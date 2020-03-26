@@ -2,12 +2,12 @@
 title: dotnet test komutu
 description: Dotnet test komutu, belirli bir projede birim testlerini yürütmek için kullanılır.
 ms.date: 02/27/2020
-ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847904"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507314"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   Test çalışmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
 
-- **`-blame`**
+- **`--blame`**
 
   Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayarının çökmesine neden olan sorunlu testleri yalıtmada yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
 

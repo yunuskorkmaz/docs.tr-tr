@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c82b2c4599f14f55b51587407a7d96b3e2be9d5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d58aa973f7de6c073611e13f2889913ff26dd55
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186603"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111926"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, görsel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmana genel bir bakış sağlar. Modelde destek işlemek için <xref:System.Windows.Media.Visual> sınıfın rolüne odaklanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
@@ -54,7 +54,7 @@ Bu konu, görsel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla
  Şekilleri, <xref:System.Windows.Media.DrawingVisual> görüntüleri veya metni işlemek için kullanılan hafif bir çizim sınıfıdır. Bu sınıf, çalışma zamanı performansını artıran düzen veya olay işleme sağlamadığından hafif olarak kabul edilir. Bu nedenle, çizimler arka planlar ve küçük resim için idealdir. Özel <xref:System.Windows.Media.DrawingVisual> bir görsel nesne oluşturmak için kullanılabilir. Daha fazla bilgi için [Bkz. ÇizimGörsel Nesneleri Kullanma.](using-drawingvisual-objects.md)  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual Sınıfı  
- 2B <xref:System.Windows.Media.Media3D.Viewport3DVisual> <xref:System.Windows.Media.Visual> ve <xref:System.Windows.Media.Media3D.Visual3D> nesneler arasında bir köprü sağlar. Sınıf, <xref:System.Windows.Media.Media3D.Visual3D> tüm 3B görsel öğelerin taban sınıfıdır. Bir <xref:System.Windows.Media.Media3D.Viewport3DVisual> değer ve <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> bir <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> değer tanımlamanızı gerektirir. Kamera sahneyi görüntülemenizi sağlar. Viewport, projeksiyonun 2B yüzeye eşleştiği yeri belirler. 3D hakkında daha [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fazla bilgi için, [bkz.](3-d-graphics-overview.md)  
+ 2B <xref:System.Windows.Media.Media3D.Viewport3DVisual> <xref:System.Windows.Media.Visual> ve <xref:System.Windows.Media.Media3D.Visual3D> nesneler arasında bir köprü sağlar. Sınıf, <xref:System.Windows.Media.Media3D.Visual3D> tüm 3B görsel öğelerin taban sınıfıdır. Bir <xref:System.Windows.Media.Media3D.Viewport3DVisual> değer ve <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> bir <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> değer tanımlamanızı gerektirir. Kamera sahneyi görüntülemenizi sağlar. Viewport, projeksiyonun 2B yüzeye eşleştiği yeri belirler. 3D hakkında daha [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fazla bilgi için, [3D Grafik Genel Bakış](3-d-graphics-overview.md)bakın.  
   
 ### <a name="containervisual-class"></a>KonteynerGörsel Sınıf  
  Sınıf <xref:System.Windows.Media.ContainerVisual> <xref:System.Windows.Media.Visual> nesnelerin bir koleksiyon için bir kapsayıcı olarak kullanılır. <xref:System.Windows.Media.ContainerVisual> Sınıf, <xref:System.Windows.Media.DrawingVisual> bir görsel nesne koleksiyonu içermesine izin vererek sınıftan türetilmiştir.  

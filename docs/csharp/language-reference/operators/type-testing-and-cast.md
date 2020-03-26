@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399471"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507093"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Tip-test ve döküm operatörleri (C# referansı)
 
@@ -113,7 +113,7 @@ Desteklenen açık dönüşümler hakkında bilgi için [C# dil belirtiminin](~/
 
 ### <a name="other-usages-of-"></a>Diğer kullanımları ()
 
-Bir [yöntemi çağırmak veya bir temsilci çağırmak](member-access-operators.md#invocation-operator-)için parantez de kullanıyorsunuz.
+Bir [yöntemi çağırmak veya bir temsilci çağırmak](member-access-operators.md#invocation-expression-)için parantez de kullanıyorsunuz.
 
 Parantezin diğer kullanımı, bir ifadedeki işlemleri değerlendirmek için sırasını ayarlamaktır. Daha fazla bilgi için [C# işleçleri'ne](index.md)bakın.
 

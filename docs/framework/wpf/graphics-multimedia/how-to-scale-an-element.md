@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: a383ad84f1db4d937469943092a03517f68777ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187444"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112056"
 ---
 # <a name="how-to-scale-an-element"></a>Nasıl yapılır: Öğe Ölçeklendirme
 Bu örnek, bir <xref:System.Windows.Media.ScaleTransform> öğeyi ölçeklendirmek için a'nın nasıl kullanılacağını gösterir.  
@@ -35,7 +35,7 @@ Bu örnek, bir <xref:System.Windows.Media.ScaleTransform> öğeyi ölçeklendirm
  ![Farklı merkez noktaları ile 2x ölçekler](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 Aynı ScaleX ve ScaleY değerlerine sahip ancak farklı merkezlere sahip iki ÖlçekDönüştürme işlemi  
   
- Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
+ Tam örnek için [2B Dönüşümler Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

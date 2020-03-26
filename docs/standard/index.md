@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228809"
 ---
 # <a name="net-guide"></a>.NET kılavuzu
 
-.NET kılavuzu .NET hakkında bilgi sağlar. .NET'e olan aşinalığınıza bağlı olarak, bu kılavuzun farklı bölümlerini ve [.NET Core](../core/index.md) veya [.NET Framework](../framework/index.md)gibi diğer kılavuzları keşfetmek isteyebilirsiniz.
+.NET kılavuzu .NET hakkında bilgi sağlar. .NET'e olan aşinalığınıza bağlı olarak, bu kılavuzun farklı bölümlerini ve [.NET Core](../core/index.md) veya [.NET Framework](../framework/index.yml)gibi diğer kılavuzları keşfetmek isteyebilirsiniz.
 
 ## <a name="new-to-net"></a>.NET'te yeni
 
@@ -44,8 +44,8 @@ Bir uygulamayı, hizmeti, bileşeni veya NuGet paketini .NET Standard veya .NET 
 
 * [.NET mimari bileşenleri](components.md)
 * [.NET Standard](net-standard.md)
-* [Yerel birlikte çalışabilirlik](native-interop/index.md)
-* [Çöp toplama](garbage-collection/index.md)
+* [Native ile birlikte çalışma](native-interop/index.md)
+* [Atık toplama](garbage-collection/index.md)
 * [.NET'teki taban türleri](base-types/index.md)
 * [Koleksiyonlar](collections/index.md)
 * [Tarihler, saatler ve saat dilimleri](datetime/index.md)

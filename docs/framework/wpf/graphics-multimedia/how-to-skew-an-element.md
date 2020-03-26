@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187658"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112030"
 ---
 # <a name="how-to-skew-an-element"></a>Nasıl yapılır: Bir Öğeyi Eğme
-Bu örnek, bir <xref:System.Windows.Media.SkewTransform> öğeyi eğriltmek için a'nın nasıl kullanılacağını gösterir. Bir eğrilik, aynı zamanda bir yama olarak bilinen, olmayan bir üniforma şekilde koordinat alanı uzanan bir dönüşümdür. A'nın <xref:System.Windows.Media.SkewTransform> tipik kullanımlarından biri, 2-B nesnelerde 3-B derinliğinin simüle edilmesidir.  
+Bu örnek, bir <xref:System.Windows.Media.SkewTransform> öğeyi eğriltmek için a'nın nasıl kullanılacağını gösterir. Bir eğrilik, aynı zamanda bir yama olarak bilinen, olmayan bir üniforma şekilde koordinat alanı uzanan bir dönüşümdür. A'nın <xref:System.Windows.Media.SkewTransform> tipik bir kullanımı, 2B nesnelerdeki 3B derinliği simüle etmektir.  
   
  'nin <xref:System.Windows.Media.SkewTransform.CenterX%2A> <xref:System.Windows.Media.SkewTransform.CenterY%2A> merkez noktasını belirtmek için ve özelliklerini kullanın. <xref:System.Windows.Media.SkewTransform>  
   
@@ -40,7 +40,7 @@ Bu örnek, bir <xref:System.Windows.Media.SkewTransform> öğeyi eğriltmek içi
  ![SkewTransform örnekleri](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 Üç SkewTransform örnekleri resimli  
   
- Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
+ Tam örnek için [2B Dönüşümler Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

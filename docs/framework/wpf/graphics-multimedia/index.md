@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186725"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112043"
 ---
 # <a name="graphics-and-multimedia"></a>Grafikler ve Multimedya
 
@@ -55,11 +55,11 @@ Grafik ve animasyonlarla ilgili çeşitli değişiklikler yapılmıştır.
 
 ## <a name="graphics-and-rendering"></a>Grafik ve Görüntüleme
 
-WPF, yüksek kaliteli 2-B grafikler için destek içerir. İşlevsellik fırçalar, geometriler, görüntüler, şekiller ve dönüşümler içerir. Daha fazla bilgi için [Bkz. Grafik.](graphics.md) Grafik öğelerinin işlenmesi sınıfa <xref:System.Windows.Media.Visual> dayanır. Ekrandaki görsel nesnelerin yapısı görsel ağaç tarafından tanımlanır. Daha fazla bilgi için [WPF Grafik Oluşturma Genel Bakış'a](wpf-graphics-rendering-overview.md)bakın.
+WPF, yüksek kaliteli 2B grafikler için destek içerir. İşlevsellik fırçalar, geometriler, görüntüler, şekiller ve dönüşümler içerir. Daha fazla bilgi için [Bkz. Grafik.](graphics.md) Grafik öğelerinin işlenmesi sınıfa <xref:System.Windows.Media.Visual> dayanır. Ekrandaki görsel nesnelerin yapısı görsel ağaç tarafından tanımlanır. Daha fazla bilgi için [WPF Grafik Oluşturma Genel Bakış'a](wpf-graphics-rendering-overview.md)bakın.
 
-### <a name="2-d-shapes"></a>2-B Şekiller
+### <a name="2d-shapes"></a>2B Şekiller
 
-WPF, aşağıdaki resimde gösterildiği gibi dikdörtgenler ve elipsler gibi yaygın olarak kullanılan vektör çizimli 2-B şekillerden oluşan bir kitaplık sağlar.
+WPF, aşağıdaki resimde gösterildiği gibi dikdörtgenler ve elipsler gibi yaygın olarak kullanılan, vektör çizimli 2B şekillerden oluşan bir kitaplık sağlar.
 
 ![Elipsleri ve dikdörtgenleri gösteren diyagram.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -99,17 +99,17 @@ Aşağıdaki resimde önceki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2s
 
 Daha fazla bilgi için [WPF'ye Genel Bakış'ta Şekiller ve Temel Çizim'e](shapes-and-basic-drawing-in-wpf-overview.md)bakın. Bir tanıtım örneği için [Şekil Elemanları Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)bakın.
 
-### <a name="2-d-geometries"></a>2-B Geometriler
+### <a name="2d-geometries"></a>2B Geometriler
 
-WPF'nin sağladığı 2-B şekiller yeterli olmadığında, kendi şekillerinizi oluşturmak için geometriler ve yollar için WPF desteğini kullanabilirsiniz. Aşağıdaki resimde, çizim fırçası olarak şekiller oluşturmak ve diğer WPF öğelerini kesmek için geometrileri nasıl kullanabileceğiniz gösterilmektedir.
+WPF'nin sağladığı 2B şekiller yeterli olmadığında, kendi şekillerinizi oluşturmak için geometriler ve yollar için WPF desteğini kullanabilirsiniz. Aşağıdaki resimde, çizim fırçası olarak şekiller oluşturmak ve diğer WPF öğelerini kesmek için geometrileri nasıl kullanabileceğiniz gösterilmektedir.
 
 ![Şekiller oluşturmak için geometrileri nasıl kullanabileceğinizi gösteren ekran görüntüsü.](./media/index/use-geometries-create-shapes.png)
 
 Daha fazla bilgi için [Geometriye Genel Bakış'a](geometry-overview.md)bakın. Bir tanıtım örneği için [Geometriler Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry)bakın.
 
-### <a name="2-d-effects"></a>2-B Etkileri
+### <a name="2d-effects"></a>2B Efektler
 
-WPF, çeşitli efektler oluşturmak için kullanabileceğiniz 2-B sınıflardan oluşan bir kitaplık sağlar. WPF'nin 2-B işleme özelliği, degradelere, bit eşlemlere, çizimlere ve videolara sahip öğeleri boyama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olanağı sağlar; ve döndürme, ölçekleme ve eğrilme kullanarak onları işlemek için. Aşağıdaki resimde WPF fırçaları kullanarak elde edebilirsiniz birçok etkileri bir örnek verir.
+WPF, çeşitli efektler oluşturmak için kullanabileceğiniz 2B sınıflardan oluşan bir kitaplık sağlar. WPF'nin 2B görüntüleme özelliği, degradelere, bit eşlemlere, çizimlere ve videolara sahip öğeleri boyama [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] olanağı sağlar; ve döndürme, ölçekleme ve eğrilme kullanarak onları işlemek için. Aşağıdaki resimde WPF fırçaları kullanarak elde edebilirsiniz birçok etkileri bir örnek verir.
 
 ![Farklı WPF fırçalarını ve boya elemanlarını gösteren çizim.](./media/index/brushes-paint-elements.png)
 
@@ -117,13 +117,13 @@ Daha fazla bilgi için [WPF Fırçalar Genel Bakış'a](wpf-brushes-overview.md)
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>3-B Rendering
+## <a name="3d-rendering"></a>3D Görüntüleme
 
-WPF, daha heyecan verici düzen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ve veri görselleştirmesi oluşturmanız için WPF'de 2-B grafik desteğiyle entegre olan bir dizi 3-B görüntüleme özelliği sağlar. Spektrumun bir ucunda, WPF 2-B görüntüleri aşağıdaki resimde gösterdiği 3-B şekillerin yüzeylerine oluşturmanızı sağlar.
+WPF, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]daha heyecan verici düzen ve veri görselleştirme oluşturmak için WPF'de 2B grafik desteğiyle bütünleşen bir dizi 3B görüntüleme özelliği sağlar. Spektrumun bir ucunda, WPF 2B görüntüleri aşağıdaki resimde gösterdiği 3B şekillerin yüzeylerine oluşturmanıza olanak tanır.
 
-![Farklı dokulara sahip 3 B şekilleri gösteren bir örneğin ekran görüntüsü.](./media/index/visual-three-dimensional-shape.png)
+![Farklı dokulara sahip 3B şekilleri gösteren bir örneğin ekran görüntüsü.](./media/index/visual-three-dimensional-shape.png)
 
-Daha fazla bilgi için [3-B Grafik Genel Bakışı'na](3-d-graphics-overview.md)bakın. Bir tanıtım örneği için [3-B Katı Numunesi'ne](https://go.microsoft.com/fwlink/?LinkID=159964)bakın.
+Daha fazla bilgi için [3B Grafik Genel Bakışı'na](3-d-graphics-overview.md)bakın. Bir tanıtım örneği için [3B Katı Numunesi'ne](https://go.microsoft.com/fwlink/?LinkID=159964)bakın.
 
 <a name="animation"></a>
 
@@ -171,5 +171,5 @@ Daha fazla bilgi için [Multimedyagenel bakış](multimedia-overview.md)ına bak
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)
-- [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
+- [3D Grafiklere Genel Bakış](3-d-graphics-overview.md)
 - [Multimedyaya Genel Bakış](multimedia-overview.md)

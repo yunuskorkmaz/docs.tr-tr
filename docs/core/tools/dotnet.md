@@ -2,12 +2,12 @@
 title: dotnet komutu
 description: Dotnet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134069"
 ---
 # <a name="dotnet-command"></a>dotnet komutu
 
@@ -193,8 +193,14 @@ Komut | İşlev
 Komut | İşlev
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Bir paketi sunucudan siler veya listeler.
-[dotnet nuget locals](dotnet-nuget-locals.md) | Http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 [dotnet nuget push](dotnet-nuget-push.md) | Bir paketi sunucuya iter ve yayımlar.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
+[dotnet nuget kaynak eklemek](dotnet-nuget-add-source.md) | Bir NuGet kaynağı ekler.
+[dotnet nuget devre dışı kaynak](dotnet-nuget-disable-source.md) | NuGet kaynağını devre dışı kılmış olur.
+[dotnet nuget etkinleştirmek kaynak](dotnet-nuget-enable-source.md) | Bir NuGet kaynağı sağlar.
+[dotnet nuget listesi kaynak](dotnet-nuget-list-source.md) | Tüm yapılandırılan NuGet kaynaklarını listeler.
+[dotnet nuget kaynak kaldırmak](dotnet-nuget-remove-source.md) | NuGet kaynağını kaldırır.
+[dotnet nuget güncelleme kaynağı](dotnet-nuget-update-source.md) | Bir NuGet kaynağını güncelleştirir.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Genel, araç yolu ve yerel araçlar komutları
 
@@ -254,6 +260,10 @@ dotnet myapp.dll
 - `DOTNET_SERVICING`
 
   Çalışma süresini yüklerken paylaşılan ana bilgisayar tarafından kullanılacak servis dizininin konumunu belirtir.
+
+- `DOTNET_NOLOGO`
+
+  .NET Core karşılama ve telemetri iletilerinin ilk çalıştırmada görüntülenip görüntülenmediğini belirtir. `true` Bu iletileri `true`(değerler, veya `1` `yes` kabul edilen) veya izin `false` verecek şekilde `false` `0`(değerler, , veya `no` kabul edilen) sessize almak üzere ayarlayın. Ayarlanmazsa, varsayılan `false` değerdir ve iletiler ilk çalıştırmada görüntülenir. Bu bayrağın telemetri üzerinde hiçbir `DOTNET_CLI_TELEMETRY_OPTOUT` etkisi olmadığını unutmayın (telemetri göndermeyi devre dışı bırakmak için bkz.
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

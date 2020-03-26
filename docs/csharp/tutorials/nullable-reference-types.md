@@ -4,12 +4,12 @@ description: Bu gelişmiş öğretici, nullable başvuru türlerine giriş sağl
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240073"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249135"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Tasarım niyetinizi nullable ve nullable olmayan referans türleri ile daha net ifade edin
 
@@ -24,7 +24,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > - Derleyicinin bu tasarım kararlarını uyguladığı kod yazın.
 > - Kendi tasarımlarınızda geçersiz referans özelliğini kullanın
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 C# 8.0 derleyicisi de dahil olmak üzere .NET Core'u çalıştıracak şekilde makinenizi ayarlamanız gerekir. C# 8.0 derleyicisi [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)ile kullanılabilir.
 
@@ -72,7 +72,7 @@ Oluşturacağınız uygulama aşağıdaki adımları yapar:
 1. Tamamlanan anket boyutu hedef numarasına ulaşana kadar yanıtlayanlara bağlantı kurur.
 1. Anket yanıtları ile ilgili önemli istatistikleri yazar.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Anketi geçersiz ve nullable olmayan türlerle oluşturun
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>Anketi geçersiz ve nullable olmayan başvuru türleri ile oluşturun
 
 Yazacağınız ilk kod anketi oluşturur. Bir anket sorusunu ve anket çalışmasını modellemek için sınıflar yazarsınız. Anketinizin yanıtının biçimine göre ayırt edilen üç tür sorusu vardır: Evet/Hayır yanıtları, sayı yanıtları ve metin yanıtları. Bir `public SurveyQuestion` sınıf oluşturun:
 

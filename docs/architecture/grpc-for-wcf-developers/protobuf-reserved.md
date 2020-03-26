@@ -2,16 +2,16 @@
 title: Protobuf ayrılmış alanlar - WCF geliştiricileri için gRPC
 description: Sürümler arası uyumluluk için ayrılmış alanlar hakkında bilgi edinin.
 ms.date: 09/09/2019
-ms.openlocfilehash: bde658c671e970b7ec841d71d5b4284eb91195f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f89513c4659a02cbc94e1c659baecb9e750acbdc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147951"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111042"
 ---
 # <a name="protobuf-reserved-fields"></a>Protobuf ayrılmış alanları
 
-Protokol Arabelleği'ndeki (Protobuf) geriye dönük uyumluluk garantileri, her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Hizmetin yeni bir sürümündeki bir iletiden alan kaldırılırsa, bu alan numarası hiçbir zaman yeniden kullanılmamalıdır. Bunu anahtar kelimeyi `reserved` kullanarak yapabilirsiniz.
+Protokol Arabelleği'ndeki (Protobuf) geriye dönük uyumluluk garantileri, her zaman aynı veri öğesini temsil eden alan numaralarına dayanır. Hizmetin yeni bir sürümündeki bir iletiden alan kaldırılırsa, bu alan numarası hiçbir zaman yeniden kullanılmamalıdır. Bunu anahtar kelimeyi `reserved` kullanarak uygulayabilirsiniz.
 
 Ve `displayName` `marketId` alanları daha önce `Stock` tanımlanan iletiden kaldırıldıysa, alan numaraları aşağıdaki örnekte olduğu gibi rezerve edilmelidir.
 

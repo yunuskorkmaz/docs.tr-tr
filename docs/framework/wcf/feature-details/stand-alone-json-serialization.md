@@ -2,12 +2,12 @@
 title: DataContractJsonSerializer kullanarak Tek Başına JSON Serileştirme
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184416"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249454"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer kullanarak Tek Başına JSON Serileştirme
 
@@ -42,7 +42,7 @@ Aşağıdaki tabloda serileştirme ve deserialization yordamları ile eşlendiğ
 |Koleksiyonlar, sözlükler ve diziler|Dizi|Bu konunun Koleksiyonlar, Sözlükler ve Diziler bölümüne bakın.|
 |Karmaşık türleri <xref:System.Runtime.Serialization.DataContractAttribute> (veya <xref:System.SerializableAttribute> uygulanan ile)|Karmaşık tür|Veri üyeleri JavaScript karmaşık türüne üye olur.|
 |<xref:System.Runtime.Serialization.ISerializable> Arabirimi uygulayan karmaşık türler)|Karmaşık tür|Diğer karmaşık türleri ile <xref:System.Runtime.Serialization.ISerializable> aynı ancak bazı türleri desteklenmez – bu konunun Gelişmiş Bilgiler bölümünün ISerializable Destek bölümüne bakın.|
-|`Null`herhangi bir tür için değer|Null|Nullable türleri de desteklenir ve boşolmayan türleri ile aynı şekilde JSON eşlenir.|
+|`Null`herhangi bir tür için değer|Null|Nullable değer türleri de desteklenir ve boşolmayan değer türleri ile aynı şekilde JSON eşlenir.|
 
 ### <a name="enumerations-and-json"></a>Sayısallaştırmalar ve JSON
 
@@ -117,7 +117,7 @@ Kendi tabanınız ve türetilmiş türleriile <xref:System.ServiceModel.ServiceK
 
 Polimorfik serileştirmenin nasıl çalıştığına ilişkin ayrıntılar ve kullanırken uyulması gereken bazı sınırlamaların tartışılması için, bu konunun ilerleyen bölümlerinde Gelişmiş Bilgiler bölümüne bakın.
 
-### <a name="versioning"></a>Sürüm oluşturma
+### <a name="versioning"></a>Sürüm Oluşturma
 
 <xref:System.Runtime.Serialization.IExtensibleDataObject> Arayüz de dahil olmak üzere veri sözleşmesi sürüm özellikleri, JSON'da tam olarak desteklenir. Ayrıca, çoğu durumda bir tür bir biçimde (örneğin, XML) deserialize ve sonra başka bir biçimde serileştirmek mümkündür (örneğin, JSON) ve hala verileri korumak <xref:System.Runtime.Serialization.IExtensibleDataObject>. Daha fazla bilgi için, [İleri-Uyumlu Veri Sözleşmeleri'ne](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)bakın. JSON'Un siparişsiz olduğunu unutmayın, böylece herhangi bir sipariş bilgisi kaybolur. Ayrıca, JSON aynı anahtar adı ile birden çok anahtar/değer çiftini desteklemez. Son olarak, <xref:System.Runtime.Serialization.IExtensibleDataObject> tüm işlemler doğal olarak polimorfik - bu <xref:System.Object>onların türetilmiş türü , tüm türleri için temel türüa atanır.
 

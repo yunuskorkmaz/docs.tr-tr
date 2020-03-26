@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8a0a7c6166bb4cfc8064faa20056fda16b593e81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151773"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111809"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
-Bu konudaki kod listeleri, aşağıdaki ADO.NET teknolojilerini kullanarak veritabanından nasıl veri alınarak alınabildiğini gösterir:
+
+Bu sayfadaki kod listeleri, aşağıdaki ADO.NET teknolojilerini kullanarak veritabanından nasıl veri alınarak alınabildiğini gösterir:
 
 - ADO.NET veri sağlayıcıları:
 
@@ -33,7 +34,7 @@ Bu konudaki kod listeleri, aşağıdaki ADO.NET teknolojilerini kullanarak verit
 
   - [EntityClient](#entityclient) `System.Data.EntityClient`( )
 
-- [LINQ to SQL](#linq-to-sql)
+- [LINQ - SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET veri sağlayıcısı örnekleri
 Aşağıdaki kod listeleri, veri sağlayıcıları ADO.NET kullanarak veritabanından nasıl veri alınır gösteriş gösterir. Veriler bir `DataReader`' de döndürülür. Daha fazla bilgi için [bkz.](retrieving-data-using-a-datareader.md)
@@ -267,7 +268,7 @@ Class EntityClientSample
 End Class
 ```
 
-## <a name="linq-to-sql"></a>LINQ to SQL
+## <a name="linq-to-sql"></a>LINQ - SQL
 Bu örnekteki kod, yalnızca CategoryID ve CategoryName özelliklerini içeren anonim bir tür olarak yansıtılan kategoriler nesneleri olarak verileri döndürmek için bir LINQ sorgusu kullanır. Bu örnek, Northwind veri bağlamını temel adamaktadır. Daha fazla bilgi için [bkz.](./sql/linq/getting-started.md)
 
 ```csharp

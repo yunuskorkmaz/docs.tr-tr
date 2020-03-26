@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Test ASP
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147497"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111055"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Core MVC uygulamalarını test ASP.NET
 
@@ -145,7 +145,7 @@ public IActionResult GetImage(int id)
 
 `_logger`ve `_imageService` her ikisi de bağımlılık olarak enjekte edilir. Artık, eylem yöntemine geçirilen aynı kimliğin `_imageService`,'e geçirildiğini ve elde edilen baytların FileResult'ın bir parçası olarak döndürülderken" test edebilirsiniz. Ayrıca, hata günlüğe kaydetmenin beklendiği gibi `NotFound` gerçekleştiğini ve görüntü eksikse, bunun önemli bir uygulama davranışı olduğunu varsayarak bir sonucun döndürüldürün (diğer bir zamanda geliştiricinin bir sorunu tanılamak için eklenen geçici kodu değil) test edebilirsiniz. Gerçek dosya mantığı ayrı bir uygulama hizmetine taşındı ve eksik bir dosya örneği için uygulamaya özgü bir özel durum döndürmek için artırıldı. Bu uygulamayı bir tümleştirme sınama kullanarak bağımsız olarak sınatabilirsiniz.
 
-Çoğu durumda, denetleyicilerinizde genel özel durum işleyicileri kullanmak isteyeceksiniz, bu nedenle bu durumda mantık miktarı en az düzeyde olmalı ve büyük olasılıkla birim sınamaya değmez. İşlevsel testleri ve aşağıda açıklanan `TestServer` sınıfı kullanarak denetleyici eylemleri test çoğu yapmalısınız.
+Çoğu durumda, denetleyicilerinizde genel özel durum işleyicileri kullanmak isteyeceksiniz, bu nedenle bu durumda mantık miktarı en az düzeyde olmalı ve büyük olasılıkla birim sınamaya değmez. İşlevsel testleri ve aşağıda açıklanan `TestServer` sınıfı kullanarak denetleyici eylemleri test çoğu yapın.
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Core uygulamaları ASP.NET entegrasyon testi
 
@@ -153,7 +153,7 @@ ASP.NET Core uygulamalarınızdaki tümleştirme testlerinin çoğu, Altyapı pr
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Core uygulamaları ASP.NET işlevsel test
 
-ASP.NET Core uygulamaları `TestServer` için, sınıf işlevsel testleri yazmayı oldukça kolaylaştırır. Doğrudan (uygulamanız `WebHostBuilder` için `HostBuilder`yaptığınız gibi) veya `WebApplicationFactory` tür (sürüm 2.1'den beri kullanılabilir) kullanarak bir `TestServer` (veya ) kullanarak yapılandırAbilirsiniz. Test ana bilgisayarınızı üretim ana bilgisayarınızla mümkün olduğunca yakından eşleştirmeyi denemelisiniz, böylece testleriniz uygulamanın üretimde yapacağına benzer davranışlar sergiler. Sınıf, `WebApplicationFactory` ASP.NET Core tarafından Görünümler gibi statik kaynağı bulmak için kullanılan TestServer'ın ContentRoot'unu yapılandırmak için yararlıdır.
+ASP.NET Core uygulamaları `TestServer` için, sınıf işlevsel testleri yazmayı oldukça kolaylaştırır. Doğrudan (uygulamanız `WebHostBuilder` için `HostBuilder`yaptığınız gibi) veya `WebApplicationFactory` tür (sürüm 2.1'den beri kullanılabilir) kullanarak bir `TestServer` (veya ) kullanarak yapılandırAbilirsiniz. Test ana bilgisayarınızın üretim ana tonunu mümkün olduğunca yakından eşleştirmeye çalışın, böylece testlerinizin uygulamanın üretimde yapacağına benzer davranışlar sergilemesi. Sınıf, `WebApplicationFactory` ASP.NET Core tarafından Görünümler gibi statik kaynağı bulmak için kullanılan TestServer'ın ContentRoot'unu yapılandırmak için yararlıdır.
 
 TEntry web uygulamanızın Başlangıç sınıfı olduğu>> IClassFixture\<\<WebApplicationFactory TEntry uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz. Bu durumda, test fikstürfabrikanın CreateClient yöntemini kullanarak bir istemci oluşturabilirsiniz:
 
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Bu işlevsel test, tüm ara yazılımlar, filtreler, bağlayıcılar, vb yerinde olabilir dahil olmak üzere core mvc / Razor Pages uygulama yığını, tam ASP.NET egzersizleri. Belirli bir rotanın ("/") beklenen başarı durum kodunu ve HTML çıktısını döndürür doğrular. Bunu gerçek bir web sunucusu kurmadan yapar ve bu nedenle test etmek için gerçek bir web sunucusu kullanarak (örneğin, güvenlik duvarı ayarları ile ilgili sorunlar) karşılaşabileceğiniz kırılganlık çok önler. TestServer'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaş, ancak ağ üzerinden bir test web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testler kullanmalısınız. Bu testler, denetleyicilerinizde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi ele aldığınızda özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve bir dizi işlevsel test bunun böyle olduğunu doğrular.
+Bu işlevsel test, tüm ara yazılımlar, filtreler, bağlayıcılar, vb yerinde olabilir dahil olmak üzere core mvc / Razor Pages uygulama yığını, tam ASP.NET egzersizleri. Belirli bir rotanın ("/") beklenen başarı durum kodunu ve HTML çıktısını döndürür doğrular. Bunu gerçek bir web sunucusu kurmadan yapar ve bu nedenle test etmek için gerçek bir web sunucusu kullanarak (örneğin, güvenlik duvarı ayarları ile ilgili sorunlar) karşılaşabileceğiniz kırılganlık çok önler. TestServer'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaş, ancak ağ üzerinden bir test web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testler kullanın. Bu testler, denetleyicilerinizde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi ele aldığınızda özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve bir dizi işlevsel test bunun böyle olduğunu doğrular.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Referanslar – Test ASP.NET Core MVC uygulamaları
 >

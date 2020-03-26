@@ -7,12 +7,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 511ea04a522804b4b2ea2ff173d6cdd738e5c7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 759c1ca20ac139ef856df08ec42fb259fc3920d1
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186228"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112017"
 ---
 # <a name="wpf-overview"></a>WPF’ye genel bakış
 
@@ -309,7 +309,7 @@ Daha fazla bilgi için [WPF fırçaları genel bakış](graphics-multimedia/wpf-
 
 ### <a name="3d-rendering"></a>3B işleme
 
-WPF ayrıca daha heyecan verici ve ilginç kullanıcı arabirimleri oluşturulmasına izin vermek için 2-b grafik ile entegre 3D render yetenekleri içerir. Örneğin, aşağıdaki şekilde 3B şekiller üzerine işlenen 2B görüntüler gösterilmektedir:
+WPF ayrıca daha heyecan verici ve ilginç kullanıcı arabirimleri oluşturulmasına izin vermek için 2B grafik ile entegre 3D render yetenekleri içerir. Örneğin, aşağıdaki şekilde 3B şekiller üzerine işlenen 2B görüntüler gösterilmektedir:
 
 ![Visual3D örnek ekran görüntüsü](media/introduction-to-wpf/wpfintrofigure13.png)
 

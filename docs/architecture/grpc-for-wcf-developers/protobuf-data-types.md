@@ -2,12 +2,12 @@
 title: Protobuf skaler veri türleri - WCF geliştiricileri için gRPC
 description: .NET Core'da Protobuf ve gRPC'nin desteklediği temel ve iyi bilinen veri türleri hakkında bilgi edinin.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148133"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249441"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf skaler veri türleri
 
@@ -125,7 +125,7 @@ Aşağıdaki tabloda, eşdeğer C# türüne sahip sarıcı türlerinin tam liste
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-İyi bilinen türleri `Timestamp` `Duration` ve sınıflar olarak .NET temsil edilir, bu nedenle nullable sürümü için gerek yoktur. Ancak, dönüşüm yaparken bu tür özellikleri geçersiz olup olmadığını kontrol `DateTimeOffset` etmek `TimeSpan`önemlidir.
+İyi bilinen türleri `Timestamp` `Duration` ve sınıflar olarak .NET temsil edilir. C# 8 ve ötesinde, nullable başvuru türlerini kullanabilirsiniz. Ancak, dönüşüm yaparken bu tür özellikleri geçersiz olup olmadığını kontrol `DateTimeOffset` etmek `TimeSpan`önemlidir.
 
 ## <a name="decimals"></a>Ondalıklar
 

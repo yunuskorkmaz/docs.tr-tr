@@ -2,15 +2,15 @@
 title: ASP.NET Çekirdek kırma değişiklikleri
 titleSuffix: ''
 description: ASP.NET Core'daki kırılma değişikliklerini listeler.
-ms.date: 01/10/2020
+ms.date: 03/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093181"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291713"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Çekirdek kırma değişiklikleri
 
@@ -18,7 +18,6 @@ ASP.NET Core, .NET Core tarafından kullanılan web uygulaması geliştirme öze
 
 Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
-- [HTTP: Tarayıcı SameSite değişiklikleri kimlik doğrulamayı etkiler](#http-browser-samesite-changes-impact-authentication)
 - [Eski Antiforgery, CORS, Teşhis, MVC ve Yönlendirme API'leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Kimlik doğrulama: Google+ amortismanı](#authentication-google-deprecated-and-replaced)
 - [Kimlik doğrulama: HttpContext.Authentication özelliği kaldırıldı](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 - [Yetkilendirme: AddAuthorization aşırı yükü farklı derlemeye taşındı](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Yetkilendirme: IAllowAnonymous YetkilendirmeFilterContext.Filters kaldırıldı](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Yetkilendirme: IAuthorizationPolicyProvider uygulamaları yeni bir yöntem gerektirir](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure: Microsoft tarafından önceden belirlenmiş Azure tümleştirme paketleri kaldırıldı](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Önbelleğe alma: CompactOnMemoryPressure özelliği kaldırıldı](#caching-compactonmemorypressure-property-removed)
 - [Önbelleğe alma: Microsoft.Extensions.Caching.SqlServer yeni SqlClient paketi kullanır](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Önbelleğe alma: YanıtCaching "pubternal" türleri iç değiştirildi](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 - [Barındırma: IIS işlem dışı uygulamalar için HTTPS yeniden yönlendirmesi etkin](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [Hosting: IHostingEnvironment ve IApplicationLifetime türleri değiştirildi](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [Barındırma: ObjectPoolProvider WebHostBuilder bağımlılıkları kaldırıldı](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: Tarayıcı SameSite değişiklikleri kimlik doğrulamayı etkiler](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: VarsayılanHttpContext genişletilebilirlik kaldırıldı](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: Başlıkadları alanları yalnızca statik olarak değiştirildi](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP: Yanıt gövde altyapı değişiklikleri](#http-response-body-infrastructure-changes)
@@ -66,9 +67,20 @@ Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 - [SignalR: HubConnectionContext yapıcılar değişti](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: JavaScript istemci paketi adı değişikliği](#signalr-javascript-client-package-name-changed)
 - [SignalR: Eski API'ler](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [SignalR: UseSignalR ve UseConnections yöntemleri kaldırıldı](#signalr-usesignalr-and-useconnections-methods-removed)
 - [STA'lar: SpaServices ve NodeServices eski işaretlenmiş](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [SP'ler: SpaServices ve NodeServices logger geri dönüş varsayılan değişikliği konsol](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [Hedef çerçeve: .NET Framework desteklenmiyor](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET Çekirdek 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET Çekirdek 3.1
 

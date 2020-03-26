@@ -4,12 +4,12 @@ description: .NET Standardı, .NET uygulamaları, .NET çalışma saatleri ve ta
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400479"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291777"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -17,11 +17,11 @@ ms.locfileid: "79400479"
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standardı, Bir .NET uygulamasının Taban Sınıf Kitaplığı tarafından uygulanan bir API kümesidir. Daha resmi olarak, kodunuzu derlediğiniz tek tip sözleşmeler kümesini oluşturan .NET API'lerinin belirtimidir. Bu sözleşmeler her .NET uygulamasında uygulanır. Bu, farklı .NET uygulamaları arasında taşınabilirlik sağlayarak kodunuzu her yerde etkin bir şekilde çalıştırarak etkinleştirin.
+.NET Standart, Bir .NET uygulamasının Taban Sınıf Kitaplığı tarafından uygulanan bir API kümesidir. Daha resmi olarak, kodunuzu derlediğiniz tek tip sözleşmeler kümesini oluşturan .NET API'lerinin belirtimidir. Bu sözleşmeler her .NET uygulamasında uygulanır. Bu, farklı .NET uygulamaları arasında taşınabilirlik sağlayarak kodunuzu her yerde etkin bir şekilde çalıştırarak etkinleştirin.
 
-.NET Standardı aynı zamanda bir [hedef çerçevesidir.](glossary.md#target-framework) Kodunuz .NET Standard'ın bir sürümünü hedefliyorsa, .NET Standardının bu sürümünü destekleyen herhangi bir .NET uygulamasında çalıştırılabilir.
+.NET Standard aynı zamanda bir [hedef çerçevesidir.](glossary.md#target-framework) Kodunuz .NET Standard'ın bir sürümünü hedefliyorsa, .NET Standard'ın bu sürümünü destekleyen herhangi bir .NET uygulamasında çalıştırılabilir.
 
-.NET Standardı ve nasıl hedeflenecek hakkında daha fazla bilgi edinmek için [.NET Standart](net-standard.md) konusuna bakın.
+.NET Standard ve nasıl hedeflenebildiğini öğrenmek için [.NET Standard'a](net-standard.md)bakın.
 
 ## <a name="net-implementations"></a>.NET uygulamaları
 
@@ -42,9 +42,9 @@ Microsoft'un etkin olarak geliştirdiği ve koruduğu dört birincil .NET uygula
 
 ### <a name="net-framework"></a>.NET Framework
 
-The.NET Framework, 2002 yılından beri var olan orijinal .NET uygulamasıdır. Varolan .NET geliştiricilerin her zaman kullandığı .NET Framework ile aynıdır. Sürüm4.5 ve daha sonra .NET Standardını uygulayın, böylece .NET Standardını hedefleyen kod .NET Framework'ün bu sürümlerinde çalıştırılabilir. Windows Forms ve WPF ile Windows masaüstü geliştirme için API'ler gibi Windows'a özgü ek API'ler içerir. .NET Framework, Windows masaüstü uygulamaları oluşturmak için optimize edilebiyi optimize edin.
+.NET Framework, 2002 yılından beri var olan orijinal .NET uygulamasıdır. .NET Standard'ı hedefleyen kod .NET Framework'ün bu sürümlerinde çalıştırılabilmek için 4.5 sürümleri ve daha sonra .NET Standard'ı uygulayın. Windows Forms ve WPF ile Windows masaüstü geliştirme için API'ler gibi Windows'a özgü ek API'ler içerir. .NET Framework, Windows masaüstü uygulamaları oluşturmak için optimize edilebistir.
 
-.NET Framework hakkında daha fazla bilgi edinmek için [.NET Framework Guide'a](../framework/index.md)bakın.
+.NET Framework hakkında daha fazla bilgi edinmek için [.NET Framework Guide'a](../framework/index.yml)bakın.
 
 ### <a name="mono"></a>Mono
 
@@ -60,7 +60,7 @@ Mono hakkında daha fazla bilgi edinmek için [Mono belgelerine](https://www.mon
 
 ### <a name="universal-windows-platform-uwp"></a>Evrensel Windows Platformu (UWP)
 
-UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulamaları ve yazılımları oluşturmak için kullanılan .NET'in bir uygulamasıdır. Cd'ler, tabletler, phablet'ler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı türde aygıtları birletmek üzere tasarlanmıştır. UWP, merkezi bir uygulama deposu, yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API'si gibi birçok hizmet sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript ile yazılabilir. C# ve Visual Basic kullanırken .NET API'leri .NET Core tarafından sağlanır.
+UWP, Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulamaları ve yazılımları oluşturmak için kullanılan .NET'in bir uygulamasıdır. Cd'ler, tabletler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı türde aygıtları birletmek üzere tasarlanmıştır. UWP, merkezi bir uygulama deposu, yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API'si gibi birçok hizmet sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript ile yazılabilir. C# ve Visual Basic kullanırken .NET API'leri .NET Core tarafından sağlanır.
 
 UWP hakkında daha fazla bilgi edinmek [için Evrensel Windows Platformu'na Giriş'e](/windows/uwp/get-started/universal-application-platform-guide)bakın.
 
@@ -75,7 +75,7 @@ UWP hakkında daha fazla bilgi edinmek [için Evrensel Windows Platformu'na Giri
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET takım lama ve ortak altyapı
 
-.NET'in her uygulamasıyla çalışan kapsamlı bir araç ve altyapı bileşeni kümesine erişebilirsiniz. Bunlar şunlardır, ancak aşağıdakiler ile sınırlı değildir:
+.NET'in her uygulamasıyla çalışan kapsamlı bir araç ve altyapı bileşeni kümesine erişebilirsiniz. Bu araçlar ve bileşenler şunlardır:
 
 - .NET dilleri ve derleyicileri
 - .NET proje sistemi *(.csproj*, *.vbproj*ve *.fsproj* dosyalarına göre)
@@ -85,7 +85,7 @@ UWP hakkında daha fazla bilgi edinmek [için Evrensel Windows Platformu'na Giri
 
 ## <a name="applicable-standards"></a>Geçerli standartlar
 
-C# Language ve Common Language Infrastructure (CLI) spesifikasyonları [Ecma International®](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk baskıları Aralık 2001'de Ecma tarafından yayınlanmıştır.
+C# Dil ve Ortak Dil Altyapısı (CLI) spesifikasyonları [Ecma International&reg;](https://www.ecma-international.org/)aracılığıyla standartlaştırılmıştır. Bu standartların ilk baskıları Aralık 2001'de Ecma tarafından yayınlanmıştır.
 
 Program dilleri Teknik Komitesi[(TC49)](https://www.ecma-international.org/memento/tc49.htm)bünyesindeki TC49-TG2 (C#) ve TC49-TG3 (CLI) görev grupları tarafından standartlarda yapılan sonraki revizyonlar, Ecma Genel Kurulu ve daha sonra ISO/IEC JTC 1 tarafından ISO Fast-Track süreci ile kabul edilmiştir.
 
@@ -94,8 +94,8 @@ Program dilleri Teknik Komitesi[(TC49)](https://www.ecma-international.org/memen
 Aşağıdaki resmi Ecma belgeleri [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) ve [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) [(TR-84)](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)için mevcuttur:
 
 - **C# Dil Standardı (sürüm 5.0)**: [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Ortak Dil Altyapısı**: Bu [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) formu ve [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) şeklinde mevcuttur.
-- **Bölüm IV XML Dosyasından Elde Edilen Bilgiler**: Bu [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) formatlarında mevcuttur.
+- **Ortak Dil Altyapısı**: [Pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) formunda ve [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) formunda mevcuttur.
+- **Bölüm IV XML Dosyasından Elde Edilen Bilgiler**: [Pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) ve [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) formatlarında mevcuttur.
 
 Resmi ISO/IEC belgeleri, ISO/IEC [Genel Kullanıma Sunulan Standartlar](https://standards.iso.org/ittf/PubliclyAvailableStandards/) sayfasından edinilebilir. Bu bağlantılar doğrudan bu sayfadan:
 
@@ -107,8 +107,8 @@ Resmi ISO/IEC belgeleri, ISO/IEC [Genel Kullanıma Sunulan Standartlar](https://
 
 - [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core Kılavuzu](../core/index.md)
-- [.NET Çerçeve Rehberi](../framework/index.md)
+- [.NET Çekirdek Rehberi](../core/index.md)
+- [.NET Çerçeve Rehberi](../framework/index.yml)
 - [C# Rehberi](../csharp/index.yml)
 - [F# Rehberi](../fsharp/index.yml)
-- [Visual Basic Kılavuzu](../visual-basic/index.yml)
+- [Görsel Temel Kılavuz](../visual-basic/index.yml)

@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184179"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291739"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB HTTP hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP hizmetlerine, Web tarayıcıları da dahil olmak üzere mümkün olan en geniş müşteri yelpazesine erişilecek ve aşağıdaki benzersiz gereksinimlere sahip olacak şekilde tasarlanmıştır:  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Bu, WCF WEB HTTP programlama modelinin her türlü veriyi işleyebilir, ancak buna karşı <xref:System.IO.Stream>programlama yapıyor olabileceğiniz anlamına gelir.  
   
- .NET Framework 3.5, JSON verilerinin (AJAX) yanı sıra Sendikasyon akışları (ATOM ve RSS dahil) için destek sağlar. Bu özellikler hakkında daha fazla bilgi için [WCF Web HTTP Biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF Sendikasyon Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) ve AJAX Entegrasyonu ve [JSON Desteği'ne](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)bakın.  
+ .NET Framework 3.5, JSON verilerinin (AJAX) yanı sıra Sendikasyon akışları (ATOM ve RSS dahil) için destek sağlar. Bu özellikler hakkında daha fazla bilgi için [WCF Web HTTP Biçimlendirme, WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md) [Sendikasyon Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)ve AJAX Entegrasyonu ve [JSON Desteği'ne](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)bakın.  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP Programlama Modeli ve Güvenliği  
 

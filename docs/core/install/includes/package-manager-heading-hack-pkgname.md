@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77466000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134100"
 ---
 
 Paket yöneticisi beslemelerine eklenen paketler hacklenebilir bir biçimde adlandırılır: `{product}-{type}-{version}`.
@@ -34,7 +34,7 @@ SDK sürümü veya yüklemek için çalışma zamanı. Bu makalede, her zaman en
 
 - Core 3.1 çalışma süresini ASP.NET yükleyin:`aspnetcore-runtime-3.1`
 - .NET Core 2.1 çalışma süresini yükleyin:`dotnet-runtime-2.1`
-- .NET Core 3.0 SDK'yı yükleyin:`dotnet-sdk-3.0`
+- .NET Core 3.1 SDK'yı yükleyin:`dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Paket eksik
 

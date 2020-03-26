@@ -2,12 +2,12 @@
 title: İşe Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c7e99d41d009ee9ab9ccf322f082d3e253ca03ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182836"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291696"
 ---
 # <a name="hiring-process"></a>İşe Alma İşlemi
 Bu örnek, ileti etkinliklerini ve iş akışı hizmetleri olarak barındırılan iki iş akışını kullanarak bir iş sürecinin nasıl uygulanacağını gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirketin BT altyapısının bir parçasıdır.  
@@ -159,7 +159,7 @@ Bu örnek, ileti etkinliklerini ve iş akışı hizmetleri olarak barındırıla
   
 1. Çözüm yapıldıktan sonra hata ayıklamadan çalıştırmak için CTRL+F5 tuşuna basın. Tüm hizmetlerin başladığını doğrulayın.  
   
-2. Çözümde **InternalClient'ı** sağ tıklatın ve ardından **Tarayıcıda Görüntüle'yi**seçin. Varsayılan sayfa `InternalClient` görüntülenir. Hizmetlerin çalıştığını emin olun ve bağlantıyı tıklatın.  
+2. Çözümde **InternalClient'a** sağ tıklayın ve **ardından Tarayıcıda Görüntüle'yi**seçin. Varsayılan sayfa `InternalClient` görüntülenir. Hizmetlerin çalıştığını emin olun ve bağlantıyı tıklatın.  
   
 3. **HiringRequest** modülü görüntülenir. Burada ayrıntılı senaryoyu takip edebilirsiniz.  
   

@@ -2,12 +2,12 @@
 title: .NET Core için csproj formatına eklemeler
 description: Varolan ve .NET Core csproj dosyaları arasındaki farklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134061"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj formatına eklemeler
 
@@ -140,7 +140,7 @@ Projenin birden çok hedef çerçevesi varsa, komutun sonuçları msbuild özell
 Madde `<PackageReference>` öğesi projede bir [NuGet bağımlılığı](/nuget/consume-packages/package-references-in-project-files)belirtir. Öznitelik `Include` paket kimliğini belirtir.
 
 ```xml
-<PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
+<PackageReference Include="package-id" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Sürüm
@@ -231,7 +231,7 @@ Proje dosyasında ön yapı ve yapı sonrası olayların belirtilme şekli deği
 
 ```xml
 <PropertyGroup>
-    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
 </PropertyGroup>
 ```
 

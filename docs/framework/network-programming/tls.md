@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 81ac469f75f925ea00c02ff94ade0e8793e7efff
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546717"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134381"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Taşıma Katmanı Güvenliği (TLS) en iyi uygulamaları
 
@@ -121,7 +121,7 @@ WCF çerçevesi, bir protokol sürümünü açıkça yapılandırmadığınız s
 
 ### <a name="for-net-framework-35---452-and-not-wcf"></a>.NET Framework 3.5 - 4.5.2 için ve WCF için değil
 
-Uygulamanızı .NET Framework 4.7 veya sonraki sürümlere yükseltmenizi öneririz. Yükseltme yapamıyorsanız, aşağıdaki adımları izleyin. Gelecekte bir noktada, .NET Framework 4.7 veya sonraki sürümlerine yükseltilene kadar uygulamanız başarısız olabilir.
+Uygulamanızı .NET Framework 4.7 veya sonraki sürümlere yükseltmenizi öneririz. Yükseltme yapamıyorsanız, aşağıdaki adımları izleyin.
 
 [SchUseStrongCrypto](#schusestrongcrypto) ve [SystemDefaultTlsVersions](#systemdefaulttlsversions) kayıt defteri anahtarlarını 1 olarak ayarlayın. Bkz. [Windows Kayıt Defteri üzerinden güvenliği yapılandırma.](#configuring-security-via-the-windows-registry) .NET Framework sürüm 3.5 `SchUseStrongCrypto` bayrağı yalnızca açık bir TLS değeri geçirildiğinde destekler.
 

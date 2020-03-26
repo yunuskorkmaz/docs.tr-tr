@@ -8,19 +8,19 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 1329f26e588b90fcd25052fb805058915b8825e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff42e59edd9d98b0b52dc3bdd3ace0c35df60878
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186469"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112381"
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekilleri açıklamak için sınıfların nasıl kullanılacağını açıklar. Bu konu, nesneler ve <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape> öğeler arasındaki farkları da zıt.  
 
 <a name="wcpsdk_graphics_geometry_introduction"></a>
 ## <a name="what-is-a-geometry"></a>Geometri Nedir?  
- Sınıf <xref:System.Windows.Media.Geometry> ve ondan türeyen sınıflar, <xref:System.Windows.Media.EllipseGeometry>yani <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.CombinedGeometry>, ve , 2-B şeklin geometrisini tanımlamanızı sağlar. Bu geometrik tanımlamaların, ekrana boyamak için bir şekil tanımlama veya isabet testi ve klip bölgelerini tanımlama gibi birçok kullanımı vardır. Animasyon yolunu tanımlamak için geometri bile kullanabilirsiniz.  
+ Sınıf <xref:System.Windows.Media.Geometry> ve ondan türeyen sınıflar, <xref:System.Windows.Media.EllipseGeometry>örneğin <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.CombinedGeometry>, ve , bir 2B şeklin geometrisini açıklamanızı sağlar. Bu geometrik tanımlamaların, ekrana boyamak için bir şekil tanımlama veya isabet testi ve klip bölgelerini tanımlama gibi birçok kullanımı vardır. Animasyon yolunu tanımlamak için geometri bile kullanabilirsiniz.  
   
  <xref:System.Windows.Media.Geometry>dikdörtgenler ve daireler veya iki veya daha fazla geometri nesnesinden oluşturulan bileşik gibi nesneler basit olabilir.  Yayları <xref:System.Windows.Media.PathGeometry> ve eğrileri tanımlamanızı <xref:System.Windows.Media.StreamGeometry> sağlayan ve sınıflar kullanılarak daha karmaşık geometriler oluşturulabilir.  
   
@@ -28,11 +28,11 @@ Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
   
 <a name="wcpsdk_graphics_geometry_geometryandshapes"></a>
 ## <a name="geometries-vs-shapes"></a>Geometriler ve Şekiller  
- <xref:System.Windows.Media.Geometry> Ve <xref:System.Windows.Shapes.Shape> sınıflar her ikisi de 2-B şekilleri <xref:System.Windows.Media.EllipseGeometry> (karşılaştırmak ve <xref:System.Windows.Shapes.Ellipse> örneğin) tanımlamak açısından benzer görünüyor, ancak önemli farklılıklar vardır.  
+ <xref:System.Windows.Media.Geometry> Ve <xref:System.Windows.Shapes.Shape> sınıflar, her ikisi de 2B şekilleri <xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Shapes.Ellipse> tanımlamak (karşılaştırmak ve örneğin), ancak önemli farklılıklar vardır benzer görünüyor.  
   
  İlk olarak, <xref:System.Windows.Media.Geometry> <xref:System.Windows.Freezable> <xref:System.Windows.Shapes.Shape> sınıf sınıftan devralırken, sınıf <xref:System.Windows.FrameworkElement>sınıftan devralır. Bunlar öğe oldukları <xref:System.Windows.Shapes.Shape> ndan, nesneler kendilerini işleyebilir ve <xref:System.Windows.Media.Geometry> düzen sistemine katılabilir, nesneler ise yapamaz.  
   
- Nesneler <xref:System.Windows.Shapes.Shape> nesnelerden <xref:System.Windows.Media.Geometry> daha kolay kullanılabilir olmasına rağmen, <xref:System.Windows.Media.Geometry> nesneler daha çok yönlüdür. Bir <xref:System.Windows.Shapes.Shape> nesne 2-B grafikleri işlemek <xref:System.Windows.Media.Geometry> için kullanılırken, bir nesne 2-B grafikler için geometrik bölgeyi tanımlamak, kırpma için bir bölge tanımlamak veya örneğin isabet testi için bir bölge tanımlamak için kullanılabilir.  
+ Nesneler <xref:System.Windows.Shapes.Shape> nesnelerden <xref:System.Windows.Media.Geometry> daha kolay kullanılabilir olmasına rağmen, <xref:System.Windows.Media.Geometry> nesneler daha çok yönlüdür. Bir <xref:System.Windows.Shapes.Shape> nesne 2B grafikleri işlemek <xref:System.Windows.Media.Geometry> için kullanılırken, bir nesne 2B grafikler için geometrik bölgeyi tanımlamak, kırpma için bir bölge tanımlamak veya örneğin isabet testi için bir bölge tanımlamak için kullanılabilir.  
   
 ### <a name="the-path-shape"></a>Yol Şekli  
  Bir, <xref:System.Windows.Shapes.Shape> <xref:System.Windows.Shapes.Path> sınıf, aslında <xref:System.Windows.Media.Geometry> içeriğini açıklamak için a kullanır. A <xref:System.Windows.Media.Geometry> <xref:System.Windows.Shapes.Shape.Fill%2A> <xref:System.Windows.Shapes.Shape.Stroke%2A> <xref:System.Windows.Media.Geometry>ile özelliğini ayarlayarak ve onun ve özelliklerini ayarlayarak, bir . <xref:System.Windows.Shapes.Path.Data%2A> <xref:System.Windows.Shapes.Path>  

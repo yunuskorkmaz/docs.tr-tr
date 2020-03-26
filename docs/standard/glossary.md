@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili terimlerin anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400437"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291560"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -30,9 +30,9 @@ Bazen ASP.NET, ASP.NET Core dahil olmak üzere her iki ASP.NET uygulamaları ifa
 
 [ASP.NET dokümantasyona](/aspnet/#pivot=aspnet)bakın.
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
-.NET Core üzerine inşa edilmiş ASP.NET çapraz platform, yüksek performanslı, açık kaynak uygulaması.
+.NET Core üzerine kurulu ASP.NET çapraz platform, yüksek performanslı, açık kaynak uygulaması.
 
 [Bkz. ASP.NET Çekirdek belgeleri.](/aspnet/#pivot=core)
 
@@ -46,7 +46,7 @@ Derleme, arabirimler, sınıflar, yapılar, sayısallamalar ve temsilciler gibi 
 
 Ortak Dil Çalışma Zamanı.
 
-Tam anlamı içeriğe bağlıdır, ancak bu genellikle .NET Framework çalışma zamanı anlamına gelir. CLR bellek ayırma ve yönetimi işler. CLR aynı zamanda sadece uygulamaları yürütmekle kalmamış, aynı zamanda [bir JIT](#jit) derleyicisi kullanarak anında kod üreten ve derleyen sanal bir makinedir. Geçerli Microsoft CLR uygulaması yalnızca Windows'dur.
+Tam anlamı içeriğe bağlıdır, ancak Ortak Dil Çalışma Süresi genellikle .NET Framework'ün çalışma zamanını ifade eder. CLR bellek ayırma ve yönetimi işler. CLR aynı zamanda sadece uygulamaları yürütmekle kalmamış, aynı zamanda [bir JIT](#jit) derleyicisi kullanarak anında kod üreten ve derleyen sanal bir makinedir. Geçerli Microsoft CLR uygulaması yalnızca Windows'dur.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,7 +64,7 @@ Sistemi oluşturan bir dizi kitaplık. \* (ve sınırlı bir ölçüde\*Microsof
 
 .NET Çekirdek çalışma zamanı.
 
-CLR /CoreCLR'nin aksine CoreRT sanal bir makine değildir, bu da [jit](#jit)içermediği için anında kod oluşturma ve çalıştırma olanaklarını içermediği anlamına gelir. Ancak, [GC](#gc) ve çalışma zamanı türü tanımlama (RTTI) ve yansıma yeteneği içerir. Ancak, yazı sistemi yansıma için meta veri gerekli olmayacak şekilde tasarlanmıştır. Bu, gereksiz meta verileri birbirine bağlayabilen ve (daha da önemlisi) uygulamanın kullanmadığı kodu tanımlayabilen bir [AOT](#aot) takım zincirine sahip olmasını sağlar. CoreRT geliştirilmekte.
+CLR /CoreCLR'nin aksine CoreRT sanal bir makine değildir, bu da [jit](#jit)içermediği için anında kod oluşturma ve çalıştırma olanaklarını içermediği anlamına gelir. Ancak, [GC](#gc) ve çalışma zamanı türü tanımlama (RTTI) ve yansıma yeteneği içerir. Ancak, yazı sistemi yansıma için meta veri gerekli olmayacak şekilde tasarlanmıştır. Meta veri gerektirmemesi, gereksiz meta verileri birbirine bağlayabilen ve (daha da önemlisi) uygulamanın kullanmadığı kodu tanımlayabilen bir [AOT](#aot) araç zincirine sahip olmasını sağlar. CoreRT geliştirilmekte.
 
 Bkz. [Intro to .NET Native ve CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
@@ -86,7 +86,7 @@ Genel olarak, belirli bir teknolojiye dayalı uygulamaların geliştirilmesini v
 
 "Çerçeve" sözcüğünün aşağıdaki terimlerde daha spesifik bir teknik anlamı vardır:
 
-- [.NET Çerçevesi](#net-framework)
+- [.NET Framework](#net-framework)
 - [hedef çerçeve](#target-framework)
 - [TFM (hedef çerçeve takma adıyla)](#tfm)
 
@@ -114,7 +114,7 @@ Tam zamanında derleyici.
 
 ## <a name="implementation-of-net"></a>.NET uygulaması
 
-.NET'in bir uygulaması aşağıdakileri içerir:
+.NET'in bir uygulaması şunları içerir:
 
 - Bir veya daha fazla çalışma saatleri. Örnekler: CLR, CoreCLR, CoreRT.
 - .NET Standardının bir sürümünü uygulayan ve ek API'ler içerebilen bir sınıf kitaplığı. Örnekler: .NET Framework Base Sınıf Kitaplığı, .NET Çekirdek Taban Sınıf Kitaplığı.
@@ -123,7 +123,7 @@ Tam zamanında derleyici.
 
 .NET uygulamalarına örnekler:
 
-- [.NET Çerçevesi](#net-framework)
+- [.NET Framework](#net-framework)
 - [.NET Core](#net-core)
 - [Evrensel Windows Platformu (UWP)](#uwp)
 
@@ -153,7 +153,7 @@ Mono hakkında daha fazla bilgi edinmek için [Mono belgelerine](https://www.mon
 
 ## <a name="net"></a>.NET
 
-[.NET Standard](#net-standard) ve tüm [.NET uygulamaları](#implementation-of-net) ve iş yükleri için şemsiye terim. Her zaman büyük harfle, asla ".Net".
+[.NET Standard](#net-standard) ve tüm [.NET uygulamaları](#implementation-of-net) ve iş yükleri için şemsiye terim. Her zaman tamamen büyük harfle, asla ".Net".
 
 [.NET Kılavuzuna](index.md) Bakın
 
@@ -179,7 +179,7 @@ Bkz. [.NET Core SDK Genel Bakış](../core/sdk.md).
 
 .NET'in yalnızca Windows'da çalışan bir uygulaması. Ortak Dil Çalışma Zamanı (CLR), Temel Sınıf Kitaplığı ve ASP.NET, Windows Forms ve WPF gibi uygulama çerçevesi kitaplıklarını içerir.
 
-Bkz. [.NET Çerçeve Rehberi](../framework/index.md).
+Bkz. [.NET Çerçeve Rehberi](../framework/index.yml).
 
 ## <a name="net-native"></a>.NET Yerel
 
@@ -269,12 +269,12 @@ Bkz. [Hedef Çerçeveler](frameworks.md).
 
 Evrensel Windows Platformu.
 
-Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulamaları ve yazılımları oluşturmak için kullanılan .NET uygulaması. Cd'ler, tabletler, phablet'ler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı türde aygıtları birletmek üzere tasarlanmıştır. UWP, merkezi bir uygulama deposu, yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API'si gibi birçok hizmet sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript ile yazılabilir. C# ve Visual Basic kullanırken .NET API'leri .NET Core tarafından sağlanır.
+Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulamaları ve yazılımları oluşturmak için kullanılan .NET uygulaması. Cd'ler, tabletler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı türde aygıtları birletmek üzere tasarlanmıştır. UWP, merkezi bir uygulama deposu, yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API'si gibi birçok hizmet sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript ile yazılabilir. C# ve Visual Basic kullanırken .NET API'leri .NET Core tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Kılavuzu](index.md)
-- [.NET Çerçeve Rehberi](../framework/index.md)
+- [.NET Rehberi](index.md)
+- [.NET Çerçeve Rehberi](../framework/index.yml)
 - [.NET Core](../core/index.md)
 - [ASP.NET Genel Bakış](/aspnet/index#pivot=aspnet)
 - [ASP.NET Çekirdek Genel Bakış](/aspnet/index#pivot=core)

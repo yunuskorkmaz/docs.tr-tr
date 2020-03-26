@@ -4,40 +4,40 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - imaging
 - graphics [Windows Forms], categories
-- 2-D vector graphics
+- 2D vector graphics
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: a69fa7a1ccad353c879731de05dc47f0d6ae8795
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505238"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291733"
 ---
 # <a name="three-categories-of-graphics-services"></a>Üç Grafik Hizmeti Kategorisi
-Windows Forms'ta grafik teklifleri, aşağıdaki üç ana kategoriye ayrılır:  
+Windows Formlar'daki grafik teklifleri aşağıdaki üç geniş kategoriye girer:  
   
-- İki boyutlu (2B) vektör grafikleri  
+- İki boyutlu (2-B) vektör grafikleri  
   
 - Görüntüleme  
   
 - Tipografi  
   
-## <a name="2-d-vector-graphics"></a>2B vektör grafikleri  
- İki boyutlu bir vektör grafik ilkelleri olan; çizgiler, eğriler ve şekiller gibi; Bu, koordinat sistemi noktalarında kümesi tarafından belirtilir. Örneğin, düz bir çizgi kendi iki uç tarafından belirtilir ve bir dikdörtgen konumu, sol üst köşesinin ve bir çift sayı genişlik ve yükseklik vererek vermiş bir noktası tarafından belirtilir. Basit bir yolu, düz satırlarla bağlı noktaları dizisi ile belirtilir. Bézier eğri dört denetim noktaları tarafından belirtilen karmaşık bir eğri ' dir.  
+## <a name="2d-vector-graphics"></a>2D Vektör Grafikleri  
+ Çizgiler, eğriler ve şekiller gibi iki boyutlu vektör grafikleri, koordinat sistemindeki nokta kümeleri tarafından belirtilen ilkel grafiklerdir. Örneğin, düz bir çizgi iki uç noktası yla belirtilir ve dikdörtgen, sol üst köşesinin konumunu veren bir nokta ve genişliğini ve yüksekliğini veren bir sayı çifti ile belirtilir. Basit bir yol, düz çizgilerle bağlanan bir dizi nokta tarafından belirtilir. Bézier spline dört kontrol noktası ile belirtilen karmaşık bir eğridir.  
   
- GDI + sınıfları ve yapıları temelleri hakkında bilgi depolamak kendilerini, ilkel nasıl düzenleneceği hakkında bilgi depolamak sınıfları ve çizim yapan sınıfları sağlar. Örneğin, <xref:System.Drawing.Rectangle> yapısı depolar; dikdörtgen boyutunu ve konumunu <xref:System.Drawing.Pen> sınıfı satırı renk, çizgi genişliği ve çizgi stili; ilgili bilgileri depolar ve <xref:System.Drawing.Graphics> sınıfında çizim satırları, dikdörtgenler, yollar, yöntemleri ve diğer şekiller. Vardır da birkaç <xref:System.Drawing.Brush> hakkında bilgi depolamak sınıfları kapalı şekiller ve yollar, renkleri veya desenleri ile doldurulur.  
+ GDI+, ilkellerin kendileri hakkında bilgi depolayan sınıflar ve yapılar, ilkellerin nasıl çizilecekleri hakkında bilgi depolayan sınıflar ve çizimi gerçekten yapan sınıflar sağlar. Örneğin, <xref:System.Drawing.Rectangle> yapı bir dikdörtgenin konumunu ve boyutunu depolar; <xref:System.Drawing.Pen> sınıf çizgi rengi, çizgi genişliği ve çizgi stili hakkında bilgi depolar; ve <xref:System.Drawing.Graphics> sınıfın çizgiler, dikdörtgenler, yollar ve diğer şekiller çizmek için yöntemleri vardır. Kapalı şekillerin <xref:System.Drawing.Brush> ve yolların renkler veya desenlerle nasıl doldurulacağı hakkında bilgi depolayan çeşitli sınıflar da vardır.  
   
- Bir dizi grafik komut da vektör görüntü meta dosyası kaydedebilirsiniz. GDI + sağlar <xref:System.Drawing.Imaging.Metafile> kaydı, görüntüleme ve meta dosyaları kaydetmek için sınıf. İle <xref:System.Drawing.Imaging.MetafileHeader> ve <xref:System.Drawing.Imaging.MetaHeader> sınıfları, meta dosyası üst bilgisinde depolanan verileri İnceleme.  
+ Bir grafik komutları dizisi olan vektör görüntüsünü meta dosyaya kaydedebilirsiniz. GDI+, <xref:System.Drawing.Imaging.Metafile> meta dosyaların kaydedilmesi, görüntülenmesi ve kaydedilmesi için sınıfı sağlar. <xref:System.Drawing.Imaging.MetafileHeader> Ve <xref:System.Drawing.Imaging.MetaHeader> sınıflar ile, metadosya üstbilgisinde depolanan verileri inceleyebilirsiniz.  
   
 ## <a name="imaging"></a>Görüntüleme  
- Belirli türde bir resim zor veya imkansız vektör grafikleri teknikleriyle görüntülenecek. Örneğin, araç çubuğu düğmeleri resimleri ve simgeler görünür resimleri çizgiler ve eğrilerle koleksiyonlarının belirtmek zordur. Yüksek çözünürlüklü dijital fotoğrafını kalabalık Beyzbol stadyum vektör teknikleri ile oluşturmak daha da zordur. Bu tür görüntüler, dizi tek nokta ekranında renklerini temsil eden sayı olan bit eşlemler olarak depolanır. GDI + sağlar <xref:System.Drawing.Bitmap> görüntüleme, düzenleme ve bit eşlemleri kaydetme sınıfı.  
+ Belirli türdeki resimlerin vektör grafik teknikleri ile görüntülenmesi zor veya imkansızdır. Örneğin, araç çubuğu düğmeleri üzerindeki resimler ve simge olarak görünen resimleri satır ve eğri koleksiyonları olarak belirtmek zordur. Kalabalık bir beyzbol stadyumunun yüksek çözünürlüklü dijital fotoğrafını vektör teknikleri ile oluşturmak daha da zordur. Bu tür görüntüler, ekrandaki tek tek noktaların renklerini temsil eden sayı dizileri olan bit eşlemler olarak depolanır. GDI+, <xref:System.Drawing.Bitmap> bit eşlemlerini görüntülemek, işlemek ve kaydetmek için sınıfı sağlar.  
   
 ## <a name="typography"></a>Tipografi  
- Tipografi yazı tipleri, boyutları ve stilleri çeşitli metin görüntülenir. GDI +'da bu karmaşık bir görev için kapsamlı destek sağlar. GDI +'daki yeni özelliklerin daha sorunsuz bir görünümünü bir LCD ekranda işlenen metin veren piksel düzgünleştirme biridir.  
+ Tipografi, çeşitli yazı tiplerinde, boyutlarda ve stillerde metnin görüntülenmesidir. GDI+, bu karmaşık görev için kapsamlı destek sağlar. GDI+'daki yeni özelliklerden biri, LCD ekranda işlenen metinlere daha yumuşak bir görünüm sağlayan alt piksel antialiasing'dir.  
   
- Ayrıca, Windows Forms yetenekleri GDI ile metin çizme seçeneği sunar, <xref:System.Windows.Forms.TextRenderer> sınıfı.  
+ Buna ek olarak, Windows Forms kendi <xref:System.Windows.Forms.TextRenderer> sınıfında GDI yetenekleri ile metin çizmek için seçenek salar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

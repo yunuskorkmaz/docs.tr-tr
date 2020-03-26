@@ -6,32 +6,32 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73973087"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249363"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Desen eşleştirme ve is ve operatörler olarak kullanarak güvenli bir şekilde döküm nasıl
 
 Nesneler çok morfik olduğundan, taban sınıf [türünden](../programming-guide/types/index.md)bir değişkenin türetilmiş bir türü tutması mümkündür. Türetilen türün örnek üyelerine erişmek için, değeri türetilmiş türe geri [atmak](../programming-guide/types/casting-and-type-conversions.md) gerekir. Ancak, bir döküm atma <xref:System.InvalidCastException>riski oluşturur. C# yalnızca başarılı olduğunda koşullu olarak bir döküm gerçekleştiren [desen eşleştirme](../pattern-matching.md) deyimleri sağlar. C# ayrıca [bir](../language-reference/operators/type-testing-and-cast.md#is-operator) değerin belirli bir türde olup olmadığını test etmek için is ve [operatörler olarak](../language-reference/operators/type-testing-and-cast.md#as-operator) sağlar.
 
-Aşağıdaki kod desen eşleşen `is` deyimi gösterir. Türemiş türleri olası bir kümebiri olup olmadığını belirlemek için bir yöntem bağımsız değişkeni sınamak yöntemleri içerir:
+Aşağıdaki örnek, desen eşleştirme `is` deyiminin nasıl kullanılacağını gösterir:
 
 [!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-Önceki örnek, desen eşleşen sözdizimi birkaç özelliklerini gösterir. Ve `if (a is Mammal m)` `if (o is Mammal m)` ifadeler bir başlatma atama ile test birleştirir. Atama yalnızca test başarılı olduğunda oluşur. Değişken `m` yalnızca atandığı katıştırılmış `if` deyimin kapsamıdır. Daha sonra `m` aynı yöntemle erişemezsiniz. Etkileşimli pencerede deneyin.
+Önceki örnek, desen eşleşen sözdizimi birkaç özelliklerini gösterir. Deyim, `if (a is Mammal m)` testi bir başlatma atamasıyla birleştirir. Atama yalnızca test başarılı olduğunda oluşur. Değişken `m` yalnızca atandığı katıştırılmış `if` deyimin kapsamıdır. Daha sonra `m` aynı yöntemle erişemezsiniz. Önceki örnek, bir nesneyi belirli bir türe dönüştürmek için [ `as` işlecinin](../language-reference/operators/type-testing-and-cast.md#as-operator) nasıl kullanılacağını da gösterir.
 
-Aşağıdaki örnek kodda gösterildiği [gibi, nullable değer türü](../language-reference/builtin-types/nullable-value-types.md) bir değer varsa, sınama için aynı sözdizimini de kullanabilirsiniz:
+Aşağıdaki örnekte gösterildiği [gibi, nullable değer türü](../language-reference/builtin-types/nullable-value-types.md) bir değer varsa, sınama için aynı sözdizimini de kullanabilirsiniz:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
 Önceki örnek, dönüşümlerle kullanmak üzere eşleşen desen diğer özelliklerini gösterir. `null` Değeri özel olarak denetleyerek null deseni için bir değişkeni sınayabilirsiniz. Değişkenin çalışma zamanı değeri `null`olduğunda, `is` bir tür için `false`bir deyim her zaman döndürür. Desen eşleştirme `is` deyimi gibi boşatılabilir bir değer `int?` türüne izin `Nullable<int>`vermez, ancak başka bir değer türü için sınama yapabilirsiniz. Önceki `is` örnekteki desenler nullable değer türleri ile sınırlı değildir. Ayrıca, başvuru türünden bir değişkenin bir değeri olup olmadığını veya `null`.
 
-Önceki örnek, değişkenin birçok farklı `is` türden `switch` biri olabileceği bir deyimde desen eşleştirme ifadesini nasıl kullandığınızı da gösterir.
+Önceki örnek, değişkenin birçok farklı türden `switch` biri olabileceği bir deyimdeki tür deseni nasıl kullandığınızı da gösterir.
 
-Bir değişkenin belirli bir tür olup olmadığını sınamak, ancak yeni bir değişkene `is` `as` atamamak istiyorsanız, başvuru türleri ve nullable türleri için ve işleçleri kullanabilirsiniz. Aşağıdaki kod, bir `is` değişkenin `as` belirli bir türde olup olmadığını sınamak için desen eşleştirmesi kullanılmadan önce C# dilinin bir parçası olan ifadelerin nasıl kullanılacağını gösterir:
+Bir değişkenin belirli bir tür olup olmadığını sınamak, ancak yeni bir değişkene `is` `as` atamamak istiyorsanız, başvuru türleri ve nullable değer türleri için ve işleçleri kullanabilirsiniz. Aşağıdaki kod, bir `is` değişkenin `as` belirli bir türde olup olmadığını sınamak için desen eşleştirmesi kullanılmadan önce C# dilinin bir parçası olan ifadelerin nasıl kullanılacağını gösterir:
 
 [!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 

@@ -2,12 +2,12 @@
 title: Bulut Için Optimize Edilmiş uygulamalarda Microsoft teknolojileri
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Bulut Için Optimize Edilmiş uygulamalarda Microsoft teknolojileri
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68676996"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546516"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Bulut için optimize edilmiş uygulamalarda Microsoft teknolojileri
 
@@ -19,7 +19,7 @@ Aşağıdaki listede, Bulut Için Optimize Edilmiş uygulamalar için gereksinim
 
 - **Yönetilen bulut**: Yönetilen bir bulut seçeneğini seçtiğinizde, temel altyapıyı, VM'leri, işletim sistemi yamaları ve ağ yapılandırmasını yönetme ve destekleme giderini ve karmaşıklığını önleyebilirsiniz. IaaS kullanarak geçiş yapmayı seçerseniz, tüm bu görevlerden ve ilişkili maliyetlerden siz sorumlusunuz. Yönetilen bir bulut seçeneğinde, yalnızca geliştirdiğiniz uygulamaları ve hizmetleri yönetirsiniz. Bulut hizmeti sağlayıcısı genellikle diğer her şeyi yönetir. Azure'daki yönetilen bulut hizmetlerine örnek olarak [Azure SQL Veritabanı, Azure](https://azure.microsoft.com/services/sql-database) [Redis Önbelleği,](https://azure.microsoft.com/services/cache/) [Azure Cosmos DB, Azure](https://azure.microsoft.com/services/cosmos-db/) [Depolama,](https://azure.microsoft.com/services/storage/) [MySQL için Azure Veritabanı,](https://azure.microsoft.com/services/mysql/) [PostgreSQL için Azure Veritabanı,](https://azure.microsoft.com/services/postgresql/) [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)ve [VM ölçek setleri,](https://azure.microsoft.com/services/virtual-machine-scale-sets/) [Azure Uygulama Hizmeti](https://azure.microsoft.com/services/app-service/)ve Azure [Kubernetes Hizmeti](https://azure.microsoft.com/services/container-service/)gibi yönetilen işlem hizmetleri verilebilir.
 
-- **Uygulama geliştirme**: Kapsayıcılarda çalışan uygulamalar oluştururken birçok dil arasından seçim yapabilirsiniz. Bu kılavuz [.NET'e](https://www.microsoft.com/net)odaklanır, ancak Node.js, Python, Spring/Java veya Go gibi diğer dilleri kullanarak kapsayıcı tabanlı uygulamalar geliştirebilirsiniz.
+- **Uygulama geliştirme**: Kapsayıcılarda çalışan uygulamalar oluştururken birçok dil arasından seçim yapabilirsiniz. Bu kılavuz [.NET'e](https://dotnet.microsoft.com)odaklanır, ancak Node.js, Python, Spring/Java veya Go gibi diğer dilleri kullanarak kapsayıcı tabanlı uygulamalar geliştirebilirsiniz.
 
 - **İzleme, telemetri, günlüğe kaydetme ve denetleme**: Bulutta çalışan uygulamaları ve kapsayıcıları izleme ve denetleme becerisi Bulut Tarafından Optimize Edilmiş tüm uygulamalar için çok önemlidir. [Azure Uygulama Öngörüleri](https://azure.microsoft.com/services/application-insights/) ve [Microsoft Operations Management Suite,](https://www.microsoft.com/cloud-platform/operations-management-suite) Bulut Tarafından Optimize Edilmiş uygulamaların izlenmesini ve denetlenmesisağlayan başlıca Microsoft araçlarıdır.
 

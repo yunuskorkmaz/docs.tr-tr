@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ceb831057a9a92aa7319d2004f04d7cf5ac820e
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186360"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111835"
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
 Konturözelliği, <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> bir konturun boyutunu, rengini ve şekli gibi bir konturgörünümünü belirtmenize olanak tanır, ancak görünümü <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verenin ötesinde özelleştirmek istediğiniz zamanlar olabilir. Bir hava fırçası, yağlı boya ve diğer birçok efekt görünümünü görüntüleyerek mürekkep görünümünü özelleştirmek isteyebilirsiniz. Windows Sunu Temeli (WPF), özel <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne uygulayarak mürekçeoluşturmanızı sağlar.  
@@ -62,7 +62,7 @@ Konturözelliği, <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> bir kont
   
  Sınıf <xref:System.Windows.Ink.Stroke> isabet testi de gerçekleştirebilir. Ayrıca, geçerli sınıftayöntemi <xref:System.Windows.Ink.Stroke.HitTest%2A> geçersiz kılarak kendi isabet testi algoritmanızı da uygulayabilirsiniz.  
   
- Aşağıdaki C# kodu, <xref:System.Windows.Ink.Stroke> <xref:System.Windows.Input.StylusPoint> verileri 3-B kontur olarak işleyen özel bir sınıf gösterir.  
+ Aşağıdaki C# kodu, <xref:System.Windows.Ink.Stroke> <xref:System.Windows.Input.StylusPoint> verileri 3B kontur olarak işleyen özel bir sınıf gösterir.  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  

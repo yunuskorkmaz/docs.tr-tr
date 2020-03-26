@@ -2,12 +2,12 @@
 title: özel korumalı - C# Referans
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134358"
 ---
 # <a name="private-protected-c-reference"></a>özel korumalı (C# Reference)
 
@@ -21,8 +21,6 @@ ms.locfileid: "75713215"
 Taban sınıfın özel korumalı üyesine, yalnızca değişkenin statik türü türetilmiş sınıf türüyse, içerdiği derlemedeki türetilmiş türlerden erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:  
 
 ```csharp
-// Assembly1.cs  
-// Compile with: /target:library  
 public class BaseClass
 {
     private protected int myValue = 0;

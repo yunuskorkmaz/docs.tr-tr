@@ -2,12 +2,12 @@
 title: Çalışma zamanı paket deposu
 description: .NET Core tarafından kullanılan bildirimleri hedeflemek için çalışma zamanı paket deposunu nasıl kullanacağınızı öğrenin.
 ms.date: 08/12/2017
-ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448964"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134270"
 ---
 # <a name="runtime-package-store"></a>Çalışma zamanı paket deposu
 
@@ -41,7 +41,7 @@ Bu özellik, paketlerin depolandığı diskteki bir dizin olan *çalışma zaman
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="<NUGET_PACKAGE>" Version="<VERSION>" />
+    <PackageReference Include="NUGET_PACKAGE" Version="VERSION" />
     <!-- Include additional packages here -->
   </ItemGroup>
 </Project>

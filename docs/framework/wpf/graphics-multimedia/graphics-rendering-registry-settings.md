@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186418"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112290"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, uygulamaları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] etkileyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik oluşturma kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -33,7 +33,7 @@ Bu konu, uygulamaları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
 |Ayar|Açıklama|  
 |-------------|-----------------|  
 |**Donanım Hızlandırma Seçeneğini Devre Dışı**|Donanım hızlandırmanın etkinlenip etkinleştirilmeyeceğini belirtir.|  
-|**Maksimum Çoklu Örnek değeri**|3-B içeriğin antialiasing için çoklu örnekleme derecesini belirtir.|  
+|**Maksimum Çoklu Örnek değeri**|3B içeriğin antialiasing için çoklu örnekleme derecesini belirtir.|  
 |**Gerekli Video Sürücü Tarih Ayarı**|Sistemin Kasım 2004'ten önce yayımlanan sürücüler için donanım ivmesini devre dışı bırakıp devre dışı bırakmayacağını belirtir.|  
 |**Referans Rasterizer Seçeneğini Kullanın**|Referans rasterizer kullanılıp [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılmaması gerektiğini belirtir.|  
   
@@ -57,9 +57,9 @@ Bu konu, uygulamaları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- **Maksimum çoklu örnek değeri,** 3-B içeriğin maksimum antialiasing miktarını ayarlamanızı sağlar. Windows Vista'da 3-B antialiasing devre dışı kalmak için bu düzeyi kullanın.  
+ **Maksimum çoklu örnek değeri,** 3B içeriğin maksimum antialiasing miktarını ayarlamanızı sağlar. Windows Vista'da 3B antialiasing devre dışı kalmak için bu düzeyi kullanın.  
   
- En **büyük çoklu örnek değeri** 0 ile 16 arasında değişen bir DWORD değeridir. 0 değeri, 3-B içeriğin çok örnekli antialiasing devre dışı bırakılır ve 16 değeri ekran kartı tarafından desteklenen 16x çok örnekli antialiasing kullanmaya çalışacağız belirtir. XPDM sürücülerini kullanan bilgisayarlarda bu kayıt defteri anahtar değerinin ayarlanması, uygulamaların büyük miktarda ek video belleği kullanmasına, 3-B görüntüleme performansını düşürmesine ve işleme hataları ve kararlılık oluşturma potansiyeline sahip olmasına neden olacağını dikkat edin Sorun.  
+ En **büyük çoklu örnek değeri** 0 ile 16 arasında değişen bir DWORD değeridir. 0 değeri, 3B içeriğin çok örnekli antialiasing devre dışı edilmesi gerektiğini belirtir ve 16 değeri ekran kartı tarafından desteklenen 16x çok örnekli antialiasing kullanmaya çalışacağız. XPDM sürücülerini kullanan bilgisayarlarda bu kayıt defteri anahtar değerinin ayarlanması, uygulamaların büyük miktarda ek video belleği kullanmasına, 3B görüntüleme performansını azaltmasına ve işleme hataları ve kararlılık getirme potansiyeline sahip olmasına neden olacağını dikkat edin Sorun.  
   
  Bu kayıt defteri anahtarı ayarlanmadığında, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XPDM sürücüleri için varsayılan olarak 0 ve WDDM sürücüleri için 4 olarak belirlenmiştir.  
   

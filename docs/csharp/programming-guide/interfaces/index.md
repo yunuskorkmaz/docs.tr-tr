@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157084"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249187"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
-Arabirim, soyut olmayan bir [sınıfın](../../language-reference/keywords/class.md) veya [bir yapının](../../language-reference/builtin-types/struct.md) uygulaması gereken ilgili işlevler grubu için tanımlar içerir. Arabirim, `static` uygulanması gereken yöntemleri tanımlayabilir. Arabirim, bildirilen örnek üyelerinden herhangi biri veya tümü için varsayılan bir uygulama sağlayabilir. Arabirim, alanlar, otomatik olarak uygulanan özellikler veya özellik benzeri olaylar gibi örnek verileri bildirmeyebilir.
+Arabirim, soyut olmayan bir [sınıfın](../../language-reference/keywords/class.md) veya [bir yapının](../../language-reference/builtin-types/struct.md) uygulaması gereken ilgili işlevler grubu için tanımlar içerir. Arabirim, `static` uygulanması gereken yöntemleri tanımlayabilir. C# 8.0 ile başlayarak, bir arabirim üyeler için varsayılan bir uygulama tanımlayabilir. Arabirim, alanlar, otomatik olarak uygulanan özellikler veya özellik benzeri olaylar gibi örnek verileri bildirmeyebilir.
 
 Arabirimleri kullanarak, örneğin, bir sınıftaki birden çok kaynaktan gelen davranışları ekleyebilirsiniz. Bu özellik C#'da önemlidir, çünkü dil sınıfların birden çok kalıtımını desteklemez. Ayrıca, başka bir yapı veya sınıftan devralamayacağından, yapı için kalıtım benzetimi yapmak istiyorsanız bir arabirim kullanmanız gerekir.
 
@@ -54,7 +54,7 @@ Arabirim aşağıdaki özelliklere sahiptir:
 - Bir arayüz doğrudan anlık olamaz. Üyeleri, arabirimi uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
 - Bir sınıf veya yapı birden çok arabirim uygulayabilir. Bir sınıf bir taban sınıf devralabilir ve aynı zamanda bir veya daha fazla arabirim uygulayabilirsiniz.
 
-## <a name="BKMK_RelatedSections"></a>İlgili Bölümler
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili Bölümler
 
 - [Arayüz Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  

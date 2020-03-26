@@ -3,19 +3,21 @@ title: Ubuntu 16.04 paket yöneticisine .NET Core yükle - .NET Core
 description: .NET Core SDK'yı ve çalışma süresini Ubuntu 16.04'e yüklemek için bir paket yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: 6038e64a2aa50d09923454e346f05c58a6c1e2fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 9e99cd8649e907fbbf8ffac7bfc008610396a31c
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134163"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Ubuntu 16.04 Paket Yöneticisi - Install .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Bu makalede, Ubuntu 16.04'e .NET Core yüklemek için bir paket yöneticisinin nasıl kullanılacağı açıklanmaktadır. Çalışma süresini yüklüyorsanız, hem .NET Core hem de ASP.NET Core [çalışma sürelerini içerdiğinden, ASP.NET Core çalışma süresini](#install-the-aspnet-core-runtime)yüklemenizi öneririz.
+Bu makalede, Ubuntu 16.04'e .NET Core yüklemek için bir paket yöneticisinin nasıl kullanılacağı açıklanmaktadır.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
 
@@ -30,7 +32,7 @@ Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 Bir terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
@@ -98,9 +100,9 @@ Bu işe yaramazsa, aşağıdaki komutları içeren bir el ile yükleme çalışt
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget -q https://packages.microsoft.com/config/ubuntu/16.04/prod.list
+wget https://packages.microsoft.com/config/ubuntu/16.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list

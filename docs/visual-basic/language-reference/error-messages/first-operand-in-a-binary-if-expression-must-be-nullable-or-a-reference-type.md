@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625563"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249532"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>İkili bir 'If' ifadesindeki ilk işlenen boş değer atanabilir veya bir başvuru türü olmalıdır
-Bir `If` ifadesi, iki veya üç bağımsız değişken alabilir. Yalnızca iki bağımsız değişken gönderdiğinizde, ilk bağımsız değişkeninin bir başvuru türüyle veya null yapılabilir bir tür olmalıdır. İlk bağımsız değişken için bir şey dışında değerlendirilirse `Nothing`, bu değer döndürülür. İlk bağımsız değişken değerlendirilirse `Nothing`, ikinci bağımsız değişken değerlendirilir ve döndürdü.  
+Bir `If` ifade iki veya üç bağımsız değişken alabilir. Yalnızca iki bağımsız değişken gönderdiğinde, ilk bağımsız değişken bir başvuru türü veya nullable değer türü olmalıdır. İlk bağımsız değişken, başka bir `Nothing`şeye değer biçilirse, değeri döndürülür. İlk bağımsız değişken `Nothing`, ikinci bağımsız değişken olarak değerlendirilir ve döndürülür.  
   
- Örneğin, aşağıdaki kod iki tane `If` üç bağımsız değişken biri diğeri iki bağımsız değişkenler ile ifadeler. İfadeler, hesaplar ve aynı değeri döndürür.  
+ Örneğin, aşağıdaki kod, `If` biri üç bağımsız değişkenli, diğeri iki bağımsız değişkenli olmak üzere iki ifade içerir. İfadeler aynı değeri hesaplar ve döndürer.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Aşağıdaki ifadeler bu hataya neden:  
+ Aşağıdaki ifadeler bu hataya neden olur:  
   
 ```vb  
 Dim choice1 = 4  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Kod değiştiremiyorsanız, ilk bağımsız değişken bir boş değer atanabilir tür veya başvuru türü olması için üç bağımsız değişken bir dönüştürme göz önünde bulundurun `If` ifade veya bir `If...Then...Else` deyimi.  
+- Kodu, ilk bağımsız değişkenin geçersiz bir değer türü veya başvuru türü olacak şekilde değiştiremiyorsanız, üç bağımsız değişkenli `If` ifadeye veya bir `If...Then...Else` deyime dönüştürmeyi düşünün.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  

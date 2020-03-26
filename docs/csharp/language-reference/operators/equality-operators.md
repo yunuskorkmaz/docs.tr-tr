@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399569"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110925"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik operatörleri (C# başvurusu)
 
@@ -83,7 +83,7 @@ Aşağıdaki örnek, işleç `!=` kullanımını gösterir:
 
 ## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
 
-Kullanıcı tanımlı bir tür `==` ve `!=` işleçler [aşırı yükleyebilir.](operator-overloading.md) Bir tür iki işleçten birini aşırı yüklenirse, başka bir işleçten de aşırı yüklenmesi gerekir.
+Kullanıcı tanımlı bir tür `==` ve `!=` işleçler [aşırı yükleyebilir.](operator-overloading.md) Bir tür iki işleçten birini aşırı yüklenirse, diğerini de aşırı yüklemesi gerekir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

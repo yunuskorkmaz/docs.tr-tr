@@ -3,12 +3,12 @@ title: Kod la .NET Core bağlantı noktası için Windows Uyumluluk Paketini kul
 description: Windows Uyumluluk Paketi ve varolan .NET Framework kodunu .NET Core'a bağlantı noktasına getirmek için nasıl kullanabileceğiniz hakkında bilgi edinin.
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 166259ca37a2005d67f6c545e4843a940f05fb71
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228630"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Kod la .NET Core bağlantı noktası için Windows Uyumluluk Paketini kullanma
 
@@ -40,9 +40,9 @@ Yalnızca Windows'a özel ve aşağıdaki teknoloji alanlarından çapraz platfo
 - Windows Runtime Önbelleğe Alma
 - Windows Hizmetleri
 
-Daha fazla bilgi için [uyumluluk paketinin belirtimine](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)bakın.
+Daha fazla bilgi için [uyumluluk paketinin belirtimine](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md)bakın.
 
-## <a name="get-started"></a>Başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 1. Taşımadan önce, [Taşıma işlemine](index.md)bir göz attıktan emin olun.
 

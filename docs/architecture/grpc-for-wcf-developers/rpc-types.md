@@ -2,12 +2,12 @@
 title: WCF geliştiricileri için RPC - gRPC türleri
 description: WCF tarafından desteklenen uzaktan yordam çağrısı türlerinin ve bunların gRPC'deki eşdeğerlerinin gözden geçirilmesi
 ms.date: 09/02/2019
-ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40c0779dc015904e9dabbb448075e3c5aa5dc49a
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111094"
 ---
 # <a name="types-of-rpc"></a>RPC türleri
 
@@ -125,7 +125,7 @@ WCF'de, oturumlu [ServiceContract](xref:System.ServiceModel.ServiceContractAttri
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF tek yönlü işlemler ve gRPC istemci akışı
 
-WCF, aktarıma özgü `[OperationContract(IsOneWay = true)]`bir onay döndüren tek yönlü işlemler (işaretli) sağlar. gRPC hizmet yöntemleri boş olsa bile her zaman yanıt verir. İstemci her zaman bu yanıtı beklemelidir. gRPC'de "ateş ve unut" mesajlaşma stili için bir istemci akış hizmeti oluşturabilirsiniz.
+WCF, aktarıma özgü `[OperationContract(IsOneWay = true)]`bir bildirimi döndüren tek yönlü işlemler (işaretli) sağlar. gRPC hizmet yöntemleri boş olsa bile her zaman yanıt verir. İstemci her zaman bu yanıtı beklemelidir. gRPC'de "ateş ve unut" mesajlaşma stili için bir istemci akış hizmeti oluşturabilirsiniz.
 
 ### <a name="thing_logproto"></a>thing_log.proto
 

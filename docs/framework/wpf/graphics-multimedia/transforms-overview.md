@@ -3,24 +3,24 @@ title: Dönüşümlere Genel Bakış
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transformations [WPF], about transformations
-- classes [WPF], 2-D transform
-- transform classes [WPF], 2-D
-- 2-D transform classes
+- classes [WPF], 2D transform
+- transform classes [WPF], 2D
+- 2D transform classes
 - FrameworkElement objects [WPF], rotating
 - FrameworkElement objects [WPF], skewing
 - FrameworkElement objects [WPF], translating
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 49fb0109e1d7db065f7e241955f30cb038699020
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5f29404a301eb023ff24b2890531dede6440ec4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187461"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111965"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
-Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkElement> nesneleri döndürmek, ölçeklendirmek, taşımak (çevirmek) ve eğriltmek için 2-B sınıflarının nasıl kullanılacağını açıklar.  
+Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkElement> nesneleri döndürmek, ölçeklendirmek, taşımak (çevirmek) ve eğriltmek için 2B sınıflarının nasıl kullanılacağını açıklar.  
 
 <a name="whatIsATransformSection"></a>
 ## <a name="what-is-a-transform"></a>Dönüşüm Nedir?  
@@ -31,7 +31,7 @@ Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkEle
   
  Aşağıdaki tabloda bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] matrisin yapısı gösterilmektedir.  
   
-### <a name="a-2-d-transformation-matrix"></a>2-B dönüştürme matrisi  
+### <a name="a-2d-transformation-matrix"></a>2B dönüşüm matrisi  
   
 ||||  
 |-|-|-|  
@@ -45,7 +45,7 @@ Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkEle
   
 <a name="transformClassesSection"></a>
 ## <a name="transform-classes"></a>Sınıfları Dönüştür  
- Windows Sunu Temeli (WPF), ortak <xref:System.Windows.Media.Transform> dönüşüm işlemleri için aşağıdaki 2-B sınıfları sağlar:  
+ Windows Sunu Temeli (WPF), <xref:System.Windows.Media.Transform> ortak dönüşüm işlemleri için aşağıdaki 2B sınıfları sağlar:  
   
 |Sınıf|Açıklama|Örnek|Illüstrasyon|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ Bu konu, <xref:System.Windows.Media.Transform> <xref:System.Windows.FrameworkEle
 |<xref:System.Windows.Media.TransformGroup>|Birden <xref:System.Windows.Media.TransformGroup> çok nesneyi, <xref:System.Windows.Media.Transform> daha sonra özellikleri dönüştürmek için uygulayabileceğiniz tek bir nesne olarak grupla.|[Nesneye Birden Çok Dönüşüm Uygulama](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Diğer <xref:System.Windows.Media.Transform> sınıflar tarafından sağverilmeyecek özel dönüşümler oluşturur. Bir <xref:System.Windows.Media.MatrixTransform>matrisi doğrudan manipüle emdiğinizde.|[Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Sunu Temeli (WPF) da 3-B dönüşümleri sağlar. Daha fazla bilgi <xref:System.Windows.Media.Media3D.Transform3D> için sınıfa bakın.  
+ Windows Sunu Temeli (WPF) da 3B dönüşümler sağlar. Daha fazla bilgi <xref:System.Windows.Media.Media3D.Transform3D> için sınıfa bakın.  
   
 <a name="transformationproperties"></a>
 ## <a name="common-transformation-properties"></a>Ortak Dönüşüm Özellikleri  
@@ -142,7 +142,7 @@ Button'u döndürmek için kullanılan DüzenTransform
   
  [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Numunenin tamamı için [2-B Dönüşüm Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın. Animasyonlar hakkında daha fazla bilgi için [Animasyona Genel Bakış'a](animation-overview.md)bakın.  
+ Tam örnek için [2B Dönüşümler Örneği'ne](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)bakın. Animasyonlar hakkında daha fazla bilgi için [Animasyona Genel Bakış'a](animation-overview.md)bakın.  
   
 <a name="freezable_features"></a>
 ## <a name="freezable-features"></a>Freezable Özellikler  
@@ -153,4 +153,4 @@ Button'u döndürmek için kullanılan DüzenTransform
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [Nasıl Dır Konular](transformations-how-to-topics.md)
-- [2-B Dönüşüm Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2B Örnek Dönüştürür](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

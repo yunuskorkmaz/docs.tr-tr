@@ -3,14 +3,14 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI ve özelliklerine genel bakış.
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399121"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110847"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI genel bakış
+# <a name="net-core-cli-overview"></a>.NET Core CLI’ya genel bakış
 
 **Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
 
@@ -95,11 +95,11 @@ Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` kod oluşturur. `dot
 
 ### <a name="arguments"></a>Bağımsız Değişkenler
 
-Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenleridir. Örneğin, yürüttuğunuzda, `dotnet publish my_app.csproj` `my_app.csproj` bağımsız değişken yayımlanacak projeyi gösterir ve `publish` komuta geçirilir.
+Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenleridir. Örneğin, yürüttuğunuzda, `dotnet publish my_app.csproj` `my_app.csproj` bağımsız değişken yayımlanacak projeyi `publish` gösterir ve komuta geçirilir.
 
 ### <a name="options"></a>Seçenekler
 
-Komut satırında geçirdiğiniz seçenekler, çağrılan komutun seçenekleridir. Örneğin, `dotnet publish --output /build_output`çalıştırdığınızda, `--output` seçenek ve değeri komuta `publish` geçirilir.
+Komut satırında geçirdiğiniz seçenekler, çağrılan komutun seçenekleridir. Örneğin, çalıştırdığınızda, `dotnet publish --output /build_output` `--output` seçenek ve değeri komuta `publish` geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

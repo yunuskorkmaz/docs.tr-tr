@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: e3326f654e05ef7d487a76f076f8ad0da3637096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187241"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291630"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamaları oluşturmak için zengin bir ortam sağlar. Ancak, Windows Forms koduna önemli bir yatırımınız olduğunda, mevcut Windows Forms [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanızı sıfırdan yeniden yazmak yerine genişletmek daha etkili olabilir. Yaygın bir senaryo, Windows Forms uygulamanızda uygulanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir veya daha fazla denetimi katıştırmak istediğinizde olur. WPF denetimlerini özelleştirme hakkında daha fazla bilgi için [bkz.](../controls/control-customization.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "79187241"
   
  Bu izbarada gösterilen görevlerin tam kod listesi için Windows [Formlar Örneğinde WPF Bileşik Denetimi Barındırma](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)bölümüne bakın.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
 
 Bu walkthrough tamamlamak için Visual Studio gerekir.  
   
@@ -185,7 +185,7 @@ namespace MyControls
 
 Aşağıdaki resimde, Windows Forms uygulamasında barındırılan bir WPF bileşik denetimi gösterilmektedir"  
 
- ![Avalon denetimini barındıran bir Windows Formu gösteren scteenshot.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Windows Form Barındırma Avalon denetimini gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
  Projeyi başlatmak için:  
@@ -329,4 +329,4 @@ Aşağıdaki resimde, Windows Forms uygulamasında barındırılan bir WPF bile�
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio’da XAML tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [İzlenecek yol: 3B WPF Bileşik Denetimini Windows Forms İçinde Barındırma](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Walkthrough: Windows Formlarında 3B WPF Bileşik Denetimi Barındırma](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

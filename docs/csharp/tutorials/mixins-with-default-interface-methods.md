@@ -3,12 +3,12 @@ title: Varsayılan arabirim yöntemlerini kullanarak mixin türleri oluşturma
 description: Varsayılan arabirim üyelerini kullanarak uygulayıcılar için isteğe bağlı varsayılan uygulamalara sahip arabirimleri genişletebilirsiniz.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134369"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Öğretici: Varsayılan arabirim yöntemleriyle arabirimleri kullanarak sınıf oluştururken işlevselliği karıştırın
 
@@ -22,7 +22,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Varsayılan uygulamaları kullanan sınıflar oluşturun.
 > * Varsayılan uygulamaların bazılarını veya tümünün geçersiz kılındığını belirten sınıflar oluşturun.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 C# 8.0 derleyicisi de dahil olmak üzere .NET Core'u çalıştıracak şekilde makinenizi ayarlamanız gerekir. C# 8.0 derleyicisi [Visual Studio 2019 sürümü 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya daha sonra ile başlayarak kullanılabilir.
 
@@ -117,7 +117,7 @@ Bu senaryo, herhangi bir uygulama olmadan bir temel arabirim gösterir. `ILight`
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-Varsayılan uygulama AC güç varsayar:
+Varsayılan uygulama hiçbir güç varsayar:
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

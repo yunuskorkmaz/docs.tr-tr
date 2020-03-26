@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452837"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112121"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Nasıl yapılır: Nesneye Birden Çok Dönüşüm Uygulama
-Bu örnek, iki veya daha fazla <xref:System.Windows.Media.Transform> nesnesini tek bir bileşik <xref:System.Windows.Media.Transform>içinde gruplamak için bir <xref:System.Windows.Media.TransformGroup> nasıl kullanacağınızı gösterir.  
+Bu örnek, a'nın <xref:System.Windows.Media.TransformGroup> iki veya <xref:System.Windows.Media.Transform> daha fazla nesneyi tek bir bileşikte <xref:System.Windows.Media.Transform>gruplandırmak için nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir <xref:System.Windows.Controls.Button><xref:System.Windows.Media.ScaleTransform> ve <xref:System.Windows.Media.RotateTransform> uygulamak için bir <xref:System.Windows.Media.TransformGroup> kullanır.  
+ Aşağıdaki örnekte <xref:System.Windows.Media.TransformGroup> a <xref:System.Windows.Media.ScaleTransform> ve <xref:System.Windows.Media.RotateTransform> a'yı <xref:System.Windows.Controls.Button>bir 'e uygulamak için .  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
@@ -33,4 +33,4 @@ Bu örnek, iki veya daha fazla <xref:System.Windows.Media.Transform> nesnesini t
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
-- [2-b dönüşümler örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2B Örnek Dönüştürür](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
