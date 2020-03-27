@@ -9,30 +9,30 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 03953b79127ffceeb49e4ece2070d09f382448a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcc9e7f198b8a20ffe13daf6508fb8a735937652
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010104"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344686"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak Dikdörtgen Geometriye Animasyon Ekleme
-Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.RectangleGeometry.Rect%2A> özelliği bir <xref:System.Windows.Media.RectangleGeometry> anahtar çerçeveler kullanarak.  
+Bu örnek, anahtar çerçeveleri <xref:System.Windows.Media.RectangleGeometry.Rect%2A> kullanarak <xref:System.Windows.Media.RectangleGeometry> bir özelliği animasyon nasıl gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Media.RectangleGeometry.Rect%2A> özelliği bir <xref:System.Windows.Media.RectangleGeometry>. Bu animasyonu üç anahtar çerçeveler şu şekilde kullanılır:  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> bir <xref:System.Windows.Media.RectangleGeometry>. özelliğini <xref:System.Windows.Media.RectangleGeometry.Rect%2A> canlandırmak için sınıfı kullanır. Bu animasyon aşağıdaki şekilde üç anahtar kare kullanır:  
   
-1. İlk iki saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearRectKeyFrame> konumunu, genişliğini ve bir dikdörtgenin yüksekliğini değişim animasyon uygulamak için sınıfı. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearRectKeyFrame> değerler arasında sorunsuz bir doğrusal geçişi oluşturun.  
+1. İlk iki saniye boyunca, dikdörtgenin <xref:System.Windows.Media.Animation.LinearRectKeyFrame> konumu, genişliği ve yüksekliğinde kademeli bir değişikliği canlandırmak için sınıfın bir örneğini kullanır. Değerler arasında düzgün <xref:System.Windows.Media.Animation.LinearRectKeyFrame> doğrusal geçiş oluşturma gibi doğrusal anahtar çerçeveler.  
   
-2. Sonraki sonuna sırasında yarım saniye kullanan bir örneğini <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> aniden dikdörtgenin yüksekliğini azaltmak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> ani değişiklikleri değerler arasında oluşturur, yükseklik hızla gerçekleşir ve ince değil.  
+2. Sonraki yarım saniyenin sonunda, aniden dikdörtgenin <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> yüksekliğini azaltmak için sınıfın bir örneğini kullanır. Değerler arasında ani <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> değişiklikler oluşturmak gibi ayrık anahtar çerçeveleri, yani yükseklik düşüşü hızlı bir şekilde oluşur ve ince değildir.  
   
-3. Son iki saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.SplineRectKeyFrame> dikdörtgeni özgün boyutunu ve konumunu geri değiştirmek için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplineRectKeyFrame> değerlerine göre değerleri arasında bir değişken geçiş oluşturmak <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> özelliği. Bu örnekte, değişiklik yavaş başlar ve zaman diliminin sonuna doğru katlanarak hızlandırır.  
+3. Son iki saniye boyunca, dikdörtgeni <xref:System.Windows.Media.Animation.SplineRectKeyFrame> orijinal boyutuna ve konumuna geri değiştirmek için sınıfın bir örneğini kullanır. Özellik değerlerine <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> göre <xref:System.Windows.Media.Animation.SplineRectKeyFrame> değerler arasında değişken bir geçiş oluşturmak gibi spline anahtar çerçeveleri. Bu örnekte, değişim yavaş yavaş başlar ve zaman diliminin sonuna doğru katlanarak hızlar.  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Tam örnek için [Anahtar Çerçeve Animasyon Örneği'ne](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

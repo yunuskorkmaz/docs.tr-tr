@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104957"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345000"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Derleme Kayıt Aracı)
 
@@ -54,7 +54,7 @@ regasm assemblyFile [options]
 
 Değişiklikleri doğrudan kayıt defterine yapmak yerine kayıt defteri girişlerini içeren bir .reg dosyası oluşturmak için **/regfile** seçeneğini kullanabilirsiniz. Kayıt Defteri Düzenleyicisi (Regedit.exe) aracı ile .reg dosyasını içe aktararak, bir bilgisayarda kayıt defterini güncelleştirebilirsiniz. .reg dosyasının, kullanıcı tarafından tanımlanan kayıt işlevleriyle yapılabilen kayıt defteri güncelleştirmelerini içermediğini unutmayın.  **/regfile** seçeneğinin yalnızca yönetilen sınıflar için kayıt defteri girişleri yayıdığını unutmayın.  Bu seçenek, s veya `TypeLibID` `InterfaceID`s için girişler yaramaz.
 
-**/tlb** seçeneğini belirttiğiniz zaman, Regasm.exe derlemede bulunan türleri açıklayan bir tür kitaplığı oluşturur ve kaydeder. RegAsm.exe oluşturulan tür kitaplıklarını geçerli çalışma dizinine veya çıktı dosyası için belirtilen dizine yerleştirir. Diğer derlemelere başvuran bir derleme için tür kitaplığı oluşturmak, bazı tür kitaplıklarının tek seferde oluşturulmasına neden olabilir. Tür kitaplığını Visual Studio gibi geliştirme araçlarına tür bilgileri sağlamak için kullanabilirsiniz. Kayıt yaptığınız derleme Tip Kitaplığı İthalatçısı ([Tlbimp.exe)](tlbimp-exe-type-library-importer.md)tarafından üretiliyorsa **/tlb** seçeneğini kullanmamalısınız. Bir tür kitaplığından içeri aktarılmış bir derlemeden bir tür kitaplığını dışarı aktaramazsınız. **/tlb** seçeneğinin kullanılması, Tlbexp.exe'nin ürettiği tür kitaplığını kaydetmemesi dışında Tip Kitaplığı İhracatçısı ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) ve Regasm.exe'yi kullanmakla aynı etkiye sahiptir.  Tür kitaplığını kaydetmek için **/tlb** seçeneğini kullanıyorsanız, **/tlb** seçeneğini **/kayıt dışı** seçeneğiyle birlikte türü kitaplığını kayıt dışı kullanabilirsiniz. İki seçeneği birlikte kullandığınızda tür kitaplığının ve arabirim girdilerinin kaydını kaldırırsınız, bu da kayıt defterini önemli ölçüde temizleyebilir.
+**/tlb** seçeneğini belirttiğiniz zaman, Regasm.exe derlemede bulunan türleri açıklayan bir tür kitaplığı oluşturur ve kaydeder. RegAsm.exe oluşturulan tür kitaplıklarını geçerli çalışma dizinine veya çıktı dosyası için belirtilen dizine yerleştirir. Diğer derlemelere başvuran bir derleme için tür kitaplığı oluşturmak, bazı tür kitaplıklarının tek seferde oluşturulmasına neden olabilir. Tür kitaplığını Visual Studio gibi geliştirme araçlarına tür bilgileri sağlamak için kullanabilirsiniz. Kayıt yaptığınız derleme Tip Kitaplığı İthalatçısı ([Tlbimp.exe)](tlbimp-exe-type-library-importer.md)tarafından üretiliyorsa **/tlb** seçeneğini kullanmamalısınız. Bir tür kitaplığından içeri aktarılmış bir derlemeden bir tür kitaplığını dışarı aktaramazsınız. **/tlb** seçeneğinin kullanılması, Tlbexp.exe'nin ürettiği tür kitaplığını kaydetmemesi dışında Tip Kitaplığı İhracatçısı ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) ve Regasm.exe'yi kullanmakla aynı etkiye sahiptir.  Tür kitaplığını kaydetmek için **/tlb** seçeneğini kullanıyorsanız, tür kitaplığını n **/unregister** seçeneğiyle **birlikte /tlb** seçeneğini kullanabilirsiniz. İki seçeneği birlikte kullandığınızda tür kitaplığının ve arabirim girdilerinin kaydını kaldırırsınız, bu da kayıt defterini önemli ölçüde temizleyebilir.
 
 Bir derlemeyi COM tarafından kullanılması için kaydettirdiğinize, Regasm.exe girdileri yerel bilgisayardaki kayıt defterine ekler. Daha ayrıntılı şekilde söylemek gerekirse, aynı derlemenin birden fazla sürümünün bir bilgisayarda yan yana çalışmasına olanak veren sürüme bağlı kayıt defteri anahtarları oluşturur. Bir derleme ilk kez kaydettirildiğinde, derleme için bir üst düzey anahtar, o sürüm için de benzersiz bir alt anahtar oluşturulur. Derlemenin yeni bir sürümünü her kaydettirdiğinizde, Regasm.exe yeni sürüm için bir alt anahtar oluşturur.
 
@@ -85,7 +85,7 @@ regasm myTest.dll /tlb:myTest.tlb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](tlbexp-exe-type-library-exporter.md)
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Tip Kütüphane İhracatçısı)](tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (Tip Kitaplığı İthalatçısı)](tlbimp-exe-type-library-importer.md)
 - [Derlemeleri COM ile Kaydetme](../interop/registering-assemblies-with-com.md)
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

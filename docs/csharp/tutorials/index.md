@@ -2,12 +2,12 @@
 title: C# öğreticiler
 description: C# programları oluşturmayı ve C# dil özelliklerini öğrenmek için bu C# eğitimlerini keşfedin.
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346794"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345103"
 ---
 # <a name="c-tutorials"></a>C# öğreticiler
 
@@ -56,7 +56,7 @@ Hello World dersini takip eden tüm giriş eğitimleri kendi yerel geliştirme o
 
 ## <a name="general-tutorials"></a>Genel Eğitimler
 
-Aşağıdaki öğreticiler [.NET Core](../../core/index.md)kullanarak C# programları oluşturmanızı sağlar:
+Aşağıdaki öğreticiler [.NET Core](../../core/index.yml)kullanarak C# programları oluşturmanızı sağlar:
 
 * [Konsol Uygulaması](console-teleprompter.md): Konsol G/Ç'yi, Konsol uygulamasının yapısını ve görev tabanlı eşzamanlı programlama modelinin temellerini gösterir.
 * [REST Client](console-webapiclient.md): C# dilinde web iletişimini, JSON serileştirmesini ve nesne yönelimli özellikleri gösterir.

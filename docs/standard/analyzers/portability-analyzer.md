@@ -4,12 +4,12 @@ description: .NET Core, .NET Standard, UWP ve Xamarin gibi çeşitli .NET uygula
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72774384"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344304"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Taşınabilirlik Çözümleyicisi
 
@@ -19,7 +19,7 @@ Projenizi .NET Core gibi yeni platformu hedef almak üzere dönüştürdükten s
 
 ## <a name="common-targets"></a>Ortak hedefler
 
-- [.NET Core](../../core/index.md): Modüler bir tasarıma sahiptir, yan yana kullanır ve çapraz platform senaryolarını hedefler. Yan yana diğer uygulamaları kırmadan yeni .NET Core sürümlerini benimsemenize olanak tanır. Amacınız uygulamanızı platformlar arası destekleyen .NET Core'a yönlendirmekse, önerilen hedef budur.
+- [.NET Core](../../core/index.yml): Modüler bir tasarıma sahiptir, yan yana kullanır ve çapraz platform senaryolarını hedefler. Yan yana diğer uygulamaları kırmadan yeni .NET Core sürümlerini benimsemenize olanak tanır. Amacınız uygulamanızı platformlar arası destekleyen .NET Core'a yönlendirmekse, önerilen hedef budur.
 - . [NET Standart](../../standard/net-standard.md): Tüm .NET uygulamalarında bulunan .NET Standart API'leri içerir. Amacınız kitaplığınızı tüm .NET destekli platformlarda çalıştırmak sayılsa, bu hedef önerilir.
 - [ASP.NET Core](/aspnet/core): .NET Core üzerine inşa edilmiş modern bir web çerçevesi. Amacınız web uygulamanızı birden çok platformu desteklemek için .NET Core'a taşımanızsa, önerilen hedef budur.
 - .NET Core + [Platform Uzantıları](../../core/porting/windows-compat-pack.md): .NET Framework kullanılabilir teknolojilerinin çoğunu sağlayan Windows Uyumluluk Paketi'ne ek olarak .NET Core API'leri içerir. Bu, uygulamanızı .NET Framework'den Windows'da .NET Core'a taşımanız için önerilen bir hedeftir.

@@ -1,6 +1,6 @@
 ---
 title: Yapı türleri - C# başvurusu
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507249"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345140"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# başvurusu)
 
@@ -24,6 +24,24 @@ ms.locfileid: "79507249"
 Yapı türleri *değer semantik*var. Diğer bir zamanda, bir yapı türü değişkeni türünün bir örneğini içerir. Varsayılan olarak, değişken değerleri atamada kopyalanır, bir bağımsız değişkeni bir yönteme geçirilir ve yöntem sonucunu döndürür. Yapı türünde bir değişken olması durumunda, türün bir örneği kopyalanır. Daha fazla bilgi için [Değer türlerine](value-types.md)bakın.
 
 Genellikle, çok az veya hiç davranış sağlayan küçük veri merkezli türler tasarlamak için yapı türleri kullanırsınız. Örneğin, .NET bir sayıyı (hem [tamsayı](integral-numeric-types.md) hem de [gerçek),](floating-point-numeric-types.md) [Boolean değeri,](bool.md) [Unicode karakterini,](char.md)bir [zaman örneğini](xref:System.DateTime)temsil etmek için yapı türlerini kullanır. Bir türün davranışına odaklanmışsanız, bir [sınıf](../keywords/class.md)tanımlamayı düşünün. Sınıf türleri *referans semantik*var. Diğer bir zamanda, sınıf türünden bir değişken, örneğin kendisi değil, tür örneğinin bir örneğine başvuruda bulunun.
+
+Yapı türlerinin değer semantikleri olduğundan, *değişmez* yapı türlerini tanımlamanızı öneririz.
+
+## <a name="readonly-struct"></a>`readonly`Yapı
+
+C# 7.2 ile başlayarak, bir yapı türünün değişmez olduğunu bildirmek için `readonly` değiştirici kullanırsınız:
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+Bir `readonly` yapının tüm veri üyeleri aşağıdaki gibi salt okunur olmalıdır:
+
+- Herhangi bir alan bildirimi [ `readonly` değiştirici olmalıdır](../keywords/readonly.md)
+- Otomatik olarak uygulananlar da dahil olmak üzere herhangi bir özellik yalnızca okunmalıdır
+
+Bu, bir `readonly` yapının hiçbir üyesinin yapının durumunu modiyi olmadığını garanti eder.
+
+> [!NOTE]
+> Bir `readonly` yapıda, mutable başvuru türündeki bir veri üyesi yine de kendi durumunu mutasyona uğrayabilir. Örneğin, bir <xref:System.Collections.Generic.List%601> örneği değiştiremezsiniz, ancak buna yeni öğeler ekleyebilirsiniz.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Bir yapı türünün tasarımıile sınırlamalar
 
@@ -63,9 +81,11 @@ Herhangi bir yapı türü için, [kutulama ve unboxing](../../programming-guide/
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Structs](~/_csharplang/spec/structs.md) bölümüne bakın.
 
+Yapı strüktları hakkında `readonly` daha fazla bilgi için özellik teklifi [notuna](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)bakın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
 - [Tasarım yönergeleri - Sınıf ve yapı arasında seçim](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
 - [Tasarım yönergeleri - Yapı tasarımı](../../../standard/design-guidelines/struct.md)
-- [Sınıflar ve yapılar](../../programming-guide/classes-and-structs/index.md)
+- [Sınıflar ve structs](../../programming-guide/classes-and-structs/index.md)

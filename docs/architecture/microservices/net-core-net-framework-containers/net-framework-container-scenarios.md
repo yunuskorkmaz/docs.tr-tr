@@ -2,12 +2,12 @@
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Docker kapsayıcıları için .NET Framework ne zaman seçilir?
 ms.date: 01/30/2020
-ms.openlocfilehash: dfb1e8883fc9c3d9235672bc2885858bfb64afa5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2697ae56eda104a0ee8e7bfcd79d3972943d1f79
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501967"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344989"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
@@ -50,7 +50,7 @@ Bu arada, Azure'daki herhangi bir platform veya hizmet istemci API'sıyla .NET C
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **.NET Çekirdek Rehberi** \
-  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.yml)
 
 - **.NET Framework'den .NET Core'a taşıma** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)

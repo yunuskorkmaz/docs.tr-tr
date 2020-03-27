@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248914"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345046"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework ile başlayın
 
 .NET Framework, .NET Framework'u hedefleyen uygulamaları yöneten bir yürütme ortamıdır. Bellek yönetimi ve diğer sistem hizmetleri sağlayan ortak dil çalışma süresi ve programcıların uygulama geliştirmenin tüm önemli alanları için sağlam ve güvenilir koddan yararlanmalarını sağlayan kapsamlı bir sınıf kitaplığından oluşur.
 
 > [!NOTE]
-> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux'ta uygulama geliştirmek ve çalıştırmak için [.NET Core'u](../../core/index.md) kullanabilirsiniz.
+> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux'ta uygulama geliştirmek ve çalıştırmak için [.NET Core'u](../../core/index.yml) kullanabilirsiniz.
 
 ## <a name="what-is-net-framework"></a>.NET Framework nedir?
 
@@ -80,7 +80,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'u deste
 | [.NET Framework ve Out-of-Band Bültenleri](the-net-framework-and-out-of-band-releases.md) | .NET Framework out-of-band sürümlerini ve bunları uygulamanızda nasıl kullanacağınızı açıklar. |
 | [Sistem Gereksinimleri](system-requirements.md) | .NET Framework'ün çalıştırılamıiçin donanım ve yazılım gereksinimlerini listeler. |
 | [.NET Core ve Açık Kaynak](net-core-and-open-source.md) | .NET Framework ile ilgili olarak .NET Core'u ve açık kaynak kodlu .NET Core projelerine nasıl erişilir' i açıklar. |
-| [.NET Çekirdek dokümantasyonu](../../core/index.md) | .NET Core için kavramsal ve API başvuru belgelerini sağlar. |
+| [.NET Çekirdek dokümantasyonu](../../core/index.yml) | .NET Core için kavramsal ve API başvuru belgelerini sağlar. |
 | [.NET Standard](../../standard/net-standard.md) | Tutarlı bir API kümesinin birden çok platformda kullanılabildiğini garanti etmek için tek tek .NET uygulamalarının desteklediği bir sürüm olan .NET Standard'ı tartışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -88,4 +88,4 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'u deste
 - [.NET Framework kılavuzu](../index.yml)
 - [Yenilikler](../whats-new/index.md)
 - [.NET API tarayıcısı](../../../api/index.md)
-- [Geliştirme rehberi](../development-guide.md)
+- [Geliştirme kılavuzu](../development-guide.md)

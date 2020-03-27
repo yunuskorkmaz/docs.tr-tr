@@ -1,14 +1,14 @@
 ---
 title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Otomatik olarak bir makine öğrenme modeli eğitmek için ML.NET Model Builder nasıl kullanılır
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399226"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344782"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -23,7 +23,7 @@ Model Builder'ı kullanmak için makine öğrenimi uzmanlığına ihtiyacınız 
 > [!NOTE]
 > Model Oluşturucu şu anda Önizleme'de.
 
-## <a name="scenarios"></a>Senaryolar
+## <a name="scenario"></a>Senaryo
 
 Uygulamanız için bir makine öğrenme modeli oluşturmak için Model Oluşturucu'ya birçok farklı senaryo getirebilirsiniz.
 
@@ -38,49 +38,43 @@ Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün açıklam
 
 Model Oluşturucu'da bir senaryo seçmeniz gerekir. Senaryonun türü, ne tür bir tahmin oluşturmaya çalıştığınıza bağlıdır.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Bir kategori tahmin edin (yalnızca iki kategori olduğunda)
+#### <a name="text-classification"></a>Metin sınıflandırması
 
-İkili sınıflandırma, verileri iki kategoriye ayırmak için kullanılır (evet/hayır; pass/fail; true/false; pozitif/negatif).
+Sınıflandırma, verileri kategorilere ayırmak için kullanılır.
 
 ![Sahtekarlık tespiti, risk azaltma ve uygulama taraması dahil olmak üzere ikili sınıflandırma örneklerini gösteren diyagram](media/binary-classification-examples.png)
 
-Duyarlılık analizi, müşteri geri bildiriminin olumlu veya olumsuz duyarlılığını tahmin etmek için kullanılabilir. Bu ikili sınıflandırma makine öğrenme görevi bir örnektir.
-
-Senaryonuz iki kategoriye sınıflandırılması gerektiriyorsa, bu şablonu kendi veri kümenizle kullanabilirsiniz.
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Bir kategori tahmin edin (üç veya daha fazla kategori olduğunda)
-
-Çok sınıflı sınıflandırma, verileri üç veya daha fazla sınıfa kategorilere ayırmak için kullanılabilir.
-
 ![Belge ve ürün sınıflandırması, destek bileti yönlendirmesi ve müşteri sorunu önceliklendirmesi dahil olmak üzere çok sınıflı sınıflandırma örnekleri](media/multiclass-classification-examples.png)
 
-Sorun sınıflandırması, sorun başlığı nı ve açıklamasını kullanarak müşteri geri bildirimlerini (örneğin, GitHub'da) kategorilere ayırmak için kullanılabilir. Bu çok sınıflı sınıflandırma makine öğrenme görevi bir örnektir.
-
-Verileri üç veya daha fazla kategoriye ayırmak istiyorsanız, senaryonuz için sorun sınıflandırma şablonunu kullanabilirsiniz.
-
-#### <a name="predict-a-number"></a>Bir sayı tahmin etme
+#### <a name="value-prediction"></a>Değer tahmini
 
 Regresyon sayıları tahmin etmek için kullanılır.
 
 ![Fiyat tahmini, satış tahmini ve tahmine dayalı bakım gibi regresyon örneklerini gösteren diyagram](media/regression-examples.png)
 
-Fiyat tahmini yer, boyut ve evin diğer özelliklerini kullanarak ev fiyatları tahmin etmek için kullanılabilir. Bu regresyon makine öğrenme görevi bir örnektir.
-
-Kendi veri kümenizle sayısal bir değer tahmin etmek istiyorsanız, senaryonuz için fiyat tahmini şablonunu kullanabilirsiniz.
-
-#### <a name="classify-images-into-categories"></a>Resimleri kategorilere ayırma
-
-Bu senaryo, kategorize edilecek giriş verilerinin bir görüntü kümesi olduğu çok sınıflı sınıflandırmanın özel bir örneğidir.
+#### <a name="image-classification"></a>Resimleri sınıflandırma
 
 Resim sınıflandırması, farklı kategorilerdeki görüntüleri tanımlamak için kullanılabilir. Örneğin, arazi veya hayvan veya üretim kusurları farklı türleri.
 
-Bir resim setiniz varsa ve görüntüleri farklı kategorilere sınıflandırmak istiyorsanız, senaryonuz için resim sınıflandırma şablonunu kullanabilirsiniz.
+Bir resim setiniz varsa ve görüntüleri farklı kategorilere sınıflandırmak istiyorsanız görüntü sınıflandırma senaryosunu kullanabilirsiniz.
 
-#### <a name="custom-scenario"></a>Özel senaryo
+#### <a name="recommendation"></a>Öneri
 
-Özel senaryo, senaryonuzu el ile seçmenize olanak tanır.
+Öneri senaryosu, beğenmelerinin ve beğenmedikleri öğenin diğer kullanıcılarla ne kadar benzer olduğuna bağlı olarak, belirli bir kullanıcı için önerilen öğelerin listesini öngörür.
 
-## <a name="data"></a>Veriler
+Bir kullanıcı kümesiniz ve satın alınacak öğeler, filmler, kitaplar veya TV programları gibi bir dizi "ürün" ve kullanıcının bu ürünlerin "derecelendirmeleri" kümesi varsa, öneri senaryosunu kullanabilirsiniz.
+
+## <a name="environment"></a>Ortam
+
+Makine öğrenimi modelinizi makinenizde veya Azure'daki bulutta yerel olarak eğitebilirsiniz.
+
+Yerel olarak eğitim aldığınızda, bilgisayar kaynaklarınızın (CPU, bellek ve disk) kısıtlamaları içinde çalışırsınız. Bulutta eğitim aldığınızda, kaynaklarınızı senaryonuzun taleplerini karşılamak üzere ölçeklendirebilirsiniz, özellikle de büyük veri kümeleri için.
+
+Yerel eğitim tüm senaryolar için desteklenir.
+
+Azure eğitimi Görüntü Sınıflandırması için desteklenir.
+
+## <a name="data"></a>Veri
 
 Senaryonuzu seçtikten sonra, Model Oluşturucu sizden bir veri kümesi sağlamanızı ister. Veriler, senaryonuz için en iyi modeli eğitmek, değerlendirmek ve seçmek için kullanılır.
 
@@ -113,14 +107,15 @@ Etiket kare görüntüleri, yatak odası ve banyo değerleri ve posta kodu bu sa
 
 Henüz kendi verileriniz yoksa, şu veri kümelerinden birini deneyin:
 
-|Senaryo|ML görev|Veriler|Etiketle|Özellikler|
+|Senaryo|Örnek|Veri|Etiketle|Özellikler|
 |-|-|-|-|-|
-|Fiyat tahmini|Regresyon|[taksi ücreti verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Ücret|Yolculuk süresi, mesafe|
-|Anormallik algılama|ikili sınıflandırma|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün Satışları|Ay|
-|Yaklaşım analizi|ikili sınıflandırma|[web sitesi yorum verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (0 negatif duygu, 1 pozitif)|Yorum, Yıl|
-|Sahtekarlık algılama|ikili sınıflandırma|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (1 sahte, 0 aksi takdirde)|Tutar, V1-V28 (anonimleştirilmiş özellikler)|
-|Metin sınıflandırması|çok sınıflı sınıflandırma|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, Açıklama|
-|Resimleri sınıflandırma|çok sınıflı sınıflandırma|[Çiçek resimleri](http://download.tensorflow.org/example_images/flower_photos.tgz)|Çiçek türü: papatya, karahindiba, gül, ayçiçeği, lale|Görüntü verilerinin kendisi|
+|Sınıflandırma|Satış anormalliklerini tahmin etme|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün Satışları|Ay|
+||Web sitesi yorumlarının duyarlılığını tahmin edin|[web sitesi yorum verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (0 negatif duygu, 1 pozitif)|Yorum, Yıl|
+||Sahte kredi kartı hareketlerini tahmin etme|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (1 sahte, 0 aksi takdirde)|Tutar, V1-V28 (anonimleştirilmiş özellikler)|
+||GitHub deposundaki sorunun türünü tahmin etme|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, Açıklama|
+|Değer tahmini|Taksi ücret fiyatını tahmin edin|[taksi ücreti verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Ücret|Yolculuk süresi, mesafe|
+|Resimleri sınıflandırma|Sorunun kategorisini tahmin etme|[çiçek görüntüleri](http://download.tensorflow.org/example_images/flower_photos.tgz)|Çiçek türü: papatya, karahindiba, gül, ayçiçeği, lale|Görüntü verilerinin kendisi|
+|Öneri|Birinin beğeneceği filmleri tahmin edin|[film reytingleri](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Kullanıcılar, Filmler|Derecelendirmeler|
 
 ## <a name="train"></a>Eğitim
 
@@ -165,13 +160,13 @@ Model Oluşturucu, eğitim verilerini bir eğitim kümesine ve test kümesine b�
 
 Bir senaryo, makine öğrenimi görevine eş ler. Her ML görevinin kendi değerlendirme ölçütleri kümesi vardır.
 
-#### <a name="regression-for-example-price-prediction"></a>Regresyon (örneğin, Fiyat Tahmini)
+#### <a name="value-prediction"></a>Değer tahmini
 
-Regresyon sorunları için varsayılan metrik RSquared'dir, RSquared değeri 0 ile 1 arasında değişir. 1 mümkün olan en iyi değer dir veya başka bir deyişle rsquared değeri daha yakın 1 modeli daha iyi performans.
+Değer tahmin sorunları için varsayılan metrik RSquared' dir, RSquared değeri 0 ile 1 arasında değişir. 1 mümkün olan en iyi değer dir veya başka bir deyişle rsquared değeri daha yakın 1 modeli daha iyi performans.
 
-Mutlak kayıp, kare-kayıp ve RMS kaybı gibi bildirilen diğer ölçümler, modelinizin nasıl performans gösterdiğini anlamak ve diğer regresyon modelleri ile karşılaştırmak için kullanılabilecek ek ölçümlerdir.
+Mutlak kayıp, kare-kayıp ve RMS kaybı gibi bildirilen diğer ölçümler, modelinizin nasıl performans gösterdiğini anlamak ve diğer değer tahmin modelleri ile karşılaştırmak için kullanılabilecek ek ölçümlerdir.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>İkili Sınıflandırma (örneğin, Duygu Analizi)
+#### <a name="classification-2-categories"></a>Sınıflandırma (2 kategori)
 
 Sınıflandırma sorunları için varsayılan metrik doğruluktır. Doğruluk, modelinizin test veri kümesi üzerinde yaptığı doğru tahminlerin oranını tanımlar. %100 veya %1.0'a ne kadar yakınsa o kadar iyi olur.
 
@@ -179,7 +174,7 @@ AUC (eğrinin altındaki alan) gibi bildirilen diğer ölçümler, modellerin ka
 
 Hassasve Geri Çağırma arasındaki dengeyi kontrol etmek için F1 puanı gibi ek ölçümler kullanılabilir.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Çok Sınıflı Sınıflandırma (örneğin, Sayı Sınıflandırması, Görüntü Sınıflandırması)
+#### <a name="classification-3-categories"></a>Sınıflandırma (3+ kategori)
 
 Çok sınıflı sınıflandırma için varsayılan metrik Mikro Doğruluk'tır. Mikro Doğruluk %100 veya %1.0'a ne kadar yakınsa o kadar iyi olur.
 
@@ -196,7 +191,7 @@ Daha fazla bilgi için [model değerlendirme ölçümlerine](resources/metrics.m
 
 Model performans puanınız istediğiniz kadar iyi değilse, şunları yapabilirsiniz:
 
-- Daha uzun bir süre için tren. Daha fazla zaman ile, daha fazla algoritma ve ayarları denemek için otomatik makine öğrenme motoru.
+- Daha uzun bir süre için tren. Daha fazla zaman ile, daha fazla algoritma ve ayarları ile otomatik makine öğrenme motoru deneyleri.
 
 - Daha fazla veri ekleyin. Bazen veri miktarı yüksek kaliteli bir makine öğrenme modeli eğitmek için yeterli değildir.
 

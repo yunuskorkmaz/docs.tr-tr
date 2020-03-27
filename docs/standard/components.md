@@ -4,12 +4,12 @@ description: .NET Standardı, .NET uygulamaları, .NET çalışma saatleri ve ta
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291777"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344160"
 ---
 # <a name="net-architectural-components"></a>.NET mimari bileşenleri
 
@@ -38,7 +38,7 @@ Microsoft'un etkin olarak geliştirdiği ve koruduğu dört birincil .NET uygula
 
 .NET Core, .NET'in bir platform ötesi uygulamasıdır ve sunucu ve bulut iş yüklerini ölçekte işlemek üzere tasarlanmıştır. Windows, macOS ve Linux'ta çalışır. .NET Standardını uygular, böylece .NET Standardını hedefleyen kod .NET Core'da çalıştırılabilir. [ASP.NET Core,](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) [Windows Forms](../framework/winforms/windows-forms-overview.md)ve [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) tüm .NET Core üzerinde çalışır.
 
-.NET Core hakkında daha fazla bilgi edinmek [için sunucu uygulamaları için .NET Core](choosing-core-framework-server.md)ve .NET Framework arasında [.NET Core](../core/index.md) ve Seçim Kılavuzu'na bakın.
+.NET Core hakkında daha fazla bilgi edinmek [için sunucu uygulamaları için .NET Core](choosing-core-framework-server.md)ve .NET Framework arasında [.NET Core](../core/index.yml) ve Seçim Kılavuzu'na bakın.
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -107,7 +107,7 @@ Resmi ISO/IEC belgeleri, ISO/IEC [Genel Kullanıma Sunulan Standartlar](https://
 
 - [Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Çekirdek Rehberi](../core/index.md)
+- [.NET Çekirdek Rehberi](../core/index.yml)
 - [.NET Çerçeve Rehberi](../framework/index.yml)
 - [C# Rehberi](../csharp/index.yml)
 - [F# Rehberi](../fsharp/index.yml)

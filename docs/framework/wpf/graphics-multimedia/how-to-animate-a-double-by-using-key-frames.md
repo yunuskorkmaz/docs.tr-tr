@@ -9,32 +9,32 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9eab794cc8411230226cddc97beaa13c1bdd9405
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010208"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344923"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme
-Bu örnek, alan bir özelliğin değerine animasyon ekleme işlemi gösterilmektedir bir <xref:System.Double> anahtar çerçeveler kullanarak.  
+Bu örnek, anahtar çerçeveleri kullanarak bir <xref:System.Double> gereken bir özelliğin değerini nasıl canlandırılabildiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir dikdörtgen ekran boyunca taşır. Örnekte <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği bir <xref:System.Windows.Media.TranslateTransform> uygulanan bir <xref:System.Windows.Shapes.Rectangle>. Süresiz olarak yinelenen animasyon, üç anahtar çerçeveler aşağıdaki şekilde kullanır:  
+ Aşağıdaki örnek, bir dikdörtgeni ekran üzerinde taşır. Örnek, uygulanan bir <xref:System.Windows.Media.TranslateTransform> <xref:System.Windows.Shapes.Rectangle> <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> <xref:System.Windows.Media.TranslateTransform.X%2A> Süresiz olarak yineleyen bu animasyon, aşağıdaki şekilde üç anahtar kare kullanır:  
   
-1. İlk üç saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> yol dikdörtgen bir hızda başlangıç konumundan 500 konuma taşımak için sınıf. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> değerler arasında sorunsuz bir doğrusal geçişi oluşturun.  
+1. İlk üç saniye boyunca, dikdörtgeni <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> başlangıç konumundan 500 konumuna sabit bir hızda bir yol boyunca taşımak için sınıfın bir örneğini kullanır. Değerler arasında düzgün <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> doğrusal geçiş oluşturma gibi doğrusal anahtar çerçeveler.  
   
-2. Dördüncü ikinci sonunda bir örneği kullanan <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> aniden dikdörtgen sonraki konuma taşımak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> değerleri arasında ani atlamalar oluşturun. Bu örnekte, dikdörtgen başlangıç konumunda ve aniden 500 konumunda görünür.  
+2. Dördüncü saniyenin sonunda, dikdörtgeni <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> aniden bir sonraki konuma taşımak için sınıfın bir örneğini kullanır. Değerler arasında ani <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> sıçramalar oluşturmak gibi ayrık anahtar kareler. Bu örnekte, dikdörtgen başlangıç konumundadır ve sonra aniden 500 konumunda görünür.  
   
-3. Son iki saniye içinde bir örneği kullanan <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> rectangle geri başlangıç konumuna taşımak için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> değerini göre değerler arasında değişken bir geçiş oluşturmak <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> özelliği. Bu örnekte, dikdörtgen yavaş taşıyarak başlar ve ardından katlanarak zaman diliminin sonuna doğru hızlandırır.  
+3. Son iki saniye içinde, dikdörtgeni <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> başlangıç konumuna geri taşımak için sınıfın bir örneğini kullanır. Özellik değerine <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> göre <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> değerler arasında değişken bir geçiş oluşturmak gibi spline anahtar çerçeveleri. Bu örnekte, dikdörtgen yavaş hareket ederek başlar ve sonra zaman diliminin sonuna doğru katlanarak hızlanır.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Tam örnek için [Anahtar Çerçeve Animasyon Örneği'ne](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)bakın.  
   
- Diğer animasyon örnekleriyle tutarlılık sağlamak için bu örnek kod sürümleri kullanan bir <xref:System.Windows.Media.Animation.Storyboard> uygulanacak nesne <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Alternatif olarak, kod içinde tek bir animasyonu uygularken kullanmak daha basit olduğu <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> yöntemi kullanmak yerine bir <xref:System.Windows.Media.Animation.Storyboard>. Bir örnek için bkz. [özelliği olmadan kullanarak bir görsel taslak animasyon](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Diğer animasyon örnekleri ile tutarlılık için, bu örneğin <xref:System.Windows.Media.Animation.Storyboard> kod sürümleri <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>bir nesne uygulamak için kullanın. Alternatif olarak, kod da tek bir animasyon uygularken, <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> bir <xref:System.Windows.Media.Animation.Storyboard>. Örneğin, Bir [Storyboard kullanmadan bir Özellik Animasyon](how-to-animate-a-property-without-using-a-storyboard.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

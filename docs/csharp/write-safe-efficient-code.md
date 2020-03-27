@@ -4,12 +4,12 @@ description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506989"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345088"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazın
 
@@ -17,11 +17,11 @@ C#'daki yeni özellikler, daha iyi performansla doğrulanabilir güvenli kod yaz
 
 Bu makaledeki örnek kodun çoğu C# 7.2'ye eklenen özellikleri kullanır. Bu özellikleri kullanmak için projenizi C# 7.2 veya daha sonra kullanacak şekilde yapılandırmanız gerekir. Dil sürümünü ayarlama hakkında daha fazla bilgi için [bkz.](language-reference/configure-language-version.md)
 
-Bu makalede, verimli kaynak yönetimi teknikleri üzerinde duruluyor. Değer türlerini kullanmanın bir avantajı da genellikle yığın ayırmalarından kaçınmalarıdır. Dezavantajı, değere göre kopyalanmış olmalarıdır. Bu dengeleme, büyük miktarda veri üzerinde çalışan algoritmaları optimize etmeyi zorlaştırır. C# 7.2'deki yeni dil özellikleri, değer türlerine yapılan atıfları kullanarak güvenli verimli kod sağlayan mekanizmalar sağlar. Hem ayırmaları hem de kopyalama işlemlerini en aza indirmek için bu özellikleri akıllıca kullanın. Bu makalede, bu yeni özellikler inceletir.
+Bu makalede, verimli kaynak yönetimi teknikleri üzerinde duruluyor. Değer türlerini kullanmanın bir avantajı da genellikle yığın ayırmalarından kaçınmalarıdır. Dezavantajı, değere göre kopyalanmış olmalarıdır. Bu takas, büyük miktarda veri üzerinde çalışan algoritmaları optimize etmeyi zorlaştırır. C# 7.2'deki yeni dil özellikleri, değer türlerine yapılan atıfları kullanarak güvenli verimli kod sağlayan mekanizmalar sağlar. Hem ayırmaları hem de kopyalama işlemlerini en aza indirmek için bu özellikleri akıllıca kullanın. Bu makalede, bu yeni özellikler inceletir.
 
 Bu makalede, aşağıdaki kaynak yönetimi teknikleri üzerinde duruluyor:
 
-- Bir [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) türün **değişmez** olduğunu ve derleyicinin parametreleri kullanırken [`in`](language-reference/keywords/in-parameter-modifier.md) kopyaları kaydetmesini sağladığını ifade etmek için a bildirin.
+- Bir [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) türün **değişmez**olduğunu ifade etmek için a bildirin. Bu, derleyicinin parametreleri kullanırken [`in`](language-reference/keywords/in-parameter-modifier.md) savunma kopyalarını kaydetmesini sağlar.
 - Bir tür değişmez değilse, üyenin `struct` durumu `readonly` değiştirmediğini belirtmek için üye bildirin.
 - İade [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) değeri daha `struct` <xref:System.IntPtr.Size?displayProperty=nameWithType> büyükse ve depolama ömrü değeri döndüren yöntemden daha büyükse bir iade kullanın.
 - A `readonly struct` boyutu daha <xref:System.IntPtr.Size?displayProperty=nameWithType>büyükse, performans nedenleriyle `in` bir parametre olarak geçirmelisiniz.

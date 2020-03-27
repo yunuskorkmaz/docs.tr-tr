@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183553"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345244"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Bu örnek, serileştirme ve deserialization işlemlerinin <xref:System.Runtime.Serialization.DataContractResolver> sınıf kullanılarak nasıl özelleştirilebildiğini gösterir. Bu örnek, serileştirme ve deserialization sırasında bilinen türlerin dinamik olarak nasıl ekleyeceğini gösterir.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. Uygulama düzgün çalışmıyorsa, ortamınızın düzgün ayarlandıkdan emin olmak için aşağıdaki adımları izleyin:  
   
-6. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](https://go.microsoft.com/fwlink/?LinkId=150774)gerçekleştirdiğinizi emin olun.  
+6. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)gerçekleştirdiğinizi emin olun.  
   
-7. Çözümü oluşturmak için, Windows [Communication Foundation Sample'ı oluştururken](https://go.microsoft.com/fwlink/?LinkId=150775)yönergeleri izleyin.  
+7. Çözümü oluşturmak için, Windows [Communication Foundation Sample'ı oluştururken](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)yönergeleri izleyin.  
   
-8. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](https://go.microsoft.com/fwlink/?LinkId=150776)yönergeleri izleyin.  
+8. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)yönergeleri izleyin.  
   
 > [!IMPORTANT]
 > Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

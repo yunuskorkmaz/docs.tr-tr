@@ -1,18 +1,18 @@
 ---
 title: readonly anahtar kelime - C# Başvuru
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399359"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345143"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -28,7 +28,7 @@ Anahtar `readonly` kelime, dört bağlamda kullanılabilen bir değiştiricidir:
   > [!WARNING]
   > Mutable başvuru türü olan harici olarak görünür salt okunur alan içeren harici olarak görünen bir tür bir güvenlik açığı olabilir ve [ca2104](/visualstudio/code-quality/ca2104) uyarısını tetikleyebilir: "Yalnızca mutable başvuru türlerini okumayı bildirin."
 
-- Bir [ `readonly struct` tanımda,](#readonly-struct-example) `readonly` değişmez `struct` olduğunu gösterir.
+- Bir `readonly struct` tür tanımında, `readonly` yapı türünün değişmez olduğunu gösterir. Daha fazla bilgi [ `readonly` ](../builtin-types/struct.md#readonly-struct) için Yapı [türleri](../builtin-types/struct.md) makalesinin yapı bölümüne bakın.
 - [ `readonly` Üye](#readonly-member-examples)tanımında, `readonly` bir `struct` üyenin yapının iç durumunu mutasyona uğratmadığını belirtir.
 - Yöntem [ `ref readonly` dönüşünde,](#ref-readonly-return-example) `readonly` değiştirici yöntemin bir başvurudöndürür ve bu başvuru için yazı izin verilmez gösterir.
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 derleyici hata iletisini alırsınız:
 
 **Yalnızca okunan bir alan atanamıyor (bir oluşturucu veya değişken baş harfi hariç)**
-
-## <a name="readonly-struct-example"></a>Readonly struct örnek
-
-Tanımdaki `readonly` `struct` değiştirici, yapının **değişmez**olduğunu bildirir. Aşağıdaki örnekte `struct` gösterildiği gibi, her örnek alanı işaretlenmelidir: `readonly`
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-Önceki örnek, depolama alanını bildirmek için [salt okunur otomatik özelliklerini](../../properties.md#read-only) kullanır. Bu, derleyiciye bu `readonly` özellikler için destek alanları oluşturmasını bildirir. Alanları doğrudan `readonly` bildirebilirsiniz:
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-İşaretlenmemiş `readonly` bir alan eklemek derleyici hatası `CS8340`oluşturur: "Yalnızca okunan yapıların örnek alanları yalnızca okunmalıdır."
 
 ## <a name="readonly-member-examples"></a>Readonly üye örnekleri
 
@@ -144,6 +122,7 @@ Bu konumlara `readonly` değiştirici ekleyebilirsiniz, ancak anlamlı bir etkis
 A'daki `readonly` değiştirici, döndürülen başvurunun değiştirilemediğini `ref return` gösterir. Aşağıdaki örnek, kaynağına bir başvuru döndürür. Arayanların `readonly` kaynağı değiştiremediğini belirtmek için değiştirici kullanır:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 Döndürülen tür bir `readonly struct`. olması gerekmez Tarafından `ref` döndürülebilen herhangi bir tür `ref readonly`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi

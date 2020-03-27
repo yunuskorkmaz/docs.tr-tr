@@ -6,24 +6,24 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c954806ca901bbfc3ab6d4bbcc237cd0e404f154
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651434"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344646"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Dizeye Animasyon Ekleme
-Bu örnekte, bu örnekte, bir dizeye animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bir <xref:System.Windows.Controls.Button> anahtar çerçeveler kullanarak denetimi.  
+Bu örnekte, anahtar çerçeveleri kullanarak, bu örnekte bir denetimin <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği olan bir <xref:System.Windows.Controls.Button> dize nasıl animasyona alınır gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bir <xref:System.Windows.Controls.Button>.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> bir <xref:System.Windows.Controls.Button>. özelliğini <xref:System.Windows.Controls.ContentControl.Content%2A> canlandırmak için sınıfı kullanır.  
   
- Anahtar çerçeveler Bu örnekte bir örneğini kullanması <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> anahtar çerçeveler ile oluşturulan bir dize animasyon yalnızca ayrık anahtar çerçeveler kullanabileceğinizden sınıfı. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> ani atlama, değerleri arasında oluşturur, animasyon değişiklikleri hızlı ve hafif değildir.  
+ Bu örnekteki tüm anahtar kareler <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> sınıfın bir örneğini kullanır, çünkü anahtar çerçevelerle oluşturulan bir dize animasyonu yalnızca ayrı anahtar çerçeveleri kullanabilir. Değerler arasında ani <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> sıçramalar oluşturmak gibi ayrık anahtar kareler, yani animasyondeğişiklikleri hızlı bir şekilde oluşur ve ince değildir.  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Tam örnek için [Anahtar Çerçeve Animasyon Örneği'ne](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

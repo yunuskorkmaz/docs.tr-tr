@@ -1,123 +1,123 @@
 ---
-title: 'İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
+title: 'İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddd9f03e26f7a8345f1070715e4877c533c361fb
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795476"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345260"
 ---
-# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
 
 Bu konu, özel istemci ve hizmet kimlik bilgilerinin nasıl uygulanacağını ve uygulama kodundan özel kimlik bilgilerinin nasıl kullanılacağını gösterir.
 
-## <a name="credentials-extensibility-classes"></a>Kimlik bilgileri genişletilebilirlik sınıfları
+## <a name="credentials-extensibility-classes"></a>Kimlik Bilgileri Genişletilebilirlik Sınıfları
 
-<xref:System.ServiceModel.Description.ClientCredentials> Ve<xref:System.ServiceModel.Description.ServiceCredentials> sınıfları, Windows Communication Foundation (WCF) güvenlik genişletilebilirliği için ana giriş noktalarıdır. Bu kimlik bilgileri sınıfları, uygulama kodunun kimlik bilgileri ayarlaması ve kimlik bilgisi türlerini güvenlik belirteçlerine dönüştürmesine imkan tanıyan API 'Leri sağlar. (*Güvenlik belirteçleri* , kimlik BILGISI bilgilerini SOAP iletileri içinde aktarmak için kullanılan formdur.) Bu kimlik bilgileri sınıflarının sorumlulukları iki alana ayrılabilir:
+Ve <xref:System.ServiceModel.Description.ClientCredentials> <xref:System.ServiceModel.Description.ServiceCredentials> sınıflar Windows Communication Foundation (WCF) güvenlik genişletilebilirliğinin ana giriş noktalarıdır. Bu kimlik bilgileri sınıfları, uygulama kodunun kimlik bilgilerini ayarlamasını ve kimlik bilgileri türlerini güvenlik belirteçlerine dönüştürmesini sağlayan API'leri sağlar. (*Güvenlik belirteçleri* SOAP iletileri içinde kimlik bilgilerini iletmek için kullanılan formdur.) Bu kimlik bilgileri sınıflarının sorumlulukları iki alana ayrılabilir:
 
-- Kimlik bilgileri ayarlamak için uygulamalara yönelik API 'Leri belirtin.
+- Kimlik bilgileri ayarlamak için uygulamalar için API'ler sağlayın.
 
-- Uygulamalar için <xref:System.IdentityModel.Selectors.SecurityTokenManager> fabrika olarak gerçekleştirin.
+- Uygulamalar için <xref:System.IdentityModel.Selectors.SecurityTokenManager> bir fabrika olarak gerçekleştirin.
 
-WCF 'de belirtilen varsayılan uygulamalar sistem tarafından belirtilen kimlik bilgisi türlerini destekler ve bu kimlik bilgileri türlerini işleyebilen bir güvenlik belirteci Yöneticisi oluşturur.
+WCF'de sağlanan varsayılan uygulamalar, sistem tarafından sağlanan kimlik bilgisi türlerini destekler ve bu kimlik bilgileri türlerini işleyebilen bir güvenlik belirteç yöneticisi oluşturur.
 
-## <a name="reasons-to-customize"></a>Özelleştirme nedenleri
+## <a name="reasons-to-customize"></a>Özelleştirme Nedenleri
 
-İstemci veya hizmet kimlik bilgisi sınıflarını özelleştirmek için birden çok neden vardır. Foremost, varsayılan WCF güvenlik davranışını sistem tarafından belirtilen kimlik bilgisi türlerini işlemeye ilişkin olarak değiştirme gereksinimidir, özellikle aşağıdaki nedenlerden dolayı:
+İstemci veya hizmet kimlik bilgisi sınıflarını özelleştirmenin birden çok nedeni vardır. En önemlisi, özellikle aşağıdaki nedenlerle, sistem tarafından sağlanan kimlik bilgileri türlerini işleme yle ilgili varsayılan WCF güvenlik davranışını değiştirme gereksinimidir:
 
-- Diğer genişletilebilirlik noktaları kullanılarak mümkün olmayan değişiklikler.
+- Diğer genişletilebilirlik noktalarını kullanarak mümkün olmayan değişiklikler.
 
-- Yeni kimlik bilgisi türleri ekleniyor.
+- Yeni kimlik bilgisi türleri ekleme.
 
-- Yeni özel güvenlik belirteci türleri ekleniyor.
+- Yeni özel güvenlik belirteç türleri ekleme.
 
-Bu konu, özel istemci ve hizmet kimlik bilgilerinin nasıl uygulanacağını ve uygulama kodundan nasıl kullanılacağını açıklamaktadır.
+Bu konu, özel istemci ve hizmet kimlik bilgilerinin nasıl uygulanacağını ve uygulama kodundan nasıl kullanılacağını açıklar.
 
-## <a name="first-in-a-series"></a>Bir seride ilk olarak
+## <a name="first-in-a-series"></a>Bir Dizide İlk
 
-Özel kimlik bilgileri sınıfının oluşturulması, kimlik bilgilerini özelleştirme nedeni kimlik bilgileri sağlama, güvenlik belirteci serileştirme veya kimlik doğrulama ile ilgili WCF davranışını değiştirmek olduğu için yalnızca ilk adımdır. Bu bölümdeki diğer konular, özel serileştiriciler ve kimlik doğrulayıcılar oluşturmayı açıklamaktadır. Bu konuda, serinin ilk konusu olan özel kimlik bilgisi sınıfı oluşturma işlemi. Sonraki eylemler (özel serileştiriciler ve kimlik doğrulayıcılar oluşturma), yalnızca özel kimlik bilgileri oluşturulduktan sonra yapılabilir. Bu konu başlığı altında yer alan ek Konular şunları içerir:
+Kimlik bilgilerini özelleştirmenin nedeni kimlik bilgileri sağlama, güvenlik belirteç serileştirme veya kimlik doğrulama ile ilgili WCF davranışını değiştirmek olduğundan, özel kimlik bilgileri sınıfı oluşturmak yalnızca ilk adımdır. Bu bölümdeki diğer konular, özel serializers ve kimlik doğrulayıcıları oluşturmak için nasıl açıklayabilirsiniz. Bu bağlamda, özel kimlik bilgisi sınıfı oluşturma serisinin ilk konudur. Sonraki eylemler (özel serializers ve kimlik doğrulayıcıları oluşturma) yalnızca özel kimlik bilgileri oluşturduktan sonra yapılabilir. Bu konu üzerine inşa ek konular şunlardır:
 
-- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](how-to-create-a-custom-security-token-provider.md)
 
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](how-to-create-a-custom-security-token-authenticator.md)
 
-- [Nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
+- [Nasıl?](how-to-create-a-custom-token.md)
 
 ## <a name="procedures"></a>Yordamlar
 
 #### <a name="to-implement-custom-client-credentials"></a>Özel istemci kimlik bilgilerini uygulamak için
 
-1. <xref:System.ServiceModel.Description.ClientCredentials> Sınıfından türetilmiş yeni bir sınıf tanımlayın.
+1. Sınıftan türetilen yeni <xref:System.ServiceModel.Description.ClientCredentials> bir sınıf tanımlayın.
 
-2. İsteğe bağlı. Yeni kimlik bilgisi türleri için yeni yöntemler veya özellikler ekleyin. Yeni kimlik bilgisi türleri eklemedıysanız, bu adımı atlayın. Aşağıdaki örnek bir `CreditCardNumber` özellik ekler.
+2. İsteğe bağlı. Yeni kimlik bilgisi türleri için yeni yöntemler veya özellikler ekleyin. Yeni kimlik bilgisi türleri eklemezseniz, bu adımı atlayın. Aşağıdaki örnekbir `CreditCardNumber` özellik ekler.
 
-3. Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Bu yöntem, özel istemci kimlik bilgileri kullanıldığında WCF güvenlik altyapısı tarafından otomatik olarak çağırılır. Bu yöntem, <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfının bir uygulamasının bir örneğini oluşturup döndürmekten sorumludur.
+3. <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> Yöntemi geçersiz kılın. Bu yöntem, özel istemci kimlik bilgileri kullanıldığında WCF güvenlik altyapısı tarafından otomatik olarak çağrılır. Bu yöntem, <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfın bir uygulama örneği oluşturmak ve döndürmek ten sorumludur.
 
     > [!IMPORTANT]
-    > Özel bir güvenlik belirteci Yöneticisi oluşturmak için <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yönteminin geçersiz kılındığına dikkat edin. ' Dan <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>türetilen güvenlik belirteci Yöneticisi, gerçek güvenlik belirtecini oluşturmak için öğesinden <xref:System.IdentityModel.Selectors.SecurityTokenProvider>türetilmiş özel bir güvenlik belirteci sağlayıcısı döndürmelidir. Güvenlik belirteçleri oluşturmak için bu kalıbı izlemeseniz, <xref:System.ServiceModel.ChannelFactory> nesneler önbelleğe alındığında (WCF istemci proxy 'leri için varsayılan davranış), büyük olasılıkla ayrıcalık yükselmesine neden olabilecek uygulamanız yanlış çalışabilir. Özel kimlik bilgisi nesnesi öğesinin bir <xref:System.ServiceModel.ChannelFactory>parçası olarak önbelleğe alınır. Ancak, özel <xref:System.IdentityModel.Selectors.SecurityTokenManager> , belirteç oluşturma mantığı <xref:System.IdentityModel.Selectors.SecurityTokenManager>içinde yerleştirildiği sürece güvenlik tehditlerinin etkisini azaltır ve her çağrılışında oluşturulur.
+    > Özel bir güvenlik belirteç yöneticisi oluşturmak için yöntemin <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> geçersiz kılındığını unutmayın. Türetilen <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>güvenlik belirteci yöneticisi, gerçek güvenlik belirteci <xref:System.IdentityModel.Selectors.SecurityTokenProvider>oluşturmak için türetilen özel bir güvenlik belirteci sağlayıcısı döndürmelidir. Güvenlik belirteçleri oluşturmak için bu deseni izlemezseniz, <xref:System.ServiceModel.ChannelFactory> nesneler önbelleğe alındığında (WCF istemci vekilleri için varsayılan davranış) uygulamanız yanlış çalışabilir ve bu da ayrıcalık saldırısının yükseltilmesine neden olabilir. Özel kimlik bilgisi <xref:System.ServiceModel.ChannelFactory>nesnesi, 'nin bir parçası olarak önbelleğe alınmış. Ancak, belirteç oluşturma mantığı yerleştirildiği sürece güvenlik tehdidini azaltan her çağrıda özel <xref:System.IdentityModel.Selectors.SecurityTokenManager> <xref:System.IdentityModel.Selectors.SecurityTokenManager>oluşturulur.
 
-4. Geçersiz kılma <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> yöntemi.
+4. <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> Yöntemi geçersiz kılın.
 
     [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
     [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]
 
-#### <a name="to-implement-a-custom-client-security-token-manager"></a>Özel bir istemci güvenlik belirteci Yöneticisi uygulamak için
+#### <a name="to-implement-a-custom-client-security-token-manager"></a>Özel istemci güvenlik belirteç yöneticisi uygulamak için
 
-1. Öğesinden <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>türetilmiş yeni bir sınıf tanımlayın.
+1. Türetilen yeni bir <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>sınıf tanımlayın.
 
-2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](how-to-create-a-custom-security-token-provider.md)oluşturun.
+2. İsteğe bağlı. Özel <xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> uygulama oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteç sağlayıcıları hakkında daha fazla bilgi için [bkz: Özel Güvenlik Belirteç Sağlayıcısı oluşturun.](how-to-create-a-custom-security-token-provider.md)
 
-3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcısı](how-to-create-a-custom-security-token-authenticator.md)oluşturun.
+3. İsteğe bağlı. Özel <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> uygulama oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteç kimlik doğrulayıcıları hakkında daha fazla bilgi için [bkz.](how-to-create-a-custom-security-token-authenticator.md)
 
-4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
+4. İsteğe bağlı. Özel bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> yöntem <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteçleri hakkında daha fazla bilgi için [bkz.](how-to-create-a-custom-token.md)
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
 
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>Uygulama kodundan özel istemci kimlik bilgilerini kullanmak için
 
-1. Hizmet arabirimini temsil eden oluşturulan istemcinin bir örneğini oluşturun ya da iletişim kurmak istediğiniz bir hizmete <xref:System.ServiceModel.ChannelFactory> işaret eden bir örnek oluşturun.
+1. Hizmet arabirimini temsil eden oluşturulan istemcinin bir örneğini <xref:System.ServiceModel.ChannelFactory> oluşturun veya iletişim kurmak istediğiniz bir hizmete işaret etme örneğini oluşturun.
 
-2. Sistem tarafından sağlanmış istemci kimlik bilgileri davranışını <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> , <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> özelliği aracılığıyla erişilebilen koleksiyondan kaldırın.
+2. Sistem tarafından sağlanan istemci kimlik <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> bilgilerini koleksiyondan kaldırın ve bu davranışa özellik üzerinden erişilebilmektedir. <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>
 
-3. Özel istemci kimlik bilgileri sınıfının yeni bir örneğini oluşturun ve bunu <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> , <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> özelliği aracılığıyla erişilebilen koleksiyona ekleyin.
+3. Özel istemci kimlik bilgileri sınıfının yeni bir <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> örneğini oluşturun ve <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> bu özelliği üzerinden erişilebilen koleksiyona ekleyin.
 
     [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
     [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]
 
-Önceki yordamda, uygulama kodundan istemci kimlik bilgilerinin nasıl kullanılacağı gösterilmektedir. WCF kimlik bilgileri, uygulama yapılandırma dosyası kullanılarak da yapılandırılabilir. Uygulama yapılandırmasının kullanılması, kaynak, yeniden derleme ve yeniden dağıtmayı değiştirmeden uygulama parametrelerinin değiştirilmesini sağladığından, genellikle sabit kodlamaya göre tercih edilir.
+Önceki yordam, uygulama kodundan istemci kimlik bilgilerinin nasıl kullanılacağını gösterir. WCF kimlik bilgileri, uygulama yapılandırma dosyası kullanılarak da yapılandırılabilir. Kaynak, yeniden derleme ve yeniden dağıtım değiştirmeye gerek kalmadan uygulama parametrelerinin değiştirilmesine olanak sağladığından, uygulama yapılandırmasını kullanmak genellikle zor kodlamaya tercih edilir.
 
-Sonraki yordamda özel kimlik bilgileri yapılandırması desteğinin nasıl sağlanacağı açıklanmaktadır.
+Sonraki yordam, özel kimlik bilgilerinin yapılandırması için destek sağlamak için nasıl açıklanır.
 
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>Özel istemci kimlik bilgileri için yapılandırma işleyicisi oluşturma
 
-1. Öğesinden <xref:System.ServiceModel.Configuration.ClientCredentialsElement>türetilmiş yeni bir sınıf tanımlayın.
+1. Türetilen yeni bir <xref:System.ServiceModel.Configuration.ClientCredentialsElement>sınıf tanımlayın.
 
-2. İsteğe bağlı. Uygulama yapılandırması aracılığıyla göstermek istediğiniz tüm ek yapılandırma parametreleri için özellikler ekleyin. Aşağıdaki örnek adlı `CreditCardNumber`bir özellik ekler.
+2. İsteğe bağlı. Uygulama yapılandırması aracılığıyla ortaya çıkarmak istediğiniz tüm ek yapılandırma parametreleri için özellikler ekleyin. Aşağıdaki örnekte . `CreditCardNumber`
 
-3. Yapılandırma öğesiyle oluşturulan özel istemci kimlik bilgileri sınıfının türünü döndürmek için özelliğigeçersizkılın.<xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A>
+3. Yapılandırma öğesi <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> ile oluşturulan özel istemci kimlik bilgileri sınıfının türünü döndürmek için özelliği geçersiz kılın.
 
-4. Geçersiz kılma <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> yöntemi. Yöntemi, yapılandırma dosyasından yüklenen ayarlara bağlı olarak özel kimlik bilgisi sınıfının bir örneğini oluşturup döndürmekten sorumludur. Özel istemci kimlik <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> bilgileri örneğinize yüklenen sistem tarafından belirtilen kimlik bilgileri ayarlarını almak için bu yöntemden temel yöntemi çağırın.
+4. <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> Yöntemi geçersiz kılın. Yöntem, yapılandırma dosyasından yüklenen ayarlara göre özel kimlik bilgisi sınıfının bir örneğini oluşturmak ve döndürmekten sorumludur. Özel istemci <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> kimlik bilgileri örneğinize yüklenen sistem tarafından sağlanan kimlik bilgilerini almak için bu yöntemden temel yöntemi arayın.
 
-5. İsteğe bağlı. 2\. adımda ek özellikler eklediyseniz, yapılandırma çerçevesini tanımak üzere ek yapılandırma ayarlarınızı <xref:System.Configuration.ConfigurationElement.Properties%2A> kaydetmek için özelliği geçersiz kılmanız gerekir. Bu özel istemci kimlik bilgileri yapılandırma öğesi aracılığıyla sistem tarafından sağlanmış ayarların yapılandırılmasına izin vermek için özelliklerinizi temel sınıf özellikleriyle birleştirin.
+5. İsteğe bağlı. Adım 2'ye ek özellikler eklediyseniz, bunları <xref:System.Configuration.ConfigurationElement.Properties%2A> tanımak için ek yapılandırma ayarlarınızı yapılandırma çerçevesine kaydetmek için özelliği geçersiz kılmanız gerekir. Sistem tarafından sağlanan ayarların bu özel istemci kimlik bilgileri yapılandırma öğesi aracılığıyla yapılandırılabilmesi için özelliklerinizi taban sınıf özellikleriyle birleştirin.
 
     [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
     [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]
 
-Yapılandırma işleyicisi sınıfına sahip olduktan sonra, WCF yapılandırma çerçevesiyle tümleştirilebilir. Bu, bir sonraki yordamda gösterildiği gibi, istemci uç noktası davranış öğelerinde özel istemci kimlik bilgilerinin kullanılmasını sağlar.
+Yapılandırma işleyicisi sınıfına sahip olduktan sonra, WCF yapılandırma çerçevesine entegre edilebilir. Bu, bir sonraki yordamda gösterildiği gibi, istemci uç nokta davranış öğelerinde özel istemci kimlik bilgilerinin kullanılmasını sağlar.
 
-#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Uygulama yapılandırmasında özel istemci kimlik bilgileri yapılandırma işleyicisini kaydetmek ve kullanmak için
+#### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Uygulama yapılandırmasında özel bir istemci kimlik bilgileri yapılandırma işleyicisini kaydetmek ve kullanmak için
 
-1. Yapılandırma dosyasına bir`extensions`< > öğesi ve bir`behaviorExtensions`< > öğesi ekleyin.
+1. Yapılandırma dosyasına <`extensions` bir `behaviorExtensions`> öğesi ve <bir> öğesi ekleyin.
 
-2. <`add``behaviorExtensions` >Öğesinebir<>öğesiekleyinveözniteliğiuygun`name` bir değere ayarlayın.
+2. <`add` `behaviorExtensions`> öğesine <> öğesi `name` ekleyin ve özniteliği uygun bir değere ayarlayın.
 
-3. `type` Özniteliği tam nitelikli tür adı olarak ayarlayın. Ayrıca, derleme adı ve diğer derleme özniteliklerini de içerir.
+3. `type` Özniteliği tam nitelikli tür adına ayarlayın. Ayrıca derleme adı ve diğer derleme öznitelikleri içerir.
 
     ```xml
     <system.serviceModel>
@@ -126,10 +126,10 @@ Yapılandırma işleyicisi sınıfına sahip olduktan sonra, WCF yapılandırma 
           <add name="myClientCredentials" type="Microsoft.ServiceModel.Samples.MyClientCredentialsConfigHandler, CustomCredentials, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
         </behaviorExtensions>
       </extensions>
-    <system.serviceModel>
+    </system.serviceModel>
     ```
 
-4. Yapılandırma işleyicinizi kaydettikten sonra, özel kimlik bilgileri öğesi sistem tarafından sağlanmış <`clientCredentials`> öğesi yerine aynı yapılandırma dosyası içinde kullanılabilir. Hem sistem tarafından belirtilen özellikleri hem de yapılandırma işleyicisi uygulamanıza eklediğiniz tüm yeni özellikleri kullanabilirsiniz. Aşağıdaki örnek, `creditCardNumber` özniteliğini kullanarak özel bir özelliğin değerini ayarlar.
+4. Yapılandırma işleyicinizi kaydettikten sonra, özel kimlik bilgileri öğesi sistem tarafından sağlanan <`clientCredentials`> öğesi yerine aynı yapılandırma dosyasıiçinde kullanılabilir. Hem sistem tarafından sağlanan özellikleri hem de yapılandırma işleyicisi uygulamanıza eklediğiniz yeni özellikleri kullanabilirsiniz. Aşağıdaki örnek, özniteliği kullanarak özel `creditCardNumber` bir özelliğin değerini ayarlar.
 
     ```xml
     <behaviors>
@@ -143,42 +143,42 @@ Yapılandırma işleyicisi sınıfına sahip olduktan sonra, WCF yapılandırma 
 
 #### <a name="to-implement-custom-service-credentials"></a>Özel hizmet kimlik bilgilerini uygulamak için
 
-1. Öğesinden <xref:System.ServiceModel.Description.ServiceCredentials>türetilmiş yeni bir sınıf tanımlayın.
+1. Türetilen yeni bir <xref:System.ServiceModel.Description.ServiceCredentials>sınıf tanımlayın.
 
-2. İsteğe bağlı. Eklenmekte olan yeni kimlik bilgisi değerleri için API sağlamak üzere yeni özellikler ekleyin. Yeni kimlik bilgisi değerleri eklemedıysanız, bu adımı atlayın. Aşağıdaki örnek bir `AdditionalCertificate` özellik ekler.
+2. İsteğe bağlı. Eklenen yeni kimlik bilgileri değerleri için API'ler sağlamak için yeni özellikler ekleyin. Yeni kimlik bilgisi değerleri eklemezseniz, bu adımı atlayın. Aşağıdaki örnekbir `AdditionalCertificate` özellik ekler.
 
-3. Geçersiz kılma <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> yöntemi. Bu yöntem, özel istemci kimlik bilgileri kullanıldığında WCF altyapısı tarafından otomatik olarak çağrılır. Yöntemi, <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfının bir uygulamasının (bir sonraki yordamda açıklanmıştır) bir örneğinin oluşturulması ve döndürülmesinden sorumludur.
+3. <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> Yöntemi geçersiz kılın. Bu yöntem, özel istemci kimlik bilgileri kullanıldığında WCF altyapısı tarafından otomatik olarak çağrılır. Yöntem, <xref:System.IdentityModel.Selectors.SecurityTokenManager> sınıfın bir uygulamasının örneğini oluşturmak ve döndürmekten sorumludur (sonraki yordamda açıklanmıştır).
 
-4. İsteğe bağlı. Geçersiz kılma <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> yöntemi. Bu yalnızca özel istemci kimlik bilgileri uygulamasına yeni özellikler veya iç alanlar eklendiğinde gereklidir.
+4. İsteğe bağlı. <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> Yöntemi geçersiz kılın. Bu, yalnızca özel istemci kimlik bilgileri uygulamasına yeni özellikler veya iç alanlar eklemek için gereklidir.
 
     [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
     [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]
 
-#### <a name="to-implement-a-custom-service-security-token-manager"></a>Özel bir hizmet güvenlik belirteci Yöneticisi uygulamak için
+#### <a name="to-implement-a-custom-service-security-token-manager"></a>Özel hizmet güvenliği belirteç yöneticisi uygulamak için
 
-1. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> Sınıfından türetilmiş yeni bir sınıf tanımlayın.
+1. Sınıftan türetilen yeni <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> bir sınıf tanımlayın.
 
-2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](how-to-create-a-custom-security-token-provider.md)oluşturun.
+2. İsteğe bağlı. Özel <xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> uygulama oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteç sağlayıcıları hakkında daha fazla bilgi için [bkz: Özel Güvenlik Belirteç Sağlayıcısı oluşturun.](how-to-create-a-custom-security-token-provider.md)
 
-3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcı](how-to-create-a-custom-security-token-authenticator.md) konusu oluşturun.
+3. İsteğe bağlı. Özel <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> uygulama oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteç kimlik doğrulayıcıları hakkında daha fazla bilgi için [bkz.](how-to-create-a-custom-security-token-authenticator.md)
 
-4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
+4. İsteğe bağlı. Özel bir <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> yöntem <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteçleri hakkında daha fazla bilgi için [bkz.](how-to-create-a-custom-token.md)
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
 
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>Uygulama kodundan özel hizmet kimlik bilgilerini kullanmak için
 
-1. Öğesinin bir örneğini oluşturun <xref:System.ServiceModel.ServiceHost>.
+1. <xref:System.ServiceModel.ServiceHost> nesnesinin bir örneğini oluşturun.
 
-2. Sistem tarafından belirtilen hizmet kimlik bilgileri davranışını <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyondan kaldırın.
+2. <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> Sistem tarafından sağlanan hizmet kimlik bilgilerini koleksiyondan kaldırın.
 
-3. Özel hizmet kimlik bilgileri sınıfının yeni bir örneğini oluşturun ve <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> koleksiyona ekleyin.
+3. Özel hizmet kimlik bilgileri sınıfının yeni bir <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> örneğini oluşturun ve koleksiyona ekleyin.
 
     [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
     [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]
 
-Daha önce "`To create a configuration handler for custom client credentials`" ve "`To register and use a custom client credentials configuration handler in the application configuration`yordamlarında açıklanan adımları kullanarak yapılandırma desteği ekleyin. Tek fark, sınıfının yapılandırma işleyicisi için <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> temel sınıf olarak yerine <xref:System.ServiceModel.Configuration.ClientCredentialsElement> sınıfını kullanmaktır. Özel hizmet kimlik bilgisi öğesi, sistem tarafından belirtilen `<serviceCredentials>` öğenin kullanıldığı her yerde kullanılabilir.
+" ve "`To create a configuration handler for custom client credentials``To register and use a custom client credentials configuration handler in the application configuration`yordamlarında daha önce açıklanan adımları kullanarak yapılandırma desteği ekleyin." Tek fark, yapılandırma <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> işleyicisi <xref:System.ServiceModel.Configuration.ClientCredentialsElement> için taban sınıf olarak sınıf yerine sınıf kullanmaktır. Özel hizmet kimlik bilgileri, sistem tarafından sağlanan `<serviceCredentials>` öğenin kullanıldığı her yerde kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -188,6 +188,6 @@ Daha önce "`To create a configuration handler for custom client credentials`" v
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](how-to-create-a-custom-security-token-provider.md)
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](how-to-create-a-custom-security-token-authenticator.md)
-- [Nasıl yapılır: Özel belirteç oluşturma](how-to-create-a-custom-token.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel Belirteç Oluşturma](how-to-create-a-custom-token.md)

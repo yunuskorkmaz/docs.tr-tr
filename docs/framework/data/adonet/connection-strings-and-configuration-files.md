@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 30198930a260b7370d061e85efe4935e88ad4d8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151633"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345055"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı Dizeleri ve Yapılandırma Dosyaları
+
 Bağlantı dizelerini uygulamanızın koduna yerleştirmek güvenlik açıklarına ve bakım sorunlarına neden olabilir. Bir uygulamanın kaynak kodunda derlenen şifrelenmemiş bağlantı dizeleri [Ildasm.exe (IL Desassembler)](../../tools/ildasm-exe-il-disassembler.md) aracı kullanılarak görüntülenebilir. Ayrıca, bağlantı dizesi hiç değişirse, uygulamanızın yeniden derlenmiş olması gerekir. Bu nedenlerden dolayı, bağlantı dizelerini bir uygulama yapılandırma dosyasında depolamanızı öneririz.  
   
 ## <a name="working-with-application-configuration-files"></a>Uygulama Yapılandırma Dosyalarıyla Çalışma  
@@ -125,9 +126,9 @@ Bağlantı dizelerini uygulamanızın koduna yerleştirmek güvenlik açıkları
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
     <add name="RsaProtectedConfigurationProvider"
-      type="System.Configuration.RsaProtectedConfigurationProvider, ... />  
+      type="System.Configuration.RsaProtectedConfigurationProvider" />  
     <add name="DataProtectionConfigurationProvider"
-      type="System.Configuration.DpapiProtectedConfigurationProvider, ... />  
+      type="System.Configuration.DpapiProtectedConfigurationProvider" />  
   </providers>  
 </configProtectedData>  
 ```  

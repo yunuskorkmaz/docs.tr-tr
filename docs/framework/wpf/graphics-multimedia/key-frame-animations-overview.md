@@ -6,18 +6,18 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eb590b07eae3b76b3a206b9731997a6bc2c90d7
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186679"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344901"
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu, anahtar kare animasyonları ile tanıştırır. Anahtar kare animasyonları, ikiden fazla hedef değeri kullanarak animasyon yapmanızı ve animasyonun enterpolasyon yöntemini denetlemenizi sağlar.  
   
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu genel bakışı anlamak için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animasyonlara ve zaman çizelgelerine aşina olmalısınız. Animasyonlara giriş için [Animasyona Genel Bakış'a](animation-overview.md)bakın. Ayrıca, From/To/By animasyonlarına aşina olmak da yardımcı olur. Daha fazla bilgi için, Gelen/To/By Animasyonlara Genel Bakış'a bakın.  
   
 <a name="whatisakeyframeanimation"></a>
@@ -289,7 +289,7 @@ Kontrol noktaları (0,25, 0,5) ve (0,75, 1,0) ile bir anahtar spline
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Anahtar Spline Animasyon Örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
-- [Anahtar Kare Animasyon Örneği](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Anahtar Kare Animasyon Örneği](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Görsel Taslaklara Genel Bakış](storyboards-overview.md)
 - [Anahtar Çerçeve ile İlgili Nasıl Yapılır Konuları](key-frame-animation-how-to-topics.md)

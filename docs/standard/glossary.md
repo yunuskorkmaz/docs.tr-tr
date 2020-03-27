@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili terimlerin anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291560"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344199"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -161,7 +161,7 @@ Mono hakkında daha fazla bilgi edinmek için [Mono belgelerine](https://www.mon
 
 .NET'in çapraz platform, yüksek performanslı, açık kaynak uygulaması. Core Common Language Runtime (CoreCLR), Core AOT Runtime (CoreRT, geliştirme), Core Base Sınıf Kitaplığı ve Core SDK'yı içerir.
 
-Bkz. [.NET Core](../core/index.md).
+Bkz. [.NET Core](../core/index.yml).
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
@@ -275,6 +275,6 @@ Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulama
 
 - [.NET Rehberi](index.md)
 - [.NET Çerçeve Rehberi](../framework/index.yml)
-- [.NET Core](../core/index.md)
+- [.NET Core](../core/index.yml)
 - [ASP.NET Genel Bakış](/aspnet/index#pivot=aspnet)
 - [ASP.NET Çekirdek Genel Bakış](/aspnet/index#pivot=core)

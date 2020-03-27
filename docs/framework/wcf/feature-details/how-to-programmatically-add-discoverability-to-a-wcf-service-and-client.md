@@ -2,15 +2,15 @@
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184880"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344973"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
-Bu konu, bir Windows Communication Foundation (WCF) hizmetinin nasıl keşfedilebilir hale getirilebildiğini açıklar. [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneğine dayanır.  
+Bu konu, bir Windows Communication Foundation (WCF) hizmetinin nasıl keşfedilebilir hale getirilebildiğini açıklar. [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneğine dayanır.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Discovery için varolan Self-Host hizmet örneğini yapılandırmak için  
   
@@ -124,7 +124,7 @@ Bu konu, bir Windows Communication Foundation (WCF) hizmetinin nasıl keşfedile
   
      Bu yöntem, hesap makinesi `FindCalculatorServiceAddress` hizmetini aramak için döndürülen uç nokta adresini kullanır.  
   
-11. Yöntemin `InvokeCalculatorService` içinde, sınıfın bir `CalculatorServiceClient` örneğini oluşturun. Bu sınıf [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneği tarafından tanımlanır. Svcutil.exe kullanılarak oluşturuldu.  
+11. Yöntemin `InvokeCalculatorService` içinde, sınıfın bir `CalculatorServiceClient` örneğini oluşturun. Bu sınıf [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneği tarafından tanımlanır. Svcutil.exe kullanılarak oluşturuldu.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ Bu konu, bir Windows Communication Foundation (WCF) hizmetinin nasıl keşfedile
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıda, bu örnek için kodun bir listesi vetir. Bu kod [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) örneğini temel aldığı için, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için [Kurulum Talimatları'na](https://go.microsoft.com/fwlink/?LinkId=145522)bakın.  
+ Aşağıda, bu örnek için kodun bir listesi vetir. Bu kod [Self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneğini temel aldığı için, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için [Kurulum Talimatları'na](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)bakın.  
   
 ```csharp  
 // Service.cs  

@@ -2,16 +2,16 @@
 title: .NET Core ve Açık Kaynak
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181603"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345026"
 ---
-# <a name="net-core-and-open-source"></a>.NET Çekirdek ve açık kaynak
+# <a name="net-core-and-open-source"></a>.NET Core ve açık kaynak
 
-Bu makalede, .NET Core'un ne olduğuna kısa bir genel bakış sağlanmıştır ve daha fazla bilgiyi nasıl bulabileceğinizi gösterir. .NET Core için belgelerin tam listesini bulmak için [.NET Core kılavuzunu ziyaret edin.](../../core/index.md)
+Bu makalede, .NET Core'un ne olduğuna kısa bir genel bakış sağlanmıştır ve daha fazla bilgiyi nasıl bulabileceğinizi gösterir. .NET Core için belgelerin tam listesini bulmak için [.NET Core kılavuzunu ziyaret edin.](../../core/index.yml)
 
 ## <a name="what-is-net-core"></a>.NET Core nedir?  
 
@@ -46,5 +46,5 @@ Bu makalede, .NET Core'un ne olduğuna kısa bir genel bakış sağlanmıştır 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET öğretici - Alo World 10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core kılavuzu](../../core/index.md)
+- [.NET Core kılavuzu](../../core/index.yml)
 - [ASP.NET Çekirdek dokümanları](/aspnet/core/)

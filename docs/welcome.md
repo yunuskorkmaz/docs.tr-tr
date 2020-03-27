@@ -3,12 +3,12 @@ title: .NET'e Hoş Geldiniz
 description: .NET teknoloji ailesiyle başlarken.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228792"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345299"
 ---
 # <a name="welcome-to-net"></a>.NET'e Hoş Geldiniz
 
@@ -33,9 +33,9 @@ Ayrıca en son .NET olaylarını takip edin:
 
 .NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında bilgi için aşağıdaki makalelere bakın:
 
-- [​.NET Core'daki Yenilikler](core/whats-new/index.md)
+- [​.NET Core’daki yenilikler](core/whats-new/index.md)
 - [.NET Framework’teki yenilikler](framework/whats-new/index.md)
-- [C'deki yenilikler #](csharp/whats-new/index.md)
+- [C# yenilikleri](csharp/whats-new/index.md)
 - [Visual Basic için yenilikler](visual-basic/getting-started/whats-new.md)
 
 ## <a name="documentation"></a>Belgeler
@@ -43,7 +43,7 @@ Ayrıca en son .NET olaylarını takip edin:
 Bu dokümantasyon,.NET'in platformlar ve diller arasında genişliğini kapsar. .NET ve dilleriyle aşağıdaki bölümlerden herhangi birinde işe alabilirsiniz:
 
 - [.NET Rehberi](standard/index.md)
-- [.NET Çekirdek Rehberi](core/index.md)
+- [.NET Çekirdek Rehberi](core/index.yml)
 - [.NET Çerçeve Rehberi](framework/index.yml)
 - [C# Rehberi](csharp/index.yml)
 - [F# Rehberi](fsharp/index.yml)
