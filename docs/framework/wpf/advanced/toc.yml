@@ -49,7 +49,7 @@
               href: propertypath-xaml-syntax.md
             - name: 'PresentationOptions:Freeze Özniteliği'
               href: presentationoptions-freeze-attribute.md
-        - name: 'Uyumluluk Biçimlendirme (mc:) Dil Özellikleri'
+        - name: 'İşaretleme Uyumluluğu (mc:) Dil Özellikleri'
           href: markup-compatibility-mc-language-features.md
           items:
             - name: 'mc:Ignorable Özniteliği'
@@ -168,13 +168,13 @@
           items:
             - name: Kod Kullanarak bir Olay İşleyicisi Ekleme
               href: how-to-add-an-event-handler-using-code.md
-            - name: Gönderilmiş bir Olayı İşleme
+            - name: Yönlendirilmiş Olayı İşleme
               href: how-to-handle-a-routed-event.md
-            - name: Özel Gönderilmiş Olay Oluşturma
+            - name: Özel Yönlendirilmiş Olay Oluşturma
               href: how-to-create-a-custom-routed-event.md
             - name: Olay İşleyicisinde Kaynak Öğesi Bulma
               href: how-to-find-the-source-element-in-an-event-handler.md
-            - name: Gönderilmiş bir Olay için Sınıf İşleme Ekleme
+            - name: Yönlendirilmiş Olay için Sınıf İşleme Ekleme
               href: how-to-add-class-handling-for-a-routed-event.md
     - name: Giriş
       href: input-wpf.md
@@ -481,6 +481,8 @@
     - name: Geçiş ve Birlikte Çalışabilirlik
       href: migration-and-interoperability.md
       items:
+        - name: WPF 3.X’ten WPF 4.5’e geçiş
+          href: types-migrated-from-wpf-to-system.md
         - name: WPF ve Windows Forms Birlikte Çalışması
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -494,17 +496,17 @@
               href: windows-forms-and-wpf-property-mapping.md
             - name: Karma Uygulama Sorunlarını Giderme
               href: troubleshooting-hybrid-applications.md
-            - name: 'İzlenecek yol: WPF''de Windows Forms Denetimini Barındırma'
+            - name: 'İzlenecek yol: WPF içinde Windows Forms Denetimi Barındırma'
               href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
             - name: 'İzlenecek yol: XAML Kullanarak WPF İçerisinde bir Windows Forms Denetimi Barındırma'
               href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
             - name: 'İzlenecek yol: WPF''de Windows Forms Bileşik Denetimini Barındırma'
               href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
-            - name: 'İzlenecek yol: WPF''te ActiveX Denetimi Barındırma'
+            - name: 'İzlenecek yol: WPF''de ActiveX Denetimi Barındırma'
               href: walkthrough-hosting-an-activex-control-in-wpf.md
             - name: 'Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme'
               href: how-to-enable-visual-styles-in-a-hybrid-application.md
-            - name: 'İzlenecek yol: WPF''de Windows Forms Denetimlerini Düzenleme'
+            - name: 'İzlenecek yol: WPF’de Windows Forms Denetimlerini Düzenleme'
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: 'İzlenecek yol: Karma Uygulamalarda Veriye Bağlama'
               href: walkthrough-binding-to-data-in-hybrid-applications.md
@@ -527,11 +529,11 @@
               href: sharing-message-loops-between-win32-and-wpf.md
             - name: WPF'de Win32 İçeriği Barındırma
               href: hosting-win32-content-in-wpf.md
-            - name: 'İzlenecek yol: WPF''te Win32 Denetimi Barındırma'
+            - name: 'İzlenecek yol: WPF içinde Win32 Denetimini Barındırma'
               href: walkthrough-hosting-a-win32-control-in-wpf.md
-            - name: 'İzlenecek yol: Win32''de WPF Barındırma'
+            - name: 'İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma'
               href: walkthrough-hosting-wpf-content-in-win32.md
-            - name: 'İzlenecek yol: Win32''de WPF Saati Barındırma'
+            - name: 'İzlenecek yol: WPF Saatini Win32 içinde Barındırma'
               href: walkthrough-hosting-a-wpf-clock-in-win32.md
         - name: WPF ve Direct3D9 Birlikte Çalışması
           href: wpf-and-direct3d9-interoperation.md
@@ -540,7 +542,7 @@
               href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
             - name: 'İzlenecek yol: WPF''de Barındırmak için Direct3D9 İçeriği Oluşturma'
               href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
-            - name: 'İzlenecek yol: WPF''de Direct3D9 İçeriği Barındırma'
+            - name: 'İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma'
               href: walkthrough-hosting-direct3d9-content-in-wpf.md
     - name: Performans
       href: performance.md

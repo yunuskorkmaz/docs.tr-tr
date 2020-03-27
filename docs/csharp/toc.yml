@@ -1569,7 +1569,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: 'C# işleçleri'
+    - name: 'C# işleçleri ve ifadeleri'
       items:
         - name: Genel Bakış
           href: language-reference/operators/index.md
@@ -1589,7 +1589,7 @@
         - name: Karşılaştırma işleçleri
           href: language-reference/operators/comparison-operators.md
           displayName: '>, <, >=, <=, greater, less'
-        - name: Üye erişimi işleçleri
+        - name: Üye erişim işleçleri ve ifadeleri
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
         - name: Tür testi ve atama işleçleri
@@ -1628,21 +1628,26 @@
         - name: await işleci
           href: language-reference/operators/await.md
           displayName: async
-        - name: default işleçi
+        - name: varsayılan değer ifadeleri
           href: language-reference/operators/default.md
-          displayName: 'default value, default literal, type default'
+          displayName: 'default value, default operator, default literal, type default'
         - name: delegate işleci
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
-        - name: nameof işleci
+        - name: nameof ifadesi
           href: language-reference/operators/nameof.md
+          displayName: nameof operator
         - name: new işleci
           href: language-reference/operators/new-operator.md
           displayName: constructor
         - name: sizeof işleci
           href: language-reference/operators/sizeof.md
-        - name: stackalloc işleci
+        - name: stackalloc ifadesi
           href: language-reference/operators/stackalloc.md
+          displayName: 'stack allocation, span, stackalloc operator'
+        - name: switch ifadesi
+          href: language-reference/operators/switch-expression.md
+          displayName: 'switch, pattern matching, patterns'
         - name: true ve false işleçleri
           href: language-reference/operators/true-false-operators.md
         - name: İşleç aşırı yüklemesi

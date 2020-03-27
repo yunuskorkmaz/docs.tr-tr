@@ -1,17 +1,17 @@
-- name: .NET Uygulama Mimarisi Kılavuzu
+- name: .NET uygulama mimarisi kılavuzu
   href: index.yml
 - name: E-kitaplar
   expanded: true
   items:
     - name: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları tasarlama
       href: modern-web-apps-azure/
-    - name: WCF Geliştiricileri için ASP.NET Core gRPC
+    - name: WCF geliştiricileri için ASP.NET Core gRPC
       href: grpc-for-wcf-developers/
     - name: Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
       href: modernize-with-azure-containers/
-    - name: Microsoft platformu ve araçları ile Kapsayıcı Docker uygulaması yaşam döngüsü
+    - name: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
       href: containerized-lifecycle/
-    - name: '.NET Mikro Hizmetleri: kapsayıcılı .NET uygulamaları mimarisi'
+    - name: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi'
       href: microservices/
     - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       href: serverless/
@@ -20,5 +20,5 @@
   items:
     - name: Azure için bulutta yerel .NET uygulamaları tasarlama
       href: cloud-native/
-    - name: ASP.NET Web Forms Geliştiricileri için Blazor
+    - name: ASP.NET Web Forms geliştiricileri için Blazor
       href: blazor-for-web-forms-developers/

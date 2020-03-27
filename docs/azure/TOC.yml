@@ -1,0 +1,16 @@
+- name: .NET geliştiricileri için Azure
+  href: index.yml
+  items:
+    - name: Azure ve .NET’e giriş
+      href: intro.md
+    - name: Azure’a geçiş
+      expanded: true
+      items:
+        - name: Azure barındırma seçeneği belirleme
+          href: ./migration/choose.md
+        - name: Azure App Service’e .NET web uygulamasını veya hizmetini geçirme
+          href: ./migration/app-service.md
+        - name: Azure VM’ye ASP.NET uygulamasını geçirme
+          href: ./migration/vm.md
+        - name: Azure’a SQL Server veritabanını geçirme
+          href: ./migration/sql.md
