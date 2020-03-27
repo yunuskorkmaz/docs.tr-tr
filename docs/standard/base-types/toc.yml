@@ -1,4 +1,4 @@
-- name: Taban Türleri
+- name: Temel Türler
   href: index.md
   items:
     - name: Ortak Tür Sistemi
@@ -116,8 +116,10 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: .NET içinde Karakter Kodlaması
-          href: character-encoding.md
+    - name: .NET içinde karakter kodlaması
+      href: character-encoding-introduction.md
+    - name: Karakter kodlaması sınıflarını kullanma
+      href: character-encoding.md
     - name: Dizeleri Ayrıştırma
       href: parsing-strings.md
       items:

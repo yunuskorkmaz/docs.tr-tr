@@ -64,3 +64,5 @@
   href: load-unload.md
 - name: 'İzlenecek yol: Visual Studio’da yönetilen bütünleştirilmiş kodlardan türleri ekleme'
   href: embed-types-visual-studio.md
+- name: MetadataLoadContext kullanarak derleme içeriklerini inceleme
+  href: inspect-contents-using-metadataloadcontext.md

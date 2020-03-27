@@ -1,13 +1,298 @@
 - name: .NET Framework kılavuzu
-  href: index.md
-- name: Yenilikler
-  href: whats-new/
+  href: index.yml
+- name: .NET Framework’e Genel Bakış
+  href: get-started/overview.md
 - name: Kullanmaya başlayın
-  href: get-started/
+  items:
+    - name: Genel Bakış
+      href: get-started/index.md
+    - name: .NET Framework ve bant dışı yayınlar
+      href: get-started/the-net-framework-and-out-of-band-releases.md
+    - name: .NET Core ve açık kaynak
+      href: get-started/net-core-and-open-source.md
+    - name: Sistem gereksinimleri
+      href: get-started/system-requirements.md
 - name: Yükleme kılavuzu
-  href: install/
+  items:
+    - name: Genel Bakış
+      href: install/index.md
+    - name: Geliştiriciler için
+      href: install/guide-for-developers.md
+    - name: İşletim sistemi sürümüne göre
+      items:
+        - name: Windows 10 ve Windows Server 2016
+          href: install/on-windows-10.md
+        - name: Windows 8.1 ve Windows Server 2012 R2
+          href: install/on-windows-8-1.md
+        - name: Windows 8 ve Windows Server 2012
+          href: install/on-windows-8.md
+        - name: Windows 7 SP1 ve Windows Server 2008 R2
+          href: install/on-windows-7.md
+        - name: Windows Vista ve Windows Server 2008
+          href: install/on-windows-vista.md
+        - name: Windows XP ve Windows Server 2003
+          href: install/on-windows-xp.md
+    - name: .NET framework’ü onarma
+      href: install/repair.md
+    - name: Sorun giderme
+      items:
+        - name: Yükleme ve kaldırma sorunlarını giderme
+          href: install/troubleshoot-blocked-installations-and-uninstallations.md
+        - name: “Bu uygulama başlatılamadı” sorununu giderme
+          href: install/application-not-started.md
+    - name: Windows 10 aracılığıyla Windows 8’de .NET Framework 3.5
+      href: install/dotnet-35-windows-10.md
+    - name: Windows 8 ila Windows 10’da .NET Framework 1.1
+      href: install/run-net-framework-1-1-apps.md
 - name: Geçiş kılavuzu
-  href: migration-guide/
+  items:
+    - name: Genel Bakış
+      href: migration-guide/index.md
+    - name: Uyumluluk
+      items:
+        - name: Uygulama uyumluluğu
+          items:
+            - name: Genel Bakış
+              displayName: App compatibility
+              href: migration-guide/application-compatibility.md
+            - name: Çalışma zamanı değişiklikleri
+              items:
+                - name: 4.0 - 4.5
+                  href: migration-guide/runtime/4.0-4.5.md
+                - name: 4.0 - 4.5.1
+                  href: migration-guide/runtime/4.0-4.5.1.md
+                - name: 4.0 - 4.5.2
+                  href: migration-guide/runtime/4.0-4.5.2.md
+                - name: 4.0 - 4.6
+                  href: migration-guide/runtime/4.0-4.6.md
+                - name: 4.0 - 4.6.1
+                  href: migration-guide/runtime/4.0-4.6.1.md
+                - name: 4.0 - 4.6.2
+                  href: migration-guide/runtime/4.0-4.6.2.md
+                - name: 4.0 - 4.7
+                  href: migration-guide/runtime/4.0-4.7.md
+                - name: 4.0 - 4.7.1
+                  href: migration-guide/runtime/4.0-4.7.1.md
+                - name: 4.0 - 4.7.2
+                  href: migration-guide/runtime/4.0-4.7.2.md
+                - name: 4.0 - 4.8
+                  href: migration-guide/runtime/4.0-4.8.md
+                - name: 4.5 - 4.5.1
+                  href: migration-guide/runtime/4.5-4.5.1.md
+                - name: 4.5 - 4.5.2
+                  href: migration-guide/runtime/4.5-4.5.2.md
+                - name: 4.5 - 4.6
+                  href: migration-guide/runtime/4.5-4.6.md
+                - name: 4.5 - 4.6.1
+                  href: migration-guide/runtime/4.5-4.6.1.md
+                - name: 4.5 - 4.6.2
+                  href: migration-guide/runtime/4.5-4.6.2.md
+                - name: 4.5 - 4.7
+                  href: migration-guide/runtime/4.5-4.7.md
+                - name: 4.5 - 4.7.1
+                  href: migration-guide/runtime/4.5-4.7.1.md
+                - name: 4.5 - 4.7.2
+                  href: migration-guide/runtime/4.5-4.7.2.md
+                - name: 4.5 - 4.8
+                  href: migration-guide/runtime/4.5-4.8.md
+                - name: 4.5.1 - 4.5.2
+                  href: migration-guide/runtime/4.5.1-4.5.2.md
+                - name: 4.5.1 - 4.6
+                  href: migration-guide/runtime/4.5.1-4.6.md
+                - name: 4.5.1 - 4.6.1
+                  href: migration-guide/runtime/4.5.1-4.6.1.md
+                - name: 4.5.1 - 4.6.2
+                  href: migration-guide/runtime/4.5.1-4.6.2.md
+                - name: 4.5.1 - 4.7
+                  href: migration-guide/runtime/4.5.1-4.7.md
+                - name: 4.5.1 - 4.7.1
+                  href: migration-guide/runtime/4.5.1-4.7.1.md
+                - name: 4.5.1 - 4.7.2
+                  href: migration-guide/runtime/4.5.1-4.7.2.md
+                - name: 4.5.1 - 4.8
+                  href: migration-guide/runtime/4.5.1-4.8.md
+                - name: 4.5.2 - 4.6
+                  href: migration-guide/runtime/4.5.2-4.6.md
+                - name: 4.5.2 - 4.6.1
+                  href: migration-guide/runtime/4.5.2-4.6.1.md
+                - name: 4.5.2 - 4.6.2
+                  href: migration-guide/runtime/4.5.2-4.6.2.md
+                - name: 4.5.2 - 4.7
+                  href: migration-guide/runtime/4.5.2-4.7.md
+                - name: 4.5.2 - 4.7.1
+                  href: migration-guide/runtime/4.5.2-4.7.1.md
+                - name: 4.5.2 - 4.7.2
+                  href: migration-guide/runtime/4.5.2-4.7.2.md
+                - name: 4.5.2 - 4.8
+                  href: migration-guide/runtime/4.5.2-4.8.md
+                - name: 4.6 - 4.6.1
+                  href: migration-guide/runtime/4.6-4.6.1.md
+                - name: 4.6 - 4.6.2
+                  href: migration-guide/runtime/4.6-4.6.2.md
+                - name: 4.6 - 4.7
+                  href: migration-guide/runtime/4.6-4.7.md
+                - name: 4.6 - 4.7.1
+                  href: migration-guide/runtime/4.6-4.7.1.md
+                - name: 4.6 - 4.7.2
+                  href: migration-guide/runtime/4.6-4.7.2.md
+                - name: 4.6 - 4.8
+                  href: migration-guide/runtime/4.6-4.8.md
+                - name: 4.6.1 - 4.6.2
+                  href: migration-guide/runtime/4.6.1-4.6.2.md
+                - name: 4.6.1 - 4.7
+                  href: migration-guide/runtime/4.6.1-4.7.md
+                - name: 4.6.1 - 4.7.1
+                  href: migration-guide/runtime/4.6.1-4.7.1.md
+                - name: 4.6.1 - 4.7.2
+                  href: migration-guide/runtime/4.6.1-4.7.2.md
+                - name: 4.6.1 - 4.8
+                  href: migration-guide/runtime/4.6.1-4.8.md
+                - name: 4.6.2 - 4.7
+                  href: migration-guide/runtime/4.6.2-4.7.md
+                - name: 4.6.2 - 4.7.1
+                  href: migration-guide/runtime/4.6.2-4.7.1.md
+                - name: 4.6.2 - 4.7.2
+                  href: migration-guide/runtime/4.6.2-4.7.2.md
+                - name: 4.6.2 - 4.8
+                  href: migration-guide/runtime/4.6.2-4.8.md
+                - name: 4.7 - 4.7.1
+                  href: migration-guide/runtime/4.7-4.7.1.md
+                - name: 4.7 - 4.7.2
+                  href: migration-guide/runtime/4.7-4.7.2.md
+                - name: 4.7 - 4.8
+                  href: migration-guide/runtime/4.7-4.8.md
+                - name: 4.7.1 - 4.7.2
+                  href: migration-guide/runtime/4.7.1-4.7.2.md
+                - name: 4.7.1 - 4.8
+                  href: migration-guide/runtime/4.7.1-4.8.md
+                - name: 4.7.2 - 4.8
+                  href: migration-guide/runtime/4.7.2-4.8.md
+            - name: Yeniden hedefleme değişiklikleri
+              items:
+                - name: 4.0 - 4.5
+                  href: migration-guide/retargeting/4.0-4.5.md
+                - name: 4.0 - 4.5.1
+                  href: migration-guide/retargeting/4.0-4.5.1.md
+                - name: 4.0 - 4.5.2
+                  href: migration-guide/retargeting/4.0-4.5.2.md
+                - name: 4.0 - 4.6
+                  href: migration-guide/retargeting/4.0-4.6.md
+                - name: 4.0 - 4.6.1
+                  href: migration-guide/retargeting/4.0-4.6.1.md
+                - name: 4.0 - 4.6.2
+                  href: migration-guide/retargeting/4.0-4.6.2.md
+                - name: 4.0 - 4.7
+                  href: migration-guide/retargeting/4.0-4.7.md
+                - name: 4.0 - 4.7.1
+                  href: migration-guide/retargeting/4.0-4.7.1.md
+                - name: 4.0 - 4.7.2
+                  href: migration-guide/retargeting/4.0-4.7.2.md
+                - name: 4.0 - 4.8
+                  href: migration-guide/retargeting/4.0-4.8.md
+                - name: 4.5 - 4.5.1
+                  href: migration-guide/retargeting/4.5-4.5.1.md
+                - name: 4.5 - 4.5.2
+                  href: migration-guide/retargeting/4.5-4.5.2.md
+                - name: 4.5 - 4.6
+                  href: migration-guide/retargeting/4.5-4.6.md
+                - name: 4.5 - 4.6.1
+                  href: migration-guide/retargeting/4.5-4.6.1.md
+                - name: 4.5 - 4.6.2
+                  href: migration-guide/retargeting/4.5-4.6.2.md
+                - name: 4.5 - 4.7
+                  href: migration-guide/retargeting/4.5-4.7.md
+                - name: 4.5 - 4.7.1
+                  href: migration-guide/retargeting/4.5-4.7.1.md
+                - name: 4.5 - 4.7.2
+                  href: migration-guide/retargeting/4.5-4.7.2.md
+                - name: 4.5 - 4.8
+                  href: migration-guide/retargeting/4.5-4.8.md
+                - name: 4.5.1 - 4.5.2
+                  href: migration-guide/retargeting/4.5.1-4.5.2.md
+                - name: 4.5.1 - 4.6
+                  href: migration-guide/retargeting/4.5.1-4.6.md
+                - name: 4.5.1 - 4.6.1
+                  href: migration-guide/retargeting/4.5.1-4.6.1.md
+                - name: 4.5.1 - 4.6.2
+                  href: migration-guide/retargeting/4.5.1-4.6.2.md
+                - name: 4.5.1 - 4.7
+                  href: migration-guide/retargeting/4.5.1-4.7.md
+                - name: 4.5.1 - 4.7.1
+                  href: migration-guide/retargeting/4.5.1-4.7.1.md
+                - name: 4.5.1 - 4.7.2
+                  href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.2 - 4.6
+                  href: migration-guide/retargeting/4.5.2-4.6.md
+                - name: 4.5.2 - 4.6.1
+                  href: migration-guide/retargeting/4.5.2-4.6.1.md
+                - name: 4.5.2 - 4.6.2
+                  href: migration-guide/retargeting/4.5.2-4.6.2.md
+                - name: 4.5.2 - 4.7
+                  href: migration-guide/retargeting/4.5.2-4.7.md
+                - name: 4.5.2 - 4.7.1
+                  href: migration-guide/retargeting/4.5.2-4.7.1.md
+                - name: 4.5.2 - 4.7.2
+                  href: migration-guide/retargeting/4.5.2-4.7.2.md
+                - name: 4.5.2 - 4.8
+                  href: migration-guide/retargeting/4.5.2-4.8.md
+                - name: 4.6 - 4.6.1
+                  href: migration-guide/retargeting/4.6-4.6.1.md
+                - name: 4.6 - 4.6.2
+                  href: migration-guide/retargeting/4.6-4.6.2.md
+                - name: 4.6 - 4.7
+                  href: migration-guide/retargeting/4.6-4.7.md
+                - name: 4.6 - 4.7.1
+                  href: migration-guide/retargeting/4.6-4.7.1.md
+                - name: 4.6 - 4.7.2
+                  href: migration-guide/retargeting/4.6-4.7.2.md
+                - name: 4.6 - 4.8
+                  href: migration-guide/retargeting/4.6-4.8.md
+                - name: 4.6.1 - 4.6.2
+                  href: migration-guide/retargeting/4.6.1-4.6.2.md
+                - name: 4.6.1 - 4.7
+                  href: migration-guide/retargeting/4.6.1-4.7.md
+                - name: 4.6.1 - 4.7.1
+                  href: migration-guide/retargeting/4.6.1-4.7.1.md
+                - name: 4.6.1 - 4.7.2
+                  href: migration-guide/retargeting/4.6.1-4.7.2.md
+                - name: 4.6.1 - 4.8
+                  href: migration-guide/retargeting/4.6.1-4.8.md
+                - name: 4.6.2 - 4.7
+                  href: migration-guide/retargeting/4.6.2-4.7.md
+                - name: 4.6.2 - 4.7.1
+                  href: migration-guide/retargeting/4.6.2-4.7.1.md
+                - name: 4.6.2 - 4.7.2
+                  href: migration-guide/retargeting/4.6.2-4.7.2.md
+                - name: 4.6.2 - 4.8
+                  href: migration-guide/retargeting/4.6.2-4.8.md
+                - name: 4.7 - 4.7.1
+                  href: migration-guide/retargeting/4.7-4.7.1.md
+                - name: 4.7 - 4.7.2
+                  href: migration-guide/retargeting/4.7-4.7.2.md
+                - name: 4.7 - 4.8
+                  href: migration-guide/retargeting/4.7-4.8.md
+                - name: 4.7.1 - 4.7.2
+                  href: migration-guide/retargeting/4.7.1-4.7.2.md
+                - name: 4.7.1 - 4.8
+                  href: migration-guide/retargeting/4.7.1-4.8.md
+                - name: 4.7.2 - 4.8
+                  href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: Sürüm uyumluluğu
+          href: migration-guide/version-compatibility.md
+    - name: .NET Framework sürümleri
+      items:
+        - name: Sürümler ve bağımlılıklar
+          href: migration-guide/versions-and-dependencies.md
+        - name: Yüklü sürümleri bulma
+          href: migration-guide/how-to-determine-which-versions-are-installed.md
+        - name: Yüklü güncelleştirmeleri bulma
+          href: migration-guide/how-to-determine-which-net-framework-updates-are-installed.md
+    - name: Uygulamayı .NET Framework 4 veya sonraki sürümlerini destekleyecek şekilde yapılandırma
+      href: migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: .NET Framework 1.1'den geçiş yapma
+      href: migration-guide/migrating-from-the-net-framework-1-1.md
+    - name: .NET Framework 4 geçiş sorunları
+      href: migration-guide/net-framework-4-migration-issues.md
 - name: Geliştirme kılavuzu
   href: development-guide.md
   items:
@@ -43,7 +328,7 @@
       href: configure-apps/
     - name: .NET Native ile uygulama derleme
       href: net-native/
-    - name: 'Hata Ayıklama, İzleme ve Profil Oluşturma'
+    - name: 'Hata ayıklama, izleme ve profil oluşturma'
       href: debug-trace-profile/
     - name: Dağıtım
       href: deployment/
@@ -60,6 +345,246 @@
     - name: XAML Hizmetleri
       href: ../desktop-wpf/xaml-services/
 - name: Araçlar
-  href: tools/
-- name: Ek sınıf kitaplıkları ve API'ler
-  href: additional-apis/
+  items:
+    - name: Genel Bakış
+      href: tools/index.md
+    - name: Al.exe (Derleme bağlayıcı)
+      href: tools/al-exe-assembly-linker.md
+    - name: Aximp.exe (Windows Forms ActiveX denetim içeri aktarıcı)
+      href: tools/aximp-exe-windows-forms-activex-control-importer.md
+    - name: Caspol.exe (Kod erişimi güvenliği ilke aracı)
+      href: tools/caspol-exe-code-access-security-policy-tool.md
+    - name: Cert2spc.exe (Yazılım yayımcısı sertifika test aracı)
+      href: tools/cert2spc-exe-software-publisher-certificate-test-tool.md
+    - name: Certmgr.exe (Sertifika yönetim aracı)
+      href: tools/certmgr-exe-certificate-manager-tool.md
+    - name: Clrver.exe (CLR sürüm aracı)
+      href: tools/clrver-exe-clr-version-tool.md
+    - name: Komut istemleri
+      href: tools/developer-command-prompt-for-vs.md
+    - name: CorFlags.exe (CorFlags dönüştürme aracı)
+      href: tools/corflags-exe-corflags-conversion-tool.md
+    - name: Fuslogvw.exe (Derleme bağlaması günlük görüntüleyici)
+      href: tools/fuslogvw-exe-assembly-binding-log-viewer.md
+    - name: Gacutil.exe (Genel derleme önbelleği aracı)
+      href: tools/gacutil-exe-gac-tool.md
+    - name: Ilasm.exe (IL derleyici)
+      href: tools/ilasm-exe-il-assembler.md
+    - name: Ildasm.exe (IL ayrıştırıcı)
+      href: tools/ildasm-exe-il-disassembler.md
+    - name: Installutil.exe (Yükleme aracı)
+      href: tools/installutil-exe-installer-tool.md
+    - name: Lc.exe (Lisans derleyici)
+      href: tools/lc-exe-license-compiler.md
+    - name: Mage.exe (Bildirim üretme ve düzenleme aracı)
+      href: tools/mage-exe-manifest-generation-and-editing-tool.md
+    - name: 'MageUI.exe (Bildirim üretme ve düzenleme aracı, grafik istemci)'
+      href: tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md
+    - name: MDbg.exe (.NET Framework komut satırı hata ayıklayıcı)
+      href: tools/mdbg-exe.md
+    - name: Mgmtclassgen.exe (Yönetim türü kesin belirlenmiş sınıf oluşturucu)
+      href: tools/mgmtclassgen-exe.md
+    - name: Mpgo.exe (Yönetilen profil temelli iyileştirme aracı)
+      href: tools/mpgo-exe-managed-profile-guided-optimization-tool.md
+    - name: Ngen.exe (Yerel görüntü oluşturucu)
+      href: tools/ngen-exe-native-image-generator.md
+    - name: Peverify.exe (PEVerify aracı)
+      href: tools/peverify-exe-peverify-tool.md
+    - name: Regasm.exe (Derleme kayıt aracı)
+      href: tools/regasm-exe-assembly-registration-tool.md
+    - name: Regsvcs.exe (.NET hizmetleri yükleme aracı)
+      href: tools/regsvcs-exe-net-services-installation-tool.md
+    - name: Resgen.exe (Kaynak dosya oluşturucu)
+      href: tools/resgen-exe-resource-file-generator.md
+    - name: SecAnnotate.exe (.NET güvenlik not ekleyici aracı)
+      href: tools/secannotate-exe-net-security-annotator-tool.md
+    - name: SignTool.exe (İmza aracı)
+      href: tools/signtool-exe.md
+    - name: Sn.exe (Tanımlayıcı ad aracı)
+      href: tools/sn-exe-strong-name-tool.md
+    - name: SOS.dll (SOS hata ayıklama uzantısı)
+      href: tools/sos-dll-sos-debugging-extension.md
+    - name: SqlMetal.exe (Kod üretme aracı)
+      href: tools/sqlmetal-exe-code-generation-tool.md
+    - name: Storeadm.exe (Yalıtılmış depolama aracı)
+      href: tools/storeadm-exe-isolated-storage-tool.md
+    - name: Tlbexp.exe (Tür kitaplığı dışarı aktarıcı)
+      href: tools/tlbexp-exe-type-library-exporter.md
+    - name: Tlbimp.exe (Tür kitaplığı içeri aktarıcı)
+      href: tools/tlbimp-exe-type-library-importer.md
+    - name: Winmdexp.exe (Windows çalışma zamanı meta veri dışarı aktarma aracı)
+      href: tools/winmdexp-exe-windows-runtime-metadata-export-tool.md
+    - name: Winmdexp.exe hata iletileri
+      href: tools/winmdexp-exe-error-messages.md
+    - name: Winres.exe (Windows Forms kaynak düzenleyici)
+      href: tools/winres-exe-windows-forms-resource-editor.md
+- name: Ek API’ler
+  items:
+    - name: Genel Bakış
+      href: additional-apis/index.md
+    - name: Microsoft.SqlServer.Server
+      items:
+        - name: SmiOrderProperty.Item
+          href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
+    - name: Sistem
+      items:
+        - name: Exception.PrepForRemoting yöntemi
+          href: additional-apis/system.exception.prepforremoting.md
+    - name: System.Data.SqlTypes
+      items:
+        - name: SqlChars.Stream özelliği
+          href: additional-apis/system.data.sqltypes.sqlchars.stream.md
+        - name: SqlStreamChars sınıfı
+          items:
+            - name: SqlStreamChars oluşturucusu
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.-ctor.md
+            - name: CanSeek özelliği
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.canseek.md
+            - name: IsNull özelliği
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.isnull.md
+            - name: Length özelliği
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.length.md
+            - name: Close yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.close.md
+            - name: Dispose yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.dispose.md
+            - name: Flush yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.flush.md
+            - name: Read yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.read.md
+            - name: Seek yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.seek.md
+            - name: SetLength yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.setlength.md
+            - name: Write yöntemi
+              href: additional-apis/system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: MemoryStream.InternalGetOriginAndLength yöntemi
+          href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
+    - name: System.Net
+      items:
+        - name: Connection sınıfı
+          href: additional-apis/connection.md
+          items:
+            - name: m_WriteList alanı
+              href: additional-apis/m_writelist.md
+        - name: ConnectionGroup sınıfı
+          href: additional-apis/connectiongroup.md
+          items:
+            - name: m_ConnectionList alanı
+              href: additional-apis/m_connectionlist.md
+        - name: ConnectStream.Connection özelliği
+          href: additional-apis/system.net.connectstream.connection.md
+        - name: CoreResponseData sınıfı
+          href: additional-apis/coreresponsedata.md
+          items:
+            - name: m_ResponseHeaders alanı
+              href: additional-apis/coreresponsedata_m_responseheaders.md
+            - name: m_StatusCode alanı
+              href: additional-apis/coreresponsedata_m_statuscode.md
+        - name: HttpWebRequest sınıfı
+          items:
+            - name: _AutoRedirects alanı
+              href: additional-apis/_autoredirects.md
+            - name: _CoreResponse alanı
+              href: additional-apis/httpwebrequest__coreresponse.md
+            - name: _HttpResponse alanı
+              href: additional-apis/_httpresponse.md
+        - name: PooledStream.NetworkStream özelliği
+          href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: RtcState sınıfı
+          href: additional-apis/system.net.rtcstate.md
+        - name: ServicePoint sınıfı
+          items:
+            - name: m_ConnectionGroupList alanı
+              href: additional-apis/m_connectiongrouplist.md
+            - name: s_ServicePointTable alanı
+              href: additional-apis/s_servicepointtable.md
+        - name: TlsStream.m_Worker alanı
+          href: additional-apis/system.net.tlsstream.m_worker.md
+    - name: System.Net.Security
+      items:
+        - name: SslState.SslProtocol özelliği
+          href: additional-apis/system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Message sınıfı
+          items:
+            - name: BodyToString metodu
+              href: additional-apis/system.servicemodel.channels.message.bodytostring.md
+            - name: WriteStartHeaders metodu
+              href: additional-apis/system.servicemodel.channels.message.writestartheaders.md
+    - name: System.Windows.Diagnostics
+      items:
+        - name: VisualDiagnostics.s_isDebuggerCheckDisabledForTestPurposes
+          href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
+    - name: System.Windows.Forms.Design
+      items:
+        - name: DataMemberFieldEditor sınıfı
+          href: additional-apis/datamemberfieldeditor-class.md
+        - name: DataMemberListEditor sınıfı
+          href: additional-apis/datamemberlisteditor-class.md
+    - name: System.Windows.Xps
+      items:
+        - name: XpsDocumentWriter
+          items:
+            - name: raise__WritingCancelled metodu
+              href: additional-apis/xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
+            - name: raise__WritingCompleted metodu
+              href: additional-apis/xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
+            - name: raise__WritingPrintTicketRequired metodu
+              href: additional-apis/xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
+            - name: raise__WritingProgressChanged
+              href: additional-apis/xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
+            - name: _WritingCancelled
+              href: additional-apis/xpsdocumentwriter-writingcancelled-event-system-windows-xps.md
+            - name: _WritingCompleted
+              href: additional-apis/xpsdocumentwriter-writingcompleted-event-system-windows-xps.md
+            - name: _WritingProgressChanged
+              href: additional-apis/xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
+    - name: System.Xml
+      items:
+        - name: XmlReader.CreateSqlReader metodu
+          href: additional-apis/system.xml.xmlreader.createsqlreader.md
+    - name: adodb ad alanı
+      items:
+        - name: Bağlantı arabirimi
+          href: additional-apis/adodb.connection.md
+        - name: EventReason sabit listesi
+          href: additional-apis/adodb.eventreasonenum.md
+        - name: EventStatus sabit listesi
+          href: additional-apis/adodb.eventstatusenum.md
+    - name: stdole ad alanı
+      items:
+        - name: DISPPARAMS yapısı
+          href: additional-apis/stdole.dispparams.md
+        - name: EXCEPINFO yapısı
+          href: additional-apis/stdole.excepinfo.md
+        - name: IFont.Name özelliği
+          href: additional-apis/stdole.ifont.name.md
+        - name: IFontDisp arabirimi
+          href: additional-apis/stdole.ifontdisp.md
+        - name: IPicture.Handle özelliği
+          href: additional-apis/stdole.ipicture.handle.md
+        - name: IPictureDisp arabirimi
+          href: additional-apis/stdole.ipicturedisp.md
+        - name: IPictureDisp.Handle özelliği
+          href: additional-apis/stdole.ipicturedisp.handle.md
+        - name: StdFont arabirimi
+          href: additional-apis/stdole.stdfont.md
+        - name: StdPicture arabirimi
+          href: additional-apis/stdole.stdpicture.md
+- name: Yenilikler ve kullanımdan kaldırılanlar
+  items:
+    - name: Yenilikler
+      href: whats-new/index.md
+    - name: Erişilebilirlik yenilikleri
+      href: whats-new/whats-new-in-accessibility.md
+    - name: API başvurusunda kullanımdan kaldırılanlar
+      href: whats-new/whats-obsolete.md
+      items:
+        - name: Eski türler
+          href: whats-new/obsolete-types.md
+        - name: Eski üyeler
+          href: whats-new/obsolete-members.md

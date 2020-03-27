@@ -240,29 +240,29 @@
         - name: Nasıl Yapılır Konuları
           href: 3-d-graphics-how-to-topics.md
           items:
-            - name: 3B Görünümü Oluşturma
+            - name: 3B Sahne Oluşturma
               href: how-to-create-a-3-d-scene.md
-            - name: 3B Modeline Çizim Uygulama
+            - name: 3B Modele Çizim Uygulama
               href: how-to-apply-a-drawing-to-a-3-d-model.md
             - name: 3B Nesnenin Ön ve Arkasına Malzeme Uygulama
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-            - name: 3B Nesnesine Yayımlatıcı Malzeme Uygulama
+            - name: 3B Nesneye Yayımlatıcı Malzeme Uygulama
               href: how-to-apply-emissive-material-to-a-3-d-object.md
             - name: 3B Model Ölçeğinin Dönüşümü
               href: how-to-transform-the-scale-of-a-3-d-model.md
-            - name: 3B Modeline Birden Çok Dönüşüm Uygulama
+            - name: 3B Modele Birden Çok Dönüşüm Uygulama
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
-            - name: 3B Çevirilerine Animasyon Ekleme
+            - name: 3B Çevirilere Animasyon Ekleme
               href: how-to-animate-3-d-translations.md
             - name: Görsel Taslaklar Kullanarak 3B Döndürmeye Animasyon Ekleme
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
-            - name: Rotation3DAnimation Kullanarak 3B Döndürmeye Animasyon Ekleme
+            - name: Rotation3DAnimation 3B Döndürmeye Animasyon Ekleme
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
             - name: Dördeyler Kullanarak 3B Döndürmeye Animasyon Ekleme
               href: how-to-animate-a-3-d-rotation-using-quaternions.md
             - name: Anahtar Çerçeveler Kullanarak 3B Döndürmeye Animasyon Ekleme (Rotation3DAnimationUsingKeyFrames)
               href: how-to-animate-a-3-d-rotation-using-key-frames.md
-            - name: Anahtar Çerçeveler Kullanarak 3B Döndürme Hareketlendirme (QuaternionAnimationUsingKeyFrames)
+            - name: Anahtar Çerçeveler Kullanarak 3B Döndürmeye Animasyon Ekleme (QuaternionAnimationUsingKeyFrames)
               href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
             - name: 3B Görünümde Kamera Konumuna ve Yönüne Animasyon Ekleme
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
@@ -424,7 +424,7 @@
           href: hit-testing-in-the-visual-layer.md
         - name: DrawingVisual Nesnelerini Kullanma
           href: using-drawingvisual-objects.md
-        - name: 'Eğitmen: Win32 Uygulamasında Görsel Nesneler Barındırma'
+        - name: 'Öğretici: Win32 Uygulamasında Görsel Nesneler Barındırma'
           href: tutorial-hosting-visual-objects-in-a-win32-application.md
         - name: Nasıl Yapılır Konuları
           href: visual-layer-programming-how-to-topics.md
