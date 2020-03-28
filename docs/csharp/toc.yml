@@ -1328,7 +1328,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: Yapı türleri
                   href: language-reference/builtin-types/struct.md
-                  displayName: struct type
+                  displayName: 'struct type, readonly'
                 - name: Boş değer atanabilen değer türleri
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

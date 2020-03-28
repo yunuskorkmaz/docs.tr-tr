@@ -3,18 +3,28 @@
 - name: Genel Bakış
   expanded: true
   items:
-    - name: API
-      items:
-        - name: ML.NET API’si
-          href: how-does-mldotnet-work.md
     - name: Model Oluşturucu ve CLI
       items:
         - name: ML.NET Model Oluşturucu aracı
           href: automate-training-with-model-builder.md
         - name: ML.NET Komut satırı arabirimi
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: ML.NET API’si
+          href: how-does-mldotnet-work.md
 - name: Öğreticiler
   items:
+    - name: Model Oluşturucu ve CLI
+      items:
+        - name: Fiyatları tahmin etme (Model Oluşturucu ve regresyon)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: ML.NET CLI kullanarak yaklaşımı çözümleme
+          href: tutorials/sentiment-analysis-cli.md
+        - name: Razor Pages'de yaklaşımı çözümleme (Model Oluşturucu ve ikili sınıflandırma)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: Sistem durumu ihlallerini kategorilere ayırma (Model Oluşturucu ve çok sınıflı sınıflandırma)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: Genel Bakış
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow kullanarak yaklaşımı sınıflandırma (metin sınıflandırması)
           href: tutorials/text-classification-tf.md
-    - name: Model Oluşturucu ve CLI
-      items:
-        - name: Fiyatları tahmin etme (Model Oluşturucu ve regresyon)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: ML.NET CLI kullanarak yaklaşımı çözümleme
-          href: tutorials/sentiment-analysis-cli.md
-        - name: Razor Pages'de yaklaşımı çözümleme (Model Oluşturucu ve ikili sınıflandırma)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: Sistem durumu ihlallerini kategorilere ayırma (Model Oluşturucu ve çok sınıflı sınıflandırma)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET ile olasılığa dayalı programlama
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: Nasıl yapılır kılavuzları
   items:
+    - name: Model Oluşturucu ve CLI
+      items:
+        - name: Model Oluşturucu’ya veri yükleme
+          href: how-to-guides/load-data-model-builder.md
+        - name: Model Oluşturucu’yu yükleme
+          href: how-to-guides/install-model-builder.md
+        - name: CLI’yı yükleme
+          href: how-to-guides/install-ml-net-cli.md
+        - name: Otomatik ML API’sini kullanma
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: Veri yükleme
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Modeli bir web API'sine dağıtma
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Model Oluşturucu ve CLI
-      items:
-        - name: Model Oluşturucu’ya veri yükleme
-          href: how-to-guides/load-data-model-builder.md
-        - name: Model Oluşturucu’yu yükleme
-          href: how-to-guides/install-model-builder.md
-        - name: CLI’yı yükleme
-          href: how-to-guides/install-ml-net-cli.md
-        - name: Otomatik ML API’sini kullanma
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: Başvuru
   items:
     - name: ML.NET API Başvurusu
