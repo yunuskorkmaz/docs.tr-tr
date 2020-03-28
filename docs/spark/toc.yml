@@ -21,6 +21,8 @@
       href: tutorials/batch-processing.md
     - name: Yapılandırılmış akış
       href: tutorials/streaming.md
+    - name: Yaklaşım analizi
+      href: tutorials/ml-sentiment-analysis.md
 - name: Nasıl yapılır kılavuzları
   items:
     - name: Uygulamanızda hata ayıklama
