@@ -1,6 +1,8 @@
-- name: .NET Core kılavuzu
-  href: index.md
-- name: .NET Core hakkında
+- name: .NET Core belgeleri
+  href: index.yml
+- name: NET Core’a giriş
+  href: introduction.md
+- name: .NET Core’a genel bakış
   href: about.md
 - name: Yükleme
   items:
