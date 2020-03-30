@@ -2,16 +2,16 @@
 title: Bellek içi veritabanları
 ms.date: 12/13/2019
 description: Bellek içi SQLite veritabanlarını nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: 16a9b6536fbfede203c24b757e96e28e7c49dc05
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 408c81f538e27dcfffad20db74b7809912b7905f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777411"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391214"
 ---
 # <a name="in-memory-databases"></a>Bellek içi veritabanları
 
-SQLite bellek içi veritabanları, diskte değil, tamamen bellekte depolanan veritabanlardır. Bellek içi veritabanı oluşturmak için `:memory:` özel veri kaynağı dosya adı kullanın. Bağlantı kapatıldığında veritabanı silinir. `:memory:`kullanırken, her bağlantı kendi veritabanını oluşturur.
+SQLite bellek içi veritabanları, diskte değil, tamamen bellekte depolanan veritabanlarıdır. Bellek tesisi `:memory:` oluşturmak için özel veri kaynağı dosya adını kullanın. Bağlantı kapatıldığında, veritabanı silinir. Kullanırken, `:memory:`her bağlantı kendi veritabanını oluşturur.
 
 ```ConnectionString
 Data Source=:memory:
@@ -19,7 +19,7 @@ Data Source=:memory:
 
 ## <a name="shareable-in-memory-databases"></a>Paylaşılabilir bellek içi veritabanları
 
-Bellek içi veritabanları, bağlantı dizesinde `Mode=Memory` ve `Cache=Shared` kullanılarak birden çok bağlantı arasında paylaşılabilir. `Data Source` anahtar sözcüğü, bellek içi veritabanına bir ad vermek için kullanılır. Aynı adı kullanan bağlantı dizeleri aynı bellek içi veritabanına erişir. En az bir bağlantı açık kaldığı sürece veritabanı devam eder. GitHub 'da kullanılabilir olduğunu gösteren bir [örnek](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/InMemorySample/Program.cs) .
+Bellek içi veritabanları kullanılarak `Mode=Memory` ve `Cache=Shared` bağlantı dizesinde birden çok bağlantı arasında paylaşılabilir. Anahtar `Data Source` kelime, bellek veritabanına bir ad vermek için kullanılır. Aynı adı kullanan bağlantı dizeleri aynı bellek veritabanına erişecektir. Veritabanı, en az bir bağlantı açık kaldığı sürece devam eder. Bunu gösteren bir [örnek](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/InMemorySample/Program.cs) GitHub'da kullanılabilir.
 
 ```ConnectionString
 Data Source=InMemorySample;Mode=Memory;Cache=Shared

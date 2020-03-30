@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345546"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391240"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -46,9 +46,9 @@ public class Program
 
 Geliştirme işlemini kolaylaştırmak için .NET, programcıların yeniden kullanabileceği ve yeni türler oluşturması gerekmeyen bir dizi temsilci türü içerir. Bunlar `Func<>` `Action<>` ,ve `Predicate<>`,, yeni temsilci türlerini tanımlamaya gerek kalmadan .NET API'leri boyunca çeşitli yerlerde kullanılabilirler. Tabii ki, çoğunlukla kullanılmak üzere olması gerekiyordu yolu ile ilgisi var onların imzaları göreceğiniz gibi üç arasında bazı farklılıklar vardır:
 
-* `Action<>`temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeye ihtiyaç duyulduğunda kullanılır.
-* `Func<>`genellikle elinizde bir dönüşüm olduğunda, yani temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Projeksiyonlar bunun en önemli örneklerindendir.
-* `Predicate<>`bağımsız değişkenin temsilcinin durumunu karşılar mı belirlemeniz gerektiğinde kullanılır. Ayrıca bir `Func<T, bool>`.
+* `Action<>`temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeye ihtiyaç duyulduğunda kullanılır. Kapsüllediği yöntem bir değer döndürmez.
+* `Func<>`genellikle elinizde bir dönüşüm olduğunda, yani temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Projeksiyonlar bunun en önemli örneklerindendir. Kapsülletiyi kapaya saran yöntem belirli bir değeri döndürür.
+* `Predicate<>`bağımsız değişkenin temsilcinin durumunu karşılar mı belirlemeniz gerektiğinde kullanılır. Aynı zamanda bir `Func<T, bool>`, yöntem bir boolean değeri döndürür anlamına gelir olarak yazılabilir.
 
 Şimdi yukarıdaki örneği alabilir ve özel bir `Func<>` tür yerine temsilci kullanarak yeniden yazabilirsiniz. Program tam olarak aynı çalışmaya devam edecektir.
 

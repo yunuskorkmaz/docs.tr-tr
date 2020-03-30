@@ -4,18 +4,18 @@ description: C# kitaplıklarında ve uygulamalarında devralma yı kullanmayı �
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156759"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391155"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
 Bu öğretici c# kalıtım size tanıttı. Devralma, belirli işlevsellik (veri ve davranış) sağlayan bir taban sınıf tanımlamanızı ve bu işlevselliği devralan veya geçersiz kılan türemiş sınıfları tanımlamanızı sağlayan nesne yönelimli programlama dillerinin bir özelliğidir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu öğretici, .NET Core SDK'yı yüklediğinizi varsayar. İndirmek için [.NET Çekirdek İndirmeler](https://dotnet.microsoft.com/download) sayfasını ziyaret edin. Ayrıca bir kod düzenleyicisi gerekir. Bu öğretici [Visual Studio Code](https://code.visualstudio.com)kullanır, ancak seçtiğiniz herhangi bir kod editörü kullanabilirsiniz.
 
@@ -28,7 +28,7 @@ Bu öğreticideki örnekleri oluşturmak ve çalıştırmak için komut satırı
 1. Örnekteki kodu kopyalayıp kod düzenleyicinize yapıştırın.
 1. Projenin bağımlılıklarını yüklemek veya geri yüklemek için komut satırından [dotnet geri yükleme](../../core/tools/dotnet-restore.md) komutunu girin.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Örneği derlemek ve yürütmek için [dotnet çalıştır](../../core/tools/dotnet-run.md) komutunu girin.
 
