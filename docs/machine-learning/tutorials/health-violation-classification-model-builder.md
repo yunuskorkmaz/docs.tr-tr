@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185829"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438183"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Öğretici: Model Builder ile restoran sağlık ihlallerinin şiddetini sınıflandırmak
 
@@ -31,7 +31,7 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > [!NOTE]
 > Model Oluşturucu şu anda Önizleme'de.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Ön koşullar ve yükleme yönergeleri listesi için [Model Oluşturucu yükleme kılavuzunu ziyaret edin.](../how-to-guides/install-model-builder.md)
 
@@ -150,6 +150,6 @@ Tebrikler! Model Oluşturucu'yu kullanarak sağlık ihlali riskini kategorilere 
 
 Bu eğitimde bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
 
-- [Model Oluşturucu Senaryolar](../automate-training-with-model-builder.md#scenarios)
+- [Model Oluşturucu Senaryolar](../automate-training-with-model-builder.md#scenario)
 - [Çok Sınıflı Sınıflandırma](../resources/glossary.md#multiclass-classification)
 - [Çok Sınıflı Sınıflandırma Modeli Ölçümleri](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

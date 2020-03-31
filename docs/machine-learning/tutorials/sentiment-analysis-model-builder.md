@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187628"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438222"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET Model Builder kullanarak bir web uygulamasında web sitesi yorumlarının duyarlılığını analiz edin
 
@@ -302,6 +302,6 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 Bu eğitimde bahsedilen konular hakkında daha fazla bilgi edinmek için aşağıdaki kaynakları ziyaret edin:
 
-- [Model Oluşturucu Senaryolar](../automate-training-with-model-builder.md#scenarios)
+- [Model Oluşturucu Senaryolar](../automate-training-with-model-builder.md#scenario)
 - [İkili Sınıflandırma](../resources/glossary.md#binary-classification)
 - [İkili Sınıflandırma Modeli Ölçümleri](../resources/metrics.md#evaluation-metrics-for-binary-classification)

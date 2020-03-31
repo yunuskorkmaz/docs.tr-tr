@@ -5,34 +5,36 @@ author: cartermp
 ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124266"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438172"
 ---
-# <a name="get-started"></a>Başlarken
+# <a name="get-started"></a>başlarken
 
 .NET'e başlamanın birkaç yolu vardır. .NET büyük bir platform olduğundan, bu dokümantasyonda her biri farklı bir perspektiften .NET'e başlamanıza yardımcı olabilecek birden çok makale bulunmaktadır.
 
 ## <a name="get-started-using-net-languages"></a>.NET dillerini kullanmaya başlayın
 
-* [C# makaleleri başlarken](../csharp/getting-started/index.md) ve [C# öğreticiler](../csharp/tutorials/index.md) C# merkezli bir şekilde başlamak için yollar sağlar.
+C#, Visual Basic ve F#'da eğitimlere başlamak için bkz.
 
-* [F# başlangıç](../fsharp/get-started/index.md) eğitimleri F#'ı kullanabileceğiniz üç temel yolu kapsar: Visual Studio, Visual Studio Code veya command-line araçları ile.
-
-* Visual Basic başlangıç makaleleri Visual Studio Visual Basic kullanmak için kılavuzları sağlar [başlarken.](../visual-basic/getting-started/index.md)
+* [C# kullanmaya başlama](../csharp/getting-started/index.md)
+* [C# eğitimleri](../csharp/tutorials/index.md)
+* [F# başlangıç eğitimleri](../fsharp/get-started/index.md)
+* [Visual Basic'e başlayın](../visual-basic/getting-started/index.md)
 
 ## <a name="get-started-using-net-core"></a>.NET Core'u kullanmaya başlayın
 
-* [.NET Core ile çalışmaya başlayın,](../core/get-started.md) farklı işletim sistemlerinde ve farklı araçlar kullanarak .NET Core ile nasıl başlansüreceğini gösteren makalelere genel bir bakış sağlar.
+.NET Core'a özgü kılavuz için bkz:
 
-* [.NET Core öğreticileri,](../core/tutorials/index.md) işletim sisteminizi ve seçtiğiniz araçlama yı kullanarak .NET Core ile başlamanın yollarını ayrıntılı olarak anlatır.
+* [.NET Core ile başlayın](../core/get-started.md)
+* [.NET Çekirdek eğitimleri](../core/tutorials/index.md)
 
 ## <a name="get-started-using-net-standard"></a>.NET Standard'ı kullanmaya başlayın
 
-* Giriş eğitimi için Visual [Studio'da bir .NET Standart kitaplık oluşturun'a](../core/tutorials/library-with-visual-studio.md)bakın.
+Giriş eğitimi için Visual [Studio'da bir .NET Standart kitaplık oluşturun'a](../core/tutorials/library-with-visual-studio.md)bakın.
 
 ## <a name="get-started-using-net-core-on-docker"></a>Docker'da .NET Core'u kullanmaya başlayın
 

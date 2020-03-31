@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452597"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438213"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -86,7 +86,7 @@ NuGet paketleri bir veya daha fazla [çerçeveyi hedefalır.](frameworks.md) .NE
 
 Meta [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) paket, .NET Standard'ı tanımlayan NuGet paketlerinin tamamına başvurur.  Hedeflemenin `netstandard` en yaygın yolu bu meta pakete başvurmaktır. ~40 .NET kitaplıklarını ve .NET Standardını tanımlayan ilişkili API'leri açıklar ve bunlara erişim sağlar. Ek API'lere `netstandard` erişmek için hedefleyen ek paketlere başvurulayabilirsiniz.
 
-### <a name="versioning"></a>Sürüm oluşturma
+### <a name="versioning"></a>Sürüm Oluşturma
 
 Belirtim tekil değil, artımlı olarak büyüyen ve doğrusal olarak sürümlenmiş API'ler kümesidir. Standardın ilk sürümü, bir temel API kümesi belirler. Sonraki sürümler API'ler ekler ve önceki sürümler tarafından tanımlanan API'leri devralır. API'lerin standarttan kaldırılması için belirlenmiş bir hüküm yoktur.
 
@@ -100,9 +100,9 @@ Uygulamalardan herhangi biri (.NET Framework, .NET Core ve Mono gibi) eklenen AP
 - Aynı .NET Standart sürümüne veya daha düşük olan kitaplıkları kullanın.
 - Daha yüksek bir .NET Standart sürümüne bağlı bir kitaplık bulursanız, aynı sürümü benimsemeniz veya bu kitaplığı kullanmamaya karar vermeniz gerekir.
 
-## <a name="targeting-net-standard"></a>Hedefleme .NET Standardı
+## <a name="target-net-standard"></a>Hedef .NET Standardı
 
-[.NET Standart Kitaplıklar](../core/tutorials/libraries.md) çerçeve ve `netstandard` NETStandard.Library metapaketinin bir birleşimini kullanarak oluşturabilirsiniz. [.NET Core araçları ile .NET Standardını hedefleme](../core/packages.md)örnekleri görebilirsiniz.
+[.NET Standart Kitaplıklar](../core/tutorials/libraries.md) çerçeve ve `netstandard` NETStandard.Library metapaketinin bir birleşimini kullanarak oluşturabilirsiniz. [.NET Core araçları ile .NET Standard hedefleme](../core/packages.md)örneklerini görebilirsiniz.
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework uyumluluk modu
 
@@ -118,7 +118,7 @@ Projelerinizde .NET Standard 2.0 kitaplıklarını yalnızca tüketmeniz gerekiy
 
 ## <a name="comparison-to-portable-class-libraries"></a>Taşınabilir Sınıf Kitaplıkları ile karşılaştırma
 
-.NET Standardı, [Taşınabilir Sınıf Kitaplıkları 'nın (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)yerini alır. .NET Standardı, standart bir BCL'yi küratörlük ederek ve sonuç olarak .NET uygulamalarında daha fazla tekdüzelik oluşturarak taşınabilir kitaplıklar oluşturma deneyimini geliştirir. .NET Standard'ı hedefleyen bir kitaplık BIR PCL veya ".NET Standart tabanlı PCL"dir. Mevcut PCL'ler "profil tabanlı PCL'lerdir".
+.NET Standardı, [Taşınabilir Sınıf Kitaplıkları 'nın (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)yerini alır. .NET Standard, standart bir BCL'yi küratörlük ederek ve sonuç olarak .NET uygulamalarında daha fazla tekdüzelik oluşturarak taşınabilir kitaplıklar oluşturma deneyimini geliştirir. .NET Standard'ı hedefleyen bir kitaplık BIR PCL veya ".NET Standart tabanlı PCL"dir. Mevcut PCL'ler "profil tabanlı PCL'lerdir".
 
 .NET Standart ve PCL profilleri benzer amaçlariçin oluşturulmuştur, ancak aynı zamanda önemli şekillerde farklılık gösterir.
 
@@ -130,7 +130,7 @@ Farklılık -lar:
 
 - .NET Standard, PCL profilleri varolan platformların kesişmelerle tanımlanırken, seçilmiş bir API kümesidir.
 - .NET Standart doğrusal sürümler, PCL profilleri ise yok.
-- PCL profilleri Microsoft platformlarını temsil ederken .NET Standardı platform-agnostiktir.
+- PCL profilleri Microsoft platformlarını temsil ederken .NET Standard platform-agnostiktir.
 
 ### <a name="pcl-compatibility"></a>PCL uyumluluğu
 
