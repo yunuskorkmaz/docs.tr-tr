@@ -1,59 +1,63 @@
-- name: .NET Standard Kılavuzu
+- name: .NET belgeleri
   href: index.md
-- name: .NET Kullanmaya Başlama
+- name: .NET kullanmaya başlama
   href: get-started.md
 - name: .NET Turu
   href: tour.md
-- name: .NET Mimari Bileşenleri
+- name: .NET mimari bileşenleri
   href: components.md
-- name: .NET Standard
+- name: .NET Standard’a genel bakış
   href: net-standard.md
-  items:
-    - name: .NET Standard’daki Yenilikler
-      href: whats-new/whats-new-in-dotnet-standard.md
-- name: Hedef Çerçeveler
+- name: .NET Standard’daki yenilikler
+  href: whats-new/whats-new-in-dotnet-standard.md
+- name: Hedef çerçeveler
   href: frameworks.md
-- name: .NET Sözlüğü
+- name: .NET sözlüğü
   href: glossary.md
 - name: Açık kaynak kitaplık kılavuzu
   href: library-guidance/
 - name: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
   href: choosing-core-framework-server.md
-- name: “Yönetilen kod” nedir?
-  href: managed-code.md
+- name: Yönetilen kod
   items:
-    - name: Otomatik Bellek Yönetimi
+    - name: “Yönetilen kod” nedir?
+      href: managed-code.md
+    - name: Otomatik bellek yönetimi
       href: automatic-memory-management.md
 - name: Ortak Dil Çalışma Zamanı (CLR)
   href: clr.md
-- name: Dil Bağımsızlığı
-  href: language-independence.md
+- name: Dil bağımsızlığı
   items:
-    - name: Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
+    - name: Genel Bakış
+      href: language-independence.md
+    - name: Dilden bağımsız bileşenler
       href: language-independence-and-language-independent-components.md
-- name: Framework Kitaplıkları
-  href: framework-libraries.md
+- name: Framework kitaplıkları
   items:
-    - name: Sınıf Kitaplığına Genel Bakış
+    - name: Genel Bakış
+      href: framework-libraries.md
+    - name: Sınıf kitaplığına genel bakış
       href: class-library-overview.md
-    - name: Taban Türleri
+    - name: Taban türleri
       href: base-types/
-- name: .NET Sınıf kitaplıkları
+- name: .NET sınıf kitaplıkları
   href: class-libraries.md
 - name: Çözümleyiciler
-  href: analyzers/index.md
   items:
-    - name: API Çözümleyicisi
+    - name: Genel Bakış
+      href: analyzers/index.md
+      displayName: analyzers
+    - name: API çözümleyicisi
       href: analyzers/api-analyzer.md
-    - name: Taşınabilirlik Çözümleyicisi
+    - name: Taşınabilirlik çözümleyicisi
       href: analyzers/portability-analyzer.md
-    - name: Framework Çözümleyicisi
+    - name: Çerçeve çözümleyicisi
       href: analyzers/framework-analyzer.md
-- name: Özel durumları işleme ve atma
+- name: Özel durum işleme
   href: exceptions/
 - name: .NET’te bütünleştirilmiş kodlar
   href: assembly/
-- name: Çöp Toplama
+- name: Atık toplama
   href: garbage-collection/
 - name: Genel türler
   href: generics.md
@@ -61,30 +65,36 @@
   href: delegates-lambdas.md
 - name: LINQ
   href: using-linq.md
-- name: Ortak Tür Sistemi ve Ortak Dil Belirtimi
+- name: Ortak tür sistemi ve ortak dil belirtimi
   href: common-type-system.md
-- name: 'Paralel İşleme, Eşzamanlılık ve Zaman Uyumsuzluk'
-  href: parallel-processing-and-concurrency.md
+- name: 'Paralel işleme, eşzamanlılık ve zaman uyumsuzluk'
   items:
+    - name: Genel Bakış
+      href: parallel-processing-and-concurrency.md
+      displayName: 'Parallel processing, concurrency, async'
     - name: Zaman uyumsuz programlama
-      href: async.md
       items:
+        - name: Genel Bakış
+          href: async.md
         - name: Ayrıntılı zaman uyumsuz programlama
           href: async-in-depth.md
-        - name: Zaman Uyumsuz Programlama Desenleri
+        - name: Asenkron programlama desenleri
           href: asynchronous-programming-patterns/
-    - name: Paralel Programlama
+    - name: Paralel programlama
       href: parallel-programming/
     - name: İş Parçacığı Oluşturma
       href: threading/
 - name: Bellek ve aralıkla ilgili türler
-  href: memory-and-spans/index.md
   items:
+    - name: Genel Bakış
+      href: memory-and-spans/index.md
     - name: Memory<T> ve Span<T> kullanım yönergeleri
       href: memory-and-spans/memory-t-usage-guidelines.md
 - name: Native ile birlikte çalışma
-  href: native-interop/index.md
   items:
+    - name: Genel Bakış
+      href: native-interop/index.md
+      displayName: Native interop
     - name: P/Invoke
       href: native-interop/pinvoke.md
     - name: Tür hazırlama
@@ -97,23 +107,27 @@
       href: native-interop/best-practices.md
     - name: Karakter kümesi ve hazırlama
       href: native-interop/charset.md
-    - name: COM Birlikte Çalışma
-      href: native-interop/cominterop.md
+    - name: COM birlikte çalışma
       items:
-        - name: COM Sarmalayıcıları
-          href: native-interop/com-wrappers.md
+        - name: Genel Bakış
+          href: native-interop/cominterop.md
+          displayName: COM interop
+        - name: COM sarmalayıcıları
           items:
-            - name: Çalışma Zamanı Aranabilir Sarmalayıcısı
+            - name: Genel Bakış
+              href: native-interop/com-wrappers.md
+              displayName: COM wrappers
+            - name: Çalışma zamanında çağrılabilir sarmalayıcı
               href: native-interop/runtime-callable-wrapper.md
-            - name: COM Aranabilir Sarmalayıcısı
+            - name: COM çağrılabilir sarmalayıcı
               href: native-interop/com-callable-wrapper.md
         - name: COM ile birlikte çalışma için .NET türlerini niteleme
           href: native-interop/qualify-net-types-for-interoperation.md
-    - name: Birlikte Çalışma Özniteliklerini Uygulama
+    - name: Birlikte çalışma özniteliklerini uygulama
       href: native-interop/apply-interop-attributes.md
     - name: Özel Durumlar
       href: native-interop/exceptions-interoperability.md
-- name: Koleksiyonlar ve Veri Yapıları
+- name: Koleksiyonlar ve veri yapıları
   href: collections/
 - name: .NET Sayısal Değerleri
   href: numerics.md
@@ -121,29 +135,29 @@
   href: datetime/
 - name: Olaylar
   href: events/
-- name: Yönetilen Yürütme İşlemi
+- name: Yönetilen yürütme işlemi
   href: managed-execution-process.md
-- name: Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
+- name: Meta veriler ve kendiliğinden açıklayıcı bileşenler
   href: metadata-and-self-describing-components.md
-- name: Konsol Uygulamaları Derleme
+- name: Konsol uygulaması oluşturma
   href: building-console-apps.md
-- name: Uygulama Temelleri
+- name: Uygulama temelleri
   href: application-essentials.md
-- name: Dosya ve Akış G/Ç
+- name: Dosya ve akış G/Ç
   href: io/index.md
-- name: Genelleştirme ve Yerelleştirme
+- name: Genelleştirme ve yerelleştirme
   href: globalization-localization/
 - name: Öznitelikler
   href: attributes/
-- name: Çerçeve Tasarım Yönergeleri
+- name: Çerçeve tasarım yönergeleri
   href: design-guidelines/
 - name: Microsoft.Data.Sqlite
   href: data/sqlite/
-- name: XML Belgeleri ve Verileri
+- name: XML belgeleri ve verileri
   href: data/xml/
 - name: Güvenlik
   href: security/
 - name: Serileştirme
   href: serialization/
-- name: Birden Çok Platform için Geliştirme
+- name: Birden çok platform için geliştirme
   href: cross-platform/
