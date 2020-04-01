@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124357"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523843"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
@@ -87,7 +87,7 @@ ms.locfileid: "77124357"
 
      Negatif ileriye dönük iddialar hakkında daha fazla bilgi için, [Gruplandırma Yapıları'na](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.
 
-- Koşullu değerlendirme: `(?(` *ifade*`)` `(?(`*evet*`|`*hayır* `)` ve *isim*`)`*evet*`|`*hayır*`)`, *ifade* eşleşecek bir alt ifade olduğu yerde, *ad* yakalama grubunun adıdır, *evet* *ifade* eşleşirse eşleşen dizedir veya *ad* geçerli, boş olmayan yakalanan grup, ve *hayır* *ifade varsa eşleşecek alt ifadedir *eşleşmez veya *ad* geçerli, boş olmayan yakalanan bir grup değildir. Bu özellik, önceki bir alt ifade eşleşmesinin veya sıfır genişlikli bir iddianın sonucuna bağlı olarak, motorun birden fazla alternatif desen kullanarak arama yapmasına olanak tanır. Bu, örneğin, önceki bir alt ifadenin eşleşip eşleşmediğine bağlı bir alt ifadeyi eşleştirmeye izin veren daha güçlü bir geri gönderme biçimine izin verir. Aşağıdaki örnekteki normal ifade, hem genel hem de dahili kullanım için tasarlanmış paragraflarla eşleşir. Yalnızca dahili kullanım için tasarlanan `<PRIVATE>` paragraflar bir etiketle başlar. Normal ifade `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` deseni, genel ve yakalama gruplarını ayırmak için dahili kullanıma yönelik paragrafların içeriğini atamak için koşullu değerlendirme kullanır. Bu paragraflar daha sonra farklı işlenebilir.
+- Koşullu değerlendirme: `(?(` *ifade*`)` `(?(`*evet*`|`*hayır* `)` ve *isim*`)`*evet*`|`*hayır*`)`, *ifade* eşleşecek bir alt ifade olduğu yerde, *adı* bir yakalama grubunun adıdır, *evet* *ifade* eşleşen veya *adı* geçerli, boş olmayan yakalanan grup ise eşleşecek dize ve *hayır* *ifade* eşleşen değilse eşleşen alt ifade veya *ad* geçerli, boş olmayan yakalanan grup değildir. Bu özellik, önceki bir alt ifade eşleşmesinin veya sıfır genişlikli bir iddianın sonucuna bağlı olarak, motorun birden fazla alternatif desen kullanarak arama yapmasına olanak tanır. Bu, örneğin, önceki bir alt ifadenin eşleşip eşleşmediğine bağlı bir alt ifadeyi eşleştirmeye izin veren daha güçlü bir geri gönderme biçimine izin verir. Aşağıdaki örnekteki normal ifade, hem genel hem de dahili kullanım için tasarlanmış paragraflarla eşleşir. Yalnızca dahili kullanım için tasarlanan `<PRIVATE>` paragraflar bir etiketle başlar. Normal ifade `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` deseni, genel ve yakalama gruplarını ayırmak için dahili kullanıma yönelik paragrafların içeriğini atamak için koşullu değerlendirme kullanır. Bu paragraflar daha sonra farklı işlenebilir.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -150,8 +150,7 @@ ms.locfileid: "77124357"
 |[Derleme ve Yeniden Kullanma](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Performansı artırmak için düzenli ifadeleri derleme ve yeniden kullanma hakkında bilgi sağlar.|
 |[İş Parçacığı Güvenliği](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Normal ifade iş parçacığı güvenliği hakkında bilgi sağlar ve normal ifade nesnelerine erişimi ne zaman eşitlemeniz gerektiğini açıklar.|
 |[.NET Framework Normal İfadeleri](../../../docs/standard/base-types/regular-expressions.md)|Normal ifadelerin programlama dili boyutuna genel bir bakış sağlar.|
-|[Normal İfade Nesne Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgi ve kod örnekleri sağlar.|
-|[Normal İfade Örnekleri](../../../docs/standard/base-types/regular-expression-examples.md)|Ortak uygulamalarda normal ifadelerin kullanımını gösteren kod örnekleri içerir.|
+|[Normal İfade Nesnesi Modeli](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Normal ifade sınıflarının nasıl kullanılacağını gösteren bilgi ve kod örnekleri sağlar.|
 |[Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Normal ifadeleri tanımlamak için kullanabileceğiniz karakter kümesi, işleçler ve yapılar hakkında bilgi sağlar.|
 
 ## <a name="reference"></a>Başvuru

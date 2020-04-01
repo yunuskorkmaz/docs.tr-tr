@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348248"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523954"
 ---
 # <a name="format-types-in-net"></a>.NET'teki biçim türlerini biçimlendirme
 
@@ -128,7 +128,7 @@ Varsayılan `ToString` yönteme güvenmek veya `ToString` bir nesne tek bir dize
 
 ### <a name="standard-format-strings"></a>Standart biçim dizeleri
 
-Standart biçim dizesi, uygulandığı nesnenin dize gösterimini tanımlayan alfabetik bir karakter olan tek bir biçim belirtici ve kaç basamaklı görüntülenmeyi etkileyen isteğe bağlı bir kesinlik belirteç içerir. sonuç dizesi. Hassas belirtici atlanırsa veya desteklenmiyorsa, standart biçim belirtici standart biçim dizesine eşdeğerdir.
+Standart biçim dizesi, uygulandığı nesnenin dize gösterimini tanımlayan alfabetik bir karakter olan tek bir biçim belirticive sonuç dizesinde kaç basamak görüntüleneceğini etkileyen isteğe bağlı bir kesinlik belirteç içerir. Hassas belirtici atlanırsa veya desteklenmiyorsa, standart biçim belirtici standart biçim dizesine eşdeğerdir.
 
 .NET, tüm sayısal türler, tüm tarih ve saat türleri ve tüm numaralandırma türleri için standart biçim belirteçleri kümesi tanımlar. Örneğin, bu kategorilerin her biri, bu tür bir değerin genel dize gösterimini tanımlayan bir "G" standart biçim belirtimini destekler.
 
@@ -359,7 +359,6 @@ Aşağıdaki örnek, `ByteByByteFormatter` sınıfını, üstbilgi değerlerini 
 |[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özgü biçimler oluşturan özel biçim dizelerini açıklar.|
 |[Numaralandırma Biçimi Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize gösterimlerini oluşturmak için kullanılan standart biçim dizeleri açıklar.|
 |[Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)|Bir dize ye bir veya daha fazla biçimlendirilmiş değerleri nasıl gömeceklerini açıklar. Dize daha sonra konsolda görüntülenebilir veya bir akışa yazılabilir.|
-|[Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)|Belirli biçimlendirme işlemleri gerçekleştirmek için adım adım yönergeler sağlayan konuları listeler.|
 |[Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)|Nesneleri bu nesnelerin dize gösterimleri tarafından açıklanan değerlere nasıl başharflere getirin açıklar. Ayrıştırma biçimlendirmenin ters işlemidir.|
 
 ## <a name="reference"></a>Başvuru

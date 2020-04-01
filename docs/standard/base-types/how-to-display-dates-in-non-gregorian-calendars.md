@@ -11,12 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138748"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523922"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 Ve <xref:System.DateTime> <xref:System.DateTimeOffset> türleri varsayılan takvim olarak Gregoryen takvimini kullanır. Bu, tarih ve saat değerinin `ToString` yöntemini çağırmanın, o tarih ve saat başka bir takvim kullanılarak oluşturulmuş olsa bile, o tarih ve saatin Gregoryen takviminde dize gösterimini gösterdiği anlamına gelir. Bu, Farsça takvimle tarih ve saat değeri oluşturmak için iki farklı yol kullanan, ancak <xref:System.DateTime.ToString%2A> yöntemi aradığında Gregoryen takviminde yine de bu tarih ve saat değerlerini görüntüleyen aşağıdaki örnekte gösterilmiştir. Bu örnek, belirli bir takvimde tarihi görüntülemek için yaygın olarak kullanılan ancak yanlış iki tekniği yansıtır.  
@@ -81,8 +81,4 @@ Ve <xref:System.DateTime> <xref:System.DateTimeOffset> türleri varsayılan takv
   
 - `DisplayDate`, iki parametreden geçirilen aşırı yüklenen <xref:System.DateTime> genel <xref:System.DateTimeOffset> yöntem: `CalendarUtility` nesne tarafından temsil edilen takvimde ifade edilecek bir veya değer; ve biçimlendirme kurallarının kullanılacağı kültür. Bir tarihin dize gösterimini döndürmedeki davranışı, hedef takvimin biçimlendirme kuralları kullanılacak kültür tarafından desteklenip desteklenmediğine bağlıdır.  
   
- Bu örnekte bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değer oluşturmak için kullanılan takvimden bağımsız olarak, bu değer genellikle Gregoryen tarihi olarak ifade edilir. Bunun nedeni, <xref:System.DateTime> <xref:System.DateTimeOffset> ve türlerinin herhangi bir takvim bilgisini korumamasıdır. Dahili olarak, 1 Ocak 0001 gece yarısından bu yana geçen kene sayısı olarak temsil edilir. Bu sayının yorumlanması takvime bağlıdır. Çoğu kültür için varsayılan takvim Gregoryen takvimidir.  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+ Bu örnekte bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değer oluşturmak için kullanılan takvimden bağımsız olarak, bu değer genellikle Gregoryen tarihi olarak ifade edilir. Bunun nedeni, <xref:System.DateTime> <xref:System.DateTimeOffset> ve türlerinin herhangi bir takvim bilgisini korumamasıdır. Dahili olarak, 1 Ocak 0001 gece yarısından bu yana geçen kene sayısı olarak temsil edilir. Bu sayının yorumlanması takvime bağlıdır. Çoğu kültür için varsayılan takvim Gregoryen takvimidir.

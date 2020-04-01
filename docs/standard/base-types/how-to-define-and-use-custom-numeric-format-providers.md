@@ -15,12 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140070"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523931"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
 .NET Framework, sayısal değerlerin dize gösterimi üzerinde kapsamlı bir denetim sağlar. Sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
@@ -84,8 +84,4 @@ ms.locfileid: "73140070"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- Bu örnekte, uygulayan <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntem yöntem için bir geri arama yöntemi olarak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> hizmet etmek için tasarlanmıştır. Bu nedenle, geçerli `formatProvider` `TelephoneFormatter` nesneye bir başvuru içerip içermediğini belirlemek için parametreyi inceler. Ancak, yöntem doğrudan koddan da çağrılabilir. Bu durumda, kültüre `formatProvider` özgü biçimlendirme <xref:System.Globalization.CultureInfo> bilgileri <xref:System.Globalization.NumberFormatInfo> sağlayan bir veya nesne sağlamak için parametreyi kullanabilirsiniz.  
-  
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
+ Bu örnekte, uygulayan <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntem yöntem için bir geri arama yöntemi olarak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> hizmet etmek için tasarlanmıştır. Bu nedenle, geçerli `formatProvider` `TelephoneFormatter` nesneye bir başvuru içerip içermediğini belirlemek için parametreyi inceler. Ancak, yöntem doğrudan koddan da çağrılabilir. Bu durumda, kültüre `formatProvider` özgü biçimlendirme <xref:System.Globalization.CultureInfo> bilgileri <xref:System.Globalization.NumberFormatInfo> sağlayan bir veya nesne sağlamak için parametreyi kullanabilirsiniz.

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711486"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523970"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET'te Dizeleri Kullanmak İçin En İyi Uygulamalar
 
@@ -199,7 +199,7 @@ Buna karşılık, sabit kültürün karşılaştırma için kullanışlı olan �
 
 Aşağıdaki tablo, anlamsal dize bağlamından numaralandırma <xref:System.StringComparison> üyesine eşleme özetleyişvere
 
-|Veriler|Davranış|İlgili System.StringComparison<br /><br /> değer|
+|Veriler|Davranış|İlgili System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |Büyük/küçük harfe duyarlı dahili tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarlı tanımlayıcılar.<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarlı ayarlar.|Baytların tam olarak eşleştiği dilsel olmayan bir tanımlayıcı.|<xref:System.StringComparison.Ordinal>|
 |Büyük/küçük harfe duyarsız iç tanımlayıcılar.<br /><br /> XML ve HTTP gibi standartlardaki büyük/küçük harfe duyarsız tanımlayıcılar.<br /><br /> Dosya yolları.<br /><br /> Kayıt defteri anahtarları ve değerleri.<br /><br /> Ortam değişkenleri.<br /><br /> Kaynak tanımlayıcıları (örneğin, işleyici adları).<br /><br /> Güvenlikle ilgili büyük/küçük harfe duyarsız ayarlar.|Büyük/küçük harfin alakasız olduğu dilsel olmayan bir tanımlayıcı; özellikle çoğu Windows sistem hizmetinde depolanan veriler.|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -350,7 +350,3 @@ Ancak, aşağıdaki <xref:System.Globalization.CultureInfo.CurrentCulture%2A?dis
 08.09.1890 06:47
 18.02.1905 15:12
 ```
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Dizeleri Düzenleme](manipulating-strings.md)

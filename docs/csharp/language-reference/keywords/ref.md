@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249337"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523785"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -25,7 +25,7 @@ Anahtar `ref` kelime, başvuru yla geçirilen bir değeri gösterir. Dört farkl
 
 ## <a name="passing-an-argument-by-reference"></a>Bir bağımsız değişkeni başvuruyla geçirme
 
-Bir yöntemin `ref` parametre listesinde kullanıldığında, anahtar kelime bir bağımsız değişkenin değere göre değil, başvuru yla geçirildiğini gösterir. Anahtar `ref` kelime, resmi parametreyi bağımsız değişken için bir diğer ad yapar ve bu da değişken olmalıdır. Başka bir deyişle, parametre üzerinde herhangi bir işlem bağımsız değişken üzerinde yapılır. Örneğin, arayan yerel bir değişken ifadesini veya dizi öğesi erişim ifadesini geçerse ve çağrılan yöntem ref parametrenin ifade ettiği nesnenin yerini alırsa, arayanın yerel değişkeni veya dizi öğesi yöntemi döndürür.
+Bir yöntemin `ref` parametre listesinde kullanıldığında, anahtar kelime bir bağımsız değişkenin değere göre değil, başvuru yla geçirildiğini gösterir. Anahtar `ref` kelime, resmi parametreyi bağımsız değişken için bir diğer ad yapar ve bu da değişken olmalıdır. Başka bir deyişle, parametre üzerinde herhangi bir işlem bağımsız değişken üzerinde yapılır. Örneğin, arayan yerel bir değişken ifadesini veya dizi öğesi erişim ifadesini geçerse ve çağrılan yöntem ref parametrenin başvurulduğu nesnenin yerini alırsa, arayanın yerel değişkeni veya dizi öğesi yöntem döndüğünde şimdi yeni nesneye başvurur.
 
 > [!NOTE]
 > Referans la geçme kavramını başvuru türleri kavramıyla karıştırmayın. İki kavram aynı değildir. Yöntem parametresi, değer `ref` türü veya başvuru türü olup olmadığına bakılmaksızın değiştirilebilir. Başvuru yla geçirildiğinde değer türünün kutulamayoktur.  
@@ -63,7 +63,7 @@ Ancak, yöntemlerden biri `ref`, , `in`parametresi `out` ve diğer bir değer pa
 
 Buna ek olarak, [uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md) aşağıdaki kısıtlamalara sahiptir:
 
-- Keywoard `out` bir uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
+- Anahtar `out` kelime, bir uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
 - Anahtar `ref` kelime, bağımsız değişken bir yapı olmadığında veya yapı olarak sınırlandırılmamış genel bir tür olduğunda, uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
 - İlk `in` bağımsız değişken bir yapı olmadığı sürece anahtar sözcük kullanılamaz. Anahtar `in` kelime, yapı olarak sınırlandırılsa bile, herhangi bir genel türde kullanılamaz.
 
@@ -163,7 +163,7 @@ Bir yapıyı " olarak `readonly ref`bildirmek için değiştiricileri birleştir
 - [Güvenli verimli kod yazın](../../write-safe-efficient-code.md)
 - [Ref dönüşler ve ref yerel ayarlar](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Koşullu ref ekspresyonu](../operators/conditional-operator.md#conditional-ref-expression)
-- [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Geçme Parametreleri](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Yöntem Parametreleri](method-parameters.md)
 - [C# Referans](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)

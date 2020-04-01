@@ -2,12 +2,12 @@
 title: dotnet yayımlama komutu
 description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110977"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523764"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -94,9 +94,21 @@ Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine 
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Çıktı dizininin yolunu belirtir. Belirtilmemişse, çalışma süresine bağlı yürütülebilir ve çapraz platform ikilileri için *./bin/[configuration]/[framework]/publish/* varsayılan olarak. Kendi kendine yeten bir yürütülebilir için *./bin/[configuration]/[framework]/[runtime]/[runtime]/publish/* olarak varsayılan olarak.
+  Çıktı dizininin yolunu belirtir.
+  
+  Belirtilmemişse, çalışma süresine bağlı yürütülebilir ve platform lar arası ikili ler için *[project_file_folder]./bin/[configuration]/[framework]/publish/* olarak varsayılan olarak geçer. Kendi kendine yeten bir yürütülebilir için *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* olarak varsayılan olarak
 
-  Yol göreceliyse, oluşturulan çıktı dizini geçerli çalışma dizinine değil, proje dosyası konumuna göredir.
+  - .NET Core 3.x SDK ve sonrası
+  
+    Proje yayımlanırken göreceli bir yol belirtilirse, oluşturulan çıktı dizini proje dosyası konumuna değil, geçerli çalışma dizinine göredir.
+
+    Çözüm yayımlanırken göreceli bir yol belirtilirse, tüm projelerin tüm çıktıları geçerli çalışma dizinine göre belirtilen klasöre gider. Yayımlama çıktısının her proje için ayrı klasörlere gitmesini sağlamak için, seçenek yerine msbuild `PublishDir` özelliğini kullanarak göreli bir yol belirtin. `--output` Örneğin, `dotnet publish -p:PublishDir=.\publish` her proje için yayımçıktısını proje dosyasını içeren klasörün altındaki klasöre `publish` gönderir.
+
+  - .NET Çekirdek 2.x SDK
+  
+    Proje yayımlanırken göreceli bir yol belirtilirse, oluşturulan çıktı dizini geçerli çalışma dizinine değil, proje dosyası konumuna göredir.
+
+    Çözüm yayımlanırken göreli bir yol belirtilirse, her projenin çıktısı proje dosyası konumuna göre ayrı bir klasöre gider. Bir çözüm yayımlanırken mutlak bir yol belirtilirse, tüm projeler için çıktı yayımlamak belirtilen klasöre gider.
 
 - **`--self-contained [true|false]`**
 

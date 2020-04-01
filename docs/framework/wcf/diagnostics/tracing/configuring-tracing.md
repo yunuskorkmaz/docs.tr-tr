@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185746"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523308"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayarlamak için nasıl yapılandırabileceğinizi, etkinlik izlemeve yayılmayı uçlardan uca izleme bağındırMasını desteklemek için nasıl ayarlayabileceğinizi ve izleme dinleyicilerini izleme izine göre nasıl ayarlaabileceğinizi açıklar.  
@@ -38,7 +38,7 @@ Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayar
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -183,6 +183,6 @@ Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayar
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Yönetim ve Teşhis](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [Nasıl yapılır: İzleme Dinleyicileri Oluşturma ve Başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
 - [Özel TraceListener Oluşturma](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

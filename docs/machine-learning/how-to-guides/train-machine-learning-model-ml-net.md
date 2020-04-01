@@ -1,16 +1,16 @@
 ---
 title: Modeli eğitme ve değerlendirme
 description: Makine öğrenimi modelleri oluşturmayı, ölçümleri nasıl toplayıp ML.NET performansı nasıl ölçtüğünü öğrenin. Makine öğrenimi modeli, yeni veriler kullanarak öngörülerde bulunmak için eğitim verilerindeki desenleri tanımlar.
-ms.date: 08/29/2019
+ms.date: 03/31/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51499f2c0ece615a99740bd9b27f99d4b5ed1d01
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976767"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523855"
 ---
 # <a name="train-and-evaluate-a-model"></a>Modeli eğitme ve değerlendirme
 
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Verileri [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) tren ve test kümelerine bölmek için yöntemi kullanın. Sonuç, biri [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) tren seti, [`IDataView`](xref:Microsoft.ML.IDataView) diğeri test kümesi için olmak üzere iki üyeiçeren bir nesne olacaktır. Veri bölme yüzdesi `testFraction` parametre tarafından belirlenir. Aşağıdaki parçacık, test kümesi için orijinal verilerin yüzde 20'sini dışarıda tutuyor.
+Verileri [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) tren ve test kümelerine bölmek için yöntemi kullanın. Sonuç, biri [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) tren seti, [`IDataView`](xref:Microsoft.ML.IDataView) diğeri test kümesi için olmak üzere iki üyeiçeren bir nesne olacaktır. Veri bölme yüzdesi `testFraction` parametre tarafından belirlenir. Aşağıdaki parçacık, test kümesi için orijinal verilerin yüzde 20'sini dışarıda tutuyor.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -100,9 +100,9 @@ ML.NET algoritmaların giriş sütunu türlerinde kısıtlamaları vardır. Ayr�
 
 ML.NET makine öğrenme algoritmaları giriş olarak bilinen boyutta bir float vektör bekliyoruz. [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) Tüm veriler zaten sayısal biçimdeyken ve birlikte işlenmesi amaçlanan (yani görüntü pikselleri) veri modelinize özniteliği uygulayın.
 
-Verilerin tümü sayısal değilse ve sütunların her birine ayrı ayrı farklı veri [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) dönüşümleri uygulamak istiyorsanız, tüm sütunlar işlendikten sonra tüm sütunları yeni bir sütuna çıktısı olan tek bir özellik vektöründe birleştirmek için yöntemi kullanın.
+Verilerin tümü sayısal değilse ve sütunların her birine ayrı ayrı farklı veri [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) dönüşümleri uygulamak istiyorsanız, tüm sütunlar işlendikten sonra tüm sütunları yeni bir sütuna çıktısı olan tek bir özellik vektöründe birleştirmek için yöntemi kullanın.
 
-Aşağıdaki parçacık, sütunları `Size` ve `HistoricalPrices` sütunları, `Features`yeni bir sütuna çıktı olan tek bir özellik vektöründe birleştirir. Ölçeklerde bir fark olduğundan, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) verileri normalleştirmek için `Features` sütuna uygulanır.
+Aşağıdaki parçacık, sütunları `Size` ve `HistoricalPrices` sütunları, `Features`yeni bir sütuna çıktı olan tek bir özellik vektöründe birleştirir. Ölçeklerde bir fark olduğundan, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) verileri normalleştirmek için `Features` sütuna uygulanır.
 
 ```csharp
 // Define Data Prep Estimator
@@ -123,7 +123,7 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ML.NET algoritmaları hiçbiri belirtilmediğinde varsayılan sütun adlarını kullanır. Tüm eğitmenler algoritma nın `featureColumnName` girişleri için çağrılan bir parametreye sahiptir ve uygulanabilir olduğunda `labelColumnName`da beklenen değer için bir parametreye sahiptirler. Varsayılan olarak bu `Features` `Label` değerler sırasıyla ve sırasıyla.
 
-Ön işleme [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) sırasında yöntemi kullanarak yeni bir `Features`sütun oluşturmak için , zaten önceden işlenmiş var olduğundan algoritmaparametrelerinde özellik sütun `IDataView`adını belirtmek için gerek yoktur. Etiket `CurrentPrice`sütunu, ancak [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) öznitelik veri modelinde kullanıldığından, ML.NET `CurrentPrice` makine `Label` öğrenme algoritması tahmincisi `labelColumnName` ne parametre sağlamak için gereksinimi kaldırır sütun yeniden adlandırır.
+Ön işleme [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) sırasında yöntemi kullanarak yeni bir `Features`sütun oluşturmak için , zaten önceden işlenmiş var olduğundan algoritmaparametrelerinde özellik sütun `IDataView`adını belirtmek için gerek yoktur. Etiket `CurrentPrice`sütunu, ancak [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) öznitelik veri modelinde kullanıldığından, ML.NET `CurrentPrice` makine `Label` öğrenme algoritması tahmincisi `labelColumnName` ne parametre sağlamak için gereksinimi kaldırır sütun yeniden adlandırır.
 
 Varsayılan sütun adlarını kullanmak istemiyorsanız, makine öğrenme algoritması tahmincisi tanımlanırken özellik ve etiket sütunlarının adlarını sonraki parçacıkta gösterildiği gibi parametreler olarak geçirin:
 
@@ -131,9 +131,29 @@ Varsayılan sütun adlarını kullanmak istemiyorsanız, makine öğrenme algori
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
+## <a name="caching-data"></a>Verileri önbelleğe alma
+
+Varsayılan olarak, veriler işlendiğinde, tembelce yüklenir veya akışlanır, bu da eğitmenlerin verileri diskten yükleyebileceği ve eğitim sırasında birden çok kez üzerinde yeniden işlem yapılabileceği anlamına gelir. Bu nedenle, verilerin diskten yüklenme sayısını azaltmak için belleğe sığan veri kümeleri için önbelleğe alma önerilir. Önbelleğe alma kullanılarak [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) bir [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)parçası olarak yapılır.
+
+Boru hattındaki herhangi [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) bir eğitmenden önce kullanılması önerilir.
+
+Aşağıdakileri [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)kullanarak, [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) eğitmen önce ekleyen daha sonra eğitmen tarafından kullanılmak üzere önceki tahmin sonuçları önbelleğe
+
+```csharp
+// 1. Concatenate Size and Historical into a single feature vector output to a new column called Features
+// 2. Normalize Features vector
+// 3. Cache prepared data
+// 4. Use Sdca trainer to train the model
+IEstimator<ITransformer> dataPrepEstimator =
+    mlContext.Transforms.Concatenate("Features", "Size", "HistoricalPrices")
+        .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+        .AppendCacheCheckpoint(mlContext);
+        .Append(mlContext.Regression.Trainers.Sdca());
+```
+
 ## <a name="train-the-machine-learning-model"></a>Makine öğrenme modelini eğitin
 
-Veriler önceden işlendikten sonra, [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) makine öğrenme modelini regresyon algoritmasıyla [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) eğitmek için yöntemi kullanın.
+Veriler önceden işlendikten sonra, [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase%602.Fit%2A) makine öğrenme modelini regresyon algoritmasıyla [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) eğitmek için yöntemi kullanın.
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -145,7 +165,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Ayıklama modeli parametreleri
 
-Model eğitildikten sonra, inceleme [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) veya yeniden eğitim için öğrenilen ayıklayın. Eğitimli [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) modelin önyargı ve öğrenilen katsayıları veya ağırlıkları sağlar.
+Model eğitildikten sonra, inceleme [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) veya yeniden eğitim için öğrenilenleri ayıklayın. Eğitimli [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) modelin önyargı ve öğrenilen katsayıları veya ağırlıkları sağlar.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
@@ -156,7 +176,7 @@ var trainedModelParameters = trainedModel.Model as LinearRegressionModelParamete
 
 ## <a name="evaluate-model-quality"></a>Model kalitesini değerlendirme
 
-En iyi performans gösteren modeli seçmenize yardımcı olmak için, test verilerindeki performansını değerlendirmek önemlidir. Eğitilmiş [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) model için çeşitli ölçümleri ölçmek için yöntemi kullanın.
+En iyi performans gösteren modeli seçmenize yardımcı olmak için, test verilerindeki performansını değerlendirmek önemlidir. Eğitilmiş [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) model için çeşitli ölçümleri ölçmek için yöntemi kullanın.
 
 > [!NOTE]
 > Yöntem, `Evaluate` makine öğrenimi görevinin gerçekleştirildiği yönteme bağlı olarak farklı ölçümler üretir. Daha fazla ayrıntı için [ `Microsoft.ML.Data` API Belgeleri'ni](xref:Microsoft.ML.Data) `Metrics` ziyaret edin ve adlarında bulunan sınıfları arayın.

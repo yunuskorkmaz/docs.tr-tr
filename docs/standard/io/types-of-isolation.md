@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d85625b99603c0bd81346cf2076b8efe0e1bba42
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159435"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523881"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolama ya da depolama ya da depolama alanı nın erişimini oluşturan kullanıcıyla her zaman sınırlandırılmıştır. Bu tür yalıtımuygulamak için, ortak dil çalışma süresi, işletim sisteminin tanıdığı kullanıcı kimliği kavramını kullanır, bu da depo açıldığında kodun çalıştığı işlemle ilişkili kimliktir. Bu kimlik kimlik doğrulaması kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
@@ -32,7 +32,7 @@ Yalıtılmış depolama ya da depolama ya da depolama alanı nın erişimini olu
   
 - Etki alanı kimliği, bir web uygulaması durumunda tam URL olabilir uygulama, kanıt temsil eder. Kabuk barındırılan kod için etki alanı kimliği uygulama dizini yolunu temel alabilir. Örneğin, çalıştırılabilir olan c:\Office\MyApp.exe yolundan çalışıyorsa, etki alanı kimliği C:\Office\MyApp.exe olacaktır.  
   
-- Montaj kimliği, derlemenin kanıtıdır. Bu, derlemenin [güçlü adı](../assembly/strong-named.md), derlemenin yazılım yayımcısı veya URL kimliği olabilecek bir şifreleme dijital imzadan gelebilir. Bir derlemenin hem güçlü bir adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet'ten geliyorsa ve imzalanmamışsa, URL kimliği kullanılır. Derlemeler ve güçlü adlar hakkında daha fazla bilgi için [Derlemelerle Programlama'ya](../assembly/program.md)bakın.  
+- Montaj kimliği, derlemenin kanıtıdır. Bu, derlemenin [güçlü adı](../assembly/strong-named.md), derlemenin yazılım yayımcısı veya URL kimliği olabilecek bir şifreleme dijital imzadan gelebilir. Bir derlemenin hem güçlü bir adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet'ten geliyorsa ve imzalanmamışsa, URL kimliği kullanılır. Derlemeler ve güçlü adlar hakkında daha fazla bilgi için [Derlemelerle Programlama'ya](/dotnet/standard/assembly/index)bakın.  
   
 - Dolaşım mağazaları, dolaşım kullanıcısı profili olan bir kullanıcıyla hareket ettirin. Dosyalar bir ağ dizinine yazılır ve kullanıcının oturum açtırolduğu herhangi bir bilgisayara indirilir. Dolaşım kullanıcı profilleri hakkında daha fazla <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>bilgi için bkz.  
   
@@ -73,7 +73,7 @@ Yalıtılmış depolama ya da depolama ya da depolama alanı nın erişimini olu
   
 <a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>Kullanıcı, Etki Alanı ve Derlemeye Göre Yalıtım  
- Uygulamanız özel bir veri deposu gerektiren bir üçüncü taraf derleme kullanıyorsa, özel verileri depolamak için yalıtılmış depolamayı kullanabilirsiniz. Kullanıcı, etki alanı ve derleme tarafından yalıtım, yalnızca belirli bir derlemedeki kodun verilere erişebilmesini sağlar ve yalnızca derleme depoyu oluşturduğunda çalışan uygulama tarafından kullanıldığında ve yalnızca mağazanın oluşturulduğu kullanıcı Uygulama. Kullanıcı, etki alanı ve derleme tarafından yalıtım, üçüncü taraf derlemesinin diğer uygulamalara veri sızdırmasını sağlar. İzole depolama alanı kullanmak istediğinizi ancak hangi yalıtım türünü kullanacağınızdan emin değilseniz, bu yalıtım türü varsayılan tercihiniz olmalıdır. Statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemi çağırmak <xref:System.IO.IsolatedStorage.IsolatedStorageFile> ve bir kullanıcı, etki <xref:System.IO.IsolatedStorage.IsolatedStorageScope> alanı ve derleme de geçen bu tür yalıtım ile depolama döndürür.  
+ Uygulamanız özel bir veri deposu gerektiren bir üçüncü taraf derleme kullanıyorsa, özel verileri depolamak için yalıtılmış depolamayı kullanabilirsiniz. Kullanıcı, etki alanı ve derleme tarafından yalıtım, yalnızca belirli bir derlemedeki kodun verilere erişebilmesini ve yalnızca derleme mağazayı oluşturduğunda çalışan uygulama tarafından kullanıldığında ve yalnızca mağazanın oluşturulduğu kullanıcı uygulamayı çalıştırdığında olmasını sağlar. Kullanıcı, etki alanı ve derleme tarafından yalıtım, üçüncü taraf derlemesinin diğer uygulamalara veri sızdırmasını sağlar. İzole depolama alanı kullanmak istediğinizi ancak hangi yalıtım türünü kullanacağınızdan emin değilseniz, bu yalıtım türü varsayılan tercihiniz olmalıdır. Statik <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> yöntemi çağırmak <xref:System.IO.IsolatedStorage.IsolatedStorageFile> ve bir kullanıcı, etki <xref:System.IO.IsolatedStorage.IsolatedStorageScope> alanı ve derleme de geçen bu tür yalıtım ile depolama döndürür.  
   
  Aşağıdaki kod örneği, kullanıcı, etki alanı ve derleme tarafından yalıtılmış bir depo alır. Mağazaya `isoFile` nesne üzerinden erişilebilir.  
   

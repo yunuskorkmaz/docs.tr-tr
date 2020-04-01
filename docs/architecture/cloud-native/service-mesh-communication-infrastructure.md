@@ -1,77 +1,77 @@
 ---
 title: Service Mesh iletişim altyapısı
-description: Hizmet ağı teknolojilerinin bulut Yerel mikro hizmet iletişimini nasıl kolaylaştırması hakkında bilgi edinin
+description: Hizmet örgü teknolojilerinin bulut ayarı mikro hizmet iletişimini nasıl kolaylaştırdığını öğrenin
 author: robvet
-ms.date: 09/10/2019
-ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 03/03/2020
+ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76780929"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523515"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh iletişim altyapısı
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bu bölümde, mikro hizmet iletişiminin sorunlarını araştırdık. Geliştirme ekiplerinin, arka uç hizmetlerinin birbirleriyle iletişim kurmasına duyarlı olmaları gerektiğini belirledik. İdeal olarak, hizmet içi iletişim, daha iyi. Ancak, arka uç hizmetleri genellikle işlemleri tamamlamaya yönelik bir diğerine bağlı olduğu için engelleme her zaman mümkün değildir.
+Bu bölüm boyunca, mikrohizmet iletişiminin zorluklarını araştırdık. Geliştirme ekiplerinin arka uç servisin birbiriyle nasıl iletişim kurduğu konusunda duyarlı olması gerektiğini söyledik. İdeal olarak, daha az hizmet arası iletişim, daha iyi. Ancak, arka uç hizmetleri işlemleri tamamlamak için genellikle birbirlerine güvendiğinden kaçınma her zaman mümkün değildir.
 
-Zaman uyumlu HTTP iletişimini ve zaman uyumsuz mesajlaşma uygulamak için farklı yaklaşımlar araştırdık. Her bir durumda, geliştirici iletişim kodu uygulamayla birlikte kullanıma açıldı. İletişim kodu karmaşıktır ve zaman yoğunluğu vardır. Yanlış kararlar önemli performans sorunlarına neden olabilir.
+Senkron HTTP iletişimi ve eşzamanlı mesajlaşmayı uygulamak için farklı yaklaşımları araştırdık. Her durumda, geliştirici iletişim kodu uygulama ile yüklenir. İletişim kodu karmaşık ve zaman yoğundur. Yanlış kararlar önemli performans sorunlarına yol açabilir.
 
-*Hizmet ağı*ile yeni ve hızlı gelişen bir teknolojinin etrafında mikro hizmet iletişim merkezlerine daha modern bir yaklaşım. [Hizmet ağı](https://www.nginx.com/blog/what-is-a-service-mesh/) , Service-to-Service iletişimini, dayanıklılığı ve birçok çapraz kesme ile ilgili sorunları ele almak için yerleşik yeteneklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu sorunlar için sorumluluğu mikro hizmetlerden ve hizmet kafes katmanının dışına taşımıştır. İletişim, mikro hizmetlerinizin dışında soyutlanmıştır.
+*Hizmet Mesh*başlıklı yeni ve hızla gelişen teknoloji etrafında mikrohizmet iletişim merkezleri için daha modern bir yaklaşım. [Hizmet örgü,](https://www.nginx.com/blog/what-is-a-service-mesh/) hizmete hizmet iletişimi, esneklik ve birçok çapraz kesme kaygısını işlemek için yerleşik özelliklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu endişelerin sorumluluğunu mikro hizmetlerden çıkarıp servis örgü katmanına taşır. İletişim, mikro hizmetlerinizden soyutlanır.
 
-Bir hizmet ağı 'nın anahtar bileşeni bir ara sunucu. Bulutta yerel bir uygulamada, bir ara sunucu örneği genellikle her bir mikro hizmetle birlikte bulunur. Ayrı işlemlerde yürütme yaparken, ikisi de yakından bağlantılıdır ve aynı yaşam döngüsünü paylaşır. Bu model, [sepet](https://docs.microsoft.com/azure/architecture/patterns/sidecar)olarak bilinen ve Şekil 4-23 ' de gösterilmiştir.
+Hizmet kafesinin önemli bir bileşeni proxy'dir. Bulut ait bir uygulamada, proxy örneği genellikle her microservice ile birlikte konumlanır. Ayrı işlemlerde yürütülürken, ikisi birbirine yakından bağlıdır ve aynı yaşam döngüsünü paylaşır. [Sidecar deseni](https://docs.microsoft.com/azure/architecture/patterns/sidecar)olarak bilinen bu desen Şekil 4-24'te gösterilmiştir.
 
-![Yan otomobil ile hizmet ağı](./media/service-mesh-with-side-car.png)
+![Yan araba ile servis örgü](./media/service-mesh-with-side-car.png)
 
-**Şekil 4-23**. Yan otomobil ile hizmet ağı
+**Şekil 4-24**. Yan araba ile servis örgü
 
-Önceki şekilde, iletilerin her mikro hizmet ile birlikte çalışan bir ara sunucu tarafından nasıl yakalandığını unutmayın. Her proxy, mikro hizmete özel trafik kurallarıyla yapılandırılabilir. İletileri anlamıştır ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir.
+Önceki şekilde iletilerin her microservice ile birlikte çalışan bir proxy tarafından nasıl ele geçirildiğine dikkat edin. Her proxy, mikro hizmete özgü trafik kurallarıyla yapılandırılabilir. İletileri anlar ve bunları hizmetlerinize ve dış dünyaya yönlendirebilir.
 
-Hizmet ağı, hizmetten hizmete iletişimin yönetilmesine birlikte hizmet bulma ve yük dengeleme için destek sağlar.
+Service Mesh, hizmetten hizmete iletişimi yönetmenin yanı sıra hizmet bulma ve yük dengeleme desteği sağlar.
 
-Bir hizmet ağı yapılandırıldıktan sonra oldukça işlevseldir. Ağ hizmeti bulma uç noktasından karşılık gelen bir örnek havuzu alır. Belirli bir hizmet örneğine bir istek gönderir ve sonucun gecikme süresini ve yanıt türünü kaydetme. Son istekler için gözlemlenen gecikme süresi dahil olmak üzere, farklı faktörlere bağlı olarak hızlı bir yanıt döndürmesinin en olası örneğini seçer.
+Bir kez yapılandırıldıktan sonra, bir hizmet örgüson derece işlevseldir. Kafes, bir hizmet bulma bitiş noktasından karşılık gelen bir örnek havuzunu alır. Belirli bir hizmet örneğine, sonucun gecikme sebebini ve yanıt türünü kaydederek bir istek gönderir. Son istekler için gözlenen gecikme sonu da dahil olmak üzere farklı etkenlere göre hızlı yanıt verme olasılığı en yüksek örneği seçer.
 
-Hizmet ağı, uygulama düzeyinde trafik, iletişim ve ağ sorunlarını yönetir. İletileri ve istekleri anlamıştır. Hizmet ağı genellikle bir kapsayıcı Orchestrator ile tümleşir. Kubernetes, hizmet kafesinin eklenebileceği genişletilebilir bir mimariyi destekler.
+Servis kafesi, uygulama düzeyinde trafik, iletişim ve ağ la ilgili endişeleri yönetir. İletileri ve istekleri anlar. Servis örgüsi genellikle bir kapsayıcı orkestratörle bütünleşir. Kubernetes, bir hizmet örgüsü eklenebilir genişletilebilir bir mimari destekler.
 
-Bölüm 6 ' da, mimarisi ve kullanılabilir açık kaynaklı uygulamalarla ilgili bir tartışma dahil olmak üzere hizmet ağı teknolojilerini yakından inceleyeceğiz.
+Bölüm 6'da, mimarisi ve mevcut açık kaynak uygulamaları üzerine bir tartışma da dahil olmak üzere Service Mesh teknolojilerine derinlemesine daldık.
 
 ## <a name="summary"></a>Özet
 
-Bu bölümde, bulutta yerel iletişim desenleri tartışıyoruz. Ön uç istemcilerinin arka uç mikro hizmetleriyle nasıl iletişim kurduğunu inceleyerek başladık. Bu şekilde, API Gateway platformları ve gerçek zamanlı iletişim hakkında konuşuyoruz. Daha sonra mikro hizmetlerin diğer arka uç hizmetleriyle nasıl iletişim kuracağını inceledik. Hem zaman uyumlu HTTP iletişimini hem de hizmetler genelinde zaman uyumsuz mesajlaşmayı inceledik. Bulutta yerel dünyada yakında sunulacak bir teknoloji olan gRPC 'yi kapsadık. Son olarak, hizmet ağı ile mikro hizmet iletişimini kolaylaştırmaya yönelik yeni ve hızlı bir şekilde gelişen bir teknoloji tanıtıldık.
+Bu bölümde bulut-yerel iletişim kalıplarını tartıştık. Ön uç müşterilerinin arka uç mikro hizmetlerle nasıl iletişim kurduklarını inceleyerek başladık. Yol boyunca, API Gateway platformları ve gerçek zamanlı iletişim hakkında konuştuk. Daha sonra mikro hizmetlerin diğer arka uç servislerle nasıl iletişim kurduğuna baktık. Hem senkron HTTP iletişimine hem de hizmetler arasında eşzamanlı mesajlaşmaya baktık. Bulut-yerli dünyada yeni bir teknoloji olan gRPC'yi ele aldık. Son olarak, mikro hizmet iletişimini kolaylaştırabilen Service Mesh adlı yeni ve hızla gelişen bir teknoloji sunduk.
 
-Bulutta yerel sistemlerde iletişimin sağlanmasına yardımcı olabilecek, yönetilen Azure hizmetlerinde özel bir vurgu yapıldı:
+Bulut ayarı olan sistemlerde iletişimin uygulanmasına yardımcı olabilecek yönetilen Azure hizmetlerine özel önem verildi:
 
 - [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
-- [Azure SignalR Hizmeti](https://azure.microsoft.com/services/signalr-service/)
-- [Azure depolama kuyrukları](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
+- [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
+- [Azure Depolama Kuyrukları](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Olay Hub 'ı](https://azure.microsoft.com/services/event-hubs/)
+- [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
 
-Daha sonra bulut Yerel sistemlerdeki dağıtılmış verilere ve sunmakta olduğu avantajlara ve güçlüklere geçeceğiz.
+Daha sonra bulut ayarı sistemlerde dağıtılmış verilere ve sunduğu avantajlara ve zorluklara geçiyoruz.
 
-### <a name="references"></a>Referanslar
+### <a name="references"></a>Başvurular
 
-- [.NET mikro hizmetleri: Kapsayıcılı .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET Microservices: Containerized .NET uygulamaları için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Mikro hizmetler için Interservice Iletişimi tasarlama](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
+- [Mikro hizmetler için Servisler Arası İletişim Tasarımı](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
-- [Gerçek zamanlı işlevselliği eklemek için tam olarak yönetilen bir hizmet olan Azure SignalR hizmeti](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
+- [Azure SignalR Hizmeti, gerçek zamanlı işlevsellik eklemek için tam olarak yönetilen bir hizmettir](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
-- [Azure API ağ geçidi giriş denetleyicisi](https://azure.github.io/application-gateway-kubernetes-ingress/)
+- [Azure API Ağ Geçidi Giriş Denetleyicisi](https://azure.github.io/application-gateway-kubernetes-ingress/)
 
-- [Azure Kubernetes Service (AKS) içindeki giriş hakkında](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
+- [Azure Kubernetes Hizmetinde Giriş Hakkında (AKS)](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
 
-- [Pratik gRPC](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
+- [gRPC Dokümantasyon](https://grpc.io/docs/guides/)
 
-- [gRPC belgeleri](https://grpc.io/docs/guides/)
+- [WCF Geliştiricileri için gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
 
-- [WCF geliştiricileri Için GRPC](https://bing.com) [Mark GRPC book]
+- [gRPC Hizmetlerinin HTTP API'leri ile karşılaştırılması](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
-- [GRPC hizmetlerini HTTP API 'Leri ile karşılaştırma](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [.NET video ile gRPC Hizmetleri Oluşturma](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[Önceki](rest-grpc.md)
->[İleri](Database-per-microservice.md)
+>[Önceki](grpc.md)
+>[Sonraki](Database-per-microservice.md)

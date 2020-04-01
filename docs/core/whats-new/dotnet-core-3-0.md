@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ccb987944af29c170b8d960d7112a13078b67dd1
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291546"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523590"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -108,7 +108,7 @@ Tek dosyalı yürütülebilir yayımlamak `PublishSingleFile` için, projenizdek
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-Tek dosyalı yayımlama hakkında daha fazla bilgi için [tek dosyalı paketleyici tasarım belgesine](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design_3_0.md)bakın.
+Tek dosyalı yayımlama hakkında daha fazla bilgi için [tek dosyalı paketleyici tasarım belgesine](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)bakın.
 
 ### <a name="assembly-linking"></a>Montaj bağlama
 

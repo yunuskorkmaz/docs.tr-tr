@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 771bd0276310eecb534fb80836faadb1a8aa10bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eed7c0176a2c1f4beb472dff981d52e522c7e36
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084198"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523827"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
 .NET Framework, belirli bir tarih için haftanın ordinal gününü belirlemeyi ve belirli bir tarih için yerelleştirilmiş hafta içi adını görüntülemeyi kolaylaştırır. Belirli bir tarihe karşılık gelen haftanın gününü gösteren numaralandırılmış bir <xref:System.DateTime.DayOfWeek%2A> değer, özellikten kullanılabilir. <xref:System.DateTimeOffset.DayOfWeek%2A> Buna karşılık, hafta içi adını almak, tarih ve saat değeri `ToString` yöntemi veya <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi gibi bir biçimlendirme yöntemi çağırılarak gerçekleştirilebilecek bir biçimlendirme işlemidir. Bu konu, bu biçimlendirme işlemlerinin nasıl gerçekleştirilini gösterir.  
@@ -96,10 +96,9 @@ ms.locfileid: "73084198"
  Ayrıca, belirli bir tarihin <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> hafta içi adını almak için özellik tarafından döndürülen değeri de kullanabilirsiniz. Bu özellik tarafından döndürülen <xref:System.Enum.ToString%2A> <xref:System.DayOfWeek> değer üzerinde yöntem için yalnızca bir çağrı gerektirir. Ancak, bu teknik, aşağıdaki örnekte gösterildiği gibi, geçerli kültür için yerelleştirilmiş bir hafta içi adı üretmez.  
   
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
- [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  
-  
+ [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

@@ -2,12 +2,12 @@
 title: Docker terimleri
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Docker terminolojisi
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502833"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523343"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -17,7 +17,9 @@ Bu bölümde, Docker'a girmeden önce aşina olmanız gereken terimler ve tanım
 
 **Dockerfile**: Docker görüntüsünün nasıl oluşturacağına dair yönergeler içeren bir metin dosyası. Bu bir toplu komut dosyası gibi, ilk satır ile başlamak ve daha sonra gerekli programları yüklemek için yönergeleri izleyin temel görüntü devletler, dosyaları kopyalamak ve benzeri, ihtiyacınız olan çalışma ortamı nı elde edene kadar.
 
-**Yapı**: Dockerfile tarafından sağlanan bilgi ve içeriğe ve görüntünün oluşturulduğu klasördeki ek dosyalara dayalı bir kapsayıcı görüntüsü oluşturma eylemi. Docker **docker build** komutu ile görüntüler oluşturabilirsiniz.
+**Yapı**: Dockerfile tarafından sağlanan bilgi ve içeriğe ve görüntünün oluşturulduğu klasördeki ek dosyalara dayalı bir kapsayıcı görüntüsü oluşturma eylemi. Docker komutu yla görüntüler oluşturabilirsiniz:
+
+> `docker build`
 
 **Konteyner**: Docker görüntüsünün bir örneği. Kapsayıcı, tek bir uygulamanın, işlemin veya hizmetin yürütülmesini temsil eder. Docker görüntüsünün, yürütme ortamının ve standart bir yönerge kümesinin içeriğinden oluşur. Bir hizmeti ölçeklerken, aynı görüntüden bir kapsayıcının birden çok örneğini oluşturursunuz. Veya bir toplu iş, her örne farklı parametreler geçirerek aynı görüntüden birden çok kapsayıcı oluşturabilir.
 
@@ -25,7 +27,7 @@ Bu bölümde, Docker'a girmeden önce aşina olmanız gereken terimler ve tanım
 
 **Etiket**: Görüntülere uygulayabileceğiniz bir işaret veya etiket, böylece aynı görüntünün farklı görüntüleri veya sürümleri (sürüm numarasına veya hedef ortama bağlı olarak) tanımlanabilir.
 
-**Çok aşamalı Yapı**: Docker 17.05 veya daha yüksek olduğundan, son görüntülerin boyutunu azaltmaya yardımcı olan bir özelliktir. Birkaç cümlede, çok aşamalı yapıyla, örneğin, uygulamayı derlemek ve yayımlamak ve ardından yayımlama klasörünü küçük bir çalışma süresi yalnızca temel görüntüyle kullanmak için çok daha küçük bir son görüntü oluşturmak için SDK içeren büyük bir temel görüntü kullanabilirsiniz.
+**Çok aşamalı Yapı**: Docker 17.05 veya daha yüksek olduğundan, son görüntülerin boyutunu azaltmaya yardımcı olan bir özelliktir. Birkaç cümlede, çok aşamalı yapıyla, örneğin, uygulamayı derlemek ve yayımlamak ve ardından yayımlama klasörünü küçük bir çalışma zamanı yalnızca temel görüntüyle kullanmak için çok daha küçük bir son görüntü oluşturmak için SDK içeren büyük bir temel görüntü kullanabilirsiniz.
 
 **Depo (repo)**: Resim sürümünü gösteren bir etiketle etiketlenmiş ilgili Docker görüntülerinin koleksiyonu. Bazı repos'lar, SDK'lar (daha ağır), yalnızca çalışma süreleri (daha hafif) içeren bir görüntü gibi belirli bir görüntünün birden çok varyantını içerir. Bu türevleri etiketleri ile işaretlenmiş olabilir. Tek bir repo, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir.
 
