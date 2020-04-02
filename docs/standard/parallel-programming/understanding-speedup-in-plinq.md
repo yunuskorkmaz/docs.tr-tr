@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60df814e18f473d84c260511292666c524fda7b7
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139912"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588074"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
 PLINQ'nin birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini paralel olarak yürüterek LINQ to Objects sorgularının yürütülmesini hızlandırmaktır. PLINQ, bir kaynak koleksiyonundaki her öğenin işlenmesi bağımsız olduğunda ve tek tek temsilciler arasında paylaşılan bir durum söz konusu olmadığında en iyi performansı gösterir. Bu tür işlemler Linq to Objects ve PLINQ'da yaygındır ve genellikle "*nefis paralel*" olarak adlandırılır, çünkü birden çok iş parçacığı üzerinde zamanlamaya kolayca ödünç verirler. Ancak, tüm sorgular tamamen nefis paralel işlemlerden oluşmaz; çoğu durumda, bir sorgu paralelleştirileemeyen veya paralel yürütmeyi yavaşlatan bazı işleçler içerir. Ve tamamen nefis paralel sorguları bile, PLINQ hala veri kaynağı bölüm ve iş parçacıkları üzerinde çalışma zamanlama ve genellikle sorgu tamamlandığında sonuçları birleştirmek gerekir. Tüm bu işlemler paralelleştirmenin hesaplama maliyetine eklenir; paralelleştirme eklemenin bu *maliyetlerine genel gider*denir. PLINQ sorgusunda optimum performans elde etmek için amaç, nefis paralel olan parçaları en üst düzeye çıkarmak ve ek yükü gerektiren parçaları en aza indirmektir. Bu makalede, hala doğru sonuçlar verirken mümkün olduğunca verimli PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  
@@ -84,4 +84,4 @@ PLINQ'nin birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

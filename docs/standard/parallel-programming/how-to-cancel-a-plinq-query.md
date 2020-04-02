@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134224"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588569"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
 Aşağıdaki örnekler, plinq sorgusunu iptal etmenin iki yolunu gösterir. İlk örnek, çoğunlukla veri geçişinden oluşan bir sorgunun nasıl iptal edilebildiğini gösterir. İkinci örnek, hesaplama olarak pahalı bir kullanıcı işlevi içeren bir sorguyu nasıl iptal ediletilir gösterir.
@@ -53,5 +53,5 @@ Bir enumerator atıldığında, örneğin sorgu sonuçları üzerinde yineleme y
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Yönetilen İş Parçacıklarında İptal](../../../docs/standard/threading/cancellation-in-managed-threads.md)

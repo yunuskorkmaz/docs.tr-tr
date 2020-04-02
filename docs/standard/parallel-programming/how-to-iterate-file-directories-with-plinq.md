@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de33561e2ef8e8fe62e8179272abe8adfffecd6f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091377"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587768"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme
 Bu örnek, dosya dizinleri üzerinde işlemleri paralelleştirmek için iki basit yolu gösterir. İlk sorgu, <xref:System.IO.Directory.GetFiles%2A> bir dizi dosya adını bir dizi dizin ve tüm alt dizinleri doldurmak için yöntemi kullanır. Bu yöntem, tüm dizi doldurulana kadar geri dönmez ve bu nedenle işlemin başında gecikme sokulabilir. Ancak, dizi doldurulur sonra, PLINQ çok hızlı bir şekilde paralel olarak işleyebilir.  
@@ -36,4 +36,4 @@ Bu örnek, dosya dizinleri üzerinde işlemleri paralelleştirmek için iki basi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

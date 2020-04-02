@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138215"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588629"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ'te Sıra Koruma
 PLINQ'de amaç, doğruluğu korurken performansı en üst düzeye çıkarmaktır. Bir sorgu mümkün olduğunca hızlı çalışmalı, ancak yine de doğru sonuçları üretmelidir. Bazı durumlarda, doğruluk kaynak sıranın sırasını korumayı gerektirir; ancak, sipariş hesaplamalı pahalı olabilir. Bu nedenle, varsayılan olarak, PLINQ kaynak sıranın sırasını korumaz. Bu bağlamda, PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]benzer , ancak linq nesnelere benzer, hangi sipariş korur.  
@@ -122,5 +122,5 @@ PLINQ'de amaç, doğruluğu korurken performansı en üst düzeye çıkarmaktır
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)

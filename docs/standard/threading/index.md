@@ -6,18 +6,18 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ca102dc98e50067d39d2f0c51a6ff75e342e9f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137938"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588662"
 ---
 # <a name="managed-threading"></a>Yönetilen İş Parçacığı Oluşturma
 İster bir işlemciye veya birkaç işlemciye sahip bilgisayarlar için geliştiriyor olun, uygulamanız şu anda başka bir iş yapıyor olsa bile, uygulamanızın kullanıcıyla en duyarlı etkileşimi sağlamasını istersiniz. Birden çok yürütme iş parçacığı kullanmak, uygulamanızın kullanıcıya yanıt vermesini sağlamanın ve aynı zamanda kullanıcı olayları arasında ve hatta sırasında işlemciyi kullanmanın en güçlü yollarından biridir. Bu bölümde iş parçacığı temel kavramları tanıtırken, yönetilen iş parçacığı kavramları ve yönetilen iş parçacığı kullanarak odaklanır.  
   
 > [!NOTE]
-> .NET Framework 4 ile başlayarak, çok iş parçacığı programlama <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> büyük ölçüde ve sınıflar, [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)ile basitleştirilmiş, <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanında yeni eşzamanlı toplama sınıfları ve iş parçacığı yerine görev kavramına dayalı yeni bir programlama modeli. Daha fazla bilgi için [Bkz. Paralel Programlama.](../../../docs/standard/parallel-programming/index.md)  
+> .NET Framework 4 ile başlayarak, çok iş parçacığı programlama <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> büyük ölçüde ve sınıflar, [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)ile basitleştirilmiş, <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanında yeni eşzamanlı toplama sınıfları ve iş parçacığı yerine görev kavramına dayalı yeni bir programlama modeli. Daha fazla bilgi için [Bkz. Paralel Programlama.](../../../docs/standard/parallel-programming/index.md)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)  
@@ -58,5 +58,5 @@ ms.locfileid: "73137938"
  [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)  
  Uygulamalarda birden çok iş parçacığı kullanımını basitleştiren paralel programlama kitaplıklarını açıklar.  
   
- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
  Birden çok işlemciden yararlanmak için sorguları paralel olarak çalıştırmak için bir sistem açıklar.

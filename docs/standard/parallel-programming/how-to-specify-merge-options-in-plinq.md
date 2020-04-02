@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e98ede3664a8815c60a490239a789c69fa557895
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139274"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588553"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme
 Bu örnek, plinq sorgusunda sonraki tüm işleçler için geçerli olacak birleştirme seçeneklerini nasıl belirteceğini gösterir. Birleştirme seçeneklerini açıkça ayarlamanız gerekmez, ancak bunu yapmak performansı artırabilir. Birleştirme seçenekleri hakkında daha fazla bilgi için [PLINQ'da Birleştirme Seçenekleri'ne](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)bakın.  
@@ -32,4 +32,4 @@ Bu örnek, plinq sorgusunda sonraki tüm işleçler için geçerli olacak birle�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.ParallelMergeOptions>
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

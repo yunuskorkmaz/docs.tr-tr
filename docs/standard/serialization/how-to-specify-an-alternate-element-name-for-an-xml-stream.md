@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir XML akışı için alternatif bir öğe adı belirtme'
+title: 'Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159864"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588464"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Nasıl yapılır: bir XML akışı için alternatif bir öğe adı belirtme
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme
   
-<xref:System.Xml.Serialization.XmlSerializer>kullanarak, aynı sınıf kümesiyle birden fazla XML akışı oluşturabilirsiniz. İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz. Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir. Bir hizmet, \<ıSBN > etiketini kullanır, ikincisi ise \<BookID > etiketini kullanır. Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`. Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız. İlk XML Web hizmeti için beklendiği gibi budur. Ancak, XML akışını ikinci XML Web hizmetine göndermek için, etiketin öğe adının `BookID`olması için Serileştirmeyi geçersiz kılmanız gerekir.  
+<xref:System.Xml.Serialization.XmlSerializer>", aynı sınıf kümesiyle birden fazla XML akışı oluşturabilirsiniz. İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz. Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir. Bir hizmet ISBN> etiketini \<kullanırken, ikincisi BookID> etiketini \<kullanır. Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`. Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız. İlk XML Web hizmeti için beklendiği gibi budur. Ancak XML akışını ikinci XML Web hizmetine göndermek için, etiketin öğe `BookID`adı.  
   
-## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Alternatif bir öğe adıyla bir XML akışı oluşturmak için  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Alternatif bir öğe adı olan bir XML akışı oluşturmak için  
   
 1. Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlElementAttribute> sınıfı.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "78159864"
 ## <a name="example"></a>Örnek  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  
@@ -83,7 +83,7 @@ public class SerializeOverride()
 }  
 ```  
   
- XML akışı aşağıdakine benzeyebilir.  
+ XML akışı aşağıdakilere benzeyebilir.  
   
 ```xml  
 <Book>  

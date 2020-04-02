@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186377"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587804"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
-Windows Sunu Temeli (WPF), bir türün [özelliğinin](../../../standard/base-types/common-type-system.md#Properties)işlevselliğini genişletmek için kullanılabilecek bir dizi hizmet sağlar. Toplu olarak, bu hizmetler genellikle WPF özellik sistemi olarak adlandırılır. WPF özellik sistemi tarafından desteklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakış, WPF özellik sistemini ve bağımlılık özelliğinin yeteneklerini açıklar. Bu, XAML'deki ve koddaki varolan bağımlılık özelliklerinin nasıl kullanılacağını içerir. Bu genel bakış, bağımlılık özelliği meta verileri ve özel bir sınıfta kendi bağımlılık özelliğinizi nasıl oluşturabilirsiniz gibi bağımlılık özelliklerinin özelleştirilmiş yönlerini de tanıtır.
+Windows Sunu Temeli (WPF), bir türün [özelliğinin](../../../standard/base-types/common-type-system.md#properties)işlevselliğini genişletmek için kullanılabilecek bir dizi hizmet sağlar. Toplu olarak, bu hizmetler genellikle WPF özellik sistemi olarak adlandırılır. WPF özellik sistemi tarafından desteklenen bir özellik bağımlılık özelliği olarak bilinir. Bu genel bakış, WPF özellik sistemini ve bağımlılık özelliğinin yeteneklerini açıklar. Bu, XAML'deki ve koddaki varolan bağımlılık özelliklerinin nasıl kullanılacağını içerir. Bu genel bakış, bağımlılık özelliği meta verileri ve özel bir sınıfta kendi bağımlılık özelliğinizi nasıl oluşturabilirsiniz gibi bağımlılık özelliklerinin özelleştirilmiş yönlerini de tanıtır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 Bu konu, .NET türü sistemi ve nesne yönelimli programlama hakkında bazı temel bilgilere sahip olduğunuzu varsayar. Bu konudaki örnekleri takip etmek için XAML'yi de anlamanız ve WPF uygulamalarının nasıl yazılabildiğini bilmeniz gerekir. Daha fazla bilgi için [Walkthrough: İlk WPF masaüstü uygulamam.](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Bağımlılık özellikleri ve CLR özellikleri
- WPF'de özellikler genellikle standart .NET [özellikleri](../../../standard/base-types/common-type-system.md#Properties)olarak ortaya çıkarır. Temel düzeyde, bu özelliklerle doğrudan etkileşimkurabilir ve bunların bir bağımlılık özelliği olarak uygulandığını asla bilemezsin. Ancak, bu özelliklerden yararlanabilmeniz için WPF özellik sisteminin bazı larını veya tüm özelliklerini bilmeniz gerekir.
+ WPF'de özellikler genellikle standart .NET [özellikleri](../../../standard/base-types/common-type-system.md#properties)olarak ortaya çıkarır. Temel düzeyde, bu özelliklerle doğrudan etkileşimkurabilir ve bunların bir bağımlılık özelliği olarak uygulandığını asla bilemezsin. Ancak, bu özelliklerden yararlanabilmeniz için WPF özellik sisteminin bazı larını veya tüm özelliklerini bilmeniz gerekir.
 
 Bağımlılık özelliklerinin amacı, diğer girdilerin değerini temel alan bir özelliğin değerini hesaplamak için bir yol sağlamaktır. Bu diğer girdiler, temalar ve kullanıcı tercihi, veri bağlama ve animasyonlar/film şeridi gibi tam zamanında özellik belirleme mekanizmaları, kaynaklar ve stiller gibi çok kullanımlı şablonlar veya öğe ağacındaki diğer öğelerle üst-alt ilişkileri yoluyla bilinen değerler gibi sistem özelliklerini içerebilir. Ayrıca, bağımsız doğrulama, varsayılan değerler, diğer özelliklerdeki değişiklikleri izleyen geri aramalar ve potansiyel çalışma zamanı bilgilerine dayalı özellik değerlerini zorlayabilecek bir sistem sağlamak için bir bağımlılık özelliği uygulanabilir. Türetilen sınıflar, varolan özelliklerin fiili uygulanmasını geçersiz kılmak veya yeni özellikler oluşturmak yerine bağımlılık özelliği meta verilerini geçersiz kılarak varolan bir özelliğin bazı belirli özelliklerini de değiştirebilir.
 
@@ -186,7 +186,7 @@ Prensipte, ilk düğme için özellik iki kez ayarlanır, ancak yalnızca bir de
 Tipik olarak, stillerin her zaman uygulanmasını ve tek bir öğenin yerel olarak ayarlanmış değerini bile gizlemesini istemezsiniz (aksi takdirde, stilleri veya öğeleri genel olarak kullanmak çok zor olur). Bu nedenle, stiller gelen değerler yerel olarak ayarlanmış bir değerden daha düşük bir emsalde çalışır. Bağımlılık özelliklerinin daha ayrıntılı bir listesi ve bağımlılık özelliğinin etkin değerinin nereden gelebileceği [için](dependency-property-value-precedence.md)bkz.
 
 > [!NOTE]
-> WPF öğelerinde tanımlı bağımlılık özellikleri olmayan birkaç özellik vardır. Ve büyük ölçüde, özellikler bağımlılık özellikleri olarak yalnızca özellik sisteminin etkinleştirdığı senaryolardan en az birini desteklemegerektiğinde uygulanmıştır: veri bağlama, şekillendirme, animasyon, varsayılan değer desteği, devralma, ekli özellikler veya Örneğin.
+> WPF öğelerinde tanımlı bağımlılık özellikleri olmayan birkaç özellik vardır. Ve büyük ölçüde, özellikler yalnızca özellik sisteminin etkinleştirdığı senaryolardan en az birini desteklemesi gerektiğinde bağımlılık özellikleri olarak uygulanmıştır: veri bağlama, şekillendirme, animasyon, varsayılan değer desteği, devralma, ekli özellikler veya geçersiz leştirme.
 
 ## <a name="learning-more-about-dependency-properties"></a>Bağımlılık özellikleri hakkında daha fazla bilgi edinme  
 

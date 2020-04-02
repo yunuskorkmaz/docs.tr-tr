@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc590d712a49ea27fcc61181e0b8c9b3349e74e5
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711408"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588333"
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Toplama türleri, karma tablolar, kuyruklar, yığınlar, çantalar, sözlükler ve listeler gibi veri koleksiyonlarının ortak varyasyonlarıdır.  
@@ -28,7 +28,7 @@ Toplama türleri, karma tablolar, kuyruklar, yığınlar, çantalar, sözlükler
   
  Koleksiyonlar, öğelerin nasıl depolanmasına, nasıl sıralandırılın, aramaların nasıl yapıldığına ve karşılaştırmaların nasıl yapıldığına bağlı olarak değişebilir. Sınıf <xref:System.Collections.Queue> ve <xref:System.Collections.Generic.Queue%601> genel sınıf ilk ilk çıkış listelerini sağlarken, <xref:System.Collections.Stack> <xref:System.Collections.Generic.Stack%601> sınıf ve genel sınıf son-ilk çıkış listelerini sağlar. Sınıf <xref:System.Collections.SortedList> ve <xref:System.Collections.Generic.SortedList%602> genel sınıf, sınıfın ve <xref:System.Collections.Hashtable> genel <xref:System.Collections.Generic.Dictionary%602> sınıfın sıralanmış sürümlerini sağlar. A <xref:System.Collections.Hashtable> veya a <xref:System.Collections.Generic.Dictionary%602> öğelerine yalnızca öğenin anahtarıyla erişilebilir, ancak <xref:System.Collections.SortedList> a <xref:System.Collections.ObjectModel.KeyedCollection%602> veya a'nın öğelerine anahtar veya öğenin dizini tarafından erişilebilir. Tüm koleksiyonlarda dizinler sıfır tabanlı <xref:System.Array>olmayan diziler sağlar dışında, sıfır tabanlı.  
   
- LINQ to Objects özelliği, nesne türü uygulandığı sürece bellek içi nesnelere erişmek için <xref:System.Collections.IEnumerable> LINQ sorgularını kullanmanıza olanak tanır. <xref:System.Collections.Generic.IEnumerable%601> LINQ sorguları verilere erişmek için ortak bir desen sağlar; genellikle standart `foreach` döngülere göre daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)konusuna bakın.  
+ LINQ to Objects özelliği, nesne türü uygulandığı sürece bellek içi nesnelere erişmek için <xref:System.Collections.IEnumerable> LINQ sorgularını kullanmanıza olanak tanır. <xref:System.Collections.Generic.IEnumerable%601> LINQ sorguları verilere erişmek için ortak bir desen sağlar; genellikle standart `foreach` döngülere göre daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)konusuna bakın.  
   
 ## <a name="related-topics"></a>İlgili Konular  
   

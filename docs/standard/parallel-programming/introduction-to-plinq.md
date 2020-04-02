@@ -8,27 +8,30 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9ef72c2691a4dbb9c68202b29e0f5c77dcdaa74
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75632369"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588178"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 
-## <a name="what-is-a-parallel-query"></a>Paralel Sorgu nedir?
+Paralel LINQ (PLINQ) [Dil-Tümleşik Sorgu (LINQ)](../../csharp/programming-guide/concepts/linq/index.md) deseninin paralel bir uygulamasıdır. PLINQ, ad alanı için uzantı yöntemleri olarak LINQ standart sorgu işleçlerinin tam kümesini <xref:System.Linq> uygular ve paralel işlemler için ek işleçlere sahiptir. PLINQ, LINQ sözdiziminin basitliğini ve okunabilirliğini paralel programlamanın gücüyle birleştirir.
 
-Dil-Tümleşik Sorgu (LINQ) .NET Framework 3.5'te tanıtıldı. Herhangi <xref:System.Collections.IEnumerable?displayProperty=nameWithType> bir veri <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> kaynağını tür güvenli bir şekilde sorgulamak için birleşik bir model sunar. LinQ to Objects, bellek içi koleksiyonlar ve diziler gibi <xref:System.Collections.Generic.List%601> karşı çalıştırılabilen LINQ sorgularının adıdır. Bu makalede, LINQ temel bir anlayışa sahip olduğunu varsayar. Daha fazla bilgi için bkz: [Dil-Tümleşik Sorgu (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md) veya [Dil-Tümleşik Sorgu (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
+> [!TIP]
+> LINQ'ya aşina değilseniz, herhangi bir tanımlanabilir veri kaynağını tür güvenli bir şekilde sorgulamak için birleşik bir model sunar. LinQ to Objects, bellek içi koleksiyonlar ve diziler gibi <xref:System.Collections.Generic.List%601> karşı çalıştırılabilen LINQ sorgularının adıdır. Bu makalede, LINQ temel bir anlayışa sahip olduğunu varsayar. Daha fazla bilgi için [bkz.](../../csharp/programming-guide/concepts/linq/index.md)
 
-Paralel LINQ (PLINQ) LINQ deseni paralel bir uygulamadır. Birçok yönden bir PLINQ sorgusu, Nesneler sorgusuna paralel olmayan bir LINQ sorgusuna benzer. PLINQ sorguları, sıralı LINQ sorguları gibi, <xref:System.Collections.IEnumerable> herhangi <xref:System.Collections.Generic.IEnumerable%601> bir bellek veya veri kaynağında çalışır ve yürütmeyi erteler, bu da sorgu numaralandırılAna kadar yürütmeye başlamadıkları anlamına gelir. Birincil fark, PLINQ sistemdeki tüm işlemcileri tam olarak kullanmaya çalışır. Bunu, veri kaynağını bölümlere ayırarak ve sonra her segmentteki sorguyu birden çok işlemciye paralel olarak ayrı bir alt iş parçacığı üzerinde gerçekleştirerek yapar. Çoğu durumda, paralel yürütme sorgunun önemli ölçüde daha hızlı çalıştığı anlamına gelir.
+## <a name="what-is-a-parallel-query"></a>Paralel sorgu nedir?
+
+Birçok yönden bir PLINQ sorgusu, Nesneler sorgusuna paralel olmayan bir LINQ sorgusuna benzer. PLINQ sorguları, sıralı LINQ sorguları gibi, <xref:System.Collections.IEnumerable> herhangi <xref:System.Collections.Generic.IEnumerable%601> bir bellek veya veri kaynağında çalışır ve yürütmeyi erteler, bu da sorgu numaralandırılAna kadar yürütmeye başlamadıkları anlamına gelir. Birincil fark, PLINQ sistemdeki tüm işlemcileri tam olarak kullanmaya çalışır. Bunu, veri kaynağını bölümlere ayırarak ve sonra her segmentteki sorguyu birden çok işlemciye paralel olarak ayrı bir alt iş parçacığı üzerinde gerçekleştirerek yapar. Çoğu durumda, paralel yürütme sorgunun önemli ölçüde daha hızlı çalıştığı anlamına gelir.
 
 Paralel yürütme sayesinde PLINQ, genellikle yalnızca sorgu işlemini <xref:System.Linq.ParallelEnumerable.AsParallel%2A> veri kaynağına ekleyerek, belirli sorgu türleri için eski kod üzerinde önemli performans iyileştirmeleri elde edebilir. Ancak, paralellik kendi karmaşıklıklarını tanıtabilir ve tüm sorgu işlemleri PLINQ'da daha hızlı çalışmaz. Aslında, paralelleştirme aslında bazı sorguları yavaşlatıyor. Bu nedenle, sipariş verme gibi sorunların paralel sorguları nasıl etkilediğini anlamanız gerekir. Daha fazla bilgi için [PLINQ'da Çabuk'u Anlama'ya](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)bakın.
 
 > [!NOTE]
 > Bu dokümantasyon PLINQ'daki delegeleri tanımlamak için lambda ifadelerini kullanır. C# veya Visual Basic'teki lambda ifadelerine aşina değilseniz, [PLINQ ve TPL'deki Lambda İfadeleri'ne](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)bakın.
 
-Bu makalenin geri kalanı ana PLINQ sınıflarına genel bir bakış verir ve PLINQ sorgularının nasıl oluşturulup oluşturulabildiğini tartışır. Her bölüm daha ayrıntılı bilgi ve kod örnekleri bağlantılar içerir.
+Bu makalenin geri kalanı ana PLINQ sınıfları genel bir bakış verir ve PLINQ sorguları oluşturmak için nasıl tartışır. Her bölüm daha ayrıntılı bilgi ve kod örnekleri bağlantılar içerir.
 
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable Sınıfı
 
@@ -111,7 +114,7 @@ PLINQ,.NET Framework 4'teki iptal türleri ile entegre edilmiştir. (Daha fazla 
 
 Daha fazla yanıt verme için, uzun süredir devam eden kullanıcı temsilcilerindeki iptal isteklerine de yanıt verebilirsiniz. Daha fazla bilgi için [bkz: PLINQ Sorgusuiptal edin.](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)
 
-## <a name="exceptions"></a>Özel durumlar
+## <a name="exceptions"></a>Özel Durumlar
 
 Bir PLINQ sorgusu yürütüldüğünde, aynı anda farklı iş parçacığından birden çok özel durum atılabilir. Ayrıca, özel durumu işlemek için kod özel durum attı kod farklı bir iş parçacığı üzerinde olabilir. <xref:System.AggregateException> PLINQ, sorgu tarafından atılan tüm özel durumları kapsüllemek ve bu özel durumları arama iş parçacığına geri döndürmek için türü kullanır. Arama iş parçacığında yalnızca bir try-catch bloğu gereklidir. Ancak, kapsüllenmiş tüm özel durumlar aracılığıyla yineleyebilir <xref:System.AggregateException> ve güvenli bir şekilde kurtarabilirsiniz herhangi bir yakalamak. Nadir durumlarda, bazı özel durumlar bir <xref:System.AggregateException>sarılmış değil atılabilir <xref:System.Threading.ThreadAbortException>ve s de sarılmış değildir.
 
@@ -134,5 +137,5 @@ PLINQ sabit sayıda bölümü destekler (ancak yük dengeleme için çalışma s
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [PLINQ'te Hızlandırmayı Anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

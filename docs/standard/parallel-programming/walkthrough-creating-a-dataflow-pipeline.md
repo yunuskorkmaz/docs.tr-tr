@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139864"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588284"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
 Kaynak bloklardan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>ileti <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>almak <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> için , ve yöntemleri kullanabiliyor olsada, ileti bloklarını *da bir veri akışı ardışık alanı*oluşturmak için bağlayabilirsiniz. Veri akışı ardışık bir dizi bileşen veya *veri akışı blokları,* her biri daha büyük bir hedefe katkıda bulunan belirli bir görev gerçekleştirir. Veri akışı ardışık bir veri akışı bloğundaki her veri akışı bloğu, başka bir veri akışı bloğundan ileti aldığında işi gerçekleştirir. Buna benzetme otomobil üretimi için bir montaj hattıdır. Her araç montaj hattından geçerken, bir istasyon çerçeveyi monte eder, bir sonraki motor ayükler, ve saire. Montaj hattı birden fazla aracın aynı anda monte edilmesini sağladığından, tüm araçların birer birer monte edilmesinden daha iyi iş elde edilmesini sağlar.
@@ -34,7 +34,7 @@ Kaynak bloklardan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A
   
 6. Boru hattının tüm işleri tamamlamasını bekleyin.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu izbiyi başlatmadan önce [Veri Akışı'nı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) okuyun.  
   
 ## <a name="creating-a-console-application"></a>Konsol Uygulaması Oluşturma  
@@ -104,7 +104,7 @@ Kaynak bloklardan <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu örnek, veri akışı ardışık aracılığıyla işlemek için bir URL gönderir. Bir boru hattı üzerinden birden fazla giriş değeri gönderirseniz, uygulamanıza parçaların bir otomobil fabrikasında nasıl hareket edebileceğini andıran bir paralellik biçimi getirebilirsiniz. Ardışık işlemin ilk üyesi sonucunu ikinci üyeye gönderdiğinde, ikinci üye ilk sonucu işlerken başka bir öğeyi paralel olarak işleyebilir.  
   
- Veri akışı ardışık lıkları kullanılarak elde edilen paralellik kaba *taneli paralellik* olarak bilinir, çünkü genellikle daha az, daha büyük görevlerden oluşur. Ayrıca, veri akışı ardışık bir işlem de küçük, kısa çalışan görevlerin daha *ince taneli paralellikkk.* Bu örnekte, `findReversedWords` ardışık yapının üyesi, çalışma listesindeki birden çok öğeyi paralel olarak işlemek için [PLINQ](parallel-linq-plinq.md) kullanır. Kaba taneli bir boru hattında ince taneli paralellik kullanımı genel iş ortalığını artırabilir.  
+ Veri akışı ardışık lıkları kullanılarak elde edilen paralellik kaba *taneli paralellik* olarak bilinir, çünkü genellikle daha az, daha büyük görevlerden oluşur. Ayrıca, veri akışı ardışık bir işlem de küçük, kısa çalışan görevlerin daha *ince taneli paralellikkk.* Bu örnekte, `findReversedWords` ardışık yapının üyesi, çalışma listesindeki birden çok öğeyi paralel olarak işlemek için [PLINQ](introduction-to-plinq.md) kullanır. Kaba taneli bir boru hattında ince taneli paralellik kullanımı genel iş ortalığını artırabilir.  
   
  Ayrıca, *veri akışı ağı*oluşturmak için bir kaynak veri akışı bloğunu birden çok hedef bloğuna bağlayabilirsiniz. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> Yöntemin aşırı yüklenen sürümü, <xref:System.Predicate%601> hedef bloğun her iletiyi değerine göre kabul edip etmediğini tanımlayan bir nesne alır. Kaynak olarak hareket eden çoğu veri akışı bloğu türü, bloklardan biri bu iletiyi kabul edene kadar bağlı hedef bloklara bağlı oldukları sırada ileti sunar. Bu filtreleme mekanizmasını kullanarak, belirli verileri bir yol ve diğer veriler üzerinden başka bir yol üzerinden yönlendiren bağlı veri akışı blokları sistemleri oluşturabilirsiniz. Veri akışı ağı oluşturmak için filtreleme kullanan [bir](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)örnek için bkz.  
   

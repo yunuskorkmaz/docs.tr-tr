@@ -4,12 +4,12 @@ description: Temsilciler ve olaylar arasındaki farkı ve .NET Core'un bu özell
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146184"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588254"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Temsilcileri ve Olayları Ayırt Etme
 
@@ -37,6 +37,11 @@ Olayları dinleyen abone ler olmasa bile UX denetimleri hala doğru çalışır.
 Başka bir husus, temsilci yönteminiz için isteyeceğiniz yöntem prototipidir. Gördüğünüz gibi, olaylar için kullanılan temsilcilerin hepsinin geçersiz bir dönüş türü vardır. Ayrıca, olay bağımsız değişken nesnesinin özelliklerini değiştirerek bilgileri olay kaynaklarına geri aktaran olay işleyicileri oluşturmak için deyimler olduğunu da gördünüz. Bu deyimler işe yarasa da, bir yöntemden değer döndürmek kadar doğal değildir.
 
 Bu iki buluşçistin her ikisinin de genellikle mevcut olabileceğine dikkat edin: Temsilci yönteminiz bir değer döndürürse, algoritmayı bir şekilde etkileme olasılığı yüksektir.
+
+## <a name="events-have-private-invocation"></a>Etkinlikler Özel Çağrı var
+
+Bir olayın bulunduğu sınıf dışındaki sınıflar yalnızca olay dinleyicileri ekleyebilir ve kaldırabilir; yalnızca olayı içeren sınıf olayı çağırabilir. Olaylar genellikle ortak sınıf üyeleridir.
+Buna karşılık, temsilciler genellikle parametre olarak geçirilir ve hiç depolanırsa özel sınıf üyesi olarak depolanır.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Etkinlik Dinleyicilerinin Genellikle Daha Uzun Ömürleri Var
 

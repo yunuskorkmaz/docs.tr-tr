@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ef813937b731b417be31e189d89b81cccc75280
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139251"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588546"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Nasıl yapılır: PLINQ'te Yürütme Modunu Belirtme
 Bu örnek, PLINQ'yi varsayılan sezgisel'ini atlayarak nasıl zorlayacağını ve sorgunun şekline bakılmaksızın sorguyu paralelleştirmeyi gösterir.  
@@ -33,4 +33,4 @@ Bu örnek, PLINQ'yi varsayılan sezgisel'ini atlayarak nasıl zorlayacağını v
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

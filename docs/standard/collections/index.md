@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160397"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588654"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veriler genellikle depolandığında ve koleksiyon olarak işlendiğinde daha verimli bir şekilde işlenebilir. <xref:System.Array?displayProperty=nameWithType> Sınıf veya sınıflar , <xref:System.Collections>, <xref:System.Collections.Generic> <xref:System.Collections.Concurrent>System.Collections.Değişmez ad alanları eklemek için kullanabilirsiniz, kaldırmak ve bir koleksiyonda öğeleri veya öğeleri bir dizi değiştirin.  
@@ -30,7 +30,7 @@ Benzer veriler genellikle depolandığında ve koleksiyon olarak işlendiğinde 
   
 - **Koleksiyonu sayısala bilme**  
   
-     .NET Framework koleksiyonları, <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonun yinelanmasını sağlamak için ya uygular ya da etkinleştirir. Bir sayıcı, koleksiyondaki herhangi bir öğeiçin hareketli bir işaretçi olarak düşünülebilir. [Foreach,](../../csharp/language-reference/keywords/foreach-in.md) ifade ve [Her biri için ... Sonraki İfade,](../../visual-basic/language-reference/statements/for-each-next-statement.md) <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemtarafından maruz kalan sayısalatörü kullanın ve sayısallaştırıcıyı manipüle etme karmaşıklığını gizler. Buna ek olarak, uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> herhangi bir koleksiyon *sorgulanabilir* bir tür olarak kabul edilir ve LINQ ile sorgulanabilir. LINQ sorguları verilere erişmek için ortak bir desen sağlar. Genellikle standart `foreach` döngülere göre daha kısa ve okunabilirdirler ve filtreleme, sıralama ve gruplandırma özellikleri sağlarlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)ve [Temel Sorgu İşlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)adresine bakın.  
+     .NET Framework koleksiyonları, <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonun yinelanmasını sağlamak için ya uygular ya da etkinleştirir. Bir sayıcı, koleksiyondaki herhangi bir öğeiçin hareketli bir işaretçi olarak düşünülebilir. [Foreach,](../../csharp/language-reference/keywords/foreach-in.md) ifade ve [Her biri için ... Sonraki İfade,](../../visual-basic/language-reference/statements/for-each-next-statement.md) <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemtarafından maruz kalan sayısalatörü kullanın ve sayısallaştırıcıyı manipüle etme karmaşıklığını gizler. Buna ek olarak, uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> herhangi bir koleksiyon *sorgulanabilir* bir tür olarak kabul edilir ve LINQ ile sorgulanabilir. LINQ sorguları verilere erişmek için ortak bir desen sağlar. Genellikle standart `foreach` döngülere göre daha kısa ve okunabilirdirler ve filtreleme, sıralama ve gruplandırma özellikleri sağlarlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)ve [Temel Sorgu İşlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)adresine bakın.  
   
 - **Koleksiyon içeriğini bir diziye kopyalama yeteneği**  
   
@@ -80,7 +80,7 @@ Benzer veriler genellikle depolandığında ve koleksiyon olarak işlendiğinde 
 |[Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Eşitlik karşılaştırmalarının kullanımını ve koleksiyonlarda sıralama karşılaştırmalarını tartışır.|  
 |[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Sıralanmış koleksiyonların performansını ve özelliklerini açıklar|  
 |[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türlerinin özelliklerini açıklar.|  
-|[İş Parçacığı Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Birden çok iş <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> parçacığından güvenli ve verimli eşzamanlı erişimi destekleyen ve koleksiyon türlerini açıklar.|  
+|[İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Birden çok iş <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> parçacığından güvenli ve verimli eşzamanlı erişimi destekleyen ve koleksiyon türlerini açıklar.|  
 |System.Collections.Değişmez|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|  
   
 <a name="BKMK_Reference"></a>

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74203993"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588628"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ'te Birleştirme Seçenekleri
 Bir sorgu paralel olarak yürütüldüğünde, PLINQ kaynak sırasını bölümler, böylece birden çok iş parçacığı genellikle ayrı iş parçacıkları üzerinde olmak üzere farklı parçalar üzerinde aynı anda çalışabilir. Sonuçlar bir iş parçacığı üzerinde tüketilecekse, `foreach` örneğin, (Visual`For Each` Basic'te) bir döngüde, her iş parçacığının sonuçları tek bir dizide birleştirilmelidir. PLINQ'un gerçekleştirdiği birleştirme türü, sorguda bulunan işleçlere bağlıdır. Örneğin, sonuçlara yeni bir düzen getiren işleçlerin tüm iş parçacıklarındaki tüm öğeleri arabelleğe alması gerekir. Tüketen iş parçacığı (aynı zamanda uygulama kullanıcısının) perspektifinden, tam arabelleğe alan bir sorgu, ilk sonucunu üretmeden önce fark edilir bir süre boyunca çalışabilir. Diğer işleçler, varsayılan olarak, kısmen arabelleğe alınır; sonuçlarını toplu olarak verirler. Bir işleç, <xref:System.Linq.ParallelEnumerable.ForAll%2A> varsayılan olarak arabelleğe alınmaz. Tüm iş parçacıklarından tüm öğeleri hemen verir.  
@@ -65,5 +65,5 @@ Bir sorgu paralel olarak yürütüldüğünde, PLINQ kaynak sırasını bölüml
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

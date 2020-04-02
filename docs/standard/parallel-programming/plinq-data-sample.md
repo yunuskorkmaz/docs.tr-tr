@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140015"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588605"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
 Bu örnek, .csv formatında örnek veriler ve müşteri, ürün, sipariş ve sipariş ayrıntılarının bellek içi koleksiyonlarına dönüştüren yöntemler içerir. PLINQ ile daha fazla deneme yapmak için, bu konudaki koda diğer bazı `Main` konulardan kod örneklerini yapıştırabilir ve yöntemden çağırabilirsiniz. Bu verileri kendi PLINQ sorgularınızla da kullanabilirsiniz.  
@@ -862,4 +862,4 @@ END PRODUCTS
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

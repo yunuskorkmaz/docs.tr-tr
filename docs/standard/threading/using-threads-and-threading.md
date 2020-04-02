@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936851"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588426"
 ---
 # <a name="using-threads-and-threading"></a>İş parçacıkları ve iş parçacığı oluşturmayı kullanma
 
@@ -20,7 +20,7 @@ ms.locfileid: "75936851"
 İşlemci yoğun görevler ayrı iş parçacıkları üzerinde yürütülürken, kullanıcı arabirimi etkin kaldığından, çoklu iş parçacığı kullanan uygulamalar kullanıcı girişine daha duyarlıdır. İş yükü arttıkça iş parçacığı ekleyebilirsiniz, çünkü ölçeklenebilir uygulamalar oluştururken multithreading de yararlıdır.
 
 > [!NOTE]
-> Uygulamanın iş parçacıklarının davranışı üzerinde daha fazla denetime ihtiyacınız varsa, iş parçacıklarını kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ile başlayarak, çok iş parçacığı <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> programlama <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> büyük ölçüde ve sınıflar, [Paralel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanında yeni eşzamanlı toplama sınıfları ve iş parçacığı yerine görev kavramına dayalı yeni bir programlama modeli ile basitleştirilmiştir. Daha fazla bilgi için bkz: [Paralel Programlama](../parallel-programming/index.md) ve Görev [Paralel Kitaplığı (TPL).](../parallel-programming/task-parallel-library-tpl.md)
+> Uygulamanın iş parçacıklarının davranışı üzerinde daha fazla denetime ihtiyacınız varsa, iş parçacıklarını kendiniz yönetebilirsiniz. Ancak, .NET Framework 4 ile başlayarak, çok iş parçacığı <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> programlama <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> büyük ölçüde ve sınıflar, [Paralel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), <xref:System.Collections.Concurrent?displayProperty=nameWithType> ad alanında yeni eşzamanlı toplama sınıfları ve iş parçacığı yerine görev kavramına dayalı yeni bir programlama modeli ile basitleştirilmiştir. Daha fazla bilgi için bkz: [Paralel Programlama](../parallel-programming/index.md) ve Görev [Paralel Kitaplığı (TPL).](../parallel-programming/task-parallel-library-tpl.md)
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Nasıl yapılsın: Yeni bir iş parçacığı oluşturma ve başlatma
 

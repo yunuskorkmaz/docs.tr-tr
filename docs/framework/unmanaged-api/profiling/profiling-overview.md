@@ -27,172 +27,170 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: aa8bff374e9698d4b7e032428ec1bdc66901e05d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3836b562d969726a6587d702d3edf45abb147d10
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860922"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588499"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 
-Profil Oluşturucu, başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) profil oluşturucu, profil oluşturma API 'sini kullanarak, CLR 'ye ileti alan ve iletileri gönderen işlevlerden oluşan bir dinamik bağlantı kitaplığıdır (DLL). Profil oluşturucu DLL, çalışma zamanında CLR tarafından yüklenir.
+Profil oluşturucu, başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak bir dil çalışma zamanı (CLR) profil oluşturucusu profil oluşturma API'sini kullanarak CLR'den ileti alan ve CLR'ye ileti gönderen işlevlerden oluşan dinamik bir bağlantı kitaplığıdır (DLL). Profil oluşturucu DLL, clr tarafından çalışma zamanında yüklenir.
 
-Geleneksel profil oluşturma araçları, uygulamanın yürütülmesini ölçmeye odaklanmaktadır. Yani, her işlevde harcanan süreyi veya zaman içinde uygulamanın bellek kullanımını ölçirler. Profil oluşturma API 'SI, kod kapsamı yardımcı programları ve hatta gelişmiş hata ayıklama yardımları gibi daha geniş bir tanılama araçları sınıfını hedefler. Bu kullanımlar doğası gereği tüm tanılardır. Profil oluşturma API 'SI yalnızca ölçülere sahip olmakla kalmaz, ayrıca bir uygulamanın yürütülmesini de izler. Bu nedenle, profil oluşturma API 'SI asla uygulamanın kendisi tarafından kullanılmamalıdır ve uygulamanın yürütülmesi profil oluşturucunun, (veya tarafından etkilenmemelidir) bağlı olmamalıdır.
+Geleneksel profil oluşturma araçları, uygulamanın yürütülmesini ölçmeye odaklanır. Diğer bir deyişle, her işlevde harcanan zamanı veya uygulamanın bellek kullanımını zaman içinde ölçerler. Profil oluşturma API' si, kod kapsama yardımcı programları ve hatta gelişmiş hata ayıklama yardımcıları gibi daha geniş bir tanı araçları sınıfını hedefler. Bu kullanımların hepsi doğada tanısaldır. Profil oluşturma API'si yalnızca bir uygulamanın yürütülmesini de ölçer. Bu nedenle, profil oluşturma API'si hiçbir zaman uygulamanın kendisi tarafından kullanılmamalıdır ve uygulamanın yürütülmesi profil oluşturucuya bağlı olmamalıdır (veya bundan etkilenmemelidir).
 
-CLR uygulamasının profilini oluşturmak, profil oluşturma genel olarak derlenmiş makine kodundan daha fazla destek gerektirir. Bunun nedeni, CLR 'nin uygulama etki alanları, çöp toplama, yönetilen özel durum işleme, tam zamanında (JıT) kod derlemesi (Microsoft ara dili veya MSIL, kod yerel makine koduna dönüştürme) ve benzer şekilde kavram sağlaması özelliklerinde. Geleneksel profil oluşturma mekanizmaları, bu özelliklerle ilgili yararlı bilgileri tanımlayamıyor veya sağlamıyor. Profil oluşturma API 'SI bu eksik bilgileri, CLR ve profili oluşturulmuş uygulamanın performansı üzerinde en az etkiyle verimli bir şekilde sağlar.
+CLR uygulamasının profilini çıkarmak, geleneksel olarak derlenen makine kodunu profillemekten daha fazla destek gerektirir. Bunun nedeni, CLR'nin uygulama etki alanları, çöp toplama, yönetilen özel durum işleme, kodun tam zamanında (JIT) derlemesi (Microsoft ara dilini veya MSIL kodu yerel makine koduna dönüştürme) ve benzeri özellikler gibi kavramları tanıtmasıdır. Geleneksel profil oluşturma mekanizmaları bu özellikleri tanımlayamaz veya bu özellikler hakkında yararlı bilgiler sağlayamaz. Profil oluşturma API'si, CLR'nin ve profilli uygulamanın performansı üzerinde en az etkiye sahip, bu eksik bilgileri verimli bir şekilde sağlar.
 
-Çalışma zamanında JıT derlemesi, profil oluşturma için iyi fırsatlar sağlar. Profil oluşturma API 'SI, bir profil oluşturucunun JıT derlenmesinden önce bir yordam için bellek içi MSIL kod akışını değiştirmesini sağlar. Bu şekilde, Profil Oluşturucu daha derin araştırma gerektiren belirli yordamlara dinamik olarak izleme kodu ekleyebilir. Bu yaklaşım geleneksel senaryolarda mümkün olsa da, profil oluşturma API 'SI kullanılarak CLR için uygulanması çok daha kolaydır.
+Çalışma zamanında JIT derleme profil oluşturma için iyi fırsatlar sağlar. Profil oluşturma API'si, bir profil oluşturucunun JIT derlenmeden önce bir yordam için bellek teki MSIL kod akışını değiştirmesini sağlar. Bu şekilde, profil oluşturucu daha derin bir araştırma gerektiren belirli yordamlara dinamik olarak enstrümantasyon kodu ekleyebilir. Bu yaklaşım geleneksel senaryolarda mümkün olsa da, profil oluşturma API'sini kullanarak CLR için uygulanması çok daha kolaydır.
 
-## <a name="the-profiling-api"></a>Profil oluşturma API 'SI
+## <a name="the-profiling-api"></a>Profil Oluşturma API'si
 
-Genellikle, profil oluşturma API 'SI, yönetilen bir uygulamanın yürütülmesini izleyen bir program olan *kod profil oluşturucu*yazmak için kullanılır.
+Genellikle, profil oluşturma API yönetilen bir uygulamanın yürütülmesini izleyen bir program dır bir *kod profil oluşturucu*yazmak için kullanılır.
 
-Profil oluşturma API 'si, profili oluşturulan uygulamayla aynı işleme yüklenen bir profil oluşturucu DLL tarafından kullanılır. Profil oluşturucu DLL, .NET Framework sürüm 1,0 ve 1,1 ' de bir[geri çağırma arabirimi (](icorprofilercallback-interface.md) [ICorProfilerCallback2](icorprofilercallback2-interface.md) sürüm 2,0 ve üzeri) uygular. CLR, profili oluşturulan işlemdeki olayların profil oluşturucuyu bilgilendirmek için bu arabirimdeki yöntemleri çağırır. Profil Oluşturucu, profili oluşturulmuş uygulamanın durumu hakkında bilgi almak için [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabirimlerindeki yöntemleri kullanarak çalışma zamanına geri çağırabilir.
+Profil oluşturma API profili olan uygulama ile aynı işleme yüklenir bir profil dll tarafından kullanılır. Profil oluşturucu DLL bir geri arama arabirimi uygular[(ICorProfilerCallback.NET](icorprofilercallback-interface.md) Framework sürüm 1.0 ve 1.1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) sürüm 2.0 ve sonrası). CLR, profil işlemindeki olayların profiloluşturucuya bildirilmesi için bu arabirimdeki yöntemleri çağırır. Profil oluşturucu, profilli uygulamanın durumu hakkında bilgi edinmek için [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arayüzlerinde kullanılan yöntemleri kullanarak çalışma süresine geri çağrıyapabilir.
 
 > [!NOTE]
-> Profil Oluşturucu çözümünün yalnızca veri toplama bölümü, profili oluşturulmuş uygulamayla aynı işlemde çalışmalıdır. Tüm Kullanıcı arabirimi ve veri analizi ayrı bir işlemde gerçekleştirilmelidir.
+> Yalnızca profil oluşturucu çözümünün veri toplama bölümü profilli uygulamayla aynı işlemde çalışıyor olmalıdır. Tüm kullanıcı arabirimi ve veri analizi ayrı bir işlemle yapılmalıdır.
 
-Aşağıdaki çizimde profil oluşturucu DLL 'nin profili oluşturulan uygulamayla ve CLR ile nasıl etkileşimde bulunduğu gösterilmektedir.
+Aşağıdaki resimde profil oluşturucu DLL'nin profil yapılan uygulama ve CLR ile nasıl etkileşimde bulunduğu gösterilmektedir.
 
 ![Profil oluşturma mimarisini gösteren ekran görüntüsü.](./media/profiling-overview/profiling-architecture.png)
 
-### <a name="the-notification-interfaces"></a>Bildirim arabirimleri
+### <a name="the-notification-interfaces"></a>Bildirim Arayüzleri
 
-[ICorProfilerCallback](icorprofilercallback-interface.md) ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) , bildirim arabirimleri olarak düşünülebilir. Bu arabirimler [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)ve [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)gibi yöntemlerden oluşur. CLR bir sınıfı yüklediğinde veya kaldırdığında, bir işlevi derlediğinde ve bu durumda, profil oluşturucunun `ICorProfilerCallback` veya `ICorProfilerCallback2` arabiriminde karşılık gelen yöntemi çağırır.
+[ICorProfilerCallback](icorprofilercallback-interface.md) ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) bildirim arabirimleri olarak kabul edilebilir. Bu arabirimler [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)ve [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)gibi yöntemlerden oluşur. CLR bir sınıfı her yüklese veya boşaltsa, bir işlev derlesin ve `ICorProfilerCallback` saire, profiloluşturcunun veya `ICorProfilerCallback2` arabirimindeki ilgili yöntemi çağırır.
 
-Örneğin, bir profil oluşturucu iki bildirim işlevi aracılığıyla kod performansını ölçebilir: [FunctionEnter2](functionenter2-function.md) ve [FunctionLeave2](functionleave2-function.md). Her bildirime yalnızca zaman damgası oluşturur, sonuçları birikir ve uygulamanın yürütülmesi sırasında en fazla CPU veya duvar saati zamanını hangi işlevlerin tükettiğini belirten bir liste verir.
+Örneğin, bir profil oluşturucu kod performansını iki bildirim işlevi yle ölçebilir: [FunctionEnter2](functionenter2-function.md) ve [FunctionLeave2](functionleave2-function.md). Her bildirimi yalnızca zaman damgaları, sonuçları birikir ve uygulamanın yürütülmesi sırasında hangi işlevlerin en çok CPU veya duvar saati süresini tükettiğini gösteren bir liste çıkarır.
 
-### <a name="the-information-retrieval-interfaces"></a>Bilgi alma arabirimleri
+### <a name="the-information-retrieval-interfaces"></a>Bilgi Alma Arayüzleri
 
-Profil oluşturma ile ilgili diğer ana arabirimler [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2](icorprofilerinfo2-interface.md). Profil Oluşturucu, analizine yardımcı olmak üzere daha fazla bilgi edinmek için bu arabirimleri gerektiği şekilde çağırır. Örneğin, CLR [FunctionEnter2](functionenter2-function.md) işlevini her çağırdığında, bir işlev tanımlayıcısı sağlar. Profil Oluşturucu, işlevin üst sınıfını, adını ve benzerlerini saptamak için [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) metodunu çağırarak, bu işlev hakkında daha fazla bilgi alabilir.
+Profil leme ile ilgili diğer ana arayüzler [ICorProfilerInfo](icorprofilerinfo-interface.md) ve [ICorProfilerInfo2'dir.](icorprofilerinfo2-interface.md) Profil oluşturucu, çözümlemesi için daha fazla bilgi elde etmek için bu arabirimleri gerektiği gibi çağırır. Örneğin, CLR [FunctionEnter2](functionenter2-function.md) işlevini aradığında, bir işlev tanımlayıcısı sağlar. Profil oluşturucu, işlevin üst sınıfını, adını ve benzeri bilgileri keşfetmek için [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yöntemini arayarak bu işlev hakkında daha fazla bilgi edinebilir.
 
 ## <a name="supported-features"></a>Desteklenen Özellikler
 
-Profil oluşturma API 'SI, ortak dil çalışma zamanında oluşan çeşitli olaylar ve eylemler hakkında bilgi sağlar. Bu bilgileri, işlemlerin iç işleyişini izlemek ve .NET Framework uygulamanızın performansını analiz etmek için kullanabilirsiniz.
+Profil oluşturma API'si, ortak dil çalışma zamanında gerçekleşen çeşitli olaylar ve eylemler hakkında bilgi sağlar. Bu bilgileri, süreçlerin iç işleyişini izlemek ve .NET Framework uygulamanızın performansını analiz etmek için kullanabilirsiniz.
 
-Profil oluşturma API 'SI, CLR 'de oluşan aşağıdaki eylemler ve olaylar hakkında bilgi alır:
+Profil oluşturma API' si, CLR' de meydana gelen aşağıdaki eylemler ve olaylar hakkında bilgi alır:
 
-- CLR başlatma ve başlatma olayları.
+- CLR başlatma ve kapatma olayları.
 
-- Uygulama etki alanı oluşturma ve kapanıyor olayları.
+- Uygulama etki alanı oluşturma ve kapatma olayları.
 
-- Derleme yükleme ve kaldırma olayları.
+- Montaj yükleme ve boşaltma olayları.
 
-- Modül yükleme ve kaldırma olayları.
+- Modül yükleme ve boşaltma olayları.
 
-- COM vtable oluşturma ve yok etme olayları.
+- COM vtable oluşturma ve imha olayları.
 
-- Tam zamanında (JıT) derleme ve kod temelli olaylar.
+- Tam zamanında (JIT) derleme ve kod pitching olaylar.
 
-- Sınıf yükleme ve kaldırma olayları.
+- Sınıf yükleme ve boşaltma olayları.
 
-- İş parçacığı oluşturma ve yok etme olayları.
+- İş parçacığı oluşturma ve imha olayları.
 
-- İşlev girdisi ve çıkış olayları.
+- İşlev giriş ve çıkış olayları.
 
-- Özel durumlar.
+- Özel durum.
 
 - Yönetilen ve yönetilmeyen kod yürütme arasındaki geçişler.
 
-- Farklı çalışma zamanı bağlamları arasındaki geçişler.
+- Farklı çalışma zamanı bağlamları arasında geçişler.
 
-- Çalışma zamanı getirilmesi hakkında bilgi.
+- Çalışma zamanı askıya almalar hakkında bilgi.
 
 - Çalışma zamanı bellek yığını ve çöp toplama etkinliği hakkında bilgi.
 
-Profil oluşturma API 'SI (yönetilen olmayan) COM uyumlu dillerden çağrılabilir.
+Profil oluşturma API'si, COM uyumlu herhangi bir dilden çağrılabilir.
 
-API, CPU ve bellek tüketimine göre etkilidir. Profil oluşturma, profili oluşturulmuş uygulamada yanıltıcı sonuçlara neden olacak kadar önemli değişiklikler içermez.
+API, CPU ve bellek tüketimi açısından etkilidir. Profil oluşturma, yanıltıcı sonuçlara neden olacak kadar önemli olan profilli uygulamada değişiklikler içermez.
 
-Profil oluşturma API 'SI hem örnekleme hem de örnekleme olmayan profil oluşturucular için faydalıdır. Bir *örnekleme profil oluşturucu* , profili düzenli saat işaretleri, yani 5 milisaniyelik olarak inceler. *Örneklemesi olmayan bir profil oluşturucu* , olaya neden olan iş parçacığı ile eşzamanlı olarak bir olay hakkında bilgilendirilir.
+Profil oluşturma API'si hem örnekleme hem de örnekleme yapmayan profilciler için yararlıdır. Örnekleme *profiloluşturucusu* profili normal saat işaretlerinde inceler, örneğin, 5 milisaniye arayla. Örnekleme olmayan bir *profil oluşturucu,* olaya neden olan iş parçacığıyla eşzamanlı olarak bir olay hakkında bilgilendirilir.
 
 ### <a name="unsupported-functionality"></a>Desteklenmeyen İşlev
 
-Profil oluşturma API 'SI aşağıdaki işlevleri desteklemez:
+Profil oluşturma API'si aşağıdaki işlevselliği desteklemez:
 
-- Geleneksel Win32 yöntemleri kullanılarak profili oluşturulmuş olması gereken yönetilmeyen kod. Ancak, CLR Profiler yönetilen ve yönetilmeyen kod arasındaki sınırları belirleyecek geçiş olaylarını içerir.
+- Geleneksel Win32 yöntemleri kullanılarak profillenilmesi gereken yönetilmeyen kod. Ancak, CLR profil oluşturucu, yönetilen ve yönetilmeyen kod arasındaki sınırları belirlemek için geçiş olayları içerir.
 
-- En boy odaklı programlama gibi amaçlar için kendi kodlarını değiştiren uygulamaları kendi kendine değiştirme.
+- Kendi kodlarını boy odaklı programlama gibi amaçlarla değiştiren kendi kendini değiştiren uygulamalar.
 
-- Sınır denetlemesi, profil oluşturma API 'SI bu bilgileri sağlamadığı için. CLR, tüm yönetilen kodların sınır denetlemesi için iç destek sağlar.
+- Profil oluşturma API'si bu bilgileri sağlamadığından, sınır denetimi. CLR, yönetilen tüm kodların sınır denetimi için içsel destek sağlar.
 
-- Aşağıdaki nedenlerden dolayı desteklenmeyen uzak profil oluşturma:
+- Aşağıdaki nedenlerle desteklenmeyen uzaktan profil oluşturma:
 
-  - Uzaktan profil oluşturma, yürütme süresini uzatır. Profil oluşturma arabirimlerini kullanırken, profil oluşturma sonuçlarının etkilenmemesi etkilenmemesi için yürütme süresini en aza indirmiş olmanız gerekir. Bu özellikle, yürütme performansı izlendiğinde geçerlidir. Ancak, profil oluşturma arabirimleri bellek kullanımını izlemek veya yığın çerçeveleri, nesneleri vb. hakkında çalışma zamanı bilgileri elde etmek için kullanıldığında uzak profil oluşturma bir sınırlama değildir.
+  - Uzaktan profil oluşturma yürütme süresini uzalar. Profil oluşturma arabirimlerini kullandığınızda, profil oluşturma sonuçlarının gereksiz yere etkilenmemesi için yürütme süresini en aza indirmeniz gerekir. Yürütme performansı izlenirken bu özellikle doğrudur. Ancak, profil oluşturma arabirimleri bellek kullanımını izlemek veya yığın çerçeveleri, nesneler ve benzeri hakkında çalışma zamanı bilgileri elde etmek için kullanıldığında uzaktan profil oluşturma bir sınırlama değildir.
 
-  - CLR kodu profil oluşturucu, profili oluşturulan uygulamanın çalıştığı yerel bilgisayardaki çalışma zamanına sahip bir veya daha fazla geri çağırma arabirimi kaydetmelidir. Bu, uzak kod profil Oluşturucu oluşturma özelliğini kısıtlar.
+  - CLR kod profillayıcısı, profilli uygulamanın çalıştırıldığı yerel bilgisayarda çalışma süresiyle birlikte bir veya daha fazla geri arama arabirimi kaydetmelidir. Bu, uzak kod profiloluşturabilme yeteneğini sınırlar.
 
-- Yüksek kullanılabilirlik gereksinimlerine sahip üretim ortamlarında profil oluşturma. Profil oluşturma API 'SI, geliştirme zamanı tanılamayı destekleyecek şekilde oluşturulmuştur. Üretim ortamlarını desteklemek için gereken kapsamlı testi henüz yapılmamıştır.
+## <a name="notification-threads"></a>Bildirim Konuları
 
-## <a name="notification-threads"></a>Bildirim Iş parçacıkları
+Çoğu durumda, bir olay oluşturan iş parçacığı da bildirimleri yürütür. Bu tür bildirimlerin (örneğin, [FunctionEnter](functionenter-function.md) ve [FunctionLeave)](functionleave-function.md) `ThreadID`açık bir şekilde sağlanmasıgerekmez. Ayrıca, profil oluşturucu, etkilenen iş parçacığına dayalı `ThreadID` olarak çözümleme bloklarını küresel depolamada dizine ekinyapmak yerine çözüm leme bloklarını depolamak ve güncelleştirmek için iş parçacığı yerel depolamasını kullanmaya karar verebilir.
 
-Çoğu durumda, bir olayı oluşturan iş parçacığı de bildirimleri yürütür. Bu tür bildirimlerin (örneğin, [FunctionEnter](functionenter-function.md) ve [FunctionLeave](functionleave-function.md)) açık `ThreadID`sağlaması gerekmez. Ayrıca, profil oluşturucu, etkilenen iş parçacığının `ThreadID` bağlı olarak genel depolamada analiz bloklarını dizinlemek yerine çözümleme bloklarını depolamak ve güncelleştirmek için iş parçacığı yerel depolama 'yı kullanmaya karar verebilir.
-
-Bu geri çağırmaların serileştirilmediğini unutmayın. Kullanıcılar, iş parçacığı açısından güvenli veri yapıları oluşturarak ve birden çok iş parçacığından paralel erişimi engellemek için gerektiğinde profil oluşturucu kodunu kilitleyerek kendi kodlarını korumalıdır. Bu nedenle, bazı durumlarda olağan dışı bir geri çağırma sırası alabilirsiniz. Örneğin, yönetilen bir uygulamanın özdeş kodu yürüten iki iş parçacığını sağladığını varsayalım. Bu durumda, bir iş parçacığından bazı işlevleri için [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) olayını ve [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) geri aramasını almadan önce diğer iş parçacığından bir `FunctionEnter` geri aramasını almak mümkündür. Bu durumda, Kullanıcı henüz derlenmiş tam zamanında (JıT) olmayan bir işlev için `FunctionEnter` geri araması alacaktır.
+Bu geri aramaların seri hale getirilemediğini unutmayın. Kullanıcılar, iş parçacığı namına veri yapıları oluşturarak ve birden çok iş parçacığından paralel erişimi önlemek için gerektiğinde profil oluşturucu kodunu kilitleyerek kodlarını korumalıdır. Bu nedenle, bazı durumlarda alışılmadık bir geri arama dizisi alabilirsiniz. Örneğin, yönetilen bir uygulamanın aynı kodu çalıştıran iki iş parçacığı yumurtladığını varsayalım. Bu durumda, [iCorProfilerCallback almak mümkündür::JITCompilationBir](icorprofilercallback-jitcompilationstarted-method.md) iş parçacığı bazı işlev `FunctionEnter` ve ICorProfilerCallback almadan önce diğer iş parçacığı bir geri arama için olay [başladı::JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) geri arama. Bu durumda, kullanıcı henüz `FunctionEnter` tam olarak tam zamanında (JIT) derlenmiş olmayan bir işlev için bir geri arama alır.
 
 ## <a name="security"></a>Güvenlik
 
-Profil oluşturucu DLL, ortak dil çalışma zamanı yürütme altyapısının bir parçası olarak çalışan yönetilmeyen bir DLL 'dir. Sonuç olarak, profil oluşturucu DLL 'deki kod, yönetilen kod erişim güvenliği kısıtlamalarına tabi değildir. Profil oluşturucu DLL 'deki tek sınırlamalar, profili oluşturulmuş uygulamayı çalıştıran kullanıcının işletim sistemi tarafından uygulanan olanlardır.
+Profil oluşturucu DLL, ortak dil çalışma zamanı yürütme altyapısının bir parçası olarak çalışan yönetilmeyen bir DLL'dir. Sonuç olarak, profil oluşturucu DLL'deki kod yönetilen kod erişim güvenliği kısıtlamalarına tabi değildir. Profil oluşturucu DLL üzerindeki tek sınırlamalar, işletim sistemi tarafından profilli uygulamayı çalıştıran kullanıcıya uygulanan sınırlamalardır.
 
-Profil Oluşturucu yazarları güvenlikle ilgili sorunlardan kaçınmak için uygun önlemleri almalıdır. Örneğin, yükleme sırasında, kötü niyetli bir kullanıcının değiştirememesi için bir erişim denetim listesine (ACL) bir profil oluşturucu DLL 'SI eklenmelidir.
+Profiler yazarları güvenlikle ilgili sorunları önlemek için uygun önlemleri almalıdır. Örneğin, yükleme sırasında, kötü amaçlı bir kullanıcının değiştirememesi için bir profil oluşturucu DLL'nin bir erişim denetim listesine (ACL) eklenmesi gerekir.
 
-## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>Yönetilen ve yönetilmeyen kodu bir kod Profilcisi ile birleştirme
+## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>Yönetilen ve Yönetilmeyen Kodu Kod Profilleyicisinde Birleştirme
 
-Yanlış yazılmış bir profil oluşturucu kendi kendine döngüsel başvurulara neden olabilir ve bu da öngörülemeyen davranışa yol açabilir.
+Yanlış yazılmış bir profil oluşturucu, kendisine dairesel başvurular alabildiği gibi öngörülemeyen davranışlara neden olabilir.
 
-CLR profil oluşturma API 'SI gözden geçirmesi, COM birlikte çalışma veya dolaylı çağrılar aracılığıyla birbirlerine çağrı yapan yönetilen ve yönetilmeyen bileşenleri içeren bir profil oluşturucu yazabileceğiniz izlenime yol açabilir.
+CLR profil oluşturma API'sinin gözden geçirilmesi, COM interop veya dolaylı aramalar aracılığıyla birbirini çağıran yönetilen ve yönetilmeyen bileşenler içeren bir profil oluşturabileceğiniz izlenimini oluşturabilir.
 
-Bu bir tasarım perspektifinden mümkün olsa da, profil oluşturma API 'SI yönetilen bileşenleri desteklemez. CLR profiler tamamen yönetilmeyen olmalıdır. Yönetilen ve yönetilmeyen kodu bir CLR Profiler 'da birleştirme girişimleri, erişim ihlallerine, program hatasına veya kilitlenmelere neden olabilir. Profil oluşturucunun yönetilen bileşenleri, olayları yönetilmeyen bileşenlerine geri tetikleyecektir. Bu, daha sonra yönetilen bileşenleri yeniden çağırıp döngüsel başvurular oluşmasına neden olur.
+Bu, tasarım açısından mümkün olsa da, profil oluşturma API'si yönetilen bileşenleri desteklemez. Bir CLR profiloluşturucu tamamen yönetilmemiş olmalıdır. Yönetilen ve yönetilmeyen kodu clr profiloluşturcayında birleştirme girişimleri erişim ihlallerine, program hatasına veya kilitlenmelere neden olabilir. Profil oluşturucunun yönetilen bileşenleri olayları yönetilmeyen bileşenlerine geri döndürecek ve bu da yönetilen bileşenleri yeniden çağırarak dairesel başvurulara yol açacaktır.
 
-Bir CLR Profiler 'ın yönetilen kodu güvenli bir şekilde çağırabildiği tek konum bir yöntemin Microsoft ara dili (MSIL) gövdesinden oluşur. MSIL gövdesini değiştirmek için önerilen yöntem, [ICorProfilerCallback4](icorprofilercallback4-interface.md) arabirimindeki JIT yeniden derleme yöntemlerini kullanmaktır.
+Bir CLR profiloluşturucunun yönetilen kodu güvenli bir şekilde arayabildiği tek konum, bir yöntemin Microsoft ara dili (MSIL) gövdesindedir. MSIL gövdesini değiştirmek için önerilen [uygulama, ICorProfilerCallback4](icorprofilercallback4-interface.md) arabirimindeki JIT yeniden derleme yöntemlerini kullanmaktır.
 
-Ayrıca, MSIL 'yi değiştirmek için eski izleme yöntemlerini kullanmak da mümkündür. Bir işlevin tam zamanında (JıT) derlenmesi tamamlanmadan önce, profil oluşturucu bir yöntemin MSIL gövdesine yönetilen çağrılar ekleyebilir ve ardından bunu JıT-derle (bkz. [ICorProfilerInfo:: GetILFunctionBody](icorprofilerinfo-getilfunctionbody-method.md) yöntemi). Bu teknik, yönetilen kodun seçmeli araçları için veya JıT hakkında istatistik ve performans verileri toplamak için başarılı bir şekilde kullanılabilir.
+MSIL'i değiştirmek için eski enstrümantasyon yöntemlerini kullanmak da mümkündür. Bir işlevin tam zamanında (JIT) derlemesi tamamlanmadan önce, profil oluşturucu bir yöntemin MSIL gövdesine yönetilen çağrıları ekleyebilir ve ardından JIT-derleme yapabilir [(Bkz. ICorProfilerInfo::GetILFunctionBody](icorprofilerinfo-getilfunctionbody-method.md) yöntemi). Bu teknik, yönetilen kodun seçici araçları için veya JIT hakkında istatistik ve performans verileri toplamak için başarıyla kullanılabilir.
 
-Alternatif olarak, bir kod Profilleyicisi, yönetilmeyen koda çağıran her yönetilen işlevin MSIL gövdesine yerel kancalar ekleyebilir. Bu teknik, izleme ve kapsam için kullanılabilir. Örneğin, bir kod Profilcisi, bloğun yürütüldüğünü sağlamak için her MSIL bloğundan sonra izleme kancaları ekleyebilir. Bir yöntemin MSIL gövdesinin değiştirilmesi çok önemli bir işlemdir ve dikkate alınması gereken birçok etken vardır.
+Alternatif olarak, bir kod profilleyicisi, yönetilmeyen koda çağıran her yönetilen işlevin MSIL gövdesine yerel kancalar ekleyebilir. Bu teknik enstrümantasyon ve kapsama için kullanılabilir. Örneğin, bir kod profilleyicisi, bloğun yürütüldünlü olduğundan emin olmak için her MSIL bloğundan sonra enstrümantasyon kancaları ekleyebilir. Bir yöntemin MSIL gövdesinin modifikasyonu çok hassas bir işlemdir ve dikkate alınması gereken birçok faktör vardır.
 
-## <a name="profiling-unmanaged-code"></a>Yönetilmeyen kod profili oluşturma
+## <a name="profiling-unmanaged-code"></a>Yönetilmeyen Kodu Profil Oluşturma
 
-Ortak dil çalışma zamanı (CLR) profil oluşturma API 'SI, yönetilmeyen kod profili oluşturma için en düşük desteği sağlar Aşağıdaki işlevsellik verilmiştir:
+Ortak dil çalışma zamanı (CLR) profil oluşturma API, yönetilmeyen kodu profil oluşturma için en az destek sağlar. Aşağıdaki işlevsellik sağlanır:
 
-- Yığın zincirlerinin numaralandırılması. Bu özellik, yönetilen kod ve yönetilmeyen kod arasındaki sınırı belirlemede kod Profilcisi sağlar.
+- Yığın zincirlerinin numaralandırması. Bu özellik, yönetilen kod ve yönetilmeyen kod arasındaki sınırı belirlemek için bir kod profiloluşturucu sağlar.
 
-- Yığın zincirinin yönetilen koda mı yoksa yerel koda mı karşılık geldiğini belirleme.
+- Yığın zincirinin yönetilen koda mı yoksa yerel koda mı karşılık olduğunu belirleme.
 
-1,0 ve 1,1 .NET Framework sürümlerinde, bu yöntemler CLR hata ayıklama API 'sinin işlem içi alt kümesi aracılığıyla kullanılabilir. CorDebug. IDL dosyasında tanımlanmıştır.
+.NET Framework sürümleri 1.0 ve 1.1'de, bu yöntemler CLR hata ayıklama API'sinin işlem içi alt kümesi aracılığıyla kullanılabilir. Bunlar CorDebug.idl dosyasında tanımlanır.
 
-.NET Framework 2,0 ve sonrasında, bu işlevsellik için [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemini kullanabilirsiniz.
+.NET Framework 2.0 ve sonraki durumlarda, bu işlevsellik için [ICorProfilerInfo2::DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemini kullanabilirsiniz.
 
-## <a name="using-com"></a>COM kullanarak
+## <a name="using-com"></a>COM'u kullanma
 
-Profil oluşturma arabirimleri COM arabirimleri olarak tanımlansa da, ortak dil çalışma zamanı (CLR) bu arabirimleri kullanmak için gerçekte COM 'u başlatılmaz. Bunun nedeni, yönetilen uygulama, istenen iş parçacığı modelini belirtmek için bir şansına sahip olmadan önce [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) işlevini kullanarak iş parçacığı modelini ayarlamayı kullanmaktan kaçınmaktır. Benzer şekilde, profil oluşturucunun kendisi de `CoInitialize`çağırmamalıdır, çünkü profili oluşturulan uygulamayla uyumsuz bir iş parçacığı modeli seçip uygulamanın başarısız olmasına neden olabilir.
+Profil oluşturma arabirimleri COM arabirimleri olarak tanımlansa da, ortak dil çalışma süresi (CLR) aslında bu arabirimleri kullanmak için COM'u başlatmaz. Bunun nedeni, yönetilen uygulama nın istenen iş parçacığı modelini belirtme şansı elde etmeden önce [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) işlevini kullanarak iş parçacığı modelini ayarlamak zorunda kalmamaktır. Benzer şekilde, profil oluşturucunun `CoInitialize`kendisi aramamalıdır, çünkü profillegösterilen uygulamayla uyumsuz bir iş parçacığı modeli seçebilir ve uygulamanın başarısız olmasına neden olabilir.
 
-## <a name="call-stacks"></a>Çağrı yığınları
+## <a name="call-stacks"></a>Çağrı Yığınları
 
-Profil oluşturma API 'SI, çağrı yığınlarının alınması için iki yol sunar: çağrı yığınlarının seyrek toplanmaya olanak tanıyan bir yığın anlık görüntüsü yöntemi ve her anında çağrı yığınını izleyen bir gölge yığın yöntemi.
+Profil oluşturma API'si çağrı yığınları elde etmek için iki yol sağlar: çağrı yığınlarının seyrek bir şekilde toplanmasını sağlayan bir yığın anlık görüntü yöntemi ve her anda çağrı yığınını izleyen bir gölge yığını yöntemi.
 
-### <a name="stack-snapshot"></a>Yığın anlık görüntüsü
+### <a name="stack-snapshot"></a>Anlık Görüntü Yığını
 
-Yığın anlık görüntüsü, zaman içinde anlık bir iş parçacığı yığınının bir izlemesinde. Profil oluşturma API 'SI yığında yönetilen işlevlerin izlenmesini destekler, ancak yönetilmeyen işlevlerin izlenmesini profil oluşturucunun kendi yığın Denetçisi ' ne bırakır.
+Yığın anlık görüntüsü, bir iş parçacığı yığınının bir anda zaman içinde izlenmesidir. Profil oluşturma API yığını üzerinde yönetilen işlevlerin izlenmesini destekler, ancak profillenmemiş işlevlerin izlenmesini profiloluşturcunun kendi yığın yürütücüse bırakır.
 
-Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bu belge kümesindeki [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemine ve [profiler Stack .NET Framework 2,0: temelleri ve ötesinde](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))inceleyin.
+Yönetilen yığınları yürümek için profiloluşturucu program hakkında daha fazla bilgi için, bu dokümantasyon kümesinde [ICorProfilerInfo2::DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemi ve [Profiler Stack Yürüyüş .NET Framework 2.0: Temelleri ve Ötesi](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
-### <a name="shadow-stack"></a>Gölge yığını
+### <a name="shadow-stack"></a>Gölge Yığını
 
-Snapshot yönteminin çok sık kullanılması, hızlı bir şekilde performans sorunu oluşturabilir. Yığın izlemelerini sık sık almak istiyorsanız, profil oluşturucunun bunun yerine [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) özel durum geri çağırmaları kullanarak bir gölge yığını oluşturması gerekir. Gölge yığını her zaman geçerli olur ve yığın anlık görüntüsü gerektiğinde hızlı bir şekilde depolamaya kopyalanabilir.
+Anlık görüntü yöntemini çok sık kullanmak hızlı bir performans sorunu oluşturabilir. Yığın izlerini sık sık almak istiyorsanız, profilciniz bunun yerine [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)ve [ICorProfilerCallback2](icorprofilercallback2-interface.md) özel durum geri aramaları kullanarak bir gölge yığını oluşturmalıdır. Gölge yığını her zaman geçerlidir ve yığın anlık görüntüsü gerektiğinde hızla depolama alanına kopyalanabilir.
 
-Bir gölge yığın, işlev bağımsız değişkenlerini, dönüş değerlerini ve genel örneklemeler hakkında bilgileri alabilir. Bu bilgiler yalnızca gölge yığın aracılığıyla kullanılabilir ve denetim bir işleve geldiğinde elde edilebilir. Ancak, bu bilgiler işlevin çalıştırılması sırasında daha sonra kullanılamayabilir.
+Gölge yığını işlev bağımsız değişkenleri, döndürme değerleri ve genel anlık bilgiler edinebilir. Bu bilgiler yalnızca gölge yığını aracılığıyla kullanılabilir ve denetim bir işleve verildiğinde elde edilebilir. Ancak, bu bilgiler daha sonra işlevin çalıştırılması sırasında kullanılamayabilir.
 
-## <a name="callbacks-and-stack-depth"></a>Geri çağrılar ve yığın derinliği
+## <a name="callbacks-and-stack-depth"></a>Geri Aramalar ve Yığın Derinliği
 
-Profiler geri çağırmaları çok yığın kısıtlı koşullarda verilebilir ve bir profil oluşturucu geri aramasında yığın taşması anında işlem çıkışı oluşmasına neden olur. Bir profil oluşturucunun geri çağırmaları yanıtlamak için olabildiğince az yığın olarak kullanılması gerekir. Profil oluşturucunun yığın taşmasına karşı dayanıklı işlemlere karşı kullanılması amaçlanıyorsa, profil oluşturucunun kendisi de yığın taşmasını tetiklememelidir.
+Profiler geri aramaları çok yığın kısıtlı durumlarda verilebilir ve profilci geri aramasında yığın taşma hemen bir işlem çıkışına yol açar. Bir profil oluşturucu, geri aramalara yanıt olarak mümkün olduğunca az yığın kullandığınızdan emin olmalıdır. Profil oluşturucu, yığın taşmasına karşı sağlam olan işlemlere karşı kullanılmak üzere tasarlanmıştırsa, profilcinin kendisi de yığın taşmasını tetiklemekten kaçınmalıdır.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Profil Oluşturma Ortamını Ayarlama](setting-up-a-profiling-environment.md)|Profil oluşturucuyu başlatma, olay bildirimlerini ayarlama ve bir Windows hizmeti profili oluşturma hakkında bilgiler sağlar.|
-|[Profil Oluşturma Arabirimleri](profiling-interfaces.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen arabirimleri açıklar.|
-|[Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen genel statik işlevleri açıklar.|
-|[Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen numaralandırmaları açıklar.|
-|[Profil Oluşturma Yapıları](profiling-structures.md)|Profil oluşturma API 'sinin kullandığı yönetilmeyen yapıları açıklar.|
+|[Profil Oluşturma Ortamını Ayarlama](setting-up-a-profiling-environment.md)|Profil oluşturucunun nasıl başharfe atılabildiğini, olay bildirimlerini nasıl ayarladığını ve bir Windows Hizmetinin profilini nasıl oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup oluşturup|
+|[Profil Oluşturma Arabirimleri](profiling-interfaces.md)|Profil oluşturma API'sinin kullandığı yönetilmeyen arabirimleri açıklar.|
+|[Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)|Profil oluşturma API'sinin kullandığı yönetilmeyen genel statik işlevleri açıklar.|
+|[Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)|Profil oluşturma API'sinin kullandığı yönetilmeyen sayısallaştırmaları açıklar.|
+|[Profil Oluşturma Yapıları](profiling-structures.md)|Profil oluşturma API'sinin kullandığı yönetilmeyen yapıları açıklar.|

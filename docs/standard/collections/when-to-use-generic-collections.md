@@ -6,15 +6,15 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711213"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588526"
 ---
 # <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
-Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliğinden anında yararlandığınız için genel koleksiyonların kullanılması genellikle önerilir. Genel koleksiyon türleri de genellikle ilgili genel olmayan koleksiyon türlerinden (ve genel olmayan temel toplama türlerinden türetilen türlerden daha iyi) koleksiyon öğeleri değer türleri olduğunda, çünkü genel koleksiyonlarda daha iyi performans gösterir öğeleri kutuya gerek yok.  
+Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliğinden anında yararlandığınız için genel koleksiyonların kullanılması genellikle önerilir. Genel koleksiyon türleri de genellikle ilgili genel olmayan koleksiyon türlerinden (ve genel olmayan temel toplama türlerinden türetilen türlerden daha iyi) koleksiyon öğeleri değer türleri olduğunda, genel öğelerle öğeleri kutulamak gerekmediği için daha iyi performans gösterir.  
   
  .NET Framework 4 veya sonraki leri hedefleyen programlar için, birden <xref:System.Collections.Concurrent> çok iş parçacığı aynı anda koleksiyondan öğe eklendiğinde veya kaldırılıyor olabilirken ad alanında genel koleksiyon sınıflarını kullanmanız gerekir.  
   
@@ -44,7 +44,7 @@ Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zor
 - <xref:System.Collections.Concurrent.ConcurrentBag%601>hızlı ekleme ve sıralanmamış öğelerin kaldırılmasını sağlar.  
   
 ## <a name="linq-to-objects"></a>Nesnelere LINQ  
- LINQ to Objects özelliği, nesne türü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi uyguladığı sürece bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak tanır. LINQ sorguları verilere erişmek için ortak bir desen sağlar; genellikle standart `foreach` döngülere göre daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)konusuna bakın.  
+ LINQ to Objects özelliği, nesne türü <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> arabirimi uyguladığı sürece bellek içi nesnelere erişmek için LINQ sorgularını kullanmanıza olanak tanır. LINQ sorguları verilere erişmek için ortak bir desen sağlar; genellikle standart `foreach` döngülere göre daha kısa ve okunabilir; ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)ve [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)konusuna bakın.  
   
 ## <a name="additional-functionality"></a>Ek İşlevsellik  
  Genel türlerden bazıları, genel olmayan koleksiyon türlerinde bulunmayan işlevselliklere sahiptir. Örneğin, genel <xref:System.Collections.Generic.List%601> olmayan <xref:System.Collections.ArrayList> sınıfa karşılık gelen sınıfın, listeyi arama yöntemlerini belirtmenize olanak <xref:System.Predicate%601> tanıyan temsilci, listenin her öğesinde <xref:System.Action%601> hareket eden yöntemleri temsil eden temsilci ve <xref:System.Converter%602> türler arasındaki dönüşümleri tanımlamanıza olanak tanıyan temsilci gibi genel özneleri kabul eden bir dizi yöntemi vardır.  

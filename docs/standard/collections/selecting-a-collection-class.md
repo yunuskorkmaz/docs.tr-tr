@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621d64183c1cacc14c2d432e4eef43f4d3ba5474
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711356"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588322"
 ---
 # <a name="selecting-a-collection-class"></a>Koleksiyon Sınıfı Seçme
 
@@ -79,11 +79,11 @@ Toplama sınıfınızı dikkatle seçtiğinizden emin olun. Yanlış türü kull
 ## <a name="linq-to-objects-and-plinq"></a>LinQ nesneler ve PLINQ için  
  LINQ to Objects, geliştiricilerin nesne türü uygulandığı sürece bellek nesneleri için LINQ <xref:System.Collections.IEnumerable> sorgularını kullanmasına olanak tanır. <xref:System.Collections.Generic.IEnumerable%601> LINQ sorguları verilere erişmek için ortak bir desen sağlar, genellikle standart `foreach` döngülere göre daha kısa ve okunabilirdir ve filtreleme, sıralama ve gruplandırma özellikleri sağlar. Daha fazla bilgi için [nesnelere LINQ (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) ve [Nesnelere LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)bakın.  
   
- PLINQ, çok çekirdekli bilgisayarların daha verimli kullanımı yoluyla birçok senaryoda daha hızlı sorgu yürütmesi sunabilen Nesnelere LINQ'nin paralel bir şekilde uygulanmasını sağlar. Daha fazla bilgi için [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)bakın.  
+ PLINQ, çok çekirdekli bilgisayarların daha verimli kullanımı yoluyla birçok senaryoda daha hızlı sorgu yürütmesi sunabilen Nesnelere LINQ'nin paralel bir şekilde uygulanmasını sağlar. Daha fazla bilgi için [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [İş Parçacığı Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)
+- [İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)

@@ -2,12 +2,12 @@
 title: dotnet yayımlama komutu
 description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523764"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588275"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -38,7 +38,23 @@ dotnet publish [-h|--help]
 - Uygulamanın beklediği paylaşılan çalışma süresini ve çalışma zamanı için diğer yapılandırma seçeneklerini (örneğin, çöp toplama türü) belirten bir *.runtimeconfig.json* dosyası.
 - NuGet önbelleğinden çıktı klasörüne kopyalanan uygulamabağımlılıkları.
 
-Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtım için hazırdır. Uygulamayı dağıtıma hazırlamak için resmi olarak desteklenen tek yol bu. Projenin belirttiği dağıtım türüne bağlı olarak, barındırma sistemi .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir.
+Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtım için hazırdır. Uygulamayı dağıtıma hazırlamak için resmi olarak desteklenen tek yol bu. Projenin belirttiği dağıtım türüne bağlı olarak, barındırma sistemi .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için [bkz.](../deploying/deploy-with-cli.md)
+
+### <a name="msbuild"></a>MSBuild
+
+Komut, `dotnet publish` hedefi çağıran MSBuild'i `Publish` çağırır. Geçirilen parametreler `dotnet publish` MSBuild'e geçirilir. Ve `-c` `-o` parametreler, sırasıyla MSBuild'in `Configuration` ve `OutputPath` özelliklerinin eşlenir.
+
+Komut, `dotnet publish` özellikleri ayarlama ve `-p` `-l` logger tanımlama gibi MSBuild seçeneklerini kabul eder. Örneğin, biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>`. Yayımlamayla ilgili özellikleri, örneğin bir *.pubxml* dosyasına atıfta bulunarak da ayarlayabilirsiniz:
+
+```dotnetcli
+dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+```
+
+Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+
+- [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Visual Studio ASP.NET Core uygulama dağıtımı için profilleri (.pubxml) yayınlamak](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
@@ -112,7 +128,9 @@ Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine 
 
 - **`--self-contained [true|false]`**
 
-  .NET Core çalışma zamanını uygulamanızla birlikte yayınlar, böylece çalışma süresinin hedef makineye yüklenmesi gerekmez. Varsayılan, `true` çalışma zamanı tanımlayıcısı belirtilmişse. Daha fazla bilgi için [.NET Core uygulama yayımlama](../deploying/index.md) ve [.NET Core CLI ile .NET Core uygulamaları yayımlama](../deploying/deploy-with-cli.md)'ya bakın.
+  .NET Core çalışma zamanını uygulamanızla birlikte yayınlar, böylece çalışma süresinin hedef makineye yüklenmesi gerekmez. Varsayılan `true` değer, çalışma zamanı tanımlayıcısı belirtilmişse ve proje yürütülebilir bir projeyse (kitaplık projesi değil). Daha fazla bilgi için [.NET Core uygulama yayımlama](../deploying/index.md) ve [.NET Core CLI ile .NET Core uygulamaları yayımlama](../deploying/deploy-with-cli.md)'ya bakın.
+
+  Bu seçenek belirtilmeden `true` kullanılırsa veya `false` `true`varsayılan . Bu durumda, çözüm veya proje bağımsız değişkenini hemen sonra `--self-contained`koymayın, çünkü `true` bu `false` konumda bekleniyor.
 
 - **`--no-self-contained`**
 
@@ -182,3 +200,6 @@ Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine 
 - [Çalışma Zamanı Tanımlayıcı (RID) kataloğu](../rid-catalog.md)
 - [macOS Catalina Noterizasyonu ile çalışma](../install/macos-notarization-issues.md)
 - [Yayınlanan bir uygulamanın dizin yapısı](/aspnet/core/hosting/directory-structure)
+- [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference)
+- [Visual Studio ASP.NET Core uygulama dağıtımı için profilleri (.pubxml) yayınlamak](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
