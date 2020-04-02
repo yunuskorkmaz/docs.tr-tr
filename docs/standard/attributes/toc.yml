@@ -1,9 +1,0 @@
-- name: Öznitelikler
-  href: index.md
-  items:
-    - name: Öznitelikleri Uygulama
-      href: applying-attributes.md
-    - name: Özel Öznitelikler Yazma
-      href: writing-custom-attributes.md
-    - name: Özniteliklerde Depolanan Bilgileri Alma
-      href: retrieving-information-stored-in-attributes.md
