@@ -1,17 +1,17 @@
 ---
 title: Temsilciler ve lambda ifadeleri
-description: Temsilcilerin, doğrudan çağrılabilen veya başka bir yönteme geçirilebilen ve çağrılan belirli bir yöntem imzasını belirten bir türü nasıl tanımladığını öğrenin.
+description: Belirli bir yöntem imzasını belirten bir tür tanımlayan temsilcilerin doğrudan nasıl çağrılabileceğini veya başka bir yönteme geçirilip çağrılabileceğini öğrenin.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: a9ca935814d1a7f77ded5f371ccd496c3859c523
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391240"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635936"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -44,10 +44,10 @@ public class Program
 * Satır, `Reverse rev = ReverseString;` ilgili temsilci türünden bir değişkene bir yöntem atayabileceğinizi gösterir.
 * Satır, `Console.WriteLine(rev("a string"));` temsilciyi çağırmak için temsilci türünden bir değişkenin nasıl kullanılacağını gösterir.
 
-Geliştirme işlemini kolaylaştırmak için .NET, programcıların yeniden kullanabileceği ve yeni türler oluşturması gerekmeyen bir dizi temsilci türü içerir. Bunlar `Func<>` `Action<>` ,ve `Predicate<>`,, yeni temsilci türlerini tanımlamaya gerek kalmadan .NET API'leri boyunca çeşitli yerlerde kullanılabilirler. Tabii ki, çoğunlukla kullanılmak üzere olması gerekiyordu yolu ile ilgisi var onların imzaları göreceğiniz gibi üç arasında bazı farklılıklar vardır:
+Geliştirme işlemini kolaylaştırmak için .NET, programcıların yeniden kullanabileceği ve yeni türler oluşturması gerekmeyen bir dizi temsilci türü içerir. Bu `Func<>`türler, `Action<>` `Predicate<>`ve , yeni temsilci türleri tanımlamak zorunda kalmadan kullanılabilir. Üç tür arasında, kullanılmak üzere tasarlanma şekliyle ilgili bazı farklar vardır:
 
 * `Action<>`temsilcinin bağımsız değişkenlerini kullanarak bir eylem gerçekleştirmeye ihtiyaç duyulduğunda kullanılır. Kapsüllediği yöntem bir değer döndürmez.
-* `Func<>`genellikle elinizde bir dönüşüm olduğunda, yani temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Projeksiyonlar bunun en önemli örneklerindendir. Kapsülletiyi kapaya saran yöntem belirli bir değeri döndürür.
+* `Func<>`genellikle elinizde bir dönüşüm olduğunda, yani temsilcinin bağımsız değişkenlerini farklı bir sonuca dönüştürmeniz gerekir. Projeksiyonlar iyi bir örnektir. Kapsülletiyi kapaya saran yöntem belirli bir değeri döndürür.
 * `Predicate<>`bağımsız değişkenin temsilcinin durumunu karşılar mı belirlemeniz gerektiğinde kullanılır. Aynı zamanda bir `Func<T, bool>`, yöntem bir boolean değeri döndürür anlamına gelir olarak yazılabilir.
 
 Şimdi yukarıdaki örneği alabilir ve özel bir `Func<>` tür yerine temsilci kullanarak yeniden yazabilirsiniz. Program tam olarak aynı çalışmaya devam edecektir.
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-Bu basit örnek için, `Main` yöntem dışında tanımlanan bir yöntem olması biraz gereksiz görünüyor. Bu nedenle .NET Framework 2.0 **anonim delegeler**kavramını tanıttı. Onların desteği ile herhangi bir ek tür veya yöntem belirtmenize gerek kalmadan "satır" temsilcileri oluşturabilirsiniz. Yalnızca gerektiğinde temsilcinin tanımını satır alabilirsiniz.
+Bu basit örnek için, `Main` yöntem dışında tanımlanan bir yöntem olması biraz gereksiz görünüyor. .NET Framework 2.0, herhangi bir ek tür veya yöntem belirtmenize gerek kalmadan "satır" delegeler oluşturmanıza izin veren *anonim temsilciler*kavramını tanıttı.
 
-Örneğin, değiştirip anonim temsilcimizi kullanarak yalnızca çift sayıların listesini filtreleyip konsola yazdıracağız.
+Aşağıdaki örnekte, anonim bir temsilci listeyi yalnızca çift sayılara filtreler ve konsola yazdırır.
 
 ```csharp
 using System;
@@ -108,9 +108,7 @@ public class Program
 
 Gördüğünüz gibi, temsilcinin gövdesi diğer temsilciler gibi yalnızca bir dizi ifadedir. Ama bunun ayrı bir tanım olması yerine, _ad hoc_ <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> bu yönteme yaptığımız çağrıda geçici olarak tanıttık.
 
-Ancak, bu yaklaşım bile, hala biz atabilir çok kod var. Lambda **ifadeleri** burada devreye giriyor.
-
-Lambda ifadeler, ya da kısaca sadece "lambdas", C # 3.0 ilk tanıtıldı, Dil Entegre Sorgu (LINQ) temel yapı taşlarından biri olarak. Onlar sadece temsilcileri kullanmak için daha uygun bir sözdizimi vardır. Bir imza ve yöntem gövdesi beyan ederler, ancak bir temsilciye atanmadıkça kendilerine ait resmi bir kimlikleri yoktur. Temsilcilerin aksine, doğrudan olay kaydının sol tarafı olarak veya çeşitli LINQ yan tümceleri ve yöntemleri yle atanabilirler.
+Ancak, bu yaklaşım bile, hala biz atabilir çok kod var. Lambda *ifadeleri* burada devreye giriyor. Lambda ifadeler, ya da kısaca sadece "lambdas", C# 3.0 dil entegre sorgu (LINQ) temel yapı taşlarından biri olarak tanıtıldı. Onlar sadece temsilcileri kullanmak için daha uygun bir sözdizimi vardır. Bir imza ve yöntem gövdesi beyan ederler, ancak bir temsilciye atanmadıkça kendilerine ait resmi bir kimlikleri yoktur. Temsilcilerin aksine, doğrudan olay kaydının sol tarafı olarak veya çeşitli LINQ yan tümceleri ve yöntemleri yle atanabilirler.
 
 Lambda ifadesi bir temsilci belirtmenin başka bir yolu olduğundan, yukarıdaki örneği anonim bir temsilci yerine lambda ifadesini kullanmak için yeniden yazabilmek gerekir.
 
@@ -139,7 +137,7 @@ public class Program
 }
 ```
 
-Önceki örnekte kullanılan lambda ifadesidir. `i => i % 2 == 0` Yine, bu delegeleri kullanmak için **sadece çok** uygun bir sözdizimi, bu nedenle kapakları altında ne olur anonim temsilci ile ne benzer.
+Önceki örnekte kullanılan lambda ifadesidir. `i => i % 2 == 0` Yine, bu yalnızca temsilcileri kullanmak için uygun bir sözdizimidir. Örtülerin altında olanlar, isimsiz temsilciye olana benzer.
 
 Yine, lambdas sadece delegeler, hangi herhangi bir sorun olmadan bir olay işleyiciolarak kullanılabilir anlamına gelir, aşağıdaki kod snippet gösterdiği gibi.
 

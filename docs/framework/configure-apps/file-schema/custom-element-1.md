@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345072"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635395"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler için özel öğe
 

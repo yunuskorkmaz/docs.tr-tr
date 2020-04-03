@@ -1,7 +1,7 @@
 ---
 title: Üye erişim işleçleri ve ifadeleri - C# başvurusu
 description: Tür üyelerine erişmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546646"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635310"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# başvurusu)
 
@@ -130,6 +130,12 @@ Aşağıdaki örnek, `?.` `?[]` işleçlerin ve işleçlerin kullanımını gös
 
 Önceki örnek, null-koşullu bir işlemin sonucu durumunda değerlendirmek için alternatif bir ifade belirtmek için [null-coalescing işleci `??` ](null-coalescing-operator.md) `null`kullanır.
 
+`a.x` Nullable `a[x]` değer `T`türünde `a?.x` yse veya karşılık `a?[x]` gelen [nullable değer türüne](../builtin-types/nullable-value-types.md) `T?`aitse. Bir tür `T`ifadesine ihtiyacınız varsa, aşağıdaki örnekte `??` görüldüğü gibi null-coalescing işlecinin null koşullu ifadesine uygulayın:
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+Önceki örnekte, `??` işleç kullanmıyorsanız, `numbers?.Length < 2` `false` ne zaman `numbers` olduğunu `null`değerlendirir.
+
 Null-koşullu üye erişim `?.` operatörü elvis operatörü olarak da bilinir.
 
 ### <a name="thread-safe-delegate-invocation"></a>İş parçacığı güvenli temsilci çağırma
@@ -214,4 +220,4 @@ Endeksler ve aralıklar hakkında daha fazla bilgi için [özellik teklif notuna
 - [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
 - [?? (null-coalescing operatörü)](null-coalescing-operator.md)
-- [:: operatör](namespace-alias-qualifier.md)
+- [:: işleci](namespace-alias-qualifier.md)

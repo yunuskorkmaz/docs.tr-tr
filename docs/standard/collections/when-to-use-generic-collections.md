@@ -6,15 +6,16 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bbf8ec7f61981332b6984488b369fee62959b92a
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588526"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635893"
 ---
-# <a name="when-to-use-generic-collections"></a>Genel Koleksiyonları Ne Zaman Kullanılacağı
-Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliğinden anında yararlandığınız için genel koleksiyonların kullanılması genellikle önerilir. Genel koleksiyon türleri de genellikle ilgili genel olmayan koleksiyon türlerinden (ve genel olmayan temel toplama türlerinden türetilen türlerden daha iyi) koleksiyon öğeleri değer türleri olduğunda, genel öğelerle öğeleri kutulamak gerekmediği için daha iyi performans gösterir.  
+# <a name="when-to-use-generic-collections"></a>Genel koleksiyonların ne zaman kullanılacağı
+
+Genel koleksiyonları kullanmak, temel koleksiyon türünden türeme ve türe özgü üyeleri uygulamak zorunda kalmadan tür güvenliğinden otomatik olarak yararlanmanızı sağlar. Genel koleksiyon türleri, genel koleksiyon öğeleri değer türleri olduğunda, genel koleksiyon öğelerini kutulamak gerekmediği için genellikle ilgili genel olmayan koleksiyon türlerinden (ve genel olmayan temel toplama türlerinden türetilen türlerden daha iyi) daha iyi performans gösterir.  
   
  .NET Framework 4 veya sonraki leri hedefleyen programlar için, birden <xref:System.Collections.Concurrent> çok iş parçacığı aynı anda koleksiyondan öğe eklendiğinde veya kaldırılıyor olabilirken ad alanında genel koleksiyon sınıflarını kullanmanız gerekir.  
   
@@ -24,7 +25,7 @@ Bir temel koleksiyon türünden türetmek ve türe özgü üyeleri uygulamak zor
   
 - <xref:System.Collections.Generic.Dictionary%602>ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602> karşılık gelen genel <xref:System.Collections.Hashtable>sınıflardır.  
   
-- <xref:System.Collections.ObjectModel.Collection%601>'ye <xref:System.Collections.CollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.Collection%601>bir taban sınıf olarak kullanılabilir, <xref:System.Collections.CollectionBase>ancak aksine, soyut değildir. Bu kullanımı çok daha kolay hale getirir.  
+- <xref:System.Collections.ObjectModel.Collection%601>'ye <xref:System.Collections.CollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.Collection%601>bir taban sınıf olarak kullanılabilir, <xref:System.Collections.CollectionBase>ancak aksine, soyut değildir, hangi kullanımı çok daha kolay hale getirir.  
   
 - <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>'ye <xref:System.Collections.ReadOnlyCollectionBase>karşılık gelen genel sınıftır. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>soyut değildir ve varolan <xref:System.Collections.Generic.List%601> bir koleksiyonu salt okunur olarak ortaya çıkarmayı kolaylaştıran bir oluşturucuya sahiptir.  
   

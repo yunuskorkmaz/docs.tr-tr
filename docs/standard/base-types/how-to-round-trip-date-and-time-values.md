@@ -12,16 +12,16 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 4fc38b6b852f8a7b8f268fd9e8624bdf350744c8
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523816"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635133"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
 
-Birçok uygulamada, bir tarih ve saat değeri, zaman içinde tek bir noktayı kesin olarak tanımlamak için tasarlanmıştır. Bu konu, geri yüklenen <xref:System.DateTime> değerin <xref:System.DateTimeOffset> kaydedilen değerle aynı zamanı tanımlaması için saat dilimi bilgileriyle bir değeri, değeri ve tarih ve saat değerini nasıl kaydedip geri yükleyeceklerini gösterir.
+Birçok uygulamada, bir tarih ve saat değeri, zaman içinde tek bir noktayı kesin olarak tanımlamak için tasarlanmıştır. Bu makalede, geri yüklenen <xref:System.DateTime> değerin <xref:System.DateTimeOffset> kaydedilen değerle aynı zamanı tanımlaması için saat dilimi bilgileriyle bir değeri, değeri ve tarih ve saat değerini nasıl kaydedip geri yükleyin.
 
 ## <a name="round-trip-a-datetime-value"></a>Gidiş-dönüş bir DateTime değeri
 
@@ -38,7 +38,7 @@ Aşağıdaki örnekte, bir <xref:System.DateTime> değerin gidiş-dönüş nası
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Bir <xref:System.DateTime> değeri yuvarlattığında, bu teknik tüm yerel ve evrensel zamanlar için zamanı başarıyla korur. Örneğin, yerel <xref:System.DateTime> bir değer ABD Pasifik Standart Saat dilimindeki bir sisteme kaydedilir ve ABD Merkezi Standart Saat dilimindeki bir sistemde geri yüklenirse, geri yüklenen tarih ve saat, iki saat dilimi arasındaki saat farkını yansıtan özgün saatten iki saat sonra olur. Ancak, bu teknik mutlaka belirtilmeyen kez doğru değildir. Özelliği <xref:System.DateTime> yerel <xref:System.DateTime.Kind%2A> zamanlarmış gibi kabul <xref:System.DateTimeKind.Unspecified> edilen tüm değerler. Bu durumda değilse, <xref:System.DateTime> başarıyla zaman içinde doğru noktası tanımlamak olmaz. Bu sınırlama için geçici çözüm sıkıca kaydetmek ve işlemi geri yüklemek için saat dilimi ile bir tarih ve saat değeri çift etmektir.
+Bir <xref:System.DateTime> değeri yuvarlattığında, bu teknik tüm yerel ve evrensel zamanlar için zamanı başarıyla korur. Örneğin, yerel <xref:System.DateTime> bir değer ABD Pasifik Standart Saat dilimindeki bir sisteme kaydedilir ve ABD Merkezi Standart Saat dilimindeki bir sistemde geri yüklenirse, geri yüklenen tarih ve saat, iki saat dilimi arasındaki saat farkını yansıtan özgün saatten iki saat sonra olur. Ancak, bu teknik mutlaka belirtilmeyen kez doğru değildir. Özelliği <xref:System.DateTime> yerel <xref:System.DateTime.Kind%2A> zamanlarmış gibi kabul <xref:System.DateTimeKind.Unspecified> edilen tüm değerler. Yerel bir saat değilse, zaman <xref:System.DateTime> içinde doğru noktayı başarıyla tanımlamaz. Bu sınırlama için geçici çözüm sıkıca kaydetmek ve işlemi geri yüklemek için saat dilimi ile bir tarih ve saat değeri çift etmektir.
 
 ## <a name="round-trip-a-datetimeoffset-value"></a>Gidiş-dönüş bir DateTimeOffset değeri
 
@@ -72,7 +72,7 @@ Bu teknik her zaman <xref:System.DateTimeOffset> bir değeri zaman içinde tek b
 
 5. Deserialized nesneyi (C#'da) veya dönüştürme (Visual Basic'te) uygun türdeki bir nesneye dönüştürün.
 
-Aşağıdaki örnek, hem tarih hem de saat dilimi bilgilerini depolayan bir nesneyi nasıl gidiş-dönüş olarak depoladığını göstermektedir.
+Aşağıdaki örnek, hem saat dilimini hem de tarih ve saat bilgilerini depolayan bir nesneyi nasıl gidiş-dönüş olarak depoladığını göstermektedir.
 
 [!code-csharp[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#4)]
 [!code-vb[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#4)]

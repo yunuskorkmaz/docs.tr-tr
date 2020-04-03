@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili terimlerin anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344199"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635578"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -155,7 +155,7 @@ Mono hakkında daha fazla bilgi edinmek için [Mono belgelerine](https://www.mon
 
 [.NET Standard](#net-standard) ve tüm [.NET uygulamaları](#implementation-of-net) ve iş yükleri için şemsiye terim. Her zaman tamamen büyük harfle, asla ".Net".
 
-[.NET Kılavuzuna](index.md) Bakın
+[.NET kılavuzuna](index.yml) bakın
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows uygulama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Rehberi](index.md)
+- [.NET Rehberi](index.yml)
 - [.NET Çerçeve Rehberi](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET Genel Bakış](/aspnet/index#pivot=aspnet)

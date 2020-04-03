@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: ea8d73c51dd018608b95104f00bf341ff434225c
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: b48dedc044b418062642af5c5bb40afab78a3c97
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344959"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635743"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Nasıl yapılır: Özel Açılan Pencerenin Konumunu Belirtme
 Bu örnek, <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özellik . <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Özellik <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>ayarlandığında, <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> temsilcinin tanımlı bir örneği çağırır. Bu temsilci, hedef alanın sol üst köşesine ve hedef alanın sol üst köşesine göregörebilen olası noktalar kümesini döndürür. <xref:System.Windows.Controls.Primitives.Popup> Yerleşim, <xref:System.Windows.Controls.Primitives.Popup> en iyi görünürlüğü sağlayan noktada gerçekleşir.  
+ <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Özellik <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>ayarlandığında, <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> temsilcinin tanımlı bir örneği çağırır. Bu temsilci, hedef alanın sol üst köşesine ve hedef alanın sol üst köşesine <xref:System.Windows.Controls.Primitives.Popup>göre görebilen olası noktalar kümesini döndürür. Yerleşim, <xref:System.Windows.Controls.Primitives.Popup> en iyi görünürlüğü sağlayan noktada gerçekleşir.  
   
  Aşağıdaki örnek, <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliği . <xref:System.Windows.Controls.Primitives.PlacementMode.Custom> Ayrıca, <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> <xref:System.Windows.Controls.Primitives.Popup>bir temsilciyi konumlandırmak için nasıl oluşturulup atanın caiz olduğunu da gösterir.  Geri arama temsilcisi <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> iki nesne döndürür.  <xref:System.Windows.Controls.Primitives.Popup> İlk konumda bir ekran kenarı tarafından <xref:System.Windows.Controls.Primitives.Popup> gizlenmişse, ikinci konuma yerleştirilir.  
   
@@ -35,5 +35,5 @@ Bu örnek, <xref:System.Windows.Controls.Primitives.Popup> <xref:System.Windows.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Açılan Pencereye Genel Bakış](popup-overview.md)
-- [Nasıl Yapılır Konuları](popup-how-to-topics.md)
+- [Pop-up'a genel bakış](popup-overview.md)
+- [Nasıl dır makaleleri](popup-how-to-topics.md)

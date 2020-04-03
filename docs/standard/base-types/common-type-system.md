@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ec078ea89befedd26ce205c724193935dd08b82a
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523966"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635903"
 ---
 # <a name="common-type-system"></a>Ortak tip sistemi
 
@@ -78,7 +78,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl beyan edili
   
 ### <a name="structures"></a>Yapılar
 
- Yapı, dolaylı olarak türetilen <xref:System.ValueType?displayProperty=nameWithType>ve sırayla <xref:System.Object?displayProperty=nameWithType>türetilen bir değer türüdür. Bir yapı, bellek gereksinimleri küçük olan değerleri temsil etmek ve değerleri güçlü bir şekilde daktilan yöntemlere yan değer parametreleri olarak aktarmak için çok yararlıdır. .NET'te tüm ilkel<xref:System.Boolean>veri <xref:System.Byte> <xref:System.Char>türleri <xref:System.DateTime> <xref:System.Decimal>( <xref:System.Double> <xref:System.Int16>, <xref:System.Int32> <xref:System.Int64>, <xref:System.SByte> <xref:System.Single> <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, , , , , , ve ) yapı olarak tanımlanır.  
+ Yapı, dolaylı olarak türetilen <xref:System.ValueType?displayProperty=nameWithType>ve sırayla <xref:System.Object?displayProperty=nameWithType>türetilen bir değer türüdür. Yapı, bellek gereksinimleri küçük olan değerleri temsil etmek ve değerleri güçlü bir şekilde daktilan parametrelere yan değer parametreleri olarak aktarmak için yararlıdır. .NET'te tüm ilkel<xref:System.Boolean>veri <xref:System.Byte> <xref:System.Char>türleri <xref:System.DateTime> <xref:System.Decimal>( <xref:System.Double> <xref:System.Int16>, <xref:System.Int32> <xref:System.Int64>, <xref:System.SByte> <xref:System.Single> <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, , , , , , ve ) yapı olarak tanımlanır.  
   
  Sınıflar gibi, yapılar da hem verileri (yapının alanları) hem de bu veriler üzerinde gerçekleştirilebilecek işlemleri (yapının yöntemleri) tanımlar. Bu, yapılarda <xref:System.Object?displayProperty=nameWithType> tanımlanan sanal yöntemler ve <xref:System.ValueType?displayProperty=nameWithType> değer türünde tanımlanan yöntemler de dahil olmak üzere yapıların yöntemlerini çağırabileceğiniz anlamına gelir. Başka bir deyişle, yapıların alanları, özellikleri ve olaylarının yanı sıra statik ve statik olmayan yöntemler de olabilir. Yapıların örneklerini oluşturabilir, bunları parametre olarak geçirebilir, yerel değişkenler olarak depolayabilir veya bunları başka bir değer türü veya başvuru türünden bir alanda depolayabilirsiniz. Yapılar arabirimleri de uygulayabilir.  
   

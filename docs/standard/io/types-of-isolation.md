@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: d85625b99603c0bd81346cf2076b8efe0e1bba42
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523881"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635740"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolama ya da depolama ya da depolama alanı nın erişimini oluşturan kullanıcıyla her zaman sınırlandırılmıştır. Bu tür yalıtımuygulamak için, ortak dil çalışma süresi, işletim sisteminin tanıdığı kullanıcı kimliği kavramını kullanır, bu da depo açıldığında kodun çalıştığı işlemle ilişkili kimliktir. Bu kimlik kimlik doğrulaması kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
@@ -48,7 +48,7 @@ Yalıtılmış depolama ya da depolama ya da depolama alanı nın erişimini olu
   
  ![Kullanıcı ve derlemeye göre yalıtımı gösteren diyagram.](./media/types-of-isolation/isolated-storage-types.gif)  
   
- Dolaşım depoları dışında, yalıtılmış depolamanın, belirli bir bilgisayara yerel olan depolama olanaklarını kullandığından, bilgisayar tarafından her zaman dolaylı olarak yalıtılmış olduğunu unutmayın.  
+ Dolaşım depoları dışında, yalıtılmış depolama, belirli bir bilgisayara yerel olan depolama olanaklarını kullandığından, bilgisayar tarafından her zaman dolaylı olarak yalıtılır.  
   
 > [!IMPORTANT]
 > Windows 8.x Store uygulamaları için yalıtılmış depolama alanı kullanılamaz. Bunun yerine, yerel verileri `Windows.Storage` ve dosyaları depolamak için Windows Runtime API'sında yer alan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için Windows Geliştirme Merkezi'ndeki [Uygulama verilerine](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) bakın.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: c5079237ff4c97dd9ef164061dc5e7499c1d6e38
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523308"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635994"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayarlamak için nasıl yapılandırabileceğinizi, etkinlik izlemeve yayılmayı uçlardan uca izleme bağındırMasını desteklemek için nasıl ayarlayabileceğinizi ve izleme dinleyicilerini izleme izine göre nasıl ayarlaabileceğinizi açıklar.  
@@ -136,7 +136,7 @@ Bu konu, izleme izlemeyi, izleme kaynaklarını izleme ve izleme düzeyleri ayar
  Kullanıcı tanımlı izleme kaynakları oluşturma hakkında daha fazla bilgi için [bkz.](../../../../../docs/framework/wcf/samples/extending-tracing.md)  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>İzleme Dinleyicilerini İzlemeYi Tüketecek Şekilde Yapılandırma  
- Çalışma zamanında WCF, verileri işleyen dinleyicilere izleme verileri aktarıyor. WCF, çıktı için <xref:System.Diagnostics>kullandıkları biçimde farklılık gösteren birkaç önceden tanımlanmış dinleyici sağlar. Özel dinleyici türleri de ekleyebilirsiniz.  
+ Çalışma zamanında, WCF izleme verilerini dinleyicilere aktarıyor ve verileri işliyor. WCF, çıktı için <xref:System.Diagnostics>kullandıkları biçimde farklılık gösteren birkaç önceden tanımlanmış dinleyici sağlar. Özel dinleyici türleri de ekleyebilirsiniz.  
   
  Kullanmak istediğiniz `add` izleme dinleyicisinin adını ve türünü belirtmek için kullanabilirsiniz. Örnek yapılandırmamızda Dinleyici'yi adlandırdık `traceListener` ve standart .NET Framework`System.Diagnostics.XmlWriterTraceListener`trace dinleyicisini ( ) kullanmak istediğimiz tür olarak ekledik. Her kaynak için istediğiniz sayıda izleme dinleyicisi ekleyebilirsiniz. İzleme dinleyicisi izlemeyi bir dosyaya yayırsa, çıktı dosyası konumunu ve adını yapılandırma dosyasında belirtmeniz gerekir. Bu, o `initializeData` dinleyici için dosyanın adına ayarlayarak yapılır. Bir dosya adı belirtmezseniz, kullanılan dinleyici türüne göre rasgele bir dosya adı oluşturulur. <xref:System.Diagnostics.XmlWriterTraceListener> Kullanılırsa, uzantısı olmayan bir dosya adı oluşturulur. Özel bir dinleyici uygularsanız, bu özniteliği dosya adı dışındaki başlatma verilerini almak için de kullanabilirsiniz. Örneğin, bu öznitelik için bir veritabanı tanımlayıcısı belirtebilirsiniz.  
   

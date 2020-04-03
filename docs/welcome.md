@@ -3,12 +3,12 @@ title: .NET'e Hoş Geldiniz
 description: .NET teknoloji ailesiyle başlarken.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345299"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635959"
 ---
 # <a name="welcome-to-net"></a>.NET'e Hoş Geldiniz
 
@@ -42,7 +42,7 @@ Ayrıca en son .NET olaylarını takip edin:
 
 Bu dokümantasyon,.NET'in platformlar ve diller arasında genişliğini kapsar. .NET ve dilleriyle aşağıdaki bölümlerden herhangi birinde işe alabilirsiniz:
 
-- [.NET Rehberi](standard/index.md)
+- [.NET Rehberi](standard/index.yml)
 - [.NET Çekirdek Rehberi](core/index.yml)
 - [.NET Çerçeve Rehberi](framework/index.yml)
 - [C# Rehberi](csharp/index.yml)

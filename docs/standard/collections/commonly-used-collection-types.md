@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: dc590d712a49ea27fcc61181e0b8c9b3349e74e5
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 04ad3c8d8ea076e881e27e295d87572a51cbc128
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588333"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635975"
 ---
 # <a name="commonly-used-collection-types"></a>Çok Kullanılan Koleksiyon Türleri
 Toplama türleri, karma tablolar, kuyruklar, yığınlar, çantalar, sözlükler ve listeler gibi veri koleksiyonlarının ortak varyasyonlarıdır.  
   
- Koleksiyonlar <xref:System.Collections.ICollection> arabirime, <xref:System.Collections.IList> arabirime, <xref:System.Collections.IDictionary> arabirimine veya genel karşılıklarına dayanır. Arabirim <xref:System.Collections.IList> ve <xref:System.Collections.IDictionary> arabirim hem <xref:System.Collections.ICollection> de arabirimden türetilmiştir; bu nedenle, tüm koleksiyonlar <xref:System.Collections.ICollection> doğrudan veya dolaylı olarak arabirimi temel alır. <xref:System.Collections.IList> Arabirimine <xref:System.Array>(, <xref:System.Collections.ArrayList>, veya) <xref:System.Collections.Generic.List%601>veya doğrudan <xref:System.Collections.ICollection> arabirim <xref:System.Collections.Queue>(, , <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> <xref:System.Collections.Generic.LinkedList%601>, veya ), tüm öğe yalnızca bir değer içerir. <xref:System.Collections.IDictionary> Arabirimi <xref:System.Collections.Hashtable> <xref:System.Collections.SortedList> (sınıflar <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Generic.SortedList%602> genel sınıflar gibi) veya <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıflara dayalı koleksiyonlarda, her öğe hem bir anahtar hem de bir değer içerir.  Sınıf <xref:System.Collections.ObjectModel.KeyedCollection%602> benzersizdir, çünkü değerlere gömülü anahtarları olan değerlerin bir listesidir ve bu nedenle bir liste ve sözlük gibi hareket eder.  
+ Koleksiyonlar <xref:System.Collections.ICollection> arabirime, <xref:System.Collections.IList> arabirime, <xref:System.Collections.IDictionary> arabirimine veya genel karşılıklarına dayanır. Arabirim <xref:System.Collections.IList> ve <xref:System.Collections.IDictionary> arabirim hem <xref:System.Collections.ICollection> de arabirimden türetilmiştir; bu nedenle, tüm koleksiyonlar <xref:System.Collections.ICollection> doğrudan veya dolaylı olarak arabirimi temel alır. <xref:System.Collections.IList> Arabirimine <xref:System.Array>(, <xref:System.Collections.ArrayList>veya <xref:System.Collections.Generic.List%601>) veya doğrudan <xref:System.Collections.ICollection> arabirim (, <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601>, <xref:System.Collections.Generic.LinkedList%601>, veya ), tüm öğe yalnızca bir değer içerir. <xref:System.Collections.IDictionary> Arabirimi <xref:System.Collections.Hashtable> <xref:System.Collections.SortedList> (sınıflar <xref:System.Collections.Generic.Dictionary%602> ve <xref:System.Collections.Generic.SortedList%602> genel sınıflar gibi) veya <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sınıflara dayalı koleksiyonlarda, her öğe hem bir anahtar hem de bir değer içerir.  Sınıf <xref:System.Collections.ObjectModel.KeyedCollection%602> benzersizdir, çünkü değerlere gömülü anahtarları olan değerlerin bir listesidir ve bu nedenle bir liste ve sözlük gibi hareket eder.  
   
  Genel koleksiyonlar güçlü yazma için en iyi çözümdür. Ancak, diliniz genel jenerikleri <xref:System.Collections> desteklemiyorsa, ad alanı <xref:System.Collections.CollectionBase> <xref:System.Collections.ReadOnlyCollectionBase>, <xref:System.Collections.DictionaryBase>, ve , güçlü bir şekilde yazılan koleksiyon sınıfları oluşturmak için genişletilebilen soyut temel sınıflar gibi temel koleksiyonları içerir. Verimli çok iş parçacığı koleksiyonu erişimi gerektiğinde, <xref:System.Collections.Concurrent> ad alanında genel koleksiyonları kullanın.  
   

@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345274"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635792"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma
-Bu konu, özel bir WS-Meta veri değişimi bağlama yapılandırmak için nasıl açıklayacağız. Windows Communication Foundation (WCF) dört sistem tanımlı meta veri bağlaması içerir, ancak meta verileri istediğiniz bağlamayı kullanarak yayımlayabilirsiniz. Bu konu, meta verileri kullanarak nasıl `wsHttpBinding`yayımlayacağınızı gösterecektir. Bu bağlama, meta verileri güvenli bir şekilde açığa çıkarma seçeneği sunar. Bu makaledeki kod [Başlarken](../samples/getting-started-sample.md)dayanmaktadır.  
+
+Bu makalede, özel bir WS-Meta veri değişimi bağlama yapılandırmak için nasıl açıklanmaktadır. Windows Communication Foundation (WCF) dört sistem tanımlı meta veri bağlaması içerir, ancak meta verileri istediğiniz bağlamayı kullanarak yayımlayabilirsiniz. Bu makalede, meta verileri kullanarak `wsHttpBinding`nasıl yayımlayacağınızı gösterir. Bu bağlama, meta verileri güvenli bir şekilde açığa çıkarma seçeneği sunar. Bu makaledeki kod [Başlarken](../samples/getting-started-sample.md)dayanmaktadır.  
   
 ### <a name="using-a-configuration-file"></a>Yapılandırma dosyası kullanma  
   

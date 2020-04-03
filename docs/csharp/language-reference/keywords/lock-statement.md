@@ -1,19 +1,19 @@
 ---
 title: kilit deyimi - C# başvurusu
 description: İş parçacığı erişimini paylaşılan bir kaynağa eşitlemek için C# kilit deyimini kullanma
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713397"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635388"
 ---
 # <a name="lock-statement-c-reference"></a>kilit deyimi (C# başvurusu)
 
@@ -48,13 +48,15 @@ Kod bir [deneyin kullandığından... son olarak](try-finally.md) blok, bir öze
 
 [Bir](../operators/await.md) `lock` deyimin gövdesinde bekleyen operatörü kullanamazsınız.
 
-## <a name="remarks"></a>Açıklamalar
+## <a name="guidelines"></a>Yönergeler
 
 İş parçacığı erişimini paylaşılan bir kaynağa eşitlediğinizde, özel bir `private readonly object balanceLock = new object();`nesne örneğini (örneğin,) veya kodun ilgisiz bölümleri tarafından kilit nesnesi olarak kullanılma olasılığı düşük başka bir örneği kilitleyin. Kilitlenme veya kilit çekişmesi neden olabileceğinden, farklı paylaşılan kaynaklar için aynı kilit nesnesi örneğini kullanmaktan kaçının. Özellikle, aşağıdakileri kilit nesneleri olarak kullanmaktan kaçının:
 
 - `this`, arayanlar tarafından kilit olarak kullanılabilir.
 - <xref:System.Type>örnekler, bu işleç veya yansıma [türü](../operators/type-testing-and-cast.md#typeof-operator) tarafından elde edilebilir gibi.
 - dize örnekleri, dize literals de dahil olmak üzere, bu [interned](/dotnet/api/system.string.intern#remarks)olabilir gibi .
+
+Kilit çekişmesini azaltmak için kilidi mümkün olduğunca kısa bir süre tutun.
 
 ## <a name="example"></a>Örnek
 
@@ -68,9 +70,9 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [C# başvurusu](../index.md)
+- [C# anahtar sözcükleri](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C# başvurusu](../index.md)
-- [C# anahtar sözcükleri](index.md)
 - [Eşitleme temellerine genel bakış](../../../standard/threading/overview-of-synchronization-primitives.md)

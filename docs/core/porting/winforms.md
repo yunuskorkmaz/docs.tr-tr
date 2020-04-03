@@ -3,13 +3,13 @@ title: Windows Forms uygulamasını .NET Core'a taşıma
 description: .NET Framework Windows Forms uygulamasını Windows için .NET Core'a nasıl ileteceklerini öğretir.
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116031"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635518"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows Forms masaüstü uygulamasını .NET Core'a taşıma
 
@@ -24,9 +24,9 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 | **MyFormsCore.csproj** | Oluşturduğunuz yeni .NET Core projesinin adı. |
 | **MyAppCore.exe** | .NET Core Windows Forms uygulaması çalıştırılabilir. |
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- Yapmak istediğiniz herhangi bir tasarımcı çalışması için [Visual Studio 2019.](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
+- [Visual Studio 2019 16.5 Yapmak](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) istediğiniz herhangi bir tasarımcı çalışması için önizleme 1 veya daha sonra. Visual Studio'nun en son [Önizleme sürümüne](https://visualstudio.microsoft.com/vs/preview/) güncellemenizi öneririz
 
   Aşağıdaki Visual Studio iş yüklerini yükleyin:
   - .NET masaüstü geliştirme
@@ -34,10 +34,11 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 
 - Çalışan bir Windows Forms projesi, sorunsuz bir şekilde bir çözüm oluşturur ve çalışır.
 - C# kodlu bir proje.
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 veya sonrası.
 
 > [!NOTE]
-> **Visual Studio 2017** .NET Core 3.0 projelerini desteklemiyor. **Visual Studio 2019** .NET Core 3.0 projelerini destekler, ancak .NET Core 3.0 Windows Forms projelerinin görsel tasarımcısını henüz desteklemez. Görsel tasarımcıyı kullanmak için, form dosyalarını .NET Core projesiyle paylaşan bir çözümde bir .NET Windows Forms projeniz olması gerekir.
+> .NET Core 3.0 projeleri yalnızca **Visual Studio 2019'da** veya daha sonraki sürümlerde desteklenir. Visual **Studio 2019 sürüm 16.5 Önizleme 1**ile başlayarak ,.NET Core Windows Forms tasarımcısı da desteklenir.
+>
+> Tasarımcıyı etkinleştirmek için **Araçlar** > **Seçenekleri** > **Ortamı** > **Önizleme Özellikleri'ne** gidin ve **.NET Core uygulamaları için önizleme Windows Formlarını Kullan** seçeneğini seçin.
 
 ### <a name="consider"></a>Düşünün
 
@@ -58,10 +59,6 @@ Bir .NET Framework Windows Forms uygulamasını taşımanız gerekirken, göz ö
 01. Projeniz tarafından kullanılan NuGet paketlerini güncelleştirin.
 
     Herhangi bir geçişten önce NuGet paketlerinin en son sürümlerini kullanmak her zaman iyi bir uygulamadır. Uygulamanız herhangi bir NuGet paketine atıfta bulunuyorsa, bunları en son sürüme güncelleştirin. Uygulamanızın başarılı bir şekilde oluşturulmasını sağlayın. Yükseltmeden sonra, paket hataları varsa, paketi kodunuzu bozmayan en son sürüme indirin.
-
-01. Visual Studio 2019 henüz .NET Core 3.0 için Forms Designer desteklemiyor
-
-    Şu anda, Visual Studio'dan Formtasarımcısını kullanmak istiyorsanız varolan .NET Framework Windows Forms proje dosyanızı saklamanız gerekir.
 
 ## <a name="create-a-new-sdk-project"></a>Yeni bir SDK projesi oluşturma
 

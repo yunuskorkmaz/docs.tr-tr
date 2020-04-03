@@ -20,12 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 99a70fa1b56a45087ee380d063c66326976f5b41
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523793"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635716"
 ---
 # <a name="net-regular-expressions"></a>.NET düzenli ifadeler
 
@@ -99,7 +99,7 @@ Normal ifade dili hakkında daha fazla bilgi için [Normal İfade Dili - Hızlı
   
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> yöntemi, normal ifade ayarları <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> şeklinde ayarlanmış olarak çağırılır. Bu nedenle eşleştirme işlemi büyük/küçük harfe duyarsızdır, ve örnek "This this" alt dizesini bir yineleme olarak tanımlar.  
   
- Giriş dizesinin "this?this" alt dizesini içerdiğini unutmayın. Ancak, aradaki noktalama işareti nedeniyle bu, bir yineleme olarak tanımlanmaz.  
+ Giriş dizesi alt dize "bu? unutmayın. Ancak, aradaki noktalama işareti nedeniyle bu, bir yineleme olarak tanımlanmaz.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Örnek 3: Dinamik olarak kültüre duyarlı düzenli bir ifade oluşturma  
 

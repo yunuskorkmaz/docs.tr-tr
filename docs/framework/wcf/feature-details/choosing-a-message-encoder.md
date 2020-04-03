@@ -2,15 +2,16 @@
 title: İleti Kodlayıcı Seçme
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345249"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635771"
 ---
-# <a name="choosing-a-message-encoder"></a>İleti Kodlayıcı Seçme
-Bu konu, Windows Communication Foundation (WCF) içinde yer alan ileti kodlayıcıları arasında seçim yapmak için ölçütleri tartışır: ikili, metin ve İleti Iletimi Optimizasyon Mekanizması (MTOM).  
+# <a name="choose-a-message-encoder"></a>İleti Kodlayıcısı Seçin
+
+Bu makalede, Windows Communication Foundation (WCF) içinde yer alan ileti kodlayıcıları arasında seçim yapmak için ölçütler açıklanmaktadır: ikili, metin ve İleti Iletimi Optimizasyon Mekanizması (MTOM).  
   
  WCF'de, *bağlayıcı öğeler*den oluşan *bir*bağlama yoluyla uç noktalar arasında bir ağ üzerinden nasıl veri aktarılabildiğini belirtirsiniz. İleti kodlayıcısı, bağlama yığınındaki bağlama öğesini kodlayan bir ileti ilemi ile temsil edilir. Bağlama, güvenlik bağlama öğesi veya güvenilir ileti bağlama öğesi, gerekli ileti kodlama bağlayıcı öğesi ve gerekli aktarım bağlama öğesi gibi isteğe bağlı iletişim bağlama öğelerini içerir.  
   
@@ -33,12 +34,12 @@ Bu konu, Windows Communication Foundation (WCF) içinde yer alan ileti kodlayıc
 |Faktörü|Açıklama|Bu faktörü destekleyen kodlayıcılar|  
 |------------|-----------------|---------------------------------------|  
 |Desteklenen Karakter Setleri|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>ve <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> sadece UTF8 ve UTF16 Unicode *(büyük-endian* ve *little-endian)* kodlamaları destekler. UTF7 veya ASCII gibi başka kodlamalar gerekiyorsa, özel bir kodlayıcı kullanılmalıdır. Örnek özel kodlayıcı için [Bkz. Özel İleti Kodlayıcısı.](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder)|Metin|  
-|Denetim|Denetim, iletim sırasında iletileri inceleyebilme yeteneğidir. SABUN'un kullanımı olsun veya olmasın, metin kodlamaları, iletilerin özel araçlar kullanılmadan birçok uygulama tarafından incelenmesine ve analiz edilmesine olanak sağlar. İleti veya aktarım düzeyinde aktarım güvenliği kullanımının iletileri inceleme yeteneğinizi etkilediğini unutmayın. Gizlilik, bir iletiyi incelenmekten korur ve bütünlük bir iletiyi değiştirilmekten korur.|Metin|  
+|Denetim|Denetim, iletim sırasında iletileri inceleyebilme yeteneğidir. SABUN'un kullanımı olsun veya olmasın, metin kodlamaları, iletilerin özel araçlar kullanılmadan birçok uygulama tarafından incelenmesine ve analiz edilmesine olanak sağlar. İleti veya aktarım düzeyinde aktarım güvenliğinin kullanımı, iletileri inceleme yeteneğinizi etkiler. Gizlilik, bir iletiyi incelenmekten korur ve bütünlük bir iletiyi değiştirilmekten korur.|Metin|  
 |Güvenilirlik|Güvenilirlik, bir kodlayıcının iletim hatalarına karşı dayanıklılığıdır. İleti, aktarım veya uygulama katmanında güvenilirlik de sağlanabilir. Tüm standart WCF kodlayıcıları başka bir katmanın güvenilirlik sağladığını varsayar. Kodlayıcının iletim hatasını kurtarma yeteneği çok azdır.|None|  
 |Sade -lik|Basitlik, kodlama belirtimi için kodlayıcılar ve kod çözücüler oluşturabileceğiniz kolaylığı temsil eder. Metin kodlamaları özellikle basitlik açısından avantajlıdır ve POX metin kodlaması SOAP'ın işlenmesi için destek gerektirmeme avantajına sahiptir.|Metin (POX)|  
 |Boyut|Kodlama, içeriğe uygulanan ek yük miktarını belirler. Kodlanmış iletilerin boyutu, hizmet işlemlerinin maksimum verimi ile doğrudan ilişkilidir. İkili kodlamalar genellikle metin kodlamalarından daha kompakttır. İleti boyutu çok yüksekolduğunda, kodlama sırasında ileti içeriğini sıkıştırmayı da düşünün. Ancak, sıkıştırma hem ileti gönderen hem de alıcı için işlem maliyetleri ekler.|İkili|  
 |Akış|Akış, uygulamaların iletinin tamamı gelmeden önce bir iletiyi işlemeye başlamasını sağlar. Akış'ı etkin bir şekilde kullanmak, iletinin önemli verilerinin iletinin başında kullanılabilir olmasını gerektirir, böylece alıcı uygulamanın ulaşmasını beklemesi gerekmez. Ayrıca, akışlı aktarım kullanan uygulamaların, içeriğin iletme bağımlılıkları olmaması için iletideki verileri aşamalı olarak düzenlemesi gerekir. Çoğu durumda, içerik akışı ile bu içerik için mümkün olan en küçük aktarım boyutuna sahip olmak arasında uzlaşma nız gerekir.|None|  
-|3. Parti Araç Desteği|Kodlama için destek alanları geliştirme ve tanı içerir. Üçüncü taraf geliştiriciler, POX biçiminde kodlanmış iletileri işlemek için kitaplıklara ve araç kitlerine büyük bir yatırım yaptı.|Metin (POX)|  
+|Üçüncü Taraf Araç Desteği|Kodlama için destek alanları geliştirme ve tanı içerir. Üçüncü taraf geliştiriciler, POX biçiminde kodlanmış iletileri işlemek için kitaplıklara ve araç kitlerine büyük bir yatırım yaptı.|Metin (POX)|  
 |Birlikte Çalışabilirlik|Bu faktör, bir WCF kodlayıcısının WCF olmayan hizmetlerle birlikte çalışabilme yeteneğini ifade eder.|Metin<br /><br /> MTOM (kısmi)|  
   
 Not: İkili Kodlayıcı'yı kullanırken, XMLReader oluştururken IgnoreWhitespace ayarını kullanmak hiçbir etki yaratmaz.  Örneğin, bir hizmet işlemi içinde aşağıdakileri yaparsanız:  

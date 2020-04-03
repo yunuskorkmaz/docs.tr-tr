@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587804"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636023"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -128,7 +128,7 @@ Bağımlılık özellikleri veya <xref:System.Windows.DependencyObject> sınıf,
 ### <a name="styles"></a>Stiller
 Stiller ve şablonlar, bağımlılık özelliklerini kullanmak için başlıca motive edici senaryolardan ikisidir. Stiller özellikle uygulamayı [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]tanımlayan özellikleri ayarlamak için yararlıdır. Stiller genellikle XAML'de kaynak olarak tanımlanır. Stiller, genellikle belirli özellikler için "ayarlayıcılar" ve başka bir özelliğin gerçek zamanlı değerine dayalı bir özellik değerini değiştiren "tetikleyiciler" içerdiğinden özellik sistemiyle etkileşime geçer.
 
-Aşağıdaki örnek çok basit bir stil oluşturur (hangi <xref:System.Windows.FrameworkElement.Resources%2A> bir sözlük içinde tanımlanır, gösterilmez), <xref:System.Windows.FrameworkElement.Style%2A> sonra <xref:System.Windows.Controls.Button>doğrudan bir . Stil içindeki ayarlayıcı, <xref:System.Windows.Controls.Control.Background%2A> özelliği yeşile <xref:System.Windows.Controls.Button> doğru şekillendiren bir özellik olarak ayarlar.
+Aşağıdaki örnek basit bir stil oluşturur (hangi <xref:System.Windows.FrameworkElement.Resources%2A> bir sözlük içinde tanımlanır, gösterilmez), <xref:System.Windows.FrameworkElement.Style%2A> sonra doğrudan <xref:System.Windows.Controls.Button>bir . Stil içindeki ayarlayıcı, <xref:System.Windows.Controls.Control.Background%2A> özelliği yeşile <xref:System.Windows.Controls.Button> doğru şekillendiren bir özellik olarak ayarlar.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -183,7 +183,7 @@ Prensipte, ilk düğme için özellik iki kez ayarlanır, ancak yalnızca bir de
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Bağımlılık özelliği önceliği neden var?
-Tipik olarak, stillerin her zaman uygulanmasını ve tek bir öğenin yerel olarak ayarlanmış değerini bile gizlemesini istemezsiniz (aksi takdirde, stilleri veya öğeleri genel olarak kullanmak çok zor olur). Bu nedenle, stiller gelen değerler yerel olarak ayarlanmış bir değerden daha düşük bir emsalde çalışır. Bağımlılık özelliklerinin daha ayrıntılı bir listesi ve bağımlılık özelliğinin etkin değerinin nereden gelebileceği [için](dependency-property-value-precedence.md)bkz.
+Genellikle, stillerin her zaman uygulanmasını ve tek bir öğenin yerel olarak ayarlanmış değerini bile gizlemesini istemezsiniz (aksi takdirde, stilleri veya öğeleri genel olarak kullanmak zor olur). Bu nedenle, stiller gelen değerler yerel olarak ayarlanmış bir değerden daha düşük bir emsalde çalışır. Bağımlılık özelliklerinin daha ayrıntılı bir listesi ve bağımlılık özelliğinin etkin değerinin nereden gelebileceği [için](dependency-property-value-precedence.md)bkz.
 
 > [!NOTE]
 > WPF öğelerinde tanımlı bağımlılık özellikleri olmayan birkaç özellik vardır. Ve büyük ölçüde, özellikler yalnızca özellik sisteminin etkinleştirdığı senaryolardan en az birini desteklemesi gerektiğinde bağımlılık özellikleri olarak uygulanmıştır: veri bağlama, şekillendirme, animasyon, varsayılan değer desteği, devralma, ekli özellikler veya geçersiz leştirme.
@@ -194,7 +194,7 @@ Tipik olarak, stillerin her zaman uygulanmasını ve tek bir öğenin yerel olar
 
 - Bileşen geliştiricileri veya uygulama geliştiricileri, veri bağlama veya stil desteği gibi yetenekleri etkinleştirmek veya geçersizleştirme ve değer zorlama desteği için kendi bağımlılık özelliklerini oluşturmak isteyebilir. Ayrıntılar için Bkz. [Özel Bağımlılık Özellikleri.](custom-dependency-properties.md)
 
-- Bağımlılık özellikleri genellikle ortak özellikler olarak kabul edilmelidir, erişilebilir veya en azından bir örnek erişimi olan herhangi bir arayan tarafından bulunabilir. Daha fazla bilgi için Bkz. [Bağımlılık Özelliği Güvenliği.](dependency-property-security.md)
+- Bağımlılık özelliklerini, bir örne erişimi olan herhangi bir arayan tarafından erişilebilir veya en azından bulunabilir ortak özellikler olarak düşünün. Daha fazla bilgi için Bkz. [Bağımlılık Özelliği Güvenliği.](dependency-property-security.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

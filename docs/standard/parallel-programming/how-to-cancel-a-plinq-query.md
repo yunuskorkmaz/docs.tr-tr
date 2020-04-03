@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588569"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635873"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
 Aşağıdaki örnekler, plinq sorgusunu iptal etmenin iki yolunu gösterir. İlk örnek, çoğunlukla veri geçişinden oluşan bir sorgunun nasıl iptal edilebildiğini gösterir. İkinci örnek, hesaplama olarak pahalı bir kullanıcı işlevi içeren bir sorguyu nasıl iptal ediletilir gösterir.
@@ -33,9 +33,9 @@ PLINQ çerçevesi tek <xref:System.OperationCanceledException> bir rulo <xref:Sy
 
 İptal ile ilgili genel kılavuz aşağıdaki gibidir:
 
-1. Kullanıcı temsilcisi iptali yaparsanız PLINQ'u <xref:System.Threading.CancellationToken> harici hakkında <xref:System.OperationCanceledException>bilgilendirmeli ve bir (harici CT) atmalısınız.
+1. Kullanıcı temsilcisi iptali yaparsanız, PLINQ'yi <xref:System.Threading.CancellationToken> harici hakkında <xref:System.OperationCanceledException>bilgilendirmeli ve bir (harici CT) atmalısınız.
 
-2. İptal oluşursa ve başka bir özel durum atılırsa, <xref:System.AggregateException>bir yerine bir <xref:System.OperationCanceledException> .
+2. İptal oluşursa ve başka özel durumlar atılırsa, <xref:System.AggregateException>bir yerine . <xref:System.OperationCanceledException>
 
 ## <a name="example"></a>Örnek
 
@@ -44,7 +44,7 @@ Aşağıdaki örnek, kullanıcı kodunda hesaplama açısından pahalı bir işl
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-Kullanıcı kodundaki iptali işlediğinizde, sorgu <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> tanımında kullanmanız gerekmez. Ancak, sorgu performansı üzerinde <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> hiçbir etkisi olmadığı ve iptalin sorgu operatörleri ve kullanıcı kodunuz tarafından gerçekleştirilmesini sağladığı için bunu yapmanızı tavsiye ettik.
+Kullanıcı kodundaki iptali işlediğinizde, sorgu <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> tanımında kullanmanız gerekmez. Ancak, sorgu performansı üzerinde <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>hiçbir <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> etkisi olmadığı ve iptalin sorgu operatörleri ve kullanıcı kodunuz tarafından gerçekleştirilmesini sağladığı için kullanmanızı tavsiye ettik.
 
 Sistem duyarlılığını sağlamak için, iptali milisaniyede bir kez kontrol etmenizi öneririz; ancak, 10 milisaniyeye kadar olan herhangi bir dönem kabul edilebilir kabul edilir. Bu sıklığın kodunuzu performansında olumsuz bir etkisi olmamalıdır.
 

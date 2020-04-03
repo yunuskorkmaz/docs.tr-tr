@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523284"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635150"
 ---
 # <a name="numerics-in-net"></a>.NET Sayısal Değerleri
 
@@ -60,11 +60,11 @@ Yapı, <xref:System.Numerics.BigInteger?displayProperty=nameWithType> teoride de
   
 Hem <xref:System.Single> <xref:System.Double> de türler, sayı olmayan ve sonsuzluğu temsil eden özel değerleri destekler. <xref:System.Double> Örneğin, tür aşağıdaki değerleri <xref:System.Double.NaN?displayProperty=nameWithType>sağlar: <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>, <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>ve . Bu özel <xref:System.Double.IsNaN%2A?displayProperty=nameWithType> <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>değerleri <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType>test <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> etmek için , , ve yöntemleri kullanırsınız.
 
-Her kayan nokta türü standart aritmetik işleçleri kümesini destekler. Sınıf, <xref:System.Math?displayProperty=nameWithType> daha geniş bir matematiksel işlev ler kümesi için yöntemler sağlar. .NET Core 2.0 ve <xref:System.MathF?displayProperty=nameWithType> daha sonra <xref:System.Single> türünün bağımsız değişkenlerini kabul eden yöntemleri sağlayan sınıfı içerir.
+Her kayan nokta türü standart aritmetik işleçleri kümesini destekler. Sınıf, <xref:System.Math?displayProperty=nameWithType> daha geniş bir matematiksel işlev ler kümesi için yöntemler sağlar. .NET Core 2.0 ve <xref:System.MathF?displayProperty=nameWithType> daha sonra <xref:System.Single> tür bağımsız değişkenleri kabul yöntemleri sağlayan sınıf içerir.
 
 Ayrıca <xref:System.BitConverter?displayProperty=nameWithType> sınıfı kullanarak tek tek <xref:System.Double> bit <xref:System.Single> ve değerlerle de çalışabilirsiniz. Yapının <xref:System.Decimal?displayProperty=nameWithType> kendi yöntemleri <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> vardır <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>ve ondalık değerin bireysel bitleriyle çalışmak için, bazı ek matematiksel işlemleri gerçekleştirmek için kendi yöntem kümesini de kullanır.
   
-Ve <xref:System.Double> <xref:System.Single> türleri, doğası gereği kesin olmayan değerler (örneğin, iki yıldız arasındaki mesafe) ve yüksek derecede kesinlik ve küçük yuvarlama hatası gerektirmediği uygulamalar için kullanılmak üzere tasarlanmıştır. Daha fazla <xref:System.Decimal?displayProperty=nameWithType> kesinlik gerektiren ve yuvarlama hatalarının en aza indirilmesi gereken durumlar için türü kullanmalısınız.
+Ve <xref:System.Double> <xref:System.Single> türleri, doğası gereği, kesin olmayan değerler (örneğin, iki yıldız arasındaki mesafe) ve yüksek derecede kesinlik ve küçük yuvarlama hatası gerektirmediği uygulamalar için kullanılmak üzere tasarlanmıştır. Daha <xref:System.Decimal?displayProperty=nameWithType> fazla kesinlik gerektiren ve yuvarlama hatalarının en aza indirilmesi gereken durumlar için türü kullanın.
 
 > [!NOTE]
 > Tür <xref:System.Decimal> yuvarlama ihtiyacını ortadan kaldırmaz. Bunun yerine, yuvarlama nedeniyle hataları en aza indirir.

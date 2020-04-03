@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523843"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635983"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal ifade davranışının ayrıntıları
 
@@ -71,7 +71,7 @@ ms.locfileid: "80523843"
 
      Olumlu ileriye dönük iddialar hakkında daha fazla bilgi için, [Gruplandırma Yapıları'na](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.
 
-- Negatif lookahead: `(?!` *alt ifade*`)`. Bu özellik, yalnızca bir alt ifade eşleşmezse bir ifadeyi eşleştirme özelliği ekler. Bu, özellikle bir aramayı budama için güçlüdür, çünkü eklenmesi gereken durumlar için bir ifadeden daha ortadan kaldırılması gereken bir servis talebi için ifade sağlamak genellikle daha kolaydır. Örneğin, "non" ile başlamayan sözcükler için bir ifade yazmak zordur. Aşağıdaki örnek, bunları dışlamak için negatif gözcü kullanır.
+- Negatif lookahead: `(?!` *alt ifade*`)`. Bu özellik, yalnızca bir alt ifade eşleşmezse bir ifadeyi eşleştirme özelliği ekler. Bu, bir aramayı budama için güçlüdür, çünkü eklenmesi gereken durumlar için bir ifadeden daha ortadan kaldırılması gereken bir servis talebi için ifade sağlamak genellikle daha kolaydır. Örneğin, "non" ile başlamayan sözcükler için bir ifade yazmak zordur. Aşağıdaki örnek, bunları dışlamak için negatif gözcü kullanır.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]

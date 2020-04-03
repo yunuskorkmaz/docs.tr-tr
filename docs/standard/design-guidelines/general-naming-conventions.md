@@ -14,90 +14,92 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: f8576790a2be08c623807e236d156e0e7f93dd14
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ef4a8f571a67477739bbc59d3103ba78dea47177
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741598"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635914"
 ---
 # <a name="general-naming-conventions"></a>Genel Adlandırma Kuralları
-Bu bölümde, Word seçimiyle ilgili genel adlandırma kuralları, kısaltmalar ve kısaltmalar kullanma yönergeleri ve dile özgü adların kullanılmasıyla ilgili öneriler açıklanmaktadır.
 
-## <a name="word-choice"></a>Sözcük seçimi
- ✔️ kolayca okunabilir tanımlayıcı adlarını seçin.
+Bu bölümde, sözcük seçimiyle ilgili genel adlandırma kuralları, kısaltmalar ve kısaltmalar kullanılarak ilgili yönergeler ve dile özgü adlar kullanmaktan nasıl kaçınılabilen öneriler açıklanmaktadır.
 
- Örneğin, `HorizontalAlignment` adlı bir özellik `AlignmentHorizontal`daha Ingilizce-okunabilir.
+## <a name="word-choice"></a>Kelime Seçimi
+ ✔️ KOLAYCA okunabilir tanımlayıcı adlar seçin.
 
- ✔️, kısaltma üzerinde okunabilirliğini tercih edin.
+ Örneğin, adlı `HorizontalAlignment` bir özellik İngilizce'den `AlignmentHorizontal`daha okunabilir.
 
- `CanScrollHorizontally` Özellik adı `ScrollableX` daha iyidir (X eksenine yönelik bir tam başvuru).
+ ✔️ kısaltma üzerinde okunabilirlik lehine DO.
 
- ❌ alt çizgi, kısa çizgi veya alfasayısal olmayan karakterler kullanmayın.
+ Özellik adı `CanScrollHorizontally` (X `ScrollableX` eksenine belirsiz bir başvuru) daha iyidir.
 
- ❌, Macarca gösterimini kullanmaz.
+ ❌Alt çizgi, tire veya diğer alfasayısal olmayan karakterleri KULLANMAYIN.
 
- ❌, yaygın olarak kullanılan programlama dillerinin anahtar sözcükleriyle çakışan tanımlayıcılar kullanmaktan KAÇıNıN.
+ ❌Macarca gösterimi KULLANMAYıN.
 
- Ortak dil belirtiminin (CLS) kural 4 ' e göre, tüm uyumlu dillerin, söz konusu dilin anahtar sözcüğünü tanımlayıcı olarak kullanan adlandırılmış öğelere erişime izin veren bir mekanizma sağlaması gerekir. C#Örneğin, bu durumda @ Sign 'ı kaçış mekanizması olarak kullanır. Ancak, bir yöntemi kaçış sırası olmadan kullanmak çok daha zor olduğundan ortak anahtar sözcüklerden kaçınmak iyi bir fikirdir.
+ ❌Yaygın olarak kullanılan programlama dillerinin anahtar kelimeleriyle çakışan tanımlayıcılar kullanmaktan kaçının.
 
-## <a name="using-abbreviations-and-acronyms"></a>Kısaltmalar ve kısaltmalar kullanma
- ❌ tanımlayıcı adlarının bir parçası olarak kısaltmalar veya aykırılıkları kullanmayın.
+ Ortak Dil Belirtimi'nin (CLS) Kural 4'e göre, tüm uyumlu dillerin söz tanımlayıcı olarak o dilin anahtar sözcüklerini kullanan adlandırılmış öğelere erişmesine izin veren bir mekanizma sağlaması gerekir. C#, örneğin, bu durumda bir kaçış mekanizması olarak @ işaretini kullanır. Ancak, kaçış sırası olan bir yöntemi onsuz kullanmaktan çok daha zor olduğu için ortak anahtar kelimelerden kaçınmak yine de iyi bir fikirdir.
+
+## <a name="using-abbreviations-and-acronyms"></a>Kısaltmaları ve Kısaltmaları Kullanma
+ ❌Tanımlayıcı adlarının bir parçası olarak kısaltmalar veya kasılmalar KULLANMAYIN.
 
  Örneğin, `GetWin`yerine `GetWindow` kullanın.
 
- ❌, yaygın olarak kabul edilmeyen ve yalnızca gerekli olduğunda bile olmayan kısaltmalar kullanmayın.
+ ❌Yaygın olarak kabul edilmeyen kısaltmalar kullanmayın ve öyle olsalar bile, yalnızca gerektiğinde.
 
-## <a name="avoiding-language-specific-names"></a>Dile özgü adlardan kaçınma
- ✔️, tür adları için dile özgü anahtar sözcükler yerine anlam açısından ilginç adlar kullanır.
+## <a name="avoiding-language-specific-names"></a>Dile Özgü Adlardan Kaçınma
+ do✔️ tür adları için dile özgü anahtar kelimeler yerine anlamsal olarak ilginç adlar kullanır.
 
- Örneğin, `GetLength` `GetInt`daha iyi bir addır.
+ Örneğin, `GetLength` daha iyi bir `GetInt`addır.
 
- ✔️, bir tanımlayıcının türünün ötesinde anlam anlamı olmadığında nadir durumlarda, dile özgü bir ad yerine genel CLR türü adı kullanın.
+ ✔️ Bir tanımlayıcının türünden başka anlamsal anlamı olmadığı nadir durumlarda, dile özgü bir ad yerine genel bir CLR türü adı kullanın.
 
- Örneğin, <xref:System.Int64> dönüştürme yöntemi `ToLong` değil `ToInt64`olarak adlandırılmalıdır (<xref:System.Int64> özel ad için C#bir clr adı olduğundan `long`). Aşağıdaki tabloda, CLR tür adlarını (Ayrıca, Visual Basic ve C# C++için karşılık gelen tür adlarını) kullanarak çeşitli temel veri türleri sunulmaktadır.
+ Örneğin, dönüştürme yöntemi , <xref:System.Int64> değil `ToInt64` `ToLong` (c# <xref:System.Int64> özgü takma ad `long`için bir CLR adı olduğundan) adlı olmalıdır. Aşağıdaki tablo, CLR türü adlarını (c#, Visual Basic ve C++) için karşılık gelen tür adlarını kullanarak birkaç temel veri türü sunar.
 
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
-|**sbyte**|**SByte**|**char**|**SByte**|
-|**byte**|**Bayt**|**işaretsiz karakter**|**Bayt**|
-|**short**|**Kısadır**|**short**|**Int16**|
-|**ushort**|**Int16**|**işaretsiz kısa**|**Int16**|
-|**int**|**Gir**|**int**|**Int32**|
-|**uint**|**Int32**|**işaretsiz int**|**Int32**|
-|**long**|**Kalacağını**|**__int64**|**Tutulamaz**|
-|**ulong**|**Int64**|**imzasız __int64**|**Int64**|
-|**float**|**Sunuculu**|**float**|**Sunuculu**|
+|**Sbyte**|**Sbyte**|**char**|**Sbyte**|
+|**Bayt**|**Bayt**|**unsigned char**|**Bayt**|
+|**short**|**Kısa**|**short**|**Int16**|
+|**ushort**|**UInt16**|**imzasız short**|**UInt16**|
+|**int**|**Tamsayı**|**int**|**Int32**|
+|**Uint**|**UInt32**|**unsigned int**|**UInt32**|
+|**long**|**Uzun**|**__int64**|**Int64**|
+|**ulong**|**UInt64**|**imzasız __int64**|**UInt64**|
+|**float**|**Tek**|**float**|**Tek**|
 |**double**|**Çift**|**double**|**Çift**|
-|**bool**|**Boolean**|**bool**|**Boolean**|
+|**bool**|**Boole**|**bool**|**Boole**|
 |**char**|**Char**|**wchar_t**|**Char**|
-|**string**|**Dize**|**Dize**|**Dize**|
-|**object**|**Nesne**|**Nesne**|**Nesne**|
+|**Dize**|**Dize**|**Dize**|**Dize**|
+|**Nesne**|**Nesne**|**Nesne**|**Nesne**|
 
- ✔️, tür adını yinelemek yerine `value` veya `item`gibi ortak bir ad kullanın, nadir olarak bir tanımlayıcının anlam anlamı yoktur ve parametre türü önemli değildir.
+ ✔️ bir tanımlayıcının anlamsal `value` `item`anlamı olmadığı ve parametrenin türü önemli olmadığı nadir durumlarda, tür adını yinelemek yerine ortak bir ad kullanın.
 
-## <a name="naming-new-versions-of-existing-apis"></a>Mevcut API 'lerin yeni sürümlerini adlandırma
- ✔️ var olan bir API 'nin yeni sürümlerini oluştururken eski API 'ye benzer bir ad kullanın.
+## <a name="naming-new-versions-of-existing-apis"></a>Varolan API'lerin Yeni Sürümlerini Adlandırma
+ do ✔️, varolan bir API'nin yeni sürümlerini oluştururken eski API'ye benzer bir ad kullanın.
 
- Bu, API 'Ler arasındaki ilişkiyi vurgulamaya yardımcı olur.
+ Bu, API'ler arasındaki ilişkiyi vurgulamaya yardımcı olur.
 
- ✔️ var olan bir API 'nin yeni bir sürümünü göstermek için önek yerine bir sonek eklemeyi tercih edebilirsiniz.
+ ✔️ VAROLAN API'nin yeni bir sürümünü belirtmek için önek yerine sonek eklemeyi tercih edin.
 
- Bu, belgelere gözatarken veya IntelliSense kullanılırken bulmaya yardımcı olur. Çoğu tarayıcı ve IntelliSense tanımlayıcıları alfabetik sırada göstertiğinden, API 'nin eski sürümü yeni API 'lere yakın şekilde düzenlenir.
+ Bu, belgelere göz atarken veya IntelliSense'i kullanırken keşfe yardımcı olur. Çoğu tarayıcı ve IntelliSense tanımlayıcıları alfabetik sırada gösterdiğinden, API'nin eski sürümü yeni API'lere yakın olarak düzenlenir.
 
- ✔️, bir sonek veya ön ek eklemek yerine yeni bir yepyeni, ancak anlamlı bir tanımlayıcı kullanmayı düşünün.
+ ✔️ bir sonek veya önek eklemek yerine yepyeni, ancak anlamlı bir tanımlayıcı kullanmayı düşünün.
 
- ✔️ var olan bir API 'nin yeni bir sürümünü göstermek için sayısal bir sonek kullanın, özellikle de var olan API 'nin adı anlamlı olan tek addır (yani, bir sektör standardı ise) ve anlamlı bir sonek eklemek (veya adı değiştirmek) uygun bir Opti değilse dayanır.
+ ✔️, özellikle API'nin varolan adı anlamlı olan tek ad (örneğin, bir endüstri standardıysa) ve anlamlı bir sonek eklemek (veya adı değiştirmek) uygun bir seçenek değilse, varolan bir API'nin yeni bir sürümünü belirtmek için sayısal bir sonek kullanın.
 
- ❌, bir tanımlayıcı için "Ex" (veya benzer) sonekini, aynı API 'nin önceki bir sürümünden ayırt etmek için kullanmaz.
+ ❌"Ex" (veya benzer) sonekini, aynı API'nin önceki bir sürümünden ayırt etmek için tanımlayıcı için KULLANMAYIN.
 
- ✔️, 32 bit tamsayı yerine 64 bit tamsayı (uzun tamsayı) üzerinde çalışan API sürümlerini ("64" sonekini) kullanıma sunuyor. Yalnızca var olan 32 bitlik API olduğunda bu yaklaşımı uygulamanız gerekir; Bunu yalnızca 64 bitlik bir sürümle yepyeni yeni API 'Ler için yapmayın.
+ ✔️ 32 bit tamsayı yerine 64 bit tamsayı (uzun bir tamsayı) üzerinde çalışan API sürümlerini tanıtırken "64" soneki kullanın. Bu yaklaşımı yalnızca varolan 32 bit API varsa almanız gerekir; sadece 64-bit sürümü ile yepyeni API'ler için bunu yapmayın.
 
- *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+ *Porsiyonlar &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
+ *Pearson Education, Inc.'in izniyle [Framework Design Guidelines: Conventions, Idioms and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina ve Brad Abrams tarafından 22 Ekim 2008'de Addison-Wesley Professional tarafından Microsoft Windows Geliştirme Serisi'nin bir parçası olarak yayımlandı.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [.NET, EditorConfig için adlandırma kuralları](/visualstudio/ide/editorconfig-naming-conventions)

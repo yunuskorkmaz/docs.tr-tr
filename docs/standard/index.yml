@@ -1,0 +1,159 @@
+### YamlMime:Landing
+title: .NET belgeleri
+summary: Birçok farklı uygulama türü oluşturmak için açık kaynak kodlu bir geliştirici platformu olan .NET hakkında bilgi edinin.
+metadata:
+  title: .NET belgeleri
+  description: Birçok farklı uygulama türü oluşturmak için açık kaynak kodlu bir geliştirici platformu olan .NET hakkında bilgi edinin.
+  ms.topic: landing-page
+  ms.date: 03/27/2020
+  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
+  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 04/03/2020
+  ms.locfileid: "80636082"
+landingContent:
+- title: .NET hakkında bilgi edinin
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET Turu
+      url: tour.md
+    - text: .NET nedir?
+      url: https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet
+  - linkListType: concept
+    links:
+    - text: .NET Standard
+      url: net-standard.md
+    - text: .NET Core
+      url: ../core/about.md
+    - text: Hedef çerçeveler
+      url: frameworks.md
+    - text: Ortak Dil Çalışma Zamanı (CLR)
+      url: clr.md
+    - text: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
+      url: choosing-core-framework-server.md
+  - linkListType: whats-new
+    links:
+    - text: .NET Standard’daki yenilikler
+      url: whats-new/whats-new-in-dotnet-standard.md
+    - text: ​.NET Core’daki yenilikler
+      url: ../core/whats-new/dotnet-core-3-1.md
+- title: Verileri serihale
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Serihale ve JSON deserialize
+      url: serialization/system-text-json-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: "C kullanarak JSON'u seri hale ve deserialize edin #"
+      url: serialization/system-text-json-how-to.md
+    - text: Newtonsoft.Json'dan System.Text.Json'a göç edin
+      url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+    - text: JSON serileştirme için özel dönüştürücüler yazın
+      url: serialization/system-text-json-converters-how-to.md
+  - linkListType: sample
+    links:
+    - text: XML serileştirme örnekleri
+      url: serialization/examples-of-xml-serialization.md
+- title: Tarihleri, sayıları ve dizeleri biçimlendirme ve dönüştürme
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Sayısal biçim dizeleri
+      url: base-types/standard-numeric-format-strings.md
+    - text: Tarih ve saat biçimi dizeleri
+      url: base-types/standard-date-and-time-format-strings.md
+    - text: Bileşik biçimlendirme
+      url: base-types/composite-formatting.md
+    - text: Saatleri saat dilimleri arasında dönüştürme
+      url: datetime/converting-between-time-zones.md
+    - text: Karakterleri dizeleri kırpma ve kaldırma
+      url: base-types/trimming.md
+    - text: .NET'te normal ifadeler
+      url: base-types/regular-expressions.md
+  - linkListType: how-to-guide
+    links:
+    - text: Dizeleri DateTime'a dönüştürme
+      url: base-types/parsing-datetime.md
+    - text: Önde gelen sıfırlara sahip bir sayıyı pad
+      url: base-types/how-to-pad-a-number-with-leading-zeros.md
+    - text: Tarih ve saat değerlerinde milisaniyegörüntüleme
+      url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+  - linkListType: reference
+    links:
+    - text: Normal ifade dili
+      url: base-types/regular-expression-language-quick-reference.md
+- title: Tasarım sınıfları ve kütüphaneler
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Tasarım yönergeleri
+      url: design-guidelines/index.md
+  - linkListType: concept
+    links:
+    - text: Adlandırma kuralları
+      url: design-guidelines/general-naming-conventions.md
+    - text: Büyük harf leme sözleşmeleri
+      url: design-guidelines/capitalization-conventions.md
+- title: Olayları ve özel durumları kullanma
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Özel durumlar için en iyi uygulamalar
+      url: exceptions/best-practices-for-exceptions.md
+    - text: Olayları işleme ve tetikleme
+      url: events/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Özel durumları yakalamak için try-catch bloğu kullanma
+      url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - text: Olayları yükseltme ve tüketme
+      url: events/how-to-raise-and-consume-events.md
+- title: Dosya ve akış G/Ç
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Dosya ve akış G/Ç
+      url: io/index.md
+    - text: Windows'da dosya yolu biçimleri
+      url: io/file-path-formats.md
+  - linkListType: how-to-guide
+    links:
+    - text: Dosyaya metin yazma
+      url: io/how-to-write-text-to-a-file.md
+    - text: Dosyadaki metni okuma
+      url: io/how-to-read-text-from-a-file.md
+    - text: Dosyaları sıkıştırma ve ayıklama
+      url: io/how-to-compress-and-extract-files.md
+    - text: Günlük dosyasını açma ve ekle
+      url: io/how-to-open-and-append-to-a-log-file.md
+- title: Bellek kullanımını yönetme
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Çöp toplama temelleri
+      url: garbage-collection/fundamentals.md
+    - text: Elden Çıkarma yöntemi uygulayın
+      url: garbage-collection/implementing-dispose.md
+- title: Paralel programlama hakkında bilgi edinin
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET içinde Paralel Programlama
+      url: parallel-programming/index.md
+  - linkListType: concept
+    links:
+    - text: Görev Paralel Kitaplığı (TPL)
+      url: parallel-programming/task-parallel-library-tpl.md
+    - text: Görev tabanlı asynchronous programlama
+      url: parallel-programming/task-based-asynchronous-programming.md
+    - text: Görev iptali
+      url: parallel-programming/task-cancellation.md
+  - linkListType: how-to-guide
+    links:
+    - text: Parallel.ForEach kullanarak basit bir paralel program yazın
+      url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+    - text: Görevden değer döndürme
+      url: parallel-programming/how-to-return-a-value-from-a-task.md
