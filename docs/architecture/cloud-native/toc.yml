@@ -39,8 +39,8 @@
           href: front-end-communication.md
         - name: Hizmetten hizmete iletişim
           href: service-to-service-communication.md
-        - name: REST ve gRPC
-          href: rest-grpc.md
+        - name: gRPC
+          href: grpc.md
         - name: Service Mesh iletişim altyapısı
           href: service-mesh-communication-infrastructure.md
     - name: Dağıtılmış Veriler
