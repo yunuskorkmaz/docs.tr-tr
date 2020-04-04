@@ -1,13 +1,13 @@
 ---
 title: Uygulama yayımlama
 description: Bir .NET Core uygulamasını yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platform lar arası uygulamalar yayınlayabilir. Bir uygulamayı bağımsız veya çalışma süresine bağlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl çalıştırdığını etkiler.
-ms.date: 01/31/2020
-ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/01/2020
+ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399065"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665534"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayıncılığı genel bakış
 
@@ -15,7 +15,7 @@ ms.locfileid: "79399065"
 
 Uygulamanızı *bağımsız* olarak yayımlama, .NET Core çalışma zamanı ve kitaplıkları, uygulamanızı ve bağımlılıklarını içeren bir uygulama üretir. Uygulamanın kullanıcıları bunu .NET Core çalışma zamanı yüklü olmayan bir makinede çalıştırabilir.
 
-Uygulamanızı *çalışma süresine bağlı* olarak yayımlama, yalnızca uygulamanızın kendisini ve bağımlılıklarını içeren bir uygulama üretir. Uygulama kullanıcılarının .NET Core çalışma süresini ayrı olarak yüklemeleri gerekir.
+Uygulamanızı *çalışma süresine bağımlı* (daha önce *çerçeveye bağımlı*olarak bilinir) olarak yayımlama, yalnızca uygulamanızın kendisini ve bağımlılıklarını içeren bir uygulama üretir. Uygulama kullanıcılarının .NET Core çalışma süresini ayrı olarak yüklemeleri gerekir.
 
 Her iki yayımlama modu varsayılan olarak platforma özgü bir yürütülebilir üretir. Runtime bağımlı uygulamalar yürütülebilir olmadan oluşturulabilir ve bu uygulamalar çapraz platformdur.
 
