@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
       href: deploying/runtime-patch-selection.md
+    - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
+      href: deploying/trim-self-contained.md
     - name: Çalışma zamanı paket deposu
       href: deploying/runtime-store.md
 - name: Docker
