@@ -2,12 +2,12 @@
 title: Bir mikro hizmete CQRS ve DDD desenlerini uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | CQRS ve DDD desenleri arasındaki genel ilişkiyi anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834310"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805585"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Basitleştirilmiş CQRS ve DDD desenlerini microservice'e uygulayın
 
@@ -17,9 +17,9 @@ CQRS, veri okuma ve yazma modellerini birbirinden ayıran mimari bir desendir. �
 
 - Komut. Bunlar sistemin durumunu değiştirir.
 
-CQS basit bir kavramdır-aynı nesne içinde sorgular veya komutlar olan yöntemler hakkında. Her yöntem durumu döndürür veya durumu mutasyona uğratsa da her ikisini birden döndürmez. Tek bir depo deseni nesnesi bile CQS ile uyumlu olabilir. CQS, CQRS için temel bir ilke olarak kabul edilebilir.
+CQS basit bir kavramdır: aynı nesne içinde sorgular veya komutlar olan yöntemler hakkında. Her yöntem durumu döndürür veya durumu mutasyona uğratsa da her ikisini birden döndürmez. Tek bir depo deseni nesnesi bile CQS ile uyumlu olabilir. CQS, CQRS için temel bir ilke olarak kabul edilebilir.
 
-[Komut ve Sorgu Sorumluluk Ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html) Greg Young tarafından tanıtıldı ve kuvvetle Udi Dahan ve diğerleri tarafından teşvik. Daha ayrıntılı olmasına rağmen, CQS ilkesine dayanmaktadır. Komutlara ve olaylara ve isteğe bağlı olarak eşzamanlı iletilere dayalı bir desen olarak kabul edilebilir. Çoğu durumda, CQRS daha gelişmiş senaryolar ile ilgilidir, okumalar için farklı bir fiziksel veritabanı olması gibi (sorgular) yazma (güncelleştirmeler). Ayrıca, daha gelişmiş bir CQRS sistemi güncelleştirme veritabanınız için [Olay Kaynağı (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) uygulayabilir, böylece olayları geçerli durum verilerini depolamak yerine yalnızca etki alanı modelinde depolarsınız. Ancak, bu kılavuzda kullanılan yaklaşım bu değildir; sorguları komutlardan ayırmaktan oluşan en basit CQRS yaklaşımını kullanıyoruz.
+[Komut ve Sorgu Sorumluluk Ayrımı (CQRS)](https://martinfowler.com/bliki/CQRS.html) Greg Young tarafından tanıtıldı ve kuvvetle Udi Dahan ve diğerleri tarafından teşvik. Daha ayrıntılı olmasına rağmen, CQS ilkesine dayanmaktadır. Komutlara ve olaylara ve isteğe bağlı olarak eşzamanlı iletilere dayalı bir desen olarak kabul edilebilir. Çoğu durumda, CQRS daha gelişmiş senaryolar ile ilgilidir, okumalar için farklı bir fiziksel veritabanı olması gibi (sorgular) yazma (güncelleştirmeler). Ayrıca, daha gelişmiş bir CQRS sistemi güncelleştirme veritabanınız için [Olay Kaynağı (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) uygulayabilir, böylece olayları geçerli durum verilerini depolamak yerine yalnızca etki alanı modelinde depolarsınız. Ancak, bu yaklaşım bu kılavuzda kullanılmaz. Bu kılavuz, sorguları komutlardan ayırmaktan oluşan en basit CQRS yaklaşımını kullanır.
 
 CQRS ayırma yönü bir katmanda sorgu işlemleri gruplandırma ve başka bir katmanda komutları elde edilir. Her katmanın kendi veri modeli vardır (model dediğimize dikkat edin, farklı bir veritabanı değil) ve kendi desen ve teknoloji kombinasyonu kullanılarak oluşturulmuştur. Daha da önemlisi, iki katman, bu kılavuz için kullanılan örnekte (sipariş mikroservice) olduğu gibi, aynı katman veya microservice içinde olabilir. Ya da farklı mikro hizmetler de veya süreçlerde uygulanabilir, böylece birbirlerini etkilemeden ayrı ayrı optimize edilebilir ve ölçeklendirilebilir.
 

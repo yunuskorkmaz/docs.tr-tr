@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-compose.yml ile çok konteynerli bir uygulama için mikrohizmetler kompozisyonu nasıl belirtilir.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523645"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805598"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -177,7 +177,7 @@ Farklı ortamları hedeflerken, birden çok oluşturma dosyası kullanmanız ger
 
 Varsayılan olarak, Compose iki dosya, bir docker-compose.yml ve isteğe bağlı docker-compose.override.yml dosyaokur. Şekil 6-11'de gösterildiği gibi, Visual Studio'yu kullanırken ve Docker desteğini etkinleştirirken, Visual Studio ayrıca uygulamanın hata ayıklanması için ek bir docker-compose.vs.debug.g.yml dosyası oluşturur, ana çözüm klasöründe obj\\Docker\\ klasöründe bu dosyaya göz atabilirsiniz.
 
-![Bir docker oluşturmak proje dosyaların ekran görüntüsü.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Docker'daki dosyalar proje oluşturur.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Şekil 6-11**. Visual Studio 2019'da docker-compose dosyaları
 
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 Böyle bir Dockerdosyası işe yarar. Ancak, resimlerinizi, özellikle de üretim resimlerinizi önemli ölçüde optimize edebilirsiniz.
 
-Konteyner ve mikrohizmetler modelinde, sürekli konteyner başlatın. Kapsayıcı tek kullanımlık olduğundan, kapsayıcıları kullanmanın tipik yolu uyku kabını yeniden başlatmaz. Orkestratörler (Kubernetes ve Azure Hizmet Kumaşı gibi) yeni görüntü örnekleri oluşturur. Bunun anlamı, uygulama inşa edildiğinde önceden derleyerek en iyi duruma getirmeniz gerektiğidir, böylece anlık işlem daha hızlı olacaktır. Kapsayıcı başlatıldığında, çalışmaya hazır olmalıdır. .NET Core ve Docker hakkındaki birçok `dotnet restore` `dotnet build` blog gönderisinde gördüğünüz gibi, dotnet CLI'yi kullanarak ve komutları kullanarak çalışma zamanında geri yüklememeli ve derlememelisiniz.
+Konteyner ve mikrohizmetler modelinde, sürekli konteyner başlatın. Kapsayıcı tek kullanımlık olduğundan, kapsayıcıları kullanmanın tipik yolu uyku kabını yeniden başlatmaz. Orkestratörler (Kubernetes ve Azure Hizmet Kumaşı gibi) yeni görüntü örnekleri oluşturur. Bunun anlamı, uygulama inşa edildiğinde önceden derleyerek en iyi duruma getirmeniz gerektiğidir, böylece anlık işlem daha hızlı olacaktır. Kapsayıcı başlatıldığında, çalışmaya hazır olmalıdır. .NET Core ve Docker hakkındaki blog `dotnet restore` `dotnet build` gönderilerinde görebileceğiniz gibi ve CLI komutlarını kullanarak çalışma zamanında geri yüklemeyin ve derlemeyin.
 
 .NET ekibi .NET Core ve ASP.NET Core'u konteyner için optimize edilmiş bir çerçeve haline getirmek için önemli çalışmalar yapıyor. Sadece .NET Core küçük bir bellek ayak izi ile hafif bir çerçeve; ekip üç ana senaryo için optimize edilmiş Docker görüntülerine odaklanmıştır ve bunları sürüm 2.1 ile başlayan *dotnet/core*adresindeki Docker Hub kayıt defterinde yayınlamıştır:
 
-1. **Geliştirme**: Önceliğin değişiklikleri hızlı bir şekilde yineleme ve hata ayıklama yeteneği ve boyutun ikincil olduğu yerdir.
+1. **Geliştirme**: Öncelik değişiklikleri hızlı bir şekilde yineleme ve hata ayıklama yeteneğidir ve boyutun ikincil olduğu yerdir.
 
-2. **Yapı**: Öncelik uygulamayı derlemektir ve ikilileri optimize etmek için ikili leri ve diğer bağımlılıkları içerir.
+2. **Yapı**: Öncelik uygulamayı derlemektir ve görüntü ikilileri optimize etmek için ikilileri ve diğer bağımlılıkları içerir.
 
-3. **Üretim**: Odak noktasının konteynerlerin hızlı bir şekilde dağıtılması ve başlatılması dır, bu nedenle bu görüntüler uygulamanın çalıştırılması için gereken ikili ve içerikle sınırlıdır.
+3. **Üretim**: Odak hızlı dağıtım ve kapsayıcıların başlatılması, bu nedenle bu görüntüler ikili ve içerik uygulama çalıştırmak için gerekli sınırlıdır.
 
-Bunu başarmak için ,NET ekibi [dotnet/core'da](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub'da) dört temel türevi sağlar:
+.NET ekibi [dotnet/core'da](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub'da) dört temel çeşidi sağlar:
 
 1. **sdk**: geliştirme ve inşa senaryoları için
 1. **aspnet**: ASP.NET üretim senaryoları için
 1. **runtime**: .NET üretim senaryoları için
-1. **runtime-deps**: bağımsız uygulamaların üretim [senaryoları](../../../core/deploying/index.md#publish-self-contained)için.
+1. **runtime-deps**: bağımsız uygulamaların üretim [senaryoları](../../../core/deploying/index.md#publish-self-contained) için
 
 Daha hızlı başlangıç için, çalışma zamanı görüntüleri\_aspnetcore url'lerini 80 bağlantı noktasına otomatik olarak ayarlar ve yerel bir anagörüntü önbelleği oluşturmak için Ngen'i kullanır.
 

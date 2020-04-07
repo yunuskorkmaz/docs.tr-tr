@@ -1,16 +1,16 @@
 ---
-title: İlişkisel ve NoSQL verileri
+title: İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 description: Bulut ayarı uygulamalarında ilişkisel ve NoSQL verileri hakkında bilgi edinin
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141425"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805801"
 ---
-# <a name="relational-vs-nosql-data"></a>İlişkisel ve NoSQL verileri
+# <a name="relational-vs-nosql-data"></a>İlişkisel veriler ile NoSQL verilerinin karşılaştırması
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -284,5 +284,5 @@ Daha fazla zaman alan görevlerden biri, verileri bir veri platformundan diğeri
 Hizmet, küçük veya büyük bir geçiş yürütmek için gereken değişiklikler boyunca size rehberlik etmek için öneriler sağlar.
 
 >[!div class="step-by-step"]
->[Önceki](Database-per-microservice.md)
+>[Önceki](database-per-microservice.md)
 >[Sonraki](azure-caching.md)

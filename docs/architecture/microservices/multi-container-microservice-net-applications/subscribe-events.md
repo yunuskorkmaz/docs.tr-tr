@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Tümleştirme etkinliklerini yayımlama ve abone etme ayrıntılarını anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523603"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805504"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -95,9 +95,9 @@ Tümleştirme olaylarını olay veri tobununuz gibi dağıtılmış bir ileti si
 
 Temel olarak, ölçeklenebilir ve yüksek kullanılabilir sistemler oluşturmak için mikro hizmetleri kullanın. Biraz basitleştiren CAP teoremi, sürekli olarak kullanılabilir, güçlü tutarlı *ve* herhangi bir bölüme toleranslı bir (dağıtılmış) veritabanı (veya kendi modeline sahip bir microservice) oluşturamayacağınızı söyler. Bu üç özelliklerden ikisini seçmeniz gerekir.
 
-Mikro hizmetler tabanlı mimarilerde kullanılabilirlik ve toleransı seçmeli ve güçlü tutarlılığı vurgulamanız gerekir. Bu nedenle, çoğu modern mikrohizmet tabanlı uygulamalarda, [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)ile Windows Dağıtılmış İşlem Koordinatörü'ne (DTC) dayalı dağıtılmış hareketleri uyguladığınızda yaptığınız gibi, genellikle iletide [dağıtılmış hareketleri](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) kullanmak istemezsinüz.
+Mikro hizmetler tabanlı mimarilerde kullanılabilirlik ve toleransı seçmeli ve güçlü tutarlılığı vurgulamamalısınız. Bu nedenle, çoğu modern mikrohizmet tabanlı uygulamalarda, [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)ile Windows Dağıtılmış İşlem Koordinatörü'ne (DTC) dayalı dağıtılmış hareketleri uyguladığınızda yaptığınız gibi, genellikle iletide [dağıtılmış hareketleri](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) kullanmak istemezsinüz.
 
-İlk sayıya ve onun örneğine geri dönelim. Hizmet veritabanı güncelleştirildikten sonra çatlarsa (bu durumda, bağlamlı \_kod satırından hemen sonra. SaveChangesAsync()), ancak tümleştirme olayı yayımlanmadan önce, genel sistem tutarsız olabilir. Bu, uğraştığınız belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
+İlk sayıya ve onun örneğine geri dönelim. Veritabanı güncelleştirildikten sonra hizmet çöküyorsa (bu durumda, kod `_context.SaveChangesAsync()`satırından hemen sonra), ancak tümleştirme olayı yayımlanmadan önce, genel sistem tutarsız olabilir. Bu, uğraştığınız belirli iş işlemine bağlı olarak iş açısından kritik olabilir.
 
 Mimari bölümünde daha önce de belirtildiği gibi, bu sorunla başa çıkmak için çeşitli yaklaşımlar olabilir:
 
@@ -109,7 +109,7 @@ Mimari bölümünde daha önce de belirtildiği gibi, bu sorunla başa çıkmak 
 
 Bu senaryo için, tam Olay Kaynak (ES) desen kullanarak en iyi yaklaşımlardan biridir, değilse *en* iyi. Ancak, birçok uygulama senaryosunda, tam bir ES sistemi uygulayamayabilirsiniz. ES, geçerli durum verilerini depolamak yerine yalnızca etki alanı olaylarını işlem veritabanınızda depolamak anlamına gelir. Yalnızca etki alanı olaylarını depolamanın, sisteminizin geçmişine sahip olması ve geçmişte herhangi bir anda sisteminizin durumunu belirleyebilmesi gibi büyük avantajları olabilir. Ancak, tam bir ES sistemi uygulamak, sisteminizin çoğunu yeniden yeniden mimarlandırmanızı gerektirir ve diğer birçok karmaşıklığı ve gereksinimi sunar. Örneğin, [Olay Mağazası](https://eventstore.org/)gibi olay kaynağı için özel olarak yapılmış bir veritabanı veya Azure Cosmos DB, MongoDB, Cassandra, CouchDB veya RavenDB gibi belge yönelimli bir veritabanı kullanmak isteyebilirsiniz. ES bu sorun için harika bir yaklaşımdır, ancak olay kaynak konusunda zaten aşina değilseniz en kolay çözüm değildir.
 
-Hareket günlüğü madenciliği kullanma seçeneği başlangıçta çok saydam görünüyor. Ancak, bu yaklaşımı kullanmak için, mikro hizmetIN SQL Server işlem günlüğü gibi RDBMS işlem günlüğünüze birleştirilmesi gerekir. Bu muhtemelen arzu edilmez. Başka bir dezavantajı, işlem günlüğüne kaydedilen alt düzey güncelleştirmelerin üst düzey tümleştirme olaylarınızla aynı düzeyde olmamasıdır. Bu nedenle, bu işlem günlüğü işlemleri ters mühendislik işlemi zor olabilir.
+Hareket günlüğü madenciliği kullanma seçeneği başlangıçta saydam görünüyor. Ancak, bu yaklaşımı kullanmak için, mikro hizmetIN SQL Server işlem günlüğü gibi RDBMS işlem günlüğünüze birleştirilmesi gerekir. Bu muhtemelen arzu edilmez. Başka bir dezavantajı, işlem günlüğüne kaydedilen alt düzey güncelleştirmelerin üst düzey tümleştirme olaylarınızla aynı düzeyde olmamasıdır. Bu nedenle, bu işlem günlüğü işlemleri ters mühendislik işlemi zor olabilir.
 
 Dengeli bir yaklaşım, işlem veritabanı tablosu nun ve basitleştirilmiş ES deseninin bir karışımıdır. Tümleştirme olayları tablosuna işledirirken özgün olayda ayarlayacağınız "olayı yayımlamaya hazır" gibi bir durum kullanabilirsiniz. Daha sonra etkinliği etkinlik otobüsüne yayımlamaya çalışırsınız. Yayımlama olayı eylemi başarılı olursa, kaynak hizmetinde başka bir işlem başlatın ve durumu "etkinliği yayımlamaya hazır"dan "zaten yayımlanmış olay"a taşırsınız.
 
@@ -157,9 +157,9 @@ Basitlik için, eShopOnContainers örnek ilk yaklaşım (hiçbir ek süreçler v
 
 Aşağıdaki kod, birden çok DbContext nesnesini içeren tek bir işlemi (bir bağlam orijinal verilerle ilgili bir bağlam ve IntegrationEventLog tablosuyla ilgili ikinci bağlam) nasıl oluşturabileceğinizi gösterir.
 
-Aşağıdaki örnek koddaki işlemin, kod çalışırken veritabanına bağlantılarda herhangi bir sorun varsa esnek olmayacağını unutmayın. Bu, veritabanlarını sunucular arasında taşıyabilecek Azure SQL DB gibi bulut tabanlı sistemlerde gerçekleşebilir. Birden çok bağlam boyunca esnek hareketler uygulamak için, daha sonra bu kılavuzda [esnek Entity Framework SQL bağlantıları uygulama](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) bölümüne bakın.
+Aşağıdaki örnek koddaki işlem, kod çalışırken veritabanına bağlantılarda herhangi bir sorun varsa esnek olmayacaktır. Bu, veritabanlarını sunucular arasında taşıyabilecek Azure SQL DB gibi bulut tabanlı sistemlerde gerçekleşebilir. Birden çok bağlam boyunca esnek hareketler uygulamak için, daha sonra bu kılavuzda [esnek Entity Framework SQL bağlantıları uygulama](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) bölümüne bakın.
 
-Netlik için aşağıdaki örnek, tüm işlemi tek bir kod parçasında gösterir. Ancak, eShopOnContainers uygulaması aslında refactored ve korumak için daha kolay böylece birden fazla sınıfa bu mantığı bölmek.
+Netlik için aşağıdaki örnek, tüm işlemi tek bir kod parçasında gösterir. Ancak, eShopOnContainers uygulaması refactored ve korumak için daha kolay böylece birden fazla sınıfa bu mantığı böler.
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -285,7 +285,7 @@ Olay işleyicisinin, ürünün sepet örneklerinin herhangi birinde bulunup bulu
 
 ## <a name="idempotency-in-update-message-events"></a>İleti olaylarını güncelleştirmede idempotency
 
-İleti olaylarını güncelleştirmenin önemli bir yönü, iletişimin herhangi bir noktasındaki bir hatanın iletinin yeniden denenmesine neden olmasıdır. Aksi takdirde, arka plandaki bir görev, bir yarış koşulu oluşturarak zaten yayımlanmış bir olayı yayımlamaya çalışabilir. Güncelleştirmelerin iktidara geldiklerinden veya bir yinelenenalgılayabilmenizi, atabilmenizi ve yalnızca bir yanıt gönderebilmenizi sağlamak için yeterli bilgi sağladıklarından emin olmanız gerekir.
+İleti olaylarını güncelleştirmenin önemli bir yönü, iletişimin herhangi bir noktasındaki bir hatanın iletinin yeniden denenmesine neden olmasıdır. Aksi takdirde, arka plandaki bir görev, bir yarış koşulu oluşturarak zaten yayımlanmış bir olayı yayımlamaya çalışabilir. Güncelleştirmelerin iktidarlı olduğundan veya bir yinelenen algılayabildiğinizden, atabildiğinizden ve yalnızca bir yanıt gönderebildiğinizden emin olmak için yeterli bilgi sağladıklarından emin olun.
 
 Daha önce de belirtildiği gibi, idempotency bir işlem sonucu değiştirmeden birden çok kez yapılabilir anlamına gelir. İleti ortamında, olayları iletirken olduğu gibi, bir olay alıcı mikrohizmetinin sonucunu değiştirmeden birden çok kez teslim edilebiliyorsa, idempotenttir. Bu, olayın doğası nedeniyle veya sistemin olayı işleme biçimi nedeniyle gerekli olabilir. İleti idempotency, yalnızca olay veri çileti deseni uygulayan uygulamalarda değil, ileti kullanan her uygulamada önemlidir.
 
@@ -306,11 +306,11 @@ Bazı ileti işleme doğal olarak idempotent olduğunu. Örneğin, bir sistem re
 
 ## <a name="deduplicating-integration-event-messages"></a>Tümleştirme olay iletilerini deduplicating
 
-İleti olaylarının farklı düzeylerde abone başına sadece bir kez gönderildiğinden ve işlendiğinden emin olabilirsiniz. Bir yol, kullanmakta olduğunuz mesajlaşma altyapısı tarafından sunulan bir çoğaltma özelliğikullanmaktır. Başka bir hedef microservice özel mantık uygulamaktır. Hem taşıma düzeyinde hem de uygulama düzeyinde doğrulamalara sahip olmak en iyi bahistir.
+İleti olaylarının farklı düzeylerde abone başına yalnızca bir kez gönderildiğinden ve işlendiğinden emin olabilirsiniz. Bir yol, kullanmakta olduğunuz mesajlaşma altyapısı tarafından sunulan bir çoğaltma özelliğikullanmaktır. Başka bir hedef microservice özel mantık uygulamaktır. Hem taşıma düzeyinde hem de uygulama düzeyinde doğrulamalara sahip olmak en iyi bahistir.
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>EventHandler düzeyinde ileti olaylarını deduplicating
 
-Bir olayın herhangi bir alıcı tarafından sadece bir kez işlendiğinden emin olmak için bir yolu olay işleyicileri ileti olayları işlerken belirli bir mantık uygulamaktır. Örneğin, [usercheckoutAcceptedIntegrationHandler sınıfının kaynak kodunda](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) gördüğünüz gibi, eShopOnContainers uygulamasında kullanılan yaklaşım, usercheckoutAcceptedIntegrationEvent event olay olayını aldığında. (Bu durumda, komut işleyicisine göndermeden önce eventMsg.RequestId'i tanımlayıcı olarak kullanarak CreateOrderCommand'ı bir IdentifiedCommand ile sarıyoruz).
+Bir olayın herhangi bir alıcı tarafından yalnızca bir kez işlendiğinden emin olmak için bir yolu olay işleyicileri ileti olayları işlerken belirli bir mantık uygulamaktır. Örneğin, [usercheckoutAcceptedIntegrationHandler sınıfının kaynak kodunda](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) gördüğünüz gibi, eShopOnContainers uygulamasında kullanılan yaklaşım, usercheckoutAcceptedIntegrationEvent event olay olayını aldığında. (Bu durumda, komut işleyicisine göndermeden önce eventMsg.RequestId'i tanımlayıcı olarak kullanarak CreateOrderCommand'ı bir IdentifiedCommand ile sarıyoruz).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>RabbitMQ kullanırken iletileri boyama
 

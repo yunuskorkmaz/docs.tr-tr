@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523785"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805855"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -87,7 +87,7 @@ Bir referans iade değeri anahtar `ref` sözcüğü kullanılarak tanımlanır:
 public ref decimal GetCurrentPrice()
 ```
 
-- Belirteç `return` ve değişken arasında `return` yöntemde bir ifade döndürülür. Örnek:
+- Belirteç `return` ve değişken arasında `return` yöntemde bir ifade döndürülür. Örneğin:
 
 ```csharp
 return ref DecimalArray[0];
@@ -117,7 +117,7 @@ Bir değere aynı şekilde başvuru yla erişebilirsiniz. Bazı durumlarda, bir 
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Her iki örnekte `ref` de anahtar kelimenin her iki yerde de kullanılması gerektiğini veya derleyicinin CS8172 hatası oluşturduğunu unutmayın: "Bir değerle bir yan referans değişkenini başharfe düşüremezsin."
+Her iki `ref` örnekte de anahtar kelime her iki yerde de kullanılmalıdır veya derleyici CS8172 hatası oluşturur, "Bir değerle bir referans değişkeni başharflenemez."
 
 C# 7.3 ile başlayarak, ifadenin `foreach` yineleme değişkeni ref lokal veya ref readonlyonly local değişken olabilir. Daha fazla bilgi için [foreach deyimi](foreach-in.md) makalesine bakın.
 
@@ -145,8 +145,8 @@ Bir `ref struct` türü yığın ayrılmış değişken olarak tutma hedefi, der
 
 - Bir `ref struct`şey için boks yapamazsınız. Bir tür, `ref struct` tür `object`, `dynamic`veya herhangi bir arabirim türü değişkenine atayamazsınız.
 - `ref struct`türler arabirimleri uygulayamaz.
-- Bir `ref struct` sınıfın alan üyesi veya normal bir yapı olarak beyan edemezsiniz. Bu, derleyici oluşturulan destek alanı oluşturan otomatik olarak uygulanan bir özelliği bildirmeyi içerir.
-- Async yöntemleri `ref struct` türleri yerel değişkenler bildiremezsiniz. Bunları döndüren <xref:System.Threading.Tasks.Task>eşzamanlı yöntemlerle <xref:System.Threading.Tasks.Task%601> veya `Task`-benzer türlerde bildirebilirsiniz.
+- Bir `ref struct` sınıfın alan üyesi veya normal bir yapı olarak beyan edemezsiniz. Bu, derleyici tarafından oluşturulan bir destek alanı oluşturan otomatik olarak uygulanan bir özelliği bildirmeyi içerir.
+- Async yöntemleri `ref struct` türleri yerel değişkenler bildiremezsiniz. Bunları, döndüren <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>eşzamanlı yöntemlerle veya `Task`-benzeri türlerde bildirebilirsiniz.
 - Yineleyicilerde `ref struct` yerel değişkenleri bildiremezsiniz.
 - Lambda `ref struct` ifadelerinde veya yerel işlevlerde değişkenleri yakalayamamazsınız.
 

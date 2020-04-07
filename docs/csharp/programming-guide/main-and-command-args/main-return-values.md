@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345122"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805932"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Ana() iade değerleri (C# Programlama Kılavuzu)
 
@@ -21,11 +21,11 @@ Ayrıca bir `int`döndürebilir:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-İade `Main` değeri kullanılmazsa, geri `void` döndürme biraz daha basit bir kod sağlar. Ancak, bir arayıcı döndürülen program, durum bilgilerini yürütülebilir dosyayı çağıran diğer programlara veya komut dosyalarına iletilmesini sağlar. Gelen `Main` iade değeri, işlemin çıkış kodu olarak kabul edilir. Çıkış `void` kodundan `Main` döndürülürse örtülü `0`olarak . Aşağıdaki örnek, geri `Main` dönüş değerinin nasıl erişilebildiğini gösterir.
+İade `Main` değeri kullanılmazsa, geri `void` döndürme biraz daha basit bir kod sağlar. Ancak, bir arayıcı döndürülen program, durum bilgilerini yürütülebilir dosyayı çağıran diğer programlara veya komut dosyalarına iletilmesini sağlar. Gelen `Main` iade değeri, işlemin çıkış kodu olarak kabul edilir. Döndürülürse, `void` `Main`çıkış kodu örtülü `0`olarak . Aşağıdaki örnek, geri `Main` dönüş değerinin nasıl erişilebildiğini gösterir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte [.NET Core](../../../core/index.yml) komut satırı araçları kullanılıyor. .NET Core komut satırı araçlarını bilmiyorsanız, bu [Başlangıç konusu](../../../core/tutorials/cli-create-console-app.md)hakkında bilgi edinebilirsiniz.
+Bu örnekte [.NET Core](../../../core/index.yml) komut satırı araçları kullanır. .NET Core komut satırı araçlarını bilmiyorsanız, bu [başlangıç makalesinde](../../../core/tutorials/cli-create-console-app.md)bunlar hakkında bilgi edinebilirsiniz.
 
 Yöntemi `Main` aşağıdaki *gibi program.cs* değiştirin:
 
@@ -37,7 +37,7 @@ Uygulamayı [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` komutunu 
 
 Ardından, uygulamayı çalıştırmak ve sonucu görüntülemek için bir Powershell komut dosyası oluşturun. Aşağıdaki kodu bir metin dosyasına yapıştırın `test.ps1` ve projeyi içeren klasörde olduğu gibi kaydedin. Powershell komut isteminde `test.ps1` yazarak powershell komut dosyasını çalıştırın.
 
-Kod sıfır döndürüldüğünden, toplu işdosyası başlıcayı bildirir. Ancak, MainReturnValTest.cs sıfır olmayan bir değeri döndürmek ve sonra programı yeniden derlemek için değiştirirseniz, powershell komut dosyasının sonraki yürütülmesi hata bildirir.
+Kod sıfır döndürüldüğünden, toplu işdosyası başlıcayı bildirir. Ancak, sıfır olmayan bir değer döndürmek ve sonra programı yeniden derlemek için MainReturnValTest.cs değiştirirseniz, powershell komut dosyasının sonraki yürütülmesi hatası bildirir.
 
 ```dotnetcli
 dotnet run
@@ -83,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 Yeni sözdiziminin avantajı, derleyicinin her zaman doğru kodu oluşturmasıdır.
 
-## <a name="compiler-generated-code"></a>Derleyici oluşturulan kod
+## <a name="compiler-generated-code"></a>Derleyici tarafından oluşturulan kod
 
 Uygulama giriş noktası a `Task` `Task<int>`veya , derleyici döndürdüğünde, uygulama kodunda bildirilen giriş noktası yöntemini çağıran yeni bir giriş noktası oluşturur. Bu giriş noktasının `$GeneratedMain`çağrıldığını varsayarsak, derleyici bu giriş noktaları için aşağıdaki kodu oluşturur:
 

@@ -1,21 +1,21 @@
 ---
-title: Temsilcileri ve Olayları Ayırt Etme
+title: Delegeler ve olaylar
 description: Temsilciler ve olaylar arasındaki farkı ve .NET Core'un bu özelliklerinin her birini ne zaman kullanacağınızı öğrenin.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588254"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805759"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Temsilcileri ve Olayları Ayırt Etme
 
 [Önceki](modern-events.md)
 
-.NET Core platformuna yeni gelen geliştiriciler, bir tasarıma `delegates` dayalı ve temelli bir tasarım arasında karar verirken genellikle mücadele ederler. `events` Bu zor bir kavramdır, çünkü iki dil özelliği çok benzerdir. Etkinlikler, temsilciler için dil desteği kullanılarak bile oluşturulur.
+.NET Core platformuna yeni gelen geliştiriciler, bir tasarıma `delegates` dayalı ve temelli bir tasarım arasında karar verirken genellikle mücadele ederler. `events` İki dil özelliği benzer olduğundan, temsilci veya olay seçimi genellikle zordur. Etkinlikler, temsilciler için dil desteği kullanılarak bile oluşturulur.
 
 Her ikisi de geç bağlama senaryosu sunar: bileşenin yalnızca çalışma zamanında bilinen bir yöntemi çağırarak iletişim kurduğu senaryoları etkinleştirir. Her ikisi de tek ve birden çok abone yöntemini destekler. Bunu tek döküm ve çok noktaya yayın desteği olarak adlandırabilirsiniz. Her ikisi de işleyicileri eklemek ve kaldırmak için benzer sözdizimini destekler. Son olarak, bir olay yükselterek ve bir temsilci arama tam olarak aynı yöntem sözdizimi arayın kullanın. Hatta her ikisi `Invoke()` de `?.` işleç ile kullanmak için aynı yöntem sözdizimini destekler.
 
@@ -45,7 +45,7 @@ Buna karşılık, temsilciler genellikle parametre olarak geçirilir ve hiç dep
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Etkinlik Dinleyicilerinin Genellikle Daha Uzun Ömürleri Var
 
-Bu biraz daha zayıf bir gerekçedir. Ancak, olay kaynağı uzun bir süre boyunca olayları yükseltecek zaman olay tabanlı tasarımlar daha doğal olduğunu görebilirsiniz. Birçok sistemde UX denetimleri için bunun örneklerini görebilirsiniz. Bir etkinliğe abone olduktan sonra, etkinlik kaynağı programın ömrü boyunca olayları yükseltebilir.
+Bu olay dinleyiciler daha uzun ömürleri var biraz daha zayıf bir gerekçedir. Ancak, olay kaynağı uzun bir süre boyunca olayları yükseltecek zaman olay tabanlı tasarımlar daha doğal olduğunu görebilirsiniz. Birçok sistemde UX denetimleri için olay tabanlı tasarım örneklerini görebilirsiniz. Bir etkinliğe abone olduktan sonra, etkinlik kaynağı programın ömrü boyunca olayları yükseltebilir.
 (Artık ihtiyacınız olmadığında etkinliklerden aboneliğinizi kaldırabilirsiniz.)
 
 Bir temsilcinin bir yönteme bağımsız değişken olarak kullanıldığı ve bu yöntem döndürüldikten sonra temsilcinin kullanılmadığı birçok temsilci tabanlı tasarımla karşılamayın.

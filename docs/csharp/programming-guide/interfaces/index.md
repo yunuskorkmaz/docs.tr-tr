@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249187"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805908"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
@@ -56,10 +56,10 @@ Arabirim aşağıdaki özelliklere sahiptir:
 
 ## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili Bölümler
 
-- [Arayüz Özellikleri](../classes-and-structs/interface-properties.md)  
+- [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  
 - [Arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)
-- [Sınıflar ve Structs](../classes-and-structs/index.md)  
+- [Sınıflar ve Yapılar](../classes-and-structs/index.md)  
 - [Devralma](../classes-and-structs/inheritance.md)  
 - [Yöntemler](../classes-and-structs/methods.md)  
 - [Çok biçimlilik](../classes-and-structs/polymorphism.md)  

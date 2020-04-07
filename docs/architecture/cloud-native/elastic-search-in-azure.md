@@ -2,13 +2,13 @@
 title: Bulut-yerel uygulamalarda elastik arama
 description: Bulut taşıyıcı uygulamalara Elastik Arama özellikleri ekleme ü
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 1bce255b6315006b11e0b6ac77040300f67ed984
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/02/2020
+ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141295"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805570"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Bulut ayarı uygulamasında elasticsearch
 
@@ -43,8 +43,6 @@ Bu bölümde bulut ayarı sistemlerdeki verilere ayrıntılı bir bakış sunulm
 - [Komut ve Sorgu Sorumluluğu Ayrımı (CQRS) deseni](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 - [Olay Kaynak deseni](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-
-- [RDBMSs vs. NoSQL Veritabanları: Genel Bakış](https://maxivak.com/rdbms-vs-nosql-databases/)
 
 - [NEDEN CAP Teoremi'nde RDBMS Bölüm toleranslı değildir ve neden kullanılabilir?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 

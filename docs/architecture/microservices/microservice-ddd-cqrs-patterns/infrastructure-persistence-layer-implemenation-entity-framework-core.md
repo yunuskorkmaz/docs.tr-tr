@@ -2,18 +2,18 @@
 title: Entity Framework Core ile altyapı kalıcılık katmanını uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Entity Framework Core'u kullanarak altyapı kalıcılığı katmanının uygulama ayrıntılarını keşfedin.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523319"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805487"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core ile altyapı kalıcılığı katmanını uygulayın
 
 SQL Server, Oracle veya PostgreSQL gibi ilişkisel veritabanlarını kullandığınızda, önerilen bir yaklaşım Varlık Çerçevesi 'ne (EF) dayalı kalıcılık katmanını uygulamaktır. EF, LINQ'yi destekler ve modeliniz için güçlü şekilde yazılan nesnelerin yanı sıra veritabanınıza basitleştirilmiş kalıcılık sağlar.
 
-Varlık Çerçevesi.NET Çerçevesi'nin bir parçası olarak uzun bir geçmişe sahiptir. .NET Core'u kullandığınızda, Windows veya Linux'ta .NET Core ile aynı şekilde çalışan Entity Framework Core'u da kullanmanız gerekir. EF Core, çok daha küçük bir ayak izi ve performansta önemli iyileştirmelerle uygulanan Entity Framework'ün tam bir yeniden yazılmasıdır.
+Varlık Çerçevesi.NET Çerçevesi'nin bir parçası olarak uzun bir geçmişe sahiptir. .NET Core'u kullandığınızda, Windows veya Linux'ta .NET Core ile aynı şekilde çalışan Entity Framework Core'u da kullanmanız gerekir. EF Core, çok daha küçük bir ayak izi ve performanstaki önemli iyileştirmelerle uygulanan Entity Framework'ün tam bir yeniden yazılmasıdır.
 
 ## <a name="introduction-to-entity-framework-core"></a>Varlık Çerçeve Çekirdeğine Giriş
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-`OrderItems` Özellik yalnızca salt okunur olarak `IReadOnlyCollection<OrderItem>`erişilebileni unutmayın. Bu tür salt okunur, böylece düzenli dış güncelleştirmeler karşı korunur.
+Tesise `OrderItems` yalnızca okuma kullanılarak `IReadOnlyCollection<OrderItem>`erişilebilir. Bu tür salt okunur, böylece düzenli dış güncelleştirmeler karşı korunur.
 
 EF Core, etki alanı modelini "kirletmeden" etki alanı modelini fiziksel veritabanıyla eşlemenin bir yolunu sağlar. Bu saf .NET POCO kodudur, çünkü eşleme eylemi kalıcılık katmanında uygulanır. Bu eşleme eyleminde, alanlara veritabanı eşlemi yapılandırmanız gerekir. Yöntemden `OnModelCreating` `OrderingContext` ve sınıftan `OrderEntityTypeConfiguration` aşağıdaki örnekte, EF `SetPropertyAccessMode` Core'a `OrderItems` kendi alanı üzerinden özelliğe erişmesini söyler.
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-IBuyerRepozitory arabiriminin bir sözleşme olarak etki alanı modeli katmanından geldiğini unutmayın. Ancak, depo uygulaması kalıcılık ve altyapı katmanında yapılır.
+Arabirim, `IBuyerRepository` sözleşme olarak etki alanı modeli katmanından gelir. Ancak, depo uygulaması kalıcılık ve altyapı katmanında yapılır.
 
 EF DbContext Bağımlılık Enjeksiyon u yoluyla yapıcı aracılığıyla gelir. IoC kapsayıcısındaki varsayılan ömrü ()`ServiceLifetime.Scoped`sayesinde aynı HTTP istek kapsamı içinde birden fazla depo arasında paylaşılır `services.AddDbContext<>`(bu da açıkça ayarlanabilir).
 
@@ -168,11 +168,11 @@ Ancak, dapper kullanarak esnek sorguları temel alan CQRS sorgularında, söz ko
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>EF DbContext'ı doğrudan kullanmanın karşısı özel bir depo kullanma
 
-Entity Framework DbContext sınıfı Çalışma Birimi ve Depo desenleri'ni temel alınca, ASP.NET Core MVC denetleyicisi gibi doğrudan kodunuzdan kullanılabilir. EShopOnContainers CRUD katalog microservice gibi, en basit kodu oluşturabilirsiniz yoludur. Mümkün olan en basit kodu istediğiniz durumlarda, birçok geliştiricinin yaptığı gibi Doğrudan DbContext sınıfını kullanmak isteyebilirsiniz.
+Entity Framework DbContext sınıfı Çalışma Birimi ve Depo desenleri dayanmaktadır ve ASP.NET Core MVC denetleyicisi gibi doğrudan kodunuzdan kullanılabilir. Çalışma birimi ve Depo desenleri, eShopOnContainers'daki CRUD kataloğu microservice'inde olduğu gibi en basit kodla sonuçlanır. Mümkün olan en basit kodu istediğiniz durumlarda, birçok geliştiricinin yaptığı gibi Doğrudan DbContext sınıfını kullanmak isteyebilirsiniz.
 
 Ancak, özel depoların uygulanması, daha karmaşık mikro hizmetler veya uygulamalar uygularken çeşitli avantajlar sağlar. Çalışma Birimi ve Depo desenleri, uygulama ve etki alanı modeli katmanlarından ayrılması için altyapı kalıcılık katmanını kapsüllemek için tasarlanmıştır. Bu desenlerin uygulanması, veritabanına erişimi taklit eden sahte depoların kullanımını kolaylaştırabilir.
 
-Şekil 7-18'de, depoları kullanmamak (doğrudan EF DbContext'ı kullanmamak) ile bu depolarla alay etmeyi kolaylaştıran depolar arasındaki farkları görebilirsiniz.
+Şekil 7-18'de, depoları kullanmamak (doğrudan EF DbContext'ı kullanmamak) ile bu depolarla alay etmeyi kolaylaştıran farkları görebilirsiniz.
 
 ![İki depodaki bileşenleri ve veri akışını gösteren diyagram.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Depo için singleton ömrünün kullanılmasının, DbContext'ınız kapsamlı (InstancePerLifetimeScope) ömür boyu (DBContext için varsayılan yaşam süreleri) olarak ayarlandığında ciddi eşzamanlılık sorunlarına neden olabileceğini unutmayın.
+Depo için singleton ömrünükullanmak, DbContext'ınız kapsamlı (InstancePerLifetimeScope) ömür boyu (DBContext için varsayılan yaşam ömürleri) olarak ayarlandığında ciddi eşzamanlılık sorunlarına neden olabilir.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
@@ -243,7 +243,7 @@ Depo için singleton ömrünün kullanılmasının, DbContext'ınız kapsamlı (
 
 ## <a name="table-mapping"></a>Tablo eşleme
 
-Tablo eşleme, sorgulanacak ve veritabanına kaydedilecek tablo verilerini tanımlar. Daha önce, etki alanı varlıklarının (örneğin, bir ürün veya sipariş etki alanı) ilgili bir veritabanı şeması oluşturmak için nasıl kullanılabileceğini gördünuz. EF güçlü *kongrekavramı*etrafında tasarlanmıştır. Kongreler "Tablonun adı ne olacak?" gibi soruları ele alıyor. veya "Birincil anahtar hangi özelliktir?" Sözleşmeler genellikle geleneksel adlara dayanır(örneğin, birincil anahtarın Id ile biten bir özellik olması tipiktir.
+Tablo eşleme, sorgulanacak ve veritabanına kaydedilecek tablo verilerini tanımlar. Daha önce, etki alanı varlıklarının (örneğin, bir ürün veya sipariş etki alanı) ilgili bir veritabanı şeması oluşturmak için nasıl kullanılabileceğini gördünuz. EF güçlü *kongrekavramı*etrafında tasarlanmıştır. Kongreler "Tablonun adı ne olacak?" gibi soruları ele alıyor. veya "Birincil anahtar hangi özelliktir?" Sözleşmeler genellikle geleneksel adlara dayanır. Örneğin, birincil anahtarın `Id`.
 
 Kural olarak, her varlık, türetilmiş bağlamda varlığı ortaya `DbSet<TEntity>` çıkaran özellik ile aynı ada sahip bir tabloya eşlenecek şekilde ayarlanır. Verilen `DbSet<TEntity>` varlık için değer sağlanmadıysa, sınıf adı kullanılır.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-Aşağıdaki belirtim, sepetin kimliği veya sepetin ait olduğu alıcının kimliği verilen tek bir sepet tüzel kişiliğini yükler. Sepetin Öğeler koleksiyonunu [hevesle yükler.](https://docs.microsoft.com/ef/core/querying/related-data)
+Aşağıdaki belirtim, sepetin kimliği veya sepetin ait olduğu alıcının kimliği verilen tek bir sepet tüzel kişiliğini yükler. Bu [hevesle](/ef/core/querying/related-data) sepetin `Items` koleksiyonu yükleyecek.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION

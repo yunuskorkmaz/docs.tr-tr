@@ -9,54 +9,54 @@ helpviewer_keywords:
 - templates [WPF], ToggleButton
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-ms.openlocfilehash: a4c449a561017659db7f54fd3cdb8964742650de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e055dcbd557f9b90eb2fe99ad15a05b6f229fd28
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283668"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805917"
 ---
 # <a name="togglebutton-styles-and-templates"></a>ToggleButton Stilleri ve Şablonları
 
-Bu konuda <xref:System.Windows.Controls.Primitives.ToggleButton> denetimine yönelik stiller ve şablonlar açıklanmaktadır. Denetime benzersiz bir görünüm sağlamak için varsayılan <xref:System.Windows.Controls.ControlTemplate> değiştirebilirsiniz. Daha fazla bilgi için bkz. [Denetim için şablon oluşturma](../../../desktop-wpf/themes/how-to-create-apply-template.md).
+Bu <xref:System.Windows.Controls.Primitives.ToggleButton> konu, denetim in stilleri ve şablonlarını açıklar. Denetime benzersiz <xref:System.Windows.Controls.ControlTemplate> bir görünüm kazandırmak için varsayılanı değiştirebilirsiniz. Daha fazla bilgi [için](../../../desktop-wpf/themes/how-to-create-apply-template.md)bkz.
 
-## <a name="togglebutton-parts"></a>ToggleButton bölüm
+## <a name="togglebutton-parts"></a>Düğme Parçaları
 
-<xref:System.Windows.Controls.Primitives.ToggleButton> denetiminde hiç adlandırılmış bölüm yok.
+Denetimde <xref:System.Windows.Controls.Primitives.ToggleButton> herhangi bir adlandırılmış parça yok.
 
-## <a name="togglebutton-states"></a>ToggleButton durumları
+## <a name="togglebutton-states"></a>ToggleButton Durumları
 
-Aşağıdaki tabloda <xref:System.Windows.Controls.Primitives.ToggleButton> denetimi için görsel durumlar listelenmektedir.
+Aşağıdaki <xref:System.Windows.Controls.Primitives.ToggleButton> tabloda denetim için görsel durumları listeler.
 
-|VisualState adı|VisualStateGroup adı|Açıklama|
+|VisualState Adı|VisualStateGroup Adı|Açıklama|
 |-|-|-|
-|Normal|Ortak durumlar|Varsayılan durum.|
-|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|
-|Basılan|Ortak durumlar|Denetime basıldığında.|
-|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|
-|Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|
-|Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|
-|İşaretli|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `true`.|
-|Olmayan|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `false`.|
-|Belirsiz|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> `true`ve <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `null`.|
-|Geçerli|Doğrulama durumları|Denetim, <xref:System.Windows.Controls.Validation> sınıfını ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> iliştirilmiş özelliği `false`kullanır.|
-|Invalidodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|
-|Invalidunodaklanmış|Doğrulama durumları|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği, denetimin odağa sahip `true`.|
+|Normal|Commonstates|Varsayılan durum.|
+|Mouseover|Commonstates|Fare işaretçisi denetimin üzerine konumlandırılır.|
+|Pressed|Commonstates|Kontrol basılı.|
+|Devre dışı|Commonstates|Denetim devre dışı.|
+|Odaklı|Odak Devletler|Kontrol odak noktası.|
+|Odaklanmamış|Odak Devletler|Denetimin odak noktası yok.|
+|İşaretli|Çek Durumları|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>`true`.|
+|Denetlenme -yen|Çek Durumları|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>`false`.|
+|Belirsiz|Çek Durumları|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>' `true`dir <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `null`ve .|
+|Geçerli|Doğrulama Durumları|Denetim <xref:System.Windows.Controls.Validation> sınıfı kullanır ve <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli `false`özellik.|
+|GeçersizOdaklanmış|Doğrulama Durumları|Ekli <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> özellik ve `true` denetim odak vardır.|
+|Geçersiz Odaklanmış|Doğrulama Durumları|Ekli <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> özellik ve `true` denetim odak yok.|
 
 > [!NOTE]
-> Denetim şablonunuzda belirsiz görsel durumu yoksa, denetlenmeyen görsel durum varsayılan görsel durum olarak kullanılır.
+> Denetim şablonunuzda Belirsiz görsel durum yoksa, denetlenmemiş görsel durum varsayılan görsel durum olarak kullanılır.
 
-## <a name="togglebutton-controltemplate-example"></a>ToggleButton ControlTemplate örneği
+## <a name="togglebutton-controltemplate-example"></a>Düğme DenetimiŞablon Örneği
 
-Aşağıdaki örnek, <xref:System.Windows.Controls.Primitives.ToggleButton> denetimi için <xref:System.Windows.Controls.ControlTemplate> tanımlanacağını gösterir.
+Aşağıdaki örnek, denetim için <xref:System.Windows.Controls.ControlTemplate> a'nın <xref:System.Windows.Controls.Primitives.ToggleButton> nasıl tanımlandığını gösterir.
 
 [!code-xaml[ControlTemplateExamples#ToggleButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]
 
-Yukarıdaki örnekte aşağıdaki kaynaklardan biri veya daha fazlası kullanılmaktadır.
+Önceki örnekte aşağıdaki kaynaklardan biri veya birkaçı kullanır.
 
 [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]
 
-Tüm örnek için bkz. [ControlTemplates Ile stillendirme örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+Tam örnek için [ControlTemplates Örnek ile Şekillendirme'ye](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

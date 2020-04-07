@@ -3,16 +3,16 @@ title: Null değerleri için beklentileri tanımlayan özniteliklere sahip nulla
 description: ApI'lerinizin null durumunu tam olarak açıklamak için AllowNull, DisallowNull, MaybeNull, NotNull ve daha fazlasını tanımlayıcı öznitelikleri kullanmayı öğrenin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5d7a864ba1b66ad6b4ae7b0391d170a29147c537
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249246"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805838"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Geçersiz başvuru türlerini kullanmak ve arayanlara geçersiz kuralları iletmek için kitaplıkları güncelleştirme
 
-[Nullable başvuru türlerinin](nullable-references.md) eklenmesi, her değişken `null` için bir değere izin verilip verilmediğini veya beklenmediğini bildirebileceğiniz anlamına gelir. Buna ek olarak, bir dizi `AllowNull`öznitelik uygulayabilirsiniz: `NotNullWhenNotNull` , , `DisallowNull` `MaybeNull` `NotNull` `NotNullWhen`, , `MaybeNullWhen`, , ve tamamen bağımsız değişken ve dönüş değerleri null durumları açıklamak için. Bu kod yazmak gibi büyük bir deneyim sağlar. Nullable olmayan bir değişken ' olarak `null`ayarlanmış olabilir uyarılar alırsınız. Geçersiz bir değişken, başvurudan çıkmadan önce null-check-checked değilse uyarılar alırsınız. Kitaplıklarınızı güncellemek zaman alabilir, ancak ödemeler buna değer. Derleyiciye bir `null` değere *ne zaman* izin verildiği veya ne zaman yasakolduğu hakkında ne kadar çok bilgi sağlarsanız, API'nizin kullanıcıları o kadar iyi uyarılar alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın kaynak dizesini almak için aşağıdaki API'ye sahip olduğunu düşünün:
+[Nullable başvuru türlerinin](nullable-references.md) eklenmesi, her değişken `null` için bir değere izin verilip verilmediğini veya beklenmediğini bildirebileceğiniz anlamına gelir. Buna ek olarak, bir dizi `AllowNull`öznitelik uygulayabilirsiniz: `NotNullIfNotNull` , , `DisallowNull` `MaybeNull` `NotNull` `NotNullWhen`, , `MaybeNullWhen`, , ve tamamen bağımsız değişken ve dönüş değerleri null durumları açıklamak için. Bu kod yazmak gibi büyük bir deneyim sağlar. Nullable olmayan bir değişken ' olarak `null`ayarlanmış olabilir uyarılar alırsınız. Geçersiz bir değişken, başvurudan çıkmadan önce null-check-checked değilse uyarılar alırsınız. Kitaplıklarınızı güncellemek zaman alabilir, ancak ödemeler buna değer. Derleyiciye bir `null` değere *ne zaman* izin verildiği veya ne zaman yasakolduğu hakkında ne kadar çok bilgi sağlarsanız, API'nizin kullanıcıları o kadar iyi uyarılar alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın kaynak dizesini almak için aşağıdaki API'ye sahip olduğunu düşünün:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

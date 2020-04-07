@@ -2,12 +2,12 @@
 title: Değer nesneleri uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Yeni Varlık Çerçevesi özelliklerini kullanarak değer nesnelerini uygulamak için ayrıntılara ve seçeneklere bakın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249428"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805742"
 ---
 # <a name="implement-value-objects"></a>Değer nesnelerini uygulama
 
@@ -133,7 +133,7 @@ Adres'in bu değer nesnesi uygulamasının nasıl bir kimliği olmadığını ve
 
 Varlık Çerçevesi (EF) tarafından kullanılacak bir sınıfta kimlik alanı olmaması, kimliği olmayan daha iyi değer nesnelerinin uygulanmasına büyük ölçüde yardımcı olan EF Core 2.0'a kadar mümkün değildi. Bu tam olarak bir sonraki bölümün açıklamasıdır.
 
-Bu değer nesneleri, değişmez olan, salt okunur olması gerektiğini iddia edilebilir (yani, sadece almak özellikleri var), ve bu gerçekten doğrudur. Ancak, değer nesneleri genellikle ileti kuyrukları üzerinden gitmek için seri ve deserialized ve salt okunur değerleri atama deserializer durur, bu yüzden sadece pratik olması için yeterli okunur özel küme olarak bırakın.
+Bu değer nesneleri, değişmez olan, salt okunur olması gerektiğini iddia edilebilir (yani, sadece almak özellikleri var), ve bu gerçekten doğrudur. Ancak, değer nesneleri genellikle seri hale getirilir ve ileti kuyruklarından geçmek için deserialized ve salt okunur değerleri atama deserializer durur, bu yüzden sadece olarak `private set`bırakın , hangi pratik olması için sadece okunur.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2.0 ve sonrası ile veritabanındaki değer nesneleri nasıl kalıcı
 
@@ -186,7 +186,7 @@ Kural olarak, sahip olunan tür için bir gölge birincil anahtar oluşturulur v
 
 Sahip olunan türlerin EF Core'daki sözleşme tarafından hiçbir zaman keşfedilmeyişediğini, bu nedenle bunları açıkça beyan etmeniz gerektiğini unutmayın.
 
-eShopOnContainers' da, OrderingContext.cs, OnModelCreating() yöntemi içinde birden çok altyapı yapılandırması uygulanmaktadır. Bunlardan biri Sipariş varlığı ile ilgilidir.
+eShopOnContainers, OrderingContext.cs dosyasında, `OnModelCreating()` yöntem içinde, birden fazla altyapı yapılandırmaları uygulanır. Bunlardan biri Sipariş varlığı ile ilgilidir.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 Önceki kodda, `orderConfiguration.OwnsOne(o => o.Address)` yöntem `Address` özelliğitin `Order` türünün sahip olduğu bir varlık olduğunu belirtir.
 
-Varsayılan olarak, EF Core kuralları veritabanı sütunlarını sahip olunan `EntityProperty_OwnedEntityProperty`varlık türündeki özellikleri . Bu nedenle, iç `Address` özellikleri adları `Orders` `Address_Street`ile tabloda `Address_City` görünür , `State`(ve benzeri için , `Country` ve `ZipCode`).
+Varsayılan olarak, EF Core kuralları veritabanı sütunlarını sahip olunan `EntityProperty_OwnedEntityProperty`varlık türündeki özellikleri . Bu nedenle, tabloda , `Orders` (ve benzeri `Address_Street` `Address_City` için `State`, `Country`, ve `ZipCode`) adlarıyla tabloda görünür. `Address`
 
 Bu sütunları `Property().HasColumnName()` yeniden adlandırmak için akıcı yöntemi ekleyebilirsiniz. Kamu malı `Address` olduğu durumlarda, haritalamalar aşağıdaki gibi olacaktır:
 
@@ -281,7 +281,7 @@ public class Address
 
 - Ayrı gezinti özellikleri aracılığıyla aynı sahip varlığında farklı sahip olunan türler olarak aynı CLR türünü eşleyebilirsiniz.
 
-- Tablo bölme kuralına göre kurulumdur, ancak Sahip olunan türü ToTable kullanarak farklı bir tabloyla eşleyerek devre dışı kullanabilirsiniz.
+- Tablo bölme kuralına göre ayarlanır, ancak ToTable'ı kullanarak sahip olunan türü farklı bir tabloyla eşleyerek devre dışı bırakabilirsiniz.
 
 - İstekli yükleme, sahip olunan türlerde otomatik olarak gerçekleştirilir, `.Include()` yani sorguyu çağırmaya gerek yoktur.
 

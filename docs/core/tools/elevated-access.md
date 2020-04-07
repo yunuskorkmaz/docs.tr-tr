@@ -3,12 +3,12 @@ title: dotnet komutları için yüksek erişim
 description: Yüksek erişim gerektiren dotnet komutları için en iyi uygulamaları öğrenin.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156770"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805796"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet komutları için yüksek erişim
 
@@ -18,6 +18,7 @@ Aşağıdaki komutlar yükseltilebilir:
 
 - `dotnet tool`[komutları, dotnet aracı yükleme](dotnet-tool-install.md)gibi .
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 Diğer komutları yükseltmenizi önermiyoruz. Özellikle, [biz dotnet geri yükleme, dotnet](dotnet-restore.md) [yapı](dotnet-build.md)ve [dotnet çalıştırmak](dotnet-run.md)gibi MSBuild kullanan komutları ile yükseklik önermiyoruz. Birincil sorun, bir kullanıcı dotnet komutları verdikten sonra kök ve kısıtlı bir hesap arasında ileri ve geri geçiş yaptığında izin yönetimi sorunlarıdır. Kısıtlanmış bir kullanıcı olarak, bir kök kullanıcı tarafından oluşturulmuş dosyaya erişiminiz olmadığını görebilirsiniz. Bu durumu çözmenin yolları var, ama en başta içine girmek için gereksiz.
 
@@ -77,7 +78,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macos"></a>[Macos](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
