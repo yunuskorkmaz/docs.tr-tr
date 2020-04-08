@@ -44,10 +44,8 @@
         - name: Service Mesh iletişim altyapısı
           href: service-mesh-communication-infrastructure.md
     - name: Dağıtılmış Veriler
-      href: null
+      href: database-per-microservice.md
       items:
-        - name: Mikro hizmet başına veritabanı
-          href: database-per-microservice.md
         - name: İlişkisel veriler ile NoSQL verilerinin karşılaştırması
           href: relational-vs-nosql-data.md
         - name: Bulutta yerel bir uygulamada önbelleğe alma
