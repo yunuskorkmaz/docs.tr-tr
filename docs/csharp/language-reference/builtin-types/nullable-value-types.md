@@ -4,19 +4,19 @@ description: C# nullable değer türleri ve bunları nasıl kullanacağı hakkı
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399590"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888078"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable değer türleri (C# başvurusu)
 
 *Nullable değer türü,* `T?` temel [değer türünün](value-types.md) `T` tüm değerlerini ve ek bir [null](../keywords/null.md) değerini temsil eder. Örneğin, aşağıdaki üç değerden herhangi birini bir `bool?` değişkene atayabilirsiniz: `true`, `false`veya `null`. Temel değer `T` türü, nullable değer türü kendisi olamaz.
 
 > [!NOTE]
-> C# 8.0 nullable başvuru türleri özelliğini tanıtür. Daha fazla bilgi için [Nullable başvuru türlerine](../../nullable-references.md)bakın. Nullable değer türleri C # 2 ile başlayan kullanılabilir.
+> C# 8.0 nullable başvuru türleri özelliğini tanıtür. Daha fazla bilgi için [Nullable başvuru türlerine](nullable-reference-types.md)bakın. Nullable değer türleri C # 2 ile başlayan kullanılabilir.
 
 Herhangi bir nullable değer türü <xref:System.Nullable%601?displayProperty=nameWithType> genel yapının bir örneğidir. Aşağıdaki değiştirilebilir formlardan herhangi birinde altta `T` yatan bir türe sahip nullable değer türüne başvurabilirsiniz: `Nullable<T>` veya `T?`.
 
@@ -24,7 +24,7 @@ Temel değer türünün tanımlanmamış değerini temsil etmeniz gerektiğinde 
 
 ## <a name="declaration-and-assignment"></a>Beyan ve atama
 
-Değer türü dolaylı olarak karşılık gelen nullable değer türüne dönüştürülebilir olduğundan, bir değeri temel değer türü için yaptığınız gibi, nullable değer türündeki bir değişkene atayabilirsiniz. `null` Değeri de atayabilirsiniz. Örnek:
+Değer türü dolaylı olarak karşılık gelen nullable değer türüne dönüştürülebilir olduğundan, bir değeri temel değer türü için yaptığınız gibi, nullable değer türündeki bir değişkene atayabilirsiniz. `null` Değeri de atayabilirsiniz. Örneğin:
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ Nullable değer türü `T` dolaylı olarak karşılık gelen nullable değer `T?
 
 ## <a name="lifted-operators"></a>Kaldırılan operatörler
 
-Önceden tanımlanmış unary ve ikili [işleçler](../operators/index.md) veya bir değer `T` türü tarafından desteklenen herhangi bir aşırı `T?`yüklü işleçleri de ilgili nullable değer türü tarafından desteklenir. Bu operatörler, aynı zamanda *kaldırılan operatörler*olarak bilinen, `null`bir veya her iki operands ise üretmek; `null` aksi takdirde, işleç sonucu hesaplamak için operands içerdiği değerleri kullanır. Örnek:
+Önceden tanımlanmış unary ve ikili [işleçler](../operators/index.md) veya bir değer `T` türü tarafından desteklenen herhangi bir aşırı `T?`yüklü işleçleri de ilgili nullable değer türü tarafından desteklenir. Bu operatörler, aynı zamanda *kaldırılan operatörler*olarak bilinen, `null`bir veya her iki operands ise üretmek; `null` aksi takdirde, işleç sonucu hesaplamak için operands içerdiği değerleri kullanır. Örneğin:
 
 [!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
@@ -120,7 +120,7 @@ Bir örneğin nullable değer türüne ait olup olmadığını belirlemek için 
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> Bu bölümde açıklanan yöntemler [geçersiz başvuru türleri](../../nullable-references.md)durumunda geçerli değildir.
+> Bu bölümde açıklanan yöntemler [geçersiz başvuru türleri](nullable-reference-types.md)durumunda geçerli değildir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -139,4 +139,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Nullable başvuru türleri](../../nullable-references.md)
+- [Boş değer atanabilir başvuru türleri](nullable-reference-types.md)

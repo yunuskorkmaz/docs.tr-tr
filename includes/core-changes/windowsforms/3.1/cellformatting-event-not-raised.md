@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: add3ff8faed2e7fab245e5b6f1b9158b7bdd06f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b736ab743a628fdcbc53c5ee51551e5dad986885
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567364"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888155"
 ---
 ### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>Araç ipucu gösterilirse CellFormatting olayı yükseltilmez
 
@@ -30,12 +30,12 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-API analizi ile tespit edilemez.
+None
 
 <!-- 
 
 ### Affected APIs
 
-- Not detectable via API analysis.
+Not detectable via API analysis.
 
 -->

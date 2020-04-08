@@ -2,12 +2,12 @@
 title: Olaylara abone olma
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Tümleştirme etkinliklerini yayımlama ve abone etme ayrıntılarını anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805504"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888221"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -93,7 +93,7 @@ CQRS yaklaşımları kullanırken olduğu gibi daha gelişmiş mikrohizmetlerde,
 
 Tümleştirme olaylarını olay veri tobununuz gibi dağıtılmış bir ileti sistemi üzerinden yayımladığınızda, özgün veritabanını atomik olarak güncelleştirme ve bir olayı yayımlama sorunu yla karşı lanırsınız (diğer bir şekilde, her iki işlem de tamamlanır veya hiçbiri). Örneğin, daha önce gösterilen basitleştirilmiş örnekte, ürün fiyatı değiştirildiğinde kod veritabanına veri adatır ve ardından bir ProductPriceChangedIntegrationEvent iletisi yayımlar. Başlangıçta, bu iki operasyonun atomik olarak yapılması gerekli görünebilir. Ancak, [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)gibi eski sistemlerde yaptığınız gibi veritabanı ve ileti aracısını içeren dağıtılmış bir işlem kullanıyorsanız, [bu, CAP teoremi](https://www.quora.com/What-Is-CAP-Theorem-1)tarafından açıklanan nedenlerle önerilmez.
 
-Temel olarak, ölçeklenebilir ve yüksek kullanılabilir sistemler oluşturmak için mikro hizmetleri kullanın. Biraz basitleştiren CAP teoremi, sürekli olarak kullanılabilir, güçlü tutarlı *ve* herhangi bir bölüme toleranslı bir (dağıtılmış) veritabanı (veya kendi modeline sahip bir microservice) oluşturamayacağınızı söyler. Bu üç özelliklerden ikisini seçmeniz gerekir.
+Temel olarak, ölçeklenebilir ve yüksek kullanılabilir sistemler oluşturmak için mikro hizmetleri kullanın. Biraz basitleştiren CAP teoremi, sürekli olarak kullanılabilir, güçlü bir şekilde tutarlı *ve* herhangi bir bölüme karşı toleranslı bir (dağıtılmış) veritabanı (veya kendi modeline sahip bir microservice) oluşturamayacağınızı söyler. Bu üç özelliklerden ikisini seçmeniz gerekir.
 
 Mikro hizmetler tabanlı mimarilerde kullanılabilirlik ve toleransı seçmeli ve güçlü tutarlılığı vurgulamamalısınız. Bu nedenle, çoğu modern mikrohizmet tabanlı uygulamalarda, [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)ile Windows Dağıtılmış İşlem Koordinatörü'ne (DTC) dayalı dağıtılmış hareketleri uyguladığınızda yaptığınız gibi, genellikle iletide [dağıtılmış hareketleri](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) kullanmak istemezsinüz.
 
@@ -151,7 +151,7 @@ Olayları yayımlama adımlarını uygularken şu seçeneklere sahipsiniz:
 
 **Şekil 6-23**. Bir işçi microservice ile olay otobüsüne etkinlik yayınlarken atomiklik
 
-Basitlik için, eShopOnContainers örnek ilk yaklaşım (hiçbir ek süreçler veya denetleyici microservices ile) artı olay veri meskenkullanır. Ancak, eShopOnContainers tüm olası arıza durumlarını ele değildir. Buluta dağıtılan gerçek bir uygulamada, sorunların eninde sonunda ortaya çıkacağı gerçeğini benimsemeli ve bu denetimi ve yeniden gönderme mantığını uygulamanız gerekir. Tabloyu sıra olarak kullanmak, bu tabloyu olay veri tobus aracılığıyla (işçiyle) yayımlarken tek bir olay kaynağı olarak kullanıyorsanız, ilk yaklaşımdan daha etkili olabilir.
+Basitlik için, eShopOnContainers örnek ilk yaklaşım (hiçbir ek süreçler veya denetleyici microservices ile) artı olay veri meskenkullanır. Ancak, eShopOnContainers örnek tüm olası arıza durumlarda işleme değildir. Buluta dağıtılan gerçek bir uygulamada, sorunların eninde sonunda ortaya çıkacağı gerçeğini benimsemeli ve bu denetimi ve yeniden gönderme mantığını uygulamanız gerekir. Tabloyu sıra olarak kullanmak, bu tabloyu olay veri tobus aracılığıyla (işçiyle) yayımlarken tek bir olay kaynağı olarak kullanıyorsanız, ilk yaklaşımdan daha etkili olabilir.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Tümleştirme olaylarını etkinlik verine aracılığıyla yayınlarken atomikliğin uygulanması
 
@@ -293,7 +293,7 @@ Idempotent bir işlem örneği, yalnızca bu veriler tabloda yoksa, tabloya veri
 
 İktidara gelen iletiler tasarlamak mümkündür. Örneğin, "ürün fiyatına 5 TL eklemek" yerine "ürün fiyatını 25 TL olarak ayarlayın" yazan bir etkinlik oluşturabilirsiniz. İlk iletiyi herhangi bir kez güvenli bir şekilde işleyebilir ve sonuç aynı olacaktır. Bu ikinci mesaj için doğru değil. Ancak ilk durumda bile, ilk olayı işlemek istemeyebilirsiniz, çünkü sistem daha yeni bir fiyat değişikliği olayı da göndermiş olabilir ve yeni fiyatın üzerine bir yazı yazmış olabilirsiniz.
 
-Başka bir örnek, birden çok aboneye yayılan sipariş tamamlanmış bir olay olabilir. Aynı sipariş tamamlanan olay için yinelenen ileti olayları olsa bile, sipariş bilgilerinin diğer sistemlerde yalnızca bir kez güncellenmesi önemlidir.
+Başka bir örnek, birden çok aboneye yayılan sipariş tamamlanmış bir olay olabilir. Uygulama, aynı sipariş le tamamlanan olay için yinelenen ileti olayları olsa bile, sipariş bilgilerinin diğer sistemlerde yalnızca bir kez güncelleştirdiğinden emin olmak zorundadır.
 
 Her olayın alıcı başına yalnızca bir kez işlenmesini gerektiren bir mantık oluşturabilmeniz için olay başına bir tür kimliğe sahip olmak uygundur.
 
@@ -310,7 +310,7 @@ Bazı ileti işleme doğal olarak idempotent olduğunu. Örneğin, bir sistem re
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>EventHandler düzeyinde ileti olaylarını deduplicating
 
-Bir olayın herhangi bir alıcı tarafından yalnızca bir kez işlendiğinden emin olmak için bir yolu olay işleyicileri ileti olayları işlerken belirli bir mantık uygulamaktır. Örneğin, [usercheckoutAcceptedIntegrationHandler sınıfının kaynak kodunda](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) gördüğünüz gibi, eShopOnContainers uygulamasında kullanılan yaklaşım, usercheckoutAcceptedIntegrationEvent event olay olayını aldığında. (Bu durumda, komut işleyicisine göndermeden önce eventMsg.RequestId'i tanımlayıcı olarak kullanarak CreateOrderCommand'ı bir IdentifiedCommand ile sarıyoruz).
+Bir olayın herhangi bir alıcı tarafından yalnızca bir kez işlendiğinden emin olmak için bir yolu olay işleyicileri ileti olayları işlerken belirli bir mantık uygulamaktır. Örneğin, bir `UserCheckoutAcceptedIntegrationEvent` tümleştirme olayı aldığında [UserCheckoutAcceptedIntegrationEventHandler sınıfının kaynak kodunda](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) görebileceğiniz gibi, eShopOnContainers uygulamasında kullanılan yaklaşım bu. (Bu durumda, `CreateOrderCommand` komut işleyicisine `IdentifiedCommand`göndermeden `eventMsg.RequestId` önce tanımlayıcı olarak bir , bir ile sarılır).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>RabbitMQ kullanırken iletileri boyama
 

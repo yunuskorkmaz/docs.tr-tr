@@ -2,12 +2,12 @@
 title: .NET Core ve Açık Kaynak
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: bed5bb6aad5f3e651f7c4c0651a2365f17eb8a0b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 4d9d42304c58c631020d8b12bec5c038bc0c07ab
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635287"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888247"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve açık kaynak
 
@@ -23,7 +23,7 @@ Bu makalede, .NET Core'un ne olduğuna kısa bir genel bakış sağlanmıştır 
   
 - **Çapraz platform:** .NET Core, ihtiyacınız olan uygulama özelliklerini uygulamak ve platform hedefiniz ne olursa olsun bu kodu yeniden kullanmak için temel işlevsellik sağlar. Şu anda üç ana işletim sistemi (OS): Windows, Linux ve macOS destekler. Desteklenen işletim sistemlerinde değiştirilmemiş uygulamalar ve kitaplıklar yazabilirsiniz. Desteklenen işletim sistemlerinin listesini görmek için [.NET Core yol haritasını](https://github.com/dotnet/core/blob/master/roadmap.md)ziyaret edin.
   
-- **Açık kaynak:** .NET Core [.NET Foundation'ın](https://www.dotnetfoundation.org/) yönetimi altındaki birçok projeden biridir ve [GitHub'da](https://github.com/)mevcuttur.  .NET Core'un açık kaynak kodl› bir proje olması, daha şeffaf bir gelişim sürecini teşvik eder ve aktif ve ilgili bir topluluğu teşvik eder.  
+- **Açık kaynak:** .NET Core [.NET Foundation'ın](https://www.dotnetfoundation.org/) yönetimi altındaki birçok projeden biridir ve [GitHub'da](https://github.com/)mevcuttur. Bir açık kaynak projesi olarak .NET Core, daha şeffaf bir geliştirme süreci ve aktif ve ilgili bir topluluğu teşvik eder.  
   
 - **Esnek dağıtım:** Uygulamanızı dağıtmanın iki ana yolu vardır: çerçeveye bağımlı dağıtım veya bağımsız dağıtım. Çerçeveye bağımlı dağıtımda, yalnızca uygulamanız ve üçüncü taraf bağımlılıkları yüklenir ve uygulamanız .NET Core'un sistem çapındaki bir sürümüne bağlıdır. Bağımsız dağıtım ile, uygulamanızı oluşturmak için kullanılan .NET Core sürümü de uygulamanız ve üçüncü taraf bağımlılıkları ile birlikte dağıtılır ve diğer sürümlerle yan yana çalıştırılabilir. Daha fazla bilgi için [bkz.](../../core/deploying/index.md)
 

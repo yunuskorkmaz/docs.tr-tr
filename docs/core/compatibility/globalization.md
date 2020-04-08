@@ -1,19 +1,28 @@
 ---
 title: Küreselleşme kırılma değişiklikleri
 description: .NET Core'da küreselleşmedeki kırılma değişikliklerini listeler.
-ms.date: 09/20/2019
-ms.openlocfilehash: eebab2b43c1fc852cd728636518c6ac2ceef2d74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: 1436f9e2ec540b0f8b1e710b25c2115646d4e5b4
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093012"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888181"
 ---
 # <a name="globalization-breaking-changes"></a>Küreselleşme kırılma değişiklikleri
 
 Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
-- [Değişmez yerel ekiyle "C" yerel eşlemleri](#c-locale-maps-to-the-invariant-locale)
+| Son dakika değişikliği | Sürüm tanıtıldı |
+| - | :-: |
+| [StringInfo ve TextElementEnumerator artık UAX29 uyumlu](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
+| [Değişmez yerel ekiyle "C" yerel eşlemleri](#c-locale-maps-to-the-invariant-locale) | 3,0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [uax29-compliant-grapheme-enumeration](../../../includes/core-changes/globalization/5.0/uax29-compliant-grapheme-enumeration.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

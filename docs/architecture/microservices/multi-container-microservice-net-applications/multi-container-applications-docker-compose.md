@@ -2,12 +2,12 @@
 title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-compose.yml ile çok konteynerli bir uygulama için mikrohizmetler kompozisyonu nasıl belirtilir.
 ms.date: 01/30/2020
-ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805598"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888234"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
@@ -201,7 +201,7 @@ Tipik bir kullanım örneği, üretim, evreleme, CI veya geliştirme gibi birden
 
 **Şekil 6-12**. Temel docker-compose.yml dosyasındaki değerleri geçersiz kılan birden çok docker-compose dosyaları
 
-Farklı ortamları işlemek için birden çok docker-compose*.yml dosyasını birleştirebilirsiniz. Temel docker-compose.yml dosyası ile başlar. Bu temel dosya, ortama bağlı olarak değişmeden temel veya statik yapılandırma ayarlarını içermelidir. Örneğin, eShopOnContainers temel dosya olarak aşağıdaki docker-compose.yml dosyası (daha az hizmet ile basitleştirilmiş) vardır.
+Farklı ortamları işlemek için birden çok docker-compose*.yml dosyasını birleştirebilirsiniz. Temel docker-compose.yml dosyası ile başlar. Bu temel dosya, ortama bağlı olarak değişmeden temel veya statik yapılandırma ayarlarını içerir. Örneğin, eShopOnContainers uygulaması temel dosya olarak aşağıdaki docker-compose.yml dosya (daha az hizmet ile basitleştirilmiş) vardır.
 
 ```yml
 #docker-compose.yml (Base)

@@ -2,12 +2,12 @@
 title: dotnet izleme aracı - .NET Core
 description: Dotnet izleme komut satırı aracını yüklemek ve kullanmak.
 ms.date: 11/21/2019
-ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6880c3721e4cab12677bd02c82ca944cc9812670
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737652"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888091"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace performans analizi programı
 
@@ -40,7 +40,7 @@ Araç: `dotnet-trace`
 
 - **`--version`**
 
-  Dotnet sayaçları yardımcı programı sürümünü görüntüler.
+  Dotnet izleme yardımcı programının sürümünü görüntüler.
 
 - **`-h|--help`**
 

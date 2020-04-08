@@ -2,12 +2,12 @@
 title: Windows Formlar değişiklikleri kırma
 description: .NET Core için Windows Formlarında çığır açan değişiklikleri listeler.
 ms.date: 01/08/2020
-ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399100"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888156"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Formlarında değişiklik kırma
 
@@ -15,21 +15,30 @@ Windows Forms desteği 3.0 sürümünde .NET Core'a eklendi. Bu makalede, window
 
 Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
-- [Kaldırılan denetimler](#removed-controls)
-- [Araç ipucu gösterilirse CellFormatting olayı yükseltilmez](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [Control.DefaultFont Segoe UI 9 pt olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt)
-- [FolderBrowserDialog modernizasyonu](#modernization-of-the-folderbrowserdialog)
-- [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types)
-- [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [DomainUpDown.UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [DoNotSupportSelectAllShortcutInMultilineTextBox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported)
-- [ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Windows Formlarından Kaldırılan Yinelenen API'ler](#duplicated-apis-removed-from-windows-forms)
+| Son dakika değişikliği | Sürüm tanıtıldı |
+| - | :-: |
+| [WinForms API'ler şimdi ArgumentNullException atmak](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [Kaldırılan denetimler](#removed-controls) | 3.1 |
+| [Araç ipucu gösterilirse CellFormatting olayı yükseltilmez](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Control.DefaultFont Segoe UI 9 pt olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3,0 |
+| [FolderBrowserDialog modernizasyonu](#modernization-of-the-folderbrowserdialog) | 3,0 |
+| [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3,0 |
+| [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3,0 |
+| [DomainUpDown.UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3,0 |
+| [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3,0 |
+| [DoNotSupportSelectAllShortcutInMultilineTextBox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3,0 |
+| [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3,0 |
+| [EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3,0 |
+| [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3,0 |
+| [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3,0 |
+| [ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3,0 |
+| [Windows Formlarından Kaldırılan Yinelenen API'ler](#duplicated-apis-removed-from-windows-forms) | 3,0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
 
 ## <a name="net-core-31"></a>.NET Çekirdek 3.1
 
