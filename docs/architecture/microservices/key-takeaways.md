@@ -2,12 +2,12 @@
 title: Anahtar paketleri
 description: Kapsayıcı .NET Uygulamaları kılavuzu/e-kitap için .NET Microservices Architecture'dan önemli paketleri alın, avantajlar ve dezavantajlar, tasarım ve geliştirme için DDD desenleri gibi bir mikrohizmet mimarisi ni kullanırken ilgili üst düzey sorunlara hızlı bir şekilde göz atın, esneklik, güvenlik ve orkestratörlerin kullanımı.
 ms.date: 10/19/2018
-ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e793a76fa59d6c131422480071d85ab3f18102c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70296027"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988784"
 ---
 # <a name="key-takeaways"></a>Anahtar Paketler
 
@@ -23,7 +23,7 @@ ms.locfileid: "70296027"
 
 **Etki alanı odaklı tasarım ve SOA.** Microservices mimari desenleri hizmet odaklı mimari (SOA) ve etki alanına dayalı tasarımdan (DDD) kaynaklanır. Değişen iş ihtiyaçları ve kuralları olan ortamlar için mikro hizmetler tasarlarken ve geliştirdiğinizde, DDD yaklaşımlarını ve desenlerini göz önünde bulundurmanız önemlidir.
 
-**Mikro hizmetler zorlukları.** Microservices, bağımsız dağıtım, güçlü alt sistem sınırları ve teknoloji çeşitliliği gibi birçok güçlü özellik sunar. Bununla birlikte, parçalanmış ve bağımsız veri modelleri, mikro hizmetler arasındaki esnek iletişim, nihai tutarlılık ve operasyonel karmaşıklık gibi dağıtılmış uygulama geliştirme ile ilgili birçok yeni zorluk da birden fazla mikro hizmetten günlük ve izleme bilgilerini toplama. Bu yönleri geleneksel monolitik uygulama çok daha yüksek bir karmaşıklık düzeyi tanıtmak. Sonuç olarak, yalnızca belirli senaryolar mikro hizmet tabanlı uygulamalar için uygundur. Bunlar, birden çok değişen alt sistemlere sahip büyük ve karmaşık uygulamaları içerir. Bu gibi durumlarda, daha iyi uzun vadeli çeviklik ve uygulama bakımı sağlayacak, çünkü daha karmaşık bir yazılım mimarisi ne kadar yatırım yapmaya değer.
+**Mikro hizmetler zorlukları.** Microservices, bağımsız dağıtım, güçlü alt sistem sınırları ve teknoloji çeşitliliği gibi birçok güçlü özellik sunar. Bununla birlikte, parçalanmış ve bağımsız veri modelleri, mikro hizmetler arasındaki esnek iletişim, nihai tutarlılık ve birden çok mikro hizmetten bilgi toplama ve izleme sonucunda oluşan operasyonel karmaşıklık gibi dağıtılmış uygulama geliştirmeyle ilgili birçok yeni zorluk da gündeme getirilmektedir. Bu yönleri geleneksel monolitik uygulama çok daha yüksek bir karmaşıklık düzeyi tanıtmak. Sonuç olarak, yalnızca belirli senaryolar mikro hizmet tabanlı uygulamalar için uygundur. Bunlar, birden çok değişen alt sistemlere sahip büyük ve karmaşık uygulamaları içerir. Bu gibi durumlarda, daha iyi uzun vadeli çeviklik ve uygulama bakımı sağlayacak, çünkü daha karmaşık bir yazılım mimarisi ne kadar yatırım yapmaya değer.
 
 **Herhangi bir uygulama için konteynerler.** Kapsayıcılar mikro hizmetler için uygundur, ancak Windows Kapsayıcıları kullanırken geleneksel .NET Framework'e dayalı yekpare uygulamalar için de yararlı olabilir. Docker'ı kullanmanın birçok dağıtımdan üretime sorunları çözme ve en gelişmiş Geliştirme ve Test ortamları sağlama gibi avantajları birçok farklı uygulama türü için geçerlidir.
 

@@ -2,12 +2,12 @@
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Dapper kullanarak eShopOnContainers sipariş microservice CQRS sorguları tarafında uygulanmasını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972083"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988758"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS microservice'de okuma/sorgu uygulama
 
@@ -49,7 +49,7 @@ Kodunuzda Dapper kullandığınızda, <xref:System.Data.SqlClient.SqlConnection>
 
 ## <a name="dynamic-versus-static-viewmodels"></a>Dinamik ve statik Görünüm Modelleri
 
-ViewModels'ı sunucu tarafından istemci uygulamalarına döndürrken, Görünüm Modelleri verileri istemci uygulaması gibi tuttuğundan, varlık modelinizin iç etki alanı varlıklarından farklı olabilecek DTO'lar (Veri Aktarımı Nesneleri) olarak bu Görünüm Modelleri'ni düşünebilirsiniz Ihtiyacı var. Bu nedenle, çoğu durumda, birden çok etki alanı varlığından gelen verileri toplayabilir ve ViewModels'i istemci uygulamasının bu verilere nasıl ihtiyaç duyduğuna göre tam olarak oluşturabilirsiniz.
+ViewModels'ı sunucu tarafından istemci uygulamalarına döndürrken, Görünüm Modelleri verileri istemci uygulamasının ihtiyaç duyduğu şekilde tuttuğundan, varlık modelinizin iç etki alanı varlıklarından farklı olabilecek DTo'lar (Veri Aktarımı Nesneleri) olarak bu Görünüm Modelleri'ni düşünebilirsiniz. Bu nedenle, çoğu durumda, birden çok etki alanı varlığından gelen verileri toplayabilir ve ViewModels'i istemci uygulamasının bu verilere nasıl ihtiyaç duyduğuna göre tam olarak oluşturabilirsiniz.
 
 Bu Görünüm Modelleri veya DTO'lar, daha sonraki bir `OrderSummary` kod snippet'inde gösterilen sınıf gibi açıkça (veri tutucu sınıfları olarak) tanımlanabilir veya yalnızca sorgularınızın döndürülen özniteliklerine göre dinamik Görünüm Modelleri veya dinamik DTO'ları dinamik bir tür olarak döndürebilirsiniz.
 

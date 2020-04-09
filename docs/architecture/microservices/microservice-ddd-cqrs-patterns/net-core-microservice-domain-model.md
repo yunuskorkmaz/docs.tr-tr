@@ -2,12 +2,12 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | DDD yönelimli etki alanı modelinin uygulama ayrıntılarına girin.
 ms.date: 10/08/2018
-ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972038"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988433"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile microservice etki alanı modeli uygulayın
 
@@ -101,7 +101,7 @@ Buna ek olarak, sınıf IAggregateRoot adlı bir arayüz ile dekore edilmiştir.
 
 İşaretleme arabirimi bazen bir anti-desen olarak kabul edilir; ancak, özellikle bu arabirim gelişmekte olabilir, bir sınıf işaretlemek için temiz bir yoldur. Bir öznitelik işaretçi için diğer seçenek olabilir, ancak sınıfın üzerine bir Toplu öznitelik işaretçisi koymak yerine IAggregate arabiriminin yanındaki taban sınıf (Varlık) görmek daha hızlıdır. Bu tercihleri meselesi, her durumda.
 
-Toplu köke sahip olmak, toplam varlıkların tutarlılık ve iş kurallarıyla ilgili kodun çoğunun Sipariş toplu kök sınıfında yöntem olarak uygulanması gerektiği anlamına gelir (örneğin, bir Sipariş Öğesi nesnesini toplua eklerken AddOrderItem) . OrderItems nesnelerini bağımsız olarak veya doğrudan oluşturmamalı veya güncelleştirmemelisiniz; AggregateRoot sınıfı, alt varlıklarına karşı herhangi bir güncelleştirme işleminin denetimini ve tutarlılığını korumalıdır.
+Toplu köke sahip olmak, agrega varlıklarının tutarlılık ve iş kurallarıyla ilgili kodun çoğunun Sipariş toplu kök sınıfında yöntem olarak uygulanması gerektiği anlamına gelir (örneğin, bir Sipariş Öğesi nesnesi toplamına eklerken AddOrderItem). OrderItems nesnelerini bağımsız olarak veya doğrudan oluşturmamalı veya güncelleştirmemelisiniz; AggregateRoot sınıfı, alt varlıklarına karşı herhangi bir güncelleştirme işleminin denetimini ve tutarlılığını korumalıdır.
 
 ## <a name="encapsulate-data-in-the-domain-entities"></a>Etki Alanı Varlıklarındaki verileri kapsülle
 
@@ -139,7 +139,7 @@ Aşağıdaki kod snippet Sipariş toplamına bir Sipariş Öğesi nesnesi ekleme
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
 // The code in command handlers or WebAPI controllers, related only to application stuff
-// There is NO code here related to OrderItem object’s business logic
+// There is NO code here related to OrderItem object's business logic
 myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, units);
 
 // The code related to OrderItem params validations or domain rules should

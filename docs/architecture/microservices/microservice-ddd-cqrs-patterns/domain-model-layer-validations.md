@@ -2,12 +2,12 @@
 title: Etki alanı model katmanında doğrulamaları tasarlama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Etki alanı modeli doğrulamalarının temel kavramlarını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899675"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988511"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Etki alanı modeli katmanında tasarım doğrulamaları
 
@@ -57,7 +57,7 @@ Gerekli veya MaxLength öznitelikleri gibi veri ek açıklamaları, [Tablo eşle
 
 Veri ek açıklamaları <xref:System.ComponentModel.DataAnnotations.IValidatableObject> ve arabirim hala model bağlama sırasında model doğrulama için kullanılabilir, her zamanki gibi denetleyicinin eylemleri çağırma önce, ama bu model bir ViewModel veya DTO olması gerekiyordu ve bir MVC veya API endişe değil bir etki alanı modeli endişe.
 
-Kavramsal farkı net hale getirdikten sonra, eylemleriniz `IValidatableObject` önerilmeyen bir varlık sınıfı nesnesi parametresi alıyorsa, veri ek açıklamalarını ve varlık sınıfında doğrulama için kullanmaya devam edebilirsiniz. Bu durumda, doğrulama modeli bağlama üzerine, hemen eylem çağıran önce oluşur ve sonucu kontrol etmek için denetleyicinin ModelState.IsValid özelliğini kontrol edebilirsiniz, ama sonra tekrar, denetleyici olur, varlık nesnesi devam etmeden önce değil DbContext, EF 4.x'ten beri yaptığı gibi.
+Kavramsal farkı net hale getirdikten sonra, eylemleriniz `IValidatableObject` önerilmeyen bir varlık sınıfı nesnesi parametresi alıyorsa, veri ek açıklamalarını ve varlık sınıfında doğrulama için kullanmaya devam edebilirsiniz. Bu durumda, doğrulama modeli bağlama üzerine, eylem çağırarak hemen önce oluşur ve sonucu kontrol etmek için denetleyicinin ModelState.IsValid özelliğini kontrol edebilirsiniz, ama sonra tekrar, ef 4.x beri yaptığı gibi, DbContext varlık nesnesi kalıcı önce denetleyici olur.
 
 DbContext'ın SaveChanges yöntemini geçersiz kılarak, `IValidatableObject.Validate` veri ek açıklamalarını ve yöntemi kullanarak varlık sınıfında özel doğrulama yı yine de uygulayabilirsiniz.
 

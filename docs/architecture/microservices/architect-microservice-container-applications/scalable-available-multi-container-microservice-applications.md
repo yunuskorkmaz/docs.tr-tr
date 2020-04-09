@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Kubernetes uygulama yaşam döngüsünü geliştirirken yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok konteyner li uygulamaları ve Azure Dev Spaces olanaklarını düzenleme seçeneklerini keşfedin.
 ms.date: 01/30/2020
-ms.openlocfilehash: ea204941a461794fbeeb2482aa11973b79437027
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a67235109bed806caa7d9caa2bc26fd4fe9daca
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628507"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988914"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -21,7 +21,7 @@ Uygulamanız mikro hizmetlere dayanıyorsa veya birden fazla kapsayıcıya böl�
 
 Her hizmet örneği için bir kapsayıcı kullanırsınız. Docker kapsayıcıları "dağıtım birimleri" ve bir kapsayıcı docker örneğidir. Ana bilgisayar birçok kapsayıcıyı işler. Mantıklı bir yaklaşım gibi görünüyor. Ama nasıl yük dengeleme, yönlendirme ve bu bestelenmiş uygulamaları düzenleyen ele alıyormusunuz?
 
-Tek Docker ana bilgisayarlarındaki düz Docker Engine, tek bir ana bilgisayarda tek görüntü örneklerini yönetme gereksinimlerini karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden fazla ana bilgisayarda dağıtılan birden çok kapsayıcıyı yönetme konusunda yetersiz kalır. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, kapsayıcıları görüntü başına birden fazla örneği olan ölçeklendirecek, askıya alacak veya gerektiğinde kapatacak ve ideal olarak ağ ve veri gibi kaynaklara nasıl erişeceklerini de denetleyecek bir yönetim platformuna ihtiyacınız var Depolama.
+Tek Docker ana bilgisayarlarındaki düz Docker Engine, tek bir ana bilgisayarda tek görüntü örneklerini yönetme gereksinimlerini karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden fazla ana bilgisayarda dağıtılan birden çok kapsayıcıyı yönetme konusunda yetersiz kalır. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, kapsayıcıları görüntü başına birden çok örneği olan ölçeklendirecek, askıya alacak veya gerektiğinde kapatacak ve ideal olarak ağ ve veri depolama gibi kaynaklara nasıl erişeceklerini de denetleyecek bir yönetim platformuna ihtiyacınız vardır.
 
 Tek tek kapsayıcıların veya çok basit bestelenmiş uygulamaların yönetiminin ötesine geçmek ve mikro hizmetlerle daha büyük kurumsal uygulamalara yönelmek için, düzenleme ve kümeleme platformlarına yönelmeniz gerekir.
 
@@ -29,7 +29,7 @@ Mimari ve geliştirme açısından, mikro hizmetlere dayalı uygulamalardan olu�
 
 **Kümeler ve orkestrasyoncular.** Uygulamaları birçok Docker ana bilgisayararasında ölçeklendirmeniz gerektiğinde, büyük bir mikrohizmet tabanlı uygulamada olduğu gibi, temel platformun karmaşıklığını soyutlayarak tüm bu ana bilgisayarları tek bir küme olarak yönetebilmeniz çok önemlidir. Konteyner kümeleri ve orkestratörleri bunu sağlıyor. Kubernetes bir orkestratör örneğidir ve Azure Kubernetes Hizmeti aracılığıyla Azure'da kullanılabilir.
 
-**Schedulers.** *Zamanlama,* bir yöneticinin kapsayıcıları kümede başlatabilmesi anlamına gelir, böylece aynı zamanda bir ui sağlarlar. Küme zamanlayıcısının çeşitli sorumlulukları vardır: kümenin kaynaklarını verimli kullanmak, kullanıcı tarafından sağlanan kısıtlamaları ayarlamak, düğümler veya ana bilgisayarlar arasında denge kapları verimli bir şekilde yüklemek ve yüksek sağlarken hatalara karşı sağlam olmak Kullanılabilir -lik.
+**Schedulers.** *Zamanlama,* bir yöneticinin kapsayıcıları kümede başlatabilmesi anlamına gelir, böylece aynı zamanda bir ui sağlarlar. Küme zamanlayıcısının çeşitli sorumlulukları vardır: kümenin kaynaklarını verimli bir şekilde kullanmak, kullanıcı tarafından sağlanan kısıtlamaları ayarlamak, düğümler veya ana bilgisayarlar arasında denge kapları verimli bir şekilde yüklemek ve yüksek kullanılabilirlik sağlarken hatalara karşı sağlam olmak.
 
 Küme ve zamanlayıcı kavramları yakından ilişkilidir, bu nedenle farklı satıcılar tarafından sağlanan ürünler genellikle her iki yetenek kümesini de sağlar. Aşağıdaki liste, kümeler ve zamanlayıcılar için sahip olduğunuz en önemli platform ve yazılım seçeneklerini gösterir. Bu orkestratörler genellikle Azure gibi genel bulutlarda sunulur.
 
@@ -48,7 +48,7 @@ Birçok bulut satıcısı Docker konteyner desteğinin yanı sıra Microsoft Azu
 
 Bir Kubernetes kümesi birden çok Docker ana bilgisayarını bir araya getirerek bunları tek bir sanal Docker ana bilgisayar olarak ortaya çıkarır, böylece kümeye birden fazla kapsayıcı dağıtabilir ve istediğiniz sayıda kapsayıcı örneğiyle ölçeklendirebilirsiniz. Küme ölçeklenebilirlik, sağlık ve benzeri gibi tüm karmaşık yönetim sıhhi tesisat ele alacaktır.
 
-AKS, Azure'da kapsayıcı uygulamaları çalıştırmak için önceden yapılandırılmış bir sanal makine kümesinin oluşturulmasını, yapılandırmasını ve yönetimini basitleştirmenin bir yolunu sağlar. Popüler açık kaynak zamanlama ve düzenleme araçlarının optimize edilmiş yapılandırmasını kullanan AKS, Microsoft Azure'da kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için mevcut becerilerinizi kullanmanıza veya büyük ve büyüyen bir topluluk uzmanlığından yararlanmanıza olanak tanır .
+AKS, Azure'da kapsayıcı uygulamaları çalıştırmak için önceden yapılandırılmış bir sanal makine kümesinin oluşturulmasını, yapılandırmasını ve yönetimini basitleştirmenin bir yolunu sağlar. Popüler açık kaynak zamanlama ve düzenleme araçlarının optimize edilmiş yapılandırmasını kullanan AKS, Microsoft Azure'da kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için mevcut becerilerinizi kullanmanıza veya büyük ve büyüyen bir topluluk uzmanlığından yararlanmanıza olanak tanır.
 
 Azure Kubernetes Hizmeti, azure için özel olarak popüler Docker kümeleme açık kaynak araçları nın ve teknolojilerinin yapılandırmasını optimize eder. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan açık bir çözüm elabilirsiniz. Boyutu, ana bilgisayar sayısını ve orkestratör araçlarını seçersiniz ve AKS diğer her şeyi işler.
 
@@ -56,7 +56,7 @@ Azure Kubernetes Hizmeti, azure için özel olarak popüler Docker kümeleme aç
 
 **Şekil 4-24**. Kubernetes kümesinin basitleştirilmiş yapısı ve topolojisi
 
-Şekil 4-24'te bir Ana düğümün (VM) kümenin koordinasyonunun çoğunu kontrol ettiği ve uygulama açısından tek bir havuz olarak yönetilen düğümlerin geri kalanına kapitaliteler dağıtabileceğiniz bir Kubernetes kümesinin yapısını görebilirsiniz. binlerce hatta on binlerce konteynere ölçeklendirebilirsiniz.
+Şekil 4-24'te bir Ana düğümün (VM) kümenin koordinasyonunun çoğunu kontrol ettiği bir Kubernetes kümesinin yapısını görebilir ve uygulama açısından tek bir havuz olarak yönetilen ve binlerce hatta on binlerce kapsayıcıya ölçeklendirmenize olanak tanıyan düğümlerin geri kalanına kapsayıcılar dağıtabilirsiniz.
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes için geliştirme ortamı
 
@@ -104,7 +104,7 @@ Temel olarak Azure'da paylaşılan bir geliştirme alanı ayarlayabilirsiniz. He
 
 Azure Dev Spaces, göreceli yalıtımda ve ekibinizin çalışmasını bozma korkusu olmadan çalışmanızı sağlayan bir alan konsepti sağlar. Her dev alanı, "üst" ana dev alanından, devam eden iş microservice ile bir microservice (veya çok) geçersiz kılmak için izin veren hiyerarşik bir yapının bir parçasıdır.
 
-Bu özellik URL öneklerine dayanır, bu nedenle url'deki herhangi bir geliştirme alanı öneki nikullanarak, dev alanında varsa hedef mikrohizmetten bir istek sunulur, aksi takdirde hiyerarşide bulunan hedef mikrohizmetin ilk örneğine iletilir , sonunda üst ana dev alana alıyorum.
+Bu özellik URL öneklerine dayanır, bu nedenle url'deki herhangi bir dev alanı önekini kullanırken, dev alanında varsa hedef mikrohizmetten bir istek sunulur, aksi takdirde hiyerarşide bulunan hedef mikrohizmetin ilk örneğine kadar iletilir ve sonunda en üstteki ana dev alanına gider.
 
 Somut bir örnekte pratik bir görünüm elde etmek için [Azure Dev Spaces'teki eShopOnContainers wiki sayfasına](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)bakın.
 

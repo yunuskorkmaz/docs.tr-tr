@@ -2,12 +2,12 @@
 title: ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | ASP.NET Core hizmetlerini ve web uygulamalarını kapsayıcılarda test etmek için bir mimari keşfedin.
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501983"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988238"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core hizmetlerini ve web uygulamalarını test etme
 

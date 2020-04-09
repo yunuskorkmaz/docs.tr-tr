@@ -2,18 +2,18 @@
 title: Kısmi hata işleme
 description: Kısmi hataları niçin incelikle işleyeceğinizi öğrenin. Bir microservice tam olarak işlevsel olmayabilir ama yine de bazı yararlı işler yapmak mümkün olabilir.
 ms.date: 10/16/2018
-ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300719360e1a2500db0af8454c91fdfe2e5b09b
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73732973"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988876"
 ---
 # <a name="handle-partial-failure"></a>Kısmi hata işleme
 
 Mikro hizmetler tabanlı uygulamalar gibi dağıtılmış sistemlerde, kısmi arıza riski her zaman vardır. Örneğin, tek bir microservice/container başarısız olabilir veya kısa bir süre için yanıt vermek için kullanılabilir olmayabilir veya tek bir VM veya sunucu çökebilir. İstemciler ve hizmetler ayrı işlemler olduğundan, bir hizmet istemcinin isteğine zamanında yanıt veremeyebilir. Hizmet aşırı yüklenmiş ve isteklere çok yavaş yanıt verebilir veya ağ sorunları nedeniyle kısa bir süre için erişilemeyebilir.
 
-Örneğin, eShopOnContainers örnek uygulamasından Sipariş ayrıntıları sayfasını göz önünde bulundurun. Kullanıcı bir sipariş göndermeye çalıştığında sipariş mikrohizmeti yanıt vermiyorsa, istemci işleminin kötü bir uygulaması (MVC web uygulaması)—örneğin, istemci kodu zaman olmadan eşzamanlı RPC'ler kullanıyorsa— iş parçacıklarını süresiz olarak engeller bir yanıt bekliyor. Kötü bir kullanıcı deneyimi oluşturmanın yanı sıra, yanıt vermeyen her bekleme bir iş parçacığı tüketir veya engeller ve iş parçacıkları yüksek ölçeklenebilir uygulamalarda son derece değerlidir. Engellenen çok sayıda iş parçacığı varsa, sonunda uygulamanın çalışma zamanı iş parçacıkları tükenebilir. Bu durumda, uygulama Şekil 8-1'de gösterildiği gibi kısmen yanıt vermemek yerine genel olarak yanıt sızabilir.
+Örneğin, eShopOnContainers örnek uygulamasından Sipariş ayrıntıları sayfasını göz önünde bulundurun. Kullanıcı bir sipariş göndermeye çalıştığında sipariş mikrohizmeti yanıt vermiyorsa, istemci işleminin kötü bir uygulaması (MVC web uygulaması)-örneğin, istemci kodu zaman olmadan eşzamanlı RPC'ler kullanıyorsa, iş parçacıklarının yanıt bekleyen kısmını süresiz olarak engeller. Kötü bir kullanıcı deneyimi oluşturmanın yanı sıra, yanıt vermeyen her bekleme bir iş parçacığı tüketir veya engeller ve iş parçacıkları yüksek ölçeklenebilir uygulamalarda son derece değerlidir. Engellenen çok sayıda iş parçacığı varsa, sonunda uygulamanın çalışma zamanı iş parçacıkları tükenebilir. Bu durumda, uygulama Şekil 8-1'de gösterildiği gibi kısmen yanıt vermemek yerine genel olarak yanıt sızabilir.
 
 ![Kısmi hataları gösteren diyagram.](./media/handle-partial-failure/partial-failures-diagram.png)
 

@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 -C# Guide'daki yenilikler
 description: C# 8.0'da bulunan yeni özellikler hakkında genel bir bakış alın.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399681"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989213"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0'daki yenilikler
 
@@ -23,8 +23,9 @@ C# 8.0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - [Bildirimleri kullanma](#using-declarations)
 - [Statik yerel fonksiyonlar](#static-local-functions)
 - [Tek kullanımlık ref structs](#disposable-ref-structs)
-- [Nullable başvuru türleri](#nullable-reference-types)
+- [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Asenkron akarsular](#asynchronous-streams)
+- [Asynchronous tek kullanımlık](#asynchronous-disposable)
 - [Endeksler ve aralıklar](#indices-and-ranges)
 - [Null-coalescing atama](#null-coalescing-assignment)
 - [Yönetilmeyen yapılı türler](#unmanaged-constructed-types)
@@ -392,6 +393,10 @@ await foreach (var number in GenerateSequence())
 ```
 
 Async [akışları oluşturma ve tüketme](../tutorials/generate-consume-asynchronous-stream.md)konusunda öğreticimizde asynchronous akışlarını kendiniz deneyebilirsiniz. Varsayılan olarak, akış öğeleri yakalanan bağlamında işlenir. Bağlamın ele geçirilmesini devre dışı kılmış <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> olmak istiyorsanız, uzantı yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi [için, Görev tabanlı eşzamanlı deseni tüketme makalesine](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)bakın.
+
+## <a name="asynchronous-disposable"></a>Asynchronous tek kullanımlık
+
+C# 8.0 ile başlayarak, dil <xref:System.IAsyncDisposable?displayProperty=nameWithType> arabirimi uygulayan tek kullanımlık türleri destekler. Bir `using` ifadenin operand ya <xref:System.IDisposable> <xref:System.IAsyncDisposable>da uygulayabilirsiniz . Durumunda `IAsyncDisposable`, derleyici `await` <xref:System.Threading.Tasks.Task> döndürülen <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>kod oluşturur. Daha fazla bilgi için [ `using` ifadeye](../language-reference/keywords/using-statement.md)bakın.
 
 ## <a name="indices-and-ranges"></a>Endeksler ve aralıklar
 

@@ -2,12 +2,12 @@
 title: .NET MikroHizmetler. Kapsayıcılı .NET Uygulamaları Mimarisi
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Mikro hizmetler modüler ve bağımsız olarak dağıtılabilir hizmetlerdir. Docker kapsayıcıları (Linux ve Windows için), bir hizmeti ve bağımlılıklarını tek bir birime birleştirerek dağıtım ve sınamayı basitleştirir ve bu da daha sonra yalıtılmış bir ortamda çalıştırılır.
 ms.date: 01/30/2020
-ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543540"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988797"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Mikro Hizmetleri: Kapsayıcılı .NET Uygulamaları Mimarisi
 

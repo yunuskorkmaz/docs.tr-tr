@@ -3,12 +3,12 @@ title: Derleme config ayarları
 description: JIT derleyicisinin .NET Core uygulamaları için nasıl çalıştığını yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092895"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989122"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Derleme için çalışma zamanı yapılandırma seçenekleri
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092895"
   - İkinci katman arka planda en iyi duruma getirilmiş kod oluşturur ("JIT'yi optimize etme").
 - .NET Core 3.0 ve sonraki durumlarda, katmanlı derleme varsayılan olarak etkinleştirilir.
 - .NET Core 2.1 ve 2.2'de katmanlı derleme varsayılan olarak devre dışı bırakılır.
-- Daha fazla bilgi için [Katmanlı derleme kılavuzuna](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)bakın.
+- Daha fazla bilgi için [Katmanlı derleme kılavuzuna](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)bakın.
 
 | | Ayar adı | Değerler |
 | - | - | - |

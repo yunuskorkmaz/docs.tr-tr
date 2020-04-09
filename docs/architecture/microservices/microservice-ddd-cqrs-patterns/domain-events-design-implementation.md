@@ -2,12 +2,12 @@
 title: Etki alanı olayları. tasarım ve uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Agregalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının ayrıntılı bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884234"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988723"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -71,7 +71,7 @@ Diğer taraftan, etki alanı olayları kullanıyorsanız, bu yaklaşımı kullan
 2. Komut işleyicisi komutu alın.
    - Tek bir toplamın işlemini yürütün.
    - (İsteğe bağlı) Yan etkiler için etki alanı olaylarını yükseltin (örneğin, OrderStartedDomainEvent).
-3. Birden çok toplama veya uygulama eyleminde açık sayıda yan etki yürütecek etki alanı olaylarını (geçerli işlem içinde) işleyebilir. Örnek:
+3. Birden çok toplama veya uygulama eyleminde açık sayıda yan etki yürütecek etki alanı olaylarını (geçerli işlem içinde) işleyebilir. Örneğin:
    - Doğrulayın veya alıcı ve ödeme yöntemi oluşturun.
    - Durumları mikro hizmetler arasında yaymak veya alıcıya e-posta göndermek gibi dış eylemleri tetiklemek için ilgili bir tümleştirme olayı oluşturun ve olay veri tonuna gönderin.
    - Diğer yan etkileri ele alın.
@@ -124,7 +124,7 @@ Etki alanının her yerde bulunan dili açısından, bir olay geçmişte olan bi
 
 Daha önce de belirtildiği gibi, olayların önemli bir özelliği, bir olay geçmişte olan bir şey olduğundan, bu değişmemesi gerektiğidir. Bu nedenle, değişmez bir sınıf olmalıdır. Önceki kodda özelliklerin salt okunur olduğunu görebilirsiniz. Nesneyi güncelleştirmenin bir yolu yoktur, değerleri yalnızca oluşturduğunuzda ayarlayabilirsiniz.
 
-Burada vurgulamak önemlidir, eğer etki alanı olayları eşit bir şekilde işlenecekse, olay nesnelerini serihale ve deserialize etmeyi gerektiren bir sıra kullanılarak, özelliklerin salt okunur değil "özel küme" olması gerekir, bu nedenle deserializer değerleri dequeuing üzerine atamak mümkün. Etki alanı olay pub / alt MediatR kullanılarak eşzamanlı olarak uygulandığından, bu Sipariş microservice bir sorun değildir.
+Burada vurgulamak önemlidir, eğer etki alanı olayları olay nesnelerini serihale ve deserialize gerektiren bir sıra kullanarak eş zamanlı olarak ele alınacaksa, özelliklerin salt okunur yerine "özel küme" olması gerekir, böylece deserializer değerleri dequeuing üzerine atayabilir. Etki alanı olay pub / alt MediatR kullanılarak eşzamanlı olarak uygulandığından, bu Sipariş microservice bir sorun değildir.
 
 ### <a name="raise-domain-events"></a>Etki alanı olaylarını yükseltme
 

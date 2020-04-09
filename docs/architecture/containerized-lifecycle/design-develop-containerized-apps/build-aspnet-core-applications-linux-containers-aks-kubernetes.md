@@ -2,12 +2,12 @@
 title: Linux konteynerolarak AKS/Kubernetes kümelerine dağıtılan core 2.2 ASP.NET uygulamaları oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
 ms.date: 02/25/2019
-ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70848747"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989031"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux konteynerolarak dağıtılan ASP.NET Core 2.2 uygulamalarını AKS/Kubernetes orkestratörüne dönüştürün
 

@@ -3,12 +3,12 @@ title: .NET Core'a taşıma araçları
 description: .NET Core bağlantı noktası için kullanabileceğiniz araçlardan bazıları hakkında bilgi edinin
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64bad7600d8e17ada83d4bd8bc56762fd1789f43
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157524"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989135"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core’a taşıma konusunda yardımcı olabilecek araçlar
 
@@ -16,7 +16,7 @@ Bu makalede listelenen araçları taşıma yaparken yararlı bulabilirsiniz:
 
 - [.NET Taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) - Kodunuzu .NET Framework ve .NET Core arasında ne kadar taşınabilir olduğuna dair bir rapor oluşturabilen bir araç zinciri:
   - Komut [satırı aracı](https://github.com/Microsoft/dotnet-apiport/releases) olarak
-  - Visual [Studio uzantısı](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b) olarak
+  - Visual [Studio uzantısı](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) olarak
 - [.NET API çözümleyicisi](../../standard/analyzers/api-analyzer.md) - Farklı platformlarda C# API'leri için olası uyumluluk risklerini keşfeden ve amortismana alınan API'lere yönelik çağrıları algılayan bir Roslyn çözümleyicisi.
 
 Ayrıca, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) aracıyla daha küçük çözümleri veya tek tek projeleri .NET Core proje dosya biçimine taşımayı deneyebilirsiniz.

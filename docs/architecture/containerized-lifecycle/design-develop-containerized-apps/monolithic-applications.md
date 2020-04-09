@@ -2,12 +2,12 @@
 title: Tek yapılı uygulamalar
 description: Yekpare uygulamaları kapsayıcılaştırmak için temel kavramları anlayın.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c186f6a300588816916886927f93e0c06ebd6bc
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771042"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988992"
 ---
 # <a name="monolithic-applications"></a>Tek yapılı uygulamalar
 
@@ -67,7 +67,7 @@ Kapsayıcılarla yekpare uygulamaları nasıl "kaldırAbileceğiniz ve kaydırab
 
 Azure'a dağıtılan bir kapsayıcının hızlı bir şekilde doğrulanmasını istediğinizden veya uygulama yalnızca tek konteyner uygulaması olduğundan, Azure Uygulama Hizmetleri ölçeklenebilir tek kapsayıcı hizmetleri sağlamak için harika bir yol sağlar.
 
-Azure Uygulama Hizmeti'ni kullanmak sezgiseldir ve kodunuzu almak, Microsoft Visual Studio'da oluşturmak ve doğrudan Azure'a dağıtmak için harika Git tümleştirmesi sağladığı ndan hızlı bir şekilde çalışmaya devam edebilirsiniz. Ancak, geleneksel olarak (Docker olmadan) Uygulama Hizmetlerinde desteklenmeyen diğer özelliklere, çerçevelere veya bağımlılıklara ihtiyacınız varsa, Azure ekibi App Service'deki bağımlılıkları güncelleyene veya diğer hizmetlere geçene kadar beklemeniz gerekir. Daha fazla denetiminiz olan ve uygulamanız için gerekli bir bileşeni veya çerçeveyi yükleyebileceğiniz Hizmet Kumaşı, Bulut Hizmetleri ve hatta düz VM'ler.
+Azure Uygulama Hizmeti'ni kullanmak sezgiseldir ve kodunuzu almak, Microsoft Visual Studio'da oluşturmak ve doğrudan Azure'a dağıtmak için harika Git tümleştirmesi sağladığı ndan hızlı bir şekilde çalışmaya devam edebilirsiniz. Ancak, geleneksel olarak (Docker olmadan) Uygulama Hizmetlerinde desteklenmeyen diğer özelliklere, çerçevelere veya bağımlılıklara ihtiyacınız varsa, Azure ekibinin App Hizmetindeki bağımlılıkları güncelleştirdiğiveya Daha fazla denetiminiz olan ve uygulamanız için gerekli bir bileşen veya çerçeve yükleyebileceğiniz Hizmet Kumaşı, Bulut Hizmetleri ve hatta düz VM'ler gibi diğer hizmetlere geçene kadar bunu beklemeniz gerekir.
 
 Şimdi, Şekil 4-4'te gösterildiği gibi, Visual Studio 2017'yi kullanırken, Azure Uygulama Hizmeti'ndeki konteyner desteği, uygulama ortamınıza istediğiniz her şeyi ekleme olanağı sağlar. Uygulamanıza bir bağımlılık eklediyseniz, bir kapsayıcıda çalıştırdığınız için Dockerfile veya Docker resminize bu bağımlılıkları ekleme özelliğine sahip olabilirsiniz.
 
@@ -75,7 +75,7 @@ Azure Uygulama Hizmeti'ni kullanmak sezgiseldir ve kodunuzu almak, Microsoft Vis
 
 **Şekil 4-4**. Visual Studio uygulamalarından/kapsayıcılarından Azure Uygulama Hizmetine kapsayıcı yayınlama
 
-Şekil 4-4 ayrıca, yayımlama akışının bir görüntüyü, Azure Konteyner Kayıt Defteri (Azure'daki dağıtımlarınıza yakın ve Azure Etkin Dizin grupları ve hesapları tarafından güvenli hale getiren bir kayıt defteri) veya diğer Docker Registry'si olabilecek bir Kapsayıcı Kayıt Defteri'ne iter Docker Hub veya şirket içi kayıtlar gibi.
+Şekil 4-4 ayrıca, yayımlama akışının bir görüntüyü, Azure Konteyner Kayıt Defteri (Azure'daki dağıtımlarınıza yakın ve Azure Etkin Dizin grupları ve hesapları tarafından güvence altına alınmış bir kayıt defteri) veya Docker Hub veya şirket içi kayıt şirketleri gibi diğer Docker Registry'si olabilecek bir Kapsayıcı Kayıt Defteri'ne iter.
 
 >[!div class="step-by-step"]
 >[Önceki](common-container-design-principles.md)

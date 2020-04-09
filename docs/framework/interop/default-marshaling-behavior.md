@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181477"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989226"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Interop marshaling, yöntem parametreleri ile ilişkili verilerin yönetilen ve yönetilmeyen bellekler arasında geçerken nasıl çalıştığını belirleyen kurallar üzerinde çalışır. Bu yerleşik kurallar, veri türü dönüşümleri, bir callee'nin ona aktarılan verileri değiştirip değiştiremeyeceği ve bu değişiklikleri arayana döndürüp döndüremeyeceği ve mareşalin performans optimizasyonları sağladığı koşullar altında bu tür etkinliklerin denetlenmesini sağlar.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Biçimlendirilmiş tür, bellekteki üyelerinin düzenini açıkça denetleyen bilgiler içeren karmaşık bir türdür. Üye düzeni bilgileri öznitelik <xref:System.Runtime.InteropServices.StructLayoutAttribute> kullanılarak sağlanır. Düzen aşağıdaki <xref:System.Runtime.InteropServices.LayoutKind> numaralandırma değerlerinden biri olabilir:  
   
-- **LayoutKind.Otomatik**  
+- **LayoutKind.Auto**  
   
      Ortak dil çalışma zamanının, türdeki üyeleri verimlilik için yeniden sıralamak için ücretsiz olduğunu gösterir. Ancak, bir değer türü yönetilmeyen koda geçirildiğinde, üyelerin düzeni tahmin edilebilir. Böyle bir yapıyı mareşalleme girişimi otomatik olarak bir özel durum neden olur.  
   

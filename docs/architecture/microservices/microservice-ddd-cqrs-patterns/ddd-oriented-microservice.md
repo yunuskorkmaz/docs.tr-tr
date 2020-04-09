@@ -2,12 +2,12 @@
 title: DDD odaklı bir mikro hizmet tasarlama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | DDD odaklı sipariş mikrohizmetinin ve uygulama katmanlarının tasarımını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401699"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988745"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD odaklı bir microservice tasarla
 

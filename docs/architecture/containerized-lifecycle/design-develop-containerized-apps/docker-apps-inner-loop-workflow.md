@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamalarının geliştirilmesi için "iç döngü" iş akışını öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936808"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989018"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -150,7 +150,7 @@ Docker'ın bu [makalesinde](https://docs.docker.com/engine/userguide/eng-image/b
 Uygulamanızı oluşturan her özel hizmet için ilgili bir resim oluşturmanız gerekir. Uygulamanız tek bir hizmet veya web uygulamasından oluşuyorsa, tek bir görüntüye ihtiyacınız vardır.
 
 > [!NOTE]
-> "Dış döngü DevOps iş akışı" dikkate alınarak, kaynak kodunuzu bir Git deposuna (Sürekli Tümleştirme) itdiğinizde görüntüler otomatik bir yapı işlemi tarafından oluşturulur, böylece görüntüler bu küresel ortamda kaynak kodu.
+> "Dış döngü DevOps iş akışı" dikkate alınarak, kaynak kodunuzu bir Git deposuna (Sürekli Tümleştirme) itdiğinizde görüntüler otomatik bir yapı işlemi tarafından oluşturulur, böylece görüntüler kaynak kodunuzdan bu küresel ortamda oluşturulur.
 >
 > Ancak bu dış döngü rotasına gitmeyi düşünmeden önce, Docker uygulamasının kaynak kontrol sistemine (Git, vb.) düzgün çalışmayan kodu itmemeleri için doğru çalıştığından emin olmalıyız.
 >

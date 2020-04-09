@@ -2,12 +2,12 @@
 title: Azure Bulutu ve Windows Kapsayıcıları ile Mevcut .NET Uygulamalarını Modernize Edin (2. baskı)
 description: Bu e-kitapla mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırmayı, kaydırmayı ve modernize etmeyi öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95a5870254481a4c6c9eed82b5be5e1eb10be346
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628454"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987952"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernize edin (2. baskı)
 
@@ -56,7 +56,7 @@ When you decide to modernize your web applications or services and move them to 
 
 ## <a name="about-this-guide"></a>Bu kılavuz hakkında
 
-Bu kılavuz, öncelikle mevcut Microsoft .NET Framework web veya hizmet odaklı uygulamaların ilk modernizasyonuna odaklanır, bu da bir iş yükünü uygulamanın kodunu önemli ölçüde değiştirmeden daha yeni veya daha modern bir ortama taşıma eylemi anlamına gelir ve temel mimari.
+Bu kılavuz, öncelikle mevcut Microsoft .NET Framework web veya hizmet odaklı uygulamaların ilk modernizasyonuna odaklanır, bu da bir iş yükünü uygulamanın kodunu ve temel mimarisini önemli ölçüde değiştirmeden daha yeni veya daha modern bir ortama taşıma eylemi anlamına gelir.
 
 Bu kılavuz, Windows Kapsayıcıları ve Azure'da Windows Kapsayıcılarını destekleyen ilgili bilgi işlem platformları gibi belirli bir dizi yeni teknoloji ve yaklaşım kullanarak uygulamalarınızı buluta taşımanın ve uygulamaları kısmen modernize etmenin avantajlarını da vurgular.
 
@@ -105,7 +105,7 @@ Tablo 1-1, her bir göç veya modernleşme yaklaşımının ana yararlarını ve
 
 .NET Framework uygulamaları başlangıçta 2001 sonlarında yayımlanan .NET Framework sürüm 1.0 ile başlamıştır. Daha sonra şirketler yeni sürümlere (2.0, 3.5 ve .NET 4.x gibi) yöneldi. Bu uygulamaların çoğu Windows Server ve Internet Information Server (IIS) üzerinde çalıştırDı ve SQL Server, Oracle, MySQL veya diğer RDBMS gibi ilişkisel bir veritabanı kullandı.
 
-Mevcut .NET uygulamalarının çoğu günümüzde .NET Framework 4.x,hatta .NET Framework 3.5'e dayanıyor olabilir ve ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation (WCF), ASP.NET SignalR ve ASP.NET Web Sayfaları gibi web çerçevelerini kullanabilir . Kurulan bu .NET Framework teknolojileri Windows'a bağlıdır. Bu bağımlılık, yalnızca eski uygulamaları geçirip uygulama altyapınızda en az değişiklik yapmak istiyorsanız göz önünde bulundurmanız önemlidir.
+Mevcut .NET uygulamalarının çoğu günümüzde .NET Framework 4.x,hatta .NET Framework 3.5'e dayalı olabilir ve ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation (WCF), ASP.NET SignalR ve ASP.NET Web Sayfaları gibi web çerçevelerini kullanabilir. Kurulan bu .NET Framework teknolojileri Windows'a bağlıdır. Bu bağımlılık, yalnızca eski uygulamaları geçirip uygulama altyapınızda en az değişiklik yapmak istiyorsanız göz önünde bulundurmanız önemlidir.
 
 Şekil 1-2, üç bulut olgunluk düzeyinin her birinde kullanılan birincil teknolojileri ve mimari stilleri gösterir:
 

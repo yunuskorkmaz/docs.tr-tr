@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Core MVC
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503949"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987913"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Core MVC uygulamaları ASP.NET geliştirin
 
@@ -51,7 +51,7 @@ app.UseEndpoints(endpoints =>
 
 Bu örnekte, yönlendirme tablosuna "varsayılan" adlı bir rota eklendi. Bu _denetleyici,_ _eylem_ve _id_için yer tutucuları ile bir rota şablonu tanımlar. Denetleyici ve eylem yer tutucuları varsayılan olarak belirtilmiş ("Ev" ve "Dizin", sırasıyla) ve id yer tutucusu isteğe bağlıdır (buna uygulanan bir "." sayesinde). Burada tanımlanan sözleşme, bir isteğin ilk bölümünün denetleyicinin adına, ikinci bölümünün eyleme karşılık vermesi gerektiğini ve gerekirse üçüncü bir bölümün bir kimlik parametresini temsil edeceğini belirtir. Geleneksel yollar genellikle başlangıç sınıfındaki Yapılandırma yöntemi gibi uygulama için tek bir yerde tanımlanır.
 
-Öznitelik yolları denetleyicilere ve eylemlere genel olarak belirtilmez, doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda onları çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığı anlamına gelir. Öznitelik yollarında, belirli bir eylem için birden çok rotayı kolayca belirtebilir ve denetleyiciler ve eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
+Öznitelik yolları denetleyicilere ve eylemlere genel olarak belirtilmez, doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda onları çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığı anlamına gelir. Öznitelik yollarında, belirli bir eylem için birden çok rotayı kolayca belirtebilir ve denetleyiciler ve eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
 
 ```csharp
 [Route("Home")]

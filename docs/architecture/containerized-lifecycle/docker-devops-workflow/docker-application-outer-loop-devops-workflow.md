@@ -2,12 +2,12 @@
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: DevOps iş akışının "dış döngü" adımlarını öğrenin
 ms.date: 02/15/2019
-ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936776"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988979"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
@@ -27,7 +27,7 @@ Bu adım Bölüm 4'te ayrıntılı olarak açıklanmıştır, ancak özetlemek g
 
 Bu adımda, takımdaki farklı geliştiricilerden gelen tüm kodun birleştirilmiş sürümünü toplamak için bir sürüm denetim sistemine sahip olmanız gerekir.
 
-Kaynak kod denetimi (SCC) ve kaynak kod yönetimi çoğu geliştirici için ikinci doğa gibi görünse de, DevOps yaşam döngüsünde Docker uygulamaları oluştururken, Docker görüntülerini uygulamayla birlikte göndermemeniz gerektiğini vurgulamak çok önemlidir doğrudan geliştiricinin makinesinden küresel Docker Registry'ye (Azure Konteyner Kayıt Defteri veya Docker Hub gibi) yerleştirin. Tam tersine, piyasaya sürülecek ve üretim ortamlarına dağıtılacak Docker görüntüleri, yalnızca kaynak kod deponuza (Git gibi) dayalı olarak küresel yapınıza veya CI ardışık hattınıza entegre edilen kaynak kodunda oluşturulmalıdır.
+Kaynak kodu denetimi (SCC) ve kaynak kodu yönetimi çoğu geliştirici için ikinci doğa gibi görünse de, DevOps yaşam döngüsünde Docker uygulamaları oluştururken, uygulamayla birlikte Docker görüntülerini doğrudan geliştiricinin makinesinden küresel Docker Registry'ye (Azure Konteyner Kayıt Defteri veya Docker Hub gibi) göndermemeniz gerektiğini vurgulamak önemlidir. Tam tersine, piyasaya sürülecek ve üretim ortamlarına dağıtılacak Docker görüntüleri, yalnızca kaynak kod deponuza (Git gibi) dayalı olarak küresel yapınıza veya CI ardışık hattınıza entegre edilen kaynak kodunda oluşturulmalıdır.
 
 Geliştiriciler tarafından oluşturulan yerel görüntüler, sadece kendi makineleri içinde test ederken onlar tarafından kullanılmalıdır. Bu yüzden DevOps boru hattının SCC kodundan aktif hale getirilmiş olması çok önemlidir.
 
@@ -100,7 +100,7 @@ Bu Visual Studio Takım Hizmetleri görevleri, Azure'da sağlanan bir Linux-Dock
 
 Genellikle, çoğu Docker uygulamaları tek bir kapsayıcı yerine birden çok kapsayıcıoluşur. İyi bir örnek, mikrohizmet başına bir konteyner olurdu için mikro hizmetler odaklı bir uygulamadır. Ancak, mikro hizmetler yaklaşım modellerini kesinlikle takip etmeden bile Docker uygulamanızın birden fazla kapsayıcı veya hizmetten oluşması olasıdır.
 
-Bu nedenle, CI boru hattında uygulama kapsayıcıları inşa ettikten sonra, aynı zamanda dağıtmak gerekir, entegre ve bir entegrasyon Docker ana bilgisayar içinde tüm kapları ile bir bütün olarak uygulama entegre ve hatta konteynerler hangi bir test kümesi içine Dağıtılmış.
+Bu nedenle, CI ardışık boru hattında uygulama kapsayıcıları inşa ettikten sonra, aynı zamanda dağıtmak gerekir, entegre, ve bir entegrasyon Docker ana bilgisayar içinde tüm kapları ile bir bütün olarak uygulama entegre ve hatta konteyner dağıtılır bir test kümesi içine.
 
 Tek bir ana bilgisayar kullanıyorsanız, docker-compose gibi Docker komutlarını kullanarak ilgili kapsayıcıları tek bir VM'de Docker ortamını test etmek ve doğrulamak için dağıtabilirsiniz. Ancak, DC/OS, Kubernetes veya Docker Swarm gibi bir orkestratör kümesiyle çalışıyorsanız, seçtiğiniz küme/zamanlayıcıya bağlı olarak kapsayıcılarınızı farklı bir mekanizma veya orkestratör aracılığıyla dağıtmanız gerekir.
 
@@ -122,7 +122,7 @@ Docker görüntüleri test edildikten ve doğrulandıktan sonra, bunları etiket
 
 SCC deponuzda (Git, vb.) depolanan uygulama kodunun sizin "doğruluk kaynağınız" olması gibi, Docker kayıt defteri de ikili uygulamanız veya bitlerinizin QA veya üretim ortamlarına dağıtılması için "doğruluk kaynağınız"dır.
 
-Tipik olarak, özel görüntüleriniz için özel depolarınızı Azure Kapsayıcı Kayıt Defteri'ndeki özel bir depoda veya Docker Trusted Registry gibi bir şirket içi kayıt defterinde veya kısıtlı erişime sahip genel bulut kayıt defterinde bulundurmak isteyebilirsiniz (örneğin, Docker Hub), bu son durumda kodunuz açık kaynak değilse, satıcının güvenliğine güvenmeniz gerekir. Her iki durumda da, kullandığınız yöntem benzerdir ve Şekil 5-4'te gösterildiği gibi komutu `docker push` temel alabilirsiniz.
+Tipik olarak, özel görüntüleriniz için özel depolarınızı Azure Kapsayıcı Kayıt Defteri'ndeki özel bir depoda veya Docker Trusted Registry gibi bir şirket içi kayıt defterinde veya sınırlı erişime sahip bir genel bulut kayıt defterinde (Docker Hub gibi) sahip olmak isteyebilirsiniz, ancak bu son durumda kodunuz açık kaynak değilse satıcının güvenliğine güvenmeniz gerekir. Her iki durumda da, kullandığınız yöntem benzerdir ve Şekil 5-4'te gösterildiği gibi komutu `docker push` temel alabilirsiniz.
 
 ![Özel görüntülerin bir kapsayıcı kayıt defterine itmesini gösteren diyagram.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
@@ -140,9 +140,9 @@ Docker görevlerini kullanarak, bir `docker-compose.yml` dosya tarafından tanı
 
 ## <a name="step-4-cd-deploy"></a>Adım 4: CD, Dağıtım
 
-Docker görüntülerinin değişmezliği, geliştirilen, CI aracılığıyla test edilen ve üretimde çalışan larla tekrarlanabilir bir dağıtım sağlar. Docker kayıt defterinizde yayınlanan uygulama Docker görüntülerini (özel veya herkese açık) yayımladıktan sonra, bunları Azure DevOps Hizmetlerini kullanarak CD ardışık ardınızdan sahip olabileceğiniz çeşitli ortamlara (üretim, QA, evreleme, vb.) dağıtabilirsiniz. boru hattı görevleri veya Azure DevOps Hizmetleri Yayın Yönetimi.
+Docker görüntülerinin değişmezliği, geliştirilen, CI aracılığıyla test edilen ve üretimde çalışan larla tekrarlanabilir bir dağıtım sağlar. Docker kayıt defterinizde yayınlanan uygulama Docker görüntülerini (özel veya herkese açık) yayımladıktan sonra, bunları Azure DevOps Hizmetleri boru hattı görevlerini veya Azure DevOps Hizmetleri Yayın Yönetimi'ni kullanarak CD ardınızdan sahip olabileceğiniz çeşitli ortamlara (üretim, QA, evreleme, vb.) dağıtabilirsiniz.
 
-Ancak, bu noktada bu, ne tür Docker uygulaması dağıttığınız için bağlıdır. Birkaç kapsayıcı veya hizmetten oluşan ve birkaç sunucuya veya VM'ye dağıtılan yekpare bir uygulama gibi basit bir uygulamayı (kompozisyon ve dağıtım açısından) dağıtmak, daha karmaşık bir uygulamayı hiperölçekli yetenekleri ile mikrohizmet odaklı uygulama. Bu iki senaryo aşağıdaki bölümlerde açıklanmıştır.
+Ancak, bu noktada bu, ne tür Docker uygulaması dağıttığınız için bağlıdır. Birkaç kapsayıcı veya hizmetten oluşan ve birkaç sunucuya veya VM'ye dağıtılan yekpare bir uygulama gibi basit bir uygulamayı (kompozisyon ve dağıtım açısından) dağıtmak, hiper ölçek özelliklerine sahip mikro hizmet odaklı bir uygulama gibi daha karmaşık bir uygulamayı dağıtmaktan farklıdır. Bu iki senaryo aşağıdaki bölümlerde açıklanmıştır.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Oluşan Docker uygulamalarını birden çok Docker ortamına dağıtma
 
@@ -170,7 +170,7 @@ Azure DevOps Hizmetleri şablonları aracılığıyla, yeni bir resim oluşturab
 
 **Şekil 5-8**. Azure DevOps Hizmetlerinin Yapılandırılması Azure DevOps Hizmetleri Yayın Yönetimi'nden görevler oluşturun
 
-Ancak, Şekil 5-6'da gösterilen ve Şekil 5-8'de uygulanan senaryonun basit olduğunu (tek Docker ana bilgisayarlarına ve VM'lere dağıtılacak ve görüntü başına tek bir kapsayıcı veya örnek olacak) ve büyük olasılıkla yalnızca geliştirme veya test için kullanılması gerektiğini unutmayın Senaryo. Çoğu kurumsal üretim senaryosunda, birden çok düğüm, sunucu ve VM arasında yük dengelemesi ve sunucu veya düğüm başarısız olursa , hizmetleri ve kapsayıcıları için "akıllı arızalar" ile yüksek kullanılabilirlik (HA) ve kolay yönetilebilirlik olmasını istersiniz başka bir ana bilgisayar sunucusuna veya VM'ye taşınır. Bu durumda, konteyner kümeleri, orkestratörler ve zamanlayıcılar gibi daha gelişmiş teknolojilere ihtiyacınız vardır. Bu nedenle, bu kümelere dağıtmanın yolu, bir sonraki bölümde açıklanan gelişmiş senaryoları işlemektir.
+Ancak, Şekil 5-6'da gösterilen ve Şekil 5-8'de uygulanan senaryonun basit bir senaryo olduğunu (tek Docker ana bilgisayarlarına ve VM'lere dağıtılacak ve görüntü başına tek bir kapsayıcı veya örnek olacak) ve büyük olasılıkla yalnızca geliştirme veya test senaryoları için kullanılması gerektiğini unutmayın. Çoğu kurumsal üretim senaryosunda, birden çok düğüm, sunucu ve VM arasında yük dengelemesi ve sunucu veya düğüm başarısız olursa, hizmetleri ve kapsayıcıları başka bir ana bilgisayar sunucusuna veya VM'ye taşınacak şekilde "akıllı arızalar" yaparak Yüksek Kullanılabilirlik (HA) ve kolay yönetilebilirlik olmasını isteyebilirsiniz. Bu durumda, konteyner kümeleri, orkestratörler ve zamanlayıcılar gibi daha gelişmiş teknolojilere ihtiyacınız vardır. Bu nedenle, bu kümelere dağıtmanın yolu, bir sonraki bölümde açıklanan gelişmiş senaryoları işlemektir.
 
 ### <a name="deploying-docker-applications-to-docker-clusters"></a>Docker uygulamalarını Docker kümelerine dağıtma
 
@@ -178,7 +178,7 @@ Dağıtılmış uygulamaların niteliği, dağıtılan bilgi işlem kaynakların
 
 Kapsayıcıları bir CLI aracından veya web Kullanıcı Arabirimi'nden bu kümelere el ile dağıtabilirsiniz, ancak dağıtım sınama veya ölçeklendirme veya izleme gibi yönetim amaçlarını tespit etmek için bu tür el ile çalışmayı rezerve etmelisiniz.
 
-CD bakış açısından ve Azure DevOps Hizmetleri özellikle, kapsayıcı uygulamalarınızı Kapsayıcı'daki dağıtılmış kümelere dağıtacak Azure DevOps Hizmetleri Yayın Yönetimi ortamlarınızdan özel olarak yapılmış dağıtım görevlerini çalıştırabilirsiniz Hizmet, Şekil 5-9'da gösterildiği gibi.
+CD bakış açısından ve Azure DevOps Hizmetleri özellikle, Azure DevOps Hizmetleri Yayın Yönetimi ortamlarınızdan, kapsayıcı uygulamalarınızı Şekil 5-9'da gösterildiği gibi Kapsayıcı Hizmeti'ndeki dağıtılmış kümelere dağıtacak özel olarak hazırlanmış dağıtım görevlerini çalıştırabilirsiniz.
 
 ![CD'nin orkestratörlere dağıtıla adım dağıtan adımını gösteren diyagram.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
@@ -200,7 +200,7 @@ Başlangıçta, belirli kümelere veya orkestratörlere dağıtılırken, `docke
 
 ## <a name="step-5-run-and-manage"></a>Adım 5: Çalıştır ın ve yönetin
 
-Uygulamaları işletme-üretim düzeyinde çalıştırmak ve yönetmek başlı başına önemli bir konu olduğundan ve bu düzeyde çalışan operasyonların ve kişilerin (BT işlemleri) yanı sıra bu alanın geniş kapsamı nedeniyle, bir sonraki bölümün tamamı açıklıyor.
+Uygulamaları işletme-üretim düzeyinde çalıştırmak ve yönetmek başlı başına önemli bir konu olduğundan ve bu düzeyde çalışan operasyonların ve çalışan kişilerin (BT işlemleri) yanı sıra bu alanın geniş kapsamı nedeniyle, bir sonraki bölümün tamamı bunu açıklamaya ayrılmıştır.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Adım 6: İzleme ve tanılama
 

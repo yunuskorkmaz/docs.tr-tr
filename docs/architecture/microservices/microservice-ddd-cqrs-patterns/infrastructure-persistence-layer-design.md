@@ -2,12 +2,12 @@
 title: Altyapı kalıcılık katmanını tasarlama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Altyapı kalıcılık katmanının tasarımındaki depo deseni keşfedin.
 ms.date: 10/08/2018
-ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846815"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988485"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Altyapı kalıcılık katmanını tasarlama
 
@@ -37,7 +37,7 @@ Kullanıcı değişiklik yaparsa, güncellenecek veriler istemci uygulamasından
 
 **Şekil 7-17**. Depolar, toplamlar ve veritabanı tabloları arasındaki ilişki
 
-Yukarıdaki diyagram Etki Alanı ve Altyapı katmanları arasındaki ilişkileri gösterir: Alıcı Toplam IBuyerRepository bağlıdır ve Sipariş Toplam IOrderRepository arayüzleri bağlıdır, bu arayüzler Altyapı katmanında uygulanır UnitOfWork'e bağlı olan ve veri katmanındaki tablolara erişen ilgili depolar tarafından.
+Yukarıdaki diyagram Etki Alanı ve Altyapı katmanları arasındaki ilişkileri gösterir: Alıcı Toplam IBuyerRepository bağlıdır ve Sipariş Toplam IOrderRepository arabirimleri bağlıdır, bu arabirimler UnitOfWork bağlı ilgili depolar tarafından Altyapı katmanında uygulanır, ayrıca orada uygulanan, Veri katmanında tablolar erişir.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Depo başına bir toplam kök uygulayın
 
@@ -78,7 +78,7 @@ public interface IRepository<T> where T : IAggregateRoot
 
 Depo deseni, ünite testleri ile uygulamanızı kolayca test etmenizi sağlar. Birim testlerinin altyapıyı değil, yalnızca kodunuzu sınadığını unutmayın, böylece depo soyutlamaları bu amaca ulaşmayı kolaylaştırır.
 
-Daha önceki bir bölümde belirtildiği gibi, web API mikro hizmetiniz gibi uygulama katmanının doğrudan uyguladığınız altyapı katmanına bağlı olmaması için depo arabirimlerini etki alanı modeli katmanına tanımlamanız ve yerleştirmeniz önerilir gerçek depo sınıfları. Bunu yaparak ve Web API'nızın denetleyicilerinde Bağımlılık Enjeksiyonu'nu kullanarak, veritabanından veri yerine sahte veri döndüren sahte depolar uygulayabilirsiniz. Bu ayrılmış yaklaşım, veritabanına bağlantı gerektirmeden uygulamanızın mantığını odaklayan birim testleri oluşturmanıza ve çalıştırmanıza olanak tanır.
+Daha önceki bir bölümde belirtildiği gibi, web API mikro hizmetiniz gibi uygulama katmanının gerçek depo sınıflarını uyguladığınız altyapı katmanına doğrudan bağlı olmaması için depo arabirimlerini etki alanı modeli katmanına tanımlamanız ve yerleştirmeniz önerilir. Bunu yaparak ve Web API'nızın denetleyicilerinde Bağımlılık Enjeksiyonu'nu kullanarak, veritabanından veri yerine sahte veri döndüren sahte depolar uygulayabilirsiniz. Bu ayrılmış yaklaşım, veritabanına bağlantı gerektirmeden uygulamanızın mantığını odaklayan birim testleri oluşturmanıza ve çalıştırmanıza olanak tanır.
 
 Veritabanlarına bağlantılar başarısız olabilir ve daha da önemlisi, bir veritabanına karşı yüzlerce test çalıştırmak iki nedenden dolayı kötüdür. İlk olarak, testlerin çok sayıda nedeniyle uzun bir zaman alabilir. İkinci olarak, veritabanı kayıtları değişebilir ve testlerinizin sonuçlarını etkileyebilir, böylece tutarlı olmayabilirler. Veritabanına karşı sınama bir birim testi değil, bir tümleştirme testidir. Hızlı çalışan birçok birim testleri, ancak veritabanlarına karşı daha az tümleştirme testleri olmalıdır.
 

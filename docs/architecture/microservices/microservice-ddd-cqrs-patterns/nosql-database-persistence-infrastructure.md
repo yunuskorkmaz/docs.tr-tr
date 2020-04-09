@@ -2,18 +2,18 @@
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: Kalıcılığı uygulamak için bir seçenek olarak, genel olarak NoSql veritabanlarının ve özellikle Azure Cosmos DB'nin kullanımını anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502392"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988446"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcılık altyapısı olarak NoSQL veritabanlarını kullanma
 
 Altyapı veri katmanınız için NoSQL veritabanlarını kullandığınızda, genellikle Entity Framework Core gibi bir ORM kullanmazsınız. Bunun yerine Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB veya Azure Depolama Tabloları gibi NoSQL altyapısı tarafından sağlanan API'yi kullanırsınız.
 
-Ancak, bir NoSQL veritabanı, özellikle Azure Cosmos DB, CouchDB veya RavenDB gibi belge yönelimli bir veritabanı kullandığınızda, modelinizi DDD agregalarıyla tasarlama şekliniz, modelinizi EF Core'da nasıl yapabileceğinize kısmen benzer. toplu kökler, alt varlık sınıfları ve değer nesne sınıfları. Ancak, sonuçta, veritabanı seçimi tasarımınızı etkileyecektir.
+Ancak, bir NoSQL veritabanı, özellikle Azure Cosmos DB, CouchDB veya RavenDB gibi belge yönelimli bir veritabanı kullandığınızda, modelinizi DDD agregalarıyla tasarlama şekliniz, toplu köklerin, alt varlık sınıflarının ve değer nesne sınıflarının tanımlanması açısından EF Core'da bunu nasıl yapabileceğinize kısmen benzer. Ancak, sonuçta, veritabanı seçimi tasarımınızı etkileyecektir.
 
 Belge yönelimli bir veritabanı kullandığınızda, json veya başka bir biçimde seri hale getirilmiş tek bir belge olarak bir agrega uygularsınız. Ancak, veritabanının kullanımı bir etki alanı modeli kodu açısından saydamdır. Bir NoSQL veritabanı kullanırken, kalıcılık ilişkisel olmadığından, varlık sınıflarını ve toplu kök sınıflarını kullanmaya devam emkişi kullanıyorsunuz, ancak EF Core'u kullanırken daha fazla esneklikle.
 
@@ -64,7 +64,7 @@ Azure Cosmos\# DB API tarafından kullanılacak toplamı uygulamak için bir C m
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
-// Then, use AggregateRoot’s methods to add the nested objects so invariants and
+// Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
 
 Order orderAggregate = new Order
@@ -156,7 +156,7 @@ Bulutta Sadece MongoDB ile Cosmos DB'yi kullanmak arasında daha fazla karşıla
 
 eShopOnContainers'da MongoDB API kullanıyoruz çünkü önceliğimiz Azure Cosmos DB ile de çalışabilen bir NoSQL veritabanı nı kullanarak tutarlı bir geliştirme/test ortamına sahip olmaktı.
 
-Ancak, üretim uygulamaları için Azure'da Azure Cosmos DB'ye erişmek için MongoDB API'sini kullanmayı planlıyorsanız, Azure Cosmos DB veritabanlarına erişmek için MongoDB API'sini kullanırken yetenek ve performans farklılıklarını analiz etmelisiniz Azure Cosmos DB API. Benzer se, MongoDB API'yi kullanabilirsiniz ve aynı anda iki NoSQL veritabanı altyapısını destekleme avantajına ulaşabilirsiniz.
+Ancak, üretim uygulamaları için Azure'da Azure Cosmos DB'ye erişmek için MongoDB API'sini kullanmayı planlıyorsanız, Azure Cosmos DB veritabanlarına erişmek için MongoDB API'sini kullanırken yerel Azure Cosmos DB API'sini kullanmaya kıyasla yetenek ve performans farklılıklarını çözümlemeniz gerekir. Benzer se, MongoDB API'yi kullanabilirsiniz ve aynı anda iki NoSQL veritabanı altyapısını destekleme avantajına ulaşabilirsiniz.
 
 MongoDB Azure Hizmeti ile [MongoDB](https://www.mongodb.com/scale/mongodb-azure-service)kümelerini Azure bulutundaki üretim veritabanı olarak da kullanabilirsiniz. Ancak bu, Microsoft tarafından sağlanan bir PaaS hizmeti değildir. Bu durumda Azure, MongoDB'den gelen bu çözümü barındırıyor.
 

@@ -2,12 +2,12 @@
 title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Mikro hizmetler arasında olay tabanlı iletişimi uygulamak için tümleştirme olaylarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712409"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988329"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 

@@ -1,75 +1,75 @@
 ---
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
-description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
+description: Azure'da Docker Konteynerleri ve Kubernetes Orkestratörlerinden Yararlanma
 ms.date: 06/30/2019
-ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44b2fff8c9c88717d83e41a421b9817e2cc68135
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087229"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989044"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Kapsayıcılar ve düzenleyiciler, tek parçalı dağıtım yaklaşımları için ortak olan sorunları çözmeye yönelik olarak tasarlanmıştır.
+Konteynerler ve orkestratörler, yekpare dağıtım yaklaşımlarında yaygın olan sorunları çözmek için tasarlanmıştır.
 
-## <a name="challenges-with-monolithic-deployments"></a>Tek parçalı dağıtımlar ile ilgili sorunlar
+## <a name="challenges-with-monolithic-deployments"></a>Yekpare dağıtımlarla ilgili zorluklar
 
-Geleneksel olarak, çoğu uygulama tek bir birim olarak dağıtılır. Bu tür uygulamalar tek bir olarak adlandırılır. Bu genel yaklaşım, birden çok modülden oluşsa bile veya derlemeler şekil 3-1 ' de gösterildiği gibi tek parçalı mimari olarak bilinir.
+Geleneksel olarak, çoğu uygulama tek bir birim olarak dağıtılmıştır. Bu tür uygulamalar monolit olarak adlandırılır. Uygulamaları birden fazla modül veya derlemeden oluşsalar bile tek birim olarak dağıtmanın bu genel yaklaşımı, Şekil 3-1'de gösterildiği gibi yekpare mimari olarak bilinir.
 
-![Tek parçalı mimari.](./media/monolithic-architecture.png)
+![Yekpare mimari.](./media/monolithic-architecture.png)
 
-**Şekil 3-1**. Tek parçalı mimari.
+**Şekil 3-1**. Yekpare mimari.
 
-Basitlik avantajlarına sahip olsalar da tek parçalı mimarilerin bir dizi zorluk yüzü vardır:
+Basitlik avantajına sahip olmalarına rağmen, yekpare mimariler bir takım zorluklarla karşı karşıyadır:
 
 ### <a name="deployments"></a>Dağıtımlar
 
-Tek parçalı uygulamalara dağıtım, genellikle yalnızca bir küçük modül değiştirilse bile tüm uygulamanın yeniden başlatılmasını gerektirir. Uygulamayı barındıran makinelerin sayısına bağlı olarak, bu, dağıtımlar sırasında kapalı kalma süresine yol açabilir.
+Yekpare uygulamalara dağıtım genellikle, yalnızca küçük bir modül değiştirilse bile, tüm uygulamanın yeniden başlatılmasını gerektirir. Uygulamayı barındıran makine sayısına bağlı olarak, bu dağıtımlar sırasında kapalı kalma süresine neden olabilir.
 
 ### <a name="hosting"></a>Barındırma
 
-Tek parçalı uygulamalar tamamen tek bir makine örneğinde barındırılır. Bu, dağıtılmış bir uygulamadaki herhangi bir modülün gerek duyduğu daha yüksek yetenek donanımlar gerektirebilir. Ayrıca, uygulamanın herhangi bir bölümü bir performans sorunu haline gelirse, genişletmek için tüm uygulamanın ek makine düğümlerine dağıtılması gerekir.
+Monolitik uygulamalar tamamen tek bir makine örneğinde barındırılır. Bu, dağıtılmış bir uygulamadaki herhangi bir modülün ihtiyaç duyduğundan daha yüksek özellikli donanım gerektirebilir. Ayrıca, uygulamanın herhangi bir bölümü darboğaza dönüşürse, ölçeklendirmek için uygulamanın tamamının ek makine düğümlerine dağıtılması gerekir.
 
 ### <a name="environment"></a>Ortam
 
-Tek parçalı uygulamalar, genellikle mevcut bir barındırma ortamına (işletim sistemi, yüklü çerçeveler vb.) dağıtılır. Bu ortam, uygulamanın geliştirildiği veya test ettiği ortamla eşleşmeyebilir. Uygulamanın ortamındaki tutarsızlıklar, tek parçalı dağıtımlar için ortak bir sorun kaynağıdır.
+Monolitik uygulamalar genellikle varolan bir barındırma ortamına (işletim sistemi, yüklü çerçeveler, vb.) dağıtılır. Bu ortam, uygulamanın geliştirildiği veya test edildiği ortamla eşleşmeyebilir. Uygulamanın ortamındaki tutarsızlıklar, yekpare dağıtımlar için sık karşılaşılan bir sorun kaynağıdır.
 
-### <a name="coupling"></a>Bağlantısı
+### <a name="coupling"></a>Kaplin
 
-Tek parçalı uygulamalar, uygulamanın farklı parçaları arasında ve uygulama ile ortamı arasında çok büyük bir çışa sahiptir. Bu, belirli bir hizmeti daha sonra veya daha sonra bir diğer uygulamada ölçeklenebilirlik veya takas etmek için bir veya daha fazla sorun yaşamamayı zorlaştırır. Bu, aynı zamanda sistemde yapılan değişiklikler için büyük olasılıkla büyük uygulamalarda çok daha büyük etkileri olmasına yol açar.
+Monolitik uygulamaların, uygulamanın farklı bölümleri ile uygulama ile çevresi arasında büyük bir bağlantı yada ması olasıdır. Bu, belirli bir hizmeti veya endişeyi daha sonra, ölçeklenebilirliğini artırmak veya alternatif bir uygulamada takas etmek için hesaba katmayı zorlaştırabilir. Bu bağlantı aynı zamanda sistem değişiklikleri için çok daha büyük potansiyel etkilere yol açar, daha büyük uygulamalarda kapsamlı test gerektiren.
 
 ### <a name="technology-choice"></a>Teknoloji seçimi
 
-Tek parçalı uygulamalar, birim olarak oluşturulup dağıtılır. Bu, basitlik ve uygunluk olanakları sunar, ancak yenilik için bir engel olabilir. Sistemdeki yeni bir özellik veya modül daha modern bir platforma veya çerçeveye daha iyi uygun olsa da, uygulamanın tutarlılığının yanı sıra geliştirme ve dağıtım kolaylığı için uygulamanın geçerli yaklaşımı kullanılarak oluşturulmuştur.
+Monolitik uygulamalar bir birim olarak oluşturulur ve dağıtılır. Bu basitlik ve tekdüzelik sunuyor ama yenilik için bir engel olabilir. Sistemdeki yeni bir özellik veya modül daha modern bir platform veya çerçeveye daha uygun olsa da, tutarlılık ve dağıtım kolaylığı açısından uygulamanın mevcut yaklaşımı kullanılarak oluşturulabilir.
 
-## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>Kapsayıcıların ve düzenleyicilerinin avantajları nelerdir?
+## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>Konteynerlerin ve orkestratörlerin faydaları nelerdir?
 
-Docker, en popüler kapsayıcı yönetimi ve görüntüleme platformudur ve Linux ve Windows üzerinde kapsayıcılarla hızlı bir şekilde çalışmanıza olanak sağlar. Kapsayıcılar, her sistemde aynı şekilde çalışan ayrı ancak tekrarlanabilir uygulama ortamları sağlar. Bu, bulut Yerel uygulamalarında uygulamalar ve uygulama bileşenleri geliştirmek ve barındırmak için idealdir. Kapsayıcılar birbirinden yalıtılmıştır, bu nedenle aynı konak donanımında iki kapsayıcı, çakışmaya neden olan bağımlılıklar olmadan farklı yazılım sürümlerine ve hatta işletim sistemine sahip olabilir.
+Docker en popüler konteyner yönetimi ve görüntüleme platformudur ve Linux ve Windows'daki konteynerlerle hızlı bir şekilde çalışmanızı sağlar. Kapsayıcılar, herhangi bir sistemde aynı şekilde çalışan ayrı ancak tekrarlanabilir uygulama ortamları sağlar. Bu, bulut ayarı uygulamalarda uygulamaları ve uygulama bileşenlerini geliştirmek ve barındırmak için onları mükemmel hale getirir. Kapsayıcılar birbirinden izole edilir, bu nedenle aynı ana bilgisayar donanımındaki iki kapsayıcı, çakışmalara neden olan bağımlılıklar olmadan yazılımın ve hatta işletim sisteminin farklı sürümlerine sahip olabilir.
 
-Diğer özellikler, kapsayıcılar kaynak denetimine denetlenebilecekleri basit dosyalar tarafından tanımlanır. Tam sunuculardan farklı olarak, güncelleştirmeleri uygulamak veya ek hizmetleri yüklemek için sık olarak çalışan sanal makineler olsa bile kapsayıcı altyapısı kolayca sürüm denetimli olabilir. Bu nedenle, kapsayıcılarda çalışmak üzere oluşturulan uygulamalar, derleme işlem hattının bir parçası olarak otomatikleştirilmiş araçlar kullanılarak geliştirilebilir, test edilebilir ve dağıtılabilir.
+Dahası, kapsayıcılar kaynak denetimine denetlenebilir basit dosyalar tarafından tanımlanır. Tam sunucuların aksine, güncellemeleri uygulamak veya ek hizmetler yüklemek için sık sık manuel çalışma gerektiren sanal makineler bile, konteyner altyapısı kolayca sürüm kontrollü olabilir. Böylece, kapsayıcılarda çalışacak şekilde oluşturulmuş uygulamalar geliştirilebilir, sınanabilir ve otomatik araçlar kullanılarak bir yapı boru hattının parçası olarak dağıtılabilir.
 
-Kapsayıcılar sabittir. Bir kapsayıcının tanımına sahip olduktan sonra, bu kapsayıcıyı yeniden oluşturabilirsiniz ve tam olarak aynı şekilde çalışır. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri başkaları kadar sık değişmemekle karşılaşmıyorsanız, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
+Konteynerler değişmez. Bir kapsayıcıtanımına sahip olduğunuzda, bu kapsayıcıyı yeniden oluşturabilirsiniz ve bu kapsayıcı tam olarak aynı şekilde çalışır. Bu değişmezlik, bileşen tabanlı tasarıma kendini verir. Bir uygulamanın bazı bölümleri diğerleri kadar sık değişmiyorsa, en sık değişen bölümleri dağıtabilecekken neden uygulamanın tamamını yeniden dağıtın? Bir uygulamanın farklı özellikleri ve çapraz kesme endişeleri ayrı birimlere ayrılabilir. Şekil 3-2, yekpare bir uygulamanın belirli özellikleri veya işlevleri atayarak kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğini gösterir. Uygulamanın kendisinde kalan işlevsellik de kapsayıcı olmuştur.
 
-arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek ![. **şekil 3-2**](./media/breaking-up-monolith-with-backend-microservices.png)
-. Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.
+![Arka uçta mikro hizmetleri kullanmak için yekpare bir uygulamayı kırmak. ](./media/breaking-up-monolith-with-backend-microservices.png)
+ **Şekil 3-2**. Arka uçta mikro hizmetleri kullanmak için yekpare bir uygulamayı kırmak.
 
-Ayrı kapsayıcılar kullanılarak oluşturulan bulutta yerel uygulamalar, bir uygulamanın gerektirdiği kadar çok veya büyük bir şekilde dağıtılması özelliğinden yararlanır. Her hizmet için uygun kaynakları olan düğümlerde tek tek hizmetler barındırılabilir. Her hizmetin çalıştığı ortam sabittir, geliştirme, test ve üretim arasında paylaşılabilir ve kolayca sürümlenebilir. Uygulamanın farklı alanlarında, tek başına derleme zamanı bağımlılıkları değil, hizmetler arasında doğrudan çağrı veya ileti olarak gerçekleştirilir. Uygulamanın geri kalanında değişiklik gerektirmeden bu özellik veya beceri için en mantıklı bir teknoloji sunan teknolojiyi seçebilir.
+Ayrı kapsayıcılar kullanılarak oluşturulmuş bulut tabanlı uygulamalar, bir uygulamayı gerektiği kadar veya az dağıtabilme özelliğinden yararlanır. Tek tek hizmetler, her hizmete uygun kaynaklara sahip düğümler üzerinde barındırılabilir. Her hizmetin çalıştığı ortam değişmezdir, dev, test ve üretim arasında paylaşılabilir ve kolayca sürülebilir. Uygulamanın farklı alanları arasında bağlantı açıkça aramalar veya iletiler arasında hizmetler arasında değil, monolit içinde zaman bağımlılıkları derlemek olarak oluşur. Ve genel uygulamanın herhangi bir bölümü, uygulamanın geri kalanında değişiklik gerektirmeden bu özellik veya özellik için en mantıklı teknolojiyi seçebilir.
 
-## <a name="what-are-the-scaling-benefits"></a>Ölçeklendirme avantajları nelerdir?
+## <a name="what-are-the-scaling-benefits"></a>Ölçeklemenin faydaları nelerdir?
 
-Kapsayıcılarda oluşturulan hizmetler, Kubernetes gibi Orchestration araçları tarafından sunulan ölçeklendirme avantajlarından yararlanabilir. Tasarım kapsayıcıları tarafından yalnızca kendileri hakkında bilgi sahibi. Birlikte çalışması gereken birden çok kapsayıcıyla çalışmaya başladıktan sonra, bunları daha yüksek bir düzeyde düzenlemek biraz zaman alabilir. Çok sayıda kapsayıcıyı ve ağ yapılandırması gibi paylaşılan bağımlılıklarını organize etmek, düzenleme araçlarının günü kaydetmek için nereden geldiği yerdir! Kubernetes, Kapsayıcılı uygulamaların dağıtımını, ölçeklendirilmesini ve yönetimini otomatikleştirmek için tasarlanan bir kapsayıcı düzenleme platformudur. Kapsayıcı gruplarının üstünde bir soyutlama katmanı oluşturur ve bunları *Pod*olarak düzenler. *Düğüm*olarak adlandırılan çalışan makinelerdeki pods çalıştırılır. Tüm düzenlenmiş Grup, *küme*olarak adlandırılır. Şekil 3-3, bir Kubernetes kümesinin farklı bileşenlerini gösterir.
+Konteynerler üzerine inşa edilen hizmetler, Kubernetes gibi düzenleme araçlarının sağladığı ölçekleme avantajlarından yararlanabilir. Tasarım kapları sadece kendilerini biliyorum. Birlikte çalışması gereken birden çok kapsayıcıya sahip olmaya başladığınızda, bunları daha yüksek bir düzeyde düzenlemeye değebilir. Çok sayıda kapsayıcıyı ve ağ yapılandırması gibi paylaşılan bağımlılıklarını organize etmek, orkestrasyon araçlarının günü kurtarmak için geldiği yerdir! Kubernetes, konteyner uygulamalarının dağıtımını, ölçeklemesini ve yönetimini otomatikleştirmek için tasarlanmış bir konteyner düzenleme platformudur. Kapsayıcı gruplarının üzerine bir soyutlama katmanı oluşturur ve bunları *bölmeler*halinde düzenler. Bölmeler *düğüm*olarak adlandırılan işçi makinelerinde çalışır. Tüm organize grup *küme*olarak adlandırılır. Şekil 3-3 bir Kubernetes kümesinin farklı bileşenlerini gösterir.
 
-Kubernetes küme bileşenlerini ![. **şekil 3-3**](./media/kubernetes-cluster-components.png)
-. Kubernetes kümesi bileşenleri.
+![Kubernetes küme bileşenleri. ](./media/kubernetes-cluster-components.png)
+ **Şekil 3-3**. Kubernetes küme bileşenleri.
 
-Kubernetes, talepleri karşılamak için kümeleri ölçeklendirmeye yönelik yerleşik destek içerir. Kapsayıcılı mikro hizmetlerle birleştirilmiş bu, bulutta yerel uygulamalar sağlar ve gerektiğinde ek kaynaklarla isteğe bağlı ani artışlar hızla ve verimli bir şekilde yanıtlayabilir.
+Kubernetes, talebi karşılamak için kümeleri ölçekleme için yerleşik destek lemiştir. Kapsayıcı mikro hizmetlerle birlikte, bulut yerel uygulamalara ihtiyaç duyulduğunda ve nerede ihtiyaç duyulduğunda ek kaynaklarla talepteki ani artışlara hızlı ve verimli bir şekilde yanıt verebilme olanağı sağlar.
 
-### <a name="declarative-versus-imperative"></a>Bildirime dayalı ve kesinlik
+### <a name="declarative-versus-imperative"></a>Bildirimsel karşı zorunluluk
 
-Kubernetes hem bildirime dayalı hem de kesinlik temelli nesne yapılandırmasını destekler. Zorunlu yaklaşım, Kubernetes 'in her adımın nasıl yapılacağını söyleyen çeşitli komutları çalıştırmayı içerir. Bu görüntüyü *çalıştırın* . Bu Pod öğesini *silin* . Bu bağlantı noktasını *kullanıma sunun* . Bildirim temelli yaklaşımla, *ne yapmak* yerine *istediğinizi* açıklayan bir yapılandırma dosyası kullanırsınız ve Kubernetes istenen bitiş durumuna ulaşmak için ne yapılacağını tanımlar. Kümenizi zaten zorunlu komutları kullanarak yapılandırdıysanız, `kubectl get svc SERVICENAME -o yaml > service.yaml`kullanarak bildirime dayalı bir bildirimi dışarı aktarabilirsiniz. Bu, şunun gibi bir bildirim dosyası oluşturur:
+Kubernetes hem bildirimsel hem de zorunlu nesne yapılandırmadestekler. Zorunlu yaklaşım, Kubernetes'e her adımda ne yapması gerektiğini söyleyen çeşitli komutlar çalıştırmayı içerir. Bu görüntüyü *çalıştırın.* Bu bölmeyi *silin.* Bu bağlantı noktasını *ortaya çıkar.* Bildirimsel yaklaşımla, *ne yapmanız* yerine *ne istediğinizi* açıklayan bir yapılandırma dosyası kullanırsınız ve Kubernetes istenen bitiş durumuna ulaşmak için ne yapmanız gerektiğini bulur. Kümenizi zorunlu komutları kullanarak zaten yapılandırıldıysanız, 'yi kullanarak bir `kubectl get svc SERVICENAME -o yaml > service.yaml`bildirim bildirimi dışa aktarabilirsiniz. Bu, bunun gibi bir manifesto dosyası üretecektir:
 
 ```yaml
 apiVersion: v1
@@ -97,69 +97,69 @@ status:
   loadBalancer: {}
 ```
 
-Bildirim temelli yapılandırma kullanırken, yapılandırma dosyalarınızın bulunduğu klasöre karşı `kubectl diff -f FOLDERNAME` kullanarak uygulamadan önce yapılacak değişiklikleri önizleyebilirsiniz. Değişiklikleri uygulamak istediğinize emin olduktan sonra `kubectl apply -f FOLDERNAME`çalıştırın. Bir klasör hiyerarşisini yinelemeli olarak işlemek için `-R` ekleyin.
+Bildirimsel yapılandırmayı kullanırken, yapılandırma dosyalarınızın bulunduğu klasöre karşı `kubectl diff -f FOLDERNAME` kullanarak bunları işlemeden önce yapılacak değişiklikleri önizleyebilirsiniz. Değişiklikleri uygulamak istediğinizden emin olduktan sonra `kubectl apply -f FOLDERNAME`çalıştırın. Bir `-R` klasör hiyerarşisi özyinelemeli olarak işlemek için ekleyin.
 
-Hizmetlere ek olarak, *dağıtımlar*gibi diğer Kubernetes özellikleri için bildirim temelli yapılandırma kullanabilirsiniz. Bildirim temelli dağıtımlar, dağıtım denetleyicileri tarafından küme kaynaklarını güncelleştirmek için kullanılır. Dağıtımlar yeni değişiklikleri almak, daha fazla yük desteklemek üzere ölçeği genişletmek veya önceki bir düzeltmeye geri dönmek için kullanılır. Bir küme kararsız durumdaysa, bildirim temelli dağıtımlar otomatik olarak kümeyi istenen bir duruma getirmek için bir mekanizma sağlar.
+Hizmetlere ek olarak, *dağıtımlar*gibi diğer Kubernetes özellikleri için bildirimsel yapılandırma kullanabilirsiniz. Bildirimsel dağıtımlar, küme kaynaklarını güncelleştirmek için dağıtım denetleyicileri tarafından kullanılır. Dağıtımlar yeni değişiklikleri kullanıma çıkarmak, daha fazla yükü desteklemek için ölçeklendirmek veya önceki bir düzeltmeye geri dönmek için kullanılır. Bir küme kararsızsa, bildirimsel dağıtımlar kümeyi otomatik olarak istenilen duruma geri getirmek için bir mekanizma sağlar.
 
-Bildirim temelli yapılandırma kullanmak, altyapının uygulama kodu ile birlikte denetlenebilen ve sürümü oluşturulmuş bir kod olarak temsil etmesine olanak tanır. Bu, geliştirilmiş değişiklik denetimi ve kaynak denetim değişikliklerine bağlı bir yapı ve dağıtım işlem hattı kullanarak sürekli dağıtım için daha iyi destek sağlar.
+Bildirimsel yapılandırmanın kullanılması, altyapının uygulama koduyla birlikte iade edilebilen ve sürümlendirilebilen kod olarak temsil edilmesine olanak tanır. Bu, kaynak denetimi değişikliklerine bağlı bir yapı ve dağıtım ardışık hattını kullanarak sürekli dağıtım için gelişmiş değişim denetimi ve daha iyi destek sağlar.
 
-## <a name="what-scenarios-are-ideal-for-containers-and-orchestrators"></a>Kapsayıcılar ve düzenleyiciler için hangi senaryolar idealdir?
+## <a name="what-scenarios-are-ideal-for-containers-and-orchestrators"></a>Konteynerler ve orkestrasyonlar için hangi senaryolar idealdir?
 
-Aşağıdaki senaryolar kapsayıcıları ve düzenlemeleri kullanmak için idealdir.
+Aşağıdaki senaryolar kapsayıcılar ve orkestratörler kullanmak için idealdir.
 
 ### <a name="applications-requiring-high-uptime-and-scalability"></a>Yüksek çalışma süresi ve ölçeklenebilirlik gerektiren uygulamalar
 
-Yüksek çalışma süresi ve ölçeklenebilirlik gereksinimleri olan bireysel uygulamalar, mikro hizmetler, kapsayıcılar ve düzenleyicilerin kullanıldığı bulutta yerel mimariler için ideal adaylardır. Bu uygulamalar, sürümlü ortamlar kullanılarak kapsayıcılarda geliştirilebilir, üretime geçmeden önce kapsamlı bir şekilde test edilebilir ve sıfır kapalı kalma süresiyle üretime dağıtılabilir. Kubernetes kümelerinin kullanımı, bu tür uygulamaların talep üzerine ölçeklenmesini ve düğüm hatalarından otomatik olarak kurtarılmasını sağlar.
+Yüksek çalışma süresi ve ölçeklenebilirlik gereksinimleri olan bireysel uygulamalar, mikro hizmetler, kapsayıcılar ve orkestratörler kullanarak bulut yerel mimariler için ideal adaylardır. Bu uygulamalar, sürümlü ortamlar kullanılarak kaplarda geliştirilebilir, üretime geçmeden önce kapsamlı bir şekilde test edilebilir ve sıfır kesintiyle üretime dağıtılabilir. Kubernetes kümelerinin kullanımı, bu tür uygulamaların isteğe bağlı olarak ölçeklendirilebilmesini ve düğüm hatalarından otomatik olarak kurtarabilmesini sağlar.
 
 ### <a name="large-numbers-of-applications"></a>Çok sayıda uygulama
 
-Ve daha sonra kapsayıcılardan ve düzenleyicilerinden çok sayıda uygulama avantajı olması gereken kuruluşlar. Kapsayıcılı ortamları ve Kubernetes kümelerini ayarlamanın en ön çabası, birincil olarak sabit bir maliyettir. Bireysel uygulamaların dağıtımı, bakımını yapma ve güncelleştirme, sürdürülmesi gereken uygulama sayısına göre farklılık gösteren bir maliyettir. Belirli bir oldukça az sayıda uygulamanın ötesinde, özel uygulamaların korunmasının karmaşıklığı kapsayıcıları ve düzenlemeleri kullanarak bir çözüm uygulama masrafını aşmaktadır.
+Çok sayıda uygulamayı dağıtan ve daha sonra muhafaza etmesi gereken kuruluşlar kapsayıcılardan ve orkestratörlerden yararlanır. Kapsayıcı ortamlar ve Kubernetes kümeleri kurma ön çaba öncelikle sabit bir maliyettir. Tek tek uygulamaları dağıtma, sürdürme ve güncelleştirmenin, bakımı gereken uygulama sayısına göre değişen bir maliyeti vardır. Belirli bir oldukça az sayıda uygulamanın ötesinde, özel uygulamaları elle korumanın karmaşıklığı, kapsayıcılar ve orkestratörler kullanarak bir çözümü uygulama maliyetini aşıyor.
 
-## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Kapsayıcıları ve düzenlemeleri kullanmaktan ne zaman kaçınmalısınız?
+## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Konteynerleri ve orkestratörleri kullanmaktan ne zaman kaçınmalısınız?
 
-Uygulamanızı, on Iki öğeli uygulama prensipini takip etmek veya derlemenize izin vermenizdir, büyük olasılıkla kapsayıcılardan ve düzenleyicilerinden Kaçınmaktan daha iyi bir şekilde başlayacaksınız. Bu gibi durumlarda, belirli işlevsellik parçalarını ayrı kapsayıcılara veya hatta sunucusuz işlevlere taşıyabilmeniz için bir VM tabanlı barındırma platformu veya belki de büyük olasılıkla bir karma sistemle ilerlemek en iyi hale gelebilir.
+On iki faktörlü uygulama ilkelerine uygun olarak uygulamanızı oluşturmak istemiyor sanız veya yapamıyorsanız, konteynerlerden ve orkestratörlerden kaçınmanız daha iyi olacaktır. Bu gibi durumlarda, vm tabanlı bir barındırma platformu veya muhtemelen bazı işlevsellik parçalarını ayrı kapsayıcılara ve hatta sunucusuz işlevlere dönüştürebileceğiniz bir karma sistemle ilerlemek en iyisi olabilir.
 
 ## <a name="development-resources"></a>Geliştirme kaynakları
 
-Bu bölümde, bir sonraki uygulamanız için kapsayıcıları ve düzenlemeleri kullanmaya başlamanıza yardımcı olabilecek geliştirme kaynaklarının kısa bir listesi gösterilmektedir. Bulut Yerel mikro hizmetleri mimari uygulamanızı nasıl tasarlayacağımızı öğrenmek istiyorsanız bu kitabın yardımcı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook)makalesini okuyun.
+Bu bölümde, bir sonraki uygulamanız için kapsayıcılar ve orkestratörler kullanmaya başlamanıza yardımcı olabilecek geliştirme kaynaklarının kısa bir listesi gösterilmektedir. Bulut-yerel mikrohizmetler mimari uygulamanızı nasıl tasarladığınıza ilişkin rehberlik arıyorsanız, bu kitabın arkadaşı [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook)'ı okuyun.
 
-### <a name="local-kubernetes-development"></a>Yerel Kubernetes geliştirme
+### <a name="local-kubernetes-development"></a>Yerel Kubernetes Geliştirme
 
-Kubernetes dağıtımları üretim ortamlarında harika bir değer sağlar, ancak bunları yerel olarak da çalıştırabilirsiniz. Çoğu zaman ayrı uygulamalarda veya mikro hizmetlerde bağımsız olarak çalışabilmeniz için oldukça iyi olabiliyor olsa da, bazen üretime dağıtıldığında çalıştırılacak şekilde tüm sistemi yerel olarak çalıştırabilmenizde yarar vardır. Bunu yapmanın birkaç yolu vardır, ikisi de Minikube ve Docker Desktop. Visual Studio, Docker geliştirmesi için de araç sağlar.
+Kubernetes dağıtımları üretim ortamlarında büyük değer sağlar, ancak bunları yerel olarak da çalıştırabilirsiniz. Çoğu zaman bağımsız olarak tek tek uygulamalar veya mikro hizmetler üzerinde çalışabilmek iyi olsa da, bazen üretime dağıtıldığında çalışacağı gibi tüm sistemi yerel olarak çalıştırabilmek iyidir. Bunu başarmanın birkaç yolu vardır, bunlardan ikisi Minikube ve Docker Desktop'dır. Visual Studio ayrıca Docker gelişimi için takım sağlar.
 
 ### <a name="minikube"></a>Minikube
 
-Minikube nedir? Minikube projesi, "Minikube macOS, Linux ve Windows üzerinde yerel bir Kubernetes kümesi uygular" diyor. Birincil hedefleri, "yerel Kubernetes uygulama geliştirmesi için en iyi araç olacak ve sığan Kubernetes özelliklerini desteklemeye yöneliktir." Minikube yükleme Docker 'dan ayrıdır, ancak Minikube, Docker Desktop 'ın desteklediğinden farklı hiper yöneticileri destekler. Aşağıdaki Kubernetes özellikleri şu anda Minikube tarafından desteklenmektedir:
+Minikube nedir? Minikube projesi "Minikube macOS, Linux ve Windows'da yerel bir Kubernetes kümesini uyguluyor" diyor. Birincil hedefleri "yerel Kubernetes uygulama geliştirme için en iyi araç olmak ve uygun tüm Kubernetes özelliklerini desteklemektir." Minikube'yi yüklemek Docker'dan ayrıdır, ancak Minikube Docker Desktop'ın desteklediğinden farklı hipervizörleri destekler. Aşağıdaki Kubernetes özellikleri şu anda Minikube tarafından desteklenir:
 
 - DNS
-- NodePorts
-- ConfigMaps ve gizlilikler
+- Düğüm Bağlantı Noktaları
+- ConfigMaps ve sırları
 - Panolar
-- Kapsayıcı çalışma zamanları: Docker, RKT, CRı-O ve containerd
-- Kapsayıcı ağ arabirimini etkinleştirme (CNı)
+- Konteyner çalışma süreleri: Docker, rkt, CRI-O ve konteyner
+- Kapsayıcı Ağ Arabirimini Etkinleştirme (CNI)
 - Giriş
 
-Minikube yükledikten sonra, bir görüntüyü indiren ve yerel Kubernetes kümesini Başlatan `minikube start` komutunu çalıştırarak hızlı bir şekilde kullanmaya başlayabilirsiniz. Küme başlatıldıktan sonra, standart Kubernetes `kubectl` komutlarını kullanarak onunla etkileşime geçin.
+Minikube'yi yükledikten sonra, görüntüyü indiren `minikube start` komutu çalıştırarak hızlı bir şekilde kullanmaya başlayabilir ve yerel Kubernetes kümesini başlatabilirsiniz. Küme başlatıldıktan sonra, standart Kubernetes `kubectl` komutlarını kullanarak onunla etkileşime girebilirsiniz.
 
 ### <a name="docker-desktop"></a>Docker Masaüstü
 
-Ayrıca, Kubernetes ile doğrudan Windows 'daki Docker Desktop 'tan da çalışabilirsiniz. Windows kapsayıcıları kullanıyorsanız bu tek seçenektir ve Windows olmayan kapsayıcılar için harika bir seçimdir. Docker Desktop 'tan çalışan Kubernetes 'i yapılandırmak için standart Docker Desktop yapılandırma uygulaması kullanılır.
+Ayrıca Windows'da Doğrudan Docker Desktop'dan Kubernetes ile de çalışabilirsiniz. Windows Kapsayıcıları kullanıyorsanız tek seçeneğiniz budur ve Windows olmayan kapsayıcılar için de mükemmel bir seçimdir. Standart Docker Desktop yapılandırma uygulaması, Docker Desktop'tan çalışan Kubernetes'i yapılandırmak için kullanılır.
 
-![Docker Desktop 'ta Kubernetes 'i yapılandırma](./media/docker-desktop-kubernetes.png)
+![Docker Masaüstünde Kubernetes'i Yapılandırma](./media/docker-desktop-kubernetes.png)
 
-**Şekil 3-4**. Docker Desktop 'ta Kubernetes 'i yapılandırma.
+**Şekil 3-4**. Docker Desktop'da Kubernetes'i yapılandırma.
 
-Docker Desktop, Kapsayıcılı uygulamaları yerel olarak yapılandırmak ve çalıştırmak için en popüler araç olan bir araçtır. Docker Desktop ile çalışırken, üretime dağıtacağınız Docker kapsayıcı görüntüleri kümesine göre yerel olarak geliştirme yapabilirsiniz. Docker Desktop, Kapsayıcılı uygulamaları yerel olarak derlemek, test etmek ve teslim etmek üzere tasarlanmıştır. Görüntüler Azure Container Registry veya Docker Hub gibi bir görüntü kayıt defterine gönderildikten sonra Azure Kubernetes hizmeti (AKS) gibi hizmetler üretimde uygulamayı yönetir.
+Docker Desktop zaten yerel olarak kapsayıcı uygulamaları yapılandırmak ve çalıştırmak için en popüler araçtır. Docker Desktop ile çalışırken, üretime dağıtacağınız Docker kapsayıcı görüntülerinin aynısını yerel olarak geliştirebilirsiniz. Docker Desktop, konteyner uygulamaları yerel olarak "oluşturmak, test etmek ve sevk etmek" için tasarlanmıştır. Görüntüler Azure Konteyner Kayıt Defteri veya Docker Hub gibi bir resim kayıt defterine gönderildikten sonra, Azure Kubernetes Service (AKS) gibi hizmetler üretimde uygulamayı yönetir.
 
-### <a name="visual-studio-docker-tooling"></a>Visual Studio Docker Araçları
+### <a name="visual-studio-docker-tooling"></a>Görsel Stüdyo Docker Takım
 
-Visual Studio, Web uygulamaları için Docker geliştirmeyi destekler. Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, Şekil 3-5 ' de gösterildiği gibi, proje oluşturma işleminin bir parçası olarak onu Docker desteğiyle yapılandırma seçeneği sunulur.
+Visual Studio web uygulamaları için Docker geliştirme destekler. Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, şekil 3-5'te gösterildiği gibi, proje oluşturma sürecinin bir parçası olarak docker desteği ile yapılandırma seçeneği verilir.
 
-![Visual Studio Docker desteğini etkinleştir](./media/visual-studio-enable-docker-support.png)
+![Visual Studio Docker Desteği etkinleştirin](./media/visual-studio-enable-docker-support.png)
 
-**Şekil 3-5**. Visual Studio Docker desteğini etkinleştir
+**Şekil 3-5**. Visual Studio Docker Desteği etkinleştirin
 
-Bu seçenek belirlendiğinde, proje kökünde bir `Dockerfile` oluşturulur ve bu, uygulamayı bir Docker kapsayıcısında derlemek ve barındırmak için kullanılabilir. Şekil 3-6 ' de örnek Dockerfile gösterilmektedir.
+Bu seçenek seçildiğinde, proje, uygulamayı `Dockerfile` docker kapsayıcısında oluşturmak ve barındırmak için kullanılabilecek kökünde bir ile oluşturulur. Örnek Dockerfile Şekil 3-6'da gösterilmiştir.
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -184,35 +184,35 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 ```
 
-**Şekil 3-6**. Visual Studio tarafından oluşturulan Dockerfile
+**Şekil 3-6**. Visual Studio Dockerfile oluşturulan
 
-Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak üzere yapılandırılmıştır. Şekil 3-7, Docker desteği eklenmiş şekilde oluşturulan yeni bir ASP.NET Core projesinden kullanılabilir farklı çalıştırma seçeneklerini gösterir.
+Uygulama çalıştığında varsayılan davranış Docker'ı da kullanacak şekilde yapılandırılır. Şekil 3-7, Docker desteği ile oluşturulan yeni bir ASP.NET Core projesinden elde edilen farklı çalışma seçeneklerini gösterir.
 
-![Visual Studio Docker çalıştırma seçenekleri](./media/visual-studio-docker-run-options.png)
+![Visual Studio Docker Çalışma Seçenekleri](./media/visual-studio-docker-run-options.png)
 
-**Şekil 3-7**. Visual Studio Docker çalıştırma seçenekleri
+**Şekil 3-7**. Visual Studio Docker Çalışma Seçenekleri
 
-[Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
+[Azure Geliştirme Alanları,](https://docs.microsoft.com/azure/dev-spaces/) yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure'da kendi Kubernetes yapılandırmalarıyla çalışması için kullanışlı bir yol sağlar. Şekil 3-7'de de görebileceğiniz gibi, uygulamayı Azure Geliştirme Spaces'te de çalıştırabilirsiniz.
 
-ASP.NET Core uygulamanıza Docker desteği eklememeniz durumunda, daha sonra her zaman ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve > **Docker desteği** **Ekle** ' yi seçin.
+ASP.NET Core uygulamanıza Docker desteğini oluştururken eklemezseniz, her zaman daha sonra ekleyebilirsiniz. Visual Studio Solution Explorer'dan projeye sağ tıklayın ve Şekil 3-8'de gösterildiği gibi**Docker Desteği** **Ekle'yi** > seçin.
 
-![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
+![Visual Studio Docker Desteği Ekle](./media/visual-studio-add-docker-support.png)
 
-**Şekil 3-8**. Visual Studio Docker desteği ekle
+**Şekil 3-8**. Visual Studio Docker Desteği Ekle
 
-Docker desteğinin yanı sıra, Şekil 3-8 ' de de gösterilen kapsayıcı düzenleme desteğini de ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosyası eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak için kullanılan helk grafiklerini içeren bir `charts` klasörü eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
+Docker desteğine ek olarak, Şekil 3-8'de de gösterilen Konteyner Orkestrasyon Desteği'ni de ekleyebilirsiniz. Varsayılan olarak, orkestratör Kubernetes ve Helm kullanır. Orkestratörü seçtikten sonra, proje `azds.yaml` köküne bir dosya eklenir `charts` ve uygulamayı yapılandırmak ve Kubernetes'e dağıtmak için kullanılan Miğfer grafiklerini içeren bir klasör eklenir. Şekil 3-9 yeni bir projede ortaya çıkan dosyaları gösterir.
 
-![Visual Studio Orchestrator desteği ekle](./media/visual-studio-add-orchestrator-support.png)
+![Visual Studio Ekle Orkestratör Desteği](./media/visual-studio-add-orchestrator-support.png)
 
-**Şekil 3-9**. Visual Studio Orchestrator desteği ekle
+**Şekil 3-9**. Visual Studio Ekle Orkestratör Desteği
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - [Kubernetes nedir?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
-- [Minikube ile Kubernetes yükleme](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+- [Minikube ile Kubernetes kurulumu](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 - [MiniKube vs Docker Masaüstü](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
-- [Docker için Visual Studio Araçları](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
+- [Docker için Görsel Stüdyo Araçları](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
 
 >[!div class="step-by-step"]
 >[Önceki](scale-applications.md)
->[İleri](leverage-serverless-functions.md)
+>[Sonraki](leverage-serverless-functions.md)

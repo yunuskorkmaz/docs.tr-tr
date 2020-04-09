@@ -3,12 +3,12 @@ title: Azure için Cloud Native .NET Uygulamalarını Temel Alma
 description: Azure'un kapsayıcıları, mikro hizmetler ve sunucusuz özelliklerinden yararlanan bulut tasimi uygulamaları oluşturma kılavuzu.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71696787"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989070"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET Uygulamalarını Temel Alma
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif Hakkı © 2019 Microsoft Corporation tarafından
+Telif &copy; Hakkı 2019 Microsoft Corporation tarafından
 
 Tüm hakları saklıdır. Bu kitabın içeriğinin hiçbir bölümü, yayımcının yazılı izni olmadan herhangi bir biçimde veya herhangi bir şekilde çoğaltılamaz veya aktarılamaz.
 
@@ -46,7 +46,7 @@ Yazar:
 
 > **Steve "ardalis" Smith** - Yazılım Mimarı ve Eğitmen - [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor** - Microsoft - Baş Bulut Sistemi Mimarı/IP Mimarı - [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - Baş Bulut Sistemi Mimar / IP Mimar - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 
 Katılımcılar ve Gözden Geçirenler:
 

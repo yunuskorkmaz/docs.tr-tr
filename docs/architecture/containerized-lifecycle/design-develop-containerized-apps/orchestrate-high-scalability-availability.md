@@ -2,12 +2,12 @@
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretim uygulamaları, tüm konteynerlerin sağlık, iş yükü ve yaşam döngülerini işleyen orkestratörlerle dağıtılmalı ve yönetilmelidir.
 ms.date: 02/15/2019
-ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369971455168026d768220dae6e2da5ce92bc698
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76919535"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989005"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -21,7 +21,7 @@ Uygulamanız mikro hizmetlere dayanıyorsa veya birden fazla kapsayıcıya böl�
 
 Mantıklı bir yaklaşım gibi görünüyor. Ama nasıl yük dengeleme, yönlendirme işleme ve bu bestelenmiş uygulamaları düzenlemek?
 
-Docker CLI, tek bir ana bilgisayarda bir kapsayıcıyı yönetme gereksinimlerini karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden çok ana bilgisayarda dağıtılan birden çok kapsayıcıyı yönetme konusunda yetersiz kalır. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, kapsayıcıları görüntü başına birden çok örneği olan ölçeklendirecek, askıya alacak veya gerektiğinde kapatacak ve ideal olarak ağ ve veri gibi kaynaklara nasıl erişeceklerini denetleyecek bir yönetim platformuna ihtiyacınız var Depolama.
+Docker CLI, tek bir ana bilgisayarda bir kapsayıcıyı yönetme gereksinimlerini karşılar, ancak daha karmaşık dağıtılmış uygulamalar için birden çok ana bilgisayarda dağıtılan birden çok kapsayıcıyı yönetme konusunda yetersiz kalır. Çoğu durumda, kapsayıcıları otomatik olarak başlatacak, kapsayıcıları görüntü başına birden çok örneği olan ölçeklendirecek, askıya alacak veya gerektiğinde kapatacak ve ideal olarak ağ ve veri depolama gibi kaynaklara nasıl erişeceklerini de denetleyecek bir yönetim platformuna ihtiyacınız vardır.
 
 Tek tek kapsayıcıların veya basit oluşturulan uygulamaların yönetiminin ötesine geçmek ve mikro hizmetlerle daha büyük kurumsal uygulamalara yönelmek için, düzenleme ve kümeleme platformlarına yönelmeniz gerekir.
 
@@ -29,7 +29,7 @@ Mimari ve geliştirme açısından bakıldığında, büyük, kurumsal, mikro hi
 
 - **Kümeler ve orkestrasyoncular.** Uygulamaları, büyük mikro hizmetler tabanlı bir uygulama gibi birçok Docker ana bilgisayar arasında ölçeklendirmeniz gerektiğinde, temel platformun karmaşıklığını soyutlayarak tüm bu ana bilgisayarları tek bir küme olarak yönetebilmeniz çok önemlidir. Konteyner kümeleri ve orkestratörleri bunu sağlıyor. Orkestratörlere örnek olarak Azure Service Fabric ve Kubernetes verilebilir. Kubernetes Azure'da Azure Kubernetes Hizmeti aracılığıyla kullanılabilir.
 
-- **Schedulers.** *Zamanlama,* bir yöneticinin kapsayıcıları kümede başlatabilmesi anlamına gelir, bu nedenle zamanlayıcılar da bunu yapmak için bir kullanıcı arabirimi sağlar. Küme zamanlayıcısının çeşitli sorumlulukları vardır: kümenin kaynaklarını verimli kullanmak, kullanıcı tarafından sağlanan kısıtlamaları ayarlamak, düğümler veya ana bilgisayarlar arasında denge kapları verimli bir şekilde yüklemek ve yüksek sağlarken hatalara karşı sağlam olmak Kullanılabilir -lik.
+- **Schedulers.** *Zamanlama,* bir yöneticinin kapsayıcıları kümede başlatabilmesi anlamına gelir, bu nedenle zamanlayıcılar da bunu yapmak için bir kullanıcı arabirimi sağlar. Küme zamanlayıcısının çeşitli sorumlulukları vardır: kümenin kaynaklarını verimli bir şekilde kullanmak, kullanıcı tarafından sağlanan kısıtlamaları ayarlamak, düğümler veya ana bilgisayarlar arasında denge kapları verimli bir şekilde yüklemek ve yüksek kullanılabilirlik sağlarken hatalara karşı sağlam olmak.
 
 Küme ve zamanlayıcı kavramları yakından ilişkilidir, bu nedenle farklı satıcılar tarafından sağlanan ürünler genellikle her iki yetenek kümesini de sağlar. Aşağıdaki bölüm kümeler ve zamanlayıcılar için sahip olduğunuz en önemli platform ve yazılım seçeneklerini gösterir. Bu orkestratörler Azure gibi genel bulutlarda yaygın olarak sunulur.
 
@@ -50,7 +50,7 @@ Birçok bulut satıcısı Docker konteyner desteğinin yanı sıra Azure, Amazon
 
 Bir Kubernetes kümesi birkaç Docker ana bilgisayarını bir araya getirerek bunları tek bir sanal Docker ana bilgisayar olarak ortaya çıkarır, böylece kümeye birden fazla kapsayıcı dağıtabilir ve istediğiniz sayıda kapsayıcı örneğiyle ölçeklendirebilirsiniz. Küme ölçeklenebilirlik, sağlık ve benzeri gibi tüm karmaşık yönetim sıhhi tesisat ele alacaktır.
 
-AKS, Azure'da kapsayıcı uygulamaları çalıştırmak için önceden yapılandırılmış bir sanal makine kümesinin oluşturulmasını, yapılandırmasını ve yönetimini basitleştirmenin bir yolunu sağlar. Popüler açık kaynak zamanlama ve düzenleme araçlarının optimize edilmiş yapılandırmasını kullanan AKS, Microsoft Azure'da kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için mevcut becerilerinizi kullanmanıza veya büyük ve büyüyen bir topluluk uzmanlığından yararlanmanıza olanak tanır .
+AKS, Azure'da kapsayıcı uygulamaları çalıştırmak için önceden yapılandırılmış bir sanal makine kümesinin oluşturulmasını, yapılandırmasını ve yönetimini basitleştirmenin bir yolunu sağlar. Popüler açık kaynak zamanlama ve düzenleme araçlarının optimize edilmiş yapılandırmasını kullanan AKS, Microsoft Azure'da kapsayıcı tabanlı uygulamaları dağıtmak ve yönetmek için mevcut becerilerinizi kullanmanıza veya büyük ve büyüyen bir topluluk uzmanlığından yararlanmanıza olanak tanır.
 
 Azure Kubernetes Hizmeti, azure için özel olarak popüler Docker kümeleme açık kaynak araçları nın ve teknolojilerinin yapılandırmasını optimize eder. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan açık bir çözüm elabilirsiniz. Boyutu, ana bilgisayar sayısını ve orkestratör araçlarını seçersiniz ve AKS diğer her şeyi işler.
 

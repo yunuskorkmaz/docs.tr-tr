@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | ASP.NET 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78241045"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987848"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Çekirdek Uygulamalarda Verilerle Çalışma
 
@@ -130,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
 Birden çok ilişki ekleyebilirsiniz ve ThenInclude'ı kullanarak alt ilişkileri de ekleyebilirsiniz. EF Core, ortaya çıkan varlık kümesini almak için tek bir sorgu yürütür. Alternatif olarak bir '' geçerek navigasyon özellikleri navigasyon özellikleri ekleyebilirsiniz. `.Include()` -uzantısı yöntemine ayrılmış dize, böyle:
 
 ```csharp
-    .Include(“Items.Products”)
+    .Include("Items.Products")
 ```
 
 Filtreleme mantığını kapsüllemenin yanı sıra, bir belirtim, hangi özelliklerin doldurulması gerektiği de dahil olmak üzere döndürülecek verilerin şeklini de belirtebilir. eShopOnWeb örnek belirtimi içinde istekli yükleme bilgileri kapsülleme gösteren çeşitli özellikleri içerir. Belirtimin sorgunun bir parçası olarak nasıl kullanıldığını burada görebilirsiniz:
@@ -282,7 +282,7 @@ await strategy.ExecuteAsync(async () =>
 
 EF Core kalıcılığı yönetmek için mükemmel bir seçim olsa da ve çoğunlukla uygulama geliştiricilerin veritabanı ayrıntılarını kapsüller, tek seçenek değildir. Başka bir popüler açık kaynak alternatif [Dapper](https://github.com/StackExchange/Dapper), sözde mikro-ORM olduğunu. Mikro-ORM, nesneleri veri yapılarına eşlemek için daha hafif ve daha az özellikli bir araçtır. Dapper'ın durumunda, tasarım hedefleri verileri almak ve güncelleştirmek için kullandığı temel sorguları tam olarak kapsüllemek yerine performansa odaklanır. Sql'i geliştiriciden soyutlamadığı için, Dapper "metale daha yakındır" ve geliştiricilerin belirli bir veri erişim işlemi için tam olarak kullanmak istedikleri sorguları yazmalarına olanak tanır.
 
-EF Core, dapper onu ayıran ama aynı zamanda performans yükü eklemek sağlayan iki önemli özelliklere sahiptir. Bunlardan ilki LINQ ifadelerinden SQL'e çevrilmedir. Bu çeviriler önbelleğe alınmış, ancak yine de ilk kez bunları gerçekleştirmek için havai vardır. İkincisi, varlıklar üzerinde değişiklik izleme (verimli güncelleştirme deyimleri oluşturulabilir. Bu davranış, AsNotTracking uzantısı kullanılarak belirli sorgular için kapatılabilir. EF Core ayrıca genellikle çok verimli ve her durumda mükemmel bir performans açısından kabul edilebilir SQL sorguları oluşturur, ancak yürütülecek kesin sorgu üzerinde ince kontrol gerekiyorsa, özel SQL (veya saklı bir yordam yürütmek) EF kullanarak geçirebilirsiniz Çekirdek de öyle. Bu durumda, Dapper hala EF Core daha iyi performans, ama sadece biraz. Julie Lerman, Mayıs 2016'daki MSDN makalesi [Dapper, Entity Framework ve Hybrid Apps'da](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)bazı performans verileri sunar. Çeşitli veri erişim yöntemleri için ek performans kıyaslama verileri [Dapper sitesinde](https://github.com/StackExchange/Dapper)bulunabilir.
+EF Core, dapper onu ayıran ama aynı zamanda performans yükü eklemek sağlayan iki önemli özelliklere sahiptir. Bunlardan ilki LINQ ifadelerinden SQL'e çevrilmedir. Bu çeviriler önbelleğe alınmış, ancak yine de ilk kez bunları gerçekleştirmek için havai vardır. İkincisi, varlıklar üzerinde değişiklik izleme (verimli güncelleştirme deyimleri oluşturulabilir. Bu davranış, AsNotTracking uzantısı kullanılarak belirli sorgular için kapatılabilir. EF Core ayrıca, genellikle çok verimli ve her durumda mükemmel bir performans açısından kabul edilebilir SQL sorguları oluşturur, ancak yürütülecek kesin sorgu üzerinde ince denetim gerekiyorsa, özel SQL (veya depolanmış bir yordam yürütmek) ef Core kullanarak da geçirebilirsiniz. Bu durumda, Dapper hala EF Core daha iyi performans, ama sadece biraz. Julie Lerman, Mayıs 2016'daki MSDN makalesi [Dapper, Entity Framework ve Hybrid Apps'da](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps)bazı performans verileri sunar. Çeşitli veri erişim yöntemleri için ek performans kıyaslama verileri [Dapper sitesinde](https://github.com/StackExchange/Dapper)bulunabilir.
 
 Dapper sözdiziminin EF Core'dan nasıl değiştiğini görmek için, öğelerin listesini almak için aynı yöntemin bu iki sürümü göz önünde bulundurun:
 

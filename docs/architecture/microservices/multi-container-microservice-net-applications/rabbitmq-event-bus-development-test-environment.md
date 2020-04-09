@@ -2,18 +2,18 @@
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Geliştirme veya test ortamları için tümleştirme etkinlikleri için bir olay veri günü mesajlaşması uygulamak için RabbitMQ'yi kullanın.
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711192"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988303"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
 EShopOnContainers uygulamasının yaptığı gibi, bir konteynerde çalışan RabbitMQ'ye dayalı özel etkinlik otobüsünüzü oluşturursanız, bunun yalnızca geliştirme ve test ortamlarınız için kullanılması gerektiğini söyleyerek başlamalıyız. Üretime hazır servis veri tonunun bir parçası olarak oluşturmadığınız sürece, üretim ortamınız için kullanmamalısınız. Basit bir özel olay veri otobüsü, ticari servis verine sahip olduğu üretime hazır birçok kritik özelliği eksik olabilir.
 
-eShopOnContainers'daki etkinlik veri neşrisi özel uygulamalarından biri temelde RabbitMQ API'sini kullanan bir kitaplıktır (Azure Hizmet Veri Tos'una dayalı başka bir uygulama vardır).
+EShopOnContainers olay otobüs özel uygulama biri temelde RabbitMQ API kullanarak bir kütüphane. (Azure Hizmet Veri Yolunda'na dayalı başka bir uygulama daha vardır.)
 
 RabbitMQ ile etkinlik otobüsü uygulaması, mikro hizmetlerin olaylara abone olmasını, olayları yayınlamasını ve Şekil 6-21'de gösterildiği gibi etkinlikleri almasını sağlar.
 
@@ -122,6 +122,6 @@ RabbitMQ desteği ile üretime hazır çözümler.
 - **Toplu Taşıma** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[Önceki](integration-event-based-microservice-communications.md)
->[Sonraki](subscribe-events.md)
+> [!div class="step-by-step"]
+> [Önceki](integration-event-based-microservice-communications.md)
+> [Sonraki](subscribe-events.md)

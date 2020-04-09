@@ -2,12 +2,12 @@
 title: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Kapsayıcı tabanlı uygulamalar için Azure bilgi işlem platformlarını seçme
 ms.date: 02/18/2020
-ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503859"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987822"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
 

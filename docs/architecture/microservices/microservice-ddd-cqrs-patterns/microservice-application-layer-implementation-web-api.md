@@ -2,12 +2,12 @@
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Bağımlılık Enjeksiyonu'nu ve Aracı desenlerini ve bunların uygulama ayrıntılarını Web API uygulama katmanında anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502441"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988472"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API'sini kullanarak mikro hizmet uygulama katmanını uygulayın
 
@@ -101,7 +101,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Bir IoC kapsayıcısında türleri kaydederken en yaygın desen, bir çift tür-bir arabirim ve ilgili uygulama sınıfı kaydetmektir. Daha sonra herhangi bir oluşturucu aracılığıyla IoC kapsayıcısından bir nesne istediğinizde, belirli bir tür arabirim nesnesi istersiniz. Örneğin, önceki örnekte, son satır, oluşturucularınızın IMyCustomRepository'ye (arayüz veya soyutlama) bağımlı olduğunu belirtirken, IoC kapsayıcısının MyCustomSQLServerRepository uygulamasının bir örneğini enjekte edeceğini belirtir Sınıfı.
+Bir IoC kapsayıcısında türleri kaydederken en yaygın desen, bir çift tür-bir arabirim ve ilgili uygulama sınıfı kaydetmektir. Daha sonra herhangi bir oluşturucu aracılığıyla IoC kapsayıcısından bir nesne istediğinizde, belirli bir tür arabirim nesnesi istersiniz. Örneğin, önceki örnekte, son satır, oluşturucularınızın IMyCustomRepository'ye (arabirim veya soyutlama) bağımlı olduğunu belirtir, IoC kapsayıcısı MyCustomSQLServerRepository uygulama sınıfının bir örneğini enjekte eder.
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Otomatik tür kaydı için Scrutor kitaplığını kullanma
 
@@ -333,7 +333,7 @@ Komut işleyicisi genellikle aşağıdaki adımları alır:
 
 Genellikle, bir komut işleyicisi, toplam kökü (kök varlığı) tarafından yönlendirilen tek bir toplamla ilgilenir. Tek bir komutun alınmasından birden çok agrega etkilenecekse, durumları veya eylemleri birden çok toplama arasında yaymak için etki alanı olaylarını kullanabilirsiniz.
 
-Burada önemli olan nokta, bir komut işlenirken, tüm etki alanı mantığının etki alanı modelinin (toplamlar) içinde, tamamen kapsüllenmiş ve birim testine hazır olması gerektiğidir. Komut işleyicisi, etki alanı modelini veritabanından almanın bir yolu olarak ve son adım olarak, altyapı katmanına (depolar) model değiştirildiğinde değişiklikleri devam etmesini söylemek için hareket eder. Bu yaklaşımın avantajı, tesisat düzeyi (komut işleyicileri, Web API, uygulama veya altyapı katmanlarında kod değiştirmeden yalıtılmış, tamamen kapsüllenmiş, zengin, davranışsal etki alanı modelinde etki alanı mantığını yeniden depolar, vb.)
+Burada önemli olan nokta, bir komut işlenirken, tüm etki alanı mantığının etki alanı modelinin (toplamlar) içinde, tamamen kapsüllenmiş ve birim testine hazır olması gerektiğidir. Komut işleyicisi, etki alanı modelini veritabanından almanın bir yolu olarak ve son adım olarak, altyapı katmanına (depolar) model değiştirildiğinde değişiklikleri devam etmesini söylemek için hareket eder. Bu yaklaşımın avantajı, tesisat düzeyi (komut işleyicileri, Web API, depolar, vb) olan uygulama veya altyapı katmanlarında kod değiştirmeden yalıtılmış, tamamen kapsüllenmiş, zengin, davranışsal etki alanı modelinde etki alanı mantığını yeniden değerlendirebilmenizdir.
 
 Komut işleyicileri karmaşık hale geldiğinde, çok fazla mantıkla, bu bir kod kokusu olabilir. Bunları gözden geçirin ve etki alanı mantığı bulursanız, etki alanı davranışını etki alanı nesnelerinin (toplam kök ve alt varlık) yöntemlerine taşımak için kodu yeniden düzenlemeyi.
 

@@ -2,12 +2,12 @@
 title: WCF Geliştiricileri için ASP.NET Core gRPC - WCF Geliştiricileri için gRPC
 description: WCF geliştiricileri için Core 3.0'ASP.NET gRPC hizmetleri oluşturmaya giriş
 ms.date: 09/02/2019
-ms.openlocfilehash: 40307124c521659a00339884bacf48881fa3e048
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 175dfbf1880a0937615543c248fba3bed0e25c23
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543241"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988966"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF Geliştiricileri için ASP.NET Core gRPC
 

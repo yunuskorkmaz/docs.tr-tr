@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523590"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989174"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -140,7 +140,7 @@ IL Bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.
 
 ### <a name="tiered-compilation"></a>Katmanlı derleme
 
-[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC) varsayılan olarak .NET Core 3.0 ile açıktır. Bu özellik, daha iyi performans elde etmek için çalışma süresinin tam zamanında (JIT) derleyiciyi daha uyumlu bir şekilde kullanmasını sağlar.
+[Katmanlı derleme](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC) varsayılan olarak .NET Core 3.0 ile açıktır. Bu özellik, daha iyi performans elde etmek için çalışma süresinin tam zamanında (JIT) derleyiciyi daha uyumlu bir şekilde kullanmasını sağlar.
 
 Katmanlı derlemenin temel avantajı, daha düşük kaliteli ama daha hızlı bir katmanda veya daha yüksek kalitede ama daha yavaş bir katmanda iki farklı jitting yöntemi sağlamaktır. Kalite, yöntemin ne kadar iyi optimize edildiklerine işaret eder. TC, başlangıçtan sabit duruma kadar yürütmenin çeşitli aşamalarından geçerken bir uygulamanın performansını artırmaya yardımcı olur. Katmanlı derleme devre dışı bırakıldığında, her yöntem başlangıç performansına göre sabit durum performansına bağlı tek bir şekilde derlenir.
 
@@ -506,11 +506,11 @@ Ayrılmaz bir `scaleB` değer alan IEEE işlemine karşılık gelir, etkili bir 
 
 Uygun olduğu durumlarda, .NET kitaplıkları performansı artırmak için bu yönergeleri kullanmaya başladı.
 
-Daha fazla bilgi için [bkz.](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)
+Daha fazla bilgi için [bkz.](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Çekirdek Sürüm API'leri
 
-.NET Core 3.0 ile başlayarak,.NET Core ile sağlanan sürüm API'leri artık beklediğiniz bilgileri döndürün. Örnek:
+.NET Core 3.0 ile başlayarak,.NET Core ile sağlanan sürüm API'leri artık beklediğiniz bilgileri döndürün. Örneğin:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

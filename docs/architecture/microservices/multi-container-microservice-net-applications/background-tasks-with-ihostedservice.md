@@ -2,12 +2,12 @@
 title: IHostedService ve BackgroundService sınıfı ile mikro hizmetlerde arka plan görevlerini uygulayın
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Microservices .NET Core'da arka plan görevlerini uygulamak için IHostedService ve BackgroundService'i kullanmak için yeni seçenekleri anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502302"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988342"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService ve BackgroundService sınıfı ile mikro hizmetlerde arka plan görevlerini uygulayın
 
@@ -178,7 +178,7 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...
+        // Constructor's parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -206,7 +206,7 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-eShopOnContainers için bu özel durumda, belirli bir devlet ile siparişleri arayan bir veritabanı tablosu sorgulayan bir uygulama yöntemi yürütülür ve değişiklikleri uygularken, olay veri yolunda entegrasyon olayları yayımlıyor (altında olabilir RabbitMQ veya Azure Servis Veri Servisi'ni kullanarak).
+eShopOnContainers için bu özel durumda, belirli bir devlet ile siparişleri arayan bir veritabanı tablosu sorgulayan bir uygulama yöntemi yürütülür ve değişiklikleri uygularken, olay veri yolunda (altında RabbitMQ veya Azure Hizmet Veri Servisi kullanıyor olabilir) üzerinden entegrasyon olayları yayımlıyor.
 
 Tabii ki, bunun yerine, başka bir iş arka plan görev çalıştırabilirsiniz.
 
@@ -249,6 +249,6 @@ Arabirim, `IHostedService` arka plan görevlerini ASP.NET Core web uygulamasınd
 - **ASP.NET Core 2.1 kullanarak GenericHost Örnek** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
->[!div class="step-by-step"]
->[Önceki](test-aspnet-core-services-web-apps.md)
->[Sonraki](implement-api-gateways-with-ocelot.md)
+> [!div class="step-by-step"]
+> [Önceki](test-aspnet-core-services-web-apps.md)
+> [Sonraki](implement-api-gateways-with-ocelot.md)

@@ -2,12 +2,12 @@
 title: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | CQRS eShopOnContainers sipariş microservice uygulandığı nı anlayın.
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847160"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988498"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers bir DDD microservice CQRS ve CQS yaklaşımları uygulayın
 

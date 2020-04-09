@@ -3,18 +3,18 @@ title: Bulutta Yerel'i tanımlama
 description: Bulut-yerel sistemler için temel temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 756a2565bd77fcef19a5f15579987836ff0e75a4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401573"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989096"
 ---
 # <a name="defining-cloud-native"></a>Bulut un yerel ini tanımlama
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Yaptığın şeyi bırak ve 10 iş arkadaşına mesaj at. "Bulut Yerlisi" terimini tanımlamalarını isteyin. Sekiz farklı cevap alma şansın yüksek. İlginçtir ki, bundan altı ay sonra, bulut-yerel teknolojiler ve uygulamalar geliştikçe, tanımları da gelişecek.
+Yaptığın şeyi bırak ve on iş arkadaşına mesaj at. "Bulut Yerlisi" terimini tanımlamalarını isteyin. Sekiz farklı cevap alma şansın yüksek.
 
 Bulut yerlisi, kritik iş sistemleri oluşturma hakkındaki düşüncemizi değiştirmekle ilgilidir.
 
@@ -113,7 +113,7 @@ Arka uç çekirdek hizmetleri birbirleriyle nasıl iletişim kuracak? Bağlantı
 
 İletişim ayrıntılı Bölüm 4, *Bulut-Yerli İletişim Desenleri ele alınmıştır.*
 
-*Esnek -lik*
+*Dayanıklılık*
 
 Microservices mimarisi sisteminizi işlem sürecinden ağ iletişimine taşır. Dağıtılmış bir ortamda, Hizmet B Hizmet A'dan gelen bir çağrıya yanıt vermiyorsa ne yapacaksınız? Hizmet C geçici olarak kullanılamaz hale geldiğinde ve diğer hizmetler yığın ve sistem performansını düşürmek çağıran ne olur?
 
@@ -278,7 +278,7 @@ Bulut satıcıları, özel destek hizmetleriyle iletişim kurmanız için API'le
 
 Destek hizmetleri ayrıntılı Bölüm 5, *Bulut-Yerel Veri Desenleri*ve Bölüm 4, *Bulut-Yerel İletişim Desenleri ele alınmıştır.*
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>Otomasyon
 
 Gördüğünüz gibi, bulut-yerli sistemler hız ve çeviklik elde etmek için mikro hizmetleri, konteynerleri ve modern sistem tasarımını benimser. Ama bu hikayenin sadece bir parçası. Bu sistemlerin çalıştırıldığı bulut ortamlarını nasıl sağlarsınız? Uygulama özelliklerini ve güncellemelerini nasıl hızla dağıtAbilirsiniz? Resmin tamamını nasıl tamamlarsın?
 

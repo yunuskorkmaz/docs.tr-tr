@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089553"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987978"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -152,7 +152,7 @@ Bu üç itibaren, ACI temel işletim sistemi korumak gerekmez, yükseltme / yama
 
 Aynı zamanda PaaS (Hizmet Olarak Platform) düzeyinde daha fazla konumlandırılmış olan Azure destek kapsayıcılarında bulunan ürünler şunlardır:
 
-- **Azure Uygulama Hizmeti**
+- **Azure App Service**
 - **Azure Kubernetes Servisi (AKS ve ACS)**
 - **Azure Batch**
 

@@ -2,13 +2,13 @@
 title: C# tarihi - C# Rehberi
 description: Dil ilk versiyonlarında nasıl dı ve o zamandan beri nasıl gelişti?
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399688"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989200"
 ---
 # <a name="the-history-of-c"></a>C'nin tarihçesi\#
 
@@ -57,7 +57,7 @@ C# sürüm 1.2 Visual Studio .NET 2003 ile gönderildi. Bu dil için birkaç kü
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türleri](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim yöntemler](../language-reference/operators/delegate-operator.md)
-- [Nullable değer türleri](../language-reference/builtin-types/nullable-value-types.md)
+- [Boş değer atanabilen değer türleri](../language-reference/builtin-types/nullable-value-types.md)
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve kontravaryans](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -154,7 +154,7 @@ Kendi içinde geleneksel bir dil özelliği olmasa da, bu sürümü ile birlikte
 
 ## <a name="c-version-70"></a>C# sürüm 7.0
 
-En son ana versiyonu C# sürüm 7.0, Visual Studio 2017 ile piyasaya sürüldü. Bu sürüm c # 6.0 damar bazı evrimsel ve serin şeyler, ancak bir hizmet olarak derleyici olmadan vardır. Yeni özelliklerden bazıları şunlardır:
+C# sürüm 7.0 Visual Studio 2017 ile piyasaya sürüldü. Bu sürüm c # 6.0 damar bazı evrimsel ve serin şeyler, ancak bir hizmet olarak derleyici olmadan vardır. Yeni özelliklerden bazıları şunlardır:
 
 - [Çıkış değişkenleri](./csharp-7.md#out-variables)
 - [Tuples ve yapısızlaştırma](./csharp-7.md#tuples)
@@ -172,5 +172,86 @@ Diğer özellikler şunlardır:
 Tüm bu özellikler geliştiriciler için serin yeni yetenekler ve her zamankinden daha temiz kod yazmak için fırsat sunuyoruz. Vurgu, anahtar kelimeyle birlikte kullanılacak değişkenlerin `out` bildirimini yoğunlaştırmak ve tuple üzerinden birden çok iade değerine izin vermektir.
 
 Ama C# daha geniş bir kullanıma sokuluyor. .NET Core artık herhangi bir işletim sistemini hedef alıyor ve gözünü bulutta ve taşınabilirliğe dikti.  Bu yeni yetenekler kesinlikle dil tasarımcılarının düşünce ve zaman işgal, yeni özellikler ile geliyor ek olarak.
+
+## <a name="c-version-71"></a>C# sürüm 7.1
+
+C# *C#* 7.1 ile nokta bültenleri serbest başladı. Bu [sürüm, dil sürümü seçimi](../language-reference/configure-language-version.md) yapılandırma öğesi, üç yeni dil özellikleri ve yeni derleyici davranışı eklendi.
+
+Bu sürümdeki yeni dil özellikleri şunlardır:
+
+- [`async``Main` yöntem](./csharp-7-1.md#async-main)
+  - Bir uygulama için giriş noktası `async` değiştirici olabilir.
+- [`default`gerçek ifadeler](./csharp-7-1.md#default-literal-expressions)
+  - Varsayılan değer ifadelerinde varsayılan gerçek ifadeleri, hedef türü çıkarılabilirken kullanabilirsiniz.
+- [Çıkarılan tuple öğesi adları](./csharp-7-1.md#inferred-tuple-element-names)
+  - Tuple elemanlarının adları birçok durumda tuple başlatma çıkarılabilir.
+- [Genel tür parametreleri üzerinde desen eşleştirme](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - Türü genel bir tür parametresi olan değişkenlerde desen eşleştirme ifadeleri kullanabilirsiniz.
+
+Son olarak, derleyici `-refout` iki `-refonly` seçenek vardır ve bu kontrol [referans derleme nesil.](./csharp-7-1.md#reference-assembly-generation)
+
+## <a name="c-version-72"></a>C# sürüm 7.2
+
+C# 7.2 birkaç küçük dil özelliği ekledi:
+
+- [Güvenli verimli kod yazma teknikleri](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - Referans semantikkullanarak değer türleri ile çalışmayı sağlayan sözdizimi geliştirmelerinin birleşimi.
+- [Girintili olmayan adlandırılmış bağımsız değişkenler](./csharp-7-2.md#non-trailing-named-arguments)
+  - Adlandırılmış bağımsız değişkenler konumsal bağımsız değişkenler tarafından izlenebilir.
+- [Sayısal edebi alanlarda önde gelen alt](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - Sayısal literals artık herhangi bir yazdırılan basamak önce önde gelen alt çizerolabilir.
+- [`private protected`erişim değiştirici](./csharp-7-2.md#private-protected-access-modifier)
+  - Erişim `private protected` değiştiricisi, aynı derlemede türetilmiş sınıflar için erişim sağlar.
+- [Koşullu `ref` ifadeler](./csharp-7-2.md#conditional-ref-expressions)
+  - Koşullu ifadenin sonucu`?:`( ) artık bir başvuru olabilir.
+
+## <a name="c-version-73"></a>C# sürüm 7.3
+
+C# 7.3 sürümü için iki ana tema vardır. Bir tema, güvenli kodun güvenli olmayan kod kadar performant olmasını sağlayan özellikler sağlar. İkinci tema, varolan özellikler için artımlı iyileştirmeler sağlar. Buna ek olarak, bu sürümde yeni derleyici seçenekleri eklendi.
+
+Aşağıdaki yeni özellikler, güvenli kod için daha iyi performans tesini destekler:
+
+- [Sabit alanlara sabitleme den erişebilirsiniz.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [Yerel değişkenleri `ref` yeniden atayabilirsiniz.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [Diziler üzerinde `stackalloc` baş harflerini kullanabilirsiniz.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [Bir deseni destekleyen herhangi bir türe sahip ifadeler kullanabilirsiniz. `fixed`](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [Ek genel kısıtlamalar kullanabilirsiniz.](csharp-7-3.md#enhanced-generic-constraints)
+
+Aşağıdaki geliştirmeler varolan özellikler için yapılmıştır:
+
+- [Test `==` edebilirsiniz `!=` ve tuple türleri ile.](csharp-7-3.md#tuples-support--and-)
+- [İfade değişkenlerini daha fazla konumda kullanabilirsiniz.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [Otomatik olarak uygulanan özelliklerin destek alanına öznitelikleri ekleyebilirsiniz.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [Bağımsız değişkenler farklı `in` olduğunda yöntem çözümlemesi geliştirildi.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [Aşırı yükleme çözünürlüğü artık daha az belirsiz servis talepleri ne kadar azdır.](csharp-7-3.md#improved-overload-candidates)
+
+Yeni derleyici seçenekleri şunlardır:
+
+- [`-publicsign`derlemelerin Açık Kaynak Yazılım (OSS) imzalanmasını etkinleştirmek için.](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap`kaynak dizinler için bir eşleme sağlamak için.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C# sürüm 8.0
+
+C# 8.0, özellikle .NET Core'u hedefleyen ilk büyük C# sürümedir. Bazı özellikler yeni CLR özelliklerine, diğerleri ise yalnızca .NET Core'a eklenen kitaplık türlerine dayanır. C# 8.0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
+
+- [Yalnızca üyeler okunur](./csharp-8.md#readonly-members)
+- [Varsayılan arabirim metotları](./csharp-8.md#default-interface-methods)
+- [Desen eşleştirme geliştirmeleri:](./csharp-8.md#more-patterns-in-more-places)
+  - [İfadeleri değiştirme](./csharp-8.md#switch-expressions)
+  - [Özellik desenleri](./csharp-8.md#property-patterns)
+  - [Tuple desenleri](./csharp-8.md#tuple-patterns)
+  - [Konumsal desenler](./csharp-8.md#positional-patterns)
+- [Bildirimleri kullanma](./csharp-8.md#using-declarations)
+- [Statik yerel fonksiyonlar](./csharp-8.md#static-local-functions)
+- [Tek kullanımlık ref structs](./csharp-8.md#disposable-ref-structs)
+- [Boş değer atanabilir başvuru türleri](../language-reference/builtin-types/nullable-reference-types.md)
+- [Asenkron akarsular](./csharp-8.md#asynchronous-streams)
+- [Endeksler ve aralıklar](./csharp-8.md#indices-and-ranges)
+- [Null-coalescing atama](./csharp-8.md#null-coalescing-assignment)
+- [Yönetilmeyen yapılı türler](./csharp-8.md#unmanaged-constructed-types)
+- [İç içe ifadelerde Stackalloc](./csharp-8.md#stackalloc-in-nested-expressions)
+- [Enterpolasyonlu harfi harfine dizelerin geliştirilmesi](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+Varsayılan arabirim üyeleri CLR'de geliştirmeler gerektirir. Bu özellikler .NET Core 3.0 için CLR'ye eklendi. Aralıkları ve dizinleri ve eşzamanlı akışlar .NET Core 3.0 kitaplıklarında yeni türler gerektirir. Nullable başvuru türleri, derleyicide uygulanırken, bağımsız değişkenlerin ve döndürücü değerlerin null durumu yla ilgili anlamsal bilgi sağlamak için kitaplıklar ek açıklama yapıldığında çok daha kullanışlıdır. Bu ek açıklamalar .NET Core kitaplıklarına ekleniyor.
 
 _Makale_ [_aslında NDepend blogunda yayınlanan_](https://blog.ndepend.com/c-versions-look-language-history/), Erik_Dietrich ve Patrick Smacchia nezaket._

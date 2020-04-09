@@ -2,12 +2,12 @@
 title: Devre Kesici desenini uygulama
 description: Http yeniden denemelerine tamamlayıcı bir sistem olarak Devre Kesici deseni nasıl uygulayacağınızı öğrenin.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847251"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988891"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Devre Kesici desenini uygulama
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-İşte bir özeti. Yeniden Deneme ilkesi, HTTP isteğini gerçekleştirmek için birkaç kez çalışır ve HTTP hatalarını alır. Yeniden deneme sayısı Devre Kesici ilkesi için belirlenen maksimum sayıya ulaştığında (bu durumda, 5), uygulama bir BrokenCircuitException atar. Sonuç, Şekil 8-6'da gösterildiği gibi dostça bir mesajdır.
+İşte özeti. Yeniden Deneme ilkesi, HTTP isteğini gerçekleştirmek için birkaç kez çalışır ve HTTP hatalarını alır. Yeniden deneme sayısı Devre Kesici ilkesi için belirlenen maksimum sayıya ulaştığında (bu durumda, 5), uygulama bir BrokenCircuitException atar. Sonuç, Şekil 8-6'da gösterildiği gibi dostça bir mesajdır.
 
 ![Sepet hizmeti inoperative hata ile MVC web uygulaması ekran görüntüsü.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

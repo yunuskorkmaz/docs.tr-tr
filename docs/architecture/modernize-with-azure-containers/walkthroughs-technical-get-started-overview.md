@@ -2,12 +2,12 @@
 title: İzlenecek yollar ve teknik başlangıca genel bakış
 description: Azure Bulutu ve Windows Kapsayıcıları ile Mevcut .NET Uygulamalarını Modernize Edin | Walkthroughs ve teknik genel bakış başlar
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660891"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987875"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
@@ -70,7 +70,7 @@ Aşağıdaki şekil, orijinal 3 Katmanlı eski uygulamanın basit senaryosunu g�
 
 ![WCF hizmeti ve WinForms istemci uygulaması ile orijinal eski 3 Katmanlı uygulamanın basit mimari senaryosu](./media/image5-1.5.png)
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Bu gözden geçirmenin avantajları basittir: Kodu ve ilk uygulamaları tanımanın yeterlidir.
 
@@ -111,7 +111,7 @@ Aşağıdaki şekil, konteynerleştirilmiş bir WCF hizmetine sahip 3 Katmanlı 
 
 ![Geliştirme ortamında kapsayıcı WCF hizmetinin basitleştirilmiş mimari diyagramı](./media/image5-3.5.png)
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Yekpare uygulamanızı bir kapta çalıştırmanın avantajları vardır. İlk olarak, uygulama için bir görüntü oluşturursunuz. Bu noktadan itibaren, her dağıtım aynı ortamda çalışır. Her kapsayıcı aynı işletim sistemi sürümünü kullanır, bağımlılıkların aynı sürümü yüklü, aynı .NET çerçeve sürümünü kullanır ve aynı işlem kullanılarak oluşturulur. Temel olarak, docker görüntüsü kullanarak uygulamanızın bağımlılıklarını kontrol eleştirirsiniz. Kapsayıcıları dağıttığınızda bağımlılıklar uygulamayla birlikte hareket emredilir.
 
@@ -170,7 +170,7 @@ Windows Kapsayıcıları için Azure VM'ler, Docker Engine'in ayarlanmasıyla wi
 
 Azure şu anda **Kapsayıcılarla Windows Server 2016**adında bir VM sağlar. Bu VM'yi, Windows Server Core veya Windows Nano Server ile yeni Windows Server Kapsayıcı özelliğini denemek için kullanabilirsiniz. Konteyner işletim sistemi görüntüleri yüklenir ve ardından VM Docker ile kullanıma hazırdır.
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Windows Kapsayıcıları şirket içi Windows Server 2016 VM'lerine dağıtılabilse de, Azure'a dağıttığınızda kullanıma hazır Windows Server Container VM'lerle başlamak için daha kolay bir yol elde edersiniz. Ayrıca, test edenler tarafından erişilebilen ortak bir çevrimiçi konum ve Azure sanal makine ölçek kümeleri aracılığıyla otomatik ölçeklenebilirlik de elde elabilirsiniz.
 
@@ -202,13 +202,13 @@ eShopModernizing uygulamalarını ACI'ye dağıtma konusunda, uygulamaların yal
 
 ![Geliştirme ortamından ACI'ye dağıtın](./media/image5-3.5.6.png)
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
-Azure Container Instances, sanal makine sağlamak veya daha yüksek düzey bir hizmet benimsemek zorunda kalmadan Azure’da Docker kapsayıcıları oluşturmayı ve yönetmeyi kolaylaştırır. ACI ile, Azure'da doğrudan bir Windows kapsayıcısı dağıtabilir ve birkaç saniye içinde tam nitelikli bir etki alanı adı (FQDN) ile internete açabilirsiniz (Windows Konteyner görüntüsünü Docker Hub veya Azure Kapsayıcısı gibi docker kayıt defterinde hazır olması koşuluyla Kayıt Defteri).
+Azure Container Instances, sanal makine sağlamak veya daha yüksek düzey bir hizmet benimsemek zorunda kalmadan Azure’da Docker kapsayıcıları oluşturmayı ve yönetmeyi kolaylaştırır. ACI ile, Azure'da doğrudan bir Windows kapsayıcısı dağıtabilir ve birkaç saniye içinde tam nitelikli bir alan adı (FQDN) ile internete maruz kalabilirsiniz (Windows Konteyner görüntüsünü Docker Hub veya Azure Kapsayıcı Kayıt Defteri gibi docker kayıt defterinde hazır olması koşuluyla).
 
 ### <a name="considerations"></a>Dikkat edilmesi gerekenler
 
-Windows Kapsayıcılarını Azure Kapsayıcı Örneklerine (ACI) tam .NET Framework / ASP.NET veya SQL Server ile dağıtmak, normal bir Docker Hosts'a (Windows Containers ile Windows Server 2016 gibi) dağıtmak kadar hızlı değildir, çünkü Docker görüntüsünün her seferinde indirilmesi (Docker kayıt defterinden çekilmesi) ve SQL kapsayıcı görüntüsünün (15,1 GB) boyutları ve kapsayıcı ASP.NET görüntüsünün (13,9 GB) önemli ölçüde büyük olması gerekir, ancak kendi docker ana bilgisayar (kalıcı on-line Windows) korumak tan çok daha ucuzdur Sunucu 2016 Windows Containers VM ile Azure) Azure Kubernetes gibi bir bütün orkestratör söz değil (AKS) hangi, diğer taraftan, üretim dağıtımları için harika bir seçimdir.
+Windows Kapsayıcılarını Azure Kapsayıcı Örneklerine (ACI) tam .NET Framework / ASP.NET veya SQL Server ile dağıtmak, normal bir Docker Hosts'a (Windows Containers ile windows server 2016 gibi) dağıtmak kadar hızlı değildir, çünkü Docker görüntüsünün her seferinde indirilmesi (Docker kayıt defterinden çekilmesi) ve SQL kapsayıcı görüntüsünün (15,1 GB) boyutları ASP.NET (13,9 GB) önemli ölçüde büyüktür, ancak kendi docker ana bilgisayarını (Windows Containers VM ile Azure'da kalıcı olarak çevrimiçi Windows Server 2016) korumaktan çok daha ucuzdur, diğer taraftan, üretim dağıtımları için harika bir seçim olan Azure'daki Kubernetes (AKS) gibi bir orkestratörden bahsetmiyorum bile.
 
 Ana sonuç olarak, Azure Kapsayıcı Örnekleri'ni kullanmak, Geliştirme/Test senaryoları ve CI/CD ardışık hatları için çok cazip bir seçenektir.
 
@@ -252,9 +252,9 @@ Bu gözden geçirmenin amacı, Azure Kapsayıcı Hizmeti'nde Windows Kapsayıcı
 
 **Şekil 5-8.** Azure DevOps Hizmetleri'ndeki CI/CD ardışık hatlarından Bir Kubernetes kümesine dağıtın
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
-Kubernetes'teki bir kümeye dağıtımın birçok faydası vardır. En büyük yararı, kullanmak istediğiniz kapsayıcı örneklerinin sayısına (varolan düğümlerde iç ölçeklenebilirlik) ve kümedeki düğüm veya VM sayısına göre uygulamayı ölçeklendirebileceğiniz üretime hazır bir ortam elde edebilmenizdir ( kümenin küresel ölçeklenebilirliği).
+Kubernetes'teki bir kümeye dağıtımın birçok faydası vardır. En büyük yararı, kullanmak istediğiniz kapsayıcı örneklerinin sayısına (varolan düğümlerde iç ölçeklenebilirlik) ve kümedeki düğüm veya VM sayısına (kümenin küresel ölçeklenebilirliği) göre uygulamayı ölçeklendirebileceğiniz üretime hazır bir ortam elde edeyim.
 
 Azure Kapsayıcı Hizmeti, azure için özel olarak popüler açık kaynak araçlarını ve teknolojilerini optimize eder. Hem kapsayıcılarınız hem de uygulama yapılandırmanız için taşınabilirlik sunan açık bir çözüm elde elabilirsiniz. Boyutu, ana bilgisayar sayısını ve orkestratör araçları-Konteyner Hizmeti diğer her şeyi işler seçin.
 
@@ -298,7 +298,7 @@ Bu gözden geçirmenin amacı, bir kayıt defterinden (Docker Hub veya Azure Kap
 
 ![Kapsayıcılar için Azure Uygulama Hizmetine Windows Kapsayıcı tabanlı uygulamayı dağıtma](./media/image5-11.png)
 
-### <a name="benefits"></a>Avantajlar
+### <a name="benefits"></a>Yararları
 
 Kapsayıcılar için Azure Uygulama Hizmetine dağıtmak, Azure Uygulama Hizmeti'nin PaaS avantajlarıyla eşleştirilmiş kapsayıcıların avantajlarını sunar. Uygulama hizmeti hem dikey hem de yatay olarak kolayca ölçeklenebilir ve değişen talepleri karşılamak üzere otomatik ölçeklendirilecek şekilde yapılandırılabilir. Güncelleştirmeler sıfır kapalı kalma süresi yle gerçekleştirilebilir ve bir kayıt defterinden sürekli dağıtım yapılandırması da kolayca yapılandırılabilir.
 

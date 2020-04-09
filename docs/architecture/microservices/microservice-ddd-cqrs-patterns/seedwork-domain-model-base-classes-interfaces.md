@@ -2,12 +2,12 @@
 title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 description: .NET Microservices Mimari Containerized .NET Uygulamaları için | DDD yönelimli etki alanı modeli için uygulamayı başlatmak için tohum çalışması kavramını başlangıç noktası olarak kullanın.
 ms.date: 10/08/2018
-ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 545be2723ba468a5fd65f81978799328234ca113
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116576"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988316"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 

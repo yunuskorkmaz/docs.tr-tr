@@ -2,12 +2,12 @@
 title: Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Buluttaki CI/CD boru hatları ve DevOps araçlarıyla uygulamanızın yaşam döngüsünü modernize edin
 ms.date: 04/30/2018
-ms.openlocfilehash: 17a78c108bfc61471128a34191ec7a5d7cc28289
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac2d9a1e9ab432cf69cb3da670fc91c681f802c2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503855"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987861"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
 
