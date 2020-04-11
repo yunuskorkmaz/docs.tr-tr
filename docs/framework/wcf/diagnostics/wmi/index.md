@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185683"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121542"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF), bir WCF Windows Management Instrumentation (WMI) sağlayıcısı aracılığıyla bir hizmetin denetim verilerini çalışma zamanında ortaya çıkarır.  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzak WMI Nesne Örneklerine Erişim  
  Uzak bir makinede WCF WMI örneklerine erişmeniz gerekiyorsa, erişmek için kullandığınız araçlarda paket gizliliğini etkinleştirmeniz gerekir. Aşağıdaki bölümde WMI CIM Studio, Windows Management Instrumentation Tester ve .NET SDK 2.0'ı kullanarak bunların nasıl elde edilebildiğini açıklanmaktadır.  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Stüdyo  
- [WMI Yönetim Araçları](https://go.microsoft.com/fwlink/?LinkId=95185)yüklediyseniz, WMI örneklerine erişmek için WMI CIM Studio'yu kullanabilirsiniz. Araçlar aşağıdaki klasörde  
+### <a name="wmi-cim-studio"></a>WMI CIM Stüdyo
+
+WMI İdari Araçları'nı yüklediyseniz, WMI örneklerine erişmek için WMI CIM Studio'yu kullanabilirsiniz. Araçlar aşağıdaki klasördedir:
   
- **%windir%\Program Dosyaları\WMI Araçları\\**  
+*%windir%\Program Dosyaları\WMI Araçları\\*
   
 1. Ad **alanına Bağlan:pencere,** **root\ServiceModel** yazın ve **Tamam'ı tıklatın.**  
   

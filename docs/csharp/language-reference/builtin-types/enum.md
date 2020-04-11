@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847721"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121150"
 ---
 # <a name="enumeration-types-c-reference"></a>Numaralandırma türleri (C# referansı)
 
@@ -66,7 +66,7 @@ C# 7.3 ile başlayarak, bir tür parametrenin numaralandırma türü olduğunu b
 
 ## <a name="conversions"></a>Dönüşümler
 
-Herhangi bir numaralandırma türü için, numaralandırma türü ile altta yatan integral türü arasında açık dönüşümler vardır. Bir enum değerini temel türüne [atarsanız,](../operators/type-testing-and-cast.md#cast-operator-) sonuç bir enum üyesinin ilişkili integral değeridir.
+Herhangi bir numaralandırma türü için, numaralandırma türü ile altta yatan integral türü arasında açık dönüşümler vardır. Bir enum değerini temel türüne [atarsanız,](../operators/type-testing-and-cast.md#cast-expression) sonuç bir enum üyesinin ilişkili integral değeridir.
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
@@ -88,7 +88,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [Numaralandırma biçimi dizeleri](../../../standard/base-types/enumeration-format-strings.md)
+- [Sabit listesi biçim dizeleri](../../../standard/base-types/enumeration-format-strings.md)
 - [Tasarım yönergeleri - Enum tasarım](../../../standard/design-guidelines/enum.md)
 - [Tasarım yönergeleri - Enum adlandırma kuralları](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [anahtar deyimi](../keywords/switch.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846339"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121436"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-affgiving) işleci (C# referans)
 
@@ -19,7 +19,7 @@ C# 8.0 ve daha sonra mevcuttur, `!` unary postfix işleci null-affgiving işleci
 
 Null-affgiving işleci çalışma zamanında hiçbir etkisi yoktur. Yalnızca ifadenin null durumunu değiştirerek derleyicinin statik akış çözümlemesi etkiler. Çalışma zamanında, `x!` ifade altta yatan ifadenin `x`sonucunu değerlendirir.
 
-Nullable başvuru türleri özelliği hakkında daha fazla bilgi için, [Nullable başvuru türleri](../../nullable-references.md)bakın.
+Nullable başvuru türleri özelliği hakkında daha fazla bilgi için, [Nullable başvuru türleri](../builtin-types/nullable-reference-types.md)bakın.
 
 ## <a name="examples"></a>Örnekler
 

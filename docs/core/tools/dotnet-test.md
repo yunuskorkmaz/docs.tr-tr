@@ -2,12 +2,12 @@
 title: dotnet test komutu
 description: Dotnet test komutu, belirli bir projede birim testlerini yürütmek için kullanılır.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507314"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121036"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  Test sonuçları için bir logger belirtir.
+  Test sonuçları için bir logger belirtir. MSBuild aksine, dotnet testi kısaltmalar kabul `-l "console;v=d"` etmez: yerine kullanım `-l "console;verbosity=detailed"`.
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve .
+  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer: `minimal`. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - `RunSettings`Bağımsız değişken
 
@@ -149,6 +149,12 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Projedeki testleri geçerli dizinde çalıştırın ve konsola ayrıntılı ayrıntılı bilgi yle günlüğe kaydedin:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Filtre seçeneği ayrıntıları
@@ -192,3 +198,4 @@ Seçici birim test filtrelemenin nasıl kullanılacağı hakkında daha fazla bi
 
 - [Çerçeveler ve Hedefler](../../standard/frameworks.md)
 - [.NET Core Runtime Tanımlayıcı (RID) kataloğu](../rid-catalog.md)
+- [Çalışma ayarlarını komut satırından geçirme](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

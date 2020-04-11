@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711902"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121385"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Döküm ve tür dönüşümleri (C# Programlama Kılavuzu)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Örtülü dönüşümler**: Dönüştürme türü güvenli olduğundan ve veri kaybolmayacağından özel sözdizimi gerekmez. Örnekler arasında daha küçük integral türlerinden dönüşümler ve türemiş sınıflardan temel sınıflara dönüşümler yer almaktadır.  
   
-- **Açık dönüşümler (dökümler)**: Açık dönüştürmeler [döküm işleci `()` ](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)gerektirir. Dönüştürmede bilgi kaybolabileceği veya dönüştürmenin başka nedenlerle başarılı olamayabileceği durumlarda döküm gereklidir. Tipik örnekler arasında daha az duyarlıklı veya daha küçük aralıklı bir türe sayısal dönüştürme ve taban sınıf örneği türemiş sınıfa dönüştürme sayılabilir.  
+- **Açık dönüşümler (dökümler)**: Açık dönüştürmeler [dökme ifade](../../language-reference/operators/type-testing-and-cast.md#cast-expression)gerektirir. Dönüştürmede bilgi kaybolabileceği veya dönüştürmenin başka nedenlerle başarılı olamayabileceği durumlarda döküm gereklidir. Tipik örnekler arasında daha az duyarlıklı veya daha küçük aralıklı bir türe sayısal dönüştürme ve taban sınıf örneği türemiş sınıfa dönüştürme sayılabilir.  
   
 - **Kullanıcı tanımlı dönüşümler**: Kullanıcı tanımlı dönüşümler, taban sınıf türetilmiş sınıf ilişkisi olmayan özel türler arasında açık ve örtülü dönüşümleri etkinleştirmek için tanımlayabileceğiniz özel yöntemlerle gerçekleştirilir. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](../../language-reference/operators/user-defined-conversion-operators.md)  
   
@@ -92,7 +92,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Türler](./index.md)
-- [() döküm operatörü](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [Oyuncu ifadesi](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [Kullanıcı tanımlı dönüştürme işleçleri](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Genelleşmiş Tür Dönüştürme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Bir dizeyi sayıya dönüştürme](./how-to-convert-a-string-to-a-number.md)

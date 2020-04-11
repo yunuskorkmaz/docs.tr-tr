@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093207"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121461"
 ---
 # <a name="integral-numeric-types--c-reference"></a>İntegral sayısal türleri (C# referansı)
 
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Dönüşümler
 
-Herhangi bir integral sayısal türü diğer integral sayısal türe dönüştürebilirsiniz. Hedef türü kaynak türün tüm değerlerini depolayabiliyorsa, dönüştürme örtülüdür. Aksi takdirde, açık bir dönüştürme çağırmak için [döküm işleci `()` ](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir. Daha fazla bilgi için yerleşik [sayısal dönüşümlere](numeric-conversions.md)bakın.
+Herhangi bir integral sayısal türü diğer integral sayısal türe dönüştürebilirsiniz. Hedef türü kaynak türün tüm değerlerini depolayabiliyorsa, dönüştürme örtülüdür. Aksi takdirde, açık bir dönüştürme gerçekleştirmek için [bir döküm ifadesi](../operators/type-testing-and-cast.md#cast-expression) kullanmanız gerekir. Daha fazla bilgi için yerleşik [sayısal dönüşümlere](numeric-conversions.md)bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

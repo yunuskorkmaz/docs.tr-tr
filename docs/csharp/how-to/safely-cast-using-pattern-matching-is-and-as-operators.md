@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249363"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121004"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Desen eşleştirme ve is ve operatörler olarak kullanarak güvenli bir şekilde döküm nasıl
 
@@ -37,4 +37,4 @@ Bir değişkenin belirli bir tür olup olmadığını sınamak, ancak yeni bir d
 
 Bu kodu desen eşleştirme koduyla karşılaştırarak görebileceğiniz gibi, desen eşleştirme sözdizimi, testi ve atamayı tek bir deyimde birleştirerek daha sağlam özellikler sağlar. Deseni eşleştirme sözdizimini mümkün olduğunca kullanın.
 
-Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip)örnekleri indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](../../../samples/snippets/csharp/how-to/safelycast.zip)örnekleri indirebilirsiniz.

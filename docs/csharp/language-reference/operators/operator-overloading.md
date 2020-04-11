@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: ec67d8ec5c0b102ea0b2434119c99f93a0bbe8dd
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 18da3a22d22f338d2f319d394d50d08e4d35e7eb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507119"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121422"
 ---
 # <a name="operator-overloading-c-reference"></a>Operatör aşırı yüklemesi (C# referansı)
 
@@ -41,7 +41,7 @@ Aşağıdaki tablo, C# işleçlerinin aşırı yüklenebilirliği hakkında bilg
 |[x + y](addition-operator.md), [x - y](subtraction-operator.md), x [ \* y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), x % [y](arithmetic-operators.md#remainder-operator-), x [& y](boolean-logical-operators.md#logical-and-operator-), x [&#124; y](boolean-logical-operators.md#logical-or-operator-), x ^ [y](boolean-logical-operators.md#logical-exclusive-or-operator-), [ \< \< x y](bitwise-and-shift-operators.md#left-shift-operator-), x >> [y](bitwise-and-shift-operators.md#right-shift-operator-), x [== y](equality-operators.md#equality-operator-), x [== y](equality-operators.md#inequality-operator-), x y , x [ \<y](comparison-operators.md#less-than-or-equal-operator-), [>](comparison-operators.md#greater-than-operator-) [x \< ](comparison-operators.md#less-than-operator-)= y , x = y , x >>= [y](comparison-operators.md#greater-than-or-equal-operator-)|Bu ikili işleçler aşırı yüklenebilir. Bazı işleçler çiftler halinde aşırı yüklenmelidir; daha fazla bilgi için bu tabloyu izleyen nota bakın.|
 |[x && y](boolean-logical-operators.md#conditional-logical-and-operator-), [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|Koşullu mantıksal işleçler aşırı yüklenemez. Ancak, aşırı `&` yüklü <code>&#124;</code> `&&` [ `true` ve `false` işleçli](true-false-operators.md) bir tür de belirli bir şekilde veya işleci aşırı yüklerse, sırasıyla veya <code>&#124;&#124;</code> işleci, bu tür operands için değerlendirilebilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı koşullu mantıksal işleçleri](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.|
 |[bir&#91;i&#93;](member-access-operators.md#indexer-operator-)|Öğe erişimi aşırı yüklenebilir işleç olarak kabul edilmez, ancak bir [dizinleyici](../../programming-guide/indexers/index.md)tanımlayabilirsiniz.|
-|[(T)x](type-testing-and-cast.md#cast-operator-)|Döküm işleci aşırı yüklenemez, ancak yeni dönüşüm işleçleri tanımlayabilirsiniz. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](user-defined-conversion-operators.md)|
+|[(T)x](type-testing-and-cast.md#cast-expression)|Döküm işleci aşırı yüklenemez, ancak dökme ifade yle gerçekleştirilebilecek özel tür dönüşümleri tanımlayabilirsiniz. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](user-defined-conversion-operators.md)|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment) [ \* ](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment) [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), , [^=](boolean-logical-operators.md#compound-assignment) [ \< \< ](bitwise-and-shift-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), , ,[>>=](bitwise-and-shift-operators.md#compound-assignment)|Bileşik atama işleçleri açıkça aşırı yüklenemez. Ancak, bir ikili işleci aşırı yüklediğinizde, ilgili bileşik atama işleci, varsa, aynı zamanda örtülü olarak aşırı yüklenir. Örneğin, `+=` aşırı yüklenebilir `+`, kullanılarak değerlendirilir.|
 |[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-expression-), [c ? t : f](conditional-operator.md), x ?? [y](null-coalescing-operator.md), [x ?? = y](null-coalescing-operator.md), [x. y](member-access-operators.md#range-operator-), [x->y](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md), , [f(x)](member-access-operators.md#invocation-expression-), [olarak](type-testing-and-cast.md#as-operator), [bekliyor](await.md), [kontrol ,](../keywords/checked.md) [işaretsiz](../keywords/unchecked.md), [varsayılan](default.md), [temsilci](delegate-operator.md), [is](type-testing-and-cast.md#is-operator) [, nameof](nameof.md), [yeni](new-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [typeof](type-testing-and-cast.md#typeof-operator)|Bu işleçler aşırı yüklenemez.|
 
@@ -56,7 +56,7 @@ Aşağıdaki tablo, C# işleçlerinin aşırı yüklenebilirliği hakkında bilg
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
-- [Operatör aşırı yükleme](~/_csharplang/spec/expressions.md#operator-overloading)
+- [İşleç aşırı yüklemesi](~/_csharplang/spec/expressions.md#operator-overloading)
 - [İşleçler](~/_csharplang/spec/classes.md#operators)
 
 ## <a name="see-also"></a>Ayrıca bkz.

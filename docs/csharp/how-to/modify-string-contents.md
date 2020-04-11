@@ -3,12 +3,12 @@ title: Dize içeriği nasıl değiştirilir - C# Guide
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543267"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121131"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C'de dize içeriği nasıl değiştirilir?\#
 
@@ -70,7 +70,7 @@ Dizeleri değişmez olduğundan, önceki örneklerin tümü geçici dizeleri vey
 
 Sabit bir bloktaki bir dizeyi güvenli olmayan kodla değiştirebilirsiniz, ancak dize oluşturulduktan sonra dize içeriğini değiştirmeniz **şiddetle** önerilmez. Bunu yapmak, olayları tahmin edilemeyecek şekillerde kırar. Örneğin, birisi sizinkiyle aynı içeriğe sahip bir dize yi interns, kopyanızı alır ve dizesini hiç değiştirmenizi beklemez.
 
-Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](../../../samples/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399604"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121457"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Yerleşik sayısal dönüşümler (C# başvurusu)
 
-C# [integral](integral-numeric-types.md) ve [kayan nokta](floating-point-numeric-types.md) sayısal türleri kümesi sağlar. Örtük veya açık olan iki sayısal tür arasında bir dönüşüm vardır. Açık bir dönüştürme çağırmak için [döküm işleci `()` ](../operators/type-testing-and-cast.md#cast-operator-) kullanmanız gerekir.
+C# [integral](integral-numeric-types.md) ve [kayan nokta](floating-point-numeric-types.md) sayısal türleri kümesi sağlar. Örtük veya açık olan iki sayısal tür arasında bir dönüşüm vardır. Açık bir dönüştürme gerçekleştirmek için [bir döküm ifadesi](../operators/type-testing-and-cast.md#cast-expression) kullanmanız gerekir.
 
 ## <a name="implicit-numeric-conversions"></a>Örtük sayısal dönüşümler
 

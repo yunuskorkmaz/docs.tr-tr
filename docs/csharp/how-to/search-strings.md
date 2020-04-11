@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3e6d95eb4a01d48fac5b5e2c951b9c346206004
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74959708"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121490"
 ---
 # <a name="how-to-search-strings"></a>Dizeleri arama
 
@@ -72,12 +72,12 @@ Aşağıdaki kod, bir dizideki her dizenin biçimini doğrulamak için düzenli 
 
 Bu tek arama deseni birçok geçerli dizeyle eşleşir. Normal ifadeler, tek bir metin dizesini aramak veya bir desene karşı doğrulamak için daha iyidir.
 
-Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
+Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](../../../samples/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../programming-guide/index.md)
-- [Dize](../programming-guide/strings/index.md)
+- [Dizeler](../programming-guide/strings/index.md)
 - [LINQ ve Dizeler](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework Normal İfadeleri](../../standard/base-types/regular-expressions.md)

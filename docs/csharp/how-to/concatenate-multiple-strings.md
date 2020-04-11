@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713895"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121045"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Birden çok dize nasıl işlenir (C# Guide)
 
@@ -51,11 +51,11 @@ Sonunda, bir koleksiyondan dizeleri <xref:System.Linq.Enumerable.Aggregate%2A?di
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
+Örnek [koduna](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)bakarak bu örnekleri deneyebilirsiniz. Veya, bir zip [dosyası olarak](../../../samples/snippets/csharp/how-to/strings.zip)örnekleri indirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
 - [C# Programlama Kılavuzu](../programming-guide/index.md)
-- [Dize](../programming-guide/strings/index.md)
+- [Dizeler](../programming-guide/strings/index.md)

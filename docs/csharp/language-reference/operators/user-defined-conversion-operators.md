@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847279"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121398"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Kullanıcı tanımlı dönüşüm işleçleri (C# başvurusu)
 
@@ -23,7 +23,7 @@ Kullanıcı tanımlı bir tür, başka bir türe özel örtük veya açık bir d
 
 Örtük dönüşümler çağrılması için özel sözdizimi gerektirmez ve atamalar ve yöntem çağrıları gibi çeşitli durumlarda oluşabilir. Önceden tanımlanmış C# örtük dönüşümleri her zaman başarılı olur ve hiçbir zaman bir özel durum atmaz. Kullanıcı tanımlı örtük dönüşümler de bu şekilde kullanılmalıdır. Özel bir dönüştürme bir özel durum atabiliyor veya bilgi kaybedebilirse, bunu açık bir dönüştürme olarak tanımlayın.
 
-Kullanıcı tanımlı [dönüşümler, is](type-testing-and-cast.md#is-operator) ve [operatörler tarafından](type-testing-and-cast.md#as-operator) dikkate alınmaz. Kullanıcı tanımlı açık dönüştürme çağırmak için [döküm işleci ()](type-testing-and-cast.md#cast-operator-) kullanın.
+Kullanıcı tanımlı [dönüşümler, is](type-testing-and-cast.md#is-operator) ve [operatörler tarafından](type-testing-and-cast.md#as-operator) dikkate alınmaz. Kullanıcı tanımlı açık dönüştürme çağırmak için [döküm ifadesini](type-testing-and-cast.md#cast-expression) kullanın.
 
 Örtük `operator` `implicit` veya `explicit` açık bir dönüştürmeyi tanımlamak için anahtar kelimeleri ve veya anahtar kelimeleri kullanın. Dönüştürmeyi tanımlayan tür, kaynak türü veya bu dönüşümün hedef türü olmalıdır. İki kullanıcı tanımlı tür arasında bir dönüşüm iki türden birinde tanımlanabilir.
 
@@ -46,7 +46,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 
 - [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
-- [Operatör aşırı yükleme](operator-overloading.md)
+- [İşleç aşırı yüklemesi](operator-overloading.md)
 - [Tür testi ve atama işleçleri](type-testing-and-cast.md)
 - [Döküm ve tür dönüştürme](../../programming-guide/types/casting-and-type-conversions.md)
 - [Tasarım yönergeleri - Dönüşüm operatörleri](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)

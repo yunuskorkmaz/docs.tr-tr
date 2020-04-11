@@ -1,5 +1,5 @@
 ---
-title: Tip-test ve döküm operatörleri - C# referans
+title: Tür-test işleçleri ve döküm ifadesi - C# referansı
 description: İfade sonucunun türünü denetlemek ve gerekirse başka bir türe dönüştürmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507093"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121412"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Tip-test ve döküm operatörleri (C# referansı)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Tür-test işleçleri ve döküm ifadesi (C# başvurusu)
 
-Tür denetimi veya tür dönüştürme gerçekleştirmek için aşağıdaki işleçleri kullanabilirsiniz:
+Tür denetimi veya tür dönüştürmesi gerçekleştirmek için aşağıdaki işleçleri ve ifadeleri kullanabilirsiniz:
 
 - [is operator](#is-operator): bir ifadenin çalışma zamanı türünün belirli bir türle uyumlu olup olmadığını kontrol etmek için
 - [olarak işleç](#as-operator): çalışma zamanı türü bu türle uyumluysa, bir ifadeyi açıkça belirli bir türe dönüştürmek için
-- [döküm operatörü ()](#cast-operator-): açık bir dönüştürme gerçekleştirmek için
+- [cast expression](#cast-expression): açık bir dönüştürme gerçekleştirmek için
 - [typeof operator](#typeof-operator): <xref:System.Type?displayProperty=nameWithType> bir tür için örnek elde etmek için
 
 ## <a name="is-operator"></a>işleç
@@ -76,7 +76,7 @@ Tür deseni ve diğer desteklenen desenler hakkında daha fazla bilgi için [bkz
 
 ## <a name="as-operator"></a>operatör olarak
 
-İşleç, `as` bir ifadenin sonucunu açıkça belirli bir başvuru veya nullable değer türüne dönüştürür. Dönüştürme mümkün değilse, `as` işleç `null`döndürür. Döküm [işlecinin ()](#cast-operator-)aksine, `as` operatör hiçbir zaman bir özel durum atmaz.
+İşleç, `as` bir ifadenin sonucunu açıkça belirli bir başvuru veya nullable değer türüne dönüştürür. Dönüştürme mümkün değilse, `as` işleç `null`döndürür. Döküm [ifadesinin](#cast-expression) `as` aksine, işleç hiçbir zaman bir özel durum atmaz.
 
 Formun ifadesi
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 `E` bunun dışında sadece bir kez değerlendirilir.
 
-İşletici `as` yalnızca başvuru, nullable, boxing ve unboxing dönüşümleri dikkate alır. Kullanıcı tanımlı `as` bir dönüştürme gerçekleştirmek için işleci kullanamazsınız. Bunu yapmak [için, döküm işleci ()](#cast-operator-)kullanın.
+İşletici `as` yalnızca başvuru, nullable, boxing ve unboxing dönüşümleri dikkate alır. Kullanıcı tanımlı `as` bir dönüştürme gerçekleştirmek için işleci kullanamazsınız. Bunu yapmak [için,](#cast-expression)bir döküm ifadesi kullanın.
 
 Aşağıdaki örnek, işleç `as` kullanımını gösterir:
 
@@ -101,7 +101,7 @@ Aşağıdaki örnek, işleç `as` kullanımını gösterir:
 > [!NOTE]
 > Önceki örnekte de görüldüğü gibi, dönüştürmenin `as` başarılı `null` olup olmadığını denetlemek için ifadenin sonucunu karşılaştırmanız gerekir. C# 7.0 ile başlayarak, hem dönüştürmenin başarılı olup olmadığını sınamak için [is işlecini](#type-testing-with-pattern-matching) kullanabilir ve başarılı olursa sonucunu yeni bir değişkene atayabilirsiniz.
 
-## <a name="cast-operator-"></a>Dökme operatör ()
+## <a name="cast-expression"></a>Oyuncu ifadesi
 
 Formun `(T)E` döküm ifadesi, ifade `E` sonucunun türe `T`açık bir şekilde dönüştürülmesini gerçekleştirir. Tür `E` `T`türünden açık bir dönüştürme yoksa derleme zamanı hatası oluşur. Çalışma zamanında, açık bir dönüştürme başarılı olmayabilir ve bir döküm ifadesi bir özel durum atabilir.
 

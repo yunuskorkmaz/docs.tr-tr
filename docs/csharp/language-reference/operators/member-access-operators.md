@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635310"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120991"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# başvurusu)
 
@@ -170,7 +170,7 @@ Aşağıdaki örnek, bağımsız değişkenli veya bağımsız bir yöntemin nas
 
 İşlemleri bir ifadede değerlendirmek için sırasını ayarlamak için parantez ler de kullanırsınız. Daha fazla bilgi için [C# işleçleri'ne](index.md)bakın.
 
-Açık tür [dönüşümleri](type-testing-and-cast.md#cast-operator-)gerçekleştiren cast ifadeleri de parantez kullanır.
+Açık tür [dönüşümleri](type-testing-and-cast.md#cast-expression)gerçekleştiren cast ifadeleri de parantez kullanır.
 
 ## <a name="index-from-end-operator-"></a>Son işleç ^ dan Dizin
 
