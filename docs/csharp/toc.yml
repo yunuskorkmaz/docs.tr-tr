@@ -1595,7 +1595,7 @@
         - name: Üye erişim işleçleri ve ifadeleri
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: Tür testi ve atama işleçleri
+        - name: Tür testi işleçleri ve tür dönüştürme ifadesi
           href: language-reference/operators/type-testing-and-cast.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: Kullanıcı tanımlı dönüştürme işleçleri
