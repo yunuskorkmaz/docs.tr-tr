@@ -1,6 +1,6 @@
 - name: Veri bağlama belgeleri
   href: index.md
-- name: Genel bakış
+- name: Genel Bakış
   href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
 - name: Bağlama kaynakları
   href: binding-sources-overview.md
@@ -80,15 +80,13 @@
       href: how-to-clear-bindings.md
     - name: DataTemplate ile oluşturulan öğeleri bulma
       href: how-to-find-datatemplate-generated-elements.md
-    - name: Web hizmetine bağlama
-      href: how-to-bind-to-a-web-service.md
 - name: LINQ to XML ile veri bağlama
   items:
-    - name: Genel bakış
+    - name: Genel Bakış
       href: wpf-data-binding-with-linq-to-xml-overview.md
     - name: LINQ to XML dinamik özellikleri
       items:
-        - name: Genel bakış
+        - name: Genel Bakış
           displayName: LINQ to XML dynamic properties
           href: linq-to-xml-dynamic-properties.md
         - name: XAttribute dinamik özellikleri
