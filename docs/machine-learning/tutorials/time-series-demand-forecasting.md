@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 962c40ea0536d6b6057d936cfc4b95a49ddadbf8
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921250"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243290"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: Zaman serisi analizi ve ML.NET ile tahmin bisiklet kiralama hizmeti talebi
 
@@ -27,7 +27,7 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > * Tahmin modelini kaydetme
 > * Tahmin modeli kullanma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
 
@@ -60,7 +60,7 @@ Bu eğitimde kullanılan algoritma [Tek Spektrum Analizi(SSA)](http://ssa.cf.ac.
 1. [ *DailyDemand.mdf* veritabanı dosyasını](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) indirin ve *Veri* dizinine kaydedin.
 
 > [!NOTE]
-> Bu öğreticide kullanılan veriler [UCI Bike Sharing Dataset'ten](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, Hadi ve Gama, Joao, 'Topluluk dedektörleri ve arka plan bilgisi birleştiren olay etiketleme', İlerleme Yapay Zeka (2013): s. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> Bu öğreticide kullanılan veriler [UCI Bike Sharing Dataset'ten](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, Hadi ve Gama, Joao, 'Topluluk dedektörleri ve arka plan bilgisi birleştiren olay etiketleme', İlerleme Yapay Zeka (2013): s. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
 Orijinal veri kümesi mevsimsellik ve hava koşullarına karşılık gelen birkaç sütun içerir. Kısaltma için ve bu öğreticide kullanılan algoritma yalnızca tek bir sayısal sütundaki değerleri gerektirdiğinden, özgün veri kümesi yalnızca aşağıdaki sütunları içerecek şekilde yoğunlaştırılmıştır:
 
@@ -287,4 +287,4 @@ Bu öğreticinin kaynak kodunu [dotnet/machinelearning-samples](https://github.c
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [ML.NET makine öğrenimi görevleri](../resources/tasks.md)
-- [Model doğruluğunu geliştirme](../resources/improve-machine-learning-model-ml-net.md)
+- [Model doğruluğunu artırma](../resources/improve-machine-learning-model-ml-net.md)

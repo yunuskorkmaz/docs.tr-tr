@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546698"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243342"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -45,14 +45,14 @@ Oluşturulan C# kodu projelerini Visual Studio'dan `dotnet run` veya (.NET Core 
 
 İkili sınıflandırma makinesi öğrenme görevi olan 'Sentiment Analysis' senaryosu için kullanılan varolan bir veri kümesini kullanacağız. Kendi veri kümenizi benzer bir şekilde kullanabilirsiniz ve model ve kod sizin için oluşturulur.
 
-1. UCI Sentiment Etiketli Cümleler dataset zip dosyasını indirin [(aşağıdaki nottaki alıntılara bakın)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve seçtiğiniz herhangi bir klasörde zip'i açın.
+1. UCI Sentiment Etiketli Cümleler dataset zip dosyasını indirin [(aşağıdaki nottaki alıntılara bakın)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve seçtiğiniz herhangi bir klasörde zip'i açın.
 
     > [!NOTE]
     > Bu öğreticideki veri kümeleri, Kotzias ve ark.'nın 'Derin Özellikleri Kullanarak Gruptan Bireysel Etiketlere' bir veri kümesi ni kullanır. KDD 2015 ve UCI Machine Learning Deposu - Dua, D. ve Karra Taniskidou, E. (2017) ev sahipliği yaptı. UCI Makine Öğrenme Deposuhttp://archive.ics.uci.edu/ml[ ]. Irvine, CA: Kaliforniya Üniversitesi, Bilgi ve Bilgisayar Bilimleri Fakültesi.
 
 2. Dosyayı `yelp_labelled.txt` daha önce oluşturduğunuz herhangi bir `/cli-test`klasöre kopyalayın (örneğin).
 
-3. Tercih ettiğiniz komut istemini açın ve veri kümesi dosyasını kopyaladığınız klasöre geçin. Örnek:
+3. Tercih ettiğiniz komut istemini açın ve veri kümesi dosyasını kopyaladığınız klasöre geçin. Örneğin:
 
     ```console
     cd /cli-test
@@ -223,7 +223,7 @@ Modeli son kullanıcı uygulamanızda çalıştırmak ve öngörülerde bulunmak
 
 Örneğin, bu kodu doğrudan **WPF** ve **WinForms** gibi herhangi bir Windows masaüstü uygulamasına taşıyabilir ve modeli konsol uygulamasında yapılandan aynı şekilde çalıştırabilirsiniz.
 
-Ancak, bir ML modeli çalıştırmak için bu kod satırları uygulamak yolu optimize edilmelidir (yani, önbellek modeli .zip dosyası ve bir kez yükleyin) ve her istek bunları oluşturmak yerine singleton nesneleri var, özellikle uygulamanız gibi ölçeklenebilir olması gerekiyorsa aşağıdaki bölümde açıklandığı gibi, bir web uygulaması veya dağıtılmış hizmet.
+Ancak, bir ML modelini çalıştırmak için bu kod satırlarını uygulama şekliniz en iyi duruma getirilmelidir (diğer bir deyişle, modeli .zip dosyasını önbelleğe alın ve bir kez yükleyin) ve özellikle uygulamanızın aşağıdaki bölümde açıklandığı gibi web uygulaması veya dağıtılmış hizmet gibi ölçeklenebilir olması gerekiyorsa, her istekte bunları oluşturmak yerine tekton nesnelere sahip olmalıdır.
 
 ### <a name="running-mlnet-models-in-scalable-aspnet-core-web-apps-and-services-multi-threaded-apps"></a>Ölçeklenebilir ASP.NET Core web uygulamalarında ve hizmetlerinde ML.NET modelleri çalıştırma (çok iş parçacığı uygulamaları)
 

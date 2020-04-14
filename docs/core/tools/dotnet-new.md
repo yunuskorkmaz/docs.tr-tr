@@ -1,13 +1,13 @@
 ---
 title: dotnet yeni komut
 description: Dotnet yeni komutu, belirtilen şablonu temel alan yeni .NET Core projeleri oluşturur.
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399128"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242887"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -198,7 +198,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +216,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="winforms"></a>winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a>winforms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +230,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="web-others"></a>işçi, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a>işçi, grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +246,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="test"></a>mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a>mstest, xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +306,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="namespace"></a>viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a>viewimports, proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -413,7 +413,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ***
 
-### <a name="web-options"></a>mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a>mvc, webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -497,9 +497,13 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
   Projeye BrowserLink'i içerir. Seçenek .NET Core 2.2 ve 3.1 SDK'da kullanılamaz.
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  Hata Ayıklama yapılarında [ustura çalışma zamanı derlemesi](/aspnet/core/mvc/views/view-compilation#runtime-compilation) kullanacak şekilde yapılandırıp yapılandırılmamasını belirler. Seçenek .NET Core 3.1 SDK'dan beri mevcuttur.
+
 ***
 
-### <a name="spa"></a>açısal, tepki
+### <a name="angular-react"></a><a name="spa"></a>açısal, tepki
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 

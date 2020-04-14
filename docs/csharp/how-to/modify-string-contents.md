@@ -3,12 +3,12 @@ title: Dize içeriği nasıl değiştirilir - C# Guide
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121131"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242861"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C'de dize içeriği nasıl değiştirilir?\#
 
@@ -58,7 +58,7 @@ Yöntem, <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithTyp
 
 Bir dizeden bir karakter dizisi oluşturabilir, dizinin içeriğini değiştirebilir ve ardından dizinin değiştirilmiş içeriğinden yeni bir dize oluşturabilirsiniz.
 
-Aşağıdaki örnek, dizedeki bir karakter kümesinin nasıl değiştirilebildiğini gösterir. İlk olarak, <xref:System.String.ToCharArray?displayProperty=nameWithName> bir karakter dizisi oluşturmak için yöntemi kullanır. "Tilki" <xref:System.String.IndexOf%2A> kelimesinin başlangıç indeksini bulmak için yöntemi kullanır. Sonraki üç karakter farklı bir sözcük ile değiştirilir. Son olarak, güncelleştirilmiş karakter dizisinden yeni bir dize oluşturulur.
+Aşağıdaki örnek, dizedeki bir karakter kümesinin nasıl değiştirilebildiğini gösterir. İlk olarak, <xref:System.String.ToCharArray?displayProperty=nameWithType> bir karakter dizisi oluşturmak için yöntemi kullanır. "Tilki" <xref:System.String.IndexOf%2A> kelimesinin başlangıç indeksini bulmak için yöntemi kullanır. Sonraki üç karakter farklı bir sözcük ile değiştirilir. Son olarak, güncelleştirilmiş karakter dizisinden yeni bir dize oluşturulur.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

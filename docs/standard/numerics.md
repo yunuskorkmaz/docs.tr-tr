@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635150"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242770"
 ---
 # <a name="numerics-in-net"></a>.NET Sayısal Değerleri
 
@@ -62,7 +62,7 @@ Hem <xref:System.Single> <xref:System.Double> de türler, sayı olmayan ve sonsu
 
 Her kayan nokta türü standart aritmetik işleçleri kümesini destekler. Sınıf, <xref:System.Math?displayProperty=nameWithType> daha geniş bir matematiksel işlev ler kümesi için yöntemler sağlar. .NET Core 2.0 ve <xref:System.MathF?displayProperty=nameWithType> daha sonra <xref:System.Single> tür bağımsız değişkenleri kabul yöntemleri sağlayan sınıf içerir.
 
-Ayrıca <xref:System.BitConverter?displayProperty=nameWithType> sınıfı kullanarak tek tek <xref:System.Double> bit <xref:System.Single> ve değerlerle de çalışabilirsiniz. Yapının <xref:System.Decimal?displayProperty=nameWithType> kendi yöntemleri <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> vardır <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>ve ondalık değerin bireysel bitleriyle çalışmak için, bazı ek matematiksel işlemleri gerçekleştirmek için kendi yöntem kümesini de kullanır.
+Ayrıca <xref:System.BitConverter?displayProperty=nameWithType> sınıfı kullanarak tek tek <xref:System.Double> bit <xref:System.Single> ve değerlerle de çalışabilirsiniz. Yapının <xref:System.Decimal?displayProperty=nameWithType> kendi yöntemleri <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> vardır <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>ve ondalık değerin bireysel bitleriyle çalışmak için, bazı ek matematiksel işlemleri gerçekleştirmek için kendi yöntem kümesini de kullanır.
   
 Ve <xref:System.Double> <xref:System.Single> türleri, doğası gereği, kesin olmayan değerler (örneğin, iki yıldız arasındaki mesafe) ve yüksek derecede kesinlik ve küçük yuvarlama hatası gerektirmediği uygulamalar için kullanılmak üzere tasarlanmıştır. Daha <xref:System.Decimal?displayProperty=nameWithType> fazla kesinlik gerektiren ve yuvarlama hatalarının en aza indirilmesi gereken durumlar için türü kullanın.
 

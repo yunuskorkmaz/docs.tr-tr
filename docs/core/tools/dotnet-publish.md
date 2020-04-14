@@ -2,12 +2,12 @@
 title: dotnet yayımlama komutu
 description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 26dda33d04f3f7a23805627708b55233ef4e87ef
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588275"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242848"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -23,7 +23,8 @@ ms.locfileid: "80588275"
 dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
+    [-o|--output] [-p:PublishReadyToRun] [-p:PublishSingleFile]
+    [-p:PublishTrimmed] [-r|--runtime] [--self-contained]
     [--no-self-contained] [-v|--verbosity] [--version-suffix]
 
 dotnet publish [-h|--help]
@@ -114,6 +115,12 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
   
   Belirtilmemişse, çalışma süresine bağlı yürütülebilir ve platform lar arası ikili ler için *[project_file_folder]./bin/[configuration]/[framework]/publish/* olarak varsayılan olarak geçer. Kendi kendine yeten bir yürütülebilir için *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* olarak varsayılan olarak
 
+  Bir web projesinde, çıktı klasörü proje klasöründeyse, ardışık `dotnet publish` komutlar iç içe olan çıktı klasörlerine neden olur. Örneğin, proje klasörü *myproject*ise ve yayımlama çıktısı klasörü *myproject/publish*ise ve iki kez `dotnet publish` çalıştırın, ikinci çalıştırma *myproject/publish/publish* *'e .config* ve *.json* dosyaları gibi içerik dosyalarını koyar. Yayımlama klasörlerini iç içe geçmemek için, doğrudan proje klasörü altında olmayan bir yayımlama klasörü belirtin veya yayımlama klasörünü projeden hariç tarayın. Publishoutput adlı bir *yayımlama*klasörünü dışlamak `PropertyGroup` için *.csproj* dosyasındaki bir öğeye aşağıdaki öğeyi ekleyin:
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK ve sonrası
   
     Proje yayımlanırken göreceli bir yol belirtilirse, oluşturulan çıktı dizini proje dosyası konumuna değil, geçerli çalışma dizinine göredir.
@@ -125,6 +132,26 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
     Proje yayımlanırken göreceli bir yol belirtilirse, oluşturulan çıktı dizini geçerli çalışma dizinine değil, proje dosyası konumuna göredir.
 
     Çözüm yayımlanırken göreli bir yol belirtilirse, her projenin çıktısı proje dosyası konumuna göre ayrı bir klasöre gider. Bir çözüm yayımlanırken mutlak bir yol belirtilirse, tüm projeler için çıktı yayımlamak belirtilen klasöre gider.
+
+- **`-p:PublishReadyToRun`**
+
+  Uygulama derlemelerini ReadyToRun (R2R) biçiminde derler. R2R, ileri zaman (AOT) derlemesinin bir şeklidir. Daha fazla bilgi için [ReadyToRun resimlerine](../whats-new/dotnet-core-3-0.md#readytorun-images)bakın. .NET Core 3.0 SDK'dan beri mevcuttur.
+
+  Bu seçeneği komut satırında değil, bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için [MSBuild'e](#msbuild)bakın.
+
+- **`-p:PublishSingleFile`**
+
+  Uygulamayı platforma özgü tek dosyalı çalıştırılabilir olarak paketler. Yürütülebilir kendi kendini ayıklama ve uygulamayı çalıştırmak için gerekli olan tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk çalıştırıldığında, uygulama uygulama adına ve yapı tanımlayıcısına göre bir dizine ayıklanır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı sürece uygulamanın kendisini ikinci kez ayıklaması gerekmez. .NET Core 3.0 SDK'dan beri mevcuttur.
+
+  Tek dosyalı yayımlama hakkında daha fazla bilgi için [tek dosyalı paketleyici tasarım belgesine](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)bakın.
+
+  Bu seçeneği komut satırında değil, bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için [MSBuild'e](#msbuild)bakın.
+
+- **`-p:PublishTrimmed`**
+
+  Kendi kendine yeten bir yürütücü yayımlarken uygulamanın dağıtım boyutunu azaltmak için kullanılmayan kitaplıkları kırpıyor. Daha fazla bilgi için, trim [bağımsız dağıtımlar ve yürütülebilir bakın.](../deploying/trim-self-contained.md) .NET Core 3.0 SDK'dan beri mevcuttur.
+
+  Bu seçeneği komut satırında değil, bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için [MSBuild'e](#msbuild)bakın.
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +230,4 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Visual Studio ASP.NET Core uygulama dağıtımı için profilleri (.pubxml) yayınlamak](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Görevleri](https://aka.ms/dotnet-illink)

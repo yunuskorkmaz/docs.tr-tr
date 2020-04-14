@@ -2,12 +2,12 @@
 title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184437"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243121"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 *Oturum,* iki uç nokta arasında gönderilen tüm iletilerin korelasyonunu konur. *Instancing,* kullanıcı tanımlı hizmet nesnelerinin ve bunların <xref:System.ServiceModel.InstanceContext> ilgili nesnelerinin kullanım ömrünü denetlemeyi ifade eder. *Eşzamanlılık,* aynı <xref:System.ServiceModel.InstanceContext> anda çalıştırılabilen iş parçacığı sayısının denetimine verilen terimdir.  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Tanınmış Singleton Hizmetleri  
  Tek örnek hizmet nesnelerinde bir varyasyon bazen yararlıdır: bir hizmet nesnesi kendiniz oluşturabilir ve bu nesneyi kullanarak servis ana bilgisayarını oluşturabilirsiniz. Bunu yapmak için, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği de <xref:System.ServiceModel.InstanceContextMode.Single> ayarlamanız gerekir veya hizmet ana bilgisayar açıldığında bir özel durum atılır.  
   
- Böyle <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> bir hizmet oluşturmak için oluşturucuyu kullanın. Singleton hizmeti tarafından kullanılmak <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> üzere belirli bir nesne örneği sağlamak istediğinizde özel bir uygulama için bir alternatif sağlar. Hizmet uygulama türünüz zor olduğunda (örneğin, parametresiz bir ortak oluşturucu uygulamıyorsa) bu aşırı yükü kullanabilirsiniz.  
+ Böyle <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> bir hizmet oluşturmak için oluşturucuyu kullanın. Singleton hizmeti tarafından kullanılmak <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> üzere belirli bir nesne örneği sağlamak istediğinizde özel bir uygulama için bir alternatif sağlar. Hizmet uygulama türünüz zor olduğunda (örneğin, parametresiz bir ortak oluşturucu uygulamıyorsa) bu aşırı yükü kullanabilirsiniz.  
   
  Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (WCF) ile ilgili bazı özelliklerin davranış yapısının farklı çalıştığını unutmayın. Örneğin, singleton nesne örneği sağlandığında aramanın <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> hiçbir etkisi yoktur. Benzer şekilde, başka bir örnek yayımetme mekanizması yoksayılır. Özellik <xref:System.ServiceModel.ServiceHost> her zaman tüm <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> işlemler <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> için ayarlanmış gibi olur.  
   

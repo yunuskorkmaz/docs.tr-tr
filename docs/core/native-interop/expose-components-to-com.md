@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146664"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242874"
 ---
 # <a name="exposing-net-core-components-to-com"></a>.NET Core bileşenlerinin COM'a teşhir edilmesi
 
@@ -24,7 +24,7 @@ ms.locfileid: "79146664"
 - .NET Core kitaplığınızı oluşturmanın bir parçası olarak bir COM sunucusu oluşturun.
 - Kayıt Defteri'ne Göre Com için yan yana bir sunucu bildirimi otomatik olarak oluşturun.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [.NET Core 3.0 SDK'yı](https://dotnet.microsoft.com/download) veya daha yeni bir sürümü yükleyin.
 
@@ -40,7 +40,7 @@ ms.locfileid: "79146664"
 
 2. `Class1.cs` dosyasını açın.
 3. Dosyanın üstüne ekleyin. `using System.Runtime.InteropServices;`
-4. Adlı `IServer`bir arayüz oluşturun. Örnek:
+4. Adlı `IServer`bir arayüz oluşturun. Örneğin:
 
    ```csharp
    using System;
@@ -92,5 +92,7 @@ GitHub'daki dotnet/numune deposunda tam işlevsel bir [COM sunucu örneği](http
 ## <a name="additional-notes"></a>Ek notlar
 
 .NET Framework'ün aksine, .NET Core derlemesinden BIR COM Türü Kitaplığı (TLB) oluşturmak için .NET Core'da destek yoktur. Kılavuz, COM arabirimlerinin yerel bildirimleri için bir IDL dosyasını veya C/C++ üstbilgisini el ile yazmaktır.
+
+COM bileşenlerinin [bağımsız dağıtımları](../deploying/index.md#publish-self-contained) desteklenmez. Com bileşenlerinin yalnızca [çalışma süresine bağlı dağıtımları](../deploying/index.md#publish-runtime-dependent) desteklenir.
 
 Ayrıca, hem .NET Framework hem de .NET Core'un aynı işleme yüklenmesi tanılama sınırlamaları vardır. Hem .NET Framework hem de .NET Core'u aynı anda hata ayıklamak mümkün olmadığı için, birincil sınırlama yönetilen bileşenlerin hata ayıklanmasıdır. Buna ek olarak, iki çalışma zamanı örneği yönetilen derlemeleri paylaşmaz. Bu, gerçek .NET türlerini iki çalışma zamanında paylaşmanın mümkün olmadığı ve bunun yerine tüm etkileşimlerin açıklanmış COM arabirim sözleşmeleri ile sınırlandırılması gerektiği anlamına gelir.

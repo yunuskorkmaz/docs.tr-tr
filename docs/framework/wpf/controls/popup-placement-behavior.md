@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176766"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243264"
 ---
 # <a name="popup-placement-behavior"></a>Açılan Pencere Yerleştirme Davranışı
 Denetim, <xref:System.Windows.Controls.Primitives.Popup> içeriği bir uygulamanın üzerinde yüzen ayrı bir pencerede görüntüler. Bir denetime, fareye veya <xref:System.Windows.Controls.Primitives.Popup> ekrana göre bir görüşün <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>konumunu <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> , ve özelliklerini kullanarak belirtebilirsiniz.  Bu özellikler, <xref:System.Windows.Controls.Primitives.Popup>'nin konumunu belirtmede esneklik sağlamak için birlikte çalışır.  
@@ -205,4 +205,4 @@ Denetim, <xref:System.Windows.Controls.Primitives.Popup> içeriği bir uygulaman
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Popup Yerleştirme Örneği](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+- [Popup Yerleştirme Örneği](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

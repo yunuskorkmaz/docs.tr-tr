@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183065"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278892"
 ---
-# <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
+# <a name="wcf-client-overview"></a>WCF istemciye genel bakış
+
 Bu bölümde istemci uygulamalarının ne yaptığı, windows communication foundation (WCF) istemcisini nasıl yapılandırılabilmek, oluşturulmak ve kullanmak ve istemci uygulamalarının nasıl güvence altına alabilmek için kullanılacağı açıklanmaktadır.  
   
 ## <a name="using-wcf-client-objects"></a>WCF İstemci Nesnelerini Kullanma  
@@ -28,7 +29,7 @@ Bu bölümde istemci uygulamalarının ne yaptığı, windows communication foun
   
 4. WCF istemci nesnesini kapatın.  
   
- Aşağıdaki bölümlerde bu adımları tartışmak ve aşağıdaki konulara kısa girişler sağlar:  
+Aşağıdaki bölümlerde bu adımları tartışmak ve aşağıdaki konulara kısa girişler sağlar:  
   
 - Hataları işleme.  
   
@@ -70,7 +71,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Bu sınıf, yapılandırılan ve daha sonra türünün `ISampleService`bir hizmetine bağlanmak için kullanılan, yapılandırılan, yapılandırılan ve yerel bir nesne olarak oluşturulabilir.  
   
- Önce WCF istemci nesnenizi oluşturmanız ve sonra kullanmanız ve tek bir deneme/yakalama bloğunda kapatmanız önerilir. Belirli hata modlarında özel durumları maskeleyebilir, çünkü `using` deyimi (Visual`Using` Basic'te) kullanmamalısınız. Daha fazla bilgi için, WCF istemci kaynaklarını serbest bırakmak için aşağıdaki bölümlere ve [Yakın ve İptal'i kullan'a](./samples/use-close-abort-release-wcf-client-resources.md)bakın.  
+ Önce WCF istemci nesnenizi oluşturmanız ve sonra kullanmanız ve tek bir deneme/yakalama bloğunda kapatmanız önerilir. Belirli hata modlarında özel durumları maskeleyebildiği için `using` deyimi (Visual`Using` Basic'te) kullanmayın. Daha fazla bilgi için, WCF istemci kaynaklarını serbest bırakmak için aşağıdaki bölümlere ve [Yakın ve İptal'i kullan'a](./samples/use-close-abort-release-wcf-client-resources.md)bakın.  
   
 ### <a name="contracts-bindings-and-addresses"></a>Sözleşmeler, Ciltler ve Adresler  
  Bir WCF istemci nesnesi oluşturamadan önce istemci nesnesini yapılandırmanız gerekir. Özellikle, kullanmak için bir hizmet *bitiş noktası* olmalıdır. Bitiş noktası, hizmet sözleşmesi, bağlama ve adresin birleşimidir. (Uç noktalar hakkında daha fazla bilgi için [bkz: Uç Noktalar: Adresler, Ciltler ve Sözleşmeler](./feature-details/endpoints-addresses-bindings-and-contracts.md).) Genellikle, bu bilgiler, Svcutil.exe aracının [ \<](../configure-apps/file-schema/wcf/endpoint-of-client.md) oluşturduğu gibi istemci uygulama yapılandırma dosyasındaki bitiş noktası>öğesinde bulunur ve istemci nesnenizi oluşturduğunuzda otomatik olarak yüklenir. Her iki WCF istemci türüde de bu bilgileri programlı olarak belirtmenizi sağlayan aşırı yüklemeler vardır.  
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Bu yapılandırma `<client>` dosyası, öğedeki hedef bitiş noktasını belirtir. Birden çok hedef uç noktası kullanma <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> hakkında <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> daha fazla bilgi için, oluşturuculara veya kuruculara bakın.  
+ Bu yapılandırma `<client>` dosyası, öğedeki hedef bitiş noktasını belirtir. Birden çok hedef uç noktası kullanma <xref:System.ServiceModel.ClientBase%601.%23ctor%2A> hakkında <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> daha fazla bilgi için, oluşturuculara veya kuruculara bakın.  
   
 ## <a name="calling-operations"></a>Arama İşlemleri  
  Bir istemci nesnesi oluşturulduktan ve yapılandırıldıktan sonra, bir try/catch bloğu oluşturun, nesneleri yerel olsaydı aynı şekilde işlemleri arayın ve WCF istemci nesnesini kapatın. İstemci uygulaması ilk işlemi aradığında, WCF temel kanalı otomatik olarak açar ve nesne geri dönüştürüldüğünde temel kanal kapatılır. (Alternatif olarak, kanalı diğer işlemleri çağırmadan önce veya sonraki olarak açıkça açıp kapatabilirsiniz.)  
@@ -127,7 +128,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Aşağıdaki kod örneğinde gösterildiği gibi, bir WCF istemci nesnesi oluşturup yöntemlerini çağırarak işlemleri çağırabilirsiniz. WCF istemci nesnesinin açılması, çağrılması ve kapatılmasının tek bir try/catch bloğu içinde gerçekleştiğini unutmayın. Daha fazla bilgi için [wcf istemcisi kullanan Hizmetlere Erişim](./feature-details/accessing-services-using-a-client.md) ve [WCF istemci kaynaklarını serbest bırakmak için Kapat ve İptal'i kullanın.](./samples/use-close-abort-release-wcf-client-resources.md)  
+ Aşağıdaki kod örneğinde gösterildiği gibi, bir WCF istemci nesnesi oluşturup yöntemlerini çağırarak işlemleri çağırabilirsiniz. WCF istemci nesnesinin açılması, çağrılması ve kapatılması tek bir try/catch bloğu içinde gerçekleşir. Daha fazla bilgi için [wcf istemcisi kullanan Hizmetlere Erişim](./feature-details/accessing-services-using-a-client.md) ve [WCF istemci kaynaklarını serbest bırakmak için Kapat ve İptal'i kullanın.](./samples/use-close-abort-release-wcf-client-resources.md)  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   

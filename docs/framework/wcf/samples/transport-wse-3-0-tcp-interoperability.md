@@ -2,12 +2,12 @@
 title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278905"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP Birlikte Çalışabilirlik Taşıma örneği, özel bir Windows Communication Foundation (WCF) aktarımı olarak Bir TCP çift yönlü oturumun nasıl uygulanacağını gösterir. Ayrıca, kanal katmanının genişletilebilirliğini, varolan konuşlanmış sistemlerle kablo üzerinde arabirim yapmak için nasıl kullanabileceğinizi de gösterir. Aşağıdaki adımlar, bu özel WCF aktarımını nasıl oluşturabildiğini gösterir:  
@@ -39,7 +39,7 @@ WSE 3.0 TCP Birlikte Çalışabilirlik Taşıma örneği, özel bir Windows Comm
   
  <xref:System.ServiceModel.Channels.Message> Baytlar halinde kodlandıktan sonra, tel üzerinde iletilmelidir. Bu, ileti sınırlarını tanımlamak için bir sistem gerektirir. WSE 3.0 çerçeveleme protokolü olarak [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) bir sürümünü kullanır. `WriteData`bir bayt[] dime kayıtları kümesine sarmak için çerçeveleme mantığını kapsüller.  
   
- İleti alma mantığı çok benzer. Ana karmaşıklık, bir soket okumasının istenenden daha az bayt döndürebildiği gerçeğini işlemektir. İleti almak için, `WseTcpDuplexSessionChannel` kablodan baytokur, DIME çerçevesini çözer ve <xref:System.ServiceModel.Channels.MessageEncoder> bayt[] bir <xref:System.ServiceModel.Channels.Message>.  
+ İleti alma mantığı benzer. Ana karmaşıklık, bir soket okumasının istenenden daha az bayt döndürebildiği gerçeğini işlemektir. İleti almak için, `WseTcpDuplexSessionChannel` kablodan baytokur, DIME çerçevesini çözer ve <xref:System.ServiceModel.Channels.MessageEncoder> bayt[] bir <xref:System.ServiceModel.Channels.Message>.  
   
  Taban, `WseTcpDuplexSessionChannel` bağlı bir soket aldığını varsayar. Taban sınıf soket kapatma yı işler. Soket kapatma ile arayüz oluşturan üç yer vardır:  
   
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+## <a name="set-up-build-and-run-the-sample"></a>Örneği ayarlama, oluşturma ve çalıştırma  
   
 1. Bu örneği çalıştırmak için [Microsoft .NET için Web Hizmetleri Geliştirmeleri (WSE) 3.0](https://www.microsoft.com/download/details.aspx?id=14089) ve WSE `TcpSyncStockService` örneğinin yüklü olması gerekir.
   
@@ -179,7 +179,7 @@ Symbols:
   
 1. Örneği yükledikten `TcpSyncStockService` sonra aşağıdakileri yapın:  
   
-    1. Visual `TcpSyncStockService` Studio'yu açın (TcpSyncStockService örneğinin WSE 3.0 yüklü olduğunu unutmayın. Bu örnek kodubir parçası değildir).  
+    1. Visual `TcpSyncStockService` Studio'da açın. (TcpSyncStockService örneği WSE 3.0 ile yüklenir. Bu, bu örneğin kodunun bir parçası değildir.)  
   
     2. StockService projesini başlangıç projesi olarak ayarlayın.  
   

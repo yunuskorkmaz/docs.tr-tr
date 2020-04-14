@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278918"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Kimlik doğrulama için bir hizmetin kimliğini geçersiz kılma
 
@@ -47,12 +47,12 @@ Genellikle, istemci kimlik bilgisi türü seçimi hizmet meta verilerinde açı�
   
 - Kerberos direct kullanıyorsanız ("tek çekim" olarak da bilinir), kimlik doğrulama başarısız olur.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Yapılandırmada \<> Öğesi'ni kullanma  
- Daha önce Sertifika'da`,` gösterilen bağlamadaki istemci kimlik bilgilerini değiştirirseniz, oluşturulan WSDL, aşağıdaki kodda gösterildiği gibi kimlik değeri için base64 seri leştirilmiş X.509 sertifikası içerir. Bu, Windows dışındaki tüm istemci kimlik bilgileri türleri için varsayılan dır.  
+### <a name="use-the-identity-element-in-configuration"></a>Yapılandırmada \<> Öğe kimliğini kullanma  
+ Daha önce gösterilen bağlamadaki istemci kimlik bilgilerini `Certificate`değiştirirseniz, oluşturulan WSDL, aşağıdaki kodda gösterildiği gibi kimlik değeri için base64 seri leştirilmiş X.509 sertifikası içerir. Bu, Windows dışındaki tüm istemci kimlik bilgileri türleri için varsayılan dır.  
 
  Yapılandırmada <`identity`> öğesini kullanarak veya kimliği kodda ayarlayarak varsayılan hizmet kimliğinin değerini değiştirebilir veya kimlik türünü değiştirebilirsiniz. Aşağıdaki yapılandırma kodu değeri `contoso.com`ile bir etki alanı adı sistemi (DNS) kimlik ayarlar.  
 
-### <a name="setting-identity-programmatically"></a>Kimlik Programlamalı Olarak Ayar  
+### <a name="set-identity-programmatically"></a>Kimlik Programlamalı Olarak Ayarlayın  
  WCF otomatik olarak belirlediğinden, hizmetiniz bir kimliği açıkça belirtmek zorunda değildir. Ancak WCF, gerekirse bir bitiş noktasında bir kimlik belirtmenize olanak tanır. Aşağıdaki kod, belirli bir DNS kimliğine sahip yeni bir hizmet bitiş noktası ekler.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]

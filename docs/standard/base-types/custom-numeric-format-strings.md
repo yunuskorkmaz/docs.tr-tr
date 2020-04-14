@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348304"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242991"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -265,7 +265,7 @@ Biçim dizesinden bağımsız olarak, bir <xref:System.Single> <xref:System.Doub
 
 Denetim Masası'ndaki **Bölgesel ve Dil Seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi yle üretilen sonuç dizesini etkiler. Bu ayarlar, geçerli iş <xref:System.Globalization.NumberFormatInfo> parçacığı kültürüyle ilişkili nesneyi başlatmaya kullanılır ve geçerli iş parçacığı kültürü biçimlendirmeyi yönetmek için kullanılan değerleri sağlar. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
-Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> kurucuyu geçerli sistem kültürüyle aynı kültürü <xref:System.Globalization.CultureInfo> temsil eden yeni bir nesneyi anında kullanmak için kullanırsanız, Denetim Masası'ndaki Bölgesel ve Dil <xref:System.Globalization.CultureInfo> **Seçenekleri** öğesi tarafından oluşturulan özelleştirmeler yeni nesneye uygulanır. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Bir sistemin özelleştirmelerini yansıtmayan <xref:System.Globalization.CultureInfo> bir nesne oluşturmak için oluşturucuyu kullanabilirsiniz.
+Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> kurucuyu geçerli sistem kültürüyle aynı kültürü <xref:System.Globalization.CultureInfo> temsil eden yeni bir nesneyi anında kullanmak için kullanırsanız, Denetim Masası'ndaki Bölgesel ve Dil <xref:System.Globalization.CultureInfo> **Seçenekleri** öğesi tarafından oluşturulan özelleştirmeler yeni nesneye uygulanır. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> Bir sistemin özelleştirmelerini yansıtmayan <xref:System.Globalization.CultureInfo> bir nesne oluşturmak için oluşturucuyu kullanabilirsiniz.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Yuvarlama ve sabit noktalı biçim dizeleri
 

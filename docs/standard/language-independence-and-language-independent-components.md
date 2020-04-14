@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400535"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243069"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
@@ -76,7 +76,7 @@ Bu makalede:
 Bu bölümde CLS uyumlu bir bileşen oluşturma kuralları tartışılmaktadır. Kuralların tam listesi için, [ECMA-335 Standardının](https://www.ecma-international.org/publications/standards/Ecma-335.htm)Bölüm I, Madde 11: Ortak Dil Altyapısı'na bakın.
 
 > [!NOTE]
-> Ortak Dil Belirtimi, tüketiciler (CLS uyumlu bir bileşene programlı olarak erişen geliştiriciler), çerçeveler (oluşturmak için bir dil derleyicisi kullanan geliştiriciler) için geçerli olduğu için CLS uyumluluğu için her kuralı tartışır CLS uyumlu kitaplıklar ve genişleticiler (dil derleyicisi veya CLS uyumlu bileşenler oluşturan bir kod aracı gibi bir araç oluşturan geliştiriciler). Bu makalede, çerçeveler için geçerli olarak kurallar üzerinde duruluyor. Ancak, genişleticiler için geçerli olan bazı kuralların Reflection.Emit kullanılarak oluşturulan derlemeler için de geçerli olabileceğini unutmayın.
+> Ortak Dil Belirtimi, tüketiciler (CLS uyumlu bir bileşene programlı olarak erişen geliştiriciler), çerçeveler (CLS uyumlu kitaplıklar oluşturmak için bir dil derleyicisi kullanan geliştiriciler) ve genişleticiler (dil derleyicisi veya CLS uyumlu bileşenler oluşturan bir kod parleyicisi gibi bir araç oluşturan geliştiriciler) için geçerli olduğu için CLS uyumluluğu için her kuralı tartışır. Bu makalede, çerçeveler için geçerli olarak kurallar üzerinde duruluyor. Ancak, genişleticiler için geçerli olan bazı kuralların Reflection.Emit kullanılarak oluşturulan derlemeler için de geçerli olabileceğini unutmayın.
 
 Dilden bağımsız bir bileşen tasarlamak için CLS uyumluluğu kurallarını bileşeninizin ortak arabirimine uygulamanız gerekir. Özel uygulamanız belirtime uymak zorunda değildir.
 
@@ -527,7 +527,7 @@ Aşağıdaki örnekte, `DescriptionAttribute` 'den <xref:System.Attribute>türey
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute özniteliği
 
-Öznitelik, <xref:System.CLSCompliantAttribute> bir program öğesinin Ortak Dil Belirtimine uyup uymadığını belirtmek için kullanılır. Oluşturucu, <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> `isCompliant`program öğesinin CLS uyumlu olup olmadığını gösteren tek bir gerekli parametre içerir.
+Öznitelik, <xref:System.CLSCompliantAttribute> bir program öğesinin Ortak Dil Belirtimine uyup uymadığını belirtmek için kullanılır. Oluşturucu, <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29> `isCompliant`program öğesinin CLS uyumlu olup olmadığını gösteren tek bir gerekli parametre içerir.
 
 Derleme zamanında derleyici, CLS uyumlu olduğu tahmin edilen uyumlu olmayan öğeleri algılar ve bir uyarı yatar. Derleyici, açıkça uyumsuz olduğu bildirilen türler veya üyeler için uyarı lar yayan değildir.
 
@@ -565,7 +565,7 @@ Aşağıdaki örnek, <xref:System.CLSCompliantAttribute> CLS uyumlu olmayan iki 
 [!code-csharp[Conceptual.CLSCompliant#35](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/indicator3.cs#35)]
 [!code-vb[Conceptual.CLSCompliant#35](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/indicator3.vb#35)]
 
-Kitaplık yerine bir uygulama geliştiriyorsanız (diğer bir deyişle, diğer uygulama geliştiricileri tarafından tüketilebilen türleri veya üyeleri ifşa etmiyorsanız), uygulamanızın tükettiği program öğelerinin CLS uyumluluğu yalnızca diliniz bunları desteklemiyorsa ilgi nizi çekebilir . Bu durumda, CLS uyumlu olmayan bir öğekullanmaya çalıştığınızda dil derleyiciniz bir hata oluşturur.
+Kitaplık yerine bir uygulama geliştiriyorsanız (diğer bir deyişle, diğer uygulama geliştiricileri tarafından tüketilebilen türleri veya üyeleri ifşa etmiyorsanız), uygulamanızın tükettiği program öğelerinin CLS uyumluluğu yalnızca diliniz bunları desteklemiyorsa ilgi nizi görür. Bu durumda, CLS uyumlu olmayan bir öğekullanmaya çalıştığınızda dil derleyiciniz bir hata oluşturur.
 
 <a name="CrossLang"></a>
 

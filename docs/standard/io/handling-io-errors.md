@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120738"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242679"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET'teki G/Ç hatalarını işleme
 
@@ -39,7 +39,7 @@ Dosya sistemi bir işletim sistemi kaynağı olduğundan, hem .NET Core hem de .
 
 Örneğin, `ERROR_FILE_NOT_FOUND` Windows işletim sisteminde, bir hata kodunu (veya 0x02) haritaları n <xref:System.IO.FileNotFoundException>için döndüren `ERROR_PATH_NOT_FOUND` bir yöntem çağrısı ve (veya <xref:System.IO.DirectoryNotFoundException>0x03) haritaların hata kodunu bir .
 
-Ancak, işletim sisteminin belirli hata kodlarını döndürdeği kesin koşullar genellikle belgesiz veya kötü belgelenmiştir. Sonuç olarak, beklenmeyen özel durumlar oluşabilir. Örneğin, bir dosya yerine bir dizinle çalıştığınız için, oluşturucuya geçersiz bir dizin <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> yolu sağlamanın <xref:System.IO.DirectoryNotFoundException>bir . Ancak, aynı zamanda <xref:System.IO.FileNotFoundException>bir atabilir .
+Ancak, işletim sisteminin belirli hata kodlarını döndürdeği kesin koşullar genellikle belgesiz veya kötü belgelenmiştir. Sonuç olarak, beklenmeyen özel durumlar oluşabilir. Örneğin, bir dosya yerine bir dizinle çalıştığınız için, oluşturucuya geçersiz bir dizin <xref:System.IO.DirectoryInfo.%23ctor%2A> yolu sağlamanın <xref:System.IO.DirectoryNotFoundException>bir . Ancak, aynı zamanda <xref:System.IO.FileNotFoundException>bir atabilir .
 
 ## <a name="exception-handling-in-io-operations"></a>G/Ç işlemlerinde özel durum işleme
 
@@ -65,7 +65,7 @@ Ancak, işletim sisteminin belirli hata kodlarını döndürdeği kesin koşulla
 > [!IMPORTANT]
 > Ad alanındaki diğer özel durum türlerinin taban sınıfı <xref:System.IO.IOException> olduğundan, diğer G/Ç ile ilgili özel durumları işledikten sonra bir `catch` blokta işlemeniz gerekir. <xref:System.IO>
 
-Buna ek olarak, .NET Core 2.1 ile başlayarak, yol doğruluğu için doğrulama denetimleri (örneğin, geçersiz karakterlerin bir yolda bulunmadığından emin olmak için) kaldırıldı ve çalışma zamanı yerine bir işletim sistemi hata kodundan eşlenen bir özel durum atar kendi doğrulama kodundan. Bu durumda atılması en olası özel <xref:System.IO.IOException>durum, başka bir özel durum türü de atılabilir rağmen.
+Buna ek olarak, .NET Core 2.1 ile başlayarak, yol doğruluğunu (örneğin, geçersiz karakterlerin bir yolda bulunmadığından emin olmak için) doğrulama denetimleri kaldırıldı ve çalışma zamanı kendi doğrulama koduyerine bir işletim sistemi hata kodundan eşlenen bir özel durum atar. Bu durumda atılması en olası özel <xref:System.IO.IOException>durum, başka bir özel durum türü de atılabilir rağmen.
 
 Özel durum işleme kodunuzda her zaman <xref:System.IO.IOException> sonuncuyu işlemeniz gerektiğini unutmayın. Aksi takdirde, diğer tüm IO özel durumlarının taban sınıfı olduğundan, türemiş sınıfların catch blokları değerlendirilmez.
 

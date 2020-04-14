@@ -1,5 +1,5 @@
 ---
-title: Standart tarih ve saat biçimi dizeleri
+title: Standart tarih ve saat biçim dizeleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248140"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242757"
 ---
-# <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçimi dizeleri
+# <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
 Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat değerinin metin gösterimini tanımlamak için kullanır. Beyaz boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir tarih ve saat biçimi dizesi, özel bir tarih ve saat biçimi dizesi olarak yorumlanır; daha fazla bilgi için [bkz: Özel tarih ve saat biçimi dizeleri.](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) Standart veya özel bir biçim dizesi iki şekilde kullanılabilir:
 
@@ -440,7 +440,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "y" biçim
 
 Denetim Masası'ndaki **Bölgesel ve Dil Seçenekleri** öğesindeki ayarlar, bir biçimlendirme işlemi yle üretilen sonuç dizesini etkiler. Bu ayarlar, biçimlendirmeyi <xref:System.Globalization.DateTimeFormatInfo> yönetmek için kullanılan değerleri sağlayan geçerli iş parçacığı kültürüyle ilişkili nesneyi başlatmaya kullanılır. Farklı ayarları kullanan bilgisayarlar farklı sonuç dizeleri üretir.
 
-Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> kurucuyu geçerli sistem kültürüyle aynı kültürü <xref:System.Globalization.CultureInfo> temsil eden yeni bir nesneyi anında kullanmak için kullanırsanız, Denetim Masası'ndaki Bölgesel ve Dil <xref:System.Globalization.CultureInfo> **Seçenekleri** öğesi tarafından oluşturulan özelleştirmeler yeni nesneye uygulanır. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Bir sistemin özelleştirmelerini yansıtmayan <xref:System.Globalization.CultureInfo> bir nesne oluşturmak için oluşturucuyu kullanabilirsiniz.
+Ayrıca, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> kurucuyu geçerli sistem kültürüyle aynı kültürü <xref:System.Globalization.CultureInfo> temsil eden yeni bir nesneyi anında kullanmak için kullanırsanız, Denetim Masası'ndaki Bölgesel ve Dil <xref:System.Globalization.CultureInfo> **Seçenekleri** öğesi tarafından oluşturulan özelleştirmeler yeni nesneye uygulanır. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> Bir sistemin özelleştirmelerini yansıtmayan <xref:System.Globalization.CultureInfo> bir nesne oluşturmak için oluşturucuyu kullanabilirsiniz.
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo Özellikleri
 

@@ -6,16 +6,16 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278957"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Öğretici: ML.NET Model Builder kullanarak bir web uygulamasında web sitesi yorumlarının duyarlılığını analiz edin
 
-Bir web uygulaması içinde gerçek zamanlı olarak yorumlardan duyguları analiz etmeyi öğrenin.
+Bir web uygulaması içinde yorumlardan duyguları gerçek zamanlı olarak nasıl analiz edeceğiz öğrenin.
 
 Bu öğretici, web sitesi yorumlarından gelen duyguları gerçek zamanlı olarak sınıflandıran bir ASP.NET Core Razor Pages uygulamasını nasıl oluşturabileceğinizi gösterir.
 
@@ -103,9 +103,9 @@ Modelin eğitilmesi için gereken süre veri miktarıyla orantılıdır. Model O
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Eğitim adımının sonucu en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendirme adımında, çıkış bölümü, **Best Model** Girişinde en iyi performans gösteren model tarafından kullanılan algoritmayı ve En İyi **Model Doğruluğu'ndaki**ölçümleri içerecektir. Ayrıca, en iyi beş modeli ve bunların ölçümlerini içeren bir özet tablo.
+Eğitim adımının sonucu en iyi performansa sahip bir model olacaktır. Model Oluşturucu aracının değerlendirme adımında, çıkış bölümü **Best Model** Girişinde en iyi performans gösteren model tarafından kullanılan algoritmayı ve En İyi **Model Doğruluğu'ndaki**ölçümleri içerir. Ayrıca, ilk beş modelleri ve bunların ölçümlerini içeren bir özet tablo gösterilir.
 
-Doğruluk ölçümlerinizden memnun değilseniz, model doğruluğunu geliştirmeyi denemenin ve geliştirmenin bazı kolay yolları, modeli eğitmek veya daha fazla veri kullanmak için gereken süreyi artırmakiçindir. Aksi takdirde, Model Oluşturucu aracında son adıma geçmek için **kod** bağlantısını seçin.
+Doğruluk ölçümlerinizden memnun değilseniz, model doğruluğunu iyileştirmeyi denemenin bazı kolay yolları, modeli eğitmek veya daha fazla veri kullanmak için gereken süreyi artırmakiçindir. Aksi takdirde, Model Oluşturucu aracında son adıma geçmek için **kod** bağlantısını seçin.
 
 ## <a name="add-the-code-to-make-predictions"></a>Tahminlerde bulunmak için kodu ekleme
 
@@ -124,7 +124,7 @@ Eğitim süreci sonucunda iki proje oluşturulacaktır.
 
 ### <a name="configure-the-predictionengine-pool"></a>PredictionEngine havuzunu yapılandırın
 
-Tek bir tahmin yapmak için, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)bir . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)iş parçacığı güvenli değildir. Ayrıca, uygulamanız içinde gerekli olan her yerde bunun bir örneğini oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilemez hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, `PredictionEnginePool` uygulamanız boyunca [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) kullanılmak [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) üzere bir nesne oluşturan bağımlılık enjeksiyonu ve hizmetin bir birleşimini kullanın.
+Tek bir tahmin yapmak için, <xref:Microsoft.ML.PredictionEngine%602>bir . <xref:Microsoft.ML.PredictionEngine%602>iş parçacığı güvenli değildir. Ayrıca, uygulamanız içinde ihtiyaç duyulan her yerde bunun bir örneğini oluşturmanız gerekir. Uygulamanız büyüdükçe, bu işlem yönetilemez hale gelebilir. Daha iyi performans ve iş parçacığı güvenliği için, `PredictionEnginePool` uygulamanız boyunca <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> kullanılmak <xref:Microsoft.ML.PredictionEngine%602> üzere bir nesne oluşturan bağımlılık enjeksiyonu ve hizmetin bir birleşimini kullanın.
 
 1. *Microsoft.Extensions.ML* NuGet paketini yükleyin:
 

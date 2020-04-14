@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 174907adac5741d5cc7d02cb134921debc586061
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03ce1a5f3ef4d4da01f848cac0c520a5a6aaf4bf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241097"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242796"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Öğretici: ML.NET ile k-araçları kümeleme kullanarak iris çiçekler kategorize
 
@@ -27,7 +27,7 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > - Modeli eğitme
 > - Öngörüler için modeli kullanma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
 
@@ -53,7 +53,7 @@ Her çiçeğin hangi gruba ait olduğunu bilmediğiniz için [denetimsiz makine 
 
 ## <a name="prepare-the-data"></a>Verileri hazırlama
 
-1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) veri kümesini indirin ve önceki adımda oluşturduğunuz *Veri* klasörüne kaydedin. Iris veri kümesi hakkında daha fazla bilgi [için, iris çiçek veri seti](https://en.wikipedia.org/wiki/Iris_flower_data_set) Vikipedi sayfasına ve veri kümesinin kaynağı olan [Iris Veri Seti](https://archive.ics.uci.edu/ml/datasets/Iris) sayfasına bakın.
+1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) veri kümesini indirin ve önceki adımda oluşturduğunuz *Veri* klasörüne kaydedin. Iris veri kümesi hakkında daha fazla bilgi [için, iris çiçek veri seti](https://en.wikipedia.org/wiki/Iris_flower_data_set) Vikipedi sayfasına ve veri kümesinin kaynağı olan [Iris Veri Seti](http://archive.ics.uci.edu/ml/datasets/Iris) sayfasına bakın.
 
 1. **Çözüm Gezgini'nde** *iris.data* dosyasına sağ tıklayın ve **Özellikler'i**seçin. **Gelişmiş**altında, **daha yeniyse**Kopyala'dan **Çıktı Dizini'ne Kopya** değerini değiştirin.
 

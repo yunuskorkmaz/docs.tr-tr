@@ -5,120 +5,120 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: ffa2f906ac2ff4630de83938ce365c1b9d5d4d64
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 246f16cee85633499a6a1c200e608ee7bccf133c
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976630"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243108"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Hizmet Çalışma Zamanı Davranışını Belirtme
-Bir hizmet sözleşmesini tasarladıktan ([hizmet sözleşmeleri tasarladıktan](designing-service-contracts.md)) ve hizmet sözleşmenizi ([hizmet sözleşmelerini uygulama](implementing-service-contracts.md)) uyguladıktan sonra, hizmet çalışma zamanının işlem davranışını yapılandırabilirsiniz. Bu konuda, sistem tarafından sunulan hizmet ve işlem davranışları açıklanmakta ve yeni davranışlar oluşturmak için nereden daha fazla bilgi bulacağınız açıklanmaktadır. Bazı davranışlar öznitelik olarak uygulandığından, çoğu uygulama yapılandırma dosyası veya programlı olarak uygulanır. Hizmet uygulamanızı yapılandırma hakkında daha fazla bilgi için bkz. [Hizmetleri yapılandırma](configuring-services.md).  
+Bir hizmet sözleşmesi[(Hizmet Sözleşmelerini Tasarlama)](designing-service-contracts.md)tasarladıktan ve hizmet sözleşmenizi[(Hizmet Sözleşmelerini Uygulama)](implementing-service-contracts.md)uyguladıktan sonra, hizmet çalışma zamanının çalışma davranışını yapılandırabilirsiniz. Bu konu, sistem tarafından sağlanan hizmet ve çalışma davranışlarını açıklar ve yeni davranışlar oluşturmak için daha fazla bilginin nerede bulunacağını açıklar. Bazı davranışlar öznitelik olarak uygulanırken, çoğu bir uygulama yapılandırma dosyası kullanılarak veya programlı olarak uygulanır. Hizmet uygulamanızı yapılandırma hakkında daha fazla bilgi için [bkz.](configuring-services.md)  
   
-## <a name="overview"></a>Genel bakış  
- Sözleşme, bu türdeki bir hizmetin giriş, çıkış, veri türleri ve yeteneklerini tanımlar. Bir hizmet sözleşmesinin uygulanması, bir adreste bağlama ile yapılandırıldığında, uyguladığı Sözleşmeyi yerine getiren bir sınıf oluşturur. Sözleşme, bağlama ve adres bilgilerinin hepsi istemci tarafından bilinir; istemci bu olmadan hizmeti kullanamaz.  
+## <a name="overview"></a>Genel Bakış  
+ Sözleşme, bu tür bir hizmetin girdilerini, çıktılarını, veri türlerini ve yeteneklerini tanımlar. Hizmet sözleşmesinin uygulanması, bir adreste bağlayıcılıkla yapılandırıldığında uyguladığı sözleşmeyi yerine getiren bir sınıf oluşturur. Sözleşme, bağlama ve adres bilgilerinin tümü müşteri tarafından bilinir; bunlar olmadan, istemci hizmeti kullanamaz.  
   
- Ancak, iş parçacığı sorunları veya örnek yönetimi gibi işlem özellikleri, istemciler için opaktır. Hizmet sözleşmenizi uyguladıktan sonra, *davranışları*kullanarak çok sayıda işlem özelliği yapılandırabilirsiniz. Davranışlar, çalışma zamanı özelliğini ayarlayarak ya da çalışma zamanına bir özelleştirme türü ekleyerek Windows Communication Foundation (WCF) çalışma zamanını değiştiren nesnelerdir. Kullanıcı tanımlı davranışlar oluşturarak çalışma zamanını değiştirme hakkında daha fazla bilgi için bkz. [ServiceHost ve hizmet modeli katmanını genişletme](./extending/extending-servicehost-and-the-service-model-layer.md).  
+ Ancak, iş parçacığı sorunları veya örnek yönetimi gibi işlem özellikleri istemciler için opaktır. Hizmet sözleşmenizi uyguladıktan sonra, *davranışları*kullanarak çok sayıda işlem özelliğini yapılandırabilirsiniz. Davranışlar, windows communication foundation (WCF) çalışma zamanını bir çalışma zamanı özelliği ayarlayarak veya çalışma zamanına bir özelleştirme türü ekleyerek değiştiren nesnelerdir. Kullanıcı tanımlı davranışlar oluşturarak çalışma süresini değiştirme hakkında daha fazla bilgi için [Bkz.](./extending/extending-servicehost-and-the-service-model-layer.md)  
   
- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> ve <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> öznitelikleri en yaygın olarak kullanılan davranışlardır ve en sık istenen işlem özelliklerini kullanıma sunar. Öznitelikleri olduklarından, bunları hizmet veya işlem uygulamasına uygularsınız. <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>gibi diğer davranışlar genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak bunları programlı olarak kullanabilirsiniz.  
+ Ve <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> öznitelikleri en yaygın olarak yararlı davranışlar dır ve en sık istenen işlem özelliklerini ortaya çıkarır. Öznitelikler olduğundan, bunları hizmet veya işlem uygulamasına uygularsınız. Diğer davranışlar, <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> örneğin, <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak bunları programlı olarak kullanabilirsiniz.  
   
- Bu konu, <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerine genel bir bakış sağlar, davranışların çalışacağı çeşitli kapsamları açıklar ve WCF ile ilgili olabilecek çeşitli kapsamlar üzerinde sistem tarafından sağlanan davranışların birçoğu için hızlı bir açıklama sağlar geliştiricilerinin.  
+ Bu <xref:System.ServiceModel.ServiceBehaviorAttribute> konu, <xref:System.ServiceModel.OperationBehaviorAttribute> ve özniteliklere genel bir bakış sağlar, davranışların çalışabileceği çeşitli kapsamları açıklar ve WCF geliştiricileri için ilgi çekici olabilecek çeşitli kapsamlarda sistem tarafından sağlanan davranışların çoğunun hızlı bir açıklamasını sağlar.  
   
 ## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute ve OperationBehaviorAttribute  
- En önemli davranışlar, denetlemek için kullanabileceğiniz <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> öznitelikleridir:  
+ En önemli davranışlar, <xref:System.ServiceModel.ServiceBehaviorAttribute> denetlemek <xref:System.ServiceModel.OperationBehaviorAttribute> için kullanabileceğiniz öznitelikler ve özniteliklerdir:  
   
-- Örnek yaşam süreleri  
+- Örnek yaşam ömürleri  
   
-- Eşzamanlılık ve eşitleme desteği  
+- Eşzamanlılık ve senkronizasyon desteği  
   
 - Yapılandırma davranışı  
   
-- İşlem davranışı  
+- Hareket davranışı  
   
 - Serileştirme davranışı  
   
-- Meta veri dönüştürme  
+- Meta veri dönüşümü  
   
 - Oturum ömrü  
   
-- Adres Filtreleme ve üstbilgi işleme  
+- Adres filtreleme ve üstbilgi işleme  
   
 - Kimliğe bürünme  
   
-- Bu öznitelikleri kullanmak için, hizmet veya işlem uygulamasını söz konusu kapsama uygun özniteliğiyle işaretleyin ve özellikleri ayarlayın. Örneğin, aşağıdaki kod örneği, bu işlemin çağıranlarının kimliğe bürünme özelliğini desteklemesini gerektirmek için <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> özelliğini kullanan bir işlem uygulamasını gösterir.  
+- Bu öznitelikleri kullanmak için, hizmet veya işlem uygulamasını bu kapsama uygun öznitelikile işaretleyin ve özellikleri ayarlayın. Örneğin, aşağıdaki kod örneği, bu işlemi <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> arayanların kimliğe bürünme desteği gerektirmek için özelliği kullanan bir işlem uygulaması gösterir.  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
   
- Özelliklerin birçoğu bağlamadan ek destek gerektirir. Örneğin, istemciden bir işlem gerektiren bir işlem, akışlı işlemleri destekleyen bir bağlama kullanacak şekilde yapılandırılmalıdır.  
+ Özelliklerin çoğu bağlama ek destek gerektirir. Örneğin, istemciden bir hareket gerektiren bir işlem, akışlı hareketleri destekleyen bir bağlayıcı kullanmak üzere yapılandırılmalıdır.  
   
-### <a name="well-known-singleton-services"></a>İyi bilinen Singleton Hizmetleri  
- <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini kullanarak, her ikisi de işlemleri uygulayan <xref:System.ServiceModel.InstanceContext> ve hizmet nesnelerinin belirli yaşam sürelerini kontrol edebilirsiniz.  
+### <a name="well-known-singleton-services"></a>Tanınmış Singleton Hizmetleri  
+ İşlemleri uygulayan <xref:System.ServiceModel.ServiceBehaviorAttribute> hizmet <xref:System.ServiceModel.OperationBehaviorAttribute> nesnelerinin <xref:System.ServiceModel.InstanceContext> hem de belirli yaşam ömürlerini denetlemek için öznitelikleri kullanabilirsiniz.  
   
- Örneğin <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği, <xref:System.ServiceModel.InstanceContext> ne sıklıkla yayımlanacağını ve hizmet nesnesi serbest bırakıldığında <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> özellikleri denetimini denetler.  
+ Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özellik ne sıklıkta <xref:System.ServiceModel.InstanceContext> serbest bırakıldığını <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> denetler ve <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> hizmet nesnesi serbest bırakıldığında özellikleri denetler.  
   
- Bununla birlikte, kendiniz de bir hizmet nesnesi oluşturabilir ve bu nesneyi kullanarak hizmet konağını oluşturabilirsiniz. Bunu yapmak için <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.Single> olarak ayarlamanız gerekir veya hizmet ana bilgisayarı açıldığında bir özel durum oluşturulur.  
+ Ancak, bir hizmet nesnesi kendiniz oluşturabilir ve bu nesneyi kullanarak hizmet ana bilgisayarını oluşturabilirsiniz. Bunu yapmak için, <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliği de <xref:System.ServiceModel.InstanceContextMode.Single> ayarlamanız gerekir veya hizmet ana bilgisayar açıldığında bir özel durum atılır.  
   
- Böyle bir hizmet oluşturmak için <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> oluşturucusunu kullanın. Tek bir hizmet tarafından kullanılmak üzere belirli bir nesne örneği sağlamak istediğinizde özel bir <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> uygulamak için alternatif sağlar. Bu aşırı yüklemeyi, hizmet uygulama türü oluşturulması zor olduğunda kullanabilirsiniz (örneğin, parametresiz bir ortak Oluşturucu uygulamadıysanız).
+ Böyle <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> bir hizmet oluşturmak için oluşturucuyu kullanın. Singleton hizmeti tarafından kullanılmak <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> üzere belirli bir nesne örneği sağlamak istediğinizde özel bir uygulama için bir alternatif sağlar. Hizmet uygulama türünüz zor olduğunda (örneğin, parametresiz bir ortak oluşturucu uygulamıyorsa) bu aşırı yükü kullanabilirsiniz.
   
- Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (WCF) örnek oluşturma davranışıyla ilgili bazı özelliklerin farklı şekilde çalıştığını unutmayın. Örneğin, <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> çağırmak iyi bilinen bir nesne örneği sağlandığında hiçbir etkiye sahip değildir. Benzer şekilde, diğer örnek yayın mekanizması yok sayılır. <xref:System.ServiceModel.ServiceHost> sınıfı her zaman, <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özelliği tüm işlemler için <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> olarak ayarlanmış gibi davranır.  
+ Bu oluşturucuya bir nesne sağlandığında, Windows Communication Foundation (WCF) ile ilgili bazı özelliklerin davranış yapısının farklı çalıştığını unutmayın. Örneğin, iyi <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> bilinen bir nesne örneği sağlandığında aramanın hiçbir etkisi yoktur. Benzer şekilde, başka bir örnek yayımetme mekanizması yoksayılır. Sınıf <xref:System.ServiceModel.ServiceHost> her zaman <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> özellik tüm işlemler <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> için ayarlanmış gibi olur.  
   
-## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Diğer hizmet, uç nokta, sözleşme ve Işlem davranışları  
- <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği gibi hizmet davranışları bir hizmetin tamamında çalışır. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> olarak ayarlarsanız, söz konusu hizmette her bir işlem içindeki iş parçacığı eşitleme sorunlarını işlemeniz gerekir. Uç nokta davranışları bir uç nokta boyunca çalışır; sistem tarafından sunulan uç nokta davranışlarının birçoğu istemci işlevselliğine yöneliktir. Sözleşme davranışları sözleşme düzeyinde çalışır ve işlem davranışları işlem teslimini değiştirir.  
+## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Diğer Hizmet, Bitiş Noktası, Sözleşme ve İşlem Davranışları  
+ <xref:System.ServiceModel.ServiceBehaviorAttribute> Öznitelik gibi hizmet davranışları tüm hizmet boyunca çalışır. Örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> size ayarlarsanız, bu hizmetteki her işlemdeki iş parçacığı eşitleme sorunlarını kendiniz işlemeniz gerekir. Bitiş noktası davranışları bir bitiş noktası boyunca çalışır; sistem tarafından sağlanan uç nokta davranışlarının çoğu istemci işlevselliği içindir. Sözleşme davranışları sözleşme düzeyinde çalışır ve işlem davranışları işlem teslimini değiştirir.  
   
- Bu davranışların birçoğu özniteliklere uygulanır ve bunları uygun hizmet sınıfına veya işlem uygulamasına uygulayarak <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> özniteliklerini yaptığınız gibi kullanırsınız. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> veya <xref:System.ServiceModel.Description.ServiceDebugBehavior> nesneleri gibi diğer davranışlar genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak program aracılığıyla da kullanılabilir.  
+ Bu davranışların çoğu öznitelikler üzerinde uygulanır ve bunları uygun hizmet <xref:System.ServiceModel.ServiceBehaviorAttribute> <xref:System.ServiceModel.OperationBehaviorAttribute> sınıfına veya işlem uygulamasına uygulayarak bunları kullanırsınız. Diğer davranışlar, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örneğin veya <xref:System.ServiceModel.Description.ServiceDebugBehavior> nesneler, genellikle bir uygulama yapılandırma dosyası kullanılarak uygulanır, ancak bunlar da programlı olarak kullanılabilir.  
   
- Örneğin, meta veri yayını <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nesnesi kullanılarak yapılandırılır. Aşağıdaki uygulama yapılandırma dosyasında en sık kullanılan kullanım gösterilmektedir.  
+ Örneğin, meta verilerin yayınlanması <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nesne kullanılarak yapılandırılır. Aşağıdaki uygulama yapılandırma dosyası en yaygın kullanımı gösterir.  
   
  [!code-xml[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.exe.config#1)]  
   
- Aşağıdaki bölümlerde, hizmetinizin veya istemcinizin çalışma zamanının dağıtımını değiştirmek için kullanabileceğiniz en yararlı sistem tarafından sağlanmış davranışların birçoğu açıklanır. Her birinin nasıl kullanılacağını öğrenmek için başvuru konusuna bakın.  
+ Aşağıdaki bölümler, hizmetinizin veya istemcinizin çalışma zamanı teslimini değiştirmek için kullanabileceğiniz en yararlı sistem tarafından sağlanan davranışların çoğunu açıklar. Her birinin nasıl kullanılacağını belirlemek için başvuru konusuna bakın.  
   
-### <a name="service-behaviors"></a>Hizmet davranışları  
- Aşağıdaki davranışlar hizmetler üzerinde çalışır.  
+### <a name="service-behaviors"></a>Hizmet Davranışları  
+ Aşağıdaki davranışlar hizmetlerde çalışır.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Hizmetin ASP.NET uyumluluk modunda çalıştırılıp çalıştırılamayacağını göstermek için bir WCF hizmetine uygulanır.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Bu hizmetin ASP.NET Uyumluluk Modunda çalıştırılıp çalıştırılamadığını belirtmek için wcf hizmetine uygulanır.  
   
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmetin istemci taleplerini nasıl yetkilendiğini denetler.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Hizmetin istemci taleplerine nasıl yetki verdiğini denetler.  
   
-- <xref:System.ServiceModel.Description.ServiceCredentials>. Hizmet kimlik bilgilerini yapılandırır. Hizmetin kimlik bilgisini (örneğin, X. 509.440 sertifikası) belirtmek için bu sınıfı kullanın.  
+- <xref:System.ServiceModel.Description.ServiceCredentials>. Bir hizmet kimlik belgesini yapılandırır. X.509 sertifikası gibi hizmetin kimlik bilgisini belirtmek için bu sınıfı kullanın.  
   
-- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. WCF hizmeti için hata ayıklama ve yardım bilgileri özelliklerini sağlar.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Bir WCF hizmeti için hata ayıklama ve Yardım bilgi özelliklerini etkinleştirir.  
   
-- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Hizmet meta verilerinin ve ilgili bilgilerin yayımlanmasını denetler.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Hizmet meta verilerinin ve ilişkili bilgilerin yayınlanmasını denetler.  
   
-- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Güvenlik olaylarının Denetim davranışını belirtir.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Güvenlik olaylarının denetim davranışını belirtir.  
   
-- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Hizmet performansını ayarlamanıza olanak tanıyan çalışma zamanı işleme ayarlarını yapılandırır.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Hizmet performansını ayarlamanızı sağlayan çalışma zamanı iş verme ayarlarını yapılandırır.  
   
-### <a name="endpoint-behaviors"></a>Uç nokta davranışları  
- Aşağıdaki davranışlar uç noktalar üzerinde çalışır. Bu davranışların birçoğu istemci uygulamalarında kullanılır.  
+### <a name="endpoint-behaviors"></a>Bitiş Noktası Davranışları  
+ Aşağıdaki davranışlar uç noktalarda çalışır. Bu davranışların çoğu istemci uygulamalarında kullanılır.  
   
-- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Bir çift yönlü istemci uygulamasında bir geri arama hizmeti uygulaması yapılandırır.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Çift yönlü istemci uygulamasında geri arama hizmeti uygulamasını yapılandırır.  
   
-- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. WCF geri çağırma nesnesi için hizmet hata ayıklamasını sağlar.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. WCF geri arama nesnesi için hizmet hata ayıklamasağlar.  
   
-- <xref:System.ServiceModel.Description.ClientCredentials>. Kullanıcının istemci ve hizmet kimlik bilgilerinin yanı sıra istemcide kullanılmak üzere hizmet kimlik bilgileri kimlik doğrulama ayarlarını yapılandırmasına izin verir.  
+- <xref:System.ServiceModel.Description.ClientCredentials>. Kullanıcının istemci ve hizmet kimlik bilgilerini yapılandırmasının yanı sıra istemcide kullanılmak üzere hizmet kimlik bilgisi kimlik doğrulama ayarlarını yapılandırmasına olanak tanır.  
   
-- <xref:System.ServiceModel.Description.ClientViaBehavior>. İstemci tarafından, aktarım kanalının oluşturulması gereken Tekdüzen Kaynak tanımlayıcısını (URI) belirtmek için kullanılır.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior>. Aktarım kanalının oluşturulması gereken Tek düzen kaynak tanımlayıcısını (URI) belirtmek için istemciler tarafından kullanılır.  
   
-- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. WCF 'nin `MustUnderstand` işlemesini devre dışı bırakmasına izin verir.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. WCF'ye `MustUnderstand` işlemi devre dışı bmasını bildirir.  
   
-- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Çalışma zamanına kanallar için zaman uyumlu alma işlemi kullanmasını söyler.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Kanallar için eşzamanlı alma işlemini kullanmanın çalışma saatini bildirir.  
   
-- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. İşlem alma işlemini destekleyen taşıtlar için alma işlemlerini iyileştirir.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. İşlem alımlarını destekleyen taşımalar için alma işlemlerini optimize eder.  
   
-### <a name="contract-behaviors"></a>Sözleşme davranışları  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Bağlamaların hizmet veya istemci uygulamasına sağlaması gereken özellik gereksinimlerini belirtir.  
+### <a name="contract-behaviors"></a>Sözleşme Davranışları  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Bağlamaların hizmete veya istemci uygulamasına sağlaması gereken özellik gereksinimlerini belirtir.  
   
-### <a name="operation-behaviors"></a>İşlem davranışları  
- Aşağıdaki işlem davranışları işlemler için serileştirme ve işlem denetimleri belirtir.  
+### <a name="operation-behaviors"></a>Operasyon Davranışları  
+ Aşağıdaki işlem davranışları, işlemler için serileştirme ve hareket denetimlerini belirtir.  
   
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>çalışma zamanı davranışını temsil eder.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>Çalışma zamanı davranışını temsil eder.  
   
-- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. `XmlSerializer` çalışma zamanı davranışını denetler ve bir işlemle ilişkilendirir.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Çalışma zamanı davranışını `XmlSerializer` denetler ve bir işlemle ilişkilendirer.  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute>. Bir hizmet işleminin bir işlem üst bilgisini kabul ettiği düzeyi belirtir.  
+- <xref:System.ServiceModel.TransactionFlowAttribute>. Hizmet işleminin bir işlem üstbilgisini kabul ettiği düzeyi belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

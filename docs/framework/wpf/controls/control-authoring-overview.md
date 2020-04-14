@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400157"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243277"
 ---
-# <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
+# <a name="control-authoring-overview"></a>Denetim yazma genel bakış
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Denetim modelinin genişletilebilirliği, yeni bir denetim oluşturma gereksinimini büyük ölçüde azaltır. Ancak, bazı durumlarda yine de özel bir denetim oluşturmanız gerekebilir. Bu konu, özel bir denetim oluşturma gereksiniminizi en aza indiren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]özellikleri ve 'deki farklı denetim yazma modellerini tartışır. Bu konu aynı zamanda yeni bir denetimin nasıl oluşturultur olduğunu da gösterir.
 
@@ -264,7 +264,7 @@ Bir temaya özgü kaynaklar, belirli bir dosya adı içeren bir kaynak sözlüğ
 
 Her tema için bir kaynak tanımlamanız gerekmez. Belirli bir tema için kaynak tanımlanmamışsa, `Classic.xaml` kaynak denetimini denetler. Kaynak, geçerli temaya karşılık gelen dosyada tanımlanmamışsa `Classic.xaml`veya denetim, kaynak sözlüğü dosyasında bulunan `generic.xaml`genel kaynağı kullanır.  Dosya, `generic.xaml` teme özgü kaynak sözlüğü dosyalarıyla aynı klasörde bulunur. Belirli `generic.xaml` bir Windows temasıyla örtüşmese de, yine de tema düzeyinde bir sözlüktür.
 
-Tema ve Kullanıcı Arabirimi otomasyon destek örneği ile [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown özel `NumericUpDown` denetimi, denetim için iki kaynak sözlük içerir: biri generic.xaml'da, diğeri luna.normalcolor.xaml'dadır.
+Tema ve Kullanıcı Arabirimi otomasyon destek örneği ile [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown özel `NumericUpDown` denetimi, denetim için iki kaynak sözlük içerir: biri generic.xaml'da, diğeri luna.normalcolor.xaml'dadır.
 
 Temalı özel <xref:System.Windows.Controls.ControlTemplate> kaynak sözlüğü dosyalarından herhangi birini koyduğunuzda, denetiminiz için statik bir <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> oluşturucu <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>oluşturmanız ve aşağıdaki örnekte gösterildiği gibi yöntemi aramanız gerekir.
 

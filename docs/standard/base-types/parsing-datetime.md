@@ -1,5 +1,5 @@
 ---
-title: "Nasıl: dizeleri DateTime'a dönüştürün"
+title: Dizeleri DateTime'a dönüştürme
 description: Tarih ve saat dizesinden bir DateTime oluşturmak için tarihleri ve saatleri temsil eden dizeleri ayrıştırma tekniklerini öğrenin.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156549"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242653"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve Saat Dizelerini .NET'te ayrıştama
+# <a name="parse-date-and-time-strings-in-net"></a>.NET'teki tarih ve zaman dizelerini ayrışt
 
 Dizeleri nesnelere dönüştürmek için <xref:System.DateTime> ayrıştMa, tarih ve saatlerin metin olarak nasıl temsil edildiği hakkında bilgi belirtmenizi gerektirir. Farklı kültürler gün, ay ve yıl için farklı siparişler kullanır. Bazı zaman gösterimleri 24 saatlik bir saat kullanırken, diğerleri ve PM belirtir. Bazı uygulamaların yalnızca tarih eihtiyacı vardır. Diğerlerinin sadece zamana ihtiyacı var. Yine de diğerlerinin hem tarih hem de saat belirtmeleri gerekir. Dizeleri nesnelere <xref:System.DateTime> dönüştüren yöntemler, beklediğiniz biçimler ve uygulamanızın ihtiyaç duyduğu tarih ve saatöğeleri hakkında ayrıntılı bilgi sağlamanıza olanak tanır. Metni <xref:System.DateTime>doğru bir şekilde bir
 
@@ -56,7 +56,7 @@ Aşağıdaki örnekte, <xref:System.DateTime.Parse%2A?displayProperty=nameWithTy
 > Bu makaledeki tüm C# örnekleri tarayıcınızda çalışır. Çıktıyı görmek için **Çalıştır** düğmesine basın. Ayrıca, bunları kendinizi denemek için de edinebilirsiniz.
 
 > [!NOTE]
-> Bu örnekler Hem [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) hem de [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)için GitHub dokümanları repo'sunda mevcuttur. Veya, [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) veya [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)için bir zip dosyası olarak proje indirebilirsiniz.
+> Bu örnekler Hem [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) hem de [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)için GitHub dokümanları repo'sunda mevcuttur. Veya, [C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip) veya [Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip)için bir zip dosyası olarak proje indirebilirsiniz.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -88,6 +88,6 @@ Her aşırı yükleme <xref:System.DateTime.Parse%2A> <xref:System.DateTime.Pars
 
 - [Dizeleri Ayrıştırma](parsing-strings.md)
 - [Biçimlendirme Türleri](formatting-types.md)
-- [.NET içinde Tür Dönüştürme](type-conversion.md)
+- [.NET'te Tür Dönüştürme](type-conversion.md)
 - [Standart tarih ve saat biçimleri](standard-date-and-time-format-strings.md)
-- [Özel tarih ve saat biçimi dizeleri](custom-date-and-time-format-strings.md)
+- [Özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)

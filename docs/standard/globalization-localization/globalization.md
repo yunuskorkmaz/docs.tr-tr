@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174790"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242692"
 ---
 # <a name="globalization"></a>Genelleştirme
 
@@ -336,9 +336,9 @@ Genel olarak, belirli <xref:System.Globalization.CultureInfo> özellikleri ve il
 
 - .NET değiştirme kültürleri destekler. Bu, mevcut standart kültürleri tamamlayan veya varolan standart kültürün tamamen yerini alan yeni bir özel kültürün tanımlanmasını mümkün kılar.
 
-- Windows sistemlerinde, kullanıcı Denetim Masası'ndaki **Bölge ve Dil** uygulamasını kullanarak kültüre özel ayarları özelleştirebilir. Bir <xref:System.Globalization.CultureInfo> nesneyi anında yaptığınızda, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> oluşturucuyu arayarak bu kullanıcı özelleştirmelerini yansıtıp yansıtmadığını belirleyebilirsiniz. Genellikle, son kullanıcı uygulamaları için kullanıcı tercihlerine saygı göstermelisiniz, böylece kullanıcıya bekledikleri biçimde veriler sunulur.
+- Windows sistemlerinde, kullanıcı Denetim Masası'ndaki **Bölge ve Dil** uygulamasını kullanarak kültüre özel ayarları özelleştirebilir. Bir <xref:System.Globalization.CultureInfo> nesneyi anında yaptığınızda, <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> oluşturucuyu arayarak bu kullanıcı özelleştirmelerini yansıtıp yansıtmadığını belirleyebilirsiniz. Genellikle, son kullanıcı uygulamaları için kullanıcı tercihlerine saygı göstermelisiniz, böylece kullanıcıya bekledikleri biçimde veriler sunulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genelleştirme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
-- [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)
+- [Küreselleşme ve Yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+- [Dizeleri Kullanmak Için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md)

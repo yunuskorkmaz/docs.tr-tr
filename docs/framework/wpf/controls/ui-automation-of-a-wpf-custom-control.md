@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 9c33d0e5da70820041ba2a2881082d9f7d179fc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97db94215220ac2a68e0395bd63b7a874a745a48
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187504"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243251"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]otomasyon istemcilerinin çeşitli platform ve çerçevelerin kullanıcı arabirimlerini incelemek veya çalıştırmak için kullanabilecekleri tek ve genelleştirilmiş bir arayüz sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]hem kalite güvencesi (test) kodu hem de ekran okuyucular gibi erişilebilirlik uygulamalarının kullanıcı arabirimi öğelerini incelemesini ve kullanıcı etkileşimini diğer kodlardan simüle etmesini sağlar. Tüm platformlar [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] hakkında bilgi için Erişilebilirlik'e bakın.  
@@ -144,7 +144,7 @@ Public Class RangePeer2
 End Class  
 ```  
   
-Örnek bir uygulama için, Bir NumericUpDown özel denetimini uygulayan ve kullanan [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) kaynak koduna bakın.  
+Örnek bir uygulama için, Bir NumericUpDown özel denetimini uygulayan ve kullanan [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) kaynak koduna bakın.  
   
 ### <a name="raise-events"></a>Etkinlikleri Yükseltin  
  Otomasyon istemcileri otomasyon etkinliklerine abone olabilir. Özel denetimler <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> yöntemi çağırarak denetim durumu değişiklikleri bildirmelidir. Benzer şekilde, bir özellik değeri <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> değiştiğinde, yöntemi çağırın. Aşağıdaki kod, eş nesnesinin denetim kodu içinden nasıl alınıp bir olayı yükseltmek için bir yöntem çağırılabildiğini gösterir. Bir optimizasyon olarak, kod bu olay türü için herhangi bir dinleyici olup olmadığını belirler. Olayı yalnızca dinleyiciler olduğunda yükseltmek gereksiz yükü önler ve denetimin yanıt vermesini sağlar.  
@@ -156,5 +156,5 @@ End Class
 
 - [UI Otomasyonuna Genel Bakış](../../ui-automation/ui-automation-overview.md)
 - [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../ui-automation/server-side-ui-automation-provider-implementation.md)
-- [GitHub'da SayısalUpDown özel denetimi (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
-- [GitHub'da SayısalUpDown özel kontrolü (Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)
+- [GitHub'da SayısalUpDown özel denetimi (C#)](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
+- [GitHub'da SayısalUpDown özel kontrolü (Visual Basic)](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1c6be08dad37afe9e6627b15d93453aa23f6408
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159266"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242705"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar
 Sınıflar, <xref:System.Collections> ister kaldırılacak öğeyi arıyor olsun, ister anahtar ve değer çiftinin değerini döndürün, koleksiyonları yönetmeyle ilgili hemen hemen tüm işlemlerde karşılaştırmalar gerçekleştirir.  
@@ -32,7 +32,7 @@ Sınıflar, <xref:System.Collections> ister kaldırılacak öğeyi arıyor olsun
   
 - T türü <xref:System.IEquatable%601>uygulanmazsa, <xref:System.Object.Equals%2A?displayProperty=nameWithType> kullanılır.  
   
- Buna ek olarak, sözlük koleksiyonları için bazı <xref:System.Collections.Generic.IEqualityComparer%601> oluşturucu aşırı yükler eşitlik için anahtarları karşılaştırmak için kullanılan bir uygulama kabul eder. Örneğin, oluşturucuya <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> bakın.  
+ Buna ek olarak, sözlük koleksiyonları için bazı <xref:System.Collections.Generic.IEqualityComparer%601> oluşturucu aşırı yükler eşitlik için anahtarları karşılaştırmak için kullanılan bir uygulama kabul eder. Örneğin, oluşturucuya <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> bakın.  
   
 <a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>Sıralama sırasını belirleme  

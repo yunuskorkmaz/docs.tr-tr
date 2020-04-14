@@ -4,12 +4,12 @@ description: 'Bu öğretici, web sitesi yorumlarından duyguları sınıflandır
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 47b9a9fe37cbcacab3797ed7fb1398b0c524d746
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241136"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243303"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Öğretici: ML.NET ikili sınıflandırma ile web sitesi yorumlarının duyarlılığını analiz edin
 
@@ -28,11 +28,11 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 
 Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ".NET Core çapraz platform geliştirme" iş yükü yüklü
 
-- [UCI Sentiment Etiketli Cümleler dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP dosyası)
+- [UCI Sentiment Etiketli Cümleler dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP dosyası)
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
@@ -49,7 +49,7 @@ Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/sample
 > [!NOTE]
 > Bu öğretici için veri kümeleri 'Derin Özellikleri Kullanarak Gruptan Bireysel Etiketlere', Kotzias et. al,. KDD 2015 ve UCI Machine Learning Deposu - Dua, D. ve Karra Taniskidou, E. (2017) ev sahipliği yaptı. UCI Makine Öğrenme Deposuhttp://archive.ics.uci.edu/ml[ ]. Irvine, CA: Kaliforniya Üniversitesi, Bilgi ve Bilgisayar Bilimleri Fakültesi.
 
-1. [INDIR UCI Sentiment Etiketli Cümleler dataset ZIP dosyası](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve unzip.
+1. [INDIR UCI Sentiment Etiketli Cümleler dataset ZIP dosyası](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)ve unzip.
 
 2. Dosyayı `yelp_labelled.txt` oluşturduğunuz *Veri* dizinine kopyalayın.
 
@@ -131,7 +131,7 @@ Uygulamayı hazırlarsınız ve verileri yüklersiniz:
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) veri şemasını tanımlar ve dosyada okur. Veri yolu değişkenlerini alır ve `IDataView`bir .
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) yöntemi veri şemasını tanımlar ve dosyada okur. Veri yolu değişkenlerini alır ve `IDataView`bir .
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Model eğitimi ve testi için veri kümesini bölme
 
@@ -141,7 +141,7 @@ Bir model hazırlarken, onu eğitmek için veri kümesinin bir kısmını ve mod
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    Önceki kod, yüklenen veri kümesini tren ve test veri kümelerine bölmek ve [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) sınıfında döndürmek için [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) yöntemini kullanır. Parametreile verilerin test kümesi `testFraction`yüzdesini belirtin. Varsayılan değer %10'dur, bu durumda daha fazla veriyi değerlendirmek için %20'dir.
+    Önceki kod, yüklenen veri kümesini trene bölmek ve veri kümelerini test etmek <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> ve bunları sınıfta döndürmek için [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) yöntemini kullanır. Parametreile verilerin test kümesi `testFraction`yüzdesini belirtin. Varsayılan değer %10'dur, bu durumda daha fazla veriyi değerlendirmek için %20'dir.
 
 2. Yöntemin sonunda ki döndürme: `splitDataView` `LoadData()`
 

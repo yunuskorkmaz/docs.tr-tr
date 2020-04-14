@@ -12,16 +12,16 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972108"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242783"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
-Varsayılan olarak, bir giriş dizesinin normal bir ifade desenindeki herhangi bir gerçek karakterle karşılaştırılması büyük/küçük harf duyarlıdır, normal bir ifade desenindeki beyaz boşluk gerçek beyaz alan karakterleri olarak yorumlanır ve normal bir ifadedeki grupları yakalar örtük olarak da açıkça adlandırılır. Bu ve varsayılan normal ifade davranışının diğer birkaç yönünü düzenli ifade seçenekleri belirterek değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> parçası olarak satır içinde eklenebilir veya bir sınıf oluşturucuya <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> veya statik desen eşleştirme yöntemine numaralandırma değeri olarak sağlanabilir.
+Varsayılan olarak, bir giriş dizesinin normal bir ifade desenindeki herhangi bir gerçek karakterle karşılaştırılması büyük/küçük harf duyarlıdır, normal ifade desenindeki beyaz boşluk gerçek beyaz alan karakterleri olarak yorumlanır ve normal bir ifadedeki yakalama grupları örtülü olarak ve açıkça adlandırılır. Bu ve varsayılan normal ifade davranışının diğer birkaç yönünü düzenli ifade seçenekleri belirterek değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> parçası olarak satır içinde eklenebilir veya bir sınıf oluşturucuya <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> veya statik desen eşleştirme yöntemine numaralandırma değeri olarak sağlanabilir.
 
 |RegexOptions üyesi|Satır çizgisi karakteri|Etki|
 |-------------------------|----------------------|------------|
@@ -40,7 +40,7 @@ Varsayılan olarak, bir giriş dizesinin normal bir ifade desenindeki herhangi b
 
 Normal ifadeler için seçenekleri üç şekilde belirtebilirsiniz:
 
-- Bir `options` <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucu veya statik parametre`Shared` (Visual Basic) desen eşleştirme <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>yöntemi, gibi veya . `options` Parametre, numaralandırılmış değerlerin bitwise VEYA birleşimidir. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>
+- Bir `options` <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucu veya statik parametre`Shared` (Visual Basic) desen eşleştirme <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>yöntemi, gibi veya . `options` Parametre, numaralandırılmış değerlerin bitwise VEYA birleşimidir. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>
 
   Bir sınıf oluşturucu <xref:System.Text.RegularExpressions.Regex> parametresi `options` kullanılarak bir örneğe seçenekler sağlandığında, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> seçenekler özelliğe atanır. Ancak, <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> özellik normal ifade deseni kendisi satır satır seçeneklerini yansıtmaz.
 
@@ -264,7 +264,7 @@ Ancak, aşağıdaki durumlarda, <xref:System.Text.RegularExpressions.RegexOption
 
 - `{`N , *n*`}` `{` *n*`,}` `{`ve *n*`,`*m*`}`gibi parantez li bir niceleme içinde beyaz alana izin verilmez. Örneğin, normal ifade `\d{1, 3}` deseni, bir beyaz boşluk karakteri içerdiğinden, bir ile üç basamak arasında herhangi bir basamak dizisini eşleştirmiyor.
 
-- Bir dil öğesini tanıtan bir karakter dizisi içinde beyaz uzaya izin verilmez. Örnek:
+- Bir dil öğesini tanıtan bir karakter dizisi içinde beyaz uzaya izin verilmez. Örneğin:
 
   - Dil öğesi `(?:` *alt ifadesi* `)` yakalamayan bir grubu `(?:` temsil eder ve öğenin bir bölümü katıştırılmış boşluklara sahip olamaz. Normal `(? :`ifade altyapısı deseni ayrışdıramadığı ve desen <xref:System.ArgumentException> `( ?:`alt ifadesi alt`)` *ifadeyle* `)` eşleşmediği için *subexpression*desen *alt ifadesi* çalışma zamanında bir atar.
 

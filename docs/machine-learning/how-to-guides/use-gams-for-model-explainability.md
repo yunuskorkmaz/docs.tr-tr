@@ -3,12 +3,12 @@ title: Genelleştirilmiş Katkı Modelleri ile ML.NET modelleri yorumlayın
 description: ML.NET model yorumlanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil fonksiyonlarını kullanın
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29eac7a609ada57283a7c5b55b935e30709930dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77092479"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243134"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET model yorumlanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil fonksiyonlarını kullanın
 
@@ -50,4 +50,4 @@ for (int i = 0; i < myFeatureBins.Length; i++)
 
 ![Jeneralize Katkı Modelleri şekil fonksiyonu grafiği](./media/use-gams-for-model-explainability/gam-shape-function-graph.png)
 
-Gam modelini nasıl eğiteceğimiz ve sonuçları nasıl inceleyip yorumlanacağına bir örnek [için, dotnet/machinelearning GitHub deposuna](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/GeneralizedAdditiveModels.cs)bakın.
+Gam modelini nasıl eğitirin ve sonuçları incelemek ve yorumlamak için bir örnek için, [ikili sınıflandırma eğitmeni örneğine](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/Trainers/BinaryClassification/Gam.cs)bakın.

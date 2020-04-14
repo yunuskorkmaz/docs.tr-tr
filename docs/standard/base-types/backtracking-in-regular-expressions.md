@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158070"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243238"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 Geri izleme, normal bir ifade deseni isteğe bağlı [niceleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değiştirme yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)içerdiğinde ve normal ifade altyapısı eşleşme arayışını sürdürmek için önceki kaydedilmiş duruma döndüğünde oluşur. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
@@ -106,14 +106,14 @@ Geri izleme, normal bir ifade deseni isteğe bağlı [niceleyiciler](../../../do
  Geri izleme, güçlü ve esnek normal ifadeler oluşturmanıza olanak tanır. Ancak, önceki bölümde gösterildiği gibi, bu yararlar kabuk edilemeyecek kadar düşük performansla eşleştirilebilir. Aşırı geri izlemeyi önlemek için, bir <xref:System.Text.RegularExpressions.Regex> nesneyi anında yaptığınızda veya statik normal ifade eşleştirme yöntemini çağırdığınızda bir zaman aralığı tanımlamanız gerekir. Bu konu, sonraki bölümde açıklanmaktadır. Buna ek olarak, .NET, geri izlemeyi sınırlayan veya bastıran ve çok az performans cezası olan karmaşık düzenli ifadeleri destekleyen üç düzenli ifade dili öğelerini destekler: [atomik gruplar,](#atomic-groups) [iddiaların arkasına bakan](#lookbehind-assertions)ve ileriye dönük [iddialar.](#lookahead-assertions) Her dil öğesi hakkında daha fazla bilgi için, [Gruplandırma Yapıları'na](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)bakın.  
 
 ### <a name="defining-a-time-out-interval"></a>Bir Zaman Aşımı Aralığı Tanımlama  
- .NET Framework 4.5 ile başlayarak, normal ifade altyapısının denemeyi bırakıp bir özel durum atmadan önce tek bir eşleşmeyi arayacağı en uzun aralığı temsil eden bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> zaman aralığı değeri ayarlayabilirsiniz. Örneğin normal ifadeler için <xref:System.TimeSpan> <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> oluşturucuya bir değer sağlayarak zaman aralığını belirtirsiniz. Buna ek olarak, her statik desen eşleştirme <xref:System.TimeSpan> yöntemi bir zaman çıkış değeri belirtmenize olanak tanıyan bir parametre ile bir aşırı yük vardır. Varsayılan olarak, zaman aralığı ayarlanır <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ve normal ifade altyapısı zaman dolmaz.  
+ .NET Framework 4.5 ile başlayarak, normal ifade altyapısının denemeyi bırakıp bir özel durum atmadan önce tek bir eşleşmeyi arayacağı en uzun aralığı temsil eden bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> zaman aralığı değeri ayarlayabilirsiniz. Örneğin normal ifadeler için <xref:System.TimeSpan> <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> oluşturucuya bir değer sağlayarak zaman aralığını belirtirsiniz. Buna ek olarak, her statik desen eşleştirme <xref:System.TimeSpan> yöntemi bir zaman çıkış değeri belirtmenize olanak tanıyan bir parametre ile bir aşırı yük vardır. Varsayılan olarak, zaman aralığı ayarlanır <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ve normal ifade altyapısı zaman dolmaz.  
   
 > [!IMPORTANT]
 > Normal ifadeniz geri izlemeye dayalıysa, her zaman bir zaman aşımı aralığı ayarlamanızı öneririz.  
   
  Özel <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> durum, normal ifade altyapısının belirtilen zaman aralığı içinde eşleşme bulamadığını gösterir, ancak özel durum neden atıldığını göstermez. Bunun nedeni aşırı geri izleme olabilir, fakat özel durumun oluştuğu zamandaki sistem yükü nedeniyle zaman aşımı aralığı çok düşük ayarlanmış da olabilir. Özel durumu işlediğinizde, giriş dizesiyle diğer eşleştirmeleri bırakmayı veya zaman aşımı aralığını artırarak eşleştirme işlemini yeniden denemeyi seçebilirsiniz.  
   
- Örneğin, aşağıdaki <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> kod, bir saniyelik zaman dışı <xref:System.Text.RegularExpressions.Regex> değeri olan bir nesneyi anında anlığına çağıran oluşturucuyu çağırır. Bir satırın `(a+)+$`sonundaki bir veya daha fazla "a" karakterinin bir veya daha fazla dizisini eşleştiren normal ifade deseni aşırı geri izleme konusuna tabidir. A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> atılırsa, örnek zaman aralığı değerini en fazla üç saniye lik bir zaman aralığına yükseltir. Bundan sonra, deseni eşleştirme girişiminden vazgeçer.  
+ Örneğin, aşağıdaki <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> kod, bir saniyelik zaman dışı <xref:System.Text.RegularExpressions.Regex> değeri olan bir nesneyi anında anlığına çağıran oluşturucuyu çağırır. Bir satırın `(a+)+$`sonundaki bir veya daha fazla "a" karakterinin bir veya daha fazla dizisini eşleştiren normal ifade deseni aşırı geri izleme konusuna tabidir. A <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> atılırsa, örnek zaman aralığı değerini en fazla üç saniye lik bir zaman aralığına yükseltir. Bundan sonra, deseni eşleştirme girişiminden vazgeçer.  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -193,5 +193,5 @@ Geri izleme, normal bir ifade deseni isteğe bağlı [niceleyiciler](../../../do
 - [.NET Düzenli İfadeler](../../../docs/standard/base-types/regular-expressions.md)
 - [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Miktar Niceleyiciler](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [Değişim Yapıları](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Gruplama Yapıları](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Alternation Yapılar](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
+- [Yapıları Gruplandırma](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
