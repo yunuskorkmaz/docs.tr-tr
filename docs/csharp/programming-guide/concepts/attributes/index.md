@@ -1,12 +1,12 @@
 ---
 title: Öznitelikler (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399751"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389548"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
@@ -95,7 +95,7 @@ Aşağıdaki örnek, C#'daki yöntemlere, yöntem parametrelerine ve yöntem dö
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Geçerli olarak tanımlanan hedeflere `ValidatedContract` bakılmaksızın, yalnızca `return` döndürme değerleri için uygulanacak `ValidatedContract` şekilde tanımlanmış olsa bile hedefin belirtilmesi gerekir. Başka bir deyişle, derleyici `AttributeUsage` belirsiz öznitelik hedeflerini çözmek için bilgileri kullanmaz. Daha fazla bilgi için [Bkz. AttributeUsage (C#)](attributeusage.md).
+> Geçerli olarak tanımlanan hedeflere `ValidatedContract` bakılmaksızın, yalnızca `return` döndürme değerleri için uygulanacak `ValidatedContract` şekilde tanımlanmış olsa bile hedefin belirtilmesi gerekir. Başka bir deyişle, derleyici `AttributeUsage` belirsiz öznitelik hedeflerini çözmek için bilgileri kullanmaz. Daha fazla bilgi için [Bkz. AttributeUsage (C#)](../../../language-reference/attributes/general.md).
 
 ## <a name="common-uses-for-attributes"></a>Öznitelikler için ortak kullanımlar
 
@@ -121,7 +121,7 @@ Daha fazla bilgi için bkz.
 - [Yansıma (C#) kullanarak Özniteliklere Erişim](accessing-attributes-by-using-reflection.md)  
 - [Öznitelikleri kullanarak C/C++ birleşimoluşturma (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Ortak Öznitelikler (C#)](common-attributes.md)  
-- [Arayan Bilgileri (C#)](../caller-information.md)  
+- [Arayan Bilgileri (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

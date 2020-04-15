@@ -2,12 +2,12 @@
 title: C# 8.0 -C# Guide'daki yenilikler
 description: C# 8.0'da bulunan yeni özellikler hakkında genel bir bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989213"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389100"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0'daki yenilikler
 
@@ -76,7 +76,7 @@ Derleyici, savunma amaçlı bir kopya oluşturması gerektiğinde sizi uyarır. 
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Değiştiricinin `readonly` salt okunur bir özellik için gerekli olduğuna dikkat edin. Derleyici, erişimedenlerin `get` durumu değiştirmediğini varsaymaz; açıkça bildirmelisiniz. `readonly` Otomatik olarak uygulanan özellikler bir özel durumdur; derleyici tüm otomatik olarak uygulanan getters readonly olarak ele alacak, bu `readonly` nedenle burada ve `X` `Y` özellikleri değiştirici eklemek için gerek yoktur.
+Değiştiricinin `readonly` salt okunur bir özellik için gerekli olduğuna dikkat edin. Derleyici, erişimedenlerin `get` durumu değiştirmediğini varsaymaz; açıkça bildirmelisiniz. `readonly` Otomatik olarak uygulanan özellikler bir özel durumdur; `readonly`derleyici olarak tüm otomatik uygulanan getters ele alacak , bu yüzden `readonly` burada değiştirici `X` ve `Y` özellikleri eklemek için gerek yoktur.
 
 Derleyici, `readonly` üyelerin durumu değiştirmediği kuralı nı uygular. `readonly` Değiştiriciyi kaldırmadığınız sürece aşağıdaki yöntem derlenmez:
 
@@ -88,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Bu özellik, derleyicinin bunu uygulayabilmesi ve bu amacla dayalı optimizasyonlar yapabilmesi için tasarım amacınızı belirtmenize olanak tanır. Dil referans makalesinde yalnızca okumuş üyeler [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)hakkında daha fazla bilgi edinebilirsiniz.
+Bu özellik, derleyicinin bunu uygulayabilmesi ve bu amacla dayalı optimizasyonlar yapabilmesi için tasarım amacınızı belirtmenize olanak tanır.
+
+Daha fazla bilgi için [Yapı türleri](../language-reference/builtin-types/struct.md) makalesinin [ `readonly` örnek üyeler](../language-reference/builtin-types/struct.md#readonly-instance-members) bölümüne bakın.
 
 ## <a name="default-interface-methods"></a>Varsayılan arabirim metotları
 

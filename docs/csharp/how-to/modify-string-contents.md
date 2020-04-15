@@ -3,12 +3,12 @@ title: Dize içeriği nasıl değiştirilir - C# Guide
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242861"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389520"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C'de dize içeriği nasıl değiştirilir?\#
 
@@ -16,7 +16,7 @@ Bu makalede, varolan `string` `string`bir değiştirerek bir üretmek için çe�
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Bu makalede gösterilen çeşitli teknikler vardır. Varolan metni değiştirebilirsiniz. Desenleri arayabilir ve eşleşen metni diğer metinlerle değiştirebilirsiniz. Bir dizeyi bir karakter dizisi olarak değerlendirebilirsiniz. Ayrıca, beyaz alanı kaldıran kolaylık yöntemleri de kullanabilirsiniz. Senaryonuzla en yakından eşleşen teknikleri seçmelisiniz.
+Bu makalede gösterilen çeşitli teknikler vardır. Varolan metni değiştirebilirsiniz. Desenleri arayabilir ve eşleşen metni diğer metinlerle değiştirebilirsiniz. Bir dizeyi bir karakter dizisi olarak değerlendirebilirsiniz. Ayrıca, beyaz alanı kaldıran kolaylık yöntemleri de kullanabilirsiniz. Senaryonuzla en yakından eşleşen teknikleri seçin.
 
 ## <a name="replace-text"></a>Metni değiştirme
 
@@ -48,7 +48,7 @@ Herhangi bir <xref:System.String.Trim%2A?displayProperty=nameWithType>satır <xr
 
 Metin eşleştirme [desenlerini](../../standard/base-types/regular-expressions.md) büyük olasılıkla bir desentarafından tanımlanan yeni metinle değiştirmek için normal ifadeler kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> kaynak dizesinde bir desen bulmak ve uygun büyük harfle değiştirmek için sınıfı kullanır. Yöntem, <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> bağımsız değişkenlerinden biri olarak değiştirme mantığını sağlayan bir işlev alır. Bu örnekte, bu `LocalReplaceMatchCase` işlev, örnek yöntem içinde bildirilen yerel bir **işlevdir.** `LocalReplaceMatchCase`uygun <xref:System.Text.StringBuilder?displayProperty=nameWithType> büyük harfle değiştirme dizesi oluşturmak için sınıfı kullanır.
 
-Normal ifadeler, bilinen metin yerine bir deseni izleyen metni aramak ve değiştirmek için en yararlıdır. Daha fazla ayrıntı için [dizeleri arama ya da arama](search-strings.md) Arama deseni, "the\s" sözcüğün "the" sözcüğüne ve ardından bir beyaz boşluk karakterini arar. Desenin bu bölümü, kaynak dizedeki "orada" ile eşleşmemesini sağlar. Normal ifade dili öğeleri hakkında daha fazla bilgi için [Bkz. Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
+Normal ifadeler, bilinen metin yerine bir deseni izleyen metni aramak ve değiştirmek için en yararlıdır. Daha fazla bilgi için [dizeleri nasıl arayacağını](search-strings.md)öğrenin. Arama deseni, "the\s" sözcüğün "the" sözcüğüne ve ardından bir beyaz boşluk karakterini arar. Desenin bu bölümü, kaynak dizedeki "orada" ile eşleşmemesini sağlar. Normal ifade dili öğeleri hakkında daha fazla bilgi için [Bkz. Normal İfade Dili - Hızlı Başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

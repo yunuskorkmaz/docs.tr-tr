@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181580"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389483"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Çerçeve sistem gereksinimleri
 
@@ -54,14 +54,14 @@ Bu makaledeki tablolar, aşağıdaki .NET Framework sürümleri için donanım, 
 
 | İşletim sistemi | Desteklenen sürümler | İşletim Sistemi ile önceden yüklenmiş | Ayrı olarak yüklenebilir |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10 Mayıs 2019 Güncelleştirmesi | 32 bit ve 64 bit |  .NET Framework 4.8 | -- |
-| Windows 10 Ekim 2018 Güncellemesi | 32 bit ve 64 bit |  .NET Framework 4.7.2 |  .NET Framework 4.8 |
-| Windows 10 Nisan 2018 Güncelleştirmesi | 32 bit ve 64 bit |  .NET Framework 4.7.2 | .NET Framework 4.8|
-| Windows 10 Fall Creators Update | 32 bit ve 64 bit | .NET Çerçeve 4.7.1 |  .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
-| Windows 10 Creators Update | 32 bit ve 64 bit |  .NET Framework 4.7 | .NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
-| Windows 10 Yıldönümü Güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.2 | .NET Framework 4.7<br/><br/>.NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8  |
-| Windows 10 Kasım Güncellemesi | 32 bit ve 64 bit | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
-| Windows 10 | 32 bit ve 64 bit | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
+| Windows 10 Mayıs 2019 Güncelleştirmesi<br/> (sürüm 1903) | 32 bit ve 64 bit |  .NET Framework 4.8 | -- |
+| Windows 10 Ekim 2018 Güncellemesi<br/> (sürüm 1809) | 32 bit ve 64 bit |  .NET Framework 4.7.2 |  .NET Framework 4.8 |
+| Windows 10 Nisan 2018 Güncelleştirmesi<br/> (sürüm 1803) | 32 bit ve 64 bit |  .NET Framework 4.7.2 | .NET Framework 4.8|
+| Windows 10 Fall Creators Update<br/> (sürüm 1709) | 32 bit ve 64 bit | .NET Çerçeve 4.7.1 |  .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
+| Windows 10 Creators Update<br/> (sürüm 1703) | 32 bit ve 64 bit |  .NET Framework 4.7 | .NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
+| Windows 10 Yıldönümü Güncelleştirmesi<br/> (sürüm 1607) | 32 bit ve 64 bit | .NET Framework 4.6.2 | .NET Framework 4.7<br/><br/>.NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8  |
+| Windows 10 Kasım Güncellemesi<br/> (sürüm 1511) | 32 bit ve 64 bit | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
+| Windows 10<br/> (sürüm 1507) | 32 bit ve 64 bit | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
 | Windows 8.1 | 32-bit, 64-bit ve ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br /> .NET Framework 4.7<br/><br/>.NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |
 | Windows 8 | 32-bit, 64-bit ve ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br /> .NET Framework 4.7<br/><br/>.NET Çerçeve 4.7.1<br/><br/> .NET Framework 4.7.2<br/><br/> .NET Framework 4.8 |

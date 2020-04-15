@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayrıntılarını anlayın. Adım adım başlayın ve Dockerfiles'ı optimize etmek ve Visual Studio'yu kullanırken kullanılabilen basitleştirilmiş iş akışıyla bitirmek için bazı ayrıntılara girin.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401643"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389196"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -286,7 +286,7 @@ Ortaya çıkan dosya daha sonra:
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ Docker-compose up komutu çalıştırıldıktan sonra, uygulama ve ilgili kapsay
 
 #### <a name="using-visual-studio"></a>Visual Studio’yu kullanma
 
-Visual Studio 2019'u kullanarak çok konteynerli bir uygulama çalıştırmak daha kolay olamaz. Her zamanki gibi hata ayıklamak için **ctrl-F5** tuşuna veya **F5'e** basarak başlangıç projesi olarak **docker-compose** projesini ayarlamanız gerekiyor.  Visual Studio, her zamanki gibi kesme noktaları oluşturabilir ve hata ayıklama zaten bağlı olan "uzak sunucularda" çalışan bağımsız işlemler haline ne hata ayıklama sağlar, böylece gerekli tüm kurulum işler. Aynen böyle.
+Visual Studio 2019'u kullanarak çok konteynerli bir uygulama çalıştırmak daha kolay olamaz. Her zamanki gibi hata ayıklamak için **ctrl-F5** tuşuna veya **F5'e** basarak başlangıç projesi olarak **docker-compose** projesini ayarlamanız gerekiyor.  Visual Studio, her zamanki gibi kesme noktaları oluşturabilir ve sonunda "uzak sunucularda" çalışan bağımsız işlemler haline ne hata ayıklama, hata ayıklama zaten bağlı, sadece bunun gibi işler.
 
 Daha önce de belirtildiği gibi, bir çözüm içinde bir projeye Docker çözüm desteği eklediğinizde, bu proje tüm çözümü aynı anda çalıştırmanızı veya hata ayıklamanızı sağlayan genel (çözüm düzeyinde) docker-compose.yml dosyasında yapılandırılır. Visual Studio, Docker çözüm desteği etkin olan her proje için bir konteyner başlatacak ve sizin için tüm dahili adımları gerçekleştirecektir (dotnet yayımlama, docker build, vb.).
 
@@ -487,7 +487,7 @@ Tüm angarya bir göz atmak istiyorsanız, dosyaya bir göz atın:
 
 `{root solution folder}\obj\Docker\docker-compose.vs.debug.g.yml`
 
-Burada önemli olan nokta, Şekil 5-12'de gösterildiği gibi Visual Studio 2019'da F5 anahtar eylemi için ek bir **Docker** komutu olmasıdır. Bu seçenek, docker-compose.yml dosyalarında tanımlanan tüm kapsayıcıları çözüm düzeyinde çalıştırarak çok kapsayıcılı bir uygulamayı çalıştırmanızı veya hata ayıklamanızı sağlar. Birden çok kapsayıcı çözümlerini hata ayıklama yeteneği, her bir kesme noktası farklı bir projede (kapsayıcı) birkaç kesme noktası ayarlayabileceğiniz anlamına gelir ve Visual Studio'dan hata ayıklama sırasında farklı projelerde tanımlanan ve üzerinde çalışan kesme noktalarında duracağınız anlamına gelir farklı kaplar.
+Burada önemli olan nokta, Şekil 5-12'de gösterildiği gibi Visual Studio 2019'da F5 anahtar eylemi için ek bir **Docker** komutu olmasıdır. Bu seçenek, docker-compose.yml dosyalarında tanımlanan tüm kapsayıcıları çözüm düzeyinde çalıştırarak çok kapsayıcılı bir uygulamayı çalıştırmanızı veya hata ayıklamanızı sağlar. Birden çok kapsayıcı çözümlerini hata ayıklama yeteneği, her bir kesme noktası farklı bir projede (kapsayıcı) birkaç kesme noktası ayarlayabileceğiniz anlamına gelir ve Visual Studio'dan hata ayıklama sırasında farklı projelerde tanımlanan ve farklı kapsayıcılarda çalışan kesme noktalarında duracağınız anlamına gelir.
 
 ![Docker-compose projesini çalıştıran hata ayıklama araç çubuğunun ekran görüntüsü.](./media/docker-app-development-workflow/debug-toolbar-docker-compose-project.png)
 

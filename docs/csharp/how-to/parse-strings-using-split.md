@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121505"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389501"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>String.Split (C# Guide) kullanarak dizeleri ayrıştırma
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>String.Split in C kullanarak dizeleri ayrışdırmak için nasıl\#
 
 Yöntem, <xref:System.String.Split%2A?displayProperty=nameWithType> giriş dizesini bir veya daha fazla sınırlayıcıyı temel alarak bölerek bir dizi alt dizeleri oluşturur. Genellikle sözcük sınırları üzerinde bir dize ayırmak için en kolay yoludur. Ayrıca, diğer belirli karakterler veya dizeleri dizeleri bölmek için kullanılır.
 
@@ -26,11 +26,11 @@ Aşağıdaki kod, ortak bir tümceciği her sözcük için bir dizi dize ye böl
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-Ayırıcı karakterin her örneği döndürülen dizide bir değer üretir. Ardışık ayırıcı karakterler, boş dizeyi döndürülen dizide bir değer olarak üretir.  Bunu ayırıcı olarak alanı kullanan aşağıdaki örnekte görebilirsiniz:
+Ayırıcı karakterin her örneği döndürülen dizide bir değer üretir. Ardışık ayırıcı karakterler, boş dizeyi döndürülen dizide bir değer olarak üretir. Boşluk karakterini ayırıcı olarak kullanan aşağıdaki örnekte boş bir dize nasıl oluşturulduğunu görebilirsiniz.
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
-Bu davranış, tabular verileri temsil eden virgülayrılmış değerler (CSV) dosyaları gibi biçimler için kolaylaştırır. Ardışık virgüller boş bir sütunu temsil ediyor.
+Bu davranış, tabular verileri temsil eden virgülden ayrılmış değerler (CSV) dosyaları gibi biçimler için kolaylaştırır. Ardışık virgüller boş bir sütunu temsil ediyor.
 
 Döndürülen dizideki <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> boş dizeleri hariç tutmak için isteğe bağlı bir parametre geçirebilirsiniz. Döndürülen koleksiyonun daha karmaşık işlenmesi için, sonuç sırasını işlemek için [LINQ'yi](../programming-guide/concepts/linq/index.md) kullanabilirsiniz.
 

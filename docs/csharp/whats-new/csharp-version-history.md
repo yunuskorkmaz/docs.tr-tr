@@ -3,12 +3,12 @@ title: C# tarihi - C# Rehberi
 description: Dil ilk versiyonlarında nasıl dı ve o zamandan beri nasıl gelişti?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989200"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389103"
 ---
 # <a name="the-history-of-c"></a>C'nin tarihçesi\#
 
@@ -120,7 +120,7 @@ Dinamik bağlama, hata potansiyelinin yanı, aynı zamanda dil içinde büyük b
 Visual Studio 2012 ile yayımlanan C# sürüm 5.0, dilin odaklanmış bir versiyonuydu. Bu sürüm için neredeyse tüm çaba başka bir çığır `async` açan `await` dil kavramı gitti: ve model asynchronous programlama için.  İşte önemli özellikler listesi:
 
 - [Eşkron üyeleri](../async.md)
-- [Arayan bilgi öznitelikleri](../programming-guide/concepts/caller-information.md)
+- [Arayan bilgi öznitelikleri](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>Ayrıca Bkz.
 

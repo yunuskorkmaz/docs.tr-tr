@@ -2,12 +2,12 @@
 title: Özel Öznitelikler oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec959723c339a13a40fd62388421ceacb736dfca
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595411"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389553"
 ---
 # <a name="creating-custom-attributes-c"></a>Özel Öznitelikler oluşturma (C#)
 Doğrudan veya dolaylı <xref:System.Attribute>olarak türetilen ve meta verilerdeki öznitelik tanımlarını tanımlamayı hızlı ve kolay hale getiren bir öznitelik sınıfı tanımlayarak kendi özel özniteliklerinizi oluşturabilirsiniz. Türleri türü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel `Author` bir öznitelik sınıfı tanımlayabilirsiniz:  
@@ -71,4 +71,4 @@ class SampleClass
 - [Yansıma (C#)](../reflection.md)
 - [Öznitelikler (C#)](./index.md)
 - [Yansıma (C#) kullanarak Özniteliklere Erişim](./accessing-attributes-by-using-reflection.md)
-- [ÖznitelikKullanım (C#)](./attributeusage.md)
+- [ÖznitelikKullanım (C#)](../../../language-reference/attributes/general.md)

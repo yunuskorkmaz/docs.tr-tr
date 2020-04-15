@@ -2,12 +2,12 @@
 title: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241951"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389712"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Native'e geçirin
 
@@ -85,7 +85,7 @@ Windows Mağazası uygulamaları için .NET ile .NET Native arasında yansımayl
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType>ve <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> temel sınıflarda gizli üyeleri içerir ve böylece açık geçersiz kılmalar olmadan geçersiz kılınabilir. Bu diğer [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) yöntemleri için de geçerlidir.
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli kombinasyonlar (örneğin, byrefs bir dizi) oluşturmaya çalıştığınızda başarısız olmayın.
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli kombinasyonlar (örneğin, bir `byref` dizi nesne) oluşturmaya çalıştığınızda başarısız olmayın.
 
 - İşaretçi parametreleri olan üyeleri çağırmak için yansımayı kullanamazsınız.
 
@@ -117,7 +117,7 @@ Aşağıdaki bölümlerde, httpclient ve Windows Communication Foundation (WCF) 
 
 - Değer türü için <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> yöntemleri ve yöntemleri geçersiz kılarsanız, taban sınıf uygulamalarını aramayın. Windows Mağazası uygulamaları için .NET'te bu yöntemler yansımaya dayanır. Derleme zamanında ,NET Native çalışma zamanı yansımasına dayanmayan bir uygulama oluşturur. Bu, bu iki yöntemi geçersiz kılmazsanız, beklendiği gibi çalışacakları anlamına gelir, çünkü .NET Native uygulamayı derleme zamanında oluşturur. Ancak, bu yöntemleri geçersiz kılmak, ancak taban sınıf uygulamasını çağırmak bir özel durum la sonuçlanır.
 
-- Bir megabayttan büyük değer türleri desteklenmez.
+- 1 megabayttan büyük değer türleri desteklenmez.
 
 - Değer türlerinin .NET Native'de parametresiz bir oluşturucusu olamaz. (C# ve Visual Basic değer türlerinde parametresiz yapıcıları yasaklar. Ancak, bunlar IL'de oluşturulabilir.)
 
@@ -225,7 +225,7 @@ Windows Mağazası uygulamaları için .NET'te ve <xref:System.Net.Http.HttpClie
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>desteklenir, ancak [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) veya byref türevleri ile kullanıldığında olduğu gibi bazı senaryolarda bir özel durum oluşturur.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>desteklenir, ancak [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) veya `byref` türevleri ile kullanıldığında gibi bazı senaryolarda bir özel durum atar.
 
  [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) desteği için amortismana hazır API'ler şunlardır:
 
@@ -324,7 +324,7 @@ Ancak, .NET Native aşağıdakileri desteklemez:
 
 - <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> Yönetilen bir türde arabirimi uygulama
 
-- [Öznitelik](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) aracılığıyla yönetilen bir türüzerinde <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> IDispatch arabiriminin uygulanması. Ancak, COM nesnelerini aracılığıyla `IDispatch`çağıramayacağınızı ve yönetilen nesnenizin `IDispatch`uygulayamadığını unutmayın.
+- [Öznitelik](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) aracılığıyla yönetilen bir türüzerinde <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> IDispatch arabiriminin uygulanması. Ancak, COM nesnelerini aracılığıyla `IDispatch`arayamadığınızı ve yönetilen nesneniz uygulayamaz. `IDispatch`
 
 Bir platform çağırma yöntemi çağırmak için yansıma kullanma desteklenmez. Yöntem çağrısını başka bir yöntemde sararak ve bunun yerine sarmalayıcıyı aramak için yansımayı kullanarak bu sınırlamayı çözebilirsiniz.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095311"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389489"
 ---
 # <a name="built-in-types-c-reference"></a>Yerleşik türleri (C# başvurusu)
 
@@ -46,6 +46,8 @@ Aşağıdaki tabloda C# yerleşik [başvuru](../keywords/reference-types.md) tü
 int a = 123;
 System.Int32 b = 123;
 ```
+
+[`void`](void.md) Anahtar kelime bir türün yokluğunu temsil eder. Bir değer döndürmeyen bir yöntemin dönüş türü olarak kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

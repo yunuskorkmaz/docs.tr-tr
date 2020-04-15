@@ -2,12 +2,12 @@
 title: dotnet komutu
 description: Dotnet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134069"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389604"
 ---
 # <a name="dotnet-command"></a>dotnet komutu
 
@@ -57,7 +57,7 @@ Komutun `dotnet` iki işlevi vardır:
 
 - .NET Core uygulamalarını çalıştırıyor.
 
-  Uygulamayı çalıştırmak için bir `.dll` uygulama dosyasına giden yolu belirtirsiniz. Örneğin, `dotnet myapp.dll` `myapp` uygulamayı çalıştırın. Dağıtım seçenekleri hakkında bilgi edinmek için [.NET Core uygulama dağıtımına](../deploying/index.md) bakın.
+  Uygulamayı çalıştırmak için bir `.dll` uygulama dosyasına giden yolu belirtirsiniz.  Uygulamayı çalıştırmak için bulmak ve konsol uygulamaları durumunda `Main` yöntemdir giriş noktası yürütmek anlamına gelir. Örneğin, `dotnet myapp.dll` `myapp` uygulamayı çalıştırın. Dağıtım seçenekleri hakkında bilgi edinmek için [.NET Core uygulama dağıtımına](../deploying/index.md) bakın.
 
 ## <a name="options"></a>Seçenekler
 
@@ -77,7 +77,7 @@ Aşağıdaki seçenekler tek `dotnet` başına vardır. Örneğin, `dotnet --inf
 
 - **`--list-runtimes`**
 
-  Yüklenen .NET Core çalışma saatlerinin listesini yazdırır.
+  Yüklenen .NET Core çalışma saatlerinin listesini yazdırır. SDK'nın x86 sürümü yalnızca x86 çalışma saatlerini listeler ve SDK'nın x64 sürümü yalnızca x64 çalışma saatlerini listeler.
 
 - **`--list-sdks`**
 
@@ -195,12 +195,12 @@ Komut | İşlev
 [dotnet nuget delete](dotnet-nuget-delete.md) | Bir paketi sunucudan siler veya listeler.
 [dotnet nuget push](dotnet-nuget-push.md) | Bir paketi sunucuya iter ve yayımlar.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
-[dotnet nuget kaynak eklemek](dotnet-nuget-add-source.md) | Bir NuGet kaynağı ekler.
-[dotnet nuget devre dışı kaynak](dotnet-nuget-disable-source.md) | NuGet kaynağını devre dışı kılmış olur.
-[dotnet nuget etkinleştirmek kaynak](dotnet-nuget-enable-source.md) | Bir NuGet kaynağı sağlar.
-[dotnet nuget listesi kaynak](dotnet-nuget-list-source.md) | Tüm yapılandırılan NuGet kaynaklarını listeler.
-[dotnet nuget kaynak kaldırmak](dotnet-nuget-remove-source.md) | NuGet kaynağını kaldırır.
-[dotnet nuget güncelleme kaynağı](dotnet-nuget-update-source.md) | Bir NuGet kaynağını güncelleştirir.
+[dotnet nuget add source](dotnet-nuget-add-source.md) | Bir NuGet kaynağı ekler.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | NuGet kaynağını devre dışı kılmış olur.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Bir NuGet kaynağı sağlar.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Tüm yapılandırılan NuGet kaynaklarını listeler.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | NuGet kaynağını kaldırır.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | Bir NuGet kaynağını güncelleştirir.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Genel, araç yolu ve yerel araçlar komutları
 
@@ -210,7 +210,7 @@ Komut | İşlev
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Makinenize bir alet yükler.
 [dotnet tool list](dotnet-tool-list.md) | Şu anda makinenizde yüklü olan tüm genel, araç yolu veya yerel araçları listeler.
-[dotnet tool install](dotnet-tool-uninstall.md) | Makinenizdeki bir aracı kaldırın.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Makinenizdeki bir aracı kaldırın.
 [dotnet tool update](dotnet-tool-update.md) | Makinenize yüklenen bir aracı güncelleştirir.
 
 ### <a name="additional-tools"></a>Ek araçlar

@@ -5,33 +5,35 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 0045d2cc0c53d17b07502948088ceec009baba5b
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 200acea81b9f00c659ddceae011430983e2b5f5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121516"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389720"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 geçiş sorunları
 
-Bu konu, .NET Framework sürüm 3.5 Service Pack 1 ile düzeltmeler, standartlara uyumluluk ve güvenlik değişiklikleri ve müşteri geri bildirimlerine dayalı değişiklikler de dahil olmak üzere .NET Framework sürüm 4 arasındaki geçiş sorunlarını açıklar. Bu değişikliklerin çoğu uygulamalarınızdaki programlamalarda herhangi bir değişiklik gerektirmez. Değişiklik içerebilecek olanlar için tablonun Önerilen değişiklikler sütununa bakın. Önemli değişiklikler alana göre ayrılır, örneğin, ASP.NET ve Windows Presentation Foundation (WPF).
+Bu makalede, .NET Framework sürüm 3.5 Hizmet Paketi 1 ve .NET Framework sürüm 4 arasındaki geçiş sorunları, düzeltmeler, standartlara uyumluluk ve güvenlik değişiklikleri ve müşteri geri bildirimlerine dayalı değişiklikler de dahil olmak üzere açıklanmaktadır. Bu değişikliklerin çoğu uygulamalarınızdaki programlamalarda herhangi bir değişiklik gerektirmez. Değişiklik içerebilecek olanlar için tablonun **Önerilen değişiklikler** sütununa bakın. Önemli değişiklikler alana göre ayrılır, örneğin, ASP.NET ve Windows Presentation Foundation (WPF).
 
-Bu konudaki sorunların daha üst düzey bir özeti [için .NET Framework 4'e](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)geçiş kılavuzuna bakın.
+Bu makaledeki sorunların daha üst düzey bir özeti [için .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)geçiş kılavuzuna bakın.
 
 Yeni özellikler hakkında bilgi için [.NET Framework 4'teki Yeniliklere](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)bakın.
 
 ## <a name="aspnet-and-web"></a>ASP.NET ve Web
 
-Ad <xref:System.Web>boşlukları: <xref:System.Web.Mobile> <xref:System.Web.Security>, <xref:System.Web.UI.WebControls>, , ; assembly: System.Web (System.Web.dll içinde)
+Ad <xref:System.Web>boşlukları: <xref:System.Web.Mobile> <xref:System.Web.Security>, , ,<xref:System.Web.UI.WebControls>
 
-| Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
-| ------- | ------------------------ | ------------------- |
+Montaj: System.Web (System.Web.dll)
+
+| Özellik  | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
+| -------- | ------------------------ | ------------------- |
 | **Tarayıcı tanım dosyaları** | Tarayıcı tanım dosyaları, yeni ve güncelleştirilmiş tarayıcılar ve aygıtlar hakkında bilgi içerecek şekilde güncelleştirildi. Netscape Navigator gibi eski tarayıcılar ve aygıtlar kaldırıldı ve Google Chrome ve Apple iPhone gibi yeni tarayıcılar ve cihazlar eklendi.<br><br>Uygulamanız kaldırılan tarayıcı tanımlarından birinden devralınan özel tarayıcı tanımları içeriyorsa, bir hata görürsünüz.<br><br>Nesne <xref:System.Web.HttpBrowserCapabilities> (sayfanın `Request.Browse` özelliği tarafından ortaya çıkarılır) tarayıcı tanım dosyaları tarafından yönlendirilir. Bu nedenle, bu nesnenin bir özelliğine ASP.NET 4'te erişerek döndürülen bilgiler, ASP.NET önceki bir sürümünde döndürülen bilgilerden farklı olabilir. | Uygulamanız eski tarayıcı tanım dosyalarına dayanıyorsa, bunları aşağıdaki klasörden kopyalayabilirsiniz:<br><br>*Windows\\\\Microsoft.NET\\Çerçeve v2.0.50727\\CONFIG\\Tarayıcılar*<br><br>Dosyaları ASP.NET 4 için ilgili * \\\\CONFIG Tarayıcılar* klasörüne kopyalayın. Dosyaları kopyaladıktan sonra [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) komut satırı aracını çalıştırın. Daha fazla bilgi [https://www.asp.net/mobile](/aspnet/mobile/overview) için Web sitesine bakın. |
 | **ASP.NET karma sürümleri altında çalışan çocuk uygulamaları** | ASP.NET ASP.NET önceki sürümlerini çalıştıran uygulamaların çocukları olarak yapılandırılan 4 uygulama yapılandırma veya derleme hataları nedeniyle başlatılamayabilir. Oluşan özel hata, uygulamanın IIS 6.0 altında mı yoksa IIS 7 veya IIS 7.5 altında mı çalıştığına bağlıdır. | Yapılandırma sisteminin ASP.NET 4 uygulamasını doğru bir şekilde tanıması için etkilenen uygulamaların yapılandırma dosyalarında değişiklik yapabilirsiniz. Yaptığınız değişiklikler hakkında bilgi için, ASP.NET Web sitesinde [4 Breaking Changes ASP.NET](/aspnet/whitepapers/aspnet4/breaking-changes) belgedeki "ASP.NET 4 Çocuk Başvurusunun ASP.NET 2,0 veya ASP.NET 3,5 Uygulamaları Altında Başlatılamaması" bölümüne bakın. |
-| **İstemkimliği değişiklikleri** | ASP.NET `clientIDMode` 4'teki yeni ayar, ASP.NET'ın `id` HTML öğeleri için özniteliği nasıl oluşturduğunu belirtmenizi sağlar. ASP.NET önceki sürümlerinde, varsayılan davranış `AutoID` `clientIDMode`. Varsayılan ayar şimdi. `Predictable` Daha fazla bilgi için [Web Sunucusu Denetimi Kimliği ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)bakın. | Uygulamanızı ASP.NET 2.0 veya ASP.NET 3.5'ten yükseltmek için Visual Studio'yu kullanırsanız, araç web.config dosyasına otomatik olarak .NET Framework'ün önceki sürümlerinin davranışını koruyan bir ayar ekler. Ancak, bir uygulamayı IIS'deki uygulama havuzunu değiştirerek .NET Framework 4'e hedeflemek için yükseltirseniz, ASP.NET varsayılan olarak yeni modu kullanır. Yeni istemci kimliği modunu devre dışı katmak için Web.config dosyasına aşağıdaki ayarı ekleyin:<br><br>`<pages clientIDMode="AutoID" />` |
+| **İstemkimliği değişiklikleri** | ASP.NET `clientIDMode` 4'teki yeni ayar, ASP.NET'ın `id` HTML öğeleri için özniteliği nasıl oluşturduğunu belirtmenizi sağlar. ASP.NET önceki sürümlerinde, varsayılan davranış `AutoID` `clientIDMode`. Varsayılan ayar şimdi. `Predictable` Daha fazla bilgi için [Web Sunucusu Denetimi Kimliği ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)bakın. | Uygulamanızı ASP.NET 2.0 veya ASP.NET 3.5'ten yükseltmek için Visual Studio'yu kullanırsanız, araç web.config dosyasına otomatik olarak .NET Framework'ün önceki sürümlerinin davranışını koruyan bir ayar ekler. Ancak, bir uygulamayı IIS'deki uygulama havuzunu .NET Framework 4'e hedeflemek üzere değiştirerek yükseltirseniz, ASP.NET varsayılan olarak yeni modu kullanır. Yeni istemci kimliği modunu devre dışı katmak için Web.config dosyasına aşağıdaki ayarı ekleyin:<br><br>`<pages clientIDMode="AutoID" />` |
 | **Kod erişim güvenliği (CAS)** | ASP.NET 3.5'te eklenen 2.0 NET özellikleri ASP.NET .NET Framework 1.1 ve .NET Framework 2.0 kod erişim güvenliği (CAS) modelini kullanır. Ancak, 4 ASP.NET CAS uygulaması önemli ölçüde elden geçirilmiştir. Sonuç olarak, genel derleme önbelleğinde çalışan güvenilir koda dayanan kısmi güven ASP.NET uygulamaları çeşitli güvenlik özel durumları nedeniyle başarısız olabilir. Makine CAS ilkesinde kapsamlı değişikliklere dayanan kısmi güven uygulamaları da başarısız olabilir ve güvenlik özel durumları atabilir. | Aşağıdaki örnekte gösterildiği gibi `legacyCasModel` `trust` yapılandırma öğesindeki yeni özniteliği kullanarak kısmi güven ASP.NET 4 uygulamayı ASP.NET 1.1 ve 2.0 davranışına geri dönebilirsiniz:<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>Önemli: Eski CAS modeline geri dönmek azaltılmış güvenlik temsil edebilir.<br><br>Yeni ASP.NET 4 kod erişim güvenlik modeli hakkında daha fazla bilgi için, [ASP.NET 4 Uygulamalar'da Kod Erişim Güvenliği'ne](https://docs.microsoft.com/previous-versions/dd984947(v=vs.100))bakın. |
-| **Yapılandırma dosyaları** | .NET Framework ve ASP.NET 4'ün kök yapılandırma dosyaları (machine.config dosyası ve root Web.config dosyası) 3.5'ASP.NET içinde web.config dosyalarında bulunan ortak yapılandırma bilgilerinin çoğunu içerecek şekilde güncelleştirildi. Yönetilen IIS 7 ve IIS 7.5 yapılandırma sistemlerinin karmaşıklığı nedeniyle, ASP.NET 4 altında ve IIS 7 ve IIS 7.5 altında ASP.NET 3.5 uygulama çalıştırmak ASP.NET hatalara veya IIS hatalarına neden olabilir. | Visual Studio'daki proje yükseltme araçlarını kullanarak 3,5 uygulama ASP.NET ASP.NET 4'e yükseltin. Visual Studio 2010, ASP.NET 3.5 uygulamasının Web.config dosyasını ASP.NET 4 için uygun ayarları içerecek şekilde otomatik olarak değiştirir.<br><br>Ancak, .NET Framework 4'ASP.NET 3,5 uygulamalarını derleme yapmadan çalıştırabilirsiniz. Bu durumda, .NET Framework 4 ve IIS 7 veya IIS 7.5 altında uygulamayı çalıştırmadan önce uygulamanın Web.config dosyasını el ile değiştirmeniz gerekebilir. Yaptığınız belirli değişiklik, Hizmet Paketi (SP) sürümleri de dahil olmak üzere birlikte çalıştığınız yazılımın birleşimine bağlıdır. Bu değişiklikten etkilenen olası yazılım kombinasyonları ve belirli kombinasyonlarla ilgili sorunların nasıl çözüleceği hakkında bilgi için, ASP.NET Web sitesinde [4 Breaking Changes ASP.NET](/aspnet/whitepapers/aspnet4/breaking-changes) belgedeki "Yeni ASP.NET 4 Kök Yapılandırmasına İlişkin Yapılandırma Hataları" bölümüne bakın. |
-| **Kontrol oluşturma** | ASP.NET önceki sürümlerinde, bazı denetimler devre dışı kaldığınız biçimlendirmeyi yaydı. Varsayılan olarak, bu tür biçimlendirme artık ASP.NET 4'te oluşturulmadı. Oluşturma değişiklikleri aşağıdaki denetimleri etkiler:<br><br>* `Image` Ve `ImageButton` denetimleri artık `border="0"` bir öznitelik işlemek.<br>* `BaseValidator` Ondan türetilen sınıf ve doğrulama denetimleri artık varsayılan olarak kırmızı metin işlemez.<br>* `HtmlForm` Denetim bir `name` öznitelik oluşturmaz.<br>* `Table` Denetim artık bir `border="0"` öznitelik işler.<br><br>Kullanıcı `Label` girişi için tasarlanmayan denetimler (örneğin, denetim), `disabled="disabled"` `Enabled` özellikleri ayarlanırsa `false` (veya bu ayarı bir kapsayıcı denetiminden devralıyorsa) artık özniteliği işlemez. | Uygulamanızı 2,0 veya ASP.NET 3,5'ASP.NET yükseltmek için Visual Studio'yu kullanıyorsanız, araç web.config dosyasına eski işlemeyi koruyan bir ayar otomatik olarak ekler. Ancak, bir uygulamayı .NET Framework 4'e hedeflemek için IIS'deki uygulama havuzunu değiştirerek yükseltirseniz, ASP.NET varsayılan olarak yeni işleme modunu kullanır. Yeni işleme modunu devre dışı katmak için Web.config dosyasına aşağıdaki ayarı ekleyin:<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
+| **Yapılandırma dosyaları** | .NET Framework ve ASP.NET 4 için kök yapılandırma dosyaları (machine.config dosyası ve root Web.config dosyası) ASP.NET 3.5'teki uygulama Web.config dosyalarında bulunan ortak yapılandırma bilgilerinin çoğunu içerecek şekilde güncelleştirildi. Yönetilen IIS 7 ve IIS 7.5 yapılandırma sistemlerinin karmaşıklığı nedeniyle, ASP.NET 4 altında ve IIS 7 ve IIS 7.5 altında ASP.NET 3.5 uygulama çalıştırmak ASP.NET hatalara veya IIS hatalarına neden olabilir. | Visual Studio'daki proje yükseltme araçlarını kullanarak 3,5 uygulama ASP.NET ASP.NET 4'e yükseltin. Visual Studio 2010, ASP.NET 3.5 uygulamasının Web.config dosyasını ASP.NET 4 için uygun ayarları içerecek şekilde otomatik olarak değiştirir.<br><br>Ancak, .NET Framework 4'ASP.NET 3.5 uygulamalarını derleme yapmadan çalıştırabilirsiniz. Bu durumda, uygulamayı .NET Framework 4 ve IIS 7 veya IIS 7.5 altında çalıştırmadan önce uygulamanın Web.config dosyasını el ile değiştirmeniz gerekebilir. Yaptığınız belirli değişiklik, Hizmet Paketi (SP) sürümleri de dahil olmak üzere birlikte çalıştığınız yazılımın birleşimine bağlıdır. Bu değişiklikten etkilenen olası yazılım kombinasyonları ve belirli kombinasyonlarla ilgili sorunların nasıl çözüleceği hakkında bilgi için, ASP.NET Web sitesinde [4 Breaking Changes ASP.NET](/aspnet/whitepapers/aspnet4/breaking-changes) belgedeki "Yeni ASP.NET 4 Kök Yapılandırmasına İlişkin Yapılandırma Hataları" bölümüne bakın. |
+| **Kontrol oluşturma** | ASP.NET önceki sürümlerinde, bazı denetimler devre dışı kaldığınız biçimlendirmeyi yaydı. Varsayılan olarak, bu tür biçimlendirme artık ASP.NET 4'te oluşturulmadı. Oluşturma değişiklikleri aşağıdaki denetimleri etkiler:<br><br>* `Image` Ve `ImageButton` denetimleri artık `border="0"` bir öznitelik işlemek.<br>* `BaseValidator` Ondan türetilen sınıf ve doğrulama denetimleri artık varsayılan olarak kırmızı metin işlemez.<br>* `HtmlForm` Denetim bir `name` öznitelik oluşturmaz.<br>* `Table` Denetim artık bir `border="0"` öznitelik işler.<br><br>Kullanıcı `Label` girişi için tasarlanmayan denetimler (örneğin, denetim), `disabled="disabled"` `Enabled` özellikleri ayarlanırsa `false` (veya bu ayarı bir kapsayıcı denetiminden devralıyorsa) artık özniteliği işlemez. | Uygulamanızı 2,0 veya ASP.NET 3,5'ASP.NET yükseltmek için Visual Studio'yu kullanıyorsanız, araç web.config dosyasına eski işlemeyi koruyan bir ayar otomatik olarak ekler. Ancak, bir uygulamayı IIS'deki uygulama havuzunu .NET Framework 4'e hedeflemek üzere değiştirerek yükseltirseniz, ASP.NET varsayılan olarak yeni işleme modunu kullanır. Yeni işleme modunu devre dışı katmak için Web.config dosyasına aşağıdaki ayarı ekleyin:<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **Varsayılan belgelerdeki olay işleyicileri** | ASP.NET 4, html `form` öğesinin `action` öznitelik değerini, varsayılan belgeeşlenmiş uzantısız bir URL'ye istekte bulunulduğunda boş bir dize olarak işler. ASP.NET önceki sürümlerinde, default.aspx isteği ile `http://contoso.com` sonuçlanır. Bu belgede, açılış `form` etiketi aşağıdaki örnekte olduğu gibi işlenir:<br><br>`<form action="Default.aspx" />`<br><br>4 ASP.NET'da, `http://contoso.com` Default.aspx'a bir istekle de sonuçlanır, ancak `form` ASP.NET şimdi HTML açılış etiketini aşağıdaki örnekte olduğu gibi işler:<br><br>`<form action="" />`<br><br>Öznitelik `action` boş bir dize olduğunda, `DefaultDocumentModule` IIS nesnesi Varsayılan.aspx için bir alt istek oluşturur. Çoğu koşulda, bu alt istek uygulama koduiçin saydamdır ve Varsayılan.aspx sayfası normal çalışır. Ancak, yönetilen kod ile IIS 7 veya IIS 7.5 Tümleşik modu arasındaki olası bir etkileşim, yönetilen .aspx sayfalarının alt istek sırasında düzgün şekilde çalışmasını durdurmasına neden olabilir. Aşağıdaki koşullar oluşursa, varsayılan .aspx belgesiiçin alt isteği bir hataya veya beklenmeyen davranışla sonuçlanır:<br><br>* Bir .aspx sayfası tarayıcıya `form` öğenin `action` özniteliği "" olarak ayarlanmış olarak gönderilir.<br>* Form ASP.NET geri yayınlanır.<br>* Yönetilen bir HTTP modülü gibi varlık gövdesinin bir kısmını `Request.Form` okur. `Request.Params` Bu, POST isteğinin varlık gövdesinin yönetilen belleğe okunmasına neden olur. Sonuç olarak, varlık gövdesi artık IIS 7 veya IIS 7.5 Tümleşik modunda çalışan yerel kod modülleri için kullanılamaz.<br>* IIS `DefaultDocumentModule` nesnesi sonunda çalışır ve Default.aspx belgeiçin bir alt istek oluşturur. Ancak, varlık gövdesi zaten yönetilen kod parçası tarafından okunduğu için, alt istek göndermek için kullanılabilir bir varlık gövdesi yoktur.<br>* HTTP ardışık alt istek için çalıştığında, .aspx dosyalarının işleyicisi işleyici-yürütme aşamasında çalışır.<br><br>Varlık gövdesi olmadığından, form değişkenleri ve görünüm durumu yoktur. Bu nedenle,.aspx sayfa işleyicisi için hangi olayın (varsa) yükseltilmesi gerektiğini belirlemek için kullanılabilir bilgi yoktur. Sonuç olarak, etkilenen .aspx sayfası için postback olay işleyicileri hiçbiri çalıştırın. | Bu değişikliğin sonucu ortaya çıkabilecek sorunları çözme yolları hakkında bilgi için, ASP.NET Web sitesinde [4 Son Dakika Değişikliği ASP.NET](/aspnet/whitepapers/aspnet4/breaking-changes) belgede yer alan "Olay İşleyicileri IIS 7 veya IIS 7.5 Tümleşik Modunda Varsayılan Belgede Yükseltilmeyebilir" bölümüne bakın. |
 | **Karma algoritma** | ASP.NET, form kimlik doğrulama tanımlama bilgileri ve görünüm durumu gibi verilerin güvenli olmasına yardımcı olmak için hem şifreleme hem de karma algoritmalar kullanır. Varsayılan olarak, ASP.NET <xref:System.Security.Cryptography.HMACSHA256> 4 tanımlama bilgileri ve görünüm durumu karma işlemleri için algoritmayı kullanır. ASP.NET önceki sürümlerinde <xref:System.Security.Cryptography.HMACSHA1> eski algoritma kullanılmıştır. | Form kimlik doğrulama tanımlama bilgileri gibi verilerin .NET Framework sürümlerinde çalışması gereken 2,0 ve ASP.NET 4'ASP.NET karıştıran uygulamalar <xref:System.Security.Cryptography.HMACSHA1> çalıştırırsanız, Web.config dosyasına aşağıdaki ayarı ekleyerek eski algoritmayı kullanmak üzere bir ASP.NET 4 Web uygulamasını yapılandırın:<br><br>`<machineKey validation="SHA1" />` |
 | **Internet Explorer'da barındırma denetimleri** | Web'de denetimleri barındırmak için daha iyi çözümler olduğundan, Artık Internet Gezgini'nde Windows Forms denetimlerini barındıramaz. Bu nedenle, IEHost.dll ve IEExec.exe derlemeleri .NET Framework kaldırıldı. | Web uygulamalarında özel denetim geliştirme için aşağıdaki teknolojileri kullanabilirsiniz:<br><br>* Bir Silverlight uygulaması oluşturabilir ve tarayıcı dışında çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için [Tarayıcı Dışı Destek'e](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29)bakın.<br>* WPF özelliklerinden yararlanmak için bir XAML tarayıcı uygulaması (XBAP) oluşturabilirsiniz (istemci makinelerde .NET Framework gerektirir). Daha fazla bilgi için [WPF XAML Tarayıcı Uygulamalarına Genel Bakış'a](../wpf/app-development/wpf-xaml-browser-applications-overview.md)bakın. |
@@ -42,7 +44,7 @@ Ad <xref:System.Web>boşlukları: <xref:System.Web.Mobile> <xref:System.Web.Secu
 | **Web.config dosyasında mobil montaj** | ASP.NET önceki sürümlerinde, System.Web.Mobile.dll derlemesine bir `assemblies` başvuru, altındaki `system.web` / `compilation`bölümde root Web.config dosyasına eklenmiştir. Performansı artırmak için bu derlemeye yapılan başvuru kaldırıldı.<br><br>Not: System.Web.Mobile.dll montajı ve mobil denetimASP.NET 4 ASP.NET dahildir, ancak bunlar amortismana dahildir. | Bu derlemedeki türleri kullanmak istiyorsanız, derlemeye kök Web.config dosyasında veya bir uygulama Web.config dosyasında bir başvuru ekleyin. |
 | **Çıkış önbelleğe alma** | 1.0ASP.NETda, bir hata çıktı `Location="ServerAndClient"` &euro;olarak belirtilen önbelleğe alınmış sayfalara neden `Vary:*` olur "yanıtta bir HTTP üstbilgisini yalamak için önbellek ayarı. Bu, istemci tarayıcılara sayfayı hiçbir zaman yerel olarak önbelleğe alıp vermemelerini söyleme etkisine sahipti. 1.1ASP.NET de, <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> `Vary:*` üstbilgi bastırmak için çağrılabilir yöntem eklendi. Ancak, hata raporları geliştiricilerin varolan `SetOmitVaryStar` davranıştan habersiz olduğunu düşündürmektedir.<br><br>4 `Vary:*` ASP.NET,HTTP üstbilgisi artık aşağıdaki yönergeyi belirten yanıtlardan yayımlanamaz:<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>Sonuç olarak, <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> `Vary:*` üstbilgi bastırmak için yöntem artık gerekli değildir. Öznitelik için `Location` "ServerAndClient" olarak belirten uygulamalarda, sayfalar aramanız <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>gerekmeden tarayıcıda önbelleğe alınabilir. | Uygulamadaki sayfaların yaramayapması `Vary:*`gerekiyorsa, <xref:System.Web.HttpResponse.AppendHeader%2A> aşağıdaki örnekte gösterildiği gibi yöntemi çağırın:<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>Alternatif olarak, çıktı önbelleğe alma `Location` özniteliğinin değerini "Sunucu" olarak değiştirebilirsiniz. |
 | **Sayfa ayrıştma** | ASP.NET Web sayfaları (.aspx dosyaları) ve kullanıcı denetimleri (.ascx dosyaları) için sayfa ayırıcısı, ASP.NET 4'te ASP.NET önceki sürümlerinden daha katıdır ve önceki sürümlerden daha fazla biçimlendirmeyi geçersiz olarak işaretler. | Bir sayfa çalıştığında oluşan hata iletilerini inceleyin ve geçersiz biçimlendirmeden kaynaklanan hataları düzeltin. |
-| **Pasaport türleri** | ASP.NET 2.0'da yerleşik Olan Passport desteği eskidir ve Passport'taki (şimdi Live ID SDK) değişiklikler nedeniyle desteklenmez. Sonuç olarak, Passport ile <xref:System.Web.Security> ilgili türleri şimdi `ObsoleteAttribute` öznitelik ile işaretlenir. | Windows Live ID SDK'yı <xref:System.Web.Security> kullanmak için ad <xref:System.Web.Security.PassportIdentity>alanında (örneğin,) Passport türlerini kullanan tüm kodları değiştirin. |
+| **Pasaport türleri** | ASP.NET 2.0'da yerleşik Olan Passport desteği eskidir ve Passport'taki (şimdi Live ID SDK) değişiklikler nedeniyle desteklenmez. Sonuç olarak, Passport ile <xref:System.Web.Security> ilgili türleri şimdi `ObsoleteAttribute` öznitelik ile işaretlenir. | Windows Live ID SDK'yı kullanmak için <xref:System.Web.Security> <xref:System.Web.Security.PassportIdentity>ad alanında (örneğin,) Passport türlerini kullanan tüm kodu değiştirin. |
 | **FilePath özelliğindeki PathInfo bilgileri** | ASP.NET 4 `PathInfo` artık <xref:System.Web.HttpRequest.FilePath>, , <xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>ve <xref:System.Web.HttpRequest.CurrentExecutionFilePath>. Bunun yerine, `PathInfo` bilgiler <xref:System.Web.HttpRequest.PathInfo>' de mevcuttur. Örneğin, aşağıdaki URL parçasını düşünün:<br><br>`/testapp/Action.mvc/SomeAction`<br><br>ASP.NET önceki sürümlerinde, <xref:System.Web.HttpRequest> özellikleri aşağıdaki değerlere sahiptir:<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (boş)<br><br>ASP.NET 4'te, <xref:System.Web.HttpRequest> özelliklerin yerine aşağıdaki değerler vardır:<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | Yol bilgilerini döndürmek için <xref:System.Web.HttpRequest> sınıfın özelliklerine güvendiğiniz yerler için kodunuzu inceleyin; yol bilgilerinin döndürülme şeklindeki değişiklikleri yansıtacak şekilde kodu değiştirin. |
 | **Doğrulama isteği** | İstek doğrulanmasını iyileştirmek için, ASP.NET istek doğrulaması istek yaşam döngüsünün daha önce çağrılır. Sonuç olarak, Web servis çağrıları ve özel işleyiciler gibi .aspx dosyaları için olmayan istekler için istek doğrulama çalışır. İstek işleme ardışık alanında özel HTTP modülleri çalışırken istek doğrulaması da etkin olacaktır.<br><br>Bu değişikliğin bir sonucu olarak, .aspx dosyaları dışındaki kaynaklariçin istek istekleri istek doğrulama hataları atabilir. İstek ardışık alanında çalışan özel kod (örneğin, özel HTTP modülleri) istek doğrulama hataları da atabilir. | Gerekirse, Web yapılandırma dosyasında aşağıdaki ayarı kullanarak yalnızca .aspx sayfalarının istek doğrulamasını tetikleme eski davranışına geri dönebilirsiniz:<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>Uyarı: Eski davranışa geri dönerseniz, varolan işleyiciler, modüller ve diğer özel koddaki tüm kodların XSS saldırı vektörleri olabilecek güvenli olmayan HTTP girişleri için denetimler gerçekleştirdiğinden emin olun. |
 | **Yönlendirme** | Visual Studio 2010'da bir dosya sistemi Web sitesi oluşturursanız ve Web sitesi klasör adında nokta (.) içeren bir klasördeyse, URL yönlendirme güvenilir bir şekilde çalışmaz. Bazı sanal yollardan bir HTTP 404 hatası döndürülür. Visual Studio 2010 kök sanal dizini için yanlış bir yol kullanarak Visual Studio Geliştirme Sunucusu başlattı çünkü bu oluşur. | * Dosya tabanlı Web sitesinin **Özellikleri** sayfasında, **Sanal Yol** özniteliğini "/" olarak değiştirin.<br><br>-veya-<br><br>* Web sitesi projesi yerine Bir Web uygulama projesi oluşturun. Web uygulama projeleri bu soruna sahip değildir ve PROJE KLASÖRÜ'nde bir nokta olsa bile URL yönlendirme çalışır.<br><br>-veya-<br><br>* IIS'de barındırılan HTTP tabanlı bir Web sitesi oluşturun. IIS tarafından barındırılan Web sitelerinin sanal yolda ve proje dosyası klasöründe noktaları olabilir. |
@@ -63,7 +65,9 @@ Ad <xref:System.Web>boşlukları: <xref:System.Web.Mobile> <xref:System.Web.Secu
 
 ### <a name="date-and-time"></a>Tarih ve saat
 
-Ad alanı: <xref:System>; montaj: mscorlib (mscorlib.dll olarak)
+Namespace:<xref:System>
+
+Montaj: mscorlib (mscorlib.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -74,19 +78,23 @@ Ad alanı: <xref:System>; montaj: mscorlib (mscorlib.dll olarak)
 
 Yeni tarafsız ve belirli kültürlerin listesi için, [Küreselleşme ve Yerelleştirmede Yenilikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29)bölümüne bakın.
 
-Ad alanı: <xref:System.Globalization>; montaj: mscorlib (mscorlib.dll olarak)
+Namespace:<xref:System.Globalization>
+
+Montaj: mscorlib (mscorlib.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
-| **Kültür isimleri** | Aşağıdaki isim değişiklikleri Alman, Divehi ve Afrika kültürlerini etkiler:<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: Alman (Switizerland) (de-CH) kültürünün para birimi adı "sFr" den değiştirilmiştir. "Fr" için.<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: Divehi (Maldivler) (dv-MV) kültürünün uzun tarih modeli "dd/MMMM/yyyy" den "dd/MM/yyyy" olarak değişmiştir.<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: P.M. Afrikaans (Güney Afrika) (af-ZA) kültürünün atafı "nm"den "PM"ye değiştirilmiştir. | Kültür adı değişikliklerine dikkat edin. |
+| **Kültür isimleri** | Aşağıdaki isim değişiklikleri Alman, Divehi ve Afrika kültürlerini etkiler:<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: Alman (İsviçre) (de-CH) kültürünün para birimi adı "sFr" olarak değiştirilmiştir. "Fr" için.<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: Divehi (Maldivler) (dv-MV) kültürünün uzun tarih modeli "dd/MMMM/yyyy" den "dd/MM/yyyy" olarak değişmiştir.<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>: P.M. Afrikaans (Güney Afrika) (af-ZA) kültürünün atafı "nm"den "PM"ye değiştirilmiştir. | Kültür adı değişikliklerine dikkat edin. |
 | **LCID parametresi** | Otomasyon sunucusu ayarlarında beklenen davranışla tutarlı olması için CLR, `LCID` parametrenin geçerli kültürünü artık yönetilmeyen COM tabanlı uygulamalara geçirmiyor. Bunun yerine, kültür için 1033 (en-us) geçer. | Belirli bir kültür gerektiren yerel uygulamalar dışında değişiklik gerekli değildir. |
 | **Eski kültür türleri** | <xref:System.Globalization.CultureTypes> Ve <xref:System.Globalization.CultureTypes> kültür türleri artık demode.<br><br>Geriye dönük uyumluluk <xref:System.Globalization.CultureTypes> için, şimdi önceki .NET Framework ile birlikte verilen <xref:System.Globalization.CultureTypes> nötr ve belirli kültürleri döndürür ve şimdi boş bir liste döndürür. | Numaralandırmanın <xref:System.Globalization.CultureTypes> diğer değerlerini kullanın. |
-| **Kültürün alınması** | Windows 7'den başlayarak ,NET Framework 4, verilerin kendisini depolamak yerine işletim sisteminden kültür bilgilerini alır. Buna ek olarak, .NET Framework verileri sıralamak ve kasaya maksatlandırmak için Windows ile senkronize eder. | Yok. |
-| **Unicode 5.1 standartları** | .NET Framework artık tüm Unicode 5.1 karakterlerini destekliyor ve bu da yaklaşık 1400 karaktere ek. Ek karakterler yeni semboller, oklar, aksamalar, noktalama işaretleri, matematiksel semboller, CJK vuruş ve ideograflar, ek Malayalam ve Telugu sayısal karakterler ve çeşitli Myanmar, Latin, Arapça, Yunan, Moğolca ve Kiril karakterleri içerir. Aşağıdaki yeni senaryolar Unicode 5.1 ile desteklenir: Sundanese, Lepcha, Ol Chiki, Vai, Saurashtra, Kayah Li, Rejang, Gurmukhi, Odia, Tamil, Telugu ve Malayalam karakterleri ve Cham. | Yok. |
+| **Kültürün alınması** | Windows 7 ile başlayarak,.NET Framework 4, verilerin kendisini depolamak yerine işletim sisteminden kültür bilgilerini alır. Buna ek olarak, .NET Framework verileri sıralamak ve kasaya maksatlandırmak için Windows ile senkronize eder. | Yok. |
+| **Unicode 5.1 standartları** | .NET Framework artık tüm Unicode 5.1 karakterlerini destekliyor -- yaklaşık 1400 karakter ek. Ek karakterler yeni semboller, oklar, aksamalar, noktalama işaretleri, matematiksel semboller, CJK vuruş ve ideograflar, ek Malayalam ve Telugu sayısal karakterler ve çeşitli Myanmar, Latin, Arapça, Yunan, Moğolca ve Kiril karakterleri içerir. Aşağıdaki yeni senaryolar Unicode 5.1 ile desteklenir: Sundanese, Lepcha, Ol Chiki, Vai, Saurashtra, Kayah Li, Rejang, Gurmukhi, Odia, Tamil, Telugu ve Malayalam karakterleri ve Cham. | Yok. |
 
 ### <a name="exceptions"></a>Özel durumlar
 
-Ad <xref:System>boşlukları: <xref:System.Runtime.ExceptionServices>, ; montaj: mscorlib (mscorlib.dll olarak)
+Ad alanları: <xref:System>,<xref:System.Runtime.ExceptionServices>
+
+Montaj: mscorlib (mscorlib.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -95,7 +103,9 @@ Ad <xref:System>boşlukları: <xref:System.Runtime.ExceptionServices>, ; montaj:
 
 ### <a name="reflection"></a>Yansıma
 
-Ad alanı: <xref:System.Reflection>; montaj: mscorlib (mscorlib.dll olarak)
+Namespace:<xref:System.Reflection>
+
+Montaj: mscorlib (mscorlib.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -108,7 +118,9 @@ Ad alanı: <xref:System.Reflection>; montaj: mscorlib (mscorlib.dll olarak)
 
 ### <a name="interoperability"></a>Birlikte Çalışabilirlik
 
-Ad alanı: <xref:System.Runtime.InteropServices>; montaj: mscorlib (mscorlib.dll olarak)
+Namespace:<xref:System.Runtime.InteropServices>
+
+Montaj: mscorlib (mscorlib.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -125,7 +137,9 @@ Bu bölümde, veri kümeleri ve SQL istemcileri, Entity Framework, LINQ to SQL v
 
 Aşağıdaki tabloda, daha önce sınırlamalar veya diğer sorunlar olan özelliklerdeki geliştirmeler açıklanmaktadır.
 
-Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects.DataClasses> <xref:System.Data.SqlClient>, , ; derlemeler: System.Data (System.Data.dll'de), System.Data.Entity (System.Data.Entity.dll'de)
+Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects.DataClasses>, ,<xref:System.Data.SqlClient>
+
+Derlemeler: System.Data (System.Data.dll'de), System.Data.Entity (System.Data.Entity.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -140,7 +154,9 @@ Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects.DataClasses> <xref:
 
 Aşağıdaki tabloda, daha önce sınırlamalar veya diğer sorunlar olan özelliklerdeki geliştirmeler açıklanmaktadır.
 
-Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects> <xref:System.Data.Objects.DataClasses>, , ; assembly: System.Data.Entity (System.Data.Entity.dll içinde)
+Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects>, ,<xref:System.Data.Objects.DataClasses>
+
+Derlemeler: System.Data.Entity (System.Data.Entity.dll içinde)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -153,18 +169,22 @@ Ad <xref:System.Data>boşlukları: <xref:System.Data.Objects> <xref:System.Data.
 
 Aşağıdaki tabloda, daha önce sınırlamalar veya diğer sorunlar olan özelliklerdeki geliştirmeler açıklanmaktadır.
 
-Ad alanı: <xref:System.Data.Linq>; assembly: System.Data.Linq (System.Data.Linq.dll içinde)
+Namespace:<xref:System.Data.Linq>
+
+Montaj: System.Data.Linq (System.Data.Linq.dll içinde)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
 | **Olaylar** | Koleksiyon <xref:System.Data.Linq.EntitySet%601> şimdi, <xref:System.Data.Linq.EntitySet%601.ListChanged> koleksiyon yüklendiğinde olayı yükseltmenin yanı sıra, <xref:System.Data.Linq.EntitySet%601> boşaltılan işlemleri ekleme ve kaldırma olayını yükseltir. |
-| **Sorgular** | `Skip(0)`artık LINQ'dan SQL sorgularına göz ardı edilmez. Sonuç olarak, bu yönteme sahip sorgular farklı davranabilir. Örneğin, bazı durumlarda, `OrderBy` bir yan `Skip(0)`tümce ile gereklidir <xref:System.NotSupportedException> ve `OrderBy` yan tümce dahil edilmediyse sorgu şimdi bir özel durum alacaktır. |
+| **Sorgular** | `Skip(0)`artık LINQ'dan SQL sorgularına göz ardı edilmez. Sonuç olarak, bu yönteme sahip sorgular farklı davranabilir. Örneğin, bazı durumlarda, `OrderBy` bir yan `Skip(0)`tümce ile gereklidir ve <xref:System.NotSupportedException> `OrderBy` soru cümlesi eklenmediyse sorgu şimdi bir özel durum oluşturur. |
 
 ### <a name="wcf-data-services"></a>WCF Veri Hizmetleri
 
 Aşağıdaki tabloda, daha önce sınırlamalar veya diğer sorunlar olan özelliklerdeki geliştirmeler açıklanmaktadır.
 
-Ad <xref:System.Data.Services>boşlukları: <xref:System.Data.Services.Client> <xref:System.Data.Services.Common>, <xref:System.Data.Services.Providers>, , ; derlemeler: System.Data.Services (System.Data.Services.dll içinde), System.Data.Services.Client (System.Data.Services.Client.dll içinde)
+Ad <xref:System.Data.Services>boşlukları: <xref:System.Data.Services.Client> <xref:System.Data.Services.Common>, , ,<xref:System.Data.Services.Providers>
+
+Derlemeler: System.Data.Services (System.Data.Services.dll içinde), System.Data.Services.Client (System.Data.Services.Client.dll içinde)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -191,13 +211,15 @@ Aşağıdaki tabloda, daha önce sınırlamalar veya diğer sorunlar olan özell
 
 ### <a name="applications"></a>Uygulamalar
 
-Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls>, ; derleme: PresentationFramework (PresentationFramework.dll içinde)
+Ad alanları: <xref:System.Windows>,<xref:System.Windows.Controls>
+
+Derlemeler: Sunum Çerçevesi (PresentationFramework.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
 | **Özel durum işleme** | Hataların daha önce algılanmasını sağlamak için, <xref:System.Reflection.TargetInvocationException> WPF a atar ve <xref:System.NullReferenceException> <xref:System.OutOfMemoryException> <xref:System.StackOverflowException> <xref:System.Security.SecurityException> <xref:System.Exception.InnerException> özelliği özgün özel durumu yakalamak yerine , , ve , gibi kritik özel durumlara ayarlar. | Yok. |
 | **Bağlantılı kaynaklar** | Bağlantıyı kolaylaştırmak için, projenin klasör yapısı dışında bir konumda bulunan kaynak dosyaları (resimler gibi), uygulama oluşturulurken kaynak kimliği olarak sadece dosya adı yerine kaynak dosyasının tam yolunu kullanır. Uygulama, dosyaları çalışma zamanında bulabilecektir. | Yok. |
-| **Kısmi güven uygulamaları** | Güvenlik hususları için, kısmi güven le çalışan ve <xref:System.Windows.Controls.WebBrowser> denetim veya <xref:System.Windows.Controls.Frame> HTML içeren bir <xref:System.Security.SecurityException> denetim içeren Windows tabanlı uygulamalar, denetim oluşturulduğunda bir şey atar.<br><br>Tarayıcı uygulamaları bir özel durum oluşturur ve aşağıdaki koşulların tümü yerine getirilirse bir ileti görüntüler:<br><br>* Uygulama Firefox'ta çalışıyor.<br>* Uygulama, internet bölgesinde güvenilmeyen sitelerden kısmi güvenle çalışıyor.<br>* Uygulama html <xref:System.Windows.Controls.WebBrowser> içeren <xref:System.Windows.Controls.Frame> bir denetim veya denetim içerir.<br><br>Güvenilen sitelerden veya intranet bölgesinden çalışan uygulamaların etkilenmeyeceğini unutmayın. | Tarayıcı uygulamalarınızda, aşağıdakilerden birini yaparak bu değişikliği kolaylaştırabilirsiniz:<br><br>* Tam güven tarayıcı uygulaması çalıştırın.<br>* Müşterilerin uygulamanın sitesini güvenilir siteler bölgesine eklemesini sağlar.<br>* Müşterilerin Internet Explorer'da uygulamayı çalıştırın. |
+| **Kısmi güven uygulamaları** | Güvenlik hususları için, kısmi güven le çalışan ve <xref:System.Windows.Controls.WebBrowser> denetim veya <xref:System.Windows.Controls.Frame> HTML içeren bir <xref:System.Security.SecurityException> denetim içeren Windows tabanlı uygulamalar, denetim oluşturulduğunda bir şey atar.<br><br>Tarayıcı uygulamaları bir özel durum oluşturur ve aşağıdaki koşulların tümü yerine getirilirse bir ileti görüntüler:<br><br>* Uygulama Firefox'ta çalışıyor.<br>* Uygulama, internet bölgesinde güvenilmeyen sitelerden kısmi güvenle çalışıyor.<br>* Uygulama html <xref:System.Windows.Controls.WebBrowser> içeren <xref:System.Windows.Controls.Frame> bir denetim veya denetim içerir.<br><br>Güvenilen sitelerden veya intranet bölgesinden çalışan uygulamalar etkilenmez. | Tarayıcı uygulamalarınızda, aşağıdakilerden birini yaparak bu değişikliği kolaylaştırabilirsiniz:<br><br>* Tam güven tarayıcı uygulaması çalıştırın.<br>* Müşterilerin uygulamanın sitesini güvenilir siteler bölgesine eklemesini sağlar.<br>* Müşterilerin Internet Explorer'da uygulamayı çalıştırın. |
 | **Kaynak sözlükleri** | Tema düzeyindekaynak sözlüklerini geliştirmek ve bunların değişmesini önlemek için, kaynak sözlüğünde tanımlanan ve tema düzeyinde bir sözlükte birleştirilen serbest leştirilebilir kaynaklar artık her zaman dondurulmuş olarak işaretlenir ve değişmezdir. Bu, serbest kaynaklar için beklenen davranıştır. | Tema düzeyinde birleştirilmiş sözlükte tanımlanan bir kaynağı değiştiren uygulamaların kaynağı klonlaması ve klonlanan kopyayı değiştirmesi gerekir. Alternatif olarak, kaynak, `x:Shared="false"` kaynak her <xref:System.Windows.ResourceDictionary> sorgulanında yeni bir kopya oluşturacak şekilde işaretlenebilir. |
 | **Windows 7** | WPF uygulamalarının Windows 7'de daha iyi çalışmasını sağlamak için, bir pencerenin davranışını düzeltmek için aşağıdaki geliştirmeler yapılmıştır:<br><br>* Dock ve jest durumları artık kullanıcı etkileşimlerine bağlı olarak beklendiği gibi çalışır.<br>* Görev çubuğu **Cascade pencereleri komutları, yığılmış pencereleri göster**ve **pencereleri yan yana göster** şimdi doğru davranışa sahip ve uygun özellikleri güncelleştir.<br>* `Top`En `Left` `Width`üst `Height` düzeye çıkarılmış veya en aza indirgenen pencerenin özellikleri artık monitöre bağlı olarak diğer değerler yerine pencerenin doğru geri yükleme konumunu içerir. | Yok. |
 | **Windows stili ve saydamlığı** | Bir <xref:System.InvalidOperationException> değer için zaman <xref:System.Windows.Window.WindowStyle> ve <xref:System.Windows.WindowState> ne <xref:System.Windows.WindowState> `true` zaman <xref:System.Windows.WindowStyle> <xref:System.Windows.Window.AllowsTransparency> dışında ayarlamak için çalışırsanız atılır. | <xref:System.Windows.Window.WindowStyle> Ne zaman <xref:System.Windows.Window.AllowsTransparency> değiştirmeniz `true`gerekiyorsa Win32 `SetWindowLongPtr` işlevini arayabilirsiniz. |
@@ -205,7 +227,9 @@ Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls>, ; derleme:
 
 ### <a name="controls"></a>Denetimler
 
-Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ; derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
+Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, , ,<xref:System.Windows.Input>
+
+Derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -221,7 +245,9 @@ Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:Syste
 
 ### <a name="graphics"></a>Grafikler
 
-<xref:System.Windows>Ad boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input> <xref:System.Windows.Media.Effects>, , , ; derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
+Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ,<xref:System.Windows.Media.Effects>
+
+Derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -231,7 +257,9 @@ Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:Syste
 
 ### <a name="input"></a>Girdi
 
-Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ; derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
+Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, , ,<xref:System.Windows.Input>
+
+Derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -242,7 +270,9 @@ Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:Syste
 
 ### <a name="ui-automation"></a>UI Otomasyonu
 
-Ad <xref:System.Windows>alanı: <xref:System.Windows.Automation.Peers> <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , , ; derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), UIAutomationProvider (UIAutomationProvider.dll'de), WindowsBase (WindowsBase.dll'de)
+<xref:System.Windows>Ad alanı: <xref:System.Windows.Automation.Peers> <xref:System.Windows.Automation.Provider>, <xref:System.Windows.Controls> <xref:System.Windows.Data>, , , ,<xref:System.Windows.Input>
+
+Derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), UIAutomationProvider (UIAutomationProvider.dll'de), WindowsBase (WindowsBase.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -255,7 +285,9 @@ Ad <xref:System.Windows>alanı: <xref:System.Windows.Automation.Peers> <xref:Sys
 
 ### <a name="xaml"></a>XAML
 
-<xref:System.Windows>Ad boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input> <xref:System.Windows.Markup>, , , ; derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
+Ad <xref:System.Windows>boşlukları: <xref:System.Windows.Controls> <xref:System.Windows.Data>, <xref:System.Windows.Input>, , ,<xref:System.Windows.Markup>
+
+Derlemeler: PresentationFramework (PresentationFramework.dll'de), PresentationCore (PresentationCore.dll'de), WindowsBase (WindowsBase.dll'de)
 
 | Özellik | 3,5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
@@ -268,7 +300,9 @@ Bu tablodaki satırlar, daha önce sınırlamaları veya diğer sorunları olan 
 
 ### <a name="schema-and-transforms"></a>Şema ve dönüşümler
 
-Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; derlemeler: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
+Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Montajlar: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -282,7 +316,9 @@ Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml
 
 ### <a name="validation"></a>Doğrulama
 
-Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; derlemeler: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
+Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Montajlar: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -291,7 +327,9 @@ Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml
 
 ### <a name="writing"></a>Yazma
 
-Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml.XPath>; derlemeler: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
+Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+Montajlar: System.Xml (System.Xml.dll' de), System.Xml.Linq (System.Xml.Linq.dll olarak)
 
 | Özellik | 3,5 SP1 arasındaki farklar |
 | ------- | ------------------------ |
@@ -303,6 +341,6 @@ Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml
 - [.NET Framework 4'te Yeni Tipler ve Üyeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
 - [.NET Framework 4 Geçiş Kılavuzu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4'te Yenilikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
-- [.NET Framework'te Sürüm Uyumluluğu](version-compatibility.md)
+- [.NET Çerçevesinde Sürüm Uyumluluğu](version-compatibility.md)
 - [Office Çözümlerini .NET Framework 4'e Geçirme](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
 - [.NET Framework Sınıf Kitaplığı'nda Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)

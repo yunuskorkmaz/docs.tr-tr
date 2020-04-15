@@ -1,6 +1,6 @@
 ---
 title: Yapı türleri - C# başvurusu
-ms.date: 03/26/2020
+ms.date: 04/14/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8013aab5580ac007875debc78208532a2d0ad1dc
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345140"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388985"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# başvurusu)
 
@@ -42,6 +42,35 @@ Bu, bir `readonly` yapının hiçbir üyesinin yapının durumunu modiyi olmadı
 
 > [!NOTE]
 > Bir `readonly` yapıda, mutable başvuru türündeki bir veri üyesi yine de kendi durumunu mutasyona uğrayabilir. Örneğin, bir <xref:System.Collections.Generic.List%601> örneği değiştiremezsiniz, ancak buna yeni öğeler ekleyebilirsiniz.
+
+## <a name="readonly-instance-members"></a>`readonly`örnek üyeler
+
+C# 8.0 ile başlayarak, `readonly` bir örnek üyenin yapının durumunu değiştirmediğini bildirmek için değiştiriciyi de kullanabilirsiniz. Tüm yapı türünü `readonly`, yapının durumunu `readonly` değiştirmeyen örnek üyeleri işaretlemek için değiştiriyi kullanın. Bir `readonly` yapıda, her örnek üye `readonly`örtülü olarak .
+
+Bir `readonly` örnek üye içinde, yapının örnek alanlarına atama yapamazsınız. Ancak, `readonly` bir üye`readonly` üye olmayan bir araya gelebilir. Bu durumda derleyici yapı örneğinin bir kopyasını oluşturur ve`readonly` bu kopyada üye olmayanı çağırır. Sonuç olarak, özgün yapı örneği değiştirilmez.
+
+Genellikle, `readonly` değiştiriciaşağıdaki örnek üye türlerine uygularsınız:
+
+- Yöntemler:
+
+  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+
+  `readonly` Ayrıca, aşağıdaki durumlarda <xref:System.Object?displayProperty=nameWithType>bildirilen yöntemleri geçersiz kılınan yöntemlere değiştirici uygulayabilirsiniz:
+
+  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+
+- özellikleri ve dizinleyiciler:
+
+  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+
+  `readonly` Değiştiriciyi bir mülkün veya dizinleyicinin her iki erişimine de uygulamanız gerekiyorsa, bunu özellik veya dizinleyicinin bildirimine uygulayın.
+
+  > [!NOTE]
+  > Derleyici, bir `get` özellik bildiriminde `readonly` `readonly` değiştiricinin varlığından bağımsız olarak otomatik olarak uygulanan bir [özelliğin](../../programming-guide/classes-and-structs/auto-implemented-properties.md) erişimini bildirir.
+
+`readonly` Değiştiriciyi bir yapı türünün statik üyelerine uygulayamazsınız.
+
+Derleyici, performans optimizasyonları `readonly` için değiştiriciden yararlanabilir. Daha fazla bilgi için bkz: [Güvenli ve verimli C# kodu yaz.](../../write-safe-efficient-code.md)
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Bir yapı türünün tasarımıile sınırlamalar
 
@@ -81,7 +110,10 @@ Herhangi bir yapı türü için, [kutulama ve unboxing](../../programming-guide/
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Structs](~/_csharplang/spec/structs.md) bölümüne bakın.
 
-Yapı strüktları hakkında `readonly` daha fazla bilgi için özellik teklifi [notuna](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)bakın.
+C# 7.2 ve sonraki özellikler hakkında daha fazla bilgi için aşağıdaki özellik teklif notlarına bakın:
+
+- [Yalnızca okuma structs](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)
+- [Salt okunur örnek üyeleri](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

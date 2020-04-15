@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151396"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389745"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Hizmetinden DataSet Kullanma
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>Bir XML web hizmetinden Bir DataSet tüketin
+
 Kısmen <xref:System.Data.DataSet> Internet üzerinden veri rahat aktarım kolaylaştırmak için, bağlantısız bir tasarım ile mimarı oldu. **DataSet,** **XML** Web hizmetinin içeriğini bir XML Web hizmetinden istemciye ve geri akışı için gerekli ek kodlama olmadan XML Web hizmetlerine giriş veya çıktı olarak belirtilebildiği için "serileştirilebilir". **DataSet,** DiffGram biçimini kullanarak dolaylı olarak XML akışına dönüştürülür, ağ üzerinden gönderilir ve ardından xml akışından alıcı uçta **DataSet** olarak yeniden oluşturulur. Bu, XML Web hizmetlerini kullanarak ilişkisel verileri iletmek ve döndürmek için çok basit ve esnek bir yöntem sağlar. DiffGram biçimi hakkında daha fazla bilgi için [DiffGrams'a](diffgrams.md)bakın.  
   
  Aşağıdaki örnek, İlişkisel verileri (değiştirilmiş veriler dahil) taşımak ve güncelleştirmeleri özgün veri kaynağına geri çözmek için **DataSet'i** kullanan bir XML Web hizmeti ve istemcisinin nasıl oluşturuldestekleyeceğini gösterir.  
@@ -20,7 +21,7 @@ Kısmen <xref:System.Data.DataSet> Internet üzerinden veri rahat aktarım kolay
 > [!NOTE]
 > Bir XML Web hizmeti oluştururken güvenlik etkilerini her zaman göz önünde bulundurmanızı öneririz. Bir XML Web hizmetinin güvenliğini sağlama hakkında bilgi için bkz: [ASP.NET kullanılarak oluşturulan XML Web Hizmetlerini Güvence Altına Alma.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Bir DataSet döndüren ve tüketen bir XML Web hizmeti oluşturmak için  
+## <a name="create-an-xml-web-service"></a>Bir XML web hizmeti oluşturma
   
 1. XML Web hizmetini oluşturun.  
   
@@ -189,9 +190,11 @@ Kısmen <xref:System.Data.DataSet> Internet üzerinden veri rahat aktarım kolay
   
 3. Bir XML Web hizmeti istemcisi oluşturun.  
   
-     Visual Studio'nun sizin için Web hizmeti proxy sınıfını oluşturmasını istiyorsanız, istemci projesini oluşturmanız ve Çözüm Gezgini penceresinde projeyi sağ tıklatın, **Web Başvurusu Ekle'yi**tıklatın ve kullanılabilir Web hizmetleri listesinden Web hizmetini seçin (Web hizmeti geçerli çözümde veya geçerli bilgisayarda kullanılamıyorsa, Web hizmeti bitiş noktasının adresini niçin sağlanması nı gerektirebilir.) XML Web hizmeti proxy'sini kendiniz oluşturursanız (önceki adımda açıklandığı gibi), istemci kodunuza aktarabilir ve XML Web hizmet yöntemlerini tüketebilirsiniz. Aşağıdaki örnek kod proxy kitaplığını alır, **GetCustomers'i** müşterilerin listesini almak için arar, yeni bir müşteri ekler ve **updatecustomers'e**güncelleştirmelerle birlikte bir **DataSet** döndürür.  
+     Visual Studio'nun sizin için Web hizmeti proxy sınıfını oluşturmasını istiyorsanız, istemci projesini oluşturmanız ve Çözüm Gezgini penceresinde projeyi sağ tıklatın ve ardından**Hizmet Başvurusu** **Ekle'yi** > seçin. Hizmet **Başvurusu Ekle** iletişim kutusunda **Gelişmiş**'i seçin ve ardından **Web Başvurusu Ekle'yi**seçin. Kullanılabilir Web hizmetleri listesinden Web hizmetini seçin (Bu, Web hizmeti geçerli çözümde veya geçerli bilgisayarda kullanılamıyorsa Web hizmeti bitiş noktasının adresini nsağlanmasını gerektirebilir). XML Web hizmeti proxy'sini kendiniz oluşturursanız (önceki adımda açıklandığı gibi), istemci kodunuza aktarabilir ve XML Web hizmet yöntemlerini tüketebilirsiniz.
+
+     Aşağıdaki örnek kod proxy kitaplığını alır, **GetCustomers'i** müşterilerin listesini almak için arar, yeni bir müşteri ekler ve **updatecustomers'e**güncelleştirmelerle birlikte bir **DataSet** döndürür.  
   
-     Yalnızca değiştirilen satırların **UpdateCustomers'e**geçirilmesi gerektiğinden, örneğin **DataSet.GetChanges** to **UpdateCustomers** tarafından döndürülen **DataSet'ten** geçtiğine dikkat edin. **UpdateCustomers,** çözülmüş değişiklikleri ve güncelleştirmedeki satır hata bilgilerini birleştirmek için varolan DataSet'te **birleştirebileceğiniz** çözülmüş **DataSet'i**döndürür. **DataSet** Aşağıdaki kod, Web başvurusunu oluşturmak için Visual Studio'yu kullandığınızı ve Web Başvuru **Ekle** iletişim kutusunda Ki Web başvurusunu DsSample olarak yeniden adlandırdığınızı varsayar.  
+     Yalnızca değiştirilen satırların **UpdateCustomers'e**geçirilmesi gerektiğinden, veriseti tarafından döndürülen **DataSet'ten** **DataSet.GetChanges** **UpdateCustomers'e** geçer. **UpdateCustomers,** çözülmüş değişiklikleri ve güncelleştirmedeki satır hata bilgilerini birleştirmek için varolan DataSet'te **birleştirebileceğiniz** çözülmüş **DataSet'i**döndürür. **DataSet** Aşağıdaki kod, Web başvurusunu oluşturmak için Visual Studio'yu kullandığınızı ve Web Başvuru **Ekle** iletişim kutusunda Ki Web başvurusunu DsSample olarak yeniden adlandırdığınızı varsayar.  
   
     ```vb  
     Imports System  

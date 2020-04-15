@@ -2,12 +2,12 @@
 title: Serileştirme ve Meta Veriler
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241925"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389227"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 
@@ -59,13 +59,13 @@ Uygulamanız nesneleri seri hale getirebilir ve deserialize ederse, gerekli meta
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Çalışma zamanı yönergeleri dosyasına her tür için aşağıdaki gibi girişler eklemeniz gerekir:  
+Çalışma zamanı yönergeleri dosyasına her tür için aşağıdaki gibi girişler ekleyin:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Örnekte kullanılan sözdizimi hakkında bilgi için, [ \<> Öğesi Türü'ne](type-element-net-native.md)bakın.  
+Örnekte kullanılan sözdizimi hakkında bilgi için, [ \<> Öğesi Türü'ne](type-element-net-native.md)bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168511"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389588"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ Sorgularına Giriş (C#)
 *Sorgu,* veri kaynağından veri alabilecek bir ifadedir. Sorgular genellikle özel bir sorgu dilinde ifade edilir. İlişkisel veritabanları için SQL ve XML için XQuery gibi çeşitli veri kaynakları türleri için zaman içinde farklı diller geliştirilmiştir. Bu nedenle, geliştiriciler, desteklemeleri gereken her veri kaynağı veya veri biçimi türü için yeni bir sorgu dili öğrenmek zorunda kaldıklarını. LINQ, çeşitli veri kaynakları ve biçimleri arasında verilerle çalışmak için tutarlı bir model sunarak bu durumu basitleştirir. LINQ sorgusunda, her zaman nesnelerle çalışırsınız. XML belgelerinde, SQL veritabanlarında, ADO.NET Datasets'teki verileri ve linq sağlayıcısının kullanılabildiği diğer biçimlerde verileri sorgulamak ve dönüştürmek için aynı temel kodlama desenlerini kullanırsınız.  
@@ -41,7 +41,7 @@ ms.locfileid: "79168511"
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
- Ile, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ilk olarak tasarım zamanında el ile veya Visual Studio [Visual Studio'da SQL Tools IÇIN LINQ](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) kullanarak bir nesne-ilişkisel eşleme oluşturun. Sorgularınızı nesnelere karşı yazarsınız ve çalışma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] zamanında veritabanıyla iletişimi işler. Aşağıdaki örnekte, `Customers` veritabanında belirli bir tablo temsil eder ve <xref:System.Linq.IQueryable%601>sorgu sonucunun <xref:System.Collections.Generic.IEnumerable%601>türü, .  
+ Ile, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ilk tasarım zamanında bir nesne-ilişkisel eşleme oluşturmak ya el ile ya da [Visual Studio SQL Tools LINQ](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)kullanarak. Sorgularınızı nesnelere karşı yazarsınız ve çalışma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] zamanında veritabanıyla iletişimi işler. Aşağıdaki örnekte, `Customers` veritabanında belirli bir tablo temsil eder ve <xref:System.Linq.IQueryable%601>sorgu sonucunun <xref:System.Collections.Generic.IEnumerable%601>türü, .  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -58,7 +58,7 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 > Genel <xref:System.Collections.IEnumerable> olmayan <xref:System.Collections.ArrayList> arabirimi destekleyen türler linq veri kaynağı olarak da kullanılabilir. Daha fazla bilgi için [LINQ (C#) ile ArrayList nasıl sorgulanır.](./how-to-query-an-arraylist-with-linq.md)  
   
-## <a name="query"></a>Sorgu  
+## <a name="the-query"></a><a name="query"></a>Sorgu  
  Sorgu, veri kaynağından veya kaynaklarından hangi bilgilerin alınca alınacak belirtin. İsteğe bağlı olarak, bir sorgu, bu bilgilerin döndürülmeden önce nasıl sıralanmalı, gruplandırılmalı ve şekillendirilmesi gerektiğini de belirtir. Sorgu, sorgu değişkeninde depolanır ve sorgu ifadesiyle başolarak başolarak başlanır. Sorgu yazmayı kolaylaştırmak için C# yeni sorgu sözdizimini tanıttı.  
   
  Önceki örnekteki sorgu, tüm çift sayıları sonda dizisinden döndürür. Sorgu ifadesi üç yan `from`tümce içerir: , `where` ve `select`. (SQL'e aşinaysanız, yan tümcelerin sıralanmasının SQL'deki sıralamadan geri çevrildiğini fark etmişsinizdir.) Yan `from` tümce veri kaynağını belirtir, `where` yan tümce filtreyi uygular ve `select` yan tümce döndürülen öğelerin türünü belirtir. Bunlar ve diğer sorgu yan tümceleri [Dil Tümleşik Sorgusu (LINQ)](../../../linq/index.md) bölümünde ayrıntılı olarak ele alınmıştır. Şimdilik önemli olan nokta, LINQ'da sorgu değişkeninin kendisinin hiçbir işlem yapıp veri döndürmememasıdır. Yalnızca sorgu daha sonraki bir noktada yürütüldüğünde sonuçları oluşturmak için gereken bilgileri depolar. Sorguların arka planda nasıl oluşturulduruştöleri hakkında daha fazla bilgi [için, Bkz. Standart Sorgu Operatörleri Genel Bakış (C#)](./standard-query-operators-overview.md).  

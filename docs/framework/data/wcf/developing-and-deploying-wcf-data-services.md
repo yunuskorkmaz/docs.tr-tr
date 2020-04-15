@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121166"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389735"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Veri Hizmetleri Geliştirme ve Dağıtma
 
@@ -42,7 +42,7 @@ Visual Studio 2015'i kullanarak bir WCF Veri Hizmeti veya ASP.NET bir web sitesi
 
 1. **Yerel IIS Sunucusu**
 
-     Internet Bilgi Hizmetleri (IIS) üzerinde çalışan ASP.NET bir uygulama veya ASP.NET Web sitesi olan bir veri hizmeti oluşturduğunuzda, yerel bilgisayarda IIS kullanarak veri hizmetinizi geliştirmenizi ve test etmemi öneririz. IIS üzerinde veri hizmetinin çalıştırılması, hata ayıklama sırasında HTTP isteklerinin izlenmesini kolaylaştırır. Bu, IIS tarafından dosyalara, veritabanlarına ve veri hizmeti tarafından gerekli kılınan diğer kaynaklara erişmek için gereken hakları önceden belirlemenizi de sağlar. Veri hizmetinizi IIS'de çalıştırmak için, hem IIS hem de Windows Communication Foundation'ın (WCF) doğru şekilde yüklendiğinden ve yapılandırıldığından ve dosya sistemindeve veritabanlarındaki IIS hesaplarına erişim izni verildiğinden emin olmalısınız. Daha fazla bilgi için [bkz: IIS'de çalışan bir WCF Veri Hizmeti geliştirin.](how-to-develop-a-wcf-data-service-running-on-iis.md)
+     Internet Bilgi Hizmetleri (IIS) üzerinde çalışan ASP.NET bir uygulama veya ASP.NET Web sitesi olan bir veri hizmeti oluşturduğunuzda, yerel bilgisayarda IIS kullanarak veri hizmetinizi geliştirmenizi ve test etmemi öneririz. IIS üzerinde veri hizmetinin çalıştırılması, hata ayıklama sırasında HTTP isteklerinin izlenmesini kolaylaştırır. Bu, IIS tarafından dosyalara, veritabanlarına ve veri hizmeti tarafından gerekli kılınan diğer kaynaklara erişmek için gereken hakları önceden belirlemenizi de sağlar. Veri hizmetinizi IIS'de çalıştırmak için, hem IIS hem de Windows Communication Foundation'ın (WCF) doğru şekilde yüklendiğinden ve yapılandırıldığından emin olun ve dosya sisteminde ve veritabanlarındaki IIS hesaplarına erişim izni verin. Daha fazla bilgi için [bkz: IIS'de çalışan bir WCF Veri Hizmeti geliştirin.](how-to-develop-a-wcf-data-service-running-on-iis.md)
 
     > [!NOTE]
     > Geliştirme ortamının yerel IIS sunucusunu yapılandırmasını sağlamak için Visual Studio'yu yönetici haklarıyla çalıştırmanız gerekir.
@@ -61,7 +61,7 @@ Visual Studio 2015'i kullanarak bir WCF Veri Hizmeti veya ASP.NET bir web sitesi
 
     - Bu sunucu, IIS'nin kimlik doğrulama gibi ek özelliklerini içermez.
 
-    - Bu sunucu, veri hizmetinden büyük ikili verilere erişirken WCF Veri Hizmetleri istemcisi tarafından varsayılan olarak gönderilen ödenmiş HTTP akışlarını işleyemez. Daha fazla bilgi için [Akış Sağlayıcısı'na](streaming-provider-wcf-data-services.md)bakın.
+    - Bu sunucu, veri hizmetinden büyük ikili verilere erişirken Varsayılan olarak WCF Veri Hizmetleri istemcisi tarafından gönderilen ödenmiş HTTP akışlarını işleyemez. Daha fazla bilgi için [Akış Sağlayıcısı'na](streaming-provider-wcf-data-services.md)bakın.
 
     - Bu sunucu, bu karakter`.`wcf veri hizmetleri tarafından anahtar değerlerde desteklenmiş olsa da, bir URL'deki dönem ( ) karakterini işleme ile ilgili sorunlar vardır.
 
@@ -74,11 +74,11 @@ Visual Studio 2015'i kullanarak bir WCF Veri Hizmeti veya ASP.NET bir web sitesi
 
 ### <a name="development-tips"></a>Geliştirme İpuçları
 
-Bir veri hizmeti geliştirirken, aşağıdakileri dikkate almanız gerekir:
+Bir veri hizmeti geliştirirken aşağıdakileri göz önünde bulundurun:
 
 - Kullanıcıların kimliğini doğrulamayı veya belirli kullanıcılar için erişimi kısıtlamayı planlıyorsanız, veri hizmetinizin güvenlik gereksinimlerini belirleyin. Daha fazla bilgi için [WCF Veri Hizmetlerinin Güvenliğini Sağlama'ya](securing-wcf-data-services.md)bakın.
 
-- HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini denetlemenizi sağlayarak veri hizmetinde hata ayıklarken size epey yardımcı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
+- Bir HTTP denetim programı, istek ve yanıt iletilerinin içeriğini incelemenize olanak sağlayarak bir veri hizmetini hata ayıklarken yararlı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
 
 - Bir veri hizmetinin hata ayıklama sırasında, normal çalışma sırasında daha veri hizmeti nden bir hata hakkında daha fazla bilgi almak isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> Veri hizmeti sınıfındaki <xref:System.Data.Services.DataServiceConfiguration> öznitelik `true` <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> özelliğini <xref:System.ServiceModel.Description.ServiceDebugBehavior> `true`'ye ayarlayarak ve 'ye ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için, [WCF Veri Hizmetleri Hata Ayıklama](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)sonrası bakın. HTTP ileti katmanında toplanan özel durumları görüntülemek için WCF'de izleme yi de etkinleştirebilirsiniz. Daha fazla bilgi için [bkz.](../../wcf/diagnostics/tracing/configuring-tracing.md)
 
@@ -119,7 +119,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
 ### <a name="deployment-considerations"></a>Dağıtım Hakkında Önemli Noktalar
 
-Bir veri hizmetini dağıtırken, aşağıdakileri dikkate almanız gerekir:
+Bir veri hizmeti dağıtırken aşağıdakileri göz önünde bulundurun:
 
 - Bir SQL Server veritabanına erişmek için Varlık Çerçevesi sağlayıcısını kullanan bir veri hizmeti dağıttığınızda, veri yapılarını, verileri veya her ikisini de veri hizmeti dağıtımınızla yaymanız gerekebilir. Visual Studio, hedef veritabanında bunu yapmak için otomatik olarak komut dosyaları (.sql dosyaları) oluşturabilir ve bu komut dosyaları ASP.NET bir uygulamanın Web dağıtım paketine eklenebilir. Daha fazla bilgi için [bkz: Web Uygulama Projesi ile Veritabanı dağıtma.](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)) Bir ASP.NET Web sitesi için, Visual **Studio'daki Veritabanı Yayımlama Sihirbazı'nı** kullanarak bunu yapabilirsiniz. Daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))
 

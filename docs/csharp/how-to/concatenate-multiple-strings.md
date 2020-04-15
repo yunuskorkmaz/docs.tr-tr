@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121045"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389531"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Birden çok dize nasıl işlenir (C# Guide)
 
@@ -37,13 +37,13 @@ Bazı ifadelerde, aşağıdaki kodun gösterdiği gibi dize enterpolasyonu kulla
 
 Dizeleri birleştirmeye başka bir <xref:System.String.Format%2A?displayProperty=nameWithType>yöntem de . Bu yöntem, az sayıda bileşen dizesinden bir dize oluşturuyorsanız iyi çalışır.
 
-Diğer durumlarda dizeleri, kaç kaynak dizesini birleştirdiğinizi bilmediğiniz ve gerçek kaynak dizeleri sayısının oldukça büyük olabileceği bir döngüde birleştiriyor olabilirsiniz. Sınıf <xref:System.Text.StringBuilder> bu senaryolar için tasarlanmıştır. Aşağıdaki kod dizeleri birleştirmek için sınıfın <xref:System.Text.StringBuilder.Append%2A> yöntemini <xref:System.Text.StringBuilder> kullanır.  
+Diğer durumlarda, dizeleri, kaç kaynak dizesini birleştirdiğinizi bilmediğiniz ve gerçek kaynak dizeleri sayısının büyük olabileceği bir döngüde birleştiriyor olabilirsiniz. Sınıf <xref:System.Text.StringBuilder> bu senaryolar için tasarlanmıştır. Aşağıdaki kod dizeleri birleştirmek için sınıfın <xref:System.Text.StringBuilder.Append%2A> yöntemini <xref:System.Text.StringBuilder> kullanır.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 [Dize concatenation veya sınıf seçmek için `StringBuilder` nedenler](xref:System.Text.StringBuilder#StringAndSB)hakkında daha fazla bilgi edinebilirsiniz.
 
-Bir koleksiyondan dizeleri birleştirmek için <xref:System.String.Concat%2A?displayProperty=nameWithType> başka bir seçenek yöntemi kullanmaktır. Kaynak <xref:System.String.Join%2A?displayProperty=nameWithType> dizeleri bir delimetre ile ayrılmış olmalıdır yöntemi kullanın. Aşağıdaki kod, her iki yöntemi kullanarak bir sözcük dizisini birleştirir:
+Bir koleksiyondan dizeleri birleştirmek için <xref:System.String.Concat%2A?displayProperty=nameWithType> başka bir seçenek yöntemi kullanmaktır. Kaynak <xref:System.String.Join%2A?displayProperty=nameWithType> dizeleri bir delimiter ile ayrılmış olmalıdır yöntemi kullanın. Aşağıdaki kod, her iki yöntemi kullanarak bir sözcük dizisini birleştirir:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 

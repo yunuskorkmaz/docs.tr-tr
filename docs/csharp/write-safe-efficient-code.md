@@ -1,15 +1,15 @@
 ---
 title: Güvenli ve verimli C# kodu yazın
 description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan kodla ilişkili performansın doğrulanabilir güvenli kodu yazmanızı sağlar.
-ms.date: 10/23/2018
+ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345088"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389677"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazın
 
@@ -22,7 +22,7 @@ Bu makalede, verimli kaynak yönetimi teknikleri üzerinde duruluyor. Değer tü
 Bu makalede, aşağıdaki kaynak yönetimi teknikleri üzerinde duruluyor:
 
 - Bir [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) türün **değişmez**olduğunu ifade etmek için a bildirin. Bu, derleyicinin parametreleri kullanırken [`in`](language-reference/keywords/in-parameter-modifier.md) savunma kopyalarını kaydetmesini sağlar.
-- Bir tür değişmez değilse, üyenin `struct` durumu `readonly` değiştirmediğini belirtmek için üye bildirin.
+- Bir tür değişmez değilse, üyenin `struct` durumu [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) değiştirmediğini belirtmek için üye bildirin.
 - İade [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) değeri daha `struct` <xref:System.IntPtr.Size?displayProperty=nameWithType> büyükse ve depolama ömrü değeri döndüren yöntemden daha büyükse bir iade kullanın.
 - A `readonly struct` boyutu daha <xref:System.IntPtr.Size?displayProperty=nameWithType>büyükse, performans nedenleriyle `in` bir parametre olarak geçirmelisiniz.
 - Değiştirici `struct` ile `in` beyan edilmedikçe veya yöntem yalnızca `readonly` yapı nın üyelerini çağırmadığı sürece asla bir parametre olarak geçmeyin. `readonly` Bu kılavuzun ihlal için de performansı olumsuz etkileyebilir ve belirsiz bir davranışa yol açabilir.
@@ -113,7 +113,7 @@ public struct Point3D
 
 Önceki örnek, `readonly` değiştiriciyi uygulayabileceğiniz birçok konumu gösterir: yöntemler, özellikler ve özellik erişimcileri. Otomatik olarak uygulanan özellikleri kullanıyorsanız, derleyici `readonly` okuma yazma `get` özellikleri için değiştiriciyi erişime ekler. Derleyici, yalnızca `readonly` `get` bir erişime sahip özellikler için otomatik olarak uygulanan özellik bildirimlerine değiştirici ekler.
 
-`readonly` Durumu mutasyona uğratmaz üyelere değiştirici nin eklenmesi, ilgili iki avantaj sağlar. İlk olarak, derleyici niyetinizi zorlar. Bu üye yapının durumunu mutasyona uğratamaz ve aynı zamanda işaretlenmemiş `readonly`bir üyeye erişemez. İkinci olarak, derleyici bir `in` `readonly` üyeye erişirken parametrelerin savunma kopyalarını oluşturmaz. Derleyici, bir üye tarafından değiştirilmediğini garanti `struct` ettiği için bu `readonly` optimizasyonu güvenli bir şekilde yapabilir.
+`readonly` Durumu mutasyona uğratmaz üyelere değiştirici nin eklenmesi, ilgili iki avantaj sağlar. İlk olarak, derleyici niyetinizi zorlar. O üye struct'un durumunu mutasyona uğratamaz. İkinci olarak, derleyici bir `in` `readonly` üyeye erişirken parametrelerin savunma kopyalarını oluşturmaz. Derleyici, bir üye tarafından değiştirilmediğini garanti `struct` ettiği için bu `readonly` optimizasyonu güvenli bir şekilde yapabilir.
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Mümkün `ref readonly return` olduğunda büyük yapılar için ifadeleri kullanma
 

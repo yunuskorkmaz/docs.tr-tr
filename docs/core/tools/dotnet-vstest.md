@@ -2,12 +2,12 @@
 title: dotnet vstest komutu
 description: Dotnet vstest komutu bir proje ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/27/2020
-ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4941a6d08d45953039eb406a30f0ff984128ba1c
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156939"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389626"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,11 @@ ms.locfileid: "78156939"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
-    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
-    [--TestCaseFilter] [--logger] [-lt|--ListTests]
-    [--ParentProcessId] [--Port] [--Diag] [--Blame]
-    [--InIsolation] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
+    [--Framework] [--InIsolation] [-lt|--ListTests] [--logger]
+    [--Parallel] [--ParentProcessId] [--Platform] [--Port]
+    [--ResultsDirectory] [--Settings] [--TestAdapterPath]
+    [--TestCaseFilter] [--Tests] [[--] <args>...]] [-?|--Help]
 ```
 
 ## <a name="description"></a>Açıklama
@@ -39,37 +39,25 @@ Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırma
 
 ## <a name="options"></a>Seçenekler
 
-- **`--Settings <Settings File>`**
+- **`--Blame`**
 
-  Testleri çalıştırırken kullanılacak ayarlar.
+  Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayar çökmesine neden sorunlu testleri yalıtmak yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
 
-- **`--Tests <Test Names>`**
+- **`--Diag <Path to log file>`**
 
-  Sağlanan değerlerle eşleşen adlarla testleri çalıştırın. Birden çok değeri virgülle ayırın.
-
-- **`--TestAdapterPath`**
-
-  Test çalışmasında belirli bir yoldan (varsa) özel test bağdaştırıcıları kullanın.
-
-- **`--Platform <Platform type>`**
-
-  Test yürütme için kullanılan hedef platform mimarisi. Geçerli değerler `x86` `x64`, `ARM`ve .
+  Test platformu için ayrıntılı günlükleri sağlar. Günlükler sağlanan dosyaya yazılır.
 
 - **`--Framework <Framework Version>`**
 
   Test yürütmesi için kullanılan Hedef .NET Framework sürümü. Geçerli değerlere `.NETFramework,Version=v4.6` örnek `.NETCoreApp,Version=v1.0`olarak . Desteklenen diğer değerler `Framework40` `Framework45`, `FrameworkCore10`, `FrameworkUap10`, ve .
 
-- **`--Parallel`**
+- **`--InIsolation`**
 
-  Testleri paralel olarak çalıştırın. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. Runsettings dosyasındaki `MaxCpuCount` `RunConfiguration` düğümün altındaki özelliği ayarlayarak açık *runsettings* sayıda çekirdek belirtin.
+  Testleri yalıtılmış bir işlemle çalıştırın. Bu, *vstest.console.exe* işleminin testlerdeki bir hata da durdurulmasını daha az sağlar, ancak testler daha yavaş çalışabilir.
 
-- **`--TestCaseFilter <Expression>`**
+- **`-lt|--ListTests <File Name>`**
 
-  Verilen ifadeyle eşleşen testler çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, Operatör biri olduğu `=` `!=`, `~`, veya . İşleç `~` 'içerir' semantik ve gibi `DisplayName`dize özellikleri için geçerlidir. `()` Alt ifadeleri gruplandırmak için parantez kullanılır.
-
-- **`-?|--Help`**
-
-  Komut için kısa bir yardım yazdırır.
+  Verilen test kabından keşfedilen tüm testleri listeler.
 
 - **`--logger <Logger Uri/FriendlyName>`**
 
@@ -93,29 +81,45 @@ Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırma
     /logger:trx [;LogFileName=<Defaults to unique file name>]
     ```
 
-- **`-lt|--ListTests <File Name>`**
+- **`--Parallel`**
 
-  Verilen test kabından keşfedilen tüm testleri listeler.
+  Testleri paralel olarak çalıştırın. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. Runsettings dosyasındaki `MaxCpuCount` `RunConfiguration` düğümün altındaki özelliği ayarlayarak açık *runsettings* sayıda çekirdek belirtin.
 
 - **`--ParentProcessId <ParentProcessId>`**
 
   Geçerli işlemin başlatılmasından sorumlu ana işlemin işlem kimliği.
 
+- **`--Platform <Platform type>`**
+
+  Test yürütme için kullanılan hedef platform mimarisi. Geçerli değerler `x86` `x64`, `ARM`ve .
+
 - **`--Port <Port>`**
 
   Soket bağlantısı ve olay iletileri almak için bağlantı noktasını belirtir.
 
-- **`--Diag <Path to log file>`**
+- **`--ResultsDirectory:<PathToResulsDirectory>`**
 
-  Test platformu için ayrıntılı günlükleri sağlar. Günlükler sağlanan dosyaya yazılır.
+  Test sonuçları dizini yoksa belirtilen yolda oluşturulur.
 
-- **`--Blame`**
+- **`--Settings <Settings File>`**
 
-  Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayar çökmesine neden sorunlu testleri yalıtmak yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
+  Testleri çalıştırırken kullanılacak ayarlar.
 
-- **`--InIsolation`**
+- **`--TestAdapterPath`**
 
-  Testleri yalıtılmış bir işlemle çalıştırın. Bu, *vstest.console.exe* işleminin testlerdeki bir hata da durdurulmasını daha az sağlar, ancak testler daha yavaş çalışabilir.
+  Test çalışmasında belirli bir yoldan (varsa) özel test bağdaştırıcıları kullanın.
+
+- **`--TestCaseFilter <Expression>`**
+
+  Verilen ifadeyle eşleşen testler çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, Operatör biri olduğu `=` `!=`, `~`, veya . İşleç `~` 'içerir' semantik ve gibi `DisplayName`dize özellikleri için geçerlidir. Alt ifadeleri `()` gruplandırmak için parantezler kullanılır. Daha fazla bilgi için [TestCase filtresine](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)bakın.
+
+- **`--Tests <Test Names>`**
+
+  Sağlanan değerlerle eşleşen adlarla testleri çalıştırın. Birden çok değeri virgülle ayırın.
+
+- **`-?|--Help`**
+
+  Komut için kısa bir yardım yazdırır.
 
 - **`@<file>`**
 
@@ -156,3 +160,7 @@ dotnet vstest /Tests:TestMethod1
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [VSTest.Console.exe komut satırı seçenekleri](/visualstudio/test/vstest-console-options)

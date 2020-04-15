@@ -3,16 +3,16 @@ title: .NET Core projesi SDK'ya genel bakış
 description: .NET Core projesi SDK'ları hakkında bilgi edinin.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 32e14993326c6f17d6470249fe5a545180348631
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399177"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389664"
 ---
 # <a name="net-core-project-sdks"></a>.NET Çekirdek projesi SDK'ları
 
-.NET Core projeleri bir yazılım geliştirme kiti (SDK) ile ilişkilidir. Her proje SDK, kod derleme, paketleme ve yayımlamadan sorumlu bir MSBuild [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevler](/visualstudio/msbuild/msbuild-tasks) kümesidir.
+.NET Core projeleri bir yazılım geliştirme kiti (SDK) ile ilişkilidir. Her *proje SDK,* kod derleme, paketleme ve yayımlamadan sorumlu bir MSBuild [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevler](/visualstudio/msbuild/msbuild-tasks) kümesidir. SDK projesine başvuran bir proje bazen *SDK tarzı proje*olarak adlandırılır.
 
 ## <a name="available-sdks"></a>Kullanılabilir SDK'lar
 
@@ -76,7 +76,7 @@ Bir SDK'ya bu yollardan biriyle başvurmak ,NET Core için proje dosyalarını b
 
 MSBuild SDK ve hedefleri `dotnet msbuild -preprocess` komutu kullanarak dahil edildikten sonra gördüğü gibi tamamen genişletilmiş proje görebilirsiniz. Komutun [`dotnet msbuild`](../tools/dotnet-msbuild.md) [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı, hangi dosyaların içe aktarıldığı, kaynakları ve projeyi gerçekten oluşturmadan yapıya katkıları gösterir.
 
-Projenin birden çok hedef çerçevesi varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odakla. Örnek:
+Projenin birden çok hedef çerçevesi varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odakla. Örneğin:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
