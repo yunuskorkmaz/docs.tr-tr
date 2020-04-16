@@ -2,12 +2,12 @@
 title: Adres Ayarlama
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 55bb30ba3df80e41986b1337f8732dd8ad3231ff
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183971"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463763"
 ---
 # <a name="addressing"></a>Adres Ayarlama
 Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerini gösterir. Örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)dayanmaktadır. Bu örnekte hizmet kendi kendine barındırılır. Hem hizmet hem de istemci konsol uygulamalarıdır. Hizmet, göreli ve mutlak uç nokta adreslerinin bir birleşimini kullanarak birden çok uç nokta tanımlar.  
@@ -76,7 +76,6 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
           "net.tcp://localhost:9000/servicemodelsamples/service"  
           binding="netTcpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-</service>  
 ```  
   
  İstemci dört hizmet uç noktasından yalnızca birine erişir, ancak dördü de yapılandırma dosyasında tanımlanır. İstemci `CalculatorProxy` nesneyi oluştururken bir bitiş noktası seçer. Yapılandırma adını `CalculatorEndpoint1` buradan `CalculatorEndpoint4`değiştirerek, uç noktaların her birini egzersiz yapabilirsiniz.  

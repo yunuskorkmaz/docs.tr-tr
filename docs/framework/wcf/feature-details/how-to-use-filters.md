@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Filtreleri Kullanma'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: f99c2af623dacac3ebe46422815a7f42e2a4df2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184824"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464110"
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
 Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımları özetler. Bu örnekte, iletiler bir hesap makinesi hizmetinin iki uygulamasına yönlendirilir, düzenli Calc ve yuvarlamaCalc. Her iki uygulama da aynı işlemleri destekler; ancak bir hizmet, dönmeden önce tüm hesaplamaları en yakın tümsabudeğere yuvarlar. İstemci uygulaması, hizmetin yuvarlama sürümünü kullanıp kullanmayacağını belirtebilmeli; hizmet tercihi ifade edilmezse, ileti iki hizmet arasında yük dengelenir. Her iki hizmettarafından ortaya çıkarılan işlemler şunlardır:  
@@ -24,7 +24,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
   
 ### <a name="determine-unique-data"></a>Benzersiz Verileri Belirleme  
   
-1. Her iki hizmet uygulaması da aynı işlemleri işlediğinden ve döndükleri veriler dışında temelde aynı olduğundan, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, Istek. Ancak istemci uygulaması iletiye benzersiz bir üstbilgi değeri eklerse, iletinin nasıl yönlendirilmesi gerektiğini belirlemek için bu değeri kullanabilirsiniz.  
+1. Her iki hizmet uygulaması da aynı işlemleri işlediği nden ve döndükleri veriler dışında temelde aynı olduğundan, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, isteği nasıl yönlendireceklerini belirlemenize izin verecek kadar benzersiz değildir. Ancak istemci uygulaması iletiye benzersiz bir üstbilgi değeri eklerse, iletinin nasıl yönlendirilmesi gerektiğini belirlemek için bu değeri kullanabilirsiniz.  
   
      Bu örnekte, istemci uygulaması nın iletinin yuvarlama hesap makinesi tarafından işlenmesi gerekiyorsa, aşağıdaki kodu kullanarak özel bir üstbilgi ekler:  
   
@@ -35,7 +35,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
   
      Artık bu üstbilginin iletilerini incelemek ve üstbilgi içeren iletileri roundCalc hizmetine yönlendirmek için XPath filtresini kullanabilirsiniz.  
   
-2. Ayrıca Yönlendirme Hizmeti, gelen iletileri bitiş noktasına dayalı olarak belirli bir hesap makinesi uygulamasına benzersiz bir şekilde yönlendirmek için EndpointName, EndpointAddress veya PrefixEndpointAddress filtreleriyle kullanılabilecek iki sanal hizmet uç noktasını ortaya çıkarır hangi istemci başvuru isteği gönderir.  
+2. Ayrıca Yönlendirme Hizmeti, gelen iletileri istemci uygulamasının isteği gönderdiği bitiş noktasına bağlı olarak belirli bir hesap makinesi uygulamasına benzersiz bir şekilde yönlendirmek için EndpointName, EndpointAddress veya PrefixEndpointAddress filtreleriyle kullanılabilecek iki sanal hizmet bitiş noktasını ortaya çıkarır.  
   
 ### <a name="define-endpoints"></a>Uç Noktaları Tanımla  
   
@@ -180,7 +180,7 @@ Bu konu, birden çok filtre kullanan bir yönlendirme yapılandırması oluştur
                 <add filterName="XPathFilter" endpointName="roundingCalcEndpoint" priority="2"/>  
               </entries>  
             </table>  
-          <filterTables>  
+          </filterTables>  
     </routing>  
     ```  
   

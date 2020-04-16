@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 86c679af77f2b7b1960e7489e0e6e61b811e1bad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9616a5afb88e46bb5d69f1cd253c854cc1684d9f
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185217"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464178"
 ---
 # <a name="federation"></a>Federasyon
 Bu konu federe güvenlik kavramına kısa bir genel bakış sağlar. Ayrıca, Windows Communication Foundation (WCF) federe güvenlik mimarilerinin dağıtılması için destek açıklar. Federasyonu gösteren örnek bir uygulama için [Federasyon Örneği'ne](../../../../docs/framework/wcf/samples/federation-sample.md)bakın.  
@@ -58,7 +58,7 @@ Bu konu federe güvenlik kavramına kısa bir genel bakış sağlar. Ayrıca, Wi
   
  Daha önce bahsedilen sakıncaları gideren alternatif bir yaklaşım, federe güvenlik istihdam etmektir. Bu yaklaşımda, A ve B kuruluşları bir güven ilişkisi kurar ve kurulan güvenin aracılık etmesini sağlamak için Güvenlik Belirteci Hizmeti (STS) kullanır.  
   
- Federe güvenlik mimarisinde, A organizasyonundaki kullanıcılar B organizasyonundaki Web hizmetine erişmek istiyorlarsa, B organizasyonunda STS'den geçerli bir güvenlik belirteci sunmaları gerektiğini ve bu nedenle özel hizmet.  
+ Federe güvenlik mimarisinde, A kuruluşunun kullanıcıları B organizasyonunda Web hizmetine erişmek istiyorlarsa, belirli bir hizmete erişimlerini doğrulayan ve yetkilendirilen B organizasyonunda STS'den geçerli bir güvenlik belirteci sunmaları gerektiğini bilirler.  
   
  STS B ile iletişime geçerek, kullanıcılar STS ile ilişkili ilkeden başka bir yönlendirme düzeyi alır. STS B'nin onlara bir güvenlik belirteci verabilmesi için STS A'dan (diğer bir şekilde istemci güven diyarı) geçerli bir güvenlik belirteci sunmaları gerekir. Bu, iki kuruluş arasında kurulan güven ilişkisinin bir sonucudur ve B kuruluşunun A organizasyonundaki kullanıcılar için kimlikleri yönetmesi gerekmediğini ima eder. Uygulamada, STS B genellikle bir `issuerAddress` `issuerMetadataAddress`null ve . Daha fazla bilgi için [bkz: Yerel İhraççı'yı yapılandırma.](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md) Bu durumda, istemci STS A'yı bulmak için yerel bir ilkeden başvurur. STS B STS A hakkında bilgi korumak zorunda değildir, çünkü bu yapılandırma *ev bölge federasyonu* denir ve daha iyi ölçekler.  
   
@@ -240,7 +240,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
                        storeLocation="LocalMachine"
                        storeName="My" />  
        </identity>  
-    <endpoint>  
+    </endpoint>  
   </service>  
 </services>  
   

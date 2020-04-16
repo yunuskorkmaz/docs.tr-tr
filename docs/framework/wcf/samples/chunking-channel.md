@@ -2,39 +2,39 @@
 title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3811f7e7229dec1a46585a558b96f94bb202902f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7b436e2ce708a122a7eae3b07ad01515fb2dce96
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716037"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463972"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 
-Windows Communication Foundation (WCF) kullanarak büyük iletiler gönderirken, bu iletileri arabelleğe almak için kullanılan bellek miktarının sınırlanmasından genellikle tercih edilir. Olası bir çözüm, ileti gövdesinin akışını (verilerin toplu olarak gövdesinde olduğu varsayıldığında) sağlar. Ancak bazı protokollerin iletinin tamamının arabelleğe alınması gerekir. Güvenilir Mesajlaşma ve güvenlik iki tür örnektir. Diğer bir olası çözüm de büyük iletiyi öbek adı verilen küçük iletilere bölmek, bu öbekleri tek seferde bir öbek göndermek ve alma tarafında büyük iletiyi edilmeyen. Uygulamanın kendisi bu parçalama ve parçalama işlemlerini yapmak için özel bir kanal kullanabilir. Öbek oluşturma kanalı örneği, özel bir protokol veya katmanlı kanalın, rastgele büyük iletileri parçalama ve parçalama için nasıl kullanılabileceğini gösterir.
+Windows Communication Foundation (WCF) kullanarak büyük iletiler gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak istenir. Olası bir çözüm ileti gövdesini akış (verilerin büyük bir kısmının gövdede olduğunu varsayarak). Ancak bazı protokoller tüm iletinin arabelleğe alınmasını gerektirir. Güvenilir mesajlaşma ve güvenlik bu iki örnektir. Başka bir olası çözüm, büyük iletiyi parçalar olarak adlandırılan daha küçük iletilere bölmek, bu parçaları her seferinde bir yığın göndermek ve büyük iletiyi alıcı tarafta yeniden oluşturmaktır. Uygulamanın kendisi bu yığın ve de-chunking yapabilir veya bunu yapmak için özel bir kanal kullanabilirsiniz. Chunking kanal örneği, özel bir protokolün veya katmanlı kanalın rasgele büyük iletilerin öğrlemeyi ve parçalarını ayrıştma yapmak için nasıl kullanılabileceğini gösterir.
 
-Parçalama her zaman yalnızca gönderilecek iletinin tamamı oluşturulduktan sonra kullanılmalıdır. Bir parçalama kanalının her zaman bir güvenlik kanalının ve güvenilir bir oturum kanalının altında katmanlanmış olması gerekir.
+Chunking her zaman yalnızca gönderilecek tüm ileti oluşturulduktan sonra kullanılmalıdır. Bir yığın kanalı her zaman bir güvenlik kanalı nın ve güvenilir bir oturum kanalının altına katmanlanmalıdır.
 
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.
 
 > [!IMPORTANT]
-> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
-## <a name="chunking-channel-assumptions-and-limitations"></a>Kanal varsayımları ve sınırlamaları parçalama
+## <a name="chunking-channel-assumptions-and-limitations"></a>Kanal Varsayımlarını ve Sınırlamalarını Parçalama
 
-### <a name="message-structure"></a>İleti yapısı
+### <a name="message-structure"></a>İleti Yapısı
 
-Öbek oluşturma kanalı, iletilerin öbeklenmesini sağlamak için aşağıdaki ileti yapısını varsayar:
+Yığın kanalı, iletilerin parçalanması için aşağıdaki ileti yapısını varsayar:
 
 ```xml
-<soap:Envelope ...>
+<soap:Envelope>
   <!-- headers -->
   <soap:Body>
     <operationElement>
@@ -44,7 +44,7 @@ Parçalama her zaman yalnızca gönderilecek iletinin tamamı oluşturulduktan s
 </soap:Envelope>
 ```
 
-ServiceModel kullanılırken, 1 girdi parametresine sahip sözleşme işlemleri giriş iletileri için bu ileti şekliyle uyumlu olmalıdır. Benzer şekilde, 1 çıkış parametresi veya dönüş değeri olan sözleşme işlemleri, çıkış iletileri için bu ileti şekliyle uyumlu değildir. Bu tür işlemlere örnekler aşağıda verilmiştir:
+ServiceModel'i kullanırken, 1 giriş parametresi olan sözleşme işlemleri, giriş iletisi için bu ileti şekline uygundur. Benzer şekilde, 1 çıktı parametresi veya iade değeri olan sözleşme işlemleri, çıktı iletisi için bu ileti şekline uygundur. Bu tür işlemlere örnekler aşağıda verilmiştir:
 
 ```csharp
 [ServiceContract]
@@ -63,17 +63,17 @@ interface ITestService
 
 ### <a name="sessions"></a>Oturumlar
 
-Öbek oluşturma kanalı, iletilerin sıralı iletiler (öbekler) tesliminde tam olarak bir kez teslim edilmesini gerektirir. Bu, temeldeki kanal yığınının oturumsuz olması gerektiği anlamına gelir. Oturumlar, taşıma (örneğin, TCP aktarımı) veya bir oturum Protokolü kanalı (örneğin, Reliableoturum kanalı) tarafından sağlanırlar.
+Yığın kanalı, iletilerin (öbek) sırayla teslim edilmesinde iletilerin tam olarak bir kez teslim edilmesini gerektirir. Bu, temel kanal yığınının oturum dolusu olması gerektiği anlamına gelir. Oturumlar aktarım (örneğin, TCP aktarım) veya oturum lu bir protokol kanalı (örneğin, ReliableSession kanalı) tarafından sağlanabilir.
 
-### <a name="asynchronous-send-and-receive"></a>Zaman uyumsuz gönderme ve alma
+### <a name="asynchronous-send-and-receive"></a>Asynchronous Gönder ve Al
 
-Zaman uyumsuz gönderme ve alma yöntemleri, parçalama kanalı örneğinin bu sürümünde uygulanmaz.
+Asynchronous gönderme ve alma yöntemleri, yığın kanalı örneğinin bu sürümünde uygulanmaz.
 
-## <a name="chunking-protocol"></a>Kümeleme Protokolü
+## <a name="chunking-protocol"></a>Parçalama Protokolü
 
-Öbek oluşturma kanalı, bir dizi öbekin başlangıcını ve sonunu ve her öbekin sıra numarasını belirten bir protokol tanımlar. Aşağıdaki üç örnek ileti, her birinin ana yönlerini tanımlayan yorumlarla başlangıç, öbek ve son iletileri gösterir.
+Yığın kanalı, bir dizi parçanın başlangıç ve sonunu ve her bir parçanın sıra numarasını gösteren bir protokol tanımlar. Aşağıdaki üç örnek ileti, her birinin temel yönlerini açıklayan açıklamalarla başlangıç, öbek ve bitiş iletilerini gösterir.
 
-### <a name="start-message"></a>Iletiyi Başlat
+### <a name="start-message"></a>İletiyi Başlat
 
 ```xml
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"
@@ -119,7 +119,7 @@ the data to be chunked.
 </s:Envelope>
 ```
 
-### <a name="chunk-message"></a>Öbek Iletisi
+### <a name="chunk-message"></a>Öbek İletisi
 
 ```xml
 <s:Envelope
@@ -161,7 +161,7 @@ kfSr2QcBlkHTvQ==
 </s:Envelope>
 ```
 
-### <a name="end-message"></a>Bitiş Iletisi
+### <a name="end-message"></a>İletiyi Sonla
 
 ```xml
 <s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"
@@ -203,21 +203,21 @@ as the ChunkingStart message.
 </s:Envelope>
 ```
 
-## <a name="chunking-channel-architecture"></a>Parçalama kanalı mimarisi
+## <a name="chunking-channel-architecture"></a>Chunking Kanal Mimarisi
 
-Parçalama kanalı, yüksek düzeyde olan ve tipik kanal mimarisinden sonraki bir `IDuplexSessionChannel`. `ChunkingChannelFactory` ve `ChunkingChannelListener`oluşturabileceğiniz bir `ChunkingBindingElement` vardır. `ChunkingChannelFactory`, istendiğinde `ChunkingChannel` örnekleri oluşturur. `ChunkingChannelListener`, yeni bir iç kanal kabul edildiğinde `ChunkingChannel` örnekleri oluşturur. `ChunkingChannel` kendi kendine ileti göndermekten ve onlardan sorumludur.
+Chunking kanalı, `IDuplexSessionChannel` yüksek düzeyde, tipik kanal mimarisini izleyen bir kanaldır. Bir ve `ChunkingBindingElement` bir `ChunkingChannelFactory` inşa edebilirsiniz bir `ChunkingChannelListener`. `ChunkingChannel` İstendiğinde `ChunkingChannelFactory` örnekler oluşturur. Yeni `ChunkingChannelListener` bir iç `ChunkingChannel` kanal kabul edildiğinde örnekler oluşturur. İletilerin `ChunkingChannel` gönderilmesi nden ve alınmasından kendisi sorumludur.
 
-Bir sonraki düzey aşağı `ChunkingChannel`, öbek protokolünü uygulamak için birkaç bileşene bağımlıdır. Gönderme tarafında kanal, gerçek parçalama yapan `ChunkingWriter` adlı özel bir <xref:System.Xml.XmlDictionaryWriter> kullanır. `ChunkingWriter`, öbek göndermek için doğrudan iç kanalı kullanır. Özel `XmlDictionaryWriter` kullanmak, özgün iletinin büyük gövdesi yazıldığı için öbekleri göndermemizi sağlar. Bu, tüm özgün iletiyi arabelleğe sunduğumuz anlamına gelir.
+Bir sonraki düzeyde `ChunkingChannel` aşağı, parçalama protokolü uygulamak için çeşitli bileşenlere dayanır. Gönder tarafında, kanal gerçek ötme yapan bir özel <xref:System.Xml.XmlDictionaryWriter> `ChunkingWriter` kullanır. `ChunkingWriter`parçaları göndermek için doğrudan iç kanalı kullanır. Bir özel `XmlDictionaryWriter` kullanarak bize orijinal iletinin büyük gövdesi yazılı olarak parçalar göndermek için izin verir. Bu, özgün iletinin tamamını arabelleğe almadığımız anlamına gelir.
 
-![Parçalama kanalı gönderme mimarisini gösteren diyagram.](./media/chunking-channel/chunking-channel-send.gif)
+![Yığın lama kanalını gösteren diyagram mimari gönder.](./media/chunking-channel/chunking-channel-send.gif)
 
-Alma tarafında `ChunkingChannel`, iç kanaldan iletiler çeker ve bunları, gelen öbeklerden özgün iletiyi reconstitutes `ChunkingReader`adlı özel bir <xref:System.Xml.XmlDictionaryReader> sağlar. `ChunkingChannel`, bu `ChunkingReader` `ChunkingMessage` adlı özel bir `Message` uygulamasına sarar ve bu iletiyi yukarıdaki katmana döndürür. Bu `ChunkingReader` ve `ChunkingMessage` birleşimi özgün ileti gövdesinin tüm özgün ileti gövdesini arabelleğe almak yerine, yukarıdaki katman tarafından okunmakta olduğu gibi serbest bırakmamızı sağlar. `ChunkingReader`, gelen öbekleri en fazla yapılandırılabilir sayıda arabelleğe alınmış parçalara kadar arabelleğe aldığı bir kuyruğa sahiptir. Bu en fazla sınıra ulaşıldığında, okuyucu yukarıdaki katmanda bulunan (yani yalnızca özgün ileti gövdesinden okunarak) veya en fazla alma zaman aşımına ulaşılana kadar iletilerin kuyruktan dönmesini bekler.
+Alma tarafında, `ChunkingChannel` iletileri iç kanaldan çeker ve gelen <xref:System.Xml.XmlDictionaryReader> parçalardan gelen orijinal iletiyi yeniden oluşturan `ChunkingReader`özel bir özele teslim eder. `ChunkingChannel`bu `ChunkingReader` özel bir `Message` uygulama `ChunkingMessage` denir sarar ve yukarıdaki katmana bu iletiyi döndürür. Bu kombinasyon `ChunkingReader` `ChunkingMessage` ve bize tüm orijinal ileti gövdesi arabelleğe almak zorunda yerine yukarıdaki katman tarafından okunuyor gibi orijinal ileti gövdesi de-chunk sağlar. `ChunkingReader`en fazla yapılandırılmış arabellekli parça sayısına kadar gelen parçaları arabelleğe aldığı bir kuyruğa sahiptir. Bu maksimum sınıra ulaşıldığında, okuyucu iletilerin yukarıdaki katman tarafından (diğer bir şekilde orijinal ileti gövdesinden okunarak) veya maksimum alma zaman aşımına ulaşılAna kadar sıradan boşaltılmasını bekler.
 
-![Parçalama kanalı alma mimarisini gösteren diyagram.](./media/chunking-channel/chunking-channel-receive.gif)
+![Yığın kanalını gösteren diyagram mimari alır.](./media/chunking-channel/chunking-channel-receive.gif)
 
-## <a name="chunking-programming-model"></a>Öbek programlama modeli
+## <a name="chunking-programming-model"></a>Chunking Programlama Modeli
 
-Hizmet geliştiricileri, sözleşme içindeki işlemlere `ChunkingBehavior` özniteliğini uygulayarak hangi iletilerin öbekli olduğunu belirtebilir. Özniteliği, geliştiricinin giriş mesajı, çıkış iletisi veya her ikisi için de uygulanıp uygulanmadığını belirtmesini sağlayan bir `AppliesTo` özelliği sunar. Aşağıdaki örnek `ChunkingBehavior` özniteliğin kullanımını gösterir:
+Hizmet geliştiriciler, sözleşme içindeki işlemlere öznitelik uygulayarak `ChunkingBehavior` hangi iletilerin ödeneceğini belirtebilir. Öznitelik, geliştiricinin `AppliesTo` öbeklemenin giriş iletisi, çıktı iletisi veya her ikisi için de geçerli olup olmadığını belirtmesine olanak tanıyan bir özelliği ortaya çıkarır. Aşağıdaki örnek, öznitelik `ChunkingBehavior` kullanımını gösterir:
 
 ```csharp
 [ServiceContract]
@@ -238,109 +238,109 @@ interface ITestService
 }
 ```
 
-`ChunkingBindingElement`, bu programlama modelinden, iletileri öbekli olacak şekilde tanımlayan eylem URI 'lerinin bir listesini derler. Her giden ileti eylemi, iletinin öbekli olarak mı yoksa doğrudan mi gönderileceğini öğrenmek için bu listeyle karşılaştırılır.
+Bu programlama modelinden, `ChunkingBindingElement` ödenecek iletileri tanımlayan bir eylem UUI listesi derler. Giden her iletinin eylemi, iletinin parçalanmış mı yoksa doğrudan gönderilmesi mi gerektiğini belirlemek için bu listeyle karşılaştırılır.
 
-## <a name="implementing-the-send-operation"></a>Gönderme Işlemini uygulama
+## <a name="implementing-the-send-operation"></a>Gönderme İşleminin Uygulanması
 
-Yüksek düzeyde, Gönder işlemi önce giden iletinin öbekli olup olmadığını denetler ve yoksa iletiyi doğrudan iç kanalı kullanarak gönderir.
+Yüksek düzeyde, Gönderen işlemi önce giden iletinin parçalanıp tıkanması gerekmediğini denetler ve değilse, iletiyi doğrudan iç kanalı kullanarak gönderir.
 
-İleti öbekli olması gerekiyorsa, Send yeni bir `ChunkingWriter` oluşturur ve bu `ChunkingWriter`geçirerek giden iletide `WriteBodyContents` çağırır. `ChunkingWriter`, ileti öbek oluşturma (özgün ileti üstbilgilerini başlangıç öbek iletisine kopyalama dahil) ve iç kanalı kullanarak öbekleri gönderir.
+İletinin parçalanmış olması gerekiyorsa, Gönder `ChunkingWriter` yeni `WriteBodyContents` bir oluşturma ve bu `ChunkingWriter`iletiyi geçen giden iletiyi çağırır. Daha `ChunkingWriter` sonra ileti ödenebilir (başlangıç öbek iletisine özgün ileti üstbilgilerinin kopyalanması dahil) yapar ve iç kanalı kullanarak öbek gönderir.
 
-Dikkat edilecek bazı ayrıntılar:
+Kayda değer birkaç ayrıntı:
 
-- `CommunicationState` açık olduğundan emin olmak için ilk çağrıları `ThrowIfDisposedOrNotOpened` gönderin.
+- Açıldığından `CommunicationState` `ThrowIfDisposedOrNotOpened` emin olmak için ilk aramaları gönderin.
 
-- Gönderme, her oturum için tek seferde yalnızca bir ileti gönderilebilmesi için eşitlenir. Bir öbekli ileti gönderilirken sıfırlanan `sendingDone` adlı bir `ManualResetEvent` vardır. Öbek iletisi gönderildikten sonra bu olay ayarlanır. Send yöntemi, giden iletiyi göndermeyi denemeden önce bu olayın ayarlanmış olmasını bekler.
+- Gönderme, her oturum için aynı anda yalnızca bir ileti gönderilebilmek için eşitlenir. Bir yığın `ManualResetEvent` `sendingDone` ileti gönderilirken sıfırlanan bir ad vardır. Son öbek iletisi gönderildikten sonra, bu olay ayarlanır. Gönder yöntemi, giden iletiyi göndermeye çalışır önce bu olayın ayarını bekler.
 
-- Send, gönderirken eşitlenen durum değişikliklerini engellemek için `CommunicationObject.ThisLock` kilitler. <xref:System.ServiceModel.Channels.CommunicationObject> durumlar ve durum makinesi hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.CommunicationObject> belgelerine bakın.
+- Gönderirken `CommunicationObject.ThisLock` eşitlenmiş durum değişikliklerini önlemek için kilitleri gönder. Durumlar <xref:System.ServiceModel.Channels.CommunicationObject> ve durum makinesi <xref:System.ServiceModel.Channels.CommunicationObject> hakkında daha fazla bilgi için belgelere bakın.
 
-- Gönderme için geçirilen zaman aşımı, tüm öbeklerin gönderilmesini içeren gönderme işleminin tamamına yönelik zaman aşımı olarak kullanılır.
+- Gönder'e geçirilen zaman aşımı, tüm parçaları göndermeyi içeren tüm gönderme işlemi için zaman aşımı olarak kullanılır.
 
-- Özgün ileti gövdesinin tamamını arabelleğe almayı önlemek için özel <xref:System.Xml.XmlDictionaryWriter> tasarımı seçildi. `message.GetReaderAtBodyContents` kullanarak gövdede <xref:System.Xml.XmlDictionaryReader> alırız, tüm gövdenin ara belleğe alınır. Bunun yerine, `message.WriteBodyContents`geçirilen özel bir <xref:System.Xml.XmlDictionaryWriter> vardır. İleti, yazıcı üzerinde WriteBase64 çağırdığında, yazıcı paketleri ileti halinde parçalara ayırır ve bunları iç kanalı kullanarak gönderir. WriteBase64 blokları öbek gönderilene kadar engeller.
+- Özel <xref:System.Xml.XmlDictionaryWriter> tasarım, tüm orijinal ileti gövdesinin arabelleğe alınışını önlemek için seçildi. Eğer tüm vücudu <xref:System.Xml.XmlDictionaryReader> kullanarak `message.GetReaderAtBodyContents` bir ceset alırsanız tamponlanmış oluruz. Bunun yerine, biz <xref:System.Xml.XmlDictionaryWriter> geçirilen bir `message.WriteBodyContents`özel var. İleti yazarüzerinde WriteBase64 çağırır gibi, yazar mesajları içine yığınlar kadar paketleri ve iç kanalı kullanarak gönderir. Yığın gönderilene kadar Base64 bloklarını yazın.
 
-## <a name="implementing-the-receive-operation"></a>Alma Işlemi uygulama
+## <a name="implementing-the-receive-operation"></a>Alma İşleminin Uygulanması
 
-Yüksek düzeyde, alma işlemi ilk önce gelen iletinin `null` olmadığını ve eyleminin `ChunkingAction`olduğunu denetler. Her iki ölçütü de karşılamıyorsa ileti alma işleminden değişmeden döndürülür. Aksi takdirde, al yeni bir `ChunkingReader` ve etrafında Sarmalanan yeni bir `ChunkingMessage` oluşturur (`GetNewChunkingMessage`çağırarak). Bu yeni `ChunkingMessage`döndürmeden önce, bir döngüsünde `innerChannel.Receive` çağıran ve son öbek iletisi alınana veya alma zaman aşımı düzeltilinceye kadar `ChunkingReader` öbeklere sahip olan `ReceiveChunkLoop`yürütmek için bir ThreadPool iş parçacığı kullanır.
+Yüksek düzeyde, Alma işlemi ilk olarak gelen iletinin `null` olmadığını ve eyleminin `ChunkingAction`. Her iki ölçüte de uymuyorsa, ileti Receive'tan değiştirilmeden döndürülür. Aksi takdirde, Receive `ChunkingReader` yeni ve `ChunkingMessage` yeni bir sarılmış `GetNewChunkingMessage`(arayarak) oluşturur. Bu yeni `ChunkingMessage`döndürmeden önce , Receive yürütmek `ReceiveChunkLoop`için `innerChannel.Receive` bir threadpool iş parçacığı kullanır `ChunkingReader` , bir döngü içinde çağırır ve son yığın iletisi alınana veya alma zaman acısı isabet kadar parçaları kapalı eller.
 
-Dikkat edilecek bazı ayrıntılar:
+Kayda değer birkaç ayrıntı:
 
-- Gönder gibi, `CommunicationState` açık olduğundan emin olmak için ilk çağrı Al `ThrowIfDisposedOrNotOepned`.
+- Gönder gibi, Açıldığından `ThrowIfDisposedOrNotOepned` `CommunicationState` emin olmak için ilk çağrıları alın.
 
-- Alma işlemi, oturumdan bir seferde yalnızca bir ileti alınabilmesi için de eşitlenir. Bu durum, bir başlangıç öbek iletisi alındıktan sonra, sonraki tüm alınan iletilerin, son öbek iletisi alınana kadar bu yeni öbek sırası içinde öbeklerinin olması beklendiğinden özellikle önemlidir. Alma, şu anda öbekli olmayan bir iletiye ait olan tüm parçalar alındığından iç kanaldan ileti çekmez. Bunu gerçekleştirmek için al, yeni bir öbek iletisi alındığında bitiş öbek iletisi alındığında ve sıfırlandığında ayarlanan `currentMessageCompleted`adlı `ManualResetEvent` kullanır.
+- Alma, oturumdan aynı anda yalnızca bir ileti alınabilmesi için eşitlenir. Bu özellikle önemlidir, çünkü bir başlangıç öbek iletisi alındıktan sonra, sonraki tüm iletilerin bir son öbek iletisi alınana kadar bu yeni yığın dizisi içinde parçalar olması beklenir. İletiye ait tüm parçalar şu anda parçalanan ileti ye gelene kadar iç kanaldan ileti çekemez. Bunu gerçekleştirmek için, `ManualResetEvent` Receive, son öbek iletisi alındığı zaman ayarlanan ve yeni bir başlangıç öycesi iletisi aldığında sıfırlanan bir adlandırılmış `currentMessageCompleted`kullanır.
 
-- Gönderme, alma işleminden farklı olarak alma sırasında eşitlenmiş durum geçişlerini engellemez. Örneğin, alma sırasında çağrılabilir ve özgün iletinin bekleyen alımı tamamlanana veya belirtilen zaman aşımı değerine ulaşılana kadar beklenebilir.
+- Gönder'in aksine, Receive alırken eşitlenmiş durum geçişlerini engellemez. Örneğin, teslim alırken Kapat çağrılabilir ve özgün iletinin bekleyen alabilmesi tamamlanana veya belirtilen zaman sonu değerine ulaşılAna kadar bekleyebilir.
 
-- Alma işlemi sırasında geçen zaman aşımı, tüm öbeklerin alınması dahil olmak üzere tüm alma işlemleri için zaman aşımı olarak kullanılır.
+- Receive için geçirilen zaman aşımı, tüm parçaları almayı içeren tüm alma işlemi için zaman aşımı olarak kullanılır.
 
-- İletiyi kullanan Katman, gelen öbek iletilerinin hızından daha düşük bir hızda ileti gövdesini kullanıyorsa, `ChunkingReader` bu gelen öbekleri `ChunkingBindingElement.MaxBufferedChunks`belirtilen sınıra kadar arabelleğe alır. Bu sınıra ulaşıldığında, arabelleğe alınmış bir öbek tüketilene veya alma zaman aşımına ulaşılana kadar alt katmandan daha fazla öbek çekilmeyen bir değer yoktur.
+- İletiyi tüketen katman ileti gövdesini gelen öbek iletilerinin hızından daha düşük bir `ChunkingReader` oranda tüketiyorsa, gelen öbek, gelen öbek'leri ' tarafından `ChunkingBindingElement.MaxBufferedChunks`belirtilen sınıra kadar arabellek Bu sınıra ulaşıldıktan sonra, arabelleğe alınan bir yığın tüketilene veya alma zaman aşıntısına ulaşılına kadar alt katmandan başka parça çekilmez.
 
-## <a name="communicationobject-overrides"></a>CommunicationObject geçersiz kılmaları
+## <a name="communicationobject-overrides"></a>İletişimNesne Geçersiz Kılma
 
-### <a name="onopen"></a>OnOpen
+### <a name="onopen"></a>Açık Açık
 
-`OnOpen`, iç kanalı açmak için `innerChannel.Open` çağırır.
+`OnOpen`iç `innerChannel.Open` kanalı açmak için çağırır.
 
-### <a name="onclose"></a>OnClose
+### <a name="onclose"></a>Onclose
 
-`OnClose`, `true` `stopReceive`, durdurmak için bekleyen `ReceiveChunkLoop` sinyali verecek şekilde ayarlar. Daha sonra, `ReceiveChunkLoop` durdurulduğunda ayarlanan `receiveStopped` <xref:System.Threading.ManualResetEvent>bekler. `ReceiveChunkLoop` belirtilen zaman aşımı süresi içinde durduğu varsayılarak, geri kalan zaman aşımı ile `innerChannel.Close` `OnClose` çağırır.
+`OnClose`durdurmak `stopReceive` için `true` bekleyen `ReceiveChunkLoop` sinyal için ilk ayarlar. Daha sonra durur `receiveStopped` <xref:System.Threading.ManualResetEvent>ayarlanır `ReceiveChunkLoop` , bekler. Belirtilen `ReceiveChunkLoop` zaman anına kadar `OnClose` `innerChannel.Close` durakları varsayarsak, kalan zaman amıyla çağırır.
 
-### <a name="onabort"></a>OnAbort
+### <a name="onabort"></a>Onabort
 
-`OnAbort`, iç kanalı durdurmak için `innerChannel.Abort` çağırır. Bekleyen bir `ReceiveChunkLoop` varsa, bekleyen `innerChannel.Receive` çağrısından bir özel durum alır.
+`OnAbort`iç `innerChannel.Abort` kanalı iptal etmek için çağırır. Bekleyen `ReceiveChunkLoop` bir arama varsa, bekleyen `innerChannel.Receive` aramadan bir özel durum alır.
 
-### <a name="onfaulted"></a>Onhatalı
+### <a name="onfaulted"></a>Hatalı
 
-`ChunkingChannel` kanal hata verdi ve `OnFaulted` geçersiz kılınmadığında özel bir davranış gerektirmez.
+Kanal `ChunkingChannel` arızalandığında özel davranış gerektirmez, bu `OnFaulted` nedenle geçersiz kılınmaz.
 
-## <a name="implementing-channel-factory"></a>Kanal fabrikası uygulama
+## <a name="implementing-channel-factory"></a>Kanal Fabrikası'nın Uygulanması
 
-`ChunkingChannelFactory`, iç kanal fabrikasında `ChunkingDuplexSessionChannel` örnekleri ve basamaklı durum geçişleri oluşturmaktan sorumludur.
+İç `ChunkingChannelFactory` kanal fabrikasına `ChunkingDuplexSessionChannel` devlet geçişlerinin örneklerini oluşturmaktan ve basamaklamadurumundan sorumludur.
 
-`OnCreateChannel`, iç kanal fabrikası kullanarak `IDuplexSessionChannel` bir iç kanal oluşturur. Daha sonra bu iç kanalı, yığın olarak kullanılacak ileti eylemlerinin listesiyle birlikte geçirerek yeni bir `ChunkingDuplexSessionChannel` oluşturur. Yığın olarak kullanılacak ileti eylemlerinin listesi ve arabellekteki öbeklerin en fazla sayısı, oluşturucusunun `ChunkingChannelFactory` geçirilen iki parametredir. `ChunkingBindingElement` bölümünde bu değerlerin nereden geldiği açıklanmaktadır.
+`OnCreateChannel`bir `IDuplexSessionChannel` iç kanal oluşturmak için iç kanal fabrikasını kullanır. Daha sonra, bu `ChunkingDuplexSessionChannel` iç kanalda, ötülecek ileti eylemlerinin listesi ve aldıktan sonra arabelleğe alınacak en fazla parça sayısı yla birlikte yeni bir geçiş oluşturur. Parçalanacak ileti eylemlerinin listesi ve arabellek için kullanılacak en fazla parça `ChunkingChannelFactory` sayısı, oluşturucusunda geçirilen iki parametredir. Bu `ChunkingBindingElement` değerlerin nereden geldiğini açıklayan bölüm.
 
-`OnOpen`, `OnClose`, `OnAbort` ve zaman uyumsuz eşdeğerleri, iç kanal fabrikasında karşılık gelen durum geçiş yöntemini çağırır.
+, `OnOpen` `OnClose` `OnAbort` ve onların eşzamanlı eşdeğerleri iç kanal fabrikasında karşılık gelen durum geçiş yöntemi ni çağırır.
 
-## <a name="implementing-channel-listener"></a>Kanal dinleyicisi uygulama
+## <a name="implementing-channel-listener"></a>Kanal Dinleyicisi Uygulama
 
-`ChunkingChannelListener`, iç kanal dinleyicisinin etrafındaki bir sarmalayıcıdır. Ana işlevi, bu iç kanal dinleyicisine yapılan temsilci çağrılarının yanı sıra yeni `ChunkingDuplexSessionChannels` iç kanal dinleyicisinden kabul edilen kanallara sarmalıdır. Bu `OnAcceptChannel` ve `OnEndAcceptChannel`yapılır. Yeni oluşturulan `ChunkingDuplexSessionChannel`, daha önce açıklanan diğer parametrelerle birlikte iç kanalı geçti.
+Bir `ChunkingChannelListener` iç kanal dinleyici etrafında bir sarmalayıcı. Ana işlevi, bu iç kanal dinleyiciiçin delege çağrıları `ChunkingDuplexSessionChannels` yanı sıra, iç kanal dinleyici kabul kanalları etrafında yeni sarmak için. Bu yapılır `OnAcceptChannel` ve `OnEndAcceptChannel`. Yeni oluşturulan `ChunkingDuplexSessionChannel` daha önce açıklanan diğer parametrelerile birlikte iç kanal geçirilir.
 
-## <a name="implementing-binding-element-and-binding"></a>Bağlama öğesi ve bağlamayı uygulama
+## <a name="implementing-binding-element-and-binding"></a>Bağlama Öğesi nin Uygulanması ve Bağlama
 
-`ChunkingBindingElement`, `ChunkingChannelFactory` ve `ChunkingChannelListener`oluşturmaktan sorumludur. `ChunkingBindingElement`, `CanBuildChannelFactory`\<T > ve `CanBuildChannelListener`\<T > türü `IDuplexSessionChannel` (parçalama kanalının desteklediği tek kanal) ve bağlamadaki diğer bağlama öğelerinin bu kanal türünü destekleyip desteklemediğini denetler.
+`ChunkingBindingElement`oluşturmaktan sorumludur `ChunkingChannelFactory` ve `ChunkingChannelListener`. T `ChunkingBindingElement`> ve `CanBuildChannelFactory` \< `CanBuildChannelListener` \<T>'daki T'nin türde `IDuplexSessionChannel` olup olmadığını (öbeklenme kanalı tarafından desteklenen tek kanal) ve bağlamadaki diğer bağlama öğelerinin bu kanal türünü desteklediğini denetler.
 
-`BuildChannelFactory`\<T > öncelikle istenen kanal türünün oluşturulup oluşturulmadığını kontrol eder ve ardından, yığın olarak kullanılacak ileti eylemlerinin bir listesini alır. Daha fazla bilgi için aşağıdaki bölüme bakın. Daha sonra, iç kanal fabrikasını (`context.BuildInnerChannelFactory<IDuplexSessionChannel>`döndürülen), ileti eylemlerinin listesini ve arabelleğe alınan en fazla parça sayısını geçirerek yeni bir `ChunkingChannelFactory` oluşturur. En fazla parça sayısı, `ChunkingBindingElement`tarafından sunulan `MaxBufferedChunks` adlı bir özellikten gelir.
+`BuildChannelFactory`\<T> önce istenen kanal türünün oluşturulabileceğini denetler ve ardından parçalanacak ileti eylemlerinin listesini alır. Daha fazla bilgi için aşağıdaki bölüme bakın. Daha sonra yeni `ChunkingChannelFactory` bir geçiş o iç kanal `context.BuildInnerChannelFactory<IDuplexSessionChannel>`fabrika (döndürülen), ileti eylemleri listesi ve arabellek için parçaların maksimum sayısı oluşturur. En fazla parça `MaxBufferedChunks` `ChunkingBindingElement`sayısı, 'nin maruz kalan özelliğinden gelir.
 
-`BuildChannelListener<T>`, `ChunkingChannelListener` oluşturmak ve bunu iç kanal dinleyicisi geçirmek için benzer bir uygulamaya sahiptir.
+`BuildChannelListener<T>`oluşturmak `ChunkingChannelListener` ve iç kanal dinleyici geçmek için benzer bir uygulama vardır.
 
-Bu örnekte `TcpChunkingBinding`adında bir örnek bağlama bulunur. Bu bağlama iki bağlama öğesinden oluşur: `TcpTransportBindingElement` ve `ChunkingBindingElement`. `MaxBufferedChunks` özelliğini ayarlamanın yanı sıra, bağlama Ayrıca `MaxReceivedMessageSize` gibi bazı `TcpTransportBindingElement` özellikleri de ayarlar (üstbilgiler için `ChunkingUtils.ChunkSize` + 100KB bayt olarak ayarlar).
+Bu örnekte .. `TcpChunkingBinding` Bu bağlama iki bağlayıcı `TcpTransportBindingElement` öğeden oluşur: ve `ChunkingBindingElement`. Özelliği açığa çıkarmanın `MaxBufferedChunks` yanı sıra, bağlama gibi `TcpTransportBindingElement` bazı `MaxReceivedMessageSize` özellikleri de `ChunkingUtils.ChunkSize` ayarlar (üstbilgi için + 100KB bayt ayarlar).
 
-`TcpChunkingBinding` Ayrıca, `IBindingRuntimePreferences` uygular ve yalnızca zaman uyumlu alma çağrılarının uygulandığını belirten `ReceiveSynchronously` yönteminden true değerini döndürür.
+`TcpChunkingBinding`ayrıca yalnızca `IBindingRuntimePreferences` senkron Receive `ReceiveSynchronously` çağrılarının uygulandığını belirten yöntemden doğru olarak uygular ve döndürür.
 
-### <a name="determining-which-messages-to-chunk"></a>Hangi Iletileri öbekte belirleme
+### <a name="determining-which-messages-to-chunk"></a>Hangi İletilerin Öbek Olarak Belirlene
 
-Öbek oluşturma kanalı yalnızca `ChunkingBehavior` özniteliği aracılığıyla tanımlanan iletileri parçalara parçalar. `ChunkingBehavior` sınıfı `IOperationBehavior` uygular ve `AddBindingParameter` metodu çağırarak uygulanır. Bu yöntemde `ChunkingBehavior`, hangi iletilerin öbekli olması gerektiğini belirleyen `AppliesTo` özelliğinin (`InMessage`, `OutMessage` veya her ikisi) değerini inceler. Daha sonra bu iletilerin her birinin eylemini alır (`OperationDescription`Ileti koleksiyonundan) ve bir `ChunkingBindingParameter`örneği içinde bulunan bir dize koleksiyonuna ekler. Daha sonra bu `ChunkingBindingParameter`, belirtilen `BindingParameterCollection`ekler.
+Yığın kanalı yalnızca öznitelik üzerinden `ChunkingBehavior` tanımlanan iletileri parçalar. Sınıf `ChunkingBehavior` uygular `IOperationBehavior` ve `AddBindingParameter` yöntemi çağırarak uygulanır. Bu yöntemde, `ChunkingBehavior` hangi iletilerin `AppliesTo` parçalanılması gerektiğini belirlemek için özelliğinin`InMessage` `OutMessage` (veya her ikisinin) değerini inceler. Daha sonra bu iletilerin her birinin eylemini alır `OperationDescription`(Üzerindeki İletiler koleksiyonundan) ve bir `ChunkingBindingParameter`örnek içinde bulunan bir dize koleksiyonuna ekler. Daha sonra `ChunkingBindingParameter` sağlanan `BindingParameterCollection`bu ekler.
 
-Bu `BindingParameterCollection`, bağlama öğesi kanal fabrikası veya kanal dinleyicisi oluşturduğunda bağlamadaki her bağlama öğesine `BindingContext` geçirilir. `ChunkingBindingElement``BuildChannelFactory<T>` ve `BuildChannelListener<T>`, bu `ChunkingBindingParameter` `BindingContext’`s `BindingParameterCollection`dışına çekin. `ChunkingBindingParameter` içinde yer alan eylemler koleksiyonu `ChunkingChannelFactory` veya `ChunkingChannelListener`geçirilir ve bu da `ChunkingDuplexSessionChannel`geçirir.
+Bu `BindingParameterCollection` bağlama öğesi `BindingContext` kanal fabrikası veya kanal dinleyici oluşturur zaman bağlama her bağlayıcı öğe içinde geçirilir. 'uygulama `ChunkingBindingElement` `BuildChannelFactory<T>` ve `BuildChannelListener<T>` `ChunkingBindingParameter` `BindingContext’`s `BindingParameterCollection`bu çekin . İçinde `ChunkingBindingParameter` yer alan eylemlerin toplanması daha `ChunkingChannelFactory` sonra `ChunkingChannelListener`ya da , sırayla geçer `ChunkingDuplexSessionChannel`.
 
-## <a name="running-the-sample"></a>Örnek çalıştırma
+## <a name="running-the-sample"></a>Örneği Çalıştırma
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için
 
-1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.
+1. Aşağıdaki komutu kullanarak 4.0 ASP.NET yükleyin.
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+2. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.
 
-3. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
+3. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.
 
-4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+4. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.
 
-5. Önce Service. exe ' yi çalıştırın, sonra Client. exe ' yi çalıştırın ve çıktı için hem konsol pencerelerini izleyin.
+5. Önce Service.exe'yi çalıştırın, sonra Client.exe'yi çalıştırın ve çıktı için her iki konsol penceresini de izleyin.
 
-Örneği çalıştırırken aşağıdaki çıktı beklenmektedir.
+Örneği çalıştırırken, aşağıdaki çıktı bekleniyor.
 
 İstemci:
 

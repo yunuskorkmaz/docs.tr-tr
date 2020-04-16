@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: b9faa4b7422419af9283ab52325e878db3d6f19f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86e0c77b899ad590b9958fea3a050ad0e660bb43
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184514"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463788"
 ---
 # <a name="security-protocols"></a>Güvenlik Protokolleri
 Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik gereksinimlerini kapsayan Web hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde, aşağıdaki Web hizmetleri güvenlik protokolleri için <xref:System.ServiceModel.Channels.SecurityBindingElement>Windows Communication Foundation (WCF) ayrıntıları (uygulandığı) açıklanmaktadır.  
@@ -47,7 +47,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
 |KerberosOverTransport|Windows|X509|Aktarım|  
 |IssuedTokenOverTransport|Federe|X509|Aktarım|  
 |SspiNegotiatedOverTransport|Windows Sspi Müzakere|Windows Sspi Müzakere|Aktarım|  
-|Anonim ForCertificate|None|X509|İleti|  
+|Anonim ForCertificate|Hiçbiri|X509|İleti|  
 |Kullanıcı AdıForCertificate|Kullanıcı adı/şifre|X509|İleti|  
 |MutualCertificate|X509|X509|İleti|  
 |MutualCertificateDuplex|X509|X509|İleti|  
@@ -55,7 +55,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
 |Kerberos|Windows|Windows|İleti|  
 |IssuedToken|Federe|Federe|İleti|  
 |SspiNegotiated|Windows Sspi Müzakere|Windows Sspi Müzakere|İleti|  
-|AnonimForSslNegotiated|None|X509, TLS-Nego|İleti|  
+|AnonimForSslNegotiated|Hiçbiri|X509, TLS-Nego|İleti|  
 |Kullanıcı AdıForSslNegotiated|Kullanıcı adı/şifre|X509, TLS-Nego|İleti|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|İleti|  
 |IssuedTokenForSslNegotiated|Federe|X509, TLS-Nego|İleti|  
@@ -64,7 +64,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
   
  WCF, uygulamalar arasındaki çoklu ileti alışverişini korumak için güvenli oturum desteği sağlamak için WS-SecureConversation'dan yararlanır.  Uygulama ayrıntıları için aşağıdaki "Güvenli Oturumlar" adlı bilgiye bakın.  
   
- Kimlik doğrulama modlarına ek olarak WCF, çoğu ileti güvenliği tabanlı kimlik doğrulama moduiçin geçerli olan yaygın koruma mekanizmalarını denetlemek için ayarlar sağlar, örneğin: imza ve şifreleme işlemleri sırası, algoritma paketleri, anahtar türetme ve imza onayı.  
+ Kimlik doğrulama modlarına ek olarak WCF, çoğu ileti güvenliği tabanlı kimlik doğrulama moduna uygulanan yaygın koruma mekanizmalarını denetlemek için ayarlar sağlar( örneğin: imza ve şifreleme işlemleri ne sırayla, algoritma paketleri, anahtar türetme ve imza onayı.  
   
  Bu belgede aşağıdaki önekler ve ad alanları kullanılır.  
   
@@ -139,7 +139,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
  Zaman damgası varlığı <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfın özelliği kullanılarak denetlenir. WCF her zaman wsse:TimeStamp ile wsse:Created ve wsse:Expires alanları ile serihale eder. WsSe:TimeStamp imzalandığında her zaman imzalanır.  
   
 ### <a name="22-protection-order"></a>2.2 Koruma Emri  
- WCF, "Şifrelemeden Önce İmzala" ve "İmzadan Önce Şifreleme" ileti koruma emrini destekler (Güvenlik İlkesi 1.2). "Şifrelemeden Önce İmzala" gibi nedenlerle önerilir: WS-Security 1.1 SignatureConfirmation mekanizması kullanılmadığı sürece imza ikame saldırılarına açık olan İmzadan Önce Şifrele ile korunan iletiler ve şifrelenmiş içerik üzerinden imza daha zor denetim.  
+ WCF, "Şifrelemeden Önce İmzala" ve "İmzadan Önce Şifreleme" ileti koruma emrini destekler (Güvenlik İlkesi 1.2). "Şifrelemeden Önce İmzala" gibi nedenlerle önerilir: WS-Security 1.1 SignatureConfirmation mekanizması kullanılmadığı ve şifreli içeriğe yönelik imza denetimi zorlaştırmadığı sürece İmzadan Önce Şifrele ile korunan iletiler imza ikame saldırılarına açıktır.  
   
 ### <a name="23-signature-protection"></a>2.3 İmza Koruması  
  İşaretten Önce Şifrele kullanıldığında, şifrelenmiş içeriği veya imzalama anahtarını tahmin etmek için kaba kuvvet saldırılarını önlemek için imzanın korunması önerilir (özellikle zayıf anahtar malzemesiyle özel bir belirteç kullanıldığında).  
@@ -235,7 +235,76 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
  İlke  
   
 ```xml  
-<wsp:Policy wsu:Id="IssuedTokenOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy  
+<wsp:Policy wsu:Id="IssuedTokenOverTransport_policy">
+ <wsp:ExactlyOne>
+  <wsp:All>
+   <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:TransportToken>
+      <wsp:Policy>
+       <sp:HttpsToken />
+      </wsp:Policy>
+     </sp:TransportToken>
+     <sp:AlgorithmSuite>
+      <wsp:Policy>
+       <sp:Basic256 />
+      </wsp:Policy>
+     </sp:AlgorithmSuite>
+     <sp:Layout>
+      <wsp:Policy>
+       <sp:Strict/>
+      </wsp:Policy>
+     </sp:Layout>
+     <sp:IncludeTimestamp/>
+    </wsp:Policy>
+   </sp:TransportBinding>
+   <sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+      <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+       <Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address>
+       <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+        <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <wsx:MetadataSection xmlns="">
+          <wsx:MetadataReference>
+           <Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address>
+           <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+            <Dns> ...  </Dns>
+           </Identity>
+          </wsx:MetadataReference>
+         </wsx:MetadataSection>
+        </Metadata>
+       </Metadata>
+      </Issuer>
+      <sp:RequestSecurityTokenTemplate>
+       <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType>
+      </sp:RequestSecurityTokenTemplate>
+      <wsp:Policy>
+       <sp:RequireInternalReference/>
+      </wsp:Policy>
+     </sp:IssuedToken>
+     <sp:SignedParts>
+      <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+     </sp:SignedParts>
+    </wsp:Policy>
+   </sp:EndorsingSupportingTokens>
+   <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/>
+     <sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/>
+    </wsp:Policy>
+   </sp:Wss11>
+   <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:MustSupportIssuedTokens/>
+     <sp:RequireClientEntropy/>
+     <sp:RequireServerEntropy/>
+    </wsp:Policy>
+   </sp:Trust13>
+   <wsaw:UsingAddressing/>
+  </wsp:All>
+ </wsp:ExactlyOne>
+</wsp:Policy>
 ```  
   
  Güvenlik Üstbilgi Düzeni  
@@ -416,7 +485,7 @@ Belirteç Koruması: False
   
  İmzayı Şifrele: Doğru  
   
- Yukarıdaki kimlik doğrulama modları yalnızca kullandıkları destekleyici belirteçlere göre farklılık gösterir. AnonymousForCertificate herhangi bir destekleyici belirteçleri yok, MutualCertificate WSS 1.1 destekleyici belirteçleri destekleyici bir olarak müşterinin X509 sertifikasına sahiptir, UserNameForCertificate imzalı destekleyici belirteç olarak bir Kullanıcı Adı Belirteci vardır ve IssuedTokenForCertificate, verilen belirteci destekleyici bir belirteç olarak sahiptir.  
+ Yukarıdaki kimlik doğrulama modları yalnızca kullandıkları destekleyici belirteçlere göre farklılık gösterir. AnonymousForCertificate herhangi bir destekleyici belirteçleri yok, MutualCertificate WSS 1.1 destekleyici belirteçleri destekleyici bir istemcinin X509 sertifikasına sahiptir, UserNameForCertificate imzalı bir destekleyici belirteç olarak bir Kullanıcı Adı Belirteci vardır ve IssuedTokenForCertificate destekleyici belirteci olarak verilen belirteç vardır.  
   
 #### <a name="324-anonymousforcertificate"></a>3.2.4 Anonim Sertifika  
  Bu kimlik doğrulama modu ile istemci anonimdir ve hizmet x.509 sertifikası kullanılarak kimlik doğrulanır. Kullanılan bağlama 3.4.2'de açıklandığı gibi simetrik bağlama örneğidir.  

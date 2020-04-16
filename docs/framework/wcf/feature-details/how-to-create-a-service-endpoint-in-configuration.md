@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5935f798004de3ec049b9c9f0300675e1660f462
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185007"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464125"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma
 Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmetinin sunduğu işlevsellik lere erişim sağlar. Bir hizmet için bir veya daha fazla uç nokta, göreli ve mutlak uç nokta adreslerinin bir birleşimini kullanarak veya herhangi bir hizmet bitiş noktası tanımlamazsanız, çalışma süresi varsayılan olarak sizin için bazı sağlar. Bu konu, hem göreceli hem de mutlak adresleri içeren bir yapılandırma dosyasını kullanarak uç noktaların nasıl ekleyeceğini gösterir.  
@@ -25,10 +25,8 @@ Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmetinin sund
   
   <system.serviceModel>  
     <services>  
-    <!-- This section is optional with the default configuration introduced  
-         in .NET Framework 4. -->  
-      <service  
-          name="Microsoft.ServiceModel.Samples.CalculatorService">  
+    <!-- This section is optional with the default configuration introduced in .NET Framework 4. -->  
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService">  
         <host>  
           <baseAddresses>  
             <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  

@@ -2,14 +2,14 @@
 title: dotnet nuget devre dışı kaynak komutu
 description: Dotnet nuget devre dışı kaynak komutu NuGet yapılandırma dosyalarınızdaki varolan bir kaynağı devre dışı kılabilir.
 ms.date: 03/20/2020
-ms.openlocfilehash: 5aa16c842bcddeead180fdeec3d9dcdda33f7ed9
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148556"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463574"
 ---
-# <a name="dotnet-nuget-disable-source"></a>dotnet nuget devre dışı kaynak
+# <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
 **Bu makale şu şekildedir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümler
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148556"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet nuget disable source <NAME> [--configfile]
-dotnet nuget disable source [-h|--help]
+dotnet nuget disable source <NAME> [--configfile <FILE>]
+
+dotnet nuget disable source -h|--help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -36,7 +37,7 @@ Komut, `dotnet nuget disable source` NuGet yapılandırma dosyalarınızdaki var
 
 ## <a name="options"></a>Seçenekler
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet yapılandırma dosyası. Belirtilirse, yalnızca bu dosyadaki ayarlar kullanılır. Belirtilmemişse, geçerli dizindeki yapılandırma dosyaları hiyerarşisi kullanılır. Daha fazla bilgi için [Ortak NuGet Yapılandırmaları'na](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)bakın.
 

@@ -6,31 +6,34 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399800"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463880"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür parametreleri üzerindeki kısıtlamalar (C# Programlama Kılavuzu)
 
-Kısıtlamalar derleyiciyi bir tür bağımsız değişkeninin sahip olması gereken özellikler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan, tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca herhangi bir <xref:System.Object?displayProperty=nameWithType>.NET türü için nihai taban sınıf olan üyeleri varsayar. Daha fazla bilgi için neden [kısıtlamaları kullanın'a](#why-use-constraints)bakın. İstemci kodu, kısıtlamanın izin verilmeyen bir tür kullanarak sınıfınızı anında kullanmaya çalışırsa, sonuç derleme zamanı hatasıdır. Kısıtlamalar `where` bağlamsal anahtar kelime kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenebvardır:
+Kısıtlamalar derleyiciyi bir tür bağımsız değişkeninin sahip olması gereken özellikler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan, tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca herhangi bir <xref:System.Object?displayProperty=nameWithType>.NET türü için nihai taban sınıf olan üyeleri varsayar. Daha fazla bilgi için neden [kısıtlamaları kullanın'a](#why-use-constraints)bakın. İstemci kodu kısıtlamayı karşılamayan bir tür kullanıyorsa, derleyici bir hata yayınlar. Kısıtlamalar `where` bağlamsal anahtar kelime kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenebvardır:
 
 |Kısıtlama|Açıklama|
 |----------------|-----------------|
-|`where T : struct`|Tür bağımsız değişkeni nullable olmayan bir değer türü olmalıdır. Nullable değer türleri hakkında bilgi için, [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md)bakın. Tüm değer türlerinin erişilebilir bir parametresiz `struct` oluşturucusu olduğundan, kısıtlama `new()` kısıtlamayı `new()` ima eder ve kısıtlamayla birleştirilemez. `struct` Ayrıca kısıtlama ile kısıtlama `unmanaged` birleştiremezsiniz.|
-|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
-|`where T : notnull`|Tür bağımsız değişkeni nullable olmayan bir tür olmalıdır. Bağımsız değişken, C# 8.0 veya sonraki bir şekilde nullable olmayan bir başvuru türü veya nullable olmayan bir değer türü olabilir. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
+|`where T : struct`|Tür bağımsız değişkeni nullable olmayan bir değer türü olmalıdır. Nullable değer türleri hakkında bilgi için, [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md)bakın. Tüm değer türlerinin erişilebilir bir parametresiz `struct` oluşturucusu olduğundan, kısıtlama `new()` kısıtlamayı `new()` ima eder ve kısıtlamayla birleştirilemez. Ayrıca kısıtlama ile `struct` kısıtlama birleştiremezsiniz. `unmanaged`|
+|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir. C# 8.0 veya sonraki bir şekilde `T` nullable bağlamında, nullable olmayan bir başvuru türü olmalıdır. |
+|`where T : class?`|Tür bağımsız değişkeni, geçersiz veya nullable olmayan bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
+|`where T : notnull`|Tür bağımsız değişkeni nullable olmayan bir tür olmalıdır. Bağımsız değişken, C# 8.0 veya sonraki bir şekilde nullable olmayan bir başvuru türü veya nullable olmayan bir değer türü olabilir. |
 |`where T : unmanaged`|Tür bağımsız değişkeni, geçersiz olmayan [yönetilmeyen](../../language-reference/builtin-types/unmanaged-types.md)bir tür olmalıdır. Kısıtlama `unmanaged` kısıtlamayı `struct` ima eder ve kısıtlamalarla `struct` `new()` birleştirilemez.|
 |`where T : new()`|Tür bağımsız değişkeninin ortak parametresiz bir oluşturucusu olmalıdır. Diğer kısıtlamalarla birlikte kullanıldığında, `new()` kısıtlama nın en son belirtilmesi gerekir. Kısıtlama `new()` `struct` ve `unmanaged` kısıtlamalarla birleştirilemez.|
-|`where T :`taban sınıf adı>* \<*|Tür bağımsız değişkeni, belirtilen taban sınıftan türemelidir.|
-|`where T :`arayüz adı>* \<*|Tür bağımsız değişkeni, belirtilen arabirimi olmalıdır veya uygulamalıdır. Birden çok arabirim kısıtlaması belirtilebilir. Kısıtlayıcı arabirim de genel olabilir.|
-|`where T : U`|T için verilen tür bağımsız değişkeni U için sağlanan bağımsız değişkenden türemelidir.|
+|`where T :`taban sınıf adı>* \<*|Tür bağımsız değişkeni, belirtilen taban sınıftan türemelidir. C# 8.0 ve sonraki nullable `T` bağlamında, belirtilen taban sınıftan türetilen bir nullable olmayan bir başvuru türü olmalıdır. |
+|`where T :`taban sınıf adı>? * \<*|Tür bağımsız değişkeni, belirtilen taban sınıftan türemelidir. C# 8.0 ve sonraki bir şekilde `T` nullable bağlamında, belirtilen taban sınıftan türetilen nullable veya unnullable türü olabilir. |
+|`where T :`arayüz adı>* \<*|Tür bağımsız değişkeni, belirtilen arabirimi olmalıdır veya uygulamalıdır. Birden çok arabirim kısıtlaması belirtilebilir. Kısıtlayıcı arabirim de genel olabilir. C# 8.0 ve sonraki bir nullable bağlamında, `T` belirtilen arabirimi uygulayan nullable olmayan bir tür olmalıdır.|
+|`where T :`arayüz adı>? * \<*|Tür bağımsız değişkeni, belirtilen arabirimi olmalıdır veya uygulamalıdır. Birden çok arabirim kısıtlaması belirtilebilir. Kısıtlayıcı arabirim de genel olabilir. C# 8.0'daki nullable `T` bağlamında, nullable başvuru türü, nullable olmayan bir başvuru türü veya bir değer türü olabilir. `T`nullable değer türü olmayabilir.|
+|`where T : U`|Için `T` verilen tür bağımsız değişkeni, '' için `U`verilen bağımsız değişkenden türemelidir. Nullable bağlamında, nullable olmayan bir başvuru türü `T` ise, `U` nullable olmayan başvuru türü olmalıdır. Nullable `U` bir başvuru türü `T` ise, nullable veya unnullable olabilir. |
 
 ## <a name="why-use-constraints"></a>Neden kısıtlamaları kullanın
 
-Tür parametresini kısıtlayarak, kısıtlanan tür ve kalıtım hiyerarşisindeki tüm türler tarafından desteklenenlere izin verilen işlem ve yöntem çağrılarının sayısını artırırsınız. Genel sınıflar veya yöntemler tasarlarken, genel üyeler üzerinde basit atamanın ötesinde herhangi bir işlem <xref:System.Object?displayProperty=nameWithType>gerçekleştirecekseniz veya desteklenmeyen yöntemleri çağıracaksanız, tür parametresine kısıtlamalar uygulamanız gerekir. Örneğin, taban sınıf kısıtlaması derleyiciye yalnızca bu türdeki veya bu türden türetilen nesnelerin tür bağımsız değişkeni olarak kullanılacağını söyler. Derleyici bu garantiye sahip olduktan sonra, bu tür yöntemlerin genel sınıfta çağrılmasını sağlayabilir. Aşağıdaki kod örneği, taban sınıf kısıtlaması `GenericList<T>` uygulayarak sınıfa [(Genel Lere](../../../standard/generics/index.md)Giriş'te) ekleyebileceğiniz işlevselliği gösterir.
+Kısıtlamalar, bir tür parametresinin yeteneklerini ve beklentilerini belirtir. Bu kısıtlamaları bildirmek, kısıtlama türündeki işlemleri ve yöntem çağrılarını kullanabileceğiniz anlamına gelir. Genel sınıfınız veya yönteminiz, genel üyeler üzerinde basit atamanın ötesinde <xref:System.Object?displayProperty=nameWithType>herhangi bir işlem kullanıyorsa veya desteklenmeyen yöntemleri arıyorsa, tür parametresine kısıtlamalar uygulamanız gerekir. Örneğin, taban sınıf kısıtlaması derleyiciye yalnızca bu türdeki veya bu türden türetilen nesnelerin tür bağımsız değişkeni olarak kullanılacağını söyler. Derleyici bu garantiye sahip olduktan sonra, bu tür yöntemlerin genel sınıfta çağrılmasını sağlayabilir. Aşağıdaki kod örneği, taban sınıf kısıtlaması `GenericList<T>` uygulayarak sınıfa [(Genel Lere](../../../standard/generics/index.md)Giriş'te) ekleyebileceğiniz işlevselliği gösterir.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -76,9 +79,11 @@ Derleyici, `System.Object`tür parametresi hakkında türetilmiştir dışında 
 
 ## <a name="notnull-constraint"></a>NotNull kısıtlama
 
-C# 8.0 ile başlayarak, `notnull` tür bağımsız değişkeninin nullable olmayan bir değer türü veya nullable olmayan başvuru türü olması gerektiğini belirtmek için kısıtlamak kullanabilirsiniz. Kısıtlama `notnull` yalnızca bir `nullable enable` bağlam içinde kullanılabilir. Kısıtlamayı `notnull` boş bir içeriğe eklerseniz derleyici bir uyarı oluşturur.
+Nullable bağlamında C# 8.0 ile başlayarak, `notnull` tür bağımsız değişkeninin nullable olmayan bir değer türü veya nullable olmayan başvuru türü olması gerektiğini belirtmek için kısıtlamak kullanabilirsiniz. Kısıtlama `notnull` yalnızca bir `nullable enable` bağlam içinde kullanılabilir. Kısıtlamayı `notnull` boş bir içeriğe eklerseniz derleyici bir uyarı oluşturur.
 
 Diğer kısıtlamaların aksine, bir tür `notnull` bağımsız değişkeni kısıtlamayı ihlal ettiğinde, derleyici bu `nullable enable` kod bir bağlam içinde derlendiğinde bir uyarı oluşturur. Kod boş bir şekilde derlenirse, derleyici herhangi bir uyarı veya hata oluşturmaz.
+
+Nullable bağlamında C# 8.0 ile `class` başlayarak, kısıtlama türü bağımsız değişkeninin nullable olmayan bir başvuru türü olması gerektiğini belirtir. Nullable bağlamında, bir tür parametresi nullable başvuru türü olduğunda, derleyici bir uyarı oluşturur.
 
 ## <a name="unmanaged-constraint"></a>Yönetilmeyen kısıtlama
 
@@ -122,4 +127,4 @@ Bir enum oluşturmak ve değerleri ve adlarından oluşan bir sözlük oluşturm
 - [C# Programlama Kılavuzu](../index.md)
 - [Genel Türlere Giriş](./index.md)
 - [Genel Sınıflar](./generic-classes.md)
-- [new Kısıtlaması](../../language-reference/keywords/new-constraint.md)
+- [yeni Kısıtlama](../../language-reference/keywords/new-constraint.md)

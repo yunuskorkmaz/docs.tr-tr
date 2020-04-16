@@ -2,12 +2,12 @@
 title: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185324"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464212"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her birini kısaca açıklar ve bunları nasıl yapılandıracağınıza ait örnekler gösterir. Her bölümü takip her alan hakkında daha derinlemesine belgeler için bir bağlantı olacaktır.  
@@ -26,6 +26,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Davranışı belirttikten sonra, aşağıdaki örnekte gösterildiği gibi <`service`> öğesinden başvurun.  
@@ -41,7 +42,8 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Bir hizmetin bulunabilmesi için, bir keşif bitiş noktası da eklemeniz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> gerekir, yukarıdaki örnek standart bir bitiş noktası ekler.  
@@ -62,6 +64,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> belirli bir bitiş noktasının keşfini etkinleştirmek veya devre dışı etmek için kullanılır.  Aşağıdaki örnek, biri bulma etkinleştirilmiş, diğeri de bulma devre dışı bırakılmış iki uygulama uç noktası olan bir hizmeti yapılandırır. Her bitiş noktası <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> için bir davranış eklenir.  
@@ -87,7 +90,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> hizmet tarafından döndürülen uç nokta meta verilerine özel meta veri eklemek için de kullanılabilir. Aşağıdaki örnekte, bunun nasıl yapılacağını gösterilmektedir.  
@@ -163,7 +167,9 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  Bu özel bağlama yapılandırması istemci bitiş noktası ile başvurulmalıdır:  
@@ -174,7 +180,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Bulma ölçütleri hakkında daha fazla bilgi için [Bkz. Bulma Ve Bulma Kriterleri.](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md) Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz: [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
@@ -223,7 +229,8 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Standart bitiş noktası yapılandırmasını ekledikten sonra, aşağıdaki `endpoint` örnekte gösterildiği gibi, her bitiş noktası için <> öğesindeki yapılandırmaya başvurun.  

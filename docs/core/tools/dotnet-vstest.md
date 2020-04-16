@@ -2,12 +2,12 @@
 title: dotnet vstest komutu
 description: Dotnet vstest komutu bir proje ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/27/2020
-ms.openlocfilehash: 4941a6d08d45953039eb406a30f0ff984128ba1c
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389626"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463279"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "81389626"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
-    [--Framework] [--InIsolation] [-lt|--ListTests] [--logger]
-    [--Parallel] [--ParentProcessId] [--Platform] [--Port]
-    [--ResultsDirectory] [--Settings] [--TestAdapterPath]
-    [--TestCaseFilter] [--Tests] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -43,11 +47,11 @@ Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırma
 
   Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayar çökmesine neden sorunlu testleri yalıtmak yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
 
-- **`--Diag <Path to log file>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
   Test platformu için ayrıntılı günlükleri sağlar. Günlükler sağlanan dosyaya yazılır.
 
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   Test yürütmesi için kullanılan Hedef .NET Framework sürümü. Geçerli değerlere `.NETFramework,Version=v4.6` örnek `.NETCoreApp,Version=v1.0`olarak . Desteklenen diğer değerler `Framework40` `Framework45`, `FrameworkCore10`, `FrameworkUap10`, ve .
 
@@ -55,11 +59,11 @@ Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırma
 
   Testleri yalıtılmış bir işlemle çalıştırın. Bu, *vstest.console.exe* işleminin testlerdeki bir hata da durdurulmasını daha az sağlar, ancak testler daha yavaş çalışabilir.
 
-- **`-lt|--ListTests <File Name>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
   Verilen test kabından keşfedilen tüm testleri listeler.
 
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Test sonuçları için bir logger belirtin.
 
@@ -85,35 +89,35 @@ Komut, `dotnet-vstest` otomatik `VSTest.Console` birim testlerini çalıştırma
 
   Testleri paralel olarak çalıştırın. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. Runsettings dosyasındaki `MaxCpuCount` `RunConfiguration` düğümün altındaki özelliği ayarlayarak açık *runsettings* sayıda çekirdek belirtin.
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   Geçerli işlemin başlatılmasından sorumlu ana işlemin işlem kimliği.
 
-- **`--Platform <Platform type>`**
+- **`--Platform <PLATFORM_TYPE>`**
 
   Test yürütme için kullanılan hedef platform mimarisi. Geçerli değerler `x86` `x64`, `ARM`ve .
 
-- **`--Port <Port>`**
+- **`--Port <PORT>`**
 
   Soket bağlantısı ve olay iletileri almak için bağlantı noktasını belirtir.
 
-- **`--ResultsDirectory:<PathToResulsDirectory>`**
+- **`--ResultsDirectory:<PATH>`**
 
   Test sonuçları dizini yoksa belirtilen yolda oluşturulur.
 
-- **`--Settings <Settings File>`**
+- **`--Settings <SETTINGS_FILE>`**
 
   Testleri çalıştırırken kullanılacak ayarlar.
 
-- **`--TestAdapterPath`**
+- **`--TestAdapterPath <PATH>`**
 
   Test çalışmasında belirli bir yoldan (varsa) özel test bağdaştırıcıları kullanın.
 
-- **`--TestCaseFilter <Expression>`**
+- **`--TestCaseFilter <EXPRESSION>`**
 
-  Verilen ifadeyle eşleşen testler çalıştırın. `<Expression>`biçimindedir `<property>Operator<value>[|&<Expression>]`, Operatör biri olduğu `=` `!=`, `~`, veya . İşleç `~` 'içerir' semantik ve gibi `DisplayName`dize özellikleri için geçerlidir. Alt ifadeleri `()` gruplandırmak için parantezler kullanılır. Daha fazla bilgi için [TestCase filtresine](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)bakın.
+  Verilen ifadeyle eşleşen testler çalıştırın. `<EXPRESSION>`biçimindedir `<property>Operator<value>[|&<EXPRESSION>]`, Operatör biri olduğu `=` `!=`, `~`, veya . İşleç `~` 'içerir' semantik ve gibi `DisplayName`dize özellikleri için geçerlidir. Alt ifadeleri `()` gruplandırmak için parantezler kullanılır. Daha fazla bilgi için [TestCase filtresine](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)bakın.
 
-- **`--Tests <Test Names>`**
+- **`--Tests <TEST_NAMES>`**
 
   Sağlanan değerlerle eşleşen adlarla testleri çalıştırın. Birden çok değeri virgülle ayırın.
 

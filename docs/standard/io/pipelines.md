@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627558"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462518"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -172,7 +172,7 @@ Nesneyi `Pipe` yeniden kullanmak genellikle etkilidir. Boruyu sıfırlamak için
 * İlk bağımsız değişken ne kadar bellek tüketilmeyi belirler.
 * İkinci bağımsız değişken, arabelleğe ne kadarının gözlendiğini belirler.
 
-Verileri tüketilen olarak işaretleme, borunun belleği alttaki arabellek havuzuna döndürebileceği anlamına gelir. Verileri gözlenen olarak işaretleme, `PipeReader.ReadAsync` bir sonraki çağrının ne işe yaradığı yla ilgili denetimleri yapar. Her şeyi gözlenen şekilde işaretlemek, bir sonraki çağrının boruya `PipeReader.ReadAsync` daha fazla veri yazılana kadar geri dönmeyeceği anlamına gelir. Başka bir değer, gözlenen `PipeReader.ReadAsync` *ve* gözlenmeyen verilerle hemen dönmek için bir sonraki çağrıyı yapar, ancak zaten tüketilen veriler.
+Verileri tüketilen olarak işaretleme, borunun belleği alttaki arabellek havuzuna döndürebileceği anlamına gelir. Verileri gözlenen olarak işaretleme, `PipeReader.ReadAsync` bir sonraki çağrının ne işe yaradığı yla ilgili denetimleri yapar. Her şeyi gözlenen şekilde işaretlemek, bir sonraki çağrının boruya `PipeReader.ReadAsync` daha fazla veri yazılana kadar geri dönmeyeceği anlamına gelir. Başka bir değer, gözlenen `PipeReader.ReadAsync` *ve* gözlenmeyen verilerle hemen dönmek için bir sonraki çağrıyı yapar, ancak zaten tüketilen verileri yapmaz.
 
 ### <a name="read-streaming-data-scenarios"></a>Akış veri senaryolarını okuma
 

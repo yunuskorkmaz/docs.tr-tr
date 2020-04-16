@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184336"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464010"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Windows Communication Foundation'daki (WCF) taşıma güvenlik mekanizmaları, kullanılan bağlama ve aktarıma bağlıdır. Örneğin, <xref:System.ServiceModel.WSHttpBinding> sınıfı kullanırken aktarım HTTP'dir ve aktarımgüvenliğini sağlamak için birincil mekanizma HTTP üzerinden Güvenli Soketler Katmanıdır (SSL), genellikle HTTPS olarak adlandırılır. Bu konu, WCF sistemi tarafından sağlanan bağlamalarda kullanılan başlıca taşıma güvenlik mekanizmalarını tartışır.  
   
 > [!NOTE]
-> SSL güvenliği .NET Framework 3.5 ile kullanıldığında ve daha sonra bir WCF istemcisi, hizmetin sertifikası üzerinde sertifika zinciri doğrulaması gerçekleştirmek için SSL anlaşması sırasında alınan ara sertifikaları hem de ara sertifikaları kullanır Sertifika. .NET Framework 3.0 yalnızca yerel sertifika deposuna yüklenen ara sertifikaları kullanır.  
+> SSL güvenliği .NET Framework 3.5 ile kullanıldığında ve daha sonra bir WCF istemcisi, hizmetin sertifikasında sertifika zinciri doğrulaması gerçekleştirmek için SSL anlaşması sırasında alınan ara sertifikaları hem de ara sertifikaları kullanır. .NET Framework 3.0 yalnızca yerel sertifika deposuna yüklenen ara sertifikaları kullanır.  
   
 > [!WARNING]
 > Aktarım güvenliği kullanıldığında, <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özellik üzerine yazılabilir. Bunun olmasını önlemek <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> için. <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>hizmet açıklamasında ayarlanabilen bir hizmet davranışıdır.  
@@ -101,7 +101,7 @@ Windows Communication Foundation'daki (WCF) taşıma güvenlik mekanizmaları, k
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  

@@ -2,35 +2,35 @@
 title: Yetkilendirme İlkesi
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 9b73eea1f51454dd82ba577c4d4d5fd5a1c0efd4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 36ec1029c8fed57957eb463808de442e74abdf9c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990197"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463942"
 ---
 # <a name="authorization-policy"></a>Yetkilendirme İlkesi
 
-Bu örnek, bir özel talep yetkilendirme ilkesinin ve ilişkili bir özel hizmet Yetkilendirme yöneticisinin nasıl uygulanacağını gösterir. Hizmet, hizmet işlemlerine talep tabanlı erişim denetimleri yaptığında ve erişim denetimlerinden önce, çağırana belirli haklar verdiğinde yararlı olur. Bu örnek, hem talep ekleme sürecini hem de son talep kümesinde erişim denetimi yapma işlemini gösterir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Varsayılan olarak, `wsHttpBinding` bağlama ile, istemci tarafından sağlanan bir Kullanıcı adı ve parola, geçerli bir Windows NT hesabında oturum açmak için kullanılır. Bu örnek, istemcinin kimliğini doğrulamak için bir <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> özel nasıl kullanacağınızı gösterir. Buna ek olarak, bir X. 509.440 sertifikası kullanarak hizmette kimlik doğrulaması yapan istemciyi gösterir. Bu örnek, ve ' nin <xref:System.IdentityModel.Policy.IAuthorizationPolicy> bir <xref:System.ServiceModel.ServiceAuthorizationManager>uygulamasını gösterir ve bu, belirli kullanıcılar için hizmetin belirli yöntemlerine erişim izni verir. Bu örnek, [ileti güvenliği Kullanıcı adına](../../../../docs/framework/wcf/samples/message-security-user-name.md)dayalıdır, ancak çağrılmadan önce <xref:System.ServiceModel.ServiceAuthorizationManager> bir talep dönüşümünün nasıl gerçekleştirileceğini gösterir.
+Bu örnek, özel talep yetkilendirme ilkesi nin ve ilişkili bir özel hizmet yetkilendirme yöneticisinin nasıl uygulanacağını gösterir. Bu, hizmet işlemlerine talep tabanlı erişim denetimleri yaptığında ve erişim denetimlerinden önce arayana belirli haklar verdiğinde yararlıdır. Bu örnek, hem talep ekleme işlemini hem de kesinleşen talep kümesine karşı bir erişim denetimi yapma işlemini gösterir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Varsayılan `wsHttpBinding` olarak bağlama ile, istemci tarafından sağlanan bir kullanıcı adı ve parola geçerli bir Windows NT hesabına oturum açmak için kullanılır. Bu örnek, istemcinin kimliğini <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> doğrulamak için bir özelin nasıl kullanılacağını gösterir. Ayrıca bu örnek, X.509 sertifikası kullanarak hizmete kimlik doğrulayan istemciyi gösterir. Bu örnek, aralarında <xref:System.IdentityModel.Policy.IAuthorizationPolicy> <xref:System.ServiceModel.ServiceAuthorizationManager>belirli kullanıcılar için hizmetin belirli yöntemlerine erişim sağlayan bir uygulama gösterir. Bu örnek İleti [Güvenliği Kullanıcı Adını](../../../../docs/framework/wcf/samples/message-security-user-name.md)temel alıyor, ancak çağrılmadan <xref:System.ServiceModel.ServiceAuthorizationManager> önce bir talep dönüştürmesinin nasıl gerçekleştiriltigerektiğini gösterir.
 
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
+> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.
 
- Özet bölümünde bu örnek şunları gösterir:
+ Özetle, bu örnek nasıl gösterir:
 
-- İstemci, bir Kullanıcı adı-parolası kullanılarak kimlik doğrulaması yapılabilir.
+- İstemcinin kimliği bir kullanıcı adı parolası kullanılarak doğrulanabilir.
 
-- İstemcinin kimliği bir X. 509.440 sertifikası kullanılarak yapılabilir.
+- İstemci X.509 sertifikası kullanılarak kimlik doğrulanabilir.
 
-- Sunucu, istemci kimlik bilgilerini özel `UsernamePassword` bir doğrulayıcı ile doğrular.
+- Sunucu, istemci kimlik bilgilerini özel `UsernamePassword` bir doğrulayıcıya karşı doğrular.
 
-- Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılır.
+- Sunucu, sunucunun X.509 sertifikası kullanılarak kimlik doğrulanır.
 
-- Sunucu, hizmette belirli <xref:System.ServiceModel.ServiceAuthorizationManager> yöntemlere erişimi denetlemek için kullanabilir.
+- Sunucu, hizmetteki belirli yöntemlere erişimi denetlemek için kullanabilir. <xref:System.ServiceModel.ServiceAuthorizationManager>
 
-- Nasıl uygulanır <xref:System.IdentityModel.Policy.IAuthorizationPolicy>?
+- Nasıl uygulanır. <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 
-Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için iki uç nokta sunar. Her uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bir bağlama, WS-Security ve `wsHttpBinding` istemci Kullanıcı adı kimlik doğrulaması kullanan standart bir bağlama ile yapılandırılır. Diğer bağlama, WS-Security ve istemci `wsHttpBinding` sertifikası kimlik doğrulaması kullanan standart bir bağlama ile yapılandırılır. Davranış >, Kullanıcı kimlik bilgilerinin hizmet kimlik doğrulaması için kullanılacağını belirtir. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) Sunucu sertifikası, `SubjectName` `findValue` [ServiceCertificate > özniteliği olarak özelliği için \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)aynı değeri içermelidir.
+Hizmet, uygulama dosyası App.config kullanılarak tanımlanan hizmetle iletişim kurmak için iki uç noktayı ortaya çıkarır. Her bitiş noktası bir adres, bir bağlama ve sözleşmeden oluşur. Bir bağlama, WS-Security `wsHttpBinding` ve istemci kullanıcı adı kimlik doğrulaması kullanan standart bir bağlama ile yapılandırılır. Diğer bağlama WS-Security ve `wsHttpBinding` istemci sertifikası kimlik doğrulaması kullanan standart bir bağlama ile yapılandırılır. [ \<Davranış>,](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) kullanıcı kimlik bilgilerinin hizmet kimlik doğrulaması için kullanılacağını belirtir. Sunucu sertifikası, `SubjectName` `findValue` [ \<hizmetSertifikası>'ndeki ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)öznitelikile özellik için aynı değeri içermelidir.
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle i
 </system.serviceModel>
 ```
 
-Her istemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama, [ \<güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) bu durumda belirtilen şekilde ve `clientCredentialType` [ \<ileti >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)belirtilen şekilde, uygun güvenlik moduyla yapılandırılır.
+Her istemci uç nokta yapılandırması bir yapılandırma adı, hizmet bitiş noktası için mutlak bir adres, bağlama ve sözleşme oluşur. İstemci bağlama, [ \<güvenlik>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) bu durumda belirtildiği gibi uygun `clientCredentialType` güvenlik modu ile ve [ \<>iletide ](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)belirtildiği gibi yapılandırılır.
 
 ```xml
 <system.serviceModel>
@@ -185,7 +185,7 @@ Her istemci uç noktası yapılandırması, bir yapılandırma adından, hizmet 
   </system.serviceModel>
 ```
 
-Kullanıcı adı tabanlı uç nokta için, istemci uygulama kullanılacak kullanıcı adını ve parolayı ayarlar.
+Kullanıcı adı tabanlı bitiş noktası için istemci uygulaması kullanılacak kullanıcı adını ve parolayı ayarlar.
 
 ```csharp
 // Create a client with Username endpoint configuration
@@ -211,7 +211,7 @@ catch (Exception e)
 client1.Close();
 ```
 
-Sertifika tabanlı uç nokta için istemci uygulama, kullanılacak istemci sertifikasını ayarlar.
+Sertifika tabanlı bitiş noktası için istemci uygulaması istemci sertifikasını kullanacak şekilde ayarlar.
 
 ```csharp
 // Create a client with Certificate endpoint configuration
@@ -236,7 +236,7 @@ catch (Exception e)
 client2.Close();
 ```
 
-Bu örnek, Kullanıcı adlarını <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve parolalarını doğrulamak için özel bir kullanır. Örnek `MyCustomUserNamePasswordValidator`, öğesinden <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>türetilir. Daha fazla bilgi <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> için belgelerine bakın. İle <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>tümleştirmeyi gösterme amaçları doğrultusunda, bu özel Doğrulayıcı örneği, aşağıdaki kodda gösterildiği gibi Kullanıcı <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> adının parolayla eşleştiği Kullanıcı adı/parola çiftlerini kabul etmek için yöntemini uygular.
+Bu örnek, <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> kullanıcı adlarını ve parolaları doğrulamak için özel bir kullanır. Örnek uygular `MyCustomUserNamePasswordValidator`, <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>türetilmiştir. Daha fazla <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> bilgi için ilgili belgelere bakın. <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>Bu özel doğrulayıcı örnek, kullanıcı adının aşağıdaki kodda gösterildiği <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> parolayla eşleştiği kullanıcı adı/parola çiftlerini kabul etme yöntemini uygular.
 
 ```csharp
 public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
@@ -261,17 +261,17 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-Doğrulayıcı hizmet koduna uygulandıktan sonra, hizmet ana bilgisayarının kullanılacak Doğrulayıcı örneği hakkında bilgilendirilmesi gerekir. Bu, aşağıdaki kod kullanılarak yapılır:
+Geçerlilik hizmeti kodunda uygulandıktan sonra, hizmet barındırıcısı kullanılacak geçerlilik örneği hakkında bilgilendirilmelidir. Bu, aşağıdaki kod kullanılarak yapılır:
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();
 ```
 
-Ya da yapılandırmada aynı şeyi yapabilirsiniz:
+Veya yapılandırmada aynı şeyi yapabilirsiniz:
 
 ```xml
-<behavior ...>
+<behavior>
     <serviceCredentials>
       <!--
       The serviceCredentials behavior allows one to specify a custom validator for username/password combinations.
@@ -282,9 +282,9 @@ Ya da yapılandırmada aynı şeyi yapabilirsiniz:
 </behavior>
 ```
 
-Windows Communication Foundation (WCF), erişim denetimleri gerçekleştirmek için zengin bir talep tabanlı model sağlar. <xref:System.ServiceModel.ServiceAuthorizationManager> Nesnesi, erişim denetimini gerçekleştirmek ve istemciyle ilişkili taleplerin hizmet yöntemine erişmek için gereken gereksinimleri karşılayıp karşılamadığını tespit etmek için kullanılır.
+Windows Communication Foundation (WCF), erişim denetimleri gerçekleştirmek için zengin bir talep tabanlı model sağlar. Nesne, <xref:System.ServiceModel.ServiceAuthorizationManager> erişim denetimini gerçekleştirmek ve istemciyle ilişkili taleplerin hizmet yöntemine erişmek için gerekli gereksinimleri karşılayıp karşılamadığını belirlemek için kullanılır.
 
-Gösterim amaçları doğrultusunda, bu örnek, bir kullanıcının, değeri bir <xref:System.ServiceModel.ServiceAuthorizationManager> işlemin işlem URI <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 'si olan tür `http://example.com/claims/allowedoperation` taleplerini temel alan yöntemlere erişimi sağlamak için yöntemini uygulayan uygulamasının bir uygulamasını gösterir. çağrılmasına izin verildi.
+Bu örnek, gösteri amacıyla, kullanıcının, <xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> adı verilmesine izin verilen işlemin Eylem URI değeri `http://example.com/claims/allowedoperation` olan tür iddialarına dayalı yöntemlere erişimini sağlayan yöntemi uygulayan bir uygulama gösterir.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -310,10 +310,10 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
 }
 ```
 
-Özel <xref:System.ServiceModel.ServiceAuthorizationManager> uygulandıktan sonra, hizmet ana bilgisayarının kullanım <xref:System.ServiceModel.ServiceAuthorizationManager> hakkında bilgilendirilmesi gerekir. Bu, aşağıdaki kodda gösterildiği gibi yapılır.
+Özel uygulama <xref:System.ServiceModel.ServiceAuthorizationManager> uygulandıktan sonra, hizmet ana bilgisayar <xref:System.ServiceModel.ServiceAuthorizationManager> kullanılacak hakkında bilgilendirilmelidir. Bu, aşağıdaki kodda gösterildiği gibi yapılır.
 
 ```xml
-<behavior ...>
+<behavior>
     ...
     <serviceAuthorization serviceAuthorizationManagerType="Microsoft.ServiceModel.Samples.MyServiceAuthorizationManager, service">
         ...
@@ -321,7 +321,7 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
 </behavior>
 ```
 
-<xref:System.IdentityModel.Policy.IAuthorizationPolicy> Uygulanacak<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> birincil yöntem yöntemidir.
+Uygulanacak <xref:System.IdentityModel.Policy.IAuthorizationPolicy> birincil yöntem <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> yöntemdir.
 
 ```csharp
 public class MyAuthorizationPolicy : IAuthorizationPolicy
@@ -377,29 +377,29 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }
 ```
 
-Önceki kod, <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> yönteminin işlemeyi etkileyen ve belirli talepler ekleyen hiçbir yeni talep bulunmadığını denetlemesini gösterir. İzin verilen talepler, kullanıcının gerçekleştirmesine izin verilen işlemlerin `GetAllowedOpList` belirli bir listesini döndürmek için uygulanan yönteminden alınır. Yetkilendirme ilkesi, belirli bir işleme erişim taleplerini ekler. Bu daha sonra, <xref:System.ServiceModel.ServiceAuthorizationManager> erişim denetimi kararlarını gerçekleştirmek için tarafından kullanılır.
+Önceki kod, yöntemin <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> işlemi etkileyen yeni iddiaların eklenmediğini nasıl denetler ve belirli talepler ekler. İzin verilen talepler, kullanıcının `GetAllowedOpList` gerçekleştirmesine izin verilen belirli bir işlem listesini döndürmek için uygulanan yöntemden elde edilir. Yetkilendirme ilkesi, belirli bir işlem için talepler ekler. Bu daha sonra <xref:System.ServiceModel.ServiceAuthorizationManager> erişim denetimi kararları gerçekleştirmek için kullanılır.
 
-Özel <xref:System.IdentityModel.Policy.IAuthorizationPolicy> uygulandıktan sonra, hizmet ana bilgisayarının kullanılacak yetkilendirme ilkeleri hakkında bilgilendirilmesi gerekir.
+Özel uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy> uygulandıktan sonra, hizmet ana bilgisayar kullanılacak yetkilendirme ilkeleri hakkında bilgilendirilmelidir.
 
 ```xml
-<serviceAuthorization ...>
+<serviceAuthorization>
        <authorizationPolicies>
             <add policyType='Microsoft.ServiceModel.Samples.CustomAuthorizationPolicy.MyAuthorizationPolicy, PolicyLibrary' />
        </authorizationPolicies>
 </serviceAuthorization>
 ```
 
-Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemci, Ekle, çıkart ve birden çok yöntemi başarıyla çağırır ve bölme yöntemini çağırmaya çalışırken bir "erişim reddedildi" iletisi alır. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
+Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemci, Ekle, Çıkarma ve Çoklu yöntemleri başarıyla çağırır ve Böl yöntemini çağırmaya çalışırken "Erişim reddedildi" iletisi alır. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.
 
-## <a name="setup-batch-file"></a>Toplu Iş dosyası kurulumu
+## <a name="setup-batch-file"></a>Kurulum Toplu Dosya
 
-Bu örneğe eklenen Setup. bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır.
+Bu örnekte yer alan Setup.bat toplu dosyası, sunucu sertifikası tabanlı güvenlik gerektiren kendi kendine barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır.
 
-Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sunar:
+Aşağıda, toplu iş dosyalarının uygun yapılandırmada çalışacak şekilde değiştirilebilmeleri için farklı bölümlerine kısa bir genel bakış sağlanacaktır:
 
-- Sunucu sertifikası oluşturuluyor.
+- Sunucu sertifikası oluşturma.
 
-    Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. % SERVER_NAME% değişkeni sunucu adını belirtiyor. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Varsayılan değer localhost 'tur.
+    Setup.bat toplu dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. %SERVER_NAME değişkeni sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Varsayılan değer yerel ana bilgisayardır.
 
     ```bat
     echo ************
@@ -411,19 +411,19 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme.
+- Sunucu sertifikasını istemcinin güvenilir sertifika deposuna yükleme.
 
-    Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikalara istemci sistemi tarafından örtük olarak güvenilmediği için gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
+    Setup.bat toplu iş dosyasındaki aşağıdaki satırlar, sunucu sertifikasını istemcigüvenilir kişiler deposuna kopyalar. Makecert.exe tarafından oluşturulan sertifikalar istemci sistemi tarafından dolaylı olarak güvenilen olmadığından bu adım gereklidir. Zaten istemci güvenilen bir kök sertifikası köklü bir sertifika varsa (örneğin, Microsoft tarafından verilmiş bir sertifika- sunucu sertifikası ile istemci sertifika deposu doldurma bu adım gerekli değildir.
 
     ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
-- İstemci sertifikası oluşturuluyor.
+- İstemci sertifikasıoluşturma.
 
-    Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak istemci sertifikasını oluşturur. % USER_NAME% değişkeni sunucu adını belirtiyor. Bu değer "test1" olarak ayarlanır çünkü bu ad, `IAuthorizationPolicy` için arama yapar. % User_name% değerini değiştirirseniz, `IAuthorizationPolicy.Evaluate` yönteminde karşılık gelen değeri değiştirmeniz gerekir.
+    Setup.bat toplu iş dosyasındaki aşağıdaki satırlar kullanılacak istemci sertifikasını oluşturur. %USER_NAME değişkeni sunucu adını belirtir. Bu değer "test1" olarak ayarlanır, çünkü `IAuthorizationPolicy` bu, aradığı addır. %USER_NAME değerini değiştirirseniz, `IAuthorizationPolicy.Evaluate` yöntemdeki karşılık gelen değeri değiştirmeniz gerekir.
 
-    Sertifika, CurrentUser Store konumu altında (kişisel) deposunda depolanır.
+    Sertifika, CurrentUser mağazasının altında Benim (Kişisel) mağazamda depolanır.
 
     ```bat
     echo ************
@@ -432,79 +432,79 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
-- İstemci sertifikası sunucunun Güvenilen sertifika deposuna yükleniyor.
+- İstemci sertifikasını sunucunun güvenilir sertifika deposuna yükleme.
 
-    Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, istemci sertifikasını güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikalara sunucu sistemi tarafından örtük olarak güvenilmediği için gereklidir. Güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), sunucu sertifika deposunu istemci sertifikası ile doldurmak için bu adım gerekli değildir.
+    Setup.bat toplu iş dosyasındaki aşağıdaki satırlar istemci sertifikasını güvenilir kişiler deposuna kopyalar. Makecert.exe tarafından oluşturulan sertifikalar sunucu sistemi tarafından dolaylı olarak güvenilen olmadığından bu adım gereklidir. Zaten güvenilir bir kök sertifikaya dayanan bir sertifikanız varsa (örneğin, Microsoft tarafından verilmiş bir sertifika- sunucu sertifikası deposunu istemci sertifikasıyla doldurma adımı gerekmez.
 
     ```console
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
-### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
+### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve oluşturmak için
 
-1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
+1. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.
 
-2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.
+2. Örneği tek veya bilgisayar lar arası yapılandırmada çalıştırmak için aşağıdaki yönergeleri kullanın.
 
 > [!NOTE]
-> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.
+> Bu örnek için yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanıyorsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinden emin olun.
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1. Yönetici ayrıcalıklarıyla Visual Studio için Geliştirici Komut İstemi açın ve örnek yükleme klasöründen *Setup. bat* dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
+1. Yönetici ayrıcalıklarıyla Visual Studio için Geliştirici Komut Komut Ustem'i açın ve örnek yükleme klasöründen *Setup.bat* çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları yükler.
 
     > [!NOTE]
-    > Setup. bat toplu iş dosyası, Visual Studio için Geliştirici Komut İstemi çalıştırılmak üzere tasarlanmıştır. Visual Studio için Geliştirici Komut İstemi içinde ayarlanan yol ortamı değişkeni *Setup. bat* betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.
+    > Setup.bat toplu dosyası Visual Studio için Geliştirici Komut Komut Istem'den çalıştırılacak şekilde tasarlanmıştır. Visual Studio için Geliştirici Komut İstemi'nde ayarlanan PATH ortamı değişkeni, *Setup.bat* komut dosyasının gerektirdiği yürütülebilir leri içeren dizine işaret eder.
 
-1. *Service\bin*' den Service. exe ' yi başlatın.
+1. Service.exe'yi *service\bin'den*başlat.
 
-1. *\Client\bin*adresinden Client. exe ' yi başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.
+1. *\client\bin'den*Client.exe'yi başlatın. İstemci etkinliği istemci konsoluygulamasında görüntülenir.
 
-İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+İstemci ve hizmet iletişim kuramazsa, [WCF Örnekleri için Sorun Giderme İpuçları'na](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))bakın.
 
-### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için
+### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlarda çalıştırmak için
 
 1. Hizmet bilgisayarında bir dizin oluşturun.
 
-2. Hizmet programı dosyalarını *\service\bin* konumundan hizmet bilgisayarındaki dizine kopyalayın. Ayrıca Setup. bat, Cleanup. bat, GetComputerName. vbs ve ImportClientCert. bat dosyalarını hizmet bilgisayarına kopyalayın.
+2. Hizmet programı dosyalarını *\service\bin'den* hizmet bilgisayarındaki dizine kopyalayın. Ayrıca Setup.bat, Cleanup.bat, GetComputerName.vbs ve ImportClientCert.bat dosyalarını servis bilgisayarına kopyalayın.
 
-3. İstemci bilgisayarda istemci ikilileri için bir dizin oluşturun.
+3. İstemci ikilileri için istemci bilgisayarında bir dizin oluşturun.
 
-4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.
+4. İstemci programı dosyalarını istemci bilgisayarındaki istemci dizinine kopyalayın. Ayrıca Setup.bat, Cleanup.bat ve ImportServiceCert.bat dosyalarını istemciye kopyalayın.
 
-5. Sunucusunda, yönetici ayrıcalıklarıyla açılan `setup.bat service` Visual Studio için geliştirici komut istemi ' de çalıştırın.
+5. Sunucuda, Yönetici `setup.bat service` ayrıcalıkları ile açılan Visual Studio için Geliştirici Komut Komut Ustem'de çalıştırın.
 
-    Bağımsız`service` değişkeniyle birlikte çalıştırmak `setup.bat` , bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını *Service. cer*adlı bir dosyaya aktarır.
+    Bağımsız değişkenle birlikte çalışmak, `setup.bat` bilgisayarın tam nitelikli etki alanı adı içeren bir hizmet sertifikası oluşturur ve hizmet sertifikasını *Service.cer*adlı bir dosyaya aktarın. `service`
 
-6. *Service. exe. config dosyasını* , bilgisayarın tam etki alanı adıyla aynı olan yeni `findValue` sertifika adını ( [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca \<Service >/\<BaseAddresses > öğesindeki **ComputerName** öğesini localhost 'dan hizmet bilgisayarınızın tam adına değiştirin.
+6. Bilgisayarın tam nitelikli alan adı ile aynı olan yeni `findValue` sertifika adını [ \<(serviceCertificate>'daki ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)öznitelikte) yansıtacak şekilde *Service.exe.config'i* edin. Ayrıca, hizmet>/\<baseAddresses> öğesindeki **bilgisayar adını** localhost'tan hizmet bilgisayarınızın tam nitelikli adına değiştirin. \<
 
-7. Service *. cer* dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.
+7. *Service.cer* dosyasını servis dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.
 
-8. İstemcisinde, yönetici ayrıcalıklarıyla açılan `setup.bat client` Visual Studio için geliştirici komut istemi ' de çalıştırın.
+8. İstemci de, Yönetici ayrıcalıkları ile açılan Visual Studio için Geliştirici Komut Komut Ustem'de çalıştırın. `setup.bat client`
 
-    Bağımsız `setup.bat` değişkeniyle birlikte `client` çalıştırmak, **test1** adlı bir istemci sertifikası oluşturur ve istemci sertifikasını *Client. cer*adlı bir dosyaya aktarır.
+    Bağımsız değişkenle birlikte çalışmak `setup.bat` **test1** adında bir istemci sertifikası oluşturur ve istemci sertifikasını *Client.cer*adlı bir dosyaya aktarın. `client`
 
-9. İstemci bilgisayardaki *Client. exe. config* dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. **Localhost** 'u sunucunun tam etki alanı adıyla değiştirerek bunu yapın.
+9. İstemci bilgisayarındaki *Client.exe.config* dosyasında, hizmetinyeni adresiyle eşleşecek şekilde bitiş noktasının adres değerini değiştirin. Bunu, **localhost'u** sunucunun tam nitelikli etki alanı adı ile değiştirerek yapın.
 
-10. Client. cer dosyasını istemci dizininden sunucusundaki hizmet dizinine kopyalayın.
+10. Client.cer dosyasını istemci dizininden sunucudaki servis dizinine kopyalayın.
 
-11. İstemcisinde, yönetici ayrıcalıklarıyla açılan Visual Studio için Geliştirici Komut İstemi 'de *ImportServiceCert. bat* dosyasını çalıştırın.
+11. İstemci de, Yönetici ayrıcalıkları ile açılan Visual Studio için Geliştirici Komut Komut Ustem'de *ImportServiceCert.bat* çalıştırın.
 
-    Bu, hizmet sertifikasını Service. cer dosyasından **CurrentUser-Trustedkişiler** deposuna aktarır.
+    Bu, hizmet sertifikasını Service.cer dosyasından **CurrentUser - Trusted People** deposuna aktarabilir.
 
-12. Sunucusunda, yönetici ayrıcalıklarıyla açılan Visual Studio için Geliştirici Komut İstemi 'de *ImportClientCert. bat* dosyasını çalıştırın.
+12. Sunucuda, Yönetici ayrıcalıklarıyla açılan Visual Studio için Geliştirici Komut Komut Ustem'inde *ImportClientCert.bat* çalıştırın.
 
-    Bu, istemci sertifikasını Client. cer dosyasından **LocalMachine-Trustedkişiler** deposuna aktarır.
+    Bu, istemci sertifikasını Client.cer dosyasından **LocalMachine - Trusted People** deposuna aktarın.
 
-13. Sunucu bilgisayarda, komut istemi penceresinden Service. exe ' yi başlatın.
+13. Sunucu bilgisayarında Service.exe komut istemi penceresinden başlatın.
 
-14. İstemci bilgisayarda, bir komut istemi penceresinden Client. exe ' yi başlatın.
+14. İstemci bilgisayarında, komut istemi penceresinden Client.exe'yi başlatın.
 
-    İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    İstemci ve hizmet iletişim kuramazsa, [WCF Örnekleri için Sorun Giderme İpuçları'na](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))bakın.
 
-### <a name="clean-up-after-the-sample"></a>Örnekten sonra temizle
+### <a name="clean-up-after-the-sample"></a>Örnekten sonra temizleme
 
-Örnekten sonra temizlemek için, örneği çalıştırmayı bitirdiğinizde Samples klasöründe *Cleanup. bat* dosyasını çalıştırın. Bu, sunucu ve istemci sertifikalarını sertifika deposundan kaldırır.
+Örnekten sonra temizlemek için, örneği çalıştırmayı bitirdiğinizde örnekler klasöründe *Cleanup.bat* çalıştırın. Bu, sunucu ve istemci sertifikalarını sertifika deposundan kaldırır.
 
 > [!NOTE]
-> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan WCF örnekleri çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Bu komut dosyası, bu örneği bilgisayarlar da çalıştırırken istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlarda sertifika kullanan WCF örnekleri çalıştırdıysanız, CurrentUser - Trusted People mağazasında yüklenen hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için aşağıdaki komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

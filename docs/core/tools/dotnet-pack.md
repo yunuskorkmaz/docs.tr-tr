@@ -2,12 +2,12 @@
 title: dotnet paketi komutu
 description: Dotnet paketi komutu,.NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 02/14/2020
-ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503651"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463505"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -20,10 +20,14 @@ ms.locfileid: "77503651"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
-    [-v|--verbosity] [--version-suffix]
-dotnet pack [-h|--help]
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
+    [-o|--output <OUTPUT_DIRECTORY>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--serviceable] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
+
+dotnet pack -h|--help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -38,6 +42,9 @@ Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız, iki se�
 Paketlenmiş projenin NuGet bağımlılıkları *.nuspec* dosyasına eklenir, böylece paket yüklendiğinde düzgün bir şekilde çözülürler. Projeden projeye başvurular proje içinde paketlenmemiştir. Şu anda, projeden projeye bağımlılıklarınız varsa, proje başına bir paketiniz olmalıdır.
 
 Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranıştan kaçınmak istiyorsanız, `--no-build` seçeneği geçirin. Bu seçenek genellikle, kodun daha önce üretildiği senaryoları sürekli tümleştirme (CI) oluşturmada yararlıdır.
+
+> [!NOTE]
+> Bazı durumlarda, örtülü yapı gerçekleştirilemez. Bu, yapı `GeneratePackageOnBuild` ve paket hedefleri arasında döngüsel bağımlılıktan kaçınmak için ayarlandığında oluşabilir. Kilitli bir dosya veya başka bir sorun varsa yapı da başarısız olabilir.
 
 Paketleme işlemi için `dotnet pack` komuta MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild Komut Satırı Başvurusu'na](/visualstudio/msbuild/msbuild-command-line-reference)bakın. [Örnekler](#examples) bölümünde, birkaç farklı senaryo için MSBuild -p anahtarının nasıl kullanılacağı gösterilmektedir.
 

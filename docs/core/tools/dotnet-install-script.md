@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK'yı ve paylaşılan çalışma süresini yüklemek için dotnet yükleme komut dosyaları hakkında bilgi edinin.
 ms.date: 01/23/2020
-ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092869"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463671"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet yükleme komut dosyaları başvurusu
 
@@ -20,17 +20,28 @@ ms.locfileid: "77092869"
 Windows:
 
 ```powershell
-dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
-    [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential]
-    [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]
+dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
+    [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
+    [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
+    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
+    [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
+    [-Version <VERSION>]
+
+dotnet-install.ps1 -Help
 ```
 
 Linux/macO'lar:
 
 ```bash
-dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--architecture]
-    [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential]
-    [--runtime-id] [--skip-non-versioned-files] [--help]
+dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
+    [--channel <CHANNEL>] [--dry-run] [--feed-credential]
+    [--install-dir <DIRECTORY>] [--jsonfile <JSONFILE>]
+    [--no-cdn] [--no-path] [--runtime <RUNTIME>] [--runtime-id <RID>]
+    [--skip-non-versioned-files] [--uncached-feed] [--verbose]
+    [--version <VERSION>]
+
+dotnet-install.sh --help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -54,6 +65,14 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
 
 ## <a name="options"></a>Seçenekler
 
+- **`-Architecture|--architecture <ARCHITECTURE>`**
+
+  .NET Çekirdek ikililerinin mimarisini yüklemek. Olası değerler `<auto>` `amd64`, `x64` `x86`, `arm64`, `arm`, , ve . Varsayılan değer, `<auto>`şu anda çalışan işletim sistemi mimarisini temsil eden değerdir.
+
+- **`-AzureFeed|--azure-feed`**
+
+  Azure akışının URL'sini yükleyiciye belirtir. Bu değeri değiştirmemenizi tavsiye ettik. Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.
+
 - **`-Channel|--channel <CHANNEL>`**
 
   Yükleme için kaynak kanalı belirtir. Olası değerler şunlardır:
@@ -65,34 +84,41 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
 
   Varsayılan değer: `LTS`. .NET destek kanalları hakkında daha fazla bilgi için [.NET Destek Politikası](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfasına bakın.
 
-- **`-Version|--version <VERSION>`**
+- **`-DryRun|--dry-run`**
 
-  Belirli bir yapı sürümünü temsil eder. Olası değerler şunlardır:
+  Ayarlanırsa, komut dosyası yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI'nin istenen sürümünü tutarlı bir şekilde yüklemek için hangi komut satırını kullanacağını görüntüler. Örneğin, sürüm `latest`belirtirseniz, bu komutun bir yapı komut dosyasında deterministically kullanılabilmesi için belirli sürümile bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ederseniz ikilinin konumunu da görüntüler.
 
-  - `latest`- Kanalüzerinde son yapı `-Channel` (seçeneği ile birlikte kullanılır).
-  - `coherent`- Kanalüzerinde son tutarlı yapı; en son kararlı paket birleşimini `-Channel` kullanır (Şube adı seçenekleriyle kullanılır).
-  - X.Y.Z formatında belirli bir yapı sürümünü temsil eden üç parçalı sürüm; seçeneğin yerini `-Channel` adakalır. Örneğin: `2.0.0-preview2-006120`.
+- **`-FeedCredential|--feed-credential`**
 
-  Belirtilmemişse, `-Version` `latest`varsayılan olarak .
+  Azure akışına eklemek için sorgu dizesi olarak kullanılır. Genel olmayan blob depolama hesaplarını kullanmak için URL'yi değiştirmenize olanak tanır.
 
-- **`-JSonFile|--jsonfile <JSONFILE>`**
+- **`-Help|--help`**
 
-  SDK sürümünü belirlemek için kullanılacak [global.json](global-json.md) dosyasına giden bir yol belirtir. *global.json* dosyasının bir değeri `sdk:version`olmalıdır.
+  Komut dosyası için yardım yazdırır.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
   Yükleme yolunu belirtir. Dizin yoksa oluşturulur. Varsayılan değer *%LocalAppData%\Microsoft\dotnet'tir.* İkili doğrudan bu dizine yerleştirilir.
 
-- **`-Architecture|--architecture <ARCHITECTURE>`**
+- **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  .NET Çekirdek ikililerinin mimarisini yüklemek. Olası değerler `<auto>` `amd64`, `x64` `x86`, `arm64`, `arm`, , ve . Varsayılan değer, `<auto>`şu anda çalışan işletim sistemi mimarisini temsil eden değerdir.
+  SDK sürümünü belirlemek için kullanılacak [global.json](global-json.md) dosyasına giden bir yol belirtir. *global.json* dosyasının bir değeri `sdk:version`olmalıdır.
 
-- **`-SharedRuntime|--shared-runtime`**
+- **`-NoCdn|--no-cdn`**
 
-  > [!NOTE]
-  > Bu parametre eskidir ve komut dosyasının gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif `-Runtime|--runtime` seçenektir.
+  [Azure İçerik Teslim Ağı'ndan (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) indirmeyi devre dışı bırakıp doğrudan önyüklemesiz akışı kullanır.
 
-  SDK'nın tamamını değil, paylaşılan çalışma zamanı bitlerini yükler. Bu seçenek belirtmeye `-Runtime|--runtime dotnet`eşdeğerdir.
+- **`-NoPath|--no-path`**
+
+  Ayarlanırsa, yükleme klasörü geçerli oturumun yoluna dışa aktarılmaz. Varsayılan olarak, komut dosyası PATH'i değiştirir ve bu da .NET Core CLI'yi yükledikten hemen sonra kullanılabilir hale getirir.
+
+- **`-ProxyAddress`**
+
+  Ayarlanırsa, yükleyici web isteklerini yaparken proxy'yi kullanır. (Yalnızca Windows için geçerlidir.)
+
+- **`ProxyUseDefaultCredentials`**
+
+  Ayarlanırsa, yükleyici proxy adresini kullanırken geçerli kullanıcının kimlik bilgilerini kullanır. (Yalnızca Windows için geçerlidir.)
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -102,53 +128,38 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
   - `aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma süresi.
   - `windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma süresi.
 
-- **`-DryRun|--dry-run`**
+- **`--runtime-id <RID>`**
 
-  Ayarlanırsa, komut dosyası yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI'nin istenen sürümünü tutarlı bir şekilde yüklemek için hangi komut satırını kullanacağını görüntüler. Örneğin, sürüm `latest`belirtirseniz, bu komutun bir yapı komut dosyasında deterministically kullanılabilmesi için belirli sürümile bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ederseniz ikilinin konumunu da görüntüler.
+  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. Taşınabilir `linux-x64` Linux için kullanın. (Yalnızca Linux/macOS için geçerlidir.)
 
-- **`-NoPath|--no-path`**
+- **`-SharedRuntime|--shared-runtime`**
 
-  Ayarlanırsa, yükleme klasörü geçerli oturumun yoluna dışa aktarılmaz. Varsayılan olarak, komut dosyası PATH'i değiştirir ve bu da .NET Core CLI'yi yükledikten hemen sonra kullanılabilir hale getirir.
+  > [!NOTE]
+  > Bu parametre eskidir ve komut dosyasının gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif `-Runtime|--runtime` seçenektir.
 
-- **`-Verbose|--verbose`**
-
-  Tanılama bilgilerini görüntüler.
-
-- **`-AzureFeed|--azure-feed`**
-
-  Azure akışının URL'sini yükleyiciye belirtir. Bu değeri değiştirmemenizi tavsiye ettik. Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.
-
-- **`-UncachedFeed|--uncached-feed`**
-
-  Bu yükleyici tarafından kullanılan cached beslemesi için URL'yi değiştirmenize olanak sağlar. Bu değeri değiştirmemenizi tavsiye ettik.
-
-- **`-NoCdn|--no-cdn`**
-
-  [Azure İçerik Teslim Ağı'ndan (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) indirmeyi devre dışı bırakıp doğrudan önyüklemesiz akışı kullanır.
-
-- **`-FeedCredential|--feed-credential`**
-
-  Azure akışına eklemek için sorgu dizesi olarak kullanılır. Genel olmayan blob depolama hesaplarını kullanmak için URL'yi değiştirmenize olanak tanır.
-
-- **`--runtime-id`**
-
-  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. Taşınabilir `linux-x64` Linux için kullanın. (Sadece Linux/macOS için geçerlidir)
-
-- **`-ProxyAddress`**
-
-  Ayarlanırsa, yükleyici web isteklerini yaparken proxy'yi kullanır. (Yalnızca Windows için geçerlidir)
-
-- **`ProxyUseDefaultCredentials`**
-
-  Ayarlanırsa, yükleyici proxy adresini kullanırken geçerli kullanıcının kimlik bilgilerini kullanır. (Yalnızca Windows için geçerlidir)
+  SDK'nın tamamını değil, paylaşılan çalışma zamanı bitlerini yükler. Bu seçenek belirtmeye `-Runtime|--runtime dotnet`eşdeğerdir.
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
   *Dotnet.exe*gibi sürümdışı dosyaları yüklemeyi atlar, zaten varsa.
 
-- **`-Help|--help`**
+- **`-UncachedFeed|--uncached-feed`**
 
-  Komut dosyası için yardım yazdırır.
+  Bu yükleyici tarafından kullanılan cached beslemesi için URL'yi değiştirmenize olanak sağlar. Bu değeri değiştirmemenizi tavsiye ettik.
+
+- **`-Verbose|--verbose`**
+
+  Tanılama bilgilerini görüntüler.
+
+- **`-Version|--version <VERSION>`**
+
+  Belirli bir yapı sürümünü temsil eder. Olası değerler şunlardır:
+
+  - `latest`- Kanalüzerinde son yapı `-Channel` (seçeneği ile birlikte kullanılır).
+  - `coherent`- Kanalüzerinde son tutarlı yapı; en son kararlı paket birleşimini `-Channel` kullanır (Şube adı seçenekleriyle kullanılır).
+  - X.Y.Z formatında belirli bir yapı sürümünü temsil eden üç parçalı sürüm; seçeneğin yerini `-Channel` adakalır. Örneğin: `2.0.0-preview2-006120`.
+
+  Belirtilmemişse, `-Version` `latest`varsayılan olarak .
 
 ## <a name="examples"></a>Örnekler
 

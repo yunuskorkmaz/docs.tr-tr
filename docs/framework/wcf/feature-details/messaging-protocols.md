@@ -2,12 +2,12 @@
 title: Mesajlaşma Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184589"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463825"
 ---
 # <a name="messaging-protocols"></a>Mesajlaşma Protokolleri
 
@@ -283,7 +283,7 @@ Tam ilke iddiası aşağıdaki gibi görünebilir:
 </wsam:Addressing>
 ```
 
-WSDL 1.1 SOAP 1.x HTTP ciltlerini kullanan uç noktalarda Uç Nokta Politikası Konusu [WS-PA] bulunan aşağıdaki iddianın kullanımı, istektebulunandan yanıtlayana ve yanıtlayana akan iletiler için kullanılmak üzere iki ayrı converse HTTP bağlantısı gerektirir, Sıra -sıyla.
+WSDL 1.1 SOAP 1.x HTTP ciltlerini kullanan uç noktalarda Uç Nokta Politikası Konusu [WS-PA] bulunan aşağıdaki iddianın kullanımı, istektebulunaniletiden yanıtlayana ve yanıtlayana giden iletilere akan iletiler için sırasıyla iki ayrı converse HTTP bağlantısı nın kullanılmasını gerektirir.
 
 ```xml
 <cdp:CompositeDuplex/>
@@ -566,7 +566,7 @@ MTOM'u kullanmak üzere yapılandırılan bir WCF bitiş noktası her zaman MTOM
 WCF, MTOM kullanımını bitiş noktasına göre belirtmek için aşağıdaki ilke iddiasını kullanır:
 
 ```xml
-<wsoma:OptimizedMimeSerialization ... />
+<wsoma:OptimizedMimeSerialization />
 ```
 
 - R4211: Önceki ilke iddiasında Bir Uç Nokta İlkesi Konusu vardır ve bitiş noktasından gönderilen ve alınan tüm iletilerin MTOM kullanılarak optimize edilmesi gerektiğini belirtir.

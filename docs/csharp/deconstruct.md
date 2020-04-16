@@ -2,14 +2,14 @@
 title: Demetleri ve diğer türleri ayrıştırma
 description: Tuples ve diğer türleri yapısızlaştırılmasını öğrenin.
 ms.technology: csharp-fundamentals
-ms.date: 07/18/2016
+ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d238f6f520653befb1464377094b93e34dde0eca
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100663"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463134"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Demetleri ve diğer türleri ayrıştırma
 
@@ -106,4 +106,4 @@ Aşağıdaki örnek, `Deconstruct` <xref:System.Reflection.PropertyInfo?displayP
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Atılanlar](discards.md)
-- [Dizilerini](tuples.md)
+- [Demetler](tuples.md)

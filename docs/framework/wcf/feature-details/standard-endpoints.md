@@ -2,12 +2,12 @@
 title: Standart Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184400"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463785"
 ---
 # <a name="standard-endpoints"></a>Standart Uç Noktaları
 Uç noktalar bir adres, bir bağlama ve sözleşme belirtilerek tanımlanır. Bitiş noktasına ayarlanabilecek diğer parametreler davranış yapılandırması, üstbilgi ve dinleme URI'lerini içerir.  Belirli uç nokta türleri için bu değerler değişmez. Örneğin, meta veri alışverişi uç <xref:System.ServiceModel.Description.IMetadataExchange> noktaları her zaman sözleşmeyi kullanır. Her zaman belirtilen <xref:System.ServiceModel.Description.WebHttpEndpoint> bir bitiş noktası davranışı gerektiren gibi diğer uç noktalar. Bir uç noktanın kullanılabilirliği, sık kullanılan uç nokta özellikleri için varsayılan değerlere sahip uç noktalarına sahip olarak geliştirilebilir. Standart uç noktalar, bir geliştiricinin varsayılan değerlere sahip veya bir veya daha fazla uç noktanın özelliklerinin değişmediği bir uç nokta tanımlamasını sağlar.  Bu uç noktalar, statik bir niteen bilgi belirtmek zorunda kalmadan böyle bir bitiş noktası kullanmanıza olanak sağlar. Standart uç noktaları altyapı ve uygulama uç noktaları için kullanılabilir.  
@@ -121,6 +121,8 @@ Aşağıdaki örnek, uzantılar bölümünde standart bir bitiş noktasının na
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
+      </standardEndpointExtensions>
+</extensions>  
 ```  
   
 ## <a name="configuring-a-standard-endpoint"></a>Standart Bitiş Noktası Nı Yapılandırma  

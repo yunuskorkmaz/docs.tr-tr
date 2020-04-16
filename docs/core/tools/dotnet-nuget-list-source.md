@@ -2,14 +2,14 @@
 title: dotnet nuget listesi kaynak komutu
 description: Dotnet nuget listesi kaynak komutu, NuGet yapılandırma dosyalarınızdaki tüm varolan kaynakları listeler.
 ms.date: 03/20/2020
-ms.openlocfilehash: 4d7bc3dbd3ab5eb14c1ebf592044b685d28355cd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148577"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463550"
 ---
-# <a name="dotnet-nuget-list-source"></a>dotnet nuget listesi kaynak
+# <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
 **Bu makale şu şekildedir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümler
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148577"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet nuget list source [--format] [--configfile]
-dotnet nuget list source [-h|--help]
+dotnet nuget list source [--format [Detailed|Short]] [--configfile <FILE>]
+
+dotnet nuget list source -h|--help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -30,11 +31,11 @@ Komut, `dotnet nuget list source` NuGet yapılandırma dosyalarınızdaki tüm v
 
 ## <a name="options"></a>Seçenekler
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet yapılandırma dosyası. Belirtilirse, yalnızca bu dosyadaki ayarlar kullanılır. Belirtilmemişse, geçerli dizindeki yapılandırma dosyaları hiyerarşisi kullanılır. Daha fazla bilgi için [Ortak NuGet Yapılandırmaları'na](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)bakın.
 
-- **`--format`**
+- **`--format [Detailed|Short]`**
 
   Liste komutu çıktısının `Detailed` biçimi: (varsayılan) ve `Short`.
 

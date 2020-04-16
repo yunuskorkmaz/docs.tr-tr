@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: a1e67401a09370a46bc7a3e8546c95467bc18b67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25efda74d205a36332a801e91ddc508796f7df5d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184141"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463985"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 Windows Communication Foundation (WCF), Web hizmetleri belirtimleri olarak bilinen bir dizi belirtimi destekleyen Web hizmetleriyle birlikte çalışacak şekilde oluşturulmuştür. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırmasını basitleştirmek için, WCF <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>üç <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>birlikte çalışabilir sistem sağlanan bağlamaları sunar: , , ve . Yapılandırılmış Bilgi StandartlarınıN İlerlemesi Için Organizasyon (OASIS) standartları ile birlikte çalışabilirlik için <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>WCF, sistem tarafından sağlanan bir birlikte çalışabilir bağlayıcıiçerir: . Meta veri yayını için WCF, sistem tarafından sağlanan iki birlikte çalışabilir bağlama içerir: [ \<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilir bağlamaların desteklediği özellikleri listeler.  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF), Web hizmetleri belirtimleri olarak bilin
        <message issuedKeyType="Symmetric"
                 issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">  
          <issuerMetadata address =
-         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'>  
+         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'/>  
        </message>  
      </security>  
   </binding>  

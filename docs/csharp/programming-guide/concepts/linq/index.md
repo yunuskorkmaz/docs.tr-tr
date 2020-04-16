@@ -2,18 +2,18 @@
 title: Dil-Tümleşik Sorgu (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2e53d6c7f4d24fd57b1f91c1428b8341386b6f9
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73418235"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463893"
 ---
 # <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
 Dil-Tümleşik Sorgu (LINQ), sorgu yeteneklerinin doğrudan C# diline entegrasyonuna dayalı bir dizi teknolojinin adıdır. Geleneksel olarak, verilere karşı sorgular derleme zamanında veya IntelliSense desteğinde tür denetimi olmadan basit dizeleri olarak ifade edilir. Ayrıca, her veri kaynağı türü için farklı bir sorgu dili öğrenmeniz gerekir: SQL veritabanları, XML belgeleri, çeşitli Web hizmetleri ve benzeri. LINQ ile sorgu, sınıflar, yöntemler, olaylar gibi birinci sınıf bir dil yapısıdır. Dil anahtar kelimeleri ve tanıdık işleçler kullanarak nesnelerin güçlü bir şekilde yazılan koleksiyonlarına karşı sorgular yazarsınız. LINQ teknoloji ailesi nesneler (LINQ to Objects), ilişkisel veritabanları (LINQ-SQL) ve XML (LINQ-XML) için tutarlı bir sorgu deneyimi sağlar.
 
-Sorgu yazan bir geliştirici için LINQ'nun en görünür "dil tümleşik" bölümü sorgu ifadesidir. Sorgu ifadeleri bildirimsel sorgu *sözdiziminde*yazılır. Sorgu sözdizimini kullanarak, veri kaynaklarında en az kodla filtreleme, sıralama ve gruplandırma işlemleri gerçekleştirebilirsiniz. SQL veritabanlarında, ADO .NET Veri kümelerinde, XML belgelerinde ve akışlarında ve .NET koleksiyonlarında verileri sorgulamak ve dönüştürmek için aynı temel sorgu ifade desenlerini kullanırsınız.
+Sorgu yazan bir geliştirici için LINQ'nun en görünür "dil tümleşik" bölümü sorgu ifadesidir. Sorgu ifadeleri bildirimsel sorgu *sözdiziminde*yazılır. Sorgu sözdizimini kullanarak, veri kaynaklarında en az kodla filtreleme, sıralama ve gruplandırma işlemleri gerçekleştirebilirsiniz. SQL veritabanlarında, veri kümelerinde, XML belgeleri ve akışlarına ve .NET koleksiyonlarına ADO.NET verileri sorgulamak ve dönüştürmek için aynı temel sorgu ifade desenlerini kullanırsınız.
 
 SQL Server veritabanları, XML belgeleri, ADO.NET Datasets ve destekleyen <xref:System.Collections.IEnumerable> nesnelerin veya genel <xref:System.Collections.Generic.IEnumerable%601> arabirimin herhangi bir koleksiyon için C# linq sorguları yazabilirsiniz. LINQ desteği, birçok Web hizmeti ve diğer veritabanı uygulamaları için üçüncü taraflarca da sağlanır.
 

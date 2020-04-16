@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f78b77849d6da7dfff3bdcba90bb4d5200186a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185064"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464152"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma
 Bu konu, 'de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <xref:System.ServiceModel.Activities.WorkflowServiceHost>barındırılan bir iş akışı için izlemeyi nasıl yapılandırılabildiğini açıklar. Bir hizmet davranışı belirterek bir Web.config dosyası üzerinden yapılandırılır.  
@@ -23,7 +23,7 @@ Bu konu, 'de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-lo
            <etwTracking profileName="Sample Tracking Profile" />  
          </behavior>
        </serviceBehaviors>  
-    <behaviors>  
+    </behaviors>  
     ```  
   
     > [!NOTE]

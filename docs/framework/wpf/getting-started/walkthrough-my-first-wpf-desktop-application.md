@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186593"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463919"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019'da ilk WPF uygulamanızı oluşturun
 
-Bu makalede, çoğu WPF uygulamasında ortak olan öğeleri içeren bir Windows Presentation Foundation (WPF) masaüstü uygulaması nın nasıl geliştirildiğinizi gösterir: Genişletilebilir Uygulama Biçimlendirme Dili (XAML) biçimlendirmesi, kod arkası, uygulama tanımları, denetimleri, düzen, veri bağlama ve stilleri. Uygulamayı geliştirmek için Visual Studio'yu kullanacaksınız.
+Bu makalede, çoğu WPF uygulamasında ortak olan öğeleri içeren bir Windows Presentation Foundation (WPF) masaüstü uygulaması nın nasıl geliştirilildiği gösterilmektedir: Genişletilebilir Uygulama Biçimlendirme Dili (XAML) biçimlendirme, kod arkası, uygulama tanımları, denetimler, düzen, veri bağlama ve stilleri. Uygulamayı geliştirmek için Visual Studio'yu kullanacaksınız.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Bir WPF projesi oluşturun.
@@ -40,7 +40,7 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 >
 > Bu sayfanın üstündeki dil seçiciyi kullanarak örnek kodun kod dilini C# ve Visual Basic arasında geçiş yapabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ile **.NET masaüstü geliştirme** iş yükü yüklendi.
 
@@ -293,11 +293,11 @@ Bu bölümde, ana sayfa kullanıcı kullanıcı sını bir resim ve sayfa başl�
 
 1. In *`ExpenseItHome.xaml`*, 230 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> piksel <xref:System.Windows.Controls.ColumnDefinition.Width%2A> sabit başka bir sütun ekleyin:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Toplam dört satır <xref:System.Windows.Controls.Grid.RowDefinitions%2A>için başka bir satır ekleyin:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> Üç denetimin (Kenarlık, ListBox ve Düğme) her birinde özelliği 1'e ayarlayarak denetimleri ikinci sütuna taşıyın.
 

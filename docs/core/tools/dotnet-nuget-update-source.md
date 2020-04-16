@@ -2,14 +2,14 @@
 title: dotnet nuget güncelleme kaynak komutu
 description: Dotnet nuget güncelleştirme kaynak komutu, NuGet yapılandırma dosyalarınızdaki varolan bir kaynağı güncelleştirir.
 ms.date: 03/20/2020
-ms.openlocfilehash: 38335e07f91850756c7671413e1193c2578e7e7e
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 42b1aec95cdd57e53f966400f6692a3d0150c16c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148549"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463484"
 ---
-# <a name="dotnet-nuget-update-source"></a>dotnet nuget güncelleme kaynağı
+# <a name="dotnet-nuget-update-source"></a>dotnet nuget update source
 
 **Bu makale şu şekildedir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümler
 
@@ -20,10 +20,11 @@ ms.locfileid: "80148549"
 ## <a name="synopsis"></a>Özet
 
 ```dotnetcli
-dotnet nuget update source <NAME> [--source] [--username]
-    [--password] [--store-password-in-clear-text] [--valid-authentication-types]
-    [--configfile]
-dotnet nuget update source [-h|--help]
+dotnet nuget update source <NAME> [--source <SOURCE>] [--username <USER>]
+    [--password <PASSWORD>] [--store-password-in-clear-text]
+    [--valid-authentication-types <TYPES>] [--configfile <FILE>]
+
+dotnet nuget update source -h|--help
 ```
 
 ## <a name="description"></a>Açıklama
@@ -38,15 +39,15 @@ Komut, `dotnet nuget update source` NuGet yapılandırma dosyalarınızdaki varo
 
 ## <a name="options"></a>Seçenekler
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet yapılandırma dosyası. Belirtilirse, yalnızca bu dosyadaki ayarlar kullanılır. Belirtilmemişse, geçerli dizindeki yapılandırma dosyaları hiyerarşisi kullanılır. Daha fazla bilgi için [Ortak NuGet Yapılandırmaları'na](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)bakın.
 
-- **`-p|--password`**
+- **`-p|--password <PASSWORD>`**
 
   Kimlik doğrulaması yapılan bir kaynağa bağlanırken kullanılacak parola.
 
-- **`-s|--source`**
+- **`-s|--source <SOURCE>`**
 
   Paket kaynağına giden yol.
 
@@ -54,11 +55,11 @@ Komut, `dotnet nuget update source` NuGet yapılandırma dosyalarınızdaki varo
 
   Parola şifrelemesini devre dışı bırakarak taşınabilir paket kaynağı kimlik bilgilerini depolamayı sağlar.
 
-- **`-u|--username`**
+- **`-u|--username <USER>`**
 
   Kimlik doğrulaması yapılan bir kaynağa bağlanırken kullanılacak kullanıcı adı.
 
-- **`--valid-authentication-types`**
+- **`--valid-authentication-types <TYPES>`**
 
   Bu kaynak için geçerli kimlik doğrulama türlerinin virgülle ayrılmış listesi. Sunucu ntlm veya Negotiate'in reklamını yaparsa ve kimlik bilgilerinizin temel mekanizma kullanılarak gönderilmesi gerekiyorsa, örneğin şirket içi Azure DevOps Server'a sahip bir PAT kullanırken bunu `basic` ayarlayın. Diğer geçerli `negotiate`değerler `kerberos` `ntlm`, `digest`, , ve , içerir, ancak bu değerlerin yararlı olması olası değildir.
 

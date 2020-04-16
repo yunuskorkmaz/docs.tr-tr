@@ -2,20 +2,16 @@
 title: dotnet referans komutu ekleyin
 description: Dotnet add reference komutu proje başvurularına proje eklemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
-ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503794"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463741"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
 **Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
 
 ## <a name="name"></a>Adı
 
@@ -23,7 +19,12 @@ ms.locfileid: "77503794"
 
 ## <a name="synopsis"></a>Özet
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
+
+dotnet add reference -h|--help
+```
 
 ## <a name="description"></a>Açıklama
 
@@ -49,13 +50,13 @@ Komut, `dotnet add reference` projeye proje başvuruları eklemek için kullanı
 
 ## <a name="options"></a>Seçenekler
 
-- **`-h|--help`**
-
-  Komut için kısa bir yardım yazdırır.
-
 - **`-f|--framework <FRAMEWORK>`**
 
   Yalnızca belirli bir [çerçeveyi](../../standard/frameworks.md)hedefalırken proje referansları ekler.
+
+- **`-h|--help`**
+
+  Komut için kısa bir yardım yazdırır.
 
 - **`--interactive`**
 

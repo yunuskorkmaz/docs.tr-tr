@@ -2,12 +2,12 @@
 title: Güvenlik Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184518"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463799"
 ---
 # <a name="security-protocols-version-10"></a>Güvenlik Protokolleri sürüm 1.0
 Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik gereksinimlerini kapsayan Web hizmetleri güvenlik mekanizmaları sağlar. Bu bölümde, aşağıdaki Web hizmetleri güvenlik protokolleri için Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) sürüm 1.0 ayrıntıları (uygulandığında) açıklanmaktadır.  
@@ -45,7 +45,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
 |KerberosOverTransport|Windows|X509|Aktarım|  
 |IssuedTokenOverTransport|Federe|X509|Aktarım|  
 |SspiNegotiatedOverTransport|Windows Sspi Müzakere|Windows Sspi Müzakere|Aktarım|  
-|Anonim ForCertificate|None|X509|İleti|  
+|Anonim ForCertificate|Hiçbiri|X509|İleti|  
 |Kullanıcı AdıForCertificate|Kullanıcı adı/şifre|X509|İleti|  
 |MutualCertificate|X509|X509|İleti|  
 |MutualCertificateDuplex|X509|X509|İleti|  
@@ -53,7 +53,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
 |Kerberos|Windows|Windows|İleti|  
 |IssuedToken|Federe|Federe|İleti|  
 |SspiNegotiated|Windows Sspi Müzakere|Windows Sspi Müzakere|İleti|  
-|AnonimForSslNegotiated|None|X509, TLS-Nego|İleti|  
+|AnonimForSslNegotiated|Hiçbiri|X509, TLS-Nego|İleti|  
 |Kullanıcı AdıForSslNegotiated|Kullanıcı adı/şifre|X509, TLS-Nego|İleti|  
 |MutualSslNegotiated|X509|X509, TLS-Nego|İleti|  
 |IssuedTokenForSslNegotiated|Federe|X509, TLS-Nego|İleti|  
@@ -62,7 +62,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
   
  WCF, uygulamalar arasındaki çoklu ileti alışverişini korumak için güvenli oturum desteği sağlamak için WS-SecureConversation'dan yararlanır.  Uygulama ayrıntıları için aşağıdaki "Güvenli Oturumlar" adlı bilgiye bakın.  
   
- Kimlik doğrulama modlarına ek olarak WCF, çoğu ileti güvenliği tabanlı kimlik doğrulama moduiçin geçerli olan yaygın koruma mekanizmalarını denetlemek için ayarlar sağlar, örneğin: imza ve şifreleme işlemleri sırası, algoritma paketleri, anahtar türetme ve imza onayı.  
+ Kimlik doğrulama modlarına ek olarak WCF, çoğu ileti güvenliği tabanlı kimlik doğrulama moduna uygulanan yaygın koruma mekanizmalarını denetlemek için ayarlar sağlar( örneğin: imza ve şifreleme işlemleri ne sırayla, algoritma paketleri, anahtar türetme ve imza onayı.  
   
  Bu belgede aşağıdaki önekler ve ad alanları kullanılır.  
   
@@ -137,7 +137,7 @@ Web Hizmetleri Güvenlik Protokolleri, varolan tüm kurumsal ileti güvenlik ger
  Zaman damgası varlığı <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfın özelliği kullanılarak denetlenir. WCF her zaman wsse:TimeStamp ile wsse:Created ve wsse:Expires alanları ile serihale eder. WsSe:TimeStamp imzalandığında her zaman imzalanır.  
   
 ### <a name="22-protection-order"></a>2.2 Koruma Emri  
- WCF, "Şifrelemeden Önce İmzala" ve "İmzadan Önce Şifreleme" ileti koruma emrini destekler (Güvenlik İlkesi 1.1). "Şifrelemeden Önce İmzala" gibi nedenlerle önerilir: WS-Security 1.1 SignatureConfirmation mekanizması kullanılmadığı sürece imza ikame saldırılarına açık olan İmzadan Önce Şifrele ile korunan iletiler ve şifrelenmiş içerik üzerinden imza daha zor denetim.  
+ WCF, "Şifrelemeden Önce İmzala" ve "İmzadan Önce Şifreleme" ileti koruma emrini destekler (Güvenlik İlkesi 1.1). "Şifrelemeden Önce İmzala" gibi nedenlerle önerilir: WS-Security 1.1 SignatureConfirmation mekanizması kullanılmadığı ve şifreli içeriğe yönelik imza denetimi zorlaştırmadığı sürece İmzadan Önce Şifrele ile korunan iletiler imza ikame saldırılarına açıktır.  
   
 ### <a name="23-signature-protection"></a>2.3 İmza Koruması  
  İşaretten Önce Şifrele kullanıldığında, şifrelenmiş içeriği veya imzalama anahtarını tahmin etmek için kaba kuvvet saldırılarını önlemek için imzanın korunması önerilir (özellikle zayıf anahtar malzemesiyle özel bir belirteç kullanıldığında).  
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -947,7 +947,7 @@ Belirteç Koruması: False
   
  İmzayı Şifrele: Doğru  
   
- Yukarıdaki kimlik doğrulama modları yalnızca kullandıkları destekleyici belirteçlere göre farklılık gösterir. AnonymousForCertificate herhangi bir destekleyici belirteçleri yok, MutualCertificate WSS 1.1 destekleyici belirteçleri destekleyici bir olarak müşterinin X509 sertifikasına sahiptir, UserNameForCertificate imzalı destekleyici belirteç olarak bir Kullanıcı Adı Belirteci vardır ve IssuedTokenForCertificate, verilen belirteci destekleyici bir belirteç olarak sahiptir.  
+ Yukarıdaki kimlik doğrulama modları yalnızca kullandıkları destekleyici belirteçlere göre farklılık gösterir. AnonymousForCertificate herhangi bir destekleyici belirteçleri yok, MutualCertificate WSS 1.1 destekleyici belirteçleri destekleyici bir istemcinin X509 sertifikasına sahiptir, UserNameForCertificate imzalı bir destekleyici belirteç olarak bir Kullanıcı Adı Belirteci vardır ve IssuedTokenForCertificate destekleyici belirteci olarak verilen belirteç vardır.  
   
  İlke  
   
@@ -1856,7 +1856,7 @@ Belirteç Koruması: False
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

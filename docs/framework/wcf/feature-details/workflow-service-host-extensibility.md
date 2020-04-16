@@ -2,12 +2,12 @@
 title: İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-ms.openlocfilehash: 776fc78cd3f5b012dd40576fe56f71835e949708
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb35b9211bc55ee66f5bb5600ef86f40d4145191
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184152"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464001"
 ---
 # <a name="workflow-service-host-extensibility"></a>İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]iş <xref:System.ServiceModel.Activities.WorkflowServiceHost> akışı hizmetlerini barındırma için sınıf sağlar. Bu sınıf, yönetilen bir uygulamada veya Windows hizmetinde kendi kendine barındıran bir iş akışı hizmetinde kullanılır. Bu sınıf, Internet Information Services (IIS) veya Windows Process Etkinleştirme Hizmeti (WAS) ile bir iş akışı hizmeti barındırırken de kullanılır. Sınıf, <xref:System.ServiceModel.Activities.WorkflowServiceHost> özel uzantılar eklemenize, boşta kalan davranışı değiştirmenize ve hizmet dışı iş akışlarını (ileti etkinliklerini kullanmayan iş akışları) barındırmanıza olanak tanıyan uzantı noktaları sağlar.  
@@ -43,6 +43,7 @@ host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action =
           <workflowUnhandledExceptionBehavior action="Abandon" />
         </behavior>  
       </serviceBehaviors>  
+</behaviors>
 ```  
   
 ## <a name="hosting-non-service-workflows"></a>Hizmet Dışı İş Akışlarını Barındırma  

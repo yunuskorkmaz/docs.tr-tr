@@ -2,12 +2,12 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184673"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464075"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 
@@ -17,13 +17,13 @@ Windows Communication Foundation (WCF) XML tabanlı bir iletişim altyapısıdı
  WCF için aşağıdaki bilgiler hakkında arka plan bilgileri sağlamak için, bu bölümde, genellikle bağlı sistem altyapıları için geçerli olan kodlamalar, ikili veriler ve akış la ilgili bazı genel endişeler ve hususlar vurgulanır.  
   
 ### <a name="encoding-data-text-vs-binary"></a>Kodlama Verileri: Metin vs İkili  
- Yaygın olarak ifade edilen geliştirici endişeleri, xml'in başlangıç etiketleri ve bitiş etiketlerinin yinelenen doğası nedeniyle ikili biçimlerle karşılaştırıldığında önemli ek yükü olduğu, sayısal değerlerin kodlanmasının önemli ölçüde daha büyük olduğu algısını içerir metin değerleri yle ifade edildikleri ve ikili verilerin metin biçimine katıştırılması için özel olarak kodlanmaları gerektiğinden verimli bir şekilde ifade edilemeyeceği için.  
+ Yaygın olarak ifade edilen geliştirici endişeleri, xml'in başlangıç etiketleri ve bitiş etiketlerinin yinelenen yapısı nedeniyle ikili biçimlerle karşılaştırıldığında önemli ek yükü olduğu, metin değerlerinde ifade edildikleri için sayısal değerlerin kodlanmasının önemli ölçüde daha büyük olduğu ve metin biçimine katıştırmak için özel olarak kodlanması gerektiğinden ikili verilerin verimli bir şekilde ifade edilemeyeceği algısını içerir.  
   
- Bu ve benzer kaygıların çoğu geçerli olmakla birlikte, XML Web hizmetleri ortamındaXML metin kodlanmış iletiler ile eski bir uzak yordam çağrısı (RPC) ortamındaki ikili kodlanmış iletiler arasındaki gerçek fark genellikle çok daha az ilk dikkate önerebilir.  
+ Bu ve benzer kaygıların çoğu geçerli olmakla birlikte, XML Web hizmetleri ortamındaxml-metin kodlanmış iletiler ile eski bir uzak yordam çağrısı (RPC) ortamındaki ikili kodlanmış iletiler arasındaki gerçek fark genellikle ilk dikkate alınmasıgerekenden çok daha az önemlidir.  
   
  XML-metin kodlanmış iletiler saydam ve "insan tarafından okunabilir" olsa da, ikili iletiler genellikle karşılaştırma da oldukça belirsizdir ve araçlar olmadan çözülmesi zordur. Okunabilirlikteki bu fark, ikili iletilerin genellikle yükte satır altı meta verileri taşıdığını göz ardı etmeye yol açar ve bu da xml metin iletilerinde olduğu gibi genel ek yük ekler. Bu, gevşek bağlantı ve dinamik çağırma özellikleri sağlamayı amaçlayan ikili biçimler için özellikle geçerlidir.  
   
- Ancak, ikili biçimler genellikle aşağıdaki veri kayıtları için veri düzenini bildiren bir "üstbilgi" içinde bu tür açıklayıcı meta veri bilgilerini taşır. Taşıma daha sonra bu ortak meta veri bloğu bildirimini en az ek yük ile izler. Bunun aksine, XML her veri öğesini bir öğeye veya öznitelike içine, böylece çevreleyen meta verilerin her serileştirilmiş yük nesnesi için tekrar tekrar dahil edilir. Sonuç olarak, bazı açıklayıcı meta veriler her ikisi için de ifade edilmesi gerektiğinden, tek bir serileştirilmiş yük nesnesinin boyutu, metinle ikili gösterimlerle karşılaştırıldığında benzerdir, ancak ikili biçim her ek ile paylaşılan meta veri açıklamasından yararlanır daha düşük genel ek yük nedeniyle aktarılan yük nesnesi.  
+ Ancak, ikili biçimler genellikle aşağıdaki veri kayıtları için veri düzenini bildiren bir "üstbilgi" içinde bu tür açıklayıcı meta veri bilgilerini taşır. Taşıma daha sonra bu ortak meta veri bloğu bildirimini en az ek yük ile izler. Bunun aksine, XML her veri öğesini bir öğeye veya öznitelike içine, böylece çevreleyen meta verilerin her serileştirilmiş yük nesnesi için tekrar tekrar dahil edilir. Sonuç olarak, metinile ikili gösterimleri karşılaştırıldığında tek serileştirilmiş yük nesnesinin boyutu benzerdir, çünkü bazı açıklayıcı meta veriler her ikisi için de ifade edilmelidir, ancak ikili biçim, daha düşük genel ek yük nedeniyle aktarılan her ek yük nesnesi ile paylaşılan meta veri açıklamasından yararlanır.  
   
  Yine de, sayılar gibi belirli veri türleri için, düz metin gösterimi birkaç bayt daha küçük olabileceğinden, düz metin gösterimi yerine 128 bit ondalık yazı gibi sabit boyutlu, ikili sayısal gösterimler kullanmanın bir dezavantajı olabilir. Metin verilerinin genellikle daha esnek XML metin kodlama seçeneklerinden boyut avantajları olabilir, ancak bazı ikili biçimler .NET İkili XML Biçimi için geçerli olmayan 16 bit ve hatta 32 bit Unicode varsayılan olarak varsayılan olabilir.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) XML tabanlı bir iletişim altyapısıdı
  XML metin mesajlarının açık bir avantajı, standartlara dayalı olmaları ve en geniş birlikte çalışabilirlik seçenekleri ve platform desteği seçenekleri sunabildikleridir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Kodlamalar" bölümüne bakın.  
   
 ### <a name="binary-content"></a>İkili İçerik  
- İkili kodlamaların, ortaya çıkan ileti boyutu açısından metin tabanlı kodlamalardan daha üstün olduğu bir alan, resimler, videolar, ses klipleri veya hizmetler ile bunların arasında değiş tokuş edilmesi gereken herhangi bir opak, ikili veri biçimi gibi büyük ikili veri öğeleridir. Tüketici. Bu tür verileri XML metnine sığdırmak için ortak yaklaşım, bunları Base64 kodlamasını kullanarak kodlamaktır.  
+ İkili kodlamaların, ortaya çıkan ileti boyutu açısından metin tabanlı kodlamalardan daha üstün olduğu alanlardan biri, resimler, videolar, ses klipleri veya hizmetler le tüketicileri arasında değiş tokuş edilmesi gereken herhangi bir opak, ikili veri biçimi gibi büyük ikili veri öğeleridir. Bu tür verileri XML metnine sığdırmak için ortak yaklaşım, bunları Base64 kodlamasını kullanarak kodlamaktır.  
   
  Base64 kodlanmış bir dizede, her karakter orijinal 8-bit verilerin 6 bitini temsil eder ve bu da Base64 için 4:3 kodlama ek yükü oranıyla sonuçlanır ve genellikle kural kuralı tarafından eklenen ek biçimlendirme karakterlerini (satır başı/satır akışı) saymaz. XML ve ikili kodlamalar arasındaki farkların önemi genellikle senaryoya bağlı olsa da, 500 MB'lık bir yükü aktarırken %33'ten fazla bir boyut kazancı genellikle kabul edilemez.  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) XML tabanlı bir iletişim altyapısıdı
 ### <a name="large-data-content"></a>Büyük Veri İçeriği  
  Tel ayak izi bir yana, daha önce bahsedilen 500 MB'lık yük de hizmet ve istemci için büyük bir yerel sorun teşkil etmektedir. Varsayılan olarak, WCF iletileri *arabelleğe alınan modda*işler. Bu, iletinin tüm içeriğinin gönderilmeden önce veya alındıktan sonra bellekte bulunduğu anlamına gelir. Bu çoğu senaryo için iyi bir strateji olsa da ve dijital imzalar ve güvenilir teslim gibi mesajlaşma özellikleri için gerekli olsa da, büyük iletiler bir sistemin kaynaklarını tüketebilir.  
   
- Büyük yüklerle başa çıkma stratejisi akıyor. İletiler, özellikle XML'de ifade edileniletiler genellikle nispeten kompakt veri paketleri olarak düşünülse de, iletinin boyutu birden çok gigabayt olabilir ve bir veri paketinden daha fazla sürekli veri akışına benzeyebilir. Veriler arabelleğe alınan mod yerine akış modunda aktarıldığında, gönderen ileti gövdesinin içeriğini akış biçiminde alıcının kullanımına gönderir ve ileti altyapısı verileri gönderenden alıcıya sürekli olarak iletir Kullanılabilir.  
+ Büyük yüklerle başa çıkma stratejisi akıyor. İletiler, özellikle XML'de ifade edileniletiler genellikle nispeten kompakt veri paketleri olarak düşünülse de, iletinin boyutu birden çok gigabayt olabilir ve bir veri paketinden daha fazla sürekli veri akışına benzeyebilir. Veriler arabelleğe alınan mod yerine akış modunda aktarıldığında, gönderen ileti gövdesinin içeriğini akış biçiminde alıcının kullanımına gönderir ve ileti altyapısı kullanılabilir olduğunda verileri sürekli olarak gönderenden alıcıya iletir.  
   
  Bu tür büyük veri içerik aktarımlarının gerçekleştiği en yaygın senaryo, ikili veri nesnelerinin aktarımlarıdır:  
   
@@ -70,7 +70,7 @@ Windows Communication Foundation (WCF) XML tabanlı bir iletişim altyapısıdı
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Metin iletisi kodlayıcısı, tüm HTTP tabanlı bağlamalar için varsayılan kodlayıcıdır ve birlikte çalışabilirliğin en yüksek sorun olduğu tüm özel bağlamalar için uygun seçimdir. Bu kodlayıcı, ikili veriler için özel bir işlem olmadan standart SOAP 1.1/SOAP 1.2 metin mesajlarını okur ve yazar. Bir <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> iletinin özelliği <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, SOAP zarf sarıcı çıktıdan atlanır ve yalnızca ileti gövdesi içeriği seri hale getirilmiştir.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM ileti kodlayıcısı, ikili veriler için özel işleme uygulayan bir metin kodlayıcısıdır ve standart bağlamaların hiçbirinde varsayılan olarak kullanılmaz, çünkü bu kesinlikle tek tek optimizasyon yardımcı programıdır. İleti, MTOM kodlamasının bir yarar sağladığı bir eşiği aşan ikili veri içeriyorsa, veriler ileti zarfını izleyen bir MIME bölümüne dışsallaştırılır. Daha sonra bu bölümde MTOM'u etkinleştirme bölümüne bakın.|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|İkili ileti kodlayıcısı, Net* bağlamaları için varsayılan kodlayıcıdır ve her iki iletişim tarafı wcf'ye dayalı olduğunda uygun seçimdir. İkili ileti kodlayıcısı, xml bilgi kümeleri (Bilgi Kümeleri) için Microsoft'a özgü bir ikili gösterim olan ve genellikle eşdeğer XML 1.0 gösteriminden daha küçük bir ayak izi sağlayan ve ikili verileri bayt olarak kodlayan .NET İkili XML Biçimini kullanır Akışı.|  
+|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|İkili ileti kodlayıcısı, Net* bağlamaları için varsayılan kodlayıcıdır ve her iki iletişim tarafı wcf'ye dayalı olduğunda uygun seçimdir. İkili ileti kodlayıcısı, genellikle eşdeğer XML 1.0 gösteriminden daha küçük bir ayak izi sağlayan ve ikili verileri bayt akışı olarak kodlayan XML Bilgi Kümeleri (Bilgi Kümeleri) için Microsoft'a özgü ikili gösterim .NET İkili XML Biçimini kullanır.|  
   
  Metin iletisi kodlaması genellikle birlikte çalışabilirlik gerektiren herhangi bir iletişim yolu için en iyi seçimdir, ikili ileti kodlaması ise diğer iletişim yolu için en iyi seçimdir. İkili ileti kodlaması genellikle tek bir iletinin metniyle karşılaştırıldığında daha küçük ileti boyutları ve iletişim oturumu süresince giderek daha küçük ileti boyutları verir. Metin kodlamanın aksine, ikili kodlama, Base64'ü kullanmak gibi ikili veriler için özel işleme kullanmak zorunda değildir, ancak baytları bayt olarak temsil eder.  
   
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) XML tabanlı bir iletişim altyapısıdı
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Daha önce de belirtildiği gibi, MTOM kodlamasını kullanma kararı gönderdiğiniz veri hacmine bağlıdır. Ayrıca, MTOM bağlama düzeyinde etkinleştirildiğinden, MTOM'un belirli bir bitiş noktasındaki tüm işlemleri etkilemesini sağlar.  
@@ -134,7 +134,7 @@ class MyData
   
 - Şifreleme, verilerin doğru şekilde yeniden oluşturuldurıldığını doğrulamak için dijital imzalara bağlıdır.  
   
-- İleti transferde kaybolursa, güvenilir oturumlar istemciye gönderilen iletileri yeniden teslim etmek üzere arabelleğe almalı ve iletilerin alınması durumunda ileti siparişini korumak için hizmet uygulamasına teslim etmeden önce iletileri hizmette tutmalı sıra dışı.  
+- İletinin devre dışı alınması durumunda iletileri hizmet uygulamasına teslim etmeden önce hizmette tutmaları gerekiyorsa, güvenilir oturumlar istemciye yeniden teslim için gönderilen iletileri arabelleğe almalıdır.  
   
  Bu işlevsel kısıtlamalar nedeniyle, akış için yalnızca aktarım düzeyinde güvenlik seçeneklerini kullanabilirsiniz ve güvenilir oturumları açamazsınız. Akış yalnızca aşağıdaki sistem tanımlı bağlamalarla kullanılabilir:  
   
@@ -153,7 +153,7 @@ class MyData
  Eş Kanal aktarımını kullanırken akış da kullanılamıyor, <xref:System.ServiceModel.NetPeerTcpBinding>bu nedenle .  
   
 #### <a name="streaming-and-sessions"></a>Akış ve Oturumlar  
- Oturum tabanlı bağlama yla çağrıları akışa aktarırken beklenmeyen davranışlar alabilirsiniz. Tüm akış çağrıları, kullanılan bağlama oturumları kullanmak üzere yapılandırılan olsa bile oturumları desteklemeyen tek bir kanal (datagram kanalı) üzerinden yapılır. Birden çok istemci oturum tabanlı bağlama üzerinden aynı hizmet nesnesine akış çağrıları yaparsa ve hizmet nesnesinin eşzamanlılık modu tek olarak ayarlanmışsa ve örnek bağlam modu PerSession olarak ayarlanmışsa, tüm aramalar datagram kanalından geçmelidir ve bu nedenle yalnızca bir arama bir defada işlenir. Bir veya daha fazla istemci daha sonra zaman dışarı olabilir. Bu sorunu, hizmet nesnesinin Örnek Bağlam Modu'nu PerCall'a veya Eşzamanlılık Modunu Çoklu'ya ayarlayarak çözebilirsiniz.  
+ Oturum tabanlı bağlama yla çağrıları akışa aktarırken beklenmeyen davranışlar alabilirsiniz. Tüm akış çağrıları, kullanılan bağlama oturumları kullanmak üzere yapılandırılan olsa bile oturumları desteklemeyen tek bir kanal (datagram kanalı) üzerinden yapılır. Birden çok istemci oturum tabanlı bağlama üzerinden aynı hizmet nesnesine akış çağrıları yaparsa ve hizmet nesnesinin eşzamanlılık modu tek olarak ayarlanmışsa ve örnek bağlam modu PerSession olarak ayarlanmışsa, tüm aramalar datagram kanalından geçmelidir ve bu nedenle aynı anda yalnızca bir arama işlenir. Bir veya daha fazla istemci daha sonra zaman dışarı olabilir. Bu sorunu, hizmet nesnesinin Örnek Bağlam Modu'nu PerCall'a veya Eşzamanlılık Modunu Çoklu'ya ayarlayarak çözebilirsiniz.  
   
 > [!NOTE]
 > Yalnızca bir "oturum" olduğundan MaxConcurrentSessions bu durumda hiçbir etkisi vardır.  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Parolayla bağlamanızı anında yaptığınızda, bağlamanın ilgili `TransferMode` özelliğini (veya özel bir bağlama oluşturuyorsanız aktarım bağlama öğesi) daha önce belirtilen değerlerden birine ayarlamanız gerekir.  
@@ -225,7 +225,7 @@ public class UploadStreamMessage
   
  Bir ileti alırken, WCF Base64 kodlanmış ileti gövdesi içeriği (veya MTOM kullanıyorsanız ilgili MIME bölümü) üzerinde bir akış oluşturuyor ve içerik okunduğunda akış EOF'ye ulaşıyor.  
   
- Aktarım düzeyi akışı, diğer ileti sözleşmesi türüyle (parametre listeleri, veri sözleşmesi bağımsız değişkenleri ve açık ileti sözleşmesi) da çalışır, ancak bu tür tür iletilerin serileştirilmesi ve deserializasyonu serileştirici tarafından arabelleğe alma gerektirdiğinden , bu tür sözleşme türevlerini kullanmak tavsiye edilmez.  
+ Aktarım düzeyi akışı da başka bir ileti sözleşmesi türüyle (parametre listeleri, veri sözleşmesi bağımsız değişkenleri ve açık ileti sözleşmesi) çalışır, ancak bu tür tür yazılan iletilerin serileştirilmesi ve deserializasyonu serializer tarafından arabelleğe alma gerektirdiğinden, bu tür sözleşme türevlerini kullanmak tavsiye edilmez.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Büyük Veriler için Özel Güvenlik Hususları  
  Tüm bağlamalar, hizmet reddi saldırılarını önlemek için gelen iletilerin boyutunu kısıtlamanızı sağlar. Örneğin, <xref:System.ServiceModel.BasicHttpBinding>gelen iletinin boyutunu sınırlayan bir [System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) özelliğini ortaya çıkarır ve böylece iletiyi işlerken erişilen maksimum bellek miktarını da sınırlar. Bu birim, varsayılan değeri 65.536 bayt olan baytolarak ayarlanır.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185014"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464142"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma
 Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanarak, oturum geri dönüştürülen hizmete dayanabilir. Örneğin, güvenli bir oturumda durum bilgisi olmayan bir SCT kullanıldığında ve Internet Information Services (IIS) sıfırlandığında, hizmetle ilişkili oturum verileri kaybolur. Bu oturum verileri bir SCT belirteç önbelleği içerir. Bu nedenle, bir istemci hizmeti bir sonraki kez durumsuz bir SCT gönderdiğinde, SCT ile ilişkili anahtar alınamadığından bir hata döndürülür. Ancak, durum lu bir ÖST kullanılırsa, ÖSK ile ilişkili anahtar ÖSK içinde bulunur. Anahtar ÖST içinde ve böylece ileti içinde bulunduğundan, güvenli oturum geri dönüştürülen hizmetten etkilenmez. Varsayılan olarak, Windows Communication Foundation (WCF) güvenli bir oturumda devletsiz SCT'leri kullanır. Bu konu, güvenli bir oturumda durum lu SCT'lerin nasıl kullanılacağını ayrıntılarıyla anlatır.  
@@ -32,6 +32,7 @@ Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanara
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. Bağlayıcı [ \<>](../../configure-apps/file-schema/wcf/bindings.md) alt öğesi [özelBağlayıcı>. \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -40,6 +41,7 @@ Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanara
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. ÖzelBağlayıcı>'ne bir [ \<güvenlik>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) alt öğesi ekleyerek bu hizmete ve bu hizmetten gönderilen iletilerin kimlik doğrulama modunu belirtin. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -48,7 +50,8 @@ Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanara
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. Güvenli oturum güvenlik>güvenli bir [ \<ConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğe ekleyerek kurulurken istemcinin nasıl doğrulanmış olduğunu belirtin. [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
@@ -103,7 +106,7 @@ Güvenli bir oturumda durumsal bir güvenlik bağlamı belirteci (SCT) kullanara
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

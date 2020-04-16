@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184849"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464123"
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
 Bu konu, iletileri aynı hizmetin farklı sürümlerine yollayan bir yönlendirme yapılandırması oluşturmak için gereken temel adımları özetler. Bu örnekte, iletiler bir hesap makinesi hizmetinin `roundingCalc` (v1) `regularCalc` ve (v2) iki farklı sürümüne yönlendirilir. Her iki uygulama da aynı işlemleri destekler; ancak eski hizmet, `roundingCalc`döndürmeden önce tüm hesaplamaları en yakın tümsavar değerine yuvarlar. İstemci uygulaması, yeni `regularCalc` hizmeti kullanıp kullanmayacağını belirtebilmeli.  
@@ -25,7 +25,7 @@ Bu konu, iletileri aynı hizmetin farklı sürümlerine yollayan bir yönlendirm
   
 - Böl  
   
- Her iki hizmet uygulaması da aynı işlemleri işlediğinden ve döndükleri veriler dışında temelde aynı olduğundan, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, Istek. Örneğin, her iki hizmet için varsayılan eylemler aynı olduğundan Eylem filtreleri kullanılamaz.  
+ Her iki hizmet uygulaması da aynı işlemleri işlediği nden ve döndükleri veriler dışında temelde aynı olduğundan, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, isteği nasıl yönlendireceklerini belirlemenize izin verecek kadar benzersiz değildir. Örneğin, her iki hizmet için varsayılan eylemler aynı olduğundan Eylem filtreleri kullanılamaz.  
   
  Bu, hizmetin her sürümü için yönlendiricide belirli bir bitiş noktası ortaya çıkarmak veya iletiye hizmet sürümünü göstermek için özel bir üstbilgi öğesi eklemek gibi çeşitli yollarla çözülebilir.  Bu yaklaşımların her biri, gelen iletileri hizmetin belirli bir sürümüne benzersiz bir şekilde yönlendirmenize olanak tanır, ancak benzersiz ileti içeriğini kullanmak, farklı hizmet sürümleri istekleri ni ayırt etmek için tercih edilen yöntemdir.  
   
@@ -90,7 +90,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]
