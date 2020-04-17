@@ -4,12 +4,12 @@ description: Azure HDInsight'ın Jupyter Notebook'larına Apache Spark için .NE
 ms.date: 03/13/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 32047efcde093a3752bdd59baa88896d1547b93e
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546756"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607421"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyter dizüstü bilgisayarlarda Apache Spark için .NET'i yükleyin
 
@@ -22,9 +22,9 @@ Jupyter Notebooks deneyimi aracılığıyla .NET for Apache Spark'ı etkinleşti
 > [!NOTE]
 > Bu özellik *deneyseldir* ve HDInsight Spark ekibi tarafından desteklenmez.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-Zaten bir kümeniz yoksa, bir [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-hdinsight-spark-cluster) kümesi oluşturun.
+Zaten bir kümeniz yoksa, bir [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) kümesi oluşturun.
 
 1. Azure [portalını](https://portal.azure.com) ziyaret edin ve **+ Kaynak Oluştur'u**seçin.
 

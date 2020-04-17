@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b52615a3fb288a6ca0622deb83f4db3c8e3587fb
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156562"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607912"
 ---
 # <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
 Bu makalede, .NET Core 3.1'deki yenilikler açıklanmaktadır. Bu sürüm, küçük ama önemli düzeltmelere odaklanan .NET Core 3.0'da küçük iyileştirmeler içerir. .NET Core 3.1 ile ilgili en önemli [özellik, uzun vadeli bir destek (LTS)](#long-term-support) sürümü olmasıdır.
 
-Visual Studio 2019 kullanıyorsanız, .NET Core 3.1 projeleri ile çalışmak için [Visual Studio 2019 sürüm 16.4'e](https://visualstudio.microsoft.com/downloads/) güncellemeniz gerekir. Visual Studio'daki yenilikler hakkında daha fazla bilgi için [Visual Studio 2019 sürüm 16.4'te Neler Yeni](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)olduğunu görün.
+Visual Studio 2019 kullanıyorsanız, .NET Core 3.1 projeleri ile çalışmak için [Visual Studio 2019 sürüm 16.4 veya sonraki](https://visualstudio.microsoft.com/downloads/) sürümlerini güncelleştirmeniz gerekir. Visual Studio sürüm 16.4'teki yenilikler hakkında bilgi için Visual [Studio 2019 sürüm 16.4'te Neler Yeni](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)olduğunu görün.
 
 Mac için Visual Studio da destekler ve Mac 8.4 için Visual Studio .NET Core 3.1 içerir.
 

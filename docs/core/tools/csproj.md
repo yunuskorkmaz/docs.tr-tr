@@ -2,12 +2,12 @@
 title: .NET Core için csproj formatına eklemeler
 description: Varolan ve .NET Core csproj dosyaları arasındaki farklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134061"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607712"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj formatına eklemeler
 
@@ -74,7 +74,7 @@ Aşağıdaki tabloda, SDK'da hangi elementin ve hangi [globs'lerin](https://en.w
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Derlemek           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.kullanıcı;  \*\*/\*. \*proj;  \* \* / \*  \* \* / \*  | Yok                      |
 | EmbeddedResource  | \*\*/\*Resx                              | \*\*/\*.kullanıcı; \*\*/\*. \*proj; \* \* / \* \* \* / \*     | Yok                      |
-| None              | \*\*/\*                                   | \*\*/\*.kullanıcı; \*\*/\*. \*proj; \* \* / \* \* \* / \*     | \*\*/\*.cs; \* \* /.resx \*   |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*.kullanıcı; \*\*/\*. \*proj; \* \* / \* \* \* / \*     | \*\*/\*.cs; \* \* /.resx \*   |
 
 > [!NOTE]
 > **Dışlama glob** her `./bin` zaman `./obj` ve `$(BaseIntermediateOutputPath)` MSBuild özellikleri tarafından `$(BaseOutputPath)` temsil edilen klasörleri hariç tutar. Bir bütün olarak, tüm dışlar `$(DefaultItemExcludes)`tarafından temsil edilir.
@@ -145,7 +145,7 @@ Madde `<PackageReference>` öğesi projede bir [NuGet bağımlılığı](/nuget/
 
 #### <a name="version"></a>Sürüm
 
-Gerekli `Version` öznitelik geri yüklemek için paketin sürümünü belirtir. Öznitelik [NuGet sürüm](/nuget/reference/package-versioning#version-ranges-and-wildcards) şemasının kurallarına saygı duyar. Varsayılan davranış en az sürüm, kapsayıcı maç. Örneğin, belirtme `Version="1.2.3"` NuGet gösterimine `[1.2.3, )` eşdeğerdir ve çözülen paketin varsa 1.2.3 sürümüne sahip olacağı anlamına gelir.
+Gerekli `Version` öznitelik geri yüklemek için paketin sürümünü belirtir. [Öznitelik, NuGet sürüm aralığı](/nuget/concepts/package-versioning#version-ranges) düzeninin kurallarına saygı duyar. Varsayılan davranış en az sürüm, kapsayıcı maç. Örneğin, belirtme `Version="1.2.3"` NuGet gösterimine `[1.2.3, )` eşdeğerdir ve çözülen paketin varsa 1.2.3 sürümüne sahip olacağı anlamına gelir.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>Varlıkları Dahil Et, Hariç Kıymetler ve Özel Varlıklar
 

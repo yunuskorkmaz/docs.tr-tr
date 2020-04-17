@@ -4,12 +4,12 @@ description: ML.NET, .NET uygulamalarına çevrimiçi veya çevrimdışı senary
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185863"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607777"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET nedir ve nasıl çalışır?
 
@@ -230,7 +230,7 @@ Giriş verilerini toplu olarak tahminlere veya aynı anda bir girişe dönüşt�
     var price = predEngine.Predict(size);
 ```
 
-Yöntem `CreatePredictionEngine()` bir giriş sınıfı ve bir çıktı sınıfı alır. Alan adları ve/veya kod öznitelikleri, model eğitimi ve tahmini sırasında kullanılan veri sütunlarının adlarını belirler. Nasıl Yapılır bölümünde [tek bir tahmin nasıl yapılır](./how-to-guides/single-predict-model-ml-net.md) hakkında bilgi edinebilirsiniz.
+Yöntem `CreatePredictionEngine()` bir giriş sınıfı ve bir çıktı sınıfı alır. Alan adları ve/veya kod öznitelikleri, model eğitimi ve tahmini sırasında kullanılan veri sütunlarının adlarını belirler. Daha fazla bilgi için [bkz.](how-to-guides/machine-learning-model-predictions-ml-net.md)
 
 ### <a name="data-models-and-schema"></a>Veri modelleri ve şema
 

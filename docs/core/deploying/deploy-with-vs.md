@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449029"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607868"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamalarını dağıtın
 
@@ -75,9 +75,9 @@ Bir veya daha fazla üçüncü taraf bağımlılıkla çerçeveye bağımlı bir
 
 1. Sisteminizde zaten yüklüyse, `Newtonsoft.Json` **Projenizi Çözüm için Paketleri Yönet** sekmesinin sağ bölmesinde seçerek projenize ekleyin.
 
-Üçüncü taraf bağımlılıkları olan çerçeveye bağımlı dağıtım, yalnızca üçüncü taraf bağımlılıkları kadar taşınabilirdir. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS'u destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu, üçüncü taraf bağımlılığının kendisi yerel koda bağlıysa olur. Bunun iyi bir örneği [Kestrel sunucusudur,](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) [libuv](https://github.com/libuv/libuv)üzerinde yerli bir bağımlılık gerektirir. Bu tür üçüncü taraf bağımlılığı olan bir uygulama için bir FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [Runtime Tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
+Üçüncü taraf bağımlılıkları olan çerçeveye bağımlı dağıtım, yalnızca üçüncü taraf bağımlılıkları kadar taşınabilirdir. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS'u destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu, üçüncü taraf bağımlılığının kendisi yerel koda bağlıysa olur. Bunun iyi bir örneği [Kestrel sunucusudur,](/aspnet/core/fundamentals/servers/kestrel) [libuv](https://github.com/libuv/libuv)üzerinde yerli bir bağımlılık gerektirir. Bu tür üçüncü taraf bağımlılığı olan bir uygulama için bir FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [Runtime Tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
 
-## <a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları olmadan bağımsız dağıtım
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları olmadan bağımsız dağıtım
 
 Üçüncü taraf bağımlılıkları olmadan bağımsız bir dağıtım dağıtmak, projeyi oluşturmayı, *csproj* dosyasını değiştirmeyi, uygulamayı oluşturmayı, test etmeye ve yayımlamayı içerir. C# ile yazılmış basit bir örnek işlemi göstermektedir. Tıpkı çerçeveye bağımlı bir dağıtım da olduğu gibi projenizi oluşturarak, kodlayarak ve test ederek başlarsınız:
 

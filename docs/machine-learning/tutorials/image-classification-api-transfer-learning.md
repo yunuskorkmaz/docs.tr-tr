@@ -6,18 +6,18 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a050d7673f7ef00cf11d959d04e709222cb2be8f
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76920097"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607564"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET Görüntü Sınıflandırma API ile transfer öğrenme kullanarak otomatik görsel denetim
 
 Somut yüzeylerin görüntülerini çatlak veya kırılmamış olarak sınıflandırmak için transfer öğrenimini, önceden eğitilmiş tensorflow modelini ve ML.NET Görüntü Sınıflandırma API'sini kullanarak özel bir derin öğrenme modelini nasıl eğittiğizi öğrenin.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -26,9 +26,9 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > - Özel bir TensorFlow görüntü sınıflandırma modelini eğitmek için transfer öğrenimini kullanma
 > - Özel modelle görüntüleri sınıflandırma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Görüntü sınıflandırma transferi öğrenme örneği genel bakış
 

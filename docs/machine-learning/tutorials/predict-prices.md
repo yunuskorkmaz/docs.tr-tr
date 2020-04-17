@@ -4,18 +4,18 @@ description: Bu öğretici fiyatları tahmin etmek için ML.NET kullanarak bir r
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 51cef97178c2dbc6a5b572a7045bdad4bc382ba0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91429383341cf718d38e636bd1d71dc25d30d20d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78240993"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607977"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile regresyon kullanarak fiyatları tahmin
 
 Bu öğretici fiyatları tahmin etmek için ML.NET kullanarak bir [regresyon modeli](../resources/glossary.md#regression) oluşturmak için nasıl göstermektedir, özellikle, New York taksi ücretleri.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verileri hazırlama ve anlama
@@ -25,9 +25,9 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 > * Modeli değerlendirme
 > * Öngörüler için modeli kullanma
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 

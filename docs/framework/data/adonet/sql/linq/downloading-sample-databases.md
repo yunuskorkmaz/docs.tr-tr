@@ -3,12 +3,12 @@ title: ADO.NET kod örnekleri için örnek SQL Server veritabanlarını edinin
 description: ADO.NET belgelerinde kod örneklerinde kullanılan örnek SQL Server veritabanlarının yanı sıra SQL Server ve yönetim araçlarını indirin
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148393"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607990"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>kod örnekleri ADO.NET için örnek veritabanlarını edinin
 
@@ -37,7 +37,7 @@ Microsoft Access için Northwind örnek veritabanı Microsoft İndirme Merkezi'n
 
 1. Yeni pencerede, **Dosya Adı** metin kutusunda, Northwind veritabanı kopyanız için bir dosya adı sağlayın.
 
-1. **Oluştur'u**seçin. Access Northwind veritabanını karşıdan yükler ve dosyayı hazırlar.
+1. **Oluştur**’u seçin. Access Northwind veritabanını karşıdan yükler ve dosyayı hazırlar.
 
 1. Bu işlem tamamlandığında, veritabanı karşılama ekranıyla açılır.
 
@@ -54,7 +54,7 @@ Veritabanı yedekleme (.bak)\*dosyalarından birini indirdikten sonra, SQL Serve
 
 [SQL Server Management Studio’yu (SSMS) İndirme](/sql/ssms/download-sql-server-management-studio-ssms)
 
-Ayrıca Visual Studio tümleşik geliştirme ortamında (IDE) veritabanlarını görüntüleyebilir ve yönetebilirsiniz. [Visual](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)Studio'da, SQL **Server Object Explorer'dan**veritabanına bağlanın veya **Server Explorer'daki**veritabanına bir Veri Bağlantısı oluşturun. Bu gezgin bölmelerini **Görünüm** menüsünden açın.
+Ayrıca Visual Studio tümleşik geliştirme ortamında (IDE) veritabanlarını görüntüleyebilir ve yönetebilirsiniz. [Visual](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)Studio'da, SQL **Server Object Explorer'dan**veritabanına bağlanın veya **Server Explorer'daki**veritabanına bir Veri Bağlantısı oluşturun. Bu gezgin bölmelerini **Görünüm** menüsünden açın.
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>SQL Server Express alın
 
@@ -62,7 +62,7 @@ SQL Server Express, SQL Server'ın uygulamalarla yeniden dağıtabileceğiniz ü
   
 [SQL Server Express Sürümü](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)kullanıyorsanız, SQL Server Express LocalDB Visual Studio'nun ücretsiz Topluluk baskısına, Professional ve daha yüksek sürümlere dahildir.  
+[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)kullanıyorsanız, SQL Server Express LocalDB Visual Studio'nun ücretsiz Topluluk baskısına, Professional ve daha yüksek sürümlere dahildir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

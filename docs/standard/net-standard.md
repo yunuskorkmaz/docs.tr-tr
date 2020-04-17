@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438213"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607486"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ Daha fazla bilgi için [.NET Framework uyumluluk moduna](../core/porting/third-p
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standart kütüphaneler ve Görsel Stüdyo
 
-Visual Studio'da .NET Standard kitaplıkları oluşturmak için Visual [Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) veya daha sonra Windows'da veya [Mac sürüm 7.1 için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya daha sonra macOS'ta yüklü olduğundan emin olun.
+Visual Studio'da .NET Standard kitaplıkları oluşturmak için Visual [Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya Visual Studio 2017 sürüm 15.3 veya daha sonra Windows'da veya [Mac sürüm 7.1 için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya daha sonra macOS'ta yüklü olduğundan emin olun.
 
 Projelerinizde .NET Standard 2.0 kitaplıklarını yalnızca tüketmeniz gerekiyorsa, bunu Visual Studio 2015'te de yapabilirsiniz. Ancak, NuGet istemci3.6 veya daha yüksek yüklü gerekir. Visual Studio 2015 için NuGet istemcisini [NuGet indirme sayfasından](https://www.nuget.org/downloads) indirebilirsiniz.
 

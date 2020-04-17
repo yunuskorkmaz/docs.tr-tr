@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092947"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607803"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework teknolojileri .NET Core'da kullanılamıyor
 
@@ -29,7 +29,7 @@ Uygulama etki alanları (AppDomains) uygulamaları birbirinden yalıtır. AppDom
 
 Süreçler arası iletişim için, sınıflar veya <xref:System.IO.Pipes> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> sınıf gibi Remoting'e alternatif olarak süreçler arası iletişim (IPC) mekanizmalarını düşünün.
 
-Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Tercihen, HTTP gibi düşük tepeli düz metin protokolü kullanın. [Kestrel web sunucusu](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), ASP.NET Core tarafından kullanılan web sunucusu, burada bir seçenektir. Ayrıca, ağ <xref:System.Net.Sockets> tabanlı, makineler arası senaryolar için kullanmayı düşünün. Daha fazla seçenek için [bkz.](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)
+Makineler arasında, alternatif olarak ağ tabanlı bir çözüm kullanın. Tercihen, HTTP gibi düşük tepeli düz metin protokolü kullanın. [Kestrel web sunucusu](/aspnet/core/fundamentals/servers/kestrel), ASP.NET Core tarafından kullanılan web sunucusu, burada bir seçenektir. Ayrıca, ağ <xref:System.Net.Sockets> tabanlı, makineler arası senaryolar için kullanmayı düşünün. Daha fazla seçenek için [bkz.](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)
 
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)
 

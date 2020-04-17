@@ -4,12 +4,12 @@ description: Bilgiyi varolan tensorFlow modelinden yeni bir ML.NET görüntü s�
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241032"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607577"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Öğretici: Önceden eğitilmiş tensorFlow modelinden ML.NET görüntü sınıflandırma modeli oluşturun
 
@@ -17,9 +17,9 @@ Bilgiyi varolan tensorFlow modelinden yeni bir ML.NET görüntü sınıflandırm
 
 TensorFlow modeli, görüntüleri bin kategoriye sınıflandırmak için eğitildi. ML.NET modeli, görüntüleri 3 kategoriye ayırmak için bir model eğitmek için ardışık bölümünde TensorFlow modelinin bir kısmını kullanır.
 
-Bir [Görüntü Sınıflandırma](https://en.wikipedia.org/wiki/Outline_of_object_recognition) modelini sıfırdan eğitmek için milyonlarca parametre, bir ton etiketli eğitim verisi ve çok miktarda bilgi işlem kaynağı (yüzlerce GPU saati) gerekir. Sıfırdan özel bir modeli eğitmek kadar etkili olmasa da, transfer öğrenimi binlerce görüntüyle ve milyonlarca etiketli görüntüyle çalışarak bu süreci kısayolla kesmenize ve oldukça hızlı bir şekilde özelleştirilmiş bir model oluşturmanıza olanak sağlar (bir makinede bir saat içinde GPU). Bu öğretici, yalnızca bir düzine eğitim görseli kullanarak daha da aşağı doğru işleyen ölçekler.
+Bir [Görüntü Sınıflandırma](https://en.wikipedia.org/wiki/Outline_of_object_recognition) modelini sıfırdan eğitmek için milyonlarca parametre, bir ton etiketli eğitim verisi ve çok miktarda bilgi işlem kaynağı (yüzlerce GPU saati) gerekir. Sıfırdan özel bir modeli eğitmek kadar etkili olmasa da, transfer öğrenimi binlerce görüntüyle ve milyonlarca etiketli görüntüyle çalışarak bu süreci kısayolla kesmenize ve oldukça hızlı bir şekilde özelleştirilmiş bir model oluşturmanıza olanak tanır (GPU'suz bir makinede bir saat içinde). Bu öğretici, yalnızca bir düzine eğitim görseli kullanarak daha da aşağı doğru işleyen ölçekler.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Sorunu anlama
@@ -35,9 +35,9 @@ Transfer öğrenme, bir problemi çözerken edinilen bilgiyi kullanarak ve farkl
 
 Bu öğretici için, görüntüleri 3 kategoriye ayıran ML.NET bir modelde, görüntüleri bin kategoriye ayırmak üzere eğitilmiş tensorflow modelinin bir bölümünü kullanırsınız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
 * [Öğretici varlıklar dizini . ZIP dosyası](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [InceptionV1 makine öğrenme modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 

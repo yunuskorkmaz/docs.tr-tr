@@ -5,12 +5,12 @@ ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f340805200a14e0e145ffe1bf20f8059df63555
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628676"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608055"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Modeli Azure İşlevleri’ne dağıtma
 
@@ -19,9 +19,9 @@ Azure İşlevler sunucusuz bir ortam aracılığıyla HTTP üzerinden öngörül
 > [!NOTE]
 > Bu örnek, hizmetin `PredictionEnginePool` önizleme sürümünü çalıştırın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- [Visual Studio 2017 sürümü 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü ve "Azure geliştirme" yüklü.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonraki sürüm 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" ve "Azure geliştirme" iş yükleri yüklü.
 - [Azure İşlevaraçları](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Önceden eğitilmiş bir model. Kendi modelinizi oluşturmak veya bu [önceden eğitilmiş duygu analizi makine öğrenme modelini](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip) indirmek için ML.NET Sentiment Analysis [öğreticisini](../tutorials/sentiment-analysis.md) kullanın
@@ -202,4 +202,4 @@ Tebrikler! Azure İşlevi kullanarak internet üzerinden öngörülerde bulunmak
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-- [Azure'a Dağıt](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [Azure’a dağıtma](/azure/azure-functions/functions-develop-vs#publish-to-azure)

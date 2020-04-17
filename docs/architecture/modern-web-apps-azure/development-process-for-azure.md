@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile Mimar Modern Web Uygulamaları | Azure i�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450055"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607899"
 ---
 # <a name="development-process-for-azure"></a>Azure için geliştirme işlemi
 
@@ -32,7 +32,7 @@ ms.locfileid: "77450055"
 
 **Visual Studio Code ve dotnet CLI** (Mac, Linux ve Windows için Çapraz Platform Araçları). Herhangi bir geliştirme dilini destekleyen hafif ve platformlar arası bir düzenleyici tercih ederseniz, Microsoft Visual Studio Code ve dotnet CLI'yi kullanabilirsiniz. Bu ürünler, geliştirici iş akışını kolaylaştıran basit ama sağlam bir deneyim sağlar. Ayrıca, Visual Studio Code editör\# içinde intellisense ve kısayol görevleri sağlayarak, C ve web geliştirme uzantıları destekler.
 
-[.NET Çekirdek SDK'yı indirin](https://dotnet.microsoft.com/download)
+[.NET Core SDK’sını indirin](https://dotnet.microsoft.com/download)
 
 [Visual Studio Kodu İndir](https://code.visualstudio.com/download)
 
@@ -58,13 +58,13 @@ Uygulamanızı dağıtacağınız bir Azure Uygulama Hizmeti oluşturun. Azure p
 
 Yeni kod projenin kaynak denetim deposuna adadığında CI yapı işleminiz otomatik bir yapı gerçekleştirir. Bu, kodun oluşturduğu (ve ideal olarak otomatik testleri geçtiği) ve dağıtılabilir olabileceği ne kadar acil geri bildirim sağlar. Bu CI yapısı bir web dağıtım paketi artifakı üretecek ve CD işleminiz tarafından tüketim için yayımlayacaktır.
 
-[CI yapı işleminizi tanımlayın](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[CI yapı işleminizi tanımlayın](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Ekibinizdeki biri yeni kod işlediğinde sistemin bir yapı yığması için sürekli tümleştirmeyi etkinleştirdiğinizden emin olun. Yapıyı test edin ve yapılarından biri olarak bir web dağıtım paketi ürettiğini doğrulayın.
 
 Bir yapı başarılı olduğunda, CD işleminiz CI yapınızın sonuçlarını Azure web uygulamanıza dağıtacaktır. Bunu yapılandırmak için, Azure Uygulama Hizmetinize dağıtılacak bir *Sürüm*oluşturur ve yapılandırırsınız.
 
-[CD sürüm işleminizi tanımlayın](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[Azure web uygulamasını dağıtma](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 CI/CD ardışık hattınız yapılandırıldıktan sonra, web uygulamanızda güncellemeler yapabilir ve bunları dağıtılmak üzere kaynak denetimine bağlayabilirsiniz.
 

@@ -3,12 +3,12 @@ title: Çöp toplayıcı config ayarları
 description: Çöp toplayıcısının .NET Core uygulamalarının belleği nasıl yönettiğini yapılandırmak için çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733522"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607816"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -117,8 +117,8 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 
 - Çöp toplayıcısı tarafından oluşturulan yığın sayısını sınırlar.
 - Yalnızca sunucu çöp toplama için geçerlidir.
-- GC işlemci afinitesi etkinse, ki bu varsayılan değerdir, `n` yığın sayısı ayarı GC `n` yığınları/iş parçacığı ile ilk işlemcilere affeder. (Affinitize maskesini veya affinitize aralıkları ayarlarını kullanarak tam olarak hangi işlemcilerin affinitize olacağını belirtin.)
-- GC işlemci yakınlığı devre dışı bırakılırsa, bu ayar GC yığınlarının sayısını sınırlar.
+- [GC işlemci afinitesi](#systemgcnoaffinitizecomplus_gcnoaffinitize) etkinse, ki bu varsayılan değerdir, `n` yığın sayısı ayarı GC `n` yığınları/iş parçacığı ile ilk işlemcilere affeder. [(Affinitize maskesini](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) veya [affinitize aralıkları](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) ayarlarını kullanarak tam olarak hangi işlemcilerin affinitize olacağını belirtin.)
+- [GC işlemci yakınlığı](#systemgcnoaffinitizecomplus_gcnoaffinitize) devre dışı bırakılırsa, bu ayar GC yığınlarının sayısını sınırlar.
 - Daha fazla bilgi için [GCHeapCount açıklamalarına](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)bakın.
 
 | | Ayar adı | Değerler | Sürüm tanıtıldı |
@@ -145,7 +145,7 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMaske/COMPlus_GCHeapAffinitizeMask
 
 - Çöp toplayıcı iş parçacıklarının kullanması gereken tam işlemcileri belirtir.
-- İşlemci ayarı `System.GC.NoAffinitize` tarafından devre `true`dışı bırakılırsa, bu ayar yoksayılır.
+- [GC işlemci afinitedevre](#systemgcnoaffinitizecomplus_gcnoaffinitize) dışı bırakılırsa, bu ayar yoksayılır.
 - Yalnızca sunucu çöp toplama için geçerlidir.
 - Değer, işlem için kullanılabilir işlemcileri tanımlayan bir bit maskesidir. Örneğin, 1023 ondalık değeri (veya ortam değişkenini kullanıyorsanız 0x3FF veya 3FF'nin hexadecimal değeri) ikili gösterimde 0011 1111 1111'dir. Bu, ilk 10 işlemcinin kullanılacağını belirtir. Sonraki 10 işlemciyi belirtmek için, yani 10-19 işlemciler, 1111 1111 1100 0000 0000 ikili değere eşdeğer olan 1047552 (veya 0xFFC00 veya FFC00 hexadecimal değeri) ondalık değerini belirtin.
 
@@ -170,9 +170,9 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - Çöp toplayıcı iş parçacıkları için kullanılacak işlemcilistesini belirtir.
-- Bu `System.GC.HeapAffinitizeMask`ayar, 64'ten fazla işlemci belirtmenize izin vermese de benzerdir.
+- Bu ayar [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask)benzer , 64'ten fazla işlemcibelirtmenizi sağlar dışında.
 - Windows işletim sistemleri için işlemci numarasını veya aralığını ilgili [CPU grubuyla](/windows/win32/procthread/processor-groups)(örneğin, "0:1-10,0:12,1:50-52,1:70" olarak öneleyin.
-- İşlemci ayarı `System.GC.NoAffinitize` tarafından devre `true`dışı bırakılırsa, bu ayar yoksayılır.
+- [GC işlemci afinitedevre](#systemgcnoaffinitizecomplus_gcnoaffinitize) dışı bırakılırsa, bu ayar yoksayılır.
 - Yalnızca sunucu çöp toplama için geçerlidir.
 - Daha fazla bilgi için, Maoni Stephens'ın blogunda [64 işlemci> > makinelerde GC için CPU yapılandırması daha iyi hale](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) getirilmesine bakın.
 
@@ -239,6 +239,11 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - GC yığını ve GC muhasebesi için baytlarda maksimum taahhüt boyutunu belirtir.
+- Bu ayar yalnızca 64 bit bilgisayarlar için geçerlidir.
+- Yalnızca belirli durumlarda geçerli olan varsayılan değer, 20 MB'dan daha az veya kapsayıcıdaki bellek sınırının %75'i kadardır. Aşağıdaki ler için varsayılan değer uygulanır:
+
+  - İşlem, belirli bir bellek sınırı olan bir kapsayıcı içinde çalışıyor.
+  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) ayarlanmaz.
 
 | | Ayar adı | Değerler | Sürüm tanıtıldı |
 | - | - | - | - |
@@ -262,7 +267,14 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- GC yığın kullanımını toplam belleğin yüzdesi olarak belirtir.
+- İzin verilebilen GC yığın kullanımını toplam fiziksel belleğin yüzdesi olarak belirtir.
+- [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) de ayarlanmışsa, bu ayar yoksayılır.
+- Bu ayar yalnızca 64 bit bilgisayarlar için geçerlidir.
+- İşlem, belirli bir bellek sınırı olan bir kapsayıcıiçinde çalışıyorsa, yüzde bu bellek sınırının yüzdesi olarak hesaplanır.
+- Yalnızca belirli durumlarda geçerli olan varsayılan değer, 20 MB'dan daha az veya kapsayıcıdaki bellek sınırının %75'i kadardır. Aşağıdaki ler için varsayılan değer uygulanır:
+
+  - İşlem, belirli bir bellek sınırı olan bir kapsayıcı içinde çalışıyor.
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) ayarlanmaz.
 
 | | Ayar adı | Değerler | Sürüm tanıtıldı |
 | - | - | - | - |

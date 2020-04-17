@@ -1,16 +1,16 @@
 ---
-title: Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapın
+title: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 description: .NET'te sunucu uygulaması yaparken göz önünde bulundurmanız gereken bir kılavuz.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344145"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607499"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
 .NET: .NET Framework ve .NET Core ile sunucu tarafı uygulamaları oluşturmak için desteklenen iki uygulama vardır. Her ikisi de aynı bileşenlerin çoğunu paylaşır ve kodu ikisi arasında paylaşabilirsiniz. Ancak, ikisi arasında temel farklılıklar vardır ve seçiminiz başarmak istediğiniz şeye bağlıdır.  Bu makalede, her birinin ne zaman kullanılacağı konusunda kılavuz luk lar verilmektedir.
 
@@ -103,7 +103,7 @@ Bazı Microsoft veya üçüncü taraf platformlar .NET Core'u desteklemez. Bazı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ASP.NET ve ASP.NET Core arasında seçim yapın](/aspnet/core/choose-aspnet-framework)
-- [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [Hedef çerçeveler](frameworks.md)
 - [.NET Çekirdek Rehberi](../core/index.yml)
 - [.NET Framework'den .NET Core'a taşıma](../core/porting/index.md)

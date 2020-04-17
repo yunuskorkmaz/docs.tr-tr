@@ -5,18 +5,18 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: a221289d0c232863f03a275c26dce835f2878bf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1d7ef6226580fd3172b5714f9d7358298ba6668
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241110"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608003"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Öğretici: ML.NET ile matris çarpansama kullanarak bir film tavsiye oluştur
 
 Bu öğretici, .NET Core konsol uygulamasında ML.NET ile nasıl bir film tavsiye oluşturabileceğinizi gösterir. Adımlar c# ve Visual Studio 2019'u kullanır.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Makine öğrenimi algoritması seçin
@@ -36,13 +36,13 @@ Görevinizi gerçekleştirmek için aşağıdaki adımları ve diğer ML.NET gö
 3. [Modelinizi değerlendirme](#evaluate-your-model)
 4. [Modelinizi kullanma](#use-your-model)
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* [Visual Studio 2017 sürüm 15.6 veya daha sonra](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) ".NET Core çapraz platform geliştirme" iş yükü yüklendi.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Uygun makine öğrenimi görevini seçin
 
-Film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi öneri sorunlarına yaklaşmanın çeşitli yolları vardır, ancak bu durumda bir kullanıcının belirli bir filme hangi derecelendirmeyi (1-5) vereceğini tahmin eder ve bu film tanımlanmış bir eşiğe göre daha yüksektir (derecelendirme ne kadar yüksekse, kullanıcının belirli bir filmi sevme olasılığı da o kadar yüksektir).
+Film listesini önermek veya ilgili ürünlerin bir listesini önermek gibi öneri sorunlarına yaklaşmanın çeşitli yolları vardır, ancak bu durumda bir kullanıcının belirli bir filme hangi derecelendirmeyi (1-5) vereceğini tahmin eder ve tanımlanmış bir eşiğe göre daha yüksekse bu filmi önerirsiniz (derecelendirme ne kadar yüksekse, kullanıcının belirli bir filmi sevme olasılığı da o kadar yüksekolur).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
