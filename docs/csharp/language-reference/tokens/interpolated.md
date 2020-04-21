@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980125"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738370"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize enterpolasyonu (C# referansı)
 
@@ -99,8 +99,8 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# özel karakterler](index.md)
-- [Dize](../../programming-guide/strings/index.md)
+- [C# özel karakterleri](index.md)
+- [Dizeler](../../programming-guide/strings/index.md)
 - [Standart sayısal biçim dizeleri](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Bileşik biçimlendirme](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

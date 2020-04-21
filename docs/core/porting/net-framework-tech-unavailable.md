@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core'da kullanılamayan .NET Framework teknolojileri hakkında bilgi edinin
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 65e465f78b55270b42532eb7e8803f48c048ec3c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607803"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739135"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework teknolojileri .NET Core'da kullanılamıyor
 
@@ -19,7 +19,7 @@ Bir API veya teknolojinin şu anda uygulanmamış olması, uygulamanın kasıtl�
 
 ## <a name="appdomains"></a>AppDomains
 
-Uygulama etki alanları (AppDomains) uygulamaları birbirinden yalıtır. AppDomains çalışma zamanı desteği gerektirir ve genellikle oldukça pahalıdır. Ek uygulama etki alanları oluşturma desteklenmez ve gelecekte bu özelliği eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı işlemler veya kapsayıcılar kullanın. Derlemeleri dinamik olarak yüklemek <xref:System.Runtime.Loader.AssemblyLoadContext> için sınıfı kullanın.
+Uygulama etki alanları (AppDomains) uygulamaları birbirinden yalıtır. AppDomains çalışma zamanı desteği gerektirir ve genellikle pahalıdır. Ek uygulama etki alanları oluşturma desteklenmez ve gelecekte bu özelliği eklemek için herhangi bir plan yoktur. Kod yalıtımı için alternatif olarak ayrı işlemler veya kapsayıcılar kullanın. Derlemeleri dinamik olarak yüklemek <xref:System.Runtime.Loader.AssemblyLoadContext> için sınıfı kullanın.
 
 .NET Framework'den kod geçişini kolaylaştırmak için .NET <xref:System.AppDomain> Core, API yüzeyinin bir kısmını ortaya çıkarır. API'lerin bazıları normal olarak çalışır <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>(örneğin), bazı üyeler <xref:System.AppDomain.SetCachePath%2A>hiçbir şey yapmaz <xref:System.PlatformNotSupportedException> (örneğin), <xref:System.AppDomain.CreateDomain%2A>bazıları atar (örneğin, ). [Dotnet/runtime GitHub deposundaki](https://github.com/dotnet/runtime) [ `System.AppDomain` başvuru kaynağıyla](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) karşı kullandığınız türleri denetleyin. Uygulanan sürümünizle eşleşen dalı seçtiğinizden emin olun.
 

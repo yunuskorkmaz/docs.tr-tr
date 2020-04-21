@@ -2,12 +2,12 @@
 title: String enterpolasyonu - C# öğretici
 description: Bu öğretici, daha büyük bir dize biçimlendirilmiş ifade sonuçlarını eklemek için C# dize enterpolasyon özelliğini nasıl kullanacağınızı gösterir.
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346786"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738278"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Biçimlendirilmiş dizeleri oluşturmak için dize enterpolasyonunu kullanma
 

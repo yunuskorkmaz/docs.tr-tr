@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388976"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739690"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Nasıl yapılır: BindingSource ve INotifyPropertyChanged Arabirimini Kullanarak Değişiklik Bildirimleri Verme
-Bileşen, <xref:System.Windows.Forms.BindingSource> veri kaynağında bulunan tür <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi uyguladığında ve özellik değeri değiştirildiğinde olayları yükselttiğinde, <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> veri kaynağındaki değişiklikleri otomatik olarak algılar. Veri kaynağı değerleri değiştikçe <xref:System.Windows.Forms.BindingSource> will'e bağlı denetimler otomatik olarak güncelleştirilen için bu yararlıdır.  
+Bileşen, <xref:System.Windows.Forms.BindingSource> veri kaynağında bulunan tür bir özellik değeri değiştirildiğinde <xref:System.ComponentModel.INotifyPropertyChanged> olayları <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> uyguladığında ve yükselttiğinde, veri kaynağındaki değişiklikleri otomatik olarak algılar. Veri kaynağı değerleri değiştikçe <xref:System.Windows.Forms.BindingSource> otomatik olarak güncelleştirmeye bağlı denetimler nedeniyle bu değişiklik algılaması yararlıdır.  
   
 > [!NOTE]
 > Veri kaynağınız uygular <xref:System.ComponentModel.INotifyPropertyChanged> ve eşzamanlı işlemler gerçekleştirmektedirseniz, arka plan iş parçacığındaki veri kaynağında değişiklik yapmamalısınız. Bunun yerine, bir arka plan iş parçacığı üzerindeki verileri okumanız ve verileri UI iş parçacığındaki bir listede birleştirmeniz gerekir.  

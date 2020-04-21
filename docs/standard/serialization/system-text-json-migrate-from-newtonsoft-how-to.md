@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 957bafcdf69d5792702962db6598458a0c8ec974
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291569"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739247"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json'dan System.Text.Json'a nasıl göç edilir?
 
@@ -81,7 +81,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` özellikleri `System.Text.Json` ve eşde�
 | Dize değerleri etrafında tek tırnak izin ver              | ❌[Desteklenmiyor](#json-strings-property-names-and-string-values) |
 | Dize özellikleri için dize dışı JSON değerlerine izin ver    | ❌[Desteklenmiyor](#non-string-values-for-string-properties) |
 
-Bu `Newtonsoft.Json` özelliklerin ayrıntılı bir listesi değildir. Liste, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderilerinde istenen senaryoların çoğunu içerir. Burada listelenen ve şu anda örnek kodu olmayan senaryolardan biri için geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın [Geri Bildirim bölümünde](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) bu **sayfayı** seçin. Bu bir GitHub sorunu oluşturur ve bu sayfanın alt kısmında listeler.
+Bu `Newtonsoft.Json` özelliklerin ayrıntılı bir listesi değildir. Liste, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderilerinde istenen senaryoların çoğunu içerir. Burada listelenen ve şu anda örnek kodu olmayan senaryolardan biri için geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **Geri Bildirim** **bölümündebu sayfayı** seçin. Bu, bu dokümantasyonun GitHub reposunda bir sorun oluşturur ve bu sayfadaki **Geri Bildirim** bölümünde de listeler.
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Newtonsoft.Json ile karşılaştırıldığında varsayılan JsonSerializer davranış farklılıkları
 
@@ -472,7 +472,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Önceki kod bir `JsonElement` özellik içeren `fileName` bir bekliyor. Bu JSON dosyasını açar `JsonDocument`ve bir oluşturur. Yöntem, arayanın belgenin tamamıyla çalışmak istediğini varsayar, `Clone` bu `RootElement`nedenle .
 
-Bir alt `JsonElement` öğe alıyorsanız ve bir alt öğeyi döndürüyorsanız, alt öğeden birini `Clone` döndürmeniz gerekmez. Arayan kişi, geçenin `JsonDocument` `JsonElement` ait olduğu şeyi canlı tutmaktan sorumludur. Örnek:
+Bir alt `JsonElement` öğe alıyorsanız ve bir alt öğeyi döndürüyorsanız, alt öğeden birini `Clone` döndürmeniz gerekmez. Arayan kişi, geçenin `JsonDocument` `JsonElement` ait olduğu şeyi canlı tutmaktan sorumludur. Örneğin:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -510,7 +510,7 @@ Aşağıdaki bölümlerde kullanmak `Utf8JsonReader`için önerilen programlama 
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader bir ref struct olduğunu
 
-Türü bir *ref struct*olduğundan, [belirli sınırlamaları](../../csharp/language-reference/keywords/ref.md#ref-struct-types)vardır. `Utf8JsonReader` Örneğin, bir sınıf veya yapı üzerinde bir ref struct dışında bir alan olarak depolanabilir. Yüksek performans elde etmek için, `ref struct` bu tür bir giriş [>,\< ](xref:System.ReadOnlySpan%601)kendisi bir ref struct giriş önbellek gerekiyor beri olmalıdır. Buna ek olarak, bu tür durum tutar beri mutable. Bu nedenle, değer yerine **ref tarafından geçirin.** Değere göre geçirilmesi bir yapı kopyasına neden olur ve durum değişiklikleri arayan tarafından görülemez. Bu bir `Newtonsoft.Json` sınıf `Newtonsoft.Json` `JsonTextReader` olduğundan farklıdır. Ref yapılarının nasıl kullanılacağı hakkında daha fazla bilgi için [bkz.](../../csharp/write-safe-efficient-code.md)
+Türü bir *ref struct*olduğundan, [belirli sınırlamaları](../../csharp/language-reference/builtin-types/struct.md#ref-struct)vardır. `Utf8JsonReader` Örneğin, bir sınıf veya yapı üzerinde bir ref struct dışında bir alan olarak depolanabilir. Yüksek performans elde etmek için, `ref struct` bu tür bir giriş [>,\< ](xref:System.ReadOnlySpan%601)kendisi bir ref struct giriş önbellek gerekiyor beri olmalıdır. Buna ek olarak, bu tür durum tutar beri mutable. Bu nedenle, değer yerine **ref tarafından geçirin.** Değere göre geçirilmesi bir yapı kopyasına neden olur ve durum değişiklikleri arayan tarafından görülemez. Bu bir `Newtonsoft.Json` sınıf `Newtonsoft.Json` `JsonTextReader` olduğundan farklıdır. Ref yapılarının nasıl kullanılacağı hakkında daha fazla bilgi için [bkz.](../../csharp/write-safe-efficient-code.md)
 
 ### <a name="read-utf-8-text"></a>UTF-8 metnini okuyun
 

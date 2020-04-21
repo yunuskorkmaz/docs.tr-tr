@@ -2,12 +2,12 @@
 title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 description: Docker uygulamalarının yaşam döngüsünü desteklemek için Microsoft'un tekliflerini tanıyın.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738095"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738454"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 
@@ -21,13 +21,13 @@ Microsoft araçları. Geliştirme/Tasarım iş yükü için: Windows için Docke
 
 **Şekil 3-1.** Microsoft platformu ve araçları ile konteynerdocker uygulamaları için yaşam döngüsünde ana direkleri
 
-Konteynerleştirilmiş Docker yaşam döngüsü iş akışı başlangıçta "varsayılan ürün seçeneklerine" dayalı olarak önceden yazılabilir, bu da geliştiricilerin daha hızlı başlamasını kolaylaştırabilir, ancak kaputun altında açık bir çerçeve olması gerekir, böylece her kuruluş veya kuruluştan farklı bağlamlara uyum sağlayabilen esnek iş akışı. İş akışı altyapısı (bileşenler ve ürünler), geliştirme veya DevOps ürünlerini başkalarıyla değiştirebilme yeteneğine sahip olsa lar bile, her şirketin gelecekte sahip olacağı ortamı kapsayacak kadar esnek olmalıdır. Bu esneklik, açıklık ve platform ve altyapıdaki geniş teknoloji seçenekleri, takip eden bölümlerde açıklandığı gibi, konteynerleştirilmiş Docker uygulamaları için Microsoft öncelikleridir.
+Konteynerleştirilmiş Docker yaşam döngüsü iş akışı başlangıçta "varsayılan ürün seçeneklerine" dayalı olarak önceden yazılabilir ve bu da geliştiricilerin daha hızlı başlamasını kolaylaştırır, ancak kaputun altında her kuruluş veya kuruluştan farklı bağlamlara uyum sağlayabilen esnek bir iş akışı olması için açık bir çerçeve olması temel dir. İş akışı altyapısı (bileşenler ve ürünler), geliştirme veya DevOps ürünlerini başkalarıyla değiştirebilme yeteneğine sahip olsa lar bile, her şirketin gelecekte sahip olacağı ortamı kapsayacak kadar esnek olmalıdır. Bu esneklik, açıklık ve platform ve altyapıdaki geniş teknoloji seçenekleri, takip eden bölümlerde açıklandığı gibi, konteynerleştirilmiş Docker uygulamaları için Microsoft öncelikleridir.
 
-Tablo 3-1, kapsayıcı Docker uygulamaları için Microsoft DevOps'lerin amacının, basitleştirilmiş bir iş akışı sağlarken her aşama (Microsoft veya üçüncü taraf) için hangi ürünleri kullanacağınızı seçebilmeniz için açık bir DevOps iş akışı sağlamak olduğunu göstermektedir zaten bağlı olan "varsayılan ürünlere göre" sağlayan; böylece Docker uygulamaları için kurumsal düzeydeki DevOps iş akışınıza hızla başlayabilirsiniz.
+Tablo 3-1, kapsayıcı Docker uygulamaları için Microsoft DevOps'lerin amacının, her aşama için hangi ürünlerin kullanılacağını seçebilmeniz için açık bir DevOps iş akışı sağlamak olduğunu ve "varsayılan olarak bağlı ürünler" sağlayan basitleştirilmiş bir iş akışı sağlamak olduğunu göstermektedir; böylece Docker uygulamaları için kurumsal düzeydeki DevOps iş akışınıza hızla başlayabilirsiniz.
 
 **Tablo 3-1.** DevOps iş akışları, her teknolojiye açık
 
-| Host | Microsoft teknolojileri | Üçüncü taraf—Azure takılabilir |
+| Ana bilgisayar | Microsoft teknolojileri | Üçüncü taraf—Azure takılabilir |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker uygulamaları için platform   | • Microsoft Visual Studio ve Visual Studio Kodu<br /> • .NET<br /> • Microsoft Azure Kubernetes Hizmeti (AKS)<br /> • Azure Servis Kumaşı<br /> • Azure Konteyner Kayıt Defteri<br /> | • Herhangi bir kod düzenleyicisi (örneğin, Sublime)<br /> • Herhangi bir dil (Node.js, Java, Go, vb.)<br /> • Herhangi bir orkestratör ve zamanlayıcı<br /> • Herhangi bir Docker kayıt defteri<br /> |
 | Docker uygulamaları için DevOps     | • Azure Devops Hizmetleri<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Servisi (AKS)<br /> • Azure Servis Kumaşı<br /> | • GitHub, Git, Subversion, vb.<br /> • Jenkins, Şef, Kukla, Hız, CircleCI, TravisCI, vb.<br /> • Şirket içi Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes, vb.<br /> |

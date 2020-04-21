@@ -1,7 +1,7 @@
 ---
 title: Üye erişim işleçleri ve ifadeleri - C# başvurusu
 description: Tür üyelerine erişmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120991"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738719"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# başvurusu)
 
@@ -156,6 +156,8 @@ if (handler != null)
 }
 ```
 
+Bu, yalnızca null `handler` olmayan bir çağrılmasını sağlamanın iş parçacığı için güvenli bir yoldur. Temsilci örnekleri değişmez olduğundan, hiçbir iş parçacığı `handler` yerel değişken tarafından başvurulan değeri değiştiremez. Özellikle, başka bir iş parçacığı tarafından yürütülen `PropertyChanged` kod `PropertyChanged` olaydan `handler` aboneliğini iptal eder ve `handler` daha önce çağrılır, `null` tarafından başvurulan değer etkilenmez kalır. İşletici, `?.` sol operand'ı en fazla bir kez değerlendirerek `null` null olarak doğrulandıktan sonra değiştirilemeyeceğini garanti eder.
+
 ## <a name="invocation-expression-"></a>Çağırma ifadesi ()
 
 Bir yöntemi çağırmak `()`veya bir [method](../../programming-guide/classes-and-structs/methods.md) [temsilci](../../programming-guide/delegates/index.md)çağırmak için parantez kullanın.
@@ -180,7 +182,7 @@ C# 8.0 ve daha `^` sonra kullanılabilir, işleç bir dizinin sonundan öğe kon
 
 Yukarıdaki örnekte de görüldüğü `^e` gibi, <xref:System.Index?displayProperty=nameWithType> ifade türündendir. İfadede `^e`, sonucu `e` örtülü olarak dönüştürülebilir `int`olmalıdır.
 
-Ayrıca, bir `^` dizi endeks oluşturmak için [aralık işleciyle](#range-operator-) birlikte işleci de kullanabilirsiniz. Daha fazla bilgi için [Endeksler ve aralıklar'a](../../tutorials/ranges-indexes.md)bakın.
+Bir dizi endeks `^` oluşturmak için [aralık işleciyle](#range-operator-) birlikte işleci de kullanabilirsiniz. Daha fazla bilgi için [Endeksler ve aralıklar'a](../../tutorials/ranges-indexes.md)bakın.
 
 ## <a name="range-operator-"></a>Menzil operatörü ...
 

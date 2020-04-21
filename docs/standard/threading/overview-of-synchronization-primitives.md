@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106589"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739378"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Eşitleme temellerine genel bakış
 
@@ -143,5 +143,5 @@ Daha fazla bilgi için [SpinWait](spinwait.md) <xref:System.Threading.SpinWait> 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [İş parçacığı güvenli koleksiyonları](../collections/thread-safe/index.md)
+- [İş parçacığı güvenli koleksiyonlar](../collections/thread-safe/index.md)
 - [İş parçacığı nesneleri ve özellikleri](threading-objects-and-features.md)

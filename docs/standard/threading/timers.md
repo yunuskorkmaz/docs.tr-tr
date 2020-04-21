@@ -12,12 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128945"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739494"
 ---
 # <a name="timers"></a>Zamanlayıcılar
 
@@ -35,7 +35,7 @@ ms.locfileid: "73128945"
 
 ## <a name="the-systemthreadingtimer-class"></a>System.Threading.Timer sınıfı
 
-Sınıf, <xref:System.Threading.Timer?displayProperty=nameWithType> belirli zaman aralıklarında sürekli olarak temsilci çağırmanızı sağlar. Ayrıca, belirli bir zaman aralığında bir temsilciye tek bir çağrı zamanlamak için bu sınıfı kullanabilirsiniz. Temsilci bir <xref:System.Threading.ThreadPool> iş parçacığı üzerinde yürütülür.
+Sınıf, <xref:System.Threading.Timer?displayProperty=nameWithType> belirli zaman aralıklarında sürekli olarak temsilci çağırmanızı sağlar. Bu sınıfı, belirli bir zaman aralığında bir temsilciye tek bir çağrı zamanlamak için de kullanabilirsiniz. Temsilci bir <xref:System.Threading.ThreadPool> iş parçacığı üzerinde yürütülür.
 
 Bir <xref:System.Threading.Timer?displayProperty=nameWithType> nesne oluşturduğunuzda, <xref:System.Threading.TimerCallback> geri arama yöntemini, geri arama için geçirilen isteğe bağlı durum nesnesini, geri aramanın ilk çağrılmadan önce geciktirilmesi gereken süreyi ve geri arama çağrıları arasındaki zaman aralığını tanımlayan bir temsilci belirtirsiniz. Bekleyen bir zamanlayıcıyı iptal <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> etmek için yöntemi arayın.
 

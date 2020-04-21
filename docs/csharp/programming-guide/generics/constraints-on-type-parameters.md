@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463880"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738261"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür parametreleri üzerindeki kısıtlamalar (C# Programlama Kılavuzu)
 
@@ -19,7 +19,7 @@ Kısıtlamalar derleyiciyi bir tür bağımsız değişkeninin sahip olması ger
 
 |Kısıtlama|Açıklama|
 |----------------|-----------------|
-|`where T : struct`|Tür bağımsız değişkeni nullable olmayan bir değer türü olmalıdır. Nullable değer türleri hakkında bilgi için, [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md)bakın. Tüm değer türlerinin erişilebilir bir parametresiz `struct` oluşturucusu olduğundan, kısıtlama `new()` kısıtlamayı `new()` ima eder ve kısıtlamayla birleştirilemez. Ayrıca kısıtlama ile `struct` kısıtlama birleştiremezsiniz. `unmanaged`|
+|`where T : struct`|Tür bağımsız değişkeni nullable olmayan bir değer türü olmalıdır. Nullable değer türleri hakkında bilgi için, [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md)bakın. Tüm değer türlerinin erişilebilir bir parametresiz `struct` oluşturucusu olduğundan, kısıtlama `new()` kısıtlamayı `new()` ima eder ve kısıtlamayla birleştirilemez. Kısıtlamaile `struct` kısıtlamayı birleştiremezsiniz. `unmanaged`|
 |`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir. C# 8.0 veya sonraki bir şekilde `T` nullable bağlamında, nullable olmayan bir başvuru türü olmalıdır. |
 |`where T : class?`|Tür bağımsız değişkeni, geçersiz veya nullable olmayan bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
 |`where T : notnull`|Tür bağımsız değişkeni nullable olmayan bir tür olmalıdır. Bağımsız değişken, C# 8.0 veya sonraki bir şekilde nullable olmayan bir başvuru türü veya nullable olmayan bir değer türü olabilir. |

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bac2a3ca3278b48b35d0372d52bcb79025ba1148
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588438"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739718"
 ---
 # <a name="threads-and-threading"></a>İş parçacıkları ve iş parçacığı
 
@@ -31,7 +31,7 @@ Varsayılan olarak, bir .NET programı genellikle *birincil* iş parçacığı o
 
 Uygulamanızın yanıt verme yeteneğini artırmak ve uygulamanın masını artırmak için çok işlemcili veya çok çekirdekli bir sistemden yararlanmak için birden çok iş parçacığı kullanırsınız.
 
-Birincil iş parçacığının kullanıcı arabirimi öğelerinden sorumlu olduğu ve kullanıcı eylemlerine yanıt veren bir masaüstü uygulaması düşünün. Aksi takdirde birincil iş parçacığı işgal edecek ve kullanıcı arabirimini yanıt vermeyen yapmak zaman alıcı işlemleri gerçekleştirmek için alt iş parçacığı kullanın. Ayrıca, gelen iletilere veya olaylara daha duyarlı olması için ağ veya aygıt iletişimi için özel bir iş parçacığı kullanabilirsiniz.
+Birincil iş parçacığının kullanıcı arabirimi öğelerinden sorumlu olduğu ve kullanıcı eylemlerine yanıt veren bir masaüstü uygulaması düşünün. Aksi takdirde birincil iş parçacığı işgal edecek ve kullanıcı arabirimini yanıt vermeyen yapmak zaman alıcı işlemleri gerçekleştirmek için alt iş parçacığı kullanın. Ayrıca, gelen iletilere veya olaylara daha duyarlı olması için ağ veya aygıt iletişimi için özel bir iş parçacığı da kullanabilirsiniz.
 
 Programınız paralel olarak yapılabilecek işlemleri gerçekleştirirse, bu işlemleri ayrı iş parçacıklarında gerçekleştirerek ve programı çok işlemcili veya çok çekirdekli bir sistemde çalıştırarak toplam yürütme süresi azaltılabilir. Böyle bir sistemde, çoklu iş parçacığı kullanımı artan yanıt ile birlikte iş parçacığı artırabilir.
 

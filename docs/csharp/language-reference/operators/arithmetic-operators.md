@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399261"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738740"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# referansı)
 
@@ -161,7 +161,7 @@ Dize `+` birleşimi ve temsilci birleşimi için işleci de kullanabilirsiniz. D
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-`-` Ayrıca temsilci kaldırma için işleci kullanabilirsiniz. Daha fazla bilgi için, ve [ `-` `-=` operatörler](subtraction-operator.md) makaleye bakın.
+`-` Temsilci kaldırma için işleci de kullanabilirsiniz. Daha fazla bilgi için, ve [ `-` `-=` operatörler](subtraction-operator.md) makaleye bakın.
 
 ## <a name="compound-assignment"></a>Bileşik atama
 

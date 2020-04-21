@@ -2,19 +2,19 @@
 title: F# kod biçimlendirme yönergeleri
 description: F# kodunu biçimlendirme yönergelerini öğrenin.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278944"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739560"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
 Bu makalede, F# kodunuzu şu şekilde biçimlendirecek şekilde kodunuzu biçimlendirecek yönergeler sunulmaktadır:
 
-* Genellikle daha okunaklı olarak görülüyor
-* Visual Studio ve diğer editörlerde biçimlendirme araçları tarafından uygulanan kurallara uygun mudur
+* Daha okunaklı
+* Visual Studio ve diğer editörlerde biçimlendirme araçları ile uygulanan kurallara uygun olarak
 * Çevrimiçi diğer kodlara benzer
 
 Bu yönergeler, [Anh-Dung Phan'ın](https://github.com/dungpa) [F# Biçimlendirme Sözleşmeleri için kapsamlı bir kılavuza](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) dayanmaktadır.
@@ -27,7 +27,7 @@ F# varsayılan olarak önemli beyaz boşluk kullanır. Aşağıdaki yönergeler,
 
 Girintisi gerektiğinde, sekmeleri değil boşlukları kullanmanız gerekir. En az bir boşluk gereklidir. Kuruluşunuz girintisi için kullanılacak alan sayısını belirtmek için kodlama standartları oluşturabilir; girintinin oluştuğu her düzeyde iki, üç veya dört girintin boşluk tipiktir.
 
-**Girintinasyon başına 4 boşluk öneririz.**
+**Girintinasyon başına dört boşluk öneririz.**
 
 Bununla ilgili olarak, programların girintisi öznel bir konudur. Varyasyonlar tamam, ancak izlemeniz gereken ilk kural *girintinin tutarlılığıdır.* Genel olarak kabul görmüş bir girintin stili seçin ve kod tabanınız boyunca sistematik olarak kullanın.
 
@@ -43,7 +43,7 @@ Her zaman ikili aritmetik ifadeler etrafında beyaz boşluk kullanın:
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Unary `-` işleçleri her zaman hemen izleyin negating değeri olmalıdır:
+Unary `-` işleçleri her zaman olumsuzladıkları değer tarafından hemen takip edilmelidir:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Çok uzun üye tanımları için parametreleri yeni bir satıra yerleştirin
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Uzun üye tanımları için parametreleri yeni bir satıra yerleştirin
 
 Çok uzun bir üye tanımınız varsa, parametreleri yeni satırlara yerleştirin ve bunları bir kapsam girin.
 
@@ -287,7 +287,7 @@ Ad alanları, özel durumlar, olaylar`.dll` ve proje/ adlar da PascalCase kullan
 
 Tarihsel olarak, bazı F# kitaplıkları adlarda alt çizerler kullanabilmiştir. Ancak, kısmen .NET adlandırma kurallarıyla çakıştığı için bu artık yaygın olarak kabul edilmez. Bununla ilgili olarak, bazı F# programcıları kısmen tarihsel nedenlerden dolayı vurguları yoğun bir şekilde kullanırlar ve hoşgörü ve saygı önemlidir. Ancak, stilgenellikle kullanmak için bir seçim var başkaları tarafından sevilmeyen olduğunu unutmayın.
 
-Bazı özel durumlar, alt çizlerin çok yaygın olduğu yerel bileşenlerle birlikte çalışmayı içerir.
+Bir özel durum, alt çizlerin yaygın olduğu yerel bileşenlerle birlikte çalışmayı içerir.
 
 ### <a name="use-standard-f-operators"></a>Standart F# işleçlerini kullanma
 
@@ -325,7 +325,7 @@ Diğer tüm türler için önek formunu kullanın.
 
 ## <a name="formatting-tuples"></a>Biçimlendirme tuples
 
-Bir tuple instantiation parantez ve içinde delimiting virgül tek bir boşluk tarafından takip `(1, 2)` `(x, y, z)`edilmelidir, örneğin: , .
+Bir tuple instantiation parantez ve içinde delimiting virgül tek bir boşluk tarafından takip `(1, 2)`edilmelidir, örneğin: , `(x, y, z)`.
 
 Tuples desen eşleşen parantez atlamak için yaygın olarak kabul edilir:
 
@@ -354,7 +354,7 @@ let update model msg =
 
 ## <a name="formatting-discriminated-union-declarations"></a>Ayrımcı birlik bildirimlerini biçimlendirme
 
-4 boşlukla tür tanımında girintis: `|`
+Dört boşluk `|` la tür tanımıgirini:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Kayıt bildirimlerini biçimlendirme
 
-4 boşluk `{` la tür tanımı girintisi ve aynı satırda alan listesini başlatın:
+Dört boşluk `{` tarafından tür tanımı girintisi ve aynı satırda alan listesini başlatın:
 
 ```fsharp
 // OK
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Anahtar `let` kelime kullanılsa `let rec` `let` `function` bile, başladıktan sonra 4 boşluk tarafından tanımlanan veya girintisi gereken işlevlerde desen eşleştirme:
+Anahtar `let` kelime kullanılsa `let rec` `let` `function` bile, başladıktan sonra dört boşluk tarafından tanımlanan veya girintisi olması gereken işlevlerde desen eşleştirme:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Nesne ifadelerini ve arabirimlerini biçimlendirme
 
-Nesne ifadeleri ve arabirimleri 4 boşluktan sonra `member` girintilen ile aynı şekilde hizalanmalıdır.
+Nesne ifadeleri ve arabirimleri dört boşluktan sonra `member` girintilen ile aynı şekilde hizalanmalıdır.
 
 ```fsharp
 let comparer =

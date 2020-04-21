@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160124"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739615"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET'te Arabelleklerle Çalışın
 
@@ -105,7 +105,7 @@ Verileri çok parçalı dizilerde işlemek için kullanılabilecek birkaç yakla
 - Bitişik `ReadOnlySequence<T>` bir diziye kopyalayın ve tek bir arabellek gibi davranın:
   - Boyutu `ReadOnlySequence<T>` küçükse, [stackalloc](../../csharp/language-reference/operators/stackalloc.md) işleci kullanarak verileri yığınayrılmış bir arabelleğe kopyalamak makul olabilir.
   - Kullanarak `ReadOnlySequence<T>` birleştirilmiş diziye <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType>kopyalayın.
-  - Kullanın. [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A) Bu yığın üzerinde yeni `T[]` bir ayırır gibi sıcak yollarda tavsiye edilmez.
+  - [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A) adresini kullanın. Bu yığın üzerinde yeni `T[]` bir ayırır gibi sıcak yollarda tavsiye edilmez.
 
 Aşağıdaki örnekler, işleme `ReadOnlySequence<byte>`için bazı yaygın durumlarda göstermektedir:
 
@@ -191,5 +191,5 @@ Aşağıdaki örnek, 4 baytlık bir büyük endian tamsayı uzunluğunu `ReadOnl
 ### <a name="sequencereadert-common-problems"></a>SequenceReader\<\> T sık karşılaşılan sorunlar
 
 - Mutable bir yapı `SequenceReader<T>` olduğundan, her zaman [başvuru](../../csharp/language-reference/keywords/ref.md)ile geçirilmelidir.
-- `SequenceReader<T>`bir [ref struct'dur,](../../csharp/language-reference/keywords/ref.md#ref-struct-types) bu nedenle yalnızca senkron yöntemlerle kullanılabilir ve alanlarda depolanamamaktadır. Daha fazla bilgi için bkz: [Güvenli ve verimli C# kodu yaz.](../../csharp/write-safe-efficient-code.md)
+- `SequenceReader<T>`bir [ref struct'dur,](../../csharp/language-reference/builtin-types/struct.md#ref-struct) bu nedenle yalnızca senkron yöntemlerle kullanılabilir ve alanlarda depolanamamaktadır. Daha fazla bilgi için bkz: [Güvenli ve verimli C# kodu yaz.](../../csharp/write-safe-efficient-code.md)
 - `SequenceReader<T>`yalnızca ileri okuyucu olarak kullanılmak üzere optimize edilsin. `Rewind`diğer `Read`ve `Peek` `IsNext` API'ler kullanılarak ele alınamaz küçük yedeklemeler için tasarlanmıştır.

@@ -2,12 +2,12 @@
 title: dotnet test komutu
 description: Dotnet test komutu, belirli bir projede birim testlerini yürütmek için kullanılır.
 ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463372"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739096"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -51,7 +51,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 ## <a name="options"></a>Seçenekler
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   Test çalışmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
 
@@ -59,19 +59,19 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   Testleri suçlama modunda çalıştırır. Bu seçenek, test ana bilgisayarının çökmesine neden olan sorunlu testleri yalıtmada yararlıdır. Bu, çökmeden önce testlerin yürütülmesi sırasını yakalayan *Sequence.xml* olarak geçerli dizinde bir çıktı dosyası oluşturur.
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Yapı yapılandırmasını tanımlar. Varsayılan değer, `Debug`ancak projenizin yapılandırmabu varsayılan SDK ayarını geçersiz kılabilir.
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   Test çalışması için veri toplayıcısını sağlar. Daha fazla bilgi için, [bkz.](https://aka.ms/vstest-collect)
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
   Test platformu için tanılama modunu etkinleştirin ve belirtilen dosyaya tanılama iletileri yazar.
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Belirli bir [çerçeve](../../standard/frameworks.md)için test ikilileri arar.
 
@@ -79,7 +79,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   Verilen ifadeyi kullanarak geçerli projedeki testleri filtreler. Daha fazla bilgi için [Filtre seçeneği ayrıntıları](#filter-option-details) bölümüne bakın. Seçici birim test filtrelemenin nasıl kullanılacağı hakkında daha fazla bilgi ve örnekler için seçici [birim testlerini çalıştırma'ya](../testing/selective-unit-tests.md)bakın.
 
-- **`h|--help`**
+- **`-h|--help`**
 
   Komut için kısa bir yardım yazdırır.
 
@@ -87,7 +87,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   Komutun durmasını ve kullanıcı girişi veya eylemini beklemesini sağlar. Örneğin, kimlik doğrulamasını tamamlamak için. .NET Core 3.0 SDK'dan beri mevcuttur.
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Test sonuçları için bir logger belirtir. MSBuild aksine, dotnet testi kısaltmalar kabul `-l "console;v=d"` etmez: yerine kullanım `-l "console;verbosity=detailed"`.
 

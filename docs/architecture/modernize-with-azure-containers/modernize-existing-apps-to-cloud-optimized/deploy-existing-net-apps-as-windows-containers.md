@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987978"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738425"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -57,7 +57,7 @@ Uygulamaları geliştirmek ve sürdürmek için kapsayıcıları kullandığın�
 
 Sanal makinelere aşina olan biri için, kapsayıcılar oldukça benzer görünebilir. Kapsayıcı bir işletim sistemi çalıştırıyor, bir dosya sistemi vardır ve fiziksel veya sanal bilgisayar sistemi gibi bir ağ üzerinden erişilebilir. Ancak, konteynerlerin arkasındaki teknoloji ve kavramlar sanal makinelerden çok farklıdır. Geliştirici açısından bakıldığında, bir kapsayıcı daha çok tek bir işlem gibi ele alınmalıdır. Aslında, bir kapsayıcı nın tek bir işlem için tek bir giriş noktası vardır.
 
-Docker kapsayıcıları (basitlik, *kapsayıcılar*için) Linux ve Windows'da yerel olarak çalıştırılabilir. Normal kapsayıcılar çalıştırırken, Windows kapsayıcıları yalnızca Windows ana bilgisayarlarında (ana bilgisayar sunucusu veya VM) ve Linux kapsayıcıları yalnızca Linux ana bilgisayarlarında çalıştırılabilir. Ancak, Windows Server ve Hyper-V kapsayıcılarının son sürümlerinde, bir Linux kapsayıcısı şu anda yalnızca Windows Server Kapsayıcılarında kullanılabilen Hyper-V yalıtım teknolojisini kullanarak Windows Server'da yerel olarak çalıştırılabilir.
+Docker kapsayıcıları (basitlik, *kapsayıcılar*için) Linux ve Windows'da yerel olarak çalıştırılabilir. Normal kapsayıcılar çalıştırırken, Windows kapsayıcıları yalnızca Windows ana bilgisayarlarında (ana bilgisayar sunucusu veya VM) ve Linux kapsayıcıları yalnızca Linux ana bilgisayarlarında çalıştırılabilir. Ancak, Windows Server ve Hyper-V kapsayıcılarının son sürümlerinde, bir Linux kapsayıcısı şu anda yalnızca Windows Server Kapsayıcılarında kullanılabilen Hyper-V yalıtım teknolojisini kullanarak Windows Server'da yerel olarak da çalıştırılabilir.
 
 Yakın gelecekte, hem Linux hem de Windows kapsayıcılarına sahip karma ortamlar mümkün ve hatta yaygın olacaktır.
 
@@ -91,14 +91,14 @@ Linux için, birden fazla dağıtım mevcuttur ve resmi .NET Docker görüntüle
 
 Dockerfile dosyanıza görüntü adını eklediğinizde, .NET Framework tabanlı Windows kapsayıcı görüntülerine yönelik aşağıdaki örneklerde olduğu gibi bir etiket kullanarak işletim sistemini ve sürümü seçebilirsiniz:
 
-> | **Etiket** | **Sistem ve sürüm** |
+> | **Tag** | **Sistem ve sürüm** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4.x Windows Server Core üzerinde |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4.x ek ASP.NET özelleştirme, Windows Server Core üzerinde |
 
 .NET Core (Linux ve Windows için çapraz platform) için etiketler aşağıdaki gibi görünür:
 
-> | **Etiket** | **Sistem ve sürüm**
+> | **Tag** | **Sistem ve sürüm**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 yalnızca Linux'ta çalışma zamanı |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 yalnızca Windows Nano Server'da çalışma zamanı |

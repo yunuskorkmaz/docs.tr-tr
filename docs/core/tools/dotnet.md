@@ -2,12 +2,12 @@
 title: dotnet komutu
 description: Dotnet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463268"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739073"
 ---
 # <a name="dotnet-command"></a>dotnet komutu
 
@@ -264,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  .NET Core karşılama ve telemetri iletilerinin ilk çalıştırmada görüntülenip görüntülenmediğini belirtir. `true` Bu iletileri `true`(değerler, veya `1` `yes` kabul edilen) veya izin `false` verecek şekilde `false` `0`(değerler, , veya `no` kabul edilen) sessize almak üzere ayarlayın. Ayarlanmazsa, varsayılan `false` değerdir ve iletiler ilk çalıştırmada görüntülenir. Bu bayrağın telemetri üzerinde hiçbir `DOTNET_CLI_TELEMETRY_OPTOUT` etkisi olmadığını unutmayın (telemetri göndermeyi devre dışı bırakmak için bkz.
+  .NET Core karşılama ve telemetri iletilerinin ilk çalıştırmada görüntülenip görüntülenmediğini belirtir. `true` Bu iletileri `true`(değerler, veya `1` `yes` kabul edilen) veya izin `false` verecek şekilde `false` `0`(değerler, , veya `no` kabul edilen) sessize almak üzere ayarlayın. Ayarlanmazsa, varsayılan `false` değerdir ve iletiler ilk çalıştırmada görüntülenir. Bu bayrağın telemetri üzerinde `DOTNET_CLI_TELEMETRY_OPTOUT` hiçbir etkisi yoktur (telemetri göndermeyi devre dışı bırakmak için bkz.
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

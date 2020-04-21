@@ -2,12 +2,12 @@
 title: C# 8.0 -C# Guide'daki yenilikler
 description: C# 8.0'da bulunan yeni özellikler hakkında genel bir bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: fcba0526fbcbe46a02cef167822c219f9db2eb63
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389100"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738161"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0'daki yenilikler
 
@@ -21,7 +21,7 @@ C# 8.0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
   - [Tuple desenleri](#tuple-patterns)
   - [Konumsal desenler](#positional-patterns)
 - [Bildirimleri kullanma](#using-declarations)
-- [Statik yerel fonksiyonlar](#static-local-functions)
+- [Statik yerel işlevler](#static-local-functions)
 - [Tek kullanımlık ref structs](#disposable-ref-structs)
 - [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Asenkron akarsular](#asynchronous-streams)
@@ -320,7 +320,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 Her iki durumda da `Dispose()`derleyici. `using` İfadedeki ifade tek kullanımlık değilse derleyici bir hata oluşturur.
 
-## <a name="static-local-functions"></a>Statik yerel fonksiyonlar
+## <a name="static-local-functions"></a>Statik yerel işlevler
 
 Artık yerel işlevin ilgili kapsamdan herhangi bir değişkeni yakalamadığından (başvuru) olmadığından emin olmak için değiştiriciyi yerel işlevlere ekleyebilirsiniz. `static` Bunu yapmak `CS8421`, "Statik yerel bir işlev değişken \<> bir başvuru içeremez" oluşturur.
 

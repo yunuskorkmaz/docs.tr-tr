@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: 9837902bf56a402d623adbcf41558dcc568b7105
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3e8607644c858ae804e384c974b5e81c1786c6a1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745218"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739511"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel Denetimine Genel Bakış (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi, Windows Forms uygulamalara Web stili bağlantılar eklemenize olanak tanır. <xref:System.Windows.Forms.Label> denetimini kullanabileceğiniz her şey için <xref:System.Windows.Forms.LinkLabel> denetimini kullanabilirsiniz; Ayrıca, metnin bir bölümünü bir dosya, klasör veya Web sayfasına bağlantı olarak da ayarlayabilirsiniz.  
+Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi, Windows Forms uygulamalarına Web tarzı bağlantılar eklemenize olanak tanır. Denetimi kullanabileceğiniz <xref:System.Windows.Forms.LinkLabel> her şey için <xref:System.Windows.Forms.Label> denetimi kullanabilirsiniz; metnin bir kısmını bir dosya, klasör veya Web sayfasına bağlantı olarak da ayarlayabilirsiniz.  
   
-## <a name="what-you-can-do-with-the-linklabel-control"></a>LinkLabel denetimiyle yapabilecekleriniz  
- <xref:System.Windows.Forms.Label> denetiminin tüm özelliklerine, yöntemlerine ve olaylarına ek olarak, <xref:System.Windows.Forms.LinkLabel> denetimi köprüler ve bağlantı renkleri için özelliklere sahiptir. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> özelliği, bağlantıyı etkinleştiren metnin alanını ayarlar. <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>ve <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> özellikleri bağlantının renklerini ayarlar. <xref:System.Windows.Forms.LinkLabel.LinkClicked> olayı, bağlantı metni seçildiğinde ne olacağını belirler.  
+## <a name="what-you-can-do-with-the-linklabel-control"></a>LinkLabel Denetimi ile Yapabilecekler  
+ <xref:System.Windows.Forms.Label> Denetimin tüm özelliklerine, yöntemlerine ve olaylarına <xref:System.Windows.Forms.LinkLabel> ek olarak, denetimin köprüler ve bağlantı renkleri için özellikleri vardır. Özellik, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> bağlantıyı etkinleştiren metnin alanını ayarlar. , <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>ve <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> özellikleri bağlantının renklerini ayarlar. Olay, <xref:System.Windows.Forms.LinkLabel.LinkClicked> bağlantı metni seçildiğinde ne olacağını belirler.  
   
- <xref:System.Windows.Forms.LinkLabel> denetiminin en basit kullanımı, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> özelliğini kullanarak tek bir bağlantı görüntülemektir, ancak <xref:System.Windows.Forms.LinkLabel.Links%2A> özelliğini kullanarak birden çok köprü da görüntüleyebilirsiniz. <xref:System.Windows.Forms.LinkLabel.Links%2A> özelliği bir bağlantı koleksiyonuna erişmenizi sağlar. Ayrıca, her bir <xref:System.Windows.Forms.LinkLabel.Link> nesnesinin <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> özelliğindeki verileri de belirtebilirsiniz. <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> özelliğinin değeri, görüntülenecek dosyanın konumunu veya bir Web sitesinin adresini depolamak için kullanılabilir.  
+ Denetimin <xref:System.Windows.Forms.LinkLabel> en basit kullanımı <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> özelliği kullanarak tek bir bağlantı görüntülemektir, ancak <xref:System.Windows.Forms.LinkLabel.Links%2A> özelliği kullanarak birden çok köprü de görüntüleyebilirsiniz. Özellik, <xref:System.Windows.Forms.LinkLabel.Links%2A> bir bağlantı koleksiyonuna erişmenizi sağlar. Ayrıca, her bir <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> <xref:System.Windows.Forms.LinkLabel.Link> nesnenin özelliğinde veri belirtebilirsiniz. <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Özelliğin değeri, görüntülenecek dosyanın konumunu veya Web sitesinin adresini depolamak için kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

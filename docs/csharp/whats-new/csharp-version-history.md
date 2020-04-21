@@ -3,12 +3,12 @@ title: C# tarihi - C# Rehberi
 description: Dil ilk versiyonlarında nasıl dı ve o zamandan beri nasıl gelişti?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ed9555bcef1c71964937c2bc18fedbc7da94f0db
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389103"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738150"
 ---
 # <a name="the-history-of-c"></a>C'nin tarihçesi\#
 
@@ -17,7 +17,7 @@ Bu makalede, C# dilinin her büyük sürümü bir tarihçesi sağlar. C# ekibi y
 > [!IMPORTANT]
 > C# dili, C# belirtiminin bazı özellikler için *standart kitaplık* olarak tanımladığı tür ve yöntemlere dayanır. .NET platformu bu tür ve yöntemleri çeşitli paketlerhalinde sunar. Bir örnek özel durum işlemedir. Atılan `throw` nesnenin türetildiğinden emin olmak için <xref:System.Exception>her deyim veya ifade denetlenir. Benzer şekilde, `catch` yakalanan türün <xref:System.Exception>türetilmiş olduğundan emin olmak için her kontrol edilir. Her sürüm yeni gereksinimler ekleyebilir. Eski ortamlardaki en son dil özelliklerini kullanmak için belirli kitaplıklar yüklemeniz gerekebilir. Bu bağımlılıklar, her belirli sürüm için sayfada belgelenmiştir. Bu bağımlılık la ilgili arka plan için [dil ve kitaplık arasındaki ilişkiler](relationships-between-language-and-library.md) hakkında daha fazla bilgi edinebilirsiniz.
 
-C# yapı araçları, en son ana dil sürümünü varsayılan dil sürümünü dikkate alır. Bu bölümdeki diğer makalelerde ayrıntılı olarak ayrıntılı olarak büyük sürümler arasında nokta sürümleri olabilir. Bir nokta sürümündeki en son özellikleri kullanmak için [derleyici dili sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir. C# 7.0'dan bu yana üç nokta açıklaması olmuştur:
+C# yapı araçları, en son ana dil sürümünü varsayılan dil sürümünü dikkate alır. Bu bölümdeki diğer makalelerde ayrıntılı olarak ayrıntılı olarak büyük sürümler arasında nokta sürümleri olabilir. Bir nokta sürümündeki en son özellikleri kullanmak için [derleyici dili sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir. C# 7.0'dan beri üç noktalı sürümler var:
 
 - [C# 7.3](csharp-7-3.md):
   - C# 7.3 Visual [Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md)ile başlayan kullanılabilir.
@@ -242,7 +242,7 @@ C# 8.0, özellikle .NET Core'u hedefleyen ilk büyük C# sürümedir. Bazı öze
   - [Tuple desenleri](./csharp-8.md#tuple-patterns)
   - [Konumsal desenler](./csharp-8.md#positional-patterns)
 - [Bildirimleri kullanma](./csharp-8.md#using-declarations)
-- [Statik yerel fonksiyonlar](./csharp-8.md#static-local-functions)
+- [Statik yerel işlevler](./csharp-8.md#static-local-functions)
 - [Tek kullanımlık ref structs](./csharp-8.md#disposable-ref-structs)
 - [Boş değer atanabilir başvuru türleri](../language-reference/builtin-types/nullable-reference-types.md)
 - [Asenkron akarsular](./csharp-8.md#asynchronous-streams)

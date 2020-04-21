@@ -2,12 +2,12 @@
 title: İzleme ve telemetri ile uygulamalarınızı modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin | İzleme ve telemetri ile uygulamalarınızı modernleştirin
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393848"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739176"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 
@@ -31,7 +31,7 @@ Azure altyapı günlükleri, Azure hizmeti olarak Log Analytics ile ilgili olara
 
 Log Analytics'e, herhangi bir tarayıcıda çalışan OMS portalı veya Azure portalı üzerinden erişebilir ve toplanan verileri analiz etmek ve bunları etkinleştirmek için yapılandırma ayarlarına ve birden çok araça erişebilirsiniz.
 
-Log Analytics'teki [Konteyner İzleme çözümü,](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) Docker ve Windows Container ana bilgisayarlarınızı tek bir konumda görüntülemenize ve yönetmenize yardımcı olur. Çözüm, hangi kapsayıcıların çalıştığını, hangi kapsayıcı görüntüsünü çalıştırdıklarını ve kapsayıcıların nerede çalıştığını gösterir. Kapsayıcılarla birlikte kullanılan komutlar da dahil olmak üzere ayrıntılı denetim bilgilerini görüntüleyebilirsiniz. Ayrıca, Docker veya Windows ana bilgisayarlarını uzaktan görüntülemenize gerek kalmadan merkezi günlükleri görüntüleyip arayarak kapsayıcıları giderebilirsiniz. Gürültülü ve aşırı kaynakları bir ana bilgisayarda tüketen kapsayıcılar bulabilirsiniz. Ayrıca, kapsayıcılar için merkezi CPU, bellek, depolama ve ağ kullanımı ve performans bilgilerini görüntüleyebilirsiniz. Windows çalıştıran bilgisayarlarda, Windows Server, Hyper-V ve Docker kapsayıcılarından günlükleri merkezileştirebilir ve karşılaştırabilirsiniz. Çözüm aşağıdaki konteyner orkestratörlerini destekler:
+Log Analytics'teki [Konteyner İzleme çözümü,](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) Docker ve Windows Container ana bilgisayarlarınızı tek bir konumda görüntülemenize ve yönetmenize yardımcı olur. Çözüm, hangi kapsayıcıların çalıştığını, hangi kapsayıcı görüntüsünü çalıştırdıklarını ve kapsayıcıların nerede çalıştığını gösterir. Kapsayıcılarla birlikte kullanılan komutlar da dahil olmak üzere ayrıntılı denetim bilgilerini görüntüleyebilirsiniz. Ayrıca, Docker veya Windows ana bilgisayarlarını uzaktan görüntülemenize gerek kalmadan merkezi günlükleri görüntüleyerek ve arayarak kapsayıcıları giderebilirsiniz. Gürültülü ve aşırı kaynakları bir ana bilgisayarda tüketen kapsayıcılar bulabilirsiniz. Ayrıca, kapsayıcılar için merkezi CPU, bellek, depolama ve ağ kullanımı ve performans bilgilerini görüntüleyebilirsiniz. Windows çalıştıran bilgisayarlarda, Windows Server, Hyper-V ve Docker kapsayıcılarından günlükleri merkezileştirebilir ve karşılaştırabilirsiniz. Çözüm aşağıdaki konteyner orkestratörlerini destekler:
 
 - Docker Swarm
 

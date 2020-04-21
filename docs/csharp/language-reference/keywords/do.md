@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713595"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738903"
 ---
 # <a name="do-c-reference"></a>do (C# Başvurusu)
 
@@ -22,7 +22,7 @@ ms.locfileid: "75713595"
 
 Continue deyimini kullanarak ifadenin `while` değerlendirilmesi [continue](continue.md) için doğrudan adım atabilirsiniz. İfade, `true`yürütme yi değerlendirirse, döngüdeki ilk ifadede devam eder. Aksi takdirde, yürütme döngüden sonra ilk deyimde devam ediyor.
 
-Ayrıca `do-while` [goto,](goto.md) [return](return.md)veya [atmak](throw.md) ifadeleri tarafından bir döngü çıkabilirsiniz.
+Ayrıca [goto](goto.md) `do-while` tarafından bir döngü çıkmak , [return](return.md), veya ifadeler [atmak.](throw.md)
 
 ## <a name="example"></a>Örnek
 

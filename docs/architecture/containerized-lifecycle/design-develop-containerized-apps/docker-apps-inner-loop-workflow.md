@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamalarının geliştirilmesi için "iç döngü" iş akışını öğrenin.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989018"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738416"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -263,7 +263,7 @@ Bunu terminalden CURL kullanarak test edebilirsiniz. Windows'daki Docker yüklem
 
 Visual Studio Code, Node.js ve .NET Core kapsayıcıları gibi diğer platformları kullanıyorsanız Docker hata ayıklama destekler.
 
-Bir sonraki bölümde açıklandığı gibi, Windows veya Mac için Visual Studio'yu kullanırken Docker'da .NET Core veya .NET Framework kapsayıcılarını hata ayıklayabilirsiniz.
+Bir sonraki bölümde açıklandığı gibi Windows veya Mac için Visual Studio'yu kullanırken Docker'da .NET Core veya .NET Framework kapsayıcılarını hata ayıklayabilirsiniz.
 
 > [!TIP]
 > Node.js Docker konteynerlerini hata ayıklama hakkında <https://blog.docker.com/2016/07/live-debugging-docker/> <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>daha fazla bilgi için bkz.

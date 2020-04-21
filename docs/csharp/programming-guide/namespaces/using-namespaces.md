@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507054"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738238"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad alanlarını kullanma (C# Programlama Kılavuzu)
 
@@ -36,7 +36,7 @@ Ad boşlukları C# programlarında iki şekilde yoğun olarak kullanılır. İlk
   
 ## <a name="namespace-aliases"></a>Ad alanı takma adları
 
- Ayrıca, ad alanı için bir takma ad oluşturmak için yönergeyi de kullanabilirsiniz. [ `using` ](../../language-reference/keywords/using-directive.md) Diğer ad alanının üyelerine erişmek için [ad alanı diğer ad niteleyicisini `::` ](../../language-reference/operators/namespace-alias-qualifier.md) kullanın. Aşağıdaki örnek, ad alanı diğer adının nasıl oluşturulup kullanılacağını gösterir:
+ Ad alanı için takma ad oluşturmak için yönergeyi de kullanabilirsiniz. [ `using` ](../../language-reference/keywords/using-directive.md) Diğer ad alanının üyelerine erişmek için [ad alanı diğer ad niteleyicisini `::` ](../../language-reference/operators/namespace-alias-qualifier.md) kullanın. Aşağıdaki örnek, ad alanı diğer adının nasıl oluşturulup kullanılacağını gösterir:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
@@ -70,7 +70,7 @@ Ad boşlukları C# programlarında iki şekilde yoğun olarak kullanılır. İlk
   
  Genel olarak, ad alanı diğer adını başvurmak veya `global::` genel ad alanına başvurmak `.` ve türleri veya üyeleri nitelemek için [ad alanı diğer adını `::` ](../../language-reference/operators/namespace-alias-qualifier.md) kullanın.  
   
- Ad alanı yerine `::` bir türe başvuruyapan bir takma adla kullanmak bir hatadır. Örnek:  
+ Ad alanı yerine `::` bir türe başvuruyapan bir takma adla kullanmak bir hatadır. Örneğin:  
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
@@ -95,5 +95,5 @@ Ad boşlukları C# programlarında iki şekilde yoğun olarak kullanılır. İlk
 - [C# Programlama Kılavuzu](../index.md)
 - [Ad Alanları](./index.md)
 - [Üye erişim ifadesi](../../language-reference/operators/member-access-operators.md#member-access-expression-)
-- [:: operatör](../../language-reference/operators/namespace-alias-qualifier.md)
+- [:: işleci](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

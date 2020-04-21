@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 51ea64065ea8422e5885022105545780bc916f06
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121461"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739013"
 ---
 # <a name="integral-numeric-types--c-reference"></a>İntegral sayısal türleri (C# referansı)
 
@@ -109,7 +109,7 @@ byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 
 Yukarıdaki örnekte de görüldüğü gibi, literal değeri hedef türü aralığında değilse, [cs0031](../../misc/cs0031.md) derleyici hatası oluşur.
 
-Ayrıca, bir tamsayı tarafından temsil edilen değeri, belirlenen edebi tür dışında türe dönüştürmek için bir döküm kullanabilirsiniz:
+Bir tamsayı tarafından temsil edilen değeri, belirlenen edebi tür dışında türe dönüştürmek için bir döküm de kullanabilirsiniz:
 
 ```csharp
 var signedByte = (sbyte)42;

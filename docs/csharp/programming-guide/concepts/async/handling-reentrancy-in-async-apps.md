@@ -2,12 +2,12 @@
 title: Async Apps'ta Reentrancy'yi Işleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451869"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738311"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Async Apps'ta Reentrancy'yi Işleme (C#)
 
@@ -33,7 +33,7 @@ Uygulamanıza eşzamanlı kod eklediğinizde, yeniden işlem tamamlanmadan önce
 > [!NOTE]
 > Aktarım Katmanı Güvenliği (TLS) sürüm 1.2 artık uygulama geliştirmenizde kullanılacak minimum sürümdür. Uygulamanız 4,7'den önce bir .NET Framework sürümünü hedefliyorsa, .NET Framework ile birlikte [Taşıma Katmanı Güvenliği (TLS) en iyi uygulamaları](../../../../framework/network-programming/tls.md)için aşağıdaki makaleye bakın.
 
-## <a name="BKMK_RecognizingReentrancy"></a>Reentrancy Tanıma
+## <a name="recognizing-reentrancy"></a><a name="BKMK_RecognizingReentrancy"></a>Reentrancy Tanıma
 
 Bu konudaki örnekte, kullanıcılar bir dizi web sitesi indiren ve indirilen toplam bayt sayısını hesaplayan bir eşzamanlı uygulama başlatmak için bir **Başlat** düğmesi seçer. Örneğin eşzamanlı sürümü, ilk kez kullanıcının düğmeyi kaç kez seçtiğine bakılmaksızın aynı şekilde yanıt verir, çünkü ilk kez kullanıcı işi, uygulama çalışan bitene kadar bu olayları yok sayar. Ancak, bir eşzamanlı uygulamada, Kullanıcı Birsonucu iş parçacığı yanıt vermeye devam eder ve tamamlanmadan önce eşzamanlı işlemi yeniden girebilirsiniz.
 
@@ -91,7 +91,7 @@ TOTAL bytes returned:  890591
 
 Bu konunun sonuna kaydırarak bu çıktıyı üreten kodu gözden geçirebilirsiniz. Çözümü yerel bilgisayarınıza indirip websitedownload projesini çalıştırarak veya kendi projenizi oluşturmak için bu konunun sonundaki kodu kullanarak kodu deneyebilirsiniz. Daha fazla bilgi ve yönerge için [Örnek Uygulamayı İnceleme ve Çalıştırma'ya](#BKMD_SettingUpTheExample)bakın.
 
-## <a name="BKMK_HandlingReentrancy"></a>Reentrancy işleme
+## <a name="handling-reentrancy"></a><a name="BKMK_HandlingReentrancy"></a>Reentrancy işleme
 
 Uygulamanızın ne yapmasını istediğinize bağlı olarak, yeniden canlandırma işlemlerini çeşitli şekillerde işleyebilirsiniz. Bu konu aşağıdaki örnekleri sunar:
 
@@ -107,11 +107,11 @@ Uygulamanızın ne yapmasını istediğinize bağlı olarak, yeniden canlandırm
 
   İstenen tüm işlemlerin eşzamanlı olarak çalışmasına izin verin, ancak her işlemden elde edilen sonuçların birlikte ve sırayla görünmesi için çıktının görüntülenmesini koordine edin.
 
-### <a name="BKMK_DisableTheStartButton"></a>Başlat Düğmesini Devre Dışı
+### <a name="disable-the-start-button"></a><a name="BKMK_DisableTheStartButton"></a>Başlat Düğmesini Devre Dışı
 
 Olay işleyicisinin üst kısmındaki düğmeyi devre dışı bırakarak işlem çalışırken Başlat düğmesini engelleyebilirsiniz. **Start** `StartButton_Click` Daha sonra, işlem bittiğinde düğmeyi bir `finally` blok içinden yeniden etkinleştirebilirsiniz, böylece kullanıcılar uygulamayı yeniden çalıştırabilir.
 
-Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)indirebilirsiniz. Projenin adı DisableStartButton'dur.
+Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)da indirebilirsiniz. Projenin adı DisableStartButton'dur.
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -140,13 +140,13 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 Değişikliklerin bir sonucu olarak, düğme web sitelerini indirirken `AccessTheWebAsync` yanıt vermez, bu nedenle işlem yeniden girilemez.
 
-### <a name="BKMK_CancelAndRestart"></a>İşlemi İptal Etme ve Yeniden Başlatma
+### <a name="cancel-and-restart-the-operation"></a><a name="BKMK_CancelAndRestart"></a>İşlemi İptal Etme ve Yeniden Başlatma
 
 **Başlat** düğmesini devre dışı bırakmak yerine düğmeyi etkin tutabilirsiniz, ancak kullanıcı bu düğmeyi tekrar seçerse, zaten çalışan işlemi iptal edin ve en son başlatılan işlemin devam etmesine izin verin.
 
 İptal hakkında daha fazla bilgi için [Async Uygulamanızı (C#) İnce Ayarla'ya](./fine-tuning-your-async-application.md)bakın.
 
-Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)indirebilirsiniz. Projenin adı CancelAndRestart'tır.
+Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)da indirebilirsiniz. Projenin adı CancelAndRestart'tır.
 
 1. Tüm <xref:System.Threading.CancellationTokenSource> yöntemler `cts`için kapsamda olan bir değişken bildirin.
 
@@ -301,13 +301,13 @@ TOTAL bytes returned:  890591
 
 Kısmi listeleri ortadan kaldırmak `StartButton_Click` için, kullanıcı işlemi her yeniden başlattığında metin kutusunu temizlemek için ilk kod satırının yorumunu kaldırın.
 
-### <a name="BKMK_RunMultipleOperations"></a>Birden Çok İşlem çalıştırın ve Çıktıyı Sıraya
+### <a name="run-multiple-operations-and-queue-the-output"></a><a name="BKMK_RunMultipleOperations"></a>Birden Çok İşlem çalıştırın ve Çıktıyı Sıraya
 
 Bu üçüncü örnek, uygulamanın **kullanıcının Başlat** düğmesini her seçtiğinde başka bir eşzamanlı işlem başlatması ve tüm işlemlerin tamamlanması için çalıştırılması açısından en karmaşık örnektir. İstenen tüm işlemler listedeki web sitelerini eşit olarak indirir, ancak işlemlerden elde edilen çıktı sırayla sunulur. Diğer bir deyişle, [Reentrancy'yi Tanıma'daki](#BKMK_RecognizingReentrancy) çıktının gösterdiği gibi, gerçek indirme etkinliği birbiriyle bağlantılıdır, ancak her grubun sonuç listesi ayrı olarak sunulur.
 
 İşlemler, görüntüleme <xref:System.Threading.Tasks.Task> `pendingWork`işlemi için bir kapı bekçisi olarak hizmet veren genel bir , paylaşır.
 
-Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)indirebilirsiniz. Projenin adı QueueResults'dir.
+Bu senaryoyu ayarlamak için, Örnek Uygulamayı Gözden Geçirme [ve Çalıştırma'da](#BKMD_SettingUpTheExample)sağlanan temel kodda aşağıdaki değişiklikleri yapın. Ayrıca bitmiş uygulamayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)da indirebilirsiniz. Projenin adı QueueResults'dir.
 
 Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse aşağıdaki çıktı sonucu gösterir. A harf etiketi, sonucun **Başlat** düğmesinin ilk kez seçildiği nden geldiğini gösterir. Sayılar, indirme hedefleri listesindeKI URL'lerin sırasını gösterir.
 
@@ -547,14 +547,14 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
     Bir grup `StartButton_Click`girdikten sonra, işlem girene `FinishOneGroupAsync`kadar bekleme ifadesini tamamlamaz. Bu nedenle, kodun bu kesimi sırasında başka hiçbir işlem denetim elde edemez.
 
-## <a name="BKMD_SettingUpTheExample"></a>Örnek Uygulamayı İnceleme ve Çalıştırma
+## <a name="reviewing-and-running-the-example-app"></a><a name="BKMD_SettingUpTheExample"></a>Örnek Uygulamayı İnceleme ve Çalıştırma
 
 Örnek uygulamayı daha iyi anlamak için uygulamayı indirebilir, kendiniz oluşturabilir veya uygulamayı uygulamadan bu konunun sonundaki kodu gözden geçirebilirsiniz.
 
 > [!NOTE]
 > Örneği Windows Presentation Foundation (WPF) masaüstü uygulaması olarak çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınıza yüklü olması gerekir.
 
-### <a name="BKMK_DownloadingTheApp"></a>Uygulamayı İndirme
+### <a name="downloading-the-app"></a><a name="BKMK_DownloadingTheApp"></a>Uygulamayı İndirme
 
 1. Sıkıştırılmış dosyayı [Async Samples: Reentrancy in .NET Desktop Apps'tan](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)indirin.
 
@@ -568,7 +568,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 6. Projeyi oluşturmak ve çalıştırmak için CTRL+F5 tuşlarını seçin.
 
-### <a name="BKMK_BuildingTheApp"></a>Uygulamayı Oluşturma
+### <a name="building-the-app"></a><a name="BKMK_BuildingTheApp"></a>Uygulamayı Oluşturma
 
 Aşağıdaki bölümde, örneği WPF uygulaması olarak oluşturmak için kod sağlanır.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e09ed853598dcbb13cc8dc3fe963276e4b5e974d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124285"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739642"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev Tabanlı Eşenkron Desen'i (TAP) üç şekilde uygulayabilirsiniz: Visual Studio'daki C# ve Visual Basic derleyicilerini kullanarak, el ile veya derleyici ve manuel yöntemlerin bir kombinasyonu aracılığıyla. Aşağıdaki bölümlerde her yöntem ayrıntılı olarak tartışılmaktadır. Hem bilgisayara bağlı hem de G/Ç bağlı asenkron işlemleri uygulamak için TAP deseni kullanabilirsiniz. [İş Yükleri](#workloads) bölümünde her işlem türü anlatılır.
@@ -24,10 +24,10 @@ Görev Tabanlı Eşenkron Desen'i (TAP) üç şekilde uygulayabilirsiniz: Visual
 ## <a name="generating-tap-methods"></a>TAP yöntemleri oluşturma
 
 ### <a name="using-the-compilers"></a>Derleyicileri kullanma
-.NET Framework 4.5 ile başlayarak, (Visual `async` `Async` Basic'te) anahtar kelimesiile atfedilen herhangi bir yöntem eşzamanlı bir yöntem olarak kabul edilir ve C# ve Visual Basic derleyicileri TAP kullanarak yöntemi eşzamanlı olarak uygulamak için gerekli dönüşümleri gerçekleştirir. Bir eşzamanlı yöntem bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> veya bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne döndürmelidir. İkincisi için, işlevin gövdesi bir `TResult`,, ve derleyici bu sonucu elde edilen görev nesnesi aracılığıyla kullanılabilir hale sağlar döndürmelidir. Benzer şekilde, yöntemin gövdesi içinde işlenmemiş giden tüm özel durumlar çıktı görevine marshaled ve ortaya <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> çıkan görevin durumda sona ermesine neden olur. Özel durum, <xref:System.OperationCanceledException> (veya türetilmiş tür) işlenmemiş olduğunda ve bu <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumda ortaya çıkan görev in durumunda sona erer.
+.NET Framework 4.5 ile başlayarak, (Visual `async` `Async` Basic'te) anahtar kelimesiile atfedilen herhangi bir yöntem eşzamanlı bir yöntem olarak kabul edilir ve C# ve Visual Basic derleyicileri TAP kullanarak yöntemi eşzamanlı olarak uygulamak için gerekli dönüşümleri gerçekleştirir. Bir eşzamanlı yöntem bir <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> veya bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesne döndürmelidir. İkincisi için, işlevin gövdesi bir `TResult`,, ve derleyici bu sonucu elde edilen görev nesnesi aracılığıyla kullanılabilir hale sağlar döndürmelidir. Benzer şekilde, yöntemin gövdesi içinde işlenmemiş giden tüm özel durumlar çıktı görevine marshaled ve ortaya <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> çıkan görevin durumda sona ermesine neden olur. Bu kuralın istisnası, <xref:System.OperationCanceledException> (veya türetilmiş tür) işlenmemiş olduğunda ve bu <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> durumda ortaya çıkan görev in durumunda sona erer.
 
 ### <a name="generating-tap-methods-manually"></a>TAP yöntemlerini el ile oluşturma
-Uygulama üzerinde daha iyi denetim için TAP desenini el ile uygulayabilirsiniz. Derleyici, <xref:System.Threading.Tasks?displayProperty=nameWithType> ad alanından ve <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında niçin destektürlerine maruz kalan ortak yüzey alanına dayanır. TAP'ı kendiniz uygulamak için <xref:System.Threading.Tasks.TaskCompletionSource%601> bir nesne oluşturur, eşzamanlı işlemi gerçekleştirir ve tamamlandığında <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>yani <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> , veya `Try` yönteme veya bu yöntemlerden birinin sürümünü arayın. Bir TAP yöntemini el ile uyguladığınız zaman, temsil edilen eşzamanlı işlem tamamlandığında ortaya çıkan görevi tamamlamanız gerekir. Örnek:
+Uygulama üzerinde daha iyi denetim için TAP desenini el ile uygulayabilirsiniz. Derleyici, <xref:System.Threading.Tasks?displayProperty=nameWithType> ad alanından ve <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında niçin destektürlerine maruz kalan ortak yüzey alanına dayanır. TAP'ı kendiniz uygulamak için <xref:System.Threading.Tasks.TaskCompletionSource%601> bir nesne oluşturur, eşzamanlı işlemi gerçekleştirir ve tamamlandığında <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A>yani <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> , veya `Try` yönteme veya bu yöntemlerden birinin sürümünü arayın. Bir TAP yöntemini el ile uyguladığınız zaman, temsil edilen eşzamanlı işlem tamamlandığında ortaya çıkan görevi tamamlamanız gerekir. Örneğin:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]

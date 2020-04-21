@@ -4,12 +4,12 @@ description: C# nullable değer türleri ve bunları nasıl kullanacağı hakkı
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888078"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738994"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable değer türleri (C# başvurusu)
 
@@ -58,7 +58,7 @@ Nullable değer türü bir değer türünü nullable olmayan bir değer türü d
 
 Yerine temel değer türünün [varsayılan](default-values.md) değerini kullanmak `null`istiyorsanız, <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> yöntemi kullanın.
 
-Ayrıca, aşağıdaki örnekte görüldüğü gibi, nullable değer türünü nullable olmayan bir türe açıkça atabilirsiniz:
+Aşağıdaki örnekte görüldüğü gibi, nullable değer türünü de açıkça nullable olmayan bir türe atabilirsiniz:
 
 [!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 

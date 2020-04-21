@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: dbe4f4e95c2b99f1be47885e39d51db81ba3a97d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173711"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738809"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C# referans)
 
@@ -27,7 +27,7 @@ C# 7.3 ile başlayarak, numaralandırıcının `Current` özelliği bir referans
 
 C# 8.0 ile `await` başlayarak, koleksiyon `foreach` türü arabirimi uyguladığında <xref:System.Collections.Generic.IAsyncEnumerable%601> işleç deyimine uygulanabilir. Döngünün her yinelemesi, bir sonraki öğe eş senkronize olarak alınırken askıya alınabilir. Varsayılan olarak, akış öğeleri yakalanan bağlamında işlenir. Bağlamın ele geçirilmesini devre dışı kılmış <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> olmak istiyorsanız, uzantı yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi [için, Görev tabanlı eşzamanlı deseni tüketme makalesine](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)bakın.
 
-İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilir veya continue deyimini kullanarak döngüdeki bir sonraki yinelemeye adım atabilirsiniz. [continue](continue.md) `foreach` Ayrıca `foreach` [goto,](goto.md) [return](return.md)veya [atmak](throw.md) ifadeleri tarafından bir döngü çıkabilirsiniz.
+İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilir veya continue deyimini kullanarak döngüdeki bir sonraki yinelemeye adım atabilirsiniz. [continue](continue.md) `foreach` Ayrıca [goto](goto.md) `foreach` tarafından bir döngü çıkmak , [return](return.md), veya ifadeler [atmak.](throw.md)
 
 İfadesi `foreach` `null`uygulanırsa, <xref:System.NullReferenceException> a atılır. `foreach` İfadenin kaynak koleksiyonu boşsa, `foreach` döngügövdesi yürütülmez ve atlanır.
 

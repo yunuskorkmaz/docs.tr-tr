@@ -4,12 +4,12 @@ description: ML.NET,ML.NET belirli bir alana atamak üzere GitHub sorunlarını 
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fc0e935a36c52627903dac2a7b29d6f534695ea0
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608068"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739715"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Öğretici: ML.NET ile çok sınıflı sınıflandırma kullanarak destek sorunlarını kategorilere ayırın
 
@@ -30,8 +30,8 @@ Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/sample
 ## <a name="prerequisites"></a>Ön koşullar
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
-* [Github sorunları sekmesi ayrılmış dosya (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
-* [Github sorunları test sekmesi ayrılmış dosya (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
+* [GitHub sorunları sekmesi ayrılmış dosya (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
+* [GitHub sorunları test sekmesi ayrılmış dosya (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
@@ -145,7 +145,7 @@ Bir için Alan GitHub etiketini `GitHubIssue`tahmin etmek istediğinizde, `Area`
 
 [!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
 
-Ardından, `mlContext.Transforms.Text.FeaturizeText` metin (`Title` ve `Description`) sütunlarını çağrılan `TitleFeaturized` her biri için `DescriptionFeaturized`sayısal bir vektöre dönüştüren çağrı ve . Her iki sütun için de aşağıdaki kodla ardışık ardışıklaştırmayı tamamlayın:
+`mlContext.Transforms.Text.FeaturizeText`Ardından,`Title` metin ( ve `Description`) sütunlarını her çağrılan `TitleFeaturized` ve `DescriptionFeaturized`. Her iki sütun için de aşağıdaki kodla ardışık ardışıklaştırmayı tamamlayın:
 
 [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
 

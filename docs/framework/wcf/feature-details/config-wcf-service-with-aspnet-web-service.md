@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389780"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739225"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma
 
 Bir Windows Communication Foundation (WCF) hizmet bitiş noktasını ASP.NET Web hizmeti istemcisiyle <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> birlikte çalışabilir olarak yapılandırmak için, hizmet bitiş noktanız için bağlama türü olarak türü kullanın.  
   
- Bağlamada HTTPS ve aktarım düzeyinde istemci kimlik doğrulaması için isteğe bağlı olarak destek etkinleştirebilirsiniz. ASP.NET Web hizmeti istemcileri MTOM ileti kodlamasını desteklemez, bu nedenle <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> özellik <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>varsayılan değeri olarak bırakılmalıdır. ASP.Net Web Hizmeti istemcileri WS-Security'yi desteklemez, bu nedenle <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> . <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>  
+ Bağlamada HTTPS ve aktarım düzeyinde istemci kimlik doğrulaması için isteğe bağlı olarak destek etkinleştirebilirsiniz. ASP.NET Web hizmeti istemcileri MTOM ileti kodlamasını desteklemez, bu nedenle <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> özellik <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>varsayılan değeri olarak bırakılmalıdır. ASP.NET Web Hizmeti istemcileri WS-Security'yi desteklemez, bu nedenle <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> . <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>  
   
  Bir WCF hizmetinin meta verilerini ASP.NET Web hizmeti proxy oluşturma araçları (diğer bir deyişle, [Web Hizmetleri Açıklama Dil Aracı (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), Web Hizmetleri Bulma Aracı [(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))ve Visual Studio'da **Web Başvuru Ekle** özelliği ni ASP.NET için kullanılabilir hale getirmek için, bir HTTP/GET meta veri bitiş noktasını ortaya çıkarmalısınız.  
   
@@ -24,7 +24,7 @@ Bir Windows Communication Foundation (WCF) hizmet bitiş noktasını ASP.NET Web
   
 1. Yeni <xref:System.ServiceModel.BasicHttpBinding> bir örnek oluşturma  
   
-2. İsteğe bağlı olarak, bu hizmetin bitiş noktası bağlamaiçin <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>aktarım güvenliğini, 'ye bağlama için güvenlik modunu ayarlayarak etkinleştirin. Ayrıntılar için lütfen [Transport Security'ye](../../../../docs/framework/wcf/feature-details/transport-security.md)bakın.  
+2. İsteğe bağlı olarak, bu hizmetin bitiş noktası bağlamaiçin <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>aktarım güvenliğini, 'ye bağlama için güvenlik modunu ayarlayarak etkinleştirin. Ayrıntılar için [Transport Security'ye](../../../../docs/framework/wcf/feature-details/transport-security.md)bakın.  
   
 3. Yeni oluşturduğunuz bağlama örneğini kullanarak hizmet ana bilgisayarınıza yeni bir uygulama bitiş noktası ekleyin. Koda bir hizmet bitiş noktası nın nasıl eklenebildiğini öğrenmek için [bkz.](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
   

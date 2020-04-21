@@ -1,18 +1,18 @@
 ---
 title: ref anahtar kelime - C# Referans
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805855"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738834"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -21,7 +21,7 @@ Anahtar `ref` kelime, başvuru yla geçirilen bir değeri gösterir. Dört farkl
 - Bir yöntem imza ve bir yöntem arama, başvuru ile bir yönteme bir argüman geçmek için. Daha fazla bilgi için [bkz.](#passing-an-argument-by-reference)
 - Bir yöntem imzasında, başvuru ile arayana bir değer döndürmek için. Daha fazla bilgi için [Bkz. Başvuru iade değerleri.](#reference-return-values)
 - Bir üye gövdesinde, bir referans dönüş değerinin, arayanın değiştirmek istediği bir başvuru olarak yerel olarak depolandığını veya genel olarak yerel bir değişkenin başvuru yla başka bir değere eriştiğini belirtmek için. Daha fazla bilgi için Ref [yerel bilgilerine](#ref-locals)bakın.
-- Bir `struct` veya bir `ref struct` `readonly ref struct`beyanda . Daha fazla bilgi için [ref struct türlerine](#ref-struct-types)bakın.
+- Bir `struct` veya bir `ref struct` `readonly ref struct`beyanda . Daha fazla bilgi [ `ref` ](../builtin-types/struct.md#ref-struct) için Yapı [türleri](../builtin-types/struct.md) makalesinin yapı bölümüne bakın.
 
 ## <a name="passing-an-argument-by-reference"></a>Bir bağımsız değişkeni başvuruyla geçirme
 
@@ -136,23 +136,6 @@ Aşağıdaki örnekte iki `Book` <xref:System.String> alanı olan bir `Title` `A
 Arayan `GetBookByTitle` yöntem tarafından döndürülen değeri bir ref yerel olarak depoladığında, aşağıdaki örnekte görüldüğü `BookCollection` gibi, arayanın return value'a yaptığı değişiklikler nesneye yansıtılır.
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>Ref yapı tipleri
-
-`struct` Bir bildirime `ref` değiştirici nin eklenmesi, bu tür örneklerin yığın ayrılması gerektiğini tanımlar. Başka bir deyişle, bu tür örnekler başka bir sınıfın bir üyesi olarak yığın üzerinde oluşturulamaz. Bu özelliğin temel <xref:System.Span%601> motivasyonu ve ilgili yapılardır.
-
-Bir `ref struct` türü yığın ayrılmış değişken olarak tutma hedefi, derleyicinin tüm `ref struct` türler için uyguladığı çeşitli kurallar sunar.
-
-- Bir `ref struct`şey için boks yapamazsınız. Bir tür, `ref struct` tür `object`, `dynamic`veya herhangi bir arabirim türü değişkenine atayamazsınız.
-- `ref struct`türler arabirimleri uygulayamaz.
-- Bir `ref struct` sınıfın alan üyesi veya normal bir yapı olarak beyan edemezsiniz. Bu, derleyici tarafından oluşturulan bir destek alanı oluşturan otomatik olarak uygulanan bir özelliği bildirmeyi içerir.
-- Async yöntemleri `ref struct` türleri yerel değişkenler bildiremezsiniz. Bunları, döndüren <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>eşzamanlı yöntemlerle veya `Task`-benzeri türlerde bildirebilirsiniz.
-- Yineleyicilerde `ref struct` yerel değişkenleri bildiremezsiniz.
-- Lambda `ref struct` ifadelerinde veya yerel işlevlerde değişkenleri yakalayamamazsınız.
-
-Bu kısıtlamalar, yanlışlıkla yönetilen yığına tanıtacak şekilde kullanmamanızı `ref struct` sağlar.
-
-Bir yapıyı " olarak `readonly ref`bildirmek için değiştiricileri birleştirebilirsiniz. A `readonly ref struct` yararları ve kısıtlamaları `ref struct` ve `readonly struct` bildirimleri birleştirir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
