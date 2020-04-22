@@ -489,7 +489,7 @@
                     - name: Bir CSV metin dosyasında sütun değerlerini hesaplama (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ ve Yansıma
-                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: Bütünleştirilmiş kodun meta verilerini Yansıma ile sorgulama (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ ve Dosya Dizinleri
@@ -1322,7 +1322,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: Yapı türleri
                   href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly'
+                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
                 - name: Boş değer atanabilen değer türleri
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
