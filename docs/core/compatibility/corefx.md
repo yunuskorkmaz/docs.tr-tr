@@ -1,17 +1,17 @@
 ---
 title: Taban sınıf kitaplığı kesme değişiklikleri
-description: Taban sınıf kitaplığı olan .NET CoreFx'teki son dakika değişikliklerini listeler.
+description: Çekirdek .NET kitaplıklarında kırılan değişiklikleri listeler.
 ms.date: 09/20/2019
-ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf90ca2bc8736101c1cb8d327a93d100148937b
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147581"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021834"
 ---
-# <a name="corefx-breaking-changes"></a>CoreFx kesme değişiklikleri
+# <a name="core-net-libraries-breaking-changes"></a>Core .NET kitaplıkları değişiklikleri kırma
 
-CoreFx,.NET Core tarafından kullanılan ilkel ve diğer genel türleri sağlar.
+Çekirdek .NET kitaplıkları .NET Core tarafından kullanılan ilkel ve diğer genel türleri sağlar.
 
 Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 

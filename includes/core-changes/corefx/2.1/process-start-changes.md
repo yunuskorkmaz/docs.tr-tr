@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9544b65f31772d0f4cee918528a73171fec4de99
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021815"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>UseShellExecute'ın varsayılan değerindeki değişiklik
 
@@ -29,7 +29,7 @@ Uygulamanız eski davranışa <xref:System.Diagnostics.Process.Start(System.Diag
 
 #### <a name="category"></a>Kategori
 
-CoreFx
+Çekirdek .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

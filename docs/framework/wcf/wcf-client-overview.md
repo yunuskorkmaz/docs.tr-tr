@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278892"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021730"
 ---
 # <a name="wcf-client-overview"></a>WCF istemciye genel bakış
 
@@ -42,7 +42,7 @@ Aşağıdaki bölümlerde bu adımları tartışmak ve aşağıdaki konulara kı
 - İstemci kanallarını kullanarak hizmetleri arama.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Hizmet Sözleşmesi, Ciltler ve Adresler Edinin  
- WCF'de, hizmetler ve istemciler yönetilen öznitelikleri, arabirimleri ve yöntemleri kullanarak sözleşmeleri modeller. İstemci uygulamasındaki bir hizmete bağlanmak için hizmet sözleşmesinin tür bilgilerini almanız gerekir. Genellikle, bunu, hizmetten meta veri indiren, seçtiğiniz dilde yönetilen bir kaynak kodu dosyasına dönüştüren ve WCF istemci nesnenizi yapılandırmak için kullanabileceğiniz bir istemci uygulama yapılandırma dosyası oluşturan [ServiceModel Metadata Utility Tool'u (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)kullanarak yaparsınız. Örneğin, bir `MyCalculatorService`'yi çağırmak için bir WCF istemcisi nesnesi oluşturacaksanız ve bu `http://computerName/MyCalculatorService/Service.svc?wsdl`hizmete ait meta verilerin , yönetilen kodda hizmet `ClientCode.vb` sözleşmesi içeren bir dosyayı elde etmek için Svcutil.exe'nin nasıl kullanılacağını aşağıdaki kod örneğinde yayımlandığını biliyorsanız.  
+ WCF'de, hizmetler ve istemciler yönetilen öznitelikleri, arabirimleri ve yöntemleri kullanarak sözleşmeleri modeller. İstemci uygulamasındaki bir hizmete bağlanmak için hizmet sözleşmesinin tür bilgilerini almanız gerekir. Genellikle [ServiceModel Metadata Utility Tool 'u (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)kullanarak hizmet sözleşmesi için tür bilgileri elde elabilirsiniz. Yardımcı program, hizmetten meta verileri karşıdan yükler, seçtiğiniz dilde yönetilen bir kaynak kodu dosyasına dönüştürür ve WCF istemci nesnenizi yapılandırmak için kullanabileceğiniz bir istemci uygulama yapılandırma dosyası oluşturur. Örneğin, bir `MyCalculatorService`'yi çağırmak için bir WCF istemcisi nesnesi oluşturacaksanız ve bu `http://computerName/MyCalculatorService/Service.svc?wsdl`hizmete ait meta verilerin , yönetilen kodda hizmet `ClientCode.vb` sözleşmesi içeren bir dosyayı elde etmek için Svcutil.exe'nin nasıl kullanılacağını aşağıdaki kod örneğinde yayımlandığını biliyorsanız.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  

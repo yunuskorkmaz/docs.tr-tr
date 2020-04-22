@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 843c78bb4e4f88d9ac58308a91ab8278364c9580
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568230"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021596"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0, kötü biçimlendirilmiş UTF-8 bayt dizilerini değiştirirken Unicode en iyi uygulamalarını takip eder
 
@@ -36,7 +36,7 @@ Geliştirici adına herhangi bir eylem gerekmez.
 
 #### <a name="category"></a>Kategori
 
-CoreFx
+Çekirdek .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

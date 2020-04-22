@@ -1,14 +1,14 @@
 ---
 title: global.json’a genel bakış
 description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürümünü ayarlamak için global.json dosyasını nasıl kullanacağınızı öğrenin.
-ms.date: 01/14/2020
+ms.date: 04/21/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626001"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021342"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
@@ -115,6 +115,17 @@ Aşağıdaki örnekte, tam olarak belirtilen sürümün nasıl kullanılacağı 
   "sdk": {
     "version": "3.1.100",
     "rollForward": "disable"
+  }
+}
+```
+
+Aşağıdaki örnek, belirli bir ana ve küçük sürümün yüklü en son özellik bandı ve yama sürümünün nasıl kullanılacağını gösterir:
+
+```json
+{
+  "sdk": {
+    "version": "3.1.000",
+    "rollForward": "latestFeature"
   }
 }
 ```

@@ -2,13 +2,13 @@
 title: Hata ayıklama bir bellek sızıntısı öğretici
 description: .NET Core'da bellek sızıntısını nasıl hata ayıklayın öğrenin.
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737733"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021366"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Öğretici: .NET Core'da bellek sızıntısını hata ayıklama
 
@@ -26,7 +26,7 @@ Bu öğreticide şunları yapacaksınız:
 > - Bir döküm dosyası oluşturun.
 > - Döküm dosyasını kullanarak bellek kullanımını çözümle.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Öğretici kullanır:
 
@@ -137,7 +137,7 @@ Bu öğreticide, artık [Örnek hata ayıklama hedefini](https://docs.microsoft.
 
 ### <a name="analyze-the-core-dump"></a>Çekirdek dökümünün analizi
 
-Şimdi oluşturulan bir çekirdek dökümü var, dökümü analiz etmek için [dotnet-dump)](dotnet-dump.md) aracını kullanın:
+Artık bir çekirdek dökümü oluşturuldu, dökümü analiz etmek için [dotnet-dökümü](dotnet-dump.md) aracını kullanın:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Analiz `core_20190430_185145` etmek istediğiniz çekirdek dökümünün adı nerede?
 
 > [!NOTE]
-> *libdl.so* bulunamaz şikayet eden bir hata görürseniz, *libc6-dev* paketini yüklemeniz gerekebilir. Daha fazla bilgi [için Linux'ta .NET Core için Ön koşullara](../linux-prerequisites.md)bakın.
+> *libdl.so* bulunamaz şikayet eden bir hata görürseniz, *libc6-dev* paketini yüklemeniz gerekebilir. Daha fazla bilgi [için Linux'ta .NET Core için Ön koşullara](../install/dependencies.md?pivots=os-linux)bakın.
 
 SOS komutlarını girebileceğiniz bir istem sunulur. Genellikle, bakmak istediğiniz ilk şey yönetilen yığının genel durumudur:
 

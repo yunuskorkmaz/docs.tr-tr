@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f8a790718fbb9d685bb8959808338dc1766bf2c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449575"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021552"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue statik, yalnızca init-only alanları için özel durum atar
 
@@ -31,7 +31,7 @@ Alternatif olarak, özniteliği <xref:System.Reflection.FieldAttributes.InitOnly
 
 #### <a name="category"></a>Kategori
 
-CoreFx
+Çekirdek .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

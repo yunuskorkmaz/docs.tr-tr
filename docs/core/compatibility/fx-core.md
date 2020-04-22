@@ -3,12 +3,12 @@ title: Son dakika değişiklikleri - .NET Framework to .NET Core
 titleSuffix: ''
 description: .NET Framework'den .NET Core'a son dakika değişikliklerini listeler.
 ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef16132c8dcffbe9bcfbe02834c9a78d6d0c33e4
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449418"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021798"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework'den .NET Core'a geçiş için son dakika değişiklikleri
 
@@ -17,7 +17,7 @@ Bir uygulamayı .NET Framework'den .NET Core'a geçiriyorsanız, bu makalede lis
 > [!NOTE]
 > Bu makale, .NET Framework ve .NET Core arasındaki son dakika değişikliklerinin tam bir listesi değildir. En önemli kırılma değişiklikleri biz bunların farkında olmak gibi burada eklenir.
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>Çekirdek .NET kitaplıkları
 
 - [UseShellExecute'ın varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
 - [FileSystemInfo.Attributes tarafından atılan Yetkisiz ErişimÖzel Durum](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)

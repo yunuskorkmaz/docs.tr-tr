@@ -4,12 +4,12 @@ description: C# dilinde yapılan son geliştirmeler, daha önce güvenli olmayan
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389677"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021483"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Güvenli ve verimli C# kodu yazın
 
@@ -26,7 +26,7 @@ Bu makalede, aşağıdaki kaynak yönetimi teknikleri üzerinde duruluyor:
 - İade [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) değeri daha `struct` <xref:System.IntPtr.Size?displayProperty=nameWithType> büyükse ve depolama ömrü değeri döndüren yöntemden daha büyükse bir iade kullanın.
 - A `readonly struct` boyutu daha <xref:System.IntPtr.Size?displayProperty=nameWithType>büyükse, performans nedenleriyle `in` bir parametre olarak geçirmelisiniz.
 - Değiştirici `struct` ile `in` beyan edilmedikçe veya yöntem yalnızca `readonly` yapı nın üyelerini çağırmadığı sürece asla bir parametre olarak geçmeyin. `readonly` Bu kılavuzun ihlal için de performansı olumsuz etkileyebilir ve belirsiz bir davranışa yol açabilir.
-- Bir [`ref struct`](language-reference/keywords/ref.md#ref-struct-types)byte `readonly ref struct` dizisi <xref:System.Span%601> olarak <xref:System.ReadOnlySpan%601> bellekle çalışmak için bir veya benzeri bir şey kullanın.
+- Bir [`ref struct`](language-reference/builtin-types/struct.md#ref-struct)byte `readonly ref struct` dizisi <xref:System.Span%601> olarak <xref:System.ReadOnlySpan%601> bellekle çalışmak için bir veya benzeri bir şey kullanın.
 
 Bu teknikler **referanslar** ve **değerler**açısından iki rakip hedefleri dengelemek için zorlar. [Başvuru türleri](programming-guide/types/index.md#reference-types) olan değişkenler bellekteki konuma bir başvuru tutar. [Değer türleri](programming-guide/types/index.md#value-types) olan değişkenler doğrudan değerlerini içerir. Bu farklılıklar, bellek kaynaklarını yönetmek için önemli olan temel farklılıkları vurgular. **Değer türleri** genellikle bir yönteme geçirildiğinde veya bir yöntemden döndürüldüğünde kopyalanır. Bu davranış, bir değer `this` türünün üyelerini ararken değerini kopyalamayı içerir. Kopyanın maliyeti, türün boyutuyla ilgilidir. **Başvuru türleri** yönetilen yığına ayrılır. Her yeni nesne yeni bir ayırma gerektirir ve daha sonra geri alınmalıdır. Bu iki işlem de zaman alır. Başvuru türü bir bağımsız değişken olarak bir yönteme geçirildiğinde veya bir yöntemden döndürüldüğünde başvuru kopyalanır.
 

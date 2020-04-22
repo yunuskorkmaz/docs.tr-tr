@@ -1,6 +1,6 @@
 ---
 title: Özel durum işleme (Görev Paralel Kitaplığı)
-ms.date: 03/30/2017
+ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134258"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021503"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Özel durum işleme (Görev Paralel Kitaplığı)
 
@@ -89,7 +89,14 @@ Eğer bir görev <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-Gerçek bir uygulamada, devamlılık temsilcisi özel durum hakkında ayrıntılı bilgi kaydedebilir ve uygulamayı özel durumdan kurtarmak için yeni görevler oluşturabilir.
+Anlamlı bir uygulamada, devam temsilcisi özel durum hakkında ayrıntılı bilgileri günlüğe kaydedebilir ve büyük olasılıkla özel durum kurtarmak için yeni görevler yumurtlayabilir. Bir görev hata yaparsa, aşağıdaki ifadeler özel durum atar:
+
+- `await task`
+- `task.Wait()`
+- `task.Result`
+- `task.GetAwaiter().GetResult()`
+
+Atılan [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) özel durumları işlemek ve gözlemlemek için bir deyim kullanın. Alternatif olarak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özel liğe erişerek özel durumu gözlemleyin.
 
 ## <a name="unobservedtaskexception-event"></a>Gözlenmeyen TaskException olayı
 

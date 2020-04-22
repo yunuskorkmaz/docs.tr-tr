@@ -25,10 +25,10 @@
           href: how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md
         - name: Windows Forms'ta Olayların Sırası
           href: order-of-events-in-windows-forms.md
-    - name: Windows Formlarının Boyutunu ve Ölçeğini Ayarlama
+    - name: Windows Forms Boyutunu ve Ölçeğini Ayarlama
       href: adjusting-the-size-and-scale-of-windows-forms.md
       items:
-        - name: 'Nasıl yapılır: Windows Formlarını Yeniden Boyutlandırma'
+        - name: 'Nasıl yapılır: Windows Forms’u Yeniden Boyutlandırma'
           href: how-to-resize-windows-forms.md
         - name: Windows Forms'ta Otomatik Ölçeklendirme
           href: automatic-scaling-in-windows-forms.md
@@ -40,7 +40,7 @@
     - name: Windows Formlarının Görünüşünü Değiştirme
       href: changing-the-appearance-of-windows-forms.md
       items:
-        - name: 'Nasıl yapılır: Windows Formlarının Kenarlıklarını Değiştirme'
+        - name: 'Nasıl yapılır: Windows Forms’un Kenarlıklarını Değiştirme'
           href: how-to-change-the-borders-of-windows-forms.md
     - name: Windows Forms Denetimleri
       href: ./controls/
@@ -79,7 +79,7 @@
               href: drag-and-drop-functionality-in-windows-forms.md
         - name: 'Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma'
           href: how-to-simulate-mouse-and-keyboard-events-in-code.md
-        - name: 'Nasıl yapılır: Windows Formları Denetimlerinde Kullanıcı Girdi Olaylarını İşleme'
+        - name: 'Nasıl yapılır: Windows Forms Denetimlerinde Kullanıcı Girdi Olaylarını İşleme'
           href: how-to-handle-user-input-events-in-windows-forms-controls.md
         - name: Windows Forms'ta Kullanıcı Girdisi Doğrulama
           href: user-input-validation-in-windows-forms.md
@@ -103,7 +103,7 @@
           href: how-to-apply-the-propertynamechanged-pattern.md
         - name: 'Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme'
           href: how-to-create-a-bound-control-and-format-the-displayed-data.md
-        - name: 'Nasıl yapılır: Bir Windows Formunda Basit Bağlantılı Denetim Oluşturma'
+        - name: 'Nasıl yapılır: Windows Forms’ta Basit Bağlantılı Denetim Oluşturma'
           href: how-to-create-a-simple-bound-control-on-a-windows-form.md
         - name: 'Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama'
           href: multiple-controls-bound-to-data-source-synchronized.md
@@ -115,7 +115,7 @@
           href: how-to-implement-the-inotifypropertychanged-interface.md
         - name: 'Nasıl yapılır: ITypedList Arabirimini Uygulama'
           href: how-to-implement-the-itypedlist-interface.md
-        - name: 'Nasıl yapılır: Windows Formlarında Verilerde Gezinme'
+        - name: 'Nasıl yapılır: Windows Forms Verilerinde Gezinme'
           href: how-to-navigate-data-in-windows-forms.md
     - name: Windows Forms Güvenliği
       href: windows-forms-security.md
@@ -130,6 +130,8 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Windows Forms için ClickOnce Dağıtımı
       href: clickonce-deployment-for-windows-forms.md
+    - name: .NET Core 3.0’da erişilebilirlik geliştirmeleri
+      href: windows-forms-accessibility-improvements.md
     - name: 'Nasıl yapılır: Windows Forms''ta Anahtarlanmış Koleksiyonlara Erişim'
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Windows Forms Uygulamalarını Geliştirme

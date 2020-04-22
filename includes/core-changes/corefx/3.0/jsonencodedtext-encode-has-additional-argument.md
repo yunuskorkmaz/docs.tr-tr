@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2afe5ae80c2d7feca89737b767a6335950d04416
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147594"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021566"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText.Encode yöntemleri ek bir JavaScriptEncoder argüman var
 
@@ -52,7 +52,7 @@ Bu yalnızca ikili bir kırılma değişikliğidir; .NET Core 3.0 Preview 8 veya
 
 #### <a name="category"></a>Kategori
 
-CoreFx
+Çekirdek .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

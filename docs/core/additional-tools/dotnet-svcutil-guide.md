@@ -3,12 +3,12 @@ title: WCF svcutil aracına genel bakış
 description: .NET Framework projeleri için WCF svcutil aracına benzer şekilde .NET Core ve ASP.NET Core projeleri için işlevsellik ekleyen Microsoft WCF dotnet-svcutil aracına genel bakış.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920944"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021259"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF dotnet-svcutil aracı
 
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** aracı, ağ konumundak
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan gelen hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan referans eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 <!-- markdownlint-disable MD025 -->
 
@@ -128,7 +128,7 @@ Oluşturulan dosya _HelloSvcutil/ServiceReference/Reference.cs_olarak kaydedilir
 4. Web hizmetini `Configure` çağırmak için yöntemi edin. Bunu, istemci nesnesinden devralan sınıfın bir `ClientBase` örneğini oluşturarak ve yöntemi istemci nesnesi üzerinde çağırarak yaparsınız:
 
     ```csharp
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {

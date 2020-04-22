@@ -2,12 +2,12 @@
 title: 'C# ayrılmış öznitelikler: Koşullu, Eski, ÖznitelikKullanım'
 ms.date: 04/09/2020
 description: Bu öznitelikler derleyici tarafından oluşturulan kodu etkilemek için derleyici tarafından yorumlanır
-ms.openlocfilehash: ca3b76387de2a57380d6eb0848991d979a558662
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389872"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021766"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>Ayrılmış öznitelikler: Koşullu Öznitelik, EskiÖzÖzöz, ÖznitelikKullanımAttribute
 
@@ -19,25 +19,25 @@ Bu öznitelikler, kodunuzdaki öğelere uygulanabilir. Bu elementlere anlamsal a
 
 Aşağıdaki örnekte, `Conditional` programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı etmek için bir yöntem uygulanır:
 
-::::::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
 
 `TRACE_ON` Tanımlayıcı tanımlanmamışsa, izleme çıktısı görüntülenmez. Etkileşimli pencerede kendiniz keşfedin.
 
 Öznitelik `Conditional` genellikle aşağıdaki örnekte gösterildiği gibi, hata ayıklama yapılar için izleme ve günlük özelliklerini etkinleştirmek için tanımlayıcı ile `DEBUG` kullanılır, ancak sürüm yapılarda değil:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
 
 Koşullu olarak işaretlenmiş bir yöntem çağrıldığında, belirtilen ön işleme sembolünün varlığı veya yokluğu, çağrının dahil edilip edilmeyeceğini veya atlanıp atlanmayacağını belirler. Sembol tanımlanırsa, çağrı dahil edilir; aksi takdirde, arama atlanır. Koşullu yöntem, bir sınıf veya yapı bildiriminde bir yöntem `void` olmalı ve bir dönüş türüne sahip olmalıdır. Kullanma, `Conditional` blokların içine `#if…#endif` girme yöntemlerinden daha temiz, daha zarif ve daha az hataya açıktır.
 
 Bir yöntemin `Conditional` birden çok özniteliği varsa, bir veya daha fazla koşullu sembol tanımlanırsa (semboller OR işleci kullanılarak mantıksal olarak birbirine bağlanır) yönteme çağrı bulunur. Aşağıdaki örnekte, bir yöntem `A` `B` çağrısıya neden olan veya bu çağrılardan birinin varlığı:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
 
 ### <a name="using-conditional-with-attribute-classes"></a>Öznitelik sınıfları ile kullanma `Conditional`
 
 Öznitelik, `Conditional` öznitelik sınıfı tanımına da uygulanabilir. Aşağıdaki örnekte, özel öznitelik `Documentation` yalnızca tanımlanmışsa `DEBUG` meta verilere bilgi ekler.
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
 
 ## <a name="obsolete-attribute"></a>`Obsolete` özniteliği
 
@@ -45,7 +45,7 @@ Bir yöntemin `Conditional` birden çok özniteliği varsa, bir veya daha fazla 
 
 Aşağıdaki örnekte `Obsolete` öznitelik sınıfa `A` ve yönteme `B.OldMethod`uygulanır. Öznitelik oluşturucu uygulanan ikinci bağımsız `B.OldMethod` değişken için `true`ayarlanmış olduğundan, bu yöntem derleyici hatasına neden olurken, sınıf `A` kullanarak sadece bir uyarı üretecektir. Ancak `B.NewMethod`arama, hiçbir uyarı veya hata üretir. Örneğin, önceki tanımlarla kullandığınızda, aşağıdaki kod iki uyarı ve bir hata oluşturur:
 
-::::::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
 
 Öznitelik oluşturucuya ilk bağımsız değişken olarak sağlanan dize, uyarı veya hatanın bir parçası olarak görüntülenir. Sınıf `A` için iki uyarı oluşturulur: biri sınıf başvuru bildirimi için, diğeri sınıf oluşturucusu için. Öznitelik `Obsolete` bağımsız değişkenler olmadan kullanılabilir, ancak bunun yerine ne kullanılacağı bir açıklama da dahil olmak üzere önerilir.
 

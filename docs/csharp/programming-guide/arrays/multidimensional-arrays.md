@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715047"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021749"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Çok Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -28,7 +28,7 @@ Dizilerin birden fazla boyutu olabilir. Örneğin, aşağıdaki bildirim dört s
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- Ayrıca, sıralamayı belirtmeden diziyi başlatmayapabilirsiniz.  
+ Sıralamayı belirtmeden diziyi de başharfe alabilirsiniz.  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -53,4 +53,4 @@ Dizilerin birden fazla boyutu olabilir. Örneğin, aşağıdaki bildirim dört s
 - [C# Programlama Kılavuzu](../index.md)
 - [Diziler](./index.md)
 - [Tek Boyutlu Diziler](./single-dimensional-arrays.md)
-- [Basit Diziler](./jagged-arrays.md)
+- [Düzensiz Diziler](./jagged-arrays.md)
