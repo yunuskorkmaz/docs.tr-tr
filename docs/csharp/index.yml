@@ -6,12 +6,12 @@ metadata:
   description: C# programlamayı öğrenin - başlangıç geliştiricileri, C#'a yeni geliştiriciler ve deneyimli C# / .NET geliştiricileri için
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339165"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102729"
 landingContent:
 - title: "C'de programlamayı öğrenin #"
   linkLists:
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: .NET Çekirdek SDK'yı indirin
+    - text: .NET Core SDK’sını indirin
       url: https://dotnet.microsoft.com/download
 - title: C# temelleri
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Nullability için API'ler açıklama
-      url: nullable-attributes.md
+    - text: Geçersiz bir geçiş stratejisi seçin
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: Async akışlarını tüketin ve oluşturun
