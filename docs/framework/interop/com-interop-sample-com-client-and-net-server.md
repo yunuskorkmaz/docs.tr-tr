@@ -15,11 +15,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181510"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="b5527-102">COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu</span><span class="sxs-lookup"><span data-stu-id="b5527-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="b5527-103">Bu örnek, bir COM [Istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve ipotek hesaplamaları gerçekleştiren bir [.NET Server'ın](#cpconcominteropsamplecomclientnetserveranchor2) birlikte çalışmasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b5527-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="b5527-104">Bu örnekte, istemci yönetilen `Loan` sınıfın bir örneğini oluşturur ve çağırır, dört bağımsız değişkeni (bu dört bağımsız değişkenden biri sıfıra eşit) geçer ve hesaplamaları görüntüler.</span><span class="sxs-lookup"><span data-stu-id="b5527-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="b5527-105">Bu örnekten kod örnekleri bu bölümde görünür.</span><span class="sxs-lookup"><span data-stu-id="b5527-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="4dbe6-102">COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu</span><span class="sxs-lookup"><span data-stu-id="4dbe6-102">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="4dbe6-103">Bu örnek, bir [com istemcisinin](#cpconcominteropsamplecomclientnetserveranchor1) ve ipotek hesaplamaları gerçekleştiren bir [.net sunucusunun](#cpconcominteropsamplecomclientnetserveranchor2) birlikte çalışmasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4dbe6-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="4dbe6-104">Bu örnekte, istemci yönetilen `Loan` sınıfın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamalar görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="4dbe6-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="4dbe6-105">Bu örnekteki kod örnekleri bu bölümün tamamında görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="4dbe6-105">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
-## <a name="com-client"></a><span data-ttu-id="b5527-106">COM İstemci</span><span class="sxs-lookup"><span data-stu-id="b5527-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="4dbe6-106">COM Istemcisi</span><span class="sxs-lookup"><span data-stu-id="4dbe6-106">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a><span data-ttu-id="b5527-107">.NET Sunucu</span><span class="sxs-lookup"><span data-stu-id="b5527-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="4dbe6-107">.NET Server</span><span class="sxs-lookup"><span data-stu-id="4dbe6-107">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -387,6 +387,6 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b5527-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5527-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4dbe6-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4dbe6-108">See also</span></span>
 
-- [<span data-ttu-id="b5527-109">.NET Framework Bileşenlerini COM'da Gösterme</span><span class="sxs-lookup"><span data-stu-id="b5527-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)
+- [<span data-ttu-id="4dbe6-109">.NET Framework Bileşenlerini COM'da Gösterme</span><span class="sxs-lookup"><span data-stu-id="4dbe6-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)

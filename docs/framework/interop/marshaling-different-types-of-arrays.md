@@ -15,76 +15,76 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181361"
 ---
-# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="b6315-102">Farklı Dizi Türlerini Hazırlama</span><span class="sxs-lookup"><span data-stu-id="b6315-102">Marshaling Different Types of Arrays</span></span>
-<span data-ttu-id="b6315-103">Dizi, yönetilen kodda aynı türden bir veya daha fazla öğe içeren bir başvuru türüdür.</span><span class="sxs-lookup"><span data-stu-id="b6315-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="b6315-104">Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametreler olarak geçirilirler.</span><span class="sxs-lookup"><span data-stu-id="b6315-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="b6315-105">Bu davranış, yönetilen dizilerin yönetilen nesnelere geçirildiği ve In/Out parametreleri olarak geçirildiğiyle tutarsızdır.</span><span class="sxs-lookup"><span data-stu-id="b6315-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="b6315-106">Ek ayrıntılar için [bkz.](copying-and-pinning.md)</span><span class="sxs-lookup"><span data-stu-id="b6315-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
+# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="3fa19-102">Farklı Dizi Türlerini Hazırlama</span><span class="sxs-lookup"><span data-stu-id="3fa19-102">Marshaling Different Types of Arrays</span></span>
+<span data-ttu-id="3fa19-103">Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir başvuru türüdür.</span><span class="sxs-lookup"><span data-stu-id="3fa19-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="3fa19-104">Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametre olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="3fa19-105">Bu davranış, yönetilen dizilerin ın/out parametreleri gibi yönetilen nesnelere geçirilme yöntemi ile tutarlı değildir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="3fa19-106">Daha fazla bilgi için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).</span><span class="sxs-lookup"><span data-stu-id="3fa19-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
   
- <span data-ttu-id="b6315-107">Aşağıdaki tabloda diziler için mareşal seçenekleri listelanır ve bunların kullanımını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b6315-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
+ <span data-ttu-id="3fa19-107">Aşağıdaki tabloda diziler için sıralama seçenekleri listelenmekte ve kullanımları açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3fa19-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
   
-|<span data-ttu-id="b6315-108">Dizi</span><span class="sxs-lookup"><span data-stu-id="b6315-108">Array</span></span>|<span data-ttu-id="b6315-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b6315-109">Description</span></span>|  
+|<span data-ttu-id="3fa19-108">Dizi</span><span class="sxs-lookup"><span data-stu-id="3fa19-108">Array</span></span>|<span data-ttu-id="3fa19-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3fa19-109">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="b6315-110">Değere göre tümsadanların.</span><span class="sxs-lookup"><span data-stu-id="b6315-110">Of integers by value.</span></span>|<span data-ttu-id="b6315-111">Bir in parametresi olarak bir dizi tümseci geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-111">Passes an array of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="b6315-112">Referans olarak tümsadanların.</span><span class="sxs-lookup"><span data-stu-id="b6315-112">Of integers by reference.</span></span>|<span data-ttu-id="b6315-113">Bir dizi integer'ı Giriş/Çıkış parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-113">Passes an array of integers as an In/Out parameter.</span></span>|  
-|<span data-ttu-id="b6315-114">Değere göre tümsaderlerin (iki boyutlu).</span><span class="sxs-lookup"><span data-stu-id="b6315-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="b6315-115">Tamsayılar matrisini In parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-115">Passes a matrix of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="b6315-116">Dizilerin değerine göre.</span><span class="sxs-lookup"><span data-stu-id="b6315-116">Of strings by value.</span></span>|<span data-ttu-id="b6315-117">Bir dizi dizeyi In parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-117">Passes an array of strings as an In parameter.</span></span>|  
-|<span data-ttu-id="b6315-118">İntegerli yapıların.</span><span class="sxs-lookup"><span data-stu-id="b6315-118">Of structures with integers.</span></span>|<span data-ttu-id="b6315-119">In parametresi olarak, içinde hiçsesayı içeren bir dizi yapıyı geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
-|<span data-ttu-id="b6315-120">Dizeleri olan yapıların.</span><span class="sxs-lookup"><span data-stu-id="b6315-120">Of structures with strings.</span></span>|<span data-ttu-id="b6315-121">Yalnızca Giriş/Çıkış parametresi olarak dizeleri içeren bir dizi yapıyı geçirir.</span><span class="sxs-lookup"><span data-stu-id="b6315-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="b6315-122">Dizinin üyeleri değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="b6315-122">Members of the array can be changed.</span></span>|  
+|<span data-ttu-id="3fa19-110">Değere göre tamsayılar.</span><span class="sxs-lookup"><span data-stu-id="3fa19-110">Of integers by value.</span></span>|<span data-ttu-id="3fa19-111">Bir tamsayılar dizisini ın parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-111">Passes an array of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="3fa19-112">Başvuruya göre tamsayılar.</span><span class="sxs-lookup"><span data-stu-id="3fa19-112">Of integers by reference.</span></span>|<span data-ttu-id="3fa19-113">Bir tamsayı dizisini bir ın/out parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-113">Passes an array of integers as an In/Out parameter.</span></span>|  
+|<span data-ttu-id="3fa19-114">Değere göre tamsayılar (iki boyutlu).</span><span class="sxs-lookup"><span data-stu-id="3fa19-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="3fa19-115">Bir tamsayı matrisini bir ın parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-115">Passes a matrix of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="3fa19-116">Değere göre dizeler.</span><span class="sxs-lookup"><span data-stu-id="3fa19-116">Of strings by value.</span></span>|<span data-ttu-id="3fa19-117">Bir dize dizisini ın parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-117">Passes an array of strings as an In parameter.</span></span>|  
+|<span data-ttu-id="3fa19-118">, Tamsayılar içeren yapılar.</span><span class="sxs-lookup"><span data-stu-id="3fa19-118">Of structures with integers.</span></span>|<span data-ttu-id="3fa19-119">As parametresi olarak tamsayılar içeren bir yapı dizisini geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
+|<span data-ttu-id="3fa19-120">Dizeleri olan yapılar.</span><span class="sxs-lookup"><span data-stu-id="3fa19-120">Of structures with strings.</span></span>|<span data-ttu-id="3fa19-121">Yalnızca dizeleri içeren bir yapı dizisini bir ın/out parametresi olarak geçirir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="3fa19-122">Dizi üyeleri değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-122">Members of the array can be changed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b6315-123">Örnek</span><span class="sxs-lookup"><span data-stu-id="b6315-123">Example</span></span>  
- <span data-ttu-id="b6315-124">Bu örnek, aşağıdaki dizi türlerinin nasıl geçirilen gösteriş gösterir:</span><span class="sxs-lookup"><span data-stu-id="b6315-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
+## <a name="example"></a><span data-ttu-id="3fa19-123">Örnek</span><span class="sxs-lookup"><span data-stu-id="3fa19-123">Example</span></span>  
+ <span data-ttu-id="3fa19-124">Bu örnek, aşağıdaki dizi türlerin nasıl geçirileceğini gösterir:</span><span class="sxs-lookup"><span data-stu-id="3fa19-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
   
-- <span data-ttu-id="b6315-125">Değere göre tümerler dizisi.</span><span class="sxs-lookup"><span data-stu-id="b6315-125">Array of integers by value.</span></span>  
+- <span data-ttu-id="3fa19-125">Değere göre tamsayılar dizisi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-125">Array of integers by value.</span></span>  
   
-- <span data-ttu-id="b6315-126">Yeniden boyutlandırılabilen başvuru yaylaları dizisi.</span><span class="sxs-lookup"><span data-stu-id="b6315-126">Array of integers by reference, which can be resized.</span></span>  
+- <span data-ttu-id="3fa19-126">Başvuruya göre tamsayılar dizisi, yeniden boyutlandırılabilir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-126">Array of integers by reference, which can be resized.</span></span>  
   
-- <span data-ttu-id="b6315-127">Değere göre çok boyutlu dizi (matris).</span><span class="sxs-lookup"><span data-stu-id="b6315-127">Multidimensional array (matrix) of integers by value.</span></span>  
+- <span data-ttu-id="3fa19-127">Değere göre tamsayılar için çok boyutlu dizi (matris).</span><span class="sxs-lookup"><span data-stu-id="3fa19-127">Multidimensional array (matrix) of integers by value.</span></span>  
   
-- <span data-ttu-id="b6315-128">Değere göre dize dizisi.</span><span class="sxs-lookup"><span data-stu-id="b6315-128">Array of strings by value.</span></span>  
+- <span data-ttu-id="3fa19-128">Değere göre dizeler dizisi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-128">Array of strings by value.</span></span>  
   
-- <span data-ttu-id="b6315-129">Tümsegeriçeren yapıların dizisi.</span><span class="sxs-lookup"><span data-stu-id="b6315-129">Array of structures with integers.</span></span>  
+- <span data-ttu-id="3fa19-129">Tamsayılarla yapıların dizisi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-129">Array of structures with integers.</span></span>  
   
-- <span data-ttu-id="b6315-130">Dizeleri ile yapıların dizi.</span><span class="sxs-lookup"><span data-stu-id="b6315-130">Array of structures with strings.</span></span>  
+- <span data-ttu-id="3fa19-130">Dizeler içeren yapıların dizisi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-130">Array of structures with strings.</span></span>  
   
- <span data-ttu-id="b6315-131">Bir dizi açıkça başvuru tarafından marshaled sürece, varsayılan davranış bir In parametresi olarak dizi marshals.</span><span class="sxs-lookup"><span data-stu-id="b6315-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="b6315-132">Bu davranışı <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> öznitelikleri açıkça uygulayarak değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b6315-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
+ <span data-ttu-id="3fa19-131">Bir dizi başvuruya göre açıkça sıralanmamışsa, varsayılan davranış diziyi bir ın parametresi olarak sıraladığında.</span><span class="sxs-lookup"><span data-stu-id="3fa19-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="3fa19-132"><xref:System.Runtime.InteropServices.InAttribute> Ve <xref:System.Runtime.InteropServices.OutAttribute> özniteliklerini açıkça uygulayarak bu davranışı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3fa19-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
   
- <span data-ttu-id="b6315-133">Diziler örneği, özgün işlev bildirimiile gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:</span><span class="sxs-lookup"><span data-stu-id="b6315-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
+ <span data-ttu-id="3fa19-133">Diziler örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:</span><span class="sxs-lookup"><span data-stu-id="3fa19-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
   
-- <span data-ttu-id="b6315-134">PinvokeLib.dll'den ihraç edilen **TestArrayOfInts.**</span><span class="sxs-lookup"><span data-stu-id="b6315-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-134">PInvokeLib. dll ' den alınan **Tebaşlangıçraylar** .</span><span class="sxs-lookup"><span data-stu-id="3fa19-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- <span data-ttu-id="b6315-135">**TestRefArrayOfInts** PinvokeLib.dll ihraç.</span><span class="sxs-lookup"><span data-stu-id="b6315-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-135">PInvokeLib. dll dosyasından **test edilmiş Testrefarray.**</span><span class="sxs-lookup"><span data-stu-id="3fa19-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- <span data-ttu-id="b6315-136">PinvokeLib.dll'den ihraç edilen **TestMatrixOfInts.**</span><span class="sxs-lookup"><span data-stu-id="b6315-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-136">PInvokeLib. dll dosyasından alınan **Testmatrixoflitre** .</span><span class="sxs-lookup"><span data-stu-id="3fa19-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- <span data-ttu-id="b6315-137">PinvokeLib.dll'den dışa aktarılan **TestArrayOfStrings.**</span><span class="sxs-lookup"><span data-stu-id="b6315-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-137">**TestArrayOfStrings** , PInvokeLib. dll dosyasından verildi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- <span data-ttu-id="b6315-138">PinvokeLib.dll'den ihraç edilen **TestArrayOfStructs.**</span><span class="sxs-lookup"><span data-stu-id="b6315-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-138">PInvokeLib. dll dosyasından aktarılmış **Testarrayofyapılar** .</span><span class="sxs-lookup"><span data-stu-id="3fa19-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- <span data-ttu-id="b6315-139">**TestArrayOfStructs2** PinvokeLib.dll'den ihraç edildi.</span><span class="sxs-lookup"><span data-stu-id="b6315-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
+- <span data-ttu-id="3fa19-139">**TestArrayOfStructs2** , PInvokeLib. dll dosyasından verildi.</span><span class="sxs-lookup"><span data-stu-id="3fa19-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
   
     ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- <span data-ttu-id="b6315-140">[PinvokeLib.dll,](marshaling-data-with-platform-invoke.md#pinvokelibdll) daha önce listelenen işlevler ve **MYPOINT** ve **MYPERSON**olmak üzere iki yapı değişkeni için uygulamalar içeren özel bir yönetilmeyen kitaplıktır.</span><span class="sxs-lookup"><span data-stu-id="b6315-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="b6315-141">Yapılar aşağıdaki öğeleri içerir:</span><span class="sxs-lookup"><span data-stu-id="b6315-141">The structures contain the following elements:</span></span>  
+ <span data-ttu-id="3fa19-140">[PInvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenen işlevler ve iki yapı değişkeni, **myPoint** ve **MyPerson**için uygulamalar içeren özel bir yönetilmeyen kitaplıktır.</span><span class="sxs-lookup"><span data-stu-id="3fa19-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="3fa19-141">Yapılar aşağıdaki öğeleri içerir:</span><span class="sxs-lookup"><span data-stu-id="3fa19-141">The structures contain the following elements:</span></span>  
   
 ```cpp
 typedef struct _MYPOINT  
@@ -100,19 +100,19 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- <span data-ttu-id="b6315-142">Bu örnekte, `MyPoint` `MyPerson` ve yapılar gömülü türleri içerir.</span><span class="sxs-lookup"><span data-stu-id="b6315-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="b6315-143">Öznitelik, <xref:System.Runtime.InteropServices.StructLayoutAttribute> üyelerin göründükleri sırada, sırayla bellekte düzenlendiğinden emin olmak için ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="b6315-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
+ <span data-ttu-id="3fa19-142">Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="3fa19-143"><xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="3fa19-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
   
- <span data-ttu-id="b6315-144">Sınıf, `NativeMethods` `App` sınıf tarafından çağrılan bir dizi yöntem içerir.</span><span class="sxs-lookup"><span data-stu-id="b6315-144">The `NativeMethods` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="b6315-145">Geçen diziler hakkında özel ayrıntılar için aşağıdaki örnekteki yorumlara bakın.</span><span class="sxs-lookup"><span data-stu-id="b6315-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="b6315-146">Başvuru türü olan bir dizi varsayılan olarak In parametresi olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="b6315-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="b6315-147">Arayanın sonuçları alabilmesi için, diziyi içeren bağımsız değişkene açık olarak **InAttribute** ve **OutAttribute** uygulanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b6315-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
+ <span data-ttu-id="3fa19-144">`NativeMethods` Sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-144">The `NativeMethods` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="3fa19-145">Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın.</span><span class="sxs-lookup"><span data-stu-id="3fa19-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="3fa19-146">Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="3fa19-147">Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="3fa19-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
   
-### <a name="declaring-prototypes"></a><span data-ttu-id="b6315-148">Prototipleri Bildirme</span><span class="sxs-lookup"><span data-stu-id="b6315-148">Declaring Prototypes</span></span>  
+### <a name="declaring-prototypes"></a><span data-ttu-id="3fa19-148">Prototipleri Bildirme</span><span class="sxs-lookup"><span data-stu-id="3fa19-148">Declaring Prototypes</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### <a name="calling-functions"></a><span data-ttu-id="b6315-149">İşlevleri Çağırma</span><span class="sxs-lookup"><span data-stu-id="b6315-149">Calling Functions</span></span>  
+### <a name="calling-functions"></a><span data-ttu-id="3fa19-149">İşlevleri Çağırma</span><span class="sxs-lookup"><span data-stu-id="3fa19-149">Calling Functions</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a><span data-ttu-id="b6315-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6315-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3fa19-150">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3fa19-150">See also</span></span>
 
-- [<span data-ttu-id="b6315-151">Platform çağrıcı veri türleri</span><span class="sxs-lookup"><span data-stu-id="b6315-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
-- [<span data-ttu-id="b6315-152">Yönetilen Kodda Prototipler Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b6315-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="3fa19-151">Platform çağırma veri türleri</span><span class="sxs-lookup"><span data-stu-id="3fa19-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [<span data-ttu-id="3fa19-152">Yönetilen Kodda Prototipler Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3fa19-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
