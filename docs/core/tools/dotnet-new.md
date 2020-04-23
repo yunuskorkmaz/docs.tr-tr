@@ -2,12 +2,12 @@
 title: dotnet yeni komut
 description: Dotnet yeni komutu, belirtilen şablonu temel alan yeni .NET Core projeleri oluşturur.
 ms.date: 04/10/2020
-ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463605"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102833"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,6 +35,10 @@ dotnet new -h|--help
 Komut, `dotnet new` şablona dayalı bir .NET Core projesi veya diğer yapılar oluşturur.
 
 Komut, belirtilen şablon ve seçenekleri temel alan disküzerinde yapıları oluşturmak için [şablon altyapısını](https://github.com/dotnet/templating) çağırır.
+
+### <a name="implicit-restore"></a>Örtük geri yükleme
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 

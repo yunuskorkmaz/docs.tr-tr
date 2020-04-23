@@ -2,12 +2,12 @@
 title: Nullable başvuru türleri - C# referans
 description: C# nullable referans türleri ve bunları nasıl kullanacağı hakkında bilgi edinin
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888318"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102703"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Nullable başvuru türleri (C# başvurusu)
 
@@ -61,11 +61,11 @@ Aşağıdaki snippet derleyicinin bu sınıfı kullanırken uyarıları nereye y
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-Önceki örnekler, başvuru değişkenlerinin null durumunu belirlemek için derleyicinin statik çözümlemesi gösterir. Derleyici, çözümlemesi için geçersiz denetimler ve atamalar için dil kuralları uygular.  Derleyici yöntem veya özelliklerin anlamtları hakkında varsayımlarda bulunamaz. Null denetimleri gerçekleştiren yöntemleri çağırırsanız, derleyici bu yöntemlerin bir değişkenin null durumunu etkilediğini bilemiyor. Derlemeyi bağımsız değişkenlerin ve döndürücü değerlerin anlambilimi hakkında bilgilendirmek için API'lerinize ekleyebileceğiniz birkaç öznitelik vardır. Bu öznitelikler .NET Core kitaplıklarında birçok yaygın API'ye uygulanmıştır. Örneğin, <xref:System.String.IsNullOrEmpty%2A> güncelleştirildi ve derleyici bu yöntemi doğru bir şekilde null denetim olarak yorumlar. Null state statik çözümlemesi için geçerli öznitelikler hakkında daha fazla bilgi için, [Nullable öznitelikleri](../../nullable-attributes.md)makaleye bakın.
+Önceki örnekler, başvuru değişkenlerinin null durumunu belirlemek için derleyicinin statik çözümlemesi gösterir. Derleyici, çözümlemesi için geçersiz denetimler ve atamalar için dil kuralları uygular.  Derleyici yöntem veya özelliklerin anlamtları hakkında varsayımlarda bulunamaz. Null denetimleri gerçekleştiren yöntemleri çağırırsanız, derleyici bu yöntemlerin bir değişkenin null durumunu etkilediğini bilemiyor. Derlemeyi bağımsız değişkenlerin ve döndürücü değerlerin anlambilimi hakkında bilgilendirmek için API'lerinize ekleyebileceğiniz birkaç öznitelik vardır. Bu öznitelikler .NET Core kitaplıklarında birçok yaygın API'ye uygulanmıştır. Örneğin, <xref:System.String.IsNullOrEmpty%2A> güncelleştirildi ve derleyici bu yöntemi doğru bir şekilde null denetim olarak yorumlar. Null state statik çözümlemesi için geçerli öznitelikler hakkında daha fazla bilgi için, [Nullable öznitelikleri](../attributes/nullable-analysis.md)makaleye bakın.
 
 ## <a name="setting-the-nullable-context"></a>Nullable bağlamı ayarlama
 
-Nullable bağlamı denetlemenin iki yolu vardır. Proje düzeyinde, proje ayarını `<Nullable>enable</Nullable>` ekleyebilirsiniz. Tek bir C# kaynak dosyasında, `#nullable enable` nullable bağlamı etkinleştirmek için pragma ekleyebilirsiniz. [Nullable bir strateji belirleme](../../nullable-attributes.md)ile ilgili makaleye bakın.
+Nullable bağlamı denetlemenin iki yolu vardır. Proje düzeyinde, proje ayarını `<Nullable>enable</Nullable>` ekleyebilirsiniz. Tek bir C# kaynak dosyasında, `#nullable enable` nullable bağlamı etkinleştirmek için pragma ekleyebilirsiniz. [Nullable bir strateji belirleme](../../nullable-migration-strategies.md)ile ilgili makaleye bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

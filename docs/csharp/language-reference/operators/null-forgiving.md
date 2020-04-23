@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f3d06dec42ba117cd30dbf4d05fa4a6f594e57e5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738564"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101987"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-affgiving) işleci (C# referans)
 
@@ -43,7 +43,7 @@ Null-affgiving işleci olmadan, derleyici `p.Name` kod için aşağıdaki `Warni
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-Önceki örnekte, `p` `null` `if` derleyicideyimin içinde olamayacağını öğrenmek için yeterli bilgiye sahip olduğundan, geçersiz affedici işleci kullanmanız gerekmez. Bir değişkenin null durumu hakkında ek bilgi sağlamanıza olanak tanıyan öznitelikler hakkında daha fazla bilgi için, [null beklentilerini tanımlamak için öznitelikleri içeren Yükseltme API'lerine](../../nullable-attributes.md)bakın.
+Önceki örnekte, `p` `null` `if` derleyicideyimin içinde olamayacağını öğrenmek için yeterli bilgiye sahip olduğundan, geçersiz affedici işleci kullanmanız gerekmez. Bir değişkenin null durumu hakkında ek bilgi sağlamanıza olanak tanıyan öznitelikler hakkında daha fazla bilgi için, [null beklentilerini tanımlamak için öznitelikleri içeren Yükseltme API'lerine](../attributes/nullable-analysis.md)bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

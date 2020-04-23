@@ -2,12 +2,12 @@
 title: ML.NET nasıl yapılacağını kılavuzları
 description: Özel Yapay AI çözümleri oluşturma ve Machine Learning entegrasyonuile .NET uygulamalarınıza yardımcı olmak için belirli görevleri nasıl yapacağınızı öğrenin.
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607538"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102456"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET Machine öğrenme nasıl yapılacağını kılavuzları
 
@@ -27,15 +27,9 @@ ML.NET Kılavuzu'nun nasıl yapılacağını bölümünde, sık sorulan sorulara
 
 * [ML.NET kullanarak bir değeri tahmin etmek için bir regresyon modeli eğitin.](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>Model kalitesini değerlendirme
-
-* [Model kalitesini değerlendirmek için ölçümleri hesaplayın.](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>Model açıklanabilirliği
 
 * [Permütasyon Özelliği Önemi olan modellerin özelliğinin önemini belirleyin.](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [Model açıklanabilirliği için Genelleştirilmiş Katkı Modelleri ve şekil işlevlerini kullanın.](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Çalıştırın
 

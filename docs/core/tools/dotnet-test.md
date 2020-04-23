@@ -2,12 +2,12 @@
 title: dotnet test komutu
 description: Dotnet test komutu, belirli bir projede birim testlerini yürütmek için kullanılır.
 ms.date: 02/27/2020
-ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739096"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102755"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -43,6 +43,10 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+### <a name="implicit-restore"></a>Örtük geri yükleme
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`PROJECT | SOLUTION`**
@@ -69,7 +73,7 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Test platformu için tanılama modunu etkinleştirin ve belirtilen dosyaya tanılama iletileri yazar.
+  Test platformu için tanılama modunu etkinleştirir ve belirtilen dosyaya tanılama iletileri yazar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -105,11 +109,11 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Hangi çalıştırmak için ikili bulmak için dizin.
+  Hangi çalıştırmak için ikili bulmak için dizin. Belirtilmemişse, varsayılan `./bin/<configuration>/<framework>/`yol .  Birden çok hedef çerçevesi olan `TargetFrameworks` projelerde (özellik üzerinden), bu seçeneği belirttiğinizi de tanımlamanız `--framework` gerekir.
 
 - **`-r|--results-directory <PATH>`**
 
-  Test sonuçlarının yerleştirilebileceği dizin. Belirtilen dizin yoksa oluşturulur.
+  Test sonuçlarının yerleştirilebileceği dizin. Belirtilen dizin yoksa oluşturulur. Varsayılan değer, proje dosyasını içeren dizindedir. `TestResults`
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -127,13 +131,13 @@ Test projeleri, aşağıdaki örnek `<PackageReference>` proje dosyasında gör�
 
   Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Varsayılan değer: `minimal`. Daha fazla bilgi için bkz. <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- `RunSettings`Bağımsız değişken
+- **`RunSettings`** Bağımsız değişken
 
   Bağımsız değişkenler `RunSettings` test için yapılandırmaolarak geçirilir. Bağımsız değişkenler `[name]=[value]` "-- " (sonra daki boşluğa dikkat ...... Bir boşluk birden çok `[name]=[value]` çifti ayırmak için kullanılır.
 
   Örnek: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Daha fazla bilgi için [vstest.console.exe: RunSettings args'ı geçmek](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Daha fazla bilgi için [bkz.](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)
 
 ## <a name="examples"></a>Örnekler
 

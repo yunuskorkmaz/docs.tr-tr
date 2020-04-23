@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170318"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102053"
 ---
 # <a name="classes-c-programming-guide"></a>Sınıflar (C# Programlama Kılavuzu)
 
@@ -26,7 +26,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-Nesne oluşturulduğunda, yönetilen yığına belirli bir nesne için yeterli bellek ayrılır ve değişken yalnızca bu nesnenin konumuna bir başvuru tutar. Yönetilen yığındaki türler, hem ayrıldıklarında hem de *çöp toplama*olarak bilinen CLR'nin otomatik bellek yönetimi işlevi tarafından geri alındıklarında ek yükü gerektirir. Ancak, çöp toplama da son derece iyi leştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için [Otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/gc.md)bilgisine bakın.  
+Nesne oluşturulduğunda, yönetilen yığına belirli bir nesne için yeterli bellek ayrılır ve değişken yalnızca bu nesnenin konumuna bir başvuru tutar. Yönetilen yığındaki türler, hem ayrıldıklarında hem de *çöp toplama*olarak bilinen CLR'nin otomatik bellek yönetimi işlevi tarafından geri alındıklarında ek yükü gerektirir. Ancak, çöp toplama da son derece iyi leştirilmiştir ve çoğu senaryoda bir performans sorunu oluşturmaz. Çöp toplama hakkında daha fazla bilgi için [Otomatik bellek yönetimi ve çöp toplama](../../../standard/garbage-collection/fundamentals.md)bilgisine bakın.  
   
 ## <a name="declaring-classes"></a>Sınıfları Bildirme
 
@@ -103,7 +103,7 @@ Aşağıdaki örnek, otomatik olarak uygulanan bir [özellik,](auto-implemented-
 
 - [C# Programlama Kılavuzu](../index.md)
 - [Nesne Odaklı Programlama](../concepts/object-oriented-programming.md)
-- [Çok biçimlilik](polymorphism.md)
+- [Çok Biçimlilik](polymorphism.md)
 - [Tanımlayıcı adları](../inside-a-program/identifier-names.md)
 - [Üyeler](members.md)
 - [Yöntemler](methods.md)

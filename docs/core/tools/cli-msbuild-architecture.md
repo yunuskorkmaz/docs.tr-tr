@@ -2,12 +2,12 @@
 title: .NET Çekirdek Komut satırı araçları mimarisi
 description: .NET Core araç katmanları ve son sürümlerde nelerin değiştiği hakkında bilgi edinin.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092921"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102885"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core araçlarındaki değişikliklere üst düzey genel bakış
 
@@ -30,7 +30,7 @@ Aşağıdaki resimde gösterildiği gibi Önizleme 2 katmanında hızlı bir yen
 
 ![Önizleme 2 araçları üst düzey mimari](media/cli-msbuild-architecture/p2-arch.png)
 
-Önizleme 2'deki araçların katmanlanması basittir. Altta, temel .NET Çekirdek CLI olduğunu. Visual Studio veya Visual Studio Code gibi diğer tüm üst düzey araçlar, projeler oluşturmak, bağımlılıkları geri yüklemek ve benzeri için CLI'ye bağlıdır ve bunlara güvenir. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsa, CLI'deki `dotnet restore` [(nota bakınız)](#dotnet-restore-note)komutuna çağrır.
+Önizleme 2'deki araçların katmanlanması basittir. Altta, temel .NET Çekirdek CLI olduğunu. Visual Studio veya Visual Studio Code gibi diğer tüm üst düzey araçlar, projeler oluşturmak, bağımlılıkları geri yüklemek ve benzeri için CLI'ye bağlıdır ve bunlara güvenir. Örneğin, Visual Studio bir geri yükleme işlemi gerçekleştirmek istiyorsa, CLI'deki komuta `dotnet restore` çağrır.
 
 Yeni proje sistemine geçicisiile, önceki diyagram değişir:
 
@@ -41,7 +41,7 @@ Temel fark, CLI artık temel tabaka değildir; bu rol artık "paylaşılan SDK b
 > [!NOTE]
 > "Hedef", MSBuild'in çağırabileceği adlandırılmış bir işlemi gösteren bir MSBuild terimidir. Genellikle hedef yapmak gerekiyordu bazı mantık yürütmek bir veya daha fazla görev ile birleştiğinde. MSBuild gibi `Copy` birçok hazır hedefleri `Execute`destekler; ayrıca, kullanıcıların yönetilen kodu kullanarak kendi görevlerini yazmalarına ve bu görevleri yürütmek için hedefleri tanımlamalarına da olanak tanır. Daha fazla bilgi için [MSBuild görevlerine](/visualstudio/msbuild/msbuild-tasks)bakın.
 
-CLI dahil olmak üzere tüm araç kümeleri artık paylaşılan SDK bileşenini ve hedeflerini tüketmektedir. Örneğin, Visual Studio 2019 ,NET `dotnet restore` Core projelerinin bağımlılıklarını geri yüklemek için[(nota bakınız)](#dotnet-restore-note)komutunu aramaz. Bunun yerine, doğrudan "Geri Yükleme" hedefini kullanır. Bunlar MSBuild hedefleri olduğundan, [dotnet msbuild](dotnet-msbuild.md) komutunu kullanarak bunları yürütmek için ham MSBuild'i de kullanabilirsiniz.
+CLI dahil olmak üzere tüm araç kümeleri artık paylaşılan SDK bileşenini ve hedeflerini tüketmektedir. Örneğin, Visual Studio 2019 .NET `dotnet restore` Core projelerinin bağımlılıklarını geri yüklemek için komuta çağrılmaz. Bunun yerine, doğrudan "Geri Yükleme" hedefini kullanır. Bunlar MSBuild hedefleri olduğundan, [dotnet msbuild](dotnet-msbuild.md) komutunu kullanarak bunları yürütmek için ham MSBuild'i de kullanabilirsiniz.
 
 ### <a name="cli-commands"></a>CLI komutları
 
@@ -73,5 +73,6 @@ Bu komut, "Release" `pub` yapılandırmasını kullanarak bir uygulamayı klasö
 
 Bu kuralın önemli `new` istisnaları `run` ve komutlarıdır. Bunlar MSBuild hedefleri olarak uygulanmamıştır.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>Örtük geri yükleme
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974981"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102638"
 ---
-# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8, 4.7, 4.6 ve 4.5 Geçiş Kılavuzu
+# <a name="migrate-to-net-framework-48-47-46-and-45"></a>.NET Framework 4.8, 4.7, 4.6 ve 4.5'e geçiş
 
-Uygulamanızı .NET Framework'ün önceki bir sürümünü kullanarak oluşturduysanız, genellikle .NET Framework 4.5 ve puan sürümleri (4.5.1 ve 4.5.2), .NET Framework 4.6 ve puan sürümleri (4.6.1 ve 4.6.2), .NET Framework 4.7 ve puan sürümlerine ( 4.7.1 ve 4.7.2) veya .NET Framework 4.8 kolayca. Görsel Stüdyo'da projenizi açın. Projeniz Visual Studio'nun önceki bir sürümünde oluşturulduysa, **Proje Uyumluluğu** iletişim kutusu otomatik olarak açılır. Visual Studio'da bir projeyi yükseltme hakkında daha fazla bilgi için, [Visual Studio Projeleri ve Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) [2019 Platform Hedefleme ve Uyumluluğu](/visualstudio/releases/2019/compatibility)Geliştirme hakkında bakınız.
+Uygulamanızı .NET Framework'ün önceki bir sürümünü kullanarak oluşturduysanız, genellikle .NET Framework 4.5 ve puan sürümleri (4.5.1 ve 4.5.2), .NET Framework 4.6 ve puan sürümleri (4.6.1 ve 4.6.2), .NET Framework 4.7 ve puan sürümleri (4.7.1 ve 4.7.2) veya .NET Framework 4.8'e kolayca yükseltebilirsiniz. Görsel Stüdyo'da projenizi açın. Projeniz Visual Studio'nun önceki bir sürümünde oluşturulduysa, **Proje Uyumluluğu** iletişim kutusu otomatik olarak açılır. Visual Studio'da bir projeyi yükseltme hakkında daha fazla bilgi için, [Visual Studio Projeleri ve Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) [2019 Platform Hedefleme ve Uyumluluğu](/visualstudio/releases/2019/compatibility)Geliştirme hakkında bakınız.
 
  Ancak, .NET Framework'deki bazı değişiklikler için kodunuzda değişiklik gerekir. Ayrıca .NET Framework 4.5 ve onun nokta sürümlerinde,.NET Framework 4.6 ve onun nokta sürümlerinde, .NET Framework 4.7 ve onun puan sürümlerinde veya .NET Framework 4.8'de yeni olan işlevselliklerden yararlanmak isteyebilirsiniz. .NET Framework'ün yeni bir sürümü için uygulamanızda bu tür değişiklikler yapmak genellikle *geçiş*olarak adlandırılır. Uygulamanızın geçirilmeniz gerekiyorsa, uygulamayı yeniden derlemeden .NET Framework 4.5 veya daha sonraki bir sürümde çalıştırabilirsiniz.
 
 ## <a name="migration-resources"></a>Geçiş kaynakları
 
-.NET Framework'ün önceki sürümlerinden sürüm 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 sürümüne geçmeden önce aşağıdaki belgeleri inceleyin:
+Uygulamanızı .NET Framework'ün önceki sürümlerinden sürüm 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 sürümüne geçirmeden önce aşağıdaki belgeleri inceleyin:
 
 - .NET Framework'ün her sürümünün altında yatan CLR sürümünü anlamak ve uygulamalarınızı başarıyla hedefleme yönergelerini gözden geçirmek için [Sürümler ve Bağımlılıklar'a](versions-and-dependencies.md) bakın.
 

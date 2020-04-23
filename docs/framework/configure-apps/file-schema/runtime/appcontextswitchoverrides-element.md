@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242822"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102937"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> öğesi
 
@@ -55,11 +55,11 @@ ms.locfileid: "81242822"
 |`runtime`|Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
- .NET Framework 4.6'dan `<AppContextSwitchOverrides>` başlayarak, yapılandırma dosyasındaki öğe, API'yi arayanların uygulamalarının yeni işlevlerden yararlanıp yararlanamayacağını veya kitaplığın önceki sürümleriyle uyumluluğu koruyup koruyamayacağını belirlemelerine olanak tanır. Örneğin, bir API'nin davranışı kitaplığın iki sürümü arasında `<AppContextSwitchOverrides>` değiştiyse, öğe, bu API'yi arayanların kitaplığın yeni işlevselliği destekleyen sürümlerindeki yeni davranışı devre dışı bırakmalarına olanak tanır. .NET Framework'de API'leri çağıran `<AppContextSwitchOverrides>` uygulamalar için öğe, uygulamaları .NET Framework'ün önceki bir sürümünü hedefleyen arayanların, uygulamaları bu işlevselliği içeren .NET Framework'ün bir sürümünde çalışıyorsa yeni işlevselliği etkinleştirmelerine de izin verebilir.
+ .NET Framework 4.6 ile `<AppContextSwitchOverrides>` başlayarak, yapılandırma dosyasındaki öğe, API'yi arayanların uygulamalarının yeni işlevlerden yararlanıp yararlanamayacağını veya kitaplığın önceki sürümleriyle uyumluluğu koruyup koruyamayacağını belirlemelerine olanak tanır. Örneğin, bir API'nin davranışı kitaplığın iki sürümü arasında `<AppContextSwitchOverrides>` değiştiyse, öğe, bu API'yi arayanların kitaplığın yeni işlevselliği destekleyen sürümlerindeki yeni davranışı devre dışı bırakmalarına olanak tanır. .NET Framework'de API'leri çağıran `<AppContextSwitchOverrides>` uygulamalar için öğe, uygulamaları .NET Framework'ün önceki bir sürümünü hedefleyen arayanların, uygulamaları bu işlevselliği içeren .NET Framework'ün bir sürümünde çalışıyorsa yeni işlevselliği etkinleştirmelerine de izin verebilir.
 
  Öğenin `value` `<AppContextSwitchOverrides>` özniteliği, bir veya daha fazla yarı sütunlu ad/değer çiftlerinden oluşan tek bir dizeden oluşur.  Her ad bir uyumluluk anahtarı tanımlar ve karşılık gelen`true` `false`değeri anahtarın ayarlanıp ayarlanmadığını gösteren bir Boolean (veya) değeridir. Varsayılan olarak, anahtar `false`ve kitaplıklar yeni işlevselliği sağlar. Yalnızca anahtar ayarlanmışsa (yani değeri) önceki işlevselliği `true`sağlarlar. Bu, kitaplıkların varolan bir API için yeni davranış sağlamasına olanak sağlarken, önceki davranışa bağlı olan arayanların yeni işlevselliği devre dışı bırakmalarına olanak tanır.
 
- .NET Framework aşağıdaki anahtarları destekler:
+.NET Framework aşağıdaki anahtarları destekler:
 
 |Anahtar adı|Açıklama|Tanıttı|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ ms.locfileid: "81242822"
 
  Kitaplık geliştiricileri, arayanların kitaplıklarının sonraki sürümlerinde tanıtılan değiştirilmiş işlevleri devre dışı bırakmalarına olanak sağlamak için özel anahtarlar da tanımlayabilir. Daha fazla bilgi <xref:System.AppContext> için sınıfa bakın.
 
-## <a name="switches-in-aspnet-applications"></a>ASP.NET uygulamalarda anahtarlar
+## <a name="switches-in-aspnet-apps"></a>ASP.NET uygulamalarında anahtarlar
 
 web.config dosyasının [ \<appSettings>](../appsettings/index.md) bölümüne [ \<bir>ekle](../appsettings/add-element-for-appsettings.md) öğesi ekleyerek uyumluluk ayarlarını kullanacak ASP.NET bir uygulamayı yapılandırabilirsiniz.
 
@@ -179,6 +179,7 @@ Aşağıdaki örnek, `<add>` bir web.config `<appSettings>` dosyasının bölüm
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [.NET Framework 4.6 ve sonraki yıllardaki yeni davranışları azletmek](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<çalışma zamanı> Öğesi](runtime-element.md)
 - [\<yapılandırma> Element](../configuration-element.md)

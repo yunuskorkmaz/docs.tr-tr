@@ -1,6 +1,6 @@
 ---
-title: Çöp Toplama
-ms.date: 03/30/2017
+title: .NET çöp toplama
+ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - memory, garbage collection
@@ -18,47 +18,44 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160150"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102248"
 ---
-# <a name="garbage-collection"></a>Çöp Toplama
+# <a name="garbage-collection"></a>Atık toplama
+
 . NET'in çöp toplayıcısı, uygulamanız için bellek tahsisini ve serbest bırakılmasını yönetir. Yeni bir nesne oluşturduğunuzda ortak dil çalışma zamanı, yönetilen yığından nesne için bellek ayırır. Yönetilen yığında kullanılabilir adres alanı bulunduğu sürece, çalışma zamanı yeni nesneler için bellek ayırmaya devam eder. Ancak, bellek sonsuz değildir. Bir süre sonra, atık toplayıcısının bellekte yer açmak için bir toplama işlemi gerçekleştirmesi gerekir. Atık toplayıcısının iyileştirme altyapısı, yapılan bellek ayrımlarına göre bir toplama işlemi gerçekleştirmek için en iyi zamanı belirler. Atık toplayıcı bir toplama işlemi gerçekleştirdiğinde, yönetilen yığın içinde uygulama tarafından artık kullanılmayan nesneleri denetler ve bu nesnelerin kullandığı belleği geri kazanmak için gerekli işlemleri gerçekleştirir.  
   
-<a name="related_topics"></a>
-## <a name="related-topics"></a>İlgili Konular  
+## <a name="in-this-section"></a>Bu bölümde
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Atık Toplamanın Temelleri](../../../docs/standard/garbage-collection/fundamentals.md)|Atık toplamanın nasıl çalıştığını, nesnelere yönetilen yığında nasıl bellek ayrıldığını ve diğer temel kavramları açıklar.|  
-|[Çöp Toplama ve Performans](../../../docs/standard/garbage-collection/performance.md)|Atık toplama ve performans sorunlarını tanılamak için kullanabileceğiniz performans denetimlerini açıklar.|  
-|[Uyarılmış Koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)|Bir atık toplama işleminin nasıl oluşturulacağını açıklar.|  
-|[Gecikme Modları](../../../docs/standard/garbage-collection/latency.md)|Atık toplama işleminin ne kadar zorlayıcı olduğunu belirleyen modları açıklar.|  
-|[Paylaşılan Web Barındırma için İyileştirme](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Atık toplamanın birden çok küçük Web sitesi tarafından paylaşılan sunucularda nasıl iyileştirileceğini açıklar.|  
-|[Atık Toplama Bildirimleri](../../../docs/standard/garbage-collection/notifications.md)|Bir tam atık toplama işleminin yaklaşmakta olduğunun ve ne zaman tamamlandığının nasıl belirleneceğini açıklar.|  
-|[Uygulama Etki Alanı Kaynak İzleme](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Bir uygulama etki alanının CPU ve bellek kullanımının nasıl izleneceğini açıklar.|  
-|[Zayıf Başvurular](../../../docs/standard/garbage-collection/weak-references.md)|Atık toplayıcının, uygulamanın bir nesneye erişmesine hala izin verirken o nesneyi toplamasına olanak sağlayan özellikleri açıklar.|  
+|[Çöp toplamanın temelleri](../../../docs/standard/garbage-collection/fundamentals.md)|Atık toplamanın nasıl çalıştığını, nesnelere yönetilen yığında nasıl bellek ayrıldığını ve diğer temel kavramları açıklar.|  
+|[İş istasyonu ve sunucu çöp toplama](workstation-server-gc.md)|İstemci uygulamaları için iş istasyonu çöp toplama ile sunucu uygulamaları için sunucu çöp toplama arasındaki farkları açıklar.|
+|[Arka plan çöp toplama](background-gc.md)|Nesil 2 koleksiyonu devam ederken nesil 0 ve 1 nesnelerinin toplanması olan arka plan çöp toplama açıklar.|
+|[Büyük nesne yığını](large-object-heap.md)|Büyük nesne yığınını (LOH) ve büyük nesnelerin çöp olarak nasıl toplandığını açıklar.|
+|[Çöp toplama ve performans](../../../docs/standard/garbage-collection/performance.md)|Atık toplama ve performans sorunlarını tanılamak için kullanabileceğiniz performans denetimlerini açıklar.|  
+|[Uyarılmış koleksiyonlar](../../../docs/standard/garbage-collection/induced.md)|Bir atık toplama işleminin nasıl oluşturulacağını açıklar.|  
+|[Gecikme modları](../../../docs/standard/garbage-collection/latency.md)|Atık toplama işleminin ne kadar zorlayıcı olduğunu belirleyen modları açıklar.|  
+|[Paylaşılan web barındırma için iyileştirme](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Atık toplamanın birden çok küçük Web sitesi tarafından paylaşılan sunucularda nasıl iyileştirileceğini açıklar.|  
+|[Çöp toplama bildirimleri](../../../docs/standard/garbage-collection/notifications.md)|Bir tam atık toplama işleminin yaklaşmakta olduğunun ve ne zaman tamamlandığının nasıl belirleneceğini açıklar.|  
+|[Uygulama etki alanı kaynak izleme](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Bir uygulama etki alanının CPU ve bellek kullanımının nasıl izleneceğini açıklar.|  
+|[Zayıf başvurular](../../../docs/standard/garbage-collection/weak-references.md)|Atık toplayıcının, uygulamanın bir nesneye erişmesine hala izin verirken o nesneyi toplamasına olanak sağlayan özellikleri açıklar.|  
   
-## <a name="reference"></a>Başvuru  
- <xref:System.GC?displayProperty=nameWithType>  
-  
- <xref:System.GCCollectionMode?displayProperty=nameWithType>  
-  
- <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
-  
- <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
-  
- <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
-  
- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
-  
- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
-  
- <xref:System.IDisposable?displayProperty=nameWithType>  
+## <a name="reference"></a>Başvuru
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- <xref:System.GCCollectionMode?displayProperty=nameWithType>  
+- <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
+- <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
+- <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
+- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
+- <xref:System.IDisposable?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen Kaynakları Temizleme](../../../docs/standard/garbage-collection/unmanaged.md)
+- [Yönetilmeyen kaynakları temizleme](../../../docs/standard/garbage-collection/unmanaged.md)

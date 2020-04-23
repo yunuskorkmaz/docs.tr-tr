@@ -2,12 +2,12 @@
 title: C# dil sürümü - C# Kılavuzu
 description: Projenize ve bu seçimin ardındaki nedenlere göre C# dil sürümünün nasıl belirlendiği hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kısıkyavaş geçersiz kılılabildiğini öğrenin.
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399541"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102665"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü
 
@@ -20,7 +20,7 @@ C# 8.0 (ve daha yüksek) yalnızca .NET Core 3.x ve yeni sürümlerinde destekle
 - Varsayılan arabirim üyesi uygulaması .NET Core 3.0 CLR'de yeni özellikler gerektirir.
 - Async akışları yeni türleri <xref:System.IAsyncDisposable?displayProperty=nameWithType> <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>gerektirir <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>, ve .
 - Dizinler ve Aralıklar <xref:System.Index?displayProperty=nameWithType> yeni <xref:System.Range?displayProperty=nameWithType>türleri gerektirir ve.
-- Nullable başvuru türleri daha iyi uyarılar sağlamak için çeşitli [öznitelikleri](../nullable-attributes.md) kullanır. Bu özellikler .NET Core 3.0'a eklendi. Diğer hedef çerçeveler bu özniteliklerin herhangi biriyle açıklamalı değil. Bu, geçersiz uyarılar potansiyel sorunları doğru şekilde yansıtmayabileceği anlamına gelir.
+- Nullable başvuru türleri daha iyi uyarılar sağlamak için çeşitli [öznitelikleri](attributes/nullable-analysis.md) kullanır. Bu özellikler .NET Core 3.0'a eklendi. Diğer hedef çerçeveler bu özniteliklerin herhangi biriyle açıklamalı değil. Bu, geçersiz uyarılar potansiyel sorunları doğru şekilde yansıtmayabileceği anlamına gelir.
 
 ## <a name="defaults"></a>Varsayılanları
 

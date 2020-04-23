@@ -1,32 +1,32 @@
 ---
-title: Windows'da LOH - .NET
+title: Windows'da büyük nesne yığını (LOH)
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283615"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102274"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerinde büyük nesne yığını
 
-.NET Çöp Toplayıcı (GC) nesneleri küçük ve büyük nesnelere böler. Bir nesne büyükolduğunda, bazı öznitelikleri nesne küçükse daha önemli hale gelir. Örneğin, sıkıştırmak -- yani yığının başka bir yerinde hafızaya kopyalamak -- pahalıya mal olabilir. Bu nedenle, .NET Çöp Toplayıcı büyük nesne yığını (LOH) üzerinde büyük nesneler yerleştirir. Bu konuda, büyük nesne yığınına derinlemesine bakacağız. Bir nesneyi büyük bir nesne olarak nitelemeyi, bu büyük nesnelerin nasıl toplandığını ve büyük nesnelerin ne tür performans etkileri uyguladığını tartışacağız.
+.NET çöp toplayıcısı (GC) nesneleri küçük ve büyük nesnelere böler. Bir nesne büyükolduğunda, bazı öznitelikleri nesne küçükse daha önemli hale gelir. Örneğin, sıkıştırma,&mdash;yığın&mdash;başka bir yerde bellekte kopyalama pahalı olabilir. Bu nedenle, çöp toplayıcı büyük nesne yığını (LOH) üzerinde büyük nesneleri yerleştirir. Bu makalede, bir nesneyi büyük bir nesne olarak nitelenenler, büyük nesnelerin ne kadar toplandığı ve büyük nesnelerin ne tür performans etkileri dayattığı açıklanmaktadır.
 
 > [!IMPORTANT]
-> Bu konu, .NET Framework ve .NET Core'da yalnızca Windows sistemlerinde çalışan büyük nesne yığınını tartışır. Diğer platformlarda .NET uygulamalarında çalışan LOH'yu kapsamaz.
+> Bu makalede, .NET Framework ve .NET Core yalnızca Windows sistemlerinde çalışan büyük nesne yığını açıklanır. Diğer platformlarda .NET uygulamalarında çalışan LOH'yu kapsamaz.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Bir nesnenin büyük nesne yığınına nasıl son verdiği ve GC'nin bunları nasıl işlediği
+## <a name="how-an-object-ends-up-on-the-loh"></a>Bir nesne LOH üzerinde nasıl biter?
 
 Bir nesne 85.000 bayt boyutundan büyük veya eşitse, büyük bir nesne olarak kabul edilir. Bu sayı performans amıile belirlendi. Bir nesne ayırma isteği 85.000 veya daha fazla bayt için olduğunda, çalışma zamanı onu büyük nesne yığınına ayırır.
 
-Bunun ne anlama geldiğini anlamak için .NET GC ile ilgili bazı temel leri incelemek yararlıdır.
+Bunun ne anlama geldiğini anlamak için, çöp toplayıcı sı hakkında bazı temel leri incelemek yararlıdır.
 
-.NET Çöp Toplayıcı bir nesil toplayıcıdır. Üç kuşağı vardır: nesil 0, nesil 1 ve nesil 2. 3 nesil olmasının nedeni, iyi ayarlanmış bir uygulamada, çoğu nesnenin gen0'de ölmesidir. Örneğin, bir sunucu uygulamasında, her istekle ilişkili ayırmalar istek tamamlandıktan sonra ölür. Uçuş tahsis talepleri gen1'e dönüşecek ve orada ölecek. Esasen, gen1 genç nesne alanları ve uzun ömürlü nesne alanları arasında bir tampon görevi görür.
+Çöp toplayıcı bir nesil koleksiyoncusudur. Üç kuşağı vardır: nesil 0, nesil 1 ve nesil 2. 3 nesil olmasının nedeni, iyi ayarlanmış bir uygulamada, çoğu nesnenin gen0'de ölmesidir. Örneğin, bir sunucu uygulamasında, her istekle ilişkili ayırmalar istek tamamlandıktan sonra ölür. Uçuş tahsis talepleri gen1'e dönüşecek ve orada ölecek. Esasen, gen1 genç nesne alanları ve uzun ömürlü nesne alanları arasında bir tampon görevi görür.
 
 Küçük nesneler her zaman nesil 0'da ayrılır ve kullanım ömürlerine bağlı olarak nesil 1 veya nesil2'ye yükseltilebilir. Büyük nesneler her zaman nesil 2'de ayrılır.
 
@@ -64,7 +64,7 @@ LOH sadece nesil 2 GCs sırasında toplanır yana, LOH segmenti sadece böyle bi
 
 ## <a name="when-is-a-large-object-collected"></a>Büyük bir nesne ne zaman toplanır?
 
-Genel olarak, aşağıdaki 3 koşuldan biri gerçekleştiğinde bir GC oluşur:
+Genel olarak, bir GC aşağıdaki üç koşuldan biri altında oluşur:
 
 - Ayırma, nesil 0 veya büyük nesne eşiğini aşıyor.
 
@@ -80,7 +80,7 @@ Genel olarak, aşağıdaki 3 koşuldan biri gerçekleştiğinde bir GC oluşur:
 
   Bu, çöp toplayıcı işletim sistemi yüksek bellek bildirimi aldığında oluşur. Çöp toplayıcı bir nesil 2 GC yapmanın verimli olacağını düşünüyorsa, bir tetikler.
 
-## <a name="loh-performance-implications"></a>LOH Performans Etkileri
+## <a name="loh-performance-implications"></a>LOH performans etkileri
 
 Büyük nesne yığınıüzerindeki ayırmalar performansı aşağıdaki şekillerde etkiler.
 
@@ -122,7 +122,7 @@ Büyük nesne yığınıüzerindeki ayırmalar performansı aşağıdaki şekill
 
 Üç faktörden, ilk ikisi genellikle üçüncüfaktörden daha önemlidir. Bu nedenle, geçici nesneler ayırmak yerine yeniden kullandığınız büyük nesnelerden oluşan bir havuz ayırmanızı öneririz.
 
-## <a name="collecting-performance-data-for-the-loh"></a>LOH için performans verileri toplama
+## <a name="collect-performance-data-for-the-loh"></a>LOH için performans verileri toplama
 
 Belirli bir alan için performans verileri toplamadan önce aşağıdakileri zaten yapmış olmalısınız:
 
@@ -310,6 +310,6 @@ Bu komut hata ayıklayıcıya girer ve yalnızca [VirtualAlloc](/windows/desktop
 
 CLR 2.0, segmentlerin (büyük ve küçük nesne yığınları dahil) sık sık alınıp serbest bırakıldığı senaryolar için yararlı olabilecek *VM Hoarding* adlı bir özellik ekledi. VM Istifleme belirtmek için, barındırma `STARTUP_HOARD_GC_VM` API'si üzerinden çağrılan bir başlangıç bayrağı belirtirsiniz. CLR, boş segmentleri işletim sistemi için geri serbest bırakmak yerine, bu segmentlerde bellek decommits ve bekleme listesine koyar. (CLR'nin bunu çok büyük segmentler için yapmadığını unutmayın.) CLR daha sonra bu segmentleri yeni segment isteklerini karşılamak için kullanır. Uygulamanızın yeni bir segmente ihtiyacı olduğunda, CLR yeterince büyük bir segment bulabilirse bu bekleme listesinden bir tane kullanır.
 
-VM istifleme, bellek özel durumları dışında önlemek için sistemde çalışan baskın uygulamalar olan bazı sunucu uygulamaları gibi zaten edindikleri segmentleri tutmak isteyen uygulamalar için de yararlıdır.
+VM istifleme, bellek dışında özel durumları önlemek için sistemde çalışan baskın uygulamalar olan bazı sunucu uygulamaları gibi zaten edindikleri segmentleri tutmak isteyen uygulamalar için de yararlıdır.
 
 Uygulamanızın oldukça kararlı bellek kullanımına sahip olduğundan emin olmak için bu özelliği kullandığınızda uygulamanızı dikkatle test etmenizi öneririz.

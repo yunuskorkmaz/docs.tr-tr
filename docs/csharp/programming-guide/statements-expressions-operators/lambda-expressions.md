@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 44d6ed9ac6e1c3c4d08bbd69ca808d2e740f0c4e
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738326"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102002"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
@@ -230,7 +230,7 @@ C# 3.0 Yemek Kitabında [Delegeler, Etkinlikler ve Lambda İfadeleri,](https://d
 - [C# Programlama Kılavuzu](../index.md)
 - [LINQ (Dil-Entegre Sorgu)](../concepts/linq/index.md)
 - [İfade Ağaçları](../concepts/expression-trees/index.md)
-- [Lambda ifadeleri ile karşılaştırıldığında yerel fonksiyonlar](../../local-functions-vs-lambdas.md)
+- [Yerel işlevler vs lambda ifadeler](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [Örtülü olarak yazılan lambda ifadeleri](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# Örnekleri (bkz. LINQ Örnek Sorgular dosyaları ve XQuery programı)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Özyinelemeli lambda ifadeleri](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

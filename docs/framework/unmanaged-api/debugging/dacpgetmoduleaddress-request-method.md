@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179207"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102913"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::İstek Yöntemi
 
@@ -49,11 +49,12 @@ Bu yapı çalışma zamanı içinde yaşar ve üstbilgi veya kitaplık dosyalar�
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üstbilgi:** Yok **Kütüphane:** Yok  
-**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md)\
+**Üstbilgi:** Yok\
+**Kütüphane:** Yok\
+**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklama](index.md)
-- [DacpGetModuleAdres Arayüzü](dacpgetmoduleaddress-structure.md)
+- [Hata Ayıklama](index.md)
+- [DacpGetModuleAdres yapısı](dacpgetmoduleaddress-structure.md)

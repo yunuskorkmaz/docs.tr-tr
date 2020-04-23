@@ -2,12 +2,12 @@
 title: dotnet geri yükleme komutu
 description: Dotnet geri yükleme komutuyla bağımlılıkları ve projeye özgü araçları nasıl geri yükleyebileceğinizi öğrenin.
 ms.date: 02/27/2020
-ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021779"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102794"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -34,9 +34,22 @@ dotnet restore -h|--help
 
 Komut, `dotnet restore` proje dosyasında belirtilen projeye özgü araçların yanı sıra bağımlılıkları geri yüklemek için NuGet'i kullanır. Varsayılan olarak, bağımlılıkların ve araçların geri yükleme paralel olarak yürütülür.
 
-Bağımlılıkları geri yüklemek için NuGet'in paketlerin bulunduğu akışlara ihtiyacı vardır. Özet akışları genellikle *nuget.config* yapılandırma dosyası üzerinden sağlanır. .NET Core SDK yüklendiğinde varsayılan yapılandırma dosyası sağlanır. Proje dizininde kendi *nuget.config* dosyanızı oluşturarak ek akışlar belirtirsiniz. *Nuget.config* beslemelerini - `-s` seçeneği ile geçersiz kılabilirsiniz.
+### <a name="specify-feeds"></a>Akışları belirtin
+
+Bağımlılıkları geri yüklemek için NuGet'in paketlerin bulunduğu akışlara ihtiyacı vardır. Özet akışları genellikle *nuget.config* yapılandırma dosyası üzerinden sağlanır. .NET Core SDK yüklendiğinde varsayılan yapılandırma dosyası sağlanır. Ek akışlar belirtmek için aşağıdakilerden birini yapın:
+
+- Proje dizininde kendi *nuget.config* dosyanızı oluşturun. Daha fazla bilgi için, bu makalenin ilerleyen saatlerinde [Ortak NuGet yapılandırmaları](/nuget/consume-packages/configuring-nuget-behavior) ve [nuget.config farklılıklarına](#nugetconfig-differences) bakın.
+- Gibi komutları kullanın. `dotnet nuget` [`dotnet nuget add source`](dotnet-nuget-add-source.md)
+
+*Nuget.config* beslemelerini `-s` seçeneği ile geçersiz kılabilirsiniz.
+
+Kimlik doğrulamalı akışların nasıl kullanılacağı hakkında bilgi için [bkz.](/nuget/consume-packages/consuming-packages-authenticated-feeds)
+
+### <a name="package-cache"></a>Paket önbelleği
 
 Bağımlılıklar için, bağımsız değişkeni kullanarak geri yükleme işlemi `--packages` sırasında geri yüklenen paketlerin nereye yerleştirildiğini belirtirsiniz. Belirtilmemişse, varsayılan NuGet paket önbelleği kullanılır `.nuget/packages` ve bu da tüm işletim sistemlerinde kullanıcının ev dizininde bulunan dizinde bulunur. Örneğin, *Linux'ta /home/user1* veya Windows'da *C:\Users\user1.*
+
+### <a name="project-specific-tooling"></a>Projeye özel takımlama
 
 Projeye özgü takımlama `dotnet restore` için, önce aracın paketlendiği paketi geri yükler, sonra da proje dosyasında belirtildiği şekilde aracın bağımlılıklarını geri yüklemeye devam eder.
 

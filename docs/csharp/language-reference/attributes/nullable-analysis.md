@@ -2,12 +2,12 @@
 title: 'C# Ayrılmış öznitelikler: Nullable statik çözümleme'
 ms.date: 04/14/2020
 description: Bu öznitelikler, nullable ve nullable referans türleri için daha iyi statik çözümleme sağlamak için derleyici tarafından yorumlanır.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389865"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102716"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Ayrılmış öznitelikler derleyicinin null durum statik analizine katkıda bulunur
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 Aranan ad bulunamadında dönmek `null` için büyük olasılıkla böyle bir yöntem yazmışsınızdır. Bu, `null` kaydın bulunamadıgini açıkça gösteriyor. Bu örnekte, büyük olasılıkla dönüş türünü `Customer` `Customer?`' den ' e değiştirirsiniz İade değerini nullable bir başvuru türü olarak bildirmek, bu API'nin amacını açıkça belirtir.
 
-Genel tanımlar [ve nullability](../../nullable-attributes.md#generic-definitions-and-nullability) kapsamındaki nedenlerden dolayı bu teknik genel yöntemlerle çalışmaz. Benzer bir desen izleyen genel bir yöntem olabilir:
+Genel tanımlar [ve nullability](../../nullable-migration-strategies.md#generic-definitions-and-nullability) kapsamındaki nedenlerden dolayı bu teknik genel yöntemlerle çalışmaz. Benzer bir desen izleyen genel bir yöntem olabilir:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

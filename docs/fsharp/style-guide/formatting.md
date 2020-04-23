@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: F# kodunu biçimlendirme yönergelerini öğrenin.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739560"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102495"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -579,10 +579,10 @@ Diziler oluştururken ve programlı listelerken, bir değer her zaman oluşturul
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 F# dilinin eski sürümlerinde, verilerin koşullu olarak oluşturulabileceği veya değerlendirilecek ardışık ifadeler olabileceği durumlarda belirtilmesi `yield` gerekir. Eski bir F# dili sürümüyle derlemeniz gerekiyorsa, bu `yield` anahtar kelimeleri atlayış etmeyi tercih edin:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Nesne ifadelerini ve arabirimlerini biçimlendirme
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>Parametrelere öznitelikleri biçimlendirme
 
-Öznitelikler de parametreler üzerinde yer olabilir. Bu durumda, parametre ile aynı satıra ve addan önce yerleştirin:
+Öznitelikler de parametrelere yerleştirilebilir. Bu durumda, parametre ile aynı satıra ve addan önce yerleştirin:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

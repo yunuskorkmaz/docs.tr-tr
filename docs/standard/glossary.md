@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili terimlerin anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635578"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102482"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -54,9 +54,12 @@ Tam anlamı içeriğe bağlıdır, ancak Ortak Dil Çalışma Süresi genellikle
 
 Bu CLR, CLR ile aynı kod tabanından oluşturulmuştür. Başlangıçta, CoreCLR Silverlight çalışma zamanı ve birden fazla platformda çalıştırmak için tasarlanmıştır, özellikle Windows ve OS X. CoreCLR şimdi .NET Core bir parçasıdır ve CLR basitleştirilmiş bir sürümünü temsil eder. Hala birçok Linux dağıtımı için destek de dahil olmak üzere, bir [çapraz platform](#cross-platform) çalışma zamanı. CoreCLR aynı zamanda JIT ve kod yürütme yetenekleri ile sanal bir makinedir.
 
-## <a name="corefx"></a>CoreFX
+## <a name="corefx"></a>CoreFx
 
 .NET Çekirdek Taban Sınıf Kitaplığı (BCL)
+
+> [!TIP]
+> *Fx* *çerçeve*anlamına gelir.
 
 Sistemi oluşturan bir dizi kitaplık. \* (ve sınırlı bir ölçüde\*Microsoft. ) ad boşlukları. BCL, ASP.NET Core gibi üst düzey uygulama çerçevelerinin temeline sahip olan genel bir amaç, alt düzey bir çerçevedir. .NET Core BCL'nin kaynak kodu [.NET Core çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. Ancak, .NET Core API'lerinin çoğu .NET Framework'de de mevcuttur, böylece CoreFX'i .NET Framework BCL'nin çatalı olarak düşünebilirsiniz.
 

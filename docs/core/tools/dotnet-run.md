@@ -2,12 +2,12 @@
 title: dotnet çalıştır komutu
 description: Dotnet çalıştır komutu, uygulamanızı kaynak kodundan çalıştırmak için kullanışlı bir seçenek sağlar.
 ms.date: 02/19/2020
-ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463412"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102780"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -46,6 +46,8 @@ dotnet myapp.dll
 Sürücü hakkında daha `dotnet` fazla bilgi için [.NET Core Komut Satırı Araçları (CLI)](index.md) konusuna bakın.
 
 Uygulamayı çalıştırmak için `dotnet run` komut, NuGet önbelleğinden paylaşılan çalışma süresinin dışında olan uygulamanın bağımlılıklarını giderir. Önbelleğe alınmış bağımlılıklar kullandığından, üretimdeki `dotnet run` uygulamaları çalıştırmak için kullanılması önerilmez. Bunun [create a deployment](../deploying/index.md) yerine, komutu [`dotnet publish`](dotnet-publish.md) kullanarak bir dağıtım oluşturun ve yayımlanmış çıktıyı dağıtın.
+
+### <a name="implicit-restore"></a>Örtük geri yükleme
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400045"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102924"
 ---
 # <a name="gcconcurrent-element"></a>\<gcEşzamanlı> elemanı
 
@@ -82,7 +82,7 @@ Aşağıdaki yapılandırma dosyası arka plan çöp toplama devre dışı kalma
 
 Makine yapılandırma dosyasında **gcConcurrentSetting** ayarı varsa, tüm .NET Framework uygulamaları için varsayılan değeri tanımlar. Makine yapılandırma dosyası ayarı uygulama yapılandırma dosya ayarını geçersiz kılar.
 
-Eşzamanlı ve arka plan çöp toplama hakkında daha fazla bilgi için, [Eşzamanlı çöp toplama,](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) [Arka plan iş istasyonu çöp toplama](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)ve Çöp Toplama [makalesinin Temelleri'ndeki](../../../../standard/garbage-collection/fundamentals.md) [Arka plan sunucusu çöp toplama](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) bölümlerine bakın.
+Eşzamanlı ve arka plan çöp toplama hakkında daha fazla bilgi için [bkz.](../../../../standard/garbage-collection/background-gc.md)
 
 ## <a name="example"></a>Örnek
 
@@ -99,5 +99,5 @@ Aşağıdaki örnek, arka plan çöp toplama sağlar:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma Dosya Şema](../index.md)
 - [Atık Toplamanın Temelleri](../../../../standard/garbage-collection/fundamentals.md)

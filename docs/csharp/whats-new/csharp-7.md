@@ -3,12 +3,12 @@ title: C# 7.0'da Yenilikler - C# Rehberi
 description: C# dilinin 7.0 sürümündeki yeni özellikler hakkında genel bir bakış alın.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399695"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102677"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 Yenilikleri
 
@@ -16,7 +16,7 @@ C# 7.0, C# diline bir dizi yeni özellik ekler:
 
 - [`out`Değişken](#out-variables)
   - Değerleri, `out` kullanıldıkları yönteme bağımsız değişken olarak sıralı olarak bildirebilirsiniz.
-- [Dizilerini](#tuples)
+- [Demetler](#tuples)
   - Birden çok ortak alan içeren hafif, adsız türler oluşturabilirsiniz. Derleyiciler ve IDE araçları bu tür anlambilimini anlar.
 - [Atılanlar](#discards)
   - Atanan değer le ilgilenmediğiniz durumlarda atamalarda kullanılan geçici, yalnızca yazma değişkenleridir. Tuples ve kullanıcı tanımlı türleri deconstructing yanı sıra parametreleri ile `out` yöntemleri arama yaparken en yararlıdır.
@@ -211,7 +211,7 @@ Aynı teknik, bağımsız `async` değişken doğrulamasından kaynaklanan özel
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Yerel fonksiyonlar tarafından desteklenen bazı tasarımlar da *lambda ifadeleri*kullanılarak gerçekleştirilebilir. Daha fazla bilgi için, [yerel işlevler vs lambda ifadeler](../local-functions-vs-lambdas.md)bakın.
+> Yerel fonksiyonlar tarafından desteklenen bazı tasarımlar da *lambda ifadeleri*kullanılarak gerçekleştirilebilir. Daha fazla bilgi için, [yerel işlevler vs lambda ifadeler](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)bakın.
 
 ## <a name="more-expression-bodied-members"></a>Daha fazla ifade gövdeli üye
 

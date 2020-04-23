@@ -2,12 +2,12 @@
 title: dotnet yapı komutu
 description: Dotnet build komutu bir proje ve tüm bağımlılıklarını oluşturur.
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463716"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102846"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -43,9 +43,13 @@ Komut, `dotnet build` projeyi ve bağımlılıklarını bir dizi ikili ye dönü
 
 .NET Core 3.0 ve sonrası hedeflemesi yapılan yürütülebilir projeler için kitaplık bağımlılıkları çıktı klasörüne kopyalanır. Bu, yayımlamaya özgü başka bir mantık yoksa (Web projeleri gibi), yapı çıktısının dağıtılabilir olması gerektiği anlamına gelir.
 
-Bina, uygulamanızın bağımlılıklarını listeleyen *project.assets.json* dosyasını gerektirir. Dosya yürütüldüğünde [`dotnet restore`](dotnet-restore.md) oluşturulur. Varlıklar dosyası yerinde olmadan, takım başvuru derlemelerini çözemez ve bu da hatalara neden olabilir. .NET Core 1.x SDK ile çalıştırmadan `dotnet restore` `dotnet build`önce açıkça çalıştırmanız gerekir. .NET Core 2.0 SDK `dotnet restore` ile başlayarak, `dotnet build`çalıştırdığınızda örtülü olarak çalışır. Yapı komutunu çalıştırırken örtülü geri yüklemeyi devre dışı `--no-restore` kalmak istiyorsanız, seçeneği geçebilirsiniz.
+### <a name="implicit-restore"></a>Örtük geri yükleme
+
+Bina, uygulamanızın bağımlılıklarını listeleyen *project.assets.json* dosyasını gerektirir. Dosya yürütüldüğünde [`dotnet restore`](dotnet-restore.md) oluşturulur. Varlıklar dosyası yerinde olmadan, takım başvuru derlemelerini çözemez ve bu da hatalara neden olabilir.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>Çalıştırılabilir veya kitaplık çıktısı
 
 Projenin yürütülüp yürütülemeyeceği proje `<OutputType>` dosyasındaki özellik tarafından belirlenir. Aşağıdaki örnek, yürütülebilir kod üreten bir projeyi gösterir:
 

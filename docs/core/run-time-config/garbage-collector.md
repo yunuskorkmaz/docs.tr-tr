@@ -3,12 +3,12 @@ title: Çöp toplayıcı config ayarları
 description: Çöp toplayıcısının .NET Core uygulamalarının belleği nasıl yönettiğini yapılandırmak için çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607816"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102872"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -24,7 +24,7 @@ Ayarlar bu sayfada gruplar halinde düzenlenir. Her grup içindeki ayarlar, beli
 
 ## <a name="flavors-of-garbage-collection"></a>Çöp toplama tatları
 
-Çöp toplamanın iki ana tadı iş istasyonu GC ve sunucu GC vardır. İkisi arasındaki farklar hakkında daha fazla bilgi [için, çöp toplamanın temelleri](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)bölümüne bakın.
+Çöp toplamanın iki ana tadı iş istasyonu GC ve sunucu GC vardır. İkisi arasındaki farklar hakkında daha fazla bilgi için [Workstation ve sunucu çöp toplama](../../standard/garbage-collection/workstation-server-gc.md)adresine bakın.
 
 Çöp toplama alt tatlar arka plan ve eşzamanlı değildir.
 
@@ -72,7 +72,7 @@ Proje dosyası:
 
 - Arka plan (eşzamanlı) çöp toplamanın etkin olup olmadığını yapılandırır.
 - Varsayılan: Etkin`true`( ).
-- Daha fazla bilgi için Bkz. [Arka Plan çöp toplama](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) ve Arka Plan sunucusu çöp [toplama.](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)
+- Daha fazla bilgi için Arka [Plan çöp koleksiyonuna](../../standard/garbage-collection/background-gc.md)bakın.
 
 | | Ayar adı | Değerler | Sürüm tanıtıldı |
 | - | - | - | - |
@@ -240,7 +240,7 @@ Bu ayarların bazıları hakkında daha fazla bilgi için [iş istasyonu ve sunu
 
 - GC yığını ve GC muhasebesi için baytlarda maksimum taahhüt boyutunu belirtir.
 - Bu ayar yalnızca 64 bit bilgisayarlar için geçerlidir.
-- Yalnızca belirli durumlarda geçerli olan varsayılan değer, 20 MB'dan daha az veya kapsayıcıdaki bellek sınırının %75'i kadardır. Aşağıdaki ler için varsayılan değer uygulanır:
+- Yalnızca belirli durumlarda geçerli olan varsayılan değer, 20 MB'dan veya kapsayıcıdaki bellek sınırının %75'inden fazladır. Aşağıdaki ler için varsayılan değer uygulanır:
 
   - İşlem, belirli bir bellek sınırı olan bir kapsayıcı içinde çalışıyor.
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) ayarlanmaz.

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974949"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102989"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'de sürüm uyumluluğu
+# <a name="version-compatibility"></a>Sürüm uyumluluğu
 
-Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın bu platformun sonraki sürümlerinde çalışacağı anlamına gelir. .NET Framework geriye dönük uyumluluğu en üst düzeye çıkarmaya çalışır: .NET Framework'ün bir sürümü için yazılan kaynak kodu .NET Framework'ün sonraki sürümlerinde derlenmelidir ve .NET Framework'ün bir sürümünde çalışan ikili ler aynı şekilde .NET Framework'ün sonraki sürümleri.
+Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın bu platformun sonraki sürümlerinde çalışacağı anlamına gelir. .NET Framework geriye dönük uyumluluğu en üst düzeye çıkarmaya çalışır: .NET Framework'ün bir sürümü için yazılan kaynak kodu .NET Framework'ün sonraki sürümlerinde derlenmelidir ve .NET Framework'ün bir sürümünde çalışan ikililer .NET Framework'ün sonraki sürümlerinde aynı şekilde kullanılmalıdır.
 
 ## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>Uygulamalar için sürüm uyumluluğu
 
-Varsayılan olarak, bir uygulama .NET Framework'ün için inşa edildiği sürümünde çalışır. Bu sürüm yoksa ve uygulama yapılandırma dosyası desteklenen sürümleri tanımlamıyorsa, .NET Framework başlatma hatası oluşabilir. Bu durumda, uygulamayı çalıştırma girişimi başarısız olur.
+Varsayılan olarak, bir uygulama .NET Framework sürümünde çalışır. Bu sürüm yoksa ve uygulama yapılandırma dosyası desteklenen sürümleri tanımlamıyorsa, .NET Framework başlatma hatası oluşabilir. Bu durumda, uygulamayı çalıştırma girişimi başarısız olur.
 
 Uygulamanızın çalıştığı belirli sürümleri tanımlamak için, uygulamanızın yapılandırma dosyasına bir veya daha fazla [ \<desteklenen Runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi ekleyin. Her `<supportedRuntime>` öğe, ilk en çok tercih edilen sürümü ve en son en az tercih edilen sürümü belirten ile çalışma zamanıdesteklenen bir sürümünü listeler.
 
@@ -41,7 +41,7 @@ Bir uygulama çalıştığı .NET Framework sürümünü denetleyebilir, ancak b
 
 Bu kısıtlama nedeniyle, uyumluluk garantileri özellikle bileşenler için önemlidir. .NET Framework 4'ten başlayarak, bu bileşene özniteliği uygulayarak bir bileşenin <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> birden çok sürümde uyumlu kalmasının beklendiği dereceyi belirtebilirsiniz. Araçlar bu özelliği, bir bileşenin gelecekteki sürümlerinde uyumluluk garantisinin olası ihlallerini algılamak için kullanabilir.
 
-## <a name="backward-compatibility-and-the-net-framework"></a>Geriye dönük uyumluluk ve .NET Çerçevesi
+## <a name="backward-compatibility"></a>Geriye dönük uyumluluk
 
 .NET Framework 4.5 ve sonraki sürümler,.NET Framework'ün önceki sürümleriyle oluşturulmuş uygulamalarla geriye dönük uyumludur. Başka bir deyişle, önceki sürümlerle oluşturulmuş uygulamalar ve bileşenler .NET Framework 4.5 ve sonraki sürümlerde değişiklik yapılmadan çalışır. Ancak, varsayılan olarak, uygulamalar geliştirildiği ortak dil çalışma zamanı sürümünde çalışır, bu nedenle uygulamanızın .NET Framework 4.5 veya sonraki sürümlerinde çalışmasını sağlamak için bir yapılandırma dosyası sağlamanız gerekebilir. Daha fazla bilgi için, bu makalenin başlarında uygulamalar için [Sürüm uyumluluğu](#Apps) bölümüne bakın.
 
@@ -63,9 +63,9 @@ Uygulamanız veya bileşeniniz .NET Framework 4.5'te beklendiği gibi çalışm�
 
 - Belgelenmemiş bir sorunla karşılaşırsanız, [.NET için Geliştirici Topluluğu sitesinde](https://developercommunity.visualstudio.com/spaces/61/index.html) bir sorun açın veya [Microsoft/dotnet GitHub repo'sunda](https://github.com/microsoft/dotnet/issues)bir sorun açın.
 
-## <a name="compatibility-and-side-by-side-execution"></a>Uyumluluk ve yan yana yürütme
+## <a name="side-by-side-execution"></a>Yan yana yürütme
 
-Sorununuzun için uygun bir geçici çözüm bulamıyorsanız, .NET Framework 4.5'in (veya puan açıklamalarından biri) 1.1, 2.0 ve 3.5 sürümleriyle yan yana çalıştığını ve sürüm 4'ün yerini alan yerinde bir güncelleştirme olduğunu unutmayın. 1.1, 2.0 ve 3.5 sürümlerini hedefleyen uygulamalar için, uygulamayı en iyi ortamda çalıştırmak için .NET Framework'ün uygun sürümünü hedef makineye yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için, [Yan yana Yürütme'ye](../deployment/side-by-side-execution.md)bakın.
+Sorununuzun için uygun bir geçici çözüm bulamıyorsanız, .NET Framework 4.5'in (veya puan açıklamalarından biri) 1.1, 2.0 ve 3.5 sürümleriyle yan yana çalıştığını ve sürüm 4'ün yerini alan yerinde bir güncelleştirme olduğunu unutmayın. 1.1, 2.0 ve 3.5 sürümlerini hedefleyen uygulamalar için, uygulamayı en iyi ortamda çalıştırmak için hedef makineye .NET Framework'ün uygun sürümünü yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için, [Yan yana Yürütme'ye](../deployment/side-by-side-execution.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

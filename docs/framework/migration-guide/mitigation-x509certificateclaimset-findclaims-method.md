@@ -2,15 +2,16 @@
 title: 'Azaltma: X509CertificateClaimSet.FindClaims Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: f94a5f685a5aa94332bf2e15e5d5eb0def02d7ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b306960c4f11bb6f54aecaeb13297e7725e16a8
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400143"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102651"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Azaltma: X509CertificateClaimSet.FindClaims Yöntemi
-.NET Framework 4.6.1'i hedefleyen uygulamalardan başlayarak, <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> `claimType` yöntem bağımsız değişkeni SAN alanındaki tüm DNS girişleriyle eşleştirmeye çalışacaktır.  
+
+.NET Framework 4.6.1'i hedefleyen <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> uygulamalardan başlayarak, `claimType` yöntem bağımsız değişkeni SAN alanındaki tüm DNS girişleriyle eşleştirmeye çalışacaktır.  
   
 ## <a name="impact"></a>Etki  
  Bu değişiklik yalnızca .NET Framework 4.6.1 ile başlayan .NET Framework sürümlerini hedefleyen uygulamaları etkiler.  

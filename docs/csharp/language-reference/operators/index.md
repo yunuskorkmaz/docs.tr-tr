@@ -1,6 +1,6 @@
 ---
 title: C# işleçleri - C# referansı
-ms.date: 08/20/2019
+ms.date: 04/22/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f0ca111000033f9db84145a38e8d567f96b75d1d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: fe4adf7df707eff0990e8c731a36d6177df228cf
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121073"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102027"
 ---
 # <a name="c-operators-c-reference"></a>C# işleçleri (C# referansı)
 
@@ -42,8 +42,8 @@ Aşağıdaki tabloda, en düşükten en yüksek önceliğe sahip c# işleçleri 
 
 | İşleçler | Kategori veya ad |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-expression-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x?[ y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [yeni](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [kontrol ,](../keywords/checked.md) [işaretsiz](../keywords/unchecked.md), [varsayılan](default.md), [ad,](nameof.md) [temsilci](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
-| [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^x](member-access-operators.md#index-from-end-operator-), [(T)x](type-testing-and-cast.md#cast-expression), [bekliyor](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x](pointer-related-operators.md#pointer-indirection-operator-), [doğru ve yanlış](true-false-operators.md) | Tekli |
+| [x.y](member-access-operators.md#member-access-expression-), [f(x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---) [x!](null-forgiving.md), [yeni](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [kontrol ,](../keywords/checked.md) [işaretsiz](../keywords/unchecked.md), [varsayılan](default.md), [adof](nameof.md), [temsilci](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
+| [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [~x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [++x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^x](member-access-operators.md#index-from-end-operator-), [x?. y](member-access-operators.md#null-conditional-operators--and-), [x?[ y]](member-access-operators.md#null-conditional-operators--and-), [(T)x](type-testing-and-cast.md#cast-expression), [bekliyor](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x](pointer-related-operators.md#pointer-indirection-operator-), [doğru ve yanlış](true-false-operators.md) | Tekli |
 | [X.. Y](member-access-operators.md#range-operator-) | Aralık |
 | [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch`Ifa -de |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), x % [y](arithmetic-operators.md#remainder-operator-) | Çarpma|

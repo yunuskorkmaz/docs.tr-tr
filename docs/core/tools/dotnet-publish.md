@@ -2,12 +2,12 @@
 title: dotnet yayımlama komutu
 description: Dotnet yayımlama komutu bir .NET Core projesi veya çözüm bir dizine yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: ca6b6bd0151674a81e0beee7798dc6bde9c088f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463466"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102807"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -24,7 +24,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive]
     [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
     [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-p:PublishReadyToRun] [-p:PublishSingleFile] [-p:PublishTrimmed]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
     [--no-self-contained] [-v|--verbosity <LEVEL>]
     [--version-suffix <VERSION_SUFFIX>]
@@ -42,6 +42,10 @@ dotnet publish -h|--help
 - NuGet önbelleğinden çıktı klasörüne kopyalanan uygulamabağımlılıkları.
 
 Komutun `dotnet publish` çıktısı yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtım için hazırdır. Uygulamayı dağıtıma hazırlamak için resmi olarak desteklenen tek yol bu. Projenin belirttiği dağıtım türüne bağlı olarak, barındırma sistemi .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için [bkz.](../deploying/deploy-with-cli.md)
+
+### <a name="implicit-restore"></a>Örtük geri yükleme
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -135,13 +139,13 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
     Çözüm yayımlanırken göreli bir yol belirtilirse, her projenin çıktısı proje dosyası konumuna göre ayrı bir klasöre gider. Bir çözüm yayımlanırken mutlak bir yol belirtilirse, tüm projeler için çıktı yayımlamak belirtilen klasöre gider.
 
-- **`-p:PublishReadyToRun`**
+- **`-p:PublishReadyToRun=true`**
 
   Uygulama derlemelerini ReadyToRun (R2R) biçiminde derler. R2R, ileri zaman (AOT) derlemesinin bir şeklidir. Daha fazla bilgi için [ReadyToRun resimlerine](../whats-new/dotnet-core-3-0.md#readytorun-images)bakın. .NET Core 3.0 SDK'dan beri mevcuttur.
 
   Bu seçeneği komut satırında değil, bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için [MSBuild'e](#msbuild)bakın.
 
-- **`-p:PublishSingleFile`**
+- **`-p:PublishSingleFile=true`**
 
   Uygulamayı platforma özgü tek dosyalı çalıştırılabilir olarak paketler. Yürütülebilir kendi kendini ayıklama ve uygulamayı çalıştırmak için gerekli olan tüm bağımlılıkları (yerel dahil) içerir. Uygulama ilk çalıştırıldığında, uygulama uygulama adına ve yapı tanımlayıcısına göre bir dizine ayıklanır. Uygulama yeniden çalıştırıldığında başlatma daha hızlıdır. Yeni bir sürüm kullanılmadığı sürece uygulamanın kendisini ikinci kez ayıklaması gerekmez. .NET Core 3.0 SDK'dan beri mevcuttur.
 
@@ -149,7 +153,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   Bu seçeneği komut satırında değil, bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için [MSBuild'e](#msbuild)bakın.
 
-- **`-p:PublishTrimmed`**
+- **`-p:PublishTrimmed=true`**
 
   Kendi kendine yeten bir yürütücü yayımlarken uygulamanın dağıtım boyutunu azaltmak için kullanılmayan kitaplıkları kırpıyor. Daha fazla bilgi için, trim [bağımsız dağıtımlar ve yürütülebilir bakın.](../deploying/trim-self-contained.md) .NET Core 3.0 SDK'dan beri mevcuttur.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738834"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102079"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -77,7 +77,7 @@ Referans türlerinin değere ve başvuruya göre nasıl geçirilen hakkında dah
   
 ## <a name="reference-return-values"></a>Başvuru dönüş değerleri
 
-Başvuru iade değerleri (veya ref returns) bir yöntemin arayana başvuruyla döndürdettiği değerlerdir. Diğer bir deyişle, arayan bir yöntem tarafından döndürülen değeri değiştirebilir ve bu değişiklik yöntemi içeren nesnenin durumuna yansıtılır.
+Başvuru iade değerleri (veya ref returns) bir yöntemin arayana başvuruyla döndürdettiği değerlerdir. Diğer bir deyişle, arayan bir yöntem tarafından döndürülen değeri değiştirebilir ve bu değişiklik arama yönteminde nesnenin durumuna yansıtılır.
 
 Bir referans iade değeri anahtar `ref` sözcüğü kullanılarak tanımlanır:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Arayanın nesnenin durumunu değiştirebilmesi için, başvuru iade değerinin ref [yerel](#ref-locals)olarak açıkça tanımlanan bir değişkene depolanmış olması gerekir.
+
+Burada yöntem imza ve yöntem gövdesi hem gösteren daha eksiksiz bir ref dönüş örneğidir.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 Çağrılan yöntem, iade değerini başvuru `ref readonly` yla değeri döndürecek şekilde bildirebilir ve arama kodunun döndürülen değeri değiştiremeyeceğini zorlayabilir. Arama yöntemi, değeri yerel bir [ref readonly](#ref-readonly-locals) değişkeninde depolayarak döndürülen değeri kopyalamaktan kaçınabilir.
 
