@@ -17,7 +17,7 @@ ms.locfileid: "73123729"
   
  Platform çağırma çağrılarının döndürdüğü yapıların blittable tür olması gerekir. Platform çağırma, dönüş türleri olarak blittable olmayan yapıları desteklemez.  
   
- <xref:System> ad alanından aşağıdaki türler blittable türleridir:  
+ <xref:System> Ad alanından aşağıdaki türler blittable türleridir:  
   
 - <xref:System.Byte?displayProperty=nameWithType>  
   
@@ -51,26 +51,26 @@ ms.locfileid: "73123729"
   
  Nesne başvuruları blittable değildir. Bu, kendileri tarafından blittable olan nesnelere başvuru dizisi içerir. Örneğin, blittable olan bir yapı tanımlayabilirsiniz, ancak bu yapılara başvuru dizisi içeren bir blittable Türü tanımlayamazsınız.  
   
- En iyi duruma getirme olarak, blittable türündeki diziler ve yalnızca blittable üyeleri içeren sınıflar sıralama [](copying-and-pinning.md) sırasında kopyalanabilir. Çağıran ve çağrılan aynı Apartment olduğunda bu türler ın/out parametreleri olarak sıralanabilen görünebilir. Ancak, bu türler aslında parametrelerde olarak sıralanır ve bağımsız değişkeni bir ın/out parametresi olarak sıralamak istiyorsanız <xref:System.Runtime.InteropServices.InAttribute> ve <xref:System.Runtime.InteropServices.OutAttribute> özniteliklerini uygulamanız gerekir.  
+ En iyi duruma getirme olarak, blittable türündeki diziler ve yalnızca blittable üyeleri içeren sınıflar sıralama [pinned](copying-and-pinning.md) sırasında kopyalanabilir. Çağıran ve çağrılan aynı Apartment olduğunda bu türler ın/out parametreleri olarak sıralanabilen görünebilir. Ancak, bu türler aslında parametrelerde olarak sıralanır ve bağımsız değişkeni bir ın/out parametresi <xref:System.Runtime.InteropServices.InAttribute> olarak <xref:System.Runtime.InteropServices.OutAttribute> sıralamak istiyorsanız ve özniteliklerini uygulamanız gerekir.  
   
  Bazı yönetilen veri türleri, yönetilmeyen bir ortamda farklı bir temsil gerektirir. Bu blittable olmayan veri türlerinin sıralanabilen bir forma dönüştürülmesi gerekir. Örneğin, yönetilen dizeler, sıralanmadan önce dize nesnelerine dönüştürülmesi gerektiğinden blittable olmayan türlerdir.  
   
- Aşağıdaki tabloda <xref:System> ad alanından blittable olmayan türler listelenmektedir. Statik bir yönteme veya bir sınıf örneğine başvuran veri yapıları olan [Temsilciler](default-marshaling-behavior.md#default-marshaling-for-delegates)de blittable değildir.  
+ Aşağıdaki tabloda, <xref:System> ad alanından blittable olmayan türler listelenmektedir. Statik bir yönteme veya bir sınıf örneğine başvuran veri yapıları olan [Temsilciler](default-marshaling-behavior.md#default-marshaling-for-delegates)de blittable değildir.  
   
 |Blittable olmayan tür|Açıklama|  
 |-------------------------|-----------------|  
-|[System. Array](default-marshaling-for-arrays.md)|C stili bir diziye veya `SAFEARRAY`dönüştürür.|  
-|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1 veya-1 olarak `true` 1, 2 veya 4 baytlık bir değere dönüştürür.|  
+|[System. Array](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY`.|  
+|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1, 2 veya 4 baytlık bir değere 1 veya-1 ile `true` dönüştürür.|  
 |[System. Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode veya ANSI karaktere dönüştürür.|  
 |[System. Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Sınıf arabirimine dönüştürür.|  
-|[System. Object](default-marshaling-for-objects.md)|Bir varyanta veya arabirime dönüştürür.|  
-|[System. Mdarray](default-marshaling-for-arrays.md)|C stili bir diziye veya `SAFEARRAY`dönüştürür.|  
+|[System.Object](default-marshaling-for-objects.md)|Bir varyanta veya arabirime dönüştürür.|  
+|[System. Mdarray](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY`.|  
 |[System. String](default-marshaling-for-strings.md)|Null bir başvuruya veya BSTR 'ye bir dizeye dönüştürür.|  
 |[System. ValueType](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Sabit bellek düzenine sahip bir yapıya dönüştürür.|  
-|[System. Szarray](default-marshaling-for-arrays.md)|C stili bir diziye veya `SAFEARRAY`dönüştürür.|  
+|[System. Szarray](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY`.|  
   
- Sınıf ve nesne türleri yalnızca COM birlikte çalışma tarafından desteklenir. Visual Basic, C#ve C++içindeki karşılık gelen türler Için bkz. [sınıf kitaplığına genel bakış](../../standard/class-library-overview.md).  
+ Sınıf ve nesne türleri yalnızca COM birlikte çalışma tarafından desteklenir. Visual Basic, C# ve C++ ' daki ilgili türler için bkz. [sınıf kitaplığına genel bakış](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
+- [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)

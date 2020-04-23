@@ -34,14 +34,14 @@ Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesini kaydetmek için
 
-1. Komut isteminde, şunları yazın:
+1. Komut istemine şunları yazın:
 
      **Regasm** *AssemblyName*
 
      Bu komutta, *AssemblyName* kayıtlı derlemenin dosya adıdır. Regasm. exe, özgün tür kitaplığıyla aynı kayıt defteri anahtarı altında birincil birlikte çalışma derlemesi için bir girdi ekler.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek `CompanyA.UtilLib.dll` birincil birlikte çalışma derlemesini kaydeder.
+ Aşağıdaki örnek, `CompanyA.UtilLib.dll` birincil birlikte çalışma derlemesini kaydeder.
 
 ```console
 regasm CompanyA.UtilLib.dll

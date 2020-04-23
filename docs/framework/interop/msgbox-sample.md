@@ -17,20 +17,20 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181353"
 ---
 # <a name="msgbox-sample"></a>MsgBox Örneği
-Bu örnek, dize türlerinin parametrelerolarak değere göre <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>nasıl <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>geçirilmeye ve , ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanların ne zaman kullanılacağını gösterir.  
+Bu örnek <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, parametre türlerini parametrelere göre ve, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, ve <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> alanlarını ne zaman kullanacağınızı gösteren bir değere göre nasıl geçirileceğini gösterir.  
   
- MsgBox örneği, özgün işlev bildirimiile gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
+ MsgBox örnek, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevi kullanır:  
   
-- **MessageBox** User32.dll'den dışa aktarılabEdilir.  
+- User32. dll dosyasından aktarılmış **MessageBox** .  
   
     ```cpp
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,
        UINT uType);  
     ```  
   
- Bu örnekte, `NativeMethods` sınıf, `MsgBoxSample` sınıf tarafından çağrılan her yönetilmeyen işlev için yönetilen bir prototip içerir. Yönetilen prototip `MsgBox`yöntemleri `MsgBox2`, `MsgBox3` ve aynı yönetilmeyen işlev için farklı bildirimleri var.  
+ Bu örnekte, `NativeMethods` sınıfı, `MsgBoxSample` sınıfı tarafından çağrılan her yönetilmeyen işlev için bir yönetilen prototip içerir. Yönetilen prototip yöntemleri `MsgBox` `MsgBox2`, ve `MsgBox3` aynı yönetilmeyen işlev için farklı bildirimlere sahiptir.  
   
- ANSI `MsgBox2` olarak belirtilen karakter türü Unicode işlevinin adı olan giriş noktasıyla `MessageBoxW`eşleşmediği için ileti kutusunda yanlış çıktı üretir. Giriş `MsgBox3` **Noktası,** **CharSet**ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında, `MsgBox3` bir özel durum atar. Dize adlandırma ve ad bağlama hakkında ayrıntılı bilgi için [bkz.](specifying-a-character-set.md)  
+ ANSI olarak belirtilen `MsgBox2` karakter türü, Unicode işlevinin adı olan giriş noktasıyla `MessageBoxW`eşleşmediğinden, için bildirimi ileti kutusunda yanlış çıktı üretir. `MsgBox3` Bildirimi, **entryPoint**, **charset**ve **ExactSpelling** alanları arasında bir uyumsuzluk oluşturur. Çağrıldığında bir özel `MsgBox3` durum oluşturur. Dize adlandırma ve ad sıralaması hakkında ayrıntılı bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]

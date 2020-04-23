@@ -46,6 +46,6 @@ Birlikte çalışabilirlik uygulaması genellikle .NET istemci derlemesini, fark
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
-- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
 - [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)

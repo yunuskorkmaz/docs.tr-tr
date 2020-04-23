@@ -19,17 +19,17 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181400"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
-COM yöntemleri, HRESULTs döndürerek hataları rapor; .NET yöntemleri özel durumlar atarak bunları rapor. Çalışma zamanı ikisi arasındaki geçişi işler. .NET Framework eşlemlerinde bir HRESULT'a her özel durum sınıfı.  
+COM yöntemleri, HRESULTs döndüren hataları raporlar; .NET yöntemleri özel durumlar oluşturarak bunları raporlar. Çalışma zamanı, iki arasındaki geçişi işler. .NET Framework her bir özel durum sınıfı bir HRESULT ile eşlenir.  
   
- Kullanıcı tanımlı özel durum sınıfları, HRESULT'in uygun olduğu her şeyi belirtebilir. Bu özel durum sınıfları, özel durum nesnesi üzerinde **HResult** alanı ayarlayarak oluşturulduğunda döndürülecek HRESULT dinamik olarak değiştirebilirsiniz. Özel durum la ilgili ek bilgiler, yönetilmeyen işlemde .NET nesnesi üzerinde uygulanan **IErrorInfo** arabirimi aracılığıyla istemciye sağlanır.  
+ Kullanıcı tanımlı özel durum sınıfları, hangi HRESULT 'nin uygun olduğunu belirtebilir. Bu özel durum sınıfları özel durum nesnesi üzerinde **HRESULT** alanı ayarlanarak, özel durum OLUŞTURULDUĞUNDA döndürülecek HRESULT öğesini dinamik olarak değiştirebilir. Özel durumla ilgili ek bilgiler, yönetilmeyen işlemdeki .NET nesnesine uygulanan **IErrorInfo** arabirimi aracılığıyla istemciye sağlanır.  
   
- **System.Exception'ı**genişleten bir sınıf oluşturursanız, inşaat sırasında HRESULT alanını ayarlamanız gerekir. Aksi takdirde, taban sınıf HRESULT değerini atar. İstisnanın oluşturucusundaki değeri sağlayarak yeni özel durum sınıflarını varolan bir HRESULT'a eşleyebilirsiniz.  
+ **System. Exception**'ı genişleten bir sınıf oluşturursanız, oluşturma sırasında HRESULT alanını ayarlamanız gerekir. Aksi takdirde, temel sınıf HRESULT değerini atar. Yeni özel durum sınıflarını, özel durumun oluşturucusunda değeri sağlayarak mevcut bir HRESULT ile eşleyebilirsiniz.  
   
- İş parçacığı üzerinde bir hediye `HRESULT` olan durumlarda çalışma `IErrorInfo` zamanının bazen bir şeyi yok sayacağını unutmayın.  Bu davranış, ve aynı `HRESULT` hatayı `IErrorInfo` temsil etmez durumlarda oluşabilir.  
+ Çalışma zamanının bazen iş parçacığında `HRESULT` `IErrorInfo` mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın.  Bu davranış, `HRESULT` ve ' `IErrorInfo` nin aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
   
-### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturmak ve bir HRESULT ile eşlemek için  
+### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturmak ve bunu bir HRESULT ile eşlemek için  
   
-1. Adlı `NoAccessException` yeni bir özel durum sınıfı oluşturmak ve HRESULT `E_ACCESSDENIED`ile eşlemek için aşağıdaki kodu kullanın.  
+1. Adlı `NoAccessException` yeni bir özel durum sınıfı oluşturmak ve bunu HRESULT `E_ACCESSDENIED`ile eşlemek için aşağıdaki kodu kullanın.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -44,7 +44,7 @@ COM yöntemleri, HRESULTs döndürerek hataları rapor; .NET yöntemleri özel d
     }  
     ```  
   
- Hem yönetilen hem de yönetilmeyen kodu aynı anda kullanan bir programla (herhangi bir programlama dilinde) karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğindeki özel mareşal, belirli bir HRESULT değeriyle özel bir özel durum atmak için **Marshal.ThrowExceptionForHR(int HResult)** yöntemini kullanır. Yöntem HRESULT'ı arar ve uygun özel durum türünü oluşturur. Örneğin, aşağıdaki kod parçasındaki HRESULT **ArgumentException**oluşturur.  
+ Aynı anda hem yönetilen hem de yönetilmeyen kodu kullanan bir programla (herhangi bir programlama dilinde) karşılaşabilirsiniz. Örneğin, aşağıdaki kod örneğinde özel sıralayıcı, belirli bir HRESULT değeri ile özel durum oluşturmak için **Marshal. ThrowExceptionForHR (INT HRESULT)** yöntemini kullanır. Yöntemi HRESULT arar ve uygun özel durum türünü oluşturur. Örneğin, aşağıdaki kod parçasındaki HRESULT **ArgumentException**üretir.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -53,94 +53,94 @@ CMyClass::MethodThatThrows
 }  
 ```  
   
- Aşağıdaki tablo, her HRESULT'ın .NET Framework'deki karşılaştırılabilir özel durum sınıfına tam eşlemi sağlar.  
+ Aşağıdaki tabloda, her HRESULT 'den karşılaştırılabilen özel durum sınıfına .NET Framework tüm eşleme sağlanmıştır.  
   
 |HRESULT|.NET özel durumu|  
 |-------------|--------------------|  
-|**MSEE_E_APPDOMAINUNLOADED**|**Appdomainunloadedexception**|  
-|**COR_E_APPLICATION**|**Applicationexception**|  
-|**COR_E_ARGUMENT veya E_INVALIDARG**|**Argumentexception**|  
-|**COR_E_ARGUMENTOUTOFRANGE**|**Argumentoutofrangeexception**|  
-|**COR_E_ARITHMETIC veya ERROR_ARITHMETIC_OVERFLOW**|**Arithmeticexception**|  
-|**COR_E_ARRAYTYPEMISMATCH**|**Arraytypemismatchexception**|  
-|**COR_E_BADIMAGEFORMAT veya ERROR_BAD_FORMAT**|**Badımageformatexception**|  
-|**COR_E_COMEMULATE_ERROR**|**KOMEDİÖZEL DURUM**|  
-|**COR_E_CONTEXTMARSHAL**|**Contextmarshalexception**|  
+|**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
+|**COR_E_APPLICATION**|**ApplicationException**|  
+|**COR_E_ARGUMENT veya E_INVALIDARG**|**ArgumentException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
+|**COR_E_ARITHMETIC veya ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
+|**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
+|**COR_E_BADIMAGEFORMAT veya ERROR_BAD_FORMAT**|**BadImageFormatException**|  
+|**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
+|**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
 |**COR_E_CORE**|**CoreException**|  
-|**NTE_FAIL**|**Cryptographicexception**|  
-|**COR_E_DIRECTORYNOTFOUND veya ERROR_PATH_NOT_FOUND**|**Directorynotfoundexception**|  
-|**COR_E_DIVIDEBYZERO**|**Dividebyzeroexception**|  
-|**COR_E_DUPLICATEWAITOBJECT**|**Duplicatewaitobjectexception**|  
-|**COR_E_ENDOFSTREAM**|**Endofstreamexception**|  
-|**COR_E_TYPELOAD**|**Entrypointnotfoundexception**|  
+|**NTE_FAIL**|**CryptographicException**|  
+|**COR_E_DIRECTORYNOTFOUND veya ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
+|**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
+|**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
+|**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
 |**COR_E_EXCEPTION**|**Özel durum**|  
-|**COR_E_EXECUTIONENGINE**|**Executionengineexception**|  
-|**COR_E_FIELDACCESS**|**Fieldaccessexception**|  
-|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**Filenotfoundexception**|  
-|**COR_E_FORMAT**|**Formatexception**|  
-|**COR_E_INDEXOUTOFRANGE**|**ındexoutofrangeexception**|  
-|**COR_E_INVALIDCAST veya E_NOINTERFACE**|**ınvalidcastexception**|  
-|**COR_E_INVALIDCOMOBJECT**|**ınvalidcomobjectexception**|  
-|**COR_E_INVALIDFILTERCRITERIA**|**ınvalidfiltercriteriaexception**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**ınvalidolevarianttypeexception**|  
+|**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
+|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
+|**COR_E_FORMAT**|**Lıklarını**|  
+|**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
+|**COR_E_INVALIDCAST veya E_NOINTERFACE**|**InvalidCastException**|  
+|**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
-|**Cor_e_ıo**|**ıoexception**|  
+|**COR_E_IO**|**IOException**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
-|**COR_E_METHODACCESS**|**Methodaccessexception**|  
-|**COR_E_MISSINGFIELD**|**Missingfieldexception**|  
-|**COR_E_MISSINGMANIFESTRESOURCE**|**Missingmanifestresourceexception**|  
-|**COR_E_MISSINGMEMBER**|**Missingmemberexception**|  
-|**COR_E_MISSINGMETHOD**|**Missingmethodexception**|  
-|**COR_E_MULTICASTNOTSUPPORTED**|**Multicastnotsupportedexception**|  
-|**COR_E_NOTFINITENUMBER**|**Notfinitenumberexception**|  
-|**E_notımpl**|**Notımplementedexception**|  
-|**COR_E_NOTSUPPORTED**|**Notsupportedexception**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**Nullreferenceexception**|  
-|**COR_E_OUTOFMEMORY veya**<br /><br /> **E_outofmemory**|**Outofmemoryexception**|  
-|**COR_E_OVERFLOW**|**Overflowexception**|  
-|**COR_E_PATHTOOLONG veya ERROR_FILENAME_EXCED_RANGE**|**Pathtoolongexception**|  
-|**COR_E_RANK**|**Rankexception**|  
-|**COR_E_REFLECTIONTYPELOAD**|**Reflectiontypeloadexception**|  
-|**COR_E_REMOTING**|**Remotingexception**|  
-|**COR_E_SAFEARRAYTYPEMISMATCH**|**Safearraytypemismatchexception**|  
-|**COR_E_SECURITY**|**Securityexception**|  
-|**COR_E_SERIALIZATION**|**Serializationexception**|  
-|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**Stackoverflowexception**|  
-|**COR_E_SYNCHRONIZATIONLOCK**|**Synchronizationlockexception**|  
-|**COR_E_SYSTEM**|**Systemexception**|  
-|**COR_E_TARGET**|**Targetexception**|  
+|**COR_E_METHODACCESS**|**MethodAccessException**|  
+|**COR_E_MISSINGFIELD**|**MissingFieldException**|  
+|**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
+|**COR_E_MISSINGMEMBER**|**MissingMemberException**|  
+|**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
+|**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**Durumu**|  
+|**COR_E_OUTOFMEMORY veya**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_PATHTOOLONG veya ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_RANK**|**RankException**|  
+|**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
+|**COR_E_REMOTING**|**RemotingException**|  
+|**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
+|**COR_E_SECURITY**|**SecurityException**|  
+|**COR_E_SERIALIZATION**|**SerializationException**|  
+|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**StackOverflowException**|  
+|**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
+|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
-|**COR_E_TARGETPARAMCOUNT**|**Targetparametercountexception**|  
-|**COR_E_THREADABORTED**|**Threadabortexception**|  
-|**COR_E_THREADINTERRUPTED**|**Threadınterruptedexception**|  
-|**COR_E_THREADSTATE**|**Threadstateexception**|  
+|**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
+|**COR_E_THREADABORTED**|**ThreadAbortException**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
+|**COR_E_THREADSTATE**|**ThreadStateException**|  
 |**COR_E_THREADSTOP**|**ThreadStopException**|  
-|**COR_E_TYPELOAD**|**Typeloadexception**|  
-|**COR_E_TYPEINITIALIZATION**|**Typeınitializationexception**|  
-|**COR_E_VERIFICATION**|**Verificationexception**|  
-|**COR_E_WEAKREFERENCE**|**Zayıf Referans Özel Durum**|  
+|**COR_E_TYPELOAD**|**TypeLoadException**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
+|**COR_E_VERIFICATION**|**VerificationException**|  
+|**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
-|**Diğer tüm HRESULTs**|**Comexception**|  
+|**Diğer tüm HRESULTs 'lar**|**COMException**|  
   
- Genişletilmiş hata bilgilerini almak için yönetilen istemcinin oluşturulan özel durum nesnesinin alanlarını incelemesi gerekir. Özel durum nesnesinin bir hata hakkında yararlı bilgiler sağlaması için COM nesnesinin **IErrorInfo** arabirimini uygulaması gerekir. Çalışma süresi, özel durum nesnesini başlatmayı sağlamak için **IErrorInfo** tarafından sağlanan bilgileri kullanır.  
+ Genişletilmiş hata bilgilerini almak için, yönetilen istemci, oluşturulan özel durum nesnesinin alanlarını incelemeli. Bir hata hakkında yararlı bilgiler sağlamak için özel durum nesnesi için, COM nesnesi **IErrorInfo** arabirimini gerçekleştirmelidir. Çalışma zamanı, özel durum nesnesini başlatmak için **IErrorInfo** tarafından belirtilen bilgileri kullanır.  
   
- COM nesnesi **IErrorInfo'yu**desteklemiyorsa, çalışma zamanı varsayılan değerlere sahip bir özel durum nesnesini başolarak laştırır. Aşağıdaki tablo, bir özel durum nesnesi ile ilişkili her alanı listeler ve COM nesnesi **IErrorInfo'yu**desteklediğinde varsayılan bilgilerin kaynağını tanımlar.  
+ COM nesnesi **IErrorInfo**'yu desteklemiyorsa, çalışma zamanı varsayılan değerlerle bir özel durum nesnesi başlatır. Aşağıdaki tabloda bir özel durum nesnesiyle ilişkili her alan listelenmekte ve COM nesnesi **IErrorInfo 'yu**desteklediğinde varsayılan bilgilerin kaynağını tanımlıyor.  
   
- İş parçacığı üzerinde bir hediye `HRESULT` olan durumlarda çalışma `IErrorInfo` zamanının bazen bir şeyi yok sayacağını unutmayın.  Bu davranış, ve aynı `HRESULT` hatayı `IErrorInfo` temsil etmez durumlarda oluşabilir.  
+ Çalışma zamanının bazen iş parçacığında `HRESULT` `IErrorInfo` mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın.  Bu davranış, `HRESULT` ve ' `IErrorInfo` nin aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
   
-|Özel durum alanı|COM'dan Bilgi Kaynağı|  
+|Özel durum alanı|COM 'tan bilgi kaynağı|  
 |---------------------|------------------------------------|  
-|**Hata Kodu**|HRESULT çağrıdan döndü.|  
-|**Helplink**|**IErrorInfo->HelpContext** sıfır değilse, dize **IErrorInfo->GetHelpFile** ve "#" ve **IErrorInfo->GetHelpContext**concatenating oluşur. Aksi takdirde dize **IErrorInfo->GetHelpFile**döndürülür.|  
-|**ınnerexception**|Her zaman bir null referans (Visual Basic**hiçbir şey).**|  
-|**İleti**|String **IErrorInfo->GetDescription**döndü.|  
-|**Kaynak**|String **IErrorInfo->GetSource**döndü.|  
-|**Stacktrace**|Yığın izi.|  
-|**Hedef Sitesi**|Başarısız HRESULT döndürülen yöntemin adı.|  
+|**Raporladı**|HRESULT çağrıdan döndürüldü.|  
+|**HelpLink**|**Ierrorinfo->HelpContext** sıfır değilse, dize **ıerrorınfo->GetHelpFile** ve "#" ve **IErrorInfo->GetHelpContext**şeklinde birleştirerek oluşturulur. Aksi takdirde, dize **IErrorInfo->GetHelpFile**öğesinden döndürülür.|  
+|**Bakın**|Her zaman bir null başvurusu (Visual Basic**hiçbir şey** ).|  
+|**İleti**|**IErrorInfo->GetDescription**öğesinden döndürülen dize.|  
+|**Kaynak**|**IErrorInfo->GetSource**öğesinden döndürülen dize.|  
+|**StackTrace**|Yığın izleme.|  
+|**TargetSite**|Hatalı HRESULT döndüren metodun adı.|  
   
- **İleti,** **Kaynak**ve **StackTrace** gibi özel durum alanları **StackOverflowException**için kullanılamaz.  
+ **İleti**, **kaynak**ve **StackTrace** gibi özel durum alanları **StackOverflowException**için kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş COM Birlikte Çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Özel durumlar](../../standard/exceptions/index.md)

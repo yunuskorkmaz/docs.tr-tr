@@ -24,7 +24,7 @@ Değer tarafından geçirilen yöntem bağımsız değişkenleri, yığın üzer
 
 ![Değere ve başvuruya göre geçirilen başvuru türlerini gösteren diyagram.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
 
-Veri sabitleme, verileri geçerli bellek konumunda geçici olarak kilitler ve bu sayede ortak dil çalışma zamanının çöp toplayıcısının yeniden konumlandırılmasını sağlar. Sıralayıcı, performansı kopyalama ve geliştirme yükünü azaltmak için verileri sabitler. Verilerin türü, sıralama işlemi sırasında kopyalanıp kopyalanmadığını veya sabitlenmeyeceğini belirler.  Sabitleme işlemi, <xref:System.String>gibi nesneler için sıralama sırasında otomatik olarak gerçekleştirilir, ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfını kullanarak belleği el ile sabitleyebilirsiniz.
+Veri sabitleme, verileri geçerli bellek konumunda geçici olarak kilitler ve bu sayede ortak dil çalışma zamanının çöp toplayıcısının yeniden konumlandırılmasını sağlar. Sıralayıcı, performansı kopyalama ve geliştirme yükünü azaltmak için verileri sabitler. Verilerin türü, sıralama işlemi sırasında kopyalanıp kopyalanmadığını veya sabitlenmeyeceğini belirler.  Sabitleme <xref:System.String>, gibi nesneler için sıralama sırasında otomatik olarak gerçekleştirilir, ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı kullanarak belleği el ile sabitleyebilirsiniz.
 
 ## <a name="formatted-blittable-classes"></a>Biçimlendirilen blittable sınıfları
 
@@ -41,9 +41,9 @@ Biçimlendirilen [non-blittable](blittable-and-non-blittable-types.md) sınıfla
 
 - Blittable olmayan bir sınıf başvuruya göre sıralandıysanız, çağrılan, veri yapısının bir kopyasına yönelik bir işaretçi alır.
 
-- <xref:System.Runtime.InteropServices.InAttribute> özniteliği ayarlandıysa, bu kopya her zaman örneğin durumuyla başlatılır ve gerektiğinde sıralama yapılır.
+- <xref:System.Runtime.InteropServices.InAttribute> Özniteliği ayarlandıysa, bu kopya her zaman örneğin durumuyla başlatılır ve gerektiğinde sıralama yapılır.
 
-- <xref:System.Runtime.InteropServices.OutAttribute> özniteliği ayarlandıysa, durum her zaman döndürülen örneğe geri kopyalanır ve gerektiğinde sıralama yapılır.
+- <xref:System.Runtime.InteropServices.OutAttribute> Öznitelik ayarlandıysa, durum her zaman dönüş sırasında örneğe kopyalanır ve gerektiğinde sıralama yapılır.
 
 - **InAttribute** ve **OutAttribute** öğelerinin her ikisi de ayarlanırsa, her iki kopya de gereklidir. Her iki öznitelik de atlanırsa Sıralayıcı, kopyayı ortadan kaldırarak iyileştirebilirler.
 
@@ -74,12 +74,12 @@ Dize türü değere göre sıralanmışsa (örneğin, bir Unicode karakter dizes
 > [!CAUTION]
 > Bir dize değere göre geçirildiğinde, çağrılan, Sıralayıcı tarafından geçirilen başvuruyu hiçbir zaman değiştirmemelidir. Bunun yapılması yönetilen yığının bozulmasına neden olabilir.
 
-Bir <xref:System.String?displayProperty=nameWithType> başvuruya göre geçirildiğinde Sıralayıcı, çağrıyı yapmadan önce, içeriği ikincil arabelleğe kopyalar. Ardından, arabelleğin içeriğini çağrıdan dönüşte yeni bir dizeye kopyalar. Bu teknik, sabit yönetilen dizenin değiştirilmemiş olarak kalmasını sağlar.
+Bir <xref:System.String?displayProperty=nameWithType> başvuru ile geçirildiğinde Sıralayıcı, çağrıyı yapmadan önce içeriği bir ikincil arabelleğe kopyalar. Ardından, arabelleğin içeriğini çağrıdan dönüşte yeni bir dizeye kopyalar. Bu teknik, sabit yönetilen dizenin değiştirilmemiş olarak kalmasını sağlar.
 
-Değer tarafından <xref:System.Text.StringBuilder?displayProperty=nameWithType> geçirildiğinde Sıralayıcı, **StringBuilder** 'ın iç arabelleğine doğrudan çağırana bir başvuru geçirir. Çağıran ve çağrılan, arabelleğin boyutunu kabul etmelidir. Çağıran, yeterli uzunlukta bir **StringBuilder** oluşturmaktan sorumludur. Aranan, arabelleğin taşma olmamasını sağlamak için gerekli önlemleri almalıdır. **StringBuilder** , değere göre geçirilen başvuru türleri varsayılan olarak parametrelerde olarak geçirilir kural için bir özel durumdur. Her zaman Içinde/dışarı olarak geçirilir.
+Bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değere göre geçirildiğinde Sıralayıcı, **StringBuilder** 'ın iç arabelleğine doğrudan çağırana bir başvuru geçirir. Çağıran ve çağrılan, arabelleğin boyutunu kabul etmelidir. Çağıran, yeterli uzunlukta bir **StringBuilder** oluşturmaktan sorumludur. Aranan, arabelleğin taşma olmamasını sağlamak için gerekli önlemleri almalıdır. **StringBuilder** , değere göre geçirilen başvuru türleri varsayılan olarak parametrelerde olarak geçirilir kural için bir özel durumdur. Her zaman Içinde/dışarı olarak geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
+- [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
 - [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Birlikte Çalışma için Hazırlama](interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](interop-marshaling.md)

@@ -42,12 +42,12 @@ COM Ayrıca, verileri COM apartmanları veya farklı COM işlemleri arasında s�
 
 ### <a name="com-clients-and-managed-servers"></a>COM Istemcileri ve yönetilen sunucular
 
-[Regasm. exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) tarafından kaydedilmiş bir tür kitaplığına sahip aktarılmış bir yönetilen sunucu, `Both`olarak ayarlanmış bir `ThreadingModel` kayıt defteri girişi içerir. Bu değer, sunucunun tek iş parçacıklı bir grupta (STA) veya çok iş parçacıklı grupta (MTA) etkinleştiribileceğini belirtir. Sunucu nesnesi, aşağıdaki tabloda gösterildiği gibi çağıranı ile aynı grupta oluşturulur:
+[Regasm. exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) tarafından kaydedilmiş bir tür kitaplığına sahip, aktarılmış bir yönetilen sunucuda, olarak `ThreadingModel` `Both`ayarlanmış bir kayıt defteri girişi vardır. Bu değer, sunucunun tek iş parçacıklı bir grupta (STA) veya çok iş parçacıklı grupta (MTA) etkinleştiribileceğini belirtir. Sunucu nesnesi, aşağıdaki tabloda gösterildiği gibi çağıranı ile aynı grupta oluşturulur:
 
 |COM istemcisi|.NET Server|Hazırlama gereksinimleri|
 |----------------|-----------------|-----------------------------|
-|A|`Both` STA olur.|Aynı apartman sıralaması.|
-|SıRAYA|`Both` MTA olur.|Aynı apartman sıralaması.|
+|A|`Both`STA olur.|Aynı apartman sıralaması.|
+|SıRAYA|`Both`MTA olur.|Aynı apartman sıralaması.|
 
 İstemci ve sunucu aynı grupta olduğundan, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını otomatik olarak işler. Aşağıdaki çizimde, aynı COM stili apartman içinde yönetilen ve yönetilmeyen Heap 'ler arasında çalışan birlikte çalışma sıralama hizmeti gösterilmektedir.
 
@@ -57,7 +57,7 @@ Yönetilen bir sunucuyu dışarı aktarmayı planlıyorsanız, COM istemcisinin 
 
 ### <a name="managed-clients-and-com-servers"></a>Yönetilen Istemciler ve COM sunucuları
 
-Yönetilen istemci apartmanları için varsayılan ayar MTA ' dır; Ancak, .NET istemcisinin uygulama türü varsayılan ayarı değiştirebilir. Örneğin, Visual Basic istemci grubu ayarı STA ' dır. Yönetilen bir istemcinin Grup ayarını incelemek ve değiştirmek için <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> özelliğini veya <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> özelliğini kullanabilirsiniz.
+Yönetilen istemci apartmanları için varsayılan ayar MTA ' dır; Ancak, .NET istemcisinin uygulama türü varsayılan ayarı değiştirebilir. Örneğin, Visual Basic istemci grubu ayarı STA ' dır. Yönetilen bir istemcinin grup <xref:System.STAThreadAttribute?displayProperty=nameWithType>ayarını incelemek <xref:System.MTAThreadAttribute?displayProperty=nameWithType>ve değiştirmek <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> için,, özelliğini <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> veya özelliğini kullanabilirsiniz.
 
 Bileşenin yazarı bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tabloda .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterilmektedir. Ayrıca, kombinasyonlar için elde edilen sıralama gereksinimlerini gösterir.
 
@@ -73,10 +73,10 @@ Yönetilen bir istemci ve yönetilmeyen sunucu aynı Apartment ise, birlikte ça
 Çapraz grup sıralaması için şunları yapabilirsiniz:
 
 - Yalnızca sınır genelinde çok sayıda çağrı olduğunda dikkat çekici olan çapraz grup sıralaması yükünü kabul edin. Grup sınırını başarıyla çapraz olarak aramak için COM bileşeninin tür kitaplığını kaydetmeniz gerekir.
-- İstemci iş parçacığını STA veya MTA olarak ayarlayarak ana iş parçacığını değiştirin. Örneğin, C# istemciniz çok SAYıDA sta com bileşeni çağırırsa, ana Iş parçacığını STA olarak ayarlayarak geçici grup sıralamasını önleyebilirsiniz.
+- İstemci iş parçacığını STA veya MTA olarak ayarlayarak ana iş parçacığını değiştirin. Örneğin, C# istemciniz birçok STA COM bileşeni çağırırsa, ana iş parçacığını STA olarak ayarlayarak geçici grup sıralamasını önleyebilirsiniz.
 
     > [!NOTE]
-    > Bir C# istemcinin Iş parçacığı STA olarak AYARLANDıĞıNDA, MTA COM bileşenlerine yapılan çağrılar, çapraz grup sıralaması gerektirir.
+    > Bir C# istemcisinin iş parçacığı STA olarak ayarlandığında, MTA COM bileşenlerine yapılan çağrılar, çapraz grup sıralaması gerektirir.
 
 Bir grup modelini açıkça seçme yönergeleri için bkz. [yönetilen ve yönetilmeyen Iş parçacığı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
 
@@ -119,9 +119,9 @@ Bazı yönetilmeyen çağrılar, hizmet verilen bileşenler ve COM arasındaki �
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)|Birlikte çalışma sıralama hizmetinin verileri sıralamak için kullandığı kuralları açıklar.|
-|[Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)|Yöntem parametrelerinin nasıl bildirilemeyeceğini ve yönetilmeyen kitaplıklar tarafından dışarıya alınan işlevlere bağımsız değişkenlerin nasıl geçirileceğini açıklar.|
-|[COM Birlikte Çalışma ile Verileri Hazırlama](marshaling-data-with-com-interop.md)|Sıralama davranışının değiştirmek için COM sarmalayıcılarının nasıl özelleştirileceğini açıklar.|
+|[Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)|Birlikte çalışma sıralama hizmetinin verileri sıralamak için kullandığı kuralları açıklar.|
+|[Platform Çağırma ile Veri Sıralama](marshaling-data-with-platform-invoke.md)|Yöntem parametrelerinin nasıl bildirilemeyeceğini ve yönetilmeyen kitaplıklar tarafından dışarıya alınan işlevlere bağımsız değişkenlerin nasıl geçirileceğini açıklar.|
+|[COM Birlikte Çalışma ile Verileri Sıralama](marshaling-data-with-com-interop.md)|Sıralama davranışının değiştirmek için COM sarmalayıcılarının nasıl özelleştirileceğini açıklar.|
 |[Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM 'dan WCF 'ye geçiş işlemini açıklar.|
 |[Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](how-to-map-hresults-and-exceptions.md)|Özel özel durumların HRESULTs ile nasıl eşlenmesinin ve .NET Framework her HRESULT 'den karşılaştırılabilen özel durum sınıfına tüm eşlemeyi nasıl sağladığını açıklar.|
 |[Genel türler kullanılarak birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM birlikte çalışabilirlik için genel türler kullanılırken hangi eylemlerin desteklendiğini açıklar.|

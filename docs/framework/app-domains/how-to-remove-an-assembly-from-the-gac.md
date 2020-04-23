@@ -28,16 +28,16 @@ Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden (GAC) kaldırmanın
 
 ## <a name="removing-an-assembly-with-gacutilexe"></a>Gacutil. exe ile bir derlemeyi kaldırma
 
-Komut satırında, aşağıdaki komutu yazın:
+Komut isteminde aşağıdaki komutu yazın:
 
-**Gacutil – u** \<*bütünleştirilmiş kod adı*>
+**Gacutil – u** \< *derleme adı*>
 
 Bu komutta, *derleme adı* genel derleme önbelleğinden kaldırılacak derlemenin adıdır.
 
 > [!WARNING]
 > Derlemenin bazı uygulamalar için hala gerekli olabileceği için, üretim sistemlerindeki derlemeleri kaldırmak üzere Gacutil. exe ' yi kullanmamalısınız. Bunun yerine, GAC içinde yüklediği her derleme için başvuru sayısını tutan Windows Installer kullanmanız gerekir.
 
-Aşağıdaki örnek, `hello.dll` adlı bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır:
+Aşağıdaki örnek, genel derleme önbelleğinden adlı `hello.dll` bir derlemeyi kaldırır:
 
 ```console
 gacutil -u hello
@@ -52,6 +52,6 @@ gacutil -u hello
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
-- [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)
-- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Derlemeler ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
+- [Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)
+- [Gacutil. exe (Genel Bütünleştirilmiş Kod Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

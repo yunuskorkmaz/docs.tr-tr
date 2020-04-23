@@ -30,7 +30,7 @@ Bu bölümde, mevcut bir COM bileşenini yönetilen koda göstermek için gereke
   
 3. [Birlikte çalışabilirlik projesi derleyin](compiling-an-interop-project.md).  
   
-     Windows SDK, Visual Basic, C#ve C++dahil olmak üzere ortak dil belirtimi (CLS) ile uyumlu birkaç dil için derleyiciler sağlar.  
+     Windows SDK, Visual Basic, C# ve C++ dahil olmak üzere ortak dil belirtimi (CLS) ile uyumlu birkaç dil için derleyiciler sağlar.  
   
 4. [Birlikte çalışabilirlik uygulaması dağıtın](deploying-an-interop-application.md).  
   
@@ -42,4 +42,4 @@ Bu bölümde, mevcut bir COM bileşenini yönetilen koda göstermek için gereke
 - [Birlikte çalışabilirlik için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu](com-interop-sample-net-client-and-com-server.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil. exe (Genel Bütünleştirilmiş Kod Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

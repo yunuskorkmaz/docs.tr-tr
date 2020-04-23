@@ -1,6 +1,6 @@
 ---
 title: Stiller ve şablonlar
-description: .NET Core için Windows Presentation Foundation (WPF)'deki XAML kaynakları hakkında bilgi edinin. Stiller ve temalarla ilgili XAML kaynaklarının türlerini anlayın.
+description: .NET Core için Windows Presentation Foundation (WPF) içindeki XAML Kaynakları hakkında bilgi edinin. Stiller ve Temalar ile ilgili XAML kaynaklarının türlerini anlayın.
 author: thraka
 ms.author: adegeo
 ms.date: 09/09/2019
@@ -14,57 +14,57 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "82071887"
 ---
-# <a name="styles-and-templates-in-wpf"></a>WPF'deki stiller ve şablonlar
+# <a name="styles-and-templates-in-wpf"></a>WPF 'deki stiller ve şablonlar
 
-Windows Presentation Foundation (WPF) stili ve baştan çıkarıcı tasarımı, geliştiricilerin ve tasarımcıların görsel olarak zorlayıcı efektler ve ürünleri için tutarlı bir görünüm oluşturmasına izin veren bir dizi özellik anlamına gelir. Bir uygulamanın görünümünü özelleştirirken, uygulamalar içinde ve arasında görünümün bakımını ve paylaşımını sağlayan güçlü bir stil ve baştan çıkarıcı bir model istersiniz. WPF bu modeli sağlar.
+Windows Presentation Foundation (WPF) stili ve şablon oluşturma, geliştiricilerin ve tasarımcıların görsel açıdan etkileyici efektler ve ürün için tutarlı bir görünüm oluşturmalarına olanak tanıyan bir özellik paketine başvurur. Bir uygulamanın görünümünü özelleştirirken, uygulamalar içinde ve arasında görünüm ve paylaşım imkanı sağlayan güçlü bir stil ve şablon oluşturma modeli istiyorsunuz. WPF bu modeli sağlar.
 
-WPF stil modelinin bir diğer özelliği de sunum ve mantığın ayrılmasıdır. Tasarımcılar, geliştiricilerin C# veya Visual Basic kullanarak programlama mantığı üzerinde çalıştıkları aynı zamanda yalnızca XAML kullanarak bir uygulamanın görünümü üzerinde çalışabilirler.
+WPF stil modelinin başka bir özelliği de sununun ve mantığın ayrımı olur. Tasarımcılar, geliştiricilerin C# veya Visual Basic kullanarak programlama mantığı üzerinde çalıştığı aynı anda yalnızca XAML kullanarak bir uygulamanın görünümü üzerinde çalışabilir.
 
-Bu genel bakış, uygulamanın stil ve cazip yönlerine odaklanır ve veri bağlayıcı kavramları tartışmaz. Veri bağlama hakkında bilgi için [bkz.](../data/data-binding-overview.md)
+Bu genel bakış, uygulamanın stil ve şablon oluşturma yönlerine odaklanır ve veri bağlama kavramlarını ele almaz. Veri bağlama hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md).
 
-Stillerin ve şablonların yeniden kullanılmasını sağlayan kaynakları anlamak önemlidir. Kaynaklar hakkında daha fazla bilgi için [Bkz. XAML Kaynakları.](xaml-resources-define.md)
+Stillerin ve şablonların yeniden kullanılmasını sağlayan kaynakları anlamanız önemlidir. Kaynaklar hakkında daha fazla bilgi için bkz. [xaml kaynakları](xaml-resources-define.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="sample"></a>Örnek
 
-Bu genel bakışta sağlanan örnek kod, aşağıdaki resimde gösterilen basit bir [fotoğraf tarama uygulamasına](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) dayanmaktadır.
+Bu genel bakışta verilen örnek kod, aşağıdaki çizimde gösterilen [basit bir fotoğraf tarama uygulamasına](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) dayalıdır.
 
-![StillistesiGörünümü](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![Stilli ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-Bu basit fotoğraf örneği, görsel olarak zorlayıcı bir kullanıcı deneyimi oluşturmak için stil ve baştan çıkarma kullanır. Örnekiki <xref:System.Windows.Controls.TextBlock> öğe ve <xref:System.Windows.Controls.ListBox> görüntü listesine bağlı bir denetim vardır.
+Bu basit fotoğraf örneği, görsel açıdan etkileyici bir kullanıcı deneyimi oluşturmak için stil ve şablon oluşturma kullanır. Örnekte, iki <xref:System.Windows.Controls.TextBlock> öğe ve bir görüntü <xref:System.Windows.Controls.ListBox> listesine bağlanan bir denetim vardır.
 
-Tam örnek için, [Stil ve Templating Örnek Giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)bakın.
+Tüm örnek için bkz. [Stil ve şablon oluşturma örneğine giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="styles"></a>Stiller
 
-Birden <xref:System.Windows.Style> çok öğeye özellik değerleri kümesi uygulamak için uygun bir yol olarak düşünebilirsiniz. Bir stil, <xref:System.Windows.FrameworkElement> bir öğeden türeyen <xref:System.Windows.FrameworkContentElement> veya bir <xref:System.Windows.Window> öğe <xref:System.Windows.Controls.Button>den türeyen herhangi bir öğe üzerinde kullanabilirsiniz.
+Bir özellik değerleri kümesini birden <xref:System.Windows.Style> çok öğeye uygulamak için kullanışlı bir yol olarak düşünebilirsiniz. Ya <xref:System.Windows.FrameworkElement> da ' dan <xref:System.Windows.FrameworkContentElement> türetilen herhangi bir <xref:System.Windows.Window> öğe için bir stil kullanabilirsiniz. <xref:System.Windows.Controls.Button>
 
-Bir stili bildirmenin en yaygın yolu, `Resources` XAML dosyasındaki bölümdekaynak olarak dır. Stiller kaynak olduğundan, tüm kaynaklar için geçerli olan aynı kapsam kurallarına uyarlar. Basitçe söylemek gerekirse, bir stili beyan ettiğiniz yer stilin uygulanabileceği yeri etkiler. Örneğin, uygulama tanımı XAML dosyanızın kök öğesindeki stili bildirirseniz, stil uygulamanızın herhangi bir yerinde kullanılabilir.
+Bir stil belirtmenin en yaygın yolu, bir XAML dosyasındaki `Resources` bölümünde kaynak olarak kullanılır. Stiller kaynaklar olduğundan, tüm kaynaklar için uygulanan aynı kapsam kurallarına uyar. Basitçe, stilin uygulanabileceğini bir stil bildirdiğiniz yere koyun. Örneğin, stili uygulama tanımı XAML dosyanızın kök öğesinde bildirirseniz, bu stil uygulamanızda herhangi bir yerde kullanılabilir.
 
-Örneğin, aşağıdaki XAML kodu, biri otomatik `TextBlock`olarak tüm `TextBlock` öğelere uygulanan ve diğeri açıkça başvurulması gereken bir , iki stil bildirir.
+Örneğin, aşağıdaki XAML kodu bir `TextBlock`için iki stil bildirir, bir otomatik olarak tüm `TextBlock` öğelere uygulanır ve açıkça başvurulması gereken başka bir tane.
 
 [!code-xaml[SnippetDefaultTextBlockStyleBasedOn](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetDefaultTextBlockStyleBasedOn)]
 
-Aşağıda, yukarıda kullanılan stillerin bir örneği verilmiştir.
+Yukarıda belirtilen stillerin bir örneği aşağıda verilmiştir.
 
 [!code-xaml[SnippetTextBlocksExplicit](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetTextBlocksExplicit)]
 
-![Stildeki metin blokları](./media/styles-and-templates-overview/stylingintro-textblocks.png)
+![Stilli metinblokları](./media/styles-and-templates-overview/stylingintro-textblocks.png)
 
-Daha fazla bilgi için [bkz.](styles-templates-create-apply-style.md)
+Daha fazla bilgi için bkz. [Denetim için stil oluşturma](styles-templates-create-apply-style.md).
 
 ## <a name="controltemplates"></a>ControlTemplates
 
-WPF'de, <xref:System.Windows.Controls.ControlTemplate> denetimin görünümü kontrol görünümünü tanımlar. Yeni <xref:System.Windows.Controls.ControlTemplate> bir denetim tanımlayıp denetime atayarak denetimin yapısını ve görünümünü değiştirebilirsiniz. Çoğu durumda, şablonlar size kendi özel denetimlerinizi yazmak zorunda kalmamanız için yeterli esneklik sağlar.
+WPF <xref:System.Windows.Controls.ControlTemplate> 'de bir denetim, denetimin görünümünü tanımlar. Bir denetimin yapısını ve görünümünü, yeni <xref:System.Windows.Controls.ControlTemplate> bir tanımlayarak bir denetime atayarak değiştirebilirsiniz. Birçok durumda, şablonlar size, kendi özel denetimlerinizi yazmak zorunda olmadığınız için yeterli esneklik sunar.
 
-Her denetimin [Denetim.Şablon](xref:System.Windows.Controls.Control.Template) özelliğine atanmış varsayılan bir şablonu vardır. Şablon, denetimin görsel sunusunu denetimin yetenekleriyle bağlar. XAML'de bir şablon tanımladığınız için, herhangi bir kod yazmadan denetimin görünümünü değiştirebilirsiniz. Her şablon, <xref:System.Windows.Controls.Button>belirli bir denetim için tasarlanmıştır.
+Her denetimin [Control. Template](xref:System.Windows.Controls.Control.Template) özelliğine atanmış varsayılan bir şablonu vardır. Şablon, denetimin özelliklerine sahip olan denetimin görsel sunumunu bağlar. XAML 'de bir şablon tanımladığınız için, herhangi bir kod yazmadan denetimin görünümünü değiştirebilirsiniz. Her şablon, gibi belirli bir denetim için tasarlanmıştır <xref:System.Windows.Controls.Button>.
 
-Genellikle bir XAML dosyasının `Resources` bölümünde kaynak olarak bir şablon bildirirsiniz. Tüm kaynaklarda olduğu gibi kapsam landırma kuralları da geçerlidir.
+Genellikle bir şablonu bir XAML dosyasının `Resources` bölümünde kaynak olarak bildirirsiniz. Tüm kaynaklarda olduğu gibi, kapsam kuralları da geçerlidir.
 
-Denetim şablonları bir stilden çok daha fazla ilgilidir. Bunun nedeni, denetim şablonunun tüm denetimin görsel görünümünü yeniden yazması, bir stilise yalnızca varolan denetime özellik değişiklikleri uygular. Ancak, [Denetim.Şablon](xref:System.Windows.Controls.Control.Template) özelliğini ayarlayarak denetim şablonu uygulandığından, şablonu tanımlamak veya ayarlamak için bir stil kullanabilirsiniz.
+Denetim şablonları, bir stille daha fazla yer kaplar. Bunun nedeni denetim şablonunun tüm denetimin görsel görünümünü yeniden, ancak bir stil ise yalnızca var olan denetimdeki özellik değişikliklerini uygular. Ancak, denetimin şablonu [Control. Template](xref:System.Windows.Controls.Control.Template) özelliği ayarlanarak uygulandığından, bir şablon tanımlamak veya ayarlamak için bir stil kullanabilirsiniz.
 
-Tasarımcılar genellikle varolan bir şablonun bir kopyasını oluşturmanıza ve değiştirmenize izin verir. Örneğin, Visual Studio WPF tasarımcısında `CheckBox` bir denetim seçin ve ardından sağ tıklatın ve **şablonu edit'i** > seçin**Kopya oluştur.** Bu *komut, şablon tanımlayan bir stil*oluşturur.
+Tasarımcılar genellikle var olan bir şablonun bir kopyasını oluşturmanıza ve bunu değiştirmenize izin verir. Örneğin, Visual Studio WPF `CheckBox` tasarımcısında bir denetim seçin ve sağ tıklayın ve **şablonu** > Düzenle ' yi seçin.**Create a copy** Bu komut *, bir şablonu tanımlayan bir stil*oluşturur.
 
 ```xaml
 <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
@@ -97,97 +97,97 @@ Tasarımcılar genellikle varolan bir şablonun bir kopyasını oluşturmanıza 
 ... content removed to save space ...
 ```
 
-Şablonun bir kopyasını düzenlemek, şablonların nasıl çalıştığını öğrenmenin harika bir yoludur. Yeni bir boş şablon oluşturmak yerine, bir kopyasını ve görsel sununun birkaç yönünü değiştirmek daha kolaydır.
+Şablonun bir kopyasının düzenlenmesinin, şablonların nasıl çalıştığını öğrenmek için harika bir yoldur. Yeni boş bir şablon oluşturmak yerine, bir kopyayı düzenlemek ve görsel sununun birkaç yönlerini değiştirmek daha kolaydır.
 
-Örneğin, bkz. [denetim için şablon oluştur.](../themes/how-to-create-apply-template.md)
+Bir örnek için bkz. [bir denetim için şablon oluşturma](../themes/how-to-create-apply-template.md).
 
-### <a name="templatebinding"></a>Templatebinding
+### <a name="templatebinding"></a>TemplateBinding
 
-Önceki bölümde tanımlanan şablon kaynağının Şablon Bağlayıcı [Biçimlendirme Uzantısı'nı](../../framework/wpf/advanced/templatebinding-markup-extension.md)kullandığını fark etmiş olabilirsiniz. A, `TemplateBinding` şablon senaryoları için en iyi duruma getirilmiş bir `{Binding RelativeSource={RelativeSource TemplatedParent}}`bağlama biçimidir ve bu da . `TemplateBinding`denetim özelliklerine şablonun bölümlerini bağlamak için yararlıdır. Örneğin, her denetimin <xref:System.Windows.Controls.Control.BorderThickness> bir özelliği vardır. Şablondaki `TemplateBinding` hangi öğenin bu denetim ayarından etkilendiğini yönetmek için a kullanın.
+Önceki bölümde tanımlanan şablon kaynağının [TemplateBinding biçimlendirme uzantısını](../../framework/wpf/advanced/templatebinding-markup-extension.md)kullandığını fark etmiş olabilirsiniz. `TemplateBinding` , İle `{Binding RelativeSource={RelativeSource TemplatedParent}}`oluşturulmuş bir bağlamaya benzer şekilde, şablon senaryoları için bir bağlamanın en iyi duruma getirilmiş bir biçimidir. `TemplateBinding`, şablonun parçalarını denetimin özelliklerine bağlamak için yararlıdır. Örneğin, her denetimin bir <xref:System.Windows.Controls.Control.BorderThickness> özelliği vardır. Şablondaki hangi `TemplateBinding` öğenin bu denetim ayarından etkilendiğini yönetmek için kullanın.
 
-### <a name="contentcontrol-and-itemscontrol"></a>İçerikKontrol ve ÖğelerKontrol
+### <a name="contentcontrol-and-itemscontrol"></a>ContentControl ve ItemsControl
 
-A' <xref:System.Windows.Controls.ContentPresenter> da <xref:System.Windows.Controls.ControlTemplate> beyan <xref:System.Windows.Controls.ContentControl>edilirse, <xref:System.Windows.Controls.ContentPresenter> otomatik olarak ve <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <xref:System.Windows.Controls.ContentControl.Content%2A> özelliklere bağlanır. Aynı şekilde, <xref:System.Windows.Controls.ItemsPresenter> bir otomatik <xref:System.Windows.Controls.ControlTemplate> olarak <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> ve <xref:System.Windows.Controls.ItemsControl.Items%2A> özellikleri bağlanır bir içinde bir.
+<xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.ControlTemplate> , Bir <xref:System.Windows.Controls.ContentControl> <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <xref:System.Windows.Controls.ContentControl.Content%2A> içinde bildiriminde bildirilirse, otomatik olarak ve özelliklerine bağlanır. <xref:System.Windows.Controls.ContentPresenter> Benzer şekilde, <xref:System.Windows.Controls.ItemsPresenter> içinde <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.ItemsControl> olan bir, <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> ve <xref:System.Windows.Controls.ItemsControl.Items%2A> özelliklerine otomatik olarak bağlanır.
 
-## <a name="datatemplates"></a>Veri Şablonları
+## <a name="datatemplates"></a>Veri şablonları
 
-Bu örnek uygulamada, fotoğraf <xref:System.Windows.Controls.ListBox> listesine bağlı bir denetim vardır.
+Bu örnek uygulamada, bir fotoğraf listesine bağlanan <xref:System.Windows.Controls.ListBox> bir denetim vardır.
 
 [!code-xaml[ListBox](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window3.xaml#SnippetListBox)]
 
-Bu <xref:System.Windows.Controls.ListBox> şu anda aşağıdaki gibi görünüyor.
+Bu <xref:System.Windows.Controls.ListBox> Şu anda aşağıdaki gibi görünüyor.
 
 ![Şablonu uygulamadan önce ListBox](./media/styles-and-templates-overview/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")
 
-Denetimlerin çoğunda bir tür içerik vardır ve bu içerik genellikle bağlandığınız verilerden gelir. Bu örnekte, veriler fotoğraf listesidir. WPF'de, verilerin <xref:System.Windows.DataTemplate> görsel temsilini tanımlamak için a kullanırsınız. Temel olarak, bir <xref:System.Windows.DataTemplate> içine ne koymak veri render uygulamasında neye benzediğini belirler.
+Çoğu denetim bazı içerik türlerine sahiptir ve içerik genellikle bağladığınız verilerden gelir. Bu örnekte, veriler fotoğraflar listesidir. WPF 'de, verilerin görsel temsilini <xref:System.Windows.DataTemplate> tanımlamak için kullanırsınız. Temel olarak, ' a <xref:System.Windows.DataTemplate> yerleştirdiğiniz özellikler, işlenen uygulamada verilerin ne şekilde göründüğünü belirler.
 
-Örnek uygulamamızda, her `Photo` özel `Source` nesne, görüntünün dosya yolunu belirten bir tür dize özelliğine sahiptir. Şu anda, fotoğraf nesneleri dosya yolları olarak görünür.
+Örnek uygulamamızda her özel `Photo` nesne, görüntünün dosya yolunu `Source` belirten String türünde bir özelliğe sahiptir. Şu anda, fotoğraf nesneleri dosya yolları olarak görünür.
 
 [!code-csharp[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Photo.cs#PhotoClass)]
 [!code-vb[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/vb/Photo.vb#PhotoClass)]
 
-Fotoğrafların görüntü olarak görünmesi için <xref:System.Windows.DataTemplate> bir kaynak oluşturursunuz.
+Fotoğrafların görüntü olarak görünmesi için kaynak olarak bir <xref:System.Windows.DataTemplate> oluşturun.
 
 [!code-xaml[DataTemplate](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window4.xaml#SnippetDataTemplate)]
 
-Özelliğin <xref:System.Windows.DataTemplate.DataType%2A> <xref:System.Windows.Style.TargetType%2A> özelliğine benzer olduğuna dikkat <xref:System.Windows.Style>edin. Kaynaklar <xref:System.Windows.DataTemplate> bölümündeyseniz, <xref:System.Windows.DataTemplate.DataType%2A> özelliği bir türe belirtdiğinizde ve bir `x:Key`özelliği atladiğinizde, bu tür görüntülendiğinde <xref:System.Windows.DataTemplate> uygulanır. Her zaman bir <xref:System.Windows.DataTemplate> `x:Key` ile atama katmak ve daha `StaticResource` sonra <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özellik veya <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> özellik gibi türleri almak özellikleri için bir olarak ayarlamak için seçeneğiniz vardır.
+<xref:System.Windows.DataTemplate.DataType%2A> Özelliğinin <xref:System.Windows.Style.TargetType%2A> özelliğine benzediğine dikkat edin <xref:System.Windows.Style>. Kaynaklar bölümünde <xref:System.Windows.DataTemplate> ise, bir tür için <xref:System.Windows.DataTemplate.DataType%2A> özelliği belirttiğinizde ve bir `x:Key`öğesini <xref:System.Windows.DataTemplate> atarsanız, bu tür her göründüğünde uygulanır. Her <xref:System.Windows.DataTemplate> zaman öğesini ile atama `x:Key` ve `StaticResource` <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> özellik veya <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> özellik gibi türleri alan özellikler için bir olarak ayarlama seçeneğiniz vardır.
 
-Esasen, <xref:System.Windows.DataTemplate> yukarıdaki örnekte bir `Photo` nesne olduğunda, bir <xref:System.Windows.Controls.Image> <xref:System.Windows.Controls.Border>. Bununla, <xref:System.Windows.DataTemplate>uygulamamız şimdi bu gibi görünüyor.
+Temel olarak, <xref:System.Windows.DataTemplate> yukarıdaki örnekteki bir `Photo` nesne olduğunda, bir, <xref:System.Windows.Controls.Image> içinde olarak görünmesi gerektiğini tanımlar. <xref:System.Windows.Controls.Border> Bununla birlikte <xref:System.Windows.DataTemplate>, uygulamamız artık şuna benzer.
 
-![Fotoğraf görüntüsü](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
+![Fotoğraf resmi](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-Veri baştan çıkarıcı model diğer özellikler sağlar. Örneğin, a <xref:System.Windows.Controls.HeaderedItemsControl> veya a <xref:System.Windows.Controls.Menu> gibi bir tür kullanarak diğer koleksiyonları içeren <xref:System.Windows.Controls.TreeView>toplama verilerini <xref:System.Windows.HierarchicalDataTemplate>görüntülerseniz, . Başka bir veri cazip <xref:System.Windows.Controls.DataTemplateSelector>özelliği , özel mantığa dayalı kullanmak için bir <xref:System.Windows.DataTemplate> seçmenize olanak sağlar. Daha fazla bilgi için, farklı veri cazip özellikleri hakkında daha ayrıntılı bir tartışma sağlayan [Veri Templating Genel Bakış'a](../../framework/wpf/data/data-templating-overview.md)bakın.
+Veri şablonu oluşturma modeli, diğer özellikleri sağlar. <xref:System.Windows.Controls.HeaderedItemsControl> Örneğin, <xref:System.Windows.Controls.Menu> veya <xref:System.Windows.Controls.TreeView>gibi bir tür kullanarak diğer koleksiyonları içeren koleksiyon verileri görüntülüyorsanız, <xref:System.Windows.HierarchicalDataTemplate>. Başka bir veri şablonu oluşturma özelliği <xref:System.Windows.Controls.DataTemplateSelector>, özel mantığa <xref:System.Windows.DataTemplate> göre kullanmak üzere seçeneğini seçmenize olanak sağlar. Daha fazla bilgi için, farklı veri şablonu oluşturma özellikleri hakkında daha ayrıntılı bir tartışma sağlayan [veri şablonu oluşturmaya genel bakış](../../framework/wpf/data/data-templating-overview.md)bölümüne bakın.
 
 ## <a name="triggers"></a>Tetikleyiciler
 
-Tetikleyici, özellik değeri değiştiğinde veya bir olay yükseltildiğinde, animasyon gibi özellikleri ayarlar veya eylemleri başlatır. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>ve <xref:System.Windows.DataTemplate> tüm `Triggers` tetikleyiciler kümesi içerebilir bir özelliği var. Tetikleyicilerin çeşitli türleri vardır.
+Bir tetikleyici, özellik değeri değiştiğinde veya bir olay ortaya çıktığında animasyon gibi eylemleri ayarlar veya başlatır. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, ve <xref:System.Windows.DataTemplate> hepsi bir tetikleyici `Triggers` kümesi içerebilen bir özelliğine sahiptir. Birkaç tetikleyici türü vardır.
 
-### <a name="propertytriggers"></a>ÖzellikTetikleyiciler
+### <a name="propertytriggers"></a>PropertyTriggers
 
-Özellik <xref:System.Windows.Trigger> değerlerini belirleyen veya bir özelliğin değerini temel alan eylemleri başlatan bir özellik tetikleyicisi olarak adlandırılır.
+Özellik <xref:System.Windows.Trigger> değerlerini ayarlayan veya bir özelliğin değerine göre eylemleri Başlatan bir özellik tetikleyicisi olarak adlandırılır.
 
-Özellik tetikleyicilerinin nasıl kullanılacağını göstermek için, seçilmedikçe her biri <xref:System.Windows.Controls.ListBoxItem> kısmen saydam hale getirebilirsiniz. Aşağıdaki stil a <xref:System.Windows.UIElement.Opacity%2A> <xref:System.Windows.Controls.ListBoxItem> değerini `0.5`ayarlar. <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> Özellik `true`, ancak, <xref:System.Windows.UIElement.Opacity%2A> `1.0`ayarlanır.
+Özellik tetiklerinin nasıl kullanılacağını göstermek için, seçili değilse her <xref:System.Windows.Controls.ListBoxItem> bir kısmen saydam yapabilirsiniz. Aşağıdaki stil, a <xref:System.Windows.UIElement.Opacity%2A> <xref:System.Windows.Controls.ListBoxItem> değerini olarak `0.5`ayarlar. Ancak <xref:System.Windows.UIElement.Opacity%2A> , <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> özelliği `true`olduğunda, olarak ayarlanır `1.0`.
 
 [!code-xaml[PropertyTrigger](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window5.xaml#SnippetPropertyTrigger)]
 
-Bu örnek, <xref:System.Windows.Trigger> bir özellik değeri ayarlamak için <xref:System.Windows.Trigger> a kullanır, ancak sınıfın da bir tetikleyici eylemleri gerçekleştirmek için etkinleştirmek <xref:System.Windows.TriggerBase.EnterActions%2A> ve <xref:System.Windows.TriggerBase.ExitActions%2A> özellikleri olduğunu unutmayın.
+Bu örnek, bir <xref:System.Windows.Trigger> Özellik değeri ayarlamak için bir kullanır, ancak <xref:System.Windows.Trigger> sınıfın, <xref:System.Windows.TriggerBase.EnterActions%2A> bir tetikleyicinin eylemleri gerçekleştirmesini sağlayan <xref:System.Windows.TriggerBase.ExitActions%2A> ve özellikleri de olduğunu unutmayın.
 
-Bu <xref:System.Windows.FrameworkElement.MaxHeight%2A> özelliği ayarlanır <xref:System.Windows.Controls.ListBoxItem> dikkat `75`edin. Aşağıdaki resimde, üçüncü öğe seçili öğedir.
+Öğesinin <xref:System.Windows.FrameworkElement.MaxHeight%2A> <xref:System.Windows.Controls.ListBoxItem> özelliğinin olarak `75`ayarlandığını unutmayın. Aşağıdaki çizimde, üçüncü öğe seçili öğedir.
 
-![StillistesiGörünümü](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![Stilli ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-### <a name="eventtriggers-and-storyboards"></a>EventTriggers ve Storyboards
+### <a name="eventtriggers-and-storyboards"></a>EventTriggers ve film şeritleri
 
-Tetikleyici başka bir <xref:System.Windows.EventTrigger>tür , bir olayın oluşumuna dayalı eylemler kümesi başlar. <xref:System.Windows.EventTrigger> Örneğin, aşağıdaki nesneler, fare işaretçisi <xref:System.Windows.Controls.ListBoxItem>girdiğinde <xref:System.Windows.FrameworkElement.MaxHeight%2A> , özelliğin ikinci bir `90` `0.2` döneme ait bir değere animasyon verdiğini belirtir. Fare öğeden uzaklaştığında, özellik `1` saniyelik bir süre içinde özgün değere geri döner. Animasyon için bir <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> değer belirtmenin <xref:System.Windows.ContentElement.MouseLeave> nasıl gerekli olmadığını unutmayın. Bunun nedeni, animasyonun özgün değeri takip edebilmesidir.
+Bir olay oluşumuna göre bir dizi <xref:System.Windows.EventTrigger>eylem başlatan, başka bir tetikleyici türü. <xref:System.Windows.EventTrigger> Örneğin, aşağıdaki nesneler fare işaretçisi <xref:System.Windows.Controls.ListBoxItem> <xref:System.Windows.FrameworkElement.MaxHeight%2A> `90` üzerine girdiğinde, özelliği ikinci bir `0.2` dönemdeki bir değere hareketlendirir. Fare öğeden uzaklaştığında, özelliği `1` ikinci bir süre içinde orijinal değere döner. <xref:System.Windows.ContentElement.MouseLeave> Animasyon için bir <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> değer belirtmek için nasıl gerekli değildir Not. Bunun nedeni, animasyonun özgün değeri takip edebilmesini sağlar.
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Daha fazla bilgi için [Storyboards'a genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md)bilgisine bakın.
+Daha fazla bilgi için görsel taslaklara [genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md)bölümüne bakın.
 
-Aşağıdaki resimde, fare üçüncü öğeyi işaret ediyor.
+Aşağıdaki çizimde, fare üçüncü öğeyi işaret ediyor.
 
 ![Stil örnek ekran görüntüsü](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
-### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers ve MultiDataTriggers
+### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>Çoklu Tetikleyiciler, veri Tetikleyicileri ve MultiDataTriggers
 
-Buna ek <xref:System.Windows.Trigger> <xref:System.Windows.EventTrigger>olarak ve , tetikleyiciler diğer türleri vardır. <xref:System.Windows.MultiTrigger>özellik değerlerini birden çok koşula göre ayarlamanızı sağlar. Kullandığınız <xref:System.Windows.DataTrigger> ve <xref:System.Windows.MultiDataTrigger> durumunuzun özelliği verilere bağlı olduğunda.
+Ve <xref:System.Windows.EventTrigger>' ye <xref:System.Windows.Trigger> ek olarak, başka tetikleyici türleri de vardır. <xref:System.Windows.MultiTrigger>özellik değerlerini birden çok koşula göre ayarlamanıza olanak sağlar. Koşulunuz <xref:System.Windows.DataTrigger> özelliği <xref:System.Windows.MultiDataTrigger> veri ile bağlantılı olduğunda ve kullanın.
 
-## <a name="visual-states"></a>Görsel Durumlar
+## <a name="visual-states"></a>Görsel durumlar
 
-Denetimler her zaman belirli bir **durumdadır.** Örneğin, fare bir denetimin yüzeyi üzerinde hareket ettiğinde, denetim in ortak `MouseOver`bir durumda olduğu kabul edilir. Belirli bir durum olmadan bir denetim ortak `Normal` durumda olarak kabul edilir. Devletler gruplara ayrılır ve daha önce bahsedilen durumlar devlet `CommonStates`grubunun bir parçasıdır. Çoğu denetimin iki `CommonStates` durum `FocusStates`grubu var: ve . Denetime uygulanan her durum grubundan, denetim her grubun bir durumundadır, örneğin. `CommonStates.MouseOver` `FocusStates.Unfocused` Ancak, denetim gibi aynı grup içinde iki farklı durumda `CommonStates.Normal` olamaz. `CommonStates.Disabled` Burada, çoğu denetimin tanıdığı ve kullandığı durumlar tablosu ve resuletmek tir.
+Denetimler her zaman belirli bir **durumda**. Örneğin, fare bir denetimin yüzeyi üzerinde dolaştığında, denetim ortak bir durumunda olduğu kabul edilir `MouseOver`. Belirli bir durumu olmayan bir denetim, ortak `Normal` durumda olduğu kabul edilir. Durumlar gruplar halinde bozulur ve yukarıda bahsedilen durumlar durum grubunun `CommonStates`bir parçasıdır. Çoğu denetim iki durum grubuna sahiptir: `CommonStates` ve `FocusStates`. Bir denetime uygulanan her bir durum grubunda, bir denetim her bir grubun `CommonStates.MouseOver` ve `FocusStates.Unfocused`gibi her zaman bir durumdadır. Ancak, bir denetim aynı grup içindeki `CommonStates.Normal` ve `CommonStates.Disabled`gibi iki farklı durumda olamaz. Denetimlerin çoğu tarafından tanınmasına ve kullanımına yönelik bir eyalet tablosu aşağıda verilmiştir.
 
-| VisualState Adı | VisualStateGroup Adı | Açıklama |
+| VisualState adı | VisualStateGroup adı | Açıklama |
 | ---------------- | --------------------- | ----------- |
-| Normal           | Commonstates          | Varsayılan durum. |
-| Mouseover        | Commonstates          | Fare işaretçisi denetimin üzerine konumlandırılır. |
-| Pressed          | Commonstates          | Kontrol basılı. |
-| Devre dışı         | Commonstates          | Denetim devre dışı. |
-| Odaklı          | Odak Devletler           | Kontrol odak noktası. |
-| Odaklanmamış        | Odak Devletler           | Denetimin odak noktası yok. |
+| Normal           | Ortak durumlar          | Varsayılan durum. |
+| Gelme olayından        | Ortak durumlar          | Fare işaretçisi denetimin üzerine yerleştirilir. |
+| Pressed          | Ortak durumlar          | Denetime basıldığında. |
+| Devre dışı         | Ortak durumlar          | Denetim devre dışı bırakıldı. |
+| Odaklı          | Odaklardaki durumlar           | Denetim odağa sahiptir. |
+| Odaklanmadan gözetle        | Odaklardaki durumlar           | Denetimin odağı yok. |
 
-Denetim şablonunun <xref:System.Windows.VisualStateManager?displayProperty=fullName> kök öğesi üzerinde bir öğe tanımlayarak, denetim belirli bir duruma girdiğinde animasyonları tetikleyebilirsiniz. Hangi `VisualStateManager` kombinasyonları <xref:System.Windows.VisualStateGroup> ve <xref:System.Windows.VisualState> izlemek için bildirir. Denetim izlenen bir duruma girdiğinde, animasyon tarafından `VisaulStateManager` tanımlanan başlatılır.
+Bir denetim şablonunun <xref:System.Windows.VisualStateManager?displayProperty=fullName> kök öğesinde bir tanımlayarak, bir denetim belirli bir duruma girdiğinde animasyonları tetikleyebilirsiniz. , `VisualStateManager` Hangi birleşimlerinin <xref:System.Windows.VisualStateGroup> ve <xref:System.Windows.VisualState> izlenecek olduğunu bildirir. Denetim bir izlenen duruma girdiğinde, tarafından `VisaulStateManager` tanımlanan animasyon başlatılır.
 
-Örneğin, aşağıdaki XAML kodu adlı `CommonStates.MouseOver` `backgroundElement`öğenin dolgu rengini canlandırmak için durumu izler. Denetim `CommonStates.Normal` duruma döndüğünde, adlı `backgroundElement` öğenin dolgu rengi geri yüklenir.
+Örneğin, aşağıdaki XAML kodu, adlı `CommonStates.MouseOver` `backgroundElement`öğenin Fill rengine animasyon eklemek için durumu izler. Denetim `CommonStates.Normal` duruma döndüğünde adlı `backgroundElement` öğesinin Fill Color geri yüklenir.
 
 ```xaml
 <ControlTemplate x:Key="roundbutton" TargetType="Button">
@@ -212,21 +212,21 @@ Denetim şablonunun <xref:System.Windows.VisualStateManager?displayProperty=full
         ...
 ```
 
-Storyboards hakkında daha fazla bilgi için [Storyboards Genel Bakış'a](../../framework/wpf/graphics-multimedia/storyboards-overview.md)bakın.
+Görsel Taslaklar hakkında daha fazla bilgi için bkz. [görsel taslakları genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
-## <a name="shared-resources-and-themes"></a>Paylaşılan kaynaklar ve temalar
+## <a name="shared-resources-and-themes"></a>Paylaşılan kaynaklar ve Temalar
 
-Tipik bir WPF uygulaması, uygulama boyunca uygulanan birden çok UI kaynağına sahip olabilir. Toplu olarak, bu kaynak kümesi uygulamanın teması olarak kabul edilebilir. WPF, <xref:System.Windows.ResourceDictionary> sınıf olarak kapsüllenmiş bir kaynak sözlüğü kullanarak kullanıcı arabirimi kaynaklarını tema olarak paketleme desteği sağlar.
+Tipik bir WPF uygulamasında, uygulamanın tamamında uygulanan birden çok UI kaynağı olabilir. Toplu olarak, bu kaynak kümesi uygulama için tema olarak kabul edilebilir. WPF, <xref:System.Windows.ResourceDictionary> sınıf olarak Kapsüllenen bir kaynak sözlüğü kullanarak, Kullanıcı arabirimi kaynaklarını bir tema olarak paketleme desteği sağlar.
 
-WPF temaları, WPF'nin herhangi bir öğenin görsellerini özelleştirmek için ortaya çıkardığı stil ve baştan çıkarıcı mekanizma kullanılarak tanımlanır.
+WPF temaları, WPF 'nin herhangi bir öğenin görsellerini özelleştirmek için sunduğu stil oluşturma ve şablon oluşturma mekanizması kullanılarak tanımlanır.
 
-WPF tema kaynakları katıştırılmış kaynak sözlüklerinde depolanır. Bu kaynak sözlükleri imzalı bir derlemenin içine katıştırılmış olmalıdır ve kodun kendisiyle aynı derlemeye veya yan yana bir derlemeye katıştırılabilir. WPF denetimleri içeren derleme presentationFramework.dll için tema kaynakları yan yana bir dizi derlemede dir.
+WPF teması kaynakları, gömülü kaynak sözlüklerinde depolanır. Bu kaynak sözlüklerinin imzalı bir derleme içine katıştırılması ve kodun kendisi ya da yan yana bütünleştirilmiş kodda aynı derlemeye katıştırılması gerekir. PresentationFramework. dll için WPF denetimleri içeren derleme, tema kaynakları ise yan yana derlemelerin bir serisinde yer almaktadır.
 
-Tema, bir öğenin stilini ararken aranacak en son yer olur. Genellikle, arama, uygun bir kaynak arayan öğe ağacında yürüyerek başlar, ardından uygulama kaynağı koleksiyonuna bakar ve son olarak sistemi sorgular. Bu, uygulama geliştiricilere temaya ulaşmadan önce ağaç veya uygulama düzeyindeki herhangi bir nesnenin stilini yeniden tanımlama şansı verir.
+Tema, bir öğenin stilini ararken bakacağız son yer olur. Genellikle arama, uygun bir kaynak için arama öğesi ağacının ardından başlatılır, ardından uygulama kaynak koleksiyonuna bakar ve son olarak sistemi sorgular. Bu, uygulama geliştiricilere, temaya ulaşmadan önce ağaç veya uygulama düzeyindeki herhangi bir nesnenin stilini yeniden tanımlamayı sağlar.
 
-Kaynak sözlüklerini, bir temayı birden çok uygulamada yeniden kullanmanızı sağlayan tek tek dosyalar olarak tanımlayabilirsiniz. Ayrıca, aynı kaynak türlerini sağlayan ancak farklı değerlere sahip birden çok kaynak sözlükleri tanımlayarak değiştirilebilir temalar da oluşturabilirsiniz. Bu stilleri veya diğer kaynakları uygulama düzeyinde yeniden tanımlamak, bir uygulamayı yüzdürme için önerilen yaklaşımdır.
+Kaynak sözlüklerini birden çok uygulama genelinde bir temayı yeniden kullanmanıza imkan tanıyan tek tek dosyalar olarak tanımlayabilirsiniz. Aynı kaynak türlerini ve farklı değerleri sağlayan birden çok kaynak sözlüğü tanımlayarak, değiştirilebilir temalar da oluşturabilirsiniz. Uygulama düzeyindeki bu stilleri veya diğer kaynakları yeniden tanımlama, bir uygulamanın kaplama oluşturma için önerilen yaklaşımdır.
 
-Uygulamalar arasında stiller ve şablonlar da dahil olmak üzere bir kaynak kümesini paylaşmak <xref:System.Windows.ResourceDictionary> için bir `shared.xaml` XAML dosyası oluşturabilir ve dosyaya başvuru içeren bir dosya tanımlayabilirsiniz.
+Stiller ve şablonlar dahil olmak üzere bir kaynak kümesini, uygulamalar arasında paylaşmak için bir XAML dosyası oluşturabilir ve bir <xref:System.Windows.ResourceDictionary> `shared.xaml` dosyanın başvurusunu içeren bir tanımlayabilirsiniz.
 
 ```xaml
 <ResourceDictionary.MergedDictionaries>
@@ -234,11 +234,11 @@ Uygulamalar arasında stiller ve şablonlar da dahil olmak üzere bir kaynak kü
 </ResourceDictionary.MergedDictionaries>
 ```
 
-Bir uygulamadaki `shared.xaml`denetimlerin tutarlı bir <xref:System.Windows.ResourceDictionary> görünüme sahip olmasını sağlayan, bir stil ve fırça kaynakları kümesiiçeren bir uygulamanın paylaşımıdır.
+Bu, bir uygulama içindeki `shared.xaml`denetimlerin tutarlı bir görünüme sahip <xref:System.Windows.ResourceDictionary> olmasını sağlayan bir stil ve fırça kaynakları kümesi içeren öğesini tanımlayan, öğesinin paylaşımdır.
 
-Daha fazla bilgi [için, Birleştirme kaynak sözlüklerine](../../framework/wpf/advanced/merged-resource-dictionaries.md)bakın.
+Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../../framework/wpf/advanced/merged-resource-dictionaries.md).
 
-Özel denetiminiz için bir tema oluşturuyorsanız, [Denetim yazma genel bakışının](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level) **tema düzeyi bölümündeki Tanımlayıcı kaynakları** görün.
+Özel denetiminiz için bir tema oluşturuyorsanız, [Denetim yazma genel bakış](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level)konusunun **Tema düzeyinde kaynakları tanımlama** bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

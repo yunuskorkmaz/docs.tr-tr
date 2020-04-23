@@ -1,6 +1,6 @@
 ---
-title: WPF Uygulamalarını .NET Core 3.0'a geçirme
-description: Bir Windows Presentation Foundation (WPF) uygulamasını .NET Core 3.0'a nasıl geçirteceklerini öğrenin.
+title: WPF uygulamalarını .NET Core 3,0 ' e geçirme
+description: Windows Presentation Foundation (WPF) uygulamasını .NET Core 3,0 ' e geçirmeyi öğrenin.
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
@@ -11,107 +11,107 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 02/01/2020
 ms.locfileid: "82071313"
 ---
-# <a name="migrating-wpf-apps-to-net-core"></a>WPF uygulamalarını .NET Core'a geçirme
+# <a name="migrating-wpf-apps-to-net-core"></a>WPF uygulamalarını .NET Core 'a geçirme
 
-Bu makale, bir Windows Presentation Foundation (WPF) uygulamasını .NET Framework'den .NET Core 3.0'a geçirmek için gereken adımları kapsar. Bağlantı noktasına elinizde bir WPF uygulamanız yoksa, ancak işlemi denemek istiyorsanız, [GitHub'da](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)bulunan **Bean Trader** örnek uygulamasını kullanabilirsiniz. Orijinal uygulama (hedefleme .NET Framework 4.7.2) NetFx\BeanTraderClient klasöründe mevcuttur. Önce uygulamaları genel olarak taşımanız için gerekli adımları açıklayacağız ve ardından **Bean Trader** örneğine uygulanan belirli değişiklikleri gözden geçireceğiz.
+Bu makalede, .NET Framework bir Windows Presentation Foundation (WPF) uygulamasını .NET Core 3,0 ' e geçirmek için gereken adımlar ele alınmaktadır. Bağlantı noktası üzerinde bir WPF uygulamanız yoksa ancak işlemi denemek istiyorsanız, [GitHub](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)'Da bulunan **çekirdeklere Trader** örnek uygulamasını kullanabilirsiniz. Özgün uygulama (hedefleme .NET Framework 4.7.2) NetFx\BeanTraderClient klasöründe bulunabilir. İlk olarak, genel olarak uygulama bağlantı noktası için gerekli adımları açıklayacak ve **çekirdeklere Trader** örneğine uygulanan belirli değişiklikleri adım adım inceleyeceğiz.
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-.NET Core'a geçiş yapmak için önce şunları belirtmelisiniz:
+.NET Core 'a geçiş yapmak için öncelikle şunları yapmanız gerekir:
 
-01. NuGet bağımlılıklarını anlayın ve güncelleyin:
+01. NuGet bağımlılıklarını anlayın ve güncelleştirin:
 
-    01. Biçimi kullanmak için NuGet `<PackageReference>` bağımlılıklarını yükseltin.
-    01. .NET Core veya .NET Standart uyumluluğu için üst düzey NuGet bağımlılıklarını gözden geçirin.
+    01. `<PackageReference>` Biçimi kullanmak için NuGet bağımlılıklarını yükseltin.
+    01. .NET Core veya .NET Standard uyumluluğu için en üst düzey NuGet bağımlılıklarını gözden geçirin.
     01. NuGet paketlerini yeni sürümlere yükseltin.
-    01. .NET bağımlılıklarını anlamak için [.NET Taşınabilirlik Çözümleyicisini](../../standard/analyzers/portability-analyzer.md) kullanın.
+    01. .Net bağımlılıklarını anlamak için [.net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) 'ni kullanın.
 
 01. Proje dosyasını yeni SDK stili biçimine geçirin:
 
-    01. Hem .NET Core hem de .NET Framework'u mi yoksa yalnızca .NET Core'u mu hedefleyeceğinizi seçin.
+    01. Hem .NET Core hem de .NET Framework mi yoksa yalnızca .NET Core 'un mi hedefedilmeyeceğini seçin.
     01. İlgili proje dosyası özelliklerini ve öğelerini yeni proje dosyasına kopyalayın.
 
-01. Yapı sorunlarını giderin:
+01. Derleme sorunlarını giderme:
 
-    01. [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/) paketine bir başvuru ekleyin.
-    01. API düzeyindeki farklılıkları bulun ve düzeltin.
-    01. *App.config* bölümlerini `appSettings` kaldırın `connectionStrings`veya .
+    01. [Microsoft. Windows. uyumluluk](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/) paketine bir başvuru ekleyin.
+    01. API düzeyi farklılıkları bulun ve onarın.
+    01. `appSettings` Veya `connectionStrings`dışındaki *app. config* bölümlerini kaldırın.
     01. Gerekirse oluşturulan kodu yeniden oluşturun.
 
 01. Çalışma zamanı testi:
 
-    01. Taşınan uygulamanın beklendiği gibi çalıştığını doğrulayın.
-    01. İstisnalara dikkat edin. <xref:System.NotSupportedException>
+    01. Bağlantı verilen uygulamanın beklendiği gibi çalıştığından emin olun.
+    01. <xref:System.NotSupportedException> Özel durumlara dikkat edin.
 
 ## <a name="about-the-sample"></a>Örnek hakkında
 
-Bu makalede, gerçek dünya WPF uygulamalarının sahip olabileceği ne benzer çeşitli bağımlılıklar kullandığından [Bean Trader örnek uygulamasına](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) başvurur. Uygulama büyük değildir, ancak karmaşıklık açısından 'Hello World' bir adım olması gerekiyordu. Uygulama, kullanıcıların gerçek uygulamaları taşıma sırasında karşılaşabilecekleri bazı sorunları gösteriyor. Uygulama bir WCF hizmeti ile iletişim kurar, bu nedenle düzgün çalışması için, ayrıca BeanTraderServer proje (aynı GitHub deposunda mevcuttur) çalıştırmak ve beanTraderClient yapılandırma doğru bitiş noktasına puan emin olmak gerekir. (Varsayılan olarak, örnek sunucu aynı makineüzerinde çalışıyor *http://localhost:8090*varsayar , yerel BeanTraderServer başlattığınızda doğru olacaktır.)
+Bu makale, gerçek dünyada WPF uygulamalarının sahip olabileceği gibi çeşitli bağımlılıklar kullandığından, [çekirdeklere Trader örnek uygulamasına](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) başvurur. Uygulama büyük değildir, ancak karmaşıklık bakımından ' Merhaba Dünya ' öğesinden bir adım adım olmak üzere tasarlanmıştır. Uygulama, kullanıcıların gerçek uygulamaları taşıma sırasında karşılaşabileceği bazı sorunları gösterir. Uygulama bir WCF hizmeti ile iletişim kurar, bu nedenle düzgün çalışması için BeanTraderServer projesini çalıştırmanız gerekir (aynı GitHub deposunda mevcuttur) ve BeanTraderClient yapılandırmasının doğru uç noktayı işaret ettiğini doğrulayın. (Varsayılan olarak, örnek, sunucunun *http://localhost:8090*' de aynı makinede çalıştığını varsayar, bu, BeanTraderServer 'ı yerel olarak başlatırsanız doğru olacaktır.)
 
-Bu örnek uygulamanın .NET Core taşıma zorluklarını ve çözümlerini göstermeyi amaçladığını unutmayın. Bu WPF en iyi uygulamaları göstermek için değil. Aslında, kasıtlı olarak bazı anti-desenler ilerlerken en az birkaç ilginç zorlukla karşılaştığınızı emin olmak için.
+Bu örnek uygulamanın .NET Core 'a yönelik güçlükleri ve çözümleri göstermesi gerektiğini aklınızda bulundurun. WPF en iyi yöntemlerini göstermek için tasarlanmamıştır. Aslında, taşıma sırasında en az birkaç ilginç zorluk çekdiğinizden emin olmak için bazı çapraz düzenleri kasıtlı olarak içerir.
 
 ## <a name="getting-ready"></a>Hazırlanma
 
-Bir .NET Framework uygulamasını .NET Core'a geçirmenin temel zorluğu, bağımlılıklarının farklı veya hiç çalışmamasıdır. Geçiş eskisinden çok daha kolaydır; birçok NuGet paketi artık .NET Standard'ı hedef alıyor. .NET Core 2.0 ile başlayarak ,NET Framework ve .NET Core yüzey alanları benzer hale gelmiştir. Buna rağmen, bazı farklılıklar (nuget paketleri ve mevcut .NET API'ler hem destek) kalır. Geçişteki ilk adım, uygulamanın bağımlılıklarını gözden geçirmek ve başvuruların .NET Core'a kolayca geçirilen bir biçimde olduğundan emin olmaktır.
+.NET Framework uygulamayı .NET Core 'a geçirmeye yönelik birincil zorluk, bağımlılıklarının farklı şekilde çalışması veya hiç olmaması olabilir. Geçiş, şundan çok daha kolay; birçok NuGet paketi artık .NET Standard hedefleyin. .NET Core 2,0 ile başlayarak .NET Framework ve .NET Core yüzey alanları benzer hale gelmiştir. Bu nedenle bile, bazı farklılıklar (hem NuGet paketlerinden hem de kullanılabilir .NET API 'Lerinde desteklenir) kalır. Geçirilmekte olan ilk adım, uygulamanın bağımlılıklarını gözden geçirmekte ve başvuruların .NET Core 'a kolayca geçirilmiş bir biçimde olduğundan emin olmanızı sağlar.
 
-### <a name="upgrade-to-packagereference-nuget-references"></a>NuGet `<PackageReference>` referanslarına yükseltme
+### <a name="upgrade-to-packagereference-nuget-references"></a>`<PackageReference>` NuGet başvurularına yükselt
 
-Eski .NET Framework projeleri genellikle NuGet bağımlılıklarını bir *packages.config* dosyasında listeler. Yeni SDK tarzı proje dosya biçimi, [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) NuGet paketlerini ayrı bir config dosyasıyerine csproj dosyasındaki öğeler olarak başvurur.
+Daha eski .NET Framework projeleri, genellikle bir *Packages. config* dosyasında NuGet bağımlılıklarını listeler. Yeni SDK stili proje dosyası biçimi, NuGet paketlerine ayrı bir yapılandırma [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) dosyası yerine csproj dosyasındaki öğeler olarak başvurur.
 
-Geçiş yaparken, -stil başvuruları `<PackageReference>`kullanmanın iki avantajı vardır:
+Geçiş yaparken, stili başvuruların kullanılmasıyla `<PackageReference>`iki avantajı vardır:
 
-- Bu, yeni .NET Core proje dosyası için gerekli olan NuGet başvuru stilidir. Zaten kullanıyorsanız, `<PackageReference>`bu proje dosyası öğeleri kopyalanabilir ve doğrudan yeni projeye yapıştırılabilir.
-- Packages.config dosyasının `<PackageReference>` aksine, öğeler yalnızca projenizin doğrudan bağlı olduğu üst düzey bağımlılıkları ifade eder. Diğer tüm geçişli NuGet paketleri geri yükleme zamanında belirlenecek ve otomatik olarak üretilen obj\project.assets.json dosyasına kaydedilecektir. Bu, projenizin hangi bağımlılıklara sahip olduğunu belirlemeyi çok daha kolay hale getirir ve bu da gerekli bağımlılıkların .NET Core'da çalışıp çalışmayacağını belirlerken yararlıdır.
+- Bu, yeni .NET Core proje dosyası için gerekli olan NuGet başvurusunun stilidir. Zaten kullanıyorsanız `<PackageReference>`, bu proje dosyası öğeleri kopyalanabilir ve doğrudan yeni projeye yapıştırılabilir.
+- Packages. config dosyasından farklı olarak, `<PackageReference>` öğeler yalnızca projenizin doğrudan bağlı olduğu en üst düzey bağımlılıklara başvurur. Diğer tüm geçişli NuGet paketleri geri yükleme sırasında belirlenir ve otomatik olarak oluşturulan obj\project.assets.JSON dosyasına kaydedilir. Bu, projenizin hangi bağımlılıklara sahip olduğunu belirlemeyi çok daha kolay hale getirir. Bu, gerekli bağımlılıkların .NET Core 'da çalışıp çalışmadığını belirlemede yararlı olur.
 
-Bir .NET Framework uygulamasını .NET Core'a geçirmenin ilk `<PackageReference>` adımı NuGet başvurularını kullanmak üzere güncelleştirmektir. Visual Studio bunu basitleştiriyor. Visual Studio'nun **Solution Explorer'ında**projenin *paketleri.config* dosyasına sağ tıklayın ve ardından **PackageReference'a geçir packages.config'i**seçin.
+.NET Framework uygulamayı .NET Core 'a geçirmeye yönelik ilk adım, NuGet başvurularını kullanacak `<PackageReference>` şekilde günceldir. Visual Studio bu basit hale getirir. Visual Studio 'nun **Çözüm Gezgini**projenin *Packages. config* dosyasına sağ tıklayıp, **Packages. config 'i packagereference öğesine geçir**' i seçmeniz yeterlidir.
 
-![PackageReference'a yükseltme](./media/convert-project-from-net-framework/package-reference-migration.png)
+![PackageReference 'a yükseltme](./media/convert-project-from-net-framework/package-reference-migration.png)
 
-Hesaplanan üst düzey NuGet bağımlılıklarını gösteren ve hangi diğer NuGet paketlerinin üst düzeye yükseltilmesi gerektiğini soran bir iletişim kutusu görüntülenir. Bu diğer paketlerin hiçbiri Bean Trader örnek için üst düzey olması gerekir, böylece tüm bu kutuların kontrolden çekebilirsiniz. Daha sonra **Tamam'ı** tıklatın ve *packages.config* dosyası kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
+Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. Bu diğer paketlerin hiçbirinin, çekirdeklere Trader örneği için en üst düzey olması gerekmez, bu nedenle bu kutuların tümünün işaretini kaldırabilirsiniz. Ardından **Tamam** ' a tıklayın ve *Packages. config* dosyası kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
 
-`<PackageReference>`-stil başvuruları NuGet paketlerini bir paket klasöründe yerel olarak saklamaz. Bunun yerine, bir optimizasyon olarak küresel olarak saklanır. Geçiş tamamlandıktan sonra, csproj dosyasını edin ve daha önce gelen çözümleyicilere atıfta bulunan öğeleri `<Analyzer>` *kaldırın. \paketleri* dizini. Merak etme; NuGet paket başvurularıhala sizde olduğundan, çözümleyiciler projeye dahil edilecektir. Sadece eski paketleri temizlemen gerekiyor. `<Analyzer>`
+`<PackageReference>`-Style başvuruları, NuGet paketlerini bir paketler klasöründe yerel olarak depolamaz. Bunun yerine, genel bir iyileştirme olarak depolanır. Geçiş tamamlandıktan sonra, csproj dosyasını düzenleyin ve ' den daha önce `<Analyzer>` gelen çözümleyiciler ile ilgili tüm öğeleri *kaldırın. \packages* dizini. Endişelenmeyin; NuGet paketi başvurularını hala içerdiğinden, çözümleyiciler projeye dahil edilir. Yalnızca eski paketler. config stilindeki `<Analyzer>` öğeleri temizlemeniz yeterlidir.
 
-### <a name="review-nuget-packages"></a>NuGet paketlerini inceleyin
+### <a name="review-nuget-packages"></a>NuGet paketlerini gözden geçir
 
-Artık projenin bağlı olduğu üst düzey NuGet paketlerini görebildiğinize göre, bu paketlerin .NET Core'da kullanılabilir olup olmadığını gözden geçirebilirsiniz. Bir paketin .NET Core'u destekleyip desteklemediğini [nuget.org](https://www.nuget.org/)bağımlılıklarına bakarak belirleyebilirsiniz. Topluluk tarafından oluşturulan [fuget.org](https://www.fuget.org/) sitesi, bu bilgileri paket bilgileri sayfasının en üstünde belirgin bir şekilde gösterir.
+Artık projenin bağımlı olduğu en üst düzey NuGet paketlerini görebilmeniz için, bu paketlerin .NET Core 'da kullanılabilir olup olmadığını gözden geçirebilirsiniz. [NuGet.org](https://www.nuget.org/)' deki bağımlılıklara bakarak bir paketin .NET Core 'u destekleyip desteklemediğini belirleyebilirsiniz. Topluluk tarafından oluşturulan [fuget.org](https://www.fuget.org/) sitesi, bu bilgileri paket bilgileri sayfasının en üstünde belirgin şekilde gösterir.
 
-.NET Core 3.0 hedeflediğinde,.NET Core veya .NET Standard'ı hedefleyen paketler çalışmalıdır (.NET Core .NET Standart yüzey alanını uyguladığından). Bazı durumlarda, kullanılan bir paketin belirli sürümü .NET Core veya .NET Standard'ı hedeflemez, ancak yeni sürümler hedeflenecektir. Bu durumda, paketin en son sürümüne yükseltmeyi düşünmelisiniz.
+.NET Core 3,0 hedeflenirken, .NET Core veya .NET Standard hedefleyen tüm paketler çalışır (.NET Core .NET Standard Surface alanını gerçekleştirdiğinden). Bazı durumlarda, kullanılan bir paketin belirli sürümü .NET Core veya .NET Standard hedeflemiyor, ancak daha yeni sürümler olacak. Bu durumda, paketin en son sürümüne yükseltmeyi göz önünde bulundurmanız gerekir.
 
-.NET Framework'u hedefleyen paketleri de kullanabilirsiniz, ancak bu bazı riskler sunar. .NET Core to .NET Framework bağımlılıklarına izin verilir, çünkü .NET Core ve .NET Framework yüzey alanları bu tür bağımlılıkların *genellikle* çalıştığı kadar benzerdir. Ancak, paket .NET Core'da bulunmayan bir .NET API kullanmaya çalışırsa, çalışma zamanı özel bir durumla karşılaşırsınız. Bu nedenle, sadece .NET Framework paketlerine başka seçenek olmadığında başvurmalı ve bunu yapmanın bir test yükü yüklediğini anlamalısınız.
+.NET Framework hedefleyen paketleri de kullanabilirsiniz, ancak bu da bazı riskler sağlar. .NET Core ve .NET Framework Surface alanları bu tür bağımlılıkların *genellikle* çalıştığı kadar benzer olduğundan, .net core 'a .NET Framework bağımlılıklara izin verilir. Ancak, paket .NET Core 'da mevcut olmayan bir .NET API kullanmaya çalışırsa, bir çalışma zamanı özel durumu ile karşılaşırsınız. Bu nedenle, başka seçenek yoksa yalnızca .NET Framework paketlerine başvurmalıdır ve bu işlemin bir test yükü uyguladığından emin olun.
 
-.NET Core veya .NET Standard'ı hedeflememeyen başvurulan paketler varsa, diğer alternatifleri düşünmeniz gerekir:
+.NET Core veya .NET Standard hedefleyen paketlere başvuruluyorsa, diğer alternatifleri düşünmek zorunda kalmazsınız:
 
-- Bunun yerine kullanılabilecek başka benzer paketler var mı? Bazen NuGet yazarları ayrı 'yayınlamak. Özellikle .NET Core hedefleyen kendi kütüphanelerinin Core sürümleri. Kurumsal Kütüphane paketleri topluluk yayıncılık bir örnektir ". NetCore" alternatifleri. Diğer durumlarda, .NET Standard için belirli bir hizmet için daha yeni SDK'lar (bazen farklı paket adlarıyla) kullanılabilir. Herhangi bir alternatif yoksa, .NET Framework hedefli paketleri kullanarak ,NET Core'da çalışırken iyice test etmeniz gerektiğini göz önünde bulundurarak devam edebilirsiniz.
+- Bunun yerine kullanılabilecek başka benzer paketler var mı? Bazen NuGet yazarları ayrı olarak yayımlar '. .NET Core 'un özel olarak hedeflediği kitaplıkların temel sürümleri. Kurumsal kitaplık paketleri, topluluk yayımlamanın bir örneğidir ". NetCore "alternatifler. Diğer durumlarda, belirli bir hizmet için yeni SDK 'lar (bazen farklı paket adlarıyla birlikte) .NET Standard için kullanılabilir. Kullanılabilir alternatif yoksa, .NET Core üzerinde çalışırken bunları tamamen test etmeniz gerektiğini aklınızda bulundurarak .NET Framework hedefli paketleri kullanmaya devam edebilirsiniz.
 
-Bean Trader örneği aşağıdaki üst düzey NuGet bağımlılıklarına sahiptir:
+Çekirdeklere Trader örneği aşağıdaki en üst düzey NuGet bağımlılıklara sahiptir:
 
-- [**Castle.Windsor, sürüm 4.1.1**](https://www.castleproject.org/projects/windsor/)  
+- [**Role. Wınsörü, sürüm 4.1.1**](https://www.castleproject.org/projects/windsor/)  
 
-  Bu paket .NET Standart 1.6'yı hedefler, bu nedenle .NET Core'da çalışır.
+  Bu paket, .NET Core üzerinde çalıştığından 1,6 .NET Standard hedefler.
 
-- [**Microsoft.CodeAnalysis.FxCopAnalyzers, sürüm 2.6.3**](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3)  
-  Bu bir meta paketidir, bu nedenle hangi platformları desteklediği hemen belli değildir, ancak [belgeler](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers) en yeni sürümünün (2.9.2) hem .NET Framework hem de .NET Core için çalışacağını gösterir.
+- [**Microsoft. CodeAnalysis. Fxcopçözümleyiciler, sürüm 2.6.3**](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3)  
+  Bu bir meta pakettir. bu nedenle, hangi platformların desteklediği, ancak [belge](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers) en yeni sürümünün (2.9.2) hem .NET Framework hem de .NET Core için çalıştığını gösterir.
 
-- [**Nito.AsyncEx, sürüm 4.0.1**](https://www.nuget.org/packages/Nito.AsyncEx/4.0.1)  
+- [**Nito. AsyncEx, sürüm 4.0.1**](https://www.nuget.org/packages/Nito.AsyncEx/4.0.1)  
 
-  Bu paket .NET Core'u hedeflemez, ancak yeni 5.0 sürümü hedeflemektedir. Birçok NuGet paketi son zamanlarda .NET Standard desteği eklence, ancak eski proje sürümleri yalnızca .NET Framework'u hedeflediğiiçin, bu geçiş yaparken yaygındır. Sürüm farkı yalnızca küçük bir sürüm farkıysa, yeni sürüme yükseltmek genellikle kolaydır. Bu önemli bir sürüm değişikliği olduğundan, pakette değişiklikler kırılabileceğinden, dikkatli yükseltme niz gerekir. Ama ileriye giden bir yol var, ki bu iyi bir şey.
+  Bu paket .NET Core 'u hedeflemiyor, ancak daha yeni 5,0 sürümü. Bu, geçiş sırasında yaygındır çünkü çok sayıda NuGet paketi son zamanlarda .NET Standard destek ekledi, ancak eski proje sürümleri yalnızca .NET Framework hedefleyecektir. Sürüm farkı yalnızca küçük bir sürüm farklılığı ise, daha yeni sürüme yükseltmek genellikle kolaydır. Bu bir ana sürüm değişikliği olduğundan, pakette önemli değişiklikler olabileceğinden, yükseltmenin dikkatli olması gerekir. Bir yol ileri olur, ancak bu iyi bir yoldur.
 
-- [**MahApps.Metro, sürüm 1.6.5**](https://www.nuget.org/packages/MahApps.Metro/1.6.5)  
+- [**MahApps. Metro, sürüm 1.6.5**](https://www.nuget.org/packages/MahApps.Metro/1.6.5)  
 
-  Bu paket aynı zamanda .NET Core'u da hedeflemez, ancak daha yeni bir ön sürüm (2.0-alfa) vardır. Yine, değişiklikleri kırma için dikkat etmek zorunda, ama yeni paket cesaret verici.
+  Bu paket ayrıca .NET Core 'u hedeflemez, ancak daha yeni bir yayın öncesi sürüm (2,0-Alpha) içerir. Yine de, son değişiklikleri gözden geçirin, ancak daha yeni paket teşvik.
 
-Bean Trader örneğinin NuGet bağımlılıkları ya .NET Standard/.NET Core'u hedef alır ya da yeni sürümleri vardır, bu nedenle burada herhangi bir engelleme sorunu olması olası değildir.
+Çekirdeklere Trader örneğinin NuGet bağımlılıkları her iki hedef .NET Standard/. NET Core veya daha yeni sürümlere sahiptir, bu nedenle burada herhangi bir engelleyici sorun olması düşüktür.
 
-### <a name="upgrade-nuget-packages"></a>NuGet paketlerini yükseltin
+### <a name="upgrade-nuget-packages"></a>NuGet paketlerini yükselt
 
-Mümkünse, herhangi bir kırılma değişikliğini erken keşfetmek ve gidermek için bu noktada (proje hala .NET Framework'ü hedefleyen projeyle) yalnızca .NET Core veya .NET Standard'ı hedefleyen paketlerin sürümlerini yükseltmek iyi olacaktır.
+Mümkünse, bu noktada yalnızca .NET Core veya .NET Standard hedef olan tüm paketlerin sürümlerini yükseltmek iyi olabilir (proje, hala .NET Framework hedefleyerek), herhangi bir son değişiklik bulmayı ve bu değişiklikleri daha önce bulur ve adreslemesini sağlar.
 
-Uygulamanın varolan .NET Framework sürümünde herhangi bir önemli değişiklik yapmak istemiyorsanız, bu işlem .NET Core'u hedefleyen yeni bir proje dosyanız olana kadar bekleyebilir. Ancak, NuGet paketlerini .NET Core uyumlu sürümlere önceden yükseltmek, yeni proje dosyasını oluşturduğunuzda geçiş işlemini daha da kolaylaştırır ve uygulamanın .NET Framework ve .NET Core sürümleri arasındaki fark sayısını azaltır.
+Uygulamanın mevcut .NET Framework sürümünde herhangi bir malzeme değişikliği yapmayın, bu, .NET Core 'u hedefleyen yeni bir proje dosyası olana kadar bekleyebilir. Ancak, NuGet paketlerini .NET Core ile uyumlu sürümlere yükseltmek, yeni proje dosyasını oluşturduktan sonra geçiş işlemini daha da kolay hale getirir ve uygulamanın .NET Framework ve .NET Core sürümleri arasındaki farkları sayısını azaltır.
 
-Bean Trader örneği ile, gerekli tüm yükseltmeleri kolayca yapılabilir (Visual Studio's NuGet paket yöneticisi kullanılarak) bir istisna dışında: **MahApps.Metro 1.6.5** den **2.0** yükseltme tema ve aksan yönetimi API'ler ile ilgili kırılma değişiklikleri ortaya koymaktadır.
+Çekirdeklere Trader örneğinde, tüm gerekli yükseltmeler (Visual Studio 'nun NuGet Paket Yöneticisi kullanılarak) tek bir özel durumla kolayca yapılabilir: **Mahapps 'den yükseltme. Metro 1.6.5** ile **2,0** arasında, tema ve vurgu yönetimi API 'leriyle ilgili önemli değişiklikler ortaya çıkarır.
 
-İdeal olarak, uygulama paketin yeni sürümünü kullanmak üzere güncellenir (bu daha fazla .NET Core üzerinde çalışmak olasıdır). Ancak bazı durumlarda bu mümkün olmayabilir. Bu gibi durumlarda, gerekli değişiklikler önemsiz olmadığından ve bu öğretici **MahApps.Metro 2'ye** değil ,.NET Core 3'e geçiş yapmaya odaklandığından **MahApps.Metro'yu** yükseltmeyin. Ayrıca, bu düşük riskli .NET Framework bağımlılığı çünkü Bean Trader uygulaması sadece **MahApps.Metro**küçük bir kısmını egzersizleri. Tabii ki, geçiş tamamlandıktan sonra her şeyin çalıştığından emin olmak için test edilmesi gerekecek. Bu gerçek bir senaryo olsaydı, şimdi bazı teknik borç geride bırakır göç yapmadığıiçin **MahApps.Metro** sürümü 2.0 taşımak için iş izlemek için bir sorun dosya iyi olurdu.
+İdeal olarak, uygulama paketin daha yeni sürümünü kullanacak şekilde güncelleştirilir (Bu, .NET Core üzerinde çalışmaya daha olasıdır). Ancak bazı durumlarda, bu işlem uygulanabilir olmayabilir. Bu gibi durumlarda, gerekli değişiklikler önemsiz olmadığından ve bu öğretici, .NET Core 3 ' e geçirmeye odaklandığından, mahapps. Metro 2 için değil, **mahapps. Metro** 'yı yükseltmeyin **.** Ayrıca, çekirdeklere Trader uygulaması yalnızca **Mahapps. Metro**'nın küçük bir kısmını sağladığından, bu düşük riskli .NET Framework bir bağımlılıkdır. Kuşkusuz, geçiş işlemi tamamlandıktan sonra her şeyin çalıştığından emin olmak için test gerekir. Bu gerçek dünyada bir senaryosa, daha önce bazı teknik borcunun gerisinde kalmasını sağlamak için, bu işlemi izlemek üzere **Mahapps. Metro** sürüm 2,0 ' ye geçiş yapmak için bir sorun gidermek iyi olacaktır.
 
-NuGet paketleri son sürümlere güncelleştirildikten sonra, Bean Trader örneğinin proje dosyasındaki `<PackageReference>` madde grubu bu şekilde görünmelidir.
+NuGet paketleri son sürümlere güncelleştirildikten sonra, çekirdeklere Trader örneğinin `<PackageReference>` proje dosyasındaki öğe grubu şuna benzemelidir.
 
 ```xml
 <ItemGroup>
@@ -130,51 +130,51 @@ NuGet paketleri son sürümlere güncelleştirildikten sonra, Bean Trader örne�
 </ItemGroup>
 ```
 
-### <a name="net-framework-portability-analysis"></a>.NET Çerçeve taşınabilirlik analizi
+### <a name="net-framework-portability-analysis"></a>.NET Framework taşınabilirlik Analizi
 
-Projenizin NuGet bağımlılıklarının durumunu anladığınızda, göz önünde bulundurulması gereken bir sonraki şey .NET Framework API bağımlılıklarıdır. [.NET Taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) aracı, projenizin hangi .NET API'lerinin diğer .NET platformlarında kullanılabildiği konusunda yararlıdır.
+Projenizin NuGet bağımlılıklarının durumunu anladığınızda, dikkate alınması gereken sonraki şey .NET Framework API bağımlılıklarıdır. [.Net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) Aracı, projenizin kullandığı .NET API 'lerinin hangisinin diğer .net platformlarında kullanılabildiğini anlamak için yararlıdır.
 
-Araç bir [Visual Studio eklentisi](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)olarak geliyor , bir [komut satırı aracı](https://github.com/Microsoft/dotnet-apiport/releases), ya da basit bir [GUI](https://github.com/Microsoft/dotnet-apiport-ui)sarılmış , hangi seçeneklerini kolaylaştırır. Porting masaüstü uygulamalarındaki GUI'yi kullanarak .NET Taşınabilirlik Çözümleyicisini (API Bağlantı Noktası) kullanarak [.NET Core](https://devblogs.microsoft.com/dotnet/porting-desktop-apps-to-net-core/) blog gönderisine ilişkin daha fazla bilgi edinebilirsiniz. Komut satırını kullanmayı tercih ederseniz, gerekli adımlar şunlardır:
+Araç, bir [Visual Studio eklentisi](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), bir [komut satırı aracı](https://github.com/Microsoft/dotnet-apiport/releases)veya [basit bir GUI](https://github.com/Microsoft/dotnet-apiport-ui)'de Sarmalanan, seçeneklerini kolaylaştıran bir araç olarak sunulur. .NET taşınabilirlik Çözümleyicisi 'ni (API bağlantı noktası) kullanma hakkında daha fazla bilgiyi, [masaüstü uygulamalarında .NET Core](https://devblogs.microsoft.com/dotnet/porting-desktop-apps-to-net-core/) blog gönderisine TAŞıMA bölümündeki GUI 'yi kullanarak bulabilirsiniz. Komut satırını kullanmayı tercih ediyorsanız, gereken adımlar şunlardır:
 
-1. Zaten yoksa [.NET Taşınabilirlik Çözümleyicisini](https://github.com/Microsoft/dotnet-apiport/releases) indirin.
-1. Taşınabilir .NET Framework uygulamasının başarıyla oluşturduğundan emin olun (bu, geçişten önce iyi bir fikirdir).
-1. API Bağlantı Noktasını böyle bir komut satırıyla çalıştırın.
+1. Henüz yoksa [.net taşınabilirlik Çözümleyicisi](https://github.com/Microsoft/dotnet-apiport/releases) 'ni indirin.
+1. .NET Framework uygulamasının derlemeler için başarıyla bağlantı kurmak için olduğundan emin olun (Bu, geçişe bakılmaksızın iyi bir fikirdir).
+1. API bağlantı noktasını aşağıdaki gibi bir komut satırıyla çalıştırın.
 
     ```console
     ApiPort.exe analyze -f <PathToBeanTraderBinaries> -r html -r excel -t ".NET Core"
     ```
 
-    Bağımsız `-f` değişken, çözümlemek için ikilileri içeren yolu belirtir. Bağımsız `-r` değişken, istediğiniz çıktı dosya biçimini belirtir. Bağımsız `-t` değişken, API kullanımını analiz etmek için hangi .NET platformuna karşı olduğunu belirtir. Bu durumda, .NET Core'u istiyorsunuz.
+    `-f` Bağımsız değişkeni, çözümlenecek ikilileri içeren yolu belirtir. `-r` Bağımsız değişkeni istediğiniz çıktı dosyası biçimini belirtir. Bağımsız `-t` DEĞIŞKENI, API kullanımının analiz edileceği .NET platformunu belirtir. Bu durumda, .NET Core 'u istersiniz.
 
-HTML raporunu açtığınızda, ilk bölümde analiz edilen tüm ikililer ve kullandıkları .NET API'lerinin yüzde kaçının hedeflenen platformda kullanılabilir olduğu listelenir. Yüzde tek başına anlamlı değildir. Daha yararlı olan, eksik olan belirli API'leri görmektir. Bunu yapmak için, bir derleme adı seçin veya tek tek derlemeler için raporlara gidin.
+HTML raporu açtığınızda, ilk bölüm çözümlenmiş ikililerin tümünü ve kullandıkları .NET API 'lerinin yüzdesini listeler ve hedeflenen platformda bulunur. Yüzde, kendi kendine anlamlı değildir. Daha fazla yararlı olan API 'Ler, eksik olan API 'Leri görşeydir. Bunu yapmak için, bir derleme adı seçin ya da ayrı derlemeler için raporlara gidin.
 
-Kaynak kodun sahibi olduğunuz derlemelere odaklanın. Bean Trader ApiPort raporunda, örneğin, listelenen birçok ikili vardır, ancak bunların çoğu NuGet paketleriaittir. `Castle.Windsor`.NET Core'da eksik olan bazı System.Web API'lerine bağlı olduğunu gösterir. Bu bir sorun değildir, çünkü daha `Castle.Windsor` önce .NET Core'u destekleyen leri doğruladığınız için. NuGet paketlerinin farklı .NET platformlarında kullanılmak üzere farklı ikili lere sahip olması `Castle.Windsor` yaygındır, bu nedenle System.Web API'lerinin .NET Framework sürümünün .NET Standard veya .NET Core'u da hedeflediği sürece .NET Standard veya .NET Core'u (ki öyle) kullanması önemsizdir.
+Kaynak koduna sahip olduğunuz derlemelere odaklanın. Çekirdeklere Trader ApiPort raporunda, örneğin, listelenen çok sayıda ikili dosya vardır, ancak çoğu NuGet paketlerine aittir. `Castle.Windsor`.NET Core 'da eksik olan System. Web API 'Lerine bağlı olduğunu gösterir. Bu sorun, daha önce .NET Core ' u `Castle.Windsor` desteklediğini doğruladığınıza ilişkin bir sorun değildir. NuGet paketleri farklı .NET platformlarıyla kullanılmak üzere farklı ikililerin olması yaygındır. bu nedenle, ' nin `Castle.Windsor` .NET Framework sürümünün System. Web API 'lerini kullanması veya aynı zamanda paket .NET Standard veya .NET Core 'u (bunun yaptığı) hedeflediğinden, ilgisiz olup olmadığı.
 
-Bean Trader örnek ile, dikkate almanız gereken tek ikili **BeanTraderClient** ve rapor sadece iki .NET API eksik olduğunu gösterir: `System.ServiceModel.ClientBase<T>.Close` ve `System.ServiceModel.ClientBase<T>.Open`.
+Çekirdeklere Trader örneğinde, dikkate almanız gereken tek ikili bir **Beantraderclient** örneğidir ve rapor yalnızca Iki .NET API 'nin eksik olduğunu gösterir: `System.ServiceModel.ClientBase<T>.Close` ve. `System.ServiceModel.ClientBase<T>.Open`
 
 ![BeanTraderClient taşınabilirlik raporu](./media/convert-project-from-net-framework/portability-report.png)
 
-WCF İstemci API'leri (çoğunlukla) .NET Core'da desteklendirildik, bu nedenle bu merkezi API'ler için alternatifler olması gerektiğinden, bu sorunların engellenmesi olası değildir. `System.ServiceModel`Aslında,'ın .NET Core yüzey alanına <https://apisof.net>(kullanarak) baktığınızda,.NET Core'da async alternatifleri olduğunu görürsünüz.
+WCF Istemci API 'Leri (çoğunlukla) .NET Core üzerinde desteklendiğinden, bu merkezi API 'lerde kullanılabilecek alternatifler olması gerektiğinden bunlar sorunları engelliyor olabilir. Aslında, .NET Core yüzey `System.ServiceModel`alanına (kullanarak <https://apisof.net>) bakarak bunun yerine .NET Core 'ta zaman uyumsuz alternatifler olduğunu görürsünüz.
 
-Bu rapor ve önceki NuGet bağımlılık analizine dayanarak, Bean Trader örneğini .NET Core'a geçiren önemli bir sorun olmaması gerekir gibi görünüyor. Göçü başlatacağınız bir sonraki adımiçin hazırsınız.
+Bu rapor ve önceki NuGet bağımlılığı analizine dayalı olarak, çekirdeklere Trader örneğini .NET Core 'a geçirmede önemli bir sorun olmaması gerekir. Geçiş işlemine gerçekten başlayacaksınız bir sonraki adıma hazırsınız.
 
-## <a name="migrating-the-project-file"></a>Proje dosyasını geçirme
+## <a name="migrating-the-project-file"></a>Proje dosyası geçiriliyor
 
-Uygulamanız yeni [SDK tarzı proje dosya biçimini](../../core/tools/csproj.md)kullanmıyorsa, .NET Core'u hedeflemek için yeni bir proje dosyasına ihtiyacınız vardır. Varolan csproj dosyasını değiştirebilir veya varolan projeyi geçerli durumunda el değmemiş olarak tutmayı tercih ederseniz, .NET Core'u hedefleyen yeni bir csproj dosyası ekleyebilirsiniz. Uygulamanın .NET Framework ve .NET Core sürümlerini, [çok hedeflemeli](../../standard/library-guidance/cross-platform-targeting.md) tek bir SDK tarzı `<TargetFrameworks>` proje dosyasıyla (birden çok hedef belirterek) oluşturabilirsiniz.
+Uygulamanız yeni [SDK stili proje dosyası biçimini](../../core/tools/csproj.md)kullanmıyor ise, .NET Core 'u hedeflemek için yeni bir proje dosyası gerekir. Var olan csproj dosyasını değiştirebilir veya mevcut projenin geçerli durumunda kalmasını tercih ediyorsanız, .NET Core 'u hedefleyen yeni bir csproj dosyası ekleyebilirsiniz. Çoklu [hedefleme](../../standard/library-guidance/cross-platform-targeting.md) (birden çok `<TargetFrameworks>` hedef belirterek) ile tek bir SDK stili proje dosyası Ile .NET Framework ve .NET Core için uygulamanın sürümlerini oluşturabilirsiniz.
 
-Yeni proje dosyasını oluşturmak için Visual Studio'da yeni bir `dotnet new wpf` WPF projesi oluşturabilir veya proje dosyasını oluşturmak ve sonra doğru konuma kopyalamak/yeniden adlandırmak için komutu geçici bir dizinde kullanabilirsiniz. Ayrıca topluluk tarafından oluşturulan bir araç, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017), bazı proje dosyası geçiş otomatikleştirebilirsiniz. Araç yararlıdır, ancak yine de geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmek için bir insana ihtiyaç duyar. Aracın en iyi şekilde işlemediği belirli bir alan, NuGet paketlerini *packages.config* dosyalarından geçirmektir. Araç, NuGet paketlerine başvurmak için hala bir *packages.config* dosyası kullanan bir `<PackageReference>` proje dosyasında çalışıyorsa, otomatik olarak öğelere geçiş yapacaktır, ancak yalnızca üst düzey paketler yerine `<PackageReference>` *tüm* paketler için öğeler ekler. Visual Studio ile öğelere`<PackageReference>` zaten geçiş yaptıysanız (bu örnekte yaptığınız gibi), araç dönüşümün geri kalanında yardımcı olabilir. Scott Hanselman [csproj dosyaları göç yaptığı blog yazısı](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)önerir gibi, elle taşıma eğitim ve sadece limana birkaç proje varsa daha iyi sonuçlar verecektir. Ancak düzinelerce veya yüzlerce proje dosyası taşımanız durumunda, [CsprojToVs2017] gibi bir araç yardımcı olabilir.
+Yeni proje dosyasını oluşturmak için, Visual Studio 'da yeni bir WPF projesi oluşturabilir veya bir geçici dizinde `dotnet new wpf` komutunu kullanarak proje dosyasını oluşturabilir ve ardından doğru konuma kopyalayabilir/yeniden adlandırabilirsiniz. Ayrıca, bazı proje dosyası geçişini otomatikleştirebilen, topluluk tarafından oluşturulan bir araç olan [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017). Araç yararlı olmakla kalmaz, geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmesi gerekir. Aracın en iyi şekilde işlemediğini belirli bir alan, *Packages. config* dosyalarından NuGet paketlerini geçirmektedir. Araç, NuGet paketlerine başvurmak için bir *Packages. config* dosyası kullanan bir proje dosyasında çalışıyorsa, `<PackageReference>` öğeleri otomatik olarak öğelere geçirilir, ancak yalnızca en üst düzey olanlar yerine `<PackageReference>` *Tüm* paketlere yönelik öğeler ekler. Visual Studio ile`<PackageReference>` öğelere zaten geçiş yaptıysanız (Bu örnekte yaptığınız gibi), araç geri kalanında dönüştürmeye yardımcı olabilir. Scott Hanselman, [csproj dosyalarını geçirirken blog gönderisine](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), el ile geçiş yaparak eğitim verme ve bağlantı noktası için yalnızca birkaç projeniz varsa daha iyi sonuçlar verecektir. Ancak onlarca veya yüzlerce proje dosyası oluşturuyorsanız, [CsprojToVs2017] gibi bir araç yardım olabilir.
 
-Bean Trader örneği için yeni bir proje `dotnet new wpf` dosyası oluşturmak için, geçici bir dizinde çalıştırın ve oluşturulan *.csproj* dosyasını *BeanTraderClient* klasörüne taşıyın ve **beanTraderClient.Core.csproj**adını yeniden adlandırın.
+Çekirdeklere Trader örneği için yeni bir proje dosyası oluşturmak için geçici bir dizinde `dotnet new wpf` çalıştırın ve oluşturulan *. csproj* dosyasını *beantraderclient* klasörüne taşıyın ve bu dosyayı **beantraderclient. Core. csproj**olarak yeniden adlandırın.
 
-Yeni proje dosyası biçimi otomatik olarak C# dosyalarını, *resx* dosyalarını ve dizininin altında bulduğu XAML dosyalarını içerdiğinden, proje dosyası zaten neredeyse tamamlandı! Geçişi tamamlamak için, eski ve yeni proje dosyalarını yan yana açın ve içerdiği herhangi bir bilginin geçirilip geçirilmeihtiyacı olup olmadığını görmek için eskidosyaya bakın. Bean Trader örnek durumda, aşağıdaki öğeler yeni projeye kopyalanmalıdır:
+Yeni proje dosyası biçimi, içinde veya dizininde bulduğu C# dosyalarını, *resx* dosyalarını ve xaml dosyalarını otomatik olarak içerdiğinden, proje dosyası zaten neredeyse tamamlanmıştır! Geçişi sona erdirmede, eski ve yeni proje dosyalarını yan yana açın ve içerdiği bilgilerin geçirilmesi gerekip gerekmediğini görmek için eskisini gözden geçirin. Çekirdeklere Trader örnek durumunda, aşağıdaki öğeler yeni projeye kopyalanmalıdır:
 
-- , `<RootNamespace>` `<AssemblyName>`ve `<ApplicationIcon>` özellikleritüm kopyalanmalıdır.
+- `<RootNamespace>`, `<AssemblyName>`Ve `<ApplicationIcon>` özelliklerinin hepsi kopyalanmalıdır.
 
-- Bean Trader örneği `<GenerateAssemblyInfo>false</GenerateAssemblyInfo>` AssemblyInfo.cs bir dosyadaki montaj düzeyinde öznitelikleri (beğen) `[AssemblyTitle]`içerdiğinden, yeni proje dosyasına bir özellik eklemeniz gerekir. Varsayılan olarak, yeni SDK tarzı projeler bu öznitelikleri csproj dosyasındaki özelliklere göre otomatik olarak oluşturur. Bu durumda bunun olmasını istemediğiniz için (otomatik oluşturulan öznitelikler AssemblyInfo.cs gelenlerle çakışacak), otomatik `<GenerateAssemblyInfo>`olarak oluşturulan öznitelikleri .
+- Ayrıca, çekirdeklere Trader örneği `<GenerateAssemblyInfo>false</GenerateAssemblyInfo>` bir AssemblyInfo.cs dosyasındaki derleme düzeyi öznitelikleri (gibi `[AssemblyTitle]`) içerdiğinden yeni proje dosyasına bir özellik eklemeniz gerekir. Varsayılan olarak, yeni SDK stili projeler bu öznitelikleri csproj dosyasındaki özelliklere göre otomatik olarak üretir. Bu durumda bunun gerçekleşmesini istemediğiniz için (otomatik olarak oluşturulan öznitelikler AssemblyInfo.cs ile çakışacak), ile `<GenerateAssemblyInfo>`otomatik olarak oluşturulan öznitelikleri devre dışı bırakabilirsiniz.
 
-- *resx* dosyaları otomatik olarak katıştırılmış `<Resource>` kaynaklar olarak dahil edilebilse de, görüntüler gibi diğer öğeler dahil edilmez. Bu nedenle, `<Resource>` görüntü ve simge dosyalarını katıştırma öğelerini kopyalayın. Globbing desenleri için yeni proje dosya biçiminin desteğini kullanarak tek bir satıra png başvurularını basitleştirebilirsiniz: `<Resource Include="**\*.png" />`.
+- *Resx* dosyaları gömülü kaynaklar olarak otomatik olarak dahil edilse de `<Resource>` , görüntüler gibi diğer öğeler değildir. Bu nedenle, görüntü `<Resource>` ve simge dosyaları katıştırmak için öğeleri kopyalayın. Yeni proje dosyası biçiminin glob desenleri desteğini kullanarak tek bir satıra png başvurularını basitleştirebilirsiniz: `<Resource Include="**\*.png" />`.
 
-- Benzer şekilde, `<None>` öğeler otomatik olarak dahil edilir, ancak varsayılan olarak çıktı dizinine kopyalanmıyor. Bean Trader projesi çıktı `<None>` dizinine *kopyalanan* bir öğe içerdiğinden (davranışları kullanarak), `PreserveNewest` bu dosya `<None>` için otomatik olarak doldurulan öğeyi güncelleştirmeniz gerekir, bu gibi.
+- Benzer şekilde `<None>` , öğeler otomatik olarak eklenir, ancak varsayılan olarak çıkış dizinine kopyalanmaz. Çekirdeklere Trader projesi çıkış dizinine (davranışlar `<None>` `PreserveNewest` kullanılarak) *kopyalanmış bir* öğe içerdiğinden, bu dosya için otomatik olarak doldurulmuş `<None>` öğeyi güncelleştirmeniz gerekir.
 
   ```xml
   <None Update="BeanTrader.pfx">
@@ -182,7 +182,7 @@ Yeni proje dosyası biçimi otomatik olarak C# dosyalarını, *resx* dosyaların
   </None>
   ```
 
-- Bean Trader örneği, bu dosyada tanımlanan temalar ve aksanlar uygulamanın `Page`kendisine gömülmek yerine dosyanın XAML'sinden yüklendiğinden, bir XAML dosyası (Default.Accent.xaml) `Content` (yerine) içerir. Yeni proje sistemi otomatik olarak bir `<Page>`XAML dosyası olduğundan, bir , ancak bu dosyayı içerir. Bu nedenle, XAML dosyasını hem sayfa`<Page Remove="**\Default.Accent.xaml" />`olarak kaldırmanız hem de içerik olarak eklemeniz gerekir.
+- Çekirdeklere Trader örneği, bir XAML dosyası (varsayılan. vurgu. xaml) `Content` (as yerine `Page`) içerir, çünkü bu dosyada tanımlanan Temalar ve vurgular, uygulamanın kendine gömülmesini yerıne çalışma zamanında dosyanın xaml 'den yüklenmesidir. Yeni proje sistemi, bir XAML dosyası olduğundan, bu `<Page>`dosyayı otomatik olarak bir olarak ekler. Bu nedenle, XAML dosyasını bir sayfa (`<Page Remove="**\Default.Accent.xaml" />`) olarak kaldırmanız ve içerik olarak eklemeniz gerekir.
 
   ```xml
   <Content Include="Resources\Themes\Default.Accent.xaml">
@@ -190,86 +190,86 @@ Yeni proje dosyası biçimi otomatik olarak C# dosyalarını, *resx* dosyaların
   </Content>
   ```
 
-- Son olarak, tüm öğeleri `<ItemGroup>` ile kopyalayarak `<PackageReference>` NuGet referansları ekleyin. NuGet paketlerini daha önce .NET Core uyumlu sürümlere yükseltmemiş olsaydınız, paket başvuruları .NET Core'a özgü bir projede olduğu için bunu şimdi yapabilirdiniz.
+- Son olarak, tüm `<ItemGroup>` `<PackageReference>` öğeleri ile kopyalayarak NuGet başvuruları ekleyin. NuGet paketlerini daha önce .NET Core ile uyumlu sürümlere yükseltmişseniz, artık paket başvurularının .NET Core 'a özgü bir projede olduğundan emin olabilirsiniz.
 
-Bu noktada, BeanTrader çözümüne yeni proje eklemek ve Visual Studio açmak mümkün olmalıdır. Proje **Solution Explorer'da**doğru `dotnet restore BeanTraderClient.Core.csproj` görünmeli ve paketleri başarıyla geri yüklemeli (.NET Framework'ü hedeflemek için kullandığınız MahApps.Metro sürümüyle ilgili iki beklenen uyarıyla).
+Bu noktada, yeni projeyi BeanTrader çözümüne eklemek ve Visual Studio 'da açmak mümkün olmalıdır. Proje, **Çözüm Gezgini**doğru görünmelidir ve `dotnet restore BeanTraderClient.Core.csproj` paketleri başarıyla geri yüklemeniz gerekir (.NET Framework hedef olarak kullandığınız mahapps. Metro sürümü ile ilgili iki beklenen uyarıyla birlikte).
 
-Her iki proje dosyasını yan yana tutmak mümkün olsa da (ve eski projeyi tam olarak oluşturmaya devam etmek istiyorsanız bile istenebilir), geçiş işlemini karmaşıklaştırır (iki proje aynı bin ve obj klasörlerini kullanmaya çalışır) ve genellikle gerekli değildir. Hem .NET Core hem de .NET Framework hedefleri için `<TargetFramework>netcoreapp3.0</TargetFramework>` oluşturmak istiyorsanız, yeni `<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>` proje dosyasındaki özelliği yerine değiştirebilirsiniz. Bean Trader örnek için, artık gerekli olduğundan eski proje dosyası (BeanTraderClient.csproj) silin. Her iki proje dosyasını da saklamayı tercih ederseniz, farklı çıktı ve ara çıktı yollarına oluşturmalarını unutmayın.
+Her iki proje dosyasını yan yana tutmak mümkün olsa da (ve eski projeyi tamamen olduğu gibi oluşturmak istiyorsanız bile istenebilir), geçiş işlemini karmaşıklaştırır (iki proje aynı bin ve obj klasörlerini kullanmayı dener) ve genellikle gerekli değildir. Hem .NET Core hem de .NET Framework hedefleri için derlemek isterseniz, yeni proje dosyasındaki `<TargetFramework>netcoreapp3.0</TargetFramework>` özelliğini bunun yerine ile `<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>` değiştirebilirsiniz. Çekirdeklere Trader örneği için artık gerekli olmadığından eski proje dosyasını (BeanTraderClient. csproj) silin. Her iki proje dosyasını da tutmak isterseniz, bunların farklı çıkış ve ara çıkış yolları için derlendiğinizden emin olun.
 
-## <a name="fix-build-issues"></a>Yapı sorunlarını düzeltme
+## <a name="fix-build-issues"></a>Derleme sorunlarını giderme
 
-Taşıma işleminin üçüncü adımı, projenin oluşturulmasını sağlamaktır. Proje dosyası SDK tarzı bir projeye dönüştürüldükten sonra bazı uygulamalar zaten başarılı bir şekilde oluşturur. Uygulamanız için durum buysa, tebrikler! Adım 4'e gidebilirsin. Diğer uygulamaların .NET Core için bina almak için bazı güncelleştirmelere ihtiyacı vardır. Örneğin, (veya `dotnet build` Visual Studio'da inşa etmek) şimdi Bean Trader örnek proje üzerinde çalıştırmaya çalışırsanız, birçok hata olacaktır, ancak bunları hızlı bir şekilde sabit alırsınız.
+Taşıma işleminin üçüncü adımı, oluşturulacak projeyi alıyor. Proje dosyası bir SDK stili projeye dönüştürüldükten sonra bazı uygulamalar başarıyla derlencektir. Uygulamanız için bu durum, tebrikler! 4. adım ' a gidebilirsiniz. Diğer uygulamalarda, .NET Core için derleme için bazı güncelleştirmeler gerekecektir. Çekirdeklere Trader örnek projesinde `dotnet build` , örneğin (veya Visual Studio 'da derleme) çalıştırmayı denerseniz, birçok hata olacaktır, ancak bunları hızlıca sabitleyebilirsiniz.
 
-### <a name="systemservicemodel-references-and-microsoftwindowscompatibility"></a>System.ServiceModel referansları ve Microsoft.Windows.Compatibility
+### <a name="systemservicemodel-references-and-microsoftwindowscompatibility"></a>System. ServiceModel başvuruları ve Microsoft. Windows. Compatibility
 
-.NET Core için kullanılabilen ancak otomatik olarak .NET Core uygulama meta paketine dahil olmayan API'ler için yaygın bir hata kaynağı olan başvurular eksiktir. Bu sorunu gidermek için `Microsoft.Windows.Compatibility` pakete başvurmanız gerekir. Uyumluluk paketi, WCF istemcisi, dizin hizmetleri, kayıt defteri, yapılandırma, APC'ler API'leri ve daha fazlası gibi Windows masaüstü uygulamalarında yaygın olan geniş bir API kümesi içerir.
+.NET Core için kullanılabilen ancak .NET Core App metapackage içinde otomatik olarak bulunmayan API 'Ler için ortak hata Kaynakları eksik. Bunu çözmek için `Microsoft.Windows.Compatibility` pakete başvurmanız gerekir. Uyumluluk Paketi, WCF istemcisi, Dizin Hizmetleri, kayıt defteri, yapılandırma, ACL 'Ler API 'Leri ve daha fazlası gibi Windows masaüstü uygulamalarında ortak olan geniş bir API kümesini içerir.
 
-Bean Trader örneği ile, yapı hatalarının çoğu <xref:System.ServiceModel> eksik türleri kaynaklanmaktadır. Bunlar, gerekli WCF NuGet paketlerine başvurarak ele alınabilir. WCF istemci API'leri `Microsoft.Windows.Compatibility` pakette bulunanlar arasındadır, bu nedenle uyumluluk paketine başvurmak daha da iyi bir çözümdür (çünkü API'lerle ilgili tüm sorunları ve uyumluluk paketinin kullanıma sunduğu WCF sorunlarına yönelik çözümleri de ele alıyor). Paket, `Microsoft.Windows.Compatibility` .NET Core 3.0 WPF ve WinForms taşıma senaryolarının çoğunda yardımcı olur. NuGet referansını ekledikten `Microsoft.Windows.Compatibility`sonra, yalnızca bir yapı hatası kalır!
+Çekirdeklere Trader örneğinde, derleme hatalarının çoğunluğu eksik <xref:System.ServiceModel> türler nedeniyle oluşur. Bunlar, gerekli WCF NuGet paketlerine başvurarak çözülebilir. WCF istemci API 'Leri, `Microsoft.Windows.Compatibility` pakette mevcut olanlar arasındadır, ancak bu nedenle uyumluluk paketine başvurmak daha iyi bir çözümdür (Ayrıca, API 'lerle ilgili sorunları ve ayrıca uyumluluk PAKETININ kullanılabildiği WCF sorunlarını çözümler) de ele alınmaktadır. Bu `Microsoft.Windows.Compatibility` paket çoğu .net Core 3,0 WPF ve WinForms taşıma senaryolarında yardımcı olur. NuGet başvurusunu öğesine `Microsoft.Windows.Compatibility`ekledikten sonra yalnızca bir derleme hatası kalır!
 
 ### <a name="cleaning-up-unused-files"></a>Kullanılmayan dosyaları temizleme
 
-Sık sık gelen bir geçiş sorunu, *tüm* kaynağı otomatik olarak içeren yeni SDK tarzı projeler tarafından alınan yapıya daha önce dahil edilmeyen C# ve XAML dosyalarıyla ilgilidir.
+Genellikle, *Tüm* kaynağı otomatik olarak IÇEREN yeni SDK stili projelere eklenen yapıya dahil olmayan C# ve xaml dosyalarıyla ilişkili bir tür geçiş sorunu vardır.
 
-Bean Trader örneğinde gördüğünüz bir sonraki yapı hatası *OldUnusedViewModel.cs*kötü bir arayüz uygulaması anlamına gelir. Dosya adı bir ipucudur, ancak denetimde bu kaynak dosyanın yanlış olduğunu göreceksiniz. Orijinal .NET Framework projesine dahil edilmediği için daha önce sorunlara neden olmadı. Diskte bulunan ancak eski *csproj'a* dahil olmayan kaynak dosyalar artık otomatik olarak eklenmiştir.
+Çekirdeklere Trader örneğinde gördüğünüz sonraki derleme hatası, *OldUnusedViewModel.cs*içindeki hatalı bir arabirim uygulamasına başvurur. Dosya adı bir ipucu, ancak Denetim sırasında bu kaynak dosyanın yanlış olduğunu fark edeceksiniz. Bu, eski .NET Framework projesine dahil edilmediğinden, daha önce soruna neden olmadı. Diskte bulunan ancak eski *csproj* 'a dahil olmayan kaynak dosyaları şimdi otomatik olarak eklenir.
 
-Bu gibi tek seferlik sorunlar için, dosyanın gerekli olmadığını onaylamak için önceki *csproj* ile `<Compile Remove="" />` karşılaştırmak kolaydır ve sonra ya o ya da, kaynak dosya artık herhangi bir yerde gerekli değilse, silin. Bu durumda, sadece *OldUnusedViewModel.cs*silmek güvenlidir.
+Bu gibi tek bir sorun varsa, dosyanın gerekli olmadığını doğrulamak için önceki *csproj* ile karşılaştırmak kolaydır ve sonra ya da `<Compile Remove="" />` kaynak dosya bundan böyle herhangi bir yerde gerekmiyorsa, silin. Bu durumda, yalnızca *OldUnusedViewModel.cs*silmek güvenlidir.
 
-Bu şekilde dışlanması gereken çok sayıda kaynak dosyanız varsa, `<EnableDefaultCompileItems>` özelliği proje dosyasında false olarak ayarlayarak C# dosyalarının otomatik olarak eklenmesini devre dışı bırakabilirsiniz. Ardından, yalnızca `<Compile Include>` eklemeyi planladığınız kaynakları oluşturmak için öğeleri eski proje dosyasındaki öğeleri yenisine kopyalayabilirsiniz. Benzer şekilde, `<EnableDefaultPageItems>` XAML sayfalarının otomatik olarak eklenmesini `<EnableDefaultItems>` kapatmak için kullanılabilir ve her ikisini de tek bir özellik ile denetleyebilir.
+Bu şekilde dışlanmanız gereken çok sayıda kaynak dosyanız varsa, proje dosyasında `<EnableDefaultCompileItems>` özelliği false olarak ayarlayarak C# dosyalarının otomatik olarak eklenmesini devre dışı bırakabilirsiniz. Daha sonra, yalnızca dahil `<Compile Include>` etmek istediğiniz kaynakları oluşturmak için eski proje dosyasındaki öğeleri yeni birine kopyalayabilirsiniz. Benzer şekilde `<EnableDefaultPageItems>` , XAML sayfalarının otomatik olarak eklenmesini devre dışı bırakmak ve `<EnableDefaultItems>` her ikisini de tek bir özellikle denetlemek için kullanılabilir.
 
-### <a name="a-brief-aside-on-multi-pass-compilers"></a>Çok geçişli derleyiciler hakkında kısa bir kenara
+### <a name="a-brief-aside-on-multi-pass-compilers"></a>Çok geçişli derleyicilere kısa bir açıklama
 
-Sorunlu dosyayı Bean Trader örneğinden çıkardıktan sonra yeniden oluşturabilirsiniz ve dört hata alabilirsiniz. Daha önce de yok muydu? Hata sayısı neden arttı? C# derleyicisi çok geçişli bir [derleyicidir.](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes) Bu, her kaynak dosyayı iki kez geçtiği anlamına gelir. İlk olarak, derleyici yalnızca her kaynak dosyadaki meta verilere ve bildirimlere bakar ve bildirim düzeyi sorunlarını tanımlar. Bunlar düzelttin hatalar. Sonra c# kaynağını IL'ye dönüştürmek için kodu tekrar gözden geçirir; bunlar şu anda gördüğünüz ikinci hata kümesidir.
+Soruna neden olan dosyayı çekirdeklere Trader örneğinden kaldırdıktan sonra, yeniden derleyebilir ve dört hata alırsınız. Daha önce hiç kimse yok mu? Neden hata sayısı? C# derleyicisi, [çok taramalı bir derleyicidir](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes). Bu, her kaynak dosyanın iki kez gittiği anlamına gelir. İlk olarak, derleyici her kaynak dosyasındaki meta verileri ve bildirimlere bakar ve bildirim düzeyindeki sorunları tanımlar. Bu hatalar düzeltildi. Ardından, C# kaynağını Il 'de oluşturmak için koddan yeniden gider; Bunlar, şu anda gördüğünüz ikinci hata kümesidir.
 
 > [!NOTE]
-> C# derleyicisi [sadece iki geçer daha](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)fazlasını yapar, ancak sonuç bu gibi büyük kod değişiklikleri için derleyici hataları iki dalga gelme eğilimindedir.
+> C# derleyicisi [yalnızca iki geçişte daha fazlasını](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)yapar, ancak nihai sonuç, bu gibi büyük kod değişiklikleri için derleyici hatalarının iki dalgada elde edilmesine neden olur.
 
-### <a name="third-party-dependency-fixes-castlewindsor"></a>Üçüncü taraf bağımlılık düzeltmeleri (Castle.Windsor)
+### <a name="third-party-dependency-fixes-castlewindsor"></a>Üçüncü taraf bağımlılık düzeltmeleri (Role. Wınsma)
 
-Bazı geçiş senaryolarında ortaya çıkan bir diğer sorun sınıfı da .NET Framework ve .NET Çekirdek sürümleri arasındaki API farklarıdır. Bir NuGet paketi hem .NET Framework'u hem de .NET Standard'ı veya .NET Core'u hedef alsa bile, farklı .NET hedefleri ile kullanılmak üzere farklı kitaplıklar olabilir. Bu, paketlerin farklı uygulamalar gerektirebilecek birçok farklı .NET platformlarını desteklemesine olanak tanır. Ayrıca, farklı .NET platformlarını hedefalırken kitaplıklarda küçük API farklılıkları olabileceği anlamına gelir.
+Bazı geçiş senaryolarında yer alan başka bir sorun sınıfı, bağımlılıkların .NET Framework ve .NET Core sürümleri arasındaki API farklarıdır. Bir NuGet paketi hem .NET Framework hem de .NET Standard ya da .NET Core 'u hedefliyorsa, farklı .NET hedefleriyle kullanılmak üzere farklı kitaplıklar olabilir. Bu, paketlerin farklı uygulamalar gerektirebilecek birçok farklı .NET platformunu desteklemesini sağlar. Aynı zamanda, farklı .NET platformlarını hedeflerken kitaplıklarda küçük API farklılıkları olabileceğini de gösterir.
 
-Bean Trader örneğinde göreceğiniz bir sonraki hata kümesi `Castle.Windsor` API'larla ilgilidir. .NET Core Bean Trader projesi ,NET Framework hedefli proje (4.1.1) `Castle.Windsor` ile aynı sürümü kullanır, ancak bu iki platform için uygulamalar biraz farklıdır.
+Çekirdeklere Trader örneğinde göreceğiniz sonraki hata kümesi, `Castle.Windsor` API 'lerle ilgilidir. .NET Core çekirdeklere Trader projesi, .NET Framework hedefli proje (4.1.1 `Castle.Windsor` ) ile aynı sürümünü kullanır, ancak bu iki platform için uygulamalar biraz farklıdır.
 
 Bu durumda, düzeltilmesi gereken aşağıdaki sorunları görürsünüz:
 
-1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`.NET Core'da kullanılamaz. Ancak, `Classes.FromAssemblyContaining` mevcut benzer API, bu nedenle aramaların `Classes.FromThisAssembly()` her iki `Classes.FromAssemblyContaining(t)`kullanım `t` ları değiştirebilirsiniz , arama yapan türü nerede.
-1. Benzer şekilde, *Bootstrapper.cs*Bootstrapper.cs `Castle.Windsor.Installer.FromAssembly`, . Bu ,NET Core'da kullanılamaz. Bunun yerine, bu çağrı `FromAssembly.Containing(typeof(Bootstrapper))`' ile değiştirilebilir.
+1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`.NET Core 'da kullanılamaz. Bununla birlikte, benzer bir `Classes.FromAssemblyContaining` API mevcuttur. bu nedenle, çağrısı ile her iki kullanımını `Classes.FromThisAssembly()` `Classes.FromAssemblyContaining(t)`' a, ' `t` ın çağrısını yapan türdür.
+1. Benzer şekilde, *Bootstrapper.cs*içinde `Castle.Windsor.Installer.FromAssembly`. Bu, .NET Core 'da kullanılamaz. Bunun yerine, bu çağrı ile `FromAssembly.Containing(typeof(Bootstrapper))`değiştirilebilir.
 
-### <a name="updating-wcf-client-usage"></a>WCF istemci kullanımını güncelleme
+### <a name="updating-wcf-client-usage"></a>WCF istemci kullanımı güncelleştiriliyor
 
-`Castle.Windsor` Farkları giderdikten sonra, .NET Core Bean Trader projesinde `BeanTraderServiceClient` kalan son yapı `DuplexClientBase`hatası (türetilmiştir) bir `Open` yöntem emamasıdır. Bu, bu geçiş işleminin başında .NET Taşınabilirlik Çözümleyicisi tarafından vurgulanan bir API olduğundan bu şaşırtıcı değildir. Baktığımızda `BeanTraderServiceClient` daha büyük bir soruna dikkatimizi çekiyor. Bu WCF istemcisi [Svcutil.exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı tarafından otomatik olarak oluşturuldu.
+`Castle.Windsor` Farklılıkları düzelttikten sonra, .NET Core çekirdeklere Trader projesinde kalan son derleme hatası, `BeanTraderServiceClient` (öğesinden `DuplexClientBase`türetilmeyen) bir `Open` yönteme sahip değildir. Bu, bu geçiş sürecinin başlangıcında .NET taşınabilirlik Çözümleyicisi tarafından vurgulanan bir API olduğundan bu değildir. Daha büyük `BeanTraderServiceClient` bir sorunla ilgilenmenizi sağlar, ancak. Bu WCF istemcisi [Svcutil. exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı tarafından otomatik olarak oluşturuldu.
 
-**Svcutil tarafından oluşturulan WCF istemcileri .NET Framework'de kullanılmak üzere hazırdır.**
+**Svcutil tarafından oluşturulan WCF istemcileri .NET Framework kullanımı için tasarlanmıştır.**
 
-Svcutil tarafından oluşturulan WCF istemcilerini kullanan çözümlerin .NET Core ile kullanılmak üzere .NET Standart uyumlu istemcileri yeniden oluşturması gerekir. Eski istemcilerin çalışmamalarının başlıca nedenlerinden biri, WCF bağlamalarını ve uç noktalarını tanımlamak için uygulama yapılandırmalarına bağımlı olmalarıdır. .NET Standart WCF API'leri çapraz platformda (System.Configuration API'lerinin bulunmadığı yerlerde) çalışabildiği için, .NET Core ve .NET Standart senaryoları için WCF istemcileri yapılandırma yerine programlamak üzere bağlamaları ve uç noktaları tanımlamalıdır.
+Svcutil tarafından oluşturulan WCF istemcilerinin kullanıldığı çözümlerin, .NET Core ile kullanmak üzere .NET Standard uyumlu istemcileri yeniden oluşturması gerekir. Eski istemcilerin çalışmayabileceği başlıca nedenlerden biri, WCF bağlamaları ve uç noktaları tanımlamak için uygulama yapılandırmasına bağımlıdır. .NET Standard WCF API 'Leri platformlar arası (System. Configuration API 'Lerinin kullanılamadığı) çalışabileceğinden, .NET Core ve .NET Standard senaryoları için WCF istemcileri, yapılandırma yerine program aracılığıyla bağlamaları ve uç noktaları tanımlamalıdır.
 
-Aslında, app.config bölümüne `<system.serviceModel>` (Svcutil ile veya el ile oluşturulmuş olsun) bağlı herhangi bir WCF istemci kullanımı .NET Core üzerinde çalışmak için değiştirilmesi gerekir.
+Aslında, `<system.serviceModel>` App. config bölümüne (Svcutil veya el ile oluşturulan) bağlı olan tüm WCF istemci kullanımları .NET Core 'da çalışacak şekilde değiştirilmelidir.
 
-.NET Standart uyumlu WCF istemcilerini otomatik olarak oluşturmanın iki yolu vardır:
+.NET Standard uyumlu WCF istemcilerini otomatik olarak oluşturmak için iki yol vardır:
 
-- Araç, `dotnet-svcutil` WCF istemcilerini Svcutil'in daha önce çalıştığı şekilde oluşturan bir .NET aracıdır.
-- Visual Studio, Bağlı Hizmetler özelliğinin [WCF Web Service Reference](../../core/additional-tools/wcf-web-service-reference-guide.md) seçeneğini kullanarak WCF istemcileri oluşturabilir.
+- `dotnet-svcutil` Araç, aynı şekilde, Svcutil 'ın daha önce çalıştığı BIR şekilde WCF istemcileri üreten bir .net aracıdır.
+- Visual Studio, bağlı hizmetler özelliğinin [WCF Web hizmeti başvurusu](../../core/additional-tools/wcf-web-service-reference-guide.md) SEÇENEĞINI kullanarak WCF istemcileri oluşturabilir.
 
-Her iki yaklaşım da iyi çalışıyor. Alternatif olarak, tabii ki, WCF istemci kodunu kendiniz yazabilirsiniz. Bu örnek için Visual Studio Connected Service özelliğini kullanmayı seçtim. Bunu yapmak için Visual Studio'nun çözüm kaşifindeki *BeanTraderClient.Core* projesine sağ tıklayın ve**Bağlı Hizmet** **Ekle'yi** > seçin. Ardından, WCF Web Servis Başvuru Sağlayıcısı'nı seçin. Bu arka uç Bean Trader web hizmetinin adresini belirtebilirsiniz bir`localhost:8080` iletişim getirecek (eğer yerel sunucu çalıştırıyorsanız) ve oluşturulan türleri kullanmanız gereken ad alanı **(BeanTrader.Service**, örneğin).
+Her iki yaklaşım da geçerlidir. Alternatif olarak, WCF istemci kodunu kendiniz de yazabilirsiniz. Bu örnek için, Visual Studio bağlı hizmet özelliğini kullanmayı seçtim. Bunu yapmak için, Visual Studio 'nun Çözüm Gezgini ' nde *beantraderclient. Core* projesine sağ tıklayın ve**bağlı hizmet** **Ekle** > ' yi seçin. Ardından, WCF Web hizmeti başvuru sağlayıcısını seçin. Bu, arka uç çekirdeklere Trader Web hizmetinin adresini (`localhost:8080` sunucuyu yerel olarak çalıştırıyorsanız) ve üretilen türlerin kullanması gereken ad alanını (örneğin,**Beantrader. Service**) belirtebileceğiniz bir iletişim kutusu getirir.
 
-![WCF Web Hizmeti Referans Bağlı Hizmet İletişim](./media/convert-project-from-net-framework/connected-service-dialog.png)
+![WCF Web hizmeti başvurusu bağlı hizmeti Iletişim kutusu](./media/convert-project-from-net-framework/connected-service-dialog.png)
 
-**Bitiş** düğmesini seçtikten sonra projeye yeni bir Bağlı Hizmetler düğümü eklenir ve Bean Trader hizmetine erişmek için yeni .NET Standart WCF istemcisini içeren düğümün altına bir Reference.cs dosyası eklenir. Bu dosyadaki `GetEndpointAddress` veya `GetBindingForEndpoint` yöntemlere bakarsanız, bağlamaların ve uç noktaların artık programlı olarak oluşturulduğunu görürsünüz (uygulama config yerine). 'Bağlı Hizmetler Ekle' özelliği, gerekli tüm WCF paketleri Microsoft.Windows.Compatibility üzerinden dahil edildiği için gerekli olmayan proje dosyasındaki bazı System.ServiceModel paketlerine de referanslar ekleyebilir. Ek bir System.ServiceModel `<PackageReference>` öğesi ekleyip eklemedigini görmek için csproj' u kontrol edin ve eğer öyleyse kaldırın.
+**Son** düğmesini seçtikten sonra, projeye yeni bir bağlı hizmetler düğümü eklenir ve çekirdeklere Trader hizmetine erişmek için yenı .NET Standard WCF istemcisini içeren düğüm altına bir Reference.cs dosyası eklenir. Bu dosyadaki `GetEndpointAddress` veya `GetBindingForEndpoint` metotlara baktığınızda, bağlamaların ve uç noktaların artık programlı olarak oluşturulduğunu görürsünüz (uygulama yapılandırması aracılığıyla değil). ' Bağlı hizmetler Ekle ' özelliği aynı zamanda proje dosyasındaki bazı System. ServiceModel paketlerine başvurular ekleyebilir, bu da gerekli tüm WCF paketleri Microsoft. Windows. Compatibility aracılığıyla dahil edilir. Ek System. ServiceModel `<PackageReference>` öğelerinin eklenmiş olup olmadığını görmek için csproj 'ı denetleyin ve varsa bunları kaldırın.
 
-Projemiz şimdi yeni WCF istemci sınıfları *(Reference.cs),* ama yine de eskileri (BeanTrader.cs) vardır. Bu noktada iki seçenek vardır:
+Projemizin şimdi yeni WCF istemci sınıflarına sahiptir ( *Reference.cs*içinde), ancak yine de eskileri de vardır (BeanTrader.cs içinde). Bu noktada iki seçenek vardır:
 
-- Orijinal .NET Framework projesini (yeni .NET Core hedefli projeyle birlikte) oluşturmak istiyorsanız, `<Compile Remove="BeanTrader.cs" />` .NET Core projesinin csproj dosyasındaki bir öğeyi kullanarak uygulamanın .NET Framework ve .NET Core sürümlerinin farklı WCF istemcilerini kullanmasını sağlayabilirsiniz. Bu, varolan .NET Framework projesini değiştirmeden bırakma avantajına sahiptir, ancak oluşturulan WCF istemcilerini kullanan kodun .NET Core durumunda .NET Framework projesinde olduğundan biraz `#if` farklı olması gerekebilir, bu nedenle ,.NET Framework için inşa edildiğinde bir şekilde çalışmak için bazı WCF istemci kullanımını (örneğin istemci oluşturma) koşullu olarak derlemek için yönergeleri kullanmanız gerekir.
+- Özgün .NET Framework projesini (yeni .NET Core 'a hedeflenmiş bir şekilde) oluşturabilmek istiyorsanız, uygulamanın .NET Framework ve .NET Core sürümlerinin farklı WCF istemcileri kullanması için .NET `<Compile Remove="BeanTrader.cs" />` Core projesinin csproj dosyasındaki bir öğeyi kullanabilirsiniz. Bu, var olan .NET Framework projesini değiştirmeden bırakma avantajına sahiptir, ancak, oluşturulan WCF istemcilerinin kullanıldığı kodun, .NET Core 'da .NET Framework projesi dışında bir şekilde farklı olması gerekebilir. bu nedenle, bazı WCF istemci kullanımını koşullu olarak derlemek için (örneğin, istemci oluşturma) `#if` , .NET Core için inşa edildiğinde ve .NET Framework için inşa edildiğinde başka bir yolla çalışacak şekilde yönergeler kullanmanız gerekir.
 
-- Diğer taraftan, varolan .NET Framework projesinde bazı kod karmaşası kabul edilebilirse, *BeanTrader.cs* hep birlikte kaldırabilirsiniz. Yeni WCF istemcisi .NET Standard için üretilmiştir, hem .NET Core hem de .NET Framework senaryolarında çalışır. .NET Core'a ek olarak .NET Framework için (çok hedefleme veya iki csproj dosyasına sahip olarak) oluşturuyorsanız, bu yeni *Reference.cs* dosyasını her iki hedef için de kullanabilirsiniz. Bu yaklaşım, kodun iki farklı WCF istemcisini desteklemek için ikiye ayırmasına gerek kalmayacağı avantajına sahiptir; aynı kod her yerde kullanılacaktır. Dezavantajı (muhtemelen kararlı) .NET Framework proje değiştirme içerir.
+- Diğer yandan, var olan .NET Framework projesindeki bazı kod karmaşıklığı kabul edilebilir ise, *BeanTrader.cs* tümünü de kaldırabilirsiniz. Yeni WCF istemcisi .NET Standard için oluşturulduğundan, hem .NET Core hem de .NET Framework senaryolarında çalışacaktır. .NET Core 'a ek olarak .NET Framework oluşturuyorsanız (çoklu hedefleyerek veya iki csproj dosyası içeriyorsa), bu yeni *Reference.cs* dosyasını her iki hedef için de kullanabilirsiniz. Bu yaklaşım, kodun iki farklı WCF istemcisini desteklemesi için bifurde gerek duymayabileceğinden faydalanır. her yerde aynı kod kullanılacaktır. Dezavantajı, (kabul edilebilir) .NET Framework projenin değiştirilmesini içerir.
 
-Bean Trader örneğinde, geçişi kolaylaştırıyorsa orijinal projede küçük değişiklikler yapabilirsiniz, bu nedenle WCF istemci kullanımını uzlaştırmak için aşağıdaki adımları uygulayın:
+Çekirdeklere Trader örneği söz konusu olduğunda, geçişi kolaylaştırmak için özgün projede küçük değişiklikler yapabilirsiniz, bu nedenle WCF istemci kullanımını mutabık kılmak için aşağıdaki adımları izleyin:
 
-01. Çözüm gezgininden 'Varolan öğeekle' bağlam menüsünü kullanarak yeni Reference.cs dosyasını .NET Framework *BeanTraderClient.csproj* projesine ekleyin. Aynı dosyanın her iki proje tarafından da kullanılması için 'bağlantı olarak' eklediğinizden emin olun (C# dosyasını kopyalamanın aksine). Eğer tek bir csproj (çoklu hedefleme kullanarak) ile hem .NET Core ve .NET Framework için oluşturuyorsanız, bu adım gerekli değildir.
+01. Çözüm Gezgini 'nden ' Varolan öğe Ekle ' bağlam menüsünü kullanarak yeni Reference.cs dosyasını .NET Framework *Beantraderclient. csproj* projesine ekleyin. Aynı dosyanın her iki proje tarafından da (C# dosyasını kopyalamaya karşı) kullanılması için ' as link ' eklediğinizden emin olun. Hem .NET Core için oluşturuyorsanız hem de tek bir csproj ile .NET Framework (Çoklu hedefleme kullanarak), bu adım gerekli değildir.
 
 01. *BeanTrader.cs*silin.
 
-01. Yeni WCF istemcisi eskisine benzer, ancak oluşturulan koddaki birkaç ad alanı farklıdır. Bu nedenle, WCF istemci türleri BeanTrader.Service (ya da seçtiğiniz ne olursa olsun namespace adı) yerine BeanTrader.Model veya bir isim alanı olmadan kullanılan proje güncellemek için gereklidir. Bina *BeanTraderClient.Core.csproj* nerede bu değişikliklerin yapılması gerektiğini belirlemek için yardımcı olacaktır. Hem C# hem de XAML kaynak dosyalarında düzeltmeler gerekir.
+01. Yeni WCF istemcisi eskisiyle benzerdir, ancak oluşturulan koddaki birçok ad alanı farklıdır. Bu nedenle, WCF istemci türlerinin BeanTrader. model yerine (veya seçtiğiniz herhangi bir ad alanı adı) bir ad alanı olmadan kullanılması için projeyi güncelleştirmeniz gerekir. *Beantraderclient. Core. csproj* oluşturma, bu değişikliklerin nerede yapılması gerektiğini belirlemesine yardımcı olur. Düzeltmelerin her ikisi de C# ve XAML kaynak dosyalarında gerekecektir.
 
-01. Son olarak, `BeanTraderServiceClient` tür için kullanılabilir oluşturucular değiştiğinden *BeanTraderServiceClientFactory.cs* bir hata olduğunu keşfedeceksiniz. Bir `InstanceContext` bağımsız değişken `CallbackHandler` `Castle.Windsor` (IoC konteyner bir kullanılarak oluşturulan) sağlamak için kullanılır. Yeni yapıcılar yeni `CallbackHandler`s oluştururlar. Ancak, 'temel türünde `BeanTraderServiceClient`istediğinizle eşleşen yapıcılar vardır. Otomatik oluşturulan WCF istemci kodunun tümü kısmi sınıflarda bulunduğundan, kolayca genişletebilirsiniz. Bunu yapmak *için, BeanTraderServiceClient.cs* adında yeni bir dosya oluşturun ve ardından aynı ada sahip kısmi bir sınıf oluşturun (BeanTrader.Service ad alanını kullanarak). Daha sonra, burada gösterildiği gibi kısmi türüne bir oluşturucu ekleyin.
+01. Son olarak, *BeanTraderServiceClientFactory.cs* içinde bir hata olduğunu öğrenirsiniz çünkü bu `BeanTraderServiceClient` tür için kullanılabilir oluşturucular değişmiştir. Bir `InstanceContext` bağımsız değişken ( `CallbackHandler` `Castle.Windsor` ioc kapsayıcısından kullanılarak oluşturulmuş) sağlamak için kullanılır. Yeni oluşturucular yeni `CallbackHandler`s oluştur. Bununla birlikte, temel türünde, istediğiniz `BeanTraderServiceClient`şekilde eşleşen oluşturucular vardır. Otomatik olarak oluşturulan WCF istemci kodu kısmi sınıflarda bulunduğundan, kolayca genişletebilirsiniz. Bunu yapmak için, *BeanTraderServiceClient.cs* adlı yeni bir dosya oluşturun ve ardından aynı ada sahip kısmi bir sınıf oluşturun (BeanTrader. Service ad alanını kullanarak). Daha sonra, burada gösterildiği gibi kısmi türe bir Oluşturucu ekleyin.
 
     ```csharp
     public BeanTraderServiceClient(System.ServiceModel.InstanceContext callbackInstance) :
@@ -277,15 +277,15 @@ Bean Trader örneğinde, geçişi kolaylaştırıyorsa orijinal projede küçük
             { }
     ```
 
-Yapılan bu değişikliklerle, Bean Trader örneği artık yeni bir .NET Standart uyumlu WCF istemcisi `Open` kullanacak ve `await OpenAsync` bunun yerine kullanmak için *TradingService.cs* aramayı değiştirmenin son düzeltmesini yapabilirsiniz.
+Bu değişiklikler yapıldıktan sonra, çekirdeklere Trader örneği artık yeni .NET Standard uyumlu bir WCF istemcisi kullanacaktır ve `Open` `await OpenAsync` bunun yerine *TradingService.cs* içindeki çağrıyı değiştirmenin son düzeltmesini yapabilirsiniz.
 
-WCF sorunları ele ile, Bean Trader örnek .NET Core sürümü şimdi temiz oluşturur!
+WCF sorunları ele ılarak, çekirdeklere Trader örneğinin .NET Core sürümü artık düzgün şekilde oluşturulur!
 
 ## <a name="runtime-testing"></a>Çalışma zamanı testi
 
-Proje .NET Core'a karşı temiz bir şekilde inşa olur olmaz geçiş çalışmalarının yapılmadığını unutmak kolaydır. Taşınan uygulamayı test etmek için de zaman bırakmak önemlidir. İşler başarılı bir şekilde inşa olduktan sonra, özellikle .NET Framework'u hedefleyen herhangi bir paket kullanıyorsanız, uygulamanın beklendiği gibi çalıştığından ve çalıştığından emin olun.
+Proje .NET Core 'a karşı düzgün bir şekilde oluşturulsa geçiş işinin yapılmadığında emin olmak kolaydır. Ayrıca, bağlantı verilen uygulamayı test etmek için zaman bırakmanız önemlidir. İşlemler başarıyla kurulduktan sonra, özellikle de .NET Framework hedefleyen paketler kullanıyorsanız, uygulamanın çalıştığından ve beklendiği gibi çalıştığından emin olun.
 
-Portlu Bean Trader uygulamasını başlatmayı deneyelim ve neler olacağını görelim. Uygulama aşağıdaki istisna dışında başarısız olmadan önce çok uzak almaz.
+Ayrıca, bağlantı noktası çekirdeklere Trader uygulamasını başlatmayı deneyelim ve neler olduğunu görelim. Uygulama aşağıdaki özel durumla başarısız olmadan önce değil.
 
 ```output
 System.Configuration.ConfigurationErrorsException: 'Configuration system failed to initialize'
@@ -294,15 +294,15 @@ Inner Exception
 ConfigurationErrorsException: Unrecognized configuration section system.serviceModel.
 ```
 
-Bu mantıklı, tabii ki. WCF'nin artık uygulama yapılandırmasını kullanmadığını unutmayın, bu nedenle app.config dosyasının eski system.serviceModel bölümünün kaldırılması gerekir. Güncelleştirilmiş WCF istemcisi kodunda aynı bilgilerin tümünü içerir, bu nedenle config bölümüne artık gerek yoktur. WCF bitiş noktasının app.config'de yapılandırılabilir olmasını istiyorsanız, bunu bir uygulama ayarı olarak ekleyebilir ve WCF hizmet bitiş noktasını yapılandırmadan almak için WCF istemci kodunu güncelleştirebilirsiniz.
+Bu, kuşkusuz bir fikir sunar. WCF 'nin artık uygulama yapılandırması kullanmadığını unutmayın. bu nedenle, App. config dosyasının eski System. serviceModel bölümünün kaldırılması gerekir. Güncelleştirilmiş WCF istemcisi, kodunda aynı bilgilerin tümünü içerir, bu nedenle yapılandırma bölümü artık gerekli değildir. WCF uç noktasının App. config içinde yapılandırılabilmesine isterseniz, bunu bir uygulama ayarı olarak ekleyebilir ve WCF hizmet uç noktasını yapılandırmadan almak için WCF istemci kodunu güncelleştirebilirsiniz.
 
-*app.config*system.serviceModel bölümünü kaldırdıktan sonra, uygulama başlatıyor ancak kullanıcı girdiğinde başka bir istisna dışında başarısız oluyor.
+*App. config*dosyasının System. ServiceModel bölümünü kaldırdıktan sonra, uygulama başlatılır ancak kullanıcı oturum açtığında başka bir özel durumla başarısız olur.
 
 ```output
 System.PlatformNotSupportedException: 'Operation is not supported on this platform.'
 ```
 
-Desteklenmeyen API. `Func<T>.BeginInvoke` [dotnet/corefx#5940'da](https://github.com/dotnet/corefx/issues/5940)açıklandığı gibi ,NET Core, `BeginInvoke` `EndInvoke` temel remoting bağımlılıkları nedeniyle temsilci türlerine ilişkin yöntemleri ve yöntemleri desteklemez. Bu sorun ve düzeltmesi,.NET Core blog gönderisi [için Gelen Temsilci.BeginInvoke](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/) Çağrıları'nda `BeginInvoke` `EndInvoke` daha ayrıntılı olarak `Task.Run` açıklanır, ancak özü şudur ve aramalar (veya mümkünse eşitleme alternatifleri) ile değiştirilmelidir. Genel çözümü burada uygulayarak, `BeginInvoke` arama tarafından `Invoke` `Task.Run`başlatılan bir çağrı ile değiştirilebilir.
+Desteklenmeyen API `Func<T>.BeginInvoke`. [DotNet/corefx # 5940](https://github.com/dotnet/corefx/issues/5940)' de açıklandığı gibi, .NET Core, `BeginInvoke` temel uzaktan `EndInvoke` iletişim bağımlılıkları nedeniyle temsilci türlerindeki ve yöntemlerini desteklemez. Bu sorun ve bu sorunun düzeltilmesi, .NET Core blog gönderisine [Ilişkin geçiş temsilcisi. BeginInvoke çağrılarında](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/) daha ayrıntılı bir şekilde açıklanmıştır, ancak bu `BeginInvoke` , `EndInvoke` çağrılarınız (veya mümkünse zaman uyumsuz alternatifler `Task.Run` ) ile değiştirilmelidir. Genel çözümü buraya uygulayarak, `BeginInvoke` çağrı tarafından `Invoke` `Task.Run`başlatılan bir çağrı ile değiştirilebilir.
 
 ```csharp
 Task.Run(() =>
@@ -316,8 +316,8 @@ Task.Run(() =>
 }, TaskScheduler.Default);
 ```
 
-`BeginInvoke` Bean Trader uygulaması kullanımı kaldırdıktan sonra .NET Core'da başarıyla çalışır!
+`BeginInvoke` Kullanım kaldırıldıktan sonra, çekirdeklere Trader uygulaması .NET Core 'da başarıyla çalışır!
 
-![.NET Core üzerinde çalışan Fasulye Trader](./media/convert-project-from-net-framework/running-on-core.png)
+![.NET Core üzerinde çalışan çekirdeklere Trader](./media/convert-project-from-net-framework/running-on-core.png)
 
-Tüm uygulamalar farklıdır, bu nedenle kendi uygulamalarınızı .NET Core'a geçirmek için gereken belirli adımlar değişir. Ama umarım Bean Trader örnek genel iş akışı ve beklenebilir sorunların türleri gösterir. Ve, bu makalenin uzunluğuna rağmen, .NET Core üzerinde çalışması için Bean Trader örneğinde gerekli olan gerçek değişiklikler oldukça sınırlıydı. Birçok uygulama .NET Core'a aynı şekilde geçiş yapar; sınırlı veya hiç kod değişikliği gerektirmiyor.
+Tüm uygulamalar farklıdır, bu nedenle kendi uygulamalarınızı .NET Core 'a geçirmek için gereken belirli adımlar farklılık gösterir. Ancak çekirdeklere Trader örneği, genel iş akışını ve beklenilen sorun türlerini gösterir. Bu makalenin uzunluğuna karşın, .NET Core üzerinde çalışmasını sağlamak için çekirdeklere Trader örneğinde gerekli olan gerçek değişiklikler oldukça sınırlı. Birçok uygulama aynı şekilde .NET Core 'a geçirilir; sınırlı ve hatta kod değişikliğine gerek yoktur.

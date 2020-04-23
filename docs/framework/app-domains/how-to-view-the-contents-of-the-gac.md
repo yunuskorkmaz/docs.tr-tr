@@ -30,7 +30,7 @@ Genel derleme önbelleğindeki derlemelerin bir listesini görüntülemek için,
 gacutil -l
 ```
 
-veya
+-veya-
 
 ```shell
 gacutil /l
@@ -41,5 +41,5 @@ gacutil /l
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)
+- [Derlemeler ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
+- [Gacutil. exe (Genel Bütünleştirilmiş Kod Önbelleği Aracı)](../tools/gacutil-exe-gac-tool.md)

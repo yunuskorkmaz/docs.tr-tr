@@ -13,20 +13,20 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130091"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework'te Dinamik Programlama
-Dokümantasyonun bu bölümü .NET Framework'de dinamik programlama hakkında bilgi sağlar.  
+Belgelerinin bu bölümü .NET Framework dinamik programlama hakkında bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yansıma](reflection.md)  
- Çalışma zamanında nesnelerle çalışmak için yansımanın nasıl kullanılacağını açıklar.  
+ Çalışma zamanında nesneleriyle çalışmak için yansıma kullanımını açıklar.  
   
  [Dinamik Yöntemleri ve Derlemeleri Yayma](emitting-dynamic-methods-and-assemblies.md)  
- Reflection.Emit'i kullanarak çalışma zamanında yöntemlerin ve derlemelerin nasıl oluşturulacaklarını açıklar.  
+ Çalışma zamanında yansıma. yayma kullanılarak yöntemlerin ve derlemelerin nasıl oluşturulduğunu açıklar.  
   
- [Dinamik Dil Çalışma Süresine Genel Bakış](dynamic-language-runtime-overview.md)  
+ [Dinamik dil çalışma zamanına genel bakış](dynamic-language-runtime-overview.md)  
  Dinamik dil çalışma zamanının özelliklerini açıklar.  
   
  [Dinamik Kaynak Kodu Oluşturma ve Derleme](dynamic-source-code-generation-and-compilation.md)  
- Dinamik kaynak kodunun nasıl üretilip derlenecek yapılacağını açıklar.  
+ Dinamik kaynak kodu oluşturmayı ve derlemeyi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Geliştirme Kılavuzu](../development-guide.md)  

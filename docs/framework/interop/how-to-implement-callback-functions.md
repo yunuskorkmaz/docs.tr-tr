@@ -16,27 +16,27 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181409"
 ---
 # <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
-Aşağıdaki yordam ve örnek, yönetilen bir uygulamanın platform çağrısını kullanarak, her pencere için işlem değerini yerel bilgisayarda nasıl yazdırabileceğini gösterir. Özellikle, yordam ve örnek pencere tutamacının değerini yazdırmak için windows listesi ve yönetilen bir geri arama işlevi (CallBack adlı) üzerinden adım **EnumWindows** işlevini kullanın.  
+Aşağıdaki yordam ve örnek, platform çağırma kullanılarak yönetilen bir uygulamanın, yerel bilgisayardaki her bir pencere için tanıtıcı değerini nasıl yazdırabileceğini göstermektedir. Özellikle, yordam ve örnek, pencere tanıtıcısının değerini yazdırmak için Windows listesini ve yönetilen bir geri çağırma işlevini (geri çağırma) adım adım almak için **EnumWindows** işlevini kullanır.  
   
-### <a name="to-implement-a-callback-function"></a>Geri arama işlevi uygulamak için  
+### <a name="to-implement-a-callback-function"></a>Bir geri çağırma işlevi uygulamak için  
   
-1. Uygulamayla daha ileri gitmeden önce **EnumWindows** işlevinin imzasına bakın. **EnumWindows** aşağıdaki imzaya sahiptir:  
+1. Uygulamayla devam etmeden önce **EnumWindows** işlevinin imzasına bakın. **EnumWindows** aşağıdaki imzaya sahiptir:  
   
     ```cpp
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
     ```
   
-     Bu işlevin geri arama gerektirdiğine dair bir ipucu **lpEnumFunc** bağımsız değişkeninin varlığıdır. Bir geri çağırma işlevine işaretçi alan bağımsız değişkenler adında **Func** sonekiyle birleştirilmiş **lp** (uzun işaretçi) öneki görmek yaygındır. Win32 işlevleri yle ilgili belgeler için Microsoft Platform SDK'ya bakın.  
+     Bu işlevin bir geri çağırma gerektirdiğini belirten bir Clue, **Lpenumfunc** bağımsız değişkeninin varlığına sahip olur. Bir geri çağırma işlevine işaretçi alan bağımsız değişkenlerin adında, **LP** (uzun işaretçi) ön ekinin **Func** sonekiyle birleştirilmiş olması yaygındır. Win32 işlevleri hakkındaki belgeler için bkz. Microsoft Platform SDK.  
   
-2. Yönetilen geri arama işlevini oluşturun. Örnek, iki bağımsız değişken `CallBack`**(hwnd** ve **lparam)** alan , adlı bir temsilci türü bildirir. İlk bağımsız değişken, pencerenin tutamacıdır; ikinci bağımsız değişken uygulama tanımlı. Bu sürümde, her iki bağımsız değişken de tamsayılar olmalıdır.  
+2. Yönetilen geri çağırma işlevini oluşturun. Örnek, iki bağımsız değişken (**HWND** ve `CallBack` **lParam**) alan çağrılan bir temsilci türü bildirir. İlk bağımsız değişken pencerenin bir tanıtıcıdır; İkinci bağımsız değişken uygulama tanımlı. Bu sürümde, her iki bağımsız değişken de tamsayı olmalıdır.  
   
-     Geri arama işlevleri genellikle başarıyı belirtmek için sıfır olmayan değerleri ve başarısızlığı belirtmek için sıfır ı döndürür. Bu örnek, numaralandırmaya devam etmek için iade değerini **açıkça true** olarak ayarlar.  
+     Geri çağırma işlevleri, hatayı göstermek için genellikle sıfır dışı değerleri döndürür ve başarıyı gösterir. Bu örnek, numaralandırmaya devam etmek için return değerini açık olarak **true** olarak ayarlar.  
   
-3. Bir temsilci oluşturun ve **bunu EnumWindows** işlevine bağımsız değişken olarak geçirin. Platform çağrısı, temsilciyi otomatik olarak tanıdık bir geri arama biçimine dönüştürür.  
+3. Bir temsilci oluşturun ve bunu **EnumWindows** işlevine bağımsız değişken olarak geçirin. Platform çağırma, temsilciyi otomatik olarak tanıdık bir geri çağırma biçimine dönüştürür.  
   
-4. Geri arama işlevi çalışmasını tamamlamadan önce çöp toplayıcının temsilciyi geri almamasını sağlayın. Bir temsilciyi parametre olarak geçtiğinde veya bir yapıda alan olarak bulunan bir temsilciyi geçtiğinde, çağrı süresince toplanmamış kalır. Bu nedenle, aşağıdaki numaralandırma örneğinde olduğu gibi, geri arama işlevi arama dönmeden önce çalışmasını tamamlar ve yönetilen arayan tarafından ek bir eylem gerektirmez.  
+4. Çöp toplayıcısının, geri çağırma işlevi işini tamamlamadan önce temsilciyi geri içermediğinden emin olun. Bir temsilciyi parametre olarak geçirdiğinizde veya bir yapıda alan olarak bulunan bir temsilciyi geçirdiğinizde, çağrının süresi boyunca toplanmamış olarak kalır. Bu nedenle, aşağıdaki numaralandırma örneğinde olduğu gibi, geri çağırma işlevi, çağrı döndürülmeden önce çalışmasını tamamlar ve yönetilen çağıran tarafından başka bir eylem gerektirmez.  
   
-     Ancak, geri arama işlevi çağrı döndükten sonra çağrılabilirse, yönetilen arayan, geri arama işlevi bitene kadar temsilcinin toplanmamış kalmasını sağlamak için adımlar atmalıdır. Çöp toplamayı önleme hakkında ayrıntılı bilgi için Platform Invoke ile [Interop Marshaling'e](interop-marshaling.md) bakın.  
+     Ancak, geri çağırma işlevi çağrı çağrıldıktan sonra çağrılırsa, geri çağırma işlevi bitene kadar, yönetilen çağıran, temsilcinin toplanmamış olarak kalmasını sağlamak için adımları almalıdır. Çöp toplamayı önlemek hakkında ayrıntılı bilgi için bkz. platform çağırma ile [birlikte çalışma hazırlama](interop-marshaling.md) .  
   
 ## <a name="example"></a>Örnek  
   

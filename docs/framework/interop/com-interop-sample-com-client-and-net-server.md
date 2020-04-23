@@ -16,10 +16,10 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181510"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu
-Bu örnek, bir COM [Istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve ipotek hesaplamaları gerçekleştiren bir [.NET Server'ın](#cpconcominteropsamplecomclientnetserveranchor2) birlikte çalışmasını gösterir. Bu örnekte, istemci yönetilen `Loan` sınıfın bir örneğini oluşturur ve çağırır, dört bağımsız değişkeni (bu dört bağımsız değişkenden biri sıfıra eşit) geçer ve hesaplamaları görüntüler. Bu örnekten kod örnekleri bu bölümde görünür.  
+Bu örnek, bir [com istemcisinin](#cpconcominteropsamplecomclientnetserveranchor1) ve ipotek hesaplamaları gerçekleştiren bir [.net sunucusunun](#cpconcominteropsamplecomclientnetserveranchor2) birlikte çalışmasını gösterir. Bu örnekte, istemci yönetilen `Loan` sınıfın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamalar görüntülenir. Bu örnekteki kod örnekleri bu bölümün tamamında görüntülenir.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
-## <a name="com-client"></a>COM İstemci  
+## <a name="com-client"></a>COM Istemcisi  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a>.NET Sunucu  
+## <a name="net-server"></a>.NET Server  
   
 ```vb  
 Imports System  

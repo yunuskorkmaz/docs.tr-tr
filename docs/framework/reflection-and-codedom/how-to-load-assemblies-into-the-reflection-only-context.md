@@ -25,16 +25,16 @@ Yalnızca yansıma yük bağlamı, diğer platformlar veya .NET Framework diğer
 
 ## <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Bir derlemeyi yalnızca yansıma yükleme bağlamına yüklemek için
 
-1. Derleme adı verilen derlemeyi yüklemek için <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> yöntemi aşırı yüklemesini veya kendi yolu verilen derlemeyi yüklemek için <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemini kullanın. Derleme ikili bir görüntü ise <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> yöntemi aşırı yüklemesini kullanın.
+1. Kendi görünen <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> adı verilen derlemeyi yüklemek için yöntem aşırı yüklemesini veya kendi yolu verilen derlemeyi <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yüklemek için yöntemini kullanın. Derleme bir ikili görüntüdür, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> yöntem aşırı yüklemesini kullanın.
 
     > [!NOTE]
     > Bir mscorlib. dll sürümünü, yürütme bağlamındaki sürümden farklı bir .NET Framework sürümünden yüklemek için yalnızca yansıma bağlamını kullanamazsınız.
 
-2. Derlemenin bağımlılıkları varsa <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi onları yüklemez. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemeniz gerekir.
+2. Derlemenin bağımlılıkları varsa, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi onları yüklemez. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemeniz gerekir.
 
 3. Derlemenin <xref:System.Reflection.Assembly.ReflectionOnly%2A> özelliğini kullanarak bir derlemenin yalnızca yansıma bağlamına yüklenip yüklenmediğini belirleme.
 
-4. Derleme için derlemeye veya derlemedeki türlere öznitelikler uygulanmışsa, yalnızca yansıma bağlamındaki kodu yürütmeye yönelik bir girişim olmadığından emin olmak için <xref:System.Reflection.CustomAttributeData> sınıfını kullanarak bu öznitelikleri inceleyin. Bir derlemeye, üyeye, modüle veya parametreye uygulanan öznitelikleri temsil eden <xref:System.Reflection.CustomAttributeData> nesneleri almak için <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> yönteminin uygun aşırı yüklemesini kullanın.
+4. Derleme için derlemeye veya derlemedeki türlere öznitelikler uygulanmışsa, yalnızca yansıma bağlamındaki kodu yürütmek için girişimde bulunmadığından emin olmak için <xref:System.Reflection.CustomAttributeData> sınıfını kullanarak bu öznitelikleri inceleyin. Bir derlemeye, üyeye, modüle <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> veya parametreye uygulanan <xref:System.Reflection.CustomAttributeData> öznitelikleri temsil eden nesneleri almak için yönteminin uygun aşırı yüklemesini kullanın.
 
     > [!NOTE]
     > Derlemeye veya içeriğine uygulanan öznitelikler derlemede tanımlanabilir veya yalnızca yansıma bağlamına yüklenmiş başka bir derlemede tanımlanabilir. Özniteliklerin tanımlandığı yerde önceden söylemek için bir yol yoktur.

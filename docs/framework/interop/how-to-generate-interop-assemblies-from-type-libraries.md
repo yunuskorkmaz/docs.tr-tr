@@ -22,12 +22,12 @@ ms.locfileid: "74281799"
   
 1. Aşağıdaki komutu kullanın:  
   
-     **Tlbimp** \<*türü-kitaplık-dosya*>  
+     **Tlbimp** \< *türü-kitaplık-dosya*>  
   
      **/Out:** anahtarını eklemek, krelib. dll gibi değiştirilmiş bir ada sahip bir birlikte çalışma derlemesi oluşturur. Birlikte çalışma derleme adının değiştirilmesi, özgün COM DLL 'sinden ayırt etmenize yardımcı olabilir ve yinelenen adlara sahip olmadan oluşabilecek sorunları önleyebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut, `Loanlib` ad alanındaki Krelib. dll derlemesini üretir.  
+ Aşağıdaki komut, `Loanlib` ad alanındaki krelib. dll derlemesini üretir.  
   
 ```console  
 tlbimp Loanlib.tlb  
@@ -41,5 +41,5 @@ tlbimp LoanLib.tlb /out: LOANLib.dll
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)

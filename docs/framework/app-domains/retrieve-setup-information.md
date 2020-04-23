@@ -18,7 +18,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119746"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma
-Bir uygulama etki alanının her örneği, hem özelliklerden hem de <xref:System.AppDomainSetup> bilgilerinden oluşur. <xref:System.AppDomain?displayProperty=nameWithType> sınıfını kullanarak, uygulama etki alanından kurulum bilgilerini alabilirsiniz. Bu sınıf, bir uygulama etki alanı hakkında yapılandırma bilgilerini alan çeşitli Üyeler sağlar.  
+Bir uygulama etki alanının her örneği, hem özelliklerden hem de <xref:System.AppDomainSetup> bilgilerden oluşur. Bir uygulama etki alanından kurulum bilgilerini <xref:System.AppDomain?displayProperty=nameWithType> sınıfını kullanarak alabilirsiniz. Bu sınıf, bir uygulama etki alanı hakkında yapılandırma bilgilerini alan çeşitli Üyeler sağlar.  
   
  Ayrıca, uygulama etki alanı için **AppDomainSetup** nesnesini sorgulayabilirsiniz. Bu, etki alanına gönderilen kurulum bilgilerini elde edebilir.  
   
@@ -28,7 +28,7 @@ Bir uygulama etki alanının her örneği, hem özelliklerden hem de <xref:Syste
  [!code-csharp[AppDomain_Setup#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source2.cs#2)]
  [!code-vb[AppDomain_Setup#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source2.vb#2)]  
   
- Aşağıdaki örnek, bir uygulama etki alanı için kurulum bilgilerini ayarlar ve ardından alır. `AppDomain.SetupInformation.ApplicationBase` yapılandırma bilgilerini alır.  
+ Aşağıdaki örnek, bir uygulama etki alanı için kurulum bilgilerini ayarlar ve ardından alır. Yapılandırma bilgilerini `AppDomain.SetupInformation.ApplicationBase` alır.  
   
  [!code-cpp[AppDomain_Setup#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source3.cpp#3)]
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]

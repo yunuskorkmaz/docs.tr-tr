@@ -12,28 +12,28 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181424"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Nasıl yapılır: Sarmalayıcıları Elle Oluşturma
-Yönetilen kaynak kodunda COM türlerini el ile bildirmeye karar verirseniz, başlamak için en iyi yer varolan bir Arabirim Tanımı Dili (IDL) dosyası veya tür kitaplığıdır. IDL dosyasıyoksa veya bir tür kitaplığı dosyası oluşturamıyorsa, yönetilen bildirimler oluşturarak ve ortaya çıkan derlemeyi bir tür kitaplığına dışa aktararak COM türlerini simüle edebilirsiniz.  
+COM türlerini yönetilen kaynak kodunda el ile bildirmeye karar verirseniz, başlamak için en iyi yer, var olan bir arabirim tanım dili (IDL) dosyası veya tür kitaplığı vardır. IDL dosyanız yoksa veya bir tür kitaplığı dosyası üretüriyorsa, yönetilen bildirimler oluşturarak ve ortaya çıkan derlemeyi bir tür kitaplığına vererek COM türlerinin benzetimini yapabilirsiniz.  
   
-### <a name="to-simulate-com-types-from-managed-source"></a>Yönetilen kaynaktan COM türlerini simüle etmek için  
+### <a name="to-simulate-com-types-from-managed-source"></a>Yönetilen kaynaktan COM türlerinin benzetimini yapmak için  
   
-1. Türleri Ortak Dil Belirtimi (CLS) ile uyumlu bir dilde bildirin ve dosyayı derle.  
+1. Türleri ortak dil belirtimi (CLS) ile uyumlu bir dilde bildirin ve dosyayı derleyin.  
   
-2. [Tip Kitaplığı İhracatçısı (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md)ile türleri içeren montajı dışa aktarın.  
+2. Türleri içeren derlemeyi [tür kitaplığı verme programı (Tlbexp. exe)](../tools/tlbexp-exe-type-library-exporter.md)ile dışarı aktarın.  
   
-3. Dışa aktarılan COM türü kitaplığını, COM yönelimli yönetilen türleri bildirmek için temel olarak kullanın.  
+3. COM tabanlı yönetilen türler bildirmek için bir temel olarak, dışarıya aktarılmış COM tür kitaplığını kullanın.  
   
-### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>Çalışma zamanı çağrılabilir sarıcı (RCW) oluşturmak için  
+### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>Çalışma zamanında çağrılabilir sarmalayıcı (RCW) oluşturmak için  
   
-1. Bir IDL dosyanız veya tür kitaplığı dosyanız olduğunu varsayarsak, özel RCW'ye hangi sınıfları ve arabirimleri eklemek istediğinize karar verin. Doğrudan veya dolaylı olarak uygulamanızda kullanmak niyetinde olmadığınız türleri hariç tutabilirsiniz.  
+1. Bir IDL dosyası ya da tür kitaplığı dosyanız olduğunu varsayarsak, özel RCW 'ya dahil etmek istediğiniz sınıfları ve arabirimleri belirleyin. Uygulamanızda doğrudan veya dolaylı olarak kullanmayı planlamadığınız tüm türleri dışarıda bırakabilirsiniz.  
   
-2. CLS uyumlu bir dilde bir kaynak dosyası oluşturun ve türleri bildirin. Alma dönüştürme işleminin tam açıklaması için [Derleme Dönüşüm Özeti türüne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) bakın. Etkili bir şekilde, özel bir RCW oluşturduğunuzda, [Tür Kitaplığı İthalatçısı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)tarafından sağlanan tür dönüştürme etkinliğini el ile gerçekleştirirsiniz. Sonraki bölümdeki örnekte, IDL veya tür kitaplığı dosyasındaki türleri ve bunların C# kodundaki karşılık gelen türleri gösterilmektedir.  
+2. CLS uyumlu bir dilde kaynak dosyası oluşturun ve türleri bildirin. İçeri aktarma dönüştürme işleminin tüm açıklaması için bkz. [tür kitaplığı, derleme dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)) . Etkin olarak, özel bir RCW oluşturduğunuzda, [tür kitaplığı alma programı (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md)tarafından sağlanmış tür dönüştürme etkinliğini el ile gerçekleştirmekten olursunuz. Sonraki bölümdeki örnekte, bir IDL veya tür kitaplığı dosyasındaki türler ve C# kodunda bunlara karşılık gelen türler gösterilmektedir.  
   
-3. Bildirimler tamamlandığında, diğer yönetilen kaynak kodlarını derlerken dosyayı derle.  
+3. Bildirimler tamamlandığında, başka bir yönetilen kaynak kodu derlerken dosyayı derleyin.  
   
-4. Tlbimp.exe ile alınan türleri olduğu gibi, bazı doğrudan kodunuza ekleyebilirsiniz ek bilgi gerektirir. Ayrıntılar için [bkz: Interop Montajlarını Edit.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))  
+4. Tlbimp. exe ile içeri aktarılan türlerde, bazıları doğrudan kodunuza ekleyebileceğiniz ek bilgiler gerektirir. Ayrıntılar için bkz. [nasıl yapılır: birlikte çalışma derlemelerini düzenleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, IDL'deki `ISATest` `SATest` arabirim ve sınıfın bir örneğini ve C# kaynak kodundaki ilgili türleri gösterir.  
+ Aşağıdaki kod, IDL 'deki `ISATest` arabirime ve `SATest` sınıfa ve C# kaynak kodundaki karşılık gelen türlere bir örnek gösterir.  
   
  **IDL veya tür kitaplığı dosyası**  
   
@@ -60,7 +60,7 @@ coclass SATest
  };  
 ```  
   
- **Yönetilen kaynak kodunda sarıcı**  
+ **Yönetilen kaynak kodunda sarmalayıcı**  
   
 ```csharp  
 using System;  
@@ -99,9 +99,9 @@ namespace SAServer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Runtime Çağrılanabilir Sarmalayıcıları Özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
-- [COM Veri Türleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [Nasıl yapılsın: Interop Montajlarını Edit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
-- [Tür Kitaplığı ndan Montaja Dönüşüm Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Çalışma zamanı çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
+- [COM veri türleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
+- [Nasıl yapılır: birlikte çalışma derlemelerini düzenleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)

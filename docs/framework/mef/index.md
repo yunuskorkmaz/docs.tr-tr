@@ -17,70 +17,70 @@ ms.locfileid: "79181280"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-Bu konu, .NET Framework 4'te tanıtılan Yönetilen Genişletilebilirlik Çerçevesi'ne genel bir bakış sağlar.
+Bu konu, .NET Framework 4 ' te tanıtılan Managed Extensibility Framework genel bir bakış sağlar.
 
 ## <a name="what-is-mef"></a>MEF nedir?
 
-Yönetilen Genişletilebilirlik Çerçevesi veya MEF, hafif ve genişletilebilir uygulamalar oluşturmak için bir kitaplıktır. Uygulama geliştiricilerin yapılandırma gerektirmeden uzantıları keşfetmesine ve kullanmasına olanak tanır. Ayrıca, uzantı geliştiricilerin kodu kolayca kapsüllemelerini ve kırılgan sert bağımlılıklardan kaçınmalarını sağlar. MEF uzantıların yalnızca uygulamalar içinde değil, uygulamalar arasında da yeniden kullanılmasına izin verir.
+Managed Extensibility Framework veya MEF, hafif ve Genişletilebilir uygulamalar oluşturmaya yönelik bir kitaplıktır. Uygulama geliştiricilerinin yapılandırma gerekmeden uzantıları bulmasına ve kullanmasına olanak tanır. Ayrıca, uzantı geliştiricilerinin kodu kolayca kapsüllemeyi ve kırarak sabit bağımlılıklara engel olmasını sağlar. MEF, uzantıların uygulamalar içinde yeniden kullanılmasına izin verir, ancak uygulamalar arasında da kullanılabilir.
 
 ## <a name="the-problem-of-extensibility"></a>Genişletilebilirlik sorunu
 
-Genişletilebilirlik için destek sağlaması gereken büyük bir uygulamanın mimarı olduğunuzu düşünün. Uygulamanız, potansiyel olarak çok sayıda küçük bileşen içermelidir ve bunları oluşturmak ve çalıştırmaktan sorumludur.
+Genişletilebilirlik için destek sağlaması gereken büyük bir uygulamanın mimarı olduğunu düşünün. Uygulamanızın büyük olasılıkla çok sayıda küçük bileşen içermesi ve bunları oluşturup çalıştırmasından sorumlu olması gerekir.
 
-Soruna en basit yaklaşım, bileşenleri uygulamanıza kaynak kodu olarak eklemek ve bunları doğrudan kodunuzdan çağırmaktır. Bunun bariz dezavantajları vardır. En önemlisi, kaynak kodu değiştirmeden yeni bileşenler ekleyemezsiniz, örneğin bir Web uygulamasında kabul edilebilir bir kısıtlama, ancak istemci uygulamasında kullanılamaz. Aynı derecede sorunlu, bileşenlerin kaynak koduna erişiminiz olmayabilir, çünkü bunlar üçüncü taraflarca geliştirilebilir ve aynı nedenle sizinkine erişmelerine izin veremezsiniz.
+Soruna en basit yaklaşım, bileşenleri uygulamanıza kaynak kodu olarak dahil etmek ve doğrudan kodunuzda çağırmak olur. Bu bir dizi belirgin sakıncalar içerir. En önemlisi, kaynak kodu değiştirmeden yeni bileşenler, örneğin bir Web uygulaması gibi kabul edilebilir olabilecek bir kısıtlama, ancak bir istemci uygulamasında kullanılamaz. Benzer şekilde sorunlu olarak, bileşenler için kaynak koda erişiminiz olmayabilir, çünkü bunlar üçüncü taraflar tarafından geliştirilip aynı nedenden dolayı sizinkilerle erişime izin vermezsiniz.
 
-Biraz daha karmaşık bir yaklaşım, uygulama ve bileşenleri arasında ayrıştırma izin vermek için bir uzantı noktası veya arabirim sağlamak olacaktır. Bu modelaltında, bir bileşenin uygulayabileceği bir arabirim ve uygulamanızla etkileşimkurmasını sağlamak için bir API sağlayabilirsiniz. Bu, kaynak kodu erişimi gerektiren sorunu çözer, ancak yine de kendi zorlukları vardır.
+Daha karmaşık bir yaklaşım, uygulama ve bileşenleri arasında ayrılmasına izin vermek için bir uzantı noktası veya arabirim sağlamaktır. Bu model altında, bir bileşenin uygulayabileceği bir arabirim ve uygulamanızla etkileşime geçmesini sağlamak için bir API sağlayabilirsiniz. Bu, kaynak kodu erişimi gerektirme sorununu çözer, ancak yine de kendi zorluklarıyla karşılaşmıştır.
 
-Uygulama bileşenleri kendi başına keşfetmek için herhangi bir kapasiteye sahip olmadığından, yine de hangi bileşenlerin kullanılabilir olduğu ve yüklenmesi gerektiği açıkça söylenmelidir. Bu genellikle kullanılabilir bileşenleri bir yapılandırma dosyasına açıkça kaydederek gerçekleştirilir. Bu, bileşenlerin doğru olduğundan güvence verilmesinin, özellikle güncelleştirmeyi yapması beklenen geliştirici değil, son kullanıcı ysa, bir bakım sorunu haline gelmesi anlamına gelir.
+Uygulamanın, bileşenleri bulmak için herhangi bir kapasitesi olmadığından, yine de hangi bileşenlerin kullanılabilir olduğunu ve yüklenmesi gerektiğini açıkça söylemelidir. Bu, genellikle bir yapılandırma dosyasına kullanılabilir bileşenleri açıkça kaydederek gerçekleştirilir. Bu, bileşenlerin doğru olduğu anlamına gelir. Bu, özellikle son kullanıcı ise, güncellemeyi yapması beklenen geliştiriciden değil, bir bakım sorunu haline gelir.
 
-Buna ek olarak, bileşenler, uygulamanın kendisinin katı olarak tanımlanmış kanalları dışında birbirleriyle iletişim kuramaz. Uygulama mimarı belirli bir iletişim gereksinimini tahmin etmemişse, bu genellikle imkansızdır.
+Ayrıca, bileşenler, uygulamanın kendisinin rigidly tanımlı kanalları dışında birbiriyle iletişim kurabiliyor. Uygulama mimarı belirli bir iletişim gereksinimini tahmin etmez, genellikle olanaksızdır.
 
-Son olarak, bileşen geliştiricilerin uyguladıkları arabirimi içeren derlemeye sıkı bir bağımlılık kabul etmesi gerekir. Bu, bir bileşenin birden fazla uygulamada kullanılmasını zorlaştırır ve bileşenler için bir test çerçevesi oluşturduğunuzda da sorun yaratabilir.
+Son olarak, bileşen geliştiricileri, uygulamadıkları arabirimi içeren derlemenin bir sabit bağımlılığını kabul etmelidir. Bu, bir bileşenin birden fazla uygulamada kullanılmasını zorlaştırıyor ve bileşenler için bir test çerçevesi oluştururken da sorun oluşturabilir.
 
-## <a name="what-mef-provides"></a>MEF'in sağladığı
+## <a name="what-mef-provides"></a>MEF 'in sağladığı
 
-Kullanılabilir bileşenlerin bu açık kaydı yerine, MEF *bunları kompozisyon*aracılığıyla dolaylı olarak keşfetmenin bir yolunu sağlar. Bir MEF bileşeni, bir *parçası*olarak adlandırılan, bildirimsel hem bağımlılıkları *(içeri aktarma*olarak bilinir) ve hangi yetenekleri *(dışa*aktarma olarak bilinir) o kullanılabilir hale belirtir. Bir parça oluşturulduğunda, MEF kompozisyon motoru diğer parçalardan elde edilebilecek lerle ithalatını karşılar.
+MEF, kullanılabilir bileşenlerin bu açık kaydı yerine, bunları *kompozisyon*aracılığıyla örtülü olarak keşfetmenin bir yolunu sağlar. *Bölüm*adı VERILEN bir MEF bileşeni, bildirimli olarak hem bağımlılıklarını ( *içeri aktarmalar*olarak bilinir) hem de kullanılabilir özellikleri ( *dışarı aktarma*olarak bilinir) belirler. Bir bölüm oluşturulduğunda, MEF bileşim altyapısı, diğer bölümlerden kullanılabilir olan içeri aktarmalarını karşılar.
 
-Bu yaklaşım, önceki bölümde tartışılan sorunları çözer. MEF parçaları yeteneklerini bildirimsel olarak belirttiğinden, çalışma zamanında bulunabilirler, bu da bir uygulamanın sabit kodlanmış başvurular veya kırılgan yapılandırma dosyaları olmadan parçaları kullanabileceği anlamına gelir. MEF, uygulamaların parçaları meta verilerine göre, anlık olarak oluşturmadan ve hatta derlemelerini yüklemeden keşfetmelerine ve incelemelerine olanak tanır. Sonuç olarak, uzantıların ne zaman ve nasıl yüklenmesi gerektiğini dikkatlice belirtmenize gerek yoktur.
+Bu yaklaşım, önceki bölümde ele alınan sorunları çözer. MEF parçaları, yeteneklerini bildirimli olarak belirttiğinden, çalışma zamanında keşfedilir ve bu da bir uygulamanın sabit kodlanmış başvurular veya fragel yapılandırma dosyaları olmadan parçalar tarafından kullanılabilmesini sağlayabilir. MEF, uygulamaların onları örneklemeden veya derlemeleri yüklemeden, meta verilerine göre parçalar bulmasına ve incelemesine olanak sağlar. Sonuç olarak, uzantıların ne zaman ve nasıl yükleneceğini dikkatle belirtmeniz gerekmez.
 
-Sağlanan dışa aktarımlarına ek olarak, bir kısmı diğer parçalar tarafından doldurulacak olan ithalatını belirtebilir. Bu, parçalar arasındaki iletişimi yalnızca mümkün değil, aynı zamanda kolay hale getirir ve kodun iyi bir şekilde faktoringine olanak tanır. Örneğin, birçok bileşende ortak olan hizmetler ayrı bir parçaya ayrılabilir ve kolayca değiştirilebilir veya değiştirilebilir.
+Bir bölüm, belirtilen dışarı aktarımlarının yanı sıra içeri aktarmaları belirtebilir ve diğer parçalar tarafından doldurulur. Bu, parçalar arasında iletişimi yalnızca mümkün değildir ancak kolay bir kod düzenleme olanağı sağlar. Örneğin, birçok bileşen için ortak hizmetler ayrı bir bölüme ayrılabilir ve kolayca değiştirilebilir veya değiştirilebilir.
 
-MEF modeli belirli bir uygulama derlemesine sabit bağımlılık gerektirmediği için, uzantıların uygulamadan uygulamaya yeniden kullanılmasına izin verir. Bu, uzantı bileşenlerini test etmek için uygulamadan bağımsız bir test kayışı geliştirmeyi de kolaylaştırır.
+MEF modeli belirli bir uygulama derlemesinde sabit bağımlılık gerektirmediğinden, uzantıların uygulamadan uygulamaya yeniden kullanılmasına izin verir. Bu Ayrıca, uzantı bileşenlerini test etmek için uygulamadan bağımsız bir test bandı geliştirmeyi kolaylaştırır.
 
-MEF kullanılarak yazılmış genişletilebilir bir uygulama, uzantı bileşenleri tarafından doldurulabilen bir alma işlemi bildirir ve uygulama hizmetlerini uzantılara maruz bırakmak için dışa aktarımlar da bildirebilir. Her uzantı bileşeni bir dışa aktarım bildirir ve ayrıca içeri aktarımlar da beyan edebilir. Bu şekilde, uzantı bileşenlerinin kendileri otomatik olarak genişletilebilir.
+MEF kullanılarak yazılan genişletilebilir bir uygulama, uzantı bileşenleriyle doldurulabilecek bir içeri aktarma bildirir ve uygulama hizmetlerini uzantılara sunmak için dışarı aktarmaları de bildirebilir. Her uzantı bileşeni bir dışarı aktarma bildirir ve içeri aktarmaları de bildirebilir. Bu şekilde, uzantı bileşenleri otomatik olarak genişletilebilir.
 
-## <a name="where-mef-is-available"></a>MEF'in mevcut olduğu yerler
+## <a name="where-mef-is-available"></a>MEF 'in kullanılabildiği yer
 
-MEF ,NET Framework 4'ün ayrılmaz bir parçasıdır ve .NET Framework'ün kullanıldığı her yerde kullanılabilir. İstemci uygulamalarınızda, windows formlarını, WPF'yi veya başka bir teknolojiyi kullanıp kullanmadıklarını veya ASP.NET kullanan sunucu uygulamalarında MEF'i kullanabilirsiniz.
+MEF .NET Framework 4 ' ün ayrılmaz bir parçasıdır ve .NET Framework kullanıldığı her yerde kullanılabilir. Windows Forms, WPF veya başka herhangi bir teknolojiyi kullanıp kullandıklarından veya ASP.NET kullanan sunucu uygulamalarında MEF 'i istemci uygulamalarınızda kullanabilirsiniz.
 
 ## <a name="mef-and-maf"></a>MEF ve MAF
 
-.NET Framework'ün önceki sürümlerinde, uygulamaların uzantıları yalıtmalarına ve yönetmelerine olanak sağlamak üzere tasarlanmış Yönetilen Eklenti Çerçevesi (MAF) sunulmuştur. MAF'nin odak noktası MEF'ten biraz daha yüksektir, uzatma yalıtımı ve montaj yükleme ve boşaltma üzerine yoğunlaşırken, MEF'in odak noktası keşfedilebilirlik, genişletilebilirlik ve taşınabilirliktir. İki çerçeve sorunsuz bir şekilde çalışır ve tek bir uygulama her ikiden de yararlanabilir.
+.NET Framework önceki sürümleri, uygulamaların uzantıları yalıtmasına ve yönetmesine olanak tanımak için tasarlanan yönetilen eklenti çerçevesini (MAF) kullanıma sunmuştur. MAF 'nin odağı MEF 'ten biraz daha yüksek düzeydeyse, MEF 'in odağı keşfedilebilirlik, genişletilebilirlik ve taşınabilirlik üzerinde olduğunda, uzantı yalıtımı ve derleme yükleme ve kaldırma üzerinde yoğunlaşmaktadır. İki çerçeve sorunsuz bir şekilde çalışır ve tek bir uygulama her ikisinin de avantajlarından yararlanabilir.
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: Örnek bir uygulama
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: örnek bir uygulama
 
-MEF'in neler yapabileceğini görmenin en basit yolu basit bir MEF uygulaması oluşturmaktır. Bu örnekte, SimpleCalculator adlı çok basit bir hesap makinesi oluşturursunuz. SimpleCalculator'ın amacı, temel aritmetik komutları "5+3" veya "6-2" şeklinde kabul eden ve doğru yanıtları döndüren bir konsol uygulaması oluşturmaktır. MEF kullanarak, uygulama kodunu değiştirmeden yeni işleçler ekleyebilirsiniz.
+MEF 'in neler yapabileceğini görmenin en basit yolu basit bir MEF uygulaması derlemenize olanak sağlar. Bu örnekte, SimpleCalculator adlı çok basit bir Hesaplayıcı oluşturacaksınız. SimpleCalculator 'ın amacı, "5 + 3" veya "6-2" biçimindeki temel aritmetik komutları kabul eden bir konsol uygulaması oluşturmaktır ve doğru yanıtları döndürür. MEF kullanarak, uygulama kodunu değiştirmeden yeni işleçler ekleyebileceksiniz.
 
-Bu örnek için tam kodu indirmek için [SimpleCalculator örneğine (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)bakın.
+Bu örneğe ilişkin tüm kodu indirmek için bkz. [SimpleCalculator örneği (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
 
 > [!NOTE]
-> SimpleCalculator amacı mutlaka kullanımı için gerçekçi bir senaryo sağlamak yerine, MEF kavramları ve sözdizimi göstermektir. MEF'in gücünden en çok yararlanacak uygulamaların çoğu SimpleCalculator'dan daha karmaşıktır. Daha kapsamlı örnekler için GitHub'daki [Yönetilen Genişletilebilirlik Çerçevesi'ne](https://github.com/MicrosoftArchive/mef) bakın.
+> SimpleCalculator 'ın amacı, kullanımı için gerçekçi bir senaryo sağlamak yerine MEF 'in kavramlarını ve sözdizimini göstermektir. MEF 'in gücünden en fazla faydalanabilir uygulamalar SimpleCalculator 'dan daha karmaşıktır. Daha kapsamlı örnekler için GitHub 'daki [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) bakın.
 
-- Başlamak için Visual Studio'da yeni bir Konsol `SimpleCalculator`Uygulaması projesi oluşturun ve adını adlandırın.
+- Başlamak için, Visual Studio 'da yeni bir konsol uygulaması projesi oluşturun ve bunu `SimpleCalculator`adlandırın.
 
-- MEF'in `System.ComponentModel.Composition` bulunduğu derlemeye bir başvuru ekleyin.
+- MEF 'in bulunduğu `System.ComponentModel.Composition` derlemeye bir başvuru ekleyin.
 
-- *Open Module1.vb* veya *Program.cs* ve `System.ComponentModel.Composition` `System.ComponentModel.Composition.Hosting`eklemek `Imports` veya `using` ifadeler için ve . Bu iki ad alanı, genişletilebilir bir uygulama geliştirmek için gereken MEF türleri içerir.
+- Ve `System.ComponentModel.Composition.Hosting` `Imports` `using` için `System.ComponentModel.Composition` *Module1. vb* veya *program.cs* ve ekleme ya da deyimlerini açın. Bu iki ad alanı, genişletilebilir bir uygulama geliştirmek için ihtiyacınız olan MEF türlerini içerir.
 
-- Visual Basic kullanıyorsanız, `Public` `Module1` modülü bildiren satıra anahtar kelimeyi ekleyin.
+- Visual Basic kullanıyorsanız, `Public` anahtar sözcüğünü `Module1` modülünü bildiren satıra ekleyin.
 
-## <a name="composition-container-and-catalogs"></a>Kompozisyon konteyner ve kataloglar
+## <a name="composition-container-and-catalogs"></a>Birleşim kapsayıcısı ve kataloglar
 
-MEF kompozisyon modelinin çekirdeği, mevcut tüm parçaları içeren ve kompozisyon gerçekleştiren kompozisyon kapsayıcısır. *composition container* Kompozisyon, ithalatın dışa aktarımla eşleştirilmesidir. Kompozisyon kapsayıcıen yaygın <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>türü, ve SimpleCalculator için bu kullanacağız.
+MEF bileşim modelinin çekirdeği, kullanılabilir tüm parçaları içeren ve kompozisyonu gerçekleştiren *bileşim kapsayıcısıdır*. Bileşim dışarı aktarmalar için içeri aktarmaların eşleştirmesinin eşleşmesine sahiptir. Birleşim kapsayıcısının en yaygın türü ' dir <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>ve bunu SimpleCalculator için kullanacaksınız.
 
-Visual Basic kullanıyorsanız, `Program` *Module1.vb'de*adlandırılmış bir genel sınıf ekleyin.
+Visual Basic kullanıyorsanız, `Program` *Module1. vb*içinde adlı bir ortak sınıf ekleyin.
 
-*Module1.vb* veya `Program` *Program.cs*sınıfa aşağıdaki satırı ekleyin:
+Aşağıdaki satırı, `Program` *Module1. vb* veya *program.cs*içindeki sınıfa ekleyin:
 
 ```vb
 Dim _container As CompositionContainer
@@ -90,9 +90,9 @@ Dim _container As CompositionContainer
 private CompositionContainer _container;
 ```
 
-Kullanılabilir parçaları keşfetmek için, kompozisyon kapları bir *katalog*kullanır. Katalog, bazı kaynaktan kullanılabilir parçaları n için kullanılabilir kılan bir nesnedir. MEF, sağlanan bir tür, derleme veya dizin parçaları keşfetmek için kataloglar sağlar. Uygulama geliştiricileri, Web hizmeti gibi diğer kaynaklardan parçaları kolayca keşfetmek için yeni kataloglar oluşturabilir.
+Bu bölümde bulunan bölümleri saptamak için, bileşim kapsayıcıları bir *kataloğu*kullanır. Katalog, bazı kaynaklardan bulunan kullanılabilir bölümleri oluşturan bir nesnedir. MEF, sağlanan bir türden, bir derlemeden veya bir dizinden parçalar bulmaya yönelik kataloglar sağlar. Uygulama geliştiricileri, Web hizmeti gibi diğer kaynaklardan parçaları saptamak için kolayca yeni kataloglar oluşturabilir.
 
-Sınıfa aşağıdaki oluşturucuekleyin: `Program`
+`Program` Sınıfına aşağıdaki oluşturucuyu ekleyin:
 
 ```vb
 Public Sub New()
@@ -137,13 +137,13 @@ private Program()
 }
 ```
 
-Çağrı, <xref:System.ComponentModel.Composition.AttributedModelServices.ComposeParts%2A> kompozisyon kapsayıcısına belirli bir parça kümesi oluşturmasını `Program`söyler, bu durumda geçerli durumda . Ancak bu noktada, hiçbir şey `Program` olmayacak, çünkü hiçbir ithalat doldurmak zorunda.
+Çağrısı, bileşim <xref:System.ComponentModel.Composition.AttributedModelServices.ComposeParts%2A> kapsayıcısına belirli bir parçalar kümesi oluşturmasını söyler, bu durumda geçerli örneği `Program`. Ancak, doldurulacak bir içeri aktarma `Program` işlemi olmadığından, bu noktada hiçbir şey gerçekleşmeyecektir.
 
-## <a name="imports-and-exports-with-attributes"></a>Öznitelikleri ile İthalat ve İhracat
+## <a name="imports-and-exports-with-attributes"></a>Özniteliklerle içeri ve dışarı aktarmalar
 
-İlk olarak, `Program` bir hesap makinesi alma var. Bu, kullanıcı arabirimi endişelerinin ayrılmasına olanak sağlar, örneğin `Program`konsol girişi ve hesap makinesi nin mantığından girecek çıktı.
+İlk olarak, bir `Program` Hesaplayıcı içeri aktarmalısınız. Bu işlem `Program`, hesap makinesinin mantığındaki konsol girişi ve çıktısı gibi kullanıcı arabirimi sorunlarının ayrılmasını sağlar.
 
-`Program` Sınıfa aşağıdaki kodu ekleyin:
+`Program` Sınıfına aşağıdaki kodu ekleyin:
 
 ```vb
 <Import(GetType(ICalculator))>
@@ -155,11 +155,11 @@ Public Property calculator As ICalculator
 public ICalculator calculator;
 ```
 
-`calculator` Nesnenin bildiriminin olağandışı olmadığını, ancak öznitelik ile <xref:System.ComponentModel.Composition.ImportAttribute> süslenmiş olduğuna dikkat edin. Bu öznitelik bir şey bir alma olarak bildirir; diğer bir de, nesne oluşturulduğunda kompozisyon motoru tarafından doldurulacaktır.
+`calculator` Nesnenin bildiriminin olağandışı olmadığına, ancak <xref:System.ComponentModel.Composition.ImportAttribute> özniteliğiyle birlikte tasarlandığına dikkat edin. Bu öznitelik bir içeri aktarma işlemi olduğunu bildirir; diğer bir deyişle, nesne oluşturulduğunda bileşim motoru tarafından doldurulur.
 
-Her ithalat, hangi ihracatile eşleşeceğini belirleyen bir *sözleşmeye*sahiptir. Sözleşme açıkça belirtilen bir dize olabilir veya otomatik olarak belirli bir tür MEF tarafından `ICalculator`oluşturulabilir, Bu durumda arayüzü . Eşleşen bir sözleşme ile beyan edilen herhangi bir ihracat bu alma yerine getirecektir. `calculator` Nesnenin türü aslında `ICalculator`olsa da, bu gerekli değildir unutmayın. Sözleşme, içe aktarma nesnesinin türünden bağımsızdır. (Bu durumda, dışarıda bırakabilirsiniz `typeof(ICalculator)`. MEF, açıkça belirtmediğiniz sürece sözleşmenin alma türüne göre otomatik olarak kabul edilecektir.)
+Her içeri aktarma işlemi bir *sözleşmeye*sahiptir ve bu, ile eşleştirileceği dışarı aktarmaları belirler. Sözleşme açıkça belirtilen bir dize olabilir veya bu durumda arabirim `ICalculator`, belirli BIR türden MEF tarafından otomatik olarak oluşturulabilir. Eşleşen bir sözleşmeyle belirtilen tüm dışarı aktarma işlemi bu içeri aktarmayı karşılar. `calculator` Nesnenin türü aslında `ICalculator`olduğunda, bu gerekli değildir. Sözleşme, içeri aktarma nesnesinin türünden bağımsızdır. (Bu durumda, `typeof(ICalculator)`' yi bırakabilirsiniz. MEF, açıkça belirtmediğiniz takdirde, sözleşmenin içeri aktarma türüne göre otomatik olarak kabul edilir.)
 
-Modüle veya `SimpleCalculator` ad alanına bu çok basit arabirimi ekleyin:
+Bu çok basit arabirimi modüle veya `SimpleCalculator` ad alanına ekleyin:
 
 ```vb
 Public Interface ICalculator
@@ -174,7 +174,7 @@ public interface ICalculator
 }
 ```
 
-Artık tanımladığınız `ICalculator`için, bunu uygulayan bir sınıfa ihtiyacınız vardır. Modüle veya `SimpleCalculator` ad alanına aşağıdaki sınıfı ekleyin:
+Tanımladığınıza `ICalculator`göre, onu uygulayan bir sınıfa ihtiyacınız vardır. Aşağıdaki sınıfı modüle veya `SimpleCalculator` ad alanına ekleyin:
 
 ```vb
 <Export(GetType(ICalculator))>
@@ -192,11 +192,11 @@ class MySimpleCalculator : ICalculator
 }
 ```
 
-İşte ithalatla eşleşecek `Program`ihracat. İhracatın içe aktarılamasıyla eşleşebilmesi için, ihracatın aynı sözleşmeye sahip olması gerekir. Dayalı bir sözleşme kapsamında `typeof(MySimpleCalculator)` ihracat bir uyumsuzluk üretecek ve ithalat doldurulmaz; sözleşmetam olarak eşleşmesi gerekir.
+İçeri aktarma ile eşleşecek dışarı aktarma aşağıda verilmiştir `Program`. Dışarı aktarmanın içeri aktarma ile eşleşmesi için, dışarı aktarmanın aynı sözleşmeye sahip olması gerekir. ' `typeof(MySimpleCalculator)` A dayalı bir sözleşme altında dışarı aktarma işlemi bir uyuşmazlık üretir ve içeri aktarma doldurulmaz; sözleşmenin tam olarak eşleşmesi gerekir.
 
-Kompozisyon kapsayıcısı bu derlemede bulunan tüm parçalarla doldurulacağı için, `MySimpleCalculator` parça kullanılabilir olacaktır. Nesne üzerinde `Program` `Program` kompozisyon gerçekleştiren oluşturucu, içe aktarma bu `MySimpleCalculator` amaç için oluşturulacak bir nesne ile doldurulur.
+Bileşim kapsayıcısı Bu derlemede bulunan tüm bölümlerle doldurulduğundan, `MySimpleCalculator` bölüm kullanılabilir olacaktır. İçin `Program` Oluşturucu `Program` nesne üzerinde kompozisyon gerçekleştirdiğinde, içeri aktarma işlemi bu amaçla oluşturulacak bir `MySimpleCalculator` nesne ile doldurulur.
 
-Kullanıcı arabirimi`Program`katmanı ( ) başka bir şey bilmek gerekmez. Bu nedenle `Main` yöntemde kullanıcı arabirimi mantığının geri kalanını doldurabilirsiniz.
+Kullanıcı arabirimi katmanının (`Program`) başka herhangi bir şeyi bilmeleri gerekmez. Bu nedenle, `Main` yönteminde Kullanıcı arabirimi mantığının geri kalanını doldurabilirsiniz.
 
 `Main` yöntemine aşağıdaki kodu ekleyin:
 
@@ -228,13 +228,13 @@ static void Main(string[] args)
 }
 ```
 
- Bu kod sadece bir giriş satırı `Calculate` okur `ICalculator` ve konsola geri yazdığı sonucun işlevini çağırır. İhtiyacın olan tüm kod `Program`bu. İşin geri kalanı parçalarhalinde olacak.
+ Bu kod, bir giriş satırını okur ve sonuç `Calculate` `ICalculator` üzerinde öğesine çağrı yaparak konsola geri yazar. Bu, ihtiyacınız olan tüm kodlarda `Program`bulunur. Çalışmanın tüm geri kalanı parçalar halinde olur.
 
-## <a name="further-imports-and-importmany"></a>Diğer İthalat ve İthalatMany
+## <a name="further-imports-and-importmany"></a>Daha fazla Içeri aktarmalar ve ImportMany
 
-SimpleCalculator'nin genişletilebilmesi için bir işlem listesi alması gerekir. Sıradan <xref:System.ComponentModel.Composition.ImportAttribute> bir öznitelik bir ve <xref:System.ComponentModel.Composition.ExportAttribute>yalnızca bir tarafından doldurulur. Birden fazla kullanılabilir varsa, kompozisyon motoru bir hata üretir. Herhangi bir sayıda dışa aktarılabilen bir alma <xref:System.ComponentModel.Composition.ImportManyAttribute> işlemi oluşturmak için özniteliği kullanabilirsiniz.
+SimpleCalculator 'ın Genişletilebilir olması için, işlem listesini içeri aktarması gerekir. Sıradan <xref:System.ComponentModel.Composition.ImportAttribute> bir öznitelik bir ve yalnızca bir <xref:System.ComponentModel.Composition.ExportAttribute>ile doldurulur. Birden fazla kullanılabilir varsa, bileşim altyapısı bir hata üretir. Herhangi bir sayıda dışarı aktarma tarafından doldurulabilecek bir içeri aktarma oluşturmak için, <xref:System.ComponentModel.Composition.ImportManyAttribute> özniteliğini kullanabilirsiniz.
 
-Sınıfa aşağıdaki işlemler `MySimpleCalculator` özelliğini ekleyin:
+`MySimpleCalculator` Sınıfına aşağıdaki Operations özelliğini ekleyin:
 
 ```vb
 <ImportMany()>
@@ -246,9 +246,9 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;
 ```
 
-<xref:System.Lazy%602>mef tarafından ihracata dolaylı referanslar tutmak için sağlanan bir türdür. Burada, dışa aktarılan nesnenin kendisine ek olarak, *dışa aktarma meta verileri*veya dışa aktarılan nesneyi açıklayan bilgiler de alırsınız. Her <xref:System.Lazy%602> biri, `IOperation` gerçek bir işlemi temsil `IOperationData` eden bir nesne ve meta verilerini temsil eden bir nesne içerir.
+<xref:System.Lazy%602>, dışarı aktarmalar için dolaylı başvuruları tutmak üzere MEF tarafından sağlanmış bir türdür. Burada dışa aktarılmış nesnenin kendisinin yanı sıra dışarı *aktarma meta verilerini*veya dışarı aktarılmış nesneyi açıklayan bilgileri de alırsınız. Her <xref:System.Lazy%602> biri, `IOperation` gerçek bir işlemi temsil eden bir nesne ve meta `IOperationData` verilerini temsil eden bir nesnesi içerir.
 
-Modüle veya `SimpleCalculator` ad alanına aşağıdaki basit arabirimleri ekleyin:
+Aşağıdaki basit arabirimleri modüle veya `SimpleCalculator` ad alanına ekleyin:
 
 ```vb
 Public Interface IOperation
@@ -272,7 +272,7 @@ public interface IOperationData
 }
 ```
 
- Bu durumda, her işlem için meta veri , +, -, \*, gibi bu işlemi temsil eden simgedir. Ekleme işlemini kullanılabilir hale getirmek için, modüle veya `SimpleCalculator` ad alanına aşağıdaki sınıfı ekleyin:
+ Bu durumda, her bir işlemin meta verileri +,-, \*vb. gibi bu işlemi temsil eden simgedir. Ek işlemi kullanılabilir hale getirmek için modüle veya `SimpleCalculator` ad alanına aşağıdaki sınıfı ekleyin:
 
 ```vb
 <Export(GetType(IOperation))>
@@ -298,13 +298,13 @@ class Add: IOperation
 }
 ```
 
-Öznitelik <xref:System.ComponentModel.Composition.ExportAttribute> daha önce olduğu gibi çalışır. Öznitelik, <xref:System.ComponentModel.Composition.ExportMetadataAttribute> bu dışa aktarıma ad değeri çifti biçiminde meta verileri bağlar. `Add` Sınıf uygular `IOperation`ken, uygulayan `IOperationData` bir sınıf açıkça tanımlanmamıştır. Bunun yerine, bir sınıf örtülü mef tarafından sağlanan meta veri adlarını dayalı özellikleri ile oluşturulur. (Bu, MEF'deki meta verilere erişmenin birkaç yollarından biridir.)
+<xref:System.ComponentModel.Composition.ExportAttribute> Özniteliği daha önce olduğu gibi çalışır. <xref:System.ComponentModel.Composition.ExportMetadataAttribute> Özniteliği, meta verileri bir ad-değer çifti biçiminde bu dışarı aktarmaya iliştirir. `Add` Sınıf uyguladığı `IOperation`sırada, uygulayan `IOperationData` bir sınıf açıkça tanımlanmamıştır. Bunun yerine, bir sınıf, belirtilen meta verilerin adlarına göre özellikler ile MEF tarafından örtülü olarak oluşturulur. (Bu, MEF 'teki meta verilere erişmenin çeşitli yöntemlerinden biridir.)
 
-MEF kompozisyon *özyinelemeli.* Açıkça bir tür `Program` `MySimpleCalculator`olduğu ortaya `ICalculator` çıktı bir içe aktarılan nesne, besteledi. `MySimpleCalculator`, sırayla, `IOperation` nesnelerin bir koleksiyon alır ve bu `MySimpleCalculator` alma oluşturulduğunda doldurulur, aynı `Program`zamanda ithalat olarak. `Add` Sınıf daha fazla alma beyan ederse, bu da doldurulması gerekir, ve benzeri. Doldurulmamış kalan tüm alma işlemi kompozisyon hatasına neden olabilir. (Ancak, içeri aktarımları isteğe bağlı olarak beyan etmek veya varsayılan değerler atamak mümkündür.)
+MEF 'te birleşim *özyinelemeli*. Açık olan `Program` nesneyi, türü `ICalculator` `MySimpleCalculator`olması için bir tanesi içeri aktardınız. `MySimpleCalculator`, sırasıyla bir `IOperation` nesne koleksiyonu içeri aktarır ve içeri aktarma işlemi oluşturulduğunda, içeri aktarmaların aynı `MySimpleCalculator` anda doldurulur `Program`. `Add` Sınıf daha fazla içeri aktarma bildirmişse, bunun da doldurulması gerekir. Doldurulmamış herhangi bir içeri aktarma işlemi bir bileşim hatası ile sonuçlanır. (Ancak, içeri aktarmaları isteğe bağlı olarak bildirmek veya varsayılan değerleri atamak mümkündür.)
 
-## <a name="calculator-logic"></a>Hesap Makinesi Mantığı
+## <a name="calculator-logic"></a>Hesaplayıcı mantığı
 
-Bu parçalar yerinde, geriye kalan tek şey hesap makinesi mantığının kendisidir. Yöntemi uygulamak için `MySimpleCalculator` sınıfa aşağıdaki kodu ekleyin: `Calculate`
+Bu parçalar yerinde olduğunda, her şey Hesaplayıcı mantığının kendisidir. `Calculate` Yöntemini uygulamak için aşağıdaki kodu `MySimpleCalculator` sınıfına ekleyin:
 
 ```vb
 Public Function Calculate(input As String) As String Implements ICalculator.Calculate
@@ -363,9 +363,9 @@ public String Calculate(string input)
 }
 ```
 
-İlk adımlar, giriş dizesini sol ve sağ operandlara ve bir işleç karakterine ayrışturur. Döngüde, `foreach` koleksiyonun `operations` her üyesi incelenir. Bu nesneler türündendir <xref:System.Lazy%602>ve meta veri değerleri ve dışa <xref:System.Lazy%602.Metadata%2A> aktarılan nesne <xref:System.Lazy%601.Value%2A> sırasıyla özellik ve özellik ile erişilebilir. `Symbol` Bu durumda, nesnenin `IOperationData` özelliği eşleşebilir olarak keşfedilirse, hesap `Operate` makinesi nesnenin yöntemini `IOperation` çağırır ve sonucu döndürür.
+İlk adımlar, giriş dizesini sol ve sağ işlenenler ve bir işleç karakteri olarak ayrıştırır. `foreach` Döngüde, `operations` koleksiyonun her üyesi incelenir. Bu nesneler türündedir <xref:System.Lazy%602>ve meta veri değerlerine ve aktarılmış nesnesine sırasıyla <xref:System.Lazy%602.Metadata%2A> özelliği ve <xref:System.Lazy%601.Value%2A> özelliği ile erişilebilir. Bu `Symbol` durumda, `IOperationData` nesnesinin özelliği bir eşleşme olarak bulunursa, hesaplayıcı `Operate` `IOperation` nesnenin yöntemini çağırır ve sonucu döndürür.
 
-Hesap makinesini tamamlamak için, bir dizedeki ilk basamaksız karakterin konumunu döndüren bir yardımcı yöntemine de ihtiyacınız vardır. Sınıfa aşağıdaki yardımcı yöntemi `MySimpleCalculator` ekleyin:
+Hesaplayıcıyı tamamlayabilmeniz için bir dizedeki ilk basamak olmayan karakterin konumunu döndüren bir yardımcı yöntemi de gereklidir. `MySimpleCalculator` Sınıfına aşağıdaki yardımcı yöntemi ekleyin:
 
 ```vb
 Private Function FindFirstNonDigit(s As String) As Integer
@@ -387,11 +387,11 @@ private int FindFirstNonDigit(string s)
 }
 ```
 
-Artık projeyi derleyip çalıştırabilmelisin. Visual Basic'te, anahtar kelimeyi `Public` ' `Module1`ye eklediğinizden emin olun Konsol penceresinde, "5+3" gibi bir ekleme işlemi yazın ve hesap makinesi sonuçları döndürür. Başka bir operatör "İşlem Bulunamadı!" iletisi döndürmektedir.
+Artık projeyi derleyip çalıştırabilmelisiniz. Visual Basic, `Public` anahtar sözcüğünü öğesine `Module1`eklediğinizden emin olun. Konsol penceresinde, "5 + 3" gibi bir ek işlem yazın ve Hesaplayıcı sonuçları döndürür. "Işlem bulunamadı!" ile ilgili başka bir operatör oluşur iletisi döndürmektedir.
 
-## <a name="extending-simplecalculator-using-a-new-class"></a>Yeni bir sınıf kullanarak SimpleCalculator'ı genişletme
+## <a name="extending-simplecalculator-using-a-new-class"></a>Yeni bir sınıf kullanarak SimpleCalculator 'ı genişletme
 
-Artık hesap makinesi çalıştığıiçin, yeni bir işlem eklemek kolaydır. Modüle veya `SimpleCalculator` ad alanına aşağıdaki sınıfı ekleyin:
+Hesap Makinası artık işe yarar, yeni bir işlem eklemek kolaydır. Aşağıdaki sınıfı modüle veya `SimpleCalculator` ad alanına ekleyin:
 
 ```vb
 <Export(GetType(IOperation))>
@@ -417,17 +417,17 @@ class Subtract : IOperation
 }
 ```
 
-Projeyi derle ve çalıştır. "5-3" gibi bir çıkarma işlemi yazın. Hesap makinesi artık çıkarmanın yanı sıra eklemeyi de destekler.
+Projeyi derleyin ve çalıştırın. "5-3" gibi bir çıkarma işlemi yazın. Hesaplayıcı artık çıkarma ve ekleme de desteklemektedir.
 
-## <a name="extending-simplecalculator-using-a-new-assembly"></a>Yeni bir derleme kullanarak SimpleCalculator'ı genişletme
+## <a name="extending-simplecalculator-using-a-new-assembly"></a>Yeni bir derleme kullanarak SimpleCalculator 'ı genişletme
 
-Kaynak koduna sınıf eklemek yeterince basittir, ancak MEF, bir uygulamanın kendi kaynağının dışına parçalar için bakma olanağı sağlar. Bunu göstermek için, bir dizin aramak için SimpleCalculator değiştirmek gerekir, yanı sıra kendi <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>derleme, parçalar için, ekleyerek .
+Kaynak koda sınıflar eklemek yeterince basittir, ancak MEF, bir uygulamanın parçalar için kendi kaynağını göz atabilme olanağı sağlar. Bunu göstermek için, SimpleCalculator ' ı, bir dizini ve kendi derlemesini, parçaları için bir ekleyerek bir <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>Dizin arayacak şekilde değiştirmeniz gerekir.
 
-SimpleCalculator projesine `Extensions` yeni bir dizin ekleyin. Çözüm düzeyinde değil, proje düzeyinde eklediğinizden emin olun. Ardından çözüme yeni bir Sınıf Kitaplığı projesi ekleyin. `ExtendedOperations` Yeni proje ayrı bir derleme halinde derlenecek.
+SimpleCalculator projesine adlı `Extensions` yeni bir dizin ekleyin. Çözüm düzeyinde değil, proje düzeyine eklediğinizden emin olun. Ardından adlı `ExtendedOperations`çözüme yeni bir sınıf kitaplığı projesi ekleyin. Yeni proje ayrı bir derlemede derlenir.
 
-Genişletilmiş İşlemler projesi için Proje Özellikleri Tasarımcısı'nı açın ve **Derleme** veya **Oluştur** sekmesini tıklatın. SimpleCalculator proje dizinindeki Uzantılar dizinine işaret etmek için **Çıktı Veya** Çıktı **yolunu** değiştirin (*... \SimpleCalculator\Uzantılar).\\*
+ExtendedOperations projesi için proje özellikleri Tasarımcısı ' nı açın ve **Derle** veya **Derle** sekmesine tıklayın. **derleme çıkış yolunu** veya **Çıkış yolunu** , SimpleCalculator proje dizinindeki uzantılar dizinine (..) işaret etmek üzere değiştirin.* \Simplehesapla, Tor\extensions\\*).
 
- *Module1.vb* veya *Program.cs'* de, `Program` oluşturucuya aşağıdaki satırı ekleyin:
+ *Module1. vb* veya *program.cs*içinde, `Program` oluşturucuya aşağıdaki satırı ekleyin:
 
 ```vb
 catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\Extensions"))
@@ -437,9 +437,9 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
-Örnek yolu Uzantılar dizininize giden yolile değiştirin. (Bu mutlak yol sadece hata ayıklama amacıyladır. Bir üretim uygulamasında, göreli bir yol kullanırsınız.) Şimdi <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> kompozisyon kapsayıcısına Uzantılar dizininde bulunan herhangi bir parça eklenecektir.
+Örnek yolu, uzantılar dizininizin yolunu ile değiştirin. (Bu mutlak yol yalnızca hata ayıklama amaçlıdır. Bir üretim uygulamasında göreli bir yol kullanırsınız.) Artık <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> , uzantılar dizinindeki tüm derlemelerde bulunan herhangi bir parçayı bileşim kapsayıcısına ekler.
 
-Genişletilmiş Operasyonlar projesinde, SimpleCalculator ve System.ComponentModel.Composition'a göndermeler ekleyin. ExtendedOperations sınıf dosyasında System.ComponentModel.Composition için bir `Imports` açıklama veya deyim `using` ekleyin. Visual Basic'te SimpleCalculator için bir `Imports` deyim de ekleyin. Ardından ExtendedOperations sınıf dosyasına aşağıdaki sınıfı ekleyin:
+ExtendedOperations projesinde, SimpleCalculator ve System. ComponentModel. Composition başvurularını ekleyin. ExtendedOperations sınıf dosyasında, System. ComponentModel. `Imports` Composition için `using` bir veya bir ifade ekleyin. Visual Basic Ayrıca, SimpleCalculator için bir `Imports` ifade ekleyin. Ardından, aşağıdaki sınıfı ExtendedOperations sınıf dosyasına ekleyin:
 
 ```vb
 <Export(GetType(SimpleCalculator.IOperation))>
@@ -465,24 +465,24 @@ public class Mod : SimpleCalculator.IOperation
 }
 ```
 
-Sözleşmenin eşleşebilmesi için özniteliğin <xref:System.ComponentModel.Composition.ExportAttribute> . <xref:System.ComponentModel.Composition.ImportAttribute>
+Sözleşmenin eşleşmesi için <xref:System.ComponentModel.Composition.ExportAttribute> özniteliğinin ile aynı türde olması gerektiğini unutmayın <xref:System.ComponentModel.Composition.ImportAttribute>.
 
-Projeyi derle ve çalıştır. Yeni Mod test edin (%) Işleç.
+Projeyi derleyin ve çalıştırın. Yeni mod (%) sınamasını yapın işlecinde.
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu konu MEF'in temel kavramlarını kapsamaktadır.
+Bu konu, MEF 'in temel kavramlarını ele almaktadır.
 
-- Parçalar, kataloglar ve kompozisyon konteyneri
+- Parçalar, kataloglar ve bileşim kapsayıcısı
 
-     Parçalar ve bileşim konteyneri bir MEF uygulamasının temel yapı taşlarıdır. Bir parça, kendisine kadar ve kendisi de dahil olmak üzere bir değer içe aktaran veya dışa aktaran herhangi bir nesnedir. Katalog, belirli bir kaynaktan parçalar koleksiyonu sağlar. Kompozisyon kapsayıcıkompozisyon gerçekleştirmek için bir katalog tarafından sağlanan parçaları kullanır, dışa aktarımbağlama.
+     Parçalar ve bileşim kapsayıcısı, MEF uygulamasının temel yapı taşlarıdır. Bir bölüm, kendisini içeren veya dahil olmak üzere bir değeri içeri aktaran veya dışarı aktaran herhangi bir nesnedir. Bir katalog, belirli bir kaynaktan bir parçalar koleksiyonu sağlar. Bileşim kapsayıcısı, bir katalog tarafından, dışarı aktarmalar için içeri aktarmalar bağlamayı bağlayan bir katalog tarafından sunulan bölümleri kullanır.
 
-- İthalat ve ihracat
+- İçeri aktarmalar ve dışarı aktarmalar
 
-     İthalat ve dışaaklar, bileşenlerin iletişim kurma yoludur. Bir alma ile bileşen, belirli bir değer veya nesne için bir ihtiyaç belirtir ve bir dışa aktarma ile bir değerin kullanılabilirliğini belirtir. Her içe aktarım, sözleşmesi nin bir dışa aktarım listesiyle eşleşir.
+     İçeri ve dışarı aktarmalar, bileşenlerin iletişim kurduğu yoldur. İçeri aktarma ile, bileşen belirli bir değer veya nesne için ihtiyacı belirtir ve bir dışarı aktarma ile bir değerin kullanılabilirliğini belirtir. Her içeri aktarma, sözleşmesi yoluyla dışarı aktarmalar listesi ile eşleştirilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu örnek için tam kodu indirmek için [SimpleCalculator örneğine (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)bakın.
+Bu örneğe ilişkin tüm kodu indirmek için bkz. [SimpleCalculator örneği (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/).
 
- Daha fazla bilgi ve kod örnekleri için [Yönetilen Genişletilebilirlik Çerçevesi'ne](https://github.com/MicrosoftArchive/mef)bakın. MEF türlerinin listesi için <xref:System.ComponentModel.Composition?displayProperty=nameWithType> ad alanına bakın.
+ Daha fazla bilgi ve kod örneği için bkz. [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef). MEF türlerinin bir listesi için bkz. <xref:System.ComponentModel.Composition?displayProperty=nameWithType> ad alanı.

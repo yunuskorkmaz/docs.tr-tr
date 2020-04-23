@@ -49,7 +49,7 @@ Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayPro
 > [!NOTE]
 > Bu yöntemler, hizmetin ömrü boyunca üzerinden taşınan durumları temsil eder; hizmet bir durumdan diğerine geçiş yapar. Örneğin, bir hizmetin çağrılmadan önce <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> <xref:System.ServiceProcess.ServiceBase.OnStart%2A> bir komuta yanıt vermesini hiçbir şekilde olmayacaktır.  
   
- İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bu güncelleştirmeler şunlardır:  
+ İlgilendiğiniz birkaç başka özellik ve yöntem vardır. Bunlar:  
   
 - <xref:System.ServiceProcess.ServiceBase> Sınıfında <xref:System.ServiceProcess.ServiceBase.Run%2A> yöntemi. Bu, hizmetin ana giriş noktasıdır. Windows hizmet şablonunu kullanarak bir hizmet oluşturduğunuzda, hizmet çalıştırmak için uygulamanızın `Main` yöntemine kod eklenir. Bu kod şöyle görünür:  
   
@@ -57,9 +57,9 @@ Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayPro
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > Bu örneklerde, uygulamanızın içerdiği her bir <xref:System.ServiceProcess.ServiceBase>hizmetin eklenebileceği ve sonra tüm hizmetlerin birlikte çalıştırılabileceği bir dizi türü kullanılır. Ancak yalnızca tek bir hizmet oluşturuyorsanız, diziyi kullanmayın ve ' den <xref:System.ServiceProcess.ServiceBase> devralan yeni bir nesne bildirmeniz ve sonra çalıştırmanız yeterlidir. Bir örnek için bkz [. nasıl yapılır: Hizmetleri programlı olarak](how-to-write-services-programmatically.md)yazın.  
+    > Bu örneklerde, uygulamanızın içerdiği her bir <xref:System.ServiceProcess.ServiceBase>hizmetin eklenebileceği ve sonra tüm hizmetlerin birlikte çalıştırılabileceği bir dizi türü kullanılır. Ancak yalnızca tek bir hizmet oluşturuyorsanız, diziyi kullanmayın ve ' den <xref:System.ServiceProcess.ServiceBase> devralan yeni bir nesne bildirmeniz ve sonra çalıştırmanız yeterlidir. Bir örnek için bkz. [nasıl yapılır: Hizmetleri program aracılığıyla yazma](how-to-write-services-programmatically.md).  
   
-- <xref:System.ServiceProcess.ServiceBase> Sınıftaki bir dizi özellik. Bunlar, hizmetinize hangi yöntemlerin çağrılabilecek olduğunu tespit edebilir. Örneğin, <xref:System.ServiceProcess.ServiceBase.CanStop%2A> özelliği olarak `true`ayarlandığında, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmetinizin yöntemi çağrılabilir. Özelliği olarak `true`ayarlandığında ,<xref:System.ServiceProcess.ServiceBase.OnPause%2A> ve<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>yöntemleriçağrılabilir. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> Bu özelliklerden `true`birini ' a ayarladığınızda, ilişkili yöntemler için işlemeyi geçersiz kılmanız ve tanımlamanız gerekir.  
+- <xref:System.ServiceProcess.ServiceBase> Sınıftaki bir dizi özellik. Bunlar, hizmetinize hangi yöntemlerin çağrılabilecek olduğunu tespit edebilir. Örneğin, <xref:System.ServiceProcess.ServiceBase.CanStop%2A> özelliği olarak `true`ayarlandığında, hizmetinizin <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemi çağrılabilir. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> Özelliği `true`olarak ayarlandığında, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> ve <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> yöntemleri çağrılabilir. Bu özelliklerden birini `true`' a ayarladığınızda, ilişkili yöntemler için işlemeyi geçersiz kılmanız ve tanımlamanız gerekir.  
   
     > [!NOTE]
     > Hizmetiniz en az <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yararlı olacak şekilde geçersiz kılmalıdır.  
@@ -68,5 +68,5 @@ Windows hizmeti uygulamaları <xref:System.ServiceProcess.ServiceBase?displayPro
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)
+- [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl Yapılır: Windows Hizmetleri Oluşturma](how-to-create-windows-services.md)

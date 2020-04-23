@@ -25,32 +25,32 @@ Aşağıdaki bölümler, uygulama etki alanları ve Derlemeleriyle programlama i
   
 - [Nasıl yapılır: Uygulama Etki Alanına Bütünleştirilmiş Kodlar Yükleme](how-to-load-assemblies-into-an-application-domain.md)  
   
-- [Nasıl yapılır: Bir Bütünleştirilmiş Koddan Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
+- [Nasıl yapılır: Bir Derlemeden Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
   
  **Bütünleştirilmiş kodlar**  
   
-- [Nasıl yapılır: Bir Bütünleştirilmiş Kodun Tam Adını Belirleme](../../standard/assembly/find-fully-qualified-name.md)  
+- [Nasıl yapılır: Bir Derlemenin Tam Olarak Nitelenmiş Adını Belirleme](../../standard/assembly/find-fully-qualified-name.md)  
   
 - [Nasıl yapılır: Tek Dosyalı Bütünleştirilmiş Kod Derleme](build-single-file-assembly.md)  
   
-- [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](build-multifile-assembly.md)  
+- [Nasıl yapılır: Birden Fazla Dosya Derlemesi Oluşturma](build-multifile-assembly.md)  
   
-- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../standard/assembly/create-public-private-key-pair.md)  
+- [Nasıl yapılır: genel-özel anahtar çifti oluşturma](../../standard/assembly/create-public-private-key-pair.md)  
   
 - [Nasıl yapılır: Bütünleştirilmiş Kodu Tanımlayıcı Adla İmzalama](../../standard/assembly/sign-strong-name.md)  
   
-- [Nasıl yapılır: Kesin Adlandırılmış bir Bütünleştirilmiş Koda Başvurma](../../standard/assembly/reference-strong-named.md)  
+- [Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma](../../standard/assembly/reference-strong-named.md)  
   
-- [Nasıl yapılır: Kesin Adlandırılmış Atlama Özelliğini Devre Dışı Bırakma](../../standard/assembly/disable-strong-name-bypass-feature.md)  
+- [Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma](../../standard/assembly/disable-strong-name-bypass-feature.md)  
   
-- [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)  
+- [Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)  
   
 - [Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme](how-to-view-the-contents-of-the-gac.md)  
   
-- [Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğinden Kaldırma](how-to-remove-an-assembly-from-the-gac.md)  
+- [Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [Nasıl yapılır: Bütünleştirilmiş Kod İçeriklerini Görüntüleme](../../standard/assembly/view-contents.md)  
+- [Nasıl yapılır: Derleme İçeriklerini Görüntüleme](../../standard/assembly/view-contents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Etki Alanları ve Derlemeler](index.md)
+- [Uygulama etki alanları ve derlemeler](index.md)

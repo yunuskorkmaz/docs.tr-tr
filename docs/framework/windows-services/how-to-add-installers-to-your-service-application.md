@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme'
+title: 'Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -18,7 +18,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053647"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
+# <a name="how-to-add-installers-to-your-service-application"></a>Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
 Visual Studio, hizmet uygulamalarınızla ilişkili kaynakları yükleyebilen yükleme bileşenlerini sevk eder. Yükleme bileşenleri, yüklenmekte olan sisteme tek bir hizmeti kaydeder ve hizmetler Denetim Yöneticisi 'nin hizmetin var olduğunu bilmesini sağlar. Bir hizmet uygulamasıyla çalışırken, projenize uygun yükleyicileri otomatik olarak eklemek için Özellikler penceresi bir bağlantı seçebilirsiniz.  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ Visual Studio, hizmet uygulamalarınızla ilişkili kaynakları yükleyebilen y�
  Hizmetlerinizin doğru şekilde yüklenmesini sağlamak için yükleyicilerin içinde herhangi bir özel kodlama yapmanız gerekmez. Ancak, yükleme işlemine özel işlevsellik eklemeniz gerekiyorsa, bazen yükleyicilerin içeriğini değiştirmeniz gerekebilir.  
   
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Hizmet uygulamanıza yükleyiciler eklemek için  
   
@@ -39,30 +39,30 @@ Visual Studio, hizmet uygulamalarınızla ilişkili kaynakları yükleyebilen y�
   
 3. Tasarımcı odaklanarak, öğesine sağ tıklayın ve ardından **Yükleyici Ekle**' ye tıklayın.  
   
-     Yeni bir sınıf, `ProjectInstaller`ve iki yükleme <xref:System.ServiceProcess.ServiceProcessInstaller> bileşeni ve <xref:System.ServiceProcess.ServiceInstaller>projenize eklenir ve hizmetin özellik değerleri bileşenlere kopyalanır.  
+     Yeni bir sınıf, `ProjectInstaller`ve iki yükleme bileşeni <xref:System.ServiceProcess.ServiceProcessInstaller> ve <xref:System.ServiceProcess.ServiceInstaller>projenize eklenir ve hizmetin özellik değerleri bileşenlere kopyalanır.  
   
-4. Bileşene tıklayın ve <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliğin değerinin hizmetin kendisindeki <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özellik ile aynı değere ayarlandığını doğrulayın. <xref:System.ServiceProcess.ServiceInstaller>  
+4. <xref:System.ServiceProcess.ServiceInstaller> Bileşene tıklayın ve <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliğin değerinin hizmetin kendisindeki <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özellik ile aynı değere ayarlandığını doğrulayın.  
   
 5. Hizmetinizin nasıl başlatılaceğini öğrenmek için <xref:System.ServiceProcess.ServiceInstaller> bileşene tıklayın ve <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliği uygun değere ayarlayın.  
   
     |Değer|Sonuç|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Hizmetin, yüklemeden sonra el ile başlatılması gerekir. Daha fazla bilgi için [nasıl yapılır: Hizmetleri](how-to-start-services.md)başlatın.|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|Hizmetin, yüklemeden sonra el ile başlatılması gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri başlatma](how-to-start-services.md).|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Bilgisayar her yeniden başlatıldığında hizmet kendisi tarafından başlatılır.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Hizmet başlatılamıyor.|  
   
-6. Hizmetinizin çalışacağı güvenlik bağlamını öğrenmek için <xref:System.ServiceProcess.ServiceProcessInstaller> bileşene tıklayın ve uygun özellik değerlerini ayarlayın. Daha fazla bilgi için [nasıl yapılır: Hizmetler](how-to-specify-the-security-context-for-services.md)için güvenlik bağlamını belirtin.  
+6. Hizmetinizin çalışacağı güvenlik bağlamını öğrenmek için <xref:System.ServiceProcess.ServiceProcessInstaller> bileşene tıklayın ve uygun özellik değerlerini ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: hizmetler Için güvenlik bağlamını belirtme](how-to-specify-the-security-context-for-services.md).  
   
 7. Özel işlem gerçekleştirmeniz gereken tüm yöntemleri geçersiz kılın.  
   
 8. Projenizdeki her bir ek hizmet için 1 ile 7 arasındaki adımları gerçekleştirin.  
   
     > [!NOTE]
-    > Projenizdeki her bir ek hizmet için, <xref:System.ServiceProcess.ServiceInstaller> `ProjectInstaller` projenin sınıfına ek bir bileşen eklemeniz gerekir. Adım 3 ' te eklenen Bileşen,projedekibireyselhizmetyükleyicilerinintümüilebirliktegeçerlidir.<xref:System.ServiceProcess.ServiceProcessInstaller>  
+    > Projenizdeki her bir ek hizmet için, projenin <xref:System.ServiceProcess.ServiceInstaller> `ProjectInstaller` sınıfına ek bir bileşen eklemeniz gerekir. Adım <xref:System.ServiceProcess.ServiceProcessInstaller> 3 ' te eklenen bileşen, projedeki bireysel hizmet yükleyicilerinin tümü ile birlikte geçerlidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Hizmetleri yükleme ve kaldırma](how-to-install-and-uninstall-services.md)
-- [Nasıl yapılır: Hizmetleri Başlat](how-to-start-services.md)
-- [Nasıl yapılır: Hizmetler için güvenlik bağlamını belirtin](how-to-specify-the-security-context-for-services.md)
+- [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl Yapılır: Hizmetleri Yükleme ve Kaldırma](how-to-install-and-uninstall-services.md)
+- [Nasıl Yapılır: Hizmetleri Başlatma](how-to-start-services.md)
+- [Nasıl Yapılır: Hizmetler için Güvenlik İçeriği Belirtme](how-to-specify-the-security-context-for-services.md)

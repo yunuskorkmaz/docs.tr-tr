@@ -21,13 +21,13 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181327"
 ---
 # <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri
-Aşağıdaki örnekler, User32.dll'de **MessageBox** işlevinin nasıl tanımlanacağını ve çağıracağını ve basit bir dizeyi bağımsız değişken olarak nasıl geçeceğini göstermektedir. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan, hedef platformun karakter genişliğini ve dize mareşalliğini belirlemesini sağlamak için **Otomatik** olarak ayarlanır.  
+Aşağıdaki örnekler, bir bağımsız değişken olarak basit bir dize geçirerek User32. dll ' de **MessageBox** işlevinin nasıl tanımlanacağını ve çağrılacağını gösterir. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan, hedef platformun karakter genişliğini ve dize sıralamasını belirlemesine izin vermek için **Auto** olarak ayarlanır.  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)]
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)]
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- Ek örnekler için [bkz.](marshaling-data-with-platform-invoke.md)  
+ Ek örnekler için bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

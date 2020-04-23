@@ -21,16 +21,16 @@ ms.locfileid: "73130296"
 Öznitelikler program öğeleriyle ilişkilendirildikten sonra, var olan ve değerlerini sorgulamak için yansıma kullanılabilir. .NET Framework sürüm 1,0 ve 1,1 ' de, özel öznitelikler yürütme bağlamında incelenir. .NET Framework sürüm 2,0, yürütme için yüklenemeyen kodu incelemek için kullanılabilen yeni bir yükleme bağlamı (yalnızca yansıma bağlamı) sağlar.  
   
 ## <a name="the-reflection-only-context"></a>Yalnızca yansıma bağlamı  
- Yalnızca yansıma bağlamına yüklenen kod yürütülemez. Bu, özel özniteliklerin örneklerinin oluşturulamadığını belirtir, çünkü bu, oluşturucuların yürütülmesi gerekir. Özel öznitelikleri yalnızca yansıma bağlamında yüklemek ve incelemek için <xref:System.Reflection.CustomAttributeData> sınıfını kullanın. Statik <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> yönteminin uygun aşırı yüklemesini kullanarak bu sınıfın örneklerini elde edebilirsiniz. Bkz. [nasıl yapılır: derlemeleri yalnızca yansıma bağlamına yükleme](how-to-load-assemblies-into-the-reflection-only-context.md).  
+ Yalnızca yansıma bağlamına yüklenen kod yürütülemez. Bu, özel özniteliklerin örneklerinin oluşturulamadığını belirtir, çünkü bu, oluşturucuların yürütülmesi gerekir. Özel öznitelikleri yalnızca yansıma bağlamında yüklemek ve incelemek için <xref:System.Reflection.CustomAttributeData> sınıfını kullanın. Statik <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> yöntemin uygun aşırı yüklemesini kullanarak bu sınıfın örneklerini elde edebilirsiniz. Bkz. [nasıl yapılır: derlemeleri yalnızca yansıma bağlamına yükleme](how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>Yürütme bağlamı  
- Yürütme bağlamındaki öznitelikleri sorgulamak için ana yansıma yöntemleri <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> ve <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
+ Yürütme bağlamındaki öznitelikleri sorgulamak için ana yansıma yöntemleri ve ' <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>dir.  
   
  Özel bir özniteliğin erişilebilirliği, eklendiği derlemeye göre denetlenir. Bu, özel özniteliğin eklendiği derlemede bulunan bir türün bir yönteminin özel özniteliğin oluşturucusunu çağırıp çağıramayacağını denetlemeye eşdeğerdir.  
   
- <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> gibi yöntemler tür bağımsız değişkeninin görünürlüğünü ve erişilebilirliğini kontrol edin. Yalnızca Kullanıcı tanımlı türü içeren derlemede bulunan kod, **GetCustomAttributes**kullanarak bu türde özel bir öznitelik alabilir.  
+ Tür bağımsız değişkeninin <xref:System.Reflection.Assembly.GetCustomAttributes%28System.Boolean%29?displayProperty=nameWithType> görünürlüğünü ve erişilebilirliğini denetlemek gibi yöntemler. Yalnızca Kullanıcı tanımlı türü içeren derlemede bulunan kod, **GetCustomAttributes**kullanarak bu türde özel bir öznitelik alabilir.  
   
- Aşağıdaki C# örnek tipik bir özel öznitelik tasarım modelidir. Çalışma zamanı özel öznitelik yansıma modelini gösterir.  
+ Aşağıdaki C# örneği tipik bir özel öznitelik tasarım deseninin örneğidir. Çalışma zamanı özel öznitelik yansıma modelini gösterir.  
   
 ```csharp
 System.DLL  
@@ -52,17 +52,17 @@ public class LocalizationExtenderProvider
 }  
 ```  
   
- Çalışma zamanı, **GetLanguage** yöntemine iliştirilmiş <xref:System.ComponentModel.DescriptionAttribute> ortak özel öznitelik türü için özel öznitelikleri almaya çalışıyorsa, aşağıdaki eylemleri gerçekleştirir:  
+ Çalışma zamanı, <xref:System.ComponentModel.DescriptionAttribute> **GetLanguage** yöntemine iliştirilmiş ortak özel öznitelik türü için özel öznitelikleri almaya çalışıyorsa, aşağıdaki eylemleri gerçekleştirir:  
   
 1. Çalışma zamanı, **Type bağımsız değişkeni** **Type. GetCustomAttributes**(tür *türü*) public olup olmadığını denetler ve bu nedenle görünür ve erişilebilir olur.  
   
-2. Çalışma zamanı, **DescriptionAttribute** 'tan türetilmiş Kullanıcı tanımlı **MyDescriptionAttribute** türünün görünür ve **System. Web. dll** derlemesi Içinde erişilebilir olduğunu denetler ve burada **GetLanguage yöntemine iliştirilir** ().  
+2. Çalışma zamanı, **DescriptionAttribute** 'dan türetilmiş Kullanıcı tanımlı **MyDescriptionAttribute** türünün görünür ve **System. Web. dll** derlemesi içinde erişilebilir olup olmadığını denetler. Bu, **GetLanguage**() yöntemine iliştirilir.  
   
 3. Çalışma zamanı, **MyDescriptionAttribute** oluşturucusunun, **System. Web. dll** derlemesi içinde görünür ve erişilebilir olduğunu denetler.  
   
 4. Çalışma zamanı, **MyDescriptionAttribute** yapıcısını özel öznitelik parametreleriyle çağırır ve yeni nesneyi çağırana döndürür.  
   
- Özel öznitelik yansıtma modeli, Kullanıcı tanımlı türlerin, türün tanımlandığı derleme dışındaki örneklerini sızdırabilir. Bu, çalışma zamanı sistem kitaplığındaki, **RuntimeMethodInfo** nesnelerinin dizisini döndüren <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> gibi Kullanıcı tanımlı türlerin örneklerini döndüren üyelerden farklı değildir. Bir istemcinin Kullanıcı tanımlı bir özel öznitelik türü hakkında bilgi bulmasını engellemek için, tür üyelerini ortak olacak şekilde tanımlayın.  
+ Özel öznitelik yansıtma modeli, Kullanıcı tanımlı türlerin, türün tanımlandığı derleme dışındaki örneklerini sızdırabilir. Bu, çalışma zamanı sistem kitaplığındaki, <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> **runtimemethoınfo** nesnelerinin bir dizisini döndürmek gibi Kullanıcı tanımlı türlerin örneklerini döndüren üyelerden farklı değildir. Bir istemcinin Kullanıcı tanımlı bir özel öznitelik türü hakkında bilgi bulmasını engellemek için, tür üyelerini ortak olacak şekilde tanımlayın.  
   
  Aşağıdaki örnek, özel özniteliklere erişim sağlamak için yansıma kullanmanın temel yolunu gösterir.  
   

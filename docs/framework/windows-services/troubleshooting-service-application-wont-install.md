@@ -27,4 +27,4 @@ Hizmet uygulamanız doğru şekilde yüklenemezse, hizmet sınıfı <xref:System
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)

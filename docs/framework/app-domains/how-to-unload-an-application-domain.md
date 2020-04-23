@@ -18,11 +18,11 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119842"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanını Boşaltma
-Bir uygulama etki alanını kullanmayı bitirdiğinizde <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> yöntemini kullanarak kaldırın. **Unload** yöntemi, belirtilen uygulama etki alanını düzgün bir şekilde kapatır. Kaldırma işlemi sırasında, uygulama etki alanına hiçbir yeni iş parçacığı erişemez ve tüm uygulama etki alanına özgü veri yapıları serbest bırakılır.  
+Bir uygulama etki alanını kullanmayı bitirdiğinizde <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> metodunu kullanarak kaldırın. **Unload** yöntemi, belirtilen uygulama etki alanını düzgün bir şekilde kapatır. Kaldırma işlemi sırasında, uygulama etki alanına hiçbir yeni iş parçacığı erişemez ve tüm uygulama etki alanına özgü veri yapıları serbest bırakılır.  
   
- Uygulama etki alanına yüklenen derlemeler kaldırılır ve artık kullanılamaz. Uygulama etki alanındaki bir derleme etki alanı Tarafsız ise, derleme verileri tüm işlem kapanana kadar bellekte kalır. İşlemin tamamını kapatmaktan başka bir etki alanı nötr derlemeyi kaldırma mekanizması yoktur. Bir uygulama etki alanını kaldırma isteğinin çalışmamasına ve <xref:System.CannotUnloadAppDomainException>neden olduğu durumlar vardır.  
+ Uygulama etki alanına yüklenen derlemeler kaldırılır ve artık kullanılamaz. Uygulama etki alanındaki bir derleme etki alanı Tarafsız ise, derleme verileri tüm işlem kapanana kadar bellekte kalır. İşlemin tamamını kapatmaktan başka bir etki alanı nötr derlemeyi kaldırma mekanizması yoktur. Bir uygulama etki alanını kaldırma isteğinin çalışmamasına ve bir <xref:System.CannotUnloadAppDomainException>ile sonuçlanmasına neden olan durumlar vardır.  
   
- Aşağıdaki örnek `MyDomain`adlı yeni bir uygulama etki alanı oluşturur, konsola bazı bilgileri yazdırır ve ardından uygulama etki alanını kaldırır. Kodu daha sonra, kaldırılan uygulama etki alanının kolay adını konsola yazdırmaya çalışır. Bu eylem, programın sonundaki try/catch deyimleri tarafından işlenen bir özel durum oluşturur.  
+ Aşağıdaki örnek adlı `MyDomain`yeni bir uygulama etki alanı oluşturur, konsola bazı bilgileri yazdırır ve ardından uygulama etki alanını kaldırır. Kodu daha sonra, kaldırılan uygulama etki alanının kolay adını konsola yazdırmaya çalışır. Bu eylem, programın sonundaki try/catch deyimleri tarafından işlenen bir özel durum oluşturur.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.AppDomain.Load#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source3.cpp#3)]

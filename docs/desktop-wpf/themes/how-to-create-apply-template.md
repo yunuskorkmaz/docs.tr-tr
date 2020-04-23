@@ -1,6 +1,6 @@
 ---
-title: WPF - .NET Desktop'da şablon oluşturma
-description: Windows Sunu Temeli ve .NET Core'da bir denetim şablonu oluşturmayı ve başvururmayı öğrenin.
+title: WPF-.NET Desktop 'ta şablon oluşturma
+description: Windows Presentation Foundation ve .NET Core 'da bir denetim şablonu oluşturmayı ve başvuruyu yapmayı öğrenin.
 author: thraka
 ms.author: adegeo
 ms.date: 11/15/2019
@@ -37,25 +37,25 @@ ms.locfileid: "82071250"
 ---
 # <a name="create-a-template-for-a-control"></a>Denetim için şablon oluşturma
 
-Windows Sunu Temeli (WPF) ile varolan bir denetimin görsel yapısını ve davranışını kendi yeniden kullanılabilir şablonunuzla özelleştirebilirsiniz. Şablonlar genel olarak uygulamanıza, pencerelere ve sayfalara veya doğrudan denetimlere uygulanabilir. Yeni bir denetim oluşturmanızı gerektiren çoğu senaryo, varolan bir denetim için yeni bir şablon oluşturmak yerine kapsanabilir.
+Windows Presentation Foundation (WPF) ile, var olan bir denetimin görsel yapısını ve davranışını kendi yeniden kullanılabilir şablonunuz ile özelleştirebilirsiniz. Şablonlar uygulamanıza, Windows ve sayfalarınıza Global olarak veya doğrudan denetimlere uygulanabilir. Yeni bir denetim oluşturmanızı gerektiren çoğu senaryo, var olan bir denetim için yeni bir şablon oluşturmak yerine tarafından ele alınabilir.
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-Bu makalede, <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Button> denetim için yeni bir oluşturma yı keşfedeceksiniz.
+Bu makalede, <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Button> denetim için yeni bir oluşturma keşfedeceksiniz.
 
-## <a name="when-to-create-a-controltemplate"></a>Denetim Şablonu ne zaman oluşturulacak?
+## <a name="when-to-create-a-controltemplate"></a>ControlTemplate ne zaman oluşturulur
 
-Denetimlerin <xref:System.Windows.Controls.Border.Background%2A>, , <xref:System.Windows.Controls.Control.Foreground%2A>ve <xref:System.Windows.Controls.Control.FontFamily%2A>. Bu özellikler denetimin görünümünün farklı yönlerini denetler, ancak bu özellikleri ayarlayarak yapabileceğiniz değişiklikler sınırlıdır. Örneğin, <xref:System.Windows.Controls.Control.Foreground%2A> özelliği maviye ve <xref:System.Windows.Controls.Control.FontStyle%2A> italik bir <xref:System.Windows.Controls.CheckBox>'de ayarlayabilirsiniz. Denetimin görünümünü, denetimdeki diğer özelliklerin yapabileceklerinin ötesinde özelleştirmek istediğinizde, <xref:System.Windows.Controls.ControlTemplate>bir .
+Denetimlerin,, ve <xref:System.Windows.Controls.Border.Background%2A> <xref:System.Windows.Controls.Control.Foreground%2A> <xref:System.Windows.Controls.Control.FontFamily%2A>gibi birçok özelliği vardır. Bu özellikler, denetimin görünümünün farklı yönlerini denetler, ancak bu özellikleri ayarlayarak yapabileceğiniz değişiklikler sınırlıdır. Örneğin, <xref:System.Windows.Controls.Control.Foreground%2A> özelliğini mavi ve <xref:System.Windows.Controls.Control.FontStyle%2A> italik olarak bir <xref:System.Windows.Controls.CheckBox>olarak ayarlayabilirsiniz. Denetimin diğer özelliklerinin yapabilecekleri ayarların ötesinde denetimin görünümünü özelleştirmek istediğinizde, bir <xref:System.Windows.Controls.ControlTemplate>oluşturursunuz.
 
-Çoğu kullanıcı arabiriminde, bir düğme aynı genel görünüme sahiptir: bazı metin içeren bir dikdörtgen. Yuvarlatılmış bir düğme oluşturmak istiyorsanız, düğmeden devralan veya düğmenin işlevselliğini yeniden oluşturan yeni bir denetim oluşturabilirsiniz. Buna ek olarak, yeni kullanıcı denetimi dairesel görsel sağlayacaktır.
+Çoğu kullanıcı arabiriminde, bir düğme aynı genel görünüme sahiptir: metin içeren bir dikdörtgen. Yuvarlatılmış düğme oluşturmak isterseniz, düğmeden devralan yeni bir denetim oluşturabilir veya düğmenin işlevselliğini yeniden oluşturabilirsiniz. Ayrıca, Yeni Kullanıcı denetimi dairesel görseli sağlar.
 
-Varolan bir denetimin görsel düzenini özelleştirerek yeni denetimler oluşturmaktan kaçınabilirsiniz. Yuvarlatılmış bir düğme yle, istenilen görsel düzene sahip bir düğme <xref:System.Windows.Controls.ControlTemplate> oluşturursunuz.
+Varolan bir denetimin görsel yerleşimini özelleştirerek yeni denetimler oluşturmaktan kaçınabilirsiniz. Yuvarlatılmış bir düğme ile, istenen görsel Düzen <xref:System.Windows.Controls.ControlTemplate> ile bir oluşturabilirsiniz.
 
-Diğer taraftan, yeni işlevsellik, farklı özellikler ve yeni ayarlarla bir denetime <xref:System.Windows.Controls.UserControl>ihtiyacınız varsa, yeni bir .
+Öte yandan, yeni işlevlerle, farklı özelliklerde ve yeni ayarlarla bir denetime ihtiyacınız varsa yeni <xref:System.Windows.Controls.UserControl>bir oluştur.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Yeni bir WPF uygulaması oluşturun ve *MainWindow.xaml'da* (veya seçtiğiniz başka bir pencerede) ** \<Pencere>** öğesindeki aşağıdaki özellikleri ayarlayın:
+Yeni bir WPF uygulaması oluşturun ve *MainWindow. xaml* içinde (veya seçtiğiniz başka bir pencerede), ** \<pencere>** öğesinde aşağıdaki özellikleri ayarlayın:
 
 |     |     |
 | --- | --- |
@@ -63,52 +63,52 @@ Yeni bir WPF uygulaması oluşturun ve *MainWindow.xaml'da* (veya seçtiğiniz b
 | **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
 | **[!OP.NO-LOC(MinWidth)]**      | `250` |
 
-** \<Pencere>** öğesinin içeriğini aşağıdaki XAML'ye ayarlayın:
+Pencere>öğesinin içeriğini aşağıdaki xaml olarak ayarlayın: ** \<**
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-Sonunda, *MainWindow.xaml* dosyası aşağıdakilere benzer olmalıdır:
+Sonda, *MainWindow. xaml* dosyası şuna benzer şekilde görünmelidir:
 
 [!code-xaml[InitialWhole](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#InitialWhole)]
 
-Uygulamayı çalıştırarsanız, aşağıdaki gibi görünür:
+Uygulamayı çalıştırırsanız, aşağıdaki gibi görünür:
 
-![İki unstyled düğmeleri ile WPF penceresi](media/create-apply-template/unstyled-button.png)
+![İki stilli düğme içeren WPF penceresi](media/create-apply-template/unstyled-button.png)
 
-## <a name="create-a-controltemplate"></a>Denetim Şablonu Oluşturma
+## <a name="create-a-controltemplate"></a>ControlTemplate oluşturma
 
-A'yı <xref:System.Windows.Controls.ControlTemplate> bildirmenin en yaygın yolu, `Resources` XAML dosyasındaki bölümde kaynak olarak dır. Şablonlar kaynak olduğundan, tüm kaynaklar için geçerli olan aynı kapsam kurallarına uyarlar. Basitçe söylemek gerekirse, şablonu beyan ettiğiniz yer şablonun uygulanabileceği yeri etkiler. Örneğin, şablonu uygulama tanımı XAML dosyanızın kök öğesinde bildirirseniz, şablon uygulamanızın herhangi bir yerinde kullanılabilir. Şablonu bir pencerede tanımlarsanız, şablonu yalnızca bu penceredeki denetimler kullanabilir.
+' In en yaygın yolu, bir <xref:System.Windows.Controls.ControlTemplate> xaml dosyasındaki `Resources` bölümünde kaynak olarak kullanılır. Şablonlar kaynaklar olduğundan, tüm kaynaklar için uygulanan aynı kapsam kurallarına uyar. Basitçe, şablonun nerede uygulanabileceğini etkileyen bir şablon bildirdiğiniz yere koyun. Örneğin, şablonu uygulama tanımı XAML dosyanızın kök öğesinde bildirirseniz, şablon uygulamanızda herhangi bir yerde kullanılabilir. Şablonu bir pencerede tanımlarsanız, şablonu yalnızca o penceredeki denetimler kullanabilir.
 
-Başlangıç olarak, `Window.Resources` *MainWindow.xaml* dosyanıza bir öğe ekleyin:
+İle başlamak için, `Window.Resources` *MainWindow. xaml* dosyanıza bir öğesi ekleyin:
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-Aşağıdaki özellikleri ** \<** kümesi ile yeni bir Denetim Şablonu>oluşturun:
+Aşağıdaki özellikler kümesiyle yeni ** \<bir ControlTemplate>** oluşturun:
 
 |     |     |
 | --- | --- |
-| **x:Anahtar**         | `roundbutton` |
+| **x:Key**         | `roundbutton` |
 | **TargetType**    | `Button` |
 
 Bu denetim şablonu basit olacaktır:
 
-- kontrol için bir kök öğesi, bir<xref:System.Windows.Controls.Grid>
-- düğmenin yuvarlak görünümünü çizmek için bir <xref:System.Windows.Shapes.Ellipse>
-- a <xref:System.Windows.Controls.ContentPresenter> kullanıcı tarafından belirtilen düğme içeriğini görüntülemek için
+- Denetim için bir kök öğe,<xref:System.Windows.Controls.Grid>
+- düğmenin <xref:System.Windows.Shapes.Ellipse> yuvarlanmış görünümünü çizmek için bir
+- <xref:System.Windows.Controls.ContentPresenter> Kullanıcı tarafından belirtilen düğme içeriğini görüntüleme
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#ControlTemplate)]
 
-### <a name="templatebinding"></a>Templatebinding
+### <a name="templatebinding"></a>TemplateBinding
 
-Yeni <xref:System.Windows.Controls.ControlTemplate>bir , denetimin görünümünü değiştirmek için ortak özellikleri kullanmak isteyebilirsiniz. [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) biçimlendirme uzantısı, denetim tarafından tanımlanan bir kamu <xref:System.Windows.Controls.ControlTemplate> malında bulunan bir öğenin özelliğini bağlar. [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md)kullandığınızda, denetimdeki özelliklerin şablona parametre olarak hareket etmesini sağlarsınız. Diğer bir şey, denetimüzerindeki bir özellik ayarlandığında, bu değer üzerinde [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) olan öğeye aktarılır.
+Yeni <xref:System.Windows.Controls.ControlTemplate>bir oluşturduğunuzda, denetimin görünümünü değiştirmek için yine de ortak özellikleri kullanmak isteyebilirsiniz. [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) biçimlendirme uzantısı, <xref:System.Windows.Controls.ControlTemplate> içindeki bir öğesinin özelliğini Denetim tarafından tanımlanan ortak bir özelliğe bağlar. Bir [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md)kullandığınızda, denetimdeki özellikleri şablona parametre olarak davranacak şekilde etkinleştirin. Diğer bir deyişle, bir denetimdeki özellik ayarlandığında, bu değer üzerinde [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) 'e sahip olan öğeye geçirilir.
 
-### <a name="ellipse"></a>Elips
+### <a name="ellipse"></a>Tir
 
-**:::no-loc text="Fill":::** **:::no-loc text="Stroke":::** <xref:System.Windows.Controls.Control.Foreground> <xref:System.Windows.Controls.Control.Background> **Elips>öğesinin ve özelliklerinin denetimin ve özelliklerine bağlı \<** olduğuna dikkat edin.
+**:::no-loc text="Fill":::** **:::no-loc text="Stroke":::** <xref:System.Windows.Controls.Control.Foreground> <xref:System.Windows.Controls.Control.Background> **Elips \<>** öğesinin ve özelliklerinin, denetimin ve özelliklerin özelliklerine bağlandığını unutmayın.
 
-### <a name="contentpresenter"></a>Contentpresenter
+### <a name="contentpresenter"></a>ContentPresenter
 
-Şablona ContentPresenter>öğesi de eklenir. [ \<](xref:System.Windows.Controls.ContentPresenter) Bu şablon bir düğme için tasarlandığından, düğmenin <xref:System.Windows.Controls.ContentControl>'den devraldığı göz önünde bulundurulmalıdır. Düğme öğenin içeriğini sunar. Düz metin veya başka bir denetim gibi düğmenin içindeki her şeyi ayarlayabilirsiniz. Aşağıdakilerin her ikisi de geçerli düğmelerdir:
+Bir [ \<ContentPresenter>](xref:System.Windows.Controls.ContentPresenter) öğesi şablona de eklenir. Bu şablon bir düğme için tasarlandığından, düğmenin Devralındığı göz önüne alın <xref:System.Windows.Controls.ContentControl>. Düğme, öğenin içeriğini gösterir. Düğmenin içinde düz metin veya başka bir denetim gibi her şeyi de ayarlayabilirsiniz. Aşağıdakilerden her ikisi de geçerli düğmelerdir:
 
 ```xaml
 <Button>My Text</Button>
@@ -120,88 +120,88 @@ Yeni <xref:System.Windows.Controls.ControlTemplate>bir , denetimin görünümün
 </Button>
 ```
 
-Önceki örneklerin her ikisinde de metin ve onay kutusu [Button.Content](xref:System.Windows.Controls.ContentControl.Content) özelliği olarak ayarlanır. İçerik olarak ayarlanan ne olursa ** \< **olsun, şablonun yaptığı bir ContentPresenter>aracılığıyla sunulabilir.
+Yukarıdaki örneklerde, metin ve onay kutusu, [Button. Content](xref:System.Windows.Controls.ContentControl.Content) özelliği olarak ayarlanır. İçerik ne olursa olsun, bu, şablonun yaptığı bir ** \<ContentPresenter>** aracılığıyla sunulabilir.
 
-A, a `Button`gibi <xref:System.Windows.Controls.ContentControl> bir türe uygulanırsa, <xref:System.Windows.Controls.ContentPresenter> öğe ağacında aranır. <xref:System.Windows.Controls.ControlTemplate> `ContentPresenter` Bulunursa, şablon denetimin <xref:System.Windows.Controls.ContentControl.Content> özelliğini otomatik olarak `ContentPresenter`.
+' A gibi <xref:System.Windows.Controls.ContentControl> bir türe uygulanırsa, öğe ağacında için bir <xref:System.Windows.Controls.ContentPresenter> aranır. <xref:System.Windows.Controls.ControlTemplate> `Button` `ContentPresenter` Bulunursa, şablon denetimin <xref:System.Windows.Controls.ContentControl.Content> özelliğini otomatik olarak öğesine bağlar `ContentPresenter`.
 
 ## <a name="use-the-template"></a>Şablonu kullanma
 
-Bu makalenin başında bildirilen düğmeleri bulun.
+Bu makalenin başlangıcında belirtilen düğmeleri bulun.
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-İkinci düğmenin <xref:System.Windows.Controls.Control.Template> özelliğini kaynağa `roundbutton` ayarlayın:
+İkinci düğmenin <xref:System.Windows.Controls.Control.Template> özelliğini `roundbutton` kaynak olarak ayarlayın:
 
 [!code-xaml[StyledButton](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButton)]
 
-Projeyi çalıştırıp sonuca bakarsanız, düğmenin yuvarlak bir arka plana sahip olduğunu görürsünüz.
+Projeyi çalıştırırsanız ve sonuca baktığınızda, düğmenin yuvarlatılmış bir arka plana sahip olduğunu görürsünüz.
 
-![Bir şablon oval düğmeile WPF penceresi](media/create-apply-template/styled-button.png)
+![Tek şablon oval düğme içeren WPF penceresi](media/create-apply-template/styled-button.png)
 
-Düğmenin bir daire olmadığını, eğri olduğunu fark etmiş olabilirsiniz. Elips>öğesinin çalışma şekli nedeniyle, her zaman kullanılabilir alanı doldurmak için genişler. ** \<** Düğmenin **:::no-loc text="width":::** ve **:::no-loc text="height":::** özelliklerinin aynı değere değiştirilmesiyle daireyi tek tipleştirin:
+Düğmenin bir daire olmadığını fark etmiş olabilirsiniz ancak eğriltilmiş olduğunu fark etmiş olabilirsiniz. Elips>öğenin çalışma biçimi nedeniyle, her zaman kullanılabilir alanı dolduracak şekilde genişler. ** \<** Düğme **:::no-loc text="width":::** ve özelliklerini aynı değere değiştirerek, **:::no-loc text="height":::** daireyi tek tek yapın:
 
 [!code-xaml[StyledButtonSize](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButtonSize)]
 
-![Tek şablon dairesel düğmeli WPF penceresi](media/create-apply-template/styled-uniform-button.png)
+![Bir şablon dairesel düğme içeren WPF penceresi](media/create-apply-template/styled-uniform-button.png)
 
-## <a name="add-a-trigger"></a>Tetikleyici Ekleme
+## <a name="add-a-trigger"></a>Tetikleyici ekleme
 
-Uygulamalı şabloniçeren bir düğme farklı görünse de, diğer düğmelerle aynı şekilde görünür. Düğmeye basarsanız, <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay ateşler. Ancak, farenizi düğmenin üzerinde hareket ettirdiğinizde düğmenin görsellerinin değişmediğini fark etmiş olabilirsiniz. Bu görsel etkileşimlerin tümü şablon tarafından tanımlanır.
+Şablon uygulanmış bir düğme farklı görünse de, diğer düğmeyle aynı şekilde davranır. Düğmeye basarsanız <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay ateşlenir. Ancak, farenizi düğmenin üzerine getirdiğinizde düğmenin görselleri değişmeyin olduğunu fark etmiş olabilirsiniz. Bu görsel etkileşimler şablon tarafından tanımlanır.
 
-WPF'nin sağladığı dinamik olay ve özellik sistemleriyle, belirli bir özelliği bir değer için izleyebilir ve uygun olduğunda şablonu yeniden şekillendirebilirsiniz. Bu örnekte, düğmenin <xref:System.Windows.UIElement.IsMouseOver> özelliğini izlersiniz. Fare denetimin üzerindeyken, ** \<Elips>** yeni bir renkle şekillendirin. Bu tür tetikleyici *propertytrigger*olarak bilinir.
+WPF 'in sağladığı dinamik olay ve özellik sistemleri ile, bir değer için belirli bir özelliği izleyebilir ve uygun olduğunda şablonu yeniden oluşturabilirsiniz. Bu örnekte, düğmenin <xref:System.Windows.UIElement.IsMouseOver> özelliğini izleyeceksiniz. Fare denetimin üzerindeyken, ** \<elipsi** yeni bir renkle>stil yapın. Bu tetikleyici türü bir *Propertytrigger*olarak bilinir.
 
-Bunun işe yaraması için ** \<Elips>** başvuruda bulunabileceğiniz bir ad eklemeniz gerekir. **Ona backgroundElement**adını verin.
+Bunun çalışması için, ** \<>elips** 'e başvurabileceksiniz bir ad eklemeniz gerekir. **BackgroundElement**adını verin.
 
 [!code-xaml[EllipseName](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml#EllipseName)]
 
-Ardından, <xref:System.Windows.Trigger> [ControlTemplate.Triggers](xref:System.Windows.Controls.ControlTemplate.Triggers) koleksiyonuna yeni bir ekleme. Tetikleyici değeri `true`için `IsMouseOver` olay izleyecek.
+Sonra, <xref:System.Windows.Trigger> [ControlTemplate. Triggers](xref:System.Windows.Controls.ControlTemplate.Triggers) koleksiyonuna yeni bir ekleyin. Tetikleyici, değeri `IsMouseOver` `true`için olayını izleyen bir işlem görür.
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml?name=ControlTemplate&highlight=6-10)]
 
-Ardından, ** \<Elips>** **Dolgu** özelliğini yeni bir renge değiştiren ** \<Tetikleyici>** bir ** \<Ayarlayıcı>** ekleyin.
+Sonra,>**>, \<elipsin** **Fill** özelliğini yeni bir renge değiştiren ** \<tetikleyicisine** bir ** \<ayarlayıcı>** ekleyin.
 
 [!code-xaml[MouseOver](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#MouseOver)]
 
-Projeyi çalıştırın. Fareyi düğmenin üzerinde hareket ettirdiğinizde ** \<Elips'in** renginin>değişir.
+Projeyi çalıştırın. Fareyi düğmenin üzerine getirdiğinizde ** \<elipsin renginin>** değişiklik olduğunu unutmayın.
 
-![fare dolgu rengini değiştirmek için WPF tuşu üzerinde hareket eder](media/create-apply-template/mouse-move-over-button.gif)
+![fare, tüm WPF düğmesine taşınıyor ve Fill rengini değiştirme](media/create-apply-template/mouse-move-over-button.gif)
 
 ## <a name="use-a-visualstate"></a>VisualState kullanma
 
-Görsel durumlar bir denetim tarafından tanımlanır ve tetiklenir. Örneğin, fare denetimin üstüne taşındığında, `CommonStates.MouseOver` durum tetiklenir. Özellik değişikliklerini denetimin geçerli durumuna göre canlandırabilirsiniz. Önceki bölümde, bir ** \<PropertyTrigger>** özelliği ne zaman `IsMouseOver` düğmenin ön planda `true`değiştirmek için `AliceBlue` kullanılmıştır . Bunun yerine, düzgün bir geçiş sağlayarak bu rengin değişimini animasyona rendiren görsel bir durum oluşturun. *VisualStates*hakkında daha fazla bilgi için [WPF'deki Stiller ve şablonlara](../fundamentals/styles-templates-overview.md#visual-states)bakın.
+Görsel durumlar, bir denetim tarafından tanımlanır ve tetiklenir. Örneğin, fare denetimin üzerine taşındığında `CommonStates.MouseOver` durum tetiklenir. Denetimin geçerli durumuna bağlı olarak özellik değişikliklerine animasyon uygulayabilirsiniz. Önceki bölümde, düğmenin ön planını `IsMouseOver` özelliğin olduğu `true` `AliceBlue` zaman değiştirmek için bir ** \<propertytrigger>** kullanıldı. Bunun yerine, bu rengin değişikliğini canlandırarak kesintisiz bir geçiş sağlayan görsel bir durum oluşturun. *Visualstates*hakkında daha fazla bilgi için bkz. [WPF 'de stiller ve şablonlar](../fundamentals/styles-templates-overview.md#visual-states).
 
-PropertyTrigger>animasyonlu görsel duruma dönüştürmek için önce ** \<ControlTemplate.Triggers>** öğesini şablonunuzdan kaldırın. ** \<**
+Propertytrigger>, bir animasyonlu görsel durumuna dönüştürmek için, önce şablonınızdan ** \<ControlTemplate. Triggers>** öğesini kaldırın. ** \<**
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-Ardından, denetim şablonunun ** \<Grid>** kökünde ** \<VisualStateManager.VisualStateGroups>** öğesini ** \<visualStateGroup>** ile `CommonStates`ekleyin. İki durum `Normal` tanımlayın ve `MouseOver`.
+Sonra, denetim şablonunun ** \<kılavuzundaki>** kökünde, VisualStateManager ** \<. VisualStateGroups>** öğesini için `CommonStates`bir ** \<VisualStateGroup>** ekleyin. İki durum tanımlayın `Normal` ve `MouseOver`.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
-VisualState>tanımlanan animasyonlar, bu durum tetiklendiğinde uygulanır. ** \<** Her durum için animasyonlar oluşturun. Animasyonlar bir ** \<Storyboard>** öğesinin içine konur. Storyboards hakkında daha fazla bilgi için [Storyboards Genel Bakış'a](../../framework/wpf/graphics-multimedia/storyboards-overview.md)bakın.
+VisualState>tanımlı animasyonlar, bu durum tetiklendiğinde uygulanır. ** \<** Her durum için animasyonlar oluşturun. Animasyonlar, ** \<film şeridi>** öğesi içine konur. Görsel Taslaklar hakkında daha fazla bilgi için bkz. [görsel taslakları genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 - Normal
 
-  Bu durum elips dolgusu animasyonlar, kontrol `Background` renginde geri.
+  Bu durum, elips dolgusunun animasyonunu, denetimin `Background` rengine geri yüklemeyi hareketlendirir.
 
   [!code-xaml[NormalState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#NormalState)]
 
-- Mouseover
+- Gelme olayından
 
-  Bu durum, elips `Background` rengini yeni bir renge animasyona salar: `Yellow`.
+  Bu durum, elips `Background` rengini yeni bir renkle hareketlendirir:. `Yellow`
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-DenetimŞablonu>artık aşağıdaki gibi görünmelidir. ** \<**
+ControlTemplate>artık aşağıdaki gibi görünmelidir. ** \<**
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-Projeyi çalıştırın. Fareyi düğmenin üzerinde hareket ettirdiğinizde, ** \<Elips'in** renginin animasyon>dikkat edin.
+Projeyi çalıştırın. Fareyi düğmenin üzerine getirdiğinizde, ** \<elips>** hareketlendirir ' ın rengini hareketlendirdiğine dikkat edin.
 
-![fare dolgu rengini değiştirmek için WPF tuşu üzerinde hareket eder](media/create-apply-template/mouse-move-over-button-visualstate.gif)
+![fare, tüm WPF düğmesine taşınıyor ve Fill rengini değiştirme](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [WPF'de denetim için stil oluşturma](../fundamentals/styles-templates-create-apply-style.md)
-- [WPF'deki stiller ve şablonlar](../fundamentals/styles-templates-overview.md)
-- [XAML Kaynaklarına Genel Bakış](../fundamentals/xaml-resources-define.md)
+- [WPF içindeki bir denetim için stil oluşturma](../fundamentals/styles-templates-create-apply-style.md)
+- [WPF 'deki stiller ve şablonlar](../fundamentals/styles-templates-overview.md)
+- [XAML kaynaklarına genel bakış](../fundamentals/xaml-resources-define.md)

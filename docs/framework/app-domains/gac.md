@@ -43,5 +43,5 @@ Ortak dil çalışma zamanının yüklü olduğu her bilgisayarda, genel derleme
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../standard/assembly/strong-named.md)
+- [Derlemeler ve Genel Derleme Önbelleği ile Çalışma](working-with-assemblies-and-the-gac.md)
+- [Tanımlayıcı adlı derlemeler](../../standard/assembly/strong-named.md)

@@ -49,7 +49,7 @@ COM geliştiricileri, uygulamasında dahil etmek üzere plantıkları yönetilen
 
   Çoğu tür bir COM uygulaması tarafından tüketilirken bir tür kitaplığı gerektirir. Bir tür kitaplığı oluşturabilir veya COM geliştiricilerinin bu görevi gerçekleştirmesini sağlayabilirsiniz. Windows SDK, bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:
 
-  - [Tür kitaplığı verme programı](#cpconpackagingassemblyforcomanchor1)
+  - [Tür Kitaplığı Dışarı Aktarıcı](#cpconpackagingassemblyforcomanchor1)
 
   - [TypeLibConverter sınıfı](#cpconpackagingassemblyforcomanchor2)
 
@@ -71,9 +71,9 @@ Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakla
 
 ## <a name="typelibconverter-class"></a>TypeLibConverter sınıfı
 
-**System. Runtime. Interop** ad alanında bulunan <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı, bir derlemede bulunan sınıfları ve ARABIRIMLERI bir com tür kitaplığına dönüştürür. Bu API, önceki bölümde açıklanan tür kitaplığı verme programı ile aynı tür bilgilerini üretir.
+<xref:System.Runtime.InteropServices.TypeLibConverter> **System. Runtime. Interop** ad alanında bulunan sınıfı, bir derlemede bulunan SıNıFLARı ve arabirimleri bir com tür kitaplığına dönüştürür. Bu API, önceki bölümde açıklanan tür kitaplığı verme programı ile aynı tür bilgilerini üretir.
 
-**TypeLibConverter sınıfı** <xref:System.Runtime.InteropServices.ITypeLibConverter>uygular.
+**TypeLibConverter sınıfı** öğesini uygular <xref:System.Runtime.InteropServices.ITypeLibConverter>.
 
 <a name="cpconpackagingassemblyforcomanchor3"></a>
 
@@ -92,9 +92,9 @@ Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakla
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Birlikte Çalışma için .NET Türlerini Niteleme](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Birlikte Çalışma için Niteleyici .NET Türleri](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Sınıf arabirimine giriş](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Bütünleştirilmiş Kod Güvenliği Konuları](../../standard/assembly/security-considerations.md)
-- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
+- [Bütünleştirilmiş kod güvenliği konuları](../../standard/assembly/security-considerations.md)
+- [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Derlemeleri COM ile Kaydetme](registering-assemblies-with-com.md)
 - [Nasıl yapılır: uygulamalarda tür kitaplıklarını Win32 kaynakları olarak katıştırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

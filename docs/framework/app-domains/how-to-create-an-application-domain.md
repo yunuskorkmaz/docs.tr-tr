@@ -18,9 +18,9 @@ ms.locfileid: "73119883"
 # <a name="how-to-create-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanı Oluşturma
 Ortak dil çalışma zamanı ana bilgisayarı, gerektiğinde uygulama etki alanlarını otomatik olarak oluşturur. Bununla birlikte, kendi uygulama etki alanlarınızı oluşturabilir ve bunları kişisel olarak yönetmek istediğiniz derlemelere yükleyebilirsiniz. Ayrıca, kodu yürütebileceğiniz uygulama etki alanları da oluşturabilirsiniz.  
   
- <xref:System.AppDomain?displayProperty=nameWithType> sınıfında aşırı yüklenmiş **CreateDomain** yöntemlerinden birini kullanarak yeni bir uygulama etki alanı oluşturursunuz. Uygulama etki alanına bir ad verebilir ve bu ada göre başvuru yapabilirsiniz.  
+ Sınıfında aşırı yüklenmiş CreateDomain yöntemlerinden birini kullanarak yeni bir uygulama etki alanı oluşturursunuz. **CreateDomain** <xref:System.AppDomain?displayProperty=nameWithType> Uygulama etki alanına bir ad verebilir ve bu ada göre başvuru yapabilirsiniz.  
   
- Aşağıdaki örnek yeni bir uygulama etki alanı oluşturur, `MyDomain`adı atar ve ardından ana bilgisayar etki alanının adını ve yeni oluşturulan alt uygulama etki alanını konsola yazdırır.  
+ Aşağıdaki örnek yeni bir uygulama etki alanı oluşturur, bu adı `MyDomain`atar ve ardından ana bilgisayar etki alanının adını ve yeni oluşturulan alt uygulama etki alanını konsola yazdırır.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]

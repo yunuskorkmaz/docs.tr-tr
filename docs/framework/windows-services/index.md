@@ -18,37 +18,37 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "71053551"
 ---
-# <a name="develop-windows-service-apps"></a>Windows hizmet uygulamaları geliştirme
+# <a name="develop-windows-service-apps"></a>Windows hizmeti uygulamaları geliştirme
 
-Visual Studio veya .NET Framework SDK'yı kullanarak, hizmet olarak yüklenmiş bir uygulama oluşturarak kolayca hizmet oluşturabilirsiniz. Bu tür bir uygulama Windows hizmeti olarak adlandırılır. Çerçeve özellikleriyle, hizmetleri oluşturabilir, yükleyebilir ve davranışlarını başlatabilir, durdurabilir ve başka bir şekilde denetleyebilirsiniz.
+Visual Studio veya .NET Framework SDK kullanarak, hizmet olarak yüklenen bir uygulama oluşturarak kolayca hizmet oluşturabilirsiniz. Bu tür bir uygulama Windows hizmeti olarak adlandırılır. Çerçeve özellikleri sayesinde, hizmetler oluşturabilir, bunları yükleyebilir ve davranışlarını başlatabilir, durdurabilir ve başka bir şekilde denetleyebilirsiniz.
 
 > [!NOTE]
-> Visual Studio'da Visual C# veya Visual Basic'te yönetilen kodda, gerektiğinde varolan C++ koduyla birlikte çalışabilen bir hizmet oluşturabilirsiniz. Veya, [ATL Project Wizard'ı](/cpp/atl/reference/atl-project-wizard)kullanarak yerel C++'da bir Windows hizmeti oluşturabilirsiniz.
+> Visual Studio 'da, Visual C# veya Visual Basic yönetilen kodda bir hizmet oluşturabilirsiniz. Bu, gerekirse mevcut C++ kodu ile birlikte çalışabilir. Veya, [atl Proje Sihirbazı 'nı](/cpp/atl/reference/atl-project-wizard)kullanarak yerel C++ ' da bir Windows hizmeti oluşturabilirsiniz.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
 
-Windows hizmet uygulamalarına genel bakış, bir hizmetin kullanım ömrü ve hizmet uygulamalarının diğer yaygın proje türlerinden nasıl farklı olduğu hakkında genel bir bakış sağlar.
+Windows hizmet uygulamalarına genel bakış, bir hizmetin kullanım süresi ve hizmet uygulamalarının diğer ortak proje türlerinden farkı nasıl farklılık gösterir.
 
 [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
-Visual Basic ve Visual C#'da bir hizmet oluşturmaya bir örnek sağlar.
+Visual Basic ve Visual C# ' de bir hizmet oluşturmak için bir örnek sağlar.
 
 [Hizmet Uygulaması Programlama Mimarisi](service-application-programming-architecture.md)
 
-Hizmet programlamada kullanılan dil öğelerini açıklar.
+Hizmet programlamasında kullanılan dil öğelerini açıklar.
 
 [Nasıl Yapılır: Windows Hizmetleri Oluşturma](how-to-create-windows-services.md)
 
-Windows hizmeti proje şablonu kullanarak Windows hizmetleri oluşturma ve yapılandırma işlemini açıklar.
+Windows hizmeti proje şablonunu kullanarak Windows hizmetlerini oluşturma ve yapılandırma sürecini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-<xref:System.ServiceProcess.ServiceBase>- Hizmet oluşturmak için <xref:System.ServiceProcess.ServiceBase> kullanılan sınıfın temel özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceBase>- <xref:System.ServiceProcess.ServiceBase> Sınıfının hizmetleri oluşturmak için kullanılan ana özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceProcessInstaller>- Hizmetlerinizi yüklemek <xref:System.ServiceProcess.ServiceProcessInstaller> ve kaldırmak için <xref:System.ServiceProcess.ServiceInstaller> sınıfla birlikte kullanılan sınıfın özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceProcessInstaller>-Hizmetlerinizi yüklemek ve kaldırmak için <xref:System.ServiceProcess.ServiceProcessInstaller> <xref:System.ServiceProcess.ServiceInstaller> sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceInstaller>- Hizmetinizi yüklemek <xref:System.ServiceProcess.ServiceInstaller> ve kaldırmak için <xref:System.ServiceProcess.ServiceProcessInstaller> sınıfla birlikte kullanılan sınıfın özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceInstaller>-Hizmetinizi yüklemek ve kaldırmak için <xref:System.ServiceProcess.ServiceInstaller> <xref:System.ServiceProcess.ServiceProcessInstaller> sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
-[Şablonlardan Projeler Oluştur](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) - Bu bölümde kullanılan proje türlerini ve aralarındanasıl seçim yapılacağını açıklar.
+[Şablonlardan proje oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) -bu bölümde kullanılan proje türlerini ve bunların arasından nasıl seçim yapılacağını açıklar.

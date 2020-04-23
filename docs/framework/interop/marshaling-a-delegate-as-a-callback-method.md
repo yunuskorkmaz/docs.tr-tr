@@ -24,13 +24,13 @@ Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcileri
 
 Geri çağırma örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:
 
-- `TestCallBack`, PInvokeLib. dll dosyasından verildi.
+- `TestCallBack`PInvokeLib. dll dosyasından verildi.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2`, PInvokeLib. dll dosyasından verildi.
+- `TestCallBack2`PInvokeLib. dll dosyasından verildi.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

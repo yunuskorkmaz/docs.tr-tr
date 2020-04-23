@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hizmetleri Program Aracılığıyla Yazma'
+title: 'Nasıl Yapılır: Hizmetleri Programlamayla Yazma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053553"
 ---
-# <a name="how-to-write-services-programmatically"></a>Nasıl yapılır: Hizmetleri Program Aracılığıyla Yazma
+# <a name="how-to-write-services-programmatically"></a>Nasıl Yapılır: Hizmetleri Programlamayla Yazma
 Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğer altyapı öğelerini kendiniz ayarlayarak kendi hizmetlerinizi yazabilirsiniz. Programlı olarak bir hizmet oluşturduğunuzda, şablonun sizin için başka bir tanıtıcı tutacağından birkaç adım gerçekleştirmeniz gerekir:  
   
 - <xref:System.ServiceProcess.ServiceBase> Sınıfından devralması için hizmet sınıfınızı ayarlamanız gerekir.  
   
 - Hizmet projeniz için çalıştırılacak `Main` hizmetleri tanımlayan bir yöntem oluşturmanız ve üzerinde <xref:System.ServiceProcess.ServiceBase.Run%2A> yöntemi çağırmalısınız.  
   
-- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Ve<xref:System.ServiceProcess.ServiceBase.OnStop%2A> yordamlarını geçersiz kılmanız ve çalıştırmak istediğiniz kodu doldurmanız gerekir.  
+- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yordamlarını geçersiz kılmanız ve çalıştırmak istediğiniz kodu doldurmanız gerekir.  
   
 ### <a name="to-write-a-service-programmatically"></a>Program aracılığıyla bir hizmet yazmak için  
   
@@ -35,7 +35,7 @@ Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğe
   
     3. **System. ServiceProcess. dll** ' ye kaydırın ve **Seç**' e tıklayın.  
   
-    4. **Tamam**'ı tıklatın.  
+    4. **Tamam**'a tıklayın.  
   
 2. Bir sınıf ekleyin ve bunu öğesinden <xref:System.ServiceProcess.ServiceBase>devralacak şekilde yapılandırın:  
   
@@ -59,21 +59,21 @@ Windows hizmeti proje şablonunu kullanmayı tercih ederseniz, devralma ve diğe
   
 6. İçin özel işlem tanımlamak istediğiniz diğer yöntemleri geçersiz kılın ve hizmetin her durumda gerçekleşmesi gereken eylemleri belirlemek için kod yazın.  
   
-7. Hizmet uygulamanız için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamanıza](how-to-add-installers-to-your-service-application.md)yükleyicileri ekleyin.  
+7. Hizmet uygulamanız için gerekli yükleyicileri ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: hizmet uygulamanıza yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md).  
   
 8. **Build** menüsünden **Build Solution** ' i seçerek projenizi oluşturun.  
   
     > [!NOTE]
     > Projenizi çalıştırmak için F5 tuşuna basmayın; bir hizmet projesini bu şekilde çalıştıramazsınız.  
   
-9. Hizmetinizi yüklemek için bir kurulum projesi ve özel eylemler oluşturun. Bir örnek için bkz [. İzlenecek yol: Bileşen tasarımcısında](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)bir Windows hizmeti uygulaması oluşturma.  
+9. Hizmetinizi yüklemek için bir kurulum projesi ve özel eylemler oluşturun. Örnek için bkz. [Izlenecek yol: bileşen tasarımcısında Windows hizmet uygulaması oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   
-10. Hizmetini yükleyin. Daha fazla bilgi için [nasıl yapılır: Hizmetleri](how-to-install-and-uninstall-services.md)yükleme ve kaldırma.  
+10. Hizmeti yükler. Daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri yükleme ve kaldırma](how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)
-- [Nasıl yapılır: Hizmet uygulamanıza yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md)
-- [Nasıl yapılır: Hizmetlerle Ilgili bilgileri günlüğe kaydet](how-to-log-information-about-services.md)
-- [İzlenecek yol: Bileşen tasarımcısında bir Windows hizmeti uygulaması oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl Yapılır: Windows Hizmetleri Oluşturma](how-to-create-windows-services.md)
+- [Nasıl Yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](how-to-add-installers-to-your-service-application.md)
+- [Nasıl Yapılır: Hizmet Bilgilerini Günlüğe Kaydetme](how-to-log-information-about-services.md)
+- [İzlenecek Yol: Bileşen Tasarımcısında Windows Hizmeti Uygulaması Oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -34,7 +34,7 @@ Bu tür bilgilerini uygulamanız için kullanılabilir hale getirmek için iki y
 
 Yalnızca tasarım zamanı birlikte çalışma derlemelerini kullandığınızda, COM bileşeninin yazarı tarafından yayımlanan birincil birlikte çalışma derlemesinden tür bilgilerini ekleyebilirsiniz. Bununla birlikte, birincil birlikte çalışma derlemesini uygulamanızla birlikte dağıtmanız gerekmez.
 
-Çoğu uygulama bir COM bileşeninin tüm özelliklerini kullanmadığından, yalnızca tasarım zamanı birlikte çalışma derlemelerini kullanmak uygulamanızın boyutunu azaltır. Derleyici tür bilgilerini katıştıran çok verimlidir; uygulamanız bir COM arabiriminde yöntemlerin yalnızca bazılarını kullanıyorsa, derleyici kullanılmayan yöntemleri eklemez. Gömülü tür bilgilerine sahip bir uygulama, başka bir uygulamayla etkileşime geçtiğinde veya bir birincil birlikte çalışma derlemesi kullanan bir uygulamayla etkileşime geçtiğinde, ortak dil çalışma zamanı, iki tür aynı ad aynı COM türünü temsil eder. COM nesnelerini kullanmak için bu kuralları bilmeniz gerekmez. Ancak kurallarla ilgileniyorsanız, bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](type-equivalence-and-embedded-interop-types.md).
+Çoğu uygulama bir COM bileşeninin tüm özelliklerini kullanmadığından, yalnızca tasarım zamanı birlikte çalışma derlemelerini kullanmak uygulamanızın boyutunu azaltır. Derleyici tür bilgilerini katıştıran çok verimlidir; uygulamanız bir COM arabiriminde yöntemlerin yalnızca bazılarını kullanıyorsa, derleyici kullanılmayan yöntemleri eklemez. Gömülü tür bilgilerine sahip bir uygulama, başka bir uygulamayla etkileşime geçtiğinde veya birincil birlikte çalışma derlemesini kullanan bir uygulamayla etkileşime geçtiğinde, ortak dil çalışma zamanı, aynı ada sahip iki türün aynı COM türünü temsil ettiğini anlamak için tür denklik kurallarını kullanır. COM nesnelerini kullanmak için bu kuralları bilmeniz gerekmez. Ancak kurallarla ilgileniyorsanız, bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](type-equivalence-and-embedded-interop-types.md).
 
 ## <a name="generating-metadata"></a>Meta veriler üretiliyor
 
@@ -52,7 +52,7 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> sınıfı
 
-  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp. exe ile aynı meta veri çıkışını üretir. Ancak, Tlbimp. exe ' den farklı olarak <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı, bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
+  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp. exe ile aynı meta veri çıkışını üretir. Ancak, Tlbimp. exe ' den farklı <xref:System.Runtime.InteropServices.TypeLibConverter> olarak, sınıfı bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
 
 - Özel sarmalayıcılar
 
@@ -62,7 +62,7 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 
   - Tanımlanmakta olan coclass 'ları ve arabirimlerin kesin açıklamaları.
 
-  - Uygun .NET Framework sınıf tanımlarını oluşturabilen C# derleyici gibi bir derleyici.
+  - C# derleyicisi gibi uygun .NET Framework sınıf tanımlarını oluşturabilen bir derleyici.
 
   - Kitaplık-derleme dönüştürme kuralları türü hakkında bilgi.
 
@@ -75,10 +75,10 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
 - [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
 - [Standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)
 - [Birlikte Çalışma Uygulamasını Dağıtma](deploying-an-interop-application.md)
 - [Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme](how-to-add-references-to-type-libraries.md)
-- [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Bütünleştirilmiş Kodları Oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md)

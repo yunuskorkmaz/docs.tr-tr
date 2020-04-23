@@ -25,7 +25,7 @@ Yönetilmeyen DLL işlevlerinin çağrılması, diğer yönetilen kodu çağırm
  [Yapıları Geçirme](passing-structures.md)  
  Önceden tanımlanmış bir düzen ile veri yapıları geçirme sorunlarını belirler.  
   
- [Geri Arama İşlevleri](callback-functions.md)  
+ [Geri Çağırma İşlevleri](callback-functions.md)  
  Geri çağırma işlevleriyle ilgili temel bilgileri sağlar.  
   
  [Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama](how-to-implement-callback-functions.md)  
@@ -35,5 +35,5 @@ Yönetilmeyen DLL işlevlerinin çağrılması, diğer yönetilen kodu çağırm
  [Yönetilmeyen DLL İşlevlerini Kullanma](consuming-unmanaged-dll-functions.md)  
  Platform Invoke kullanılarak yönetilmeyen DLL işlevlerinin nasıl çağrılacağını açıklar.  
   
- [Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)  
+ [Platform Çağırma ile Veri Sıralama](marshaling-data-with-platform-invoke.md)  
  Yöntem parametrelerinin nasıl bildirilemeyeceğini ve yönetilmeyen kitaplıklar tarafından dışarıya alınan işlevlere bağımsız değişkenlerin nasıl geçirileceğini açıklar.

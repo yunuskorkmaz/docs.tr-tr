@@ -17,9 +17,9 @@ ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181497"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu
-Bu örnek, com [sunucusuna](#cpconcominteropsamplenetclientcomserveranchor2)erişmek için oluşturulmuş bir [.NET istemcisinin](#cpconcominteropsamplenetclientcomserveranchor1)com coclass örneğini nasıl oluşturduğunu ve sınıf üyelerini ipotek hesaplamaları gerçekleştirmeye nasıl çağırdığını gösterir.  
+Bu örnek, bir [com sunucusuna](#cpconcominteropsamplenetclientcomserveranchor2)erişmek için oluşturulan bir [.net ISTEMCISININ](#cpconcominteropsamplenetclientcomserveranchor1), bir com coclass örneği oluşturduğunu ve ipotek hesaplamaları gerçekleştirmek için sınıf üyelerini çağırışını gösterir.  
   
- Bu örnekte, istemci **Kredi** coclass'ının bir örneğini oluşturur ve çağırır, dört bağımsız değişkeni (bu dört bağımsız değişkenden biri sıfıra eşit) örneği geçer ve hesaplamaları görüntüler. Bu örnekten kod parçaları bu bölümde görünür.  
+ Bu örnekte, istemci, **kredi** coclass 'ın bir örneğini oluşturur ve çağırır, örnek olarak dört bağımsız değişken geçirir (Bu dördü sıfıra eşit bir tane) ve hesaplamaları görüntüler. Bu örnekteki kod parçaları bu bölümün tamamında görüntülenir.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
 ## <a name="net-client"></a>.NET İstemcisi  
@@ -152,7 +152,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
-## <a name="com-server"></a>COM Sunucusu  
+## <a name="com-server"></a>COM sunucusu  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  

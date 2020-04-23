@@ -1,5 +1,5 @@
 ---
-title: 'Sorun Giderme: Windows hizmetlerinde hata ayıklama'
+title: 'Sorun Giderme: Windows Hizmetlerinde Hata Ayıklama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -19,12 +19,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053505"
 ---
-# <a name="troubleshooting-debugging-windows-services"></a>Sorun Giderme: Windows hizmetlerinde hata ayıklama
+# <a name="troubleshooting-debugging-windows-services"></a>Sorun Giderme: Windows Hizmetlerinde Hata Ayıklama
 Bir Windows hizmet uygulamasında hata ayıklarken, hizmetiniz ve **Windows Service Manager** etkileşime geçin. **Service Manager** <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemi çağırarak hizmetinizi başlatır ve sonra <xref:System.ServiceProcess.ServiceBase.OnStart%2A> yöntemin dönmesi için 30 saniye bekler. Yöntem bu kez dönmezse, yönetici hizmetin başlatılamayacağını belirten bir hata gösterir.  
   
- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemi[hata ayıkladığınızda, nasıl yapılır: Windows hizmet uygulamalarında](how-to-debug-windows-service-applications.md)hata ayıklayın, bu 30 saniyelik sürenin farkında olmalısınız. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemine bir kesme noktası yerleştirirseniz ve 30 saniye içinde ilerlemeyin, yönetici hizmeti başlatmayacak.  
+ <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemi hata ayıkladığınızda, [nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](how-to-debug-windows-service-applications.md)bölümünde açıklandığı gibi, bu 30 saniyelik sürenin farkında olmanız gerekir. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Yöntemine bir kesme noktası yerleştirirseniz ve 30 saniye içinde ilerlemeyin, yönetici hizmeti başlatmayacak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows hizmet uygulamalarında hata ayıklama](how-to-debug-windows-service-applications.md)
-- [Windows Hizmeti Uygulamalarına Giriş](introduction-to-windows-service-applications.md)
+- [Nasıl Yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama](how-to-debug-windows-service-applications.md)
+- [Windows Hizmet Uygulamalarına Giriş](introduction-to-windows-service-applications.md)

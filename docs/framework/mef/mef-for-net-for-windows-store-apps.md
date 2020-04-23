@@ -10,17 +10,17 @@ ms.lasthandoff: 12/04/2019
 ms.locfileid: "74802184"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows Mağazası uygulamaları için .NET için MEF
-<xref:System.Composition?displayProperty=nameWithType> ve alt ad alanları, Genişletilebilir Windows 8. x mağaza uygulamalarını Managed Extensibility Framework (MEF) ile geliştirmeye yönelik türler içerir. Bu ad alanları, Windows 8 işletim sistemi için Windows 8. x Mağaza uygulamaları alt kümesinin .NET bölümüdür.  
+<xref:System.Composition?displayProperty=nameWithType>ve alt ad alanlarında, Managed Extensibility Framework (MEF) ile genişletilebilir Windows 8. x Mağazası uygulamaları geliştirmeye yönelik türler bulunur. Bu ad alanları, Windows 8 işletim sistemi için Windows 8. x Mağaza uygulamaları alt kümesinin .NET bölümüdür.  
   
- Bu ad alanları .NET Framework ile dağıtılan çekirdek sınıf kitaplığının bir parçası değildir. Bu ad alanlarını yüklemek için projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. Composition paketini çevrimiçi olarak arayın.  
+ Bu ad alanları, .NET Framework dağıtılan çekirdek sınıf kitaplığının bir parçası değildir. Bu ad alanlarını yüklemek için projenizi Visual Studio 'da açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. Composition paketini çevrimiçi olarak arayın.  
   
-- <xref:System.Composition?displayProperty=nameWithType>, Windows 8. x Mağazası uygulamaları için Core MEF 'i oluşturan sınıflar sağlar.  
+- <xref:System.Composition?displayProperty=nameWithType>Windows 8. x Mağazası uygulamaları için Core MEF 'i oluşturan sınıflar sağlar.  
   
-- <xref:System.Composition.Convention?displayProperty=nameWithType>, kural tabanlı bir yapılandırma modeliyle MEF kullanmayı destekleyen türler sağlar.  
+- <xref:System.Composition.Convention?displayProperty=nameWithType>kural tabanlı bir yapılandırma modeliyle MEF kullanmayı destekleyen türler sağlar.  
   
-- <xref:System.Composition.Hosting?displayProperty=nameWithType>, ana bilgisayar uygulamalarına yönelik geliştiriciler için yararlı olan MEF türleri sağlar.  
+- <xref:System.Composition.Hosting?displayProperty=nameWithType>, ana bilgisayar uygulamaları geliştiricileri için yararlı olan MEF türleri sağlar.  
   
-- <xref:System.Composition.Hosting.Core?displayProperty=nameWithType>, bileşim altyapısı tarafından dahili olarak kullanılan MEF türleri sağlar.  
+- <xref:System.Composition.Hosting.Core?displayProperty=nameWithType>bileşim altyapısı tarafından dahili olarak kullanılan MEF türleri sağlar.  
   
  Windows 8. x Mağazası uygulamaları için .NET ve içerdiği ad alanları ve türlerin listesi hakkında daha fazla bilgi için bkz. [Windows Mağazası uygulamalarına genel bakış için .net](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   

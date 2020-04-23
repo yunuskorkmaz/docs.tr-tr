@@ -17,7 +17,7 @@ ms.locfileid: "79181306"
 
 Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar. Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.  
   
- Aşağıda, Bir DLL işlevini yeniden adlandırmak için olası nedenlerin bir listesi vetir:  
+ Bir DLL işlevini yeniden adlandırmak için olası nedenlerinin bir listesi aşağıda verilmiştir:  
   
 - Büyük/küçük harf duyarlı API işlev adlarını kullanmaktan kaçınmak için  
   
@@ -31,7 +31,7 @@ Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetil
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Visual Basic'te bir İşlevi Yeniden Adlandırma  
 
-Visual Basic, alanı ayarlamak için **Bildiriyi** <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> beyan etme deyimindeki **İşlev** anahtar sözcük'üne kullanır. Aşağıdaki örnek, temel bir bildirimi gösterir.  
+Visual Basic, <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alanı ayarlamak için **Declare** deyimindeki **Function** anahtar sözcüğünü kullanır. Aşağıdaki örnek, temel bir bildirimi gösterir.  
   
 ```vb
 Friend Class NativeMethods
@@ -43,7 +43,7 @@ Friend Class NativeMethods
 End Class
 ```
   
-Aşağıdaki örnekte gösterildiği gibi, tanımınıza **Alias** anahtar sözcüğünüzü ekleyerek **MessageBox** giriş noktasını **MsgBox** ile değiştirebilirsiniz. Her iki örnekte de **Otomatik** anahtar kelime, giriş noktasının karakter kümesi sürümünü belirtme gereksinimini ortadan kaldırır. Karakter kümesi seçme hakkında daha fazla bilgi için [bkz.](specifying-a-character-set.md)  
+Aşağıdaki örnekte gösterildiği gibi, tanımınıza **diğer ad** anahtar sözcüğünü ekleyerek **MessageBox** giriş noktasını **MsgBox** ile değiştirebilirsiniz. Her iki örnekte de **Auto** anahtar sözcüğü, giriş noktasının karakter kümesi sürümünü belirtme gereksinimini ortadan kaldırır. Bir karakter kümesi seçme hakkında daha fazla bilgi için bkz. [bir karakter kümesi belirtme](specifying-a-character-set.md).  
   
 ```vb
 Friend Class NativeMethods
@@ -57,7 +57,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>C# ve C++'de bir İşlevi Yeniden Adlandırma  
- Bir DLL işlevini ada veya sıraya göre belirtmek için <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alanını kullanabilirsiniz. Yöntem tanımınızdaki işlevin adı DLL'deki giriş noktasıyla aynıysa, İşlevin **EntryPoint** alanıyla açıkça tanımlanması gerekmez. Aksi halde, bir ad veya sıra belirtmek için aşağıdaki öznitelik biçimlerinden birini kullanın:  
+ Bir DLL işlevini ada veya sıraya göre belirtmek için <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> alanını kullanabilirsiniz. Yöntem tanımınızdaki işlevin adı DLL 'deki giriş noktasıyla aynıysa, işlevi **entryPoint** alanı ile açıkça belirlemeniz gerekmez. Aksi halde, bir ad veya sıra belirtmek için aşağıdaki öznitelik biçimlerinden birini kullanın:  
   
 ```csharp
 [DllImport("DllName", EntryPoint = "Functionname")]
@@ -66,7 +66,7 @@ End Class
   
  Bir sıralı sayıyı (#) işareti ile kullanmanız gerektiğini unutmayın.  
   
- Aşağıdaki örnek, **EntryPoint** alanını kullanarak **MessageBoxA'nın** kodunuzda **MsgBox** ile nasıl değiştirilmeye devam edilebildiğini gösterir.  
+ Aşağıdaki örnek, **giriş noktası** alanını kullanarak kodunuzda bir **MsgBox** ile **MessageBoxA** 'nın nasıl değiştirileceğini gösterir.  
   
 ```csharp
 using System;

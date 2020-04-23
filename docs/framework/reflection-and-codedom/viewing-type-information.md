@@ -19,14 +19,14 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130009"
 ---
 # <a name="viewing-type-information"></a>Tür Bilgilerini Görüntüleme
-<xref:System.Type?displayProperty=nameWithType> sınıfı, yansıma için bir merkezidir. Ortak dil çalışma zamanı, yansıma istediğinde yüklenen bir tür için **türü** oluşturur. Bu tür hakkındaki her şeyi bulmak için bir **tür** nesnesinin yöntemlerini, alanlarını, özelliklerini ve iç içe geçmiş sınıfları kullanabilirsiniz.  
+<xref:System.Type?displayProperty=nameWithType> Sınıfı, yansıma için bir merkezidir. Ortak dil çalışma zamanı, yansıma istediğinde yüklenen bir tür için **türü** oluşturur. Bu tür hakkındaki her şeyi bulmak için bir **tür** nesnesinin yöntemlerini, alanlarını, özelliklerini ve iç içe geçmiş sınıfları kullanabilirsiniz.  
   
- Yüklü olmayan derlemelerden **tür** nesneleri almak için <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> kullanın, istediğiniz tür veya türlerin adını geçirerek. Zaten yüklü olan bir derlemeden **tür** nesnelerini almak için <xref:System.Type.GetType%2A?displayProperty=nameWithType> kullanın. Modül **türü** nesnelerini almak için <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> ve <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> kullanın.  
+ Yüklü <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> olmayan <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> derlemelerden, istediğiniz tür veya türlerin adını geçirerek **tür** nesneleri almak için veya kullanın. Zaten <xref:System.Type.GetType%2A?displayProperty=nameWithType> yüklü olan bir derlemeden **tür** nesnelerini almak için kullanın. Modül <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> türü <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> nesneleri almak için **Type** ve kullanın.  
   
 > [!NOTE]
 > Genel türleri ve yöntemleri incelemek ve işlemek istiyorsanız, lütfen [yansıma ve genel türler](reflection-and-generic-types.md) ' de sunulan ek bilgilere ve [nasıl yapılır: yansıma Ile genel türleri Inceleme ve örnek oluşturma](how-to-examine-and-instantiate-generic-types-with-reflection.md)bölümüne bakın.  
   
- Aşağıdaki örnek, bir derlemenin <xref:System.Reflection.Assembly> nesne ve modülünü almak için gereken sözdizimini gösterir.  
+ Aşağıdaki örnek, bir derlemenin <xref:System.Reflection.Assembly> nesne ve modülünü almak için gereken söz dizimini gösterir.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source5.cpp#6)]
  [!code-csharp[Conceptual.Types.ViewInfo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#6)]
@@ -38,11 +38,11 @@ ms.locfileid: "73130009"
  [!code-csharp[Conceptual.Types.ViewInfo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source5.cs#7)]
  [!code-vb[Conceptual.Types.ViewInfo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source5.vb#7)]  
   
- Bir **türü**edindiğinizde, bu türden Üyeler hakkında bilgi bulmanın birçok yolu vardır. Örneğin, geçerli türdeki üyelerin her birini açıklayan bir <xref:System.Reflection.MemberInfo> nesne dizisi elde eden <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> yöntemini çağırarak tüm tür üyeleri hakkında bilgi edinebilirsiniz.  
+ Bir **türü**edindiğinizde, bu türden Üyeler hakkında bilgi bulmanın birçok yolu vardır. Örneğin, geçerli türdeki üyelerin her birini açıklayan bir <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> <xref:System.Reflection.MemberInfo> nesne dizisi elde eden yöntemini çağırarak tüm tür üyeleri hakkında bilgi edinebilirsiniz.  
   
  Ayrıca, bir veya daha fazla Oluşturucu, yöntem, olay, alan veya ada göre belirttiğiniz özellikler hakkında bilgi almak için **tür** sınıfındaki yöntemleri de kullanabilirsiniz. Örneğin, <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType> geçerli sınıfın belirli bir oluşturucusunu kapsüller.  
   
- Bir **tür**varsa, bu türü içeren modülü kapsülleyen bir nesne almak için <xref:System.Type.Module%2A?displayProperty=nameWithType> özelliğini kullanabilirsiniz. Modülün bulunduğu derlemeyi kapsülleyen bir nesneyi bulmak için <xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> özelliğini kullanın. Türü, <xref:System.Type.Assembly%2A?displayProperty=nameWithType> özelliğini kullanarak doğrudan kapsülleyen derlemeyi elde edebilirsiniz.  
+ Bir **tür**varsa, bu türü içeren modülü kapsülleyen bir <xref:System.Type.Module%2A?displayProperty=nameWithType> nesne almak için özelliğini kullanabilirsiniz. Modülünü içeren <xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> derlemeyi kapsülleyen bir nesneyi bulmak için özelliğini kullanın. <xref:System.Type.Assembly%2A?displayProperty=nameWithType> Özelliğini kullanarak türü sarmalayan derlemeyi doğrudan elde edebilirsiniz.  
   
 ## <a name="systemtype-and-constructorinfo"></a>System. Type ve ConstructorInfo  
  Aşağıdaki örnek, bu örnekte <xref:System.String> sınıfı için oluşturucuların nasıl ekleneceğini gösterir.  
@@ -52,9 +52,9 @@ ms.locfileid: "73130009"
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo, MethodInfo, FieldInfo ve PropertyInfo  
- <xref:System.Reflection.MemberInfo>, <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.FieldInfo>veya <xref:System.Reflection.PropertyInfo> nesnelerini kullanarak türün yöntemleri, özellikleri, olayları ve alanları hakkında bilgi edinin.  
+ , <xref:System.Reflection.MemberInfo>, Veya <xref:System.Reflection.MethodInfo> <xref:System.Reflection.FieldInfo> <xref:System.Reflection.PropertyInfo> nesnelerini kullanarak türün yöntemleri, özellikleri, olayları ve alanları hakkında bilgi edinin.  
   
- Aşağıdaki örnek, **System. IO. File** sınıfındaki üye sayısını listelemek için **MemberInfo** kullanır ve sınıfın görünürlüğünü öğrenmek için <xref:System.Type.IsPublic%2A> özelliğini kullanır.  
+ Aşağıdaki örnek, **System. IO. File** sınıfındaki üye sayısını listelemek için <xref:System.Type.IsPublic%2A> **MemberInfo** kullanır ve sınıfının görünürlüğünü öğrenmek için özelliğini kullanır.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.Types.ViewInfo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source2.cs#2)]
@@ -66,7 +66,7 @@ ms.locfileid: "73130009"
  [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)]
  [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
   
- Aşağıdaki örnek, belirtilen sınıfın tüm üyelerini (oluşturucular, alanlar, özellikler, olaylar ve Yöntemler) listelemek ve üyeleri statik ve örnek kategorilerine bölmek için <xref:System.Reflection.BindingFlags> birlikte tüm yansıma **\*bilgi** sınıflarını kullanır.  
+ Aşağıdaki örnek, belirtilen sınıfın tüm üyelerini (oluşturucular, alanlar <xref:System.Reflection.BindingFlags> , özellikler, olaylar ve Yöntemler) listelemek ve üyeleri statik ve örnek kategorilerine bölmek için ile birlikte tüm yansıma ** \*bilgileri** sınıflarını kullanır.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]

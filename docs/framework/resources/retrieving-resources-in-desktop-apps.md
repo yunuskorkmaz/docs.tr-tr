@@ -27,43 +27,43 @@ ms.locfileid: "79180457"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 
-.NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklarla çalışırken, varsayılan veya nötr kültür kaynaklarını ana derlemeyle düzenli olarak paketlemeli ve uygulamanızın desteklediği her dil veya kültür için ayrı bir uydu derlemesi oluşturmalısınız. Daha sonra adlandırılmış kaynaklara <xref:System.Resources.ResourceManager> erişmek için bir sonraki bölümde açıklandığı gibi sınıfı kullanabilirsiniz. Kaynaklarınızı ana derlemeye ve uydu derlemelerine gömmemeyi seçerseniz, bu makalenin ilerleyen bölümlerinde [açıkolduğu](#from_file) gibi ikili .kaynaklar dosyalarına da doğrudan erişebilirsiniz.  Windows 8.x Store uygulamalarındaki kaynakları almak için Windows [Mağazası uygulamalarında kaynak oluşturma ve alma](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))hakkında bkz.  
+.NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklarla çalışırken, ana bütünleştirilmiş kod ile varsayılan veya nötr kültür için kaynakları en iyi şekilde paketleyip uygulamanızın desteklediği her dil ya da kültür için ayrı bir uydu derlemesi oluşturmanız gerekir. Daha sonra, <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıfını kullanabilirsiniz. Kaynaklarınızı ana derleme ve uydu Derlemeleriyle katıştırmamayı seçerseniz, bu makalenin ilerleyen kısımlarında [kaynakları. resources dosyalarından alma](#from_file) bölümünde açıklandığı gibi doğrudan ikili. resources dosyalarına da erişebilirsiniz.  Windows 8. x Mağaza uygulamalarında kaynakları almak için, bkz. [Windows Mağazası uygulamalarında kaynakları oluşturma ve alma](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
-## <a name="retrieving-resources-from-assemblies"></a>Derlemelerden Kaynak Alma  
- Sınıf, <xref:System.Resources.ResourceManager> çalışma zamanında kaynaklara erişim sağlar. Dize <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> kaynaklarını almak için yöntemi <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> ve dize olmayan kaynakları almak için veya yöntemi kullanırsınız. Her yöntemin iki aşırı yüklemesi vardır:  
+## <a name="retrieving-resources-from-assemblies"></a>Derlemelerden kaynakları alma  
+ Sınıfı <xref:System.Resources.ResourceManager> , çalışma zamanında kaynaklara erişim sağlar. Dize kaynaklarını almak <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> için yöntemini ve <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> dize olmayan kaynakları almak için <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> yöntemini kullanın. Her yöntemin iki aşırı yüklemesi vardır:  
   
-- Tek parametresi kaynağın adını içeren bir dize olan aşırı yük. Yöntem, geçerli iş parçacığı kültürü için bu kaynağı almaya çalışır. Daha fazla bilgi <xref:System.Resources.ResourceManager.GetString%28System.String%29>için <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, <xref:System.Resources.ResourceManager.GetStream%28System.String%29> , ve yöntemleri bakın.  
+- Tek parametresi kaynağın adını içeren bir dize olan aşırı yükleme. Yöntemi, geçerli iş parçacığı kültürü için bu kaynağı almaya çalışır. Daha fazla bilgi için bkz <xref:System.Resources.ResourceManager.GetString%28System.String%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%29>., ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri.  
   
-- İki parametreye sahip bir aşırı yükleme: kaynağın adını <xref:System.Globalization.CultureInfo> içeren bir dize ve kaynağı alınacak kültürü temsil eden bir nesne. Bu kültür için bir kaynak kümesi bulunamazsa, kaynak yöneticisi uygun bir kaynak almak için geri dönüş kurallarını kullanır. Daha fazla bilgi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>için <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> , ve yöntemleri bakın.  
+- İki parametreye sahip bir aşırı yükleme: kaynak adını içeren bir dize ve kaynağı alınacak olan kültürü temsil <xref:System.Globalization.CultureInfo> eden bir nesne. Bu kültür için bir kaynak kümesi bulunamazsa, Kaynak Yöneticisi uygun bir kaynağı almak için geri dönüş kurallarını kullanır. Daha fazla bilgi için bkz <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>., ve <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemleri.  
   
- Kaynak yöneticisi, uygulamanın kültüre özgü kaynakları nasıl aldığını denetlemek için kaynak geri dönüş işlemini kullanır. Daha fazla bilgi için, Kaynakları Paketleme ve Dağıtma'daki "Kaynak Geri Dönüş Süreci" [bölümüne](packaging-and-deploying-resources-in-desktop-apps.md)bakın. Bir <xref:System.Resources.ResourceManager> nesneyi anlık olarak kullanma hakkında bilgi için sınıf konusundaki "ResourceManager <xref:System.Resources.ResourceManager> Nesnesini Anında Kullanma" bölümüne bakın.  
+ Resource Manager, uygulamanın kültüre özgü kaynakları nasıl alacağını denetlemek için kaynak geri dönüş işlemini kullanır. Daha fazla bilgi için kaynak [paketleme ve dağıtma](packaging-and-deploying-resources-in-desktop-apps.md)konusunun "kaynak geri dönüş işlemi" bölümüne bakın. Bir <xref:System.Resources.ResourceManager> nesneyi örnekleme hakkında daha fazla bilgi için, <xref:System.Resources.ResourceManager> sınıf konusunun "ResourceManager nesnesi örneği oluşturma" bölümüne bakın.  
   
-### <a name="retrieving-string-data-an-example"></a>String Veri Alma: Bir Örnek  
- Aşağıdaki örnekte, <xref:System.Resources.ResourceManager.GetString%28System.String%29> geçerli UI kültürünün dize kaynaklarını alma yöntemi ni çağırır. İngilizce (Amerika Birleşik Devletleri) kültürü ve Fransız (Fransa) ve Rus (Rusya) kültürleri için yerelleştirilmiş kaynaklar için tarafsız bir dize kaynağı içerir. Aşağıdaki İngilizce (ABD) kaynağı Strings.txt adlı bir dosyada dır:  
+### <a name="retrieving-string-data-an-example"></a>Dize verilerini alma: örnek  
+ Aşağıdaki örnek, geçerli UI <xref:System.Resources.ResourceManager.GetString%28System.String%29> kültürünün dize kaynaklarını almak için yöntemini çağırır. Bu, Fransızca (Fransa) ve Rusça (Rusya) kültürleri için Ingilizce (Birleşik Devletler) kültürün ve yerelleştirilmiş kaynakların bağımsız bir dize kaynağını içerir. Aşağıdaki Ingilizce (Birleşik Devletler) kaynağı dizeler. txt adlı bir dosyadır:  
   
 ```text
 TimeHeader=The current time is  
 ```  
   
- Fransızca (Fransa) kaynağı Strings.fr-FR.txt adlı bir dosyada dır:  
+ Fransızca (Fransa) kaynağı Strings.fr-FR. txt adlı bir dosyadır:  
   
 ```text
 TimeHeader=L'heure actuelle est  
 ```  
   
- Rus (Rusya) kaynağı Strings.ru-RU-txt adlı bir dosyada dır:  
+ Rusça (Rusya) kaynağı Strings.ru-RU-txt adlı bir dosyadır:  
   
 ```text
 TimeHeader=Текущее время —  
 ```  
   
- Bu örneğin kaynak kodu, kodun C# sürümü için GetString.cs adlı bir dosyada ve Visual Basic sürümü için GetString.vb adlı bir dosyada, dört kültürün adını içeren bir dize dizisini tanımlar: kaynakların bulunduğu üç kültür ve İspanyolca (İspanya) kültürü. Beş kez rasgele yürüten bir döngü bu kültürlerden birini seçer <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> onu ve özelliklerine atar. Daha sonra, <xref:System.Resources.ResourceManager.GetString%28System.String%29> günün saati ile birlikte görüntülediği yerelleştirilmiş dizeyi almak için yöntemi çağırır.  
+ Bu örneğin, kodun C# sürümü ve Visual Basic sürümünde GetString. vb için GetString.cs adlı bir dosyada bulunan kaynak kodu, dört kültürün adını içeren bir dize dizisi tanımlar: kaynakların kullanılabildiği üç kültür ve Ispanyolca (Ispanya) kültürü. Beş kez yürütülen bir döngü, <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> bu kültürlerin birini rastgele seçer ve ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> özelliklerine atar. Daha sonra, yerelleştirilmiş <xref:System.Resources.ResourceManager.GetString%28System.String%29> dizeyi almak için yöntemini çağırır, bu da günün saati ile birlikte görüntülenir.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)]
  [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
   
- Aşağıdaki toplu iş (.bat) dosyası örneği derler ve uygun dizinlerde uydu derlemeleri oluşturur. Komutlar C# dili ve derleyicisi için sağlanır. Visual Basic için, `vbc`''' olarak değiştirin `csc` ve ' `GetString.cs` ' `GetString.vb`  
+ Aşağıdaki Batch (. bat) dosyası örneği derler ve uygun dizinlerde uydu derlemeleri oluşturur. Komutları C# dili ve derleyicisi için verilmiştir. Visual Basic için, olarak `csc` değiştirin `vbc`ve öğesini olarak `GetString.cs` `GetString.vb`değiştirin.  
   
 ```console
 resgen strings.txt  
@@ -78,22 +78,22 @@ md ru-RU
 al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.dll  
 ```  
   
- Geçerli UI kültürü İspanyolca (İspanya) olduğunda, İspanyolca dil kaynakları kullanılamadığından ve İngilizce örneğin varsayılan kültürü olduğundan, örneğin İngilizce dil kaynaklarını görüntülediğine unutmayın.  
+ Geçerli UI kültürü Ispanyolca (Ispanya) olduğunda, Ispanyolca Dil kaynakları kullanılamadığından ve Ingilizce 'nin varsayılan kültür olduğu için, örneğin Ingilizce dil kaynaklarını görüntülediğini unutmayın.  
   
-### <a name="retrieving-object-data-two-examples"></a>Nesne Verilerini Alma: İki Örnek  
- Nesne verilerini <xref:System.Resources.ResourceManager.GetObject%2A> almak <xref:System.Resources.ResourceManager.GetStream%2A> için yöntemleri kullanabilirsiniz. Bu, ilkel veri türlerini, serileştirilebilir nesneleri ve ikili biçimde depolanan nesneleri (görüntüler gibi) içerir.  
+### <a name="retrieving-object-data-two-examples"></a>Nesne verilerini alma: Iki örnek  
+ Nesne verilerini almak için <xref:System.Resources.ResourceManager.GetObject%2A> ve <xref:System.Resources.ResourceManager.GetStream%2A> yöntemlerini kullanabilirsiniz. Buna temel veri türleri, serileştirilebilir nesneler ve ikili biçimde (görüntüler gibi) depolanan nesneler dahildir.  
   
- Aşağıdaki örnek, <xref:System.Resources.ResourceManager.GetStream%28System.String%29> bir uygulamanın açılış sıçrama penceresinde kullanılan bir bit eşlemi almak için yöntemi kullanır. CreateResources.cs (C#için) veya CreateResources.vb (Visual Basic için) adlı bir dosyadaki aşağıdaki kaynak kodu, serileştirilmiş görüntüyü içeren bir .resx dosyası oluşturur. Bu durumda, görüntü SplashScreen.jpg adlı bir dosyadan yüklenir; kendi resminizi değiştirmek için dosya adını değiştirebilirsiniz.  
+ Aşağıdaki örnek, bir uygulamanın <xref:System.Resources.ResourceManager.GetStream%28System.String%29> açılış giriş penceresinde kullanılan bir bit eşlemi almak için yöntemini kullanır. CreateResources.cs adlı bir dosyadaki aşağıdaki kaynak kodu (C# için) veya Createresobir. vb (Visual Basic için), serileştirilmiş görüntüyü içeren bir. resx dosyası üretir. Bu durumda, görüntü, SplashScreen. jpg adlı bir dosyadan yüklenir. kendi görüntünüzü yerine koymak için dosya adını değiştirebilirsiniz.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/createresources.cs#4)]
  [!code-vb[Conceptual.Resources.Retrieving#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/createresources.vb#4)]  
   
- Aşağıdaki kod kaynağı alır ve görüntüyü denetimde <xref:System.Windows.Forms.PictureBox> görüntüler.  
+ Aşağıdaki kod, kaynağı alır ve görüntüyü bir <xref:System.Windows.Forms.PictureBox> denetimde görüntüler.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
   
- C# örneğini oluşturmak için aşağıdaki toplu iş dosyasını kullanabilirsiniz. Visual Basic için `csc` `vbc`kaynak kod dosyasının uzantısını ' `.cs` `.vb`'' olarak değiştirin ve '' olarak değiştirin  
+ C# örneğini oluşturmak için aşağıdaki toplu iş dosyasını kullanabilirsiniz. Visual Basic için, olarak `csc` `vbc`değiştirin ve kaynak kod dosyasının uzantısını `.cs` olarak `.vb`değiştirin.  
   
 ```console
 csc CreateResources.cs  
@@ -104,22 +104,22 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- Aşağıdaki örnek, <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> özel bir nesneyi deserialize etmek için yöntemi kullanır. Örnek, UIElements.cs adlı bir kaynak kodu dosyası içerir (Visual Basic için UIElements.vb) adlı `PersonTable`aşağıdaki yapıyı tanımlar. Bu yapı, tablo sütunlarının yerelleştirilmiş adlarını görüntüleyen genel bir tablo görüntüleme yordamı tarafından kullanılmak üzere tasarlanmıştır. Yapının `PersonTable` öznitelik ile <xref:System.SerializableAttribute> işaretlendiğini unutmayın.  
+ Aşağıdaki örnek, özel bir <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> nesnenin serisini kaldırmak için yöntemini kullanır. Örnek, adlı `PersonTable`aşağıdaki yapıyı tanımlayan, UIElements.cs adlı bir kaynak kod dosyası (Visual Basic Için UIElements. vb) içerir. Bu yapının tablo sütunlarının yerelleştirilmiş adlarını görüntüleyen bir genel tablo görüntüleme yordamı tarafından kullanılması amaçlanmıştır. `PersonTable` Yapının <xref:System.SerializableAttribute> özniteliğiyle işaretlendiğini unutmayın.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
   
- CreateResources.cs adlı bir dosyadan (Visual Basic için CreateResources.vb) aşağıdaki kod, tablo başlığı nı ve İngilizce dili `PersonTable` için yerelleştirilmiş bir uygulama için bilgi içeren bir nesne depolayan UIResources.resx adlı bir XML kaynak dosyası oluşturur.  
+ CreateResources.cs adlı bir dosyadan aşağıdaki kod (Visual Basic için Createresolenebilir. vb), bir tablo başlığı ve Ingilizce dili için yerelleştirilmiş bir uygulama için bilgi içeren bir `PersonTable` nesnesi depolayan UIResources. resx ADLı bir XML kaynak dosyası oluşturur.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example1.cs#7)]
  [!code-vb[Conceptual.Resources.Retrieving#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#7)]  
   
- GetObject.cs (GetObject.vb) adlı bir kaynak kodu dosyasında aşağıdaki kod kaynakları alır ve konsola görüntüler.  
+ Aşağıdaki kod, GetObject.cs (GetObject. vb) adlı bir kaynak kod dosyasında, kaynakları alır ve konsola görüntüler.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example2.cs#8)]
  [!code-vb[Conceptual.Resources.Retrieving#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example2.vb#8)]  
   
- Gerekli kaynak dosyasını ve derlemelerini oluşturabilir ve aşağıdaki toplu iş dosyasını çalıştırarak uygulamayı çalıştırabilirsiniz. Yapı hakkındaki `/r` bilgilere erişebilmek için Resgen.exe'ye UIElements.dll'ye bir başvuru sağlama seçeneğini kullanmanız gerekir. `PersonTable` C# kullanıyorsanız, `vbc` derleyici adını `csc`' ile değiştirin `.vb` ve `.cs`uzantıyı ' ile değiştirin.  
+ Aşağıdaki toplu iş dosyasını yürüterek gerekli kaynak dosya ve derlemeleri oluşturabilir ve uygulamayı çalıştırabilirsiniz. Bir UIElements. `/r` dll başvurusu Ile Resgen. exe ' yi, `PersonTable` yapıyla ilgili bilgilere erişebilecek şekilde sağlamak için bu seçeneği kullanmanız gerekir. C# kullanıyorsanız `vbc` , derleyici adını `csc`ile değiştirin ve `.vb` uzantısını ile `.cs`değiştirin.  
   
 ```console
 vbc -t:library UIElements.vb  
@@ -132,64 +132,64 @@ vbc GetObject.vb -r:UIElements.dll -resource:UIResources.resources
 GetObject.exe  
 ```  
   
-## <a name="versioning-support-for-satellite-assemblies"></a>Uydu Montajları için Sürüm Desteği  
- Varsayılan olarak, <xref:System.Resources.ResourceManager> nesne istenen kaynakları aldığında, ana derlemenin sürüm numarasıyla eşleşen sürüm numaralarına sahip uydu derlemelerini arar. Bir uygulamayı dağıttıktan sonra, ana derlemeyi veya belirli kaynak uydu derlemelerini güncelleştirmek isteyebilirsiniz. .NET Framework, ana montaj ve uydu derlemelerinin sürümü için destek sağlar.  
+## <a name="versioning-support-for-satellite-assemblies"></a>Uydu derlemeleri için sürüm oluşturma desteği  
+ Varsayılan olarak, <xref:System.Resources.ResourceManager> nesne istenen kaynakları aldığında, ana derlemenin sürüm numarasıyla eşleşen sürüm numaralarına sahip uydu derlemelerini arar. Bir uygulamayı dağıttıktan sonra, ana derlemeyi veya belirli kaynak uydu derlemelerini güncelleştirmek isteyebilirsiniz. .NET Framework, ana derleme ve uydu derlemelerinin sürümü oluşturma desteği sağlar.  
   
- Öznitelik, <xref:System.Resources.SatelliteContractVersionAttribute> bir ana derleme için sürüm desteği sağlar. Bu özniteliği bir uygulamanın ana montajında belirtmek, uydu derlemelerini güncelleştirmeden bir ana derlemeyi güncelleştirmenize ve yeniden dağıtmanıza olanak tanır. Ana derlemeyi güncelledikten sonra, ana derlemenin sürüm numarasını artım, ancak uydu sözleşme sürüm numarasını değiştirmeden bırakın. Kaynak yöneticisi istenen kaynakları aldığında, bu öznitelik tarafından belirtilen uydu derleme sürümünü yükler.  
+ Özniteliği <xref:System.Resources.SatelliteContractVersionAttribute> , bir ana derleme için sürüm oluşturma desteği sağlar. Bu özniteliğin bir uygulamanın ana derlemesinde belirtilmesi, bir ana derlemeyi, uydu derlemelerini güncelleştirmeden güncellemenize ve yeniden dağıtmanıza olanak sağlar. Ana derlemeyi güncelleştirdikten sonra, ana derlemenin sürüm numarasını artırın, ancak uydu sözleşmesinin sürüm numarasını değiştirmeden bırakın. Resource Manager istenen kaynakları aldığında, bu öznitelik tarafından belirtilen uydu derleme sürümünü yükler.  
   
- Yayıncı ilke derlemeleri uydu derlemelerinin sürümü için destek sağlar. Ana derlemeyi güncelleştirmeden uydu derlemesini güncelleyebilir ve yeniden dağıtabilirsiniz. Uydu montajını güncelledikten sonra, sürüm numarasını artım ve bir yayımcı ilke derlemesi ile sevk edin. Yayımcı ilke derlemesinde, yeni uydu derlemenizin önceki sürümüyle geriye dönük uyumlu olduğunu belirtin. Kaynak yöneticisi uydu <xref:System.Resources.SatelliteContractVersionAttribute> derlemesinin sürümünü belirlemek için özniteliği kullanır, ancak montaj yükleyiciyayım ilkesi tarafından belirtilen uydu montaj sürümüne bağlanır. Yayımcı ilke derlemeleri hakkında daha fazla bilgi için [bkz.](../configure-apps/how-to-create-a-publisher-policy.md)  
+ Yayımcı ilke derlemeleri, uydu derlemelerinin sürümü oluşturma desteği sağlar. Ana derlemeyi güncelleştirmeden bir uydu derlemesini güncelleştirebilir ve yeniden dağıtabilirsiniz. Bir uydu derlemesini güncelleştirdikten sonra, sürüm numarasını artırın ve bir yayımcı ilkesi derlemesi ile gönderin. Yayımcı ilkesi derlemesinde, yeni uydu derlemelerinizin önceki sürümüyle geriye dönük olarak uyumlu olduğunu belirtin. Resource Manager, uydu derlemesinin sürümünü <xref:System.Resources.SatelliteContractVersionAttribute> belirlerken özniteliğini kullanır, ancak derleme yükleyicisi yayımcı ilkesi tarafından belirtilen uydu derleme sürümüne bağlanır. Yayımcı ilke derlemeleri hakkında daha fazla bilgi için bkz. [Yayımcı Ilke dosyası oluşturma](../configure-apps/how-to-create-a-publisher-policy.md).  
   
- Tam montaj sürüm desteğini etkinleştirmek için, [genel derleme önbelleğinde](../app-domains/gac.md) güçlü adlandırılmış derlemeler dağıtmanızı ve uygulama dizininde güçlü adları olmayan derlemeleri dağıtmanızı öneririz. Uygulama dizininde güçlü adlandırılmış derlemeler dağıtmak istiyorsanız, derlemeyi güncelleştirdiğinizde uydu derlemesinin sürüm numarasını artımayı mümkün olmazsınız. Bunun yerine, varolan kodu güncelleştirilmiş kodla değiştirip aynı sürüm numarasını koruduğunuz yerinde bir güncelleştirme gerçekleştirmeniz gerekir. Örneğin, uydu assemblyin 1.0.0.0 sürümünü tam olarak belirtilen montaj adı "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" ile güncellemek istiyorsanız, güncellenmiş myApp.resources.dll ile üzerine yazmak aynı, tam olarak belirtilen montaj adı "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" ile derlenmiştir. Uydu derleme dosyalarındaki yerinde güncelleştirmeleri kullanmanın, bir uygulamanın uydu derlemesinin sürümünü doğru bir şekilde belirlemesini zorlaştırdığını unutmayın.  
+ Tam derleme sürümü oluşturma desteğini etkinleştirmek için, tanımlayıcı adlı derlemeleri [genel derleme önbelleğinde](../app-domains/gac.md) dağıtmanız ve uygulama dizininde tanımlayıcı adlara sahip olmayan derlemeler dağıtmanız önerilir. Uygulama dizininde tanımlayıcı adlı derlemeler dağıtmak istiyorsanız, derlemeyi güncelleştirdiğinizde bir uydu derlemesinin sürüm numarasını artırmanız mümkün olmayacaktır. Bunun yerine, mevcut kodu güncelleştirilmiş kodla değiştirdiğiniz ve aynı sürüm numarasını tuttuğunuz yerde bir yerinde güncelleştirme gerçekleştirmeniz gerekir. Örneğin, tam olarak belirtilen derleme adı "myApp. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a" olan bir uydu derlemesinin sürüm 1.0.0.0 sürümünü güncelleştirmek istiyorsanız, aynı, tam olarak belirtilen "myApp. resources, Version = 1.0.0.0, Culture = de, PublicKeyToken = b03f5f11d50a3a" derleme adıyla derlenmiş olan güncelleştirilmiş myApp. resources. dll ile üzerine yazın. Uydu derleme dosyalarında yerinde güncelleştirme kullanmanın, bir uygulamanın bir uydu derlemesinin sürümünü doğru bir şekilde belirlemesini zorlaştırmadığını unutmayın.  
   
- Derleme sürümü hakkında daha fazla bilgi için [Montaj Sürümü](../../standard/assembly/versioning.md) ve Çalışma [Zamanı Derlemeleri Nasıl Bulur'a](../deployment/how-the-runtime-locates-assemblies.md)bakın.  
+ Derleme sürümü oluşturma hakkında daha fazla bilgi için bkz. [derleme sürümü oluşturma](../../standard/assembly/versioning.md) ve [çalışma zamanının derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>
-## <a name="retrieving-resources-from-resources-files"></a>.resources Dosyalarından Kaynak Alma  
- Kaynakları uydu derlemelerine dağıtmamayı seçerseniz, kaynaklara <xref:System.Resources.ResourceManager> doğrudan .kaynaklar dosyalarından erişmek için bir nesne kullanmaya devam edebilirsiniz. Bunu yapmak için .resources dosyalarını doğru dağıtmanız gerekir. Ardından, nesneyi <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> <xref:System.Resources.ResourceManager> anında anımsamak ve bağımsız .kaynaklar dosyalarını içeren dizin belirtmek için yöntemi kullanırsınız.  
+## <a name="retrieving-resources-from-resources-files"></a>Kaynakları. resources dosyalarından alma  
+ Uydu derlemelerindeki kaynakları dağıtmayabilir ' i tercih ediyorsanız,. resources dosyalarından doğrudan kaynaklara <xref:System.Resources.ResourceManager> erişmek için bir nesne kullanmaya devam edebilirsiniz. Bunu yapmak için. resources dosyalarını doğru olarak dağıtmanız gerekir. Daha sonra, <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> bir <xref:System.Resources.ResourceManager> nesneyi başlatmak ve tek başına. resources dosyalarını içeren dizini belirtmek için yöntemini kullanırsınız.  
   
-### <a name="deploying-resources-files"></a>.resources Dosyalarını dağıtma  
- .resources dosyalarını bir uygulama derlemesine ve uydu derlemelerine katıştırdığınızda, her uydu derlemesi aynı dosya adıvardır, ancak uydu derlemesinin kültürünü yansıtan bir alt dizine yerleştirilir. Bunun aksine, .kaynaklar dosyalarından kaynaklara doğrudan erişdiğinizde, tüm .resources dosyalarını genellikle uygulama dizininin bir alt dizini olan tek bir dizine yerleştirebilirsiniz. Uygulamanın varsayılan .resources dosyasının adı yalnızca bir kök adından oluşur ve kültürüne dair hiçbir belirti göstermez (örneğin, strings.resources). Her yerelleştirilmiş kültürün kaynakları, adı kültür tarafından izlenen kök adından oluşan bir dosyada depolanır (örneğin, strings.ja.resources veya strings.de-DE.resources).
+### <a name="deploying-resources-files"></a>. Resources dosyalarını dağıtma  
+ Bir uygulama derlemesine ve uydu derlemelerine. resources dosyaları eklediğinizde, her uydu derlemesi aynı dosya adına sahiptir, ancak uydu derlemesinin kültürünü yansıtan bir alt dizine yerleştirilir. Buna karşılık,. resources dosyalarından doğrudan kaynaklara eriştiğinizde, tüm. resources dosyalarını, genellikle uygulama dizininin bir alt dizini olacak şekilde tek bir dizine yerleştirebilirsiniz. Uygulamanın varsayılan. resources dosyasının adı, kültürü (örneğin, dizeler. resources) göstergesi olmadan yalnızca bir kök adından oluşur. Yerelleştirilmiş her kültürün kaynakları, adı kök adından ve ardından kültürün (örneğin, dizeler. ja. resources veya strings.de-DE. resources) yer aldığı bir dosyada depolanır.
 
- Aşağıdaki resimde kaynak dosyalarının dizin yapısında nerede bulunması gerektiği gösterilmektedir. Ayrıca .kaynak dosyaları için adlandırma kuralları verir.  
+ Aşağıdaki çizimde, kaynak dosyalarının dizin yapısında nerede bulunacağı gösterilmektedir. Ayrıca,. kaynak dosyaları için adlandırma kuralları sağlar.  
 
  ![Uygulamanızın ana dizinini gösteren çizim.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
-### <a name="using-the-resource-manager"></a>Kaynak Yöneticisini Kullanma  
- Kaynaklarınızı oluşturduktan ve bunları uygun dizine yerleştirdikten <xref:System.Resources.ResourceManager> sonra, <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> yöntemi çağırarak kaynakları kullanmak için bir nesne oluşturursunuz. İlk parametre, uygulamanın varsayılan .resources dosyasının kök adını belirtir (bu önceki bölümdeki örnek için "dizeleri" olacaktır). İkinci parametre kaynakların konumunu belirtir ("Önceki örnek için Kaynaklar"). Üçüncü parametre, <xref:System.Resources.ResourceSet> kullanılacak uygulamayı belirtir. Üçüncü parametre `null`ise, varsayılan çalışma <xref:System.Resources.ResourceSet> süresi kullanılır.  
+### <a name="using-the-resource-manager"></a>Kaynak Yöneticisi kullanma  
+ Kaynaklarınızı oluşturup uygun dizine yerleştirdikten sonra, <xref:System.Resources.ResourceManager> <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> yöntemini çağırarak kaynakları kullanmak için bir nesne oluşturun. İlk parametre, uygulamanın varsayılan. resources dosyasının kök adını belirtir (Bu, önceki bölümdeki örnek için "dizeler" olacaktır). İkinci parametre, kaynakların konumunu belirtir (önceki örnek için "kaynaklar"). Üçüncü parametre kullanılacak <xref:System.Resources.ResourceSet> uygulamayı belirtir. Üçüncü parametre ise `null`, varsayılan çalışma zamanı <xref:System.Resources.ResourceSet> kullanılır.  
   
 > [!NOTE]
-> Tek başına .resources dosyalarını kullanarak ASP.NET uygulamaları dağıtmayın. Bu kilitleme sorunlarına neden olabilir ve XCOPY dağıtım tatili. ASP.NET kaynakları uydu meclislerine dağıtmanızı öneririz. Daha fazla bilgi için [Web Sayfası Kaynaklarına Genel Bakış ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))sayfasına bakın.  
+> Tek başına. resources dosyalarını kullanarak ASP.NET uygulamalarını dağıtmayın. Bu, kilitlenme sorunlarına neden olabilir ve XCOPY dağıtımını keser. ASP.NET kaynaklarını uydu Derlemeleriyle dağıtmanızı öneririz. Daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
- <xref:System.Resources.ResourceManager> Nesneyi anında yaptıktan sonra, kaynakları <xref:System.Resources.ResourceManager.GetString%2A>almak <xref:System.Resources.ResourceManager.GetObject%2A>için <xref:System.Resources.ResourceManager.GetStream%2A> daha önce tartışıldığı gibi , ve yöntemleri kullanırsınız. Ancak, kaynakların doğrudan .resources dosyalarından alınması, katışılmış kaynakların derlemelerden alınmasından farklıdır. .resources dosyalarından kaynak <xref:System.Resources.ResourceManager.GetString%28System.String%29>aldığınızda, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>,, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemler her zaman geçerli kültürden bağımsız olarak varsayılan kültürün kaynaklarını alır. Uygulamanın geçerli kültürünün veya belirli bir kültürün kaynaklarını almak için <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> veya yöntemi aramanız ve kaynakları alınacak kültürü belirtmeniz gerekir. Geçerli kültürün kaynaklarını almak için, bağımsız değişken <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> olarak `culture` özelliğin değerini belirtin. Kaynak yöneticisi kaynakları `culture`alamıyorsa, uygun kaynakları almak için standart kaynak geri dönüş kurallarını kullanır.  
+ Nesneyi örnekledikten sonra, kaynakları almak için daha <xref:System.Resources.ResourceManager.GetString%2A>önce <xref:System.Resources.ResourceManager.GetObject%2A>anlatıldığı gibi <xref:System.Resources.ResourceManager.GetStream%2A> ,, ve yöntemlerini kullanırsınız. <xref:System.Resources.ResourceManager> Ancak, kaynakların doğrudan. resources dosyalarından alınması, gömülü kaynakların derlemelerden alıntığından farklıdır. Kaynakları. resources dosyalarından <xref:System.Resources.ResourceManager.GetString%28System.String%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%29>aldığınızda,, ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri her zaman geçerli kültürden bağımsız olarak varsayılan kültürün kaynaklarını alır. Uygulamanın geçerli kültürünün veya belirli bir kültürün kaynaklarını almak için,, veya <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemini çağırmanız ve kaynakları alınacak olan kültürü belirtmeniz gerekir. Geçerli kültürün kaynaklarını almak için, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğinin değerini `culture` bağımsız değişken olarak belirtin. Resource Manager kaynakları alamıyorsa `culture`, uygun kaynakları almak için standart kaynak geri dönüş kurallarını kullanır.  
   
 ### <a name="an-example"></a>Bir Örnek  
- Aşağıdaki örnekte, kaynak yöneticisinin kaynakları doğrudan .resources dosyalarından nasıl aldığı gösterilebilir. Örnek, İngilizce (ABD), Fransızca (Fransa) ve Rus (Rusya) kültürleri için metin tabanlı üç kaynak dosyasından oluşur. İngilizce (ABD) örneğin varsayılan kültürüdür. Kaynakları Strings.txt adlı aşağıdaki dosyada depolanır:  
+ Aşağıdaki örnek, Resource Manager 'ın kaynakları doğrudan. resources dosyalarından nasıl alacağını gösterir. Örnek, Ingilizce (Birleşik Devletler), Fransızca (Fransa) ve Rusça (Rusya) kültürleri için üç metin tabanlı kaynak dosyasından oluşur. İngilizce (Birleşik Devletler), örneğin varsayılan kültürdür. Kaynakları, dizeler. txt adlı aşağıdaki dosyada depolanır:  
   
 ```text
 Greeting=Hello  
 Prompt=What is your name?  
 ```  
   
- Fransız (Fransa) kültürü için kaynaklar Strings.fr-FR.txt adlı aşağıdaki dosyada saklanır:  
+ Fransızca (Fransa) kültürünün kaynakları, Strings.fr-FR. txt adlı aşağıdaki dosyada depolanır:  
   
 ```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
   
- Rus (Rusya) kültürü için kaynaklar Strings.ru-RU.txt adlı aşağıdaki dosyada saklanır:  
+ Rusça (Rusya) kültürü için kaynaklar, Strings.ru-RU. txt adlı aşağıdaki dosyada depolanır:  
   
 ```text
 Greeting=Здравствуйте  
 Prompt=Как вас зовут?  
 ```  
   
- Aşağıdaki örnek için kaynak kodudur. Örnek, İngilizce (ABD), İngilizce (Kanada), Fransızca (Fransa) ve Rus (Rusya) kültürleri için <xref:System.Globalization.CultureInfo> nesneleri anlık olarak alır ve her birinin geçerli kültürünü yapar. Yöntem <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> daha sonra uygun <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> kültüre `culture` özgü kaynakları almak için bağımsız değişken olarak özelliğin değerini sağlar.  
+ Örnek için kaynak kodu aşağıda verilmiştir. Örnek, Ingilizce <xref:System.Globalization.CultureInfo> (Birleşik Devletler), Ingilizce (Kanada), Fransızca (Fransa) ve Rusça (Rusya) kültürleri için nesneleri örnekleyen ve her bir geçerli kültürü yapan. Yöntemi <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> daha sonra, uygun kültüre özgü kaynakları <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> almak için `culture` bağımsız değişken olarak özelliğin değerini sağlar.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- Aşağıdaki toplu iş dosyasını çalıştırarak örneğin C# sürümünü derleyebilirsiniz. Visual `csc` Basic kullanıyorsanız, uzantıyı `vbc` `.cs` `.vb`değiştirin ve uzantıyı değiştirin.  
+ Aşağıdaki toplu iş dosyasını çalıştırarak örnek C# sürümünü derleyebilirsiniz. Visual Basic `csc` kullanıyorsanız, ile `vbc`değiştirin ve `.cs` uzantısını ile `.vb`değiştirin.  
   
 ```console
 Md Resources  
@@ -203,7 +203,7 @@ csc Example.cs
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Resources.ResourceManager>
-- [Masaüstü Uygulamalarında Kaynaklar](index.md)
+- [Masaüstü uygulamalarındaki kaynaklar](index.md)
 - [Kaynakları Paketleme ve Dağıtma](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Çalışma Zamanının Derlemelerin Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
 - [Windows Mağazası uygulamalarında kaynak oluşturma ve alma](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))
