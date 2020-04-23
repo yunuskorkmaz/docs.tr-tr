@@ -17,23 +17,23 @@ ms.locfileid: "79399940"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Platform Çağırma ile Veri Sıralama
 
-Yönetilmeyen bir kitaplıktan dışa aktarılan işlevleri çağırmak için ,.NET Framework uygulaması, yönetilmeyen işlevi temsil eden yönetilen kodda bir işlev prototipi gerektirir. Platform çağırmayı sağlayan bir prototip oluşturmak için verileri doğru bir şekilde ele kelemesi için aşağıdakileri yapmanız gerekir:
+Yönetilmeyen bir kitaplıktan aktarılmış işlevleri çağırmak için, bir .NET Framework uygulaması yönetilmeyen işlevi temsil eden yönetilen kodda bir işlev prototipi gerektirir. Platform Invoke 'ın verileri doğru bir şekilde sıralaması için bir prototip oluşturmak üzere şunları yapmanız gerekir:
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute> Özniteliği yönetilen koddaki statik işlev veya yönteme uygulayın.
+- <xref:System.Runtime.InteropServices.DllImportAttribute> Özniteliği, Yönetilen koddaki statik işleve veya yöntemine uygulayın.
 
 - Yönetilmeyen veri türleri için yönetilen veri türlerini değiştirin.
 
-Özniteliği isteğe bağlı alanlarıyla uygulayarak ve yönetilen veri türlerini yönetilmeyen türler için ikame ederek eşdeğer yönetilen bir prototip oluşturmak için yönetilmeyen bir işlevle birlikte verilen belgeleri kullanabilirsiniz. Nasıl uygulanacağına ilişkin <xref:System.Runtime.InteropServices.DllImportAttribute>talimatlar için [bkz.](consuming-unmanaged-dll-functions.md)
+Özniteliği isteğe bağlı alanlarıyla uygulayıp yönetilmeyen türler için yönetilen veri türlerini değiştirerek eşdeğer bir yönetilen prototip oluşturmak için, yönetilmeyen bir işlevle sağlanan belgeleri kullanabilirsiniz. Uygulamasına nasıl uygulandığına <xref:System.Runtime.InteropServices.DllImportAttribute>ilişkin yönergeler için bkz. [yönetilmeyen DLL işlevlerini](consuming-unmanaged-dll-functions.md)kullanma.
 
-Bu bölümde, bağımsız değişkenleri geçirip yönetilmeyen kitaplıklar tarafından dışa aktarılan işlevlerden iade değerleri almak için yönetilen işlev prototiplerinin nasıl oluşturulacaklarını gösteren örnekler sağlar. Örnekler ayrıca, verileri açıkça <xref:System.Runtime.InteropServices.MarshalAsAttribute> bağlamak için <xref:System.Runtime.InteropServices.Marshal> öznitelik ve sınıfın ne zaman kullanılacağını da gösterir.
+Bu bölümde, yönetilmeyen kitaplıklar tarafından dışarıya aktarılmış işlevlerden gelen bağımsız değişkenleri iletmek ve dönüş değerlerini almak için yönetilen işlev prototürlerinin nasıl oluşturulacağı gösterilmektedir. Örnekler Ayrıca, <xref:System.Runtime.InteropServices.MarshalAsAttribute> verileri açıkça sıralamak için özniteliği ve <xref:System.Runtime.InteropServices.Marshal> sınıfını ne zaman kullanacağınızı gösterir.
 
-## <a name="platform-invoke-data-types"></a>Platform çağrıcı veri türleri
+## <a name="platform-invoke-data-types"></a>Platform çağırma veri türleri
 
-Aşağıdaki tabloda Windows API'lerinde ve C stili işlevlerinde kullanılan veri türleri listelenir. Birçok yönetilmeyen kitaplık, bu veri türlerini parametre ve iade değerleri olarak geçen işlevler içerir. Üçüncü sütun, yönetilen kodda kullandığınız ilgili .NET Framework yerleşik değer türünü veya sınıfını listeler. Bazı durumlarda, tabloda listelenen tür için aynı boyutta bir tür değiştirebilirsiniz.
+Aşağıdaki tabloda, Windows API 'Leri ve C stili işlevlerinde kullanılan veri türleri listelenmektedir. Birçok yönetilmeyen kitaplık, bu veri türlerini parametre olarak geçen ve değer döndüren işlevleri içerir. Üçüncü sütunda karşılık gelen .NET Framework yerleşik değer türü veya yönetilen kodda kullandığınız sınıf listelenir. Bazı durumlarda, tabloda listelenen tür için aynı boyuttaki bir türü değiştirebilirsiniz.
 
-|Windows API'larında yönetilmeyen tür|Yönetilmeyen C dil türü|Yönetilen tür|Açıklama|
+|Windows API 'Lerinde yönetilmeyen tür|Yönetilmeyen C dil türü|Yönetilen tür|Açıklama|
 |--------------------------------|-------------------------------|------------------------|-----------------|
-|`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Değer döndürmeyen bir işleve uygulanır.|
+|`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Değer döndürmeyen bir işleve uygulandı.|
 |`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> veya <xref:System.UIntPtr?displayProperty=nameWithType>|32 bit Windows işletim sistemlerinde 32 bit, 64 bit Windows işletim sistemlerinde 64 bit.|
 |`BYTE`|`unsigned char`|<xref:System.Byte?displayProperty=nameWithType>|8 bit|
 |`SHORT`|`short`|<xref:System.Int16?displayProperty=nameWithType>|16 bit|
@@ -44,20 +44,20 @@ Aşağıdaki tabloda Windows API'lerinde ve C stili işlevlerinde kullanılan ve
 |`BOOL`|`long`|<xref:System.Boolean?displayProperty=nameWithType> veya <xref:System.Int32?displayProperty=nameWithType>|32 bit|
 |`DWORD`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|
 |`ULONG`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 bit|
-|`CHAR`|`char`|<xref:System.Char?displayProperty=nameWithType>|ANSI ile süsleyin.|
-|`WCHAR`|`wchar_t`|<xref:System.Char?displayProperty=nameWithType>|Unicode ile süsleyin.|
-|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI ile süsleyin.|
-|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI ile süsleyin.|
-|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode ile süsleyin.|
-|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode ile süsleyin.|
+|`CHAR`|`char`|<xref:System.Char?displayProperty=nameWithType>|ANSI ile süslemek.|
+|`WCHAR`|`wchar_t`|<xref:System.Char?displayProperty=nameWithType>|Unicode ile süsle.|
+|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI ile süslemek.|
+|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI ile süslemek.|
+|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode ile süsle.|
+|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> veya <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Unicode ile süsle.|
 |`FLOAT`|`float`|<xref:System.Single?displayProperty=nameWithType>|32 bit|
 |`DOUBLE`|`double`|<xref:System.Double?displayProperty=nameWithType>|64 bit|
 
-Visual Basic, C#ve C++'daki ilgili türler için [.NET Framework Class Kitaplığına Giriş'e](../../standard/class-library-overview.md#system-namespace)bakın.
+Visual Basic, C# ve C++ ' daki ilgili türler için [.NET Framework sınıfı kitaplığına giriş](../../standard/class-library-overview.md#system-namespace)bölümüne bakın.
 
 ## <a name="pinvokelibdll"></a>PinvokeLib.dll
 
-Aşağıdaki kod, Pinvoke.dll tarafından sağlanan kitaplık işlevlerini tanımlar. Bu bölümde açıklanan birçok örnek bu kitaplığı çağırır.
+Aşağıdaki kod, PInvoke. dll tarafından sunulan kitaplık işlevlerini tanımlar. Bu bölümde açıklanan birçok örnek, bu kitaplığı çağırır.
 
 ### <a name="example"></a>Örnek
 

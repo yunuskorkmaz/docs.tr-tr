@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119733"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645435"
 ---
 # <a name="using-application-domains"></a>Uygulama Etki Alanlarını Kullanma
 
@@ -36,7 +36,7 @@ Bir uygulama etki alanından kurulum bilgilerinin nasıl alınacağını açıkl
 [Nasıl yapılır: Uygulama Etki Alanına Bütünleştirilmiş Kodlar Yükleme](how-to-load-assemblies-into-an-application-domain.md)  
 Bir derlemenin uygulama etki alanına nasıl yükleneceğini açıklar.  
   
-[Nasıl yapılır: Bir Bütünleştirilmiş Koddan Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
+[Nasıl yapılır: Bir Derlemeden Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
 Bir derleme hakkında bilgilerin nasıl alınacağını açıklar.  
   
 [Gölge Kopyalama Bütünleştirilmiş Kodları](shadow-copy-assemblies.md)  
@@ -45,8 +45,8 @@ Gölge kopyalamanın, kullanıldıkları sırada derlemeler için güncelleştir
 [Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma](how-to-receive-first-chance-exception-notifications.md)  
 Ortak dil çalışma zamanı özel durum işleyicilerini aramaya başlamadan önce bir özel durumun oluşturulduğu bildirimini nasıl alacağınızı açıklar.  
   
-[Bütünleştirilmiş Kod Yüklerini Çözme](../../standard/assembly/resolve-loads.md)  
-Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayının kullanılmasıyla ilgili rehberlik sağlar.  
+[Derleme Yüklerini Çözme](../../standard/assembly/resolve-loads.md)  
+Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı kullanma hakkında rehberlik sağlar.  
   
 ## <a name="reference"></a>Başvuru  
 
@@ -57,7 +57,7 @@ Bir uygulama etki alanını temsil eder. Uygulama etki alanları oluşturmak ve 
 [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)  
 Derlemeler tarafından gerçekleştirilen işlevlere genel bir bakış sağlar.  
   
-[Bütünleştirilmiş Kodlarla Programlama](../../standard/assembly/program.md)  
+[Derlemelerle Programlama](../../standard/assembly/index.md)  
 Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.  
   
 [Dinamik Yöntemleri ve Derlemeleri Yayma](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

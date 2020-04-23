@@ -9,9 +9,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071985"
 ---
-.NET uygulamanızın ,.NET için Azure Yönetim Kitaplıklarını kullanabilmek için Azure aboneliğinizde kaynak okumak ve oluşturmak için izinlere ihtiyacı vardır. Bir hizmet ilkesi oluşturun ve bu erişimi sağlamak için uygulamanızı kimlik bilgileriyle çalışacak şekilde yapılandırın. Hizmet sorumluları, yalnızca uygulamanızın çalışması için gereken ayrıcalıkları verdiğiniz kimlikle ilişkili etkileşimli olmayan bir hesap oluşturmanızı sağlar.
+.NET uygulamanız, .NET için Azure Yönetim kitaplıklarını kullanabilmeniz için Azure aboneliğinizdeki kaynakları okuma ve oluşturma izinlerine ihtiyaç duyuyor. Bir hizmet sorumlusu oluşturun ve bu erişime izin vermek için uygulamanızı kimlik bilgileriyle çalışacak şekilde yapılandırın. Hizmet sorumluları, yalnızca uygulamanızın çalışması için gereken ayrıcalıkları verdiğiniz kimlikle ilişkili etkileşimli olmayan bir hesap oluşturmanızı sağlar.
 
-İlk olarak, [Azure Bulut BulutU'ya](https://shell.azure.com/bash)giriş yapın. Hizmet sorumlusunun oluşturulmasını istediğiniz aboneliği şu anda kullandığınızı doğrulayın.
+İlk olarak [Azure Cloud Shell](https://shell.azure.com/bash)oturum açın. Şu anda hizmet sorumlusu 'nın oluşturulmasını istediğiniz aboneliği kullandığınızı doğrulayın.
 
 ```azurecli-interactive
 az account show
@@ -35,15 +35,15 @@ Abonelik bilgileriniz görüntülenir.
 }
 ```
 
-Doğru aboneliğe giriş yapmadıysanız, yazarak `az account set -s <name or ID of subscription>`doğru aboneliği seçin.
+Doğru abonelikte oturum açmadıysanız, yazarak `az account set -s <name or ID of subscription>`doğru olanı seçin.
 
-Aşağıdaki komutla hizmet atasını oluşturun:
+Hizmet sorumlusunu aşağıdaki komutla oluşturun:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --sdk-auth
 ```
 
-Hizmet temel bilgileri JSON olarak görüntülenir.
+Hizmet sorumlusu bilgileri JSON olarak görüntülenir.
 
 ```json
 {
@@ -60,4 +60,4 @@ Hizmet temel bilgileri JSON olarak görüntülenir.
 }
 ```
 
-JSON çıktısını daha sonra kullanılmak üzere bir metin düzenleyicisine kopyalayıp yapıştırın.
+JSON çıkışını kopyalayın ve daha sonra kullanmak üzere bir metin düzenleyicisine yapıştırın.

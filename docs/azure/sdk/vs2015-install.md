@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2015 için Azure araçları
-description: Visual Studio 2015'teki Azure .NET kitaplıklarını kullanmaya başlamak için araçları alın.
+title: Visual Studio için Azure Araçları 2015
+description: Visual Studio 2015 ' den Azure .NET kitaplıklarını kullanmaya başlamak için Araçları alın.
 ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
@@ -10,26 +10,26 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071929"
 ---
-# <a name="azure-tools-for-visual-studio-2015"></a>Visual Studio 2015 için Azure araçları
+# <a name="azure-tools-for-visual-studio-2015"></a>Visual Studio için Azure Araçları 2015
 
-**Visual Studio 2015 için Azure SDK** ve **Service Fabric SDK ve Visual Studio 2015 Araçları** için yüklemenin en hızlı ve en kolay yolu Web Platform [Installer'ı](https://www.microsoft.com/web/downloads/platform.aspx)kullanmaktır. Microsoft Web Platform Installer, Visual Studio 2015 için Azure araçları da dahil olmak üzere Microsoft Web Platformu'nun bazı bileşenlerini indirme, yükleme ve güncelleştirmeyi kolaylaştıran ücretsiz bir araçtır. Bu [SDK'lar, Azure İndirmeler sayfasından](https://azure.microsoft.com/downloads/)tek tek bileşenler olarak indirilebilir ve yüklenebilir.
+**Visual studio 2015 Için Azure SDK 'sını** ve **Visual studio 2015 için Service Fabric SDK ve araçları** yüklemenin en hızlı ve en kolay yolu [Web Platformu Yükleyicisi](https://www.microsoft.com/web/downloads/platform.aspx)'ni kullanmaktır. Microsoft Web Platformu Yükleyicisi, Visual Studio 2015 için Azure araçları dahil olmak üzere Microsoft Web Platformu bileşenlerini indirmeyi, yüklemeyi ve güncellemeyi kolaylaştıran ücretsiz bir araçtır. Bu SDK 'lar Ayrıca [Azure İndirmeleri sayfasından](https://azure.microsoft.com/downloads/)ayrı bileşenler olarak indirilip yüklenebilir.
 
-## <a name="using-the-web-platform-installer"></a>Web Platform Yükleyicisini Kullanma
+## <a name="using-the-web-platform-installer"></a>Web Platformu Yükleyicisi 'ni kullanma
 
-1. İndirin ve bu [Web Platformu Installer bootstrapper](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=VWDOrVs2015AzurePack;MicrosoftAzure-ServiceFabric-VS2015)çalıştırın.
+1. Bu [Web platformu yükleyici Bootstrapper](https://www.microsoft.com/web/handlers/webpi.ashx?command=getinstallerredirect&appid=VWDOrVs2015AzurePack;MicrosoftAzure-ServiceFabric-VS2015)'nı indirip çalıştırın.
 
-2. Bootstrapper Web Platform Installer'ı (gerekirse) yükler ve visual **studio 2015 için Azure SDK'nın** en son sürümlerini ve **Hizmet Kumaşı SDK ve Visual Studio için Araçlar 2015** öğelerini öğelerinize otomatik olarak *yüklenecek öğelere* koyar. **Yükle'yi**tıklatın.
+2. Önyükleyici, Web Platformu Yükleyicisi 'ni yükler (gerekirse) ve **Visual studio 2015 Için Azure SDK** 'nın en son sürümlerini ve visual Studio 2015 IÇIN **Service Fabric SDK ve araçlar** 'ı otomatik olarak yerleştirir. *Items to be installed* **Install**'a tıklayın.
 
     ![Web Platformu Yükleyicisi](../media/sdk/vs2015-install/webpi.png)
 
-3. Sonraki ekranda Kabul **Ediyorum'u**tıklatın. Web PI, seçtiğiniz bileşenleri indirmeye ve yüklemeye başlar.
+3. Sonraki ekranda **kabul ediyorum**' a tıklayın. Web PI seçtiğiniz bileşenleri indirmeye ve yüklemeye başlayacak.
 
-4. Yükleme tamamlandıktan sonra bir onay ekranı görüntülenir. **Son**'a tıklayın. Artık Web Platformu Yükleyici'yi kapatabilirsiniz.
+4. Yükleme tamamlandıktan sonra, bir onay ekranı görüntülenir. **Son**'a tıklayın. Artık Web Platformu Yükleyicisi 'ni kapatabilirsiniz.
 
 ## <a name="verifying-the-installation"></a>Yüklemenin doğrulanması
 
-1. Visual Studio 2015'te **Araçlar** menüsüne tıklayın ve **ardından Uzantılar ve Güncellemeler'i tıklatın...**.
+1. Visual Studio 2015 ' de **Araçlar** menüsüne ve ardından **Uzantılar ve Güncelleştirmeler ' e tıklayın...**
 
-2. Görüntülenen listede **Microsoft Azure Uygulama Hizmet Araçları, Microsoft** **Azure Depolama Bağlantılı Hizmet**ve Hizmet Kumaş **Araçları**gibi çeşitli Azure araçları bulunur.
+2. Görüntülenmiş listede **Microsoft Azure App Service araçları**, **Microsoft Azure depolama bağlı hizmet**ve **Service Fabric araçları**gibi çeşitli Azure araçları yer alacak.
 
-    ![Uzantılar ve güncellemeler](../media/sdk/vs2015-install/ext-tools.png)
+    ![Uzantılar ve güncelleştirmeler](../media/sdk/vs2015-install/ext-tools.png)

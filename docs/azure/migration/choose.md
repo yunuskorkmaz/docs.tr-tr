@@ -1,6 +1,6 @@
 ---
-title: Doğru Azure barındırma seçeneğini seçin
-description: ASP.NET web uygulamanız için hangi Azure geçiş yolunun doğru olduğunu öğrenin.
+title: Doğru Azure barındırma seçeneğini belirleyin
+description: ASP.NET Web uygulamanız için hangi Azure geçiş yolunun doğru olduğunu öğrenin.
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
@@ -11,11 +11,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "82072111"
 ---
-# <a name="choose-the-right-azure-hosting-option"></a>Doğru Azure barındırma seçeneğini seçin
+# <a name="choose-the-right-azure-hosting-option"></a>Doğru Azure barındırma seçeneğini belirleyin
 
-Bu makalede, varolan .NET Framework uygulamalarınızı şirket içinde Azure'a geçirdiğinizde Azure'da sahip olduğunuz birden çok seçenek arasında dikkate alınması gereken hususlar ve karşılaştırmalar sağlanmaktadır.
+Bu makalede, mevcut .NET Framework uygulamalarınızı Şirket içinden Azure 'a geçirirken Azure 'da sahip olduğunuz birden çok seçenek arasındaki önemli noktalar ve karşılaştırmalar sağlanmıştır.
 
-Varolan .NET uygulamalarını Azure'a geçirerken göz önünde bulundurulması gereken temel alanlar şunlardır:
+Mevcut .NET uygulamalarını Azure 'a geçirirken göz önünde bulundurmanız gereken temel bölgeler şunlardır:
 
 1. İşlem seçenekleri
 1. Veritabanı seçenekleri
@@ -24,52 +24,52 @@ Varolan .NET uygulamalarını Azure'a geçirerken göz önünde bulundurulması 
 
 ## <a name="compute-choices"></a>İşlem seçenekleri
 
-Varolan .NET Framework uygulamalarını Azure'a geçirdiğinizde birden çok seçeneğiniz vardır. Ancak,.NET Framework Windows'a bağlı olduğundan, aşağıdaki seçenekler Windows tabanlı işlem hizmetleriyle sınırlıdır.
+Mevcut .NET Framework uygulamaları Azure 'a geçirirken birden çok seçeneğiniz vardır. Ancak .NET Framework Windows 'a bağlı olduğundan, aşağıdaki seçimler Windows tabanlı işlem hizmetleri ile sınırlıdır.
 
-Aşağıdaki tablo, varolan .NET uygulamanız için doğru bilgi işlem geçiş yolunu seçmenize yardımcı olacak çeşitli karşılaştırmalar ve öneriler gösterir.
+Aşağıdaki tabloda, mevcut .NET uygulamanız için doğru işlem geçiş yolunu seçmenize yardımcı olacak çeşitli karşılaştırmalar ve öneriler gösterilmektedir.
 
 |                 | Azure VM’leri | Azure App Service | Windows Kapsayıcıları |
 |-----------------|-----------|-------------------|--------------------|
-|Kullanılması gereken durumlar      |<ul><li>Uygulama sunucu ve yerel .msi yüklemeleri üzerinde güçlü bağımlılıkları vardır.</li><li>En kolay uygulama geçiş yolunu istiyorsunuz</li></ul>|Uygulama sunucu üzerinde hiçbir bağımlılığı vardır, sadece temiz bir ASP.NET web uygulaması (MVC, WebForm) veya N-Tier uygulaması (Web API, WCf) bir veritabanı sunucusuna erişen. |<ul><li>Uygulamanın özgün sunucuya bağımlılıkları vardır, ancak bu bağımlılıklar Docker Windows görüntüsüne eklenebilir.</li><li>[Uygulamayı Cloud DevOps-Ready](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md) olacak şekilde modernize etmek istiyorum</li></ul>|
-|Artıları & faydaları  |<ul><li>En kolay geçiş yolu</li><li>Tanıdık bir ortam. Dağıtım ortamı bir VM'dir, bu nedenle şirket içi sunuculara benzer.</li></ul> |Azure'daki uygulamaları yönetmenin ve ölçeklendirmenin en basit yolu olan, devam eden PaaS bakımı. |<ul><li>Geleceğe hazırlanan Cloud DevOps-Ready bağımlılıkları uygulamanın kaplarına dahil edilmiştir.</li><li>.NET /C# kodunu yeniden düzenlemenize gerek yok.</li></ul> |
-|Simgeler             |Bu IaaS. Bakım pahalıya mal olur. Ağ, yük dengeleyici, ölçeklendirme, IIS yönetimi ve benzeri konularda VM'nin altyapısını yönetmeniz gerekir. |<ul><li>Tüm uygulamalar [desteklenmez](https://appmigration.microsoft.com/assessment)</li><li>Bazı uygulamaların yeniden düzenlemesi ve hatta biraz yeniden tasarlanması gerekebilir, bu nedenle Azure Uygulama Hizmeti'ni desteklerler.</li></ul> |<ul><li>Docker'ın beceri öğrenme eğrisi</li><li>Bazı kod ve uygulama yapılandırma ayarları değişir</li></ul>|
-|Gereksinimler |Windows Server VM, şirket içi uygulamayla aynı gereksinimlere sahip | [Hazır olma denetimlerinde](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)belirtilen Azure Uygulama Hizmeti gereksinimleri. |<ul><li>[Docker Engine - Windows Server için Kurumsal 2019](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />or</li><li>[Azure Konteyner Hizmeti (AKS)](https://azure.microsoft.com/services/container-service/) (Yani Kubernetes orkestratör)<br />or<li>[Azure Servis Kumaşı](https://azure.microsoft.com/services/service-fabric/) orkestratör</li></ul> |
-|Geçiş yapma |Bkz. [Azure Sanal Makinelere Geçiş](vm.md) | Bkz. [Azure Uygulama Hizmetini Geçir](app-service.md) | Azure ve [Windows Kapsayıcıları e-Kitap ile mevcut .NET uygulamalarını modernize etmede](https://aka.ms/liftandshiftwithcontainersebook) açıklanan hususları, senaryoları ve walkthroughs'u izleyin |
+|Kullanılması gereken durumlar      |<ul><li>Uygulamanın, sunucuda ve yerel. msi yüklemelerinde güçlü bağımlılıkları vardır.</li><li>En kolay uygulama geçiş yolunu istiyorsunuz</li></ul>|Uygulamanın sunucuda bağımlılığı yok, bir veritabanı sunucusuna erişen yalnızca temiz bir ASP.NET Web uygulaması (MVC, WebForm) veya N katmanlı uygulama (Web API 'SI, WCf). |<ul><li>Uygulamanın özgün sunucuda bağımlılıkları vardır ancak bu bağımlılıklar Docker Windows görüntüsüne dahil edilebilir.</li><li>Uygulamayı [bulut DevOps-Ready](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md) olacak şekilde modernleştirin etmek ister misiniz?</li></ul>|
+|Profesyonelleri & avantajları  |<ul><li>En kolay geçiş yolu</li><li>Tanıdık ortam. Dağıtım ortamı bir VM olduğundan, şirket içi sunuculara benzer.</li></ul> |Sürekli PaaS bakımı, Azure 'da uygulamaları yönetmenin ve ölçeklendirmenin en kolay yolu. |<ul><li>Daha sonra Cloud DevOps-uygulamanın kapsayıcılarına dahil edilen bağımlılıklarla hazır.</li><li>Neredeyse .NET/C # kodunu yeniden düzenleme gerekmez.</li></ul> |
+|Simgeler             |IaaS 'dir. Bakım maliyetlidir. Ağ iletişimi, yük dengeleyici, genişleme, IIS yönetimi vb. gibi VM 'nin altyapısını yönetmeniz gerekir. |<ul><li>Tüm uygulamalar [desteklenmez](https://appmigration.microsoft.com/assessment)</li><li>Bazı uygulamaların yeniden düzenlenmiş ve hatta biraz daha yüksek bir şekilde kullanılabilmesi için Azure App Service desteklemesi gerekebilir.</li></ul> |<ul><li>Docker 'ın becerileri öğrenme eğrisi</li><li>Bazı kod ve uygulama yapılandırma ayarları değişir</li></ul>|
+|Gereksinimler |Şirket içi için uygulamadan aynı gereksinimlere sahip Windows Server VM | [Hazırlık denetimlerinde](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)Azure App Service gereksinimler belirtildi. |<ul><li>[Docker altyapısı-Windows Server 2019 için kuruluş](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />or</li><li>[Azure Container Service (AKS)](https://azure.microsoft.com/services/container-service/) (Kubernetes Orchestrator)<br />or<li>[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) Orchestrator</li></ul> |
+|Geçiş yapma |Bkz. [Azure sanal makinelerine geçirme](vm.md) | Bkz. [geçirme Azure App Service](app-service.md) | [Azure ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirmede](https://aka.ms/liftandshiftwithcontainersebook) açıklanan konuları, senaryoları ve izlenecek yolları izleyin. |
 
-Aşağıdaki akış şeması diyagramı, varolan .NET Framework uygulamalarınız için Azure'a geçiş planlarken bir karar ağacını gösterir. Uygunsa, önce A seçeneğini deneyin, ancak B seçeneği gerçekleştirmenin en kolay yoludur.
+Aşağıdaki akış çizelgesi diyagramı, mevcut .NET Framework uygulamalarınız için Azure 'a geçiş planlarken bir karar ağacı gösterir. Mümkünse, ilk olarak seçeneğini deneyin, ancak seçenek B, gerçekleştirilecek en kolay yoldur.
 
-![Barındırma karar ağacını gösteren akış şeması](../media/migration/choose/decision-tree.png)
+![Barındırma kararı ağacını gösteren akış çizelgesi](../media/migration/choose/decision-tree.png)
 
 ## <a name="database-choices"></a>Veritabanı seçenekleri
 
-İlişkisel veritabanlarını Azure'a geçirerken birden çok seçeneğiniz vardır. Bkz. SQL [Server veritabanınızı Azure'a geçirip](sql.md) varolan .NET uygulamanız için doğru veritabanı geçiş yolunu seçmenize yardımcı olun.
+İlişkisel veritabanlarını Azure 'a geçirirken birden çok seçeneğiniz vardır. Mevcut .NET uygulamanız için doğru veritabanı geçiş yolunu seçmenize yardımcı olmak üzere [SQL Server veritabanınızı Azure 'A geçirme](sql.md) konusuna bakın.
 
 ## <a name="networking-and-security-considerations"></a>Ağ ve güvenlik konuları
 
-Uygulamaları Microsoft Azure gibi genel bir buluta dağıtırken, Azure ile şirket içi arasında Bir [DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) veya Azure ile Internet arasında bir DMZ gibi ağ [DMZ'leri oluşturarak](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/)belirli ağları yalıtmak ve güvenli hale getirmek [isteyebilirsiniz.](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz) DMZ'ler [Azure Sanal Ağı](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)ile uygulanabilir.
+Uygulamalar Microsoft Azure gibi bir genel buluta dağıtıldığında, [Azure ile şirket içi arasında bir DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) veya [Azure ile Internet arasında bir DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)gibi [ağ DMZs oluşturarak](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/)belirli ağları yalıtmak ve güvenli hale getirmek isteyebilirsiniz. DMZs, [Azure sanal ağı](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)ile uygulanabilir.
 
-Azure Sanal ağlar şunları yapmanızı sağlar:
+Azure sanal ağları şunları sağlar:
 
-- Kontrol ettiğiniz karma bir altyapı oluşturun
+- Denetlediğiniz bir karma altyapı oluşturun
 - Kendi IP adreslerinizi ve DNS sunucularınızı getirin
-- Bir IPsec VPN veya ExpressRoute ile bağlantılarınızı emniyete ala
-- Alt ağlar arasındaki trafik üzerinde parçalı denetim edin
-- Sanal cihazlar kullanarak gelişmiş ağ topolojileri oluşturun
-- Uygulamalarınız için izole ve son derece güvenli bir ortam elde edin
+- IPSec VPN veya ExpressRoute ile bağlantılarınızın güvenliğini sağlama
+- Alt ağlar arasındaki trafik üzerinde ayrıntılı denetim sağlayın
+- Sanal gereçler ile gelişmiş ağ topolojileri oluşturma
+- Uygulamalarınız için yalıtılmış ve yüksek oranda güvenli bir ortam alın
 
-Kendi sanal ağınızı oluşturmaya başlamak için [Azure Sanal Ağ belgelerine](https://docs.microsoft.com/azure/virtual-network/)bakın.
+Kendi sanal ağınızı oluşturmaya başlamak için bkz. [Azure sanal ağ belgeleri](https://docs.microsoft.com/azure/virtual-network/).
 
-## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Azure'a geçiş yaparken kimlik doğrulama ve yetkilendirme hususları
+## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>Azure 'a geçiş yaparken kimlik doğrulama ve yetkilendirme konuları
 
-Buluta taşınan herhangi bir kuruluşun en önemli endişesi güvenliktir. Çoğu şirket, bir güvenlik modeli tasarlamak ve geliştirmek için önemli miktarda zaman, para ve mühendislik yatırımı yapmış ve kimlik mağazaları ve tek oturum açma çözümleri gibi mevcut yatırımlardan yararlanabilmeleri önemlidir.
+Buluta taşınan herhangi bir kuruluşun önemli bir sorunu güvenlik. Çoğu şirket, bir güvenlik modeli tasarlamak ve geliştirmek için önemli miktarda zaman, para ve mühendislik kazanmıştır ve kimlik depoları ve çoklu oturum açma çözümleri gibi mevcut yatırımlardan faydalanabilir.
 
-Şirket içinde çalışan birçok mevcut kuruluş B2E .NET uygulaması, kimlik doğrulama ve kimlik yönetimi için Active Directory kullanır. Azure AD Connect, şirket içi dizinlerinizi Azure Etkin Dizini ile tümleştirmenize olanak tanır. Başlamak için bkz. [Şirket içi dizinlerinizi Azure Etkin Dizini ile tümleştirin.](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+Şirket içinde çalışan birçok mevcut Enterprise B2E .NET uygulaması, kimlik doğrulama ve kimlik yönetimi için Active Directory kullanır. Azure AD Connect, şirket içi dizinlerinizi Azure Active Directory tümleştirmenizi sağlar. Başlamak için bkz. Şirket [içi dizinlerinizi Azure Active Directory tümleştirme](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
-Azure Active Directory ile ilgili daha fazla planlama için [karma kimlik çözümünüz için Kimlik gereksinimlerine](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) bakın.
+Azure Active Directory ilgili daha fazla planlama için [karma kimlik çözümünüz Için kimlik gereksinimleri](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs) bölümüne bakın.
 
-Diğer kimlik doğrulama protokolü seçenekleri, tüketiciye yönelik uygulamalarda yaygın olan [OAuth](https://en.wikipedia.org/wiki/OAuth) ve [OpenID'dir.](https://en.wikipedia.org/wiki/OpenID) OAuth kullanarak IdentityServer4 tarafından sarılmış ASP.NET Kimlik SQL veritabanı gibi özerk kimlik veritabanları nı kullanırken, genellikle şirket içi veritabanlarına veya dizinlere bağlantı gerekmez.
+Diğer kimlik doğrulama protokolü seçimleri, tüketiciye yönelik uygulamalarda ortak olan [OAuth](https://en.wikipedia.org/wiki/OAuth) ve [OpenID](https://en.wikipedia.org/wiki/OpenID)' dir. Identityserver4 tarafından OAuth kullanılarak Sarmalanan ASP.NET Identity SQL veritabanı gibi otonom kimlik veritabanlarını kullanırken, genellikle şirket içi veritabanlarına veya dizinlere bağlantı gerekmez.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [ASP.NET bir web uygulamasını Azure Uygulama Hizmetine geçirin](app-service.md)
+> [Bir ASP.NET Web uygulamasını Azure App Service geçirme](app-service.md)

@@ -17,75 +17,75 @@ ms.locfileid: "81243043"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Program aracılığıyla .resx dosyalarıyla çalışma
 
-XML kaynak (.resx) dosyaları, ad/değer çiftleri verileri tarafından izlenen belirli bir şema izlemesi gereken bir üstbilgi de dahil olmak üzere iyi tanımlanmış XML'den oluşması gerektiğinden, bu dosyaları el ile oluşturmanın hataya açık olduğunu görebilirsiniz. Alternatif olarak, .NET Sınıf Kitaplığı'ndaki türleri ve üyeleri kullanarak .resx dosyalarını programlı olarak oluşturabilirsiniz. .resx dosyalarında depolanan kaynakları almak için .NET Sınıf Kitaplığını da kullanabilirsiniz. Bu makalede, .resx dosyalarıyla <xref:System.Resources> çalışmak için ad alanındaki türleri ve üyeleri nasıl kullanabileceğiniz açıklanmaktadır.
+XML kaynak (. resx) dosyaları, belirli bir şemayı izlemelidir ve ardından ad/değer çiftlerinde bulunan veriler tarafından izlenen bir üst bilgi dahil olmak üzere iyi tanımlanmış XML 'den oluşmalıdır, bu dosyaların el ile oluşturulmasını hata ediyor olduğunu fark edebilirsiniz. Alternatif olarak, .NET sınıf kitaplığındaki türleri ve üyeleri kullanarak program aracılığıyla. resx dosyaları oluşturabilirsiniz. .NET sınıf kitaplığı ' nı. resx dosyalarında depolanan kaynakları almak için de kullanabilirsiniz. Bu makalede,. resx dosyalarıyla çalışmak için <xref:System.Resources> ad alanındaki türleri ve üyeleri nasıl kullanabileceğiniz açıklanmaktadır.
 
-Bu makalede, kaynakları içeren XML (.resx) dosyalarıyla çalışma açıklanır. Derlemelere katıştırılmış ikili kaynak dosyalarıyla çalışma <xref:System.Resources.ResourceManager>hakkında bilgi için bkz.
+Bu makalede, kaynakları içeren XML (. resx) dosyalarıyla çalışma açıklanmaktadır. Derlemelere eklenmiş ikili kaynak dosyalarıyla çalışma hakkında daha fazla bilgi için bkz <xref:System.Resources.ResourceManager>..
 
 > [!WARNING]
-> Programlı dışında .resx dosyalarıyla çalışmanın yolları da vardır. [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) projesine bir kaynak dosyası eklediğinizde, Visual Studio bir .resx dosyası oluşturmak ve korumak için bir arayüz sağlar ve .resx dosyasını derleme zamanında otomatik olarak bir .resources dosyasına dönüştürür. .resx dosyasını doğrudan işlemek için metin düzenleyicisi de kullanabilirsiniz. Ancak, dosyanın bozulmasını önlemek için, dosyada depolanan ikili bilgileri değiştirmemeye dikkat edin.
+> Program aracılığıyla. resx dosyalarıyla çalışmak için de çeşitli yollar vardır. [Visual](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Studio projesine bir kaynak dosyası eklediğinizde, Visual Studio bir. resx dosyası oluşturmak ve sürdürmek için bir arabirim sağlar ve derleme zamanında. resx dosyasını otomatik olarak bir. resources dosyasına dönüştürür. Bir. resx dosyasını doğrudan işlemek için de bir metin düzenleyicisi kullanabilirsiniz. Ancak, dosyanın bozulmaması için dosyada depolanan tüm ikili bilgileri değiştirmemeye dikkat edin.
 
-## <a name="create-a-resx-file"></a>.resx dosyası oluşturma
+## <a name="create-a-resx-file"></a>. Resx dosyası oluşturma
 
-<xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> Sınıfı, aşağıdaki adımları izleyerek programlı bir şekilde bir .resx dosyası oluşturmak için kullanabilirsiniz:
+Aşağıdaki adımları izleyerek bir <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> . resx dosyası oluşturmak için sınıfını kullanabilirsiniz:
 
-1. Yöntemi arayarak <xref:System.Resources.ResXResourceWriter> ve .resx dosyasının adını vererek nesneyi anında belirtin. <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> Dosya adı .resx uzantısını içermelidir. Nesneyi <xref:System.Resources.ResXResourceWriter> bir `using` blokta anında atarsanız, <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> 3.
+1. Yöntemini çağırarak <xref:System.Resources.ResXResourceWriter> ve. resx dosyasının adını sağlayarak bir nesne örneğini oluşturun. <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> Dosya adı. resx uzantısını içermelidir. <xref:System.Resources.ResXResourceWriter> Nesneyi bir `using` blokta örneklediğinizde, adım 3 ' teki <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> yöntemi açıkça çağırmanız gerekmez.
 
-2. Dosyaya <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> eklemek istediğiniz her kaynak için yöntemi arayın. Dize, nesne ve ikili (bayt dizisi) verilerini eklemek için bu yöntemin aşırı yüklerini kullanın. Kaynak bir nesneyse, serileştirilebilir olmalıdır.
+2. Dosyaya eklemek <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> istediğiniz her kaynak için yöntemini çağırın. Dize, nesne ve ikili (bayt dizisi) verilerini eklemek için bu yöntemin aşırı yüklerini kullanın. Kaynak bir nesnedir, seri hale getirilebilir olmalıdır.
 
-3. Kaynak <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> dosyasını oluşturmak ve tüm kaynakları serbest bırakmak için yöntemi arayın. Nesne <xref:System.Resources.ResXResourceWriter> bir `using` blok içinde oluşturulduysa, kaynaklar .resx dosyasına yazılır ve <xref:System.Resources.ResXResourceWriter> nesne tarafından kullanılan kaynaklar `using` bloğun sonunda serbest bırakılır.
+3. Kaynak dosyasını <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> oluşturmak ve tüm kaynakları serbest bırakmak için yöntemini çağırın. <xref:System.Resources.ResXResourceWriter> Nesne `using` bir blok içinde oluşturulduysa, kaynaklar. resx dosyasına yazılır ve <xref:System.Resources.ResXResourceWriter> nesne tarafından kullanılan kaynaklar `using` bloğun sonunda serbest bırakılır.
 
-Elde edilen .resx dosyası, yöntem tarafından `data` eklenen her kaynak <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> için uygun üstbilgi ve etikete sahiptir.
+Elde edilen. resx dosyası, `data` <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> yöntemi tarafından eklenen her kaynak için uygun başlığa ve etikete sahiptir.
 
 > [!WARNING]
 > Şifreleri, güvenlik açısından duyarlı bilgileri veya özel verileri depolamak için kaynak dosyalarını kullanmayın.
 
-Aşağıdaki örnek, altı dize, bir simge ve iki uygulama tanımlı nesne (iki `Automobile` nesne) depolayan CarResources.resx adlı bir .resx dosyası oluşturur. Örnekte tanımlanan ve anında verilen `Automobile` sınıf öznitelik ile <xref:System.SerializableAttribute> etiketlenir.
+Aşağıdaki örnek, altı dizeyi, bir simgeyi ve uygulama tanımlı iki nesneyi (iki `Automobile` nesne) depolayan CarResources. resx adlı bir. resx dosyası oluşturur. Örnekte `Automobile` tanımlanan ve örneği oluşturulan sınıf, <xref:System.SerializableAttribute> özniteliğiyle etiketlenir.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> .resx dosyaları oluşturmak için [Visual Studio'yı](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) da kullanabilirsiniz. Derleme zamanında Visual Studio, .resx dosyasını ikili kaynak (.resources) dosyasına dönüştürmek için [Kaynak Dosya Üretecisini (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) kullanır ve ayrıca bir uygulama derlemesine veya uydu derlemesine katıştırır.
+> Ayrıca,. resx dosyaları oluşturmak için [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanabilirsiniz. Derleme zamanında, Visual Studio,. resx dosyasını ikili bir kaynak (. resources) dosyasına dönüştürmek için [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) kullanır ve ayrıca onu bir uygulama derlemesine ya da uydu derlemesine katıştırır.
 
-Bir .resx dosyayı çalıştırılabilir bir dosyaya katıştıramaz veya uydu derlemesine kopyalayamazsınız. .resx dosyanızı [Kaynak Dosya Üretecisini (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanarak ikili kaynak (.kaynaklar) dosyasına dönüştürmeniz gerekir. Ortaya çıkan .resources dosyası daha sonra bir uygulama derlemesine veya uydu derlemesine katışdırılabilir. Daha fazla bilgi için [kaynak dosyaları oluşturma'ya](creating-resource-files-for-desktop-apps.md)bakın.
+Bir. resx dosyasını bir çalışma zamanı yürütülebilir dosyasına katıştıramaz veya bir uydu derlemesinde derlenemez. [Kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md)kullanarak. resx dosyanızı ikili bir kaynak (. resources) dosyasına dönüştürmeniz gerekir. Elde edilen. resources dosyası daha sonra bir uygulama derlemesine veya bir uydu derlemesine gömülebilir. Daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](creating-resource-files-for-desktop-apps.md).
 
-## <a name="enumerate-resources"></a>Kaynakları sayısallandırma
- Bazı durumlarda, belirli bir kaynak yerine tüm kaynakları bir .resx dosyasından almak isteyebilirsiniz. Bunu yapmak için,.resx dosyasındaki <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> tüm kaynaklar için bir sayısallaştırıcı sağlayan sınıfı kullanabilirsiniz. Sınıf, <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> döngünün her <xref:System.Collections.DictionaryEntry> yinelemesi için belirli bir kaynağı temsil eden bir nesneyi döndürür. <xref:System.Collections.IDictionaryEnumerator> Özelliği <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> kaynağın anahtarını döndürür <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> ve özelliği kaynağın değerini döndürür.
+## <a name="enumerate-resources"></a>Kaynakları listeleme
+ Bazı durumlarda, belirli bir kaynak yerine, bir. resx dosyasından tüm kaynakları almak isteyebilirsiniz. Bunu yapmak için,. resx dosyasındaki tüm <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> kaynaklar için bir Numaralandırıcı sağlayan sınıfını kullanabilirsiniz. Sınıfı, döngüsünün her yinelemesi için belirli <xref:System.Collections.DictionaryEntry> bir kaynağı temsil eden bir nesne döndüren uygular <xref:System.Collections.IDictionaryEnumerator> <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> Özelliği, kaynağın anahtarını döndürür ve <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> özelliği kaynağın değerini döndürür.
 
- Aşağıdaki örnek, önceki <xref:System.Resources.ResXResourceReader> örnekte oluşturulan CarResources.resx dosyası için bir nesne oluşturur ve kaynak dosyası üzerinden yineler. Kaynak dosyasında `Automobile` tanımlanan iki nesneyi bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> nesneye ekler ve bir <xref:System.Collections.SortedList> nesneye altı dizeden beşini ekler. Nesnedeki <xref:System.Collections.SortedList> değerler, sütun başlıklarını konsola görüntülemek için kullanılan bir parametre dizisine dönüştürülür. Özellik `Automobile` değerleri de konsola görüntülenir.
+ Aşağıdaki örnek, önceki örnekte <xref:System.Resources.ResXResourceReader> oluşturulan CarResources. resx dosyası için bir nesne oluşturur ve kaynak dosyasında yinelenir. Kaynak dosyasında tanımlanan iki `Automobile` nesneyi bir <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> nesnesine ekler ve bir <xref:System.Collections.SortedList> nesnesine beş dizeden beş tane ekler. <xref:System.Collections.SortedList> Nesnesindeki değerler, konsol için sütun başlıklarının gösterilmesi için kullanılan bir parametre dizisine dönüştürülür. `Automobile` Özellik değerleri de konsola görüntülenir.
 
  [!code-csharp[Conceptual.Resources.ResX#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/enumerate1.cs#2)]
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]
 
-## <a name="retrieve-a-specific-resource"></a>Belirli bir kaynak alma
- .resx dosyasındaki öğeleri saymaya ek olarak, <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> sınıfı kullanarak belirli bir kaynağı ada göre ada göre alabilirsiniz. Yöntem, <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> adlandırılmış bir dize kaynağının değerini alır. Yöntem, <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> adlandırılmış bir nesnenin veya ikili verilerin değerini alır. Yöntem, daha sonra (C#'da) veya (Visual Basic'te) uygun türdeki bir nesneye dönüştürülmesi gereken bir nesneyi döndürür.
+## <a name="retrieve-a-specific-resource"></a>Belirli bir kaynağı alma
+ Bir. resx dosyasındaki öğeleri listelemenin yanı sıra, <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> sınıfını kullanarak belirli bir kaynağı ada göre alabilirsiniz. Yöntemi <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> , adlandırılmış bir dize kaynağının değerini alır. Yöntemi <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> , adlandırılmış nesnenin veya ikili verilerin değerini alır. Yöntemi, daha sonra, uygun türdeki bir nesneye (C# ' de) veya dönüştürmeli (Visual Basic) bir nesne döndürür.
 
- Aşağıdaki örnek, kaynak adlarına göre bir formun resim yazısı dizesini ve simgesini alır. Ayrıca, önceki örnekte `Automobile` kullanılan uygulama tanımlı nesneleri alır ve <xref:System.Windows.Forms.DataGridView> bunları bir denetimde görüntüler.
+ Aşağıdaki örnek, bir formun başlık dizesini ve simgesini kaynak adlarına göre alır. Ayrıca, önceki örnekte kullanılan uygulama tanımlı `Automobile` nesneleri alır ve bunları bir <xref:System.Windows.Forms.DataGridView> denetimde görüntüler.
 
  [!code-csharp[Conceptual.Resources.ResX#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/retrieve1.cs#3)]
  [!code-vb[Conceptual.Resources.ResX#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/retrieve1.vb#3)]
 
-## <a name="convert-resx-files-to-binary-resources-files"></a>.resx dosyalarını ikili .kaynaklar dosyalarına dönüştürme
- .resx dosyalarını katıştırılmış ikili kaynak (.resources) dosyalarına dönüştürmenin önemli avantajları vardır. .resx dosyalarının uygulama geliştirme sırasında okunması ve bakımı kolay olsa da, bunlar nadiren bitmiş uygulamalara dahil edilir. Bir uygulama yla dağıtılırsa, yürütülebilir uygulama ve beraberindeki kitaplıklar dışında ayrı dosyalar olarak bulunurlar. Buna karşılık, .resources dosyaları yürütülebilir veya eşlik eden derlemeleri uygulama gömülü. Buna ek olarak, yerelleştirilmiş uygulamalar için, çalışma zamanında .resx dosyalarına güvenmek, kaynak geri dönüşünü kullanma sorumluluğunu geliştiriciye yerleştirir. Buna karşılık, gömülü .kaynaklar dosyalarını içeren bir uydu derlemeleri kümesi oluşturulduysa, ortak dil çalışma süresi kaynak geri dönüş işlemini işler.
+## <a name="convert-resx-files-to-binary-resources-files"></a>. Resx dosyalarını ikili. resources dosyalarına Dönüştür
+ . Resx dosyalarının gömülü ikili kaynak (. resources) dosyalarına dönüştürülmesi önemli avantajlara sahiptir. . Resx dosyalarının uygulama geliştirme sırasında okunması ve korunması kolay olsa da, tamamlanmış uygulamalara nadiren dahil edilmiştir. Bunlar bir uygulamayla dağıtılırsa, uygulama çalıştırılabiliri ve buna eşlik eden kütüphanelerin ayrı dosyaları olarak bulunur. Buna karşılık,. resources dosyaları uygulama yürütülebilir dosyasına veya buna eşlik eden derlemelere katıştırılır. Ayrıca, yerelleştirilmiş uygulamalar için, çalışma zamanında. resx dosyalarına bağlı olarak, geliştiriciye kaynak geri dönüşü işleme sorumluluğunu koyar. Buna karşılık, gömülü. resources dosyaları içeren bir uydu derlemeleri kümesi oluşturulduysa, ortak dil çalışma zamanı kaynak geri dönüş işlemini işler.
 
- .resx dosyasını .resources dosyasına dönüştürmek için, aşağıdaki temel sözdizimine sahip [Kaynak Dosya Üretecisini (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanırsınız:
+ Bir. resx dosyasını bir. resources dosyasına dönüştürmek için aşağıdaki temel sözdizimine sahip [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md)kullanılır:
 
- **Resgen.exe** *.resxFilename*
+ **Resgen. exe** *. resxfilename*
 
- Sonuç, .resx dosyası ve .resources dosya uzantısı ile aynı kök dosya adına sahip ikili kaynak dosyasıdır. Bu dosya daha sonra derlenebilir bir veya derleme zamanda kitaplık olarak derlenebilir. Visual Basic derleyicisini kullanıyorsanız, bir .resources dosyasını uygulamanın yürütülebilir dosyasına gömmek için aşağıdaki sözdizimini kullanın:
+ Sonuç,. resx dosyası ve bir. resources dosya uzantısıyla aynı kök dosya adına sahip olan bir ikili kaynak dosyasıdır. Bu dosya daha sonra derleme zamanında bir yürütülebilir veya bir kitaplık olarak derlenebilir. Visual Basic derleyicisini kullanıyorsanız, bir uygulamanın yürütülebilir dosyasına bir. resources dosyasını eklemek için aşağıdaki sözdizimini kullanın:
 
- **vbc** *filename* **.vb -kaynak:** *.resourcesFilename*
+ **vbc** *filename* **. vb-kaynak:** *. resourcesfilename*
 
- C# kullanıyorsanız, sözdizimi aşağıdaki gibidir:
+ C# kullanıyorsanız sözdizimi aşağıdaki gibidir:
 
- **csc** *dosya adı* **.cs -kaynak:** *.resourcesFilename*
+ **CSC** *dosya adı* **. cs-Resource:** *. resourcesfilename*
 
- .resources dosyası, aşağıdaki temel sözdizimine sahip [Olan Assembly Linker (AL.exe)](../tools/al-exe-assembly-linker.md)kullanılarak uydu derlemesine de eklenebilir:
+ . Resources dosyası, aşağıdaki temel sözdizimine sahip [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanılarak bir uydu derlemesine de katıştırılabilir:
 
- **al** *resourcesFilename* **-out:** *assemblyFilename*
+ **Al** *resourcesfilename* **-Out:** *assemblyFileName*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kaynak Dosyaları Oluşturma](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (Kaynak Dosya Üreteci)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Montaj Linker)](../tools/al-exe-assembly-linker.md)
+- [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md)
+- [Al. exe (bütünleştirilmiş kod bağlayıcı)](../tools/al-exe-assembly-linker.md)

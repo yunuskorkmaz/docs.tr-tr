@@ -1,6 +1,6 @@
 ---
-title: .NET için Azure kitaplıklarıyla kimlik doğrulaması
-description: .NET için Azure kitaplıklarında kimlik doğrulaması
+title: .NET için Azure kitaplıkları ile kimlik doğrulama
+description: .NET için Azure kitaplıklarında kimlik doğrulama
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
@@ -10,11 +10,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "82072153"
 ---
-# <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET için Azure Kitaplıkları ile kimlik doğrulaması
+# <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET için Azure kitaplıkları ile kimlik doğrulama
 
 ## <a name="connect-to-services-with-connection-strings"></a>Bağlantı dizeleriyle hizmetlere bağlanma
 
-Azure hizmet kitaplıkların çoğu kimlik doğrulaması için bir bağlantı dizesi veya anahtar gerektirir. Örneğin, SQL Veritabanı standart bir SQL bağlantı dizesi kullanır:
+Çoğu Azure hizmet kitaplığı, kimlik doğrulaması için bir bağlantı dizesi veya anahtarlar gerektirir. Örneğin, SQL veritabanı standart bir SQL bağlantı dizesi kullanır:
 
 ```csharp
 var builder = new SqlConnectionStringBuilder();
@@ -33,7 +33,7 @@ using (var conn = new SqlConnection(builder.ConnectionString))
 }
 ```
 
-Azure Depolama bir depolama anahtarı kullanır:
+Azure depolama, bir depolama anahtarı kullanır:
 
 ```csharp
 string storageConnectionString = "DefaultEndpointsProtocol=https;"
@@ -45,9 +45,9 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Hizmet bağlantı dizeleri [CosmosDB,](https://docs.microsoft.com/azure/cosmos-db/) [Redis için Azure Önbelleği](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)ve [Servis Veri Servisi](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)gibi diğer Azure hizmetlerinde kullanılır. Bu dizeleri Azure portalı, CLI veya PowerShell'i kullanarak alabilirsiniz. Kodunuzda bağlantı dizeleri oluşturmak için kaynakları sorgulamak için .NET için Azure yönetim kitaplıklarını da kullanabilirsiniz.
+Hizmet bağlantı dizeleri [Cosmosdb](https://docs.microsoft.com/azure/cosmos-db/), [redin için Azure Cache](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)ve [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)gibi diğer Azure hizmetlerinde kullanılır. Bu dizeleri Azure portal, CLı veya PowerShell kullanarak edinebilirsiniz. Kodunuzda bağlantı dizeleri oluşturmak üzere kaynakları sorgulamak için .NET için Azure Yönetim kitaplıklarını da kullanabilirsiniz.
 
-Bu parçacık, bir depolama hesabı bağlantı dizesi oluşturmak için yönetim kitaplıklarını kullanır:
+Bu kod parçacığı, bir depolama hesabı bağlantı dizesi oluşturmak için yönetim kitaplıklarını kullanır:
 
 ```csharp
 // Get a storage account
@@ -70,22 +70,22 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 Diğer kitaplıklar uygulamanızın verilen kimlik bilgileriyle uygulamayı yetkilendiren bir [hizmet sorumlusuyla](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-objects) çalıştırılmasını gerektirir. Bu yapılandırma aşağıda listelenen yönetim kitaplığı için nesne tabanlı kimlik doğrulama adımlarına benzer.
 
-## <a name="azure-management-libraries-for-net-authentication"></a><a name="mgmt-auth"></a>.NET kimlik doğrulaması için azure yönetim kitaplıkları
+## <a name="azure-management-libraries-for-net-authentication"></a><a name="mgmt-auth"></a>.NET kimlik doğrulaması için Azure Yönetim kitaplıkları
 
 [!include[Create service principal](../includes/create-sp.md)]
 
-Hizmet ilkesi oluşturulduğuna göre, kaynakları oluşturmak ve yönetmek için hizmet ilkesine kimlik doğrulaması yapmak için iki seçenek kullanılabilir.
+Hizmet sorumlusu oluşturulduktan sonra, kaynakları oluşturmak ve yönetmek için hizmet sorumlusunun kimliğini doğrulamak üzere iki seçenek mevcuttur.
 
-Her iki seçenek için de projenize aşağıdaki NuGet paketlerini eklemeniz gerekir.
+Her iki seçenek için de aşağıdaki NuGet paketlerini projenize eklemeniz gerekir.
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent
 Install-Package Microsoft.Azure.Management.ResourceManager.Fluent
 ```
 
-### <a name="authenticate-with-token-credentials"></a>Belirteç kimlik bilgileriyle kimlik doğrulaması
+### <a name="authenticate-with-token-credentials"></a>Belirteç kimlik bilgileriyle kimlik doğrulama
 
-İlk yöntem, koddaki belirteç kimlik bilgisi nesnesini oluşturmaktır. Kimlik bilgilerini bir yapılandırma dosyasında, kayıt defterinde veya Azure KeyVault'ta güvenli bir şekilde depolamanız gerekir.
+İlk yöntem, koddaki Token Credential nesnesini oluşturmak için kullanılır. Kimlik bilgilerini bir yapılandırma dosyasında, kayıt defterinde veya Azure Keykasasında güvenli bir şekilde depolamanız gerekir.
 
 ```csharp
 var credentials = SdkContext.AzureCredentialsFactory
@@ -95,9 +95,9 @@ var credentials = SdkContext.AzureCredentialsFactory
     AzureEnvironment.AzureGlobalCloud);
 ```
 
-Hizmet ilkesini oluşturduğunuzda JSON çıkışındaki *clientId,* *clientSecret*ve *tenantId* değerlerini kullanın.
+Hizmet sorumlusunu oluştururken JSON çıktısından *ClientID*, *ClientSecret*ve *tenantıd* değerlerini kullanın.
 
-Ardından API `Azure` ile çalışmaya başlamak için giriş noktası nesnesini oluşturun:
+Ardından, API ile çalışmaya `Azure` başlamak için giriş noktası nesnesini oluşturun:
 
 ```csharp
 var azure = Microsoft.Azure.Management.Fluent.Azure
@@ -106,13 +106,13 @@ var azure = Microsoft.Azure.Management.Fluent.Azure
     .WithDefaultSubscription();
 ```
 
-### <a name="file-based-authentication"></a><a name="mgmt-file"></a>Dosya tabanlı kimlik doğrulama
+### <a name="file-based-authentication"></a><a name="mgmt-file"></a>Dosya tabanlı kimlik doğrulaması
 
-Dosya tabanlı kimlik doğrulama, hizmet temel kimlik bilgilerini düz bir metin dosyasına koymanızı ve dosya sistemi içinde güvenli hale almanızı sağlar.
+Dosya tabanlı kimlik doğrulaması, hizmet sorumlusu kimlik bilgilerini bir düz metin dosyasına yerleştirip dosya sistemi içinde güvenli hale getirmeye olanak tanır.
 
 [!include[File-based authentication](../includes/file-based-auth.md)]
 
-Dosyanın içeriğini okuyun ve API `Azure` ile çalışmaya başlamak için giriş noktası nesnesini oluşturun:
+API ile çalışmaya başlamak için dosyanın içeriğini okuyun ve giriş noktası `Azure` nesnesini oluşturun:
 
 ```csharp
 // pull in the location of the authentication properties file from the environment

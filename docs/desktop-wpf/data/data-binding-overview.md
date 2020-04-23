@@ -1,6 +1,6 @@
 ---
 title: Veri bağlamaya genel bakış
-description: .NET Core için Windows Presentation Foundation'da projenize ekleyebileceğiniz farklı veri kaynakları hakkında bilgi edinin. Dinamik uygulamalar oluşturmak için veri kaynakları XAML öğelerine bağlanabilir.
+description: .NET Core için Windows Presentation Foundation ' de projenize ekleyebileceğiniz farklı veri kaynakları hakkında bilgi edinin. Veri kaynakları, dinamik uygulamalar oluşturmak için XAML öğelerine bağlanabilir.
 author: thraka
 ms.date: 09/19/2019
 ms.author: adegeo
@@ -14,279 +14,279 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "82072013"
 ---
-# <a name="data-binding-overview-in-wpf"></a>WPF'de veri bağlama genel bakış
+# <a name="data-binding-overview-in-wpf"></a>WPF 'de veri bağlamaya genel bakış
 
-Windows Presentation Foundation 'da (WPF) veri bağlama, uygulamaların verileri sunması ve bunlarla etkileşimde bulunması için basit ve tutarlı bir yol sağlar. Öğeler .NET nesneleri ve XML şeklinde çeşitli veri kaynaklarından gelen verilere bağlanabilir. Tek <xref:System.Windows.Controls.ContentControl> veri <xref:System.Windows.Controls.Button> öğelerinin veya <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListView>veri öğelerikoleksiyonlarının esnek bir şekilde şekillendirilmesini sağlamak için yerleşik işlevsellik gibi herhangi bir ve herhangi bir <xref:System.Windows.Controls.ItemsControl>işlev vardır. Verilerin üzerinde sıralama, filtreleme ve grup görünümleri oluşturulabilir.
+Windows Presentation Foundation (WPF) içindeki veri bağlama, uygulamaların verileri sunmak ve verilerle etkileşim kurmak için basit ve tutarlı bir yol sağlar. Öğeler, .NET nesneleri ve XML biçiminde çeşitli veri kaynaklarından verilere bağlanabilir. <xref:System.Windows.Controls.ContentControl> <xref:System.Windows.Controls.Button> Ve gibi <xref:System.Windows.Controls.ListView>her türlü gibi, tek veri öğelerinin veya veri öğelerinin koleksiyonlarının esnek stillendirilmesini sağlayan yerleşik işlevlere sahiptir. <xref:System.Windows.Controls.ItemsControl> <xref:System.Windows.Controls.ListBox> Sıralama, filtre ve grup görünümleri verilerin üzerine oluşturulabilir.
 
-WPF'deki veri bağlama işlevi, çok çeşitli özelliklerle veri bağlama için doğal destek, verilerin esnek UI gösterimi ve iş mantığının UI'den temiz ayrılması dahil olmak üzere geleneksel modellere göre çeşitli avantajlara sahiptir.
+WPF 'deki veri bağlama işlevselliği, geniş kapsamlı özellikler, verilerin esnek Kullanıcı arabirimi gösterimi ve kullanıcı arabiriminden iş mantığı ayırmayı temizleme dahil olmak üzere geleneksel modellere göre çeşitli avantajlar sunar.
 
-Bu makalede, önce WPF veri bağlama için temel kavramları <xref:System.Windows.Data.Binding> tartışır ve daha sonra sınıfın kullanımı ve veri bağlama diğer özellikleri kapsar.
+Bu makalede ilk olarak WPF veri bağlama için temel kavramlar ele alınmaktadır ve <xref:System.Windows.Data.Binding> sınıfının kullanımı ve veri bağlamanın diğer özellikleri ele alınmıştır.
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="what-is-data-binding"></a>Veri bağlama nedir?
 
-Veri bağlama, uygulama arabirimi ile görüntüleþtistirilen veriler arasýnda bir bağlantı kuran bir iþlemidir. Bağlama doğru ayarlara sahipse ve veriler doğru bildirimleri sağlıyorsa, veriler değerini değiştirdiğinde, verilere bağlı öğeler değişiklikleri otomatik olarak yansıtır. Veri bağlama, bir öğedeki verilerin dış gösterimi değişirse, temel verilerin değişikliği yansıtacak şekilde otomatik olarak güncelleştirilebildiği anlamına da gelebilir. Örneğin, kullanıcı bir `TextBox` öğedeki değeri değiştirirse, temel veri değeri bu değişikliği yansıtacak şekilde otomatik olarak güncelleştirilir.
+Veri bağlama, uygulama kullanıcı arabirimi ve görüntülediği veriler arasında bağlantı kuran işlemdir. Bağlamanın doğru ayarları varsa ve veriler doğru bildirimleri sağlıyorsa, veriler değerini değiştirdiğinde veriye bağlanan öğeler otomatik olarak değişiklikleri yansıtır. Veri bağlama Ayrıca bir öğedeki verilerin bir dış gösterimi değişirse, temel alınan verilerin değişikliği yansıtacak şekilde otomatik olarak güncelleştirilmesini sağlayabilir. Örneğin, Kullanıcı bir `TextBox` öğesindeki değeri düzenlerse, temel alınan veri değeri bu değişikliği yansıtacak şekilde otomatik olarak güncelleştirilir.
 
-Veri bağlamanın tipik bir kullanımı, sunucu veya yerel yapılandırma verilerini formlara veya diğer Web-kullanım birimi denetimlerine yerleştirmektir. WPF'de bu kavram, çok çeşitli veri kaynaklarına çok çeşitli özellikleri bağlamayı içerecek şekilde genişletilir. WPF'de, öğelerin bağımlılık özellikleri .NET nesnelerine (Web Hizmetleri ve Web özellikleriyle ilişkili ADO.NET nesneler veya nesneler dahil) ve XML verilerine bağlanabilir.
+Veri bağlamanın tipik bir kullanımı, sunucu veya yerel yapılandırma verilerini formlara veya diğer kullanıcı arabirimi denetimlerine yerleştirkullanmaktır. WPF 'de, bu kavram çeşitli veri kaynaklarına çok çeşitli özellikler bağlamayı kapsayacak şekilde genişletilir. WPF 'de, öğelerin bağımlılık özellikleri .NET nesnelerine (ADO.NET nesneleri veya Web Hizmetleri ve Web özellikleriyle ilişkili nesneler dahil) ve XML verileriyle bağlanabilir.
 
-Veri bağlama örneğinde, açık artırma öğelerinin listesini görüntüleyen [Veri Bağlama Demo'ndan][data-binding-demo]aşağıdaki uygulama Ara Birimi'ne bir göz atın.
+Veri bağlama örneği için, bir açık eksiltme öğelerinin listesini görüntüleyen [veri bağlama tanıtımına][data-binding-demo]ait aşağıdaki uygulama kullanıcı arabirimine göz atın.
 
 ![Veri bağlama örnek ekran görüntüsü](./media/data-binding-overview/demo.png "DataBinding_DataBindingDemo")
 
-Uygulama veri bağlama nın aşağıdaki özelliklerini gösterir:
+Uygulama, veri bağlamanın aşağıdaki özelliklerini gösterir:
 
-- ListBox'ın içeriği *AuctionItem* nesnelerinden oluşan bir koleksiyona bağlıdır. Bir *AuctionItem* *nesnesi Açıklama,* *Başlangıç Fiyatı,* *Başlangıç Tarihi,* *Kategori,* *Özel Özellikler*ve benzeri özelliklere sahiptir.
+- ListBox 'ın içeriği bir *AuctionItem* nesneleri koleksiyonuna bağlanır. Bir *AuctionItem* nesnesi *Description*, *StartPrice*, *StartDate*, *category*, *SpecialFeatures*gibi özelliklere sahiptir.
 
-- Veriler *(AuctionItem* nesneleri) `ListBox` her öğe için açıklama ve geçerli fiyat gösterilecek şekilde şablonlanır. Şablon bir <xref:System.Windows.DataTemplate>. Ayrıca, her öğenin görünümü, görüntülenen *AuctionItem'in* *Özel Özellikler* değerine bağlıdır. *AuctionItem'in* *Özel Özellikler* değeri *Renk*ise, öğenin mavi bir kenarlığı vardır. Değer *Vurgulanırsa,* öğenin turuncu bir kenarlığı ve bir yıldızı vardır. [Veri Templating](#data-templating) bölümü veri templating hakkında bilgi sağlar.
+- İçinde görüntülenen veriler (*AuctionItem* nesneleri), `ListBox` her öğe için açıklama ve geçerli fiyatın gösterilmesi için şablonlanır. Şablon, kullanılarak oluşturulur <xref:System.Windows.DataTemplate>. Ayrıca, her öğenin görünümü görüntülenmekte olan *AuctionItem* öğesinin *SpecialFeatures* değerine bağlıdır. *AuctionItem* öğesinin *SpecialFeatures* değeri *Color*ise, öğenin mavi kenarlığı vardır. Değer *Vurgulayıcıdır*, öğenin turuncu kenarlığı ve yıldızı vardır. [Veri şablonu](#data-templating) oluşturma bölümü, veri şablonu oluşturma hakkında bilgi sağlar.
 
-- `CheckBoxes` Kullanıcı, sağlanan verileri gruplayabilir, filtreleyebilir veya sıralayabilir. Yukarıdaki resimde, kategoriye ve **kategoriye ve tarihe** `CheckBoxes` **göre Gruplandırma** seçilir. Verilerin ürünün kategorisine göre gruplandırış olduğunu ve kategori adının alfabetik sırada olduğunu fark etmiş olabilirsiniz. Görüntüden fark etmek zordur, ancak öğeler de her kategorideki başlangıç tarihine göre sıralanır. Sıralama bir koleksiyon *görünümü*kullanılarak yapılır. [Koleksiyonlara Bağlama](#binding-to-collections) bölümü koleksiyon görünümlerini tartışır.
+- Kullanıcı, verileri `CheckBoxes` belirtilen kullanarak gruplandırabilir, süzebilir veya sıralayabilir. Yukarıdaki görüntüde **kategoriye göre gruplandırma** ve `CheckBoxes` **kategoriye ve tarihe göre sıralama** seçilidir. Verilerin ürün kategorisine göre gruplandığını fark etmiş olabilirsiniz ve kategori adı alfabetik sırada olur. Görüntüden bildirimde bulunulmaları zordur, ancak öğeler her kategori içindeki başlangıç tarihine göre sıralanır. Sıralama, bir *koleksiyon görünümü*kullanılarak yapılır. [Koleksiyonlara bağlama](#binding-to-collections) bölümü koleksiyon görünümlerini tartışır.
 
-- Kullanıcı bir öğe yi seçtiğinde, seçili öğenin ayrıntılarını <xref:System.Windows.Controls.ContentControl> görüntüler. Bu deneyim, *Ana ayrıntı senaryosu*olarak adlandırılır. [Ana ayrıntı senaryosu](#master-detail-binding-scenario) bölümü, bu tür bağlama hakkında bilgi sağlar.
+- Kullanıcı bir öğe seçtiğinde, seçili öğenin ayrıntılarını <xref:System.Windows.Controls.ContentControl> görüntüler. Bu deneyim, *ana ayrıntı senaryosu*olarak adlandırılır. [Ana ayrıntı senaryosu](#master-detail-binding-scenario) bölümünde bu bağlama türü hakkında bilgi sağlanır.
 
-- *StartDate* özelliğinin <xref:System.DateTime>türü, milisaniyeye zamanı içeren bir tarih döndürür. Bu uygulamada, daha kısa bir tarih dizesi görüntülenecek şekilde özel bir dönüştürücü kullanılmıştır. [Veri dönüştürme](#data-conversion) bölümü dönüştürücüler hakkında bilgi sağlar.
+- *StartDate* özelliğinin türü <xref:System.DateTime>, milisaniye cinsinden saati içeren bir tarih döndürür. Bu uygulamada, daha kısa bir tarih dizesinin görüntülenmesi için özel bir dönüştürücü kullanılmıştır. [Veri dönüştürme](#data-conversion) bölümünde dönüştürücüler hakkında bilgi sağlanır.
 
 Kullanıcı *Ürün Ekle* düğmesini seçtiğinde aşağıdaki form gelir.
 
-![Ürün Listeleme sayfası ekle](./media/data-binding-overview/demo-addproductlisting.png "DataBinding_Demo_AddProductListing")
+![Ürün listeleme sayfası ekle](./media/data-binding-overview/demo-addproductlisting.png "DataBinding_Demo_AddProductListing")
 
-Kullanıcı formdaki alanları dinleyebilir, kısa veya ayrıntılı önizleme bölmelerini kullanarak ürün `Submit` girişini önizleyebilir ve yeni ürün girişini eklemeyi seçebilir. Varolan tüm gruplandırma, filtreleme ve sıralama ayarları yeni giriş için geçerli olacaktır. Bu özel durumda, yukarıdaki resimde girilen öğe *Bilgisayar* kategorisindeikinci öğe olarak görüntülenir.
+Kullanıcı formdaki alanları düzenleyebilir, kısa veya ayrıntılı önizleme bölmelerini kullanarak ürün listesini önizleyebilir ve yeni ürün listesini eklemeyi seçebilir `Submit` . Mevcut gruplandırma, filtreleme ve sıralama ayarları, yeni giriş için geçerli olacaktır. Bu durumda, yukarıdaki görüntüde girilen öğe, *bilgisayar* kategorisi içinde ikinci öğe olarak görüntülenir.
 
-Bu resimde gösterilmeyen *Başlangıç Tarihi'nde* <xref:System.Windows.Controls.TextBox>sağlanan doğrulama mantığıdır. Kullanıcı geçersiz bir tarih (geçersiz biçimlendirme veya geçmiş bir tarih) girerse, <xref:System.Windows.Controls.ToolTip> kullanıcı yada bir ve kırmızı <xref:System.Windows.Controls.TextBox>ünlem işareti yle bildirilir. [Veri Doğrulama](#data-validation) bölümünde doğrulama mantığının nasıl oluşturuldurulması açıklanmıştır.
+Bu görüntüde gösterilmez, *başlangıç tarihinde* <xref:System.Windows.Controls.TextBox>verilen doğrulama mantığıdır. Kullanıcı geçersiz bir tarih (geçersiz biçimlendirme veya geçmiş tarih) girerse, kullanıcıya öğesinin yanında bir <xref:System.Windows.Controls.ToolTip> ve kırmızı bir ünlem işaretiyle bildirim gönderilir. <xref:System.Windows.Controls.TextBox> [Veri doğrulama](#data-validation) bölümü, doğrulama mantığının nasıl oluşturulacağını açıklar.
 
-Yukarıda özetlenen veri bağlamanın farklı özelliklerine girmeden önce, öncelikle WPF veri bağlamayı anlamak için kritik olan temel kavramları tartışacağız.
+Yukarıda özetlenen veri bağlamasının farklı özelliklerine geçmeden önce, WPF veri bağlamayı anlamak için kritik olan temel kavramları tartışacağız.
 
 ## <a name="basic-data-binding-concepts"></a>Temel veri bağlama kavramları
 
-Hangi öğeyi bağlasanız ve veri kaynağınızın yapısından bağımsız olarak, her bağlama her zaman aşağıdaki şekilde gösterilen modeli izler.
+Bağladığınız öğeden ve veri kaynağınızın doğası ne olursa olsun, her bağlama her zaman aşağıdaki şekilde gösterilen modeli izler.
 
 ![Temel veri bağlama modelini gösteren diyagram.](./media/data-binding-overview/basic-data-binding-diagram.png)
 
-Şekildeki gibi, veri bağlama aslında bağlayıcı hedefiniz ile bağlayıcı kaynağınız arasındaki köprüdür. Şekil aşağıdaki temel WPF veri bağlama kavramlarını göstermektedir:
+Şekil gösterdiği gibi, veri bağlama temelde bağlama hedefi ve bağlama kaynağınız arasındaki köprüdir. Şekil aşağıdaki temel WPF veri bağlama kavramlarını göstermektedir:
 
-- Tipik olarak, her bağlama nın dört bileşeni vardır:
+- Genellikle, her bağlamada dört bileşen vardır:
 
-  - Bağlayıcı bir hedef nesne.
-  - Hedef bir özellik.
-  - Bağlayıcı bir kaynak.
-  - Kullanılacak bağlayıcı kaynaktaki değere giden yol.
+  - Bağlama hedefi nesnesi.
+  - Target özelliği.
+  - Bağlama kaynağı.
+  - Kullanılacak bağlama kaynağındaki değerin yolu.
   
-  > Örneğin, bir `TextBox` `Employee.Name` `TextBox`özelliği bağlamak istiyorsanız, hedef nesne , hedef özelliği <xref:System.Windows.Controls.TextBox.Text%2A> özelliği, kullanılacak değer *Ad*ve kaynak nesne *Çalışan* nesnesidir.
+  > Örneğin `TextBox` , bir öğesinin içeriğini `Employee.Name` özelliğine bağlamak istiyorsanız, hedef nesneniz `TextBox`, hedef özelliği <xref:System.Windows.Controls.TextBox.Text%2A> ise, kullanılacak değer, *adı*ise ve kaynak nesne *çalışan* nesnesidir.
 
-- Hedef özellik bir bağımlılık özelliği olmalıdır. Çoğu <xref:System.Windows.UIElement> özellik bağımlılık özellikleridir ve salt okunur olanlar hariç çoğu bağımlılık özelliği varsayılan olarak veri bağlamayı destekler. (Yalnızca bağımlılık <xref:System.Windows.DependencyObject> özelliklerini tanımlayabilir ve tüm <xref:System.Windows.UIElement> türler `DependencyObject`türetilmiştir.)
+- Target özelliği bir Dependency özelliği olmalıdır. Çoğu <xref:System.Windows.UIElement> Özellik bağımlılık özellikleridir ve salt okuma dışındaki çoğu bağımlılık özellikleri varsayılan olarak veri bağlamayı destekler. (Yalnızca öğesinden <xref:System.Windows.DependencyObject> türetilmiş türler, bağımlılık özelliklerini tanımlayabilir ve tüm <xref:System.Windows.UIElement> türler öğesinden `DependencyObject`türetilir.)
 
-- Şekilde gösterilmese de, bağlama kaynak nesnesinin özel bir .NET nesnesi olmakla sınırlı olmadığı unutulmamalıdır. WPF veri bağlama ,NET nesneleri ve XML şeklinde verileri destekler. Bazı örnekler sağlamak için, bağlama <xref:System.Windows.UIElement>kaynağınız bir , herhangi bir liste nesnesi, bir ADO.NET veya Web Hizmetleri nesnesi veya XML verilerinizi içeren bir XmlNode olabilir. Daha fazla bilgi için [bkz.](../../framework/wpf/data/binding-sources-overview.md)
+- Şekilde gösterilmese de, bağlama kaynak nesnesinin özel bir .NET nesnesi olmasına sınırlı olmadığından not edilmelidir. WPF veri bağlama, verileri .NET nesneleri ve XML biçiminde destekler. Bazı örnekler sağlamak için bağlama kaynağınız bir, herhangi bir <xref:System.Windows.UIElement>liste nesnesi, ADO.NET veya Web Hizmetleri NESNESI veya XML verilerinizi Içeren bir XmlNode olabilir. Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](../../framework/wpf/data/binding-sources-overview.md).
 
-Bağlayıcı bir hedef oluştururken bağlayıcı bir *hedefe* bağlandığınızı unutmamak önemlidir. Örneğin, bazı temel XML verilerini <xref:System.Windows.Controls.ListBox> kullanarak veri bağlamada görüntüleniyorsanız, `ListBox` xml verilerinize bağlasanız.
+Bir bağlama oluştururken bağlama hedefini bağlama kaynağı *olarak* bağladığınızda dikkat etmeniz önemlidir. Örneğin, bir <xref:System.Windows.Controls.ListBox> veri bağlama kullanarak bazı temel XML verilerini görüntülüyorsanız, bunu XML verilerine bağlamanız `ListBox` gerekir.
 
-Bağlayıcı oluşturmak için nesneyi <xref:System.Windows.Data.Binding> kullanırsınız. Bu makalenin geri kalanında, `Binding` nesnenin özellikleri ve kullanımıyla ilişkili kavramların çoğu ve bazı özellikleri tartışılır.
+Bir bağlama oluşturmak için <xref:System.Windows.Data.Binding> nesnesini kullanın. Bu makalenin geri kalanında, ile ilişkili kavramların birçoğu ve `Binding` nesnenin bazı özellikleri ve kullanımları açıklanmaktadır.
 
 ### <a name="direction-of-the-data-flow"></a>Veri akışının yönü
 
-Önceki şekildeki okta belirtildiği gibi, bağlayıcı kaynağın veri akışı bağlayıcı hedeften bağlayıcı kaynağa (örneğin, kullanıcı a `TextBox`değerini düzenlediğinde kaynak değeri değişir) ve/veya bağlayıcı kaynaktan `TextBox` bağlayıcı hedefe (örneğin, içeriğiniz bağlayıcı kaynaktaki değişikliklerle güncellenir)
+Önceki şekildeki oka göre gösterildiği gibi, bir bağlamanın veri akışı bağlama kaynağından bağlama kaynağına gidebilir (örneğin, bir Kullanıcı bir `TextBox`' ın değerini değiştirdiğinde kaynak değer değişir) ve/veya bağlama kaynağından bağlama hedefine (örneğin, `TextBox` içeriğiniz bağlama kaynağında değişikliklerle güncelleştirilir) ve bağlama kaynağı doğru bildirimleri sağlar.
 
-Uygulamanızın kullanıcıların verileri değiştirmesini ve kaynak nesneye geri yaymasını etkinleştirmesini isteyebilirsiniz. Veya kullanıcıların kaynak verileri güncelleştirmesini etkinleştirmek istemeyebilirsiniz. Veri akışını ayarlayarak kontrol <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>edebilirsiniz.
+Uygulamanızın kullanıcıların verileri değiştirmesini ve kaynak nesnesine geri yaymasını etkinleştirmesini isteyebilirsiniz. Ya da kullanıcıların kaynak verileri güncelleştirmesini etkinleştirmek istemeyebilirsiniz. ' İ ayarlayarak veri akışını kontrol edebilirsiniz <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>.
 
-Bu şekil, farklı veri akışı türlerini göstermektedir:
+Bu şekilde farklı veri akışı türleri gösterilmektedir:
 
 ![Veri bağlama veri akışı](./media/data-binding-overview/databinding-dataflow.png "DataBinding_DataFlow")
 
-- <xref:System.Windows.Data.BindingMode.OneWay>bağlama, hedef özelliği otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak hedef özellikteki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama, bağlı olan denetim örtülü olarak salt okunursa uygundur. Örneğin, stok işaretçisi gibi bir kaynağa bağlanabilir veya belki de hedef özelliğinizde tablonun veriye bağlı arka plan rengi gibi değişiklikler yapmak için sağlanan denetim arabirimi yoktur. Hedef özelliğinin değişikliklerini izlemeye gerek yoksa, bağlama <xref:System.Windows.Data.BindingMode.OneWay> modunu kullanarak <xref:System.Windows.Data.BindingMode.TwoWay> bağlama modunun genel yükü önlenir.
+- <xref:System.Windows.Data.BindingMode.OneWay>bağlama, hedef özelliği otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak Target özelliğindeki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama, bağlanmakta olan denetimin örtülü olarak salt okunurdur. Örneğin, bir stok şeridi gibi bir kaynağa bağlanabilir veya belki de hedef özellikte, bir tablonun veri bağlantılı arka plan rengi gibi değişiklikler yapmak için hiçbir denetim arabirimi sağlanmamıştır. Hedef özelliğin değişikliklerini izlemeye gerek yoksa <xref:System.Windows.Data.BindingMode.OneWay> bağlama modunun kullanılması <xref:System.Windows.Data.BindingMode.TwoWay> bağlama modunun ek yükünü önler.
 
-- <xref:System.Windows.Data.BindingMode.TwoWay>bağlama, diğerini otomatik olarak güncelleştirmek için kaynak özellikte veya hedef özellikte değişikliklere neden olur. Bu tür bağlama, değiştirilebilir formlar veya diğer tam etkileşimli arabirimi senaryoları için uygundur. Çoğu özellik <xref:System.Windows.Data.BindingMode.OneWay> varsayılan bağlama, ancak bazı bağımlılık özellikleri (genellikle kullanıcı tarafından kullanılabilir <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> denetimleri özellikleri ve [CheckBox.IsChecked](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) varsayılan <xref:System.Windows.Data.BindingMode.TwoWay> bağlama. Bağımlılık özelliğinin varsayılan olarak tek yönlü veya iki yönlü bağlayıp bağlamadığını belirlemenin programlı <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> bir yolu, özellik meta <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> verilerini almak ve sonra özelliğin Boolean değerini denetlemektir.
+- <xref:System.Windows.Data.BindingMode.TwoWay>bağlama, kaynak özellikte veya Target özelliğinde, diğerini otomatik olarak güncelleştirmek için değişikliklere neden olur. Bu tür bir bağlama, düzenlenebilir formlar veya diğer tam etkileşimli kullanıcı arabirimi senaryoları için uygundur. Çoğu özellik varsayılan olarak <xref:System.Windows.Data.BindingMode.OneWay> bağlamaya, ancak bazı bağımlılık özelliklerine (genellikle <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> ve [onay kutusu](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) gibi kullanıcı tarafından düzenlenebilir denetimlerin özellikleri). <xref:System.Windows.Data.BindingMode.TwoWay> Bağımlılık özelliğinin tek yönlü veya iki yönlü olarak bağlama özelliğinin, özelliği olan <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> özellik meta verilerini almak ve sonra <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> özelliğin Boole değerini denetlemesi için programlı bir yoldur.
 
-- <xref:System.Windows.Data.BindingMode.OneWayToSource>bağlamanın <xref:System.Windows.Data.BindingMode.OneWay> tersidir; hedef özellik değiştiğinde kaynak özelliği güncelleştirir. Bir örnek senaryo, ui kaynak değerini yeniden değerlendirmek gerekiyorsa.
+- <xref:System.Windows.Data.BindingMode.OneWayToSource>, <xref:System.Windows.Data.BindingMode.OneWay> bağlamanın tersidir; hedef özelliği değiştiğinde kaynak özelliğini güncelleştirir. Tek örnek senaryo yalnızca kaynak değeri kullanıcı arabiriminden yeniden değerlendirmeniz gerektiğinde olur.
 
-- Şekilde gösterilmeyecek olan <xref:System.Windows.Data.BindingMode.OneTime> bağlayıcıdır, bu da kaynak özelliğin hedef özelliği ni başlatmasına neden olur, ancak sonraki değişiklikleri yaymaz. Veri bağlamı değişirse veya veri bağlamında nesne değişirse, değişiklik hedef özelliğe *yansıtılmaz.* Geçerli durum anlık görüntüsü uygunsa veya veriler gerçekten statikse, bu tür bir bağlama uygundur. Hedef özelliğinizi kaynak bir özellikten belirli bir değerle başlatmayı istiyorsanız ve veri bağlamı önceden bilinmiyorsa, bu tür bir bağlama da yararlıdır. Bu mod, kaynak değerinin değişmediği durumlarda daha iyi performans sağlayan daha basit bir <xref:System.Windows.Data.BindingMode.OneWay> bağlama biçimidir.
+- Şekil, kaynak özelliğin hedef özelliği <xref:System.Windows.Data.BindingMode.OneTime> başlatmasına, ancak sonraki değişiklikleri yaymasına neden olan bağlamadır. Veri bağlamı değişirse veya veri bağlamındaki nesne değişirse değişiklik, hedef *özellikte yansıtılmaz.* Geçerli durumun bir anlık görüntüsü uygunsa veya veriler gerçekten statikse, bu tür bir bağlama uygundur. Hedef özelliği bir kaynak özelliğinden bir değer ile başlatmak istiyorsanız ve veri bağlamı önceden bilinmiyorsa, bu tür bağlama de kullanışlıdır. Bu mod aslında kaynak değerin değişmemesi durumunda <xref:System.Windows.Data.BindingMode.OneWay> daha iyi performans sağlayan daha basit bir bağlama biçimidir.
 
-Kaynak değişikliklerini (ve <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> bağlamaları) algılamak için, kaynak . <xref:System.ComponentModel.INotifyPropertyChanged> Bkz. Nasıl Yapılacağını: Bir <xref:System.ComponentModel.INotifyPropertyChanged> uygulama örneği için özellik değişikliği [bildirimini uygulayın.](../../framework/wpf/data/how-to-implement-property-change-notification.md)
+Kaynak değişiklikleri (ve <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> bağlamaları için geçerlidir) algılamak için, kaynak gibi uygun bir özellik değişikliği bildirim mekanizması gerçekleştirmelidir. <xref:System.ComponentModel.INotifyPropertyChanged> Bkz. nasıl yapılır: <xref:System.ComponentModel.INotifyPropertyChanged> uygulama örneği için [özellik değişikliği bildirimi uygulama](../../framework/wpf/data/how-to-implement-property-change-notification.md) .
 
-Özellik, <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType> bağlama modları hakkında daha fazla bilgi ve bağlama nın yönünü nasıl belirtin bir örnek sağlar.
+<xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType> Özelliği bağlama modları hakkında daha fazla bilgi ve bir bağlamanın yönlerinin nasıl belirtilbir örneğini sağlar.
 
-### <a name="what-triggers-source-updates"></a>Kaynak güncelleştirmelerini tetikleyen nedir?
+### <a name="what-triggers-source-updates"></a>Hangi kaynak güncelleştirmelerini tetikler
 
-Hedef özellikteki <xref:System.Windows.Data.BindingMode.TwoWay> <xref:System.Windows.Data.BindingMode.OneWayToSource> değişiklikleri dinleyen veya dinleyen ve bunları kaynağı güncelleştirme olarak bilinen kaynağa geri yayılabilen bağlayıcılar. Örneğin, temel kaynak değerini değiştirmek için TextBox'ın metnini değiştirebilirsiniz.
+Hedef özelliğindeki değişiklikler <xref:System.Windows.Data.BindingMode.TwoWay> için <xref:System.Windows.Data.BindingMode.OneWayToSource> veya dinleyen bağlamalar, kaynağı güncelleştirme olarak bilinen, kaynak olarak kaynağa geri yayılır. Örneğin, temel alınan kaynak değerini değiştirmek için bir TextBox metnini düzenleyebilirsiniz.
 
-Ancak, metni düzenlerken veya metni düzenlemeyi bitirdikten sonra kaynak değeriniz güncelleştirildi ve denetim odağı mı kaybetti? Özellik, <xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType> kaynağın güncelleştirmesini neyin tetiklediğini belirler. Aşağıdaki şekilde ki sağ okların noktalarında <xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType> özelliğin rolü gösterin.
+Ancak, metin düzenlenirken veya metni düzenledikten sonra Denetim odağı kaybetirken kaynak değer güncelleştirilir mi? Özelliği <xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType> , kaynağın güncelleştirilmesini neyin tetikleyeceğini belirler. Aşağıdaki şekildeki doğru okların noktaları, <xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType> özelliğin rolünü gösterir.
 
 ![UpdateSourceTrigger özelliğinin rolünü gösteren diyagram.](./media/data-binding-overview/data-binding-updatesource-trigger.png)
 
-`UpdateSourceTrigger` Değer <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType>ise, hedef özellik değişir değişmez sağ <xref:System.Windows.Data.BindingMode.TwoWay> ok <xref:System.Windows.Data.BindingMode.OneWayToSource> veya bağlamalarla işaret edilen değer güncelleştirilir. Ancak, `UpdateSourceTrigger` değer ise, <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>bu değer yalnızca hedef özellik odağı kaybettiğinde yeni değerle güncelleştirilir.
+`UpdateSourceTrigger` Değer <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType>ise, sağ ok veya <xref:System.Windows.Data.BindingMode.TwoWay> <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlamalar tarafından işaret edilen değer, hedef özelliği değiştikçe hemen güncellenir. Ancak `UpdateSourceTrigger` değer ise <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, bu değer yalnızca Target özelliği odağı kaybettiğinde yeni değerle güncelleştirilir.
 
-<xref:System.Windows.Data.Binding.Mode%2A> Özelliğe benzer şekilde, farklı bağımlılık <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özelliklerinin farklı varsayılan değerleri vardır. Çoğu bağımlılık özelliği için varsayılan <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>değer, `TextBox.Text` özelliğin varsayılan <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>değeri ise . `PropertyChanged`kaynak güncelleştirmeleri genellikle hedef özellik değiştiğinde meydana gelir. Anında değişiklikler Onay Kutuları ve diğer basit kontroller için iyidir. Ancak, metin alanları için, her tuş vuruşundan sonra güncelleştirme performansı azaltabilir ve kullanıcının yeni değere bağlanmadan önce arka alan ve yazım hatalarını düzeltmesi için olağan fırsatı reddeder.
+<xref:System.Windows.Data.Binding.Mode%2A> Özelliğe benzer şekilde, farklı bağımlılık özellikleri farklı varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değerlere sahiptir. Bağımlılık özelliklerinin çoğu için varsayılan değer, <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> `TextBox.Text` özelliğin varsayılan değeri olan ' dir. <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> `PropertyChanged`kaynak güncelleştirmelerinin genellikle Target özelliği değiştiğinde meydana gelir. Anında değişiklikler, onay kutuları ve diğer basit denetimler için uygundur. Bununla birlikte, metin alanları için, her tuş vuruşundan sonra güncelleştirme performansı azaledebilir ve kullanıcıyı yeni değere işlemeden önce, geri alma ve yazma hatalarını çözme fırsatını reddeder.
 
-Bağımlılık <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özelliğinin varsayılan değerini nasıl bulabileceğiniz hakkında bilgi için özellik sayfasına bakın.
+Bağımlılık özelliğinin <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> varsayılan değerini bulma hakkında bilgi için bkz. Özellik sayfası.
 
-Aşağıdaki tablo, örnek <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Controls.TextBox> olarak kullanarak her değer için bir örnek senaryo sağlar.
+Aşağıdaki tabloda, <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Controls.TextBox> örnek olarak kullanılarak her bir değer için örnek bir senaryo verilmiştir.
 
-| UpdateSourceTrigger değeri | Kaynak değeri güncelleştirildiğinde | TextBox için örnek senaryo |
+| UpdateSourceTrigger değeri | Kaynak değer güncelleştirildiği zaman | TextBox için örnek senaryo |
 | ------------------------- | ---------------------------------- | ---------------------------- |
-| `LostFocus`(varsayılan <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>) | TextBox denetimi odağı kaybettiğinde. | Doğrulama mantığıyla ilişkili bir TextBox (aşağıdaki [Veri Doğrulama'ya](#data-validation) bakın). |
-| `PropertyChanged` | Girerken <xref:System.Windows.Controls.TextBox>. | Sohbet odası penceresinde TextBox denetimleri. |
-| `Explicit` | Uygulama aradığında. <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> | TextBox, editable formunda denetimler (kaynak değerlerini yalnızca kullanıcı gönder düğmesini tıklattığında güncelleştirir). |
+| `LostFocus`(için <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>varsayılan) | TextBox denetimi odağı kaybettiğinde. | Doğrulama mantığı ile ilişkili bir metin kutusu (aşağıdaki [veri doğrulamasına](#data-validation) bakın). |
+| `PropertyChanged` | Öğesine yazarken <xref:System.Windows.Controls.TextBox>. | Bir sohbet odası penceresinde TextBox denetimleri. |
+| `Explicit` | Uygulama çağırdığında <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>. | Düzenlenebilir bir formda metin kutusu denetimleri (kaynak değerlerini yalnızca Kullanıcı Gönder düğmesine tıkladığında güncelleştirir). |
 
-Örneğin, [bkz.](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
+Bir örnek için bkz. [nasıl yapılır: denetim kutusu metninde kaynağı ne zaman güncelleştirin](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).
 
-## <a name="creating-a-binding"></a>Bağlayıcı oluşturma
+## <a name="creating-a-binding"></a>Bağlama oluşturma
 
-Önceki bölümlerde tartışılan bazı kavramları yeniden ifade etmek için, <xref:System.Windows.Data.Binding> nesneyi kullanarak bir bağlama kurarsınız ve her bağlamanın genellikle dört bileşeni vardır: bağlayıcı hedef, hedef özellik, bağlayıcı bir kaynak ve kullanılacak kaynak değerine giden bir yol. Bu bölümde bağlama nasıl ayarlanan açıklanmıştır.
+Önceki bölümlerde ele alınan kavramların bazılarını yeniden oluşturmak için, <xref:System.Windows.Data.Binding> nesnesini kullanarak bir bağlama kurarsınız ve her bağlamada genellikle dört bileşen vardır: bağlama hedefi, hedef özellik, bağlama kaynağı ve kullanılacak kaynak değer yolu. Bu bölümde bir bağlamanın nasıl ayarlanacağı açıklanır.
 
-Bağlayıcı kaynak nesnenin SDKSample ad alanında tanımlanan *MyData* adlı bir sınıf olduğu aşağıdaki örneği göz önünde *bulundurun.* Gösterim amacıyla, *MyData'nın* *ColorName* adında bir dize özelliği vardır ve değeri "Kırmızı" olarak ayarlanır. Böylece, bu örnek kırmızı arka plan ile bir düğme oluşturur.
+Bağlama kaynak nesnesinin, *SDKSample* ad alanında tanımlanan *MyData* adlı bir sınıf olduğu aşağıdaki örneği göz önünde bulundurun. Tanıtım amacıyla, *MyData* değeri "Red" olarak ayarlanmış *ColorName* adlı bir String özelliğine sahiptir. Bu nedenle, bu örnek kırmızı bir arka plana sahip bir düğme oluşturur.
 
 [!code-xaml[BindNonTextProperty](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColor)]
 
-Bağlayıcı bildirim sözdizimi ve kodda bir bağlama nın nasıl ayarlanacaklarına ilişkin örnekler hakkında daha fazla bilgi için [bkz.](../../framework/wpf/data/binding-declarations-overview.md)
+Bağlama bildirimi sözdizimi hakkında daha fazla bilgi ve kod içinde bağlama ayarlama örnekleri için bkz. [bağlama bildirimlerine genel bakış](../../framework/wpf/data/binding-declarations-overview.md).
 
-Bu örneği temel diyagramımıza uygularsak, elde edilen şekil aşağıdaki gibi görünür. Arka Plan <xref:System.Windows.Data.BindingMode.OneWay> özelliği varsayılan olarak <xref:System.Windows.Data.BindingMode.OneWay> bağlamayı desteklediğinden, bu şekil bir bağlamayı açıklar.
+Bu örneği temel diyagramımızı uygulıyoruz, sonuçta elde edilen şekil aşağıdaki gibi görünür. Bu şekilde, arka <xref:System.Windows.Data.BindingMode.OneWay> plan özelliği varsayılan olarak bağlamayı desteklediğinden <xref:System.Windows.Data.BindingMode.OneWay> bu şekilde bir bağlama açıklanmaktadır.
 
-![Veri bağlama Arka Plan özelliğini gösteren diyagram.](./media/data-binding-overview/data-binding-button-background-example.png)
+![Veri bağlama arka plan özelliğini gösteren diyagram.](./media/data-binding-overview/data-binding-button-background-example.png)
 
-*ColorName* özelliği türü <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Media.Brush>nde yken bu bağlamanın neden çalıştığını merak edebilirsiniz. Bu bağlama, [Veri dönüştürme](#data-conversion) bölümünde tartışılan varsayılan tür dönüştürmekullanır.
+Bu bağlamanın, bir <xref:System.Windows.Controls.Control.Background%2A> Özellik türü <xref:System.Windows.Media.Brush>olsa da, *ColorName* özelliği String türünde olmasına rağmen neden bu bağlamanın işe yaradığına merak ediyor olabilirsiniz. Bu bağlama, [veri dönüştürme](#data-conversion) bölümünde ele alınan varsayılan tür dönüşümünü kullanır.
 
-### <a name="specifying-the-binding-source"></a>Bağlayıcı kaynağı belirtme
+### <a name="specifying-the-binding-source"></a>Bağlama kaynağını belirtme
 
-Önceki örnekte, bağlama kaynağının [DockPanel.DataContext](xref:System.Windows.FrameworkElement.DataContext) özelliğini ayarlayarak belirtildiğine dikkat edin. Daha <xref:System.Windows.Controls.Button> sonra <xref:System.Windows.FrameworkElement.DataContext%2A> değeri ana <xref:System.Windows.Controls.DockPanel>öğesi olan ,'dan devralır. Yinelemek gerekirse, bağlayıcı kaynak nesne bir bağlama dört gerekli bileşenlerinden biridir. Bu nedenle, bağlayıcı kaynak nesne belirtilmeden, bağlama hiçbir şey yapmaz.
+Önceki örnekte, bağlama kaynağının [DockPanel. DataContext](xref:System.Windows.FrameworkElement.DataContext) özelliği ayarlanarak belirtildiğine dikkat edin. Sonra değeri, üst öğesi olan öğesinden <xref:System.Windows.Controls.DockPanel>devralır. <xref:System.Windows.FrameworkElement.DataContext%2A> <xref:System.Windows.Controls.Button> Yeniden yinelemek için bağlama kaynak nesnesi, bir bağlamanın gerekli dört bileşenlerinden biridir. Bu nedenle, bağlama kaynak nesnesi belirtilmeksizin bağlama hiçbir şey yapmaz.
 
-Bağlayıcı kaynak nesneyi belirtmenin birkaç yolu vardır. Aynı <xref:System.Windows.FrameworkElement.DataContext%2A> kaynağa birden çok özellik bağlarken, özelliği bir üst öğeüzerinde kullanmak yararlıdır. Ancak, bazen bağlayıcı kaynağı tek tek bağlama bildirimlerinde belirtmek daha uygun olabilir. Önceki örnekte, <xref:System.Windows.FrameworkElement.DataContext%2A> özelliği kullanmak yerine, aşağıdaki örnekte olduğu <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> gibi, özelliği doğrudan düğmenin bağlayıcı bildirimine ayarlayarak bağlama kaynağını belirtebilirsiniz.
+Bağlama kaynak nesnesini belirtmek için çeşitli yollar vardır. Aynı kaynağa <xref:System.Windows.FrameworkElement.DataContext%2A> birden çok özellik bağlarken bir üst öğe üzerinde özelliğini kullanmak faydalıdır. Ancak, bazen bağlama kaynağını tek tek bağlama bildirimlerinde belirtmek daha uygun olabilir. Önceki örnekte, <xref:System.Windows.FrameworkElement.DataContext%2A> özelliğini kullanmak yerine, aşağıdaki örnekte olduğu gibi, özelliği doğrudan düğmenin bağlama bildiriminde ayarlayarak <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> bağlama kaynağını belirtebilirsiniz.
 
 [!code-xaml[BindNonTextPropertyCompactBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColorCompactBinding)]
 
-<xref:System.Windows.FrameworkElement.DataContext%2A> Özelliği doğrudan bir öğeüzerinde <xref:System.Windows.FrameworkElement.DataContext%2A> ayarlamak, değeri bir atadan devralmak (ilk örnekteki düğme gibi) ve <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> bağlama özelliğini bağlamaya ayarlayarak bağlayıcı kaynağı açıkça belirtmek (son örnekteki düğme gibi), bağlama kaynağını belirtmek için <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> özelliği veya <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> özelliği de kullanabilirsiniz. Özellik, <xref:System.Windows.Data.Binding.ElementName%2A> bir düğmenin genişliğini ayarlamak için kaydırıcı kullandığınızda olduğu gibi uygulamanızdaki diğer öğelere bağlanırken kullanışlıdır. Özellik, <xref:System.Windows.Data.Binding.RelativeSource%2A> bir veya bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Style>'de bağlama belirtildiğinde yararlıdır. Daha fazla bilgi için [bkz: Bağlama kaynağını belirtin.](../../framework/wpf/data/how-to-specify-the-binding-source.md)
+<xref:System.Windows.FrameworkElement.DataContext%2A> Bir öğedeki özelliği doğrudan ayarlama, <xref:System.Windows.FrameworkElement.DataContext%2A> değeri bir üst öğeden devralma (örneğin, birinci örnekteki düğme gibi) ve bağlama üzerindeki <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> özelliği ayarlayarak bağlama kaynağını açıkça belirtme (örneğin, son örnek düğme gibi), bağlama kaynağını belirtmek için <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> özelliğini veya <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> özelliğini de kullanabilirsiniz. <xref:System.Windows.Data.Binding.ElementName%2A> Özelliği, bir düğmenin genişliğini ayarlamak için kaydırıcı kullanırken olduğu gibi, uygulamanızdaki diğer öğelere bağlarken faydalıdır. <xref:System.Windows.Data.Binding.RelativeSource%2A> Özelliği, <xref:System.Windows.Controls.ControlTemplate> veya içinde bağlama belirtildiğinde faydalıdır <xref:System.Windows.Style>. Daha fazla bilgi için bkz. [nasıl yapılır: bağlama kaynağını belirtme](../../framework/wpf/data/how-to-specify-the-binding-source.md).
 
-### <a name="specifying-the-path-to-the-value"></a>Değere giden yolu belirtme
+### <a name="specifying-the-path-to-the-value"></a>Değerin yolunu belirtme
 
-Bağlama kaynağınız bir nesneyse, <xref:System.Windows.Data.Binding.Path?displayProperty=nameWithType> bağlamanız için kullanılacak değeri belirtmek için özelliği kullanırsınız. XML verilerine bağlanıyorsunsa, <xref:System.Windows.Data.Binding.XPath?displayProperty=nameWithType> değeri belirtmek için özelliği kullanırsınız. Bazı durumlarda, verileriniz XML <xref:System.Windows.Data.Binding.Path%2A> olsa bile özelliği kullanmak geçerli olabilir. Örneğin, döndürülen bir XmlNode'un Ad özelliğine erişmek istiyorsanız (XPath sorgusunun bir <xref:System.Windows.Data.Binding.Path%2A> sonucu olarak), <xref:System.Windows.Data.Binding.XPath%2A> özelliği özelliğine ek olarak kullanmanız gerekir.
+Bağlama kaynağınız bir nesnedir, bağlamanız için kullanılacak değeri belirtmek <xref:System.Windows.Data.Binding.Path?displayProperty=nameWithType> için özelliğini kullanın. XML verilerine bağlıyorsanız, değerini belirtmek için <xref:System.Windows.Data.Binding.XPath?displayProperty=nameWithType> özelliğini kullanın. Bazı durumlarda, verileriniz XML olduğunda bile <xref:System.Windows.Data.Binding.Path%2A> özelliği kullanmak için geçerli olabilir. Örneğin, döndürülen bir XmlNode 'un Name özelliğine (bir XPath sorgusunun sonucu olarak) erişmek istiyorsanız özelliği ek <xref:System.Windows.Data.Binding.Path%2A> <xref:System.Windows.Data.Binding.XPath%2A> olarak özelliğini kullanmanız gerekir.
 
-Daha fazla bilgi <xref:System.Windows.Data.Binding.Path%2A> için, bkz. <xref:System.Windows.Data.Binding.XPath%2A>
+Daha fazla bilgi için bkz. <xref:System.Windows.Data.Binding.Path%2A> ve <xref:System.Windows.Data.Binding.XPath%2A> özellikleri.
 
-Kullanılacak değerin bağlayıcının <xref:System.Windows.Data.Binding.Path%2A> dört gerekli bileşeninden biri olduğunu vurgulamış olsak da, tüm nesneye bağlamak istediğiniz senaryolarda kullanılacak değer bağlayıcı kaynak nesneyle aynı olacaktır. Bu gibi durumlarda, bir <xref:System.Windows.Data.Binding.Path%2A>. Aşağıdaki örneği inceleyin.
+' Nin, kullanılacak değere, <xref:System.Windows.Data.Binding.Path%2A> bir bağlamanın dört gerekli bileşenlerinden biri olduğunu vurguladığımızda, bir nesnenin tamamına bağlamak istediğiniz senaryolarda, kullanılacak değer bağlanacak kaynak nesneyle aynı olacaktır. Bu durumlarda, bir <xref:System.Windows.Data.Binding.Path%2A>belirtmemelidir. Aşağıdaki örneği inceleyin.
 
 [!code-xaml[EmptyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/EmptyBinding.xaml#EmptyBinding)]
 
-Yukarıdaki örnekte boş bağlama sözdizimi kullanır: {Bağlama}. Bu durumda, <xref:System.Windows.Controls.ListBox> Veri Bağlamı bir üst DockPanel öğesinden devralır (bu örnekte gösterilmez). Yol belirtilmediğinde, varsayılan nesnenin tamamına bağlanır. Başka bir deyişle, bu örnekte, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği tüm nesneye bağladığımız için yol dışarıda bırakılmış. (Ayrıntılı bir tartışma için [koleksiyonlara Bağlama](#binding-to-collections) bölümüne bakın.)
+Yukarıdaki örnek, boş bağlama söz dizimini kullanır: {Binding}. Bu durumda, bir üst <xref:System.Windows.Controls.ListBox> DockPanel öğesinden DataContext 'i devralır (Bu örnekte gösterilmez). Yol belirtilmediğinde, varsayılan olarak nesnenin tamamına bağlanır. Diğer bir deyişle, bu örnekte, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği nesnenin tamamına bağlamamız nedeniyle yol kalmadı. (Ayrıntılı bir tartışma için [koleksiyonlara bağlama](#binding-to-collections) bölümüne bakın.)
 
-Bir koleksiyona bağlama dışında, bu senaryo, bir nesnenin yalnızca tek bir özelliği yerine tüm nesneye bağlanmak istediğinizde de yararlıdır. Örneğin, kaynak nesneniz türdeyse, <xref:System.String>yalnızca dizekendisine bağlamak isteyebilirsiniz. Başka bir yaygın senaryo, bir öğeyi birkaç özelliği olan bir nesneye bağlamak istediğinizde.
+Bir koleksiyona bağlama dışında, bu senaryo aynı zamanda yalnızca bir nesnenin tek bir özelliği yerine bir nesnenin tamamına bağlamak istediğinizde de yararlıdır. Örneğin, kaynak nesneniz tür <xref:System.String>ise, yalnızca dizenin kendisini bağlamak isteyebilirsiniz. Diğer bir yaygın senaryo, bir öğeyi birkaç özelliği olan bir nesneye bağlamak istemizin olur.
 
-Verilerin bağlı hedef özelliğiniz için anlamlı olması için özel mantık uygulamanız gerekebilir. Varsayılan tür dönüştürme yoksa özel mantık özel bir dönüştürücü şeklinde olabilir. Dönüştürücüler hakkında bilgi için [Veri dönüştürme](#data-conversion) ye bakın.
+Verilerin, bağlantılı hedef özelliği için anlamlı olması için özel mantık uygulamanız gerekebilir. Özel mantık, varsayılan tür dönüştürmesi yoksa özel bir dönüştürücü biçiminde olabilir. Dönüştürücüler hakkında bilgi için bkz. [veri dönüştürme](#data-conversion) .
 
-### <a name="binding-and-bindingexpression"></a>Bağlama ve Bağlamaİfadesi
+### <a name="binding-and-bindingexpression"></a>Bağlama ve BindingExpression
 
-Diğer özellikleri ve veri bağlama kullanımları girmeden <xref:System.Windows.Data.BindingExpression> önce, sınıf tanıtmak yararlıdır. Önceki bölümlerde de gördüğünüz <xref:System.Windows.Data.Binding> gibi, sınıf bir bağlama bildirimi için üst düzey sınıftır; bir bağlama nın özelliklerini belirtmenize olanak tanıyan birçok özellik sağlar. İlgili bir <xref:System.Windows.Data.BindingExpression>sınıf, kaynak ve hedef arasındaki bağlantıyı koruyan altta yatan nesnedir. Bağlama, birkaç bağlama deyimi arasında paylaşılabilen tüm bilgileri içerir. A, <xref:System.Windows.Data.BindingExpression> paylaşılamayan ve tüm örnek bilgilerini içeren <xref:System.Windows.Data.Binding>bir örnek ifadesidir.
+Veri bağlamanın diğer özelliklerine ve kullanımlarına geçmeden önce <xref:System.Windows.Data.BindingExpression> sınıfı tanıtmak yararlı olur. Önceki bölümlerde gördüğünüz gibi, <xref:System.Windows.Data.Binding> sınıfı bağlama bildirimi için üst düzey sınıftır; bir bağlamanın özelliklerini belirtmenize imkan tanıyan birçok özellik sağlar. İlişkili bir sınıf, <xref:System.Windows.Data.BindingExpression>kaynak ve hedef arasındaki bağlantıyı tutan temel nesnedir. Bağlama, birkaç bağlama ifadesi genelinde paylaşılabilen tüm bilgileri içerir. <xref:System.Windows.Data.BindingExpression> , <xref:System.Windows.Data.Binding>Paylaşılamayan bir örnek ifadesidir ve öğesinin tüm örnek bilgilerini içerir.
 
-Sınıfın `myDataObject` bir örneği `MyData` olan, kaynak `myBinding` <xref:System.Windows.Data.Binding> nesnenin bulunduğu ve `MyData` 'adı bir `MyDataProperty`dize özelliği içeren tanımlı bir sınıf olduğu aşağıdaki örneği göz önünde bulundurun. Bu `myText`örnek, metin içeriğini , bir <xref:System.Windows.Controls.TextBlock>örneğini `MyDataProperty`.
+Aşağıdaki örneği, burada `myDataObject` `MyData` sınıfının bir örneği, `myBinding` kaynak <xref:System.Windows.Data.Binding> nesne ise ve `MyData` adlı `MyDataProperty`bir dize özelliği içeren tanımlanmış bir sınıftır. Bu örnek, bir örneği `myText` <xref:System.Windows.Controls.TextBlock>olan öğesinin metin içeriğini öğesine `MyDataProperty`bağlar.
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-Diğer bağlamalar oluşturmak için aynı *myBinding* nesnesini kullanabilirsiniz. Örneğin, bir onay kutusunun metin içeriğini *MyDataProperty'e*bağlamak için *myBinding* nesnesini kullanabilirsiniz. Bu senaryoda, *myBinding* nesnesini <xref:System.Windows.Data.BindingExpression> paylaşmanın iki örneği olacaktır.
+Diğer bağlamaları oluşturmak için aynı *myBinding* nesnesi kullanabilirsiniz. Örneğin, bir onay kutusunun metin içeriğini *MyDataProperty*olarak bağlamak Için *myBinding* nesnesini kullanabilirsiniz. Bu senaryoda, <xref:System.Windows.Data.BindingExpression> *myBinding* nesnesini paylaşan iki örnek olacaktır.
 
-Bir <xref:System.Windows.Data.BindingExpression> nesne, veriye bağlı bir nesneyi çağırarak <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> döndürülür. Aşağıdaki makaleler <xref:System.Windows.Data.BindingExpression> sınıfın bazı kullanımlarını göstermektedir:
+Bir <xref:System.Windows.Data.BindingExpression> nesne, veriye bağlı bir <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> nesne çağırarak döndürülür. Aşağıdaki makalelerde, <xref:System.Windows.Data.BindingExpression> sınıfının kullanımları gösterilmektedir:
 
 - [Bağımlı hedef özelliğinden bağlama nesnesi alma](../../framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)
 
-- [TextBox metni kaynağı güncellediğinde denetim](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
+- [TextBox metni kaynağı güncelleştirdiğinde denetleme](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
 
 ## <a name="data-conversion"></a>Veri dönüştürme
 
-[Bağlama](#creating-a-binding) bölümünde, <xref:System.Windows.Controls.Control.Background%2A> özelliği "Kırmızı" değerine sahip bir dize özelliğine bağlı olduğundan düğme kırmızıdır. Dize değerini <xref:System.Windows.Media.Brush> <xref:System.Windows.Media.Brush>bir .'ye dönüştürmek için tür dönüştürücü türünde bulunduğundan, bu dize değeri çalışır
+[Bağlama oluşturma](#creating-a-binding) bölümünde düğme kırmızıdır çünkü <xref:System.Windows.Controls.Control.Background%2A> özelliği "Red" değerine sahip bir dize özelliğine bağımlıdır. Bu dize değeri, dize değerini bir <xref:System.Windows.Media.Brush> <xref:System.Windows.Media.Brush>olarak dönüştürmek için türde bir tür dönüştürücüsü bulunduğundan geçerlidir.
 
-Bu bilgileri şekil Bağlama [bölümü oluşturma](#creating-a-binding) şuna benzer.
+Bu bilgileri [bağlama oluşturma](#creating-a-binding) bölümünde olduğu şekle ekleme bu şekilde görünür.
 
-![Veri bağlama Varsayılan özelliğini gösteren diyagram.](./media/data-binding-overview/data-binding-button-default-conversion.png)
+![Veri bağlama varsayılan özelliğini gösteren diyagram.](./media/data-binding-overview/data-binding-button-default-conversion.png)
 
-Ancak, bağlayıcı kaynak nesnenizin bir renk özelliği varsa *Color* <xref:System.Windows.Media.Color>ne olur? Bu durumda, bağlamanın çalışması için öncelikle *Renk* özelliği değerini özelliğin <xref:System.Windows.Controls.Control.Background%2A> kabul ettiği bir şeye dönüştürmeniz gerekir. Aşağıdaki örnekte olduğu gibi <xref:System.Windows.Data.IValueConverter> arabirimi uygulayarak özel bir dönüştürücü oluşturmanız gerekir.
+Ancak, Binding kaynak nesnenizin dize türünde bir özelliği olması yerine ne tür <xref:System.Windows.Media.Color>bir *Color* özelliği vardır? Bu durumda, bağlamanın çalışması için öncelikle *Color* özelliğinin değerini <xref:System.Windows.Controls.Control.Background%2A> özelliğin kabul ettiği bir şeye dönüştürmeniz gerekir. Aşağıdaki örnekte olduğu gibi, <xref:System.Windows.Data.IValueConverter> arabirimini uygulayarak özel bir dönüştürücü oluşturmanız gerekir.
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ColorBrushConverter.cs#ColorBrushConverter)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ColorBrushConverter.vb#ColorBrushConverter)]
 
 Daha fazla bilgi edinmek için bkz. <xref:System.Windows.Data.IValueConverter>.
 
-Şimdi varsayılan dönüştürme yerine özel dönüştürücü kullanılır ve diyagramımız şu na benzer.
+Artık özel dönüştürücü varsayılan dönüştürme yerine kullanılır ve diyagramımız şuna benzer.
 
-![Veri bağlama özel dönüştürücü gösteren diyagram.](./media/data-binding-overview/data-binding-converter-color-example.png)
+![Veri bağlama özel dönüştürücüsünü gösteren diyagram.](./media/data-binding-overview/data-binding-converter-color-example.png)
 
-Yinelemek gerekirse, varsayılan dönüşümler, bağlı olan tür dönüştürücüler nedeniyle kullanılabilir. Bu davranış, hedefte hangi tür dönüştürücülerin bulunduğuna bağlıdır. Şüpheniz varsa, kendi dönüştürücü oluşturun.
+Yeniden yinelemek için, bağlanmakta olan türde bulunan tür dönüştürücüler nedeniyle varsayılan dönüşümler kullanılabilir olabilir. Bu davranış, hedefte hangi tür dönüştürücülerinin kullanılabilir olduğuna bağlı olarak değişir. Şüpheniz varsa, kendi dönüştürücüyü oluşturun.
 
-Veri dönüştürücüsi uygulamanın mantıklı olduğu bazı tipik senaryolar şunlardır:
+Aşağıda, bir veri dönüştürücüsünü uygulamak açısından anlamlı olduğu bazı tipik senaryolar verilmiştir:
 
-- Verileriniz kültüre bağlı olarak farklı şekilde görüntülenmelidir. Örneğin, belirli bir kültürde kullanılan kuralları temel alan bir para birimi dönüştürücüsü veya takvim tarihi/saat dönüştürücüsü uygulamak isteyebilirsiniz.
+- Verileriniz kültüre bağlı olarak farklı şekilde görüntülenmelidir. Örneğin, belirli bir kültürde kullanılan kurallara göre bir para birimi dönüştürücü veya takvim tarih/saat Dönüştürücüsü uygulamak isteyebilirsiniz.
 
-- Kullanılan verilerin bir özelliğin metin değerini değiştirmek için tasarlanmaması gerekmez, ancak bunun yerine görüntünün kaynağı veya görüntü metninin rengi veya stili gibi başka bir değeri değiştirmek amaçlanır. Dönüştürücüler, metin alanını bir tablo hücresinin Arka Plan özelliğine bağlamak gibi uygun görünmeyen bir özelliğin bağlamasını dönüştürerek bu örnekte kullanılabilir.
+- Kullanılan veriler bir özelliğin metin değerini değiştirmek zorunda değildir, ancak bunun yerine bir görüntünün kaynağı veya görüntü metninin rengi ya da stili gibi başka bir değerin değiştirilmesini amaçlanır. Dönüştürücüler, bir metin alanını tablo hücresinin arka plan özelliğine bağlama gibi, uygun gibi görünmeyebilir bir özelliğin bağlamasını dönüştürerek bu örnekte kullanılabilir.
 
-- Birden fazla denetim veya denetimlerin birden çok özelliği aynı verilere bağlıdır. Bu durumda, birincil bağlama yalnızca metni görüntüleyebilir, diğer bağlamalar ise belirli ekran sorunlarını işler, ancak yine de kaynak bilgilerle aynı bağlamayı kullanır.
+- Denetimlerin birden fazla denetimi veya birden çok özelliği aynı verilere bağlıydı. Bu durumda, birincil bağlama yalnızca metni görüntüleyebilir, diğer bağlamalar ise belirli görüntüleme sorunlarını işler ancak yine de kaynak bilgilerle aynı bağlamayı kullanır.
 
-- Hedef özellik, <xref:System.Windows.Data.MultiBinding>". Bunun <xref:System.Windows.Data.MultiBinding>için, bağlamaların değerlerinden son bir değer üretmek için bir özel <xref:System.Windows.Data.IMultiValueConverter> kullanırsınız. Örneğin, renk aynı veya farklı bağlayıcı kaynak nesnelerden gelen değerler olabilir kırmızı, mavi ve yeşil değerler, hesaplanabilir. Örnekler <xref:System.Windows.Data.MultiBinding> ve bilgiler için bkz.
+- Target özelliği, bir bağlama koleksiyonu içerir <xref:System.Windows.Data.MultiBinding>. İçin <xref:System.Windows.Data.MultiBinding>, bağlamaların değerlerinden son <xref:System.Windows.Data.IMultiValueConverter> bir değer üretmek için özel kullanırsınız. Örneğin, aynı veya farklı bağlama kaynak nesnelerinden değer olabilen kırmızı, mavi ve yeşil değerlerden renk hesaplanabilir. Örnekler <xref:System.Windows.Data.MultiBinding> ve bilgiler için bkz..
 
-## <a name="binding-to-collections"></a>Koleksiyonlara bağlanma
+## <a name="binding-to-collections"></a>Koleksiyonlara bağlama
 
-Bağlayıcı kaynak nesne, özellikleri veri içeren tek bir nesne olarak veya genellikle birlikte gruplanan çok biçimli nesnelerin veri koleksiyonu olarak (veritabanına yapılan bir sorgunun sonucu gibi) olarak işlenebilir. Şimdiye kadar sadece tek nesnelere bağlanmayı tartıştık. Ancak, veri toplamaya bağlama yaygın bir senaryodur. Örneğin, yaygın bir <xref:System.Windows.Controls.ItemsControl> senaryo, veri bağlama <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListView>bölümünde <xref:System.Windows.Controls.TreeView> gösterilen uygulamada olduğu gibi bir , , gibi bir , kullanmak veya bir veri toplama [görüntülemektir.](#what-is-data-binding)
+Bağlama kaynak nesnesi, özellikleri veri içeren tek bir nesne olarak ya da genellikle birlikte gruplanmış çok biçimli nesnelerin veri koleksiyonu olarak (bir veritabanının bir sorgusunun sonucu gibi) değerlendirilir. Şimdiye kadar yalnızca tek nesnelere bağlamayı tartıştık. Ancak, bir veri koleksiyonuna bağlama yaygın bir senaryodur. Örneğin, yaygın bir senaryo <xref:System.Windows.Controls.ItemsControl> , veya <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.TreeView> gibi bir veri koleksiyonunu ( [veri bağlama nedir](#what-is-data-binding) bölümünde gösterilen uygulamadaki gibi) göstermek için kullanılır.
 
-Neyse ki, temel diyagramımız hala geçerli. Bir koleksiyona <xref:System.Windows.Controls.ItemsControl> bağlıysanız, diyagram aşağıdaki gibi görünür.
+Neyse ki temel diyagramımız hala geçerli olur. Bir koleksiyona bağlıyorsanız <xref:System.Windows.Controls.ItemsControl> , diyagram şuna benzer şekilde görünür.
 
-![Veri bağlama ÖğeleriDenetim nesnesini gösteren diyagram.](./media/data-binding-overview/data-binding-itemscontrol.png)
+![Veri bağlama ItemControl nesnesini gösteren diyagram.](./media/data-binding-overview/data-binding-itemscontrol.png)
 
-Bu diyagramda gösterildiği gibi, <xref:System.Windows.Controls.ItemsControl> bir koleksiyon nesnesine bağlamak için, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A?displayProperty=nameWithType> özellik kullanılacak özelliktir. İçeriği `ItemsSource` olarak <xref:System.Windows.Controls.ItemsControl>düşünebilirsiniz. Bağlama, <xref:System.Windows.Data.BindingMode.OneWay> özelliğin `ItemsSource` varsayılan `OneWay` olarak bağlamayı desteklemesidir.
+Bu diyagramda gösterildiği gibi, bir <xref:System.Windows.Controls.ItemsControl> koleksiyon nesnesine bağlamak için <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A?displayProperty=nameWithType> özelliği kullanılacak özelliktir. ' Nin içeriği `ItemsSource` olarak düşünebilirsiniz <xref:System.Windows.Controls.ItemsControl>. Bağlama, <xref:System.Windows.Data.BindingMode.OneWay> `ItemsSource` özelliğin varsayılan olarak bağlamayı desteklediğinden `OneWay` kaynaklanır.
 
-### <a name="how-to-implement-collections"></a>Koleksiyonlar nasıl uygulanır?
+### <a name="how-to-implement-collections"></a>Koleksiyonları uygulama
 
-<xref:System.Collections.IEnumerable> Arabirimi uygulayan herhangi bir koleksiyon üzerinden sayısalatabilirsiniz. Ancak, koleksiyondaki eklemeler veya silmelerin Kullanıcı Arabirimi'ni otomatik olarak güncelleştirmesi için dinamik <xref:System.Collections.Specialized.INotifyCollectionChanged> bağlamalar ayarlamak için, koleksiyonun arabirimi uygulaması gerekir. Bu arabirim, temel koleksiyon değiştiğinde yükseltilmesi gereken bir olayı ortaya çıkarır.
+<xref:System.Collections.IEnumerable> Arabirimini uygulayan herhangi bir koleksiyonun üzerinde listeleme yapabilirsiniz. Bununla birlikte, koleksiyondaki eklemelerin veya silinmelerin Kullanıcı arabirimini otomatik olarak güncelleştirmeleri için dinamik bağlamaları ayarlamak için koleksiyonun <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimini uygulaması gerekir. Bu arabirim, temeldeki koleksiyon değiştiğinde oluşturulması gereken bir olay gösterir.
 
-WPF, <xref:System.Collections.ObjectModel.ObservableCollection%601> <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi ortaya çıkaran bir veri koleksiyonunun yerleşik bir uygulaması olan sınıfı sağlar. Veri değerlerinin kaynak nesnelerden hedeflere aktarılmasını tam olarak desteklemek için, koleksiyonunuzdaki bağlanabilir özellikleri destekleyen her nesnenin <xref:System.ComponentModel.INotifyPropertyChanged> arabirimi de uygulaması gerekir. Daha fazla bilgi için [bkz.](../../framework/wpf/data/binding-sources-overview.md)
+WPF, <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi <xref:System.Collections.ObjectModel.ObservableCollection%601> kullanıma sunan bir veri koleksiyonunun yerleşik bir uygulama olan sınıfını sağlar. Veri değerlerinin Kaynak nesnelerden hedeflere aktarılmasını tam olarak desteklemek için, koleksiyonunuzdaki bağlanabilir özellikleri destekleyen her nesnenin de <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulaması gerekir. Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](../../framework/wpf/data/binding-sources-overview.md).
 
-Kendi koleksiyonunuzu uygulamadan önce, başkaları arasında <xref:System.Collections.ObjectModel.ObservableCollection%601> , ve <xref:System.Collections.Generic.List%601> <xref:System.Collections.ObjectModel.Collection%601> <xref:System.ComponentModel.BindingList%601>, gibi varolan toplama sınıflarından birini kullanmayı düşünün. Gelişmiş bir senaryonuz varsa ve kendi koleksiyonunuzu <xref:System.Collections.IList>uygulamak istiyorsanız, dizin tarafından tek tek erişilebilen ve böylece en iyi performansı sağlayan genel olmayan bir nesne koleksiyonu sağlayan nesneleri kullanmayı düşünün.
+Kendi koleksiyonunuzu uygulamadan önce <xref:System.Collections.ObjectModel.ObservableCollection%601> ,, ve <xref:System.Collections.Generic.List%601> <xref:System.Collections.ObjectModel.Collection%601> <xref:System.ComponentModel.BindingList%601>gibi var olan koleksiyon sınıflarından birini ya da birçok başka konuda kullanmayı düşünün. Gelişmiş bir senaryonuz varsa ve kendi koleksiyonunuzu uygulamak istiyorsanız <xref:System.Collections.IList>, dizin tarafından ayrı ayrı erişilebilen nesnelerin genel olmayan bir koleksiyonunu sağlayan öğesini kullanmayı düşünün ve bu sayede en iyi performansı elde edebilirsiniz.
 
 ### <a name="collection-views"></a>Koleksiyon görünümleri
 
-Bir <xref:System.Windows.Controls.ItemsControl> veri koleksiyonuna bağlandıktan sonra, verileri sıralamak, filtrelemek veya gruplandırmak isteyebilirsiniz. Bunu yapmak için, <xref:System.ComponentModel.ICollectionView> arabirimi uygulayan sınıflar olan koleksiyon görünümlerini kullanırsınız.
+<xref:System.Windows.Controls.ItemsControl> Bir veri koleksiyonu bağladıktan sonra verileri sıralamak, filtrelemek veya gruplandırmak isteyebilirsiniz. Bunu yapmak için, <xref:System.ComponentModel.ICollectionView> arabirimini uygulayan sınıflar olan koleksiyon görünümlerini kullanırsınız.
 
-#### <a name="what-are-collection-views"></a>Koleksiyon görünümleri nedir?
+#### <a name="what-are-collection-views"></a>Koleksiyon görünümleri nelerdir?
 
-Koleksiyon görünümü, temel kaynak koleksiyonunun kendisini değiştirmek zorunda kalmadan kaynak koleksiyonunu sıralama, filtre ve grup sorgularına göre gezinmenizi ve görüntülemenizi sağlayan bağlayıcı kaynak koleksiyonunun üstündeki katmandır. Koleksiyon görünümü, koleksiyondaki geçerli öğeiçin bir işaretçi de tutar. Kaynak koleksiyon <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi uygularsa, olay <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> tarafından yükseltilen değişiklikler görünümlere yayılır.
+Koleksiyon görünümü, temel kaynak koleksiyonun kendisini değiştirmek zorunda kalmadan sıralama, filtre ve grup sorgularına göre kaynak koleksiyonunu gezinmenize ve görüntülemenize olanak tanıyan bir bağlama kaynak koleksiyonunun en üstünde yer alan bir katmandır. Koleksiyon görünümü Ayrıca koleksiyondaki geçerli öğe için bir işaretçi tutar. Kaynak koleksiyon <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimini uygularsa, <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> olay tarafından oluşturulan değişiklikler görünümlere yayılır.
 
-Görünümler temel kaynak koleksiyonlarını değiştirmedığından, her kaynak koleksiyonuyla ilişkili birden çok görünüm eolabilir. Örneğin, *Görev* nesneleri koleksiyonunuz olabilir. Görünümlerin kullanımıyla, aynı verileri farklı şekillerde görüntüleyebilirsiniz. Örneğin, sayfanızın sol tarafında, önceliğe göre sıralanmış görevleri ve alana göre gruplanmış sağ tarafta göstermek isteyebilirsiniz.
+Görünümler temeldeki kaynak koleksiyonlarını değiştirmediğinden, her kaynak koleksiyonda ilişkili birden fazla görünüm bulunabilir. Örneğin, *görev* nesneleri koleksiyonunuz olabilir. Görünümlerin kullanımı ile aynı verileri farklı yollarla görüntüleyebilirsiniz. Örneğin, sayfanızın sol tarafında önceliğe göre sıralanmış görevleri ve sağ tarafa alana göre gruplanmış olarak göstermek isteyebilirsiniz.
 
 #### <a name="how-to-create-a-view"></a>Görünüm oluşturma
 
-Bir görünüm oluşturmanın ve kullanmanın bir yolu, görünüm nesnesini doğrudan anında kullanmak ve sonra bağlama kaynağı olarak kullanmaktır. Örneğin, veri [bağlama][data-binding-demo] nedir bölümünde gösterilen Veri bağlama demo uygulamasını göz önünde [bulundurun.](#what-is-data-binding) Uygulama, doğrudan veri toplama <xref:System.Windows.Controls.ListBox> yerine veri toplama üzerinde bir görünüme bağlanır şekilde uygulanır. Aşağıdaki [örnek, Veri bağlama demo][data-binding-demo] uygulamasından çıkarılır. Sınıf, <xref:System.Windows.Data.CollectionViewSource> bir sınıfın xaml proxy'sidir. <xref:System.Windows.Data.CollectionView> Bu özel örnekte, <xref:System.Windows.Data.CollectionViewSource.Source%2A> görünümün görünümü geçerli uygulama nesnesinin *AuctionItems* koleksiyonuna (tür) <xref:System.Collections.ObjectModel.ObservableCollection%601>bağlıdır.
+Bir görünüm oluşturmanın ve kullanmanın bir yolu, doğrudan görünüm nesnesini oluşturmak ve bunu bağlama kaynağı olarak kullanmaktır. Örneğin, [veri bağlama tanıtımı bölümünde gösterilen](#what-is-data-binding) [veri bağlama tanıtım][data-binding-demo] uygulamasını göz önünde bulundurun. Uygulama, veri toplamayı doğrudan değil, <xref:System.Windows.Controls.ListBox> veri koleksiyonu üzerinden bir görünüme bağlamalara uygulanır. Aşağıdaki örnek, [veri bağlama tanıtım][data-binding-demo] uygulamasından ayıklanır. <xref:System.Windows.Data.CollectionViewSource> Sınıfı, öğesinden <xref:System.Windows.Data.CollectionView>devralan bir sınıfın xaml ara sunucusu. Bu örnekte, <xref:System.Windows.Data.CollectionViewSource.Source%2A> görünümün geçerli uygulama nesnesinin *AuctionItems* koleksiyonuna (türü <xref:System.Collections.ObjectModel.ObservableCollection%601>) bağlanması gerekir.
 
 [!code-xaml[CollectionView](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#CollectionView)]
 
-Kaynak *listelemeDataView* daha sonra uygulamadaki öğeler için bağlayıcı <xref:System.Windows.Controls.ListBox>kaynak olarak hizmet vermektedir.
+*ListingDataView* kaynağı daha sonra uygulamadaki öğeler için bağlama kaynağı olarak görev yapar (örneğin, <xref:System.Windows.Controls.ListBox>).
 
 [!code-xaml[ListBoxCollectionView](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#ListBoxCollectionView)]
 
-Aynı koleksiyon için başka bir görünüm oluşturmak <xref:System.Windows.Data.CollectionViewSource> için başka bir `x:Key` örnek oluşturabilir ve ona farklı bir ad verebilirsiniz.
+Aynı koleksiyon için başka bir görünüm oluşturmak üzere başka <xref:System.Windows.Data.CollectionViewSource> bir örnek oluşturabilir ve buna farklı `x:Key` bir ad verebilirsiniz.
 
-Aşağıdaki tablo, varsayılan koleksiyon görünümü olarak veya kaynak <xref:System.Windows.Data.CollectionViewSource> toplama türüne göre hangi görünüm veri türlerinin oluşturulduğunu gösterir.
+Aşağıdaki tabloda, varsayılan koleksiyon görünümü olarak veya kaynak koleksiyon türüne <xref:System.Windows.Data.CollectionViewSource> göre hangi görünüm verisi türlerinin oluşturulduğu gösterilmektedir.
 
-| Kaynak toplama türü                    | Koleksiyon görünümü türü | Notlar |
+| Kaynak koleksiyon türü                    | Koleksiyon görünüm türü | Notlar |
 | ----------------------------------------- | -------------------- | ----- |
-| <xref:System.Collections.IEnumerable>     | Dayalı bir iç tip<xref:System.Windows.Data.CollectionView> | Öğeleri gruplayamaz. |
-| <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | Hızlı. |
+| <xref:System.Collections.IEnumerable>     | Temelinde bir iç tür<xref:System.Windows.Data.CollectionView> | Öğeler gruplandırılamıyor. |
+| <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | En hızlı. |
 | <xref:System.ComponentModel.IBindingList> | <xref:System.Windows.Data.BindingListCollectionView> | |
 
 #### <a name="using-a-default-view"></a>Varsayılan görünüm kullanma
 
-Bağlayıcı kaynak olarak bir koleksiyon görünümü belirtme, bir koleksiyon görünümü oluşturmak ve kullanmak için bir yoldur. WPF ayrıca bağlayıcı kaynak olarak kullanılan her koleksiyon için varsayılan bir koleksiyon görünümü oluşturur. Doğrudan bir koleksiyona bağlanırsanız, WPF varsayılan görünümüne bağlanır. Bu varsayılan görünüm aynı koleksiyona tüm bağlamalar tarafından paylaşılır, bu nedenle varsayılan görünüme tek bir bağlı denetim veya kod (sıralama veya daha sonra tartışılan geçerli madde işaretçisinde değişiklik gibi) yapılan bir değişiklik, aynı koleksiyona diğer tüm bağlamalara yansıtılır.
+Bir koleksiyon görünümünü bağlama kaynağı olarak belirtme, koleksiyon görünümü oluşturmanın ve kullanmanın bir yoludur. WPF ayrıca, bağlama kaynağı olarak kullanılan her koleksiyon için varsayılan bir koleksiyon görünümü oluşturur. Doğrudan bir koleksiyona bağlarsanız, WPF varsayılan görünümüne bağlanır. Bu varsayılan görünüm, aynı koleksiyondaki tüm bağlamalar tarafından paylaşılır. bu nedenle, bir bağlantılı denetim veya kodla (sıralama ya da geçerli öğe işaretçisine yapılan bir değişiklik gibi) bir varsayılan görünümde yapılan değişiklik, aynı koleksiyona yapılan diğer tüm bağlamalara yansıtılır.
 
-Varsayılan görünümü elde etmek için <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> yöntemi kullanırsınız. Örneğin, bkz. [veri koleksiyonunun varsayılan görünümünü al.](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)
+Varsayılan görünümü almak için <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> yöntemini kullanırsınız. Bir örnek için bkz. [veri koleksiyonunun varsayılan görünümünü edinme](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).
 
-#### <a name="collection-views-with-adonet-datatables"></a>ADO.NET DataTables ile toplama görünümleri
+#### <a name="collection-views-with-adonet-datatables"></a>ADO.NET DataTable ile koleksiyon görünümleri
 
-Performansı artırmak için, ADO.NET <xref:System.Data.DataTable> <xref:System.Data.DataView> veya nesnelerin koleksiyon görünümleri, <xref:System.Data.DataView>veri kaynağının tüm koleksiyon görünümlerinde paylaşılmasına neden olan sıralama ve filtreleme nin , "davlumon" olarak sıralanmasını ve filtrelediğini belirtir. Her koleksiyon görünümünün bağımsız olarak sıralanmasını ve filtrelemesini <xref:System.Data.DataView> sağlamak için, her koleksiyon görünümünü kendi nesnesiyle baş harfe ayırın.
+Performansı artırmak için, ADO.NET <xref:System.Data.DataTable> veya <xref:System.Data.DataView> nesneleri <xref:System.Data.DataView>için koleksiyon görünümleri, sıralama ve filtreleme ile veri kaynağının tüm koleksiyon görünümlerinde paylaşılmasına neden olur. Her koleksiyon görünümünün bağımsız olarak sıralanmasını ve filtrelemesine olanak tanımak için her koleksiyon görünümünü kendi <xref:System.Data.DataView> nesnesiyle başlatın.
 
 #### <a name="sorting"></a>Sıralama
 
-Daha önce de belirtildiği gibi, görünümler bir koleksiyona bir sıralama sırası uygulayabilir. Temel koleksiyonda bulunduğundan, verileriniz ilgili, doğal bir sıraya sahip olabilir veya olmayabilir. Koleksiyon üzerindeki görünüm, sağladığınız karşılaştırma ölçütlerine bağlı olarak bir sipariş uygulamanıza veya varsayılan siparişi değiştirmenize olanak tanır. Verilerin istemci tabanlı görünümü olduğundan, yaygın bir senaryo, kullanıcının sütunun karşılık geldiği değere göre sıralı veri sütunlarını sıralamak isteyebileceğidir. Görünümleri kullanarak, bu kullanıcı tarafından yönlendirilen sıralama, yine temel koleksiyonda herhangi bir değişiklik yapmadan ve hatta koleksiyon içeriği için yeniden sorgulamayapmak zorunda kalmadan uygulanabilir. Örneğin, [üstbilgi tıklatıldığında GridView sütununa](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)bakın.
+Daha önce bahsedildiği gibi, görünümler bir koleksiyona sıralama düzeni uygulayabilir. Temel koleksiyonda olduğu gibi, verileriniz ilgili ve kendine özgü bir sıraya sahip olabilir veya olmayabilir. Koleksiyon üzerindeki görünüm, sağladığınız karşılaştırma ölçütlerine göre bir sipariş veya varsayılan sırayı değiştirmenize olanak sağlar. Verilerin istemci tabanlı bir görünümü olduğundan, yaygın olarak kullanılan bir senaryo, kullanıcının sütun için karşılık gelen tablo verilerinin sütunlarını sütuna karşılık geldiği bir değere göre sıralamak isteyebilir. Görünümleri kullanarak, bu kullanıcı odaklı sıralama, temel koleksiyonda herhangi bir değişiklik yapılmadan veya koleksiyon içeriğini yeniden sorgulamak zorunda kalmadan uygulanabilir. Bir örnek için bkz. [bir başlık tıklandığında GridView sütununu sıralama](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).
 
-Aşağıdaki örnekte, veri <xref:System.Windows.Controls.CheckBox> [bağlama](#what-is-data-binding) bölümündeki uygulama Arabirimi'nin "Kategori ve tarihe göre sırala" sıralama mantığını gösterilmektedir.
+Aşağıdaki örnek, [veri bağlama nedir](#what-is-data-binding) bölümünde uygulama kullanıcı arabirimindeki "kategoriye göre sıralama ve tarihe <xref:System.Windows.Controls.CheckBox> göre sırala" öğesinin sıralama mantığını gösterir.
 
 [!code-csharp[AddSortChecked](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#AddSortChecked)]
 [!code-vb[AddSortChecked](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#AddSortChecked)]
 
 #### <a name="filtering"></a>Filtreleme
 
-Görünümler, görünümün tam koleksiyonun yalnızca belirli bir alt kümesini göstermesi için bir koleksiyona filtre de uygulayabilir. Verilerdeki bir koşula filtre uygulayabilirsiniz. Örneğin, [veri bağlama](#what-is-data-binding) bölümündeki uygulama tarafından yapıldığı gibi, "Yalnızca pazarlıkları <xref:System.Windows.Controls.CheckBox> göster" 25 TL veya daha pahalı öğeleri filtrelemek için mantık içerir. Aşağıdaki kod, seçildiğinde <xref:System.Windows.Data.CollectionViewSource.Filter> <xref:System.Windows.Controls.CheckBox> olay işleyicisi olarak *ShowOnlyBargainsFilter* ayarlamak için yürütülür.
+Görünümler bir koleksiyona bir filtre de uygulayabilir, böylece görünüm tam koleksiyonun yalnızca belirli bir alt kümesini gösterir. Verilerdeki bir koşula filtre ekleyebilirsiniz. Örneğin, [veri bağlama nedir](#what-is-data-binding) bölümünde uygulama tarafından yapıldığı gibi, "yalnızca Barkazancı göster" <xref:System.Windows.Controls.CheckBox> , maliyet $25 veya daha fazla olan öğeleri filtrelemek için mantık içerir. Aşağıdaki kod, seçildiğinde, *ShowOnlyBargainsFilter* öğesini <xref:System.Windows.Data.CollectionViewSource.Filter> olay işleyicisi <xref:System.Windows.Controls.CheckBox> olarak ayarlamak için yürütülür.
 
 [!code-csharp[ListingViewFilter](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingViewFilter)]
 [!code-vb[ListingViewFilter](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingViewFilter)]
@@ -296,24 +296,24 @@ Görünümler, görünümün tam koleksiyonun yalnızca belirli bir alt kümesin
 [!code-csharp[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#FilterEvent)]
 [!code-vb[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#FilterEvent)]
 
-<xref:System.Windows.Data.CollectionView> Sınıflardan birini doğrudan yerine <xref:System.Windows.Data.CollectionViewSource>kullanıyorsanız, geri arama belirtmek için <xref:System.Windows.Data.CollectionView.Filter%2A> özelliği kullanırsınız. Örneğin, [bkz. Bir Görünümdeki Verileri Filtrele.](../../framework/wpf/data/how-to-filter-data-in-a-view.md)
+Yerine doğrudan <xref:System.Windows.Data.CollectionView> sınıflardan birini kullanıyorsanız <xref:System.Windows.Data.CollectionViewSource>, bir geri çağırma belirtmek için <xref:System.Windows.Data.CollectionView.Filter%2A> özelliğini kullanın. Bir örnek için bkz. [bir görünümdeki verileri filtreleme](../../framework/wpf/data/how-to-filter-data-in-a-view.md).
 
 #### <a name="grouping"></a>Gruplandırma
 
-Bir <xref:System.Collections.IEnumerable> koleksiyonu görüntüleyen iç sınıf dışında, tüm koleksiyon görünümleri, kullanıcının koleksiyon görünümünde koleksiyonu mantıksal gruplara bölmesine olanak tanıyan destek *gruplandırmasını*görüntüler. Gruplar, kullanıcının verilere bağlı olarak dinamik olarak oluşturulduğu grupların listesini sağladığı açık veya örtülü olabilir.
+Bir <xref:System.Collections.IEnumerable> koleksiyonu görüntüleyen iç sınıf hariç, tüm koleksiyon görünümleri, kullanıcının koleksiyon görünümündeki koleksiyonu mantıksal gruplar halinde bölümlamasına olanak sağlayan *gruplandırmayı*destekler. Gruplar, kullanıcının grupların bir listesini sağladığı veya örtük olarak, grupların verilere göre dinamik olarak oluşturulduğu açık olabilir.
 
-Aşağıdaki örnekte "Kategoriye göre gruplandırma" <xref:System.Windows.Controls.CheckBox>mantığı gösterilmektedir.
+Aşağıdaki örnekte, "kategoriye göre gruplandırma" <xref:System.Windows.Controls.CheckBox>mantığı gösterilmektedir.
 
 [!code-csharp[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingGroupCheck)]
 [!code-vb[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingGroupCheck)]
 
-Başka bir gruplandırma örneği için, [GridView uygulayan bir ListView'daki Grup Öğeleri'ne](../../framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)bakın.
+Başka bir gruplandırma örneği için bkz. [GridView uygulayan bir ListView Içindeki öğeleri gruplandırma](../../framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).
 
-#### <a name="current-item-pointers"></a>Geçerli madde işaretçileri
+#### <a name="current-item-pointers"></a>Geçerli öğe işaretçileri
 
-Görünümler, geçerli öğe kavramını da destekler. Koleksiyon görünümünde nesneler arasında gezinebilirsiniz. Gezinirken, koleksiyondaki belirli bir konumda bulunan nesneyi almanıza olanak tanıyan bir öğe işaretçisi taşıyorsunuz. Örneğin, [bkz. veri CollectionView'daki nesneler arasında gezinme.](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)
+Görünümler, geçerli bir öğe kavramını da destekler. Bir koleksiyon görünümündeki nesneler arasında gezinebilirsiniz. Gezindiğinizde, koleksiyonda belirli bir konumda bulunan nesneyi almanıza izin veren bir öğe işaretçisini taşıyor olursunuz. Bir örnek için bkz. [Data CollectionView içindeki nesneler arasında gezinme](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md).
 
-WPF yalnızca bir görünüm (belirttiğiniz bir görünüm veya koleksiyonun varsayılan görünümü) kullanarak koleksiyona bağlandığından, koleksiyonlara yapılan tüm bağlamaların geçerli bir madde işaretçisi vardır. Bir görünüme bağlanırken, değerdeki `Path` eğik çizgi ("/") karakteri görünümün geçerli öğesini belirtir. Aşağıdaki örnekte, veri bağlamı bir koleksiyon görünümüdür. İlk satır koleksiyona bağlanır. İkinci satır koleksiyondaki geçerli öğeye bağlanır. Üçüncü satır, koleksiyondaki `Description` geçerli öğenin özelliğine bağlanır.
+WPF bir koleksiyona yalnızca bir görünüm (belirttiğiniz bir görünüm veya koleksiyonun varsayılan görünümü) kullanarak bağlandığından, koleksiyonlara yönelik tüm bağlamaların geçerli öğe işaretçisi vardır. Bir görünüme bağlanırken, bir `Path` değer içindeki eğik çizgi ("/") karakteri görünümün geçerli öğesini belirler. Aşağıdaki örnekte, veri bağlamı bir koleksiyon görünümüdür. İlk satır koleksiyona bağlanır. İkinci satır koleksiyondaki geçerli öğeye bağlanır. Üçüncü satır koleksiyondaki geçerli öğenin `Description` özelliğine bağlar.
 
 ```xaml
 <Button Content="{Binding }" />
@@ -321,130 +321,130 @@ WPF yalnızca bir görünüm (belirttiğiniz bir görünüm veya koleksiyonun va
 <Button Content="{Binding Path=/Description}" />
 ```
 
-Eğik çizgi ve özellik sözdizimi de koleksiyonlar hiyerarşisi geçmek için yığılmış olabilir. Aşağıdaki örnek, kaynak koleksiyonun geçerli öğesi `Offices`olan adlı koleksiyonun geçerli öğesine bağlanır.
+Eğik çizgi ve özellik söz dizimi bir koleksiyon hiyerarşisinin çapraz geçişini sağlamak için de yığınlanalabilir. Aşağıdaki örnek, kaynak koleksiyonun geçerli öğesinin bir özelliği olan adlı `Offices`bir koleksiyonun geçerli öğesine bağlar.
 
 ```xaml
 <Button Content="{Binding /Offices/}" />
 ```
 
-Geçerli madde işaretçisi, koleksiyona uygulanan herhangi bir sıralama veya filtrelemeden etkilenebilir. Sıralama, seçili son öğedeki geçerli madde işaretçisini korur, ancak koleksiyon görünümü artık onun etrafında yeniden yapılandırılır. (Seçili öğe daha önce listenin başındaydı, ancak şimdi seçili öğe ortada bir yerde olabilir.) Filtreleme, bu seçim filtrelemeden sonra görünümde kalırsa seçili öğeyi korur. Aksi takdirde, geçerli madde işaretçisi filtre uygulanmış koleksiyon görünümünün ilk öğesine ayarlanır.
+Geçerli öğe işaretçisi, koleksiyona uygulanan sıralama veya filtrelemeden etkilenebilir. Sıralama, seçili son öğe üzerinde geçerli öğe işaretçisini korur, ancak koleksiyon görünümü artık bunun etrafında yeniden yapılandırılmış. (Belki de seçili öğe listenin başında, ancak artık seçili öğe ortada bir yerde olabilir.) Filtre, filtreleme sonrasında Görünüm ' de kalırsa, seçili öğeyi korur. Aksi takdirde, geçerli öğe işaretçisi filtrelenmiş koleksiyon görünümünün ilk öğesine ayarlanır.
 
-#### <a name="master-detail-binding-scenario"></a>Ana ayrıntı bağlama senaryosu
+#### <a name="master-detail-binding-scenario"></a>Ana-ayrıntı bağlama senaryosu
 
-Geçerli öğe kavramı yalnızca koleksiyondaki öğelerin gezinmesi için değil, aynı zamanda ana ayrıntı bağlama senaryosu için de yararlıdır. [Veri bağlama](#what-is-data-binding) bölümündeki uygulama UI'sini yeniden düşünün. Bu uygulamada, içindeki seçim, 'de gösterilen <xref:System.Windows.Controls.ContentControl>içeriği <xref:System.Windows.Controls.ListBox> belirler. Başka bir şekilde ifade etmek <xref:System.Windows.Controls.ListBox> gerekirse, bir <xref:System.Windows.Controls.ContentControl> öğe seçildiğinde, seçili öğenin ayrıntılarını gösterir.
+Geçerli bir öğe kavramı yalnızca bir koleksiyondaki öğelerin gezinmesi için değil, aynı zamanda ana ayrıntı bağlama senaryosu için de kullanışlıdır. [Veri bağlama nedir](#what-is-data-binding) bölümünde uygulama kullanıcı arabirimini de göz önünde bulundurun. Bu uygulamada, içindeki seçim içinde gösterilen içeriği <xref:System.Windows.Controls.ListBox> belirler <xref:System.Windows.Controls.ContentControl>. Bir <xref:System.Windows.Controls.ListBox> öğe seçildiğinde, bu öğeyi başka bir şekilde koymak için seçili öğenin ayrıntılarını <xref:System.Windows.Controls.ContentControl> gösterir.
 
-Ana ayrıntı senaryosunu, aynı görünüme bağlı iki veya daha fazla denetime sahip olarak uygulayabilirsiniz. [Veri bağlama demosundan][data-binding-demo] aşağıdaki örnek, veri <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.ContentControl> [bağlama](#what-is-data-binding) nedir bölümünde uygulama ui'sinde gördüğünüz ve gördüğünüz biçimlendirmeyi gösterir.
+Aynı görünüme iki veya daha fazla denetim bağlayarak, ana ayrıntı senaryosunu uygulayabilirsiniz. [Veri bağlama tanıtımında][data-binding-demo] bulunan aşağıdaki örnek, <xref:System.Windows.Controls.ListBox> ve [veri bağlama nedir](#what-is-data-binding) bölümünde uygulama Kullanıcı <xref:System.Windows.Controls.ContentControl> arabiriminde gördüğünüz ve ' nin işaretlemesini gösterir.
 
 [!code-xaml[ListBoxContentControl](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#ListBoxContentControl)]
 
-Denetimlerin her ikisinin de aynı kaynağa, *listingDataView* statik kaynağına bağlı olduğuna dikkat edin [(görünüm bölümü nasıl oluşturulur](#how-to-create-a-view)bölümünde bu kaynağın tanımına bakın). Bu bağlama çalışır, çünkü singleton <xref:System.Windows.Controls.ContentControl> nesnesi (bu durumda) bir koleksiyon görünümüne bağlı <xref:System.Windows.Data.CollectionView.CurrentItem%2A> olduğunda, otomatik olarak görünümün görünümüne bağlanır. Nesneler <xref:System.Windows.Data.CollectionViewSource> para birimini ve seçimi otomatik olarak eşitler. Liste denetiminiz bu örnekte <xref:System.Windows.Data.CollectionViewSource> olduğu gibi bir nesneye bağlı değilse, `true` bunun çalışması için özelliğini <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> ayarlamanız gerekir.
+Denetimlerin her ikisinin de aynı kaynağa, *listingDataView* statik kaynağına ( [bir görünüm oluşturma bölümünde](#how-to-create-a-view)bu kaynağın tanımına bakın) bağlandığını unutmayın. Bu bağlama, tek bir nesne ( <xref:System.Windows.Controls.ContentControl> bu durumda) bir koleksiyon görünümüne bağlı olduğunda otomatik olarak görünümün öğesine bağlandığı için <xref:System.Windows.Data.CollectionView.CurrentItem%2A> geçerlidir. Nesneler <xref:System.Windows.Data.CollectionViewSource> , para birimini ve seçimi otomatik olarak eşitler. Liste denetiminiz bir <xref:System.Windows.Data.CollectionViewSource> nesneye bu örnekte olduğu gibi bağlanmazsa, bunun çalışması için <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> özelliğini olarak `true` ayarlamanız gerekir.
 
-Diğer örnekler için, [bağlayıcı toplama ve seçime dayalı bilgileri görüntülemek](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) ve [hiyerarşik verilerle ana ayrıntı deseni kullanın](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)bakın.
+Diğer örnekler için bkz. [bir koleksiyona bağlama ve seçime göre bilgi görüntüleme](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) ve [hiyerarşik verilerle ana ayrıntı modelini kullanma](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
-Yukarıdaki örnekte bir şablon kullandığını fark etmiş olabilirsiniz. Aslında, veriler şablonlar (açıkça tarafından açıkça kullanılan <xref:System.Windows.Controls.ContentControl> ve bir örtülü tarafından <xref:System.Windows.Controls.ListBox>kullanılan) kullanmadan istediğimiz şekilde görüntülenmez. Şimdi bir sonraki bölümde veri cazip açın.
+Yukarıdaki örneğin bir şablon kullandığını fark etmiş olabilirsiniz. Aslında, veriler şablonlar kullanılmadan (tarafından açıkça kullanılan <xref:System.Windows.Controls.ContentControl> ve tarafından örtülü olarak kullanılan <xref:System.Windows.Controls.ListBox>), istediğimiz şekilde gösterilmez. Şimdi, sonraki bölümde veri şablonu oluşturma özelliğini kullanacağız.
 
 ## <a name="data-templating"></a>Veri şablonu oluşturma
 
-Veri şablonları kullanılmadan, [veri bağlama](#what-is-data-binding) bölümündeki uygulamamız UI aşağıdaki gibi görünür.
+Veri şablonlarının kullanımı olmadan, uygulama Kullanıcı arabirimimiz [veri bağlama](#what-is-data-binding) bölümünde aşağıdaki gibi görünür.
 
-![Veri Şablonları Olmadan Veri Bağlama Demosu](./media/data-binding-overview/demo-no-template.png)
+![Veri şablonları olmadan veri bağlama tanıtımı](./media/data-binding-overview/demo-no-template.png)
 
-Önceki bölümde gösterildiği gibi, <xref:System.Windows.Controls.ListBox> hem denetim hem <xref:System.Windows.Controls.ContentControl> de *denetim, AuctionItem*s'nin tüm koleksiyon nesnesine (veya daha spesifik olarak koleksiyon nesnesi üzerindeki görünüme) bağlıdır. Veri toplamanın nasıl görüntüleneciyi <xref:System.Windows.Controls.ListBox> gösteren özel yönergeler olmadan, altta <xref:System.Windows.Controls.ContentControl> yatan koleksiyondaki her nesnenin dize gösterimini görüntüler ve bağlı olduğu nesnenin dize gösterimini görüntüler.
+Önceki bölümde gösterildiği gibi, hem <xref:System.Windows.Controls.ListBox> denetim hem <xref:System.Windows.Controls.ContentControl> de tüm koleksiyon nesnesine (ya da daha fazla özellikle, koleksiyon nesnesi üzerinde Görünüm), *AuctionItem*s ' nin tamamına bağlanır. Veri koleksiyonunun nasıl görüntüleneceği konusunda belirli yönergeler olmadan, temel alınan koleksiyondaki <xref:System.Windows.Controls.ListBox> her nesnenin dize gösterimini görüntüler ve bağladığına ait nesnenin dize temsilini <xref:System.Windows.Controls.ContentControl> görüntüler.
 
-Bu sorunu çözmek için uygulama <xref:System.Windows.DataTemplate?text=DataTemplates>tanımlar. Önceki bölümde örnekte gösterildiği gibi, <xref:System.Windows.Controls.ContentControl> açıkça *ayrıntılarıProductListingTemplate* veri şablonu kullanır. Denetim, <xref:System.Windows.Controls.ListBox> koleksiyondaki *AuctionItem* nesnelerini görüntülerken aşağıdaki veri şablonlarını örtülü olarak kullanır.
+Bu sorunu çözmek için uygulama tanımlar <xref:System.Windows.DataTemplate?text=DataTemplates>. Önceki bölümdeki örnekte gösterildiği gibi, <xref:System.Windows.Controls.ContentControl> açıkça *Ayrıntılar Productlistingtemplate* veri şablonunu kullanır. <xref:System.Windows.Controls.ListBox> Denetim, koleksiyonda *AuctionItem* nesnelerini görüntülerken aşağıdaki veri şablonunu örtülü olarak kullanır.
 
 [!code-xaml[AuctionItemDataTemplate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#AuctionItemDataTemplate)]
 
-Bu iki DataTemplates kullanımı ile, ortaya çıkan UI [veri bağlama](#what-is-data-binding) bölümünde gösterilen biridir. Bu ekran görüntüsünden de görebileceğiniz gibi, verileri kontrollerinize yerleştirmenize izin vermenin yanı sıra, DataTemplates verileriniz için etkileyici görseller tanımlamanıza olanak sağlar. Örneğin, <xref:System.Windows.DataTrigger> *highlight* *SpecialFeatures* <xref:System.Windows.DataTemplate> değeri ile *AuctionItem*s turuncu bir kenarlık ve bir yıldız ile görüntülenecektir, böylece yukarıda s kullanılır.
+Bu iki DataTemplate kullanımı ile elde edilen kullanıcı arabirimi, [veri bağlama nedir](#what-is-data-binding) bölümünde gösterilen şeydir. Söz konusu ekran görüntüsünden görebileceğiniz gibi, denetimlerinizde veri yerleştirmenize izin vermenin yanı sıra DataTemplates verileriniz için etkileyici görseller tanımlamanızı sağlar. Örneğin, yukarıda <xref:System.Windows.DataTrigger>' de, *özelleştirilmiş özellikler* içeren <xref:System.Windows.DataTemplate> *AuctionItem* *s 'in,* turuncu bir kenarlık ve yıldız ile görüntülenebilmesi için, yukarıda ' de kullanılır.
 
-Veri şablonları hakkında daha fazla bilgi [için, Veri cazip genel bakış](../../framework/wpf/data/data-templating-overview.md)bakın.
+Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](../../framework/wpf/data/data-templating-overview.md).
 
 ## <a name="data-validation"></a>Veri doğrulama
 
-Kullanıcı girişi alan çoğu uygulamanın, kullanıcının beklenen bilgileri girdiğinden emin olmak için doğrulama mantığına sahip olması gerekir. Doğrulama denetimleri tür, aralık, biçim veya uygulamaya özgü diğer gereksinimleri temel alabilir. Bu bölümde WPF'de veri doğrulamanın nasıl çalıştığı açıklanmıştır.
+Kullanıcının beklenen bilgileri girdiğinden emin olmak için Kullanıcı girişi kullanan çoğu uygulamanın doğrulama mantığı olması gerekir. Doğrulama denetimleri tür, Aralık, biçim veya uygulamaya özgü diğer gereksinimlere göre yapılabilir. Bu bölümde, veri doğrulamanın WPF 'de nasıl çalıştığı açıklanmaktadır.
 
-### <a name="associating-validation-rules-with-a-binding"></a>Doğrulama kurallarını bağlayıcı bir ilişkiyle ilişkilendirme
+### <a name="associating-validation-rules-with-a-binding"></a>Doğrulama kurallarını bir bağlama ile ilişkilendirme
 
-WPF veri bağlama modeli nesnenizle <xref:System.Windows.Data.Binding> ilişkilendirmenizi <xref:System.Windows.Data.Binding.ValidationRules%2A> sağlar. Örneğin, aşağıdaki örnek a'yı <xref:System.Windows.Controls.TextBox> adlı `StartPrice` bir özelliğe <xref:System.Windows.Controls.ExceptionValidationRule> bağlar <xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType> ve özelliğe bir nesne ekler.
+WPF veri bağlama modeli, <xref:System.Windows.Data.Binding.ValidationRules%2A> <xref:System.Windows.Data.Binding> nesneniz ile ilişkilendirmenize olanak tanır. Örneğin, aşağıdaki <xref:System.Windows.Controls.TextBox> örnek öğesini adlı `StartPrice` bir özelliğe bağlar ve <xref:System.Windows.Controls.ExceptionValidationRule> <xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType> özelliğine bir nesne ekler.
 
 [!code-xaml[TextboxStartPrice](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextboxStartPrice)]
 
-Nesne, <xref:System.Windows.Controls.ValidationRule> bir özelliğin değerinin geçerli olup olmadığını denetler. WPF'nin iki tür <xref:System.Windows.Controls.ValidationRule> yerleşik nesnesi vardır:
+Bir <xref:System.Windows.Controls.ValidationRule> nesne, özelliğin değerinin geçerli olup olmadığını denetler. WPF 'de <xref:System.Windows.Controls.ValidationRule> iki tür yerleşik nesne vardır:
 
-- Bağlayıcı <xref:System.Windows.Controls.ExceptionValidationRule> kaynak özelliğinin güncelleştirmesi sırasında atılan özel durumlar için denetimler. Önceki örnekte, `StartPrice` tür dosdoğru. Kullanıcı tamsayıya dönüştürülemeyen bir değer girdiğinde, bir özel durum atılır ve bağlamageçersiz olarak işaretlenir. <xref:System.Windows.Controls.ExceptionValidationRule> Açık olarak ayarlamak için alternatif bir sözdizimi, <xref:System.Windows.Data.Binding> özelliği <xref:System.Windows.Data.MultiBinding> sizin veya <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> `true` nesnenizde ayarlamaktır.
+- Bağlama <xref:System.Windows.Controls.ExceptionValidationRule> kaynağı özelliğinin güncelleştirilmesi sırasında oluşturulan özel durumları denetler. Önceki örnekte, `StartPrice` integer türündedir. Kullanıcı tamsayıya dönüştürülemeyen bir değer girdiğinde, bir özel durum oluşturulur ve bağlamanın geçersiz olarak işaretlenmesine neden olur. <xref:System.Windows.Controls.ExceptionValidationRule> Açıkça ayarlamaya yönelik alternatif <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> bir sözdizimi, `true` <xref:System.Windows.Data.Binding> veya <xref:System.Windows.Data.MultiBinding> nesneniz için özelliğini olarak ayarlanmıştır.
 
-- Nesne, <xref:System.Windows.Controls.DataErrorValidationRule> <xref:System.ComponentModel.IDataErrorInfo> arabirimi uygulayan nesneler tarafından yükseltilen hataları denetler. Bu doğrulama kuralını kullanma örneği <xref:System.Windows.Controls.DataErrorValidationRule>için bkz. <xref:System.Windows.Controls.DataErrorValidationRule> Açık olarak ayarlamak için alternatif bir sözdizimi, <xref:System.Windows.Data.Binding> özelliği <xref:System.Windows.Data.MultiBinding> sizin veya <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> `true` nesnenizde ayarlamaktır.
+- Bir <xref:System.Windows.Controls.DataErrorValidationRule> nesnesi, <xref:System.ComponentModel.IDataErrorInfo> arabirimini uygulayan nesneler tarafından oluşturulan hataları denetler. Bu doğrulama kuralını kullanmayla ilgili bir örnek için bkz <xref:System.Windows.Controls.DataErrorValidationRule>.. <xref:System.Windows.Controls.DataErrorValidationRule> Açıkça ayarlamaya yönelik alternatif <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> bir sözdizimi, `true` <xref:System.Windows.Data.Binding> veya <xref:System.Windows.Data.MultiBinding> nesneniz için özelliğini olarak ayarlanmıştır.
 
-<xref:System.Windows.Controls.ValidationRule> Ayrıca, sınıftan türeyen ve <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntemi uygulayarak kendi doğrulama kuralınızı da oluşturabilirsiniz. Aşağıdaki örnek, [veri bağlama](#what-is-data-binding) bölümündeki *Ürün Ekleme* <xref:System.Windows.Controls.TextBox> "Başlangıç Tarihi" tarafından kullanılan kuralı gösterir.
+Ayrıca, <xref:System.Windows.Controls.ValidationRule> sınıfından türeterek ve <xref:System.Windows.Controls.ValidationRule.Validate%2A> metodunu uygulayarak kendi doğrulama kuralınızı de oluşturabilirsiniz. Aşağıdaki örnek, [veri bağlama nedir](#what-is-data-binding) bölümünde "başlangıç tarihi" <xref:System.Windows.Controls.TextBox> *ürün ekleme listesi* tarafından kullanılan kuralı gösterir.
 
 [!code-csharp[FutureDateRule](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/FutureDateRule.cs#FutureDateRule)]
 [!code-vb[FutureDateRule](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/FutureDateRule.vb#FutureDateRule)]
 
-*StartDateEntryForm* <xref:System.Windows.Controls.TextBox> aşağıdaki örnekte gösterildiği gibi bu *FutureDateRule*kullanır.
+*StartDateEntryForm* <xref:System.Windows.Controls.TextBox> , aşağıdaki örnekte gösterildiği gibi bu *futuredadterule*öğesini kullanır.
 
 [!code-xaml[TextboxStartDate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextboxStartDate)]
 
-<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Değer olduğundan, <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>bağlama motoru her tuş vuruşunda kaynak değerini güncelleştirir, bu da <xref:System.Windows.Data.Binding.ValidationRules%2A> her tuş vuruşunda koleksiyondaki her kuralı denetlediği anlamına gelir. Bunu Doğrulama İşlemi bölümünde daha fazla tartışıyoruz.
+<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Değer olduğundan <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, bağlama altyapısı her tuş vuruşunda kaynak değerini günceller, bu da her tuş vuruşu üzerinde <xref:System.Windows.Data.Binding.ValidationRules%2A> koleksiyondaki her kuralı denetlediği anlamına gelir. Bunu doğrulama Işlemi bölümünde ele aldık.
 
 ### <a name="providing-visual-feedback"></a>Görsel geri bildirim sağlama
 
-Kullanıcı geçersiz bir değer girerse, uygulama kullanıcı arabirimi ndeki hata hakkında bazı geri bildirimler vermek isteyebilirsiniz. Bu tür geribildirim sağlamanın <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> bir yolu, ekli <xref:System.Windows.Controls.ControlTemplate>özelliği özel bir değere ayarlamaktır. Önceki alt bölümde gösterildiği gibi, *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> adlı *doğrulama Şablonu*kullanır. Aşağıdaki *örnekdoğrulamaŞablontanımını*gösterir.
+Kullanıcı geçersiz bir değer girerse, uygulama kullanıcı arabiriminde hata hakkında bazı geri bildirimler sağlamak isteyebilirsiniz. Bu tür geri bildirimde bulunmak için bir yol, <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> ekli özelliği özel <xref:System.Windows.Controls.ControlTemplate>olarak ayarlamaya yönelik bir yoldur. Önceki alt bölümde gösterildiği gibi, *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> adlı bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> *validationTemplate*'i kullanır. Aşağıdaki örnek *validationTemplate*tanımını gösterir.
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#ControlTemplate)]
 
-Öğe, <xref:System.Windows.Controls.AdornedElementPlaceholder> bezenlenen denetimin nereye yerleştirileceğini belirtir.
+<xref:System.Windows.Controls.AdornedElementPlaceholder> Öğesi, donatılan denetimin yerleştirilmesi gereken yeri belirtir.
 
-Ayrıca, hata iletisini <xref:System.Windows.Controls.ToolTip> görüntülemek için a da kullanabilirsiniz. Hem *StartDateEntryForm* ve *StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>es stil *textStyleTextBox*kullanın <xref:System.Windows.Controls.ToolTip> , hangi hata iletisi görüntüler oluşturur. Aşağıdaki *örnektextStyleTextBox*tanımını gösterir. Bağlı öğe, <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> `true` bağlı öğenin özelliklerine bağlanan bağlayıcılardan biri veya birkaçı hatalı olduğunda dır.
+Ayrıca, hata iletisini göstermek <xref:System.Windows.Controls.ToolTip> için de kullanabilirsiniz. Hem *StartDateEntryForm* hem de <xref:System.Windows.Controls.ToolTip> *StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>, hata iletisini görüntüleyen bir oluşturan *textStyleTextBox*stilini kullanır. Aşağıdaki örnek *textStyleTextBox*'ın tanımını gösterir. İliştirilmiş özelliği <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> , bağlı `true` öğenin özelliklerindeki bir veya daha fazla bağlamanın hatalı olması durumunda olur.
 
 [!code-xaml[TextBoxStyle](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextBoxStyle)]
 
-Özel <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve <xref:System.Windows.Controls.ToolTip>ile, *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> bir doğrulama hatası olduğunda aşağıdaki gibi görünüyor.
+Özel <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve <xref:System.Windows.Controls.ToolTip>ile, bir doğrulama hatası olduğunda *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> aşağıdaki gibi görünür.
 
 ![Veri bağlama doğrulama hatası](./media/data-binding-overview/demo-validation-date.png "DataBindingDemo_Validation")
 
-İlişkili <xref:System.Windows.Data.Binding> doğrulama kurallarınız varsa ancak bağlı <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> denetimde bir belirtmezseniz, doğrulama hatası olduğunda kullanıcıları bilgilendirmek için varsayılan bir varsayılan <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> kullanılır. Varsayılan, <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> süsleyici katmanında kırmızı kenarlık tanımlayan bir denetim şablonudur. Varsayılan <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve <xref:System.Windows.Controls.ToolTip>, *StartPriceEntryForm* <xref:System.Windows.Controls.TextBox> ui bir doğrulama hatası olduğunda aşağıdaki gibi görünüyor.
+Eğer hesabınız <xref:System.Windows.Data.Binding> , doğrulama kurallarına sahipse ancak ilişkili denetimde belirtmezseniz <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> , bir doğrulama hatası olduğunda kullanıcıları bilgilendirmek için varsayılan <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> olarak kullanılır. Varsayılan değer <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> , donatıcı katmanında kırmızı bir kenarlığı tanımlayan bir denetim şablonudur. Varsayılan <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve <xref:System.Windows.Controls.ToolTip>ile, *StartPriceEntryForm* <xref:System.Windows.Controls.TextBox> Kullanıcı arabirimi, doğrulama hatası olduğunda aşağıdaki gibi görünür.
 
 ![Veri bağlama doğrulama hatası](./media/data-binding-overview/demo-validation-price.png "DataBindingDemo_ValidationDefault")
 
-İletişim kutusundaki tüm denetimleri doğrulamak için mantığın nasıl sağlayabileceğinize bir örnek olarak, [İletişim kutularına genel bakıştaki](../../framework/wpf/app-development/dialog-boxes-overview.md)Özel İletişim Kutuları bölümüne bakın.
+Bir iletişim kutusundaki tüm denetimleri doğrulamaya yönelik mantık sağlama hakkında bir örnek için [iletişim kutularında](../../framework/wpf/app-development/dialog-boxes-overview.md)özel iletişim kutuları bölümüne bakın.
 
 ### <a name="validation-process"></a>Doğrulama işlemi
 
-Doğrulama genellikle bir hedefin değeri bağlayıcı kaynak özelliğine aktarıldığında oluşur. Bu aktarım <xref:System.Windows.Data.BindingMode.TwoWay> üzerinde <xref:System.Windows.Data.BindingMode.OneWayToSource> oluşur ve ciltler. Yinelemek gerekirse, kaynak güncelleştirmesine neden olan şey, kaynak <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> [güncelleştirmelerini tetikleyenler](#what-triggers-source-updates) bölümünde açıklandığı gibi özelliğin değerine bağlıdır.
+Doğrulama genellikle bir hedefin değeri bağlama kaynağı özelliğine aktarıldığında oluşur. Bu aktarım, ve <xref:System.Windows.Data.BindingMode.TwoWay> <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlamalarda gerçekleşir. Yeniden yinelemek için, bir kaynak güncelleştirmesine neden olan kaynak [güncelleştirmelerini tetikleyen](#what-triggers-source-updates) bölümünde açıklandığı <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> gibi, özelliğin değerine bağlıdır.
 
-Aşağıdaki öğeler *doğrulama* işlemini açıklar. Bu işlem sırasında herhangi bir zamanda bir doğrulama hatası veya başka bir hata türü oluşursa, işlem durdurulur:
+Aşağıdaki öğeler *doğrulama* işlemini anlatmaktadır. Bu işlem sırasında herhangi bir doğrulama hatası veya başka türde bir hata oluşursa, işlem durdurulur:
 
-1. Bağlama motoru, <xref:System.Windows.Controls.ValidationRule> bunun <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.RawProposedValue> için ayarlanmış özel nesneler olup olmadığını <xref:System.Windows.Data.Binding>denetler, bu <xref:System.Windows.Controls.ValidationRule.Validate%2A> durumda biri <xref:System.Windows.Controls.ValidationRule> bir hataya girene kadar veya hepsi geçene kadar her birinde yöntemi çağırır.
+1. Bağlama altyapısı, olarak <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.RawProposedValue> ayarlanmış herhangi bir özel nesne olup olmadığını denetler; bu <xref:System.Windows.Data.Binding>durumda, biri bir hata halinde çalıştırana kadar veya <xref:System.Windows.Controls.ValidationRule.Validate%2A> hepsi geçene <xref:System.Windows.Controls.ValidationRule> kadar her bir yöntemi çağırır.
 
-2. Bağlayıcı motor daha sonra varsa dönüştürücü çağırır.
+2. Bağlama altyapısı, varsa dönüştürücüyü çağırır.
 
-3. Dönüştürücü başarılı olursa, bağlayıcı motor, <xref:System.Windows.Controls.ValidationRule> bunun <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> <xref:System.Windows.Data.Binding>için ayarlanmış özel nesneler varsa, bu durumda biri <xref:System.Windows.Controls.ValidationRule.Validate%2A> bir hataya girene <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> kadar veya hepsi geçene kadar <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> ayarlanmış her bir yöntem çağırır.
+3. Dönüştürücü başarılı olursa bağlama motoru, için <xref:System.Windows.Controls.ValidationRule> olarak <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> ayarlanmış herhangi bir özel nesne olup olmadığını denetler; bu <xref:System.Windows.Data.Binding>durumda, biri bir hata halinde veya hepsi geçene kadar <xref:System.Windows.Controls.ValidationRule.Validate%2A> <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> ayarlanmış olan her bir yöntem için olarak <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> ayarlanan her bir yöntemi çağırır.
 
-4. Bağlama motoru kaynak özelliği ayarlar.
+4. Bağlama altyapısı, kaynak özelliğini ayarlar.
 
-5. Bağlama <xref:System.Windows.Controls.ValidationRule> motoru, bunun <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.UpdatedValue> için ayarlanmış özel nesneler olup olmadığını <xref:System.Windows.Data.Binding>denetler, bu <xref:System.Windows.Controls.ValidationRule.Validate%2A> durumda, <xref:System.Windows.Controls.ValidationRule> biri <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> bir <xref:System.Windows.Controls.ValidationStep.UpdatedValue> hataya girene kadar veya hepsi geçene kadar ayarlanmış her bir yöntem çağırır. A <xref:System.Windows.Controls.DataErrorValidationRule> bir bağlama ile ilişkili <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> yse ve onun <xref:System.Windows.Controls.ValidationStep.UpdatedValue>varsayılan <xref:System.Windows.Controls.DataErrorValidationRule> olarak ayarlanırsa, bu noktada denetlenir. Bu <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> noktada, ayarlanan herhangi `true` bir bağlama denetlenir.
+5. Bağlama altyapısı, <xref:System.Windows.Controls.ValidationRule> için olarak <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.UpdatedValue> ayarlanmış herhangi bir özel nesne olup olmadığını denetler; bu <xref:System.Windows.Data.Binding>durumda, biri bir hata halinde <xref:System.Windows.Controls.ValidationRule.Validate%2A> <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.UpdatedValue> çalıştırana kadar ya da hepsi geçene kadar ayarlanmış olan her bir bir yöntemi çağırır. Bir <xref:System.Windows.Controls.DataErrorValidationRule> bağlama ile ilişkiliyse ve <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> bu, varsayılan <xref:System.Windows.Controls.ValidationStep.UpdatedValue> <xref:System.Windows.Controls.DataErrorValidationRule> olarak ayarlanırsa, bu noktada denetlenir. Bu noktada, olarak <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> `true` ayarlanmış herhangi bir bağlama denetlenir.
 
-6. Bağlama <xref:System.Windows.Controls.ValidationRule> motoru, bunun <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.CommittedValue> için ayarlanmış özel nesneler olup olmadığını <xref:System.Windows.Data.Binding>denetler, bu <xref:System.Windows.Controls.ValidationRule.Validate%2A> durumda, <xref:System.Windows.Controls.ValidationRule> biri <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> bir <xref:System.Windows.Controls.ValidationStep.CommittedValue> hataya girene kadar veya hepsi geçene kadar ayarlanmış her bir yöntem çağırır.
+6. Bağlama altyapısı, <xref:System.Windows.Controls.ValidationRule> için olarak <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.CommittedValue> ayarlanmış herhangi bir özel nesne olup olmadığını denetler; bu <xref:System.Windows.Data.Binding>durumda, biri bir hata halinde <xref:System.Windows.Controls.ValidationRule.Validate%2A> <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.CommittedValue> çalıştırana kadar ya da hepsi geçene kadar ayarlanmış olan her bir bir yöntemi çağırır.
 
-A <xref:System.Windows.Controls.ValidationRule> bu işlem boyunca herhangi bir zamanda geçmezse, bağlama <xref:System.Windows.Controls.ValidationError> motoru bir nesne <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> oluşturur ve bağlı öğenin koleksiyonuna ekler. Bağlama altyapısı nesneleri <xref:System.Windows.Controls.ValidationRule> belirli bir adımda çalıştırmadan önce, bu adım <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> sırasında bağlı öğenin ekli özelliğine eklenen herhangi bir <xref:System.Windows.Controls.ValidationError> kaldırır. Örneğin, bir <xref:System.Windows.Controls.ValidationRule> olan <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> başarısız <xref:System.Windows.Controls.ValidationStep.UpdatedValue> olacak şekilde ayarlanmışsa, bir sonraki doğrulama işlemi gerçekleştiğinde, bağlama <xref:System.Windows.Controls.ValidationRule> motoru, <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> ayarlanan herhangi bir çağrıyı <xref:System.Windows.Controls.ValidationStep.UpdatedValue> <xref:System.Windows.Controls.ValidationError> hemen önce kaldırır.
+<xref:System.Windows.Controls.ValidationRule> Bu işlem boyunca hiçbir zaman geçemezse bağlama altyapısı bir <xref:System.Windows.Controls.ValidationError> nesnesi oluşturur ve onu bağlantılı öğenin <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> koleksiyonuna ekler. Bağlama altyapısı herhangi bir adımda <xref:System.Windows.Controls.ValidationRule> nesneleri çalıştırmadan önce, söz konusu adım sırasında bağlı öğenin <xref:System.Windows.Controls.ValidationError> <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Ekli özelliğine eklenen her türlü öğeyi kaldırır. Örneğin, bir,, <xref:System.Windows.Controls.ValidationRule> , <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> bir sonraki doğrulama <xref:System.Windows.Controls.ValidationStep.UpdatedValue> işlemi başarısız olduğunda, bağlama <xref:System.Windows.Controls.ValidationError> altyapısı, olarak <xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.UpdatedValue>ayarlanmış herhangi bir ' i çağırmadan önce onu kaldırır.
 
-<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Boş olmadığında, öğenin <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> bağlı özelliği `true`. Ayrıca, <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A> özelliği <xref:System.Windows.Data.Binding> ayarlanırsa `true`, bağlama motoru öğe <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> üzerinde ekli olay yükseltir.
+<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> Boş olmadığında, öğesinin <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ekli özelliği olarak `true`ayarlanır. Ayrıca <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A> , öğesinin <xref:System.Windows.Data.Binding> özelliği olarak `true`ayarlandıysa, bağlama altyapısı öğesinde <xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType> ekli olayı başlatır.
 
-Ayrıca, her iki yönde geçerli bir değer aktarımı (hedefkaynak <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> veya kaynak hedef) ekli özelliği temizler unutmayın.
+Ayrıca, her iki yönde de geçerli bir değer aktarımının (hedeften kaynağa veya kaynaktan hedefe) <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> ekli özelliği temizlemiş olduğunu unutmayın.
 
-Bağlama ile ilişkili <xref:System.Windows.Controls.ExceptionValidationRule> bir ya varsa, <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> ya da `true` özellik ayarlanmış olsaydı ve bağlama motoru kaynağı ayarlar zaman bir özel durum <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>atılır, bağlama motoru olup olmadığını görmek için . Özel durumları işlemek için <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> özel bir işleyici sağlamak için geri aramayı kullanma seçeneğiniz vardır. Bir <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> üzerinde <xref:System.Windows.Data.Binding>belirtilmemişse, bağlama motoru <xref:System.Windows.Controls.ValidationError> özel bir durum oluşturur <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> ve bağlı öğenin koleksiyonuna ekler.
+Bağlama onunla <xref:System.Windows.Controls.ExceptionValidationRule> ilişkili bir varsa veya <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> özelliği olarak `true` ayarlanmışsa ya da bağlama altyapısı kaynağı ayarlarsa, bağlama altyapısı bir <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>olup olmadığını denetler. Özel durumları işlemek için özel bir işleyici <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> sağlamak üzere geri aramayı kullanma seçeneğiniz vardır. ' Nde belirtilmemişse, bağlama motoru <xref:System.Windows.Controls.ValidationError> özel durum ile bir oluşturur ve onu bağlı öğenin <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> koleksiyonuna ekler. <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> <xref:System.Windows.Data.Binding>
 
 ## <a name="debugging-mechanism"></a>Hata ayıklama mekanizması
 
-Belirli bir bağlamanın <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> durumu hakkında bilgi almak için bağlı bir nesne üzerinde ekli özelliği ayarlayabilirsiniz.
+Belirli bir bağlamanın durumu hakkında bilgi <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> almak için bağlama ile ilgili nesne üzerinde iliştirilmiş özelliğini ayarlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [LINQ sorgusunun sonuçlarına bağlama](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
 - [Veri bağlama](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Veri bağlama demosu][data-binding-demo]
-- [Nasıl dır makaleleri](../../framework/wpf/data/data-binding-how-to-topics.md)
+- [Veri bağlama tanıtımı][data-binding-demo]
+- [Nasıl yapılır makaleleri](../../framework/wpf/data/data-binding-how-to-topics.md)
 - [ADO.NET veri kaynağına bağlama](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
 
-[data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "veri bağlama demo uygulaması"
+[data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "veri bağlama tanıtım uygulaması"

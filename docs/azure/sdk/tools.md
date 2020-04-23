@@ -1,6 +1,6 @@
 ---
-title: Azure .NET ve .NET Core geliştiricileri için araçlar
-description: Windows, Linux ve Mac ortamından Azure .NET kitaplıklarını kullanmaya başlamak için araçları alın.
+title: Azure .NET ve .NET Core geliştiricileri için Araçlar
+description: Azure .NET kitaplıklarını bir Windows, Linux ve Mac ortamından kullanmaya başlamak için Araçları alın.
 ms.date: 10/01/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: 1c6370e4b3e5e6e901ba6ef56c65d794f3da5abe
@@ -10,66 +10,66 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071943"
 ---
-# <a name="tools-for-net-and-net-core-azure-developers"></a>.NET ve .NET Core Azure geliştiricileri için araçlar
+# <a name="tools-for-net-and-net-core-azure-developers"></a>.NET ve .NET Core Azure geliştiricileri için Araçlar
 
-## <a name="sdk-downloads"></a>SDK indirme
+## <a name="sdk-downloads"></a>SDK İndirmeleri
 
-.NET için azure kitaplıkları [NuGet paketleri](https://www.nuget.org/packages?q=windowsazureofficial)olarak uygulanır. Azure hizmeti tarafından düzenlenen yükleme yönergeleri için [API Başvurusu'na](/dotnet/api/overview/azure/?view=azure-dotnet) bakın.
+.NET için Azure kitaplıkları, [NuGet paketleri](https://www.nuget.org/packages?q=windowsazureofficial)olarak uygulanır. Azure hizmeti tarafından düzenlenen yükleme yönergeleri için [API başvurusuna](/dotnet/api/overview/azure/?view=azure-dotnet) bakın.
 
 ## <a name="development-tools"></a>Geliştirme araçları
 
-Visual Studio'da birçok Azure hizmeti için araçlama bulunmaktadır. Bazı Azure hizmetlerinin kullanılabilir ek araçları veya emülatörleri vardır( örneğin [Azure Depolama Gezgini).](https://azure.microsoft.com/features/storage-explorer/) Gerekirse ek araçlar için Azure hizmetinizin belgelerine bakın.
+Visual Studio, yerleşik birçok Azure hizmeti için araç içerir. Bazı Azure hizmetlerinde [Azure Depolama Gezgini](https://azure.microsoft.com/features/storage-explorer/)gibi ek araçlar veya Öykünücüler mevcuttur. Gerekirse, ek araçlar için Azure hizmetinize yönelik belgelere bakın.
 
-Bu yönergeler işletim sisteminiz için önerilen başlangıç geliştirme ortamını yükler.
+Bu yönergeler, işletim sisteminiz için önerilen başlangıç geliştirme ortamını yükler.
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-Visual Studio sürümleri 2017 ve daha sonra Azure geliştirme için yerleşik destek var. Aşağıdaki adımlar, Visual Studio'da Azure geliştirme desteğini etkinleştirmeyi açıklar.
+Visual Studio sürümleri 2017 ve üzeri, Azure geliştirme için yerleşik desteğe sahiptir. Aşağıdaki adımlarda, Visual Studio 'da Azure geliştirme desteğinin etkinleştirilmesi açıklanır.
 
-Visual Studio 2015 ve daha önceki kullanımlar için <a href="vs2015-install.md">aşağıdaki talimatları uygulayın.</a>
+Visual Studio 2015 ve önceki sürümleri için <a href="vs2015-install.md">Bu yönergeleri izleyin</a>.
 
-### <a name="step-1-download-visual-studio-2019"></a>Adım 1: Visual Studio 2019 İndir
+### <a name="step-1-download-visual-studio-2019"></a>1. Adım: Visual Studio 2019 ' i Indirin
 
-Visual Studio 2019 yüklüyse bu adımı atlayabilirsiniz.
+Visual Studio 2019 zaten yüklüyse, bu adımı atlayabilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Visual Studio 2019’u İndirin](https://www.visualstudio.com/downloads/)
 
-### <a name="step-2-install-the-two-azure-workloads"></a>Adım 2: İki Azure iş yükünü yükleme
+### <a name="step-2-install-the-two-azure-workloads"></a>2. Adım: iki Azure iş yükünü yüklerken
 
-Visual Studio yükleyicisinde Visual Studio'yu yükleyin (veya varolan bir yüklemeyi değiştirin). *Azure geliştirme* ve *ASP.NET ve web geliştirme* iş yüklerinin seçildiğinden emin olun.
+Visual Studio yükleyicisi ' nde, Visual Studio 'Yu (veya var olan bir yüklemeyi değiştirme) yükleme. *Azure geliştirme* ve *ASP.net ve Web geliştirme* iş yüklerinin seçildiğinden emin olun.
 
-### <a name="step-3-develop-with-net-on-azure"></a>Adım 3: Azure'da .NET ile geliştirin
+### <a name="step-3-develop-with-net-on-azure"></a>3. Adım: Azure 'da .NET ile geliştirme
 
-[İlk ASP.NET Core web uygulamanızı Azure App Service'de dağıtarak](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet)başlayın.
+[İlk ASP.NET Core Web uygulamanızı Azure App Service dağıtmaya](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet)başlayın.
 
 ## <a name="macos"></a>[Mac OS](#tab/macos)
 
-Mac için Visual Studio, Azure geliştirme için ihtiyacınız olan her şeye sahiptir.
+Mac için Visual Studio Azure geliştirme için ihtiyacınız olan her şey vardır.
 
-### <a name="step-1-download-visual-studio-for-mac"></a>Adım 1: Mac için Visual Studio'u İndirin
+### <a name="step-1-download-visual-studio-for-mac"></a>1. Adım: Indirme Mac için Visual Studio
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio'u İndirin](https://www.visualstudio.com/vs/visual-studio-mac/)
+> [Mac için Visual Studio indir](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Yükleme sırasında Azure araçları varsayılan olarak seçilir.
+Yükleme sırasında Azure Araçları varsayılan olarak seçilidir.
 
 ## <a name="linux"></a>[Linux](#tab/linux)
 
-Visual Studio Code, Linux'ta Azure geliştirme için ihtiyacınız olan her şeye sahiptir.
+Visual Studio Code, Linux üzerinde Azure geliştirme için ihtiyacınız olan her şeye sahiptir.
 
-### <a name="step-1-download-the-net-core-sdk"></a>Adım 1: .NET Core SDK'yı indirin
+### <a name="step-1-download-the-net-core-sdk"></a>1. Adım: .NET Core SDK Indirin
 
 .NET Core uygulamaları için SDK ve komut satırı araçları.
 
 > [!div class="nextstepaction"]
-> [Karşıdan yükleme .NET Core SDK](https://dotnet.microsoft.com/download)
+> [.NET Core SDK indir](https://dotnet.microsoft.com/download)
 
-### <a name="step-2-visual-studio-code"></a>Adım 2: Görsel Stüdyo Kodu
+### <a name="step-2-visual-studio-code"></a>2. Adım: Visual Studio Code
 
-Windows, Mac ve Linux gibi işletim sistemlerinde .NET Core uygulamalarını düzenle ve hata ayıkla.
+Herhangi bir işletim sisteminde .NET Core uygulamalarını düzenleyin ve hatalarını ayıklayın: Windows, Mac ve Linux.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Kodu İndir](https://code.visualstudio.com)
+> [Visual Studio Code indir](https://code.visualstudio.com)
 
 ---

@@ -21,53 +21,53 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79399975"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
-Platform çağırma, yönetilen kodun Windows API'dakiler gibi dinamik bağlantı kitaplıklarında (DL'lerde) uygulanan yönetilmeyen işlevleri çağırmasını sağlayan bir hizmettir. Dışa aktarılan bir işlevi bulur ve çağırır ve gerektiğinde interişlem sınırı boyunca bağımsız değişkenlerini (karşıtlar, dizeleri, diziler, yapılar vb.) sıralar.  
+Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlantı kitaplıkları (dll) içinde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. İçe aktarılmış bir işlevi bulur ve çağırır ve bağımsız değişkenlerini (tamsayılar, dizeler, diziler, yapılar vb.) gerektiğinde birlikte çalışma sınırında sıralar.  
   
- Bu bölümde, yönetilmeyen DLL işlevlerinin tüketilmesiyle ilişkili görevler tanıtılmış ve platform çağırma hakkında daha fazla bilgi verilmektedir. Aşağıdaki görevlere ek olarak, genel hususlar ve ek bilgi ve örnekler sağlayan bir bağlantı vardır.  
+ Bu bölüm, yönetilmeyen DLL işlevleri tüketen ilişkili görevleri tanıtır ve platform çağırma hakkında daha fazla bilgi sağlar. Aşağıdaki görevlere ek olarak, Genel hususlar ve ek bilgi ve örnekler sağlayan bir bağlantı vardır.  
   
-#### <a name="to-consume-exported-dll-functions"></a>Dışa aktarılan DLL işlevlerini tüketmek için  
+#### <a name="to-consume-exported-dll-functions"></a>İçe aktarılmış DLL işlevlerini kullanmak için  
   
-1. [DLs işlevlerini tanımlayın.](identifying-functions-in-dlls.md)  
+1. [DLL 'lerdeki Işlevleri belirler](identifying-functions-in-dlls.md).  
   
-     En az düzeyde, işlevin adını ve onu içeren DLL'nin adını belirtmeniz gerekir.  
+     En düşük düzeyde, işlevin adını ve onu içeren DLL adını belirtmeniz gerekir.  
   
-2. [DLL işlevlerini tutmak için bir sınıf oluşturun.](creating-a-class-to-hold-dll-functions.md)  
+2. [DLL işlevlerini barındıracak bir sınıf oluşturun](creating-a-class-to-hold-dll-functions.md).  
   
-     Varolan bir sınıfı kullanabilir, her yönetilmeyen işlev için ayrı bir sınıf oluşturabilir veya ilgili yönetilmeyen işlevler kümesi içeren bir sınıf oluşturabilirsiniz.  
+     Mevcut bir sınıfı kullanabilir, her yönetilmeyen işlev için tek bir sınıf oluşturabilir veya ilgili yönetilmeyen işlevler kümesini içeren bir sınıf oluşturabilirsiniz.  
   
-3. [Yönetilen kodda prototipler oluşturun.](creating-prototypes-in-managed-code.md)  
+3. [Yönetilen kodda prototipler oluşturun](creating-prototypes-in-managed-code.md).  
   
-     [Visual Basic] **İşlev** ve **Lib** anahtar kelimeleriyle **Bildir ifadesini** kullanın. Bazı nadir durumlarda, **Paylaşılan İşlev** anahtar kelimeleri ile **DllImportAttribute** kullanabilirsiniz. Bu olgular daha sonra bu bölümde açıklanmıştır.  
+     [Visual Basic] **Declare** ifadesini **Function** ve **lib** anahtar sözcükleriyle kullanın. Nadir bazı durumlarda, **paylaşılan işlev** anahtar sözcükleriyle **DllImportAttribute** kullanabilirsiniz. Bu durumlar bu bölümde daha sonra açıklanmaktadır.  
   
-     [C#] DLL ve işlevi tanımlamak için **DllImportAttribute** kullanın. Yöntemi **statik** ve **extern** değiştiriciler ile işaretleyin.  
+     Þ DLL ve işlevi tanımlamak için **DllImportAttribute** kullanın. Yöntemi **static** ve **extern** değiştiricilere göre işaretleyin.  
   
-     [C++] DLL ve işlevi tanımlamak için **DllImportAttribute** kullanın. Sarma makinesi yöntemini veya işlevini **extern "C"** ile işaretleyin.  
+     C++ DLL ve işlevi tanımlamak için **DllImportAttribute** kullanın. Sarmalayıcı metodunu veya işlevi **extern "C"** ile işaretleyin.  
   
-4. [Bir DLL işlevini arayın.](calling-a-dll-function.md)  
+4. [BIR DLL Işlevi çağırın](calling-a-dll-function.md).  
   
-     Yönetilen sınıfınızdaki yöntemi, diğer yönetilen yöntemlerde olduğu gibi arayın. [Yapıları n geçirilmesi](passing-structures.md) ve [geri arama işlevlerinin uygulanması](callback-functions.md) özel durumlardır.  
+     Yönetilen sınıfınıza, diğer yönetilen yöntemler gibi yöntemi çağırın. [Yapıları geçirme](passing-structures.md) ve [geri çağırma işlevlerini uygulama](callback-functions.md) özel durumlardır.  
   
- Nasıl inşa edilebildiğini gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, [Bkz. Platform Invoke ile Verileri Mareşalleme.](marshaling-data-with-platform-invoke.md)  
+ Nasıl oluşturulacağını gösteren örnekler için. Platform çağırma ile kullanılacak NET tabanlı bildirimler, bkz. [Platform çağırma Ile verileri sıralama](marshaling-data-with-platform-invoke.md).  
   
-## <a name="a-closer-look-at-platform-invoke"></a>Platform çağırmaya daha yakından bakmak  
- Platform, dışa aktarılan işlevleri bulmak ve bağımsız değişkenlerini çalışma zamanında mareşallemek için meta verilere dayanır. Aşağıdaki çizim bu süreci göstermektedir.  
+## <a name="a-closer-look-at-platform-invoke"></a>Platform çağırma ' ye daha yakından bakış  
+ Platform çağırma, içe aktarılmış işlevleri bulmak ve çalışma zamanında bağımsız değişkenlerini sıralamak için meta verileri kullanır. Aşağıdaki çizim bu süreci göstermektedir.  
   
- ![Platform çağrısı çağrısını gösteren diyagram.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
+ ![Platform çağırma çağrısını gösteren diyagram.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
- Platform yönetilmeyen bir işlev çağırdığında, aşağıdaki eylem sırasını gerçekleştirir:  
+ Platform Invoke yönetilmeyen bir işlevi çağırdığında, aşağıdaki eylem dizisini gerçekleştirir:  
   
-1. İşleviçeren DLL'yi bulur.  
+1. İşlevi içeren DLL 'yi bulur.  
   
-2. DLL'yi belleğe yükler.  
+2. DLL 'yi belleğe yükler.  
   
-3. Bellekteki işlevin adresini bulur ve gerektiğinde verileri sıralayarak bağımsız değişkenlerini yığına iter.  
+3. Bellekteki işlevin adresini bulur ve bağımsız değişkenlerini yığına iter, verileri gereken şekilde sıralama.  
   
     > [!NOTE]
-    > DLL'nin bulunması ve yüklenmesi ve bellekteki işlevin adresinin bulunması yalnızca işlevin ilk çağrısında gerçekleşir.  
+    > DLL 'yi bulma ve yükleme ve bellekteki işlevin adresini bulma işlemi yalnızca işlevin ilk çağrısında gerçekleşir.  
   
-4. Denetimi yönetilmeyen işleve aktarın.  
+4. Denetimi yönetilmeyen işleve aktarır.  
   
- Platform çağırma, yönetilen arayaniçin yönetilmeyen işlev tarafından oluşturulan özel durumlar atar.
+ Platform çağırma, yönetilmeyen işlev tarafından yönetilen çağırana oluşturulan özel durumları oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

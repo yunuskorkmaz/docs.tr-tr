@@ -1,6 +1,6 @@
 ---
-title: .NET Framework ve .NET Core arasındaki farklar
-description: Windows Presentation Foundation (WPF) ve .NET Core WPF'nin .NET Framework uygulaması arasındaki farkları açıklar. Uygulamanızı geçirerken, bu uyumsuzlukları göz önünde bulundurmalısınız.
+title: .NET Framework ve .NET Core arasındaki farklılıklar
+description: Windows Presentation Foundation (WPF) ve .NET Core WPF .NET Framework uygulama arasındaki farkları açıklar. Uygulamanızı geçirirken, bu uyumsuzlukları göz önünde bulundurmanız gerekir.
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
@@ -11,49 +11,49 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82072209"
 ---
-# <a name="differences-in-wpf"></a>WPF'deki farklar
+# <a name="differences-in-wpf"></a>WPF farkları
 
-Bu makalede, .NET Core ve .NET Framework'de Windows Presentation Foundation (WPF) arasındaki farklar açıklanmaktadır. .NET Core için WPF, .NET Framework kaynak kodu için orijinal WPF'den çatallanmış açık [kaynak](https://github.com/dotnet/wpf) çerçevedir.
+Bu makalede, .NET Core ve .NET Framework Windows Presentation Foundation (WPF) arasındaki farklar açıklanmaktadır. .NET Core için WPF, .NET Framework kaynak kodu için özgün WPF tarafından ele alınan [Açık kaynaklı bir çerçevedir](https://github.com/dotnet/wpf) .
 
-.NET Framework'ün .NET Core'un desteklemediği birkaç özelliği vardır. Desteklenmeyen teknolojiler hakkında daha fazla bilgi için [.NET Core'da bulunmayan .NET Framework teknolojilerine](../../core/porting/net-framework-tech-unavailable.md)bakın.
+.NET Core 'un desteklemediği .NET Framework birkaç özelliği vardır. Desteklenmeyen teknolojiler hakkında daha fazla bilgi için bkz. [.NET Core 'da .NET Framework teknolojileri kullanılamıyor](../../core/porting/net-framework-tech-unavailable.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-## <a name="sdk-style-projects"></a>SDK tarzı projeler
+## <a name="sdk-style-projects"></a>SDK stili projeler
 
-.NET Core, SDK tarzı proje dosyalarını kullanır. Bu proje dosyaları Visual Studio tarafından yönetilen geleneksel .NET Framework proje dosyalarından farklıdır. .NET Framework WPF uygulamalarınızı .NET Core'a geçirmek için projelerinizi dönüştürmeniz gerekir. Daha fazla bilgi için [WPF uygulamalarını .NET Core 3.0'a geçirin.](convert-project-from-net-framework.md)
+.NET Core, SDK stili proje dosyalarını kullanır. Bu proje dosyaları, Visual Studio tarafından yönetilen geleneksel .NET Framework proje dosyalarından farklıdır. .NET Framework WPF uygulamalarınızı .NET Core 'a geçirmek için projelerinizi dönüştürmeniz gerekir. Daha fazla bilgi için bkz. [WPF uygulamalarını .NET Core 3,0 'ye geçirme](convert-project-from-net-framework.md).
 
-## <a name="nuget-package-references"></a>NuPaket referansları alın
+## <a name="nuget-package-references"></a>NuGet paket başvuruları
 
-.NET Framework uygulamanız NuGet bağımlılıklarını *bir packages.config* dosyasında [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) listeliyorsa, biçime geçirin:
+.NET Framework uygulamanız, NuGet bağımlılıklarını bir *Packages. config* dosyasında listelediğinden şu [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) biçime geçin:
 
-1. Visual Studio'da **Solution Explorer** bölmesini açın.
-1. WPF projenizde **packagereference'a sağ tıkla.config** > **Migrate packages.config to PackageReference**.
+1. Visual Studio 'da **Çözüm Gezgini** bölmesini açın.
+1. WPF projenizde **Packages. config** > Packages. config 'i**packagereference**' a geçirin.
 
-![PackageReference'a yükseltme](media/differences-from-net-framework/package-reference-migration.png)
+![PackageReference 'a yükseltme](media/differences-from-net-framework/package-reference-migration.png)
 
-Hesaplanan üst düzey NuGet bağımlılıklarını gösteren ve hangi diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini soran bir iletişim kutusu görüntülenir. **Tamam'ı** seçin ve *packages.config* dosyası projeden kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
+Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. **Tamam** ' ı seçtiğinizde, *Packages. config* dosyası projeden kaldırılacak ve `<PackageReference>` öğeler proje dosyasına eklenecektir.
 
-Projeniz kullandığında, `<PackageReference>`paketler *paketler* paketler klasöründe yerel olarak depolanır, genel olarak depolanır. Proje dosyasını açın `<Analyzer>` ve *Paketler* klasörüne yönlendirilen öğeleri kaldırın. Bu çözümleyiciler otomatik olarak NuGet paket başvurularına dahil edilir.
+Projeniz kullandığında `<PackageReference>`, paketler yerel olarak bir *paketler* klasöründe depolanmaz. Proje dosyasını açın ve *paketler* klasörüne başvuruda `<Analyzer>` bulunan tüm öğeleri kaldırın. Bu çözümleyiciler, NuGet paket başvurularına otomatik olarak eklenir.
 
 ## <a name="code-access-security"></a>Kod Erişimi Güvenliği
 
-Kod Erişim Güvenliği (CAS) .NET Core veya WPF tarafından .NET Core için desteklenmez. CAS ile ilgili tüm işlevler tam güven varsayımı altında ele alının. .NET Core için WPF, CAS ile ilgili kodu kaldırır. Bu tür deki çağrıların başarılı olduğundan emin olmak için bu tür lerin genel API yüzeyi hala mevcuttur.
+.NET Core için .NET Core veya WPF tarafından kod erişim güvenliği (CAS) desteklenmez. Tüm CA 'larla ilgili işlevler tam güven varsayımına göre değerlendirilir. .NET Core için WPF, CA ile ilgili kodu kaldırır. Bu türlerin ortak API 'SI yüzeyi, bu türlere yapılan çağrıların başarılı olduğundan emin olmak için hala var.
 
-Genel olarak tanımlanan CAS ile ilgili türler WPF derlemelerinden core .NET kitaplık derlemelerine taşındı. WPF derlemeleri, taşınan türlerin yeni konumuna tür iletme kümesine sahiptir.
+Ortak olarak tanımlanan CA 'larla ilgili türler WPF derlemelerinden ve çekirdek .NET kitaplığı derlemelerinden taşındı. WPF derlemelerinin tür iletme türü, taşınan türlerin yeni konumuna ayarlanır.
 
-| Kaynak derleme | Hedef montaj | Tür                |
+| Kaynak derleme | Hedef derleme | Tür                |
 | --------------- | --------------- | ------------------- |
-| *WindowsBase.dll* | *System.Security.Permissions.dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
-| *Sistem.Xaml.dll* | *System.Security.Permissions.dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
-| *Sistem.Xaml.dll* | *System.Windows.Extension.dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
+| *WindowsBase. dll* | *System. Security. Permissions. dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
+| *System. xaml. dll* | *System. Security. Permissions. dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
+| *System. xaml. dll* | *System. Windows. Extension. dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
 
 > [!NOTE]
-> Taşıma sürtünmesini en aza indirmek için, aşağıdaki özelliklerle ilgili bilgilerin depolanması ve alınması `XamlAccessLevel` işlevi türde korunmuştur.
+> Savunma savunma durumunu en aza indirmek için, aşağıdaki özelliklerle ilgili bilgileri depolama ve alma işlevleri `XamlAccessLevel` türünde tutulur.
 >
 > - `PrivateAccessToTypeName`
 > - `AssemblyNameString`
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Bir .NET Framework WPF uygulamasını .NET Core'a nasıl ileteceklerini öğrenin.](convert-project-from-net-framework.md)
+- [.NET Framework WPF uygulamasının .NET Core 'a nasıl bağlantı sağladığını öğrenin.](convert-project-from-net-framework.md)

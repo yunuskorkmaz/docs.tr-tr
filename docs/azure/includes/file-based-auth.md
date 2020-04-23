@@ -9,9 +9,9 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071936"
 ---
-'li bir `azureauth.json`metin dosyası oluşturun. Hizmet ilkesini oluşturduğunuz dan JSON çıktısını yapıştırın.
+Adlı `azureauth.json`bir metin dosyası oluşturun. Hizmet sorumlusunu oluştururken JSON çıkışını yapıştırın.
 
-Bu dosyayı sisteminizde güvenli ve kodunuzun okuyabileceği bir konuma kaydedin. Örneğin, dosyaya tam yol `AZURE_AUTH_LOCATION` ile adlandırılan bir ortam değişkeni ayarlamak için PowerShell'i kullanın:
+Bu dosyayı sisteminizde güvenli ve kodunuzun okuyabileceği bir konuma kaydedin. Dosyanın tam yolu ile adlı `AZURE_AUTH_LOCATION` bir ortam değişkenini ayarlamak için PowerShell kullanın, örneğin:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("AZURE_AUTH_LOCATION", "C:\src\azureauth.json", "User")

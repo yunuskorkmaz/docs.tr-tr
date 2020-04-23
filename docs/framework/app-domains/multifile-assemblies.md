@@ -10,18 +10,18 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-ms.openlocfilehash: 8ffb0482ebd01a056d9ffd80a74ec0332e1b8dff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a70e45d50763cf99c55cf08600c3c816b4043b7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119788"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644211"
 ---
 # <a name="multifile-assemblies"></a>Birden çok dosyalı derlemeler
 
-Komut satırı derleyicileri veya Visual C++Studio 'yu kullanarak .NET Framework hedefleyen çok dosyalı derlemeler oluşturabilirsiniz. Derlemedeki bir dosyanın derleme bildirimini içermesi gerekir. Bir uygulamayı başlatan bütünleştirilmiş kod ayrıca `Main` veya `WinMain` yöntemi gibi bir giriş noktası içermelidir.
+Visual C++ komut satırı derleyicilerini veya Visual Studio 'Yu kullanarak .NET Framework hedefleyen çok dosyalı derlemeler oluşturabilirsiniz. Derlemedeki bir dosyanın derleme bildirimini içermesi gerekir. Bir uygulamayı başlatan bir derleme, `Main` ya `WinMain` da yöntemi gibi bir giriş noktası içermelidir.
 
-Örneğin, *Client.cs* ve *Stringer.cs*olmak üzere iki kod modülü içeren bir uygulamanız olduğunu varsayalım. *Stringer.cs* , *Client.cs*içindeki kod tarafından başvurulan `myStringer` ad alanını oluşturur. *Client.cs* , uygulamanın giriş noktası olan `Main` yöntemini içerir. Bu örnekte, iki kod modülünü derler ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturursunuz. Derleme bildirimi hem *istemci* hem de *stru* modüllerine başvurur.
+Örneğin, *Client.cs* ve *Stringer.cs*olmak üzere iki kod modülü içeren bir uygulamanız olduğunu varsayalım. *Stringer.cs* , `myStringer` *Client.cs*içindeki kod tarafından başvurulan ad alanını oluşturur. *Client.cs* , uygulamanın `Main` giriş noktası olan yöntemini içerir. Bu örnekte, iki kod modülünü derler ve ardından uygulamayı başlatan derleme bildirimini içeren üçüncü bir dosya oluşturursunuz. Derleme bildirimi hem *istemci* hem de *stru* modüllerine başvurur.
 
 > [!NOTE]
 > Çok dosyalı derlemeler, derleme birden fazla kod modüllerine sahip olsa bile yalnızca bir giriş noktasına sahip olabilir.
@@ -42,4 +42,4 @@ Derlemeyi oluşturduktan sonra, derleme bildirimini içeren dosyayı imzalayabil
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](build-multifile-assembly.md)
-- [Bütünleştirilmiş kod içeren program](../../standard/assembly/program.md)
+- [Derlemeler ile programlama](../../standard/assembly/index.md)
