@@ -9,15 +9,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "82071985"
 ---
-<span data-ttu-id="84300-101">.NET uygulamanızın ,.NET için Azure Yönetim Kitaplıklarını kullanabilmek için Azure aboneliğinizde kaynak okumak ve oluşturmak için izinlere ihtiyacı vardır.</span><span class="sxs-lookup"><span data-stu-id="84300-101">Your .NET application needs permissions to read and create resources in your Azure subscription in order to use the Azure Management Libraries for .NET.</span></span> <span data-ttu-id="84300-102">Bir hizmet ilkesi oluşturun ve bu erişimi sağlamak için uygulamanızı kimlik bilgileriyle çalışacak şekilde yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="84300-102">Create a service principal and configure your app to run with its credentials to grant this access.</span></span> <span data-ttu-id="84300-103">Hizmet sorumluları, yalnızca uygulamanızın çalışması için gereken ayrıcalıkları verdiğiniz kimlikle ilişkili etkileşimli olmayan bir hesap oluşturmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="84300-103">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="d0937-101">.NET uygulamanız, .NET için Azure Yönetim kitaplıklarını kullanabilmeniz için Azure aboneliğinizdeki kaynakları okuma ve oluşturma izinlerine ihtiyaç duyuyor.</span><span class="sxs-lookup"><span data-stu-id="d0937-101">Your .NET application needs permissions to read and create resources in your Azure subscription in order to use the Azure Management Libraries for .NET.</span></span> <span data-ttu-id="d0937-102">Bir hizmet sorumlusu oluşturun ve bu erişime izin vermek için uygulamanızı kimlik bilgileriyle çalışacak şekilde yapılandırın.</span><span class="sxs-lookup"><span data-stu-id="d0937-102">Create a service principal and configure your app to run with its credentials to grant this access.</span></span> <span data-ttu-id="d0937-103">Hizmet sorumluları, yalnızca uygulamanızın çalışması için gereken ayrıcalıkları verdiğiniz kimlikle ilişkili etkileşimli olmayan bir hesap oluşturmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="d0937-103">Service principals provide a way to create a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="84300-104">İlk olarak, [Azure Bulut BulutU'ya](https://shell.azure.com/bash)giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="84300-104">First, login to [Azure Cloud Shell](https://shell.azure.com/bash).</span></span> <span data-ttu-id="84300-105">Hizmet sorumlusunun oluşturulmasını istediğiniz aboneliği şu anda kullandığınızı doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="84300-105">Verify you are currently using the subscription in which you want the service principal created.</span></span>
+<span data-ttu-id="d0937-104">İlk olarak [Azure Cloud Shell](https://shell.azure.com/bash)oturum açın.</span><span class="sxs-lookup"><span data-stu-id="d0937-104">First, login to [Azure Cloud Shell](https://shell.azure.com/bash).</span></span> <span data-ttu-id="d0937-105">Şu anda hizmet sorumlusu 'nın oluşturulmasını istediğiniz aboneliği kullandığınızı doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="d0937-105">Verify you are currently using the subscription in which you want the service principal created.</span></span>
 
 ```azurecli-interactive
 az account show
 ```
 
-<span data-ttu-id="84300-106">Abonelik bilgileriniz görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="84300-106">Your subscription information is displayed.</span></span>
+<span data-ttu-id="d0937-106">Abonelik bilgileriniz görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="d0937-106">Your subscription information is displayed.</span></span>
 
 ```json
 {
@@ -35,15 +35,15 @@ az account show
 }
 ```
 
-<span data-ttu-id="84300-107">Doğru aboneliğe giriş yapmadıysanız, yazarak `az account set -s <name or ID of subscription>`doğru aboneliği seçin.</span><span class="sxs-lookup"><span data-stu-id="84300-107">If you're not logged into the correct subscription, select the correct one by typing `az account set -s <name or ID of subscription>`.</span></span>
+<span data-ttu-id="d0937-107">Doğru abonelikte oturum açmadıysanız, yazarak `az account set -s <name or ID of subscription>`doğru olanı seçin.</span><span class="sxs-lookup"><span data-stu-id="d0937-107">If you're not logged into the correct subscription, select the correct one by typing `az account set -s <name or ID of subscription>`.</span></span>
 
-<span data-ttu-id="84300-108">Aşağıdaki komutla hizmet atasını oluşturun:</span><span class="sxs-lookup"><span data-stu-id="84300-108">Create the service principal with the following command:</span></span>
+<span data-ttu-id="d0937-108">Hizmet sorumlusunu aşağıdaki komutla oluşturun:</span><span class="sxs-lookup"><span data-stu-id="d0937-108">Create the service principal with the following command:</span></span>
 
 ```azurecli-interactive
 az ad sp create-for-rbac --sdk-auth
 ```
 
-<span data-ttu-id="84300-109">Hizmet temel bilgileri JSON olarak görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="84300-109">The service principal information is displayed as JSON.</span></span>
+<span data-ttu-id="d0937-109">Hizmet sorumlusu bilgileri JSON olarak görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="d0937-109">The service principal information is displayed as JSON.</span></span>
 
 ```json
 {
@@ -60,4 +60,4 @@ az ad sp create-for-rbac --sdk-auth
 }
 ```
 
-<span data-ttu-id="84300-110">JSON çıktısını daha sonra kullanılmak üzere bir metin düzenleyicisine kopyalayıp yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="84300-110">Copy and paste the JSON output to a text editor for use later.</span></span>
+<span data-ttu-id="d0937-110">JSON çıkışını kopyalayın ve daha sonra kullanmak üzere bir metin düzenleyicisine yapıştırın.</span><span class="sxs-lookup"><span data-stu-id="d0937-110">Copy and paste the JSON output to a text editor for use later.</span></span>
