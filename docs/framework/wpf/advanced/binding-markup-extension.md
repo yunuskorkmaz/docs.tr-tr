@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: d0a437e756da16db978d8074c4355fd83d211b67
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6a424e085c7499db08d0a7e6b652f45fb2cdd70
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453605"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644078"
 ---
 # <a name="binding-markup-extension"></a>Biçimlendirme Uzantısı Bağlama
-Bir özellik değerini veri bağlantılı değer olacak şekilde erteler, bir ara ifade nesnesi oluşturma ve çalışma zamanında öğe ve bağlama için geçerli olan veri bağlamını yorumlama.  
+Bir özellik değerini veriye bağlı bir değer olarak erteler, ara ifade nesnesi oluşturur ve çalışma zamanında öğe ve bağlamaiçin geçerli olan veri bağlamını yorumlar.  
   
-## <a name="binding-expression-usage"></a>Bağlama Ifadesi kullanımı  
+## <a name="binding-expression-usage"></a>Bağlayıcı İfade Kullanımı  
   
 ```xaml  
 <object property="{Binding}" .../>  
@@ -30,101 +30,101 @@ Bir özellik değerini veri bağlantılı değer olacak şekilde erteler, bir ar
 <object property="{Binding path[, bindPropN=valueN]*}" .../>  
 ```  
   
-## <a name="syntax-notes"></a>Söz dizimi notları  
- Bu sözdizimlerde `[]` ve `*` değişmez değer değildir. Bu değerler, sıfır veya daha fazla *bindprop*`=`*değer* çiftlerinin kullanılabileceğini belirten, aralarında ve önünde *bindProp*`=`*değer* çiftleri arasında `,` bir ayırıcıyla birlikte bir gösterimin parçasıdır.  
+## <a name="syntax-notes"></a>Sözdizimi Notları  
+ Bu `[]` sözdizimlerinde, `*` ve edebi değildir. Bunlar, aralarında bir ayırıcı ve önceki *bindProp*`=`*değer* çiftleri ile sıfır veya daha fazla *bindProp*`=`*değer* çiftleri kullanılabileceğini belirtmek için bir `,` gösterimin parçasıdır.  
   
- "Bağlama uzantısı ile ayarlanabilir olan bağlama özellikleri" bölümünde listelenen özelliklerden herhangi biri bunun yerine <xref:System.Windows.Data.Binding> nesne öğesinin öznitelikleri kullanılarak ayarlanabilir. Ancak, <xref:System.Windows.Data.Binding>biçimlendirme uzantısının kullanımı gerçek değildir, yalnızca CLR <xref:System.Windows.Data.Binding> sınıfının özelliklerini ayarlamış olan özniteliklerin Genel XAML işlemesiyle aynıdır. Diğer bir deyişle, `<Binding` *bindProp1*`="`*değer1*`"[` *Bindpropn*`="`*valueN*`"]*/>`, <xref:System.Windows.Data.Binding> ifade kullanımı yerine `Binding` nesne öğesi kullanımı öznitelikleri için eşdeğer bir sözdizimidir. <xref:System.Windows.Data.Binding>belirli özelliklerinin XAML öznitelik kullanımı hakkında bilgi edinmek için .NET Framework sınıf kitaplığındaki <xref:System.Windows.Data.Binding> ilgili özelliğin "XAML öznitelik kullanımı" bölümüne bakın.  
+ "Bağlama Uzantısı ile Ayarlanabilen Bağlama Özellikleri" bölümünde listelenen özelliklerden herhangi biri, <xref:System.Windows.Data.Binding> bunun yerine bir nesne öğesinin öznitelikleri kullanılarak ayarlanabilir. Ancak, bu gerçekten biçimlendirme uzantısı <xref:System.Windows.Data.Binding>kullanımı değil , clr <xref:System.Windows.Data.Binding> sınıfının özelliklerini ayarlamak öznitelikleri sadece genel XAML işleme. Başka bir `<Binding` deyişle, *bindProp1*`="` *valuedPropN*`="``"]*/>` <xref:System.Windows.Data.Binding> `Binding` *valueN,* *value1* `"[` ifade kullanımı yerine nesne öğesi kullanımıözleri için eşdeğer bir sözdizimidir. Belirli özelliklerin <xref:System.Windows.Data.Binding>XAML öznitelik kullanımı hakkında bilgi edinmek için .NET Framework Class Kitaplığı'ndaki ilgili özelliğin <xref:System.Windows.Data.Binding> "XAML Öznitelik Kullanımı" bölümüne bakın.  
   
 ## <a name="xaml-values"></a>XAML Değerleri  
   
 |||  
 |-|-|  
-|`bindProp1, bindPropN`|Ayarlanacak <xref:System.Windows.Data.Binding> veya <xref:System.Windows.Data.BindingBase> özelliğinin adı. <xref:System.Windows.Data.Binding> özelliklerinin hepsi `Binding` uzantısıyla ayarlanamaz ve bazı özellikler yalnızca daha fazla iç içe biçimlendirme uzantıları kullanılarak `Binding` ifadesinde ayarlanabilir. "Bağlama uzantısı ile ayarlanabilir Özellikler" bölümüne bakın.|  
-|`value1, valueN`|Özelliği ayarlanacak değer. Öznitelik değerinin işlenmesi, son olarak ayarlanan <xref:System.Windows.Data.Binding> özelliğin türüne ve mantığına özgüdür.|  
-|`path`|Örtük <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> özelliğini ayarlayan yol dizesi. Ayrıca bkz. [PROPERTYPATH XAML sözdizimi](propertypath-xaml-syntax.md).|  
+|`bindProp1, bindPropN`|Ayarlanan <xref:System.Windows.Data.Binding> özelliğin <xref:System.Windows.Data.BindingBase> adı. Tüm <xref:System.Windows.Data.Binding> özellikler `Binding` uzantıyla ayarlanamaz ve bazı özellikler `Binding` yalnızca daha iç içe olan biçimlendirme uzantıları kullanılarak bir ifade içinde ayarlanabilir. Bkz. "Bağlama Uzantısı ile Ayarlanabilen Bağlama Özellikleri" bölümüne bakın.|  
+|`value1, valueN`|Özelliği ayarlamak için değer. Öznitelik değerinin işlenmesi sonuçta ayarlanan belirli <xref:System.Windows.Data.Binding> özelliğin türüne ve mantığına özgüdür.|  
+|`path`|Örtük <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> özelliği ayarlayan yol dizesi. Ayrıca bakınız [PropertyPath XAML Sözdizimi.](propertypath-xaml-syntax.md)|  
   
-## <a name="unqualified-binding"></a>Nitelenmemiş {Binding}  
- "Bağlama Ifadesi kullanımı" içinde gösterilen `{Binding}` kullanımı, `null`ilk <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> içeren varsayılan değerler içeren bir <xref:System.Windows.Data.Binding> nesnesi oluşturur. Oluşturulan <xref:System.Windows.Data.Binding>, <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> ve çalışma zamanı veri bağlamında ayarlanan <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> gibi anahtar veri bağlama özelliklerine bağlı olabileceğinden, bu pek çok senaryoda hala yararlıdır. Veri bağlamı kavramı hakkında daha fazla bilgi için bkz. [veri bağlama](../data/data-binding-wpf.md).  
+## <a name="unqualified-binding"></a>Niteliksiz {Bağlama}  
+ "Bağlama İfadeSi Kullanımı"nda `{Binding}` gösterilen <xref:System.Windows.Data.Binding> kullanım, <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> `null`ilk harfini içeren varsayılan değerlere sahip bir nesne oluşturur. Oluşturulan <xref:System.Windows.Data.Binding> gibi anahtar veri bağlama özellikleri güvenerek <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> olabilir ve <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> çalışma zamanı veri bağlamında ayarlanması, çünkü bu, birçok senaryoda hala yararlıdır. Veri bağlamı kavramı hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/data/data-binding-overview.md)  
   
-## <a name="implicit-path"></a>Örtük yol  
- `Binding` biçimlendirme uzantısı kavramsal bir "varsayılan özellik" olarak <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> kullanır, burada `Path=` ifadede görünmesine gerek kalmaz. Örtük bir yol içeren bir `Binding` ifadesi belirtirseniz, <xref:System.Windows.Data.Binding> özelliğinin ada göre belirttiği diğer `bindProp``value` =önce, ifadede ilk olarak örtük yol görünmelidir. Örneğin: `{Binding PathString}`, `PathString`, biçimlendirme uzantısı kullanımı tarafından oluşturulan <xref:System.Windows.Data.Binding> <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> değeri olarak değerlendirilen bir dizedir. Virgül ayırıcısından sonra diğer adlandırılmış özelliklerle örtük bir yol ekleyebilirsiniz, örneğin, `{Binding LastName, Mode=TwoWay}`.  
+## <a name="implicit-path"></a>Örtük Yol  
+ `Binding` Biçimlendirme uzantısı, <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> `Path=` ifadede görünmesi gerekmeyen kavramsal bir "varsayılan özellik" olarak kullanır. Örtük bir `Binding` yol ile bir ifade belirtirseniz, örtük yol özelliği `bindProp` = `value` ad ile <xref:System.Windows.Data.Binding> belirtilen diğer çiftleri önce, ifadede ilk görünmesi gerekir. Örneğin:, `{Binding PathString}`biçimlendirme uzantısı kullanımı tarafından `PathString` <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType> <xref:System.Windows.Data.Binding> oluşturulan değeri olarak değerlendirilen bir dize nerede. Virgül ayırıcıdan sonra diğer adlandırılmış özellikleri ile örtülü bir `{Binding LastName, Mode=TwoWay}`yol ekleyebilirsiniz, örneğin.  
   
-## <a name="binding-properties-that-can-be-set-with-the-binding-extension"></a>Bağlama uzantısıyla ayarlanabilir Özellikler bağlama  
- Bu konuda gösterilen sözdizimi, <xref:System.Windows.Data.Binding> biçimlendirme uzantısı/ifade sözdizimi aracılığıyla ayarlanabileceğinden <xref:System.Windows.Data.BindingBase> veya `Binding` birçok okuma/yazma özelliği olduğundan, genel `bindProp`=`value` yaklaşık olarak kullanır. Örtük bir <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>özel durumu ile herhangi bir sırada ayarlanabilir. (Bu durumda, herhangi bir sırada ayarlanabilir olan `Path=`açıkça belirtme seçeneğiniz vardır. Temel olarak, virgülle ayrılmış `bindProp`=`value` çiftleri kullanarak aşağıdaki listede bulunan özelliklerden sıfır veya daha fazlasını ayarlayabilirsiniz.  
+## <a name="binding-properties-that-can-be-set-with-the-binding-extension"></a>Bağlama Uzantısı ile Ayarlanabilen Bağlama Özellikleri  
+ Bu konuda gösterilen sözdizimi, `bindProp` = `value` `Binding` biçimlendirme uzantısı / ifade sözdizimi <xref:System.Windows.Data.BindingBase> aracılığıyla <xref:System.Windows.Data.Binding> ayarlanabilen çok sayıda okuma/yazma özelliği olduğundan genel yaklaşım kullanır. Bunlar örtülü <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>bir istisna dışında, herhangi bir sırada ayarlanabilir. (Bu durumda herhangi bir sırada `Path=`ayarlanabileceğini açıkça belirtme seçeneğiniz vardır). Temel olarak, virgülle ayrılmış çiftleri kullanarak `bindProp` = `value` aşağıdaki listedeki özelliklerin sıfırveya daha fazlasını ayarlayabilirsiniz.  
   
- Bu özellik değerlerinin birkaçı XAML içindeki bir metin sözdiziminden yerel tür dönüştürmeyi desteklemeyen nesne türleri gerektirir ve bu nedenle bir öznitelik değeri olarak ayarlanmaları için biçimlendirme uzantıları gerektirir. Daha fazla bilgi için her bir özelliğin .NET Framework sınıf kitaplığındaki XAML öznitelik kullanımı bölümüne bakın; daha fazla biçimlendirme uzantısı kullanımı olan veya olmayan XAML öznitelik sözdizimi için kullandığınız dize, her `Binding` bir `bindProp`=`value` içinde tırnak işareti yerleştirmeyin. `Binding` ifadesi.  
+ Bu özellik değerlerinden bazıları, XAML'deki bir metin sözdiziminden yerel tür dönüştürmesini desteklemeyen nesne türleri gerektirir ve bu nedenle öznitelik değeri olarak ayarlanabilmesi için biçimlendirme uzantıları gerektirir. Daha fazla bilgi için her özellik için .NET Framework Class Kitaplığı'ndaki XAML Öznitelik Kullanımı bölümünü kontrol edin; XAML öznitelik sözdizimi için kullandığınız dize, daha fazla biçimlendirme uzantısı kullanımı yla `Binding` veya daha fazla biçimlendirme uzantısı kullanımı olmadan `bindProp` = `value` temelde `Binding` ifadede belirttiğiniz değerle aynıdır, ancak ifadede her birinin etrafına tırnak işaretleri yerleştirmezsiniz.  
   
-- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: olası bir bağlama grubunu tanımlayan bir dize. Bu görece gelişmiş bir bağlama kavramıdır; <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>için başvuru sayfasına bakın.  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: olası bir bağlama grubunu tanımlayan bir dize. Bu nispeten gelişmiş bir bağlama kavramıdır; için <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>başvuru sayfasına bakın.  
   
-- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir.  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`.  
   
-- <xref:System.Windows.Data.Binding.Converter%2A>: ifadede bir `bindProp`=`value` dize olarak ayarlanabilir, ancak bunu yapmak için değer için bir [StaticResource Işaretleme uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerekir. Bu örnekteki değer bir özel dönüştürücü sınıfının örneğidir.  
+- <xref:System.Windows.Data.Binding.Converter%2A>: ifadede bir `bindProp` = `value` dize olarak ayarlanabilir, ancak bunu yapmak için statik kaynak [biçimlendirme uzantısı](staticresource-markup-extension.md)gibi değer için bir nesne başvurusu gerektirir. Bu durumda değer özel bir dönüştürücü sınıfının bir örneğidir.  
   
-- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: ifadede standartlara dayalı bir tanımlayıcı olarak ayarlanabilir; <xref:System.Windows.Data.Binding.ConverterCulture%2A>için başvuru konusuna bakın.  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: ifadede standartlara dayalı tanımlayıcı olarak ayarlanan; için <xref:System.Windows.Data.Binding.ConverterCulture%2A>başvuru konusuna bakın.  
   
-- <xref:System.Windows.Data.Binding.ConverterParameter%2A>: ifadede bir `bindProp`=`value` dize olarak ayarlanabilir, ancak bu, geçirilen parametrenin türüne bağlıdır. Değer için bir başvuru türü geçirilirse, bu kullanım iç içe bir [StaticResource biçimlendirme uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerektirir.  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>: ifadede bir `bindProp` = `value` dize olarak ayarlanabilir, ancak bu geçirilen parametrenin türüne bağlıdır. Değer için bir başvuru türü geçiyorsa, bu kullanım iç içe geçmiş [Statik Kaynak Biçimlendirme Uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerektirir.  
   
-- <xref:System.Windows.Data.Binding.ElementName%2A>: birbirini dışlamalı <xref:System.Windows.Data.Binding.RelativeSource%2A> ve <xref:System.Windows.Data.Binding.Source%2A>; Bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. Bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md).  
+- <xref:System.Windows.Data.Binding.ElementName%2A>: karşılıklı münhasır <xref:System.Windows.Data.Binding.RelativeSource%2A> <xref:System.Windows.Data.Binding.Source%2A>karşı ve ; bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. [Bkz. Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md).  
   
-- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: ifadede bir `bindProp`=`value` dize olarak ayarlanabilir, ancak bu, geçirilmekte olan değerin türüne bağlıdır. Bir başvuru türü geçirilirse, iç içe bir [StaticResource biçimlendirme uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerekir.  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: ifadede bir `bindProp` = `value` dize olarak ayarlanabilir, ancak bu geçirilen değerin türüne bağlıdır. Bir başvuru türünü geçiyorsa, iç içe geçmiş [Statik Kaynak Biçimlendirme Uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerektirir.  
   
-- <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir.  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`.  
   
-- <xref:System.Windows.Data.Binding.Mode%2A>: *değer* <xref:System.Windows.Data.BindingMode> Numaralandırmadaki sabit bir addır. Örneğin, `{Binding Mode=OneWay}`.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *değer* numaralandırmadan <xref:System.Windows.Data.BindingMode> sabit bir addır. Örneğin, `{Binding Mode=OneWay}`.  
   
-- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir.  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`.  
   
-- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir.  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`.  
   
-- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir.  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`.  
   
-- <xref:System.Windows.Data.Binding.Path%2A>: bir veri nesnesi veya genel nesne modeli için bir yolu tanımlayan bir dize. Biçim, bu konuda yeterince açıklanamaz bir nesne modelinde geçiş için birkaç farklı kural sağlar. Bkz. [PROPERTYPATH XAML sözdizimi](propertypath-xaml-syntax.md).  
+- <xref:System.Windows.Data.Binding.Path%2A>: bir veri nesnesine veya genel nesne modeline giden yolu açıklayan bir dize. Biçim, bu konuda yeterince açıklanamayan bir nesne modelinde geçiş için birkaç farklı kural sağlar. Bkz. [PropertyPath XAML Sözdizimi.](propertypath-xaml-syntax.md)  
   
-- <xref:System.Windows.Data.Binding.RelativeSource%2A>: <xref:System.Windows.Data.Binding.ElementName%2A> ve <xref:System.Windows.Data.Binding.Source%2A>birlikte birbirini dışlamalı; Bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. Bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md). Değeri belirtmek için iç içe bir [RelativeSource MarkupExtension](relativesource-markupextension.md) kullanımı gerektirir.  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>: karşılıklı münhasır <xref:System.Windows.Data.Binding.ElementName%2A> karşı <xref:System.Windows.Data.Binding.Source%2A>ve ; bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. [Bkz. Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md). Değeri belirtmek için iç içe bir [RelativeSource MarkupExtension](relativesource-markupextension.md) kullanımı gerektirir.  
   
-- <xref:System.Windows.Data.Binding.Source%2A>: birbirini dışlamalı <xref:System.Windows.Data.Binding.RelativeSource%2A> ve <xref:System.Windows.Data.Binding.ElementName%2A>; Bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. Bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md). Yalnızca bir anahtarlı kaynak sözlüğünden bir nesne veri kaynağına başvuran bir [StaticResource Işaretleme uzantısı](staticresource-markup-extension.md) olan iç içe geçmiş uzantı kullanımı gerektirir.  
+- <xref:System.Windows.Data.Binding.Source%2A>: karşılıklı münhasır <xref:System.Windows.Data.Binding.RelativeSource%2A> <xref:System.Windows.Data.Binding.ElementName%2A>karşı ve ; bu bağlama özelliklerinin her biri belirli bir bağlama metodolojisini temsil eder. [Bkz. Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md). Anahtarlı kaynak sözlüğünden bir nesne veri kaynağına başvuran bir statik kaynak [biçimlendirme uzantısı](staticresource-markup-extension.md) olan iç içe geçmiş bir uzantı kullanımı gerektirir.  
   
-- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: bağlanan veriler için bir dize biçimi kuralını açıklayan bir dize. Bu görece gelişmiş bir bağlama kavramıdır; <xref:System.Windows.Data.BindingBase.StringFormat%2A>için başvuru sayfasına bakın.  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: bağlı veriler için dize biçimi kuralını açıklayan bir dize. Bu nispeten gelişmiş bir bağlama kavramıdır; için <xref:System.Windows.Data.BindingBase.StringFormat%2A>başvuru sayfasına bakın.  
   
-- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: ifadede bir `bindProp`=`value` dize olarak ayarlanabilir, ancak bu, geçirilen parametrenin türüne bağlıdır. Değer için bir başvuru türü geçirilirse, iç içe bir [StaticResource biçimlendirme uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerektirir.  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: ifadede bir `bindProp` = `value` dize olarak ayarlanabilir, ancak bu geçirilen parametrenin türüne bağlıdır. Değer için bir başvuru türünü geçmek, iç içe geçmiş [Statik Kaynak Biçimlendirme Uzantısı](staticresource-markup-extension.md)gibi bir nesne başvurusu gerektirir.  
   
-- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *değer* <xref:System.Windows.Data.UpdateSourceTrigger> Numaralandırmadaki sabit bir addır. Örneğin, `{Binding UpdateSourceTrigger=LostFocus}`. Belirli denetimler, bu bağlama özelliği için muhtemelen farklı varsayılan değerlere sahip olabilir. Bkz. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *değer* numaralandırmadan <xref:System.Windows.Data.UpdateSourceTrigger> sabit bir addır. Örneğin, `{Binding UpdateSourceTrigger=LostFocus}`. Belirli denetimler, bu bağlama özelliği için farklı varsayılan değerlere sahip olabilir. Bkz. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
-- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir. Bkz. açıklamalar.  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`. Bkz. Açıklamalar.  
   
-- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Boolean, `true` ya da `false`olabilir. Varsayılan, `false` değeridir. Bkz. açıklamalar.  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: Boolean, ya `true` `false`olabilir ya . Varsayılan değer: `false`. Bkz. Açıklamalar.  
   
-- <xref:System.Windows.Data.Binding.XPath%2A>: bir XML veri kaynağının XMLDOM 'ına bir yol tanımlayan bir dize. Bkz. [XMLDataProvider ve XPath sorgularını kullanarak XML verilerine bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+- <xref:System.Windows.Data.Binding.XPath%2A>: Bir XML veri kaynağının XMLDOM içine bir yol açıklayan bir dize. [Bir XMLDataProvider ve XPath Sorguları kullanarak XML Veri Bind](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)bakın.  
   
- Aşağıda, `Binding` işaretleme uzantısı/`{Binding}` ifade formu kullanılarak ayarlanamaz <xref:System.Windows.Data.Binding> özellikleri verilmiştir.  
+ Aşağıda <xref:System.Windows.Data.Binding> `Binding` biçimlendirme uzantısı/`{Binding}` ifade formu kullanılarak ayarlanamayan özellikler verilmiştir.  
   
-- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: Bu özellik, geri çağırma uygulamasına bir başvuru bekliyor. Olay işleyicileri dışındaki geri çağırmaları/yöntemlere XAML sözdiziminde başvurulamaz.  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: bu özellik, geri arama uygulamasına bir başvuru bekliyor. XAML sözdiziminde olay işleyicileri dışındaki geri arama/yöntemler başvurulamaz.  
   
-- <xref:System.Windows.Data.Binding.ValidationRules%2A>: özellik, <xref:System.Windows.Controls.ValidationRule> nesnelerin genel bir koleksiyonunu alır. Bu, bir <xref:System.Windows.Data.Binding> nesne öğesinde bir özellik öğesi olarak ifade edilebilir, ancak bir `Binding` ifadesinde kullanım için uygun bir öznitelik ayrıştırma teknii yok. <xref:System.Windows.Data.Binding.ValidationRules%2A>için başvuru konusuna bakın.  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>: özellik <xref:System.Windows.Controls.ValidationRule> nesnelerin genel bir koleksiyon alır. Bu, bir <xref:System.Windows.Data.Binding> nesne öğesinde özellik öğesi olarak ifade edilebilir, ancak bir `Binding` ifadede kullanım için hazır kullanılabilir öznitelik ayrıştırma tekniği yoktur. Bkz. başvuru <xref:System.Windows.Data.Binding.ValidationRules%2A>konusu.  
   
 - <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> Bağımlılık özelliği önceliği açısından, bir `Binding` ifadesi yerel olarak ayarlanan değere eşdeğerdir. Daha önce `Binding` ifadeye sahip olan bir özellik için yerel bir değer ayarlarsanız, `Binding` tamamen kaldırılır. Ayrıntılar için bkz. [bağımlılık özelliği değer önceliği](dependency-property-value-precedence.md).  
+> Bağımlılık özelliği önceliği açısından, bir `Binding` ifade yerel olarak ayarlanmış bir değere eşdeğerdir. Daha önce bir ifadesi olan bir özellik `Binding` için yerel `Binding` bir değer ayarlarsanız, bu değer tamamen kaldırılır. Ayrıntılar için Bkz. [Bağımlılık Özelliği Değeri Önceliği.](dependency-property-value-precedence.md)  
   
- Temel düzeyde veri bağlamayı açıklama bu konuda ele alınmıyor. Bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md).  
+ Temel düzeyde veri bağlama açıklayan bu konuda ele alınmaz. [Bkz. Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
-> <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uzantısı söz dizimini desteklemez. Bunun yerine özellik öğelerini kullanmanız gerekir. <xref:System.Windows.Data.MultiBinding> ve <xref:System.Windows.Data.PriorityBinding>için başvuru konularına bakın.  
+> <xref:System.Windows.Data.MultiBinding>ve <xref:System.Windows.Data.PriorityBinding> bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uzantı sözdizimini desteklemez. Bunun yerine özellik öğelerini kullanırsınız. Bkz. <xref:System.Windows.Data.MultiBinding> başvuru <xref:System.Windows.Data.PriorityBinding>konuları ve .  
   
- XAML için Boole değerleri büyük/küçük harfe duyarlıdır. Örneğin, `{Binding NotifyOnValidationError=true}` ya da `{Binding NotifyOnValidationError=True}`belirtebilirsiniz.  
+ XAML için Boolean değerleri büyük/küçük harf duyarsızdır. Örneğin ya belirtebilirsiniz `{Binding NotifyOnValidationError=true}` `{Binding NotifyOnValidationError=True}`ya da .  
   
- Veri doğrulamayı içeren bağlamalar genellikle `{Binding ...}` ifadesi yerine açık bir `Binding` öğesi tarafından belirtilir ve bir ifadede <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> veya <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> ayarı çok seyrek olur. Bunun nedeni, yardımcı özelliğin <xref:System.Windows.Data.Binding.ValidationRules%2A> ifade formunda kolayca ayarlanamamasıdır. Daha fazla bilgi için bkz. [bağlama doğrulamasını uygulama](../data/how-to-implement-binding-validation.md).  
+ Veri doğrulaması içeren bağlamalar genellikle ifade `Binding` olarak değil, `{Binding ...}` açık bir <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> öğe <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> tarafından belirtilir ve ayar veya bir ifade de nadirdir. Bunun nedeni, eşlik <xref:System.Windows.Data.Binding.ValidationRules%2A> eden özelliğin ifade biçiminde kolayca ayarlanamamasıdır. Daha fazla bilgi için [bkz.](../data/how-to-implement-binding-validation.md)  
   
- `Binding`, biçimlendirme uzantısıdır. Biçimlendirme uzantıları genellikle öznitelik değerlerinin sabit değerler veya işleyici adlarından farklı olması için bir gereksinim olduğunda uygulanır ve gereksinim, belirli tür veya özelliklere sahip tür dönüştürücülerden daha geneldir. XAML 'deki tüm biçimlendirme uzantıları, `{` ve `}` karakterlerini öznitelik sözdiziminde kullanır. Bu, XAML işlemcisinin bir biçimlendirme uzantısının dize içeriğini işlemesi gerektiğini tanıdığı bir kuraldır. Daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `Binding`biçimlendirme uzantısıdır. Biçimlendirme uzantıları genellikle öznitelik değerlerinden kaçma gereksinimi gerçek değerler veya işleyici adlarından başka bir gereksinim olduğunda uygulanır ve gereksinim, belirli türlerde veya özelliklere atfedilen tür dönüştürücülerinden daha geneldir. XAML'deki tüm biçimlendirme `{` uzantıları, bir XAML işlemcisinin bir biçimlendirme uzantısının dize içeriğini işlemesi gerektiğini kabul ettiği kural olan öznitelik sözdiziminde karakterleri ve `}` karakterleri kullanır. Daha fazla bilgi için [bkz: Biçimlendirme Uzantıları ve WPF XAML.](markup-extensions-and-wpf-xaml.md)  
   
- `Binding`, WPF 'nin XAML uygulamasına yönelik uzantı işlevlerini uygulayan <xref:System.Windows.Data.Binding> sınıfının Ayrıca XAML ile ilgili olmayan çeşitli diğer yöntemleri ve özellikleri de uyguladığı bir tipik biçimlendirme uzantısıdır. Diğer üyelerin, XAML biçimlendirme uzantısı olarak çalışmaya ek olarak birçok veri bağlama senaryosunu ele alan daha çok yönlü ve kendi kendine içerilen bir sınıf <xref:System.Windows.Data.Binding> yapması amaçlanmıştır.  
+ `Binding`WPF'nin XAML uygulaması <xref:System.Windows.Data.Binding> için uzantı işlevini uygulayan sınıfın XAML ile ilgili olmayan birkaç diğer yöntem ve özelliği de uyguladığı atipik bir biçimlendirme uzantısıdır. Diğer üyeler, XAML biçimlendirme uzantısı olarak işlev ine ek olarak birçok veri bağlama senaryosunu ele alabilecek daha çok yönlü ve bağımsız bir sınıf yapmak <xref:System.Windows.Data.Binding> için tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Data.Binding>
-- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)

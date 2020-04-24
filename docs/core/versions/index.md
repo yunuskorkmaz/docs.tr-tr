@@ -2,12 +2,12 @@
 title: .NET Çekirdek Çalışma Süresi ve SDK nasıl sürülür?
 description: Bu makalede, .NET Core SDK ve Runtime'ın nasıl sürülme şekli (anlamsal sürüme benzer) öğretilir.
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777325"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644390"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core'un nasıl sürümlendirilene genel bakış
 
@@ -107,7 +107,7 @@ Her platformdaki uygulamalar genellikle platform sürümükapsamında güncellen
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hedef çerçeveler](../../standard/frameworks.md)
-- [.NET Core dağıtımı paketleme](../build/distribution-packaging.md)
+- [.NET Core dağıtımı paketleme](../distribution-packaging.md)
 - [.NET Çekirdek Destek Yaşam Döngüsü Bilgi Formu](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Sürüm Bağlama](https://github.com/dotnet/designs/issues/3)
 - [.NET Core için Docker görüntüleri](https://hub.docker.com/_/microsoft-dotnet-core/)

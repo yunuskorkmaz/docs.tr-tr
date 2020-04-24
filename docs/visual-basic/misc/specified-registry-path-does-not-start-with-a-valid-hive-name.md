@@ -1,16 +1,16 @@
 ---
-title: Belirtilen kayıt defteri yolu bir geçerli hive adı ile başlamıyor
+title: Belirtilen kayıt defteri yolu geçerli bir kovan adı ile başlamaz
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-ms.openlocfilehash: 9686ade2043e48bebceb53fadc647b9229aeb660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fcd7fe76a76eec2f31f5cada92f6ef6dcd2a3c1
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660975"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646087"
 ---
-# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>Belirtilen kayıt defteri yolu bir geçerli hive adı ile başlamıyor
-Belirtilen kayıt defteri yolu, geçerli yığın adıyla başlamaz. Geçerli yığın adlarıdır:  
+# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>Belirtilen kayıt defteri yolu geçerli bir kovan adı ile başlamaz
+Belirtilen kayıt defteri yolu geçerli bir kovan adı ile başlamaz. Geçerli kovan adları şunlardır:  
   
 - `HKEY_CLASSES_ROOT`  
   
@@ -28,10 +28,10 @@ Belirtilen kayıt defteri yolu, geçerli yığın adıyla başlamaz. Geçerli y�
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Geçerli yığın adı sağlayarak doğrulayın.  
+- Geçerli bir kovan adı sağladığınızı doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dizeleri Düzenleme](../../standard/base-types/manipulating-strings.md)
-- [Okuma ve yazma (Visual Basic) kayıt defteri](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Dizeleri Düzenleme](../../standard/base-types/best-practices-strings.md)
+- [Kayıt Defterini Okuma ve Yazma (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
 - [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

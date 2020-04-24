@@ -4,16 +4,16 @@ description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmak için 
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a20cdda5cbd366d04e7ee9e8df3d1b15d10c1f4a
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: f99b446bbd38b2b814c13afa13ab34cd5c9aa086
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391162"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645517"
 ---
 # <a name="introduction-to-net-core"></a>NET Core’a giriş
 
-[.NET Core](about.md) [açık kaynak kodlu,](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)genel amaçlı bir geliştirme platformudur. Birden çok programlama dilini kullanarak x64, x86, ARM32 ve ARM64 işlemcileri için Windows, macOS ve Linux için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API'ler [bulut,](/aspnet/core/) [IoT,](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) [istemci UI](/dotnet/desktop-wpf/overview/index)ve [makine öğrenimi](/dotnet/machine-learning/)için sağlanmaktadır.
+[.NET Core](about.md) [açık kaynak kodlu,](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)genel amaçlı bir geliştirme platformudur. Birden çok programlama dilini kullanarak x64, x86, ARM32 ve ARM64 işlemcileri için Windows, macOS ve Linux için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API'ler [bulut,](/aspnet/core/) [IoT,](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) [istemci UI](../desktop-wpf/overview/index.md)ve [makine öğrenimi](/dotnet/machine-learning/)için sağlanmaktadır.
 
 .NET Core'u makinenizde denemek için [.NET Core SDK'yı indirin.](https://dotnet.microsoft.com/download) En son sürümü [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 

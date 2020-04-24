@@ -4,12 +4,12 @@ description: .NET Core SDK'yı ve çalışma süresini Debian 9'a yüklemek içi
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: cfe28d04edfac97938612537986498636c141be0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 2e45698d6b87499a54a25b6779ec1a767a2ece6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134299"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645374"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Debian 9 Paket Yöneticisi - Install .NET Core
 
@@ -19,12 +19,12 @@ Bu makalede, Debian 9'a .NET Core yüklemek için paket yöneticisinin nasıl ku
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft depo anahtarı ve özet akışı ekleme
 
 .NET'i yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydedin.
-- Ürün deposunu kaydedin.
+- Microsoft paketi imzalama anahtarını güvenilen anahtarlar listesine ekleyin.
+- Depoyu paket yöneticisine ekleyin.
 - Gerekli bağımlılıkları yükleyin.
 
 Bu işlemin makine başına tek bir kez yapılması yeterlidir.

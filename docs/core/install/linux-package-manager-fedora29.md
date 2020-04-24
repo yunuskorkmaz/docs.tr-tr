@@ -4,12 +4,12 @@ description: .NET Core SDK'yı ve çalışma süresini Fedora 29'a yüklemek iç
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: bf75231ddf1cbf96668e949e20b24a0c0f6b4154
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: d1cbe38f4f104a8e178d8bcfd1fa1bd6d7645261
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134280"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645305"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 Paket Yöneticisi - Install .NET Core
 
@@ -19,12 +19,12 @@ Bu makalede, Fedora 29'a .NET Core yüklemek için bir paket yöneticisinin nas�
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft anahtarını ve akışını kaydetme
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft depo anahtarı ve özet akışı ekleme
 
 .NET'i yüklemeden önce şunları yapmanız gerekir:
 
-- Microsoft anahtarını kaydedin.
-- Ürün deposunu kaydedin.
+- Microsoft paketi imzalama anahtarını güvenilen anahtarlar listesine ekleyin.
+- Depoyu paket yöneticisine ekleyin.
 - Gerekli bağımlılıkları yükleyin.
 
 Bu işlemin makine başına tek bir kez yapılması yeterlidir.

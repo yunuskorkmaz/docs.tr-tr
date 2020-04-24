@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 2917c9d15a6195c2d67781d6b2cfb0a5f1c136d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8074562ddb865b482cf123743796ac68bb529f85
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187165"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646238"
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
-Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakların sözdizimi yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kod kullanılarak nasıl erişilebildiği veya oluşturulabileceği üzerinde yoğunlaşmışolur. Sözdizimi açısından genel kaynak kullanımı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kaynakları hakkında daha fazla bilgi için [Bkz. XAML Kaynakları.](xaml-resources.md)  
+Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakların sözdizimi yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kod kullanılarak nasıl erişilebildiği veya oluşturulabileceği üzerinde yoğunlaşmışolur. Sözdizimi açısından genel kaynak kullanımı [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve kaynakları hakkında daha fazla bilgi için [Bkz. XAML Kaynakları.](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
 
 <a name="accessing"></a>
 ## <a name="accessing-resources-from-code"></a>Koddan Kaynaklara Erişim  
@@ -46,5 +46,5 @@ Bu genel bakış, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XAML Kaynakları](xaml-resources.md)
+- [XAML Kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79154120"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645352"
 ---
 # <a name="generatepublisherevidence-element"></a>\<PublisherEvidence> Öğesi'ni oluşturur
 Çalışma zamanının kod erişim <xref:System.Security.Policy.Publisher> güvenliği (CAS) için kanıt oluşturup oluşturmadığını belirtir.  
@@ -55,7 +55,7 @@ ms.locfileid: "79154120"
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> .NET Framework 4 ve sonraki durumlarda, bu öğenin montaj yük süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için, [Güvenlik Değişiklikleri'ndeki](../../../security/security-changes.md)"Güvenlik İlkesi Basitleştirme" bölümüne bakın.  
+> .NET Framework 4 ve sonraki durumlarda, bu öğenin montaj yük süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için, [Güvenlik Değişiklikleri'ndeki](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)"Güvenlik İlkesi Basitleştirme" bölümüne bakın.  
   
  Ortak dil çalışma süresi (CLR), derleme için kanıt oluşturmak <xref:System.Security.Policy.Publisher> için yük zamanında Authenticode imzasını doğrulamaya çalışır. Ancak, varsayılan olarak, çoğu uygulamakanıt gerekmez. <xref:System.Security.Policy.Publisher> Standart CAS <xref:System.Security.Policy.PublisherMembershipCondition>ilkesi, .. Uygulamanız özel CAS ilkesine sahip bir bilgisayarda yürütülmedikçe veya kısmi güven ortamında taleplerini <xref:System.Security.Permissions.PublisherIdentityPermission> karşılamayı amaçlamıyorsa, yayımcı imzasını doğrulamayla ilişkili gereksiz başlangıç maliyetinden kaçınmalısınız. (Kimlik izinleri talepleri her zaman tam güven ortamında başarılı olur.)  
   
@@ -79,4 +79,4 @@ ms.locfileid: "79154120"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma Dosya Şema](../index.md)

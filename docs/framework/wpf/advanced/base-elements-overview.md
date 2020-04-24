@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141634"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644048"
 ---
 # <a name="base-elements-overview"></a>Temel Öğelere Genel Bakış
 Yüksek orandaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıflar, SDK belgelerinde temel öğe sınıfları olarak yaygın olarak adlandırılan dört sınıftan türetilir. Bu sınıflar <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkContentElement>, ve . Sınıf <xref:System.Windows.DependencyObject> da ilişkilidir, çünkü her ikisinin ve <xref:System.Windows.UIElement><xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Yüksek orandaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
   
 - Stil ve film panoları için destek. Daha fazla bilgi <xref:System.Windows.Style> için bkz ve [Storyboards Genel Bakış.](../graphics-multimedia/storyboards-overview.md)  
   
-- Veri bağlama desteği. Daha fazla bilgi için bkz: [Veri Bağlama Genel Bakışı.](../data/data-binding-overview.md)  
+- Veri bağlama desteği. Daha fazla bilgi için bkz: [Veri Bağlama Genel Bakışı.](../../../desktop-wpf/data/data-binding-overview.md)  
   
 - Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [Bkz. XAML Kaynakları.](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
   
@@ -67,7 +67,7 @@ Yüksek orandaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
   
 - Stil ve film panoları için destek. Daha fazla bilgi <xref:System.Windows.Style> için bkz ve [Animasyona Genel Bakış.](../graphics-multimedia/animation-overview.md)  
   
-- Veri bağlama desteği. Daha fazla bilgi için bkz: [Veri Bağlama Genel Bakışı.](../data/data-binding-overview.md)  
+- Veri bağlama desteği. Daha fazla bilgi için bkz: [Veri Bağlama Genel Bakışı.](../../../desktop-wpf/data/data-binding-overview.md)  
   
 - Dinamik kaynak başvuruları için destek. Daha fazla bilgi için [Bkz. XAML Kaynakları.](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
   

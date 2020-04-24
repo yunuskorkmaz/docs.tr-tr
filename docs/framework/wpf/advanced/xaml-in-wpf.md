@@ -7,28 +7,28 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741886"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646158"
 ---
 # <a name="xaml-in-wpf"></a>WPF'de XAML
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], bildirime dayalı uygulama programlaması için bir biçimlendirme dilidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] XAML işlemcisi uygulamasını uygular ve XAML dil desteği sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] türler, bir XAML temsili için gereken tür yedeklemesini sağlayabilecekleri şekilde uygulanır. Genel olarak, XAML biçimlendirmesinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı arabiriminizi büyük çoğunluğunu oluşturabilirsiniz.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]bildirimsel uygulama programlama için bir biçimlendirme dilidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Bir XAML işlemci uygulaması uygular ve XAML dil desteği sağlar. Türler, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML gösterimi için gerekli tür desteğini sağlayacak şekilde uygulanır. Genel olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML biçimlendirmesinde uygulama Kullanıcı Larınızın çoğunluğunu oluşturabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
-[XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)  
+[XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)  
 [Arka Plan Kod ve WPF İçindeki XAML](code-behind-and-xaml-in-wpf.md)  
 [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)  
-[İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)  
+[Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)  
 [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF XAML Ad Kapsamları](wpf-xaml-namescopes.md)  
 [Satır İçi Stil ve Şablonları](inline-styles-and-templates.md)  
-[XAML 'de boşluk Işleme](../../../desktop-wpf/xaml-services/white-space-processing.md)  
+[XAML'de Beyaz Alan İşleme](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverters ve XAML](typeconverters-and-xaml.md)  
 [XML Karakter Varlıkları ve XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
 [XAML Ad Alanı (x:) Dil Özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md)  

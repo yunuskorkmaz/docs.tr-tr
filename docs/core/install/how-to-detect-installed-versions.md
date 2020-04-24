@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399037"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645341"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core'un zaten yüklü olduğunu kontrol etme
 
@@ -163,6 +163,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>Klasörleri yükle denetimini denetleme
+
+.NET Core'un yüklü olması ancak işletim sisteminiz `PATH` veya kullanıcı profiliniz için değişkene eklenmemiş olması mümkündür. Önceki bölümlerdeki komutları çalıştırmak çalışmayabilir. Alternatif olarak, .NET Core yükleme klasörlerinin var olup olmadığını denetleyebilirsiniz.
+
+.NET Core'u yükleyiciden veya komut dosyasından yüklediğinizde, standart bir klasöre yüklenir. .NET Core'u yüklemek için kullandığınız yükleyici veya komut dosyası çoğu zaman farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi seçerseniz, klasör yolunun başlangıcını ayarlayın.
+
+::: zone pivot="os-windows"
+
+- **dotnet çalıştırılabilir**\
+_C:\\program\\dosyaları\\dotnet dotnet.exe_
+
+- **.NET SDK**\
+_C:\\program\\dosyaları\\dotnet sdk\\{sürüm}\\_
+
+- **.NET Çalışma Süresi**\
+_C:\\program\\dosyaları\\dotnet paylaşılan\\{runtime-type}\\{version}\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **dotnet çalıştırılabilir**\
+_/home/user/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/home/user/share/dotnet/sdk/{version}/_
+
+- **.NET Çalışma Süresi**\
+_/home/user/share/dotnet/shared/{runtime-type}/{version}/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **dotnet çalıştırılabilir**\
+_/usr/local/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/usr/local/share/dotnet/sdk/{version}/_
+
+- **.NET Çalışma Süresi**\
+_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 

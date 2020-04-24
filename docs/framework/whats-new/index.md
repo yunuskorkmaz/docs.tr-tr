@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249701"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644224"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework'deki yenilikler
 
@@ -102,7 +102,7 @@ Sistem durumu uç noktaları, hizmetleri sağlık durumuna göre yönetmek için
 
 Sistem durumu bitiş noktasını ortaya çıkarmanın ve WCF hizmet sistem durumu bilgilerini yayımlamanın iki yolu vardır:
 
-- Kod aracılığıyla. Örnek:
+- Kod aracılığıyla. Örneğin:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ Sistem durumu bitiş noktasını ortaya çıkarmanın ve WCF hizmet sistem durum
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Yapılandırma dosyası kullanarak. Örnek:
+- Yapılandırma dosyası kullanarak. Örneğin:
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ Sistem durumu bitiş noktasını ortaya çıkarmanın ve WCF hizmet sistem durum
   </behaviors>
   ```
 
-`OnServiceFailure`Bir hizmetin sistem durumu, , , , `OnDispatcherFailure` `OnListenerFailure` `OnThrottlePercentExceeded`gibi sorgu parametreleri kullanılarak sorgulanabilir ve her sorgu parametresi için bir HTTP yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak 503 HTTP yanıt kodu kullanılır. Örnek:
+`OnServiceFailure`Bir hizmetin sistem durumu, , , , `OnDispatcherFailure` `OnListenerFailure` `OnThrottlePercentExceeded`gibi sorgu parametreleri kullanılarak sorgulanabilir ve her sorgu parametresi için bir HTTP yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak 503 HTTP yanıt kodu kullanılır. Örneğin:
 
 - OnServiceFailure:`https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -201,7 +201,7 @@ Karışık Mod yüksek DPI ölçekleme desteği etkinleştirmek için, aşağıd
 
 - [Taban sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ Oluşturma](#net472)
+- [Ağ](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Ve <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> yöntemler, belirli <xref:System.Security.Cryptography.DSA> bir <xref:System.Security.Cryptography.RSA> anahtar boyutuna sahip yeni veya anahtarlar oluşturmanıza izin sağlar. Örnek:
+Ve <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> yöntemler, belirli <xref:System.Security.Cryptography.DSA> bir <xref:System.Security.Cryptography.RSA> anahtar boyutuna sahip yeni veya anahtarlar oluşturmanıza izin sağlar. Örneğin:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -434,7 +434,7 @@ Web config dosyasını değiştirerek SameSite for <xref:System.Web.Security.For
 
 <a name="net472" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **HttpClientHandler özelliklerinin uygulanması**
 
@@ -467,7 +467,7 @@ NET Framework 4.7.2, her zaman şifrelenmiş enklav tabanlı destekler ekler. Al
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, belirli bir Attestation Protokolü yürütmek için gerekli bilgileri almak için SQL Server tarafından kullanılan attestation parametrelerini sağlar.
 
-Uygulama yapılandırma dosyası daha sonra enklav <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> sağlayıcısı için işlevselliği sağlayan soyut sınıfın somut bir uygulama belirtir. Örnek:
+Uygulama yapılandırma dosyası daha sonra enklav <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> sağlayıcısı için işlevselliği sağlayan soyut sınıfın somut bir uygulama belirtir. Örneğin:
 
 ```xml
 <configuration>
@@ -589,7 +589,7 @@ Windows Forms uygulaması için, uygulama bildirimi yerine uygulama yapılandır
 
 - [Taban sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ Oluşturma](#net471)
+- [Ağ](#net471)
 - [ASP.NET](#asp-net471)
 
 Buna ek olarak, .NET Framework 4.7.1'deki önemli bir odak noktası, bir uygulamanın Yardımcı Teknoloji kullanıcıları için uygun bir deneyim sağlamasına olanak tanıyan gelişmiş erişilebilirliktir. .NET Framework 4.7.1'deki erişilebilirlik geliştirmeleri hakkında bilgi için [.NET Framework'de erişilebilirlikte yenilikler](whats-new-in-accessibility.md)egörebilirsiniz.
@@ -630,7 +630,7 @@ Sınıf, <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=na
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 **Message.HashAlgorithm için SHA-2 desteği**
 
@@ -650,7 +650,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir ardışık ardışık işle
 
 **ASP.NET formlar kimlik doğrulama kimlik bilgileri için SHA-2 karma seçenekleri**
 
-.NET Framework 4.7 ve önceki sürümlerde, ASP.NET geliştiricilerin MD5 veya SHA1 kullanarak yapılandırma dosyalarında hashed parolalarla kullanıcı kimlik bilgilerini depolamasına izin verdi. .NET Framework 4.7.1 ile başlayan ASP.NET, SHA256, SHA384 ve SHA512 gibi yeni güvenli SHA-2 karma seçeneklerini de destekler. SHA1 varsayılan olarak kalır ve varsayılan olmayan karma algoritması web yapılandırma dosyasında tanımlanabilir. Örnek:
+.NET Framework 4.7 ve önceki sürümlerde, ASP.NET geliştiricilerin MD5 veya SHA1 kullanarak yapılandırma dosyalarında hashed parolalarla kullanıcı kimlik bilgilerini depolamasına izin verdi. .NET Framework 4.7.1 ile başlayan ASP.NET, SHA256, SHA384 ve SHA512 gibi yeni güvenli SHA-2 karma seçeneklerini de destekler. SHA1 varsayılan olarak kalır ve varsayılan olmayan karma algoritması web yapılandırma dosyasında tanımlanabilir. Örneğin:
 
 ```xml
 <system.web>
@@ -671,7 +671,7 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir ardışık ardışık işle
 .NET Framework 4.7 aşağıdaki alanlarda yeni özellikler içerir:
 
 - [Taban sınıflar](#Core47)
-- [Ağ Oluşturma](#net47)
+- [Ağ](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -695,11 +695,11 @@ ASP.NET, 23 olay içeren önceden tanımlanmış bir ardışık ardışık işle
 
 **DataContractJsonSerializer tarafından kontrol karakterleri için daha iyi destek**
 
-.NET Framework 4.7'de, kontrol karakterlerini <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ECMAScript 6 standardına uygun olarak serihale sağlar. Bu davranış, .NET Framework 4.7'yi hedefleyen uygulamalar için varsayılan olarak etkinleştirilir ve .NET Framework 4.7 altında çalışan ancak .NET Framework'ün önceki bir sürümünü hedefleyen uygulamalar için bir tercih özelliğidir. Daha fazla bilgi için bkz: [.NET Framework 4.7'deki Değişiklikleri Yeniden Hedefleme.](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+.NET Framework 4.7'de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sınıf, kontrol karakterlerini ECMAScript 6 standardına uygun olarak serihale sağlar. Bu davranış, .NET Framework 4.7'yi hedefleyen uygulamalar için varsayılan olarak etkinleştirilir ve .NET Framework 4.7 altında çalışan ancak .NET Framework'ün önceki bir sürümünü hedefleyen uygulamalar için bir tercih özelliğidir. Daha fazla bilgi için [Uygulama uyumluluk](../migration-guide/application-compatibility.md) bölümüne bakın.
 
 <a name="net47" />
 
-#### <a name="networking"></a>Ağ Oluşturma
+#### <a name="networking"></a>Ağ
 
 .NET Framework 4.7 ağla ilgili aşağıdaki özelliği ekler:
 
@@ -768,11 +768,11 @@ Yüksek DPI desteği, uygulama yapılandırma dosyanızdaki [ \<System.Windows.F
 
 **Windows WM_POINTER iletilerine dayalı dokunma/kalem yığını desteği**
 
-Artık Windows Mürekkep Hizmetleri Platformu (WISP) yerine [WM_POINTER iletilerine](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) dayalı bir dokunma/kalem yığını kullanma seçeneğiniz vardır. Bu, .NET Framework'de yer alan bir tercih özelliğidir. Daha fazla bilgi için bkz: [.NET Framework 4.7'deki Değişiklikleri Yeniden Hedefleme.](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+Artık Windows Mürekkep Hizmetleri Platformu (WISP) yerine [WM_POINTER iletilerine](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) dayalı bir dokunma/kalem yığını kullanma seçeneğiniz vardır. Bu, .NET Framework'de yer alan bir özelliktir. Daha fazla bilgi için [Uygulama uyumluluk](../migration-guide/application-compatibility.md) bölümüne bakın.
 
 **WPF yazdırma API'leri için yeni uygulama**
 
-WPF'nin sınıftaki <xref:System.Printing.PrintQueue?displayProperty=nameWithType> yazdırma API'leri, amortismana kalanmış [XPS Print API](/windows/desktop/printdocs/xps-printing)yerine Windows [Print Document Package API'yi](/windows/desktop/printdocs/tailored-app-printing-api) çağırır. Bu değişikliğin uygulama uyumluluğu üzerindeki etkisi [için](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)bkz.
+WPF'nin sınıftaki <xref:System.Printing.PrintQueue?displayProperty=nameWithType> yazdırma API'leri, amortismana kalanmış [XPS Print API](/windows/desktop/printdocs/xps-printing)yerine Windows [Print Document Package API'yi](/windows/desktop/printdocs/tailored-app-printing-api) çağırır. Bu değişikliğin uygulama uyumluluğu üzerindeki etkisi için [Uygulama uyumluluğu](../migration-guide/application-compatibility.md) bölümüne bakın.
 
 <a name="v462" />
 
@@ -965,7 +965,7 @@ End Function
 
 Windows şifreleme kitaplığı (CNG), kalıcı simetrik tuşları depolamak ve donanımda depolanan simetrik anahtarları kullanmak için destek ekledi ve .NET Framework 4.6.2 geliştiricilerin bu özelliği kullanmasını mümkün kıldı.  Anahtar adlar ve anahtar sağlayıcılar kavramı uygulamaya özgü olduğundan, bu özelliği kullanmak, tercih edilen fabrika yaklaşımı (arama `Aes.Create`gibi) yerine somut uygulama türlerinin oluşturucusu kullanılmasını gerektirir.
 
-AES ( ) ve 3DES (<xref:System.Security.Cryptography.AesCng><xref:System.Security.Cryptography.TripleDESCng>) algoritmaları için kalıcı anahtar simetrik şifreleme desteği vardır. Örnek:
+AES ( ) ve 3DES (<xref:System.Security.Cryptography.AesCng><xref:System.Security.Cryptography.TripleDESCng>) algoritmaları için kalıcı anahtar simetrik şifreleme desteği vardır. Örneğin:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1387,7 +1387,7 @@ Yönetilmeyen profil oluşturma API'si aşağıdaki gibi geliştirilmiştir:
 
 ### <a name="native-image-generator-ngen-pdbs"></a>Yerli Görüntü Jeneratörü (NGEN) PDB'leri
 
-Makineler arası olay izleme, müşterilerin Machine A'daki bir programın profilini çıkarmalarına ve Makine B'deki kaynak çizgi eşlemesiyle profil oluşturma verilerine bakmalarını sağlar. kaynaktan yerel eşleme oluşturmak için IL PDB içeren analiz makinesine makine. Dosyalar telefon uygulamaları gibi nispeten küçük olduğunda bu işlem iyi çalışabilir, ancak dosyalar masaüstü sistemlerinde çok büyük olabilir ve kopyalamak için önemli bir zaman gerektirebilir.
+Makineler arası olay izleme, müşterilerin Machine A'daki bir programın profilini çıkarmalarına ve Makine B'deki kaynak çizgi eşlemesiyle profil oluşturma verilerine bakmalarına olanak tanır. Dosyalar telefon uygulamaları gibi nispeten küçük olduğunda bu işlem iyi çalışabilir, ancak dosyalar masaüstü sistemlerinde çok büyük olabilir ve kopyalamak için önemli bir zaman gerektirebilir.
 
 Ngen PDB'leri ile NGen, IL PDB'ye bağımlı olmadan IL-to-native eşlemi içeren bir PDB oluşturabilir. Makineler arası olay izleme senaryomuzda, tek gereken Makine A'dan Makine B'ye oluşturulan yerel görüntü PDB'yi kopyalamak ve IL PDB'nin kaynaktan IL'e eşleğesini ve pdb'nin IL-yerel eşlemasını okumak için [Hata Ayık Arabirim Erişim API'lerini](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) kullanmaktır. Her iki eşlemenin birleştirilmesi kaynaktan yereleşleme sağlar. Yerel görüntü PDB tüm modüllerden ve yerel görüntülerden çok daha küçük olduğundan, Makine A'dan Makine B'ye kopyalama işlemi çok daha hızlıdır.
 
@@ -1709,7 +1709,7 @@ Ngen PDB'leri ile NGen, IL PDB'ye bağımlı olmadan IL-to-native eşlemi içere
 
   Varsayılan değer: `false`.
 
-- **Ağ Oluşturma**
+- **Ağ**
 
   - **Soket yeniden kullanımı**
 
@@ -1890,7 +1890,7 @@ Visual Studio 2013'te .NET Framework uygulamalarınızı hata ayıklarken ki gel
 
 - 64 bit uygulamalar için edit ve devam et. Visual Studio 2013, masaüstü, Windows Mağazası ve Windows Phone için 64 bit yönetilen uygulamalar için Edit ve Continue özelliğini destekler. Varolan sınırlamalar hem 32 bit hem de 64 bit uygulamalar için geçerli liğini korur [(Desteklenen Kod Değişiklikleri (C#)](/visualstudio/debugger/supported-code-changes-csharp) makalesinin son bölümüne bakın).
 
-- Async-aware hata ayıklama. Visual Studio 2013'te eşzamanlı uygulamaları hata ayıklamayı kolaylaştırmak için çağrı yığını, toplayıcılar tarafından sağlanan altyapı kodunu gizleyerek eşzamanlı programlamayı destekler ve mantıksal üst çerçevelerde zincirler oluşturarak mantıksal program yürütmesini daha fazla takip edebilirsiniz Açıkça. Görevler penceresi Paralel Görevler penceresinin yerini alır ve belirli bir kesme noktasıyla ilgili görevleri görüntüler ve uygulamada şu anda etkin veya zamanlanmış diğer görevleri görüntüler. Bu özelliği [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Async-aware hata ayıklama" bölümünde n için okuyabilirsiniz.
+- Async-aware hata ayıklama. Visual Studio 2013'te eşzamanlı uygulamaları hata ayıklamayı kolaylaştırmak için çağrı yığını, toplayıcılar tarafından sağlanan altyapı kodunu asynchronous programlamayı desteklemek için gizler ve mantıksal üst çerçevelerde zincirler oluşturarak mantıksal program yürütmesini daha net bir şekilde takip edebilirsiniz. Görevler penceresi Paralel Görevler penceresinin yerini alır ve belirli bir kesme noktasıyla ilgili görevleri görüntüler ve uygulamada şu anda etkin veya zamanlanmış diğer görevleri görüntüler. Bu özelliği [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Async-aware hata ayıklama" bölümünde n için okuyabilirsiniz.
 
 - Windows Runtime bileşenleri için daha iyi özel durum desteği. Windows 8.1'de, Windows Mağazası uygulamalarından kaynaklanan özel durumlar, dil sınırları nın ötesinde bile özel durumlara neden olan hata yla ilgili bilgileri korur. Bu özelliği [.NET Framework 4.5.1 duyurusunun](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)"Windows Mağazası uygulama geliştirme" bölümünden okuyabilirsiniz.
 

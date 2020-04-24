@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151747"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646022"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, her ikisi de ortak dil çalışma süresi (CLR) tarafından sağlanan ortak bir altyapı kullanılarak uygulanan rol tabanlı güvenliğin yanı sıra kod erişim güvenliği (CAS) sunar. Yönetilmeyen kod dünyasında, çoğu uygulama kullanıcının veya asıl ın izinleriyle yürütülür. Sonuç olarak, kötü amaçlı veya hata dolu yazılımlar yüksek ayrıcalıklara sahip bir kullanıcı tarafından çalıştırıldığında bilgisayar sistemleri zarar görebilir ve özel veriler tehlikeye atılabilir.  
@@ -50,7 +50,7 @@ ms.locfileid: "79151747"
  Oluşturmakta olduğunuz uygulama türüne bağlı olarak, veritabanında rol tabanlı izinleri uygulamayı da düşünmelisiniz. SQL Server'da rol tabanlı güvenlik hakkında daha fazla bilgi için [SQL Server Security'ye](./sql/sql-server-security.md)bakın.  
   
 ## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
- Derlemeler, bir .NET Framework uygulaması için dağıtım, sürüm denetimi, yeniden kullanma, etkinleştirme kapsamlandırma ve güvenlik izinlerinin temel birimini oluşturur. Derleme, birlikte çalışmak ve mantıksal bir işlevsellik birimi oluşturmak üzere oluşturulmuş türler ve kaynaklar topluluğu sağlar. CLR için, bir tür bir derleme bağlamı dışında yok. Derlemeler oluşturma ve dağıtma hakkında daha fazla bilgi için [Derlemelerle Programlama'ya](../../../standard/assembly/program.md)bakın.  
+ Derlemeler, bir .NET Framework uygulaması için dağıtım, sürüm denetimi, yeniden kullanma, etkinleştirme kapsamlandırma ve güvenlik izinlerinin temel birimini oluşturur. Derleme, birlikte çalışmak ve mantıksal bir işlevsellik birimi oluşturmak üzere oluşturulmuş türler ve kaynaklar topluluğu sağlar. CLR için, bir tür bir derleme bağlamı dışında yok. Derlemeler oluşturma ve dağıtma hakkında daha fazla bilgi için [Derlemelerle Programlama'ya](../../../standard/assembly/index.md)bakın.  
   
 ### <a name="strong-naming-assemblies"></a>Güçlü adlandırma Derlemeleri  
  Güçlü bir ad veya dijital imza, basit metin adını, sürüm numarasını ve kültür bilgilerini (sağlanmışsa) içeren derlemenin kimliğinden, ortak anahtar ve dijital imzadan oluşur. Dijital imza, ilgili özel anahtar kullanılarak bir derleme dosyasından oluşturulur. Derleme dosyası, derlemeyi oluşturan tüm dosyaların adlarını ve işlerini içeren derleme bildirimini içerir.  

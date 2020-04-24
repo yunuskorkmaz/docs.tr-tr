@@ -3,21 +3,21 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: e949b16f76f20191b84bbbbb6e8b019d913316f0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251838"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646075"
 ---
-# <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache >
-Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçleri için bir önbellek kaydeder.  
+# <a name="sessionsecuritytokencache"></a>\<oturumSecurityTokenCache>
+Bir hizmet veya güvenlik belirteç işleyicisi koleksiyonu ile oturum belirteçleri için bir önbellek kaydeder.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IdentityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<önbellekler >** ](caches.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sessionSecurityTokenCache >**  
+[**\<yapılandırma>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<önbellekleri>**](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oturumSecurityTokenCache>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,19 +39,19 @@ Bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla oturum belirteçler
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> Sınıfından türeten bir tür.|  
+|type|<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> Sınıftan türemiş bir tür.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<önbellekler >](caches.md)|Bir hizmet veya güvenlik belirteci işleyici koleksiyonu tarafından kullanılan önbellekleri kaydeder.|  
+|[\<önbellekleri>](caches.md)|Bir hizmet veya güvenlik belirteci işleyicisi koleksiyonu tarafından kullanılan önbellekleri kaydeder.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML, oturum güvenlik belirteçlerini (<xref:System.IdentityModel.Tokens.SessionSecurityToken>) tutmak için özel bir önbelleğin yapılandırmasını gösterir. Yapılandırma `ClaimsAwareWebFarm` örnekten alınır. Bu örnek hakkında daha fazla bilgi için bkz. [WIF kodu örnek dizini](../../../security/wif-code-sample-index.md).  
+ Aşağıdaki XML, oturum güvenlik belirteçlerini tutmak için özel<xref:System.IdentityModel.Tokens.SessionSecurityToken>bir önbelleğin yapılandırmasını gösterir ( ). Yapılandırma `ClaimsAwareWebFarm` örnekten alınır. Bu örnek hakkında daha fazla bilgi için [WIF Kodu Örnek Endeksi'ne](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index)bakın.  
   
 ```xml  
 <caches>  

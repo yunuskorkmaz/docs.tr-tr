@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463919"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646424"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019'da ilk WPF uygulamanızı oluşturun
 
@@ -358,7 +358,7 @@ Aşağıdaki resimde *ExpenseReportPage.xaml'a*eklenen UI öğeleri gösterilmek
 
 ## <a name="style-controls"></a>Stil denetimleri
 
-Çeşitli öğelerin görünümü genellikle bir UI aynı türdeki tüm öğeler için aynıdır. UI, görünümleri birden çok öğe arasında yeniden kullanılabilir hale getirmek için [stilleri](../controls/styling-and-templating.md) kullanır. Stillerin yeniden kullanılabilirliği XAML oluşturma ve yönetimini basitleştirmeye yardımcı olur. Bu bölüm, önceki adımlarda tanımlanan öğe başına öznitelikleri stilleri ile değiştirir.
+Çeşitli öğelerin görünümü genellikle bir UI aynı türdeki tüm öğeler için aynıdır. UI, görünümleri birden çok öğe arasında yeniden kullanılabilir hale getirmek için [stilleri](../../../desktop-wpf/fundamentals/styles-templates-overview.md) kullanır. Stillerin yeniden kullanılabilirliği XAML oluşturma ve yönetimini basitleştirmeye yardımcı olur. Bu bölüm, önceki adımlarda tanımlanan öğe başına öznitelikleri stilleri ile değiştirir.
 
 1. *Açık Uygulama.xaml* veya *App.xaml*.
 
@@ -481,7 +481,7 @@ Aşağıdaki resimde, uygulamanın `ExpenseIt` denetimleri, düzeni, stilleri, v
 Bu walkthrough windows presentation foundation (WPF) kullanarak bir ui oluşturmak için bir dizi teknik öğrendim. Artık veriye bağlı bir .NET uygulamasının yapı taşları hakkında temel bir anlayışa sahip olmalısınız. WPF mimarisi ve programlama modelleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [WPF mimarisi](../advanced/wpf-architecture.md)
-- [XAML genel bakış (WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md)
 - [Düzen](../advanced/layout.md)
 

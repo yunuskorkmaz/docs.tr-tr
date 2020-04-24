@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181627"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645990"
 ---
-# <a name="net-framework-development-guide"></a>.NET Framework Geliştirme Kılavuzu
+# <a name="net-framework-development-guide"></a>.NET Çerçeve geliştirme rehberi
+
 Bu bölümde,.NET Framework uygulamalarınızın nasıl oluşturulup, yapılandırışlanın, hata ayıklamanın, güvenli hale nasıl sağlanınve dağıtılanın açıklanmaktadır. Bu bölümde ayrıca dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı gibi teknoloji alanları hakkında bilgi de verilmektedir.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
- [Uygulama Temelleri](../standard/application-essentials.md)  
- Uygulama etki alanları ve derlemelerle programlama, öznitelikleri kullanma, temel türleri biçimlendirme ve ayrıştma, koleksiyonları kullanma, olayları ve özel durumları işleme, dosya ve veri akışlarını kullanma ve kullanma gibi temel uygulama geliştirme görevleri hakkında bilgi sağlar Generics.  
+## <a name="in-this-section"></a>Bu Bölümde
   
  [Veri ve Modelleme](./data/index.md)  
  ADO.NET, Dil Tümleşik Sorgusu (LINQ), WCF Veri Hizmetleri ve XML'i kullanarak verilere nasıl erişilir hakkında bilgi sağlar.  

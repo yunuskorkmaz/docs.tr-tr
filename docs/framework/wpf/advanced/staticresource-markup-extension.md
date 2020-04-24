@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: aa7f69e8871295006c3c5a9c7d0a70d0ecbd6d7e
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 5c0bb247bae525658d89d53f1672e57b87aba7bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559826"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646206"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource Biçimlendirme Uzantısı
-Önceden tanımlanmış bir kaynağa başvuru arayarak herhangi bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Özellik özniteliği için bir değer sağlar. Bu kaynağın arama davranışı, daha önce geçerli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfasının ve diğer uygulama kaynaklarının biçimlendirmesine göre yüklenen kaynakları ve çalışma zamanı nesnelerinde Özellik değeri olarak bu kaynak değerini oluşturacak olan yükleme zamanı aramasına benzer.  
+Zaten tanımlanmış bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynağa başvuruda bulunarak herhangi bir özellik özniteliği için bir değer sağlar. Bu kaynağın arama davranışı, daha önce geçerli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfanın biçimlendirmesinden yüklenen kaynakları ve diğer uygulama kaynaklarını arayacak ve bu kaynak değerini çalışma zamanı nesnelerindeki özellik değeri olarak oluşturacak yükleme zamanı aramaya benzer.  
   
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı  
   
@@ -38,39 +38,39 @@ ms.locfileid: "75559826"
   
 |||  
 |-|-|  
-|`key`|İstenen kaynak için anahtar. Bu anahtar başlangıçta [X:Key yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) tarafından, bir kaynak biçimlendirme içinde oluşturulduysa veya kaynak kodda oluşturulduysa <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> çağrılırken `key` parametresi olarak sağlanmışsa.|  
+|`key`|İstenen kaynağın anahtarı. Bu anahtar başlangıçta [x:Key Yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) tarafından bir kaynak biçimlendirme de `key` oluşturulduysa <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> veya kaynak kod olarak oluşturulduysa parametre olarak sağlanmışsa atanmıştır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
-> `StaticResource`, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyasında sözcüksel olarak tanımlanmış bir kaynağa ileri bir başvuru yapmayı denememelidir. Bunun denenmemesi desteklenmez, ancak böyle bir başvuru başarısız olmasa bile, bir <xref:System.Windows.ResourceDictionary> temsil eden iç karma tabloları arandığı zaman, ileri başvurunun denenmesine yönelik bir yükleme süresi performans cezası olur. En iyi sonuçları elde etmek için, kaynak sözlüklerinizin, ileri başvuruların önlenebilir şekilde ayarlanmasını sağlayabilirsiniz. İleri başvuruyu önlememeniz durumunda, bunun yerine [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md) kullanın.  
+> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] A, `StaticResource` dosya içinde sözlü olarak tanımlanan bir kaynağa ileri başvuru yapmaya çalışmamalıdır. Bunu yapmaya çalışmak desteklenmez ve böyle bir başvuru başarısız olmasa bile, ileri başvuruyu denemek, bir <xref:System.Windows.ResourceDictionary> başvuruyu temsil eden iç karma tablolar arandığında bir yükleme süresi performans cezasına neden olur. En iyi sonuçlar için, kaynak sözlüklerinizin kompozisyonunu, ileriye dönük başvuruların önlenebileceği şekilde ayarlayın. İleri ye dönük bir başvurudan kaçınamıyorsanız, bunun yerine [DynamicResource Biçimlendirme Uzantısı'nı](dynamicresource-markup-extension.md) kullanın.  
   
- Belirtilen <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>, sayfa, uygulama, kullanılabilir denetim temaları ve dış kaynaklar ya da sistem kaynakları için bir [X:Key yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) ile tanımlanmış mevcut bir kaynağa karşılık gelmelidir. Kaynak arama bu sırada oluşur. Statik ve dinamik kaynaklar için kaynak arama davranışı hakkında daha fazla bilgi için bkz. [xaml kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
+ Belirtilen, <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> sayfanızda, uygulamanızda, kullanılabilir denetim temalarında ve dış kaynaklarda veya sistem kaynaklarında bir [düzeyde x:Key Yönergesi](../../../desktop-wpf/xaml-services/xkey-directive.md) ile tanımlanan varolan bir kaynağa karşılık gelmelidir. Kaynak araması bu sırada gerçekleşir. Statik ve dinamik kaynaklar için kaynak arama davranışı hakkında daha fazla bilgi için [Bkz. XAML Kaynakları.](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
   
- Kaynak anahtarı [XamlName dilbilgisinde](../../../desktop-wpf/xaml-services/xamlname-grammar.md)tanımlanmış herhangi bir dize olabilir. Kaynak anahtarı, <xref:System.Type>gibi diğer nesne türleri de olabilir. <xref:System.Type> anahtar, denetimlerin temalar tarafından nasıl Stillenebilir ve örtülü bir stil anahtarıyla bir temel değer. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).  
+ Kaynak anahtarı [XamlName Grammar'da](../../../desktop-wpf/xaml-services/xamlname-grammar.md)tanımlanan herhangi bir dize olabilir. Kaynak anahtarı, <xref:System.Type>başka nesne türleri de olabilir. Anahtar, <xref:System.Type> denetimlerin örtülü bir stil anahtarı aracılığıyla temalar tarafından nasıl biçimlandırılabildiğini temel denedir. Daha fazla bilgi için [bkz.](../controls/control-authoring-overview.md)  
   
- Bir kaynağa başvuran alternatif bildirime dayalı yol, [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)olarak belirlenir.  
+ Bir kaynağa başvurmanın alternatif bildirimsel yolu [Dinamik Kaynak Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)olarakdır.  
   
- Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. `StaticResource` tanımlayıcı dizeden sonra belirtilen dize belirteci, temel <xref:System.Windows.StaticResourceExtension> uzantı sınıfının <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> değeri olarak atanır.  
+ Öznitelik sözdizimi, bu işaretleme uzantısı ile kullanılan en yaygın sözdizimidir. Tanımlayıcı dizesonra sağlanan `StaticResource` dize belirteci alttaki <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> <xref:System.Windows.StaticResourceExtension> uzantı sınıfının değeri olarak atanır.  
   
- `StaticResource`, nesne öğesi sözdiziminde kullanılabilir. Bu durumda, <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> özelliğinin değerini belirtmek gereklidir.  
+ `StaticResource`nesne öğesi sözdiziminde kullanılabilir. Bu durumda, <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> özelliğin değerini belirterek gereklidir.  
   
- `StaticResource`, özellik = değer çifti olarak <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> özelliğini belirten ayrıntılı bir öznitelik kullanımında de kullanılabilir:  
+ `StaticResource`<xref:System.Windows.StaticResourceExtension.ResourceKey%2A> özelliği özellik=değer çifti olarak belirten ayrıntılı bir öznitelik kullanımında da kullanılabilir:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
 ```  
   
- Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. `StaticResource`, gereken tek bir ayarlanabilir özelliğe sahip olduğundan, bu ayrıntılı kullanım tipik değildir.  
+ Ayrıntılı kullanım, genellikle birden fazla ayarlanabilir özelliğe sahip uzantılar için veya bazı özellikler isteğe bağlıysa yararlıdır. Yalnızca `StaticResource` bir ayarlanabilen özelliği olduğundan, bu ayrıntılı kullanım tipik değildir.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında, bu biçimlendirme uzantısının işlenmesi <xref:System.Windows.StaticResourceExtension> sınıfı tarafından tanımlanır.  
+ İşlemci uygulamasında, bu biçimlendirme uzantısı için işleme <xref:System.Windows.StaticResourceExtension> sınıf tarafından tanımlanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
   
- `StaticResource`, biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tüm biçimlendirme uzantıları öznitelik sözdiziminde {ve} karakterlerini kullanır. Bu, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin, bir biçimlendirme uzantısının özniteliği işlemesi gerektiğini tanıdığı bir kuraldır. Daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ `StaticResource`biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. Öznitelik sözdiziminde { ve } karakterlerini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanan tüm biçimlendirme uzantıları, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcinin bir biçimlendirme uzantısının özniteliği işlemesi gerektiğini kabul ettiği kuraldır. Daha fazla bilgi için [bkz: Biçimlendirme Uzantıları ve WPF XAML.](markup-extensions-and-wpf-xaml.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
-- [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [XAML Kaynakları](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Kaynaklar ve Kod](resources-and-code.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243277"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646132"
 ---
 # <a name="control-authoring-overview"></a>Denetim yazma genel bakış
 
@@ -38,7 +38,7 @@ Tarihsel olarak, varolan bir denetimden özelleştirilmiş bir deneyim elde etme
 
 - **Tetikleyiciler.** A, <xref:System.Windows.Trigger> yeni bir denetim oluşturmadan denetimin görünümünü ve davranışını dinamik olarak değiştirmenize olanak tanır. Örneğin, uygulamanızda birden <xref:System.Windows.Controls.ListBox> çok denetiminiz olduğunu ve <xref:System.Windows.Controls.ListBox> her bir indeki öğelerin seçildiğinde kalın ve kırmızı olmasını istediğinizi varsayalım. İlk içgüdünüz, seçili öğenin <xref:System.Windows.Controls.ListBox> görünümünü değiştirmek <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> için yöntemi devralan ve geçersiz kılabilecek bir sınıf oluşturmak olabilir, ancak <xref:System.Windows.Controls.ListBoxItem> daha iyi bir yaklaşım, seçili öğenin görünümünü değiştiren bir stile tetikleyici eklemektir. Tetikleyici, özellik değerlerini değiştirmenize veya bir özelliğin değerine göre eylem yapmanızı sağlar. Bir <xref:System.Windows.EventTrigger> olay meydana geldiğinde eylem yapmanızı sağlar.
 
-Stiller, şablonlar ve tetikleyiciler hakkında daha fazla bilgi için [bkz.](styling-and-templating.md)
+Stiller, şablonlar ve tetikleyiciler hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 
 Genel olarak, denetiminiz varolan bir denetimin işlevselliğini yansıtıyorsa, ancak denetimin farklı görünmesini istiyorsanız, öncelikle varolan denetimin görünümünü değiştirmek için bu bölümde tartışılan yöntemlerden herhangi birini kullanıp kullanamayacağınızı düşünmelisiniz.
 

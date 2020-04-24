@@ -1,12 +1,12 @@
 ---
 title: Öznitelikler (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389548"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645483"
 ---
 # <a name="attributes-c"></a>Öznitelikler (C#)
 
@@ -81,7 +81,7 @@ Olası `target` değerlerin listesi aşağıdaki tabloda gösterilmiştir.
 
 Otomatik olarak `field` uygulanan bir özellik için oluşturulan destek alanına bir öznitelik uygulamak için hedef değeri [belirtirsiniz.](../../../properties.md)
 
-Aşağıdaki örnek, öznitelikleri derlemelere ve modüllere nasıl uygulayacağımızı gösterir. Daha fazla bilgi için [Ortak Öznitelikler (C#)](common-attributes.md)'ye bakın.
+Aşağıdaki örnek, öznitelikleri derlemelere ve modüllere nasıl uygulayacağımızı gösterir. Daha fazla bilgi için [Ortak Öznitelikler (C#)](../../../language-reference/attributes/global.md)'ye bakın.
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Daha fazla bilgi için bkz.
 - [Özel Öznitelikler oluşturma (C#)](creating-custom-attributes.md)  
 - [Yansıma (C#) kullanarak Özniteliklere Erişim](accessing-attributes-by-using-reflection.md)  
 - [Öznitelikleri kullanarak C/C++ birleşimoluşturma (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Ortak Öznitelikler (C#)](common-attributes.md)  
+- [Ortak Öznitelikler (C#)](../../../language-reference/attributes/global.md)  
 - [Arayan Bilgileri (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187529"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646480"
 ---
 # <a name="controls"></a>Denetimler
 <a name="introduction"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "79187529"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Ayrıca, stiliçin bir anahtar atayarak ve denetiminizin `Style` özelliğinde bu anahtarı belirterek yalnızca belirli bir türün belirli denetimlerine stil uygulayabilirsiniz.  Stiller hakkında daha fazla bilgi için [Stil ve Templating'e](styling-and-templating.md)bakın.  
+ Ayrıca, stiliçin bir anahtar atayarak ve denetiminizin `Style` özelliğinde bu anahtarı belirterek yalnızca belirli bir türün belirli denetimlerine stil uygulayabilirsiniz.  Stiller hakkında daha fazla bilgi için [Stil ve Templating'e](../../../desktop-wpf/fundamentals/styles-templates-overview.md)bakın.  
   
 ### <a name="creating-a-controltemplate"></a>Denetim Şablonu Oluşturma  
  A, <xref:System.Windows.Style> aynı anda birden çok denetimde özellikleri ayarlamanızı sağlar, ancak <xref:System.Windows.Controls.Control> bazen bir <xref:System.Windows.Style>. Sınıftan <xref:System.Windows.Controls.Control> devralan sınıfların <xref:System.Windows.Controls.ControlTemplate>yapısı ve görünümünü tanımlayan bir <xref:System.Windows.Controls.Control>, . A'nın <xref:System.Windows.Controls.Control.Template%2A> <xref:System.Windows.Controls.Control> özelliği herkese açıktır, bu <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.ControlTemplate> nedenle bir a'yı varsayılanından farklı bir özellik verebilirsiniz. Genellikle bir denetim <xref:System.Windows.Controls.ControlTemplate> görünümünü <xref:System.Windows.Controls.Control> özelleştirmek için bir denetim devralma yerine yeni <xref:System.Windows.Controls.Control>belirtebilirsiniz .  
@@ -99,7 +99,7 @@ ms.locfileid: "79187529"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Stil ve Şablon Oluşturma](styling-and-templating.md)
+- [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Kategoriye Göre Denetimler](controls-by-category.md)
 - [Denetim Kitaplığı](control-library.md)
 - [Veri Şablonu Oluşturmaya Genel Bakış](../data/data-templating-overview.md)

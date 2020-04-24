@@ -7,35 +7,35 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 25308ee87fb387787e20c8a8887ae8e4e60742b9
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7bbc7bad36b3b1f2c92065e5f5699e5a86ac6189
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460221"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646105"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Nasıl yapılır: ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme
-<xref:System.Windows.Controls.ListView>bir öğeye yönelik bir olayı işlemek için, her bir <xref:System.Windows.Controls.ListViewItem>bir olay işleyicisi eklemeniz gerekir. Bir <xref:System.Windows.Controls.ListView> bir veri kaynağına bağlandığında, açıkça bir <xref:System.Windows.Controls.ListViewItem>oluşturmazsınız, ancak <xref:System.Windows.Controls.ListViewItem>stiline <xref:System.Windows.EventSetter> ekleyerek her öğe için olayı işleyebilirsiniz.  
+Bir öğenin olaylarını işlemek <xref:System.Windows.Controls.ListView>için, her <xref:System.Windows.Controls.ListViewItem>birine bir olay işleyicisi eklemeniz gerekir. A <xref:System.Windows.Controls.ListView> bir veri kaynağına bağlandığında, açıkça bir <xref:System.Windows.Controls.ListViewItem>, ancak bir <xref:System.Windows.EventSetter> . <xref:System.Windows.Controls.ListViewItem>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir veri-bağlantılı <xref:System.Windows.Controls.ListView> oluşturur ve her <xref:System.Windows.Controls.ListViewItem>bir olay işleyicisi eklemek için bir <xref:System.Windows.Style> oluşturur.  
+ Aşağıdaki örnek, veriye bağlı <xref:System.Windows.Controls.ListView> bir oluşturur <xref:System.Windows.Style> ve her <xref:System.Windows.Controls.ListViewItem>birine bir olay işleyicisi eklemek için bir tane oluşturur.  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
 [!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- Aşağıdaki örnek <xref:System.Windows.Controls.Control.MouseDoubleClick> olayını işler.  
+ Aşağıdaki örnek <xref:System.Windows.Controls.Control.MouseDoubleClick> olayı işler.  
   
  [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
-> Bir <xref:System.Windows.Controls.ListView> veri kaynağına bağlamak yaygın olsa da, açıkça bir <xref:System.Windows.Controls.ListViewItem>oluşturup oluşturmasanız bile, veri bağlama olmayan bir <xref:System.Windows.Controls.ListView> her bir <xref:System.Windows.Controls.ListViewItem> bir olay işleyicisi eklemek için bir stil kullanabilirsiniz.  Açık ve örtük olarak oluşturulmuş <xref:System.Windows.Controls.ListViewItem> denetimleri hakkında daha fazla bilgi için bkz. <xref:System.Windows.Controls.ItemsControl>.  
+> Bir veri <xref:System.Windows.Controls.ListView> kaynağına a bağlamak en yaygın olsa da, açıkça bir tane oluşturup oluşturmadığınıza bakılmaksızın, her <xref:System.Windows.Controls.ListViewItem> birine veri ye bağlı <xref:System.Windows.Controls.ListView> olmayan bir olay işleyicisi eklemek için bir <xref:System.Windows.Controls.ListViewItem>stil kullanabilirsiniz.  Açık ve örtülü olarak oluşturulan <xref:System.Windows.Controls.ListViewItem> denetimler <xref:System.Windows.Controls.ItemsControl>hakkında daha fazla bilgi için bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.XmlElement>
-- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Veri Bağlama Genel Bakış](../../../desktop-wpf/data/data-binding-overview.md)
 - [Stil ve Şablon Oluşturma](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [XMLDataProvider ve XPath Sorguları Kullanarak XML Verilerine Bağlama](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [ListView Genel Bakış](listview-overview.md)

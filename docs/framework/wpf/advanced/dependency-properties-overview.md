@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636023"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644049"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -123,7 +123,7 @@ Aşağıdaki örnek, <xref:System.Windows.Controls.ContentControl.Content%2A> XA
 > [!NOTE]
 > Bağlamalar yerel bir değer olarak kabul edilir, bu da başka bir yerel değer ayarlarsanız, bağlamayı ortadan kaldıracağınız anlamına gelir. Ayrıntılar için Bkz. [Bağımlılık Özelliği Değeri Önceliği.](dependency-property-value-precedence.md)
 
-Bağımlılık özellikleri veya <xref:System.Windows.DependencyObject> sınıf, veri bağlama <xref:System.ComponentModel.INotifyPropertyChanged> işlemleri için <xref:System.Windows.DependencyObject> kaynak özellik değerinde değişiklik bildirimleri üretmek amacıyla doğal olarak desteklemez. Verileri bağlama hedefine değişiklikleri bildirebilecek veri bağlamada kullanılmak üzere nasıl özellikler oluşturulabileceği hakkında daha fazla bilgi için [bkz.](../data/data-binding-overview.md)
+Bağımlılık özellikleri veya <xref:System.Windows.DependencyObject> sınıf, veri bağlama <xref:System.ComponentModel.INotifyPropertyChanged> işlemleri için <xref:System.Windows.DependencyObject> kaynak özellik değerinde değişiklik bildirimleri üretmek amacıyla doğal olarak desteklemez. Verileri bağlama hedefine değişiklikleri bildirebilecek veri bağlamada kullanılmak üzere nasıl özellikler oluşturulabileceği hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/data/data-binding-overview.md)
 
 ### <a name="styles"></a>Stiller
 Stiller ve şablonlar, bağımlılık özelliklerini kullanmak için başlıca motive edici senaryolardan ikisidir. Stiller özellikle uygulamayı [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]tanımlayan özellikleri ayarlamak için yararlıdır. Stiller genellikle XAML'de kaynak olarak tanımlanır. Stiller, genellikle belirli özellikler için "ayarlayıcılar" ve başka bir özelliğin gerçek zamanlı değerine dayalı bir özellik değerini değiştiren "tetikleyiciler" içerdiğinden özellik sistemiyle etkileşime geçer.
@@ -134,7 +134,7 @@ Aşağıdaki örnek basit bir stil oluşturur (hangi <xref:System.Windows.Framew
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Daha fazla bilgi için [Stil ve Templating'e](../controls/styling-and-templating.md)bakın.
+Daha fazla bilgi için [Stil ve Templating'e](../../../desktop-wpf/fundamentals/styles-templates-overview.md)bakın.
 
 ### <a name="animations"></a>Animasyonlar
 Bağımlılık özellikleri animasyonlu olabilir. Animasyon uygulandığında ve çalışırken, animasyondeğeri özelliğin sahip olduğu herhangi bir değerden (yerel değer gibi) daha yüksek bir önceliğe göre çalışır.

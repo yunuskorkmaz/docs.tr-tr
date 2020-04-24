@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398869"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644376"
 ---
 # <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
@@ -67,7 +67,7 @@ Sadece proje bazında `DotnetCliToolReference` kullanılabilen bir dizi araç ar
 
 .NET Core 2.1, *Genel Araçları* destekler -- yani komut satırından küresel olarak kullanılabilen özel araçlar. .NET Core'un önceki sürümlerindeki genişletilebilirlik modeli, özel araçları yalnızca `DotnetCliToolReference`proje bazında kullanılabilir hale getirdi.
 
-Genel Bir Araç yüklemek için [dotnet aracı yükleme](../tools/dotnet-tool-install.md) komutunu kullanırsınız. Örnek:
+Genel Bir Araç yüklemek için [dotnet aracı yükleme](../tools/dotnet-tool-install.md) komutunu kullanırsınız. Örneğin:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -251,6 +251,6 @@ Değişiklikleri kesme hakkında bilgi için, [sürüm 2.0'dan 2.1'e geçiş iç
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [​.NET Core'daki Yenilikler](index.md)
+- [​.NET Core 3.1’deki yenilikler](dotnet-core-3-1.md)
 - [EF Core 2.1'deki yeni özellikler](/ef/core/what-is-new/ef-core-2.1)
 - [ASP.NET Core 2.1'deki yenilikler](/aspnet/core/aspnetcore-2.1)

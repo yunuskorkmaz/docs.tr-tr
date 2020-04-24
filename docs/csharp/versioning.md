@@ -4,12 +4,12 @@ description: C# ve .NET'te sürümlemenin nasıl çalıştığını anlama
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc192337e4eaa5f9f1d6509ea8c15deeac34a48c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156473"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645462"
 ---
 # <a name="versioning-in-c"></a>C sürümü\#
 
@@ -43,7 +43,7 @@ Kitaplığınızın eski sürümleriyle geriye doğru uyumluluğu korumaya çal�
 - Sanal yöntemler: Yeni sürümde sanal olmayan bir sanal yöntem yaptığınızda, bu yöntemi geçersiz kılan projelerin güncellenmesi gerekir. Bu büyük bir kırılma değişim ve şiddetle cesareti olduğunu.
 - Yöntem imzaları: Bir yöntem davranışını güncelleştirmek imzasını da değiştirmenizi gerektiriyorsa, bunun yerine, bu yönteme çağıran kodun çalışmaya devam etmesi için aşırı yükleme oluşturmanız gerekir.
 Uygulamanın tutarlı kalması için eski yöntem imzasını her zaman yeni yöntem imzasına çağırmak için değiştirebilirsiniz.
-- [Eski öznitelik](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Bu özniteliği, amortismana kaldırılmış ve gelecek sürümlerde kaldırılma olasılığı olan sınıfları veya sınıf üyelerini belirtmek için kodunuzdaki bu özelliği kullanabilirsiniz. Bu, kitaplığınızı kullanan geliştiricilerin değişiklikleri kırmaya daha iyi hazır olmasını sağlar.
+- [Eski öznitelik](language-reference/attributes/general.md#obsolete-attribute): Bu özniteliği, amortismana kaldırılmış ve gelecek sürümlerde kaldırılma olasılığı olan sınıfları veya sınıf üyelerini belirtmek için kodunuzdaki bu özelliği kullanabilirsiniz. Bu, kitaplığınızı kullanan geliştiricilerin değişiklikleri kırmaya daha iyi hazır olmasını sağlar.
 - İsteğe Bağlı Yöntem Bağımsız Değişkenleri: Daha önce isteğe bağlı yöntem bağımsız değişkenlerini zorunlu hale getirdiğinizde veya varsayılan değerlerini değiştirdiğinizde, bu bağımsız değişkenleri sağlamayan tüm kodun güncelleştirilmesi gerekir.
 
 > [!NOTE]

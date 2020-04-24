@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186180"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646152"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konu, XAML sözdizimi öğelerini açıklamak için kullanılan terimleri tanımlar. Bu terimler, hem özel olarak WPF belgeleri hem de XAML kullanan diğer çerçeveler veya System.Xaml düzeyinde XAML dil desteği tarafından etkinleştirilen temel XAML kavramları için bu belgelerin geri kalanı boyunca sık sık kullanılır. Bu [konu, XAML Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)konusuna getirilen temel terminolojiyi genişletir.  
@@ -130,7 +130,7 @@ Bu konu, XAML sözdizimi öğelerini açıklamak için kullanılan terimleri tan
   
  Ayrıca, varsayılan ad alanı üzerinden erişilebilen herhangi bir nesneden herhangi bir olayı *bir tür Adı*kullanarak adlandırabilirsiniz. *olay* kısmen nitelikli isim; bu sözdizimi, işleyicinin alt öğelerden yönlendirilen olayları işlemek için amaçlandığı yönlendirilmiş olaylar için işleyicileri eklemeyi destekler, ancak üst öğenin de bu olay üye tablosunda yoktur. Bu sözdizimi ekli bir olay sözdizimini andırır, ancak buradaki olay gerçek bir bağlı olay değildir. Bunun yerine, nitelikli bir ada sahip bir olaya başvuruyorsunuz. Daha fazla bilgi için, [Yönlendirilen Olaylara Genel Bakış'a](routed-events-overview.md)bakın.  
   
- Bazı senaryolar için özellik adları bazen öznitelik adı yerine öznitelik değeri olarak sağlanır. Bu özellik adı, form *sahibiType'ta*belirtilen özellik gibi niteleyicileri de içerebilir. *dependencyPropertyName*. Bu senaryo, XAML'de stilleri veya şablonları yazarken yaygındır. Öznitelik değeri olarak sağlanan özellik adlarının işleme kuralları farklıdır ve ayarlanan özelliğin türüne veya belirli WPF alt sistemlerinin davranışlarına göre yönetilir. Ayrıntılar için [Stil ve Templating'e](../controls/styling-and-templating.md)bakın.  
+ Bazı senaryolar için özellik adları bazen öznitelik adı yerine öznitelik değeri olarak sağlanır. Bu özellik adı, form *sahibiType'ta*belirtilen özellik gibi niteleyicileri de içerebilir. *dependencyPropertyName*. Bu senaryo, XAML'de stilleri veya şablonları yazarken yaygındır. Öznitelik değeri olarak sağlanan özellik adlarının işleme kuralları farklıdır ve ayarlanan özelliğin türüne veya belirli WPF alt sistemlerinin davranışlarına göre yönetilir. Ayrıntılar için [Stil ve Templating'e](../../../desktop-wpf/fundamentals/styles-templates-overview.md)bakın.  
   
  Özellik adları için başka bir kullanım, bir öznitelik değeri bir özellik-özellik ilişkisini açıklar. Bu özellik veri bağlama ve film şeridi hedefleri için <xref:System.Windows.PropertyPath> kullanılır ve sınıf ve türü dönüştürücü tarafından etkinleştirilir. Arama semantikdaha eksiksiz bir açıklama için, [PropertyPath XAML Sözdizimi](propertypath-xaml-syntax.md)bakın.  
   
@@ -173,7 +173,7 @@ Bu konu, XAML sözdizimi öğelerini açıklamak için kullanılan terimleri tan
   
  Koleksiyon türleri için .NET Başvuru sayfalarında, bir koleksiyon için nesne öğesinin kasıtlı ihmali olan bu sözdizimi bazen XAML sözdizimi bölümlerinde Örtülü Koleksiyon Sözdizimi olarak belirtilir.  
   
- Kök öğesi dışında, başka bir öğenin alt öğesi olarak iç içe bir XAML dosyasında her nesne öğesi gerçekten aşağıdaki durumlardan biri veya her ikisi olan bir öğedir: üst öğenin örtülü toplama özelliğinin bir üyesi veya üst öğe için XAML içerik özelliğinin değerini belirten bir öğe (XAML içerik özellikleri yaklaşan bir bölümde ele alınacaktır). Başka bir deyişle, biçimlendirme sayfasındaki üst öğeler ve alt öğelerin ilişkisi gerçekten kökteki tek bir nesnedir ve kökün altındaki her nesne öğesi, üst öğenin özellik değerini sağlayan tek bir örnektir veya bir sayfadaki öğelerden biri aynı zamanda üst koleksiyon türü özellik değeri olan toplama. Bu tek köklü kavram XML ile ortaktır ve sık sık XAML gibi <xref:System.Windows.Markup.XamlReader.Load%2A>yükleyin API'lerin davranışında takviye edilir.  
+ Kök öğesi dışında, başka bir öğenin alt öğesi olarak iç içe geçen bir XAML dosyasındaki her nesne öğesi gerçekten aşağıdaki durumlardan biri veya her ikisi olan bir öğedir: üst öğenin örtülü toplama özelliğinin bir üyesi veya üst öğe için XAML içerik özelliğinin değerini belirten bir öğe (XAML içerik özellikleri yaklaşan bir bölümde ele alınacaktır). Başka bir deyişle, biçimlendirme sayfasındaki üst öğeler ve alt öğelerin ilişkisi gerçekten kökteki tek bir nesnedir ve kökün altındaki her nesne öğesi, üst öğenin özellik değerini sağlayan tek bir örnektir veya üst öğenin koleksiyon türünde bir özellik değeri olan öğelerden biridir. Bu tek köklü kavram XML ile ortaktır ve sık sık XAML gibi <xref:System.Windows.Markup.XamlReader.Load%2A>yükleyin API'lerin davranışında takviye edilir.  
   
  Aşağıdaki örnek, bir koleksiyon için nesne öğesi<xref:System.Windows.Media.GradientStopCollection>( ) açıkça belirtilen bir sözdizimidir.  
   
@@ -227,7 +227,7 @@ Bu konu, XAML sözdizimi öğelerini açıklamak için kullanılan terimleri tan
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>İçerik Özellikleri ve Koleksiyon Sözdizimi Birleştirildi  
- Birden fazla nesne öğeöğesini içerik olarak kabul edebilmek için, içerik özelliğinin türü özellikle bir toplama türü olmalıdır. Koleksiyon türleri için özellik öğesi sözdizimine benzer şekilde, Bir XAML işlemcinin koleksiyon türleri olan türleri tanımlaması gerekir. Bir öğenin XAML içerik özelliği varsa ve XAML içerik özelliğinin türü bir koleksiyonsa, zımni toplama türünün biçimlendirmede nesne öğesi olarak belirtilmesi gerekmez ve XAML içerik özelliğinin özellik olarak belirtilmesi gerekmez Öğe. Bu nedenle biçimlendirmedeki görünen içerik modeliartık içerik olarak atanmış birden fazla alt öğeye sahip olabilir. Aşağıda türemiş bir <xref:System.Windows.Controls.Panel> sınıf için içerik sözdizimi veremiş tir. Tüm <xref:System.Windows.Controls.Panel> türetilmiş sınıflar, türünde <xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.UIElementCollection>bir değer gerektiren XAML içerik özelliğini kurar.  
+ Birden fazla nesne öğeöğesini içerik olarak kabul edebilmek için, içerik özelliğinin türü özellikle bir toplama türü olmalıdır. Koleksiyon türleri için özellik öğesi sözdizimine benzer şekilde, Bir XAML işlemcinin koleksiyon türleri olan türleri tanımlaması gerekir. Bir öğenin XAML içerik özelliği varsa ve XAML içerik özelliğinin türü bir koleksiyonsa, zımni toplama türünün biçimlendirmede nesne öğesi olarak belirtilmesi gerekmez ve XAML içerik özelliğinin özellik öğesi olarak belirtilmesi gerekmez. Bu nedenle biçimlendirmedeki görünen içerik modeliartık içerik olarak atanmış birden fazla alt öğeye sahip olabilir. Aşağıda türemiş bir <xref:System.Windows.Controls.Panel> sınıf için içerik sözdizimi veremiş tir. Tüm <xref:System.Windows.Controls.Panel> türetilmiş sınıflar, türünde <xref:System.Windows.Controls.Panel.Children%2A> <xref:System.Windows.Controls.UIElementCollection>bir değer gerektiren XAML içerik özelliğini kurar.  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -316,7 +316,7 @@ Bu konu, XAML sözdizimi öğelerini açıklamak için kullanılan terimleri tan
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XAML'ye Genel Bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [XAML Ad Uzayı (x:) Dil Özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [XAML Ad Alanı (x:) Dil Özellikleri](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [TypeConverters ve XAML](typeconverters-and-xaml.md)
