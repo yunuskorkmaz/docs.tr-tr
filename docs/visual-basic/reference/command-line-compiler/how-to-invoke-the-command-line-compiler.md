@@ -30,7 +30,7 @@ Komut satırı derleyicisini, yürütülebilir dosyasının adını MS-DOS istem
 
 4. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
 
-    Örneğin, kaynak kodunuzu `SourceFiles`adlı bir dizinde depoladıysanız, komut Istemi ' ni açın ve bu dizine geçmek için `cd SourceFiles` yazın. Dizin `Source.vb`adlı bir kaynak dosya içeriyorsa, `vbc.exe Source.vb`yazarak derleyebilirsiniz.
+    Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows komut Istemi için PATH ortam değişkenini derleyiciye ayarlamak için
 
@@ -54,11 +54,11 @@ Komut satırı derleyicisini, yürütülebilir dosyasının adını MS-DOS istem
 
 1. **Başlat** menüsünde, **Donatılar** klasörüne tıklayın ve ardından **Windows komut istemi**' ni açın.
 
-2. Komut satırında `vbc.exe`*sourceFileName* yazın ve ENTER tuşuna basın.
+2. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
 
-     Örneğin, kaynak kodunuzu `SourceFiles`adlı bir dizinde depoladıysanız, komut Istemi ' ni açın ve bu dizine geçmek için `cd SourceFiles` yazın. Dizin `Source.vb`adlı bir kaynak dosya içeriyorsa, `vbc.exe Source.vb`yazarak derleyebilirsiniz.
+     Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

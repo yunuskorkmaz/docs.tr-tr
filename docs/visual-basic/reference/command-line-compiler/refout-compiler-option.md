@@ -29,15 +29,15 @@ ms.locfileid: "74348649"
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 `filepath`  
-Başvuru derlemesinin yolu ve dosya adı. Genellikle birincil derlemenin alt klasöründe olmalıdır. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir. `filepath` tüm klasörler var olmalıdır; derleyici bunları oluşturmaz.
+Başvuru derlemesinin yolu ve dosya adı. Genellikle birincil derlemenin alt klasöründe olmalıdır. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir. İçindeki `filepath` tüm klasörler var olmalıdır; derleyici bunları oluşturmaz.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic, sürüm 15,3 ' den başlayarak `-refout` anahtarını destekler.
+Visual Basic, `-refout` sürüm 15,3 ' den başlayarak anahtarı destekler.
 
 Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
-`-refout` ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
+`-refout` Ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

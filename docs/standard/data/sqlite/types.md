@@ -1,7 +1,7 @@
 ---
 title: Veri türleri
 ms.date: 12/13/2019
-description: Desteklenen veri türlerini ve bunların etrafındaki bazı sınırlamaları açıklar.
+description: Desteklenen veri türlerini ve bunların çevresindeki bazı sınırlamaları açıklar.
 ms.openlocfilehash: a11ff382f80cd979506d6195c299c8234c3eb8ea
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
@@ -11,17 +11,17 @@ ms.locfileid: "81389036"
 ---
 # <a name="data-types"></a>Veri türleri
 
-SQLite yalnızca dört ilkel veri türüne sahiptir: INTEGER, REAL, TEXT ve BLOB. Veritabanı değerlerini bu `object` dört türden yalnızca biri döndürülen API'ler. Ek .NET türleri Microsoft.Data.Sqlite tarafından desteklenir, ancak değerler sonuçta bu türler ile dört ilkel tür arasında zorlanır.
+SQLite yalnızca dört temel veri türüne sahiptir: tamsayı, gerçek, metın ve BLOB. Veritabanı değerlerini olarak döndüren API 'Ler `object` , yalnızca bu dört türden birini döndürür. Ek .NET türleri Microsoft. Data. SQLite tarafından desteklenir, ancak değerler bu türler ve dört temel türden biri arasında sonuç olarak zorlanır.
 
 | .NET           | SQLite  | Açıklamalar                                                       |
 | -------------- | ------- | ------------------------------------------------------------- |
 | Boole        | TAMSAYI | `0` veya `1`                                                    |
 | Bayt           | TAMSAYI |                                                               |
-| Bayt[]         | Blob    |                                                               |
+| Byte []         | Bun    |                                                               |
 | Char           | TEXT    | UTF-8                                                         |
-| DateTime       | TEXT    | yyyy-MM-dd HH:mm:ss. FFFFFFF                                   |
-| DateTimeOffset | TEXT    | yyyy-MM-dd HH:mm:ss. FFFFFFFzzz                                |
-| Ondalık        | TEXT    | `0.0###########################`Biçim. REAL kayıp olur. |
+| DateTime       | TEXT    | yyyy-AA-GG SS: DD: ss. FFFFFFF                                   |
+| DateTimeOffset | TEXT    | yyyy-AA-GG SS: DD: ss. FFFFFFFzzz                                |
+| Ondalık        | TEXT    | `0.0###########################`formatını. GERÇEK, kayıplı olur. |
 | Çift         | GERÇEK SAYI    |                                                               |
 | Guid           | TEXT    | 00000000-0000-0000-0000-000000000000                          |
 | Int16          | TAMSAYI |                                                               |
@@ -30,35 +30,35 @@ SQLite yalnızca dört ilkel veri türüne sahiptir: INTEGER, REAL, TEXT ve BLOB
 | SByte          | TAMSAYI |                                                               |
 | Tek         | GERÇEK SAYI    |                                                               |
 | Dize         | TEXT    | UTF-8                                                         |
-| TimeSpan       | TEXT    | d.hh:mm:ss.fffffff                                            |
+| TimeSpan       | TEXT    | d. hh: mm: ss. fffffff                                            |
 | UInt16         | TAMSAYI |                                                               |
 | UInt32         | TAMSAYI |                                                               |
-| UInt64         | TAMSAYI | Büyük değerler taşması                                         |
+| UInt64         | TAMSAYI | Büyük değer taşması                                         |
 
 ## <a name="alternative-types"></a>Alternatif türler
 
-Bazı .NET türleri alternatif SQLite türlerinden okunabilir. Parametreler bu alternatif türleri kullanacak şekilde de yapılandırılabilir. Daha fazla bilgi için [Parametreler'e](parameters.md#alternative-types)bakın.
+Bazı .NET türleri alternatif SQLite türlerinden okunabilir. Parametreler, bu alternatif türleri kullanacak şekilde de yapılandırılabilir. Daha fazla bilgi için bkz. [Parametreler](parameters.md#alternative-types).
 
 | .NET           | SQLite  | Açıklamalar          |
 | -------------- | ------- | ---------------- |
 | Char           | TAMSAYI | UTF-16           |
 | DateTime       | GERÇEK SAYI    | Jülyen gün değeri |
 | DateTimeOffset | GERÇEK SAYI    | Jülyen gün değeri |
-| Guid           | Blob    |                  |
-| TimeSpan       | GERÇEK SAYI    | Gün içinde          |
+| Guid           | Bun    |                  |
+| TimeSpan       | GERÇEK SAYI    | Gün cinsinden          |
 
-Örneğin, aşağıdaki sorgu, sonuç kümesindeki GERÇEK sütundaki TimeSpan değerini okur.
+Örneğin, aşağıdaki sorgu, sonuç kümesindeki gerçek bir sütundan bir TimeSpan değeri okur.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DateAndTimeSample/Program.cs?name=snippet_AlternativeType)]
 
 ## <a name="column-types"></a>Sütun türleri
 
-SQLite, değer türünün depolandığı sütunla değil, değerin kendisiyle ilişkili olduğu dinamik bir tür sistemi kullanır. İstediğiniz sütun türü adını kullanmakta özgürsunuz. Microsoft.Data.Sqlite bu adlara ek semantik uygulamaz.
+SQLite, bir değer türünün depolandığı sütun değil, değerin kendisi ile ilişkilendirildiği dinamik bir tür sistemi kullanır. Dilediğiniz sütun türü adını kullanabilirsiniz. Microsoft. Data. SQLite, bu adlara ek semantik hiçbiri uygulamaz.
 
-Sütun türü adı [türü afinite](https://www.sqlite.org/datatype3.html#type_affinity)üzerinde bir etkisi var. Yaygın bir gotcha STRING bir sütun türünü kullanarak beklenmeyen sonuçlara yol açabilir INTEGER veya REAL, değerleri dönüştürmek için çalışacağız olmasıdır. Yalnızca dört ilkel SQLite türü adlarını kullanmanızı öneririz: INTEGER, REAL, TEXT ve BLOB.
+Sütun türü adının [tür benzeşimi](https://www.sqlite.org/datatype3.html#type_affinity)üzerinde bir etkisi vardır. Tek bir yaygın Gotcha, bir DIZE türü kullanmanın değerleri ıNTEGER veya REAL değerine dönüştürmeye çalışır, bu da beklenmedik sonuçlara yol açabilir. Yalnızca dört temel SQLite tür adı kullanmanızı öneririz: tamsayı, gerçek, metın ve BLOB.
 
-SQLite, uzunluk, kesinlik ve ölçek gibi tür yönlerini belirtmenize olanak tanır, ancak bunlar veritabanı altyapısı tarafından zorlanmaz. Uygulamanız bunları uygulamadan sorumludur.
+SQLite, uzunluk, duyarlık ve ölçek gibi tür modellerini belirtmenize izin verir, ancak bunlar veritabanı altyapısı tarafından zorlanmaz. Uygulamanızı zormaktan sorumludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQLite'de Veri Tipleri](https://www.sqlite.org/datatype3.html)
+- [SQLite Içindeki veri türleri](https://www.sqlite.org/datatype3.html)

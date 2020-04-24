@@ -14,7 +14,7 @@ ms.locfileid: "75710550"
 Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan aynı düğüm türleri değildir.  
   
 ## <a name="w3c-xpath-node-types"></a>W3C XPath düğüm türleri  
- Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan düğümlerin türleri değildir. <xref:System.Xml.XPath.XPathNodeType> numaralandırması tarafından temsil edilen XPath düğüm türleri aşağıda verilmiştir.  
+ Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) içinde bulunan düğümlerin türleri değildir. Aşağıda, <xref:System.Xml.XPath.XPathNodeType> sabit listesi tarafından temsil edilen XPath düğüm türleri verilmiştir.  
   
 - <xref:System.Xml.XPath.XPathNodeType.All>  
   
@@ -36,7 +36,7 @@ Bir XPath sorgusunda tanınan düğümlerin türleri Belge Nesne Modeli (DOM) i�
   
 - <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- Bu düğüm türleri, düğümlerin XML bilgi kümesinden türetildiği XPath veri modelini temel alır. <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> ve <xref:System.Xml.XPath.XPathNodeType.Whitespace> düğüm türleri, Microsoft .NET Framework uzantılarıdır ve XPath veri modelinde açıklanan temel düğüm türlerine sahiptir.  
+ Bu düğüm türleri, düğümlerin XML bilgi kümesinden türetildiği XPath veri modelini temel alır. <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> Ve <xref:System.Xml.XPath.XPathNodeType.Whitespace> düğüm türleri, XPath veri modelinde açıklanan temel düğüm türleri için Microsoft .NET Framework uzantılarıdır.  
   
  Öznitelik düğümü türü, XPath veri modelinde DOM 'da olduğundan farklı bir şekilde kullanılır. XPath veri modelinde, öğe düğümü kendisiyle ilişkili bir öznitelik düğümleri kümesine sahiptir ve öğe düğümü her öznitelik düğümünün üst öğesidir. Bununla birlikte, DOM 'da, öğe düğümü üst öğesi değil, sahip olur. Her iki modelde da öznitelik ve ad alanı düğümleri, öğe düğümünün alt düğümleri olarak değerlendirilmez.  
   

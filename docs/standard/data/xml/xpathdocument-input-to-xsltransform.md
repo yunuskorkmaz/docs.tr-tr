@@ -14,12 +14,12 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709770"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform’a XPathDocument Girişi
-<xref:System.Xml.XPath.XPathDocument>, belgeleri <xref:System.Xml.Xsl.XslTransform>işlemek için salt okuma önbelleğidir. Bu, XML Belge Nesne Modeli (DOM) için yapısal olarak benzerdir, ancak <xref:System.Xml.XPath.XPathNavigator>XPath en iyi duruma getirme işlevlerini kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) işleme ve XML yol dili (XPath) veri modeli için son derece iyileştirilmiştir.  
+, <xref:System.Xml.XPath.XPathDocument> İle <xref:System.Xml.Xsl.XslTransform>belgelerin işlenmesine yönelik salt okunurdur. Bu, XML Belge Nesne Modeli (DOM) için yapısal olarak benzerdir, ancak ' deki XPath iyileştirme işlevleri kullanılarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) işleme ve XML yol dili (XPath) veri modeli için oldukça iyileştirilmiştir <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler Için Genişletilebilir Stil sayfası DILI (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Aşağıdaki kod örneği, bir dönüşüm için girdi olarak bir <xref:System.Xml.XPath.XPathDocument> oluşturur.  
+ Aşağıdaki kod örneği bir Transform için <xref:System.Xml.XPath.XPathDocument> bir as girişi oluşturur.  
   
 ```vb  
 Dim xslt as XslTransform = new XslTransform()  

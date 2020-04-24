@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl: sabit genişlikte metin Dosyaları okuma'
+title: 'Nasıl yapılır: sabit genişlikli metin dosyalarından okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -15,49 +15,49 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334623"
 ---
-# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Nasıl: Visual Basic'teki sabit genişlikteki metin dosyalarından okuma
+# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic içindeki sabit genişlikli metin dosyalarından okuma
 
-Nesne, `TextFieldParser` günlükler gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırmak için bir yol sağlar.  
+`TextFieldParser` Nesnesi, günlük gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırabilmeniz için bir yol sağlar.  
   
- Özellik, `TextFieldType` ayrıştırılan dosyanın sınırlı bir dosya mı yoksa sabit genişlikte metin alanlarına sahip bir dosya mı olduğunu tanımlar. Sabit genişlikteki metin dosyasında, sonundaki alan değişken genişliğe sahip olabilir. Sonundaki alanın değişken genişliği olduğunu belirtmek için, genişliği sıfırdan küçük veya eşit olacak şekilde tanımlayın.  
+ `TextFieldType` Özelliği, ayrıştırılmış dosyanın ayrılmış bir dosya mı yoksa sabit genişlikte metin alanları olduğunu tanımlar. Sabit genişlikli bir metin dosyasında, sonundaki alanın bir değişken genişliği olabilir. Uçtaki alanın bir değişken genişliğine sahip olduğunu belirtmek için, bu değeri sıfıra eşit veya daha küçük bir genişliğe sahip olacak şekilde tanımlayın.  
   
-### <a name="to-parse-a-fixed-width-text-file"></a>Sabit genişlikte metin dosyasını ayrışdırmak için  
+### <a name="to-parse-a-fixed-width-text-file"></a>Sabit genişlikli bir metin dosyasını ayrıştırmak için  
   
-1. Yeni `TextFieldParser`bir . Aşağıdaki kod `TextFieldParser` adlandırılmış `Reader` oluşturur ve `test.log`dosyayı açar.  
+1. Yeni `TextFieldParser`bir oluştur. Aşağıdaki kod, `TextFieldParser` adlı adı `Reader` oluşturur ve dosyasını `test.log`açar.  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
-2. `TextFieldType` Özelliği, genişlik ve biçimi tanımlayan olarak `FixedWidth`tanımlayın. Aşağıdaki kod metin sütunlarını tanımlar; birincisi 5 karakter genişliğinde, ikincisi 10, üçüncü 11 ve dördüncü değişken genişliktedir.  
+2. `TextFieldType` Özelliği `FixedWidth`, genişliği ve biçimi tanımlayarak tanımlayın. Aşağıdaki kod, metnin sütunlarını tanımlar; Birincisi 5 karakter genişliğinde, ikinci 10, üçüncü 11 ve dördüncü değişken genişliktedir.  
   
      [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
-3. Dosyadaki alanları iletin. Satırlar bozuksa, bir hata bildirin ve ayrıştmaya devam edin.  
+3. Dosyadaki alanlar arasında döngü gerçekleştirin. Herhangi bir satır bozuksa, bir hata bildirin ve ayrıştırmaya devam edin.  
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. `While` Ve `Using` blokları kapatın `End While` `End Using`ve.  
+4. `While` Ve `Using` bloklarıyla birlikte `End While` kapatın. `End Using`  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek dosyadan `test.log`okur.  
+ Bu örnek dosyadan okur `test.log`.  
   
  [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
-## <a name="robust-programming"></a>Sağlam programlama  
+## <a name="robust-programming"></a>Güçlü programlama  
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Bir satır belirtilen biçim kullanılarak ayrıştısı olamaz (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Özel durum iletisi özel durum neden satırı <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> belirtirken, özellik satırda bulunan metne atanır.  
+- Satır belirtilen biçim (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) kullanılarak ayrıştırılamıyor. Özel durum iletisi, özel duruma neden olan satırı belirtir, ancak <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> Özellik satırda bulunan metne atanır.  
   
 - Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Kullanıcının dosyaya erişmek için yeterli izine sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).  
+- Kullanıcının dosyaya erişmek için yeterli izinlere sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).  
   
-- Yol çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- Kullanıcının dosyaya erişmek için yeterli izinleri yoktur (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı, dosyaya (<xref:System.UnauthorizedAccessException>) erişmek için yeterli izinlere sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -28,9 +28,9 @@ Derleyicinin sözdizimiyle ilgili hatalar ve uyarılar için kod görüntülemes
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, `-quiet` geçerli değildir. Derleyici söz dizimi ile ilgili bir hata veya uyarı bildirdiğinde, satır kaynak kodundan de çıkış olur. Derleyici çıkışını ayrıştırmaya yönelik uygulamalar için derleyicinin yalnızca Tanılamanın metnini çıktısının daha kullanışlı olabilir.
+Varsayılan `-quiet` olarak etkin değildir. Derleyici söz dizimi ile ilgili bir hata veya uyarı bildirdiğinde, satır kaynak kodundan de çıkış olur. Derleyici çıkışını ayrıştırmaya yönelik uygulamalar için derleyicinin yalnızca Tanılamanın metnini çıktısının daha kullanışlı olabilir.
 
-Aşağıdaki örnekte, `Module1` `-quiet` olmadan derlendiğinde kaynak kodu içeren bir hata verir.
+Aşağıdaki örnekte, `Module1` olmadan `-quiet`derlendiğinde kaynak kodu içeren bir hata verir.
 
 ```vb
 Module Module1
@@ -49,18 +49,18 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-@No__t-0 ile derlenirse, derleyici yalnızca şunları verir:
+İle `-quiet`derlenirse, derleyici yalnızca aşağıdakilerin çıktısını verir:
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
+> Bu `-quiet` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod `T2.vb` derler ve söz dizimi ile ilgili derleyici tanılamaları için kod görüntülemez:
+Aşağıdaki kod, sözdizimi `T2.vb` ile ilgili derleyici tanılamaları için kodu derler ve görüntülemez:
 
 ```console
 vbc -quiet t2.vb

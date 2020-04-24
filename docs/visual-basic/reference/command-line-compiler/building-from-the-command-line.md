@@ -1,5 +1,5 @@
 ---
-title: Komut Satırından Oluşturma
+title: Komut Satırından Derleme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - builds [Visual Basic], command-line
@@ -43,11 +43,11 @@ Kendi kullanımı için değiştirebileceğiniz örnek komut satırlarının bir
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-[Komut satırı derleyicisini Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md) \
 Alfabetik olarak veya amacına göre düzenlenmiş derleyici seçeneklerinin listesini sağlar.
 
 [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
 Kodun belirli bölümlerinin nasıl derlenebileceğinizi açıklar.
 
-[Visual Studio \ projeler ve çözümler oluşturma ve Temizleme](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)
+[Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
 Farklı yapılarda nelerin ekleneceğini nasıl düzenleyebileceğinizi, proje özellikleri ' ni seçmenizi ve projelerin doğru sırada oluşturulmasını sağlar.

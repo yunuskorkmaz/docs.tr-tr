@@ -21,9 +21,9 @@ ms.locfileid: "80588464"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme
   
-<xref:System.Xml.Serialization.XmlSerializer>", aynı sınıf kümesiyle birden fazla XML akışı oluşturabilirsiniz. İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz. Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir. Bir hizmet ISBN> etiketini \<kullanırken, ikincisi BookID> etiketini \<kullanır. Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`. Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız. İlk XML Web hizmeti için beklendiği gibi budur. Ancak XML akışını ikinci XML Web hizmetine göndermek için, etiketin öğe `BookID`adı.  
+Kullanarak <xref:System.Xml.Serialization.XmlSerializer>, aynı sınıf kümesiyle bırden fazla xml akışı oluşturabilirsiniz. İki farklı XML Web Hizmetleri aynı temel bilgileri, yalnızca küçük farkları gerektirdiğinden bunu isteyebilirsiniz. Örneğin, siparişler books için işlemi iki XML Web Hizmetleri varsayalım ve bu nedenle her ikisi de ISBN numaraları gerektirir. İkinci bir hizmet, BookID> etiketini \< \<kullandığında ISBN> etiketini kullanır. Adlı bir sınıf sahip `Book` adında bir alan içeren `ISBN`. Örneği, `Book` sınıf serileştirildiği, varsayılan olarak, üye adı (ISBN) etiket öğe adı kullanacağız. İlk XML Web hizmeti için beklendiği gibi budur. Ancak, XML akışını ikinci XML Web hizmetine göndermek için, etiketin öğe adının olması `BookID`için serileştirme geçersiz kılmanız gerekir.  
   
-## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Alternatif bir öğe adı olan bir XML akışı oluşturmak için  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Alternatif bir öğe adıyla bir XML akışı oluşturmak için  
   
 1. Öğesinin bir örneğini oluşturur <xref:System.Xml.Serialization.XmlElementAttribute> sınıfı.  
   
@@ -83,7 +83,7 @@ public void SerializeOverride()
 }  
 ```  
   
- XML akışı aşağıdakilere benzeyebilir.  
+ XML akışı aşağıdakine benzeyebilir.  
   
 ```xml  
 <Book>  
@@ -96,7 +96,7 @@ public void SerializeOverride()
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -13,11 +13,11 @@ ms.locfileid: "74334529"
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma
 
-<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesne, **Belgelerim** veya **Masaüstüm**gibi **Tüm Kullanıcılar** dizinlerinin çoğundan okumak için kullanılabilir.  
+<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesnesi, **Belgelerim** veya **masaüstlerim**gibi **tüm Kullanıcı** dizinlerinden okumak için kullanılabilir.  
   
 ### <a name="to-read-from-the-my-documents-folder"></a>Belgelerim klasöründen okumak için  
   
-- Her `ReadAllText` dosyadaki metni belirli bir dizindeki okumak için yöntemi kullanın. Aşağıdaki kod bir dizin ve dosya belirtir `ReadAllText` ve sonra onları `patients`adlı dize içine okumak için kullanır.  
+- Belirli bir `ReadAllText` dizindeki her bir dosyanın metnini okumak için yöntemini kullanın. Aşağıdaki kod, bir dizini ve dosyayı belirtir ve sonra bunları `ReadAllText` adlı `patients`dizeye okumak için kullanır.  
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   

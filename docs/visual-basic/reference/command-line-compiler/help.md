@@ -25,7 +25,7 @@ Derleyici seçeneklerini görüntüler.
 -help  
 ```
 
-veya  
+or  
 
 ```console
 -?  
@@ -35,7 +35,7 @@ veya
  Bu seçeneği bir derlemeye eklerseniz, hiçbir çıktı dosyası oluşturulmaz ve hiçbir derleme gerçekleşmez.  
   
 > [!NOTE]
-> `-help` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-help` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, komut satırından yardım görüntüler.  

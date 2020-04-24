@@ -27,13 +27,13 @@ Belirtilen dizinin ya da proje dizininin tüm alt dizinlerindeki kaynak kodu dos
  İsteğe bağlı. Aramanın başlamasını istediğiniz dizin. Belirtilmemişse, arama proje dizininde başlar.  
   
  `file`  
- Gerekli. Aranacak dosya (lar). Joker karakterlere izin verilir.  
+ Gereklidir. Aranacak dosya (lar). Joker karakterlere izin verilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-recurse`kullanmadan proje dizinindeki tüm eşleşen dosyaları derlemek için dosya adında joker karakterler kullanabilirsiniz. Çıkış dosyası adı belirtilmemişse, derleyici, çıktı dosyasının adını işlenen ilk girdi dosyasında temel alır. Bu genellikle alfabetik olarak görüntülendiklerinde derlenen dosyalar listesindeki ilk dosyadır. Bu nedenle, `-out` seçeneğini kullanarak bir çıkış dosyası belirtmek en iyisidir.  
+ Kullanarak `-recurse`proje dizinindeki tüm eşleşen dosyaları derlemek için dosya adında joker karakterler kullanabilirsiniz. Çıkış dosyası adı belirtilmemişse, derleyici, çıktı dosyasının adını işlenen ilk girdi dosyasında temel alır. Bu genellikle alfabetik olarak görüntülendiklerinde derlenen dosyalar listesindeki ilk dosyadır. Bu nedenle, `-out` seçeneğini kullanarak bir çıkış dosyası belirtmek en iyisidir.  
   
 > [!NOTE]
-> `-recurse` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-recurse` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki komut, geçerli dizindeki tüm Visual Basic dosyalarını derler.  
@@ -42,7 +42,7 @@ Belirtilen dizinin ya da proje dizininin tüm alt dizinlerindeki kaynak kodu dos
 vbc *.vb  
 ```  
   
- Aşağıdaki komut, `Test\ABC` dizinindeki tüm Visual Basic dosyalarını ve altındaki tüm dizinleri derler ve sonra `Test.ABC.dll`oluşturur.  
+ Aşağıdaki komut `Test\ABC` dizindeki tüm Visual Basic dosyalarını ve altındaki tüm dizinleri derler ve sonra üretir `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

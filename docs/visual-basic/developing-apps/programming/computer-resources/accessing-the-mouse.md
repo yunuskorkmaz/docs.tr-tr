@@ -14,17 +14,17 @@ ms.locfileid: "74347012"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Fareye Erişme (Visual Basic)
 
-Nesne, `My.Computer.Mouse` fare varsa, fare sayısı ve fare tekerleği yle ilgili ayrıntılar gibi bilgisayarın faresi hakkında bilgi bulmanın bir yolunu sağlar.  
+`My.Computer.Mouse` Nesnesi, fare gibi bilgisayarın faresi, fare düğmelerinin sayısı ve fare tekerleği hakkındaki ayrıntılar gibi bilgileri bulmak için bir yol sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
- Bu tablo, `My.Computer.Mouse` nesneyle ilişkili görevleri listeler ve her birinin nasıl gerçekleştirilini gösteren konulara işaret ediyor.  
+ Bu tablo, `My.Computer.Mouse` nesnesiyle ilişkili görevleri listeler ve bunların her birinin nasıl yapılacağını gösteren konulara işaret eder.  
   
 |Alıcı|Bkz.|  
 |--------|---------|  
-|Farenin kaydırma tekerleği olup olmadığını belirleyin.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
-|Sol ve sağ fare düğmelerinin değiştirilip değiştirilemediğini belirleme|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
-|Fare tekerleği bir çentik döndürüldüğünde ne kadar kaydırılmayı ayarlayın.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
+|Farenin bir kaydırma tekerleği olup olmadığını belirleme.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Sol ve sağ fare düğmelerinin değiştirilip yüklenmediğini belirleme|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Fare tekerleği bir dişli döndürüldüğünde ne kadar kaydırılacağını ayarlayın.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

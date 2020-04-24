@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bütünleştirilmiş kod kullanarak XSLT dönüşümü gerçekleştirme'
+title: 'Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155981"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: bütünleştirilmiş kod kullanarak XSLT dönüşümü gerçekleştirme
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
 XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derleme doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ve XSLT dosyalarını yerel bilgisayarınıza kopyalamak için  
@@ -85,7 +85,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
     </xsl:stylesheet>  
     ```  
   
-- XML dosyasını yerel bilgisayarınıza kopyalayın ve `books.xml`olarak adlandırın.  
+- XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml`.  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,7 +130,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Komut dosyası etkinken stil sayfasını derlemek için.  
   
-1. Komut satırından aşağıdaki komutu yürütmek `Transform.dll` ve `Transform_Script1.dll` adlı iki derleme oluşturur (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
+1. Komut satırından aşağıdaki komutu yürütmek, ve `Transform.dll` `Transform_Script1.dll` adlı iki derleme oluşturur (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
   
     ```console  
     xsltc /settings:script+ Transform.xsl  
@@ -146,7 +146,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
   
 1. Çözüm Gezgini veya komut satırından bir başvuru ekleyerek Visual Studio 'da bir derlemeyi dahil edebilirsiniz.  
   
-2. Komut satırı için C#, aşağıdakileri kullanın:  
+2. C# ile komut satırı için aşağıdakileri kullanın:  
   
     ```console  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
@@ -177,7 +177,7 @@ xslt.Load(typeof(Transform));
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Assembly.Load%2A>.  
+Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz <xref:System.Reflection.Assembly.Load%2A>..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

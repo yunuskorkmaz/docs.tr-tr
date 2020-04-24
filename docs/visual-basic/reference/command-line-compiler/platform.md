@@ -24,7 +24,7 @@ Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış do
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`x86`|Derlemenizi 32 bit, x86 uyumlu CLR tarafından çalıştırılacak şekilde derler.|  
 |`x64`|, Derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik CLR tarafından çalıştırılacak şekilde derler.|  
@@ -34,7 +34,7 @@ Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış do
 |`anycpu32bitpreferred`|Derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulama, Windows 'un hem 32 bit hem de 64-bit sürümlerinde 32 bitlik bir uygulama olarak çalışacaktır. Bu bayrak yalnızca yürütülebilir dosyalar için geçerlidir (. EXE) ve .NET Framework 4,5 gerektirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çıkış dosyasının hedeflediği işlemcinin türünü belirtmek için `-platform` seçeneğini kullanın.  
+ Çıkış dosyası `-platform` tarafından hedeflenen işlemcinin türünü belirtmek için seçeneğini kullanın.  
   
  Genel olarak, Visual Basic yazılan .NET Framework derlemeleri platformdan bağımsız olarak aynı çalışacaktır. Ancak, farklı platformlarda farklı şekilde davranan bazı durumlar vardır. Bu ortak durumlar şunlardır:  
   
@@ -44,25 +44,25 @@ Ortak dil çalışma zamanının (CLR) hangi platform sürümünün çıkış do
   
 - Tanıtıcılar için `Integer` yerine <xref:System.IntPtr> kullanan yanlış platform çağrıları veya COM bildirimleri.  
   
-- `Integer`<xref:System.IntPtr> atama.  
+- Öğesine <xref:System.IntPtr> `Integer`atama.  
   
 - Tüm platformlarda mevcut olmayan bileşenlerle platform Invoke veya COM birlikte çalışma kullanma.  
   
- Kodunuzun çalışacağı mimariyle ilgili varsayımlar yaptığını biliyorsanız, **-Platform** seçeneği bazı sorunları azaltır. Engelle  
+ Kodunuzun çalışacağı mimariyle ilgili varsayımlar yaptığını biliyorsanız, **-Platform** seçeneği bazı sorunları azaltır. Daha ayrıntılı şekilde belirtmek gerekirse:  
   
 - 64 bitlik bir platformu hedefistemediğinize karar verirseniz ve uygulama 32 bit makinede çalışıyorsa, hata iletisi daha önce gelir ve sorunu bu anahtarı kullanmadan oluşan hatadan daha da hedeflenmiştir.  
   
-- Seçeneğinde `x86` bayrağını ayarlarsanız ve uygulama daha sonra bir 64 bit makinede çalışıyorsa, uygulama yerel olarak çalıştırmak yerine WOW alt sisteminde çalışır.  
+- Seçeneğini seçenekte ayarlarsanız `x86` ve uygulama daha sonra bir 64 bit makinede çalışıyorsa, uygulama yerel olarak ÇALıŞTıRMAK yerine wow alt sisteminde çalışır.  
   
  64 bitlik bir Windows işletim sisteminde:  
   
-- `-platform:x86` ile derlenen derlemeler, WOW64 altında çalışan 32 bitlik CLR üzerinde yürütülür.  
+- İle `-platform:x86` derlenen derlemeler, WOW64 altında çalışan 32 bitlik clr üzerinde yürütülür.  
   
-- `-platform:anycpu` ile derlenen çalıştırılabilir dosyalar 64 bitlik CLR üzerinde yürütülür.  
+- İle `-platform:anycpu` derlenen çalıştırılabilir dosyalar 64 bitlik clr üzerinde yürütülür.  
   
-- `-platform:anycpu` ile derlenen bir DLL, yüklendiği işlemle aynı CLR üzerinde yürütülür.  
+- İle `-platform:anycpu` derlenen bir dll, yüklendiği IŞLEMLE aynı CLR üzerinde yürütülür.  
   
-- `-platform:anycpu32bitpreferred` ile derlenen çalıştırılabilir dosyalar 32 bitlik CLR üzerinde yürütülür.  
+- İle `-platform:anycpu32bitpreferred` derlenen yürütülebilir dosyalar 32 bitlik clr üzerinde yürütülür.  
   
  Windows 'un 64 bitlik bir sürümünde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).  
   

@@ -19,11 +19,11 @@ Belge türü tanımları (DTD 'Ler) ad alanı desteğini karmaşıklaştırır. 
   
  Bu yapı için izin veriliyorsa aşağıdakiler olası çözümlerdir:  
   
-- `x:` bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek bir `xmlns:x` ad alanı bildirimi kullanılarak çözümlenebilmelidir ve bu da DTD 'de bir yerde bulunmalıdır. Bu öneki örnek belgesinde farklı bir şeye eşlemek hatadır.  
+- `x:` , Bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek bir `xmlns:x` ad alanı bildirimi kullanılarak ÇÖZÜMLENEBILMELIDIR, bu da DTD 'de bir yerde bulunmalıdır. Bu öneki örnek belgesinde farklı bir şeye eşlemek hatadır.  
   
-- `x:`, bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek, örnek öğelerinin bağlamında her zaman çözümlenir. Bu, önek aslında `item` öğesinin göründüğü ad alanı kapsamına bağlı olarak farklı ad alanı Tekdüzen Kaynak tanımlayıcılarına (URI) eşleyebileceğiniz anlamına gelir. Bu davranış, önceki madde işaretinde verilen çözünürlükten daha öngörülebilir hale gelir, ancak varsayılan özniteliklerin gerçekleştirilmiş olması gerektiğinden diğer karmaşık kollar vardır.  
+- `x:` , Bir ad alanı öneki olarak değerlendirilir, ancak bu ön ek, örnek öğelerinin bağlamında her zaman çözümlenir. Bu, önekinin, `item` öğenin göründüğü ad alanı kapsamına bağlı olarak, aslında farklı ad alanı Tekdüzen Kaynak tanımlayıcılarına (URI 'ler) eşleme olabileceği anlamına gelir. Bu davranış, önceki madde işaretinde verilen çözünürlükten daha öngörülebilir hale gelir, ancak varsayılan özniteliklerin gerçekleştirilmiş olması gerektiğinden diğer karmaşık kollar vardır.  
   
-- İki nokta üst üste, bir DTD 'de olduğundan ve özniteliğin adı `x:y`, ön ek ve ad alanı URI 'SI olmadığından yok sayılır.  
+- İki nokta üst üste, bir DTD 'de olduğundan ve özniteliğin adı `x:y`, ön ek ve ad alanı URI 'si olmadığından yok sayılır.  
   
 - Varsayılan öznitelikteki iki nokta üst üste, bir DTD içindeki adlarda iki nokta üst üsteyle desteklenmediğini söyleyen bir özel durum oluşturur. Bu, öngörülebilir bir davranışa neden olur, ancak World Wide Web Konsorsiyumu (W3C) yayımlanmış DTD 'lerin çoğunu yükleyemeyeceğiniz anlamına gelir.  
   

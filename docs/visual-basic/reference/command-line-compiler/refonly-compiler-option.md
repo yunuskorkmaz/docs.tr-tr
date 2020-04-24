@@ -16,7 +16,7 @@ ms.locfileid: "74348571"
 ---
 # <a name="-refonly-visual-basic"></a>-Yalnızca ref(Visual Basic)
 
-**-Refonly** seçeneği, derlemenin birincil çıktısının uygulama derlemesi yerine bir başvuru derlemesi olması gerektiğini gösterir. Başvuru derlemeleri yürütülene kadar `-refonly` parametresi, pdb 'leri çıktısını sessizce devre dışı bırakır.
+**-Refonly** seçeneği, derlemenin birincil çıktısının uygulama derlemesi yerine bir başvuru derlemesi olması gerektiğini gösterir. Başvuru `-refonly` derlemeleri yürütülene kadar parametresi, pdb 'leri çıktısını yeniden devre dışı bırakır.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,11 +28,11 @@ ms.locfileid: "74348571"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Visual Basic, sürüm 15,3 ' den başlayarak `-refonly` anahtarını destekler.
+Visual Basic, `-refonly` sürüm 15,3 ' den başlayarak anahtarı destekler.
 
 Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
-`-refonly` ve [`-refout`](refout-compiler-option.md) seçenekleri birbirini dışlıyor.
+`-refonly` Ve [`-refout`](refout-compiler-option.md) seçenekleri birbirini dışlıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

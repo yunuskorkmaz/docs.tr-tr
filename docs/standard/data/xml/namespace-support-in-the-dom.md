@@ -13,13 +13,13 @@ ms.locfileid: "75710615"
 # <a name="namespace-support-in-the-dom"></a>DOM Ad Alanı Desteği
 XML Belge Nesne Modeli (DOM) tamamen ad alanı farkındır. Yalnızca ad alanı algılayan XML belgeleri desteklenir. World Wide Web Konsorsiyumu (W3C), düzey 1 ' i uygulayan DOM uygulamalarının ad alanı kullanmayan ve DOM düzeyi 2 özelliklerinin ad alanı duyarlı olduğunu belirtir. Ancak, yöntemin düzey 1 veya düzey 2 DOM önermesinden bağımsız olarak, XML DOM 'daki tüm özellikler ad alanı farkındır.  
   
- Örneğin, ad alanı kullanmayan bir ayarda, DOM düzey 1 Önerinde belirtildiği gibi `setAttribute("A:b", "123")`çağırmak, `A` ön ekine ve `b`yerel adına sahip bir özniteliğe neden olmaz. `A:b`değeri olan bir özniteliğe neden olur.  
+ Örneğin, ad alanı kullanmayan bir ayarda, DOM düzey 1 Önerinde `setAttribute("A:b", "123")`belirtildiği gibi çağırmak, öneki `A` ve yerel adı olan bir öznitelik ile sonuçlanmaz `b`. Bu, değerine `A:b`sahip bir özniteliğe neden olur.  
   
- Ad alanı kullanan bir ortamda, DOM düzey 2 `setAttribute("A:b", "123")` çağrısı, `A` ön ekine ve `b`yerel adına sahip bir özniteliğe neden olur. Microsoft .NET Framework DOM 'ın çalışması budur.  
+ Ad alanı kullanan bir ortamda, DOM düzey 2 `setAttribute("A:b", "123")` ' ye yapılan çağrı, öneki `A` ve yerel adı olan bir özniteliğe neden olur. `b` Microsoft .NET Framework DOM 'ın çalışması budur.  
   
- Bu nedenle, ad parametresi alan tüm yöntemler için, bu yöntemler adı nitelemek için de bir ön ek alır. **SetAttribute** DOM düzey 1 yöntemindeki `A:b` gibi ad parametresi aşağıdaki gibi ayrıştırılır:  
+ Bu nedenle, ad parametresi alan tüm yöntemler için, bu yöntemler adı nitelemek için de bir ön ek alır. **SetAttribute** DOM düzey 1 yönteminde olduğu `A:b` gibi ad parametresi aşağıdaki gibi ayrıştırılır:  
   
-- İki nokta üst üste yoksa (:) sonra yerel ad `name` parametresine ayarlanır ve önek ve NamespaceURI Boş dizelerdir.  
+- İki nokta üst üste yoksa (:) sonra yerel ad `name` parametreye ayarlanır ve önek ve NamespaceURI Boş dizelerdir.  
   
 - İki nokta üst üste bulursa, ad, ilk iki nokta karakterinin konumunu temel alarak iki bölüme ayrılır. Ön ek, iki nokta üst üste gelmeden önce bulunan dizeye ayarlanır ve yerel ad, iki nokta üst üsteden sonra bulunan dizeye ayarlanır. NamespaceURI değeri kullanmayan yöntemler için, NamespaceURI çözümlenmez ve boş dize olarak ayarlanır. Aksi halde, NamespaceURI yöntemine geçirilen dizeye ayarlanır. Ön ek tanımlanmamışsa, **Save** yöntemi ve **InnerXml** ve **OuterXml** özellikleri başarısız olur.  
   

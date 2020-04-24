@@ -20,16 +20,16 @@ ms.locfileid: "74349212"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Kullanıcı Verilerine Erişme (Visual Basic)
 
-Bu bölümde, `My.User` nesneyle ilgili konular ve onunla gerçekleştirebileceğiniz görevler yer almaktadır.  
+Bu bölümde, `My.User` ile gerçekleştirebileceğiniz nesne ve görevlerle ilgili konular yer almaktadır.  
   
- Nesne, `My.User` <xref:System.Security.Principal.IPrincipal> arabirimi uygulayan bir nesneyi döndürerek oturum açmış kullanıcı hakkındaki bilgilere erişim sağlar.  
+ `My.User` Nesnesi, <xref:System.Security.Principal.IPrincipal> arabirimi uygulayan bir nesne döndürerek oturum açmış kullanıcı hakkındaki bilgilere erişim sağlar.  
   
 ## <a name="tasks"></a>Görevler  
   
 |Alıcı|Bkz.|  
 |--------|---------|  
-|Kullanıcının oturum açma adını alma|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Uygulama Windows kimlik doğrulaması kullanıyorsa, kullanıcının etki alanı adını alın|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|Kullanıcının oturum açma adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|Uygulamanın Windows kimlik doğrulamasını kullanması durumunda kullanıcının etki alanı adını al|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |Kullanıcının rolünü belirleme|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

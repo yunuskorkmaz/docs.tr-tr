@@ -23,17 +23,17 @@ Derleyicinin yaygın olarak kullanılan .NET Framework derlemelerine otomatik ol
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 seçeneği derleyiciye, vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası ile derlenmeyeceğini söyler. Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır. @No__t-0 seçeneği belirtilmediği takdirde derleyici System. dll derlemesine dolaylı olarak başvurur. @No__t-0 seçeneği, derleyicinin Vbc. rsp ile derlenmeyeceğini veya System. dll derlemesine otomatik olarak başvurmayacağını söyler.  
+ `-noconfig` Seçeneği, derleyicinin Vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası ile derlenmeyeceğini söyler. Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır. `-nostdlib` Seçenek belirtilmediği takdirde derleyici System. dll derlemesine dolaylı olarak başvurur. `-nostdlib` Seçeneği, derleyicinin Vbc. rsp ile derlenmeyeceğini veya System. dll derlemesine otomatik olarak başvurmayacağını söyler.  
   
 > [!NOTE]
 > Mscorlib. dll ve Microsoft. VisualBasic. dll derlemelerine her zaman başvurulur.  
   
- Vbc. rsp dosyasını, her Vbc. exe derlemesine dahil edilecek ek derleyici seçeneklerini belirtmek için değiştirebilirsiniz (`-noconfig` seçeneği belirtildiğinde hariç). Daha fazla bilgi için bkz. [@ (yanıt dosyası belirtme)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md).  
+ Vbc. rsp dosyasını, her Vbc. exe derlemesine dahil edilecek ek derleyici seçeneklerini belirtmek için değiştirebilirsiniz ( `-noconfig` seçeneğini belirtirken hariç). Daha fazla bilgi için bkz. [@ (yanıt dosyası belirtme)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md).  
   
- Derleyici en son `vbc` komutuna geçirilen seçenekleri işler. Bu nedenle, komut satırındaki herhangi bir seçenek, vbc. rsp dosyasında aynı seçeneğin ayarını geçersiz kılar.  
+ Derleyici, son `vbc` komuta geçirilen seçenekleri işler. Bu nedenle, komut satırındaki herhangi bir seçenek, vbc. rsp dosyasında aynı seçeneğin ayarını geçersiz kılar.  
   
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-noconfig` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

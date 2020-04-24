@@ -11,19 +11,19 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710771"
 ---
 # <a name="inferring-an-xml-schema"></a>XML Şemasından Çıkarım Yapma
-Bir XML belgesi yapısından bir XML şeması tanım dili (XSD) şeması çıkarması için şema nesne modeli (SOM) <xref:System.Xml.Schema.XmlSchemaInference> sınıfının nasıl kullanılacağını açıklar.  
+Bir XML belgesi yapısından bir XML şeması tanım dili (XSD <xref:System.Xml.Schema.XmlSchemaInference> ) şeması çıkarması Için şema nesne MODELI (som) sınıfının nasıl kullanılacağını açıklar.  
   
- <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki şema nesne modeli (SOM) <xref:System.Xml.Schema.XmlSchemaInference> sınıfı, bir XML belgesi yapısından bir XML şeması tanım dili (XSD) şeması çıkarmanızı sağlar. <xref:System.Xml.Schema.XmlSchemaInference> sınıfı, XML belgesini doğrulayabilecek bir XML şeması çıktı.  
+ Ad alanındaki şema nesne modeli (SOM <xref:System.Xml.Schema.XmlSchemaInference> ) sınıfı, bir XML belgesi YAPıSıNDAN bir XML şeması tanım DILI (xsd) şeması çıkarmanızı sağlar. <xref:System.Xml.Schema?displayProperty=nameWithType> <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı, XML belgesini doğrulayabilecek bir XML şeması çıktı.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- Bir XML belgesi yapısından bir şemayı çıkarsmak için <xref:System.Xml.Schema.XmlSchemaInference> sınıfının nasıl kullanılacağını açıklar.  
+ <xref:System.Xml.Schema.XmlSchemaInference> SıNıFıNıN bir XML belgesi yapısından bir şemayı çıkarması için nasıl kullanılacağını açıklar.  
   
  [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
  Çıkarım işleminin bir XML belgesinde karşılaşılan düğüm türlerini şema yapısına nasıl dönüştürdüğünde açıklar.  
   
  [Basit Türlerin Çıkarımını Yapma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)  
- <xref:System.Xml.Schema.XmlSchemaInference> sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
+ <xref:System.Xml.Schema.XmlSchemaInference> Sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

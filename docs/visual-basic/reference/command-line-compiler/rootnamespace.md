@@ -25,23 +25,23 @@ Tüm tür bildirimleri için bir ad alanı belirtir.
 -rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`namespace`|Geçerli proje için tüm tür bildirimlerinin içine alınacağı ad alanının adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Visual Studio tümleşik geliştirme ortamında oluşturulan bir projeyi derlemek için Visual Studio yürütülebilir dosyası (devenv. exe) kullanırsanız, <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> özelliğinin değerini belirtmek için `-rootnamespace` ' ı kullanın. Daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](/visualstudio/ide/reference/devenv-command-line-switches) .  
+ Visual Studio tümleşik geliştirme ortamında oluşturulan bir projeyi derlemek için Visual Studio yürütülebilir dosyası (devenv. exe) kullanırsanız, `-rootnamespace` <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> özelliğinin değerini belirtmek için kullanın. Daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](/visualstudio/ide/reference/devenv-command-line-switches) .  
   
- Çıkış dosyanızdaki ad alanı adlarını görüntülemek için ortak dil çalışma zamanı MSIL Disassembler (`Ildasm.exe`) kullanın.  
+ Çıkış dosyanızdaki ad alanı adlarını görüntülemek için ortak dil`Ildasm.exe`çalışma zamanı MSIL Disassembler () kullanın.  
   
 |Visual Studio tümleşik geliştirme ortamında Set-RootNamespace|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **kök ad alanı** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve ad alanındaki tüm tür bildirimlerini `mynamespace` ' de barındırır.  
+ Aşağıdaki kod, ad `In.vb` alanındaki `mynamespace`tüm tür bildirimlerini derler ve içine alır.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
@@ -50,5 +50,5 @@ vbc -rootnamespace:mynamespace in.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Ildasm.exe (IL Ayrıştırıcı)](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [Ildadsm. exe (Il ayırıcı)](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

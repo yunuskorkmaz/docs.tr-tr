@@ -17,22 +17,22 @@ ms.locfileid: "74334587"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Metin Dosyalarını Okuma
 
-`My.Computer.FileSystem` Nesnenin <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> yöntemi bir metin dosyasından okumanızı sağlar. Dosyanın içeriği ASCII veya UTF-8 gibi bir kodlama kullanıyorsa dosya kodlaması belirtilebilir.
+`My.Computer.FileSystem` Nesnesinin <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> yöntemi bir metin dosyasından okumanızı sağlar. Dosyanın içeriği ASCII veya UTF-8 gibi bir kodlama kullanıyorsa dosya kodlaması belirtilebilir.
 
 Genişletilmiş karakterler içeren bir dosyadan okuma yapıyorsanız, dosya kodlamasını belirtmeniz gerekir.
 
 > [!NOTE]
-> Bir dosyayı bir defada tek bir metin <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> satırı `My.Computer.FileSystem` okumak için nesnenin yöntemini kullanın. `OpenTextFileReader` metodu bir <xref:System.IO.StreamReader> nesnesi döndürür. Bir dosyayı <xref:System.IO.StreamReader.ReadLine%2A> bir `StreamReader` defada bir satır okumak için nesnenin yöntemini kullanabilirsiniz. `StreamReader` Nesnenin <xref:System.IO.StreamReader.EndOfStream%2A> yöntemini kullanarak dosyanın sonu için test edebilirsiniz.
+> Tek seferde tek satırlık bir dosyayı okumak için <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> `My.Computer.FileSystem` nesnenin yöntemini kullanın. `OpenTextFileReader` metodu bir <xref:System.IO.StreamReader> nesnesi döndürür. Tek seferde bir dosyayı <xref:System.IO.StreamReader.ReadLine%2A> bir satırı okumak `StreamReader` için nesnesinin yöntemini kullanabilirsiniz. `StreamReader` Nesnesinin <xref:System.IO.StreamReader.EndOfStream%2A> yöntemini kullanarak dosyanın sonuna kadar test edebilirsiniz.
 
 ## <a name="to-read-from-a-text-file"></a>Bir metin dosyasından okumak için
 
-Bir `ReadAllText` metin dosyasının içeriğini bir dize halinde okumak ve yolu sağlamak için `My.Computer.FileSystem` nesnenin yöntemini kullanın. Aşağıdaki örnek, test.txt dosyasının içeriği okuyup bir dize haline getirir ve sonra da bir ileti kutusunda görüntüler.
+Bir metin `ReadAllText` dosyasının içeriğini bir `My.Computer.FileSystem` dizeye okumak ve yolu sağlamak için nesnesinin yöntemini kullanın. Aşağıdaki örnek, test.txt dosyasının içeriği okuyup bir dize haline getirir ve sonra da bir ileti kutusunda görüntüler.
 
 [!code-vb[VbFileIORead#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#2)]
 
 ### <a name="to-read-from-a-text-file-that-is-encoded"></a>Kodlanmış bir metin dosyasından okumak için
 
-Yol `ReadAllText` ve dosya `My.Computer.FileSystem` kodlama türünü sağlayarak bir metin dosyasının içeriğini bir dize halinde okumak için nesnenin yöntemini kullanın. Aşağıdaki örnek, UTF32 biçimindeki test.txt dosyasının içeriği okuyup bir dize haline getirir ve sonra da bir ileti kutusunda görüntüler.
+Bir metin `ReadAllText` dosyasının içeriğini bir `My.Computer.FileSystem` dizeye okumak için nesnesinin yöntemini kullanın, yol ve dosya kodlama türünü sağlar. Aşağıdaki örnek, UTF32 biçimindeki test.txt dosyasının içeriği okuyup bir dize haline getirir ve sonra da bir ileti kutusunda görüntüler.
 
 [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]
 
@@ -40,23 +40,23 @@ Yol `ReadAllText` ve dosya `My.Computer.FileSystem` kodlama türünü sağlayara
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunlukta bir dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, ya da bir aygıt yolu ( ).<xref:System.ArgumentException>
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (<xref:System.ArgumentException>).
 
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
 
 - Dosya yok (<xref:System.IO.FileNotFoundException>).
 
-- Dosya başka bir işlem tarafından kullanılıyor veya G/Ç<xref:System.IO.IOException>hatası oluşur ( ).
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).
 
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
 
-- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
 
-- Arabellek için dize yazmak için yeterli<xref:System.OutOfMemoryException>bellek yoktur ( ).
+- Dizeyi arabelleğe (<xref:System.OutOfMemoryException>) yazmak için yeterli bellek yok.
 
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
 
-Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası Visual Basic kaynak dosyası olmayabilir.
+Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.
 
 Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.
 

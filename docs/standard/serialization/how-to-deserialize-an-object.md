@@ -17,11 +17,11 @@ ms.locfileid: "75559904"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>XmlSerializer kullanarak bir nesne serisini kaldırma
 
-Bir nesnenin serisini kaldırdığınızda, aktarım biçimi bir akış veya dosya nesnesi oluşturup oluşturamayacağını belirler. Aktarım biçimi saptandıktan sonra, gerektiğinde <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> veya <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemlerini çağırabilirsiniz.
+Bir nesnenin serisini kaldırdığınızda, aktarım biçimi bir akış veya dosya nesnesi oluşturup oluşturamayacağını belirler. Aktarım biçimi saptandıktan sonra, <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> veya <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> yöntemlerini gerektiği şekilde çağırabilirsiniz.
 
 ## <a name="to-deserialize-an-object"></a>Bir nesnenin serisini kaldırmak için
 
-1. Seri durumdan çıkarılacak nesnenin türünü kullanarak bir <xref:System.Xml.Serialization.XmlSerializer> oluşturun.
+1. Seri durumdan <xref:System.Xml.Serialization.XmlSerializer> çıkarılacak nesnenin türünü kullanarak oluşturun.
 
 1. Arama <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> nesnenin bir kopyasını oluşturmak için yöntemi. Seri durumdan çıkarma sırasında döndürülen nesneyi, aşağıdaki örnekte gösterildiği gibi, bir dosyanın bir dosyadan serileştirerek (bir akıştan seri durumdan çıkarılabilse de), bu nesnenin özgün türüne atamalısınız.
 

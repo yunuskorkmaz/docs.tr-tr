@@ -1,102 +1,123 @@
 ---
-title: İş senaryolarını örnekleyin ve sunucusuz uygulamalar için kılıfları kullanın
-description: Görüntü işlemeden mobil arka uçlara ve ETL ardışık hatlara kadar değişen örneklere erişerek uygulamalı bir yaklaşımla sunucusuz öğrenin.
+title: Sunucusuz uygulamalar için örnek iş senaryoları ve kullanım örnekleri
+description: Görüntü işlemeden mobil desteğe ve ETL işlem hattına kadar olan örneklere erişerek, uygulamalı bir yaklaşım ile sunucusuz öğrenin.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/17/2020
+ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76787889"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135665"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
-Sunucusuz uygulamalar için birçok kullanım örnekleri ve senaryolar vardır. Bu bölümde, farklı senaryoları gösteren örnekler içerir. Senaryolar, ilgili belgelere ve genel kaynak kodu depolarına bağlantılar içerir. Bu bölümdeki örnekler, kendi binanıza ve sunucusuz çözümleri uygulamaya başlamanızı sağlar.
+Sunucusuz uygulamalar için birçok kullanım durumu ve senaryosu vardır. Bu bölümde, farklı senaryoları gösteren örnekler yer almaktadır. Senaryolar ilgili belgelerin ve genel kaynak kodu depolarının bağlantılarını içerir. Bu bölümdeki örnekler, kendi oluşturma ve sunucusuz çözümler uygulamanıza başlamanızı sağlar.
 
-## <a name="analyze-and-archive-images"></a>Görüntüleri analiz ve arşivleme
+## <a name="big-data-processing"></a>Büyük veri işleme
 
-Bu örnek, sunucusuz olayları (Olay Izgarası), iş akışlarını (Mantık Uygulaması) ve kodu (Azure İşlevleri) gösterir. Ayrıca nasıl başka bir kaynak ile entegre gösterir, bu durumda görüntü analizi için Bilişsel Hizmetler.
+![Şemayı eşleme/azaltma](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/media/mapreducearchitecture.png)
 
-Konsol uygulaması, web'deki bir URL'ye bağlantı aktarmanızı sağlar. Uygulama URL'yi olay ızgara iletisi olarak yayımlar. Buna paralel olarak, sunucusuz bir işlev uygulaması ve bir mantık uygulaması iletiyi abone eder. Sunucusuz işlev uygulaması, görüntüyü blob depolamaalanına serileştirir. Ayrıca bilgileri Azure Tablo Depolama'da da saklar. Meta veriler orijinal resim URL'sini ve blob resminin adını depolar. Mantık uygulaması, görüntüyü analiz etmek ve makine tarafından oluşturulan bir başlık oluşturmak için Özel Vizyon API'si ile etkileşime girer. Resim yazısı meta veri tablosunda depolanır.
+Bu örnek, büyük bir veri kümesinde bir eşleme/azaltma işlemi yapmak için sunucusuz kullanır. 2017 ' de günde yeni York sarı vergilenme dönüşlerin ortalama hızını belirler.
 
-![Görüntü mimarisini analiz et ve arşivle](./media/image-processing-example.png)
+[Büyük veri Işleme: Azure 'da sunucusuz MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
 
-Ayrı bir tek sayfa uygulaması (SPA), görüntülerin ve meta verilerin listesini almak için sunucusuz bir işlev çağırır. Her görüntü için, arşivdeki görüntü verilerini sağlayan başka bir işlev çağırır. Nihai sonuç, otomatik altyazıları olan bir galeridir.
+## <a name="create-serverless-applications-hands-on-lab"></a>Sunucusuz uygulamalar oluşturma: Uygulamalı laboratuvar
 
-![Otomatik resim galerisi](./media/automated-image-gallery.png)
+Sunucu tarafı mantığı çalıştırmak ve sunucusuz mimariler oluşturmak için işlevleri kullanmayı öğrenin.
 
-Mantık uygulaması oluşturmak için tam deposu ve talimatları burada mevcuttur: [Olay ızgara tutkal](https://github.com/JeremyLikness/Event-Grid-Glue).
+- İşletmeniz için en iyi Azure hizmetini seçme
+- Azure Işlevleri oluşturma
+- Tetikleyicileri kullanma
+- Zincirleme işlevleri
+- Uzun süre çalışan iş akışları
+- İzleme
+- Geliştirme, test ve dağıtım
 
-## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Xamarin.Forms ve işlevleri kullanarak çapraz platform mobil istemci
+[Sunucusuz uygulamalar oluşturma](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
 
-Azure Web Portalı'nda veya Visual Studio'da basit bir sunucusuz Azure İşi'nin nasıl uygulanacağını görün. Android, iOS ve Windows'da çalışan Xamarin.Forms ile bir istemci oluşturun. Uygulama daha sonra sunucu ve sunucusuz arka uç ile mobil istemciler arasında bir iletişim aracı olarak JavaScript Nesne Gösterimi (JSON) kullanmak için rafine edilir.
+## <a name="customer-reviews"></a>Müşteri İncelemeleri
 
-Daha fazla bilgi için bkz: [Xamarin.Forms istemcisi ile basit bir Azure İşlevi uygulama.](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+Bu örnek, Visual Studio 'da C# sınıf kitaplıkları için yeni Azure Işlevleri araçları 'nı örnekler. Müşterilerin Azure depolama Blobları ve CosmosDB 'de depolanan ürün incelemelerini göndermesi için bir Web sitesi oluşturun. Azure bilişsel hizmetler 'i kullanarak müşteri incelemelerinin otomatik olarak yönetimini gerçekleştirmek için bir Azure Işlevi ekleyin. Web sitesini işlevden ayırmak için bir Azure depolama kuyruğu kullanın.
 
-## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Sunucusuz görüntü tanıma özelliğine sahip bir fotoğraf mozaiği oluşturma
+[Bilişsel hizmetler ile müşteri Incelemeleri uygulaması](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
 
-Örnek, giriş görüntüsünden bir fotoğraf mozaiği oluşturmak için Azure İşlevlerini ve Microsoft Bilişsel Hizmetler Özel Görme Hizmeti'ni kullanır. Model görüntüleri tanımak için eğitildi. Bir resim yüklendiğinde, görüntüyü tanır ve Bing ile arama lar. Orijinal görüntü, arama sonuçları kullanılarak yeniden oluşturulur.
+## <a name="docker-linux-image-support"></a>Docker Linux görüntü desteği
 
-![Orlando göz fotoğrafı ve mozaik](./media/orlando-eye-both.png)
+Bu örnek, bir Linux Docker `Dockerfile` kapsayıcısında Azure işlevleri oluşturmak ve çalıştırmak için nasıl oluşturulacağını gösterir.
 
-Örneğin, modelinizi Orlando Eye gibi Orlando simge yapıları ile eğitebilirsiniz. Özel Vizyon Orlando Göz bir görüntü tanıyacak, ve işlevi için Bing görüntü arama sonuçlarıoluşan bir fotoğraf mozaik yaratacak "Orlando Eye."
+[Linux 'ta Azure Işlevleri](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
 
-Daha fazla bilgi için Azure [Fonksiyonları fotoğraf mozaik jeneratörüne](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)bakın.
+## <a name="file-processing-and-validation"></a>Dosya işleme ve doğrulama
 
-## <a name="migrate-an-existing-application-to-the-cloud"></a>Varolan bir uygulamayı buluta geçirme
+Bu örnek, kuramsal müşterilerden bir CSV dosyası kümesini ayrıştırır. "Batch" müşterisi için gereken tüm dosyaların kullanılabilir olmasını sağlar ve sonra her bir dosyanın yapısını doğrular. Azure Işlevleri, Logic Apps ve Dayanıklı İşlevler kullanılarak farklı çözümler sunulmaktadır.
 
-Önceki bölümlerde tartışıldığı gibi, başvurunuzu şirket içinde barındırmak için n-tier mimarisini benimsemek yaygındır. Sanal makineleri kullanarak kaynakları "olduğu gibi" geçirmek buluta giden en az riskli yol olsa da, birçok şirket uygulamalarını yeniden düzenleme fırsatını kullanmayı tercih eder. Neyse ki, refactoring bir "ya hep ya hiç" çaba olmak zorunda değildir. Aslında, uygulamanızı geçirip parçaları bulut yerel benzerleriyle parça parça değiştirmek mümkündür.
+[Azure Işlevleri, Logic Apps ve Dayanıklı İşlevler kullanarak dosya işleme ve doğrulama](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
 
-Uygulama, eski şirket içi koddan sunucusuz bir bitiş noktasına bir bitiş noktası nı yeniden düzenlemeyi etkinleştirmek için Azure İşlevlerinin yakınlık özelliğini kullanır.
+## <a name="game-data-visualization"></a>Oyun verileri görselleştirme
 
-![Geçiş mimarisi](./media/migration-architecture.png)
+![Oyun telemetrisi](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/media/points.png)
 
-Proxy, tek tek istekleri sunucusuz işlevlere taşındıklarında yeniden yönlendirmek için güncelleştirilen tek bir API bitiş noktası sağlar.
+Bir geliştiricinin oyunları için bir düzenleyici veri görselleştirme çözümünü nasıl uygulayamayacağı hakkında bir örnek. Aslında, bir Unreal Engine 4 eklentisi ve Unity eklentisi arka ucu olarak bu örnek kullanılarak geliştirilmiştir. Hizmet bileşeni, oyun altyapısı belirsiz.
 
-Tüm geçiş boyunca yürüyen bir videoyu görüntüleyebilirsiniz: [Sunucusuz Azure işlevleriyle kaldırma ve kaydırma.](https://channel9.msdn.com/Events/Connect/2017/E102) Örnek koda erişin: [Kendi uygulamanızı getirin.](https://github.com/JeremyLikness/bring-own-app-connect-17)
+[Düzenleyici içi oyun telemetri görselleştirmesi](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
 
-## <a name="parse-a-csv-file-and-insert-into-a-database"></a>CSV dosyalarını ayrıştın ve veritabanına ekleme
+## <a name="graphql"></a>GraphQL
 
-Ayıklama, Dönüştürme ve Yükleme (ETL), farklı sistemleri entegre eden ortak bir iş fonksiyonudur. Geleneksel yaklaşımlar genellikle özel FTP sunucuları ayarlamayı ve zamanlanmış işleri dosyaları ayrıştırmak ve iş amaçlı çevirmek için dağıtmayı içerir. Sunucusuz mimari, dosya yüklendiğinde bir tetikleyici ateş edebileceğinden işi kolaylaştırır. Azure İşlevler, belirli bir soruna odaklanan küçük kod parçalarını ideal bileşimi aracılığıyla ETL gibi görevleri ele alır.
+GraphQL API 'sini kullanıma sunan sunucusuz bir işlev oluşturun.
 
-![CSV ayrıştma işlemini gösteren ekran görüntüsü.](./media/serverless-business-scenarios/csv-parse-database-import.png)
+[GraphQL için sunucusuz işlevler](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
 
-Kaynak kodu ve uygulamalı laboratuvar için [CSV alma laboratuvarına](https://github.com/JeremyLikness/azure-fn-file-process-hol)bakın.
+## <a name="internet-of-things-iot-reliable-edge-relay"></a>Nesnelerin İnterneti (IoT) güvenilir Edge geçişi
 
-## <a name="shorten-links-and-track-metrics"></a>Bağlantıları kısaltma ve ölçümleri izleme
+![IoT mimarisi](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/media/architecture.png)
 
-Bağlantı kısaltma araçları başlangıçta 140 karakter sınırını karşılamak için kısa twitter gönderilerinde URL'lerin kodlanmasına yardımcı oldu. Bunlar, en yaygın olarak analitik için tıklamaları izlemek için çeşitli kullanımları kapsayacak şekilde büyüdü. Bağlantı kısaltıcı senaryosu, bağlantıları ve rapor ölçümlerini yöneten tamamen sunucusuz bir uygulamadır.
+Bu örnek, IoT cihazlarından güvenilir yukarı akış iletişimini etkinleştirmek için yeni bir iletişim protokolü uygular. Veri boşluğu algılamayı ve geri dolguyu otomatikleştirir.
 
-Azure İşlevleri, uzun URL'yi yapıştırıp kısa URL'ler oluşturmanıza olanak tanıyan tek sayfalı bir Uygulama (SPA) sunmak için kullanılır. URL'ler kampanyalar (konular) ve ortamlar (bağlantıların yayınlandığı sosyal ağlar gibi) gibi şeyleri izlemek için etiketlenir. Kısa kod, anahtar olarak Azure Tablo Depolama'da, değeri uzun URL ile depolanır. Kısa bağlantıyı tıklattığınızda, başka bir işlev uzun URL'yi arar, yeniden yönlendirme gönderir ve olay la ilgili bilgileri sıraya yerleştirir. Başka bir Azure İşlevi sırayı işler ve bilgileri Azure Cosmos DB'ye yerleştirir.
+[IoT güvenilir Edge geçişi](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
 
-![Bağlantı kısaltıcı mimarisi](./media/link-shortener-architecture.png)
+## <a name="microservices-reference-architecture"></a>Mikro hizmetler başvuru mimarisi
 
-Daha sonra toplanan veriler hakkında bilgi toplamak için bir Power BI panosu oluşturabilirsiniz. Arka uçta, Application Insights önemli ölçümler sağlar. Telemetri, ortalama bir kullanıcının yeniden yönlendirmesinin ne kadar sürdüğünü ve Azure Tablo Depolama'ya erişme nin ne kadar sürdüğünü içerir.
+![Başvuru mimarisi](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/media/macro-architecture.png)
 
-![Güç BI örneği](./media/power-bi-example.png)
+Reuna bulut uygulamasına (kurgusal bir şirket) göre grup tasarlama, geliştirme ve sunma konusunda karar veren işlem sürecinde size kılavuzluk eden bir başvuru mimarisi. Mimarinin tüm bileşenlerini yapılandırmaya ve dağıtmaya yönelik uygulamalı yönergeler içerir.
 
-Talimatlar ile tam bağlantı kısaltıcı deposu burada mevcuttur: [Serverless URL kısaltıcı](https://github.com/jeremylikness/serverless-url-shortener). Burada basitleştirilmiş bir sürüm hakkında bilgi edinebilirsiniz: [Sunucusuz .NET uygulamaları için Azure Depolama dakika içinde](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+[Sunucusuz mikro hizmetler başvuru mimarisi](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
-## <a name="verify-device-connectivity-using-a-ping"></a>Ping kullanarak aygıt bağlantısını doğrulama
+## <a name="migrate-console-apps-to-serverless"></a>Konsol uygulamalarını sunucusuz 'e geçirme
 
-Örnek, bir Azure IoT Hub'ı ve bir Azure İşlevi'nden oluşur. IoT Hub'daki yeni bir ileti Azure İşi'ni tetikler. Sunucusuz kod, aynı ileti içeriğini gönderen aygıta geri gönderir. Proje, çözüm için gereken tüm kod ve dağıtım yapılandırmasına sahiptir.
+Bu örnek, herhangi bir konsol uygulamasını`.csx` Azure IŞLEVLERINDE bir http Web hizmetine dönüştürmek için kullanılabilen genel bir işlevdir (dosya). Tek yapmanız gereken, `.exe`bir yapılandırma dosyasını düzenleyeceğiniz ve öğesine bağımsız değişken olarak geçirilecek giriş parametrelerini belirtmelidir.
 
-Daha fazla bilgi için [Azure IoT Hub ping'ine](https://github.com/Azure-Samples/iot-hub-node-ping)bakın.
+[Konsol uygulamalarını Azure Işlevleri üzerinde çalıştırma](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
 
-## <a name="recommended-resources"></a>Önerilen kaynaklar
+## <a name="serverless-for-mobile"></a>Mobil için sunucusuz
 
-- [Azure Fonksiyonları fotoğraf mozaik jeneratör](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
-- [Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping)
-- [Dakikalar içinde sunucusuz .NET uygulamaları için Azure Depolama](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-- [Kendi uygulamanızı getirin](https://github.com/JeremyLikness/bring-own-app-connect-17)
-- [CSV ithalat laboratuvarı](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-- [Olay ızgara tutkal](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Xamarin.Forms istemcisi ile basit bir Azure İşi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
-- [Sunucusuz Azure işlevleriyle kaldırma ve kaydırma](https://channel9.msdn.com/Events/Connect/2017/E102)
-- [Sunucusuz URL kısaltıcı](https://github.com/jeremylikness/serverless-url-shortener)
+Azure Işlevlerinin kolayca uygulanması ve bakımını yapmak ve HTTP üzerinden erişilebilir olması kolay bir işlemdir. Bir mobil uygulama için API uygulamanın harika bir yoludur. Microsoft, Xamarin ile iOS, Android ve Windows için harika platformlar arası araçlar sunar. Bu nedenle, Xamarin ve Azure Işlevleri birlikte harika çalışmaktadır. Bu makalede, Azure Web portalında veya Visual Studio 'da ilk olarak Azure Işlevinin nasıl uygulanacağı ve Android, iOS ve Windows üzerinde çalışan Xamarin. Forms ile platformlar arası istemci oluşturma işlemlerinin nasıl yapılacağı gösterilir.
+
+[Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+
+## <a name="serverless-messaging"></a>Sunucusuz mesajlaşma
+
+Bu örnek, her sayıdaki oturum/bölüm arasında rastgele sayıda ileti yüklemek için Dayanıklı İşlevler ' fan çıkış deseninin nasıl kullanılacağını gösterir. Service Bus, Event Hubs veya depolama kuyruklarını hedefler. Örnek ayrıca, başka bir Azure Işleviyle bu iletileri kullanma ve sonuç zamanlama verilerini başka bir olay hub 'ına yükleme özelliğini de ekler. Veriler daha sonra Azure Veri Gezgini gibi analiz hizmetlerine alınır.
+
+[Azure Işlevleri ile Service Bus, Event Hubs ve depolama kuyrukları aracılığıyla ileti oluşturun ve kullanın](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
+
+## <a name="recommended-resources"></a>Önerilen Kaynaklar
+
+- [Linux 'ta Azure Işlevleri](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
+- [Büyük veri Işleme: Azure 'da sunucusuz MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
+- [Sunucusuz uygulamalar oluşturma](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
+- [Bilişsel hizmetler ile müşteri Incelemeleri uygulaması](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
+- [Azure Işlevleri, Logic Apps ve Dayanıklı İşlevler kullanarak dosya işleme ve doğrulama](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
+- [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+- [Düzenleyici içi oyun telemetri görselleştirmesi](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
+- [IoT güvenilir Edge geçişi](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
+- [Azure Işlevleri ile Service Bus, Event Hubs ve depolama kuyrukları aracılığıyla ileti oluşturun ve kullanın](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
+- [Konsol uygulamalarını Azure Işlevleri üzerinde çalıştırma](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
+- [GraphQL için sunucusuz işlevler](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
+- [Sunucusuz mikro hizmetler başvuru mimarisi](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
 >[!div class="step-by-step"]
 >[Önceki](orchestration-patterns.md)
->[Sonraki](serverless-conclusion.md)
+>[İleri](serverless-conclusion.md)

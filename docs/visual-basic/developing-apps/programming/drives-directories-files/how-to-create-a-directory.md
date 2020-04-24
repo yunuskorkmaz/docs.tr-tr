@@ -14,13 +14,13 @@ ms.locfileid: "74348806"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dizin Oluşturma
 
-Dizinoluşturmak için `My.Computer.FileSystem` nesnenin `CreateDirectory` yöntemini kullanın.  
+Dizin oluşturmak `CreateDirectory` için `My.Computer.FileSystem` nesnesinin yöntemini kullanın.  
   
- Dizin zaten varsa, özel durum atılmaz.  
+ Dizin zaten varsa, hiçbir özel durum oluşturulmaz.  
   
-### <a name="to-create-a-directory"></a>Dizin oluşturmak için  
+### <a name="to-create-a-directory"></a>Bir dizin oluşturmak için  
   
-- Dizinin `CreateDirectory` oluşturulması gereken konumun tam yolunu belirterek yöntemi kullanın. Bu örnek, `NewDirectory` ''de `C:\Documents and Settings\All Users\Documents`dizin oluşturur.  
+- Dizinin oluşturulması `CreateDirectory` gereken konumun tam yolunu belirterek yöntemi kullanın. Bu örnek, dizininde dizinini `NewDirectory` oluşturur `C:\Documents and Settings\All Users\Documents`.  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
@@ -28,19 +28,19 @@ Dizinoluşturmak için `My.Computer.FileSystem` nesnenin `CreateDirectory` yönt
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Dizin adı yanlış biçimlendirilmiş. Örneğin, yasadışı karakterler içerir veya sadece beyaz<xref:System.ArgumentException>boşluk ( ).  
+- Dizin adı hatalı biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>) içeriyor.  
   
-- Oluşturulacak dizinin üst dizini salt okunur (<xref:System.IO.IOException>).  
+- Oluşturulacak dizinin üst dizini salt okunurdur (<xref:System.IO.IOException>).  
   
 - Dizin adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Dizin adı çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Dizin adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- Dizin adı bir kolon<xref:System.NotSupportedException>":" ( ).  
+- Dizin adı iki nokta üst üste ":" (<xref:System.NotSupportedException>).  
   
-- Kullanıcının dizini oluşturma izni yoktur<xref:System.UnauthorizedAccessException>( ).  
+- Kullanıcının dizin oluşturma izni yok (<xref:System.UnauthorizedAccessException>).  
   
-- Kullanıcı kısmi güven durumunda izinlerden yoksundur<xref:System.Security.SecurityException>( ).  
+- Kullanıcının kısmi güven durumunda (<xref:System.Security.SecurityException>) izinleri yoktur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

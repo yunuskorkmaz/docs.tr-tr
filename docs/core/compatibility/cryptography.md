@@ -1,27 +1,32 @@
 ---
-title: Şifreleme kırma değişiklikleri
-description: .NET Core'da şifrelemeyle ilgili kırılma değişikliklerini listeler.
-ms.date: 02/10/2020
-ms.openlocfilehash: c25eefa8e3ee01ed7a1df4ec4aa9225f2c347a4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Şifreleme son değişiklikleri
+description: .NET Core ile ilgili şifrelemeye ilişkin önemli değişiklikleri listeler.
+ms.date: 04/22/2020
+ms.openlocfilehash: 66049473083d87b4c84408f35a04193a4563c2b3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449237"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135613"
 ---
-# <a name="cryptography-breaking-changes"></a>Şifreleme kırma değişiklikleri
+# <a name="cryptography-breaking-changes"></a>Şifreleme son değişiklikleri
 
-Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
+Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
-| Son dakika değişikliği | Sürüm tanıtıldı |
+| Son değişiklik | Sunulan sürüm |
 | - | :-: |
-| [EnvelopedCms varsayılan olarak AES-256 şifrelemesi için](#envelopedcms-defaults-to-aes-256-encryption) | 3,0 |
-| [RSAOpenSsl anahtar üretimi için minimum boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3,0 |
-| [.NET Core 3.0 OpenSSL 1.1.x openssl 1.0.x tercih](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3,0 |
-| [Pkcs8PrivateKeyInfo oluşturucu daha iyi argüman doğrulama](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3,0 |
-| [İmzaCms.ComputeSignature boolean parametre saygı duyulur](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+| [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3,0 |
+| [EnvelopedCms varsayılan değer AES-256 şifrelemesi](#envelopedcms-defaults-to-aes-256-encryption) | 3,0 |
+| [RSAOpenSsl anahtar üretimi için en düşük boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3,0 |
+| [.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3,0 |
+| [Pkcs8PrivateKeyInfo oluşturucusunda daha iyi bağımsız değişken doğrulaması](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3,0 |
+| [SignedCms. ComputeSignature Boolean parametresi dikkate alındı](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE [begin-trusted-cert-linux](~/includes/core-changes/cryptography/3.0/begin-trusted-cert-linux.md)]
+
+***
 
 [!INCLUDE[EnvelopedCms defaults to AES-256 encryption](~/includes/core-changes/cryptography/3.0/envelopedcms-defaults-to-aes256.md)]
 

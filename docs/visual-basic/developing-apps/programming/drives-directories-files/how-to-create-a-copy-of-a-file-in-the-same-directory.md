@@ -18,51 +18,51 @@ ms.locfileid: "74348816"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Aynı Dizinde Dosya Kopyası Oluşturma
 
-Dosyaları `My.Computer.FileSystem.CopyFile` kopyalamak için yöntemi kullanın. Parametreler, varolan dosyaların üzerine yazmanızı, dosyayı yeniden adlandırmanızı, işlemin ilerlemesini göstermenizi ve kullanıcının işlemi iptal etmesine izin verir.  
+Dosyaları kopyalamak `My.Computer.FileSystem.CopyFile` için yöntemini kullanın. Parametreler var olan dosyaların üzerine yazılmasına, dosyayı yeniden adlandırmanıza, işlemin ilerlemesini göstermeye ve kullanıcının işlemi iptal edebilmesini sağlar.  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Aynı klasördeki bir dosyanın kopyasını oluşturmak için  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Aynı klasörde bir dosyanın kopyasını oluşturmak için  
   
-- Hedef `CopyFile` dosyayı ve konumu sağlayarak yöntemi kullanın. Aşağıdaki `test.txt` örnek, .. `test2.txt`  
+- Hedef dosyayı `CopyFile` ve konumu sağlayarak yöntemini kullanın. Aşağıdaki örnek, `test.txt` çağrılan `test2.txt`bir kopyasını oluşturur.  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
-### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Aynı klasördeki bir dosyanın kopyasını oluşturmak için varolan dosyaların üzerine yazma  
+### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Varolan dosyaların üzerine yazarak aynı klasörde bir dosyanın kopyasını oluşturmak için  
   
-- Yöntemi kullanarak, hedef dosyayı ve konumu sağlama `True`ve '' a ayarlama `overwrite` `CopyFile` Aşağıdaki örnek, `test.txt` çağrılan `test2.txt` bir kopyasını oluşturur ve bu ada göre varolan dosyaların üzerine yazar.  
+- `CopyFile` Yöntemini kullanarak hedef dosya ve konumu ve olarak `overwrite` `True`ayarını yapın. Aşağıdaki örnek, `test.txt` adlı `test2.txt` bir kopyasını oluşturur ve bu ada göre var olan dosyaların üzerine yazar.  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Aşağıdaki koşullar bir özel durum atılmasına neden olabilir:  
+ Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- Sistem mutlak yolu alamadım<xref:System.ArgumentException>( ).  
+- Sistem mutlak yolu (<xref:System.ArgumentException>) alamadı.  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
-- Kaynak dosya geçerli değil veya yok<xref:System.IO.FileNotFoundException>( ).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Birleştirilmiş yol varolan bir<xref:System.IO.IOException>dizine işaret eder ( ).  
+- Birleşik yol, var olan bir dizine (<xref:System.IO.IOException>) işaret eder.  
   
-- Hedef dosya var `overwrite` ve `False` ayarlanır<xref:System.IO.IOException>( ).  
+- Hedef dosya vardır ve `overwrite` ( `False` <xref:System.IO.IOException>) olarak ayarlanır.  
   
-- Kullanıcının dosyaya erişmek için yeterli izinleri yoktur (<xref:System.IO.IOException>).  
+- Kullanıcı, dosyaya (<xref:System.IO.IOException>) erişmek için yeterli izinlere sahip değil.  
   
-- Hedef klasörde aynı ada sahip bir<xref:System.IO.IOException>dosya kullanılıyor ( ).  
+- Hedef klasörde aynı ada sahip bir dosya kullanımda (<xref:System.IO.IOException>).  
   
-- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- `ShowUI`ayarlanır `True` `onUserCancel` , olarak ayarlanır `ThrowException`ve kullanıcı işlemi iptal etti<xref:System.OperationCanceledException>( ).  
+- `ShowUI`olarak ayarlanır `True`, `onUserCancel` olarak ayarlanır `ThrowException`ve Kullanıcı işlemi (<xref:System.OperationCanceledException>) iptal etti.  
   
-- `ShowUI`ayarlanır `True` `onUserCancel` ve belirtilmemiş bir G/Ç hatası oluşur (<xref:System.OperationCanceledException>). `ThrowException`  
+- `ShowUI``True`, `onUserCancel` olarak ayarlanır, olarak ayarlanır `ThrowException`ve belirtilmemiş g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Kullanıcının gerekli izni yoktur<xref:System.UnauthorizedAccessException>( ).  
+- Kullanıcı gerekli izne (<xref:System.UnauthorizedAccessException>) sahip değil.  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

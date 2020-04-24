@@ -14,29 +14,29 @@ ms.locfileid: "74336732"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme (Visual Basic)
 
-Uygulamanızda meydana `My.Application.Log` `My.Log` gelen olaylarla ilgili bilgileri günlüğe kaydetmek için nesneleri kullanabilirsiniz. Bu gözden geçirme, varsayılan ayarları nasıl geçersiz `Log` kılındığını ve nesnenin diğer günlük dinleyicilerine yazmasına nasıl neden olduğunu gösterir.
+Uygulamanızda gerçekleşen olaylar hakkındaki `My.Application.Log` bilgileri `My.Log` günlüğe kaydetmek için ve nesnelerini kullanabilirsiniz. Bu izlenecek yol, varsayılan ayarların nasıl geçersiz kılınacağını ve `Log` nesnenin diğer günlük dinleyicilerine yazmasına neden olduğunu gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-Nesne `Log` birkaç günlük dinleyiciye bilgi yazabilir. Yapılandırmaları değiştirmeden önce günlük dinleyicilerinin geçerli yapılandırmasını belirlemeniz gerekir. Daha fazla bilgi için [bkz.](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+Nesnesi `Log` , çeşitli günlük dinleyicilerine bilgi yazabilir. Yapılandırmaları değiştirmeden önce günlük dinleyicilerinin geçerli yapılandırmasını belirlemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
-Nasıl yapılacağını gözden geçirmek [isteyebilirsiniz: Metin Dosyasına Olay Bilgileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) veya Nasıl [Yazılır: Uygulama Olayı Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+[Nasıl yapılır: bir metin dosyasına olay bilgilerini yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) veya [nasıl yapılır: uygulama olay günlüğüne yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
 
-### <a name="to-add-listeners"></a>Dinleyici eklemek için
+### <a name="to-add-listeners"></a>Dinleyicileri eklemek için
 
-1. **Solution Explorer'da** app.config'e sağ tıklayın ve **Aç'ı**seçin.
+1. **Çözüm Gezgini** içinde App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
-     \-veya -
+     \-veya
 
-     App.config dosyası yoksa:
+     App. config dosyası yoksa:
 
-    1. **Proje** menüsünde **Yeni Öğe Ekle'yi**seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. Yeni **Öğe Ekle** iletişim kutusundan, **Uygulama Yapılandırma Dosyası'nı**seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
-    3. **Ekle**’ye tıklayın.
+    3. **Ekle**'ye tıklayın.
 
-2. Bölümdeki `<listeners>` "DefaultSource" `<source>` `name` özniteliğinin bulunduğu bölümün altındaki bölümü bulun. `<sources>` Bölüm, `<sources>` `<system.diagnostics>` üst düzey `<configuration>` bölümde.
+2. Bölümünde " `<listeners>` DefaultSource" `<source>` `name` `<sources>` özniteliğine sahip bölümün altındaki bölümü bulun. `<sources>` Bölümü, üst düzey `<configuration>` bölümündeki `<system.diagnostics>` bölümünde bulunur.
 
 3. Bu öğeleri bu `<listeners>` bölüme ekleyin.
 
@@ -53,9 +53,9 @@ Nasıl yapılacağını gözden geçirmek [isteyebilirsiniz: Metin Dosyasına Ol
     <!-- <add name="Console" /> -->
     ```
 
-4. İleti almak `Log` istediğiniz günlük dinleyicilerinin yorumlarını bırakın.
+4. İleti almak `Log` istediğiniz günlük dinleyicilerinin açıklamasını kaldırın.
 
-5. `<sharedListeners>` Bölümü, `<system.diagnostics>` bölümü, üst düzey `<configuration>` bölümü bulun.
+5. Bölümünde, `<sharedListeners>` üst düzey `<configuration>` bölümünde bölümünde `<system.diagnostics>` bulunan bölümünü bulun.
 
 6. Bu öğeleri bu `<sharedListeners>` bölüme ekleyin.
 
@@ -88,7 +88,7 @@ Nasıl yapılacağını gözden geçirmek [isteyebilirsiniz: Metin Dosyasına Ol
          initializeData="true" />
     ```
 
-7. app.config dosyasının içeriği aşağıdaki XML benzer olmalıdır:
+7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -147,39 +147,39 @@ Nasıl yapılacağını gözden geçirmek [isteyebilirsiniz: Metin Dosyasına Ol
     </configuration>
     ```
 
-### <a name="to-reconfigure-a-listener"></a>Dinleyiciyi yeniden yapılandırmak için
+### <a name="to-reconfigure-a-listener"></a>Bir dinleyiciyi yeniden yapılandırmak için
 
-1. Dinleyicinin `<add>` öğesini `<sharedListeners>` bölümden bulun.
+1. `<sharedListeners>` Bölümünden dinleyicinin `<add>` öğesini bulun.
 
-2. Öznitelik `type` dinleyici türüadını verir. Bu tür <xref:System.Diagnostics.TraceListener> sınıftan devralınmalıdır. Doğru türün kullanıldığından emin olmak için güçlü adlandırılmış tür adını kullanın. Daha fazla bilgi için aşağıdaki "Güçlü adlandırılmış bir türe başvurmak için" bölümüne bakın.
+2. `type` Öznitelik, dinleyici türünün adını verir. Bu tür <xref:System.Diagnostics.TraceListener> sınıfından devralması gerekir. Doğru türün kullanıldığından emin olmak için kesin adlandırılmış tür adını kullanın. Daha fazla bilgi için, aşağıdaki "kesin adlandırılmış türe başvurmak Için" bölümüne bakın.
 
      Kullanabileceğiniz bazı türler şunlardır:
 
-    - Dosya <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> günlüğüne yazan bir dinleyici.
+    - Bir <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dosya günlüğüne yazan bir dinleyici.
 
-    - Parametre tarafından belirtilen bilgisayar olay günlüğüne bilgi yazan bir <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyici. `initializeData`
+    - Parametresi tarafından belirtilen bilgisayar olay günlüğüne bilgi yazan bir <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyici. `initializeData`
 
-    - Parametrede <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> belirtilen dosyaya yazan ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyiciler. `initializeData`
+    - Parametresinde belirtilen dosyaya yazılan <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> ve <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyicileri. `initializeData`
 
     - Komut <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> satırı konsoluna yazan bir dinleyici.
 
-     Diğer günlük dinleyici türlerinin nerede bilgi yazdıkları hakkında bilgi için, bu türbelgelerine başvurun.
+     Diğer günlük dinleyicisi türlerinin yazma bilgileri hakkında daha fazla bilgi için, bu türün belgelerine başvurun.
 
-3. Uygulama log-dinleyici nesnesi oluşturduğunda, özniteliği oluşturucu parametresi olarak geçirir. `initializeData` Özniteliğin `initializeData` anlamı izleme dinleyicisi bağlıdır.
+3. Uygulama, log-Listener nesnesini oluşturduğunda, `initializeData` özniteliği Oluşturucu parametresi olarak geçirir. `initializeData` Özniteliğin anlamı, izleme dinleyicisine bağlıdır.
 
-4. Günlük dinleyicisini oluşturduktan sonra, uygulama dinleyicinin özelliklerini ayarlar. Bu özellikler `<add>` öğedeki diğer öznitelikler tarafından tanımlanır. Belirli bir dinleyicinin özellikleri hakkında daha fazla bilgi için, o dinleyicinin türüne ait belgelere bakın.
+4. Günlük dinleyicisini oluşturduktan sonra uygulama, dinleyicinin özelliklerini ayarlar. Bu özellikler, `<add>` öğesindeki diğer öznitelikler tarafından tanımlanır. Belirli bir dinleyicinin özellikleri hakkında daha fazla bilgi için, bu dinleyicinin türüne yönelik belgelere bakın.
 
-### <a name="to-reference-a-strongly-named-type"></a>Güçlü adlandırılmış bir türe başvurmak için
+### <a name="to-reference-a-strongly-named-type"></a>Kesin adlandırılmış türe başvurmak için
 
-1. Günlük dinleyiciniz için doğru türün kullanıldığından emin olmak için, tam nitelikli tür adını ve güçlü bir şekilde adlandırılmış montaj adını kullandığınızdan emin olun. Güçlü adlandırılmış bir türün sözdizimi aşağıdaki gibidir:
+1. Doğru türün günlük dinleyiciniz için kullanıldığından emin olmak için tam tür adı ve kesin adlandırılmış derleme adını kullandığınızdan emin olun. Kesin adlandırılmış türün sözdizimi aşağıdaki gibidir:
 
-     \<*tür adı* \<>, montaj \< *adı*>, sürüm \< *numarası* \<>, *kültür*>, güçlü *ad*>
+     \<*tür adı*>, \< *derleme adı*>, \< *sürüm numarası*>, \< *kültür*>, \< *tanımlayıcı ad*>
 
-2. Bu kod örneği, tam nitelikli bir tür için güçlü adlandırılmış tür adının nasıl belirlendiğini gösterir—"System.Diagnostics.FileLogTraceListener" bu durumda.
+2. Bu kod örneği, bu durumda "System. Diagnostics. FileLogTraceListener" tam türü için kesin adlandırılmış tür adının nasıl belirleneceğini göstermektedir.
 
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]
 
-     Bu çıktıdır ve yukarıdaki "Dinleyici eklemek için" yordamında olduğu gibi, güçlü bir şekilde adlandırılmış bir türe benzersiz bir şekilde başvurmak için kullanılabilir.
+     Bu çıktı, yukarıdaki "dinleyicileri ekleme" yordamında olduğu gibi kesin adlandırılmış bir türe benzersiz olarak başvurmak için kullanılabilir.
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 
@@ -189,5 +189,5 @@ Nasıl yapılacağını gözden geçirmek [isteyebilirsiniz: Metin Dosyasına Ol
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [Nasıl Yapılır: Olay Bilgilerini Metin Dosyasına Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Nasıl Yapılır: Uygulama Olay Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Nasıl yapılır: Olay Bilgilerini Metin Dosyasına Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
+- [Nasıl yapılır: Uygulama Olay Günlüğüne Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

@@ -16,21 +16,21 @@ ms.locfileid: "80588385"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML Şema Tanımı Aracı ve XML Serileştirme
 
-XML Şema Tanımı aracı[(XML Şema Tanım Aracı (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) Windows&reg; Yazılım Geliştirme Kiti 'nin (SDK) bir parçası olarak .NET Framework araçlarıyla birlikte yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
+XML şema tanımı Aracı ([XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)), Windows&reg; yazılım GELIŞTIRME seti 'nin (SDK) bir parçası olarak .NET Framework araçları ile birlikte yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
   
-- Belirli bir XML şeması tanım dili (XSD) şemaya uygun C# veya Visual Basic sınıf dosyaları oluşturmak için. Aracı bağımsız değişken olarak bir XML Şeması alır ve bir dizi içeren bir dosya çıkarır, sahip serileştirilmiş olduğunda sınıflar <xref:System.Xml.Serialization.XmlSerializer>, şemaya uygun. Belirli bir şemaya uygun sınıflar oluşturmak için aracınasıl kullanacağıhakkında bilgi için [bkz: Sınıflar ve XML Şema Belgeleri oluşturmak için XML Şema Tanım Aracı'nı kullanın.](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+- Belirli bir XML şeması tanım dili (XSD) şemaya uygun C# veya Visual Basic sınıf dosyaları oluşturmak için. Aracı bağımsız değişken olarak bir XML Şeması alır ve bir dizi içeren bir dosya çıkarır, sahip serileştirilmiş olduğunda sınıflar <xref:System.Xml.Serialization.XmlSerializer>, şemaya uygun. Aracının belirli bir şemaya uygun sınıflar oluşturmak için nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: sınıf ve XML şeması belgeleri oluşturmak IÇIN XML şema tanımı aracını kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
-- Bir XML Şeması belge .dll dosyası ya da .exe dosyası oluşturmak için. Oluşturduğunuz veya özniteliklerle değiştirilmiş bir dosya kümesinin şemasını görmek için, XML şemasını oluşturmak için araca bir bağımsız değişken olarak DLL veya EXE'yi geçirin. Bir dizi sınıftan bir XML Şema Belgesi oluşturmak için aracın nasıl kullanılacağı hakkında bilgi için [bkz: Sınıflar ve XML Şema Belgeleri oluşturmak için XML Şema Tanım Aracı'nı kullanın.](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+- Bir XML Şeması belge .dll dosyası ya da .exe dosyası oluşturmak için. Oluşturduğunuz veya öznitelikleri ile değiştirilmiş bir dosya kümesinin şemasını görmek için, XML şemasını oluşturmak için, DLL veya EXE ' yi araca bağımsız değişken olarak geçirin. Aracının bir sınıf kümesinden bir XML Schema Document oluşturmak için nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: sınıf ve XML şeması belgeleri oluşturmak IÇIN XML şema tanımı aracını kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
-Aracı kullanma hakkında daha fazla bilgi için [Bkz. XML Şema Tanım Aracı (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+Aracı kullanma hakkında daha fazla bilgi için bkz. [XML şema tanımı Aracı (xsd. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Data.DataSet>
 - [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML şema tanımı Aracı (XSD.exe'nin)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML şema tanımı Aracı (xsd. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
-- [XML Şema Bağlama Desteği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))
+- [XML şeması bağlama desteği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

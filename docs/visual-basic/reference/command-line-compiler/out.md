@@ -24,12 +24,12 @@ ms.locfileid: "74352382"
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`filename`|Gerekli. Derleyicinin oluşturduğu çıkış dosyasının adı. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
+|`filename`|Gereklidir. Derleyicinin oluşturduğu çıkış dosyasının adı. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Oluşturulacak dosyanın tam adını ve uzantısını belirtin. Bunu yapmazsanız,. exe dosyası adını `Sub Main` yordamını içeren kaynak kodu dosyasından alır ve. dll dosyası adı ilk kaynak kodu dosyasından alır.  
+ Oluşturulacak dosyanın tam adını ve uzantısını belirtin. Bunu yapmazsanız,. exe dosyası, `Sub Main` yordamı içeren kaynak kodu dosyasından adını alır ve. dll dosyası adı ilk kaynak kodu dosyasından alır.  
   
  Bir. exe veya. dll uzantısı olmadan bir dosya adı belirtirseniz, derleyici, `-target` derleyici seçeneği için belirtilen değere bağlı olarak uzantıyı sizin için otomatik olarak ekler.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74352382"
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **derleme adı** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve `T2.exe`çıktı dosyası oluşturur.  
+ Aşağıdaki kod derleme `T2.vb` ve çıkış dosyası `T2.exe`oluşturur.  
   
 ```console
 vbc t2.vb -out:t3.exe  

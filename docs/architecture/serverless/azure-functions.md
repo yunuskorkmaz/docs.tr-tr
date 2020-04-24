@@ -1,93 +1,82 @@
 ---
-title: Azure Fonksiyonları - Sunucusuz uygulamalar
-description: Azure işlevleri, olay odaklı anlık ölçek kodu sağlamak için birden çok dilde (C#, JavaScript, Java) ve platformlarda sunucusuz özellikler sağlar.
+title: Azure Işlevleri-sunucusuz uygulamalar
+description: Azure işlevleri, olay odaklı anında ölçeklendirme kodu sağlamak için birden çok dilde (C#, JavaScript, Java) ve platformlarda sunucusuz yetenekler sağlar.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401615"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135730"
 ---
 # <a name="azure-functions"></a>Azure İşlevleri
 
-Azure işlevleri sunucusuz bir bilgi işlem deneyimi sağlar. Bir işlev bir *tetikleyici* tarafından çağrılır (örneğin, bir HTTP bitiş noktası veya zamanlayıcıya erişim) ve bir kod bloğu veya iş mantığı yürütür. İşlevler, depolama ve kuyruklar gibi kaynaklara bağlanan özel *bağlamaları* da destekler.
+Azure işlevleri, sunucusuz bir işlem deneyimi sağlar. Bir işlev bir *tetikleyici* tarafından çağrılır (bir HTTP uç noktasına veya bir zamanlayıcıya erişim gibi) ve bir kod bloğu veya iş mantığı yürütür. İşlevler ayrıca depolama ve kuyruklar gibi kaynaklara bağlanan özelleştirilmiş *bağlamaları* destekler.
 
 ![Azure işlevleri logosu](./media/azure-functions-logo.png)
 
-Azure İşlevler çerçevesinin iki sürümü vardır. Eski sürüm tam .NET Framework'u destekler ve yeni çalışma süresi çapraz platform .NET Core uygulamalarını destekler. JavaScript, F#ve Java gibi C# ek dilleri desteklenir. Portalda oluşturulan işlevler zengin bir komut dosyası sözdizimi sağlar. Bağımsız projeler olarak oluşturulan işlevler tam platform desteği ve yetenekleri ile dağıtılabilir.
+Geçerli çalışma zamanı sürüm 3,0, platformlar arası .NET Core 3,1 uygulamalarını destekler. JavaScript, F # ve Java gibi ek diller de desteklenir. Portalda oluşturulan işlevler, zengin bir betik sözdizimi sağlar. Tek başına projeler olarak oluşturulan işlevler, tam platform desteği ve özellikleri ile dağıtılabilir.
 
-Daha fazla bilgi için Azure [İşlevleri belgelerine](https://docs.microsoft.com/azure/azure-functions)bakın.
-
-## <a name="functions-v1-vs-v2"></a>Fonksiyonlar v1 vs. v2
-
-Azure İşlevleri çalışma zamanının iki sürümü vardır: 1.x ve 2.x. Sürüm 1.x genellikle kullanılabilir (GA). Portal veya Windows makinelerinden .NET geliştirmeyi destekler ve .NET Framework'i kullanır. 1.x, Python, PHP, TypeScript, Batch, Bash ve PowerShell için deneysel destekle C#, JavaScript ve F#'ı destekler.
-
-[Sürüm 2.x de genel olarak şimdi kullanılabilir](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). .NET Core'dan yararlanır ve Windows, macOS ve Linux makinelerinde platformlar arası geliştirmeyi destekler. 2.x Java için birinci sınıf destek ekler, ancak henüz deneysel dillerin hiçbirini doğrudan desteklemez. Sürüm 2.x, platforma üçüncü taraf uzantıları, bağlamaların bağımsız sürümü ve daha kolay bir yürütme ortamı sağlayan yeni bir bağlayıcı genişletilebilirlik modeli kullanır.
-
-> **[Bağlayıcı yönlendirme desteği](https://github.com/Azure/azure-functions-host/issues/992)ile 1.x bilinen bir sorun vardır.** Sorun .NET geliştirmeye özgüdür. Çalışma zamanında dahil edilen kitaplıklardan farklı bir sürüme sahip kitaplıklara bağımlılık ları olan projeler etkilenir. Fonksiyonlar ekibi, sorun üzerinde somut ilerleme kaydetmeyi taahhüt etmiştir. Takım, genel kullanılabilirliğe geçmeden önce 2.x'te bağlama yönlendirmelerini ele alacaktır. Önerilen düzeltmeler ve geçici çözümleriçeren resmi ekip bildirimine buradan ulaşabilirsiniz: [Azure İşyerlerinde Derleme çözümü.](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)
-
-Daha fazla bilgi için bkz: [1.x ve 2.x karşılaştırın.](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+Daha fazla bilgi için bkz. [Azure işlevleri belgeleri](https://docs.microsoft.com/azure/azure-functions).
 
 ## <a name="programming-language-support"></a>Programlama dili desteği
 
-Aşağıdaki diller genel kullanılabilirlik (GA), önizleme veya deneysel olarak desteklenir.
+Aşağıdaki dillerin tümü genel kullanılabilirlik (GA) içinde desteklenir.
 
-|Dil      |1.x         |2.x      |
-|--------------|------------|---------|
-|**C #**        |GA          |Önizleme  |
-|**Javascript**|GA          |Önizleme  |
-|**F#**        |GA          |         |
-|**Java**      |            |Önizleme  |
-|**Python**    |Deneysel|         |
-|**PHP**       |Deneysel|         |
-|**TypeScript**|Deneysel|         |
-|**Toplu iş**     |Deneysel|         |
-|**Bash**      |Deneysel|         |
-|**Powershell**|Deneysel|         |
+|Dil      |Desteklenen çalışma zamanları|
+|--------------|------------------|
+|**C#**        |.NET Core 3,1     |
+|**JavaScript**|Düğüm 10 & 12      |
+|**F#**        |.NET Core 3,1     |
+|**Java**      |Java 8            |
+|**Python**    |Python 3,6, 3,7, & 3,8|
+|**TypeScript**|Düğüm 10 & 12 (JavaScript aracılığıyla)|
+|**PowerShell**|PowerShell Core 6|
 
 Daha fazla bilgi için bkz. [Desteklenen diller](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
-## <a name="app-service-plans"></a>Uygulama hizmeti planları
+## <a name="app-service-plans"></a>App Service planları
 
-İşlevler bir *uygulama hizmet planı*tarafından yedeklenir. Plan, işlevler uygulaması tarafından kullanılan kaynakları tanımlar. Bir bölgeye planlar atayabilir, kullanılacak sanal makinelerin boyutunu ve sayısını belirleyebilir ve bir fiyatlandırma katmanı seçebilirsiniz. Gerçek bir sunucusuz yaklaşım için işlev uygulamaları **tüketim** planını kullanabilir. Tüketim planı, arka ucunu yüke göre otomatik olarak ölçeklendirecektir.
+İşlevler bir *App Service planı*tarafından desteklenir. Plan, işlevler uygulaması tarafından kullanılan kaynakları tanımlar. Bir bölgeye planlar atayabilir, kullanılacak sanal makinelerin boyutunu ve sayısını belirleyebilir ve bir fiyatlandırma katmanı seçebilirsiniz. Doğru sunucusuz bir yaklaşım için işlev uygulamaları **Tüketim** planını kullanabilir. Tüketim planı, yük temelinde arka ucu otomatik olarak ölçeklendirecektir.
 
-Daha fazla bilgi için [Uygulama hizmet planlarına](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)bakın.
+İşlev uygulamaları için başka bir barındırma seçeneği de [Premium plandır](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan). Bu plan, soğuk başlangıçtan kaçınmak için "Always On" örneği sağlar, VNet bağlantısı gibi gelişmiş özellikleri destekler ve Premium donanımda çalışır.
+
+Daha fazla bilgi için bkz. [App Service planları](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
 
 ## <a name="create-your-first-function"></a>İlk uygulamanızı oluşturma
 
-İşlev uygulamaları oluşturmanın üç yaygın yolu vardır.
+İşlev uygulamaları oluşturabileceğiniz üç yaygın yol vardır.
 
-- Portaldaki komut dosyası işlevleri.
-- Azure CLI'yi kullanarak gerekli kaynakları oluşturun.
-- En sevdiğiniz IDE'yi kullanarak işlevleri yerel olarak oluşturun ve Bunları Azure'da yayınlayın.
+- Portalda betik işlevleri.
+- Azure CLı kullanarak gereken kaynakları oluşturun.
+- En sevdiğiniz IDE 'yi kullanarak işlevleri yerel olarak derleyin ve Azure 'da yayımlayın.
 
-Portalda komut dosyası işlevi oluşturma hakkında daha fazla bilgi için azure [portalında ilk işlevinizi oluştur'a](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)bakın.
+Portalda betikleştirilmiş bir işlev oluşturma hakkında daha fazla bilgi için, [Azure Portal ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)bölümüne bakın.
 
-Azure CLI'den oluşturmak için [bkz.](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+Azure CLı 'dan derlemek için bkz. [Azure CLI kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli).
 
-Visual Studio'dan bir işlev oluşturmak için visual [studio'u kullanarak ilk işlevinizi oluşturun'e](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)bakın.
+Visual Studio 'dan bir işlev oluşturmak için bkz. [Visual Studio kullanarak ilk işlevinizi oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## <a name="understand-triggers-and-bindings"></a>Tetikleyicileri ve bağlamaları anlama
 
-Fonksiyonlar bir *tetikleyici* tarafından çağrılır ve tam olarak bir tane olabilir. İşlev çağırmak için ek olarak, bazı tetikleyiciler de bağlama olarak hizmet vermektedir. Tetikleyiciye ek olarak birden çok bağlama da tanımlayabilirsiniz. *Bağlamalar,* verileri kodunuza bağlamak için bildirimsel bir yol sağlar. Bunlar (giriş) geçirilebilir veya veri (çıktı) alabilir. Tetikleyiciler ve bağlamalar işlevlerin çalışmasını kolaylaştırır. Bağlamalar, veritabanı veya dosya sistemi bağlantılarının el ile oluşturma ek yükü kaldırılır. Bağlamalar için gereken tüm bilgiler, komut dosyaları için özel bir *functions.json* dosyasında bulunur veya koddaki özniteliklerle birlikte bildirilir.
+İşlevler bir *tetikleyici* tarafından çağrılır ve tam olarak bir tane olabilir. İşlevi çağırmaya ek olarak, bazı Tetikleyiciler de bağlamalar olarak görev yapar. Ayrıca, tetikleyicisine ek olarak birden çok bağlama de tanımlayabilirsiniz. *Bağlamalar* , verileri kodunuza bağlamanın bildirim temelli bir yolunu sağlar. Bunlar (giriş) veya veri alabilir (çıktı). Tetikleyiciler ve bağlamalar işlevleri ile çalışmayı kolay hale getirir. Bağlamalar, veritabanı veya dosya sistemi bağlantılarını el ile oluşturma ek yükünü ortadan kaldırır. Bağlamalar için gereken tüm bilgiler, betikler için özel bir *Functions. JSON* dosyasında bulunur veya koddaki özniteliklerle birlikte bildirilmiştir.
 
-Bazı yaygın tetikleyiciler şunlardır:
+Bazı ortak Tetikleyiciler şunları içerir:
 
-- Blob Depolama: Bir dosya veya klasör depolama alanına yüklendiğinde veya değiştirildiğinde işlevinizi çağırın.
-- HTTP: REST API gibi işlevinizi çağırın.
-- Sıra: Öğeler kuyrukta olduğunda işlevinizi çağırın.
-- Zamanlayıcı: düzenli bir cadence üzerinde işlevinizi çağırmak.
+- BLOB depolama: bir dosya veya klasör bir depolama alanında karşıya yüklenirken veya değiştirildiğinde işlevinizi çağırın.
+- HTTP: işlevinizi REST API gibi çağırın.
+- Queue: bir kuyrukta öğeler mevcutsa işlevinizi çağırın.
+- Süreölçer: işlevinizi düzenli bir temposunda çağırma.
 
-Bağlamalara örnek olarak şunlar verilebilir:
+Bağlama örnekleri şunları içerir:
 
-- CosmosDB: dosyaları yüklemek veya kaydetmek için veritabanına kolayca bağlanın.
-- Tablo Depolama: fonksiyon uygulamanızdan anahtar/değer depolama ile çalışın.
-- Sıra Depolama: öğeleri kuyruktan kolayca alın veya kuyruğa yeni öğeler yerleştirin.
+- CosmosDB: dosyaları yüklemek veya kaydetmek için kolayca veritabanına bağlanın.
+- Tablo Depolama: işlev uygulamanızdan anahtar/değer depolama ile çalışma.
+- Kuyruk depolama: bir kuyruktan kolayca öğe alın veya yeni öğeleri kuyruğa yerleştirin.
 
-Aşağıdaki örnek *functions.json* dosyası bir tetikleyici ve bağlama tanımlar:
+Aşağıdaki örnek *Functions. JSON* dosyası bir tetikleyiciyi ve bağlamayı tanımlar:
 
 ```json
 {
@@ -111,9 +100,9 @@ Aşağıdaki örnek *functions.json* dosyası bir tetikleyici ve bağlama tanım
 }
 ```
 
-Bu örnekte, işlev `images` kapsayıcıda blob depolama bir değişiklik tarafından tetiklenir. Dosyaiçin bilgiler geçirilir, bu nedenle tetikleyici de bağlayıcı olarak hareket eder. Başka bir bağlama adlı `images`bir kuyruğa bilgi koymak için var.
+Bu örnekte, işlev, `images` kapsayıcıda blob depolamaya yapılan bir değişiklik tarafından tetiklenir. Dosya ile ilgili bilgiler geçirilir, bu nedenle tetikleyici de bir bağlama işlevi görür. Adlı `images`bir kuyruğa bilgi koymak için başka bir bağlama var.
 
-Burada işlev için C# komut dosyası:
+İşlevin C# betiği aşağıdadır:
 
 ```csharp
 public static string Run(Stream myBlob, string name, TraceWriter log)
@@ -123,62 +112,10 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 }
 ```
 
-Örnek, değiştirilen veya blob depolamasına yüklenen dosyanın adını alan ve daha sonra işleme için sıraya koyan basit bir işlevdir.
+Örnek, değiştirilen veya blob depolamaya yüklenen dosyanın adını alan ve daha sonra işlenmek üzere bir kuyruğa yerleştirtiren basit bir işlevdir.
 
-Tetikleyicilerin ve bağlamaların tam listesi için Azure [İşlevleri tetikleyicileri ve bağlama kavramlarını](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)görün.
-
-## <a name="proxies"></a>Proxy 'leri
-
-Ek severler, uygulamanız için yeniden yönlendirme işlevselliği sağlar. Ekseksiler, bitiş noktasını başka bir kaynağa gösterir ve haritayı gösterir. Vekillerile şunları yapabilirsiniz:
-
-- Gelen isteği başka bir bitiş noktasına yeniden yönlendirin.
-- Gelen isteği geçirilmeden önce değiştirin.
-- Değiştirin veya yanıt sağlayın.
-
-Ekseksitler gibi senaryolar için kullanılır:
-
-- URL'yi basitleştirme, kısaltma veya değiştirme.
-- Birden çok arka uç hizmetine tutarlı bir API öneki sağlar.
-- Geliştirilen bir uç noktaya verilen yanıtla alay etmek.
-- Bilinen bir bitiş noktasına statik yanıt sağlar.
-- Arka uç taşınırken veya geçirilirken API bitiş noktasını tutarlı tutmak.
-
-Yakınlıklar JSON tanımları olarak depolanır. Örnek aşağıda verilmiştir:
-
-```json
-{
-  "$schema": "http://json.schemastore.org/proxies",
-  "proxies": {
-    "Domain Redirect": {
-      "matchCondition": {
-        "route": "/{shortUrl}"
-      },
-      "backendUri": "http://%WEBSITE_HOSTNAME%/api/UrlRedirect/{shortUrl}"
-    },
-    "Root": {
-      "matchCondition": {
-        "route": "/"
-      },
-      "responseOverrides": {
-        "response.statusCode": "301",
-        "response.statusReason": "Moved Permanently",
-        "response.headers.location": "https://docs.microsoft.com/"
-      }
-    }
-  }
-}
-```
-
-Proxy `Domain Redirect` kısaltılmış bir rota alır ve daha uzun işlev kaynağıyla eşler. Dönüşüm gibi görünüyor:
-
-`https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
-
-Proxy, kök URL'ye `Root` gönderilen`https://--shorturl--/`bir şeyi alır ( ) ve belgeleme sitesine yönlendirir.
-
-Ekseksi kullanmanın bir örneği Azure videosunda [gösterilir: Sunucusuz Azure İşlevleri ile uygulamanızı buluta getirin.](https://channel9.msdn.com/events/Connect/2017/E102) Gerçek zamanlı olarak, yerel SQL Server'da çalışan bir ASP.NET Core uygulaması Azure Bulutu'na geçirilir. Ekseksiler, işlevleri kullanmak için geleneksel bir Web API projesini yeniden düzenlemeye yardımcı olmak için kullanılır.
-
-Proxies hakkında daha fazla bilgi için Azure [İşleriyle Çalışma'ya](https://docs.microsoft.com/azure/azure-functions/functions-proxies)bakın.
+Tetikleyiciler ve bağlamaların tam listesi için bkz. [Azure işlevleri Tetikleyicileri ve bağlamaları kavramları](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
 >[!div class="step-by-step"]
 >[Önceki](azure-serverless-platform.md)
->[Sonraki](application-insights.md)
+>[İleri](application-insights.md)

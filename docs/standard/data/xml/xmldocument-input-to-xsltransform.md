@@ -14,17 +14,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709848"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform’a XmlDocument Girişi
-<xref:System.Xml.XmlDocument> sınıfı, bir XML belgesi için özellikleri düzenlemenizi sağlar. XML 'nin <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine gönderilmeden önce düzenlenmesi veya değiştirilmesi gerekiyorsa, XML 'yi bir <xref:System.Xml.XmlDocument>yükleyin, düzenleyin ve <xref:System.Xml.Xsl.XslTransform>içine gönderin.  
+Sınıfı <xref:System.Xml.XmlDocument> , bir XML belgesi için düzenlenebilir özellikleri sağlar. XML 'nin <xref:System.Xml.Xsl.XslTransform.Transform%2A> yönteme gönderilmeden önce düzenlenmesi veya değiştirilmesi GEREKIYORSA, XML 'yi bir <xref:System.Xml.XmlDocument>öğesine yükleyin, düzenleyin ve içine gönderin. <xref:System.Xml.Xsl.XslTransform>  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler Için Genişletilebilir Stil sayfası DILI (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.IXPathNavigable> arabirimini uygular, bu nedenle belge, Düzenlemeden sonra <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirilebilir.  
+ , <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.IXPathNavigable> Arabirimini uygular, bu nedenle belge Düzenlemeden sonra <xref:System.Xml.Xsl.XslTransform.Transform%2A> yönteme geçirilebilir.  
   
- <xref:System.Xml.XmlDocument>'nin düzenlenme özelliği nedeniyle, bir dönüşüme giriş olarak <xref:System.Xml.XmlDocument> sınıfının kullanılması, iç depolama nedeniyle XML yol dili (XPath) sorguları için optimize edilmiş şekilde, <xref:System.Xml.XPath.XPathDocument> dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüştürmelerinin <xref:System.Xml.XPath.XPathDocument> kullanmaktan daha yavaştır.  
+ Öğesinin <xref:System.Xml.XmlDocument>düzenlenme özelliği nedeniyle, <xref:System.Xml.XmlDocument> sınıfının bir dönüşüme giriş olarak kullanılması, Iç depolama nedeniyle XML yol dili (XPath) <xref:System.Xml.XPath.XPathDocument> sorguları için optimize edilmiş olduğundan, <xref:System.Xml.XPath.XPathDocument> dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüştürmeleri için kullanmaktan daha yavaştır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir <xref:System.Xml.XmlReader>gönderilen çıkış ile <xref:System.Xml.Xsl.XslTransform><xref:System.Xml.XmlDocument> nasıl sağlanabilecek gösterilmektedir.  
+ Aşağıdaki kod örneği, <xref:System.Xml.XmlDocument> <xref:System.Xml.Xsl.XslTransform>' a gönderilen çıkış ile öğesine nasıl sağlanabilecek gösterilmektedir. <xref:System.Xml.XmlReader>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  

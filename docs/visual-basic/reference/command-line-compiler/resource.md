@@ -25,7 +25,7 @@ Bir derlemede yönetilen bir kaynak gömer.
 -resource:filename[,identifier[,public|private]]  
 ```
 
-veya  
+or  
 
 ```console
 -res:filename[,identifier[,public|private]]  
@@ -33,22 +33,22 @@ veya
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`filename`|Gerekli. Çıkış dosyasına eklemek için kaynak dosyasının adı. Varsayılan olarak, `filename` derlemede ortaktır. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.|  
-|`identifier`|İsteğe bağlı. Kaynağın mantıksal adı; yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır. İsteğe bağlı olarak, aşağıdaki gibi, derleme bildiriminde kaynağın genel mi yoksa özel mi olduğunu belirtebilirsiniz: `-res:filename.res, myname.res, public`|  
+|`filename`|Gereklidir. Çıkış dosyasına eklemek için kaynak dosyasının adı. Varsayılan olarak, `filename` derlemede ortaktır. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.|  
+|`identifier`|İsteğe bağlı. Kaynağın mantıksal adı; yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır. İsteğe bağlı olarak, aşağıdaki gibi, derleme bildiriminde kaynağın genel mi yoksa özel mi olduğunu belirtebilirsiniz:`-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak dosyasını çıkış dosyasına yerleştirmeksizin bir kaynağı derlemeye bağlamak için `-linkresource` kullanın.  
+ Kaynak `-linkresource` dosyasını çıkış dosyasına yerleştirmeksizin bir kaynağı derlemeye bağlamak için kullanın.  
   
- `filename`, örneğin [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir (daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>). Çalışma zamanında diğer tüm kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>veya <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>.  
+ , Örneğin, [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir (daha fazla bilgi için bkz <xref:System.Resources.ResourceManager> .). `filename` Çalışma zamanında diğer tüm kaynaklara erişmek için aşağıdaki yöntemlerden birini kullanın: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>, <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>veya. <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>  
   
- `-resource` kısa biçimi `-res`.  
+ Öğesinin `-resource` kısa biçimi `-res`.  
   
- Visual Studio IDE 'de `-resource` ayarlama hakkında daha fazla bilgi için bkz. [uygulama kaynaklarını yönetme (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
+ Visual Studio IDE 'de nasıl ayarlanacağı `-resource` hakkında bilgi için bkz. [uygulama kaynaklarını yönetme (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve kaynak dosyası `Rf.resource`ekler.  
+ Aşağıdaki kod, kaynak `In.vb` dosyasını `Rf.resource`derler ve iliştirir.  
   
 ```console
 vbc -res:rf.resource in.vb  

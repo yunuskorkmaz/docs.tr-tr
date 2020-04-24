@@ -22,8 +22,8 @@ ms.locfileid: "74344245"
 ```  
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
- `+` &#124; `-`  
- İsteğe bağlı. Seçenek varsayılan olarak kapalıdır veya `-highentropyva-`belirtirseniz. `-highentropyva` veya `-highentropyva+`belirtirseniz, seçeneği açık olur.  
+ `+`&#124;`-`  
+ İsteğe bağlı. Seçeneği varsayılan olarak veya öğesini belirtirseniz `-highentropyva-`kapalıdır. Veya `-highentropyva` `-highentropyva+`belirtirseniz seçeneği açık olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu seçeneği belirtirseniz, Windows çekirdeğinin uyumlu sürümleri, çekirdek ASLR 'in bir parçası olarak bir işlemin adres alanı yerleşimini rasgele hale geldiğinde daha yüksek sayıda entropi kullanabilir. Çekirdek daha yüksek bir entropi kullanıyorsa, yığınlar ve yığınlar gibi bellek bölgelerine daha fazla sayıda adres tahsis edilebilir. Sonuç olarak, belirli bir bellek bölgesinin konumunu tahmin etmek daha zordur.  

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılsın: Birden çok biçime sahip metin dosyalarından okuma'
+title: 'Nasıl yapılır: birden çok biçimdeki metin dosyalarından okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -18,13 +18,13 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334578"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Nasıl yapılsın: Visual Basic'te birden fazla formata sahip fext dosyalarından okuma
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Nasıl yapılır: Visual Basic birden çok biçimdeki fext dosyalarından okuma
 
-Nesne, <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> günlükler gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırmak için bir yol sağlar. Dosyayı `PeekChars` ayrıştirırken her satırın biçimini belirlemek için yöntemi kullanarak birden çok biçime sahip bir dosyayı işleyebilirsiniz.
+<xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Nesnesi, günlük gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırabilmeniz için bir yol sağlar. Dosya aracılığıyla ayrıştırdığınızda her satırın biçimini belirleyebilmek için `PeekChars` yöntemini kullanarak birden çok biçimdeki bir dosyayı işleyebilirsiniz.
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a>Birden çok biçimli bir metin dosyasını ayrışdırmak için
+### <a name="to-parse-a-text-file-with-multiple-formats"></a>Birden çok biçimdeki bir metin dosyasını ayrıştırmak için
 
-1. Projenize *testfile.txt* adlı bir metin dosyası ekleyin. Metin dosyasına aşağıdaki içeriği ekleyin:
+1. Projenize *Testfile. txt* adlı bir metin dosyası ekleyin. Aşağıdaki içeriği metin dosyasına ekleyin:
 
     ```text
     Err  1001 Cannot access resource.
@@ -35,37 +35,37 @@ Nesne, <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> günlükler gibi yap�
     Acc  10/04/2009User2      Standard user.
     ```
 
-2. Bir hata raporlandığında beklenen biçimi ve kullanılan biçimi tanımlayın. Her dizideki son giriş -1'dir, bu nedenle son alanın değişken genişlikte olduğu varsayılır. Bu, dizideki son giriş 0'dan az veya eşit olduğunda oluşur.
+2. Beklenen biçimi ve bir hata bildirildiğinde kullanılan biçimi tanımlayın. Her dizideki son giriş-1 ' dir, bu nedenle son alan, değişken genişliği olarak kabul edilir. Bu, dizideki son giriş 0 ' dan küçük veya buna eşit olduğunda gerçekleşir.
 
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]
 
-3. Genişlik <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> ve biçimi tanımlayan yeni bir nesne oluşturun.
+3. Genişliği ve biçimi <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> tanımlayarak yeni bir nesne oluşturun.
 
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]
 
-4. Okumadan önce biçim için test, satırlar arasında döngü.
+4. Okumadan önce biçim için test eden satırlarda döngü yapın.
 
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]
 
-5. Konsola hata yazın.
+5. Konsola hataları yazın.
 
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki dosyadan `testfile.txt`okur tam bir örnektir:
+Aşağıda, dosyadan `testfile.txt`okuyan tüm örnek verilmiştir:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
-## <a name="robust-programming"></a>Sağlam programlama
+## <a name="robust-programming"></a>Güçlü programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Bir satır belirtilen biçim kullanılarak ayrıştısı olamaz (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Özel durum iletisi özel durum neden satırı <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> belirtirken, özellik satırda bulunan metne atanır.
+- Satır belirtilen biçim (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) kullanılarak ayrıştırılamıyor. Özel durum iletisi, özel duruma neden olan satırı belirtir, ancak <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> Özellik satırda bulunan metne atanır.
 - Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).
-- Kullanıcının dosyaya erişmek için yeterli izine sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).
-- Yol çok uzun<xref:System.IO.PathTooLongException>( ).
-- Kullanıcının dosyaya erişmek için yeterli izinleri yoktur (<xref:System.UnauthorizedAccessException>).
+- Kullanıcının dosyaya erişmek için yeterli izinlere sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).
+- Kullanıcı, dosyaya (<xref:System.UnauthorizedAccessException>) erişmek için yeterli izinlere sahip değil.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

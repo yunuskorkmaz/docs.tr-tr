@@ -25,7 +25,7 @@ Yönetilen bir kaynağa bir bağlantı oluşturur.
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-veya  
+or  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
@@ -33,27 +33,27 @@ veya
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
  `filename`  
- Gerekli. Derlemeye bağlanacak kaynak dosyası. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.  
+ Gereklidir. Derlemeye bağlanacak kaynak dosyası. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.  
   
  `identifier`  
  İsteğe bağlı. Kaynağın mantıksal adı. Kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır. İsteğe bağlı olarak, dosyanın derleme bildiriminde genel mi yoksa özel mi olduğunu belirtebilirsiniz, örneğin: `-linkres:filename.res,myname.res,public`. Varsayılan olarak, `filename` derlemede ortaktır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-linkresource` seçeneği, kaynak dosyasını çıkış dosyasına eklemez; Bunu yapmak için `-resource` seçeneğini kullanın.  
+ Bu `-linkresource` seçenek, kaynak dosyasını çıkış dosyasına eklemez; Bunu yapmak `-resource` için seçeneğini kullanın.  
   
- `-linkresource` seçeneği `-target:module`dışında `-target` seçeneklerinden birini gerektirir.  
+ Seçeneği `-linkresource` , dışındaki `-target` seçeneklerden birini gerektirir `-target:module`.  
   
- `filename`, örneğin [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. (Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>.) Çalışma zamanında diğer tüm kaynaklara erişmek için, <xref:System.Reflection.Assembly> sınıfında `GetManifestResource` ile başlayan yöntemleri kullanın.  
+ , Örneğin, [Resgen. exe (kaynak dosya Oluşturucu)](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. `filename` (Daha fazla bilgi için bkz <xref:System.Resources.ResourceManager>..) Çalışma zamanında diğer tüm kaynaklara erişmek için `GetManifestResource` <xref:System.Reflection.Assembly> sınıfında başlayan yöntemleri kullanın.  
   
  Dosya adı herhangi bir dosya biçimi olabilir. Örneğin, genel derleme önbelleğine yüklenebilmesi ve derlemedeki yönetilen koddan erişilebilmesi için derlemenin yerel bir DLL parçası yapmak isteyebilirsiniz.  
   
- `-linkresource` kısa biçimi `-linkres`.  
+ Öğesinin `-linkresource` kısa biçimi `-linkres`.  
   
 > [!NOTE]
-> `-linkresource` seçeneği Visual Studio geliştirme ortamında kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
+> Bu `-linkresource` seçenek, Visual Studio geliştirme ortamında kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `in.vb` ve `rf.resource`kaynak dosyası bağlantılarını derler.  
+ Aşağıdaki kod derlenir `in.vb` ve kaynak dosyasına `rf.resource`bağlanır.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  

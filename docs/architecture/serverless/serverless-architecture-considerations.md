@@ -1,86 +1,86 @@
 ---
-title: Sunucusuz mimari hususlar - Serverless uygulamaları
-description: Devlet yönetiminden kalıcı depolamadan ölçeklendirmeye, günlüğe kaydetmeye, izlemeve tanılamaya kadar sunucusuz uygulamaları tanımlamanın zorluklarını anlayın.
+title: Sunucusuz mimari değerlendirmeleri-sunucusuz uygulamalar
+description: Durum yönetiminden ve kalıcı depolamadan, genişleme, günlüğe kaydetme, izleme ve Tanılama için sunucusuz uygulamalar tasarlama sorunlarını anlayın.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522429"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135678"
 ---
 # <a name="serverless-architecture-considerations"></a>Sunucusuz mimaride dikkat edilmesi gerekenler
 
-Sunucusuz bir mimari benimsemek bazı zorluklarla birlikte gelir. Bu bölümde dikkat edilmesi gereken daha yaygın hususlardan bazıları incelenebilmelidir. Tüm bu zorlukların çözümleri vardır. Tüm mimari seçimlerde olduğu gibi, sunucusuz gitme kararı ancak artıları ve eksileri dikkatlice göz önünde bulundurularak verilmelidir. Uygulamanızın gereksinimlerine bağlı olarak, sunucusuz bir uygulamanın belirli bileşenler için doğru çözüm olmadığına karar verebilirsiniz.
+Sunucusuz bir mimariyi benimsemek, bazı güçlüklerle birlikte gelir. Bu bölümde, dikkat edilmesi gereken bazı yaygın hususlar incelenmektedir. Bu güçlüklerin tümünde çözüm vardır. Tüm mimari seçimlerinin yanı sıra, go sunucusuz kararı yalnızca, olumlu ve dezavantajların dikkatle ele alındıktan sonra yapılmalıdır. Uygulamanızın ihtiyaçlarına bağlı olarak, bir sunucusuz uygulamanın belirli bileşenler için doğru çözüm olmadığını belirleyebilirsiniz.
 
-## <a name="managing-state"></a>Devleti yönetme
+## <a name="managing-state"></a>Durumu yönetme
 
-Sunucusuz işlevler, genel olarak mikro hizmetlerde olduğu gibi, varsayılan olarak durumsuz. Durum kaçınmak, sunucusuzların geçici olmasını, ölçeklendirmesini ve merkezi bir hata noktası olmadan esneklik sağlamasını sağlar. Bazı durumlarda, iş süreçleri devlet gerektirir. İşleminizin durum gerektiriyorsa, iki seçeneğiniz var. Sunucusuz dışında bir model benimseyebilir veya durum sağlayan ayrı bir hizmetle etkileşimkurabilirsiniz. Durum eklemek çözümü zorlaştırabilir ve ölçeklendirmeyi zorlaştırabilir ve potansiyel olarak tek bir hata noktası oluşturabilir. İşlevinizin kesinlikle durum gerekip gerekmediğini dikkatlice düşünün. Yanıt "evet" ise, sunucusuz olarak uygulamanın mantıklı olup olmadığını belirleyin.
+Mikro hizmetlerde olduğu gibi sunucusuz işlevler varsayılan olarak durum bilgisiz değildir. Önleme durumu sunucusuz 'ın daha kısa olmasını, ölçeğini genişletmek ve merkezi bir hata noktası olmadan dayanıklılık sağlamasını sağlar. Bazı durumlarda, iş süreçlerini durum gerektirir. İşleminiz durum gerektiriyorsa, iki seçeneğiniz vardır. Sunucusuz dışında bir modeli benimseyebilirsiniz veya durum sağlayan ayrı bir hizmetle etkileşim kurabilirsiniz. Durum eklemek çözümü karmaşıklaştırır ve ölçeği daha zor hale getirebilir ve tek bir hata noktası oluşturabilir. İşlevinizin kesinlikle durum gerektirip gerektirmediğini dikkatle düşünün. Yanıt "Evet" ise, bunu sunucusuz ile uygulamayı hala mantıklı olup olmadığını saptayın.
 
-Sunucusuz yararları ödün vermeden devlet benimsemek için çeşitli çözümler vardır. Daha popüler çözümlerden bazıları şunlardır:
+Sunucusuz 'ın avantajlarından ödün vermeden, benimseme durumuna yönelik birkaç çözüm vardır. Daha popüler çözümlerden bazıları şunlardır:
 
-- Redis gibi geçici bir veri deposu veya dağıtılmış önbellek kullanma
-- SQL veya CosmosDB gibi bir veritabanında depo durumu
-- Duruma dayanıklı işlevler gibi bir iş akışı altyapısı üzerinden işleme
+- Geçici bir veri deposu veya dağıtılmış önbellek kullanın, örneğin Redsıs
+- Durumu SQL veya CosmosDB gibi bir veritabanında depola
+- [Dayanıklı işlevler](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview) gibi bir iş akışı altyapısı aracılığıyla durumu işleme
 
-Alt satırda, sunucusuz ile uygulamayı düşündüğünüz işlemler içinde herhangi bir devlet yönetimi için ihtiyaç farkında olması gerektiğidir.
+En alttaki satır, sunucusuz ile uygulamayı düşündüğünde işlem içinde herhangi bir durum yönetimine gerek duyduğuna dikkat etmeniz gerekir.
 
-## <a name="long-running-processes"></a>Uzun süren süreçler
+## <a name="long-running-processes"></a>Uzun süre çalışan süreçler
 
-Sunucusuzların birçok faydası, işlemlerin geçici olmasına dayanır. Kısa çalışma süreleri, sunucusuz sağlayıcının işlevleri sona ererken kaynakları boşaltmasını ve işlevleri ana bilgisayarlar arasında paylaşmasını kolaylaştırır. Çoğu bulut sağlayıcısı, işlevinizin çalıştırabileceği toplam süreyi yaklaşık 10 dakika ile sınırlar. İşleminiz daha uzun sürebilirse, alternatif bir uygulama düşünebilirsiniz.
+Sunucusuz 'in birçok avantajı, işlemlerin kısa ömürlü olmasını sağlar. Kısa çalışma süreleri, sunucusuz sağlayıcının kaynakları boşalttığından ve konaklar genelinde işlevleri paylaştığı ve paylaştığı kaynakları daha kolay hale getirir. Çoğu bulut sağlayıcısı, işlevinizin çalışacağı toplam süreyi 10 dakika içinde sınırlandırır. İşleminiz daha uzun sürbaşlayabilir, alternatif bir uygulama düşünebilirsiniz.
 
-Birkaç istisna ve çözüm vardır. Bir çözüm, işleminizi tek tek çalıştırmanın daha az zaman alan daha küçük bileşenlere dönüştürülmesi olabilir. İşlemleriniz bağımlılıklar nedeniyle uzun sürüyorsa, dayanıklı işlevler gibi bir çözüm kullanarak eşzamanlı bir iş akışı da düşünebilirsiniz. Dayanıklı işlevler, tamamlanması için harici bir işlemi beklerken işleminizin durumunu duraklatabilir ve korur. Eşzamanlı işleme, gerçek işlemin çalışma süresini azaltır.
+Birkaç özel durum ve çözüm vardır. Tek bir çözüm, işleminizi bir kez daha az çalışacak şekilde daha küçük bileşenlere bölmek olabilir. İşlem bağımlılıkları nedeniyle uzun süre çalışırsa, dayanıklı işlevler gibi bir çözüm kullanarak zaman uyumsuz bir iş akışını da düşünebilirsiniz. Dayanıklı işlevler, bir dış işlemin tamamlanmasını beklerken işleminizin durumunu duraklatır ve korur. Zaman uyumsuz işleme, gerçek işlemin çalışma süresini azaltır.
 
 ## <a name="startup-time"></a>Başlangıç zamanı
 
-Sunucusuz uygulamalarla ilgili olası endişelerden biri başlangıç zamanıdır. Kaynakları korumak için, birçok sunucusuz sağlayıcı "isteğe bağlı" altyapı oluşturur. Bir süre sonra sunucusuz bir işlev tetiklendiğinde, işlevi barındıracak kaynakların oluşturulması veya yeniden başlatılması gerekebilir. Bazı durumlarda, soğuk başlar birkaç saniye gecikmelere neden olabilir. Başlangıç süresi sağlayıcılar ve hizmet düzeyleri arasında değişir. Uygulamanın başarısı için en aza indirmek önemliyse, başlangıç süresini ele almak için birkaç yaklaşım vardır.
+Sunucusuz uygulamalarla ilgili olası bir sorun başlangıç zamanı. Kaynakları korumak için, birçok sunucusuz sağlayıcı "isteğe bağlı" altyapıyı oluşturur. Bir sunucusuz işlev bir süre sonra tetiklendiğinde, işlevi barındıracak kaynakların oluşturulması veya yeniden başlatılması gerekebilir. Bazı durumlarda, soğuk başlar birkaç saniyelik gecikmeler oluşmasına neden olabilir. Başlangıç süresi sağlayıcılar ve hizmet düzeyleri arasında farklılık gösterir. Uygulamanın başarısı için en aza indirmek önemliyse, başlangıç zamanına yönelik birkaç yaklaşım vardır.
 
-- Bazı sağlayıcılar, kullanıcıların altyapının "her zaman açıktır" garanti eden hizmet düzeyleri için ödeme ödemesine izin verir.
-- Bir keep-alive mekanizması uygulayın ("uyanık" tutmak için bitiş noktası ping).
-- Kapsayıcı bir işlev yaklaşımı ile Kubernetes gibi orkestrasyon kullanın (ana bilgisayar zaten yeni örnekleri kadar dönen son derece hızlı çalışıyor).
+- Bazı sağlayıcılar, kullanıcıların altyapının "her zaman açık" olduğunu garanti eden hizmet düzeyleri için ödeme yapmasına olanak tanır.
+- Canlı tutma mekanizması uygulayın ("uyanık" durumunda tutmak için uç noktaya ping yapın).
+- Kapsayıcılı bir işlev yaklaşımı ile Kubernetes gibi Orchestration kullanın (konak zaten çalışıyor, yeni örneklerin dönmesini son derece hızlıdır).
 
-## <a name="database-updates-and-migrations"></a>Veritabanı güncelleştirmeleri ve geçişler
+## <a name="database-updates-and-migrations"></a>Veritabanı güncelleştirmeleri ve geçişleri
 
-Sunucusuz kodun bir avantajı, tüm uygulamayı yeniden dağıtmak zorunda kalmadan yeni işlevler serbest bırakabilmektir. İlişkisel bir veritabanı söz konusu olduğunda bu avantaj bir dezavantaj haline gelebilir. Veritabanı şemalarında yapılan değişiklikleri sunucusuz güncelleştirmelerle eşitlemek zordur. İşler ters gittiğinde ve değişiklikler geri alınmalıdır. Veri bütünlüğü, mikro hizmetler ve sunucusuz işlevler için en iyi uygulamanın kendi verilerine sahip olmalarının bir nedenidir. Değişiklikleri tek bir bilgi işlem ve veri birimi olarak dağıtmak mümkündür. Gerçek şu ki, birçok eski sistem, sunucusuz mimarisi ile uzlaştırılması gereken büyük bir arka uç veritabanına sahiptir.
+Sunucusuz kodun avantajı, uygulamanın tamamını yeniden dağıtmaya gerek kalmadan yeni işlevleri serbest bırakabilmenizi sağlar. Bu avantaj, ilişkili ilişkisel bir veritabanı olduğunda olumsuz bir hale gelebilir. Veritabanı şemalarında yapılan değişikliklerin sunucusuz güncelleştirmelerle eşitlenmesi zordur. Ek sorunlar, şeyler yanlış olduğunda ve değişikliklerin geri alınması gerektiğinde ortaya çıkmıştır. Veri bütünlüğü, mikro hizmetler ve sunucusuz işlevler için en iyi uygulama, kendi verilerinin sahibi olmasının bir nedenidir. Değişiklikleri tek bir işlem ve veri birimi olarak dağıtmak mümkündür. Gerçeklik, birçok eski sistem sunucusuz mimariyle mutabakatı gereken büyük bir arka uç veritabanı özelliğidir.
 
-Şema sürümünü çözmek için popüler bir yaklaşım varolan özellikleri ve sütunları değiştirmek için asla, ancak yeni bilgi eklemektir. Örneğin, bir yapılacaklar listesi için Boolean "tamamlanmış" bayrağından "tamamlanmış tarihe" geçmek için bir değişiklik düşünün. Veritabanı değişikliği, eski alanı kaldırmak yerine:
+Şema sürümü oluşturmayı çözmeye yönelik popüler bir yaklaşım, mevcut özellikleri ve sütunları hiçbir şekilde değiştirmemek, bunun yerine yeni bilgiler eklemektir. Örneğin, yapılacaklar listesi için Boole "tamamlandı" bayrağını "tamamlanma tarihi" olarak değiştirmek için bir değişikliği göz önünde bulundurun. Eski alanı kaldırmak yerine veritabanı değişikliği şu şekilde olur:
 
-1. Yeni bir "tamamlanmış tarih" alanı ekleyin.
-1. "Tamamlanmış" Boolean alanını, tamamlanan tarihin geçerli tarihten sonra olup olmadığını değerlendiren bir hesaplanmış işleve dönüştürün.
-1. Tamamlanan Boolean'ın doğru ayarlandığı geçerli tarihe tamamlanmış tarihi ayarlamak için bir tetikleyici ekleyin.
+1. Yeni bir "tamamlanma tarihi" alanı ekleyin.
+1. "Tamamlandı" Boole alanını, tamamlanma tarihinin geçerli tarihten sonra olup olmadığını değerlendiren bir hesaplanan işleve dönüştürün.
+1. Tamamlanan Boole değeri true olarak ayarlandığında tamamlandı tarihini geçerli tarihe ayarlamak için bir tetikleyici ekleyin.
 
-Yeni sunucusuz işlevler yeni alandan yararlanabiliyorken, değişiklik sırası eski kodun "olduğu gibi" çalıştırılabilmesini sağlar.
+Değişiklik dizisi, eski kodun "olduğu gibi" çalışmaya devam etmesini sağlar ve daha yeni sunucusuz işlevler yeni alandan faydalanabilir.
 
-Sunucusuz mimarideki veriler hakkında daha fazla bilgi [için, dağıtılmış veri yönetimi için Zorluklar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md)bölümüne bakın.
+Sunucusuz mimarilerde bulunan veriler hakkında daha fazla bilgi için bkz. [Dağıtılmış veri yönetimi Için sorunlar ve çözümler](../microservices/architect-microservice-container-applications/distributed-data-management.md).
 
 ## <a name="scaling"></a>Ölçeklendirme
 
-Sunucusuz'un "sunucu yok" anlamına geldiğini niçin yanlış bir yoruma sayılsın? Aslında "daha az sunucu." Bir destek altyapısı nın olması, ölçekleme söz konusu olduğunda anlaşılması önemlidir. Çoğu sunucusuz platform, olay yoğunluğu arttığında altyapının nasıl ölçeklendirilebildiğini işlemek için bir denetim kümesi sağlar. Çeşitli seçenekler arasından seçim yapabilirsiniz, ancak stratejiniz işleve bağlı olarak değişebilir. Ayrıca, işlevler genellikle ilgili bir ana bilgisayar altında çalıştırılır, böylece aynı ana bilgisayardaki işlevler aynı ölçek seçeneklerine sahiptir. Bu nedenle ölçek gereksinimlerine göre hangi işlevlerin birlikte barındırıldığı organize etmek ve stratejilendirmek gerekir.
+Sunucusuz "sunucu yok" anlamına gelen yaygın bir yanıltıcı olur. Aslında "daha az sunucu" gibi. Bir destek altyapısı, ölçeklendirmenin ne zaman geldiğini anlamak için önemlidir. Çoğu sunucusuz platform, olay yoğunluğu arttıkça altyapının ölçeklendirilmesi için bir denetim kümesi sağlar. Çeşitli seçeneklerden birini seçebilirsiniz, ancak stratejiniz işleve bağlı olarak farklılık gösterebilir. Ayrıca, işlevler genellikle ilgili bir ana bilgisayar altında çalıştırılır, böylece aynı konaktaki işlevler aynı ölçek seçeneklerine sahip olacaktır. Bu nedenle, ölçek gereksinimlerine göre hangi işlevlerin birlikte barındırıldığını düzenlemek ve stratejik hale eklemek gereklidir.
 
-Kurallar genellikle değişen parametrelere göre nasıl ölçeklendirileceği (ana bilgisayar kaynaklarını artıracağını) ve ölçeklendirmeyi (ana bilgisayar örneklerinin sayısını artıracağını) belirtir. Ölçekler için tetikleyiciler zamanlama, istek oranları, CPU kullanımı ve bellek kullanımını içerebilir. Daha yüksek performans genellikle daha büyük bir maliyetle gelir. Daha az pahalı, tüketime dayalı yaklaşımlar, istek oranı aniden arttığında o kadar hızlı ölçeklendirilemez. Ön "sigorta maliyeti" kadar ödeme arasında bir trade-off kesinlikle "gitmek" ve talep ani artışlar nedeniyle daha yavaş tepkiler riski ödeme arasında dır.
+Kurallar, değişen parametrelere bağlı olarak genellikle ölçeği artırma (konak kaynaklarını artırma) ve genişleme (konak örneği sayısını artırma) belirler. Ölçek Tetikleyicileri için zamanlama, istek hızları, CPU kullanımı ve bellek kullanımı dahil olabilir. Daha yüksek performans genellikle daha fazla maliyetle gelir. Daha ucuz, tüketim tabanlı yaklaşımlar, istek oranı aniden arttıkça hızla ölçeklenmeyebilir. Önde gelen "sigorta maliyeti" ve kesin olarak "gitirken" ödeme yaparak, istek üzerine ani artışlar nedeniyle daha az yanıt vermek arasında bir denge vardır.
 
 ## <a name="monitoring-tracing-and-logging"></a>İzleme, izleme ve günlüğe kaydetme
 
-DevOps'un gözden kaçan bir yönü, dağıtıldıktan sonra uygulamaları izlemektir. Sunucusuz işlevleri izlemek için bir stratejiye sahip olmak önemlidir. En büyük zorluk genellikle korelasyon veya bir kullanıcı aynı etkileşimin bir parçası olarak birden fazla işlevi aradığında tanıma. Çoğu sunucusuz platform, üçüncü taraf araçlara içe aktarılabilen konsol günlüğe kaydetmeye izin verir. Telemetri koleksiyonunu otomatikleştirmek, korelasyon iLikleri oluşturmak ve izlemek ve ayrıntılı öngörüler sağlamak için belirli eylemleri izlemek için seçenekler de vardır. Azure, izleme ve analiz için gelişmiş [Application Insights platformünü](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) sağlar.
+DevOps 'ın genellikle daha fazla bir yönü dağıtıldıktan sonra uygulamaları izlerdir. Sunucusuz işlevleri izlemeye yönelik bir stratejinin olması önemlidir. En büyük zorluk genellikle bağıntılandır veya bir kullanıcı aynı etkileşimin bir parçası olarak birden çok işlevi çağırdığında, bu şekilde tanınması gerekir. Sunucusuz platformların çoğu, üçüncü taraf araçlara aktarılabilecek konsol günlüğüne izin verir. Telemetri toplamayı otomatik hale getirmek, bağıntı kimliklerini oluşturmak ve izlemek ve ayrıntılı Öngörüler sağlamak için belirli eylemleri izlemek için de seçenekler vardır. Azure, izleme ve analiz için Gelişmiş [Application Insights platformu](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) sağlar.
 
-## <a name="inter-service-dependencies"></a>Servisler arası bağımlılıklar
+## <a name="inter-service-dependencies"></a>Hizmetler arası bağımlılıklar
 
-Sunucusuz bir mimari, diğer işlevlere dayanan işlevler içerebilir. Aslında, sunucusuz bir mimaride birden çok hizmetin etkileşim veya dağıtılmış işlemin bir parçası olarak birbirini araması nadir değildir. Güçlü bağlantıdan kaçınmak için, hizmetlerin doğrudan birbiriyle referans vermemeleri önerilir. Bir hizmetin bitiş noktasının değişmesi gerektiğinde, doğrudan başvurular büyük yeniden düzenlemeyle sonuçlanabilir. Önerilen çözüm, bir istek türü için uygun bitiş noktasını sağlayan kayıt defteri gibi bir hizmet bulma mekanizması sağlamaktır. Başka bir çözüm, kuyruklar veya hizmetler arasındaki iletişim konuları gibi mesajlaşma hizmetlerinden yararlanmaktır.
+Sunucusuz bir mimari, diğer işlevlere bağlı olan işlevleri içerebilir. Aslında, bir etkileşim ya da dağıtılmış işlemin bir parçası olarak birden fazla hizmetin her birini aramasını sağlamak için sunucusuz bir mimaride yaygın olmayan bir durumdur. Güçlü kuponu önlemek için, hizmetlerin birbirini doğrudan başvurmaması önerilir. Bir hizmetin uç noktasının değişmesi gerektiğinde, doğrudan başvurular büyük yeniden düzenleme ile sonuçlanabilir. Önerilen bir çözüm, bir istek türü için uygun uç noktasını sağlayan bir kayıt defteri gibi bir hizmet bulma mekanizması sağlamaktır. Farklı bir çözüm, hizmetler arasındaki iletişim için kuyruklar veya konular gibi mesajlaşma hizmetlerinden faydalanmaya yöneliktir.
 
-## <a name="managing-failure-and-providing-resiliency"></a>Başarısızlığı yönetme ve esneklik sağlama
+## <a name="managing-failure-and-providing-resiliency"></a>Hatayı yönetme ve dayanıklılık sağlama
 
-*Devre kesici deseni*de göz önünde bulundurmak da önemlidir: Bir nedenle bir hizmet başarısız olmaya devam ederse, bu hizmeti tekrar tekrar aramak tavsiye edilmez. Bunun yerine, bağımlı hizmetin durumu yeniden kurulana kadar alternatif bir hizmet çağrılır veya ileti döndürülür. Sunucusuz mimari, servisler arası bağımlılıkları çözme ve yönetme stratejisini dikkate almalıdır.
+*Devre kesici deseninin*göz önünde bulundurulması de önemlidir: bazı nedenlerle bir hizmet başarısız olmaya devam ederse, bu hizmetin tekrar tekrar çağırmasının önerilmez. Bunun yerine, alternatif bir hizmet çağrılır veya bağımlı hizmetin sistem durumu yeniden oluşturulana kadar bir ileti döndürülür. Sunucusuz mimarinin, hizmet dışı bağımlılıkların çözümlenmesi ve yönetilmesi için strateji hesabına sahip olması gerekir.
 
-Devre kesici desenini devam ettirebilmek için hizmetlerin hataya dayanıklı ve esnek olması gerekir. Hata toleransı, beklenmeyen özel durumlar veya geçersiz durumlarla karşılaşıldıktan sonra bile uygulamanızın çalışmaya devam etme yeteneğini ifade eder. Hata toleransı genellikle kodun kendisi ve özel durumları işlemek için nasıl yazıldığının bir fonksiyonudur. Esneklik, uygulamanın hatalardan kurtulmada ne kadar yetenekli olduğunu ifade eder. Esneklik genellikle sunucusuz platform tarafından yönetilir. Platform, varolan başarısız olduğunda yeni bir sunucusuz işlev örneği döndürebilmelidir. Platform aynı zamanda her yeni örnek başarısız olduğunda yeni örnekler kadar dönen durdurmak için yeterince akıllı olmalıdır.
+Devre kesici düzenine devam etmek için, hizmetlerin hata toleranslı ve dayanıklı olması gerekir. Hata toleransı, uygulamanızın beklenmedik özel durumlar veya geçersiz durumlardan sonra bile çalışmaya devam etmesini sağlar. Hata toleransı genellikle kodun kendisinin bir işlevidir ve özel durumları işlemek için nasıl yazıldığı. Dayanıklılık, uygulamanın hatalardan kurtarılırken ne kadar uyumlu olduğunu ifade eder. Dayanıklılık genellikle sunucusuz platform tarafından yönetilir. Mevcut bir hata oluştuğunda platformun yeni bir sunucusuz işlev örneği alabilmesi gerekir. Her yeni örnek başarısız olduğunda, platformun yeni örnekleri dönmesini durdurmak için de yeterince akıllı olması gerekir.
 
-Daha fazla bilgi için bkz: [Devre Kesici deseni uygulama.](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+Daha fazla bilgi için bkz. [devre kesici modelini uygulama](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md).
 
-## <a name="versioning-and-greenblue-deployments"></a>Sürüm ve yeşil/mavi dağıtımlar
+## <a name="versioning-and-greenblue-deployments"></a>Sürüm oluşturma ve yeşil/mavi dağıtımlar
 
-Sunucusuz olmanın en önemli yararı, tüm uygulamayı yeniden dağıtmak zorunda kalmadan belirli bir işlevi yükseltme yeteneğidir. Yükseltmelerin başarılı olabilmesi için işlevlerin, onları çağıran hizmetlerin kodun doğru sürümüne yönlendirilmesi için sürülmesi gerekir. Yeni sürümleri dağıtmak için bir strateji de önemlidir. Yaygın bir yaklaşım "yeşil/mavi dağıtımlar" kullanmaktır. Yeşil dağıtım geçerli işlevdir. Yeni bir "mavi" sürümü üretime dağıtılır ve test edilir. Test geçtiğinde, yeşil ve mavi sürümler yeni sürümün canlı olarak gelmesi için değiştirilir. Herhangi bir sorunla karşılaşılırsa, bunlar geri değiştirilebilir. Sürüm ve yeşil/mavi dağıtımları desteklemek, sürüm değişikliklerini karşılamak için işlevleri yazma nın ve dağıtımları işlemek için sunucusuz platformla çalışmanın bir birleşimini gerektirir. Olası bir yaklaşım, [Azure sunucusuz platform](azure-functions.md#proxies) bölümünde açıklanan yakınlıkları kullanmaktır.
+Sunucusuz 'ın önemli bir avantajı, uygulamanın tamamını yeniden dağıtmaya gerek kalmadan belirli bir işlevi yükseltmeme özelliğidir. Yükseltmelerin başarılı olabilmesi için işlevlerin doğru kod sürümüne yönlendirilmesi için işlevleri sürümlenmiş olmalıdır. Yeni sürümleri dağıtmaya yönelik bir strateji da önemlidir. Yaygın bir yaklaşım, "yeşil/mavi dağıtımlar" kullanmaktır. Yeşil dağıtım, geçerli işlevdir. Yeni bir "mavi" sürümü üretime dağıtılır ve test edilir. Testler başarılı olduğunda, yeni sürümün canlı olması için yeşil ve mavi sürümler takas edilir. Herhangi bir sorunla karşılaşıldığında, geri dönebilir. Sürüm oluşturma ve yeşil/mavi dağıtımları desteklemek, sürüm değişikliklerini barındırmak ve dağıtımları işlemek için sunucusuz platformla çalışmak üzere işlevleri yazmanın bir birleşimini gerektirir.
 
 >[!div class="step-by-step"]
 >[Önceki](serverless-architecture.md)
->[Sonraki](serverless-design-examples.md)
+>[İleri](serverless-design-examples.md)

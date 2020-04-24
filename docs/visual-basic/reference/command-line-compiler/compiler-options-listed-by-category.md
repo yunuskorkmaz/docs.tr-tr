@@ -31,7 +31,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |Seçenek|Amaç|  
 |---|---|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Çıktı dosyasının bölümlerinin hangi noktada hizalanacağını belirtir.|  
-|[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|İyileştirmeleri etkinleştirilir/devre dışı bırakır.|  
+|[-optimize et](../../../visual-basic/reference/command-line-compiler/optimize.md)|İyileştirmeleri etkinleştirilir/devre dışı bırakır.|  
   
 ## <a name="output-files"></a>Çıkış dosyaları  
   
@@ -51,11 +51,11 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |---|---|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
-|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Belirtilen derlemeden bir ad alanı içeri aktarır.|  
+|[-içeri aktarmalar](../../../visual-basic/reference/command-line-compiler/imports.md)|Belirtilen derlemeden bir ad alanı içeri aktarır.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar kapsayıcısı adı belirtir.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Derlemeye tanımlayıcı ad vermek için bir anahtar veya anahtar çifti içeren bir dosya belirtir.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.|  
-|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Meta verileri bir derlemeden içeri aktarır.|  
+|[-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.|  
+|[-başvuru](../../../visual-basic/reference/command-line-compiler/reference.md)|Meta verileri bir derlemeden içeri aktarır.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Modülün bir parçası olacağı derlemenin adını belirtir.|  
 |`-analyzer`|Bu derlemeden çözümleyiciler çalıştırın (kısa biçim:-a)|  
 |`-additionalfile`|Kod oluşturmayı doğrudan etkilemeyen, ancak hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilen ek dosyaları adlandırır.|  
@@ -76,8 +76,8 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-help` seçeneği belirtilerek aynıdır. Hiçbir derleme gerçekleşmez.|  
-|[-yardım](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-?` seçeneği belirtilerek aynıdır. Hiçbir derleme gerçekleşmez.|  
+|[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-help` seçeneğini belirtirken de aynıdır. Hiçbir derleme gerçekleşmez.|  
+|[-yardım](../../../visual-basic/reference/command-line-compiler/help.md)|Derleyici seçeneklerini görüntüler. Bu komut, `-?` seçeneğini belirtirken de aynıdır. Hiçbir derleme gerçekleşmez.|  
   
 ## <a name="language"></a>Dil  
   
@@ -113,11 +113,11 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic derleyicisinin iç derleyici hatalarını nasıl rapor etmesi gerektiğini belirtir.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Windows çekirdeğine, belirli bir yürütülebilir dosyanın yüksek entropi adres alanı düzeni rastgele seçimini (ASLR) destekleyip desteklemediğini söyler.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Başlangıçta kullanılacak `Sub Main` yordamını içeren sınıfı belirtir.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Başlangıçta kullanılacak `Sub Main` yordamı içeren sınıfı belirtir.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc. rsp ile derleme|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Derleyicinin standart kitaplıklara Başvurmamasını sağlar.|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Derleyicinin hiçbir uygulama bildirimini yürütülebilir dosyaya katıştırmamasını sağlar.|  
-|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
+|[-Platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Kaynak dosyaları derlemek için alt dizinleri arar.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Tüm tür bildirimleri için bir ad alanı belirtir.|  
 |[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.|  
@@ -128,5 +128,5 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alfabetik olarak listelenen Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [Alfabetik Olarak Listelenmiş Visual Basic Derleyici Seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties)

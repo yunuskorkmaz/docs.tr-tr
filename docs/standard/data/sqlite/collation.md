@@ -1,7 +1,7 @@
 ---
 title: Harmanlama
 ms.date: 12/13/2019
-description: Özel bir harmanlama dizisi oluşturmayı öğrenin.
+description: Özel bir harmanlama sırası oluşturmayı öğrenin.
 ms.openlocfilehash: 9879846cc191a62c4cb47a0fbaa47c59153ba61c
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
@@ -11,31 +11,31 @@ ms.locfileid: "81242978"
 ---
 # <a name="collation"></a>Harmanlama
 
-Dizileri harmanlama, düzen ve eşitliği belirlemek için TEXT değerlerini karşılaştırırken SQLite tarafından kullanılır. SQL sorgularında sütun oluştururken veya işlem başına kullanırken hangi harmanlamanın kullanılacağını belirtebilirsiniz. SQLite varsayılan olarak üç harmanlama dizisi içerir.
+Harmanlama dizileri, sıralama ve eşitlik belirlenmesi için metın değerleri karşılaştırılırken SQLite tarafından kullanılır. SQL sorgularında sütun veya işlem başına oluşturma sırasında hangi harmanlamayı kullanacağınızı belirtebilirsiniz. SQLite varsayılan olarak üç harmanlama dizisi içerir.
 
 | Harmanlama | Açıklama                               |
 | --------- | ----------------------------------------- |
-| RTRIM     | Sondaki beyaz boşluğu yok sayar               |
-| NOCASE    | ASCII karakterleri a-z için büyük/küçük harf duyarsız |
-| Ikili    | Duyarlı. Baytları doğrudan karşılaştırır   |
+| RTRIM     | Sondaki boşluğu yoksayar               |
+| NOCASE    | ASCII karakterleri A-Z için büyük/küçük harfe duyarsız |
+| Ý    | Büyük/küçük harfe duyarlı. Baytları doğrudan karşılaştırır   |
 
 ## <a name="custom-collation"></a>Özel harmanlama
 
-Ayrıca kendi harmanlama dizilerinizi tanımlayabilir veya yerleşik sekanları <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>kullanarak geçersiz kılabilirsiniz. Aşağıdaki örnek, Unicode karakterlerini desteklemek için NOCASE harmanlama geçersiz kılınan gösterir. [Tam örnek kodu](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub'da kullanılabilir.
+Ayrıca kendi harmanlama dizlerinizi tanımlayabilir veya kullanarak <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>yerleşik olanları geçersiz kılabilirsiniz. Aşağıdaki örnekte, Unicode karakterlerini desteklemek için NOCASE harmanlamasının geçersiz kılınması gösterilmektedir. [Tam örnek kod](https://github.com/dotnet/docs/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) GitHub ' da kullanılabilir.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 
-## <a name="like-operator"></a>Operatör gibi
+## <a name="like-operator"></a>LIKE işleci
 
-SQLite LIKE operatör collations onurlandırmaz. Varsayılan uygulama NOCASE harmanlama aynı semantik vardır. A'dan Z'ye KADAR ASCII karakterleri için sadece büyük bir duyarsızlık.
+SQLite içindeki LIKE işleci harmanlamaları dikkate almaz. Varsayılan uygulama, NOCASE harmanlamasıyla aynı semantiğe sahiptir. Yalnızca A-Z ASCII karakterleri için büyük/küçük harfe duyarsızdır.
 
-Aşağıdaki pragma deyimini kullanarak LIKE işleci kılıfını kolayca hassas hale getirebilirsiniz:
+Aşağıdaki pragma ifadesini kullanarak LIKE işlecinin büyük küçük harfe duyarlı olmasını kolayca sağlayabilirsiniz:
 
 ```sql
 PRAGMA case_sensitive_like = 1
 ```
 
-LIKE işlecinin uygulanmasını geçersiz kılmayla ilgili ayrıntılar için [Kullanıcı tanımlı işlevlere](user-defined-functions.md) bakın.
+LIKE işlecinin uygulanmasını geçersiz kılma hakkında ayrıntılar için [Kullanıcı tanımlı işlevlere](user-defined-functions.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

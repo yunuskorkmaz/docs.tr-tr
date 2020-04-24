@@ -16,39 +16,39 @@ ms.locfileid: "74335289"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te İkili Dosyaları Okuma
 
-Nesne `My.Computer.FileSystem` ikili `ReadAllBytes` dosyalardan okuma yöntemini sağlar.  
+`My.Computer.FileSystem` Nesnesi, ikili dosyalardan `ReadAllBytes` okumak için yöntemini sağlar.  
   
 ### <a name="to-read-from-a-binary-file"></a>İkili dosyadan okumak için  
   
-- Bir `ReadAllBytes` dosyanın içeriğini bayt dizisi olarak döndüren yöntemi kullanın. Bu örnek dosyadan `C:/Documents and Settings/selfportrait.jpg`okur.  
+- Bir dosyanın `ReadAllBytes` içeriğini bayt dizisi olarak döndüren yöntemini kullanın. Bu örnek dosyadan okur `C:/Documents and Settings/selfportrait.jpg`.  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
-- Büyük ikili dosyalar için, <xref:System.IO.FileStream.Read%2A> <xref:System.IO.FileStream> dosyadan yalnızca belirli bir miktarı aynı anda okumak için nesnenin yöntemini kullanabilirsiniz. Daha sonra, her okuma işlemi için dosyanın ne kadarının belleğe yüklendiğini sınırlayabilirsiniz. Aşağıdaki kod örneği bir dosyayı kopyalar ve arayanın dosyanın okuma işlemi başına belleğe ne kadarının okunduğunu belirtmesine olanak tanır.  
+- Büyük ikili dosyalar için, tek seferde yalnızca belirtilen <xref:System.IO.FileStream.Read%2A> bir miktarı dosyadan <xref:System.IO.FileStream> okumak için nesnesinin yöntemini kullanabilirsiniz. Böylece, her okuma işlemi için dosyanın belleğe ne kadarının yüklendiğini sınırlayabilirsiniz. Aşağıdaki kod örneği bir dosyayı kopyalar ve çağıranın okuma işlemi başına ne kadar dosyanın belleğe okunduğunu belirtmesini sağlar.  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Aşağıdaki koşullar bir özel durum atılmasına neden olabilir:  
+ Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: sıfır uzunlukta bir dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, ya da bir aygıt yolu ( ).<xref:System.ArgumentException>  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (<xref:System.ArgumentException>).  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
 - Dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Dosya başka bir işlem tarafından kullanılıyor veya G/Ç<xref:System.IO.IOException>hatası oluşur ( ).  
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- Arabellek için dize yazmak için yeterli<xref:System.OutOfMemoryException>bellek yoktur ( ).  
+- Dizeyi arabelleğe (<xref:System.OutOfMemoryException>) yazmak için yeterli bellek yok.  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
- Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası Visual Basic kaynak dosyası olmayabilir.  
+ Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.  
   
  Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.  
   

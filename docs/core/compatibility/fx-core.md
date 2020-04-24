@@ -1,26 +1,27 @@
 ---
-title: Son dakika değişiklikleri - .NET Framework to .NET Core
+title: Son değişiklikler-.NET Core 'a .NET Framework
 titleSuffix: ''
-description: .NET Framework'den .NET Core'a son dakika değişikliklerini listeler.
+description: .NET Framework 'den .NET Core 'a yapılan son değişiklikleri listeler.
 ms.date: 12/18/2019
-ms.openlocfilehash: ef16132c8dcffbe9bcfbe02834c9a78d6d0c33e4
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 6a6cbffed5a54e3683832da54d408d77bb553cf1
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021798"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135639"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework'den .NET Core'a geçiş için son dakika değişiklikleri
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a geçiş için son değişiklikler
 
-Bir uygulamayı .NET Framework'den .NET Core'a geçiriyorsanız, bu makalede listelenen son dakika değişiklikleri sizi etkileyebilir. Son kesme değişiklikleri kategoriye ve bu kategoriler içinde ,.NET Core sürümüne göre gruplandırılır.
+.NET Framework bir uygulamayı .NET Core 'a geçiriyorsanız, bu makalede listelenen son değişiklikler sizi etkileyebilir. Son değişiklikler, eklenen .NET Core sürümüne göre kategoriye ve bu kategorilerin içine göre gruplandırılır.
 
 > [!NOTE]
-> Bu makale, .NET Framework ve .NET Core arasındaki son dakika değişikliklerinin tam bir listesi değildir. En önemli kırılma değişiklikleri biz bunların farkında olmak gibi burada eklenir.
+> Bu makale, .NET Framework ve .NET Core arasındaki önemli değişikliklerden oluşan bir liste değildir. Bunlara göz önünde bulundurulduğumuz için en önemli son değişiklikler buraya eklenir.
 
-## <a name="core-net-libraries"></a>Çekirdek .NET kitaplıkları
+## <a name="core-net-libraries"></a>Core .NET kitaplıkları
 
-- [UseShellExecute'ın varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
-- [FileSystemInfo.Attributes tarafından atılan Yetkisiz ErişimÖzel Durum](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
+- [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -28,15 +29,19 @@ Bir uygulamayı .NET Framework'den .NET Core'a geçiriyorsanız, bu makalede lis
 
 ***
 
-### <a name="net-core-10"></a>.NET Çekirdek 1.0
+### <a name="net-core-10"></a>.NET Core 1,0
 
 [!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
 
 ***
 
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
 ## <a name="cryptography"></a>Şifreleme
 
-- [İmzaCms.ComputeSignature boolean parametre saygı duyulur](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+- [SignedCms. ComputeSignature Boolean parametresi dikkate alındı](#boolean-parameter-of-signedcmscomputesignature-is-respected)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -46,25 +51,25 @@ Bir uygulamayı .NET Framework'den .NET Core'a geçiriyorsanız, bu makalede lis
 
 ## <a name="windows-forms"></a>Windows Forms
 
-Windows Forms desteği 3.0 sürümünde .NET Core'a eklendi. Bir Windows Forms uygulamasını .NET Framework'den .NET Core'a geçirmiyorsanız, burada listelenen son dakika değişiklikleri uygulamanızı etkileyebilir.
+Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. .NET Framework bir Windows Forms uygulamasını .NET Core 'a geçiriyorsanız, burada listelenen son değişiklikler uygulamanızı etkileyebilir.
 
 - [Kaldırılan denetimler](#removed-controls)
-- [Araç ipucu gösterilirse CellFormatting olayı yükseltilmez](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [Control.DefaultFont Segoe UI 9 pt olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt)
-- [FolderBrowserDialog modernizasyonu](#modernization-of-the-folderbrowserdialog)
+- [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt)
+- [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog)
 - [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types)
 - [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [DomainUpDown.UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
 - [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [DoNotSupportSelectAllShortcutInMultilineTextBox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
 - [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported)
 - [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
 - [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported)
-- [ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Windows Formlarından Kaldırılan Yinelenen API'ler](#duplicated-apis-removed-from-windows-forms)
+- [Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [Yinelenen API 'Ler Windows Forms kaldırıldı](#duplicated-apis-removed-from-windows-forms)
 
-### <a name="net-core-31"></a>.NET Çekirdek 3.1
+### <a name="net-core-31"></a>.NET Core 3,1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -130,5 +135,5 @@ Windows Forms desteği 3.0 sürümünde .NET Core'a eklendi. Bir Windows Forms u
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core'da her zaman özel durumlar oluşturan API'ler](unsupported-apis.md)
-- [.NET Framework teknolojileri .NET Core'da kullanılamıyor](../porting/net-framework-tech-unavailable.md)
+- [.NET Core üzerinde her zaman özel durum oluşturan API 'Ler](unsupported-apis.md)
+- [.NET Core 'da .NET Framework teknolojileri kullanılamıyor](../porting/net-framework-tech-unavailable.md)

@@ -13,7 +13,7 @@ ms.locfileid: "75706272"
 
 **Sıralama** , yönetilen ve yerel kod arasında çapraz geçiş olmaları gerektiğinde türleri dönüştürme işlemidir.
 
-Yönetilen ve yönetilmeyen koddaki türler farklı olduğundan sıralama gereklidir. Yönetilen kodda, örneğin `String`, yönetilmeyen Uluslararası dizeler Unicode ("geniş"), Unicode olmayan, null ile sonlandırılmış, ASCII vb. olabilir. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyi gerçekleştirmeye çalışır. Ancak, ek denetime ihtiyacınız olan bu durumlar için, yönetilmeyen tarafta beklenen türü ne olduğunu belirtmek üzere [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) özniteliğini kullanabilirsiniz. Örneğin, dizenin null ile sonlandırılmış bir ANSI dizesi olarak gönderilmesini istiyorsanız bunu şöyle yapabilirsiniz:
+Yönetilen ve yönetilmeyen koddaki türler farklı olduğundan sıralama gereklidir. Yönetilen kodda, örneğin, `String`yönetilmeyen Uluslararası dizeler Unicode ("geniş"), Unicode olmayan, null ile SONLANDıRıLMıŞ, ASCII vb. olabilir. Varsayılan olarak, P/Invoke alt sistemi, bu makalede açıklanan varsayılan davranışa göre doğru şeyi gerçekleştirmeye çalışır. Ancak, ek denetime ihtiyacınız olan bu durumlar için, yönetilmeyen tarafta beklenen türü ne olduğunu belirtmek üzere [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) özniteliğini kullanabilirsiniz. Örneğin, dizenin null ile sonlandırılmış bir ANSI dizesi olarak gönderilmesini istiyorsanız bunu şöyle yapabilirsiniz:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -36,13 +36,13 @@ Bu ilk tabloda, hem P/Invoke hem de alan sıralaması için, sıralama için ayn
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | P/Invoke veya yapının `CharSet` göre `char` veya `char16_t`. [Karakter kümesi belgelerine](charset.md)bakın. |
-| `string`  | P/Invoke veya yapının `CharSet` göre `char*` veya `char16_t*`. [Karakter kümesi belgelerine](charset.md)bakın. |
+| `char`    | Ya `char` da `char16_t` P/Invoke `CharSet` ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
+| `string`  | Ya `char*` da `char16_t*` P/Invoke `CharSet` ya da yapısına bağlı olarak. [Karakter kümesi belgelerine](charset.md)bakın. |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET Işaretçi türleri (örn. `void*`)  | `void*` |
-| `System.Runtime.InteropServices.SafeHandle` türetilen tür | `void*` |
-| `System.Runtime.InteropServices.CriticalHandle` türetilen tür | `void*`          |
+| Türetilmiş tür`System.Runtime.InteropServices.SafeHandle` | `void*` |
+| Türetilmiş tür`System.Runtime.InteropServices.CriticalHandle` | `void*`          |
 | `bool`    | Win32 `BOOL` türü       |
 | `decimal` | COM `DECIMAL` yapısı |
 | .NET temsilcisi | Yerel işlev işaretçisi |
@@ -53,26 +53,26 @@ Bir parametre veya yapı olarak sıralama yapıyorsanız, birkaç sıralama kate
 
 | .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
-| .NET dizisi | Dizi öğelerinin yerel gösterimlerine ait bir dizi başlangıcına yönelik bir işaretçi. | `[MarshalAs]` özniteliği olmadan izin verilmiyor|
-| `Sequential` veya `Explicit` `LayoutKind` bir sınıf | Sınıfın yerel gösterimine yönelik bir işaretçi | Sınıfın yerel temsili |
+| .NET dizisi | Dizi öğelerinin yerel gösterimlerine ait bir dizi başlangıcına yönelik bir işaretçi. | `[MarshalAs]` Özniteliği olmadan izin verilmiyor|
+| `Sequential` Veya içeren `LayoutKind` bir sınıf`Explicit` | Sınıfın yerel gösterimine yönelik bir işaretçi | Sınıfın yerel temsili |
 
 Aşağıdaki tablo, yalnızca Windows 'un varsayılan sıralama kurallarını içerir. Windows dışı platformlarda bu türleri sıralayamaz.
 
 | .NET türü | Yerel tür (parametre) | Yerel tür (alan) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
-| `System.Array` | COM arabirimi | `[MarshalAs]` özniteliği olmadan izin verilmiyor |
+| `System.Array` | COM arabirimi | `[MarshalAs]` Özniteliği olmadan izin verilmiyor |
 | `System.ArgIterator` | `va_list` | İzin verilmiyor |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | İzin verilmiyor |
 | `System.Collections.IEnumerable` | `IDispatch*` | İzin verilmiyor |
-| `System.DateTimeOffset` | 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil eden `int64_t` || 1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil eden `int64_t` |
+| `System.DateTimeOffset` | `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme || `int64_t`1 Ocak 1601 ' de gece yarısından beri geçen onay işareti sayısını temsil etme |
 
 Bazı türler, alan olarak değil yalnızca parametre olarak sıralanabilir. Bu türler aşağıdaki tabloda listelenmiştir:
 
 | .NET türü | Yerel tür (yalnızca parametre) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | P/Invoke `CharSet` bağlı olarak `char*` ya da `char16_t*`.  [Karakter kümesi belgelerine](charset.md)bakın. |
-| `System.ArgIterator` | `va_list` (yalnızca Windows x86/x64/arm64 üzerinde) |
+| `System.Text.StringBuilder` | Ya `char*` da `char16_t*` P/Invoke `CharSet` öğesine bağlı olarak.  [Karakter kümesi belgelerine](charset.md)bakın. |
+| `System.ArgIterator` | `va_list`(yalnızca Windows x86/x64/arm64 üzerinde) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
@@ -87,14 +87,14 @@ Bu varsayılanlar tam olarak istediğiniz şekilde yapamazsa, parametrelerin nas
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Temsilci türleri | .NET Framework `_Delegate*`. .NET Core 'da izin verilmiyor. |
+| Temsilci türleri | `_Delegate*`.NET Framework. .NET Core 'da izin verilmiyor. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET dizisi | `SAFEARRAY`                   |
-| `string[]` | `BSTR`s `SAFEARRAY`        |
+| `string[]` | `SAFEARRAY`/ `BSTR`s        |
 
 ## <a name="marshaling-classes-and-structs"></a>Sınıfları ve yapıları hazırlama
 
-Bir yapının tür sıralaması, yönetilmeyen bir yönteme nasıl geçmektir. Örneğin, yönetilmeyen yöntemlerin bazıları parametre olarak bir yapı gerektirir. Bu durumlarda, bir parametre olarak kullanmak için, dünyanın yönetilen bölümünde karşılık gelen bir yapı veya bir sınıf oluşturmanız gerekir. Ancak, sınıfı tanımlamak yeterli değildir, Ayrıca, sınıf içindeki alanların yönetilmeyen yapıya nasıl eşlenmediğini de belirlemeniz gerekir. Burada `StructLayout` özniteliği yararlı hale gelir.
+Bir yapının tür sıralaması, yönetilmeyen bir yönteme nasıl geçmektir. Örneğin, yönetilmeyen yöntemlerin bazıları parametre olarak bir yapı gerektirir. Bu durumlarda, bir parametre olarak kullanmak için, dünyanın yönetilen bölümünde karşılık gelen bir yapı veya bir sınıf oluşturmanız gerekir. Ancak, sınıfı tanımlamak yeterli değildir, Ayrıca, sınıf içindeki alanların yönetilmeyen yapıya nasıl eşlenmediğini de belirlemeniz gerekir. Burada `StructLayout` öznitelik faydalı olur.
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -119,7 +119,7 @@ public static void Main(string[] args) {
 }
 ```
 
-Önceki kodda `GetSystemTime()` işlevine çağırmanın basit bir örneği gösterilmektedir. İlginç bit 4. satırda. Özniteliği, sınıfın alanlarının diğer (yönetilmeyen) taraftaki yapıya sırayla eşlenmesi gerektiğini belirtir. Bu, alanların adlandırılmasının önemli olmadığı, yönetilmeyen yapısına karşılık gelmesi gerektiğinden, aşağıdaki örnekte gösterildiği gibi, yalnızca kendi sırası önemli değildir.
+Önceki kod, `GetSystemTime()` işlevine çağırmanın basit bir örneğini gösterir. İlginç bit 4. satırda. Özniteliği, sınıfın alanlarının diğer (yönetilmeyen) taraftaki yapıya sırayla eşlenmesi gerektiğini belirtir. Bu, alanların adlandırılmasının önemli olmadığı, yönetilmeyen yapısına karşılık gelmesi gerektiğinden, aşağıdaki örnekte gösterildiği gibi, yalnızca kendi sırası önemli değildir.
 
 ```c
 typedef struct _SYSTEMTIME {

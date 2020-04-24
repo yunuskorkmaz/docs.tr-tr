@@ -1,20 +1,24 @@
 ### YamlMime:Landing
 title: .NET belgeleri
-summary: Birçok farklı uygulama türü oluşturmak için açık kaynak kodlu bir geliştirici platformu olan .NET hakkında bilgi edinin.
+summary: Birçok farklı uygulama türü oluşturmaya yönelik açık kaynaklı bir geliştirici platformu olan .NET hakkında bilgi edinin.
 metadata:
   title: .NET belgeleri
-  description: Birçok farklı uygulama türü oluşturmak için açık kaynak kodlu bir geliştirici platformu olan .NET hakkında bilgi edinin.
+  description: Birçok farklı uygulama türü oluşturmaya yönelik açık kaynaklı bir geliştirici platformu olan .NET hakkında bilgi edinin.
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636082"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135821"
 landingContent:
 - title: .NET hakkında bilgi edinin
   linkLists:
+  - linkListType: download
+    links:
+    - text: .NET SDK 'sını indirin
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: .NET Turu
@@ -39,53 +43,53 @@ landingContent:
       url: whats-new/whats-new-in-dotnet-standard.md
     - text: ​.NET Core’daki yenilikler
       url: ../core/whats-new/dotnet-core-3-1.md
-- title: Verileri serihale
+- title: Verileri serileştirme
   linkLists:
   - linkListType: concept
     links:
-    - text: Serihale ve JSON deserialize
+    - text: JSON serisini serileştirme ve seri durumdan çıkarma
       url: serialization/system-text-json-overview.md
   - linkListType: how-to-guide
     links:
-    - text: "C kullanarak JSON'u seri hale ve deserialize edin #"
+    - text: 'C kullanarak JSON serisini serileştirme ve seri durumdan çıkarma #'
       url: serialization/system-text-json-how-to.md
-    - text: Newtonsoft.Json'dan System.Text.Json'a göç edin
+    - text: Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-    - text: JSON serileştirme için özel dönüştürücüler yazın
+    - text: JSON serileştirme için özel dönüştürücüler yazma
       url: serialization/system-text-json-converters-how-to.md
   - linkListType: sample
     links:
     - text: XML serileştirme örnekleri
       url: serialization/examples-of-xml-serialization.md
-- title: Tarihleri, sayıları ve dizeleri biçimlendirme ve dönüştürme
+- title: Tarihleri, rakamları ve dizeleri biçimlendirme ve dönüştürme
   linkLists:
   - linkListType: concept
     links:
     - text: Sayısal biçim dizeleri
       url: base-types/standard-numeric-format-strings.md
-    - text: Tarih ve saat biçimi dizeleri
+    - text: Tarih ve saat biçim dizeleri
       url: base-types/standard-date-and-time-format-strings.md
     - text: Bileşik biçimlendirme
       url: base-types/composite-formatting.md
     - text: Saatleri saat dilimleri arasında dönüştürme
       url: datetime/converting-between-time-zones.md
-    - text: Karakterleri dizeleri kırpma ve kaldırma
+    - text: Dizelerdeki karakterleri kırpın ve kaldırın
       url: base-types/trimming.md
-    - text: .NET'te normal ifadeler
+    - text: .NET içinde normal ifadeler
       url: base-types/regular-expressions.md
   - linkListType: how-to-guide
     links:
-    - text: Dizeleri DateTime'a dönüştürme
+    - text: Dizeleri Tarih/saate Dönüştür
       url: base-types/parsing-datetime.md
-    - text: Önde gelen sıfırlara sahip bir sayıyı pad
+    - text: Bir sayıyı baştaki sıfırlarla doldurma
       url: base-types/how-to-pad-a-number-with-leading-zeros.md
-    - text: Tarih ve saat değerlerinde milisaniyegörüntüleme
+    - text: Tarih ve saat değerlerinde milisaniyeleri görüntüleme
       url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
   - linkListType: reference
     links:
     - text: Normal ifade dili
       url: base-types/regular-expression-language-quick-reference.md
-- title: Tasarım sınıfları ve kütüphaneler
+- title: Sınıf ve kitaplıkları tasarlama
   linkLists:
   - linkListType: overview
     links:
@@ -95,7 +99,7 @@ landingContent:
     links:
     - text: Adlandırma kuralları
       url: design-guidelines/general-naming-conventions.md
-    - text: Büyük harf leme sözleşmeleri
+    - text: Büyük/Küçük Harf kuralları
       url: design-guidelines/capitalization-conventions.md
 - title: Olayları ve özel durumları kullanma
   linkLists:
@@ -107,9 +111,9 @@ landingContent:
       url: events/index.md
   - linkListType: how-to-guide
     links:
-    - text: Özel durumları yakalamak için try-catch bloğu kullanma
+    - text: Özel durumları yakalamak için try-catch bloğu kullanın
       url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
-    - text: Olayları yükseltme ve tüketme
+    - text: Olay oluşturma ve kullanma
       url: events/how-to-raise-and-consume-events.md
 - title: Dosya ve akış G/Ç
   linkLists:
@@ -117,17 +121,17 @@ landingContent:
     links:
     - text: Dosya ve akış G/Ç
       url: io/index.md
-    - text: Windows'da dosya yolu biçimleri
+    - text: Windows üzerinde dosya yolu biçimleri
       url: io/file-path-formats.md
   - linkListType: how-to-guide
     links:
-    - text: Dosyaya metin yazma
+    - text: Bir dosyaya metin yaz
       url: io/how-to-write-text-to-a-file.md
-    - text: Dosyadaki metni okuma
+    - text: Dosyadan metin oku
       url: io/how-to-read-text-from-a-file.md
-    - text: Dosyaları sıkıştırma ve ayıklama
+    - text: Dosyaları sıkıştır ve Ayıkla
       url: io/how-to-compress-and-extract-files.md
-    - text: Günlük dosyasını açma ve ekle
+    - text: Açın ve bir günlük dosyasına ekleyin
       url: io/how-to-open-and-append-to-a-log-file.md
 - title: Bellek kullanımını yönetme
   linkLists:
@@ -135,7 +139,7 @@ landingContent:
     links:
     - text: Çöp toplama temelleri
       url: garbage-collection/fundamentals.md
-    - text: Elden Çıkarma yöntemi uygulayın
+    - text: Dispose metodu uygulama
       url: garbage-collection/implementing-dispose.md
 - title: Paralel programlama hakkında bilgi edinin
   linkLists:
@@ -147,13 +151,13 @@ landingContent:
     links:
     - text: Görev Paralel Kitaplığı (TPL)
       url: parallel-programming/task-parallel-library-tpl.md
-    - text: Görev tabanlı asynchronous programlama
+    - text: Görev tabanlı zaman uyumsuz programlama
       url: parallel-programming/task-based-asynchronous-programming.md
     - text: Görev iptali
       url: parallel-programming/task-cancellation.md
   - linkListType: how-to-guide
     links:
-    - text: Parallel.ForEach kullanarak basit bir paralel program yazın
+    - text: Parallel. ForEach kullanarak basit bir paralel program yazın
       url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
-    - text: Görevden değer döndürme
+    - text: Görevden bir değer döndürme
       url: parallel-programming/how-to-return-a-value-from-a-task.md

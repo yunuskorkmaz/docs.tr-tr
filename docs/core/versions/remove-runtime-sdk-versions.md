@@ -1,30 +1,30 @@
 ---
-title: .NET Core çalışma süresini ve SDK'yı kaldırın
-description: Bu makalede, .NET Core Runtime ve SDK'nın şu anda hangi sürümlerinin yüklendiği ve windows, mac ve Linux'ta bunların nasıl kaldırılılabildiğini nasıl belirleyeceğiz açıklanmaktadır.
-ms.date: 12/17/2019
+title: .NET Core çalışma zamanını ve SDK 'sını kaldırma
+description: Bu makalede, .NET Core çalışma zamanı ve SDK 'sının hangi sürümlerinin yüklü olduğunu ve sonra Windows, Mac ve Linux 'ta nasıl kaldırılacağını belirleme açıklanmaktadır.
+ms.date: 04/22/2020
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b3501bf7c730120d3885b8c3f29b901fb131215
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398841"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135769"
 ---
-# <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Çekirdek Çalışma Süresi ve SDK nasıl kaldırılır?
+# <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core çalışma zamanı ve SDK 'sını kaldırma
 
-Zaman içinde ,.NET Core çalışma zamanı ve SDK'nın güncelleştirilmiş sürümlerini yüklerken, .NET Core'un eski sürümlerini makinenizden kaldırmak isteyebilirsiniz. Çalışma zamanının eski sürümlerini kaldırmak, [.NET Core sürüm seçimiyle](selection.md)ilgili makalede ayrıntılı olarak açıklandığı gibi paylaşılan çerçeve uygulamalarını çalıştırmak için seçilen çalışma süresini değiştirebilir.
+Zaman içinde, .NET Core çalışma zamanının ve SDK 'sının güncelleştirilmiş sürümlerini yüklerken, eski .NET Core sürümlerini makinenizden kaldırmak isteyebilirsiniz. Çalışma zamanının eski sürümlerini kaldırmak, [.NET Core sürümü seçiminde](selection.md)makalesinde açıklandığı gibi, paylaşılan çerçeve uygulamalarını çalıştırmak için seçilen çalışma zamanını değiştirebilir.
 
-## <a name="should-i-remove-a-version"></a>Bir sürümü kaldırmalı mıyım?
+## <a name="should-i-remove-a-version"></a>Bir sürümü kaldırmalıyım mıyım?
 
-[.NET Core sürüm seçim](selection.md) davranışları ve .NET Core'un güncelleştirmeler arasında çalışma zamanı uyumluluğu, önceki sürümlerin güvenli bir şekilde kaldırılmasını sağlar. .NET Core çalışma zamanı güncelleştirmeleri, 1.x ve 2.x gibi ana sürüm 'bandı' içinde uyumludur. Ayrıca, .NET Core SDK'nın yeni sürümleri genellikle çalışma zamanının önceki sürümlerini uyumlu bir şekilde hedefleyen uygulamalar oluşturma yeteneğini korur.
+.NET Core [Sürüm seçimi](selection.md) davranışları ve .NET Core çalışma zamanı uyumluluğu, önceki sürümlerin güvenli şekilde kaldırılmasını mümkün. .NET Core çalışma zamanı güncelleştirmeleri, 1. x ve 2. x gibi ana sürüm ' bantlı ' içinde uyumludur. Ayrıca, .NET Core SDK daha yeni sürümleri genellikle çalışma zamanının önceki sürümlerini uyumlu bir şekilde hedefleyen uygulamalar oluşturmanıza olanak tanır.
 
-Genel olarak, yalnızca uygulamanız için gereken çalışma sürelerinin en son SDK ve en son yama sürümüne ihtiyacınız vardır. Eski SDK veya Runtime sürümlerini tutmanın **project.json**tabanlı uygulamaları korumayı içerdiği durumlar. Uygulamanızın önceki SDK'lar veya çalışma süreleri için belirli nedenleri olmadığı sürece, eski sürümleri güvenle kaldırabilirsiniz.
+Genel olarak, uygulamanız için gereken çalışma zamanlarının yalnızca en son SDK ve en son düzeltme eki sürümüne ihtiyacınız vardır. Eski SDK veya çalışma zamanı sürümlerinin tutulması, **Project. JSON**tabanlı uygulamaların tutulmasını içerir. Uygulamanızın önceki SDK 'lar veya çalışma zamanları için belirli nedenleri yoksa, eski sürümleri güvenle kaldırabilirsiniz.
 
-## <a name="determine-what-is-installed"></a>Nenin yüklü olduğunu belirleme
+## <a name="determine-what-is-installed"></a>Nelerin yüklendiğini belirleme
 
-.NET Core 2.1 ile başlayarak ,.NET CLI,.makinenize yüklenen SDK ve çalışma süresini listelemek için kullanabileceğiniz seçeneklere sahiptir.  Makinenize yüklenen SDK'ların listesini görmek için kullanın. [`dotnet --list-sdks`](../tools/dotnet.md#options) Makinenizde yüklü çalışma sürelerinin listesini görmek için kullanın. [`dotnet --list-runtimes`](../tools/dotnet.md#options) Aşağıdaki metin, Windows, macOS veya Linux için tipik çıktıyı gösterir:
+.NET Core 2,1 ile başlayarak, .NET CLı, makinenizde yüklü olan SDK ve çalışma zamanının sürümlerini listelemek için kullanabileceğiniz seçeneklere sahiptir.  Makinenizde [`dotnet --list-sdks`](../tools/dotnet.md#options) yüklü SDK 'ların listesini görmek için kullanın. Makinenizde [`dotnet --list-runtimes`](../tools/dotnet.md#options) yüklü olan çalışma zamanlarının listesini görmek için kullanın. Aşağıdaki metin Windows, macOS veya Linux için tipik çıktıyı gösterir:
 
 <!-- markdownlint-disable MD025 -->
 
@@ -36,7 +36,7 @@ Aşağıdaki komutu çalıştırarak:
 dotnet --list-sdks
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 2.1.200-preview-007474 [C:\Program Files\dotnet\sdk]
@@ -62,7 +62,7 @@ Ve aşağıdaki komutu çalıştırarak:
 dotnet --list-runtimes
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -90,7 +90,7 @@ Aşağıdaki komutu çalıştırarak:
 dotnet --list-sdks
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 1.0.1 [/usr/share/dotnet/sdk]
@@ -110,7 +110,7 @@ Ve aşağıdaki komutu çalıştırarak:
 dotnet --list-runtimes
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -132,7 +132,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macos"></a>[Macos](#tab/macos)
+# <a name="macos"></a>[Mac OS](#tab/macos)
 
 Aşağıdaki komutu çalıştırarak:
 
@@ -140,7 +140,7 @@ Aşağıdaki komutu çalıştırarak:
 dotnet --list-sdks
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 1.0.1 [/usr/local/share/dotnet/sdk]
@@ -160,7 +160,7 @@ Ve aşağıdaki komutu çalıştırarak:
 dotnet --list-runtimes
 ```
 
-Aşağıdakilere benzer çıktı alırsınız:
+Aşağıdakine benzer bir çıktı alırsınız:
 
 ```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -184,104 +184,108 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstall-net-core"></a>.NET Core'u kaldır
+## <a name="uninstall-net-core"></a>.NET Core kaldır
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-.NET Core, .NET Core çalışma zamanı ve SDK sürümlerini kaldırmak için Windows **Ekle/Kaldır** iletişim kutusunu kullanır. Aşağıdaki şekilde .NET çalışma zamanı ve SDK yüklü çeşitli sürümleri ile **Programlar Ekle/ Kaldır** iletişim kutusunu gösterir.
+.NET Core, .NET Core çalışma zamanının ve SDK 'nın sürümlerini kaldırmak için Windows **Program Ekle/Kaldır** iletişim kutusunu kullanır. Aşağıdaki şekilde, .NET çalışma zamanının ve SDK 'nın birkaç sürümü yüklü olan **Program Ekle/Kaldır** iletişim kutusu gösterilmektedir.
 
-![.NET Core'u kaldırmak için program ekleme / kaldırma](./media/remove-runtime-sdk-versions/programs-and-features.png)
+![.NET Core kaldırmak için Program Ekle/Kaldır](./media/remove-runtime-sdk-versions/programs-and-features.png)
 
-Makinenizden kaldırmak istediğiniz sürümleri seçin ve **Kaldır'ı**tıklatın.
+Makinenizden kaldırmak istediğiniz herhangi bir sürümü seçip **Kaldır**' a tıklayın.
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
-Linux'ta .NET Core'u (SDK veya çalışma süresi) kaldırmak için daha fazla seçenek vardır. .NET Core'u kaldırmanın en iyi yolu ,.NET Core'u yüklemek için kullandığınız eylemi yansıtmaktır. Ayrıntılar seçtiğiniz dağıtıma ve yükleme yöntemine bağlıdır.
+Linux 'ta .NET Core (SDK veya çalışma zamanı) kaldırmak için daha fazla seçenek vardır. .NET Core ' u kaldırmanın en iyi yolu, .NET Core yüklemek için kullandığınız eylemi yansıtmasıdır. Ayrıntılar, seçtiğiniz dağıtıma ve yükleme yöntemine bağlıdır.
 
 > [!IMPORTANT]
-> Red Hat kurulumları için ,NET Core'un yüklenmesi ve yüklenmesi hakkında bilgi almak için [Red Hat Getting Started Guide'a](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/gs_install_dotnet#install_register_rehel) başvurun.
+> Red Hat yüklemeleri için, .NET Core 'u yükleme ve kaldırma hakkında bilgi için, [Red Hat kullanmaya başlama kılavuzuna](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/gs_install_dotnet#install_register_rehel) bakın.
 
-.NET Core 2.1 ile başlayarak, bir paket yöneticisi kullanarak yükseltirken .NET Core SDK'yı kaldırmanız gerekmez. Paket yöneticisi `update` `refresh` veya komutları, daha yeni bir sürümün başarılı bir şekilde yüklenmesi yle eski sürümü otomatik olarak kaldırır.
+.NET Core 2,1 ' den itibaren, bir paket Yöneticisi kullanılarak yükseltilirken .NET Core SDK kaldırmanız gerekmez. Paket Yöneticisi `update` veya `refresh` komutları, daha yeni bir sürümü başarıyla yüklendikten sonra eski sürümü otomatik olarak kaldırır.
 
-Bir paket yöneticisi kullanarak .NET Core'u yüklediyseniz, .NET SDK'yı veya çalışma süresini kaldırmak için aynı paket yöneticisini kullanırsınız. .NET Core kurulumları en popüler paket yöneticilerini destekler. Ortamınızdaki kesin sözdizimi için dağıtımınızın paket yöneticisine ilişkin belgelere başvurun:
+.NET Core 'u bir paket Yöneticisi kullanarak yüklediyseniz, .NET SDK veya çalışma zamanı 'nı kaldırmak için aynı paket yöneticisini kullanın. .NET Core yüklemeleri en popüler paket yöneticilerini destekler. Ortamınızdaki kesin bir sözdizimi için dağıtımın Paket Yöneticisi belgelerine başvurun:
 
-- [apt-get(8)](https://linux.die.net/man/8/apt-get) Ubuntu dahil olmak üzere Debian tabanlı sistemler tarafından kullanılır.
-- [yum(8)](https://linux.die.net/man/8/yum) Fedora, CentOS ve Oracle Linux'ta kullanılır.
-- [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) openSUSE ve SUSE Linux Enterprise System (SLES) üzerinde kullanılır.
-- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) Fedora'da kullanılır.
+- [apt-get (8)](https://linux.die.net/man/8/apt-get) , Ubuntu dahil olmak üzere, dekim tabanlı sistemler tarafından kullanılır.
+- Fedora, CentOS ve Oracle Linux için [yılum (8)](https://linux.die.net/man/8/yum) kullanılır.
+- [zypper (8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) , openSUSE ve SUSE Linux Enterprise System (SLES) ' de kullanılır.
+- [DNF (8)](https://dnf.readthedocs.io/en/latest/command_ref.html) , Fedora 'da kullanılır.
 
-Hemen hemen her durumda, bir paketi `remove`kaldırmak için komutu .
+Neredeyse tüm durumlarda, bir paketi kaldırma komutu olur `remove`.
 
-Çoğu paket yöneticisi için .NET Core SDK `dotnet-sdk`kurulumuiçin paket adı, sürüm numarası takip eder. .NET Core SDK'nın 2.1.300 sürümü `2.1` nden başlayarak ve çalışma zamanının sürümünden başlayarak, yalnızca büyük ve küçük sürüm numaraları gereklidir: örneğin, .NET `dotnet-sdk-2.1`Core SDK sürüm 2.1.300 paket olarak başvurulabilir. Önceki sürümler tüm sürüm dizesini gerektirir: örneğin, `dotnet-sdk-2.1.200` .NET Core SDK'nın 2.1.200 sürümü için gerekli olacaktır.
+Çoğu paket yöneticisi için .NET Core SDK yüklemesinin paket adı ve ardından sürüm numarası `dotnet-sdk`gelir. Çalışma zamanının .NET Core SDK ve sürümünün `2.1` sürümü 2.1.300 başlayarak, yalnızca büyük ve küçük sürüm numaraları gereklidir: örneğin, .NET Core SDK sürüm 2.1.300, paket `dotnet-sdk-2.1`olarak başvurulabilirler. Önceki sürümler sürüm dizesinin tamamını gerektirir: Örneğin, `dotnet-sdk-2.1.200` .NET Core SDK sürüm 2.1.200 için gerekli olacaktır.
 
-SDK değil, yalnızca çalışma süresini yüklemiş makineler için paket adı `dotnet-runtime-<version>` .NET Core çalışma zamanı `aspnetcore-runtime-<version>` ve tüm çalışma zamanı yığını içindir.
+SDK değil yalnızca çalışma zamanını yükleyen makineler için, paket adı `dotnet-runtime-<version>` .NET Core çalışma zamanına ve `aspnetcore-runtime-<version>` tüm çalışma zamanı yığınına yöneliktir.
 
-.NET Core yüklemeleri 2.0'dan önce, SDK paket yöneticisi kullanılarak kaldırıldığında ana bilgisayar uygulamasını kaldırmadı. Kullanarak, `apt-get`komutu:
+2,0 ' den önceki .NET Core yüklemeleri, SDK Paket Yöneticisi kullanılarak kaldırıldığında ana bilgisayar uygulamasını kaldırmadı. Kullanarak `apt-get`, komut şu şekilde olur:
 
 ```bash
 apt-get remove dotnet-host
 ```
 
-'ye bağlı bir sürüm olmadığını `dotnet-host`unutmayın.
+Uygulamasına `dotnet-host`iliştirilmiş bir sürüm olmadığını unutmayın.
 
-Bir tarball kullanarak yüklediyseniz, el ile yöntemi kullanarak .NET Core'u kaldırmanız gerekir.
+Bir tarbol kullanarak yüklediyseniz, el ile yöntemini kullanarak .NET Core 'u kaldırmanız gerekir.
 
-SDK'ları ve çalışma sürelerini, bu sürümü içeren dizini kaldırarak ayrı ayrı kaldırırsınız. Örneğin, 1.0.1 SDK ve çalışma süresini kaldırmak için aşağıdaki bash komutlarını kullanırsınız:
-
-```bash
-sudo rm -rf /usr/share/dotnet/sdk/1.0.1
-sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/1.0.1
-sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/1.0.1
-sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
-```
-
-SDK ve çalışma zamanı nın üst dizinleri, `dotnet --list-sdks` önceki `dotnet --list-runtimes` tabloda gösterildiği gibi, ve komuttan çıktıda listelenir.
-
-# <a name="macos"></a>[Macos](#tab/macos)
-
-Mac'te, bu sürümü içeren dizini kaldırarak SDK'ları ve çalışma sürelerini ayrı ayrı kaldırmanız gerekir. Örneğin, 1.0.1 SDK ve çalışma süresini kaldırmak için aşağıdaki bash komutlarını kullanırsınız:
+Linux 'ta, sürümlü dizinleri kaldırarak SDK 'Ları ve çalışma zamanlarını ayrı olarak kaldırmanız gerekir. Bunun için, bu, SDK ve çalışma zamanının diskten silinmesine neden olur. Örneğin, 1.0.1 SDK ve çalışma zamanını kaldırmak için aşağıdaki Bash komutlarını kullanın:
 
 ```bash
-sudo rm -rf /usr/local/share/dotnet/sdk/1.0.1
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/1.0.1
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/1.0.1
-sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
+version="1.0.1"
+sudo rm -rf /usr/local/share/dotnet/sdk/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
 ```
 
-SDK ve çalışma zamanı nın üst dizinleri, `dotnet --list-sdks` önceki `dotnet --list-runtimes` tabloda gösterildiği gibi, ve komuttan çıktıda listelenir.
+SDK ve çalışma zamanının üst dizinleri, önceki tabloda gösterildiği gibi, `dotnet --list-sdks` ve `dotnet --list-runtimes` komutunun çıktısında listelenir.
+
+# <a name="macos"></a>[Mac OS](#tab/macos)
+
+Mac üzerinde, sürümlenmiş dizinleri kaldırarak SDK 'Ları ve çalışma zamanlarını ayrı olarak kaldırmanız gerekir. Bunun için, bu, SDK ve çalışma zamanının diskten silinmesine neden olur. Örneğin, 1.0.1 SDK ve çalışma zamanını kaldırmak için aşağıdaki Bash komutlarını kullanın:
+
+```bash
+version="1.0.1"
+sudo rm -rf /usr/local/share/dotnet/sdk/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
+```
+
+SDK ve çalışma zamanının üst dizinleri, önceki tabloda gösterildiği gibi, `dotnet --list-sdks` ve `dotnet --list-runtimes` komutunun çıktısında listelenir.
 
 ---
 
 ## <a name="net-core-uninstall-tool"></a>.NET Core Kaldırma Aracı
 
-[.NET Çekirdek Kaldırma](../additional-tools/uninstall-tool.md) Aracı`dotnet-core-uninstall`( ) bir sistemden .NET Core SDK'ları ve çalışma sürelerini kaldırmanızı sağlar. Hangi sürümlerin kaldırılması gerektiğini belirtmek için seçenekler topluluğu kullanılabilir.
+[.NET Core kaldırma aracı](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`), bir sistemden .NET Core SDK 'larını ve çalışma zamanlarını kaldırmanıza imkan sağlar. Hangi sürümlerin kaldırılacağını belirlemek için bir seçenek koleksiyonu kullanılabilir.
 
-## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK sürümlerinde Visual Studio bağımlılığı
+## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK sürümlerindeki Visual Studio bağımlılığı
 
-Visual Studio 2019 sürüm 16.3'ten önce Visual Studio yükleyiciler bağımsız .NET Core SDK yükleyicisini aradılar. Sonuç olarak, Windows **Programları Ekle/Kaldır** iletişim kutusunda SDK sürümleri görünür. Visual Studio tarafından tek başına yükleyici kullanılarak yüklenen .NET Core SDK'ların kaldırılması Visual Studio'yu bozabilir. SDK'ları kaldırdıktan sonra Visual Studio'da sorun yaşıyorsanız, Visual Studio'nun belirli sürümünde Onarım'ı çalıştırın. Aşağıdaki tabloda .NET Core SDK sürümlerindeki Visual Studio bağımlılıklarından bazıları gösterilmektedir:
+Visual Studio 2019 sürüm 16,3 ' den önce, Visual Studio yükleyicileri tek başına .NET Core SDK yükleyicisini çağırdı. Sonuç olarak, SDK sürümleri Windows **Ekle/Kaldır** iletişim kutusunda görünür. Visual Studio tarafından tek başına yükleyici kullanılarak yüklenen .NET Core SDK 'larını kaldırmak, Visual Studio 'Yu bozabilir. SDK 'Ları kaldırdıktan sonra Visual Studio sorunları varsa, Visual Studio 'nun söz konusu sürümünde Onar ' ı çalıştırın. Aşağıdaki tabloda .NET Core SDK sürümlerindeki bazı Visual Studio bağımlılıkları gösterilmektedir:
 
 | Visual Studio sürüm | .NET Core SDK sürümü |
 | -- | -- |
-|  Visual Studio 2019 sürüm 16.2  | .NET Çekirdek SDK 2.2.4xx, 2.1.8xx |
-|  Visual Studio 2019 sürüm 16.1 | .NET Çekirdek SDK 2.2.3xx, 2.1.7xx |
-| Visual Studio 2019 sürüm 16.0 | .NET Çekirdek SDK 2.2.2xx, 2.1.6xx |
-| Visual Studio 2017 sürümü 15.9 | .NET Çekirdek SDK 2.2.1xx, 2.1.5xx |
-| Visual Studio 2017 sürümü 15.8 | .NET Çekirdek SDK 2.1.4xx |
+|  Visual Studio 2019 sürüm 16.2  | .NET Core SDK 2.2.4 xx, 2.1.8 xx |
+|  Visual Studio 2019 sürüm 16.1 | .NET Core SDK 2.2.3 xx, 2.1.7 xx |
+| Visual Studio 2019 sürüm 16,0 | .NET Core SDK 2.2.2 xx, 2.1.6 xx |
+| Visual Studio 2017 sürüm 15,9 | .NET Core SDK 2.2.1 xx, 2.1.5 xx |
+| Visual Studio 2017 sürüm 15,8 | .NET Core SDK 2.1.4 xx |
 
-Visual Studio 2019 sürüm 16.3 ile başlayan Visual Studio, .NET Core SDK'nın kendi kopyasından sorumludur. Bu nedenle, Artık Bu SDK sürümlerini **Programlar Ekle/Kaldır** iletişim kutusunda görmezsiniz.
+Visual Studio 2019 sürüm 16,3 ' den itibaren, Visual Studio .NET Core SDK kendi kopyasına göre ücretlendirilir. Bu nedenle, bu SDK sürümlerini **Program Ekle/Kaldır** iletişim kutusunda artık göremezsiniz.
 
-## <a name="remove-the-nuget-fallback-folder"></a>NuGet geri dönüş klasörünü kaldırma
+## <a name="remove-the-nuget-fallback-folder"></a>NuGet geri dönüş klasörünü kaldır
 
-.NET Core 3.0 SDK'dan önce,.NET Core SDK yükleyiciler NuGet paketlerini saklamak için *NuGetFallbackFolder'ı* kullanmıştı. Bu önbellek `dotnet restore` gibi işlemler sırasında `dotnet build /t:Restore`kullanılmıştır. `NuGetFallbackFolder` *C:\Program Files\dotnet\sdk* adresinde Windows'da ve */usr/local/share/dotnet/sdk* adresinde bulunur.
+.NET Core SDK yükleyicileri, .NET Core 3,0 SDK 'dan önce bir NuGet paketleri önbelleğini depolamak için *Nugetfallbackfolder* kullandı. Bu önbellek, `dotnet restore` veya `dotnet build /t:Restore`gibi işlemler sırasında kullanılır. , `NuGetFallbackFolder` Windows üzerinde *C:\Program Files\dotnet\sdk* konumunda ve MacOS 'ta */usr/local/share/DotNet/SDK* konumunda bulunur.
 
-Bu klasörü kaldırmak isteyebilirsiniz, eğer:
+Şu durumlarda bu klasörü kaldırmak isteyebilirsiniz:
 
-* Yalnızca .NET Core 3.0 SDK veya sonraki sürümleri kullanarak geliştiriyorsunuz.
-* .NET Core SDK sürümlerini 3.0'dan önce kullanıyorsunuz, ancak çevrimiçi olarak çalışabilirsiniz ve işler bir kez daha yavaş olabilir.
+* Yalnızca .NET Core 3,0 SDK veya sonraki sürümlerini kullanarak geliştiriyoruz.
+* 3,0 'den önceki .NET Core SDK sürümlerini kullanarak geliştiriyoruz, ancak çevrimiçi çalışabilirsiniz ve bir kez daha yavaş çalışabilir.
 
-NuGet geri dönüş klasörünü kaldırmak istiyorsanız, silebilirsiniz, ancak bunu yapmak için yönetici ayrıcalıklarına ihtiyacınız vardır.
+NuGet geri dönüş klasörünü kaldırmak istiyorsanız, onu silebilirsiniz, ancak bunu yapmak için yönetici ayrıcalıklarına sahip olmanız gerekir.
 
-*Dotnet* klasörünü silmek önerilmez. Bunu yapmak, daha önce yüklediğiniz tüm genel araçları kaldırır. Ayrıca, Windows'da:
+*DotNet* klasörünün silinmesi önerilmez. Bunu yapmak, daha önce yüklediğiniz tüm küresel araçları kaldırır. Ayrıca, Windows üzerinde:
 
-- Visual Studio 2019 sürüm 16.3 ve sonraki sürümlerini kıracaksınız. Kurtarmak için **Onarım'ı** çalıştırabilirsiniz.
-- **Programları Ekle/Kaldır** iletişim kutusunda .NET Core SDK girişleri varsa, bunlar yetim kalır.
+- Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerini bozacaksınız. Kurtarmak için **onarmayı** çalıştırabilirsiniz.
+- **Program Ekle/Kaldır** iletişim kutusunda .NET Core SDK girdileri varsa, bunlar yalnız bırakılmış olacaktır.

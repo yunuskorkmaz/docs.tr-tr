@@ -7,23 +7,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 6bd7525b77d4154193b57f8e6589cb865ace5fd6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 709ad98bbac6c8a1b97f884b09e7e91da0566fda
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709887"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135886"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet ile XML Şeması (XSD) Doğrulaması
-XML belgeleri, bir <xref:System.Xml.Schema.XmlSchemaSet>bir XML şeması tanım dili (XSD) şemasına göre doğrulanabilir.  
+XML belgeleri, bir <xref:System.Xml.Schema.XmlSchemaSet>XML şeması tanım DILI (xsd) şemasına göre doğrulanabilir.  
   
 ## <a name="validating-xml-documents"></a>XML belgelerini doğrulama  
- XML belgeleri <xref:System.Xml.XmlReader> sınıfının <xref:System.Xml.XmlReader.Create%2A> yöntemi tarafından onaylanır. Bir XML belgesini doğrulamak için, XML belgesinin doğrulanması için bir XML şeması tanım dili (XSD) şeması içeren bir <xref:System.Xml.XmlReaderSettings> nesnesi oluşturun.  
+ XML belgeleri, <xref:System.Xml.XmlReader.Create%2A> <xref:System.Xml.XmlReader> sınıfının yöntemi tarafından onaylanır. XML belgesini doğrulamak için, XML belgesi doğrulanacak <xref:System.Xml.XmlReaderSettings> bir XML şeması tanım DILI (xsd) şeması içeren bir nesne oluşturun.  
   
 > [!NOTE]
-> <xref:System.Xml.Schema> ad alanı, [LINQ to XMLC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)kullanılırken bir xsd dosyasına yönelik bir xml ağacının doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. LINQ to XML ile XML belgelerinin doğrulanması hakkında daha fazla bilgi için bkz. [xsd (LINQ to XML) (C#) kullanarak doğrulama](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve [nasıl yapılır: xsd (LINQ to XML) (Visual Basic) kullanarak](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)doğrulama.
+> Ad <xref:System.Xml.Schema> alanı, [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)kullanırken bir xml ağacının xsd dosyasına karşı doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. LINQ to XML ile XML belgelerinin doğrulanması hakkında daha fazla bilgi için bkz. [xsd (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve [nasıl yapılır: XSD kullanarak doğrulama (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).
   
- Tek bir şema veya bir şema kümesi (<xref:System.Xml.Schema.XmlSchemaSet>olarak), <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemine parametre olarak geçirerek bir <xref:System.Xml.Schema.XmlSchemaSet> eklenebilir. Bir belge doğrulanırken belgenin hedef ad alanının şema kümesindeki şemanın hedef ad alanıyla eşleşmesi gerektiğini unutmayın.  
+ Tek bir şema veya bir şema kümesi ( <xref:System.Xml.Schema.XmlSchemaSet>olarak) öğesine bir parametre olarak bir parametresi <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> geçirerek öğesine eklenebilir. <xref:System.Xml.Schema.XmlSchemaSet> Bir belge doğrulanırken belgenin hedef ad alanının şema kümesindeki şemanın hedef ad alanıyla eşleşmesi gerektiğini unutmayın.  
   
  Aşağıda örnek bir XML belgesi verilmiştir.  
   
@@ -33,9 +33,9 @@ XML belgeleri, bir <xref:System.Xml.Schema.XmlSchemaSet>bir XML şeması tanım 
   
  [!code-xml[XSDInference Examples#6](../../../../samples/snippets/xml/VS_Snippets_Data/XSDInference Examples/XML/contosoBooks.xsd#6)]  
   
- Aşağıdaki kod örneğinde, yukarıdaki şema <xref:System.Xml.XmlReaderSettings> nesnesinin <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> özelliğine eklenir. <xref:System.Xml.XmlReaderSettings> nesnesi, yukarıdaki XML belgesini doğrulayan <xref:System.Xml.XmlReader> nesnesinin <xref:System.Xml.XmlReader.Create%2A> yöntemine bir parametre olarak geçirilir.  
+ Aşağıdaki kod örneğinde, yukarıdaki şema <xref:System.Xml.XmlReaderSettings.Schemas%2A> <xref:System.Xml.XmlReaderSettings> nesnenin özelliğine eklenir. <xref:System.Xml.XmlReaderSettings> Nesnesi, yukarıdaki XML belgesini doğrulayan <xref:System.Xml.XmlReader.Create%2A> <xref:System.Xml.XmlReader> nesnesinin yöntemine bir parametre olarak geçirilir.  
   
- <xref:System.Xml.XmlReaderSettings> nesnesinin <xref:System.Xml.XmlReaderSettings.ValidationType%2A> özelliği, <xref:System.Xml.XmlReader> nesnesinin <xref:System.Xml.XmlReader.Create%2A> yöntemi tarafından XML belgesinin doğrulanmasını zorlamak için `Schema` olarak ayarlanmıştır. Hem XML belgesi hem de şemanın doğrulama işlemi sırasında bulunan hatalara göre oluşturulan <xref:System.Xml.Schema.XmlSeverityType.Warning> veya <xref:System.Xml.Schema.XmlSeverityType.Error> olayları işlemek için <xref:System.Xml.XmlReaderSettings> nesnesine bir <xref:System.Xml.Schema.ValidationEventHandler> eklenir.  
+ <xref:System.Xml.XmlReaderSettings> Nesnesinin <xref:System.Xml.XmlReaderSettings.ValidationType%2A> özelliği <xref:System.Xml.XmlReader.Create%2A> , <xref:System.Xml.XmlReader> nesne yöntemi tarafından XML belgesinin `Schema` doğrulanmasını zorlamak için olarak ayarlanır. , <xref:System.Xml.Schema.ValidationEventHandler> Hem XML belgesi hem <xref:System.Xml.XmlReaderSettings> de şemanın doğrulama işlemi <xref:System.Xml.Schema.XmlSeverityType.Warning> sırasında <xref:System.Xml.Schema.XmlSeverityType.Error> bulunan hatalara göre oluşan herhangi bir veya olayı işlemek için nesnesine eklenir.  
   
  [!code-cpp[XmlSchemaSetOverall Example#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaSetOverall Example/CPP/xmlschemasetexample.cpp#1)]
  [!code-csharp[XmlSchemaSetOverall Example#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]

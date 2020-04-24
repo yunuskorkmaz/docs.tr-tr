@@ -24,7 +24,7 @@ Derlemek için derleyici seçeneklerini ve kaynak kodu dosyalarını içeren bir
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 `response_file`  
-Gerekli. Derlemek için derleyici seçeneklerini veya kaynak kodu dosyalarını listeleyen bir dosya. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.
+Gereklidir. Derlemek için derleyici seçeneklerini veya kaynak kodu dosyalarını listeleyen bir dosya. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -36,14 +36,14 @@ Bir derlemede birden fazla yanıt dosyası belirtmek için, aşağıdaki gibi bi
 @file1.rsp @file2.rsp
 ```
 
-Bir yanıt dosyasında, tek satırda birden çok derleyici seçeneği ve kaynak kodu dosyası görünebilir. Tek bir derleyici-seçenek belirtiminin tek bir satırda görünmesi gerekir (birden çok satıra yayılamaz). Yanıt dosyaları `#` simgesiyle başlayan açıklamalara sahip olabilir.
+Bir yanıt dosyasında, tek satırda birden çok derleyici seçeneği ve kaynak kodu dosyası görünebilir. Tek bir derleyici-seçenek belirtiminin tek bir satırda görünmesi gerekir (birden çok satıra yayılamaz). Yanıt dosyaları `#` sembolle başlayan açıklamalara sahip olabilir.
 
 Komut satırında belirtilen seçenekleri, bir veya daha fazla yanıt dosyasında belirtilen seçeneklerle birleştirebilirsiniz. Derleyici, komut seçeneklerini kendileriyle karşılaştığı şekilde işler. Bu nedenle, komut satırı bağımsız değişkenleri yanıt dosyalarında daha önce listelenen seçenekleri geçersiz kılabilir. Buna karşılık, bir yanıt dosyasındaki seçenekler, önceden komut satırında veya diğer yanıt dosyalarında listelenen seçenekleri geçersiz kılar.
 
-Visual Basic, vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyasını sağlar. `-noconfig` seçeneği kullanılmadığı takdirde Vbc. rsp dosyası varsayılan olarak dahil edilir. Daha fazla bilgi için bkz. [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic, vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyasını sağlar. `-noconfig` Seçenek kullanılmamışsa, vbc. rsp dosyası varsayılan olarak dahil edilir. Daha fazla bilgi için bkz. [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> `@` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
+> Bu `@` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
@@ -59,7 +59,7 @@ source2.vb
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `File1.rsp`adlı yanıt dosyası ile `@` seçeneğinin nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, `@` seçeneğinin adlı `File1.rsp`yanıt dosyası ile nasıl kullanılacağını gösterir.
 
 ```console
 vbc @file1.rsp

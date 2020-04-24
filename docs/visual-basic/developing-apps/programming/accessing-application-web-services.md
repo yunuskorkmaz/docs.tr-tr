@@ -15,16 +15,16 @@ ms.locfileid: "74349220"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Uygulama Web Hizmetlerine Erişme (Visual Basic)
 
-Nesne, `My.WebServices` geçerli proje tarafından başvurulan her Web hizmetinin bir örneğini sağlar. Her örnek isteğe bağlı olarak anında verilir. Bu Web hizmetlerine `My.WebServices` nesnenin özellikleri üzerinden erişebilirsiniz. Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynırdır. Devralan <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> herhangi bir sınıf bir Web hizmetidir.
+`My.WebServices` Nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine `My.WebServices` nesnenin özellikleri aracılığıyla erişebilirsiniz. Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. Öğesinden <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> devralan tüm sınıflar bir Web hizmetidir.
 
 ## <a name="tasks"></a>Görevler
 
-Aşağıdaki tablo, bir uygulama tarafından başvurulan Web hizmetlerine erişmenin olası yollarını listeler.
+Aşağıdaki tabloda, bir uygulama tarafından başvurulan Web hizmetlerine erişmenin olası yolları listelenmektedir.
 
 |Alıcı|Bkz.|
 |---|---|
-|Web hizmetini arama|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Bir Web hizmetini eşzamanlı olarak arayın ve tamamlandığında bir olayı ele alın|[Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Web hizmeti çağırma|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
+|Bir Web hizmetini zaman uyumsuz olarak çağırma ve tamamlandığında bir olayı işleme|[Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

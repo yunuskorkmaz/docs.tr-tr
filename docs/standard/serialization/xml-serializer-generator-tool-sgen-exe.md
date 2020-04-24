@@ -11,7 +11,7 @@ ms.locfileid: "80588357"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
-XML Serializer Generator, belirli bir derlemedeki türleri için bir XML serileştirme derlemesi oluşturur. Serileştirme derlemesi, belirtilen türdeki nesneleri serileştirdiğinde veya deserialize ettiğinde bir <xref:System.Xml.Serialization.XmlSerializer> başlangıç performansını artırır.
+XML seri hale getirici Oluşturucusu, belirtilen derlemedeki türler için bir XML serileştirme derlemesi oluşturuyor. Serileştirme derlemesi, belirtilen türlerin nesnelerini seri hale getirse veya seri hale getirtiğinde bir <xref:System.Xml.Serialization.XmlSerializer> öğesinin başlangıç performansını geliştirir.
   
 ## <a name="syntax"></a>Sözdizimi
 
@@ -22,29 +22,29 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework araçlarının düzgün çalışması için `Path`, `Include`ve `Lib` çevre değişkenlerinizi doğru ayarlamanız gerekir. \<SDK>\v2.0\Bin dizininde bulunan SDKVars.bat'ı çalıştırarak bu ortam değişkenlerini ayarlayın. Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
+> .NET Framework araçlarının düzgün çalışması için,, ve `Path` `Include` `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. \<SDK> \v2.0\Bin dizininde bulunan sdkvars. bat dosyasını çalıştırarak bu ortam değişkenlerini ayarlayın. Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
   
 ## <a name="parameters"></a>Parametreler  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/a\[ssembly\]:**_filename_|Dosya *adı*ile belirtilen derlemede veya yürütülebilir de bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
-|**/c\[ompiler\]:**_seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
+|**/a\[erleme\]:**_dosya adı_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
+|**/c\[ompiler\]:**_Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
 |**/d\[ebug\]**|Bir hata ayıklayıcısı ile kullanılan bir görüntü oluşturur.|  
-|**/f\[orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan **yanlıştır.**|  
-|**/yardım veya /?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/k\[eep\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
+|**/f\[Orce\]**|Aynı ada sahip bir varolan derlemenin üzerine zorlar. Varsayılan değer **false**'dur.|  
+|**/Help veya/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/k\[UT\]**|Serileştirme derlemeye derlenen sonra oluşturulan kaynak dosyaların ve diğer geçici dosyaları silmeyi göstermez. Bu araç belirli bir tür için serileştirme kod oluşturmak olup olmadığını belirlemek için kullanılabilir.|  
 |**/n\[ologo\]**|Microsoft başlangıç başlığı görüntülenmesini engeller.|  
-|**/o\[\]ut :**_yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Not:**  Oluşturulan derlemenin adı giriş derlemesinin adı artı "xmlSerializers.dll" adresinden oluşur.|  
+|**/o\[UT\]:**_yol_|Oluşturulan derleme kaydedileceği dizini belirtir. **Note:**  Oluşturulan derlemenin adı, giriş derlemesinin adından oluşur ve "Xmlserileştiriciler. dll".|  
 |**/p\[roxytypes\]**|XML Web hizmeti proxy türleri için yalnızca serileştirme kod oluşturur.|  
-|**/r\[eference\]:**_assemblyfiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
+|**/r\[eference\]:**_AssemblyFiles_|XML serileştirme gerektiren türleri tarafından başvurulan bir derleme belirtir. Virgülle ayrılmış birden çok derleme dosyaları kabul eder.|  
 |**/s\[ilent\]**|Başarı iletilerinin görüntülenmesini bastırır.|  
-|**/t\[\]ype :**_yazı_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
-|**/v\[erbose\]**|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/t\[türü\]:**_tür_|Belirtilen tür için yalnızca serileştirme kod oluşturur.|  
+|**/v\[erboo\]**|Hata ayıklama için ayrıntılı çıktı görüntüler. Listeler ile seri hale getirilemiyor hedef derleme türlerinden <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML seri hale getirici oluşturucunun kullanılmadığında bir <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme kodu ve bir seri hale getirme derlemesi her türü için bir uygulama her çalıştırıldığında oluşturur. XML serileştirme başlatmanın performansını artırmak için, bu derlemeleri önceden oluşturmak için Sgen.exe aracını kullanın. Bu derlemeleri uygulama ile sonra dağıtılabilir.  
+ XML seri hale getirici oluşturucunun kullanılmadığında bir <xref:System.Xml.Serialization.XmlSerializer> seri hale getirme kodu ve bir seri hale getirme derlemesi her türü için bir uygulama her çalıştırıldığında oluşturur. XML serileştirme başlatmasının performansını artırmak için SGen. exe aracını kullanarak bu derlemeleri önceden oluşturun. Bu derlemeleri uygulama ile sonra dağıtılabilir.  
   
  XML seri hale getirici oluşturucunun ayrıca seri hale getirme işlemi türü ilk kez yüklendiğinde isabet bir performans tabi olmayan çünkü sunucularla iletişim kurmak için XML Web hizmeti proxy kullanan istemciler performansını geliştirebilir.  
   
@@ -64,4 +64,4 @@ sgen Data.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Komut Istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

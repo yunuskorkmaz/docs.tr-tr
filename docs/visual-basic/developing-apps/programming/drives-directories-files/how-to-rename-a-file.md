@@ -14,39 +14,39 @@ ms.locfileid: "74334548"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosyayı Yeniden Adlandırma
 
-Geçerli `RenameFile` konumu, `My.Computer.FileSystem` dosya adını ve yeni dosya adını sağlayarak dosyayı yeniden adlandırmak için nesnenin yöntemini kullanın. Bu yöntem bir dosyayı taşımak için kullanılamaz; dosyayı `MoveFile` taşımak ve yeniden adlandırmak için yöntemi kullanın.  
+Geçerli konumu `RenameFile` , dosya adını `My.Computer.FileSystem` ve yeni dosya adını sağlayarak bir dosyayı yeniden adlandırmak için nesnesinin yöntemini kullanın. Bu yöntem bir dosyayı taşımak için kullanılamaz; dosyayı taşımak `MoveFile` ve yeniden adlandırmak için yöntemini kullanın.  
   
-### <a name="to-rename-a-file"></a>Dosyayı yeniden adlandırmak için  
+### <a name="to-rename-a-file"></a>Bir dosyayı yeniden adlandırmak için  
   
-- Dosyayı `My.Computer.FileSystem.RenameFile` yeniden adlandırmak için yöntemi kullanın. Bu örnek, `Test.txt` `SecondTest.txt`'' adlı dosyayı yeniden adlandırır.  
+- Bir dosyayı `My.Computer.FileSystem.RenameFile` yeniden adlandırmak için yöntemini kullanın. Bu örnek, olarak `Test.txt` `SecondTest.txt`adlandırılan dosyayı yeniden adlandırır.  
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- Bu kod örneği, IntelliSense kod parçacığı olarak da kullanılabilir. Kod snippet toplayıcı, snippet Dosya sisteminde yer alır **- İşleme Sürücüler, Klasörler ve Dosyalar**. Daha fazla bilgi için [Kod Parçacıkları'na](/visualstudio/ide/code-snippets)bakın.  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide kod parçacığı, **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- `newName`yol bilgilerini<xref:System.ArgumentException>içerir ( ).  
+- `newName`yol bilgilerini (<xref:System.ArgumentException>) içerir.  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
-- `newName`veya `Nothing` boş bir<xref:System.ArgumentNullException>dize ( ).  
+- `newName``Nothing` ya da boş bir dizedir (<xref:System.ArgumentNullException>).  
   
-- Kaynak dosya geçerli değil veya yok<xref:System.IO.FileNotFoundException>( ).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- () adlarında `newName` belirtilen varolan bir dosya<xref:System.IO.IOException>veya dizin vardır.  
+- ( `newName` <xref:System.IO.IOException>) İçinde belirtilen ada sahip bir dosya veya dizin var.  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
-- Kullanıcı nın gerekli izni yoktur<xref:System.UnauthorizedAccessException>( ).  
+- Kullanıcı gerekli izne (<xref:System.UnauthorizedAccessException>) sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

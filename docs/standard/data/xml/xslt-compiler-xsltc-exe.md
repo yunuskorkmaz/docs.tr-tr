@@ -32,12 +32,12 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Aşağıdaki stil sayfası için sınıfın adını belirtir. Sınıf adı tam olarak nitelenmiş olabilir.<br /><br /> Sınıf adı varsayılan olarak stil sayfasının adıdır. Örneğin, Customers. xsl stil sayfası derlenmişse, varsayılan sınıf adı müşteriler olur.|  
-|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerinin oluşturulup oluşturulmayacağını belirtir.<br /><br /> `+` veya `/debug`belirtme, derleyicinin hata ayıklama bilgileri oluşturmasına ve bir program veritabanı (PDB) dosyasına yerleştirmesine neden olur. Oluşturulan PDB dosyasının adı `assemblyName`. pdb ' dir.<br /><br /> `-`belirtme `/debug`belirtmezseniz, herhangi bir hata ayıklama bilgisinin oluşturulmasına neden olmaz. Bir perakende derlemesi oluşturulur. **Note:**  Hata ayıklama modunda derleme, XSLT performansını önemli ölçüde etkileyebilir.|  
+|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerinin oluşturulup oluşturulmayacağını belirtir.<br /><br /> Veya `+` `/debug`belirtildiğinde, derleyicinin hata ayıklama bilgileri oluşturmasına ve BIR program veritabanı (pdb) dosyasına yerleştirmesine neden olur. Oluşturulan PDB dosyasının adı. pdb 'dir `assemblyName`.<br /><br /> Belirtmiyorsanız geçerli olan öğesini belirtme `-` `/debug`, hiçbir hata ayıklama bilgisinin oluşturulmasına neden olmaz. Bir perakende derlemesi oluşturulur. **Note:**  Hata ayıklama modunda derleme, XSLT performansını önemli ölçüde etkileyebilir.|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/nologo`|Derleyicinin telif hakkı iletisinin görüntülenmesini önler.|  
-|`/platform:` `string`|Derlemenin çalıştırılabilen platformları belirtir. Geçerli platform değerlerini aşağıda açıklanmıştır:<br /><br /> `x86`, derlemenizi 32 bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler<br /><br /> `x64`, derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> Itanium, derlemenizi Itanium işlemcisine sahip bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> `anycpu`, derlemenizi herhangi bir platformda çalışacak şekilde derler. Bu varsayılandır.|  
+|`/platform:` `string`|Derlemenin çalıştırılabilen platformları belirtir. Geçerli platform değerlerini aşağıda açıklanmıştır:<br /><br /> `x86`derlemenizi 32 bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler<br /><br /> `x64`, derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> Itanium, derlemenizi Itanium işlemcisine sahip bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> `anycpu`derlemenizi herhangi bir platformda çalışacak şekilde derler. Bu varsayılandır.|  
 |`/out:` `assemblyName`|Çıktı olan derlemenin adını belirtir. Birden çok stil sayfası varsa, derleme adı varsayılan olarak ana stil sayfasının adı veya ilk stil sayfası olur.<br /><br /> Stil sayfası betikler içeriyorsa, betikler ayrı bir derlemeye kaydedilir. Betik derleme adları ana derleme adından oluşturulur. Örneğin, derleme adınız için CustOrders. dll ' yi belirttiyseniz, ilk betik derlemesi CustOrders_Script1. dll olarak adlandırılır.|  
-|`/settings:` `document+-, script+-, DTD+-,`|Stil sayfasında `document()` işlevlere, XSLT betiğine veya belge türü tanımına (DTD) izin verilip verilmeyeceğini belirtir.<br /><br /> Varsayılan davranış DTD desteğini devre dışı bırakır, `document()` işlevi ve komut dosyası.|  
+|`/settings:` `document+-, script+-, DTD+-,`|Stil sayfasında işlevlere, `document()` XSLT betiğine veya belge türü tanımına (DTD) izin verilip verilmeyeceğini belirtir.<br /><br /> Varsayılan davranış DTD, `document()` işlev ve komut dosyası desteğini devre dışı bırakır.|  
 |`@` `file`|Derleyici seçeneklerini içeren bir dosya belirtmenizi sağlar.|  
 |`?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 > Derlenen derlemeyi uygulamanıza başvuru olarak da dahil etmeniz gerekir.  
   
- Xsltc. exe aracı, Sınıf (`/class:`*adı*) veya derleme (`/out:`*AssemblyName*) adlarını doğrulamaz. Adlar geçerli değilse, ortak dil çalışma zamanı tarafından hatalar oluşturulur.  
+ Xsltc. exe aracı, Sınıf (`/class:`*ad*) veya derleme (`/out:`*AssemblyName*) adlarını doğrulamaz. Adlar geçerli değilse, ortak dil çalışma zamanı tarafından hatalar oluşturulur.  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki komut, stil sayfasını derler ve booksort. dll adlı bir derleme oluşturur.  

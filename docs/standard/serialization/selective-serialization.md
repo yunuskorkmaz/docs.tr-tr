@@ -27,12 +27,12 @@ public class MyObject
 }  
 ```
 
-Mümkünse, güvenlik bakımından hassas verileri nonserializable içerebilecek bir nesne olun. Nesnenin serileştirilmesi gerekiyorsa, hassas verileri depolayan belirli alanlara `NonSerialized` özniteliğini uygulayın. Bu alanları Serileştirmeden dışlamak istemiyorsanız, depotıkları verilerin serileştirme izni olan herhangi bir koda açık olduğunu unutmayın. Güvenli serileştirme kodu yazma hakkında daha fazla bilgi için bkz. [güvenlik ve serileştirme](../../../docs/framework/misc/security-and-serialization.md).
+Mümkünse, güvenlik bakımından hassas verileri nonserializable içerebilecek bir nesne olun. Nesnenin serileştirilmesi gerekiyorsa, bu `NonSerialized` özniteliği hassas verileri depolayan belirli alanlara uygulayın. Bu alanları Serileştirmeden dışlamak istemiyorsanız, depotıkları verilerin serileştirme izni olan herhangi bir koda açık olduğunu unutmayın. Güvenli serileştirme kodu yazma hakkında daha fazla bilgi için bkz. [güvenlik ve serileştirme](../../../docs/framework/misc/security-and-serialization.md).
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İkili Serileştirme](binary-serialization.md)
-- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)
-- [Güvenlik ve serileştirme](../../../docs/framework/misc/security-and-serialization.md)
+- [İkili serileştirme](binary-serialization.md)
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
+- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)

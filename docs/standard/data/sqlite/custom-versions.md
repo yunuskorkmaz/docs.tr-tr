@@ -19,7 +19,7 @@ SQLitePCLRaw, farklı platformlarda doğru bağımlılıklara kolayca getirmeyi 
 
 Ana Microsoft. Data. SQLite paketi varsayılan olarak SQLitePCLRaw. bundle_e_sqlite3 ' ye getirir.
 
-Farklı bir paket kullanmak için, kullanmak istediğiniz paket paketiyle birlikte `Microsoft.Data.Sqlite.Core` paketini de yükleyebilirsiniz. Paketleri Microsoft. Data. SQLite tarafından otomatik olarak başlatılır.
+Farklı bir paket kullanmak için, kullanmak istediğiniz `Microsoft.Data.Sqlite.Core` paket paketiyle birlikte bunun yerine paketini de yükleyebilirsiniz. Paketleri Microsoft. Data. SQLite tarafından otomatik olarak başlatılır.
 
 | Paket | Açıklama |
 | --- | --- |
@@ -31,14 +31,14 @@ Farklı bir paket kullanmak için, kullanmak istediğiniz paket paketiyle birlik
 
 Örneğin, bir SQLCipher 'ın resmi olmayan, açık kaynaklı derlemesini kullanmak için aşağıdaki komutları kullanın.
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite.Core
@@ -49,7 +49,7 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="sqlitepclraw-providers"></a>SQLitePCLRaw sağlayıcıları
 
-`SQLitePCLRaw.provider.dynamic_cdecl` paketinden yararlanarak, kendi SQLite yapınızı kullanabilirsiniz. Bu durumda, yerel kitaplığı uygulamanızla dağıtmaktan sorumlu olursunuz. Bu şekilde, uygulamanıza yerel kitaplıklar dağıtmanın ayrıntıları, kullandığınız .NET platformu ve çalışma zamanına bağlı olarak önemli ölçüde farklılık gösterir.
+`SQLitePCLRaw.provider.dynamic_cdecl` Paketten yararlanarak kendi SQLite yapınızı kullanabilirsiniz. Bu durumda, yerel kitaplığı uygulamanızla dağıtmaktan sorumlu olursunuz. Bu şekilde, uygulamanıza yerel kitaplıklar dağıtmanın ayrıntıları, kullandığınız .NET platformu ve çalışma zamanına bağlı olarak önemli ölçüde farklılık gösterir.
 
 İlk olarak, IGetFunctionPointer uygulamanız gerekir. Uygulama .NET Core üzerinde oldukça basit.
 

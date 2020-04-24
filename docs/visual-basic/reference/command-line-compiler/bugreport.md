@@ -23,15 +23,15 @@ Bir hata raporunu dosyaaktardığınızda kullanabileceğiniz bir dosya oluştur
 -bugreport:file
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-|Terim|Tanım|
+|Sözleşme Dönemi|Tanım|
 |---|---|
-|`file`|Gerekli. Hata raporunuzu içerecek dosyanın adı. Ad bir boşluk içeriyorsa, dosya adını tırnak işaretleri ("") içine alın.|
+|`file`|Gereklidir. Hata raporunuzu içerecek dosyanın adı. Ad bir boşluk içeriyorsa, dosya adını tırnak işaretleri ("") içine alın.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`file`için aşağıdaki bilgiler eklenmiştir:
+Aşağıdaki bilgiler öğesine `file`eklenir:
 
 - Derlemedeki tüm kaynak kodu dosyalarının bir kopyası.
 
@@ -45,15 +45,15 @@ Bir hata raporunu dosyaaktardığınızda kullanabileceğiniz bir dosya oluştur
 
 - Sorunun düzeltilmesi için bir açıklama, sizden sorulur.
 
-Tüm kaynak kodu dosyalarının bir kopyası `file`eklendiğinden, mümkün olan en kısa programda (şüpheli) kod hatasını yeniden oluşturmak isteyebilirsiniz.
+Tüm kaynak kodu dosyalarının bir kopyası içine `file`eklendiğinden, en kısa olası programda (şüpheli) kod hatasını yeniden oluşturmak isteyebilirsiniz.
 
 > [!IMPORTANT]
-> `-bugreport` seçeneği potansiyel olarak hassas bilgiler içeren bir dosya oluşturur. Bu geçerli saati, derleyici sürümünü, .NET Framework sürümünü, işletim sistemi sürümünü, Kullanıcı adını, derleyicinin çalıştırıldığı komut satırı bağımsız değişkenlerini, tüm kaynak kodunu ve başvurulan herhangi bir derlemenin ikili biçimini içerir. Bu seçeneğe, bir ASP.NET uygulamasının sunucu tarafı derlemesi için Web. config dosyasında komut satırı seçenekleri belirtilerek erişilebilir. Bunu önlemek için Machine. config dosyasını, kullanıcıların sunucuda derlenmesine izin vermeyecek şekilde değiştirin.
+> Bu `-bugreport` seçenek potansiyel olarak hassas bilgiler içeren bir dosya oluşturur. Bu geçerli saati, derleyici sürümünü, .NET Framework sürümünü, işletim sistemi sürümünü, Kullanıcı adını, derleyicinin çalıştırıldığı komut satırı bağımsız değişkenlerini, tüm kaynak kodunu ve başvurulan herhangi bir derlemenin ikili biçimini içerir. Bu seçeneğe, bir ASP.NET uygulamasının sunucu tarafı derlemesi için Web. config dosyasında komut satırı seçenekleri belirtilerek erişilebilir. Bunu önlemek için Machine. config dosyasını, kullanıcıların sunucuda derlenmesine izin vermeyecek şekilde değiştirin.
 
-Bu seçenek `-errorreport:prompt`, `-errorreport:queue`veya `-errorreport:send`ile kullanılırsa ve uygulamanız iç derleyici hatasıyla karşılaşırsa, `file` içindeki bilgiler Microsoft Corporation 'a gönderilir. Bu bilgiler, Microsoft mühendislerinin hatanın nedenini belirlemesine yardımcı olur ve Visual Basic sonraki sürümünün artırılmasına yardımcı olabilir. Varsayılan olarak, Microsoft 'a hiçbir bilgi gönderilmez. Ancak, varsayılan olarak etkinleştirilen `-errorreport:queue`kullanarak bir uygulamayı derlediğinizde, uygulama kendi hata raporlarını toplar. Daha sonra, bilgisayarın Yöneticisi oturum açtığında, hata raporlama sistemi, yöneticinin oturum açmadan bu yana oluşan tüm hata raporlarını iletmesini sağlayan bir açılır pencere görüntüler.
+Bu `-errorreport:prompt`seçenek, `-errorreport:queue`veya `-errorreport:send`ile kullanılırsa ve uygulamanız iç derleyici hatasıyla karşılaşırsa, içindeki `file` bilgiler Microsoft Corporation 'a gönderilir. Bu bilgiler, Microsoft mühendislerinin hatanın nedenini belirlemesine yardımcı olur ve Visual Basic sonraki sürümünün artırılmasına yardımcı olabilir. Varsayılan olarak, Microsoft 'a hiçbir bilgi gönderilmez. Ancak, varsayılan olarak etkinleştirilen bir uygulamayı kullanarak `-errorreport:queue`derlerken, uygulama hata raporlarını toplar. Daha sonra, bilgisayarın Yöneticisi oturum açtığında, hata raporlama sistemi, yöneticinin oturum açmadan bu yana oluşan tüm hata raporlarını iletmesini sağlayan bir açılır pencere görüntüler.
 
 > [!NOTE]
-> `-bugreport` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.
+> Bu `-bugreport` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.
 
 ## <a name="example"></a>Örnek
 

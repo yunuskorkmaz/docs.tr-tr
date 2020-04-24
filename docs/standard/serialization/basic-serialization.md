@@ -18,7 +18,7 @@ ms.locfileid: "80248036"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Bir sınıfı serileştirilebilir hale getirmenin en kolay yolu, sınıfı aşağıdaki <xref:System.SerializableAttribute> gibi işaretlemektir.  
+Seri hale getirilebilir bir sınıfı yapmanın en kolay yolu, <xref:System.SerializableAttribute> bunu aşağıdaki şekilde işaretlemenize yol kullanmaktır.  
   
 ```csharp  
 [Serializable]  
@@ -29,7 +29,7 @@ public class MyObject {
 }  
 ```  
   
-Aşağıdaki kod örneği, bu sınıfın bir örneğinin bir dosyaya nasıl serileştirilebildiğini gösterir.  
+Aşağıdaki kod örneği, bu sınıfın bir örneğinin bir dosyaya nasıl seri hale getirilebilir olduğunu gösterir.  
   
 ```csharp  
 MyObject obj = new MyObject();  
@@ -42,9 +42,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-Bu örnek bir ikili biçimlendirici serileştirme yapmak için kullanır. Yapmanız gereken tek şey, akışı ve kullanmak istediğiniz formatter bir örnek oluşturmak ve sonra formatter **Serialize** yöntemini arayın. Serihale edilecek akış ve nesne bu çağrıya parametreler olarak sağlanır. Bu örnekte açıkça gösterilmese de, bir sınıfın tüm üye değişkenleri seri hale getirilecek ve hatta değişkenler özel olarak işaretlenecektir. Bu açıdan, ikili serileştirme <xref:System.Xml.Serialization.XmlSerializer> yalnızca ortak alanları serihale sınıf, farklıdır. Üye değişkenleri ikili serileştirmeden dışlama hakkında bilgi için Seçici [Serileştirme'ye](selective-serialization.md)bakın.  
+Bu örnek bir ikili biçimlendirici serileştirme yapmak için kullanır. Tek yapmanız gereken, bir akışın ve kullanmak istediğiniz biçimlendirici 'nin bir örneğini oluşturmak ve ardından biçimlendirici üzerinde **serileştirme** yöntemini çağırdır. Akış ve seri hale getirilecek nesne bu çağrıya parametre olarak sağlanır. Bu örnekte açıkça gösterilmese de, bir sınıfın tüm üye değişkenleri, hatta özel olarak işaretlenen değişkenler serileştirilir. Bu şekilde, ikili serileştirme yalnızca ortak alanları seri <xref:System.Xml.Serialization.XmlSerializer> hale getirir sınıfından farklılık gösterir. İkili Serileştirmeden üye değişkenlerini dışlama hakkında daha fazla bilgi için bkz. [Seçmeli serileştirme](selective-serialization.md).  
   
-Nesne önceki durumuna geri yükleme oldukça kolaydır. İlk olarak, okumak için <xref:System.Runtime.Serialization.Formatter>bir akış oluşturun ve sonra nesneyi deserialize etmek için formatter talimat. Aşağıdaki kod örneği, nasıl yapıldığını gösterir.  
+Nesne önceki durumuna geri yükleme oldukça kolaydır. İlk olarak, okumak <xref:System.Runtime.Serialization.Formatter>için bir akış oluşturun ve sonra biçimlendirici bir nesne serisini kaldırmak için talimat söyleyin. Aşağıdaki kod örneği, nasıl yapıldığını gösterir.  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -58,9 +58,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Yukarıda <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> kullanılan çok verimli ve kompakt bir bayt akışı üretir. Onunla, .NET Framework üzerine serisi kaldırılacak nesneleri serileştirmek için ideal bir aracı kolaylaştıracak bu Biçimlendiricinin serileştirilmiş tüm nesneleri ayrıca seri durumdan çıkarılabiliyorsa. Bir nesne deserialized zaman yapıcılar çağrılmadı dikkat etmek önemlidir. Bu kısıtlama performans nedenleriyle deserialization yerleştirilir. Ancak, bu, çalışma zamanının nesne yazarla yaptığı olağan sözleşmelerden bazılarını ihlal eder ve geliştiriciler bir nesneyi serileştirilebilir olarak işaretlerken sonuçları anlamalarını sağlamalıdır.  
+Yukarıda <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> kullanılan, çok verimlidir ve bir kompakt bayt akışı üretir. Onunla, .NET Framework üzerine serisi kaldırılacak nesneleri serileştirmek için ideal bir aracı kolaylaştıracak bu Biçimlendiricinin serileştirilmiş tüm nesneleri ayrıca seri durumdan çıkarılabiliyorsa. Bir nesne seri durumdan kaldırıldığında oluşturucuların çağrılmadığını unutmayın. Bu kısıtlama, performans nedenleriyle seri durumdan çıkarma üzerine yerleştirilir. Ancak bu, çalışma zamanının nesne yazıcı ile yaptığı bazı olağan sözleşmeleri ihlal ediyor ve geliştiriciler bir nesneyi seri hale getirilebilir olarak işaretlerken sonuçları anladıklarından emin olmalıdır.  
   
-Taşınabilirlik bir gereklilikse, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> bunun yerine kullanın. Yukarıdaki koddaki **BinaryFormatter'ı** **SoapFormatter** ile değiştirmenız ve Serialize ve **Deserialize'yi** eskisi gibi aramanız yeterlidir. **Serialize** Bu biçimlendirici yukarıda kullanılan örnek için aşağıdaki çıktıyı üretir.  
+Taşınabilirlik bir gereksinimle, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> bunun yerine kullanın. Yukarıdaki koddaki **BinaryFormatter** **'ı SoapFormatter** Ile değiştirin ve **seri hale getirme** ve **seri durumdan çıkarma** 'yı çağırın. Bu biçimlendirici yukarıda kullanılan örnek için aşağıdaki çıktıyı üretir.  
   
 ```xml  
 <SOAP-ENV:Envelope  
@@ -81,7 +81,7 @@ Taşınabilirlik bir gereklilikse, <xref:System.Runtime.Serialization.Formatters
 </SOAP-ENV:Envelope>  
 ```  
   
-[Serializable](xref:System.SerializableAttribute) özniteliğinin devralınamayacağını unutmayın. Yeni bir sınıf `MyObject`türederseniz, yeni sınıf da öznitelik ile işaretlenmiş olmalıdır, ya da serileştirilemez. Örneğin, aşağıdaki sınıfın bir örneğini seri hale getirmeye çalıştığınızda, <xref:System.Runtime.Serialization.SerializationException> `MyStuff` türün serileştirilebilir olarak işaretlenmediğini bildiren bir bilgi alırsınız.  
+[Seri hale getirilebilir](xref:System.SerializableAttribute) özniteliğin devralınamayacağını unutmamak önemlidir. Öğesinden `MyObject`yeni bir sınıf türetirsiniz, yeni sınıf özniteliğiyle işaretlenmelidir veya seri hale getirilemez. Örneğin, aşağıdaki sınıfın bir örneğini serileştirmek istediğinizde, <xref:System.Runtime.Serialization.SerializationException> `MyStuff` türün seri hale getirilebilir olarak işaretlenmediğini bildiren bir uyarı alırsınız.  
   
 ```csharp  
 public class MyStuff : MyObject
@@ -90,9 +90,9 @@ public class MyStuff : MyObject
 }  
 ```  
   
- [Serializable](xref:System.SerializableAttribute) özniteliği ni kullanmak uygundur, ancak daha önce gösterildiği gibi sınırlamaları vardır. Serileştirme için bir sınıfı ne zaman işaretlemeniz gerektiği hakkında bilgi için [Serileştirme Yönergeleri'ne](serialization-guidelines.md) bakın. Serileştirme derlendikten sonra sınıfa eklenemez.  
+ [Serileştirilebilir](xref:System.SerializableAttribute) özniteliği kullanılması kullanışlıdır, ancak daha önce gösterildiği gibi sınırlamalar vardır. Serileştirme için bir sınıfı işaretlemeniz gereken zaman hakkında bilgi edinmek için [serileştirme yönergelerine](serialization-guidelines.md) bakın. Derleme derlendikten sonra bir sınıfa serileştirme eklenemiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İkili Serileştirme](binary-serialization.md)
-- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)
+- [İkili serileştirme](binary-serialization.md)
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md)

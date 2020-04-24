@@ -1,53 +1,114 @@
 ---
-title: .NET Framework'den .NET Core'a bağlantı noktası
-description: Taşıma işlemini anlayın ve bir .NET Framework projesini .NET Core'a taşımayaparken yararlı olabileceğiniz araçları keşfedin.
+title: .NET Framework’ten .NET Core’a taşıma
+description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 499632791e85f4ede87668775ad48407c6988095
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75937312"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135587"
 ---
-# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework'den .NET Core'a taşımaya genel bakış
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
-Şu anda .NET Core'a taşımak istediğiniz .NET Framework'de çalışan kodunuz olabilir. Bu makalede aşağıdakiler sunulmaktadır:
+Şu anda .NET Core 'a taşıma konusunda ilgilendiğiniz .NET Framework çalışan bir kodunuz olabilir. Bu makalede aşağıdakiler sunulmaktadır:
 
 * Taşıma işlemine genel bakış.
-* Kodunuzu .NET Core'a taşımanızda yararlı olabileceğiniz araçların listesi.
+* Kodunuzu .NET Core 'a taşırken yararlı bulabileceğiniz araçların bir listesi.
 
 ## <a name="overview-of-the-porting-process"></a>Taşıma işlemine genel bakış
 
-Projenizi .NET Core'a taşımayaparken aşağıdaki işlemi kullanmanızı öneririz:
+Birçok proje için .NET Framework .NET Core 'a (veya .NET Standard) taşıma görece bir şekilde ileriye doğru. Gerekli sayıda değişiklik vardır, ancak birçoğu aşağıda özetlenen desenleri izler. Uygulama modelinin .NET Core 'da (kitaplıklar, konsol uygulamaları ve Masaüstü uygulamaları gibi) kullanılabildiği projeler genellikle küçük değişiklikler gerektirir. Yeni bir uygulama modeli gerektiren projeler (örneğin, ASP.NET ' den ASP.NET Core taşıma gibi), biraz daha fazla iş gerektirir, ancak birçok desende dönüştürme sırasında kullanılabilecek analoglarından vardır. Bu belge, kod temellerini hedef .NET Standard veya .NET Core 'a başarıyla dönüştürmek üzere kullanıcılara çalışan ana stratejileri tanımlamaya yardımcı olmalıdır ve dönüştürme iki düzeyde ele alınacaktır: çözüm genelinde ve projeye özel. Uygulama modeline özgü dönüşümlerde yönergeler için en alttaki bağlantılara bakın.
 
-1. .NET Framework 4.7.2 veya daha yüksek bir hedefe bağlantı noktası yapmak istediğiniz tüm projeleri yeniden hedeflenin.
+Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı öneririz. Bu adımların her biri, davranış değişikliklerine yönelik olası yerleri tanıtır, bu nedenle sonraki adımlara devam etmeden önce kitaplığınızı veya uygulamanızı yeterince test ettirdiğinizden emin olun. İlk adımlar, projenizin .NET Standard veya .NET Core 'a yönelik bir anahtara hazırlanmaya yöneliktir. Birim testleriniz varsa, çalışmakta olduğunuz üründeki değişiklikleri test etmeye devam edebilmeniz için önce bunları dönüştürmeniz en iyisidir. .NET Core 'a taşıma işlemi, kod tabanınızda önemli bir değişiklik olduğundan, kodunuzun bağlantı noktası oluşturduğunuz testleri çalıştırabilmeniz için test projelerinizin bağlantı noktası yapılması önemle önerilir. MSTest, xUnit ve NUnit tüm .NET Core üzerinde çalışır.
 
-   Bu adım, .NET Core belirli bir API'yi desteklemediğinde .NET Framework'e özgü hedefler için API alternatiflerini kullanabilmesini sağlar.
+## <a name="getting-started"></a>Başlarken
 
-2. Derlemelerinizi analiz etmek ve .NET Core'a taşınabilir olup olmadıklarını görmek için [.NET Taşınabilirlik Çözümleyicisini](../../standard/analyzers/portability-analyzer.md) kullanın.
+Aşağıdaki araçlar işlem boyunca kullanılacaktır:
 
-   API Taşınabilirlik Çözümleyiciaracı derlenmiş derlemelerinizi analiz eder ve bir rapor oluşturur. Bu rapor, net core'da bulunmayan üst düzey taşınabilirlik özetini ve kullandığınız her API'nın dökümünü gösterir.
+- Visual Studio 2019
+- [.Net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) 'ni indirin
+- _Isteğe bağlı_ DotNet 'yi yüklemeyi [deneyin-Dönüştür](https://github.com/dotnet/try-convert)
 
-3. Bazı platformlarda ve diğer bazı olası uyumluluk sorunlarını <xref:System.PlatformNotSupportedException> oluşturan API'leri tanımlamak için [.NET API çözümleyicisini](../../standard/analyzers/api-analyzer.md) projelerinize yükleyin.
+## <a name="porting-a-solution"></a>Çözüm taşıma
 
-   Bu araç taşınabilirlik çözümleyicisine benzer, ancak kod .NET Core üzerinde inşa edebilirsiniz eğer analiz yerine, bir API çalıştıran zamanda bir <xref:System.PlatformNotSupportedException> atacak bir şekilde bir API kullanıyorsanız analiz eder. .NET Framework 4.7.2 veya daha yüksek bir yerden hareket ediyorsanız, bu yaygın olmasa da, bunu kontrol etmek iyidir. .NET Core'da özel durumlar oluşturan API'ler hakkında daha fazla bilgi [için,.NET Core'da her zaman özel durumlar oluşturan API'lere](../compatibility/unsupported-apis.md)bakın.
+Bir çözümde birden çok proje olduğunda, projeleri belirli bir sırada ele almanız gerektiğinden taşıma daha karmaşık görünebilir. Dönüştürme işlemi, çözümdeki diğer projelere bağımlılığı olmayan projelerin önce dönüştürülmesi ve tüm çözüm üzerinden devam etmesi için bir alt yaklaşım olmalıdır.
 
-4. Visual `packages.config` [Studio'daki dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference)tüm bağımlılıklarınızı [PackageReference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
+Sipariş projelerinin geçirilmesi gerektiğini belirlemek için aşağıdaki araçları kullanabilirsiniz:
 
-   Bu adım, bağımlılıklarınızı eski `packages.config` biçimden dönüştürmeyi içerir. `packages.config`.NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir.
+- [Visual Studio 'Daki bağımlılık diyagramları](/visualstudio/modeling/create-layer-diagrams-from-your-code) , bir çözümde kodun yönlendirilmiş bir grafiğini oluşturabilir.
+- Proje `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` başvuruları listesini içeren bir JSON belgesi oluşturmak için öğesini çalıştırın.
 
-5. .NET Core için yeni projeler oluşturun ve kaynak dosyaları kopyalayın veya varolan proje dosyanızı bir araçla dönüştürmeye çalışın.
+## <a name="per-project-steps"></a>Proje adımları başına
 
-   .NET Core, .NET Framework'den daha basitleştirilmiş (ve farklı) bir [proje dosyası biçimi](../tools/csproj.md) kullanır. Devam etmek için proje dosyalarınızı bu biçime dönüştürmeniz gerekir.
+Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı öneririz:
 
-6. Test kodunuzu port.
+1. `packages.config` [Visual Studio 'daki Dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference)tüm bağımlılıklarınızı [packagereference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
 
-   .NET Core'a geçiş kod tabanınızda önemli bir değişiklik olduğundan, kodunuzu üzerinde bağlantı darken testleri çalıştırabilmeniz için test projelerinizi taşımanız önerilir. MSTest, xUnit ve NUnit 'in tümü .NET Core üzerinde çalışır.
+   Bu adım, bağımlılıklarınızı eski `packages.config` biçimden dönüştürmeyi içerir. `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, daha sonra yönetmeniz gereken bağımlılıkların miktarını azaltarak, daha sonraki adımları daha kolay hale getirmek için bir projede doğrudan kullandığınız bağımlılıklara gerek duyar.
 
-Ayrıca, [dotnet try-convert](https://github.com/dotnet/try-convert) aracıyla tek bir işlemdeki küçük çözümleri veya tek tek projeleri .NET Core proje dosya biçimine taşımayı deneyebilirsiniz. `dotnet try-convert`tüm projeleriniz için çalışacağı garanti edilmez ve bağlı olduğunuz davranışta ince değişikliklere neden olabilir. Otomatikleştirilebilen temel şeyleri otomatikleştiren bir _başlangıç noktası_ olarak kullanın. Bir projeyi geçirmek için garantili bir çözüm değildir.
+1. Proje dosyanızı yeni SDK stili dosya yapısına dönüştürün. .NET Core için yeni projeler oluşturabilir ve kaynak dosyaları üzerine kopyalayabilir ya da mevcut proje dosyanızı bir araçla dönüştürmeyi deneyebilirsiniz.
+
+   .NET Core .NET Framework göre Basitleştirilmiş (ve farklı) bir [Proje dosyası biçimi](../tools/csproj.md) kullanır. Devam etmek için proje dosyalarınızı bu biçime dönüştürmeniz gerekir. Bu proje stili, bu noktada yine de hedeflemek istediğiniz .NET Framework de hedeflemesini sağlar.
+
+   En küçük çözüm veya tek bir işlemde, [DotNet TRY-Convert](https://github.com/dotnet/try-convert) aracı Ile .NET Core proje dosyası biçimine bir işlem üzerinden bağlantı kurmayı deneyebilirsiniz. `dotnet try-convert`Tüm projeleriniz için çalışma garantisi verilmez ve bağımlı olduğunuz davranışta hafif değişikliklere neden olabilir. Otomatikleştirilmiş olabilecek temel şeyleri otomatikleştiren bir _Başlangıç noktası_ olarak kullanın. SDK stil projeleri tarafından kullanılan hedeflerde eski stil projesi dosyalarıyla karşılaştırılan birçok fark olduğundan, projenin geçirilmesi için garantili bir çözüm değildir.
+
+1. .NET Framework 4.7.2 veya üstünü hedeflemek için, bağlantı noktası yapmak istediğiniz tüm projeleri yeniden hedefleyin.
+
+   Bu adım, .NET Core belirli bir API 'YI desteklemedikleri zaman .NET Framework özel hedefler için API alternatifleri kullanmanıza da sağlar.
+
+1. Tüm bağımlılıkları en son sürüme güncelleştirin. Projeler, .NET Standard desteği olmayan kitaplıkların eski sürümlerini kullanıyor olabilir. Ancak, sonraki sürümler bunu basit bir anahtarla destekleyebilir. Kitaplıklarda önemli değişiklikler varsa, bu durum kod değişiklikleri gerektirebilir.
+
+1. Derlemelerinizi çözümlemek ve .NET Core 'a taşınabilir olup olmadığını görmek için [.net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) 'ni kullanın.
+
+   .NET taşınabilirlik Çözümleyicisi Aracı, derlenmiş derlemelerinizi analiz eder ve bir rapor oluşturur. Bu rapor, üst düzey bir taşınabilirlik özetini ve kullanmakta olduğunuz her API 'nin, NET Core 'da kullanılamayan bir dökümünü gösterir. Aracı kullanırken, yalnızca dönüştürdüğünüz tek projeyi, gerekli olabilecek API değişikliklerine odaklanmak üzere gönder. API 'lerin çoğunun .NET Core 'da eşdeğer kullanılabilirliği vardır ve bu, ' ye geçmek isteyeceksiniz.
+
+   Çözümleyici tarafından oluşturulan raporları okurken önemli bilgiler, kullanılmakta olan gerçek API 'lardır ve hedef platform için desteğin yüzdesi değildir. Birçok API .NET Standard/çekirdek içinde eşdeğer seçeneklere sahiptir ve bu nedenle kitaplığınızın veya uygulamanızın API için gereken senaryoları anlamak, taşınabilirliğin belirlenmesini sağlamaya yardımcı olur.
+
+   API 'Lerin eşdeğer olmadığı bazı durumlar vardır ve platformlar için bazı derleyici ön işlemci yönergeleri (örn. `#if NET45`) yapmanız gerekir. Bu noktada, projeniz hala .NET Framework hedeflemeye devam eder. Bu hedeflenen durumların her biri için, bir senaryo olarak anlayabileceği iyi bilinen koşullar kullanılması önerilir.  Örneğin, .NET Core 'da AppDomain desteği sınırlıdır, ancak derlemeleri yükleme ve kaldırma senaryosunda .NET Core 'da kullanılamayan yeni bir API vardır. Bu kodu kodda işlemenin yaygın bir yolu şöyle olacaktır:
+
+   ```csharp
+   #if FEATURE_APPDOMAIN_LOADING
+   // Code that uses appdomains
+   #elif FEATURE_ASSEMBLY_LOAD_CONTEXT
+   // Code that uses assembly load context
+   #else
+   #error Unsupported platform
+   #endif
+   ```
+
+1. Bazı platformlarda ve diğer olası Uyumluluk sorunlarından oluşan <xref:System.PlatformNotSupportedException> API 'leri tanımlamak için, projelerinize [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) 'ni yükler.
+
+   Bu araç taşınabilirlik Çözümleyicisi ile benzerdir, ancak kodun .NET Core üzerinde oluşturulup oluşturulmayacağını çözümlemek yerine, bir API 'yi çalışma zamanında oluşturacak şekilde <xref:System.PlatformNotSupportedException> kullanıp kullanmayacağınızı analiz eder. .NET Framework 4.7.2 veya üzeri bir sürümü taşıyorsanız, bu yaygın olmasa da kontrol etmeniz iyidir. .NET Core üzerinde özel durumlar oluşturan API 'Ler hakkında daha fazla bilgi için bkz. [.NET Core üzerinde her zaman özel durum oluşturan API 'ler](../compatibility/unsupported-apis.md).
+
+1. Bu noktada, .NET Core 'u (genellikle uygulamalar için) veya .NET Standard (kitaplıklar için) hedeflemek için geçiş yapabilirsiniz.
+
+   .NET Core ve .NET Standard arasındaki seçim büyük ölçüde projenin çalıştırılacağı yere bağlıdır. Diğer uygulamalar tarafından tüketilen veya NuGet aracılığıyla dağıtılan bir kitaplıktır, genellikle .NET Standard hedeflenecek. Ancak, yalnızca performans veya diğer nedenlerle .NET Core 'da kullanılabilen API 'Ler olabilir; Bu durumda, .NET Core, büyük olasılıkla bir .NET Standard derlemesi ile, azaltılmış performans veya komik bir şekilde hedeflenmelidir. .NET Standard hedefleyerek, proje yeni platformlarda (WebAssembly gibi) çalıştırılmaya hazırlanacaktır. Projenin belirli uygulama çerçeveleri üzerinde bağımlılıkları varsa (örneğin, ASP.NET Core), hedef, bağımlılıkların desteklediklerinize göre sınırlandırılır.
+
+   .NET Framework veya .NET Standard için koşullu derleme koduna yönelik bir ön işlemci yönergesi yoksa, proje dosyasında aşağıdakileri bulmak kadar basit olacaktır:
+
+   ```xml
+   <TargetFramework>net472</TargetFramework>
+   ```
+
+   ve istediğiniz çerçeveye geçiş yapın. .NET Core 3,1 için şu şekilde olur:
+
+   ```xml
+   <TargetFramework>netcoreapp3.1</TargetFramework>
+   ```
+
+   Bununla birlikte, bazı nedenlerle belirli derlemeleri .NET Framework desteklemeye devam etmek istediğiniz bir kitaplıktır, bunu aşağıdaki ile değiştirerek [Çoklu hedefleyebilirsiniz](../../standard/library-guidance/cross-platform-targeting.md) :
+
+   ```xml
+   <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
+   ```
+
+   Windows 'a özgü API 'Ler (örneğin, kayıt defteri erişimi) kullanıyorsanız, [Windows Uyumluluk Paketi](./windows-compat-pack.md)' ni yüklemelisiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 >[!div class="nextstepaction"]
->[Bağımlılıkları analiz edin](third-party-deps.md)
+>[Analyze dependencies](third-party-deps.md)
+>[ASP.NET Core geçiş için](/aspnet/core/migration/proper-to-2x) bağımlılıklar[paketi NuGet paketi](../deploying/creating-nuget-packages.md)
+>ASP.net

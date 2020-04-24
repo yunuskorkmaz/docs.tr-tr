@@ -13,11 +13,11 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249545"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer> Elemanı
+# <a name="xmlserializer-element"></a>\<xmlSerializer> öğesi
 Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> yapılır.  
   
  \<yapılandırma>  
-\<system.xml.serialization>  
+\<System. xml. Serialization>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,8 +32,8 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**kontrolDeserializeAvanslar**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan "true"dur.|  
-|**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan **yanlıştır.**|  
+|**Checkdeserializeavanslar**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan değer "true" dır.|  
+|**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan değer **false**'dur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,15 +42,15 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.xml.serialization> Elemanı](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
+|[\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> güvenilmeyen verileri deserializing hizmet reddi olası reddi saldırılarına karşı ek bir güvenlik katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Böyle bir durum algılanırsa, bir özel durum şu iletiyle atılır: "İç hata: deserialization altta yatan akış üzerinde ilerlemek için başarısız oldu."  
+ Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> güvenilmeyen verilerin serisi kaldırılırken olası hizmet reddi saldırılarına karşı ek bir güvenlik katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Böyle bir koşul algılanırsa, şu iletiyle bir özel durum oluşturulur: "Iç hata: seri kaldırma, temel alınan akışın üzerinde ilerleyemedi."  
   
- Bu iletiyi alan değil gerekmeyen gösteren bir saldırı hizmet reddi devam ediyor. Bazı ender durumlarda, yanlış Pozitif sonsuz döngü algılama mekanizması oluşturur ve yasal gelen ileti için özel durum. Özel uygulamanızda meşru iletilerin bu ekstra koruma katmanı tarafından reddedildiğini fark ederseniz, "false" olarak **denetleDeserializeAdvances** özniteliği ni ayarlayın.  
+ Bu iletiyi alan değil gerekmeyen gösteren bir saldırı hizmet reddi devam ediyor. Bazı ender durumlarda, yanlış Pozitif sonsuz döngü algılama mekanizması oluşturur ve yasal gelen ileti için özel durum. Özel uygulamanızda bu ek koruma katmanı tarafından meşru iletiler reddedilmekte olduğunu fark ederseniz **Checkdeserializeavanslar** özniteliğini "false" olarak ayarlayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, "false" özniteliğini **deserializeAdvances** olarak ayarlar.  
+ Aşağıdaki kod örneği **Checkdeserializeavanslar** özniteliğini "false" olarak ayarlar.  
   
 ```xml  
 <configuration>  
@@ -63,5 +63,5 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialization> Elemanı](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)

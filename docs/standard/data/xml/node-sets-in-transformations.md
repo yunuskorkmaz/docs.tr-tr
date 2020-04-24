@@ -14,11 +14,11 @@ ms.locfileid: "75710563"
 Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> sınıfı, .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler Için Genişletilebilir Stil sayfası DILI (XSLT) dönüşümleri gerçekleştirebilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- Düğüm kümeleri, XPath ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir. Dönüşümde bir `select` özniteliğinde kullanılan bir XPath ifadesinin sonucu olan bu düğüm kümesi, XML Belge Nesne Modeli (DOM) tarafından ayarlanan düğüm ile aynı davranışa sahiptir. Gezinti için <xref:System.Xml.XPath.XPathNodeIterator> kullanan bir sonuç ağacı parçasının veya sonuç ağacı parçasının aksine, bir düğüm kümesi üzerinde, XPathNavigator kullanarak bir düğüm kümesi [gezinmesine](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)gidebilirsiniz.  
+ Düğüm kümeleri, XPath ifadelerinden döndürülen dört temel veri türünden biridir. Belge düzeninde oluşturulan ve yinelenen düğümleri olmayan düğümlerin sıralanmamış bir koleksiyonu olan düğüm kümesi, bir stil sayfasında bir değişkene atanabilir. Dönüşümdeki bir `select` öznitelikte kullanılan bir XPath ifadesinin sonucu olan bu düğüm KÜMESI, XML belge nesne MODELI (DOM) bir düğüm kümesiyle aynı davranışa sahiptir. Bir düğüm kümesinde gezinme için, bir sonuç ağacı parçasının veya sonuç ağacı parçasının aksine (örneğin, <xref:System.Xml.XPath.XPathNodeIterator> gezinti için) bir düğüm kümesi gezinmede gösterilen bir yöntem kümesini kullanarak gidebilirsiniz. [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
   
- Aşağıdaki kod örneği, bir stil sayfasındaki bir `variable` veya `parameter` öğesi düğüm kümesine değerlendirirken bir düğüm kümesi üzerinde nasıl yineleme yapılacağını gösterir.  
+ Aşağıdaki kod örneği, bir stil sayfasındaki bir `variable` veya `parameter` öğesinin bir düğüm kümesini değerlendirirken bir düğüm kümesi üzerinde nasıl yineleceğini gösterir.  
   
 ## <a name="style-sheet"></a>Stil sayfası  
   
@@ -38,7 +38,7 @@ Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>Giriş  
+## <a name="input"></a>Girdi  
   
 ```xml  
 <bookstore>  
@@ -56,7 +56,7 @@ Düğüm kümeleri, XML yol dili (XPath) ifadelerinden döndürülen dört temel
 </bookstore>  
 ```  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
   
 ```output  
 ******  

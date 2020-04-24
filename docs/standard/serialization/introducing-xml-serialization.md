@@ -1,5 +1,5 @@
 ---
-title: XML serileştirmeayrıntıları
+title: XML serileştirme ayrıntıları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,47 +21,47 @@ ms.locfileid: "80588448"
 ---
 # <a name="xml-serialization"></a>XML serileştirme
 
-Serileştirme, bir nesneyi kolayca taşınabilen bir forma dönüştürme işlemidir. Örneğin, bir nesneyi seri hale getirebilir ve istemci ve sunucu arasında HTTP kullanarak internet üzerinden taşıyabilirsiniz. Diğer tarafta, deserialization nesneyi akıştan yeniden yapıdadır.
+Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemidir. Örneğin, bir nesneyi seri hale getirebilirsiniz ve bir istemci ile sunucu arasında HTTP kullanarak Internet üzerinden aktarabilirsiniz. Diğer uçta, seri durumdan çıkarma nesneyi akıştan yeniden oluşturur.
 
- XML serileştirme, yalnızca bir nesnenin ortak alanlarını ve özellik değerlerini xml akışına serileştirir. XML serileştirme türü bilgilerini içermez. Örneğin, **Kitaplık** ad alanında bulunan bir **Kitap** nesneniz varsa, aynı türdeki bir nesneye deserialized olduğunu garanti yoktur.
+ XML serileştirme, bir nesnenin yalnızca ortak alanlarını ve özellik değerlerini bir XML akışına seri hale getirir. XML serileştirme türü bilgilerini içermez. Örneğin, **kitaplık** ad alanında bulunan bir **kitap** nesneniz varsa, bunun seri durumdan çıkarılma, aynı türde bir nesneye sahip değildir.
 
 > [!NOTE]
 > XML serileştirme yöntemleri, Dizinleyicileri, özel alanları veya salt okunur özelliklerini (dışında salt okunur koleksiyonlar) dönüştürmez. Bir nesnenin tüm alanları ve özellikleri serileştirmek için ve ortak ve özel, kullanın <xref:System.Runtime.Serialization.DataContractSerializer> XML serileştirme yerine.
 
- XML serileştirmede merkezi sınıf <xref:System.Xml.Serialization.XmlSerializer> sınıftır ve bu sınıftaki en önemli yöntemler **Serialize** ve **Deserialize** yöntemleridir. <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2.0'da, [XML Serializer Generator Tool (Sgen.exe),](xml-serializer-generator-tool-sgen-exe.md) uygulamanızla birlikte dağıtılmak ve başlangıç performansını artırmak üzere bu serileştirme derlemelerini önceden oluşturmak üzere tasarlanmıştır. **XmlSerializer** tarafından oluşturulan XML akışı World Wide Web Konsorsiyumu (W3C) [XML Şema tanım dili (XSD) 1.0 önerisi](https://www.w3.org/TR/xslt)ile uyumludur. Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölüm 2: veri türleri."
+ XML serileştirme <xref:System.Xml.Serialization.XmlSerializer> içindeki merkezi sınıf sınıftır ve bu sınıftaki en önemli Yöntemler **serileştirme** ve **seri durumdan çıkarma** yöntemleridir. <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2,0 ' de, [XML serileştiricisi oluşturma aracı (SGen. exe)](xml-serializer-generator-tool-sgen-exe.md) , uygulamanızla birlikte dağıtılacak ve başlangıç performansını iyileştirecek şekilde bu serileştirme derlemelerini oluşturmak için tasarlanmıştır. **XmlSerializer** tarafından oluşturulan xml akışı, world WIDE Web KONSORSIYUMU (W3C) [XML şeması tanım dili (xsd) 1,0 önerisi](https://www.w3.org/TR/xslt)ile uyumludur. Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölüm 2: veri türleri."
 
- Nesnelerinizdeki veriler, sınıflar, alanlar, özellikler, ilkel türler, diziler ve hatta **XmlElement** veya **XmlAttribute** nesneleri şeklinde katıştırılmış XML gibi programlama dili yapıları kullanılarak tanımlanır. Özniteliklerle açıklamalı kendi sınıflarınızı oluşturma veya varolan bir XML Şeması'na dayalı sınıfları oluşturmak için XML Şema Tanımı aracını kullanma seçeneğiniz vardır.
+ Nesnelerinizin verileri, diziler, alanlar, özellikler, ilkel türler, diziler ve hatta katıştırılmış XML gibi programlama dili yapılarını **XmlElement** veya **XmlAttribute** nesneleri biçiminde kullanarak açıklanır. Kendi sınıflarınızı oluşturma, özniteliklerle açıklama eklenmiş veya XML şema tanımı aracını kullanarak mevcut bir XML şemasına göre sınıfları oluşturma seçeneğiniz vardır.
 
- Bir XML Şemasınız varsa, şemaya güçlü bir şekilde yazılan ve özniteliklerle açıklamalı bir sınıf kümesi oluşturmak için XML Şema Tanımı aracını çalıştırabilirsiniz. Bu tür bir sınıfının bir örneğini serileştirilmiş olduğunda, oluşturulan XML için XML Şeması uyar. Bu tür bir sınıf ile programlayabileceğiniz sağlanan kolay yönetilebilen nesne modeli olan sırasında oluşturulan XML XML şemaya uygun olduğunu garanti. Bu, **XmlReader** ve **XmlWriter** sınıfları gibi .NET Framework'deki diğer sınıfları ayrıştırmak ve xml akışı yazmak için kullanmaya alternatiftir. Daha fazla bilgi için [Bkz. XML Belgeler ve Veriler.](../../../docs/standard/data/xml/index.md) Bu sınıflar herhangi bir XML akışını ayrıştırmak için izin verir. Buna karşılık, XML akışı bilinen bir XML Şemasına uyması beklenirken **XmlSerializer'ı** kullanın.
+ XML şemanız varsa, şemaya kesin olarak yazılan ve özniteliklerle açıklanan bir sınıf kümesi oluşturmak için XML şema tanımı aracını çalıştırabilirsiniz. Bu tür bir sınıfının bir örneğini serileştirilmiş olduğunda, oluşturulan XML için XML Şeması uyar. Bu tür bir sınıf ile programlayabileceğiniz sağlanan kolay yönetilebilen nesne modeli olan sırasında oluşturulan XML XML şemaya uygun olduğunu garanti. Bu, bir XML akışı ayrıştırmak ve yazmak için **XmlReader** ve **XmlWriter** sınıfları gibi .NET Framework diğer sınıfların kullanılmasına bir alternatiftir. Daha fazla bilgi için bkz. [XML belgeleri ve verileri](../../../docs/standard/data/xml/index.md). Bu sınıflar herhangi bir XML akışını ayrıştırabilmeniz için izin verir. Buna karşılık, XML akışının bilinen bir XML şemasına uyması beklendiğinde **XmlSerializer** 'ı kullanın.
 
- Öznitelikler, XML sınıfı tarafından oluşturulan **XML** akışını denetleyerek XML ad alanını, öğe adını, öznitelik adını ve benzeri, XML akışını ayarlamanızı sağlar. Bu öznitelikler ve XML serileştirmeyi nasıl denetledikleri hakkında daha fazla bilgi için, [Bkz. XML Serileştirmeyi Denetleme Öznitelikleri.](controlling-xml-serialization-using-attributes.md) Oluşturulan XML'i denetlemek için kullanılan bu özniteliklerin bir tablosu için, [XML Serileştirmeyi Denetleyen Özniteliklere](attributes-that-control-xml-serialization.md)bakın.
+ Öznitelikler, XML akışının XML ad alanını, öğe adını, öznitelik adını ve benzerlerini ayarlamanıza olanak tanıyan **XmlSerializer** sınıfı tarafından oluşturulan XML akışını denetler. Bu öznitelikler ve XML serileştirmesini denetleme hakkında daha fazla bilgi için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](controlling-xml-serialization-using-attributes.md). Oluşturulan XML 'yi denetlemek için kullanılan özniteliklerin bir tablosu için bkz. [XML serileştirme denetleyen öznitelikler](attributes-that-control-xml-serialization.md).
 
- **XmlSerializer** sınıfı bir nesneyi daha da seri hale getirebilir ve kodlanmış soap XML akışı oluşturabilir. Oluşturulan XML "Basit Nesne Erişim Protokolü (SOAP) 1.1." başlıklı bölümüne World Wide Web Consortium belgesinin 5 uyar Bu işlem hakkında daha fazla bilgi için [bkz: Bir Nesneyi SOAP Kodlu XML Akışı Olarak Serihale.](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) Oluşturulan XML'i denetleyen özniteliklerin tablosu için [bkz.](attributes-that-control-encoded-soap-serialization.md)
+ **XmlSerializer** sınıfı bir nesneyi daha sonra serileştirmez ve KODLANMıŞ BIR SOAP XML akışı oluşturabilir. Oluşturulan XML "Basit Nesne Erişim Protokolü (SOAP) 1.1." başlıklı bölümüne World Wide Web Consortium belgesinin 5 uyar Bu işlem hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir NESNEYI SOAP kodlu XML akışı olarak serileştirme](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Oluşturulan XML 'yi denetleyen özniteliklerin bir tablosu için bkz. [KODLANMıŞ SOAP serileştirmesini denetleyen öznitelikler](attributes-that-control-encoded-soap-serialization.md).
 
- **XmlSerializer** sınıfı, XML Web hizmetleri tarafından oluşturulan ve xml Web hizmetlerine aktarılan SOAP iletilerini oluşturur. SOAP iletilerini denetlemek için, bir XML Web hizmet dosyasında (.asmx) bulunan sınıflara, döndürme değerlerine, parametrelere ve alanlara öznitelikleri uygulayabilirsiniz. Bir XML Web hizmeti gerçek veya kodlanmış SOAP stilini kullanabileceğinden, "XML Serileştirmeyi Kontrol Eden Öznitelikler" ve "Kodlanmış SOAP Serialization'ı Kontrol Eden Öznitelikler" dizilerinde listelenen öznitelikleri kullanabilirsiniz. Bir XML Web hizmeti tarafından oluşturulan XML'i denetlemek için öznitelikleri kullanma hakkında daha fazla bilgi için Bkz. [XML Web Hizmetleri ile XML Serileştirme.](xml-serialization-with-xml-web-services.md) SOAP ve XML Web hizmetleri hakkında daha fazla bilgi için [SOAP İleti Biçimlendirmeyi Özelleştirme'ye](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))bakın.
+ **XmlSerializer** sınıfı, tarafından oluşturulan ve XML Web Hizmetleri 'NE geçirilen SOAP iletilerini oluşturur. SOAP iletilerini denetlemek için sınıflar, dönüş değerleri, parametreler ve bir XML Web hizmeti dosyasında (. asmx) bulunan alanlara öznitelikler uygulayabilirsiniz. XML Web hizmeti değişmez değer veya kodlanmış SOAP stilini kullanabilmesi için, "XML serileştirmesini denetleyen öznitelikler" ve "kodlanmış SOAP serileştirmesini denetleyen öznitelikler" bölümünde listelenen öznitelikleri kullanabilirsiniz. XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için öznitelikleri kullanma hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](xml-serialization-with-xml-web-services.md). SOAP ve XML Web Hizmetleri hakkında daha fazla bilgi için bkz. [SOAP Ileti biçimlendirmesini özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer uygulamalar için güvenlik hususları
 
-**XmlSerializer**kullanan bir uygulama oluştururken, aşağıdaki öğeleri ve bunların etkileri farkında olun:
+**XmlSerializer**'ı kullanan bir uygulama oluştururken, aşağıdaki öğeleri ve bunların etkilerini unutmayın:
 
-- **XmlSerializer** C# (.cs) dosyalarını oluşturur ve temp ortamı değişkeni tarafından adlandırılan dizindeki .dll dosyalarına derler; serileştirme bu DLs ile oluşur.
+- **XmlSerializer** , C# (. cs) dosyaları oluşturur ve bunları temp ortam değişkeni tarafından adlandırılan dizinde. dll dosyalarına derler; serileştirme bu DLL 'Ler ile oluşur.
 
   > [!NOTE]
   > Bu seri hale getirme derlemeler önceden oluşturulur ve SGen.exe aracını kullanarak oturum açmış. Bu, bir Web Hizmetleri sunucusu çalışmıyor. Diğer bir deyişle, yalnızca istemci kullanımı için ve el ile serileştirme içindir.
 
-  Kod ve DLL'leri oluşturma ve derleme sırasındaki kötü amaçlı bir işleme etkilenir. Microsoft Windows NT 4.0 veya sonraki sürümü çalıştıran bir bilgisayara kullanırken, TEMP dizinini paylaşmak iki veya daha fazla kullanıcı için olası olabilir. İki hesap farklı güvenlik ayrıcalıklarına sahipse ve daha yüksek ayrıcalıklı hesap **XmlSerializer**kullanarak bir uygulama çalıştırıyorsa TEMP dizinini paylaşmak tehlikelidir. Bu durumda, bir kullanıcı derlenmiş olup .cs veya .dll dosya değiştirerek bilgisayarın güvenlik ihlal. Bu sorunu gidermek için her zaman her bilgisayar hesabında kendi profili sahip olduğundan emin olun. Varsayılan olarak, her hesap için farklı bir dizin TEMP ortam değişkeni gösteriyor.
+  Kod ve DLL'leri oluşturma ve derleme sırasındaki kötü amaçlı bir işleme etkilenir. Microsoft Windows NT 4.0 veya sonraki sürümü çalıştıran bir bilgisayara kullanırken, TEMP dizinini paylaşmak iki veya daha fazla kullanıcı için olası olabilir. İki hesabın farklı güvenlik ayrıcalıklarına sahip olması ve yüksek ayrıcalıklı hesabın **XmlSerializer**kullanarak bir uygulama ÇALıŞTıRMASı durumunda geçici dizin paylaşımı tehlikelidir. Bu durumda, bir kullanıcı derlenmiş olup .cs veya .dll dosya değiştirerek bilgisayarın güvenlik ihlal. Bu sorunu gidermek için her zaman her bilgisayar hesabında kendi profili sahip olduğundan emin olun. Varsayılan olarak, her hesap için farklı bir dizin TEMP ortam değişkeni gösteriyor.
 
-- Kötü niyetli bir kullanıcı bir Web sunucusuna sürekli xml veri akışı gönderirse (hizmet reddi saldırısı), bilgisayar kaynakları azalana kadar **XmlSerializer** verileri işlemeye devam edin.
+- Kötü amaçlı bir Kullanıcı bir Web sunucusuna (hizmet reddi saldırısı) sürekli bir XML verisi akışı gönderirse, bilgisayar kaynakları azalana kadar **XmlSerializer** verileri işlemeye devam eder.
 
-  Internet Information Services (IIS) çalıştıran bir bilgisayara kullandığınız ve uygulamanızı IIS içinde çalışıyorsa bu tür bir saldırıya ortadan kaldırıldı. IIS, akışları belirli bir miktardan daha uzun işlemeyen bir kapı sunar (varsayılan değer 4 KB'dir). IIS kullanmayan ve **XmlSerializer**ile deserialize bir uygulama oluşturursanız, hizmet reddi saldırısını engelleyen benzer bir kapı uygulamanız gerekir.
+  Internet Information Services (IIS) çalıştıran bir bilgisayara kullandığınız ve uygulamanızı IIS içinde çalışıyorsa bu tür bir saldırıya ortadan kaldırıldı. IIS, küme miktarından daha uzun akışları işlemez (varsayılan 4 KB 'tır). IIS kullanmayan ve **XmlSerializer**ile seri hale getirilen bir uygulama oluşturursanız, hizmet reddi saldırısını engelleyen benzer bir geçit uygulamanız gerekir.
 
-- **XmlSerializer** verileri serileştirir ve verilen herhangi bir türü kullanarak herhangi bir kodu çalıştırır.
+- **XmlSerializer** verileri seri hale getirir ve kendisine verilen herhangi bir türü kullanarak herhangi bir kodu çalıştırır.
 
-  Kötü amaçlı bir nesne bir iş parçacığı sayısını gösterir iki yolu vardır. Kötü amaçlı kod çalıştırabilir veya **XmlSerializer**tarafından oluşturulan C# dosyasına kötü amaçlı kod enjekte edebilir. İlk durumda, kötü amaçlı bir nesne yıkıcı bir yordam çalıştırmaya çalışırsa, kod erişim güvenliği herhangi bir hasarın yapılmasını önlemeye yardımcı olur. İkinci durumda, kötü amaçlı bir nesnenin **XmlSerializer**tarafından oluşturulan C# dosyasına bir şekilde kod enjekte edebileceği teorik bir olasılık vardır. Bu sorun ayrıntılı olarak incelenmiş olsa da ve böyle bir saldırı olası kabul edilmiştir, bilinmeyen ve güvenilmeyen türü ile veri seri asla önlem almalıdır.
+  Kötü amaçlı bir nesne bir iş parçacığı sayısını gösterir iki yolu vardır. Kötü amaçlı kod çalıştırabilir veya **XmlSerializer**tarafından oluşturulan C# dosyasına kötü amaçlı kod ekleyebilir. İlk durumda, kötü amaçlı bir nesne bozucu bir yordam çalıştırmaya çalışırsa, kod erişim güvenliği, herhangi bir hasar yapılmasını önlemeye yardımcı olur. İkinci durumda, kötü niyetli bir nesnenin **XmlSerializer**tarafından oluşturulan C# dosyasına bir kod eklemesine olanak tanıyan bir teorik olabilir. Bu sorun kapsamlı bir şekilde incelendi ve bu tür bir saldırı nadiren düşünülse de, verileri bilinmeyen ve güvenilmeyen bir türle asla serileştirmez.
 
 - Serileştirilmiş hassas verileri açık olabilir.
 
-  **XmlSerializer** serileştirilmiş veri sonra, bir XML dosyası veya diğer veri deposu olarak saklanabilir. Veri deponuz başka işlemler için kullanılabilirse veya bir intranet veya Internet'te görünüyorsa, veriler çalınabilir ve kötü amaçlı olarak kullanılabilir. Örneğin, bir uygulama oluşturursanız, siparişler serileştiren kredi kartı numaraları dahil, veri yüksek oranda duyarlıdır. Bunu önlemek için her zaman için veri deposu korumak ve özel olarak saklamak için adımları izleyin.
+  **XmlSerializer** verileri serileştirdikten sonra bir XML dosyası veya başka bir veri deposu olarak depolanabilir. Veri depetiniz diğer işlemlere kullanılabilirse veya bir intranette ya da Internet üzerinde görülebilir durumdaysa, veriler çalınıp kötü amaçlı olarak kullanılabilir. Örneğin, bir uygulama oluşturursanız, siparişler serileştiren kredi kartı numaraları dahil, veri yüksek oranda duyarlıdır. Bunu önlemek için her zaman için veri deposu korumak ve özel olarak saklamak için adımları izleyin.
 
 ## <a name="serialization-of-a-simple-class"></a>Basit bir sınıfın seri hale getirme
 
@@ -88,7 +88,7 @@ Bu sınıfın örneğini serileştirilmiş olduğunda, aşağıdakine benzer.
 </OrderForm>
 ```
 
-Serileştirmenin diğer örnekleri için Bkz. [XML Serileştirme örnekleri.](examples-of-xml-serialization.md)
+Serileştirme hakkında daha fazla örnek için bkz. [XML serileştirme örnekleri](examples-of-xml-serialization.md).
 
 ## <a name="items-that-can-be-serialized"></a>Seri hale öğeleri
 
@@ -96,36 +96,36 @@ Aşağıdaki öğeler **XmLSerializer** sınıfı kullanılarak seri hale getiri
 
 - Ortak okuma/yazma özellikleri ve ortak sınıfların alanları.
 
-- **ICollection** veya **ImEnumerable**uygulayan sınıflar.
+- **ICollection** veya **IEnumerable**uygulayan sınıflar.
 
   > [!NOTE]
   > Yalnızca koleksiyonları serileştirilmiş, ortak değil Özellikleri ' dir.
 
 - **XmlElement** nesneleri.
 
-- **XmlNode** nesneleri.
+- **XMLNode** nesneleri.
 
-- **DataSet** nesneleri.
+- **Veri kümesi** nesneleri.
 
- Nesneleri serileştirme veya deserializing hakkında daha fazla bilgi için [bkz: Nesneyi Serihale](how-to-serialize-an-object.md) ve [Nasıl İşle: Nesneyi Deserialize Etme](how-to-deserialize-an-object.md).
+ Nesneleri serileştirmek veya seri durumdan çıkarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: serileştirme bir nesne](how-to-serialize-an-object.md) ve [nasıl yapılır: bir nesnenin serisini kaldırma](how-to-deserialize-an-object.md).
 
 ## <a name="advantages-of-using-xml-serialization"></a>XML Serialization kullanarak avantajları
 
-**XmlSerializer** sınıfı, bir nesneyi XML olarak serihale ettiğinizde tam ve esnek denetim sağlar. Bir XML Web hizmeti oluşturuyorsanız, XML çıkışının belirli bir şemaya uygun olduğundan emin olmak için sınıflara ve üyelere serileştirmeyi denetleyen öznitelikleri uygulayabilirsiniz.
+**XmlSerializer** sınıfı, BIR nesneyi XML olarak serileştirçalışırken size tüm ve esnek denetim sağlar. Bir XML Web hizmeti oluşturuyorsanız, XML çıkışının belirli bir şemaya uygun olmasını sağlamak için, sınıfları ve üyeleri serileştirme ' i denetleyen öznitelikler uygulayabilirsiniz.
 
 Örneğin, **XmlSerializer** şunları yapmanızı sağlar:
 
-- Bir alanın veya özelliğin öznitelik veya öğe olarak kodlanıp kodlanmayacağını belirtin.
+- Bir alanın veya özelliğin öznitelik veya bir öğe olarak kodlanıp kodlanmayacağını belirtin.
 
 - Kullanmak için bir XML ad alanı belirtin.
 
-- Bir alan veya özellik adı uygun değilse, bir öğenin adını veya özniteliğini belirtin.
+- Bir alan veya özellik adı uygun değilse, bir öğenin veya özniteliğin adını belirtin.
 
-XML serileştirmenin bir diğer avantajı da, oluşturulan XML akışı belirli bir şemaya uygun olduğu sürece, geliştirdiğiniz uygulamalarüzerinde herhangi bir kısıtlama olmamasıdır. Books tanımlamak için kullanılan bir şema düşünün. Bir başlık özelliklerini, yazarın, yayımcı ve ISBN öğe sayısı. Örneğin, bir kitap düzeni veya books envanterini olarak istediğiniz herhangi bir şekilde XML verileri işleyen bir uygulama geliştirebilirsiniz. Her iki durumda da, tek gereksinim XML akışının belirtilen XML Şema tanım dili (XSD) şemasına uygun olmasıdır.
+XML serileştirmenin bir diğer avantajı, oluşturulan uygulamalar üzerinde herhangi bir kısıtlama olmadığı sürece, üretilen XML akışı belirli bir şemaya uygun değildir. Books tanımlamak için kullanılan bir şema düşünün. Bir başlık özelliklerini, yazarın, yayımcı ve ISBN öğe sayısı. Örneğin, bir kitap düzeni veya books envanterini olarak istediğiniz herhangi bir şekilde XML verileri işleyen bir uygulama geliştirebilirsiniz. Her iki durumda da, XML akışının belirtilen XML şeması tanım dili (XSD) şemasına uygun olması yeterlidir.
 
 ## <a name="xml-serialization-considerations"></a>XML serileştirme konuları
 
-**XmlSerializer** sınıfı kullanırken aşağıdakiler göz önünde bulundurulmalıdır:
+**XmlSerializer** sınıfı kullanılırken aşağıdakiler göz önünde bulundurulmalıdır:
 
 - Sgen.exe aracı açıkça en iyi performans için serileştirme derlemelerini oluşturmak üzere tasarlanmıştır.
 
@@ -133,21 +133,21 @@ XML serileştirmenin bir diğer avantajı da, oluşturulan XML akışı belirli 
 
 - Yalnızca genel özelliklerini ve alanları seri hale getirilebilir. Özellikler ortak erişimciler olmalıdır (almanıza ve ayarlamanıza yöntemleri). Genel olmayan verileri seri gerekir, kullanın <xref:System.Runtime.Serialization.DataContractSerializer> sınıfının XML serileştirme değil.
 
-- Bir sınıfın **XmlSerializer**tarafından serihale getirilebilmek için parametresiz bir oluşturucusu olmalıdır.
+- Bir sınıf **XmlSerializer**tarafından seri hale getirilecek parametresiz bir oluşturucuya sahip olmalıdır.
 
 - Yöntemleri seri hale getirilemiyor.
 
-- **XmlSerializer,** aşağıdaki gibi, belirli gereksinimleri karşılıyorsa, **IEnumerable** veya **ICollection'ı** farklı şekilde uygulayan sınıfları işleyebilir.
+- **XmlSerializer** , bazı gereksinimleri karşılıyorsa **IEnumerable** veya **ICollection** uygulayan sınıfları aşağıdaki gibi işleyebilir.
 
-  **Tümevarım'ı** uygulayan bir sınıfın, tek bir parametre alan ortak bir **Ekle** yöntemini uygulaması gerekir. **Add** yönteminin parametresi, **IEnumerator.Current** özelliği **GetEnumerator** yönteminden döndürülen türle tutarlı (polimorfik) olmalıdır.
+  **IEnumerable** uygulayan bir sınıf, tek bir parametre alan ortak bir **Add** yöntemi gerçekleştirmelidir. **Add** yönteminin parametresi, **GetEnumerator** yönteminden döndürülen **IEnumerator. Current** özelliğinden döndürülen türle tutarlı (Polimorfik) olmalıdır.
 
-  **IEnumerable** 'a **(CollectionBase**gibi) ek olarak **ICollection** uygulayan bir sınıfın, bir tamsayı alan ortak **Öğe** dizineli özelliği (C#'da bir dizinleyici) olması ve tür **tamsayı**ortak **Sayısı** özelliğine sahip olması gerekir. **Ekle** metoduna geçirilen parametre, **Öğe** özelliğinden döndürülen türle veya bu türdeki tabanlardan biri olmalıdır.
+  **IEnumerable** ( **CollectionBase**gibi) ek olarak **ICollection** uygulayan bir sınıf, bir tamsayı alan ortak bir **öğe** dizinli özelliğine (C# ' deki bir Dizin Oluşturucu) sahip olmalıdır ve **tamsayı**türünde bir ortak **Count** özelliği olmalıdır. **Add** yöntemine geçirilen parametre, **öğe** özelliğinden döndürülen aynı türde veya bu tür tabanlarından biri olmalıdır.
 
-  **ICollection**uygulayan sınıflar için, seri hale getirilecek değerler **GetEnumerator'u**aramak yerine dizine eklenmiş **Öğe** özelliğinden alınır. Ayrıca, başka bir koleksiyon sınıfı döndüren ortak alanlar **(ICollection**uygulayan lar) dışında, ortak alanlar ve özellikler serileştirilmez. Örneğin, [Bkz. XML Serileştirme Örnekleri.](examples-of-xml-serialization.md)
+  **ICollection**uygulayan sınıflar için, seri hale getirilecek değerler **GetEnumerator**çağrısı yerine dizinli **Item** özelliğinden alınır. Ayrıca, genel alanlar ve özellikler, başka bir koleksiyon sınıfını ( **ICollection**uygulayan bir tane) döndüren ortak alanlar dışında serileştirilmez. Örnek için bkz. [XML serileştirme örnekleri](examples-of-xml-serialization.md).
 
 ## <a name="xsd-data-type-mapping"></a>XSD veri türü eşlemesi
 
-[XML Şema Bölüm 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belge, XML Şema tanım dili (XSD) şemasında izin verilen basit veri türlerini belirtir. Bunların çoğu için (örneğin, **int** ve **ondalık),**.NET Framework'de karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türlerinin .NET Framework'de (örneğin, **NMTOKEN** veri türü) karşılık gelen bir veri türü yoktur. Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML Şema Tanım Aracı 'nı[(XML Şema Tanım Aracı (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)kullanıyorsanız, tür dizesinin bir üyesine uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN**ile "MyToken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
+[XML şeması Bölüm 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belgesi, bir XML şeması tanım DILI (xsd) şemasında izin verilen basit veri türlerini belirtir. Bunlardan birçoğu (örneğin, **int** ve **decimal**) için .NET Framework karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türleri .NET Framework karşılık gelen bir veri türüne sahip değildir (örneğin, **NMTOKEN** veri türü). Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML şema tanımı aracını ([XML şema tanımı Aracı (xsd. exe)](xml-schema-definition-tool-xsd-exe.md)) kullanırsanız, tür dizesinin bir üyesine uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN**olan "mytoken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -159,9 +159,9 @@ Public MyToken As String
 public string MyToken;
 ```
 
-Benzer şekilde, belirli bir XML Şemasına (XSD) uyması gereken bir sınıf oluşturuyorsanız, uygun özniteliği uygulamalı ve **DataType** özelliğini istenen XML veri türü adına ayarlamanız gerekir.
+Benzer şekilde, belirli bir XML şeması (XSD) ile uyumlu olması gereken bir sınıf oluşturuyorsanız, uygun özniteliği uygulamanız ve **DataType** ÖZELLIĞINI istenen XML veri türü adı olarak ayarlamanız gerekir.
 
-Tür eşlemelerinin tam listesi için, aşağıdaki öznitelik sınıflarından herhangi biri için **DataType** özelliğine bakın:
+Tür eşlemelerinin tüm listesi için aşağıdaki öznitelik sınıflarının herhangi biri için **DataType** özelliğine bakın:
 
 - <xref:System.Xml.Serialization.SoapAttributeAttribute>
 
@@ -180,8 +180,8 @@ Tür eşlemelerinin tam listesi için, aşağıdaki öznitelik sınıflarından 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.IO.FileStream>
-- [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)
-- [İkili Serileştirme](binary-serialization.md)
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
+- [İkili serileştirme](binary-serialization.md)
 - [Serileştirme](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML Serileştirme Örnekleri](examples-of-xml-serialization.md)

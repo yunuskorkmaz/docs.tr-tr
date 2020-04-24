@@ -1,5 +1,5 @@
 ---
-title: .NET kullanarak C# JSON serisini serileştirme ve serisini kaldırma
+title: C#-.NET kullanarak JSON serisini serileştirme ve serisini kaldırma
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -18,7 +18,7 @@ ms.locfileid: "78159552"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 'te JSON serileştirme ve seri durumundan çıkarma (sıralama ve kaldırma)-genel bakış
 
-`System.Text.Json` ad alanı, JavaScript Nesne Gösterimi (JSON) ' den serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
+Ad `System.Text.Json` alanı, JAVASCRIPT nesne GÖSTERIMI (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
 
 Kitaplık tasarımı, kapsamlı bir özellik kümesi üzerinden yüksek performans ve düşük bellek ayırmayı vurgular. Yerleşik UTF-8 desteği, UTF-8 olarak kodlanmış JSON metnini okuma ve yazma sürecini en iyi duruma getirir. Bu, Web ve disk üzerindeki dosyalardaki veriler için en yaygın kodlama olur.
 
@@ -35,9 +35,9 @@ Kitaplık Ayrıca, bellek içi belge nesne modeli (DOM) ile çalışmak için s�
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Kitaplığı kullanma](system-text-json-how-to.md)
-* [Newtonsoft.Json geçiş](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Öğesinden geçişNewtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Dönüştürücüler yazma](system-text-json-converters-how-to.md)
-* [System.Text.Json kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [System.Text.Json API başvurusu](xref:System.Text.Json)
+* [System.Text.Jsonkaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [System.Text.JsonAPI başvurusu](xref:System.Text.Json)
 * [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)
 <!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

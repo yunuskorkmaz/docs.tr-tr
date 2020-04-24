@@ -14,7 +14,7 @@ ms.locfileid: "74348792"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Dosya Oluşturma
 
-Bu örnek, <xref:System.IO.File.Create%2A> <xref:System.IO.File> sınıftayöntemi kullanarak belirtilen yolda boş bir metin dosyası oluşturur.  
+Bu örnek, <xref:System.IO.File.Create%2A> <xref:System.IO.File> sınıfındaki yöntemini kullanarak belirtilen yolda boş bir metin dosyası oluşturur.  
   
 ## <a name="example"></a>Örnek  
 
@@ -22,33 +22,33 @@ Bu örnek, <xref:System.IO.File.Create%2A> <xref:System.IO.File> sınıftayönte
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 
- Dosyaya `file` yazmak için değişkeni kullanın.  
+ Dosyaya yazmak `file` için değişkenini kullanın.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Dosya zaten varsa, değiştirilir.  
+ Dosya zaten varsa, değiştirilmiştir.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol adı yanlış biçimlendirilmiş. Örneğin, yasadışı karakterler içerir veya sadece beyaz<xref:System.ArgumentException>boşluk ( ).  
+- Yol adı hatalı biçimlendirilmiş. Örneğin, geçersiz karakterler içeriyor veya yalnızca boşluk (<xref:System.ArgumentException>) içeriyor.  
   
-- Yol salt okunur (<xref:System.IO.IOException>).  
+- Yol salt okunurdur (<xref:System.IO.IOException>).  
   
 - Yol adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Yol adı çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- Yol geçersizdir (<xref:System.IO.DirectoryNotFoundException>).  
+- Yol geçersiz (<xref:System.IO.DirectoryNotFoundException>).  
   
-- Yol sadece bir kolon<xref:System.NotSupportedException>":" ( ).  
+- Yol yalnızca bir iki nokta üst üste ":"<xref:System.NotSupportedException>().  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Kısmi <xref:System.Security.SecurityException> güven ortamlarında a atılabilir.  
+ Kısmi <xref:System.Security.SecurityException> güven ortamlarında bir oluşturulur.  
   
- <xref:System.IO.File.Create%2A> Yönteme çağrı gerektirir. <xref:System.Security.Permissions.FileIOPermission>  
+ <xref:System.IO.File.Create%2A> Yöntemine yapılan çağrı gerekir <xref:System.Security.Permissions.FileIOPermission>.  
   
- Kullanıcının dosyayı oluşturma izni yoksa bir <xref:System.UnauthorizedAccessException> atma yapılır.  
+ <xref:System.UnauthorizedAccessException> Kullanıcının dosyayı oluşturma izni yoksa oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

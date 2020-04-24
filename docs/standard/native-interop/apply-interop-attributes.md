@@ -21,7 +21,7 @@ ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159253"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
-<xref:System.Runtime.InteropServices> ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi sırasında COM birlikte çalışma araçları ve API 'Leri tarafından uygulanan ve sizin tarafınızdan veya COM birlikte çalışma tarafından uygulanan bunlar.  
+<xref:System.Runtime.InteropServices> Ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme IŞLEMI sırasında com birlikte çalışma araçları ve API 'leri tarafından uygulanan ve sizin tarafınızdan ya da com birlikte çalışma tarafından uygulanan bunlar.  
   
  Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../../../docs/standard/attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
   
@@ -71,5 +71,5 @@ ms.locfileid: "78159253"
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
-- [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Birlikte Çalışma için Niteleyici .NET Türleri](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
 - [COM için bir .NET Framework derlemesi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -25,18 +25,18 @@ Taşma, tamsayı işlemleri için hata denetimini açar veya kapatır.
 -removeintchecks[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. @No__t-0 seçeneği, derleyicinin taşma hataları için tüm tamsayı hesaplamalarını denetlemesini sağlar. Varsayılan, `-removeintchecks-` değeridir.<br /><br /> @No__t-0 veya `-removeintchecks+` belirtilmesi hata denetimini önler ve tamsayı hesaplamaları daha hızlı yapabilir. Ancak, hata denetimi olmadan ve veri türü kapasiteleri taşırsa, yanlış sonuçlar bir hata oluşturulmadan depolanabilir.|  
+|`+`&#124;`-`|İsteğe bağlı. Seçeneği `-removeintchecks-` , derleyicinin taşma hataları için tüm tamsayı hesaplamalarını denetlemesini sağlar. Varsayılan değer: `-removeintchecks-`.<br /><br /> Hata `-removeintchecks` denetimini `-removeintchecks+` belirtme veya engeller ve tamsayı hesaplamaları daha hızlı hale getirebilirsiniz. Ancak, hata denetimi olmadan ve veri türü kapasiteleri taşırsa, yanlış sonuçlar bir hata oluşturulmadan depolanabilir.|  
   
 |Visual Studio tümleşik geliştirme ortamında-removeintdenetimleri ayarlamak için|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş** düğmesine tıklayın.<br />4. **tamsayı taşma denetimlerini kaldır** kutusunun değerini değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `Test.vb` derler ve tamsayı taşmayı devre dışı bırakır-hata denetimi.  
+ Aşağıdaki kod, tamsayı `Test.vb` taşmasını derler ve devre dışı bırakır-hata denetimi.  
   
 ```console
 vbc -removeintchecks+ test.vb  

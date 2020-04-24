@@ -24,13 +24,13 @@ Derleme sırasında telif hakkı başlığının ve bilgilendirici mesajların g
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nologo`belirtirseniz, derleyici bir telif hakkı başlığını görüntülemez. `-nologo`, varsayılan olarak etkin değildir.  
+ Belirtirseniz `-nologo`, derleyici bir telif hakkı başlığını görüntülemez. Varsayılan `-nologo` olarak etkin değildir.  
   
 > [!NOTE]
-> `-nologo` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-nologo` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve bir telif hakkı başlığını görüntülemez.  
+ Aşağıdaki kod, bir `T2.vb` telif hakkı başlığını derler ve göstermez.  
   
 ```console
 vbc -nologo t2.vb  

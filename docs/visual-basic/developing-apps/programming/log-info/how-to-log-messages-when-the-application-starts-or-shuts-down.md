@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme'
+title: 'Nasıl yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -18,45 +18,45 @@ ms.locfileid: "74352093"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Nasıl Yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme (Visual Basic)
 
-Uygulamanızda meydana `My.Application.Log` `My.Log` gelen olaylarla ilgili bilgileri günlüğe kaydetmek için nesneleri kullanabilirsiniz. Bu örnek, izleme `My.Application.Log.WriteEntry` bilgileri yazmak `Startup` `Shutdown` için yöntemin ve olayların nasıl kullanılacağını gösterir.  
+Uygulamanızda gerçekleşen olaylar hakkındaki `My.Application.Log` bilgileri `My.Log` günlüğe kaydetmek için ve nesnelerini kullanabilirsiniz. Bu örnek, `My.Application.Log.WriteEntry` `Startup` izleme bilgilerini yazmak için yönteminin ve `Shutdown` olaylarıyla birlikte nasıl kullanılacağını gösterir.  
   
-### <a name="to-access-the-applications-event-handler-code"></a>Uygulamanın olay işleyici koduna erişmek için  
+### <a name="to-access-the-applications-event-handler-code"></a>Uygulamanın olay işleyicisi koduna erişmek için  
   
-1. **Çözüm Gezgini'nde**bir proje seçili var. **Proje** menüsünde **Özellikler'i**seçin.  
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' i seçin.  
   
-2. **Uygulama** sekmesini tıklatın.  
+2. **Uygulama** sekmesine tıklayın.  
   
-3. Kod Düzenleyicisi'ni açmak için **Uygulama Etkinliklerini Görüntüle** düğmesini tıklatın.  
+3. Kod düzenleyicisini açmak için **uygulama olaylarını görüntüle** düğmesine tıklayın.  
   
-     Bu, ApplicationEvents.vb dosyasını açar.  
+     Bu, ApplicationEvents. vb dosyasını açar.  
   
 ### <a name="to-log-messages-when-the-application-starts"></a>Uygulama başladığında iletileri günlüğe kaydetmek için  
   
-1. Code Editor'da ApplicationEvents.vb dosyasını açık bulundurun. **Genel** menüde **MyApplication Events'i**seçin.  
+1. ApplicationEvents. vb dosyasını kod düzenleyicisinde açın. **Genel** menüsünde **MyApplication olayları**' nı seçin.  
   
-2. **Bildirimler** menüsünde **Başlangıç'ı**seçin.  
+2. **Bildirimler** menüsünde, **Başlangıç**' ı seçin.  
   
-     Uygulama, ana <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> uygulama çalışmadan önce olayı yükseltir.  
+     Uygulama, ana uygulama <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> çalışmadan önce olayı başlatır.  
   
-3. Yöntem `My.Application.Log.WriteEntry` olay işleyicisine `Startup` ekleyin.  
+3. `My.Application.Log.WriteEntry` Yöntemini `Startup` olay işleyicisine ekleyin.  
   
      [!code-vb[VbVbalrMyApplicationLog#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#1)]  
   
 ### <a name="to-log-messages-when-the-application-shuts-down"></a>Uygulama kapandığında iletileri günlüğe kaydetmek için  
   
-1. Code Editor'da ApplicationEvents.vb dosyasını açık bulundurun. **Genel** menüde **MyApplication Events'i**seçin.  
+1. ApplicationEvents. vb dosyasını kod düzenleyicisinde açın. **Genel** menüsünde **MyApplication olayları**' nı seçin.  
   
-2. **Bildirimler** menüsünde **Kapatma'yı**seçin.  
+2. **Bildirimler** menüsünde, **kapatır**' ı seçin.  
   
-     Uygulama, ana <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> uygulama çalıştırdıktan sonra, ancak kapanmadan önce olayı yükseltir.  
+     Uygulama, uygulamayı kapatmadan <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> önce ana uygulama çalıştırıldıktan sonra başlatır.  
   
-3. Yöntem `My.Application.Log.WriteEntry` olay işleyicisine `Shutdown` ekleyin.  
+3. `My.Application.Log.WriteEntry` Yöntemini `Shutdown` olay işleyicisine ekleyin.  
   
      [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
 ## <a name="example"></a>Örnek  
 
- Kod Düzenleyicisi'ndeki uygulama olaylarına erişmek için **Proje Tasarımcısı'nı** kullanabilirsiniz. Daha fazla bilgi için [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)sayfasına bakın.  
+ Kod düzenleyicisinde uygulama olaylarına erişmek için **Proje tasarımcısını** kullanabilirsiniz. Daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   

@@ -22,19 +22,19 @@ Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını beli
 -codepage:id  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`id`|Gerekli. Derleyici, kaynak dosyaların kodlamasını yorumlamak için `id` tarafından belirtilen kod sayfasını kullanır.|  
+|`id`|Gereklidir. Derleyici, kaynak dosyaların kodlamasını yorumlamak için tarafından `id` belirtilen kod sayfasını kullanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirli bir kodlamayla kaydedilen kaynak kodu derlemek için, hangi kod sayfasının kullanılacağını belirtmek için `-codepage` kullanabilirsiniz. `-codepage` seçeneği, derinizdeki tüm kaynak kodu dosyaları için geçerlidir. Daha fazla bilgi için [.NET Framework karakter kodlaması](../../../standard/base-types/character-encoding.md)bölümüne bakın.  
+ Belirli bir kodlamayla kaydedilen kaynak kodu derlemek için, hangi kod sayfasının kullanılacağını `-codepage` belirtmek için kullanabilirsiniz. Bu `-codepage` seçenek, derinizdeki tüm kaynak kodu dosyaları için geçerlidir. Daha fazla bilgi için [.NET Framework karakter kodlaması](../../../standard/base-types/character-encoding.md)bölümüne bakın.  
   
- Kaynak kodu dosyaları bir imzayla geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanılarak kaydedilmişse `-codepage` seçeneği gerekli değildir. Kullanıcı **kodlama** iletişim kutusunda başka bir kodlama belirtmediği takdirde, Visual Studio tüm kaynak kodu dosyalarını varsayılan olarak geçerli ANSI kod sayfasıyla kaydeder. Visual Studio, farklı bir kod sayfasıyla kaydedilen kaynak kodu dosyalarını açmak için **kodlama** iletişim kutusunu kullanır.  
+ Kaynak `-codepage` kodu dosyaları bir IMZAYLA geçerli ANSI kod sayfası, UNICODE veya UTF-8 kullanılarak kaydedilmişse seçenek gerekli değildir. Kullanıcı **kodlama** iletişim kutusunda başka bir kodlama belirtmediği takdirde, Visual Studio tüm kaynak kodu dosyalarını varsayılan olarak geçerli ANSI kod sayfasıyla kaydeder. Visual Studio, farklı bir kod sayfasıyla kaydedilen kaynak kodu dosyalarını açmak için **kodlama** iletişim kutusunu kullanır.  
   
 > [!NOTE]
-> `-codepage` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-codepage` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

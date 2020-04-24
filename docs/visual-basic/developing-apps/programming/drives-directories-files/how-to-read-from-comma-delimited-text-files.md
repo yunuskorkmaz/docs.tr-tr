@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl: virgülle sınırlandırılmış metin dosyalarından okuma'
+title: 'Nasıl yapılır: virgülle ayrılmış metin dosyalarından okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing
@@ -14,47 +14,47 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335071"
 ---
-# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Nasıl: Visual Basic virgülle sınırlandırılmış metin dosyalarından okuma
+# <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic içinde virgülle ayrılmış metin dosyalarından okuma
 
-Nesne, `TextFieldParser` günlükler gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırmak için bir yol sağlar. Özellik, `TextFieldType` sınırlı bir dosya mı yoksa sabit genişlikte metin alanlarına sahip bir dosya mı olduğunu tanımlar.  
+`TextFieldParser` Nesnesi, günlük gibi yapılandırılmış metin dosyalarını kolayca ve verimli bir şekilde ayrıştırabilmeniz için bir yol sağlar. `TextFieldType` Özelliği, bunun ayrılmış bir dosya mı yoksa sabit genişlikte metin alanları mı olduğunu tanımlar.  
   
-### <a name="to-parse-a-comma-delimited-text-file"></a>Virgül lesınırlı metin dosyasını ayrışdırmak için  
+### <a name="to-parse-a-comma-delimited-text-file"></a>Virgülle ayrılmış bir metin dosyasını ayrıştırmak için  
   
-1. Yeni `TextFieldParser`bir . Aşağıdaki kod `TextFieldParser` adlandırılmış `MyReader` oluşturur ve `test.txt`dosyayı açar.  
+1. Yeni `TextFieldParser`bir oluştur. Aşağıdaki kod, `TextFieldParser` adlı adı `MyReader` oluşturur ve dosyasını `test.txt`açar.  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
-2. Türü `TextField` ve sınırlayıcıyı tanımlayın. Aşağıdaki kod `TextFieldType` özelliği """ olarak `Delimited` tanımlar.  
+2. `TextField` Türü ve sınırlandırıcıyı tanımlayın. Aşağıdaki kod, ", `TextFieldType` " olarak `Delimited` özelliği ve sınırlandırıcıyı tanımlar.  
   
      [!code-vb[VbFileIORead#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#16)]  
   
-3. Dosyadaki alanları iletin. Satırlar bozuksa, bir hata bildirin ve ayrıştmaya devam edin. Aşağıdaki kod dosya boyunca döner, her alanı sırayla görüntüler ve yanlış biçimlendirilmiş alanları raporeder.  
+3. Dosyadaki alanlar arasında döngü gerçekleştirin. Herhangi bir satır bozuksa bir hata bildirin ve ayrıştırmaya devam edin. Aşağıdaki kod, dosyasında her bir alanı görüntüleyerek ve yanlış biçimlendirilmiş tüm alanları bildiren bir dosya üzerinden döngü başlatır.  
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4. `While` Ve `Using` blokları kapatın `End While` `End Using`ve.  
+4. `While` Ve `Using` bloklarıyla birlikte `End While` kapatın. `End Using`  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek dosyadan `test.txt`okur.  
+ Bu örnek dosyadan okur `test.txt`.  
   
  [!code-vb[VbFileIORead#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a>Sağlam programlama  
+## <a name="robust-programming"></a>Güçlü programlama  
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Bir satır belirtilen biçim kullanılarak ayrıştısı olamaz (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Özel durum iletisi özel durum neden satırı <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> belirtirken, özellik satırda bulunan metin atanır.  
+- Satır belirtilen biçim (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>) kullanılarak ayrıştırılamıyor. Özel durum iletisi, özel duruma neden olan satırı belirtir, ancak <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliğe satırda içerilen metin atanır.  
   
 - Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Kullanıcının dosyaya erişmek için yeterli izine sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).  
+- Kullanıcının dosyaya erişmek için yeterli izinlere sahip olmadığı kısmi güven durumu. (<xref:System.Security.SecurityException>).  
   
-- Yol çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Yol çok uzun (<xref:System.IO.PathTooLongException>).  
   
-- Kullanıcının dosyaya erişmek için yeterli izinleri yoktur (<xref:System.UnauthorizedAccessException>).  
+- Kullanıcı, dosyaya (<xref:System.UnauthorizedAccessException>) erişmek için yeterli izinlere sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,7 +12,7 @@ ms.locfileid: "75710160"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Belgeye Katıştırılmış Stil Sayfası Yönergeleri
 
-Bazen mevcut XML, `<?xml:stylesheet?>`stil sayfası yönergesini içerir. Microsoft Internet Explorer, `<?xml-stylesheet?>` sözdizimine alternatif olarak bunu kabul eder. XML verileri, aşağıdaki verilerde gösterildiği gibi bir `<?xml:stylesheet?>` yönergesi içerdiğinde, bu verileri XML Belge Nesne Modeli yüklemeye çalışmak (DOM) bir özel durum oluşturur.
+Bazen varolan XML, öğesinin `<?xml:stylesheet?>`stil sayfası yönergesini içerir. Microsoft Internet Explorer, `<?xml-stylesheet?>` söz dizimini bir alternatif olarak kabul eder. XML verileri aşağıdaki verilerde gösterildiği gibi `<?xml:stylesheet?>` bir yönerge içerdiğinde, bu verileri XML belge nesne modeli yüklemeye ÇALıŞMAK (DOM) bir özel durum oluşturur.
 
 ```xml
 <?xml version="1.0" ?>
@@ -23,7 +23,7 @@ Bazen mevcut XML, `<?xml:stylesheet?>`stil sayfası yönergesini içerir. Micros
 </root>
 ```
 
-Bunun nedeni, `<?xml:stylesheet?>` DOM 'a geçersiz bir işlem **yönergesi yönergesi** olarak kabul edildiği için oluşur. XML belirtiminde ad alanlarına göre herhangi bir işlem **yönergesi**, nitelenmiş adların (QNames 'ler) aksine yalnızca iki nokta üst üste olmayan adlar (NCNames) olabilir.
+Bunun nedeni, `<?xml:stylesheet?>` Dom için geçersiz bir **processingyönergesini** kabul ettiğinden oluşur. XML belirtiminde ad alanlarına göre herhangi bir işlem **yönergesi**, nitelenmiş adların (QNames 'ler) aksine yalnızca iki nokta üst üste olmayan adlar (NCNames) olabilir.
 
 XML belirtiminde ad alanlarının 6. bölümünde, **Load** ve **LoadXml** yöntemlerine sahip olmanın etkisi bir belgede olur:
 
@@ -31,9 +31,9 @@ XML belirtiminde ad alanlarının 6. bölümünde, **Load** ve **LoadXml** yönt
 
 - Hiçbir varlık adı, Işleme yönergesi hedefi veya gösterim adı herhangi bir iki nokta üst üste içermez.
 
-İki nokta üst üste içeren `<?xml:stylesheet?>`, şimdi ikinci madde işareti içindeki kuralı ihlal ediyor.
+İki nokta `<?xml:stylesheet?>` üst üste içeren, artık kuralı ikinci madde işaretiyle ihlal edersiniz.
 
-World Wide Web Konsorsiyumu (W3C) [Ile xml belgelerinin sürüm 1,0 önerisi Ile ilişkilendirme](https://www.w3.org/TR/xml-stylesheet/)IÇIN, XSLT stil SAYFASıNı bir XML belgesi ile ilişkilendirme işleme yönergesi, iki nokta üst üste değiştirme ile `<?xml-stylesheet?>`.
+World Wide Web Konsorsiyumu (W3C) [Ile xml belgelerinin sürüm 1,0 önerisi Ile ilişkilendirme](https://www.w3.org/TR/xml-stylesheet/), XSLT stil SAYFASıNı bir XML belgesi `<?xml-stylesheet?>`ile ilişkilendirmek için işleme yönergesi, iki nokta üst üste yerine bir tire ile.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
