@@ -7,4 +7,4 @@ ms.lasthandoff: 10/31/2019
 ms.locfileid: "73198599"
 ---
 
-<span data-ttu-id="f1e33-101">Her derleyici seçeneği iki biçimde mevcuttur: **-Option** ve **/Option**.</span><span class="sxs-lookup"><span data-stu-id="f1e33-101">Every compiler option is available in two forms: **-option** and **/option**.</span></span> <span data-ttu-id="f1e33-102">Belgeler yalnızca-seçenek formunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="f1e33-102">The documentation only shows the -option form.</span></span>
+<span data-ttu-id="36894-101">Her derleyici seçeneği iki biçimde mevcuttur: **-Option** ve **/Option**.</span><span class="sxs-lookup"><span data-stu-id="36894-101">Every compiler option is available in two forms: **-option** and **/option**.</span></span> <span data-ttu-id="36894-102">Belgeler yalnızca-seçenek formunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="36894-102">The documentation only shows the -option form.</span></span>
