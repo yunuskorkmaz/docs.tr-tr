@@ -15,7 +15,7 @@ ms.locfileid: "74334493"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te StreamWriter ile Dosyalara Metin Yazma
 
-Bu örnek, <xref:System.IO.StreamWriter> `My.Computer.FileSystem.OpenTextFileWriter` yöntemle bir nesne açar ve <xref:System.IO.TextWriter.WriteLine%2A> <xref:System.IO.StreamWriter> sınıfın yöntemi ile bir metin dosyasına bir dize yazmak için kullanır.  
+Bu <xref:System.IO.StreamWriter> örnek, `My.Computer.FileSystem.OpenTextFileWriter` yöntemi ile bir nesnesi açar ve onu <xref:System.IO.TextWriter.WriteLine%2A> <xref:System.IO.StreamWriter> sınıfının yöntemiyle bir metin dosyasına bir dize yazmak için kullanır.  
   
 ## <a name="example"></a>Örnek  
 
@@ -25,19 +25,19 @@ Bu örnek, <xref:System.IO.StreamWriter> `My.Computer.FileSystem.OpenTextFileWri
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Dosya var ve salt okunur<xref:System.IO.IOException>( ).  
+- Dosya var ve salt okunurdur (<xref:System.IO.IOException>).  
   
 - Disk dolu (<xref:System.IO.IOException>).  
   
-- Yol adı çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Yol adı çok uzun (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasöre erişmesi gerekir. `Create` Dosya zaten varsa, uygulamanın `Write` yalnızca daha az bir ayrıcalıkla erişmesi gerekir. Mümkün olduğunda, dosyayı dağıtım sırasında oluşturmak ve bir `Read` klasöre erişmek yerine `Create` yalnızca tek bir dosyaya erişim vermek daha güvenlidir.  
+ Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasöre erişmesi gerekir `Create` . Dosya zaten mevcutsa, uygulamanın yalnızca `Write` daha az bir ayrıcalığa erişmesi gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması daha güvenlidir ve bir klasör için `Read` `Create` erişim yerine yalnızca tek bir dosyaya erişim izni verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
-- [Nasıl Yapılsın: Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+- [Nasıl yapılır: metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
 - [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

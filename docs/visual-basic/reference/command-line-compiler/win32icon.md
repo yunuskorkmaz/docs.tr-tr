@@ -22,14 +22,14 @@ ms.locfileid: "72004637"
 -win32icon:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`filename`|Çıkış dosyanıza eklenecek. ico dosyası. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Microsoft Windows Kaynak derleyicisi (RC) ile bir. ico dosyası oluşturabilirsiniz. Visual C++ program derlerken kaynak derleyicisi çağrılır; . ico dosyası. rc dosyasından oluşturulur. @No__t-0 ve `-win32resource` seçenekleri birbirini dışlıyor.  
+ Microsoft Windows Kaynak derleyicisi (RC) ile bir. ico dosyası oluşturabilirsiniz. Visual C++ programı derlerken kaynak derleyicisi çağrılır; . ico dosyası. rc dosyasından oluşturulur. `-win32icon` Ve `-win32resource` seçenekleri birbirini dışlıyor.  
   
  Bir .NET Framework kaynak dosyasına başvurmak için bkz. [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) veya .NET Framework kaynak dosyası iliştirmek için [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) . . Res dosyasını içeri aktarmak için bkz. [-Win32Resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72004637"
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **uygulama** sekmesine tıklayın.<br />3. **simge** kutusunda değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve bir. ico dosyası iliştirir `Rf.ico`.  
+ Aşağıdaki kod bir. `In.vb` ico dosyasını derler ve iliştirir `Rf.ico`.  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

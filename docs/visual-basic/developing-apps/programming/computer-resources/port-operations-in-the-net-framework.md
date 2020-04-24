@@ -13,25 +13,25 @@ ms.locfileid: "74345513"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Visual Basic ile .NET Framework'te Bağlantı Noktası İşlemleri
 
-Bilgisayarınızın seri bağlantı noktalarına <xref:System.IO.Ports?displayProperty=nameWithType> ad alanındaki .NET Framework sınıfları aracılığıyla erişebilirsiniz. En önemli sınıf, <xref:System.IO.Ports.SerialPort>senkron ve olay odaklı G/Ç, pin ve kesme durumlarına erişim ve seri sürücü özelliklerine erişim için bir çerçeve sağlar. Bir <xref:System.IO.Stream> nesneye sarılmış olabilir, <xref:System.IO.Ports.SerialPort.BaseStream> özellik üzerinden erişilebilir. Bir <xref:System.IO.Ports.SerialPort> <xref:System.IO.Stream> nesneye kaydırma, seri bağlantı noktasına akışları kullanan sınıflar tarafından erişilmesine olanak tanır. Ad alanı, seri bağlantı noktalarının denetimini basitleştiren sayısallaştırmalar içerir.
+<xref:System.IO.Ports?displayProperty=nameWithType> Ad alanındaki .NET Framework sınıfları aracılığıyla bilgisayarınızın seri bağlantı noktalarına erişebilirsiniz. En önemli sınıf <xref:System.IO.Ports.SerialPort>, zaman uyumlu ve olay odaklı g/ç için bir çerçeve, PIN ve kesme durumlarına erişim ve seri sürücü özelliklerine erişim sağlar. <xref:System.IO.Ports.SerialPort.BaseStream> Özelliği aracılığıyla erişilebilen bir <xref:System.IO.Stream> nesneye kaydırılmış olabilir. Bir <xref:System.IO.Ports.SerialPort> <xref:System.IO.Stream> nesne içine sarmalama, seri bağlantı noktasına akışlar kullanan sınıflar tarafından erişilmesine izin verir. Ad alanı, seri bağlantı noktalarının denetimini kolaylaştıran numaralandırmalar içerir.
 
-Bir <xref:System.IO.Ports.SerialPort> nesne oluşturmanın en basit <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> yolu yöntemdir.
+Bir <xref:System.IO.Ports.SerialPort> nesne oluşturmanın en basit yolu <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A> yöntemi kullanmaktır.
 
 > [!NOTE]
-> Paralel bağlantı noktaları, USB bağlantı noktaları gibi diğer bağlantı noktaları türlerine doğrudan erişmek için .NET Framework sınıflarını kullanamazsınız.
+> Paralel bağlantı noktaları, USB bağlantı noktaları vb. gibi diğer bağlantı noktası türlerine doğrudan erişmek için .NET Framework sınıfları kullanamazsınız.
 
 ## <a name="enumerations"></a>Numaralandırmalar
 
-Bu tablo, seri bağlantı noktasına erişmek için kullanılan ana sayıları listeler ve açıklar:
+Bu tablo, bir seri bağlantı noktasına erişmek için kullanılan ana numaralandırmaları listeler ve açıklar:
 
 |Sabit Listesi|Açıklama|
 |---|---|
-|<xref:System.IO.Ports.Handshake>|Bir nesne için seri bağlantı noktası iletişimi <xref:System.IO.Ports.SerialPort> oluştururken kullanılan denetim protokolünü belirtir.|
+|<xref:System.IO.Ports.Handshake>|Bir <xref:System.IO.Ports.SerialPort> nesne için seri bağlantı noktası iletişimi kurarken kullanılan denetim protokolünü belirtir.|
 |<xref:System.IO.Ports.Parity>|Bir <xref:System.IO.Ports.SerialPort> nesne için eşlik bitini belirtir.|
 |<xref:System.IO.Ports.SerialData>|<xref:System.IO.Ports.SerialPort> Nesnenin seri bağlantı noktasında alınan karakter türünü belirtir.|
-|<xref:System.IO.Ports.SerialError>|<xref:System.IO.Ports.SerialPort> Nesneüzerinde oluşan hataları belirtir|
-|<xref:System.IO.Ports.SerialPinChange>|<xref:System.IO.Ports.SerialPort> Nesne üzerinde oluşan değişiklik türünü belirtir.|
-|<xref:System.IO.Ports.StopBits>|<xref:System.IO.Ports.SerialPort> Nesne üzerinde kullanılan durdurma bitlerinin sayısını belirtir.|
+|<xref:System.IO.Ports.SerialError>|<xref:System.IO.Ports.SerialPort> Nesnede oluşan hataları belirtir|
+|<xref:System.IO.Ports.SerialPinChange>|<xref:System.IO.Ports.SerialPort> Nesnede gerçekleşen değişikliğin türünü belirtir.|
+|<xref:System.IO.Ports.StopBits>|<xref:System.IO.Ports.SerialPort> Nesnede kullanılan durdurma bitlerinin sayısını belirtir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

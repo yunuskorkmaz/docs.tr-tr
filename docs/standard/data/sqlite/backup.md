@@ -11,8 +11,8 @@ ms.locfileid: "75901278"
 ---
 # <a name="online-backup"></a>Çevrimiçi yedekleme
 
-Bir uygulama çalışırken SQLite, veritabanı dosyalarını yedekleyebilir. Bu işlevsellik, `SqliteConnection`<xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> yöntemi olarak Microsoft. Data. SQLite 'ta kullanılabilir.
+Bir uygulama çalışırken SQLite, veritabanı dosyalarını yedekleyebilir. Bu işlevsellik, <xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> Microsoft. Data. sqlite ' de yöntemi olarak sunulmaktadır `SqliteConnection`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/BackupSample/Program.cs?name=snippet_Backup)]
 
-Şu anda `BackupDatabase`, veritabanını olabildiğince çabuk yedekleyecek ve diğer bağlantıların veritabanına yazmasını engeller. Sorun [#13834](https://github.com/dotnet/efcore/issues/13834) , arka planda veritabanını yedeklemek ve diğer bağlantıların yedeklemeyi kesintiye uğratmak ve veritabanına yazmak için ALTERNATIF bir API sağlar. İlgilendiğiniz sorun hakkında geri bildirim sağlayın.
+`BackupDatabase` Şu anda veritabanını olabildiğince çabuk yedekleyecek ve diğer bağlantıların veritabanına yazmasını engeller. Sorun [#13834](https://github.com/dotnet/efcore/issues/13834) , arka planda veritabanını yedeklemek ve diğer bağlantıların yedeklemeyi kesintiye uğratmak ve veritabanına yazmak için ALTERNATIF bir API sağlar. İlgilendiğiniz sorun hakkında geri bildirim sağlayın.

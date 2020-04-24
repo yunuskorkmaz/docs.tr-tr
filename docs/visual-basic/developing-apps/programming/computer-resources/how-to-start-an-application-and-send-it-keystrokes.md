@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl: Bir Uygulama başlatmak ve tuş vuruşlarını göndermek - Visual Basic'
+title: 'Nasıl yapılır: uygulama başlatma ve tuş vuruşu gönderme-Visual Basic'
 ms.date: 10/23/2019
 helpviewer_keywords:
 - keystrokes, sending
@@ -14,21 +14,21 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "72919387"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Nasıl yapılır: bir uygulamayı başlatın ve tuş vuruşlarını gönderin (Visual Basic)
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Nasıl yapılır: uygulama başlatma ve tuş vuruşu gönderme (Visual Basic)
 
-Bu örnek, <xref:Microsoft.VisualBasic.Interaction.Shell%2A> Not Defteri uygulamasını başlatmak için yöntemi kullanır ve Sonra [My.Computer.Keyboard.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) yöntemini kullanarak tuş vuruşlarını göndererek bir cümle yazdırır.
+Bu örnek, <xref:Microsoft.VisualBasic.Interaction.Shell%2A> Notepad uygulamasını başlatmak için yöntemini kullanır ve sonra, [My. Computer. Keyboard. SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) yöntemini kullanarak tuş vuruşları göndererek bir cümle yazdırır.
 
 ## <a name="example"></a>Örnek
 
 [!code-vb[VbVbalrMyComputer#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#25)]
 
-## <a name="robust-programming"></a>Sağlam programlama
+## <a name="robust-programming"></a>Güçlü programlama
 
-İstenen işlem tanımlayıcısı ile bir uygulama bulunamıyorsa bir <xref:System.ArgumentException> özel durum yükseltilir.  
+İstenen <xref:System.ArgumentException> işlem tanımlayıcısına sahip bir uygulama bulunamazsa bir özel durum oluşur.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 
-`Shell` İşlev çağrısı tam güven<xref:System.Security.SecurityException> (sınıf) gerektirir.
+`Shell` İşleve yapılan çağrı için tam güven (<xref:System.Security.SecurityException> sınıf) gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

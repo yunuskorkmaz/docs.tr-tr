@@ -26,9 +26,9 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 [Komut Satırından Derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
 Visual Studio IDE içinden program derlemek için alternatif olarak sunulan Visual Basic komut satırı derleyicisini açıklar.
 
-[Alfabetik olarak listelenen Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+[Alfabetik Olarak Listelenmiş Visual Basic Derleyici Seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 Alfabetik bir tabloda derleyici seçeneklerini listeler
 
-[Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+[Kategoriye Göre Listelenmiş Visual Basic Derleyici Seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 İşlev gruplarında derleyici seçeneklerini gösterir.
   

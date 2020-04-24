@@ -1,5 +1,5 @@
 ---
-title: Dosya Erişimi
+title: Dosya erişimi
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file access
@@ -23,27 +23,27 @@ ms.locfileid: "74348905"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic ile Dosya Erişimi
 
-Nesne, `My.Computer.FileSystem` dosya ve klasörlerle çalışmak için araçlar sağlar. Özellikleri, yöntemleri ve olayları, dosya ve klasörleri oluşturmanıza, kopyalamanıza, taşımanıza, araştırmanıza ve silmenize olanak sağlar. `My.Computer.FileSystem`geriye dönük uyumluluk için`FileOpen`Visual `FileClose` `Input`Basic `InputString`tarafından sağlanan eski işlevlerden (, , , , `LineInput`, vb.) daha iyi performans sağlar.  
+`My.Computer.FileSystem` Nesnesi dosya ve klasörlerle çalışmaya yönelik araçlar sağlar. Özellikleri, yöntemleri ve olayları, dosya ve klasör oluşturmanızı, kopyalamanızı, taşımanızı, araştırmanızı ve silmenizi sağlar. `My.Computer.FileSystem`, geriye dönük uyumluluk için Visual Basic tarafından sağlanan`FileOpen`eski `FileClose`işlevlerden `Input`( `InputString`, `LineInput`,,, vb.) daha iyi performans sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Dosyalardan okumak için `My.Computer.FileSystem` nesneyi kullanmayla ilgili konuları listeler  
+ Dosyalardan okumak için `My.Computer.FileSystem` nesnesini kullanma ile ilgili konuları listeler  
   
  [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Dosyalara yazmak için `My.Computer.FileSystem` nesneyi kullanmayla ilgili konuları listeler  
+ Dosyalara yazmak için `My.Computer.FileSystem` nesnesini kullanma ile ilgili konuları listeler  
   
  [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Dosya ve klasörleri `My.Computer.FileSystem` oluşturmak, kopyalamak, siler ve taşımak için nesneyi kullanmakla ilgili konuları listeler.  
+ Dosya ve klasörleri oluşturmak, kopyalamak `My.Computer.FileSystem` , silmek ve taşımak için nesnesini kullanma ile ilgili konuları listeler.  
   
  [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- Günlükler gibi metin `TextFieldReader` dosyalarını ayrışdırmak için nasıl kullanılacağını tartışır.  
+ ' Nin, `TextFieldReader` Günlükler gibi metin dosyalarını ayrıştırmak için nasıl kullanılacağını açıklar.  
   
  [Dosya Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Dosya kodlamalarını ve bunların kullanımını açıklar.  
   
  [İzlenecek Yol: Visual Basic'te Dosyaları ve Dizinleri Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Dosya ve klasörler hakkında bilgi raporlayan bir yardımcı programın nasıl oluşturulurolduğunu gösterir.  
+ Dosyalar ve klasörler hakkında bilgi raporlayan bir yardımcı programın nasıl oluşturulacağını gösterir.  
   
  [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
- Metin dosyalarını okurken ve yazarken karşılaşılan sık karşılaşılan sorunları listeler ve her biri için çözümler önerir.
+ Metin dosyalarını okurken ve yazarken karşılaşılan yaygın sorunları listeler ve her biri için düzeltmeler önerir.

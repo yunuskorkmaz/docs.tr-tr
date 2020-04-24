@@ -21,20 +21,20 @@ Microsoft .NET çerçevesindeki şema nesne modeli (SOM), şemaları programlı 
   
 - Kesin olarak belirlenmiş sınıfları kullanarak bellek içi şemalar oluşturun.  
   
-- Şemaları önbelleğe almak, derlemek ve almak için <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla etkileşime geçin.  
+- Şemaları önbelleğe alma <xref:System.Xml.Schema.XmlSchemaSet> , derleme ve alma amacıyla sınıfla etkileşime geçin.  
   
-- XML örnek belgelerini şemalara karşı doğrulamak için <xref:System.Xml.XmlReader> sınıfının <xref:System.Xml.XmlReader.Create%2A> yöntemiyle etkileşime geçin.  
+- XML örnek belgelerinin <xref:System.Xml.XmlReader.Create%2A> şemalara karşı doğrulanması <xref:System.Xml.XmlReader> için sınıfının yöntemiyle etkileşime geçin.  
   
 - Şemaları oluşturmaya ve korumaya yönelik düzenleyiciler oluşturun.  
   
 - Karmaşık ve XML örnek belgelerinin doğrulamasında kullanılmak üzere kaydedilebilecek bir şemayı dinamik olarak düzenleyin.  
   
 ## <a name="the-schema-object-model"></a>Şema nesne modeli  
- SOM, bir XML şemasındaki öğelere karşılık gelen <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki kapsamlı bir sınıf kümesinden oluşur. Örneğin, `<xsd:schema>...</xsd:schema>` öğesi <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> sınıfına eşlenir ve bir `<xsd:schema/>` öğesi içinde yer alan tüm bilgiler <xref:System.Xml.Schema.XmlSchema> sınıfı kullanılarak gösterilebilir. Benzer şekilde, `<xsd:element>...</xsd:element>` ve `<xsd:attribute>...</xsd:attribute>` öğeleri sırasıyla <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> ve <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> sınıflarıyla eşlenir. Bu eşleme, izleyen diyagramda gösterilen <xref:System.Xml.Schema> ad alanında bir XML şeması nesne modeli oluşturan bir XML şemasının tüm öğeleri için devam eder.  
+ SOM, bir XML şemasındaki öğelere karşılık gelen <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki kapsamlı bir sınıf kümesinden oluşur. Örneğin, `<xsd:schema>...</xsd:schema>` öğesi <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> sınıfıyla eşlenir ve bir `<xsd:schema/>` öğe içinde yer alan tüm bilgiler <xref:System.Xml.Schema.XmlSchema> sınıfı kullanılarak temsil edilebilir. Benzer şekilde, `<xsd:element>...</xsd:element>` ve `<xsd:attribute>...</xsd:attribute>` öğeleri sırasıyla <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> ve <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> sınıflarıyla eşlenir. Bu eşleme, izleyen diyagramda gösterilen <xref:System.Xml.Schema> ad alanında bir XML şeması nesne modeli oluşturan bir XML şemasının tüm öğeleri için devam eder.  
   
  ![System. xml. Schema nesne modeli](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
- <xref:System.Xml.Schema> ad alanındaki her bir sınıf hakkında daha fazla bilgi için .NET Framework sınıf kitaplığındaki <xref:System.Xml.Schema> ad alanı başvurusu belgelerine bakın.  
+ <xref:System.Xml.Schema> Ad alanındaki her sınıf hakkında daha fazla bilgi için, .NET Framework sınıf <xref:System.Xml.Schema> kitaplığındaki ad alanı başvurusu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

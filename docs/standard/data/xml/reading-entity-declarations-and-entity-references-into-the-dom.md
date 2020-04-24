@@ -11,7 +11,7 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710407"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
-Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten bir bildirimidir. Varlıkların iki bölümü vardır. İlk olarak, bir varlık bildirimi kullanarak bir adı değiştirme içeriğine bağlamamalısınız. Bir varlık bildirimi, bir belge türü tanımı (DTD) veya XML şemasında `<!ENTITY name "value">` söz dizimi kullanılarak oluşturulur. İkinci olarak, varlık bildiriminde tanımlanan ad daha sonra XML 'de kullanılır. XML 'de kullanıldığında, bir varlık başvurusu olarak adlandırılır. Örneğin, aşağıdaki varlık bildirimi, "Microsoft Press" içeriğiyle ilişkili `publisher` adının bir varlığını bildirir.  
+Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten bir bildirimidir. Varlıkların iki bölümü vardır. İlk olarak, bir varlık bildirimi kullanarak bir adı değiştirme içeriğine bağlamamalısınız. Bir varlık bildirimi, bir belge türü tanımı `<!ENTITY name "value">` (DTD) veya XML şemasında sözdizimi kullanılarak oluşturulur. İkinci olarak, varlık bildiriminde tanımlanan ad daha sonra XML 'de kullanılır. XML 'de kullanıldığında, bir varlık başvurusu olarak adlandırılır. Örneğin, aşağıdaki varlık bildirimi "Microsoft Press" içeriğiyle ilişkili olan adın `publisher` bir varlığını bildirir.  
   
 ```xml  
 <!ENTITY publisher "Microsoft Press">  
@@ -24,16 +24,16 @@ Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten 
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- Bazı çözümleyiciler, bir belge belleğe yüklendiğinde varlıkları otomatik olarak genişletir. Bu nedenle, XML belleğe okunmakta olduğunda, varlık bildirimleri hatırlanır ve kaydedilir. Ayrıştırıcı daha sonra genel bir varlık başvurusunu tanımlayan `&;` karakterlerle karşılaştığında, ayrıştırıcı bu adı bir varlık bildirim tablosunda arar. Başvuru, `&publisher;` gösterdiği içerikle değiştirilmiştir. Aşağıdaki XML 'i kullanarak  
+ Bazı çözümleyiciler, bir belge belleğe yüklendiğinde varlıkları otomatik olarak genişletir. Bu nedenle, XML belleğe okunmakta olduğunda, varlık bildirimleri hatırlanır ve kaydedilir. Ayrıştırıcı daha sonra genel bir `&;` varlık başvurusunu tanımlayan karakterlerle karşılaştığında, ayrıştırıcı bu adı bir varlık bildirim tablosunda arar. Başvuru, `&publisher;` gösterdiği içerikle değiştirilmiştir. Aşağıdaki XML 'i kullanarak  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- varlık başvurusunu genişletmek ve `&publisher;` Microsoft Press içeriğiyle değiştirmek, aşağıdaki genişletilmiş XML 'yi sağlar.  
+ varlık başvurusunu genişletmek ve Microsoft Press içeriğiyle `&publisher;` değiştirmek, AŞAĞıDAKI Genişletilmiş XML 'yi sağlar.  
   
- **Output**  
+ **Çıktı**  
   
 ```xml  
 <author>Fred</author>  
@@ -44,9 +44,9 @@ Varlık, içerik veya biçimlendirme yerine XML 'de kullanılacak adı belirten 
   
  ![varlık türü hiyerarşisinin akış grafiği](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
- XML Belge Nesne Modeli (DOM) Microsoft .NET Framework uygulamasının varsayılan örneği, varlıkların başvurularını korumasıdır ve XML yüklendiğinde varlıkları genişletmez. Bunun, DOM 'a bir belge yüklendiği, DTD 'de bildirildiği varlıktaki içeriği temsil eden alt düğümler ile `&publisher;` başvuru değişkenini içeren bir **XmlEntityReference** düğümünün oluşturulduğu bir ifade.  
+ XML Belge Nesne Modeli (DOM) Microsoft .NET Framework uygulamasının varsayılan örneği, varlıkların başvurularını korumasıdır ve XML yüklendiğinde varlıkları genişletmez. Bu, DOM 'da bir belge yüklendiği için, DTD 'de bildirildiği varlıktaki içeriği temsil eden alt **XmlEntityReference** düğümler ile başvuru değişkenini `&publisher;` içeren bir XmlEntityReference düğümü oluşturulur.  
   
- `<!ENTITY publisher "Microsoft Press">` varlık bildirimini kullanarak, aşağıdaki diyagramda bu bildirimden oluşturulan **XmlEntity** ve **XmlText** düğümleri gösterilmektedir.  
+ `<!ENTITY publisher "Microsoft Press">` Varlık bildirimini kullanarak, aşağıdaki diyagramda bu bildirimden oluşturulan **XmlEntity** ve **XmlText** düğümleri gösterilmektedir.  
   
  ![varlık bildiriminden oluşturulan düğümler](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   

@@ -25,7 +25,7 @@ Belirtile ilgili sorunların [DotNet/vblang](https://github.com/dotnet/vblang/is
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)
+- [Visual Basic dil başvurusu](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
->[Next](../../../../_vblang/spec/introduction.md)
+>[Sonraki](../../../../_vblang/spec/introduction.md)

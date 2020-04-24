@@ -17,7 +17,7 @@ ms.lasthandoff: 03/04/2020
 ms.locfileid: "78266735"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-Değişkenler kullanılmadan önce bildirilmemişse derleyicinin hataları bildirmesine neden olur.  
+Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata raporlamasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,27 +27,27 @@ Değişkenler kullanılmadan önce bildirilmemişse derleyicinin hataları bildi
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
  `+`&#124;`-`  
- İsteğe bağlı. Değişkenlerin açık bildirimini gerektirecek şekilde belirtin. `-optionexplicit+` Seçenek `-optionexplicit+` varsayılandır ve `-optionexplicit`. Bu `-optionexplicit-` seçenek, değişkenlerin örtülü olarak beyan edilmesini sağlar.  
+ İsteğe bağlı. Değişkenlerin `-optionexplicit+` açık bildirimini gerektirmek için belirtin. Varsayılan `-optionexplicit+` seçenektir ve ile aynıdır `-optionexplicit`. Seçeneği `-optionexplicit-` , değişkenlerin örtülü bildirimini sunar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak kod dosyası bir [Seçenek Açık deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)içeriyorsa, deyim komut satırı derleyici ayarını `-optionexplicit` geçersiz kılar.  
+ Kaynak kodu dosyası [açık bir seçenek ifade](../../../visual-basic/language-reference/statements/option-explicit-statement.md)içeriyorsa, ifade `-optionexplicit` komut satırı derleyici ayarını geçersiz kılar.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE'de -optionexplicit'ı ayarlamak için  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE 'de ayarlamak için-OptionExplicit  
   
-1. **Çözüm Gezgini'nde**bir proje seçili var. **Proje** menüsünde **Özellikler'i**tıklatın.
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.
   
-2. **Derle** sekmesini tıklatın.  
+2. **Derle** sekmesine tıklayın.  
   
-3. **Seçenek Açık** kutusundaki değeri değiştirin.  
+3. **Açık** kutudaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod kullanıldığında `-optionexplicit-` derlenir.  
+ Aşağıdaki kod, kullanıldığında derlenir `-optionexplicit-` .  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Command-Line Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)

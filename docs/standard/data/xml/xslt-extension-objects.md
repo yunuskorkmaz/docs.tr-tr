@@ -22,19 +22,19 @@ Uzantı nesneleri stil sayfalarının işlevlerini genişletmek için kullanıl�
  XSLT uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> nesnesine <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir. Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.  
   
 > [!NOTE]
-> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemini çağırmak için FullTrust izin kümesi gereklidir. Daha fazla bilgi için bkz. [kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Yöntemi çağırmak için FullTrust izin kümesi gereklidir. Daha fazla bilgi için bkz. [kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
- Uzantı nesnelerinden döndürülen veri türleri `number`, `string`, `Boolean`ve `node set`dört temel XPath veri türünden biridir.  
+ Uzantı nesnelerinden döndürülen `number`veri türleri, `string` `Boolean`,, ve `node set`' nin dört temel XPath veri türünden biridir.  
   
- Belirtilmemiş bir parametre sayısının geçirilmesine izin veren `params` anahtar sözcüğüyle tanımlanmış herhangi bir yöntem, şu anda <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı tarafından desteklenmemektedir. `params` anahtar sözcüğüyle tanımlanmış herhangi bir yöntemi kullanan XSLT stil sayfaları doğru çalışmaz. Ayrıntılar için bkz. [params](../../../csharp/language-reference/keywords/params.md).  
+ Belirtilmemiş bir parametre sayısının geçirilmesine izin veren `params` anahtar sözcüğü ile tanımlanmış herhangi bir yöntem, şu anda <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı tarafından desteklenmemektedir. `params` Anahtar sözcükle tanımlanmış herhangi bir YÖNTEMI kullanan XSLT stil sayfaları doğru çalışmaz. Ayrıntılar için bkz. [params](../../../csharp/language-reference/keywords/params.md).  
   
 ### <a name="to-use-an-xslt-extension-object"></a>XSLT uzantı nesnesi kullanmak için  
   
-1. <xref:System.Xml.Xsl.XsltArgumentList> nesnesi oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanarak Uzantı nesnesini ekleyin.  
+1. Bir <xref:System.Xml.Xsl.XsltArgumentList> nesne oluşturun ve yöntemi kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Uzantı nesnesini ekleyin.  
   
 2. Uzantı nesnesini stil sayfasından çağırın.  
   
-3. <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

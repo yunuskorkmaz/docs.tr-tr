@@ -13,12 +13,12 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 06/27/2019
 ms.locfileid: "67410541"
 ---
-# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> Element
+# <a name="systemxmlserialization-element"></a>\<System. xml. Serialization> öğesi
 
-XML serileştirme denetlemek için üst düzey öğe. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).
+XML serileştirmesini denetlemek için en üst düzey öğe. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).
 
-\<Yapılandırma > \
-\<system.xml.serialization>
+\<yapılandırma> \
+\<System. xml. Serialization>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,18 +39,18 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)|Serileştirme modu belirler <xref:System.DateTime> nesneleri.|
-|[\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme.|
+|[\<dateTimeSerialization> öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)|Serileştirme modu belirler <xref:System.DateTime> nesneleri.|
+|[\<SchemaImporterExtensions> öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<Yapılandırma > öğesi](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
+|[\<yapılandırma> öğesi](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde serileştirme modunu belirtmek verilmektedir bir <xref:System.DateTime> nesnesi ve tarafından kullanılan türlerinin eklenmesi <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türleri için .NET Framework türleri eşlerken.
+Aşağıdaki kod örneği, bir <xref:System.DateTime> nesnenin serileştirme modunun ve tarafından kullanılan türlerin .NET Framework türlerine ne <xref:System.Xml.Serialization.XmlSchemaImporter> zaman ekleneceğini gösterir.
 
 ```xml
 <system.xml.serialization>
@@ -70,7 +70,7 @@ Aşağıdaki kod örneğinde serileştirme modunu belirtmek verilmektedir bir <x
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<schemaImporterExtensions > öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<Ekle > öğesi için \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization> öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<SchemaImporterExtensions> öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<SchemaImporterExtensions \<Için> öğesi ekleme>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

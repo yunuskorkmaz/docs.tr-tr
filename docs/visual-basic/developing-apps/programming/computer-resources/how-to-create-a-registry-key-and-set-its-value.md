@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama'
+title: 'Nasıl yapılır: Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -20,59 +20,59 @@ ms.locfileid: "74349195"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarı Oluşturma ve Değerini Ayarlama
 
-`My.Computer.Registry` Nesnenin `CreateSubKey` yöntemi bir kayıt defteri anahtarı oluşturmak için kullanılabilir.
+`My.Computer.Registry` Nesnesinin `CreateSubKey` yöntemi bir kayıt defteri anahtarı oluşturmak için kullanılabilir.
 
 ## <a name="procedure"></a>Yordam
 
 ### <a name="to-create-a-registry-key"></a>Kayıt defteri anahtarı oluşturmak için
 
-- Anahtarın `CreateSubKey` altına hangi kovan yerleştirirken anahtarın adını belirterek yöntemi kullanın. Parametre `Subkey` büyük/küçük harf duyarlı değildir. Bu örnek, HKEY_CURRENT_USER altında `MyTestKey` kayıt defteri anahtarı oluşturur.
+- Anahtar adının `CreateSubKey` yanı sıra anahtarın altına hangi Hive yerleştirileceğini belirterek yöntemini kullanın. Parametre `Subkey` , büyük/küçük harfe duyarlı değildir. Bu örnek HKEY_CURRENT_USER altında kayıt defteri `MyTestKey` anahtarı oluşturur.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Kayıt defteri anahtarı oluşturmak ve içinde bir değer ayarlamak için
+### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Bir kayıt defteri anahtarı oluşturmak ve içinde bir değer ayarlamak için
 
-1. Anahtarın `CreateSubkey` altına hangi kovan yerleştirirken anahtarın adını belirterek yöntemi kullanın. Bu örnek, HKEY_CURRENT_USER altında `MyTestKey` kayıt defteri anahtarı oluşturur.
+1. Anahtar adının `CreateSubkey` yanı sıra anahtarın altına hangi Hive yerleştirileceğini belirterek yöntemini kullanın. Bu örnek HKEY_CURRENT_USER altında kayıt defteri `MyTestKey` anahtarı oluşturur.
 
     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]
 
-2. `SetValue` Yöntemi ile değeri ayarlayın. Bu örnek, dize değerini ayarlar. "MyTestKeyValue" için "Bu bir test değeri".
+2. Değerini `SetValue` yöntemiyle ayarlayın. Bu örnek dize değerini ayarlar. "Bu bir test değeridir" için "MyTestKeyValue".
 
     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, HKEY_CURRENT_USER altında `MyTestKey` kayıt defteri anahtarı nı `MyTestKeyValue` `This is a test value`oluşturur ve dize değerini .
+Bu örnek HKEY_CURRENT_USER altında kayıt defteri `MyTestKey` anahtarını oluşturur ve sonra dize değerini `MyTestKeyValue` olarak `This is a test value`ayarlar.
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-Anahtarınız için uygun bir yer bulmak için kayıt defteri yapısını inceleyin. Örneğin, geçerli kullanıcının HKEY_CURRENT_USER\Yazılım anahtarını açmak ve şirketinizin adını içeren bir anahtar oluşturmak isteyebilirsiniz. Ardından şirket defteri değerlerini şirketinizin anahtarına ekleyin.
+Anahtarınız için uygun bir konum bulmak üzere kayıt defteri yapısını inceleyin. Örneğin, geçerli kullanıcının HKEY_CURRENT_USER \Software anahtarını açmak ve şirketinizin adıyla bir anahtar oluşturmak isteyebilirsiniz. Ardından kayıt defteri değerlerini şirketinizin anahtarına ekleyin.
 
-Bir Web uygulamasından kayıt defterini okurken, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme bağlıdır.
+Bir Web uygulamasından kayıt defteri okurken, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulamasına ve kimliğe bürünmeye bağlıdır.
 
-Yerel bilgisayara () değil, kullanıcı<xref:Microsoft.Win32.Registry.CurrentUser>klasörüne veri yazmak<xref:Microsoft.Win32.Registry.LocalMachine>daha güvenlidir.
+Yerel bilgisayar (<xref:Microsoft.Win32.Registry.CurrentUser><xref:Microsoft.Win32.Registry.LocalMachine>) yerine Kullanıcı klasörüne () veri yazmak daha güvenlidir.
 
-Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapacağınız gerektiğine karar vermeniz gerekir. Başka bir işlem, belki de kötü niyetli bir, zaten değer yarattı ve ona erişimi olabilir. Verileri kayıt defteri değerine koyduğunuzda, veriler diğer işlem için kullanılabilir. Bunu önlemek için <xref:Microsoft.Win32.RegistryKey.GetValue%2A> yöntemi kullanın. Anahtar `Nothing` zaten yoksa döndürür.
+Bir kayıt defteri değeri oluşturduğunuzda, bu değer zaten varsa ne yapılacağını belirlemeniz gerekir. Belki de kötü amaçlı olan bir işlem, değeri zaten oluşturmuş ve ona erişime sahip olabilir. Verileri kayıt defteri değerine yerleştirdiğinizde, veriler diğer işlem tarafından kullanılabilir. Bunu engellemek için <xref:Microsoft.Win32.RegistryKey.GetValue%2A> yöntemini kullanın. Anahtar zaten `Nothing` mevcut değilse döndürür.
 
-Kayıt defteri anahtarı ALA'lar (Access Control Lists) tarafından korunsa bile, parolalar gibi sırları kayıt defterinde düz metin olarak depolamak güvenli değildir.
+Kayıt defteri anahtarı ACL 'Ler (Access Control listeleri) tarafından korunsa bile, parolalar gibi gizli dizileri, kayıt defterinde düz metin olarak depolamak güvenli değildir.
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
 - Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).
 
-- Kullanıcının kayıt defteri anahtarları oluşturma izinleri<xref:System.Security.SecurityException>yoktur ( ).
+- Kullanıcının kayıt defteri anahtarları oluşturma izni yok (<xref:System.Security.SecurityException>).
 
-- Anahtar adı 255 karakter sınırını aşıyor<xref:System.ArgumentException>( ).
+- Anahtar adı 255 karakter sınırını (<xref:System.ArgumentException>) aşıyor.
 
-- Anahtar kapalıdır<xref:System.IO.IOException>( ).
+- Anahtar kapalı (<xref:System.IO.IOException>).
 
-- Kayıt defteri anahtarı salt okunur<xref:System.UnauthorizedAccessException>( ).
+- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
 
-Bu işlemi çalıştırmak için derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektirir. Kısmi güven bağlamında çalışıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Benzer şekilde, kullanıcının ayarlar oluşturmak veya yazmak için doğru ALA'lara sahip olması gerekir. Örneğin, kod erişim güvenlik iznine sahip yerel bir uygulamanın işletim sistemi izni olmayabilir. Daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../../../../framework/misc/code-access-security-basics.md)bakın.
+Bu işlemi çalıştırmak için, derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektiriyor. Kısmi güven bağlamında çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum oluşturabilir. Benzer şekilde, Kullanıcı oluşturma veya ayarları yazma için doğru ACL 'Lere sahip olmalıdır. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

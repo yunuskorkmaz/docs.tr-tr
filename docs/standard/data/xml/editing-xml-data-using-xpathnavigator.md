@@ -11,17 +11,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710966"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Düzenleme
-<xref:System.Xml.XPath.XPathNavigator> sınıfı, bir <xref:System.Xml.XmlDocument> nesnesinde bulunan bir XML belgesinden düğümleri ve değerleri eklemek, değiştirmek ve kaldırmak için yöntemler sağlar. Düğüm ve değerleri eklemek, değiştirmek ve kaldırmak için bu yöntemlerden herhangi birini kullanmak üzere <xref:System.Xml.XPath.XPathNavigator> nesnesi düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği true olmalıdır.  
+Sınıfı <xref:System.Xml.XPath.XPathNavigator> , bir <xref:System.Xml.XmlDocument> nesnede bulunan bir XML belgesinden düğüm ve değer ekleme, değiştirme ve kaldırma yöntemleri sağlar. Düğüm ve değerleri eklemek, değiştirmek ve kaldırmak için bu yöntemlerden herhangi birini kullanmak üzere, <xref:System.Xml.XPath.XPathNavigator> nesne düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği doğru olmalıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnesine eşdüzey, alt, öznitelik düğümleri ve değerlerin nasıl ekleneceğini açıklar.  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnesine eşdüzey, alt, öznitelik düğümleri ve değerlerin nasıl ekleneceğini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerini Değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnesindeki düğümlerin ve değerlerin nasıl değiştirileceğini açıklar.  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnedeki düğümlerin ve değerlerin nasıl değiştirileceğini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerini Kaldırma](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnesinden düğümlerin ve değerlerin nasıl kaldırılacağını açıklar.  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesneden düğümlerin ve değerlerin nasıl kaldırılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

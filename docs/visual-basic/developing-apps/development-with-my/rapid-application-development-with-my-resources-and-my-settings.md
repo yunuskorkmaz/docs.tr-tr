@@ -16,15 +16,15 @@ ms.locfileid: "74349261"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources ve My.Settings ile Hızlı Uygulama Geliştirme (Visual Basic)
 
-`My.Resources` nesnesi, uygulamanın kaynaklarına erişim sağlar ve uygulamanıza yönelik kaynakları dinamik olarak almanızı sağlar.  
+`My.Resources` Nesnesi, uygulamanın kaynaklarına erişim sağlar ve uygulamanıza yönelik kaynakları dinamik olarak almanızı sağlar.  
   
 ## <a name="retrieving-resources"></a>Kaynakları Alma  
 
- Ses dosyaları, simgeler, görüntüler ve dizeler gibi birçok kaynak `My.Resources` nesnesi aracılığıyla alınabilir. Örneğin, uygulamanın kültüre özgü kaynak dosyalarına erişebilirsiniz. Aşağıdaki örnek, formun simgesini uygulamanın kaynak dosyasında depolanan `Form1Icon` adlı simgeye ayarlar.  
+ Ses dosyaları, simgeler, görüntüler ve dizeler gibi birçok kaynak `My.Resources` nesne aracılığıyla alınabilir. Örneğin, uygulamanın kültüre özgü kaynak dosyalarına erişebilirsiniz. Aşağıdaki örnek, formun simgesini uygulamanın kaynak dosyasında saklanan adlı `Form1Icon` simgeye ayarlar.  
   
  [!code-vb[VbVbcnMy#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#7)]  
   
- `My.Resources` nesnesi yalnızca genel kaynakları kullanıma sunar. Formlarla ilişkili kaynak dosyalarına erişim sağlamaz. Form kaynaklarına formdan erişmeniz gerekir.  
+ `My.Resources` Nesne yalnızca genel kaynakları kullanıma sunar. Formlarla ilişkili kaynak dosyalarına erişim sağlamaz. Form kaynaklarına formdan erişmeniz gerekir.  
   
  Benzer şekilde, `My.Settings` nesnesi uygulamanın ayarlarına erişim sağlar ve uygulamanızın özellik ayarlarını ve diğer bilgilerini dinamik olarak depolamanızı ve almanızı sağlar. Daha fazla bilgi için bkz [. My. Resources nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md) ve [My. Settings nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   

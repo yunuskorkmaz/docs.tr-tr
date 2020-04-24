@@ -30,9 +30,9 @@ Oluşturulan yürütülebilir dosyanın çalıştırılabileceği alt sistemin e
 
 `major.minor`
 
-Alt sistemin gerekli en düşük sürümü, birincil ve ikincil sürümler için nokta gösteriminde ifade edilir. Örneğin, bu seçeneğin değerini 6,01 olarak ayarlarsanız, uygulamanın bu konunun ilerleyen kısımlarında açıklandığı gibi, bir uygulamanın Windows 7 ' den eski bir işletim sisteminde çalışabilebileceğinizi belirtebilirsiniz. `major` için değerleri ve tamsayılar olarak `minor` belirtmeniz gerekir.
+Alt sistemin gerekli en düşük sürümü, birincil ve ikincil sürümler için nokta gösteriminde ifade edilir. Örneğin, bu seçeneğin değerini 6,01 olarak ayarlarsanız, uygulamanın bu konunun ilerleyen kısımlarında açıklandığı gibi, bir uygulamanın Windows 7 ' den eski bir işletim sisteminde çalışabilebileceğinizi belirtebilirsiniz. `major` Ve `minor` değerlerini tamsayılar olarak belirtmeniz gerekir.
 
-`minor` sürümünde önde gelen sıfır sürümü değiştirmez, ancak sondaki sıfırları. Örneğin, 6,1 ve 6,01 aynı sürüme başvurun, ancak 6,10 farklı bir sürüme başvurur. Karışıklığın önüne geçmek için küçük sürümü iki basamakla ifade etmenizi öneririz.
+`minor` Sürümdeki öndeki sıfırlar sürümü değiştirmez, ancak sonunda sıfır yapılır. Örneğin, 6,1 ve 6,01 aynı sürüme başvurun, ancak 6,10 farklı bir sürüme başvurur. Karışıklığın önüne geçmek için küçük sürümü iki basamakla ifade etmenizi öneririz.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -40,13 +40,13 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 
 |Windows sürümü|Alt sistem sürümü|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
-|Windows XP|5.01|
-|Windows Server 2003|5.02|
-|Windows Vista|6.00|
-|Windows 7|6.01|
-|Windows Server 2008|6.01|
-|Windows 8|6.02|
+|Windows 2000|5,00|
+|Windows XP|5,01|
+|Windows Server 2003|5,02|
+|Windows Vista|6,00|
+|Windows 7|6,01|
+|Windows Server 2008|6,01|
+|Windows 8|6,02|
 
 ## <a name="default-values"></a>Varsayılan değerler
 
@@ -58,7 +58,7 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 
   - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
 
-  - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
+  - [-Platform: ARM](../../../visual-basic/reference/command-line-compiler/platform.md)
 
 - MSBuild kullanıyorsanız varsayılan değer 6,00 ' dir. .NET Framework 4,5 ' i hedefliyorsanız ve bu listede daha önce belirtilen derleyici seçeneklerinden hiçbirini belirlemediniz.
 
@@ -66,7 +66,7 @@ Aşağıdaki tabloda, Windows 'un ortak alt sistem sürümleri listelenmektedir.
 
 ## <a name="setting-this-option"></a>Bu seçeneği ayarlama
 
-Visual Studio 'da **-subsystemversion** derleyici seçeneğini ayarlamak için. vbproj dosyasını açmanız ve MSBuild XML 'teki `SubsystemVersion` özelliği için bir değer belirtmeniz gerekir. Visual Studio IDE 'de bu seçeneği ayarlayamazsınız. Daha fazla bilgi için bu konunun önceki kısımlarında "varsayılan değerler" veya [genel MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties)bölümüne bakın.
+Visual Studio 'da **-subsystemversion** derleyici seçeneğini ayarlamak için,. vbproj dosyasını açmanız ve MSBuild xml içindeki `SubsystemVersion` özelliği için bir değer belirtmeniz gerekir. Visual Studio IDE 'de bu seçeneği ayarlayamazsınız. Daha fazla bilgi için bu konunun önceki kısımlarında "varsayılan değerler" veya [genel MSBuild proje özellikleri](/visualstudio/msbuild/common-msbuild-project-properties)bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

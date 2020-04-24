@@ -27,9 +27,9 @@ Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializ
 - Bir uygulamanın eski sürümleri yeni sürümleri eski türünü seri durumdan çıkarılacak sorulduğunda özel durumlar oluşturan.
 - Bir uygulamanın daha yeni sürümleri, bir eksik veri türüyle eski sürümleri işlenirken özel durumlar oluşturan.
 
-Sürüm dayanıklı serileştirme (VTS), .NET Framework 2,0 ' de sunulan ve zaman içinde seri hale getirilebilir türlerin değiştirilmesini sağlayan bir özellik kümesidir. Özellikle, VTS özellikleri, genel türler de dahil olmak üzere <xref:System.SerializableAttribute> özniteliğinin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](version-tolerant-serialization-technology-sample.md).
+Sürüm dayanıklı serileştirme (VTS), .NET Framework 2,0 ' de sunulan ve zaman içinde seri hale getirilebilir türlerin değiştirilmesini sağlayan bir özellik kümesidir. Özellikle, VTS özellikleri, genel türler dahil olmak üzere <xref:System.SerializableAttribute> özniteliğin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](version-tolerant-serialization-technology-sample.md).
 
-Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ayrıca, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>kullanılırken, fazlalık veri toleransı hariç tüm özellikler de etkinleştirilir. Serileştirme için bu sınıfları kullanma hakkında daha fazla bilgi için bkz. [Ikili serileştirme](binary-serialization.md).
+Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ayrıca, ' yi kullanırken, fazlalık veri toleransı hariç tüm özellikler de etkinleştirilir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Serileştirme için bu sınıfları kullanma hakkında daha fazla bilgi için bkz. [Ikili serileştirme](binary-serialization.md).
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -49,7 +49,7 @@ Bu özellikler, aşağıdaki bölümlerde daha ayrıntılı bir şekilde ele al�
 
 Geçmişte, seri durumundan çıkarma sırasında, hiçbir gereksiz veya beklenmeyen veriler özel durum oluşturulmasına neden oldu. VTS ile aynı durumda, özel durumların oluşturulması yerine hiçbir gereksiz veya beklenmeyen veri yok sayılır. Bu yeni sürümleri bir türün (yani, daha fazla alan içeren bir sürüm) kullanan uygulamalar sağlar, eski sürümleri aynı türde beklediğiniz uygulamalar bilgileri göndermek için.
 
-Aşağıdaki örnekte, `Address` sınıfının 2,0 sürümünün `CountryField` bulunan ek veriler, eski bir uygulama daha yeni sürümü seri hale geldiğinde yok sayılır.
+Aşağıdaki örnekte, `CountryField` `Address` sınıfının sürüm 2,0 ' de yer alan ek veriler, eski bir uygulama daha yeni sürümü seri hale geldiğinde yok sayılır.
 
 ```csharp  
 // Version 1 of the Address class.  
@@ -90,7 +90,7 @@ End Class
 
 ### <a name="tolerance-of-missing-data"></a>Eksik verilerin toleransı
 
-Alanlar, <xref:System.Runtime.Serialization.OptionalFieldAttribute> özniteliği bunlara uygulanarak isteğe bağlı olarak işaretlenebilir. Seri durumundan çıkarma sırasında isteğe bağlı verileri yoksa, serileştirme motoruna olmaması yoksayar ve bir özel durum oluşturmaz. Bu nedenle, eski sürümleri bir türün beklediğiniz uygulamaları daha yeni sürümleri aynı türde beklediğiniz uygulamaları için veri gönderebilir.
+Alanlar, <xref:System.Runtime.Serialization.OptionalFieldAttribute> öznitelikleri uygulanarak isteğe bağlı olarak işaretlenebilir. Seri durumundan çıkarma sırasında isteğe bağlı verileri yoksa, serileştirme motoruna olmaması yoksayar ve bir özel durum oluşturmaz. Bu nedenle, eski sürümleri bir türün beklediğiniz uygulamaları daha yeni sürümleri aynı türde beklediğiniz uygulamaları için veri gönderebilir.
 
 Aşağıdaki örnek, 2.0 sürümünü gösterir `Address` ile `CountryField` alan isteğe bağlı olarak işaretlenmiş. Daha eski bir uygulamanın sürüm 2.0 bekler daha yeni bir uygulama için 1 sürümü gönderirse, veri olmaması göz ardı edilir.
 
@@ -128,11 +128,11 @@ Serileştirme geri çağırmaları serileştirme/seri kaldırma işlemine dört 
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|Serileştirme önce.|Serileştirme için hazırlayın. Örneğin, isteğe bağlı veri yapıları oluşturun.|
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Serileştirme sonra.|Serileştirme olayları kaydeder.|
 
- Bu geri çağırma, varsa seri kaldırma oluşturucusundan önce çağrılır. \*
+ \*Bu geri çağırma, bir tane varsa, seri durumdan çıkarma oluşturucusundan önce çağrılır.
 
 #### <a name="using-callbacks"></a>Geri çağırmaları kullanma
 
-Geri çağırmaları kullanmak için, <xref:System.Runtime.Serialization.StreamingContext> parametresi kabul eden bir yönteme uygun özniteliği uygulayın. Her sınıf için yalnızca bir yöntem bu özniteliklerin her biriyle işaretlenebilir. Örneğin:
+Geri çağırmaları kullanmak için, uygun özniteliği <xref:System.Runtime.Serialization.StreamingContext> parametreyi kabul eden bir yönteme uygulayın. Her sınıf için yalnızca bir yöntem bu özniteliklerin her biriyle işaretlenebilir. Örneğin:
 
 ```csharp
 [OnDeserializing]
@@ -262,14 +262,14 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-Bazı kullanıcıların, sunucu ve istemci üzerinde farklı bir sınıf sürümü gerektiğinden, seri hale getirilecek ve seri durumdan çıkarılacak sınıfı kontrol etmeniz gerekebilir. <xref:System.Runtime.Serialization.SerializationBinder> serileştirme ve seri durumundan çıkarma sırasında kullanılan gerçek türleri denetlemek için kullanılan soyut bir sınıftır. Bu sınıf kullanmak için öğesinden bir sınıf türetin <xref:System.Runtime.Serialization.SerializationBinder> ve geçersiz kılın <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> ve <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> yöntemleri. Daha fazla bilgi için bkz. [Serializationciltçi Ile serileştirme ve serisini kaldırma](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
+Bazı kullanıcıların, sunucu ve istemci üzerinde farklı bir sınıf sürümü gerektiğinden, seri hale getirilecek ve seri durumdan çıkarılacak sınıfı kontrol etmeniz gerekebilir. <xref:System.Runtime.Serialization.SerializationBinder>serileştirme ve seri durumundan çıkarma sırasında kullanılan gerçek türleri denetlemek için kullanılan soyut bir sınıftır. Bu sınıf kullanmak için öğesinden bir sınıf türetin <xref:System.Runtime.Serialization.SerializationBinder> ve geçersiz kılın <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> ve <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> yöntemleri. Daha fazla bilgi için bkz. [Serializationciltçi Ile serileştirme ve serisini kaldırma](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).
 
-## <a name="best-practices"></a>Önerilen uygulamalar
+## <a name="best-practices"></a>En iyi uygulamalar
 
 Uygun sürüm davranış sağlamak için bir tür sürümü sürümü değişiklik yapıldığında bu kuralları izleyin:
 
 - Hiçbir zaman serileştirilmiş bir alan kaldırın.
-- Özniteliği önceki sürümdeki alana uygulanmadıysa, bir alana <xref:System.NonSerializedAttribute> özniteliğini hiçbir şekilde uygulamayın.
+- Özniteliği önceki sürümdeki <xref:System.NonSerializedAttribute> alana uygulanmadıysa, bir alana özniteliği hiçbir şekilde uygulamayın.
 - Hiçbir zaman adı veya serileştirilmiş bir alan türünü değiştirin.
 - Yeni bir seri hale getirilmiş alan eklerken **OptionalFieldAttribute** özniteliğini uygulayın.
 - Bir alandan **Serializedattribute** özniteliği kaldırılırken (önceki bir sürümde seri hale getirilebilir olmayan), **OptionalFieldAttribute** özniteliğini uygulayın.
@@ -293,4 +293,4 @@ Bir tür gelecekteki serileştirme yapısıyla uyumlu olmasını sağlamak için
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
 - <xref:System.NonSerializedAttribute>
-- [İkili Serileştirme](binary-serialization.md)
+- [İkili serileştirme](binary-serialization.md)

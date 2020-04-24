@@ -11,24 +11,24 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710446"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath Veri Modelini Kullanarak XML Verilerini İşleme
-<xref:System.Xml?displayProperty=nameWithType> ad alanı, <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları kullanarak XML belgelerinin, parçaların, düğümlerin veya düğüm kümesinin bellek içinde programlı bir gösterimini sağlar.  
+<xref:System.Xml?displayProperty=nameWithType> Ad alanı, <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> sınıfları kullanarak XML belgelerinin, parçaların, düğümlerin veya düğüm kümesinin bellek içinde programlı bir gösterimini sağlar.  
   
- <xref:System.Xml.XPath.XPathDocument> sınıfı, XPath veri modelini kullanarak bir XML belgesinin hızlı, Salt okunabilir ve bellek içi gösterimini sağlar. <xref:System.Xml.XmlDocument> sınıfı, W3C Belge Nesne Modeli (DOM) düzey 1 Core ve çekirdek DOM düzeyi 2 uygulayan bir XML belgesinin düzenlenebilir bellek içi gösterimini sağlar. Her iki sınıf de <xref:System.Xml.XPath.IXPathNavigable> arabirimini uygular ve bazı durumlarda seçmek, değerlendirmek, gezinmek ve bazı durumlarda kullanılan bir <xref:System.Xml.XPath.XPathNavigator> nesnesi döndürür, temel alınan XML verilerini düzenler.  
+ <xref:System.Xml.XPath.XPathDocument> Sınıfı, XPath veri modelini kullanarak bir XML belgesinin hızlı, Salt okunabilir ve bellek içi gösterimini sağlar. Sınıfı <xref:System.Xml.XmlDocument> , W3C belge nesne MODELI (DOM) düzey 1 Core ve çekirdek DOM düzeyi 2 uygulayan bir XML belgesinin düzenlenebilir bellek içi gösterimini sağlar. Her iki sınıf de <xref:System.Xml.XPath.IXPathNavigable> arabirimini uygular ve seçim <xref:System.Xml.XPath.XPathNavigator> yapmak, değerlendirmek, gezinmek ve bazı durumlarda, temel alınan XML verilerini düzenlemek için kullanılan bir nesne döndürür.  
   
  Aşağıdaki bölümlerde, döndüren sınıfına göre <xref:System.Xml.XPath.XPathNavigator> sınıfının işlevleri açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- Bir <xref:System.Xml.XmlDocument> XML belgesini okumak ve bir XML belgesini okumak ve düzenlemek için bir salt okunurdur <xref:System.Xml.XPath.XPathDocument> sınıf nesnesinin nasıl oluşturulduğunu açıklar. Bu konu ayrıca, bir XML belgesini gezinmek ve düzenlemek için her bir sınıftan bir <xref:System.Xml.XPath.XPathNavigator> nesne döndürme işlemini açıklar.  
+ Bir XML belgesini okumak ve bir XML belgesini <xref:System.Xml.XPath.XPathDocument> okumak ve düzenlemek için bir salt okunurdur ve düzenlenebilir <xref:System.Xml.XmlDocument> sınıf nesnesi oluşturmayı açıklar. Bu konu ayrıca bir XML belgesini gezinmek <xref:System.Xml.XPath.XPathNavigator> ve düzenlemek için her sınıftan bir nesne döndürme işlemini açıklar.  
   
  [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri XPath sorgusu kullanarak seçmek, bir XPath ifadesinin sonuçlarını değerlendirmek ve incelemek ve bir XML belgesindeki bir düğümün belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
+ Bir XPath sorgusu kullanarak bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri seçmek, bir XPath ifadesinin SONUÇLARıNı değerlendirmek ve incelemek ve bir XML belgesindeki bir düğümün belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için kullanılan sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- Düğümlerde gezinmek, XML verilerini ayıklamak ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde kesin türü belirtilmiş XML verilerine erişmek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
+ Düğümlerde gezinmek, XML verilerini <xref:System.Xml.XPath.XPathNavigator> ayıklamak ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde kesin olarak belirlenmiş XML verilerine erişmek için kullanılan sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerini Düzenleme](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
- Bir <xref:System.Xml.XmlDocument> nesnesinde bulunan bir XML belgesinden düğüm ve değer eklemek, değiştirmek ve kaldırmak için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının yöntemlerini açıklar.  
+ Bir <xref:System.Xml.XmlDocument> nesne IÇINDEKI bir XML <xref:System.Xml.XPath.XPathNavigator> belgesinden düğümleri ve değerleri eklemek, değiştirmek ve kaldırmak için kullanılan sınıfının yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak Şema Doğrulama](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde bulunan XML içeriğini doğrulamaya yönelik yolları açıklar.  

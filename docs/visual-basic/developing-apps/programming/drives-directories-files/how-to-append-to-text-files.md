@@ -15,13 +15,13 @@ ms.locfileid: "74348879"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Metin Dosyalarına Ekleme
 
-Yöntem, <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> parametrenin `append` .'a ayarlanmış olduğunu belirterek bir metin `True`dosyasına eklemek için kullanılabilir.  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Yöntemi, `append` parametresinin olarak `True`ayarlandığını belirterek bir metin dosyasına eklemek için kullanılabilir.  
   
-### <a name="to-append-to-a-text-file"></a>Metin dosyasına eklemek için  
+### <a name="to-append-to-a-text-file"></a>Bir metin dosyasına eklemek için  
   
-- Eklenecek `WriteAllText` hedef dosya ve dizeyi belirterek ve `append` parametreyi `True`' ye ayarlayarak yöntemi kullanın.  
+- Eklenecek hedef `WriteAllText` dosyayı ve dizeyi belirterek ve `append` parametresini olarak `True`ayarlamak için yöntemini kullanın.  
   
-     Bu örnek, `"This is a test string."` dize adlı `Testfile.txt`dosyaya yazar.  
+     Bu örnek, dizeyi `"This is a test string."` adlı `Testfile.txt`dosyaya yazar.  
   
      [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
@@ -29,19 +29,19 @@ Yöntem, <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> parametr
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
-- `File`olmayan bir yola işaret eder<xref:System.IO.FileNotFoundException> <xref:System.IO.DirectoryNotFoundException>( veya ).  
+- `File`varolmayan bir yola işaret eder (<xref:System.IO.FileNotFoundException> veya <xref:System.IO.DirectoryNotFoundException>).  
   
-- Dosya başka bir işlem tarafından kullanılıyor veya G/Ç<xref:System.IO.IOException>hatası oluşur ( ).  
+- Dosya başka bir işlem tarafından kullanılıyor veya bir g/ç hatası oluştu (<xref:System.IO.IOException>).  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Yoldaki bir dosya veya dizin adı bir üst üste (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya dizin adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

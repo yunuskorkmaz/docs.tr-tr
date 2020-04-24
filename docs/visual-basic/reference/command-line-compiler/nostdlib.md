@@ -23,16 +23,16 @@ Derleyicinin standart kitaplıklara otomatik olarak başvurmasına neden olur.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-nostdlib` seçeneği, System. dll derlemesine otomatik başvuruyu kaldırır ve derleyicinin Vbc. rsp dosyasını okumasını önler. Vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır.  
+ `-nostdlib` Seçeneği, System. dll derlemesine otomatik başvuruyu kaldırır ve derleyicinin Vbc. rsp dosyasını okumasını önler. Vbc. exe dosyası ile aynı dizinde bulunan Vbc. rsp dosyası, yaygın olarak kullanılan .NET Framework derlemelerine başvurur ve `System` ve `Microsoft.VisualBasic` ad alanlarını içeri aktarır.  
   
 > [!NOTE]
 > Mscorlib. dll ve Microsoft. VisualBasic. dll derlemelerine her zaman başvurulur.  
   
 > [!NOTE]
-> `-nostdlib` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-nostdlib` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, standart kitaplıklara başvurulmadan `T2.vb` derler. `My` nesnesini kaldırmak için `_MYTYPE` koşullu derleme sabitinin "Empty" dizesine ayarlamanız gerekir.  
+ Aşağıdaki kod standart kitaplıklara `T2.vb` başvurulmadan derlenir. `My` Nesneyi kaldırmak için `_MYTYPE` koşullu derleme sabitinin "Empty" dizesini ayarlamanız gerekir.  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

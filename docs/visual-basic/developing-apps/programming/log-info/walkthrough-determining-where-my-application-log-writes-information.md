@@ -18,50 +18,50 @@ ms.locfileid: "74353600"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme (Visual Basic)
 
-Nesne `My.Application.Log` birkaç günlük dinleyiciye bilgi yazabilir. Günlük dinleyicileri bilgisayarın yapılandırma dosyası tarafından yapılandırılır ve bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir. Bu konu varsayılan ayarları ve uygulamanızın ayarlarını nasıl belirleyirinizi açıklar.
+Nesnesi `My.Application.Log` , çeşitli günlük dinleyicilerine bilgi yazabilir. Günlük dinleyicileri bilgisayarın yapılandırma dosyası tarafından yapılandırılır ve bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir. Bu konu, varsayılan ayarları ve uygulamanızın ayarlarının nasıl belirleneceğini açıklar.
 
-Varsayılan çıktı konumları hakkında daha fazla bilgi için Bkz. [Uygulama Günlükleri ile Çalışma.](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+Varsayılan çıkış konumları hakkında daha fazla bilgi için bkz. [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
-### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log için dinleyici belirlemek için
+### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My. Application. log için dinleyicileri belirleme
 
-1. Derlemenin yapılandırma dosyasını bulun. Montajı geliştiriyorsanız, Visual Studio'daki app.config'e **Solution Explorer'dan**erişebilirsiniz. Aksi takdirde, yapılandırma dosya adı ".config" ile eklenen derlemenin adıdır ve derlemeyle aynı dizinde bulunur.
+1. Derlemenin yapılandırma dosyasını bulun. Derlemeyi geliştiriyorsanız, **Çözüm Gezgini**Visual Studio 'da App. config dosyasına erişebilirsiniz. Aksi takdirde, yapılandırma dosya adı ". config" ile eklenen derlemenin adıdır ve derlemeyle aynı dizinde bulunur.
 
     > [!NOTE]
-    > Her derlemenin bir yapılandırma dosyası yok.
+    > Her derlemenin bir yapılandırma dosyası yoktur.
 
     Yapılandırma dosyası bir XML dosyasıdır.
 
-2. Bölümde bulunan "DefaultSource" `<source>` `name` özniteliğinin bulunduğu bölümdeki bölümü bulun. `<listeners>` `<sources>` Bölüm, `<sources>` üst düzey `<system.diagnostics>` `<configuration>` bölümde yer almaktadır.
+2. Bölümünde yer `name` alan `<sources>` "DefaultSource" özniteliğine sahip bölümünde bölümünü bulun. `<listeners>` `<source>` `<sources>` Bölümü, bölümünde, üst düzey `<system.diagnostics>` `<configuration>` bölümünde bulunur.
 
-    Bu bölümler yoksa, bilgisayarın yapılandırma dosyası günlük dinleyicilerini `My.Application.Log` yapılandırabilir. Aşağıdaki adımlar, bilgisayar yapılandırma dosyasının tanımladığı nı nasıl belirleyeceklerini açıklar:
+    Bu bölümler yoksa, bilgisayarın yapılandırma dosyası `My.Application.Log` günlük dinleyicilerini yapılandırabilir. Aşağıdaki adımlarda, bilgisayar yapılandırma dosyasının neyi tanımladığı nasıl belirleneceği açıklanır:
 
-    1. Bilgisayarın makinesinin bulunduğu config dosyasını bulun. Genellikle *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dizininde bulunur, işletim sistemi `SystemRoot` dizininin bulunduğu yerdir ve `frameworkVersion` .NET Framework'ün sürümüdür.
+    1. Bilgisayarın Machine. config dosyasını bulun. Genellikle, *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* dizininde bulunur, burada `SystemRoot` işletim sistemi dizinidir ve `frameworkVersion` .NET Framework sürümüdür.
 
-        machine.config'deki ayarlar, bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir.
+        Machine. config dosyasındaki ayarlar bir uygulamanın yapılandırma dosyası tarafından geçersiz kılınabilir.
 
         Aşağıda listelenen isteğe bağlı öğeler yoksa, bunları oluşturabilirsiniz.
 
-    2. `<listeners>` "DefaultSource" `<source>` `name` özniteliğinin bulunduğu bölümdeki bölümü, `<sources>` `<system.diagnostics>` bölümdeki, üst düzey `<configuration>` bölümdeki bölümü bulun.
+    2. `<source>` `name` `<sources>` `<system.diagnostics>` Bölümündeki bölümünde bulunan bölümündeki "DefaultSource" özniteliği, bölümündeki en üst düzey `<configuration>` bölümünde bulunan bölümü `<listeners>` bulun.
 
-        Bu bölümler yoksa, yalnızca `My.Application.Log` varsayılan günlük dinleyicileri vardır.
+        Bu bölümler yoksa, `My.Application.Log` yalnızca varsayılan günlük dinleyicilerine sahiptir.
 
-3. <`add>` `listeners>` bölümündeki <öğeleri bulun.
+3. <`listeners>` bölümünde <`add>` öğelerini bulun.
 
-     Bu öğeler, adı geçen `My.Application.Log` günlük dinleyicilerini kaynağa ekler.
+     Bu öğeler, kaynak için `My.Application.Log` adlandırılmış günlük dinleyicileri ekler.
 
-4. Bölümdeki, `<system.diagnostics>` üst düzey `<configuration>` bölümde, günlük dinleyicilerinin adlarını içeren `<add>` öğeleri bulun. `<sharedListeners>`
+4. Bölümünde, `<add>` üst düzey `<sharedListeners>` `<configuration>` bölümündeki bölümünde bulunan günlük dinleyicilerinin `<system.diagnostics>` adlarını içeren öğeleri bulun.
 
-5. Birçok paylaşılan dinleyici türü için dinleyicinin başlangıç verileri, dinleyicinin verileri nereye yönlendirdiğinin açıklamasını içerir:
+5. Birçok türdeki paylaşılan dinleyici için, dinleyicinin başlatma verileri, dinleyicinin verileri nerede yönlendirdiği hakkında bir açıklama içerir.
 
-    - Bir <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyici, girişte açıklandığı gibi bir dosya günlüğüne yazar.
+    - Bir <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> dinleyici, giriş bölümünde açıklandığı gibi bir dosya günlüğüne yazar.
 
-    - Dinleyici, <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> `initializeData` parametre tarafından belirtilen bilgisayar olay günlüğüne bilgi yazar. Bir olay günlüğünü görüntülemek için **Server Explorer** veya Windows **Event Viewer'ı**kullanabilirsiniz. Daha fazla bilgi için [.NET Framework'deki ETW Olayları'na](../../../../framework/performance/etw-events.md)bakın.
+    - Bir <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> dinleyici, `initializeData` parametre tarafından belirtilen bilgisayar olay günlüğüne bilgi yazar. Bir olay günlüğünü görüntülemek için **Sunucu Gezgini** veya **Windows Olay Görüntüleyicisi**kullanabilirsiniz. Daha fazla bilgi için [.NET Framework ETW olayları](../../../../framework/performance/etw-events.md)bölümüne bakın.
 
-    - Ve <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyiciler parametrede belirtilen `initializeData` dosyaya yazar.
+    - Ve <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> dinleyicileri, `initializeData` parametresinde belirtilen dosyaya yazar.
 
-    - Dinleyici <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> komut satırı konsoluna yazar.
+    - Bir <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> dinleyici, komut satırı konsoluna yazar.
 
-    - Diğer günlük dinleyici türlerinin nerede bilgi yazdıkları hakkında bilgi için, bu türbelgelerine başvurun.
+    - Diğer günlük dinleyicisi türlerinin yazma bilgileri hakkında daha fazla bilgi için, bu türün belgelerine başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -73,8 +73,8 @@ Varsayılan çıktı konumları hakkında daha fazla bilgi için Bkz. [Uygulama 
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Nasıl Yapılır: Günlük Özel Durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Nasıl yapılır: Özel Durumları Günlüğe Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Nasıl yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [.NET Framework'te ETW Olayları](../../../../framework/performance/etw-events.md)
 - [Sorun Giderme: Günlük Dinleyicileri](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

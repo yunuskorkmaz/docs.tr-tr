@@ -15,9 +15,9 @@ Microsoft. Data. SQLite birçok ADO.NET soyutlamasının uygulamalarını sağla
 
 ## <a name="database-schema-information"></a>Veritabanı şeması bilgileri
 
-Sorgu sonuçlarıyla ilgili meta veriler <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> yöntemi kullanılarak kullanılabilir.
+Sorgu sonuçlarıyla ilgili meta veriler, <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> yöntemi kullanılarak kullanılabilir.
 
-`DbConnection.GetSchema()` uygulanmadı. Bu API iyi tanımlanmış olmadığından, [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) tablosu ve [table_info](https://www.sqlite.org/pragma.html#pragma_table_info) pragma gibi standart SQLite API 'leri kullanarak doğrudan veritabanı meta verilerini almayı öneririz.
+`DbConnection.GetSchema()`uygulanmadı. Bu API iyi tanımlanmış olmadığından, [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) tablosu ve [table_info](https://www.sqlite.org/pragma.html#pragma_table_info) pragma gibi standart SQLite API 'leri kullanarak doğrudan veritabanı meta verilerini almayı öneririz.
 
 Daha fazla bilgi için bkz. [meta veriler](metadata.md).
 
@@ -29,9 +29,9 @@ Sorun [#13825](https://github.com/dotnet/efcore/issues/13825)için System. Trans
 
 ## <a name="data-adapters"></a>Veri bağdaştırıcıları
 
-`DbDataAdapter` henüz Microsoft. Data. SQLite tarafından uygulanmıyor. Bu, verileri yüklemek ve güncelleştirmek için yalnızca ADO.NET `DataSet` ve `DataTable` kullanabileceğiniz anlamına gelir.
+`DbDataAdapter`henüz Microsoft. Data. SQLite tarafından uygulanmıyor. Bu, yalnızca ADO.NET `DataSet` `DataTable` kullanabilir ve verileri yükleyebilir ve güncelleştiremezsiniz.
 
-`DbDataAdapter`uygulama hakkında geri bildirim sağlamak için sorun [#13838](https://github.com/dotnet/efcore/issues/13838) kullanın.
+Uygulama `DbDataAdapter`hakkında geri bildirim sağlamak için sorun [#13838](https://github.com/dotnet/efcore/issues/13838) kullanın.
 
 ## <a name="output-parameters"></a>Çıktı parametreleri
 
@@ -47,7 +47,7 @@ SQLite saklı yordamları desteklemez.
 
 ## <a name="isolation-levels"></a>Yalıtım düzeyleri
 
-`Chaos` ve `Snapshot` yalıtım düzeyleri SQLite işlemlerinde desteklenmez.
+`Chaos` Ve `Snapshot` yalıtım düzeyleri SQLite işlemlerinde desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,17 +16,17 @@ ms.locfileid: "74334519"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belgelerim Dizinindeki Dosyalara Metin Yazma
 
-Nesne, `My.Computer.FileSystem.SpecialDirectories` **MyDocuments** dizini gibi özel dizinlere erişmenizi sağlar.  
+`My.Computer.FileSystem.SpecialDirectories` Nesnesi, **MyDocuments** dizini gibi özel dizinlere erişmenizi sağlar.  
   
 ## <a name="procedure"></a>Yordam  
   
-#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Belgelerim dizinine yeni metin dosyaları yazmak için  
+#### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Yeni metin dosyalarını Belgelerim dizinine yazmak için  
   
-1. Yolu `My.Computer.FileSystem.SpecialDirectories.MyDocuments` sağlamak için özelliği kullanın.  
+1. Yolunu sağlamak `My.Computer.FileSystem.SpecialDirectories.MyDocuments` için özelliğini kullanın.  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2. Belirtilen `WriteAllText` dosyaya metin yazmak için yöntemi kullanın.  
+2. Belirtilen dosyaya `WriteAllText` metin yazmak için yöntemini kullanın.  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   
@@ -36,17 +36,17 @@ Nesne, `My.Computer.FileSystem.SpecialDirectories` **MyDocuments** dizini gibi �
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 
- Yazmak `test.txt` istediğiniz dosyanın adı ile değiştirin.  
+ Yazmak `test.txt` istediğiniz dosyanın adıyla değiştirin.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Bu kod, dosyaya metin yazarken oluşabilecek tüm özel durumları yeniden atar. Kullanıcı seçeneklerini geçerli dosya adlarıyla sınırlayan [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) ve [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) bileşenleri gibi Windows Forms denetimlerini kullanarak özel durumlar olasılığını azaltabilirsiniz. Ancak, bu denetimleri kullanarak kusursuz değildir. Dosya sistemi, kullanıcının bir dosyayı seçtiği saat ile kodun yürütüldettiği saat arasında değişebilir. Bu nedenle, dosyalarla çalışırken özel durum işleme neredeyse her zaman gereklidir.  
+ Bu kod, dosyaya metin yazarken ortaya çıkabilecek tüm özel durumları yeniden oluşturur. Kullanıcı seçimlerini geçerli dosya adlarıyla sınırlayan [OpenFileDialog](../../../../framework/winforms/controls/openfiledialog-component-windows-forms.md) ve [SaveFileDialog](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md) bileşenleri gibi Windows Forms denetimleri kullanarak özel durumların olasılığını azaltabilirsiniz. Ancak, bu denetimlerin kullanılması, örnek değildir. Dosya sistemi, kullanıcının bir dosyayı seçtiği zaman ve kodun yürütüldüğü saat arasında değişebilir. Bu nedenle, dosyalarla çalışırken neredeyse her zaman özel durum işleme gerekir.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Kısmi güven bağlamında çalışıyorsanız, kod yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../../../../framework/misc/code-access-security-basics.md)bakın.  
+ Kısmi güven bağlamında çalıştırıyorsanız, yetersiz ayrıcalıklar nedeniyle kod bir özel durum oluşturabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
- Bu örnek yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için oluşturma iznine ihtiyacı vardır. İzinler erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın yalnızca yazma iznine, daha az bir ayrıcalığa ihtiyacı vardır. Mümkün olduğunda, dosyayı dağıtım sırasında oluşturmak ve bir klasör için ayrıcalık oluştur'a ayrıcalık vermek yerine yalnızca tek bir dosyaya Okuma ayrıcalıkları vermek daha güvenlidir. Ayrıca, kullanıcı klasörlerine veri yazmak kök klasöre veya **Program Dosyaları** klasörüne yazmaktan daha güvenlidir. Daha fazla bilgi için [ACL Technology Genel Bakış'a](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))bakın.  
+ Bu örnek yeni bir dosya oluşturur. Uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için oluşturma izni olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten mevcutsa, uygulamanın daha az bir ayrıcalık olmak üzere yalnızca yazma izni olması gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması daha güvenlidir ve bir klasör için oluşturma ayrıcalıkları vermek yerine yalnızca tek bir dosyaya okuma ayrıcalıkları verin. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya **Program Files** klasöründen daha güvenlidir. Daha fazla bilgi için bkz. [ACL teknolojisine genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

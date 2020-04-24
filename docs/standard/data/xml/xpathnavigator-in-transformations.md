@@ -14,13 +14,13 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709757"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
-<xref:System.Xml.XPath.XPathNavigator> sınıfı verilere salt okunurdur ve dönüşümler (XSLT) için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>ve <xref:System.Xml.XmlDocument>uygulanır. <xref:System.Xml.XPath.XPathNavigator>, XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.  
+Sınıfı <xref:System.Xml.XPath.XPathNavigator> , verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. , Ve <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument>üzerinde uygulanır. , <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi world WIDE Web KONSORSIYUMU (W3C) veri modelini temel alır.  
   
- <xref:System.Xml.XPath.XPathNavigator> herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. <xref:System.Xml.XPath.XPathNavigator> Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
+ , <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. Ayrıca <xref:System.Xml.XPath.XPathNavigator> , sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
   
- API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar. <xref:System.Xml.XPath.XPathNavigator>, bir **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir. <xref:System.Xml.XPath.XPathNavigator> her zaman bir düğüm üzerinde konumlandırılır. Başarısız olan herhangi bir **Move** yöntemi, <xref:System.Xml.XPath.XPathNavigator> değişmeden bırakılamaz.  
+ API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar. , <xref:System.Xml.XPath.XPathNavigator> Bir **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir. , <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğüm üzerinde konumlandırılır. Başarısız olan herhangi bir **Move** yöntemi <xref:System.Xml.XPath.XPathNavigator> değişmeden bırakılamaz.  
   
- <xref:System.Xml.XPath.XPathNavigator>, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren `fragment`parametresiyle işlevi çağırarak bir sonuç ağacı parçası oluşturur.  
+ , <xref:System.Xml.XPath.XPathNavigator> Sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren parametresiyle `fragment`işlevi çağırarak bir sonuç ağacı parçası oluşturur.  
   
 ## <a name="testxsl"></a>test. Xsl  
   
@@ -107,7 +107,7 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>Çıkış  
+## <a name="output"></a>Çıktı  
  Dönüşümün sonucu, **out. xml**dosyasında bulunur:  
   
 ```xml  

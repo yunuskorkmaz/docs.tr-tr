@@ -34,7 +34,7 @@ COM, .NET çalışma zamanı nesne modelinden çeşitli önemli yollarla farklı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework 'de gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
-- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)
-- [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)
+- [Çalışma Zamanı Aranabilir Sarmalayıcısı](runtime-callable-wrapper.md)
+- [COM Aranabilir Sarmalayıcısı](com-callable-wrapper.md)
 - [.NET Framework 'de standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Nasıl yapılır: .NET Framework içindeki çalışma zamanı çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

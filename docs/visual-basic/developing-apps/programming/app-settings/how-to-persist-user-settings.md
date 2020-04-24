@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kullanıcı Ayarlarını Kalıcı Yapma'
+title: 'Nasıl yapılır: Kullanıcı Ayarlarını Kalıcı Yapma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
@@ -15,22 +15,22 @@ ms.locfileid: "74329636"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Kalıcı Yapma
 
-Kullanıcı ayarlarındaki `My.Settings.Save` değişiklikleri sürdürmek için yöntemi kullanabilirsiniz.  
+Kullanıcı ayarlarındaki değişiklikleri kalıcı `My.Settings.Save` hale getirmek için yöntemini kullanabilirsiniz.  
   
- Genellikle, uygulamalar kapatıldığında kullanıcı ayarlarındaki değişiklikleri sürdürmek üzere tasarlanmıştır. Bunun nedeni, ayarları kaydetmenin birkaç etkene bağlı olarak birkaç saniye sürebileceğidir.  
+ Genellikle, uygulamalar, uygulama kapandığında Kullanıcı ayarlarındaki değişiklikleri kalıcı hale getirmek için tasarlanmıştır. Bunun nedeni, ayarların kaydedilmesi birkaç etmene bağlı olarak birkaç saniyeye göre yapılabilir.  
   
- Daha fazla bilgi için [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)' e bakın.  
+ Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Çalışma zamanında kullanıcı kapsamı ayarlarının değerlerini değiştirip kaydedebilirsiniz, ancak uygulama kapsamı ayarları salt okunur ve programlı olarak değiştirilemez. Uygulamayı oluştururken, **Proje Tasarımcısı**aracılığıyla veya uygulamanın yapılandırma dosyasını düzenleyerek uygulama kapsamı ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Çalışma zamanında kullanıcı kapsamı ayarlarının değerlerini değiştirebilir ve kaydedebilirsiniz, ancak uygulama kapsamı ayarları salt okunurdur ve program aracılığıyla değiştirilemez. Uygulamayı oluştururken, **Proje Tasarımcısı**aracılığıyla veya uygulamanın yapılandırma dosyasını düzenleyerek uygulama kapsamı ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek, `LastChanged` kullanıcı ayarı değerini değiştirir ve `My.Settings.Save` yöntemi çağırarak bu değişikliği kaydeder.  
+ Bu örnek, `LastChanged` Kullanıcı ayarının değerini değiştirir ve `My.Settings.Save` yöntemini çağırarak bu değişikliği kaydeder.  
   
  [!code-vb[VbVbalrMyResources#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#5)]  
   
- Bu örneğin çalışabilmesi için, uygulamanızın bir `LastChanged` kullanıcı `Date`ayarı olması gerekir. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Bu örneğin çalışması için, uygulamanızın türünde `LastChanged` `Date`bir Kullanıcı ayarı olması gerekir. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

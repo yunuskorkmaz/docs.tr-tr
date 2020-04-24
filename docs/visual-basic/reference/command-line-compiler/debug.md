@@ -24,24 +24,24 @@ Derleyicinin hata ayıklama bilgileri oluşturmasına ve bunu çıkış dosyası
 -debug[+ | -]
 ```
 
-veya
+or
 
 ```console
 -debug:[full | pdbonly]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-|Terim|Tanım|
+|Sözleşme Dönemi|Tanım|
 |---|---|
-|`+` &#124; `-`|İsteğe bağlı. `+` veya `-debug` belirtme derleyicinin hata ayıklama bilgileri oluşturmasına ve bir. pdb dosyasına yerleştirmesine neden olur. `-` belirtmek `-debug`Belirtmemeye yönelik aynı etkiye sahiptir.|
-|`full` &#124; `pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. `-debug:pdbonly`belirtmezseniz, varsayılan değer, çalışan programa bir hata ayıklayıcı eklemenize olanak sağlayan `full`. `pdbonly` bağımsız değişkeni, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
+|`+`&#124;`-`|İsteğe bağlı. `+` Derleyicinin hata ayıklama bilgilerini oluşturmasını ve bir. pdb dosyasına yerleştirmesini `-debug` sağlar. Belirtme `-` , belirtilmemekle `-debug`aynı etkiye sahiptir.|
+|`full`&#124;`pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Belirtmezseniz `-debug:pdbonly`, varsayılan `full`olarak, çalışan programa bir hata ayıklayıcı eklemenize olanak sağlar. `pdbonly` Bağımsız değişken, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. `-debug`, `-debug+`veya `-debug:full`belirtmezseniz, programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
+Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. , `-debug` `-debug+`Veya `-debug:full`belirtmezseniz, programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
 
-Varsayılan olarak, hata ayıklama bilgileri yayılmaz (`-debug-`). Hata ayıklama bilgilerini yayma için `-debug` veya `-debug+`belirtin.
+Varsayılan olarak, hata ayıklama bilgileri yayılmaz (`-debug-`). Hata ayıklama bilgilerini göstermek için veya `-debug` `-debug+`belirtin.
 
 Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
@@ -51,7 +51,7 @@ Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fa
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek hata ayıklama bilgilerini çıkış dosyasına `App.exe`koyar.
+Aşağıdaki örnek hata ayıklama bilgilerini çıkış dosyasına `App.exe`yerleştirir.
 
 ```console
 vbc -debug -out:app.exe test.vb

@@ -23,7 +23,7 @@ Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zaman�
   
      COM birlikte çalışabilirliği, sınıfın tüm üyelerini ve temel sınıfının üyelerini içeren bir arabirimi otomatik olarak oluşturmak için bir mekanizma sağlar, ancak açık arabirimler sağlamak çok daha iyidir. Otomatik olarak oluşturulan arabirime sınıf arabirimi denir. Yönergeler için bkz. [sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Visual Basic, C#ve C++ ' yi kullanarak, kodunuzda ARABIRIM tanımlarını ekleyebilirsiniz (IDL) veya eşdeğerini kullanmak yerine. Sözdizimi ayrıntıları için dil belgelerinize bakın.  
+     Visual Basic, C# ve C++ ' ı, arabirim tanımı dili (IDL) veya eşdeğerini kullanmak yerine kodunuzda arabirim tanımlarını eklemek için kullanabilirsiniz. Sözdizimi ayrıntıları için dil belgelerinize bakın.  
   
 - Yönetilen türler ortak olmalıdır.  
   
@@ -33,7 +33,7 @@ Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zaman�
   
 - Yöntemler, özellikler, alanlar ve olaylar ortak olmalıdır.  
   
-     Ortak türlerin üyeleri COM 'a görünür olmaları durumunda da genel olmalıdır. <xref:System.Runtime.InteropServices.ComVisibleAttribute>uygulayarak bir derlemenin görünürlüğünü, genel bir türü veya genel bir türün genel üyelerini kısıtlayabilirsiniz. Varsayılan olarak, tüm genel türler ve Üyeler görünür durumdadır.  
+     Ortak türlerin üyeleri COM 'a görünür olmaları durumunda da genel olmalıdır. Bir derlemenin görünürlüğünü, ortak bir türü veya genel bir türün genel üyelerini ' a uygulayarak kısıtlayabilirsiniz <xref:System.Runtime.InteropServices.ComVisibleAttribute>. Varsayılan olarak, tüm genel türler ve Üyeler görünür durumdadır.  
   
 - Türler COM 'dan etkinleştirilecek Ortak parametresiz bir oluşturucuya sahip olmalıdır.  
   

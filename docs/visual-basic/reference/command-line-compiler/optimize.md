@@ -23,25 +23,25 @@ Derleyici iyileştirmelerini etkinleştirilir veya devre dışı bırakır.
 -optimize[ + | - ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. @No__t-0 seçeneği derleyici iyileştirmelerini devre dışı bırakır. @No__t-0 seçeneği iyileştirmeleri sunar. Varsayılan olarak, iyileştirmeler devre dışıdır.|  
+|`+`&#124;`-`|İsteğe bağlı. `-optimize-` Seçeneği derleyici iyileştirmelerini devre dışı bırakır. `-optimize+` Seçeneği iyileştirmeleri izin vermez. Varsayılan olarak, iyileştirmeler devre dışıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici iyileştirmeleri çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirir. Ancak, iyileştirmeler çıkış dosyasında kod yeniden düzenleme ile sonuçlandığından `-optimize+`, hata ayıklamayı zorlaştırır.  
+ Derleyici iyileştirmeleri çıkış dosyanızı daha küçük, daha hızlı ve daha verimli hale getirir. Ancak, iyileştirmeler çıkış dosyasında kod yeniden düzenleme ile `-optimize+` sonuçlandığından hata ayıklamayı zorlaştırır.  
   
- Derleme için `-target:module` ile oluşturulan tüm modüllerin derleme ile aynı `-optimize` ayarları kullanması gerekir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
+ Bir derleme için ile `-target:module` oluşturulan tüm modüllerin derleme ile aynı `-optimize` ayarları kullanması gerekir. Daha fazla bilgi için bkz. [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).  
   
- @No__t-0 ve `-debug` seçeneklerini birleştirebilirsiniz.  
+ `-optimize` Ve `-debug` seçeneklerini birleştirebilirsiniz.  
   
 |Visual Studio tümleşik geliştirme ortamında ayarlanacak şekilde iyileştirmek için|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />     <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş** düğmesine tıklayın.<br />4. **Iyileştirmeleri etkinleştir** onay kutusunu değiştirin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve derleyici iyileştirmelerini sunar.  
+ Aşağıdaki kod, derleyici `T2.vb` iyileştirmelerini derler ve sunar.  
   
 ```console
 vbc t2.vb -optimize  

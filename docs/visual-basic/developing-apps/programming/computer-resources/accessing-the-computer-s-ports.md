@@ -14,35 +14,35 @@ ms.locfileid: "74329590"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>Bilgisayar Bağlantı Noktalarına Erişme (Visual Basic)
 
-Nesne, `My.Computer.Ports` bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve yöntem sağlar.  
+`My.Computer.Ports` Nesnesi, bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve bir yöntem sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
- [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- Kullanılabilir seri bağlantı noktalarını nasıl göstereceğimi gösterir.  
+ [Nasıl yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ Kullanılabilir seri bağlantı noktalarının nasıl gösterileceğini gösterir.  
   
- [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- Bilgisayarın seri bağlantı noktasına bağlı bir modemin nasıl çevrilecek lerini gösterir.  
+ [Nasıl yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ Bir bilgisayarın seri bağlantı noktasına bağlı bir modemin nasıl arayacağını gösterir.  
   
- [Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- Bir dize bilgisayarın seri bağlantı noktasına nasıl gönderilebildiğini gösterir.  
+ [Nasıl yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ Bilgisayarın seri bağlantı noktasına bir dizenin nasıl gönderileceğini gösterir.  
   
- [Nasıl Yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- Bilgisayarın seri bağlantı noktasından dize nasıl alınabildiğini gösterir.  
+ [Nasıl yapılır: Seri Bağlantı Noktalarından Dize Alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ Bilgisayarın seri bağlantı noktasından nasıl dize alınacağını gösterir.  
   
  [.NET Framework'te Bağlantı Noktası İşlemleri](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Bağlantı noktası işlemleri gerçekleştirirken .NET Framework'ün nasıl kullanılacağını açıklar.  
+ Bağlantı noktası işlemlerini gerçekleştirirken .NET Framework nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Nesneyi `My.Computer.Ports` ve üyelerini açıklar.  
+ `My.Computer.Ports` Nesnesini ve üyelerini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>  
- Bilgisayardaki `SerialPortNames` seri bağlantı noktalarının adlarının bir koleksiyonunu alan özelliği açıklar.  
+ Bilgisayardaki seri `SerialPortNames` bağlantı noktalarının bir koleksiyonunu alan özelliğini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Bir <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> `OpenSerialPort` nesne oluşturan ve açan yöntemi açıklar.  
+ <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> Nesnesini oluşturan ve açan `OpenSerialPort` yöntemi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 

@@ -15,21 +15,21 @@ ms.locfileid: "78159682"
 ---
 # <a name="extending-the-dom"></a>DOM Genişletme
 
-Microsoft .NET Framework, XML Belge Nesne Modeli (DOM) uygulamasını sağlayan bir temel sınıf kümesi içerir. <xref:System.Xml.XmlNode>ve türetilmiş sınıfları, bir XML belgesinin içeriğini ve yapısını gezinmenize, sorgulamanızı ve değiştirmenize olanak tanıyan yöntemler ve özellikler sağlar.
+Microsoft .NET Framework, XML Belge Nesne Modeli (DOM) uygulamasını sağlayan bir temel sınıf kümesi içerir. <xref:System.Xml.XmlNode>Ve türetilmiş sınıfları, bir XML belgesinin içeriğini ve yapısını gezinmenize, sorgulamanızı ve değiştirebilmeniz için yöntemler ve özellikler sağlar.
 
 XML içeriği DOM kullanılarak belleğe yüklendiğinde oluşturulan düğümler düğüm adı, düğüm türü vb. gibi bilgiler içerir. Temel sınıfların sağlamadığı belirli düğüm bilgilerinin gerekli olduğu durumlar olabilir. Örneğin, düğümün satır numarasını ve konumunu görmek isteyebilirsiniz. Bu durumda, var olan DOM sınıflarından yeni sınıflar türetebilir ve ek işlevler ekleyebilirsiniz.
 
 Yeni sınıflar türetmede iki genel kılavuz vardır:
 
-- <xref:System.Xml.XmlNode> sınıfından hiçbir şekilde türetmeniz önerilir. Bunun yerine, ilgilendiğiniz düğüm türüne karşılık gelen sınıftan sınıfları türetmeniz önerilir. Örneğin, öznitelik düğümleri hakkında ek bilgi döndürmek istiyorsanız <xref:System.Xml.XmlAttribute> sınıfından türetebilirsiniz.
+- <xref:System.Xml.XmlNode> Sınıfından hiçbir şekilde türetmeniz önerilir. Bunun yerine, ilgilendiğiniz düğüm türüne karşılık gelen sınıftan sınıfları türetmeniz önerilir. Örneğin, öznitelik düğümleri hakkında ek bilgi döndürmek istiyorsanız <xref:System.Xml.XmlAttribute> sınıfından türetebilirsiniz.
 
 - Düğüm oluşturma yöntemleri hariç, bir işlevi geçersiz kıldığınızda, işlevin temel sürümünü her zaman çağırmanız ve sonra ek işlem eklemeniz önerilir.
 
 ## <a name="creating-your-own-node-instances"></a>Kendi düğüm örneklerinizi oluşturma
 
-<xref:System.Xml.XmlDocument> sınıfı, düğüm oluşturma yöntemleri içerir. Bir XML dosyası yüklendiğinde, düğümleri oluşturmak için bu yöntemler çağırılır. Bir belge yüklendiğinde düğüm örneklerinizin oluşturulması için bu yöntemleri geçersiz kılabilirsiniz. Örneğin, <xref:System.Xml.XmlElement> sınıfını genişlettiyseniz, <xref:System.Xml.XmlDocument> sınıfını devralacak ve <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemini geçersiz kılarsınız.
+Sınıfı <xref:System.Xml.XmlDocument> , düğüm oluşturma yöntemlerini içerir. Bir XML dosyası yüklendiğinde, düğümleri oluşturmak için bu yöntemler çağırılır. Bir belge yüklendiğinde düğüm örneklerinizin oluşturulması için bu yöntemleri geçersiz kılabilirsiniz. Örneğin, <xref:System.Xml.XmlElement> sınıfı genişlettiyseniz, <xref:System.Xml.XmlDocument> sınıfını miras alıp <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi geçersiz kılabilirsiniz.
 
-Aşağıdaki örnek, <xref:System.Xml.XmlElement> sınıfının uygulamanızı döndürmek için <xref:System.Xml.XmlDocument.CreateElement%2A> yönteminin nasıl geçersiz kılınacağını göstermektedir.
+Aşağıdaki örnek, <xref:System.Xml.XmlDocument.CreateElement%2A> <xref:System.Xml.XmlElement> sınıfının uygulamanızı döndürmek için yönteminin nasıl geçersiz kılınacağını göstermektedir.
 
 ```vb
 Class LineInfoDocument
@@ -220,7 +220,7 @@ public class Test {
 }
 ```
 
-#### <a name="input"></a>Girdi
+#### <a name="input"></a>Giriş
 
 Book. xml
 
@@ -240,15 +240,15 @@ Number of elements in book.xml: 3
 
 ## <a name="node-event-handler"></a>Düğüm olay Işleyicisi
 
-DOM 'ın .NET Framework uygulanması, bir XML belgesindeki düğümler değiştiğinde olayları almanıza ve işleyebilmenizi sağlayan bir olay sistemi de içerir. <xref:System.Xml.XmlNodeChangedEventHandler> ve <xref:System.Xml.XmlNodeChangedEventArgs> sınıfları kullanarak `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`ve `NodeRemoving` olaylarını yakalayabilirsiniz.
+DOM 'ın .NET Framework uygulanması, bir XML belgesindeki düğümler değiştiğinde olayları almanıza ve işleyebilmenizi sağlayan bir olay sistemi de içerir. <xref:System.Xml.XmlNodeChangedEventHandler> Ve <xref:System.Xml.XmlNodeChangedEventArgs> sınıflarını kullanarak,,,,, `NodeChanged`ve `NodeChanging` `NodeRemoved` `NodeRemoving` olaylarını `NodeInserted`yakalayabilirsiniz `NodeInserting`.
 
 Olay işleme işlemi, özgün DOM sınıflarında olduğu gibi, türetilen sınıflarda tam olarak aynı şekilde işler.
 
-Düğüm olay işleme hakkında daha fazla bilgi için bkz. [Olaylar](../../../../docs/standard/events/index.md) ve <xref:System.Xml.XmlNodeChangedEventHandler>.
+Düğüm olay işleme hakkında daha fazla bilgi için bkz [Events](../../../../docs/standard/events/index.md) . olaylar <xref:System.Xml.XmlNodeChangedEventHandler>ve.
 
 ## <a name="default-attributes-and-the-createelement-method"></a>Default öznitelikleri ve CreateElement yöntemi
 
-Türetilmiş bir sınıfta <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemini geçersiz kılıyorsa, belgeyi düzenlenirken yeni öğeler oluştururken varsayılan öznitelikler eklenmez. Bu yalnızca düzenlenirken bir sorundur. <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi bir <xref:System.Xml.XmlDocument>varsayılan öznitelikleri eklemekten sorumlu olduğundan, bu işlevi <xref:System.Xml.XmlDocument.CreateElement%2A> yönteminde kodmalısınız. Varsayılan öznitelikleri içeren bir <xref:System.Xml.XmlDocument> yüklüyorsanız, bunlar doğru şekilde işlenir. Varsayılan öznitelikler hakkında daha fazla bilgi için bkz. [Dom 'Daki öğeler Için yeni öznitelikler oluşturma](creating-new-attributes-for-elements-in-the-dom.md).
+Türetilmiş bir sınıftaki <xref:System.Xml.XmlDocument.CreateElement%2A> yöntemi geçersiz kılıyorsa, belgeyi düzenlenirken yeni öğeler oluştururken varsayılan öznitelikler eklenmez. Bu yalnızca düzenlenirken bir sorundur. Yöntemi ' a varsayılan öznitelikler eklemekten sorumlu olduğundan, bu işlevselliği <xref:System.Xml.XmlDocument.CreateElement%2A> yönteminde kodmalısınız. <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.CreateElement%2A> Varsayılan öznitelikleri içeren bir <xref:System.Xml.XmlDocument> yüklüyorsanız, bunlar doğru şekilde işlenir. Varsayılan öznitelikler hakkında daha fazla bilgi için bkz. [Dom 'Daki öğeler Için yeni öznitelikler oluşturma](creating-new-attributes-for-elements-in-the-dom.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

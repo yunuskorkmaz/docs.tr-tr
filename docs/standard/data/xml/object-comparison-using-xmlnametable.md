@@ -49,7 +49,7 @@ if (((object)node1.Name) == ((object)node2.Name))
 { ...  
 ```  
   
- İki belge arasında geçirilen bir ad tablosunun yukarıdaki senaryosu, bir XML şeması tanım dili (XSD) şemasına veya belge türüne uyan bir eticaret sitesinde sipariş belgeleri gibi, aynı belge türü sürekli olarak işlendiğinde tipik bir noktadır. tanım (DTD) ve aynı dizeler yinelenir. Aynı ad tablosunun kullanılması, birden çok belgede aynı öğe adı gerçekleştiği için bir performans geliştirmesi sağlar.  
+ İki belge arasında geçirilen bir ad tablosunun yukarıdaki senaryosu, bir XML şeması tanım dili (xsd) şeması veya belge türü tanımı (DTD) ile uyumlu olan ve aynı dizeler tekrarlandığı bir e-ticaret sitesinde sipariş belgeleri gibi, aynı belge türü her zaman sürekli işlendiğinde tipik bir addır. Aynı ad tablosunun kullanılması, birden çok belgede aynı öğe adı gerçekleştiği için bir performans geliştirmesi sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

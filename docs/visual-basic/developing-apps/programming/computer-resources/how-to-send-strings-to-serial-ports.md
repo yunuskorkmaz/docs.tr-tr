@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme'
+title: 'Nasıl yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, sending strings to
@@ -16,33 +16,33 @@ ms.locfileid: "74345581"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Seri Bağlantı Noktalarına Dizeler Gönderme
 
-Bu konu, Visual `My.Computer.Ports` Basic'te bilgisayarın seri bağlantı noktalarına dizeleri göndermek için nasıl kullanılacağını açıklar.  
+Bu konuda, Visual Basic bilgisayarın seri `My.Computer.Ports` bağlantı noktalarına dize göndermek için nasıl kullanılacağı açıklanmaktadır.  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek, COM1 seri bağlantı noktasına bir dize gönderir. Bilgisayarınızda farklı bir seri bağlantı noktası kullanmanız gerekebilir.  
+ Bu örnekte, COM1 seri bağlantı noktasına bir dize gönderilir. Bilgisayarınızda farklı bir seri bağlantı noktası kullanmanız gerekebilir.  
   
- Bağlantı `My.Computer.Ports.OpenSerialPort` noktasına başvuruda bulunulmak için yöntemi kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Bağlantı noktasına `My.Computer.Ports.OpenSerialPort` bir başvuru almak için yöntemini kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
- Blok, `Using` bir özel durum oluştursa bile uygulamanın seri bağlantı noktasını kapatmasına olanak tanır. Seri bağlantı noktasını işleyen tüm kodbu blok `Try...Catch...Finally` içinde veya bir blok içinde görünmelidir.  
+ `Using` Blok, uygulamanın bir özel durum oluşturursa bile seri bağlantı noktasını kapatmasını sağlar. Seri bağlantı noktasını işleyen tüm kodlar bu blok içinde veya bir `Try...Catch...Finally` blok içinde görünmelidir.  
   
- Yöntem <xref:System.IO.Ports.SerialPort.WriteLine%2A> verileri seri bağlantı noktasına gönderir.  
+ <xref:System.IO.Ports.SerialPort.WriteLine%2A> Yöntemi, verileri seri bağlantı noktasına gönderir.  
   
  [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Bu örnek, bilgisayarın kullandığını `COM1`varsayar.  
+- Bu örnekte, bilgisayarın kullandığı `COM1`varsayılır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Bu örnek, bilgisayarın kullandığını `COM1`varsayar; daha fazla esneklik için, kod kullanıcıkullanılabilir bağlantı noktaları listesinden istenen seri bağlantı noktasını seçmek için izin vermelidir. Daha fazla bilgi için [bkz: Kullanılabilir Seri Bağlantı Noktalarını Göster.](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ Bu örnek bilgisayarın kullandığını `COM1`varsayar; daha fazla esneklik için, kod kullanıcının kullanılabilir bağlantı noktası listesinden istenen seri bağlantı noktasını seçmesine izin verir. Daha fazla bilgi için bkz. [nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- Bu örnek, `Using` bir özel durum atsa bile uygulamanın bağlantı noktasını kapattıklarından emin olmak için bir blok kullanır. Daha fazla bilgi için [bkz.](../../../../visual-basic/language-reference/statements/using-statement.md)  
+ Bu örnek, bir `Using` özel durum oluşturursa uygulamanın bağlantı noktasını kapatdığından emin olmak için bir bloğu kullanır. Daha fazla bilgi için bkz. [using deyimleri](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [Nasıl Yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Nasıl Yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [Nasıl yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Nasıl yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

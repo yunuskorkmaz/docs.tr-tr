@@ -31,97 +31,97 @@ ms.locfileid: "74348918"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic'te Dosya ve Dizin Oluşturma, Silme ve Taşıma
 
-Bu bölümde Visual Basic'te dosya ve dizin oluşturma, silme, taşıma ve yeniden adlandırma ile ilişkili görevler listelenir.  
+Bu bölümde, Visual Basic dosya ve dizinleri oluşturma, silme, taşıma ve yeniden adlandırma ile ilgili görevler listelenmiştir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Nasıl Yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- Yalnızca .txt dosyaları gibi belirli bir dosya adı deseni olan dosyaların bir dizine nasıl kopyalanılsüreceğini gösterir.  
+ Belirli bir dosya adı düzeniyle (örneğin, yalnızca. txt dosyaları gibi) dosyaların bir dizine nasıl kopyalanacağını gösterir.  
   
  [Nasıl Yapılır: Aynı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- Aynı dizinde bir dosyanın kopyasının nasıl oluşturulurunun gösterildiğini gösterir.  
+ Aynı dizindeki bir dosyanın kopyasının nasıl oluşturulacağını gösterir.  
   
  [Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- Bir dosyanın başka bir dizin için nasıl kopyalanıl süreceğini gösterir.  
+ Bir dosyanın başka bir dizine nasıl kopyalanacağını gösterir.  
   
  [Nasıl Yapılır: Dosya Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
- Dosyanın nasıl oluşturulurulur gösterir.  
+ Dosya oluşturmayı gösterir.  
   
  [Nasıl Yapılır: Dosya Silme](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
- Bir dosyanın nasıl silinir gösteriş.  
+ Bir dosyanın nasıl silineceğini gösterir.  
   
  [Nasıl Yapılır: Belirli bir Düzendeki Dosyaları Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- Yalnızca bir dizinde belirli bir dosya adı deseni olan dosyaların nasıl listelenebildiğini gösterir.  
+ Bir dizinde yalnızca belirli bir dosya adı düzenine sahip dosyaların nasıl listeleyeceğinizi gösterir.  
   
  [Nasıl Yapılır: Dosya Taşıma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- Bir dosyanın nasıl farklı bir dizine taşındığını gösterir.  
+ Bir dosyanın farklı bir dizine nasıl taşınacağını gösterir.  
   
  [Nasıl Yapılır: Dosyayı Yeniden Adlandırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- Bir dosyanın nasıl yeniden adlandırılabildiğini gösterir.  
+ Bir dosyanın nasıl yeniden adlandırılacağını gösterir.  
   
  [Nasıl Yapılır: Bir Dizini Diğerine Kopyalama](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- Dizinin başka bir konuma nasıl kopyalanılsüreceğini gösterir.  
+ Bir dizinin başka bir konuma nasıl kopyalanacağını gösterir.  
   
  [Nasıl Yapılır: Dizin Oluşturma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
- Dizin oluşturmanın nasıl yapılacağını gösterir.  
+ Bir dizinin nasıl oluşturulacağını gösterir.  
   
  [Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- Adlarında belirli bir desen olan dizinlerin nasıl listelenebildiğini gösterir.  
+ Belirli bir düzene sahip dizinlerin adlarını nasıl listeleyeceğinizi gösterir.  
   
  [Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
- Dosyaların dizindeki nasıl listelenebildiğini gösterir.  
+ Dizindeki dosyaların nasıl listeleyeceğinizi gösterir.  
   
  [Nasıl Yapılır: Belgelerim Dizini İçeriğini Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- Özel dizinlerden nasıl okunduğunu gösterir.  
+ Özel dizinlerden nasıl okunacağını gösterir.  
   
  [Nasıl Yapılır: Dosya Yollarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- Dosya yollarını birleştirmek `My` için yöntemlerin nasıl kullanılacağını gösterir.  
+ Dosya yollarını birleştirmek için `My` yöntemlerin nasıl kullanılacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Nesneyi `My.Computer.FileSystem` ve üyelerini açıklar.  
+ `My.Computer.FileSystem` Nesnesini ve üyelerini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- `CombinePath` Yöntemi açıklar.  
+ `CombinePath` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- `CopyDirectory` Yöntemi açıklar.  
+ `CopyDirectory` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- `CopyFile` Yöntemi açıklar.  
+ `CopyFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- `CreateDirectory` Yöntemi açıklar.  
+ `CreateDirectory` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A>  
- `DeleteDirectory` Yöntemi açıklar.  
+ `DeleteDirectory` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A>  
- `DeleteFile` Yöntemi açıklar.  
+ `DeleteFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A>  
- `GetParentPath` Yöntemi açıklar.  
+ `GetParentPath` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveDirectory%2A>  
- `MoveDirectory` Yöntemi açıklar.  
+ `MoveDirectory` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- `MoveFile` Yöntemi açıklar.  
+ `MoveFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameDirectory%2A>  
- `RenameDirectory` Yöntemi açıklar.  
+ `RenameDirectory` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- `RenameFile` Yöntemi açıklar.  
+ `RenameFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- Nesneyi `SpecialDirectories` açıklar.  
+ `SpecialDirectories` Nesnesini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 
  [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Dosyalardan okumayla ilişkili görevleri listeler.  
+ Dosyalardan okunmayla ilişkili görevleri listeler.  
   
  [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- Dosyalara yazmayla ilgili görevleri listeler.
+ Dosyalara yazmayı içeren görevleri listeler.

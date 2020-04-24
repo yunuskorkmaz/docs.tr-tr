@@ -15,7 +15,7 @@ ms.locfileid: "75447141"
 
 ## <a name="concurrency"></a>Eşzamanlılık
 
-SQLite 'ta, tek seferde veritabanında bekleyen değişikliklere yalnızca bir işlem izin verilir. Bu nedenle, başka bir işlemin tamamlanabilmesi çok uzun sürerse <xref:Microsoft.Data.Sqlite.SqliteCommand> <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> ve `Execute` yöntemlerine yapılan çağrılar zaman aşımına uğrar.
+SQLite 'ta, tek seferde veritabanında bekleyen değişikliklere yalnızca bir işlem izin verilir. Bu nedenle, başka bir işlemin <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> tamamlanamayacak `Execute` kadar uzun <xref:Microsoft.Data.Sqlite.SqliteCommand> sürme durumunda ve üzerinde yapılan çağrılar zaman aşımına uğrar.
 
 Kilitleme, yeniden denemeler ve zaman aşımları hakkında daha fazla bilgi için bkz. [veritabanı hataları](database-errors.md).
 
@@ -31,8 +31,8 @@ SQLite, paylaşılan bir önbellek kullanılırken **read UNCOMMITTED** öğesin
 
 - *Hayali* nesnelerin, bir işlem sırasında bir sorgunun where yan tümcesini karşılamak için değiştirilen veya eklenen satırlardır. İzin veriliyorsa aynı sorgu aynı işlemde iki kez yürütüldüğünde aynı sorgu farklı satırlar döndürebilir.
 
-Microsoft. Data. SQLite, <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> geçirilen IsolationLevel 'ı en düşük düzey olarak değerlendirir. Gerçek yalıtım düzeyi READ UNCOMMITTED veya Serializable olarak yükseltilir.
+Microsoft. Data. SQLite, geçirilen IsolationLevel 'ı <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> en düşük düzey olarak değerlendirir. Gerçek yalıtım düzeyi READ UNCOMMITTED veya Serializable olarak yükseltilir.
 
-Aşağıdaki kod, bir kirli okumayı benzetir. Bağlantı dizesinin `Cache=Shared`içermesi gerektiğini göz önünde bulundurun.
+Aşağıdaki kod, bir kirli okumayı benzetir. Bağlantı dizesinin içermesi gerektiğini göz önünde bulundurun `Cache=Shared`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]

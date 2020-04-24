@@ -14,32 +14,32 @@ ms.locfileid: "74345546"
 ---
 # <a name="performing-network-operations-visual-basic"></a>Ağ İşlemlerini Gerçekleştirme (Visual Basic)
 
-Aşağıdaki tablolar `My.Computer.Network` nesneile ilişkili görevleri listeler.  
+Aşağıdaki tablolarda `My.Computer.Network` nesnesiyle ilişkili görevler listelenmiştir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
- [Nasıl Yapılır: Karşıya Dosya Yükleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Bir dosyanın nasıl yüklendiğini ve uzak bir `My.Computer.Network`konuma nasıl depolayabildiğini gösterir.  
+ [Nasıl yapılır: Karşıya Dosya Yükleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ Bir dosyayı karşıya yüklemeyi ve kullanarak `My.Computer.Network`uzak bir konuma depolamayı gösterir.  
   
- [Nasıl Yapılır: Dosya İndirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Bir dosyayı uzak bir konumdan `My.Computer.Network`nasıl indirilir' i kullanarak gösterir.  
+ [Nasıl yapılır: Dosya İndirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ Kullanılarak `My.Computer.Network`uzak bir konumdan bir dosyanın nasıl indirileceğini gösterir.  
   
- [Nasıl Yapılır: Bağlantı Durumunu Denetleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- Bilgisayarın çalışan bir ağ bağlantısı olup olmadığını nasıl belirleyeceklerini gösterir.  
+ [Nasıl yapılır: Bağlantı Durumunu Denetleme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ Bilgisayarın çalışan bir ağ bağlantısına sahip olup olmadığını nasıl belirleyeceğini gösterir.  
   
 ## <a name="reference"></a>Başvuru  
 
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Ağla çalışmak için yöntemleri, özellikleri ve olayları listeler.  
+ Ağ ile çalışmaya yönelik yöntemleri, özellikleri ve olayları listeler.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- `DownloadFile` Yöntemi açıklar.  
+ `DownloadFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.Ping%2A>  
- `Ping` Yöntemi açıklar.  
+ `Ping` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- `UploadFile` Yöntemi açıklar.  
+ `UploadFile` Yöntemini açıklar.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>  
- `IsAvailable` Özelliği açıklar.
+ `IsAvailable` Özelliğini açıklar.

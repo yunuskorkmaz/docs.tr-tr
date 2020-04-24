@@ -20,7 +20,7 @@ Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programla
   
  Aşağıdaki basit XML 'e sahipseniz:  
   
- **Girdi**  
+ **Giriş**  
   
 ```xml  
 <book>  
@@ -33,11 +33,11 @@ Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programla
  ![örnek düğüm ağacı](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Kitap ve başlık düğümü ağaç gösterimi  
   
- `book` öğesi bir **XmlElement** nesnesi olur, bir next öğesi `title`bir **XmlElement**olur, ancak element içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
+ `book` Öğesi bir **XmlElement** nesnesi olur, Next öğesi `title`de bir **XmlElement**olur, ancak öğe içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
   
  Aşağıdaki örnek, XML verilerinde okur ve düğüm türüne bağlı olarak farklı metin yazar. Aşağıdaki XML veri dosyasını input, **Items. xml**olarak kullanma:  
   
- **Girdi**  
+ **Giriş**  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -187,30 +187,30 @@ public class Sample
 |Girdi|Çıktı|Düğüm türü testi|  
 |-----------|------------|--------------------|  
 |\<? XML Version = "1.0"? >|\<? XML sürümü = ' 1.0 '? >|XmlNodeType. Xmlbildirimi|  
-|Bu örnek bir XML belgesi olan \<!--. >|Bu örnek bir XML belgesi olan \<!--. >|XmlNodeType. Comment|  
-|\<! DOCTYPE öğeleri [\<! VARLıK numarası "123" >] >|\<! DOCTYPE öğeleri [\<! VARLıK numarası "123" >]|XmlNodeType. DocumentType|  
-|Öğeleri \<>|Öğeleri \<>|XmlNodeType. element|  
-|Öğe > \<|Öğe > \<|XmlNodeType. element|  
-|Bir varlıkla test edin: &number;|Bir varlıkla test: 123|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Öğe > \<|Öğe > \<|XmNodeType. element|  
-|alt öğe ile test etme|alt öğe ile test etme|XmlNodeType.Text|  
-|\<daha >|\<daha >|XmlNodeType. element|  
-|Çocuk|Çocuk|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Öğe > \<|Öğe > \<|XmlNodeType. element|  
+|\<Örnek bir XML belgesi olan!---->|\<Örnek bir XML belgesi olan!---->|XmlNodeType. Comment|  
+|\<! DOCTYPE öğeleri [\<! VARLıK numarası "123" >] >|\<! DOCTYPE öğeleri [\<! "123" VARLıK numarası >]|XmlNodeType. DocumentType|  
+|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|Bir varlıkla test edin:&number;|Bir varlıkla test: 123|XmlNodeType. Text|  
+|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\<Öğe>|\<Öğe>|XmNodeType. element|  
+|alt öğe ile test etme|alt öğe ile test etme|XmlNodeType. Text|  
+|\<daha fazla>|\<daha fazla>|XmlNodeType. element|  
+|Çocuk|Çocuk|XmlNodeType. Text|  
+|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\<Öğe>|\<Öğe>|XmlNodeType. element|  
 |CDATA bölümüyle test etme|CDATA bölümüyle test etme|XmlTest. Text|  
-|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest. CDATA|  
-|def|def|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Öğe > \<|Öğe > \<|XmlNodeType. element|  
-|Bir Char varlığıyla test edin: &\#65;|Bir Char varlığı ile test: A|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|Bu öğedeki on dört karakter!--\<.-->|\<--bu öğedeki on dört karakter.-->|XmlNodeType. Comment|  
-|Öğe > \<|Öğe > \<|XmlNodeType. element|  
-|1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</Item >|\</Item >|XmlNodeType.EndElement|  
-|\</Items >|\</Items >|XmlNodeType.EndElement|  
+|<! [CDATA [\<456>]]\>|<! [CDATA [\<456>]]\>|XmlTest. CDATA|  
+|def|def|XmlNodeType. Text|  
+|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|Bir Char varlığıyla test: &\#65;|Bir Char varlığı ile test: A|XmlNodeType. Text|  
+|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\<Bu öğede on dört karakter!--.-->|\<--Bu öğedeki on dört karakter.-->|XmlNodeType. Comment|  
+|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|1234567890ABCD|1234567890ABCD|XmlNodeType. Text|  
+|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\</Items>|\</Items>|XmlNodeType. EndElement|  
   
  Düğüm türü ne tür eylemlerin geçerli olduğunu ve ne tür özellikleri ayarlayabileceğinizi ve alabildiğinizi kontrol etmek için hangi düğüm türünün atandığını bilmeniz gerekir.  
   

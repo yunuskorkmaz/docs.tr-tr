@@ -24,7 +24,7 @@ Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş o
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için `-deterministic` seçeneğini kullanın, biri derlemeler genelinde özdeş olan ikili içerik.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı `-deterministic` sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
 
 Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
@@ -44,9 +44,9 @@ Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
   - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
 - Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
 - Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
-- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `-lib` veya `-recurse`tarafından).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, veya `-lib` `-recurse`ile).
 - Derleyicinin çalıştırıldığı CLR platformu.
-- `%LIBPATH%`değeri, çözümleyici bağımlılığını yüklemeyi etkileyebilecek.
+- `%LIBPATH%`, Çözümleyici bağımlılığı yüklemeyi etkileyebilecek değeri.
 
 Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğini oluşturmak için belirleyici derleme kullanılabilir. Ayrıca, bir ikiliye yapılan değişikliklere bağımlı derleme adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir derleme sisteminde de yararlı olabilir.
 

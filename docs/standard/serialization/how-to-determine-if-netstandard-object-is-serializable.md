@@ -21,7 +21,7 @@ ms.locfileid: "78159903"
 
 .NET Standard hedefleyen bir kitaplık geliştirdiyseniz, kitaplığınız .NET Standard destekleyen herhangi bir .NET uygulaması tarafından tüketilebilir. Bu, belirli bir türün serileştirilebilir olup olmadığını önceden belirleyemeyeceğiniz anlamına gelir. çalışma zamanında seri hale getirilebilir olup olmadığını belirleyebilirsiniz.
 
-Nesnenin türünü temsil eden bir <xref:System.Type> nesnesinin <xref:System.Type.IsSerializable> özelliğinin değerini alarak, bir nesnenin çalışma zamanında seri hale getirilebilir olup olmadığını belirleyebilirsiniz. Aşağıdaki örnek bir uygulama sağlar. Herhangi bir <xref:System.Object> örneğinin seri hale getirilemeyeceğini belirten bir `IsSerializable(Object)` uzantısı yöntemi tanımlar.
+Nesnenin türünü temsil eden <xref:System.Type.IsSerializable> <xref:System.Type> nesnenin özelliğinin değerini alarak çalışma zamanında bir nesnenin seri hale getirilebilir olup olmadığını belirleyebilirsiniz. Aşağıdaki örnek bir uygulama sağlar. Herhangi <xref:System.Object> bir örneğin `IsSerializable(Object)` seri hale getirilemeyeceğini belirten bir genişletme yöntemi tanımlar.
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]

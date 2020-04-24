@@ -39,14 +39,14 @@ Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan
  Belirtilen kitaplığa (DLL) bir başvuru ile derleyin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 derleyici seçeneği, derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan derlenmesi gerektiğini belirtmenize olanak sağlar. Visual Basic çalışma zamanı kitaplığına başvuru olmadan derlerseniz, hatalar veya uyarılar bir Visual Basic çalışma zamanı Yardımcısı çağrısı üreten kod veya dil yapılarında günlüğe kaydedilir. ( *Visual Basic çalışma zamanı Yardımcısı* , belirli bir dil anlam yürütmesi yürütmek için çalışma zamanında çağrılan Microsoft. VisualBasic. dll ' de tanımlanan bir işlevdir.)  
+ `-vbruntime` Derleyici seçeneği, derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan derlenmesi gerektiğini belirtmenize olanak sağlar. Visual Basic çalışma zamanı kitaplığına başvuru olmadan derlerseniz, hatalar veya uyarılar bir Visual Basic çalışma zamanı Yardımcısı çağrısı üreten kod veya dil yapılarında günlüğe kaydedilir. ( *Visual Basic çalışma zamanı Yardımcısı* , belirli bir dil anlam yürütmesi yürütmek için çalışma zamanında çağrılan Microsoft. VisualBasic. dll ' de tanımlanan bir işlevdir.)  
   
- @No__t-0 seçeneği, hiçbir `-vbruntime` anahtarı belirtilmemişse oluşan aynı davranışı üretir. Önceki `-vbruntime` anahtarlarını geçersiz kılmak için `-vbruntime+` seçeneğini kullanabilirsiniz.  
+ `-vbruntime+` Seçeneği, `-vbruntime` anahtar belirtilmediğinde oluşan aynı davranışı üretir. Daha önceki `-vbruntime` anahtarları geçersiz `-vbruntime+` kılmak için seçeneğini kullanabilirsiniz.  
   
- @No__t-0 türündeki nesnelerin çoğu, `-vbruntime-` veya `-vbruntime:path` seçeneklerini kullandığınızda kullanılamaz.  
+ Veya seçeneklerini kullandığınızda, `My` `-vbruntime:path` türün çoğu nesne `-vbruntime-` kullanılamaz.  
   
 ## <a name="embedding-visual-basic-runtime-core-functionality"></a>Visual Basic çalışma zamanı temel işlevlerini katıştırma  
- @No__t-0 seçeneği, bir çalışma zamanı kitaplığı başvurusu olmadan derlemenize olanak sağlar. Bunun yerine, Visual Basic çalışma zamanı kitaplığındaki çekirdek işlevsellik Kullanıcı derlemesine katıştırılır. Uygulamanız Visual Basic çalışma zamanı içermeyen platformlarda çalışıyorsa, bu seçeneği kullanabilirsiniz.  
+ Seçeneği `-vbruntime*` , bir çalışma zamanı kitaplığı başvurusu olmadan derlemenize olanak sağlar. Bunun yerine, Visual Basic çalışma zamanı kitaplığındaki çekirdek işlevsellik Kullanıcı derlemesine katıştırılır. Uygulamanız Visual Basic çalışma zamanı içermeyen platformlarda çalışıyorsa, bu seçeneği kullanabilirsiniz.  
   
  Aşağıdaki çalışma zamanı üyeleri katıştırılır:  
   
@@ -58,37 +58,37 @@ Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan
   
 - <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> yöntemi  
   
-- <xref:Microsoft.VisualBasic.Constants.vbBack> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbBack>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCr> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbCr>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbCrLf> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbLf> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbLf>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNewLine> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullChar> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbNullString> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbTab> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbTab>sabit  
   
-- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> sabiti  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>sabit  
   
-- @No__t-0 türündeki bazı nesneler  
+- `My` Türün bazı nesneleri  
   
- @No__t-0 seçeneğini kullanarak derlerseniz ve kodunuz çekirdek işlevlerle gömülü olmayan Visual Basic çalışma zamanı kitaplığından bir üyeye başvuruyorsa, derleyici üyenin kullanılabilir olmadığını belirten bir hata döndürür.  
+ `-vbruntime*` Seçeneğini kullanarak derlerseniz ve kodunuz çekirdek işlevlerle gömülü olmayan Visual Basic çalışma zamanı kitaplığından bir üyeye başvuruyorsa, derleyici üyenin kullanılamaz olduğunu belirten bir hata döndürür.  
   
 ## <a name="referencing-a-specified-library"></a>Belirtilen bir kitaplığa başvurma  
- Varsayılan Visual Basic çalışma zamanı kitaplığı yerine özel bir çalışma zamanı kitaplığı başvurusuyla derlemek için `path` bağımsız değişkenini kullanabilirsiniz.  
+ Varsayılan Visual Basic çalışma zamanı `path` kitaplığı yerine özel bir çalışma zamanı kitaplığı başvurusuyla derlemek için bağımsız değişkenini kullanabilirsiniz.  
   
- @No__t-0 bağımsız değişkeninin değeri bir DLL 'nin tam yolu ise, derleyici bu dosyayı çalışma zamanı kitaplığı olarak kullanır. @No__t-0 bağımsız değişkeninin değeri bir DLL 'nin tam yolu değilse, Visual Basic Derleyicisi önce geçerli klasörde tanımlanan DLL 'yi arar. Daha sonra [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) derleyici seçeneğini kullanarak belirttiğiniz yolda arama yapılır. @No__t-0 derleyici seçeneği kullanılmazsa, derleyici .NET Framework klasöründe tanımlanan DLL 'yi (`%systemroot%\Microsoft.NET\Framework\versionNumber`) arar.  
+ `path` Bağımsız değişkenin DEĞERI bir dll 'nin tam yolu ise, derleyici çalışma zamanı kitaplığı olarak bu dosyayı kullanacaktır. `path` Bağımsız değişkenin DEĞERI bir dll 'ye tam yol değilse, Visual Basic derleyici önce geçerli KLASÖRDE tanımlanan dll 'yi arar. Daha sonra [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) derleyici seçeneğini kullanarak belirttiğiniz yolda arama yapılır. `-sdkpath` Derleyici seçeneği kullanılmazsa, derleyici .NET Framework klasöründe (`%systemroot%\Microsoft.NET\Framework\versionNumber`) tanımlanan dll 'yi arar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir özel kitaplığa başvuru ile derlemek için `-vbruntime` seçeneğinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, özel bir kitaplığa yönelik bir `-vbruntime` başvuruya sahip derleme için seçeneğinin nasıl kullanılacağını gösterir.  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -98,5 +98,5 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 
 - [Visual Basic Core – Visual Studio 2010 SP1 'de yeni derleme modu](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

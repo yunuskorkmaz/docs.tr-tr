@@ -17,13 +17,13 @@ Microsoft. Data. SQLite ile [kaber](https://stackexchange.github.io/Dapper/)kull
 
 SQLite parametre adları büyük/küçük harfe duyarlıdır. SQL 'de kullanılan parametre adlarının anonim nesne özellikleri ile eşleştiğinden emin olun. Sorun [#18861](https://github.com/dotnet/efcore/issues/18861) bu deneyimi iyileştirir.
 
-Paber Ayrıca `@` önekini kullanmak için parametreler bekliyor. Diğer ön ekler çalışmaz.
+Paber aynı zamanda, `@` ön eki kullanmak için parametreler bekliyor. Diğer ön ekler çalışmaz.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_Parameter)]
 
 ## <a name="data-types"></a>Veri türleri
 
-Kaber, SqliteDataReader Dizin oluşturucuyu kullanarak değerleri okur. Bu dizin oluşturucunun dönüş türü Object, yani yalnızca Long, Double, String veya Byte [] değerlerini döndürdüğüne gelir. Daha fazla bilgi için bkz. [veri türleri](types.md). Kaber, bu ve diğer temel türler arasındaki dönüştürmelerin çoğunu işler. Ne yazık ki `DateTimeOffset`, `Guid`veya `TimeSpan`işlemez. Sonuçlarınızda bu türleri kullanmak istiyorsanız tür işleyicileri oluşturun.
+Kaber, SqliteDataReader Dizin oluşturucuyu kullanarak değerleri okur. Bu dizin oluşturucunun dönüş türü Object, yani yalnızca Long, Double, String veya Byte [] değerlerini döndürdüğüne gelir. Daha fazla bilgi için bkz. [veri türleri](types.md). Kaber, bu ve diğer temel türler arasındaki dönüştürmelerin çoğunu işler. Ne yazık ki,, `DateTimeOffset`veya `Guid` `TimeSpan`işlemez. Sonuçlarınızda bu türleri kullanmak istiyorsanız tür işleyicileri oluşturun.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_TypeHandlers)]
 

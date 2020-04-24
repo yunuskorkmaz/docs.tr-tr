@@ -14,36 +14,36 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709705"
 ---
 # <a name="xslt-parameters"></a>XSLT Parametreleri
-XSLT parametreleri, <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanılarak eklenir. Tam ad ve ad alanı URI 'SI parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
+XSLT parametreleri <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanılarak öğesine eklenir. Tam ad ve ad alanı URI 'SI parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
   
 ### <a name="to-use-an-xslt-parameter"></a>XSLT parametresi kullanmak için  
   
-1. <xref:System.Xml.Xsl.XsltArgumentList> nesnesi oluşturun ve <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanarak parametreyi ekleyin.  
+1. <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> Yöntemini kullanarak bir <xref:System.Xml.Xsl.XsltArgumentList> nesne oluşturun ve parametresini ekleyin.  
   
 2. Stil sayfasından parametresini çağırın.  
   
-3. <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine geçirin.  
   
 ## <a name="parameter-types"></a>Parametre Türleri  
  Parameter nesnesi bir W3C türüne karşılık gelmelidir. Aşağıdaki tabloda karşılık gelen W3C türleri, eşdeğer Microsoft .NET sınıfları (türü) ve W3C türünün bir XPath türü veya XSLT türü olup olmadığı gösterilmektedir.  
   
 |W3C türü|Eşdeğer .NET sınıfı (tür)|XPath veya XSLT türü|  
 |--------------|------------------------------------|------------------------|  
-|`String`|<xref:System.String?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Number`|<xref:System.Double?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`String`|<xref:System.String?displayProperty=nameWithType>|XPath|  
+|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|XPath|  
+|`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
-|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator []**|{1&gt;XPath&lt;1}|  
+|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator []**|XPath|  
   
- \* Bu, tek bir düğüm içeren bir düğüm kümesine eşdeğerdir.  
+ * Bu, tek bir düğüm içeren bir düğüm kümesine eşdeğerdir.  
   
- Parametre nesnesi yukarıdaki sınıflardan biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türleri <xref:System.Double>dönüştürülür. <xref:System.DateTime> türü <xref:System.String>dönüştürülür. <xref:System.Xml.XPath.IXPathNavigable> türler <xref:System.Xml.XPath.XPathNavigator>dönüştürülür. **XPathNavigator []** <xref:System.Xml.XPath.XPathNodeIterator>dönüştürüldü.  
+ Parametre nesnesi yukarıdaki sınıflardan biri değilse, aşağıdaki kurallara göre dönüştürülür. Ortak dil çalışma zamanı (CLR) sayısal türleri öğesine <xref:System.Double>dönüştürülür. <xref:System.DateTime> Tür öğesine <xref:System.String>dönüştürülür. <xref:System.Xml.XPath.IXPathNavigable>türler öğesine <xref:System.Xml.XPath.XPathNavigator>dönüştürülür. **XPathNavigator []** , öğesine <xref:System.Xml.XPath.XPathNodeIterator>dönüştürüldü.  
   
  Diğer tüm türler bir hata oluşturur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, hesaplanan indirim tarihini tutacak bir parametre oluşturmak için <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemini kullanır. İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.  
+ Aşağıdaki örnek, hesaplanan indirim <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> tarihini tutacak bir parametre oluşturmak için yöntemini kullanır. İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
@@ -56,7 +56,7 @@ XSLT parametreleri, <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.
 ##### <a name="discountxsl"></a>Discount. Xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -46,20 +46,20 @@ System. Data. SQLite, doğrudan .NET türlerine eşlenen sütun türlerine ek se
 
 Microsoft. Data. SQLite daha az sayıda [bağlantı dizesi](connection-strings.md) anahtar kelimiştir. Aşağıdaki tabloda, yerine kullanılabilecek alternatifler gösterilmektedir.
 
-| Anahtar sözcüğü          | Yapıyı                                         |
+| Sözcükle          | Yapıyı                                         |
 | ---------------- | --------------------------------------------------- |
-| Önbellek Boyutu       | `PRAGMA cache_size = <pages>` gönder                  |
+| Önbellek Boyutu       | Gönder`PRAGMA cache_size = <pages>`                  |
 | Varsayılan Zaman Aşımı  | SqliteConnection üzerinde DefaultTimeout özelliğini kullanın |
 | FailIfMissing    | `Mode=ReadWrite` kullan                                |
 | FullUri          | Veri kaynağı anahtar sözcüğünü kullanma                         |
-| Günlük modu     | `PRAGMA journal_mode = <mode>` gönder                 |
-| Eski biçim    | `PRAGMA legacy_file_format = 1` gönder                |
-| En fazla sayfa sayısı   | `PRAGMA max_page_count = <pages>` gönder              |
-| Sayfa Boyutu        | `PRAGMA page_size = <bytes>` gönder                   |
+| Günlük modu     | Gönder`PRAGMA journal_mode = <mode>`                 |
+| Eski biçim    | Gönder`PRAGMA legacy_file_format = 1`                |
+| En fazla sayfa sayısı   | Gönder`PRAGMA max_page_count = <pages>`              |
+| Sayfa Boyutu        | Gönder`PRAGMA page_size = <bytes>`                   |
 | Salt Okunur        | `Mode=ReadOnly` kullan                                 |
-| Zaman uyumlu      | `PRAGMA synchronous = <mode>` gönder                  |
-| Uri              | Veri kaynağı anahtar sözcüğünü kullanma                         |
-| UseUTF16Encoding | `PRAGMA encoding = 'UTF-16'` gönder                   |
+| Zaman Uyumlu      | Gönder`PRAGMA synchronous = <mode>`                  |
+| Kullanılmamışsa              | Veri kaynağı anahtar sözcüğünü kullanma                         |
+| UseUTF16Encoding | Gönder`PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>Yetkilendirme
 

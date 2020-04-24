@@ -22,14 +22,14 @@ Başvurulan derlemelerin konumunu belirtir.
 -libpath:dirList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`dirList`|Gerekli. Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırmakta olduğunuz dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde, derleyicinin aranacağı dizinlerin noktalı virgülle ayrılmış listesi. Dizin adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
+|`dirList`|Gereklidir. Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırmakta olduğunuz dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde, derleyicinin aranacağı dizinlerin noktalı virgülle ayrılmış listesi. Dizin adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-libpath` seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
+ `-libpath` Seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
   
  Derleyici, aşağıdaki sırada tam olarak nitelenen derleme başvurularını arar:  
   
@@ -37,20 +37,20 @@ Başvurulan derlemelerin konumunu belirtir.
   
 2. Ortak dil çalışma zamanı sistem dizini.  
   
-3. `-libpath`tarafından belirtilen dizinler.  
+3. Tarafından `-libpath`belirtilen dizinler.  
   
 4. LıB ortam değişkeni tarafından belirtilen dizinler.  
   
- `-libpath` seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
+ `-libpath` Seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
   
- Derleme başvurusunu belirtmek için `-reference` kullanın.  
+ Derleme `-reference` başvurusunu belirtmek için kullanın.  
   
 |Visual Studio tümleşik geliştirme ortamında Set-libpath|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. **başvuru yolları...** düğmesine tıklayın.<br />4. **başvuru yolları** iletişim kutusunda dizin adını **klasör:** kutusuna girin.<br />5. **Klasör Ekle**'ye tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir. exe dosyası oluşturmak için `T2.vb` derler. Derleyici, C: sürücüsünün kök dizininde ve derleme başvuruları için C: sürücüsünün yeni derlemeler dizininde çalışma dizinine bakar.  
+ Aşağıdaki kod, bir `T2.vb` . exe dosyası oluşturmak için derlenir. Derleyici, C: sürücüsünün kök dizininde ve derleme başvuruları için C: sürücüsünün yeni derlemeler dizininde çalışma dizinine bakar.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  

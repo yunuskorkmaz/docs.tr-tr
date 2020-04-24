@@ -7,4 +7,4 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "65639119"
 ---
 > [!WARNING]
-> İkili serileştirme tehlikeli olabilir. Hiçbir zaman güvenilmeyen bir kaynaktan gelen verileri deserialize ve asla gidiş-dönüş serileştirilmiş verileri sizin kontrolünüz altında olmayan sistemlere aktarmayın.
+> İkili serileştirme tehlikeli olabilir. Güvenilmeyen bir kaynaktaki verileri hiçbir şekilde seri durumdan çıkarmayın ve bu verileri hiçbir şekilde hiçbir şekilde geri dönmez.

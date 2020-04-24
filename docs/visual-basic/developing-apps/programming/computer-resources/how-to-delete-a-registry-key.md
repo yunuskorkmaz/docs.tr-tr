@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kayıt Defteri Anahtarını Silme'
+title: 'Nasıl yapılır: Kayıt Defteri Anahtarını Silme'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -20,33 +20,33 @@ ms.locfileid: "74345647"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarını Silme
 
-Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemler kayıt defteri anahtarlarını silmek için kullanılabilir.  
+<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri kayıt defteri anahtarlarını silmek için kullanılabilir.  
   
 ## <a name="procedure"></a>Yordam  
   
 #### <a name="to-delete-a-registry-key"></a>Kayıt defteri anahtarını silmek için  
   
-- Kayıt `DeleteSubKey` defteri anahtarını silmek için yöntemi kullanın. Bu örnek, CurrentUser kovanındaki anahtar Yazılım/TestApp'i siler. Koddaki bu durumu uygun dizeyle değiştirebilir veya kullanıcı tarafından sağlanan bilgilere güvendirebilirsiniz.  
+- Bir kayıt `DeleteSubKey` defteri anahtarını silmek için yöntemini kullanın. Bu örnek, geçerli kullanıcı kovanındaki Key Software/TestApp öğesini siler. Bu kodu kodda uygun dizeye değiştirebilir veya Kullanıcı tarafından sağlanan bilgileri kullanabilir.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Anahtar/değer `DeleteSubKey` çifti yoksa yöntem boş bir dize döndürür.  
+ Anahtar `DeleteSubKey` /değer çifti yoksa yöntem boş bir dize döndürür.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
 - Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Kullanıcının kayıt defteri anahtarlarını silme izinleri yoktur (<xref:System.Security.SecurityException>).  
+- Kullanıcının kayıt defteri anahtarlarını silme izni yok (<xref:System.Security.SecurityException>).  
   
-- Anahtar adı 255 karakter sınırını aşıyor<xref:System.ArgumentException>( ).  
+- Anahtar adı 255 karakter sınırını (<xref:System.ArgumentException>) aşıyor.  
   
-- Kayıt defteri anahtarı salt okunur<xref:System.UnauthorizedAccessException>( ).  
+- Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Yeterli çalışma zamanı izinleri verilmezse veya<xref:System.Security.Permissions.RegistryPermission>kullanıcı ayarlar oluşturmak veya yazmak için doğru erişime (ALA'lar tarafından belirlendiği şekilde) sahip değilse kayıt defteri çağrıları başarısız olur. Örneğin, kod erişim güvenlik iznine sahip yerel bir uygulamanın işletim sistemi izni olmayabilir.  
+ Yeterli çalışma zamanı izni verilmezse (<xref:System.Security.Permissions.RegistryPermission>) veya Kullanıcı, ayarları oluşturmak veya bu ayarlara yazmak için doğru erişime (ACL 'ler tarafından belirlendiği şekilde) sahip değilse, kayıt defteri çağrıları başarısız olur. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

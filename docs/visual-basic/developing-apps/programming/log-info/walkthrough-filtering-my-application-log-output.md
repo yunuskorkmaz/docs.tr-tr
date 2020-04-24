@@ -15,27 +15,27 @@ ms.locfileid: "74353598"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek Yol: My.Application.Log Çıktısını Filtreleme (Visual Basic)
 
-Bu gözden geçirme, `My.Application.Log` nesne için varsayılan günlük filtrelemenin nasıl değiştirilebildiğini, `Log` nesneden dinleyicilere hangi bilgilerin aktarıldığını ve dinleyiciler tarafından hangi bilgilerin yazıldığını denetleyeceğini gösterir. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığı için, uygulamayı yaptıktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.
+Bu izlenecek yol, nesneden dinleyicilerine hangi bilgilerin geçtiğini `My.Application.Log` `Log` ve hangi bilgilerin dinleyiciler tarafından yazıldığını denetlemek için nesnenin varsayılan günlük filtrelemesinin nasıl değiştirileceğini gösterir. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından, uygulamayı oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.
 
 ## <a name="getting-started"></a>Başlarken
 
-`My.Application.Log` Yazan her iletinin, filtreleme mekanizmalarının günlük çıktısını denetlemek için kullandığı ilişkili bir önem düzeyi vardır. Bu örnek `My.Application.Log` uygulama, farklı önem düzeyleri ile birkaç günlük iletileri yazmak için yöntemler kullanır.
+`My.Application.Log` Yazan her ileti, bir ilişkili önem düzeyine sahiptir ve bu da filtreleme mekanizmalarının günlük çıkışını denetlemek için kullandığı bir önem düzeyi vardır Bu örnek uygulama, `My.Application.Log` farklı önem düzeylerindeki çeşitli günlük iletilerini yazmak için yöntemler kullanır.
 
-#### <a name="to-build-the-sample-application"></a>Örnek uygulamayı oluşturmak için
+#### <a name="to-build-the-sample-application"></a>Örnek uygulamayı derlemek için
 
-1. Yeni bir Visual Basic Windows Application projesi açın.
+1. Yeni bir Visual Basic Windows uygulaması projesi açın.
 
-2. Form1'e Button1 adlı bir düğme ekleyin.
+2. Form1 adına button1 adlı bir düğme ekleyin.
 
-3. Button1 <xref:System.Windows.Forms.Control.Click> için olay işleyicisi, aşağıdaki kodu ekleyin:
+3. Button1 için <xref:System.Windows.Forms.Control.Click> olay işleyicisinde aşağıdaki kodu ekleyin:
 
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]
 
-4. Uygulamayı hata ayıklamada çalıştırın.
+4. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-5. **Düğmeye Basın1**.
+5. **Button1**'e basın.
 
-     Uygulama, uygulamanın hata ayıklama çıktısı ve günlük dosyasına aşağıdaki bilgileri yazar.
+     Uygulama, uygulamanın hata ayıklama çıktısına ve günlük dosyasına aşağıdaki bilgileri yazar.
 
      `DefaultSource Information: 0 : In Button1_Click`
 
@@ -43,58 +43,58 @@ Bu gözden geçirme, `My.Application.Log` nesne için varsayılan günlük filtr
 
 6. Uygulamayı kapatın.
 
-     Uygulamanın hata ayıklama çıkış penceresinin nasıl görüntüleneğe ilişkin bilgi için [Çıktı Penceresi'ne](/visualstudio/ide/reference/output-window)bakın. Uygulamanın günlük dosyasının konumu hakkında bilgi için [bkz.](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+     Uygulamanın hata ayıklama çıkış penceresini görüntüleme hakkında daha fazla bilgi için bkz. [Çıkış penceresi](/visualstudio/ide/reference/output-window). Uygulamanın günlük dosyasının konumu hakkında daha fazla bilgi için bkz [. Walkthrough: My. Application. log bilgisinin nereden yazabileceğini belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
     > [!NOTE]
-    > Varsayılan olarak, uygulama kapandığında günlük dosyası çıktısını temize çıkar.
+    > Varsayılan olarak uygulama kapandığında günlük dosyası çıkışını temizler.
 
-     Yukarıdaki örnekte, yönteme <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> ikinci çağrı ve <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> yönteme çağrı günlük çıkışı üretirken, `WriteEntry` yönteme yapılan ilk ve son çağrılar bunu yapmaz. Bunun nedeni, her ikisi `WriteEntry` `WriteException` de `My.Application.Log` nesnenin varsayılan günlük filtrelemesi tarafından izin verilen "Bilgi" ve "Hata" önem düzeyleridir. Ancak, "Başlat" ve "Durdur" önem düzeylerine sahip olayların günlük çıktısı üretmesini engeller.
+     Yukarıdaki örnekte, yöntemine yapılan <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> ikinci çağrı ve yöntemine yapılan çağrı <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> günlük çıktısını üretir, ancak `WriteEntry` yöntemin ilk ve son çağrıları değildir. Bunun nedeni, önem seviyelerinin `WriteEntry` `WriteException` "bilgi" ve "hata" olmasına ve her ikisinin de `My.Application.Log` nesnenin varsayılan günlük filtrelemesine izin verdiği anlamına gelir. Bununla birlikte, "Başlat" ve "Durdur" önem derecesindeki olaylar günlük çıktısı üretmesinin engellenmektedir.
 
-## <a name="filtering-for-all-myapplicationlog-listeners"></a>Tüm My.Application.Log Dinleyiciler için Filtreleme
+## <a name="filtering-for-all-myapplicationlog-listeners"></a>Tüm My. Application. log dinleyicileri için filtreleme
 
-Nesne, `My.Application.Log` <xref:System.Diagnostics.SourceSwitch> `DefaultSwitch` hangi iletilerden geçtiğini `WriteEntry` ve `WriteException` günlük dinleyicilerine hangi yöntemleri denetlemeyi kullanır. Değerini numaralandırma `DefaultSwitch` değerlerinden birine ayarlayarak uygulamanın yapılandırma dosyasında <xref:System.Diagnostics.SourceLevels> yapılandırabilirsiniz. Varsayılan olarak, değeri "Bilgi"dir.
+`My.Application.Log` Nesnesi, `WriteEntry` ve `WriteException` yöntemlerinden <xref:System.Diagnostics.SourceSwitch> hangi `DefaultSwitch` iletilerin günlük dinleyicilerine geçireceğini denetlemek için adlandırılmış bir kullanır. Değerini <xref:System.Diagnostics.SourceLevels> sabit listesi `DefaultSwitch` değerlerinden birine ayarlayarak uygulamanın yapılandırma dosyasında yapılandırabilirsiniz. Varsayılan olarak, değeri "bilgi" ' dir.
 
-Bu tablo, Log'un belirli `DefaultSwitch` bir ayar göz önüne alındığında dinleyicilere ileti yazması için gereken önem düzeyini gösterir.
+Bu tablo, belirli `DefaultSwitch` bir ayar Için, günlüğe kaydedilecek bir ileti yazmak için gereken önem derecesini gösterir.
 
-|Varsayılan Anahtar Değeri|Çıktı için gereken ileti önem derecesi|
+|DefaultSwitch değeri|Çıkış için gereken ileti önem derecesi|
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` veya `Error`|
-|`Warning`|`Critical`, `Error`veya`Warning`|
-|`Information`|`Critical`, `Error` `Warning`, veya`Information`|
-|`Verbose`|`Critical`, `Error` `Warning`, `Information`, veya`Verbose`|
-|`ActivityTracing`|`Start`, `Stop` `Suspend`, `Resume`, veya`Transfer`|
+|`Warning`|`Critical`, `Error`, veya`Warning`|
+|`Information`|`Critical``Warning`, `Error`, veya`Information`|
+|`Verbose`|`Critical``Warning`,, `Error` `Information`, veya`Verbose`|
+|`ActivityTracing`|`Start``Suspend`,, `Stop` `Resume`, veya`Transfer`|
 |`All`|Tüm iletilere izin verilir.|
-|`Off`|Tüm iletiler engellendi.|
+|`Off`|Tüm iletiler engellenir.|
 
 > [!NOTE]
-> Ve `WriteEntry` `WriteException` yöntemlerin her biri bir önem düzeyi belirtmeyen bir aşırı yük var. Aşırı yükleme için `WriteEntry` örtük önem düzeyi "Bilgi"dir ve `WriteException` aşırı yükleme için örtük önem düzeyi "Hata"dır.
+> `WriteEntry` Ve `WriteException` yöntemlerinin her biri önem düzeyi belirtmeyen bir aşırı yüklemeye sahiptir. `WriteEntry` Aşırı yükleme için örtülü önem düzeyi "bilgi" ve `WriteException` aşırı yükleme için örtülü önem düzeyi "hata" dır.
 
-Bu tablo, önceki örnekte gösterilen günlük çıktısını açıklar: varsayılan `DefaultSwitch` "Bilgi" ayarı ile, `WriteEntry` yönteme yalnızca ikinci çağrı ve `WriteException` yönteme yapılan çağrı günlük çıktısı üretir.
+Bu tabloda, önceki örnekte gösterilen günlük çıktısı açıklanmaktadır: varsayılan `DefaultSwitch` "bilgi" ayarıyla, `WriteEntry` yönteme yalnızca ikinci çağrı ve `WriteException` yönteme yapılan çağrı günlük çıkışı oluşturur.
 
-#### <a name="to-log-only-activity-tracing-events"></a>Yalnızca olayları izleme etkinliğini günlüğe kaydetmek için
+#### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini'nde** app.config'e sağ tıklayın ve **Aç'ı**seçin.
+1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
      -veya-
 
-     App.config dosyası yoksa:
+     App. config dosyası yoksa:
 
-    1. **Proje** menüsünde **Yeni Öğe Ekle'yi**seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. Yeni **Öğe Ekle** iletişim kutusundan, **Uygulama Yapılandırma Dosyası'nı**seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
-    3. **Ekle**’ye tıklayın.
+    3. **Ekle**'ye tıklayın.
 
-2. Üst `<switches>` düzey `<configuration>` bölümde bulunan `<system.diagnostics>` bölümdeki bölümü bulun.
+2. Üst düzey `<switches>` `<system.diagnostics>` `<configuration>` bölümde bulunan bölümünde olan bölümünü bulun.
 
-3. Anahtarların koleksiyonuna `DefaultSwitch` ekleyen öğeyi bulun. Bu öğeye benzer olmalıdır:
+3. Anahtarlar koleksiyonuna ekleyen `DefaultSwitch` öğeyi bulun. Bu öğe şuna benzer görünmelidir:
 
      `<add name="DefaultSwitch" value="Information" />`
 
-4. Özniteliğin `value` değerini "ActivityTracing" olarak değiştirin.
+4. `value` Özniteliğin değerini "ActivityTracing" olarak değiştirin.
 
-5. app.config dosyasının içeriği aşağıdaki XML benzer olmalıdır:
+5. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -123,11 +123,11 @@ Bu tablo, önceki örnekte gösterilen günlük çıktısını açıklar: varsay
     </configuration>
     ```
 
-6. Uygulamayı hata ayıklamada çalıştırın.
+6. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-7. **Düğmeye Basın1**.
+7. **Button1**'e basın.
 
-     Uygulama, uygulamanın hata ayıklama çıktısı ve günlük dosyasına aşağıdaki bilgileri yazar:
+     Uygulama aşağıdaki bilgileri uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazar:
 
      `DefaultSource Start: 4 : Entering Button1_Click`
 
@@ -135,38 +135,38 @@ Bu tablo, önceki örnekte gösterilen günlük çıktısını açıklar: varsay
 
 8. Uygulamayı kapatın.
 
-9. Özniteliğin değerini `value` "Bilgi" olarak değiştirin.
+9. `value` Özniteliğin değerini "Information" olarak değiştirin.
 
     > [!NOTE]
-    > Anahtar `DefaultSwitch` ayarı `My.Application.Log`yalnızca. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıfların nasıl bir şekilde nasıl bir şekilde değiştiğini değiştirmez.
+    > Yalnızca `DefaultSwitch` `My.Application.Log`anahtar ayarı denetimleri. .NET Framework <xref:System.Diagnostics.Trace?displayProperty=nameWithType> ve <xref:System.Diagnostics.Debug?displayProperty=nameWithType> sınıflarının nasıl davranacağını değiştirmez.
 
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log Dinleyiciler için Bireysel Filtreleme
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My. Application. log dinleyicileri Için bireysel filtreleme
 
-Önceki örnek, tüm `My.Application.Log` çıktıiçin filtrelemenin nasıl değiştirilebildiğini gösterir. Bu örnek, tek bir günlük dinleyicisi filtrelemek için nasıl gösterir. Varsayılan olarak, bir uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazan iki dinleyicisi vardır.
+Önceki örnekte, tüm `My.Application.Log` çıktılar için filtrelemenin nasıl değiştirileceği gösterilmektedir. Bu örnek, tek bir günlük dinleyicisinin nasıl filtreleneceğini gösterir. Varsayılan olarak, uygulamanın, uygulamanın hata ayıklama çıktısına ve günlük dosyasına yazan iki dinleyicisi vardır.
 
-Yapılandırma dosyası, günlük dinleyicilerinin davranışını, her birinin bir filtreye sahip olmasını sağlayarak `My.Application.Log`denetler. Günlük dinleyicisi, yalnızca iletinin önem derecesine hem günlük `DefaultSwitch` hem de günlük dinleyicifiltresi tarafından izin verilirse bir ileti çıkar.
+Yapılandırma dosyası, her birinin bir filtreye benzer bir filtreye sahip olmasını sağlayarak günlük dinleyicilerinin davranışını denetler `My.Application.Log`. Günlük dinleyicisi yalnızca, iletinin önem derecesine yalnızca günlüğün `DefaultSwitch` ve günlük dinleyicinin filtresi tarafından izin veriliyorsa bir ileti çıktı.
 
-Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapılandırılabildiğini ve `Log` nesneye nasıl ekleyeceğini gösterir. Varsayılan hata ayıklama dinleyicisi `Log` nesneden kaldırılmalıdır, bu nedenle hata ayıklama iletilerinin yeni hata ayıklama dinleyicisinden geldiği açıktır.
+Bu örnek, `Log` yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapılandırılacağını ve nesneye nasıl ekleneceğini gösterir. Varsayılan hata ayıklama dinleyicisi `Log` nesnesinden kaldırılmalıdır, bu nedenle hata ayıklama iletilerinin yeni hata ayıklama dinleyicisinden geldiği temizlenmelidir.
 
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydetmek için
 
-1. **Çözüm Gezgini'nde** app.config'e sağ tıklayın ve **Aç'ı**seçin.
+1. **Çözüm Gezgini** App. config öğesine sağ tıklayın ve **Aç**' ı seçin.
 
-     \-veya-
+     \-veya
 
-     App.config dosyası yoksa:
+     App. config dosyası yoksa:
 
-    1. **Proje** menüsünde **Yeni Öğe Ekle'yi**seçin.
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-    2. Yeni **Öğe Ekle** iletişim kutusundan, **Uygulama Yapılandırma Dosyası'nı**seçin.
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.
 
-    3. **Ekle**’ye tıklayın.
+    3. **Ekle**'ye tıklayın.
 
-2. **Çözüm Gezgini'nde**app.config'e sağ tıklayın. **Aç'ı**seçin.
+2. **Çözüm Gezgini**' de App. config öğesine sağ tıklayın. **Aç**' ı seçin.
 
-3. Bölümün altında yer `<source>` alan "DefaultSource" `name` özniteliğinin bulunduğu bölümdeki bölümü bulun. `<listeners>` `<sources>` Bölüm, `<sources>` üst `<system.diagnostics>` düzey `<configuration>` bölümde, bölüm altındadır.
+3. Bölümünün altında `<sources>` bulunan "DefaultSource" `name` özniteliğine sahip bölümünde bölümünü bulun. `<listeners>` `<source>` `<sources>` Bölümü, `<system.diagnostics>` bölümünün üst düzey `<configuration>` bölümünde yer aldığı bölümdür.
 
-4. Bu öğeyi `<listeners>` bölüme ekleyin:
+4. Bu öğeyi `<listeners>` bölümüne ekleyin:
 
     ```xml
     <!-- Remove the default debug listener. -->
@@ -175,9 +175,9 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
     <add name="NewDefault"/>
     ```
 
-5. `<sharedListeners>` Bölümü, `<system.diagnostics>` bölümü, üst düzey `<configuration>` bölümü bulun.
+5. Bölümünde, `<sharedListeners>` üst düzey `<configuration>` bölümünde bölümünde `<system.diagnostics>` bulunan bölümünü bulun.
 
-6. Bu öğeyi `<sharedListeners>` bu bölüme ekleyin:
+6. Bu öğeyi bu `<sharedListeners>` bölüme ekleyin:
 
     ```xml
     <add name="NewDefault"
@@ -190,9 +190,9 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
     </add>
     ```
 
-     Filtre, <xref:System.Diagnostics.EventTypeFilter> özniteliği <xref:System.Diagnostics.SourceLevels> olarak `initializeData` numaralandırma değerlerinden birini alır.
+     <xref:System.Diagnostics.EventTypeFilter> Filtre, <xref:System.Diagnostics.SourceLevels> sabit listesi değerlerinden birini `initializeData` özniteliği olarak alır.
 
-7. app.config dosyasının içeriği aşağıdaki XML benzer olmalıdır:
+7. App. config dosyasının içeriği aşağıdaki XML 'e benzer olmalıdır:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -233,9 +233,9 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
     </configuration>
     ```
 
-8. Uygulamayı hata ayıklamada çalıştırın.
+8. Uygulamayı hata ayıklayıcıda çalıştırın.
 
-9. **Düğmeye Basın1**.
+9. **Button1**'e basın.
 
      Uygulama, uygulamanın günlük dosyasına aşağıdaki bilgileri yazar:
 
@@ -243,19 +243,19 @@ Bu örnek, yeni bir hata ayıklama dinleyicisi için filtrelemenin nasıl yapıl
 
      `Default Error: 2 : Error in the application.`
 
-     Uygulama, daha kısıtlayıcı filtreleme nedeniyle uygulamanın hata ayıklama çıktısına daha az bilgi yazar.
+     Uygulama daha kısıtlayıcı filtreleme nedeniyle uygulamanın hata ayıklama çıktısına daha az bilgi yazar.
 
      `Default Error   2   Error`
 
 10. Uygulamayı kapatın.
 
-Dağıtımdan sonra günlük ayarlarını değiştirme hakkında daha fazla bilgi için [bkz.](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+Dağıtımdan sonra günlük ayarlarını değiştirme hakkında daha fazla bilgi için bkz. [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [İzlenecek Yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [İzlenecek Yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Nasıl Yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [İzlenecek yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Nasıl yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [İzleme Anahtarları](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/index.md)

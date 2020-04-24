@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kullanıcı Ayarları için Özellik Kılavuzu Oluşturma'
+title: 'Nasıl yapılır: Kullanıcı Ayarları için Özellik Kılavuzu Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -16,40 +16,40 @@ ms.locfileid: "74329607"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarları için Özellik Kılavuzu Oluşturma
 
-Nesnenin kullanıcı ayar özellikleri ile bir <xref:System.Windows.Forms.PropertyGrid> denetim doldurma tarafından kullanıcı ayarları için bir özellik ızgarası oluşturabilirsiniz. `My.Settings`  
+`My.Settings` Nesnenin Kullanıcı ayarı özellikleriyle bir <xref:System.Windows.Forms.PropertyGrid> denetim doldurarak Kullanıcı ayarları için özellik Kılavuzu oluşturabilirsiniz.  
   
 > [!NOTE]
-> Bu örneğin çalışabilmesi için uygulamanızın kullanıcı ayarlarını yapılandırması gerekir. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Bu örneğin çalışması için, uygulamanız kullanıcı ayarlarının yapılandırılmış olması gerekir. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- Nesne `My.Settings` her ayarı bir özellik olarak ortaya çıkarır. Özellik adı ayar adı ile aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **Kapsamı** özelliğin salt okunup okunmayalı olduğunu belirler; **Bir Uygulama**-kapsam ayarı için özellik salt okunurken, **Kullanıcı-kapsam**ayarı özelliği okuma-yazma özelliğidir. Daha fazla bilgi için [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)' e bakın.  
+ `My.Settings` Nesnesi her ayarı bir özellik olarak gösterir. Özellik adı, ayar adıyla aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **kapsamı** , özelliğin salt okunurdur belirler; bir **uygulama**kapsamı ayarının özelliği salt okunurdur, ancak **Kullanıcı**kapsamı ayarının özelliği okuma-yazma olur. Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Çalışma zamanında uygulama kapsamı ayarlarının değerlerini değiştiremez veya kaydedemezsiniz. Uygulama kapsamı ayarları yalnızca uygulamayı oluştururken **(Proje Tasarımcısı**aracılığıyla) veya uygulamanın yapılandırma dosyasını düzenleyerek değiştirilebilir. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Çalışma zamanında uygulama kapsamı ayarlarının değerlerini değiştiremez veya kaydedemezsiniz. Uygulama kapsamı ayarları yalnızca uygulama oluşturulurken ( **Proje Tasarımcısı**aracılığıyla) veya uygulamanın yapılandırma dosyası düzenlenerek değiştirilebilir. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- Bu örnek, <xref:System.Windows.Forms.PropertyGrid> `My.Settings` nesnenin kullanıcı ayar özelliklerine erişmek için bir denetim kullanır. Varsayılan olarak, <xref:System.Windows.Forms.PropertyGrid> `My.Settings` nesnenin tüm özelliklerini gösterir. Ancak, kullanıcı ayar özellikleri <xref:System.Configuration.UserScopedSettingAttribute> özniteliğe sahiptir. Bu örnek, <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> yalnızca <xref:System.Windows.Forms.PropertyGrid> kullanıcı <xref:System.Configuration.UserScopedSettingAttribute> ayar özelliklerini görüntülemek için özelliğini ayarlar.  
+ Bu örnek, `My.Settings` nesnenin <xref:System.Windows.Forms.PropertyGrid> Kullanıcı ayarı özelliklerine erişmek için bir denetim kullanır. Varsayılan olarak, <xref:System.Windows.Forms.PropertyGrid> `My.Settings` nesnesinin tüm özelliklerini gösterir. Ancak, Kullanıcı ayarı özelliklerinin <xref:System.Configuration.UserScopedSettingAttribute> özniteliği vardır. Bu örnek, <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> <xref:System.Windows.Forms.PropertyGrid> öğesinin özelliğini yalnızca Kullanıcı ayarı <xref:System.Configuration.UserScopedSettingAttribute> özelliklerini görüntüleyecek şekilde ayarlar.  
   
-### <a name="to-add-a-user-setting-property-grid"></a>Kullanıcı ayar özelliği ızgarası eklemek için  
+### <a name="to-add-a-user-setting-property-grid"></a>Kullanıcı ayarı Özellik Kılavuzu eklemek için  
   
-1. **Toolbox'tan** **PropertyGrid** denetimini uygulamanız için tasarım yüzeyine `Form1`ekleyin, burada olduğu varsayılır.  
+1. Araç kutusundan **PropertyGrid** denetimini uygulamanızın tasarım **Toolbox** yüzeyine ekleyin, burada kabul edilir `Form1`.  
   
-     Özellik-ızgara denetiminin varsayılan `PropertyGrid1`adı.  
+     Özellik Kılavuzu denetiminin varsayılan adı `PropertyGrid1`.  
   
-2. Form yükleme olay işleyicisinin kodunu açmak için `Form1` tasarım yüzeyini çift tıklatın.  
+2. Form yükleme olay işleyicisi için kodu açmak `Form1` üzere tasarım yüzeyine çift tıklayın.  
   
-3. Nesneyi `My.Settings` özellik ızgarası için seçili nesne olarak ayarlayın.  
+3. `My.Settings` Nesne, Özellik kılavuzu için seçilen nesne olarak ayarlanır.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4. Özellik ızgarasını yalnızca kullanıcı ayarlarını gösterecek şekilde yapılandırın.  
+4. Özellik kılavuzunu yalnızca Kullanıcı ayarlarını gösterecek şekilde yapılandırın.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
     > [!NOTE]
-    > Yalnızca uygulama kapsamı ayarlarını göstermek <xref:System.Configuration.ApplicationScopedSettingAttribute> için, <xref:System.Configuration.UserScopedSettingAttribute>özniteliği yerine kullanın.  
+    > Yalnızca uygulama kapsamı ayarlarını göstermek için yerine <xref:System.Configuration.ApplicationScopedSettingAttribute> özniteliğini kullanın. <xref:System.Configuration.UserScopedSettingAttribute>  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Uygulama kapandığında uygulama kullanıcı ayarlarını kaydeder. Ayarları hemen kaydetmek için `My.Settings.Save` yöntemi arayın. Daha fazla bilgi için [bkz: Visual Basic'te Kullanıcı Ayarlarını Devam](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)Edin.  
+ Uygulama kapandığında uygulama kullanıcı ayarlarını kaydeder. Ayarları hemen kaydetmek için `My.Settings.Save` yöntemini çağırın. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı ayarlarını Visual Basic kalıcı hale](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)getirme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

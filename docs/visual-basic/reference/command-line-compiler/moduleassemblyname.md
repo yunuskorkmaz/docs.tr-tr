@@ -22,29 +22,29 @@ Bu modülün bir parçası olacağı derlemenin adını belirtir.
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`assembly_name`|Bu modülün bir parçası olacağı derlemenin adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici `-moduleassemblyname` seçeneğini yalnızca `-target:module` seçeneği belirtilmişse işler. Bu, derleyicinin bir modül oluşturmasına neden olur. Derleyici tarafından oluşturulan modül yalnızca `-moduleassemblyname` seçeneğiyle belirtilen derleme için geçerlidir. Modülü farklı bir derlemeye yerleştirirseniz, çalışma zamanı hataları oluşur.  
+ Derleyici, `-moduleassemblyname` seçeneği yalnızca `-target:module` seçenek belirtilmişse işler. Bu, derleyicinin bir modül oluşturmasına neden olur. Derleyici tarafından oluşturulan modül yalnızca `-moduleassemblyname` seçeneğiyle belirtilen derleme için geçerlidir. Modülü farklı bir derlemeye yerleştirirseniz, çalışma zamanı hataları oluşur.  
   
- @No__t_0 seçeneği yalnızca aşağıdakilerin doğru olması durumunda gereklidir:  
+ `-moduleassemblyname` Seçeneği yalnızca aşağıdakilerin doğru olması durumunda gereklidir:  
   
-- Modüldeki bir veri türünün başvurulan bir derlemede `Friend` türüne erişmesi gerekir.  
+- Modüldeki bir veri türünün başvurulan derlemedeki bir `Friend` türe erişmesi gerekir.  
   
 - Başvurulan derleme, modülün derleyecek olduğu derlemeye arkadaş bütünleştirilmiş kodu erişimi verdi.  
   
  Modül oluşturma hakkında daha fazla bilgi için bkz. [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Arkadaş derlemeleri hakkında daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
-> @No__t_0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca bir komut isteminden derleme yaptığınızda kullanılabilir.  
+> Bu `-moduleassemblyname` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca bir komut isteminden derleme yaptığınızda kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Çok Dosyalı Bütünleştirilmiş Kod Derleme](../../../framework/app-domains/build-multifile-assembly.md)
+- [Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme](../../../framework/app-domains/build-multifile-assembly.md)
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ Bu modülün bir parçası olacağı derlemenin adını belirtir.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Arkadaş Bütünleştirilmiş Kodları](../../../standard/assembly/friend.md)
+- [Arkadaş derlemeleri](../../../standard/assembly/friend.md)

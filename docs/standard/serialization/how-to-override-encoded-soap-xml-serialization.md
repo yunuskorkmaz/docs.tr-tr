@@ -14,7 +14,7 @@ ms.locfileid: "61922596"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma
 
-Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer. Standart XML serileştirme geçersiz kılma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir XML Stream için alternatif öğe adı belirtin](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi standart XML serileştirme geçersiz kılma işlemi benzer. Standart XML serileştirme geçersiz kılma hakkında daha fazla bilgi için bkz. [nasıl yapılır: BIR XML akışı Için alternatif bir öğe adı belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Nesneleri serileştirmek SOAP iletilerini olarak geçersiz kılmak için
 
@@ -22,13 +22,13 @@ Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi st
 
 2. Oluşturma bir `SoapAttributes` serileştirilmekte olan her sınıf üyesi için.
 
-3. Bir veya daha fazla serileştirilen üye için uygun olarak XML serileştirme etkileyecek özniteliklerin örneği oluşturun. "Öznitelikleri emin denetim kodlanmış SOAP serileştirme" daha fazla bilgi için bkz.
+3. XML serileştirmesini etkileyen bir veya daha fazla öznitelik için, serileştirildiği üyeye uygun bir örnek oluşturun. Daha fazla bilgi için bkz. "kodlanmış SOAP serileştirmesini denetleyen öznitelikler".
 
-4. Uygun özelliğini ayarlayın `SoapAttributes` adım 3'te oluşturulan özniteliğine.
+4. Uygun özelliğini `SoapAttributes` adım 3 ' te oluşturulan özniteliğe ayarlayın.
 
 5. Add `SoapAttributes` to `SoapAttributeOverrides`.
 
-6. Oluşturma bir `XmlTypeMapping` kullanarak `SoapAttributeOverrides`. Kullanım `SoapReflectionImporter.ImportTypeMapping` yöntemi.
+6. Oluşturma bir `XmlTypeMapping` kullanarak `SoapAttributeOverrides`. `SoapReflectionImporter.ImportTypeMapping` yöntemini kullanın.
 
 7. Oluşturma bir `XmlSerializer` kullanarak `XmlTypeMapping`.
 
@@ -36,7 +36,7 @@ Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi st
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,. Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip. Gibi çeşitli öznitelikleri `SoapElementAttribute`, sınıf üyeleri için uygulanmış. Zaman sınıfın serileştirilmiş ile `SerializeOriginal` yöntemi, öznitelikleri kontrol SOAP ileti içeriği. Zaman `SerializeOverride` yöntemi çağrıldığında, davranışını `XmlSerializer` çeşitli öznitelikler oluşturulması ve özelliklerini ayarlama geçersiz bir `SoapAttributes` için özniteliklerle (gerektiği gibi).
+Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,. Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip. Gibi çeşitli öznitelikler `SoapElementAttribute`, sınıf üyelerine uygulandı. Sınıf `SerializeOriginal` yöntemiyle seri hale geldiğinde, öznitelikler SOAP ileti içeriğini denetler. `SerializeOverride` Yöntemi çağrıldığında, çeşitli öznitelikler oluşturularak ve bir `SoapAttributes` öğesinin özelliklerini bu özniteliklere (uygun şekilde) ayarlayarak öğesinin `XmlSerializer` davranışı geçersiz kılınır.
 
 ```csharp
 using System;
@@ -280,9 +280,9 @@ public class Run
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Kodlanmış SOAP Serileştirmesini Denetleyen Öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [XML Web Hizmetleri ile XML Serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [Nasıl yapılır: Bir nesneyi serileştirmek](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Nasıl yapılır: Bir nesneyi seri durumdan çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [Nasıl yapılır: Bir nesne bir SOAP kodlu XML Stream seri hale getirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Kodlanmış SOAP serileştirmesini denetleyen öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [XML Web hizmetleriyle XML serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Nasıl yapılır: SOAP Kodlu XML Akışı Olarak Nesneyi Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

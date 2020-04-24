@@ -16,11 +16,11 @@ ms.locfileid: "74334557"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Nasıl Yapılır: StreamReader Olan Dosyalardaki Metni Okuma (Visual Basic)
 
-Nesne `My.Computer.FileSystem` a ve <xref:System.IO.TextReader> a'yı <xref:System.IO.TextWriter>açmak için yöntemler sağlar. Bu `OpenTextFileWriter` yöntemler, `OpenTextFileReader` **Tüm** sekmesini seçmediğiniz sürece IntelliSense'de görünmeyen gelişmiş yöntemlerdir.  
+Nesnesi `My.Computer.FileSystem` , <xref:System.IO.TextReader> ve ' i açmak için yöntemler sağlar <xref:System.IO.TextWriter>. Bu yöntemler `OpenTextFileWriter` ve `OpenTextFileReader`, **Tüm** sekmesini seçmediğiniz takdirde IntelliSense 'de görünmeyen gelişmiş yöntemlerdir.  
   
-### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Metin okuyucuiçeren bir dosyadan satır okumak için  
+### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>Bir dosyadan metin okuyucu içeren bir satırı okumak için  
   
-- Dosyayı `OpenTextFileReader` belirterek <xref:System.IO.TextReader>açmak için yöntemi kullanın. Bu örnek, adlı `testfile.txt`dosyayı açar, ondan bir satır okur ve satırı bir ileti kutusunda görüntüler.  
+- <xref:System.IO.TextReader>Öğesini açmak için `OpenTextFileReader` yöntemini kullanın, dosyasını belirtin. Bu örnek, adlı `testfile.txt`dosyayı açar, bundan bir satır okur ve bir ileti kutusunda çizgiyi görüntüler.  
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
@@ -28,13 +28,13 @@ Nesne `My.Computer.FileSystem` a ve <xref:System.IO.TextReader> a'yı <xref:Syst
 
  Okunan dosya bir metin dosyası olmalıdır.  
   
- Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası Visual Basic kaynak dosyası olmayabilir.  
+ Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1. vb dosyası bir Visual Basic kaynak dosyası olmayabilir.  
   
  Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın. Dosyanın içeriği beklendiği gibi olmayabilir ve dosyadan okuma yöntemleri başarısız olabilir.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Bir dosyadan okumak için <xref:System.Security.Permissions.FileIOPermission> derlemeniz, sınıf tarafından verilen bir ayrıcalık düzeyi gerektirir. Kısmi güven bağlamında çalışıyorsanız, kod yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../../../../framework/misc/code-access-security-basics.md)bakın. Kullanıcının da dosyaya erişmesi gerekir. Daha fazla bilgi için [ACL Technology Genel Bakış'a](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))bakın.  
+ Bir dosyadan okumak için, derlemeniz <xref:System.Security.Permissions.FileIOPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektirir. Kısmi güven bağlamında çalıştırıyorsanız, yetersiz ayrıcalıklar nedeniyle kod bir özel durum oluşturabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md). Kullanıcının da dosyaya erişimi olması gerekir. Daha fazla bilgi için bkz. [ACL teknolojisine genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

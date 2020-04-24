@@ -25,19 +25,19 @@ ms.locfileid: "72005590"
 -filealign:number  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `number`  
- Gerekli. Çıkış dosyasındaki bölümlerin hizalamasını belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192. Bu değerler baytlardır.  
+ Gereklidir. Çıkış dosyasındaki bölümlerin hizalamasını belirten bir değer. Geçerli değerler 512, 1024, 2048, 4096 ve 8192. Bu değerler baytlardır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çıkış dosyanızdaki bölümlerin hizalamasını belirtmek için `-filealign` seçeneğini kullanabilirsiniz. Bölümler, bir Taşınabilir çalıştırılabilir (PE) dosyasında kod veya veri içeren bitişik bellek bloklarıdır. @No__t-0 seçeneği, uygulamanızı standart olmayan hizalamayla derlemenize olanak sağlar; çoğu geliştiricilerin bu seçeneği kullanması gerekmez.  
+ Çıkış dosyanızdaki bölümlerin hizalamasını `-filealign` belirtmek için seçeneğini kullanabilirsiniz. Bölümler, bir Taşınabilir çalıştırılabilir (PE) dosyasında kod veya veri içeren bitişik bellek bloklarıdır. `-filealign` Seçeneği uygulamanızı standart olmayan hizalamayla derlemenize olanak sağlar; çoğu geliştiricilerin bu seçeneği kullanması gerekmez.  
   
- Her bölüm `-filealign` değerinin katı olan bir sınıra hizalanır. Sabit bir varsayılan yoktur. @No__t-0 belirtilmemişse, derleyici derleme zamanında bir varsayılan değer seçer.  
+ Her bölüm, `-filealign` değerin katı olan bir sınır üzerine hizalanır. Sabit bir varsayılan yoktur. `-filealign` Belirtilmemişse, derleyici derleme zamanında bir varsayılan değer seçer.  
   
  Bölüm boyutunu belirterek, çıkış dosyasının boyutunu değiştirebilirsiniz. Bölüm boyutunu değiştirmek, daha küçük cihazlarda çalıştırılacak programlar için yararlı olabilir.  
   
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-filealign` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

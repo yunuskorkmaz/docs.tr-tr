@@ -48,7 +48,7 @@ Windows Formatında veri sınır denetimleri aracılığıyla nasıl veri görü
 [Veri kümelerinde verileri düzenleme](/visualstudio/data-tools/edit-data-in-datasets)  
 Bir veri kümesinin veri tabloları içindeki verilerin nasıl yönetileceğini açıklayan sayfalara bağlantılar sağlar.  
 
-[Veri kümelerindeki verileri doğrulama](/visualstudio/data-tools/validate-data-in-datasets)  
+[Veri kümelerinde verileri doğrulama](/visualstudio/data-tools/validate-data-in-datasets)  
 Sütun ve satır değişiklikleri sırasında bir veri kümesine nasıl doğrulama ekleneceğini açıklayan sayfalara bağlantılar sağlar.
 
 [Verileri yeniden veritabanına kaydetme](/visualstudio/data-tools/save-data-back-to-the-database)  
@@ -58,4 +58,4 @@ Bir uygulamadan veritabanına, güncelleştirilmiş verilerin nasıl gönderildi
 .NET Framework programcısına veri erişim hizmetlerini gösteren ADO.NET sınıflarını açıklar.
 
 [Office Çözümlerindeki Veriler](/visualstudio/vsto/data-in-office-solutions)  
-Office çözümlerinde, şema yönelimli programlama, veriyi önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler de dahil olmak üzere, verilerin nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.
+Şemaya dayalı programlama, veri önbelleğe alma ve sunucu tarafı veri erişimi hakkında bilgiler de dahil olmak üzere, verilerin Office çözümlerinde nasıl çalıştığını açıklayan sayfalara bağlantılar içerir.

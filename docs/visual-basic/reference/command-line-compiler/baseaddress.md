@@ -25,18 +25,18 @@ DLL oluşturulurken varsayılan bir temel adresi belirtir.
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`address`|Gerekli. DLL 'nin temel adresi. Bu adres, onaltılık bir sayı olarak belirtilmelidir.|  
+|`address`|Gereklidir. DLL 'nin temel adresi. Bu adres, onaltılık bir sayı olarak belirtilmelidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir DLL için varsayılan temel adres .NET Framework tarafından ayarlanır.  
   
  Bu adresteki alt sıra sözcüğünün yuvarlanacağını unutmayın. Örneğin, 0x11110001 belirtirseniz, 0x11110000 ' a yuvarlanır.  
   
- DLL imzalama işlemini gerçekleştirmek için, tanımlayıcı adlandırma aracının (sn. exe) `–R` seçeneğini kullanın.  
+ DLL imzalama işlemini gerçekleştirmek için, tanımlayıcı adlandırma aracı (sn `–R` . exe) seçeneğini kullanın.  
   
  Hedef bir DLL değilse, bu seçenek yoksayılır.  
   

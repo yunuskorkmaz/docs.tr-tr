@@ -15,16 +15,16 @@ ms.locfileid: "74348753"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Belirli bir Düzendeki Dosyaları Bulma
 
-Yöntem, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> dosyaların yol adlarını temsil eden salt okunur dizeler koleksiyonunu döndürür. `wildCards` Belirli bir desen belirtmek için parametrekullanabilirsiniz. Alt dizinleri aramaya eklemek istiyorsanız, parametreyi `searchType` ' `SearchOption.SearchAllSubDirectories`ye ayarlarsınız.  
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Yöntemi, dosyaların yol adlarını temsil eden salt okunurdur bir dize koleksiyonu döndürür. Belirli bir kalıbı belirtmek `wildCards` için parametresini kullanabilirsiniz. Aramaya alt dizinler eklemek isterseniz, `searchType` parametresini olarak `SearchOption.SearchAllSubDirectories`ayarlayın.  
   
- Belirtilen desenle eşleşen dosya bulunmazsa boş bir koleksiyon döndürülür.  
+ Belirtilen Düzenle eşleşen hiçbir dosya bulunamazsa boş bir koleksiyon döndürülür.  
   
 > [!NOTE]
-> Ad `DirectoryInfo` alanının sınıfını kullanarak dosya listesini döndürme hakkında bilgi için bkz. <xref:System.IO.DirectoryInfo.GetFiles%2A> `System.IO`  
+> Ad alanının `DirectoryInfo` sınıfını kullanarak bir dosya listesi döndürme hakkında daha fazla bilgi için bkz <xref:System.IO.DirectoryInfo.GetFiles%2A>.. `System.IO`  
   
-### <a name="to-find-files-with-a-specified-pattern"></a>Belirli bir desene sahip dosyaları bulmak için  
+### <a name="to-find-files-with-a-specified-pattern"></a>Belirtilen bir düzene sahip dosyaları bulmak için  
   
-- Arama `GetFiles` yapmak istediğiniz dizinin adını ve yolunu sağlayarak ve deseni belirterek yöntemi kullanın. Aşağıdaki örnek, dizindeki uzantılı `.dll` tüm dosyaları döndürür ve `ListBox1`ekler.  
+- Arama yapmak `GetFiles` istediğiniz dizinin adını ve yolunu sağlayarak ve modelini belirterek yöntemini kullanın. Aşağıdaki örnek, dizininde uzantısı `.dll` olan tüm dosyaları döndürür ve içine ekler. `ListBox1`  
   
      [!code-vb[VbFileIOMisc#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#4)]  
   
@@ -32,21 +32,21 @@ Yöntem, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> dos
 
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
 - `directory`yok (<xref:System.IO.DirectoryNotFoundException>).  
   
-- `directory`varolan bir dosyaya işaret eder (<xref:System.IO.IOException>).  
+- `directory`var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
-- Kullanıcı gerekli izinleri yoksun<xref:System.UnauthorizedAccessException>( ).  
+- Kullanıcının gerekli izinleri (<xref:System.UnauthorizedAccessException>) yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

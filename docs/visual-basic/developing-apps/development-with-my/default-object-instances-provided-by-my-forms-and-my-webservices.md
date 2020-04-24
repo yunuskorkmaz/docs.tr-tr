@@ -20,13 +20,13 @@ ms.locfileid: "74330212"
   
 ## <a name="default-instances"></a>Varsayılan örnekler  
 
- Varsayılan örnek, çalışma zamanı tarafından sağlanmış bir sınıfının örneğidir ve `Dim` ve `New` deyimleri kullanılarak bildirilmesine ve örneklendirilmemelidir. Aşağıdaki örnek, `Form1`adlı bir <xref:System.Windows.Forms.Form> sınıfın örneğini nasıl bildirdiğini ve örnekleyeceğinizi ve `My.Forms`aracılığıyla bu <xref:System.Windows.Forms.Form> sınıfının varsayılan bir örneğini nasıl sağlayabileceğinizi gösterir.  
+ Varsayılan örnek, çalışma zamanı tarafından sağlanmış bir sınıfının örneğidir ve `Dim` ve `New` deyimleri kullanılarak bildirilmesine ve örneklendirilmemelidir. Aşağıdaki <xref:System.Windows.Forms.Form> örnek, adlı `Form1`bir sınıfın örneğini nasıl bildirdiğini ve örnekleyeceğinizi ve bundan böyle bu <xref:System.Windows.Forms.Form> sınıfın varsayılan bir örneğini nasıl sağlayabileceğinizi gösterir. `My.Forms`  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- `My.Forms` nesnesi, projenizde bulunan her `Form` sınıfının varsayılan örneklerinin bir koleksiyonunu döndürür. Benzer şekilde, `My.WebServices` uygulamanızda bir başvuru oluşturduğunuz her Web hizmeti için proxy sınıfının varsayılan bir örneğini sağlar.  
+ Nesnesi `My.Forms` , projenizde bulunan her `Form` sınıf için bir varsayılan örnekler koleksiyonu döndürür. Benzer şekilde `My.WebServices` , uygulamanızda bir başvuru oluşturduğunuz her Web hizmeti için proxy sınıfının varsayılan bir örneğini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,10 +14,10 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710914"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
-<xref:System.Xml.XPath.XPathNavigator> sınıfı bir XPath ifadesini değerlendirmek için <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi sağlar. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi bir XPath ifadesi alır, bunu değerlendirir ve XPath ifadesinin sonucuna göre Boole, sayı, dize veya düğüm kümesinin W3C XPath türünü döndürür.  
+<xref:System.Xml.XPath.XPathNavigator> Sınıfı, bir XPath <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ifadesini değerlendirmek için yöntemini sağlar. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesi alır, değerlendirir ve XPath ifadesinin sonucuna göre Boole, sayı, dize veya düğüm kümesinin W3C XPath türünü döndürür.  
   
 ## <a name="the-evaluate-method"></a>Değerlendir yöntemi  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi bir XPath ifadesi alır, bunu değerlendirir ve Boole (<xref:System.Boolean>), sayı (<xref:System.Double>), dize (<xref:System.String>) veya düğüm kümesinin (<xref:System.Xml.XPath.XPathNodeIterator>) yazılmış bir sonucunu döndürür. Örneğin, <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi matematiksel bir yöntemde kullanılabilir. Aşağıdaki örnek kod, `books.xml` dosyasındaki tüm kitapların toplam fiyatını hesaplar.  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi bir XPath ifadesi alır, bunu değerlendirir ve Boole<xref:System.Boolean>(), sayı (<xref:System.Double>), dize (<xref:System.String>) veya düğüm kümesi (<xref:System.Xml.XPath.XPathNodeIterator>) ile yazılmış bir sonuç döndürür. Örneğin, <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi matematiksel bir yöntemde kullanılabilir. Aşağıdaki örnek kod, `books.xml` dosyadaki tüm kitapların toplam fiyatını hesaplar.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -37,12 +37,12 @@ Double total = (Double)navigator.Evaluate(query);
 Console.WriteLine(total);  
 ```  
   
- Örnek, `books.xml` dosyasını girdi olarak alır.  
+ Örnek, `books.xml` dosyayı giriş olarak alır.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="position-and-last-functions"></a>konum ve son Işlevler  
- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi aşırı yüklendi. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemlerinden biri, bir <xref:System.Xml.XPath.XPathNodeIterator> nesnesini parametre olarak alır. Bu <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi, yalnızca bir <xref:System.Xml.XPath.XPathExpression> nesnesini parametre olarak alan <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemi ile aynıdır, ancak bir düğüm kümesi bağımsız değişkeninin üzerinde değerlendirmeyi gerçekleştirmek için geçerli bağlamı belirtmesini sağlar. Bu bağlam, XPath `position()` ve `last()` işlevleri için, geçerli bağlam düğümüne göreli oldukları için gereklidir. Bir konum adımında bir koşul olarak kullanılmadıkça, `position()` ve `last()` işlevleri, aksi takdirde değerlendirilmek üzere bir düğüm kümesine başvuru gerektirir, `position` ve `last` işlevleri `0`döndürür.  
+ <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemi aşırı yüklendi. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntemlerden biri bir <xref:System.Xml.XPath.XPathNodeIterator> nesneyi parametre olarak alır. Bu belirli <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> Yöntem, yalnızca bir <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> <xref:System.Xml.XPath.XPathExpression> nesneyi parametre olarak alan ve bir düğüm kümesi bağımsız değişkeninin üzerinde değerlendirmeyi gerçekleştirmek için geçerli bağlamı belirtmesini olanaklı hale getirecağından, bu yöntem ile aynıdır. Bu bağlam, XPath `position()` ve `last()` işlevler için geçerli bağlam düğümü göreli oldukları için gereklidir. Bir `position()` konum adımında koşul olarak kullanılmadığı sürece ve `last()` işlevleri, aksi takdirde değerlendirilmek üzere bir düğüm kümesine başvuru gerektirir, `position` ve `last` işlevleri döndürülür. `0`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

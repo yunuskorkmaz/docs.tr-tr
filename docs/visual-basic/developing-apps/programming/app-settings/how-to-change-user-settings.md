@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kullanıcı Ayarlarını Değiştirme'
+title: 'Nasıl yapılır: Kullanıcı Ayarlarını Değiştirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -16,22 +16,22 @@ ms.locfileid: "74329623"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Değiştirme
 
-Nesne üzerinde ayarın özelliğine yeni bir değer atayarak kullanıcı `My.Settings` ayarını değiştirebilirsiniz.  
+`My.Settings` Nesnenin nesne üzerindeki özelliğine yeni bir değer atayarak, bir kullanıcı ayarını değiştirebilirsiniz.  
   
- Nesne `My.Settings` her ayarı bir özellik olarak ortaya çıkarır. Özellik adı ayar adı ile aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **Kapsamı** özelliğin salt okunup okunmayalı olduğunu belirler: **Uygulama**kapsam ayarı özelliği salt okunurken, **Kullanıcı-kapsam**ayarı özelliği okuma-yazma özelliğidir. Daha fazla bilgi için [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)' e bakın.  
+ `My.Settings` Nesnesi her ayarı bir özellik olarak gösterir. Özellik adı, ayar adıyla aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **kapsamı** özelliğin salt okunurdur olduğunu belirler: bir **uygulama**kapsamı ayarının özelliği salt okunurdur, ancak **Kullanıcı**kapsamı ayarı özelliği okuma-yazma olur. Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Çalışma zamanında kullanıcı kapsamı ayarlarının değerlerini değiştirip kaydedebilirsiniz, ancak uygulama kapsamı ayarları salt okunur ve programlı olarak değiştirilemez. **Proje Tasarımcısı'nı** kullanarak veya uygulamanın yapılandırma dosyasını düzenleyerek uygulamayı oluştururken uygulama kapsamı ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> Çalışma zamanında kullanıcı kapsamı ayarlarının değerlerini değiştirebilir ve kaydedebilirsiniz, ancak uygulama kapsamı ayarları salt okunurdur ve program aracılığıyla değiştirilemez. Uygulamayı **Proje tasarımcısını** kullanarak oluştururken veya uygulamanın yapılandırma dosyasını düzenleyerek, uygulama kapsamı ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek, kullanıcı `Nickname` ayarı değerini değiştirir.  
+ Bu örnek, `Nickname` Kullanıcı ayarının değerini değiştirir.  
   
  [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
- Bu örneğin çalışabilmesi için, uygulamanızın bir `Nickname` kullanıcı `String`ayarı olması gerekir.  
+ Bu örneğin çalışması için, uygulamanızın türünde `Nickname` `String`bir Kullanıcı ayarı olması gerekir.  
   
- Uygulama kapandığında uygulama kullanıcı ayarlarını kaydeder. Ayarları hemen kaydetmek için `My.Settings.Save` yöntemi arayın. Daha fazla bilgi için [bkz: Visual Basic'te Kullanıcı Ayarlarını Devam](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)Edin.  
+ Uygulama kapandığında uygulama kullanıcı ayarlarını kaydeder. Ayarları hemen kaydetmek için `My.Settings.Save` yöntemini çağırın. Daha fazla bilgi için bkz. [nasıl yapılır: Kullanıcı ayarlarını Visual Basic kalıcı hale](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)getirme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

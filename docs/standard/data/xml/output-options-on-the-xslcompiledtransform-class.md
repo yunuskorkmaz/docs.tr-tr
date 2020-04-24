@@ -14,46 +14,46 @@ ms.locfileid: "75710511"
 Bu konu başlığı altında, kullanılabilir XSLT çıkış seçenekleri açıklanmaktadır. Stil sayfasında veya <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yönteminde çıkış seçeneklerini belirtebilirsiniz.  
   
 ## <a name="xsloutput-element"></a>xsl: output öğesi  
- `xsl:output` öğesi çıkışın seçeneklerini belirtir. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi tarafından belirtilen çıkış türü `xsl:output` seçeneklerinin davranışını belirler.  
+ `xsl:output` Öğesi çıktının seçeneklerini belirtir. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> Yöntemi tarafından belirtilen çıkış türü, `xsl:output` seçeneklerin davranışını belirler.  
   
- Aşağıdaki tabloda, çıkış türü bir Stream veya <xref:System.IO.TextWriter>olduğunda `xsl:output` öğesinde kullanılabilen özniteliklerin her biri için davranış açıklanmaktadır.  
+ Aşağıdaki tabloda, çıkış türü bir Stream veya a `xsl:output` <xref:System.IO.TextWriter>olduğunda, öğesinde bulunan her bir özniteliklerin davranışı açıklanmaktadır.  
   
 |Öznitelik adı|Davranış|  
 |--------------------|--------------|  
-|{1&gt; yöntemi&lt;1}|Desteklenen.|  
-|sürümü|LIP. Sürüm, her zaman için 1,0 for XML ve HTML için 4,0 ' dir.|  
-|{1&gt;encoding&lt;1}|Bir <xref:System.IO.TextWriter>çıktısı alırken yok sayılır. Bunun yerine <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> özelliği kullanılır.|  
-|{1&gt;atlayın-xml-bildirimi&lt;1}|Desteklenen.|  
-|tek başına|Desteklenen.|  
-|doctype-genel|Desteklenen.|  
-|DOCTYPE-System|Desteklenen.|  
-|CDATA-bölüm-öğeler|Desteklenen.|  
-|{1&gt;Girinti&lt;1}|Desteklenen.|  
-|{1&gt;medya türü&lt;1}|Desteklenen.|  
+|method|Destekleniyor.|  
+|version|LIP. Sürüm, her zaman için 1,0 for XML ve HTML için 4,0 ' dir.|  
+|encoding|Bir <xref:System.IO.TextWriter>öğesine çıktısı oluşturulurken yok sayılır. Bunun <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> yerine özelliği kullanılır.|  
+|XML bildirimini atla|Destekleniyor.|  
+|bağımsız|Destekleniyor.|  
+|doctype-genel|Destekleniyor.|  
+|DOCTYPE-System|Destekleniyor.|  
+|CDATA-bölüm-öğeler|Destekleniyor.|  
+|leyebilirsiniz|Destekleniyor.|  
+|medya türü|Destekleniyor.|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>Bir XmlWriter 'a çıkış gönderme  
- Stil sayfanızda `xsl:output` öğesi kullanılıyorsa ve çıkış türü bir <xref:System.Xml.XmlWriter> nesnesi ise, <xref:System.Xml.XmlWriter> nesnesini oluştururken <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> özelliğini kullanmanız gerekir. <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> özelliği, derlenmiş bir stil sayfasının `xsl:output` öğesinden türetilmiş bilgiler içeren bir <xref:System.Xml.XmlWriterSettings> nesnesi döndürür. Bu <xref:System.Xml.XmlWriterSettings> nesnesi, doğru ayarlarla bir <xref:System.Xml.XmlWriter> nesnesi oluşturmak için <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> yöntemine geçirilebilir.  
+ Stil sayfanızda `xsl:output` öğesi kullanılıyorsa ve çıkış türü bir <xref:System.Xml.XmlWriter> nesnedir, <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> <xref:System.Xml.XmlWriter> nesneyi oluştururken özelliğini kullanmanız gerekir. Özelliği <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> , derlenmiş bir <xref:System.Xml.XmlWriterSettings> stil sayfası `xsl:output` öğesinden türetilmiş bilgiler içeren bir nesnesi döndürür. Bu <xref:System.Xml.XmlWriterSettings> nesne, <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> doğru ayarlarla bir <xref:System.Xml.XmlWriter> nesne oluşturmak için yöntemine geçirilebilir.  
   
 ## <a name="output-types"></a>Çıkış türleri  
- Aşağıdaki liste <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> komutunda bulunan çıkış türlerini açıklar.  
+ Aşağıdaki listede, <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> komutta bulunan çıkış türleri açıklanmaktadır.  
   
 #### <a name="xmlwriter"></a>Işleyemez  
- <xref:System.Xml.XmlWriter> sınıfı, XML akışlarını veya dosyalarını yazar. <xref:System.Xml.XmlWriterSettings> sınıfını kullanarak, çıkış seçenekleri de dahil olmak üzere <xref:System.Xml.XmlWriter> nesnesinde destekedilecek özellikleri belirtebilirsiniz. <xref:System.Xml.XmlWriter> sınıfı, <xref:System.Xml> çerçevesinin ayrılmaz bir parçasıdır. Bu çıktı türünü, çıkış sonuçlarının başka bir XML işlemine göre işlem hattını kullanarak kullanın.  
+ Sınıfı <xref:System.Xml.XmlWriter> , XML akışlarını veya dosyalarını yazar. Sınıfını kullanarak, çıktı seçenekleri de dahil olmak üzere <xref:System.Xml.XmlWriter> , nesne üzerinde destekedilecek özellikleri belirtebilirsiniz. <xref:System.Xml.XmlWriterSettings> <xref:System.Xml.XmlWriter> Sınıfı, <xref:System.Xml> çerçevesinin integral bir parçasıdır. Bu çıktı türünü, çıkış sonuçlarının başka bir XML işlemine göre işlem hattını kullanarak kullanın.  
   
 #### <a name="string"></a>Dize  
  Çıkış dosyasının URI 'sini belirtmek için bu çıkış türünü kullanın.  
   
 #### <a name="stream"></a>Akış  
- Akış, bir dosya, giriş/çıkış aygıtı, işlem içi iletişim kanalı veya TCP/IP yuvası gibi bir bayt dizisinin soyutlamasıdır. <xref:System.IO.Stream> sınıfı ve onun türetilmiş sınıfları, bu farklı giriş ve çıkış türlerinin genel bir görünümünü sağlar ve bu da programcı 'yı işletim sisteminin ve temel cihazların belirli ayrıntılarından yalılar.  
+ Akış, bir dosya, giriş/çıkış aygıtı, işlem içi iletişim kanalı veya TCP/IP yuvası gibi bir bayt dizisinin soyutlamasıdır. <xref:System.IO.Stream> Sınıfı ve onun türetilmiş sınıfları, bu farklı giriş ve çıkış türlerinin genel bir görünümünü sağlar ve bu da programcı 'yı işletim sisteminin ve temel cihazların belirli ayrıntılarından yalılar.  
   
- <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>veya çıkış akışına (`Response.OutputStream`) veri göndermek için bu çıkış türünü kullanın.  
+ Bir <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>veya çıkış akışına (`Response.OutputStream`) veri göndermek için bu çıkış türünü kullanın.  
   
 #### <a name="textwriter"></a>TextWriter  
- <xref:System.IO.TextWriter> sıralı karakterler yazar. Sırasıyla dizelere veya akışlara karakter yazan <xref:System.IO.StringWriter> ve <xref:System.IO.StreamWriter> sınıflarında uygulanır. Bir dizeye çıkış yapmak istediğinizde bu çıkış türünü kullanın.  
+ Sıralı <xref:System.IO.TextWriter> karakterler yazar. Sırasıyla dizelere veya akışlara <xref:System.IO.StringWriter> karakter <xref:System.IO.StreamWriter> yazan ve sınıflarında uygulanır. Bir dizeye çıkış yapmak istediğinizde bu çıkış türünü kullanın.  
   
 ## <a name="notes"></a>Notlar  
   
-- Boş Etiketler yazılırken, öğe adının son karakteri ve ters eğik çizgi arasına bir boşluk yazılır, örneğin `<myElement />`. Bu, daha eski tarayıcıların oluşturulan HTML sayfalarını doğru görüntülemesini sağlar.  
+- Boş Etiketler yazılırken, öğe adının son karakteri ve ters eğik çizgi `<myElement />` arasına bir boşluk yazılır; örneğin. Bu, daha eski tarayıcıların oluşturulan HTML sayfalarını doğru görüntülemesini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,7 +16,7 @@ ms.locfileid: "74352872"
 Bu bölüm Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgilerine bağlantılar sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)  
+ [Visual Basic dil başvurusu](../../visual-basic/language-reference/index.md)  
  Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağlar.  
   
  [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  

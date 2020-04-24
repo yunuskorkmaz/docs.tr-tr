@@ -20,7 +20,7 @@ Varlık başvurusu genişletilmemişse ancak korunmadığında, XML Belge Nesne 
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- DOM, `&publisher;` başvurusuyla karşılaştığında bir **XmlEntityReference** düğümü oluşturur. **XmlEntityReference** , varlık bildiriminde içerikten kopyalanmış alt düğümleri içerir. Önceki kod örneği varlık bildiriminde metin içerir, bu nedenle bir **XmlText** düğümü varlık başvurusu düğümünün alt düğümü olarak oluşturulur.  
+ DOM, `&publisher;` başvuruyla karşılaştığında bir **XmlEntityReference** düğümü oluşturur. **XmlEntityReference** , varlık bildiriminde içerikten kopyalanmış alt düğümleri içerir. Önceki kod örneği varlık bildiriminde metin içerir, bu nedenle bir **XmlText** düğümü varlık başvurusu düğümünün alt düğümü olarak oluşturulur.  
   
  ![Korunan varlık başvuruları için ağaç yapısı](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 Korunan varlık başvuruları için ağaç yapısı  
@@ -30,7 +30,7 @@ Korunan varlık başvuruları için ağaç yapısı
 > [!NOTE]
 > **XmlEntity** 'den kopyalanmış düğümler, varlık başvurusu düğümü altına yerleştirildiğinde her zaman tam kopya değildir. Varlık başvurusu düğümünde kapsamda olan ve alt düğümlerin son yapılandırmasını etkileyen ad alanları olabilir.  
   
- Varsayılan olarak, `&abc;` gibi genel varlıklar korunur ve **XmlEntityReference** düğümleri her zaman oluşturulur.  
+ Varsayılan olarak, gibi `&abc;` genel varlıklar korunur ve **XmlEntityReference** düğümleri her zaman oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

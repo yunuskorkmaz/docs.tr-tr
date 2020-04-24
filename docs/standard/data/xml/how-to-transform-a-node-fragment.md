@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: düğüm parçasını dönüştürme'
+title: 'Nasıl yapılır: Düğüm Parçasını Dönüştürme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,8 +13,8 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710823"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: düğüm parçasını dönüştürme
-Bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> nesnesi içindeki verileri dönüştürdüğünüzde XSLT dönüştürmeleri bir belge için bir bütün olarak uygulanır. Diğer bir deyişle, belge kök düğümü dışında bir düğüm geçirirseniz, bu, dönüşüm işleminin yüklenen belgedeki tüm düğümlere erişmesini engellemez. Bir düğüm parçasını dönüştürmek için yalnızca düğüm parçasını içeren ayrı bir nesne oluşturmanız ve bu nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine iletmeniz gerekir.  
+# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: Düğüm Parçasını Dönüştürme
+Bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> NESNESINDE bulunan verileri dönüştürdüğünüzde XSLT dönüştürmeleri bir belge için bir bütün olarak uygulanır. Diğer bir deyişle, belge kök düğümü dışında bir düğüm geçirirseniz, bu, dönüşüm işleminin yüklenen belgedeki tüm düğümlere erişmesini engellemez. Bir düğüm parçasını dönüştürmek için yalnızca düğüm parçasını içeren ayrı bir nesne oluşturmanız ve bu nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemine iletmeniz gerekir.  
   
 ## <a name="procedures"></a>Yordamlar  
   
@@ -42,7 +42,7 @@ Bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> nes
 ##### <a name="singlexsl"></a>tek. Xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>Çıkış  
+### <a name="output"></a>Çıktı  
  Kitap başlığı, güvenirlik Man.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

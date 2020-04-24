@@ -58,7 +58,7 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Sarmalayıcıları](com-wrappers.md)
-- [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)
+- [COM sarmalayıcıları](com-wrappers.md)
+- [COM Aranabilir Sarmalayıcısı](com-callable-wrapper.md)
 - [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../../framework/interop/importing-a-type-library-as-an-assembly.md)
+- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](../../framework/interop/importing-a-type-library-as-an-assembly.md)

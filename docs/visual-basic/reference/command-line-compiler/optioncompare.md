@@ -28,7 +28,7 @@ Dize karşılaştırmalarının nasıl yapılacağını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t_0 iki formdan birini belirtebilirsiniz: ikili dize karşılaştırmaları kullanmak için `-optioncompare:binary` ve metin dizesi karşılaştırmaları kullanmak için `-optioncompare:text`. Varsayılan olarak, derleyici `-optioncompare:binary` ' ı kullanır.
+İki formdan birini `-optioncompare` belirtebilirsiniz: `-optioncompare:binary` ikili dize karşılaştırmaları kullanmak ve `-optioncompare:text` metin dizesi karşılaştırmaları kullanmak için. Varsayılan olarak, derleyici kullanır `-optioncompare:binary`.
 
 Microsoft Windows 'da, geçerli kod sayfası ikili sıralama düzenini belirler. Tipik bir ikili sıralama düzeni aşağıdaki gibidir:
 
@@ -52,7 +52,7 @@ Bkz. [Option Compare deyimin](../../../visual-basic/language-reference/statement
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod `ProjFile.vb` derler ve ikili dize karşılaştırmaları kullanır.
+Aşağıdaki kod derlenir `ProjFile.vb` ve ikili dize karşılaştırmaları kullanır.
 
 ```console
 vbc -optioncompare:binary projFile.vb

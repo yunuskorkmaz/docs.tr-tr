@@ -17,27 +17,27 @@ ms.locfileid: "75710290"
 Dış kaynakları çözmeniz gerekebilmeniz için bir XSLT dönüştürmesi sırasında birkaç zaman vardır.  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver sınıfını kullanma  
- <xref:System.Xml.XmlResolver> sınıfı, dış kaynakları çözümlemek için kullanılır. Aşağıdaki tabloda XSLT işleme sırasında <xref:System.Xml.XmlResolver> ne zaman dahil olduğu açıklanır.  
+ Sınıfı <xref:System.Xml.XmlResolver> , dış kaynakları çözümlemek için kullanılır. Aşağıdaki tabloda XSLT işleme sırasında ne <xref:System.Xml.XmlResolver> zaman dahil olduğu açıklanır.  
   
 |XSLT görevi|İçin XmlResolver kullanılma|  
 |---------------|--------------------------------------|  
-|Stil sayfasını derleyin.|Stil sayfasının URI 'sini çözümleyin.<br /><br /> \- ve -<br /><br /> Herhangi bir `xsl:import` veya `xsl:include` öğesinde URI başvurularını çözümleyin.|  
-|Stil sayfasını yürütün.|Bağlam belgesinin URI 'sini çözümleyin.<br /><br /> \- ve -<br /><br /> Tüm XSLT `document()` işlevlerinde URI başvurularını çözümleyin.|  
+|Stil sayfasını derleyin.|Stil sayfasının URI 'sini çözümleyin.<br /><br /> '<br /><br /> Herhangi bir `xsl:import` veya `xsl:include` öğesinde URI başvurularını çözümleyin.|  
+|Stil sayfasını yürütün.|Bağlam belgesinin URI 'sini çözümleyin.<br /><br /> '<br /><br /> Tüm XSLT `document()` işlevlerinde URI başvurularını çözümleyin.|  
   
- <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> ve <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemleri, bağımsız değişkenlerinden biri olarak bir <xref:System.Xml.XmlResolver> nesnesi alan aşırı yüklemeleri içerir. Bir <xref:System.Xml.XmlResolver> belirtilmemişse, kimlik bilgileri olmayan bir varsayılan <xref:System.Xml.XmlUrlResolver> kullanılır.  
+ Ve <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemleri, bağımsız değişkenlerinden biri olarak bir <xref:System.Xml.XmlResolver> nesne alan aşırı yüklemeleri içerir. <xref:System.Xml.XmlResolver> Belirtilmemişse, kimlik bilgileri olmayan bir varsayılan <xref:System.Xml.XmlUrlResolver> kullanılır.  
   
- Aşağıdaki listede bir <xref:System.Xml.XmlResolver> nesnesi belirtmek isteyebileceğiniz zaman açıklanmaktadır:  
+ Aşağıdaki listede bir <xref:System.Xml.XmlResolver> nesne belirtmek isteyebileceğiniz zaman açıklanmaktadır:  
   
 - XSLT işleminin kimlik doğrulaması gerektiren bir ağ kaynağına erişmesi gerekiyorsa, gerekli kimlik bilgileriyle bir <xref:System.Xml.XmlResolver> kullanabilirsiniz.  
   
-- XSLT işleminin erişebileceği kaynakları kısıtlamak istiyorsanız, doğru izin kümesiyle bir <xref:System.Xml.XmlSecureResolver> kullanabilirsiniz. Denetlediğiniz veya güvenilmeyen bir kaynağı açmanız gerekiyorsa <xref:System.Xml.XmlSecureResolver> sınıfını kullanın.  
+- XSLT işleminin erişebileceği kaynakları kısıtlamak istiyorsanız, doğru izin kümesiyle bir <xref:System.Xml.XmlSecureResolver> kullanabilirsiniz. Denetlediğiniz veya <xref:System.Xml.XmlSecureResolver> güvenilmeyen bir kaynağı açmanız gerekiyorsa sınıfını kullanın.  
   
 - Davranışı özelleştirmek istiyorsanız kendi <xref:System.Xml.XmlResolver> sınıfınızı uygulayabilir ve kaynakları çözümlemek için kullanabilirsiniz.  
   
-- Dış kaynaklara erişilmemesini sağlamak istiyorsanız <xref:System.Xml.XmlResolver> bağımsız değişkeni için `null` belirtebilirsiniz.  
+- Hiçbir dış kaynağa erişilmemesini sağlamak istiyorsanız `null` <xref:System.Xml.XmlResolver> bağımsız değişkeni için belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir ağ kaynağında depolanan bir stil sayfasını derler. <xref:System.Xml.XmlUrlResolver> nesnesi, stil sayfasına erişmek için gereken kimlik bilgilerini belirtir.  
+ Aşağıdaki örnek, bir ağ kaynağında depolanan bir stil sayfasını derler. Bir <xref:System.Xml.XmlUrlResolver> nesne, stil sayfasına erişmek için gereken kimlik bilgilerini belirtir.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  

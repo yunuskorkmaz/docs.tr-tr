@@ -22,21 +22,21 @@ Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derledi�
 -addmodule:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `fileList`  
- Gerekli. Meta veri içeren ancak derleme bildirimleri içermeyen dosyaların virgülle ayrılmış listesi. Boşluk içeren dosya adları tırnak işaretleri ("") içine alınmalıdır.  
+ Gereklidir. Meta veri içeren ancak derleme bildirimleri içermeyen dosyaların virgülle ayrılmış listesi. Boşluk içeren dosya adları tırnak işaretleri ("") içine alınmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t_0 parametresine göre listelenen dosyalar `-target:module` seçeneğiyle oluşturulmalıdır ya da başka bir derleyicinin `-target:module` eşdeğeri olmalıdır.  
+ `fileList` Parametresi tarafından listelenen dosyaların `-target:module` seçeneğiyle oluşturulması veya başka bir derleyicinin eşdeğeri olması gerekir `-target:module`.  
   
- @No__t_0 ile eklenen tüm modüller, çalışma zamanında çıkış dosyası ile aynı dizinde olmalıdır. Diğer bir deyişle, derleme zamanında herhangi bir dizinde bir modül belirtebilirsiniz, ancak modülün çalışma zamanında uygulama dizininde olması gerekir. Bu yoksa <xref:System.TypeLoadException> bir hata alırsınız.  
+ İle `-addmodule` eklenen tüm modüller, çalışma zamanında çıkış dosyası ile aynı dizinde olmalıdır. Diğer bir deyişle, derleme zamanında herhangi bir dizinde bir modül belirtebilirsiniz, ancak modülün çalışma zamanında uygulama dizininde olması gerekir. Aksi takdirde bir <xref:System.TypeLoadException> hata alırsınız.  
   
- @No__t_2 ile `-target:module` dışında herhangi bir[hedef Visual Basic (](../../../visual-basic/reference/command-line-compiler/target.md) örtük veya açık) herhangi bir seçeneği belirtirseniz, `-addmodule` geçirdiğiniz dosyalar projenin derlemesinin bir parçası haline gelir. @No__t_0 bir veya daha fazla dosya eklenmiş bir çıkış dosyası çalıştırmak için bütünleştirilmiş kod gereklidir.  
+ `-target:module` İle `-addmodule`dışında herhangi bir `-addmodule` [hedef Visual Basic (](../../../visual-basic/reference/command-line-compiler/target.md) örtük veya açık) herhangi bir seçeneği belirtirseniz, bu dosya projenin derlemesinin bir parçası haline gelir. Bir veya daha fazla dosya eklenmiş bir çıkış dosyası çalıştırmak için bütünleştirilmiş kod gereklidir `-addmodule`.  
   
  Derleme içeren bir dosyadan meta verileri içeri aktarmak için [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) kullanın.  
   
 > [!NOTE]
-> @No__t_0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-addmodule` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod bir modül oluşturur.  
@@ -47,7 +47,7 @@ Derleyicinin, belirtilen dosya (lar) dan tüm tür bilgilerini şu anda derledi�
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- @No__t_0 çalıştırdığınızda `802` çıkış olur.  
+ Çalıştırdığınızda `t1`, çıkış çıkışları `802`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

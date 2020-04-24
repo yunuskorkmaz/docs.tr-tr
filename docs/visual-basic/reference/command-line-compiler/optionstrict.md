@@ -26,19 +26,19 @@ ms.locfileid: "72583083"
 -optionstrict[:custom]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-`+` &#124; `-`  
-İsteğe bağlı. @No__t_0 seçeneği örtük tür dönüştürmeyi kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-` ' dır. @No__t_0 seçeneği `-optionstrict` aynıdır. Hem izin veren tür semantiğinin hem de kullanabilirsiniz.
+`+`&#124;`-`  
+İsteğe bağlı. `-optionstrict+` Seçeneği örtük tür dönüştürmeyi kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-`. `-optionstrict+` Seçeneği ile `-optionstrict`aynıdır. Hem izin veren tür semantiğinin hem de kullanabilirsiniz.
 
 `custom`  
-Gerekli. Katı dil semantiklerine uyulmadığında uyar.
+Gereklidir. Katı dil semantiklerine uyulmadığında uyar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-@No__t_0 yürürlükte olduğunda, yalnızca genişleyen tür dönüştürmeleri örtülü olarak yapılabilir. Bir tamsayı türü nesnesine `Decimal` tür nesnesi atama gibi örtülü daraltma türü dönüştürmeleri hata olarak bildirilir.
+Etkin `-optionstrict+` olduğunda, yalnızca genişleyen tür dönüştürmeleri örtülü olarak yapılabilir. Bir tamsayı türü nesnesine bir `Decimal` tür nesnesi atama gibi örtülü daraltma tür dönüştürmeleri hata olarak bildirilir.
 
-Örtük daraltma türü dönüştürmeleri için uyarı oluşturmak üzere `-optionstrict:custom` kullanın. Belirli uyarıları yok saymak için `-nowarn:numberlist` ve belirli uyarıları hata olarak değerlendirmek için `-warnaserror:numberlist` kullanın.
+Örtülü daraltma tür dönüştürmeleri için uyarı oluşturmak için kullanın `-optionstrict:custom`. Belirli `-nowarn:numberlist` uyarıları yoksaymak ve `-warnaserror:numberlist` belirli uyarıları hata olarak değerlendirmek için kullanın.
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE 'de-OptionStrict öğesini ayarlamak için
 
@@ -54,7 +54,7 @@ Bkz. [Option Strict deyimdir](../../../visual-basic/language-reference/statement
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, `Test.vb` ' i katı tür semantiğini kullanarak derler.
+Aşağıdaki kod, katı `Test.vb` tür semantiğini kullanarak derlenir.
 
 ```console
 vbc -optionstrict+ test.vb

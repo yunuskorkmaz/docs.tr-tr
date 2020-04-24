@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bağlantı Durumunu Denetleme'
+title: 'Nasıl yapılır: Bağlantı Durumunu Denetleme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -16,17 +16,17 @@ ms.locfileid: "74345888"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Bağlantı Durumunu Denetleme
 
-Özellik, <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> bilgisayarın çalışma ağı veya Internet bağlantısı olup olmadığını belirlemek için kullanılabilir.  
+<xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Özelliği, bilgisayarın çalışan bir ağa veya Internet bağlantısına sahip olup olmadığını anlamak için kullanılabilir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Bilgisayarın çalışma bağlantısı olup olmadığını denetlemek için  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Bilgisayarda çalışan bir bağlantı olup olmadığını denetlemek için  
   
-- Özelliğin `IsAvailable` olup `True` olmadığını `False`veya . Aşağıdaki kod özelliğin durumunu denetler ve bildirir:  
+- `IsAvailable` Özelliğin `True` veya `False`olup olmadığını belirleme. Aşağıdaki kod özelliğin durumunu denetler ve raporlar:  
   
      [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
-     Bu kod örneği, IntelliSense kod parçacığı olarak da kullanılabilir. Kod snippet toplayıcı, **bağlantı ve ağ**bulunmaktadır. Daha fazla bilgi için [Kod Parçacıkları'na](/visualstudio/ide/code-snippets)bakın.  
+     Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **bağlantı ve ağ**bölümünde bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

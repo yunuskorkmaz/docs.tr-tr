@@ -16,51 +16,51 @@ ms.locfileid: "74348858"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 
-Bir <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> dizini başka bir dizine kopyalamak için yöntemi kullanın. Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizini yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` `False`ayarlanmışsa, iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
+Bir dizini <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka bir dizine kopyalamak için yöntemini kullanın. Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` olarak `False`ayarlanırsa, iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
 
-Bir dizin içinde dosyaları kopyalarken, birleştirme `overwrite` sırasında var olan dosya gibi belirli bir dosyanın `False`neden olduğu özel durumlar atılabilir. Bu tür özel durumlar atıldığında, özelliği dosya veya `Data` dizin yolunun anahtar olduğu ve belirli özel durum iletisinin ilgili değerde bulunduğu girişleri barındıran tek bir özel durum olarak birleştirilir.
+Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştirme `overwrite` sırasında var olan bir dosya gibi) nedeniyle özel durumlar oluşturulabilir. `False` Bu tür özel durumlar oluştuğunda, `Data` özelliği dosya veya dizin yolunun anahtar olduğu ve belirli özel durum iletisinin karşılık gelen değerde bulunduğu girdileri tutan tek bir özel durum halinde birleştirilir.
 
 ## <a name="to-copy-a-directory-to-another-directory"></a>Bir dizini başka bir dizine kopyalamak için
 
-- Kaynak `CopyDirectory` ve hedef dizin adlarını belirterek yöntemi kullanın. Aşağıdaki örnek, varolan dosyaların `TestDirectory1` `TestDirectory2`üzerine yazdığı dizini kopyalar.
+- Kaynak ve `CopyDirectory` hedef dizin adlarını belirterek yöntemini kullanın. Aşağıdaki örnek, var olan dosyaların üzerine `TestDirectory1` yazarak `TestDirectory2`adlı dizini içine kopyalar.
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
-    Bu kod örneği, IntelliSense kod parçacığı olarak da kullanılabilir. Kod snippet picker, dosya sisteminde yer alır **- İşleme Sürücüler, Klasörler ve Dosyalar**. Daha fazla bilgi için [Kod Parçacıkları'na](/visualstudio/ide/code-snippets)bakın.
+    Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide **dosya sistemi Işleme sürücülerinde, klasörlerinde ve dosyalarında**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Dizin için belirtilen yeni ad bir üst üste (:) veya eğik çizgi (\ veya /) (<xref:System.ArgumentException>).
+- Dizin için belirtilen yeni ad iki nokta içerir (:) veya eğik çizgi (\ veya/)<xref:System.ArgumentException>().
 
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).
 
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
 
-- `destinationDirectoryName`veya `Nothing` boş bir<xref:System.ArgumentNullException>dize ( )
+- `destinationDirectoryName``Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>)
 
-- Kaynak dizini yok (<xref:System.IO.DirectoryNotFoundException>).
+- Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).
 
-- Kaynak dizini bir kök dizinidir (<xref:System.IO.IOException>).
+- Kaynak dizin bir kök dizin (<xref:System.IO.IOException>).
 
-- Birleştirilmiş yol varolan bir<xref:System.IO.IOException>dosyayı işaret eder ( ).
+- Birleşik yol, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
 
-- Kaynak yolu ve hedef yolu<xref:System.IO.IOException>aynıdır ( ).
+- Kaynak yolu ve hedef yolu aynı (<xref:System.IO.IOException>).
 
-- `ShowUI`ayarlanır `UIOption.AllDialogs` ve kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla<xref:System.OperationCanceledException>dosya kopyalanamaz ( ).
+- `ShowUI`, olarak `UIOption.AllDialogs` ayarlanır ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor (<xref:System.OperationCanceledException>).
 
-- İşlem döngüseldir (<xref:System.InvalidOperationException>).
+- İşlem döngüsel (<xref:System.InvalidOperationException>).
 
-- Yol bir kolon içerir (:) (<xref:System.NotSupportedException>).
+- Yol iki nokta içerir (:) (<xref:System.NotSupportedException>).
 
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
 
-- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
 
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
 
-- Hedef dosya var, ancak erişilemiyor (<xref:System.UnauthorizedAccessException>).
+- Hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

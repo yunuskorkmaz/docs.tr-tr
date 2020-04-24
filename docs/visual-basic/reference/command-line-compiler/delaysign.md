@@ -23,18 +23,18 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
 -delaysign[+ | -]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Bağımsız Değişkenler
 
-`+` &#124; `-`  
-İsteğe bağlı. Tam olarak imzalanan bir derleme istiyorsanız `-delaysign-` kullanın. Ortak anahtarı derlemeye koymak ve imzalı karma için alan ayırmak istiyorsanız `-delaysign+` kullanın. Varsayılan, `-delaysign-` değeridir.
+`+`&#124;`-`  
+İsteğe bağlı. Tam `-delaysign-` olarak imzalanan bir derleme istiyorsanız kullanın. Ortak `-delaysign+` anahtarı derlemeye yerleştirmek ve imzalı karma için alan ayırmak istiyorsanız kullanın. Varsayılan değer: `-delaysign-`.
 
 ## <a name="remarks"></a>Açıklamalar
 
-[-Keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) veya [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)ile kullanılmamışsa `-delaysign` seçeneğinin hiçbir etkisi yoktur.
+`-delaysign` [-Keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) veya [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)ile kullanılmamışsa seçeneğinin etkisi yoktur.
 
 Tam olarak imzalanan bir derleme istediğinizde, derleyici bildirimi içeren dosyayı (derleme meta verileri) karma hale getirir ve bu karmayı özel anahtarla imzalar. Elde edilen dijital imza, bildirimi içeren dosyada depolanır. Bir derlemenin gecikmesi gecikmeli olduğunda, derleyici imzayı hesaplamaz ve depolamaz, ancak imza daha sonra eklenebilmesi için dosyada yer ayırır.
 
-Örneğin, `-delaysign+` ' ı kullanarak bir kuruluştaki geliştirici, test edicinin genel derleme önbelleği ile kaydedebilmesi ve kullanması için imzasız test sürümlerini dağıtabilir. Derlemedeki iş tamamlandığında, kuruluşun özel anahtarından sorumlu olan kişi derlemeyi tamamen imzalayabilir. Bu compartmen, kuruluşun özel anahtarının açıklanmasını koruurken tüm geliştiricilerin derlemeler üzerinde çalışmasına izin verir.
+Örneğin, kullanarak `-delaysign+`bir kuruluştaki geliştirici, test edicinin genel derleme önbelleği ile kaydedebilmesi ve kullanması için imzasız test sürümlerini dağıtabilir. Derlemedeki iş tamamlandığında, kuruluşun özel anahtarından sorumlu olan kişi derlemeyi tamamen imzalayabilir. Bu compartmen, kuruluşun özel anahtarının açıklanmasını koruurken tüm geliştiricilerin derlemeler üzerinde çalışmasına izin verir.
 
 Bir derlemeyi imzalama hakkında daha fazla bilgi için bkz. [tanımlayıcı adlı derlemeler oluşturma ve kullanma](../../../standard/assembly/create-use-strong-named.md) .
 

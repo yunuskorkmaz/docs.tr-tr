@@ -24,21 +24,21 @@ Derleyicinin yalnızca belirtilen Visual Basic dil sürümünde bulunan sözdizi
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
  `version`  
- Gerekli. Derleme sırasında kullanılacak dil sürümü. Kabul edilen değerler `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` ve `latest`.
+ Gereklidir. Derleme sırasında kullanılacak dil sürümü. Kabul edilen değerler `9`, `10` `11` `12` `14`,,,, `15`, `15.3`, `15.5` `default` ve `latest`.
 
- Tüm sayıların tümü, alt sürüm olarak `.0` (örneğin, `11.0`) kullanılarak da belirtilebilir.
+ Tüm sayıların tümü, alt sürüm olarak (örneğin, `.0` `11.0`) kullanılarak da belirtilebilir.
 
- Komut satırında `-langversion:?` belirterek tüm olası değerlerin listesini görebilirsiniz.  
+ Komut satırında belirterek `-langversion:?` , olası tüm değerlerin listesini görebilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-langversion` seçeneği derleyicinin kabul ettiği sözdizimini belirtir. Örneğin, dil sürümünün 9,0 olduğunu belirtirseniz, derleyici yalnızca 10,0 ve sonraki sürümlerde geçerli olan sözdizimi için hatalar oluşturur.  
+ `-langversion` Seçeneği derleyicinin kabul ettiği sözdizimini belirtir. Örneğin, dil sürümünün 9,0 olduğunu belirtirseniz, derleyici yalnızca 10,0 ve sonraki sürümlerde geçerli olan sözdizimi için hatalar oluşturur.  
   
  .NET Framework farklı sürümlerini hedefleyen uygulamalar geliştirirken, bu seçeneği kullanabilirsiniz. Örneğin, .NET Framework 3,5 ' i hedefliyorsanız, dil sürümü 10,0 ' den sözdizimini kullanmamanız için bu seçeneği kullanabilirsiniz.  
   
- `-langversion` doğrudan yalnızca komut satırını kullanarak ayarlayabilirsiniz. Daha fazla bilgi için bkz. [belirli bir .NET Framework sürümünü hedefleme](/visualstudio/ide/visual-studio-multi-targeting-overview).  
+ Doğrudan yalnızca komut `-langversion` satırını kullanarak ayarlayabilirsiniz. Daha fazla bilgi için bkz. [belirli bir .NET Framework sürümünü hedefleme](/visualstudio/ide/visual-studio-multi-targeting-overview).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, Visual Basic 9,0 `sample.vb` derler.  
+ Aşağıdaki kod Visual Basic 9,0 `sample.vb` için derlenir.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  

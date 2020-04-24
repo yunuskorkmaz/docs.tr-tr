@@ -25,22 +25,22 @@ ms.locfileid: "72004966"
 -win32resource:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
  `filename`  
  Çıkış dosyanıza eklenecek kaynak dosyasının adı. Bir boşluk içeriyorsa dosya adını tırnak işaretleri ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Microsoft Windows Kaynak derleyicisi (RC) ile bir Win32 kaynak dosyası oluşturabilirsiniz.  
   
- Win32 kaynağı, uygulamanızın **Dosya Gezgini**'nde tanımlanmasına yardımcı olan sürüm veya bit eşlem (simge) bilgilerini içerebilir. @No__t-0 belirtmezseniz, derleyici derleme sürümüne göre sürüm bilgileri oluşturur. @No__t-0 ve `-win32icon` seçenekleri birbirini dışlıyor.  
+ Win32 kaynağı, uygulamanızın **Dosya Gezgini**'nde tanımlanmasına yardımcı olan sürüm veya bit eşlem (simge) bilgilerini içerebilir. Belirtmezseniz `-win32resource`, derleyici derleme sürümüne göre sürüm bilgileri oluşturur. `-win32resource` Ve `-win32icon` seçenekleri birbirini dışlıyor.  
   
  Bir .NET Framework kaynak dosyasına başvurmak için bkz. [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) veya .NET Framework kaynak dosyası iliştirmek için [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) .  
   
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-win32resource` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve bir Win32 kaynak dosyası ekler, `Rf.res`:  
+ Aşağıdaki kod, `Rf.res`bir `In.vb` Win32 kaynak dosyasını derler ve iliştirir:  
   
 ```console  
 vbc -win32resource:rf.res in.vb  

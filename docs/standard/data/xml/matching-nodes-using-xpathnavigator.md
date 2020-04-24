@@ -14,13 +14,13 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710693"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğümleri Eşleştirme
-<xref:System.Xml.XPath.XPathNavigator> sınıfı, bir düğümün bir XPath ifadesiyle eşleşip eşleşmediğini anlamak için <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemini sağlar. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemi, giriş olarak bir XPath ifadesi alır ve geçerli düğümün verilen XPath ifadesiyle veya belirtilen derlenmiş <xref:System.Xml.XPath.XPathExpression> nesnesiyle eşleşip eşleşmediğini gösteren bir <xref:System.Boolean> döndürür.  
+<xref:System.Xml.XPath.XPathNavigator> Sınıfı, <xref:System.Xml.XPath.XPathNavigator.Matches%2A> bir düğümün bir XPath ifadesiyle eşleşip eşleşmediğini belirleme yöntemini sağlar. Yöntemi <xref:System.Xml.XPath.XPathNavigator.Matches%2A> , giriş olarak bir XPath ifadesi alır ve geçerli düğümün <xref:System.Boolean> verilen XPath ifadesiyle veya belirtilen derlenmiş <xref:System.Xml.XPath.XPathExpression> nesneyle eşleşip eşleşmediğini gösteren bir döndürür.  
   
 ## <a name="matching-nodes"></a>Eşleşen düğümler  
- Geçerli düğüm belirtilen XPath ifadesiyle eşleşiyorsa <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemi `true` döndürür. Örneğin, aşağıdaki kod örneğinde, geçerli düğüm öğe `b`ise ve öğe `b` bir öznitelik `c`içeriyorsa <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemi `true` döndürür.  
+ <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi, geçerli `true` düğüm belirtilen XPath ifadesiyle eşleşiyorsa döndürür. Örneğin, aşağıdaki kod örneğinde, geçerli düğüm <xref:System.Xml.XPath.XPathNavigator.Matches%2A> öğesi `true` `b`ise ve öğesinin `b` bir özniteliği `c`varsa yöntemi döndürülür.  
   
 > [!NOTE]
-> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemi <xref:System.Xml.XPath.XPathNavigator>durumunu değiştirmez.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi, <xref:System.Xml.XPath.XPathNavigator>öğesinin durumunu değiştirmez.  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  

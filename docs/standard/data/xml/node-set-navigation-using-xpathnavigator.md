@@ -11,28 +11,28 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710576"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
-<xref:System.Xml.XPath.XPathNavigator> sınıfının düğüm kümesi gezinti yöntemlerini kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümlerin üzerinde gezinebilirsiniz. Tüm düğümlerin üzerinde veya <xref:System.Xml.XPath.XPathNavigator> sınıfının seçim yöntemlerinden biri tarafından döndürülen seçili düğüm kümesi üzerinde gezinebilirsiniz.  
+Sınıfın düğüm kümesi gezinti yöntemlerini kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümlerin üzerinde gezinebilirsiniz. <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator> Sınıfın seçim yöntemlerinden biri tarafından döndürülen tüm düğümlerin veya seçili düğüm kümesinin üzerinde gezinebilirsiniz.  
   
 ## <a name="element-node-set-navigation"></a>Öğe düğümü kümesi gezintisi  
- <xref:System.Xml.XPath.XPathNavigator> sınıfı, öğe düğümlerinde gezinmek için kullanılan birkaç yöntem sağlar. Aşağıdaki tabloda kullanılabilir gezinti yöntemleri ve bunların nasıl taşındıklarından bir açıklama gösterilmektedir; Bu, öznitelik ve ad alanı düğümlerinde gezinmek için kullanılan yöntemleri içermez.  
+ Sınıfı <xref:System.Xml.XPath.XPathNavigator> , öğe düğümlerinde gezinmek için kullanılan birkaç yöntem sağlar. Aşağıdaki tabloda kullanılabilir gezinti yöntemleri ve bunların nasıl taşındıklarından bir açıklama gösterilmektedir; Bu, öznitelik ve ad alanı düğümlerinde gezinmek için kullanılan yöntemleri içermez.  
   
- <xref:System.Xml.XPath.XPathNavigator> nesnesindeki düğümleri seçme hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak XML verilerini seçme, değerlendirme ve eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md). Öznitelik ve ad alanı düğümlerine gitme hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak öznitelik ve ad alanı düğümü gezintisi](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
+ Bir <xref:System.Xml.XPath.XPathNavigator> nesnedeki düğümleri seçme hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak XML verilerini seçme, değerlendirme ve eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md). Öznitelik ve ad alanı düğümlerine gitme hakkında daha fazla bilgi için bkz. [XPathNavigator kullanarak öznitelik ve ad alanı düğümü gezintisi](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>|<xref:System.Xml.XPath.XPathNavigator> belirtilen <xref:System.Xml.XPath.XPathNavigator> aynı konuma taşımaktır.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün alt düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün ilk eşdüzey düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün ilk alt düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>|<xref:System.Xml.XPath.XPathNavigator> belge düzeninde belirtilen öğeye gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>|<xref:System.Xml.XPath.XPathNavigator>, belirtilen <xref:System.String>eşleşen bir değere sahip `ID` türünde bir özniteliğe sahip düğüme taşımıştır.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün sonraki eşdüzey düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün üst düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>|<xref:System.Xml.XPath.XPathNavigator> geçerli düğümün önceki eşdüzey düğümüne gider.|  
-|<xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>|<xref:System.Xml.XPath.XPathNavigator> XML belgesinin kök düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>|<xref:System.Xml.XPath.XPathNavigator> ' İ <xref:System.Xml.XPath.XPathNavigator> belirtilen konumuna gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>|<xref:System.Xml.XPath.XPathNavigator> Öğesini geçerli düğümün alt düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>|<xref:System.Xml.XPath.XPathNavigator> Geçerli düğümün ilk eşdüzey düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>|<xref:System.Xml.XPath.XPathNavigator> Geçerli düğümün ilk alt düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>|<xref:System.Xml.XPath.XPathNavigator> Belge düzeninde belirtilen öğeye gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>|' Öğesini <xref:System.Xml.XPath.XPathNavigator> , belirtilen `ID` <xref:System.String>ile eşleşen bir değeri olan bir özniteliğine sahip düğüme taşımıştır.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>|<xref:System.Xml.XPath.XPathNavigator> Geçerli düğümün sonraki eşdüzey düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>|<xref:System.Xml.XPath.XPathNavigator> Öğesini geçerli düğümün üst düğümüne kaydırır.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>|<xref:System.Xml.XPath.XPathNavigator> Geçerli düğümün önceki eşdüzey düğümüne gider.|  
+|<xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>|<xref:System.Xml.XPath.XPathNavigator> Öğesini XML belgesinin kök düğümüne gider.|  
   
 ## <a name="comments-and-processing-instruction-node-navigation"></a>Açıklamalar ve Işleme yönergesi düğüm gezintisi  
- Aşağıdaki <xref:System.Xml.XPath.XPathNavigator> sınıfı yöntemleri, bir XML belgesindeki diğer düğümlerden açıklamalara veya işleme talimatlarına geçmek için geçerlidir.  
+ Aşağıdaki <xref:System.Xml.XPath.XPathNavigator> sınıf yöntemleri, bir XML belgesindeki diğer düğümlerden açıklamalara veya işleme talimatlarına geçmek için geçerlidir.  
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   

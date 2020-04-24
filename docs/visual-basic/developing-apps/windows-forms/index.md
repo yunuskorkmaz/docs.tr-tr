@@ -18,7 +18,7 @@ Visual Basic önemli bir kısmı, kullanıcıların bilgisayarlarında yerel ola
 
 ## <a name="designing-windows-forms-applications"></a>Windows Forms uygulamaları tasarlama
 
-Visual Studio ile Windows Forms ve Windows hizmet uygulamaları oluşturabilirsiniz. Daha fazla bilgi için aşağıdaki konulara bakın:
+Visual Studio ile Windows Forms ve Windows hizmet uygulamaları oluşturabilirsiniz. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
 - [Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md)kullanmaya başlama. Windows Forms ve program oluşturma hakkında bilgi sağlar.
 
@@ -38,30 +38,30 @@ Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken bir olay
 
 ### <a name="controls"></a>Denetimler
 
-Windows Forms, formlara yerleştirebileceğiniz çeşitli denetimler içerir: metin kutularını, düğmeleri, açılan kutuları, radyo düğmelerini ve hatta Web sayfalarını görüntüleyen denetimler. Bir formda kullanabileceğiniz tüm denetimlerin listesi için, bkz. [Windows Forms kullanılacak denetimler](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Mevcut bir denetim gereksinimlerinizi karşılamıyorsa, Windows Forms <xref:System.Windows.Forms.UserControl> sınıfını kullanarak kendi özel denetimlerinizi oluşturmayı da destekler.
+Windows Forms, formlara yerleştirebileceğiniz çeşitli denetimler içerir: metin kutularını, düğmeleri, açılan kutuları, radyo düğmelerini ve hatta Web sayfalarını görüntüleyen denetimler. Bir formda kullanabileceğiniz tüm denetimlerin listesi için, bkz. [Windows Forms kullanılacak denetimler](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Mevcut bir denetim gereksinimlerinizi karşılamıyorsa, Windows Forms <xref:System.Windows.Forms.UserControl> sınıfı kullanarak kendi özel denetimlerinizi oluşturmayı da destekler.
 
-Windows Forms, Microsoft Office gibi yüksek kaliteli uygulamalardaki özellikleri taklit eden zengin Kullanıcı arabirimi denetimlerine sahiptir. <xref:System.Windows.Forms.ToolStrip> ve <xref:System.Windows.Forms.MenuStrip> denetimini kullanarak metin ve görüntü içeren araç çubukları ve menüler oluşturabilir, alt menüler görüntüleyebilir ve metin kutuları ve Birleşik giriş kutuları gibi diğer denetimleri barındırabilirsiniz.
+Windows Forms, Microsoft Office gibi yüksek kaliteli uygulamalardaki özellikleri taklit eden zengin Kullanıcı arabirimi denetimlerine sahiptir. <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.MenuStrip> denetimini kullanarak metin ve görüntü içeren araç çubukları ve menüler oluşturabilir, alt menüler görüntüleyebilir ve metin kutuları ve Birleşik giriş kutuları gibi diğer denetimleri barındırabilirsiniz.
 
-Visual Studio sürükle ve bırak formları Tasarımcısı ile kolayca Windows Forms uygulamalar oluşturabilirsiniz: imlecinizin bulunduğu denetimleri seçmeniz ve bunları form üzerinde istediğiniz yere yerleştirmeniz yeterlidir. Tasarımcı, denetimleri hizalamayı ortadan kaldırmaya yönelik kılavuz çizgileri ve "satırları Yasla" gibi araçlar sağlar. Visual Studio 'Yu veya komut satırında derlemeyi kullanıp, en az zaman ve çaba ile gelişmiş form düzenleri oluşturmak için <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> ve <xref:System.Windows.Forms.SplitContainer> denetimleri kullanabilirsiniz.
+Visual Studio sürükle ve bırak formları Tasarımcısı ile kolayca Windows Forms uygulamalar oluşturabilirsiniz: imlecinizin bulunduğu denetimleri seçmeniz ve bunları form üzerinde istediğiniz yere yerleştirmeniz yeterlidir. Tasarımcı, denetimleri hizalamayı ortadan kaldırmaya yönelik kılavuz çizgileri ve "satırları Yasla" gibi araçlar sağlar. Visual Studio 'yu veya komut satırında derlemeyi kullanıp kullanmayacağınızı, en az zaman ve çaba ile gelişmiş <xref:System.Windows.Forms.FlowLayoutPanel>form <xref:System.Windows.Forms.TableLayoutPanel> düzenleri <xref:System.Windows.Forms.SplitContainer> oluşturmak için ve denetimlerini kullanabilirsiniz.
 
 ### <a name="custom-ui-elements"></a>Özel Kullanıcı arabirimi öğeleri
 
-Son olarak, kendi özel kullanıcı arabirimi öğelerinizi oluşturmanız gerekiyorsa <xref:System.Drawing> ad alanı, satırları, daireleri ve diğer şekilleri doğrudan form üzerinde işlemek için gereken tüm sınıfları içerir.
+Son olarak, kendi özel kullanıcı arabirimi öğelerinizi oluşturmanız gerekiyorsa, <xref:System.Drawing> ad alanı, satırları, daireleri ve diğer şekilleri doğrudan form üzerinde işlemek için ihtiyacınız olan tüm sınıfları içerir.
 
 Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.
 
-|Bitiş|Bkz.|
+|Alıcı|Bkz.|
 |--------|---------|
 |Visual Studio ile yeni bir Windows Forms uygulaması oluşturma|[Öğretici 1: resim görüntüleyici oluşturma](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
 |Formlarda denetimleri kullanma|[Nasıl yapılır: Windows Forms’a Denetimler Ekleme](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|<xref:System.Drawing> grafik oluşturma|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
+|İle grafik oluşturma<xref:System.Drawing>|[Grafik Programlamaya Başlarken](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
 |Özel denetimler oluşturma|[Nasıl yapılır: UserControl Sınıfından Devralma](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ## <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme
 
-Birçok uygulamanın, verileri bir veritabanından, XML dosyasından, XML Web hizmetinden veya başka bir veri kaynağından görüntülemesi gerekir. Windows Forms, bu tür tablosal verileri geleneksel bir satır ve sütun biçiminde işlemek için <xref:System.Windows.Forms.DataGridView> denetimi adlı esnek bir denetim sağlar, böylece her veri parçası kendi hücresini kaplar. <xref:System.Windows.Forms.DataGridView> kullanarak, tek tek hücrelerin görünümünü özelleştirebilir, rastgele satırları ve sütunları bir yere kilitleyebilir ve diğer özellikler arasında hücrelerde karmaşık denetimleri görüntüleyebilirsiniz.
+Birçok uygulamanın, verileri bir veritabanından, XML dosyasından, XML Web hizmetinden veya başka bir veri kaynağından görüntülemesi gerekir. Windows Forms, her veri parçasının kendi hücresini <xref:System.Windows.Forms.DataGridView> kaplayacağı şekilde, bu tür tablosal verileri geleneksel bir satır ve sütun biçiminde işlemeye yönelik denetim adlı esnek bir denetim sağlar. ' <xref:System.Windows.Forms.DataGridView> Yi kullanarak, tek tek hücrelerin görünümünü özelleştirebilir, rastgele satırları ve sütunları bir yere kilitleyebilir ve diğer özellikler arasında hücrelerde karmaşık denetimleri görüntüleyebilirsiniz.
 
-Ağ üzerinden veri kaynaklarına bağlanmak, Windows Forms akıllı istemcileri olan basit bir görevdir. <xref:System.Windows.Forms.BindingSource> bileşeni, Visual Studio 2005 ve .NET Framework 2,0 ' deki Windows Forms yeni bir veri kaynağına bağlantıyı temsil eder ve verileri denetimlere bağlama, önceki ve sonraki kayıtlara gitme, kayıtları düzenlemeyle ve değişiklikleri özgün kaynağa geri kaydetme yöntemlerini sunar. <xref:System.Windows.Forms.BindingNavigator> denetimi, kullanıcıların kayıtlar arasında gezindiği <xref:System.Windows.Forms.BindingSource> bileşen üzerinde basit bir arabirim sağlar.
+Ağ üzerinden veri kaynaklarına bağlanmak, Windows Forms akıllı istemcileri olan basit bir görevdir. Visual <xref:System.Windows.Forms.BindingSource> Studio 2005 ve .NET Framework 2,0 ' de Windows Forms yeni olan bileşen, bir veri kaynağına bağlantıyı temsil eder ve verileri denetimlere bağlama, önceki ve sonraki kayıtlara gitme, kayıtları düzenlemeyle ve değişiklikleri özgün kaynağa geri kaydetme yöntemlerini gösterir. Denetim <xref:System.Windows.Forms.BindingNavigator> , kullanıcıların kayıtlar arasında gezindiği <xref:System.Windows.Forms.BindingSource> bileşen üzerinde basit bir arabirim sağlar.
 
 ### <a name="data-bound-controls"></a>Veri bağlantılı denetimler
 
@@ -73,9 +73,9 @@ Windows Forms ' de yönetebileceğiniz başka bir veri bağlama türü ayarları
 
 Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın.
 
-|Bitiş|Bkz.|
+|Alıcı|Bkz.|
 |--------|---------|
-|<xref:System.Windows.Forms.BindingSource> bileşenini kullanma|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|<xref:System.Windows.Forms.BindingSource> Bileşeni kullanma|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
 |ADO.NET veri kaynaklarıyla çalışma|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Windows formunda verileri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
@@ -89,7 +89,7 @@ Uygulamanızı güncelleştirdiğinizde, yeni bir dağıtım bildirimi ve uygula
 
 ClickOnce 'a tam giriş için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment). Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:
 
-|Bitiş|Bkz.|
+|Alıcı|Bkz.|
 |--------|---------|
 |ClickOnce ile uygulama dağıtma|[Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |ClickOnce dağıtımını güncelleştirme|[Nasıl yapılır: ClickOnce Uygulaması için Güncelleştirmeleri Yönetme](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
@@ -101,7 +101,7 @@ Windows Forms ' de, iletişim kutuları oluşturma, yazdırma, yardım ve belge 
 
 Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yardım konularına bakın:
 
-|Bitiş|Bkz.|
+|Alıcı|Bkz.|
 |--------|---------|
 |Form içeriğini yazdırma|[Nasıl yapılır: Windows Forms'ta Grafik Yazdırma](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Nasıl yapılır: Windows Forms'ta Çok Sayfalı Metin Dosyası Yazdırma](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Windows Forms güvenliği hakkında daha fazla bilgi edinin|[Windows Forms'ta Güvenliğe Genel Bakış](../../../framework/winforms/security-in-windows-forms-overview.md)|

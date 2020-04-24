@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Kayıt Defteri Anahtarından Değer Okuma'
+title: 'Nasıl yapılır: Kayıt Defteri Anahtarından Değer Okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -17,43 +17,43 @@ ms.locfileid: "74345612"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarından Değer Okuma
 
-`My.Computer.Registry` Nesnenin `GetValue` yöntemi, Windows kayıt defterindeki değerleri okumak için kullanılabilir.  
+`My.Computer.Registry` Nesne `GetValue` yöntemi, Windows kayıt defterindeki değerleri okumak için kullanılabilir.  
   
- Aşağıdaki örnekte yer alan "Software\MyApp" tuşu yoksa bir özel durum atılır. Aşağıdaki `ValueName`örnekte "Ad" yoksa, `Nothing` döndürülür.  
+ Aşağıdaki örnekteki "Software\MyApp" anahtarı yoksa, bir özel durum oluşturulur. `ValueName`, Aşağıdaki örnekteki "Name" mevcut `Nothing` değilse, döndürülür.  
   
- Yöntem, `GetValue` belirli bir kayıt defteri anahtarında belirli bir değerin bulunup bulunmadığını belirlemek için de kullanılabilir.  
+ Yöntemi `GetValue` , belirli bir değerin belirli bir kayıt defteri anahtarında bulunup bulunmadığını anlamak için de kullanılabilir.  
   
- Kod bir Web uygulamasından kayıt defterini okuduğunda, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme tarafından belirlenir.  
+ Kod, bir Web uygulamasından kayıt defterini okuduğunda, geçerli kullanıcı Web uygulamasında uygulanan kimlik doğrulama ve kimliğe bürünme tarafından belirlenir.  
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>Kayıt defteri anahtarından bir değeri okumak için  
   
-- Kayıt `GetValue` defteri anahtarından bir değer okumak için yolu ve adı belirterek yöntemi kullanın. Aşağıdaki örnekteki değeri `Name` `HKEY_CURRENT_USER\Software\MyApp` okur ve bir ileti kutusunda görüntüler.  
+- Kayıt defteri `GetValue` anahtarından bir değeri okumak için yolu ve adı belirterek yöntemi kullanın. Aşağıdaki örnek, öğesinden `Name` `HKEY_CURRENT_USER\Software\MyApp` değerini okur ve bir ileti kutusunda görüntüler.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
- Bu kod örneği, IntelliSense kod parçacığı olarak da kullanılabilir. Kod snippet picker, **Windows İşletim Sistemi > Kayıt Bulunmaktadır.** Daha fazla bilgi için [Kod Parçacıkları'na](/visualstudio/ide/code-snippets)bakın.  
+ Bu kod örneği, bir IntelliSense kod parçacığı olarak da kullanılabilir. Kod parçacığı seçicide, **Windows Işletim sistemi > kayıt defterinde**bulunur. Daha fazla bilgi için bkz. [kod parçacıkları](/visualstudio/ide/code-snippets).  
   
-### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Kayıt defteri anahtarında bir değerin bulunup bulunmadığını belirlemek için  
+### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>Bir kayıt defteri anahtarında bir değerin bulunup bulunmadığını belirleme  
   
-- Değeri `GetValue` almak için yöntemi kullanın. Aşağıdaki kod, değerin var olup olmadığını denetler ve yoksa bir iletiyi döndürür.  
+- Değerini almak `GetValue` için yöntemini kullanın. Aşağıdaki kod değerin mevcut olup olmadığını denetler ve yoksa bir ileti döndürür.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Kayıt defteri, verileri depolamak için kullanılan üst düzey veya kök anahtarlarını tutar. Örneğin, HKEY_LOCAL_MACHINE kök anahtarı tüm kullanıcılar tarafından kullanılan makine düzeyindeayarları depolamak için kullanılırken, HKEY_CURRENT_USER tek bir kullanıcıya özgü verileri depolamak için kullanılır.  
+ Kayıt defteri, verileri depolamak için kullanılan en üst düzey veya kök anahtarlar içerir. Örneğin, HKEY_LOCAL_MACHINE kök anahtarı, tüm kullanıcılar tarafından kullanılan makine düzeyindeki ayarları depolamak için kullanılır, HKEY_CURRENT_USER tek bir kullanıcıya özgü verileri depolamak için kullanılır.  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
 - Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Kullanıcının kayıt defteri anahtarlarından okuma izni<xref:System.Security.SecurityException>yoktur ( ).  
+- Kullanıcının kayıt defteri anahtarlarından okuma izni yok (<xref:System.Security.SecurityException>).  
   
-- Anahtar adı 255 karakter sınırını aşıyor<xref:System.ArgumentException>( ).  
+- Anahtar adı 255 karakter sınırını (<xref:System.ArgumentException>) aşıyor.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
 
- Bu işlemi çalıştırmak için derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektirir. Kısmi güven bağlamında çalışıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum atabilir. Benzer şekilde, kullanıcının ayarlar oluşturmak veya yazmak için doğru ALA'lara sahip olması gerekir. Örneğin, kod erişim güvenlik iznine sahip yerel bir uygulamanın işletim sistemi izni olmayabilir. Daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../../../../framework/misc/code-access-security-basics.md)bakın.  
+ Bu işlemi çalıştırmak için, derlemeniz <xref:System.Security.Permissions.RegistryPermission> sınıf tarafından verilen bir ayrıcalık düzeyi gerektiriyor. Kısmi güven bağlamında çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum oluşturabilir. Benzer şekilde, Kullanıcı oluşturma veya ayarları yazma için doğru ACL 'Lere sahip olmalıdır. Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../../framework/misc/code-access-security-basics.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

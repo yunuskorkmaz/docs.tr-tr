@@ -53,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- **Count** özelliğine ek olarak, **XmlNodeList**içindeki düğümlerin koleksiyonu üzerinde, `foreach` stil yinelemesi sağlayan bir **GetEnumerator** yöntemi vardır. Aşağıdaki kod örneği `foreach` deyimin kullanımını gösterir.  
+ **Count** özelliğine ek olarak, **XmlNodeList**içindeki düğümlerin **GetEnumerator** koleksiyonu üzerinde bir `foreach` stil yinelemesi sağlayan bir GetEnumerator yöntemi vardır. Aşağıdaki kod örneği, `foreach` ifadesinin kullanımını gösterir.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -90,7 +90,7 @@ End While
   }  
 ```  
   
- **XmlNodeList**üzerinde bulunan Yöntemler ve özellikler hakkında daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeList>.  
+ **XmlNodeList**üzerinde bulunan Yöntemler ve özellikler hakkında daha fazla bilgi için bkz <xref:System.Xml.XmlNodeList>..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

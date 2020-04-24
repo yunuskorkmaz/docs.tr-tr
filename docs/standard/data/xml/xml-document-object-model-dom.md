@@ -42,7 +42,7 @@ XML belge yapısında, bu çizimdeki her bir daire, **XMLNode** nesnesi olarak a
 - Bir öğe düğümündeki metin gibi, düğümün içerdiği bilgilere ek olarak tüm düğümleri alın.
 
   > [!NOTE]
-  > Bir uygulama, DOM tarafından sağlanmış yapı veya Düzenle özelliklerine ihtiyaç sağlamazsa, **XmlReader** ve **XmlWriter** sınıfları önbelleğe alınmamış, salt iletme akışı xml 'e erişim sağlar. Daha fazla bilgi için bkz. <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>.
+  > Bir uygulama, DOM tarafından sağlanmış yapı veya Düzenle özelliklerine ihtiyaç sağlamazsa, **XmlReader** ve **XmlWriter** sınıfları önbelleğe alınmamış, salt iletme akışı xml 'e erişim sağlar. Daha fazla bilgi için <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> bölümlerine bakın.
 
 **Düğüm** nesnelerinin bir dizi yöntem ve özellik yanı sıra temel ve iyi tanımlanmış özellikler vardır. Bu özelliklerden bazıları şunlardır:
 
@@ -64,7 +64,7 @@ XML belge yapısında, bu çizimdeki her bir daire, **XMLNode** nesnesi olarak a
 
 - **Kitap** ve **PubInfo** düğümleri tarafından diyagramda temsil edilen aynı düzeydeki düğümler eşdüzey düzeydir.
 
-DOM 'ın bir özelliği öznitelikleri nasıl işler. Öznitelikler üst, alt ve eşdüzey ilişkilerin parçası olan düğümler değildir. Öznitelikler, öğe düğümünün bir özelliği olarak değerlendirilir ve bir ad ve değer çiftinden oluşur. Örneğin, öğe `price`ilişkili `format="dollar`"içeren XML verileriniz varsa, `format` sözcüğü addır ve `format` özniteliğinin değeri `dollar`olur. **Fiyat** düğümünün `format="dollar"` özniteliğini almak için, imleç `price` öğesi düğümünde bulunduğu zaman **GetAttribute** yöntemini çağırın. Daha fazla bilgi için bkz. [Dom Içindeki özniteliklere erişme](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
+DOM 'ın bir özelliği öznitelikleri nasıl işler. Öznitelikler üst, alt ve eşdüzey ilişkilerin parçası olan düğümler değildir. Öznitelikler, öğe düğümünün bir özelliği olarak değerlendirilir ve bir ad ve değer çiftinden oluşur. Örneğin `format="dollar`, "öğesiyle ilişkili" ÖĞESININ `price`bulunduğu XML veriniz varsa, sözcük `format` addır ve `format` öznitelik değeri olur. `dollar` `format="dollar"` **Fiyat** düğümünün özniteliğini almak için, imleç `price` öğe düğümünde bulunduğu zaman **GetAttribute** yöntemini çağırın. Daha fazla bilgi için bkz. [Dom Içindeki özniteliklere erişme](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).
 
 XML belleğe okunduğu için düğümler oluşturulur. Ancak, tüm düğümler aynı türde değildir. XML içindeki bir öğe, işleme yönergesinden farklı kurallara ve sözdizimine sahiptir. Bu nedenle, çeşitli veriler okunabileceği için her düğüme bir düğüm türü atanır. Bu düğüm türü, düğümün özelliklerini ve işlevlerini belirler.
 

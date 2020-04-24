@@ -17,15 +17,15 @@ Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm 
 |-------------------|------------|-----------------|  
 |Belge|<xref:System.Xml.XmlDocument>|Ağaçtaki tüm düğümlerin kapsayıcısı. Her zaman kök öğesiyle aynı olmayan belge kökü olarak da bilinir.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Herhangi bir ağaç yapısı olmadan bir veya daha fazla düğüm içeren geçici bir paket.|  
-|DocumentType|<xref:System.Xml.XmlDocumentType>|`<!DOCTYPE…>` düğümünü temsil eder.|  
+|DocumentType|<xref:System.Xml.XmlDocumentType>|`<!DOCTYPE…>` Düğümü temsil eder.|  
 |EntityReference|<xref:System.Xml.XmlEntityReference>|Genişletilmemiş varlık başvuru metnini temsil eder.|  
 |Öğe|<xref:System.Xml.XmlElement>|Bir öğe düğümünü temsil eder.|  
 |Özniteliği|<xref:System.Xml.XmlAttribute>|, Bir öğesinin özniteliğidir.|  
 |Processingyönergesi|<xref:System.Xml.XmlProcessingInstruction>|Bir işleme yönergesi düğümüdür.|  
-|Yorum|<xref:System.Xml.XmlComment>|Bir açıklama düğümü.|  
+|Açıklama|<xref:System.Xml.XmlComment>|Bir açıklama düğümü.|  
 |Metin|<xref:System.Xml.XmlText>|Bir öğeye veya özniteliğe ait metin.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|CDATA 'ı temsil eder.|  
-|Varlık|<xref:System.Xml.XmlEntity>|Bir XML belgesindeki `<!ENTITY…>` bildirimlerini, iç belge türü tanımı (DTD) alt kümesinden veya dış DTD 'lerden ve parametre varlıklarından temsil eder.|  
+|Varlık|<xref:System.Xml.XmlEntity>|Bir XML `<!ENTITY…>` belgesindeki bildirimleri, bir iç belge türü tanımı (DTD) alt kümesinden ya da dış DTD 'lerden ve parametre varlıklarından temsil eder.|  
 |Gösterim|<xref:System.Xml.XmlNotation>|DTD 'de belirtilen bir gösterimi temsil eder.|  
   
  Bir öznitelik (*ATTR*), W3C DOM Level 1 bölümü 1,2 temel arabirimlerinde bir düğüm olarak listelense de, herhangi bir öğe düğümünün alt öğesi olarak kabul edilmez.  
@@ -34,13 +34,13 @@ Bir XML belgesi, düğüm ağacı olarak belleğe okuna, düğümlerin düğüm 
   
 |Düğüm türü|Açıklama|  
 |---------------|-----------------|  
-|<xref:System.Xml.XmlDeclaration>|`<?xml version="1.0"…>`bildirim düğümünü temsil eder.|  
+|<xref:System.Xml.XmlDeclaration>|Bildirim düğümünü `<?xml version="1.0"…>`temsil eder.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Karışık içerikte boşluk olan önemli boşluk temsil eder.|  
 |<xref:System.Xml.XmlWhitespace>|Bir öğenin içeriğindeki boşluğu temsil eder.|  
-|EndElement|**XmlReader** bir öğenin sonuna geldiğinde döndürülür.<br /><br /> Örnek XML: **\</item >**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
-|EndEntity|**XmlReader** , <xref:System.Xml.XmlReader.ResolveEntity%2A>çağrısı sonucu olarak varlık değişikliği sonuna geldiğinde döndürülür. Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
+|EndElement|**XmlReader** bir öğenin sonuna geldiğinde döndürülür.<br /><br /> Örnek xml: ** \</item>**<br /><br /> Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
+|EndEntity|**XmlReader** , çağrısının sonuna geldiğinde bir çağrının sonucunu aldığında döndürülür <xref:System.Xml.XmlReader.ResolveEntity%2A>. Daha fazla bilgi için bkz. <xref:System.Xml.XmlNodeType>.|  
   
- XML 'de okuyan ve düğüm ve içeriği hakkında bilgi yazdırmak için düğüm türlerinde bir Case yapısı kullanan bir kod örneğini görüntülemek için, bkz. <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
+ XML 'de okuyan ve düğüm ve içeriği hakkında bilgi yazdırmak için düğüm türlerinde bir Case yapısı kullanan bir kod örneğini görüntülemek için bkz <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>..  
   
  Düğüm türlerinin nesne hiyerarşisi ve bunların eşdeğer nesne adı hakkında daha fazla bilgi için bkz. [XML belge nesne modeli (DOM) hiyerarşisi](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Düğüm ağacında oluşturulan nesneler hakkında daha fazla bilgi için, bkz. [nesne HIYERARŞISINI XML verileriyle eşleme](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   

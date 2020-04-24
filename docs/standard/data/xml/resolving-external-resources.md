@@ -41,12 +41,12 @@ ms.locfileid: "75710277"
   
 |XmlResolver özelliği|İşlev|Notlar|  
 |--------------------------|--------------|-----------|  
-|**XmlDocument** tarafından kullanılan **XmlResolver** sınıfı, **XmlReader**tarafından kullanılan bir.|**XmlDocument** , **XmlReader**'a atanan **XmlResolver** 'ı kullanır.<br /><br /> XmlDocument **. Resolver** özelliği, **XmlReader**'dan bir **XmlResolver** alındığından, **XmlDocument** güven düzeyinden bağımsız olarak ayarlanamaz. **XmlDocument**'un **XmlResolver** özelliğini ayarlayarak **xmlokuyucuları** **XmlResolver** 'ın ayarlarını geçersiz kılmayı deneyemezsiniz.|**XmlReader** , **xmltextreader**, <xref:System.Xml.XmlReader>veya özel olarak yazılmış bir okuyucu olabilir. Kullanılan okuyucu varlık çözünürlüğünü destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvurularını desteklemiyorsa, varlık başvuruları çözümlenmez.|  
+|**XmlDocument** tarafından kullanılan **XmlResolver** sınıfı, **XmlReader**tarafından kullanılan bir.|**XmlDocument** , **XmlReader**'a atanan **XmlResolver** 'ı kullanır.<br /><br /> XmlDocument **. Resolver** özelliği, **XmlReader**'dan bir **XmlResolver** alındığından, **XmlDocument** güven düzeyinden bağımsız olarak ayarlanamaz. **XmlDocument**'un **XmlResolver** özelliğini ayarlayarak **xmlokuyucuları** **XmlResolver** 'ın ayarlarını geçersiz kılmayı deneyemezsiniz.|**XmlReader** , **XmlTextReader**, doğrulama <xref:System.Xml.XmlReader>veya özel yazılı bir okuyucu olabilir. Kullanılan okuyucu varlık çözünürlüğünü destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvurularını desteklemiyorsa, varlık başvuruları çözümlenmez.|  
   
  XmlResolver 'ın doğru kimlik bilgilerini içerecek şekilde ayarlanması, dış kaynaklara erişime izin verir.  
   
 > [!NOTE]
-> **XmlResolver** özelliğini almanın bir yolu yoktur. Bu, bir kullanıcının kimlik bilgilerinin ayarlandığı bir **XmlResolver** 'ı yeniden kullanmasını önlemeye yardımcı olur. Ayrıca, **XmlDocument** 'yi yüklemek Için bir **XmlTextReader** veya doğrulama <xref:System.Xml.XmlReader> kullanılırsa ve **XmlDocument** ayarlanmış bir çözümleyici 'ye sahipse, bu okuyuculardan gelen çözümleyiciler **yükleme** aşamasından sonra **XmlDocument** tarafından önbelleğe alınmaz, çünkü bu da bir güvenlik riski oluşturur.  
+> **XmlResolver** özelliğini almanın bir yolu yoktur. Bu, bir kullanıcının kimlik bilgilerinin ayarlandığı bir **XmlResolver** 'ı yeniden kullanmasını önlemeye yardımcı olur. Ayrıca, **XmlDocument** 'yi yüklemek Için bir **XmlTextReader** veya <xref:System.Xml.XmlReader> doğrulama kullanılıyorsa ve **XmlDocument** ayarlanmış bir çözümleyici 'ye sahipse, bu okuyuculardan gelen çözümleyiciler **yükleme** aşamasından sonra **XmlDocument** tarafından önbelleğe alınmaz, çünkü bu da bir güvenlik riski oluşturur.  
   
  Daha fazla bilgi için <xref:System.Xml.XmlResolver> başvuru sayfasının açıklamalar bölümüne bakın.  
   

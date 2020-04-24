@@ -11,11 +11,11 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710316"
 ---
 # <a name="removing-nodes-from-the-dom"></a>DOM’dan Düğümleri Kaldırma
-XML Belge Nesne Modeli (DOM) bir düğümü kaldırmak için, belirli bir düğümü kaldırmak için <xref:System.Xml.XmlNode.RemoveChild%2A> metodunu kullanın. Bir düğümü kaldırdığınızda, yöntemi kaldırılan düğüme ait olan alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değildir.  
+XML Belge Nesne Modeli (DOM) bir düğümü kaldırmak için, belirli bir düğümü kaldırmak <xref:System.Xml.XmlNode.RemoveChild%2A> için yöntemini kullanın. Bir düğümü kaldırdığınızda, yöntemi kaldırılan düğüme ait olan alt ağacı kaldırır; diğer bir deyişle, bir yaprak düğüm değildir.  
   
- DOM 'dan birden fazla düğümü kaldırmak için, geçerli düğümün varsa tüm alt ve özniteliklerini kaldırmak üzere <xref:System.Xml.XmlNode.RemoveAll%2A> yöntemini kullanın.  
+ DOM 'dan birden fazla düğümü kaldırmak için, geçerli düğümün <xref:System.Xml.XmlNode.RemoveAll%2A> varsa tüm alt öğeleri ve öznitelikleri kaldırmak için yöntemini kullanın.  
   
- Bir <xref:System.Xml.XmlNamedNodeMap>çalışıyorsanız, <xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A> yöntemini kullanarak bir düğümü kaldırabilirsiniz.  
+ İle çalışıyorsanız <xref:System.Xml.XmlNamedNodeMap>, <xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A> yöntemini kullanarak bir düğümü kaldırabilirsiniz.  
   
  Öznitelikleri kaldırmak için bkz. [Dom 'daki bir öğe düğümünden öznitelikleri kaldırma](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   

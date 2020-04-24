@@ -11,7 +11,7 @@ ms.locfileid: "71353144"
 ---
 # <a name="basic-serialization-technology-sample"></a>Temel Serileştirme Teknolojisi Örneği
 
-[Örnek indir](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
+[Örnek indirme](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)
 
 Bu örnek, ortak dil çalışma zamanının bir akışa bellekte bir nesne grafiğinin seri hale getirme yeteneğini gösterir. Bu örnek ya da kullanabilirsiniz <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> veya <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> seri hale getirme. Verilerle doldurulan bağlantılı bir liste, bir dosya akışından serileştirilir veya seri hale getirilebilir. Her iki durumda da, sonuçları görebilmesi listesi görüntülenir. Bağlantılı listesinin türünde `LinkedList`, bu örnek tarafından tanımlanan bir türü.
 
@@ -74,17 +74,17 @@ Aşağıdaki madde işaretleri sınıflar Bu örnek tarafından kullanılan ve t
 
   - <xref:System.Runtime.Serialization.IFormatter>Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya bir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ' ın bir ikili biçimdeki bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Bir ikili biçimdeki bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, bağlantılı bir listeyi SOAP biçimindeki bir akışa seri hale getirmek için kullanılır. SOAP standart bir biçimidir.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>SOAP biçimindeki bir akışa bağlı bir liste serileştirmek için kullanılır. SOAP standart bir biçimidir.
 
 - Akış G/Ç
 
   - <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türüdür. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.
 
-  - <xref:System.IO.File> disk üzerinde dosya okumak ve oluşturmak için <xref:System.IO.FileStream> nesneleri oluşturmak için kullanılır.
+  - <xref:System.IO.File>Disk üzerinde dosya <xref:System.IO.FileStream> okumak ve oluşturmak için nesneleri oluşturmak üzere kullanılır.
 
-  - <xref:System.IO.FileStream> bağlantılı listeleri seri hale getirmek ve seri durumdan çıkarmak için kullanılır.
+  - <xref:System.IO.FileStream>Bağlantılı listeleri seri hale getirmek ve seri durumdan çıkarmak için kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -99,9 +99,9 @@ Aşağıdaki madde işaretleri sınıflar Bu örnek tarafından kullanılan ve t
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [Temel Serileştirme](../../../docs/standard/serialization/basic-serialization.md)
-- [İkili Serileştirme](../../../docs/standard/serialization/binary-serialization.md)
+- [Temel serileştirme](../../../docs/standard/serialization/basic-serialization.md)
+- [İkili serileştirme](../../../docs/standard/serialization/binary-serialization.md)
 - [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [XML Serileştirmeye Giriş](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Serileştirme](../../../docs/standard/serialization/index.md)
-- [XML ve SOAP Serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)

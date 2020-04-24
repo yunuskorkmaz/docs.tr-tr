@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Uygulama Ayarlarını Okuma'
+title: 'Nasıl yapılır: Uygulama Ayarlarını Okuma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
@@ -15,17 +15,17 @@ ms.locfileid: "74329565"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Uygulama Ayarlarını Okuma
 
-Nesne üzerinde ayarın özelliğine erişerek bir kullanıcı `My.Settings` ayarını okuyabilirsiniz.  
+`My.Settings` Nesne üzerindeki ayara erişerek bir kullanıcı ayarını okuyabilirsiniz.  
   
- Nesne `My.Settings` her ayarı bir özellik olarak ortaya çıkarır. Özellik adı ayar adı ile aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **Kapsamı** özelliğin salt okunup okunmaz olduğunu gösterir; **Bir Uygulama** kapsamı ayarı için özellik salt okunur, **Kullanıcı** kapsam ayarı için özellik okuma-yazma. Daha fazla bilgi için [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md)' e bakın.  
+ `My.Settings` Nesnesi her ayarı bir özellik olarak gösterir. Özellik adı, ayar adıyla aynıdır ve özellik türü ayar türüyle aynıdır. Ayarın **kapsamı** , özelliğin salt okunurdur belirtir; bir **uygulama** kapsamı ayarının özelliği salt okunurdur, ancak bir **Kullanıcı** kapsamı ayarı özelliği okuma-yazma olur. Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="example"></a>Örnek  
 
- Bu örnek, `Nickname` ayarın değerini görüntüler.  
+ Bu örnek, `Nickname` ayarın değerini gösterir.  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
- Bu örneğin çalışması için, uygulamanızın `Nickname` türünde `String`bir ayarı olması gerekir. Daha fazla bilgi için bkz: [Uygulama Ayarlarını Yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+ Bu örneğin çalışması için, uygulamanızın türünde `Nickname` `String`bir ayarı olması gerekir. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

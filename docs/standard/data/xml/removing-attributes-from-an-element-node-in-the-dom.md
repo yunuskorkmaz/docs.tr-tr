@@ -13,29 +13,29 @@ ms.locfileid: "75710355"
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
 Öznitelikleri kaldırmanın birçok yolu vardır. Bir teknik, öznitelik koleksiyonundan kaldırmektir. Bunu yapmak için aşağıdaki adımlar gerçekleştirilir:  
   
-1. `XmlAttributeCollection attrs = elem.Attributes;`kullanarak öğeden öznitelik koleksiyonunu alın.  
+1. Öğesini kullanarak `XmlAttributeCollection attrs = elem.Attributes;`öğesinden öznitelik koleksiyonunu alın.  
   
 2. Öznitelik koleksiyonundan özniteliği, üç yöntemden birini kullanarak kaldırın:  
   
-    - Belirli bir özniteliği kaldırmak için <xref:System.Xml.XmlAttributeCollection.Remove%2A> kullanın.  
+    - Belirli <xref:System.Xml.XmlAttributeCollection.Remove%2A> bir özniteliği kaldırmak için kullanın.  
   
-    - Koleksiyondan tüm öznitelikleri kaldırmak ve öğeyi hiçbir öznitelik olmadan bırakmak için <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> kullanın.  
+    - Koleksiyondan <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> tüm öznitelikleri kaldırmak ve öğeyi hiçbir öznitelik olmadan bırakmak için kullanın.  
   
-    - Öznitelik koleksiyonundan bir özniteliği Dizin numarasını kullanarak kaldırmak için <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> kullanın.  
+    - Öznitelik <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> koleksiyonundan özniteliği Dizin numarasını kullanarak kaldırmak için kullanın.  
   
  Aşağıdaki yöntemler öğe düğümünden öznitelikleri kaldırır.  
   
-- Öznitelik koleksiyonunu kaldırmak için <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> kullanın.  
+- Öznitelik <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> koleksiyonunu kaldırmak için kullanın.  
   
-- Koleksiyondan ada göre tek bir özniteliği kaldırmak için <xref:System.Xml.XmlElement.RemoveAttribute%2A> kullanın.  
+- Koleksiyondan <xref:System.Xml.XmlElement.RemoveAttribute%2A> ada göre tek bir özniteliği kaldırmak için kullanın.  
   
-- Koleksiyondan dizin numarasına göre tek bir özniteliği kaldırmak için <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> kullanın.  
+- Koleksiyondan <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> dizin numarasına göre tek bir özniteliği kaldırmak için kullanın.  
   
- Diğer bir seçenek de öğeyi almak, öznitelik koleksiyonundan özniteliği almak ve öznitelik düğümünü doğrudan kaldırkullanmaktır. Öznitelik koleksiyonundan özniteliği almak için, bir ad, `XmlAttribute attr = attrs["attr_name"];`, Dizin `XmlAttribute attr = attrs[0];`veya ad alanı `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`ile tam olarak niteleyerek adı kullanabilirsiniz.  
+ Diğer bir seçenek de öğeyi almak, öznitelik koleksiyonundan özniteliği almak ve öznitelik düğümünü doğrudan kaldırkullanmaktır. Öznitelik koleksiyonundan özniteliği almak için bir ad, `XmlAttribute attr = attrs["attr_name"];`, Dizin `XmlAttribute attr = attrs[0];`veya ad alanıyla `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`tam olarak niteleyerek adı kullanabilirsiniz.  
   
- Öznitelikleri kaldırmak için kullanılan yöntemden bağımsız olarak, belge türü tanımında (DTD) varsayılan öznitelikler olarak tanımlanan öznitelikleri kaldırmaya ilişkin özel sınırlamalar vardır. Ait oldukları öğe kaldırılmadığı takdirde varsayılan öznitelikler kaldırılamaz. Varsayılan öznitelikler, varsayılan özniteliklerin bildirildiği öğeler için her zaman vardır. Varsayılan bir özniteliği bir <xref:System.Xml.XmlAttributeCollection> veya <xref:System.Xml.XmlElement> kaldırmak, öğesinin <xref:System.Xml.XmlAttributeCollection> eklenen ve varsayılan değere başlatılan bir değiştirme özniteliğiyle sonuçlanır. `<book att1="1" att2="2" att3="3"></book>`olarak tanımlanmış bir öğeye sahipseniz, üç varsayılan özniteliğe göre bildirildiği bir `book` öğesi vardır. XML Belge Nesne Modeli (DOM) uygulama, bu `book` öğesinin var olduğu sürece `att1`, `att2`ve `att3`bu üç varsayılan özniteliğe sahiptir.  
+ Öznitelikleri kaldırmak için kullanılan yöntemden bağımsız olarak, belge türü tanımında (DTD) varsayılan öznitelikler olarak tanımlanan öznitelikleri kaldırmaya ilişkin özel sınırlamalar vardır. Ait oldukları öğe kaldırılmadığı takdirde varsayılan öznitelikler kaldırılamaz. Varsayılan öznitelikler, varsayılan özniteliklerin bildirildiği öğeler için her zaman vardır. Varsayılan bir özniteliği bir <xref:System.Xml.XmlAttributeCollection> veya <xref:System.Xml.XmlElement> ' den, öğesinin öğesine eklenen <xref:System.Xml.XmlAttributeCollection> bir değiştirme özniteliğinde, belirtilen varsayılan değere başlatıldığında kaldırır. Olarak `<book att1="1" att2="2" att3="3"></book>`tanımlanmış bir öğeye sahipseniz, üç varsayılan özniteliğin bildirildiği bir `book` öğeye sahip olursunuz. XML belge nesne modeli `book` (DOM) uygulama, bu öğe olduğu sürece, ve `att1` `att2` `att3`' nin bu üç varsayılan özniteliğine sahiptir.  
   
- Bir <xref:System.Xml.XmlAttribute>ile çağrıldığında <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> yöntemi öznitelik değerini String. Empty olarak ayarlar, çünkü bir öznitelik değer olmadan bulunamaz.  
+ İle <xref:System.Xml.XmlAttribute>çağrıldığında <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> yöntemi, bir öznitelik değer olmadan mevcut olamaz, özniteliği String. Empty olarak ayarlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

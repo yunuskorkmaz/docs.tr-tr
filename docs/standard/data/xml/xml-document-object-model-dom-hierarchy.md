@@ -13,7 +13,7 @@ ms.locfileid: "75709978"
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML Belge Nesne Modeli (DOM) Hiyerarşisi
 Aşağıdaki çizim, parantez içinde World Wide Web Konsorsiyumu (W3C) adı olan XML Belge Nesne Modeli (DOM) için sınıf hiyerarşisini ve ilgili olduğu sınıf adını gösterir.  
   
- ![XML Belge Nesne Modeli &#40;Dom&#41; hiyerarşisi](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![XML Belge Nesne Modeli &#40;DOM&#41; hiyerarşisi](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 XML Belge Nesne Modeli (DOM) hiyerarşisi  
   
  Aşağıdaki sınıflar **XMLNode**'dan aktarılmaz:  

@@ -11,9 +11,9 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710459"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM Modelini Kullanarak XML Verilerini İşleme
-XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak değerlendirir ve XML verilerini bellekte işlemek için kullanılır. `System.Xml` ad alanı, XML belgelerinin, parçaların, düğümlerin veya düğüm kümelerinin programlı bir gösterimini sağlar. World Wide Web Konsorsiyumu (W3C) DOM düzeyi 1 çekirdeğini ve DOM düzey 2 temel önerilerini temel alır.  
+XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak değerlendirir ve XML verilerini bellekte işlemek için kullanılır. `System.Xml` Ad alanı, XML belgelerinin, parçaların, düğümlerin veya düğüm kümelerinin programlı bir gösterimini sağlar. World Wide Web Konsorsiyumu (W3C) DOM düzeyi 1 çekirdeğini ve DOM düzey 2 temel önerilerini temel alır.  
   
- <xref:System.Xml.XmlDocument> sınıfı bir XML belgesini temsil eder. Diğer tüm XML nesnelerini alma ve oluşturma üyelerini içerir. <xref:System.Xml.XmlDocument>ve ilgili sınıfları kullanarak, XML belgeleri oluşturabilir, verileri yükleyebilir ve erişebilir, verileri değiştirebilir ve değişiklikleri kaydedebilirsiniz.  
+ <xref:System.Xml.XmlDocument> Sınıfı bir XML belgesini temsil eder. Diğer tüm XML nesnelerini alma ve oluşturma üyelerini içerir. <xref:System.Xml.XmlDocument>Ve ilişkili SıNıFLARıNı kullanarak XML belgeleri oluşturabilir, verileri yükleyebilir ve erişebilir, verileri değiştirebilir ve değişiklikleri kaydedebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -57,4 +57,4 @@ XML Belge Nesne Modeli (DOM), XML verilerini standart bir nesne kümesi olarak d
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak XML işlemesini açıklar.
+ <xref:System.Xml.XPath.XPathNavigator> SıNıFıNı kullanarak XML işlemesini açıklar.

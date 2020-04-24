@@ -102,7 +102,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);
 ```
 
-**Output**
+**Çıktı**
 
 ```xml
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
@@ -110,11 +110,11 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>
 ```
 
-Tam kod örneği <xref:System.Xml.XmlDocument.CreateAttribute%2A>' de bulunabilir.
+Tam kod örneği adresinde <xref:System.Xml.XmlDocument.CreateAttribute%2A>bulunabilir.
 
 Ayrıca, bir **XmlAttribute** düğümü oluşturabilir ve bunu koleksiyondaki uygun konuma yerleştirmek Için **InsertBefore** veya **InsertAfter** yöntemlerini kullanabilirsiniz. Öznitelik koleksiyonunda aynı ada sahip bir öznitelik zaten varsa, var olan **XmlAttribute** düğümü koleksiyondan kaldırılır ve yeni **XmlAttribute** düğümü eklenir. Bu, **SetAttribute** yöntemiyle aynı şekilde çalışır. Bu yöntemler, var olan bir düğümü bir parametre olarak, **InsertBefore** ve **InsertAfter**yapmak için başvuru noktası olarak alır. Yeni düğümün nereye yerleştirileceğini belirten bir başvuru düğümü sağlamazsanız, **InsertAfter** yöntemi için varsayılan değer, koleksiyonun başlangıcına yeni düğüm eklemek olur. Hiçbir başvuru düğümü sağlanmazsa, **InsertBefore**varsayılan konumu koleksiyonun sonunda olur.
 
-Özniteliklerin **XmlNamedNodeMap** oluşturduysanız, <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> yöntemini kullanarak bir özniteliği ada göre ekleyebilirsiniz. Daha fazla bilgi için bkz. [NamedNodeMaps ve NodeLists Içindeki düğüm koleksiyonları](node-collections-in-namednodemaps-and-nodelists.md).
+Öznitelikleri için <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> bir **XmlNamedNodeMap** oluşturduysanız, yöntemini kullanarak bir özniteliği ada göre ekleyebilirsiniz. Daha fazla bilgi için bkz. [NamedNodeMaps ve NodeLists Içindeki düğüm koleksiyonları](node-collections-in-namednodemaps-and-nodelists.md).
 
 ## <a name="default-attributes"></a>Varsayılan öznitelikler
 

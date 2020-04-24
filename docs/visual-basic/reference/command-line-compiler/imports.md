@@ -22,23 +22,23 @@ Belirtilen bir derlemeden ad alanlarını içeri aktarır.
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`namespaceList`|Gerekli. İçeri aktarılacak ad alanlarının virgülle ayrılmış listesi.|  
+|`namespaceList`|Gereklidir. İçeri aktarılacak ad alanlarının virgülle ayrılmış listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-imports` seçeneği, geçerli kaynak dosyaları kümesi içinde veya başvurulan herhangi bir derlemeden tanımlanmış herhangi bir ad alanını içeri aktarır.  
+ `-imports` Seçeneği, geçerli kaynak dosyaları kümesi içinde veya başvurulan herhangi bir derlemeden tanımlanmış herhangi bir ad alanını içeri aktarır.  
   
- `-imports` ile belirtilen bir ad alanındaki Üyeler, derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Tek kaynak kodu dosyasında bir ad alanı kullanmak için [Imports ifadesini (.net ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kullanın.  
+ İle `-imports` belirtilen bir ad alanındaki Üyeler, derlemedeki tüm kaynak kodu dosyaları için kullanılabilir. Tek kaynak kodu dosyasında bir ad alanı kullanmak için [Imports ifadesini (.net ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kullanın.  
   
 |Visual Studio tümleşik geliştirme ortamında ayarlama-içeri aktarmalar|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. ad alanı adını **Kullanıcı Içeri aktarma Ekle** düğmesinin yanındaki kutuya girin.<br />4. **Kullanıcı Içeri aktarma Ekle** düğmesine tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `-imports:system.globalization` belirtildiğinde derlenir. Bu olmadan, başarılı derleme, kaynak kodu dosyasının başına `Imports System.Globalization` bir deyimin eklenmesini veya özelliğin tam olarak `System.Globalization.CultureInfo.CurrentCulture.Name`uygun olmasını gerektirir.
+ Aşağıdaki kod, belirtildiğinde derlenir `-imports:system.globalization` . Bu olmadan, başarılı derleme kaynak kodu dosyasının başına `Imports System.Globalization` bir deyimin dahil edilmesini veya özelliğin tam olarak `System.Globalization.CultureInfo.CurrentCulture.Name`nitelenmesini gerektirir.
 
 ```vb
 Module Example

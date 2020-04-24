@@ -13,11 +13,11 @@ ms.locfileid: "75447239"
 
 Microsoft. Data. SQLite yerel SQLite kitaplığıyla etkileşmek için SQLitePCLRaw kullanır. SQLitePCLRaw, yerel SQLite API üzerinde bir basit .NET API 'SI sağlar. SqliteConnection ve SqliteDataReader, bu API 'Leri doğrudan çağırmanıza olanak sağlayan temel SQLitePCLRaw nesnelerine erişim sağlar.
 
-Aşağıdaki örnek, yürütülen SQL deyimlerini konsola yazmak için `sqlite3_trace` nasıl çağrılacağını gösterir:
+Aşağıdaki örnek, yürütülen SQL deyimlerini konsola `sqlite3_trace` yazma çağrısının nasıl çağrılacağını göstermektedir:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_Trace)]
 
-Aşağıdaki örnekte, bir SQL ifadesinin kaç tane SQLite sanal makine ile derlendiğini görmek için `sqlite3_stmt_status` çağrısı gösterilmektedir:
+Aşağıdaki örnek, bir SQL ifadesinin `sqlite3_stmt_status` kaç tane SQLite sanal makine tarafından derlendiğini görmek için çağrıyı gösterir:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_StatementStatus)]
 

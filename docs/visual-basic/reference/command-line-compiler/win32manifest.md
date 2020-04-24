@@ -24,7 +24,7 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanı
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`fileName`|Özel bildirim dosyasının yolu.|  
   
@@ -38,13 +38,13 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanı
   
  Aşağıdaki koşullardan biri doğru ise uygulamanız sanallaştırmaya tabi olacaktır:  
   
-1. `-nowin32manifest` seçeneğini kullanın ve `-win32resource` seçeneğini kullanarak bir sonraki derleme adımında veya Windows kaynak (. res) dosyasının bir parçası olarak bir bildirim sağlamaz.  
+1. Seçeneğini kullanarak, `-nowin32manifest` seçeneğini kullanarak `-win32resource` sonraki bir derleme adımında veya bir Windows kaynak (. res) dosyasının parçası olarak bir bildirim sağlamaz.  
   
 2. İstenen yürütme düzeyini belirtmeyen özel bir bildirim sağlarsınız.  
   
  Visual Studio varsayılan bir. manifest dosyası oluşturur ve yürütülebilir dosyanın yanı sıra hata ayıklama ve sürüm dizinlerinde depolar. Varsayılan App. manifest dosyasını, proje Tasarımcısı 'ndaki **uygulama** sekmesinde **UAC ayarlarını görüntüle** ' ye tıklayarak görüntüleyebilir veya düzenleyebilirsiniz. Daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Uygulama bildirimini, bir derleme sonrası özel adım olarak veya `-nowin32manifest` seçeneğini kullanarak bir Win32 kaynak dosyasının parçası olarak sağlayabilirsiniz. Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin PE dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
+ Uygulama bildirimini özel derleme sonrası bir adım olarak veya `-nowin32manifest` seçeneğini kullanarak bir Win32 kaynak dosyasının parçası olarak sağlayabilirsiniz. Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin PE dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Visual Basic derleyicisinin bir PE 'ye eklediği varsayılan bildirimi gösterir.  

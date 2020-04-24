@@ -22,18 +22,18 @@ Derleyicinin ayrıntılı durum ve hata iletileri oluşturmasına neden olur.
 -verbose[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
- `+` &#124; `-`  
- İsteğe bağlı. @No__t-0 belirtildiğinde, derleyicinin ayrıntılı iletileri yaymasına neden olan `-verbose+` belirtilerek aynı olur. Bu seçenek için varsayılan değer `-verbose-` ' dır.  
+## <a name="arguments"></a>Bağımsız Değişkenler  
+ `+`&#124;`-`  
+ İsteğe bağlı. Belirtme `-verbose` , derleyicinin ayrıntılı iletiler yaymasına neden olan, belirtilerek `-verbose+`aynı şekilde belirlenir. Bu seçenek için varsayılan değer `-verbose-`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 seçeneği, derleyici tarafından verilen toplam hata sayısı, hangi derlemelerin bir modül tarafından yüklenmekte olduğunu raporlar ve hangi dosyaların derlenmekte olduğunu gösterir.  
+ `-verbose` Seçeneği derleyici tarafından verilen toplam hata sayısı, bir modül tarafından hangi derlemelerin yüklendiğini raporlar ve şu anda derlenen dosyaları görüntüler.  
   
 > [!NOTE]
-> @No__t-0 seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-verbose` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve derleyicinin ayrıntılı durum bilgilerini görüntülemesi için yönlendirir.  
+ Aşağıdaki kod derlenir `In.vb` ve derleyicinin ayrıntılı durum bilgilerini görüntülemesi için yönlendirir.  
   
 ```console  
 vbc -verbose in.vb  

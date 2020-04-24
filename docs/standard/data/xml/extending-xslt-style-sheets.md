@@ -11,17 +11,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710875"
 ---
 # <a name="extending-xslt-style-sheets"></a>XSLT Stil Sayfalarını Genişletme
-Bu bölümde XSLT işlevlerini genişletmek için farklı yöntemler açıklanmıştır. <xref:System.Xml.Xsl.XsltArgumentList> sınıfını kullanarak uzantı nesneleri veya parametreler ekleyebilirsiniz. Uzantı nesneleri veya parametreler daha sonra stil sayfasından çağrılabilir. Ayrıca, `msxsl:script` öğesini kullanarak de komut dosyası bloklarını stil sayfasına ekleyebilirsiniz.  
+Bu bölümde XSLT işlevlerini genişletmek için farklı yöntemler açıklanmıştır. <xref:System.Xml.Xsl.XsltArgumentList> Sınıfını kullanarak uzantı nesneleri veya parametreler ekleyebilirsiniz. Uzantı nesneleri veya parametreler daha sonra stil sayfasından çağrılabilir. Ayrıca, `msxsl:script` öğesini kullanarak komut dosyası bloklarını stil sayfasına ekleyebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XSLT Genişletme Nesneleri](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
- XSLT uzantı nesnelerini işlemek için <xref:System.Xml.Xsl.XsltArgumentList> sınıfını kullanmayı açıklar.  
+ XSLT uzantı nesnelerini <xref:System.Xml.Xsl.XsltArgumentList> işlemek için sınıfının kullanımını açıklar.  
   
  [XSLT Parametreleri](../../../../docs/standard/data/xml/xslt-parameters.md)  
- XSLT parametrelerini işlemek için <xref:System.Xml.Xsl.XsltArgumentList> sınıfını kullanmayı açıklar.  
+ XSLT parametrelerini işlemek <xref:System.Xml.Xsl.XsltArgumentList> için sınıfının kullanımını açıklar.  
   
  [msxsl:script Kullanan Betik Blokları](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
- `msxsl:script` öğesinin kullanımını açıklar.  
+ `msxsl:script` Öğesinin kullanımını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

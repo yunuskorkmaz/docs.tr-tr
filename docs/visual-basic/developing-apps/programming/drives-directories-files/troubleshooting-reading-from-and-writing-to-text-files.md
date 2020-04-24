@@ -1,5 +1,5 @@
 ---
-title: 'Sorun giderme: metin dosyalarından okuma ve yazma'
+title: 'Sorun giderme: metin dosyalarını okuma ve yazma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -16,25 +16,25 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333793"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarından okuma ve yazma (Visual Basic)
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Sorun giderme: metin dosyalarını okuma ve yazma (Visual Basic)
 
-Bu konu, metin dosyalarıyla çalışırken karşılaşılan sık karşılaşılan sorunları tartışır ve her birine bir yaklaşım önerir.  
+Bu konuda, metin dosyalarıyla çalışırken karşılaşılan yaygın sorunlar ele alınmaktadır ve her birine bir yaklaşım önerisinde bulunur.  
   
 ## <a name="common-problems"></a>Sık karşılaşılan sorunlar  
 
- Metin dosyalarıyla çalışırken karşılaşılan en sık karşılaşılan sorunlar arasında güvenlik özel durumları, dosya kodlamaları veya geçersiz yollar yer almaktadır.  
+ Metin dosyalarıyla çalışırken karşılaşılan en yaygın sorunlar, güvenlik özel durumları, dosya kodlamaları veya geçersiz yollar içerir.  
   
 ### <a name="security-exceptions"></a>Güvenlik özel durumları  
 
- Bir <xref:System.Security.SecurityException> güvenlik hatası oluştuğunda A atılır. Bu genellikle, kullanıcının gerekli izinlerden yoksun olmasının bir sonucudur ve bu izinler eklenerek veya yalıtılmış depolama daki dosyalarla çalışarak çözülebilir.  
+ Bir <xref:System.Security.SecurityException> güvenlik hatası oluştuğunda oluşturulur. Bu genellikle kullanıcının gerekli izinlere sahip olmadığı bir sonucudur. Bu, izinleri ekleyerek veya yalıtılmış depolamada dosyalarla çalışarak çözülebilen bir sonucudur.  
   
 ### <a name="file-encodings"></a>Dosya kodlamaları  
 
- Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işlenirken karakterlerin nasıl temsil edilecek lerini belirtir. Metin dosyasındaki beklenmeyen karakterler yanlış kodlamadan kaynaklanabilir. Çoğu dosya için, unicode genellikle tercih edilse de, bir kodlama hangi dil karakterlerini işleyebileceği veya işleyemeyeceği açısından diğerine göre tercih edilebilir. Daha fazla bilgi için Dosya <xref:System.Text.Encoding> [Kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) ve .  
+ Karakter kodlamaları olarak da bilinen dosya kodlamaları, metin işleme sırasında karakterlerin nasıl temsil edileceğini belirtir. Metin dosyasında beklenmeyen karakterler yanlış kodlamadan kaynaklanıyor olabilir. Çoğu dosya için, tek bir kodlama bir veya işleyemeyen dil karakterleri açısından tercih edilebilir, ancak UNICODE genellikle tercih edilir. Daha fazla bilgi için bkz. [dosya kodlamaları](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) ve <xref:System.Text.Encoding>.  
   
 ### <a name="incorrect-paths"></a>Yanlış yollar  
 
- Dosya yollarını, özellikle de göreli yolları ayrıştırırken, yanlış verileri sağlamak kolaydır. Doğru yolu sağladığından emin olunarak birçok sorun düzeltilebilir. Daha fazla bilgi için [bkz: Dosya Yollarını Ayrışdırın.](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ Dosya yollarını ayrıştırırken özellikle göreli yollar, yanlış verileri sağlamak kolaydır. Doğru yolu belirttiğinizden emin olmak için birçok sorun düzeltilebilir. Daha fazla bilgi için bkz. [nasıl yapılır: dosya yollarını ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,24 +14,24 @@ ms.locfileid: "76794558"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Nasıl Yapılır: Web Hizmetini Zaman Uyumsuz Çağırma (Visual Basic)
 
-Bu örnek, bir Web hizmetinin eşsenkronize işleyicisi olayına bir işleyici bağlar, böylece eşzamanlı yöntem çağrısının sonucunu alabilir. Bu örnekte DemoTemperatureService Web `http://www.xmethods.net`hizmeti kullanılır.
+Bu örnek, bir işleyiciyi bir Web hizmetinin zaman uyumsuz işleyici olayına iliştirir, böylece zaman uyumsuz bir yöntem çağrısının sonucunu alabilir. Bu örnek, adresinde `http://www.xmethods.net`DemoTemperatureService Web hizmetini kullandı.
 
-Visual Studio Tümleşik Geliştirme Ortamı'ndaki (IDE) projenizde bir Web `My.WebServices` hizmetine başvururken, bu hizmet nesneye eklenir ve IDE belirli bir Web hizmetine erişmek için bir istemci proxy sınıfı oluşturur
+Visual Studio tümleşik geliştirme ortamında (IDE) projenizdeki bir Web hizmetine başvurduğunuzda, `My.WebServices` nesnesine EKLENIR ve IDE belirtilen Web hizmetine erişmek için bir istemci proxy sınıfı oluşturur
 
-Proxy sınıfı, uygulamanızın işlevin tamamlanmasını beklediği Web hizmeti yöntemlerini eşzamanlı olarak aramanızı sağlar. Buna ek olarak, proxy yöntem eşit olarak aramanıza yardımcı olmak için ek üyeler oluşturur. Her Web hizmeti işlevi için, *NameOfWebServiceFunction*, proxy bir *NameOfWebServiceFunction* `Async` alt yordamı, bir *NameOfWebServiceFunction* `Completed` olay ve bir *NameOfWebServiceFunction* `CompletedEventArgs` sınıf oluşturur. Bu örnek, DemoTemperatureService Web hizmetinin işlevine `getTemp` erişmek için eşzamanlı üyelerin nasıl kullanılacağını gösterir.
+Proxy sınıfı, uygulamanızın işlevin tamamlanmasını beklediği zaman uyumlu Web hizmeti yöntemlerini aramanızı sağlar. Ayrıca, proxy, yöntemi zaman uyumsuz olarak çağırmaya yardımcı olmak için ek Üyeler oluşturur. Her Web hizmeti işlevi için, *NameOfWebServiceFunction*, proxy bir *NameOfWebServiceFunction* `Async` alt yordamı, *NameOfWebServiceFunction* `Completed` olayı ve *NameOfWebServiceFunction* `CompletedEventArgs` sınıfı oluşturur. Bu örnek, DemoTemperatureService Web hizmetinin `getTemp` işlevine erişmek için zaman uyumsuz üyelerin nasıl kullanılacağını gösterir.
 
 > [!NOTE]
-> ASP.NET `My.WebServices` nesneyi desteklemediği için bu kod Web uygulamalarında çalışmaz.
+> ASP.NET `My.WebServices` nesneyi desteklemediğinden, bu kod Web uygulamalarında çalışmaz.
 
-## <a name="call-a-web-service-asynchronously"></a>Bir Web hizmetini eşzamanlı olarak arama
+## <a name="call-a-web-service-asynchronously"></a>Bir Web hizmetini zaman uyumsuz olarak çağırma
 
-1. DemoTemperatureService Web hizmetine `http://www.xmethods.net`başvurun. Adres,
+1. Adresindeki `http://www.xmethods.net`DemoTemperatureService Web hizmetine başvurun. Adres
 
     ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
-2. Olay için bir olay `getTempCompleted` işleyicisi ekleyin:
+2. `getTempCompleted` Olay için bir olay işleyicisi ekleyin:
 
     ```vb
     Private Sub getTempCompletedHandler(ByVal sender As Object,
@@ -42,15 +42,15 @@ Proxy sınıfı, uygulamanızın işlevin tamamlanmasını beklediği Web hizmet
     ```
 
     > [!NOTE]
-    > Bir olay `Handles` işleyicisini nesnenin `My.WebServices` olaylarıyla ilişkilendirmek için deyimi kullanamazsınız.
+    > Bir olay işleyicisini `My.WebServices` nesnenin `Handles` olaylarıyla ilişkilendirmek için ifadesini kullanamazsınız.
 
-3. `getTempCompleted` Olay işleyicisi olaya eklendiğini izlemek için bir alan ekleyin:
+3. Olay işleyicisinin `getTempCompleted` olaya eklendiğini izlemek için bir alan ekleyin:
 
     ```vb
     Private handlerAttached As Boolean = False
     ```
 
-4. Olay işleyicisini gerekirse `getTempCompleted` olaya eklemek ve `getTempAsync` yöntemi çağırmak için bir yöntem ekleyin:
+4. Gerekirse olaya olay işleyicisini `getTempCompleted` eklemek ve `getTempAsync` yöntemi çağırmak için bir yöntem ekleyin:
 
     ```vb
     Sub CallGetTempAsync(ByVal zipCode As Integer)
@@ -64,7 +64,7 @@ Proxy sınıfı, uygulamanızın işlevin tamamlanmasını beklediği Web hizmet
     End Sub
     ```
 
-    Web yöntemini `getTemp` eşzamanlı olarak çağırmak için `CallGetTempAsync` yöntemi arayın. Web yöntemi bittiğinde, iade değeri olay işleyicisine `getTempCompletedHandler` aktarılır.
+    `getTemp` Web yöntemini zaman uyumsuz olarak çağırmak için `CallGetTempAsync` yöntemini çağırın. Web yöntemi bittiğinde, dönüş değeri `getTempCompletedHandler` olay işleyicisine geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

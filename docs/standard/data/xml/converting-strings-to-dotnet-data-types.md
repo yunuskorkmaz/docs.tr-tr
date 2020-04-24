@@ -14,7 +14,7 @@ ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160358"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework Veri Türleri için Dizeleri Dönüştürme
-Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz. <xref:System.Xml.XmlConvert>.  
+Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert>..  
   
  **ToString** yönteminden döndürülen dize, geçirilen verilerin dize bir sürümüdür. Ayrıca, **XmlConvert** sınıfını kullanarak dönüştüren birkaç .NET Framework türü vardır ancak **System. Convert** sınıfındaki yöntemleri kullanmaz. **XmlConvert** sınıfı, XML ŞEMASı (xsd) veri türü belirtimini Izler ve **XmlConvert** 'in eşleyebileceğiniz bir veri türüne sahiptir.  
   
@@ -28,12 +28,12 @@ Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama 
 |Double. PositiveInfinity|'SI|  
 |Double. NegativeInfinity|"-INF"|  
 |DateTime|Biçim "yyyy-MM-ddTHH: mm: sszzzzzz" ve alt kümeleridir.|  
-|Timespan|Format, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika ve 20 saniyelik bir süredir.|  
+|Timespan|Biçim, 2 yıl, 10 ay, 15 gün, 10 saat `P2Y10M15DT10H30M20S` , 30 dakika ve 20 saniye olmak üzere Pnazmntnhnmns 'dir|  
   
 > [!NOTE]
 > Tabloda listelenen .NET Framework türlerinden herhangi birini **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
   
- **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örnek:  
+ **DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir. **DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir. Örneğin:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -76,14 +76,14 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |Geçerli dize giriş parametresi|.NET Framework çıkış türü|  
 |----------------------------------|--------------------------------|  
-|"true"|Boolean. true|  
+|değeri|Boolean. true|  
 |"1"|Boolean. true|  
-|"false"|Boolean. false|  
+|yanlýþ|Boolean. false|  
 |"0"|Boolean. false|  
   
  Örneğin, aşağıdaki XML verildiğinde:  
   
- **Girdi**  
+ **Giriş**  
   
 ```xml  
 <Boolean>true</Boolean>  
@@ -119,7 +119,7 @@ Console.WriteLine(bvalue);
 |'SI|Double. PositiveInfinity|  
 |"-INF"|Double. NegativeInfinity|  
   
- Aşağıdaki kod `<Infinity>INF</Infinity>`Yazar:  
+ Aşağıdaki kod yazılır `<Infinity>INF</Infinity>`:  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  

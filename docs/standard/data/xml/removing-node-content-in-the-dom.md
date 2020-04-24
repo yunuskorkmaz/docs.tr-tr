@@ -11,7 +11,7 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710342"
 ---
 # <a name="removing-node-content-in-the-dom"></a>DOM’daki Düğüm İçeriğini Kaldırma
-<xref:System.Xml.XmlComment>, <xref:System.Xml.XmlText>, <xref:System.Xml.XmlCDataSection>, <xref:System.Xml.XmlWhitespace>ve <xref:System.Xml.XmlSignificantWhitespace> düğüm türleri olan <xref:System.Xml.XmlCharacterData>'ten devraldığı düğüm türleri için, düğümden bir karakter aralığını kaldıran <xref:System.Xml.XmlCharacterData.DeleteData%2A> yöntemini kullanarak karakterleri kaldırabilirsiniz. İçeriği tamamen kaldırmak istiyorsanız, içeriği içeren düğümü kaldırırsınız. Düğümü korumak istiyorsanız, ancak içerik yanlış ise içeriği değiştirin. Bir düğümün içeriğini değiştirme hakkında daha fazla bilgi için bkz. [BIR XML belgesindeki düğümleri, içeriği ve değerleri değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+<xref:System.Xml.XmlComment>, <xref:System.Xml.XmlText> <xref:System.Xml.XmlSignificantWhitespace> <xref:System.Xml.XmlCharacterData.DeleteData%2A> <xref:System.Xml.XmlCharacterData> <xref:System.Xml.XmlCDataSection>,, <xref:System.Xml.XmlWhitespace>, Ve düğüm türleri olan öğesinden devraldığı düğüm türleri için, düğümünden bir karakter aralığını kaldıran yöntemini kullanarak karakterleri kaldırabilirsiniz. İçeriği tamamen kaldırmak istiyorsanız, içeriği içeren düğümü kaldırırsınız. Düğümü korumak istiyorsanız, ancak içerik yanlış ise içeriği değiştirin. Bir düğümün içeriğini değiştirme hakkında daha fazla bilgi için bkz. [BIR XML belgesindeki düğümleri, içeriği ve değerleri değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

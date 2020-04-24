@@ -1,5 +1,5 @@
 ---
-title: Metin dosyalarını TextFieldParser nesnesiyle ayrıştırma
+title: TextFieldParser nesnesiyle metin dosyalarını ayrıştırma
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using
@@ -13,27 +13,27 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333853"
 ---
-# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Metin dosyalarını TextFieldParser nesnesi ile ayrıştırma (Visual Basic)
+# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>TextFieldParser nesnesiyle metin dosyalarını ayrıştırma (Visual Basic)
 
-Nesne, `TextFieldParser` günlük dosyaları veya eski veritabanı bilgileri gibi sınırlı genişlikte metin sütunları olarak yapılandırılan çok büyük dosyayı ayrıştırmanızı ve işlemenizi sağlar. Metin dosyasını ayrıştırmak `TextFieldParser` metin dosyası üzerinde yineleme yle benzerken, metin alanlarını ayıklamak için ayrıştırma yöntemi, sınırlandırılmış dizeleri belirtebilmek için kullanılan dize işleme yöntemlerine benzer.  
+`TextFieldParser` Nesnesi, günlük dosyaları veya eski veritabanı bilgileri gibi, metnin ayrılmış genişlik sütunları olarak yapılandırılmış çok büyük bir dosyayı ayrıştırmanıza ve işleetmenize olanak tanır. Bir metin dosyasının `TextFieldParser` ayrıştırılmasında metin dosyası üzerinde yineleme yapmak benzer, ancak metin alanlarını ayıklamak için ayrıştırma yöntemi, sınırlandırılmış dizeleri simgeleştirmek için kullanılan dize işleme yöntemlerine benzerdir.  
   
-## <a name="parsing-different-types-of-text-files"></a>Farklı metin dosyalarını ayrıştma  
+## <a name="parsing-different-types-of-text-files"></a>Farklı metin dosyası türlerini ayrıştırma  
 
- Metin dosyaları, virgül veya sekme alanı gibi bir karakterle sınırlandırılmış çeşitli genişlikteki alanlara sahip olabilir. Aşağıdaki `TextFieldType` örnekte olduğu gibi, sekme sınırlandırılmış `SetDelimiters` bir metin dosyasını tanımlamak için yöntemi kullanan sınırlayıcıyı tanımlayın:  
+ Metin dosyalarında, virgül veya sekme alanı gibi bir karakterle ayrılmış çeşitli genişlik alanları olabilir. Aşağıdaki `TextFieldType` örnekte olduğu gibi, sekmeyle ayrılmış bir metin dosyası tanımlamak için `SetDelimiters` yöntemini kullanan sınırlayıcısı tanımlayın:  
   
  [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
- Diğer metin dosyaları sabit alan genişlikleri olabilir. Bu gibi durumlarda, aşağıdaki `TextFieldType` örnekte olduğu gibi, her alanın genişlikleri olarak `FixedWidth` tanımlamak ve tanımlamak gerekir. Bu örnek, `SetFieldWidths` metin sütunlarını tanımlamak için yöntemi kullanır: ilk sütun 5 karakter genişliğinde, ikinci 10, üçüncü 11 ve dördüncü değişken genişliği.  
+ Diğer metin dosyaları, sabit olan alan genişliklerine sahip olabilir. Bu gibi durumlarda, aşağıdaki örnekte olduğu gibi, `TextFieldType` her `FixedWidth` bir alanın genişliğini tanımlamanız ve tanımlamanız gerekir. Bu örnek, `SetFieldWidths` metin sütunlarını tanımlamak için yöntemini kullanır: ilk sütun 5 karakter genişliğinde, ikincisi 10, üçüncüsü 11 ve dördüncü değişken genişliktir.  
   
  [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
- Biçim tanımlandıktan sonra, her satırı sırayla `ReadFields` işlemek için yöntemi kullanarak dosya yı kullanabilirsiniz.  
+ Biçim tanımlandıktan sonra, her satırı sırayla işlemek için `ReadFields` yöntemini kullanarak dosyasında döngü yapabilirsiniz.  
   
- Bir alan belirtilen biçimle eşleşmiyorsa, bir <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> özel durum atılır. Bu tür özel durumlar `ErrorLine` atıldığında, özel durum ve bu metnin satır numarasıneden metin ve `ErrorLineNumber` özellikleri tutun.  
+ Bir alan belirtilen biçimle eşleşmezse, bir <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> özel durum oluşturulur. Bu tür özel durumlar oluştuğunda `ErrorLine` ve `ErrorLineNumber` özellikleri, özel duruma ve bu metnin satır numarasına neden olan metni tutar.  
   
-## <a name="parsing-files-with-multiple-formats"></a>Dosyaları birden çok biçimle ayrışdırma  
+## <a name="parsing-files-with-multiple-formats"></a>Birden çok biçimdeki dosyaları ayrıştırma  
 
- `TextFieldParser` Nesnenin `PeekChars` yöntemi, okumadan önce her alanı denetlemek için kullanılabilir, böylece alanlar için birden çok biçim tanımlamak ve buna göre tepki vermek. Daha fazla bilgi [için bkz: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+ `TextFieldParser` Nesne `PeekChars` yöntemi, okumadan önce her bir alanı denetlemek için kullanılabilir ve alanlar için birden çok biçim tanımlamanızı ve buna uygun şekilde tepki vermesini sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: birden çok biçimdeki metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

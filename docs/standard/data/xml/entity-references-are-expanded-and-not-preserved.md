@@ -11,12 +11,12 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710940"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Varlık Başvuruları Genişletilir ve Korunmaz
-Varlık başvurusu genişletildiğinde ve gösterdiği metin tarafından değiştirildiğinde, **XmlEntityReference** düğümü oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimdeki içerikten oluşturulan düğümler **XmlEntityReference**yerine kopyalanır. Bu nedenle, `&publisher;` örnekte, `&publisher;` kaydedilmez, ancak bunun yerine **XmlText** düğümü oluşturulur.  
+Varlık başvurusu genişletildiğinde ve gösterdiği metin tarafından değiştirildiğinde, **XmlEntityReference** düğümü oluşturulmaz. Bunun yerine, varlık bildirimi ayrıştırılır ve bildirimdeki içerikten oluşturulan düğümler **XmlEntityReference**yerine kopyalanır. Bu nedenle, `&publisher;` örnekte `&publisher;` kaydedilmez, ancak bunun yerine **XmlText** düğümü oluşturulur.  
   
  ![Genişletilmiş ağaç yapısı](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 Genişletilmiş varlık başvuruları için ağaç yapısı  
   
- `B` veya `<` gibi karakter varlıkları korunmaz. Bunun yerine, her zaman genişletilir ve metin düğümleri olarak gösterilir.  
+ `B` Veya `<` gibi karakter varlıkları korunmaz. Bunun yerine, her zaman genişletilir ve metin düğümleri olarak gösterilir.  
   
  **XmlEntityReference** düğümlerini ve ona iliştirilmiş Varlık başvurusunun alt düğümlerini korumak Için, **EntityHandling** bayrağını **ExpandCharEntities**olarak ayarlayın. Aksi halde, **EntityHandling** bayrağını varsayılan konumda bırakın, bu, **ExpandEntities**. Bu durumda, DOM 'da varlık başvurusu düğümlerini görmezsiniz. Düğümler, varlık bildiriminin alt düğümlerinin kopyaları olan düğümlerle değiştirilmiştir.  
   
@@ -24,7 +24,7 @@ Genişletilmiş varlık başvuruları için ağaç yapısı
   
  XmlElement: Yayımcı  
   
- XmlEntityReference: `&publisher;`  
+ XmlEntityReference:`&publisher;`  
   
  XmlText: Microsoft Press  
   

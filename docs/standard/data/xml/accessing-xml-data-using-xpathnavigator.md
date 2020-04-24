@@ -11,23 +11,23 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711174"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerine Erişme
-<xref:System.Xml.XPath.XPathNavigator> sınıfı, düğümlerde gezinmek, XML verilerini ayıklamak ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde kesin türü belirtilmiş XML verilerine erişmek için yöntemler sağlar.  
+<xref:System.Xml.XPath.XPathNavigator> Sınıfı düğümlerde gezınmek, XML verilerini ayıklamak ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde kesin olarak belirlenmiş XML verilerine erişmek için yöntemler sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XPathNavigator Kullanarak Düğüm Kümesinde Gezinme](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümlerde gezinmek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının düğüm kümesi gezinti yöntemlerini açıklar.  
+ Bir <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümlerde gezinmek için kullanılan sınıfın düğüm kümesi gezinti yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfının öznitelik ve ad alanı düğümü gezinti yöntemlerini açıklar.  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfının öznitelik ve ad alanı düğüm gezinti yöntemlerini açıklar.  
   
  [XPathNavigator Kullanarak XML Verilerini Ayıklama](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinden XML verilerinin ayıklanması için çeşitli yöntemler açıklanmıştır.  
+ Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinden XML verilerinin ayıklanması için çeşitli yöntemleri açıklar.  
   
  [XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> sınıfını kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnedeki kesin türü belirtilmiş XML verilerine erişmeyi açıklar.  
+ Sınıfını kullanarak bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> NESNESINDEKI kesin türü belirtilmiş XML verilerine erişmeyi açıklar. <xref:System.Xml.XPath.XPathNavigator>  
   
  [Kullanıcı Tanımlı İşlevler ve Değişkenler](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
- Uzantı işlevlerini ve değişkenlerini destekleyen <xref:System.Xml.Xsl.IXsltContextFunction> ve <xref:System.Xml.Xsl.IXsltContextVariable> arabirimleri ile birlikte özel bir <xref:System.Xml.Xsl.XsltContext> sınıfını uygulamayı açıklar.  
+ Arabirimleri <xref:System.Xml.Xsl.IXsltContextFunction> ve <xref:System.Xml.Xsl.IXsltContextVariable> uzantı işlevlerini <xref:System.Xml.Xsl.XsltContext> ve değişkenleri destekleyen özel bir sınıfın birlikte uygulanması açıklanmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

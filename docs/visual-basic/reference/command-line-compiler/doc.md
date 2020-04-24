@@ -22,21 +22,21 @@ Belge açıklamalarını bir XML dosyasına işler.
 -doc[+ | -]  
 ```
 
-veya  
+or  
 
 ```console
 -doc:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`+` &#124; `-`|İsteğe bağlı. \+ Veya yalnızca `-doc`belirtme, derleyicinin belge bilgilerini oluşturmasını ve bir XML dosyasına yerleştirmesini sağlar. `-` belirtmek, `-doc`Belirtmemeye, hiçbir belge bilgisinin oluşturumamasına neden olan eşdeğerdir.|  
-|`file`|`-doc:` kullanılıyorsa gereklidir. Derlemenin kaynak kodu dosyalarındaki yorumlarla doldurulan çıkış XML dosyasını belirtir. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
+|`+`&#124;`-`|İsteğe bağlı. Yalnızca `-doc`+ veya belirtildiğinde, derleyicinin belge bilgilerini oluşturmasına ve bir XML dosyasına yerleştirmesine neden olur. `-` Belirtildiğinde `-doc`, hiçbir belge bilgisinin oluşturulmamasına neden olmayan bir değer belirtilmiyor.|  
+|`file`|`-doc:` Kullanılıyorsa gereklidir. Derlemenin kaynak kodu dosyalarındaki yorumlarla doldurulan çıkış XML dosyasını belirtir. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-doc` seçeneği, derleyicinin belge açıklamalarını içeren bir XML dosyası oluşturup oluşturmayacağını denetler. `-doc:file` sözdizimini kullanırsanız `file` parametresi, XML dosyasının adını belirtir. `-doc` veya `-doc+`kullanırsanız, derleyici XML dosya adını derleyicinin oluşturmakta olduğu yürütülebilir dosya veya kitaplıktan alır. `-doc-` kullanırsanız veya `-doc` seçeneğini belirtmezseniz, derleyici bir XML dosyası oluşturmaz.  
+ `-doc` Seçeneği, derleyicinin belge açıklamalarını IÇEREN bir XML dosyası oluşturup üretmediğini denetler. `-doc:file` Söz dizimini kullanırsanız `file` parametresi, XML dosyasının adını belirtir. Veya `-doc` `-doc+`kullanıyorsanız, derleyici XML dosya adını derleyicinin oluşturmakta olduğu yürütülebilir dosya veya kitaplıktan alır. `-doc` Seçeneğini kullanırsanız `-doc-` veya BELIRTMEZSENIZ, derleyici bir XML dosyası oluşturmaz.  
   
  Kaynak kodu dosyalarında, belge açıklamaları aşağıdaki tanımlardan önce olabilir:  
   
@@ -46,7 +46,7 @@ veya
   
  Oluşturulan XML dosyasını Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) özelliğiyle birlikte kullanmak IÇIN, XML dosyasının dosya adının desteklemek istediğiniz derlemeyle aynı olmasına izin verin. XML dosyasının derlemeyle aynı dizinde olduğundan emin olun; böylece derlemeye Visual Studio projesinde başvuruluyorsa,. xml dosyası da bulunur. IntelliSense 'in bir proje içinde veya bir proje tarafından başvurulan projelerde kod için çalışması için XML belge dosyaları gerekli değildir.  
   
- `-target:module`ile derlemediğiniz takdirde, XML dosyası `<assembly></assembly>`Etiketler içerir. Bu Etiketler, derlemenin çıkış dosyası için derleme bildirimini içeren dosyanın adını belirtir.  
+ İle `-target:module`derleme yapmadığınız TAKDIRDE, XML dosyası etiketleri `<assembly></assembly>`içerir. Bu Etiketler, derlemenin çıkış dosyası için derleme bildirimini içeren dosyanın adını belirtir.  
   
  Kodunuzda açıklamalardan belge oluşturma yolları için bkz. [XML açıklama etiketleri](../../../visual-basic/language-reference/xmldoc/index.md) .  
   

@@ -11,17 +11,17 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710147"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
-<xref:System.Xml.XPath.XPathNavigator> sınıfı bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri XPath sorgusu kullanarak seçme, bir XPath ifadesinin sonuçlarını değerlendirme ve İnceleme ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki bir düğümün belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirleme yöntemleri sağlar. Bu ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri seçme, değerlendirme ve eşleştirme ile ilgili diğer kavramlar aşağıdaki konularda açıklanmaktadır.  
+<xref:System.Xml.XPath.XPathNavigator> Sınıfı, bir XPath sorgusu kullanarak <xref:System.Xml.XPath.XPathDocument> bir veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri seçmek, bir XPath ifadesinin sonuçlarını değerlendirmek ve incelemek ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki bir düğümün belirli bir XPath ifadesiyle eşleşip eşleşmediğini belirlemek için yöntemler sağlar. Bu ve bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğümleri seçme, değerlendirme ve eşleştirme ile ilgili diğer kavramlar aşağıdaki konularda açıklanmıştır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [XPathNavigator Kullanarak XML Verileri Seçme](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- Bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesinde bir XPath ifadesi kullanarak bir düğüm kümesi seçmek için kullanılan <xref:System.Xml.XPath.XPathNavigator> Sınıf yöntemlerinin kümesini açıklar.  
+ Bir XPath ifadesi kullanarak <xref:System.Xml.XPath.XPathNavigator> bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesindeki düğüm kümesi seçmek için kullanılan sınıf yöntemleri kümesini açıklar.  
   
  [XPathNavigator Kullanarak XPath İfadelerini Değerlendirme](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- Bir XPath ifadesini değerlendirmek için kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> yöntemini açıklar.  
+ Bir XPath <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> ifadesini değerlendirmek için <xref:System.Xml.XPath.XPathNavigator> kullanılan sınıfının metodunu açıklar.  
   
  [XPathNavigator Kullanarak Düğümleri Eşleştirme](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- Bir düğümün bir XPath ifadesiyle eşleşip eşleşmediğini belirlemekte kullanılan <xref:System.Xml.XPath.XPathNavigator> sınıfının <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemini açıklar.  
+ Bir düğümün <xref:System.Xml.XPath.XPathNavigator.Matches%2A> bir XPath ifadesiyle <xref:System.Xml.XPath.XPathNavigator> eşleşip eşleşmediğini anlamak için kullanılan sınıfının yöntemini açıklar.  
   
  [XPath Sorguları ile Tanınan Düğüm Türleri](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  Bir XPath sorgusunda tanınan düğümlerin türlerini açıklar.  
@@ -30,7 +30,7 @@ ms.locfileid: "75710147"
  Bir XPath sorgusunda ad alanlarının kullanımını açıklar.  
   
  [Derlenmiş XPath İfadeleri](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
- Derlenmiş bir XPath sorgusunu temsil eden <xref:System.Xml.XPath.XPathExpression> sınıfını açıklar.  
+ Derlenmiş bir <xref:System.Xml.XPath.XPathExpression> XPath sorgusunu temsil eden sınıfı açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,7 +15,7 @@ ms.locfileid: "75710667"
 Aşağıdaki tabloda, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasındaki varsayılan eşleme açıklanmaktadır.
 
 > [!NOTE]
-> `xs` ve `xdt` önekleri, sırasıyla <https://www.w3.org/2001/XMLSchema> ve <https://www.w3.org/2003/05/xpath-datatypes> ad alanı URI 'Leri ile eşleştirilir.
+> `xs` Ve `xdt` ön ekler sırasıyla <https://www.w3.org/2001/XMLSchema> ve <https://www.w3.org/2003/05/xpath-datatypes> ad alanı URI 'leri ile eşleştirilir.
 
 |XML türü|CLR türü|
 |--------------|--------------|

@@ -11,14 +11,14 @@ ms.locfileid: "75447274"
 ---
 # <a name="database-errors"></a>Veritabanı hataları
 
-<xref:Microsoft.Data.Sqlite.SqliteException> bir SQLite hatası ile karşılaşıldığında oluşturulur. İleti SQLite tarafından sağlanır. `SqliteErrorCode` ve `SqliteExtendedErrorCode` özellikleri, hatanın SQLite [sonuç kodunu](https://www.sqlite.org/rescode.html) içerir.
+<xref:Microsoft.Data.Sqlite.SqliteException>bir SQLite hatası ile karşılaşıldığında oluşturulur. İleti SQLite tarafından sağlanır. Ve `SqliteErrorCode` `SqliteExtendedErrorCode` özellikleri, hatanın SQLite [sonuç kodunu](https://www.sqlite.org/rescode.html) içerir.
 
 Microsoft. Data. SQLite yerel SQLite kitaplığı ile etkileşime geçtiğinde hatalarla karşılaşılabilir. Aşağıdaki listede, hataların gerçekleşebileceği yaygın senaryolar gösterilmektedir:
 
 * Bir bağlantı açılıyor.
 * İşlem başlatılıyor.
 * Bir komut yürütülüyor.
-* <xref:Microsoft.Data.Sqlite.SqliteDataReader.NextResult%2A>çağrılıyor.
+* Çağrılıyor <xref:Microsoft.Data.Sqlite.SqliteDataReader.NextResult%2A>.
 
 Uygulamanızın bu hataları nasıl işleyeceğini dikkatle düşünün.
 
@@ -28,14 +28,14 @@ SQLite, tabloları ve veritabanı dosyalarını kilitlemek için gelir. Uygulama
 
 Microsoft. Data. SQLite, meşgul veya kilitli bir hatayla karşılaştığında otomatik olarak yeniden dener veya komut zaman aşımına ulaşılacaktır.
 
-<xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>ayarlayarak komut zaman aşımını artırabilirsiniz. Varsayılan zaman aşımı 30 saniyedir. `0` değeri zaman aşımı değildir.
+Komutunu ayarlayarak <xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>komut zaman aşımını artırabilirsiniz. Varsayılan zaman aşımı 30 saniyedir. Bir değeri zaman `0` aşımı değildir anlamına gelir.
 
 ```csharp
 // Retry for 60 seconds while locked
 command.CommandTimeout = 60;
 ```
 
-Microsoft. Data. SQLite bazen örtük bir komut nesnesi oluşturması gerekir. Örneğin, BeginTransaction sırasında. Bu komutlara ilişkin zaman aşımını ayarlamak için <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>kullanın.
+Microsoft. Data. SQLite bazen örtük bir komut nesnesi oluşturması gerekir. Örneğin, BeginTransaction sırasında. Bu komutlara ilişkin zaman aşımını ayarlamak için kullanın <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>.
 
 ```csharp
 // Set the default timeout of all commands on this connection

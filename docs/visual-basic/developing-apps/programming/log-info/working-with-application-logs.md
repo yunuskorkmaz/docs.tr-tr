@@ -15,51 +15,51 @@ ms.locfileid: "74345894"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 
-Ve `My.Application.Log` `My.Log` nesneler günlüklere günlük ve izleme bilgilerini yazmayı kolaylaştırır.
+`My.Application.Log` Ve `My.Log` nesneleri günlüğe kaydetme ve izleme bilgilerini günlüklere yazmayı kolaylaştırır.
 
-## <a name="how-messages-are-logged"></a>İletiler Nasıl Günlüğe Kaydedilir?
+## <a name="how-messages-are-logged"></a>Iletiler günlüğe nasıl kaydedilir?
 
-İlk olarak, iletinin önem derecesi günlüğün <xref:System.Diagnostics.TraceSource.Switch%2A> <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> özelliğiyle denetlenir. Varsayılan olarak, yalnızca önem "Bilgi" ve daha yüksek iletileri, log'un `TraceListener` koleksiyonunda belirtilen izleme dinleyicilerine aktarılır. Daha sonra, her dinleyici iletinin önem derecesini dinleyicinin <xref:System.Diagnostics.TraceSource.Switch%2A> özelliğiyle karşılaştırır. İletinin önem derecesi yeterince yüksekse, dinleyici iletiyi yazar.
+İlk olarak, iletinin önem derecesi günlüğün <xref:System.Diagnostics.TraceSource.Switch%2A> <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> özelliğinin özelliği ile denetlenir. Varsayılan olarak, günlük `TraceListener` koleksiyonunda belirtilen izleme dinleyicilerine yalnızca önem derecesi "bilgi" ve üzeri iletiler geçirilir. Ardından, her dinleyici iletinin önem derecesini dinleyicinin <xref:System.Diagnostics.TraceSource.Switch%2A> özelliği ile karşılaştırır. İletinin önem derecesi yeterince yüksekse, dinleyici iletiyi yazar.
 
-Aşağıdaki diyagram, yönteme yazılan `WriteEntry` bir iletinin `WriteLine` log'un izleme dinleyicilerinin yöntemlerine nasıl iletildiğini gösterir:
+Aşağıdaki diyagramda, `WriteEntry` yönteme yazılan bir iletinin günlüğün izleme dinleyicilerinin `WriteLine` yöntemlerine nasıl geçirildiği gösterilmektedir:
 
-![Günlük aramamı gösteren diyagram.](./media/working-with-application-logs/my-log-call-messages.png)
+![Günlük çağrımı gösteren diyagram.](./media/working-with-application-logs/my-log-call-messages.png)
 
-Uygulamanın yapılandırma dosyasını değiştirerek günlüğün ve izleme dinleyicilerinin davranışını değiştirebilirsiniz. Aşağıdaki diyagram, günlük parçaları ve yapılandırma dosyası arasındaki yazışmaları gösterir.
+Uygulamanın yapılandırma dosyasını değiştirerek günlük ve izleme dinleyicilerinin davranışını değiştirebilirsiniz. Aşağıdaki diyagramda, günlüğün bölümleri ile yapılandırma dosyası arasındaki yazışma gösterilmektedir.
 
-![Günlük yapılandırmamı gösteren diyagram.](./media/working-with-application-logs/my-log-configuration.png)
+![Günlük yapılandırmanızın gösterildiği diyagram.](./media/working-with-application-logs/my-log-configuration.png)
 
-## <a name="where-messages-are-logged"></a>İletilerin Günlüğe Kaydedildiği Yerler
+## <a name="where-messages-are-logged"></a>Iletiler günlüğe kaydedilir
 
-Derlemede yapılandırma dosyası yoksa, `My.Application.Log` `My.Log` ve nesneler uygulamanın hata ayıklama çıktısına <xref:System.Diagnostics.DefaultTraceListener> (sınıf aracılığıyla) yazar. Buna ek `My.Application.Log` olarak, <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> `My.Log` nesne derlemenin günlük dosyasına (sınıf aracılığıyla) yazarken, nesne ASP.NET Web <xref:System.Web.WebPageTraceListener> sayfasının çıktısına (sınıf aracılığıyla) yazar.
+Derlemenin yapılandırma dosyası yoksa, `My.Application.Log` ve `My.Log` nesneleri uygulamanın hata ayıklama çıktısına ( <xref:System.Diagnostics.DefaultTraceListener> sınıfı aracılığıyla) yazar. Ayrıca, `My.Application.Log` nesnesi derlemenin günlük dosyasına ( <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> sınıfı aracılığıyla) yazar, `My.Log` nesne ASP.NET Web sayfasının çıktısına ( <xref:System.Web.WebPageTraceListener> sınıfı aracılığıyla) yazar.
 
-Hata ayıklama çıkışı, uygulamanızı hata ayıklama modunda çalıştırırken Visual Studio **Çıktı** penceresinde görüntülenebilir. **Çıktı** penceresini açmak için **Hata Ayıklama** menü öğesini tıklatın, **Windows'u**işaret edin ve sonra **Çıktı'yı**tıklatın. **Çıktı** penceresinde, **kutudan çıktıyı göster'den** **Hata Ayıklama'yı** seçin.
+Hata ayıklama çıktısı, uygulamanızı hata ayıklama modunda çalıştırırken Visual Studio **çıktı** penceresinde görüntülenebilir. **Çıkış** penceresini açmak Için, **Hata Ayıkla** menü öğesine tıklayın, **Windows**' ın üzerine gelin ve ardından **Çıkış**' a tıklayın. **Çıkış** penceresinde, **çıktıyı göster** kutusundan **Hata Ayıkla** ' yı seçin.
 
-Varsayılan olarak, `My.Application.Log` kullanıcının uygulama verileri için yola günlük dosyası yazar. Yolu <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> nesnenin özelliğinden alabilirsiniz. Bu yolun biçimi aşağıdaki gibidir:
+Varsayılan olarak, `My.Application.Log` günlük dosyasını kullanıcının uygulama verileri yoluna yazar. <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> Nesnenin <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> özelliğinden yolunu alabilirsiniz. Yolun biçimi aşağıdaki gibidir:
 
 `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`
 
-Için tipik `BasePath` bir değer aşağıdaki gibidir.
+İçin `BasePath` tipik bir değer aşağıdaki gibidir.
 
-C:\Belgeler ve\\`username`Ayarlar \Uygulama Verileri
+C:\Documents and Settings\\`username`\Application Data
 
-`CompanyName`, ve `ProductName` `ProductVersion` uygulamanın derleme bilgi gelen değerleri. Günlük dosya adının biçimi *AssemblyName*.log'dur, *AssemblyName* uzantısı olmadan derlemenin dosya adıdır. Başvuru nun günlüğe yazmaya çalıştığı zaman orijinal günlük kullanılamadığı nda birden fazla günlük dosyası gerekiyorsa, günlük dosyası adı için form *AssemblyName*-*yineleme*.log, pozitif `iteration` `Integer`olduğu yerdir.
+`CompanyName`, `ProductName`Ve `ProductVersion` değerleri uygulamanın derleme bilgileriyle gelir. Günlük dosyası adının biçimi *AssemblyName*. log biçimindedir, burada *AssemblyName* uzantısı olmayan derlemenin dosya adıdır. Birden çok günlük dosyası gerekiyorsa (örneğin, uygulama günlüğe yazmaya çalıştığında özgün günlüğün kullanılamadığı durumlar gibi), günlük dosyası adı için form *AssemblyName*-*yineleme*. log ' dur ve burada `iteration` pozitif `Integer`olur.
 
-Bilgisayarın ve uygulamanın yapılandırma dosyalarını ekleyerek veya değiştirerek varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için [Bkz. Walkthrough: My.Application.Log Yazma Bilgileri Nerede Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+Bilgisayar ve uygulamanın yapılandırma dosyalarını ekleyerek veya değiştirerek varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz [. Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
 
-## <a name="configuring-log-settings"></a>Günlük Ayarlarını Yapılandırma
+## <a name="configuring-log-settings"></a>Günlük ayarlarını yapılandırma
 
-Nesne, `Log` uygulama yapılandırma dosyası, app.config olmadan çalışan varsayılan bir uygulama vardır. Varsayılanları değiştirmek için, yeni ayarlarla birlikte bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için [bkz: Walkthrough: Filtreleme My.Application.Log Çıktı](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+`Log` Nesnesi, uygulama yapılandırma dosyası, App. config olmadan çalışacak varsayılan bir uygulamaya sahiptir. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-Günlük yapılandırma bölümleri app.config dosyasının `<system.diagnostics>` `<configuration>` ana düğümünde düğüm bulunur. Günlük bilgileri birkaç düğümde tanımlanır:
+Günlük yapılandırma bölümleri, App. config dosyasının `<system.diagnostics>` ana `<configuration>` düğümündeki düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
 
-- Nesnenin `Log` dinleyicileri VarsayılanKaynak adlı `<sources>` düğümde tanımlanır.
+- `Log` Nesnenin dinleyicileri DefaultSource adlı `<sources>` düğümde tanımlanmıştır.
 
-- Nesnenin `Log` önem derecesi filtresi Varsayılan `<switches>` Anahtar adlı düğümde tanımlanır.
+- `Log` Nesnesi için önem derecesi, DefaultSwitch adlı `<switches>` düğümde tanımlanmıştır.
 
-- Günlük dinleyiciler `<sharedListeners>` düğümde tanımlanır.
+- Günlük dinleyicileri, `<sharedListeners>` düğümde tanımlanmıştır.
 
- `<sources>`, , `<switches>`ve `<sharedListeners>` düğümörnekleri aşağıdaki kodda gösterilir:
+ Aşağıdaki kodda `<sources>`, `<switches>`, ve `<sharedListeners>` düğümleri örnekleri gösterilmiştir:
 
 ```xml
 <configuration>
@@ -86,25 +86,25 @@ Günlük yapılandırma bölümleri app.config dosyasının `<system.diagnostics
 </configuration>
 ```
 
-## <a name="changing-log-settings-after-deployment"></a>Dağıtımdan Sonra Günlük Ayarlarını Değiştirme
+## <a name="changing-log-settings-after-deployment"></a>Dağıtımdan sonra günlük ayarlarını değiştirme
 
-Bir uygulama geliştirdiğinizde, yapılandırma ayarları yukarıdaki örneklerde gösterildiği gibi app.config dosyasında depolanır. Uygulamanızı dağıttıktan sonra, yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *applicationName*.exe.config'dir ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için bu, projeyle ilişkili Web.config dosyasıdır.
+Bir uygulama geliştirirken, yapılandırma ayarları Yukarıdaki örneklerde gösterildiği gibi App. config dosyasında depolanır. Uygulamanızı dağıttıktan sonra yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *ApplicationName*. exe. config olur ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için, bu, projeyle ilişkili Web. config dosyasıdır.
 
-Uygulamanız ilk kez bir sınıfın örneğini oluşturan kodu çalıştırdığında, nesne hakkında bilgi için yapılandırma dosyasını denetler. Nesne `Log` için bu, nesneye `Log` ilk kez erişici olduğunda gerçekleşir. Sistem yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler ve uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
+Uygulamanız bir sınıfın bir örneğini ilk kez oluşturan kodu yürüttüğünde, nesne hakkında bilgi için yapılandırma dosyasını kontrol eder. `Log` Nesnesi için, bu `Log` nesne ilk kez erişildiğinde gerçekleşir. Sistem, yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler — uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
 
-Dağıtılan bir uygulamada, uygulamanız başlamadan önce anahtar nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirin. Genellikle, bu, anahtar nesnelerini açıp kapatmayı veya izleme düzeylerini değiştirerek ve ardından uygulamanızı yeniden başlatmayı içerir.
+Dağıtılan bir uygulamada, uygulama başlamadan önce geçiş nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirin. Genellikle bu, anahtar nesnelerinin açık ve kapalı olduğunu ya da izleme düzeylerini değiştirerek ve sonra uygulamanızı yeniden başlatarak içerir.
 
 ## <a name="security-considerations"></a>Güvenlikle İlgili Dikkat Edilmesi Gerekenler
 
 Günlüğe veri yazarken aşağıdakileri göz önünde bulundurun:
 
-- **Kullanıcı bilgilerini sızdırmaktan kaçının.** Uygulamanızın yalnızca onaylanmış bilgileri günlüğüne yazdığından emin olun. Örneğin, uygulama günlüğünün kullanıcı adları içermesi kabul edilebilir, ancak kullanıcı parolaları içermeyebilir.
+- **Kullanıcı bilgilerinin sızmasını önleyin.** Uygulamanızın günlüğe yalnızca onaylanan bilgileri yazdığından emin olun. Örneğin, uygulama günlüğü Kullanıcı adlarını içermesi, ancak kullanıcı parolalarını içermemesi için kabul edilebilir olabilir.
 
-- **Günlük konumlarını güvenli hale getirin.** Hassas olabilecek bilgiler içeren tüm günlükler güvenli bir konumda depolanmalıdır.
+- **Günlük konumlarını güvenli hale getirin.** Potansiyel olarak hassas bilgiler içeren herhangi bir günlüğün güvenli bir konumda depolanması gerekir.
 
-- **Yanıltıcı bilgilerden kaçının.** Genel olarak, uygulamanız bu verileri kullanmadan önce bir kullanıcı tarafından girilen tüm verileri doğrulamalıdır. Bu, uygulama günlüğüne veri yazmayı içerir.
+- **Yanıltıcı bilgilerden kaçının.** Genel olarak, uygulamanız bu verileri kullanmadan önce bir kullanıcı tarafından girilen tüm verileri doğrulamalıdır. Bu, uygulama günlüğüne veri yazılmasını içerir.
 
-- **Hizmet reddi kaçının.** Uygulamanız günlüğe çok fazla bilgi yazıyorsa, günlüğü doldurabilir veya önemli bilgileri bulmayı zorlaştırabilir.
+- **Hizmet reddine engel olmaz.** Uygulamanız günlüğe çok fazla bilgi yazdığında, günlüğü doldurabilir veya önemli bilgileri bulmayı zorlaştırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

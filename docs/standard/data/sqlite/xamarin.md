@@ -33,7 +33,7 @@ Microsoft. Data. SQLite, 2,0 .NET Standard hedefler ve Xamarin 'te desteklenir. 
 
 Microsoft. Data. SQLite, SQLitePCLRaw paketlerini otomatik olarak başlatmaya çalışır. Ne yazık ki, Xamarin. iOS için sonraki zaman (AOT) derlemesinde sınırlamalar nedeniyle, deneme başarısız olur ve aşağıdaki hatayı alırsınız.
 
-> `SQLitePCL.raw.SetProvider()`çağırmanız gerekiyor. Paket paketi kullanıyorsanız, bu, `SQLitePCL.Batteries.Init()`çağırarak yapılır.
+> Çağırmanız `SQLitePCL.raw.SetProvider()`gerekiyor. Paket paketi kullanıyorsanız, bu, çağırarak `SQLitePCL.Batteries.Init()`yapılır.
 
 Paketi başlatmak için, Microsoft. Data. SQLite kullanılmadan önce aşağıdaki kod satırını uygulamanıza ekleyin.
 

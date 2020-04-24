@@ -14,9 +14,9 @@ ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709744"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Dönüşümlerde XPathNodeIterator
-<xref:System.Xml.XPath.XPathNodeIterator>, bir XML yol dili (XPath) sorgusunun sonucu olarak oluşturulan bir düğüm kümesi veya düğüm kümesi yöntemi kullanılarak bir düğüm kümesine dönüştürülen bir sonuç ağacı parçasının üzerinde yineleme yapmak için yöntemler sağlar. <xref:System.Xml.XPath.XPathNodeIterator>, bu düğüm kümesindeki düğümlerin üzerinde yineleme yapmanızı sağlar. Düğüm kümesi alındıktan sonra, <xref:System.Xml.XPath.XPathNodeIterator> sınıfı seçili düğüm kümesine salt okunurdur ve salt ileri bir imleç sağlar. Düğüm kümesi belge sırasıyla oluşturulur, bu nedenle bu yöntemin çağrılması belge düzeninde sonraki düğüme gider. <xref:System.Xml.XPath.XPathNodeIterator> kümedeki tüm düğümlerin düğüm ağacını oluşturmaz. Bunun yerine, veride tek bir düğüm penceresi sağlar ve bu, ağaçta hareket ettiği sırada işaret ettiği temel düğümü ortaya çıkar. <xref:System.Xml.XPath.XPathNodeIterator> sınıfından kullanılabilir yöntemler ve özellikler, geçerli düğümden bilgi almanızı sağlar. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz. <xref:System.Windows.Forms.ToolBar>.  
+, <xref:System.Xml.XPath.XPathNodeIterator> Bir XML yol dili (XPath) sorgusunun sonucu olarak oluşturulan bir düğüm kümesi veya düğüm kümesi yöntemi kullanılarak bir düğüm kümesine dönüştürülen bir sonuç ağacı parçasının üzerinde yinelemek için yöntemler sağlar. , <xref:System.Xml.XPath.XPathNodeIterator> Bu düğüm kümesi içindeki düğümleri yinelemenize olanak sağlar. Düğüm kümesi alındıktan sonra, <xref:System.Xml.XPath.XPathNodeIterator> sınıf seçili düğüm kümesine salt okunurdur ve salt ileri bir imleç sağlar. Düğüm kümesi belge sırasıyla oluşturulur, bu nedenle bu yöntemin çağrılması belge düzeninde sonraki düğüme gider. <xref:System.Xml.XPath.XPathNodeIterator>kümedeki tüm düğümlerin düğüm ağacını oluşturmaz. Bunun yerine, veride tek bir düğüm penceresi sağlar ve bu, ağaçta hareket ettiği sırada işaret ettiği temel düğümü ortaya çıkar. <xref:System.Xml.XPath.XPathNodeIterator> Sınıfından kullanılabilir yöntemler ve özellikler, geçerli düğümden bilgi almanızı sağlar. Kullanılabilir yöntemlerin ve özelliklerin listesi için bkz <xref:System.Windows.Forms.ToolBar>..  
   
- Bir <xref:System.Xml.XPath.XPathNodeIterator> bir XPath sorgusundan oluşturulmuş bir düğüm kümesi üzerinde hareket ettirildiğinde ve yalnızca ileri hareket ettirildiğinde, taşıma yöntemi <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> yöntemi kullanmaktır. Bu yöntemin dönüş türü `Boolean`, sonraki Seçili düğüme taşınırsa `true` döndürülüyor ve daha fazla seçili düğüm yoksa `false`. `true`döndürürse aşağıdaki listede kullanılabilen özellikler gösterilmektedir:  
+ Bir <xref:System.Xml.XPath.XPathNodeIterator> XPath sorgusundan oluşturulmuş bir düğüm kümesi üzerinde hareket ettirildiğinde ve yalnızca ileri hareket ettirildiğinde, taşıma <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> Yöntemi yöntemini kullanmaktır. Bu yöntemin dönüş türü, sonraki seçili `Boolean`düğüme taşınırsa `true` döndürülür ve `false` daha fazla seçili düğüm yoksa döndürülüyor. Dönerse `true`, aşağıdaki listede kullanılabilen özellikler gösterilmektedir:  
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
@@ -24,9 +24,9 @@ ms.locfileid: "75709744"
   
 - <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
- İlk kez bir düğüm kümesine baktığınızda, seçili küme içindeki ilk düğümde <xref:System.Xml.XPath.XPathNodeIterator> konumlandırmak için bir <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> çağrısı yapılmalıdır. Bu, bir while döngüsünün yazılmasına izin verir.  
+ İlk kez bir düğüm kümesine baktığınızda, seçilen küme için ilk düğümde konumlandırmaya <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> <xref:System.Xml.XPath.XPathNodeIterator> yönelik bir çağrı yapılmalıdır. Bu, bir while döngüsünün yazılmasına izin verir.  
   
- Aşağıdaki kod örneği, bir <xref:System.Xml.XPath.XPathNodeIterator> <xref:System.Xml.Xsl.XslTransform> <xref:System.Xml.Xsl.XsltArgumentList>parametre olarak nasıl geçirileceğini gösterir. Kodun girişi **Books. xml**' dir ve stil sayfası **Text. xsl**' dir. **Test. xml** dosyası <xref:System.Xml.XPath.XPathDocument>.  
+ Aşağıdaki kod örneği ' de bir <xref:System.Xml.XPath.XPathNodeIterator> öğesine bir parametresi <xref:System.Xml.Xsl.XslTransform> olarak nasıl geçirileceğini gösterir. <xref:System.Xml.Xsl.XsltArgumentList> Kodun girişi **Books. xml**' dir ve stil sayfası **Text. xsl**' dir. **Test. xml** dosyası <xref:System.Xml.XPath.XPathDocument>.  
   
 ```vb  
 Imports System  

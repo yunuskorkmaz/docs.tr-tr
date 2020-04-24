@@ -23,17 +23,17 @@ UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.
 ```  
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
- `+` &#124; `-`  
- İsteğe bağlı. Bu seçenek için varsayılan değer `-utf8output-`, bu, derleyici çıkışının UTF-8 kodlamasını kullanmayacağı anlamına gelir. `-utf8output` belirtmek `-utf8output+`belirtirken de aynıdır.  
+ `+`&#124;`-`  
+ İsteğe bağlı. Bu seçenek `-utf8output-`için varsayılan değer, DERLEYICI çıkışının UTF-8 kodlamasını kullanmayacağı anlamına gelir. Belirtmek `-utf8output` , belirtilerek `-utf8output+`aynı olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı uluslararası yapılandırmalarda, Derleyici çıktısı konsolunda doğru şekilde görüntülenemez. Bu gibi durumlarda `-utf8output` kullanın ve derleyici çıkışını bir dosyaya yeniden yönlendirin.  
+ Bazı uluslararası yapılandırmalarda, Derleyici çıktısı konsolunda doğru şekilde görüntülenemez. Bu gibi durumlarda, derleyici `-utf8output` çıkışını kullanın ve bir dosyaya yeniden yönlendirin.  
   
 > [!NOTE]
-> `-utf8output` seçeneği, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> Bu `-utf8output` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve derleyiciyi UTF-8 kodlaması kullanarak çıktıyı görüntüleyecek şekilde yönlendirir.  
+ Aşağıdaki kod derlenir `In.vb` ve derleyicinin UTF-8 kodlamasını kullanarak çıktıyı görüntülemesini sağlar.  
   
 ```console  
 vbc -utf8output in.vb  

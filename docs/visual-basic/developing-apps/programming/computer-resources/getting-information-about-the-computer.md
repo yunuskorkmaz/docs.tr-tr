@@ -13,19 +13,19 @@ ms.locfileid: "74348117"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Bilgisayar Hakkında Bilgi Alma (Visual Basic)
 
-Nesne, `My.Computer.Info` bilgisayarın belleği, yüklü derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikler sağlar.
+`My.Computer.Info` Nesnesi, bilgisayarın belleği, yüklü derlemeler, ad ve işletim sistemi hakkında bilgi almak için özellikler sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu tablo, `My.Computer.Info` nesne üzerinden sık olarak gerçekleştirilen görevleri listeler ve her birinin nasıl gerçekleştirilingerektiğini gösteren konulara işaret edilir.
+Bu tablo, `My.Computer.Info` genellikle nesnesi aracılığıyla gerçekleştirilen görevleri listeler ve bunların her birinin nasıl gerçekleştirileceğini gösteren konuların noktalarını gösterir.
 
 |Alıcı|Bkz.|
 |---|---|
-|Uygulamanın yüklü olduğu bilgisayar için ne kadar sanal adres alanı olduğunu belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
-|Uygulamanın çalıştırıldığı bilgisayarın platform türünü belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
+|Uygulamanın yüklendiği bilgisayar için ne kadar kullanılabilir sanal adres alanı olduğunu belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
+|Uygulamanın çalıştığı bilgisayarın Platform türünü belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
 |Uygulamanın çalıştığı bilgisayarın işletim sistemini belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|
-|Uygulamanın çalıştırıldığı bilgisayara hangi hizmet paketlerinin yüklendiğini belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
-|Uygulamanın çalıştırıldığı `UICulture` bilgisayarda yüklü olanları belirleyin.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
+|Uygulamanın üzerinde çalıştığı bilgisayarda hangi hizmet paketlerinin yüklü olduğunu belirleme|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
+|Uygulamanın üzerinde çalıştığı `UICulture` bilgisayarda yüklü ' yı belirleme.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

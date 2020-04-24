@@ -16,45 +16,45 @@ ms.locfileid: "74348838"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Farklı Dizinde Dosya Kopyası Oluşturma
 
-Yöntem, `My.Computer.FileSystem.CopyFile` dosyaları kopyalamanızı sağlar. Parametreleri, varolan dosyaların üzerine yazma, dosyayı yeniden adlandırma, işlemin ilerlemesini gösterme ve kullanıcının işlemi iptal etmesine izin verme olanağı sağlar.  
+Yöntemi `My.Computer.FileSystem.CopyFile` , dosyaları kopyalamanızı sağlar. Parametreleri var olan dosyaların üzerine yazma, dosyayı yeniden adlandırma, işlemin ilerlemesini gösterme ve kullanıcının işlemi iptal edebilmesini sağlar.  
   
-### <a name="to-copy-a-text-file-to-another-folder"></a>Metin dosyasını başka bir klasöre kopyalamak için  
+### <a name="to-copy-a-text-file-to-another-folder"></a>Bir metin dosyasını başka bir klasöre kopyalamak için  
   
-- Kaynak `CopyFile` dosya ve hedef dizini belirterek bir dosyayı kopyalamak için yöntemi kullanın. Parametre, `overwrite` varolan dosyaların üzerine yazıp yazılmayacağınızı belirtmenize olanak tanır. Aşağıdaki kod örnekleri nasıl `CopyFile`kullanılacağını gösterir.  
+- Kaynak dosya `CopyFile` ve hedef dizin belirterek bir dosyayı kopyalamak için yöntemini kullanın. Parametresi `overwrite` , var olan dosyaların üzerine yazılıp yazılmayacağını belirtmenize izin verir. Aşağıdaki kod örnekleri, nasıl kullanılacağını göstermektedir `CopyFile`.  
   
      [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Aşağıdaki koşullar bir özel durum atılmasına neden olabilir:  
+ Aşağıdaki koşullar bir özel durumun oluşturulmasına neden olabilir:  
   
-- Yol aşağıdaki nedenlerden biri için geçerli değildir: bir sıfır uzunlukta dize, sadece beyaz boşluk içerir, geçersiz karakterler içerir, \\ \\ya\\da bir aygıt yolu (ile başlar . ) (<xref:System.ArgumentException>).  
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).  
   
-- Sistem mutlak yolu alamadım<xref:System.ArgumentException>( ).  
+- Sistem mutlak yolu (<xref:System.ArgumentException>) alamadı.  
   
-- Yol geçerli değildir, çünkü `Nothing` <xref:System.ArgumentNullException>( ).  
+- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.  
   
-- Kaynak dosya geçerli değil veya yok<xref:System.IO.FileNotFoundException>( ).  
+- Kaynak dosya geçerli değil veya yok (<xref:System.IO.FileNotFoundException>).  
   
-- Birleştirilmiş yol varolan bir<xref:System.IO.IOException>dizine işaret eder ( ).  
+- Birleşik yol, var olan bir dizine (<xref:System.IO.IOException>) işaret eder.  
   
-- Hedef dosya var `overwrite` ve `False` ayarlanır<xref:System.IO.IOException>( ).  
+- Hedef dosya vardır ve `overwrite` ( `False` <xref:System.IO.IOException>) olarak ayarlanır.  
   
-- Kullanıcının dosyaya erişmek için yeterli izinleri yoktur (<xref:System.IO.IOException>).  
+- Kullanıcı, dosyaya (<xref:System.IO.IOException>) erişmek için yeterli izinlere sahip değil.  
   
-- Hedef klasörde aynı ada sahip bir<xref:System.IO.IOException>dosya kullanılıyor ( ).  
+- Hedef klasörde aynı ada sahip bir dosya kullanımda (<xref:System.IO.IOException>).  
   
-- Yoldaki bir dosya veya klasör adı bir üst üste içerir (:) veya geçersiz bir biçimde<xref:System.NotSupportedException>( ).  
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).  
   
-- `ShowUI`ayarlanır `True` `onUserCancel` , olarak ayarlanır `ThrowException`ve kullanıcı işlemi iptal etti<xref:System.OperationCanceledException>( ).  
+- `ShowUI`olarak ayarlanır `True`, `onUserCancel` olarak ayarlanır `ThrowException`ve Kullanıcı işlemi (<xref:System.OperationCanceledException>) iptal etti.  
   
-- `ShowUI`ayarlanır `True` `onUserCancel` ve belirtilmemiş bir G/Ç hatası oluşur (<xref:System.OperationCanceledException>). `ThrowException`  
+- `ShowUI``True`, `onUserCancel` olarak ayarlanır, olarak ayarlanır `ThrowException`ve belirtilmemiş g/ç hatası oluşur (<xref:System.OperationCanceledException>).  
   
-- Yol, sistem tarafından tanımlanan maksimum<xref:System.IO.PathTooLongException>uzunluğu aşıyor ( ).  
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.  
   
-- Kullanıcının gerekli izni yoktur<xref:System.UnauthorizedAccessException>( ).  
+- Kullanıcı gerekli izne (<xref:System.UnauthorizedAccessException>) sahip değil.  
   
-- Kullanıcı yolu görüntülemek için gerekli izinlerden<xref:System.Security.SecurityException>yoksundur ( ).  
+- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

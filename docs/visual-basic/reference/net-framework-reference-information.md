@@ -20,7 +20,7 @@ Bu konu, .NET Framework sınıf kitaplığıyla nasıl çalışılacağı hakkı
  [Başlarken](../../framework/get-started/index.md)  
  .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.  
   
- [Sınıf Kitaplığına Genel Bakış](../../standard/class-library-overview.md)  
+ [Sınıf kitaplığına genel bakış](../../standard/class-library-overview.md)  
  Geliştirme sürecini hızlandırarak iyileştirmenize ve sistem işlevselliğine erişim sağlamanıza yardımcı olan sınıfları, arabirimleri ve değer türlerini tanıtır.  
   
  [Geliştirme Kılavuzu](../../framework/development-guide.md)  

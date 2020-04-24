@@ -25,25 +25,25 @@ Koşullu derleyici sabitlerini tanımlar.
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-veya
+or
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|`symbol`|Gerekli. Tanımlanacak simge.|  
-|`value`|İsteğe bağlı. `symbol`atanacak değer. `value` bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri (\\") ile çevrelenmelidir. Hiçbir değer belirtilmemişse, true olarak alınır.|  
+|`symbol`|Gereklidir. Tanımlanacak simge.|  
+|`value`|İsteğe bağlı. Atanacak `symbol`değer. `value` Bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri (\\") arasına alınmalıdır. Hiçbir değer belirtilmemişse, true olarak alınır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-define` seçeneği, kaynak dosyanızda `#Const` Önişlemci yönergesini kullanmayla benzer bir etkiye sahiptir, ancak `-define` ile tanımlanmış sabitler ortak olur ve projedeki tüm dosyalar için geçerlidir.  
+ Bu `-define` seçenek, kaynak dosyanızda ön `#Const` işlemci yönergesini kullanmayla benzer bir etkiye sahiptir, ancak ile `-define` tanımlanmış sabitler ortak olur ve projedeki tüm dosyalar için geçerlidir.  
   
- Bu seçenek tarafından oluşturulan sembolleri, kaynak dosyaları koşullu olarak derlemek için `#If`...`Then`...`#Else` yönergesi ile kullanabilirsiniz.  
+ Bu seçenek tarafından oluşturulan sembolleri `#If`... ile kullanabilirsiniz. `Then`... `#Else` kaynak dosyaları koşullu olarak derlemek için yönerge.  
   
- `-d`, `-define`kısa bir biçimidir.  
+ `-d`, öğesinin `-define`kısa biçimidir.  
   
  Sembol tanımlarını ayırmak için virgül kullanarak `-define` birden çok sembol tanımlayabilirsiniz.  
   
@@ -59,6 +59,6 @@ veya
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#If... Sonra... #Else yönergeler](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

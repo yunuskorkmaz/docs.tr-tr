@@ -20,7 +20,7 @@ Yönetilmeyen kod özel durumu birlikte çalışması yalnızca Windows platform
 
 ## <a name="setjmplongjmp-behaviors"></a>Setjmp/longjmp davranışları
 
-`setjmp` ve `longjmp` C işlevleriyle birlikte çalışma desteklenmez. Yönetilen çerçeveleri atlamak için `longjmp` kullanamazsınız.
+WITH `setjmp` ve `longjmp` C işlevleriyle birlikte çalışma desteklenmez. Yönetilen çerçeveleri atlamak `longjmp` için kullanamazsınız.
 
 Daha fazla bilgi için bkz. [longjmp belgeleri](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp).
 

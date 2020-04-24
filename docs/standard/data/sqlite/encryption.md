@@ -15,7 +15,7 @@ SQLite, veritabanı dosyalarını varsayılan olarak şifrelemeyi desteklemez. B
 
 ## <a name="installation"></a>Yükleme
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet remove package Microsoft.Data.Sqlite
@@ -23,7 +23,7 @@ dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Remove-Package Microsoft.Data.Sqlite
@@ -37,14 +37,14 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="specify-the-key"></a>Anahtarı belirtin
 
-Şifrelemeyi etkinleştirmek için `Password` bağlantı dizesi anahtar sözcüğünü kullanarak anahtarı belirtin. Kullanıcı girişinden değer eklemek veya güncelleştirmek ve bağlantı dizesi ekleme saldırılarına engel olmak için <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> kullanın.
+Şifrelemeyi etkinleştirmek için `Password` bağlantı dizesi anahtar sözcüğünü kullanarak anahtarı belirtin. Kullanıcı <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> girişinden değer eklemek veya güncelleştirmek için kullanın ve bağlantı dizesi ekleme saldırılarına karşı önleyin.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
 ## <a name="rekeying-the-database"></a>Veritabanını yeniden anahtarlama
 
-Bir veritabanının şifreleme anahtarını değiştirmek istiyorsanız, bir `PRAGMA rekey` ifadesini yayınlayın. Veritabanının şifresini çözmek için `NULL`belirtin.
+Bir veritabanının şifreleme anahtarını değiştirmek istiyorsanız, bir `PRAGMA rekey` ifade yayınlayın. Veritabanının şifresini çözmek için öğesini belirtin `NULL`.
 
-Ne yazık ki, SQLite `PRAGMA` deyimlerdeki parametreleri desteklemez. Bunun yerine, SQL ekleme işlemini engellemek için `quote()` işlevini kullanın.
+Ne yazık ki, SQLite deyimlerdeki `PRAGMA` parametreleri desteklemez. Bunun yerine, SQL `quote()` ekleme işlemini engellemek için işlevini kullanın.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_Rekey)]

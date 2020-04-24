@@ -15,13 +15,13 @@ Bir .NET Framework türünü dizeye dönüştürmek istiyorsanız, **ToString** 
   
 |.NET Framework türü|Döndürülen dize türü|  
 |-------------------------|--------------------------|  
-|Boole değeri|"true", "false"|  
+|Boole|"true", "false"|  
 |Single. PositiveInfinity|'SI|  
 |Tek. NegativeInfinity|"-INF"|  
 |Double. PositiveInfinity|'SI|  
 |Double. NegativeInfinity|"-INF"|  
 |DateTime|Biçim yyyy-MM-ddTHH: mm: sszzzzzz ve alt kümeleridir.|  
-|Zaman aralığı|Biçim Pnazmntnhnmns, örneğin, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika ve 20 saniyelik bir süredir.|  
+|Timespan|Biçim Pnazmntnhnmns, örneğin `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika ve 20 saniye.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

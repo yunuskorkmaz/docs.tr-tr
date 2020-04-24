@@ -13,7 +13,7 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159825"
 ---
-# <a name="schemaimporterextensions-element"></a>\<SchemaImporterExtensions > öğesi
+# <a name="schemaimporterextensions-element"></a>\<SchemaImporterExtensions> öğesi
 Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -28,16 +28,16 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<SchemaImporterExtensions için > öğesi \<ekleyin >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Eşleme oluşturmak için <xref:System.Xml.Serialization.XmlSchemaImporter> tarafından kullanılan türleri ekler.|  
+|[\<SchemaImporterExtensions \<Için> öğesi ekleme>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Eşlemeleri oluşturmak <xref:System.Xml.Serialization.XmlSchemaImporter> için tarafından kullanılan türleri ekler.|  
   
 ## <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[System. xml. Serialization > öğesi \<](../../../docs/standard/serialization/system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
+|[\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, XSD türlerini .NET Framework türlerine eşlerken <xref:System.Xml.Serialization.XmlSchemaImporter> tarafından kullanılan türlerin nasıl ekleneceğini göstermektedir.  
+ Aşağıdaki kod örneği, <xref:System.Xml.Serialization.XmlSchemaImporter> .NET Framework türlerine xsd türleri eşlerken tarafından kullanılan türlerin nasıl ekleneceğini göstermektedir.  
   
 ```xml  
 <system.xml.serialization>  
@@ -54,7 +54,7 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization > öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<SchemaImporterExtensions için > öğesi \<ekleyin >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [System. xml. Serialization > öğesi \<](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization> öğesi](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<SchemaImporterExtensions \<Için> öğesi ekleme>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)

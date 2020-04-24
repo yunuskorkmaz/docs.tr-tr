@@ -115,7 +115,7 @@ public class Sample
 
 Bu örnek aşağıdaki çıktıyı görüntüler:
 
-**Output**
+**Çıktı**
 
 Koleksiyondaki tüm öznitelikleri görüntüleyin.
 
@@ -190,7 +190,7 @@ public class Sample
 
 ## <a name="retrieving-an-individual-attribute-node"></a>Tek bir öznitelik düğümünü alma
 
-Bir öğeden tek bir öznitelik düğümü almak için <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> yöntemi kullanılır. **XmlAttribute**türünde bir nesne döndürür. Bir **XmlAttribute**olduktan sonra, <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> sınıfında bulunan tüm yöntemler ve özellikler, bu nesne üzerinde bulunur, örneğin **Owner öğesini**bulma.
+Bir öğeden tek bir öznitelik düğümü almak için <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> yöntemi kullanılır. **XmlAttribute**türünde bir nesne döndürür. Bir **XmlAttribute**olduktan sonra, <xref:System.Xml.XmlAttribute?displayProperty=nameWithType> sınıfta bulunan tüm yöntemler ve özellikler bu nesne üzerinde bulunur, örneğin **Owner öğesini**bulma.
 
 ```vb
 Imports System.IO

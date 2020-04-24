@@ -15,11 +15,11 @@ ADO.NET içinde meta verileri almak için iki API vardır. Biri sorgu sonuçlar�
 
 ## <a name="query-result-metadata"></a>Sorgu sonucu meta verileri
 
-`SqliteDataReader`<xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> yöntemi kullanarak bir sorgunun sonuçlarıyla ilgili meta verileri elde edebilirsiniz. Döndürülen <xref:System.Data.DataTable> şu sütunları içerir:
+Üzerinde <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> `SqliteDataReader`yöntemi kullanarak bir sorgunun sonuçlarıyla ilgili meta verileri alabilirsiniz. Döndürülen <xref:System.Data.DataTable> şu sütunları içerir:
 
 | Sütun             | Tür    | Açıklama                                                               |
 | ------------------ | ------- | ------------------------------------------------------------------------- |
-| `AllowDBNull`      | Boole değeri | Kaynak sütunu NULL olabilir.                                    |
+| `AllowDBNull`      | Boole | Kaynak sütunu NULL olabilir.                                    |
 | `BaseCatalogName`  | Dize  | Kaynak sütunun veritabanının adı. İfadeler için Always NULL.    |
 | `BaseColumnName`   | Dize  | Kaynak sütunun diğer adı değil. İfadeler için Always NULL.    |
 | `BaseSchemaName`   | Dize  | Her zaman NULL. SQLite şemaları desteklemez.                              |
@@ -27,18 +27,18 @@ ADO.NET içinde meta verileri almak için iki API vardır. Biri sorgu sonuçlar�
 | `BaseTableName`    | Dize  | Kaynak sütunun tablosunun adı. İfadeler için Always NULL.       |
 | `ColumnName`       | Dize  | Sonuç kümesindeki sütunun adı veya diğer adı.                        |
 | `ColumnOrdinal`    | Int32   | Sonuç kümesindeki sütunun sıra sayısı.                              |
-| `ColumnSize`       | Int32   | Always-1. Bu, `Microsoft.Data.Sqlite`sonraki sürümlerinde değişebilir.   |
+| `ColumnSize`       | Int32   | Always-1. Bu, gelecekteki sürümlerinde değişebilir `Microsoft.Data.Sqlite`.   |
 | `DataType`         | Tür    | Sütunun varsayılan .NET veri türü.                                 |
 | `DataTypeName`     | Dize  | Sütunun SQLite veri türü.                                       |
-| `IsAliased`        | Boole değeri | Sonuç kümesinde sütun adı diğer ad ise true.                     |
-| `IsAutoIncrement`  | Boole değeri | Kaynak sütunu AUTOıNCREMENT anahtar sözcüğüyle oluşturulduysa true.     |
-| `IsExpression`     | Boole değeri | Sütun sorgudaki bir ifadeden kaynaklanıyorsa true.            |
-| `IsKey`            | Boole değeri | Kaynak sütunu BIRINCIL ANAHTARıN parçasıysa doğru.                     |
-| `IsUnique`         | Boole değeri | Kaynak sütunu BENZERSIZ ise doğru.                                      |
-| `NumericPrecision` | Int16   | Her zaman NULL. Bu, `Microsoft.Data.Sqlite`sonraki sürümlerinde değişebilir. |
-| `NumericScale`     | Int16   | Her zaman NULL. Bu, `Microsoft.Data.Sqlite`sonraki sürümlerinde değişebilir. |
+| `IsAliased`        | Boole | Sonuç kümesinde sütun adı diğer ad ise true.                     |
+| `IsAutoIncrement`  | Boole | Kaynak sütunu AUTOıNCREMENT anahtar sözcüğüyle oluşturulduysa true.     |
+| `IsExpression`     | Boole | Sütun sorgudaki bir ifadeden kaynaklanıyorsa true.            |
+| `IsKey`            | Boole | Kaynak sütunu BIRINCIL ANAHTARıN parçasıysa doğru.                     |
+| `IsUnique`         | Boole | Kaynak sütunu BENZERSIZ ise doğru.                                      |
+| `NumericPrecision` | Int16   | Her zaman NULL. Bu, gelecekteki sürümlerinde değişebilir `Microsoft.Data.Sqlite`. |
+| `NumericScale`     | Int16   | Her zaman NULL. Bu, gelecekteki sürümlerinde değişebilir `Microsoft.Data.Sqlite`. |
 
-Aşağıdaki örnek, bir sonuçla ilgili meta verileri gösteren bir hata ayıklama dizesi oluşturmak için `GetSchemaTable` nasıl kullanacağınızı gösterir:
+Aşağıdaki örnek, bir sonuçla ilgili meta `GetSchemaTable` verileri gösteren bir hata ayıklama dizesi oluşturmak için nasıl kullanılacağını gösterir:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/ResultMetadataSample/Program.cs?name=snippet_ResultMetadata)]
 

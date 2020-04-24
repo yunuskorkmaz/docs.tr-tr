@@ -62,7 +62,7 @@ Console.WriteLine(doc.InnerXml);
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- Ağaç, belge çağrısının bir sonucu olarak bir dizeye kalıcı yapıldığında **. InnerXml**, `test` öğesinin ad alanını korumak için `xmlns:a='123'` özniteliği eklenmiştir. `'123'`ve `'123'`kaldı.  
+ Ağaç, belge çağrısının bir sonucu olarak bir dizeye kalıcı yapıldığında **. InnerXml**, `xmlns:a='123'` `test` öğesinin ad alanını korumak için eklenmiştir. İdi `'123'`ve kaldı `'123'`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

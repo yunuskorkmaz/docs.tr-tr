@@ -24,20 +24,20 @@ Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.
   
 ## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
-|+ &#124; -|İsteğe bağlı. Varsayılan olarak `-warnaserror-` etkindir; Uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. `-warnaserror+`ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
-|`numberList`|İsteğe bağlı. `-warnaserror` seçeneğinin uygulandığı uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi. Hiçbir uyarı KIMLIĞI belirtilmemişse, `-warnaserror` seçeneği tüm uyarılar için geçerlidir.|  
+|+ &#124;-|İsteğe bağlı. Varsayılan `-warnaserror-` olarak etkindir; Uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. İle `-warnaserror` `-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
+|`numberList`|İsteğe bağlı. `-warnaserror` Seçeneğin UYGULANDıĞı uyarı kimliği numaralarının virgülle ayrılmış listesi. Hiçbir uyarı KIMLIĞI belirtilmemişse, bu `-warnaserror` seçenek tüm uyarılar için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-warnaserror` seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
+ `-warnaserror` Seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
   
- Varsayılan olarak, `-warnaserror-` etkindir ve bu, uyarıların yalnızca bilgilendirici olmasına neden olur. `-warnaserror+`ile aynı olan `-warnaserror` seçeneği, uyarıların hata olarak işlenmesine neden olur.  
+ Varsayılan olarak, `-warnaserror-` uyarıların yalnızca bilgilendirici olmasına neden olan, etkin olur. İle `-warnaserror` `-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.  
   
  Yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz.  
   
 > [!NOTE]
-> `-warnaserror` seçeneği, uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
+> Bu `-warnaserror` seçenek uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
   
 |Visual Studio IDE 'de tüm uyarıları hata olarak değerlendirmek için-warnaserror öğesini ayarlamak için|  
 |---|  
@@ -48,14 +48,14 @@ Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5. hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `In.vb` derler ve derleyicinin bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
+ Aşağıdaki kod, derleyicisini derler `In.vb` ve bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı hata olarak değerlendirir.  
+ Aşağıdaki kod, bir `T2.vb` hata olarak yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı derler ve değerlendirir.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  

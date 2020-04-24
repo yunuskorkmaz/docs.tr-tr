@@ -19,20 +19,20 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
   
  `xmlns:<name>=<"uri">`  
   
- Burada `<name>` ad alanı ön eki ve `<"uri">` ad alanını tanımlayan URI 'dir. Ön eki bildirdikten sonra, bir XML belgesindeki öğeleri ve öznitelikleri nitelemek ve bunları ad alanı URI 'siyle ilişkilendirmek için kullanabilirsiniz. Ad alanı ön eki bir belge boyunca kullanıldığından, bu değer kısa bir süre olmalıdır.  
+ Burada `<name>` ad alanı öneki ve `<"uri">` ad alanını tanımlayan URI 'dir. Ön eki bildirdikten sonra, bir XML belgesindeki öğeleri ve öznitelikleri nitelemek ve bunları ad alanı URI 'siyle ilişkilendirmek için kullanabilirsiniz. Ad alanı ön eki bir belge boyunca kullanıldığından, bu değer kısa bir süre olmalıdır.  
   
- Bu örnek iki `BOOK` öğesi tanımlar. İlk öğe önek, `mybook`ve ikinci öğe önek tarafından nitelenir, `bb`. Her önek farklı bir ad alanı URI 'siyle ilişkilendirilir:  
+ Bu örnek iki `BOOK` öğe tanımlar. İlk öğe önek `mybook`tarafından nitelenir, ve ikinci öğe önek tarafından nitelenir `bb`. Her önek farklı bir ad alanı URI 'siyle ilişkilendirilir:  
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
 <bb:BOOK xmlns:bb="urn:blueyonderairlines">  
 ```  
   
- Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğesi `mybook` ad alanına aitse, `<mybook:Author>`olarak bildirilmiştir.  
+ Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğe `mybook` ad alanına aitse, olarak `<mybook:Author>`belirtilir.  
   
 <a name="scope"></a>
 ## <a name="declaration-scope"></a>Bildirim kapsamı  
- Bir ad alanı, içinde bildirildiği öğenin sonuna kadar bildirim noktasından etkilidir. Bu örnekte, `BOOK` öğesinde tanımlanan ad alanı `Publisher` öğesi gibi `BOOK` öğesi dışındaki öğelere uygulanmaz:  
+ Bir ad alanı, içinde bildirildiği öğenin sonuna kadar bildirim noktasından etkilidir. Bu örnekte, öğesinde tanımlanan `BOOK` ad alanı öğesi gibi `BOOK` öğe `Publisher` dışındaki öğelere uygulanmaz:  
   
 ```xml  
 <Author>Joe Smith</Author>  
@@ -56,26 +56,26 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
 ```  
   
 ## <a name="managing-namespaces"></a>Ad alanlarını yönetme  
- <xref:System.Xml.XmlNamespaceManager> sınıfı, bir ad alanı URI 'Leri ve bunların ön eklerini depolar ve bu koleksiyonda ad alanlarını arayabilir, eklemenize ve kaldırmanıza olanak tanır. Bazı bağlamlarda, daha iyi XML işleme performansı için bu sınıf gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfı XPath desteği için <xref:System.Xml.XmlNamespaceManager> kullanır.  
+ <xref:System.Xml.XmlNamespaceManager> Sınıfı, bir ad alanı URI 'leri ve bunların ön eklerini depolar ve bu koleksiyonda ad alanlarını arayabilir, eklemenize ve kaldırmanıza olanak tanır. Bazı bağlamlarda, daha iyi XML işleme performansı için bu sınıf gereklidir. Örneğin, <xref:System.Xml.Xsl.XsltContext> sınıfı XPath desteği için <xref:System.Xml.XmlNamespaceManager> kullanır.  
   
  Ad alanı Yöneticisi ad alanları üzerinde herhangi bir doğrulama gerçekleştirmez, ancak ön eklerin ve ad alanlarının zaten doğrulanmış olduğunu varsayar ve [W3C ad](https://www.w3.org/TR/REC-xml-names/) alanları belirtimine uyum sağlar.  
   
 > [!NOTE]
-> Ve [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) [VISUAL BASIC](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) İçindeki LINQ to XML, ad alanlarını yönetmek için <xref:System.Xml.XmlNamespaceManager> kullanmaz. LINQ to XML kullanırken ad alanlarını yönetme hakkında bilgi için bkz. [XML ad alanlarıC#() ile çalışma](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) ve LINQ belgelerinde [XML ad alanları (Visual Basic) ile](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) çalışma.  
+> [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ' de LINQ to XML ve ad alanlarını <xref:System.Xml.XmlNamespaceManager> yönetmek için kullanmayın [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) . LINQ to XML kullanırken ad alanlarını yönetme hakkında bilgi için bkz. [XML ad alanları (C#) Ile çalışma](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) ve LINQ belgelerindeki [XML ad alanları (Visual Basic) ile](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) çalışma.  
   
- <xref:System.Xml.XmlNamespaceManager> sınıfıyla gerçekleştirebileceğiniz yönetim ve arama görevlerinin bazıları aşağıda verilmiştir. Daha fazla bilgi ve örnek için, her bir yöntem veya özellik için başvuru sayfasının bağlantılarını izleyin.  
+ <xref:System.Xml.XmlNamespaceManager> Sınıfı ile gerçekleştirebileceğiniz yönetim ve arama görevlerinin bazıları aşağıda verilmiştir. Daha fazla bilgi ve örnek için, her bir yöntem veya özellik için başvuru sayfasının bağlantılarını izleyin.  
   
 |Alıcı|Kullanım|  
 |--------|---------|  
 |Ad alanı Ekle|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> yöntemi|  
 |Ad alanını kaldır|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> yöntemi|  
-|Varsayılan ad alanı için URI 'yi bul|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> özelliği|  
+|Varsayılan ad alanı için URI 'yi bul|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>özelliði|  
 |Bir ad alanı öneki için URI bulma|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> yöntemi|  
 |Bir ad alanı URI 'sinin önekini bulma|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> yöntemi|  
 |Geçerli düğümdeki ad alanlarının listesini al|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> yöntemi|  
-|Ad alanı kapsamı|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
+|Ad alanı kapsamı|<xref:System.Xml.XmlNamespaceManager.PushScope%2A>ve <xref:System.Xml.XmlNamespaceManager.PopScope%2A> yöntemleri|  
 |Geçerli kapsamda bir ön ek tanımlanıp tanımlanmadığını denetleyin|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> yöntemi|  
-|Ön ekleri ve URI 'Leri aramak için kullanılan ad tablosunu alın|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> özelliği|  
+|Ön ekleri ve URI 'Leri aramak için kullanılan ad tablosunu alın|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>özelliði|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

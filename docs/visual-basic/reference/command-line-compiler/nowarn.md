@@ -22,32 +22,32 @@ Derleyicinin uyarı oluşturma yeteneğini engeller.
 -nowarn[:numberList]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız Değişkenler  
   
-|Terim|Tanım|  
+|Sözleşme Dönemi|Tanım|  
 |---|---|  
 |`numberList`|İsteğe bağlı. Derleyicinin bastırmaları gereken uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi. Uyarı kimlikleri belirtilmemişse, tüm uyarılar bastırılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 seçeneği derleyicinin uyarı üretmesine neden olur. Tek bir uyarıyı bastırmak için, iki nokta üst üste takip eden `-nowarn` seçeneğine uyarı KIMLIĞINI sağlayın. Birden çok uyarı numarasını virgülle ayırın.  
+ `-nowarn` Seçeneği derleyicinin uyarı üretmesine neden olur. Tek bir uyarıyı gizlemek için, iki nokta üst üste izleyen `-nowarn` SEÇENEĞE uyarı kimliğini sağlayın. Birden çok uyarı numarasını virgülle ayırın.  
   
- Uyarı tanımlayıcısının yalnızca sayısal kısmını belirtmeniz gerekir. Örneğin, kullanılmayan yerel değişkenlerin uyarısı olan BC42024 ' ı bastırmak istiyorsanız `-nowarn:42024` belirtin.  
+ Uyarı tanımlayıcısının yalnızca sayısal kısmını belirtmeniz gerekir. Örneğin, kullanılmayan yerel değişkenlerin uyarısı olan BC42024 'i gizlemek istiyorsanız, öğesini belirtin `-nowarn:42024`.  
   
  Uyarı KIMLIĞI numaraları hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
 |Visual Studio tümleşik geliştirme ortamında-nowarn 'yi ayarlamak için|  
 |---|  
-|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin.<br />     veya<br />     Belirli bir uyarıyı devre dışı bırakmak için, uyarının yanındaki açılan listeden **hiçbiri** ' ne tıklayın.|  
+|1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. tüm uyarıları devre dışı bırakmak için **tüm uyarıları devre dışı bırak** onay kutusunu seçin.<br />     - veya -<br />     Belirli bir uyarıyı devre dışı bırakmak için, uyarının yanındaki açılan listeden **hiçbiri** ' ne tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve herhangi bir uyarı görüntülemez.  
+ Aşağıdaki kod derlenir `T2.vb` ve herhangi bir uyarı görüntülemez.  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod `T2.vb` derler ve kullanılmayan yerel değişkenler için uyarıları görüntülemez (42024).  
+ Aşağıdaki kod derlenir `T2.vb` ve kullanılmayan yerel değişkenler için uyarıları görüntülemez (42024).  
   
 ```console
 vbc -nowarn:42024 t2.vb  
