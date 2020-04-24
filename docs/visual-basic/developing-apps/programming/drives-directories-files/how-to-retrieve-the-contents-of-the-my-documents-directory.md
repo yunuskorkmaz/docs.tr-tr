@@ -11,17 +11,17 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334529"
 ---
-# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="414d0-102">Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="414d0-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
+# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="aac5e-102">Nasıl Yapılır: Visual Basic'te Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="aac5e-102">How to: Retrieve the Contents of the My Documents Directory in Visual Basic</span></span>
 
-<span data-ttu-id="414d0-103"><xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesne, **Belgelerim** veya **Masaüstüm**gibi **Tüm Kullanıcılar** dizinlerinin çoğundan okumak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="414d0-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
+<span data-ttu-id="aac5e-103"><xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> Nesnesi, **Belgelerim** veya **masaüstlerim**gibi **tüm Kullanıcı** dizinlerinden okumak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="aac5e-103">The <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> object can be used to read from many of the **All Users** directories, such as **My Documents** or **Desktop**.</span></span>  
   
-### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="414d0-104">Belgelerim klasöründen okumak için</span><span class="sxs-lookup"><span data-stu-id="414d0-104">To read from the My Documents folder</span></span>  
+### <a name="to-read-from-the-my-documents-folder"></a><span data-ttu-id="aac5e-104">Belgelerim klasöründen okumak için</span><span class="sxs-lookup"><span data-stu-id="aac5e-104">To read from the My Documents folder</span></span>  
   
-- <span data-ttu-id="414d0-105">Her `ReadAllText` dosyadaki metni belirli bir dizindeki okumak için yöntemi kullanın.</span><span class="sxs-lookup"><span data-stu-id="414d0-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="414d0-106">Aşağıdaki kod bir dizin ve dosya belirtir `ReadAllText` ve sonra onları `patients`adlı dize içine okumak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="414d0-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
+- <span data-ttu-id="aac5e-105">Belirli bir `ReadAllText` dizindeki her bir dosyanın metnini okumak için yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="aac5e-105">Use the `ReadAllText` method to read the text from each file in a specific directory.</span></span> <span data-ttu-id="aac5e-106">Aşağıdaki kod, bir dizini ve dosyayı belirtir ve sonra bunları `ReadAllText` adlı `patients`dizeye okumak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="aac5e-106">The following code specifies a directory and file and then uses `ReadAllText` to read them into the string named `patients`.</span></span>  
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a><span data-ttu-id="414d0-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="414d0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aac5e-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aac5e-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
