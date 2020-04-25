@@ -4,12 +4,12 @@ description: Görüntü işlemeden mobil desteğe ve ETL işlem hattına kadar o
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/17/2020
-ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135665"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158456"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -93,13 +93,13 @@ Bu örnek, herhangi bir konsol uygulamasını`.csx` Azure IŞLEVLERINDE bir http
 
 ## <a name="serverless-for-mobile"></a>Mobil için sunucusuz
 
-Azure Işlevlerinin kolayca uygulanması ve bakımını yapmak ve HTTP üzerinden erişilebilir olması kolay bir işlemdir. Bir mobil uygulama için API uygulamanın harika bir yoludur. Microsoft, Xamarin ile iOS, Android ve Windows için harika platformlar arası araçlar sunar. Bu nedenle, Xamarin ve Azure Işlevleri birlikte harika çalışmaktadır. Bu makalede, Azure Web portalında veya Visual Studio 'da ilk olarak Azure Işlevinin nasıl uygulanacağı ve Android, iOS ve Windows üzerinde çalışan Xamarin. Forms ile platformlar arası istemci oluşturma işlemlerinin nasıl yapılacağı gösterilir.
+Azure Işlevlerinin kolayca uygulanması ve bakımını yapmak ve HTTP üzerinden erişilebilir olması kolay bir işlemdir. Bir mobil uygulama için API uygulamanın harika bir yoludur. Microsoft, Xamarin ile iOS, Android ve Windows için harika platformlar arası araçlar sunar. Bu nedenle, Xamarin ve Azure Işlevleri birlikte harika çalışmaktadır. Bu makalede, ilk olarak Azure portal veya Visual Studio 'da bir Azure Işlevinin nasıl uygulanacağı ve Android, iOS ve Windows üzerinde çalışan Xamarin. Forms ile platformlar arası istemci oluşturma işlemlerinin nasıl yapılacağı gösterilir.
 
 [Xamarin. Forms istemcisiyle basit bir Azure Işlevi uygulama](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 
 ## <a name="serverless-messaging"></a>Sunucusuz mesajlaşma
 
-Bu örnek, her sayıdaki oturum/bölüm arasında rastgele sayıda ileti yüklemek için Dayanıklı İşlevler ' fan çıkış deseninin nasıl kullanılacağını gösterir. Service Bus, Event Hubs veya depolama kuyruklarını hedefler. Örnek ayrıca, başka bir Azure Işleviyle bu iletileri kullanma ve sonuç zamanlama verilerini başka bir olay hub 'ına yükleme özelliğini de ekler. Veriler daha sonra Azure Veri Gezgini gibi analiz hizmetlerine alınır.
+Bu örnek, her sayıdaki oturum/bölüm arasında rastgele sayıda ileti yüklemek için Dayanıklı İşlevler ' fan-Out deseninin nasıl kullanıldığını gösterir. Service Bus, Event Hubs veya depolama kuyruklarını hedefler. Örnek ayrıca, başka bir Azure Işleviyle bu iletileri kullanma ve sonuç zamanlama verilerini başka bir olay hub 'ına yükleme özelliğini de ekler. Veriler daha sonra Azure Veri Gezgini gibi analiz hizmetlerine alınır.
 
 [Azure Işlevleri ile Service Bus, Event Hubs ve depolama kuyrukları aracılığıyla ileti oluşturun ve kullanın](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 

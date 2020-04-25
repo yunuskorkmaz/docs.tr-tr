@@ -1,21 +1,21 @@
 ---
-title: Ubuntu 19,10 Paket Yöneticisi 'ne .NET Core 'u yükler-.NET Core
-description: Ubuntu 19,10 ' de .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
+title: Ubuntu 20,04 paket yöneticisi 'ne .NET Core 'u yükler-.NET Core
+description: Ubuntu 20,04 ' de .NET Core SDK ve çalışma zamanı yüklemek için bir paket Yöneticisi kullanın.
 author: thraka
 ms.author: adegeo
-ms.date: 03/17/2020
-ms.openlocfilehash: 5a51527a6691508c033d5130265e32ecfb7308f8
+ms.date: 04/15/2020
+ms.openlocfilehash: b99dcbab3305bffdcc9202bb2a09e3061abca95b
 ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140746"
+ms.locfileid: "82148382"
 ---
-# <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19,10 Paket Yöneticisi-.NET Core 'ı yükler
+# <a name="ubuntu-2004-package-manager---install-net-core"></a>Ubuntu 20,04 paket yöneticisi-.NET Core 'ı yükler
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Bu makalede, Ubuntu 19,10 ' de .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır.
+Bu makalede, Ubuntu 20,04 ' de .NET Core yüklemek için bir paket yöneticisi 'nin nasıl kullanılacağı açıklanır.
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
@@ -32,7 +32,7 @@ Bu işlemin makine başına tek bir kez yapılması yeterlidir.
 Bir Terminal açın ve aşağıdaki komutları çalıştırın.
 
 ```bash
-wget https://packages.microsoft.com/config/ubuntu/19.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
@@ -102,7 +102,7 @@ Bu işe yaramazsa, aşağıdaki komutlarla el ile yüklemeyi çalıştırabilirs
 sudo apt-get install -y gpg
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-wget https://packages.microsoft.com/config/ubuntu/19.10/prod.list
+wget https://packages.microsoft.com/config/ubuntu/20.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list

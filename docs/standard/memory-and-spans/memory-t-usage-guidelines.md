@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135782"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158599"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T > ve Span\<T > kullanım yönergeleri
 
@@ -23,7 +23,7 @@ Arabellekler API 'Ler arasında geçirilebileceği ve arabelleklerin bazen birde
 
 - **Sahiplik**. Arabellek örneğinin sahibi, artık kullanımda olmadığında arabelleği yok etme da dahil olmak üzere ömür yönetiminden sorumludur. Tüm arabelleklerin tek bir sahibi vardır. Genellikle sahip, arabelleği oluşturan veya bir fabrikadan arabelleği alan bileşendir. Sahiplik da aktarılabilir; **Bileşen-a** arabellek denetimini **bileşen-b**' y e yeniden denetleyebilir ve bu noktada, o nokta **bileşeni-A** artık arabellek kullanamaz ve **bileşen-b** artık kullanımda olmadığında arabelleği yok etmeden sorumlu olur.
 
-- **Tüketim**. Bir arabellek örneğinin tüketicisi, onu okuyarak ve muhtemelen ona yazarak arabellek örneğini kullanmasına izin verilir. Bazı dış eşitleme mekanizması sağlanmadığı takdirde arabellekler tek seferde bir tüketiciye sahip olabilir. Bir arabelleğin etkin tüketicisinin, arabelleğin sahibi olması gerekmediğini unutmayın.
+- **Tüketim**. Bir arabellek örneğinin tüketicisi, onu okuyarak ve muhtemelen ona yazarak arabellek örneğini kullanmasına izin verilir. Bazı dış eşitleme mekanizması sağlanmadığı takdirde arabellekler tek seferde bir tüketiciye sahip olabilir. Bir arabelleğin etkin tüketicisi, arabelleğin sahibi değildir.
 
 - **Kira**. Kira, belirli bir bileşenin arabelleğin tüketicisi olmasına izin verilen süredir.
 
@@ -110,7 +110,7 @@ Bir bellek bloğunun sahibi olduğu, ancak bazıları aynı anda belirli bir bel
 
 - Yığın tarafından ayrılan doğası performansı <xref:System.Span%601> iyileştirir ve tercih edilen türü bir <xref:System.Span%601> bellek bloğunda çalıştırmak için, bu da bazı önemli kısıtlamalara de <xref:System.Span%601> neden olur. Ne zaman kullanacağınızı <xref:System.Span%601> ve ne zaman kullanılacağını bilmemiz önemlidir <xref:System.Memory%601>.
 
-Aşağıdakiler ve ilgili türleri başarıyla kullanılarak <xref:System.Memory%601> önerimlerimiz aşağıda verilmiştir. İçin <xref:System.Memory%601> geçerli olan ve <xref:System.Span%601> Ayrıca, açıkça aksi belirtilmedikçe ve <xref:System.ReadOnlyMemory%601> <xref:System.ReadOnlySpan%601> için geçerli olan yönergelerin olduğunu unutmayın.
+Aşağıdakiler ve ilgili türleri başarıyla kullanılarak <xref:System.Memory%601> önerimlerimiz aşağıda verilmiştir. İçin <xref:System.Memory%601> geçerli olan ve <xref:System.Span%601> Ayrıca, açıkça aksi <xref:System.ReadOnlyMemory%601> belirtilmedikçe <xref:System.ReadOnlySpan%601> ve için geçerli olan rehberlik.
 
 **Kural #1: zaman uyumlu bir API Için, mümkünse\<bir parametre olarak> bellek\<t yerine> span t kullanın.**
 

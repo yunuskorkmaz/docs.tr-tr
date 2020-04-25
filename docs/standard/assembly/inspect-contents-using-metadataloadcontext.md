@@ -1,44 +1,44 @@
 ---
-title: 'Nasıl yapilir: MetadataLoadContext kullanarak montaj içeriğini inceleyin'
-description: .NET derlemelerini denetim amacıyla yüklemenize olanak tanıyan bir API olan MetadataLoadContext'ı nasıl kullanacağınızı öğrenin.
+title: 'Nasıl yapılır: MetadataLoadContext kullanarak bütünleştirilmiş kod içeriklerini Inceleme'
+description: .NET derlemelerini inceleme amacıyla yüklemeyi sağlayan bir API olan MetadataLoadContext ' i nasıl kullanacağınızı öğrenin.
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 90c84147c52199afc42a2efc297bc7fe40658ec7
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242666"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141195"
 ---
-# <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Nasıl yapilir: MetadataLoadContext kullanarak montaj içeriğini inceleyin
+# <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>Nasıl yapılır: MetadataLoadContext kullanarak bütünleştirilmiş kod içeriklerini Inceleme
 
-.NET'teki yansıma API'si varsayılan olarak geliştiricilerin ana yürütme bağlamına yüklenen derlemelerin içeriğini denetlemesine olanak tanır. Ancak, bazen bir derlemeyi yürütme bağlamına yüklemek mümkün değildir, örneğin, başka bir platform veya işlemci mimarisi için derlenmiş olduğundan veya bir [başvuru derlemesi](reference-assemblies.md)olduğundan. API, <xref:System.Reflection.MetadataLoadContext?displayProperty=fullName> bu tür derlemeleri yüklemenize ve incelemenize olanak tanır. Yüklenen <xref:System.Reflection.MetadataLoadContext> derlemeler yalnızca meta veri olarak kabul edilir, diğer bir deyişle, derlemedeki türleri inceleyebilirsiniz, ancak içinde bulunan herhangi bir kodu yürütemezsiniz. Ana yürütme bağlamından <xref:System.Reflection.MetadataLoadContext> farklı olarak, geçerli dizinden otomatik olarak bağımlılıklar yüklenmez; bunun <xref:System.Reflection.MetadataAssemblyResolver> yerine, ona geçen tarafından sağlanan özel bağlama mantığını kullanır.
+.NET ' teki yansıma API 'SI varsayılan olarak, geliştiricilerin ana yürütme bağlamına yüklenen derlemelerin içeriğini incelemesine olanak sağlar. Ancak, bazen bir derlemeyi yürütme bağlamına yüklemek mümkün değildir, örneğin başka bir platform veya işlemci mimarisi için derlenmişse veya bir [başvuru bütünleştirilmiş kodu](reference-assemblies.md). API <xref:System.Reflection.MetadataLoadContext?displayProperty=fullName> , bu derlemeleri yüklemenize ve incelemenize olanak sağlar. İçine <xref:System.Reflection.MetadataLoadContext> yüklenen derlemeler yalnızca meta veri olarak değerlendirilir, diğer bir deyişle, derlemedeki türleri inceleyebilirsiniz, ancak içinde yer alan herhangi bir kodu çalıştıramazsınız. Ana yürütme bağlamından farklı olarak, <xref:System.Reflection.MetadataLoadContext> otomatik olarak geçerli dizinden bağımlılıkları yüklemez; Bunun yerine, <xref:System.Reflection.MetadataAssemblyResolver> geçirilen tarafından verilen özel bağlama mantığını kullanır.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-Kullanmak <xref:System.Reflection.MetadataLoadContext>için [System.Reflection.MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) NuGet paketini yükleyin. .NET Standard 2.0 uyumlu hedef çerçevede desteklenir, örneğin,.NET Core 2.0 veya .NET Framework 4.6.1.
+Kullanmak <xref:System.Reflection.MetadataLoadContext>için [System. Reflection. MetadataLoadContext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) NuGet paketini yükler. .NET Standard 2,0 uyumlu hedef çerçevede desteklenir, örneğin .NET Core 2,0 veya .NET Framework 4.6.1.
 
-## <a name="create-metadataassemblyresolver-for-metadataloadcontext"></a>MetadataLoadContext için MetadataAssemblyResolver oluşturma
+## <a name="create-metadataassemblyresolver-for-metadataloadcontext"></a>MetadataLoadContext için MetadataAssemblyResolver oluştur
 
-<xref:System.Reflection.MetadataLoadContext> Oluşturma, <xref:System.Reflection.MetadataAssemblyResolver>'nin örneğini sağlamayı gerektirir. Bir sağlamak için en basit <xref:System.Reflection.PathAssemblyResolver>yolu, montajları montajları verilen toplama derlemesini çözer kullanmaktır. Bu koleksiyon, doğrudan incelemek istediğiniz derlemelerin yanı sıra, gerekli tüm bağımlılıkları da içermelidir. Örneğin, harici bir derlemede bulunan özel özniteliği okumak için, bu derlemeyi eklemeniz gerekir veya bir özel durum atılır. Çoğu durumda, en azından *çekirdek derlemeyi*, yani yerleşik sistem türlerini içeren <xref:System.Object?displayProperty=nameWithType>derlemeyi içermelisiniz. Aşağıdaki kod, denetlenen <xref:System.Reflection.PathAssemblyResolver> derleme ve geçerli çalışma zamanının çekirdek derlemesi oluşan toplama nın nasıl oluşturulacak olduğunu gösterir:
+Oluşturmak için <xref:System.Reflection.MetadataLoadContext> öğesinin örneğini sağlaması gerekir <xref:System.Reflection.MetadataAssemblyResolver>. Bir tane sağlamanın en basit yolu, derleme yolu dizelerinin <xref:System.Reflection.PathAssemblyResolver>verilen koleksiyonundan derlemeleri çözümleyen öğesini kullanmaktır. Bu koleksiyon, doğrudan incelemek istediğiniz derlemelerin yanı sıra tüm gerekli bağımlılıkları da içermelidir. Örneğin, bir dış derlemede bulunan özel özniteliği okumak için, söz konusu derlemeyi veya bir özel durumu içermelidir. Çoğu durumda, en azından *çekirdek derleme*, diğer bir deyişle, gibi yerleşik sistem türlerini içeren derleme dahil etmelisiniz <xref:System.Object?displayProperty=nameWithType>. Aşağıdaki kod, incelenen derlemeden ve geçerli çalışma <xref:System.Reflection.PathAssemblyResolver> zamanının temel bütünleştirilmiş kodundan oluşan koleksiyonu kullanarak nasıl oluşturulacağını gösterir:
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#CoreAssembly)]
 
-Tüm BCL türlerine erişmeniz gerekiyorsa, koleksiyona tüm çalışma zamanı derlemelerini ekleyebilirsiniz. Aşağıdaki kod, denetlenen <xref:System.Reflection.PathAssemblyResolver> derlemeve geçerli çalışma zamanının tüm derlemelerinden oluşan koleksiyonun nasıl oluşturulturun nasıl oluşturulacak larını gösterir:
+Tüm BCL türlerine erişmeniz gerekiyorsa, tüm çalışma zamanı derlemelerini koleksiyona ekleyebilirsiniz. Aşağıdaki kod, incelenen derlemeden ve geçerli çalışma <xref:System.Reflection.PathAssemblyResolver> zamanının tüm derlemelerinden oluşan koleksiyon kullanılarak nasıl oluşturulacağını gösterir:
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#RuntimeAssemblies)]
 
-## <a name="create-metadataloadcontext"></a>MetadataLoadContext oluşturma
+## <a name="create-metadataloadcontext"></a>MetadataLoadContext oluştur
 
-Oluşturmak <xref:System.Reflection.MetadataLoadContext>için, daha önce <xref:System.Reflection.MetadataLoadContext.%23ctor%28System.Reflection.MetadataAssemblyResolver%2CSystem.String%29>ilk parametre <xref:System.Reflection.MetadataAssemblyResolver> olarak oluşturulan ve ikinci parametre olarak çekirdek derleme adı geçen, onun oluşturucu çağırmak. Çekirdek derleme adını atlayabilirsiniz, bu durumda oluşturucu varsayılan adları kullanmaya çalışır: "mscorlib", "System.Runtime" veya "netstandard".
+Oluşturmak <xref:System.Reflection.MetadataLoadContext>için, oluşturucuyu <xref:System.Reflection.MetadataLoadContext.%23ctor%28System.Reflection.MetadataAssemblyResolver%2CSystem.String%29>çağırın, daha önce ilk parametresi olarak oluşturulan <xref:System.Reflection.MetadataAssemblyResolver> öğesini ve ikinci parametre olarak çekirdek derleme adını geçirerek. Çekirdek derleme adını atlayabilirsiniz, bu durumda oluşturucunun varsayılan adları kullanmayı deneyeceği "mscorlib", "System. Runtime" veya "Netstandard" olması gerekir.
 
-Bağlamı oluşturduktan sonra, <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath%2A>derlemeleri '. Kod yürütme içerenler dışında yüklü derlemelerde tüm yansıma API'lerini kullanabilirsiniz. Yöntem <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> yapıcıların yürütülmesini içerir, bu nedenle <xref:System.Reflection.MemberInfo.GetCustomAttributesData%2A> özel öznitelikleri incelemek için gerektiğinde <xref:System.Reflection.MetadataLoadContext>yerine yöntemi kullanın.
+Bağlamı oluşturduktan sonra, gibi yöntemleri kullanarak bu derlemeye Derlemeler yükleyebilirsiniz <xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath%2A>. Kod yürütmeyi kapsayan olanlar hariç, yüklenen derlemelerde tüm yansıma API 'Lerini kullanabilirsiniz. <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A> Yöntemi oluşturucuların yürütülmesini içerir, bu nedenle içindeki özel öznitelikleri incelemeniz gerektiğinde <xref:System.Reflection.MemberInfo.GetCustomAttributesData%2A> bunun yerine yöntemini kullanın <xref:System.Reflection.MetadataLoadContext>.
 
-Aşağıdaki kod örneği <xref:System.Reflection.MetadataLoadContext>oluşturur, montaj yükler ve konsola montaj öznitelikleri çıkar:
+Aşağıdaki kod örneği oluşturur <xref:System.Reflection.MetadataLoadContext>, derlemeyi buna yükler ve derleme özniteliklerini konsola verir:
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#CreateContext)]
 
 ## <a name="example"></a>Örnek
 
-Tam bir kod örneği için [MetadataLoadContext örneğini kullanarak montaj içeriğini incele'ye](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext)bakın.
+Kod örneği için bkz. [MetadataLoadContext örneği kullanılarak derleme Içeriğini İnceleme](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/).

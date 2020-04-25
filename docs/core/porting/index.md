@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 499632791e85f4ede87668775ad48407c6988095
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135587"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158298"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -46,7 +46,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. `packages.config` [Visual Studio 'daki Dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference)tüm bağımlılıklarınızı [packagereference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
 
-   Bu adım, bağımlılıklarınızı eski `packages.config` biçimden dönüştürmeyi içerir. `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, daha sonra yönetmeniz gereken bağımlılıkların miktarını azaltarak, daha sonraki adımları daha kolay hale getirmek için bir projede doğrudan kullandığınız bağımlılıklara gerek duyar.
+   Bu adım, bağımlılıklarınızı eski `packages.config` biçimden dönüştürmeyi içerir. `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, yalnızca bir projede doğrudan kullandığınız bağımlılıklara gerek duyar, bu da daha sonra yönetmeniz gereken bağımlılıkların sayısını azaltarak daha sonra daha kolay bir hale getirir.
 
 1. Proje dosyanızı yeni SDK stili dosya yapısına dönüştürün. .NET Core için yeni projeler oluşturabilir ve kaynak dosyaları üzerine kopyalayabilir ya da mevcut proje dosyanızı bir araçla dönüştürmeyi deneyebilirsiniz.
 
@@ -66,7 +66,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
    Çözümleyici tarafından oluşturulan raporları okurken önemli bilgiler, kullanılmakta olan gerçek API 'lardır ve hedef platform için desteğin yüzdesi değildir. Birçok API .NET Standard/çekirdek içinde eşdeğer seçeneklere sahiptir ve bu nedenle kitaplığınızın veya uygulamanızın API için gereken senaryoları anlamak, taşınabilirliğin belirlenmesini sağlamaya yardımcı olur.
 
-   API 'Lerin eşdeğer olmadığı bazı durumlar vardır ve platformlar için bazı derleyici ön işlemci yönergeleri (örn. `#if NET45`) yapmanız gerekir. Bu noktada, projeniz hala .NET Framework hedeflemeye devam eder. Bu hedeflenen durumların her biri için, bir senaryo olarak anlayabileceği iyi bilinen koşullar kullanılması önerilir.  Örneğin, .NET Core 'da AppDomain desteği sınırlıdır, ancak derlemeleri yükleme ve kaldırma senaryosunda .NET Core 'da kullanılamayan yeni bir API vardır. Bu kodu kodda işlemenin yaygın bir yolu şöyle olacaktır:
+   API 'Lerin eşdeğer olmadığı bazı durumlar vardır ve platformlar için bazı derleyici Önişlemci yönergeleri (yani, `#if NET45`) yapmanız gerekir. Bu noktada, projeniz .NET Framework hedeflemeye devam eder. Bu hedeflenen durumların her biri için, bir senaryo olarak anlayabileceği iyi bilinen koşullar kullanılması önerilir.  Örneğin, .NET Core 'da AppDomain desteği sınırlıdır, ancak derlemeleri yükleme ve kaldırma senaryosunda .NET Core 'da kullanılamayan yeni bir API vardır. Bu kodu kodda işlemenin yaygın bir yolu şöyle olacaktır:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -84,7 +84,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. Bu noktada, .NET Core 'u (genellikle uygulamalar için) veya .NET Standard (kitaplıklar için) hedeflemek için geçiş yapabilirsiniz.
 
-   .NET Core ve .NET Standard arasındaki seçim büyük ölçüde projenin çalıştırılacağı yere bağlıdır. Diğer uygulamalar tarafından tüketilen veya NuGet aracılığıyla dağıtılan bir kitaplıktır, genellikle .NET Standard hedeflenecek. Ancak, yalnızca performans veya diğer nedenlerle .NET Core 'da kullanılabilen API 'Ler olabilir; Bu durumda, .NET Core, büyük olasılıkla bir .NET Standard derlemesi ile, azaltılmış performans veya komik bir şekilde hedeflenmelidir. .NET Standard hedefleyerek, proje yeni platformlarda (WebAssembly gibi) çalıştırılmaya hazırlanacaktır. Projenin belirli uygulama çerçeveleri üzerinde bağımlılıkları varsa (örneğin, ASP.NET Core), hedef, bağımlılıkların desteklediklerinize göre sınırlandırılır.
+   .NET Core ve .NET Standard arasındaki seçim büyük ölçüde projenin çalıştırılacağı yere bağlıdır. Diğer uygulamalar tarafından tüketilen veya NuGet aracılığıyla dağıtılan bir kitaplıktır, genellikle .NET Standard hedeflenecek. Ancak, yalnızca performans veya diğer nedenlerle .NET Core 'da kullanılabilen API 'Ler olabilir; Bu durumda, .NET Core, büyük olasılıkla bir .NET Standard derlemesi ile daha az performans veya işlevselliğe sahip olacak şekilde hedeflenmelidir. .NET Standard hedefleyerek, proje yeni platformlarda (WebAssembly gibi) çalıştırılmaya hazırlanacaktır. Projenin belirli uygulama çerçeveleri üzerinde bağımlılıkları varsa (örneğin, ASP.NET Core), hedef, bağımlılıkların desteklediklerinize göre sınırlandırılır.
 
    .NET Framework veya .NET Standard için koşullu derleme koduna yönelik bir ön işlemci yönergesi yoksa, proje dosyasında aşağıdakileri bulmak kadar basit olacaktır:
 
@@ -98,17 +98,17 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
    <TargetFramework>netcoreapp3.1</TargetFramework>
    ```
 
-   Bununla birlikte, bazı nedenlerle belirli derlemeleri .NET Framework desteklemeye devam etmek istediğiniz bir kitaplıktır, bunu aşağıdaki ile değiştirerek [Çoklu hedefleyebilirsiniz](../../standard/library-guidance/cross-platform-targeting.md) :
+   Ancak, .NET Framework özgü yapıları desteklemeye devam etmek istediğiniz bir kitaplıktır, bunu aşağıdaki ile değiştirerek [Çoklu hedefleyebilirsiniz](../../standard/library-guidance/cross-platform-targeting.md) :
 
    ```xml
    <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
    ```
 
-   Windows 'a özgü API 'Ler (örneğin, kayıt defteri erişimi) kullanıyorsanız, [Windows Uyumluluk Paketi](./windows-compat-pack.md)' ni yüklemelisiniz.
+   Windows 'a özgü API 'Ler kullanıyorsanız (kayıt defteri erişimi gibi), [Windows Uyumluluk Paketi](./windows-compat-pack.md)' ni yükleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
->[!div class="nextstepaction"]
->[Analyze dependencies](third-party-deps.md)
->[ASP.NET Core geçiş için](/aspnet/core/migration/proper-to-2x) bağımlılıklar[paketi NuGet paketi](../deploying/creating-nuget-packages.md)
->ASP.net
+> [!div class="nextstepaction"]
+> [Analyze dependencies](third-party-deps.md)
+> [ASP.NET Core geçiş için](/aspnet/core/migration/proper-to-2x) bağımlılıklar[paketi NuGet paketi](../deploying/creating-nuget-packages.md)
+> ASP.net

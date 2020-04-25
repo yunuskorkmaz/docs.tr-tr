@@ -2,17 +2,17 @@
 title: Bağımsız Tanılama Akış Örneği
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 29d8caee48925040db9f1812f015870e3a1272bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8edb6c603e21a517244901993226fce3f055bbe
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144012"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141103"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Bağımsız Tanılama Akış Örneği
-Bu örnek, Windows Communication Foundation (WCF) ile sendikasyon için bir RSS/Atom beslemesi oluşturmanın nasıl olduğunu göstermektedir. Nesne modelinin temellerini ve windows communication foundation (WCF) hizmetinde nasıl kurulabildiğini gösteren temel bir "Hello World" programıdır.  
+Bu örnek, Windows Communication Foundation (WCF) ile dağıtım için bir RSS/Atom akışının nasıl oluşturulacağını gösterir. Nesne modelinin temellerini ve bir Windows Communication Foundation (WCF) hizmeti üzerinde ayarlamayı gösteren temel bir "Merhaba Dünya" programıdır.  
   
- WCF modelleri sendikasyon akışları özel bir veri türünü <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>döndüren hizmet işlemleri olarak, . RsS <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 2.0 ve Atom 1.0 biçimlerine bir akışı serihale getirebilirsiniz. Aşağıdaki örnek kod, kullanılan sözleşmeyi gösterir.  
+ WCF, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>özel bir veri türü döndüren hizmet işlemleri olarak genel yayımlama akışlarını modeller. Örnekleri, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> bir akışı hem RSS 2,0 hem de Atom 1,0 biçimlerine seri hale getirebilirsiniz. Aşağıdaki örnek kodda kullanılan sözleşme gösterilmektedir.  
   
 ```csharp  
 [ServiceContract(Namespace = "")]  
@@ -32,9 +32,9 @@ Bu örnek, Windows Communication Foundation (WCF) ile sendikasyon için bir RSS/
     }  
 ```  
   
- İşlem, `GetProcesses` WCF'nin http <xref:System.ServiceModel.Web.WebGetAttribute> GET isteklerini hizmet işlemlerine nasıl gönderdiğini denetlemenize ve gönderilen iletilerin biçimini belirtmenize olanak tanıyan öznitelikle açıklamalı olarak açıklanır.  
+ Bu `GetProcesses` Işlem, WCF 'nin HIZMET <xref:System.ServiceModel.Web.WebGetAttribute> işlemlerine http get isteklerini nasıl dağıtmakta olduğunu denetlemenizi ve gönderilen iletilerin biçimini belirlemenizi sağlayan özniteliğiyle birlikte açıklanmış.  
   
- Herhangi bir WCF hizmeti gibi, sendikasyon akışları da yönetilen herhangi bir uygulamada kendi kendine barındırılabilir. Sendikasyon hizmetleri, düzgün çalışması <xref:System.ServiceModel.WebHttpBinding>için belirli bir bağlama (the) ve belirli bir bitiş noktası davranışı (the) <xref:System.ServiceModel.Description.WebHttpBehavior>gerektirir. Yeni <xref:System.ServiceModel.Web.WebServiceHost> sınıf, belirli yapılandırma olmadan bu tür uç noktaları oluşturmak için kullanışlı bir API sağlar.  
+ Herhangi bir WCF hizmeti gibi, dağıtım akışları da herhangi bir yönetilen uygulamada barındırılabilir. Dağıtım Hizmetleri, doğru şekilde çalışması için belirli <xref:System.ServiceModel.WebHttpBinding>bir bağlama () ve belirli bir uç <xref:System.ServiceModel.Description.WebHttpBehavior>nokta davranışı () gerektirir. Yeni <xref:System.ServiceModel.Web.WebServiceHost> sınıf, belirli bir yapılandırma olmadan bu tür uç noktaları oluşturmak için uygun bir API sağlar.  
   
 ```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -43,15 +43,15 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
             //using the proper binding (the WebHttpBinding) and endpoint behavior (the WebHttpBehavior)  
 ```  
   
- Alternatif olarak, eşdeğer <xref:System.ServiceModel.Activation.WebServiceHostFactory> işlevsellik sağlamak için IIS tarafından barındırılan .svc dosyasının içinden kullanabilirsiniz (bu teknik bu örnek kodda gösterilmez).  
+ Alternatif olarak, eşdeğer işlevselliği <xref:System.ServiceModel.Activation.WebServiceHostFactory> sağlamak için IIS tarafından barındırılan bir. svc dosyası içinden kullanabilirsiniz (Bu teknik, bu örnek kodda gösterilmez).  
   
 ```xml
-<%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
+<% @ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
 ```
   
- Bu hizmet, HTTP GET standardını kullanarak istek aldığından, hizmete erişmek için herhangi bir RSS veya ATOM'a duyarlı istemcik kullanabilirsiniz. Örneğin, RSS'ye duyarlı bir tarayıcıda `http://localhost:8000/diagnostics/feed/?format=atom` veya `http://localhost:8000/diagnostics/feed/?format=rss` bu hizmetin çıktısını görüntüleyebilirsiniz.
+ Bu hizmet, standart HTTP GET kullanarak istekleri aldığından, hizmete erişmek için herhangi bir RSS veya ATOM kullanan istemci kullanabilirsiniz. Örneğin, RSS kullanan bir tarayıcıda `http://localhost:8000/diagnostics/feed/?format=atom` veya `http://localhost:8000/diagnostics/feed/?format=rss` ' a giderek bu hizmetin çıkışını görüntüleyebilirsiniz.
   
- Ayrıca, sendikasyon verilerini okumak ve zorunlu kodu kullanarak işlemek [için WCF Sendikasyon Nesnesi Model Eşlerini Atom ve RSS'ye nasıl](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) kullanabilirsiniz.  
+ Ayrıca, dağıtılmış verileri okumak ve bunu zorunlu kodla işlemek için [WCF dağıtım nesnesi modelinin atom ve RSS 'ye nasıl eşlendiğini](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) de kullanabilirsiniz.  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -74,22 +74,22 @@ foreach (SyndicationItem i in feed.Items)
 }
 ```
   
-## <a name="set-up-build-and-run-the-sample"></a>Örneği ayarlama, oluşturma ve çalıştırma
+## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
   
-1. Windows Communication Foundation Samples için [Tek Seferlik Kurulum Prosedürü'nde](one-time-setup-procedure-for-the-wcf-samples.md)belirtilen şekilde bilgisayarda HTTP ve HTTPS için doğru adres kayıt iznine sahip olduğundan emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik kurulum yordamında](one-time-setup-procedure-for-the-wcf-samples.md)bulunan yönergeleri ayarlama bölümünde açıklandığı gibi, bilgisayarda http ve https için doğru adres kayıt iznine sahip olduğunuzdan emin olun.
 
 2. Çözümü derleyin.
 
 3. Konsol uygulamasını çalıştırın.
 
-4. Konsol uygulaması çalışırken, RSS'ye duyarlı bir tarayıcıya `http://localhost:8000/diagnostics/feed/?format=atom` gidin veya `http://localhost:8000/diagnostics/feed/?format=rss` bu tarayıcıyı kullanarak gidin.
+4. Konsol uygulaması çalışırken, RSS kullanan bir tarayıcıya gidin `http://localhost:8000/diagnostics/feed/?format=atom` veya `http://localhost:8000/diagnostics/feed/?format=rss` bu tarayıcıyı kullanın.
 
 > [!IMPORTANT]
-> Örnekler bilgisayarınıza zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (wcf) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 

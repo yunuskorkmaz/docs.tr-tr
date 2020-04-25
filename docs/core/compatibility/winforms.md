@@ -1,46 +1,56 @@
 ---
-title: Windows Formlar değişiklikleri kırma
-description: .NET Core için Windows Formlarında çığır açan değişiklikleri listeler.
+title: Windows Forms son değişiklikler
+description: .NET Core için Windows Forms 'deki son değişiklikleri listeler.
 ms.date: 01/08/2020
-ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888156"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158443"
 ---
-# <a name="breaking-changes-in-windows-forms"></a>Windows Formlarında değişiklik kırma
+# <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
-Windows Forms desteği 3.0 sürümünde .NET Core'a eklendi. Bu makalede, windows formları için son dakika değişiklikleri tanıtıldıkları .NET Core sürümüne göre listelenir. Bir Windows Forms uygulamasını .NET Framework'den veya .NET Core'un önceki sürümünden (3.0 veya sonraki) yükseltiyorsanız, bu makale sizin için geçerlidir.
+Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. Bu makalede, sunulan .NET Core sürümü tarafından Windows Forms yönelik son değişiklikler listelenir. Bir Windows Forms uygulamasını .NET Framework veya .NET Core 'un önceki bir sürümünden (3,0 veya üzeri) yükseltiyorsanız, bu makale sizin için geçerlidir.
 
-Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
+Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
-| Son dakika değişikliği | Sürüm tanıtıldı |
+| Son değişiklik | Sunulan sürüm |
 | - | :-: |
-| [WinForms API'ler şimdi ArgumentNullException atmak](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [Durum çubuğu denetimleri kaldırıldı](#removed-status-bar-controls) | 5.0 |
+| [WinForms yöntemleri artık ArgumentException oluşturur](#winforms-methods-now-throw-argumentexception) | 5.0 |
+| [WinForms yöntemleri şimdi ArgumentNullException oluşturur](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [Kaldırılan denetimler](#removed-controls) | 3.1 |
-| [Araç ipucu gösterilirse CellFormatting olayı yükseltilmez](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
-| [Control.DefaultFont Segoe UI 9 pt olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3,0 |
-| [FolderBrowserDialog modernizasyonu](#modernization-of-the-folderbrowserdialog) | 3,0 |
+| [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3,0 |
+| [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog) | 3,0 |
 | [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3,0 |
 | [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3,0 |
-| [DomainUpDown.UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3,0 |
+| [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3,0 |
 | [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3,0 |
-| [DoNotSupportSelectAllShortcutInMultilineTextBox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3,0 |
+| [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3,0 |
 | [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3,0 |
-| [EtkinleştirVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3,0 |
+| [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3,0 |
 | [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3,0 |
 | [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3,0 |
-| [ErişilebilirObject.RuntimeIDFirstItem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3,0 |
-| [Windows Formlarından Kaldırılan Yinelenen API'ler](#duplicated-apis-removed-from-windows-forms) | 3,0 |
+| [Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3,0 |
+| [Yinelenen API 'Ler Windows Forms kaldırıldı](#duplicated-apis-removed-from-windows-forms) | 3,0 |
 
-## <a name="net-50"></a>.NET 5.0
+## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentexception.md)]
+
+***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
 
 ***
 
-## <a name="net-core-31"></a>.NET Çekirdek 3.1
+## <a name="net-core-31"></a>.NET Core 3,1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -106,4 +116,4 @@ Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms uygulamasını .NET Core'a taşıma](../porting/winforms.md)
+- [.NET Core 'a Windows Forms uygulaması bağlantı noktası](../porting/winforms.md)

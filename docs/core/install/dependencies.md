@@ -1,20 +1,20 @@
 ---
-title: .NET Core SDK ve çalışma zamanı bağımlılıkları - .NET Core
-description: .NET Core SDK'yı ve Windows, Linux ve macOS'ta çalışma süresini yüklemek için işletim sistemi ve CPU mimarisi ön koşulları ayrıntılarıyla anlatılmaktadır.
+title: .NET Core SDK ve çalışma zamanı bağımlılıkları-.NET Core
+description: Windows, Linux ve macOS 'ta .NET Core SDK ve çalışma zamanı yüklemek için işletim sistemi ve CPU mimarisi ön koşullarını ayrıntılı olarak izleyin.
 author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546568"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140987"
 ---
-# <a name="net-core-dependencies-and-requirements"></a>.NET Temel bağımlılıklar ve gereksinimler
+# <a name="net-core-dependencies-and-requirements"></a>.NET Core bağımlılıkları ve gereksinimleri
 
-Bu makalede, işletim sistemleri ve CPU mimarisi .NET Core tarafından desteklenen ayrıntılar.
+Bu makalede .NET Core tarafından desteklenen işletim sistemleri ve CPU mimarisinin ayrıntıları verilir.
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 
@@ -23,81 +23,81 @@ Bu makalede, işletim sistemleri ve CPU mimarisi .NET Core tarafından desteklen
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31"></a>[.NET Çekirdek 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3,1](#tab/netcore31)
 
-Aşağıdaki Windows sürümleri .NET Core 3.1 ile desteklenir:
+Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                            | Sürüm                        | Mimarileri   |
+| İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows İstemcisi                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 İstemci             | Sürüm 1607+                  | x64, x86        |
-| Windows Server                | 2012 R2+                       | x64, x86        |
-| Nano Sunucu                   | Sürüm 1803+                  | x64, ARM32      |
+| Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
+| Windows 10 Istemcisi             | Sürüm 1607 +                  | x64, x86        |
+| Windows Server                | 2012 R2 +                       | x64, x86        |
+| Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
 
-.NET Core 3.1 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)bkz.
+.NET Core 3,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-*.NET Core 3.0 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
+*.NET Core 3,0 şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
-Aşağıdaki Windows sürümleri .NET Core 3.0 ile desteklenir:
+Aşağıdaki Windows sürümleri .NET Core 3,0 ile desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                            | Sürüm                        | Mimarileri   |
+| İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows İstemcisi                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 İstemci             | Sürüm 1607+                  | x64, x86        |
-| Windows Server                | 2012 R2+                       | x64, x86        |
-| Nano Sunucu                   | Sürüm 1803+                  | x64, ARM32      |
+| Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
+| Windows 10 Istemcisi             | Sürüm 1607 +                  | x64, x86        |
+| Windows Server                | 2012 R2 +                       | x64, x86        |
+| Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
 
-.NET Core 3.0 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)bkz.
+.NET Core 3,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-*.NET Core 2.2 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
+*.NET Core 2,2 Şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
-Aşağıdaki Windows sürümleri .NET Core 2.2 ile desteklenir:
+Aşağıdaki Windows sürümleri .NET Core 2,2 ile desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                            | Sürüm                        | Mimarileri   |
+| İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows İstemcisi                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 İstemci             | Sürüm 1607+                  | x64, x86        |
-| Windows Server                | 2008 R2 SP1+                   | x64, x86        |
-| Nano Sunucu                   | Sürüm 1803+                   | x64, ARM32      |
+| Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
+| Windows 10 Istemcisi             | Sürüm 1607 +                  | x64, x86        |
+| Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
+| Nano Sunucu                   | Sürüm 1803 +                   | x64, ARM32      |
 
-.NET Core 2.2 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)bkz.
+.NET Core 2,2 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
-Aşağıdaki Windows sürümleri .NET Core 2.1 ile desteklenir:
+Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                            | Sürüm                        | Mimarileri   |
+| İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows İstemcisi                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 İstemci             | Sürüm 1607+                  | x64, x86        |
-| Windows Server                | 2008 R2 SP1+                   | x64, x86        |
-| Nano Sunucu                   | Sürüm 1803+                  | x64,            |
+| Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
+| Windows 10 Istemcisi             | Sürüm 1607 +                  | x64, x86        |
+| Windows Server                | 2008 R2 SP1 +                   | x64, x86        |
+| Nano Sunucu                   | Sürüm 1803 +                  | x64            |
 
-.NET Core 2.1 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)bkz.
+.NET Core 2,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
 ---
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7 / Vista / 8.1 / Sunucu 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a>Windows 7/Vista/8,1/Server 2008 R2/Server 2012 R2
 
-.NET SDK'yı veya çalışma süresini aşağıdaki Windows sürümlerine yüklüyorsanız ek bağımlılıklar gereklidir:
+Aşağıdaki Windows sürümlerine .NET SDK veya çalışma zamanı yüklüyorsanız ek bağımlılıklar gereklidir:
 
 - Windows 7 SP1
 - Windows Vista SP 2
@@ -105,217 +105,221 @@ Aşağıdaki Windows sürümleri .NET Core 2.1 ile desteklenir:
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 
-Aşağıdakileri yükleyin:
+Aşağıdakileri yükleyerek:
 
-- [Microsoft Visual C++ 2015 Yeniden Dağıtılabilir Güncelleştirme 3](https://www.microsoft.com/download/details.aspx?id=52685).
+- [Microsoft Visual C++ 2015 yeniden dağıtılabilir güncelleştirme 3](https://www.microsoft.com/download/details.aspx?id=52685).
 - [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
 
 Aşağıdaki hatalardan biriyle karşılaşırsanız yukarıdaki gereksinimler de gereklidir:
 
-> *Api-ms-win-crt-runtime-l1-1-0.dll* bilgisayarınızdan eksik olduğu için program başlatılamaz. Bu sorunu gidermek için programı yeniden yüklemeyi deneyin.
+> *API-MS-Win-CRT-Runtime-L1-1 -0. dll* dosyası bilgisayarınızda bulunmadığı için program başlatılamıyor. Bu sorunu gidermek için programı yeniden yüklemeyi deneyin.
 >
-> \-veya -
+> \-veya
 >
-> Kütüphane *hostfxr.dll* bulundu, ancak *C\\\<yükleme: \\path_to_app>hostfxr.dll* başarısız oldu.
+> *API-MS-Win-Cor-TimeZone-L1-1 -0. dll* dosyası bilgisayarınızda bulunmadığı için program başlatılamıyor. Bu sorunu gidermek için programı yeniden yüklemeyi deneyin.
+>
+> \-veya
+>
+> *Hostfxr. dll* kitaplığı bulundu, ancak *\\\<C: path_to_app>\\hostfxr. dll* konumundan yükleniyor.
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31"></a>[.NET Çekirdek 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3,1](#tab/netcore31)
 
-.NET Core 3.1, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
+.NET Core 3,1, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
 
-.NET Core 3.1 aşağıdaki Linux dağıtımlarında/sürümlerinde desteklenir:
+.NET Core 3,1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                             | Sürüm               | Mimarileri    |
+| İşletim Sistemi                             | Sürüm               | Mimariler    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
-| CentOS                         | 7+                    | x64 |
-| Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 30+                   | x64 |
-| Debian                         | 9+                    | x64, ARM32, ARM64 |
-| Ubuntu                         | 16,04+                | x64, ARM32, ARM64 |
-| Linux Darphane                     | 18+                   | x64 |
-| openSUSE                       | 15+                   | x64 |
-| SUSE Kurumsal Linux (SLES)   | 12 SP2+               | x64 |
-| Alp Linux                   | 3.10+                 | x64, ARM64 |
+| CentOS                         | 7 +                    | x64 |
+| Oracle Linux                   | 7 +                    | x64 |
+| Fedora                         | 30 +                   | x64 |
+| Debian                         | 9 +                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04 +                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2 +               | x64 |
+| Alp Linux                   | 3.10 +                 | x64, ARM64 |
 
-.NET Core 3.1 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)bkz.
+.NET Core 3,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
-ARM64'e .NET Core 3.1'in nasıl yüklenir (çekirdek 4.14+) nasıl yüklenirhakkında daha fazla bilgi için Linux [ARM64'te .NET Core 3.0](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)yükleme'ye bakın.
+.NET Core 3,1 ' i ARM64 üzerinde yükleme hakkında daha fazla bilgi için bkz. [LINUX ARM64 üzerinde .net core 3,0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
 > [!IMPORTANT]
-> ARM64 desteği Linux çekirdeği 4.14 veya daha yüksek gerektirir. Bazı linux dağıtımları bu gereksinimi karşılarken, diğerleri bunu karşılamaz. Örneğin, Ubuntu 18.04 desteklenir, ancak Ubuntu 16.04 desteklenmez.
+> ARM64 desteği Linux Kernel 4,14 veya üstünü gerektirir. Bazı Linux dağıtımları, diğerleri bu gereksinimi karşılar. Örneğin, Ubuntu 18,04 desteklenir, ancak Ubuntu 16,04 değildir.
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-*.NET Core 3.0 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
+*.NET Core 3,0 şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
-.NET Core 3.0, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
+.NET Core 3,0, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
 
-.NET Core 3.0 aşağıdaki Linux dağıtımlarında/sürümlerinde desteklenir:
+.NET Core 3,0, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                             | Sürüm               | Mimarileri    |
+| İşletim Sistemi                             | Sürüm               | Mimariler    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
-| CentOS                         | 7+                    | x64 |
-| Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 29+                   | x64 |
-| Debian                         | 9+                    | x64, ARM32, ARM64 |
-| Ubuntu                         | 16,04+                | x64, ARM32, ARM64 |
-| Linux Darphane                     | 18+                   | x64 |
-| openSUSE                       | 15+                   | x64 |
-| SUSE Kurumsal Linux (SLES)   | 12 SP2+               | x64 |
-| Alp Linux                   | 3.8+                  | x64, ARM64 |
+| CentOS                         | 7 +                    | x64 |
+| Oracle Linux                   | 7 +                    | x64 |
+| Fedora                         | 29 +                   | x64 |
+| Debian                         | 9 +                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04 +                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18 +                   | x64 |
+| openSUSE                       | 15 +                   | x64 |
+| SUSE Enterprise Linux (SLES)   | 12 SP2 +               | x64 |
+| Alp Linux                   | 3.8 +                  | x64, ARM64 |
 
-.NET Core 3.0 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)bkz.
+.NET Core 3,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-ARM64'e .NET Core 3.0 nasıl yüklenir hakkında daha fazla bilgi için Linux [ARM64'te .NET Core 3.0](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)yükleme'ye bakın.
+ARM64 üzerinde .NET Core 3,0 yükleme hakkında daha fazla bilgi için bkz. [LINUX ARM64 üzerinde .net core 3,0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-*.NET Core 2.2 şu anda destek değil. Daha fazla bilgi için [.NET Çekirdek Destek Politikası'na](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)bakın.*
+*.NET Core 2,2 Şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
-.NET Core 2.2, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
+.NET Core 2,2, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
 
-.NET Core 2.2 aşağıdaki Linux dağıtımlarında/sürümlerinde desteklenir:
+.NET Core 2,2, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                             |  Sürüm                |  Mimarileri   |
+| İşletim Sistemi                             |  Sürüm                |  Mimariler   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7                   | x64 |
 | CentOS                         |  7                      | x64 |
 | Oracle Linux                   |  7                      | x64 |
 | Fedora                         |  29, 30                 | x64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
-| Linux Darphane                     |  17, 18                 | x64 |
-| openSUSE                       |  15+                    | x64 |
-| SUSE Kurumsal Linux (SLES)   |  12 SP2+                | x64 |
-| Alp Linux                   |  3.8+                   | x64 |
+| Ubuntu                         |  16,04, 18,04, 18,10    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2 +                | x64 |
+| Alp Linux                   |  3.8 +                   | x64 |
 
-.NET Core 2.2 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)bkz.
+.NET Core 2,2 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
-.NET Core 2.1, Linux'u tek bir işletim sistemi olarak ele alıyor. Desteklenen Linux dağıtımları için tek bir Linux yapısı (yonga mimarisi başına) vardır.
+.NET Core 2,1, Linux 'u tek bir işletim sistemi olarak değerlendirir. Desteklenen Linux dağıtımları için tek bir Linux derlemesi (yonga mimarisi başına) vardır.
 
-.NET Core 2.1 aşağıdaki Linux dağıtımlarında/sürümlerinde desteklenir:
+.NET Core 2,1, aşağıdaki Linux dağıtımları/sürümlerinde desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| İşletim Sistemi                             |  Sürüm                |  Mimarileri   |
+| İşletim Sistemi                             |  Sürüm                |  Mimariler   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
-| CentOS                         |  7+                     | x64 |
-| Oracle Linux                   |  7+                     | x64 |
-| Fedora                         |  30+                    | x64 |
+| CentOS                         |  7 +                     | x64 |
+| Oracle Linux                   |  7 +                     | x64 |
+| Fedora                         |  30 +                    | x64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64, ARM32 |
-| Linux Darphane                     |  17+                    | x64 |
-| openSUSE                       |  15+                    | x64 |
-| SUSE Kurumsal Linux (SLES)   |  12 SP2+                | x64 |
-| Alp Linux                   |  3.8+                   | x64 |
+| Ubuntu                         |  16,04, 18,04, 19,04, 19,10    | x64, ARM32 |
+| Linux Mint                     |  17 +                    | x64 |
+| openSUSE                       |  15 +                    | x64 |
+| SUSE Enterprise Linux (SLES)   |  12 SP2 +                | x64 |
+| Alp Linux                   |  3.8 +                   | x64 |
 
-.NET Core 2.1 destekli işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi [için](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)bkz.
+.NET Core 2,1 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 2,1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
 ---
 
 ## <a name="linux-distribution-dependencies"></a>Linux dağıtım bağımlılıkları
 
-Linux dağıtımınıza bağlı olarak, ek bağımlılıklar yüklemeniz gerekebilir.
+Linux dağıtımına bağlı olarak ek bağımlılıklar yüklemeniz gerekebilir.
 
 > [!IMPORTANT]
-> Tam sürümleri ve adları tercih Linux dağıtımı biraz değişebilir.
+> Tam sürümler ve adlar, tercih ettiğiniz Linux dağıtımında biraz farklılık gösterebilir.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-Ubuntu dağılımları, aşağıdaki kitaplıkların yüklenmesini gerektirir:
+Ubuntu dağıtımları aşağıdaki kitaplıkların yüklenmesini gerektirir:
 
 - liblttng-ust0
-- libcurl3 (14.x ve 16.x için)
-- libcurl4 (18.x için)
-- libssl1.0.0
+- libcurl3 (14. x ve 16. x için)
+- libcurl4 (18. x için)
+- libssl 1.0.0
 - libkrb5-3
 - zlib1g
-- libicu52 (14.x için)
-- libicu55 (16.x için)
-- libicu57 (17.x için)
-- libicu60 (18.x için)
+- libicu52 (14. x için)
+- libicu55 (16. x için)
+- libicu57 (17. x için)
+- libicu60 (18. x için)
 
-*System.Drawing.Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılık da gerekir:
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
 
-- libgdiplus (sürüm 6.0.1 veya sonrası)
+- libgdiplus (sürüm 6.0.1 veya üzeri)
 
 > [!WARNING]
-> Ubuntu çoğu sürümleri libgdiplus önceki bir sürümünü içerir. Mono deposunu sisteminize ekleyerek libgdiplus'ın yeni bir sürümünü yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
+> Ubuntu 'ın çoğu sürümü libgdiplus 'in önceki bir sürümünü içerir. En son bir libgdiplus sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
 ### <a name="centos-and-fedora"></a>CentOS ve Fedora
 
-CentOS dağıtımları için aşağıdaki kitaplıklar yüklenir:
+CentOS dağıtımları için aşağıdaki kitaplıkların yüklü olması gerekir:
 
 - lttng-ust
-- libcurl
-- openssl-libs
+- libkıvrık
+- OpenSSL-libs
 - krb5-libs
-- libicu
-- Zlib
+- libıu
+- zlib
 
-Fedora kullanıcıları: OpenSSL sürümünüz = 1.1'i >**ise, compat-openssl10**yüklemeniz gerekir.
+Fedora kullanıcıları: OpenSSL sürümünüz >= 1,1 Ise, **COMPAT-openssl10**yüklemeniz gerekir.
 
-.NET Core 2.0 için aşağıdaki bağımlılıklar da gereklidir:
+.NET Core 2,0 için aşağıdaki bağımlılıklar da gereklidir:
 
-- libunwind
+- librüzgar
 - libuuid
 
-Bağımlılıklar hakkında daha fazla bilgi için, [bağımsız Linux uygulamalarına](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)bakın.
+Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-*System.Drawing.Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılık da gerekir:
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
 
-- libgdiplus (sürüm 6.0.1 veya sonrası)
+- libgdiplus (sürüm 6.0.1 veya üzeri)
 
 > [!WARNING]
-> CentOS ve Fedora'nın çoğu sürümü nde libgdiplus'ın önceki bir sürümü yer almaktadır. Mono deposunu sisteminize ekleyerek libgdiplus'ın yeni bir sürümünü yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
+> CentOS ve Fedora sürümlerinin çoğu, libgdiplus 'in önceki bir sürümünü içerir. En son bir libgdiplus sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-.NET Core aşağıdaki macOS sürümlerinde desteklenir:
+.NET Core aşağıdaki macOS sürümleriyle desteklenir:
 
 > [!NOTE]
-> Bir `+` sembol minimum sürümü temsil eder.
+> Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Çekirdek Sürümü | macOS                 | Mimarileri |     |
+| .NET Core sürümü | macOS                 | Mimariler |     |
 | ----------------- | --------------------- | --------------| --- |
-| 3.1               | Yüksek Sierra (10.13+)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3,0               | Yüksek Sierra (10.13+)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2,2               | Sierra (10.12+)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra (10.12+)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 3.1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
+| 3,0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2,2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
-MacOS Catalina (sürüm 10.15) ile başlayarak, Geliştirici Kimliği ile dağıtılan 1 Haziran 2019 tarihinden sonra üretilen tüm yazılımların noter tasdikli olması gerekir. Bu gereksinim .NET Core çalışma zamanı, .NET Core SDK ve .NET Core ile oluşturulan yazılımlar için geçerlidir.
+MacOS Catalina (sürüm 10,15) ile başlayarak, geliştirici KIMLIĞIYLE dağıtılan 1 Haziran 2019 ' den sonra oluşturulan tüm yazılımlar, dikkat edilmiş olmalıdır. Bu gereksinim .NET Core çalışma zamanı, .NET Core SDK ve .NET Core ile oluşturulan yazılımlar için geçerlidir.
 
-.NET Core (hem çalışma süresi hem de SDK) 3.1, 3.0 ve 2.1 sürümlerinin yükleyicileri 18 Şubat 2020'den beri noter olarak noterolarak verilmiştir. Önceki sürümler noter onaylı değildir. Noter onaylı olmayan bir uygulama çalıştırıyorsanız, aşağıdaki resme benzer bir hata görürsünüz:
+.NET Core (çalışma zamanı ve SDK) yükleyicileri 3,1, 3,0 ve 2,1 sürümleri, 18 Şubat 2020 tarihinden itibaren giderilmiş. Önceki yayınlanmış sürümler yok. Desteklenmeyen bir uygulama çalıştırırsanız aşağıdaki görüntüye benzer bir hata görürsünüz:
 
-![macOS Catalina noterizasyon uyarısı](media/dependencies/macos-notarized-pkg-warning.png)
+![macOS Catalina notarleştirme uyarısı](media/dependencies/macos-notarized-pkg-warning.png)
 
-Zorunlu noterizasyonun .NET Core 'u (ve .NET Core uygulamalarını) nasıl etkilediği hakkında daha fazla bilgi için [bkz.](macos-notarization-issues.md)
+Zorunlu kılınma 'nın .NET Core 'u (ve .NET Core uygulamalarınızı) nasıl etkilediği hakkında daha fazla bilgi için bkz. [macOS Catalina Ile çalışma](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 
-*.System.Drawing.Common* assembly kullanan NET Core uygulamaları libgdiplus'ın yüklenmesini gerektirir.
+*System. Drawing. Common* derlemesini kullanan .NET Core Uygulamaları, libgdiplus 'in yüklenmesini gerektirir.
 
-Libgdiplus elde etmek için kolay bir yolu macOS için [Homebrew ("brew")](https://brew.sh/) paket yöneticisi kullanarak. *Brew*yükledikten sonra, terminal (komut) komut u komutu aşağıdaki komutları çalıştırarak libgdiplus yükleyin:
+Libgdiplus almanın kolay bir yolu, macOS için [homebrew ("Brew")](https://brew.sh/) paket yöneticisini kullanmaktır. *Brew*yükledikten sonra, bir Terminal (komut) isteminde aşağıdaki komutları yürüterek libgdiplus yükleme yapın:
 
 ```console
 brew update
@@ -326,5 +330,5 @@ brew install mono-libgdiplus
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Uygulamaları geliştirmek ve çalıştırmak için [.NET Core SDK'yı](sdk.md) (çalışma süresini içerir) yükleyin.
-- Başkalarının oluşturduğu uygulamaları çalıştırmak için [.NET Core çalışma süresini](runtime.md)yükleyin.
+- Uygulama geliştirmek ve çalıştırmak için, [.NET Core SDK](sdk.md) (çalışma zamanını içerir).
+- Başkalarının oluşturduğu uygulamaları çalıştırmak için [.NET Core çalışma zamanı](runtime.md)'nı yüklersiniz.

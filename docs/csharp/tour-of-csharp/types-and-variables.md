@@ -1,14 +1,14 @@
 ---
 title: C# türleri ve değişkenleri-C# dilinin turu
 description: "C 'de türleri tanımlama ve değişkenleri bildirme hakkında bilgi edinin #"
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: dc80a7ea80790ef5af5218f5a608e5829d2970cc
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135964"
+ms.locfileid: "82141002"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -30,8 +30,10 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
     - Formun Kullanıcı tanımlı türleri`enum E {...}`
   - [Yapı türleri][StructTypes]
     - Formun Kullanıcı tanımlı türleri`struct S {...}`
-  - [Boş değer atanabilen değer türleri][NullableTypes]
+  - [Null yapılabilir değer türleri][NullableTypes]
     - Bir `null` değere sahip diğer tüm değer türlerinin uzantıları
+  - [Demet değer türleri][TupleTypes]
+    - Formun Kullanıcı tanımlı türleri`(T1, T2, ...)`
 - [Başvuru türleri][ReferenceTypes]
   - [Sınıf türleri][ClassTypes]
     - Diğer tüm türlerin Ultimate temel sınıfı:`object`
@@ -49,6 +51,7 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
