@@ -7,7 +7,7 @@
       href: xaml-in-wpf.md
       items:
         - name: XAML'ye Genel Bakış (WPF)
-          href: xaml-overview-wpf.md
+          href: ../../../desktop-wpf/fundamentals/xaml.md
         - name: Ayrıntılı XAML Sözdizimi
           href: xaml-syntax-in-detail.md
         - name: Arka Plan Kod ve WPF İçindeki XAML
@@ -290,7 +290,7 @@
       href: resources-wpf.md
       items:
         - name: XAML Kaynakları
-          href: xaml-resources.md
+          href: ../../../desktop-wpf/fundamentals/xaml-resources-define.md
           items:
             - name: Kaynaklar ve Kod
               href: resources-and-code.md

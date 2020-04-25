@@ -1,5 +1,5 @@
 - name: 'Sürücüleri, Dizinleri ve Dosyaları İşleme'
-  href: processing.md
+  href: index.md
   items:
     - name: Visual Basic ile Dosya Erişimi
       href: file-access.md
