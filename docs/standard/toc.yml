@@ -232,7 +232,11 @@
           displayName: garbage collection
         - name: Temeller
           href: garbage-collection/fundamentals.md
-        - name: Büyük Nesne Yığını
+        - name: İş istasyonu ve sunucu GC
+          href: garbage-collection/workstation-server-gc.md
+        - name: Arka Plan GC
+          href: garbage-collection/background-gc.md
+        - name: Büyük nesne yığını
           href: garbage-collection/large-object-heap.md
         - name: Çöp toplama ve performans
           href: garbage-collection/performance.md
@@ -748,8 +752,8 @@
           href: serialization/how-to-chunk-serialized-data.md
         - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
           href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
-        - name: Örnekler
-          href: serialization/samples-binary.md
+        - name: Örnek
+          href: serialization/basic-serialization-technology-sample.md
     - name: XML ve SOAP serileştirmesi
       items:
         - name: Genel Bakış
@@ -804,8 +808,6 @@
               href: serialization/xml-serializer-generator-tool-sgen-exe.md
             - name: XML Şema Tanımlama aracı (Xsd.exe)
               href: serialization/xml-schema-definition-tool-xsd-exe.md
-        - name: Örnekler
-          href: serialization/samples-xml.md
 - name: Birden çok platform için geliştirme
   items:
     - name: Genel Bakış

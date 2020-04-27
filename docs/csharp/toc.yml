@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: Boş değer atanabilir başvuru türleri
       href: nullable-references.md
-    - name: Boş değer atanabilir başvurular için API imzalarını güncelleştirme
-      href: nullable-attributes.md
+    - name: Null yapılabilir başvuru türlerini etkinleştirmek için bir strateji seçin
+      href: nullable-migration-strategies.md
     - name: Ad Alanları
       href: programming-guide/namespaces/index.md
     - name: Temel Türler
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
