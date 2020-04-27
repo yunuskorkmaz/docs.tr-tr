@@ -221,6 +221,8 @@
                   href: migration-guide/retargeting/4.5.1-4.7.1.md
                 - name: 4.5.1 - 4.7.2
                   href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.1 - 4.8
+                  href: migration-guide/retargeting/4.5.1-4.8.md
                 - name: 4.5.2 - 4.6
                   href: migration-guide/retargeting/4.5.2-4.6.md
                 - name: 4.5.2 - 4.6.1
@@ -277,6 +279,44 @@
                   href: migration-guide/retargeting/4.7.1-4.8.md
                 - name: 4.7.2 - 4.8
                   href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: Davranış azaltmaları
+          items:
+            - name: Genel Bakış
+              href: migration-guide/mitigations.md
+            - name: Özel IMessageFilter.PreFilterMessage uygulamaları
+              href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
+            - name: Uygulama etki alanlarında nesneleri seri durumdan çıkarma
+              href: migration-guide/mitigation-deserialization-of-objects-across-app-domains.md
+            - name: Yeni 64 bit JIT derleyicisi
+              href: migration-guide/mitigation-new-64-bit-jit-compiler.md
+            - name: Yoldaki iki noktaların denetimi
+              href: migration-guide/mitigation-path-colon-checks.md
+            - name: Yol normalleştirme
+              href: migration-guide/mitigation-path-normalization.md
+            - name: Simge nesnelerinde PNG çerçeveleri
+              href: migration-guide/mitigation-png-frames-in-icon-objects.md
+            - name: İşaretçi tabanlı dokunmatik ve kalem desteği
+              href: migration-guide/mitigation-pointer-based-touch-and-stylus-support.md
+            - name: Havuz engelleme süresi
+              href: migration-guide/mitigation-pool-blocking-period.md
+            - name: Ürün sürümü oluşturma
+              href: migration-guide/mitigation-product-versioning.md
+            - name: Denetim karakterini serileştirme
+              href: migration-guide/mitigation-serialization-control-characters.md
+            - name: TLS protokolleri
+              href: migration-guide/mitigation-tls-protocols.md
+            - name: WCF hizmetleri ve sertifika kimlik doğrulaması
+              href: migration-guide/mitigation-wcf-services-and-certificate-authentication.md
+            - name: WPF düzeni
+              href: migration-guide/mitigation-wpf-layout.md
+            - name: WPF penceresi işleme
+              href: migration-guide/mitigation-wpf-window-rendering.md
+            - name: X509CertificateClaimSet.FindClaims yöntemi
+              href: migration-guide/mitigation-x509certificateclaimset-findclaims-method.md
+            - name: XML şeması doğrulama
+              href: migration-guide/mitigation-xml-schema-validation.md
+            - name: ZipArchiveEntry.FullName yol ayıracı
+              href: migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md
         - name: Sürüm uyumluluğu
           href: migration-guide/version-compatibility.md
     - name: .NET Framework sürümleri
