@@ -1,83 +1,90 @@
 ---
 title: Docker öğreticisi ile uygulama Kapsayıcılı hale getirme
 description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edineceksiniz.
-ms.date: 01/09/2020
+ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 03c0d8824eefd5956b43bc0b812abb0d5b7688ed
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: c5e6648539af45f3ce615bfc183e6f95a62b085a
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140826"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200034"
 ---
-# <a name="tutorial-containerize-a-net-core-app"></a><span data-ttu-id="2bd0e-103">Öğretici: bir .NET Core uygulamasını Kapsayıize edin</span><span class="sxs-lookup"><span data-stu-id="2bd0e-103">Tutorial: Containerize a .NET Core app</span></span>
+# <a name="tutorial-containerize-a-net-core-app"></a><span data-ttu-id="35ca7-103">Öğretici: bir .NET Core uygulamasını Kapsayıize edin</span><span class="sxs-lookup"><span data-stu-id="35ca7-103">Tutorial: Containerize a .NET Core app</span></span>
 
-<span data-ttu-id="2bd0e-104">Bu öğretici, .NET Core uygulamanızı içeren bir Docker görüntüsü oluşturmayı öğretir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-104">This tutorial teaches you how to build a Docker image that contains your .NET Core application.</span></span> <span data-ttu-id="2bd0e-105">Görüntü, yerel geliştirme ortamınız, özel bulut veya genel bulutunuz için kapsayıcılar oluşturmak üzere kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-105">The image can be used to create containers for your local development environment, private cloud, or public cloud.</span></span>
+<span data-ttu-id="35ca7-104">Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edineceksiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-104">In this tutorial, you'll learn how to containerize a .NET Core application with Docker.</span></span> <span data-ttu-id="35ca7-105">Kapsayıcılar, sabit bir altyapı olmak, taşınabilir bir mimari sağlamak ve ölçeklenebilirliği etkinleştirmek gibi birçok özellik ve avantaja sahiptir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-105">Containers have many features and benefits, such as being an immutable infrastructure, providing a portable architecture, and enabling scalability.</span></span> <span data-ttu-id="35ca7-106">Görüntü, yerel geliştirme ortamınız, özel bulut veya genel bulutunuz için kapsayıcılar oluşturmak üzere kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-106">The image can be used to create containers for your local development environment, private cloud, or public cloud.</span></span>
 
-<span data-ttu-id="2bd0e-106">Şunları öğreneceksiniz:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-106">You'll learn to:</span></span>
+<span data-ttu-id="35ca7-107">Bu öğreticide şunları yaptınız:</span><span class="sxs-lookup"><span data-stu-id="35ca7-107">In this tutorial, you:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="2bd0e-107">Basit bir .NET Core uygulaması oluşturma ve yayımlama</span><span class="sxs-lookup"><span data-stu-id="2bd0e-107">Create and publish a simple .NET Core app</span></span>
-> - <span data-ttu-id="2bd0e-108">.NET Core için Dockerfile oluşturma ve yapılandırma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-108">Create and configure a Dockerfile for .NET Core</span></span>
-> - <span data-ttu-id="2bd0e-109">Docker görüntüsü oluşturma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-109">Build a Docker image</span></span>
-> - <span data-ttu-id="2bd0e-110">Docker kapsayıcısı oluşturma ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-110">Create and run a Docker container</span></span>
+> - <span data-ttu-id="35ca7-108">Basit bir .NET Core uygulaması oluşturma ve yayımlama</span><span class="sxs-lookup"><span data-stu-id="35ca7-108">Create and publish a simple .NET Core app</span></span>
+> - <span data-ttu-id="35ca7-109">.NET Core için Dockerfile oluşturma ve yapılandırma</span><span class="sxs-lookup"><span data-stu-id="35ca7-109">Create and configure a Dockerfile for .NET Core</span></span>
+> - <span data-ttu-id="35ca7-110">Docker görüntüsü oluşturma</span><span class="sxs-lookup"><span data-stu-id="35ca7-110">Build a Docker image</span></span>
+> - <span data-ttu-id="35ca7-111">Docker kapsayıcısı oluşturma ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="35ca7-111">Create and run a Docker container</span></span>
 
-<span data-ttu-id="2bd0e-111">Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup dağıtduklarını anlayacaksınız.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-111">You'll understand the Docker container build and deploy tasks for a .NET Core application.</span></span> <span data-ttu-id="2bd0e-112">*Docker platformu* , uygulamaları *Docker görüntüleri*olarak hızlı bir şekilde oluşturmak ve paketlemek için *Docker altyapısını* kullanır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-112">The *Docker platform* uses the *Docker engine* to quickly build and package apps as *Docker images*.</span></span> <span data-ttu-id="2bd0e-113">Bu görüntüler, katmanlı bir kapsayıcıda dağıtılacak ve çalıştırılacak *Dockerfile* biçiminde yazılır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-113">These images are written in the *Dockerfile* format to be deployed and run in a layered container.</span></span>
+<span data-ttu-id="35ca7-112">Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup dağıtduklarını anlayacaksınız.</span><span class="sxs-lookup"><span data-stu-id="35ca7-112">You'll understand the Docker container build and deploy tasks for a .NET Core application.</span></span> <span data-ttu-id="35ca7-113">*Docker platformu* , uygulamaları *Docker görüntüleri*olarak hızlı bir şekilde oluşturmak ve paketlemek için *Docker altyapısını* kullanır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-113">The *Docker platform* uses the *Docker engine* to quickly build and package apps as *Docker images*.</span></span> <span data-ttu-id="35ca7-114">Bu görüntüler, katmanlı bir kapsayıcıda dağıtılacak ve çalıştırılacak *Dockerfile* biçiminde yazılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-114">These images are written in the *Dockerfile* format to be deployed and run in a layered container.</span></span>
 
-> [!WARNING]
-> <span data-ttu-id="2bd0e-114">**Bu öğretici ASP.NET Core uygulamalar için değildir.**</span><span class="sxs-lookup"><span data-stu-id="2bd0e-114">**This tutorial isn't for ASP.NET Core apps.**</span></span> <span data-ttu-id="2bd0e-115">ASP.NET Core kullanıyorsanız, [bir ASP.NET Core uygulama](/aspnet/core/host-and-deploy/docker/building-net-docker-images) öğreticisini nasıl kapsayıtabilecek öğrenin makalesini okuyun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-115">If you're using ASP.NET Core, read the [Learn how to containerize an ASP.NET Core application](/aspnet/core/host-and-deploy/docker/building-net-docker-images) tutorial.</span></span>
+> [!NOTE]
+> <span data-ttu-id="35ca7-115">Bu öğretici ASP.NET Core uygulamalar için **değildir** .</span><span class="sxs-lookup"><span data-stu-id="35ca7-115">This tutorial **is not** for ASP.NET Core apps.</span></span> <span data-ttu-id="35ca7-116">ASP.NET Core kullanıyorsanız, [bir ASP.NET Core uygulama](/aspnet/core/host-and-deploy/docker/building-net-docker-images) öğreticisini nasıl Kapsayıyoruz hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-116">If you're using ASP.NET Core, see the [Learn how to containerize an ASP.NET Core application](/aspnet/core/host-and-deploy/docker/building-net-docker-images) tutorial.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2bd0e-116">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="2bd0e-116">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="35ca7-117">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="35ca7-117">Prerequisites</span></span>
 
-<span data-ttu-id="2bd0e-117">Aşağıdaki önkoşulları yükler:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-117">Install the following prerequisites:</span></span>
+<span data-ttu-id="35ca7-118">Aşağıdaki önkoşulları yükler:</span><span class="sxs-lookup"><span data-stu-id="35ca7-118">Install the following prerequisites:</span></span>
 
-- <span data-ttu-id="2bd0e-118">[.NET Core 3,1 SDK](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="2bd0e-118">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)</span></span>\
-<span data-ttu-id="2bd0e-119">.NET Core yüklüyse, kullanmakta olduğunuz SDK 'yı öğrenmek `dotnet --info` için komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-119">If you have .NET Core installed, use the `dotnet --info` command to determine which SDK you're using.</span></span>
+- <span data-ttu-id="35ca7-119">[.NET Core 3,1 SDK](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="35ca7-119">[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)</span></span>\
+<span data-ttu-id="35ca7-120">.NET Core yüklüyse, kullanmakta olduğunuz SDK 'yı öğrenmek `dotnet --info` için komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-120">If you have .NET Core installed, use the `dotnet --info` command to determine which SDK you're using.</span></span>
+- [<span data-ttu-id="35ca7-121">Docker Community sürümü</span><span class="sxs-lookup"><span data-stu-id="35ca7-121">Docker Community Edition</span></span>](https://www.docker.com/products/docker-desktop)
+- <span data-ttu-id="35ca7-122">*Dockerfile* ve .NET Core örnek uygulaması için geçici çalışma klasörü.</span><span class="sxs-lookup"><span data-stu-id="35ca7-122">A temporary working folder for the *Dockerfile* and .NET Core example app.</span></span> <span data-ttu-id="35ca7-123">Bu öğreticide, *Docker-Working* adı çalışma klasörü olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-123">In this tutorial, the name *docker-working* is used as the working folder.</span></span>
 
-- [<span data-ttu-id="2bd0e-120">Docker Community sürümü</span><span class="sxs-lookup"><span data-stu-id="2bd0e-120">Docker Community Edition</span></span>](https://www.docker.com/products/docker-desktop)
+## <a name="create-net-core-app"></a><span data-ttu-id="35ca7-124">.NET Core uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="35ca7-124">Create .NET Core app</span></span>
 
-- <span data-ttu-id="2bd0e-121">*Dockerfile* ve .NET Core örnek uygulaması için geçici çalışma klasörü.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-121">A temporary working folder for the *Dockerfile* and .NET Core example app.</span></span> <span data-ttu-id="2bd0e-122">Bu öğreticide, *Docker-Working* adı çalışma klasörü olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-122">In this tutorial, the name *docker-working* is used as the working folder.</span></span>
-
-## <a name="create-net-core-app"></a><span data-ttu-id="2bd0e-123">.NET Core uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-123">Create .NET Core app</span></span>
-
-<span data-ttu-id="2bd0e-124">Docker kapsayıcısının çalışacağı bir .NET Core uygulamasına ihtiyacınız vardır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-124">You need a .NET Core app that the Docker container will run.</span></span> <span data-ttu-id="2bd0e-125">Terminalinizi açın, henüz yapmadıysanız bir çalışma klasörü oluşturun ve bunu girin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-125">Open your terminal, create a working folder if you haven't already, and enter it.</span></span> <span data-ttu-id="2bd0e-126">Çalışma klasöründe, *uygulama*adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-126">In the working folder, run the following command to create a new project in a subdirectory named *app*:</span></span>
+<span data-ttu-id="35ca7-125">Docker kapsayıcısının çalışacağı bir .NET Core uygulamasına ihtiyacınız vardır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-125">You need a .NET Core app that the Docker container will run.</span></span> <span data-ttu-id="35ca7-126">Terminalinizi açın, henüz yapmadıysanız bir çalışma klasörü oluşturun ve bunu girin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-126">Open your terminal, create a working folder if you haven't already, and enter it.</span></span> <span data-ttu-id="35ca7-127">Çalışma klasöründe, *uygulama*adlı bir alt dizinde yeni bir proje oluşturmak için aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-127">In the working folder, run the following command to create a new project in a subdirectory named *app*:</span></span>
 
 ```dotnetcli
-dotnet new console -o app -n myapp
+dotnet new console -o App -n NetCore.Docker
 ```
 
-<span data-ttu-id="2bd0e-127">Klasör ağaclarınız şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-127">Your folder tree will look like the following:</span></span>
+<span data-ttu-id="35ca7-128">Klasör ağaclarınız şöyle görünür:</span><span class="sxs-lookup"><span data-stu-id="35ca7-128">Your folder tree will look like the following:</span></span>
 
 ```
 docker-working
-│
-└───app
-    │   myapp.csproj
-    │   Program.cs
-    │
-    └───obj
-            myapp.csproj.nuget.cache
-            myapp.csproj.nuget.dgspec.json
-            myapp.csproj.nuget.g.props
-            myapp.csproj.nuget.g.targets
-            project.assets.json
+    └──App
+        ├──NetCore.Docker.csproj
+        ├──Program.cs
+        └──obj
+            ├──NetCore.Docker.csproj.nuget.dgspec.json
+            ├──NetCore.Docker.csproj.nuget.g.props
+            ├──NetCore.Docker.csproj.nuget.g.targets
+            ├──project.assets.json
+            └──project.nuget.cache
 ```
 
-<span data-ttu-id="2bd0e-128">Komut `dotnet new` , *uygulama* adlı yeni bir klasör oluşturur ve bir "Merhaba Dünya" uygulaması oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-128">The `dotnet new` command creates a new folder named *app* and generates a "Hello World" app.</span></span> <span data-ttu-id="2bd0e-129">*Uygulama* klasörünü girip komutunu `dotnet run`çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-129">Enter the *app* folder and run the command `dotnet run`.</span></span> <span data-ttu-id="2bd0e-130">Aşağıdaki çıktıyı görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-130">You'll see the following output:</span></span>
+<span data-ttu-id="35ca7-129">Komut `dotnet new` , *uygulama* adlı yeni bir klasör oluşturur ve bir "Merhaba Dünya" konsol uygulaması oluşturur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-129">The `dotnet new` command creates a new folder named *App* and generates a "Hello World" console application.</span></span> <span data-ttu-id="35ca7-130">Dizinleri değiştirin ve Terminal oturumunuzda *uygulama* klasörüne gidin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-130">Change directories and navigate into the *App* folder, from your terminal session.</span></span> <span data-ttu-id="35ca7-131">Uygulamayı başlatmak `dotnet run` için komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-131">Use the `dotnet run` command to start the app.</span></span> <span data-ttu-id="35ca7-132">Uygulama çalışır ve komutun altına yazdırılır `Hello World!` :</span><span class="sxs-lookup"><span data-stu-id="35ca7-132">The application will run, and print `Hello World!` below the command:</span></span>
 
-```console
-> dotnet run
+```dotnetcli
+dotnet run
 Hello World!
 ```
 
-<span data-ttu-id="2bd0e-131">Varsayılan şablon, terminale yazdıran ve ardından çıkış yapan bir uygulama oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-131">The default template creates an app that prints to the terminal and then exits.</span></span> <span data-ttu-id="2bd0e-132">Bu öğretici için süresiz olarak döngü yapan bir uygulama kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-132">For this tutorial, you'll use an app that loops indefinitely.</span></span> <span data-ttu-id="2bd0e-133">*Program.cs* dosyasını bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-133">Open the *Program.cs* file in a text editor.</span></span> <span data-ttu-id="2bd0e-134">Şu anda şu kod gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-134">It should currently look like the following code:</span></span>
+<span data-ttu-id="35ca7-133">Varsayılan şablon, terminale yazdıran bir uygulama oluşturur ve hemen sonlandırılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-133">The default template creates an app that prints to the terminal and then immediately terminates.</span></span> <span data-ttu-id="35ca7-134">Bu öğretici için süresiz olarak döngü yapan bir uygulama kullanacaksınız.</span><span class="sxs-lookup"><span data-stu-id="35ca7-134">For this tutorial, you'll use an app that loops indefinitely.</span></span> <span data-ttu-id="35ca7-135">*Program.cs* dosyasını bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-135">Open the *Program.cs* file in a text editor.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="35ca7-136">Visual Studio Code kullanıyorsanız, önceki Terminal oturumunda aşağıdaki komutu yazın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-136">If you're using Visual Studio Code, from the previous terminal session type the following command:</span></span>
+>
+> ```
+> code .
+> ```
+>
+> <span data-ttu-id="35ca7-137">Bu, Visual Studio Code projedeki projeyi içeren *uygulama* klasörünü açar.</span><span class="sxs-lookup"><span data-stu-id="35ca7-137">This will open the *App* folder that contains the project in Visual Studio Code.</span></span>
+
+<span data-ttu-id="35ca7-138">*Program.cs* aşağıdaki C# kodu gibi görünmelidir:</span><span class="sxs-lookup"><span data-stu-id="35ca7-138">The *Program.cs* should look like the following C# code:</span></span>
 
 ```csharp
 using System;
 
-namespace myapp
+namespace NetCore.Docker
 {
     class Program
     {
@@ -89,34 +96,34 @@ namespace myapp
 }
 ```
 
-<span data-ttu-id="2bd0e-135">Dosyayı her saniye sayı sayan aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-135">Replace the file with the following code that counts numbers every second:</span></span>
+<span data-ttu-id="35ca7-139">Dosyayı her saniye sayı sayan aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="35ca7-139">Replace the file with the following code that counts numbers every second:</span></span>
 
 ```csharp
 using System;
+using System.Threading.Tasks;
 
-namespace myapp
+namespace NetCore.Docker
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var counter = 0;
             var max = args.Length != 0 ? Convert.ToInt32(args[0]) : -1;
             while (max == -1 || counter < max)
             {
-                counter++;
-                Console.WriteLine($"Counter: {counter}");
-                System.Threading.Tasks.Task.Delay(1000).Wait();
+                Console.WriteLine($"Counter: {++counter}");
+                await Task.Delay(1000);
             }
         }
     }
 }
 ```
 
-<span data-ttu-id="2bd0e-136">Dosyayı kaydedin ve ile `dotnet run`programı test edin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-136">Save the file and test the program again with `dotnet run`.</span></span> <span data-ttu-id="2bd0e-137">Bu uygulamanın süresiz olarak çalıştığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-137">Remember that this app runs indefinitely.</span></span> <span data-ttu-id="2bd0e-138">Durdurmak için <kbd>CTRL</kbd>+<kbd>C</kbd> Cancel komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-138">Use the cancel command <kbd>CTRL</kbd>+<kbd>C</kbd> to stop it.</span></span> <span data-ttu-id="2bd0e-139">Aşağıdaki çıktıyı görürsünüz:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-139">You'll see the following output:</span></span>
+<span data-ttu-id="35ca7-140">Dosyayı kaydedin ve ile `dotnet run`programı test edin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-140">Save the file and test the program again with `dotnet run`.</span></span> <span data-ttu-id="35ca7-141">Bu uygulamanın süresiz olarak çalıştığını unutmayın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-141">Remember that this app runs indefinitely.</span></span> <span data-ttu-id="35ca7-142">Durdurmak için <kbd>CTRL + C</kbd> Cancel komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-142">Use the cancel command <kbd>Ctrl+C</kbd> to stop it.</span></span> <span data-ttu-id="35ca7-143">Aşağıda örnek bir çıktı verilmiştir:</span><span class="sxs-lookup"><span data-stu-id="35ca7-143">The following is an example output:</span></span>
 
-```console
-> dotnet run
+```dotnetcli
+dotnet run
 Counter: 1
 Counter: 2
 Counter: 3
@@ -124,241 +131,234 @@ Counter: 4
 ^C
 ```
 
-<span data-ttu-id="2bd0e-140">Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca bu miktara göre sayılır ve ardından çıkış olur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-140">If you pass a number on the command line to the app, it will only count up to that amount and then exit.</span></span> <span data-ttu-id="2bd0e-141">Beş olarak saymak `dotnet run -- 5` için deneyin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-141">Try it with `dotnet run -- 5` to count to five.</span></span>
+<span data-ttu-id="35ca7-144">Uygulama için komut satırına bir sayı geçirirseniz, bu miktarı yalnızca bu miktara göre sayılır ve ardından çıkış olur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-144">If you pass a number on the command line to the app, it will only count up to that amount and then exit.</span></span> <span data-ttu-id="35ca7-145">Beş olarak saymak `dotnet run -- 5` için deneyin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-145">Try it with `dotnet run -- 5` to count to five.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="2bd0e-142">Sonrasında `--` herhangi bir parametre `dotnet run` komutuna geçirilmez ve bunun yerine uygulamanıza geçirilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-142">Any parameters after `--` are not passed to the `dotnet run` command and instead are passed to your application.</span></span>
+> [!IMPORTANT]
+> <span data-ttu-id="35ca7-146">Sonrasında `--` herhangi bir parametre `dotnet run` komutuna geçirilmez ve bunun yerine uygulamanıza geçirilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-146">Any parameters after `--` are not passed to the `dotnet run` command and instead are passed to your application.</span></span>
 
-## <a name="publish-net-core-app"></a><span data-ttu-id="2bd0e-143">.NET Core uygulaması Yayımla</span><span class="sxs-lookup"><span data-stu-id="2bd0e-143">Publish .NET Core app</span></span>
+## <a name="publish-net-core-app"></a><span data-ttu-id="35ca7-147">.NET Core uygulaması Yayımla</span><span class="sxs-lookup"><span data-stu-id="35ca7-147">Publish .NET Core app</span></span>
 
-<span data-ttu-id="2bd0e-144">.NET Core uygulamanızı Docker görüntüsüne eklemeden önce yayımlayın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-144">Before you add your .NET Core app to the Docker image, publish it.</span></span> <span data-ttu-id="2bd0e-145">Kapsayıcının, başlatıldığında uygulamanın yayımlanmış sürümünü çalıştırmasını sağlamak istiyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-145">You want to make sure that the container runs the published version of the app when it's started.</span></span>
-
-<span data-ttu-id="2bd0e-146">Çalışma klasöründen, örnek kaynak kodu ile *uygulama* klasörünü girin ve şu komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-146">From the working folder, enter the *app* folder with the example source code and run the following command:</span></span>
+<span data-ttu-id="35ca7-148">.NET Core uygulamasını Docker görüntüsüne eklemeden önce, önce yayımlanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-148">Before adding the .NET Core app to the Docker image, first it must be published.</span></span> <span data-ttu-id="35ca7-149">Kapsayıcının uygulamanın yayımlanmış sürümünü çalıştırması en iyisidir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-149">It is best to have the container run the published version of the app.</span></span> <span data-ttu-id="35ca7-150">Uygulamayı yayımlamak için şu komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-150">To publish the app, run the following command:</span></span>
 
 ```dotnetcli
 dotnet publish -c Release
 ```
 
-<span data-ttu-id="2bd0e-147">Bu komut, uygulamanızı *Yayımla* klasörüne derler.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-147">This command compiles your app to the *publish* folder.</span></span> <span data-ttu-id="2bd0e-148">Çalışma klasöründeki *Yayımla* klasörünün yolu`.\app\bin\Release\netcoreapp3.1\publish\`</span><span class="sxs-lookup"><span data-stu-id="2bd0e-148">The path to the *publish* folder from the working folder should be `.\app\bin\Release\netcoreapp3.1\publish\`</span></span>
+<span data-ttu-id="35ca7-151">Bu komut, uygulamanızı *Yayımla* klasörüne derler.</span><span class="sxs-lookup"><span data-stu-id="35ca7-151">This command compiles your app to the *publish* folder.</span></span> <span data-ttu-id="35ca7-152">Çalışma klasöründeki *Yayımla* klasörünün yolu`.\App\bin\Release\netcoreapp3.1\publish\`</span><span class="sxs-lookup"><span data-stu-id="35ca7-152">The path to the *publish* folder from the working folder should be `.\App\bin\Release\netcoreapp3.1\publish\`</span></span>
 
-<span data-ttu-id="2bd0e-149">*App* klasöründen, *MyApp. dll* dosyasının oluşturulduğunu doğrulamak için Yayımla klasörünün bir dizin listesini alın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-149">From the *app* folder, get a directory listing of the publish folder to verify that the *myapp.dll* file was created.</span></span>
+#### <a name="windows"></a>[<span data-ttu-id="35ca7-153">Windows</span><span class="sxs-lookup"><span data-stu-id="35ca7-153">Windows</span></span>](#tab/windows)
 
-```console
-> dir bin\Release\netcoreapp3.1\publish
+<span data-ttu-id="35ca7-154">*Netcore. Docker. dll* dosyasının oluşturulduğunu doğrulamak için *uygulama* klasöründen Yayımla klasörünün bir dizin listesini alın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-154">From the *App* folder, get a directory listing of the publish folder to verify that the *NetCore.Docker.dll* file was created.</span></span>
 
-    Directory:  C:\docker-working\app\bin\Release\netcoreapp3.1\publish
+```powershell
+dir .\bin\Release\netcoreapp3.1\publish\
 
-01/09/2020  11:41 AM    <DIR>          .
-01/09/2020  11:41 AM    <DIR>          ..
-01/09/2020  11:41 AM               407 myapp.deps.json
-01/09/2020  12:15 PM             4,608 myapp.dll
-01/09/2020  12:15 PM           169,984 myapp.exe
-01/09/2020  12:15 PM               736 myapp.pdb
-01/09/2020  11:41 AM               154 myapp.runtimeconfig.json
+    Directory: C:\Users\dapine\App\bin\Release\netcoreapp3.1\publish
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        4/27/2020   8:27 AM            434 NetCore.Docker.deps.json
+-a----        4/27/2020   8:27 AM           6144 NetCore.Docker.dll
+-a----        4/27/2020   8:27 AM         171520 NetCore.Docker.exe
+-a----        4/27/2020   8:27 AM            860 NetCore.Docker.pdb
+-a----        4/27/2020   8:27 AM            154 NetCore.Docker.runtimeconfig.json
 ```
 
-<span data-ttu-id="2bd0e-150">Linux veya macOS kullanıyorsanız, bir dizin listesi almak için `ls` komutunu kullanın ve *MyApp. dll* dosyasının oluşturulduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-150">If you're using Linux or macOS, use the `ls` command to get a directory listing and verify that the *myapp.dll* file was created.</span></span>
+#### <a name="linux"></a>[<span data-ttu-id="35ca7-155">Linux</span><span class="sxs-lookup"><span data-stu-id="35ca7-155">Linux</span></span>](#tab/linux)
+
+<span data-ttu-id="35ca7-156">Bir dizin `ls` listesi almak için komutunu kullanın ve *Netcore. Docker. dll* dosyasının oluşturulduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-156">Use the `ls` command to get a directory listing and verify that the *NetCore.Docker.dll* file was created.</span></span>
 
 ```bash
 me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
-myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
+NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
 
-## <a name="create-the-dockerfile"></a><span data-ttu-id="2bd0e-151">Dockerfile oluşturma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-151">Create the Dockerfile</span></span>
+---
 
-<span data-ttu-id="2bd0e-152">*Dockerfile* dosyası `docker build` komut tarafından bir kapsayıcı görüntüsü oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-152">The *Dockerfile* file is used by the `docker build` command to create a container image.</span></span> <span data-ttu-id="2bd0e-153">Bu dosya, uzantısı olmayan *Dockerfile* adlı bir metin dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-153">This file is a text file named *Dockerfile* that doesn't have an extension.</span></span>
+## <a name="create-the-dockerfile"></a><span data-ttu-id="35ca7-157">Dockerfile oluşturma</span><span class="sxs-lookup"><span data-stu-id="35ca7-157">Create the Dockerfile</span></span>
 
-<span data-ttu-id="2bd0e-154">Terminalinizde, başlangıçta oluşturduğunuz çalışma klasörüne bir dizin geri gidin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-154">In your terminal, navigate back one directory to the working folder you created at the start.</span></span> <span data-ttu-id="2bd0e-155">Çalışma klasörünüzde *Dockerfile* adlı bir dosya oluşturun ve dosyayı bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-155">Create a file named *Dockerfile* in your working folder and open it in a text editor.</span></span> <span data-ttu-id="2bd0e-156">Kapsayıcılı olduğunuz uygulamanın türüne bağlı olarak, ASP.NET Core çalışma zamanını veya .NET Core çalışma zamanını seçersiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-156">Depending on the type of application you're going to containerize, you'll choose either the ASP.NET Core runtime or the .NET Core runtime.</span></span> <span data-ttu-id="2bd0e-157">Şüpheli olduğunda, .NET Core çalışma zamanını içeren ASP.NET Core çalışma zamanını seçin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-157">When in doubt, choose the ASP.NET Core runtime, which includes the .NET Core runtime.</span></span> <span data-ttu-id="2bd0e-158">Bu öğretici ASP.NET Core çalışma zamanı görüntüsünü kullanır, ancak önceki bölümlerde oluşturulan uygulama bir .NET Core uygulamasıdır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-158">This tutorial will use the ASP.NET Core runtime image, but the application created in the previous sections is an .NET Core application.</span></span>
+<span data-ttu-id="35ca7-158">*Dockerfile* dosyası `docker build` komut tarafından bir kapsayıcı görüntüsü oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-158">The *Dockerfile* file is used by the `docker build` command to create a container image.</span></span> <span data-ttu-id="35ca7-159">Bu dosya, uzantısı olmayan *Dockerfile* adlı bir metin dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-159">This file is a text file named *Dockerfile* that doesn't have an extension.</span></span>
 
-- <span data-ttu-id="2bd0e-159">ASP.NET Core çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="2bd0e-159">ASP.NET Core runtime</span></span>
+<span data-ttu-id="35ca7-160">*. Csproj* Içeren dizinde *dockerfile* adlı bir dosya oluşturun ve bunu bir metin düzenleyicisinde açın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-160">Create a file named *Dockerfile* in directory containing the *.csproj* and open it in a text editor.</span></span> <span data-ttu-id="35ca7-161">Bu öğretici, .NET Core çalışma zamanı görüntüsünü içeren ASP.NET Core çalışma zamanı görüntüsünü kullanır ve .NET Core konsol uygulamasına karşılık gelir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-161">This tutorial will use the ASP.NET Core runtime image (which contains the .NET Core runtime image) and corresponds with the .NET Core console application.</span></span>
 
-  ```dockerfile
-  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-  ```
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+```
 
-- <span data-ttu-id="2bd0e-160">.NET Core çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="2bd0e-160">.NET Core runtime</span></span>
+> [!NOTE]
+> <span data-ttu-id="35ca7-162">ASP.NET Core çalışma zamanı görüntüsü kasıtlı olarak burada kullanılır, ancak `mcr.microsoft.com/dotnet/core/runtime:3.1` görüntü kullanılmış olabilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-162">The ASP.NET Core runtime image is used intentionally here, although the `mcr.microsoft.com/dotnet/core/runtime:3.1` image could have been used.</span></span>
 
-  ```dockerfile
-  FROM mcr.microsoft.com/dotnet/core/runtime:3.1
-  ```
+<span data-ttu-id="35ca7-163">`FROM` Anahtar sözcüğü tam bir Docker kapsayıcı görüntüsü adı gerektirir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-163">The `FROM` keyword requires a fully qualified Docker container image name.</span></span> <span data-ttu-id="35ca7-164">Microsoft Container Registry (MCR, mcr.microsoft.com), genel olarak erişilebilen kapsayıcıları barındıran Docker Hub 'ının bir genel yöneticisdir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-164">The Microsoft Container Registry (MCR, mcr.microsoft.com) is a syndicate of Docker Hub - which hosts publicly accessible containers.</span></span> <span data-ttu-id="35ca7-165">`dotnet/core` Segment, kapsayıcının kapsayıcı görüntüsü adı olduğu yerde `aspnet` kapsayıcı deposudur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-165">The `dotnet/core` segment is the container repository, where as the `aspnet` segment is the container image name.</span></span> <span data-ttu-id="35ca7-166">Görüntü, sürüm oluşturma için `3.1`kullanılan ile etiketlenir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-166">The image is tagged with `3.1`, which is used for versioning.</span></span> <span data-ttu-id="35ca7-167">Bu nedenle `mcr.microsoft.com/dotnet/core/aspnet:3.1` , .net Core 3,1 çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="35ca7-167">Thus, `mcr.microsoft.com/dotnet/core/aspnet:3.1` is the .NET Core 3.1 runtime.</span></span> <span data-ttu-id="35ca7-168">SDK 'nizin hedeflediği çalışma zamanıyla eşleşen çalışma zamanı sürümünü çekdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="35ca7-168">Make sure that you pull the runtime version that matches the runtime targeted by your SDK.</span></span> <span data-ttu-id="35ca7-169">Örneğin, önceki bölümde oluşturulan uygulama .NET Core 3,1 SDK 'sını ve *Dockerfile* içinde başvurulan temel görüntüyü **3,1**ile etiketledi.</span><span class="sxs-lookup"><span data-stu-id="35ca7-169">For example, the app created in the previous section used the .NET Core 3.1 SDK and the base image referred to in the *Dockerfile* is tagged with **3.1**.</span></span>
 
-<span data-ttu-id="2bd0e-161">Komut `FROM` , Docker 'a belirtilen depodan etiketlenen **3,1** görüntüsünü çekmesini söyler.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-161">The `FROM` command tells Docker to pull down the image tagged **3.1** from the specified repository.</span></span> <span data-ttu-id="2bd0e-162">SDK 'nizin hedeflediği çalışma zamanıyla eşleşen çalışma zamanı sürümünü çekdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-162">Make sure that you pull the runtime version that matches the runtime targeted by your SDK.</span></span> <span data-ttu-id="2bd0e-163">Örneğin, önceki bölümde oluşturulan uygulama .NET Core 3,1 SDK 'sını ve *Dockerfile* içinde başvurulan temel görüntüyü **3,1**ile etiketledi.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-163">For example, the app created in the previous section used the .NET Core 3.1 SDK and the base image referred to in the *Dockerfile* is tagged with **3.1**.</span></span>
-
-<span data-ttu-id="2bd0e-164">*Dockerfile* dosyasını kaydedin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-164">Save the *Dockerfile* file.</span></span> <span data-ttu-id="2bd0e-165">Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-165">The directory structure of the working folder should look like the following.</span></span> <span data-ttu-id="2bd0e-166">Daha derin düzey dosya ve klasörlerin bazıları, makalede yer kazanmak için kesildi:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-166">Some of the deeper-level files and folders have been cut to save space in the article:</span></span>
+<span data-ttu-id="35ca7-170">*Dockerfile* dosyasını kaydedin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-170">Save the *Dockerfile* file.</span></span> <span data-ttu-id="35ca7-171">Çalışma klasörünün dizin yapısı aşağıdaki gibi görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-171">The directory structure of the working folder should look like the following.</span></span> <span data-ttu-id="35ca7-172">Daha derin düzey dosya ve klasörlerden bazıları, makalede yer kazanmak için atlandı:</span><span class="sxs-lookup"><span data-stu-id="35ca7-172">Some of the deeper-level files and folders have been omitted to save space in the article:</span></span>
 
 ```
 docker-working
-│   Dockerfile
-│
-└───app
-    │   myapp.csproj
-    │   Program.cs
-    │
-    ├───bin
-    │   └───Release
-    │       └───netcoreapp3.1
-    │           └───publish
-    │                   myapp.deps.json
-    │                   myapp.exe
-    │                   myapp.dll
-    │                   myapp.pdb
-    │                   myapp.runtimeconfig.json
-    │
-    └───obj
+    └──App
+        ├──Dockerfile
+        ├──NetCore.Docker.csproj
+        ├──Program.cs
+        ├──bin
+        │   └──Release
+        │       └──netcoreapp3.1
+        │           └──publish
+        │               ├──NetCore.Docker.deps.json
+        │               ├──NetCore.Docker.exe
+        │               ├──NetCore.Docker.dll
+        │               ├──NetCore.Docker.pdb
+        │               └──NetCore.Docker.runtimeconfig.json
+        └──obj
+            └──...
 ```
 
-<span data-ttu-id="2bd0e-167">Terminalinizden aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-167">From your terminal, run the following command:</span></span>
+<span data-ttu-id="35ca7-173">Terminalinizden aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-173">From your terminal, run the following command:</span></span>
 
-```console
-docker build -t myimage -f Dockerfile .
+```Docker
+docker build -t counter-image -f Dockerfile .
 ```
 
-<span data-ttu-id="2bd0e-168">Docker, *Dockerfile*dosyasındaki her satırı işleyecek.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-168">Docker will process each line in the *Dockerfile*.</span></span> <span data-ttu-id="2bd0e-169">`.` Komutunda Docker 'ın bir *dockerfile dosyasını*bulmak için geçerli klasörü kullanmasını `docker build` söyler.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-169">The `.` in the `docker build` command tells Docker to use the current folder to find a *Dockerfile*.</span></span> <span data-ttu-id="2bd0e-170">Bu komut, görüntüyü oluşturur ve bu görüntüyü işaret eden **MyImage** adlı bir yerel depo oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-170">This command builds the image and creates a local repository named **myimage** that points to that image.</span></span> <span data-ttu-id="2bd0e-171">Bu komut tamamlandıktan sonra, yüklenen `docker images` görüntülerin listesini görmek için komutunu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-171">After this command finishes, run `docker images` to see a list of images installed:</span></span>
+<span data-ttu-id="35ca7-174">Docker, *Dockerfile*dosyasındaki her satırı işleyecek.</span><span class="sxs-lookup"><span data-stu-id="35ca7-174">Docker will process each line in the *Dockerfile*.</span></span> <span data-ttu-id="35ca7-175">`.` Komutunda Docker 'ın bir *dockerfile dosyasını*bulmak için geçerli klasörü kullanmasını `docker build` söyler.</span><span class="sxs-lookup"><span data-stu-id="35ca7-175">The `.` in the `docker build` command tells Docker to use the current folder to find a *Dockerfile*.</span></span> <span data-ttu-id="35ca7-176">Bu komut, görüntüyü oluşturur ve bu görüntüye işaret eden **Counter-Image** adlı bir yerel depo oluşturur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-176">This command builds the image and creates a local repository named **counter-image** that points to that image.</span></span> <span data-ttu-id="35ca7-177">Bu komut tamamlandıktan sonra, yüklenen `docker images` görüntülerin listesini görmek için komutunu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-177">After this command finishes, run `docker images` to see a list of images installed:</span></span>
 
-```console
-> docker images
+```Docker
+docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              54240314fe71        4 weeks ago         346MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 54240314fe71        4 weeks ago         346MB
+counter-image                           latest              e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-<span data-ttu-id="2bd0e-172">İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-172">Notice that the two images share the same **IMAGE ID** value.</span></span> <span data-ttu-id="2bd0e-173">*Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-173">The value is the same between both images because the only command in the *Dockerfile* was to base the new image on an existing image.</span></span> <span data-ttu-id="2bd0e-174">*Dockerfile dosyasına*iki komut ekleyelim.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-174">Let's add two commands to the *Dockerfile*.</span></span> <span data-ttu-id="2bd0e-175">Her komut, **MyImage** Repository girişinin işaret ettiği görüntüyü temsil eden son komutla yeni bir görüntü katmanı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-175">Each command creates a new image layer with the final command representing the image the **myimage** repository entry points to.</span></span>
+<span data-ttu-id="35ca7-178">İki görüntünün aynı **görüntü kimliği** değerini paylaştığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="35ca7-178">Notice that the two images share the same **IMAGE ID** value.</span></span> <span data-ttu-id="35ca7-179">*Dockerfile* 'daki tek komut yeni görüntünün varolan bir görüntüye dayandırdığı için, her iki görüntü arasında değer aynıdır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-179">The value is the same between both images because the only command in the *Dockerfile* was to base the new image on an existing image.</span></span> <span data-ttu-id="35ca7-180">*Dockerfile dosyasına*üç komut ekleyelim.</span><span class="sxs-lookup"><span data-stu-id="35ca7-180">Let's add three commands to the *Dockerfile*.</span></span> <span data-ttu-id="35ca7-181">Her komut, için **Sayaç-görüntü** deposu giriş noktalarını temsil eden son komutla yeni bir görüntü katmanı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-181">Each command creates a new image layer with the final command representing the **counter-image** repository entry points to.</span></span>
 
 ```dockerfile
-COPY app/bin/Release/netcoreapp3.1/publish/ app/
-
-WORKDIR /app
-
-ENTRYPOINT ["dotnet", "myapp.dll"]
+COPY bin/Release/netcoreapp3.1/publish/ App/
+WORKDIR /App
+ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
 
-<span data-ttu-id="2bd0e-176">Komut `COPY` , Docker 'a bilgisayarınızdaki belirtilen klasörü kapsayıcıda bir klasöre kopyalamasını söyler.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-176">The `COPY` command tells Docker to copy the specified folder on your computer to a folder in the container.</span></span> <span data-ttu-id="2bd0e-177">Bu örnekte, *Publish* klasörü kapsayıcıda *uygulama* adlı bir klasöre kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-177">In this example, the *publish* folder is copied to a folder named *app* in the container.</span></span>
+<span data-ttu-id="35ca7-182">Komut `COPY` , Docker 'a bilgisayarınızdaki belirtilen klasörü kapsayıcıda bir klasöre kopyalamasını söyler.</span><span class="sxs-lookup"><span data-stu-id="35ca7-182">The `COPY` command tells Docker to copy the specified folder on your computer to a folder in the container.</span></span> <span data-ttu-id="35ca7-183">Bu örnekte, *Publish* klasörü kapsayıcıda *uygulama* adlı bir klasöre kopyalanır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-183">In this example, the *publish* folder is copied to a folder named *App* in the container.</span></span>
 
-<span data-ttu-id="2bd0e-178">`WORKDIR` Komut, kapsayıcının içindeki **geçerli dizini** *uygulama*olarak değiştirir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-178">The `WORKDIR` command changes the **current directory** inside of the container to *app*.</span></span>
+<span data-ttu-id="35ca7-184">`WORKDIR` Komut, kapsayıcının içindeki **geçerli dizini** *uygulama*olarak değiştirir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-184">The `WORKDIR` command changes the **current directory** inside of the container to *App*.</span></span>
 
-<span data-ttu-id="2bd0e-179">Sonraki komut `ENTRYPOINT`, Docker öğesine kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-179">The next command, `ENTRYPOINT`, tells Docker to configure the container to run as an executable.</span></span> <span data-ttu-id="2bd0e-180">Kapsayıcı başladığında, `ENTRYPOINT` komutu çalışır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-180">When the container starts, the `ENTRYPOINT` command runs.</span></span> <span data-ttu-id="2bd0e-181">Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-181">When this command ends, the container will automatically stop.</span></span>
+<span data-ttu-id="35ca7-185">Sonraki komut `ENTRYPOINT`, Docker öğesine kapsayıcıyı yürütülebilir olarak çalışacak şekilde yapılandırmasını söyler.</span><span class="sxs-lookup"><span data-stu-id="35ca7-185">The next command, `ENTRYPOINT`, tells Docker to configure the container to run as an executable.</span></span> <span data-ttu-id="35ca7-186">Kapsayıcı başladığında, `ENTRYPOINT` komutu çalışır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-186">When the container starts, the `ENTRYPOINT` command runs.</span></span> <span data-ttu-id="35ca7-187">Bu komut sona erdiğinde kapsayıcı otomatik olarak durur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-187">When this command ends, the container will automatically stop.</span></span>
 
-<span data-ttu-id="2bd0e-182">Terminalinizden komutunu çalıştırın `docker build -t myimage -f Dockerfile .` ve komut tamamlandığında komutunu çalıştırın `docker images`.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-182">From your terminal, run `docker build -t myimage -f Dockerfile .` and when that command finishes, run `docker images`.</span></span>
+<span data-ttu-id="35ca7-188">Terminalinizden komutunu çalıştırın `docker build -t counter-image -f Dockerfile .` ve komut tamamlandığında komutunu çalıştırın `docker images`.</span><span class="sxs-lookup"><span data-stu-id="35ca7-188">From your terminal, run `docker build -t counter-image -f Dockerfile .` and when that command finishes, run `docker images`.</span></span>
 
-```console
-> docker build -t myimage -f Dockerfile .
-Sending build context to Docker daemon  1.121MB
+```Docker
+docker build -t counter-image -f Dockerfile .
+Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
- ---> 54240314fe71
-Step 2/4 : COPY app/bin/Release/netcoreapp3.1/publish/ app/
- ---> 1e05ea8b3ef5
-Step 3/4 : WORKDIR /app
- ---> Running in 8c8f710e6292
-Removing intermediate container 8c8f710e6292
- ---> 31575599f7dc
-Step 4/4 : ENTRYPOINT ["dotnet", "myapp.dll"]
- ---> Running in 93851322fb76
-Removing intermediate container 93851322fb76
- ---> e496e8b22d02
-Successfully built e496e8b22d02
-Successfully tagged myimage:latest
+ ---> e6780479db63
+Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
+ ---> d1732740eed2
+Step 3/4 : WORKDIR /App
+ ---> Running in b1701a42f3ff
+Removing intermediate container b1701a42f3ff
+ ---> 919aab5b95e3
+Step 4/4 : ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
+ ---> Running in c12aebd26ced
+Removing intermediate container c12aebd26ced
+ ---> cd11c3df9b19
+Successfully built cd11c3df9b19
+Successfully tagged counter-image:latest
 
-> docker images
+docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
-myimage                                 latest              e496e8b22d02        4 seconds ago       346MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 54240314fe71        4 weeks ago         346MB
+counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
+mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-<span data-ttu-id="2bd0e-183">*Dockerfile* 'daki her komut bir katman oluşturdu ve BIR **görüntü kimliği**oluşturdu.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-183">Each command in the *Dockerfile* generated a layer and created an **IMAGE ID**.</span></span> <span data-ttu-id="2bd0e-184">Son **görüntü kimliği** (sizinki farklı olacak) **ddcc6646461b** ve bir sonraki adımda bu görüntüye göre bir kapsayıcı oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-184">The final **IMAGE ID** (yours will be different) is **ddcc6646461b** and next you'll create a container based on this image.</span></span>
+<span data-ttu-id="35ca7-189">*Dockerfile* 'daki her komut bir katman oluşturdu ve BIR **görüntü kimliği**oluşturdu.</span><span class="sxs-lookup"><span data-stu-id="35ca7-189">Each command in the *Dockerfile* generated a layer and created an **IMAGE ID**.</span></span> <span data-ttu-id="35ca7-190">Son **görüntü kimliği** (sizinki farklı olacak) **cd11c3df9b19** ve bir sonraki adımda bu görüntüye göre bir kapsayıcı oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="35ca7-190">The final **IMAGE ID** (yours will be different) is **cd11c3df9b19** and next you'll create a container based on this image.</span></span>
 
-## <a name="create-a-container"></a><span data-ttu-id="2bd0e-185">Bir kapsayıcı oluşturma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-185">Create a container</span></span>
+## <a name="create-a-container"></a><span data-ttu-id="35ca7-191">Bir kapsayıcı oluşturma</span><span class="sxs-lookup"><span data-stu-id="35ca7-191">Create a container</span></span>
 
-<span data-ttu-id="2bd0e-186">Artık uygulamanızı içeren bir görüntünüz olduğuna göre, bir kapsayıcı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-186">Now that you have an image that contains your app, you can create a container.</span></span> <span data-ttu-id="2bd0e-187">Bir kapsayıcıyı iki şekilde oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-187">You can create a container in two ways.</span></span> <span data-ttu-id="2bd0e-188">İlk olarak, durdurulan yeni bir kapsayıcı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-188">First, create a new container that is stopped.</span></span>
+<span data-ttu-id="35ca7-192">Artık uygulamanızı içeren bir görüntünüz olduğuna göre, bir kapsayıcı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-192">Now that you have an image that contains your app, you can create a container.</span></span> <span data-ttu-id="35ca7-193">Bir kapsayıcıyı iki şekilde oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-193">You can create a container in two ways.</span></span> <span data-ttu-id="35ca7-194">İlk olarak, durdurulan yeni bir kapsayıcı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="35ca7-194">First, create a new container that is stopped.</span></span>
 
-```console
-> docker create myimage
-9222af24353f42bab6c13e01a0a64ef2c915cad27bdc46ffa32380581de11e91
+```Docker
+docker create --name core-counter counter-image
+0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
-<span data-ttu-id="2bd0e-189">Yukarıdaki `docker create` komut, **MyImage** görüntüsünü temel alan bir kapsayıcı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-189">The `docker create` command from above will create a container based on the **myimage** image.</span></span> <span data-ttu-id="2bd0e-190">Bu komutun çıktısı, oluşturulan kapsayıcının **KAPSAYıCı kimliğini** (sizinki farklı olacak) gösterir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-190">The output of that command shows you the **CONTAINER ID** (yours will be different) of the created container.</span></span> <span data-ttu-id="2bd0e-191">*Tüm* kapsayıcıların listesini görmek için `docker ps -a` komutunu kullanın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-191">To see a list of *all* containers, use the `docker ps -a` command:</span></span>
+<span data-ttu-id="35ca7-195">Yukarıdaki `docker create` komutu **sayaç görüntüsü** görüntüsünü temel alan bir kapsayıcı oluşturur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-195">The `docker create` command from above will create a container based on the **counter-image** image.</span></span> <span data-ttu-id="35ca7-196">Bu komutun çıktısı, oluşturulan kapsayıcının **KAPSAYıCı kimliğini** (sizinki farklı olacak) gösterir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-196">The output of that command shows you the **CONTAINER ID** (yours will be different) of the created container.</span></span> <span data-ttu-id="35ca7-197">*Tüm* kapsayıcıların listesini görmek için `docker ps -a` komutunu kullanın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-197">To see a list of *all* containers, use the `docker ps -a` command:</span></span>
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS        PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   4 seconds ago       Created               gallant_lehmann
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE            COMMAND                   CREATED           STATUS     PORTS    NAMES
+0f281cb3af99    counter-image    "dotnet NetCore.Dock…"    40 seconds ago    Created             core-counter
 ```
 
-### <a name="manage-the-container"></a><span data-ttu-id="2bd0e-192">Kapsayıcıyı yönetme</span><span class="sxs-lookup"><span data-stu-id="2bd0e-192">Manage the container</span></span>
+### <a name="manage-the-container"></a><span data-ttu-id="35ca7-198">Kapsayıcıyı yönetme</span><span class="sxs-lookup"><span data-stu-id="35ca7-198">Manage the container</span></span>
 
-<span data-ttu-id="2bd0e-193">Her kapsayıcıya, bu kapsayıcı örneğine başvurmak için kullanabileceğiniz bir rastgele ad atanır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-193">Each container is assigned a random name that you can use to refer to that container instance.</span></span> <span data-ttu-id="2bd0e-194">Örneğin, otomatik olarak oluşturulan kapsayıcı **gallant_lehmann** adı (sizinki farklı olacaktır) seçti ve bu ad kapsayıcıyı başlatmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-194">For example, the container that was created automatically chose the name **gallant_lehmann** (yours will be different) and that name can be used to start the container.</span></span> <span data-ttu-id="2bd0e-195">`docker create --name` Parametresini kullanarak otomatik adı belirli bir ile geçersiz kılabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-195">You override the automatic name with a specific one by using the `docker create --name` parameter.</span></span>
+<span data-ttu-id="35ca7-199">Kapsayıcı belirli bir adla `core-counter`oluşturulmuştur, bu ad kapsayıcıyı yönetmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-199">The container was created with a specific name `core-counter`, this name is used to manage the container.</span></span> <span data-ttu-id="35ca7-200">Aşağıdaki örnek, kapsayıcıyı başlatmak `docker start` için komutunu kullanır ve sonra yalnızca çalıştıran kapsayıcıları göstermek için `docker ps` komutunu kullanır:</span><span class="sxs-lookup"><span data-stu-id="35ca7-200">The following example uses the `docker start` command to start the container, and then uses the `docker ps` command to only show containers that are running:</span></span>
 
-<span data-ttu-id="2bd0e-196">Aşağıdaki örnek, kapsayıcıyı başlatmak `docker start` için komutunu kullanır ve sonra yalnızca çalıştıran kapsayıcıları göstermek için `docker ps` komutunu kullanır:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-196">The following example uses the `docker start` command to start the container, and then uses the `docker ps` command to only show containers that are running:</span></span>
+```Docker
+docker start core-counter
+core-counter
 
-```console
-> docker start gallant_lehmann
-gallant_lehmann
-
-> docker ps
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS         PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   7 minutes ago       Up 8 seconds           gallant_lehmann
+docker ps
+CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS          PORTS    NAMES
+2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    2 minutes ago    Up 11 seconds            core-counter
 ```
 
-<span data-ttu-id="2bd0e-197">Benzer şekilde, `docker stop` komut kapsayıcıyı durdurur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-197">Similarly, the `docker stop` command will stop the container.</span></span> <span data-ttu-id="2bd0e-198">Aşağıdaki örnek, kapsayıcıyı durdurmak `docker stop` için komutunu kullanır ve ardından hiçbir kapsayıcının çalışmadığını göstermek için `docker ps` komutunu kullanır:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-198">The following example uses the `docker stop` command to stop the container, and then uses the `docker ps` command to show that no containers are running:</span></span>
+<span data-ttu-id="35ca7-201">Benzer şekilde, `docker stop` komut kapsayıcıyı durdurur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-201">Similarly, the `docker stop` command will stop the container.</span></span> <span data-ttu-id="35ca7-202">Aşağıdaki örnek, kapsayıcıyı durdurmak `docker stop` için komutunu kullanır ve ardından hiçbir kapsayıcının çalışmadığını göstermek için `docker ps` komutunu kullanır:</span><span class="sxs-lookup"><span data-stu-id="35ca7-202">The following example uses the `docker stop` command to stop the container, and then uses the `docker ps` command to show that no containers are running:</span></span>
 
-```console
-> docker stop gallant_lehmann
-gallant_lehmann
+```Docker
+docker stop core-counter
+core-counter
 
-> docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS   NAMES
+docker ps
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
 
-### <a name="connect-to-a-container"></a><span data-ttu-id="2bd0e-199">Bir kapsayıcıya bağlanma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-199">Connect to a container</span></span>
+### <a name="connect-to-a-container"></a><span data-ttu-id="35ca7-203">Bir kapsayıcıya bağlanma</span><span class="sxs-lookup"><span data-stu-id="35ca7-203">Connect to a container</span></span>
 
-<span data-ttu-id="2bd0e-200">Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-200">After a container is running, you can connect to it to see the output.</span></span> <span data-ttu-id="2bd0e-201">`docker start` Ve `docker attach` komutlarını kullanarak kapsayıcıyı başlatın ve çıkış akışına göz atın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-201">Use the `docker start` and `docker attach` commands to start the container and peek at the output stream.</span></span> <span data-ttu-id="2bd0e-202">Bu örnekte, <kbd>CTRL + C</kbd> tuş vuruşu, çalışan kapsayıcıyı ayırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-202">In this example, the <kbd>CTRL + C</kbd> keystroke is used to detach from the running container.</span></span> <span data-ttu-id="2bd0e-203">Bu tuş vuruşu, kapsayıcıyı durduran kapsayıcıyı gerçekten sonlandırarak işlemden çıkabilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-203">This keystroke may actually end the process in the container, which will stop the container.</span></span> <span data-ttu-id="2bd0e-204">`--sig-proxy=false` Parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-204">The `--sig-proxy=false` parameter ensures that <kbd>CTRL + C</kbd> won't stop the process in the container.</span></span>
+<span data-ttu-id="35ca7-204">Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu sunucuya bağlanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-204">After a container is running, you can connect to it to see the output.</span></span> <span data-ttu-id="35ca7-205">`docker start` Ve `docker attach` komutlarını kullanarak kapsayıcıyı başlatın ve çıkış akışına göz atın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-205">Use the `docker start` and `docker attach` commands to start the container and peek at the output stream.</span></span> <span data-ttu-id="35ca7-206">Bu örnekte, <kbd>CTRL + C</kbd> tuş vuruşu, çalışan kapsayıcıyı ayırmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-206">In this example, the <kbd>Ctrl+C</kbd> keystroke is used to detach from the running container.</span></span> <span data-ttu-id="35ca7-207">Bu tuş vuruşu, aksi belirtilmediği sürece kapsayıcıdaki işlemi sona erdirmek için kapsayıcıyı durdurur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-207">This keystroke will end the process in the container unless otherwise specified, which would stop the container.</span></span> <span data-ttu-id="35ca7-208">`--sig-proxy=false` Parametresi, <kbd>CTRL + C</kbd> 'nin kapsayıcıdaki işlemi durdurmamasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="35ca7-208">The `--sig-proxy=false` parameter ensures that <kbd>Ctrl+C</kbd> will not stop the process in the container.</span></span>
 
-<span data-ttu-id="2bd0e-205">Kapsayıcıdan ayrıldıktan sonra, hala çalıştığını ve saymakta olduğunu doğrulamak için yeniden bağlayın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-205">After you detach from the container, reattach to verify that it's still running and counting.</span></span>
+<span data-ttu-id="35ca7-209">Kapsayıcıdan ayrıldıktan sonra, hala çalıştığını ve saymakta olduğunu doğrulamak için yeniden bağlayın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-209">After you detach from the container, reattach to verify that it's still running and counting.</span></span>
 
-```console
-> docker start gallant_lehmann
-gallant_lehmann
+```Docker
+docker start core-counter
+core-counter
 
-> docker attach --sig-proxy=false gallant_lehmann
+docker attach --sig-proxy=false core-counter
 Counter: 7
 Counter: 8
 Counter: 9
 ^C
 
-> docker attach --sig-proxy=false gallant_lehmann
+docker attach --sig-proxy=false core-counter
 Counter: 17
 Counter: 18
 Counter: 19
 ^C
 ```
 
-### <a name="delete-a-container"></a><span data-ttu-id="2bd0e-206">Kapsayıcı silme</span><span class="sxs-lookup"><span data-stu-id="2bd0e-206">Delete a container</span></span>
+### <a name="delete-a-container"></a><span data-ttu-id="35ca7-210">Kapsayıcı silme</span><span class="sxs-lookup"><span data-stu-id="35ca7-210">Delete a container</span></span>
 
-<span data-ttu-id="2bd0e-207">Bu makalenin amaçları doğrultusunda, kapsayıcıların hiçbir şey yapmadan asılı istememeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-207">For the purposes of this article you don't want containers just hanging around doing nothing.</span></span> <span data-ttu-id="2bd0e-208">Daha önce oluşturduğunuz kapsayıcıyı silin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-208">Delete the container you previously created.</span></span> <span data-ttu-id="2bd0e-209">Kapsayıcı çalışıyorsa durdurun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-209">If the container is running, stop it.</span></span>
+<span data-ttu-id="35ca7-211">Bu makalenin amaçları doğrultusunda, kapsayıcıların hiçbir şey yapmadan asılı istememeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="35ca7-211">For the purposes of this article you don't want containers just hanging around doing nothing.</span></span> <span data-ttu-id="35ca7-212">Daha önce oluşturduğunuz kapsayıcıyı silin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-212">Delete the container you previously created.</span></span> <span data-ttu-id="35ca7-213">Kapsayıcı çalışıyorsa durdurun.</span><span class="sxs-lookup"><span data-stu-id="35ca7-213">If the container is running, stop it.</span></span>
 
-```console
-> docker stop gallant_lehmann
+```Docker
+docker stop core-counter
 ```
 
-<span data-ttu-id="2bd0e-210">Aşağıdaki örnekte tüm kapsayıcılar listelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-210">The following example lists all containers.</span></span> <span data-ttu-id="2bd0e-211">Ardından, kapsayıcıyı silmek `docker rm` için komutunu kullanır ve ardından çalışan kapsayıcılar için ikinci bir kez kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-211">It then uses the `docker rm` command to delete the container, and then checks a second time for any running containers.</span></span>
+<span data-ttu-id="35ca7-214">Aşağıdaki örnekte tüm kapsayıcılar listelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-214">The following example lists all containers.</span></span> <span data-ttu-id="35ca7-215">Ardından, kapsayıcıyı silmek `docker rm` için komutunu kullanır ve ardından çalışan kapsayıcılar için ikinci bir kez kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="35ca7-215">It then uses the `docker rm` command to delete the container, and then checks a second time for any running containers.</span></span>
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS     PORTS   NAMES
-9222af24353f        myimage             "dotnet myapp.dll"   19 minutes ago      Exited             gallant_lehmann
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS                        PORTS    NAMES
+2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    7 minutes ago    Exited (143) 20 seconds ago            core-counter
 
-> docker rm gallant_lehmann
-gallant_lehmann
+docker rm core-counter
+core-counter
 
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS     PORTS    NAMES
+docker ps -a
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
 
-### <a name="single-run"></a><span data-ttu-id="2bd0e-212">Tek çalıştırma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-212">Single run</span></span>
+### <a name="single-run"></a><span data-ttu-id="35ca7-216">Tek çalıştırma</span><span class="sxs-lookup"><span data-stu-id="35ca7-216">Single run</span></span>
 
-<span data-ttu-id="2bd0e-213">Docker, kapsayıcıyı `docker run` tek bir komut olarak oluşturup çalıştırmak için komutunu sağlar.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-213">Docker provides the `docker run` command to create and run the container as a single command.</span></span> <span data-ttu-id="2bd0e-214">Bu komut, ve daha sonra `docker create` `docker start`çalıştırma gereksinimini ortadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-214">This command eliminates the need to run `docker create` and then `docker start`.</span></span> <span data-ttu-id="2bd0e-215">Kapsayıcı durdurulduğunda kapsayıcıyı otomatik olarak silmek için de bu komutu ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-215">You can also set this command to automatically delete the container when the container stops.</span></span> <span data-ttu-id="2bd0e-216">Örneğin, ilk olarak `docker run -it --rm` iki şey yapmak için kullanın, kapsayıcıya bağlanmak için otomatik olarak geçerli terminali kullanın ve ardından kapsayıcı tamamlandığında onu kaldırın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-216">For example, use `docker run -it --rm` to do two things, first, automatically use the current terminal to connect to the container, and then when the container finishes, remove it:</span></span>
+<span data-ttu-id="35ca7-217">Docker, kapsayıcıyı `docker run` tek bir komut olarak oluşturup çalıştırmak için komutunu sağlar.</span><span class="sxs-lookup"><span data-stu-id="35ca7-217">Docker provides the `docker run` command to create and run the container as a single command.</span></span> <span data-ttu-id="35ca7-218">Bu komut, ve daha sonra `docker create` `docker start`çalıştırma gereksinimini ortadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-218">This command eliminates the need to run `docker create` and then `docker start`.</span></span> <span data-ttu-id="35ca7-219">Kapsayıcı durdurulduğunda kapsayıcıyı otomatik olarak silmek için de bu komutu ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-219">You can also set this command to automatically delete the container when the container stops.</span></span> <span data-ttu-id="35ca7-220">Örneğin, ilk olarak `docker run -it --rm` iki şey yapmak için kullanın, kapsayıcıya bağlanmak için otomatik olarak geçerli terminali kullanın ve ardından kapsayıcı tamamlandığında onu kaldırın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-220">For example, use `docker run -it --rm` to do two things, first, automatically use the current terminal to connect to the container, and then when the container finishes, remove it:</span></span>
 
-```console
-> docker run -it --rm myimage
+```Docker
+docker run -it --rm counter-image
 Counter: 1
 Counter: 2
 Counter: 3
@@ -367,23 +367,32 @@ Counter: 5
 ^C
 ```
 
-<span data-ttu-id="2bd0e-217">İle `docker run -it`, <kbd>CTRL + C</kbd> komutu kapsayıcıda çalışan işlemi durdurur, bu da kapsayıcıyı durdurur.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-217">With `docker run -it`, the <kbd>CTRL + C</kbd> command will stop process that is running in the container, which in turn, stops the container.</span></span> <span data-ttu-id="2bd0e-218">`--rm` Parametre sağlandığı için, işlem durdurulduğunda kapsayıcı otomatik olarak silinir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-218">Since the `--rm` parameter was provided, the container is automatically deleted when the process is stopped.</span></span> <span data-ttu-id="2bd0e-219">Mevcut olmadığını doğrulayın:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-219">Verify that it doesn't exist:</span></span>
+<span data-ttu-id="35ca7-221">Kapsayıcı Ayrıca parametreleri .NET Core uygulamasının yürütülmesine geçirir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-221">The container also passes parameters into the execution of the .NET Core app.</span></span> <span data-ttu-id="35ca7-222">.NET Core uygulamasının 3 ' te yalnızca 3 geçişine kadar saymasını bildirmek için.</span><span class="sxs-lookup"><span data-stu-id="35ca7-222">To instruct the .NET Core app to count only to 3 pass in 3.</span></span>
 
-```console
-> docker ps -a
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
+```Docker
+docker run -it --rm counter-image 3
+Counter: 1
+Counter: 2
+Counter: 3
 ```
 
-### <a name="change-the-entrypoint"></a><span data-ttu-id="2bd0e-220">GIRIŞ noktasını değiştirme</span><span class="sxs-lookup"><span data-stu-id="2bd0e-220">Change the ENTRYPOINT</span></span>
+<span data-ttu-id="35ca7-223">İle `docker run -it`, <kbd>CTRL + C</kbd> komutu kapsayıcıda çalışan işlemi durdurur, bu da kapsayıcıyı durdurur.</span><span class="sxs-lookup"><span data-stu-id="35ca7-223">With `docker run -it`, the <kbd>Ctrl+C</kbd> command will stop process that is running in the container, which in turn, stops the container.</span></span> <span data-ttu-id="35ca7-224">`--rm` Parametre sağlandığı için, işlem durdurulduğunda kapsayıcı otomatik olarak silinir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-224">Since the `--rm` parameter was provided, the container is automatically deleted when the process is stopped.</span></span> <span data-ttu-id="35ca7-225">Mevcut olmadığını doğrulayın:</span><span class="sxs-lookup"><span data-stu-id="35ca7-225">Verify that it doesn't exist:</span></span>
 
-<span data-ttu-id="2bd0e-221">`docker run` Komut ayrıca *dockerfile* ' dan `ENTRYPOINT` komutu değiştirmenize ve yalnızca bu kapsayıcı için, başka bir şey çalıştırmanıza imkan tanır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-221">The `docker run` command also lets you modify the `ENTRYPOINT` command from the *Dockerfile* and run something else, but only for that container.</span></span> <span data-ttu-id="2bd0e-222">Örneğin, veya `bash` `cmd.exe`çalıştırmak için aşağıdaki komutu kullanın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-222">For example, use the following command to run `bash` or `cmd.exe`.</span></span> <span data-ttu-id="2bd0e-223">Komutu gereken şekilde düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-223">Edit the command as necessary.</span></span>
+```Docker
+docker ps -a
+CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
+```
 
-#### <a name="windows"></a><span data-ttu-id="2bd0e-224">Windows</span><span class="sxs-lookup"><span data-stu-id="2bd0e-224">Windows</span></span>
+### <a name="change-the-entrypoint"></a><span data-ttu-id="35ca7-226">GIRIŞ noktasını değiştirme</span><span class="sxs-lookup"><span data-stu-id="35ca7-226">Change the ENTRYPOINT</span></span>
 
-<span data-ttu-id="2bd0e-225">Bu örnekte, `ENTRYPOINT` olarak `cmd.exe`değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-225">In this example, `ENTRYPOINT` is changed to `cmd.exe`.</span></span> <span data-ttu-id="2bd0e-226"><kbd>CTRL</kbd>+İşlemi sonlandırmak ve kapsayıcıyı durdurmak için CTRL<kbd>C</kbd> 'ye basıldı.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-226"><kbd>CTRL</kbd>+<kbd>C</kbd> is pressed to end the process and stop the container.</span></span>
+<span data-ttu-id="35ca7-227">`docker run` Komut ayrıca *dockerfile* ' dan `ENTRYPOINT` komutu değiştirmenize ve yalnızca bu kapsayıcı için, başka bir şey çalıştırmanıza imkan tanır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-227">The `docker run` command also lets you modify the `ENTRYPOINT` command from the *Dockerfile* and run something else, but only for that container.</span></span> <span data-ttu-id="35ca7-228">Örneğin, veya `bash` `cmd.exe`çalıştırmak için aşağıdaki komutu kullanın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-228">For example, use the following command to run `bash` or `cmd.exe`.</span></span> <span data-ttu-id="35ca7-229">Komutu gereken şekilde düzenleyin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-229">Edit the command as necessary.</span></span>
 
-```console
-> docker run -it --rm --entrypoint "cmd.exe" myimage
+#### <a name="windows"></a>[<span data-ttu-id="35ca7-230">Windows</span><span class="sxs-lookup"><span data-stu-id="35ca7-230">Windows</span></span>](#tab/windows)
+
+<span data-ttu-id="35ca7-231">Bu örnekte, `ENTRYPOINT` olarak `cmd.exe`değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-231">In this example, `ENTRYPOINT` is changed to `cmd.exe`.</span></span> <span data-ttu-id="35ca7-232">İşlemi sonlandırmak ve kapsayıcıyı durdurmak için <kbd>CTRL + C</kbd> tuşlarına basıldığında.</span><span class="sxs-lookup"><span data-stu-id="35ca7-232"><kbd>Ctrl+C</kbd> is pressed to end the process and stop the container.</span></span>
+
+```Docker
+docker run -it --rm --entrypoint "cmd.exe" counter-image
 
 Microsoft Windows [Version 10.0.17763.379]
 (c) 2018 Microsoft Corporation. All rights reserved.
@@ -405,68 +414,74 @@ C:\>dir
 C:\>^C
 ```
 
-#### <a name="linux"></a><span data-ttu-id="2bd0e-227">Linux</span><span class="sxs-lookup"><span data-stu-id="2bd0e-227">Linux</span></span>
+#### <a name="linux"></a>[<span data-ttu-id="35ca7-233">Linux</span><span class="sxs-lookup"><span data-stu-id="35ca7-233">Linux</span></span>](#tab/linux)
 
-<span data-ttu-id="2bd0e-228">Bu örnekte, `ENTRYPOINT` olarak `bash`değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-228">In this example, `ENTRYPOINT` is changed to `bash`.</span></span> <span data-ttu-id="2bd0e-229">`quit` Komut, işlemi sonlandıran ve kapsayıcıyı durduran çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-229">The `quit` command is run which ends the process and stop the container.</span></span>
+<span data-ttu-id="35ca7-234">Bu örnekte, `ENTRYPOINT` olarak `bash`değiştirilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-234">In this example, `ENTRYPOINT` is changed to `bash`.</span></span> <span data-ttu-id="35ca7-235">`exit` Komut, işlemi sonlandıran ve kapsayıcıyı durduran çalıştırılır.</span><span class="sxs-lookup"><span data-stu-id="35ca7-235">The `exit` command is run which ends the process and stop the container.</span></span>
 
 ```bash
-root@user:~# docker run -it --rm --entrypoint "bash" myimage
-root@8515e897c893:/# ls app
-myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
-root@8515e897c893:/# exit
+docker run -it --rm --entrypoint "bash" counter-image
+root@b735b9799abf:/App# ls
+NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.exe  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
+root@b735b9799abf:/App# dotnet NetCore.Docker.dll 3
+Counter: 1
+Counter: 2
+Counter: 3
+root@b735b9799abf:/App# exit
 exit
 ```
 
-## <a name="essential-commands"></a><span data-ttu-id="2bd0e-230">Gerekli komutlar</span><span class="sxs-lookup"><span data-stu-id="2bd0e-230">Essential commands</span></span>
+---
 
-<span data-ttu-id="2bd0e-231">Docker, kapsayıcınıza ve görüntülerinize ne yapmak istediğinizi kapsayan birçok farklı komuta sahiptir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-231">Docker has many different commands that cover what you want to do with your container and images.</span></span> <span data-ttu-id="2bd0e-232">Bu Docker komutları, Kapsayıcılarınızı yönetmek için gereklidir:</span><span class="sxs-lookup"><span data-stu-id="2bd0e-232">These Docker commands are essential to managing your containers:</span></span>
+## <a name="essential-commands"></a><span data-ttu-id="35ca7-236">Gerekli komutlar</span><span class="sxs-lookup"><span data-stu-id="35ca7-236">Essential commands</span></span>
 
-- [<span data-ttu-id="2bd0e-233">docker build</span><span class="sxs-lookup"><span data-stu-id="2bd0e-233">docker build</span></span>](https://docs.docker.com/engine/reference/commandline/build/)
-- [<span data-ttu-id="2bd0e-234">Docker çalıştırma</span><span class="sxs-lookup"><span data-stu-id="2bd0e-234">docker run</span></span>](https://docs.docker.com/engine/reference/commandline/run/)
-- [<span data-ttu-id="2bd0e-235">docker ps</span><span class="sxs-lookup"><span data-stu-id="2bd0e-235">docker ps</span></span>](https://docs.docker.com/engine/reference/commandline/ps/)
-- [<span data-ttu-id="2bd0e-236">Docker durdur</span><span class="sxs-lookup"><span data-stu-id="2bd0e-236">docker stop</span></span>](https://docs.docker.com/engine/reference/commandline/stop/)
-- [<span data-ttu-id="2bd0e-237">Docker RM</span><span class="sxs-lookup"><span data-stu-id="2bd0e-237">docker rm</span></span>](https://docs.docker.com/engine/reference/commandline/rm/)
-- [<span data-ttu-id="2bd0e-238">Docker rmi</span><span class="sxs-lookup"><span data-stu-id="2bd0e-238">docker rmi</span></span>](https://docs.docker.com/engine/reference/commandline/rmi/)
-- [<span data-ttu-id="2bd0e-239">Docker görüntüsü</span><span class="sxs-lookup"><span data-stu-id="2bd0e-239">docker image</span></span>](https://docs.docker.com/engine/reference/commandline/image/)
+<span data-ttu-id="35ca7-237">Docker kapsayıcıları ve görüntüleri oluşturan, yöneten ve bunlarla etkileşim kuran birçok farklı komuta sahiptir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-237">Docker has many different commands that create, manage, and interact with containers and images.</span></span> <span data-ttu-id="35ca7-238">Bu Docker komutları, Kapsayıcılarınızı yönetmek için gereklidir:</span><span class="sxs-lookup"><span data-stu-id="35ca7-238">These Docker commands are essential to managing your containers:</span></span>
 
-## <a name="clean-up-resources"></a><span data-ttu-id="2bd0e-240">Kaynakları temizleme</span><span class="sxs-lookup"><span data-stu-id="2bd0e-240">Clean up resources</span></span>
+- [<span data-ttu-id="35ca7-239">docker build</span><span class="sxs-lookup"><span data-stu-id="35ca7-239">docker build</span></span>](https://docs.docker.com/engine/reference/commandline/build/)
+- [<span data-ttu-id="35ca7-240">Docker çalıştırma</span><span class="sxs-lookup"><span data-stu-id="35ca7-240">docker run</span></span>](https://docs.docker.com/engine/reference/commandline/run/)
+- [<span data-ttu-id="35ca7-241">docker ps</span><span class="sxs-lookup"><span data-stu-id="35ca7-241">docker ps</span></span>](https://docs.docker.com/engine/reference/commandline/ps/)
+- [<span data-ttu-id="35ca7-242">Docker durdur</span><span class="sxs-lookup"><span data-stu-id="35ca7-242">docker stop</span></span>](https://docs.docker.com/engine/reference/commandline/stop/)
+- [<span data-ttu-id="35ca7-243">Docker RM</span><span class="sxs-lookup"><span data-stu-id="35ca7-243">docker rm</span></span>](https://docs.docker.com/engine/reference/commandline/rm/)
+- [<span data-ttu-id="35ca7-244">Docker rmi</span><span class="sxs-lookup"><span data-stu-id="35ca7-244">docker rmi</span></span>](https://docs.docker.com/engine/reference/commandline/rmi/)
+- [<span data-ttu-id="35ca7-245">Docker görüntüsü</span><span class="sxs-lookup"><span data-stu-id="35ca7-245">docker image</span></span>](https://docs.docker.com/engine/reference/commandline/image/)
 
-<span data-ttu-id="2bd0e-241">Bu öğreticide kapsayıcılar ve görüntüler oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-241">During this tutorial, you created containers and images.</span></span> <span data-ttu-id="2bd0e-242">İsterseniz, bu kaynakları silin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-242">If you want, delete these resources.</span></span> <span data-ttu-id="2bd0e-243">İçin aşağıdaki komutları kullanın</span><span class="sxs-lookup"><span data-stu-id="2bd0e-243">Use the following commands to</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="35ca7-246">Kaynakları temizleme</span><span class="sxs-lookup"><span data-stu-id="35ca7-246">Clean up resources</span></span>
 
-01. <span data-ttu-id="2bd0e-244">Tüm kapsayıcıları Listele</span><span class="sxs-lookup"><span data-stu-id="2bd0e-244">List all containers</span></span>
+<span data-ttu-id="35ca7-247">Bu öğreticide kapsayıcılar ve görüntüler oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-247">During this tutorial, you created containers and images.</span></span> <span data-ttu-id="35ca7-248">İsterseniz, bu kaynakları silin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-248">If you want, delete these resources.</span></span> <span data-ttu-id="35ca7-249">İçin aşağıdaki komutları kullanın</span><span class="sxs-lookup"><span data-stu-id="35ca7-249">Use the following commands to</span></span>
 
-    ```console
-    > docker ps -a
+01. <span data-ttu-id="35ca7-250">Tüm kapsayıcıları Listele</span><span class="sxs-lookup"><span data-stu-id="35ca7-250">List all containers</span></span>
+
+    ```Docker
+    docker ps -a
     ```
 
-02. <span data-ttu-id="2bd0e-245">Çalıştıran kapsayıcıları durdurun.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-245">Stop containers that are running.</span></span> <span data-ttu-id="2bd0e-246">, `CONTAINER_NAME` Kapsayıcıya otomatik olarak atanan adı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-246">The `CONTAINER_NAME` represents the name automatically assigned to the container.</span></span>
+02. <span data-ttu-id="35ca7-251">Adına göre çalışan kapsayıcıları durdurun.</span><span class="sxs-lookup"><span data-stu-id="35ca7-251">Stop containers that are running by their name.</span></span>
 
-    ```console
-    > docker stop CONTAINER_NAME
+    ```Docker
+    docker stop counter-image
     ```
 
-03. <span data-ttu-id="2bd0e-247">Kapsayıcıyı silme</span><span class="sxs-lookup"><span data-stu-id="2bd0e-247">Delete the container</span></span>
+03. <span data-ttu-id="35ca7-252">Kapsayıcıyı silme</span><span class="sxs-lookup"><span data-stu-id="35ca7-252">Delete the container</span></span>
 
-    ```console
-    > docker rm CONTAINER_NAME
+    ```Docker
+    docker rm counter-image
     ```
 
-<span data-ttu-id="2bd0e-248">Sonra, makinenizde artık istemediğiniz görüntüleri silin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-248">Next, delete any images that you no longer want on your machine.</span></span> <span data-ttu-id="2bd0e-249">*Dockerfile* dosyanız tarafından oluşturulan görüntüyü silin ve ardından *dockerfile* ' ın dayandığı .NET Core görüntüsünü silin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-249">Delete the image created by your *Dockerfile* and then delete the .NET Core image the *Dockerfile* was based on.</span></span> <span data-ttu-id="2bd0e-250">**Görüntü kimliğini** veya **Depo: etiketli dize etiketini** kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-250">You can use the **IMAGE ID** or the **REPOSITORY:TAG** formatted string.</span></span>
+<span data-ttu-id="35ca7-253">Sonra, makinenizde artık istemediğiniz görüntüleri silin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-253">Next, delete any images that you no longer want on your machine.</span></span> <span data-ttu-id="35ca7-254">*Dockerfile* dosyanız tarafından oluşturulan görüntüyü silin ve ardından *dockerfile* ' ın dayandığı .NET Core görüntüsünü silin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-254">Delete the image created by your *Dockerfile* and then delete the .NET Core image the *Dockerfile* was based on.</span></span> <span data-ttu-id="35ca7-255">**Görüntü kimliğini** veya **Depo: etiketli dize etiketini** kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-255">You can use the **IMAGE ID** or the **REPOSITORY:TAG** formatted string.</span></span>
 
-```console
-docker rmi myimage:latest
+```Docker
+docker rmi counter-image:latest
 docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
-<span data-ttu-id="2bd0e-251">Yüklenen görüntülerin `docker images` listesini görmek için komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-251">Use the `docker images` command to see a list of images installed.</span></span>
+<span data-ttu-id="35ca7-256">Yüklenen görüntülerin `docker images` listesini görmek için komutunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="35ca7-256">Use the `docker images` command to see a list of images installed.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="2bd0e-252">Görüntü dosyaları büyük olabilir.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-252">Image files can be large.</span></span> <span data-ttu-id="2bd0e-253">Genellikle, uygulamanızı test ederken ve geliştirirken oluşturduğunuz geçici kapsayıcıları kaldırırsınız.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-253">Typically, you would remove temporary containers you created while testing and developing your app.</span></span> <span data-ttu-id="2bd0e-254">Bu çalışma zamanına göre diğer görüntüleri oluşturmayı planlıyorsanız, genellikle temel görüntüleri çalışma zamanı yüklü olarak tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-254">You usually keep the base images with the runtime installed if you plan on building other images based on that runtime.</span></span>
+> [!TIP]
+> <span data-ttu-id="35ca7-257">Görüntü dosyaları büyük olabilir.</span><span class="sxs-lookup"><span data-stu-id="35ca7-257">Image files can be large.</span></span> <span data-ttu-id="35ca7-258">Genellikle, uygulamanızı test ederken ve geliştirirken oluşturduğunuz geçici kapsayıcıları kaldırırsınız.</span><span class="sxs-lookup"><span data-stu-id="35ca7-258">Typically, you would remove temporary containers you created while testing and developing your app.</span></span> <span data-ttu-id="35ca7-259">Bu çalışma zamanına göre diğer görüntüleri oluşturmayı planlıyorsanız, genellikle temel görüntüleri çalışma zamanı yüklü olarak tutabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="35ca7-259">You usually keep the base images with the runtime installed if you plan on building other images based on that runtime.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="2bd0e-255">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="2bd0e-255">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="35ca7-260">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="35ca7-260">Next steps</span></span>
 
-- [<span data-ttu-id="2bd0e-256">ASP.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-256">Learn how to containerize an ASP.NET Core application.</span></span>](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-- [<span data-ttu-id="2bd0e-257">ASP.NET Core mikro hizmet öğreticisini deneyin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-257">Try the ASP.NET Core Microservice Tutorial.</span></span>](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-- [<span data-ttu-id="2bd0e-258">Kapsayıcıları destekleyen Azure hizmetlerini gözden geçirin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-258">Review the Azure services that support containers.</span></span>](https://azure.microsoft.com/overview/containers/)
-- [<span data-ttu-id="2bd0e-259">Dockerfile komutları hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="2bd0e-259">Read about Dockerfile commands.</span></span>](https://docs.docker.com/engine/reference/builder/)
-- [<span data-ttu-id="2bd0e-260">Visual Studio için kapsayıcı araçlarını keşfet</span><span class="sxs-lookup"><span data-stu-id="2bd0e-260">Explore the Container Tools for Visual Studio</span></span>](/visualstudio/containers/overview)
+- [<span data-ttu-id="35ca7-261">ASP.NET Core uygulamasını kapsayıya kapsayıtabilecek hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-261">Learn how to containerize an ASP.NET Core application.</span></span>](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+- [<span data-ttu-id="35ca7-262">ASP.NET Core mikro hizmet öğreticisini deneyin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-262">Try the ASP.NET Core Microservice Tutorial.</span></span>](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [<span data-ttu-id="35ca7-263">Kapsayıcıları destekleyen Azure hizmetlerini gözden geçirin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-263">Review the Azure services that support containers.</span></span>](https://azure.microsoft.com/overview/containers/)
+- [<span data-ttu-id="35ca7-264">Dockerfile komutları hakkında bilgi edinin.</span><span class="sxs-lookup"><span data-stu-id="35ca7-264">Read about Dockerfile commands.</span></span>](https://docs.docker.com/engine/reference/builder/)
+- [<span data-ttu-id="35ca7-265">Visual Studio için kapsayıcı araçlarını keşfet</span><span class="sxs-lookup"><span data-stu-id="35ca7-265">Explore the Container Tools for Visual Studio</span></span>](/visualstudio/containers/overview)
