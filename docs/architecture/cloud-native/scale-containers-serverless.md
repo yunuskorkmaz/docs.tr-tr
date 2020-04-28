@@ -1,30 +1,33 @@
 ---
 title: Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
-description: Bulut Yerel uygulamalarını Azure Kubernetes hizmeti ile ölçeklendirerek, tek tek makine kaynaklarını artırarak veya bir uygulama kümesindeki makinelerin sayısını artırarak Kullanıcı taleplerini karşılayın.
-ms.date: 09/23/2019
-ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+description: Azure Kubernetes hizmeti ile bulutta yerel uygulamaları, Kullanıcı talebini karşılayacak şekilde ölçeklendirin.
+ms.date: 04/13/2020
+ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184801"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199930"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
 
-Bir uygulamayı ölçeklendirmenin iki genel yolu vardır: ölçeği artırma ve genişletme. İlki, bir konağa özellik eklemek anlamına gelir, ikincisi ise toplam konak sayısına ekleme anlamına gelir. Bunu öğrenmek için kullanılan yaygın bir benzerleme vurguladı, kendinizi ve kasaların şehir genelinde nasıl ele alınacağını öğrenin. Tek bir arkadaşınız varsa, iki özellikli yarış arabasın üzerinden yarışalım yapabilirsiniz. Ancak üç veya dört ise, kapasiteyi artırmak için SUVs veya bir mini Van 'den birini almanız gerekebilir. Toplam numaranız bir düzine veya daha fazla atlama yaparken, muhtemelen daha fazla örnek (Bu durumda, daha fazla araçlar) ekleyerek ölçeği genişletme kavramını gösteren birden çok araçlar almanız (birisi bir veri yolu olmadığı müddetçe) gerekir. Bunun uygulamalarımız için nasıl uygulanacağını görelim.
+Bir uygulamayı ölçeklendirmenin iki yolu vardır: yukarı veya çıkış. İlki, kapasiteyi artırmak için daha fazla kaynak eklemeye yönelik olarak, tek bir kaynağa kapasite eklemek anlamına gelir.
 
 ## <a name="the-simple-solution-scaling-up"></a>Basit çözüm: ölçeği artırma
 
-Var olan sunucuları daha fazla kaynak (CPU, bellek, disk g/ç hızı, ağ g/ç hızı) vermek için yükseltme işlemi, *Ölçek artırma*olarak bilinir. Bulutta yerel uygulamalarda, ölçek artırma, genellikle fiziksel makinelerde gerçek donanımların satın alınması ve yüklenmesi ve bu sayede kullanılabilir seçenekler listesinden daha yetenekli bir plan seçilmesi anlamına gelmiyor. Bulutta yerel uygulamalar genellikle, Kubernetes düğüm havuzundaki tek tek düğümleri barındırmak için kullanılan sanal makine (VM) boyutunu değiştirerek ölçeği atlar. Düğümler, kümeler ve düğüm gibi Kubernetes kavramları, [sonraki bölümde](leverage-containers-orchestrators.md)daha ayrıntılı olarak açıklanmıştır. Azure, hem [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) hem de [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)çalıştıran çok çeşitli VM boyutlarını destekler. Uygulamanızı dikey olarak ölçeklendirmek için, daha büyük bir düğüm VM boyutuyla yeni bir düğüm havuzu oluşturun ve sonra iş yüklerini yeni havuza geçirin. Bu, şu anda Önizlemedeki bir özellik olan [AKS kümeniz için birden çok düğüm havuzu](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)gerektirir. Sunucusuz uygulamalar, [Premium bir plan](https://docs.microsoft.com/azure/azure-functions/functions-scale) ve Premium örnek boyutları seçerek veya farklı bir adanmış App Service planı seçerek ölçeği artırma.
+Daha fazla CPU, bellek, disk g/ç hızı ve ağ g/ç hızına sahip mevcut bir konak sunucusunu yükseltme, *Ölçek artırma*olarak bilinir. Bulut Yerel uygulamasının ölçeklendirilmesi, bulut satıcısından daha yetenekli kaynakların seçilmesini içerir. Örneğin, Kubernetes kümenizdeki daha büyük VM 'Lere sahip yeni bir düğüm havuzu oluşturabilirsiniz. Ardından Kapsayıcılı hizmetlerinizi yeni havuza geçirin.
+
+Özel bir App Service planından [Premium işlevler planı](https://docs.microsoft.com/azure/azure-functions/functions-scale) veya Premium örnek boyutları seçerek sunucusuz uygulamalar ölçeklendirilir.
 
 ## <a name="scaling-out-cloud-native-apps"></a>Bulutta yerel uygulamaların ölçeğini genişletme
 
-Bulutta yerel uygulamalar, hizmet isteklerine ek düğümler veya Pod ekleyerek ölçeklendirmeyi destekler. Bu, uygulamanın yapılandırma ayarları ayarlanarak (örneğin, [bir düğüm havuzu ölçeklendirilirken](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) veya *Otomatik ölçeklendirilirken*el ile gerçekleştirilebilir. Otomatik ölçeklendirme, bir uygulama tarafından isteğe yanıt vermek için kullanılan kaynakları ayarlar ve bu da ek Isıtma veya soğutma için çağrı yaparak bir termostat 'nın sıcaklığa nasıl yanıt vereceğini de benzer. Otomatik ölçeklendirme kullanırken el ile ölçekleme devre dışıdır.
+Bulutta yerel uygulamalar sıklıkla büyük dalgalanmalar yaşar ve bir süre içinde ölçeklendirilmesi gerekir. Ölçeklendirmeyi tercih ederler. Ölçeği genişletme, var olan bir kümeye ek makineler (düğümler adı verilir) veya uygulama örnekleri eklenerek yatay olarak yapılır. Kubernetes 'te, uygulamanın yapılandırma ayarlarını ayarlayarak (örneğin, [bir düğüm havuzunu ölçeklendirerek](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) veya otomatik ölçeklendirmeyle el ile ölçekleyebilirsiniz.
 
-AKS kümeleri, iki şekilde ölçeklendirebilir:
+AKS kümeleri, iki şekilde otomatik ölçeklendirme yapabilir:
 
-- [Küme otomatik yüklemesi](https://docs.microsoft.com/azure/aks/cluster-autoscaler) , kaynak kısıtlamaları nedeniyle düğümlerde zamanlanabilecek düğüm sayısını izler. Gerektiğinde ek düğümler ekler.
-- **Yatay Pod otomatik Scaler** , Kubernetes kümesinde ölçüm sunucusunu kullanarak pods 'nin kaynak taleplerini izler. Bir hizmette daha fazla kaynak gerekiyorsa, otomatik, sayı sayısını artırır.
+İlk olarak, [yatay Pod otomatik Scaler](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale#autoscale-pods) kaynak talebini Izler ve pod çoğaltmalarınızı bunu karşılayacak şekilde otomatik olarak ölçeklendirir. Trafik arttıkça, hizmetlerinizin ölçeğini genişletmek için ek çoğaltmalar otomatik olarak sağlanır. Benzer şekilde, talep azaldıkça hizmetlerinizin ölçeklendirilmesine kaldırılır. Örneğin CPU kullanımı gibi ölçeklenmesi gereken ölçümü tanımlarsınız. Ayrıca, çalıştırılacak en düşük ve en fazla çoğaltma sayısını da belirtebilirsiniz. AKS, ölçüyü izler ve uygun şekilde ölçeklendirir.
+
+Ardından [aks kümesi otomatik Scaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler) özelliği, talebi karşılamak üzere bir Kubernetes kümesi genelinde işlem düğümlerini otomatik olarak ölçeklendirmenize olanak sağlar. Bununla birlikte, daha fazla işlem kapasitesi gerektiğinde, temel alınan Azure sanal makine ölçek kümesine yeni VM 'Leri otomatik olarak ekleyebilirsiniz. Artık gerekli olmadığında düğümleri da kaldırır.
 
 Şekil 3-13, bu iki ölçeklendirme hizmeti arasındaki ilişkiyi gösterir.
 
@@ -32,18 +35,13 @@ AKS kümeleri, iki şekilde ölçeklendirebilir:
 
 **Şekil 3-13**. App Service planını ölçekleme.
 
-Bu hizmetler Ayrıca, gereken sayıda düğüm veya düğüm sayısını azaltabilir. Bu iki hizmet birlikte çalışabilir ve genellikle bir kümede birlikte dağıtılır. Birleştirildiğinde, yatay Pod otomatik Scaler, uygulama talebini karşılamak için gereken sayıda Pod çalıştırmaya odaklanılmıştır. Küme otomatik yüklemesi, zamanlanmış pods 'yi desteklemek için gereken düğüm sayısını çalıştırmaya odaklanır.
+Birlikte çalışarak, her ikisi de en uygun sayıda kapsayıcı örneği ve işlem düğümü dalgalanmayı desteklemek için işlem düğümleri sağlar. Yatay Pod otomatik Scaler, gereken sayıda Pod 'yi iyileştirir. Küme otomatik yüklemesi, gerekli düğüm sayısını iyileştirir.
 
 ### <a name="scaling-azure-functions"></a>Azure Işlevlerini ölçeklendirme
 
-Azure Işlevleri ölçeklendirmeyi otomatik olarak destekler. Varsayılan tüketim planı, içinde gelen tetikleme olaylarının sayısına göre dinamik olarak kaynakları ekler (ve kaldırır). Yalnızca işlevleriniz çalışırken kullanılan işlem kaynakları, yürütme süresi ve kullanılan bellek sayısına göre ücretlendirilirsiniz. Premium planı kullanarak, bu özellikleri de aynı özelliklere sahip olursunuz, ancak kullanılan örnek boyutlarını denetleyebilir, örnekleri zaten çarpımış olabilir (soğuk başlangıç gecikmelerinden kaçınmak için) ve işlevlerinizin çalıştırılacağı adanmış VM 'Leri yapılandırabilirsiniz. Varsayılan yapılandırma birçok uygulama için ekonomik ve ölçeklenebilir bir çözüm sağlamalıdır, ancak Premium seçeneği, geliştiricilerin özel Azure Işlevleri gereksinimleri için esneklik sağlamasına izin verir.
+Azure Işlevleri isteğe bağlı olarak otomatik olarak ölçeklendirilir. Sunucu kaynakları, tetiklenen olay sayısına göre dinamik olarak ayrılır ve kaldırılır. Yalnızca işlevleriniz çalıştırıldığında tüketilen işlem kaynakları için ücret ödersiniz. Faturalandırma, yürütme süresi ve kullanılan bellek sayısına bağlıdır.
 
-## <a name="references"></a>Referanslar
-
-- [Birden çok düğüm havuzu](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
-- [AKS kümesi otomatik Scaler](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Öğretici: AKS 'de Uygulamaları ölçeklendirme](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
-- [Azure Işlevleri ölçeklendirme ve barındırma](https://docs.microsoft.com/azure/azure-functions/functions-scale)
+Varsayılan tüketim planı çoğu uygulama için ekonomik ve ölçeklenebilir bir çözüm sağlarken Premium seçeneği, geliştiricilerin özel Azure Işlevleri gereksinimlerine yönelik esnekliğe olanak sağlar. Premium planına yükseltme, örnek boyutları üzerinde denetim, önceden çarpımış örnekler (soğuk başlangıç gecikmelerini önlemek için) ve adanmış VM 'Ler üzerinde denetim sağlar.
 
 >[!div class="step-by-step"]
 >[Önceki](deploy-containers-azure.md)

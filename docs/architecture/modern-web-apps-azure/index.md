@@ -1,110 +1,110 @@
 ---
 title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
-description: ASP.NET Core ve Azure kullanarak yekpare web uygulamaları oluşturma konusunda uçlardan uca kılavuz sağlayan bir kılavuz.
+description: ASP.NET Core ve Azure kullanarak tek parçalı Web uygulamaları oluşturmaya yönelik uçtan uca rehberlik sağlayan bir kılavuz.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987900"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199969"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Microsoft Azure ile Modern Web Uygulamaları Tasarlama
 
-![Mimar Modern Web Uygulamaları kılavuzunun kitap kapağı görüntüsü.](./media/index/web-application-guide-cover-image.png)
+![Mimarel Modern Web uygulamaları kılavuzu 'nun kitap kapağı resmi.](./media/index/web-application-guide-cover-image.png)
 
-**EDITION v3.1** - Core 3.1 ASP.NET güncellendi
+**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi
 
 YAYIMLAYAN
 
-Microsoft Developer Division, .NET ve Visual Studio ürün ekipleri
+Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
-Microsoft Corporation'ın bir bölümü
+Microsoft Corporation 'ın bir bölümü
 
 One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2020 Microsoft Corporation tarafından
+Telif hakkı © 2020 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin hiçbir bölümü, yayımcının yazılı izni olmadan herhangi bir biçimde veya herhangi bir şekilde çoğaltılamaz veya aktarılamaz.
+Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
-Bu kitap "olduğu gibi" sağlanır ve yazarın görüş ve görüşlerini ifade eder. URL ve diğer Internet web sitesi referansları da dahil olmak üzere bu kitapta ifade edilen görüşler, görüşler ve bilgiler önceden haber verilmeden değişebilir.
+Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. URL ve diğer Internet Web sitesi başvuruları dahil olmak üzere bu kitapta ifade edilen görünümler, eklentiler ve bilgiler bildirimde bulunmadan değiştirilebilir.
 
 Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "Ticari https://www.microsoft.com Markalar" web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve "ticari markalar" https://www.microsoft.com Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
-Mac ve macOS, Apple Inc. şirketinin ticari markalarıdır.
+Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc. şirketinin izni yle kullanılan tescilli ticari markasıdır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
-Diğer tüm işaretler ve logolar ilgili sahiplerinin mülkiyetindedir.
+Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
 Yazar:
 
-> **Steve "ardalis" Smith** - Yazılım Mimarı ve Eğitmen - [Ardalis.com](https://ardalis.com)
+> **Steve "ardalış" Smith** -yazılım mimarı ve trainer- [Ardalis.com](https://ardalis.com)
 
-Editörler:
+Edit
 
 > **Maira Wenzel**
 
 ## <a name="introduction"></a>Giriş
 
-.NET Core ve ASP.NET Core, geleneksel .NET geliştirmeye göre çeşitli avantajlar sunar. Aşağıdakilerden bazıları veya tümü uygulamanızın başarısı için önemliyse sunucu uygulamalarınız için .NET Core'u kullanmalısınız:
+.NET Core ve ASP.NET Core geleneksel .NET geliştirme konusunda çeşitli avantajlar sunar. Aşağıdakilerden bazıları veya tümü uygulamanızın başarısı için önemliyse, sunucu uygulamalarınız için .NET Core ' u kullanmanız gerekir:
 
-- Platform ötesi destek.
+- Platformlar arası destek.
 
 - Mikro hizmetlerin kullanımı.
 
-- Docker konteynerlerinin kullanımı.
+- Docker Kapsayıcıları kullanımı.
 
 - Yüksek performans ve ölçeklenebilirlik gereksinimleri.
 
-- .NET sürümlerinin aynı sunucudaki uygulamalara göre yan yana sürüklüyor.
+- Aynı sunucuda .NET sürümlerinin uygulamaya göre yan yana sürümü oluşturma.
 
-Geleneksel .NET uygulamaları bu gereksinimlerin çoğunu destekleyebilir ve destekleyebilir, ancak ASP.NET Core ve .NET Core yukarıdaki senaryolar için geliştirilmiş destek sunmak üzere optimize edilmiştir.
+Geleneksel .NET uygulamaları, bu gereksinimlerin birçoğunu destekler ve ASP.NET Core ve .NET Core, yukarıdaki senaryolar için geliştirilmiş destek sunacak şekilde iyileştirildi.
 
-Giderek daha fazla kuruluş, Microsoft Azure gibi hizmetleri kullanarak web uygulamalarını bulutta barındırmayı tercih ediyor. Aşağıdakiler uygulamanız veya kuruluşunuz için önemliyse, uygulamanızı bulutta barındırmayı düşünmelisiniz:
+Daha fazla kuruluş, Microsoft Azure gibi hizmetleri kullanarak Web uygulamalarını bulutta barındırmak üzere tercih ediyor. Uygulamanız veya kuruluşunuz için önemli bir öneme sahipseniz, uygulamanızı bulutta barındırmayı göz önünde bulundurmanız gerekir:
 
-- Veri merkezi maliyetlerine daha az yatırım (donanım, yazılım, alan, yardımcı programlar, sunucu yönetimi, vb.)
+- Veri merkezi maliyetlerinde daha az yatırım (donanım, yazılım, boşluk, yardımcı programlar, sunucu yönetimi vb.)
 
-- Esnek fiyatlandırma (boşta kapasite için değil, kullanıma göre ödeme).
+- Esnek fiyatlandırma (boşta kapasite için değil, kullanıma göre ödeme yapın).
 
 - Aşırı güvenilirlik.
 
-- Geliştirilmiş uygulama hareketliliği; uygulamanızın nerede ve nasıl dağıtılandığını kolayca değiştirin.
+- Geliştirilmiş uygulama Mobility; Uygulamanızın nerede ve nasıl dağıtıldığını kolayca değiştirin.
 
-- Esnek kapasite; gerçek ihtiyaçlar temel alınabında yukarı veya aşağı ölçeklendirin.
+- Esnek kapasite; gerçek ihtiyaçlarına göre ölçeği artırma veya azaltma.
 
-Azure'da barındırılan ASP.NET Core ile web uygulamaları oluşturmak, geleneksel alternatiflere göre birçok rekabet avantajı sunar. ASP.NET Core modern web uygulama geliştirme uygulamaları ve bulut barındırma senaryoları için optimize edin. Bu kılavuzda, bu özelliklerden en iyi şekilde yararlanmak için ASP.NET Core uygulamalarınızı nasıl tasarlayacağımızı öğreneceksiniz.
+Azure 'da barındırılan ASP.NET Core ile Web uygulamaları oluşturmak, geleneksel alternatifler üzerinde birçok rekabet avantajı sunar. ASP.NET Core Modern Web uygulaması geliştirme uygulamaları ve bulut barındırma senaryoları için iyileştirilmiştir. Bu kılavuzda, bu özelliklerden en iyi şekilde yararlanmak için ASP.NET Core uygulamalarınızı nasıl mimareceğinizi öğreneceksiniz.
 
 ## <a name="purpose"></a>Amaç
 
-Bu kılavuz, ASP.NET Core ve Azure kullanarak *yekpare* web uygulamaları oluşturma konusunda uçlardan uca kılavuz sağlar. Bu bağlamda,"yekpare", bu uygulamaların etkileşimli hizmetler ve uygulamalar topluluğu olarak değil, tek bir birim olarak dağıtılmasını ifade eder.
+Bu kılavuz, ASP.NET Core ve Azure kullanarak *tek parçalı* Web uygulamaları oluşturmaya yönelik uçtan uca yönergeler sağlar. Bu bağlamda, "monoparçalı", bu uygulamaların bir etkileşim Hizmetleri ve uygulamaları koleksiyonu olarak değil, tek bir birim olarak dağıtılmasının gerçeğini ifade eder.
 
-Bu kılavuz ["_.NET Microservices tamamlayıcıdır. _](../microservices/index.md) Kurumsal uygulamaları barındıracak şekilde Docker, Microservices ve Dağıtım Kapları'na odaklanan Containerized .NET Applications için Mimari.
+Bu kılavuz, ["_.net mikro hizmetleri" için tamamlayıcı bir kılavuzdur. _](../microservices/index.md)Docker, mikro hizmetler ve kapsayıcı dağıtımında kurumsal uygulamaları barındırmak için daha fazla odaklanan, Kapsayıcılı .NET uygulamaları için mimari.
 
-### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET MikroHizmetler. Kapsayıcılı .NET Uygulamaları Mimarisi
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi
 
 - **e-kitap**  
   <https://aka.ms/MicroservicesEbook>
-- **Örnek Uygulama**  
+- **Örnek uygulama**  
   <https://aka.ms/microservicesarchitecture>
 
-## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalı?
+## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 
-Bu kılavuzun hedef kitlesi, bulutta Microsoft teknolojilerini ve hizmetlerini kullanarak modern web uygulamaları oluşturmak isteyen geliştiriciler, geliştirme yol gösterici ve mimarlardır.
+Bu kılavuzun hedef kitlesi, bulutta Microsoft teknolojilerini ve hizmetlerini kullanarak modern web uygulamaları oluşturmaya ilgilenen temel geliştiriciler, geliştirme müşteri adayları ve mimarilerdir.
 
-İkinci bir hedef kitle, ASP.NET veya Azure'u zaten tanıdık olan ve yeni veya varolan projeler için ASP.NET Core'a yükseltmenin mantıklı olup olmadığı hakkında bilgi arayan teknik karar vericilerdir.
+İkincil hedef kitle, zaten ASP.NET veya Azure 'u bildiğiniz ve yeni veya mevcut projeler için ASP.NET Core yükseltme konusunda anlamlı olup olmadığı hakkında bilgi arayan teknik karar mekanizmalarıdır.
 
-## <a name="how-you-can-use-this-guide"></a>Bu kılavuzu nasıl kullanabilirsiniz?
+## <a name="how-you-can-use-this-guide"></a>Bu Kılavuzu nasıl kullanabileceğiniz
 
-Bu kılavuz, modern .NET teknolojileri ve Windows Azure ile web uygulamaları oluşturmaya odaklanan nispeten küçük bir belgeye sıkıştırılmıştır. Bu nedenle, bu tür uygulamalar ve teknik hususlar anlayış bir temel sağlamak için bütünüyle okunabilir. Kılavuz, örnek uygulamasıyla birlikte, bir başlangıç noktası veya başvuru olarak da hizmet verebilir. İlişkili örnek uygulamayı kendi uygulamalarınız için şablon olarak veya uygulamanızın bileşen parçalarını nasıl düzenleyebileceğini görmek için kullanın. Kendi uygulamanız için bu seçenekleri değerlendirirken kılavuzun ilkelerine ve mimari ve teknoloji seçeneklerinin ve karar konularının kapsamına bakın.
+Bu kılavuz, modern .NET teknolojileri ve Azure ile Web uygulamaları oluşturmaya odaklanan görece küçük bir belgeye yoğunlaştırılmıştır. Bu nedenle, bu tür uygulamaları ve teknik konuları anlama temelini sağlamak için tamamen okunabilir. Kılavuz, örnek uygulamayla birlikte bir başlangıç noktası veya başvuru işlevi de sunabilir. İlişkili örnek uygulamayı kendi uygulamalarınız için bir şablon olarak veya uygulamanızın bileşen parçalarını nasıl düzenleyebileceğini görmek için kullanın. Kendi uygulamanız için bu seçenekleri katdığınızda, kılavuzun ilkelerine ve mimari ve teknoloji seçeneklerinin kapsamına ve kararına dikkat edin.
 
-Bu hususların ve fırsatların ortak bir şekilde anlaşılmasını sağlamaya yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Herkesin ortak bir terminoloji ve temel ilkeler den çalışması mimari örüntü lerin ve uygulamaların tutarlı bir şekilde uygulanmasını sağlamaya yardımcı olur.
+Bu noktaların ve fırsatların yaygın olarak anlaşılmasına yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Her bir gövdenin ortak bir terminoloji kümesinden ve temel ilkelerin üzerinde çalışmasını sağlamak, mimari desenlerinin ve uygulamaların tutarlı olmasını sağlamaya yardımcı olur.
 
 ## <a name="references"></a>Başvurular
 

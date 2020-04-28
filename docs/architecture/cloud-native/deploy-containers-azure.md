@@ -1,42 +1,49 @@
 ---
 title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
-ms.date: 06/30/2019
-ms.openlocfilehash: 6d95db26b6a45dd6825c88693308ffe90d1ed071
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 04/13/2020
+ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183268"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199566"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Kapsayıcılar, biri taşınabilirlik olan birçok avantaj sağlar. Yerel olarak geliştirmiş ve test ettiğiniz kapsayıcıyı kolayca alabilir ve uygulamanızı hazırlama ve üretim ortamlarında çalıştırabilecekleri Azure 'a dağıtabilirsiniz. Azure, kapsayıcı tabanlı uygulama barındırmak için çeşitli seçenekler sağlar ve benzer şekilde birçok farklı dağıtım yöntemi destekler. En yaygın ve en esnek yaklaşım, kapsayıcıları Azure Container Registry (ACR) uygulamasına dağıtmaktır ve burada, bunları barındırmak için kullanmak istediğiniz hizmetler tarafından erişilebilir. Azure Kapsayıcılar için Web App, Azure Kubernetes Hizmetleri (AKS) ve Azure Container Instance (acı) hepsi ACR 'ye gönderilen kapsayıcı görüntülerine erişebilir.
+Bu bölümde ve Bölüm 1 ' de kapsayıcılar tartışıyoruz. Kapsayıcıların taşınabilirlik dahil olmak üzere bulutta yerel uygulamalara birçok avantaj sunduğumuz görüldü. Azure bulutunda, aynı Kapsayıcılı Hizmetleri hazırlama ve üretim ortamları arasında dağıtabilirsiniz. Azure, bu Kapsayıcılı iş yüklerini barındırmak için çeşitli seçenekler sunar:
+
+- Azure Kubernetes Hizmetleri (AKS)
+- Azure Container Instance (ACI)
+- Kapsayıcılar için Azure Web Apps
 
 ## <a name="azure-container-registry"></a>Azure Container Registry
 
-Azure Container Registry (ACR), tüm kapsayıcı dağıtımlarınız için görüntü oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar. Kapsayıcıları dağıtabileceğiniz ortak ve özel başka kapsayıcı kayıt defterleri de vardır. Diğer seçeneklerin üzerinde ACR avantajı, görüntülerinizi üretim ortamınıza yakın tutabilirsiniz, derleme ve dağıtım sürelerini geliştirir. Ayrıca, Azure kaynaklarınızın geri kalanı için kullandığınız güvenlik yordamlarını kullanarak güvenli hale getirebilirsiniz, güvenliği artırır ve varlık yönetimi çabalarını azaltabilirsiniz.
+Bir mikro hizmeti kapsayıcıında ilk olarak bir derleme kapsayıcısına "Image" olursunuz. Görüntü, hizmet kodu, bağımlılıklar ve çalışma zamanının ikili bir gösterimidir. Docker API 'sindeki `Docker Build` komutunu kullanarak el ile bir görüntü oluşturmanıza karşın, otomatik derleme sürecinin bir parçası olarak daha iyi bir yaklaşım oluşturmanız daha iyidir.
 
-Azure portalını veya [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak [bir kapsayıcı kayıt defteri oluşturursunuz](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) . Yeni bir kapsayıcı kayıt defteri oluşturmak için yalnızca bir Azure aboneliği, bir kaynak grubu ve benzersiz bir ad gerekir. Şekil 3-11, kayıt defteri *adı*. azurecr.io adresinde barındırılacak bir kayıt defteri oluşturmaya yönelik temel seçenekleri gösterir.
+Oluşturulduktan sonra kapsayıcı görüntüleri kapsayıcı kayıt defterlerine depolanır. Kapsayıcı görüntülerini oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar. Hem ortak hem de özel çok sayıda kayıt defterleri mevcuttur. Azure Container Registry (ACR), Azure bulutundaki tam olarak yönetilen bir kapsayıcı kayıt defteri hizmetidir. Azure ağ içindeki görüntülerinizi devam ettirir ve bunları Azure Container konaklarına dağıtma süresini azaltır. Ayrıca, diğer Azure kaynakları için kullandığınız güvenlik ve kimlik yordamlarını kullanarak bunları da güvenli hale getirebilirsiniz.
 
-![](./media/create-container-registry.png)
-**şekil 3-11**kapsayıcı kayıt defteri oluşturun. Kapsayıcı kayıt defteri oluştur
+[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak bir Azure Container Registry oluşturursunuz. Azure 'da bir kayıt defteri oluşturmak basittir. Azure aboneliği, kaynak grubu ve benzersiz bir ad gerektirir. Şekil 3-11, üzerinde `registryname.azurecr.io`barındırılacak bir kayıt defteri oluşturmak için temel seçenekleri gösterir.
 
-Bir kayıt defteri oluşturduktan sonra, kullanabilmeniz için kimlik doğrulaması yapmanız gerekir. Genellikle, Azure CLı komutunu kullanarak kayıt defterinde oturum açmanız gerekir:
+![Kapsayıcı kayıt defteri oluşturma](./media/create-container-registry.png)
+
+**Şekil 3-11**. Kapsayıcı kayıt defteri oluşturma
+
+Kayıt defterini oluşturduktan sonra, kullanabilmeniz için kimlik doğrulaması yapmanız gerekir. Genellikle, Azure CLı komutunu kullanarak kayıt defterinde oturum açmanız gerekir:
 
 ```azurecli
 az acr login --name *registryname*
 ```
 
-Azure Container Registry bir kayıt defteri oluşturduktan sonra, kapsayıcı görüntülerini buna göndermek için Docker komutlarını kullanabilirsiniz. Bununla birlikte, bunu yapabilmeniz için önce görüntünüzü ACR oturum açma sunucunuzun tam adı (URL) ile etiketlemelisiniz. Bu, *registryname*. azurecr.io biçiminde olacaktır.
+Kimliği doğrulandıktan sonra Docker komutlarını kullanarak kapsayıcı görüntülerini buna gönderebilirsiniz. Ancak bunu yapabilmeniz için önce, görüntünüzü ACR oturum açma sunucunuzun tam adı (URL) ile etiketlemelisiniz. *Registryname*. azurecr.io biçiminde olacaktır.
 
 ```console
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Görüntüyü etiketledikten sonra, görüntüyü ACR örneğinize göndermek için `docker push` komutunu kullanın.
+Görüntüyü etiketledikten sonra, görüntüyü ACR örneğinize `docker push` göndermek için komutunu kullanın.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -48,13 +55,31 @@ Bir görüntüyü kayıt defterine gönderdikten sonra, bu komutu kullanarak gö
 docker rmi myregistry.azurecr.io/mycontainer:v1
 ```
 
-Geliştiriciler, doğrudan makinelerinden bir kapsayıcı kayıt defterine nadiren gönderim yapmanız gerekir. Bunun yerine, bu işlemden sonra Azure DevOps gibi bir araçta tanımlanan derleme işlem hattı sorumludur. [Cloud-Native DevOps](devops.md)bölümünde daha fazla bilgi edinin.
+En iyi uygulama olarak, geliştiricilerin resimleri bir kapsayıcı kayıt defterine el ile göndermemesi gerekir. Bunun yerine, bu işlemden GitHub veya Azure DevOps gibi bir araçta tanımlanan derleme işlem hattı sorumludur. [Cloud-Native DevOps](devops.md)bölümünde daha fazla bilgi edinin.
+
+## <a name="acr-tasks"></a>ACR Görevleri
+
+[ACR görevleri](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) , Azure Container Registry kullanılabilen bir özellikler kümesidir. Azure bulutunda kapsayıcı görüntüleri oluşturup yöneterek [iç döngü geliştirme döngünüzü](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) genişletir. Geliştirme makinenizde bir `docker build` ve `docker push` yerel olarak çağırmak yerine, bulutta ACR görevleri tarafından otomatik olarak işlenir.
+
+Aşağıdaki AZ CLı komutu her ikisi de bir kapsayıcı görüntüsü oluşturur ve ACR 'ye gönderir:
+
+```azurecli
+# create a container registry
+az acr create --resource-group myResourceGroup --name myContainerRegistry008 --sku Basic
+
+# build container image in ACR and push it into your container regsitry
+az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --file Dockerfile .
+```
+
+Önceki komut bloğundan görebileceğiniz gibi, geliştirme makinenize Docker Desktop yüklemeniz gerekmez. Ayrıca, her iki kaynak kodunda ve temel görüntü güncelleştirmelerinde, kapsayıcılar görüntülerini yeniden oluşturmak için ACR görev tetikleyicilerini yapılandırabilirsiniz.
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-Kapsayıcı tabanlı uygulamanız birden çok kapsayıcı içeriyorsa, Kubernetes gibi bir *Orchestrator* kullanarak kapsayıcılar arasındaki etkileşimleri tanımlamak ve yönetmek isteyeceksiniz. Kapsayıcı görüntülerinizi ACR 'ye dağıttıktan sonra, Azure Kubernetes hizmetlerini, güncelleştirilmiş görüntüleri ACR 'den otomatik olarak dağıtmak üzere kolayca yapılandırabilirsiniz. Eksiksiz bir CI/CD işlem hattı sayesinde, güncelleştirmeleri hızlı bir şekilde dağıtmaya yönelik riskleri en aza indirmek için bir [kanarya yayın](https://martinfowler.com/bliki/CanaryRelease.html) stratejisi yapılandırabilirsiniz. Uygulamanın yeni sürümü başlangıçta hiçbir trafik yönlendirilmeden üretimde yapılandırılır ve ardından az sayıda kullanıcı uygulamanın yeni dağıtılan sürümüne yönlendirilir. Ekip yazılımın yeni sürümünde güven kazandığında, yeni sürümün daha fazla örneği kullanıma alınır ve önceki sürümün örnekleri kullanımdan kalkmıştır. AKS bu dağıtım stilini kolayca destekler.
+Bu bölümde Azure Kubernetes hizmeti (AKS) ile tartışıyoruz. Kapsayıcının yerleşik bulut Yerel uygulamalarını yöneten kapsayıcı Orchestrator 'ın de olduğunu gördük.
 
-Azure 'daki kaynakların çoğunda olduğu gibi, portalı kullanarak Azure Kubernetes kümeleri oluşturabilir veya Helm ya da Terkform gibi komut satırı araçları ya da altyapı Otomasyonu araçlarını kullanabilirsiniz. Yeni bir kümeye başlamak için aşağıdaki bilgileri sağlamanız gerekir:
+Bir görüntüyü bir kayıt defterine dağıttıktan sonra ACR gibi, AKS 'leri otomatik olarak çekmek ve dağıtmak için yapılandırabilirsiniz. Bir CI/CD işlem hattı varken, güncelleştirmeleri hızlı bir şekilde dağıtmaya yönelik riskleri en aza indirmek için bir [kanarya yayın](https://martinfowler.com/bliki/CanaryRelease.html) stratejisi yapılandırabilirsiniz. Uygulamanın yeni sürümü başlangıçta hiçbir trafik yönlendirilmeden üretimde yapılandırılır. Daha sonra, sistem yeni dağıtılan sürüme küçük bir Kullanıcı yüzdesi yönlendirir. Ekip yeni sürümde güvenli bir şekilde güvendiğinden, daha fazla örnek alabilir ve eskisini devre dışı bırakabilirsiniz. AKS bu dağıtım stilini kolayca destekler.
+
+Azure 'daki kaynakların çoğunda olduğu gibi portal, komut satırı veya Helm ya da Terkform gibi Otomasyon araçlarını kullanarak bir Azure Kubernetes hizmet kümesi oluşturabilirsiniz. Yeni bir kümeye başlamak için aşağıdaki bilgileri sağlamanız gerekir:
 
 - Azure aboneliği
 - Kaynak grubu
@@ -65,11 +90,11 @@ Azure 'daki kaynakların çoğunda olduğu gibi, portalı kullanarak Azure Kuber
 - Düğüm boyutu
 - Düğüm sayısı
 
-Bu bilgiler başlamak için yeterlidir. Azure portalında oluşturma sürecinin bir parçası olarak, kümenizin aşağıdaki özelliklerine ilişkin seçenekleri de yapılandırabilirsiniz:
+Bu bilgiler başlamak için yeterlidir. Azure portal oluşturma sürecinin bir parçası olarak, kümenizin aşağıdaki özellikleri için seçenekleri de yapılandırabilirsiniz:
 
-- Ölçeklendir
-- Kimlik Doğrulama
-- Ağ Oluşturma
+- Ölçek
+- Kimlik Doğrulaması
+- Ağ
 - İzleme
 - Etiketler
 
@@ -77,13 +102,14 @@ Bu [hızlı başlangıçta Azure Portal kullanarak bir AKS kümesi dağıtma iş
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
-Karmaşık Kubernetes kümeleri barındırmak için önemli kaynaklar gerektirebilir, bu da geliştiricilerin tüm uygulamayı tek bir makinede (özellikle bir dizüstü bilgisayar) çalıştırmasını zorlaştırır. Azure Dev Spaces, geliştiricilerin Azure 'da barındırılan Azure Kubernetes kümelerinin kendi sürümleriyle çalışmasına izin vererek buna bir çözüm sunar. Azure Dev Spaces, AKS kullanan mikro hizmet tabanlı uygulamaların geliştirilmesini kolaylaştırmak için tasarlanmıştır.
+Bulutta yerel uygulamalar hızlı bir şekilde büyük ve karmaşık bir şekilde büyüyerek önemli işlem kaynaklarının çalıştırılmasını gerektirir. Bu senaryolarda, tüm uygulama bir geliştirme makinesinde (özellikle bir dizüstü bilgisayar) barındırılamaz. Azure Dev Spaces, AKS kullanarak bu sorunu gidermek için tasarlanmıştır. Geliştiricilerin, bir AKS geliştirme kümesinde uygulamanın geri kalanını barındırırken hizmetlerinin yerel bir sürümüyle çalışmasını sağlar.
+
+Geliştiriciler, Kapsayıcılı uygulamanın tamamını içeren bir AKS kümesinde çalışan (geliştirme) örneği paylaşır. Ancak, hizmetlerini yerel olarak geliştirmek üzere makinesinde ayarlanan kişisel alanları kullanırlar. Hazırlık yapıldığında, bağımlılıklar çoğaltılmaksızın AKS kümesindeki uçtan uca test ederler. Azure Dev Spaces, yerel makineden AKS Hizmetleri ile kod birleştirir. Geliştiriciler Visual Studio veya Visual Studio Code kullanarak doğrudan Kubernetes 'te kodu hızla yineleyebilir ve hata ayıklamanıza olanak sağlar.
 
 Azure Dev Spaces değerini anlamak için, bu teklifi Gato Monroy 'tan paylaşalım, Microsoft Azure kapsayıcıların zaman adayı:
 
-"Her biri kendi yapılandırma ve Destek Hizmetleri olan onlarca bileşenden oluşan karmaşık mikro hizmetler uygulamasındaki bir hatayı gidermeye çalışan yeni bir çalışan olduğunu düşünün. Başlamak için, yerel geliştirme ortamınızı, IDE 'nizi ayarlama, araç zinciri oluşturma, Kapsayıcılı hizmet bağımlılıkları, yerel bir Kubernetes ortamı, hizmet yedekleme için molar ve daha fazlasını içeren üretime benzetebilmek üzere yapılandırmanız gerekir. Geliştirme ortamınızı ayarlamaya yönelik tüm zamanlı olarak, ilk hatanın bu kadar gün sürebiliyor.
-
-> Ya da dev Spaces ve AKS kullanabilirsiniz. "
+> Her biri kendi yapılandırma ve destek hizmetleri içeren onlarca bileşenden oluşan karmaşık mikro hizmetler uygulamasındaki bir hatayı gidermeye çalışan yeni bir çalışan olduğunuzu düşünelim. Başlamak için, yerel geliştirme ortamınızı, IDE 'nizi ayarlama, araç zinciri oluşturma, Kapsayıcılı hizmet bağımlılıkları, yerel bir Kubernetes ortamı, hizmet yedekleme için molar ve daha fazlasını içeren üretime benzetebilmek üzere yapılandırmanız gerekir. Geliştirme ortamınızı ayarlamaya yönelik tüm zamanlı olarak, ilk hatanın bu kadar gün sürebiliyor.
+> Ya da dev Spaces ve AKS kullanabilirsiniz.
 
 Azure Dev Spaces ile çalışma işlemi aşağıdaki adımları içerir:
 
@@ -98,16 +124,10 @@ Bu adımların tümü, Azure CLı ve yeni `azds` komut satırı araçları kulla
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Daha sonra, uygulamayı çalıştırmak için gerekli Docker ve Helu grafik varlıklarını oluşturmak için `azds prep` komutunu kullanabilirsiniz. Daha sonra `azds up`kullanarak kodu AKS 'de çalıştırırsınız. Bu komutu ilk kez çalıştırdığınızda helk grafiği yüklenir ve kapsayıcı (ler), yönergelerinizi temel alarak oluşturulup dağıtılır. İlk kez çalıştırıldığında bu işlem birkaç dakika sürebilir. Bununla birlikte, değişiklik yaptıktan sonra, `azds space select` kullanarak kendi alt geliştirme alanınıza bağlanabilir ve ardından, bunları yalıtılmış alt geliştirme alanınızda dağıtabilir ve hatalarını ayıklayabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, `azds up` komutunu yeniden yayımlayarak veya Visual Studio veya Visual Studio Code yerleşik araçları ' nı kullanarak bu güncelleştirme gönderebilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
+Ardından, uygulamayı çalıştırmak için gerekli `azds prep` Docker ve hele grafik varlıklarını oluşturmak için komutunu kullanabilirsiniz. Ardından, kodunuzu kullanarak `azds up`aks 'de çalıştırırsınız. Bu komutu ilk kez çalıştırdığınızda HELI grafiği yüklenecektir. Kapsayıcılar, yönergelerinizi temel alarak oluşturulup dağıtılacak. Bu görev ilk kez çalıştırıldığında birkaç dakika sürebilir. Bununla birlikte, değişiklikleri yaptıktan sonra kendi alt geliştirme alanınıza `azds space select` bağlanarak bunları yalıtılmış alt geliştirme alanınızda dağıtıp hata ayıklaması yapabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, `azds up` komutu yeniden yayımlayarak bu güncelleştirme gönderebilirsiniz veya Visual Studio veya Visual Studio Code yerleşik araçları kullanabilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
 
-Visual Studio 'da Azure Dev Spaces Connect](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**şekil 3-12**![. Visual Studio 'da Azure Dev Spaces bağlanma
-
-## <a name="references"></a>Referanslar
-
-- [Canary yayını](https://martinfowler.com/bliki/CanaryRelease.html)
-- [VS Code Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)
-- [Visual Studio ile Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio)
+![Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+**Şekil 3-12**' de Azure dev Spaces bağlanın. Visual Studio 'da Azure Dev Spaces bağlanma
 
 >[!div class="step-by-step"]
 >[Önceki](combine-containers-serverless-approaches.md)

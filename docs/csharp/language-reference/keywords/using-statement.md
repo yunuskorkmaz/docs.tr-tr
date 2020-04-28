@@ -1,69 +1,69 @@
 ---
-title: deyimi kullanarak - C# Reference
+title: using deyimleri-C# başvurusu
 ms.date: 04/07/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: a237a90b4782e0460857c3d5d887771bcc8ccaaf
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989187"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199683"
 ---
-# <a name="using-statement-c-reference"></a>deyimi kullanarak (C# Reference)
+# <a name="using-statement-c-reference"></a>using deyimleri (C# Başvurusu)
 
-<xref:System.IDisposable> Nesnelerin doğru kullanımını sağlayan kullanışlı bir sözdizimi sağlar. C# 8.0'dan `using` başlayarak, deyim <xref:System.IAsyncDisposable> nesnelerin doğru kullanımını sağlar.
+<xref:System.IDisposable> Nesnelerin doğru kullanımını sağlayan uygun bir sözdizimi sağlar. C# 8,0 ' `using` den başlayarak, ifade <xref:System.IAsyncDisposable> nesnelerin doğru kullanımını sağlar.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, deyimin `using` nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, `using` ifadesinin nasıl kullanılacağını göstermektedir.
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetFirstExample":::
 
-C# 8.0 ile başlayarak, ayraç gerektirmeyen `using` ifade için aşağıdaki alternatif sözdizimini kullanabilirsiniz:
+C# 8,0 ' den başlayarak, küme ayraçları gerektirmeyen `using` ifade için aşağıdaki alternatif sözdizimini kullanabilirsiniz:
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetModernUsing":::
 
 ## <a name="remarks"></a>Açıklamalar
 
-<xref:System.IO.File>ve <xref:System.Drawing.Font> yönetilmeyen kaynaklara erişen yönetilen türlere örneklerdir (bu durumda dosya işletmek ve aygıt bağlamları). Yönetilmeyen kaynakların ve bunları kapsülleyen sınıf kitaplık türlerinin başka türleri de vardır. Tüm bu tür <xref:System.IDisposable> arabirimi veya <xref:System.IAsyncDisposable> arabirimi uygulamalıdır.
+<xref:System.IO.File>ve <xref:System.Drawing.Font> yönetilmeyen kaynaklara erişen yönetilen türlerin örnekleridir (Bu durumda dosya tutamaçları ve cihaz bağlamları). Birçok farklı türde yönetilmeyen kaynak ve bunları kapsülleyen sınıf kitaplığı türleri vardır. Bu tür türler <xref:System.IDisposable> arabirimini veya <xref:System.IAsyncDisposable> arabirimini gerçekleştirmelidir.
 
-Bir `IDisposable` nesnenin ömrü tek bir yöntemle sınırlıysa, `using` bunu ifadede beyan etmeli ve anında bildirmelisiniz. Deyim, `using` nesne <xref:System.IDisposable.Dispose%2A> üzerindeki yöntemi doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda) nesnenin kendisini de <xref:System.IDisposable.Dispose%2A> çağrıldığı anda kapsam dışına çıkmasına neden olur. `using` Blok içinde, nesne salt okunur ve değiştirilemez veya yeniden atanamaz. Nesne yerine `IAsyncDisposable` `IDisposable`uygularsa, `using` deyimi çağırır <xref:System.IAsyncDisposable.DisposeAsync%2A> `awaits` ve <xref:System.Threading.Tasks.Task>döndürülür.
+Bir `IDisposable` nesnenin yaşam süresi tek bir yöntemle sınırlı olduğunda, bu örneği `using` bildiriminde belirtmeniz ve oluşturmanız gerekir. `using` İfade, <xref:System.IDisposable.Dispose%2A> yöntemi nesnesi üzerinde doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda), bu da nesnenin kendisinin kapsam <xref:System.IDisposable.Dispose%2A> dışına geçmesine neden olur ve çağrılır. `using` Blok içinde, nesne salt okunurdur ve değiştirilemez ya da yeniden atanamaz. Nesnesi yerine uygularsa `IAsyncDisposable` , `IDisposable` `using` <xref:System.IAsyncDisposable.DisposeAsync%2A> ifade öğesini ve `awaits` döndürülen <xref:System.Threading.Tasks.Task>öğesini çağırır.
 
-İfade, `using` <xref:System.IDisposable.Dispose%2A> `using` blok içinde <xref:System.IAsyncDisposable.DisposeAsync%2A>bir özel durum oluşsa bile (veya) çağrılmasını sağlar. Nesneyi `try` bir bloğun içine koyup (veya <xref:System.IDisposable.Dispose%2A> <xref:System.IAsyncDisposable.DisposeAsync%2A> bir `finally` blokta; aslında `using` deyim derleyici tarafından bu şekilde çevrilmiştir) çağırarak aynı sonucu elde edebilirsiniz. Kod örneği daha önce derleme zamanında aşağıdaki koda genişletir (nesne için sınırlı kapsamı oluşturmak için ekstra kıvırcık ayraçlara dikkat edin):
+Bu `using` <xref:System.IDisposable.Dispose%2A> ifade, `using` bloğunda bir özel <xref:System.IAsyncDisposable.DisposeAsync%2A>durum gerçekleşse bile (veya) çağrısı yapılmasını sağlar. Nesneyi bir `try` bloğun içine yerleştirerek ve sonra da (veya <xref:System.IDisposable.Dispose%2A> <xref:System.IAsyncDisposable.DisposeAsync%2A>) bir `finally` blokta çağırarak aynı sonucu elde edebilirsiniz; Aslında, `using` deyimin derleyici tarafından çevrilme yöntemi budur. Kod örneği, derleme zamanında aşağıdaki koda genişletilir (nesne için sınırlı kapsam oluşturmak için ek küme ayraçları aklınızda):
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetTryFinallyExample":::
 
-Yeni `using` deyim sözdizimi benzer koda çevirir. Blok, `try` değişkenin beyan edildiği yerde açılır. Blok, `finally` genellikle bir yöntemin sonunda, çevreleyen bloğun kapanışına eklenir.
+Daha yeni `using` ifade söz dizimi benzer bir koda dönüştürür. `try` Blok, değişkenin bildirildiği yerde açılır. `finally` Blok, genellikle bir yöntemin sonunda kapsayan bloğa yakın bir zamanda eklenir.
 
-İfade hakkında `try` - daha fazla bilgi [için, try-finally](try-finally.md) makalesine bakın. `finally`
+İfadesiyle ilgili `try` - daha fazla bilgi için bkz. [try-finally](try-finally.md) makalesi. `finally`
 
-Bir türün birden çok örneği, `using` aşağıdaki örnekte gösterildiği gibi tek bir deyimle bildirilebilir. Tek bir ifadede birden çok değişken ilettiğinizde örtülü olarak yazılan değişkenleri ()`var`kullanamayacağınızı unutmayın:
+Aşağıdaki örnekte gösterildiği gibi, bir türün birden çok örneği tek `using` bir bildirimde bildirilebilecek. Tek bir ifadede birden çok değişken bildirdiğinizde örtük olarak`var`yazılmış değişkenleri () kullanamıyoruz.
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetDeclareMultipleVariables":::
 
-Aşağıdaki örnekte gösterildiği gibi, C# 8 ile tanıtılan yeni sözdizimini kullanarak aynı türden birden çok bildirimi birleştirebilirsiniz:
+Aşağıdaki örnekte gösterildiği gibi, C# 8 ile sunulan yeni sözdizimini kullanarak aynı türdeki birden çok bildirimi birleştirebilirsiniz:
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetModernMultipleVariables":::
 
-Kaynak nesnesini anında anlayabilir ve sonra değişkeni `using` ifadeye geçirebilirsiniz, ancak bu en iyi uygulama değildir. Bu durumda, denetim `using` bloğu terk ettikten sonra, nesne kapsamda kalır, ancak büyük olasılıkla yönetilmeyen kaynaklarına erişimi yoktur. Başka bir deyişle, artık tam olarak başharfe biçilemedi. Nesneyi `using` bloğun dışında kullanmaya çalışırsanız, bir özel durum atılmasını göze alabilirsiniz. Bu nedenle, `using` nesnenin ifadedeki anlık olarak anlık olarak ve kapsamını `using` blokla sınırlamak daha iyidir.
+Kaynak nesnesini örnekleyebilirsiniz ve sonra değişkeni `using` ifadeye geçirebilirsiniz, ancak bu en iyi yöntem değildir. Bu durumda, Denetim `using` bloğundan ayrıldıktan sonra nesne kapsamda kalır, büyük olasılıkla yönetilmeyen kaynaklarına erişemez. Diğer bir deyişle, artık tam olarak başlatılamaz. Nesneyi `using` bloğunun dışında kullanmaya çalışırsanız, bir özel durumun oluşturulması riskiyle karşılaşırsınız. Bu nedenle, `using` deyimindeki nesnenin örneğini oluşturmak ve kapsamını `using` bloğa sınırlamak daha iyidir.
 
 :::code language="csharp" source="snippets/usings.cs" id="SnippetDeclareBeforeUsing":::
 
-`IDisposable` Nesnelerin atılması hakkında daha fazla bilgi için [bkz.](../../../standard/garbage-collection/using-objects.md)
+`IDisposable` Nesneleri elden atma hakkında daha fazla bilgi için bkz. [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# Language Specification'daki](/dotnet/csharp/language-reference/language-specification/introduction) [using deyimine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [using ifadesine](~/_csharplang/spec/statements.md#the-using-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [using Yönergesi](using-directive.md)
-- [Çöp Toplama](../../../standard/garbage-collection/index.md)
+- [Çöp toplama](../../../standard/garbage-collection/index.md)
 - [IDisposable uygulayan nesneleri kullanma](../../../standard/garbage-collection/using-objects.md)
-- [IDisposable arayüzü](xref:System.IDisposable)
-- [C# 8.0'da ifade kullanma](~/_csharplang/proposals/csharp-8.0/using.md)
+- [IDisposable arabirimi](xref:System.IDisposable)
+- [C# 8,0 ' de using deyimleri](~/_csharplang/proposals/csharp-8.0/using.md)

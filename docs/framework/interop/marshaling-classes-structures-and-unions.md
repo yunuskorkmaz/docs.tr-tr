@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960010"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200021"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 
@@ -42,6 +42,7 @@ Aşağıdaki tablo sınıflar, yapılar ve birleşimler için sıralama seçenek
 |Başvuruya göre tamsayılar ve dizeler içeren yapıların dizisi.|Out parametresi olarak tamsayılar ve dizeler içeren bir yapı dizisini geçirir. Çağrılan işlev dizi için bellek ayırır.|[Outarrayofyapılar örneği](#outarrayofstructs-sample)|
 |Değer türleri olan birleşimler.|Birleşimleri değer türleriyle geçirir (tamsayı ve çift).|[Birleşimler örneği](#unions-sample)|
 |Karışık Türler içeren birleşimler.|Birleşimleri karışık türler (tamsayı ve dize) ile geçirir.|[Birleşimler örneği](#unions-sample)|
+|Platforma özgü düzen ile struct.|Yerel paketleme tanımlarına sahip bir tür geçirir.|[Platform örneği](#platform-sample)|
 |Yapıda null değerler.|Değer türüne başvuru yerine bir null başvurusu (Visual Basic**hiçbir şey** ) geçirir.|[HandleRef örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Yapılar örneği
@@ -221,6 +222,85 @@ Yönetilen kodda birleşimler yapılar olarak tanımlanır. Yapı `MyUnion` , ü
 [!code-cpp[Conceptual.Interop.Marshaling#29](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)]
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
+
+## <a name="platform-sample"></a>Platform örneği
+
+Bazı senaryolarda `struct` ve `union` düzenler hedeflenen platforma bağlı olarak farklılık gösterebilir. Örneğin, bir COM senaryosunda [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) tanımlandığı zaman türü göz önünde bulundurun:
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+Yukarıdaki `struct` , türün bellek yerleşimini etkileyen Windows üstbilgileri ile bildirilmiştir. Yönetilen bir ortamda tanımlandığında, yerel kodla düzgün şekilde birlikte çalışmak için bu düzen ayrıntılarının olması gerekir.
+
+Bu türün 32 bitlik bir işlemde doğru yönetilen tanımı:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+64 bit süreçte boyut *ve* alan uzaklıkları farklıdır. Doğru düzen:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+Bir birlikte çalışma senaryosunda yerel düzeni doğru şekilde düşünmeyen hata rastgele kilitlenmeler veya daha kötü hesaplamalar, yanlış hesaplamalar olabilir.
+
+Varsayılan olarak, .NET derlemeleri .NET çalışma zamanının 32-bit ve 64 bit sürümünde çalıştırılabilir. Uygulamanın, önceki tanımlardan hangisinin kullanılacağına karar vermek için çalışma zamanına kadar beklemesi gerekir.
+
+Aşağıdaki kod parçacığı, çalışma zamanında 32-bit ve 64 bit tanım arasında nasıl seçim yapılacağı hakkında bir örnek gösterir.
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
 
 ## <a name="systime-sample"></a>SysTime örneği
 

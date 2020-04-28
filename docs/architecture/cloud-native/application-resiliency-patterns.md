@@ -2,12 +2,12 @@
 title: Uygulama dayanıklılığı desenleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Uygulama dayanıklılığı desenleri
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087757"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199696"
 ---
 # <a name="application-resiliency-patterns"></a>Uygulama dayanıklılığı desenleri
 
@@ -33,7 +33,7 @@ Bölüm 1 ' de önerildiği gibi, bulutta yerel uygulamalar oluştururken Micros
 
 Sonra, yeniden deneme ve devre kesici desenlerinde genişletelim.
 
-### <a name="retry-pattern"></a>Yeniden deneme biçimi
+### <a name="retry-pattern"></a>Yeniden deneme düzeni
 
 Dağıtılmış bir bulutta yerel ortamda, hizmet ve bulut kaynaklarına yapılan çağrılar, genellikle kısa bir süre sonra kendilerini düzelttiğinden geçici (kısa süreli) hatalardan dolayı başarısız olabilir. Yeniden deneme stratejisi uygulamak, bulutta yerel bir hizmetin bu senaryoları işlemesine yardımcı olur.
 
@@ -54,9 +54,9 @@ Hizmet süresinin kendine doğru olması için çağrıyı yeniden denemeden ön
 
 ## <a name="circuit-breaker-pattern"></a>Devre kesici stili
 
-Yeniden deneme stili, bir isteği kısmi bir hata halinde ölçeklendirmesine yardımcı olmakla kalmaz, hataların daha uzun süre içinde çözülmesi gereken beklenmeyen olaylar nedeniyle hatalara neden olabilecek durumlar vardır. Bu hatalar, bir hizmetin tamamen başarısızlığına yönelik kısmi bir bağlantı kaybından önem düzeyi olarak değişebilir. Bu durumlarda, bir uygulamanın başarılı olması olası olmayan bir işlemi sürekli olarak yeniden denemesi için daha az kullanılır.
+Yeniden deneme stili, bir isteği kısmi bir hata halinde ölçeklendirmesine yardımcı olmakla kalmaz, hataların daha uzun süre içinde çözülmesi gereken beklenmeyen olaylar nedeniyle hatalara neden olabilecek durumlar vardır. Bu hataların önem derecesi kısmi bağlantı kaybıyla bir hizmetin tamamen çökmesi arasında değişebilir. Bu durumlarda, bir uygulamanın başarılı olması olası olmayan bir işlemi sürekli olarak yeniden denemesi için daha az kullanılır.
 
-Nesnelerin daha kötü olması için, yanıt vermeyen bir hizmette sürekli yeniden deneme işlemleri yürütmek, sizi, bellek, iş parçacıkları ve veritabanı gibi kaynakları tükettiğini önemli bir çağrı ile yaptığınız otomatik olarak belirlenen bir hizmet reddi senaryosuna taşıyabilirler. bağlantılar, sistemin aynı kaynakları kullanan ilişkisiz kısımlarında hata vermesine neden olur.
+Kötü, yanıt vermeyen bir hizmette sürekli yeniden deneme işlemleri gerçekleştirmek için, önemli olmayan bir hizmette sürekli olarak gerçekleştirilen bir hizmet reddi senaryosuna taşınabilir ve bu da, bellek, iş parçacıkları ve veritabanı bağlantıları gibi kaynakları tüketerek, aynı kaynakları kullanan sistemin ilgisiz kısımlarında hata oluşmasına neden olabilir.
 
 Bu durumlarda, işlemin hemen başarısız olması ve yalnızca başarılı olma olasılığı varsa hizmeti çağırmayı denemesi tercih edilir.
 
