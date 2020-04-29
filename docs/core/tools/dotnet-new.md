@@ -1,23 +1,23 @@
 ---
-title: dotnet yeni komut
-description: Dotnet yeni komutu, belirtilen şablonu temel alan yeni .NET Core projeleri oluşturur.
+title: DotNet yeni komut
+description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102833"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506863"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.0 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
 ## <a name="name"></a>Adı
 
-`dotnet new`- Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
+`dotnet new`-Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
@@ -32,9 +32,9 @@ dotnet new -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Komut, `dotnet new` şablona dayalı bir .NET Core projesi veya diğer yapılar oluşturur.
+`dotnet new` Komut bir şablonu temel alan bir .NET Core projesi veya diğer yapılar oluşturur.
 
-Komut, belirtilen şablon ve seçenekleri temel alan disküzerinde yapıları oluşturmak için [şablon altyapısını](https://github.com/dotnet/templating) çağırır.
+Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturmak için [şablon altyapısını](https://github.com/dotnet/templating) çağırır.
 
 ### <a name="implicit-restore"></a>Örtük geri yükleme
 
@@ -44,75 +44,75 @@ Komut, belirtilen şablon ve seçenekleri temel alan disküzerinde yapıları ol
 
 - **`TEMPLATE`**
 
-  Komut çağrıldığında anında başlatılabilmek için şablon. Her şablonun geçirebileceğiniz belirli seçenekleri olabilir. Daha fazla bilgi için [Şablon seçeneklerine](#template-options)bakın.
+  Komut çağrıldığında örnek oluşturulacak şablon. Her şablonun geçirebilmeniz için özel seçenekleri olabilir. Daha fazla bilgi için bkz. [şablon seçenekleri](#template-options).
 
-  Yüklenen tüm `dotnet new --list` şablonların listesini görmek için çalıştırabilirsiniz. Döndürülen `TEMPLATE` tablodaki **Şablonlar** veya **Kısa Ad** sütunundaki metindeki değer tam eşleşme değilse, bu iki sütunda bir alt dize eşleşmesi gerçekleştirilir.
+  Tüm yüklü şablonların `dotnet new --list` listesini `dotnet new -l` görmek için veya çalıştırabilirsiniz. `TEMPLATE` Değer, döndürülen tablodaki **Şablonlar** veya **kısa ad** sütunundaki metinde tam eşleşme değilse, bu iki sütunda bir alt dize eşleşmesi gerçekleştirilir.
 
-  .NET Core 3.0 SDK ile başlayarak, cli aşağıdaki koşullarda `dotnet new` komutu çağırdığınızda NuGet.org şablonları arar:
+  .NET Core 3,0 SDK ile başlayarak, aşağıdaki koşullarda `dotnet new` komutu çağırdığınızda CLI NuGet.org içindeki şablonları arar:
 
-  - CLI, çağrıştırırken bir şablon eşleşmesi `dotnet new`bulamazsa, kısmi bile değildir.
-  - Şablonun daha yeni bir sürümü varsa. Bu durumda, proje veya yapı oluşturulur, ancak CLI şablonun güncelleştirilmiş bir sürümü hakkında sizi uyarır.
+  - CLı çağrılırken `dotnet new`bir şablon eşleşmesi bulamazsa, bu da kısmi değildir.
+  - Şablonun daha yeni bir sürümü kullanılabilir. Bu durumda, proje veya yapıt oluşturulur ancak CLı, şablonun güncelleştirilmiş bir sürümü hakkında sizi uyarır.
 
-  Komut varsayılan şablonlar listesini içerir. Kullanılabilir `dotnet new -l` şablonların listesini almak için kullanın. Aşağıdaki tabloda .NET Core SDK ile önceden yüklenmiş gelen şablonlar gösterilmektedir. Şabloniçin varsayılan dil parantez içinde gösterilir. Belirli şablon seçeneklerini görmek için kısa ad bağlantısını tıklatın.
+  Aşağıdaki tabloda, .NET Core SDK ile önceden yüklenmiş olan şablonlar gösterilmektedir. Şablon için varsayılan dil, köşeli ayraçlar içinde gösterilir. Özel şablon seçeneklerini görmek için kısa ad bağlantısına tıklayın.
 
-| Şablonlar                                    | Kısa ad                      | Dil     | Etiketler                                  | Tanıttı |
+| Şablonlar                                    | Kısa ad                      | Dil     | Etiketler                                  | Dağıtıla |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Konsol Uygulaması                          | [Konsol](#console)             | [C#], F#, VB | Ortak/Konsol                        | 1.0        |
-| Sınıf kitaplığı                                | [classlib](#classlib)           | [C#], F#, VB | Ortak / Kütüphane                        | 1.0        |
-| WPF Uygulaması                              | [Wpf](#wpf)                     | [C#]         | Ortak/WPF                            | 3,0        |
-| WPF Sınıf kitaplığı                            | [wpflib](#wpf)                  | [C#]         | Ortak/WPF                            | 3,0        |
-| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Ortak/WPF                            | 3,0        |
-| WPF Kullanıcı Kontrol Kütüphanesi                     | [wpfusercontrollib](#wpf)       | [C#]         | Ortak/WPF                            | 3,0        |
-| Windows Formları (WinForms) Uygulaması         | [Winforms](#winforms)           | [C#]         | Ortak/WinForm'lar                       | 3,0        |
-| Windows Formları (WinForms) Sınıf kitaplığı       | [winformslib](#winforms)        | [C#]         | Ortak/WinForm'lar                       | 3,0        |
-| İşçi Hizmeti                               | [Işçi](#web-others)           | [C#]         | Ortak/Çalışan/Web                     | 3,0        |
-| Ünite Test Projesi                            | [Mstest](#test)                 | [C#], F#, VB | Test /MSTest                           | 1.0        |
-| NUnit 3 Test Projesi                         | [nunit](#nunit)                  | [C#], F#, VB | Test /NUnit                            | 2.1.400    |
-| NUnit 3 Test Öğesi                            | `nunit-test`                    | [C#], F#, VB | Test /NUnit                            | 2,2        |
-| xUnit Test Projesi                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
-| Jilet Bileşeni                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3,0        |
-| Jilet Sayfası                                   | [Sayfası](#page)                   | [C#]         | Web/ASP.NET                           | 2,0        |
-| MVC Görünümİthalat                              | [içe görme](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
-| MVC Görünüm Başlat                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
-| Blazor Server Uygulaması                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3,0        |
-| ASP.NET Çekirdek Boş                           | [Web](#web)                     | [C#], F #     | Web/Boş                             | 1.0        |
-| ASP.NET Çekirdek Web Uygulaması (Model-View-Controller) | [Mvc](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
-| ASP.NET Çekirdek Web Uygulaması                         | [webapp, jilet](#web-options)   | [C#]         | Web/MVC/Razor Sayfaları                   | 2.2, 2.0   |
-| ASP.NET Çekirdek li Açısal                    | [Açısal](#spa)                 | [C#]         | Web/MVC/SPA                           | 2,0        |
-| React.js ile ASP.NET Çekirdek                   | [Tepki](#spa)                   | [C#]         | Web/MVC/SPA                           | 2,0        |
-| React.js ve Redux ile ASP.NET Çekirdek         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2,0        |
-| Razor Sınıf Kütüphanesi                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Kütüphane/Razor Sınıf Kütüphanesi | 2.1        |
-| ASP.NET Core Web API'si                         | [webapi](#webapi)               | [C#], F #     | Web/WebAPI                            | 1.0        |
-| ASP.NET Çekirdek gRPC Hizmeti                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3,0        |
-| Protokol Arabellek Dosyası                         | [Proto](#namespace)             |              | Web/gRPC                              | 3,0        |
-| dotnet gitignore dosyası                        | `gitignore`                     |              | Config                                | 3,0        |
-| global.json dosyası                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
-| NuGet Config                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| dotnet yerel araç bildirimi dosyası              | `tool-manifest`                 |              | Config                                | 3,0        |
-| Web Config                                   | `webconfig`                     |              | Config                                | 1.0        |
-| Çözüm Dosyası                                | `sln`                           |              | Çözüm                              | 1.0        |
+| Konsol Uygulaması                          | [konsola](#console)             | [C#], F #, VB | Ortak/konsol                        | 1.0        |
+| Sınıf kitaplığı                                | [projesinin](#classlib)           | [C#], F #, VB | Ortak/Kitaplık                        | 1.0        |
+| WPF uygulaması                              | [WPF](#wpf)                     | Þ         | Ortak/WPF                            | 3,0        |
+| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | Þ         | Ortak/WPF                            | 3,0        |
+| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | Þ         | Ortak/WPF                            | 3,0        |
+| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | Þ         | Ortak/WPF                            | 3,0        |
+| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | Þ         | Ortak/WinForms                       | 3,0        |
+| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | Þ         | Ortak/WinForms                       | 3,0        |
+| Çalışan hizmeti                               | [ından](#web-others)           | Þ         | Ortak/çalışan/Web                     | 3,0        |
+| Birim testi projesi                            | ['i](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
+| NUnit 3 test projesi                         | [NUnit](#nunit)                  | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 test öğesi                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2,2        |
+| xUnit test projesi                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1.0        |
+| Razor bileşeni                              | `razorcomponent`                | Þ         | Web/ASP. NET                           | 3,0        |
+| Razor sayfası                                   | [sayfasında](#page)                   | Þ         | Web/ASP. NET                           | 2,0        |
+| MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2,0        |
+| MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2,0        |
+| Blazor sunucusu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | Web/Blazor                            | 3,0        |
+| ASP.NET Core boş                           | [Web](#web)                     | [C#], F #     | Web/boş                             | 1.0        |
+| ASP.NET Core Web uygulaması (Model-View-Controller) | [MVC](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
+| ASP.NET Core Web uygulaması                         | [WEBAPP, Razor](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
+| Angular ile ASP.NET Core                    | [Angular](#spa)                 | Þ         | Web/MVC/SPA                           | 2,0        |
+| Tepki verme. js ile ASP.NET Core                   | [tıkla](#spa)                   | Þ         | Web/MVC/SPA                           | 2,0        |
+| Yanıt verir. js ve Redux ile ASP.NET Core         | [reactredux](#reactredux)       | Þ         | Web/MVC/SPA                           | 2,0        |
+| Razor sınıf kitaplığı                          | [razorclasslib](#razorclasslib) | Þ         | Web/Razor/kitaplık/Razor sınıfı kitaplığı | 2.1        |
+| ASP.NET Core Web API'si                         | [WebApi](#webapi)               | [C#], F #     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC hizmeti                    | [GRPC](#web-others)             | Þ         | Web/gRPC                              | 3,0        |
+| DotNet gitignore dosyası                        | `gitignore`                     |              | Config                                | 3,0        |
+| Global. JSON dosyası                             | [globaljson](#globaljson)       |              | Config                                | 2,0        |
+| NuGet yapılandırması                                 | `nugetconfig`                   |              | Config                                | 1.0        |
+| DotNet yerel araç bildirim dosyası              | `tool-manifest`                 |              | Config                                | 3,0        |
+| Web yapılandırması                                   | `webconfig`                     |              | Config                                | 1.0        |
+| Çözüm dosyası                                | `sln`                           |              | Çözüm                              | 1.0        |
+| Protokol arabelleği dosyası                         | [Proto](#namespace)             |              | Web/gRPC                              | 3,0        |
 
 ## <a name="options"></a>Seçenekler
 
 - **`--dry-run`**
 
-  Verilen komut çalıştırılırsa ne olacağının bir özetini görüntüler. .NET Core 2.2 SDK'dan beri mevcuttur.
+  Bir şablon oluşturulmasına neden olacaksa, verilen komutun çalıştırılması durumunda ne olacağını gösteren bir Özet görüntüler. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
 - **`--force`**
 
-  Varolan dosyaları değiştirse bile içeriği oluşturulmaya zorlar. Bu, seçilen şablon çıktı dizinindeki varolan dosyaları geçersiz kılacaksa gereklidir.
+  Var olan dosyaları değiştirebilse bile içeriğin oluşturulmasını zorlar. Seçilen şablon çıkış dizinindeki mevcut dosyaları geçersiz kılacağından bu gereklidir.
 
 - **`-h|--help`**
 
-  Komut için yardım yazdırır. Komutun `dotnet new` kendisi veya herhangi bir şablon için çağrılabilir. Örneğin, `dotnet new mvc --help`.
+  Komut için yardım yazdırır. `dotnet new` Komutun kendisi veya herhangi bir şablon için çağrılabilir. Örneğin, `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
-  Bir şablon paketi yükler `PATH` `NUGET_ID` veya sağlanan. Bir şablon paketinin ön sürüm sürümünü yüklemek istiyorsanız, sürümü ' nin `<package-name>::<package-version>`biçiminde belirtmeniz gerekir. Varsayılan `dotnet new` olarak, \* en son kararlı paket sürümünü temsil eden sürüm için geçer. [Örnekler](#examples) bölümündeki bir örneğe bakın.
+  `PATH` Veya `NUGET_ID` tarafından belirtilen bir şablon paketini kurar. Şablon paketinin bir ön sürümü sürümünü yüklemek istiyorsanız, sürümü biçiminde belirtmeniz gerekir `<package-name>::<package-version>`. Varsayılan olarak, `dotnet new` en \* son kararlı paket sürümünü temsil eden sürüm için geçirir. [Örnekler](#examples) bölümündeki bir örneğe bakın.
   
-  Bu komutu çalıştırdığınızda şablonun bir sürümü zaten yüklenmişse, sürüm belirtilmemişse şablon belirtilen sürüme veya en son kararlı sürüme güncelleştirilir.
+  Bu komutu çalıştırdığınızda şablonun bir sürümü zaten yüklüyse, şablon belirtilen sürüme veya sürüm belirtilmemişse en son kararlı sürüme güncelleştirilir.
 
-  Özel şablonlar oluşturma hakkında bilgi [için, nokta yeni için Özel şablonlara](custom-templates.md)bakın.
+  Özel şablonlar oluşturma hakkında daha fazla bilgi için bkz. [DotNet New Için özel şablonlar](custom-templates.md).
 
 - **`-l|--list`**
 
@@ -120,56 +120,56 @@ Komut, belirtilen şablon ve seçenekleri temel alan disküzerinde yapıları ol
 
 - **`-lang|--language {C#|F#|VB}`**
 
-  Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir [(bağımsız değişkenler](#arguments) bölümündeki varsayılanlara bakın). Bazı şablonlar için geçerli değildir.
+  Oluşturulacak şablonun dili. Kabul edilen dil şablona göre değişir (bkz. [arguments](#arguments) bölümünde Varsayılanlar). Bazı şablonlar için geçerli değildir.
 
   > [!NOTE]
-  > Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu gibi durumlarda, dil parametre değerini tırnak içinde içine atl.. Örneğin, `dotnet new console -lang "F#"`.
+  > Bazı kabuklar `#` özel bir karakter olarak yorumlanır. Bu durumlarda, dil parametre değerini tırnak içine alın. Örneğin, `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
-  Oluşturulan çıktının adı. Ad belirtilmemişse, geçerli dizinin adı kullanılır.
+  Oluşturulan çıkışın adı. Ad belirtilmemişse, geçerli dizinin adı kullanılır.
 
 - **`--nuget-source <SOURCE>`**
 
-  Yükleme sırasında kullanılacak bir NuGet kaynağı belirtir. .NET Core 2.1 SDK'dan beri mevcuttur.
+  Yüklemesi sırasında kullanılacak bir NuGet kaynağını belirtir. .NET Core 2,1 SDK 'dan beri kullanılabilir.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Oluşturulan çıktıyı yerleştirmek için yer. Geçerli dizin varsayılandır.
+  Oluşturulan çıkışın yerleştirileceği konum. Geçerli dizin varsayılandır.
 
 - **`--type <TYPE>`**
 
-  Kullanılabilir türleri temel alan şablonları filtreler. Önceden tanımlanmış `project`değerler `item`, `other`, veya .
+  Şablonları kullanılabilir türlerine göre filtreler. Önceden tanımlanmış değerler `project`, `item`, ve `other`.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
-  Bir şablon paketini `PATH` kaldırın `NUGET_ID` veya sağlanan. `<PATH|NUGET_ID>` Değer belirtilmediği zaman, şu anda yüklü olan tüm şablon paketleri ve ilişkili şablonları görüntülenir. `NUGET_ID`Belirtirken, sürüm numarasını eklemeyin.
+  `PATH` Veya `NUGET_ID` belirtilen bir şablon paketini kaldırır. `<PATH|NUGET_ID>` Değer belirtilmediğinde, yüklü olan tüm şablon paketleri ve bunlarla ilişkili şablonlar görüntülenir. Belirtirken `NUGET_ID`, sürüm numarasını eklemeyin.
 
-  Bu seçenek için bir parametre belirtmezseniz, komut yüklenen şablonları ve bunlarla ilgili ayrıntıları listeler.
+  Bu seçeneğe bir parametre belirtmezseniz, komut, yüklü şablonları ve bunlarla ilgili ayrıntıları listeler.
 
   > [!NOTE]
-  > Bir şablonu kaldırmak `PATH`için , yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* çalışmaz.
-  > Şablon yolunuza sonlandırma dizini kesimieklemeyi eklemeyin.
+  > Bir `PATH`şablonu kullanarak kaldırmak için, yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcıları/\<Kullanıcı>/Documents/Templates/garciasoftware.consoletemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
+  > Şablon yolunuzda son Sonlandırıcı Dizin eğik çizgisi eklemeyin.
 
 - **`--update-apply`**
 
-  Şu anda yüklü olan ve bunları yükleyen şablon paketleri için güncelleştirmeolup olmadığını denetler. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Şu anda yüklü olan şablon paketleri için kullanılabilir güncelleştirmelerin olup olmadığını denetler ve bunları kurar. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 - **`--update-check`**
 
-  Şu anda yüklü olan şablon paketleri için güncelleştirme olup olmadığını denetler. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Şu anda yüklü olan şablon paketleri için kullanılabilir güncelleştirmeler olup olmadığını denetler. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ## <a name="template-options"></a>Şablon seçenekleri
 
-Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıdaki ek seçeneklere sahiptir:
+Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıdaki ek seçeneklere sahiptir:
 
 ### <a name="console"></a>console
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -178,89 +178,89 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Oluşturulan `LangVersion` proje dosyasındaki özelliği ayarlar. Örneğin, C# 7.3'u kullanmak için kullanın. `--langVersion 7.3` F# için desteklenmez. .NET Core 2.2 SDK'dan beri mevcuttur.
+  Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, C# 7,3 `--langVersion 7.3` kullanmak için kullanın. F # için desteklenmez. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
-  Varsayılan C# sürümlerinin listesi için [Varsayılanlar'a](../../csharp/language-reference/configure-language-version.md#defaults)bakın.
+  Varsayılan C# sürümlerinin listesi için bkz. [Varsayılanlar](../../csharp/language-reference/configure-language-version.md#defaults).
 
 - **`--no-restore`**
 
-  Belirtilirse, proje oluşturma sırasında örtülü bir geri yükleme yürütmez. .NET Core 2.2 SDK'dan beri mevcuttur.
+  Belirtilmişse, proje oluşturma sırasında örtük geri yükleme yürütmez. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
 ***
 
-### <a name="classlib"></a>classlib
+### <a name="classlib"></a>projesinin
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp<version>` .NET Çekirdek Sınıf Kitaplığı oluşturmak veya `netstandard<version>` .NET Standart Sınıf Kitaplığı oluşturmak için. Varsayılan değer: `netstandard2.0`.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Değerler: `netcoreapp<version>` bir .NET Core sınıf kitaplığı oluşturmak veya `netstandard<version>` bir .NET Standard sınıf kitaplığı oluşturmak için. Varsayılan değer: `netstandard2.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Oluşturulan `LangVersion` proje dosyasındaki özelliği ayarlar. Örneğin, C# 7.3'u kullanmak için kullanın. `--langVersion 7.3` F# için desteklenmez. .NET Core 2.2 SDK'dan beri mevcuttur.
+  Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, C# 7,3 `--langVersion 7.3` kullanmak için kullanın. F # için desteklenmez. .NET Core 2,2 SDK 'dan beri kullanılabilir.
 
-  Varsayılan C# sürümlerinin listesi için [Varsayılanlar'a](../../csharp/language-reference/configure-language-version.md#defaults)bakın.
+  Varsayılan C# sürümlerinin listesi için bkz. [Varsayılanlar](../../csharp/language-reference/configure-language-version.md#defaults).
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>WPF, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3.1 SDK'dan beri mevcuttur.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Oluşturulan `LangVersion` proje dosyasındaki özelliği ayarlar. Örneğin, C# 7.3'u kullanmak için kullanın. `--langVersion 7.3`
+  Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, C# 7,3 `--langVersion 7.3` kullanmak için kullanın.
 
-  Varsayılan C# sürümlerinin listesi için [Varsayılanlar'a](../../csharp/language-reference/configure-language-version.md#defaults)bakın.
+  Varsayılan C# sürümlerinin listesi için bkz. [Varsayılanlar](../../csharp/language-reference/configure-language-version.md#defaults).
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a>winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a>WinForms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  Oluşturulan `LangVersion` proje dosyasındaki özelliği ayarlar. Örneğin, C# 7.3'u kullanmak için kullanın. `--langVersion 7.3`
+  Oluşturulan proje `LangVersion` dosyasındaki özelliği ayarlar. Örneğin, C# 7,3 `--langVersion 7.3` kullanmak için kullanın.
 
-  Varsayılan C# sürümlerinin listesi için [Varsayılanlar'a](../../csharp/language-reference/configure-language-version.md#defaults)bakın.
+  Varsayılan C# sürümlerinin listesi için bkz. [Varsayılanlar](../../csharp/language-reference/configure-language-version.md#defaults).
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="worker-grpc"></a><a name="web-others"></a>işçi, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a>çalışan, GRPC
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3.1 SDK'dan beri mevcuttur.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Varsayılan değer: `netcoreapp3.1`. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="mstest-xunit"></a><a name="test"></a>mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a>MSTest, xUnit
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 3.0 SDK beri kullanılabilir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core 3,0 SDK 'dan beri kullanılabilir seçeneği.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -269,21 +269,21 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`-p|--enable-pack`**
 
-  [Dotnet paketi](dotnet-pack.md)kullanarak proje için paketleme sağlar.
+  [DotNet Pack](dotnet-pack.md)kullanarak proje için paketleme imkanı sunar.
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="nunit"></a>nunit
+### <a name="nunit"></a>NUnit
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -294,15 +294,15 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`-p|--enable-pack`**
 
-  [Dotnet paketi](dotnet-pack.md)kullanarak proje için paketleme sağlar.
+  [DotNet Pack](dotnet-pack.md)kullanarak proje için paketleme imkanı sunar.
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
-### <a name="page"></a>Sayfası
+### <a name="page"></a>sayfasında
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -310,11 +310,11 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`-np|--no-pagemodel`**
 
-  Sayfayı PageModel olmadan oluşturur.
+  PageModel olmadan sayfayı oluşturur.
 
 ***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a>viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a>viewıtemler, Proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -326,70 +326,70 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
+  Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`- Kimlik doğrulaması yok (Varsayılan).
-  - `Individual`- Bireysel kimlik doğrulama.
-  - `IndividualB2C`- Azure AD B2C ile bireysel kimlik doğrulaması.
-  - `SingleOrg`- Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `MultiOrg`- Birden çok kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`- Windows kimlik doğrulaması.
+  - `None`-Kimlik doğrulaması yok (varsayılan).
+  - `Individual`-Bireysel kimlik doğrulama.
+  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
+  - `Windows`-Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Active Directory B2C örneği. Kimlik `IndividualB2C` doğrulaması ile kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  Bu proje için oturum açma ve kaydolma ilkesi kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`-rp|--reset-password-policy-id <ID>`**
 
-  Bu proje için sıfırlama parola ilkesi kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`-ep|--edit-profile-policy-id <ID>`**
 
-  Bu projenin profil ilke kimliğini edin. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için profil ilke KIMLIĞINI Düzenle. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Etkin Dizin örneği. Kimlik `SingleOrg` doğrulaması ile kullanın. `MultiOrg` Varsayılan değer: `https://login.microsoftonline.com/`.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` Veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci Kimliği. "Kimlik `IndividualB2C` `SingleOrg`doğrulama" `MultiOrg` ile kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`Veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracı için etki alanı. Kimlik `SingleOrg` doğrulaması ile kullanın. `IndividualB2C` Varsayılan değer: `qualified.domain.name`.
+  Dizin kiracının etki alanı. `SingleOrg` Veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanacak dizinin Kiracı Kimliği. Kimlik `SingleOrg` doğrulaması ile kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Yeniden yönlendirme URI uygulamanın temel yolu içinde istek yolu. Kimlik `SingleOrg` doğrulaması ile kullanın. `IndividualB2C` Varsayılan değer: `/signin-oidc`.
+  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` Veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
-  Bu uygulamanın dizine okuma erişimine izin verir. Yalnızca kimlik `SingleOrg` doğrulama `MultiOrg` veya kimlik doğrulama için geçerlidir.
+  Bu uygulamanın dizine okuma erişimini sağlar. Yalnızca veya `MultiOrg` kimlik `SingleOrg` doğrulaması için geçerlidir.
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır. Bu seçenek yalnızca `Individual`, `IndividualB2C` `SingleOrg`, `MultiOrg` , , `--auth`için kullanılıyorsa veya kullanılmazsa geçerlidir.
+  HTTPS 'yi kapatır. Bu `Individual`seçenek yalnızca, `IndividualB2C` `SingleOrg`,, veya `MultiOrg` için `--auth`kullanılmıyorsa geçerlidir.
 
 - **`-uld|--use-local-db`**
 
-  SQLite yerine LocalDB'nin kullanılması gerektiğini belirtir. Yalnızca kimlik `Individual` doğrulama `IndividualB2C` veya kimlik doğrulama için geçerlidir.
+  SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `IndividualB2C` kimlik `Individual` doğrulaması için geçerlidir.
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
@@ -397,13 +397,13 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2.2 SDK'da kullanılamaz.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2,2 SDK sürümünde kullanılamaz.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -413,84 +413,84 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır.
+  HTTPS 'yi kapatır.
 
 ***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a>mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a>MVC, WebApp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
+  Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`- Kimlik doğrulaması yok (Varsayılan).
-  - `Individual`- Bireysel kimlik doğrulama.
-  - `IndividualB2C`- Azure AD B2C ile bireysel kimlik doğrulaması.
-  - `SingleOrg`- Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `MultiOrg`- Birden çok kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`- Windows kimlik doğrulaması.
+  - `None`-Kimlik doğrulaması yok (varsayılan).
+  - `Individual`-Bireysel kimlik doğrulama.
+  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
+  - `Windows`-Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Active Directory B2C örneği. Kimlik `IndividualB2C` doğrulaması ile kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  Bu proje için oturum açma ve kaydolma ilkesi kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`-rp|--reset-password-policy-id <ID>`**
 
-  Bu proje için sıfırlama parola ilkesi kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için parola sıfırlama ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`-ep|--edit-profile-policy-id <ID>`**
 
-  Bu projenin profil ilke kimliğini edin. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için profil ilke KIMLIĞINI Düzenle. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Etkin Dizin örneği. Kimlik `SingleOrg` doğrulaması ile kullanın. `MultiOrg` Varsayılan değer: `https://login.microsoftonline.com/`.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` Veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci Kimliği. "Kimlik `IndividualB2C` `SingleOrg`doğrulama" `MultiOrg` ile kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C`, `SingleOrg`Veya `MultiOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracı için etki alanı. Kimlik `SingleOrg` doğrulaması ile kullanın. `IndividualB2C` Varsayılan değer: `qualified.domain.name`.
+  Dizin kiracının etki alanı. `SingleOrg` Veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanacak dizinin Kiracı Kimliği. Kimlik `SingleOrg` doğrulaması ile kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`--callback-path <PATH>`**
 
-  Yeniden yönlendirme URI uygulamanın temel yolu içinde istek yolu. Kimlik `SingleOrg` doğrulaması ile kullanın. `IndividualB2C` Varsayılan değer: `/signin-oidc`.
+  Uygulamanın yeniden yönlendirme URI 'sinin temel yolundaki istek yolu. `SingleOrg` Veya `IndividualB2C` kimlik doğrulamasıyla kullanın. Varsayılan değer: `/signin-oidc`.
 
 - **`-r|--org-read-access`**
 
-  Bu uygulamanın dizine okuma erişimine izin verir. Yalnızca kimlik `SingleOrg` doğrulama `MultiOrg` veya kimlik doğrulama için geçerlidir.
+  Bu uygulamanın dizine okuma erişimini sağlar. Yalnızca veya `MultiOrg` kimlik `SingleOrg` doğrulaması için geçerlidir.
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır. Bu seçenek yalnızca `Individual`, `IndividualB2C` `SingleOrg`, `MultiOrg` , , , veya kullanılmazsa geçerlidir.
+  HTTPS 'yi kapatır. `Individual`Bu seçenek yalnızca `IndividualB2C`, `SingleOrg`,, veya `MultiOrg` kullanılmıyorsa geçerlidir.
 
 - **`-uld|--use-local-db`**
 
-  SQLite yerine LocalDB'nin kullanılması gerektiğini belirtir. Yalnızca kimlik `Individual` doğrulama `IndividualB2C` veya kimlik doğrulama için geçerlidir.
+  SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `IndividualB2C` kimlik `Individual` doğrulaması için geçerlidir.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 3.0 SDK beri kullanılabilir.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. .NET Core 3,0 SDK 'dan beri kullanılabilir seçeneği.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -499,50 +499,50 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 - **`--use-browserlink`**
 
-  Projeye BrowserLink'i içerir. Seçenek .NET Core 2.2 ve 3.1 SDK'da kullanılamaz.
+  Projedeki BrowserLink öğesini içerir. Seçenek .NET Core 2,2 ve 3,1 SDK sürümünde kullanılamaz.
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  Hata Ayıklama yapılarında [ustura çalışma zamanı derlemesi](/aspnet/core/mvc/views/view-compilation#runtime-compilation) kullanacak şekilde yapılandırıp yapılandırılmamasını belirler. Seçenek .NET Core 3.1 SDK'dan beri mevcuttur.
+  Projenin hata ayıklama yapılarında [Razor çalışma zamanı derlemesini](/aspnet/core/mvc/views/view-compilation#runtime-compilation) kullanmak üzere yapılandırılıp yapılandırılmadığını belirler. .NET Core 3.1.201 SDK 'dan beri kullanılabilir seçeneği.
 
 ***
 
-### <a name="angular-react"></a><a name="spa"></a>açısal, tepki
+### <a name="angular-react"></a><a name="spa"></a>Angular, tepki verme
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Kullanılacak kimlik doğrulama türü. .NET Core 3.0 SDK'dan beri mevcuttur.
+  Kullanılacak kimlik doğrulaması türü. .NET Core 3,0 SDK 'dan beri kullanılabilir.
   
   Olası değerler şunlardır:
 
-  - `None`- Kimlik doğrulaması yok (Varsayılan).
-  - `Individual`- Bireysel kimlik doğrulama.
+  - `None`-Kimlik doğrulaması yok (varsayılan).
+  - `Individual`-Bireysel kimlik doğrulama.
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır. Bu seçenek yalnızca kimlik `None`doğrulaması.
+  HTTPS 'yi kapatır. Bu seçenek yalnızca kimlik doğrulaması ise geçerlidir `None`.
 
 - **`-uld|--use-local-db`**
 
-  SQLite yerine LocalDB'nin kullanılması gerektiğini belirtir. Yalnızca kimlik `Individual` doğrulama `IndividualB2C` veya kimlik doğrulama için geçerlidir. .NET Core 3.0 SDK'dan beri mevcuttur.
+  SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca veya `IndividualB2C` kimlik `Individual` doğrulaması için geçerlidir. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2.2 SDK'da kullanılamaz.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2,2 SDK sürümünde kullanılamaz.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -556,13 +556,13 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2.2 SDK'da kullanılamaz.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2,2 SDK sürümünde kullanılamaz.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -572,11 +572,11 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır.
+  HTTPS 'yi kapatır.
 
 ***
 
@@ -584,70 +584,70 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 - **`-s|--support-pages-and-views`**
 
-  Bu kitaplığa bileşenlere ek olarak geleneksel Razor sayfaları ve Görünümler eklemeyi destekler. .NET Core 3.0 SDK'dan beri mevcuttur.
+  , Bu kitaplığa bileşenlere ek olarak geleneksel Razor sayfaları ve görünümleri eklenmesini destekler. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ***
   
-### <a name="webapi"></a>webapi
+### <a name="webapi"></a>WebApi
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Kullanılacak kimlik doğrulama türü. Olası değerler şunlardır:
+  Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`- Kimlik doğrulaması yok (Varsayılan).
-  - `IndividualB2C`- Azure AD B2C ile bireysel kimlik doğrulaması.
-  - `SingleOrg`- Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`- Windows kimlik doğrulaması.
+  - `None`-Kimlik doğrulaması yok (varsayılan).
+  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `Windows`-Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Active Directory B2C örneği. Kimlik `IndividualB2C` doğrulaması ile kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
+  Bağlanılacak Azure Active Directory B2C örneği. `IndividualB2C` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/tfp/`.
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  Bu proje için oturum açma ve kaydolma ilkesi kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın.
+  Bu proje için oturum açma ve kaydolma ilkesi KIMLIĞI. `IndividualB2C` Kimlik doğrulamasıyla kullanın.
 
 - **`--aad-instance <INSTANCE>`**
 
-  Bağlanmak için Azure Etkin Dizin örneği. Kimlik `SingleOrg` doğrulaması ile kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
+  Bağlanılacak Azure Active Directory örneği. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `https://login.microsoftonline.com/`.
 
 - **`--client-id <ID>`**
 
-  Bu projenin Istemci Kimliği. Kimlik `IndividualB2C` doğrulaması ile kullanın. `SingleOrg` Varsayılan değer: `11111111-1111-1111-11111111111111111`.
+  Bu projenin Istemci KIMLIĞI. `IndividualB2C` Veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `11111111-1111-1111-11111111111111111`.
 
 - **`--domain <DOMAIN>`**
 
-  Dizin kiracı için etki alanı. Kimlik `IndividualB2C` doğrulaması ile kullanın. `SingleOrg` Varsayılan değer: `qualified.domain.name`.
+  Dizin kiracının etki alanı. `IndividualB2C` Veya `SingleOrg` kimlik doğrulamasıyla kullanın. Varsayılan değer: `qualified.domain.name`.
 
 - **`--tenant-id <ID>`**
 
-  Bağlanacak dizinin Kiracı Kimliği. Kimlik `SingleOrg` doğrulaması ile kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
+  Bağlanılacak dizinin Tenantıd KIMLIĞI. `SingleOrg` Kimlik doğrulamasıyla kullanın. Varsayılan değer: `22222222-2222-2222-2222-222222222222`.
 
 - **`-r|--org-read-access`**
 
-  Bu uygulamanın dizine okuma erişimine izin verir. Yalnızca kimlik `SingleOrg` doğrulama için geçerlidir.
+  Bu uygulamanın dizine okuma erişimini sağlar. Yalnızca kimlik doğrulaması `SingleOrg` için geçerlidir.
 
 - **`--exclude-launch-settings`**
 
-  oluşturulan şablondan *launchSettings.json* hariç tutar.
+  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
 
 - **`--no-https`**
 
-  HTTPS'yi kapatır. `app.UseHsts`ve `app.UseHttpsRedirection` `Startup.Configure`eklenmez. Bu seçenek yalnızca `IndividualB2C` kimlik `SingleOrg` doğrulaması için kullanılıyorsa veya kullanılmamışsa geçerlidir.
+  HTTPS 'yi kapatır. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine `Startup.Configure`eklenmez. Bu seçenek yalnızca kimlik doğrulaması `IndividualB2C` için `SingleOrg` kullanılmıyorsa geçerlidir.
 
 - **`-uld|--use-local-db`**
 
-  SQLite yerine LocalDB'nin kullanılması gerektiğini belirtir. Yalnızca kimlik `IndividualB2C` doğrulama için geçerlidir.
+  SQLite yerine LocalDB kullanılması gerektiğini belirtir. Yalnızca kimlik doğrulaması `IndividualB2C` için geçerlidir.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Hedef için [çerçeve](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2.2 SDK'da kullanılamaz.
+  Hedeflenecek [çerçeveyi](../../standard/frameworks.md) belirtir. Seçenek .NET Core 2,2 SDK sürümünde kullanılamaz.
 
-  Aşağıdaki tablo, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerleri listeler:
+  Aşağıdaki tabloda, kullanmakta olduğunuz SDK sürüm numarasına göre varsayılan değerler listelenmektedir:
 
   | SDK sürümü | Varsayılan değer   |
   |-------------|-----------------|
@@ -657,7 +657,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--no-restore`**
 
-  Proje oluşturma sırasında örtülü bir geri yükleme yürütmez.
+  Proje oluşturma sırasında örtük geri yükleme yürütülmez.
 
 ***
 
@@ -665,25 +665,25 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  .NET Core SDK sürümünü *global.json* dosyasında kullanmak üzere belirtir.
+  *Global. JSON* dosyasında kullanılacak .NET Core SDK sürümünü belirtir.
 
 ***
 
 ## <a name="examples"></a>Örnekler
 
-- Şablon adını belirterek c# konsolu uygulama projesi oluşturun:
+- Şablon adını belirterek bir C# konsol uygulaması projesi oluşturun:
 
   ```dotnetcli
   dotnet new "Console Application"
   ```
 
-- Geçerli dizinde bir F# konsolu uygulama projesi oluşturun:
+- Geçerli dizinde bir F # konsol uygulaması projesi oluşturun:
 
   ```dotnetcli
   dotnet new console -lang F#
   ```
 
-- Belirtilen dizinde bir .NET Standart sınıf kitaplığı projesi oluşturun:
+- Belirtilen dizinde bir .NET Standard sınıf kitaplığı projesi oluşturun:
 
   ```dotnetcli
   dotnet new classlib -lang VB -o MyLibrary
@@ -695,43 +695,43 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
   dotnet new mvc -au None
   ```
 
-- Yeni bir xUnit projesi oluşturun:
+- Yeni bir xUnit projesi oluştur:
 
   ```dotnetcli
   dotnet new xunit
   ```
 
-- Tek Sayfa Uygulaması (SPA) şablonları için kullanılabilen tüm şablonları listeleyin:
+- Tek sayfalı uygulama (SPA) şablonları için kullanılabilen tüm şablonları listeleyin:
 
   ```dotnetcli
   dotnet new spa -l
   ```
 
-- *Biz* alt dize ile eşleşen tüm şablonları listeleyin. Tam eşleşme bulunamadı, bu nedenle alt dize eşleştirme hem kısa ad hem de ad sütunlarına karşı çalışır.
+- *We* alt dizeniz ile eşleşen tüm şablonları listeleyin. Tam eşleşme bulunamadı, bu nedenle alt dize eşleştirmesi hem kısa ad hem de ad sütunlarında çalışır.
 
   ```dotnetcli
   dotnet new we -l
   ```
 
-- Ng eşleşen şablonu çağırmak için girişimi *.* Tek bir eşleşme belirlenemezse, kısmi eşleşmeolan şablonları listeleyin.
+- Şablonla *eşleşen şablonu*çağırma girişimi. Tek bir eşleşme belirlenemiyorsa kısmi eşleşen şablonları listeleyin.
 
   ```dotnetcli
   dotnet new ng
   ```
 
-- ASP.NET Core için SPA şablonlarının 2.0 sürümünü yükleyin:
+- ASP.NET Core için SPA şablonlarının 2,0 sürümünü yükler:
 
   ```dotnetcli
   dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0
   ```
 
-- Yüklenen şablonları ve bunlarla ilgili ayrıntıları ve bunları nasıl kaldırılabildiğini listeleyin:
+- Yüklü şablonları ve bunlarla ilgili ayrıntıları, bunları kaldırma dahil olmak üzere listeleyin:
 
   ```dotnetcli
   dotnet new -u
   ```
 
-- Geçerli dizinde SDK sürümünü 3.1.101 olarak ayarlayarak *global.json* oluşturun:
+- SDK sürümünü 3.1.101 olarak ayarlamak için geçerli dizinde *Global. JSON* oluşturun:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101
@@ -739,7 +739,7 @@ Her proje şablonunda ek seçenekler olabilir. Çekirdek şablonları aşağıda
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dotnet yeni için özel şablonlar](custom-templates.md)
+- [DotNet New için özel şablonlar](custom-templates.md)
 - [Dotnet new için özel şablon oluşturma](../tutorials/cli-templates-create-item-template.md)
-- [dotnet/dotnet-şablon-örnekleri GitHub repo](https://github.com/dotnet/dotnet-template-samples)
-- [dotnet yeni için kullanılabilir şablonlar](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [DotNet/DotNet-şablon-örnek GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
+- [DotNet New için kullanılabilir şablonlar](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

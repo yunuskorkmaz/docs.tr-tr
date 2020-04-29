@@ -4,12 +4,12 @@ description: Windows Presentation Foundation (WPF) uygulamasını .NET Core 3,0 
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: f52005e7c8a6312b8c4e09a950f1f635af1894e4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "82071313"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507461"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>WPF uygulamalarını .NET Core 'a geçirme
 
@@ -162,7 +162,7 @@ Bu rapor ve önceki NuGet bağımlılığı analizine dayalı olarak, çekirdekl
 
 Uygulamanız yeni [SDK stili proje dosyası biçimini](../../core/tools/csproj.md)kullanmıyor ise, .NET Core 'u hedeflemek için yeni bir proje dosyası gerekir. Var olan csproj dosyasını değiştirebilir veya mevcut projenin geçerli durumunda kalmasını tercih ediyorsanız, .NET Core 'u hedefleyen yeni bir csproj dosyası ekleyebilirsiniz. Çoklu [hedefleme](../../standard/library-guidance/cross-platform-targeting.md) (birden çok `<TargetFrameworks>` hedef belirterek) ile tek bir SDK stili proje dosyası Ile .NET Framework ve .NET Core için uygulamanın sürümlerini oluşturabilirsiniz.
 
-Yeni proje dosyasını oluşturmak için, Visual Studio 'da yeni bir WPF projesi oluşturabilir veya bir geçici dizinde `dotnet new wpf` komutunu kullanarak proje dosyasını oluşturabilir ve ardından doğru konuma kopyalayabilir/yeniden adlandırabilirsiniz. Ayrıca, bazı proje dosyası geçişini otomatikleştirebilen, topluluk tarafından oluşturulan bir araç olan [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017). Araç yararlı olmakla kalmaz, geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmesi gerekir. Aracın en iyi şekilde işlemediğini belirli bir alan, *Packages. config* dosyalarından NuGet paketlerini geçirmektedir. Araç, NuGet paketlerine başvurmak için bir *Packages. config* dosyası kullanan bir proje dosyasında çalışıyorsa, `<PackageReference>` öğeleri otomatik olarak öğelere geçirilir, ancak yalnızca en üst düzey olanlar yerine `<PackageReference>` *Tüm* paketlere yönelik öğeler ekler. Visual Studio ile`<PackageReference>` öğelere zaten geçiş yaptıysanız (Bu örnekte yaptığınız gibi), araç geri kalanında dönüştürmeye yardımcı olabilir. Scott Hanselman, [csproj dosyalarını geçirirken blog gönderisine](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), el ile geçiş yaparak eğitim verme ve bağlantı noktası için yalnızca birkaç projeniz varsa daha iyi sonuçlar verecektir. Ancak onlarca veya yüzlerce proje dosyası oluşturuyorsanız, [CsprojToVs2017] gibi bir araç yardım olabilir.
+Yeni proje dosyasını oluşturmak için, Visual Studio 'da yeni bir WPF projesi oluşturabilir veya bir geçici dizinde `dotnet new wpf` komutunu kullanarak proje dosyasını oluşturabilir ve ardından doğru konuma kopyalayabilir/yeniden adlandırabilirsiniz. Ayrıca, bazı proje dosyası geçişini otomatikleştirebilen, topluluk tarafından oluşturulan bir araç olan [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017). Araç yararlı olmakla kalmaz, geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmesi gerekir. Aracın en iyi şekilde işlemediğini belirli bir alan, *Packages. config* dosyalarından NuGet paketlerini geçirmektedir. Araç, NuGet paketlerine başvurmak için bir *Packages. config* dosyası kullanan bir proje dosyasında çalışıyorsa, `<PackageReference>` öğeleri otomatik olarak öğelere geçirilir, ancak yalnızca en üst düzey olanlar yerine `<PackageReference>` *Tüm* paketlere yönelik öğeler ekler. Visual Studio ile`<PackageReference>` öğelere zaten geçiş yaptıysanız (Bu örnekte yaptığınız gibi), araç geri kalanında dönüştürmeye yardımcı olabilir. Scott Hanselman, [csproj dosyalarını geçirirken blog gönderisine](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), el ile geçiş yaparak eğitim verme ve bağlantı noktası için yalnızca birkaç projeniz varsa daha iyi sonuçlar verecektir. Ancak onlarca veya yüzlerce proje dosyası aktarıyorsanız, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) gibi bir araç bir yardım olabilir.
 
 Çekirdeklere Trader örneği için yeni bir proje dosyası oluşturmak için geçici bir dizinde `dotnet new wpf` çalıştırın ve oluşturulan *. csproj* dosyasını *beantraderclient* klasörüne taşıyın ve bu dosyayı **beantraderclient. Core. csproj**olarak yeniden adlandırın.
 
