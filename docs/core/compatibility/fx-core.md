@@ -3,12 +3,12 @@ title: Son değişiklikler-.NET Core 'a .NET Framework
 titleSuffix: ''
 description: .NET Framework 'den .NET Core 'a yapılan son değişiklikleri listeler.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6a6cbffed5a54e3683832da54d408d77bb553cf1
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135639"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595708"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a geçiş için son değişiklikler
 
@@ -22,6 +22,7 @@ ms.locfileid: "82135639"
 - [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute)
 - [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported)
+- [UriBuilder özellikleri artık önde gelen karakterlerin önüne alınmaz](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -36,6 +37,10 @@ ms.locfileid: "82135639"
 ***
 
 [!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***
 
