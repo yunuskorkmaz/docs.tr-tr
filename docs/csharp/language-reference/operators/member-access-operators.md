@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 86c8cce79e447bee638e1c5c7cb2fdbc64f630f3
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595903"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624871"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -139,7 +139,7 @@ Yukarıdaki örnek, null-koşullu bir işlemin sonucu olarak değerlendirmek iç
 Null koşullu üye erişim işleci `?.` ELVIS işleci olarak da bilinir.
 
 > [!NOTE]
-> C# 8 ' de, null koşullu işleçler beklenmedik bir şekilde [null-forverme işleciyle](null-forgiving.md) etkileşime girer. Örneğin, ifadesi `x?.y!.z` olarak `(x?.y)!.z`ayrıştırılır. Bu yorum `z` nedeniyle,, olsa bile `x` değerlendirilir `null`, bu da bir <xref:System.NullReferenceException>ile sonuçlanabilir.
+> C# 8 ' de, [null-forverme işleci](null-forgiving.md) önceki null koşullu işlemlerin listesini sonlandırır. Örneğin, ifadesi `x?.y!.z` olarak `(x?.y)!.z`ayrıştırılır. Bu yorum `z` nedeniyle,, olsa bile `x` değerlendirilir `null`, bu da bir <xref:System.NullReferenceException>ile sonuçlanabilir.
 
 ### <a name="thread-safe-delegate-invocation"></a>İş parçacığı açısından güvenli temsilci çağırma
 

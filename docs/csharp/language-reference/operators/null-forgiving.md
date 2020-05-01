@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595955"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624884"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forverme) işleci (C# Başvurusu)
 
@@ -20,7 +20,7 @@ C# 8,0 ve üzeri sürümlerde, birli sonek `!` operatörü null-forverme işleç
 Null-forverme işlecinin çalışma zamanında hiçbir etkisi yoktur. Yalnızca ifadenin null durumunu değiştirerek derleyicinin statik akış analizini etkiler. Çalışma zamanında ifade `x!` , temel alınan ifadenin `x`sonucu olarak değerlendirilir.
 
 > [!NOTE]
-> C# 8 ' de null-forverme işleci, [null koşullu işleçlerle](member-access-operators.md#null-conditional-operators--and-) beklenmedik şekilde etkileşime girer. İfade `x?.y!.z` olarak `(x?.y)!.z`ayrıştırılır. Bu yorum `z` nedeniyle `x` , `null`olsa bile değerlendirilir, bu da bir <xref:System.NullReferenceException>ile sonuçlanabilir.
+> C# 8 ' de, null-forverme işleci önceki [null koşullu](member-access-operators.md#null-conditional-operators--and-) işlemlerin listesini sonlandırır. Örneğin, ifadesi `x?.y!.z` olarak `(x?.y)!.z`ayrıştırılır. Bu yorum `z` nedeniyle,, olsa bile `x` değerlendirilir `null`, bu da bir <xref:System.NullReferenceException>ile sonuçlanabilir.
 
 Null yapılabilir başvuru türleri özelliği hakkında daha fazla bilgi için bkz. [Nullable başvuru türleri](../builtin-types/nullable-reference-types.md).
 
