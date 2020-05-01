@@ -488,7 +488,11 @@
     - name: İş parçacığı güvenli koleksiyonlar
       href: collections/thread-safe/
 - name: .NET Sayısal Değerleri
-  href: numerics.md
+  items:
+    - name: Genel Bakış
+      href: numerics.md
+    - name: SIMD özellikli türler
+      href: simd.md
 - name: 'Tarihler, saatler ve saat dilimleri'
   href: datetime/
 - name: Olaylar
