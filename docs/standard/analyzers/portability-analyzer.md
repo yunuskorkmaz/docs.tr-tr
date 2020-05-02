@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507539"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728440"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -27,7 +27,7 @@ Projenizi, .NET Core gibi yeni platformu hedefleyecek şekilde dönüştürdükt
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi 'ni kullanma
 
-Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlamak için önce uzantıyı [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)indirip yüklemeniz gerekir. Visual Studio 2017 ve sonraki sürümlerinde çalışmaktadır. Bunu, Visual Studio 'da**taşınabilirlik Çözümleyicisi ayarlarını** **Çözümle** > aracılığıyla yapılandırabilir ve geçerli derlemelerinizin oluşturulduğu platform/sürümle karşılaştıran taşınabilirlik boşluklarını değerlendirmek istediğiniz .net platformları/sürümleri olan hedef Platformlarınızı seçebilirsiniz.
+Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlamak için önce uzantıyı [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)indirip yüklemeniz gerekir. Visual Studio 2017 ve sonraki sürümlerinde çalışmaktadır. Visual Studio 'da**taşınabilirlik Çözümleyicisi ayarlarını** **analiz** > ederek yapılandırın ve geçerli derlemelerinizin oluşturulduğu platform/sürümle kıyaslanması gereken taşınabilirlik boşluklarını değerlendirmek istediğiniz .net platformları/sürümleri olan hedef Platformlarınızı seçin.
 
 ![Taşınabilirlik Çözümleyicisi 'nin ekran görüntüsü.](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,7 +67,7 @@ Raporun **Ayrıntılar** bölümünde, seçilen **hedeflenen platformların**hi�
 - Hedef üye: Yöntem bir hedef platformda yok
 - Bütünleştirilmiş kod adı: eksik API 'nin üzerinde bulunduğu .NET Framework derlemesi.
 - Seçilen hedef platformların her biri, ".NET Core": "desteklenmeyen" değeri gibi bir sütundur ve bu hedef platformda API 'nin desteklenmediği anlamına gelir.
-- Önerilen değişiklikler: olarak değiştirilecek önerilen API veya teknoloji. Şu anda, çok sayıda API için bu alan boş veya güncel değil. Çok sayıda API nedeniyle, bunu tutmanın büyük bir zorluğu vardır. Müşterilere yararlı bilgiler sağlamak için alternatif çözümlere bakıyoruz.
+- Önerilen değişiklikler: olarak değiştirilecek önerilen API veya teknoloji. Şu anda, birçok API için bu alan boş veya güncel değil. Çok sayıda API nedeniyle, güncel tutulması için önemli bir güçlük sunuyoruz. Müşterilere yararlı bilgiler sağlamak için alternatif çözümlere bakıyoruz.
 
 #### <a name="missing-assemblies"></a>Eksik derlemeler
 

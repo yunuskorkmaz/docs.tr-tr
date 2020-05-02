@@ -1,45 +1,45 @@
 ---
-ms.openlocfilehash: 8cb0aca991f5adfe4561ef56090cb9f7b2e56283
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d70a8d2a3031a5b3d47ab3fb7f40193dce6e311e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901892"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728322"
 ---
-### <a name="localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete"></a>Yerelleştirme: ResourceManagerWithCultureStringLocalizer ve WithCulture eski olarak işaretlenmiş
+### <a name="localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete"></a>Yerelleştirme: ResourceManagerWithCultureStringLocalizer ve WithCulture artık kullanılmıyor olarak işaretlendi
 
-[ResourceManagerWithCultureStringLocalizer](https://github.com/aspnet/Localization/blob/43b974482c7b703c92085c6f68b3b23d8fe32720/src/Microsoft.Extensions.Localization/ResourceManagerWithCultureStringLocalizer.cs#L18) sınıf ve [WithCulture](https://github.com/aspnet/Localization/blob/master/src/Microsoft.Extensions.Localization/ResourceManagerStringLocalizer.cs#L154-L170) arayüz üyesi genellikle kendi `IStringLocalizer` uygulama oluştururken, yerelleştirme kullanıcıları için karışıklık kaynaklarıdır. Bu öğeler, kullanıcıya bir `IStringLocalizer` örneğin "dil başına, kaynak başına" olduğu izlenimini verir. Gerçekte, örnekleri sadece "kaynak başına" olmalıdır. Aranan dil, infaz zamanına `CultureInfo.CurrentUICulture` göre belirlenir. Karışıklığın kaynağını ortadan kaldırmak için API'ler Core 3.0 Preview 3'ASP.NET geçersiz olarak işaretlenmiştir. API'ler ileride yayınlanacak bir sürümde kaldırılacaktır.
+[ResourceManagerWithCultureStringLocalizer](https://github.com/aspnet/Localization/blob/43b974482c7b703c92085c6f68b3b23d8fe32720/src/Microsoft.Extensions.Localization/ResourceManagerWithCultureStringLocalizer.cs#L18) sınıfı ve [withculture](https://github.com/aspnet/Localization/blob/master/src/Microsoft.Extensions.Localization/ResourceManagerStringLocalizer.cs#L154-L170) arabirim üyesi, genellikle yerelleştirme kullanıcıları için, özellikle kendi `IStringLocalizer` uygulamasını oluştururken karışıklık kaynaklarıdır. Bu öğeler kullanıcıya bir `IStringLocalizer` örneğin "dil başına, kaynak başına" olan izlenimi verir. Gerçekte, örneklerin yalnızca "kaynak başına" olması gerekir. İçin aranan dil, `CultureInfo.CurrentUICulture` yürütme zamanına göre belirlenir. Karışıklık kaynağını ortadan kaldırmak için, API 'Ler ASP.NET Core 3,0 Preview 3 ' te eski olarak işaretlendi. API 'Ler gelecek bir sürümde kaldırılacak.
 
-Bağlam için [dotnet/aspnetcore#3324'e](https://github.com/dotnet/aspnetcore/issues/3324)bakın. Tartışma için [dotnet/aspnetcore#7756'ya](https://github.com/dotnet/aspnetcore/issues/7756)bakın.
+Bağlam için bkz. [DotNet/aspnetcore # 3324](https://github.com/dotnet/aspnetcore/issues/3324). Tartışma için bkz. [DotNet/aspnetcore # 7756](https://github.com/dotnet/aspnetcore/issues/7756).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Yöntemler ' olarak `Obsolete`işaretlenmemiştir.
+Yöntemler olarak `Obsolete`işaretlenmemiş.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Yöntemler işaretlenir. `Obsolete`
+Yöntemler işaretlenir `Obsolete`.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-API'ler önerilmez bir kullanım örneği temsil etti. Yerelleştirme tasarımı hakkında karışıklık vardı.
+API 'Ler önerilmeyen bir kullanım durumunu temsil eder. Yerelleştirme tasarımı hakkında karışıklık vardı.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Öneri bunun yerine `ResourceManagerStringLocalizer` kullanmaktır. Kültür tarafından `CurrentCulture`ayarlansın. Bu bir seçenek değilse, [KaynakYöneticisiWithCultureStringLocalizer](https://github.com/aspnet/Localization/blob/43b974482c7b703c92085c6f68b3b23d8fe32720/src/Microsoft.Extensions.Localization/ResourceManagerWithCultureStringLocalizer.cs#L18)bir kopyasını oluşturun ve kullanın.
+Bunun yerine kullanılması `ResourceManagerStringLocalizer` önerilir. Kültürün tarafından ayarlanmasına izin verin `CurrentCulture`. Bu seçenek değilse, bir [ResourceManagerWithCultureStringLocalizer](https://github.com/aspnet/Localization/blob/43b974482c7b703c92085c6f68b3b23d8fe32720/src/Microsoft.Extensions.Localization/ResourceManagerWithCultureStringLocalizer.cs#L18)kopyası oluşturun ve kullanın.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- <xref:Microsoft.Extensions.Localization.ResourceManagerWithCultureStringLocalizer>
-- <xref:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.WithCulture%2A?displayProperty=nameWithType>
+- [ResourceManagerWithCultureStringLocalizer](/dotnet/api/microsoft.extensions.localization.resourcemanagerwithculturestringlocalizer?view=dotnet-plat-ext-3.0)
+- [ResourceManagerStringLocalizer. WithCulture](/dotnet/api/microsoft.extensions.localization.resourcemanagerstringlocalizer.withculture?view=dotnet-plat-ext-3.0)
 
 <!--
 

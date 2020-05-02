@@ -2,12 +2,12 @@
 title: Özel Hizmet Ana Bilgisayarı
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 6470249c557d571dfee165d57ce518d475340093
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 70d527599c310cba694624839f14a313f6000337
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140932"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728426"
 ---
 # <a name="custom-service-host"></a>Özel Hizmet Ana Bilgisayarı
 Bu örnek, bir hizmetin çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.ServiceHost> sınıfının özel bir türevi nasıl kullanacağınızı gösterir. Bu yaklaşım, çok sayıda hizmeti yaygın bir şekilde yapılandırmaya yönelik yeniden kullanılabilir bir alternatif sağlar. Örnek ayrıca, Internet Information Services (IIS) veya <xref:System.ServiceModel.Activation.ServiceHostFactory> Windows Işlem etkinleştirme HIZMETI (was) barındırma ortamında özel bir ServiceHost kullanmak için sınıfını nasıl kullanacağınızı gösterir.  
@@ -32,7 +32,7 @@ Bu örnek, bir hizmetin çalışma zamanı davranışını değiştirmek için <
 ## <a name="implementing-a-custom-servicehost"></a>Özel bir ServiceHost uygulama
  <xref:System.ServiceModel.ServiceHost> Sınıfı, bir hizmetin çalışma zamanı davranışını değiştirmek için devralanların geçersiz kılabilmesini sağlayan çeşitli yararlı sanal yöntemler sunar. Örneğin, `ApplyConfiguration`() yöntemi yapılandırma deposundan hizmet yapılandırma bilgilerini okur ve konağın <xref:System.ServiceModel.Description.ServiceDescription> uygun şekilde değiştirir. Varsayılan uygulama, uygulamanın yapılandırma dosyasından yapılandırmayı okur. Özel uygulamalar, <xref:System.ServiceModel.Description.ServiceDescription> ( `ApplyConfiguration`) öğesini kullanarak kesinlik temelli kodu daha fazla değiştirebilir ya da varsayılan yapılandırma deposunu tamamen değiştirebilir. Örneğin, bir hizmetin uç nokta yapılandırmasını uygulamanın yapılandırma dosyası yerine bir veritabanından okumak için.  
   
- Bu örnekte, bu davranış hizmetin yapılandırma dosyasına açıkça eklenmese bile, ServiceMetadataBehavior öğesini ekleyen özel bir ServiceHost (meta veri yayımlamayı sağlayan) oluşturmak istiyoruz. Bunu gerçekleştirmek için, ve geçersiz kılmalar <xref:System.ServiceModel.ServiceHost> `ApplyConfiguration`() öğesinden devralan yeni bir sınıf oluşturacağız.  
+ Bu örnekte, bu davranış hizmetin yapılandırma dosyasına açıkça eklenmese bile, ServiceMetadataBehavior (meta veri yayımlamayı sağlayan) ekleyen özel bir ServiceHost oluşturmak istiyoruz. Bunu gerçekleştirmek için, ve geçersiz kılmalar <xref:System.ServiceModel.ServiceHost> `ApplyConfiguration`() öğesinden devralan yeni bir sınıf oluşturun.  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -119,7 +119,7 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- Özel ana bilgisayar, hizmeti barındırmak için varsayılan <xref:System.ServiceModel.ServiceHost> sınıfı kullandığımız gibi uygulamanın yapılandırma dosyasından hizmetin uç nokta yapılandırmasını yine de okur. Ancak, özel ana bilgisayar içinde meta veri yayımlamayı etkinleştirmeye yönelik mantığı eklediğimiz için, artık yapılandırmada meta veri yayımlama davranışını açıkça etkinleştirmeleri gerekir. Bu yaklaşım, birkaç hizmet içeren bir uygulama oluştururken ve aynı yapılandırma öğelerini ve üzerine yazmadan her birinde meta veri yayımlamayı etkinleştirmek istediğinizde ayrı bir avantaja sahiptir.  
+ Hizmeti barındırmak için varsayılan <xref:System.ServiceModel.ServiceHost> sınıfı kullandığımız için özel ana bilgisayar, uygulamanın yapılandırma dosyasından hizmetin uç nokta yapılandırmasını yine de okur. Ancak, özel ana bilgisayar içinde meta veri yayımlamayı etkinleştirmeye yönelik mantığı eklediğimiz için, artık yapılandırmada meta veri yayımlama davranışını açıkça etkinleştirmeleri gerekir. Bu yaklaşım, birkaç hizmet içeren bir uygulama oluştururken ve aynı yapılandırma öğelerini ve üzerine yazmadan her birinde meta veri yayımlamayı etkinleştirmek istediğinizde ayrı bir avantaja sahiptir.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS 'de veya WAS 'de özel bir ServiceHost kullanma  
  Hizmet ana bilgisayarı örneğini oluşturup açmaktan sorumlu olan uygulama kodunuz olduğundan, Self-Host senaryolarında özel bir hizmet ana bilgisayarı kullanılması basittir. Ancak, IIS veya barındırma ortamında, WCF altyapısı gelen iletilere yanıt olarak hizmetinizin ana bilgisayarını dinamik olarak örnekleyebilir. Özel hizmet ana bilgisayarları da bu barındırma ortamında kullanılabilir, ancak bir ServiceHostFactory biçiminde bazı ek kodlar gerektirir. Aşağıdaki kod, özel <xref:System.ServiceModel.Activation.ServiceHostFactory> `SelfDescribingServiceHost`örneklerimizi döndüren bir türevi gösterir.  
@@ -141,7 +141,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 }  
 ```  
   
- Gördüğünüz gibi, özel bir ServiceHostFactory uygulamak çok basittir. Tüm özel mantık, ServiceHost uygulamasının içinde bulunur; Factory, türetilmiş sınıfın bir örneğini döndürür.  
+ Gördüğünüz gibi, özel bir ServiceHostFactory uygulamak basittir. Tüm özel mantık, ServiceHost uygulamasının içinde bulunur; Factory, türetilmiş sınıfın bir örneğini döndürür.  
   
  Hizmet uygulamasıyla özel bir fabrika kullanmak için hizmetin. svc dosyasına bazı ek meta veriler eklememiz gerekir.  
   
@@ -151,10 +151,10 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- Burada, `Factory` `@ServiceHost` yönergeye ek bir öznitelik ekledik ve öznitelik değeri olarak özel fabrikamızın clr türü adını geçirdik. IIS veya bu hizmet için bir ileti aldığında, WCF barındırma altyapısı ilk olarak bir ServiceHostFactory örneği oluşturur ve ardından çağırarak `ServiceHostFactory.CreateServiceHost()`hizmet ana bilgisayarının örneğini oluşturur.  
+ Burada, `Factory` `@ServiceHost` yönergeye ek bir öznitelik ekledik ve öznitelik değeri olarak özel fabrikamızın clr türü adını geçirdik. IIS veya bu hizmet için bir ileti aldığında, WCF barındırma altyapısı ilk olarak bir ServiceHostFactory örneği oluşturur ve ardından çağırarak `ServiceHostFactory.CreateServiceHost()`hizmet ana bilgisayarını başlatır.  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
- Bu örnek, tam işlevli bir istemci ve hizmet uygulamasını sağlasa da, örnek noktası, bir hizmetin çalışma zamanı davranışının özel bir ana bilgisayar aracılığıyla nasıl değiştirileceğini gösterir. aşağıdaki adımları uygulayın:  
+ Bu örnek tam işlevli bir istemci ve hizmet uygulamasını sağlasa da, örnek noktası, bir hizmetin çalışma zamanı davranışının özel bir ana bilgisayar aracılığıyla nasıl değiştirileceğini gösterir. aşağıdaki adımları uygulayın:  
   
 ### <a name="observe-the-effect-of-the-custom-host"></a>Özel ana bilgisayarın etkisini gözlemleyin
   

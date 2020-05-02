@@ -2,12 +2,12 @@
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141164"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728415"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 
@@ -16,7 +16,7 @@ Bulma belirtimi, bulma işlemine katılan uç noktaların güvenli olmasını ge
  Özel kanal, bulma ve duyuru uç noktaları için mevcut kanal yığınının üzerine uygulanır. Bu şekilde, gönderilen her ileti için bir imza üst bilgisi uygulanır. İmza, alınan iletilerde doğrulanır ve eşleşmediği zaman veya iletilerde imza yoksa iletiler bırakılır. İletileri imzalamak ve doğrulamak için, örnek sertifikaları kullanır.  
   
 ## <a name="discussion"></a>Tartışma  
- WCF çok genişletilebilir ve kullanıcılara kanalları istenen şekilde özelleştirme olasılığa izin verir. Örnek, güvenli kanallar oluşturan bir bulgu güvenli bağlama öğesi uygular. Güvenli kanallar, ileti imzalarını uygular ve doğrular ve geçerli yığının üzerine uygulanır.  
+ WCF genişletilebilir ve kullanıcılara kanalları istediğiniz gibi özelleştirme olasılığa izin verir. Örnek, güvenli kanallar oluşturan bir bulgu güvenli bağlama öğesi uygular. Güvenli kanallar, ileti imzalarını uygular ve doğrular ve geçerli yığının üzerine uygulanır.  
   
  Güvenli bağlama öğesi, güvenli kanal fabrikaları ve kanal dinleyicileri oluşturur.  
   

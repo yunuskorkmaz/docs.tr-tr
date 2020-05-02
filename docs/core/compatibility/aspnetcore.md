@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 04/28/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 454735028f8c0923b99e85ade30f498f13dd6cab
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507162"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728325"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -41,6 +41,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: DefaultHttpContext genişletilebilirliği kaldırıldı](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames alanları statik ReadOnly olarak değiştirildi](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: ıhttpclientfactory günlük tamsayı durum kodları tarafından oluşturulan HttpClient örnekleri](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP: yanıt gövdesi altyapı değişiklikleri](#http-response-body-infrastructure-changes)
 - [HTTP: bazı tanımlama bilgisi SameSite varsayılan değerleri değiştirildi](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: zaman uyumlu GÇ varsayılan olarak devre dışıdır](#http-synchronous-io-disabled-in-all-servers)
@@ -54,6 +55,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [Kestrel: yeni koleksiyona taşınan artbilgisi üstbilgileri ıste](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: aktarım soyutlama katmanı değişiklikleri](#kestrel-transport-abstractions-removed-and-made-public)
 - [Yerelleştirme: kullanım dışı olarak işaretlenen API 'Ler](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Yerelleştirme: ResourceManagerWithCultureStringLocalizer Class ve WithCulture arabirim üyesi kaldırıldı](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Günlüğe kaydetme: Debuggünlükçü sınıfı iç oluşturulmuş](#logging-debuglogger-class-made-internal)
 - [MVC: denetleyici eylemi zaman uyumsuz son ek kaldırıldı](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult, Microsoft. AspNetCore. Mvc. Core 'a taşındı](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -87,7 +89,15 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 ***
 
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
 
 ***
 

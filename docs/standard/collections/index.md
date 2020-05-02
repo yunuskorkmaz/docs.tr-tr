@@ -1,6 +1,6 @@
 ---
 title: Koleksiyonlar ve Veri Yapıları
-ms.date: 03/30/2017
+ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
@@ -10,85 +10,109 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 1bc632a7cfdb96967c7fc508e22ca93c1ed9318f
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588654"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728491"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
-Benzer veriler genellikle depolandığında ve koleksiyon olarak işlendiğinde daha verimli bir şekilde işlenebilir. <xref:System.Array?displayProperty=nameWithType> Sınıf veya sınıflar , <xref:System.Collections>, <xref:System.Collections.Generic> <xref:System.Collections.Concurrent>System.Collections.Değişmez ad alanları eklemek için kullanabilirsiniz, kaldırmak ve bir koleksiyonda öğeleri veya öğeleri bir dizi değiştirin.  
-  
- Koleksiyonların iki ana türü vardır; genel koleksiyonlar ve genel olmayan koleksiyonlar. Genel koleksiyonlar .NET Framework 2.0'a eklendi ve derleme zamanında tür güvenli koleksiyonlar sağladı. Bu nedenle, genel koleksiyonlar genellikle daha iyi performans sunar. Genel koleksiyonlar oluşturulduklarında bir tür parametresini kabul eder ve öğeleri <xref:System.Object> koleksiyondan eklediğinizde veya kaldırdığınızda bu türe ve bu türden döküm yapmanıza gerek duymaz.  Ayrıca, çoğu genel koleksiyon Windows Mağazası uygulamalarında desteklenir. Genel olmayan koleksiyonlar öğeleri <xref:System.Object>, döküm gerektirir ve çoğu Windows Mağazası uygulaması geliştirme için desteklenmez olarak depolar. Ancak, eski kodda genel olmayan koleksiyonlar görebilirsiniz.  
-  
- .NET Framework 4'ten başlayarak, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, birden çok iş parçacığından toplama öğelerine erişmek için verimli iş parçacığı güvenli işlemleri sağlar. System.Collections.Immutable namespace[(NuGet](https://www.nuget.org/packages/System.Collections.Immutable)paketi)'deki değişmez koleksiyon sınıfları, işlemler özgün koleksiyonun bir kopyasıüzerinde gerçekleştirildiğinden ve özgün koleksiyon değiştirilemediğinden doğal olarak iş parçacığı açısından güvenlidir.  
+
+Benzer veriler genellikle koleksiyon olarak depolandığında ve değiştirildiğinde daha verimli bir şekilde işlenebilir. Bir koleksiyondaki öğeleri veya <xref:System.Array?displayProperty=nameWithType> öğe aralığını eklemek, kaldırmak ve <xref:System.Collections>değiştirmek <xref:System.Collections.Generic>için <xref:System.Collections.Concurrent>,, <xref:System.Collections.Immutable> ve ad alanlarındaki sınıfı veya sınıfları kullanabilirsiniz.
+
+İki ana koleksiyon türü vardır; Genel Koleksiyonlar ve genel olmayan Koleksiyonlar. Genel Koleksiyonlar .NET Framework 2,0 ' ye eklenmiştir ve derleme zamanında tür kullanımı uyumlu koleksiyonlar sağlar. Bu nedenle, genel Koleksiyonlar genellikle daha iyi performans sunar. Genel Koleksiyonlar, oluşturuldukları sırada bir tür parametresi kabul eder ve koleksiyondan öğe eklediğinizde veya kaldırdığınızda <xref:System.Object> türe ve türüne dönüştürme yapılmasını gerektirmez.  Ayrıca, çoğu genel koleksiyon Windows Mağazası uygulamalarında desteklenir. Genel olmayan koleksiyonlar öğeleri olarak <xref:System.Object>depolar, atama gerektir ve çoğu Windows Mağazası uygulaması geliştirme için desteklenmez. Ancak, daha eski bir kodda genel olmayan koleksiyonlar görebilirsiniz.
+
+.NET Framework 4 ' ten başlayarak, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar. <xref:System.Collections.Immutable> Ad alanındaki ([NuGet paketi](https://www.nuget.org/packages/System.Collections.Immutable)) sabit koleksiyon sınıfları, işlemler orijinal koleksiyonun bir kopyasında yapıldığından ve özgün koleksiyon değiştirilemediğinden, doğal olarak iş parçacığı açısından güvenlidir.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
-## <a name="common-collection-features"></a>Ortak koleksiyon özellikleri  
- Tüm koleksiyonlar, koleksiyondaki öğeleri ekleme, kaldırma veya bulma yöntemleri sağlar. Ayrıca, <xref:System.Collections.ICollection> arabirimi veya <xref:System.Collections.Generic.ICollection%601> arabirimi doğrudan veya dolaylı olarak uygulayan tüm koleksiyonlar bu özellikleri paylaşır:  
-  
-- **Koleksiyonu sayısala bilme**  
-  
-     .NET Framework koleksiyonları, <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> koleksiyonun yinelanmasını sağlamak için ya uygular ya da etkinleştirir. Bir sayıcı, koleksiyondaki herhangi bir öğeiçin hareketli bir işaretçi olarak düşünülebilir. [Foreach,](../../csharp/language-reference/keywords/foreach-in.md) ifade ve [Her biri için ... Sonraki İfade,](../../visual-basic/language-reference/statements/for-each-next-statement.md) <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemtarafından maruz kalan sayısalatörü kullanın ve sayısallaştırıcıyı manipüle etme karmaşıklığını gizler. Buna ek olarak, uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> herhangi bir koleksiyon *sorgulanabilir* bir tür olarak kabul edilir ve LINQ ile sorgulanabilir. LINQ sorguları verilere erişmek için ortak bir desen sağlar. Genellikle standart `foreach` döngülere göre daha kısa ve okunabilirdirler ve filtreleme, sıralama ve gruplandırma özellikleri sağlarlar. LINQ sorguları da performansı artırabilir. Daha fazla bilgi için [linq to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)ve [Temel Sorgu İşlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)adresine bakın.  
-  
-- **Koleksiyon içeriğini bir diziye kopyalama yeteneği**  
-  
-     Tüm koleksiyonlar **CopyTo** yöntemini kullanarak bir diziye kopyalanabilir; ancak, yeni dizideki öğelerin sırası, sayılayıcının bunları döndürdeği sırasına dayanır. Ortaya çıkan dizi her zaman sıfır ın alt sınırı ile tek boyutludur.  
-  
- Buna ek olarak, birçok koleksiyon sınıfı aşağıdaki özellikleri içerir:  
-  
-- **Kapasite ve Sayma özellikleri**  
-  
-     Bir koleksiyonun kapasitesi, içerebileceği öğe sayısıdır. Bir koleksiyonun sayısı, gerçekte içerdiği öğe sayısıdır. Bazı koleksiyonlar kapasiteyi veya sayıyı veya her ikisini birden gizler.  
-  
-     Çoğu koleksiyon, geçerli kapasiteye ulaşıldığında kapasiteyi otomatik olarak genişletir. Bellek yeniden ayrılır ve öğeler eski koleksiyondan yenisine kopyalanır. Bu, koleksiyonu kullanmak için gereken kodu azaltır; ancak, koleksiyonun performansı olumsuz etkilenebilir. Örneğin, , <xref:System.Collections.Generic.List%601>Öğe <xref:System.Collections.Generic.List%601.Count%2A> eklemek <xref:System.Collections.Generic.List%601.Capacity%2A>O(1) işleminden daha azsa. Yeni öğeyi barındıracak kapasitenin artırılması gerekiyorsa, bir öğe eklemek n'nin bulunduğu <xref:System.Collections.Generic.List%601.Count%2A>bir O(n) işlemi olur. Birden çok gerçek değiştirmenin neden olduğu düşük performansı önlemenin en iyi yolu, ilk kapasiteyi koleksiyonun tahmini boyutu olarak ayarlamaktır.  
-  
-     A <xref:System.Collections.BitArray> özel bir durumdur; kapasitesi uzunluğu ile aynıdır, sayısı ile aynıdır.  
-  
-- **Tutarlı bir alt sınır**  
-  
-     Bir koleksiyonun alt sınırı, ilk öğenin dizinidir. Ad alanlarındaki <xref:System.Collections> tüm dizine eklenmiş koleksiyonların daha düşük bir sınırı sıfırdır, yani 0 dizine sahiptirler. <xref:System.Array>varsayılan olarak sıfır ın daha düşük bir sınırı vardır, ancak **dizi** sınıfının <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>bir örneğini oluştururken farklı bir alt sınır tanımlanabilir.  
-  
-- Birden çok iş parçacığı (yalnızca<xref:System.Collections> sınıflar) **erişim için eşitleme.**  
-  
-     <xref:System.Collections> Ad alanındaki genel olmayan toplama türleri eşitleme ile bazı iş parçacığı güvenliği sağlar; genellikle <xref:System.Collections.ICollection.SyncRoot%2A> ve <xref:System.Collections.ICollection.IsSynchronized%2A> üyeleri aracılığıyla maruz. Bu koleksiyonlar varsayılan olarak iş parçacığı güvenli değildir. Bir koleksiyona ölçeklenebilir ve verimli çok iş parçacığı erişimi ne gerekiyorsa, <xref:System.Collections.Concurrent> ad alanındaki sınıflardan birini kullanın veya değişmez bir koleksiyon kullanmayı düşünün. Daha fazla bilgi için [İş Parçacığı Güvenli Koleksiyonları'na](../../../docs/standard/collections/thread-safe/index.md)bakın.  
-  
-<a name="BKMK_Choosingacollection"></a>
-## <a name="choosing-a-collection"></a>Koleksiyon seçme  
- Genel olarak, genel koleksiyonları kullanmanız gerekir. Aşağıdaki tabloda bazı ortak toplama senaryoları ve bu senaryolar için kullanabileceğiniz koleksiyon sınıfları açıklanmaktadır. Genel koleksiyonlarda yeniyseniz, bu tablo göreviniz için en iyi şekilde çalışan genel koleksiyonu seçmenize yardımcı olur.  
+## <a name="common-collection-features"></a>Ortak koleksiyon özellikleri
 
-|İstiyorum...|Genel toplama seçenekleri|Genel olmayan toplama seçenekleri|İş parçacığı güvenli veya değişmez toplama seçenekleri|  
-|-|-|-|-|  
-|Anahtara göre hızlı arama için öğeleri anahtar/değer çiftleri olarak depolama|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Anahtarın karma koduna göre düzenlenen anahtar/değer çiftleri topluluğu.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
-|Öğelere dizin le erişim|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
-|Öğeleri ilk ilk çıkan öğeleri kullanma (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
-|Verileri Son İlk Çıkış (LIFO) kullanma|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
-|Öğelere sırayla erişin|<xref:System.Collections.Generic.LinkedList%601>|Öneri yok|Öneri yok|  
-|Öğeler kaldırıldığında veya koleksiyona eklendiğinde bildirimleri alın. (uygular <xref:System.ComponentModel.INotifyPropertyChanged> ve <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Öneri yok|Öneri yok|  
-|Sıralanmış bir koleksiyon|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
-|Matematiksel fonksiyonlar için bir küme|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Öneri yok|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
-  
+Tüm Koleksiyonlar koleksiyondaki öğeleri eklemek, kaldırmak veya bulmak için yöntemler sağlar. Ayrıca, <xref:System.Collections.ICollection> arabirimi veya <xref:System.Collections.Generic.ICollection%601> arabirimi doğrudan veya dolaylı olarak uygulayan tüm koleksiyonlar bu özellikleri paylaşır:
+
+- **Koleksiyonu listeleme özelliği**
+
+    .NET Framework koleksiyonlar, koleksiyonun <xref:System.Collections.IEnumerable?displayProperty=nameWithType> üzerinden <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> tekrarlandırılmış olmasını sağlar veya uygular. Numaralandırıcı, koleksiyondaki herhangi bir öğe için taşınabilir bir işaretçi olarak düşünülebilir. [Foreach, in](../../csharp/language-reference/keywords/foreach-in.md) Ifadesi ve [for each... Next Ifadesinde](../../visual-basic/language-reference/statements/for-each-next-statement.md) <xref:System.Collections.IEnumerable.GetEnumerator%2A> yöntemi tarafından sunulan Numaralandırıcı kullanılır ve Numaralandırıcının işlenmesinin karmaşıklığı gizlenir. Ayrıca, uygulayan <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> herhangi bir koleksiyon *sorgulanabilir bir tür* olarak değerlendirilir ve LINQ ile sorgulanabilir. LINQ sorguları verilere erişmek için ortak bir model sağlar. Genellikle standart `foreach` döngülerden daha kısa ve okunabilir ve filtreleme, sıralama ve gruplama özellikleri sağlar. LINQ sorguları da performansı iyileştirebilir. Daha fazla bilgi için bkz. [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)ve [temel sorgu işlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+
+- **Koleksiyon içeriğini bir diziye kopyalama özelliği**
+
+    Tüm koleksiyonlar, **CopyTo** yöntemi kullanılarak bir diziye kopyalanabilir; Ancak, yeni dizideki öğelerin sırası, Numaralandırıcı tarafından döndürülen diziye göre belirlenir. Elde edilen dizi her zaman bir sıfır alt sınırı olan bir boyutludur.
+
+Ayrıca, birçok koleksiyon sınıfı aşağıdaki özellikleri içerir:
+
+- **Kapasite ve sayı özellikleri**
+
+    Bir koleksiyonun kapasitesi içerebileceği öğelerin sayısıdır. Bir koleksiyonun sayısı, gerçekten içerdiği öğelerin sayısıdır. Bazı koleksiyonlar kapasiteyi veya sayıyı veya her ikisini de gizler.
+
+    En fazla koleksiyon, geçerli kapasiteye ulaşıldığında kapasiteyi otomatik olarak genişletir. Bellek yeniden ayrılır ve öğeler eski koleksiyondan yeni bir koleksiyona kopyalanır. Bu, koleksiyonu kullanmak için gereken kodu azaltır; Ancak, koleksiyonun performansı olumsuz etkilenebilir. Örneğin, için <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.List%601.Count%2A> ' den <xref:System.Collections.Generic.List%601.Capacity%2A>küçükse, bir öğe eklemek bir O (1) işlemidir. Kapasitenin yeni öğeye uyum sağlayacak şekilde artırılması gerekiyorsa, bir öğe eklendiğinde bir O (`n`) işlemi `n` olur. <xref:System.Collections.Generic.List%601.Count%2A> Birden çok realkonum nedeniyle oluşan zayıf performansı önlemenin en iyi yolu, ilk kapasiteyi koleksiyonun tahmini boyutu olacak şekilde ayarlamamaktır.
+
+    Özel <xref:System.Collections.BitArray> bir durumdur; kapasitesi, sayısı ile aynı olan uzunluktadır.
+
+- **Tutarlı bir alt sınır**
+
+    Bir koleksiyonun alt sınırı, ilk öğesinin dizinidir. <xref:System.Collections> Ad alanlarındaki tüm dizini oluşturulmuş koleksiyonların alt sınırı sıfır, yani 0 dizinlenir. <xref:System.Array>Varsayılan olarak sıfır alt öğesine sahiptir, ancak kullanılarak <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> **dizi** sınıfının bir örneği oluşturulurken farklı bir alt sınır tanımlanabilir.
+
+- **Birden çok iş parçacığından erişim için eşitleme** (<xref:System.Collections> yalnızca sınıflar).
+
+    <xref:System.Collections> Ad alanındaki genel olmayan koleksiyon türleri eşitlemeyle bazı iş parçacığı güvenliği sağlar; genellikle <xref:System.Collections.ICollection.SyncRoot%2A> ve <xref:System.Collections.ICollection.IsSynchronized%2A> üyeleri aracılığıyla kullanıma sunulur. Bu koleksiyonlar varsayılan olarak iş parçacığı açısından güvenli değildir. Bir koleksiyona ölçeklenebilir ve verimli bir çok iş parçacıklı erişim gerekiyorsa, <xref:System.Collections.Concurrent> ad alanındaki sınıflardan birini kullanın veya sabit bir koleksiyon kullanmayı deneyin. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md).
+
+<a name="BKMK_Choosingacollection"></a>
+## <a name="choose-a-collection"></a>Bir koleksiyon seçin
+
+Genel olarak, genel Koleksiyonlar kullanmanız gerekir. Aşağıdaki tabloda bazı yaygın koleksiyon senaryoları ve bu senaryolar için kullanabileceğiniz koleksiyon sınıfları açıklanmaktadır. Genel koleksiyonlarınız için yeni olduğunuzda, bu tablo göreviniz için en iyi sonucu veren genel koleksiyonu seçmenize yardımcı olur.
+
+|İstiyorum...|Genel koleksiyon seçenekleri|Genel olmayan koleksiyon seçenekleri|İş parçacığı güvenli veya sabit koleksiyon seçenekleri|
+|-|-|-|-|
+|Öğeleri anahtara göre hızlı arama için anahtar/değer çiftleri olarak depola|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Anahtarın karma koduna göre düzenlenmiş anahtar/değer çiftleri koleksiyonu.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|
+|Öğelere dizine göre erişin|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|
+|İlk kez çıkan öğeleri kullan (FıFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|
+|Ilk kez geçen verileri kullanma (LıFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|
+|Öğelere sırayla erişin|<xref:System.Collections.Generic.LinkedList%601>|Öneri yok|Öneri yok|
+|Öğeler kaldırıldığında veya koleksiyona eklendiğinde bildirim alın. (ve <xref:System.ComponentModel.INotifyPropertyChanged> <xref:System.Collections.Specialized.INotifyCollectionChanged>uygular)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Öneri yok|Öneri yok|
+|Sıralanmış bir koleksiyon|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|
+|Matematik işlevleri için bir küme|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Öneri yok|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|
+
+### <a name="algorithmic-complexity-of-collections"></a>Koleksiyonların algoritmik karmaşıklığı
+
+Bir [koleksiyon sınıfı](selecting-a-collection-class.md)seçerken, performans üzerindeki olası avantajları göz önünde bulundurmayı tercih edilir. Farklı kesilebilir koleksiyon türlerinin algoritmik karmaşıklığını karşılık gelen sabit karşılıklarıyla nasıl karşılaştırılacağını başvurmak için aşağıdaki tabloyu kullanın. Genellikle değişmez koleksiyon türleri daha az performansız olmakla kalmaz, genellikle geçerli bir karşılaştırmalı kullanım avantajıdır.
+
+| Değiştirilebilir                   | Amorti edilmiş  | En kötü durum                | Değişmez                          | Karmaşıklık |
+|---------------------------|------------|---------------------------|------------------------------------|------------|
+| `Stack<T>.Push`           | O (1)       | O (`n`)                    | `ImmutableStack<T>.Push`           | O (1)       |
+| `Queue<T>.Enqueue`        | O (1)       | O (`n`)                    | `ImmutableQueue<T>.Enqueue`        | O (1)       |
+| `List<T>.Add`             | O (1)       | O (`n`)                    | `ImmutableList<T>.Add`             | O (günlük `n`) |
+| `List<T>.Item[Int32]`     | O (1)       | O (1)                      | `ImmutableList<T>.Item[Int32]`     | O (günlük `n`) |
+| `List<T>.Enumerator`      | O (`n`)     | O (`n`)                    | `ImmutableList<T>.Enumerator`      | O (`n`)     |
+| `HashSet<T>.Add`, arama  | O (1)       | O (`n`)                    | `ImmutableHashSet<T>.Add`          | O (günlük `n`) |
+| `SortedSet<T>.Add`        | O (günlük `n`) | O (`n`)                    | `ImmutableSortedSet<T>.Add`        | O (günlük `n`) |
+| `Dictionary<T>.Add`       | O (1)       | O (`n`)                    | `ImmutableDictionary<T>.Add`       | O (günlük `n`) |
+| `Dictionary<T>`Ma    | O (1)       | O (1) – veya kesinlikle O (`n`) | `ImmutableDictionary<T>`Ma    | O (günlük `n`) |
+| `SortedDictionary<T>.Add` | O (günlük `n`) | O (`n` günlük `n`)            | `ImmutableSortedDictionary<T>.Add` | O (günlük `n`) |
+
+Bir `List<T>` `for` döngü veya `foreach` döngü kullanılarak etkili bir şekilde Numaralandırılabilir. Ancak `ImmutableList<T>`, bir `for` döngü Içinde, dizin oluşturucunun O (günlük `n`) zamanı nedeniyle kötü bir iş yapar. Bir `ImmutableList<T>` `foreach` döngüyü kullanarak numaralandırma etkilidir çünkü `ImmutableList<T>` , kullanımları gibi `List<T>` basit bir dizi yerine verilerini depolamak için bir ikili ağaç kullanır. Dizi, istenen dizine sahip düğüm bulunana kadar bir ikili ağacın aşağı doğru bir şekilde dizine alınması gerekir.
+
+Ayrıca, `SortedSet<T>` ile `ImmutableSortedSet<T>`aynı karmaşıklığa sahiptir. Çünkü her ikisi de ikili ağaçlar kullanır. Kuşkusuz önemli fark, değişmez bir ikili ağaç `ImmutableSortedSet<T>` kullanır. `ImmutableSortedSet<T>` Ayrıca, mutasyona izin veren bir <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> sınıf sağladığından, hem dengesslik hem de performans sağlayabilirsiniz.
+
 <a name="BKMK_RelatedTopics"></a>
-## <a name="related-topics"></a>İlgili Konular  
-  
-|Başlık|Açıklama|  
-|-----------|-----------------|  
-|[Koleksiyon Sınıfı Seçme](../../../docs/standard/collections/selecting-a-collection-class.md)|Farklı koleksiyonları açıklar ve senaryonuz için bir tane seçmenize yardımcı olur.|  
-|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|Yaygın olarak kullanılan genel ve genel <xref:System.Array?displayProperty=nameWithType>olmayan <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>toplama <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>türlerini açıklar, , , ve.|  
-|[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını tartışır.|  
-|[Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Eşitlik karşılaştırmalarının kullanımını ve koleksiyonlarda sıralama karşılaştırmalarını tartışır.|  
-|[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Sıralanmış koleksiyonların performansını ve özelliklerini açıklar|  
-|[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türlerinin özelliklerini açıklar.|  
-|[İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Birden çok iş <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> parçacığından güvenli ve verimli eşzamanlı erişimi destekleyen ve koleksiyon türlerini açıklar.|  
-|System.Collections.Değişmez|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|  
-  
+## <a name="related-topics"></a>İlgili Konular
+
+|Başlık|Açıklama|
+|-----------|-----------------|
+|[Koleksiyon Sınıfı Seçme](../../../docs/standard/collections/selecting-a-collection-class.md)|Farklı koleksiyonları açıklar ve senaryonuz için bir tane seçmenize yardımcı olur.|
+|[Yaygın olarak kullanılan koleksiyon türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|<xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>Ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>gibi yaygın olarak kullanılan genel ve genel olmayan koleksiyon türlerini açıklar.|
+|[Genel Koleksiyonlar ne zaman kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını açıklar.|
+|[Koleksiyonlar Içinde karşılaştırmalar ve sıralamalar](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Koleksiyonlarda eşitlik karşılaştırmaları ve sıralama karşılaştırmalarının kullanımını açıklar.|
+|[Sıralanmış koleksiyon türleri](../../../docs/standard/collections/sorted-collection-types.md)|Sıralanmış koleksiyon performansını ve özelliklerini açıklar|
+|[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türlerinin özelliklerini açıklar.|
+|[İş parçacığı güvenli Koleksiyonlar](../../../docs/standard/collections/thread-safe/index.md)|<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> Ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> gibi birçok iş parçacığından güvenli ve verimli eşzamanlı erişimi destekleyen koleksiyon türlerini açıklar.|
+|System. Collections. sabit|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|
+
 <a name="BKMK_Reference"></a>
-## <a name="reference"></a>Başvuru  
- <xref:System.Array?displayProperty=nameWithType>  
- <xref:System.Collections?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.Specialized?displayProperty=nameWithType>  
- <xref:System.Linq?displayProperty=nameWithType>  
- <xref:System.Collections.Immutable>
+## <a name="reference"></a>Başvuru
+<xref:System.Array?displayProperty=nameWithType>
+<xref:System.Collections?displayProperty=nameWithType>
+<xref:System.Collections.Concurrent?displayProperty=nameWithType>
+<xref:System.Collections.Generic?displayProperty=nameWithType>
+<xref:System.Collections.Specialized?displayProperty=nameWithType>
+<xref:System.Linq?displayProperty=nameWithType>
+<xref:System.Collections.Immutable>

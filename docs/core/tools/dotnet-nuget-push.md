@@ -1,24 +1,24 @@
 ---
-title: dotnet nuget push komutu
-description: Dotnet nuget push komutu bir paketi sunucuya iter ve yayımlar.
+title: DotNet NuGet Push komutu
+description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463514"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728351"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
 ## <a name="name"></a>Adı
 
-`dotnet nuget push`- Bir paketi sunucuya iter ve yayınlar.
+`dotnet nuget push`-Sunucuya bir paket gönderir ve onu yayımlar.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
@@ -32,23 +32,25 @@ dotnet nuget push -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet nuget push` bir paketi sunucuya iter ve yayımlar. Push komutu, sistemin NuGet config dosyasında veya config dosyaları zincirinde bulunan sunucu ve kimlik bilgilerini kullanır. Config dosyaları hakkında daha fazla bilgi için [NuGet Davranışını Yapılandırma'ya](/nuget/consume-packages/configuring-nuget-behavior)bakın. NuGet'in varsayılan yapılandırması *%AppData%\NuGet\NuGet.config* (Windows) veya *$HOME/.local/share* (Linux/macOS) yüklenerek elde edilir, ardından sürücü kökünden başlayıp geçerli dizinde biten herhangi bir *nuget.config* veya *.nuget\nuget.config* yüklenir.
+Komut `dotnet nuget push` , bir paketi sunucuya gönderir ve yayınlar. Push komutu, sistemin NuGet yapılandırma dosyasında veya yapılandırma dosyaları zincirinde bulunan sunucu ve kimlik bilgisi ayrıntılarını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior). NuGet 'in varsayılan yapılandırması, *%AppData%\NuGet\NuGet.config* (Windows) veya *$Home/PST local/share* (Linux/MacOS) yükleyerek elde edilir ve sürücü kökünden başlayıp geçerli dizinde sona ermek üzere herhangi bir *NuGet. config* veya *. nuget\nuget.exe* .
+
+Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için kullanın [`dotnet pack`](dotnet-pack.md).
 
 ## <a name="arguments"></a>Bağımsız Değişkenler
 
 - **`ROOT`**
 
-  Itilecek pakete dosya yolunu belirtir.
+  Gönderilecek paketin dosya yolunu belirtir.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-d|--disable-buffering`**
 
-  Bellek kullanımını azaltmak için bir HTTP(S) sunucusuna bastırırken arabelleği devre dışı düşürür.
+  Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderilirken arabelleğe almayı devre dışı bırakır.
 
 - **`--force-english-output`**
 
-  Uygulamayı değişmez, İngilizce tabanlı bir kültür kullanarak çalıştırmaya zorlar.
+  Uygulamayı, sabit, Ingilizce tabanlı bir kültür kullanılarak çalışmaya zorlar.
 
 - **`-h|--help`**
 
@@ -56,7 +58,7 @@ Komut `dotnet nuget push` bir paketi sunucuya iter ve yayımlar. Push komutu, si
 
 - **`--interactive`**
 
-  Komutun engellenmesine izin verir ve kimlik doğrulama gibi işlemler için el ile eylem gerektirir. Seçenek .NET Core 2.2 SDK'dan beri mevcuttur.
+  Komutun, kimlik doğrulaması gibi işlemler için el ile eylem yapmasına izin verir. .NET Core 2,2 SDK 'dan beri kullanılabilir seçeneği.
 
 - **`-k|--api-key <API_KEY>`**
 
@@ -64,19 +66,19 @@ Komut `dotnet nuget push` bir paketi sunucuya iter ve yayımlar. Push komutu, si
 
 - **`-n|--no-symbols`**
 
-  Sembolleri itmiyor (mevcut olsa bile).
+  Sembol (varsa bile) almaz.
 
 - **`--no-service-endpoint`**
 
-  Kaynak URL'ye "api/v2/package" eklenmemiştir. Seçenek .NET Core 2.1 SDK'dan beri mevcuttur.
+  Kaynak URL 'ye "API/v2/Package" eklemeyin. .NET Core 2,1 SDK 'dan beri kullanılabilir seçeneği.
 
 - **`-s|--source <SOURCE>`**
 
-  Sunucu URL'sini belirtir. Config değeri `DefaultPushSource` NuGet config dosyasında ayarlılmadığı sürece bu seçenek gereklidir.
+  Sunucu URL 'sini belirtir. Bu seçenek, NuGet yapılandırma `DefaultPushSource` dosyasında yapılandırma değeri ayarlanmadığı takdirde gereklidir.
 
 - **`--skip-duplicate`**
 
-  Bir HTTP(S) sunucusuna birden çok paket iterken, herhangi bir 409 Çakışma yanıtını bir uyarı olarak ele alır, böylece itme devam edebilir. .NET Core 3.1 SDK'dan beri mevcuttur.
+  Bir HTTP (S) sunucusuna birden çok paket gönderdiğinizde, gönderim devam edebilmesi için 409 çakışma yanıtını uyarı olarak değerlendirir. .NET Core 3,1 SDK 'dan beri kullanılabilir.
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -84,62 +86,71 @@ Komut `dotnet nuget push` bir paketi sunucuya iter ve yayımlar. Push komutu, si
 
 - **`-ss|--symbol-source <SOURCE>`**
 
-  Sembol sunucu URL'sini belirtir.
+  Sembol sunucusu URL 'sini belirtir.
 
 - **`-t|--timeout <TIMEOUT>`**
 
-  Bir sunucuya saniyeler içinde itmek için zaman anına göre belirtir. Varsayılan olarak 300 saniye (5 dakika) olarak tanımlanır. 0 (sıfır saniye) belirtmek varsayılan değeri uygular.
+  Bir sunucuya saniye cinsinden gönderme zaman aşımını belirtir. Varsayılan değer 300 saniyedir (5 dakika). 0 (sıfır saniye) belirtilmesi varsayılan değeri uygular.
 
 ## <a name="examples"></a>Örnekler
 
-- *Foo.nupkg'ı* varsayılan itme kaynağına iter ve bir API anahtarı belirtir:
+- Bir API anahtarı belirterek, varsayılan gönderim kaynağına *foo. nupkg* gönderin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- *Foo.nupkg'ı* resmi NuGet sunucusuna itin ve bir API anahtarı belirtin:
+- Bir API anahtarı belirterek, resmi NuGet sunucusuna *foo. nupkg* gönderin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * *Foo.nupkg'ı* özel push `https://customsource`kaynağına itin, API tuşu belirterek:
+  * Bir API anahtarı belirterek, özel itme kaynağına `https://customsource` *foo. nupkg* gönderin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- *Foo.nupkg'ı* varsayılan itme kaynağına iter:
+- *Foo. nupkg* 'yi varsayılan gönderim kaynağına gönder:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- *Foo.symbols.nupkg'ı* varsayılan semboller kaynağına iter:
+- Varsayılan semboller kaynağına *foo. Symbols. nupkg* gönder:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- *Foo.nupkg'ı* varsayılan itme kaynağına iter ve 360 saniyelik bir zaman ayarı belirtir:
+- Varsayılan itme kaynağına *foo. nupkg* göndererek 360 saniyelik bir zaman aşımı belirtin:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Geçerli dizindeki tüm *.nupkg* dosyalarını varsayılan itme kaynağına iter:
+- Geçerli dizindeki tüm *. nupkg* dosyalarını varsayılan gönderim kaynağına gönder:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
 
   > [!NOTE]
-  > Bu komut işe yaramazsa, SDK'nın (.NET Core 2.1 SDK ve önceki sürümlerinde) eski sürümlerinde bulunan bir hatadan kaynaklanıyor olabilir.
-  > Bunu düzeltmek için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın:`dotnet nuget push **/*.nupkg`
+  > Bu komut işe yaramazsa, bunun nedeni SDK 'nın eski sürümlerinde var olan bir hata olabilir (.NET Core 2,1 SDK ve önceki sürümleri).
+  > Bunu onarmak için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın:`dotnet nuget push **/*.nupkg`
 
-- 409 Çakışma yanıtı bir HTTP(S) sunucusu tarafından döndürülse bile tüm *.nupkg* dosyalarını iter:
+- Bir HTTP (S) sunucusu tarafından 409 çakışma yanıtı döndürülse bile tüm *. nupkg* dosyalarını gönderin:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- Geçerli dizindeki tüm *. nupkg* dosyalarını yerel akış dizinine gönder:
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  Bu komut, paketleri hiyerarşik bir klasör yapısında depolamaz, bu da performansı iyileştirmek için önerilir. Daha fazla bilgi için bkz. [Yerel akışlar](//nuget/hosting-packages/local-feeds).
+  

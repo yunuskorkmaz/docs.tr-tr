@@ -2,15 +2,16 @@
 title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141233"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728389"
 ---
-# <a name="extending-tracing"></a>İzlemeyi Genişletme
-Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri yazarak Windows Communication Foundation (WCF) izleme özelliğinin nasıl genişletileceğini gösterir. Bu, kullanıcının mantıksal iş birimlerine izleme etkinlikleri ve grup izlemeleri oluşturmalarına olanak sağlar. Ayrıca, etkinlikleri aktarımlar (aynı uç nokta içinde) ve yayma (uç noktalar arasında) ile ilişkilendirmek mümkündür. Bu örnekte, izleme hem istemci hem de hizmet için etkinleştirilmiştir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve mesaj günlüğü](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+# <a name="extend-tracing"></a>İzlemeyi Genişlet
+
+Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri yazarak Windows Communication Foundation (WCF) izleme özelliğinin nasıl genişletileceğini gösterir. Kullanıcı tanımlı etkinlik izlemelerinin yazılması, kullanıcının mantıksal iş birimlerine izleme etkinlikleri ve grup izlemeleri oluşturmasına izin verir. Ayrıca, etkinlikleri aktarımlar (aynı uç nokta içinde) ve yayma (uç noktalar arasında) ile ilişkilendirmek mümkündür. Bu örnekte, izleme hem istemci hem de hizmet için etkinleştirilmiştir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve mesaj günlüğü](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
  Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
   
@@ -29,8 +30,8 @@ Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri y
 ## <a name="tracing-and-activity-propagation"></a>İzleme ve etkinlik yayma  
  Kullanıcı tanımlı etkinlik izleme, kullanıcının izlemeleri mantıksal iş birimlerine göre gruplamak, aktarımlar ve yayma aracılığıyla etkinlikleri ilişkilendirmek ve WCF izlemenin (örneğin, bir günlük dosyasının disk alanı maliyeti) performans maliyetini azaltmak için kendi izleme etkinliklerini oluşturmalarına olanak tanır.  
   
-### <a name="adding-custom-sources"></a>Özel kaynak ekleme  
- Kullanıcı tanımlı izlemeler, hem istemci hem de hizmet koduna eklenebilir. İstemci veya hizmet yapılandırma dosyalarına izleme kaynakları eklemek, bu özel izlemelerin [hizmet Izleme Görüntüleyicisi aracında (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kaydedilip görüntülenmesine izin verir. Aşağıdaki kod, yapılandırma dosyasına adlı `ServerCalculatorTraceSource` Kullanıcı tanımlı izleme kaynağının nasıl ekleneceğini gösterir.  
+### <a name="add-custom-sources"></a>Özel Kaynak Ekle  
+ Kullanıcı tanımlı izlemeler, hem istemci hem de hizmet koduna eklenebilir. İstemci veya hizmet yapılandırma dosyalarına izleme kaynakları eklemek, bu özel izlemelerin [hizmet Izleme Görüntüleyicisi aracında (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kaydedilmesini ve görüntülenmesini sağlar. Aşağıdaki kod, yapılandırma dosyasına adlı `ServerCalculatorTraceSource` Kullanıcı tanımlı izleme kaynağının nasıl ekleneceğini gösterir.  
   
 ```xml  
 <system.diagnostics>  
@@ -67,7 +68,7 @@ Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri y
 ....
 ```  
   
-### <a name="correlating-activities"></a>Etkinlikleri ilişkilendirme  
+### <a name="correlate-activities"></a>Etkinlikleri ilişkilendirme  
  Etkinlikleri doğrudan uç noktalar arasında ilişkilendirmek için, `propagateActivity` özniteliği `true` `System.ServiceModel` izleme kaynağında olarak ayarlanmalıdır. Ayrıca, WCF etkinliklerinde ilerlemeden izlemeleri yaymak için, ServiceModel etkinliği Izlemenin kapalı olması gerekir. Bu, aşağıdaki kod örneğinde görülebilir.  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri y
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>Performans maliyetini azallama  
- `System.ServiceModel` İzleme kaynağında kapalı ayarı `ActivityTracing` , yalnızca Kullanıcı tanımlı etkinlik izlemelerini içeren bir izleme dosyası oluşturur ve bu da hiçbir ServiceModel etkinlik izlemeden dahil değildir. Bu, çok daha küçük boyutta bir günlük dosyasına neden olur. Ancak, WCF işleme izlemelerinin ilişkilendirilmesi için fırsat kaybolur.  
+### <a name="lessen-performance-cost"></a>Performans maliyetini azaltır  
+ `System.ServiceModel` İzleme kaynağında kapalı ayarı `ActivityTracing` , yalnızca Kullanıcı tanımlı etkinlik izlemelerini içeren bir izleme dosyası oluşturur ve bu da hiçbir ServiceModel etkinlik izlemeden dahil değildir. ServiceModel etkinliğinin dışlanması, daha küçük bir günlük dosyasına neden olur. Ancak, WCF işleme izlemelerinin ilişkilendirilmesi için fırsat kaybolur.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
+## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma  
   
 1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   

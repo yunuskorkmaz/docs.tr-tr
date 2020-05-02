@@ -2,12 +2,12 @@
 title: Dayanıklı Örnek Bağlamı
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141180"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728403"
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 
@@ -18,7 +18,7 @@ Bu örnek, dayanıklı örnek bağlamlarını etkinleştirmek için Windows Comm
 
 Bu örnek, WCF 'nin hem kanal katmanını hem de hizmet modeli katmanını genişletmeyi içerir. Bu nedenle, uygulama ayrıntılarına geçmeden önce temel kavramları anlamanız gerekir.
 
-Dayanıklı örnek bağlamları gerçek dünyada oldukça sık bulunabilir. Örneğin, bir alışveriş sepeti uygulaması, alışverişi yarı olarak duraklatma ve başka bir gün içinde devam etme yeteneğine sahiptir. Bu sayede, bir sonraki güne ait alışveriş sepetini ziyaret ettiğimiz zaman, özgün bağlamımız geri yüklendi. , Bağlantısı kesiltiğimiz sırada alışveriş sepeti uygulamasının (sunucudaki) alışveriş sepeti örneğini korumadığını unutmamak önemlidir. Bunun yerine, durumunu dayanıklı bir depolama medyasına devam ettirir ve geri yüklenen bağlam için yeni bir örnek oluştururken onu kullanır. Bu nedenle, aynı bağlam için hizmet veren hizmet örneği, önceki örnekle aynı değildir (yani aynı bellek adresine sahip değildir).
+Dayanıklı örnek bağlamları gerçek dünyada oldukça sık bulunabilir. Örneğin, bir alışveriş sepeti uygulamasının, bir alışveriş sepetini aracılığıyla alışverişi bir gün içinde duraklatarak devam etmesine olanak tanır. Bu sayede, bir sonraki güne ait alışveriş sepetini ziyaret ettiğimiz zaman, özgün bağlamımız geri yüklendi. , Bağlantısı kesiltiğimiz sırada alışveriş sepeti uygulamasının (sunucudaki) alışveriş sepeti örneğini korumadığını unutmamak önemlidir. Bunun yerine, durumunu dayanıklı bir depolama medyasına devam ettirir ve geri yüklenen bağlam için yeni bir örnek oluştururken onu kullanır. Bu nedenle, aynı bağlam için hizmet veren hizmet örneği, önceki örnekle aynı değildir (yani aynı bellek adresine sahip değildir).
 
 İstemci ve hizmet arasında bir bağlam KIMLIĞI değiş tokuş eden küçük bir protokol tarafından dayanıklı örnek bağlamı mümkün hale getirilir. Bu bağlam KIMLIĞI istemcide oluşturulur ve hizmete iletilir. Hizmet örneği oluşturulduğunda, hizmet çalışma zamanı kalıcı bir depolamadan bu bağlam KIMLIĞINE karşılık gelen kalıcı durumu yüklemeye çalışır (varsayılan olarak bir SQL Server 2005 veritabanıdır). Kullanılabilir bir durum yoksa, yeni örnek varsayılan durumuna sahiptir. Hizmet uygulamasının, hizmet uygulamasının durumunu değiştiren işlemleri işaretlemek için özel bir öznitelik kullanır, böylece çalışma zamanı, hizmet örneğini çağırdıktan sonra kaydedebilir.
 
@@ -28,11 +28,11 @@ Dayanıklı örnek bağlamları gerçek dünyada oldukça sık bulunabilir. Örn
 
 2. Hizmet yerel davranışını özel örnek oluşturma mantığını uygulayacak şekilde değiştirin.
 
-Listedeki ilk ileti, iletişimdeki iletileri etkilediği için bir özel kanal olarak uygulanmalıdır ve kanal katmanına bağlanılmalıdır. İkincisi yalnızca hizmet yerel davranışını etkiler ve bu nedenle çeşitli hizmet genişletilebilirliği noktaları genişletilerek uygulanabilir. Sonraki birkaç bölümde, bu uzantıların her biri ele alınmıştır.
+Listedeki ilk bir ileti, hattaki iletileri etkilediği için özel bir kanal olarak uygulanmalıdır ve kanal katmanına bağlanılmalıdır. İkincisi yalnızca hizmet yerel davranışını etkiler ve bu nedenle çeşitli hizmet genişletilebilirliği noktaları genişletilerek uygulanabilir. Sonraki birkaç bölümde, bu uzantıların her biri ele alınmıştır.
 
 ## <a name="durable-instancecontext-channel"></a>Dayanıklı InstanceContext kanalı
 
-Aranacak ilk şey bir kanal katmanı uzantısıdır. Özel bir kanal yazmanın ilk adımı, kanalın iletişim yapısına karar vermidir. Yeni bir tel protokol kullanıma sunulmakta olduğundan kanal, kanal yığınındaki neredeyse tüm diğer kanallarla çalışmalıdır. Bu nedenle, tüm ileti değişimi düzenlerini desteklemelidir. Ancak, kanalın temel işlevselliği, iletişim yapısıyla bağımsız olarak aynıdır. Daha belirgin bir şekilde, istemciden içerik KIMLIĞINI iletilere ve hizmetten bu bağlam KIMLIĞINI okuyup üst düzeylere geçirecek şekilde yazması gerekir. Bu nedenle, tüm dayanıklı `DurableInstanceContextChannelBase` örnek bağlam kanalı uygulamaları için soyut temel sınıf olarak davranan bir sınıf oluşturulur. Bu sınıf, genel durum makinesi yönetim işlevlerini ve bu iki korumalı üyeyi uygulamak ve iletilere ve bu kaynaklardan bağlam bilgilerini okumak için içerir.
+Aranacak ilk şey bir kanal katmanı uzantısıdır. Özel bir kanal yazmanın ilk adımı, kanalın iletişim yapısına karar vermidir. Yeni bir hat Protokolü tanıtılmakta olduğundan kanal, kanal yığınındaki neredeyse tüm diğer kanallarla çalışmalıdır. Bu nedenle, tüm ileti değişimi düzenlerini desteklemelidir. Ancak, kanalın temel işlevselliği, iletişim yapısıyla bağımsız olarak aynıdır. Daha belirgin bir şekilde, istemciden içerik KIMLIĞINI iletilere ve hizmetten bu bağlam KIMLIĞINI okuyup üst düzeylere geçirecek şekilde yazması gerekir. Bu nedenle, tüm dayanıklı `DurableInstanceContextChannelBase` örnek bağlam kanalı uygulamaları için soyut temel sınıf olarak davranan bir sınıf oluşturulur. Bu sınıf, genel durum makinesi yönetim işlevlerini ve bu iki korumalı üyeyi uygulamak ve iletilere ve bu kaynaklardan bağlam bilgilerini okumak için içerir.
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -89,7 +89,7 @@ message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextI
 
 Devam etmeden önce, `Properties` `Message` sınıfında koleksiyonun kullanımını anlamak önemlidir. Genellikle, bu `Properties` koleksiyon, verileri daha düşük olan kanal katmanından üst düzeylere geçirirken kullanılır. Bu şekilde, istenen veriler, protokol ayrıntılarının ne olursa olsun, üst düzeylere tutarlı bir şekilde sağlanır. Diğer bir deyişle, kanal katmanı, bağlam KIMLIĞINI bir SOAP üstbilgisi veya HTTP tanımlama bilgisi üstbilgisi olarak gönderebilir ve alabilir. Ancak Kanal katmanı bu bilgileri `Properties` koleksiyonda kullanılabilir hale yaptığından üst düzeylerin bu ayrıntıları öğrenmek için gerekli değildir.
 
-Artık bu `DurableInstanceContextChannelBase` sınıfla, gerekli arabirimlerin (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel destekleyen desteklenecektir, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) her on onuna sahip olmalıdır. Her kullanılabilir ileti değişimi düzenine (datagram, simpleks, dupleks ve oturumsuz çeşitleri) benzer. Bu uygulamaların her biri, daha önce açıklanan temel sınıfı ve çağrıları `ApplyContext` ve `ReadContextId` uygun şekilde devralınır. Örneğin, `DurableInstanceContextOutputChannel` IOutputChannel arabirimini uygulayan-iletileri gönderen her yöntemden `ApplyContext` yöntemini çağırır.
+Artık bu `DurableInstanceContextChannelBase` sınıfla, gerekli arabirimlerin (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel destekleyen desteklenecektir, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) her on onuna sahip olmalıdır. Her kullanılabilir ileti değişimi düzenine (datagram, simpleks, dupleks ve oturumsuz çeşitleri) benzer. Bu uygulamaların her biri, daha önce açıklanan temel sınıfı ve çağrıları `ApplyContext` ve `ReadContextId` uygun şekilde devralır. Örneğin, `DurableInstanceContextOutputChannel` IOutputChannel arabirimini uygulayan-iletileri gönderen her yöntemden `ApplyContext` yöntemini çağırır.
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-`SqlServerStorageManager` Sınıfı varsayılan `IStorageManager` uygulamayı içerir. `SaveInstance` Yönteminde verilen nesne XmlSerializer kullanılarak serileştirilir ve SQL Server veritabanına kaydedilir.
+`SqlServerStorageManager` Sınıfı varsayılan `IStorageManager` uygulamayı içerir. `SaveInstance` Yönteminde, verilen nesne XmlSerializer kullanılarak serileştirilir ve SQL Server veritabanına kaydedilir.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-`GetInstance` Yönteminde, seri hale getirilmiş veriler belirli BIR bağlam kimliği için okunmakta ve öğesinden oluşturulan nesne çağırana döndürülür.
+`GetInstance` Yönteminde, serileştirilmiş veriler belirli BIR bağlam kimliği için okunurdur ve öğesinden oluşturulan nesne çağırana döndürülür.
 
 ```csharp
 object data;
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 Daha önce açıklandığı gibi, bağlam KIMLIĞI `Properties` `Message` sınıfının koleksiyonundan okunurdur ve Extension sınıfının oluşturucusuna geçirilir. Bu, bilgilerin katmanlar arasında tutarlı bir şekilde nasıl değiş tokuş edilebilir olduğunu gösterir.
 
-Sonraki önemli adım, hizmet örneği oluşturma sürecini geçersiz kılar. WCF, özel örnek oluşturma davranışlarını uygulamaya ve IInstanceProvider arabirimini kullanarak bunları çalışma zamanına kadar yüklemeye olanak tanır. Yeni `InstanceProvider` sınıf bu işi yapmak için uygulanır. Oluşturucuda, örnek sağlayıcıdan beklenen hizmet türü kabul edilir. Daha sonra bu, yeni örnekler oluşturmak için kullanılır. `GetInstance` Uygulamada, kalıcı bir örnek bulmak için bir Depolama Yöneticisi örneği oluşturulur. Döndürürse `null` , hizmet türünün yeni bir örneği oluşturulur ve çağırana döndürülür.
+Sonraki önemli adım, hizmet örneği oluşturma sürecini geçersiz kılar. WCF, özel örnek oluşturma davranışlarını uygulamaya ve IInstanceProvider arabirimini kullanarak bunları çalışma zamanına kadar yüklemeye olanak tanır. Yeni `InstanceProvider` sınıf bu işi yapmak için uygulanır. Örnek sağlayıcıdan beklenen hizmet türü oluşturucuda kabul edildi. Daha sonra bu, yeni örnekler oluşturmak için kullanılır. `GetInstance` Uygulamada, kalıcı bir örnek bulmak için Depolama Yöneticisi 'nin bir örneği oluşturulur. Dönerse `null`, hizmet türünün yeni bir örneği oluşturulur ve çağırana döndürülür.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-Sonraki önemli adım, `InstanceContextExtension` `InstanceContextInitializer` ve `InstanceProvider` sınıflarını hizmet modeli çalışma zamanına yüklemektir. Davranışı yüklemek için hizmet uygulama sınıflarını işaretlemek üzere özel bir öznitelik kullanılabilir. , `DurableInstanceContextAttribute` Bu özniteliğin uygulamasını içerir ve tüm hizmet çalışma zamanını genişletmek `IServiceBehavior` için arabirimini uygular.
+Sonraki önemli adım,, ve `InstanceContextExtension` `InstanceContextInitializer` `InstanceProvider` sınıflarını hizmet modeli çalışma zamanına yüklemektir. Davranışı yüklemek için hizmet uygulama sınıflarını işaretlemek üzere özel bir öznitelik kullanılabilir. , `DurableInstanceContextAttribute` Bu özniteliğin uygulamasını içerir ve tüm hizmet çalışma zamanını genişletmek `IServiceBehavior` için arabirimini uygular.
 
-Bu sınıf, kullanılacak depolama Yöneticisi türünü kabul eden bir özelliğe sahiptir. Bu şekilde, uygulama kullanıcıların kendi `IStorageManager` uygulamasını bu özniteliğin parametresi olarak belirtmesini sağlar.
+Bu sınıf, kullanılacak depolama Yöneticisi türünü kabul eden bir özelliğe sahiptir. Bu şekilde, uygulama, kullanıcıların kendi `IStorageManager` uygulamasını bu özniteliğin parametresi olarak belirtmesini sağlar.
 
-`ApplyDispatchBehavior` Uygulamada `InstanceContextMode` geçerli `ServiceBehavior` özniteliğin doğrulanması doğrulanıyor. Bu özellik Singleton olarak ayarlandıysa, dayanıklı örnek oluşturma mümkün değildir ve konağa bildirimde bulunan bir `InvalidOperationException` oluşturulur.
+`ApplyDispatchBehavior` Uygulamada, `InstanceContextMode` geçerli `ServiceBehavior` özniteliğin doğrulanması doğrulanıyor. Bu özellik Singleton olarak ayarlandıysa, dayanıklı örnek oluşturma mümkün değildir ve konağa bildirimde bulunan bir `InvalidOperationException` oluşturulur.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>Uzantıyı kullanma
 
-Hem kanal katmanı hem de hizmet modeli katman uzantıları gerçekleştirilir ve bunlar artık WCF uygulamalarında kullanılabilir. Hizmetler, kanalı bir özel bağlama kullanarak kanal yığınına eklemek ve ardından hizmet uygulama sınıflarını uygun özniteliklerle işaretlemek için gerekir.
+Hem kanal katmanı hem de hizmet modeli katman uzantıları gerçekleştirilir ve bunlar artık WCF uygulamalarında kullanılabilir. Hizmetler, kanalı bir özel bağlama kullanarak kanal yığınına eklemeli ve ardından hizmet uygulama sınıflarını uygun özniteliklerle işaretmalıdır.
 
 ```csharp
 [DurableInstanceContext]
