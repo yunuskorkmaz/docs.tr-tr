@@ -1,24 +1,24 @@
 ---
-title: dotnet nuget push komutu
-description: Dotnet nuget push komutu bir paketi sunucuya iter ve yayımlar.
+title: DotNet NuGet Push komutu
+description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463514"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728351"
 ---
-# <a name="dotnet-nuget-push"></a><span data-ttu-id="0c214-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="0c214-103">dotnet nuget push</span></span>
+# <a name="dotnet-nuget-push"></a><span data-ttu-id="31732-103">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="31732-103">dotnet nuget push</span></span>
 
-<span data-ttu-id="0c214-104">**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler</span><span class="sxs-lookup"><span data-stu-id="0c214-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="31732-104">**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="31732-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="0c214-105">Adı</span><span class="sxs-lookup"><span data-stu-id="0c214-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="31732-105">Adı</span><span class="sxs-lookup"><span data-stu-id="31732-105">Name</span></span>
 
-<span data-ttu-id="0c214-106">`dotnet nuget push`- Bir paketi sunucuya iter ve yayınlar.</span><span class="sxs-lookup"><span data-stu-id="0c214-106">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
+<span data-ttu-id="31732-106">`dotnet nuget push`-Sunucuya bir paket gönderir ve onu yayımlar.</span><span class="sxs-lookup"><span data-stu-id="31732-106">`dotnet nuget push` - Pushes a package to the server and publishes it.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="0c214-107">Özet</span><span class="sxs-lookup"><span data-stu-id="0c214-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="31732-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="31732-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
@@ -30,116 +30,127 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="0c214-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0c214-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="31732-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="31732-108">Description</span></span>
 
-<span data-ttu-id="0c214-109">Komut `dotnet nuget push` bir paketi sunucuya iter ve yayımlar.</span><span class="sxs-lookup"><span data-stu-id="0c214-109">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="0c214-110">Push komutu, sistemin NuGet config dosyasında veya config dosyaları zincirinde bulunan sunucu ve kimlik bilgilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="0c214-110">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="0c214-111">Config dosyaları hakkında daha fazla bilgi için [NuGet Davranışını Yapılandırma'ya](/nuget/consume-packages/configuring-nuget-behavior)bakın.</span><span class="sxs-lookup"><span data-stu-id="0c214-111">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="0c214-112">NuGet'in varsayılan yapılandırması *%AppData%\NuGet\NuGet.config* (Windows) veya *$HOME/.local/share* (Linux/macOS) yüklenerek elde edilir, ardından sürücü kökünden başlayıp geçerli dizinde biten herhangi bir *nuget.config* veya *.nuget\nuget.config* yüklenir.</span><span class="sxs-lookup"><span data-stu-id="0c214-112">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
+<span data-ttu-id="31732-109">Komut `dotnet nuget push` , bir paketi sunucuya gönderir ve yayınlar.</span><span class="sxs-lookup"><span data-stu-id="31732-109">The `dotnet nuget push` command pushes a package to the server and publishes it.</span></span> <span data-ttu-id="31732-110">Push komutu, sistemin NuGet yapılandırma dosyasında veya yapılandırma dosyaları zincirinde bulunan sunucu ve kimlik bilgisi ayrıntılarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="31732-110">The push command uses server and credential details found in the system's NuGet config file or chain of config files.</span></span> <span data-ttu-id="31732-111">Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior).</span><span class="sxs-lookup"><span data-stu-id="31732-111">For more information on config files, see [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior).</span></span> <span data-ttu-id="31732-112">NuGet 'in varsayılan yapılandırması, *%AppData%\NuGet\NuGet.config* (Windows) veya *$Home/PST local/share* (Linux/MacOS) yükleyerek elde edilir ve sürücü kökünden başlayıp geçerli dizinde sona ermek üzere herhangi bir *NuGet. config* veya *. nuget\nuget.exe* .</span><span class="sxs-lookup"><span data-stu-id="31732-112">NuGet's default configuration is obtained by loading *%AppData%\NuGet\NuGet.config* (Windows) or *$HOME/.local/share* (Linux/macOS), then loading any *nuget.config* or *.nuget\nuget.config* starting from the root of drive and ending in the current directory.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="0c214-113">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="0c214-113">Arguments</span></span>
+<span data-ttu-id="31732-113">Komut, var olan bir paketi iter.</span><span class="sxs-lookup"><span data-stu-id="31732-113">The command pushes an existing package.</span></span> <span data-ttu-id="31732-114">Paket oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="31732-114">It doesn't create a package.</span></span> <span data-ttu-id="31732-115">Bir paket oluşturmak için kullanın [`dotnet pack`](dotnet-pack.md).</span><span class="sxs-lookup"><span data-stu-id="31732-115">To create a package, use [`dotnet pack`](dotnet-pack.md).</span></span>
+
+## <a name="arguments"></a><span data-ttu-id="31732-116">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="31732-116">Arguments</span></span>
 
 - **`ROOT`**
 
-  <span data-ttu-id="0c214-114">Itilecek pakete dosya yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="0c214-114">Specifies the file path to the package to be pushed.</span></span>
+  <span data-ttu-id="31732-117">Gönderilecek paketin dosya yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="31732-117">Specifies the file path to the package to be pushed.</span></span>
 
-## <a name="options"></a><span data-ttu-id="0c214-115">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="0c214-115">Options</span></span>
+## <a name="options"></a><span data-ttu-id="31732-118">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="31732-118">Options</span></span>
 
 - **`-d|--disable-buffering`**
 
-  <span data-ttu-id="0c214-116">Bellek kullanımını azaltmak için bir HTTP(S) sunucusuna bastırırken arabelleği devre dışı düşürür.</span><span class="sxs-lookup"><span data-stu-id="0c214-116">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
+  <span data-ttu-id="31732-119">Bellek kullanımını azaltmak için bir HTTP (S) sunucusuna gönderilirken arabelleğe almayı devre dışı bırakır.</span><span class="sxs-lookup"><span data-stu-id="31732-119">Disables buffering when pushing to an HTTP(S) server to reduce memory usage.</span></span>
 
 - **`--force-english-output`**
 
-  <span data-ttu-id="0c214-117">Uygulamayı değişmez, İngilizce tabanlı bir kültür kullanarak çalıştırmaya zorlar.</span><span class="sxs-lookup"><span data-stu-id="0c214-117">Forces the application to run using an invariant, English-based culture.</span></span>
+  <span data-ttu-id="31732-120">Uygulamayı, sabit, Ingilizce tabanlı bir kültür kullanılarak çalışmaya zorlar.</span><span class="sxs-lookup"><span data-stu-id="31732-120">Forces the application to run using an invariant, English-based culture.</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="0c214-118">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="0c214-118">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="31732-121">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="31732-121">Prints out a short help for the command.</span></span>
 
 - **`--interactive`**
 
-  <span data-ttu-id="0c214-119">Komutun engellenmesine izin verir ve kimlik doğrulama gibi işlemler için el ile eylem gerektirir.</span><span class="sxs-lookup"><span data-stu-id="0c214-119">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="0c214-120">Seçenek .NET Core 2.2 SDK'dan beri mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="0c214-120">Option available since .NET Core 2.2 SDK.</span></span>
+  <span data-ttu-id="31732-122">Komutun, kimlik doğrulaması gibi işlemler için el ile eylem yapmasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="31732-122">Allows the command to block and requires manual action for operations like authentication.</span></span> <span data-ttu-id="31732-123">.NET Core 2,2 SDK 'dan beri kullanılabilir seçeneği.</span><span class="sxs-lookup"><span data-stu-id="31732-123">Option available since .NET Core 2.2 SDK.</span></span>
 
 - **`-k|--api-key <API_KEY>`**
 
-  <span data-ttu-id="0c214-121">Sunucu için API anahtarı.</span><span class="sxs-lookup"><span data-stu-id="0c214-121">The API key for the server.</span></span>
+  <span data-ttu-id="31732-124">Sunucu için API anahtarı.</span><span class="sxs-lookup"><span data-stu-id="31732-124">The API key for the server.</span></span>
 
 - **`-n|--no-symbols`**
 
-  <span data-ttu-id="0c214-122">Sembolleri itmiyor (mevcut olsa bile).</span><span class="sxs-lookup"><span data-stu-id="0c214-122">Doesn't push symbols (even if present).</span></span>
+  <span data-ttu-id="31732-125">Sembol (varsa bile) almaz.</span><span class="sxs-lookup"><span data-stu-id="31732-125">Doesn't push symbols (even if present).</span></span>
 
 - **`--no-service-endpoint`**
 
-  <span data-ttu-id="0c214-123">Kaynak URL'ye "api/v2/package" eklenmemiştir.</span><span class="sxs-lookup"><span data-stu-id="0c214-123">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="0c214-124">Seçenek .NET Core 2.1 SDK'dan beri mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="0c214-124">Option available since .NET Core 2.1 SDK.</span></span>
+  <span data-ttu-id="31732-126">Kaynak URL 'ye "API/v2/Package" eklemeyin.</span><span class="sxs-lookup"><span data-stu-id="31732-126">Doesn't append "api/v2/package" to the source URL.</span></span> <span data-ttu-id="31732-127">.NET Core 2,1 SDK 'dan beri kullanılabilir seçeneği.</span><span class="sxs-lookup"><span data-stu-id="31732-127">Option available since .NET Core 2.1 SDK.</span></span>
 
 - **`-s|--source <SOURCE>`**
 
-  <span data-ttu-id="0c214-125">Sunucu URL'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0c214-125">Specifies the server URL.</span></span> <span data-ttu-id="0c214-126">Config değeri `DefaultPushSource` NuGet config dosyasında ayarlılmadığı sürece bu seçenek gereklidir.</span><span class="sxs-lookup"><span data-stu-id="0c214-126">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
+  <span data-ttu-id="31732-128">Sunucu URL 'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="31732-128">Specifies the server URL.</span></span> <span data-ttu-id="31732-129">Bu seçenek, NuGet yapılandırma `DefaultPushSource` dosyasında yapılandırma değeri ayarlanmadığı takdirde gereklidir.</span><span class="sxs-lookup"><span data-stu-id="31732-129">This option is required unless `DefaultPushSource` config value is set in the NuGet config file.</span></span>
 
 - **`--skip-duplicate`**
 
-  <span data-ttu-id="0c214-127">Bir HTTP(S) sunucusuna birden çok paket iterken, herhangi bir 409 Çakışma yanıtını bir uyarı olarak ele alır, böylece itme devam edebilir.</span><span class="sxs-lookup"><span data-stu-id="0c214-127">When pushing multiple packages to an HTTP(S) server, treats any 409 Conflict response as a warning so that the push can continue.</span></span> <span data-ttu-id="0c214-128">.NET Core 3.1 SDK'dan beri mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="0c214-128">Available since .NET Core 3.1 SDK.</span></span>
+  <span data-ttu-id="31732-130">Bir HTTP (S) sunucusuna birden çok paket gönderdiğinizde, gönderim devam edebilmesi için 409 çakışma yanıtını uyarı olarak değerlendirir.</span><span class="sxs-lookup"><span data-stu-id="31732-130">When pushing multiple packages to an HTTP(S) server, treats any 409 Conflict response as a warning so that the push can continue.</span></span> <span data-ttu-id="31732-131">.NET Core 3,1 SDK 'dan beri kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="31732-131">Available since .NET Core 3.1 SDK.</span></span>
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
-  <span data-ttu-id="0c214-129">Sembol sunucusu için API anahtarı.</span><span class="sxs-lookup"><span data-stu-id="0c214-129">The API key for the symbol server.</span></span>
+  <span data-ttu-id="31732-132">Sembol sunucusu için API anahtarı.</span><span class="sxs-lookup"><span data-stu-id="31732-132">The API key for the symbol server.</span></span>
 
 - **`-ss|--symbol-source <SOURCE>`**
 
-  <span data-ttu-id="0c214-130">Sembol sunucu URL'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0c214-130">Specifies the symbol server URL.</span></span>
+  <span data-ttu-id="31732-133">Sembol sunucusu URL 'sini belirtir.</span><span class="sxs-lookup"><span data-stu-id="31732-133">Specifies the symbol server URL.</span></span>
 
 - **`-t|--timeout <TIMEOUT>`**
 
-  <span data-ttu-id="0c214-131">Bir sunucuya saniyeler içinde itmek için zaman anına göre belirtir.</span><span class="sxs-lookup"><span data-stu-id="0c214-131">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="0c214-132">Varsayılan olarak 300 saniye (5 dakika) olarak tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="0c214-132">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="0c214-133">0 (sıfır saniye) belirtmek varsayılan değeri uygular.</span><span class="sxs-lookup"><span data-stu-id="0c214-133">Specifying 0 (zero seconds) applies the default value.</span></span>
+  <span data-ttu-id="31732-134">Bir sunucuya saniye cinsinden gönderme zaman aşımını belirtir.</span><span class="sxs-lookup"><span data-stu-id="31732-134">Specifies the timeout for pushing to a server in seconds.</span></span> <span data-ttu-id="31732-135">Varsayılan değer 300 saniyedir (5 dakika).</span><span class="sxs-lookup"><span data-stu-id="31732-135">Defaults to 300 seconds (5 minutes).</span></span> <span data-ttu-id="31732-136">0 (sıfır saniye) belirtilmesi varsayılan değeri uygular.</span><span class="sxs-lookup"><span data-stu-id="31732-136">Specifying 0 (zero seconds) applies the default value.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="0c214-134">Örnekler</span><span class="sxs-lookup"><span data-stu-id="0c214-134">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="31732-137">Örnekler</span><span class="sxs-lookup"><span data-stu-id="31732-137">Examples</span></span>
 
-- <span data-ttu-id="0c214-135">*Foo.nupkg'ı* varsayılan itme kaynağına iter ve bir API anahtarı belirtir:</span><span class="sxs-lookup"><span data-stu-id="0c214-135">Pushes *foo.nupkg* to the default push source, specifying an API key:</span></span>
+- <span data-ttu-id="31732-138">Bir API anahtarı belirterek, varsayılan gönderim kaynağına *foo. nupkg* gönderin:</span><span class="sxs-lookup"><span data-stu-id="31732-138">Push *foo.nupkg* to the default push source, specifying an API key:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- <span data-ttu-id="0c214-136">*Foo.nupkg'ı* resmi NuGet sunucusuna itin ve bir API anahtarı belirtin:</span><span class="sxs-lookup"><span data-stu-id="0c214-136">Push *foo.nupkg* to the official NuGet server, specifying an API key:</span></span>
+- <span data-ttu-id="31732-139">Bir API anahtarı belirterek, resmi NuGet sunucusuna *foo. nupkg* gönderin:</span><span class="sxs-lookup"><span data-stu-id="31732-139">Push *foo.nupkg* to the official NuGet server, specifying an API key:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * <span data-ttu-id="0c214-137">*Foo.nupkg'ı* özel push `https://customsource`kaynağına itin, API tuşu belirterek:</span><span class="sxs-lookup"><span data-stu-id="0c214-137">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
+  * <span data-ttu-id="31732-140">Bir API anahtarı belirterek, özel itme kaynağına `https://customsource` *foo. nupkg* gönderin:</span><span class="sxs-lookup"><span data-stu-id="31732-140">Push *foo.nupkg* to the custom push source `https://customsource`, specifying an API key:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- <span data-ttu-id="0c214-138">*Foo.nupkg'ı* varsayılan itme kaynağına iter:</span><span class="sxs-lookup"><span data-stu-id="0c214-138">Pushes *foo.nupkg* to the default push source:</span></span>
+- <span data-ttu-id="31732-141">*Foo. nupkg* 'yi varsayılan gönderim kaynağına gönder:</span><span class="sxs-lookup"><span data-stu-id="31732-141">Push *foo.nupkg* to the default push source:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- <span data-ttu-id="0c214-139">*Foo.symbols.nupkg'ı* varsayılan semboller kaynağına iter:</span><span class="sxs-lookup"><span data-stu-id="0c214-139">Pushes *foo.symbols.nupkg* to the default symbols source:</span></span>
+- <span data-ttu-id="31732-142">Varsayılan semboller kaynağına *foo. Symbols. nupkg* gönder:</span><span class="sxs-lookup"><span data-stu-id="31732-142">Push *foo.symbols.nupkg* to the default symbols source:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- <span data-ttu-id="0c214-140">*Foo.nupkg'ı* varsayılan itme kaynağına iter ve 360 saniyelik bir zaman ayarı belirtir:</span><span class="sxs-lookup"><span data-stu-id="0c214-140">Pushes *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
+- <span data-ttu-id="31732-143">Varsayılan itme kaynağına *foo. nupkg* göndererek 360 saniyelik bir zaman aşımı belirtin:</span><span class="sxs-lookup"><span data-stu-id="31732-143">Push *foo.nupkg* to the default push source, specifying a 360-second timeout:</span></span>
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- <span data-ttu-id="0c214-141">Geçerli dizindeki tüm *.nupkg* dosyalarını varsayılan itme kaynağına iter:</span><span class="sxs-lookup"><span data-stu-id="0c214-141">Pushes all *.nupkg* files in the current directory to the default push source:</span></span>
+- <span data-ttu-id="31732-144">Geçerli dizindeki tüm *. nupkg* dosyalarını varsayılan gönderim kaynağına gönder:</span><span class="sxs-lookup"><span data-stu-id="31732-144">Push all *.nupkg* files in the current directory to the default push source:</span></span>
 
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
 
   > [!NOTE]
-  > <span data-ttu-id="0c214-142">Bu komut işe yaramazsa, SDK'nın (.NET Core 2.1 SDK ve önceki sürümlerinde) eski sürümlerinde bulunan bir hatadan kaynaklanıyor olabilir.</span><span class="sxs-lookup"><span data-stu-id="0c214-142">If this command doesn't work, it might be due to a bug that existed in older versions of the SDK (.NET Core 2.1 SDK and earlier versions).</span></span>
-  > <span data-ttu-id="0c214-143">Bunu düzeltmek için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın:`dotnet nuget push **/*.nupkg`</span><span class="sxs-lookup"><span data-stu-id="0c214-143">To fix this, upgrade your SDK version or run the following command instead: `dotnet nuget push **/*.nupkg`</span></span>
+  > <span data-ttu-id="31732-145">Bu komut işe yaramazsa, bunun nedeni SDK 'nın eski sürümlerinde var olan bir hata olabilir (.NET Core 2,1 SDK ve önceki sürümleri).</span><span class="sxs-lookup"><span data-stu-id="31732-145">If this command doesn't work, it might be due to a bug that existed in older versions of the SDK (.NET Core 2.1 SDK and earlier versions).</span></span>
+  > <span data-ttu-id="31732-146">Bunu onarmak için SDK sürümünüzü yükseltin veya bunun yerine aşağıdaki komutu çalıştırın:`dotnet nuget push **/*.nupkg`</span><span class="sxs-lookup"><span data-stu-id="31732-146">To fix this, upgrade your SDK version or run the following command instead: `dotnet nuget push **/*.nupkg`</span></span>
 
-- <span data-ttu-id="0c214-144">409 Çakışma yanıtı bir HTTP(S) sunucusu tarafından döndürülse bile tüm *.nupkg* dosyalarını iter:</span><span class="sxs-lookup"><span data-stu-id="0c214-144">Pushes all *.nupkg* files even if a 409 Conflict response is returned by an HTTP(S) server:</span></span>
+- <span data-ttu-id="31732-147">Bir HTTP (S) sunucusu tarafından 409 çakışma yanıtı döndürülse bile tüm *. nupkg* dosyalarını gönderin:</span><span class="sxs-lookup"><span data-stu-id="31732-147">Push all *.nupkg* files even if a 409 Conflict response is returned by an HTTP(S) server:</span></span>
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- <span data-ttu-id="31732-148">Geçerli dizindeki tüm *. nupkg* dosyalarını yerel akış dizinine gönder:</span><span class="sxs-lookup"><span data-stu-id="31732-148">Push all *.nupkg* files in the current directory to a local feed directory:</span></span>
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  <span data-ttu-id="31732-149">Bu komut, paketleri hiyerarşik bir klasör yapısında depolamaz, bu da performansı iyileştirmek için önerilir.</span><span class="sxs-lookup"><span data-stu-id="31732-149">This command doesn't store packages in a hierarchical folder structure, which is recommended to optimize performance.</span></span> <span data-ttu-id="31732-150">Daha fazla bilgi için bkz. [Yerel akışlar](//nuget/hosting-packages/local-feeds).</span><span class="sxs-lookup"><span data-stu-id="31732-150">For more information, see [Local feeds](//nuget/hosting-packages/local-feeds).</span></span>
+  
