@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: Desteklenen işletim sistemi ve bağımlılıklar
       href: install/dependencies.md
+    - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
+      href: install/remove-runtime-sdk-versions.md
     - name: .NET şablonlarını yönetme
       href: install/templates.md
     - name: macOS Noter Onayı sorunları
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: .NET Core sürüm seçimi
       href: versions/selection.md
-    - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
-      href: versions/remove-runtime-sdk-versions.md
 - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
   href: rid-catalog.md
 - name: Bağımlılık yönetimi ve yüklemesi
