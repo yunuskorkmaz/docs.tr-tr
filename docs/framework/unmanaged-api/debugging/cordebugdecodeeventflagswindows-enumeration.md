@@ -10,12 +10,12 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: da3a100bd552eaa3233642b006e0265adbcac1ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90ddd27834e7614c1827d606a9955b4d6c53127
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795982"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows Numaralandırması
 Windows platformunda hata ayıklama olayları hakkında ek bilgi sağlar.  
@@ -35,20 +35,20 @@ typedef enum CorDebugDecodeEventFlagsWindows {
 |`IS_FIRST_CHANCE`|Hata ayıklama olayının ilk şans özel durumu olduğunu gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICorDebugProcess6::D ecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi, bir hata ayıklama olayı ve değeri hedef mimarisine bağlı olan ek bilgiler sağlayan bir `dwFlags` parametresi içerir. `CorDebugDecodeEventFlagsWindows` numaralandırması, Windows platformunda hata ayıklama olayları ile kullanılabilir.  
+ [ICorDebugProcess6::D ecodeEvent](icordebugprocess6-decodeevent-method.md) yöntemi bir hata ayıklama `dwFlags` olayı ve değeri hedef mimarisine bağlı olan ek bilgiler sağlayan bir parametre içerir. `CorDebugDecodeEventFlagsWindows` Sabit listesi Windows platformunda hata ayıklama olayları ile kullanılabilir.  
   
 > [!NOTE]
 > Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

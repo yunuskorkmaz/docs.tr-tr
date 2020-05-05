@@ -3,12 +3,12 @@ title: XML Belgesinde Ad Alanlarını Yönetme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796158"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML Belgesinde Ad Alanlarını Yönetme
 XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve önceden tanımlanmış URI 'Ler ile ilişkilendirir. Bu ilişkilendirmeleri oluşturmak için, ad alanı URI 'Leri için ön ekleri tanımlar ve bu önekleri, XML verilerinde öğe ve öznitelik adlarını nitelemek için kullanabilirsiniz. Ad alanları öğe ve öznitelik adı çakışmalarını önler ve aynı ada sahip öğelerin ve özniteliklerin işlenmesini ve farklı şekilde doğrulanmasını etkinleştirir.  
@@ -25,7 +25,8 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
-<bb:BOOK xmlns:bb="urn:blueyonderairlines">  
+<bb:BOOK xmlns:bb="urn:blueyonderairlines" />
+</mybook>
 ```  
   
  Bir öğenin belirli bir ad alanının parçası olduğunu belirtmek için, buna ad alanı öneki ekleyin. Örneğin, bir `Author` öğe `mybook` ad alanına aitse, olarak `<mybook:Author>`belirtilir.  
@@ -53,6 +54,8 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
+...
+</BOOK>
 ```  
   
 ## <a name="managing-namespaces"></a>Ad alanlarını yönetme  
@@ -80,4 +83,4 @@ XML ad alanları, bir XML belgesindeki öğe ve öznitelik adlarını özel ve �
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.XmlNamespaceManager>
-- [XML Belgeleri ve Verileri](../../../../docs/standard/data/xml/index.md)
+- [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md)

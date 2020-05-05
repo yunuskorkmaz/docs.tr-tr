@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796177"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML Belgelerinden Şema Çıkarımı Yapma
 Bu konuda, <xref:System.Xml.Schema.XmlSchemaInference> sınıfının bir XML belgesi YAPıSıNDAN bir XML şeması tanım DILI (xsd) şeması çıkarması için nasıl kullanılacağı açıklanmaktadır.  
@@ -29,7 +29,7 @@ Bu konuda, <xref:System.Xml.Schema.XmlSchemaInference> sınıfının bir XML bel
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  `attribute1` Yukarıdaki örnekte, `6` özniteliğe <xref:System.Xml.Schema.XmlSchemaInference> işlem tarafından bir değer ile karşılaşıldığında, türünde `xs:unsignedByte`olduğu varsayılır. <xref:System.Xml.Schema.XmlSchemaInference> İşlem `xs:string` tarafından ikinci `parent` öğe ile karşılaşıldığında, `attribute1` özniteliğinin değeri artık `A`olduğundan, kısıtlama, türü olarak değiştirilerek gevşerek yapılır. Benzer şekilde, `minOccurs` şemada çıkarılan tüm `child` öğelerin özniteliği, ikinci üst öğenin alt öğeleri olmadığından, öğesine `minOccurs="0"` gevşulmuş olarak ayarlanır.  

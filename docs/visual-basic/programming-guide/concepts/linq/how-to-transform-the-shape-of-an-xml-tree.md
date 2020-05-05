@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: bir XML ağacının şeklini dönüştürme'
+title: 'Nasıl yapılır: XML Ağacının Şeklini Dönüştürme'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332415"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796112"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Nasıl yapılır: bir XML ağacının şeklini dönüştürme (Visual Basic)
 Bir XML belgesinin *şekli* öğe adlarına, öznitelik adlarına ve hiyerarşisinin özelliklerine başvurur.  
@@ -21,7 +21,7 @@ Bir XML belgesinin *şekli* öğe adlarına, öznitelik adlarına ve hiyerarşis
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, ekli sorgu ifadeleri kullanarak bir XML dosyasının şeklini değiştirir.  
   
- Bu örnekteki kaynak XML belgesi, tüm müşterileri içeren `Root` öğesi altında bir `Customers` öğesi içerir. Ayrıca, tüm siparişleri içeren `Root` öğesi altında bir `Orders` öğesi içerir. Bu örnek, her müşteri için siparişlerin `Customer` öğesi içindeki bir `Orders` öğesinde bulunduğu yeni bir XML ağacı oluşturur. Özgün belge ayrıca `Order` öğesinde bir `CustomerID` öğesi içerir; Bu öğe, yeniden şekillendirilmiş belgeden kaldırılacak.  
+ Bu örnekteki kaynak XML belgesi, `Customers` `Root` tüm müşterileri içeren öğesi altında bir öğesi içerir. Ayrıca, `Root` tüm siparişleri `Orders` içeren öğesi altında bir öğesi de içerir. Bu örnek, her müşteriye ait siparişlerin `Orders` `Customer` öğesi içindeki bir ÖĞEDE bulunduğu yeni bir XML ağacı oluşturur. Özgün belge, `CustomerID` `Order` öğesinde bir öğesi de içerir; Bu öğe, yeniden şekillendirilmiş belgeden kaldırılacak.  
   
  Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  Bu kod aşağıdaki çıktıyı üretir:  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,13 +86,14 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>Örnek  
  Bu örnek bazı öğeleri yeniden adlandırır ve bazı öznitelikleri öğelere dönüştürür.  
   
- Kod, <xref:System.Xml.Linq.XElement> nesnelerinin bir listesini döndüren `ConvertAddress`çağırır. Yöntemin bağımsız değişkeni, `Type` özniteliğinin `"Shipping"`değerine sahip olduğu `Address` karmaşık öğeyi belirleyen bir sorgudur.  
+ Bir <xref:System.Xml.Linq.XElement> nesne listesi `ConvertAddress`döndüren kod çağırır. Yöntemin bağımsız değişkeni, `Address` `Type` özniteliğinin değeri olan karmaşık öğeyi belirleyen bir sorgudur. `"Shipping"`  
   
  Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   

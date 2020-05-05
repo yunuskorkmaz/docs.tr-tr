@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 69a8aabd1d79bb9bb4248259c99124ce50677600
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789240"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795670"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState Numaralandırması
 Hata ayıklama için bir iş parçacığının durumunu belirtir.  
@@ -41,19 +41,19 @@ typedef enum CorDebugThreadState {
 |`THREAD_SUSPEND`|İş parçacığı çalıştırılamıyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcı, bir iş parçacığının yürütmesini denetlemek için `CorDebugThreadState` numaralandırmayı kullanır. Bir iş parçacığının durumu [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) veya [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi kullanılarak ayarlanabilir.  
+ Hata ayıklayıcı, `CorDebugThreadState` bir iş parçacığının yürütmesini denetlemek için sabit listesini kullanır. Bir iş parçacığının durumu [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) veya [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) yöntemi kullanılarak ayarlanabilir.  
   
- [BARıNDıRMA API](../../../../docs/framework/unmanaged-api/hosting/index.md) 'sine sunulan bir geri çağırma, ileti balonları, bu nedenle kesintiye uğramış bir durum gerekli değildir.  
+ [BARıNDıRMA API](../hosting/index.md) 'sine sunulan bir geri çağırma, ileti balonları, bu nedenle kesintiye uğramış bir durum gerekli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

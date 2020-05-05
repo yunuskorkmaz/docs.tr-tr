@@ -1,112 +1,112 @@
 ---
-title: Sözdizimi dönüşümüne başlayın (Roslyn API'leri)
-description: Sözdizimi ağaçlarını gezmeye, sorgulamaya ve yürümeye giriş.
+title: Sözdizimi dönüşümü ile çalışmaya başlama (Roslyn API 'Leri)
+description: Sözdizimi ağaçlarını geçme, sorgulama ve yürüyen bir giriş.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240616"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794799"
 ---
-# <a name="get-started-with-syntax-transformation"></a>Sözdizimi dönüştürmeye başlayın
+# <a name="get-started-with-syntax-transformation"></a>Sözdizimi dönüşümü ile çalışmaya başlama
 
-Bu öğretici, [sözdizimi analiziile başlarken](syntax-analysis.md) incelenen kavramlar ve teknikler üzerine inşa edin ve [anlamsal analiz hızlı başlangıçlara başlayın.](semantic-analysis.md) Henüz yapmadıysanız, bu işe başlamadan önce bu hızlı başlangıcı tamamlamanız gerekir.
+Bu öğretici, [sözdizimi analizi ile çalışmaya başlama](syntax-analysis.md) bölümünde keşfolan kavram ve tekniklerin yanı sıra [anlam Analizi](semantic-analysis.md) hızlı başlangıçlarını kullanmaya başlamanızı de oluşturur. Henüz yapmadıysanız, bu hızlı başlangıçlara başlamadan önce bunu tamamlamalısınız.
 
-Bu hızlı başlangıçta, sözdizimi ağaçları oluşturma ve dönüştürme tekniklerini keşfesunuz. Önceki hızlı başlangıçlarda öğrendiğiniz tekniklerle birlikte, ilk komut satırı yeniden düzenlemenizi oluşturursunuz!
+Bu hızlı başlangıçta, sözdizimi ağaçları oluşturma ve dönüştürme tekniklerini keşfedebilirsiniz. Önceki hızlı başlangıçlarda öğrendiğiniz tekniklerle birlikte ilk komut satırı yeniden düzenleme bilgilerinizi oluşturursunuz!
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-## <a name="immutability-and-the-net-compiler-platform"></a>Değişmezlik ve .NET derleyici platformu
+## <a name="immutability-and-the-net-compiler-platform"></a>İmlebilirlik ve .NET derleyici platformu
 
-**Değişmezlik** .NET derleyici platformunun temel ilkelerinden biridir. Değişmez veri yapıları oluşturulduktan sonra değiştirilemez. Değişmez veri yapıları aynı anda birden fazla tüketici tarafından güvenli bir şekilde paylaşılabilir ve analiz edilebilir. Bir tüketicinin diğerini öngörülemeyen şekillerde etkilemetehlikesi yoktur. Çözümleyicinizin kilitlenmeye veya diğer eşzamanlılık önlemlerine ihtiyacı yoktur. Bu kural sözdizimi ağaçları, derlemeler, semboller, anlamsal modeller ve karşılaştığınız diğer tüm veri yapıları için geçerlidir. API'ler varolan yapıları değiştirmek yerine, eskileri için belirtilen farkları temel alan yeni nesneler oluşturur. Dönüşümleri kullanarak yeni ağaçlar oluşturmak için sözdizimi ağaçlarına bu kavramı uygularsınız.
+**İmlebilirlik kullanılabilirliği** , .NET derleyicisi platformunun temel bir temel ' dir. Sabit veri yapıları oluşturulduktan sonra değiştirilemez. Değişmez veri yapıları, aynı anda birden çok tüketici tarafından güvenli bir şekilde paylaşılabilir ve çözümlenebilir. Bir tüketicinin, bir tüketiciyi öngörülemeyen yollarla etkilediğine ilişkin tehlike yoktur. Çözümleyici 'nizin kilitleri veya diğer eşzamanlılık ölçüleri gerekmez. Bu kural, söz konusu sözdizimi ağaçları, derlemeler, semboller, anlam modelleri ve karşılaştığınız tüm diğer veri yapılarına yöneliktir. API 'Ler, var olan yapıları değiştirmek yerine, eski farklılıklara göre belirtilen farklılıkları temel alarak yeni nesneler oluşturur. Dönüşümleri kullanarak yeni ağaçlar oluşturmak için bu kavramı sözdizimi ağaçlarına uygularsınız.
 
 ## <a name="create-and-transform-trees"></a>Ağaçlar oluşturma ve dönüştürme
 
-Sözdizimi dönüşümleri için iki stratejiden birini seçersiniz. **Fabrika yöntemleri** en iyi, değiştirilecek belirli düğümleri veya yeni kod eklemek istediğiniz belirli konumları ararken kullanılır. **Yeniden yazanlar,** değiştirmek istediğiniz kod desenleri için tüm projeyi taramaya istediğinizde en iyi sidir.
+Söz dizimi dönüştürmeleri için iki stratejiden birini seçersiniz. **Fabrika yöntemleri** , değiştirilecek belirli düğümleri veya yeni kod eklemek istediğiniz belirli konumları ararken en iyi şekilde kullanılır. **Yeniden yazarlar** , değiştirmek istediğiniz kod desenleri için bir projenin tamamını taramak istediğinizde en iyi seçenektir.
 
 ### <a name="create-nodes-with-factory-methods"></a>Fabrika yöntemleriyle düğüm oluşturma
 
-İlk sözdizimi dönüşümü fabrika yöntemlerini gösterir. İfadeyi `using System.Collections;` bir `using System.Collections.Generic;` ifadeyle değiştireceksin. Bu örnek, fabrika <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> yöntemlerini kullanarak <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> nesneleri nasıl oluşturduğunuzu gösterir. **Düğüm**her tür için, **belirteç,** veya **trivia** bu tür bir örnek oluşturur bir fabrika yöntemi var. Alttan yukarıya doğru hiyerarşik düğümler oluşturarak sözdizimi ağaçları oluşturursunuz. Ardından, varolan düğümleri oluşturduğunuz yeni ağaçla değiştirirken varolan programı dönüştürürsünüz.
+İlk sözdizimi dönüştürmesi, Fabrika yöntemlerini gösterir. Bir `using System.Collections;` ifadeyi bir `using System.Collections.Generic;` ifadesiyle değiştirecek. Bu örnek, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Fabrika yöntemlerini kullanarak <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> nesneleri nasıl oluşturacağınızı gösterir. Her **düğüm**, **belirteç**veya **üç** tür için, bu türün bir örneğini oluşturan bir fabrika yöntemi vardır. Düğümleri aşağıdan yukarıya doğru oluşturarak sözdizimi ağaçları oluşturursunuz. Ardından, var olan programı, oluşturduğunuz yeni ağaç ile varolan düğümleri değiştirmektir.
 
-Visual Studio'yı başlatın ve yeni bir C# **Stand-Alone Kod Analizi Aracı** projesi oluşturun. Visual Studio'da, Yeni Proje iletişim kutusunu görüntülemek için **Dosya** > **Yeni** > **Projesi'ni** seçin. **Visual C#** > **Extensibility** altında tek **başına kod analiz aracı**seçin. Bu quickstart iki örnek projeler vardır, bu yüzden çözüm **SyntaxTransformationQuickStart**adı ve proje **ConstructionCS**adı . **Tamam**'a tıklayın.
+Visual Studio 'yu başlatın ve yeni bir C# **tek başına kod analizi araç** projesi oluşturun. Visual Studio 'da yeni proje iletişim kutusunu göstermek için **Dosya** > **Yeni** > **Proje** ' yi seçin. **Visual C#** > **genişletilebilirliği** altında **tek başına bir kod Analizi Aracı**seçin. Bu hızlı başlangıçta iki örnek proje bulunur, bu nedenle çözümü **SyntaxTransformationQuickStart**olarak adlandırın ve projeyi **constructioncs**olarak adlandırın. **Tamam**'a tıklayın.
 
-Bu proje, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> ad alanını <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> temsil eden `System.Collections.Generic` bir yapı oluşturmak için sınıf yöntemlerini kullanır.
+Bu proje, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> `System.Collections.Generic` ad alanını temsil eden bir oluşturmak için sınıf yöntemlerini kullanır.
 
-Sınıfın fabrika yöntemlerini ve yöntemlerini `Program.cs` <xref:System.Console> daha sonra nitelemeden kullanabilmeniz için dosyanın en üstüne aşağıdaki yönergeyi ekleyin: <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory>
+Aşağıdaki using yönergesini, `Program.cs` <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> sınıfının Fabrika yöntemlerini ve yöntemlerini <xref:System.Console> , daha sonra bunları nitelemeden kullanabilmek için ' ın en üstüne ekleyin:
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
-Deyimi temsil eden ağacı oluşturmak için **ad sözdizimi düğümleri** oluşturursunuz. `using System.Collections.Generic;` <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>C#'da görünen dört tür ad için taban sınıftır. C# dilinde görünebilecek herhangi bir ad oluşturmak için bu dört tür adı bir araya getirirsiniz:
+İfadeyi temsil eden ağacı oluşturmak için **ad sözdizimi düğümleri** oluşturacaksınız. `using System.Collections.Generic;` <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>, C# dilinde görünen dört tür ad için temel sınıftır. C# dilinde görünebilen herhangi bir ad oluşturmak için bu dört tür adı birlikte oluşturursunuz:
 
-* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>, gibi `System` basit tek tanımlayıcı adları temsil `Microsoft`eder ve .
-* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.GenericNameSyntax?displayProperty=nameWithType>, genel bir tür veya yöntem `List<int>`adı gibi temsil eder.
-* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax?displayProperty=nameWithType>, gibi formun `<left-name>.<right-identifier-or-generic-name>` nitelikli bir `System.IO`adını temsil eder.
-* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.AliasQualifiedNameSyntax?displayProperty=nameWithType>, bir derleme extern diğer adı kullanarak `LibraryV2::Foo`bir adı temsil eder.
+* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>, ve `System` `Microsoft`gibi basit tek tanımlayıcı adlarını temsil eder.
+* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.GenericNameSyntax?displayProperty=nameWithType>, gibi genel bir tür veya yöntem adını temsil eder `List<int>`.
+* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax?displayProperty=nameWithType>, gibi formun `<left-name>.<right-identifier-or-generic-name>` tam adını temsil eder `System.IO`.
+* <xref:Microsoft.CodeAnalysis.CSharp.Syntax.AliasQualifiedNameSyntax?displayProperty=nameWithType>Bu, bir derleme extern diğer adını kullanarak bir `LibraryV2::Foo`adı temsil eder.
 
-Düğüm oluşturmak <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IdentifierName(System.String)> <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> için yöntemi kullanırsınız. Yönteminize `Main` aşağıdaki kodu `Program.cs`ekleyin:
+Bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> düğüm oluşturmak <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory.IdentifierName(System.String)> için yöntemini kullanırsınız. Aşağıdaki kodu `Main` yöntemine ekleyin `Program.cs`:
 
 [!code-csharp[create the system identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateIdentifierName "Create and display the system name identifier")]
 
-Önceki kod bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> nesne oluşturur ve değişkene `name`atar. Roslyn API'lerinin çoğu, ilgili türlerle çalışmayı kolaylaştırmak için temel sınıfları döndürer. Değişken `name`, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>an , oluşturmak gibi yeniden <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>kullanılabilir. Örneği oluştururken tür çıkarımını kullanmayın. Bu projede bu adımı otomatikleştireceksin.
+Önceki kod bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> nesnesi oluşturur ve değişkenine `name`atar. Roslyn API 'Lerinin birçoğu, ilgili türlerle çalışmayı kolaylaştırmak için temel sınıflar döndürür. , Bir `name` <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>değişkeni oluştururken yeniden kullanılabilir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>. Örneği oluştururken tür çıkarımı kullanmayın. Bu adımı bu projede otomatikleştirin.
 
-Adı sen yarattın. Şimdi, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>inşa ederek ağaca daha fazla düğüm inşa etmek zamanı. Yeni ağaç `name` adın sol olarak kullanır ve <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> `Collections` ad alanı için yeni bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>sağ tarafı olarak. Aşağıdaki kodu `program.cs`ekleyin:
+Adı oluşturdunuz. Şimdi, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>oluşturarak ağaçta daha fazla düğüm oluşturmaya zaman atalım. Yeni ağaç, adının `name` solunda ve öğesinin sağ tarafıyla birlikte <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> `Collections` ad alanı için yeni bir kez kullanılır <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax>. Aşağıdaki kodu öğesine `program.cs`ekleyin:
 
 [!code-csharp[create the collections identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
 
-Kodu yeniden çalıştırın ve sonuçları görün. Kodu temsil eden bir düğüm ağacı inşa ediyorsun. Ad alanı <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> `System.Collections.Generic`oluşturmak için bu deseni devam eeeceksiniz. Aşağıdaki kodu `Program.cs`ekleyin:
+Kodu yeniden çalıştırın ve sonuçları görün. Kodu temsil eden bir düğüm ağacı yarayorsunuz. Ad alanı <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> `System.Collections.Generic`için oluşturmak üzere bu düzene devam edersiniz. Aşağıdaki kodu öğesine `Program.cs`ekleyin:
 
 [!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
-Ekleyecek kod için ağaç oluşturduğunuzu görmek için programı yeniden çalıştırın.
+Eklenecek kodun ağacını oluşturduğunuzdan emin olmak için programı yeniden çalıştırın.
 
-### <a name="create-a-modified-tree"></a>Değiştirilmiş bir ağaç oluşturma
+### <a name="create-a-modified-tree"></a>Değiştirilmiş ağaç oluşturma
 
-Bir deyim içeren küçük bir sözdizimi ağacı inşa ettik. Yeni düğümler oluşturmak için API'ler tek bir deyim veya diğer küçük kod blokları oluşturmak için doğru seçimdir. Ancak, daha büyük kod blokları oluşturmak için düğümleri değiştiren veya düğümleri varolan bir ağaca ekleyen yöntemler kullanmalısınız. Sözdizimi ağaçlarının değişmez olduğunu unutmayın. **Sözdizimi API' si,** inşaattan sonra varolan bir sözdizimi ağacını değiştirmek için herhangi bir mekanizma sağlamaz. Bunun yerine, varolandeğişikliklere dayalı yeni ağaçlar üreten yöntemler sağlar. `With*`yöntemler, sınıfta beyan edilen uzantı yöntemlerinden <xref:Microsoft.CodeAnalysis.SyntaxNode> türeyen veya uzatma yöntemlerinden kaynaklanan somut sınıflarda tanımlanır. <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> Bu yöntemler, varolan bir düğümün alt özelliklerine değişiklikler uygulayarak yeni bir düğüm oluşturur. Ayrıca, <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> uzantı yöntemi bir alt ağaçta bir soyundan gelen düğüm değiştirmek için kullanılabilir. Bu yöntem ayrıca, yeni oluşturulan alt öğeyi işaret etmek için üst öğeyi güncelleştirir ve bu işlemi tüm ağaca kadar yineler - ağacı _yeniden döndürme_ olarak bilinen bir işlem.
+Tek bir ifade içeren küçük bir sözdizimi ağacı oluşturdunuz. Yeni düğümler oluşturmak için API 'Ler, tek deyimler veya diğer küçük kod blokları oluşturmak için doğru seçimdir. Ancak, daha büyük kod blokları oluşturmak için, düğümleri değiştirecek veya düğümleri varolan bir ağaca ekleyecek yöntemleri kullanmanız gerekir. Söz dizimi ağaçlarının sabit olduğunu unutmayın. **Sözdizimi API 'si** , oluşturulduktan sonra var olan bir sözdizimi ağacını değiştirmek için herhangi bir mekanizma sağlamaz. Bunun yerine, var olan değişikliklere göre yeni ağaçlar üreten yöntemler sağlar. `With*`Yöntemler, <xref:Microsoft.CodeAnalysis.SyntaxNode> <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> sınıfında belirtilen genişletme yöntemlerinden veya sınıfından türetilen somut sınıflarda tanımlanmıştır. Bu yöntemler, var olan bir düğümün alt özelliklerine değişiklikler uygulayarak yeni bir düğüm oluşturur. Ek olarak, <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> genişletme yöntemi bir alt ağaçtaki alt düğümü değiştirmek için de kullanılabilir. Bu yöntem aynı zamanda yeni oluşturulan alt öğeye işaret eden üst öğeyi güncelleştirir ve bu işlemi, ağacı _yeniden dönme_ olarak bilinen bir işlem olan ağacın tamamına yineler.
 
-Bir sonraki adım, tüm (küçük) bir programı temsil eden bir ağaç oluşturmak ve sonra onu değiştirmektir. `Program` Sınıfın başına aşağıdaki kodu ekleyin:
+Bir sonraki adım, (küçük) bir programın tamamını temsil eden bir ağaç oluşturmak ve ardından onu değiştirmektir. `Program` Sınıfının başlangıcına aşağıdaki kodu ekleyin:
 
 [!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#DeclareSampleCode "Create a tree that represents a small program")]
 
 > [!NOTE]
-> Örnek kod ad `System.Collections` alanını değil, `System.Collections.Generic` ad alanını kullanır.
+> Örnek kod, ad alanını `System.Collections` değil `System.Collections.Generic` ad alanını kullanır.
 
-Ardından, metni ayrıştırmak ve `Main` bir ağaç oluşturmak için yöntemin altına aşağıdaki kodu ekleyin:
+Sonra, metni ayrıştırmak ve bir ağaç oluşturmak için `Main` yönteminin altına aşağıdaki kodu ekleyin:
 
 [!code-csharp[create a parse tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateParseTree "Create a tree that represents a small program")]
 
-Bu örnek, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)?displayProperty=NameWithType> bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> düğümdeki adı önceki kodda oluşturulmuş olanla değiştirmek için yöntemi kullanır.
+Bu örnek, bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)?displayProperty=NameWithType> <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> düğümdeki adı önceki kodda oluşturulmuş bir ile değiştirmek için yöntemini kullanır.
 
-Adı önceki <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> kodda <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)> oluşturduğunuz adla güncelleştirmek için yöntemi kullanarak yeni bir düğüm oluşturun. `System.Collections` `Main` Yöntemin altına aşağıdaki kodu ekleyin:
+Adı önceki kodda <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> oluşturduğunuz adla güncelleştirmek <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.WithName(Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax)> için yöntemini kullanarak yeni bir düğüm oluşturun. `System.Collections` Aşağıdaki kodu `Main` yönteminin altına ekleyin:
 
 [!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
-Programı çalıştırın ve çıktıya dikkatlice bakın. Kök `newusing` ağacına yerleştirilmemiş. Orijinal ağaç değiştirilmemiş.
+Programı çalıştırın ve çıkışa dikkatle göz atın. `newusing` Kök ağaca yerleştirilmemiş. Özgün ağaç değiştirilmedi.
 
-Yeni bir ağaç <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> oluşturmak için uzantı yöntemini kullanarak aşağıdaki kodu ekleyin. Yeni ağaç, varolan alma işleminin güncelleştirilmiş `newUsing` düğümle değiştirilmesinin sonucudur. Bu yeni ağacı varolan `root` değişkene atarsınız:
+Yeni bir ağaç oluşturmak için <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> genişletme yöntemini kullanarak aşağıdaki kodu ekleyin. Yeni ağaç, varolan içeri aktarmanın güncelleştirilmiş `newUsing` düğümle değiştirilmesi sonucudur. Bu yeni ağacı mevcut `root` değişkene atarsınız:
 
 [!code-csharp[create a new root tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#TransformTree "Create the transformed root tree with the replaced namespace")]
 
-Programı yeniden çalıştırın. Bu kez ağaç şimdi doğru `System.Collections.Generic` ad alanı içeriak.
+Programı yeniden çalıştırın. Bu kez, ağaç artık `System.Collections.Generic` ad alanını doğru bir şekilde içeri aktarır.
 
-### <a name="transform-trees-using-syntaxrewriters"></a>Kullanarak ağaçları dönüştürün`SyntaxRewriters`
+### <a name="transform-trees-using-syntaxrewriters"></a>Kullanarak ağaçları dönüştürme`SyntaxRewriters`
 
-Ve `With*` <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> yöntemler, sözdizimi ağacının tek tek dallarını dönüştürmek için kullanışlı araçlar sağlar. Sınıf <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> sözdizimi ağacında birden çok dönüşüm gerçekleştirir. Sınıf <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> bir alt <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>sınıftır. Belirli <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> bir <xref:Microsoft.CodeAnalysis.SyntaxNode>türe dönüştürme uygular. Dönüşümleri sözdizimi ağacında <xref:Microsoft.CodeAnalysis.SyntaxNode> göründükleri her yerde birden çok nesne türüne uygulayabilirsiniz. Bu hızlı başlatmadaki ikinci proje, yerel değişken bildirimlerinde açık türleri kaldıran ve tür çıkarımının kullanılabilebileceği bir komut satırı yeniden oluşturma oluşturur.
+Ve `With*` <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> yöntemleri, bir sözdizimi ağacının tek tek dallarını dönüştürmek için kullanışlı bir yol sağlar. Sınıfı <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> , bir sözdizimi ağacında birden çok dönüştürme gerçekleştirir. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> Sınıfı, öğesinin <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>bir alt sınıfıdır. , <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> Belirli bir türüne dönüşüm uygular <xref:Microsoft.CodeAnalysis.SyntaxNode>. Bir sözdizimi ağacında göründükleri yerde, <xref:Microsoft.CodeAnalysis.SyntaxNode> birden çok nesne türüne dönüşümler uygulayabilirsiniz. Bu hızlı başlangıçtaki ikinci proje, tür çıkarımı kullanılabilir her yerde yerel değişken bildirimlerinde açık türleri kaldıran bir komut satırı yeniden düzenlemesi oluşturur.
 
-Yeni bir C# **Tek Başına Kod Analizi Aracı** projesi oluşturun. Visual Studio'da çözüm `SyntaxTransformationQuickStart` düğümüne sağ tıklayın. **Yeni Proje iletişim kutusunu**görüntülemek için Yeni**Proje** **Ekle'yi** > seçin. **Visual C#** > **Genişletilebilirlik** **altında, Tek Başına Kod Analiz Aracı'nı**seçin. Projenizi `TransformationCS` adlandırın ve Tamam'ı tıklatın.
+Yeni bir C# **tek başına kod analizi araç** projesi oluşturun. Visual Studio 'da `SyntaxTransformationQuickStart` çözüm düğümüne sağ tıklayın. **Yeni proje iletişim kutusunu**göstermek için**Yeni proje** **Ekle** > ' yi seçin. **Visual C#** > **genişletilebilirliği**altında **tek başına Kod Analizi Aracı**' nı seçin. Projenizi `TransformationCS` adlandırın ve Tamam ' a tıklayın.
 
-İlk adım, dönüşümlerinizi gerçekleştirmek için türetilen <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> bir sınıf oluşturmaktır. Projeye yeni bir sınıf dosyası ekleyin. Visual Studio'da **Project** > **Add Class'ı seçin...** **Dosya** adı `TypeInferenceRewriter.cs` olarak Yeni Öğe ekle iletişim türünde.
+İlk adım, dönüştürmelerinizi gerçekleştirmek için öğesinden <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> türeten bir sınıf oluşturmaktır. Projeye yeni bir sınıf dosyası ekleyin. Visual Studio 'da **Proje** > **Sınıf Ekle...** öğesini seçin. **Yeni öğe Ekle** iletişim kutusunda dosya adı `TypeInferenceRewriter.cs` olarak yazın.
 
-`TypeInferenceRewriter.cs` Dosyaya yönergeleri kullanarak aşağıdakileri ekleyin:
+Aşağıdaki using yönergelerini `TypeInferenceRewriter.cs` dosyasına ekleyin:
 
 [!code-csharp[add necessary usings](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#AddUsings "Add required usings")]
 
-Ardından, `TypeInferenceRewriter` sınıfın sınıfı <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> genişletmesini yapın:
+Sonra, `TypeInferenceRewriter` sınıfın <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> sınıfı genişletmesine dikkat edin:
 
 [!code-csharp[add base class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BaseClass "Add base class")]
 
-Bir <xref:Microsoft.CodeAnalysis.SemanticModel> alanı tutmak ve oluşturucuda başlatmayı sağlamak için özel bir salt okunur alanını bildirmek için aşağıdaki kodu ekleyin. Tür çıkarımının nerede kullanılabileceğini belirlemek için daha sonra bu alana ihtiyacınız olacaktır:
+Bir <xref:Microsoft.CodeAnalysis.SemanticModel> özel salt okuma alanı bildirmek için aşağıdaki kodu ekleyin ve oluşturucuda başlatın. Tür çıkarımını nerede kullanılabileceğini öğrenmek için bu alana daha sonra ihtiyacınız olacak:
 
 [!code-csharp[initialize members](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Construction "Declare and initialize member variables")]
 
@@ -120,15 +120,15 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Roslyn API'lerinin çoğu, döndürülen gerçek çalışma zamanı türlerinin temel sınıfları olan dönüş türlerini bildirir. Birçok senaryoda, bir tür düğüm tamamen başka bir tür düğüm le değiştirilebilir - hatta kaldırılabilir. Bu örnekte, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> yöntem <xref:Microsoft.CodeAnalysis.SyntaxNode>türetilmiş tür . <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> Bu yeniden yazar, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> varolana dayalı yeni bir düğüm döndürür.
+> Roslyn API 'lerinin birçoğu, döndürülen gerçek çalışma zamanı türlerinin temel sınıfları olan dönüş türlerini bildirir. Birçok senaryoda, bir tür düğüm tamamen veya hatta kaldırılmış başka bir düğüm türüyle değiştirilebilir. Bu örnekte, <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> metodu türetilmiş türü yerine bir <xref:Microsoft.CodeAnalysis.SyntaxNode>döndürür <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Bu yeniden yazıcı, mevcut bir <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> düğümü temel alarak yeni bir düğüm döndürüyor.
 
-Bu hızlı başlatma yerel değişken bildirimlerini işler. Döngüler, döngüler, `for` LINQ `foreach` ifadeleri ve lambda ifadeleri gibi diğer bildirimlere genişletebilirsiniz. Ayrıca bu rewriter sadece basit formun beyannameleri dönüştürecek:
+Bu hızlı başlangıçta yerel değişken bildirimleri ele alır. `foreach` Döngüleri, `for` döngüleri, LINQ ifadeleri ve lambda ifadeleri gibi diğer bildirimlere genişletebilirsiniz. Ayrıca, bu yeniden yazıcı yalnızca en basit formun bildirimlerini dönüştürür:
 
 ```csharp
 Type variable = expression;
 ```
 
-Kendi başına keşfetmek istiyorsanız, bu tür değişken bildirimleri için bitmiş örneği genişletmeyi düşünün:
+Kendi kendinize araştırmak isterseniz, bu tür bildirimler için tamamlanan örneği genişletmeyi göz önünde bulundurun:
 
 ```csharp
 // Multiple variables in a single declaration.
@@ -138,46 +138,46 @@ Type variable1 = expression1,
 Type variable;
 ```
 
-Bu bildirim formlarını yeniden `VisitLocalDeclarationStatement` yazmayı atlamak için yöntemin gövdesine aşağıdaki kodu ekleyin:
+Aşağıdaki kodu, bu bildirim biçimlerini yeniden yazmayı atlamak `VisitLocalDeclarationStatement` için yönteminin gövdesine ekleyin:
 
 [!code-csharp[exclude other declarations](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#Exclusions "Exclude variables declarations not processed by this sample")]
 
-Yöntem, parametredeğiştirilmeden `node` döndürülerek hiçbir yeniden yazma gerçekleşir gösterir. Bu `if` ifadelerden hiçbiri doğru değilse, düğüm başharfle olası bir bildirimi temsil eder. Bildirimde belirtilen tür adını ayıklamak için bu deyimleri <xref:Microsoft.CodeAnalysis.SemanticModel> ekleyin ve bir tür sembolü elde etmek için alanı kullanarak bağlamak:
+Yöntemi, `node` parametreyi değiştirilmemiş olarak döndürerek yeniden yazma gerçekleşmeden emin olduğunu gösterir. Bu `if` ifadelerden hiçbiri true ise, düğüm başlatma ile olası bir bildirimi temsil eder. Bildirimde belirtilen tür adını ayıklamak ve bir tür simgesi almak için <xref:Microsoft.CodeAnalysis.SemanticModel> alanı kullanarak bağlamak için bu deyimleri ekleyin:
 
 [!code-csharp[extract type name](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ExtractTypeSymbol "Extract the type name specified by the declaration")]
 
-Şimdi, baş harf ifadesini bağlamak için bu ifadeyi ekleyin:
+Şimdi Başlatıcı ifadesini bağlamak için bu deyimi ekleyin:
 
 [!code-csharp[bind initializer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Bind the initializer expressions")]
 
-Son olarak, `if` baş harf ifadesinin türü `var` belirtilen türle eşleşiyorsa, varolan tür adını anahtar kelimeyle değiştirmek için aşağıdaki ifadeyi ekleyin:
+Son olarak, başlatıcı ifadesinin `if` türü belirtilen türle eşleşiyorsa, varolan tür adını `var` anahtar sözcüğüyle değiştirmek için aşağıdaki deyimi ekleyin:
 
 [!code-csharp[ReplaceNode](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
-Bildirge, başharf ifadesini bir taban sınıfa veya arabirime atabileceğinden koşullu olarak gereklidir. Bu istenirse, atamanın sol ve sağ tarafındaki türler eşleşmez. Bu gibi durumlarda açık türü kaldırmak bir programın anlambilimini değiştirir. `var`bağlamsal bir anahtar kelime `var` olduğundan, anahtar kelime yerine tanımlayıcı olarak belirtilir. Önde gelen ve sondaki ıvır zıvır (beyaz boşluk) `var` dikey beyaz boşluk ve girintiyi korumak için eski tür adından anahtar kelimeye aktarılır. Tür adı aslında bildirim `ReplaceNode` deyiminin torunu <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> olduğu için dönüştürmek yerine `With*` kullanmak daha kolaydır.
+Bildirim, başlatıcı ifadesini temel bir sınıfa veya arabirime atabileceğinden koşullu gereklidir. Bu istenirse, atamanın sol ve sağ tarafındaki türler eşleşmez. Bu durumlarda açık türün kaldırılması bir programın semantiğini değiştirir. `var`bağlamsal bir anahtar sözcük olduğundan `var` , bir anahtar sözcük yerine tanımlayıcı olarak belirtilir. Baştaki ve sondaki üç nokta (beyaz boşluk), dikey boşluk ve girintileme sağlamak için eski tür adından `var` anahtar sözcüğe aktarılır. Tür adı bildirim ifadesinin gerçekten `ReplaceNode` alt öğesi `With*` olduğundan, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> bunu dönüştürmek yerine kullanılması daha basittir.
 
-`TypeInferenceRewriter`Bitirdin. Şimdi örneği `Program.cs` bitirmek için dosyanıza dönün. Bir test <xref:Microsoft.CodeAnalysis.Compilation> oluşturun <xref:Microsoft.CodeAnalysis.SemanticModel> ve ondan elde edin. Bunu <xref:Microsoft.CodeAnalysis.SemanticModel> denemek için `TypeInferenceRewriter`kullan. Bu adımı en son sen atacaksın. Bu arada, test derlemenizi temsil eden bir yer tutucu değişkeni bildirin:
+Tamamladınız `TypeInferenceRewriter`. Şimdi, örneği tamamlayacak `Program.cs` şekilde dosyanıza geri dönün. Bir test <xref:Microsoft.CodeAnalysis.Compilation> oluşturun ve <xref:Microsoft.CodeAnalysis.SemanticModel> buradan alın. Bunu denemek <xref:Microsoft.CodeAnalysis.SemanticModel> için kullanın `TypeInferenceRewriter`. Bu adımı son yapmanız gerekir. Bu arada, test derlenmesini temsil eden bir yer tutucu değişkeni bildirin:
 
 [!code-csharp[DeclareCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
 
-Bir anı durakldıktan sonra, hiçbir `CreateTestCompilation` yöntemin bulunmadığını bildiren bir hata squiggle görünmelisiniz. Ampulü açmak için **Ctrl+Period** tuşuna basın ve ardından **Yöntem Saplama** oluştur komutunu çağırmak için Enter tuşuna basın. Bu `CreateTestCompilation` `Program` komut, sınıftaki yöntem için bir yöntem saplama oluşturur. Bu yöntemi daha sonra doldurmak için geri geleceksiniz:
+Bir süre durakladıktan sonra, hiçbir `CreateTestCompilation` yöntemin mevcut olmadığını bildiren bir hata ortaya çıktıktan sonra hata görürsünüz. Açık ampul ' i açmak için **CTRL + nokta** tuşlarına basın ve sonra **Yöntem oluşturma saplama** komutunu çağırmak için ENTER tuşuna basın. Bu komut, `CreateTestCompilation` `Program` sınıfında yöntemi için bir yöntem saplaması oluşturacaktır. Daha sonra bu yöntemi dolduracak şekilde geri döneceksiniz:
 
-![C# Kullanımdan yöntem oluşturma](./media/syntax-transformation/generate-from-usage.png)
+![C# kullanımdan bir yöntem oluştur](./media/syntax-transformation/generate-from-usage.png)
 
-Testteki <xref:Microsoft.CodeAnalysis.SyntaxTree> <xref:Microsoft.CodeAnalysis.Compilation>her birinin üzerinde yinelemek için aşağıdaki kodu yazın. Her biri `TypeInferenceRewriter` <xref:Microsoft.CodeAnalysis.SemanticModel> için, bu ağaç için yeni bir baş harf:
+Testteki <xref:Microsoft.CodeAnalysis.SyntaxTree> <xref:Microsoft.CodeAnalysis.Compilation>her birinde yinelemek için aşağıdaki kodu yazın. Her biri için, bu ağaç `TypeInferenceRewriter` <xref:Microsoft.CodeAnalysis.SemanticModel> için ile yeni bir başlatın:
 
 [!code-csharp[IterateTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#IterateTrees "Iterate all the source trees in the test compilation")]
 
-Oluşturduğunuz `foreach` deyimin içinde, her kaynak ağaçta dönüşümü gerçekleştirmek için aşağıdaki kodu ekleyin. Bu kod, herhangi bir düzenleme yapıldıysa, yeni dönüştürülmüş ağacı koşullu olarak yazar. Yeniden yazarınız yalnızca tür çıkarımı kullanılarak basitleştirilebilen bir veya daha fazla yerel değişken bildirimiyle karşılaştığında bir ağacı değiştirmelidir:
+Oluşturduğunuz `foreach` deyimin içinde, her kaynak ağacında dönüştürmeyi gerçekleştirmek için aşağıdaki kodu ekleyin. Bu kod, herhangi bir düzenleme yapılıyorsa, yeni dönüştürülmüş ağacı koşullu olarak yazar. Yeniden yazıcı, tür çıkarımı kullanılarak Basitleştirilen bir veya daha fazla yerel değişken bildirimi ile karşılaştığında yalnızca bir ağacı değiştirmeli:
 
 [!code-csharp[TransformTrees](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#TransformTrees "Transform and save any trees that are modified by the rewriter")]
 
-`File.WriteAllText` Kodun altında kıvrımlar görmelisin. Ampulü seçin ve gerekli `using System.IO;` ifadeyi ekleyin.
+`File.WriteAllText` Kodun altında dalgalı çizgiler görmeniz gerekir. Ampul ' i seçin ve gerekli `using System.IO;` ifadeyi ekleyin.
 
-Neredeyse bitirdin! Bir adım kaldı: bir test <xref:Microsoft.CodeAnalysis.Compilation>oluşturma . Bu hızlı başlangıç sırasında hiç tür çıkarım kullanmadığınız için, mükemmel bir test çalışması yapılmış olurdu. Ne yazık ki, c# proje dosyasından derleme oluşturmak bu gözden geçirmenin kapsamı dışındadır. Ama neyse ki, talimatları dikkatle takip ediyorsanız, umut var. `CreateTestCompilation` yönteminin içeriğini aşağıdaki kodla değiştirin. Bu hızlı başlatmada açıklanan projeyle tesadüfen eşleşen bir test derlemesi oluşturur:
+Neredeyse tamamladınız! Bir adım kaldı: test <xref:Microsoft.CodeAnalysis.Compilation>oluşturma. Bu hızlı başlangıçta tür çıkarımı kullanmadığınız için, tam bir test çalışması yapmış olabilir. Ne yazık ki, bir C# proje dosyasından derleme oluşturmak Bu izlenecek yolun kapsamının dışındadır. Ancak, yönergeleri dikkatle takip ediyorsanız, umuyoruz. `CreateTestCompilation` yönteminin içeriğini aşağıdaki kodla değiştirin. Tesadüfen bu hızlı başlangıçta açıklanan projeyle eşleşen bir test derlemesi oluşturur:
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-Parmaklarını çapraz ve projeyi çalıştır. Visual Studio'da **Hata** > **Ayıklama Başlat'ı**seçin. Visual Studio tarafından projenizdeki dosyaların değiştiği sorulmalıdır. Değiştirilen dosyaları yeniden yüklemek için "**Tümüne Evet**" seçeneğini tıklayın. Muhteşemliğinizi gözlemlemek için onları inceleyin. Tüm bu açık ve gereksiz tür belirteci olmadan kodun ne kadar temiz göründüğünü unutmayın.
+Parmaklarınızın çapraz yanı sıra projeyi çalıştırın. Visual Studio 'da **hata** > **ayıklamayı Başlat hata**Ayıkla ' yı seçin. Visual Studio 'Nun projenizdeki dosyaların değiştiği sorulur. Değiştirilen dosyaları yeniden yüklemek için "**Tümüne Evet**" e tıklayın. Awesomeninizi gözlemlemek için bunları inceleyin. Kodun tüm açık ve gereksiz tür belirticileri olmadan ne kadar temizleyici göründüğünü göz önünde edin.
 
-Tebrikler! **Derleyici API'lerini,** belirli sözdizimdiziliş desenler için bir C# projesindeki tüm dosyaları arayan, bu desenlerle eşleşen kaynak kodun anlambilimini analiz eden ve dönüştüren kendi yeniden düzenlemenizi yazmak için kullandınız. Artık resmen yeniden düzenleme yazarısın!
+Tebrikler! **Derleyici API 'lerini** , belirli sözdizimsel desenler Için bir C# projesindeki tüm dosyaları arayan kendi yeniden düzenleme, bu desenlerle eşleşen kaynak kodun semantiğini analiz eden ve onu dönüştüren kendi yeniden düzenlemenizi yazmak için kullandınız. Artık resmi bir yeniden düzenleme yazarımız!
