@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cfbd856c73ab10642a7cf7c16cfb2d70e7fe9756
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795735"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat Numaralandırması
 Bir yerel özel durum ayıklama olayı hakkında bilgi içeren bir bayt dizisindeki verilerin biçimini açıklar.  
@@ -37,20 +37,20 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|Veriler 64 bitlik bir Windows özel durum kaydıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugRecordFormat` numaralandırmasının bir üyesi, `pRecord` bağımsız değişkeninde bayt dizisinin biçimini göstermek için [DecodeEvent](icordebugprocess6-decodeevent-method.md) yöntemine geçirilir.  
+ Bir `CorDebugRecordFormat` numaralandırma üyesi, `pRecord` bağımsız değişkeninde bayt dizisinin biçimini göstermek için [DecodeEvent](icordebugprocess6-decodeevent-method.md) yöntemine geçirilir.  
   
 > [!NOTE]
 > Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

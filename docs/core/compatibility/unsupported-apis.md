@@ -1,29 +1,29 @@
 ---
-title: .NET Core'da Desteklenmeyen API'ler
+title: .NET Core 'da desteklenmeyen API 'Ler
 titleSuffix: ''
-description: .NET Core'da her zaman özel durum oluşturan .NET Framework'den hangi API'lerin olduğunu öğrenin.
+description: .NET Core üzerinde her zaman bir özel durum oluşturan .NET Framework hangi API 'Leri öğrenin.
 ms.date: 12/23/2019
-ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794604"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core'da her zaman özel durumlar oluşturan API'ler
+# <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core üzerinde her zaman özel durum oluşturan API 'Ler
 
-Aşağıdaki API'ler her <xref:System.PlatformNotSupportedException> zaman .NET Core'un tümüne veya bir platform alt kümesine bir
+Aşağıdaki API 'Ler her zaman bir <xref:System.PlatformNotSupportedException> platform alt kümesi üzerinde .NET Core üzerinde oluşturulur.
 
-Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
+Bu makale, etkilenen API üyelerini ad alanına göre düzenler.
 
 > [!NOTE]
 >
-> - Bu makale, devam etmekte olan bir çalışmadır. .NET Core'da özel durumlar oluşturan API'lerin tam bir listesi değildir.
-> - Bu makalede, .NET Core'u oluşturan ikili serileştirme için açık arabirim uygulamaları içermez. Daha fazla bilgi için [.NET Core'daki İkili serileştirmeye](../../standard/serialization/binary-serialization.md#net-core)bakın.
+> - Bu makale, devam eden bir çalışmadır. .NET Core üzerinde özel durum oluşturan API 'lerin tamamen bir listesi değildir.
+> - Bu makale, .NET Core üzerinde throw ikili serileştirme için açık arabirim uygulamaları içermez. Daha fazla bilgi için bkz. [.NET Core 'Da ikili serileştirme](../../standard/serialization/binary-serialization.md#net-core).
 
 ## <a name="system"></a>Sistem
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | Tümü |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | Tümü |
@@ -36,58 +36,58 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.OperatingSystem.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Type.ReflectionOnlyGetType(System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
+## <a name="systemcodedomcompiler"></a>System. CodeDom. derleyicisi
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | Tümü |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | Tümü |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromSource%2A?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
+## <a name="systemcollectionsspecialized"></a>System. Collections. özelleşmiş
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.OnDeserialization(System.Object)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemconfiguration"></a>System.Configuration
+## <a name="systemconfiguration"></a>System. Configuration
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
-| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>(tüm üyeler) | Tümü |
+| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>(tüm Üyeler) | Tümü |
 
-## <a name="systemconsole"></a>Console
+## <a name="systemconsole"></a>System. Console
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux ve macOS |
-| <xref:System.Console.BufferHeight?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.BufferWidth?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.CursorSize?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.CursorVisible?displayProperty=nameWithType>(yalnızca almak) | Linux ve macOS |
+| <xref:System.Console.BufferHeight?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.BufferWidth?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.CursorSize?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.CursorVisible?displayProperty=nameWithType>(yalnızca Get) | Linux ve macOS |
 | <xref:System.Console.MoveBufferArea%2A?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Console.SetWindowPosition%2A?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Console.SetWindowSize%2A?displayProperty=nameWithType> | Linux ve macOS |
-| <xref:System.Console.Title?displayProperty=nameWithType>(yalnızca almak) | Linux ve macOS |
-| <xref:System.Console.WindowHeight?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.WindowLeft?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.WindowTop?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Console.WindowWidth?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
+| <xref:System.Console.Title?displayProperty=nameWithType>(yalnızca Get) | Linux ve macOS |
+| <xref:System.Console.WindowHeight?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.WindowLeft?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.WindowTop?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Console.WindowWidth?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
 
-## <a name="systemdatacommon"></a>System.Data.Common
+## <a name="systemdatacommon"></a>System. Data. Common
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>(atar <xref:System.NotSupportedException>) | Tümü |
 
-## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
+## <a name="systemdiagnosticsprocess"></a>System. Diagnostics. Process
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
-| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>(yalnızca ayar) | Linux |
-| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>(yalnızca ayar) | Linux |
+| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>(yalnızca set) | Linux |
+| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>(yalnızca set) | Linux |
 | <xref:System.Diagnostics.Process.ProcessorAffinity?displayProperty=nameWithType> | macOS |
 | <xref:System.Diagnostics.Process.MainWindowHandle?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> | Linux ve macOS |
@@ -95,37 +95,37 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Diagnostics.ProcessStartInfo.PasswordInClearText?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.LoadUserProfile?displayProperty=nameWithType> | Linux ve macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(yalnızca almak) | macOS |
-| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(yalnızca Get) | Mac OS |
+| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
 
 ## <a name="systemio"></a>System.IO
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemiopipes"></a>Pipes
+## <a name="systemiopipes"></a>System. ıO. Pipes
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.IO.Pipes.PipeStream.InBufferSize?displayProperty=nameWithType> | Linux ve macOS |
 | <xref:System.IO.Pipes.PipeStream.OutBufferSize?displayProperty=nameWithType> | Linux ve macOS |
-| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>(yalnızca ayar) | Linux ve macOS |
+| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>(yalnızca set) | Linux ve macOS |
 | <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain?displayProperty=nameWithType> | Linux ve macOS |
 
-## <a name="systemmedia"></a>Media
+## <a name="systemmedia"></a>System. Media
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 
 ## <a name="systemnet"></a>System.Net
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | Tümü |
@@ -145,28 +145,28 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Net.WebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Net.WebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemnetnetworkinformation"></a>Networkınformation
+## <a name="systemnetnetworkinformation"></a>System .net. NetworkInformation
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP) |
 
-## <a name="systemnetsockets"></a>Sockets
+## <a name="systemnetsockets"></a>System .net. Sockets
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)> | Tümü |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemnetwebsockets"></a>System.Net.WebSockets
+## <a name="systemnetwebsockets"></a>System .net. WebSockets
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemreflection"></a>System.Reflection
+## <a name="systemreflection"></a>System. Reflection
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | Tümü |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | Tümü |
@@ -176,15 +176,15 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Reflection.StrongNameKeyPair.PublicKey?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
+## <a name="systemruntimecompilerservices"></a>System. Runtime. CompilerServices
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
+## <a name="systemruntimeinteropservices"></a>System. Runtime. InteropServices
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | Tümü |
@@ -196,13 +196,13 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemsecurity"></a>Security
+## <a name="systemsecurity"></a>System. Security
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | Tümü |
@@ -219,9 +219,9 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Security.SecurityContext.SuppressFlow?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemsecurityclaims"></a>System.Security.Claims
+## <a name="systemsecurityclaims"></a>System. Security. Claim
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | Tümü |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
@@ -229,9 +229,9 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Security.Claims.ClaimsIdentity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
+## <a name="systemsecuritycryptography"></a>System. Security. Cryptography
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A> | Linux ve macOS |
@@ -262,50 +262,50 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
+## <a name="systemsecuritycryptographypkcs"></a>System. Security. Cryptography. Pkcs
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | Tümü |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Sertifikalar
+## <a name="systemsecuritycryptographyx509certificates"></a>System. Security. Cryptography. X509Certificates
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | Tümü |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>(yalnızca ayar) | Tümü |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>(yalnızca set) | Tümü |
 
-## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
+## <a name="systemsecurityauthenticationextendedprotection"></a>System. Security. Authentication. ExtendedProtection
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 
-## <a name="systemsecuritypolicy"></a>System.Security.Policy
+## <a name="systemsecuritypolicy"></a>System. Security. Policy
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
+## <a name="systemserviceprocessservicecontroller"></a>System. ServiceProcess. ServiceController
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | Tümü |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | Tümü |
 
-## <a name="systemthreading"></a>Threading
+## <a name="systemthreading"></a>System. Threading
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | Tümü |
@@ -316,7 +316,7 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 
 ## <a name="systemxml"></a>System.Xml
 
-| Üye | Atan platformlar |
+| Üye | Oluşturan platformlar |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Tümü |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | Tümü |
@@ -324,6 +324,6 @@ Bu makalede, etkilenen API üyeleri ad alanına göre düzenler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'den .NET Core'a geçiş için son dakika değişiklikleri](../compatibility/fx-core.md)
-- [.NET Core'da ikili serileştirme](../../standard/serialization/binary-serialization.md#net-core)
-- [.NET taşınabilirlik analizörü](../../standard/analyzers/portability-analyzer.md)
+- [.NET Framework 'den .NET Core 'a geçiş için son değişiklikler](fx-core.md)
+- [.NET Core 'da ikili serileştirme](../../standard/serialization/binary-serialization.md#net-core)
+- [.NET taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md)

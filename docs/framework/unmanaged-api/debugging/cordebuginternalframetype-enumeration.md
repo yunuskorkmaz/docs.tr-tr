@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778364"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795839"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType Numaralandırması
 Yığın çerçevesinin türünü tanımlar. Bu numaralandırma [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) yöntemi tarafından kullanılır.  
@@ -47,7 +47,7 @@ typedef enum CorDebugInternalFrameType {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Null değer. `ICorDebugInternalFrame::GetFrameType` yöntemi bu değeri hiçbir şekilde döndürmez.|  
+|`STUBFRAME_NONE`|Null değer. `ICorDebugInternalFrame::GetFrameType` Yöntem hiçbir şekilde bu değeri döndürmez.|  
 |`STUBFRAME_M2U`|Yönetilen-yönetilmeyen bir saplama çerçevesi.|  
 |`STUBFRAME_U2M`|Yönetilmeyenden yönetilene bir saplama çerçevesi.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uygulama etki alanları arasında geçiş.|  
@@ -60,14 +60,14 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|Çalışma zamanı JıT olarak bir yöntemi derlemedir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

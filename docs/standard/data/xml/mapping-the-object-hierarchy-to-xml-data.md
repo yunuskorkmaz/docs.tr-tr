@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160033"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794396"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML Verilerine Nesne Hiyerarşisi Eşleme
 Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programlama için ağacın düğümlerine erişmek üzere bir nesne hiyerarşiniz vardır. Aşağıdaki örnek, XML içeriğinin düğüm haline geldiğini gösterir.  
@@ -179,7 +179,7 @@ public class Sample
  **Çıktı**  
   
 ```xml  
-<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
+<?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>
 ```  
   
  Girişi bir kerede tek bir satıra götürdüğünde ve koddan oluşturulan çıktıyı kullanarak, hangi düğüm testinin çıktı satırlarını üretdiğini analiz etmek için aşağıdaki tabloyu kullanabilirsiniz. böylece, hangi XML verilerinin ne tür düğüm türünde olduğunu anlayabilirsiniz.  

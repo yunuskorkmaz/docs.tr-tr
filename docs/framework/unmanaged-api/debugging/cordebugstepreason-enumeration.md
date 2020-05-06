@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789249"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795709"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason Numaralandırması
 Tek bir adımın sonucunu gösterir.  
@@ -51,15 +51,15 @@ typedef enum CorDebugStepReason {
 |`STEP_EXIT`|İş parçacığı, adım tamamlanmadan önce çıktı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [StepComplete Yöntemi](icordebugmanagedcallback-stepcomplete-method.md)
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

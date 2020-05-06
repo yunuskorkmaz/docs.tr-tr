@@ -3,16 +3,16 @@ title: Microsoft. NET. SDK için MSBuild özellikleri
 description: .NET Core SDK anlayan MSBuild özelliklerine yönelik başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 105b7d67ea24515ea88481cb4a4fe42d2a03cfd0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506798"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795579"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild özellikleri
 
-Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini açıklar.
+Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini açıklar. Özelliğin alt öğeleri olarak her bir özellik için *meta verileri* belirtebilirsiniz.
 
 > [!NOTE]
 > Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için tüm yararlı MSBuild özelliklerini listelemez. Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -28,11 +28,9 @@ Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini
 `TargetFramework` Özelliği, bir [metapackage](../packages.md#metapackages)örtük olarak başvurduğu uygulamanın hedef Framework sürümünü belirtir. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
 ```
 
 Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).
@@ -45,11 +43,9 @@ Uygulamanızın birden `TargetFrameworks` çok platformu hedeflemesini istediği
 > `TargetFramework` (Tekil) belirtilmişse bu özellik yoksayılır.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
+</PropertyGroup>
 ```
 
 Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).
@@ -62,12 +58,24 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 `NetStandardImplicitPackageVersion` [Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliğini kullanın. Aşağıdaki örnekteki proje dosyası hedefler `netstandard1.3` , ancak 1.6.0 sürümünü kullanır. `NETStandard.Library`
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netstandard1.3</TargetFramework>
+  <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="package-properties"></a>Paket özellikleri
+
+Projenizden oluşturulan paketi betimleyen, `PackageId`, `PackageVersion`, `PackageIcon`ve `Title` `Description` gibi özellikleri belirtebilirsiniz. Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [Pack Target](/nuget/reference/msbuild-targets#pack-target).
+
+```xml
+<PropertyGroup>
+  ...
+  <PackageId>ClassLibDotNetStandard</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>John Doe</Authors>
+  <Company>Contoso</Company>
+</PropertyGroup>
 ```
 
 ## <a name="publish-properties"></a>Özellikleri Yayımla
@@ -82,11 +90,9 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 `RuntimeIdentifier` Özelliği, proje için tek bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır. RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
+</PropertyGroup>
 ```
 
 ### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
@@ -97,11 +103,9 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 > `RuntimeIdentifier`(tekil) yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+</PropertyGroup>
 ```
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
@@ -111,11 +115,9 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <TrimmerRootAssembly Include="System.Security" />
-  </ItemGroup>
-</Project>
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
 ```
 
 ### <a name="useapphost"></a>UseAppHost
@@ -125,11 +127,9 @@ Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.
 .NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur. Yürütülebilir dosyanın `UseAppHost` üretilmesini devre `false` dışı bırakmak için özelliğini olarak ayarlayın.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <UseAppHost>false</UseAppHost>
+</PropertyGroup>
 ```
 
 Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).
@@ -143,11 +143,9 @@ Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtım�
 Özelliği `LangVersion` , belirli bir programlama dili sürümü belirtmenizi sağlar. Örneğin, C# önizleme özelliklerine erişmek istiyorsanız, olarak `LangVersion` `preview`ayarlayın.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <LangVersion>preview</LangVersion>
+</PropertyGroup>
 ```
 
 Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).
@@ -171,11 +169,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `ConcurrentGarbageCollection` Özelliği [Background (eşzamanlı) Çöp toplamanın](../../standard/garbage-collection/background-gc.md) etkinleştirilip etkinleştirilmeyeceğini yapılandırır. Arka plan atık toplamayı `false` devre dışı bırakmak için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [System. GC. eşzamanlı/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="invariantglobalization"></a>Invariantgenelleştirme
@@ -183,11 +179,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `InvariantGlobalization` Özelliği, uygulamanın *Genelleştirme sabit* modunda çalışıp çalışmadığını yapılandırır, bu, kültüre özgü verilere erişimi olmayan anlamına gelir. Değeri `true` Genelleştirme sabit modunda çalışacak şekilde ayarlayın. Daha fazla bilgi için bkz. [sabit mod](../run-time-config/globalization.md#invariant-mode).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <InvariantGlobalization>true</InvariantGlobalization>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <InvariantGlobalization>true</InvariantGlobalization>
+</PropertyGroup>
 ```
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
@@ -195,11 +189,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `RetainVMGarbageCollection` Özelliği, çöp toplayıcıyı, daha sonra kullanılmak üzere veya serbest bırakmak için silinen bellek segmentlerini bir bekleme listesine koymak üzere yapılandırır. Değeri, çöp toplayıcıya kesimleri bir bekleme listesine koymasını `true` söyler. Daha fazla bilgi için bkz. [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
@@ -207,11 +199,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `ServerGarbageCollection` Özelliği, uygulamanın [iş istasyonu çöp toplamayı veya sunucu çöp toplamayı](../../standard/garbage-collection/workstation-server-gc.md)kullanıp kullanmadığını yapılandırır. Değerini `true` sunucu çöp toplamayı kullanacak şekilde ayarlayın. Daha fazla bilgi için bkz. [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ServerGarbageCollection>true</ServerGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ServerGarbageCollection>true</ServerGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
@@ -219,11 +209,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `ThreadPoolMaxThreads` Özelliği, çalışan iş parçacığı havuzu için en fazla iş parçacığı sayısını yapılandırır. Daha fazla bilgi için bkz. [en fazla iş parçacığı](../run-time-config/threading.md#maximum-threads).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
@@ -231,11 +219,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `ThreadPoolMinThreads` Özelliği, çalışan iş parçacığı havuzu için en az iş parçacığı sayısını yapılandırır. Daha fazla bilgi için bkz. [En düşük iş parçacıkları](../run-time-config/threading.md#minimum-threads).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilation"></a>TieredCompilation
@@ -243,11 +229,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 Özelliği `TieredCompilation` , Just-ın-TIME (JIT) derleyicisinin [katmanlı derlemeyi](../whats-new/dotnet-core-3-0.md#tiered-compilation)kullanıp kullanmadığını yapılandırır. Katmanlı derlemeyi devre dışı `false` bırakmak için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [katmanlı derleme](../run-time-config/compilation.md#tiered-compilation).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilation>false</TieredCompilation>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjit"></a>Tieredcompilationquickjıt
@@ -255,11 +239,9 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `TieredCompilationQuickJit` ÖZELLIĞI, JIT derleyicisinin hızlı JIT kullanıp kullanmadığını yapılandırır. Hızlı JıT 'i devre `false` dışı bırakmak için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [hızlı JIT](../run-time-config/compilation.md#quick-jit).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjitforloops"></a>Tieredcompilationquickjıtfordöngüleri
@@ -267,51 +249,84 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 `TieredCompilationQuickJitForLoops` ÖZELLIĞI, JIT derleyicisinin döngüleri içeren YÖNTEMLERDE hızlı JIT kullanıp kullanmadığını yapılandırır. Döngüleri içeren yöntemlerde hızlı `true` JIT 'i etkinleştirmek için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [döngüler Için hızlı JIT](../run-time-config/compilation.md#quick-jit-for-loops).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+</PropertyGroup>
 ```
 
-## <a name="nuget-packages"></a>NuGet paketleri
+## <a name="reference-properties"></a>Başvuru özellikleri
 
-- [PackageReference](#packagereference)
 - [AssetTargetFallback](#assettargetfallback)
-
-### <a name="packagereference"></a>PackageReference
-
-Öğe `PackageReference` , bir NuGet bağımlılığı belirtmenizi sağlar. Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz. `Include` Öznitelik, paket kimliğini belirtir. Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-  </ItemGroup>
-</Project>
-```
-
-Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).
+- [PackageReference](#packagereference)
+- [ProjectReference](#projectreference)
+- [Başvuru](#reference)
+- [Özellikleri geri yükle](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-Özelliği `AssetTargetFallback` , projenizin başvurduğu projeler için ek uyumlu çerçeve sürümlerini belirtmenizi sağlar ve projenizin kullandığı NuGet paketleri. Örneğin, kullanarak `PackageReference` bir paket bağımlılığı belirtirseniz ancak bu paket `TargetFramework`, projelerinizle uyumlu olan varlıkları içermiyorsa, `AssetTargetFallback` özelliği yürütmeye gelir. Başvurulan paketin uyumluluğu, içinde `AssetTargetFallback`belirtilen her bir hedef çerçeve kullanılarak yeniden denetlenir.
+Özelliği `AssetTargetFallback` , proje başvuruları ve NuGet paketleri için ek uyumlu çerçeve sürümlerini belirtmenizi sağlar. Örneğin, kullanarak `PackageReference` bir paket bağımlılığı belirtirseniz ancak bu paket `TargetFramework`, projelerinizle uyumlu olan varlıkları içermiyorsa, `AssetTargetFallback` özelliği yürütmeye gelir. Başvurulan paketin uyumluluğu, içinde `AssetTargetFallback`belirtilen her bir hedef çerçeve kullanılarak yeniden denetlenir.
 
 `AssetTargetFallback` Özelliğini bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-framework-versions)ayarlayabilirsiniz.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <PropertyGroup>
-    <AssetTargetFallback>net461</AssetTargetFallback>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
 ```
 
-### <a name="pack-and-restore-targets"></a>Paket ve geri yükleme hedefleri
+### <a name="packagereference"></a>PackageReference
 
-MSBuild 15,1 tanıtılan `pack` ve `restore` derleme kapsamında NuGet paketleri oluşturmak ve geri yüklemek için hedefler. Bu hedeflerin `PackageTargetFallback`MSBuild özellikleri hakkında daha fazla bilgi için, bkz. [NuGet Pack ve geri yükleme MSBuild hedefleri](/nuget/reference/msbuild-targets).
+, `PackageReference` Bir NuGet paketine bir başvuruyu tanımlar. Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz.
+
+`Include` Öznitelik, paket kimliğini belirtir. `Version` Öznitelik, sürümü veya sürüm aralığını belirtir. En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges). Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets`, `ExcludeAssets`, ve. `PrivateAssets`
+
+Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).
+
+### <a name="projectreference"></a>ProjectReference
+
+Öğe `ProjectReference` , başka bir projeye yönelik bir başvuru tanımlar. Başvurulan proje bir NuGet paket bağımlılığı olarak eklenir, diğer bir `PackageReference`deyişle, ile aynı şekilde işlenir.
+
+`Include` Öznitelik, projenin yolunu belirtir. Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets`, `ExcludeAssets`, ve. `PrivateAssets`
+
+Aşağıdaki örnekteki proje dosyası kod parçacığı adlı `Project2`bir projeye başvurur.
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\Project2.csproj" />
+</ItemGroup>
+```
+
+### <a name="reference"></a>Başvuru
+
+Öğe `Reference` , derleme dosyasına bir başvuru tanımlar.
+
+`Include` Öznitelik, dosyanın adını belirtir ve `HintPath` alt öğe derleme yolunu belirtir.
+
+```xml
+<ItemGroup>
+  <Reference Include="MyAssembly">
+    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+### <a name="restore-properties"></a>Özellikleri geri yükle
+
+Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını ve bu bağımlılıkların tüm bağımlılıklarını yükler. `RestorePackagesPath` Ve `RestoreIgnoreFailedSources`gibi özellikler belirterek paket geri yüklemesini özelleştirebilirsiniz. Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [hedefi geri yükleme](/nuget/reference/msbuild-targets#restore-target).
+
+```xml
+<PropertyGroup>
+  <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

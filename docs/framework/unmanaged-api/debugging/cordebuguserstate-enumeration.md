@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789234"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795644"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState Numaralandırması
 Bir iş parçacığının kullanıcı durumunu belirtir.  
@@ -60,14 +60,14 @@ typedef enum CorDebugUserState {
  Bir iş parçacığının kullanıcı durumunu almak için [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)

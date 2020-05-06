@@ -1,6 +1,6 @@
 ---
-title: Boolean mantıksal işleçleri - C# referansı
-description: Boolean operands ile mantıksal olumsuzlama, bağlaç (AND) ve kapsayıcı ve özel ayırma (OR) işlemleri gerçekleştiren C# işleçleri hakkında bilgi edinin.
+title: Boolean mantıksal işleçler-C# başvurusu
+description: Mantıksal olumsuzlama, birlikte (ve) ve kapsamlı ve dışlamalı (veya) işlemleri Boolean işlenenleriyle gerçekleştiren C# işleçleri hakkında bilgi edinin.
 ms.date: 09/27/2019
 author: pkulikov
 f1_keywords:
@@ -32,90 +32,90 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399499"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795007"
 ---
-# <a name="boolean-logical-operators-c-reference"></a>Boolean mantıksal işleçleri (C# referansı)
+# <a name="boolean-logical-operators-c-reference"></a>Boole mantıksal işleçleri (C# Başvurusu)
 
-Aşağıdaki işleçler [bool](../builtin-types/bool.md) operands ile mantıksal işlemler gerçekleştirin:
+Aşağıdaki işleçler [bool](../builtin-types/bool.md) işlenenleri olan mantıksal işlemler gerçekleştirir:
 
-- Unary [ `!` (mantıksal olumsuzlama)](#logical-negation-operator-) işleci.
-- İkili [ `&` (mantıksal AND)](#logical-and-operator-), [ `|` (mantıksal OR)](#logical-or-operator-)ve [ `^` (mantıksal özel OR)](#logical-exclusive-or-operator-) işleçleri. Bu operatörler her zaman her iki operands değerlendirmek.
-- İkili [ `&&` (koşullu mantıksal AND)](#conditional-logical-and-operator-) ve [ `||` (koşullu mantıksal OR)](#conditional-logical-or-operator-) işleçleri. Bu operatörler sağ operve sadece gerekli olduğunda değerlendirirler.
+- Birli [ `!` (mantıksal değilleme)](#logical-negation-operator-) işleci.
+- İkili [ `&` (mantıksal ve)](#logical-and-operator-), [ `|` (mantıksal or)](#logical-or-operator-)ve [ `^` (mantıksal dışlamalı veya)](#logical-exclusive-or-operator-) işleçler. Bu operatörler her iki işleneni de değerlendirir.
+- İkili [ `&&` (Koşullu mantıksal and)](#conditional-logical-and-operator-) ve [ `||` (Koşullu mantıksal or)](#conditional-logical-or-operator-) işleçleri. Bu işleçler yalnızca gerekli olması durumunda sağ işleneni değerlendirir.
 
-[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)operands `&`için `|`, `^` , ve operatörler bitwise mantıksal işlemler gerçekleştirin. Daha fazla bilgi için [Bitwise ve shift işleçleri'ne](bitwise-and-shift-operators.md)bakın.
+[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md) `&` `|`işlenenleri için,, ve `^` işleçleri bit düzeyinde mantıksal işlemler gerçekleştirir. Daha fazla bilgi için bkz. [bit düzeyinde and SHIFT işleçleri](bitwise-and-shift-operators.md).
 
-## <a name="logical-negation-operator-"></a>Mantıksal olumsuzlama operatörü!
+## <a name="logical-negation-operator-"></a>Mantıksal Değilleme İşleci!
 
-Unary önek `!` işleci, operand'ının mantıksal olumsuzluğunu hesaplar. Yani, `true`üretir , eğer operand değerlendirir `false`, `false`ve , eğer operand `true`değerlendirir:
+Birli önek `!` işleci, işleneninin mantıksal olumsuzunu hesaplar. Diğer bir deyişle, işlenen `true`olarak değerlendirilirse `false`, ve `false`işleneni şunu değerleniyorsa üretir. `true`
 
 [!code-csharp-interactive[logical negation](snippets/BooleanLogicalOperators.cs#Negation)]
 
-C# 8.0 ile başlayarak, `!` unary postfix işleci [null-affgiving işlecidir.](null-forgiving.md)
+C# 8,0 ' den başlayarak birli sonek `!` operatörü [null-forverme işleçtir](null-forgiving.md).
 
-## <a name="logical-and-operator-"></a>Mantıksal VE işleç&amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a>Mantıksal AND işleci&amp;
 
-İşletici, `&` operandlarının mantıksal ve mantıksal ve hesaplamalarını. Bunun sonucu `x & y` `true` ise `x` her `y` ikisi `true`de ve değerlendirmek . Aksi takdirde, `false`sonuç .
+`&` İşleci, işlenenlerinin mantıksal ve işlecini hesaplar. Sonucu `x & y` `true` her ikisi de `x` `y` olarak `true`değerlendirilir. Aksi takdirde, sonuç olur `false`.
 
-Operatör, `&` sol daki operand'ı değerlendirse bile, operasyon `false`sonucunun sağ operand'ın `false` değerine bakılmaksızın her iki operandı da değerlendirir.
+`&` İşleç, sol işlenen olarak `false`değerlendirilse bile her iki işleneni de değerlendirir, böylece işlem sonucu sağ işlenen değerden bağımsız olarak olur `false` .
 
-Aşağıdaki örnekte, `&` işleç sağ operand sol operand değeri ne olursa olsun gerçekleştirilen bir yöntem çağrısıdır:
+Aşağıdaki örnekte, `&` işlecinin sağ işleneni, sol işlenenin değerinden bağımsız olarak gerçekleştirilen bir yöntem çağrıdır:
 
 [!code-csharp-interactive[logical AND](snippets/BooleanLogicalOperators.cs#And)]
 
-[Koşullu mantıksal VE işleci](#conditional-logical-and-operator-) `&&` de mantıksal VE onun operands hesaplamak, ancak sağ operand değerlendirmek değil eğer sol `false`operand değerlendirir .
+[Koşullu mantıksal and işleci](#conditional-logical-and-operator-) `&&` Ayrıca işlenenlerinin mantıksal ve işlecini hesaplar, ancak sol işlenen olarak `false`değerlendirilirse sağ işleneni değerlendirmez.
 
-[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)operands `&` için, operatör [bitwise mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) onun operands hesaplar. Unary `&` [işleci, işlecin adresidir.](pointer-related-operators.md#address-of-operator-)
+[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)işlenenleri için `&` işleç, işlenenlerinin [bit düzeyinde mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) işlecini hesaplar. Birli `&` işleç [Adres işleçtir](pointer-related-operators.md#address-of-operator-).
 
-## <a name="logical-exclusive-or-operator-"></a>Mantıksal özel OR operatörü ^
+## <a name="logical-exclusive-or-operator-"></a>Mantıksal dışlamalı OR işleci ^
 
-İşletici, `^` operandlarının mantıksal XOR olarak da bilinen mantıksal özel veya'sini hesaplar. Bunun `x ^ y` sonucu, `true` `x` `true` eğer değerlendirirve `y` `false`değerlendirirse, `x` ya `false` da `y` değerlendirir `true`ve değerlendirir. Aksi takdirde, `false`sonuç . Diğer bir `bool` deyişle, operands `^` için, operatör [eşitsizlik işleci](equality-operators.md#inequality-operator-) `!=`olarak aynı sonucu hesaplamak.
+`^` İşleci, IŞLENENLERININ mantıksal XOR 'ı olarak da bilinen mantıksal dışlamalı veya hesaplar. Sonucu `x ^ y` olarak `true` `x` değerlendirilir `true` `y` ve `false` `x` değerlendiriyor ya da olarak değerlendirilir `false` ve `y` olarak değerlendirilir. `true` Aksi takdirde, sonuç olur `false`. `bool` Diğer bir deyişle, `^` işleç, işlenenleri [eşitsizlik işleciyle](equality-operators.md#inequality-operator-) `!=`aynı sonucu hesaplar.
 
 [!code-csharp-interactive[logical exclusive OR](snippets/BooleanLogicalOperators.cs#Xor)]
 
-[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)operands `^` için, operatör [bitwise mantıksal özel VEYA](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) operands bilgisayara.
+[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)işlenenleri için, `^` işleç [BIT düzeyinde mantıksal dışlamalı veya](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) işlenenleri hesaplar.
 
 ## <a name="logical-or-operator-"></a>Mantıksal OR işleci |
 
-İşletici, `|` operandlarının mantıksal VEYA'sini hesaplar. `x | y` Bunun sonucu, `true` eğer `x` `y` ya da `true`değerlendirir. Aksi takdirde, `false`sonuç .
+`|` İşleci, işlenenlerinin mantıksal veya işlecini hesaplar. Sonucu `x | y` `true` , ya da `x` olarak `y` `true`değerlendirilir. Aksi takdirde, sonuç olur `false`.
 
-Operatör, `|` sol daki operand'ı değerlendirse bile, operasyon `true`sonucunun sağ operand'ın `true` değerine bakılmaksızın her iki operandı da değerlendirir.
+`|` İşleç, sol işlenen olarak `true`değerlendirilse bile her iki işleneni de değerlendirir, böylece işlem sonucu sağ işlenen değerden bağımsız olarak olur `true` .
 
-Aşağıdaki örnekte, `|` işleç sağ operand sol operand değeri ne olursa olsun gerçekleştirilen bir yöntem çağrısıdır:
+Aşağıdaki örnekte, `|` işlecinin sağ işleneni, sol işlenenin değerinden bağımsız olarak gerçekleştirilen bir yöntem çağrıdır:
 
 [!code-csharp-interactive[logical OR](snippets/BooleanLogicalOperators.cs#Or)]
 
-[Koşullu mantıksal OR işleci](#conditional-logical-or-operator-) `||` de onun operands mantıksal OR bilgisayar, ancak sağ operand değerlendirmek değil eğer sol operand `true`değerlendirir .
+[Koşullu mantıksal or işleci](#conditional-logical-or-operator-) `||` Ayrıca, işlenenlerinin mantıksal veya işlecini hesaplar, ancak sol işlenen olarak `true`değerlendirilirse sağ işleneni değerlendirmez.
 
-[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)operands `|` için, operatör [bitwise mantıksal VEYA](bitwise-and-shift-operators.md#logical-or-operator-) operands bilgisayara.
+[İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)işlenenleri için `|` işleç, işlenenlerinin [bit düzeyinde mantıksal veya](bitwise-and-shift-operators.md#logical-or-operator-) işlecini hesaplar.
 
-## <a name="conditional-logical-and-operator-"></a>Koşullu mantıksal VE işleç&amp;&amp;
+## <a name="conditional-logical-and-operator-ampamp"></a><a name="conditional-logical-and-operator-"></a>Koşullu mantıksal AND işleci&amp;&amp;
 
-Koşullu mantıksal VE `&&`işleç , aynı zamanda "kısa devre" mantıksal VE işleci olarak bilinen, mantıksal VE onun operands hesaplamak. Bunun sonucu `x && y` `true` ise `x` her `y` ikisi `true`de ve değerlendirmek . Aksi takdirde, `false`sonuç . `x` Değerlendiriliyorsa, `y` `false`değerlendirilmez.
+"Kısa devre dışı" `&&`mantıksal and işleci olarak da bilinen Koşullu mantıksal and işleci, işlenenlerinin mantıksal ve işlecini hesaplar. Sonucu `x && y` `true` her ikisi de `x` `y` olarak `true`değerlendirilir. Aksi takdirde, sonuç olur `false`. , `x` Olarak `false`değerlendirilirse, `y` değerlendirilmez.
 
-Aşağıdaki örnekte, `&&` işleç sağ operand sol el operand değerlendirirse yapılmaz bir yöntem çağrısı `false`vardır:
+Aşağıdaki örnekte, `&&` işlecinin sağ işleneni, sol taraftaki işlenen şu şekilde `false`değerlendirildiğinde gerçekleştirilmeyen bir yöntem çağrıdır:
 
 [!code-csharp-interactive[conditional logical AND](snippets/BooleanLogicalOperators.cs#ConditionalAnd)]
 
-[Mantıksal VE işleci](#logical-and-operator-) `&` de mantıksal VE onun operands bilgisayara, ama her zaman her iki operands değerlendirir.
+[Mantıksal and işleci](#logical-and-operator-) `&` , işlenenlerinin mantıksal ve işlecini de hesaplar, ancak her iki işleneni de değerlendirir.
 
-## <a name="conditional-logical-or-operator-"></a>Koşullu mantıksal OR işleci ||
+## <a name="conditional-logical-or-operator-"></a>Koşullu mantıksal OR işleci | |
 
-Koşullu mantıksal OR `||`işleci , "kısa devre" mantıksal OR işleci olarak da bilinir, onun operands mantıksal VEYA bilgisayar. `x || y` Bunun sonucu, `true` eğer `x` `y` ya da `true`değerlendirir. Aksi takdirde, `false`sonuç . `x` Değerlendiriliyorsa, `y` `true`değerlendirilmez.
+"Kısa devre dışı" `||`mantıksal or işleci olarak da bilinen Koşullu mantıksal or işleci, işlenenlerinin mantıksal veya işlecini hesaplar. Sonucu `x || y` `true` , ya da `x` olarak `y` `true`değerlendirilir. Aksi takdirde, sonuç olur `false`. , `x` Olarak `true`değerlendirilirse, `y` değerlendirilmez.
 
-Aşağıdaki örnekte, `||` işleç sağ operand sol el operand değerlendirirse yapılmaz bir yöntem çağrısı `true`vardır:
+Aşağıdaki örnekte, `||` işlecinin sağ işleneni, sol taraftaki işlenen şu şekilde `true`değerlendirildiğinde gerçekleştirilmeyen bir yöntem çağrıdır:
 
 [!code-csharp-interactive[conditional logical OR](snippets/BooleanLogicalOperators.cs#ConditionalOr)]
 
-[Mantıksal OR işleci](#logical-or-operator-) `|` de onun operands mantıksal OR bilgisayar, ama her zaman her iki operands değerlendirir.
+[Mantıksal or işleci](#logical-or-operator-) `|` Ayrıca işlenenlerinin mantıksal veya ' lerini hesaplar, ancak her iki işleneni de değerlendirir.
 
-## <a name="nullable-boolean-logical-operators"></a>Nullable Boolean mantıksal işleçleri
+## <a name="nullable-boolean-logical-operators"></a>Null yapılabilir Boolean mantıksal işleçler
 
-Operands `bool?` için, `&` `|` ve operatörler üç değerli mantığı destekler. Bu işleçlerin anlambilimi aşağıdaki tablo ile tanımlanır:  
+İşlenenler `bool?` için `&` ve `|` işleçleri üç değerli mantığı destekler. Bu işleçlerin semantiği aşağıdaki tablo tarafından tanımlanır:  
   
 |x|y|x&y|x&#124;y|  
 |----|----|----|----|  
@@ -129,17 +129,17 @@ Operands `bool?` için, `&` `|` ve operatörler üç değerli mantığı destekl
 |null|yanlış|yanlış|null|  
 |null|null|null|null|  
 
-Bu işleçlerin davranışı, nullable değer türleri ile tipik işleç davranışı farklıdır. Tipik olarak, bir değer türünün operands için tanımlanan bir işleç de karşılık gelen nullable değer türü operands ile kullanılabilir. Böyle bir `null` operatör, herhangi bir operands `null`değerlendirirse üretir. Ancak, `&` operands biri değerlendirilse bile ve `|` operatörler non-null `null`üretebilir. Nullable değer türleri ile işleç davranışı hakkında daha fazla bilgi için, [Nullable değer türleri](../builtin-types/nullable-value-types.md) makalenin [Kaldırılan işleçler](../builtin-types/nullable-value-types.md#lifted-operators) bölümüne bakın.
+Bu işleçlerin davranışı, null yapılabilir değer türleriyle tipik işleç davranışından farklıdır. Genellikle, bir değer türünün işlenenleri için tanımlanan bir işleç, karşılık gelen Nullable değer türünün işlenenleri ile de kullanılabilir. Böyle bir işleç, `null` işlenenlerinin herhangi biri olarak `null`değerlendirilirse üretir. Ancak, `&` ve `|` işleçleri işlenenlerden biri olarak `null`değerlendirilse bile null olmayan bir üretebilir. Null yapılabilir değer türleriyle operatör davranışı hakkında daha fazla bilgi için, [Nullable değer türleri](../builtin-types/nullable-value-types.md) makalesinin [yükseltilmemiş işleçleri](../builtin-types/nullable-value-types.md#lifted-operators) bölümüne bakın.
 
-Aşağıdaki örnekte `!` görüldüğü `^` gibi, operandlu ve operandlu `bool?` işleçleri de kullanabilirsiniz:
+Ayrıca, `!` aşağıdaki örnekte gösterildiği gibi `^` işlenenlerle `bool?` birlikte ve işleçlerini kullanabilirsiniz:
 
 [!code-csharp-interactive[lifted negation and xor](snippets/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
-Koşullu mantıksal `&&` işleçler `||` ve `bool?` operands destekyok.
+Koşullu mantıksal işleçler `&&` ve `||` işlenenleri desteklemez. `bool?`
 
 ## <a name="compound-assignment"></a>Bileşik atama
 
-Bir ikili `op`işleç için, formun bileşik atama ifadesi
+Bir ikili işleci `op`için, formun bileşik atama ifadesi
 
 ```csharp
 x op= y
@@ -151,42 +151,43 @@ eşdeğerdir
 x = x op y
 ```
 
-`x` bunun dışında sadece bir kez değerlendirilir.
+`x` hariç yalnızca bir kez değerlendirilir.
 
-, `&` `|`, `^` ve işleçler bileşik atamayı destekler, aşağıdaki örnekte görüldüğü gibi:
+Aşağıdaki `&`örnekte `|`gösterildiği gibi `^` ,, ve işleçleri bileşik atamayı destekler:
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-Koşullu mantıksal `&&` işleçler ve `||` bileşik atama desteklemiyor.
+> [!NOTE]
+> Koşullu mantıksal işleçler `&&` ve `||` bileşik atamayı desteklemez.
 
 ## <a name="operator-precedence"></a>İşleç önceliği
 
-Aşağıdaki liste, mantıksal işleçleri en yüksek öncelikten en düşüke doğru sipariş verir:
+Aşağıdaki liste, en yüksek öncelikten başlayarak mantıksal işleçleri en düşüğe göre sıralar:
 
-- Mantıksal olumsuzlama işleci`!`
-- Mantıksal VE işleç`&`
-- Mantıksal özel OR işleci`^`
-- Mantıksal VEYA işleci`|`
-- Koşullu mantıksal VE işleç`&&`
+- Mantıksal Değilleme İşleci`!`
+- Mantıksal AND işleci`&`
+- Mantıksal dışlamalı OR işleci`^`
+- Mantıksal OR işleci`|`
+- Koşullu mantıksal AND işleci`&&`
 - Koşullu mantıksal OR işleci`||`
 
-Operatör önceliği tarafından `()`dayatılan değerlendirme sırasını değiştirmek için parantez kullanın:
+İşleç önceliğine göre `()`uygulanan değerlendirmenin sırasını değiştirmek için parantezleri kullanın:
 
 [!code-csharp-interactive[operator precedence](snippets/BooleanLogicalOperators.cs#Precedence)]
 
-Öncelik düzeyine göre sıralanan C# işleçlerinin tam listesi için [C# işleçleri](index.md) makalesinin [Operatör önceliği](index.md#operator-precedence) bölümüne bakın.
+Öncelik düzeyine göre sıralanan C# işleçlerinin tüm listesi için [c# işleçleri](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
 
-## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür `!`, `&` `|`, `^` , ve işleçleri [aşırı yükleyebilir.](operator-overloading.md) Bir ikili işleci aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenir. Kullanıcı tanımlı bir tür, bileşik atama işlecinin aşırı yüklenemeyeceğini açıkça ifade eder.
+Kullanıcı tanımlı bir `!`tür `&` `|`,,, ve `^` işleçlerini [aşırı](operator-overloading.md) yükleyebilir. İkili işleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtük olarak aşırı yüklenmiştir. Kullanıcı tanımlı bir tür, bileşik atama işlecini açıkça aşırı yükleyemez.
 
-Kullanıcı tanımlı bir tür koşullu mantıksal `&&` `||`işleçleri aşırı yükleyemez ve . Ancak, kullanıcı tanımlı bir tür doğru ve yanlış `&` `|` [işleçleri](true-false-operators.md) ve veya `&&` `||` işleci belirli bir şekilde aşırı yüklerse, sırasıyla işlem veya işlem, bu tür operands için değerlendirilebilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı koşullu mantıksal işleçleri](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.
+Kullanıcı tanımlı bir tür koşullu mantıksal işleçleri `&&` ve ' i `||`aşırı yükleyemez. Ancak, Kullanıcı tanımlı bir tür [true ve false işleçlerini](true-false-operators.md) ve `&` ya `|` da işlecini belirli bir şekilde aşırı yükleiyorsa, `&&` veya `||` işlemi sırasıyla bu türün işlenenleri için değerlendirilebilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı Koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
-- [Mantıksal olumsuzlama işleci](~/_csharplang/spec/expressions.md#logical-negation-operator)
+- [Mantıksal Değilleme İşleci](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Mantıksal işleçler](~/_csharplang/spec/expressions.md#logical-operators)
 - [Koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 - [Bileşik atama](~/_csharplang/spec/expressions.md#compound-assignment)

@@ -1,5 +1,5 @@
 ---
-title: let yan tümcesi - C# Referans
+title: Let yan tümcesi-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - let_CSharpKeyword
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173594"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795371"
 ---
 # <a name="let-clause-c-reference"></a>let tümcesi (C# Başvurusu)
 
-Sorgu ifadesinde, bir alt ifadenin sonucunu sonraki tümcelerde kullanmak için depolamak bazen yararlıdır. Bunu, yeni bir `let` aralık değişkeni oluşturan ve sağladığınız ifadenin sonucuyla baş harfe çeken anahtar kelimeyle yapabilirsiniz. Bir değerle baş harfe büründükten sonra, aralık değişkeni başka bir değeri depolamak için kullanılamaz. Ancak, aralık değişkeni sorgulanabilir bir tür tutuyorsa, sorgulanabilir bir tür sorgulanabilir.
+Bir sorgu ifadesinde, alt ifadenin sonucunu izleyen yan tümcelerde kullanmak üzere depolamak bazen yararlı olur. Bunu, yeni bir Aralık değişkeni `let` oluşturan ve bunu sağladığınız ifadenin sonucuyla Başlatan anahtar sözcüğü ile yapabilirsiniz. Bir değerle başlatıldıktan sonra, Aralık değişkeni başka bir değeri depolamak için kullanılamaz. Ancak, Aralık değişkeni sorgulanabilir bir tür içeriyorsa, bu, sorgulanabilir.
 
 ## <a name="example"></a>Örnek
 
 Aşağıdaki örnekte `let` iki şekilde kullanılır:
 
-1. Kendisi sorgulanabilir bir sayısal olabilir türü oluşturmak için.
+1. Kendisi için sorgulanabilen bir sıralanabilir tür oluşturmak için.
 
-2. Sorgunun aralık değişkeninde `ToLower` `word`yalnızca bir kez aramasını sağlamak için. Kullanmadan, `let`yan tümcedeki her yüklemi `where` çağırmanız `ToLower` gerekir.
+2. Sorgunun, Aralık değişkeninde `ToLower` `word`yalnızca bir kez çağırmasını sağlamak için. Kullanmadan `let`, `where` yan tümcesindeki her bir koşula çağrı `ToLower` yapmanız gerekir.
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../../language-reference/index.md)
-- [Sorgu Anahtar Kelimeleri (LINQ)](query-keywords.md)
+- [C# başvurusu](../index.md)
+- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
 - [C# üzerinde LINQ](../../linq/index.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../programming-guide/concepts/linq/index.md)
 - [Sorgu ifadelerinde özel durumları işleme](../../linq/handle-exceptions-in-query-expressions.md)

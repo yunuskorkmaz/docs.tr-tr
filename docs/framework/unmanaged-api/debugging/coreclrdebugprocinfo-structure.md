@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40dbfc60f8bde1198fd56a4a8aeed1dd6879d1ae
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132158"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795631"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo Yapısı
 Uzak makinede çalışan bir işlemi temsil eder.  
@@ -45,7 +45,7 @@ struct  CoreClrDebugProcInfo {
 |`m_wszName`|İşlemin komut satırı. Bu üye kesilmiş olabilir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
