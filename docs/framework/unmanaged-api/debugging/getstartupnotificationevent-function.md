@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3377dcd5d45ca8e31a57a75bd81366d41837c12c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122948"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860708"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent İşlevi
 Belirtilen hedef işlemde yüklenen herhangi bir ortak dil çalışma zamanı (CLR) tarafından işaret edilecek bir olay tanıtıcısı oluşturur veya açar.  
@@ -48,18 +48,18 @@ HRESULT GetStartupNotificationEvent
  Tanıtıcı, başlangıç bildirimi olayına başarıyla alındı.  
   
  E_INVALIDARG  
- `phStartupEvent` null veya `debuggeePID` Şu anda çalışan bir işleme başvurmuyor.  
+ `phStartupEvent`null veya `debuggeePID` Şu anda çalışan bir işleme başvurmuyor.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Başlangıç bildirimi olayının tanıtıcısı alınamıyor.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows işletim sisteminde `debuggeePID` bir IŞLETIM sistemi işlem tanımlayıcısına eşlenir.  
+ Windows işletim sisteminde bir IŞLETIM sistemi `debuggeePID` işlem tanımlayıcısına eşlenir.  
   
  Olaya, olayı gösteren CLR tarafından yönetilen herhangi bir kod yürütülmeden önce sinyal gönderilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üstbilgi:** dbgshim. h  
   

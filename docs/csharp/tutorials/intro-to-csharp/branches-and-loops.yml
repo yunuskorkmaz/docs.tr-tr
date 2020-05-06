@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Liste koleksiyonu
-  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: a7c855e362e606f82a8b576fbb8db1d632b0f0eb
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135938"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860980"
 items:
 - durationInMinutes: 1
   content: >
@@ -65,14 +65,9 @@ items:
 
 
     Koşulları kontrol etmek ve bu koşullara göre deyimleri yürütmek için gerçekleştirilen bu işlem son derece etkilidir. Şimdi daha fazlasını keşfedelim.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: if ve else koşullarını birlikte çalıştırma
   durationInMinutes: 10
-  content: "\nHem true hem de false dallarında farklı kod yürütmek için, koşul false olduğunda yürütülen bir `else` dalı oluşturursunuz. Şunu deneyin:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n`else` anahtar sözcüğünden sonraki deyim, yalnızca test edilen koşul `false` olduğunda yürütülür. `if` ve `else` koşullarını boole koşullarıyla birleştirmek, ihtiyacınız olan tüm etkiyi sunar.\n\n> [!IMPORTANT]\n> `if` ve `else` deyimlerinin altındaki girinti, insan okuyuculara yöneliktir.\n> C# dili, girintileme veya boşluk olarak kabul etmez.\n> `if` veya `else` anahtar sözcüğünden sonra gelen deyim, koşula bağlı olarak yürütülür. Bu öğreticideki tüm örnekler, ifadelerin denetim akışına göre satırları girintilemek için ortak bir uygulama izler.\n\nGirinti dikkate alınmadığından, koşullu olarak yürütülen bloğun birden çok deyim içermesini istediğinizde bunu belirtmek için `{` ve `}` ayraçlarını kullanmanız gerekir. C# programcıları bu ayraçları genellikle tüm `if` and `else` tümcelerinde kullanır. Aşağıdaki örnek, biraz önce oluşturduğunuz örnekle aynıdır. Deneyin.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Bu öğreticinin geri kalanında, kod örnekleri, kabul edilen uygulamaları takip eden ayraçları içerir.\n\nDaha karmaşık koşulları test edebilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nEşitlik `==` için simge testi *equality*. ' `==` Yi kullanarak, ' de gördüğünüz şekilde `a = 5`testi, atamanın eşitliğine ayırır.\n\n`&&` \"ve\" sözcüğünü ifade eder. Bu, deyimi true dalında yürütmek için her iki koşulun da true olması gerektiği anlamına gelir.  Bu örnekler aynı zamanda, `{` ve `}` ayraçları içine alınmaları koşuluyla her koşullu dalda birden çok deyime sahip olabileceğinizi de gösterir.\n\n“veya” sözcüğünü ifade etmek için `||` işaretini de kullanabilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`, `b`Ve `c` değerlerini değiştirin ve arasında `&&` `||` geçiş yapın. `&&` Ve `||` işleçlerinin nasıl çalıştığını daha fazla anlayacaksınız.\n\n> [!NOTE]\n> Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).\n"
+  content: "\nHem true hem de false dallarında farklı kod yürütmek için, koşul false olduğunda yürütülen bir `else` dalı oluşturursunuz. Şunu deneyin:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n`else` anahtar sözcüğünden sonraki deyim, yalnızca test edilen koşul `false` olduğunda yürütülür. `if` ve `else` koşullarını boole koşullarıyla birleştirmek, ihtiyacınız olan tüm etkiyi sunar.\n\n> [!IMPORTANT]\n> `if` ve `else` deyimlerinin altındaki girinti, insan okuyuculara yöneliktir.\n> C# dili, girintileme veya boşluk olarak kabul etmez.\n> `if` veya `else` anahtar sözcüğünden sonra gelen deyim, koşula bağlı olarak yürütülür. Bu öğreticideki tüm örnekler, ifadelerin denetim akışına göre satırları girintilemek için ortak bir uygulama izler.\n\nGirinti dikkate alınmadığından, koşullu olarak yürütülen bloğun birden çok deyim içermesini istediğinizde bunu belirtmek için `{` ve `}` ayraçlarını kullanmanız gerekir. C# programcıları bu ayraçları genellikle tüm `if` and `else` tümcelerinde kullanır. Aşağıdaki örnek, biraz önce oluşturduğunuz örnekle aynıdır. Deneyin.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Bu öğreticinin geri kalanında, kod örnekleri, kabul edilen uygulamaları takip eden ayraçları içerir.\n\nDaha karmaşık koşulları test edebilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nEşitlik `==` için simge testi *equality*. ' `==` Yi kullanarak, ' de gördüğünüz şekilde `a = 5`testi, atamanın eşitliğine ayırır.\n\n`&&` \"ve\" sözcüğünü ifade eder. Bu, deyimi true dalında yürütmek için her iki koşulun da true olması gerektiği anlamına gelir.  Bu örnekler aynı zamanda, `{` ve `}` ayraçları içine alınmaları koşuluyla her koşullu dalda birden çok deyime sahip olabileceğinizi de gösterir.\n\n“veya” sözcüğünü ifade etmek için `||` işaretini de kullanabilirsiniz:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`, `b`Ve `c` değerlerini değiştirin ve arasında `&&` `||` geçiş yapın. `&&` Ve `||` işleçlerinin nasıl çalıştığını daha fazla anlayacaksınız.\n"
 - title: İşlemleri yinelemek için döngüleri kullanma
   durationInMinutes: 6
   content: >
@@ -125,11 +120,6 @@ items:
 
 
     Şimdi son döngü deyimine geçelim.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: For döngüsü ile çalışma
   durationInMinutes: 5
   content: >
@@ -168,11 +158,6 @@ items:
 
 
     İşiniz bittiğinde öğrendiklerinizi kullanmak için kendi kendinize kod yazma adımına geçelim.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: İç içe geçmiş döngüler oluşturuldu
   durationInMinutes: 10
   content: "Ya `while` `for` da `do` döngüsü, iç döngüde her öğe ile dış döngüdeki her bir öğenin birleşimini kullanarak bir matris oluşturmak için başka bir döngünün içinde iç içe olabilir. Satırları ve sütunları temsil etmek için alfasayısal çiftler kümesi oluşturmayı görelim.\n\nBir `for` döngü satırları oluşturabilir:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nŞu sütunları başka bir döngü oluşturabilir:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nBir döngüyü diğerinin içine, çiftler halinde iç içe geçirebilirsiniz:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nİç döngünün her tam çalışması için dış döngünün bir kez artıyor olduğunu görebilirsiniz. Satır ve sütun iç içe geçirmeyi tersine çevirin ve yaptığınız değişiklikleri kendiniz görün.\n"
@@ -190,11 +175,6 @@ items:
 
 
     Kendiniz deneyin. Daha sonra başarılı olup olmadığınıza bakın. İpucu olarak, yanıtta 63’ü bulmanız gerekir.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Görevi tamamlama
   durationInMinutes: 1
   content: >
@@ -217,10 +197,5 @@ items:
     Console.WriteLine($"The sum is {sum}");
 
     ```
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Tebrikler!
   content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **liste koleksiyonu** bağlantısını seçebilir veya [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret ederek .NET Core SDK indirebilir, makinenizde bir proje oluşturabilir ve kodlamadan haberdar olabilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\nAşağıdaki konulardan bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [If ve else deyimi](../../language-reference/keywords/if-else.md)\n- [While ekstresi](../../language-reference/keywords/while.md)\n- [Do deyimi](../../language-reference/keywords/do.md)\n- [For deyimleri](../../language-reference/keywords/for.md)"

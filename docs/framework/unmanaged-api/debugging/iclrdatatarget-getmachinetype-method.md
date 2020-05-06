@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 50ea9caf08b2ffb689760da95af4e5c3fdd77301
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9d86b23b91702929a86334f557a8d647e19861a4
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793735"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860596"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType Metodu
 Hedef işlemin kullandığı yönerge kümesi türünün tanımlayıcısını alır.  
@@ -35,16 +35,16 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>Parametreler  
  `machineType`  
- dışı Hedef işlemin kullandığı yönerge kümesini gösteren bir değere yönelik işaretçi. Döndürülen `machineType`, WinNT. h üstbilgi dosyasında tanımlanan IMAGE_FILE_MACHINE sabitlerinden biridir.  
+ dışı Hedef işlemin kullandığı yönerge kümesini gösteren bir değere yönelik işaretçi. Döndürülen `machineType` , Winnt. h üstbilgi dosyasında tanımlanan IMAGE_FILE_MACHINE sabitlerinden biridir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

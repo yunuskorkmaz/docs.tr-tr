@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179103"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860508"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual Yöntemi
-Belirtilen arabellekten belirtilen sanal bellek adresine veri yazar.  
+Belirtilen arabellekteki verileri belirtilen sanal bellek adresine yazar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [içinde] Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
+ 'ndaki Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
   
  `buffer`  
- [içinde] Yazılacak verileri depolayan bir arabellek için işaretçi.  
+ 'ndaki Yazılacak verileri depolayan bir arabelleğin işaretçisi.  
   
  `bytesRequested`  
- [içinde] Yazılacak bayt sayısı.  
+ 'ndaki Yazılacak baytların sayısı.  
   
  `bytesWritten`  
- [çıkış] Yazılan baytların gerçek sayısına işaretçi.  
+ dışı Yazılan gerçek bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 42f7020212dd2db793b7c7d20a15c129157e7261
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793765"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860759"
 ---
-# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_Getmanagedobjectfieldınfo Işlevi
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_getmanagedobjectfieldınfo işlevi
 Belirtilen nesne işaretçisini ve alan adını kullanarak bir nesnenin başından bir alana ve alanın değerine kadar olan sapmayı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -50,7 +50,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  dışı Alan değeri. Bu parametre null olabilir.  
   
  `pOffset`  
- dışı `objAddr` alanındaki Aralık. Bu parametre null olabilir.  
+ dışı Alana `objAddr` yapılan konum. Bu parametre null olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Eğer fark 0 ise, hiçbir fark yazılmaz.  
@@ -58,11 +58,11 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  Şu anda bağlamda iş parçacığında yönetilen kod yoksa, işlev, bir 0xa0 tesis değeri ve 0x1000 hata kodu ile HRESULT SOS_E_NOMANAGEDCODE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** SOS_Stacktrace. h  
   
- **.NET Framework sürümü:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümü:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

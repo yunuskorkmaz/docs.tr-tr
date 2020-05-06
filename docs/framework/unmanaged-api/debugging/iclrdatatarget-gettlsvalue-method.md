@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 141dc8632812ab4a2ce82864cde56337025baa28
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785412"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860575"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue Yöntemi
 Hedef işlemde belirtilen iş parçacığının iş parçacığı yerel depolama alanından (TLS) bir değer alır. Bu yöntem, ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.  
@@ -43,19 +43,19 @@ HRESULT GetTLSValue (
  'ndaki Konumun dizini. Bu değer, belirtilen iş parçacığının yerel deposunda geçerli bir dizin olmalıdır.  
   
  `value`  
- dışı Verilen TLS konumundan döndürülen değeri belirten `CLRDATA_ADDRESS` değerine yönelik bir işaretçi.  
+ dışı Verilen TLS konumundan döndürülen `CLRDATA_ADDRESS` değeri belirten bir değer işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, hata ayıklama uygulamasının yazarı tarafından uygulanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ClrData. IDL, ClrData. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

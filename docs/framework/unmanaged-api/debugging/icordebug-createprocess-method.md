@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b9ae2b36bff9b4a6c048a8de99fa7d09350b1401
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789008"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859714"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess Yöntemi
 Hata ayıklayıcının denetimi altında bir işlem ve birincil iş parçacığını başlatır.  
@@ -52,13 +52,13 @@ HRESULT CreateProcess (
  'ndaki Başlatılan işlem tarafından yürütülecek komut satırını belirten, null ile sonlandırılmış bir dize işaretçisi. Uygulama adı (örneğin, "SomeApp. exe") ilk bağımsız değişken olmalıdır.  
   
  `lpProcessAttributes`  
- 'ndaki İşlemin güvenlik tanımlayıcısını belirten bir Win32 `SECURITY_ATTRIBUTES` yapısına yönelik işaretçi. `lpProcessAttributes` null ise, işlem varsayılan bir güvenlik tanımlayıcısı alır.  
+ 'ndaki İşlemin güvenlik tanımlayıcısını belirten `SECURITY_ATTRIBUTES` Win32 yapısına yönelik işaretçi. Null `lpProcessAttributes` ise, işlem varsayılan bir güvenlik tanımlayıcısı alır.  
   
  `lpThreadAttributes`  
- 'ndaki İşlemin birincil iş parçacığının güvenlik tanımlayıcısını belirten bir Win32 `SECURITY_ATTRIBUTES` yapısına yönelik işaretçi. `lpThreadAttributes` null ise, iş parçacığı varsayılan bir güvenlik tanımlayıcısı alır.  
+ 'ndaki İşlemin birincil iş parçacığının `SECURITY_ATTRIBUTES` güvenlik tanımlayıcısını belirten Win32 yapısına yönelik işaretçi. Null `lpThreadAttributes` ise, iş parçacığı varsayılan bir güvenlik tanımlayıcısı alır.  
   
  `bInheritHandles`  
- 'ndaki Çağıran işlemdeki her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya tanıtıcıların devralınamayacağını belirtmek için `false` `true` olarak ayarlayın. Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.  
+ 'ndaki Çağıran işlemdeki `true` her bir devralınabilir tanıtıcının başlatılan işlem tarafından devralındığını veya `false` tanıtıcıların devralınamayacağını belirtmek için olarak ayarlayın. Devralınan tutamaçlar, özgün tanıtıcılarla aynı değere ve erişim haklarına sahiptir.  
   
  `dwCreationFlags`  
  'ndaki Öncelik sınıfını ve başlatılan işlemin davranışını denetleyen [Win32 Işlemi oluşturma bayraklarının](/windows/win32/procthread/process-creation-flags) bit düzeyinde birleşimi.  
@@ -70,10 +70,10 @@ HRESULT CreateProcess (
  'ndaki İşlem için geçerli dizinin tam yolunu belirten, null ile sonlandırılmış bir dize işaretçisi. Bu parametre null ise, yeni işlem çağıran işlemle aynı geçerli sürücü ve dizine sahip olur.  
   
  `lpStartupInfo`  
- 'ndaki Başlatılan işlemin ana penceresinin pencere istasyonunu, masaüstünü, standart tutamaçlarını ve görünümünü belirten bir Win32 `STARTUPINFOW` yapısına yönelik işaretçi.  
+ 'ndaki Başlatılan işlemin ana penceresinin `STARTUPINFOW` pencere istasyonunu, masaüstünü, standart tutamaçlarını ve görünümünü belirten bir Win32 yapısına yönelik işaretçi.  
   
  `lpProcessInformation`  
- 'ndaki Başlatılacak işlemle ilgili kimlik bilgilerini belirten bir Win32 `PROCESS_INFORMATION` yapısına yönelik işaretçi.  
+ 'ndaki Başlatılacak işlemle ilgili kimlik `PROCESS_INFORMATION` bilgilerini belirten Win32 yapısına yönelik işaretçi.  
   
  `debuggingFlags`  
  'ndaki Hata ayıklama seçeneklerini belirten CorDebugCreateProcessFlags numaralandırması değeri.  
@@ -82,22 +82,22 @@ HRESULT CreateProcess (
  dışı İşlemi temsil eden ICorDebugProcess nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemin parametreleri, Win32 `CreateProcess` yöntemi ile aynıdır.  
+ Bu yöntemin parametreleri Win32 `CreateProcess` yöntemiyle aynıdır.  
   
- Yönetilmeyen karma mod hata ayıklamayı etkinleştirmek için `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS olarak ayarlayın. Yalnızca yönetilen hata ayıklamayı kullanmak istiyorsanız, bu bayrakları ayarlamayın.  
+ Yönetilmeyen karma mod hata ayıklamayı etkinleştirmek için DEBUG_PROCESS &#124; `dwCreationFlags` DEBUG_ONLY_THIS_PROCESS olarak ayarlayın. Yalnızca yönetilen hata ayıklamayı kullanmak istiyorsanız, bu bayrakları ayarlamayın.  
   
- Hata ayıklayıcı ve hataları Ayıklanacak işlem (ekli işlem) tek bir konsolu paylaşıyorsa ve birlikte çalışma hata ayıklaması kullanılırsa, ekli işlemin konsol kilitlerini tutması ve hata ayıklama olayında durdurulması mümkündür. Hata ayıklayıcı daha sonra konsolu kullanma denemesini engeller. Bu sorundan kaçınmak için `dwCreationFlags` parametresindeki CREATE_NEW_CONSOLE bayrağını ayarlayın.  
+ Hata ayıklayıcı ve hataları Ayıklanacak işlem (ekli işlem) tek bir konsolu paylaşıyorsa ve birlikte çalışma hata ayıklaması kullanılırsa, ekli işlemin konsol kilitlerini tutması ve hata ayıklama olayında durdurulması mümkündür. Hata ayıklayıcı daha sonra konsolu kullanma denemesini engeller. Bu sorundan kaçınmak için, `dwCreationFlags` parametresindeki CREATE_NEW_CONSOLE bayrağını ayarlayın.  
   
  Birlikte çalışabilirlik hata ayıklaması, IA-64 tabanlı ve AMD64 tabanlı platformlar gibi Win9x ve x86 olmayan platformlarda desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
