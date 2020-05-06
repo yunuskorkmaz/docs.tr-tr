@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
-  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/30/2020
-  ms.locfileid: "82595916"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860971"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     Şimdi ilerleyelim ve daha fazla keşif yapalım. Bu dersin geri kalan kısmında, metni C# dilinde ifade eden `string` türüyle çalışma konusu incelenir. `Console` türü gibi `string` türünün de yöntemleri vardır. `string` yöntemleri metinle çalışır.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Değişken bildirme ve kullanma
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     Sonuçları görmek için yeniden **Çalıştır** ' ı seçin. "Merhaba {aFriend}" yerine ileti "Hello Maira" olmalıdır.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Dizelerle çalışma
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > Bu, kendi kendinize keşif yapmanız için iyi bir fırsattır. `Console.WriteLine()` tarafından ekrana metin yazıldığını öğrendiniz. Değişkenleri bildirmeyi ve dizeleri birleştirmeyi öğrendiniz. Etkileşimli pencerede denemeler yapın. Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. Öğesinden sonra `.` `d` bir yazın `firstFriend`. Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Dizelerle daha fazlasını gerçekleştirme
   durationInMinutes: 5
   content: >
@@ -231,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Dizeleri arama
   durationInMinutes: 10
   content: >
@@ -268,11 +248,6 @@ items:
 
 
     “You” ile başlayıp “hello” ile bitirirseniz `true`, “goodbye” ile başlar veya bitirirseniz false değerini alırsınız.
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - title: Görevi tamamlama
   durationInMinutes: 3
   content: >
@@ -293,9 +268,4 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > Bu çevrimiçi kodlama deneyimi, önizleme modundadır. Sorunla karşılaşırsanız lütfen [dotnet üzerinde bildirin/depoyu deneyin](https://github.com/dotnet/try/issues).
 - content: "\"Hello C#\" C# öğreticisine giriş ' i tamamladınız. Sonraki etkileşimli öğreticiye başlamak için aşağıdaki **C# bağlantısındaki rakamları** seçebilir veya .NET Core SDK indirmek, makinenizde bir proje oluşturmak ve kodlamaya devam etmek için [.net sitesini](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) ziyaret edebilirsiniz. \"Sonraki adımlar\" bölümü, sizi bu öğreticilere geri getirir.\n\n`string` Tür hakkında daha fazla bilgi için:\n- [Dizeler](../../programming-guide/strings/index.md)üzerinde [C# Programlama Kılavuzu](../../programming-guide/index.md) konusu.\n- [Dizelerle çalışma hakkında ipuçları](../../how-to/index.md#working-with-strings)."
