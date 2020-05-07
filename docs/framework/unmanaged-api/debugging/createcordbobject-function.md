@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179229"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860896"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject İşlevi
-Yönetilen hata ayıklama oturumunu uzak bir işlemde anında algılamak için işlevsellik sağlayan bir hata ayıklama arabirimi[(ICorDebug)](icordebug-interface.md)oluşturur.  
+Uzak bir işlemde yönetilen bir hata ayıklama oturumunun örneğini oluşturma işlevselliği sağlayan bir hata ayıklayıcı arabirimi ([ICorDebug](icordebug-interface.md)) oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,32 +37,32 @@ HRESULT CordbCreateObject (
   
 ## <a name="parameters"></a>Parametreler  
  `iDebuggerVersion`  
- [içinde] Hedef işlemin hata ayıklayıcı sürümü. Bu parametre uzaktan hata ayıklama için CorDebugVersion_2_0 olmalıdır.  
+ 'ndaki Hedef işlemin hata ayıklayıcı sürümü. Bu parametre, uzaktan hata ayıklama için CorDebugVersion_2_0 olmalıdır.  
   
  `ppCordb`  
- [çıkış] [ICorDebug](icordebug-interface.md) arabirimine atılacak ve döndürülecek bir nesneye işaretçi.  
+ dışı [ICorDebug](icordebug-interface.md) arabirimine verilecek ve döndürülen bir nesne işaretçisinin işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
- İşlemdeki CLR sayısı başarıyla belirlendi ve karşılık gelen tutamaç ve yol dizileri düzgün şekilde dolduruldu.  
+ İşlemdeki CLRs sayısı başarıyla belirlendi ve karşılık gelen tanıtıcı ve yol dizileri doğru şekilde dolduruldu.  
   
- E_ınvalıdarg  
- `ppCordb`null veya `iDebuggerVersion` CorDebugVersion_2_0 değildir.  
+ E_INVALIDARG  
+ `ppCordb`null veya `iDebuggerVersion` CorDebugVersion_2_0 değil.  
   
- E_outofmemory  
- Için yeterli bellek ayrılamıyor`ppCordb`  
+ E_OUTOFMEMORY  
+ İçin yeterli bellek ayrılamıyor`ppCordb`  
   
- E_FAIL (veya diğer E_ iade kodları)  
- Diğer başarısızlıklar.  
+ E_FAIL (veya diğer E_ dönüş kodları)  
+ Diğer sorunlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Döndürülen [ICorDebug](icordebug-interface.md) `ppCordb` arabirimi, yönetilen tüm hata ayıklama hizmetleri için üst düzey hata ayıklama arabirimidir.  
+ ' De `ppCordb` döndürülen [ICorDebug](icordebug-interface.md) arabirimi, tüm yönetilen hata ayıklama Hizmetleri için en üst düzey hata ayıklama arabirimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Kütüphane:** mscordbi_macx86.dll  
+ **Kitaplık:** mscordbi_macx86. dll  
   
- **.NET Çerçeve Sürümleri:** 3.5 SP1
+ **.NET Framework sürümleri:** 3,5 SP1

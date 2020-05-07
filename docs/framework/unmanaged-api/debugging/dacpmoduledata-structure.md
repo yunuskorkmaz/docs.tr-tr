@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179196"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860808"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData Yapısı
 
@@ -45,21 +45,21 @@ struct DacpModuleData
 | Üye    | Açıklama                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Modül nesnesinin adresi.                                           |
-| `File`    | Taşınabilir yürütülebilir (PE) dosyasına işaretçi.                       |
-| `ilBase`  | Yüklenen görüntütabanının adresi.                                 |
-| `payLoad` | Çalışma zamanı tarafından kullanılan ek modül bilgileri için bir yük arabelleği. |
+| `File`    | Taşınabilir çalıştırılabilir (PE) dosyasına yönelik bir işaretçi.                       |
+| `ilBase`  | Yüklenen görüntünün tabanının adresi.                                 |
+| `payLoad` | Çalışma zamanı tarafından kullanılan ek modül bilgileri için yük arabelleği. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı çalışma zamanı içinde yaşar ve üstbilgi veya kitaplık dosyaları aracılığıyla açıklanmaz. Kullanmak için, yapıyı yukarıda belirtildiği gibi tanımlayın.
+Bu yapı çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Kullanmak için, yapıyı yukarıda belirtilen şekilde tanımlayın.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üstbilgi:** Hiçbiri  
-**Kütüphane:** Hiçbiri  
-**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)
 - [Hata Ayıklama Yapıları](debugging-structures.md)

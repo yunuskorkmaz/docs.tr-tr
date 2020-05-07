@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179154"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860560"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual Yöntemi
-Belirtilen sanal bellek adresindeki verileri belirtilen arabelleğe okur.  
+Belirtilen sanal bellek adresinden belirtilen arabelleğe verileri okur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [içinde] Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
+ 'ndaki Sanal bellek adresini depolayan bir CLRDATA_ADDRESS.  
   
  `buffer`  
- [çıkış] Verileri alan bir arabellek için bir işaretçi.  
+ dışı Verileri alan bir arabelleğin işaretçisi.  
   
  `bytesRequested`  
- [içinde] Arabelleğein uzunluğu.  
+ 'ndaki Arabelleğin uzunluğu.  
   
  `bytesRead`  
- [çıkış] Döndürülen bayt sayısına işaretçi.  
+ dışı Döndürülen bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** ClrData.idl, ClrData.h  
+ **Üst bilgi:** ClrData. IDL, ClrData. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
