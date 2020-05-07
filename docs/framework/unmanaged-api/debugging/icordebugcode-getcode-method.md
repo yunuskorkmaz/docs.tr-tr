@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178992"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893646"
 ---
-# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="01207-102">ICorDebugCode::GetCode Metodu</span><span class="sxs-lookup"><span data-stu-id="01207-102">ICorDebugCode::GetCode Method</span></span>
-<span data-ttu-id="01207-103">Belirtilen işlevin tüm kodunu alır, sökme için biçimlendirilir.</span><span class="sxs-lookup"><span data-stu-id="01207-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="01207-104">Bu yöntem .NET Framework sürüm 2.0'da amortismana hazırlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="01207-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="01207-105">Bunun yerine [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) kullanın.</span><span class="sxs-lookup"><span data-stu-id="01207-105">Use [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) instead.</span></span>  
+# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="bbfd4-102">ICorDebugCode::GetCode Metodu</span><span class="sxs-lookup"><span data-stu-id="bbfd4-102">ICorDebugCode::GetCode Method</span></span>
+<span data-ttu-id="bbfd4-103">Ayrıştırılmış derleme için biçimlendirilen, belirtilen işlevin tüm kodunu alır.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="bbfd4-104">Bu yöntem 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="bbfd4-105">Bunun yerine [ICorDebugCode2:: Getcodeöbekleri](icordebugcode2-getcodechunks-method.md) kullanın.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-105">Use [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01207-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01207-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bbfd4-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bbfd4-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCode (  
@@ -38,34 +38,34 @@ HRESULT GetCode (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01207-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01207-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bbfd4-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bbfd4-107">Parameters</span></span>  
  `startOffset`  
- <span data-ttu-id="01207-108">[içinde] Fonksiyonun başlangıcının mahsup.</span><span class="sxs-lookup"><span data-stu-id="01207-108">[in] The offset of the beginning of the function.</span></span>  
+ <span data-ttu-id="bbfd4-108">'ndaki İşlevin başlangıcının boşluğu.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-108">[in] The offset of the beginning of the function.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="01207-109">[içinde] Fonksiyonun sonu mahsup.</span><span class="sxs-lookup"><span data-stu-id="01207-109">[in] The offset of the end of the function.</span></span>  
+ <span data-ttu-id="bbfd4-109">'ndaki İşlevin sonundaki fark.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-109">[in] The offset of the end of the function.</span></span>  
   
  `cBufferAlloc`  
- <span data-ttu-id="01207-110">[içinde] Kodun `buffer` döndürüleceği dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="01207-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
+ <span data-ttu-id="bbfd4-110">'ndaki Kodun döndürüleceği `buffer` dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
   
  `buffer`  
- <span data-ttu-id="01207-111">[çıkış] Kodun döndürüleceği dizi.</span><span class="sxs-lookup"><span data-stu-id="01207-111">[out] The array into which the code will be returned.</span></span>  
+ <span data-ttu-id="bbfd4-111">dışı Kodun döndürüleceği dizi.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-111">[out] The array into which the code will be returned.</span></span>  
   
  `pcBufferSize`  
- <span data-ttu-id="01207-112">[çıkış] Döndürülen bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="01207-112">[out] The number of bytes returned.</span></span>  
+ <span data-ttu-id="bbfd4-112">dışı Döndürülen bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-112">[out] The number of bytes returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="01207-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="01207-113">Remarks</span></span>  
- <span data-ttu-id="01207-114">İşlevin kodu birden çok parçaya bölündüyse, yerel ofset'i artırmak amacıyla kısıtlanırlar.</span><span class="sxs-lookup"><span data-stu-id="01207-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="01207-115">Talimat sınırları denetlenmez.</span><span class="sxs-lookup"><span data-stu-id="01207-115">Instruction boundaries are not checked.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bbfd4-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bbfd4-113">Remarks</span></span>  
+ <span data-ttu-id="bbfd4-114">İşlevin kodu birden çok Öbekle ayrılmışsa, bu değerler artan yerel uzaklığa göre birleştirilir.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="bbfd4-115">Yönerge sınırları denetlenmez.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-115">Instruction boundaries are not checked.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01207-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01207-116">Requirements</span></span>  
- <span data-ttu-id="01207-117">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01207-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bbfd4-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bbfd4-116">Requirements</span></span>  
+ <span data-ttu-id="bbfd4-117">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bbfd4-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01207-118">**Üstbilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01207-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bbfd4-118">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="bbfd4-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="01207-119">**Kütüphane:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01207-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bbfd4-119">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="bbfd4-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01207-120">**.NET Çerçeve Sürümleri:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="01207-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="bbfd4-120">**.NET Framework sürümleri:** 1,1, 1,0</span><span class="sxs-lookup"><span data-stu-id="bbfd4-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01207-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01207-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbfd4-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bbfd4-121">See also</span></span>
 
-- [<span data-ttu-id="01207-122">GetCodeChunks Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01207-122">GetCodeChunks Method</span></span>](icordebugcode2-getcodechunks-method.md)
+- [<span data-ttu-id="bbfd4-122">GetCodeChunks Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bbfd4-122">GetCodeChunks Method</span></span>](icordebugcode2-getcodechunks-method.md)

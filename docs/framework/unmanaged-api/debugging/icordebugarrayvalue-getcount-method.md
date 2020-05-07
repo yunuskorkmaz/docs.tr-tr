@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82f282630a2e31b8c67d43fa0f0b30431a0d6ee4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088527"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895055"
 ---
-# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="e18d0-102">ICorDebugArrayValue::GetCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e18d0-102">ICorDebugArrayValue::GetCount Method</span></span>
-<span data-ttu-id="e18d0-103">Dizideki toplam öğe sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="e18d0-103">Gets the total number of elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="f2640-102">ICorDebugArrayValue::GetCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f2640-102">ICorDebugArrayValue::GetCount Method</span></span>
+<span data-ttu-id="f2640-103">Dizideki toplam öğe sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="f2640-103">Gets the total number of elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e18d0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e18d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2640-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f2640-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,15 +33,15 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e18d0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e18d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f2640-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f2640-105">Parameters</span></span>  
  `pnCount`  
- <span data-ttu-id="e18d0-106">dışı Dizideki toplam öğe sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="e18d0-106">[out] A pointer to the total number of elements in the array.</span></span>  
+ <span data-ttu-id="f2640-106">dışı Dizideki toplam öğe sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f2640-106">[out] A pointer to the total number of elements in the array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e18d0-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e18d0-107">Requirements</span></span>  
- <span data-ttu-id="e18d0-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e18d0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2640-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f2640-107">Requirements</span></span>  
+ <span data-ttu-id="f2640-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2640-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e18d0-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="e18d0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f2640-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f2640-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e18d0-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="e18d0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f2640-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="f2640-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e18d0-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e18d0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f2640-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2640-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
