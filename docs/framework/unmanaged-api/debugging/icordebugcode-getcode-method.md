@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178992"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893646"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode Metodu
-Belirtilen işlevin tüm kodunu alır, sökme için biçimlendirilir. Bu yöntem .NET Framework sürüm 2.0'da amortismana hazırlanmıştır. Bunun yerine [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) kullanın.  
+Ayrıştırılmış derleme için biçimlendirilen, belirtilen işlevin tüm kodunu alır. Bu yöntem 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır. Bunun yerine [ICorDebugCode2:: Getcodeöbekleri](icordebugcode2-getcodechunks-method.md) kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametreler  
  `startOffset`  
- [içinde] Fonksiyonun başlangıcının mahsup.  
+ 'ndaki İşlevin başlangıcının boşluğu.  
   
  `endOffset`  
- [içinde] Fonksiyonun sonu mahsup.  
+ 'ndaki İşlevin sonundaki fark.  
   
  `cBufferAlloc`  
- [içinde] Kodun `buffer` döndürüleceği dizinin boyutu.  
+ 'ndaki Kodun döndürüleceği `buffer` dizinin boyutu.  
   
  `buffer`  
- [çıkış] Kodun döndürüleceği dizi.  
+ dışı Kodun döndürüleceği dizi.  
   
  `pcBufferSize`  
- [çıkış] Döndürülen bayt sayısı.  
+ dışı Döndürülen bayt sayısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlevin kodu birden çok parçaya bölündüyse, yerel ofset'i artırmak amacıyla kısıtlanırlar. Talimat sınırları denetlenmez.  
+ İşlevin kodu birden çok Öbekle ayrılmışsa, bu değerler artan yerel uzaklığa göre birleştirilir. Yönerge sınırları denetlenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

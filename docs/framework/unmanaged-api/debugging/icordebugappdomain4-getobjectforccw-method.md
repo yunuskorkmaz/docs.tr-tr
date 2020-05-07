@@ -2,15 +2,15 @@
 title: ICorDebugAppDomain4::GetObjectForCCW Metodu
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: 10d32314e46aba4f030b294cadc3cbb36e8742f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a175a6b6c91c284348580e1d9dc9ef0c5f5fc5df
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179043"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895127"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW Metodu
-Yönetilen bir nesneyi COM çağrılabilir sarıcı (CCW) işaretçisinden alır.  
+COM çağrılabilir sarmalayıcı (CCW) işaretçisinden yönetilen bir nesne alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,21 +23,21 @@ HRESULT GetObjectForCCW(
   
 ## <a name="parameters"></a>Parametreler  
  `ccwPointer`  
- [içinde] Com çağrılabilir sarıcı (CCW) işaretçisi.  
+ 'ndaki COM çağrılabilir sarmalayıcı (CCW) işaretçisi.  
   
  `ppManagedObject`  
- [çıkış] Verilen CCW işaretçisine karşılık gelen yönetilen nesneyi temsil eden bir "ICorDebugValue" nesnesinin adresine işaretçi.  
+ dışı Verilen CCW işaretçisine karşılık gelen yönetilen nesneyi temsil eden "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

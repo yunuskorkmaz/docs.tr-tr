@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: ed5b39ed4b2a14c071bf23fb04efbad6834e8a9d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783965"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892818"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue Arabirimi
 Bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) ile ilişkili bilgileri almak için yöntemler sağlar.  
@@ -32,16 +32,16 @@ Bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) ile ilişkili bilgile
 |[GetCachedInterfaceTypes Yöntemi](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Geçerli nesnenin küçük harf olarak kullanıldığı veya kullanıldığı arabirim türleri için bir Numaralandırıcı sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir "ICorDebugValue" arabiriminin bir örneğinin bir RCW 'yu temsil ettiğini denetlemek için, hata ayıklayıcı `IID_ICorDebugComObjectValue`"ICorDebugValue" üzerinde `QueryInterface` çağırır.  
+ "ICorDebugValue" arabiriminin bir örneğinin bir RCW 'yu temsil ettiğini denetlemek için, ile `QueryInterface` `IID_ICorDebugComObjectValue`"ICorDebugValue" üzerinde bir hata ayıklayıcı çağırır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

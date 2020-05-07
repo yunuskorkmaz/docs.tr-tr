@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199787"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895613"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -34,9 +34,9 @@ Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri
 
 | Şirket | Deneyim |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Üretimde 600 ' dür ve hizmet vardır. Günde yüz kez dağıtır. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet bulunur. Her hafta birkaç bin derleme dağıtır. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Üretimde 300 ' den fazla hizmet vardır. Günde neredeyse 1.000 değişiklik yapar. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Üretimde 600 ' dür ve hizmet vardır. Günde yüz kez dağıtılır. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet vardır. Her hafta birkaç bin kez dağıtılır. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Üretimde 300 ' den fazla hizmet vardır. Günde 1.000 kez dağıtılır. |
 
 Gördüğünüz gibi, Netflix, Uber ve WeChat yüzlerce bağımsız mikro hizmetten oluşan sistemleri kullanıma sunar. Bu mimari stili, pazar koşullarına hızlı yanıt vermesini sağlar. Canlı, karmaşık bir uygulamanın küçük alanlarında anında güncelleştirebilir ve bu alanların gerektiği şekilde ölçeklendirilmesini sağlayabilirsiniz.
 
@@ -167,7 +167,7 @@ Bu bölümde daha önce, mikro hizmetler ile tek bir şekilde oluşturulmuş bir
 
 - Her mikro hizmet bağımsız olarak ölçeklendirilebilen. Tüm uygulamanın tek bir birim olarak ölçeklendirilmesi yerine, yalnızca daha fazla işlem gücü veya ağ bant genişliği gerektiren hizmetleri ölçeklendirebilirsiniz. Ölçeklendirmeye yönelik bu ayrıntılı yaklaşım sisteminizin daha fazla denetimini sağlar ve sisteminizin bölümlerini ölçeklendirirken, her şeyi değil, genel maliyetleri azaltmaya yardımcı olur.
 
-Mikro hizmetleri anlamak için harika bir başvuru kılavuzu [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Book derin, mikro hizmetler tasarımı ve mimarisine sahiptir. Microsoft 'tan ücretsiz bir indirme olarak sunulan [tam yığın mikro hizmet başvuru mimarisi](https://github.com/dotnet-architecture/eShopOnContainers) için bir yardımcı olur.
+Mikro hizmetleri anlamak için harika bir başvuru kılavuzu [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). Book derin, mikro hizmetler tasarımı ve mimarisine sahiptir. Microsoft 'tan ücretsiz bir indirme olarak sunulan [tam yığın mikro hizmet başvuru mimarisi](https://github.com/dotnet-architecture/eShopOnContainers) için bir yardımcı olur.
 
 ### <a name="developing-microservices"></a>Mikro hizmetler geliştirme
 

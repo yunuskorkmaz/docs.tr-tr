@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f785eafa8925324e3bd269ca08a3b1367b74c44
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125639"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893583"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction Yöntemi
 Bu "ICorDebugCode" ile ilişkili "ICorDebugFunction" öğesini alır.  
@@ -38,13 +38,13 @@ HRESULT GetFunction (
  dışı İşlevin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugCode` ve `ICorDebugFunction` bire bir ilişki bakımını sağlar.  
+ `ICorDebugCode`ve `ICorDebugFunction` bire bir ilişki saklayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

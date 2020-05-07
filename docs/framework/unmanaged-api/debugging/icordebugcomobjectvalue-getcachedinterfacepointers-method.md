@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1d6d2f506086dd3204053b0b635da2e7cdc87e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783963"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892802"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers Metodu
 Geçerli çalışma zamanında çağrılabilir sarmalayıcı (RCW) üzerinde önbelleğe alınmış ham arabirim işaretçilerini alır.  
@@ -35,27 +35,27 @@ HRESULT GetCachedInterfacePointers(
   
 ## <a name="parameters"></a>Parametreler  
  `bIInspectableOnly`  
- 'ndaki Yöntemin yalnızca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) tarafından önbelleğe alınan Windows Çalışma Zamanı arabirimlerini (`IInspectable` arabirimleri) veya tüm COM arabirimlerini döndürmeyeceğini belirten bir değer.  
+ 'ndaki Yöntemin yalnızca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) tarafından önbelleğe`IInspectable` alınan Windows çalışma zamanı arabirimleri (arabirimler) veya tüm com arabirimlerini döndürmeyeceğini belirten bir değer.  
   
  `celt`  
  'ndaki Adresleri alınacak olan nesne sayısı.  
   
  `pceltFetched`  
- dışı Aslında `ptrs`döndürülen `CORDB_ADDRESS` değerlerinin sayısı için bir işaretçi.  
+ dışı Aslında ' de `CORDB_ADDRESS` `ptrs`döndürülen değer sayısına yönelik bir işaretçi.  
   
  `ptrs`  
- Önbelleğe alınmış arabirim nesnelerinin adreslerini içeren `CORDB_ADDRESS` değerleri dizisinin başlangıç adresine yönelik bir işaretçi.  
+ Önbelleğe alınmış arabirim nesnelerinin adreslerini içeren bir `CORDB_ADDRESS` değer dizisinin başlangıç adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

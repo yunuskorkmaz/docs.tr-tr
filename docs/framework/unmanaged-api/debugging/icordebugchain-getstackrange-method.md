@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178951"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894463"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange Metodu
-Bu zincirin yığın kesiminin adres aralığını alır.  
+Bu zincir için yığın segmentinin adres aralığını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parametreler  
  `pStart`  
- [çıkış] Yığın kesiminin `CORDB_ADDRESS` başlangıç adresi olan bir değeriçin işaretçi.  
+ dışı Yığın segmentinin başlangıç `CORDB_ADDRESS` adresi olan değere yönelik bir işaretçi.  
   
  `pEnd`  
- [çıkış] Yığın kesiminin `CORDB_ADDRESS` bitiş adresi olan bir değerin işaretçisi.  
+ dışı Yığın kesiminin bitiş adresi `CORDB_ADDRESS` olan değere yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sayısal aralık yalnızca yığın çerçeve konumlarının karşılaştırılması için anlamlıdır. Yığında gerçekte nelerin depolanmış olduğu hakkında herhangi bir varsayımda bulunamazsınız.  
+ Sayısal Aralık yalnızca yığın çerçeve konumlarının karşılaştırılmasının anlamı vardır. Aslında yığında depolandıkları hakkında varsayımlar yapamazsınız.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

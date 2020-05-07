@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199839"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895544"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -55,10 +55,29 @@ Kapsayıcılar, proje yapıtları haline gelen ve kaynak denetimine işaretlenmi
 
 Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı şekilde yeniden oluşturabilir ve çalıştırabilirsiniz. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri diğerlerinden farklı şekilde geliştikçe, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
 
+Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı şekilde yeniden oluşturabilir ve çalıştırabilirsiniz. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri diğerlerinden farklı şekilde geliştikçe, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
+
 ![Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek. ](./media/breaking-up-monolith-with-backend-microservices.png)
  **Şekil 3-2**. Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.
 
 Her bulut Yerel hizmeti ayrı bir kapsayıcıda oluşturulup dağıtılır. Her biri gerektiğinde güncelleştirebilir. Her hizmet için uygun kaynakları olan düğümlerde tek tek hizmetler barındırılabilir. Her hizmetin çalıştığı ortam, geliştirme, test ve üretim ortamlarında paylaşılan ve kolayca sürümlü bir sabittir. Uygulamanın farklı alanlarında, tek başına derleme zamanı bağımlılıkları değil, hizmetler arasında doğrudan çağrı veya ileti olarak gerçekleştirilir. Ayrıca, uygulamanın geri kalanında değişiklik gerektirmeden belirli bir özelliği en iyi şekilde sunan teknolojiyi de seçebilirsiniz.
+
+Kapsayıcılı hizmetler otomatik yönetim gerektirir. Bağımsız olarak dağıtılan kapsayıcıların büyük bir kümesini el ile yönetmek mümkün değildir. Örneğin, aşağıdaki görevleri göz önünde bulundurun:
+
+- Kapsayıcı örnekleri birçok makinenin bir kümesi arasında nasıl sağlanacak?
+- Dağıtıldıktan sonra kapsayıcılar birbirleriyle nasıl keşfedilir ve birbirleriyle iletişim kurar?
+- Kapsayıcılar isteğe bağlı olarak nasıl ölçeklenebilen veya kullanıma hazır?
+- Her kapsayıcının durumunu nasıl izleyebilirim?
+- Bir kapsayıcıyı donanım ve yazılım hatalarıyla nasıl koruyabilirim?
+- Canlı bir uygulama için kapsayıcıları sıfır kapalı kalma süresiyle nasıl yükseltebilirim?
+
+Kapsayıcı yöneticileri bu ve diğer kaygıları ele alır ve otomatikleştirin.
+
+Bulut Yerel ekonomik sistemde, Kubernetes, kapsayıcı Orchestrator ' ı d haline geldi. Bu, bulut Yerel Bilgi Işlem altyapısı (CNCF) tarafından yönetilen açık kaynaklı bir platformdur. Kubernetes, bir makine kümesi içindeki Kapsayıcılı iş yüklerinin dağıtım, ölçeklendirme ve işlevsel sorunlarını otomatikleştirir. Ancak, Kubernetes 'nin yüklenmesi ve yönetilmesi, önemli bir karmaşıkdır.
+
+Daha iyi bir yaklaşım, Kubernetes 'in bir bulut satıcısından yönetilen hizmet olarak faydalanmasıdır. Azure bulut, [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)ile tam olarak yönetilen bir Kubernetes platformu sunar. AKS, Kubernetes yönetiminin karmaşıklık ve operasyonel yükünü soyutlar. Kubernetes 'i bir bulut hizmeti olarak kullanırsınız; Microsoft, yönetim ve destekleme sorumluluğunu kullanır. AKS, diğer Azure hizmetleri ve geliştirme araçlarıyla da sıkı bir şekilde tümleşir.
+
+AKS, küme temelli bir teknolojidir. Federasyon sanal makineleri veya düğümleri havuzu Azure bulutuna dağıtılır. Bunlar, yüksek oranda kullanılabilir bir ortam veya küme oluşturur. Küme, bulutta yerel uygulamanıza sorunsuz, tek bir varlık olarak görünür. Bu şekilde, AKS 'ler, yükü eşit bir şekilde dağıtan önceden tanımlanmış bir stratejiye göre Kapsayıcılı hizmetlerinizi bu düğümler arasında dağıtır.
 
 Kapsayıcılı hizmetler otomatik yönetim gerektirir. Bağımsız olarak dağıtılan kapsayıcıların büyük bir kümesini el ile yönetmek mümkün değildir. Örneğin, aşağıdaki görevleri göz önünde bulundurun:
 
@@ -144,7 +163,7 @@ Uygulamanızı on Iki öğeli uygulama ilkelerine göre derlemenize izin verirse
 
 ## <a name="development-resources"></a>Geliştirme kaynakları
 
-Bu bölümde, bir sonraki uygulamanız için kapsayıcıları ve düzenlemeleri kullanmaya başlamanıza yardımcı olabilecek geliştirme kaynaklarının kısa bir listesi gösterilmektedir. Bulut Yerel mikro hizmetleri mimari uygulamanızı nasıl tasarlayacağımızı öğrenmek istiyorsanız bu kitabın yardımcı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://aka.ms/microservicesebook)makalesini okuyun.
+Bu bölümde, bir sonraki uygulamanız için kapsayıcıları ve düzenlemeleri kullanmaya başlamanıza yardımcı olabilecek geliştirme kaynaklarının kısa bir listesi gösterilmektedir. Bulut Yerel mikro hizmetleri mimari uygulamanızı nasıl tasarlayacağımızı öğrenmek istiyorsanız bu kitabın yardımcı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için mimari](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)makalesini okuyun.
 
 ### <a name="local-kubernetes-development"></a>Yerel Kubernetes geliştirme
 
@@ -219,15 +238,19 @@ Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak ü
 
 Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve**Docker desteği** **ekleyin** > .
 
-![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
-
-**Şekil 3-8**. Visual Studio Docker desteği ekle
+**Şekil 3-8**. Visual Studio 'ya Docker desteği ekleme
 
 Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosya eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir `charts` klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 
-![Visual Studio Orchestrator desteği ekle](./media/visual-studio-add-orchestrator-support.png)
+Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosya eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir `charts` klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 
-**Şekil 3-9**. Visual Studio Orchestrator desteği ekle
+**Şekil 3-9**. Visual Studio 'ya düzenleme desteği ekleme
+
+### <a name="visual-studio-code-docker-tooling"></a>Docker Tooling Visual Studio Code
+
+Docker geliştirmeyi destekleyen Visual Studio Code için kullanılabilen birçok uzantı vardır.
+
+Microsoft, [Visual Studio Code uzantısı Için Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)sağlar. Bu uzantı, uygulamalara kapsayıcı desteği ekleme sürecini basitleştirir. Gerekli dosyaları, Docker görüntülerini oluşturur ve bir kapsayıcı içinde uygulamanızın hatalarını ayıklamanızı sağlar. Uzantı; başlatma, durdurma, İnceleme, kaldırma ve daha fazlasını içeren kapsayıcılar ve görüntüler üzerinde işlem yapmayı kolaylaştıran bir görsel gezgin sunar. Uzantı Ayrıca birden çok çalışan kapsayıcıyı tek bir birim olarak yönetmenizi sağlayan Docker Compose destekler.
 
 >[!div class="step-by-step"]
 >[Önceki](scale-applications.md)

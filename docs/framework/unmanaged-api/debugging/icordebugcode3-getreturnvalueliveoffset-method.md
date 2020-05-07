@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 34d543dd76de05bdf55d8187cf192455d1387a9f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cb4c79601061ab8473d6d7ca50c4ed2f92b01c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178948"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893436"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset Metodu
-Belirli bir IL ofset için, hata ayıklamanın bir işlevden geri dönüş değerini elde edilebilmek için kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.  
+Belirtilen bir Il ofseti için, hata ayıklayıcının bir işlevden dönüş değeri alabileceği şekilde, bir kesme noktasının yerleştirilmesi gereken yerel uzaklıkları alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,41 +40,41 @@ HRESULT GetReturnValueLiveOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `ILoffset`  
- IL ofset. Bir işlev arama sitesi olmalıdır veya işlev çağrısı başarısız olur.  
+ Il kayması. İşlevin çağrı sitesi olması gerekir veya işlev çağrısı başarısız olur.  
   
  `bufferSize`  
- Depolamak `pOffsets`için kullanılabilir bayt sayısı.  
+ Depolanacak `pOffsets`kullanılabilir bayt sayısı.  
   
  `pFetched`  
- Geri döndürülen uzaklık sayısına işaretçi. Genellikle değeri 1'dir, ancak tek bir IL `CALL` yönergesi birden çok montaj yönergesi ile eşlenebilir.  
+ Gerçekten döndürülen uzaklık sayısına yönelik bir işaretçi. Genellikle değeri 1 ' dir, ancak tek bir Il yönergesi birden çok `CALL` derleme yönergesiyle eşleyebilirsiniz.  
   
  `pOffsets`  
- Bir dizi yerel uzaklık. Tipik olarak, tek bir IL yönergesi birden çok `CALL` derleme yönergesi için birden çok harita eşleyebilir rağmen, `pOffsets` tek bir ofset içerir.  
+ Yerel uzaklık dizisi. Genellikle, `pOffsets` tek bir konum içerir, ancak tek bir Il yönergesi birden `CALL` çok derleme yönergesiyle birden çok haritaya eşlenir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, başvuru türünü döndüren bir yöntemin geri dönüş değerini almak için [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemi ile birlikte kullanılır. Bir IŞLEV çağrı sitesine IL ofset'in bu yönteme geçirilmesi bir veya daha fazla yerel uzaklık döndürür. Hata ayıklama, işlevdeki bu yerel uzaklıklarda kesme noktaları ayarlayabilir. Hata ayıklayıcı kesme noktalarından birine ulaştığında, bu yönteme geçtiğiniz IL ofsetini iade değerini almak için [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemine geçirebilirsiniz. Hata ayıklama daha sonra ayarladığının tüm kesme noktalarını temizlemelidir.  
+ Bu yöntem, başvuru türü döndüren bir yöntemin dönüş değerini almak için [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemi ile birlikte kullanılır. Bir işlev çağrısı sitesine bir Il uzaklığının bu yönteme geçirilmesi bir veya daha fazla yerel uzaklık döndürür. Hata ayıklayıcı daha sonra işlevdeki bu yerel kaydırmalar üzerinde kesme noktaları ayarlayabilir. Hata ayıklayıcı kesme noktalarından birine geçtiğinde, dönüş değerini almak için bu yönteme geçirdiğiniz Il sapmasını [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemine geçirebilirsiniz. Hata ayıklayıcı daha sonra, ayarlandığı tüm kesme noktalarını temizlemelidir.  
   
 > [!WARNING]
-> `ICorDebugCode3::GetReturnValueLiveOffset` Ve [ICorDebugILFrame3::GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemleri yalnızca başvuru türleri için iade değeri bilgileri almanızı sağlar. İade değeri bilgilerinin değer türlerinden (diğer bir şekilde) <xref:System.ValueType>alınması desteklenmez.  
+> `ICorDebugCode3::GetReturnValueLiveOffset` Ve [ICorDebugILFrame3:: Getreturnvalueforılsapmasını](icordebugilframe3-getreturnvalueforiloffset-method.md) yöntemleri yalnızca başvuru türleri için dönüş değeri bilgilerini almanızı sağlar. Değer türlerinden dönüş değeri bilgileri alma (yani, öğesinden <xref:System.ValueType>türetilen tüm türler) desteklenmez.  
   
- İşlev aşağıdaki `HRESULT` tabloda gösterilen değerleri döndürür.  
+ İşlevi, aşağıdaki tabloda `HRESULT` gösterilen değerleri döndürür.  
   
-|`HRESULT`Değer|Açıklama|  
+|`HRESULT`deeri|Açıklama|  
 |---------------------|-----------------|  
 |`S_OK`|Başarılı.|  
-|`CORDBG_E_INVALID_OPCODE`|Verilen IL ofset sitesi bir çağrı yönergesi değildir veya işlev döndürür. `void`|  
-|`CORDBG_E_UNSUPPORTED`|Verilen IL ofset uygun bir çağrıdır, ancak iade türü iade değeri almak için desteklenmez.|  
+|`CORDBG_E_INVALID_OPCODE`|Verilen Il konum sitesi bir çağrı yönergesi değil veya işlev döndürüyor `void`.|  
+|`CORDBG_E_UNSUPPORTED`|Verilen Il kayması uygun bir çağrıdır, ancak dönüş türü bir dönüş değeri almak için desteklenmez.|  
   
- Bu `ICorDebugCode3::GetReturnValueLiveOffset` yöntem yalnızca x86 tabanlı ve AMD64 sistemlerinde kullanılabilir.  
+ `ICorDebugCode3::GetReturnValueLiveOffset` Yöntemi yalnızca x86 tabanlı ve AMD64 sistemlerinde kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

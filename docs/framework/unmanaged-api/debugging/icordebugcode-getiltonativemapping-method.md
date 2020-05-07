@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777883"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893537"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping Metodu
 Microsoft ara dili (MSIL) uzaklıklarından yerel uzaklıklara olan eşlemeleri temsil eden "COR_DEBUG_IL_TO_NATIVE_MAP" örneklerinin bir dizisini alır.  
@@ -38,28 +38,28 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="parameters"></a>Parametreler  
  `cMap`  
- 'ndaki `map` dizisinin boyutu.  
+ 'ndaki `map` Dizinin boyutu.  
   
  `pcMap`  
- dışı `map` dizide döndürülen gerçek öğe sayısına yönelik bir işaretçi.  
+ dışı `map` Dizide döndürülen gerçek öğe sayısı için bir işaretçi.  
   
  `map`  
- dışı Her biri MSIL 'den yerel bir uzaklığa bir eşlemeyi temsil eden `COR_DEBUG_IL_TO_NATIVE_MAP` yapılarının bir dizisi.  
+ dışı Her biri bir `COR_DEBUG_IL_TO_NATIVE_MAP` MSIL öğesinden yerel bir uzaklığa bir eşlemeyi temsil eden yapıların dizisi.  
   
  Döndürülen öğelerin dizisinde bir sıralama yoktur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetILToNativeMapping` yöntemi, yalnızca bu "ICorDebugCode" örneği, MSIL kodundan derlenen yerel kodu temsil ediyorsa anlamlı sonuçlar döndürür.  
+ Yöntemi `GetILToNativeMapping` , yalnızca bu "ICorDebugCode" ÖRNEĞI, MSIL kodundan derlenen yerel kodu (JIT) gösterirse anlamlı sonuçlar döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorDebugCode arabirimi](icordebugcode-interface1.md)
+- [ICorDebugCode Arabirimi](icordebugcode-interface1.md)

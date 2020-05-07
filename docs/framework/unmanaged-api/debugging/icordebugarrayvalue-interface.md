@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778197"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894964"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue Arabirimi
 
@@ -39,19 +39,19 @@ Tek boyutlu veya çok boyutlu bir diziyi temsil eden ICorDebugHeapValue öğesin
 |[HasBaseIndicies Yöntemi](icordebugarrayvalue-hasbaseindicies-method.md)|Dizinin temel dizinlere sahip olup olmadığını belirler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugArrayValue` hem tek boyutlu hem çok boyutlu dizileri destekler.  
+ `ICorDebugArrayValue`hem tek boyutlu hem çok boyutlu dizileri destekler.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

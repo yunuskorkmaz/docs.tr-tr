@@ -1,60 +1,90 @@
 ---
 title: eShopOnContainers'ı Azure'a dağıtma
 description: Azure Kubernetes hizmeti, helk ve DevSpaces kullanarak eShopOnContainers uygulamasını dağıtma.
-ms.date: 06/30/2019
-ms.openlocfilehash: 21033cc904dc595193c69f3452ce2522740f8ff6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 04/20/2020
+ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183275"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895592"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers'ı Azure'a dağıtma
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-EShopOnContainers uygulamasını destekleme mantığı, çeşitli hizmetler kullanılarak Azure tarafından desteklenebilir. Önerilen yaklaşım, Azure Kubernetes hizmeti (AKS) kullanarak Kubernetes 'ten faydalanmalıdır. Bu, kolayca tekrarlanabilir altyapı yapılandırması sağlamak için Held dağıtımıyla birleştirilebilir. İsteğe bağlı olarak, geliştiriciler geliştirme sürecinin bir parçası olarak Kubernetes Azure Dev Spaces faydalanabilir. Diğer bir seçenek de Azure Işlevleri ve Azure Logic Apps gibi Azure sunucusuz özellikleri kullanarak uygulama işlevselliğini barındırmanıza olanak sağlar.
+EShopOnContainers uygulaması, çeşitli Azure platformlarına dağıtılabilir. Önerilen yaklaşım, uygulamayı Azure Kubernetes hizmetlerine (AKS) dağıtmaktır. Bir Kubernetes dağıtım aracı olan helk, dağıtım karmaşıklığını azaltmak için kullanılabilir. İsteğe bağlı olarak, geliştiriciler geliştirme sürecini kolaylaştırmak için Kubernetes için Azure Dev Spaces uygulayabilir.
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-EShopOnContainers uygulamasını kendi AKS kümenizde barındırmak istiyorsanız, ilk adım kümenizin oluşturulması gerekir. Bunu, gerekli adımlarda size yol gösterecek olan Azure portal kullanarak yapabilirsiniz veya Azure CLı 'yı kullanarak, rol tabanlı Access Control (RBAC) ve uygulama yönlendirmeyi bu şekilde etkinleştirmenizi sağlamak için dikkatli olabilirsiniz. EShopOnContainers ' belgeleri kendi AKS kümenizi oluşturma ile ilgili adımları açıklamaktadır. Küme oluşturulduktan sonra, Kubernetes panosuna erişimi etkinleştirmeniz gerekir, bu noktada kümeyi yönetmek için Kubernetes panosuna gözatabilmeniz gerekir.
+AKS 'de eShop barındırmak için ilk adım bir AKS kümesi oluşturmaktır. Bunu yapmak için, gerekli adımlarda size yol gösterecek Azure portal kullanabilirsiniz. Ayrıca, rol tabanlı Access Control (RBAC) ve uygulama yönlendirmeyi etkinleştirmek için Azure CLı 'dan bir küme oluşturabilirsiniz. EShopOnContainers ' belgeleri kendi AKS kümenizi oluşturmak için gereken adımları ayrıntılı olarak oluşturur. Oluşturulduktan sonra, Kubernetes panosundan kümeye erişip yönetebilirsiniz.
 
-Küme oluşturulduktan ve yapılandırıldıktan sonra, Held ve Tiller kullanarak uygulamayı dağıtabilirsiniz.
+Artık eShop uygulamasını, Held ve Tiller kullanan kümeye dağıtabilirsiniz.
 
 ## <a name="deploying-to-azure-kubernetes-service-using-helm"></a>Held kullanarak Azure Kubernetes hizmetine dağıtma
 
-AKS 'e yönelik temel dağıtımlar özel CLı betikleri veya basit dağıtım dosyaları kullanabilir, ancak daha karmaşık uygulamaların Helm gibi bir bağımlılık yönetim aracı kullanması gerekir. Helk, bulut Yerel Bilgi Işlem altyapısı tarafından korunur ve Kubernetes uygulamalarını tanımlamanıza, yüklemenize ve yükseltmenize yardımcı olur. Held, Held grafiklerini ve bir küme içi bileşeni olan Tiller bir komut satırı istemcisinden oluşur. Hele grafikleri, ilişkili bir Kubernetes kaynağı kümesini ve genellikle tanımladıkları uygulamayla birlikte sürümlenmiş standart YAML biçimli dosyaları kullanır. Hele grafikleri, tanımladıkları yüklemenin gereksinimlerine bağlı olarak basit ile karmaşık arasında değişir.
+Helk, doğrudan Kubernetes ile birlikte çalışarak bir uygulama paketi Yöneticisi aracıdır. Kubernetes uygulamalarını tanımlamanıza, yüklemenize ve yükseltmenize yardımcı olur. Basit uygulamalar özel CLı betikleri veya basit dağıtım dosyaları ile AKS 'e dağıtılabilirken, karmaşık uygulamalar çok sayıda Kubernetes nesnesi içerebilir ve Held 'den faydalanabilir.
+
+Held kullanarak uygulamalar, Held paketlerinde uygulamayı ve yapılandırmayı bildirimli olarak açıklayan, Held grafikleri adlı metin tabanlı yapılandırma dosyalarını içerir. Grafikler, ilgili bir Kubernetes kaynakları kümesini anlatmak için standart YAML biçimli dosyaları kullanır. Bunlar, tanımladıkları uygulama kodunun yanı sıra sürümlüdür. Hele grafikleri, tanımladıkları yüklemenin gereksinimlerine bağlı olarak basit ile karmaşık arasında değişir.
+
+Held, Held grafiklerini tüketen ve komutları, Tiller adlı bir sunucu bileşenine Başlatan bir komut satırı istemci aracından oluşur. Tiller, Kapsayıcılı iş yüklerinizin doğru sağlamasını sağlamak için Kubernetes API 'siyle iletişim kurar. Held, bulut Yerel Bilgi Işlem altyapısı tarafından korunur.
+
+Aşağıdaki YAML dosyası bir Held şablonu sunar:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.app.svc.marketing }}
+  labels:
+    app: {{ template "marketing-api.name" . }}
+    chart: {{ template "marketing-api.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "marketing-api.name" . }}
+    release: {{ .Release.Name }}
+```
+
+Şablonun bir dinamik anahtar/değer çiftleri kümesini nasıl açıklayacağını aklınızda edin. Şablon çağrıldığında, küme ayraçları içine alınmış değerler diğer YAML tabanlı yapılandırma dosyalarından çekilir.
 
 EShopOnContainers Held grafiklerini/k8s/Held klasöründe bulabilirsiniz. Şekil 2-6, uygulamanın farklı bileşenlerinin, Held tarafından yönetilen dağıtımlar tanımlamak için kullanılan bir klasör yapısına nasıl düzenlendiğini gösterir.
 
-![eShopOnContainers mimarisi](./media/eshoponcontainers-helm-folder.png)
-**şekil 2-6**. EShopOnContainers Held klasörü.
+![eshoponcontainers mimari](./media/eshoponcontainers-helm-folder.png)
+**Şekil 2-6**. EShopOnContainers Held klasörü.
 
-Her bir bileşen bir `helm install` komutu kullanılarak yüklenir. Bu komutlar kolayca betikleştirilmiş ve eShopOnContainers, farklı bileşenler arasında döngü yapan ve bunları ilgili Helu grafiklerini kullanarak yükleyen bir "tümünü dağıt" betiği sağlar. Sonuç, kaynak denetimindeki uygulamayla sürümlü, ekip üzerindeki herkesin tek satırlık bir betik komutuyla bir AKS kümesine dağıtabileceği, tekrarlanabilir bir işlemdir. Özellikle de Azure Dev Spaces birleştirildiğinde, bu, geliştiricilerin kendi mikro hizmet tabanlı bulut Yerel uygulamalarında yaptığı değişiklikleri tanılamalarını ve test etmelerini kolaylaştırır.
+Her bir bileşen, bir `helm install` komut kullanılarak yüklenir. eShop, ilgili Held grafiklerini kullanarak bileşenleri döngüye sokma ve yükleyen bir "tümünü dağıt" betiği içerir. Sonuç, kaynak denetimindeki uygulamayla sürümlü, ekip üzerindeki herkesin tek satırlık bir betik komutuyla bir AKS kümesine dağıtabileceği, tekrarlanabilir bir işlemdir.
+
+> Help 'nin 2. sürümünün, Tiller Server bileşenine yönelik ihtiyacı ortadan kaldırdığına unutmayın. Bu geliştirme hakkında daha fazla bilgiyi [burada](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)bulabilirsiniz.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
-Azure Dev Spaces, bireysel geliştiricilerin geliştirme sırasında Azure 'da AKS kümelerinin kendi benzersiz sürümlerini barındırmalarına yardımcı olur. Bu, yerel makine gereksinimlerini en aza indirir ve takım üyelerinin, değişikliklerinin gerçek bir AKS ortamında nasıl davranacağını hızla görüntülemesine olanak tanır. Azure Dev Spaces, geliştiricilerin dev alanlarını yönetmek ve gerektiğinde belirli bir alt dev alanına dağıtmak üzere kullanması için bir CLı sunar. Her bir alt dev alanına benzersiz bir URL alt etki alanı kullanılarak başvurulur. bu sayede, tek tek geliştiricilerin devam eden her iş ile çakışmaktan kaçınmak için, değiştirilen kümelerin yan yana dağıtımına izin verilir. Şekil 2-7 ' de, geliştirici Susıe 'nin kendi Bisiklet mikro hizmetinin kendi sürümünü geliştirme alanına dağıttığının nasıl yapıldığını görebilirsiniz. Daha sonra kendi alan adı (susie.s.dev.myapp.eus.azds.io) ile başlayan özel bir URL 'YI kullanarak yaptığı değişiklikleri test edebilir.
+Bulutta yerel uygulamalar hızlı bir şekilde büyük ve karmaşık bir şekilde büyüyerek önemli işlem kaynaklarının çalıştırılmasını gerektirir. Bu senaryolarda, tüm uygulama bir geliştirme makinesinde (özellikle bir dizüstü bilgisayar) barındırılamaz. Azure Dev Spaces, AKS kullanarak bu sorunu gidermek için tasarlanmıştır. Geliştiricilerin, bir AKS geliştirme kümesinde uygulamanın geri kalanını barındırırken hizmetlerinin yerel bir sürümüyle çalışmasını sağlar.
 
-![eShopOnContainers mimarisi](./media/azure-devspaces-one.png)
-**şekil 2-7**. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
+Geliştiriciler, Kapsayıcılı uygulamanın tamamını içeren bir AKS kümesinde çalışan (geliştirme) örneği paylaşır. Ancak, hizmetlerini yerel olarak geliştirmek üzere makinesinde ayarlanan kişisel alanları kullanırlar. Hazırlık yapıldığında, bağımlılıklar çoğaltılmaksızın AKS kümesindeki uçtan uca test ederler. Azure Dev Spaces, yerel makineden AKS Hizmetleri ile kod birleştirir. Ekip üyeleri, değişikliklerinin gerçek bir AKS ortamında nasıl davranacağını görebilir. Geliştiriciler Visual Studio 2017 veya Visual Studio Code kullanarak doğrudan Kubernetes 'te kodu hızla yineleyebilir ve hata ayıklamanıza olanak sağlar.
 
-Aynı zamanda, geliştirici John, rezervasyonlar mikro hizmetini özelleştirip değişiklikleri test etmek için gereklidir. Şekil 2-8 ' de gösterildiği gibi, Susie değişiklikleri ile çakışmadan kendi geliştirme alanı üzerinde değişiklikleri dağıtabiyor. Kendi URL 'sini kullanarak değişikliklerini test edebilir. Bu, alan adı (john.s.dev.myapp.eus.azds.io) önekini kullanır.
+Şekil 2-7 ' de, geliştirici Susie ' nin, Bisiklet mikro hizmetinin güncelleştirilmiş bir sürümünü geliştirme alanına dağıttığdığını görebilirsiniz. Daha sonra kendi alan adı (susie.s.dev.myapp.eus.azds.io) ile başlayan özel bir URL 'YI kullanarak yaptığı değişiklikleri test edebilir.
 
-![eShopOnContainers mimarisi](./media/azure-devspaces-two.png)
-**şekil 2-8**. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
+![eshoponcontainers mimari](./media/azure-devspaces-one.png)
+**Şekil 2-7**. Geliştirici Susie, Bisiklet mikro hizmetinin kendi sürümünü dağıtır ve test eder.
+
+Aynı zamanda, geliştirici John, rezervasyonlar mikro hizmetini özelleştirip değişiklikleri test etmek için gereklidir. Şekil 2-8 ' de gösterildiği gibi, Susie değişiklikleri ile çakışmadan kendi dev alanındaki değişiklikleri dağıtır. John daha sonra yaptığı kendi URL 'sini kullanarak değişikliklerini test eder (john.s.dev.myapp.eus.azds.io).
+
+![eshoponcontainers mimari](./media/azure-devspaces-two.png)
+**Şekil 2-8**. Geliştirici John, rezervasyonlar mikro hizmetinin kendi sürümünü dağıtır ve diğer geliştiricilerle çakışmadan test eder.
 
 Azure Dev Spaces kullanarak takımlar, değişiklikleri bağımsız olarak değiştirirken, dağıttığınızda ve test ederken doğrudan AKS ile çalışabilir. Bu yaklaşım, her geliştiricinin kendi AKS ortamları etkin olduğundan, ayrı ayrı barındırılan ortamların gereksinimini azaltır. Geliştiriciler, CLı kullanarak Azure Dev Spaces çalışabilir veya doğrudan Visual Studio 'dan Azure Dev Spaces için uygulamasını başlatabilir. [Azure Dev Spaces nasıl çalıştığı ve yapılandırıldığı hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 
 ## <a name="azure-functions-and-logic-apps-serverless"></a>Azure Işlevleri ve Logic Apps (sunucusuz)
 
-EShopOnContainers örneği, çevrimiçi pazarlama kampanyalarının izlenmesi için destek içerir. Belirli bir kampanya KIMLIĞI için pazarlama kampanyası ayrıntılarını çekmek üzere bir Azure Işlevi kullanılır. Bu amaçla bir bütün ASP.NET Core uygulama oluşturmak yerine, tek bir Azure Işlev uç noktası daha basit ve yeterlidir. Azure Işlevleri, özellikle Kubernetes 'te çalışacak şekilde yapılandırıldığında tam ASP.NET Core uygulamalardan çok daha basit bir derleme ve dağıtım modeline sahiptir. İşlevin dağıtımı Azure Resource Manager (ARM) şablonları ve Azure CLı kullanılarak komut dosyası oluşturulur. Bu kampanya ayrıntıları mikro hizmeti müşteriye yönelik değildir ve çevrimiçi mağazanızlarla aynı gereksinimlere sahip değildir ve Azure Işlevleri için iyi bir aday haline gelir. İşlev, veritabanı bağlantı dizesi verileri ve görüntü tabanı URI 'SI ayarları gibi bazı yapılandırmanın düzgün şekilde çalışmasını gerektirir. Azure Işlevleri 'ni Azure portalında yapılandırırsınız.
-
-## <a name="references"></a>Referanslar
-
-- [eShopOnContainers: AKS 'te Kubernetes kümesi oluşturma](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
-- [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+EShopOnContainers örneği, çevrimiçi pazarlama kampanyalarının izlenmesi için destek içerir. Belirli bir kampanya KIMLIĞI için pazarlama kampanyası ayrıntılarını izlemek üzere bir Azure Işlevi kullanılır. Tam bir mikro hizmet oluşturmak yerine, tek bir Azure Işlevi daha basit ve yeterlidir. Azure Işlevleri, özellikle Kubernetes içinde çalışacak şekilde yapılandırıldığında basit bir derleme ve dağıtım modeline sahiptir. İşlevin dağıtımı Azure Resource Manager (ARM) şablonları ve Azure CLı kullanılarak komut dosyası oluşturulur. Bu kampanya hizmeti müşteriye açık değildir ve tek bir işlemi çağırır ve Azure Işlevleri için harika bir aday yapar. İşlev, veritabanı bağlantı dizesi verileri ve görüntü tabanı URI 'SI ayarları dahil olmak üzere en az yapılandırma gerektirir. Azure Işlevlerini Azure portal yapılandırırsınız.
 
 >[!div class="step-by-step"]
 >[Önceki](map-eshoponcontainers-azure-services.md)

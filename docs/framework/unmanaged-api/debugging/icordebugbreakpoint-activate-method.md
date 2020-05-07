@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e30c29f7-3f19-4081-b572-a731aa14cd44
 topic_type:
 - apiref
-ms.openlocfilehash: 50794e96484432c8b7c203f6b8caa60130068a8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24dc55cc9a49c3602829ca627d584c761b4088ce
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122781"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894741"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate Yöntemi
-Bu `ICorDebugBreakpoint`etkin durumunu ayarlar.  
+Bunun `ICorDebugBreakpoint`etkin durumunu ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,13 +35,13 @@ HRESULT Activate (
   
 ## <a name="parameters"></a>Parametreler  
  `bActive`  
- 'ndaki Durumu etkin olarak belirtmek için bu değeri `true` olarak ayarlayın; Aksi takdirde, bu değeri `false`olarak ayarlayın.  
+ 'ndaki Durumu etkin olarak belirtmek `true` için bu değeri olarak ayarlayın; Aksi takdirde, bu değeri olarak `false`ayarlayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
