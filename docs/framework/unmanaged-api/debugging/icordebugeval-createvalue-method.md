@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-ms.openlocfilehash: bd6f1b2153404ba4567ef8348ff128b5d475c6fe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 55888786fdd8ff2b1d5610a74ee729db0d4fcfde
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793498"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976258"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue Yöntemi
 Sıfır veya null başlangıç değeri ile belirtilen türde bir değer oluşturur.  
@@ -39,7 +39,7 @@ HRESULT CreateValue (
   
 ## <a name="parameters"></a>Parametreler  
  `elementType`  
- 'ndaki Değerin türünü belirten [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) numaralandırması değeri.  
+ 'ndaki Değerin türünü belirten [CorElementType](../metadata/corelementtype-enumeration.md) numaralandırması değeri.  
   
  `pElementClass`  
  'ndaki Tür temel bir tür değilse, değerin sınıfını belirten [ICorDebugClass](icordebugclass-interface.md) nesnesine yönelik işaretçi.  
@@ -48,14 +48,14 @@ HRESULT CreateValue (
  dışı Değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateValue`, tek bir işlev değerlendirmesinde kullanmak amacıyla verilen türde bir `ICorDebugValue` nesnesi oluşturur. Bu değer nesnesi, Kullanıcı sabitlerini parametre olarak geçirmek için kullanılabilir.  
+ `CreateValue`tek bir `ICorDebugValue` işlev değerlendirmesinde kullanmak amacıyla verilen türde bir nesne oluşturur. Bu değer nesnesi, Kullanıcı sabitlerini parametre olarak geçirmek için kullanılabilir.  
   
  Değerin türü temel bir tür ise, ilk değeri sıfır veya null olur. Temel bir türün değerini ayarlamak için [ICorDebugGenericValue:: SetValue](icordebuggenericvalue-setvalue-method.md) kullanın.  
   
- `elementType` değeri ELEMENT_TYPE_CLASS, null nesne başvurusunu temsil eden bir "ICorDebugReferenceValue" (`ppValue`olarak döndürülen) alırsınız. Bu nesneyi, nesne başvuru parametrelerine sahip bir işlev değerlendirmesine null geçirmek için kullanabilirsiniz. `ICorDebugValue` her şeyi ayarlayamazsınız; her zaman null kalmaya devam eder.  
+ Değeri ELEMENT_TYPE_CLASS `elementType` ise, null nesne başvurusunu temsil eden bir "ICorDebugReferenceValue" (içinde `ppValue`döndürülen) alırsınız. Bu nesneyi, nesne başvuru parametrelerine sahip bir işlev değerlendirmesine null geçirmek için kullanabilirsiniz. Her şeye ayarlayamazsınız `ICorDebugValue` ; her zaman null kalmaya devam eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
@@ -66,4 +66,4 @@ HRESULT CreateValue (
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CreateValueForType Yöntemi](icordebugeval2-createvaluefortype-method.md)
-- [Icorıncertificate Geval arabirimi](icordebugeval-interface.md)
+- [ICorDebugEval Arabirimi](icordebugeval-interface.md)

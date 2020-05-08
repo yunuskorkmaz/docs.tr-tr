@@ -1,60 +1,60 @@
 ---
-title: .NET Derleyici Platformu SDK kavramları ve nesne modeli
-description: Bu genel bakış, .NET derleyicisi SDK ile etkili bir şekilde çalışmak için gereken arka planı sağlar. API katmanlarını, ilgili ana türleri ve genel nesne modelini öğreneceksiniz.
+title: SDK kavramlarını ve nesne modelini .NET Compiler Platform
+description: Bu genel bakış, .NET derleyici SDK 'Sı ile etkin şekilde çalışmanız için gereken arka planı sağlar. API katmanlarını, ilgili ana türleri ve genel nesne modelini öğreneceksiniz.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156967"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975946"
 ---
-# <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Derleyici Platformu SDK modelini anlayın
+# <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK modelini anlama
 
-Derleyiciler, yazdığınız kodu, genellikle insanların kodu okuma ve anlama şeklinden farklı olan yapılandırılmış kuralları izleyerek işler. Derleyiciler tarafından kullanılan modelin temel bir şekilde anlaşılması, Roslyn tabanlı araçlar inşa ederken kullandığınız API'leri anlamak için gereklidir.
+Derleyiciler, genellikle, insanların kodu okumasından ve anlayacağından farklı şekilde yazdığınız yapılandırılmış kurallara göre yazdığınız kodu işler. Derleyiciler tarafından kullanılan modelin temel olarak anlaşılmasına, Roslyn tabanlı araçlar oluştururken kullandığınız API 'Leri anlamak önemlidir.
 
-## <a name="compiler-pipeline-functional-areas"></a>Derleyici boru hattı fonksiyonel alanları
+## <a name="compiler-pipeline-functional-areas"></a>Derleyici ardışık düzeni işlevsel alanı
 
-.NET Derleyici Platformu SDK, geleneksel derleyici ardışık hattını yansıtan bir API katmanı sağlayarak C# ve Visual Basic derleyicilerinin kod çözümlemesi'ni tüketici olarak size sunar.
+.NET Compiler Platform SDK, geleneksel bir derleyici işlem hattını yansıtan bir API katmanı sağlayarak C# ve Visual Basic derleyicilerinin Kod analizini bir tüketici olarak kullanıma sunar.
 
-![nesne koduna derleyici boru hattı işleme kaynak kodunun adımları](media/compiler-api-model/compiler-pipeline.png)
+![Derleyici işlem hattının, nesne koduna işleme kaynak kodu adımları](media/compiler-api-model/compiler-pipeline.png)
 
-Bu ardışık hattın her aşaması ayrı bir bileşendir. İlk olarak, ayrıştirme aşaması, kaynak metni dil dilbilgisini izleyen sözdizimi olarak belirterek ayrıştirır. İkinci olarak, bildirim aşaması kaynak ve alınan meta verileri çözümleyip adlandırılmış sembolleroluşturur. Daha sonra, bağlama aşaması koddaki tanımlayıcıları sembollerle eşleşir. Son olarak, yayan aşama derleyici tarafından biriken tüm bilgileri içeren bir derleme yayar.
+Bu işlem hattının her aşaması ayrı bir bileşendir. İlk olarak, ayrıştırma aşaması, kaynak metnini simgeleştirir ve dil dilbilgisini izleyen söz dizimine ayrıştırır. İkinci olarak, bildirim aşaması, adlandırılmış sembolleri biçimlendirmek için kaynağı ve içeri aktarılan meta verileri analiz eder. Sonra, bağlama aşaması koddaki tanımlayıcılarla eşleşir. Son olarak, yayma aşaması derleyici tarafından oluşturulan tüm bilgileri içeren bir derleme yayar.
 
-![derleyici pipeline api derleyici ardışık bir parçası olan her adıma erişim sağlar](media/compiler-api-model/compiler-pipeline-api.png)
+![Derleyici ardışık düzeni API 'si, derleyici ardışık düzeninin parçası olan her adıma erişim sağlar](media/compiler-api-model/compiler-pipeline-api.png)
 
-Bu aşamaların her birine karşılık gelen .NET Derleyici Platformu SDK, o aşamadaki bilgilere erişim sağlayan bir nesne modelini ortaya çıkarır. Ayrıştırma aşaması sözdizimi ağacını, bildirim aşaması hiyerarşik bir sembol tablosunu, bağlama aşaması derleyicinin semantik çözümlemesi sonucunu ortaya çıkarır ve yaslanma aşaması IL byte kodları üreten bir API'dir.
+Bu aşamaların her birine karşılık gelen .NET Compiler Platform SDK, söz konusu aşamadaki bilgilere erişim sağlayan bir nesne modeli sunar. Ayrıştırma aşaması bir sözdizimi ağacı sunar, bildirim aşaması hiyerarşik bir sembol tablosu gösterir, bağlama aşaması derleyicinin anlam analizinin sonucunu gösterir ve yayma aşaması, IL bayt kodları üreten bir API 'dir.
 
-![derleyici ardışık boru hattının her adımında derleyici api'den edinilebilen dil hizmetleri](media/compiler-api-model/compiler-pipeline-lang-svc.png)
+![Derleyici işlem hattının her adımında derleyici API 'sinde kullanılabilen dil Hizmetleri](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
-Her derleyici bu bileşenleri tek bir uç-uç bütün olarak birleştirir.
+Her derleyici bu bileşenleri tek bir uçtan uca tam olarak birleştirir.
 
-Bu API'ler Visual Studio tarafından kullanılanlarla aynıdır. Örneğin, kod anahat ve biçimlendirme özellikleri sözdizimi ağaçlarını kullanır, Nesne Tarayıcısı ve gezinti özellikleri sembol tablosunu kullanır, yeniden düzenleme ve Tanıma Git semantik modeli kullanır ve Düzenle ve Devam, Emit API dahil olmak üzere tüm bunları kullanır.
+Bu API 'Ler, Visual Studio tarafından kullanılan aynı olanlardır. Örneğin, kod ana hattı ve biçimlendirme özellikleri, sözdizimi ağaçlarını kullanır, Nesne Tarayıcısı ve gezinti özellikleri sembol tablosunu kullanır, yeniden düzenlemeler ve tanıma git anlam modeli kullanır ve Düzenle ve devam et, yayma API 'SI de dahil olmak üzere tümünü kullanır.
 
 ## <a name="api-layers"></a>API katmanları
 
-.NET derleyici SDK API'lerin iki ana katmanından oluşur: derleyici API'leri ve çalışma alanları API'leri.
+.NET derleyici SDK 'Sı iki ana API katmanından oluşur: derleyici API 'Leri ve çalışma alanı API 'Leri.
 
-![derleyici boru hattı apistarafından temsil edilen api katmanları](media/compiler-api-model/api-layers.png)
+![Derleyici ardışık düzen API 'leri tarafından temsil edilen API katmanları](media/compiler-api-model/api-layers.png)
 
-### <a name="compiler-apis"></a>Derleyici API'leri
+### <a name="compiler-apis"></a>Derleyici API 'Leri
 
-Derleyici katmanı, derleyici ardışık ardışık ardışık ardışık ardışık her aşamasında maruz kalan bilgilere karşılık gelen nesne modellerini içerir, hem sözdizimverici hem de anlamsal. Derleyici katmanı, derleme başvuruları, derleyici seçenekleri ve kaynak kodu dosyaları da dahil olmak üzere derleyicinin tek bir çağırmasının değişmez anlık görüntüsünü de içerir. C# dilini ve Visual Basic dilini temsil eden iki farklı API vardır. Bu iki API şeklinde benzer ama her bir dile yüksek sadakat için özel. Bu katmanın Visual Studio bileşenlerine hiçbir bağımlılığı yoktur.
+Derleyici katmanı, derleyici ardışık düzeninin her aşamasında gösterilen bilgilere karşılık gelen nesne modellerini, hem sözdizimsel hem de anlam içerir. Derleyici katmanı, derleme başvuruları, derleyici seçenekleri ve kaynak kodu dosyaları da dahil olmak üzere tek bir derleyici çağrısının sabit bir anlık görüntüsünü içerir. C# dilini ve Visual Basic dilini temsil eden iki ayrı API vardır. Bu iki API, şekle benzer ancak her bir dile Yüksek uygunluğa göre tasarlanmıştır. Bu katmanın Visual Studio bileşenlerinde hiçbir bağımlılığı yoktur.
 
-### <a name="diagnostic-apis"></a>TanıSAL API'lar
+### <a name="diagnostic-apis"></a>Tanılama API 'Leri
 
-Derleme, analizinin bir parçası olarak sözdizimi, anlamsal ve kesin atama hatalarından çeşitli uyarılara ve bilgilendirme diagnostiklerine kadar her şeyi kapsayan bir dizi tanılama üretebilir. Derleyici API katmanı, kullanıcı tanımlı çözümleyicilerin derleme işlemine takılmasını sağlayan genişletilebilir bir API aracılığıyla tanılamayı ortaya çıkarır. StyleCop veya FxCop gibi araçlar tarafından üretilenler gibi kullanıcı tanımlı tanılamaların derleyici tanımlı tanılamayla birlikte üretilmesine olanak tanır. Bu şekilde tanılama üretmek, politikaya dayalı bir yapıyı durdurmak ve editörde canlı squiggles göstermek ve kod önermek gibi deneyimler için tanılama ya da tanılama ya da kod önerme gibi araçlarla doğal olarak bütünleşme nin avantajına sahiptir. Giderir.
+Analizinin bir parçası olarak, derleyici söz dizimi, anlam ve belirli atama hatalarından her şeyi kapsayan bir tanılama kümesi oluşturabilir ve çeşitli uyarılar ve bilgilendirici tanılamaları olabilir. Derleyici API katmanı, Kullanıcı tanımlı çözümleyiciler derleme sürecine takılmasına olanak sağlayan genişletilebilir bir API aracılığıyla tanılamayı kullanıma sunar. StyleCop veya FxCop gibi araçlarla üretilenler gibi Kullanıcı tanımlı tanılamaları, derleyici tanımlı tanılamalarıyla birlikte üretilede sağlar. Tanılamayı bu şekilde oluşturmak, MSBuild ve Visual Studio gibi araçlarla doğal olarak tümleştirme avantajına sahiptir. bu sayede, ilkeye dayalı bir derlemeyi durdurma ve düzenleyicide canlı dalgalı çizgiler gösterme ve kod düzeltmeleri önerme gibi deneyimlere bağlı olan deneyimler için tanılamaları vardır.
 
-### <a name="scripting-apis"></a>Komut Dosyası API'leri
+### <a name="scripting-apis"></a>Betik oluşturma API 'Leri
 
-Barındırma ve komut dosyası API'leri derleyici katmanının bir parçasıdır. Bunları kod parçacıklarını yürütmek ve çalışma zamanı yürütme bağlamı biriktirmek için kullanabilirsiniz.
-C# etkileşimli REPL (Oku-Değerlendir-Yazdır Döngüsü) bu API'leri kullanır. REPL, C#'ı komut dosyası dili olarak kullanmanızı ve siz yazarken kodu etkileşimli olarak yürütmenizi sağlar.
+Barındırma ve betik oluşturma API 'Leri, derleyici katmanının bir parçasıdır. Bunları kod parçacıklarını yürütmek ve bir çalışma zamanı yürütme bağlamını biriktirme amacıyla kullanabilirsiniz.
+C# etkileşimli REPL (Read-değerlendir-Print döngüsü) Bu API 'Leri kullanır. REPL, C# ' yi bir komut dosyası dili olarak kullanmanızı sağlar ve kodu yazarken etkileşimli olarak çalıştırabilirsiniz.
 
-### <a name="workspaces-apis"></a>Çalışma Alanları API'leri
+### <a name="workspaces-apis"></a>Çalışma alanları API 'Leri
 
-Çalışma Alanları katmanı, kod çözümlemesi yapmak ve tüm çözümleri yeniden düzenlemenin başlangıç noktası olan Çalışma Alanı API'sini içerir. Projelerle ilgili tüm bilgileri tek bir nesne modelinde düzenlemenize yardımcı olur ve dosyaları ayrıştırmaya, seçenekleri yapılandırmaya veya projeden projeye bağımlılıkları yönetmeye gerek kalmadan derleyici katmanı nesne modellerine doğrudan erişim sağlar .
+Çalışma alanları katmanı, Kod analizini yapmak ve tüm çözümlerin yeniden düzenlemesi için başlangıç noktası olan çalışma alanı API 'sini içerir. Bir çözümdeki projelerle ilgili tüm bilgileri tek bir nesne modeline göre organize etmek için size yardımcı olur. Bu, dosyaları ayrıştırmaya, seçenekleri yapılandırmanıza veya projeden projeye bağımlılıkları yönetmeye gerek kalmadan derleyici katmanı nesne modellerine doğrudan erişmenizi sağlar.
 
-Buna ek olarak, Çalışma Alanları katmanı, Visual Studio IDE gibi bir ana bilgisayar ortamında işlev gören kod çözümlemesi ve yeniden düzenleme araçları uygularken kullanılan bir dizi API'yi yüzeyler. Örnekler arasında Tüm Başvuruları Bul, Biçimlendirme ve Kod Oluşturma API'leri verilebilir.
+Ayrıca, çalışma alanları katmanı, Visual Studio IDE gibi bir konak ortamında işlev Analizi ve yeniden düzenleme araçları uygularken kullanılan bir API kümesini yüzey halinde gösterir. Örnekler, tüm başvuruları bul, biçimlendirme ve kod oluşturma API 'Lerini içerir.
 
-Bu katmanın Visual Studio bileşenlerine hiçbir bağımlılığı yoktur.
+Bu katmanın Visual Studio bileşenlerinde hiçbir bağımlılığı yoktur.

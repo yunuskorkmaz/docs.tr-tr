@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-ms.openlocfilehash: 6a7d9465a454175b58bb7b9566d31f3c65420610
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b985ada09e0e1914c5e60da61a45398fc6098b33
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085066"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976287"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread Metodu
 Bu değerlendirmenin yürütüldüğü veya yürütüleceği iş parçacığını alır.  
@@ -38,10 +38,10 @@ HRESULT GetThread (
  dışı İş parçacığını temsil eden ICorDebugThread nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,25 +2,25 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624897"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975439"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
 `dotnet test`-Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
 ## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,31 +37,40 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet test` , belirli bir projedeki birim testlerini yürütmek için kullanılır. Komut `dotnet test` , bir proje için belirtilen Test Çalıştırıcısı konsol uygulamasını başlatır. Test Çalıştırıcısı, bir birim test çerçevesi (örneğin, MSTest, NUnit veya xUnit) için tanımlanan testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür. Çok hedefli projeler için testler hedeflenen her çerçeve için çalıştırılır. Test Çalıştırıcısı ve birim testi kitaplığı, NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılıklar olarak geri yüklenir.
+Komut `dotnet test` , belirli bir çözümde birim testlerini yürütmek için kullanılır. `dotnet test` Komut çözümü oluşturur ve çözümdeki her test projesi için bir test ana bilgisayarı uygulaması çalıştırır. Test ana bilgisayarı, test çerçevesini (örneğin, MSTest, NUnit veya xUnit) kullanarak belirtilen projedeki testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür.
+
+Çok hedefli projeler için testler hedeflenen her çerçeve için çalıştırılır. Test Konağı ve birim testi çerçevesi, NuGet paketleri olarak paketlenir ve proje için sıradan bağımlılıklar olarak geri yüklenir.
 
 Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<PackageReference>` sıradan bir öğe kullanarak Test Çalıştırıcısı belirtir:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+Test `Microsoft.NET.Test.Sdk` Konağı `xunit` nerede, test çerçevesidir. Ve `xunit.runner.visualstudio` , xUnit Framework 'ün test ana bilgisayarı ile çalışmasına izin veren bir test bağdaştırıcısıdır.
+
 ### <a name="implicit-restore"></a>Örtük geri yükleme
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  Test projesinin veya çözümünün yolu. Belirtilmezse, varsayılan olarak geçerli dizin olur.
+  - Test projesinin yolu.
+  - Çözümün yolu.
+  - Proje veya çözüm içeren bir dizinin yolu.
+  - Test projesi *. dll* dosyasının yolu.
+
+  Belirtilmemişse, geçerli dizinde bir proje veya çözüm arar.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Test çalıştırmasında belirtilen yoldan özel test bağdaştırıcılarını kullanın.
+  Ek test bağdaştırıcıları için aranacak bir dizin yolu. Yalnızca soneki `.TestAdapter.dll` olan *. dll* dosyaları denetlenir. Belirtilmemişse, test *. dll* dizininde arama yapılır.
 
 - **`--blame`**
 
-  Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Geçerli dizinde, kilitlenmeden önce yürütülen testlerin sırasını yakalayan *Sequence. xml* olarak bir çıktı dosyası oluşturur.
+  Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Kilitlenme algılandığında, çökmeden önce çalıştırılan testlerin sırasını yakalayan bir sıra `TestResults/<Guid>/<Guid>_Sequence.xml` dosyası oluşturur.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<Pack
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Test platformu için tanılama modunu sağlar ve tanılama iletilerini belirtilen dosyaya yazar.
+  Test platformu için tanılama modunu sağlar ve belirtilen dosyaya ve bunun yanındaki dosyalara tanılama iletileri yazar. İletileri günlüğe kaydeden işlem, test ana bilgisayar günlüğü `*.host_<date>.txt` için ve `*.datacollector_<date>.txt` veri toplayıcı günlüğü için oluşturulan dosyaları belirler.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Belirli bir [çerçeve](../../standard/frameworks.md)için test ikililerini arar.
+  Test ikilileri için `dotnet` veya .NET Framework test ana bilgisayarının kullanımını zorlar. Bu seçenek yalnızca kullanılacak ana bilgisayar türünü belirler. Kullanılacak gerçek çerçeve sürümü test projesinin *runtimeconfig. JSON* tarafından belirlenir. Belirtilmediğinde, [TargetFramework derleme özniteliği](/dotnet/api/system.runtime.versioning.targetframeworkattribute) konak türünü belirlemekte kullanılır. Bu öznitelik *. dll*' den çıkarılır .NET Framework ana bilgisayar kullanılır.
 
 - **`--filter <EXPRESSION>`**
 
@@ -121,7 +130,7 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<Pack
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Testleri `.runsettings` çalıştırmak için kullanılacak dosya. `TargetPlatform` Öğesinin (x86 | x64) için `dotnet test`hiçbir etkisi olmadığını unutmayın. X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *DotNet. exe* ' nin bit genişliği, testleri çalıştırmak için kullanılacak şeydir. daha fazla bilgi için aşağıdaki kaynaklara bakın:
+  Testleri `.runsettings` çalıştırmak için kullanılacak dosya. `TargetPlatform` Öğesinin (x86 | x64) için `dotnet test`hiçbir etkisi olmadığını unutmayın. X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *DotNet. exe* ' nin bit genişliği, testleri çalıştırmak için kullanılacak şeydir. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   - [Birim testlerini bir `.runsettings` dosya kullanarak yapılandırın.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Test çalıştırması yapılandırma](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -136,7 +145,7 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<Pack
 
 - **`RunSettings`** değişkenlerinden
 
-  Bağımsız değişkenler test için `RunSettings` yapılandırma olarak geçirilir. Bağımsız değişkenler "- `[name]=[value]` -" sonra çift olarak belirtilir (--sonra boşluk bırakın). Birden çok `[name]=[value]` çifti ayırmak için bir boşluk kullanılır.
+ Satır `RunSettings` içi, "--" sonra komut satırındaki son bağımsız değişkenler olarak geçirilir (--sonra boşluğu aklınızda bırakın). Satır `RunSettings` içi çiftler olarak `[name]=[value]` belirtilir. Birden çok `[name]=[value]` çifti ayırmak için bir boşluk kullanılır.
 
   Örnek: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -167,6 +176,12 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<Pack
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
+  
+  - Projedeki testleri geçerli dizinde çalıştırın ve test ana bilgisayarı kilitlenirse sürmekte olan testleri rapor edin:
+
+  ```dotnetcli
+  dotnet test --blame
+  ```
 
 ## <a name="filter-option-details"></a>Filtre seçeneği ayrıntıları
 
@@ -178,7 +193,7 @@ Test projeleri, aşağıdaki örnek proje dosyasında görüldüğü gibi `<Pack
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Adı</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:

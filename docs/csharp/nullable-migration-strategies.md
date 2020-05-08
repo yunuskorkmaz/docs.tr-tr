@@ -1,94 +1,211 @@
 ---
-title: Nullable başvuru türlerini kullanmak için kod tabanınızı güncelleştirin
-description: Nullable başvuru türlerini kullanmak için kod tabanınızı yükseltmek için en iyi stratejiyi seçin.
+title: Kod tabanınızı null yapılabilir başvuru türlerini kullanacak şekilde güncelleştirin
+description: Kod tabanınızı, null yapılabilir başvuru türlerini kullanacak şekilde yükseltmek için en iyi stratejiyi seçin.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: b4a10863aea5c47b47c2a017afb20786b1e67528
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5909eb9ffe1f5398fc2eb74848b82f8fe9516548
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103529"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975335"
 ---
-# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Geçersiz başvuru türlerini kullanmak ve arayanlara geçersiz kuralları iletmek için kitaplıkları güncelleştirme
+# <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Kitaplıkları null yapılabilir başvuru türleri kullanacak şekilde güncelleştirme ve arayanlara null olabilecek kuralları iletişim kurma
 
-[Nullable başvuru türlerinin](nullable-references.md) eklenmesi, her değişken `null` için bir değere izin verilip verilmediğini veya beklenmediğini bildirebileceğiniz anlamına gelir. Buna ek olarak, bir dizi `AllowNull`öznitelik uygulayabilirsiniz: `NotNullIfNotNull` , , `DisallowNull` `MaybeNull` `NotNull` `NotNullWhen`, , `MaybeNullWhen`, , ve tamamen bağımsız değişken ve dönüş değerleri null durumları açıklamak için. Bu kod yazmak gibi büyük bir deneyim sağlar. Nullable olmayan bir değişken ' olarak `null`ayarlanmış olabilir uyarılar alırsınız. Geçersiz bir değişken, başvurudan çıkmadan önce null-check-checked değilse uyarılar alırsınız. Kitaplıklarınızı güncellemek zaman alabilir, ancak ödemeler buna değer. Derleyiciye bir `null` değere *ne zaman* izin verildiği veya ne zaman yasakolduğu hakkında ne kadar çok bilgi sağlarsanız, API'nizin kullanıcıları o kadar iyi uyarılar alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın kaynak dizesini almak için aşağıdaki API'ye sahip olduğunu düşünün:
+[Null yapılabilir başvuru türlerinin](nullable-references.md) eklenmesi, her değişken için bir `null` değere izin verilip verilmeyeceğini veya beklenmediğini bildirebilmeniz anlamına gelir. Ayrıca, bağımsız değişkenin ve dönüş değerlerinin null durumlarını tamamen anlatmak `AllowNull`için `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`, ve `NotNullIfNotNull` birçok öznitelik uygulayabilirsiniz. Bu, kod yazarken harika bir deneyim sağlar. Null yapılamayan bir değişken olarak `null`ayarlanmayabilir. Nullable bir değişken, başvuru yapılmadan önce null olarak işaretli değilse uyarılar alırsınız. Kitaplıklarınızın güncelleştirilmesi zaman alabilir, ancak ödeme bu duruma göre yapılır. Bir `null` değere izin verildiğinde veya yasaklanmış *olduğunda* derleyiciye sağladığınız daha fazla bilgi, API 'nizin Kullanıcı tarafından daha iyi uyarıları alır. Tanıdık bir örnekle başlayalım. Kitaplığınızın bir kaynak dizesini almak için aşağıdaki API 'ye sahip olduğunu düşünün:
 
 ```csharp
 bool TryGetMessage(string key, out string message)
 ```
 
-Önceki örnek .NET'teki tanıdık `Try*` deseni izler. Bu API için iki başvuru `key` bağımsız `message` değişkeni vardır: ve parametre. Bu API, bu bağımsız değişkenlerin nullness ile ilgili aşağıdaki kurallara sahiptir:
+Yukarıdaki örnek, .NET 'teki tanıdık `Try*` olan bir model izler. Bu API için iki başvuru bağımsız değişkeni vardır: `key` ve `message` parametresi. Bu API, bu bağımsız değişkenlerin nulldurumuyla ilgili aşağıdaki kurallara sahiptir:
 
-- Arayanlar için `key`argüman `null` olarak geçmemelidir.
-- Arayanlar, değeri bağımsız değişken `null` olarak olan `message`bir değişkeni geçirebilir.
-- `TryGetMessage` Yöntem dönerse, `true`değeri null `message` değildir. İade değeri `false,` `message` (ve null durumu) değeri ise null.
+- Çağıranlar için `null` `key`bağımsız değişken olarak geçmemelidir.
+- Çağıranlar, değeri `null` bağımsız değişkeni olan bir değişken geçirebilir `message`.
+- `TryGetMessage` Yöntemi döndürürse `true`, değeri null `message` değildir. Dönüş değeri `false,` `message` (ve null durumu) değeri null ise.
 
-Kural tamamen `key` değişken türü ile ifade `key` edilebilir: nullable olmayan bir referans türü olmalıdır. Parametre `message` daha karmaşıktır. Bu `null` argüman olarak izin verir, ama garanti, `out` başarı, bu argüman null değildir. Bu senaryolar için, beklentileri açıklamak için daha zengin bir kelime gerekir.
+Kuralı `key` değişken türü ile tamamen ifade edilebilir: `key` null yapılamayan bir başvuru türü olmalıdır. `message` Parametresi daha karmaşıktır. Bağımsız değişken `null` olarak izin verir, ancak başarıyı, bu bağımsız değişkenin null olmadığını `out` garanti eder. Bu senaryolar için beklentileri betimleyen daha zengin bir sözlük gerekir.
 
-Kitaplığınızı geçersiz başvurular için güncelleştirmek, bazı `?` değişkenlere ve tür adlarına serpintiden daha fazlasını gerektirir. Önceki örnek, API'lerinizi incelemeniz ve her giriş bağımsız değişkeni için beklentilerinizi göz önünde bulundurmanız gerektiğini gösterir. İade değeri garantilerini ve yöntemin `out` `ref` iadesi üzerine herhangi bir veya bağımsız değişkeni göz önünde bulundurun. Ardından bu kuralları derleyiciye iletin ve derleyici arayanlar bu kurallara uymadığında uyarılar sağlar.
+Boş değer atanabilir başvurular için kitaplığınızın güncelleştirilmesi, bazı değişkenlerde ve tür `?` adlarından daha fazla spreninkini gerektirir. Yukarıdaki örnek, API 'lerinizi incelemeniz ve her giriş bağımsız değişkeni için beklentilerinizi göz önünde bulundurmanız gerektiğini gösterir. Dönüş değeri için garantiyi ve yöntemin dönüşi üzerinde `out` herhangi `ref` bir veya bağımsız değişkeni göz önünde bulundurun. Sonra bu kuralları derleyiciye iletmeyin ve bu kurallar tarafından çağıranlar olmadığında Derleyici uyarılar sağlar.
 
-Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelerken kitaplığınızı veya uygulamanızı geçersiz kılınabilir hale getirecek stratejilerle başlayalım. Geçersiz başvuru türlerini etkinleştiren devam eden geliştirmeyi nasıl dengelersiniz göreceğiniz. Genel tür tanımları için zorlukları öğreneceksiniz. Tek tek API'larda ön ve sonrası koşulları açıklamak için öznitelikleri uygulamayı öğreneceksiniz.
+Bu iş zaman alır. Diğer gereksinimleri ve teslim edilebilirleri dengelarken, kitaplığınızı veya uygulamanızı null yapılabilir hale getirme stratejileriyle başlayalım. Devam eden geliştirmeyi nasıl dengeleyebilirsiniz, null yapılabilir başvuru türleri etkinleştiriliyor. Genel tür tanımları için zorluk öğrenirsiniz. Tek tek API 'lerde ön ve son koşulları betimleyen öznitelikler uygulamayı öğreneceksiniz.
 
-## <a name="choose-a-strategy-for-nullable-reference-types"></a>Nullable başvuru türleri için bir strateji seçin
+## <a name="choose-a-strategy-for-nullable-reference-types"></a>Null yapılabilir başvuru türleri için bir strateji seçin
 
-İlk seçenek, geçersiz başvuru türlerinin varsayılan olarak açık mı yoksa kapalı mı olması gerektiğidir. İki stratejiniz var:
+İlk seçenek, null yapılabilir başvuru türlerinin varsayılan olarak açık veya kapalı olması gerekip gerekmediğini belirtir. İki stratejileriniz vardır:
 
-- Tüm proje için geçersiz başvuru türlerini etkinleştirin ve hazır olmayan kodda devre dışı edin.
-- Yalnızca nullable başvuru türleri için açıklamalı olan kod için nullable başvuru türlerini etkinleştirin.
+- Tüm proje için null yapılabilir başvuru türlerini etkinleştirin ve devre dışı olan kodda devre dışı bırakın.
+- Yalnızca Nullable başvuru türleri için açıklama eklenmiş kod için null yapılabilir başvuru türlerini etkinleştirin.
 
-İlk strateji, geçersiz başvuru türleri için güncellerken kitaplığa diğer özellikler eklerken en iyi şekilde çalışır. Tüm yeni gelişme geçersiz farkındadır. Varolan kodu güncelleştirerken, bu sınıflarda nullable başvuru türlerini etkinleştirin.
+İlk strateji, null yapılabilir başvuru türleri için güncelleştirdiğinizde, kitaplığa başka özellikler eklerken en iyi şekilde kullanılır. Tüm yeni geliştirmeler null yapılabilir. Mevcut kodu güncelleştirdiğinizde bu sınıflarda null yapılabilir başvuru türlerini etkinleştirirsiniz.
 
-Bu ilk stratejiyi izleyerek aşağıdakileri yaparsınız:
+Bu ilk stratejiyi izleyerek şunları yapın:
 
-1. Öğeyi `<Nullable>enable</Nullable>` *csproj* dosyalarınıza ekleyerek tüm proje için nullable başvuru türlerini etkinleştirin.
-1. Projenizdeki `#nullable disable` her kaynak dosyaya pragma ekleyin.
-1. Her dosya üzerinde çalışırken, pragma kaldırın ve herhangi bir uyarı adresi.
+1. `<Nullable>enable</Nullable>` Öğeyi *csproj* dosyalarınıza ekleyerek projenin tamamına ait null yapılabilir başvuru türlerini etkinleştirin.
+1. `#nullable disable` Pragmayı projenizdeki her kaynak dosyasına ekleyin.
+1. Her dosya üzerinde çalışırken, pragmayı kaldırın ve tüm uyarıları çözün.
 
-Bu ilk strateji, her dosyaya pragma eklemek için daha ön çalışma vardır. Avantajı, projeye eklenen her yeni kod dosyasının boşalınabilen etkin olmasıdır. Herhangi bir yeni iş farkında geçersiz olacaktır; yalnızca varolan kodun güncelleştirilmesi gerekir.
+Bu ilk stratejide, her dosyaya pragma eklemek için daha fazla yukarı iş vardır. Avantajı, projeye eklenen her yeni kod dosyasının null yapılabilir olmasını sağlar. Herhangi bir yeni iş, null yapılabilir. yalnızca var olan kodun güncellenmesi gerekiyor.
 
-İkinci strateji, kitaplık genellikle kararlıysa daha iyi çalışır ve geliştirmenin ana odak noktası geçersiz başvuru türlerini benimsemektir. API'lere açıklama eklerken geçersiz başvuru türlerini açarsınız. Bitirdikten sonra, tüm proje için geçersiz başvuru türlerini etkinleştirin.
+İkinci strateji, kitaplığın genellikle kararlı olması ve geliştirmenin ana odağının null yapılabilir başvuru türlerini benimsemeniz durumunda daha iyi bir şekilde çalışacaktır. API 'Leri not yazarken null yapılabilir başvuru türlerini açabilirsiniz. İşiniz bittiğinde, tüm proje için null yapılabilir başvuru türlerini etkinleştirirsiniz.
 
-Bu ikinci stratejiyi takip ederek aşağıdakileri yaparsınız:
+Bu ikinci stratejiyi izleyerek şunları yapın:
 
-1. Nullable `#nullable enable` farkında yapmak istediğiniz dosyaya pragma ekleyin.
-1. Tüm uyarıları ele alın.
-1. Tüm kitaplığı geçersiz kılınana kadar bu ilk iki adıma devam edin.
-1. Öğeyi `<Nullable>enable</Nullable>` *csproj* dosyalarınıza ekleyerek tüm proje için geçersiz türleri etkinleştirin.
-1. Pragmaları `#nullable enable` kaldırın, çünkü artık ihtiyaç duyulmaz.
+1. Null yapılabilir `#nullable enable` olmasını istediğiniz dosyaya pragma ekleyin.
+1. Tüm uyarıları çözün.
+1. Tüm kitaplığı null yapılabilir olarak farkında olana kadar bu ilk iki adıma devam edin.
+1. `<Nullable>enable</Nullable>` Öğeyi *csproj* dosyalarınıza ekleyerek projenin tamamına ait boş değer atanabilir türleri etkinleştirin.
+1. Artık gerekli `#nullable enable` olmadığından pragmaları kaldırın.
 
-Bu ikinci strateji daha az iş ön vardır. Takas, yeni bir dosya oluşturduğunuzda ilk görevin pragmayı eklemek ve onu geçersiz kılınabilir hale getirmek olmasıdır. Ekibinizdeki herhangi bir geliştirici unutursa, bu yeni kod artık tüm kodu geçersiz kılmak için birikme çalışmasının biriktirme listesindedir.
+Bu ikinci stratejinin daha az iş ön ucu vardır. Zorunluluğunu getirir, yeni bir dosya oluşturduğunuz ilk görevin pragmasını eklemek ve null yapılabilir olduğunu fark edevidir. Takımınızdaki herhangi bir geliştirici unutur, bu yeni kod artık tüm kod Nullable olarak uyumlu hale getirmek için iş kapsamındedir.
 
-Seçtiğiniz bu stratejilerden hangisi, projenizde ne kadar etkin geliştirme nin gerçekleştiğine bağlıdır. Projeniz ne kadar olgun ve istikrarlı sayılsa, ikinci strateji de o kadar iyi. Ne kadar çok özellik geliştirilirse, ilk strateji o kadar iyi.
+Seçtiğiniz bu Stratejiler, projenizde ne kadar etkin geliştirme gerçekleştireceğinize bağlıdır. Projeniz ne kadar fazla olgun ve kararlı, ikinci strateji daha iyidir. Daha fazla geliştirmekte olan özellikler, ilk strateji daha iyidir.
 
-## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Geçersiz uyarılar kırılma değişikliklerine neden olmalı mı?
+## <a name="should-nullable-warnings-introduce-breaking-changes"></a>Null yapılabilir uyarılar, son değişiklikleri mi göstermelidir?
 
-Nullable başvuru türlerini etkinleştirmeden önce, değişkenler *geçersiz olarak*kabul edilir. Nullable başvuru türlerini etkinleştirdikten sonra, tüm bu değişkenler *nullable değildir.* Derleyici, bu değişkenler null olmayan değerlere başharflemedeğilse uyarılar verir.
+Null yapılabilir başvuru türlerini etkinleştirmeden önce, değişkenler *null yapılabilir zorunluluvou*olarak değerlendirilir. Null yapılabilir başvuru türlerini etkinleştirdikten sonra, bu değişkenlerin hepsi *null değer atanamaz*. Bu değişkenler null olmayan değerlere başlatılamıyorsa, derleyici uyarılar verebilir.
 
-Olası bir diğer uyarı kaynağı da, değer başharfe atılmamışsa iade değerleridir.
+Büyük olasılıkla başka bir uyarı kaynağı, değer başlatılmamış olduğunda değerler döndürür.
 
-Derleyici uyarılarıele ilk adım, bağımsız `?` değişkenlerin veya iade değerlerinin ne zaman null olabileceğini belirtmek için parametre ve iade türlerinde ek açıklamalar kullanmaktır. Başvuru değişkenleri null olmamalıdır, özgün bildirimi doğrudur. Bunu yaptığınızda, amacınız sadece uyarıları düzeltmek değildir. Daha önemli amaç, derleyicinin olası null değerleri için niyetinizi anlamasını sağlamaktır. Uyarıları incelerken, kitaplığınız için bir sonraki önemli kararınızı verirsiniz. Tasarım amacınızı daha net bir şekilde iletmek için API imzalarını değiştirmeyi düşünüyor musunuz? Daha önce incelenen `TryGetMessage` yöntem için daha iyi bir API imzası olabilir:
+Derleyici uyarılarını adresleyen ilk adım, parametre ve dönüş türleri `?` üzerinde ek açıklamaların kullanılması ve bağımsız değişkenlerin veya dönüş değerlerinin null olabileceğini göstermek için kullanılır. Başvuru değişkenleri null olmamalı, özgün bildirim doğru olur. Bunu yaparken hedefiniz yalnızca uyarıları düzeltemedi. Daha önemli hedef, derleyicinin olası null değerler için amacınızı anlaması sağlamaktır. Uyarıları incelerken, kitaplığınız için bir sonraki önemli kararına ulaşabilirsiniz. Tasarım amacınızı daha net bir şekilde iletmek için API imzalarını değiştirmeyi düşünmek istiyor musunuz? Daha önce incelenen `TryGetMessage` Yöntem için daha ıyı bir API imzası şu olabilir:
 
 ```csharp
 string? TryGetMessage(string key);
 ```
 
-İade değeri başarı veya başarısızlık gösterir ve değer bulunursa değeri taşır. Çoğu durumda, API imzalarını değiştirmek boş değerleri nasıl ilettiklerini artırabilir.
+Dönüş değeri başarılı veya başarısız olduğunu gösterir ve değer bulunursa değeri taşır. Çoğu durumda, API imzalarını değiştirmek, null değerleri nasıl ilettikleri iyileştirebilirler.
 
-Ancak, genel kitaplıklar veya büyük kullanıcı tabanlarına sahip kitaplıklar için, api imza değişiklikleri sunmamayı tercih edebilirsiniz. Bu gibi durumlar ve diğer yaygın desenler için, bir bağımsız değişken veya `null`iade değeri ne zaman olabilir daha net tanımlamak için öznitelikleri uygulayabilirsiniz. API'nizin yüzeyini değiştirmeyi düşünseniz de düşünmeseniz de, tür ek açıklamalarının bağımsız `null` değişkenler veya döndürme değerleri için değerleri açıklamak için tek başına yeterli olmadığını görürsünüz. Bu gibi durumlarda, bir API'yi daha net açıklamak için öznitelikleri uygulayabilirsiniz.
+Ancak, genel kitaplıklar veya büyük Kullanıcı temellerine sahip kitaplıklar için herhangi bir API imza değişikliğine giriş yapmayı tercih edebilirsiniz. Bu durumlar ve diğer yaygın desenler için, bir bağımsız değişken veya dönüş değeri olabileceği zaman daha net bir şekilde tanımlanacak öznitelikler uygulayabilirsiniz `null`. API 'nizin yüzeyini değiştirmeyi göz önünde bulundurmayın, büyük olasılıkla tür ek açıklamalarını bağımsız değişkenlerin veya dönüş değerlerinin değerlerini tanımlamak `null` için yeterli olmadığını fark edeceksiniz. Bu örneklerde, bir API 'yi daha net bir şekilde anlatmak için öznitelikler uygulayabilirsiniz.
 
-## <a name="attributes-extend-type-annotations"></a>Öznitelikler tür ek açıklamalarını genişletir
+## <a name="attributes-extend-type-annotations"></a>Öznitelikler tür ek açıklamalarını Genişlet
 
-Değişkenlerin null durumu hakkında ek bilgi ifade etmek için çeşitli öznitelikler eklenmiştir. C# 8'den önce yazdığınız tüm kodlar nullable referans türlerini tanıttı *null habersiz*oldu. Bu, herhangi bir başvuru türü değişkeninin null olabileceği, ancak null denetimlerin gerekli olmadığı anlamına gelir. Bir kez kodunuzu *farkında geçersiz*olduğunda, bu kurallar değişir. Referans türleri hiçbir `null` zaman değer olmamalıdır ve geçersiz başvuru `null` türleri referans gösterilmeden önce karşı denetlenmelidir.
+Değişkenlerin null durumu hakkında ek bilgileri ifade etmek için çeşitli öznitelikler eklenmiştir. C# 8 ' den önce yazdığınız tüm kod null yapılabilir başvuru türleri olarak *null zorunluluvou*idi. Yani herhangi bir başvuru türü değişkeni null olabilir, ancak null denetimleri gerekli değildir. Kodunuz *Nullable olarak farkında*olduktan sonra bu kurallar değişir. Başvuru türleri asla `null` değer olmamalı ve null yapılabilir başvuru türleri başvurulmadan `null` önce denetlenmelidir.
 
-API senaryoda gördüğünüz gibi, API'lerinizin `TryGetValue` kuralları büyük olasılıkla daha karmaşıktır. API'lerinizin çoğu, değişkenlerin ne zaman olabilir veya `null`olamaz için daha karmaşık kurallara sahiptir. Bu gibi durumlarda, bu kuralları ifade etmek için öznitelikleri kullanırsınız. API'nizin anlambilimini açıklayan öznitelikler, [geçersiz çözümlemesi etkileyen Öznitelikler](./language-reference/attributes/nullable-analysis.md)makalesinde bulunur.
+`TryGetValue` API 'si senaryosuyla gördüğünüz gibi API 'lerinizin kuralları büyük olasılıkla daha karmaşıktır. API 'lerinizin birçoğu, değişkenlerin ne zaman veya ne zaman oluşturulabileceğine `null`ilişkin daha karmaşık kurallara sahiptir. Bu durumlarda, bu kuralları ifade etmek için öznitelikleri kullanacaksınız. API 'nizin semantiğini tanımlayan öznitelikler, [null yapılabilir Analizi etkileyen öznitelikler](./language-reference/attributes/nullable-analysis.md)hakkında makalesinde bulunur.
 
-## <a name="generic-definitions-and-nullability"></a>Genel tanımlar ve nullability
+## <a name="generic-definitions-and-nullability"></a>Genel tanımlar ve null değer alabilirlik
 
-Genel türlerin ve genel yöntemlerin null durumunu doğru bir şekilde iletmek özel bakım gerektirir. Bu, nullable değer türü ve nullable referans türü temelde farklı olduğu gerçeğinden kaynaklanmaktadır. An, `int?` derleyici tarafından eklenen bir `string?` öznitelik ile ise eşanlamlıdır. `string` `Nullable<int>` Sonuç olarak derleyici bir `T?` veya bir `T` `class` `struct`olup olmadığını bilmeden doğru kod oluşturamaz.
+Genel türlerin ve genel yöntemlerin null durumuna doğru bir şekilde iletişim kurmak için özel bakım yapılması gerekir. Bu, null olabilen bir değer türünün ve null olabilen bir başvuru türünün temelde farklı olduğu gerçekten farklıdır. , `int?` İçin `Nullable<int>`bir eş anlamlı olur, `string?` ancak `string` derleyici tarafından eklenen bir özniteliktir. Sonuç, derleyicisinin `T?` bir veya bir `T` `class` `struct`olduğunu bilmeksizin doğru kodu oluşturabileceği bir sonucudur.
 
-Bu, kapalı bir genel tür için tür bağımsız değişkeni olarak geçersiz bir türü (değer türü veya başvuru türü) kullanamayacağınız anlamına gelmez. Her `List<string?>` `List<int?>` ikisi de ve `List<T>`geçerli anlık vardır.
+Bu, kapalı bir genel türün tür bağımsız değişkeni olarak null yapılabilir bir tür (değer türü veya başvuru türü) kullanmayacağınız anlamına gelmez. Her `List<string?>` ikisi `List<int?>` de geçerli örneklerdir `List<T>`.
 
-Bunun anlamı, kısıtlamalar olmadan genel `T?` bir sınıf veya yöntem bildiriminde kullanamadığınızdır. Örneğin, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> döndürmek `T?`için değiştirilmez. Bu sınırlamayı, kısıtlama yı `struct` `class` veya kısıtlamayı ekleyerek aşabilirsiniz. Bu kısıtlamalardan herhangi biriyle, derleyici hem de `T` . `T?`
+Bunun anlamı, kısıtlama olmadan genel bir sınıfta veya `T?` yöntem bildiriminde kullanmayacağınız anlamına gelir. Örneğin, <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> döndürülecek `T?`şekilde değiştirilmez. `struct` Ya `class` da kısıtlamasını ekleyerek bu sınırlamayı aşabilirsiniz. Bu kısıtlamalardan biri ile derleyici, hem hem de `T` için nasıl kod oluşturulacağını bilir. `T?`
 
-Genel bir tür bağımsız değişkeni için kullanılan türlerin nullable olmayan türleri olarak kısıtlamak isteyebilirsiniz. Bunu, bu tür `notnull` bağımsız değişkenine kısıtlama ekleyerek yapabilirsiniz. Bu kısıtlama uygulandığında, tür bağımsız değişkeni nullable türü olmamalıdır.
+Genel tür bağımsız değişkeni için kullanılan türleri null yapılamayan türler olacak şekilde kısıtlamak isteyebilirsiniz. Bunu, bu tür bağımsız değişkenine `notnull` kısıtlama ekleyerek yapabilirsiniz. Bu kısıtlama uygulandığında tür bağımsız değişkeni null yapılabilir bir tür olmamalıdır.
+
+## <a name="late-initialized-properties-data-transfer-objects-and-nullability"></a>Gecikmeli başlatılan özellikler, Veri Aktarımı nesneler ve null değer düzeyi
+
+Geç başlatılan özelliklerin null olabilmesini belirten, oluşturulduktan sonra ayarlanan anlamı, sınıfınızın özgün tasarım hedefini doğru bir şekilde ifade etmeye devam ettiğinden emin olmak için özel bir dikkat gerektirebilir.
+
+Veri Aktarımı Objects (DTOs) gibi geç başlatılan özellikler içeren türler genellikle bir veritabanı ORM (nesne Ilişkisel Eşleyici), seri hale getirici veya başka bir kaynaktan özellikleri otomatik olarak dolduran başka bir bileşen gibi bir dış kitaplık tarafından örneklenmiştir.
+
+Bir öğrenci 'yi temsil eden null yapılabilir başvuru türlerini etkinleştirmeden önce aşağıdaki DTO sınıfını göz önünde bulundurun:
+
+```csharp
+class Student
+{
+    [Required]
+    public string FirstName { get; set; }
+
+    [Required]
+    public string LastName { get; set; }
+
+    public string VehicleRegistration { get; set; }
+}
+```
+
+Tasarım amacı (Bu `Required` durumda özniteliği tarafından belirtilir), bu sistemde `FirstName` ve `LastName` Özellikler **zorunludur**ve bu nedenle null değildir.
+
+`VehicleRegistration` Özellik **zorunlu değil**, null olabilir.
+
+Null yapılabilir başvuru türlerini etkinleştirdiğinizde, özelliklerden hangisinin boş değer atanabilir olabileceğini, özgün amacınızla tutarlı olduğunu belirtmek istersiniz:
+
+```csharp
+class Student
+{
+    [Required]
+    public string FirstName { get; set; }
+
+    [Required]
+    public string LastName { get; set; }
+
+    public string? VehicleRegistration { get; set; }
+}
+```
+
+Bu DTO için, null olabilecek tek özellik ``VehicleRegistration``.
+
+Ancak, derleyici hem hem `CS8618` de `FirstName` için uyarıları başlatır `LastName`ve null yapılamayan özelliklerin başlatılmamış olduğunu gösterir.
+
+Derleyici uyarılarını özgün amacınızı sürdüren bir şekilde çözümlemek için kullanabileceğiniz üç seçenek mevcuttur. Bu seçeneklerden herhangi biri geçerlidir; kodlama stilinize ve tasarım gereksinimlerinize en uygun olanı seçmeniz gerekir.
+
+### <a name="initialize-in-the-constructor"></a>Oluşturucuda Başlat
+
+Başlatılmamış uyarıları çözümlemek için ideal yol, oluşturucudaki özellikleri başlatmaktır:
+
+```csharp
+class Student
+{
+    public Student(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
+
+    [Required]
+    public string FirstName { get; set; }
+
+    [Required]
+    public string LastName { get; set; }
+
+    public string? VehicleRegistration { get; set; }
+}
+```
+
+Bu yaklaşım yalnızca sınıfı örneğini oluşturmak için kullandığınız kitaplık, kurucudaki parametreleri geçirmeyi destekliyorsa işe yarar.
+
+Ayrıca, bir kitaplık kurucudaki *bazı* özelliklerin geçirilmesini destekleyebilir, ancak tümünü desteklemez.
+Örneğin, EF Core normal sütun özellikleri için [Oluşturucu bağlamasını](/ef/core/modeling/constructors) destekler, ancak gezinti özellikleri içermez.
+
+Oluşturucuyu bağlamayı destekleme kapsamını anlamak için, sınıfınızı örnekleyen kitaplıktaki belgeleri denetleyin.
+
+### <a name="property-with-nullable-backing-field"></a>Null yapılabilir destek alanı olan özellik
+
+Oluşturucu bağlama sizin için çalışmazsa, bu sorunu gidermek için bir yol null yapılabilir bir yedekleme alanı olan null yapılamayan bir özelliğe sahip olur:
+
+```csharp
+private string? _firstName;
+
+[Required]
+public string FirstName
+{
+    set => _firstName = value;
+    get => _firstName
+           ?? throw new InvalidOperationException("Uninitialized " + nameof(FirstName))
+}
+```
+
+Bu senaryoda, `FirstName` özelliği başlatılmadan önce ERIŞILIYORSA, API sözleşmesi yanlış kullanıldığı için kod bir `InvalidOperationException`oluşturur.
+
+Bazı kitaplıkların, yedekleme alanları kullanılırken özel hususlar olabileceğini göz önünde bulundurmanız gerekir. Örneğin, EF Core [alanları](/ef/core/modeling/backing-field) doğru şekilde kullanmak için yapılandırılması gerekebilir.
+
+### <a name="initialize-the-property-to-null"></a>Özelliği null olarak Başlat
+
+Null olabilir bir yedekleme alanı kullanmanın bir alternatifi olarak veya sınıfınızı örnekleyen bir kitaplık Bu yaklaşımla uyumlu değilse, özelliği, null-forverme işlecinin ( `null` `!`) yardımıyla doğrudan ' a başlatabilirsiniz.
+
+```csharp
+[Required]
+public string FirstName { get; set; } = null!;
+
+[Required]
+public string LastName { get; set; } = null!;
+
+public string? VehicleRegistration { get; set; }
+```
+
+Çalışma zamanında gerçek bir null değeri, bir programlama hatasının sonucu hariç, özelliği düzgün bir şekilde başlatılmadan önce özelliğe erişerek hiçbir zaman gözlemleyeceksiniz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Var olan bir kod temelinin Nullable başvurulara geçirilmesi](tutorials/upgrade-to-nullable-references.md)
+- [EF Core null yapılabilir başvuru türleriyle çalışma](/ef/core/miscellaneous/nullable-reference-types)
