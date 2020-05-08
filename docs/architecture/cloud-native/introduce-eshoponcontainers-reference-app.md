@@ -2,12 +2,12 @@
 title: EShopOnContainers başvuru uygulamasına giriş
 description: ASP.NET Core ve Azure için eShopOnContainers bulutu yerel mikro hizmetleri başvuru uygulamasına giriş.
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087252"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895535"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers başvuru uygulamasına giriş
 
@@ -30,9 +30,9 @@ Uygulamanın Özellikler ve gereksinimlerinin bir gözden geçirimiyle başlayal
 - Öğeleri markala filtrele
 - Alışveriş sepetine öğe ekleme
 - Sepetten öğe düzenleme veya kaldırma
-- İptal
+- Kullanıma alma
 - Hesap kaydetme
-- Oturum aç
+- Oturum açma
 - Oturumu kapat
 - Siparişleri gözden geçirme
 
@@ -70,7 +70,7 @@ Kod, farklı mikro hizmetleri desteklemek üzere düzenlenmiştir ve her mikro h
 
 ## <a name="understanding-microservices"></a>Mikro hizmetleri anlama
 
-Bu kitap, Azure teknolojisi kullanılarak oluşturulan bulutta yerel uygulamalara odaklanır. Mikro hizmetler en iyi uygulamaları ve mikro hizmet tabanlı uygulamaların nasıl mimarinin nasıl kullanılacağı hakkında daha fazla bilgi edinmek için yardımcı kitabı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimariyi](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)okuyun. Kitap çevrimiçi, PDF veya eReader biçimlerinde kullanılabilir.
+Bu kitap, Azure teknolojisi kullanılarak oluşturulan bulutta yerel uygulamalara odaklanır. Mikro hizmetler en iyi uygulamaları ve mikro hizmet tabanlı uygulamaların nasıl mimarinin nasıl kullanılacağı hakkında daha fazla bilgi edinmek için yardımcı kitabı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimariyi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)okuyun.
 
 >[!div class="step-by-step"]
 >[Önceki](candidate-apps.md)

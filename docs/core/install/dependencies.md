@@ -3,14 +3,14 @@ title: .NET Core SDK ve çalışma zamanı bağımlılıkları-.NET Core
 description: Windows, Linux ve macOS 'ta .NET Core SDK ve çalışma zamanı yüklemek için işletim sistemi ve CPU mimarisi ön koşullarını ayrıntılı olarak izleyin.
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140987"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895483"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core bağımlılıkları ve gereksinimleri
 
@@ -290,6 +290,24 @@ Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux u
 
 > [!WARNING]
 > CentOS ve Fedora sürümlerinin çoğu, libgdiplus 'in önceki bir sürümünü içerir. En son bir libgdiplus sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
+
+### <a name="alpine"></a>Alpine
+
+Alp dağıtımları aşağıdaki kitaplıkların yüklenmesini gerektirir:
+
+- ICU-libs (Genelleştirme devre dışıysa bu gerekli değildir)
+- krb5-libs
+- libkıvrık
+- libintl
+- libssl 1.1 (alp 3,9 veya üzeri için) veya libssl 1.0 (eski sürümler için)
+- libstdc + +
+- lttng-ust
+- numactl (isteğe bağlı, yalnızca NUMA 'nın etkinleştirildiği cihazlarda yararlıdır)
+- zlib
+
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
+
+- libgdiplus (yalnızca Edge/test deposunda kullanılabilir)
 
 ::: zone-end
 

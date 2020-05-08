@@ -3,12 +3,12 @@ title: Bulutta yerel iletişim desenleri
 description: Bulutta yerel uygulamalarda önemli hizmet iletişim sorunları hakkında bilgi edinin
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214006"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895626"
 ---
 # <a name="cloud-native-communication-patterns"></a>Bulutta yerel iletişim desenleri
 
@@ -44,7 +44,7 @@ Birçok avantaj sağlarken, mikro hizmetler ücretsiz öğle yemeği değildir. 
 
 - İleti şifreleme/şifre çözme önemli hale gelir.
 
-[.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)Microsoft 'tan ücretsiz olarak sunulan mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sunmaktadır. Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.
+[.Net mikro hizmetleri: Kapsayıcılı .NET uygulamaları Için](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)Microsoft 'tan ücretsiz olarak sunulan mimari, mikro hizmet uygulamalarına yönelik iletişim desenlerinin ayrıntılı bir kapsamını sunmaktadır. Bu bölümde, Azure bulutu 'nda bulunan uygulama seçenekleriyle birlikte bu desenlere yönelik yüksek düzeyde bir genel bakış sunuyoruz.
 
 Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız. Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız. Yukarı ve gRPC iletişim teknolojisini keşfereceğiz. Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz. Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.
 

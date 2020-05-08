@@ -3,18 +3,18 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728351"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895465"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
 `dotnet nuget push`-Sunucuya bir paket gönderir ve onu yayımlar.
 
@@ -152,5 +152,4 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  Bu komut, paketleri hiyerarşik bir klasör yapısında depolamaz, bu da performansı iyileştirmek için önerilir. Daha fazla bilgi için bkz. [Yerel akışlar](//nuget/hosting-packages/local-feeds).
-  
+  Bu komut, paketleri hiyerarşik bir klasör yapısında depolamaz, bu da performansı iyileştirmek için önerilir. Daha fazla bilgi için bkz. [Yerel akışlar](/nuget/hosting-packages/local-feeds).  

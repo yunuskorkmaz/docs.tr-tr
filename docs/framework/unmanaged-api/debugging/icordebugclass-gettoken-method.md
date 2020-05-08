@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 6964c931307a40f384ad8a8e355cab0aad575ec6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3433f5f69927afb501c2596571f138e3a69fabb6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125768"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894120"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken Metodu
-Bu sınıfın tanımına başvuran `TypeDef` meta veri belirtecini alır.  
+Bu sınıfın `TypeDef` tanımına başvuran meta veri belirtecini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,17 +35,17 @@ HRESULT GetToken (
   
 ## <a name="parameters"></a>Parametreler  
  `pTypeDef`  
- dışı Bu sınıfın tanımına başvuran `mdTypeDef` belirtece yönelik bir işaretçi.  
+ dışı Bu sınıfın tanımına başvuran `mdTypeDef` bir belirteç işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [Meta Veri Arabirimleri](../metadata/metadata-interfaces.md)

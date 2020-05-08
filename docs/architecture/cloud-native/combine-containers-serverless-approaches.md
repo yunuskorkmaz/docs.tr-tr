@@ -2,12 +2,12 @@
 title: Bulutta yerel hizmetler için kapsayıcıları ve sunucusuz yaklaşımları birleştirme
 description: Kapsayıcıları ve Kubernetes 'i sunucusuz yaklaşımlar ile birleştirme
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895646"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>Kapsayıcıları ve sunucusuz yaklaşımları birleştirme
 
@@ -35,7 +35,11 @@ Proje oluşturulduğunda, bir Dockerfile ve ile `dotnet`yapılandırılan çalı
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>KEDA ile sunucusuz ve Kubernetes 'i birleştirme
 
-Azure işlevleri, hedeflenen olayların hızına göre talebi karşılamak için otomatik olarak ölçeklendirilir. Her zaman, işlevlerinizi barındırmak ve Kubernetes tabanlı olay temelli otomatik ölçeklendirmeyi veya KEDA kullanmak için AKS 'den yararlanabilirsiniz. Herhangi bir olay gerçekleşirken KEDA, sıfır örneğe ölçeklendirebilir. [KEDA Ile Azure işlevlerinin ölçeklendirilmesi hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda).
+Bu bölümde, Azure Işlevleri 'nin platformunun talebi karşılamak için otomatik olarak ölçeklendirilen olduğunu gördünüz. Ancak, Kapsayıcılı işlevleri AKS 'e dağıttığınızda, yerleşik ölçeklendirme işlevini kaybedersiniz. Kurtarma için [Kubernetes tabanlı olay temelli (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda). Kapsayıcılı işlevleri dahil etmek için `event-driven Kubernetes workloads,` hassas otomatik ölçeklendirme imkanı sunar.
+
+KEDA, Docker kapsayıcısında Işlevlerin çalışma zamanına olay odaklı ölçeklendirme işlevselliği sağlar. KEDA `n instances`, yük temelinde (herhangi bir olay gerçekleşirken) sıfır örneklerinden ölçeklendirebilir. Bu, Kubernetes otomatik ölçeklendirme (yatay Pod otomatik Scaler) için özel ölçümleri ortaya çıkaran otomatik ölçeklendirmeyi sağlar. Bir Kubernetes kümesinde, Işlev kapsayıcılarını KEDA kullanarak, sunucusuz işlev yeteneklerini çoğaltabilirsiniz.
+
+KEDA projesinin artık Cloud Native Computing Foundation (CNCF) tarafından yönetildiğini belirten bir değer.
 
 >[!div class="step-by-step"]
 >[Önceki](leverage-serverless-functions.md)

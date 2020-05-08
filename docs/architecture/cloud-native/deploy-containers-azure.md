@@ -2,12 +2,12 @@
 title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199566"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895597"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
 
@@ -108,8 +108,8 @@ Geliştiriciler, Kapsayıcılı uygulamanın tamamını içeren bir AKS kümesin
 
 Azure Dev Spaces değerini anlamak için, bu teklifi Gato Monroy 'tan paylaşalım, Microsoft Azure kapsayıcıların zaman adayı:
 
-> Her biri kendi yapılandırma ve destek hizmetleri içeren onlarca bileşenden oluşan karmaşık mikro hizmetler uygulamasındaki bir hatayı gidermeye çalışan yeni bir çalışan olduğunuzu düşünelim. Başlamak için, yerel geliştirme ortamınızı, IDE 'nizi ayarlama, araç zinciri oluşturma, Kapsayıcılı hizmet bağımlılıkları, yerel bir Kubernetes ortamı, hizmet yedekleme için molar ve daha fazlasını içeren üretime benzetebilmek üzere yapılandırmanız gerekir. Geliştirme ortamınızı ayarlamaya yönelik tüm zamanlı olarak, ilk hatanın bu kadar gün sürebiliyor.
-> Ya da dev Spaces ve AKS kullanabilirsiniz.
+> "Her biri kendi yapılandırma ve Destek Hizmetleri olan onlarca bileşenden oluşan karmaşık mikro hizmetler uygulamasındaki bir hatayı gidermeye çalışan yeni bir çalışan olduğunuzu düşünün. Başlamak için, yerel geliştirme ortamınızı, IDE 'nizi ayarlama, araç zinciri oluşturma, Kapsayıcılı hizmet bağımlılıkları, yerel bir Kubernetes ortamı, hizmet yedekleme için molar ve daha fazlasını içeren üretime benzetebilmek üzere yapılandırmanız gerekir. Geliştirme ortamınızı ayarlamaya yönelik tüm zamanlı olarak, ilk hatanın bu kadar gün sürebiliyor.
+> Ya da dev Spaces ve AKS kullanabilirsiniz. "
 
 Azure Dev Spaces ile çalışma işlemi aşağıdaki adımları içerir:
 

@@ -1,118 +1,118 @@
 ---
 title: gRPC
-description: gRPC, bulut tasire uygulamalarındaki rolü ve HTTP RESTful iletişiminden nasıl farklı olduğu hakkında bilgi edinin.
+description: GRPC, bulutta yerel uygulamalardaki rolü ve HTTP ile gerçekleşen iletişimin nasıl farklı olduğunu öğrenin.
 author: robvet
 ms.date: 03/31/2020
-ms.openlocfilehash: 28a07ad5ec105d3fc5b65e4cf0ac0cd85eb16627
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80524175"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895561"
 ---
 # <a name="grpc"></a>gRPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Şimdiye kadar bu kitapta, biz [REST tabanlı](https://docs.microsoft.com/azure/architecture/best-practices/api-design) iletişim üzerinde duruldu. REST'in, varlık kaynaklarına karşı CRUD tabanlı işlemleri tanımlayan esnek bir mimari stil olduğunu gördük. İstemciler, bir istek/yanıt iletişim modeliyle HTTP genelindeki kaynaklarla etkileşimkurar. REST yaygın olarak uygulansa da, daha yeni bir iletişim teknolojisi olan gRPC, bulut-yerli topluluk genelinde muazzam bir ivme kazanmıştır.
+Şimdiye kadar bu kitapta, [REST tabanlı](https://docs.microsoft.com/azure/architecture/best-practices/api-design) iletişime odaklandık. REST 'in varlık kaynaklarına karşı CRUD tabanlı işlemleri tanımlayan esnek bir mimari stili olduğunu gördük. İstemciler, istek/yanıt iletişim modeliyle HTTP genelindeki kaynaklarla etkileşime geçin. DIĞER bir deyişle, daha yeni bir iletişim teknolojisi olan gRPC, buluta özgü topluluk genelinde inanılmaz itici güç elde etti.
 
-## <a name="what-is-grpc"></a>gRPC nedir?
+## <a name="what-is-grpc"></a>GRPC nedir?
 
-gRPC, asırlık [uzaktan yordam çağrısı (RPC)](https://en.wikipedia.org/wiki/Remote_procedure_call) protokolünü geliştiren modern, yüksek performanslı bir çerçevedir. Uygulama düzeyinde, gRPC istemciler ve arka uç hizmetleri arasındaki iletileri kolaylaştırır. Google kaynaklı gRPC, açık kaynak kodludur ve bulut ahalisi teklifleri [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) ekosisteminin bir parçasıdır. CNCF gRPC bir [kuluçka projesi](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)olarak kabul eder. Kuluçka, son kullanıcıların üretim uygulamalarında teknolojiyi kullandığı anlamına gelir ve projede sağlıklı sayıda katılımcı vardır.
+gRPC, yaş-eski [uzak yordam çağrısı (RPC) protokolünü gelişten](https://en.wikipedia.org/wiki/Remote_procedure_call) modern ve yüksek performanslı bir çerçevedir. Uygulama düzeyinde, gRPC istemciler ve arka uç hizmetleri arasında ileti gönderimi kolaylaştırır. Google 'dan kaynaklanan gRPC, bulutta yerel [Bilgi Işlem altyapısı (CNCF)](https://www.cncf.io/) ekosisteminin açık kaynak ve bir parçasıdır. CNCF gRPC 'yi bir [ınubating projesi](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc)olarak değerlendirir. Inubating, son kullanıcıların, üretim uygulamalarında teknolojiyi kullandığı ve projenin sağlıklı sayıda katkıda bulunanın olduğu anlamına gelir.
 
-Tipik bir gRPC istemci uygulaması, bir iş işlemini uygulayan yerel, süreç içi bir işlevi ortaya çıkarır. Kapakların altında, bu yerel işlev uzak bir makinede başka bir işlevi çağırır. Yerel bir çağrı gibi görünen şey, aslında uzak bir hizmete yapılan saydam bir işlem dışı çağrı haline gelir. RPC tesisat, bilgisayarlar arasındaki noktadan noktaya ağ iletişimini, serileştirmeyi ve yürütmeyi özetler.
+Tipik bir gRPC istemci uygulaması, bir iş işlemi uygulayan yerel, işlem içi bir işlev sergilecektir. Bu yerel işlev, ' ın altında, uzak bir makinede başka bir işlevi çağırır. Yerel bir çağrı olarak görünen, uzak bir hizmete bir saydam işlem dışı çağrısı olur. RPC sıhhi tesisat, bilgisayarlar arasında noktadan noktaya ağ iletişimini, Serileştirmeyi ve yürütmeyi soyutlar.
 
-Bulut ait uygulamalarda, geliştiriciler genellikle programlama dilleri, çerçeveler ve teknolojiler arasında çalışır. Bu *birlikte çalışabilirlik,* ileti sözleşmelerini ve platform ötesi iletişim için gereken tesisatı karmaşıklaştırır.  gRPC bu endişeleri özetleyen bir "tek düze katman" sağlar. Geliştiriciler kendi kendi platformunda kod iş işlevselliği üzerinde duruldu, gRPC iletişim sıhhi tesisat işler.
+Bulutta yerel uygulamalarda, geliştiriciler genellikle programlama dilleri, çerçeveler ve teknolojilerde çalışır. Bu *birlikte çalışabilirlik* , platformlar arası iletişim için gereken ileti sözleşmelerini ve sıhhi tesisat 'yi karmaşıklaştırır.  gRPC, bu kaygıları soyutlayan bir "Tekdüzen yatay katman" sağlar. Yerel platformlarda bulunan geliştiriciler iş işlevselliğine odaklanırken, gRPC iletişim sıhhi tesisat ile ilgilenir.
 
-gRPC, Java, JavaScript, C#, Go, Swift ve NodeJS gibi en popüler geliştirme yığınları arasında kapsamlı destek sunar.
+gRPC, Java, JavaScript, C#, Go, Swift ve NodeJS dahil birçok popüler geliştirme yığını genelinde kapsamlı destek sunar.
 
-## <a name="grpc-benefits"></a>gRPC Avantajları
+## <a name="grpc-benefits"></a>gRPC avantajları
 
-gRPC, taşıma protokolü için HTTP/2 kullanır. HTTP 1.1 ile uyumlu olsa da, HTTP/2 birçok gelişmiş özellik sunar:
+gRPC, Aktarım Protokolü için HTTP/2 kullanır. HTTP 1,1 ile uyumlu olmakla birlikte, HTTP/2 özellikleri birçok gelişmiş özelliğe sahiptir:
 
-- Veri aktarım için ikili bir protokol - http 1.1'in aksine, verileri açık metin olarak gönderir.
-- Aynı bağlantı üzerinden birden çok paralel istek göndermek için çok yönlü destek - HTTP 1.1 aynı anda bir istek/yanıt iletisi ile işlemeyi sınırlar.
-- Aynı anda hem istemci isteklerini hem de sunucu yanıtlarını göndermek için çift yönlü tam çift yönlü iletişim.
-- Büyük veri kümelerini eş zamanlı olarak akışa göre istekleri ve yanıtları etkinleştiren yerleşik akış.
+- Verileri düz metin olarak gönderen HTTP 1,1 'nin aksine veri aktarımı için bir ikili protokol.
+- Aynı bağlantı üzerinden birden çok paralel istek göndermek için çoğullama desteği-HTTP 1,1, işleme bir kerede tek bir istek/yanıt iletisi ile sınırlar.
+- Hem istemci isteklerini hem de sunucu yanıtlarını aynı anda göndermek için çift yönlü tam çift yönlü iletişim.
+- Zaman uyumsuz akış büyük veri kümelerine yönelik istekleri ve yanıtları etkinleştiren yerleşik akış.
 
-gRPC hafif ve yüksek performanslı. %60-80 daha küçük iletilerle JSON serileştirmesinden 8 kata kadar daha hızlı olabilir. Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) deyimiyle, gRPC performansı son derece optimize edilmiş [NetTCP bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini aşıyor. Microsoft yığınını destekleyen NetTCP'nin aksine, gRPC çapraz platformdur.
+gRPC hafif ve yüksek performanslı. % 60-80 daha küçük iletilerle JSON serileştirmesine kadar daha hızlı olabilir. Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) ayrıştırmasına göre, GRPC performansı, yüksek oranda Iyileştirilmiş [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini aşmaktadır. Microsoft Stack ' i tercih eden NetTCP 'nin aksine gRPC platformlar arası bir platformdur.
 
 ## <a name="protocol-buffers"></a>Protokol Arabellekleri
 
-gRPC [Protokol Tamponlar](https://developers.google.com/protocol-buffers/docs/overview)adlı bir açık kaynak teknolojisi kucaklar. Hizmetlerin birbirine gönderdiği yapılandırılmış iletileri seri hale getirmek için son derece verimli ve platformdan bağımsız bir serileştirme biçimi sağlarlar. Geliştiriciler, platformlar arası Arabirim Tanımı Dili (IDL) kullanarak her bir mikro hizmet için bir hizmet sözleşmesi tanımlar. Metin tabanlı `.proto` bir dosya olarak uygulanan sözleşmede, her hizmetin yöntemleri, girişleri ve çıktıları açıklanır. Aynı sözleşme dosyası, farklı geliştirme platformlarında oluşturulmuş gRPC istemcileri ve hizmetleri için kullanılabilir.
+gRPC, [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview)adlı açık kaynaklı bir teknolojinin ayraçları. Hizmetlerin birbirlerine gönderdikleri yapılandırılmış iletileri serileştirmek için yüksek düzeyde etkili ve platformdan bağımsız bir serileştirme biçimi sağlar. Platformlar arası arabirim tanım dili (IDL) kullanarak, geliştiriciler her mikro hizmet için bir hizmet sözleşmesi tanımlar. Metin tabanlı `.proto` dosya olarak uygulanan sözleşme, her hizmet için yöntemleri, girişleri ve çıkışları açıklar. Aynı sözleşme dosyası, farklı geliştirme platformları üzerine inşa olan gRPC istemcileri ve hizmetleri için de kullanılabilir.
 
-Proto dosyasını kullanarak, Protobuf `protoc`derleyicisi, hedef platformunuz için hem istemci hem de hizmet kodu oluşturur. Kod aşağıdaki bileşenleri içerir:
+Prototiparabelleği derleyicisi `protoc`olan proto dosyasını kullanarak, hedef platformunuz için hem istemci hem de hizmet kodu üretir. Kod aşağıdaki bileşenleri içerir:
 
-- İstemci ve hizmet tarafından paylaşılan ve iletinin hizmet işlemlerini ve veri öğelerini temsil eden güçlü bir şekilde yazılan nesneler.
-- Uzak gRPC hizmetinin devralabileceği ve genişletebileceği gerekli ağ tesisatı ile güçlü bir şekilde yazılan taban sınıfı.
-- Uzaktan gRPC hizmetini çağırmak için gerekli sıhhi tesisatı içeren bir istemci saplaması.
+- İstemci ve hizmet tarafından paylaşılan, bir ileti için hizmet işlemlerini ve veri öğelerini temsil eden türü kesin belirlenmiş nesneler.
+- Uzak gRPC hizmetinin devralmasını ve uzatabtiği, gerekli ağ tesisat gerektiren, kesin olarak belirtilmiş bir temel sınıf.
+- Uzak gRPC hizmetini çağırmak için gereken sıhhi tesisat 'yi içeren bir istemci saplaması.
 
-Çalışma zamanında, her ileti standart bir Protobuf gösterimi olarak serihale edilir ve istemci ile uzak hizmet arasında değiştirilir. JSON veya XML'in aksine, Protobuf iletileri derlenmiş ikili baytlar olarak seri hale getirilmiştir.
+Çalışma zamanında, her ileti standart bir Prototipme temsili olarak serileştirilir ve istemci ile uzak hizmet arasında değiş tokuş yapılır. JSON veya XML 'den farklı olarak, prototipli mesajlar derlenmiş ikili bayt olarak serileştirilir.
 
-Kitap, [WCF Geliştiriciler için gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/), Microsoft Architecture sitesinden kullanılabilir, gRPC ve Protokol Arabellekleri derinlemesine kapsama sağlar.
+Microsoft mimari sitesinden sunulan [WCF geliştiricileri Için GRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)Rehberi, GRPC ve protokol arabelleklerinin ayrıntılı kapsamını sağlar.
 
-## <a name="grpc-support-in-net"></a>.NET'te gRPC desteği
+## <a name="grpc-support-in-net"></a>.NET ' te gRPC desteği
 
-gRPC .NET Core 3.0 SDK veya daha sonra entegre edilmiştir. Aşağıdaki araçlar bunu destekler:
+gRPC, .NET Core 3,0 SDK ve sonraki sürümleriyle tümleşiktir. Aşağıdaki araçlar bunu destekler:
 
-- Visual Studio 2019, sürüm 16.3 veya daha sonra, web geliştirme iş yükü yüklü.
+- Web geliştirme iş yükü yüklüyken Visual Studio 2019, sürüm 16,3 veya üzeri.
 - Visual Studio Code
-- nokta CLI
+- DotNet CLı
 
-SDK uç nokta yönlendirme, yerleşik IoC ve günlük için takım içerir. Açık kaynak kestrel web sunucusu HTTP/2 bağlantılarını destekler. Şekil 4-20, bir gRPC hizmeti için iskelet projesini iskeleleyen visual studio 2019 şablonlarını gösterir. .NET Core'un Windows, Linux ve macOS'u nasıl tam olarak desteklediğine dikkat edin.
+SDK, Endpoint Routing, yerleşik IOC ve günlüğe kaydetme için araç içerir. Açık kaynaklı Kestrel Web sunucusu HTTP/2 bağlantılarını destekler. Şekil 4-20, bir gRPC hizmeti için iskelet bir projeyi dolandırıcılara bağlayan bir Visual Studio 2019 şablonunu gösterir. .NET Core 'un Windows, Linux ve macOS 'ı tam olarak nasıl desteklediğini aklınızda yapın.
 
-![Visual Studio 2019'da gRPC Desteği](./media/visual-studio-2019-grpc-template.png)
+![Visual Studio 2019 ' de gRPC desteği](./media/visual-studio-2019-grpc-template.png)
 
-**Şekil 4-20**. Visual Studio 2019'da gRPC desteği
+**Şekil 4-20**. Visual Studio 2019 ' de gRPC desteği
   
-Şekil 4-21, Visual Studio 2019'da yer alan yerleşik iskeleden üretilen iskelet gRPC hizmetini göstermektedir.  
+Şekil 4-21, Visual Studio 2019 ' de yer alan yerleşik yapı iskelesi tarafından oluşturulan iskelet gRPC hizmetini gösterir.  
 
-![Visual Studio 2019'da gRPC projesi](./media/grpc-project.png  )
+![Visual Studio 2019 ' de gRPC projesi](./media/grpc-project.png  )
 
-**Şekil 4-21**. Visual Studio 2019'da gRPC projesi
+**Şekil 4-21**. Visual Studio 2019 ' de gRPC projesi
 
-Önceki şekilde, proto açıklama dosyası ve servis koduna dikkat edin. Kısa bir süre sonra göreceğiniz gibi, Visual Studio hem Başlangıç sınıfında hem de altta yatan proje dosyasında ek yapılandırma oluşturur.
+Önceki şekilde, Proto Description dosyası ve hizmet kodu ' na göz önünde. Kısa süre içinde gördüğünüz gibi, Visual Studio hem başlangıç sınıfında hem de temel alınan proje dosyasında ek yapılandırma oluşturur.
 
 ## <a name="grpc-usage"></a>gRPC kullanımı
 
-Aşağıdaki senaryolar için gRPC'yi tercih edin:
+GRPC 'yi aşağıdaki senaryolar için tercih edin:
 
-- İşleme devam etmek için anında yanıt alınması gereken synchronous backend microservice-to-microservice iletişimi.
-- Karma programlama platformlarını desteklemesi gereken çok dilli ortamlar.
-- Performansın kritik olduğu düşük gecikme sonu ve yüksek iş letimatif iletişim.
-- Noktadan noktaya gerçek zamanlı iletişim - gRPC, anketler yapmadan iletileri gerçek zamanlı olarak itebilir ve çift yönlü akış için mükemmel bir desteğe sahiptir.
-- Ağ kısıtlı ortamlar – ikili gRPC iletileri her zaman eşdeğer metin tabanlı JSON iletisinden daha küçüktür.
+- İşleme devam etmek için anında yanıtın gerekli olduğu, zaman uyumlu arka uç mikro hizmetten mikro hizmet iletişimi.
+- Karma programlama platformlarını desteklemesi gereken çok yönlü ortamları.
+- Performansın kritik olduğu düşük gecikme süresi ve yüksek aktarım hızı iletişimi.
+- Noktadan noktaya gerçek zamanlı iletişim-gRPC, yoklama yapmadan iletileri gerçek zamanlı olarak gönderebilir ve iki yönlü akış için mükemmel destek sağlar.
+- Ağ kısıtlamalı ortamlar – ikili gRPC iletileri her zaman eşdeğer bir metin tabanlı JSON iletisinden küçüktür.
 
-O zaman, bu yazı, gRPC öncelikle arka uç hizmetleri ile kullanılır. Çoğu modern tarayıcı, bir ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetim düzeyini sağlayamaz. Bununla birlikte, JavaScript veya Blazor WebAssembly teknolojileri ile oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan erken bir [girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır. [.NET için gRPC-Web,](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) tarayıcı uygulamalarındaki gRPC özelliklerini desteklemek için ASP.NET core gRPC uygulamasına olanak tanır:
+Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcıların çoğu, ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya Blazor WebAssembly teknolojileriyle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [erken bir girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır. [.Net Için GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
 
-- Güçlü bir şekilde kod oluşturulan istemciler
-- Kompakt Protobuf mesajları
+- Kesin tür belirtilmiş kod tarafından oluşturulan istemciler
+- Küçük mesajlar
 - Sunucu akışı
 
-## <a name="grpc-implementation"></a>gRPC uygulaması
+## <a name="grpc-implementation"></a>gRPC uygulama
 
-Microservice başvuru mimarisi, [eShop on Containers](https://github.com/dotnet-architecture/eShopOnContainers), Microsoft, gRPC hizmetlerinin .NET Core uygulamalarında nasıl uygulanacağını gösterir. Şekil 4-22 arka uç mimarisini sunar.
+Microsoft 'un [kapsayıcılarındaki](https://github.com/dotnet-architecture/eShopOnContainers)mikro hizmet başvuru mimarisi, .NET Core uygulamalarında GRPC hizmetlerinin nasıl uygulanacağını gösterir. Şekil 4-22 arka uç mimarisini gösterir.
 
-![Konteynerlerde eShop için arka uç mimarisi](./media/eshop-with-aggregators.png)
+![Kapsayıcılarda eShop için arka uç mimarisi](./media/eshop-with-aggregators.png)
 
-**Şekil 4-22**. Konteynerlerde eShop için arka uç mimarisi
+**Şekil 4-22**. Kapsayıcılarda eShop için arka uç mimarisi
 
-Önceki şekilde, eShop'un birden çok API ağ geçidini ortaya çıkararak [Frontends deseni](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) (BFF) için Arka Uç'u nasıl kucakladığını not edin. Bu bölümde BFF modelini daha önce tartıştık. Web-Alışveriş API Ağ Geçidi ile arka uç Alışveriş microservices arasında yer alan Toplayıcı microservice'e (gri renkte) dikkat edin. Toplayıcı, bir istemciden tek bir istek alır, çeşitli mikro hizmetlere gönderir, sonuçları toplar ve bunları isteyen istemciye geri gönderir. Bu tür işlemler genellikle hemen yanıt üretmek için eşzamanlı iletişim gerektirir. eShop'ta, Toplayıcı'dan gelen arka uç aramaları Şekil 4-23'te gösterildiği gibi gRPC kullanılarak gerçekleştirilir.
+Önceki şekilde, birden çok API ağ geçidini açığa çıkararak eShop 'nin ön uç (BFF) [Için arka](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) ucunu nasıl atdığını aklınızda bir yere aklınızda Bu bölümün önceki kısımlarında BFF modelini tartıştık. Web-alışveriş API ağ geçidi ve arka uç alışverişi mikro hizmetleri arasında yer alan toplayıcı mikro hizmetine (gri) yakın bir ilgi ödeyin. Toplayıcı bir istemciden tek bir istek alır, bunu çeşitli mikro hizmetlere dağıtır, sonuçları toplar ve bunları istek istemcisine geri gönderir. Bu işlemler genellikle anında yanıt üretmek için zaman uyumlu iletişim gerektirir. EShop 'de, Şekil 4-23 ' de gösterildiği gibi, toplayıcıdan arka uç çağrıları gRPC kullanılarak gerçekleştirilir.
 
-![konteynerlerde eShop'ta gRPC](./media/grpc-implementation.png)
+![Kapsayıcılar üzerinde eShop içinde gRPC](./media/grpc-implementation.png)
 
-**Şekil 4-23**. konteynerlerde eShop'ta gRPC
+**Şekil 4-23**. Kapsayıcılar üzerinde eShop içinde gRPC
 
-gRPC iletişimi hem istemci hem de sunucu bileşenlerini gerektirir. Önceki şekilde, Alışveriş Toplayıcısı'nın bir gRPC istemcisini nasıl uyguladığına dikkat edin. İstemci, her biri bir gRPC sunucusu uygulayan mikro hizmetleri arka dan amaçlamak için eşzamanlı gRPC çağrıları (kırmızı) yapar. Hem istemci hem de sunucu .NET Core 3.0 SDK'dan yerleşik gRPC tesisatından yararlanır. İstemci tarafı *saplamalar* uzak gRPC aramaları çağırmak için sıhhi tesisat sağlar. Sunucu tarafındaki bileşenler, özel hizmet sınıflarının devralıp tüketebileceği gRPC tesisatı sağlar.
+gRPC iletişimi hem istemci hem de sunucu bileşenleri gerektirir. Önceki şekilde, alışveriş toplayıcısı 'nın gRPC istemcisini nasıl uyguladığı hakkında daha fazla. İstemci, her biri gRPC sunucusunu uygulayan, arka uç mikro hizmetleri için zaman uyumlu gRPC çağrıları (kırmızı) yapar. Hem istemci hem de sunucu, .NET Core SDK yerleşik gRPC tesisat özelliğinden faydalanır. İstemci tarafı *saplamaları* , uzak GRPC çağrılarını çağırma için bir sıhhi tesisat sağlar. Sunucu tarafı bileşenleri, özel hizmet sınıflarının devralması ve tükettiği gRPC sıhhi tesisat sağlar.
 
-Hem RESTful API hem de gRPC iletişimini ortaya çıkaran microservices, trafiği yönetmek için birden çok uç nokta gerektirir. RESTful aramaları için HTTP trafiğini dinleyen bir bitiş noktası ve gRPC aramaları için başka bir bitiş noktası açarsınız. gRPC bitiş noktası, gRPC iletişimi için gerekli olan HTTP/2 protokolü için yapılandırılmalıdır.
+Hem yeniden takip eden bir API 'yi hem de gRPC iletişimini sunan mikro hizmetler, trafiği yönetmek için birden çok uç nokta gerektirir. Yeniden yapılan çağrılar için HTTP trafiğini dinleyen bir uç nokta ve farklı gRPC çağrıları için bir tane açarsınız. GRPC uç noktasının, gRPC iletişimi için gerekli olan HTTP/2 Protokolü için yapılandırılması gerekir.
 
-Biz asynchronous iletişim kalıpları ile mikro hizmetleri ayırmak için çalışırken, bazı işlemler doğrudan aramalar gerektirir. gRPC mikro hizmetler arasında doğrudan senkron iletişim için birincil seçim olmalıdır. HTTP/2 ve protokol arabelleklerine dayalı yüksek performanslı iletişim protokolü, mükemmel bir seçim dir.
+Bağımsız olarak, mikro hizmetleri zaman uyumsuz iletişim desenleriyle ayırarak, bazı işlemler doğrudan çağrı gerektirir. gRPC, mikro hizmetler arasında doğrudan zaman uyumlu iletişim için birincil seçim olmalıdır. HTTP/2 ve protokol arabelleklerine bağlı olarak yüksek performanslı iletişim protokolü, bunu kusursuz bir seçim yapın.
 
-## <a name="looking-ahead"></a>İleriye bakmak
+## <a name="looking-ahead"></a>Öne bakıyor
 
-İleriye baktığımızda, gRPC bulut-yerli sistemler için çekiş kazanmaya devam edecektir. Performans avantajları ve gelişim kolaylığı ilgi çekicidir. Ancak, REST büyük olasılıkla uzun bir süre için etrafında olacaktır. Genel olarak açıklanmış API'ler ve geriye dönük uyumluluk nedenleriyle öne çıkmaktadır.
+İleriye bakarak, gRPC, bulutta yerel sistemler için bir işlem yapmaya devam edecektir. Performans avantajları ve geliştirme kolaylığı etkileyici. Ancak REST büyük olasılıkla uzun bir süre içinde olabilir. Bu, genel kullanıma açık API 'Ler ve geriye dönük uyumluluk nedenleriyle daha fazla.
 
 >[!div class="step-by-step"]
 >[Önceki](service-to-service-communication.md)
->[Sonraki](service-mesh-communication-infrastructure.md)
+>[İleri](service-mesh-communication-infrastructure.md)

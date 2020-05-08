@@ -1,15 +1,15 @@
 ---
-title: Cloud Native uygulama demeti
+title: Bulutta Yerel Uygulama Paketleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulama demeti
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895676"
 ---
-# <a name="cloud-native-application-bundles"></a>Cloud Native uygulama demeti
+# <a name="cloud-native-application-bundles"></a>Bulutta Yerel Uygulama Paketleri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -72,13 +72,14 @@ CNAB 'nin çekirdeği adlı `bundle.json`bir dosyadır. Bu dosya, paket içeriğ
 
 **Şekil 11-13** -örnek bir Terrayform dosyası
 
-Ayrıca `bundle.json` , terrayform 'a geçirilmiş bir parametre kümesi tanımlar. Paketin Parametreleştirme özelliği, çeşitli farklı ortamlarda yüklemeye izin verir.
+Ayrıca `bundle.json` , Terrayform 'a geçirilmiş bir parametre kümesi tanımlar. Paketin Parametreleştirme özelliği, çeşitli farklı ortamlarda yüklemeye izin verir.
 
 CNAB biçimi de esnektir ve bu da tüm bulutlarca kullanılmasına izin verir. Bu, [OpenStack](https://www.openstack.org/)gibi şirket içi çözümlere karşı bile kullanılabilir.
 
 ## <a name="devops-decisions"></a>DevOps kararları
 
-DevOps alanında bu günlerde çok sayıda harika araç ve hatta daha fazla harika kitap ve bilgi DevOps yolculuğuna başlamak için sık kullanılan bir kitap, NoOps 'dan DevOps 'a kurgusal bir şirketin dönüşümünü izleyen [Phoenix projenidir](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/). Bunlardan biri belirli bir şeydir: DevOps, karmaşık, bulut Yerel uygulamaları dağıtımında artık "daha iyi" olsun. Bu bir gereksinimdir ve herhangi bir projenin başlangıcında planlanmış ve kaynakları planlı olmalıdır.
+DevOps alanında bu günlerde çok sayıda harika araç ve hatta daha fazla harika kitap ve bilgi DevOps yolculuğuna başlamak için sık kullanılan bir kitap, NoOps 'dan DevOps 'a kurgusal bir şirketin dönüşümünü izleyen [Phoenix projenidir](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/). Bir şey belirli bir şeydir: DevOps, karmaşık, bulut Yerel uygulamaları dağıtımında artık "daha iyi" olsun. Bu bir gereksinimdir ve herhangi bir projenin başlangıcında planlanmış ve kaynakları planlı olmalıdır.
 
 >[!div class="step-by-step"]
 >[Önceki](infrastructure-as-code.md)
+>[İleri](summary.md)

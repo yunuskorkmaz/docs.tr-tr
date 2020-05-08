@@ -1,48 +1,48 @@
 ---
 title: Bağımlılıklar ve .NET kitaplıkları
-description: .NET kitaplıklarında NuGet bağımlılıklarını yönetmek için en iyi uygulama önerileri.
+description: .NET kitaplıklarında NuGet bağımlılıklarını yönetmeye yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731484"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895700"
 ---
 # <a name="dependencies"></a>Bağımlılıklar
 
-.NET kitaplığına bağımlılık eklemenin birincil yolu NuGet paketlerine başvurmaktır. NuGet paket başvuruları, önceden yazılmış işlevselliği hızla yeniden kullanmanıza ve bunlardan yararlanmanıza olanak tanır, ancak bunlar .NET geliştiricileri için ortak bir sürtünme kaynağıdır. Bağımlılıkları doğru yönetmek, diğer .NET kitaplıklarında yapılan değişikliklerin .NET kitaplığınızı kırmasını önlemek için önemlidir ve bunun tersi de önemlidir!
+.NET kitaplığına bağımlılık eklemenin birincil yolu NuGet paketlerine başvuruyorlardır. NuGet paket başvuruları, zaten yazılmış işlevselliği hızlı bir şekilde yeniden kullanmanıza ve bu işlevselliği kullanmanıza olanak tanır, ancak .NET geliştiricileri için yaygın bir savunma kaynağıdır. Bağımlılıkları doğru şekilde yönetmek, diğer .NET kitaplıklarında bulunan değişikliklerin .NET kitaplığınızı bozmasını engellemek için önemlidir, tersi de geçerlidir!
 
 ## <a name="diamond-dependencies"></a>Elmas bağımlılıkları
 
-Bir .NET projesinin bağımlılık ağacında bir paketin birden çok sürümü olması yaygın bir durumdur. Örneğin, bir uygulama, her biri aynı paketin farklı sürümlerine dayanan iki NuGet paketine bağlıdır. Uygulamanın bağımlılık grafiğinde elmas bağımlılığı artık mevcut.
+.NET projesinin, bağımlılık ağacında bir paketin birden fazla sürümüne sahip olması yaygın bir durumdur. Örneğin, bir uygulama, her biri aynı paketin farklı sürümlerine bağlı olan iki NuGet paketine bağımlıdır. Bir elmas bağımlılığı artık uygulamanın bağımlılık grafiğinde bulunur.
 
 ![Elmas bağımlılığı](./media/dependencies/diamond-dependency.png "Elmas bağımlılığı")
 
-Yapı zamanında NuGet, bağımlılıkların bağımlılıkları da dahil olmak üzere projenin bağlı olduğu tüm paketleri analiz eder. Bir paketin birden çok sürümü algılandığında, bir paket seçmek için kurallar değerlendirilir. Bir derlemenin yan yana sürümlerini aynı uygulamada çalıştırmak .NET'te sorunlu olduğundan, paketleri birleştirme gereklidir.
+Derleme zamanında, NuGet, bağımlılıkların bağımlılıkları da dahil olmak üzere bir projenin bağımlı olduğu tüm paketleri analiz eder. Bir paketin birden çok sürümü algılandığında, kurallar bir tane seçmek üzere değerlendirilir. Aynı uygulamadaki bir derlemenin yan yana sürümlerini çalıştırmak .NET 'te sorunlu olduğundan paketlerin kaldırılması gerekir.
 
-Çoğu elmas bağımlılığı kolayca çözülür; ancak, belirli durumlarda sorunlar yaratabilirler:
+Çoğu elmas bağımlılığı kolayca çözülür; Ancak, belirli koşullarda sorunlar oluşturabilirler:
 
-1. **Çakışan NuGet paket başvuruları,** paket geri yüklemesi sırasında bir sürümün çözülmesini engeller.
-2. **Sürümler arasındaki son dakika değişiklikleri** çalışma zamanında hatalara ve özel durumlara neden olur.
-3. **Paket derlemesi güçlü adlandırılmış,** montaj sürümü değiştirildi ve uygulama .NET Framework üzerinde çalışıyor. Derleme bağlama yönlendirmeleri gereklidir.
+1. **Çakışan NuGet paket başvuruları** , paketin geri yükleme sırasında bir sürümün çözümlenmesini engelliyor.
+2. **Sürümler arasındaki son değişiklikler,** çalışma zamanında hatalara ve özel durumlara neden oluyor.
+3. **Paket derlemesi tanımlayıcı adlı**, derleme sürümü değişti ve uygulama .NET Framework çalışıyor. Derleme bağlama yeniden yönlendirmeleri gereklidir.
 
-Sizinkinin yanında hangi paketlerin kullanılacağını bilmek mümkün değildir. Kitaplığınızı kıran elmas bağımlılığı olasılığını azaltmanın iyi bir yolu, bağlı olduğunuz paket sayısını en aza indirmektir.
+Hangi paketlerin sizin de birlikte kullanılacağını Bileme olanaksızdır. Bir elmas bağımlılığını düşürmenin olasılığını azaltmanın iyi bir yolu, bağlı olduğunuz paket sayısını en aza indirmektir.
 
-✔️ .NET kitaplığınızı gereksiz bağımlılıklar için gözden geçirin.
+✔️, .NET kitaplığınızı gereksiz bağımlılıklar için gözden geçirin.
 
-## <a name="nuget-dependency-version-ranges"></a>NuGet bağımlılık sürüm aralıkları
+## <a name="nuget-dependency-version-ranges"></a>NuGet bağımlılığı sürüm aralıkları
 
-Paket başvurusu, izin verdiği geçerli paketlerin aralığını belirtir. Genellikle, proje dosyasındaki paket başvuru sürümü minimum sürümüdür ve en fazla sürüm yoktur.
+Paket başvurusu, izin verdiği geçerli paketlerin aralığını belirtir. Genellikle proje dosyasındaki paket başvuru sürümü en düşük sürümdür ve en fazla bir değer yoktur.
 
 ```xml
 <!-- Accepts any version 1.0 and above. -->
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-NuGet'in bağımlılıkları çözerken kullandığı kurallar [karmaşıktır,](/nuget/consume-packages/dependency-resolution)ancak NuGet her zaman en düşük geçerli sürümü arar. NuGet, en düşük uyumluluk sorunları olacağından, kullanılabilir en yüksek sürümü kullanmaya göre en düşük geçerli sürümü tercih eder.
+Bir yandan,, bağımlılıkları çözümlerken NuGet tarafından kullanılan kurallar [karmaşıktır](/nuget/consume-packages/dependency-resolution), ancak [Varsayılan olarak](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) NuGet, en düşük uygun sürümü arar. En düşük uyumluluk sorunlarına sahip olacağı için NuGet, en yüksek kullanılabilir sürümü kullanarak en düşük uygun sürümü tercih eder.
 
-NuGet'in en düşük geçerli sürüm kuralı nedeniyle, en son sürümü almaktan kaçınmak için paket başvurularına bir üst sürüm veya tam aralık yerleştirmeye gerek yoktur. NuGet zaten sizin için en düşük, en uyumlu sürümü bulmaya çalışır.
+NuGet 'in en düşük geçerli sürüm kuralı nedeniyle, en son sürümü almayı önlemek için paket başvurularına bir üst sürüm veya tam Aralık yerleştirmeniz gerekli değildir. NuGet, sizin için en düşük, en uyumlu sürümü bulmayı zaten deniyor.
 
 ```xml
 <!-- Accepts 1.0 up to 1.x, but not 2.0 and higher. -->
@@ -52,21 +52,21 @@ NuGet'in en düşük geçerli sürüm kuralı nedeniyle, en son sürümü almakt
 <PackageReference Include="ExamplePackage" Version="[1.0]" />
 ```
 
-Üst sürüm sınırları, bir çakışma olduğunda NuGet'in başarısız olmasına neden olur. Örneğin, bir kitaplık tam olarak 1,0'ı kabul ederken, başka bir kitaplık 2,0 veya üzeri gerektirir. Sürüm 2.0'da kırılma değişiklikleri getirilmiş olsa da, katı veya üst sınır sürüm bağımlılığı bir hatayı garanti eder.
+Çakışma varsa, üst sürüm sınırları NuGet 'in başarısız olmasına neden olur. Örneğin, bir kitaplık, farklı bir kitaplık 2,0 veya üzeri gerektirdiğinden tam olarak 1,0 kabul eder. Sürüm 2,0 ' de önemli değişiklikler sunulurken, katı veya üst sınır sürümü bağımlılığı bir hata garanti eder.
 
-![Elmas bağımlılık çatışması](./media/dependencies/diamond-dependency-conflict.png "Elmas bağımlılık çatışması")
+![Elmas bağımlılığı çakışması](./media/dependencies/diamond-dependency-conflict.png "Elmas bağımlılığı çakışması")
 
-❌En az sürümü olmayan NuGet paket referansları YOKTUR.
+❌En düşük sürüm olmadan NuGet paketi başvuruları yoktur.
 
-❌Kaçının NuGet paket başvuruları tam bir sürümünü talep.
+❌Tam bir sürümü talep eden NuGet paket başvurularından KAÇıNıN.
 
-❌Kaçının NuGet paketi referansları bir sürüm üst sınırı ile.
+❌Sürüm üst sınırı olan NuGet paket başvurularından KAÇıNıN.
 
 ## <a name="nuget-shared-source-packages"></a>NuGet paylaşılan kaynak paketleri
 
-Dış NuGet paket bağımlılıklarını azaltmanın bir yolu paylaşılan kaynak paketlerine başvurmaktır. Paylaşılan kaynak paketi, başvurulduğunda projeye dahil edilen [kaynak kodu dosyalarını](/nuget/reference/nuspec#including-content-files) içerir. Projenizin geri kalanıyla derlenen kaynak kod dosyalarını dahil ettiğiniz için dışbağımlılık ve çakışma olasılığı yoktur.
+Dış NuGet paket bağımlılıklarını azaltmanın bir yolu, paylaşılan kaynak paketlerine başvurmaktır. Paylaşılan bir kaynak paketi, başvuruluyorsa bir projede yer alan [kaynak kodu dosyaları](/nuget/reference/nuspec#including-content-files) içerir. Yalnızca projenizin geri kalanı ile derlenen kaynak kodu dosyalarını dahil ettiğinden, dış bağımlılık ve çakışma şansı yoktur.
 
-Paylaşılan kaynak paketleri, küçük işlevsellik parçalarını da içeren harikadır. Örneğin, HTTP aramaları yapmak için yardımcı yöntemlerin paylaşılan bir kaynak paketi.
+Paylaşılan kaynak paketleri, küçük işlevsellik parçaları için harika. Örneğin, HTTP çağrıları yapmak için bir yardımcı yöntem paylaşılan kaynak paketidir.
 
 ![Paylaşılan kaynak paketi](./media/dependencies/shared-source-package.png "Paylaşılan kaynak paketi")
 
@@ -74,28 +74,28 @@ Paylaşılan kaynak paketleri, küçük işlevsellik parçalarını da içeren h
 <PackageReference Include="Microsoft.Extensions.Buffers.Testing.Sources" PrivateAssets="All" Version="1.0" />
 ```
 
-![Paylaşılan kaynak projesi](./media/dependencies/shared-source-project.png "Paylaşılan kaynak projesi")
+![Paylaşılan kaynak proje](./media/dependencies/shared-source-project.png "Paylaşılan kaynak proje")
 
-Paylaşılan kaynak paketlerinin bazı sınırlamaları vardır. Bunlar `PackageReference`yalnızca, eski `packages.config` projeler hariç tutulabilir. Ayrıca paylaşılan kaynak paketleri yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Bu sınırlamalar nedeniyle paylaşılan kaynak paketleri en iyi açık kaynak proje içinde işlevselliği paylaşmak için kullanılır.
+Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca tarafından `PackageReference`başvurulabilirler, bu nedenle eski `packages.config` projeler hariç tutulur. Ayrıca, paylaşılan kaynak paketleri yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Bu sınırlamalar nedeniyle, paylaşılan kaynak paketleri, bir açık kaynak proje içindeki işlevselliği paylaşmak için en iyi şekilde kullanılır.
 
-✔️ Küçük, dahili işlevsellik parçaları için paylaşılan kaynak paketlerine başvurmayı düşünün.
+✔️ küçük, iç işlevsellik parçaları için paylaşılan kaynak paketlerine başvurmayı göz önünde bulundurun.
 
-✔️ Küçük, dahili işlevsellik parçaları sağlıyorsa paketinizi paylaşılan bir kaynak paketi haline getirmeyi düşünün.
+✔️, küçük, iç işlevsellik parçaları sağlıyorsa paketinizi paylaşılan bir kaynak paketi yapmayı düşünün.
 
-✔️ DO referans ile `PrivateAssets="All"`paylaşılan kaynak paketleri .
+✔️ Paylaşılan kaynak paketlerine başvuru YAPıN `PrivateAssets="All"`.
 
-> Bu ayar, NuGet paketinin yalnızca geliştirme sırasında kullanılacağını ve genel bağımlılık olarak açıklanmaması gerektiğini söyler.
+> Bu ayar NuGet 'e paketin yalnızca geliştirme zamanında kullanılacağını ve genel bağımlılık olarak sunulmayacağını söyler.
 
-❌Ortak API'nizde paylaşılan kaynak paketi türleri YOKTUR.
+❌Ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
 
-> Paylaşılan kaynak türleri başvuru derleme derlemesine derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, bir projedeki `IRepository` paylaşılan kaynak türü, başka bir projedeki `IRepository` aynı paylaşılan kaynaktan ayrı bir türdür. Paylaşılan kaynak paketlerindeki türlerin `internal` görünürlüğü olmalıdır.
+> Paylaşılan kaynak türleri, başvurulan derlemeye derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, bir projedeki paylaşılan kaynak `IRepository` türü, başka bir projede aynı paylaşılan kaynaktan `IRepository` ayrı bir tür. Paylaşılan kaynak paketlerindeki türlerin `internal` görünürlüğe sahip olması gerekir.
 
-❌Paylaşılan kaynak paketlerini NuGet.org yayınlamaYIN.
+❌Paylaşılan kaynak paketlerini NuGet.org 'e yayımlamayın.
 
-> Paylaşılan kaynak paketleri kaynak kodu içerir ve yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Örneğin, C# paylaşılan kaynak paketi bir F# uygulaması tarafından kullanılamaz.
+> Paylaşılan kaynak paketleri kaynak kodu içerir ve yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Örneğin, bir C# paylaşılan kaynak paketi bir F # uygulaması tarafından kullanılamaz.
 >
-> Paylaşılan kaynak paketlerini yerel bir [özet akışında yayımlayın veya MyGet](./publish-nuget-package.md) bunları projeniz dahilinde dahili olarak tüketin.
+> Paylaşılan kaynak paketlerini yerel bir akışa yayımlayın veya bunları projenizde dahili olarak tüketmek üzere [MyGet](./publish-nuget-package.md) yapın.
 
 >[!div class="step-by-step"]
 >[Önceki](nuget.md)
->[Sonraki](sourcelink.md)
+>[İleri](sourcelink.md)
