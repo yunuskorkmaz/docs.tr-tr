@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784370"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894727"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint Arabirimi
 
@@ -29,25 +29,25 @@ Bir işlevde bir kesme noktasını veya bir değer üzerinde bir izleme noktası
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Activate Yöntemi](icordebugbreakpoint-activate-method.md)|Bu `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
-|[IsActive Yöntemi](icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` etkin olup olmadığını gösteren bir değer alır.|  
+|[Activate Yöntemi](icordebugbreakpoint-activate-method.md)|Bunun `ICorDebugBreakpoint`etkin durumunu ayarlar.|  
+|[IsActive Yöntemi](icordebugbreakpoint-isactive-method.md)|Bu `ICorDebugBreakpoint` , etkin olup olmadığını gösteren bir değer alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu işlevsellik isteniyorsa, bir hata ayıklayıcı onu `ICorDebugBreakpoint`en üstünde uygulamalıdır.  
+ Kesme noktaları, Koşullu ifadeleri doğrudan desteklemez. Bu tür işlevler isteniyorsa, bir hata ayıklayıcının üzerinde uygulaması gerekir `ICorDebugBreakpoint`.  
   
- ICorDebugFunctionBreakpoint Arabirimi, işlevleri içindeki kesme noktalarını desteklemek için `ICorDebugBreakpoint` genişletir.  
+ ICorDebugFunctionBreakpoint Arabirimi işlevleri içindeki `ICorDebugBreakpoint` kesme noktalarını destekleyecek şekilde genişletilir.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

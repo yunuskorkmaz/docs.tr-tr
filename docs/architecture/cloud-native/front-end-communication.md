@@ -1,169 +1,167 @@
 ---
 title: Ön uç istemci iletişimi
-description: Ön uç istemcilerin bulut tabanlı sistemlerle nasıl iletişim kurduğunu öğrenin
+description: Ön uç istemcilerinin, bulutta yerel sistemlerle nasıl iletişim kuracağını öğrenin
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: af26873381509df7807db6ecb37a7d73669adb37
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989083"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895582"
 ---
 # <a name="front-end-client-communication"></a>Ön uç istemci iletişimi
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bulut ait bir sistemde, ön uç istemciler (mobil, web ve masaüstü uygulamaları) bağımsız arka uç mikro hizmetlerle etkileşim kurmak için bir iletişim kanalı gerektirir.  
+Bulutta yerel bir sistemde, ön uç istemcileri (mobil, Web ve Masaüstü uygulamaları) bağımsız arka uç mikro hizmetleriyle etkileşim kurmak için bir iletişim kanalı gerektirir.  
 
 Seçenekler nelerdir?
 
-İşleri basit tutmak için, ön uç istemcisi Şekil 4-2'de gösterilen arka uç mikro hizmetlerle *doğrudan iletişim kurabilir.*
+İşleri basit tutmak için bir ön uç istemci, Şekil 4-2 ' de gösterilen arka uç mikro hizmetleriyle *doğrudan iletişim kurabilir* .
 
-![Hizmet iletişimine doğrudan istemci](./media/direct-client-to-service-communication.png)
+![İstemcisini hizmet iletişimine yönlendirin](./media/direct-client-to-service-communication.png)
 
-**Şekil 4-2.** Hizmet iletişimine doğrudan istemci
+**Şekil 4-2.** İstemcisini hizmet iletişimine yönlendirin
 
-Bu yaklaşımla, her microservice ön uç istemcileri tarafından erişilebilir bir ortak bitiş noktası vardır. Üretim ortamında, trafiği orantılı olarak yönlendirme, mikro hizmetlerin önüne bir yük dengeleyicisi yerleştirilecek.
+Bu yaklaşımda, her mikro hizmetin ön uç istemcilerle erişilebilen genel bir uç noktası vardır. Bir üretim ortamında, mikro hizmetlerin önüne bir yük dengeleyici yerleştirirsiniz, yönlendirme trafiği orantılı olarak yapılır.
 
-Uygulanması basit olsa da, doğrudan istemci iletişimi sadece basit microservice uygulamaları için kabul edilebilir olacaktır. Bu desen sıkıca çekirdek arka uç hizmetleri için ön uç müşterileri çiftler, dahil olmak üzere bir dizi sorun için kapıyı açarak:
+Basit bir uygulama olarak, doğrudan istemci iletişimi yalnızca basit mikro hizmet uygulamaları için kabul edilebilir. Bu model, ön uç istemcilerini çekirdek arka uç hizmetlerine sıkı bir şekilde bağlıarak, bir dizi sorunun kapısını açarak aşağıdakiler de dahildir:
 
-- Müşteri arka uç hizmet refactoring için duyarlılık.
-- Çekirdek arka uç hizmetleri doğrudan maruz olarak daha geniş bir saldırı yüzeyi.
-- Her mikro hizmet te çapraz kesme endişelerinin çoğaltılması.
-- Aşırı karmaşık istemci kodu - istemciler birden çok uç noktayı izlemeli ve hataları esnek bir şekilde işlemelidir.
+- Arka uç hizmeti yeniden düzenleme için istemci geçirtibilirliği.
+- Çekirdek arka uç hizmetleri olarak daha geniş bir saldırı yüzeyi doğrudan kullanıma sunulur.
+- Her mikro hizmette çapraz kesme sorunlarının çoğaltılması.
+- Aşırı karmaşık istemci kodu-istemciler birden çok bitiş noktasını takip etmelidir ve hataların dayanıklı bir şekilde işlenmesi gerekir.
 
-Bunun yerine, yaygın olarak kabul edilen bulut tasarım deseni, ön uç uygulamaları ve arka uç hizmetleri arasında bir [API Ağ Geçidi Hizmeti](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) uygulamaktır. Desen Şekil 4-3'te gösterilmiştir.
+Bunun yerine, yaygın olarak kabul edilen bir bulut tasarım deseninin ön uç uygulamaları ve arka uç hizmetleri arasında bir [API ağ geçidi hizmeti](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) uygulaması vardır. Model Şekil 4-3 ' de gösterilmiştir.
 
-![API Ağ Geçidi Deseni](./media/api-gateway-pattern.png)
+![API ağ geçidi kalıbı](./media/api-gateway-pattern.png)
 
-**Şekil 4-3.** API ağ geçidi deseni
+**Şekil 4-3.** API ağ geçidi kalıbı
 
-Önceki şekilde, API Ağ Geçidi hizmetinin arka uç çekirdek mikro hizmetlerini nasıl özetlediğime dikkat edin. Bir web API olarak uygulanan, bir *ters proxy*olarak hareket eder , iç mikrohizmetler için gelen trafik yönlendirme.
+Önceki şekilde, API ağ geçidi hizmetinin arka uç çekirdek mikro hizmetlerini nasıl soyutlamasını aklınızda bir yere göz önüne alın. Bir Web API 'SI olarak uygulanan, iç mikro hizmetlere gelen trafiği yönlendiren bir *ters proxy*işlevi görür.
 
-Ağ geçidi, istemciyi dahili hizmet bölümleme ve yeniden düzenlemeden yalıtıyor. Bir arka uç hizmetini değiştirirseniz, istemciyi bozmadan ağ geçidinde barındırırsınız. Ayrıca kimlik, önbelleğe alma, esneklik, ölçüm leme ve azaltma gibi çapraz kesme endişeleri için ilk savunma hattıdır. Bu çapraz kesme kaygılarının çoğu arka uç temel servislerinden ağ geçidine yüklenebilir ve arka uç hizmetlerini basitleştirebilir.
+Ağ Geçidi, iç hizmet bölümlendirme ve yeniden düzenleme işleminden istemciyi yalıtılmış olarak düzenler. Bir arka uç hizmetini değiştirirseniz, istemciyi bozmadan ağ geçidinde buna uyum sağlayabilirsiniz. Ayrıca, kimlik, önbelleğe alma, dayanıklılık, ölçüm ve azaltma gibi çapraz savunma sorunları için ilk savunma hattınızdır. Bu çapraz kesme sorunlarının birçoğu arka uç çekirdek hizmetlerinden ağ geçidine yüklenebilir ve arka uç hizmetleri basitleştirir.
 
-API Ağ Geçidi'ni basit ve hızlı tutmaya özen gerekir. Genellikle, iş mantığı ağ geçidi dışında tutulur. Karmaşık bir ağ geçidi bir darboğaz ve sonunda bir monolit kendisi olma riskleri. Daha büyük sistemler genellikle istemci türüne (mobil, web, masaüstü) veya arka uç işlevlerine göre bölümlenmiş birden çok API Ağ Geçidi ni ortaya çıkarır. Frontends deseni [için Backend,](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) birden çok ağ geçidi uygulamak için yön sağlar. Desen Şekil 4-4'te gösterilmiştir.
+API ağ geçidini basit ve hızlı tutmak için dikkatli olunmalıdır. Genellikle, iş mantığı ağ geçidinin dışında tutulur. Karmaşık bir ağ geçidi riski soruna neden oluyor ve sonunda tek bir. Daha büyük sistemler genellikle istemci türüne (mobil, Web, masaüstü) veya arka uç işlevselliğine göre bölünmüş birden çok API ağ geçidi sunar. Ön [uçlar Için arka uç](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) , birden çok ağ geçidi uygulamaya yönelik bir yön sağlar. Model Şekil 4-4 ' de gösterilmiştir.
 
-![API Ağ Geçidi Deseni](./media/backend-for-frontend-pattern.png)
+![API ağ geçidi kalıbı](./media/backend-for-frontend-pattern.png)
 
-**Şekil 4-4.** Ön uç deseni için arka uç
+**Şekil 4-4.** Ön uç deseninin arka ucu
 
-Önceki şekilde gelen trafiğin belirli bir API ağ geçidine nasıl gönderildiğini not edin - istemci türüne göre: web, mobil veya masaüstü uygulaması. Her aygıtın yetenekleri form faktörü, performans ve görüntü sınırlamaları arasında önemli ölçüde farklılık gösterdiğinden, bu yaklaşım anlamlıdır. Genellikle mobil uygulamalar tarayıcı veya masaüstü uygulamalarından daha az işlevsellik ortaya çıkarır. Her ağ geçidi, ilgili aygıtın özellikleri ve işlevleriyle eşleşecek şekilde optimize edilebilir.
+Önceki şekilde, gelen trafiğin istemci türüne göre belirli bir API Gateway 'e gönderilme şekli: Web, mobil veya masaüstü uygulaması. Bu yaklaşım, her bir cihazın özellikleri, form faktörü, performansı ve görüntüleme sınırlamaları arasında önemli ölçüde farklılık gösterir. Genellikle mobil uygulamalar tarayıcıdan veya Masaüstü uygulamalarından daha az işlevsellik sunar. Her ağ geçidi, ilgili cihazın özellikleri ve işlevselliğiyle eşleşecek şekilde iyileştirilebilir.
 
-Başlangıç olarak, kendi API Ağ Geçidi hizmetinizi oluşturabilirsiniz. GitHub hızlı bir arama birçok örnek verecektir. Ancak, çeşitli çerçeveler ve ticari ağ geçidi ürünleri mevcuttur.
+Başlamak için kendi API Gateway hizmetinizi oluşturabilirsiniz. GitHub ' da hızlı bir arama birçok örnek sağlayacaktır. Ancak, çeşitli çerçeveler ve ticari ağ geçidi ürünleri mevcuttur.
 
-## <a name="ocelot-gateway"></a>Ocelot Ağ Geçidi
+## <a name="ocelot-gateway"></a>Ocelot ağ geçidi
 
-Basit .NET bulut tabanlı uygulamalar için [Ocelot Ağ Geçidi'ni](https://github.com/ThreeMammals/Ocelot)düşünebilirsiniz. Ocelot, .NET mikro hizmetleri için oluşturulan ve sisteme birleşik bir giriş noktası gerektiren bir Açık Kaynak API Ağ Geçididir. Hafif, hızlı, ölçeklenebilir.
+Basit .NET bulutu yerel uygulamaları için [Ocelot ağ geçidini](https://github.com/ThreeMammals/Ocelot)göz önünde bulundurmayabilirsiniz. Ocelot, sistemlerinde Birleşik bir giriş noktası gerektiren .NET mikro hizmetleri için oluşturulan açık kaynaklı bir API ağ geçididir. Hafif, hızlı, ölçeklenebilir.
 
-Herhangi bir API Ağ Geçidi gibi, birincil işlevi gelen HTTP isteklerini aşağı akış hizmetlerine iletmektir. Ayrıca, bir .NET Core ara yazılım ardışık boru hattında yapılandırılabilir yetenekleri geniş bir yelpazede destekler. Özellik kümesi aşağıdaki tabloda sunulur.
+API ağ geçitlerine benzer şekilde, birincil işlevselliği gelen HTTP isteklerini aşağı akış hizmetlerine iletmektir. Ayrıca, bir .NET Core ara yazılım ardışık düzeninde yapılandırılabilir çok çeşitli özellikleri destekler. Özellik kümesi, aşağıdaki tabloda sunulmuştur.
 
-|Ocelot Özellikleri  | |
+|Ocelot özellikleri  | |
 | :-------- | :-------- |
 | Yönlendirme | Kimlik Doğrulaması |
-| İstek Toplama | Yetkilendirme |
-| Hizmet Bulma (Konsolos ve Eureka ile) | Azaltma |
-| Yük Dengeleme | Günlük, İzleme |
-| Önbelleğe alma | Üstbilgi/Sorgu Dize Dönüşümü |
-| Korelasyon Geçişi | Özel Middleware |
-| Hizmet Kalitesi | Yeniden İlkeler |
+| İstek toplama | Yetkilendirme |
+| Hizmet bulma (Tüketil ve Eureka ile) | Azaltma |
+| Yük Dengeleme | Günlüğe kaydetme, Izleme |
+| Önbelleğe alma | Üstbilgiler/sorgu dizesi dönüştürmesi |
+| Bağıntı geçişi | Özel ara yazılım |
+| Hizmet kalitesi | Yeniden deneme Ilkeleri |
 
-Her Ocelot ağ geçidi, json yapılandırma dosyasında yukarı ve aşağı akışları adreslerini ve yapılandırılabilir özellikleri belirtir. İstemci Ocelot ağ geçidine bir HTTP isteği gönderir. Ocelot, alındıktan sonra HttpRequest nesnesini, yapılandırmasında belirtilen duruma yönlendirerek ardışık kaynaktan geçirir. Boru hattının sonunda, Ocelot yeni bir HTTPResponseObject oluşturur ve alt hizmete geçirir. Yanıt için, Ocelot yanıtı istemciye geri göndererek ardışık hattı tersine çevirir.
+Her Ocelot Gateway, bir JSON yapılandırma dosyasında yukarı akış ve aşağı akış adreslerini ve yapılandırılabilir özellikleri belirtir. İstemci Ocelot ağ geçidine bir HTTP isteği gönderir. Bir kez alındıktan sonra, Ocelot, kendi işlem hattı aracılığıyla, kendi yapılandırması tarafından belirtilen duruma geçen HttpRequest nesnesini geçirir. İşlem hattının sonunda, Ocelot yeni bir HTTPResponseObject oluşturur ve bunu aşağı akış hizmetine geçirir. Yanıt için Ocelot, yanıtı istemciye geri göndererek işlem hattını tersine çevirir.
 
-Ocelot NuGet paketi olarak mevcuttur. NET Standart 2.0'ı hedefler ve hem .NET Core 2.0+ hem de .NET Framework 4.6.1+ çalışma süreleri ile uyumlu hale getirir. Ocelot, HTTP konuşan ve .NET Core'un desteklediği platformlarda çalışan her şeyle bütünleşir: Linux, macOS ve Windows. Ocelot genişletilebilir ve Docker kapsayıcıları, Azure Kubernetes Hizmetleri veya diğer genel bulutlar dahil olmak üzere birçok modern platformu destekler.  Ocelot [Konsolos](https://www.consul.io)gibi açık kaynak paketleri ile entegre , [GraphQL](https://graphql.org), ve Netflix's [Eureka](https://github.com/Netflix/eureka).
+Ocelot, bir NuGet paketi olarak kullanılabilir. NET Standard 2,0 ' i hedefler ve hem .NET Core 2.0 + hem de .NET Framework 4.6.1 + çalışma zamanları ile uyumlu hale getirir. Ocelot, HTTP ve .NET Core 'un desteklediği platformlarda çalışan, Linux, macOS ve Windows ile tümleşen her şeyi tümleştirir. Ocelot genişletilebilir ve Docker kapsayıcıları, Azure Kubernetes Hizmetleri veya diğer genel bulutlar dahil olmak üzere birçok modern platformu destekler.  Ocelot, [Tüketil](https://www.consul.io), [Graphql](https://graphql.org)ve Netflix 'in [Eureka](https://github.com/Netflix/eureka)gibi açık kaynaklı paketlerle tümleştirilir.
 
-Ticari API ağ geçidinin zengin özellik kümesini gerektirmeyen basit bulut tabanlı uygulamalar için Ocelot'u düşünün.
+Ticari bir API ağ geçidinin zengin özellik kümesini gerektirmeyen basit bulutta yerel uygulamalar için Ocelot ' i düşünün.
 
 ## <a name="azure-application-gateway"></a>Azure Application Gateway
 
-Basit ağ geçidi gereksinimleri için [Azure Uygulama Ağ Geçidi'ni](https://docs.microsoft.com/azure/application-gateway/overview)düşünebilirsiniz. Azure [PaaS hizmeti](https://azure.microsoft.com/overview/what-is-paas/)olarak kullanılabilir, URL yönlendirme, SSL sonlandırma ve Web Uygulaması Güvenlik Duvarı gibi temel ağ geçidi özelliklerini içerir. Hizmet [Katman-7 yük dengeleme](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) özelliklerini destekler. Katman 7 ile, istekleri yalnızca düşük düzeyli TCP ağ paketlerinin değil, bir HTTP iletisinin gerçek içeriğine göre yönlendirebilirsiniz.
+Basit ağ geçidi gereksinimleri için [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)göz önüne alabilirsiniz. Azure [PaaS hizmeti](https://azure.microsoft.com/overview/what-is-paas/)olarak KULLANILABILIR, URL YÖNLENDIRME, SSL sonlandırma ve bir Web uygulaması güvenlik duvarı gibi temel ağ geçidi özelliklerini içerir. Hizmet, [katman 7 Yük Dengeleme](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) özelliklerini destekler. Katman 7 ile, yalnızca düşük düzeyde TCP ağ paketleri yerine bir HTTP iletisinin gerçek içeriğine göre istekleri yönlendirebilirsiniz.
 
-Bu kitap boyunca, [Biz Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html)bulut-yerli sistemleri barındırma evangelize. Bir konteyner orkestratörü olan Kubernetes, konteynerleştirilmiş iş yüklerinin dağıtımını, ölçeklemesini ve operasyonel endişelerini otomatikleştirir. Azure Uygulama Ağ Geçidi, [Azure Kubernetes Hizmet](https://azure.microsoft.com/services/kubernetes-service/) kümesi için bir API ağ geçidi olarak yapılandırılabilir.
+Bu kitapta, [Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html)'te bulutta yerel sistemleri barındırıyoruz endişe. Bir kapsayıcı Orchestrator, Kubernetes Kapsayıcılı iş yüklerinin dağıtım, ölçeklendirme ve operasyonel sorunlarını otomatikleştirir. Azure Application Gateway, [Azure Kubernetes hizmet](https://azure.microsoft.com/services/kubernetes-service/) kümesi IÇIN bir API ağ geçidi olarak yapılandırılabilir.
 
-[Uygulama Ağ Geçidi Giriş Denetleyicisi,](https://azure.github.io/application-gateway-kubernetes-ingress/) Azure Uygulama Ağ Geçidi'nin doğrudan Azure [Kubernetes Hizmeti](https://azure.microsoft.com/services/kubernetes-service/)ile çalışmasını sağlar. Şekil 4.5 mimarisini gösterir.
+[Application Gateway giriş denetleyicisi](https://azure.github.io/application-gateway-kubernetes-ingress/) , Azure Application Gateway 'In doğrudan [Azure Kubernetes hizmeti](https://azure.microsoft.com/services/kubernetes-service/)ile çalışmasını sağlar. Şekil 4,5, mimariyi gösterir.
 
 ![Application Gateway Giriş Denetleyicisi](./media/application-gateway-ingress-controller.png)
 
 **Şekil 4-5.** Application Gateway Giriş Denetleyicisi
 
-Kubernetes, [HTTP](https://kubernetes.io/docs/concepts/services-networking/ingress/)(Düzey 7) yük dengelemeyi destekleyen yerleşik bir özellik içerir. Giriş, AKS içindeki mikrohizmet örneklerinin dış dünyaya nasıl maruz kalına açıklanabildiği ne kadar kurallar tanımlar. Önceki resimde, giriş denetleyicisi küme için yapılandırılan giriş kurallarını yorumlar ve Azure Uygulama Ağ Geçidi'ni otomatik olarak yapılandırır. Bu kurallara göre, Uygulama Ağ Geçidi trafiği AKS içinde çalışan mikro hizmetlere yönlendirir. Giriş denetleyicisi giriş kurallarındaki değişiklikleri dinler ve Azure Uygulama Ağ Geçidi'nde uygun değişiklikleri yapar.
+Kubernetes, [giriş ADLı http](https://kubernetes.io/docs/concepts/services-networking/ingress/)(düzey 7) yük dengelemeyi destekleyen yerleşik bir özellik içerir. Giriş, mikro hizmet örneklerinin dışarıdaki dünyaya nasıl sunulabileceğini gösteren bir kurallar kümesi tanımlar. Önceki görüntüde, giriş denetleyicisi küme için yapılandırılmış giriş kurallarını yorumlar ve Azure Application Gateway otomatik olarak yapılandırır. Bu kurallara göre Application Gateway trafiği AKS içinde çalışan mikro hizmetlere yönlendirir. Giriş denetleyicisi, giriş kurallarında yapılan değişiklikleri dinler ve Azure Application Gateway uygun değişiklikleri yapar.
 
 ## <a name="azure-api-management"></a>Azure API Management
 
-Orta ve büyük ölçekli bulut tabanlı sistemler için [Azure API Yönetimi'ni](https://azure.microsoft.com/services/api-management/)düşünebilirsiniz. Bu, yalnızca API Ağ Geçidi ihtiyaçlarınızı çözmekle kalmıyor, aynı zamanda tam özellikli bir geliştirici ve yönetim deneyimi de sağlayan bulut tabanlı bir hizmet. API Yönetimi Şekil 4-6'da gösterilmiştir.
+Orta ve büyük ölçekli bulut Yerel sistemleri için [Azure API Management](https://azure.microsoft.com/services/api-management/)göz önünde bulundurmanız gerekebilir. Yalnızca API ağ geçidi ihtiyaçlarınızı çözme, ancak tam özellikli bir geliştirici ve yönetim deneyimi sağlayan bulut tabanlı bir hizmettir. API Management Şekil 4-6 ' de gösterilir.
 
 ![Azure API Management](./media/azure-api-management.png)
 
 **Şekil 4-6.** Azure API Management
 
-Başlatmak için, API Yönetimi, yapılandırılabilir kurallar ayarı ve ilkelerine dayalı arka uç hizmetlerine kontrollü erişim sağlayan bir ağ geçidi sunucusu ortaya çıkarır. Bu hizmetler Azure bulutu, ön hazırlık veri merkezinizde veya diğer genel bulutlarda olabilir. API anahtarları ve JWT belirteçleri kimin ne yapabileceğini belirler. Tüm trafik analitik amaçlarla günlüğe kaydedilir.
+Başlamak için API Management, yapılandırılabilir kurallara ve ilkelere bağlı olarak arka uç hizmetlerine denetimli erişime izin veren bir ağ geçidi sunucusu kullanıma sunar. Bu hizmetler Azure bulutta, şirket içi veri merkezinizde veya diğer genel bulutlarda olabilir. API anahtarları ve JWT belirteçleri neleri yapabileceğini tespit edebilir. Tüm trafik analitik amaçlar için günlüğe kaydedilir.
 
-Geliştiriciler için API Management, hizmetlere, belgelere ve bunları çağırmak için örnek kodlara erişim sağlayan bir geliştirici portalı sunar. Geliştiriciler, hizmet bitiş noktalarını incelemek ve kullanımlarını analiz etmek için Swagger/Open API'yi kullanabilir. Hizmet, büyük geliştirme platformlarında çalışır: .NET, Java, Golang ve daha fazlası.
+Geliştiriciler için API Management Hizmetleri, belgeleri ve bunları çağırmaya yönelik örnek koda erişim sağlayan bir geliştirici portalı sunmaktadır. Geliştiriciler, hizmet uç noktalarını incelemek ve kullanımlarını çözümlemek için Swagger/Open API 'sini kullanabilir. Hizmet, .NET, Java, Golang ve daha fazlası için büyük geliştirme platformları genelinde çalışmaktadır.
 
-Yayımcı portalı, yöneticilerin API'leri ortaya çıkardığı ve davranışlarını yönettiği bir yönetim panosu ortaya çıkarır. Hizmet erişimi verilebilir, hizmet sağlığı izlenebilir ve hizmet telemetrisi toplanabilir. Yöneticiler, davranışı etkilemek için her uç noktaya *ilkeler* uygular. İlkeler, her hizmet çağrısı için sırayla yürüten önceden oluşturulmuş [deyimlerdir.](https://docs.microsoft.com/azure/api-management/api-management-howto-policies)  İlkeler, gelen arama, giden çağrı veya bir hata üzerine çağrılmak üzere yapılandırılır. İlkeler, ilkeleri birleştirirken deterministic sıralamayı etkinleştirmek için farklı hizmet kapsamlarında uygulanabilir. Önceden inşa [politikaları](https://docs.microsoft.com/azure/api-management/api-management-policies)çok sayıda ürün gemileri.
+Yayımcı portalı, yöneticilerin API 'Leri kullanıma sunduğu ve davranışlarını yönetebilen bir Yönetim Panosu sunar. Hizmet erişimi verilebilir, hizmet durumu izlenir ve hizmet telemetri toplanır. Yöneticiler, davranışı etkilemek için her bir uç noktaya *ilke* uygular. [İlkeler](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) , her hizmet çağrısı için sırayla yürütülen önceden oluşturulmuş deyimlerdir.  İlkeler bir gelen çağrı, giden çağrı için yapılandırılır veya bir hata olduğunda çağrılır. İlkeler, ilke birleştirilirken belirleyici sıralamayı etkinleştirmek üzere farklı hizmet kapsamlarına uygulanabilir. Ürün, çok sayıda önceden oluşturulmuş [ilke](https://docs.microsoft.com/azure/api-management/api-management-policies)ile birlikte gelir.
 
-İlkelerin bulut ayarı olan hizmetlerinizin davranışını nasıl etkileyebileceğine örnekler aşağıda verilmiştir:  
+İlkelerin bulut Yerel hizmetlerinizin davranışını nasıl etkileyebileceğini gösteren örnekler aşağıda verilmiştir:  
 
 - Hizmet erişimini kısıtlayın.
-- Kimlik doğrulamasını zorla.  
-- Gerekirse tek bir kaynaktan gelen gaz çağrıları.
-- Önbelleğe alma'yı etkinleştirin.
-- Belirli IP adreslerinden gelen aramaları engelleyin.
-- Hizmet akışını kontrol edin.
-- İstekleri SOAP'dan REST'e veya XML'den JSON'a gibi farklı veri biçimleri arasında dönüştürün.
+- Kimlik doğrulamasını zorunlu tutun.  
+- Gerekirse, tek bir kaynaktaki çağrıları kısıtlama.
+- Önbelleğe almayı etkinleştirin.
+- Belirli IP adreslerinden gelen çağrıları engelleyin.
+- Hizmetin akışını denetleyin.
+- İstekleri SOAP 'dan REST 'e veya XML gibi farklı veri biçimleri arasında dönüştürme.
 
-Azure API Yönetimi, bulutta veya veri merkezinizde her yerde barındırılan arka uç hizmetlerini ortaya çıkarabilir. Bulut tabanlı sistemlerinizde ortaya çıkarabileceğiniz eski hizmetler için hem REST hem de SOAP API'lerini destekler. Diğer Azure hizmetleri bile API Yönetimi aracılığıyla ortaya çıkabilir. Azure [Hizmet Veri Veri Tos'u](https://azure.microsoft.com/services/service-bus/) veya Azure Mantıksal [Uygulamaları](https://azure.microsoft.com/services/logic-apps/)gibi bir Azure destek hizmetinin üzerine yönetilen bir API yerleştirebilirsiniz. Azure API Yönetimi yerleşik yük dengeleme desteğini içermez ve bir yük dengeleme hizmetiyle birlikte kullanılmalıdır.
+Azure API Management, bulutta veya veri merkezinizde herhangi bir yerde barındırılan arka uç hizmetlerini kullanıma sunabilir. Bulut Yerel sistemlerinizde kullanıma sunabileceğiniz eski hizmetler için hem REST hem de SOAP API 'Lerini destekler. Diğer Azure hizmetleri de API Management aracılığıyla görüntülenebilir. Yönetilen bir API 'yi [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) veya [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)gibi bir Azure yedekleme hizmetinin üzerine yerleştirebilirsiniz. Azure API Management, yerleşik yük dengeleme desteği içermez ve bir Yük Dengeleme hizmeti ile birlikte kullanılmalıdır.
 
-Azure API Yönetimi [dört farklı katmanda](https://azure.microsoft.com/pricing/details/api-management/)kullanılabilir:
+Azure API Management [dört farklı katmanda](https://azure.microsoft.com/pricing/details/api-management/)kullanılabilir:
 
 - Geliştirici
 - Temel
 - Standart
 - Premium
 
-Geliştirici katmanı, üretim dışı iş yükleri ve değerlendirme içindir. Diğer katmanlar giderek daha fazla güç, özellik ve daha yüksek hizmet düzeyi anlaşmaları (SLA'lar) sunar. Premium katman [Azure Sanal Ağ](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) ve [çok bölgeli destek](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)sağlar. Tüm katmanlar saat başına sabit bir fiyata sahiptir.
+Geliştirici katmanı, üretim dışı iş yükleri ve değerlendirme için tasarlanmıştır. Diğer katmanlar, giderek daha fazla güç, özellik ve daha yüksek hizmet düzeyi sözleşmeleri (SLA 'Lar) sunar. Premium katmanı, [Azure sanal ağı](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) ve [çok bölgeli destek](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region)sağlar. Tüm katmanların saat başına sabit bir fiyatı vardır.
 
-Son zamanlarda Microsoft, Azure API Yönetimi için [bir API Yönetimi sunucusuz katmanı](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) duyurdu. Tüketim fiyatlandırma *katmanı*olarak adlandırılan hizmet, sunucusuz bilgi işlem modeli etrafında tasarlanmış API Yönetimi'nin bir çeşididir. Daha önce gösterilen "önceden tahsis edilmiş" fiyatlandırma katmanlarının aksine, tüketim katmanı anında sağlama ve eylem başına ödeme fiyatlandırması sağlar.
+Azure bulutu Ayrıca Azure API Management için [sunucusuz bir katman](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) sağlar. *Tüketim fiyatlandırma katmanı*olarak adlandırılan hizmet, sunucusuz bilgi işlem modeli etrafında tasarlanan API Management bir değişkendir. Daha önce gösterilen "önceden ayrılmış" fiyatlandırma katmanlarının aksine, tüketim katmanı hızlı sağlama ve eylem başına ödeme fiyatlandırması sağlar.
 
-Aşağıdaki kullanım örnekleri için API Ağ Geçidi özelliklerini sağlar:
+Aşağıdaki kullanım örnekleri için API Gateway özelliklerini sunar:
 
-- [Azure İşlevler](https://docs.microsoft.com/azure/azure-functions/functions-overview) ve [Azure Mantık Uygulamaları](https://azure.microsoft.com/services/logic-apps/)gibi sunucusuz teknolojiler kullanılarak uygulanan microservices.
-- Hizmet Veri Mes'i kuyrukları ve konuları, Azure depolama ve diğerleri gibi Azure destek hizmet kaynaklarını destekler.
-- Trafiğin zaman zaman büyük ani olduğu ancak çoğu zaman düşük kaldığı mikro hizmetler.
+- Mikro hizmetler, [Azure işlevleri](https://docs.microsoft.com/azure/azure-functions/functions-overview) ve [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps/)gibi sunucusuz teknolojiler kullanılarak uygulanır.
+- Azure yedekleme hizmeti kaynakları, Service Bus kuyrukları ve konuları, Azure depolama ve diğerleri.
+- Trafiğin zaman zaman büyük ani artışlar olduğu halde mikro hizmetler, sürenin büyük bölümü azalmış kalır.
 
-Tüketim katmanı aynı temel hizmet API Yönetimi bileşenlerini kullanır, ancak dinamik olarak ayrılan kaynaklara dayalı tamamen farklı bir mimari kullanır. Sunucusuz bilgi işlem modeliyle mükemmel bir şekilde uyumluhale getirir:
+Tüketim katmanı, aynı temel hizmet API Management bileşenlerini kullanır, ancak dinamik olarak ayrılan kaynaklara göre tamamen farklı bir mimari kullanır. Sunucusuz bilgi işlem modeliyle mükemmel bir şekilde hizalanır:
 
-- Yönetecek altyapı yok.
-- Boşta kapasite yok.
+- Yönetilecek altyapı yok.
+- Boş kapasite yok.
 - Yüksek kullanılabilirlik.
-- Otomatik ölçekleme.
-- Maliyet, fiili kullanıma bağlıdır.
+- Otomatik ölçeklendirme.
+- Maliyet, gerçek kullanıma göre belirlenir.
   
-Yeni tüketim katmanı, sunucusuz kaynakları API'ler olarak ortaya çıkaran bulut tabanlı sistemler için mükemmel bir seçimdir.
-
-> Yazma sırasında, tüketim katmanı Azure bulutunda önizlemededir.
+Yeni tüketim katmanı, sunucusuz kaynakları API olarak sunan, bulutta yerel sistemler için harika bir seçimdir.
 
 ## <a name="real-time-communication"></a>Gerçek zamanlı iletişim
 
-Gerçek zamanlı veya itme, iletişim, https://yassı sistemlerle HTTP üzerinden iletişim sağlayan ön uç uygulamalar için başka bir seçenektir. Finansal işaretlemeler, çevrimiçi eğitim, oyun oynama ve iş ilerleme güncellemeleri gibi uygulamalar, arka uçtan anında, gerçek zamanlı yanıtlar gerektirir. Normal HTTP iletişimi sayesinde, istemcinin yeni verilerin ne zaman kullanılabildığını bilmesi ne zaman mümkündür. İstemci sürekli *olarak yoklama* veya sunucuya istek göndermek gerekir. *Gerçek zamanlı* iletişim sayesinde, sunucu istediği zaman istemciye yeni veriler itebilir.
+Gerçek zamanlı veya gönderim, iletişim, ön uç uygulamalar için HTTP üzerinden arka uç bulut Yerel sistemleriyle iletişim kuran başka bir seçenektir. Finansal-ticiler, çevrimiçi eğitim, oyun ve iş ilerlemesi güncelleştirmeleri gibi uygulamalar, arka uçta anlık ve gerçek zamanlı yanıtlar gerektirir. Normal HTTP iletişimi sayesinde, istemcinin yeni verilerin ne zaman kullanılabilir olduğunu öğrenme yöntemi yoktur. İstemci sürekli olarak *yoklama* veya sunucuya istek gönderiyor olmalıdır. *Gerçek* zamanlı iletişimle, sunucu istediğiniz zaman istemciye yeni verileri gönderebilir.
 
-Gerçek zamanlı sistemler genellikle yüksek frekanslı veri akışları ve çok sayıda eşzamanlı istemci bağlantısı ile karakterize edilir. Gerçek zamanlı bağlantının el ile uygulanması, bağlı istemcilere ölçeklenebilirlik ve güvenilir mesajlaşma sağlamak için önemsiz olmayan altyapı gerektiren, hızlı bir şekilde karmaşık hale gelebilir. Kendinizi Azure Redis Önbelleği'nin bir örneğini ve istemci yakınlığı için yapışkan oturumlarla yapılandırılan bir dizi yük dengeleyicisini yönetirken bulabilirsiniz.
+Gerçek zamanlı sistemler genellikle yüksek frekanslı veri akışları ve çok sayıda eşzamanlı istemci bağlantısı tarafından belirlenir. Gerçek zamanlı bağlantının el ile uygulanması, bağlantılı istemcilere ölçeklenebilirlik ve güvenilir mesajlaşma sağlamak için önemsiz olmayan bir altyapı gerektiren hızlı bir şekilde karmaşık hale gelebilir. Bir Azure Redis Cache örneğini ve istemci benzeşimi için yapışkan oturumlarla yapılandırılmış yük dengeleyiciler kümesini yönetme hakkında bilgi edinebilirsiniz.
 
-[Azure SignalR Hizmeti,](https://azure.microsoft.com/services/signalr-service/) bulut ayarı uygulamalarınız için gerçek zamanlı iletişimi kolaylaştıran tam olarak yönetilen bir Azure hizmetidir. Kapasite sağlama, ölçekleme ve kalıcı bağlantılar gibi teknik uygulama ayrıntıları soyutlanır. %99.9 hizmet seviyesi anlaşmasıyla sizin için halledilirler. Altyapı tesisatı değil, uygulama özelliklerine odaklanırsınız.
+[Azure SignalR hizmeti](https://azure.microsoft.com/services/signalr-service/) , bulutta yerel uygulamalarınızın gerçek zamanlı iletişimini kolaylaştıran, tam olarak yönetilen bir Azure hizmetidir. Kapasite sağlama, ölçekleme ve kalıcı bağlantılar gibi teknik uygulama ayrıntıları soyutlanmıştır. Bunlar sizin için 99,9% bir hizmet düzeyi sözleşmesi ile işlenirler. Altyapı sıhhi tesisat değil uygulama özelliklerine odaklanırsınız.
 
-Bulut tabanlı bir HTTP hizmeti etkinleştirildiğinde, içerik güncelleştirmelerini tarayıcı, mobil ve masaüstü uygulamaları da dahil olmak üzere doğrudan bağlı istemcilere iletebilir. İstemciler sunucuyu yoklamaya gerek kalmadan güncelleştirilir. Azure SignalR, Web Sockets, Sunucu Tarafı Etkinlikleri ve Uzun Yoklama gibi gerçek zamanlı bağlantı oluşturan aktarım teknolojilerini özetler. Geliştiriciler, bağlı istemcilerin tümüne veya belirli alt kümelerine ileti göndermeye odaklanır.
+Bulut tabanlı bir HTTP hizmeti etkinleştirildikten sonra, tarayıcı, mobil ve Masaüstü uygulamaları dahil olmak üzere doğrudan bağlı istemcilere içerik güncelleştirmeleri gönderebilir. İstemciler, sunucuyu yoklamaya gerek kalmadan güncelleştirilir. Azure SignalR, WebSockets, sunucu tarafı olayları ve uzun yoklama dahil gerçek zamanlı bağlantı oluşturan aktarım teknolojilerini soyutlar. Geliştiriciler bağlı istemcilerin tamamına veya belirli alt kümelerine ileti göndermeye odaklanmaktadır.
 
-Şekil 4-7, Azure SignalR etkinleştirilmiş bulut tabanlı bir uygulamaya bağlanan bir TÜR İstemci kümesini gösterir.
+Şekil 4-7, Azure SignalR özellikli bir bulutta yerel uygulamaya bağlanan bir HTTP Istemcileri kümesini gösterir.
 
 ![Azure SignalR](./media/azure-signalr-service.png)
 
 **Şekil 4-7.** Azure SignalR
 
-Azure SignalR Hizmetinin bir diğer avantajı da Serverless bulut ayarı hizmetlerinin uygulanmasıyla birlikte gelir. Belki de kodunuz Azure Fonksiyonları tetikleyicileri ile isteğe bağlı olarak yürütülür. Kodunuz istemcilerle uzun bağlantılar sağlamadığından, bu senaryo zor olabilir. Azure SignalR Hizmeti, bağlantıları zaten yönettiği için bu durumu sizin yerinize çözebilir.
+Azure SignalR hizmeti 'nin başka bir avantajı da sunucusuz bulut Yerel Hizmetleri uygulama ile birlikte gelir. Belki de kodunuz Azure Işlevleri tetikleyicilerine göre isteğe bağlı olarak yürütülür. Bu senaryo, kodunuz istemcilerle uzun bağlantıları korumadığından karmaşık olabilir. Azure SignalR Hizmeti, bağlantıları zaten yönettiği için bu durumu sizin yerinize çözebilir.
 
-Azure SignalR Hizmeti, Azure SQL Veritabanı, Hizmet Veri Cemi veya Redis Önbelleği gibi diğer Azure hizmetleriyle yakından tümleşince bulut ayarı uygulamalarınız için birçok olasılık açar.
+Azure SignalR hizmeti, Azure SQL veritabanı, Service Bus veya Redis Cache gibi diğer Azure hizmetleriyle yakından tümleştirilir, bulutta yerel uygulamalarınız için birçok olasılıktan fazlasını açıyor.
 
 >[!div class="step-by-step"]
 >[Önceki](communication-patterns.md)
->[Sonraki](service-to-service-communication.md)
+>[İleri](service-to-service-communication.md)

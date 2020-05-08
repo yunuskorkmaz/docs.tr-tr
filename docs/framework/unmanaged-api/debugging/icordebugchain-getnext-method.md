@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47a90ed63ae217cb150f392ad9196f8d0d5764e3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192120"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894635"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext Metodu
 İş parçacığı için bir sonraki çerçeve zincirini alır.  
@@ -35,13 +35,13 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>Parametreler  
  `ppChain`  
- dışı İş parçacığı için bir sonraki çerçeve zincirini temsil eden ıcordebugzincirine ait adrese yönelik bir işaretçi. Bu zincir son zincirdir `ppChain` null olur.  
+ dışı İş parçacığı için bir sonraki çerçeve zincirini temsil eden ıcordebugzincirine ait adrese yönelik bir işaretçi. Bu zincir son zincirdir, `ppChain` null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

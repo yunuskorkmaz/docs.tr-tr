@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781209"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895507"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
 
@@ -17,8 +17,8 @@ Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, 
 
 Uygulamanın mimarisi Şekil 2-5 ' de gösterilmiştir. Sol tarafta, mobil, geleneksel web ve Web tek sayfalı uygulama (SPA) türleri ile ayrılmış olan istemci uygulamalar vardır. Sağ tarafta, her biri Docker kapsayıcılarında ve Kubernetes kümelerinde barındırılabilen sistem oluşturan sunucu tarafı bileşenleridir. Geleneksel Web uygulaması, sarı renkle gösterilen ASP.NET Core MVC uygulaması tarafından desteklenir. Bu uygulama ve mobil ve Web SPA uygulamaları, tek tek mikro hizmetlerle bir veya daha fazla API ağ geçidi üzerinden iletişim kurar. API ağ geçitleri, her bir ağ geçidinin belirli bir ön uç istemcisini destekleyecek şekilde tasarlandığı anlamına gelen "ön uçlar için arka uçlar" (BFF) düzenine uyar. Tek tek mikro hizmetler, API ağ geçitlerinin sağında listelenir ve hem iş mantığını hem de bazı kalıcılık deposu türlerini içerir. Farklı hizmetler SQL Server veritabanları, Redsıs Cache örnekleri ve MongoDB/CosmosDB mağazalarını kullanır. En sağdaki, mikro hizmetler arasında iletişim kurmak için kullanılan sistemin olay veri yolu.
 
-![eShopOnContainers mimarisi](./media/eshoponcontainers-architecture.png)
-**şekil 2-5**. EShopOnContainers mimarisi.
+![eshoponcontainers mimari](./media/eshoponcontainers-architecture.png)
+**Şekil 2-5**. EShopOnContainers mimarisi.
 
 Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 
@@ -28,7 +28,7 @@ Azure Kubernetes Service (AKS) ile ASP.NET Core MVC uygulamalarından bağımsı
 
 AKS, bağımsız kapsayıcı kümeleri için yönetim hizmetleri sağlar. Uygulama, yukarıdaki mimari diyagramında gösterilen her mikro hizmet için ayrı AKS kümeleri dağıtır. Bu yaklaşım, her bir hizmetin, kaynak taleplerine göre bağımsız olarak ölçeklendirilmesine olanak tanır. Her mikro hizmet de bağımsız olarak dağıtılabilir ve ideal olarak bu tür dağıtımlar sıfır sistem kapalı kalma süresine neden olur.
 
-## <a name="api-gateway"></a>API ağ geçidi
+## <a name="api-gateway"></a>API Ağ Geçidi
 
 EShopOnContainers uygulamasının birden çok ön uç istemcisi ve birden çok farklı arka uç hizmeti vardır. İstemci uygulamaları ve bunları destekleyen mikro hizmetler arasında bire bir yazışmalar yoktur. Böyle bir senaryoda, istemci yazılımını, çeşitli arka uç hizmetleriyle güvenli bir şekilde arabirimine yazarken harika bir karmaşıklık olabilir. Her istemcinin bu karmaşıklığı kendi kendine ele almanız gerekir. bunun sonucunda, yineleme ve hizmet olarak güncelleştirmelerin değiştirileceği veya yeni ilkelerin uygulandığı birçok yer vardır.
 
@@ -44,7 +44,7 @@ APıM kullanarak uygulamalar, her biri belirli bir ön uç istemcisi için arka 
 
 Uygulamanız AKS kullanıyorsa diğer bir seçenek de, Azure Gateway giriş denetleyicisi 'ni AKS kümeniz içinde Pod olarak dağıtmaktır. Bu, kümenizin bir Azure Application Gateway ile tümleşmesini sağlayarak ağ geçidinin trafiği AKS pods 'ye yükünü dengelemeye olanak tanır. [AKS Için Azure Gateway giriş denetleyicisi hakkında daha fazla bilgi edinin](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>Veri
+## <a name="data"></a>Veriler
 
 EShopOnContainers tarafından kullanılan çeşitli arka uç Hizmetleri farklı depolama gereksinimlerine sahiptir. Birkaç mikro hizmet SQL Server veritabanlarını kullanır. Sepet mikro hizmeti, kalıcılığı için bir Redsıs önbelleği kullanır. Konumlar mikro hizmeti, verileri için bir MongoDB API 'SI bekler. Azure, bu veri biçimlerinin her birini destekler.
 
@@ -54,26 +54,15 @@ EShopOnContainers uygulaması, kullanıcının güncel alışveriş sepetini ist
 
 Konumlar mikro hizmeti, sürekliliği için bir MongoDB NoSQL veritabanı kullanır. Geliştirme sırasında, veritabanı kendi kapsayıcısına dağıtılabilir ve üretimde, hizmet [Azure Cosmos DB MongoDB için API 'sini](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)kullanabilir. Azure Cosmos DB avantajlarından biri, bir SQL API 'SI ve MongoDB, Cassandra, Gremlin ve Azure Tablo depolama dahil yaygın NoSQL API 'Leri dahil olmak üzere birden çok farklı iletişim protokollerinden faydalanabilir. Azure Cosmos DB, kendisini kullanan hizmetlerin ihtiyaçlarını karşılamak üzere ölçeklenebilen bir hizmet olarak tam olarak yönetilen ve genel olarak dağıtılmış bir veritabanı sunmaktadır.
 
-Bulutta yerel uygulamalardaki dağıtılmış veriler, [Bölüm 5](database-per-microservice.md)' te daha ayrıntılı bir şekilde ele alınmıştır.
+Bulutta yerel uygulamalardaki dağıtılmış veriler, [Bölüm 5](distributed-data.md)' te daha ayrıntılı bir şekilde ele alınmıştır.
 
 ## <a name="event-bus"></a>Olay veri yolu
 
 Uygulama, farklı hizmetler arasındaki değişiklikleri iletmek için olayları kullanır. Bu işlevsellik çeşitli uygulamalarla uygulanabilir ve yerel olarak eShopOnContainers uygulaması [Kbbitmq](https://www.rabbitmq.com/)kullanır. Azure 'da barındırıldığı zaman, uygulama kendi mesajlaşmasından [Azure Service Bus](https://docs.microsoft.com/azure/service-bus/) faydalanır. Azure Service Bus, uygulamaların ve hizmetlerin ayrılmış, güvenilir ve zaman uyumsuz bir şekilde birbirleriyle iletişim kurmasına olanak sağlayan, tam olarak yönetilen bir tümleştirme ileti aracısıdır. Azure Service Bus, Yayımcı-abone senaryolarını desteklemek üzere ayrı ayrı kuyrukları ve ayrı *konuları* destekler. EShopOnContainers uygulaması, bir mikro hizmetten gelen iletilerin belirli bir iletiye tepki vermek için gereken diğer mikro hizmetlere dağıtılmasını desteklemek üzere Azure Service Bus ile ilgili konuların faydalanır.
 
-## <a name="resiliency"></a>Resiliency
+## <a name="resiliency"></a>Dayanıklılık
 
 Üretim ortamına dağıtıldıktan sonra, eShopOnContainers uygulaması, dayanıklılığını artırmak için kullanılabilen çeşitli Azure hizmetlerinden yararlanabilir. Uygulama, uygulamanın kullanılabilirliğine göre raporlama ve uyarılar sağlamak üzere Application Insights ile tümleştirilebilen sistem durumu denetimleri yayımlar. Azure kaynakları, hataları ve performans sorunlarını belirlemek ve düzeltmek için kullanılabilecek tanılama günlükleri de sağlar. Kaynak günlükleri, uygulama tarafından farklı Azure kaynaklarının ne zaman ve nasıl kullanıldığı hakkında ayrıntılı bilgi sağlar. [Bölüm 6](resiliency.md)' da bulutta yerel dayanıklılık özellikleri hakkında daha fazla bilgi edineceksiniz.
-
-## <a name="references"></a>Referanslar
-
-- [EShopOnContainers mimarisi](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL veritabanına genel bakış](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Redsıs için Azure önbelleği](https://azure.microsoft.com/services/cache/)
-- [MongoDB için Azure Cosmos DB API 'SI](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Izleyicisine genel bakış](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[Önceki](introduce-eshoponcontainers-reference-app.md)
