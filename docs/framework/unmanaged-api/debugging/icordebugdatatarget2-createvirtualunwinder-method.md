@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::CreateVirtualUnwinder Yöntemi
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-ms.openlocfilehash: 9fc4facda6253d0c68dcf89b2a1b06e639734efe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a479fba9bbcf28c60474fffc6219af23e62c251
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788848"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976505"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder Yöntemi
 Bir başlangıç bağlamından (bir iş parçacığının yaprağı olması gerekmez) geriye doğru geri sarıdan başlayan yeni bir Stack unwinder oluşturur.  
@@ -29,10 +29,10 @@ HRESULT CreateVirtualUnwinder(
  'ndaki Yığını ölçeklendirme yapılacak iş parçacığının yerel iş parçacığı KIMLIĞI.  
   
  contextFlags  
- 'ndaki `initialContext`içinde bağlamın hangi bölümlerinin tanımlandığını belirten bayraklar.  
+ 'ndaki İçeriğin hangi bölümlerinin tanımlandığını belirten bayraklar `initialContext`.  
   
  cbContext  
- 'ndaki `initialContext`boyutu.  
+ 'ndaki Boyutu `initialContext`.  
   
  InitialContext  
  'ndaki Bağlamdaki veriler.  
@@ -41,7 +41,7 @@ HRESULT CreateVirtualUnwinder(
  dışı Bir ICorDebugVirtualUnwinder Interface nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- başarılı olursa `S_OK`. Diğer `HRESULT` hata olduğunu gösterir. Mscordbi tarafından alınan başarısız olan `HRESULT`, önemli olarak değerlendirilir ve [ICorDebug](icordebug-interface.md) yöntemlerinin `CORDBG_E_DATA_TARGET_ERROR`döndürmesine neden olur.  
+ `S_OK`başarılı olursa. Diğer `HRESULT` bir hata olduğunu gösterir. Mscordbi tarafından alınan herhangi bir hata `HRESULT` önemli kabul edilir ve [ICorDebug](icordebug-interface.md) yöntemlerinin döndürülmesine `CORDBG_E_DATA_TARGET_ERROR`neden olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -49,13 +49,13 @@ HRESULT CreateVirtualUnwinder(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

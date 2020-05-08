@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793464"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976193"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject Yöntemi
 Yeni bir nesne örneği ayırır ve belirtilen Oluşturucu yöntemini çağırır.  
@@ -42,13 +42,13 @@ HRESULT NewObject (
  'ndaki Çağrılacak Oluşturucu.  
   
  `nArgs`  
- 'ndaki `ppArgs` dizisinin boyutu.  
+ 'ndaki `ppArgs` Dizinin boyutu.  
   
  `ppArgs`  
  'ndaki Her biri oluşturucuya geçirilecek bir bağımsız değişkeni temsil eden ICorDebugValue nesnelerinin dizisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   

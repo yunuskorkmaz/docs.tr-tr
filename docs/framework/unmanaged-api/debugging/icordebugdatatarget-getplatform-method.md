@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-ms.openlocfilehash: 3654c94975d16e35d5c3d8e762730d17509a2c6d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3df35d52a4e5209b282ccef653b065bdcf1f8fe4
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788872"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976544"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform Metodu
 Hedef işlemin çalıştığı işlemci mimarisi ve işletim sistemi dahil olmak üzere platform hakkında bilgi sağlar.  
@@ -36,9 +36,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
  dışı Hedef platformu açıklayan [CorDebugPlatformEnum](cordebugplatform-enumeration.md) numaralandırması için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CorDebugPlatformEnum` numaralandırma dönüş değeri [ICorDebug](icordebug-interface.md) arabirimi tarafından, işaretçi boyutu, adres alanı düzeni, YAZMAÇ kümesi, yönerge biçimi, bağlam düzeni ve çağırma kuralları gibi hedef işlemin ayrıntılarını belirlemede kullanılır.  
+ `CorDebugPlatformEnum` Sabit listesi dönüş değeri, kendi işaretçi boyutu, adres alanı düzeni, kayıt kümesi, yönerge biçimi, bağlam düzeni ve çağırma kuralları gibi hedef işlemin ayrıntılarını belirlemede [ICorDebug](icordebug-interface.md) arabirimi tarafından kullanılır.  
   
- `pTargetPlatform` değeri, kullanımdaki gerçek donanımı belirtmek yerine, hedef için Öykünülen bir platforma başvurabilir. Örneğin, Windows işletim sisteminin 64 bitlik bir sürümünde Windows on Windows (WOW) ortamında çalışan bir işlem [CorDebugPlatformEnum](cordebugplatform-enumeration.md) numaralandırmasının `CORDB_PLATFORM_WINDOWS_X86` değerini kullanmalıdır.  
+ `pTargetPlatform` Değer, kullanımdaki gerçek donanımı belirtmek yerine, hedef için Öykünülen bir platforma başvurabilir. Örneğin, Windows işletim sisteminin 64 bitlik bir sürümündeki Windows 'da Windows (WOW) ortamında çalışan bir işlem `CORDB_PLATFORM_WINDOWS_X86` [CorDebugPlatformEnum](cordebugplatform-enumeration.md) numaralandırması değerini kullanmalıdır.  
   
  Bu yöntem başarılı olmalıdır. Başarısız olursa, hedef platform kullanılamaz olur. Yöntemi aşağıdaki nedenlerden dolayı başarısız olabilir:  
   
@@ -47,13 +47,13 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
 - Hedef Platformdaki gerçek donanım kullanılamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
