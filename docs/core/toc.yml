@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
   href: rid-catalog.md
+- name: Kaynak bildirim adları
+  href: resources/manifest-file-names.md
 - name: Bağımlılık yönetimi ve yüklemesi
   items:
     - name: Bağımlılık yönetimi

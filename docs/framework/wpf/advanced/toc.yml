@@ -463,18 +463,17 @@
           href: localization-attributes-and-comments.md
         - name: WPF Genel Bakışında Çift Yönlü Özellikler
           href: bidirectional-features-in-wpf-overview.md
-        - name: Nasıl Yapılır Konuları
-          href: globalization-and-localization-how-to-topics.md
+        - name: Nasıl yapılır belgeleri
           items:
-            - name: Bir Uygulamayı Yerelleştirme
+            - name: Uygulama yerelleştirme
               href: how-to-localize-an-application.md
-            - name: Düğme Oluşturmak için Otomatik Düzeni Kullanma
+            - name: Düğme oluşturmak için otomatik düzeni kullanma
               href: how-to-use-automatic-layout-to-create-a-button.md
-            - name: Otomatik Düzen için Kılavuz Kullanma
+            - name: Otomatik düzen için kılavuz kullanma
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: Yerelleştirilebilir Dize Kaynaklarını Yönetmek için ResourceDictionary Kullanma
+            - name: Kaynakları yönetmek için ResourceDictionary kullanma
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-            - name: Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı
+            - name: Yerelleştirilebilir uygulamalarda kaynak kullanma
               href: how-to-use-resources-in-localizable-applications.md
     - name: Düzen
       href: layout.md
