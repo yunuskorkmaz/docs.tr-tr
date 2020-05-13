@@ -1,5 +1,6 @@
 ---
 title: .NET’te bütünleştirilmiş kodlar
+description: Derlemeler, için temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinleridir. NET tabanlı uygulamalar.
 ms.date: 08/15/2019
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 helpviewer_keywords:
@@ -12,97 +13,97 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228671"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379908"
 ---
 # <a name="assemblies-in-net"></a>.NET’te bütünleştirilmiş kodlar
 
-Derlemeler dağıtım, sürüm denetimi, yeniden kullanımı, etkinleştirme kapsam ve güvenlik izinleri için temel birimleri oluşturur. NET tabanlı uygulamalar. Bir derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan bir tür ve kaynakların bir derlemesidir. Derlemeler yürütülebilir (*.exe*) veya dinamik bağlantı kitaplığı (*.dll*) dosyaları biçimindedir ve .NET uygulamalarının yapı taşlarıdır. Ortak dil çalışma zamanını, tür uygulamalarına dikkat etmesi gereken bilgilerle birlikte sağlarlar.
+Derlemeler, için temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinleri birimlerini oluşturur. NET tabanlı uygulamalar. Bir derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan bir tür ve kaynakların bir derlemesidir. Derlemeler yürütülebilir (*. exe*) veya dinamik bağlantı kitaplığı (*. dll*) dosyaları formunu alır ve .NET uygulamalarının yapı taşlarıdır. Ortak dil çalışma zamanını, tür uygulamalarının farkında olması için gereken bilgileri sağlar.
 
-.NET Core ve .NET Framework'de, bir veya daha fazla kaynak kod dosyasından derleme oluşturabilirsiniz. .NET Framework'de derlemeler bir veya daha fazla modül içerebilir. Bu, birden çok geliştiricinin tek bir derleme oluşturmak için birleştirilen ayrı kaynak kodu dosyaları veya modülleri üzerinde çalışabilmesi için daha büyük projelerin planlanmasını sağlar. Modüller hakkında daha fazla bilgi için [bkz.](../../framework/app-domains/build-multifile-assembly.md)
+.NET Core ve .NET Framework ' de bir veya daha fazla kaynak kodu dosyasından derleme oluşturabilirsiniz. .NET Framework, derlemeler bir veya daha fazla modül içerebilir. Bu, birçok geliştiricinin tek bir derleme oluşturmak için birleştirilen ayrı kaynak kod dosyaları veya modüller üzerinde çalışabilmesi için daha büyük projelerin planlanmasını sağlar. Modüller hakkında daha fazla bilgi için bkz. [nasıl yapılır: çok dosyalı derleme oluşturma](../../framework/app-domains/build-multifile-assembly.md).
 
 Derlemeler aşağıdaki özelliklere sahiptir:
 
-- Derlemeler *.exe* veya *.dll* dosyaları olarak uygulanır.
+- Derlemeler *. exe* veya *. dll* dosyaları olarak uygulanır.
 
-- .NET Framework'ü hedefleyen kitaplıklar için, derlemeleri [genel derleme önbelleğine (GAC)](../../framework/app-domains/gac.md)koyarak uygulamalar arasında paylaşabilirsiniz. Bunları GAC'ye eklemeden önce derlemeleri güçlü adlandırmanız gerekir. Daha fazla bilgi için Bkz. [Güçlü adlı derlemeler.](strong-named.md)
+- .NET Framework hedefleyen kitaplıklar için, derlemeleri [genel derleme önbelleği 'ne (GAC)](../../framework/app-domains/gac.md)koyarak uygulamalar arasında paylaşabilirsiniz. GAC 'ye dahil etmeden önce derlemeleri tanımlayıcı olarak adlandırın. Daha fazla bilgi için bkz. [Strong-adlandırılmış derlemeler](strong-named.md).
 
-- Derlemeler yalnızca gerekli yse belleğe yüklenir. Kullanılmazlarsa, yüklenmezler. Bu, derlemelerin daha büyük projelerdeki kaynakları yönetmenin etkili bir yolu olabileceği anlamına gelir.
+- Derlemeler yalnızca gerekli olmaları durumunda belleğe yüklenir. Kullanılmıyorsa, bunlar yüklenmez. Bu, derlemelerin daha büyük projelerde kaynakları yönetmenin etkili bir yolu olabileceği anlamına gelir.
 
-- Yansımayı kullanarak bir derleme hakkında programlı olarak bilgi edinebilirsiniz. Daha fazla bilgi için [Yansıma (C#)](../../csharp/programming-guide/concepts/reflection.md) veya [Yansıma (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md)'ye bakın.
+- Yansıma kullanarak, bir derleme hakkında program aracılığıyla bilgi edinebilirsiniz. Daha fazla bilgi için bkz. [yansıma (C#)](../../csharp/programming-guide/concepts/reflection.md) veya [yansıma (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Bir derlemeyi sadece .NET Core'daki <xref:System.Reflection.MetadataLoadContext> sınıfı ve .NET Core ve .NET Framework'deki <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> yöntemleri <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> kullanarak incelemek için yükleyebilirsiniz.
+- <xref:System.Reflection.MetadataLoadContext>.NET Core içindeki sınıfını ve <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> .net Core ve .NET Framework yöntemlerini kullanarak incelemek için bir derlemeyi yükleyebilirsiniz.
 
-## <a name="assemblies-in-the-common-language-runtime"></a>Ortak dilde çalışma zamanındaki derlemeler
+## <a name="assemblies-in-the-common-language-runtime"></a>Ortak dil çalışma zamanındaki derlemeler
 
-Derlemeler, tür uygulamalarına dikkat etmesi gereken bilgilerle ortak dil çalışma zamanını sağlar. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.
+Derlemeler, tür uygulamalarının farkında olması için gereken bilgilerle ortak dil çalışma zamanı sağlar. Çalışma zamanı için, bir derleme bağlamı dışında bir tür yoktur.
 
-Derleme aşağıdaki bilgileri tanımlar:
+Bir derleme aşağıdaki bilgileri tanımlar:
 
-- Ortak dil çalışma zamanının yürütüldettiği kod. Her derlemenin yalnızca bir giriş `DllMain`noktası `WinMain`olabileceğini `Main`unutmayın: , , veya .
+- Ortak dil çalışma zamanının yürütüldüğünü belirten kod. Her derlemenin yalnızca bir giriş noktası olabileceğini unutmayın: `DllMain` , `WinMain` , veya `Main` .
 
-- Güvenlik sınırı. Bir derleme, izinlerin istendiği ve verildiği birimdir. Derlemelerde güvenlik sınırları hakkında daha fazla bilgi için [Montaj güvenlik hususlarına](security-considerations.md)bakın.
+- Güvenlik sınırı. Bir derleme, izinlerin istendiği ve verildiği birimdir. Derlemelerdeki güvenlik sınırları hakkında daha fazla bilgi için bkz. [bütünleştirilmiş kod güvenliği konuları](security-considerations.md).
 
-- Sınır yazın. Her tipin kimliği, içinde bulunduğu derlemenin adını içerir. Bir derlemenin kapsamına yüklenen ve `MyType` olarak adlandırılan bir tür, başka bir derlemenin kapsamına yüklenen ve `MyType` olarak adlandırılan türle aynı değildir.
+- Tür sınırı. Her tipin kimliği, içinde bulunduğu derlemenin adını içerir. Bir derlemenin kapsamına yüklenen ve `MyType` olarak adlandırılan bir tür, başka bir derlemenin kapsamına yüklenen ve `MyType` olarak adlandırılan türle aynı değildir.
 
-- Başvuru kapsamı sınırı. [Derleme bildirimi,](#assembly-manifest) türleri çözmek ve kaynak isteklerini karşılamak için kullanılan meta verilere sahiptir. Bildirim, derleme dışında ortaya çıkarmak için türleri ve kaynakları belirtir ve bağlı olduğu diğer derlemeleri toplar. Taşınabilir yürütülebilir (PE) dosyasındaki Microsoft ara dili (MSIL) kodu, ilişkili bir [derleme bildirimi](#assembly-manifest)olmadığı sürece yürütülmez.
+- Başvuru kapsamı sınırı. [Bütünleştirilmiş kod bildiriminde](#assembly-manifest) , türleri çözümlemek ve kaynak isteklerini karşılayan meta veriler vardır. Bildirim, derleme dışında kullanıma sunulacak türleri ve kaynakları belirtir ve üzerinde bağımlı olduğu diğer derlemeleri numaralandırır. Bir Taşınabilir çalıştırılabilir (PE) dosyada Microsoft ara dili (MSIL) kodu, ilişkili bir [derleme bildirimine](#assembly-manifest)sahip olmadığı takdirde yürütülmez.
 
-- Sürüm sınırı. Derleme, ortak dil çalışma süresindeki en küçük sürülebilir birimdir. Aynı derlemedeki tüm türler ve kaynaklar bir birim olarak sürülür. [Derleme bildirimi,](#assembly-manifest) bağımlı derlemeler için belirttiğiniz sürüm bağımlılıklarını açıklar. Sürüm hakkında daha fazla bilgi için [Montaj sürümüne](versioning.md)bakın.
+- Sürüm sınırı. Derleme, ortak dil çalışma zamanındaki en düşük sürümlenebilir birimdir. Aynı derlemedeki tüm türler ve kaynaklar birim olarak sürümlüdür. [Derleme bildirimi](#assembly-manifest) , herhangi bir bağımlı derleme için belirttiğiniz sürüm bağımlılıklarını açıklar. Sürüm oluşturma hakkında daha fazla bilgi için bkz. [derleme sürümü oluşturma](versioning.md).
 
-- Dağıtım birimi. Bir uygulama başlatıldığında, sadece uygulamanın başlangıçta çağırdığı derlemeler mevcut olmalıdır. Yerelleştirme kaynakları veya yardımcı program sınıfları içeren derlemeler gibi diğer derlemeler, isteğe bağlı olarak alınabilir. Bu, uygulamaların ilk indirildiğinde basit ve ince olmasını sağlar. Derlemeleri dağıtma hakkında daha fazla bilgi için [bkz.](../../framework/deployment/index.md)
+- Dağıtım birimi. Bir uygulama başlatıldığında, sadece uygulamanın başlangıçta çağırdığı derlemeler mevcut olmalıdır. Yerelleştirme kaynaklarını veya yardımcı sınıfları içeren derlemeler gibi diğer derlemeler isteğe bağlı olarak alınabilir. Bu, uygulamaların ilk İndirilme sırasında basit ve ince olmasını sağlar. Derlemeleri dağıtma hakkında daha fazla bilgi için bkz. [uygulamaları dağıtma](../../framework/deployment/index.md).
 
-- Yan yana yürütme birimi. Bir derlemenin birden çok sürümü çalıştırma hakkında daha fazla bilgi için [Derlemeler ve yan yana yürütme](side-by-side-execution.md)bölümüne bakın.
+- Yan yana yürütme birimi. Bir derlemenin birden çok sürümünü çalıştırma hakkında daha fazla bilgi için bkz. [derlemeler ve yan yana yürütme](side-by-side-execution.md).
 
-## <a name="create-an-assembly"></a>Derleme oluşturma
+## <a name="create-an-assembly"></a>Derleme oluştur
 
-Derlemeler statik veya dinamik olabilir. Statik derlemeler, disk üzerinde taşınabilir yürütülebilir (PE) dosyalarda saklanır. Statik derlemeler arabirimleri, sınıfları ve bit eşlemler, JPEG dosyaları ve diğer kaynak dosyaları gibi kaynakları içerebilir. Ayrıca, doğrudan bellekten çalıştırılan ve yürütmeden önce diske kaydedilmemiş dinamik derlemeler de oluşturabilirsiniz. Yürütüldükten sonra dinamik derlemeleri diske kaydedebilirsiniz.
+Derlemeler statik veya dinamik olabilir. Statik derlemeler, disk üzerinde taşınabilir yürütülebilir (PE) dosyalarda saklanır. Statik derlemeler, arabirimler, sınıflar ve bit eşlemler, JPEG dosyaları ve diğer kaynak dosyaları gibi kaynakları içerebilir. Ayrıca, doğrudan bellekten çalıştırılan ve yürütmeden önce diske kaydedilmemiş dinamik derlemeler de oluşturabilirsiniz. Yürütüldükten sonra dinamik derlemeleri diske kaydedebilirsiniz.
 
-Derleme oluşturmak için birçok yol vardır. *.dll* veya *.exe* dosyaları oluşturabilen Visual Studio gibi geliştirme araçlarını kullanabilirsiniz. Diğer geliştirme ortamlarından modüllerle derlemeler oluşturmak için Windows SDK'daki araçları kullanabilirsiniz. Dinamik derlemeler oluşturmak için ortak dil <xref:System.Reflection.Emit?displayProperty=nameWithType>çalışma zamanı API'lerini de kullanabilirsiniz.
+Derleme oluşturmak için birçok yol vardır. Visual Studio gibi, *. dll* veya *. exe* dosyaları oluşturabileceğiniz geliştirme araçlarını kullanabilirsiniz. Diğer geliştirme ortamlarındaki modüllerle derlemeler oluşturmak için Windows SDK araçlarını kullanabilirsiniz. Dinamik derlemeler oluşturmak için gibi ortak dil çalışma zamanı API 'Lerini de kullanabilirsiniz <xref:System.Reflection.Emit?displayProperty=nameWithType> .
 
-Derleme derlemeleri Visual Studio'da oluşturarak, .NET Core komut satırı arabirim araçlarıyla oluşturarak veya .NET Framework derlemesini komut satırı derleyicisiyle oluşturarak derlemeyapın. .NET Core CLI kullanarak derlemeler oluşturma hakkında daha fazla bilgi için [bkz.](../../core/tools/index.md) Komut satırı derleyicileri ile derlemeler oluşturmak için C#için [csc.exe ile komut satırı oluşturma](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya Visual Basic için komut [satırından Yapı'ya](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) bakın.
+Derlemeleri Visual Studio 'da oluşturarak, .NET Core komut satırı arabirimi araçlarıyla derleyerek veya komut satırı derleyicisi ile .NET Framework derlemeleri oluştururken derleyin. .NET Core CLI kullanarak derlemeler oluşturma hakkında daha fazla bilgi için bkz. [.NET Core CLI genel bakış](../../core/tools/index.md). Komut satırı derleyicileri ile derleme oluşturmak için, bkz. C# için [CSC. exe Ile komut satırı derleme](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya Visual Basic için [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) .
 
 > [!NOTE]
-> Visual Studio'da derleme oluşturmak için **Yapı** menüsünde **Oluştur'u**seçin.
+> Visual Studio 'da derleme oluşturmak için, **Oluştur** menüsünde, **Oluştur**' u seçin.
 
 ## <a name="assembly-manifest"></a>Derleme bildirimi
 
-Her derlemenin bir *derleme bildirim* dosyası vardır. İçindekiler tablosuna benzer şekilde, derleme bildirimi şunları içerir:
+Her derlemenin bir *bütünleştirilmiş kod bildirim* dosyası vardır. İçindekiler tablosuna benzer şekilde, derleme bildirimi şunları içerir:
 
 - Derlemenin kimliği (adı ve sürümü).
 
-- *.exe* veya *.dll* dosyanızın dayandığı diğer derlemeler, bitmap dosyaları veya Readme dosyaları gibi derlemeyi oluşturan diğer tüm dosyaları açıklayan bir dosya tablosu.
+- *. Exe* veya *. dll* dosyanızın dayandığı, oluşturduğunuz diğer derlemeler, bit eşlem dosyaları veya Benioku dosyaları gibi, derlemeyi oluşturan diğer tüm dosyaları açıklayan bir dosya tablosu.
 
-- *.dll*s veya diğer dosyalar gibi tüm dış akçelerin listesi olan *derleme başvuru listesi.* Derleme başvuruları hem genel hem de özel nesnelere başvurular içerir. Genel nesneler diğer tüm uygulamalar için kullanılabilir. .NET Core'da, genel nesneler belirli bir .NET Core çalışma süresiyle birleştiğinde. .NET Framework'de, genel nesneler genel montaj önbelleğinde (GAC) bulunur. *System.IO.dll* GAC bir derleme bir örnektir. Özel nesneler, uygulamanızın yüklendiği dizinde veya altında dizin düzeyinde olmalıdır.
+- *. Dll*s veya diğer dosyalar gibi tüm dış bağımlılıkların listesi olan bir *derleme başvuru listesi*. Derleme başvuruları hem genel hem de özel nesneler için başvurular içerir. Genel nesneler diğer tüm uygulamalar tarafından kullanılabilir. .NET Core 'da, genel nesneler belirli bir .NET Core çalışma zamanı ile birlikte işlenir. .NET Framework, genel nesneler genel derleme önbelleğinde (GAC) bulunur. *System. IO. dll* GAC 'deki bir derlemeye örnektir. Özel nesneler, uygulamanızın yüklendiği dizinin üzerinde veya altında bir dizin düzeyinde olmalıdır.
 
-Derlemeler içerik, sürüm ve bağımlılıklar hakkında bilgi içerdiğinden, bunları kullanan uygulamaların düzgün çalışması için Windows sistemlerindeki kayıt defteri gibi dış kaynaklara dayanması gerekmez. Derlemeler *.dll* çakışmalarını azaltır ve uygulamalarınızın daha güvenilir ve dağıtılmasını kolaylaştırır. Birçok durumda, bir . NET tabanlı uygulama sadece hedef bilgisayara dosyalarını kopyalayarak. Daha fazla bilgi için [Derleme bildirimine](manifest.md)bakın.
+Derlemeler içerik, sürüm oluşturma ve Bağımlılıklar hakkında bilgi içerdiğinden, bunları kullanan uygulamalar Windows sistemlerindeki kayıt defteri gibi dış kaynakları değil, düzgün şekilde çalışır. Derlemeler *. dll* çakışmalarını azaltır ve uygulamalarınızın dağıtımını daha güvenilir ve daha kolay hale getirir. Çoğu durumda, bir yükleyebilirsiniz. Yalnızca dosyalarını hedef bilgisayara kopyalayarak NET tabanlı uygulama. Daha fazla bilgi için bkz. [derleme bildirimi](manifest.md).
 
-## <a name="add-a-reference-to-an-assembly"></a>Derlemeye başvuru ekleme
+## <a name="add-a-reference-to-an-assembly"></a>Bir derlemeye başvuru ekleme
 
-Bir uygulamada derleme kullanmak için, buna bir başvuru eklemeniz gerekir. Bir derleme başvurulduktan sonra, ad alanlarının tüm erişilebilir türleri, özellikleri, yöntemleri ve diğer üyeleri, kodları kaynak dosyanızın bir parçasıyılmış gibi uygulamanız tarafından kullanılabilir.
+Bir uygulamada bir derlemeyi kullanmak için buna bir başvuru eklemeniz gerekir. Bir derlemeye başvurulduktan sonra, tüm erişilebilir türler, özellikler, Yöntemler ve ad alanlarının diğer üyeleri, kodu kaynak dosyanızın bir parçası olduğundan, uygulamanız için kullanılabilir.
 
 > [!NOTE]
-> .NET Sınıf Kitaplığı'ndaki derlemelerin çoğuna otomatik olarak başvurulur. Bir sistem derlemesi otomatik olarak başvurulmuyorsa, .NET Core için, derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio'da NuGet Paket Yöneticisi'ni kullanın veya *.csproj* veya *.vbproj* projesine montaj için [ \<packagereference>](../../core/tools/dependencies.md#the-packagereference-element) öğesi ekleyin. .NET Framework'de, Visual Studio'daki Başvuru **Ekle** iletişim kutusunu kullanarak veya [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için `-reference` komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
+> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya *. csproj* veya *. vbproj* projesine derleme için bir [ \< packagereference>](../../core/tools/dependencies.md#the-packagereference-element) öğesi ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya `-reference` [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
 
-C#'da, aynı derlemenin iki sürümütek bir uygulamada kullanabilirsiniz. Daha fazla bilgi için [extern diğer adı.](../../csharp/language-reference/keywords/extern-alias.md)
+C# ' de, tek bir uygulamada aynı derlemenin iki sürümünü kullanabilirsiniz. Daha fazla bilgi için bkz. [extern diğer ad](../../csharp/language-reference/keywords/extern-alias.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Montaj içeriği](contents.md)|Bir derlemeoluşturan öğeler.|
-|[Montaj manifestosu](manifest.md)|Derlemedeki veriler ve derlemelerde nasıl depolanır.|
-|[Genel montaj önbelleği](../../framework/app-domains/gac.md)|GAC derlemeleri nasıl saklar ve kullanır.|
-|[Güçlü adlandırılmış derlemeler](strong-named.md)|Güçlü adlandırılmış derlemelerin özellikleri.|
-|[Derleme güvenliği hakkında dikkate alınması gerekenler](security-considerations.md)|Güvenlik meclislerde nasıl çalışır.|
-|[Montaj sürümü](versioning.md)|.NET Framework sürüm ilkesine genel bakış.|
-|[Montaj yerleşimi](../../framework/app-domains/assembly-placement.md)|Montajların bulunduğu yer.|
-|[Derlemeler ve yan yana yürütme](side-by-side-execution.md)|Aynı anda çalışma zamanının veya derlemenin birden çok sürümü kullanın.|
-|[Dinamik metotları ve bütünleştirilmiş kodları yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler nasıl oluşturulur.|
-|[Çalışma zamanı derlemeleri nasıl bulur?](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework'ün montaj başvurularını çalışma zamanında nasıl çözer?|
+|[Derleme içerikleri](contents.md)|Bir derlemeyi oluşturan öğeler.|
+|[Derleme bildirimi](manifest.md)|Derleme bildirimindeki veriler ve derlemelerde nasıl depolanıyor.|
+|[Genel derleme önbelleği](../../framework/app-domains/gac.md)|GAC derlemeleri nasıl depolar ve kullanır.|
+|[Tanımlayıcı adlandırılmış derlemeler](strong-named.md)|Tanımlayıcı adlı derlemelerin özellikleri.|
+|[Derleme güvenliği hakkında dikkate alınması gerekenler](security-considerations.md)|Güvenlik, Derlemelerle nasıl kullanılır.|
+|[Derleme sürümü oluşturma](versioning.md)|.NET Framework sürüm oluşturma ilkesine genel bakış.|
+|[Derleme yerleştirme](../../framework/app-domains/assembly-placement.md)|Derlemelerin nerede bulunacağı.|
+|[Derlemeler ve yan yana yürütme](side-by-side-execution.md)|Çalışma zamanının veya derlemenin birden çok sürümünü aynı anda kullanın.|
+|[Dinamik metotları ve bütünleştirilmiş kodları yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler oluşturma.|
+|[Çalışma zamanının derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework çalışma zamanında derleme başvurularını nasıl çözümler.|
 
 ## <a name="reference"></a>Başvuru
 
@@ -110,10 +111,10 @@ C#'da, aynı derlemenin iki sürümütek bir uygulamada kullanabilirsiniz. Daha 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET derleme dosya biçimi](file-format.md)
-- [Arkadaş meclisleri](friend.md)
+- [.NET derleme dosyası biçimi](file-format.md)
+- [Arkadaş derlemeleri](friend.md)
 - [Başvuru derlemeleri](reference-assemblies.md)
-- [Nasıl yapılsın: Montajları yükleme ve boşaltma](load-unload.md)
-- [Nasıl kullanılır: .NET Core'da montaj boşaltılabilirliğini kullanma ve hata ayıklama](unloadability.md)
-- [Nasıl Yapılır: Dosyanın derleme olup olmadığını belirleme](identify.md)
-- [Nasıl yapilir: MetadataLoadContext kullanarak montaj içeriğini inceleyin](inspect-contents-using-metadataloadcontext.md)
+- [Nasıl yapılır: derlemeleri yükleme ve kaldırma](load-unload.md)
+- [Nasıl yapılır: .NET Core 'da derleme tasbilirliğini kullanma ve hata ayıklama](unloadability.md)
+- [Nasıl yapılır: bir dosyanın derleme olup olmadığını belirleme](identify.md)
+- [Nasıl yapılır: MetadataLoadContext kullanarak bütünleştirilmiş kod içeriklerini Inceleme](inspect-contents-using-metadataloadcontext.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: 00c9939b25f395010f6ea5832b405c3e9928a223
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2149c985519b95f89af2c50d05753ae7259babe4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792021"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378217"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable Yöntemi
 Kullanılabilir yazmaçların bit eşlemini sağlayan bir bayt dizisini alır.  
@@ -36,30 +36,30 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametreler  
  `numChunks`  
- 'ndaki `availableRegChunks` dizisinin boyutu.  
+ 'ndaki `availableRegChunks`Dizinin boyutu.  
   
  `availableRegChunks`  
  dışı Her bitin bir kayda karşılık gelen bir bayt dizisi. Bir yazmaç varsa, kaydın karşılık gelen biti ayarlanır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- CorDebugRegister sabit listesinin değerleri, farklı mikro işlemcilerin kayıtlarını belirtir. Her bir değerin üst beş biti, `availableRegChunks` bayt dizisinin dizinidir. Her bir değerin alt üç biti, dizinlenmiş bayt içindeki bit konumunu belirler. Belirli bir kaydı belirten `CorDebugRegister` bir değer verildiğinde, maskenin içindeki kayıt konumu aşağıdaki şekilde belirlenir:  
+ CorDebugRegister sabit listesinin değerleri, farklı mikro işlemcilerin kayıtlarını belirtir. Her bir değerin üst beş biti, `availableRegChunks` bayt dizisinin dizinidir. Her bir değerin alt üç biti, dizinlenmiş bayt içindeki bit konumunu belirler. Belirli bir `CorDebugRegister` kaydı belirten bir değer verildiğinde, maskede kaydın konumu aşağıdaki şekilde belirlenir:  
   
-1. `availableRegChunks` dizisindeki doğru bayta erişmek için gereken dizini ayıklayın:  
+1. Dizideki doğru bayta erişmek için gereken dizini ayıklayın `availableRegChunks` :  
   
-     `CorDebugRegister` değeri > > 3  
+     `CorDebugRegister`değer >> 3  
   
 2. Dizin oluşturulan bayt içindeki bit konumunu ayıklayın; burada bit sıfır en az önemli bir bittir:  
   
-     `CorDebugRegister` değeri & 7  
+     `CorDebugRegister`değer & 7  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

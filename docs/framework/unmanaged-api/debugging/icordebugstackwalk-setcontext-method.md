@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791851"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378771"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext Yöntemi
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) nesnesinin geçerli bağlamını iş parçacığı için geçerli bir bağlam olarak ayarlar.  
@@ -38,22 +38,22 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  'ndaki Bir [CorDebugSetContextFlag](cordebugsetcontextflag-enumeration.md) bayrağı, bağlamın yığındaki etkin kareden mi yoksa yığının geriye doğru bir şekilde mi devraldığını gösterir.  
   
  `contextSize`  
- 'ndaki `CONTEXT` arabelleğinin ayrılan boyutu.  
+ 'ndaki Arabelleğin ayrılan boyutu `CONTEXT` .  
   
  `context`  
- 'ndaki `CONTEXT` arabelleği.  
+ 'ndaki `CONTEXT`Arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk` nesnenin bağlamı başarıyla ayarlandı.|  
-|E_FAIL|`ICorDebugStackWalk` nesnenin bağlamı ayarlanmadı.|  
+|S_OK|`ICorDebugStackWalk`Nesnenin bağlamı başarıyla ayarlandı.|  
+|E_FAIL|`ICorDebugStackWalk`Nesnenin bağlamı ayarlanmadı.|  
 |E_INVALIDARG|Bağlam null.|  
 |HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER)|Bağlam arabelleği çok küçük.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem, iş parçacığının geçerli bağlamını değiştirmez.  
@@ -63,13 +63,13 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  [Icordebugstackizlenecek yol:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini hemen çağırarak, bu bağlamın tam bit düzeyinde bir kopyasını alabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

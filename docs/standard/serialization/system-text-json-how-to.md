@@ -1,5 +1,6 @@
 ---
 title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
+description: Bu makalede, System.Text.Json .net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanabileceğiniz gösterilmektedir. Örnek kod içerir.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 6324fe28b23e4df74bcf3fd1dbb7e0c14d5e3d1b
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: ad748508b73c3e141ae345efa0abb66c009740cd
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135808"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378717"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
-Bu makalede, <xref:System.Text.Json> JAVASCRIPT nesne GÖSTERIMI (JSON) ve öğesinden seri hale getirmek ve seri durumdan çıkarmak için ad alanı kullanımı gösterilmektedir. İçinden `Newtonsoft.Json`mevcut kodu aktarıyorsanız, bkz. [nasıl geçiş `System.Text.Json`yapılacağı ](system-text-json-migrate-from-newtonsoft-how-to.md).
+Bu makalede, <xref:System.Text.Json> JavaScript nesne gösterimi (JSON) ve öğesinden seri hale getirmek ve seri durumdan çıkarmak için ad alanı kullanımı gösterilmektedir. İçinden mevcut kodu aktarıyorsanız `Newtonsoft.Json` , bkz. [nasıl geçiş `System.Text.Json` yapılacağı ](system-text-json-migrate-from-newtonsoft-how-to.md).
 
 Yönergeler ve örnek kod, kitaplığı, [ASP.NET Core](/aspnet/core/)gibi bir çerçeve aracılığıyla değil, doğrudan kullanır.
 
-Serileştirme örnek kodunun çoğu, JSON ( <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> girintileme `true` ve insanlar okunabilirlik için boşluk) olarak ayarlanır. Üretim kullanımı için genellikle bu ayar `false` için varsayılan değerini kabul etmiş olursunuz.
+Serileştirme örnek kodunun çoğu, <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> `true` JSON (girintileme ve insanlar okunabilirlik için boşluk) olarak ayarlanır. Üretim kullanımı için genellikle bu ayar için varsayılan değerini kabul etmiş olursunuz `false` .
 
 Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
@@ -30,14 +31,14 @@ Kod örnekleri, aşağıdaki sınıfa ve türevlerini ifade eder:
 
 ## <a name="namespaces"></a>Ad Alanları
 
-<xref:System.Text.Json> Ad alanı tüm giriş noktalarını ve ana türleri içerir. Ad <xref:System.Text.Json.Serialization> alanı, serileştirme ve seri durumdan çıkarma ile ilgili gelişmiş senaryolar ve özelleştirme için öznitelikler ve API 'leri içerir. Bu makalede gösterilen kod örnekleri, bu ad `using` alanlarından biri veya her ikisi için yönergeler gerektirir:
+<xref:System.Text.Json>Ad alanı tüm giriş noktalarını ve ana türleri içerir. <xref:System.Text.Json.Serialization>Ad alanı, serileştirme ve seri durumdan çıkarma ile ilgili gelişmiş senaryolar ve özelleştirme için öznitelikler ve API 'leri içerir. Bu makalede gösterilen kod örnekleri, `using` Bu ad alanlarından biri veya her ikisi için yönergeler gerektirir:
 
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-<xref:System.Runtime.Serialization> Ad alanındaki öznitelikler Şu anda sürümünde `System.Text.Json`desteklenmemektedir.
+<xref:System.Runtime.Serialization>Ad alanındaki öznitelikler Şu anda sürümünde desteklenmemektedir `System.Text.Json` .
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>.NET nesnelerini JSON 'a yazma (serileştirme)
 
@@ -55,7 +56,7 @@ Aşağıdaki örnek, bir JSON dosyası oluşturmak için zaman uyumsuz kod kulla
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFileAsync.cs?name=SnippetSerialize)]
 
-Önceki örneklerde, serileştirilmekte olan türün tür çıkarımı kullanılır. Öğesinin `Serialize()` aşırı yüklemesi genel bir tür parametresi alır:
+Önceki örneklerde, serileştirilmekte olan türün tür çıkarımı kullanılır. Öğesinin aşırı yüklemesi `Serialize()` genel bir tür parametresi alır:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerializeWithGenericParameter)]
 
@@ -106,7 +107,7 @@ UTF-8 ' e seri hale getirmek için <xref:System.Text.Json.JsonSerializer.Seriali
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetSerialize)]
 
-' <xref:System.Text.Json.JsonSerializer.Serialize%2A> İ alan <xref:System.Text.Json.Utf8JsonWriter> bir aşırı yükleme de mevcuttur.
+' İ <xref:System.Text.Json.JsonSerializer.Serialize%2A> alan bir aşırı yükleme <xref:System.Text.Json.Utf8JsonWriter> de mevcuttur.
 
 UTF-8 ' i seri hale getirmek, dize tabanlı yöntemler kullanmaktan daha hızlı% 5-10 daha hızlıdır. Aradaki fark, baytların (UTF-8 olarak) dizelere dönüştürülmesi gerekmez (UTF-16).
 
@@ -123,8 +124,8 @@ Desteklenen türler şunlardır:
 
 * Sayısal türler, dizeler ve Boole gibi JavaScript temel elemanlarına eşleyen .NET temel türleri.
 * Kullanıcı tanımlı [düz eskı clr nesneleri (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).
-* Tek boyutlu ve pürüzlü Diziler (`ArrayName[][]`).
-* `Dictionary<string,TValue>``object`burada, veya bir poco `TValue` `JsonElement`.
+* Tek boyutlu ve pürüzlü Diziler ( `ArrayName[][]` ).
+* `Dictionary<string,TValue>`Burada `TValue` , `object` `JsonElement` veya bir poco.
 * Aşağıdaki ad alanlarından Koleksiyonlar.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
@@ -136,7 +137,7 @@ Ek türleri işlemek veya yerleşik dönüştürücüler tarafından desteklenme
 
 Bir dizeden veya dosyadan seri durumdan çıkarmak için <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> yöntemini çağırın.
 
-Aşağıdaki örnek, bir dizeden JSON okur ve daha önce [serileştirme örneği](#serialization-example)için gösterilen `WeatherForecast` sınıfının bir örneğini oluşturur:
+Aşağıdaki örnek, bir dizeden JSON okur ve `WeatherForecast` daha önce [serileştirme örneği](#serialization-example)için gösterilen sınıfının bir örneğini oluşturur:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -144,13 +145,13 @@ Zaman uyumlu kod kullanarak bir dosyadan seri durumdan çıkarmak için, aşağ�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFile.cs?name=SnippetDeserialize)]
 
-Zaman uyumsuz kod kullanarak bir dosyadan seri durumdan çıkarmak için <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> yöntemini çağırın:
+Zaman uyumsuz kod kullanarak bir dosyadan seri durumdan çıkarmak için yöntemini çağırın <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFileAsync.cs?name=SnippetDeserialize)]
 
 ### <a name="deserialize-from-utf-8"></a>UTF-8 ' den serisini kaldırma
 
-UTF-8 ' den seri durumdan çıkarmak için <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> , aşağıdaki örneklerde gösterildiği `Utf8JsonReader` gibi bir `ReadOnlySpan<byte>`veya içeren bir aşırı yükleme çağırın. Örnekler, JSON 'ın jsonUtf8Bytes adlı bir bayt dizisinde olduğunu varsayar.
+UTF-8 ' den seri durumdan çıkarmak için, <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> `Utf8JsonReader` `ReadOnlySpan<byte>` Aşağıdaki örneklerde gösterildiği gibi bir veya içeren bir aşırı yükleme çağırın. Örnekler, JSON 'ın jsonUtf8Bytes adlı bir bayt dizisinde olduğunu varsayar.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize1)]
 
@@ -171,7 +172,7 @@ Yerleşik dönüştürücüler tarafından desteklenmeyen işlevselliği sağlam
 
 ## <a name="serialize-to-formatted-json"></a>Biçimlendirilen JSON 'a serileştirme
 
-JSON çıkışını gerçekten yazdırmak için şu şekilde <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> `true`ayarlayın:
+JSON çıkışını gerçekten yazdırmak için şu <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> şekilde ayarlayın `true` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerializePrettyPrint)]
 
@@ -223,7 +224,7 @@ Bu öznitelik tarafından ayarlanan özellik adı:
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>Tüm JSON Özellik adları için ortası Case kullanın
 
-Tüm JSON Özellik adları için ortası durumunu kullanmak için, aşağıdaki <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> örnekte `JsonNamingPolicy.CamelCase`gösterildiği gibi olarak ayarlanır:
+Tüm JSON Özellik adları için ortası durumunu kullanmak için, <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> `JsonNamingPolicy.CamelCase` Aşağıdaki örnekte gösterildiği gibi olarak ayarlanır:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundTripCamelCasePropertyNames.cs?name=Serialize)]
 
@@ -243,15 +244,15 @@ Seri hale getirmek ve JSON çıktısı için örnek bir sınıf aşağıda veril
 Ortası durum özelliği adlandırma ilkesi:
 
 * Serileştirme ve seri durumdan çıkarma için geçerlidir.
-* Öznitelikleri tarafından `[JsonPropertyName]` geçersiz kılınır. Bu nedenle, örnekteki JSON Özellik adının `Wind` ortası durum olmaması neden olur.
+* Öznitelikleri tarafından geçersiz kılınır `[JsonPropertyName]` . Bu nedenle, örnekteki JSON Özellik adının `Wind` ortası durum olmaması neden olur.
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>Özel bir JSON Özellik adlandırma ilkesi kullanma
 
-Özel bir JSON Özellik adlandırma ilkesi kullanmak için, aşağıdaki örnekte gösterildiği gibi <xref:System.Text.Json.JsonNamingPolicy> <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> yönteminden türeten bir sınıf oluşturun ve yöntemi geçersiz kılın:
+Özel bir JSON Özellik adlandırma ilkesi kullanmak için, <xref:System.Text.Json.JsonNamingPolicy> <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> Aşağıdaki örnekte gösterildiği gibi yönteminden türeten bir sınıf oluşturun ve yöntemi geçersiz kılın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/UpperCaseNamingPolicy.cs)]
 
-Daha sonra özelliği <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> , adlandırma ilkesi sınıfınızın bir örneğine ayarlayın:
+Daha sonra <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> özelliği, adlandırma ilkesi sınıfınızın bir örneğine ayarlayın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPropertyNamingPolicy.cs?name=SnippetSerialize)]
 
@@ -271,15 +272,15 @@ Seri hale getirmek ve JSON çıktısı için örnek bir sınıf aşağıda veril
 JSON özelliği adlandırma ilkesi:
 
 * Serileştirme ve seri durumdan çıkarma için geçerlidir.
-* Öznitelikleri tarafından `[JsonPropertyName]` geçersiz kılınır. Bu, örnekteki JSON Özellik adının `Wind` büyük harfle değil.
+* Öznitelikleri tarafından geçersiz kılınır `[JsonPropertyName]` . Bu, örnekteki JSON Özellik adının `Wind` büyük harfle değil.
 
 ### <a name="camel-case-dictionary-keys"></a>Camel durum sözlüğü anahtarları
 
-Seri hale getirilecek bir nesnenin özelliği tür `Dictionary<string,TValue>`ise, `string` anahtarlar ortası duruma dönüştürülebilir. Bunu yapmak için, aşağıdaki <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> örnekte `JsonNamingPolicy.CamelCase`gösterildiği gibi öğesini olarak ayarlayın:
+Seri hale getirilecek bir nesnenin özelliği tür ise `Dictionary<string,TValue>` , `string` anahtarlar ortası duruma dönüştürülebilir. Bunu yapmak için, <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> `JsonNamingPolicy.CamelCase` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCamelCaseDictionaryKeys.cs?name=SnippetSerialize)]
 
-Anahtar-değer çiftlerine `TemperatureRanges` `"ColdMinTemp", 20` sahip adlı bir sözlük ile bir nesneyi serileştirmek ve `"HotMinTemp", 40` aşağıdaki örnekte olduğu gibi JSON çıktısına neden olur:
+Anahtar-değer çiftlerine sahip adlı bir sözlük ile bir nesneyi serileştirmek `TemperatureRanges` `"ColdMinTemp", 20` ve `"HotMinTemp", 40` Aşağıdaki örnekte olduğu gibi JSON çıktısına neden olur:
 
 ```json
 {
@@ -293,17 +294,17 @@ Anahtar-değer çiftlerine `TemperatureRanges` `"ColdMinTemp", 20` sahip adlı b
 }
 ```
 
-Sözlük anahtarları için ortası örnek adlandırma ilkesi yalnızca serileştirme için geçerlidir. Bir sözlüğün serisini kaldırırsanız, için belirtseniz `JsonNamingPolicy.CamelCase` bıle anahtarlar JSON dosyasıyla eşleşir. `DictionaryKeyPolicy`
+Sözlük anahtarları için ortası örnek adlandırma ilkesi yalnızca serileştirme için geçerlidir. Bir sözlüğün serisini kaldırırsanız, için belirtseniz bile anahtarlar JSON dosyasıyla eşleşir `JsonNamingPolicy.CamelCase` `DictionaryKeyPolicy` .
 
 ### <a name="enums-as-strings"></a>Dizeler dize olarak numaralandırmalar
 
-Varsayılan olarak, numaralandırmalar sayı olarak serileştirilir. Sabit listesi adlarını dizeler olarak seri hale getirmek için <xref:System.Text.Json.Serialization.JsonStringEnumConverter>öğesini kullanın.
+Varsayılan olarak, numaralandırmalar sayı olarak serileştirilir. Sabit listesi adlarını dizeler olarak seri hale getirmek için öğesini kullanın <xref:System.Text.Json.Serialization.JsonStringEnumConverter> .
 
 Örneğin, bir sabit listesi olan aşağıdaki sınıfı seri hale getirmeniz gerektiğini varsayalım:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnum)]
 
-Özet ise `Hot`, varsayılan olarak serileştirilmiş JSON sayısal değer 3 ' ü içerir:
+Özet ise `Hot` , varsayılan olarak SERILEŞTIRILMIŞ JSON sayısal değer 3 ' ü içerir:
 
 ```json
 {
@@ -356,7 +357,7 @@ Seri hale getirmek ve JSON çıktısı için örnek bir tür aşağıda verilmi�
 
 ### <a name="exclude-all-read-only-properties"></a>Tüm salt okuma özelliklerini Dışla
 
-Bir özellik, genel bir alıcı içeriyorsa ancak genel bir ayarlayıcı içermiyorsa salt okunurdur. Tüm salt okunurdur özelliklerini hariç tutmak için, aşağıdaki örnekte <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> gösterildiği `true`gibi öğesini olarak ayarlayın:
+Bir özellik, genel bir alıcı içeriyorsa ancak genel bir ayarlayıcı içermiyorsa salt okunurdur. Tüm salt okunurdur özelliklerini hariç tutmak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
 
@@ -376,7 +377,7 @@ Bu seçenek yalnızca serileştirme için geçerlidir. Seri durumdan çıkarma s
 
 ### <a name="exclude-all-null-value-properties"></a>Tüm null değer özelliklerini Dışla
 
-Tüm null değer özelliklerini dışlamak için, aşağıdaki örnekte <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> gösterildiği gibi `true`özelliğini olarak ayarlayın:
+Tüm null değer özelliklerini dışlamak için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> `true` Aşağıdaki örnekte gösterildiği gibi özelliğini olarak ayarlayın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
@@ -399,7 +400,7 @@ Bu ayar serileştirme ve seri durumdan çıkarma için geçerlidir. Seri durumda
 
 ## <a name="customize-character-encoding"></a>Karakter kodlamasını özelleştirme
 
-Varsayılan olarak, seri hale getirici ASCII olmayan tüm karakterleri çıkar.  Diğer bir deyişle, bu, karakterin `\uxxxx` Unicode `xxxx` kodunun bulunduğu konum ile değiştirilir.  Örneğin, `Summary` özelliği Kiril жарко olarak ayarlandıysa, `WeatherForecast` nesne şu örnekte gösterildiği gibi serileştirilir:
+Varsayılan olarak, seri hale getirici ASCII olmayan tüm karakterleri çıkar.  Diğer bir deyişle, bu, `\uxxxx` karakterin Unicode kodunun bulunduğu konum ile değiştirilir `xxxx` .  Örneğin, `Summary` özelliği Kiril жарко olarak ayarlandıysa, `WeatherForecast` nesne şu örnekte gösterildiği gibi serileştirilir:
 
 ```json
 {
@@ -411,13 +412,13 @@ Varsayılan olarak, seri hale getirici ASCII olmayan tüm karakterleri çıkar. 
 
 ### <a name="serialize-language-character-sets"></a>Dil karakter kümelerini serileştirme
 
-Bir veya daha fazla dilin karakter kümesini kaçış olmadan seri hale getirmek için, aşağıdaki örnekte gösterildiği gibi bir örneği <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>oluştururken [Unicode aralığı](xref:System.Text.Unicode.UnicodeRanges) belirtin:
+Bir veya daha fazla dilin karakter kümesini kaçış olmadan seri hale getirmek için, aşağıdaki örnekte gösterildiği gibi bir örneği oluştururken [Unicode aralığı](xref:System.Text.Unicode.UnicodeRanges) belirtin <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName> :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetLanguageSets)]
 
-Bu kod, Kiril veya Yunan karakterlerinden kaçış yapmaz. `Summary` Özellik Kiril жарко olarak ayarlandıysa, `WeatherForecast` nesne şu örnekte gösterildiği gibi serileştirilir:
+Bu kod, Kiril veya Yunan karakterlerinden kaçış yapmaz. `Summary`Özellik Kiril жарко olarak ayarlandıysa, `WeatherForecast` nesne şu örnekte gösterildiği gibi serileştirilir:
 
 ```json
 {
@@ -427,7 +428,7 @@ Bu kod, Kiril veya Yunan karakterlerinden kaçış yapmaz. `Summary` Özellik Ki
 }
 ```
 
-Tüm dil kümelerini kaçış olmadan seri hale getirmek için <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>kullanın.
+Tüm dil kümelerini kaçış olmadan seri hale getirmek için kullanın <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType> .
 
 ### <a name="serialize-specific-characters"></a>Belirli karakterleri serileştirme
 
@@ -449,35 +450,35 @@ Yukarıdaki kod tarafından üretilen JSON örneği aşağıda verilmiştir:
 
 ### <a name="serialize-all-characters"></a>Tüm karakterleri seri hale getirme
 
-Aşağıdaki örnekte gösterildiği gibi, kullanarak <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>kaçı en aza indirin:
+<xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>Aşağıdaki örnekte gösterildiği gibi, kullanarak kaçı en aza indirin:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUnsafeRelaxed)]
 
 > [!CAUTION]
-> Varsayılan kodlayıcıyla karşılaştırıldığında `UnsafeRelaxedJsonEscaping` kodlayıcı, karakterlerin kaçışsız geçmesine izin verme konusunda daha fazla izne sahiptir:
+> Varsayılan kodlayıcıyla karşılaştırıldığında kodlayıcı, `UnsafeRelaxedJsonEscaping` karakterlerin kaçışsız geçmesine izin verme konusunda daha fazla izne sahiptir:
 >
-> * , `<`, Ve `>` `&` `'`gibi HTML 'ye duyarlı karakterleri atmaz.
+> * ,, Ve gibi HTML 'ye duyarlı karakterleri atmaz `<` `>` `&` `'` .
 > * Bu, XSS veya bilgi açıklama saldırılarına karşı ek derinlemesine savunma korumaları sunmaz, örneğin, *karakter*kümesinde istemci ve sunucu disagreeing neden olabilir.
 >
-> Güvenli olmayan kodlayıcıyı yalnızca istemcinin, elde edilen yükü UTF-8 ile kodlanmış JSON olarak yorumladığı bilindiğinde kullanın. Örneğin, sunucu yanıt üst bilgisini `Content-Type: application/json; charset=utf-8`gönderiyorsa onu kullanabilirsiniz. Ham `UnsafeRelaxedJsonEscaping` ÇıKıŞıN bir HTML sayfasına veya bir `<script>` öğeye yayılmasın.
+> Güvenli olmayan kodlayıcıyı yalnızca istemcinin, elde edilen yükü UTF-8 ile kodlanmış JSON olarak yorumladığı bilindiğinde kullanın. Örneğin, sunucu yanıt üst bilgisini gönderiyorsa onu kullanabilirsiniz `Content-Type: application/json; charset=utf-8` . Ham `UnsafeRelaxedJsonEscaping` çıkışın BIR HTML sayfasına veya bir öğeye yayılmasın `<script>` .
 
 ## <a name="serialize-properties-of-derived-classes"></a>Türetilmiş sınıfların serileştirme özellikleri
 
 Çok biçimli bir tür hiyerarşisinin serileştirilmesi desteklenmiyor. Örneğin, bir özellik bir arabirim ya da soyut sınıf olarak tanımlanmışsa, çalışma zamanı türü ek özelliklere sahip olsa bile yalnızca arabirim veya soyut sınıf üzerinde tanımlanan özellikler serileştirilir. Bu davranışın istisnaları, bu bölümde açıklanmaktadır.
 
-Örneğin, bir `WeatherForecast` sınıfınız ve türetilmiş bir sınıfınız `WeatherForecastDerived`olduğunu varsayalım:
+Örneğin, bir `WeatherForecast` sınıfınız ve türetilmiş bir sınıfınız olduğunu varsayalım `WeatherForecastDerived` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFDerived)]
 
-Ve derleme zamanında `Serialize` yöntemin tür bağımsız değişkeninin şu olduğunu `WeatherForecast`varsayalım:
+Ve derleme zamanında yöntemin tür bağımsız değişkeninin `Serialize` Şu olduğunu varsayalım `WeatherForecast` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-Bu senaryoda, `WindSpeed` `weatherForecast` nesne gerçekten bir `WeatherForecastDerived` nesne olsa bile Özellik serileştirilmez. Yalnızca temel sınıf özellikleri serileştirilir:
+Bu senaryoda, `WindSpeed` `weatherForecast` nesne gerçekten bir nesne olsa bile Özellik serileştirilmez `WeatherForecastDerived` . Yalnızca temel sınıf özellikleri serileştirilir:
 
 ```json
 {
@@ -491,15 +492,15 @@ Bu davranış, türetilmiş çalışma zamanında oluşturulan bir türdeki veri
 
 Yukarıdaki örnekteki türetilmiş türün özelliklerini seri hale getirmek için aşağıdaki yaklaşımlardan birini kullanın:
 
-* Çalışma zamanında türü belirtmenize <xref:System.Text.Json.JsonSerializer.Serialize%2A> izin veren aşırı yüklemesini çağırın:
+* <xref:System.Text.Json.JsonSerializer.Serialize%2A>Çalışma zamanında türü belirtmenize izin veren aşırı yüklemesini çağırın:
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
 
-* Seri hale getirilecek nesneyi bildirin `object`.
+* Seri hale getirilecek nesneyi bildirin `object` .
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeObject)]
 
-Yukarıdaki örnek senaryoda, her iki yaklaşım `WindSpeed` özelliğin JSON çıktısına dahil olmasına neden olur:
+Yukarıdaki örnek senaryoda, her iki yaklaşım `WindSpeed` ÖZELLIĞIN JSON çıktısına dahil olmasına neden olur:
 
 ```json
 {
@@ -513,22 +514,22 @@ Yukarıdaki örnek senaryoda, her iki yaklaşım `WindSpeed` özelliğin JSON ç
 > [!IMPORTANT]
 > Bu yaklaşımlar yalnızca kök nesnenin seri hale getirilmesi için, bu kök nesnenin özellikleri için değil, polimorfik serileştirme sağlar.
 
-Bunları tür `object`olarak tanımlarsanız alt düzey nesneler için polimorfik serileştirme alabilirsiniz. Örneğin, `WeatherForecast` sınıfınızın, tür `PreviousForecast` `WeatherForecast` olarak tanımlanabilen adında bir özelliği olduğunu varsayalım: `object`
+Bunları tür olarak tanımlarsanız alt düzey nesneler için polimorfik serileştirme alabilirsiniz `object` . Örneğin, `WeatherForecast` sınıfınızın, tür olarak tanımlanabilen adında bir özelliği olduğunu varsayalım `PreviousForecast` `WeatherForecast` `object` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
 
-`PreviousForecast` Özelliği bir örneği içeriyorsa `WeatherForecastDerived`:
+`PreviousForecast`Özelliği bir örneği içeriyorsa `WeatherForecastDerived` :
 
-* Serileştirmede `WeatherForecastWithPrevious` JSON çıktısı **içermez** `WindSpeed`.
-* Serileştirmede `WeatherForecastWithPreviousAsObject` JSON çıktısı **dahildir** `WindSpeed`.
+* Serileştirmede JSON çıktısı `WeatherForecastWithPrevious` **içermez** `WindSpeed` .
+* Serileştirmede JSON çıktısı `WeatherForecastWithPreviousAsObject` **dahildir** `WindSpeed` .
 
-Seri hale `WeatherForecastWithPreviousAsObject`getirmek için, ya `Serialize<object>` `GetType` da kök nesnesi türetilmiş bir tür olabilecek bir nesne olmadığından çağırmak gerekmez. Aşağıdaki kod örneği, veya `Serialize<object>` `GetType`çağırmaz:
+Seri hale getirmek için `WeatherForecastWithPreviousAsObject` , `Serialize<object>` ya da `GetType` kök nesnesi türetilmiş bir tür olabilecek bir nesne olmadığından çağırmak gerekmez. Aşağıdaki kod örneği, `Serialize<object>` veya çağırmaz `GetType` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
 
-Yukarıdaki kod doğru şekilde serileştirir `WeatherForecastWithPreviousAsObject`:
+Yukarıdaki kod doğru şekilde serileştirir `WeatherForecastWithPreviousAsObject` :
 
 ```json
 {
@@ -544,11 +545,11 @@ Yukarıdaki kod doğru şekilde serileştirir `WeatherForecastWithPreviousAsObje
 }
 ```
 
-Özellikleri `object` , arabirimler ile birlikte tanımlamaya yönelik aynı yaklaşım. Aşağıdaki arabirime ve uygulamaya sahip olduğunuzu ve uygulama örnekleri içeren özelliklerle bir sınıfı seri hale getirmek istediğinizi varsayalım:
+Özellikleri, arabirimler ile birlikte tanımlamaya yönelik aynı yaklaşım `object` . Aşağıdaki arabirime ve uygulamaya sahip olduğunuzu ve uygulama örnekleri içeren özelliklerle bir sınıfı seri hale getirmek istediğinizi varsayalım:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
 
-Bir `Forecasts`örneğini serileştirçalıştığınızda, yalnızca `Tuesday` `WindSpeed` özelliğini gösterir, çünkü `Tuesday` şu şekilde `object`tanımlanır:
+Bir örneğini serileştirçalıştığınızda `Forecasts` , yalnızca `Tuesday` `WindSpeed` özelliğini gösterir, çünkü `Tuesday` Şu şekilde tanımlanır `object` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
 
@@ -574,8 +575,8 @@ Polimorfik **serileştirme**hakkında daha fazla bilgi edinmek ve **serisini kal
 
 ## <a name="allow-comments-and-trailing-commas"></a>Yorumlara ve sondaki virgülleri izin ver
 
-Varsayılan olarak, JSON 'da yorumlara ve sondaki virgüllerin kullanımına izin verilmez. JSON 'da açıklamalara izin vermek için <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> özelliğini olarak `JsonCommentHandling.Skip`ayarlayın.
-Ve sondaki virgüllerin kullanılmasına izin vermek için <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> özelliğini olarak `true`ayarlayın. Aşağıdaki örnek, her ikisine de izin vermeyi göstermektedir:
+Varsayılan olarak, JSON 'da yorumlara ve sondaki virgüllerin kullanımına izin verilmez. JSON 'da açıklamalara izin vermek için <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> özelliğini olarak ayarlayın `JsonCommentHandling.Skip` .
+Ve sondaki virgüllerin kullanılmasına izin vermek için <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> özelliğini olarak ayarlayın `true` . Aşağıdaki örnek, her ikisine de izin vermeyi göstermektedir:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCommasComments.cs?name=SnippetDeserialize)]
 
@@ -591,7 +592,7 @@ Yorumlar ve sondaki virgülden oluşan örnek JSON aşağıda verilmiştir:
 
 ## <a name="case-insensitive-property-matching"></a>Büyük/küçük harfe duyarsız Özellik eşleştirme
 
-Varsayılan olarak, seri durumdan çıkarma JSON ile hedef nesne özellikleri arasındaki büyük/küçük harfe duyarlı Özellik adı eşleşmelerini arar. Bu davranışı değiştirmek için şu şekilde <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> `true`ayarlayın:
+Varsayılan olarak, seri durumdan çıkarma JSON ile hedef nesne özellikleri arasındaki büyük/küçük harfe duyarlı Özellik adı eşleşmelerini arar. Bu davranışı değiştirmek için şu <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> şekilde ayarlayın `true` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCaseInsensitive.cs?name=SnippetDeserialize)]
 
@@ -632,16 +633,16 @@ Ve seri durumdan çıkarılacak JSON şu şekilde yapılır:
 }
 ```
 
-Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` ve `SummaryWords` özellikleri nonereye gidebileceği ve kaybediliyor. Bu özellikler gibi ek verileri yakalamak için, [Jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) özniteliğini veya `Dictionary<string,object>` `Dictionary<string,JsonElement>`türünde bir özelliğe uygulayın:
+Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` ve `SummaryWords` özellikleri nonereye gidebileceği ve kaybediliyor. Bu özellikler gibi ek verileri yakalamak için, [Jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) özniteliğini veya türünde bir özelliğe uygulayın `Dictionary<string,object>` `Dictionary<string,JsonElement>` :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
 
-Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veri `ExtensionData` özelliğin anahtar-değer çiftleri haline gelir:
+Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veri özelliğin anahtar-değer çiftleri haline gelir `ExtensionData` :
 
 |Özellik |Değer  |Notlar  |
 |---------|---------|---------|
 | Tarih    | 8/1/2019 12:00:00-07:00||
-| TemperatureCelsius| 0 | Büyük/küçük harfe duyarlı`temperatureCelsius` UYUŞMAZLıK (JSON 'da), bu nedenle özellik ayarlanmadı. |
+| TemperatureCelsius| 0 | Büyük/küçük harfe duyarlı uyuşmazlık ( `temperatureCelsius` JSON 'da), bu nedenle özellik ayarlanmadı. |
 | Özet | Sık Erişimli ||
 | ExtensionData | temperatureCelsius: 25 |Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur.|
 || DatesAvailable:<br>  8/1/2019 12:00:00-07:00<br>8/2/2019 12:00:00-07:00 |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
@@ -667,7 +668,7 @@ Hedef nesne serileştirildiğinde, uzantı veri anahtarı değer çiftleri, gele
 }
 ```
 
-`ExtensionData` ÖZELLIK adının JSON içinde görünmediğine dikkat edin. Bu davranış, JSON 'nin seri durumdan çıkarılmazsız ek verileri kaybetmeden bir gidiş dönüş yapmasını sağlar.
+`ExtensionData`Özellik ADıNıN JSON içinde görünmediğine dikkat edin. Bu davranış, JSON 'nin seri durumdan çıkarılmazsız ek verileri kaybetmeden bir gidiş dönüş yapmasını sağlar.
 
 ## <a name="ignore-null-when-deserializing"></a>Seri durumdan çıkarılırken null değeri yoksay
 
@@ -687,38 +688,38 @@ Ve aşağıdaki JSON öğesinin seri durumdan çıkarıldığını varsayalım:
 }
 ```
 
-Seri durumdan çıktıktan sonra `Summary` , `WeatherForecastWithDefault` nesnesinin özelliği null olur.
+Seri durumdan çıktıktan sonra, `Summary` nesnesinin özelliği `WeatherForecastWithDefault` null olur.
 
-Bu davranışı değiştirmek için, aşağıdaki <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> örnekte `true`gösterildiği gibi öğesini olarak ayarlayın:
+Bu davranışı değiştirmek için, <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> `true` Aşağıdaki örnekte gösterildiği gibi öğesini olarak ayarlayın:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
 
-Bu seçenekle `Summary` `WeatherForecastWithDefault` nesnenin özelliği, serisini kaldırma işleminden sonra varsayılan "Özet yok" değeridir.
+Bu seçenekle `Summary` nesnenin özelliği, `WeatherForecastWithDefault` serisini kaldırma işleminden sonra varsayılan "Özet yok" değeridir.
 
 JSON içindeki null değerler yalnızca geçerli olmaları durumunda yok sayılır. Nullable değer türleri için null değerler özel durumlara neden olur.
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter ve JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>, bir veya `ReadOnlySpan<byte>` `ReadOnlySequence<byte>`' dan okunan UTF-8 kodlu JSON metin için yüksek performanslı, düşük bir ayırma, Salt ilet okuyucu olur. , `Utf8JsonReader` Özel Çözümleyicileri ve seri hale getiriciler oluşturmak için kullanılabilen alt düzey bir türdür. <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> Yöntemi, kapakların altında kullanır `Utf8JsonReader` .
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>, bir veya ' dan okunan UTF-8 kodlu JSON metin için yüksek performanslı, düşük bir ayırma, Salt ilet okuyucu olur `ReadOnlySpan<byte>` `ReadOnlySequence<byte>` . , `Utf8JsonReader` Özel Çözümleyicileri ve seri hale getiriciler oluşturmak için kullanılabilen alt düzey bir türdür. <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>Yöntemi `Utf8JsonReader` , kapakların altında kullanır.
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName>, `String` `Int32`ve `DateTime`gibi ortak .net türlerinden UTF-8 kodlu JSON metni yazmanın yüksek performanslı bir yoludur. Yazıcı, özel serileştiriciler oluşturmak için kullanılabilen alt düzey bir türdür. <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> Yöntemi, kapakların altında kullanır `Utf8JsonWriter` .
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName>, ve gibi ortak .NET türlerinden UTF-8 kodlu JSON metni yazmanın yüksek performanslı bir yoludur `String` `Int32` `DateTime` . Yazıcı, özel serileştiriciler oluşturmak için kullanılabilen alt düzey bir türdür. <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>Yöntemi `Utf8JsonWriter` , kapakların altında kullanır.
 
-<xref:System.Text.Json.JsonDocument?displayProperty=fullName>kullanarak `Utf8JsonReader`salt okunurdur belge nesne MODELI (DOM) oluşturma yeteneği sağlar. DOM, bir JSON yükünde verilere rastgele erişim sağlar. Yükü oluşturan JSON öğelerine <xref:System.Text.Json.JsonElement> tür aracılığıyla erişilebilir. Türü `JsonElement` , JSON metnini ortak .net türlerine dönüştürmek için API 'lerle birlikte dizi ve nesne numaralandırıcıları sağlar. `JsonDocument`bir <xref:System.Text.Json.JsonDocument.RootElement> özellik sunar.
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName>kullanarak salt okunurdur Belge Nesne Modeli (DOM) oluşturma yeteneği sağlar `Utf8JsonReader` . DOM, bir JSON yükünde verilere rastgele erişim sağlar. Yükü oluşturan JSON öğelerine tür aracılığıyla erişilebilir <xref:System.Text.Json.JsonElement> . `JsonElement`Türü, JSON metnini ortak .net türlerine dönüştürmek Için API 'lerle birlikte dizi ve nesne numaralandırıcıları sağlar. `JsonDocument`bir <xref:System.Text.Json.JsonDocument.RootElement> özellik sunar.
 
 Aşağıdaki bölümlerde, bu araçların JSON okuma ve yazma için nasıl kullanılacağı gösterilmektedir.
 
 ## <a name="use-jsondocument-for-access-to-data"></a>Veri erişimi için JsonDocument kullanın
 
-Aşağıdaki örnek, bir JSON dizesindeki verilere rastgele <xref:System.Text.Json.JsonDocument> erişim için sınıfının nasıl kullanılacağını gösterir:
+Aşağıdaki örnek, <xref:System.Text.Json.JsonDocument> BIR JSON dizesindeki verilere rastgele erişim için sınıfının nasıl kullanılacağını gösterir:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
 Yukarıdaki kod:
 
-* Analiz edilecek JSON 'in adlı `jsonString`bir dizede olduğunu varsayar.
-* `Grade` Özelliği olan bir `Students` dizideki nesneler için Ortalama bir sınıf hesaplar.
+* Analiz edilecek JSON 'in adlı bir dizede olduğunu varsayar `jsonString` .
+* Özelliği olan bir dizideki nesneler için Ortalama bir sınıf hesaplar `Students` `Grade` .
 * Bir sınıfa sahip olmayan öğrenciler için varsayılan bir 70 sınıfı atar.
-* Her yinelemeyle bir `count` değişkeni arttırarak öğrencileri sayar. Aşağıdaki örnekte gösterildiği gibi bir <xref:System.Text.Json.JsonElement.GetArrayLength%2A>alternatif çağrdır:
+* Her yinelemeyle bir değişkeni arttırarak öğrencileri sayar `count` . <xref:System.Text.Json.JsonElement.GetArrayLength%2A>Aşağıdaki örnekte gösterildiği gibi bir alternatif çağrdır:
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades2)]
 
@@ -728,15 +729,15 @@ Bu kodun işlediği JSON örneğine bir örnek aşağıda verilmiştir:
 
 ## <a name="use-jsondocument-to-write-json"></a>JSON yazmak için JsonDocument kullanın
 
-Aşağıdaki örnek, öğesinden nasıl JSON yazılacağını göstermektedir <xref:System.Text.Json.JsonDocument>:
+Aşağıdaki örnek, öğesinden nasıl JSON yazılacağını göstermektedir <xref:System.Text.Json.JsonDocument> :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
 
 Yukarıdaki kod:
 
-* Bir JSON dosyasını okur, verileri bir `JsonDocument`dosyasına yükler ve bir dosyaya biçimli (düzgün YAZDıRıLMıŞ) JSON yazar.
-* JSON <xref:System.Text.Json.JsonDocumentOptions> girişi içindeki açıklamalara izin verildiğini ancak yok sayılacağını belirtmek için kullanır.
-* İşiniz bittiğinde, yazıcı <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> üzerindeki çağrılar. Diğer bir seçenek de yazıcı boşaltıatıldığı zaman yazıcının temizlemesini sağlar.
+* Bir JSON dosyasını okur, verileri bir `JsonDocument` dosyasına yükler ve bir dosyaya biçimli (düzgün yazdırılmış) JSON yazar.
+* <xref:System.Text.Json.JsonDocumentOptions>JSON girişi içindeki açıklamalara izin verildiğini ancak yok sayılacağını belirtmek için kullanır.
+* İşiniz bittiğinde, <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> Yazıcı üzerindeki çağrılar. Diğer bir seçenek de yazıcı boşaltıatıldığı zaman yazıcının temizlemesini sağlar.
 
 Örnek kod tarafından işlenecek JSON girişi örneği aşağıda verilmiştir:
 
@@ -748,17 +749,17 @@ Sonuç, aşağıdaki düzgün yazdırılmış JSON çıktıdır:
 
 ## <a name="use-utf8jsonwriter"></a>Utf8JsonWriter kullanma
 
-Aşağıdaki örnek <xref:System.Text.Json.Utf8JsonWriter> sınıfının nasıl kullanılacağını gösterir:
+Aşağıdaki örnek sınıfının nasıl kullanılacağını gösterir <xref:System.Text.Json.Utf8JsonWriter> :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8WriterToStream.cs?name=SnippetSerialize)]
 
 ## <a name="use-utf8jsonreader"></a>Utf8JsonReader kullanma
 
-Aşağıdaki örnek <xref:System.Text.Json.Utf8JsonReader> sınıfının nasıl kullanılacağını gösterir:
+Aşağıdaki örnek sınıfının nasıl kullanılacağını gösterir <xref:System.Text.Json.Utf8JsonReader> :
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromBytes.cs?name=SnippetDeserialize)]
 
-Yukarıdaki kod, `jsonUtf8` değişkenin UTF-8 olarak KODLANMıŞ geçerli JSON içeren bir bayt dizisi olduğunu varsayar.
+Yukarıdaki kod, `jsonUtf8` DEĞIŞKENIN UTF-8 olarak kodlanmış GEÇERLI JSON içeren bir bayt dizisi olduğunu varsayar.
 
 ### <a name="filter-data-using-utf8jsonreader"></a>Utf8JsonReader kullanarak verileri filtreleme
 
@@ -770,13 +771,13 @@ Yukarıdaki kod:
 
 * JSON 'un bir nesne dizisi içerdiğini ve her nesne dize türünde bir "ad" özelliği içerebildiği varsayılır.
 * "University" ile biten nesneleri ve "ad" özellik değerlerini sayar.
-* Dosyanın UTF-16 olarak kodlandığını varsayar ve bunu UTF-8 ' e dönüştürür. Aşağıdaki kod kullanılarak UTF-8 olarak kodlanmış bir dosya doğrudan bir `ReadOnlySpan<byte>`ile okunabilir:
+* Dosyanın UTF-16 olarak kodlandığını varsayar ve bunu UTF-8 ' e dönüştürür. Aşağıdaki kod kullanılarak UTF-8 olarak kodlanmış bir dosya doğrudan bir ile okunabilir `ReadOnlySpan<byte>` :
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
-  Dosya bir UTF-8 bayt sırası işareti (BOM) içeriyorsa, okuyucu metin gerektirdiğinden, baytları öğesine `Utf8JsonReader`geçirmeden önce kaldırın. Aksi takdirde, BOM geçersiz JSON olarak değerlendirilir ve okuyucu bir özel durum oluşturur.
+  Dosya bir UTF-8 bayt sırası işareti (BOM) içeriyorsa, okuyucu metin gerektirdiğinden, baytları öğesine geçirmeden önce kaldırın `Utf8JsonReader` . Aksi takdirde, BOM geçersiz JSON olarak değerlendirilir ve okuyucu bir özel durum oluşturur.
 
 Yukarıdaki kodun okuya, bir JSON örneği aşağıda verilmiştir. Sonuçtaki Özet ileti "2 ' den 4 ' ün" University "ile biten adlara sahiptir:
 

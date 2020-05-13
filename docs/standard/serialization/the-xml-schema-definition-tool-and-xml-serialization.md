@@ -1,5 +1,6 @@
 ---
 title: XML Şema Tanımı Aracı ve XML Serileştirme
+description: XML şema tanımı aracı bir XSD şeması için C# veya Visual Basic sınıf dosyaları oluşturur ve bir kitaplıktan veya yürütülebilir dosyadan bir XML şeması oluşturur.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Xsd.exe
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: b51b9a0112893d9a7838155f4af051e7079c8cdd
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 258e66643dae64aec7280419911f5ac9193a2ada
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588385"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380108"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML Şema Tanımı Aracı ve XML Serileştirme
 
-XML şema tanımı Aracı ([XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)), Windows&reg; yazılım GELIŞTIRME seti 'nin (SDK) bir parçası olarak .NET Framework araçları ile birlikte yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
+XML şema tanımı Aracı ([XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)), Windows &reg; yazılım geliştirme SETI 'nin (SDK) bir parçası olarak .NET Framework araçları ile birlikte yüklenir. Aracı, öncelikle iki amaçları için tasarlanmıştır:  
   
 - Belirli bir XML şeması tanım dili (XSD) şemaya uygun C# veya Visual Basic sınıf dosyaları oluşturmak için. Aracı bağımsız değişken olarak bir XML Şeması alır ve bir dizi içeren bir dosya çıkarır, sahip serileştirilmiş olduğunda sınıflar <xref:System.Xml.Serialization.XmlSerializer>, şemaya uygun. Aracının belirli bir şemaya uygun sınıflar oluşturmak için nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: sınıf ve XML şeması belgeleri oluşturmak IÇIN XML şema tanımı aracını kullanma](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   

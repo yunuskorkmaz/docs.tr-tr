@@ -1,73 +1,74 @@
 ---
-title: "İzim: Visual Studio'da yönetilen derlemelerden türleri gömme"
+title: 'İzlenecek yol: Visual Studio’da yönetilen bütünleştirilmiş kodlardan türleri ekleme'
+description: Bu izlenecek yol, Visual Studio kullanarak .NET 'teki yönetilen derlemelerden türlerin nasıl ekleneceğini gösterir. Gömülü türler, sürüm bağımsızlığını destekleyebilir.
 ms.date: 08/19/2019
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f11fbedad766753ee462c5f597b823493cdaf7cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 636e5f8095b64cd0f445555c96d00945ccf7eaf8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75338553"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378979"
 ---
-# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>İzim: Visual Studio'da yönetilen derlemelerden türleri gömme
+# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>İzlenecek yol: Visual Studio’da yönetilen bütünleştirilmiş kodlardan türleri ekleme
 
-Güçlü adlandırılmış yönetilen bir derlemeden tür bilgilerini katıştırmak, sürüm bağımsızlığı elde etmek için bir uygulamada gevşek çift türleri yapabilirsiniz. Diğer bir diğer olarak, programınız, her yeni sürüm için yeniden derlenmek zorunda kalmadan yönetilen kitaplığın herhangi bir sürümünden türleri kullanmak üzere yazılabilir.
+Tanımlayıcı adlı yönetilen bir derlemeden tür bilgilerini eklerseniz, sürüm bağımsızlığını elde etmek için bir uygulamada gevşek olarak birkaç tür oluşturabilirsiniz. Diğer bir deyişle, programınız her yeni sürüm için yeniden derlenmesi gerekmeden yönetilen bir kitaplığın herhangi bir sürümündeki türleri kullanmak üzere yazılabilir.
 
-Tür katıştırma, Microsoft Office'in otomasyon nesnelerini kullanan bir uygulama gibi COM interop'uyla sıklıkla kullanılır. Tür bilgilerini katıştırma, bir programın aynı yapısının farklı bilgisayarlarda Microsoft Office'in farklı sürümleriyle çalışmasını sağlar. Ancak, tam olarak yönetilen çözümlerle tür katıştırma da kullanabilirsiniz.
+Tür ekleme, genellikle Microsoft Office Otomasyon nesneleri kullanan bir uygulama gibi COM birlikte çalışma ile kullanılır. Tür bilgilerinin gömülmesi, farklı bilgisayarlarda farklı Microsoft Office sürümleriyle çalışmak için aynı programın derlemesini sağlar. Ancak, tam olarak yönetilen çözümlerle tür eklemeyi de kullanabilirsiniz.
 
-Katıştırılmış ortak arabirimleri belirttikten sonra, bu arabirimleri uygulayan çalışma zamanı sınıfları oluşturursunuz. İstemci programı, ortak arabirimleri içeren derlemeye başvurarak ve başvurunun özelliğini `Embed Interop Types` ayarlayarak, arabirimlerin tür `True`bilgilerini tasarım zamanında katıştırabilir. İstemci programı daha sonra bu arabirimler olarak yazılan çalışma zamanı nesnelerinin örneklerini yükleyebilir. Bu komut satırı derleyicisi kullanarak ve [-link derleyici seçeneği](../../csharp/language-reference/compiler-options/link-compiler-option.md)kullanarak derleme başvuru eşdeğerdir.
+Katıştırılabilen ortak arabirimleri belirttikten sonra, bu arabirimleri uygulayan çalışma zamanı sınıfları oluşturursunuz. İstemci programı, genel arabirimleri içeren derlemeye başvurarak ve başvurusunun özelliğini ayarlayarak, tasarım zamanında arabirimlerin tür bilgilerini ekleyebilir `Embed Interop Types` `True` . İstemci programı daha sonra bu arabirimler olarak yazılmış çalışma zamanı nesnelerinin örneklerini yükleyebilir. Bu, komut satırı derleyicisini kullanmakla ve derlemeye, [-Link derleyici seçeneği](../../csharp/language-reference/compiler-options/link-compiler-option.md)kullanılarak başvurulmaya eşdeğerdir.
 
-Güçlü adlandırılmış çalışma zamanı derlemenizin yeni bir sürümünü oluşturursanız, istemci programının yeniden derlenmesine gerek yoktur. İstemci programı, ortak arabirimler için katıştırılmış tür bilgilerini kullanarak, çalışma zamanı derlemesinin hangi sürümünü kullanabilirse kullanmaya devam eder.
+Güçlü adlandırılmış çalışma zamanı derlemenin yeni bir sürümünü oluşturursanız, istemci programın yeniden derlenmesi gerekmez. İstemci programı, ortak arabirimler için katıştırılmış tür bilgilerini kullanarak çalışma zamanı derlemesinin hangi sürümünün kullanılabilir olduğunu kullanmaya devam eder.
 
-Bu gözden geçirmede, siz:
+Bu izlenecek yolda şunları yapabilirsiniz:
 
-1. Katıştırılmış tür bilgilerini içeren ortak arabirimiçeren güçlü adlandırılmış bir derleme oluşturun.
-1. Ortak arabirimi uygulayan güçlü adlandırılmış bir çalışma zamanı derlemesi oluşturun.
-1. Ortak arabirimden tür bilgilerini gömen ve çalışma zamanı derlemesinden sınıfın bir örneğini oluşturan bir istemci programı oluşturun.
-1. Çalışma zamanı montajını değiştirin ve yeniden oluşturun.
-1. Yeniden derlenmek zorunda kalmadan çalışma zamanı derlemesinin yeni sürümünü kullandığını görmek için istemci programını çalıştırın.
+1. Katıştırılabilen tür bilgilerini içeren bir ortak arabirim ile tanımlayıcı adlı bir derleme oluşturun.
+1. Ortak arabirimi uygulayan, tanımlayıcı adlı bir çalışma zamanı derlemesi oluşturun.
+1. Ortak arabirimden tür bilgilerini katıştıran bir istemci programı oluşturun ve çalışma zamanı derlemesinden sınıfın bir örneğini oluşturur.
+1. Çalışma zamanı derlemesini değiştirin ve yeniden derleyin.
+1. Yeniden derlenmesi gerekmeden, çalışma zamanı derlemesinin yeni sürümünü kullandığını görmek için istemci programını çalıştırın.
 
 [!INCLUDE[note_settings_general](../../../includes/note-settings-general-md.md)]
 
 ## <a name="conditions-and-limitations"></a>Koşullar ve sınırlamalar
 
-Bir derlemeden tür bilgilerini aşağıdaki koşullar altında katıştırabilirsiniz:
+Bir derlemeden tür bilgilerini aşağıdaki koşullarda ekleyebilirsiniz:
 
-- Derleme, en az bir ortak arabirimi ortaya çıkarır.
-- Katıştılı arabirimler, benzersiz `ComImport` GUID'lere sahip öznitelikler ve `Guid` özniteliklerle açıklamalı olarak açıklanır.
-- Derleme öznitelik veya `ImportedFromTypeLib` `PrimaryInteropAssembly` öznitelik ve derleme düzeyinde `Guid` öznitelik ile açıklamalı. Visual C# ve Visual Basic proje şablonları `Guid` varsayılan olarak montaj düzeyinde bir öznitelik içerir.
+- Derleme en az bir ortak arabirim kullanıma sunar.
+- Katıştırılmış arabirimlere, `ComImport` `Guid` benzersiz GUID 'leri olan öznitelikler ve özniteliklerle açıklama eklenir.
+- Derlemeye, `ImportedFromTypeLib` özniteliğiyle veya `PrimaryInteropAssembly` özniteliğiyle ve derleme düzeyi özniteliğiyle açıklama eklenir `Guid` . Visual C# ve Visual Basic proje şablonları varsayılan olarak bir derleme düzeyi `Guid` özniteliği içerir.
 
-Tür katıştırma birincil işlevi COM interop derlemeleri desteklemek olduğundan, tam yönetilen bir çözüme tür bilgilerini katıştırdığınızda aşağıdaki sınırlamalar geçerlidir:
+Ekleme türü birincil işlevi COM birlikte çalışma derlemelerini desteklemek olduğundan, tür bilgilerini tam olarak yönetilen bir çözüme eklediğinizde aşağıdaki sınırlamalar geçerlidir:
 
-- Yalnızca COM interop'a özgü öznitelikler gömülür. Diğer öznitelikler yoksayılır.
-- Bir tür genel parametreler kullanıyorsa ve genel parametre türü katıştırılmış bir türse, bu tür derleme sınırı boyunca kullanılamaz. Derleme sınırını aşmaya örnek olarak yöntem başka bir derlemeden çağrı veya başka bir derlemede tanımlanan bir türden tür elde etmek verilebilir.
-- Sabitler gömülü değildir.
-- Sınıf, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> anahtar olarak katışılmış bir türü desteklemez. Katıştırılmış bir türü anahtar olarak desteklemek için kendi sözlük türünüzü uygulayabilirsiniz.
+- Yalnızca COM birlikte çalışabilirliğine özgü öznitelikler katıştırılır. Diğer öznitelikler yok sayılır.
+- Bir tür genel parametreler kullanıyorsa ve genel parametrenin türü gömülü bir türse, bu tür bir derleme sınırı boyunca kullanılamaz. Bir derleme sınırının geçmesinin örnekleri, başka bir derlemeden bir yöntemi çağırmayı veya başka bir derlemede tanımlanan türden bir tür türetmeyi içerir.
+- Sabitler ekli değil.
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>Sınıf, gömülü bir türü anahtar olarak desteklemez. Gömülü bir türü anahtar olarak desteklemek için kendi sözlük türünü uygulayabilirsiniz.
 
-## <a name="create-an-interface"></a>Arayüz oluşturma
+## <a name="create-an-interface"></a>Arabirim oluşturma
 
-İlk adım türü eşdeğerlik arabirim derlemeoluşturmaktır.
+İlk adım tür denklik arabirim derlemesini oluşturmaktır.
 
-1. Visual Studio'da **Dosya** > **Yeni** > **Projesi'ni**seçin.
+1. Visual Studio 'da **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-1. Yeni **proje** iletişim kutusu oluştur kutusunda, **şablonları ara** kutusuna *sınıf kitaplığı* yazın. Listeden C# veya Visual Basic **Class Library (.NET Framework)** şablonu seçin ve sonra **İleri'yi**seçin.
+1. **Yeni proje oluştur** iletişim kutusunda, **şablon ara** kutusuna *sınıf kitaplığı* yazın. Listeden C# veya Visual Basic **Class Library (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-1. Yeni proje iletişim **kutunuzu Yapıla,** **Proje adı**altında , *TypeEquivalenceInterface*yazın ve ardından **Oluştur'u**seçin. Yeni proje oluşturuldu.
+1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı**altında *TypeEquivalenceInterface*yazın ve ardından **Oluştur**' u seçin. Yeni proje oluşturulur.
 
-1. **Solution Explorer'da** *Class1.cs* veya *Class1.vb* dosyasına sağ tıklayın, **Yeniden Adlandır'ı**seçin ve dosyayı *Class1'den* *ISampleInterface'e*yeniden adlandırın. Sınıfı yeniden adlandırmak için istem `ISampleInterface`için **Evet'i** yanıtlayın. Bu sınıf, sınıfın ortak arabirimini temsil eder.
+1. **Çözüm Gezgini**' de, *Class1.cs* veya *Class1. vb* dosyasını sağ tıklatın, **Yeniden Adlandır**' ı seçin ve dosyayı SınıfAdı SınıfAdı *' dan* *isampelınterface*olarak yeniden adlandırın. Ayrıca sınıfını olarak yeniden adlandırmak için istemine **Evet** yanıtı verin `ISampleInterface` . Bu sınıf, sınıfının genel arabirimini temsil eder.
 
-1. **Solution Explorer'da** **TypeEquivalenceInterface** projesini sağ tıklatın ve ardından **Özellikler'i**seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceInterface** projesine sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-1. **Özellikler** ekranının sol bölmesine **Yap'ı** seçin ve **Çıktı yolunu** *bilgisayarınızdaki C:\TypeEquivalenceSample*gibi bir konuma ayarlayın. Bu yol boyunca aynı konumu kullanırsınız.
+1. **Özellikler** ekranının sol bölmesinde **Oluştur** ' u seçin ve **Çıkış yolunu** bilgisayarınızdaki bir konuma (örneğin, *C:\TypeEquivalenceSample*) ayarlayın. Bu izlenecek yol boyunca aynı konumu kullanırsınız.
 
-1. **Özellikler** ekranının sol bölmesine **İmzala'yı** seçin ve ardından montaj onay kutusunu **imzala'yı** seçin. **Güçlü bir ad tuşu dosyası seç**için açılan açılır durumda Yeni'yi seçin. **New**
+1. **Özellikler** ekranının sol bölmesinde **oturum** aç ' ı seçin ve ardından **derlemeyi imzala** onay kutusunu seçin. **Bir tanımlayıcı ad anahtar dosyası seç**açılan menüsünde **Yeni**' yi seçin.
 
-1. Güçlü **Ad Anahtarı Oluştur** iletişim kutusunda, **Anahtar dosya adı**altında , *key.snk*yazın. Parola onay **kutusuyla anahtar dosyamı koruyun'un** select'ini seçin ve ardından **Tamam'ı**seçin.
+1. **Tanımlayıcı ad anahtarı oluştur** iletişim kutusunda, **anahtar dosya adı**altında *Key. snk*yazın. **Anahtar dosyamı parolayla koru** onay kutusunu kaldırın ve ardından **Tamam**' ı seçin.
 
-1. Kod düzenleyicisinde *ISampleInterface* sınıf dosyasını açın ve arabirimi oluşturmak `ISampleInterface` için içeriğini aşağıdaki kodla değiştirin:
+1. Kod düzenleyicisinde *ısamptaınterface* sınıf dosyasını açın ve aşağıdaki kodla içeriğini değiştirerek `ISampleInterface` arabirimi oluşturun:
 
    ```csharp
    using System;
@@ -96,11 +97,11 @@ Tür katıştırma birincil işlevi COM interop derlemeleri desteklemek olduğun
    End Interface
    ```
 
-1. **Araçlar** menüsünde **Guid Oluştur'u**ve **GUID Oluştur** iletişim kutusunda Kayıt **Defteri Biçimi'ni**seçin. **Kopyala'yı**seçin ve ardından **Çıkış'ı**seçin.
+1. **Araçlar** menüsünde **GUID oluştur**' u seçin ve **Guid oluştur** iletişim kutusunda **kayıt defteri biçimi**' ni seçin. **Kopyala**' yı seçin ve ardından **Çıkış**' ı seçin.
 
-1. Kodunuzu `Guid` öznitelik olarak, örnek GUID'i kopyaladiğiniz GUID ile değiştirin ve ayraçları kaldırın (**{ }**).
+1. `Guid`Kodunuzun özniteliğinde, örnek GUID 'yi KOPYALADıĞıNıZ GUID ile değiştirin ve ayraçları (**{}**) kaldırın.
 
-1. **Solution Explorer'da** **Özellikler** klasörünü genişletin ve *AssemblyInfo.cs* veya *AssemblyInfo.vb* dosyasını seçin. Kod düzenleyicisinde, dosyaya aşağıdaki özniteliği ekleyin:
+1. **Çözüm Gezgini**, **Özellikler** klasörünü genişletin ve *AssemblyInfo.cs* veya *AssemblyInfo. vb* dosyasını seçin. Kod Düzenleyicisi 'nde, dosyaya aşağıdaki özniteliği ekleyin:
 
    ```csharp
    [assembly: ImportedFromTypeLib("")]
@@ -110,37 +111,37 @@ Tür katıştırma birincil işlevi COM interop derlemeleri desteklemek olduğun
    <Assembly: ImportedFromTypeLib("")>
    ```
 
-1. **Dosyaları** > ve projeyi kaydetmek için Dosya**Tümünü Kaydet'i** seçin veya **Ctrl**+**Shift**+**S** tuşuna basın.
+1. **Dosya**  >  **Save All** **Ctrl** + **Shift** + **S** ve proje kaydetmek için Tümünü Kaydet ' i seçin veya CTRL SHIFT 'e basın.
 
-1. **Solution Explorer'da** **TypeEquivalenceInterface** projesini sağ tıklatın ve **Oluştur'u**seçin. Sınıf kitaplığı DLL dosyası derlenir ve belirtilen yapı çıktı yoluna kaydedilir, örneğin *C:\TypeEquivalenceSample*.
+1. **Çözüm Gezgini**, **TypeEquivalenceInterface** projesine sağ tıklayın ve **Oluştur**' u seçin. Sınıf kitaplığı DLL dosyası derlenir ve belirtilen derleme çıkış yoluna kaydedilir, örneğin *C:\TypeEquivalenceSample*.
 
 ## <a name="create-a-runtime-class"></a>Çalışma zamanı sınıfı oluşturma
 
-Ardından, tür eşdeğerliği çalışma zamanı sınıfını oluşturun.
+Sonra, tür eşdeğerlik çalışma zamanı sınıfını oluşturun.
 
-1. Visual Studio'da **Dosya** > **Yeni** > **Projesi'ni**seçin.
+1. Visual Studio 'da **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-1. Yeni **proje** iletişim kutusu oluştur kutusunda, **şablonları ara** kutusuna *sınıf kitaplığı* yazın. Listeden C# veya Visual Basic **Class Library (.NET Framework)** şablonu seçin ve sonra **İleri'yi**seçin.
+1. **Yeni proje oluştur** iletişim kutusunda, **şablon ara** kutusuna *sınıf kitaplığı* yazın. Listeden C# veya Visual Basic **Class Library (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-1. Yeni proje iletişim **kutunuzu Yapıla,** **Proje adı**altında , *TypeEquivalenceRuntime*yazın ve ardından **Oluştur'u**seçin. Yeni proje oluşturuldu.
+1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı**altında *TypeEquivalenceRuntime*yazın ve ardından **Oluştur**' u seçin. Yeni proje oluşturulur.
 
-1. **Çözüm Gezgini'nde,** *Class1.cs* veya *Class1.vb* dosyasına sağ tıklayın, **Yeniden Adlandır'ı**seçin ve dosyayı *Class1'den* *SampleClass'a*yeniden adlandırın. Sınıfı yeniden adlandırmak için istem `SampleClass`için **Evet'i** yanıtlayın. Bu sınıf `ISampleInterface` arabirimi uygular.
+1. **Çözüm Gezgini**, *Class1.cs* veya *Class1. vb* dosyasını sağ tıklayın, **Yeniden Adlandır**' ı seçin ve dosyayı *SınıfAdı SınıfAdı* *' dan* SampleClass olarak yeniden adlandırın. Ayrıca sınıfını olarak yeniden adlandırmak için istemine **Evet** yanıtı verin `SampleClass` . Bu sınıf, `ISampleInterface` arabirimini uygular.
 
-1. **Solution Explorer'da** **TypeEquivalenceInterface** projesini sağ tıklatın ve **Özellikleri**seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceInterface** projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-1. **Özellikler** ekranının sol bölmesine **Yapı'yı** seçin ve çıktı **yolunu** TypeEquivalenceInterface projesi için kullandığınız konuma ayarlayın, örneğin *C:\TypeEquivalenceSample*.
+1. **Özellikler** ekranının sol bölmesinde **Oluştur** ' u seçin ve ardından **Çıkış yolunu** TypeEquivalenceInterface projesi için kullandığınız aynı konuma ayarlayın, örneğin, *C:\TypeEquivalenceSample*.
 
-1. **Özellikler** ekranının sol bölmesine **İmzala'yı** seçin ve ardından montaj onay kutusunu **imzala'yı** seçin. **Güçlü bir ad tuşu dosyası seç**için açılan açılır durumda Yeni'yi seçin. **New**
+1. **Özellikler** ekranının sol bölmesinde **oturum** aç ' ı seçin ve ardından **derlemeyi imzala** onay kutusunu seçin. **Bir tanımlayıcı ad anahtar dosyası seç**açılan menüsünde **Yeni**' yi seçin.
 
-1. Güçlü **Ad Anahtarı Oluştur** iletişim kutusunda, **Anahtar dosya adı**altında , *key.snk*yazın. Parola onay **kutusuyla anahtar dosyamı koruyun'un** select'ini seçin ve ardından **Tamam'ı**seçin.
+1. **Tanımlayıcı ad anahtarı oluştur** iletişim kutusunda, **anahtar dosya adı**altında *Key. snk*yazın. **Anahtar dosyamı parolayla koru** onay kutusunu kaldırın ve ardından **Tamam**' ı seçin.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceRuntime** projesine sağ tıklayın ve**Referans** **Ekle'yi** > seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceRuntime** projesine sağ tıklayın ve başvuru **Ekle**' yi seçin  >  **Reference**.
 
-1. Başvuru **Yöneticisi** iletişim kutusunda **Gözat'ı** seçin ve çıktı yolu klasörüne göz atın. *TypeEquivalenceInterface.dll* dosyasını seçin, **Ekle'yi**seçin ve ardından **Tamam'ı**seçin.
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Araştır** ' ı seçin ve çıkış yolu klasörüne gidin. *TypeEquivalenceInterface. dll* dosyasını seçin, **Ekle**' yi seçin ve ardından **Tamam**' ı seçin.
 
-1. **Solution**Explorer'da, **Başvurular** klasörünü genişletin ve **TypeEquivalenceInterface** başvurualanını seçin. **Özellikler** bölmesinde, zaten değilse **Belirli Sürümü** **False** olarak ayarlayın.
+1. **Çözüm Gezgini**, **Başvurular** klasörünü genişletin ve **TypeEquivalenceInterface** başvurusunu seçin. **Özellikler** bölmesinde, **belirli bir sürümü** henüz yoksa **yanlış** olarak ayarlayın.
 
-1. Kod düzenleyicisinde *SampleClass* sınıf dosyasını açın ve sınıfı oluşturmak için `SampleClass` içeriğini aşağıdaki kodla değiştirin:
+1. Kod düzenleyicisinde *SampleClass* sınıf dosyasını açın ve sınıfını oluşturmak için içeriğini aşağıdaki kodla değiştirin `SampleClass` :
 
    ```csharp
    using System;
@@ -182,31 +183,31 @@ Ardından, tür eşdeğerliği çalışma zamanı sınıfını oluşturun.
    End Class
    ```
 
-1. **Dosyaları** > ve projeyi kaydetmek için Dosya**Tümünü Kaydet'i** seçin veya **Ctrl**+**Shift**+**S** tuşuna basın.
+1. **Dosya**  >  **Save All** **Ctrl** + **Shift** + **S** ve proje kaydetmek için Tümünü Kaydet ' i seçin veya CTRL SHIFT 'e basın.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceRuntime** projesini sağ tıklatın ve **Build'i**seçin. Sınıf kitaplığı DLL dosyası derlenir ve belirtilen yapı çıktı yoluna kaydedilir.
+1. **Çözüm Gezgini**, **TypeEquivalenceRuntime** projesine sağ tıklayın ve **Oluştur**' u seçin. Sınıf kitaplığı DLL dosyası derlenir ve belirtilen yapı çıkış yoluna kaydedilir.
 
 ## <a name="create-a-client-project"></a>İstemci projesi oluşturma
 
-Son olarak, arabirim derlemesine başvuran bir tür eşdeğerlik istemci programı oluşturun.
+Son olarak, arabirim derlemesine başvuran bir tür denklik istemci programı oluşturun.
 
-1. Visual Studio'da **Dosya** > **Yeni** > **Projesi'ni**seçin.
+1. Visual Studio 'da **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-1. Yeni **bir proje** oluştur iletişim kutusunda **şablonara** kutusuna *konsol* yazın. Listeden C# veya Visual Basic **Console App (.NET Framework)** şablonundan birini seçin ve ardından **İleri'yi**seçin.
+1. **Yeni proje oluştur** iletişim kutusunda, **şablon ara** kutusuna *konsol* yazın. Listeden C# veya Visual Basic **konsol uygulaması (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-1. Yeni proje iletişim **kutunuzu Yapıla,** **Proje adı altında**, *TypeEquivalenceClient*yazın ve ardından **Oluştur'u**seçin. Yeni proje oluşturuldu.
+1. **Yeni projenizi yapılandırın** iletişim kutusunda, **Proje adı**altında *TypeEquivalenceClient*yazın ve ardından **Oluştur**' u seçin. Yeni proje oluşturulur.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceClient** projesini sağ tıklatın ve **Özellikler'i**seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceClient** projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-1. **Özellikler** ekranının sol bölmesine **Yapı'yı** seçin ve çıktı **yolunu** TypeEquivalenceInterface projesi için kullandığınız konuma ayarlayın, örneğin *C:\TypeEquivalenceSample*.
+1. **Özellikler** ekranının sol bölmesinde **Oluştur** ' u seçin ve ardından **Çıkış yolunu** TypeEquivalenceInterface projesi için kullandığınız aynı konuma ayarlayın, örneğin, *C:\TypeEquivalenceSample*.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceClient** projesine sağ tıklayın ve**Referans** **Ekle'yi** > seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceClient** projesine sağ tıklayın ve başvuru **Ekle**' yi seçin  >  **Reference**.
 
-1. Başvuru **Yöneticisi** iletişim kutusunda, **TypeEquivalenceInterface.dll** dosyası zaten listelenmişse, bu dosyayı seçin. Değilse, **Gözat**seçin , çıkış yolu klasörüne göz atın, *TypeEquivalenceInterface.dll* dosyasını seçin *(TypeEquivalenceRuntime.dll*değil), ve **Ekle**seçin . **Tamam'ı**seçin.
+1. **Başvuru Yöneticisi** iletişim kutusunda, **TypeEquivalenceInterface. dll** dosyası zaten listeleniyorsa, onu seçin. Aksi takdirde, **Araştır**' ı seçin, çıkış yolu klasörüne gidin, *TypeEquivalenceInterface. dll* dosyasını ( *TypeEquivalenceRuntime. dll*değil) seçin ve **Ekle**' yi seçin. **Tamam**’ı seçin.
 
-1. **Solution**Explorer'da, **Başvurular** klasörünü genişletin ve **TypeEquivalenceInterface** başvurualanını seçin. **Özellikler** bölmesinde, **Embed Interop Türlerini** **True**olarak ayarlayın.
+1. **Çözüm Gezgini**, **Başvurular** klasörünü genişletin ve **TypeEquivalenceInterface** başvurusunu seçin. **Özellikler** bölmesinde, **birlikte çalışma türlerini katıştır** ' ı **doğru**olarak ayarlayın.
 
-1. Kod düzenleyicisindeki *Program.cs* veya *Module1.vb* dosyasını açın ve istemci programını oluşturmak için içeriğini aşağıdaki kodla değiştirin:
+1. Kod düzenleyicisinde *program.cs* veya *Module1. vb* dosyasını açın ve istemci programını oluşturmak için içeriğini aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -250,23 +251,23 @@ Son olarak, arabirim derlemesine başvuran bir tür eşdeğerlik istemci program
    End Module
    ```
 
-1. **Dosyaları** > ve projeyi kaydetmek için Dosya**Tümünü Kaydet'i** seçin veya **Ctrl**+**Shift**+**S** tuşuna basın.
+1. **Dosya**  >  **Save All** **Ctrl** + **Shift** + **S** ve proje kaydetmek için Tümünü Kaydet ' i seçin veya CTRL SHIFT 'e basın.
 
-1. Programı oluşturmak ve çalıştırmak için **Ctrl**+**F5** tuşuna basın. Konsol çıkışının montaj sürümünü **1.0.0.0**döndürür.
+1. **Ctrl** + Programı derlemek ve çalıştırmak için CTRL**F5** tuşuna basın. Konsol çıkışının **1.0.0.0**derleme sürümünü döndürdüğünü unutmayın.
 
 ## <a name="modify-the-interface"></a>Arabirimi değiştirme
 
-Şimdi, arabirim montajını değiştirin ve sürümünü değiştirin.
+Şimdi, arabirim derlemesini değiştirin ve sürümünü değiştirin.
 
-1. Visual Studio'da **Dosya** > **Açık** > **Projesi/Çözümü'nü**seçin ve **TypeEquivalenceInterface** projesini açın.
+1. Visual Studio 'da **Dosya**  >  **Aç**  >  **Proje/çözüm**' ü seçin ve **TypeEquivalenceInterface** projesini açın.
 
-1. **Solution Explorer'da** **TypeEquivalenceInterface** projesini sağ tıklatın ve **Özellikleri**seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceInterface** projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-1. **Özellikler** ekranının sol bölmesine **Uygulama'yı** seçin ve ardından **Derleme Bilgileri'ni**seçin.
+1. **Özellikler** ekranının sol bölmesinde **uygulama** ' yı seçin ve ardından **derleme bilgileri**' ni seçin.
 
-1. Derleme **Bilgileri** iletişim kutusunda, **Derleme sürümü** ve Dosya **sürüm** değerlerini *2.0.0.0*olarak değiştirin ve ardından **Tamam'ı**seçin.
+1. **Derleme bilgileri** Iletişim kutusunda **derleme sürümünü** ve **dosya sürümü** değerlerini *2.0.0.0*olarak değiştirip **Tamam**' ı seçin.
 
-1. *SampleInterface.cs* veya *SampleInterface.vb* dosyasını açın ve arabirime `ISampleInterface` aşağıdaki kod satırını ekleyin:
+1. *SampleInterface.cs* veya *sampleınterface. vb* dosyasını açın ve aşağıdaki kod satırını `ISampleInterface` arabirime ekleyin:
 
    ```csharp
    DateTime GetDate();
@@ -276,23 +277,23 @@ Son olarak, arabirim derlemesine başvuran bir tür eşdeğerlik istemci program
    Function GetDate() As Date
    ```
 
-1. **Dosyaları** > ve projeyi kaydetmek için Dosya**Tümünü Kaydet'i** seçin veya **Ctrl**+**Shift**+**S** tuşuna basın.
+1. **Dosya**  >  **Save All** **Ctrl** + **Shift** + **S** ve proje kaydetmek için Tümünü Kaydet ' i seçin veya CTRL SHIFT 'e basın.
 
-1. **Solution Explorer'da** **TypeEquivalenceInterface** projesini sağ tıklatın ve **Oluştur'u**seçin. Sınıf kitaplığı DLL dosyasının yeni bir sürümü derlenir ve yapı çıktı yoluna kaydedilir.
+1. **Çözüm Gezgini**, **TypeEquivalenceInterface** projesine sağ tıklayın ve **Oluştur**' u seçin. Sınıf kitaplığı DLL dosyasının yeni bir sürümü derlenir ve derleme çıkış yoluna kaydedilir.
 
 ## <a name="modify-the-runtime-class"></a>Çalışma zamanı sınıfını değiştirme
 
 Ayrıca çalışma zamanı sınıfını değiştirin ve sürümünü güncelleştirin.
 
-1. Visual Studio'da **Dosya** > **Açık** > **Projesi/Çözümü'nü**seçin ve **TypeEquivalenceRuntime** projesini açın.
+1. Visual Studio 'da **Dosya**  >  **Aç**  >  **Proje/çözüm**' ü seçin ve **TypeEquivalenceRuntime** projesini açın.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceRuntime** projesini sağ tıklatın ve **Özellikleri**seçin.
+1. **Çözüm Gezgini**, **TypeEquivalenceRuntime** projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-1. **Özellikler** ekranının sol bölmesine **Uygulama'yı** seçin ve ardından **Derleme Bilgileri'ni**seçin.
+1. **Özellikler** ekranının sol bölmesinde **uygulama** ' yı seçin ve ardından **derleme bilgileri**' ni seçin.
 
-1. Derleme **Bilgileri** iletişim kutusunda, **Derleme sürümü** ve Dosya **sürüm** değerlerini *2.0.0.0*olarak değiştirin ve ardından **Tamam'ı**seçin.
+1. **Derleme bilgileri** Iletişim kutusunda **derleme sürümünü** ve **dosya sürümü** değerlerini *2.0.0.0*olarak değiştirip **Tamam**' ı seçin.
 
-1. *SampleClass.cs* veya *SampleClass.vb* dosyasını `SampleClass` açın ve sınıfa aşağıdaki kodu ekleyin:
+1. *SampleClass.cs* veya *SampleClass. vb* dosyasını açın ve sınıfına aşağıdaki kodu ekleyin `SampleClass` :
 
    ```csharp
     public DateTime GetDate()
@@ -307,17 +308,17 @@ Ayrıca çalışma zamanı sınıfını değiştirin ve sürümünü güncelleş
    End Function
    ```
 
-1. **Dosyaları** > ve projeyi kaydetmek için Dosya**Tümünü Kaydet'i** seçin veya **Ctrl**+**Shift**+**S** tuşuna basın.
+1. **Dosya**  >  **Save All** **Ctrl** + **Shift** + **S** ve proje kaydetmek için Tümünü Kaydet ' i seçin veya CTRL SHIFT 'e basın.
 
-1. **Çözüm Gezgini'nde** **TypeEquivalenceRuntime** projesini sağ tıklatın ve **Build'i**seçin. Sınıf kitaplığı DLL dosyasının yeni bir sürümü derlenir ve yapı çıktı yoluna kaydedilir.
+1. **Çözüm Gezgini**, **TypeEquivalenceRuntime** projesine sağ tıklayın ve **Oluştur**' u seçin. Sınıf kitaplığı DLL dosyasının yeni bir sürümü derlenir ve derleme çıkış yoluna kaydedilir.
 
-## <a name="run-the-updated-client-program"></a>Güncelleştirilmiş istemci programını çalıştırın
+## <a name="run-the-updated-client-program"></a>Güncelleştirilmiş istemci programını çalıştır
 
-Yapı çıktı klasörü konumuna gidin ve *TypeEquivalenceClient.exe'yi*çalıştırın. Konsol çıkışının artık `TypeEquivalenceRuntime` derlemenin yeni sürümünü yansıttığını unutmayın, *2.0.0.0*, program yeniden derlenmeden.
+Yapı çıkış klasörü konumuna gidin ve *TypeEquivalenceClient. exe*' yi çalıştırın. Konsol çıkışının artık, 2.0.0.0 derlemesinin yeni sürümünü, yeniden `TypeEquivalenceRuntime` Derlenmekte olan program *2.0.0.0*olmadan yansıttığını unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-link (C# Derleyici Seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-Link (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [-bağlantı (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C# programlama kılavuzu](../../csharp/programming-guide/index.md)
 - [Programlama kavramları (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

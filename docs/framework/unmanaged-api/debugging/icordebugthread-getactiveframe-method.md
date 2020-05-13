@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-ms.openlocfilehash: d623893bd77e46832b0bd823ed60c23e4eee29ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 843c6df1ef41fdd3227b92275182432ad4cc43b1
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133535"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379722"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame Metodu
 Bu ICorDebugThread nesnesindeki etkin (en son) çerçeveye yönelik bir arabirim işaretçisi alır.  
@@ -38,13 +38,13 @@ HRESULT GetActiveFrame (
  dışı Bir çerçeveyi temsil eden ICorDebugFrame Interface nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Şu anda etkin bir çerçeve yoksa `ppFrame` parametresi null.  
+ `ppFrame`Şu anda hiçbir çerçeve etkin değilse parametre null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,23 +1,23 @@
 ---
-title: dotnet komutu
-description: Dotnet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
+title: DotNet komutu
+description: DotNet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739073"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378835"
 ---
-# <a name="dotnet-command"></a>dotnet komutu
+# <a name="dotnet-command"></a>DotNet komutu
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet`- .NET Core CLI için genel sürücü.
+`dotnet`-.NET Core CLI için genel sürücü.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 Kullanılabilir komutlar ve ortam hakkında bilgi almak için:
 
@@ -27,7 +27,7 @@ dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
 dotnet -h|--help
 ```
 
-Bir komutçalıştırmak için (SDK yüklemegerektirir):
+Bir komutu çalıştırmak için (SDK yüklemesi gerektirir):
 
 ```dotnetcli
 dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
@@ -46,112 +46,120 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
-`--roll-forward`.NET Core 3.x'ten beri kullanılabilir. .NET Core 2.x için kullanın. `--roll-forward-on-no-candidate-fx`
+`--roll-forward`, .NET Core 3. x sürümünden bu yana kullanılabilir. `--roll-forward-on-no-candidate-fx`.NET Core 2. x için kullanın.
 
 ## <a name="description"></a>Açıklama
 
-Komutun `dotnet` iki işlevi vardır:
+`dotnet`Komutun iki işlevi vardır:
 
-- .NET Core projeleri ile çalışmak için komutlar sağlar.
+- .NET Core projeleriyle çalışmak için komutlar sağlar.
 
-  Örneğin, [`dotnet build`](dotnet-build.md) bir proje oluşturur. Her komut kendi seçeneklerini ve bağımsız değişkenlerini tanımlar. Tüm komutlar, `--help` komutun nasıl kullanılacağı hakkında kısa belgeler yazdırma seçeneğini destekler.
+  Örneğin, [`dotnet build`](dotnet-build.md) bir proje oluşturur. Her komut kendi seçeneklerini ve bağımsız değişkenlerini tanımlar. Tüm komutlar, `--help` komutu kullanma hakkında kısa bir belge yazdırma seçeneğini destekler.
 
-- .NET Core uygulamalarını çalıştırıyor.
+- .NET Core uygulamaları çalıştırır.
 
-  Uygulamayı çalıştırmak için bir `.dll` uygulama dosyasına giden yolu belirtirsiniz.  Uygulamayı çalıştırmak için bulmak ve konsol uygulamaları durumunda `Main` yöntemdir giriş noktası yürütmek anlamına gelir. Örneğin, `dotnet myapp.dll` `myapp` uygulamayı çalıştırın. Dağıtım seçenekleri hakkında bilgi edinmek için [.NET Core uygulama dağıtımına](../deploying/index.md) bakın.
+  Uygulamayı çalıştırmak için bir uygulama dosyasının yolunu belirtin `.dll` .  Uygulamayı çalıştırmak için, konsol uygulamaları söz konusu olduğunda giriş noktasını bulmak ve yürütmek anlamına gelir `Main` . Örneğin, `dotnet myapp.dll` `myapp` uygulamayı çalıştırır. Dağıtım seçenekleri hakkında bilgi edinmek için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md) .
 
 ## <a name="options"></a>Seçenekler
 
-Tek `dotnet` başına, bir komutu çalıştırmak ve bir uygulamayı çalıştırmak için farklı seçenekler mevcuttur.
+Farklı seçenekler, `dotnet` bir komut çalıştırmak ve bir uygulamayı çalıştırmak için tek başına kullanılabilir.
 
-### <a name="options-for-dotnet-by-itself"></a>Dotnet seçenekleri tek başına
+### <a name="options-for-dotnet-by-itself"></a>Tek başına DotNet seçenekleri
 
-Aşağıdaki seçenekler tek `dotnet` başına vardır. Örneğin, `dotnet --info`. Çevre yle ilgili bilgileri yazdırır.
+Aşağıdaki seçenekler `dotnet` kendi kendine yöneliktir. Örneğin, `dotnet --info`. Ortamla ilgili bilgi yazdırır.
 
 - **`--info`**
 
-  Geçerli işletim sistemi gibi bir .NET Core yüklemesi ve makine ortamı hakkında ayrıntılı bilgileri yazdırır ve .NET Core sürümünün SHA'sını işler.
+  .NET Core yüklemesi ve geçerli işletim sistemi gibi makine ortamıyla ilgili ayrıntılı bilgileri yazdırır ve .NET Core sürümünün SHA 'sini yürütün.
 
 - **`--version`**
 
-  .NET Core SDK'nın kullanımdaki sürümünü yazdırır.
+  Kullanımda olan .NET Core SDK sürümünü yazdırır.
 
 - **`--list-runtimes`**
 
-  Yüklenen .NET Core çalışma saatlerinin listesini yazdırır. SDK'nın x86 sürümü yalnızca x86 çalışma saatlerini listeler ve SDK'nın x64 sürümü yalnızca x64 çalışma saatlerini listeler.
+  Yüklü .NET Core çalışma zamanlarının listesini yazdırır. SDK 'nın x86 sürümü yalnızca x86 çalışma zamanlarını listeler ve SDK 'nın x64 sürümü yalnızca x64 çalışma zamanları listeler.
 
 - **`--list-sdks`**
 
-  Yüklenen .NET Core SDK'ların listesini yazdırır.
+  Yüklü .NET Core SDK 'larının listesini yazdırır.
 
 - **`-h|--help`**
 
-  Kullanılabilir komutların listesini yazdırır.
+  Kullanılabilir komutların bir listesini yazdırır.
 
 ### <a name="sdk-options-for-running-a-command"></a>Komut çalıştırmak için SDK seçenekleri
 
-Aşağıdaki seçenekler bir `dotnet` komut ile vardır. Örneğin, `dotnet build --help`.
+Aşağıdaki seçenekler `dotnet` bir komutla yöneliktir. Örneğin, `dotnet build --help`.
 
 - **`-d|--diagnostics`**
 
-  Tanılama çıktısını sağlar.
+  Tanılama çıkışını izin vermez.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve . Her komutta desteklenmez. Bu seçeneğin kullanılabilir olup olmadığını belirlemek için belirli komut sayfasına bakın.
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` . Her komutta desteklenmez. Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
 
 - **`-h|--help`**
 
-  Belirli bir komut için belgeleri yazdırır, örneğin. `dotnet build --help`
+  Gibi belirli bir komutun belgelerini yazdırır `dotnet build --help` .
 
 - **`command options`**
 
-  Her komut, bu komuta özgü seçenekleri tanımlar. Kullanılabilir seçeneklerlistesi için belirli komut sayfasına bakın.
+  Her komut, bu komuta özgü seçenekleri tanımlar. Kullanılabilir seçeneklerin listesi için bkz. özel komut sayfası.
 
 ### <a name="runtime-options"></a>Çalışma zamanı seçenekleri
 
-Bir uygulama çalıştırıldığında `dotnet` aşağıdaki seçenekler kullanılabilir. Örneğin, `dotnet myapp.dll --fx-version 3.1.1`.
+Bir uygulama çalıştırıldığında aşağıdaki seçenekler mevcuttur `dotnet` . Örneğin, `dotnet myapp.dll --roll-forward Major`.
 
 - **`--additionalprobingpath <PATH>`**
 
-  Sondalama ilkesi ve sondalama için derlemeler içeren yol.
+  Araştırmanın yoklama ilkesini ve derlemelerini içeren yol.
 
 - **`--additional-deps <PATH>`**
 
-  Ek bir *.deps.json* dosyasına giden yol. *Deps.json* dosyası, derleme çakışmalarını gidermek için kullanılan bağımlılıkların, derleme bağımlılıklarının ve sürüm bilgilerinin listesini içerir. Daha fazla bilgi için GitHub'daki [Runtime Configuration Files'a](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) bakın.
+  Ek *. Deps. JSON* dosyasının yolu. Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  .NET Core çalışma zamanı sürümü uygulamayı çalıştırmak için kullanmak.
+  *Deps. JSON* dosyasının yolu. *Deps. JSON* dosyası, uygulamayı çalıştırmak için gerekli bağımlılıklar hakkında bilgi içeren bir yapılandırma dosyasıdır. Bu dosya .NET Core SDK tarafından oluşturulur.
 
 - **`--runtimeconfig`**
 
-  *Runtimeconfig.json* dosyasına giden yol. *Runtimeconfig.json* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için [.NET Core çalışma zamanı yapılandırma ayarlarına](../run-time-config/index.md#runtimeconfigjson)bakın.
+  *Runtimeconfig. JSON* dosyasının yolu. *Runtimeconfig. JSON* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
-- **`--roll-forward-on-no-candidate-fx <N>`****.NET Core 2.x SDK'da mevcuttur.**
+- **`--roll-forward <SETTING>`****.NET Core SDK 3,0 ' den başlayarak kullanılabilir.**
 
-  Gerekli paylaşılan çerçeve kullanılamadığında davranışı tanımlar. `N`olabilir:
+  Uygulamaya nasıl iletme uygulanacağını denetler. `SETTING`Aşağıdaki değerlerden biri olabilir. Belirtilmemişse, `Minor` varsayılandır.
 
-  - `0`- Hatta küçük sürümü ileri rulo devre dışı.
-  - `1`- Roll ileri küçük sürümü, ancak ana sürümünde değil. Bu varsayılan davranıştır.
-  - `2`- Küçük ve ana versiyonlarda ileri ye doğru yuvarlan.
+  - `LatestPatch`-En yüksek düzeltme eki sürümüne ilet. Bu, ikincil sürüm iletmeyi devre dışı bırakır.
+  - `Minor`-İstenen alt sürüm eksikse, en düşük düzeydeki sürüme ilet. İstenen ikincil sürüm varsa, LatestPatch ilkesi kullanılır.
+  - `Major`-İstenen ana sürüm eksikse, en düşük ana sürüme ve en düşük alt sürüme ilet. İstenen ana sürüm varsa, Ikincil ilke kullanılır.
+  - `LatestMinor`-İstenen alt sürüm mevcut olsa bile en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
+  - `LatestMajor`-İstenen ana mevcut olsa bile en yüksek ve en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
+  - `Disable`-İleri geri alma. Yalnızca belirtilen sürüme bağlayın. Bu ilke, en son düzeltme eklerine iletme özelliğini devre dışı bıraktığından genel kullanım için önerilmez. Bu değer yalnızca test için önerilir.
 
-   Daha fazla bilgi için [bkz.](../whats-new/dotnet-core-2-1.md#roll-forward)
+  Hariç `Disable` olmak üzere, tüm ayarlar kullanılabilir en yüksek düzeltme eki sürümünü kullanacaktır.
 
-- **`--roll-forward <SETTING>`****.NET Core SDK 3.0 ile başlayan kullanılabilir.**
+  İleri sarma davranışı Ayrıca bir proje dosyası özelliği, çalışma zamanı yapılandırma dosyası özelliği ve ortam değişkeni içinde de yapılandırılabilir. Daha fazla bilgi için bkz. [ana sürüm çalışma zamanı ileri iletme](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
 
-  Kullanıma almanın uygulamaya nasıl uygulandığını denetler. Aşağıdaki `SETTING` değerlerden biri olabilir. Belirtilmemişse, `Minor` varsayılandır.
+- **`--roll-forward-on-no-candidate-fx <N>`****.NET Core 2. x SDK ' da kullanılabilir.**
 
-  - `LatestPatch`- En yüksek yama sürümüne doğru yuvarlan. Bu, küçük sürümün devrilmelerini devre dışı kılabilir.
-  - `Minor`- İstenen küçük sürüm eksikse, en düşük yüksek minör sürüme doğru ileri doğru yuvarlan. İstenen küçük sürüm varsa, En Son Yama ilkesi kullanılır.
-  - `Major`- İstenen ana sürüm eksikse, en düşük yüksek ana sürüme ve en düşük küçük sürüme yuvarlan. İstenen ana sürüm varsa, Küçük ilke kullanılır.
-  - `LatestMinor`- İstenen küçük sürüm mevcut olsa bile, en yüksek minör sürüme doğru yuvarlan. Bileşen barındırma senaryoları için tasarlanmıştır.
-  - `LatestMajor`- İstenilen ana sürüm mevcut olsa bile, en yüksek majör ve en yüksek minör sürüme doğru yuvarlan. Bileşen barındırma senaryoları için tasarlanmıştır.
-  - `Disable`- Öne yuvarlanmayın. Yalnızca belirtilen sürüme bağla. Bu ilke, en son düzeltme ekilerine ilerleme yitirme özelliğini devre dışı kattığı için genel kullanım için önerilmez. Bu değer yalnızca sınama için önerilir.
+  Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N`şunları yapabilirsiniz:
 
-`Disable`Hariç, tüm ayarlar mevcut en yüksek yama sürümünü kullanır.
+  - `0`-Hatta ikincil sürüm iletmeyi devre dışı bırakın.
+  - `1`-Önemli sürümde değil, küçük sürümde ilet. Bu, varsayılan davranıştır.
+  - `2`-Küçük ve büyük sürümlerde ilet.
 
-Roll forward davranışı, proje dosyası özelliğinde, çalışma zamanı yapılandırma dosyası özelliğinde ve ortam değişkeninde de yapılandırılabilir. Daha fazla bilgi için [Bkz. Major-version runtime roll forward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+  Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  .NET Core 3,0 ile başlayarak bu seçeneğin yerini almıştır `--roll-forward` ve bunun yerine bu seçenek kullanılmalıdır.
+
+- **`--fx-version <VERSION>`**
+
+  Uygulamayı çalıştırmak için kullanılacak .NET Core çalışma zamanının sürümü.
+
+  Bu seçenek, uygulamanın dosyasındaki ilk Framework başvurusunun sürümünü geçersiz kılar `.runtimeconfig.json` . Bu, yalnızca tek bir çerçeve başvurusu varsa beklendiği gibi çalıştığı anlamına gelir. Uygulamanın birden fazla Framework başvurusu varsa, bu seçeneğin kullanılması hatalara neden olabilir.
 
 ## <a name="dotnet-commands"></a>dotnet komutları
 
@@ -159,74 +167,74 @@ Roll forward davranışı, proje dosyası özelliğinde, çalışma zamanı yap�
 
 | Komut                                       | İşlev                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | Bir .NET Core uygulaması oluşturur.                                     |
-| [dotnet build-server](dotnet-build-server.md) | Bir yapı tarafından başlatılan sunucularla etkileşim de eder.                          |
-| [dotnet clean](dotnet-clean.md)               | Yapı çıktılarını temizleyin.                                                |
-| [dotnet help](dotnet-help.md)                 | Komut için çevrimiçi olarak daha ayrıntılı belgeler gösterir.           |
-| [dotnet migrate](dotnet-migrate.md)           | Geçerli bir Önizleme 2 projesini bir .NET Core SDK 1.0 projesine geçirin.  |
+| [dotnet build](dotnet-build.md)               | .NET Core uygulaması oluşturur.                                     |
+| [dotnet build-server](dotnet-build-server.md) | Bir yapı tarafından başlatılan sunucularla etkileşime girer.                          |
+| [dotnet clean](dotnet-clean.md)               | Derleme çıktılarını temizle.                                                |
+| [dotnet help](dotnet-help.md)                 | Komutu için çevrimiçi daha ayrıntılı belgeler gösterir.           |
+| [dotnet migrate](dotnet-migrate.md)           | Geçerli bir Preview 2 projesini .NET Core SDK 1,0 projesine geçirir.  |
 | [dotnet msbuild](dotnet-msbuild.md)           | MSBuild komut satırına erişim sağlar.                        |
-| [dotnet new](dotnet-new.md)                   | Belirli bir şablon için C# veya F# projesini başlatır.                |
-| [dotnet pack](dotnet-pack.md)                 | Kodunuzu bir NuGet paketi oluşturur.                               |
-| [dotnet publish](dotnet-publish.md)           | .NET framework'e bağımlı veya bağımsız bir uygulama yayımlar. |
+| [dotnet new](dotnet-new.md)                   | Belirli bir şablon için C# veya F # projesi başlatır.                |
+| [dotnet pack](dotnet-pack.md)                 | Kodunuzun bir NuGet paketini oluşturur.                               |
+| [dotnet publish](dotnet-publish.md)           | .NET Framework 'e bağımlı veya kendi kendine içerilen bir uygulama yayımlar. |
 | [dotnet restore](dotnet-restore.md)           | Belirli bir uygulama için bağımlılıkları geri yükler.                  |
-| [dotnet run](dotnet-run.md)                   | Uygulamayı kaynaktan çalıştırın.                                   |
-| [dotnet sln](dotnet-sln.md)                   | Çözüm dosyasına proje ekleme, kaldırma ve listele etme seçenekleri.       |
-| [dotnet store](dotnet-store.md)               | Montajları çalışma zamanı paket deposunda saklar.                     |
-| [dotnet test](dotnet-test.md)                 | Bir test koşucusu kullanarak testler çalışır.                                     |
+| [dotnet run](dotnet-run.md)                   | Uygulamayı kaynaktan çalıştırır.                                   |
+| [dotnet sln](dotnet-sln.md)                   | Bir çözüm dosyasındaki projeleri ekleme, kaldırma ve listeleme seçenekleri.       |
+| [dotnet store](dotnet-store.md)               | Derlemeleri çalışma zamanı paket deposunda depolar.                     |
+| [dotnet test](dotnet-test.md)                 | Testleri bir Test Çalıştırıcısı kullanarak çalıştırır.                                     |
 
 ### <a name="project-references"></a>Proje başvuruları
 
 Komut | İşlev
 --- | ---
-[dotnet add reference](dotnet-add-reference.md) | Proje başvurusu ekler.
+[dotnet add reference](dotnet-add-reference.md) | Bir proje başvurusu ekler.
 [dotnet list reference](dotnet-list-reference.md) | Proje başvurularını listeler.
-[dotnet remove reference](dotnet-remove-reference.md) | Proje başvurularını kaldırır.
+[dotnet remove reference](dotnet-remove-reference.md) | Proje başvurusunu kaldırır.
 
 ### <a name="nuget-packages"></a>NuGet paketleri
 
 Komut | İşlev
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Bir NuGet paketi ekler.
-[dotnet remove package](dotnet-remove-package.md) | NuGet paketini kaldırır.
+[dotnet remove package](dotnet-remove-package.md) | Bir NuGet paketini kaldırır.
 
 ### <a name="nuget-commands"></a>NuGet komutları
 
 Komut | İşlev
 --- | ---
-[dotnet nuget delete](dotnet-nuget-delete.md) | Bir paketi sunucudan siler veya listeler.
-[dotnet nuget push](dotnet-nuget-push.md) | Bir paketi sunucuya iter ve yayımlar.
-[dotnet nuget locals](dotnet-nuget-locals.md) | Http isteği önbelleği, geçici önbellek veya makine çapında ki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Sunucudan bir paketi siler veya listesini kaldırır.
+[dotnet nuget push](dotnet-nuget-push.md) | Bir paketi sunucuya gönderir ve yayımlar.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 [dotnet nuget add source](dotnet-nuget-add-source.md) | Bir NuGet kaynağı ekler.
-[dotnet nuget disable source](dotnet-nuget-disable-source.md) | NuGet kaynağını devre dışı kılmış olur.
-[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Bir NuGet kaynağı sağlar.
-[dotnet nuget list source](dotnet-nuget-list-source.md) | Tüm yapılandırılan NuGet kaynaklarını listeler.
-[dotnet nuget remove source](dotnet-nuget-remove-source.md) | NuGet kaynağını kaldırır.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Bir NuGet kaynağını devre dışı bırakır.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Bir NuGet kaynağını sunar.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Tüm yapılandırılmış NuGet kaynaklarını listeler.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | Bir NuGet kaynağını kaldırır.
 [dotnet nuget update source](dotnet-nuget-update-source.md) | Bir NuGet kaynağını güncelleştirir.
 
-### <a name="global-tool-path-and-local-tools-commands"></a>Genel, araç yolu ve yerel araçlar komutları
+### <a name="global-tool-path-and-local-tools-commands"></a>Küresel, araç yolu ve yerel araçlar komutları
 
-Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü şahıslar tarafından yazılmış araçları yükleyebilirsiniz. Araçlar, genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için [.NET Core araçlarına genel bakış](global-tools.md)ala. .NET Core SDK 2.1 ile başlayan global ve araç yolu araçları mevcuttur. Yerel araçlar .NET Core SDK 3.0 ile başlayarak kullanılabilir.
+Araçlar, NuGet paketlerinden yüklenen ve komut isteminden çağrılan konsol uygulamalarıdır. Araçları kendiniz yazabilir veya üçüncü taraflarca yazılmış Araçları yükleyebilirsiniz. Araçlar genel araçlar, araç yolu araçları ve yerel araçlar olarak da bilinir. Daha fazla bilgi için bkz. [.NET Core araçlarına genel bakış](global-tools.md). Genel ve araç yolu araçları .NET Core SDK 2,1 ' den başlayarak kullanılabilir. Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.
 
 Komut | İşlev
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | Makinenize bir alet yükler.
-[dotnet tool list](dotnet-tool-list.md) | Şu anda makinenizde yüklü olan tüm genel, araç yolu veya yerel araçları listeler.
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | Makinenizdeki bir aracı kaldırın.
-[dotnet tool update](dotnet-tool-update.md) | Makinenize yüklenen bir aracı güncelleştirir.
+[dotnet tool install](dotnet-tool-install.md) | Makinenize bir araç kurar.
+[dotnet tool list](dotnet-tool-list.md) | Makinenizde yüklü olan tüm genel, araç-yol veya yerel araçları listeler.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Bir aracı makinenizden kaldırır.
+[dotnet tool update](dotnet-tool-update.md) | Makinenizde yüklü bir aracı güncelleştirir.
 
 ### <a name="additional-tools"></a>Ek araçlar
 
-.NET Core SDK 2.1.300 ile başlayarak, sadece proje bazında `DotnetCliToolReference` kullanılabilen bir dizi araç artık .NET Core SDK'nın bir parçası olarak kullanılabilir. Bu araçlar aşağıdaki tabloda listelenmiştir:
+.NET Core SDK 2.1.300 ' den itibaren, yalnızca kullanılarak proje bazında kullanılabilen birçok araç, `DotnetCliToolReference` .NET Core SDK bir parçası olarak kullanılabilir. Bu araçlar aşağıdaki tabloda listelenmiştir:
 
 | Araç                                              | İşlev                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| dev-certs                                         | Geliştirme sertifikaları oluşturur ve yönetir.                |
-| [Ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core komut satırı araçları.                    |
-| sql önbellek                                         | SQL Server önbellek komut satırı araçları.                         |
-| [kullanıcı sırları](/aspnet/core/security/app-secrets) | Geliştirme kullanıcı sırlarını yönetir.                            |
-| [Izle](/aspnet/core/tutorials/dotnet-watch)      | Dosyalar değiştiğinde komutu çalıştıran bir dosya izleyicisi başlatır. |
+| geliştirme-CERT                                         | Geliştirme sertifikaları oluşturur ve yönetir.                |
+| [aşv](/ef/core/miscellaneous/cli/dotnet)           | Komut satırı araçlarını Entity Framework Core.                    |
+| SQL-Cache                                         | Önbellek komut satırı araçlarını SQL Server.                         |
+| [Kullanıcı gizli dizileri](/aspnet/core/security/app-secrets) | Geliştirme Kullanıcı gizli dizilerini yönetir.                            |
+| [Servisi](/aspnet/core/tutorials/dotnet-watch)      | Dosyalar değiştiğinde bir komutu çalıştıran bir dosya İzleyicisi başlatır. |
 
-Her araç hakkında daha `dotnet <tool-name> --help`fazla bilgi için yazın.
+Her araç hakkında daha fazla bilgi için, yazın `dotnet <tool-name> --help` .
 
 ## <a name="examples"></a>Örnekler
 
@@ -236,13 +244,13 @@ Yeni bir .NET Core konsol uygulaması oluşturun:
 dotnet new console
 ```
 
-Belirli bir dizinde bir proje ve bağımlılıkları oluşturun:
+Belirli bir dizinde bir proje ve onun bağımlılıklarını oluşturun:
 
 ```dotnetcli
 dotnet build
 ```
 
-Bir uygulama çalıştırın:
+Bir uygulamayı çalıştırın:
 
 ```dotnetcli
 dotnet myapp.dll
@@ -252,65 +260,89 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  Varsayılan konumda yüklü değillerse .NET Core çalışma saatlerinin konumunu belirtir. Windows'daki varsayılan `C:\Program Files\dotnet`konum. Linux ve macOS üzerinde `/usr/share/dotnet`varsayılan konum . Bu ortam değişkeni yalnızca oluşturulan yürütülebilir uygulamalar (ek hosts) aracılığıyla uygulamaları çalıştırırken kullanılır. `DOTNET_ROOT(x86)`bunun yerine, 64 bit işletim sistemi üzerinde 32 bit çalıştırılabilir çalıştırılırken kullanılır.
+  Varsayılan konumda yüklü değilse, .NET Core çalışma zamanlarının konumunu belirtir. Windows üzerinde varsayılan konum `C:\Program Files\dotnet` . Linux ve macOS 'ta varsayılan konum `/usr/share/dotnet` . Bu ortam değişkeni yalnızca oluşturulan yürütülebilir dosyalar (apphosts) aracılığıyla uygulamalar çalıştırılırken kullanılır. `DOTNET_ROOT(x86)`, 64 bit IŞLETIM sisteminde 32 bitlik bir yürütülebilir dosya çalıştırılırken kullanılır.
 
 - `DOTNET_PACKAGES`
 
-  Genel paketler klasörü. Ayarlanmamışsa, varsayılan `~/.nuget/packages` olarak Unix'te veya `%userprofile%\.nuget\packages` Windows'da olur.
+  Genel paketler klasörü. Ayarlanmamışsa, varsayılan olarak `~/.nuget/packages` UNIX veya `%userprofile%\.nuget\packages` Windows üzerinde olur.
 
 - `DOTNET_SERVICING`
 
-  Çalışma süresini yüklerken paylaşılan ana bilgisayar tarafından kullanılacak servis dizininin konumunu belirtir.
+  Çalışma zamanı yüklenirken paylaşılan konak tarafından kullanılacak bakım dizininin konumunu belirtir.
 
 - `DOTNET_NOLOGO`
 
-  .NET Core karşılama ve telemetri iletilerinin ilk çalıştırmada görüntülenip görüntülenmediğini belirtir. `true` Bu iletileri `true`(değerler, veya `1` `yes` kabul edilen) veya izin `false` verecek şekilde `false` `0`(değerler, , veya `no` kabul edilen) sessize almak üzere ayarlayın. Ayarlanmazsa, varsayılan `false` değerdir ve iletiler ilk çalıştırmada görüntülenir. Bu bayrağın telemetri üzerinde `DOTNET_CLI_TELEMETRY_OPTOUT` hiçbir etkisi yoktur (telemetri göndermeyi devre dışı bırakmak için bkz.
+  .NET Core karşılama ve telemetri iletilerinin ilk çalıştırmada görüntülenip görüntülenmeyeceğini belirtir. `true`Bu iletilerin sessize (değerler `true` , `1` veya `yes` kabul edildi) veya `false` izin ver (değerler `false` , `0` veya `no` kabul edildi) olarak ayarlanmış olarak ayarlayın. Ayarlanmamışsa, varsayılan olur `false` ve iletiler ilk çalıştırmada görüntülenir. Bu bayrağın telemetri üzerinde hiçbir etkisi yoktur ( `DOTNET_CLI_TELEMETRY_OPTOUT` telemetri göndermek için bkz.).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  .NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft'a gönderilmeyeceğini belirtir. Telemetri özelliğini devre dışı bırakacak şekilde `1`ayarlayın `yes` (değerler `true`, veya kabul edilir). `true` Aksi takdirde, `false` telemetri özellikleri `false`(değerler , `0`veya `no` kabul) içine tercih etmek için ayarlayın. Ayaredilmezse, varsayılan `false` ve telemetri özelliği etkindir.
+  .NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. `true`Telemetri özelliğini devre dışı bırakmak için olarak ayarlayın (değerler `true` , `1` veya `yes` kabul edildi). Aksi takdirde, `false` telemetri özelliklerini (değerler `false` , `0` veya `no` kabul edildi) kabul etmek için olarak ayarlayın. Ayarlanmamışsa, varsayılan olarak `false` ve telemetri özelliği etkindir.
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  .NET Core çalışma zamanı, paylaşılan çerçeve veya SDK'nın genel konumdan çözülüp çözülmeyeceğini belirtir. Ayarlanmazise, varsayılan olarak 1 `true`(mantıksal). Genel konumdan `false`çözüme kavuşturulması ve .NET Core yüklemelerini yalıtmak için 0 (mantıksal) olarak ayarlayın. Çok düzeyli arama hakkında daha fazla bilgi [için, Çok düzeyli SharedFX Arama'ya](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)bakın.
+  .NET Core çalışma zamanı, paylaşılan Framework veya SDK 'nın genel konumdan çözümlenip çözümlenmediğini belirtir. Ayarlanmazsa, varsayılan olarak 1 (mantıksal) olur `true` . `false`Genel konumdan çözümlenmemelidir ve yalıtılmış .NET Core yüklemelerine sahip olmak için 0 (mantıksal) olarak ayarlayın. Çoklu düzey arama hakkında daha fazla bilgi için bkz. [çok düzeyli SharedFX arama](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-- `DOTNET_ROLL_FORWARD`**.NET Core 3.x SDK ile başlayan kullanılabilir.**
+- `DOTNET_ROLL_FORWARD`**.NET Core 3. x ile başlayarak kullanılabilir.**
 
-  Yuvarlanan ileri davranışını belirler. Daha fazla bilgi `--roll-forward` için bu makalenin önceki seçeneğine bakın.
+  İleri alma davranışını belirler. Daha fazla bilgi için `--roll-forward` Bu makaledeki önceki seçeneğe bakın.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`**.NET Core 2.x SDK'da mevcuttur.**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE`**.NET Core 3. x ile başlayarak kullanılabilir.**
 
-  Devre dışı bırakır küçük sürüm, `0`eğer ayarlanırsa. Daha fazla bilgi için [bkz.](../whats-new/dotnet-core-2-1.md#roll-forward)
+  `1`(Etkin) olarak ayarlandıysa, yayın sürümünden yayın öncesi sürümüne ileri doğru bir şekilde geri dönme imkanı sağlar. Varsayılan olarak ( `0` -Disabled), .NET Core çalışma zamanının yayın sürümü istendiğinde, geri alma yalnızca sürüm sürümlerini göz önünde bulunduracaktır.
+
+  Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`**.NET Core 2. x ' te kullanılabilir.**
+
+  , Olarak ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır `0` . Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+  Bu ayarın yerini .NET Core 3,0 ' de almıştır `DOTNET_ROLL_FORWARD` . Bunun yerine yeni ayarlar kullanılmalıdır.
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  CLI UI'nin dilini ayarlar. `en-us` Desteklenen değerler Visual Studio ile aynıdır. Daha fazla bilgi için [Visual Studio yükleme belgelerinde](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)yükleyici dilini değiştirme bölümüne bakın. .NET kaynak yöneticisi kuralları geçerlidir, böylece&mdash; `CultureInfo` ağaçtaki torunları da seçebileceğiniz tam bir eşleşme seçmeniz gerekmez. Örneğin, bunu `fr-CA`ayarlarsanız, CLI `fr` çevirileri bulur ve kullanır. Desteklenmeyen bir dile ayarlarsanız, CLI İngilizce'ye geri döner.
+  CLı Kullanıcı arabiriminin dilini, gibi bir yerel ayar değeri kullanarak ayarlar `en-us` . Desteklenen değerler, Visual Studio ile aynıdır. Daha fazla bilgi için [Visual Studio yükleme belgelerindeki](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)yükleyici dilini değiştirme bölümüne bakın. .NET Resource Manager kuralları uygulanır, bu sayede tam bir eşleşme seçmeniz gerekmez, ağaçta alt &mdash; öğeleri de seçebilirsiniz `CultureInfo` . Örneğin, olarak ayarlarsanız `fr-CA` , CLI çevirileri bulur ve kullanır `fr` . Bunu desteklenmeyen bir dile ayarlarsanız, CLı Ingilizce 'ye geri döner.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
-  GUI özellikli oluşturulan yürütülebilirler için - normalde belirli hata sınıfları için gösteren iletişim açılır pencereaçılır penceresini devre dışı kılabilir. Sadece bu `stderr` gibi durumlarda yazar ve çıkar.
+  GUI özellikli oluşturulan yürütülebilir dosyalar için-normalde belirli hata sınıfları için gösterilen iletişim kutusu açılır penceresini devre dışı bırakır. Bu durumda yalnızca öğesine yazar `stderr` ve çıkar.
   
 - `DOTNET_ADDITIONAL_DEPS`
 
-  CLI seçeneğine `--additional-deps`eşdeğerdir.
+  CLı seçeneğine eşdeğerdir `--additional-deps` .
 
 - `DOTNET_RUNTIME_ID`
 
-  Algılanan RID geçersiz kılar.
+  Algılanan RID 'yi geçersiz kılar.
 
 - `DOTNET_SHARED_STORE`
 
-  Montaj çözünürlüğünün bazı durumlarda geri aldığı "paylaşılan deponun" konumu.
+  Bazı durumlarda derleme çözümlemenin geri döndürüleceği "paylaşılan deponun" konumu.
 
 - `DOTNET_STARTUP_HOOKS`
 
-  Başlangıç kancalarını yüklemek ve çalıştırmak için montajların listesi.
+  Başlangıç kancalarını yüklemek ve yürütmek için derlemelerin listesi.
+
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR`**.NET Core 3. x ile başlayarak kullanılabilir.**
+
+  Yürütülmeden önce tek dosya uygulamasının ayıklandığı bir dizini belirtir.
+
+  Daha fazla bilgi için bkz. [tek dosya yürütülebilir dosyaları](../whats-new/dotnet-core-3-0.md#single-file-executables).
 
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
-  Barındırma bileşenlerinden gelen tanılama izlemelerini `dotnet.exe` `hostfxr`denetler, örneğin , , ve `hostpolicy`.
+  , Ve gibi barındırma bileşenlerinden tanılama izlemeyi denetler `dotnet.exe` `hostfxr` `hostpolicy` .
+
+  * `COREHOST_TRACE=[0/1]`-Varsayılan, `0` -izleme devre dışı. Olarak ayarlanırsa `1` , tanılama izlemesi etkinleştirilir.
+  * `COREHOST_TRACEFILE=<file path>`-yalnızca izleme etkinse etkilidir `COREHOST_TRACE=1` . Ayarlandığında, izleme bilgileri belirtilen dosyaya yazılır, aksi takdirde izleme bilgileri üzerine yazılır `stderr` . **.NET Core 3. x ile başlayarak kullanılabilir.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]`-Varsayılan değer `4` . Ayar yalnızca, ile izleme etkinleştirildiğinde kullanılır `COREHOST_TRACE=1` . **.NET Core 3. x ile başlayarak kullanılabilir.**
+    * `4`-Tüm izleme bilgileri yazılır
+    * `3`-yalnızca bilgilendirme, uyarı ve hata iletileri yazılır
+    * `2`-yalnızca uyarı ve hata iletileri yazılır
+    * `1`-yalnızca hata iletileri yazılır
+
+  Uygulama başlatma hakkında ayrıntılı izleme bilgileri almanın tipik yolu, `COREHOST_TRACE=1` uygulamayı ayarlamak ve çalıştırmak için kullanılır `COREHOST_TRACEFILE=host_trace.txt` . `host_trace.txt`Geçerli dizinde ayrıntılı bilgiler içeren yeni bir dosya oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Runtime Yapılandırma Dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
 - [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md)

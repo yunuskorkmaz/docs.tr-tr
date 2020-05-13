@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791968"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379058"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx Yöntemi
 Hata ayıklayıcı altındaki uzak makinede bir işlem başlatır.  
@@ -44,7 +44,7 @@ HRESULT DebugActiveProcessEx (
  'ndaki Hata ayıklayıcının eklendiği işlemin KIMLIĞI.  
   
  `win32Attach`  
- [in] hata ayıklayıcının işlem için Win32 hata ayıklayıcısı olarak davranması ve yönetilmeyen geri çağırmaları gönderimi gerekiyorsa `true`; Aksi takdirde, `false`.  
+ [in] `true` hata ayıklayıcının işlem için Win32 hata ayıklayıcısı olarak davranması ve yönetilmeyen geri çağırmaları dağıtımı gerekiyorsa; Aksi takdirde, `false` .  
   
  `ppProcess`  
  dışı Hata ayıklayıcının eklendiği işlemi temsil eden bir "ICorDebugProcess" nesnesinin adresine yönelik bir işaretçi.  
@@ -60,7 +60,7 @@ HRESULT DebugActiveProcessEx (
  Karışık modda hata ayıklama Silverlight 'ta desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   

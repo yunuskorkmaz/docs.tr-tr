@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a74d32478bc88ee634fa5ff9b61ac2059bc8e302
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133588"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379712"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper Yöntemi
 Bu ICorDebugThread 'in etkin çerçevesiyle Adımlama sağlayan bir ICorDebugStepper nesnesi oluşturur.  
@@ -35,18 +35,18 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parametreler  
  `ppStepper`  
- dışı Bu iş parçacığının etkin çerçevesinde Adımlama sağlayan bir `ICorDebugStepper` nesnesinin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugStepper`Bu iş parçacığının etkin çerçevesinin üzerinde Adımlama sağlayan bir nesnenin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Etkin çerçeve yönetilmeyen bir kod olabilir.  
   
- `ICorDebugStepper` arabirimi, gerçek adımlamayı gerçekleştirmek için kullanılmalıdır.  
+ Bu `ICorDebugStepper` arabirim, gerçek adımlamayı gerçekleştirmek için kullanılmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: öbek serileştirilmiş veriler'
+description: Büyük veri kümeleriyle sorunları önlemek için verileri öbek oluşturabilirsiniz. Serileştirme ve seri durumdan çıkarma denetlemek için IXmlSerializable arabirimini uygulayın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 6a39997d8854d525146c044ed4bbf939de615d3f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602431"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379135"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Nasıl yapılır: öbek serileştirilmiş veriler
 
@@ -30,7 +31,7 @@ Büyük veri kümeleri, Web hizmeti iletilerinde gönderirken oluşan iki sorunl
   
 2. İnordinate bant genişliği kullanımını Base64 kodlama sonra 33 yüzde Enflasyon nedeniyle.  
   
- Bu sorunları gidermek için, serileştirme ve <xref:System.Xml.Serialization.IXmlSerializable> seri durumdan çıkarmayı denetlemek üzere arabirimini uygulayın. Özellikle, uygulayan <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> verileri öbek için yöntemleri.  
+ Bu sorunları gidermek için, <xref:System.Xml.Serialization.IXmlSerializable> serileştirme ve seri durumdan çıkarmayı denetlemek üzere arabirimini uygulayın. Özellikle, uygulayan <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ve <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> verileri öbek için yöntemleri.  
   
 ### <a name="to-implement-server-side-chunking"></a>Sunucu tarafı parçalama uygulamak için  
   
@@ -40,9 +41,9 @@ Büyük veri kümeleri, Web hizmeti iletilerinde gönderirken oluşan iki sorunl
   
 ### <a name="to-implement-client-side-processing"></a>İstemci tarafında işleme uygulamak için  
   
-1. Web yöntemi uygulayan türü döndürmek için istemci proxy'de alter <xref:System.Xml.Serialization.IXmlSerializable>. Bunu otomatik olarak yapmak <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> için kullanabilirsiniz, ancak burada gösterilmez.  
+1. Web yöntemi uygulayan türü döndürmek için istemci proxy'de alter <xref:System.Xml.Serialization.IXmlSerializable>. Bunu <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> otomatik olarak yapmak için kullanabilirsiniz, ancak burada gösterilmez.  
   
-2. Öbekli <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> veri akışını okumak ve baytları diske yazmak için yöntemini uygulayın. Bu uygulama, ilerleme çubuğu gibi bir grafik denetimi tarafından kullanılabilecek ilerleme olayları da oluşturur.  
+2. <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>Öbekli veri akışını okumak ve baytları diske yazmak için yöntemini uygulayın. Bu uygulama, ilerleme çubuğu gibi bir grafik denetimi tarafından kullanılabilecek ilerleme olayları da oluşturur.  
   
 ## <a name="example"></a>Örnek  
 Aşağıdaki kod örneği, ASP.NET arabelleğe almayı devre dışı etkinleştiren istemcideki Web yöntemini gösterir. Ayrıca istemci-tarafı uygulaması gösterir <xref:System.Xml.Serialization.IXmlSerializable> verileri chunks arabirimi <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> yöntemi.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792060"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378227"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters Yöntemi
 Verilen bit maskesi tarafından belirtilen her kaydın değerini alır (kodun Şu anda yürütüldüğü platform için).  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parametreler  
  `maskCount`  
- 'ndaki `mask` dizisinin bayt cinsinden boyutu.  
+ 'ndaki Dizinin bayt cinsinden boyutu `mask` .  
   
  `mask`  
  'ndaki Her bitin bir kayda karşılık gelen bir bayt dizisi. Bit 1 ise, karşılık gelen yazmaç değeri alınacaktır.  
@@ -47,25 +47,25 @@ HRESULT GetRegisters (
  'ndaki Alınacak kayıt değerlerinin sayısı.  
   
  `regBuffer`  
- dışı Her biri bir yazmaç değerini alan `CORDB_REGISTER` nesnelerden oluşan bir dizi.  
+ dışı `CORDB_REGISTER`Her biri bir yazmaç değerini alan bir nesne dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetRegisters` yöntemi, maske tarafından belirtilen yazmaçlardan bir değer dizisi döndürür. Dizi, maske biti ayarlanmamış yazmaçların değerlerini içermiyor. Bu nedenle, `regBuffer` dizisinin boyutu maskenin içindeki 1 sayısına eşit olmalıdır. `regCount` değeri maskenin gösterdiği kayıt sayısı için çok küçükse, daha yüksek numaralandırılmış yazmaçların değerleri kümeden kesilir. `regCount` çok büyükse kullanılmayan `regBuffer` öğeleri değiştirilmemiş olur.  
+ `GetRegisters`Yöntemi, maske tarafından belirtilen yazmaçlardan bir değer dizisi döndürür. Dizi, maske biti ayarlanmamış yazmaçların değerlerini içermiyor. Bu nedenle, `regBuffer` dizinin boyutu maskenin içindeki 1 sayısına eşit olmalıdır. Değeri, `regCount` maske tarafından belirtilen kayıt sayısı için çok küçükse, daha yüksek numaralandırılmış yazmaçların değerleri kümeden kesilir. `regCount`Çok büyükse, kullanılmamış `regBuffer` öğeler değiştirilmemiş olur.  
   
  Maske tarafından kullanılamayan bir kayıt belirtilmişse, bu kayıt için belirsiz bir değer döndürülür.  
   
- `ICorDebugRegisterSet2::GetRegisters` yöntemi 64 taneden fazla kayıt olan platformlar için gereklidir. Örneğin, ıA64 128 genel amaçlı kayıt kayıtları ve 128 kayan nokta kayıtları içerir, bu nedenle bit maskesinde en fazla 64 bit olmalıdır.  
+ `ICorDebugRegisterSet2::GetRegisters`Yöntemi 64 taneden fazla kayıt olan platformlar için gereklidir. Örneğin, ıA64 128 genel amaçlı kayıt kayıtları ve 128 kayan nokta kayıtları içerir, bu nedenle bit maskesinde en fazla 64 bit olmalıdır.  
   
- 64 ' den fazla kayıt yoksa, x86 gibi platformlarda olduğu gibi `GetRegisters` yöntemi aslında yalnızca `mask` bayt dizisindeki baytları bir `ULONG64` içine çevirir ve sonra `ULONG64` maskesini alan [ICorDebugRegisterSet:: Getyazmaçları](icordebugregisterset-getregisters-method.md) yöntemini çağırır.  
+ 64 ' den fazla kayıt yoksa, x86 gibi platformlarda olduğu gibi, `GetRegisters` yöntemi aslında yalnızca `mask` bayt dizisindeki baytları a 'ya çevirir `ULONG64` ve ardından maskeyi alan [ICorDebugRegisterSet:: getyazmaçları](icordebugregisterset-getregisters-method.md) yöntemini çağırır `ULONG64` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

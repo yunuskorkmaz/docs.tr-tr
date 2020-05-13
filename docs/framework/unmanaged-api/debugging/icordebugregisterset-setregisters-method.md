@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac6244b9-54ba-475f-b72a-abed6afc46ec
 topic_type:
 - apiref
-ms.openlocfilehash: d61d37448930d451b519c93909165e5e16f92765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: eba86c09197aad6bac284c52fe164432e197c6f7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792046"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378256"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters Yöntemi
-`SetRegisters`, .NET Framework sürüm 2,0 ' de uygulanmamıştır. Bu yöntemi çağırmayın.  
+`SetRegisters`.NET Framework sürüm 2,0 ' de uygulanmıyor. Bu yöntemi çağırmayın.  
   
 > [!NOTE]
 > [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) veya [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md)gibi daha üst düzey işlemleri kullanın.  
@@ -39,7 +39,7 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   

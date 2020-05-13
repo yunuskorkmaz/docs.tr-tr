@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-ms.openlocfilehash: 8082b2a3654f1605f18f3b68f54464dc83c8e60a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a4da6f958407c0b704ffb7372a77b7f022fc824
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133485"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379764"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException Metodu
 Yönetilen kod tarafından şu anda oluşturulmakta olan bir özel durumu temsil eden ICorDebugValue nesnesine yönelik bir arabirim işaretçisi alır.  
@@ -35,20 +35,20 @@ HRESULT GetCurrentException (
   
 ## <a name="parameters"></a>Parametreler  
  `ppExceptionObject`  
- dışı Yönetilen kod tarafından şu anda oluşturulan özel durumu temsil eden bir `ICorDebugValue` nesnesinin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugValue`Yönetilen kod tarafından şu anda oluşturulan özel durumu temsil eden nesnenin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel durum nesnesi, `catch` bloğunun sonuna kadar özel durumun oluşturulduğu zamandan itibaren mevcut olacaktır. Icoralgıladığında Geval yöntemleri tarafından gerçekleştirilen bir işlev değerlendirmesi, kurulum 'daki özel durum nesnesini temizler ve tamamlanarak geri yükler.  
+ Özel durum nesnesi, bloğun sonuna kadar özel durumun oluşturulduğu zamandan itibaren mevcut olacaktır `catch` . Icoralgıladığında Geval yöntemleri tarafından gerçekleştirilen bir işlev değerlendirmesi, kurulum 'daki özel durum nesnesini temizler ve tamamlanarak geri yükler.  
   
- Özel durumlar iç içe olabilir (örneğin, bir filtrede veya bir işlev değerlendirmesinde bir özel durum oluşturulursa), tek bir iş parçacığında birden çok bekleyen özel durum olabilir. `GetCurrentException` en güncel özel durumu döndürür.  
+ Özel durumlar iç içe olabilir (örneğin, bir filtrede veya bir işlev değerlendirmesinde bir özel durum oluşturulursa), tek bir iş parçacığında birden çok bekleyen özel durum olabilir. `GetCurrentException`en güncel özel durumu döndürür.  
   
  Özel durum nesnesi ve türü özel durumun ömrü boyunca değişebilir. Örneğin, x türü bir özel durum oluşturulduktan sonra ortak dil çalışma zamanı (CLR) belleği tükendiğinden bellek dışı bir özel duruma yükseltebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

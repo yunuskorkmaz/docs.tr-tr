@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc406f6e87e5b2be48c6fe7d5fc988774ac5cd11
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122342"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379986"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase Yöntemi
-Bu `ICorDebugType`temsil eden türün temel türünü temsil eden bir ICorDebugType için bir arabirim işaretçisi alır.  
+Bir ICorDebugType öğesine, varsa, bu tür tarafından temsil edilen türün temel türünü temsil eden bir arabirim işaretçisi alır `ICorDebugType` .  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parametreler  
  `pBase`  
- dışı Temel türü temsil eden bir `ICorDebugType` nesnesinin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugType`Temel türü temsil eden nesnenin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bir türün temel türünü aramak, bir nesnenin veya onun üst sınıflarının tüm alanlarını yazdırmak gibi yaygın hata ayıklayıcı işlevselliği uygulamak için yararlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,15 +1,15 @@
 ---
 title: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını nasıl dağıtacağınızı öğrenin.
-ms.date: 01/23/2020
+ms.date: 05/11/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 228ddd59023dbd9d63ff392764fb36441a6af23a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895724"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379840"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Öğretici: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -40,7 +40,7 @@ Başlamadan önce, aşağıdaki görevleri yapın:
 
 Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı oluşturursunuz.
 
-1. Azure Portal, **kaynak** > **Analizi** > oluştur**Azure Databricks**' u seçin.
+1. Azure Portal, **kaynak**  >  **Analizi**oluştur  >  **Azure Databricks**' u seçin.
 
    ![Azure portal Azure Databricks kaynak oluşturma](./media/databricks-deployment/create-databricks-resource.png)
 
@@ -53,7 +53,7 @@ Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı
     |**Kaynak grubu**     | Yeni bir kaynak grubu oluşturmayı veya mevcut bir kaynak grubunu kullanmayı seçin. Kaynak grubu, bir Azure çözümü için ilgili kaynakları bir arada tutan kapsayıcıdır. Daha fazla bilgi için bkz. [Azure Kaynak Grubuna genel bakış](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Konum**     | Tercih ettiğiniz bölgeyi seçin. Kullanılabilir bölgeler hakkında daha fazla bilgi için bkz. [bölgeye göre kullanılabilir Azure hizmetleri](https://azure.microsoft.com/regions/services/).        |
     |**Fiyatlandırma Katmanı**     |  **Standart**, **Premium**veya **deneme**arasında seçim yapın. Bu katmanlar hakkında daha fazla bilgi için bkz. [Databricks fiyatlandırma sayfası](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Sanal Ağ**     |   No       |
+    |**Sanal Ağ**     |   Hayır       |
 
 3. **Oluştur**’u seçin. Çalışma alanının oluşturulması birkaç dakika sürer. Çalışma alanı oluşturma sırasında, **Bildirimler**' de dağıtım durumunu görüntüleyebilirsiniz.
 
@@ -79,15 +79,15 @@ Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı
    pip3 install databricks-cli
    ```
 
-3. Databricks CLı 'yı yükledikten sonra, yeni bir komut istemi açın ve komutunu `databricks`çalıştırın. **' Databricks ' bir iç veya dış komut hatası olarak tanınmazsa**, yeni bir komut istemi açtığınızdan emin olun.
+3. Databricks CLı 'yı yükledikten sonra, yeni bir komut istemi açın ve komutunu çalıştırın `databricks` . **' Databricks ' bir iç veya dış komut hatası olarak tanınmazsa**, yeni bir komut istemi açtığınızdan emin olun.
 
 ## <a name="set-up-azure-databricks"></a>Azure Databricks ayarlama
 
 Databricks CLı yükleolduğunuza göre, kimlik doğrulama ayrıntılarını ayarlamanız gerekir.
 
-1. Databricks CLı komutunu `databricks configure --token`çalıştırın.
+1. Databricks CLı komutunu çalıştırın `databricks configure --token` .
 
-2. Configure komutunu çalıştırdıktan sonra, bir ana bilgisayar girmeniz istenir. Ana bilgisayar URL 'niz şu biçimi kullanır: **https://< \Location>. azuredatabricks.net**. Örneğin, Azure Databricks hizmeti oluşturma sırasında **eastus2** ' ı seçtiyseniz, konak olur **https://eastus2.azuredatabricks.net**.
+2. Configure komutunu çalıştırdıktan sonra, bir ana bilgisayar girmeniz istenir. Ana bilgisayar URL 'niz şu biçimi kullanır: **https://< \Location>. azuredatabricks.net**. Örneğin, Azure Databricks hizmeti oluşturma sırasında **eastus2** ' ı seçtiyseniz, konak olur **https://eastus2.azuredatabricks.net** .
 
 3. Ana bilgisayarınızı girdikten sonra bir belirteç girmeniz istenir. Azure portal, Azure Databricks çalışma alanınızı başlatmak için **çalışma alanını Başlat** ' ı seçin.
 
@@ -115,7 +115,7 @@ Artık oluşturduğunuz Azure Databricks kümelerine erişebiliyor ve dosyaları
 
    Yerel bilgisayarınızda **DB-init.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [DB-init.sh içeriğini](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) yapıştırın.
 
-   Yeni oluşturduğunuz dosyada, `DOTNET_SPARK_RELEASE` değişkenini olarak `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`ayarlayın. *DB-init.sh* dosyasının kalan kısmını olduğu gibi bırakın.
+   Yeni oluşturduğunuz dosyada, `DOTNET_SPARK_RELEASE` değişkenini olarak ayarlayın `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` . *DB-init.sh* dosyasının kalan kısmını olduğu gibi bırakın.
 
 > [!Note]
 > Windows kullanıyorsanız, *install-Worker.sh* ve *DB-init.sh* betiklerinizde yer alan satır SONLARıNı UNIX stili (LF) olduğunu doğrulayın. Satır sonlarını notepad + + ve atom gibi metin düzenleyicilerle değiştirebilirsiniz.
@@ -188,7 +188,7 @@ Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığ�
 
 1. İşinizin kümesini yapılandırmak için işinize gidin ve **Düzenle** ' yi seçin.
 
-2. Kümenizi **Spark 2.4.1**olarak ayarlayın. Ardından **Gelişmiş Seçenekler** > **Başlangıç betikleri**' ni seçin. Init betiği yolunu olarak `dbfs:/spark-dotnet/db-init.sh`ayarlayın.
+2. Kümenizi **Spark 2.4.1**olarak ayarlayın. Ardından **Gelişmiş Seçenekler**  >  **Başlangıç betikleri**' ni seçin. Init betiği yolunu olarak ayarlayın `dbfs:/spark-dotnet/db-init.sh` .
 
    ![Azure Databricks Spark kümesini yapılandırma](./media/databricks-deployment/cluster-config.png)
 

@@ -1,13 +1,14 @@
 ---
 title: Temel Serileştirme Teknolojisi Örneği
+description: Bu örnek, bir akışa bellekte bir nesne grafiğini seri hale getirmek için CLR özelliğini gösterir. Bu örnek, SoapFormatter veya BinaryFormatter kullanabilir.
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353144"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378437"
 ---
 # <a name="basic-serialization-technology-sample"></a>Temel Serileştirme Teknolojisi Örneği
 
@@ -82,7 +83,7 @@ Aşağıdaki madde işaretleri sınıflar Bu örnek tarafından kullanılan ve t
 
   - <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türüdür. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.
 
-  - <xref:System.IO.File>Disk üzerinde dosya <xref:System.IO.FileStream> okumak ve oluşturmak için nesneleri oluşturmak üzere kullanılır.
+  - <xref:System.IO.File><xref:System.IO.FileStream>Disk üzerinde dosya okumak ve oluşturmak için nesneleri oluşturmak üzere kullanılır.
 
   - <xref:System.IO.FileStream>Bağlantılı listeleri seri hale getirmek ve seri durumdan çıkarmak için kullanılır.
 

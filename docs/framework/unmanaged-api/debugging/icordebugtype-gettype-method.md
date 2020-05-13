@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-ms.openlocfilehash: 25ffbf73fbefbb3c584450283c3080dfc11ee598
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ac42c6254182ea775377a448a54d527b234c97dc
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791248"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379921"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType Metodu
-Bu ICorDebugType tarafından temsil edilen ortak dil çalışma zamanı (CLR) <xref:System.Type> yerel türünü açıklayan bir CorElementType değeri alır.  
+Bu ICorDebugType tarafından temsil edilen ortak dil çalışma zamanının (CLR) yerel türünü açıklayan bir CorElementType değeri alır <xref:System.Type> .  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT GetType (
   
 ## <a name="parameters"></a>Parametreler  
  `ty`  
- dışı Bu `ICorDebugType` temsil eden CLR <xref:System.Type> belirten `CorElementType` numaralandırması değerine yönelik bir işaretçi.  
+ dışı `CorElementType`Numaralandırmadaki, bu temsil eden clr 'yi gösteren bir değer işaretçisi <xref:System.Type> `ICorDebugType` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ty` değeri ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE ise, [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) yöntemi, genel bir türün örneklenmemiş türünü almak için çağrılabilir; Aksi takdirde, `ICorDebugType::GetClass`çağırmayın.  
+ Değeri `ty` element_type_class ya da element_type_valuetype ise, [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) yöntemi, genel bir türün örneklenmemiş türünü almak için çağrılabilir; Aksi takdirde, çağırmayın `ICorDebugType::GetClass` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

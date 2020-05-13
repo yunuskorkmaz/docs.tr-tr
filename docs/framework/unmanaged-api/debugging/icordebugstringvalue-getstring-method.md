@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178508"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379658"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString Yöntemi
-Bu ICorDebugStringValue tarafından başvurulan dize alır.  
+Bu ICorDebugStringValue tarafından başvurulan dizeyi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametreler  
  `cchString`  
- [içinde] `szString` Dizinin boyutu.  
+ 'ndaki `szString`Dizinin boyutu.  
   
  `pcchString`  
- [çıkış] Dizide döndürülen karakter sayısına `szString` işaretçi.  
+ dışı Dizide döndürülen karakter sayısına yönelik bir işaretçi `szString` .  
   
  `szString`  
- [çıkış] Alınan dizeyi depolayan bir dizi.  
+ dışı Alınan dizeyi depolayan bir dizi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

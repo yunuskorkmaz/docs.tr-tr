@@ -1,5 +1,6 @@
 ---
 title: XML öğesi ve XML öznitelik adlarını nitelendirme
+description: Bu makalede, XML öğelerinde XML öğelerinin ve XML özniteliklerinin adlarını nasıl nitelendirilebileceğiniz gösterilmektedir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6c29e03d9ce28e5b0abc68a5d7e8d82f4485ac93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159877"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378408"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML öğesi ve XML öznitelik adlarını nitelendirme
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces> Sınıfının ÖRNEKLERININ içerdiği xml ad ALANLARı, [XML 'de ad alanları](https://www.w3.org/TR/REC-xml-names/)adı verilen World Wide Web Konsorsiyumu (W3C) belirtimine uymalıdır.
+Sınıfının örneklerinin içerdiği XML ad alanları <xref:System.Xml.Serialization.XmlSerializerNamespaces> , [XML 'de ad alanları](https://www.w3.org/TR/REC-xml-names/)adı VERILEN World Wide Web Konsorsiyumu (W3C) belirtimine uymalıdır.
 
 XML ad alanları, XML öğelerinin ve XML belgelerinin XML özniteliklerinin adlarını nitelemek için bir yöntem sağlar. Tam adı bir önek ve virgül ile ayrılmış bir yerel ad oluşur. Önek yalnızca bir yer tutucu olarak işlev görür; bir ad alanı belirten bir URI ile eşleşir. Evrensel yönetilen URI ad alanı ve yerel adı birleşimi evrensel benzersiz olması garanti bir ad oluşturur.
 
@@ -30,11 +31,11 @@ XML ad alanları, XML öğelerinin ve XML belgelerinin XML özniteliklerinin adl
 
 2. Tüm öneklerine ve ad alanı çiftleri için Ekle `XmlSerializerNamespaces`.
 
-3. Bir XML belgesine `System.Xml.Serialization` seri hale getirilecek her üyeye veya sınıfa <xref:System.Xml.Serialization.XmlSerializer> uygun özniteliği uygulayın.
+3. `System.Xml.Serialization` <xref:System.Xml.Serialization.XmlSerializer> Bir XML belgesine seri hale getirilecek her üyeye veya sınıfa uygun özniteliği uygulayın.
 
-    Kullanılabilir <xref:System.Xml.Serialization.XmlAnyElementAttribute>öznitelikler şunlardır:, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, ve. <xref:System.Xml.Serialization.XmlTypeAttribute>
+    Kullanılabilir öznitelikler şunlardır: <xref:System.Xml.Serialization.XmlAnyElementAttribute> , <xref:System.Xml.Serialization.XmlArrayAttribute> ,, <xref:System.Xml.Serialization.XmlArrayItemAttribute> , <xref:System.Xml.Serialization.XmlAttributeAttribute> , <xref:System.Xml.Serialization.XmlElementAttribute> <xref:System.Xml.Serialization.XmlRootAttribute> , ve <xref:System.Xml.Serialization.XmlTypeAttribute> .
 
-4. Her bir `Namespace` özniteliğin özelliğini öğesinden ad alanı değerlerinden birine ayarlayın `XmlSerializerNamespaces`.
+4. `Namespace`Her bir özniteliğin özelliğini öğesinden ad alanı değerlerinden birine ayarlayın `XmlSerializerNamespaces` .
 
 5. Geçiş `XmlSerializerNamespaces` için `Serialize` yöntemi `XmlSerializer`.
 

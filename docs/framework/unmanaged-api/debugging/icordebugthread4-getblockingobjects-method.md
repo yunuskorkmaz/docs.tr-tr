@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 39833b689f28437b4241d9cb15fb4a92b2f9bcc3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 366b5124cc66a4e9a1c3bd4e77f604f15ba8d8a8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791370"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379679"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects Metodu
 İş parçacığı engelleme bilgileri sağlayan [CorDebugBlockingObject](cordebugblockingobject-structure.md) yapılarının sıralı bir listesini sağlar.  
@@ -43,18 +43,18 @@ HRESULT GetBlockingObjects (
   
  Hata ayıklanan, eşitlenmiş durumda olduğu sürece bu yöntem çağrılmalıdır.  
   
- `ppBlockingObjectEnum` geçerli bir işaretçi değilse, sonuç tanımsızdır.  
+ `ppBlockingObjectEnum`Geçerli bir işaretçi değilse, sonuç tanımsızdır.  
   
  Bir iş parçacığı engellenirse ve hata belirlenemiyorsa, yöntem hatayı gösteren bir HRESULT döndürür; Aksi takdirde, S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f66ef88646c314502dcb610cec8ce822cab1fca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133611"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379277"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval Yöntemi
 Bu ICorDebugThread 'in işlevlerini toplayan ve sunan bir ıcordebugger Geval nesnesi oluşturur.  
@@ -35,16 +35,16 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parametreler  
  `ppEval`  
- dışı Bu iş parçacığının işlevlerini toplayan ve ortaya çıkaran `ICorDebugEval` nesnesinin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugEval`Bu iş parçacığının işlevlerini toplayan ve ortaya çıkaran nesnenin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Değerlendirme nesnesi, hesaplamayı yapmadan önce iş parçacığı üzerinde yeni bir zincir gönderir. Bu, değerlendirme tamamlanana kadar iş parçacığında gerçekleştirilmekte olan hesaplamayı keser.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

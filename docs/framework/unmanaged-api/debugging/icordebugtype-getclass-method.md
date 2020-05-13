@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-ms.openlocfilehash: d403a8bfba3599a60d8af72307590f5a569480dd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 878a57514af34730049864f17f4853c1237904c2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791290"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379968"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass Yöntemi
 Örneklenmiş genel türü temsil eden bir ICorDebugClass için bir arabirim işaretçisi alır.  
@@ -35,16 +35,16 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parametreler  
  `ppClass`  
- dışı Örneklenmemiş genel türü temsil eden `ICorDebugClass` arabiriminin adresine yönelik bir işaretçi.  
+ dışı `ICorDebugClass`Örneklenmiş genel türü temsil eden bir arabirimin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetClass`, yalnızca belirli koşullar altında çağrılabilir. `GetClass`çağrılmadan önce [ICorDebugType:: GetType](icordebugtype-gettype-method.md) çağırın. `ICorDebugType::GetType`, ELEMENT_TYPE_CLASS veya ELEMENT_TYPE_VALUETYPE olan bir CorElementType değeri döndürürse, bir genel türün örneklenmemiş türünü almak için `GetClass` çağrılabilir.  
+ `GetClass`yalnızca belirli koşullar altında çağrılabilir. Çağrılmadan önce [ICorDebugType:: GetType](icordebugtype-gettype-method.md) çağırın `GetClass` . `ICorDebugType::GetType`Element_type_class veya element_type_valuetype bir CorElementType değeri döndürürse, `GetClass` genel bir türün örneklenmemiş türünü almak için çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

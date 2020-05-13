@@ -1,21 +1,22 @@
 ---
 title: 'Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme'
+description: Bir XML akışını varolan bir sınıftan bir sınıf türeterek ve XmlSerializer örneğini yeni sınıfın serileştirildiği şekilde karşılaştırarak özelleştirebilirsiniz.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b9a8bd52b7dfe7a9bf43061d8f44747b3a847c68
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159929"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379121"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Nasıl yapılır: Türetilen Sınıfların Serileştirmesini Denetleme
-Bir XML öğesinin adını değiştirmek için **Xmtalementattribute** özniteliğini kullanmak, nesne serileştirmesini özelleştirmenin tek yolu değildir. Ayrıca, var olan bir sınıftan türeterek ve yeni sınıfın serileştirildiği <xref:System.Xml.Serialization.XmlSerializer> ÖRNEĞI karşılaştırarak XML akışını özelleştirebilirsiniz.  
+Bir XML öğesinin adını değiştirmek için **Xmtalementattribute** özniteliğini kullanmak, nesne serileştirmesini özelleştirmenin tek yolu değildir. Ayrıca, var olan bir sınıftan türeterek ve <xref:System.Xml.Serialization.XmlSerializer> yeni sınıfın serileştirildiği örneği KARŞıLAŞTıRARAK XML akışını özelleştirebilirsiniz.  
   
- Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf. Ancak, **XmlSerializer** 'ı serileştirme veya seri durumdan çıkarma sırasında türetilen türü kabul etmek için talimat vermelisiniz. Bu, bir <xref:System.Xml.Serialization.XmlElementAttribute> örnek oluşturularak ve **tür** özelliği türetilmiş sınıf türüne ayarlanarak yapılabilir. Bir <xref:System.Xml.Serialization.XmlAttributes> örneğe **xmtalementattribute** ekleyin. Ardından, geçersiz kılınmakta olan türü ve <xref:System.Xml.Serialization.XmlAttributeOverrides> türetilen sınıfı kabul eden üyenin adını belirterek **XmlAttributes** öğesini bir örneğe ekleyin. Bu, aşağıdaki örnekte gösterilir.  
+ Örneğin, belirtilen bir `Book` sınıfı, bu sınıftan türetilen ve oluşturma bir `ExpandedBook` birkaç daha fazla özellik sınıf. Ancak, **XmlSerializer** 'ı serileştirme veya seri durumdan çıkarma sırasında türetilen türü kabul etmek için talimat vermelisiniz. Bu, bir <xref:System.Xml.Serialization.XmlElementAttribute> örnek oluşturularak ve **tür** özelliği türetilmiş sınıf türüne ayarlanarak yapılabilir. Bir örneğe **Xmtalementattribute** ekleyin <xref:System.Xml.Serialization.XmlAttributes> . Ardından **XmlAttributes** <xref:System.Xml.Serialization.XmlAttributeOverrides> , geçersiz kılınmakta olan türü ve türetilen sınıfı kabul eden üyenin adını belirterek XmlAttributes öğesini bir örneğe ekleyin. Bu, aşağıdaki örnekte gösterilir.  
   
 ## <a name="example"></a>Örnek  
   

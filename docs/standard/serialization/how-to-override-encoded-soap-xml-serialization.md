@@ -1,16 +1,17 @@
 ---
 title: 'Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma'
+description: Standart XML serileştirmesini geçersiz kılma işlemine benzer şekilde, nesnelerin XML serileştirmesini SOAP iletileri olarak geçersiz kılma hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922596"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375842"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Nasıl yapılır: Kodlanmış SOAP XML Serileştirmesini Geçersiz Kılma
 
@@ -24,7 +25,7 @@ Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi st
 
 3. XML serileştirmesini etkileyen bir veya daha fazla öznitelik için, serileştirildiği üyeye uygun bir örnek oluşturun. Daha fazla bilgi için bkz. "kodlanmış SOAP serileştirmesini denetleyen öznitelikler".
 
-4. Uygun özelliğini `SoapAttributes` adım 3 ' te oluşturulan özniteliğe ayarlayın.
+4. Uygun özelliğini `SoapAttributes` Adım 3 ' te oluşturulan özniteliğe ayarlayın.
 
 5. Add `SoapAttributes` to `SoapAttributeOverrides`.
 
@@ -36,7 +37,7 @@ Nesneleri serileştirmek XML SOAP iletilerini olarak geçersiz kılma işlemi st
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,. Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip. Gibi çeşitli öznitelikler `SoapElementAttribute`, sınıf üyelerine uygulandı. Sınıf `SerializeOriginal` yöntemiyle seri hale geldiğinde, öznitelikler SOAP ileti içeriğini denetler. `SerializeOverride` Yöntemi çağrıldığında, çeşitli öznitelikler oluşturularak ve bir `SoapAttributes` öğesinin özelliklerini bu özniteliklere (uygun şekilde) ayarlayarak öğesinin `XmlSerializer` davranışı geçersiz kılınır.
+Aşağıdaki kod örneğinde bir dosya iki yolla serileştiren: geçersiz kılma olmadan ilk `XmlSerializer` sınıfının davranış ve davranışı geçersiz kılma tarafından saniye,. Örnek adlı bir sınıf içerir `Group` birkaç üyelere sahip. Gibi çeşitli öznitelikler, `SoapElementAttribute` sınıf üyelerine uygulandı. Sınıf yöntemiyle seri hale geldiğinde `SerializeOriginal` , ÖZNITELIKLER SOAP ileti içeriğini denetler. `SerializeOverride`Yöntemi çağrıldığında, `XmlSerializer` çeşitli öznitelikler oluşturularak ve bir öğesinin özelliklerini `SoapAttributes` Bu özniteliklere (uygun şekilde) ayarlayarak öğesinin davranışı geçersiz kılınır.
 
 ```csharp
 using System;

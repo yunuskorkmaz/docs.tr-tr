@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178540"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379148"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters Metodu
-Bit maskesi tarafından belirtilen her kaydın (şu anda kodu yürüten bilgisayarda) değerini alır.  
+Bit maskesi tarafından belirtilen her kaydın (Şu anda kod yürüten bilgisayardaki) değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,27 +38,27 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parametreler  
  `mask`  
- [içinde] Hangi kayıt değerlerinin alıneceğini belirten bir bit maskesi. Her bit bir kayda karşılık gelir. Bir bit bire ayarlanırsa, kaydın değeri alınır; aksi takdirde, kaydın değeri alınmaz.  
+ 'ndaki Hangi yazmaç değerlerinin alınacağını belirten bir bit maskesi. Her bit bir kayda karşılık gelir. Bir bit olarak ayarlandıysa, kaydın değeri alınır; Aksi takdirde, kaydın değeri alınmadı.  
   
  `regCount`  
- [içinde] Alınacak kayıt değerlerinin sayısı.  
+ 'ndaki Alınacak kayıt değerlerinin sayısı.  
   
  `regBuffer`  
- [çıkış] Her biri `CORDB_REGISTER` bir kayıt değeri alan bir nesne dizisi.  
+ dışı `CORDB_REGISTER`Her biri bir yazmaç değeri alan bir nesne dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dizinin boyutu bit maskesinde bire ayarlanmış bit sayısına eşit olmalıdır. Parametre, `regCount` arabellekte kayıt değerlerini alacak öğe sayısını belirtir. `regCount` Değer maske tarafından belirtilen kayıt sayısı için çok küçükse, daha yüksek numaralanmış kayıtlar kümeden kesilir. Değer `regCount` çok büyükse, kullanılmayan `regBuffer` öğeler değiştirilmez.  
+ Dizinin boyutu, bit maskesinde bir tane olarak ayarlanan bit sayısına eşit olmalıdır. `regCount`Parametresi, kayıt değerlerini alacak arabellekteki öğelerin sayısını belirtir. Değer, `regCount` maskenin gösterdiği kayıt sayısı için çok küçük ise, üstteki numaralandırılmış Yazmaçları kümeden kesilecek. `regCount`Değer çok büyükse, kullanılmamış `regBuffer` öğeler değiştirilmemiş olur.  
   
- Bit maskesi kullanılamayan bir kayıt belirtirse, `GetRegisters` bu kayıt için belirsiz bir değer verir.  
+ Bit maskesi kullanılamayan bir kaydı belirtirse, `GetRegisters` Bu kayıt için belirsiz bir değer döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

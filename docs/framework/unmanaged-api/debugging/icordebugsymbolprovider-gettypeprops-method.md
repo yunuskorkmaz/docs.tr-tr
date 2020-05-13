@@ -2,12 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetTypeProps yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: 5fa091eaf2cf93b0c645effeec3c959d42665fc9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e116716284bb2081edb669e7fc9083cde10f6457
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791540"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379357"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps yöntemi
 Bir vtable içindeki göreli bir sanal adres (RVA) verilen genel parametrelerinin imza sayısı gibi bir türün özellikleri hakkında bilgi döndürür.  
@@ -28,28 +28,28 @@ HRESULT GetTypeProps(
  'ndaki Vtable içindeki göreli bir sanal adres (RVA).  
   
  `cbSignature`  
- 'ndaki `signature` dizisinin boyutu. Açıklamalar bölümüne bakın.  
+ 'ndaki `signature`Dizinin boyutu. Açıklamalar bölümüne bakın.  
   
  `pcbSignature`  
- dışı dışı Döndürülen `signature` dizisinin boyutuna yönelik bir işaretçi.  
+ dışı dışı Döndürülen dizinin boyutuna yönelik bir işaretçi `signature` .  
   
  `signature`  
  dışı Tüm genel parametrelerin TypeSpec imzalarını tutan bir arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Türün `signature` dizisinin gereken boyutunu almak için, `cbSignature` bağımsız değişkenini 0 olarak ayarlayın ve **null**olarak `signature`. Yöntemi döndürüldüğünde, `pcbSignature` `signature` dizisi için gerekli olan bayt sayısını içerir.  
+ Türün dizisinin gerekli boyutunu almak için `signature` , `cbSignature` bağımsız değişkenini 0 ve `signature` **null**olarak ayarlayın. Yöntemi döndüğünde, `pcbSignature` dizi için gereken bayt sayısını içerir `signature` .  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

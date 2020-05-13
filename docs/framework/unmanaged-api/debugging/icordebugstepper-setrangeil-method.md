@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-ms.openlocfilehash: b3153a88867d249aad8365bb774348fb8c9d57d5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7fadffaab6eee5beed513f339ea300acef5a1c6b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791747"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378997"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL Yöntemi
 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) öğesine yapılan çağrıların, yerel koda göre veya bir şekilde ele alınan metodun Microsoft ara DILI (MSIL) koduna göreli bağımsız değişken değerlerini geçirip geçirmeyeceğini belirten bir değer belirler.  
@@ -35,13 +35,13 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>Parametreler  
  `bIL`  
- 'ndaki Aralıkların MSIL koduna göreli olduğunu belirtmek için `true` olarak ayarlayın. Aralıkların yerel koda göreli olduğunu belirtmek için `false` olarak ayarlayın. Varsayılan değer `true` şeklindedir.  
+ 'ndaki `true`ARALıKLARıN MSIL koduna göreli olduğunu belirtmek için olarak ayarlayın. `false`Aralıkların yerel koda göreli olduğunu belirtmek için olarak ayarlayın. Varsayılan değer: `true`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

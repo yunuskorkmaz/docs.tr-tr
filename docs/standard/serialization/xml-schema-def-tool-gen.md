@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma'
+description: Bir sınıfı tanımlayan bir XML şeması oluşturmak veya bir XML şeması tarafından tanımlanan sınıfı oluşturmak için XML şema tanımı aracını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389797"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379530"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Nasıl yapılır: Sınıflar ve XML Şeması Belgeleri Oluşturmak için XML Şema Tanımı Aracını Kullanma
 XML şema tanımı Aracı (XSD.exe'nin), bir sınıf açıklayan bir XML şeması oluşturmak veya bir XML şeması tarafından tanımlanan sınıfı oluşturmak için sağlar. Aşağıdaki yordamlar bu işlemleri gerçekleştirmek nasıl kullanılacağını göstermektedir.
 
 XML şema tanımı Aracı (xsd. exe) genellikle şu yolda bulunabilir: \
-_C:\\Program Files (x86)\\Microsoft SDK\\'ları\\Windows {Version\\}\\bin Netfx {Version} araçları\\_
+_C: \\ Program Files (x86) \\ Microsoft SDK 'ları \\ Windows \\ {Version} \\ bin \\ Netfx {Version} araçları\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Belirli bir şemaya uygun sınıflar oluşturmak için  
   
@@ -30,7 +31,7 @@ _C:\\Program Files (x86)\\Microsoft SDK\\'ları\\Windows {Version\\}\\bin Netfx 
     xsd mySchema.xsd  
     ```  
   
-     Araç yalnızca 16 Mart 2001 World Wide Web Consortium XML belirtimi başvuran şemaları işleyebilir. Diğer bir deyişle, aşağıdaki örnekte gösterildiği gibi XML şeması adhttp://www.w3.org/2001/XMLSchemaalanı "" olmalıdır.  
+     Araç yalnızca 16 Mart 2001 World Wide Web Consortium XML belirtimi başvuran şemaları işleyebilir. Diğer bir deyişle, aşağıdaki örnekte gösterildiği gibi XML şeması ad alanı " http://www.w3.org/2001/XMLSchema " olmalıdır.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  

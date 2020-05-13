@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılsın: Güçlü bir derlemeye başvuru'
+title: 'Nasıl yapılır: tanımlayıcı adlı bir derlemeye başvurma'
+description: Bu makalede, derleme zamanında veya çalışma zamanında tanımlayıcı adlı bir .NET derlemesinde türlerin veya kaynakların nasıl başvurulacağını gösterilmektedir.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -11,50 +12,50 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156484"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379872"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılsın: Güçlü bir derlemeye başvuru
-Güçlü adlandırılmış bir derlemede başvuru türleri veya kaynakları için işlem genellikle saydamdır. Başvuruyu derleme zamanında (erken bağlama) veya çalışma zamanında yapabilirsiniz.  
+# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: tanımlayıcı adlı bir derlemeye başvurma
+Tanımlayıcı adlı bir derlemede tür veya kaynaklara başvurma işlemi genellikle saydamdır. Başvuruyu derleme zamanında (erken bağlama) veya çalışma zamanında yapabilirsiniz.  
   
-Derleyiciye derlemesi için derlenecek derlemenin başka bir derlemeye açıkça atıfta bulunulmasını belirttiğiniz zaman derleme zamanı başvurusu oluşur. Derleme zamanı başvurularını kullandığınızda, derleyici hedeflenen güçlü adı verilen derlemenin ortak anahtarını otomatik olarak alır ve derlenen derlemenin derleme başvurusuna yerleştirir.
+Derleyiciye derlenen derlemenin başka bir derlemeye açıkça başvuruda bulunduğunu belirttiğinizde derleme zamanı başvurusu oluşur. Derleme zamanı başvurusu kullandığınızda, derleyici hedeflenen tanımlayıcı adlı derlemenin ortak anahtarını otomatik olarak alır ve derlenen derlemenin derleme başvurusuna koyar.
   
 > [!NOTE]
-> Güçlü adlandırılmış derleme yalnızca diğer güçlü adlandırılmış derlemelerden türleri kullanabilir. Aksi takdirde, güçlü adlı derlemenin güvenliği tehlikeye girer.  
+> Tanımlayıcı adlı bir derleme, yalnızca diğer tanımlayıcı adlı derlemelerden türleri kullanabilir. Aksi takdirde, tanımlayıcı adlı derlemenin güvenliği tehlikeye girebilir.  
   
-## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Güçlü adlandırılmış derlemeiçin derleme zamanı başvurusu yapma  
+## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Tanımlayıcı adlı bir derlemeye derleme zamanı başvurusu yapma  
 
 Komut isteminde aşağıdaki komutu yazın:  
 
-\<*derleyici komutu*> **/başvuru:**\<*derleme adı*>  
+\<*derleyici komutu* >  **/Reference:** \< *bütünleştirilmiş kod adı*>  
 
-Bu komutta *derleyici komutu* kullandığınız dilin derleyici komutudur ve *derleme adı* başvurulan güçlü adlandırılmış derlemenin adıdır. Kitaplık derlemesi oluşturmak için **/t:kitaplık** seçeneği gibi diğer derleyici seçeneklerini de kullanabilirsiniz.  
+Bu komutta *derleyici komutu* , kullanmakta olduğunuz dilin derleyici komutu ve *derleme adı* , başvurulmakta olan tanımlayıcı adlı derlemenin adıdır. Ayrıca, bir kitaplık derlemesi oluşturmak için **/t: Library** seçeneği gibi diğer derleyici seçeneklerini de kullanabilirsiniz.  
 
-Aşağıdaki örnek, *myAssembly.cs*adlı bir kod modülünden *myLibAssembly.dll* adlı güçlü bir derlemeye başvuran *myAssembly.dll* adlı bir derleme oluşturur.  
+Aşağıdaki örnek, *MyAssembly.cs*adlı bir kod modülünden *myLibAssembly. dll* adlı güçlü adlı bir derlemeye başvuran *MyAssembly. dll* adlı bir derleme oluşturur.  
 
 ```cmd
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
 
-## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Güçlü adlandırılmış derlemeye çalışma zamanı başvurusu yapma  
+## <a name="make-a-run-time-reference-to-a-strong-named-assembly"></a>Tanımlayıcı adlı bir derlemeye çalışma zamanı başvurusu yapma  
   
-Örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> güçlü <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> adlı bir derlemeye çalışma zamanı başvurusu yaptığınızda, örneğin veya yöntemi ni kullanarak, başvurulan güçlü adlandırılmış derlemenin görüntü adını kullanmanız gerekir. Görüntü adının sözdizimi aşağıdaki gibidir:  
+Tanımlayıcı adlı bir derlemeye çalışma zamanı başvurusu yaptığınızda (örneğin, veya yöntemini kullanarak), <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> başvurulan tanımlayıcı adlı derlemenin görünen adını kullanmanız gerekir. Görünen adın sözdizimi aşağıdaki gibidir:  
 
-\<*derleme adı*>**,** \< *sürüm numarası*>**,** \< *kültür*>**,** \< *ortak anahtar belirteci*>  
+\<*bütünleştirilmiş kod adı* > **,** \< *sürüm numarası* > **,** \< *kültür* > **,** \< *ortak anahtar belirteci*>  
 
-Örnek:  
+Örneğin:  
 
 ```console
 myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
-Bu örnekte, `PublicKeyToken` ortak anahtar belirteci hexadecimal şeklidir. Kültür değeri yoksa, kullanın. `Culture=neutral`  
+Bu örnekte, `PublicKeyToken` ortak anahtar belirtecinin onaltılı biçimidir. Kültür değeri yoksa kullanın `Culture=neutral` .  
 
-Aşağıdaki kod örneği, yöntemle bu <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> bilgilerin nasıl kullanılacağını gösterir.  
+Aşağıdaki kod örneği, bu bilgileri yöntemiyle nasıl kullanacağınızı gösterir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> .  
 
 ```cpp
 Assembly^ myDll =
@@ -71,13 +72,13 @@ Dim myDll As Assembly = _
     Assembly.Load("myDll, Version=1.0.0.1, Culture=neutral, PublicKeyToken=9b35aa32c18d4fb1")
 ```
 
-Aşağıdaki [Güçlü Ad (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) komutunu kullanarak belirli bir derleme için ortak anahtarın ve ortak anahtar belirtecisinin hexadecimal biçimini yazdırabilirsiniz:  
+Aşağıdaki [tanımlayıcı ad (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md) komutunu kullanarak, belirli bir derleme için ortak anahtar ve ortak anahtar belirtecinin onaltılık biçimini yazdırabilirsiniz:  
 
-**sn \< -Tp** *montajı***>**  
+**sn-TP \< ** *derleme***>**  
 
-Ortak anahtar dosyanız varsa, bunun yerine aşağıdaki komutu kullanabilirsiniz (komut satırı seçeneğindeki duruma ilişkin farkı not edin):  
+Ortak anahtar dosyanız varsa, bunun yerine aşağıdaki komutu kullanabilirsiniz (komut satırı seçeneğinde büyük/küçük harf farkını aklınızda bulabilirsiniz):  
 
-**sn -tp \< ** *genel anahtar dosyası***>**  
+**sn-TP \< ** *ortak anahtar dosyası***>**  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

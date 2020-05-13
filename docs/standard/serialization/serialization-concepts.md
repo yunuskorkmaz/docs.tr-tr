@@ -1,13 +1,14 @@
 ---
 title: Serileştirme kavramları
+description: Serileştirme bir nesnenin durumunu yakalamak veya bir uygulama etki alanından diğerine bir nesne değere göre göndermek için kullanılabilir.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159838"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378735"
 ---
 # <a name="serialization-concepts"></a>Serileştirme kavramları
 Neden serileştirme kullanmak istiyor? İki en önemli bir tam kopya daha sonraki bir aşamada yeniden oluşturulabilir için bir depolama ortamına bir nesne durumunu sürdürülmesi için ve nesne değerine göre bir uygulama etki alanından diğerine gönderilecek nedenleridir. Örneğin, serileştirme ASP.NET oturum durumu Kaydet ve Pano'ya Windows Forms nesneleri kopyalamak için kullanılır. Bu aynı zamanda nesneleri değerine göre bir uygulama etki alanından diğerine geçmesine uzaktan iletişim tarafından kullanılır.
@@ -22,9 +23,9 @@ Ortak dil çalışma zamanı, nesnelerin bellekte nasıl depolandığını yöne
 Serileştirilmiş sınıf seri durumdan çıkarılmışsa, sınıf yeniden oluşturulur ve tüm veri üyelerinin değerleri otomatik olarak geri yüklenir.
 
 ## <a name="marshal-by-value"></a>Değere göre sıralama
-Nesneleri oluşturulan burada yalnızca uygulama etki alanında geçerli değil. Nesneyi parametre olarak geçirme veya bir sonuç olarak döndürme girişimi, nesne öğesinden `MarshalByRefObject` türetilmediği veya olarak `Serializable`işaretli olmadığı sürece başarısız olur. Nesne olarak `Serializable`işaretlenmişse, nesne otomatik olarak serileştirilir, bir uygulama etki alanından diğerine taşınır ve sonra ikinci uygulama etki alanında nesnenin tam bir kopyasını oluşturmak için serisi kaldırılır. Bu işlem genellikle hazırlanır tarafından değeri olarak adlandırılır.
+Nesneleri oluşturulan burada yalnızca uygulama etki alanında geçerli değil. Nesneyi parametre olarak geçirme veya bir sonuç olarak döndürme girişimi, nesne öğesinden türetilmediği veya olarak işaretli olmadığı sürece başarısız olur `MarshalByRefObject` `Serializable` . Nesne olarak işaretlenmişse, `Serializable` nesne otomatik olarak serileştirilir, bir uygulama etki alanından diğerine taşınır ve sonra ikinci uygulama etki alanında nesnenin tam bir kopyasını oluşturmak için serisi kaldırılır. Bu işlem genellikle hazırlanır tarafından değeri olarak adlandırılır.
 
-Bir nesne öğesinden `MarshalByRefObject`türetilirse, nesne başvurusu nesnenin kendisi yerine bir uygulama etki alanından diğerine geçirilir. Ayrıca, ' den `MarshalByRefObject` türetilen bir nesneyi de işaretleyebilirsiniz. `Serializable` Bu nesne uzaktan iletişim ile kullanıldığında, serileştirme işleminden sorumlu olan ve bir yedek seçiciyle (`SurrogateSelector`) önceden yapılandırılmış olan biçimlendirici, serileştirme işleminin denetimini alır ve bir ara sunucu `MarshalByRefObject` ile türetilmiş tüm nesneleri değiştirir. `SurrogateSelector` Yerine, serileştirme mimarisi, [serileştirme işlemindeki adımlarda](steps-in-the-serialization-process.md)açıklanan standart serileştirme kurallarını izler.  
+Bir nesne öğesinden `MarshalByRefObject` türetilirse, nesne başvurusu nesnenin kendisi yerine bir uygulama etki alanından diğerine geçirilir. Ayrıca, ' den türetilen bir nesneyi de işaretleyebilirsiniz `MarshalByRefObject` `Serializable` . Bu nesne uzaktan iletişim ile kullanıldığında, serileştirme işleminden sorumlu olan ve bir yedek seçiciyle () önceden yapılandırılmış olan biçimlendirici, `SurrogateSelector` serileştirme işleminin denetimini alır ve `MarshalByRefObject` bir ara sunucu ile türetilmiş tüm nesneleri değiştirir. Yerine, `SurrogateSelector` serileştirme mimarisi, [serileştirme işlemindeki adımlarda](steps-in-the-serialization-process.md)açıklanan standart serileştirme kurallarını izler.  
 
 ## <a name="related-sections"></a>İlgili bölümler  
  [İkili serileştirme](../../../docs/standard/serialization/binary-serialization.md)  

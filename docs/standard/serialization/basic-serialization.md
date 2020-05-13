@@ -1,5 +1,6 @@
 ---
 title: Temel serileştirme
+description: Bu makalede, bir sınıfını SerializableAttribute ile seri hale getirilebilir hale getirme ve serileştirme ve seri durumundan çıkarma örnekleri dahildir gösterilmektedir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248036"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378421"
 ---
 # <a name="basic-serialization"></a>Temel serileştirme
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Seri hale getirilebilir bir sınıfı yapmanın en kolay yolu, <xref:System.SerializableAttribute> bunu aşağıdaki şekilde işaretlemenize yol kullanmaktır.  
+Seri hale getirilebilir bir sınıfı yapmanın en kolay yolu, bunu aşağıdaki şekilde işaretlemenize yol kullanmaktır <xref:System.SerializableAttribute> .  
   
 ```csharp  
 [Serializable]  
@@ -42,9 +43,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-Bu örnek bir ikili biçimlendirici serileştirme yapmak için kullanır. Tek yapmanız gereken, bir akışın ve kullanmak istediğiniz biçimlendirici 'nin bir örneğini oluşturmak ve ardından biçimlendirici üzerinde **serileştirme** yöntemini çağırdır. Akış ve seri hale getirilecek nesne bu çağrıya parametre olarak sağlanır. Bu örnekte açıkça gösterilmese de, bir sınıfın tüm üye değişkenleri, hatta özel olarak işaretlenen değişkenler serileştirilir. Bu şekilde, ikili serileştirme yalnızca ortak alanları seri <xref:System.Xml.Serialization.XmlSerializer> hale getirir sınıfından farklılık gösterir. İkili Serileştirmeden üye değişkenlerini dışlama hakkında daha fazla bilgi için bkz. [Seçmeli serileştirme](selective-serialization.md).  
+Bu örnek bir ikili biçimlendirici serileştirme yapmak için kullanır. Tek yapmanız gereken, bir akışın ve kullanmak istediğiniz biçimlendirici 'nin bir örneğini oluşturmak ve ardından biçimlendirici üzerinde **serileştirme** yöntemini çağırdır. Akış ve seri hale getirilecek nesne bu çağrıya parametre olarak sağlanır. Bu örnekte açıkça gösterilmese de, bir sınıfın tüm üye değişkenleri, hatta özel olarak işaretlenen değişkenler serileştirilir. Bu şekilde, ikili serileştirme <xref:System.Xml.Serialization.XmlSerializer> yalnızca ortak alanları seri hale getirir sınıfından farklılık gösterir. İkili Serileştirmeden üye değişkenlerini dışlama hakkında daha fazla bilgi için bkz. [Seçmeli serileştirme](selective-serialization.md).  
   
-Nesne önceki durumuna geri yükleme oldukça kolaydır. İlk olarak, okumak <xref:System.Runtime.Serialization.Formatter>için bir akış oluşturun ve sonra biçimlendirici bir nesne serisini kaldırmak için talimat söyleyin. Aşağıdaki kod örneği, nasıl yapıldığını gösterir.  
+Nesne önceki durumuna geri yükleme oldukça kolaydır. İlk olarak, okumak için bir akış oluşturun <xref:System.Runtime.Serialization.Formatter> ve sonra biçimlendirici bir nesne serisini kaldırmak için talimat söyleyin. Aşağıdaki kod örneği, nasıl yapıldığını gösterir.  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -58,7 +59,7 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Yukarıda <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> kullanılan, çok verimlidir ve bir kompakt bayt akışı üretir. Onunla, .NET Framework üzerine serisi kaldırılacak nesneleri serileştirmek için ideal bir aracı kolaylaştıracak bu Biçimlendiricinin serileştirilmiş tüm nesneleri ayrıca seri durumdan çıkarılabiliyorsa. Bir nesne seri durumdan kaldırıldığında oluşturucuların çağrılmadığını unutmayın. Bu kısıtlama, performans nedenleriyle seri durumdan çıkarma üzerine yerleştirilir. Ancak bu, çalışma zamanının nesne yazıcı ile yaptığı bazı olağan sözleşmeleri ihlal ediyor ve geliştiriciler bir nesneyi seri hale getirilebilir olarak işaretlerken sonuçları anladıklarından emin olmalıdır.  
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Yukarıda kullanılan, çok verimlidir ve bir kompakt bayt akışı üretir. Onunla, .NET Framework üzerine serisi kaldırılacak nesneleri serileştirmek için ideal bir aracı kolaylaştıracak bu Biçimlendiricinin serileştirilmiş tüm nesneleri ayrıca seri durumdan çıkarılabiliyorsa. Bir nesne seri durumdan kaldırıldığında oluşturucuların çağrılmadığını unutmayın. Bu kısıtlama, performans nedenleriyle seri durumdan çıkarma üzerine yerleştirilir. Ancak bu, çalışma zamanının nesne yazıcı ile yaptığı bazı olağan sözleşmeleri ihlal ediyor ve geliştiriciler bir nesneyi seri hale getirilebilir olarak işaretlerken sonuçları anladıklarından emin olmalıdır.  
   
 Taşınabilirlik bir gereksinimle, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> bunun yerine kullanın. Yukarıdaki koddaki **BinaryFormatter** **'ı SoapFormatter** Ile değiştirin ve **seri hale getirme** ve **seri durumdan çıkarma** 'yı çağırın. Bu biçimlendirici yukarıda kullanılan örnek için aşağıdaki çıktıyı üretir.  
   
@@ -81,7 +82,7 @@ Taşınabilirlik bir gereksinimle, <xref:System.Runtime.Serialization.Formatters
 </SOAP-ENV:Envelope>  
 ```  
   
-[Seri hale getirilebilir](xref:System.SerializableAttribute) özniteliğin devralınamayacağını unutmamak önemlidir. Öğesinden `MyObject`yeni bir sınıf türetirsiniz, yeni sınıf özniteliğiyle işaretlenmelidir veya seri hale getirilemez. Örneğin, aşağıdaki sınıfın bir örneğini serileştirmek istediğinizde, <xref:System.Runtime.Serialization.SerializationException> `MyStuff` türün seri hale getirilebilir olarak işaretlenmediğini bildiren bir uyarı alırsınız.  
+[Seri hale getirilebilir](xref:System.SerializableAttribute) özniteliğin devralınamayacağını unutmamak önemlidir. Öğesinden yeni bir sınıf türetirsiniz `MyObject` , yeni sınıf özniteliğiyle işaretlenmelidir veya seri hale getirilemez. Örneğin, aşağıdaki sınıfın bir örneğini serileştirmek istediğinizde, <xref:System.Runtime.Serialization.SerializationException> `MyStuff` türün seri hale getirilebilir olarak işaretlenmediğini bildiren bir uyarı alırsınız.  
   
 ```csharp  
 public class MyStuff : MyObject

@@ -1,5 +1,6 @@
 ---
 title: XML Serileştirmeyi Denetleyen Öznitelikler
+description: Bu makale, kaynak ve sınıf üyeleri için uygulayabileceğiniz ve XmlSerializer 'ın bir sınıf örneğini serileştirerek veya seri durumdan ayırmayı denetleyen öznitelikler içerir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - classes, serializing
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794972"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378456"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serileştirmeyi Denetleyen Öznitelikler
-Sınıfının bir örneğini <xref:System.Xml.Serialization.XmlSerializer> seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için aşağıdaki tablodaki öznitelikleri sınıflar ve sınıf üyelerine uygulayabilirsiniz. Bu özniteliklerin XML serileştirmesini denetlemesini anlamak için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
+Sınıfının bir örneğini seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için aşağıdaki tablodaki öznitelikleri sınıflar ve sınıf üyelerine uygulayabilirsiniz <xref:System.Xml.Serialization.XmlSerializer> . Bu özniteliklerin XML serileştirmesini denetlemesini anlamak için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
   
  Bu öznitelikler, bir XML Web hizmeti tarafından oluşturulan SOAP iletilerini denetlemek için de kullanılabilir. Bu öznitelikleri bir XML Web Hizmetleri yöntemine uygulama hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
   
@@ -25,7 +26,7 @@ Sınıfının bir örneğini <xref:System.Xml.Serialization.XmlSerializer> seri 
   
 |Öznitelik|Uygulandığı öğe:|Belirler|  
 |---------------|----------------|---------------|  
-|<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|Ortak alan, özelliği, parameTRe veya bir dizi döndürür dönüş değeri <xref:System.Xml.XmlAttribute> nesneleri.|Seri durumdan çıkarılırken, dizi, şemaya bilinmeyen tüm <xref:System.Xml.XmlAttribute> XML özniteliklerini temsil eden nesneleriyle doldurulur.|  
+|<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|Ortak alan, özelliği, parameTRe veya bir dizi döndürür dönüş değeri <xref:System.Xml.XmlAttribute> nesneleri.|Seri durumdan çıkarılırken, dizi, <xref:System.Xml.XmlAttribute> şemaya bilinmeyen tüm XML özniteliklerini temsil eden nesneleriyle doldurulur.|  
 |<xref:System.Xml.Serialization.XmlAnyElementAttribute>|Ortak alan, özelliği, parameTRe veya bir dizi döndürür dönüş değeri <xref:System.Xml.XmlElement> nesneleri.|İşlenirken, dizi renkle doldurulup <xref:System.Xml.XmlElement> şemaya bilinmeyen tüm XML öğeleri temsil eden nesneleri.|  
 |<xref:System.Xml.Serialization.XmlArrayAttribute>|Ortak alan, özelliği, parameTRe veya karmaşık nesneler dizisi döndürür dönüş değeri.|Dizi üyelerinin bir XML dizi üyeleri olarak oluşturulur.|  
 |<xref:System.Xml.Serialization.XmlArrayItemAttribute>|Ortak alan, özelliği, parameTRe veya karmaşık nesneler dizisi döndürür dönüş değeri.|Bir diziye eklenen türetilen türler. Genellikle birlikte uygulanan bir <xref:System.Xml.Serialization.XmlArrayAttribute>.|  
@@ -39,7 +40,7 @@ Sınıfının bir örneğini <xref:System.Xml.Serialization.XmlSerializer> seri 
 |<xref:System.Xml.Serialization.XmlTextAttribute>|Ortak özellikler ve alanları.|Özellik veya alan XML metin olarak serileştirilmiş.|  
 |<xref:System.Xml.Serialization.XmlTypeAttribute>|Ortak sınıf bildirimleri.|XML ad alanı ve adını yazın.|  
   
- <xref:System.Xml.Serialization> Ad alanında bulunan bu özniteliklerin yanı sıra, bir alana <xref:System.ComponentModel.DefaultValueAttribute> özniteliği de uygulayabilirsiniz. **DefaultValueAttribute** değeri belirtilmemişse, üyeye otomatik olarak atanacak değeri ayarlar.  
+ Ad alanında bulunan bu özniteliklerin yanı sıra <xref:System.Xml.Serialization> , <xref:System.ComponentModel.DefaultValueAttribute> bir alana özniteliği de uygulayabilirsiniz. **DefaultValueAttribute** değeri belirtilmemişse, üyeye otomatik olarak atanacak değeri ayarlar.  
   
  Kodlanmış SOAP XML serileştirmesini denetlemek için bkz. [KODLANMıŞ SOAP serileştirmesini denetleyen öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70e79378ad8eb2599199a1f7bc57cf530c9b4dd3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133551"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379690"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain Yöntemi
 Bu ICorDebugThread nesnesindeki etkin (en son) yığın zincirine yönelik bir arabirim işaretçisi alır.  
@@ -38,13 +38,13 @@ HRESULT GetActiveChain (
  dışı Yığın zincirini temsil eden bir ıcordebugzincirleri nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Şu anda etkin bir yığın zinciri yoksa `ppChain` parametresi null.  
+ `ppChain`Şu anda etkin bir yığın zinciri yoksa parametre null.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

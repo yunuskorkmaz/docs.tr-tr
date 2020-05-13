@@ -1,5 +1,6 @@
 ---
 title: Sürüm dayanıklı serileştirme
+description: 2,0 .NET Framework, seri hale getirilebilir türlerin daha kolay bir şekilde değiştirileceğini sağlayan özellikler kümesi olan sürüm dayanıklı serileştirme 'i tanıtır.
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 87bdc0f0328e7a75477672432c0944818dbef244
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348432"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380089"
 ---
 # <a name="version-tolerant-serialization"></a>Sürüm dayanıklı serileştirme
 
@@ -27,9 +28,9 @@ Sonraki uygulamaya bir sürümünden yeniden kullanılabilir olacaktır serializ
 - Bir uygulamanın eski sürümleri yeni sürümleri eski türünü seri durumdan çıkarılacak sorulduğunda özel durumlar oluşturan.
 - Bir uygulamanın daha yeni sürümleri, bir eksik veri türüyle eski sürümleri işlenirken özel durumlar oluşturan.
 
-Sürüm dayanıklı serileştirme (VTS), .NET Framework 2,0 ' de sunulan ve zaman içinde seri hale getirilebilir türlerin değiştirilmesini sağlayan bir özellik kümesidir. Özellikle, VTS özellikleri, genel türler dahil olmak üzere <xref:System.SerializableAttribute> özniteliğin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](version-tolerant-serialization-technology-sample.md).
+Sürüm dayanıklı serileştirme (VTS), .NET Framework 2,0 ' de sunulan ve zaman içinde seri hale getirilebilir türlerin değiştirilmesini sağlayan bir özellik kümesidir. Özellikle, VTS özellikleri, <xref:System.SerializableAttribute> Genel türler dahil olmak üzere özniteliğin uygulandığı sınıflar için etkinleştirilir. VTS türü diğer sürümleriyle uyumluluk bozup olmadan bu sınıflar için yeni alanlar eklemek olanaklı kılar. Çalışan bir örnek uygulama için bkz. [Sürüm dayanıklı serileştirme teknolojisi örneği](version-tolerant-serialization-technology-sample.md).
 
-Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ayrıca, ' yi kullanırken, fazlalık veri toleransı hariç tüm özellikler de etkinleştirilir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Serileştirme için bu sınıfları kullanma hakkında daha fazla bilgi için bkz. [Ikili serileştirme](binary-serialization.md).
+Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Ayrıca, ' yi kullanırken, fazlalık veri toleransı hariç tüm özellikler de etkinleştirilir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Serileştirme için bu sınıfları kullanma hakkında daha fazla bilgi için bkz. [Ikili serileştirme](binary-serialization.md).
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -41,7 +42,7 @@ Kullanırken VTS özelliklerin etkinleştirilip <xref:System.Runtime.Serializati
 - İsteğe bağlı veriler eksik tolerans. Bu yeni sürümleri için veri göndermek eski sürümleri sağlar.
 - Serileştirme geri çağırmaları. Bu veri eksik olduğu durumlarda akıllı varsayılan değer ayarı sağlar.
 
-Ayrıca, yeni bir isteğe bağlı alan eklendiğinde bildirmek için bir özellik yok. Bu, <xref:System.Runtime.Serialization.OptionalFieldAttribute> özniteliğinin <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> özelliğidir.
+Ayrıca, yeni bir isteğe bağlı alan eklendiğinde bildirmek için bir özellik yok. Bu, <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> <xref:System.Runtime.Serialization.OptionalFieldAttribute> özniteliğinin özelliğidir.
 
 Bu özellikler, aşağıdaki bölümlerde daha ayrıntılı bir şekilde ele alınmıştır.
 
@@ -49,7 +50,7 @@ Bu özellikler, aşağıdaki bölümlerde daha ayrıntılı bir şekilde ele al�
 
 Geçmişte, seri durumundan çıkarma sırasında, hiçbir gereksiz veya beklenmeyen veriler özel durum oluşturulmasına neden oldu. VTS ile aynı durumda, özel durumların oluşturulması yerine hiçbir gereksiz veya beklenmeyen veri yok sayılır. Bu yeni sürümleri bir türün (yani, daha fazla alan içeren bir sürüm) kullanan uygulamalar sağlar, eski sürümleri aynı türde beklediğiniz uygulamalar bilgileri göndermek için.
 
-Aşağıdaki örnekte, `CountryField` `Address` sınıfının sürüm 2,0 ' de yer alan ek veriler, eski bir uygulama daha yeni sürümü seri hale geldiğinde yok sayılır.
+Aşağıdaki örnekte, sınıfının sürüm 2,0 ' de yer alan ek veriler, `CountryField` `Address` eski bir uygulama daha yeni sürümü seri hale geldiğinde yok sayılır.
 
 ```csharp  
 // Version 1 of the Address class.  
@@ -90,7 +91,7 @@ End Class
 
 ### <a name="tolerance-of-missing-data"></a>Eksik verilerin toleransı
 
-Alanlar, <xref:System.Runtime.Serialization.OptionalFieldAttribute> öznitelikleri uygulanarak isteğe bağlı olarak işaretlenebilir. Seri durumundan çıkarma sırasında isteğe bağlı verileri yoksa, serileştirme motoruna olmaması yoksayar ve bir özel durum oluşturmaz. Bu nedenle, eski sürümleri bir türün beklediğiniz uygulamaları daha yeni sürümleri aynı türde beklediğiniz uygulamaları için veri gönderebilir.
+Alanlar, öznitelikleri uygulanarak isteğe bağlı olarak işaretlenebilir <xref:System.Runtime.Serialization.OptionalFieldAttribute> . Seri durumundan çıkarma sırasında isteğe bağlı verileri yoksa, serileştirme motoruna olmaması yoksayar ve bir özel durum oluşturmaz. Bu nedenle, eski sürümleri bir türün beklediğiniz uygulamaları daha yeni sürümleri aynı türde beklediğiniz uygulamaları için veri gönderebilir.
 
 Aşağıdaki örnek, 2.0 sürümünü gösterir `Address` ile `CountryField` alan isteğe bağlı olarak işaretlenmiş. Daha eski bir uygulamanın sürüm 2.0 bekler daha yeni bir uygulama için 1 sürümü gönderirse, veri olmaması göz ardı edilir.
 
@@ -132,7 +133,7 @@ Serileştirme geri çağırmaları serileştirme/seri kaldırma işlemine dört 
 
 #### <a name="using-callbacks"></a>Geri çağırmaları kullanma
 
-Geri çağırmaları kullanmak için, uygun özniteliği <xref:System.Runtime.Serialization.StreamingContext> parametreyi kabul eden bir yönteme uygulayın. Her sınıf için yalnızca bir yöntem bu özniteliklerin her biriyle işaretlenebilir. Örneğin:
+Geri çağırmaları kullanmak için, uygun özniteliği parametreyi kabul eden bir yönteme uygulayın <xref:System.Runtime.Serialization.StreamingContext> . Her sınıf için yalnızca bir yöntem bu özniteliklerin her biriyle işaretlenebilir. Örneğin:
 
 ```csharp
 [OnDeserializing]
@@ -269,7 +270,7 @@ Bazı kullanıcıların, sunucu ve istemci üzerinde farklı bir sınıf sürüm
 Uygun sürüm davranış sağlamak için bir tür sürümü sürümü değişiklik yapıldığında bu kuralları izleyin:
 
 - Hiçbir zaman serileştirilmiş bir alan kaldırın.
-- Özniteliği önceki sürümdeki <xref:System.NonSerializedAttribute> alana uygulanmadıysa, bir alana özniteliği hiçbir şekilde uygulamayın.
+- <xref:System.NonSerializedAttribute>Özniteliği önceki sürümdeki alana uygulanmadıysa, bir alana özniteliği hiçbir şekilde uygulamayın.
 - Hiçbir zaman adı veya serileştirilmiş bir alan türünü değiştirin.
 - Yeni bir seri hale getirilmiş alan eklerken **OptionalFieldAttribute** özniteliğini uygulayın.
 - Bir alandan **Serializedattribute** özniteliği kaldırılırken (önceki bir sürümde seri hale getirilebilir olmayan), **OptionalFieldAttribute** özniteliğini uygulayın.

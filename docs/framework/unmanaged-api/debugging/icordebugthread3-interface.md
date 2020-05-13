@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-ms.openlocfilehash: 19bd869aec7e4d046890d2314f5142753ba0b112
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dc556dfb59e999ed9b7fc5f35c603dc26c35f314
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791386"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378716"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 Arabirimi
 [Icordebugstackyürüme](icordebugstackwalk-interface.md) ve ilgili arabirimlere giriş noktası sağlar.  
@@ -32,19 +32,19 @@ ms.locfileid: "76791386"
 |[GetActiveInternalFrames Yöntemi](icordebugthread3-getactiveinternalframes-method.md)|Yığında iç çerçeveler ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) nesneleri) dizisini döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugThread3`, ICorDebugThread arabirimine yönelik bir mantıksal uzantıdır.  
+ `ICorDebugThread3`, ICorDebugThread arabirimine yönelik mantıksal bir uzantıdır.  
   
 > [!NOTE]
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

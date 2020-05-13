@@ -2,12 +2,12 @@
 title: ICorDebugStaticFieldSymbol Arabirimi
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: b50b9c8435f19e1a77229f01dc85514f5f75c9f5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f9b82f0f98a668555a8096d7575c049c31cae93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791800"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379436"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol Arabirimi
 Statik bir alan için hata ayıklama simgesi bilgisini temsil eder.  
@@ -21,19 +21,19 @@ Statik bir alan için hata ayıklama simgesi bilgisini temsil eder.
 |[GetSize Yöntemi](icordebugstaticfieldsymbol-getsize-method.md)|Statik alanın bayt cinsinden boyutunu alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugStaticFieldSymbol` arabirimi, bir statik alana yönelik hata ayıklama simgesi bilgilerini almak için kullanılır.  
+ `ICorDebugStaticFieldSymbol`Arabirim, bir statik alana yönelik hata ayıklama simgesi bilgilerini almak için kullanılır.  
   
 > [!NOTE]
 > Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

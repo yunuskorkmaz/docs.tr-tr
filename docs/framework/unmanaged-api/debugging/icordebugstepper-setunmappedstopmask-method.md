@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-ms.openlocfilehash: ff393b119c349e34898b781c3185cc82f2dba11f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ef458fda8e8b7e75f92a4b3c06eabec106180d23
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137558"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379260"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask Yöntemi
 Yürütmenin durdurmayacak eşlenmemiş kodun türünü belirten bir değer ayarlar.  
@@ -37,7 +37,7 @@ HRESULT SetUnmappedStopMask (
  `mask`  
  'ndaki Hata ayıklayıcının yürütmeyi durdurulacağı eşlenmemiş kodun türünü belirten CorDebugUnmappedStop numaralandırması değeri.  
   
- Varsayılan değer STOP_OTHER_UNMAPPED ' dir. STOP_UNMANAGED değeri yalnızca birlikte çalışma hata ayıklaması ile geçerlidir.  
+ Varsayılan değer STOP_OTHER_UNMAPPED. STOP_UNMANAGED değeri yalnızca birlikte çalışma hata ayıklaması ile geçerlidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Hata ayıklayıcı, Microsoft ara dili (MSIL) için karşılık gelen hiçbir eşleme olmayan bir tam zamanında (JıT) derleme bulduğunda, bu tür eşlenmemiş kod belirten bayrak ayarlandıysa yürütmeyi halliyorlar. Aksi halde, bu adım saydam olarak devam eder.  
@@ -45,10 +45,10 @@ HRESULT SetUnmappedStopMask (
  Hata ayıklayıcı bir yöntemi girmek için bir Stepper kullanmıyorsa, eşlenmemiş kod üzerinde adım adım değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

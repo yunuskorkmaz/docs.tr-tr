@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13125f60f596cb8a80d9c42c51a979f632de494b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133516"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379752"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState Yöntemi
 Bu ICorDebugThread nesnesinin geçerli hata ayıklama durumunu alır.  
@@ -38,13 +38,13 @@ HRESULT GetDebugState (
  dışı Bu iş parçacığının geçerli hata ayıklama durumunu açıklayan, CorDebugThreadState numaralandırma değerlerinin bit düzeyinde birleşimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlem şu anda durdurulmuşsa, bu iş parçacığının gerçek geçerli durumu değil, işlem devam etseydi, bu iş parçacığı için mevcut olacak hata ayıklama durumunu temsil `pState`.  
+ İşlem şu anda durdurulmuşsa, `pState` işlem devam etseydi, bu iş parçacığının gerçek geçerli durumu değil, bu iş parçacığı için mevcut olacak hata ayıklama durumunu temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

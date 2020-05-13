@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791932"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379226"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget Arabirimi
 Geliştiricilerin, ortak dil çalışma zamanı (CLR) ortamında Silverlight tabanlı uygulamalarda hata ayıklamalarına olanak tanıyan yöntemler sağlar.  
@@ -49,7 +49,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  Karma mod (yani, yönetilen ve yerel kod) hata ayıklaması Windows 95, Windows 98 veya Windows ME 'de veya x86 olmayan platformlarda (IA-64 ve AMD64 gibi) desteklenmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL  
   

@@ -1,68 +1,68 @@
 ---
-title: Databricks'e Apache Spark işi için bir .NET gönderme
-description: Spark gönder ve Jar'ı Ayarla'yı kullanarak Databricks'e Apache Spark için bir .NET işini nasıl göndereceğinizi öğrenin.
-ms.date: 12/05/2019
+title: Databricks 'e Apache Spark iş için .NET gönderme
+description: Spark-gönder ve ayarla jar kullanarak Databricks 'e yönelik bir .NET Apache Spark işi göndermeyi öğrenin.
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 65976f9095ecef66e0538c398492033c612c1430
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a158110854f80921740954403a8fd51b30cbcb12
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187604"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379648"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks'e Apache Spark işi için bir .NET gönderme
+# <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks 'e Apache Spark iş için .NET gönderme
 
-Apache Spark için .NET işinizi Databricks'e `spark-submit` dağıtmanın iki yolu vardır: ve Jar'ı Ayarlayın.
+.NET Apache Spark işlerini Databricks kümelerinde çalıştırabilirsiniz, ancak kullanıma hazır değildir. Apache Spark iş için .NET uygulamanızı Databricks 'e dağıtmanın iki yolu vardır: `spark-submit` ve jar 'Yi ayarlayın.
 
-## <a name="deploy-using-spark-submit"></a>Kıvılcım gönder'i kullanarak dağıtma
+## <a name="deploy-using-spark-submit"></a>Spark-gönder kullanarak dağıtma
 
-Apache [Spark](https://spark.apache.org/docs/latest/submitting-applications.html) işleri için .NET'i Databricks'e göndermek için kıvılcım gönder komutunu kullanabilirsiniz. `spark-submit`yalnızca isteğe bağlı oluşturulan bir kümeye gönderilmesine izin verir.
+Apache Spark işleri için .NET 'i Databricks 'e göndermek için [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanabilirsiniz. `spark-submit`yalnızca isteğe bağlı olarak oluşturulan bir kümeye gönderim yapılmasına izin verir.
 
-1. Databricks Çalışma Alanınıza gidin ve bir iş oluşturun. İşiniz için bir başlık seçin ve ardından **kıvılcım gönder'i yapılandır'ı**seçin. İş yapılandırmasında aşağıdaki parametreleri yapıştırın ve **onayla'yı**seçin.
+1. Databricks çalışma alanınıza gidin ve bir iş oluşturun. İşiniz için bir başlık seçin ve ardından **Spark-gönder**' i seçin. Aşağıdaki parametreleri iş yapılandırmasına yapıştırın ve **Onayla**' yı seçin.
 
     ```
     ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
-    > Yukarıdaki parametrenin içeriğini özel dosyalarınıza ve yapılandırmanıza göre güncelleştirin. Örneğin, DBFS'ye yüklediğiniz Microsoft.Spark kavanoz dosyasının sürümüne başvurun ve uygulamanızın uygun adını ve yayınlanan uygulama zip dosyasını kullanın.
+    > Yukarıdaki parametrenin içeriğini, belirli dosyalarınıza ve yapılandırmanıza göre güncelleştirin. Örneğin, DBFS 'ye yüklediğiniz Microsoft. Spark jar dosyasının sürümüne başvurun ve uygulamanızın uygun adını ve yayımlanmış uygulama ZIP dosyasını kullanın.
 
-2. İşinize gidin ve işinizin kümesini yapılandırmak için **Edit'i** seçin. Databricks Runtime Sürümünü, dağıtımınızda kullanmak istediğiniz Apache Spark sürümünü temel alın. Ardından **Gelişmiş Seçenekler > Init Komut Dosyaları'nı** `dbfs:/spark-dotnet/db-init.sh`seçin ve Komut Dosyası Yolunu 'da ' olarak ayarlayın. Küme ayarlarınızı onaylamak için **Onayla'yı** seçin.
+2. İşinizin kümesini yapılandırmak için işinize gidin ve **Düzenle** ' yi seçin. Dağıtımınızda kullanmak istediğiniz Apache Spark sürümüne göre Databricks Runtime sürümünü ayarlayın. Ardından **Init betikleri > gelişmiş seçenekler**' i seçin ve Init betiği yolunu olarak ayarlayın `dbfs:/spark-dotnet/db-init.sh` . Küme ayarlarınızı onaylamak için **Onayla** ' yı seçin.
 
-3. İşinize gidin ve yeni yapılandırılan Spark kümenizde işinizi çalıştırmak için **Şimdi Çalıştır'ı** seçin. İş kümesinin oluşturulması birkaç dakika sürer. Oluşturulduktan sonra, işiniz sunulacaktır. Databricks çalışma alanınızın sol menüsünden **Kümeler'i** seçerek çıktıyı görüntüleyebilir, ardından **Sürücü Günlükleri'ni**seçebilirsiniz.
+3. İşinizi yeni yapılandırılmış Spark kümenizde çalıştırmak için işinize gidin ve **Şimdi Çalıştır** ' ı seçin. İş kümesinin oluşturulması birkaç dakika sürer. Oluşturulduktan sonra işiniz gönderilir. Databricks çalışma alanınızın sol menüsünde **kümeler** ' ı seçerek çıktıyı görüntüleyebilir, ardından **sürücü günlükleri**' ni seçebilirsiniz.
 
-## <a name="deploy-using-set-jar"></a>Set Jar'ı kullanarak dağıtma
+## <a name="deploy-using-set-jar"></a>Set jar kullanarak dağıtma
 
-Alternatif olarak, Apache Spark işleri için .NET'i Databricks'e göndermek için Databricks çalışma alanınızdaki [Set Jar'ı](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) kullanabilirsiniz. *Set Jar* varolan bir etkin kümeye iş gönderme sağlar.
+Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üzere Databricks çalışma alanınızda [set jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) öğesini kullanabilirsiniz. *Set jar* , mevcut bir etkin kümeye iş gönderilmesini sağlar.
 
 ### <a name="one-time-setup"></a>Tek seferlik kurulum
 
-1. Databricks kümenize gidin ve sol taraftaki menüden **İş'leri** seçin ve ardından **JAR'ı ayarlayın.**
+1. Databricks kümenize gidin ve sol taraftaki menüden **işler** ' i ve ardından **jar ayarla**' yı seçin.
 
-2. Yükleme uygun `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar`.
+2. Uygun olanını karşıya yükleyin `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` .
 
-3. Aşağıdaki parametreleri, aşağıdaki ler yerine yayınladığınız yürütülebilir `<your-app-name>`için doğru adı içerecek şekilde değiştirin:
+3. Aşağıdaki parametreleri, yerine yayımladığınız yürütülebilir dosya için doğru adı içerecek şekilde değiştirin `<your-app-name>` :
 
     ```
     Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
     Arguments /dbfs/apps/<your-app-name>.zip <your-app-name>
     ```
 
-4. Kümeyi, init komut dosyasını zaten ayarlamış olduğunuz varolan bir kümeye işaret etmek üzere yapılandırın.
+4. Kümeyi, zaten init betiğini ayarlamış olduğunuz mevcut bir kümeye işaret etmek üzere yapılandırın.
 
 ### <a name="publish-and-run-your-app"></a>Uygulamanızı yayımlayın ve çalıştırın
 
-1. Uygulamanızı yayımladığınızdan ve uygulama kodunuzu kullanmadığınızdan `SparkSession.Stop()`emin olun.
+1. Uygulamanızı yayımladığınızdan ve uygulama kodunuzun kullanmadığından emin olun `SparkSession.Stop()` .
 
-2. Uygulamanızı Databricks kümenize yüklemek için [Databricks CLI'yi](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) kullanın. Örneğin, yayınlanan uygulamanızı kümenize yüklemek için aşağıdaki komutu kullanın:
+2. Uygulamanızı Databricks kümenize yüklemek için [DATABRICKS CLI](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) kullanın. Örneğin, yayımlanmış uygulamanızı kümenize yüklemek için aşağıdaki komutu kullanın:
 
     ```console
     cd <path-to-your-app-publish-directory>
     databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
     ```
 
-3. Uygulamanızda kullanıcı tanımlı işlevleriniz varsa, kullanıcı tanımlı işlevleri ve bağımlılıkları içeren DL'ler gibi uygulama derlemelerinin her *Microsoft.Spark.Worker'ın*çalışma dizinine yerleştirilmesi gerekir.
+3. Uygulamanızda Kullanıcı tanımlı işlevleriniz varsa, bağımlılıklarıyla birlikte Kullanıcı tanımlı işlevler içeren dll 'Ler gibi uygulama derlemelerinin her bir *Microsoft. spark. Worker*çalışma dizinine yerleştirilmesi gerekir.
 
     Uygulama derlemelerinizi Databricks kümenize yükleyin:
 
@@ -71,17 +71,17 @@ Alternatif olarak, Apache Spark işleri için .NET'i Databricks'e göndermek iç
     databricks fs cp <assembly>.dll dbfs:/apps/dependencies
     ```
 
-    Uygulama bağımlılıkları yolunuza işaret etmek için [db-init.sh'daki](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) uygulama bağımlılıkları bölümünü açıklamave değiştirin. Ardından, güncelleştirilmiş *db-init.sh* kümenize yükleyin:
+    [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) ' deki uygulama bağımlılıkları bölümünü açıklama olarak değiştirin ve uygulama bağımlılıkları yolunu işaret edin. Ardından, güncelleştirilmiş *DB-init.sh* , kümenize yükleyin:
 
     ```console
     cd <path-to-db-init-and-install-worker>
     databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
     ```
 
-4. İşinizi çalıştırmak için **Şimdi Çalıştır'> Iş > [İş adı] > Databricks kümesine** gidin.
+4. İşi çalıştırmak için **Şimdi çalıştırın > Databricks kümesi > işler > [iş-adı] Şimdi Çalıştır** .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Apache Spark için .NET ile başlayın](../tutorials/get-started.md)
-* [Apache Spark uygulaması için Bir .NET'i Databricks'e dağıtma](../tutorials/databricks-deployment.md)
-* [Azure Databricks Dokümantasyon](https://docs.microsoft.com/azure/azure-databricks/)
+* [Apache Spark için .NET ile çalışmaya başlama](../tutorials/get-started.md)
+* [Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı](../tutorials/databricks-deployment.md)
+* [Azure Databricks Belgeleri](https://docs.microsoft.com/azure/azure-databricks/)

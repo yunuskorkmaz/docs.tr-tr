@@ -1,5 +1,6 @@
 ---
 title: C#-.NET kullanarak JSON serisini serileştirme ve serisini kaldırma
+description: Bu genel bakışta, System.Text.Json .net 'TEKI JSON 'a serileştirmek ve seri durumdan çıkarmak için ad alanı işlevselliği açıklanmaktadır.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159552"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380131"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET 'te JSON serileştirme ve seri durumundan çıkarma (sıralama ve kaldırma)-genel bakış
 
-Ad `System.Text.Json` alanı, JAVASCRIPT nesne GÖSTERIMI (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
+`System.Text.Json`Ad alanı, JavaScript nesne gösterimi (JSON) öğesinden serileştirmek ve seri durumdan çıkarmak için işlevsellik sağlar.
 
 Kitaplık tasarımı, kapsamlı bir özellik kümesi üzerinden yüksek performans ve düşük bellek ayırmayı vurgular. Yerleşik UTF-8 desteği, UTF-8 olarak kodlanmış JSON metnini okuma ve yazma sürecini en iyi duruma getirir. Bu, Web ve disk üzerindeki dosyalardaki veriler için en yaygın kodlama olur.
 

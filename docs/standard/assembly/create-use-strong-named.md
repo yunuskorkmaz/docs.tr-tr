@@ -1,5 +1,6 @@
 ---
 title: Tanımlayıcı adlı derlemeler oluşturma ve kullanma
+description: Bu makalede, .NET 'teki bir derlemeyi güçlü bir adla imzalama ve daha sonra bu ada göre başvuru işlemi gösterilmektedir.
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,70 +13,70 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75738688"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378528"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tanımlayıcı adlı derlemeler oluşturma ve kullanma
 
-Güçlü bir ad, derlemenin kimliğinden oluşur— basit metin adı, sürüm numarası ve kültür bilgileri (sağlanmışsa)—ortak anahtar ve dijital imza. İlgili özel anahtar kullanılarak bir derleme dosyasından oluşturulur. (Derleme dosyası, derlemeyi oluşturan tüm dosyaların adlarını ve işlerini içeren derleme bildirimini içerir.)
+Tanımlayıcı ad, derleme kimliğinden (basit metin adı, sürüm numarası ve kültür bilgileri (sağlanmışsa) ve bir ortak anahtar ve dijital imza ile oluşur. Karşılık gelen özel anahtar kullanılarak derleme dosyasından oluşturulur. (Derleme dosyası, derlemeyi oluşturan tüm dosyaların adlarını ve karmalarını içeren derleme bildirimini içerir.)
 
 > [!WARNING]
-> Güvenlik için güçlü isimlere güvenmeyin. Yalnızca benzersiz bir kimlik sağlarlar.
+> Güvenlik için tanımlayıcı adlara güvenmeyin. Yalnızca benzersiz bir kimlik sağlarlar.
 
-Güçlü adlandırılmış derleme yalnızca diğer güçlü adlandırılmış derlemelerden türleri kullanabilir. Aksi takdirde, güçlü adlı derlemenin bütünlüğü tehlikeye girer.
+Tanımlayıcı adlı bir derleme, yalnızca diğer tanımlayıcı adlı derlemelerden türleri kullanabilir. Aksi takdirde, tanımlayıcı adlı derlemenin bütünlüğü tehlikeye girebilir.
 
 > [!NOTE]
-> .NET Core güçlü adlandırılmış derlemeleri desteklese ve .NET Core kitaplığındaki tüm derlemeler imzalanmış olsa da, üçüncü taraf derlemelerin çoğunluğugüçlü adlara ihtiyaç duymaz. Daha fazla bilgi için GitHub'da [Güçlü Ad İmzalama'ya](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) bakın.
+> .NET Core, tanımlayıcı adlı derlemeleri desteklese de, .NET Core kitaplığındaki tüm derlemeler imzalansa da, üçüncü taraf derlemelerin çoğunluğunun tanımlayıcı adlara ihtiyacı yoktur. Daha fazla bilgi için bkz. GitHub 'da [tanımlayıcı ad imzalama](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) .
 
-## <a name="strong-name-scenario"></a>Güçlü ad senaryosu
+## <a name="strong-name-scenario"></a>Tanımlayıcı ad senaryosu
 
-Aşağıdaki senaryo, güçlü bir ada sahip bir derlemeyi imzalama ve daha sonra bu ada başvurma işlemini özetleyin.
+Aşağıdaki senaryo, bir derlemeyi güçlü bir adla imzalama ve daha sonra bu ada göre başvuruda bulunma sürecini özetler.
 
-1. Derleme A, aşağıdaki yöntemlerden biri kullanılarak güçlü bir adla oluşturulur:
+1. Derleme A, aşağıdaki yöntemlerden biri kullanılarak bir tanımlayıcı ad ile oluşturulur:
 
     - Visual Studio gibi güçlü adlar oluşturmayı destekleyen bir geliştirme ortamı kullanma.
 
-    - [Güçlü Ad aracını (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) kullanarak bir şifreleme anahtar çifti oluşturma ve bu anahtar çiftini bir komut satırı derleyicisi veya [Derleme Bağlayıcısı (Al.exe)](../../framework/tools/al-exe-assembly-linker.md)kullanarak derlemeye atama. Windows SDK hem Sn.exe hem de Al.exe sağlar.
+    - Bir komut satırı derleyicisi veya [derleme Bağlayıcısı (al. exe)](../../framework/tools/al-exe-assembly-linker.md)kullanarak, [tanımlayıcı ad Aracı (sn. exe)](../../framework/tools/sn-exe-strong-name-tool.md) kullanarak bir şifreleme anahtarı çifti oluşturma ve bu anahtar çiftini derlemeye atama. Windows SDK hem sn. exe hem de al. exe sağlar.
 
-2. Geliştirme ortamı veya araç, derlemenin bildirimini içeren dosyanın karmasını geliştiricinin özel anahtarıyla işaretler. Bu dijital imza, Assembly A'nın bildirimini içeren taşınabilir yürütülebilir (PE) dosyasında depolanır.
+2. Geliştirme ortamı veya aracı, geliştiricinin özel anahtarıyla derlemenin bildirimini içeren dosyanın karmasını imzalar. Bu dijital imza, derleme A 'nın bildirimini içeren taşınabilir çalıştırılabilir (PE) dosyasında depolanır.
 
-3. B Meclisi A Meclisi'nin tüketicisidir. B Meclisi'nin manifestosunun başvuru bölümü, Meclis A'nın ortak anahtarını temsil eden bir belirteç içerir. Belirteç, tam ortak anahtarın bir bölümüdür ve anahtar dan çok yer kazanmak için kullanılır.
+3. Derleme B, A derlemesi tüketicisidir. Derleme B 'nin bildiriminin başvuru bölümü, derleme A 'nın ortak anahtarını temsil eden bir belirteç içerir. Belirteç, tam ortak anahtarın bir bölümüdür ve alan kazanmak için anahtarın kendisi yerine kullanılır.
 
-4. Ortak dil çalışma süresi, derleme genel derleme önbelleğine yerleştirildiğinde güçlü ad imzasını doğrular. Çalışma zamanında güçlü bir ada göre bağlandığında, ortak dil çalışma süresi, B Derlemesi'nin manifestosunda depolanan anahtarı, A Derlemesi için güçlü bir ad oluşturmak için kullanılan anahtarla karşılaştırır. .NET Framework güvenlik denetimleri geçerse ve bağlama başarılı olursa, B Derlemesi A'nın bitlerinin değiştirilmediğini ve bu bitlerin aslında A Derlemesi geliştiricilerinden geldiğinin bir garantisi vardır.
+4. Ortak dil çalışma zamanı, derleme genel derleme önbelleğine yerleştirildiğinde tanımlayıcı ad imzasını doğrular. Çalışma zamanında tanımlayıcı ada göre bağlamada ortak dil çalışma zamanı, derleme B 'nin bildiriminde depolanan anahtarı, derleme A için tanımlayıcı ad oluşturmak için kullanılan anahtarla karşılaştırır. .NET Framework güvenlik denetimi başarılı olursa ve bağlama başarılı olursa, derleme B, derleme A 'nın bitleri kurcalanmayan ve bu bitlerin aslında A derlemesi geliştiricilerinden geldiği garantisi vardır.
 
 > [!NOTE]
-> Bu senaryo güven sorunlarını ele almaz. Derlemeler, güçlü bir ada ek olarak tam Microsoft Authenticode imzaları taşıyabilir. Authenticode imzaları güven oluşturan bir sertifika içerir. Güçlü adların bu şekilde imzalanacak kod gerektirmediğini unutmayın. Güçlü adlar yalnızca benzersiz bir kimlik sağlar.
+> Bu senaryo güven sorunlarına yönelik değildir. Derlemeler, güçlü bir ada ek olarak tam Microsoft Authenticode imzalarını taşıyabilir. Authenticode imzaları, güven kuran bir sertifika içerir. Tanımlayıcı adların kodun bu şekilde imzalanmasını gerektirmediğini unutmayın. Tanımlayıcı adlar yalnızca benzersiz bir kimlik sağlar.
 
-## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Güvenilir derlemelerin imza doğrulamasını atlama
+## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Güvenilen derlemelerin imza doğrulamasını atla
 
-.NET Framework 3.5 Service Pack 1'den başlayarak, bir derleme `MyComputer` bölge için varsayılan uygulama etki alanı gibi tam güven uygulama etki alanına yüklendiğinde güçlü ad imzaları doğrulanmaz. Buna güçlü ad bypass özelliği denir. Tam güven ortamında, imzaları <xref:System.Security.Permissions.StrongNameIdentityPermission> ne olursa olsun imzalı, tam güven derlemeleri için her zaman başarılı talepler. Güçlü ad atlama özelliği, bu durumda tam güven derlemelerinin güçlü ad imza doğrulamasının gereksiz ek yükünü önleyerek derlemelerin daha hızlı yüklenmesini sağlar.
+.NET Framework 3,5 Service Pack 1 ' den itibaren, bir derleme bir tam güvenli uygulama etki alanına yüklendiğinde, bölgenin varsayılan uygulama etki alanı gibi tanımlayıcı ad imzaları doğrulanmaz `MyComputer` . Bu, tanımlayıcı ad atlama özelliği olarak adlandırılır. Tam güven ortamında, <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalarından bağımsız olarak imzalı, tam güvenle derlemeler için her zaman başarılı olur. Güçlü ad atlama özelliği, bu durumda derlemelerin daha hızlı yüklenmesine izin vermek için tam güven derlemelerinin tanımlayıcı ad imzası doğrulamasının gereksiz ek yükünü önler.
 
-Baypas özelliği, güçlü bir adla imzalanmış ve aşağıdaki özelliklere sahip tüm derlemeler için geçerlidir:
+Atlama özelliği, bir tanımlayıcı ad ile imzalanmış ve aşağıdaki özelliklere sahip olan her derleme için geçerlidir:
 
-- Kanıt olmadan <xref:System.Security.Policy.StrongName> tamamen güvenilirdir (örneğin, bölge kanıtları vardır). `MyComputer`
+- Kanıt olmadan tamamen güvenilir <xref:System.Security.Policy.StrongName> (örneğin, `MyComputer` bölge kanıtları vardır).
 
-- Tamamen güvenilir bir <xref:System.AppDomain>içine yüklendi .
+- Tam güvenilir bir şekilde yüklendi <xref:System.AppDomain> .
 
-- Bu özelliği altında <xref:System.AppDomainSetup.ApplicationBase%2A> bir konumdan <xref:System.AppDomain>yüklenir.
+- Özelliği altında bir konumdan yüklendi <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomain> .
 
-- Gecikme imzalı değil.
+- Gecikmeli imza değildir.
 
-Bu özellik tek tek uygulamalar veya bir bilgisayar için devre dışı alınabilir. [Bkz. Nasıl Yapılır: Güçlü ad atlama özelliğini devre dışı sayıl.](disable-strong-name-bypass-feature.md)
+Bu özellik ayrı uygulamalar veya bir bilgisayar için devre dışı bırakılabilir. Bkz. [nasıl yapılır: güçlü adı atlama özelliğini devre dışı bırakma](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl yapilir: Genel-özel anahtar çifti oluşturma](create-public-private-key-pair.md)|Derlemeyi imzalamak için şifreleme anahtar çiftinin nasıl oluşturulduğunu açıklar.|
-|[Nasıl yapilir: Güçlü bir ada sahip bir derlemeyi imzalama](sign-strong-name.md)|Güçlü adlandırılmış bir derlemenin nasıl oluşturulabildiğini açıklar.|
-|[Geliştirilmiş güçlü adlandırma](enhanced-strong-naming.md)|.NET Framework 4.5'teki güçlü adlara yapılan geliştirmeleri açıklar.|
-|[Nasıl yapılsın: Güçlü bir derlemeye başvuru](reference-strong-named.md)|Derleme zamanında veya çalışma zamanında, güçlü adlandırılmış bir derlemedeki türlere veya kaynaklara nasıl başvurulmayı açıklar.|
-|[Nasıl yapılır: Güçlü ad atlama özelliğini devre dışı](disable-strong-name-bypass-feature.md)|Güçlü ad imzalarının doğrulanmasını atlayan özelliğin nasıl devre dışı kalınır olduğunu açıklar. Bu özellik tüm veya belirli uygulamalar için devre dışı alınabilir.|
-|[Derleme oluşturma](create.md)|Tek dosyalı ve çok dosyalı derlemelere genel bakış sağlar.|
-|[Visual Studio'da montaj imzalamayı nasıl geciktirir?](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Derleme oluşturulduktan sonra güçlü bir ada sahip bir derlemenin nasıl imzalandığını açıklar.|
-|[Sn.exe (Güçlü Ad aracı)](../../framework/tools/sn-exe-strong-name-tool.md)|.NET Framework'de yer alan ve güçlü adlara sahip derlemeler oluşturmaya yardımcı olan aracı açıklar. Bu araç, temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.|
-|[Al.exe (Montaj bağlayıcısı)](../../framework/tools/al-exe-assembly-linker.md)|.NET Framework'de yer alan ve modüllerden veya kaynak dosyalarından derleme bildirimi olan bir dosya oluşturan aracı açıklar.|
+|[Nasıl yapılır: genel-özel anahtar çifti oluşturma](create-public-private-key-pair.md)|Bir derlemeyi imzalamak için bir şifreleme anahtarı çiftinin nasıl oluşturulacağını açıklar.|
+|[Nasıl yapılır: bir derlemeyi güçlü bir adla Imzalama](sign-strong-name.md)|Tanımlayıcı adlı derlemenin nasıl oluşturulacağını açıklar.|
+|[Tanımlayıcı adlandırmayı iyileştirme](enhanced-strong-naming.md)|4,5 .NET Framework güçlü adlarla ilgili geliştirmeleri açıklar.|
+|[Nasıl yapılır: tanımlayıcı adlı bir derlemeye başvurma](reference-strong-named.md)|Derleme zamanında veya çalışma zamanında tanımlayıcı adlı bir derlemede türlerin veya kaynakların nasıl başvurululacağını açıklar.|
+|[Nasıl yapılır: tanımlayıcı adı atlama özelliğini devre dışı bırakma](disable-strong-name-bypass-feature.md)|Tanımlayıcı ad imzalarının doğrulanmasını atlayan özelliğin nasıl devre dışı bırakılacağını açıklar. Bu özellik tüm veya belirli uygulamalar için devre dışı bırakılabilir.|
+|[Derleme oluşturma](create.md)|Tek dosyalı ve çoklu dosya Derlemeleriyle genel bir bakış sağlar.|
+|[Visual Studio 'da bir derlemeyi imzalamayı geciktirme](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Derleme oluşturulduktan sonra bir derlemeyi güçlü bir adla nasıl imzalayabileceğinizi açıklar.|
+|[Sn. exe (tanımlayıcı ad aracı)](../../framework/tools/sn-exe-strong-name-tool.md)|Güçlü adlara sahip derlemeler oluşturulmasına yardımcı olan .NET Framework dahil olan aracı açıklar. Bu araç, temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.|
+|[Al.exe (Derleme bağlayıcı)](../../framework/tools/al-exe-assembly-linker.md)|Modüller veya kaynak dosyalarından derleme bildirimine sahip bir dosya üreten .NET Framework dahil olan aracı açıklar.|
