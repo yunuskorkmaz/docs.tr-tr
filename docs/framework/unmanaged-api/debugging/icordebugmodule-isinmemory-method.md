@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-ms.openlocfilehash: 1384acff4ea3d1aa820b065cd2c56f649f0cbdbb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5fa55a84ed8907a5072f6099c3bf02cd6d78683
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127920"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213138"
 ---
-# <a name="icordebugmoduleisinmemory-method"></a><span data-ttu-id="57264-102">ICorDebugModule::IsInMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="57264-102">ICorDebugModule::IsInMemory Method</span></span>
-<span data-ttu-id="57264-103">Bu modülün yalnızca bellekte mevcut olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="57264-103">Gets a value that indicates whether this module exists only in memory.</span></span>  
+# <a name="icordebugmoduleisinmemory-method"></a><span data-ttu-id="639c3-102">ICorDebugModule::IsInMemory Yöntemi</span><span class="sxs-lookup"><span data-stu-id="639c3-102">ICorDebugModule::IsInMemory Method</span></span>
+<span data-ttu-id="639c3-103">Bu modülün yalnızca bellekte mevcut olup olmadığını gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="639c3-103">Gets a value that indicates whether this module exists only in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57264-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="57264-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="639c3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="639c3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT IsInMemory(  
@@ -33,20 +33,20 @@ HRESULT IsInMemory(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57264-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="57264-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="639c3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="639c3-105">Parameters</span></span>  
  `pInMemory`  
- <span data-ttu-id="57264-106">[out] Bu modül yalnızca bellekte mevcutsa `true`; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="57264-106">[out] `true` if this module exists only in memory; otherwise, `false`.</span></span>  
+ <span data-ttu-id="639c3-106">[out] `true` Bu modül yalnızca bellekte mevcutsa; Aksi takdirde, `false` .</span><span class="sxs-lookup"><span data-stu-id="639c3-106">[out] `true` if this module exists only in memory; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="57264-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="57264-107">Remarks</span></span>  
- <span data-ttu-id="57264-108">Ortak dil çalışma zamanı (CLR), modüllerin ham akışlarının yüklenmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="57264-108">The common language runtime (CLR) supports the loading of modules from raw streams of bytes.</span></span> <span data-ttu-id="57264-109">Bu tür modüller *bellek içi modüller* olarak adlandırılır ve diskte bulunmamaktadır.</span><span class="sxs-lookup"><span data-stu-id="57264-109">Such modules are called *in-memory modules* and do not exist on disk.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="639c3-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="639c3-107">Remarks</span></span>  
+ <span data-ttu-id="639c3-108">Ortak dil çalışma zamanı (CLR), modüllerin ham akışlarının yüklenmesini destekler.</span><span class="sxs-lookup"><span data-stu-id="639c3-108">The common language runtime (CLR) supports the loading of modules from raw streams of bytes.</span></span> <span data-ttu-id="639c3-109">Bu tür modüller *bellek içi modüller* olarak adlandırılır ve diskte bulunmamaktadır.</span><span class="sxs-lookup"><span data-stu-id="639c3-109">Such modules are called *in-memory modules* and do not exist on disk.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57264-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="57264-110">Requirements</span></span>  
- <span data-ttu-id="57264-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57264-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="639c3-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="639c3-110">Requirements</span></span>  
+ <span data-ttu-id="639c3-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="639c3-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57264-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="57264-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="639c3-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="639c3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="57264-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="57264-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="639c3-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="639c3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57264-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57264-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="639c3-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="639c3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57264-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="57264-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="639c3-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="639c3-115">See also</span></span>

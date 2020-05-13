@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 79a6c70399d5059d6959ac6127f22807138c00fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137754"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213120"
 ---
-# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="55678-102">ICorDebugFunctionBreakpoint::GetFunction Yöntemi</span><span class="sxs-lookup"><span data-stu-id="55678-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
-<span data-ttu-id="55678-103">Kesme noktasının ayarlandığı işleve başvuran bir ICorDebugFunction için bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="55678-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
+# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="5f90e-102">ICorDebugFunctionBreakpoint::GetFunction Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5f90e-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
+<span data-ttu-id="5f90e-103">Kesme noktasının ayarlandığı işleve başvuran bir ICorDebugFunction için bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="5f90e-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55678-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="55678-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f90e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5f90e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunction (  
@@ -33,15 +33,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="55678-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="55678-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f90e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5f90e-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="55678-106">dışı Kesme noktasının ayarlandığı işlevin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="55678-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="5f90e-106">dışı Kesme noktasının ayarlandığı işlevin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5f90e-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55678-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="55678-107">Requirements</span></span>  
- <span data-ttu-id="55678-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55678-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f90e-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5f90e-107">Requirements</span></span>  
+ <span data-ttu-id="5f90e-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f90e-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55678-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="55678-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5f90e-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="5f90e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="55678-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="55678-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f90e-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="5f90e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55678-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55678-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="5f90e-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f90e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

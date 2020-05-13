@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-ms.openlocfilehash: e7821022e6966dbdea90d57b6899f09b2ed1964e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6e214131aeb2d6d17ea4b0a730b5fc77428a7ca8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090523"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213692"
 ---
-# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="08e65-102">ICorDebugFrame::GetFunctionToken Metodu</span><span class="sxs-lookup"><span data-stu-id="08e65-102">ICorDebugFrame::GetFunctionToken Method</span></span>
-<span data-ttu-id="08e65-103">Bu yığın çerçevesiyle ilişkili kodu içeren işleve ait meta veri belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="08e65-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetfunctiontoken-method"></a><span data-ttu-id="08f25-102">ICorDebugFrame::GetFunctionToken Metodu</span><span class="sxs-lookup"><span data-stu-id="08f25-102">ICorDebugFrame::GetFunctionToken Method</span></span>
+<span data-ttu-id="08f25-103">Bu yığın çerçevesiyle ilişkili kodu içeren işleve ait meta veri belirtecini alır.</span><span class="sxs-lookup"><span data-stu-id="08f25-103">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08e65-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="08e65-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08f25-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="08f25-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionToken (  
@@ -33,15 +33,15 @@ HRESULT GetFunctionToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="08e65-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="08e65-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08f25-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="08f25-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="08e65-106">dışı İşlevin meta verilerine başvuran `mdMethodDef` belirtece yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="08e65-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
+ <span data-ttu-id="08f25-106">dışı `mdMethodDef`İşlevin meta verilerine başvuran bir belirteç işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="08f25-106">[out] A pointer to an `mdMethodDef` token that references the metadata for the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="08e65-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="08e65-107">Requirements</span></span>  
- <span data-ttu-id="08e65-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08e65-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08f25-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="08f25-107">Requirements</span></span>  
+ <span data-ttu-id="08f25-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08f25-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08e65-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="08e65-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="08f25-109">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="08f25-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="08e65-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="08e65-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="08f25-110">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="08f25-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="08e65-111">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08e65-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="08f25-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08f25-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

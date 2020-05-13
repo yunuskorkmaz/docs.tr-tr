@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-ms.openlocfilehash: 788ce2d47769caa72518e0357a0affdff5862699
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91f0a75f127afcff89c2b92bf3ed67466b205081
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137278"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213055"
 ---
-# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="68cb1-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Metodu</span><span class="sxs-lookup"><span data-stu-id="68cb1-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
-<span data-ttu-id="68cb1-103">Bir bağımsız değişkenin veya yerel değişkenin değerini alır, bu yerel çerçeve için sırasıyla alt sözcük ve yüksek sözcük belirtilen yazmaç ve bellek konumunda depolanır.</span><span class="sxs-lookup"><span data-stu-id="68cb1-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="a36f7-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Metodu</span><span class="sxs-lookup"><span data-stu-id="a36f7-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
+<span data-ttu-id="a36f7-103">Bir bağımsız değişkenin veya yerel değişkenin değerini alır, bu yerel çerçeve için sırasıyla alt sözcük ve yüksek sözcük belirtilen yazmaç ve bellek konumunda depolanır.</span><span class="sxs-lookup"><span data-stu-id="a36f7-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68cb1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="68cb1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a36f7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a36f7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocalMemoryRegisterValue (  
@@ -37,29 +37,29 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68cb1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="68cb1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a36f7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a36f7-105">Parameters</span></span>  
  `highWordAddress`  
- <span data-ttu-id="68cb1-106">'ndaki Değerin yüksek sözcüğünü içeren bellek konumunu belirten bir `CORDB_ADDRESS` değeri.</span><span class="sxs-lookup"><span data-stu-id="68cb1-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
+ <span data-ttu-id="a36f7-106">'ndaki `CORDB_ADDRESS`Değerin yüksek sözcüğünü içeren bellek konumunu belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="a36f7-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
   
  `lowWordRegister`  
- <span data-ttu-id="68cb1-107">'ndaki Değerin düşük sözcüğünü içeren kaydı belirten "CorDebugRegister" numaralandırmasının değeri.</span><span class="sxs-lookup"><span data-stu-id="68cb1-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="a36f7-107">'ndaki Değerin düşük sözcüğünü içeren kaydı belirten "CorDebugRegister" numaralandırmasının değeri.</span><span class="sxs-lookup"><span data-stu-id="a36f7-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="68cb1-108">'ndaki `pvSigBlob` parametresi tarafından başvurulan ikili meta veri imzasının boyutunu belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="68cb1-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="a36f7-108">'ndaki Parametresi tarafından başvurulan ikili meta veri imzasının boyutunu belirten bir tamsayı `pvSigBlob` .</span><span class="sxs-lookup"><span data-stu-id="a36f7-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="68cb1-109">'ndaki Değerin türünün ikili meta veri imzasına işaret eden bir `PCCOR_SIGNATURE` değeri.</span><span class="sxs-lookup"><span data-stu-id="68cb1-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="a36f7-109">'ndaki `PCCOR_SIGNATURE`Değerin türünün ikili meta veri imzasına işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="a36f7-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="68cb1-110">dışı Belirtilen yazmaç ve bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="68cb1-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
+ <span data-ttu-id="a36f7-110">dışı Belirtilen yazmaç ve bellek konumunda depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a36f7-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68cb1-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="68cb1-111">Requirements</span></span>  
- <span data-ttu-id="68cb1-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68cb1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a36f7-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a36f7-111">Requirements</span></span>  
+ <span data-ttu-id="a36f7-112">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a36f7-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68cb1-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="68cb1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a36f7-113">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="a36f7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="68cb1-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="68cb1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a36f7-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="a36f7-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="68cb1-115">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68cb1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a36f7-115">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a36f7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68cb1-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="68cb1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a36f7-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a36f7-116">See also</span></span>
