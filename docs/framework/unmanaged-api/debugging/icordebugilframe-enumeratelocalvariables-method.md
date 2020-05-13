@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad1a91e42f582ce96906da5cbf00ca89acb18499
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178838"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210303"
 ---
-# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="d2104-102">ICorDebugILFrame::EnumerateLocalVariables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d2104-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
-<span data-ttu-id="d2104-103">Bu çerçevedeki yerel değişkenler için bir sayısallaştırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="d2104-103">Gets an enumerator for the local variables in this frame.</span></span>  
+# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="11b30-102">ICorDebugILFrame::EnumerateLocalVariables Yöntemi</span><span class="sxs-lookup"><span data-stu-id="11b30-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
+<span data-ttu-id="11b30-103">Bu çerçevedeki yerel değişkenler için bir Numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="11b30-103">Gets an enumerator for the local variables in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2104-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d2104-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11b30-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="11b30-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateLocalVariables(
@@ -33,18 +33,18 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d2104-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d2104-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11b30-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="11b30-105">Parameters</span></span>  
  `ppValueEnum`  
- <span data-ttu-id="d2104-106">[çıkış] Bu çerçevedeki yerel değişkenlerin sayıcısı olan bir ICorDebugValueEnum nesnesinin adresine işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d2104-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
+ <span data-ttu-id="11b30-106">dışı Bu çerçevedeki yerel değişkenlerin numaralandırıcısı olan ICorDebugValueEnum nesnesinin adresine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="11b30-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2104-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d2104-107">Remarks</span></span>  
- <span data-ttu-id="d2104-108">`EnumerateLocalVariables`bu ICorDebugILFrame nesnesi tarafından temsil edilen çağrı çerçevesinde bulunan yerel değişkenleri listeleyen bir enumerator alır.</span><span class="sxs-lookup"><span data-stu-id="d2104-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="d2104-109">Bazıları etkin olmadığından, liste çalışan işlevdeki tüm yerel değişkenleri içermeyebilir.</span><span class="sxs-lookup"><span data-stu-id="d2104-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="11b30-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="11b30-107">Remarks</span></span>  
+ <span data-ttu-id="11b30-108">`EnumerateLocalVariables`Bu ICorDebugILFrame nesnesi tarafından temsil edilen çağrı çerçevesinde kullanılabilen yerel değişkenleri listeleyerek bir Numaralandırıcı alır.</span><span class="sxs-lookup"><span data-stu-id="11b30-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="11b30-109">Liste, çalışan işlevdeki tüm yerel değişkenleri içermeyebilir, çünkü bazıları etkin olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="11b30-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2104-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d2104-110">Requirements</span></span>  
- <span data-ttu-id="d2104-111">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2104-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11b30-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="11b30-110">Requirements</span></span>  
+ <span data-ttu-id="11b30-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11b30-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2104-112">**Üstbilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2104-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="11b30-112">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="11b30-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d2104-113">**Kütüphane:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2104-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11b30-113">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="11b30-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2104-114">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2104-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="11b30-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11b30-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

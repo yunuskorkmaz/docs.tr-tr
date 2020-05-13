@@ -1,31 +1,31 @@
 ---
 title: Microsoft. NET. SDK için MSBuild özellikleri
-description: .NET Core SDK anlayan MSBuild özelliklerine yönelik başvuru.
+description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795579"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206105"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a><span data-ttu-id="ae72f-103">.NET Core SDK projeleri için MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-103">MSBuild properties for .NET Core SDK projects</span></span>
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a><span data-ttu-id="c5e7e-103">.NET Core SDK projeleri için MSBuild başvurusu</span><span class="sxs-lookup"><span data-stu-id="c5e7e-103">MSBuild reference for .NET Core SDK projects</span></span>
 
-<span data-ttu-id="ae72f-104">Bu sayfa, .NET Core projelerini yapılandırmaya yönelik MSBuild özelliklerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-104">This page describes MSBuild properties for configuring .NET Core projects.</span></span> <span data-ttu-id="ae72f-105">Özelliğin alt öğeleri olarak her bir özellik için *meta verileri* belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-105">You can specify *metadata* for each property as child elements of the property.</span></span>
+<span data-ttu-id="c5e7e-104">Bu sayfa, .NET Core projelerini yapılandırmak için kullanabileceğiniz MSBuild özelliklerine ve öğelerine yönelik bir başvurudur.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-104">This page is a reference for the MSBuild properties and items that you can use to configure .NET Core projects.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae72f-106">Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için tüm yararlı MSBuild özelliklerini listelemez.</span><span class="sxs-lookup"><span data-stu-id="ae72f-106">This page is a work in progress and does not list all of the useful MSBuild properties for the .NET Core SDK.</span></span> <span data-ttu-id="ae72f-107">Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).</span><span class="sxs-lookup"><span data-stu-id="ae72f-107">For a list of common MSBuild properties, see [Common MSBuild properties](/visualstudio/msbuild/common-msbuild-project-properties).</span></span>
+> <span data-ttu-id="c5e7e-105">Bu sayfa devam eden bir çalışmadır ve .NET Core SDK için tüm yararlı MSBuild özelliklerini listelemez.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-105">This page is a work in progress and does not list all of the useful MSBuild properties for the .NET Core SDK.</span></span> <span data-ttu-id="c5e7e-106">Ortak MSBuild özelliklerinin bir listesi için bkz. [Ortak MSBuild özellikleri](/visualstudio/msbuild/common-msbuild-project-properties).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-106">For a list of common MSBuild properties, see [Common MSBuild properties](/visualstudio/msbuild/common-msbuild-project-properties).</span></span>
 
-## <a name="framework-properties"></a><span data-ttu-id="ae72f-108">Çerçeve özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-108">Framework properties</span></span>
+## <a name="framework-properties"></a><span data-ttu-id="c5e7e-107">Çerçeve özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-107">Framework properties</span></span>
 
-- [<span data-ttu-id="ae72f-109">TargetFramework</span><span class="sxs-lookup"><span data-stu-id="ae72f-109">TargetFramework</span></span>](#targetframework)
-- [<span data-ttu-id="ae72f-110">Targetçerçeveler</span><span class="sxs-lookup"><span data-stu-id="ae72f-110">TargetFrameworks</span></span>](#targetframeworks)
-- [<span data-ttu-id="ae72f-111">Netstandardımplicitpackageversion</span><span class="sxs-lookup"><span data-stu-id="ae72f-111">NetStandardImplicitPackageVersion</span></span>](#netstandardimplicitpackageversion)
+- [<span data-ttu-id="c5e7e-108">TargetFramework</span><span class="sxs-lookup"><span data-stu-id="c5e7e-108">TargetFramework</span></span>](#targetframework)
+- [<span data-ttu-id="c5e7e-109">Targetçerçeveler</span><span class="sxs-lookup"><span data-stu-id="c5e7e-109">TargetFrameworks</span></span>](#targetframeworks)
+- [<span data-ttu-id="c5e7e-110">Netstandardımplicitpackageversion</span><span class="sxs-lookup"><span data-stu-id="c5e7e-110">NetStandardImplicitPackageVersion</span></span>](#netstandardimplicitpackageversion)
 
-### <a name="targetframework"></a><span data-ttu-id="ae72f-112">TargetFramework</span><span class="sxs-lookup"><span data-stu-id="ae72f-112">TargetFramework</span></span>
+### <a name="targetframework"></a><span data-ttu-id="c5e7e-111">TargetFramework</span><span class="sxs-lookup"><span data-stu-id="c5e7e-111">TargetFramework</span></span>
 
-<span data-ttu-id="ae72f-113">`TargetFramework` Özelliği, bir [metapackage](../packages.md#metapackages)örtük olarak başvurduğu uygulamanın hedef Framework sürümünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-113">The `TargetFramework` property specifies the target framework version for the app, which implicitly references a [metapackage](../packages.md#metapackages).</span></span> <span data-ttu-id="ae72f-114">Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="ae72f-114">For a list of valid target framework monikers, see [Target frameworks in SDK-style projects](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
+<span data-ttu-id="c5e7e-112">`TargetFramework`Özelliği, bir [metapackage](../packages.md#metapackages)örtük olarak başvurduğu uygulamanın hedef Framework sürümünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-112">The `TargetFramework` property specifies the target framework version for the app, which implicitly references a [metapackage](../packages.md#metapackages).</span></span> <span data-ttu-id="c5e7e-113">Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-113">For a list of valid target framework monikers, see [Target frameworks in SDK-style projects](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -33,14 +33,14 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="ae72f-115">Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="ae72f-115">For more information, see [Target frameworks in SDK-style projects](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="c5e7e-114">Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-114">For more information, see [Target frameworks in SDK-style projects](../../standard/frameworks.md).</span></span>
 
-### <a name="targetframeworks"></a><span data-ttu-id="ae72f-116">Targetçerçeveler</span><span class="sxs-lookup"><span data-stu-id="ae72f-116">TargetFrameworks</span></span>
+### <a name="targetframeworks"></a><span data-ttu-id="c5e7e-115">Targetçerçeveler</span><span class="sxs-lookup"><span data-stu-id="c5e7e-115">TargetFrameworks</span></span>
 
-<span data-ttu-id="ae72f-117">Uygulamanızın birden `TargetFrameworks` çok platformu hedeflemesini istediğinizde özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-117">Use the `TargetFrameworks` property when you want your app to target multiple platforms.</span></span> <span data-ttu-id="ae72f-118">Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="ae72f-118">For a list of valid target framework monikers, see [Target frameworks in SDK-style projects](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
+<span data-ttu-id="c5e7e-116">`TargetFrameworks`Uygulamanızın birden çok platformu hedeflemesini istediğinizde özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-116">Use the `TargetFrameworks` property when you want your app to target multiple platforms.</span></span> <span data-ttu-id="c5e7e-117">Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-117">For a list of valid target framework monikers, see [Target frameworks in SDK-style projects](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae72f-119">`TargetFramework` (Tekil) belirtilmişse bu özellik yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-119">This property is ignored if `TargetFramework` (singular) is specified.</span></span>
+> <span data-ttu-id="c5e7e-118">`TargetFramework`(Tekil) belirtilmişse bu özellik yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-118">This property is ignored if `TargetFramework` (singular) is specified.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -48,14 +48,14 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="ae72f-120">Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="ae72f-120">For more information, see [Target frameworks in SDK-style projects](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="c5e7e-119">Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-119">For more information, see [Target frameworks in SDK-style projects](../../standard/frameworks.md).</span></span>
 
-### <a name="netstandardimplicitpackageversion"></a><span data-ttu-id="ae72f-121">Netstandardımplicitpackageversion</span><span class="sxs-lookup"><span data-stu-id="ae72f-121">NetStandardImplicitPackageVersion</span></span>
+### <a name="netstandardimplicitpackageversion"></a><span data-ttu-id="c5e7e-120">Netstandardımplicitpackageversion</span><span class="sxs-lookup"><span data-stu-id="c5e7e-120">NetStandardImplicitPackageVersion</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae72f-122">Bu özellik yalnızca kullanan `netstandard1.x`projeler için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-122">This property only applies to projects using `netstandard1.x`.</span></span> <span data-ttu-id="ae72f-123">Kullanan `netstandard2.x`projeler için uygulanmaz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-123">It doesn't apply to projects that use `netstandard2.x`.</span></span>
+> <span data-ttu-id="c5e7e-121">Bu özellik yalnızca kullanan projeler için geçerlidir `netstandard1.x` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-121">This property only applies to projects using `netstandard1.x`.</span></span> <span data-ttu-id="c5e7e-122">Kullanan projeler için uygulanmaz `netstandard2.x` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-122">It doesn't apply to projects that use `netstandard2.x`.</span></span>
 
-<span data-ttu-id="ae72f-124">`NetStandardImplicitPackageVersion` [Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-124">Use the `NetStandardImplicitPackageVersion` property when you want to specify a framework version that's lower than the [metapackage](../packages.md#metapackages) version.</span></span> <span data-ttu-id="ae72f-125">Aşağıdaki örnekteki proje dosyası hedefler `netstandard1.3` , ancak 1.6.0 sürümünü kullanır. `NETStandard.Library`</span><span class="sxs-lookup"><span data-stu-id="ae72f-125">The project file in the following example targets `netstandard1.3` but uses the 1.6.0 version of `NETStandard.Library`.</span></span>
+<span data-ttu-id="c5e7e-123">`NetStandardImplicitPackageVersion` [Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-123">Use the `NetStandardImplicitPackageVersion` property when you want to specify a framework version that's lower than the [metapackage](../packages.md#metapackages) version.</span></span> <span data-ttu-id="c5e7e-124">Aşağıdaki örnekteki proje dosyası hedefler, `netstandard1.3` ancak 1.6.0 sürümünü kullanır `NETStandard.Library` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-124">The project file in the following example targets `netstandard1.3` but uses the 1.6.0 version of `NETStandard.Library`.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -64,9 +64,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-## <a name="package-properties"></a><span data-ttu-id="ae72f-126">Paket özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-126">Package properties</span></span>
+## <a name="package-properties"></a><span data-ttu-id="c5e7e-125">Paket özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-125">Package properties</span></span>
 
-<span data-ttu-id="ae72f-127">Projenizden oluşturulan paketi betimleyen, `PackageId`, `PackageVersion`, `PackageIcon`ve `Title` `Description` gibi özellikleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-127">You can specify properties such as `PackageId`, `PackageVersion`, `PackageIcon`, `Title`, and `Description` to describe the package that gets created from your project.</span></span> <span data-ttu-id="ae72f-128">Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [Pack Target](/nuget/reference/msbuild-targets#pack-target).</span><span class="sxs-lookup"><span data-stu-id="ae72f-128">For information about these and other properties, see [pack target](/nuget/reference/msbuild-targets#pack-target).</span></span>
+<span data-ttu-id="c5e7e-126">`PackageId` `PackageVersion` `PackageIcon` `Title` `Description` Projenizden oluşturulan paketi betimleyen,,, ve gibi özellikleri belirtebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-126">You can specify properties such as `PackageId`, `PackageVersion`, `PackageIcon`, `Title`, and `Description` to describe the package that gets created from your project.</span></span> <span data-ttu-id="c5e7e-127">Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [Pack Target](/nuget/reference/msbuild-targets#pack-target).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-127">For information about these and other properties, see [pack target](/nuget/reference/msbuild-targets#pack-target).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -78,16 +78,16 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a><span data-ttu-id="ae72f-129">Özellikleri Yayımla</span><span class="sxs-lookup"><span data-stu-id="ae72f-129">Publish properties</span></span>
+## <a name="publish-properties-and-items"></a><span data-ttu-id="c5e7e-128">Özellikleri ve öğeleri Yayımla</span><span class="sxs-lookup"><span data-stu-id="c5e7e-128">Publish properties and items</span></span>
 
-- [<span data-ttu-id="ae72f-130">Runtimeıdentifier</span><span class="sxs-lookup"><span data-stu-id="ae72f-130">RuntimeIdentifier</span></span>](#runtimeidentifier)
-- [<span data-ttu-id="ae72f-131">Runtimetanımlayıcıtanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="ae72f-131">RuntimeIdentifiers</span></span>](#runtimeidentifiers)
-- [<span data-ttu-id="ae72f-132">TrimmerRootAssembly</span><span class="sxs-lookup"><span data-stu-id="ae72f-132">TrimmerRootAssembly</span></span>](#trimmerrootassembly)
-- [<span data-ttu-id="ae72f-133">UseAppHost</span><span class="sxs-lookup"><span data-stu-id="ae72f-133">UseAppHost</span></span>](#useapphost)
+- [<span data-ttu-id="c5e7e-129">Runtimeıdentifier</span><span class="sxs-lookup"><span data-stu-id="c5e7e-129">RuntimeIdentifier</span></span>](#runtimeidentifier)
+- [<span data-ttu-id="c5e7e-130">Runtimetanımlayıcıtanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="c5e7e-130">RuntimeIdentifiers</span></span>](#runtimeidentifiers)
+- [<span data-ttu-id="c5e7e-131">TrimmerRootAssembly</span><span class="sxs-lookup"><span data-stu-id="c5e7e-131">TrimmerRootAssembly</span></span>](#trimmerrootassembly)
+- [<span data-ttu-id="c5e7e-132">UseAppHost</span><span class="sxs-lookup"><span data-stu-id="c5e7e-132">UseAppHost</span></span>](#useapphost)
 
-### <a name="runtimeidentifier"></a><span data-ttu-id="ae72f-134">Runtimeıdentifier</span><span class="sxs-lookup"><span data-stu-id="ae72f-134">RuntimeIdentifier</span></span>
+### <a name="runtimeidentifier"></a><span data-ttu-id="c5e7e-133">Runtimeıdentifier</span><span class="sxs-lookup"><span data-stu-id="c5e7e-133">RuntimeIdentifier</span></span>
 
-<span data-ttu-id="ae72f-135">`RuntimeIdentifier` Özelliği, proje için tek bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-135">The `RuntimeIdentifier` property lets you specify a single [runtime identifier (RID)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="ae72f-136">RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.</span><span class="sxs-lookup"><span data-stu-id="ae72f-136">The RID enables publishing a self-contained deployment.</span></span>
+<span data-ttu-id="c5e7e-134">`RuntimeIdentifier`Özelliği, proje için tek bir [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-134">The `RuntimeIdentifier` property lets you specify a single [runtime identifier (RID)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="c5e7e-135">RID, kendi kendine içerilen bir dağıtımı yayımlamayı mümkün.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-135">The RID enables publishing a self-contained deployment.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -95,12 +95,12 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="runtimeidentifiers"></a><span data-ttu-id="ae72f-137">Runtimetanımlayıcıtanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="ae72f-137">RuntimeIdentifiers</span></span>
+### <a name="runtimeidentifiers"></a><span data-ttu-id="c5e7e-136">Runtimetanımlayıcıtanımlayıcıları</span><span class="sxs-lookup"><span data-stu-id="c5e7e-136">RuntimeIdentifiers</span></span>
 
-<span data-ttu-id="ae72f-138">`RuntimeIdentifiers` Özelliği, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-138">The `RuntimeIdentifiers` property lets you specify a semicolon-delimited list of [runtime identifiers (RIDs)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="ae72f-139">Birden çok çalışma zamanı için yayımlamanız gerekiyorsa bu özelliği kullanın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-139">Use this property if you need to publish for multiple runtimes.</span></span> <span data-ttu-id="ae72f-140">`RuntimeIdentifiers`, doğru varlıkların grafikte olduğundan emin olmak için geri yükleme zamanında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-140">`RuntimeIdentifiers` is used at restore time to ensure the right assets are in the graph.</span></span>
+<span data-ttu-id="c5e7e-137">`RuntimeIdentifiers`Özelliği, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-137">The `RuntimeIdentifiers` property lets you specify a semicolon-delimited list of [runtime identifiers (RIDs)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="c5e7e-138">Birden çok çalışma zamanı için yayımlamanız gerekiyorsa bu özelliği kullanın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-138">Use this property if you need to publish for multiple runtimes.</span></span> <span data-ttu-id="c5e7e-139">`RuntimeIdentifiers`, doğru varlıkların grafikte olduğundan emin olmak için geri yükleme zamanında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-139">`RuntimeIdentifiers` is used at restore time to ensure the right assets are in the graph.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="ae72f-141">`RuntimeIdentifier`(tekil) yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-141">`RuntimeIdentifier` (singular) can provide faster builds when only a single runtime is required.</span></span>
+> <span data-ttu-id="c5e7e-140">`RuntimeIdentifier`(tekil) yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-140">`RuntimeIdentifier` (singular) can provide faster builds when only a single runtime is required.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -108,11 +108,11 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="trimmerrootassembly"></a><span data-ttu-id="ae72f-142">TrimmerRootAssembly</span><span class="sxs-lookup"><span data-stu-id="ae72f-142">TrimmerRootAssembly</span></span>
+### <a name="trimmerrootassembly"></a><span data-ttu-id="c5e7e-141">TrimmerRootAssembly</span><span class="sxs-lookup"><span data-stu-id="c5e7e-141">TrimmerRootAssembly</span></span>
 
-<span data-ttu-id="ae72f-143">Öğe `TrimmerRootAssembly` , bir derlemeyi [*kırpmanıza*](../deploying/trim-self-contained.md)dışlamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-143">The `TrimmerRootAssembly` item lets you exclude an assembly from [*trimming*](../deploying/trim-self-contained.md).</span></span> <span data-ttu-id="ae72f-144">Kırpma, çalışma zamanının kullanılmayan parçalarını paketlenmiş bir uygulamadan kaldırma işlemidir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-144">Trimming is the process of removing unused parts of the runtime from a packaged application.</span></span> <span data-ttu-id="ae72f-145">Bazı durumlarda, kırpma gerekli başvuruları yanlış kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-145">In some cases, trimming might incorrectly remove required references.</span></span>
+<span data-ttu-id="c5e7e-142">`TrimmerRootAssembly`Öğe, bir derlemeyi [*kırpmanıza*](../deploying/trim-self-contained.md)dışlamanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-142">The `TrimmerRootAssembly` item lets you exclude an assembly from [*trimming*](../deploying/trim-self-contained.md).</span></span> <span data-ttu-id="c5e7e-143">Kırpma, çalışma zamanının kullanılmayan parçalarını paketlenmiş bir uygulamadan kaldırma işlemidir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-143">Trimming is the process of removing unused parts of the runtime from a packaged application.</span></span> <span data-ttu-id="c5e7e-144">Bazı durumlarda, kırpma gerekli başvuruları yanlış kaldırabilir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-144">In some cases, trimming might incorrectly remove required references.</span></span>
 
-<span data-ttu-id="ae72f-146">Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-146">The following XML excludes the `System.Security` assembly from trimming.</span></span>
+<span data-ttu-id="c5e7e-145">Aşağıdaki XML, `System.Security` derlemeyi kırpmaya dışlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-145">The following XML excludes the `System.Security` assembly from trimming.</span></span>
 
 ```xml
 <ItemGroup>
@@ -120,11 +120,11 @@ ms.locfileid: "82795579"
 </ItemGroup>
 ```
 
-### <a name="useapphost"></a><span data-ttu-id="ae72f-147">UseAppHost</span><span class="sxs-lookup"><span data-stu-id="ae72f-147">UseAppHost</span></span>
+### <a name="useapphost"></a><span data-ttu-id="c5e7e-146">UseAppHost</span><span class="sxs-lookup"><span data-stu-id="c5e7e-146">UseAppHost</span></span>
 
-<span data-ttu-id="ae72f-148">`UseAppHost` Özelliği, .NET Core SDK 2.1.400 sürümünde tanıtılmıştı.</span><span class="sxs-lookup"><span data-stu-id="ae72f-148">The `UseAppHost` property was introduced in the 2.1.400 version of the .NET Core SDK.</span></span> <span data-ttu-id="ae72f-149">Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler.</span><span class="sxs-lookup"><span data-stu-id="ae72f-149">It controls whether or not a native executable is created for a deployment.</span></span> <span data-ttu-id="ae72f-150">Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-150">A native executable is required for self-contained deployments.</span></span>
+<span data-ttu-id="c5e7e-147">`UseAppHost`Özelliği, .NET Core SDK 2.1.400 sürümünde tanıtılmıştı.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-147">The `UseAppHost` property was introduced in the 2.1.400 version of the .NET Core SDK.</span></span> <span data-ttu-id="c5e7e-148">Dağıtım için yerel bir yürütülebilir dosyanın oluşturulup oluşturulmayacağını denetler.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-148">It controls whether or not a native executable is created for a deployment.</span></span> <span data-ttu-id="c5e7e-149">Kendi kendine kapsanan dağıtımlar için yerel bir yürütülebilir dosya gereklidir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-149">A native executable is required for self-contained deployments.</span></span>
 
-<span data-ttu-id="ae72f-151">.NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="ae72f-151">In .NET Core 3.0 and later versions, a framework-dependent executable is created by default.</span></span> <span data-ttu-id="ae72f-152">Yürütülebilir dosyanın `UseAppHost` üretilmesini devre `false` dışı bırakmak için özelliğini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-152">Set the `UseAppHost` property to `false` to disable generation of the executable.</span></span>
+<span data-ttu-id="c5e7e-150">.NET Core 3,0 ve sonraki sürümlerinde, çerçeveye bağlı bir yürütülebilir dosya varsayılan olarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-150">In .NET Core 3.0 and later versions, a framework-dependent executable is created by default.</span></span> <span data-ttu-id="c5e7e-151">`UseAppHost` `false` Yürütülebilir dosyanın üretilmesini devre dışı bırakmak için özelliğini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-151">Set the `UseAppHost` property to `false` to disable generation of the executable.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -132,15 +132,31 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="ae72f-153">Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="ae72f-153">For more information about deployment, see [.NET Core application deployment](../deploying/index.md).</span></span>
+<span data-ttu-id="c5e7e-152">Dağıtım hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-152">For more information about deployment, see [.NET Core application deployment](../deploying/index.md).</span></span>
 
-## <a name="compile-properties"></a><span data-ttu-id="ae72f-154">Derleme özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-154">Compile properties</span></span>
+## <a name="compile-properties"></a><span data-ttu-id="c5e7e-153">Derleme özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-153">Compile properties</span></span>
 
-- [<span data-ttu-id="ae72f-155">LangVersion</span><span class="sxs-lookup"><span data-stu-id="ae72f-155">LangVersion</span></span>](#langversion)
+- [<span data-ttu-id="c5e7e-154">Embeddedresourceusebağımlıtuponconvention</span><span class="sxs-lookup"><span data-stu-id="c5e7e-154">EmbeddedResourceUseDependentUponConvention</span></span>](#embeddedresourceusedependentuponconvention)
+- [<span data-ttu-id="c5e7e-155">LangVersion</span><span class="sxs-lookup"><span data-stu-id="c5e7e-155">LangVersion</span></span>](#langversion)
 
-### <a name="langversion"></a><span data-ttu-id="ae72f-156">LangVersion</span><span class="sxs-lookup"><span data-stu-id="ae72f-156">LangVersion</span></span>
+### <a name="embeddedresourceusedependentuponconvention"></a><span data-ttu-id="c5e7e-156">Embeddedresourceusebağımlıtuponconvention</span><span class="sxs-lookup"><span data-stu-id="c5e7e-156">EmbeddedResourceUseDependentUponConvention</span></span>
 
-<span data-ttu-id="ae72f-157">Özelliği `LangVersion` , belirli bir programlama dili sürümü belirtmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-157">The `LangVersion` property lets you specify a specific programming language version.</span></span> <span data-ttu-id="ae72f-158">Örneğin, C# önizleme özelliklerine erişmek istiyorsanız, olarak `LangVersion` `preview`ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-158">For example, if you want access to C# preview features, set `LangVersion` to `preview`.</span></span>
+<span data-ttu-id="c5e7e-157">Özelliği, kaynak dosyaları `EmbeddedResourceUseDependentUponConvention` ile birlikte bulunan kaynak dosyalardaki tür bilgilerden kaynak bildirim dosyası adlarının oluşturulup oluşturulmayacağını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-157">The `EmbeddedResourceUseDependentUponConvention` property defines whether resource manifest file names are generated from type information in source files that are colocated with resource files.</span></span> <span data-ttu-id="c5e7e-158">Örneğin, *Form1. resx* , *Form1.cs*ile aynı klasörssa ve olarak `EmbeddedResourceUseDependentUponConvention` ayarlanırsa `true` , oluşturulan *. resources* dosyası, *Form1.cs*içinde tanımlanan ilk türden alır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-158">For example, if *Form1.resx* is in the same folder as *Form1.cs*, and `EmbeddedResourceUseDependentUponConvention` is set to `true`, the generated *.resources* file takes its name from the first type that's defined in *Form1.cs*.</span></span> <span data-ttu-id="c5e7e-159">Örneğin, `MyNamespace.Form1` *Form1.cs*içinde tanımlanan ilk tür ise, oluşturulan dosya adı *MyNamespace. Form1. resources*olur.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-159">For example, if `MyNamespace.Form1` is the first type defined in *Form1.cs*, the generated file name is *MyNamespace.Form1.resources*.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="c5e7e-160">`LogicalName`,, `ManifestResourceName` Veya `DependentUpon` meta veriler bir öğe için belirtilmişse `EmbeddedResource` , bu kaynak dosyası için oluşturulan bildirim dosyası adı bu meta verileri temel alır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-160">If `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata is specified for an `EmbeddedResource` item, the generated manifest file name for that resource file is based on that metadata instead.</span></span>
+
+<span data-ttu-id="c5e7e-161">Varsayılan olarak, yeni bir .NET Core projesinde, bu özellik olarak ayarlanır `true` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-161">By default, in a new .NET Core project, this property is set to `true`.</span></span> <span data-ttu-id="c5e7e-162">`false`, Ve öğesi için, `LogicalName` `ManifestResourceName` Proje dosyasındaki öğe için, veya olarak ayarlanırsa,, `DependentUpon` `EmbeddedResource` kaynak bildirim dosyası adı projenin kök ad alanını ve *. resx* dosyasının göreli dosya yolunu temel alan olur.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-162">If set to `false`, and no `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata is specified for the `EmbeddedResource` item in the project file, the resource manifest file name is based off the root namespace for the project and the relative file path to the *.resx* file.</span></span> <span data-ttu-id="c5e7e-163">Daha fazla bilgi için bkz. [kaynak bildirim dosyalarının adlandırılması](../resources/manifest-file-names.md).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-163">For more information, see [How resource manifest files are named](../resources/manifest-file-names.md).</span></span>
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
+
+### <a name="langversion"></a><span data-ttu-id="c5e7e-164">LangVersion</span><span class="sxs-lookup"><span data-stu-id="c5e7e-164">LangVersion</span></span>
+
+<span data-ttu-id="c5e7e-165">`LangVersion`Özelliği, belirli bir programlama dili sürümü belirtmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-165">The `LangVersion` property lets you specify a specific programming language version.</span></span> <span data-ttu-id="c5e7e-166">Örneğin, C# önizleme özelliklerine erişmek istiyorsanız, `LangVersion` olarak ayarlayın `preview` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-166">For example, if you want access to C# preview features, set `LangVersion` to `preview`.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -148,25 +164,25 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="ae72f-159">Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).</span><span class="sxs-lookup"><span data-stu-id="ae72f-159">For more information, see [C# language versioning](../../csharp/language-reference/configure-language-version.md#override-a-default).</span></span>
+<span data-ttu-id="c5e7e-167">Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-167">For more information, see [C# language versioning](../../csharp/language-reference/configure-language-version.md#override-a-default).</span></span>
 
-## <a name="run-time-configuration-properties"></a><span data-ttu-id="ae72f-160">Çalışma zamanı yapılandırma özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-160">Run-time configuration properties</span></span>
+## <a name="run-time-configuration-properties"></a><span data-ttu-id="c5e7e-168">Çalışma zamanı yapılandırma özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-168">Run-time configuration properties</span></span>
 
-<span data-ttu-id="ae72f-161">Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışma zamanı davranışları yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-161">You can configure some run-time behaviors by specifying MSBuild properties in the project file of the app.</span></span> <span data-ttu-id="ae72f-162">Çalışma zamanı davranışını yapılandırmanın diğer yolları hakkında daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md).</span><span class="sxs-lookup"><span data-stu-id="ae72f-162">For information about other ways of configuring run-time behavior, see [.NET Core run-time configuration settings](../run-time-config/index.md).</span></span>
+<span data-ttu-id="c5e7e-169">Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışma zamanı davranışları yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-169">You can configure some run-time behaviors by specifying MSBuild properties in the project file of the app.</span></span> <span data-ttu-id="c5e7e-170">Çalışma zamanı davranışını yapılandırmanın diğer yolları hakkında daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-170">For information about other ways of configuring run-time behavior, see [.NET Core run-time configuration settings](../run-time-config/index.md).</span></span>
 
-- [<span data-ttu-id="ae72f-163">ConcurrentGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-163">ConcurrentGarbageCollection</span></span>](#concurrentgarbagecollection)
-- [<span data-ttu-id="ae72f-164">Invariantgenelleştirme</span><span class="sxs-lookup"><span data-stu-id="ae72f-164">InvariantGlobalization</span></span>](#invariantglobalization)
-- [<span data-ttu-id="ae72f-165">RetainVMGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-165">RetainVMGarbageCollection</span></span>](#retainvmgarbagecollection)
-- [<span data-ttu-id="ae72f-166">ServerGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-166">ServerGarbageCollection</span></span>](#servergarbagecollection)
-- [<span data-ttu-id="ae72f-167">ThreadPoolMaxThreads</span><span class="sxs-lookup"><span data-stu-id="ae72f-167">ThreadPoolMaxThreads</span></span>](#threadpoolmaxthreads)
-- [<span data-ttu-id="ae72f-168">ThreadPoolMinThreads</span><span class="sxs-lookup"><span data-stu-id="ae72f-168">ThreadPoolMinThreads</span></span>](#threadpoolminthreads)
-- [<span data-ttu-id="ae72f-169">TieredCompilation</span><span class="sxs-lookup"><span data-stu-id="ae72f-169">TieredCompilation</span></span>](#tieredcompilation)
-- [<span data-ttu-id="ae72f-170">Tieredcompilationquickjıt</span><span class="sxs-lookup"><span data-stu-id="ae72f-170">TieredCompilationQuickJit</span></span>](#tieredcompilationquickjit)
-- [<span data-ttu-id="ae72f-171">Tieredcompilationquickjıtfordöngüleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-171">TieredCompilationQuickJitForLoops</span></span>](#tieredcompilationquickjitforloops)
+- [<span data-ttu-id="c5e7e-171">ConcurrentGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-171">ConcurrentGarbageCollection</span></span>](#concurrentgarbagecollection)
+- [<span data-ttu-id="c5e7e-172">Invariantgenelleştirme</span><span class="sxs-lookup"><span data-stu-id="c5e7e-172">InvariantGlobalization</span></span>](#invariantglobalization)
+- [<span data-ttu-id="c5e7e-173">RetainVMGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-173">RetainVMGarbageCollection</span></span>](#retainvmgarbagecollection)
+- [<span data-ttu-id="c5e7e-174">ServerGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-174">ServerGarbageCollection</span></span>](#servergarbagecollection)
+- [<span data-ttu-id="c5e7e-175">ThreadPoolMaxThreads</span><span class="sxs-lookup"><span data-stu-id="c5e7e-175">ThreadPoolMaxThreads</span></span>](#threadpoolmaxthreads)
+- [<span data-ttu-id="c5e7e-176">ThreadPoolMinThreads</span><span class="sxs-lookup"><span data-stu-id="c5e7e-176">ThreadPoolMinThreads</span></span>](#threadpoolminthreads)
+- [<span data-ttu-id="c5e7e-177">TieredCompilation</span><span class="sxs-lookup"><span data-stu-id="c5e7e-177">TieredCompilation</span></span>](#tieredcompilation)
+- [<span data-ttu-id="c5e7e-178">Tieredcompilationquickjıt</span><span class="sxs-lookup"><span data-stu-id="c5e7e-178">TieredCompilationQuickJit</span></span>](#tieredcompilationquickjit)
+- [<span data-ttu-id="c5e7e-179">Tieredcompilationquickjıtfordöngüleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-179">TieredCompilationQuickJitForLoops</span></span>](#tieredcompilationquickjitforloops)
 
-### <a name="concurrentgarbagecollection"></a><span data-ttu-id="ae72f-172">ConcurrentGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-172">ConcurrentGarbageCollection</span></span>
+### <a name="concurrentgarbagecollection"></a><span data-ttu-id="c5e7e-180">ConcurrentGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-180">ConcurrentGarbageCollection</span></span>
 
-<span data-ttu-id="ae72f-173">`ConcurrentGarbageCollection` Özelliği [Background (eşzamanlı) Çöp toplamanın](../../standard/garbage-collection/background-gc.md) etkinleştirilip etkinleştirilmeyeceğini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-173">The `ConcurrentGarbageCollection` property configures whether [background (concurrent) garbage collection](../../standard/garbage-collection/background-gc.md) is enabled.</span></span> <span data-ttu-id="ae72f-174">Arka plan atık toplamayı `false` devre dışı bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-174">Set the value to `false` to disable background garbage collection.</span></span> <span data-ttu-id="ae72f-175">Daha fazla bilgi için bkz. [System. GC. eşzamanlı/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).</span><span class="sxs-lookup"><span data-stu-id="ae72f-175">For more information, see [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).</span></span>
+<span data-ttu-id="c5e7e-181">`ConcurrentGarbageCollection`Özelliği [Background (eşzamanlı) Çöp toplamanın](../../standard/garbage-collection/background-gc.md) etkinleştirilip etkinleştirilmeyeceğini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-181">The `ConcurrentGarbageCollection` property configures whether [background (concurrent) garbage collection](../../standard/garbage-collection/background-gc.md) is enabled.</span></span> <span data-ttu-id="c5e7e-182">`false`Arka plan atık toplamayı devre dışı bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-182">Set the value to `false` to disable background garbage collection.</span></span> <span data-ttu-id="c5e7e-183">Daha fazla bilgi için bkz. [System. GC. eşzamanlı/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-183">For more information, see [System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -174,9 +190,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="invariantglobalization"></a><span data-ttu-id="ae72f-176">Invariantgenelleştirme</span><span class="sxs-lookup"><span data-stu-id="ae72f-176">InvariantGlobalization</span></span>
+### <a name="invariantglobalization"></a><span data-ttu-id="c5e7e-184">Invariantgenelleştirme</span><span class="sxs-lookup"><span data-stu-id="c5e7e-184">InvariantGlobalization</span></span>
 
-<span data-ttu-id="ae72f-177">`InvariantGlobalization` Özelliği, uygulamanın *Genelleştirme sabit* modunda çalışıp çalışmadığını yapılandırır, bu, kültüre özgü verilere erişimi olmayan anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-177">The `InvariantGlobalization` property configures whether the app runs in *globalization-invariant* mode, which means it doesn't have access to culture-specific data.</span></span> <span data-ttu-id="ae72f-178">Değeri `true` Genelleştirme sabit modunda çalışacak şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-178">Set the value to `true` to run in globalization-invariant mode.</span></span> <span data-ttu-id="ae72f-179">Daha fazla bilgi için bkz. [sabit mod](../run-time-config/globalization.md#invariant-mode).</span><span class="sxs-lookup"><span data-stu-id="ae72f-179">For more information, see [Invariant mode](../run-time-config/globalization.md#invariant-mode).</span></span>
+<span data-ttu-id="c5e7e-185">`InvariantGlobalization`Özelliği, uygulamanın *Genelleştirme sabit* modunda çalışıp çalışmadığını yapılandırır, bu, kültüre özgü verilere erişimi olmayan anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-185">The `InvariantGlobalization` property configures whether the app runs in *globalization-invariant* mode, which means it doesn't have access to culture-specific data.</span></span> <span data-ttu-id="c5e7e-186">Değeri `true` Genelleştirme sabit modunda çalışacak şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-186">Set the value to `true` to run in globalization-invariant mode.</span></span> <span data-ttu-id="c5e7e-187">Daha fazla bilgi için bkz. [sabit mod](../run-time-config/globalization.md#invariant-mode).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-187">For more information, see [Invariant mode](../run-time-config/globalization.md#invariant-mode).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -184,9 +200,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="retainvmgarbagecollection"></a><span data-ttu-id="ae72f-180">RetainVMGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-180">RetainVMGarbageCollection</span></span>
+### <a name="retainvmgarbagecollection"></a><span data-ttu-id="c5e7e-188">RetainVMGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-188">RetainVMGarbageCollection</span></span>
 
-<span data-ttu-id="ae72f-181">`RetainVMGarbageCollection` Özelliği, çöp toplayıcıyı, daha sonra kullanılmak üzere veya serbest bırakmak için silinen bellek segmentlerini bir bekleme listesine koymak üzere yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-181">The `RetainVMGarbageCollection` property configures the garbage collector to put deleted memory segments on a standby list for future use or release them.</span></span> <span data-ttu-id="ae72f-182">Değeri, çöp toplayıcıya kesimleri bir bekleme listesine koymasını `true` söyler.</span><span class="sxs-lookup"><span data-stu-id="ae72f-182">Setting the value to `true` tells the garbage collector to put the segments on a standby list.</span></span> <span data-ttu-id="ae72f-183">Daha fazla bilgi için bkz. [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).</span><span class="sxs-lookup"><span data-stu-id="ae72f-183">For more information, see [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).</span></span>
+<span data-ttu-id="c5e7e-189">`RetainVMGarbageCollection`Özelliği, çöp toplayıcıyı, daha sonra kullanılmak üzere veya serbest bırakmak için silinen bellek segmentlerini bir bekleme listesine koymak üzere yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-189">The `RetainVMGarbageCollection` property configures the garbage collector to put deleted memory segments on a standby list for future use or release them.</span></span> <span data-ttu-id="c5e7e-190">Değeri, `true` çöp toplayıcıya kesimleri bir bekleme listesine koymasını söyler.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-190">Setting the value to `true` tells the garbage collector to put the segments on a standby list.</span></span> <span data-ttu-id="c5e7e-191">Daha fazla bilgi için bkz. [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-191">For more information, see [System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -194,9 +210,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="servergarbagecollection"></a><span data-ttu-id="ae72f-184">ServerGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="ae72f-184">ServerGarbageCollection</span></span>
+### <a name="servergarbagecollection"></a><span data-ttu-id="c5e7e-192">ServerGarbageCollection</span><span class="sxs-lookup"><span data-stu-id="c5e7e-192">ServerGarbageCollection</span></span>
 
-<span data-ttu-id="ae72f-185">`ServerGarbageCollection` Özelliği, uygulamanın [iş istasyonu çöp toplamayı veya sunucu çöp toplamayı](../../standard/garbage-collection/workstation-server-gc.md)kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-185">The `ServerGarbageCollection` property configures whether the application uses [workstation garbage collection or server garbage collection](../../standard/garbage-collection/workstation-server-gc.md).</span></span> <span data-ttu-id="ae72f-186">Değerini `true` sunucu çöp toplamayı kullanacak şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-186">Set the value to `true` to use server garbage collection.</span></span> <span data-ttu-id="ae72f-187">Daha fazla bilgi için bkz. [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).</span><span class="sxs-lookup"><span data-stu-id="ae72f-187">For more information, see [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).</span></span>
+<span data-ttu-id="c5e7e-193">`ServerGarbageCollection`Özelliği, uygulamanın [iş istasyonu çöp toplamayı veya sunucu çöp toplamayı](../../standard/garbage-collection/workstation-server-gc.md)kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-193">The `ServerGarbageCollection` property configures whether the application uses [workstation garbage collection or server garbage collection](../../standard/garbage-collection/workstation-server-gc.md).</span></span> <span data-ttu-id="c5e7e-194">Değerini `true` sunucu çöp toplamayı kullanacak şekilde ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-194">Set the value to `true` to use server garbage collection.</span></span> <span data-ttu-id="c5e7e-195">Daha fazla bilgi için bkz. [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-195">For more information, see [System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -204,9 +220,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="threadpoolmaxthreads"></a><span data-ttu-id="ae72f-188">ThreadPoolMaxThreads</span><span class="sxs-lookup"><span data-stu-id="ae72f-188">ThreadPoolMaxThreads</span></span>
+### <a name="threadpoolmaxthreads"></a><span data-ttu-id="c5e7e-196">ThreadPoolMaxThreads</span><span class="sxs-lookup"><span data-stu-id="c5e7e-196">ThreadPoolMaxThreads</span></span>
 
-<span data-ttu-id="ae72f-189">`ThreadPoolMaxThreads` Özelliği, çalışan iş parçacığı havuzu için en fazla iş parçacığı sayısını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-189">The `ThreadPoolMaxThreads` property configures the maximum number of threads for the worker thread pool.</span></span> <span data-ttu-id="ae72f-190">Daha fazla bilgi için bkz. [en fazla iş parçacığı](../run-time-config/threading.md#maximum-threads).</span><span class="sxs-lookup"><span data-stu-id="ae72f-190">For more information, see [Maximum threads](../run-time-config/threading.md#maximum-threads).</span></span>
+<span data-ttu-id="c5e7e-197">`ThreadPoolMaxThreads`Özelliği, çalışan iş parçacığı havuzu için en fazla iş parçacığı sayısını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-197">The `ThreadPoolMaxThreads` property configures the maximum number of threads for the worker thread pool.</span></span> <span data-ttu-id="c5e7e-198">Daha fazla bilgi için bkz. [en fazla iş parçacığı](../run-time-config/threading.md#maximum-threads).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-198">For more information, see [Maximum threads](../run-time-config/threading.md#maximum-threads).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -214,9 +230,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="threadpoolminthreads"></a><span data-ttu-id="ae72f-191">ThreadPoolMinThreads</span><span class="sxs-lookup"><span data-stu-id="ae72f-191">ThreadPoolMinThreads</span></span>
+### <a name="threadpoolminthreads"></a><span data-ttu-id="c5e7e-199">ThreadPoolMinThreads</span><span class="sxs-lookup"><span data-stu-id="c5e7e-199">ThreadPoolMinThreads</span></span>
 
-<span data-ttu-id="ae72f-192">`ThreadPoolMinThreads` Özelliği, çalışan iş parçacığı havuzu için en az iş parçacığı sayısını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-192">The `ThreadPoolMinThreads` property configures the minimum number of threads for the worker thread pool.</span></span> <span data-ttu-id="ae72f-193">Daha fazla bilgi için bkz. [En düşük iş parçacıkları](../run-time-config/threading.md#minimum-threads).</span><span class="sxs-lookup"><span data-stu-id="ae72f-193">For more information, see [Minimum threads](../run-time-config/threading.md#minimum-threads).</span></span>
+<span data-ttu-id="c5e7e-200">`ThreadPoolMinThreads`Özelliği, çalışan iş parçacığı havuzu için en az iş parçacığı sayısını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-200">The `ThreadPoolMinThreads` property configures the minimum number of threads for the worker thread pool.</span></span> <span data-ttu-id="c5e7e-201">Daha fazla bilgi için bkz. [En düşük iş parçacıkları](../run-time-config/threading.md#minimum-threads).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-201">For more information, see [Minimum threads](../run-time-config/threading.md#minimum-threads).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -224,9 +240,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="tieredcompilation"></a><span data-ttu-id="ae72f-194">TieredCompilation</span><span class="sxs-lookup"><span data-stu-id="ae72f-194">TieredCompilation</span></span>
+### <a name="tieredcompilation"></a><span data-ttu-id="c5e7e-202">TieredCompilation</span><span class="sxs-lookup"><span data-stu-id="c5e7e-202">TieredCompilation</span></span>
 
-<span data-ttu-id="ae72f-195">Özelliği `TieredCompilation` , Just-ın-TIME (JIT) derleyicisinin [katmanlı derlemeyi](../whats-new/dotnet-core-3-0.md#tiered-compilation)kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-195">The `TieredCompilation` property configures whether the just-in-time (JIT) compiler uses [tiered compilation](../whats-new/dotnet-core-3-0.md#tiered-compilation).</span></span> <span data-ttu-id="ae72f-196">Katmanlı derlemeyi devre dışı `false` bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-196">Set the value to `false` to disable tiered compilation.</span></span> <span data-ttu-id="ae72f-197">Daha fazla bilgi için bkz. [katmanlı derleme](../run-time-config/compilation.md#tiered-compilation).</span><span class="sxs-lookup"><span data-stu-id="ae72f-197">For more information, see [Tiered compilation](../run-time-config/compilation.md#tiered-compilation).</span></span>
+<span data-ttu-id="c5e7e-203">`TieredCompilation`Özelliği, Just-In-Time (JIT) derleyicisinin [katmanlı derlemeyi](../whats-new/dotnet-core-3-0.md#tiered-compilation)kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-203">The `TieredCompilation` property configures whether the just-in-time (JIT) compiler uses [tiered compilation](../whats-new/dotnet-core-3-0.md#tiered-compilation).</span></span> <span data-ttu-id="c5e7e-204">`false`Katmanlı derlemeyi devre dışı bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-204">Set the value to `false` to disable tiered compilation.</span></span> <span data-ttu-id="c5e7e-205">Daha fazla bilgi için bkz. [katmanlı derleme](../run-time-config/compilation.md#tiered-compilation).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-205">For more information, see [Tiered compilation](../run-time-config/compilation.md#tiered-compilation).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -234,9 +250,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="tieredcompilationquickjit"></a><span data-ttu-id="ae72f-198">Tieredcompilationquickjıt</span><span class="sxs-lookup"><span data-stu-id="ae72f-198">TieredCompilationQuickJit</span></span>
+### <a name="tieredcompilationquickjit"></a><span data-ttu-id="c5e7e-206">Tieredcompilationquickjıt</span><span class="sxs-lookup"><span data-stu-id="c5e7e-206">TieredCompilationQuickJit</span></span>
 
-<span data-ttu-id="ae72f-199">`TieredCompilationQuickJit` ÖZELLIĞI, JIT derleyicisinin hızlı JIT kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-199">The `TieredCompilationQuickJit` property configures whether the JIT compiler uses quick JIT.</span></span> <span data-ttu-id="ae72f-200">Hızlı JıT 'i devre `false` dışı bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-200">Set the value to `false` to disable quick JIT.</span></span> <span data-ttu-id="ae72f-201">Daha fazla bilgi için bkz. [hızlı JIT](../run-time-config/compilation.md#quick-jit).</span><span class="sxs-lookup"><span data-stu-id="ae72f-201">For more information, see [Quick JIT](../run-time-config/compilation.md#quick-jit).</span></span>
+<span data-ttu-id="c5e7e-207">`TieredCompilationQuickJit`Özelliği, JIT derleyicisinin hızlı JIT kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-207">The `TieredCompilationQuickJit` property configures whether the JIT compiler uses quick JIT.</span></span> <span data-ttu-id="c5e7e-208">`false`Hızlı JIT 'i devre dışı bırakmak için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-208">Set the value to `false` to disable quick JIT.</span></span> <span data-ttu-id="c5e7e-209">Daha fazla bilgi için bkz. [hızlı JIT](../run-time-config/compilation.md#quick-jit).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-209">For more information, see [Quick JIT](../run-time-config/compilation.md#quick-jit).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -244,9 +260,9 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="tieredcompilationquickjitforloops"></a><span data-ttu-id="ae72f-202">Tieredcompilationquickjıtfordöngüleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-202">TieredCompilationQuickJitForLoops</span></span>
+### <a name="tieredcompilationquickjitforloops"></a><span data-ttu-id="c5e7e-210">Tieredcompilationquickjıtfordöngüleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-210">TieredCompilationQuickJitForLoops</span></span>
 
-<span data-ttu-id="ae72f-203">`TieredCompilationQuickJitForLoops` ÖZELLIĞI, JIT derleyicisinin döngüleri içeren YÖNTEMLERDE hızlı JIT kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="ae72f-203">The `TieredCompilationQuickJitForLoops` property configures whether the JIT compiler uses quick JIT on methods that contain loops.</span></span> <span data-ttu-id="ae72f-204">Döngüleri içeren yöntemlerde hızlı `true` JIT 'i etkinleştirmek için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="ae72f-204">Set the value to `true` to enable quick JIT on methods that contain loops.</span></span> <span data-ttu-id="ae72f-205">Daha fazla bilgi için bkz. [döngüler Için hızlı JIT](../run-time-config/compilation.md#quick-jit-for-loops).</span><span class="sxs-lookup"><span data-stu-id="ae72f-205">For more information, see [Quick JIT for loops](../run-time-config/compilation.md#quick-jit-for-loops).</span></span>
+<span data-ttu-id="c5e7e-211">`TieredCompilationQuickJitForLoops`Özelliği, JIT derleyicisinin döngüleri içeren yöntemlerde hızlı JIT kullanıp kullanmadığını yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-211">The `TieredCompilationQuickJitForLoops` property configures whether the JIT compiler uses quick JIT on methods that contain loops.</span></span> <span data-ttu-id="c5e7e-212">`true`Döngüleri içeren yöntemlerde hızlı JIT 'i etkinleştirmek için değerini olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-212">Set the value to `true` to enable quick JIT on methods that contain loops.</span></span> <span data-ttu-id="c5e7e-213">Daha fazla bilgi için bkz. [döngüler Için hızlı JIT](../run-time-config/compilation.md#quick-jit-for-loops).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-213">For more information, see [Quick JIT for loops](../run-time-config/compilation.md#quick-jit-for-loops).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -254,19 +270,19 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a><span data-ttu-id="ae72f-206">Başvuru özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-206">Reference properties</span></span>
+## <a name="reference-properties-and-items"></a><span data-ttu-id="c5e7e-214">Başvuru özellikleri ve öğeleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-214">Reference properties and items</span></span>
 
-- [<span data-ttu-id="ae72f-207">AssetTargetFallback</span><span class="sxs-lookup"><span data-stu-id="ae72f-207">AssetTargetFallback</span></span>](#assettargetfallback)
-- [<span data-ttu-id="ae72f-208">PackageReference</span><span class="sxs-lookup"><span data-stu-id="ae72f-208">PackageReference</span></span>](#packagereference)
-- [<span data-ttu-id="ae72f-209">ProjectReference</span><span class="sxs-lookup"><span data-stu-id="ae72f-209">ProjectReference</span></span>](#projectreference)
-- [<span data-ttu-id="ae72f-210">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ae72f-210">Reference</span></span>](#reference)
-- [<span data-ttu-id="ae72f-211">Özellikleri geri yükle</span><span class="sxs-lookup"><span data-stu-id="ae72f-211">Restore properties</span></span>](#restore-properties)
+- [<span data-ttu-id="c5e7e-215">AssetTargetFallback</span><span class="sxs-lookup"><span data-stu-id="c5e7e-215">AssetTargetFallback</span></span>](#assettargetfallback)
+- [<span data-ttu-id="c5e7e-216">PackageReference</span><span class="sxs-lookup"><span data-stu-id="c5e7e-216">PackageReference</span></span>](#packagereference)
+- [<span data-ttu-id="c5e7e-217">ProjectReference</span><span class="sxs-lookup"><span data-stu-id="c5e7e-217">ProjectReference</span></span>](#projectreference)
+- [<span data-ttu-id="c5e7e-218">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c5e7e-218">Reference</span></span>](#reference)
+- [<span data-ttu-id="c5e7e-219">Özellikleri geri yükle</span><span class="sxs-lookup"><span data-stu-id="c5e7e-219">Restore properties</span></span>](#restore-properties)
 
-### <a name="assettargetfallback"></a><span data-ttu-id="ae72f-212">AssetTargetFallback</span><span class="sxs-lookup"><span data-stu-id="ae72f-212">AssetTargetFallback</span></span>
+### <a name="assettargetfallback"></a><span data-ttu-id="c5e7e-220">AssetTargetFallback</span><span class="sxs-lookup"><span data-stu-id="c5e7e-220">AssetTargetFallback</span></span>
 
-<span data-ttu-id="ae72f-213">Özelliği `AssetTargetFallback` , proje başvuruları ve NuGet paketleri için ek uyumlu çerçeve sürümlerini belirtmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-213">The `AssetTargetFallback` property lets you specify additional compatible framework versions for project references and NuGet packages.</span></span> <span data-ttu-id="ae72f-214">Örneğin, kullanarak `PackageReference` bir paket bağımlılığı belirtirseniz ancak bu paket `TargetFramework`, projelerinizle uyumlu olan varlıkları içermiyorsa, `AssetTargetFallback` özelliği yürütmeye gelir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-214">For example, if you specify a package dependency using `PackageReference` but that package doesn't contain assets that are compatible with your projects's `TargetFramework`, the `AssetTargetFallback` property comes into play.</span></span> <span data-ttu-id="ae72f-215">Başvurulan paketin uyumluluğu, içinde `AssetTargetFallback`belirtilen her bir hedef çerçeve kullanılarak yeniden denetlenir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-215">The compatibility of the referenced package is rechecked using each target framework that's specified in `AssetTargetFallback`.</span></span>
+<span data-ttu-id="c5e7e-221">`AssetTargetFallback`Özelliği, proje başvuruları ve NuGet paketleri için ek uyumlu çerçeve sürümlerini belirtmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-221">The `AssetTargetFallback` property lets you specify additional compatible framework versions for project references and NuGet packages.</span></span> <span data-ttu-id="c5e7e-222">Örneğin, kullanarak bir paket bağımlılığı belirtirseniz `PackageReference` ancak bu paket, projelerinizle uyumlu olan varlıkları içermiyorsa `TargetFramework` , `AssetTargetFallback` özelliği yürütmeye gelir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-222">For example, if you specify a package dependency using `PackageReference` but that package doesn't contain assets that are compatible with your projects's `TargetFramework`, the `AssetTargetFallback` property comes into play.</span></span> <span data-ttu-id="c5e7e-223">Başvurulan paketin uyumluluğu, içinde belirtilen her bir hedef çerçeve kullanılarak yeniden denetlenir `AssetTargetFallback` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-223">The compatibility of the referenced package is rechecked using each target framework that's specified in `AssetTargetFallback`.</span></span>
 
-<span data-ttu-id="ae72f-216">`AssetTargetFallback` Özelliğini bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-framework-versions)ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-216">You can set the `AssetTargetFallback` property to one or more [target framework versions](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
+<span data-ttu-id="c5e7e-224">`AssetTargetFallback`Özelliğini bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-framework-versions)ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-224">You can set the `AssetTargetFallback` property to one or more [target framework versions](../../standard/frameworks.md#supported-target-framework-versions).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -274,13 +290,13 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-### <a name="packagereference"></a><span data-ttu-id="ae72f-217">PackageReference</span><span class="sxs-lookup"><span data-stu-id="ae72f-217">PackageReference</span></span>
+### <a name="packagereference"></a><span data-ttu-id="c5e7e-225">PackageReference</span><span class="sxs-lookup"><span data-stu-id="c5e7e-225">PackageReference</span></span>
 
-<span data-ttu-id="ae72f-218">, `PackageReference` Bir NuGet paketine bir başvuruyu tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-218">The `PackageReference` defines a reference to a NuGet package.</span></span> <span data-ttu-id="ae72f-219">Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-219">For example, you may want to reference a single package instead of a [metapackage](../packages.md#metapackages).</span></span>
+<span data-ttu-id="c5e7e-226">`PackageReference`Öğe, bir NuGet paketine bir başvuru tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-226">The `PackageReference` item defines a reference to a NuGet package.</span></span> <span data-ttu-id="c5e7e-227">Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-227">For example, you may want to reference a single package instead of a [metapackage](../packages.md#metapackages).</span></span>
 
-<span data-ttu-id="ae72f-220">`Include` Öznitelik, paket kimliğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-220">The `Include` attribute specifies the package ID.</span></span> <span data-ttu-id="ae72f-221">`Version` Öznitelik, sürümü veya sürüm aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-221">The `Version` attribute specifies the version or version range.</span></span> <span data-ttu-id="ae72f-222">En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges).</span><span class="sxs-lookup"><span data-stu-id="ae72f-222">For information about how to specify a minimum version, maximum version, range, or exact match, see [Version ranges](/nuget/concepts/package-versioning#version-ranges).</span></span> <span data-ttu-id="ae72f-223">Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets`, `ExcludeAssets`, ve. `PrivateAssets`</span><span class="sxs-lookup"><span data-stu-id="ae72f-223">You can also add the following metadata to a project reference: `IncludeAssets`, `ExcludeAssets`, and `PrivateAssets`.</span></span>
+<span data-ttu-id="c5e7e-228">`Include`Öznitelik, paket kimliğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-228">The `Include` attribute specifies the package ID.</span></span> <span data-ttu-id="c5e7e-229">`Version`Öznitelik, sürümü veya sürüm aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-229">The `Version` attribute specifies the version or version range.</span></span> <span data-ttu-id="c5e7e-230">En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-230">For information about how to specify a minimum version, maximum version, range, or exact match, see [Version ranges](/nuget/concepts/package-versioning#version-ranges).</span></span> <span data-ttu-id="c5e7e-231">Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets` , `ExcludeAssets` , ve `PrivateAssets` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-231">You can also add the following metadata to a project reference: `IncludeAssets`, `ExcludeAssets`, and `PrivateAssets`.</span></span>
 
-<span data-ttu-id="ae72f-224">Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.</span><span class="sxs-lookup"><span data-stu-id="ae72f-224">The project file snippet in the following example references the [System.Runtime](https://www.nuget.org/packages/System.Runtime/) package.</span></span>
+<span data-ttu-id="c5e7e-232">Aşağıdaki örnekteki proje dosyası kod parçacığı [System. Runtime](https://www.nuget.org/packages/System.Runtime/) paketine başvurur.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-232">The project file snippet in the following example references the [System.Runtime](https://www.nuget.org/packages/System.Runtime/) package.</span></span>
 
 ```xml
 <ItemGroup>
@@ -288,15 +304,15 @@ ms.locfileid: "82795579"
 </ItemGroup>
 ```
 
-<span data-ttu-id="ae72f-225">Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).</span><span class="sxs-lookup"><span data-stu-id="ae72f-225">For more information, see [Package references in project files](/nuget/consume-packages/package-references-in-project-files).</span></span>
+<span data-ttu-id="c5e7e-233">Daha fazla bilgi için bkz. [Proje dosyalarındaki paket başvuruları](/nuget/consume-packages/package-references-in-project-files).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-233">For more information, see [Package references in project files](/nuget/consume-packages/package-references-in-project-files).</span></span>
 
-### <a name="projectreference"></a><span data-ttu-id="ae72f-226">ProjectReference</span><span class="sxs-lookup"><span data-stu-id="ae72f-226">ProjectReference</span></span>
+### <a name="projectreference"></a><span data-ttu-id="c5e7e-234">ProjectReference</span><span class="sxs-lookup"><span data-stu-id="c5e7e-234">ProjectReference</span></span>
 
-<span data-ttu-id="ae72f-227">Öğe `ProjectReference` , başka bir projeye yönelik bir başvuru tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-227">The `ProjectReference` item defines a reference to another project.</span></span> <span data-ttu-id="ae72f-228">Başvurulan proje bir NuGet paket bağımlılığı olarak eklenir, diğer bir `PackageReference`deyişle, ile aynı şekilde işlenir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-228">The referenced project is added as a NuGet package dependency, that is, it's treated the same as a `PackageReference`.</span></span>
+<span data-ttu-id="c5e7e-235">`ProjectReference`Öğe, başka bir projeye yönelik bir başvuru tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-235">The `ProjectReference` item defines a reference to another project.</span></span> <span data-ttu-id="c5e7e-236">Başvurulan proje bir NuGet paket bağımlılığı olarak eklenir, diğer bir deyişle, ile aynı şekilde işlenir `PackageReference` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-236">The referenced project is added as a NuGet package dependency, that is, it's treated the same as a `PackageReference`.</span></span>
 
-<span data-ttu-id="ae72f-229">`Include` Öznitelik, projenin yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-229">The `Include` attribute specifies the path to the project.</span></span> <span data-ttu-id="ae72f-230">Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets`, `ExcludeAssets`, ve. `PrivateAssets`</span><span class="sxs-lookup"><span data-stu-id="ae72f-230">You can also add the following metadata to a project reference: `IncludeAssets`, `ExcludeAssets`, and `PrivateAssets`.</span></span>
+<span data-ttu-id="c5e7e-237">`Include`Öznitelik, projenin yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-237">The `Include` attribute specifies the path to the project.</span></span> <span data-ttu-id="c5e7e-238">Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets` , `ExcludeAssets` , ve `PrivateAssets` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-238">You can also add the following metadata to a project reference: `IncludeAssets`, `ExcludeAssets`, and `PrivateAssets`.</span></span>
 
-<span data-ttu-id="ae72f-231">Aşağıdaki örnekteki proje dosyası kod parçacığı adlı `Project2`bir projeye başvurur.</span><span class="sxs-lookup"><span data-stu-id="ae72f-231">The project file snippet in the following example references a project named `Project2`.</span></span>
+<span data-ttu-id="c5e7e-239">Aşağıdaki örnekteki proje dosyası kod parçacığı adlı bir projeye başvurur `Project2` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-239">The project file snippet in the following example references a project named `Project2`.</span></span>
 
 ```xml
 <ItemGroup>
@@ -304,11 +320,11 @@ ms.locfileid: "82795579"
 </ItemGroup>
 ```
 
-### <a name="reference"></a><span data-ttu-id="ae72f-232">Başvuru</span><span class="sxs-lookup"><span data-stu-id="ae72f-232">Reference</span></span>
+### <a name="reference"></a><span data-ttu-id="c5e7e-240">Başvuru</span><span class="sxs-lookup"><span data-stu-id="c5e7e-240">Reference</span></span>
 
-<span data-ttu-id="ae72f-233">Öğe `Reference` , derleme dosyasına bir başvuru tanımlar.</span><span class="sxs-lookup"><span data-stu-id="ae72f-233">The `Reference` item defines a reference to an assembly file.</span></span>
+<span data-ttu-id="c5e7e-241">`Reference`Öğe, derleme dosyasına bir başvuru tanımlar.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-241">The `Reference` item defines a reference to an assembly file.</span></span>
 
-<span data-ttu-id="ae72f-234">`Include` Öznitelik, dosyanın adını belirtir ve `HintPath` alt öğe derleme yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="ae72f-234">The `Include` attribute specifies the name of the file, and the `HintPath` child element specifies the path to the assembly.</span></span>
+<span data-ttu-id="c5e7e-242">`Include`Öznitelik, dosyanın adını belirtir ve `HintPath` meta veriler derlemenin yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-242">The `Include` attribute specifies the name of the file, and the `HintPath` metadata specifies the path to the assembly.</span></span>
 
 ```xml
 <ItemGroup>
@@ -318,9 +334,9 @@ ms.locfileid: "82795579"
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a><span data-ttu-id="ae72f-235">Özellikleri geri yükle</span><span class="sxs-lookup"><span data-stu-id="ae72f-235">Restore properties</span></span>
+### <a name="restore-properties"></a><span data-ttu-id="c5e7e-243">Özellikleri geri yükle</span><span class="sxs-lookup"><span data-stu-id="c5e7e-243">Restore properties</span></span>
 
-<span data-ttu-id="ae72f-236">Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını ve bu bağımlılıkların tüm bağımlılıklarını yükler.</span><span class="sxs-lookup"><span data-stu-id="ae72f-236">Restoring a referenced package installs all of its direct dependencies and all the dependencies of those dependencies.</span></span> <span data-ttu-id="ae72f-237">`RestorePackagesPath` Ve `RestoreIgnoreFailedSources`gibi özellikler belirterek paket geri yüklemesini özelleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-237">You can customize package restoration by specifying properties such as `RestorePackagesPath` and `RestoreIgnoreFailedSources`.</span></span> <span data-ttu-id="ae72f-238">Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [hedefi geri yükleme](/nuget/reference/msbuild-targets#restore-target).</span><span class="sxs-lookup"><span data-stu-id="ae72f-238">For more information about these and other properties, see [restore target](/nuget/reference/msbuild-targets#restore-target).</span></span>
+<span data-ttu-id="c5e7e-244">Başvurulan bir paketin geri yüklenmesi, tüm doğrudan bağımlılıklarını ve bu bağımlılıkların tüm bağımlılıklarını yükler.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-244">Restoring a referenced package installs all of its direct dependencies and all the dependencies of those dependencies.</span></span> <span data-ttu-id="c5e7e-245">Ve gibi özellikler belirterek paket geri yüklemesini özelleştirebilirsiniz `RestorePackagesPath` `RestoreIgnoreFailedSources` .</span><span class="sxs-lookup"><span data-stu-id="c5e7e-245">You can customize package restoration by specifying properties such as `RestorePackagesPath` and `RestoreIgnoreFailedSources`.</span></span> <span data-ttu-id="c5e7e-246">Bu ve diğer özellikler hakkında daha fazla bilgi için bkz. [hedefi geri yükleme](/nuget/reference/msbuild-targets#restore-target).</span><span class="sxs-lookup"><span data-stu-id="c5e7e-246">For more information about these and other properties, see [restore target](/nuget/reference/msbuild-targets#restore-target).</span></span>
 
 ```xml
 <PropertyGroup>
@@ -328,10 +344,10 @@ ms.locfileid: "82795579"
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ae72f-239">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae72f-239">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5e7e-247">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5e7e-247">See also</span></span>
 
-- [<span data-ttu-id="ae72f-240">MSBuild şema başvurusu</span><span class="sxs-lookup"><span data-stu-id="ae72f-240">MSBuild schema reference</span></span>](/visualstudio/msbuild/msbuild-project-file-schema-reference)
-- [<span data-ttu-id="ae72f-241">Ortak MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-241">Common MSBuild properties</span></span>](/visualstudio/msbuild/common-msbuild-project-properties)
-- [<span data-ttu-id="ae72f-242">NuGet paketi için MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-242">MSBuild properties for NuGet pack</span></span>](/nuget/reference/msbuild-targets#pack-target)
-- [<span data-ttu-id="ae72f-243">NuGet geri yükleme için MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="ae72f-243">MSBuild properties for NuGet restore</span></span>](/nuget/reference/msbuild-targets#restore-properties)
-- [<span data-ttu-id="ae72f-244">Bir derlemeyi özelleştirme</span><span class="sxs-lookup"><span data-stu-id="ae72f-244">Customize a build</span></span>](/visualstudio/msbuild/customize-your-build)
+- [<span data-ttu-id="c5e7e-248">MSBuild şema başvurusu</span><span class="sxs-lookup"><span data-stu-id="c5e7e-248">MSBuild schema reference</span></span>](/visualstudio/msbuild/msbuild-project-file-schema-reference)
+- [<span data-ttu-id="c5e7e-249">Ortak MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-249">Common MSBuild properties</span></span>](/visualstudio/msbuild/common-msbuild-project-properties)
+- [<span data-ttu-id="c5e7e-250">NuGet paketi için MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-250">MSBuild properties for NuGet pack</span></span>](/nuget/reference/msbuild-targets#pack-target)
+- [<span data-ttu-id="c5e7e-251">NuGet geri yükleme için MSBuild özellikleri</span><span class="sxs-lookup"><span data-stu-id="c5e7e-251">MSBuild properties for NuGet restore</span></span>](/nuget/reference/msbuild-targets#restore-properties)
+- [<span data-ttu-id="c5e7e-252">Bir derlemeyi özelleştirme</span><span class="sxs-lookup"><span data-stu-id="c5e7e-252">Customize a build</span></span>](/visualstudio/msbuild/customize-your-build)

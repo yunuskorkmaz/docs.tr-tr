@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: afe4e97f-bffc-47e1-adad-d6e842487f35
 topic_type:
 - apiref
-ms.openlocfilehash: 70650f415c11353bcff897f53b8dcbf9b89e6183
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: faaa118fa73a4c9b8750752d84a9dd980170ff66
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137274"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210455"
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="52ea0-102">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="52ea0-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
-<span data-ttu-id="52ea0-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="52ea0-103">This method is not implemented.</span></span>  
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="17ac1-102">ICorDebugProcess::ThreadForFiberCookie Yöntemi</span><span class="sxs-lookup"><span data-stu-id="17ac1-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+<span data-ttu-id="17ac1-103">Bu yöntem uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="17ac1-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="52ea0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="52ea0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17ac1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="17ac1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ThreadForFiberCookie (  
@@ -34,11 +34,11 @@ HRESULT ThreadForFiberCookie (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="52ea0-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="52ea0-105">Requirements</span></span>  
- <span data-ttu-id="52ea0-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52ea0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17ac1-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="17ac1-105">Requirements</span></span>  
+ <span data-ttu-id="17ac1-106">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17ac1-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52ea0-107">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="52ea0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="17ac1-107">**Üst bilgi:** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="17ac1-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="52ea0-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="52ea0-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="17ac1-108">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="17ac1-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="52ea0-109">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52ea0-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="17ac1-109">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17ac1-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
