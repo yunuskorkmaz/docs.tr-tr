@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 69fd3e2df4a4eafe91cc025f28e1387cc443ea04
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792928"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212314"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 Arabirimi
 Dinamik modül için simge okuyucu oluşturur.  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Dinamik bir modül için bir sembol okuyucu (genellikle [ıstreamunmanagedreader arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) oluşturur.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols Yöntemi](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Dinamik bir modül için bir sembol okuyucu (genellikle [ıstreamunmanagedreader arabirimi](../diagnostics/isymunmanagedreader-interface.md)) oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirim "ICorDebugModule" ve "ICorDebugModule2" arabirimlerini mantıksal olarak genişletir.  
@@ -50,7 +50,7 @@ interface ICorDebugModule3 : IUnknown
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   

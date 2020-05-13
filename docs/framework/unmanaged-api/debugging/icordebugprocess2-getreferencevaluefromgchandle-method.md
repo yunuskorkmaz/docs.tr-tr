@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-ms.openlocfilehash: 47647bf0460507b4c88b47bf87bfcc3bf620aecc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 143eefd557511f80007c88c1678143a885377467
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137217"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212990"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle Metodu
 Bir atık toplama tanıtıcısına sahip olan, belirtilen yönetilen nesneye bir başvuru işaretçisi alır.  
@@ -36,7 +36,7 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>Parametreler  
  `handle`  
- 'ndaki Bir atık toplama tanıtıcısına sahip yönetilen bir nesne için bir işaretçi. Bu değer bir <xref:System.IntPtr> nesnesidir ve yönetilen nesne için <xref:System.Runtime.InteropServices.GCHandle> elde edilebilir.  
+ 'ndaki Bir atık toplama tanıtıcısına sahip yönetilen bir nesne için bir işaretçi. Bu değer bir <xref:System.IntPtr> nesnedir ve <xref:System.Runtime.InteropServices.GCHandle> yönetilen nesne için öğesinden alınabilir.  
   
  `pOutValue`  
  dışı Belirtilen yönetilen nesneye bir başvuruyu temsil eden ICorDebugReferenceValue nesnesinin adresine yönelik bir işaretçi.  
@@ -47,13 +47,13 @@ HRESULT GetReferenceValueFromGCHandle (
  Döndürülen başvuru normal bir başvuru gibi davranır. Bir kesme noktasından sonra kod yürütme devam ettiğinde devre dışıdır. Hedef nesnenin ömrü, başvuru değerinin yaşam süresinden etkilenmez.  
   
 > [!NOTE]
-> `GetReferenceValueFromGCHandle` yöntemi tanıtıcıyı doğrulamaz. Bu nedenle `GetReferenceValueFromGCHandle` yöntemi, hem hata ayıklayıcıyı hem de geçersiz bir tanıtıcı geçirildiğinde hata ayıklanan kodu bozabilir.  
+> `GetReferenceValueFromGCHandle`Yöntemi tanıtıcıyı doğrulamaz. Bu nedenle, `GetReferenceValueFromGCHandle` Yöntem hata ayıklayıcıyı ve geçersiz bir tanıtıcı geçiriliyorsa kodun ayıklanmasına neden olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,16 +1,16 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetPublicKey Yöntemi
+title: 'Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: 632e990899346493d5a7df08d293e25b83ed7ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51724aa1ee6101c50c7cdb4b6071fb458814f483
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178734"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213549"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey Yöntemi
-Meclisin genel anahtarını alır.  
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Icordebugmergedassemblyrecord:: GetPublicKey Yöntemi
+Derlemenin ortak anahtarını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,27 +23,27 @@ HRESULT GetPublicKey(
   
 ## <a name="parameters"></a>Parametreler  
  `cbPublicKey`  
- [içinde] `pbPublicKey` Dizideki maksimum bayt sayısı.  
+ 'ndaki Dizideki en fazla bayt sayısı `pbPublicKey` .  
   
  `pcbPublicKey`  
- [çıkış] Diziye yazılan gerçek bayt sayısına `pbPublicKey` işaretçi.  
+ dışı Diziye yazılan gerçek bayt sayısına yönelik bir işaretçi `pbPublicKey` .  
   
  `pbPublicKey`  
- [çıkış] Derlemenin ortak anahtarını içeren bir bayt dizisiiçin işaretçi.  
+ dışı Derlemenin ortak anahtarını içeren bir bayt dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

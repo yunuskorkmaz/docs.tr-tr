@@ -15,36 +15,36 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf725ea98fa4351e72cf592f92968ee2233ecb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948815"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213588"
 ---
 # <a name="icordebugprocess4-interface"></a>ICorDebugProcess4 Arabirimi
 
-İşlem yürütme denetimi dışında için destek sağlar.
+İşlem dışı yürütme denetimi için destek sağlar.
 
 ## <a name="methods"></a>Yöntemler
 
 | Yöntem                                                                 | Açıklama                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Icordebug ardışık düzen işlemi hata ayıklayıcı dışı debugee'nın yürütülmesine devam etmesini bildirir. |
+| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | ICorDebug ardışık düzenine, işlem hata ayıklamanın dışına ayıklandığını bildirir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu arabirim, çalışma zamanı içinde bulunur ve herhangi bir üst bilgiler veya kitaplık dosyaları kullanıma. Ancak, bu, türetilen bir COM arabirimidir `IUnknown` GUID'e sahip `E930C679-78AF-4953-8AB7-B0AABF0F9F80` normal COM mekanizmalar aracılığıyla edinilebilir.
+Bu arabirim çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Ancak, `IUnknown` `E930C679-78AF-4953-8AB7-B0AABF0F9F80` normal com mekanizmalarından elde edilebilir GUID ile TÜRETILEN bir com arabirimidir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** Yok.
+**Üst bilgi:** Seçim
 
-**Kitaplığı:** None
+**Kitaplık:** Seçim
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

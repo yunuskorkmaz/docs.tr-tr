@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 59221b09cc1c5d2d01c1007b649a4bb01de57f04
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794343"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213770"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 Arabirimi
-İşlevin dönüş değerini içeren bir yöntem sağlar. `ICorDebugILFrame3`, ICorDebugILFrame ve ICorDebugILFrame2 arabirimlerinin mantıksal uzantısıdır.  
+İşlevin dönüş değerini içeren bir yöntem sağlar. `ICorDebugILFrame3`, ICorDebugILFrame ve ICorDebugILFrame2 arabirimlerinin mantıksal bir uzantısıdır.  
   
 ## <a name="methods"></a>Yöntemler  
   
@@ -32,13 +32,13 @@ ms.locfileid: "76794343"
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,23 +5,30 @@ helpviewer_keywords:
 - applications [WPF], localizable
 - localizable applications [WPF]
 ms.assetid: 08539ad6-7fca-4f34-b82b-ff439e11dfa7
-ms.openlocfilehash: 3634bb72cbacfb02b0a1230a47a1664cb8ce5009
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 8f516a86036656b98add23d38c588b5c19be4d7a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238456"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212481"
 ---
-# <a name="how-to-use-resources-in-localizable-applications"></a>Nasıl yapılır: Yerelleştirilebilir Uygulamalarda Kaynak Kullanımı
-Yerelleştirme anlamına gelir uyum sağlamak bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] farklı kültürler için. Başlık gibi metin bunun için açıklamalı alt yazılar, liste kutusu öğeleri ve diğerleri çevrilecek sahip. Çeviri kolaylaştırmak için kaynak dosyalarına çevrilmesi için öğeleri toplanır. Bkz: [bir uygulamayı yerelleştirme](how-to-localize-an-application.md) yerelleştirme için bir kaynak dosyasının nasıl oluşturulacağı hakkında bilgi için. Yapmak için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirilebilir geliştiricilerin gereken bir kaynağı derlemeye tüm yerelleştirilebilir kaynakları oluşturmak bir uygulama. Kaynak derlemesi farklı dilde yerelleştirilmiş olan ve arka plan kod yüklemek için kaynak yönetimi API'sini kullanır. İçin gerekli dosyaları birini bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir proje dosyası (.proj) uygulamasıdır. Uygulamanızda kullandığınız tüm kaynakları, proje dosyasında eklenmelidir. Aşağıdaki kod örneği bunu gösterir.  
-  
-## <a name="example"></a>Örnek  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
-  
- `<Resource Include="data\picture1.jpg"/>`  
-  
- `<EmbeddedResource Include="data\stringtable.en-US.restext"/>`  
-  
- Bir kaynak kullanmak için örneği <xref:System.Resources.ResourceManager> ve kullanmak istediğiniz kaynak yükleyin. Bunun nasıl yapılacağı gösterilmektedir.  
-  
- [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+# <a name="how-to-use-resources-in-localizable-apps"></a>Nasıl yapılır: yerelleştirilebilir uygulamalarda kaynakları kullanma
+
+Yerelleştirme, bir kullanıcı arabirimini farklı kültürlere uyarlayacağı anlamına gelir. Bunu yapmak için başlıklar, açıklamalı alt yazılar ve liste kutusu öğeleri gibi metinler çevrilmelidir. Çeviriyi daha kolay hale getirmek için çevrilecek öğeler kaynak dosyalarına toplanır. Yerelleştirme için bir kaynak dosyası oluşturma hakkında bilgi için bkz. [bir uygulamayı yerelleştirin](how-to-localize-an-application.md) . Bir WPF uygulamasını yerelleştirilebilir hale getirmek için geliştiricilerin tüm yerelleştirilebilir kaynakları bir kaynak derlemesinde oluşturması gerekir. Kaynak derlemesi farklı dillere yereldir ve arka plan kodu, yüklemek için kaynak yönetimi API kullanır.
+
+## <a name="example"></a>Örnek
+
+WPF uygulaması için gereken dosyalardan biri bir proje dosyasıdır (. proj). Uygulamanızda kullandığınız tüm kaynaklar proje dosyasına eklenmelidir. Aşağıdaki XAML örneği bunu gösterir.
+
+```xaml
+<Resource Include="data\picture1.jpg"/>  
+<EmbeddedResource Include="data\stringtable.en-US.restext"/>
+```
+
+Uygulamanızda bir kaynak kullanmak için, <xref:System.Resources.ResourceManager> kullanmak istediğiniz kaynağı oluşturun ve yükleyin. Aşağıdaki C# kodu bunun nasıl yapılacağını göstermektedir.
+
+[!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Uygulama yerelleştirme](how-to-localize-an-application.md)

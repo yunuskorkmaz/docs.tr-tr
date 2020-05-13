@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129533"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212548"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName Metodu
 Modülün dosya adını alır.  
@@ -37,7 +37,7 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchname`  
- 'ndaki `szName` dizisinin boyutu.  
+ 'ndaki `szName`Dizinin boyutu.  
   
  `pcchName`  
  'ndaki Döndürülen adın uzunluğuna yönelik bir işaretçi.  
@@ -46,15 +46,15 @@ HRESULT GetName(
  dışı Döndürülen adı depolayan bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Modülün dosya adı diskteki adla eşleşiyorsa `GetName` yöntemi bir S_OK HRESULT döndürür. `GetName`, bir dinamik veya bellek içi modül gibi bir ad olursa, bir S_FALSE HRESULT döndürür.  
+ `GetName`Modülün dosya adı diskteki adla eşleşiyorsa Yöntem bir S_OK HRESULT döndürür. `GetName`ad, dinamik veya bellek içi bir modül için gibi, varsa HRESULT S_FALSE döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

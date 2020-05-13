@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73332138-5fea-441f-b893-61af87d45a42
 topic_type:
 - apiref
-ms.openlocfilehash: 1ef6af11851acbe0f7e9469c9432ff09f9228608
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1a57b7ceb6da961fba1f0d6e8e0ba1aa88ca0541
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792500"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213497"
 ---
 # <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 Arabirimi
 Yönetilen kodu çalıştıran bir işlemi temsil eden ICorDebugProcess arabiriminin mantıksal uzantısı.  
@@ -28,8 +28,8 @@ Yönetilen kodu çalıştıran bir işlemi temsil eden ICorDebugProcess arabirim
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint Yöntemi](icordebugprocess2-clearunmanagedbreakpoint-method.md)|Daha önceki bir `ICorDebugProcess2::SetUnmanagedBreakpoint`çağrısıyla ayarlanan belirtilen uzaklığında bir kesme noktasını kaldırır.|  
-|[GetDesiredNGENCompilerFlags Yöntemi](icordebugprocess2-getdesiredngencompilerflags-method.md)|Görüntüyü bu `ICorDebugProcess2`başvurduğu işleme yüklemek için ortak dil çalışma zamanı (CLR) için ayarlanması gereken bayrakları alır.|  
+|[ClearUnmanagedBreakpoint Yöntemi](icordebugprocess2-clearunmanagedbreakpoint-method.md)|Daha önceki bir çağrısıyla ayarlanan belirtilen uzaklığında bir kesme noktasını kaldırır `ICorDebugProcess2::SetUnmanagedBreakpoint` .|  
+|[GetDesiredNGENCompilerFlags Yöntemi](icordebugprocess2-getdesiredngencompilerflags-method.md)|Görüntüyü bunun başvurduğu işleme yüklemek için ortak dil çalışma zamanı (CLR) için ayarlanması gereken bayrakları alır `ICorDebugProcess2` .|  
 |[GetReferenceValueFromGCHandle Yöntemi](icordebugprocess2-getreferencevaluefromgchandle-method.md)|Bir atık toplama tanıtıcısına sahip olan, belirtilen yönetilen nesneye bir başvuru işaretçisi alır.|  
 |[GetThreadForTaskID Yöntemi](icordebugprocess2-getthreadfortaskid-method.md)|Belirtilen tanımlayıcıya sahip görevin yürütüldüğü iş parçacığını alır.|  
 |[GetVersion Yöntemi](icordebugprocess2-getversion-method.md)|Hata ayıklamakta olan işlemin üzerinde çalıştığı CLR sürümünü alır.|  
@@ -42,13 +42,13 @@ Yönetilen kodu çalıştıran bir işlemi temsil eden ICorDebugProcess arabirim
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

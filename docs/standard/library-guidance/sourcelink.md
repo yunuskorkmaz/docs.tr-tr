@@ -1,43 +1,47 @@
 ---
-title: Kaynak Bağlantı ve .NET kitaplıkları
-description: .NET kitaplıkları için hata ayıklama geliştirmek için Kaynak Bağlantı kullanmak için en iyi uygulama önerileri.
+title: Kaynak bağlantısı ve .NET kitaplıkları
+description: .NET kitaplıklarında hata ayıklamayı geliştirmek için kaynak bağlantısını kullanmaya yönelik en iyi yöntem önerileri.
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744546"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212431"
 ---
 # <a name="source-link"></a>Kaynak Bağlantısı
 
-Kaynak Bağlantı geliştiriciler tarafından NuGet gelen .NET derlemeleri kaynak kodu hata ayıklama sağlayan bir teknolojidir. Kaynak Bağlantısı, NuGet paketini oluştururken yürütür ve kaynak denetimi meta verilerini derlemelerin ve paketin içine yerlebir eder. Paketi indiren ve Visual Studio'da Source Link'i etkinleştiren geliştiriciler, kaynak koduna adım atabilir. Kaynak Bağlantı büyük bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verileri sağlar.
+Kaynak bağlantısı, geliştiriciler tarafından NuGet 'den .NET derlemelerinin kaynak kodu hata ayıklamasını sağlayan bir teknolojidir. NuGet paketini oluştururken kaynak bağlantısı yürütülür ve derleme ve paket içindeki kaynak denetimi meta verilerini katıştırır. Visual Studio 'da paketini indirir ve kaynak bağlantısı etkinleştirilmiş geliştiriciler, kaynak kodunu görebilir. Kaynak bağlantısı, harika bir hata ayıklama deneyimi oluşturmak için kaynak denetimi meta verileri sağlar.
 
-## <a name="source-link-demo"></a>Kaynak Bağlantı demosu
+## <a name="source-link-demo"></a>Kaynak bağlantısı tanıtımı
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-source-link"></a>Kaynak Bağlantısını Kullanma
+## <a name="using-source-link"></a>Kaynak bağlantısı kullanma
 
-Kaynak Bağlantı'yı kullanma yönergeleri [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub deposunda bulunabilir.
+Kaynak bağlantısı kullanma yönergeleri [DotNet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub deposunda bulunabilir.
 
-Kaynak Bağlantı meta verilerinin pakete başarıyla yerleştirildiğini doğrulamak için [NuGet Paket](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) Gezgini'ni kullanabilirsiniz. Meta `Repository` verilerin bir işleme tanımlayıcısıyla mevcut olduğunu ve .pdb dosyalarının her hedefin .dll'si ile bulunduğunu denetleyin.
+Kaynak bağlantısı meta verilerinin pakete başarıyla eklenmiş olduğunu doğrulamak için [NuGet Paket Gezgini](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) ' ni kullanabilirsiniz. `Repository`Meta verilerin bir kayıt tanımlayıcısıyla birlikte var olduğunu ve bu. pdb dosyalarının her hedefin. dll ile bulunduğunu denetleyin.
 
-![NuGet Paket Gezgini'nde Kaynak Bağlantı](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet Paket Gezgini'nde Kaynak Bağlantı")
+![NuGet Paket Gezgininde kaynak bağlantısı](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet Paket Gezgininde kaynak bağlantısı")
 
-✔️ Derlemelerinize ve NuGet paketlerinize kaynak denetimi meta verileri eklemek için Kaynak Bağlantısını kullanmayı düşünün.
+✔️ derlemelerinize ve NuGet paketlerine kaynak denetimi meta verileri eklemek için kaynak bağlantısı kullanmayı düşünün.
 
 > [!TIP]
-> Türünüzüze hata ayıklama öznitelikleri ekleyerek bir geliştiricinin hata ayıklama deneyimini daha da geliştirebilirsiniz.
+> Türlerinizi hata ayıklayıcı öznitelikleri ekleyerek bir geliştiricinin hata ayıklama deneyimini daha da geliştirebilirsiniz.
 >
-> * <xref:System.Diagnostics.DebuggerDisplayAttribute>hata ayıklama değişkeni pencerelerinde bir sınıfın veya alanın nasıl görüntüleneceğini özelleştirebilir.
-> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>hata ayıklayıcıya koda adım atmak yerine kodu niçin geçmesi gerektiğini bildirir.
-> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>bir üyenin hata ayıklama değişkeni penceresinde görüntülenip görüntülenmediğini denetler.
+> * <xref:System.Diagnostics.DebuggerDisplayAttribute>, bir sınıfın veya alanın hata ayıklayıcı değişkeni penceresinde nasıl görüntülendiğini özelleştirebilir.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>hata ayıklayıcıya koda Adımlama yerine kodda adım adım ilermesini söyler.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>hata ayıklayıcı değişkeni penceresinde bir üyenin görüntülenip görüntülenmediğini denetler.
 
-✔️ Simge dosyaları`*.pdb`yayımlama düşünün ( ).
+✔️ sembol dosyalarını yayımlamayı düşünün ( `*.pdb` ).
 
-> En iyi hata ayıklama deneyimi için kitaplığınız sembol dosyaları yayımlamanın yanı sıra Kaynak Bağlantı'yı da kullanmalıdır. Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için [Sembol paketlerine](./nuget.md#symbol-packages)bakın.
+> En iyi hata ayıklama deneyimi için kitaplığınızın sembol dosyalarını yayımlaması ve kaynak bağlantısı kullanması gerekir. Sembol dosyaları ve sembol paketleri hakkında daha fazla bilgi için bkz. [sembol paketleri](./nuget.md#symbol-packages).
+
+✔️ belirleyici derlemeleri etkinleştirmeyi düşünün.
+
+> Belirleyici derlemeler, sonuçta elde edilen ikilinin belirtilen kaynaktan oluşturulduğunu ve izlenebilirlik sağlamasını etkinleştirir. Belirleyici derlemeler ve bunları etkinleştirmeye yönelik yönergeler hakkında daha fazla bilgi için bkz. [belirleyici derlemeler](https://github.com/clairernovotny/DeterministicBuilds).
 
 >[!div class="step-by-step"]
->[Önceki](dependencies.md)
->[Sonraki](publish-nuget-package.md)
+>[Önceki](dependencies.md) 
+> [Sonraki](publish-nuget-package.md)

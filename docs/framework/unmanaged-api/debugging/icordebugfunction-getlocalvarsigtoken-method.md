@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a923701b05f7d283c4fd464d470fb0c9243c1bd5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137893"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213614"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken Metodu
 Bu ICorDebugFunction örneğiyle temsil edilen işlevin yerel değişken imzası için meta veri belirtecini alır.  
@@ -35,13 +35,13 @@ HRESULT GetLocalVarSigToken (
   
 ## <a name="parameters"></a>Parametreler  
  `pmdSig`  
- dışı Bu işlevin yerel değişken imzası için `mdSignature` belirteç işaretçisi veya bu işlevin yerel değişkenleri yoksa `mdSignatureNil`.  
+ dışı `mdSignature`Bu işlevin yerel değişken imzası için belirteç işaretçisi veya `mdSignatureNil` Bu işlevin yerel değişkenleri yoksa.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

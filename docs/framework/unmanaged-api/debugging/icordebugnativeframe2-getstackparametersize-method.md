@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: ca742ba9e89e1d189cfa38dead314df0d8b4e9d1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b88b3907eb555050de93f35411629b2bd30c7375
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792769"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212951"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize Yöntemi
 X86 işletim sistemlerindeki yığındaki parametrelerin birikmiş boyutunu döndürür.  
@@ -43,21 +43,21 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |S_OK|Yığın boyutu başarıyla döndürüldü.|  
 |S_FALSE|`GetStackParameterSize`, x86 olmayan bir platformda çağrıldı.|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize` `null`.|  
+|E_INVALIDARG|`pSize``null`.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Icordebugstackyürüme](icordebugstackwalk-interface.md) yöntemleri, yığına gönderilen parametrelerin yığın işaretçisini ayarlamadığında. Bunun yerine, `GetStackParameterSize` tarafından döndürülen değeri bir yerel unwinder çekirdek olarak ayarlamak için kullanabilirsiniz. Bu, parametreleri ayarlar.  
+ [Icordebugstackyürüme](icordebugstackwalk-interface.md) yöntemleri, yığına gönderilen parametrelerin yığın işaretçisini ayarlamadığında. Bunun yerine, tarafından döndürülen değeri, `GetStackParameterSize` bir yerel unwinder, parametreler için ayarlanacak şekilde, yığın işaretçisini ayarlamak için kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

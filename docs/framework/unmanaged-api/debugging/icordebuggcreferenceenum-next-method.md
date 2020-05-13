@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: d87f414e9dfd05a519b60efc7ecdd5328a6dd86f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf6f9c5fe8777f3333e449a804a3c3a0a64ff19
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178860"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213094"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next Yöntemi
-Çöp toplanacak nesneler hakkında bilgi içeren belirtilen [COR_GC_REFERENCE](cor-gc-reference-structure.md) örnek sayısını alır.  
+Atık olarak toplanabilecek nesneler hakkında bilgi içeren [cor_gc_reference](cor-gc-reference-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,25 +35,25 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- Celt  
- [içinde] Alınacak kök sayısı.  
+ celt  
+ 'ndaki Alınacak köklerin sayısı.  
   
- Kök  
- [çıkış] Her biri çöp toplanacak bir nesnenin kökünü temsil eden [bir COR_GC_REFERENCE](cor-gc-reference-structure.md) nesneyi işaret eden bir dizi işaretçi.  
+ kök  
+ dışı Her biri, atık toplanan bir nesnenin kökünü temsil eden bir [cor_gc_reference](cor-gc-reference-structure.md) nesnesine işaret eden bir işaretçiler dizisi.  
   
- pceltFetched  
- [çıkış] Gerçekte döndürülen `roots` [COR_GC_REFERENCE](cor-gc-reference-structure.md) nesne sayısına işaretçi Bu değer `null` 1 `celt` ise olabilir.  
+ Pceltfettiz  
+ dışı Aslında ' de döndürülen [cor_gc_reference](cor-gc-reference-structure.md) nesnelerinin sayısına yönelik bir işaretçi `roots` . Bu değer 1 ise `null` olabilir `celt` .  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

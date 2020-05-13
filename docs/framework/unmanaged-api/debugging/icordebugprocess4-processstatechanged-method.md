@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged Yöntemi
+title: ICorDebugProcess4::P rocessStateChanged yöntemi
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178636"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213575"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged Yöntemi
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::P rocessStateChanged yöntemi
 
-ICorDebug boru hattına işlem hata ayıklayıcısının debugee'nin yürütmesini devam ettiğini bildirin.
+ICorDebug ardışık düzenine, işlem hata ayıklamanın dışına ayıklandığını bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,24 +37,24 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Parametreler
 
  `eChange`\
-[içinde] İşlemin yürütme durumundaki bir değişikliği açıklayan [CorDebugStateChange numaralandırmasının](cordebugstatechange-enumeration.md) bir üyesi.
+'ndaki İşlemin yürütme durumundaki bir değişikliği açıklayan [Cordebugstatechange numaralandırmasının](cordebugstatechange-enumeration.md) bir üyesi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem `ICorDebugProcess4` arabirimin bir parçasıdır ve sanal yöntem tablosunun dördüncü yuvasına karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `ICorDebugProcess4` ve sanal yöntem tablosunun dördüncü yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üstbilgi:** Hiçbiri
+ **Üst bilgi:** Seçim
 
- **Kütüphane:** Hiçbiri
+ **Kitaplık:** Seçim
 
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICorDebugProcess4 Arabirimi](icordebugprocess4-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)

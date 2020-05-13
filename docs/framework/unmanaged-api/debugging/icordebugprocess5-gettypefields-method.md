@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178598"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212795"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields Metodu
 Bir türe ait alanlar hakkında bilgi sağlar.  
@@ -38,28 +38,28 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Parametreler  
  `id`  
- [içinde] Alan bilgileri alınan türün tanımlayıcısı.  
+ 'ndaki Alan bilgilerinin alındığı türün tanımlayıcısı.  
   
  `celt`  
- [içinde] Alan bilgileri alınacak [olan COR_FIELD](cor-field-structure.md) nesnesayısı.  
+ 'ndaki Alan bilgileri alınacak olan [COR_FIELD](cor-field-structure.md) nesne sayısı.  
   
  `fields`  
- [çıkış] Türe ait alanlar hakkında bilgi sağlayan [COR_FIELD](cor-field-structure.md) nesneler dizisi.  
+ dışı Türe ait alanlar hakkında bilgi sağlayan [COR_FIELD](cor-field-structure.md) nesneleri dizisi.  
   
  `pceltNeeded`  
- [çıkış] 'de `fields`dahil COR_FIELD [nesne](cor-field-structure.md) sayısına işaretçi  
+ dışı İçinde bulunan [COR_FIELD](cor-field-structure.md) nesne sayısı için bir işaretçi `fields` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemin `celt` doldurmak için kullandığı alan bilgilerinin sayısını belirten `fields`parametre, `COR_TYPE_LAYOUT::numFields` alanın değerine karşılık vermelidir.  
+ `celt`Alan bilgilerinin doldurmak için kullandığı alan sayısını belirten parametresi, `fields` alanın değerine karşılık gelmelidir `COR_TYPE_LAYOUT::numFields` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

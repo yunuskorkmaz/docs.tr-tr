@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: 683c2853ea2ed43e61eb666ec56619cb58cde273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6aff37a480460bfed7064d59b4c5276daf3207c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129492"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212509"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken Yöntemi
 Bu modül için tablo girişi belirtecini alır.  
@@ -35,20 +35,20 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Parametreler  
  `pToken`  
- dışı Modülün meta verilerine başvuran `mdModule` belirtecine yönelik bir işaretçi.  
+ dışı `mdModule`Modülün meta verilerine başvuran belirtece yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirteç [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)ve [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) meta veri alma arabirimlerine geçirilebilir.  
+ Belirteç [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)ve [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) meta veri alma arabirimlerine geçirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veriler](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [Meta Veriler](../metadata/index.md)

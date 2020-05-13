@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bcced647af6436bd8f5b1f3779d9368b6173d11
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792707"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213042"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame Yöntemi
 Belirtilen çerçevenin geçerli çerçevenin üst öğesi olup olmadığını belirler.  
@@ -38,7 +38,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  'ndaki Üst durum için değerlendirmek istediğiniz çerçeve nesnesine yönelik bir işaretçi.  
   
  `pIsParent`  
- [out] `pPotentialParentFrame` geçerli çerçevenin üst öğesi ise `true`; Aksi takdirde, `false`.  
+ [out] `true` `pPotentialParentFrame`Geçerli çerçevenin üst öğesi ise, tersi durumda `false` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
@@ -47,21 +47,21 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|Üst durum başarıyla döndürüldü.|  
 |E_FAIL|Üst durum döndürülemedi.|  
-|E_INVALIDARG|`pPotentialParentFrame` veya `pIsParent` null.|  
+|E_INVALIDARG|`pPotentialParentFrame`ya da `pIsParent` null.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsMatchingParentFrame`, yöntemine geçirdiğiniz çerçeve nesnesinin, yöntemin çağrıldığı üst öğesi ise `true` döndürür. Yöntemi belirtilen çerçevenin alt öğesi olmayan bir çerçevede çağırırsanız, bir hata döndürür.  
+ `IsMatchingParentFrame``true`yöntemine geçirdiğiniz çerçeve nesnesinin, yöntemin çağrıldığı çerçeve nesnesinin üst öğesi olup olmadığını döndürür. Yöntemi belirtilen çerçevenin alt öğesi olmayan bir çerçevede çağırırsanız, bir hata döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

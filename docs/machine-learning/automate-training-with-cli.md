@@ -1,42 +1,42 @@
 ---
-title: ML.NET CLI ile model eğitimini otomatikleştirin
-description: Komut satırından en iyi modeli otomatik olarak eğitmek için ML.NET CLI aracını nasıl kullanacağımı keşfedin.
+title: ML.NET CLı ile model eğitimi otomatikleştirin
+description: Komut satırından en iyi modeli otomatik olarak eğiteiçin ML.NET CLı aracının nasıl kullanılacağını öğrenin.
 ms.date: 12/17/2019
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185889"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212418"
 ---
-# <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI ile model eğitimini otomatikleştirin
+# <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLı ile model eğitimi otomatikleştirin
 
-cli ML.NET .NET geliştiricileri için model oluşturma otomatikleştirir.
+ML.NET CLı, .NET geliştiricileri için model oluşturmayı otomatikleştirir.
 
-ML.NET API'yi tek başına kullanmak için (automl CLI ML.NET olmadan) bir eğitmen (belirli bir görev için makine öğrenimi algoritması uygulaması) ve verilerinize uygulamak için veri dönüşümleri kümesini (özellik mühendisliği) seçmeniz gerekir. En uygun ardışık düzen hattı her veri kümesi için değişir ve tüm seçeneklerden en uygun algoritmaseçerek karmaşıklığı ekler. Dahası, her algoritmanın ayarlanacak bir dizi hiperparametresi vardır. Bu nedenle, özellik mühendisliği, öğrenme algoritmaları ve hiperparametrelerin en iyi kombinasyonlarını bulmaya çalışarak makine öğrenimi modeli optimizasyonu üzerinde haftalar ve bazen aylar geçirebilirsiniz.
+ML.NET API 'sini kendisiyle kullanmak için (ML.NET Düzml CLı olmadan), bir daha (belirli bir görev için makine öğrenimi algoritması uygulaması) ve verilerinize uygulanacak veri dönüştürmeleri (özellik Mühendisliği) kümesini seçmeniz gerekir. En iyi işlem hattı her bir veri kümesi için farklılık gösterir ve tüm seçeneklerden en uygun algoritmayı belirlemek karmaşıklığa ekler. Ayrıca, her algoritmanın ayarlanabilir bir hiper parametre kümesi vardır. Bu nedenle, özellik mühendisliğinin, öğrenme algoritmalarının ve hiper parametrelerin en iyi birleşimlerini bulmaya çalışarak, hafta ve bazen aylık olarak makine öğrenimi modeli iyileştirmesi harcamanıza izin verebilirsiniz.
 
-CLI ML.NET otomatik makine öğrenimi (AutoML) kullanarak bu işlemi basitleştirir.
+ML.NET CLı, otomatik makine öğrenimi (Otomatikml) kullanarak bu işlemi basitleştirir.
 
 > [!NOTE]
-> Bu konu, şu anda Önizleme'de olan **cli** ve ML.NET **AutoML**ML.NET anlamına gelir ve malzeme değişebilir.
+> Bu konu, şu anda önizleme aşamasında olan ML.NET **CLI** ve ml.net **oto ml**'ye başvurur ve malzemeler değişebilir.
 
-## <a name="what-is-the-mlnet-command-line-interface-cli"></a>komut satırı arabirimi (CLI) ML.NET nedir?
+## <a name="what-is-the-mlnet-command-line-interface-cli"></a>ML.NET komut satırı arabirimi (CLı) nedir?
 
-CLI ML.NET bir [.NET Core aracıdır.](../core/tools/global-tools.md) Yüklendikten sonra, bir makine öğrenme görevi ve bir eğitim veri seti vermek ve bir ML.NET modeli yanı sıra uygulamanızda modeli kullanmak için çalıştırmak için C# kodu oluşturur.
+ML.NET CLı, bir [.NET Core aracıdır](../core/tools/global-tools.md). Yüklendikten sonra, bir makine öğrenimi görevi ve eğitim veri kümesi verirsiniz ve bir ML.NET modeli, ayrıca uygulamanızdaki modeli kullanmak için çalıştırılacak C# kodu oluşturur.
 
-Aşağıdaki şekilde gösterildiği gibi, yüksek kaliteli bir ML.NET modeli (serileştirilmiş model .zip dosyası) artı örnek C# kodu çalıştırmak / bu modeli puan oluşturmak kolaydır. Buna ek olarak, bu modeli oluşturmak/eğitmek için C# kodu da oluşturulur, böylece "en iyi model" için kullanılan algoritma ve ayarları araştırabilir ve yineleyebilirsiniz.
+Aşağıdaki şekilde gösterildiği gibi, bu modeli çalıştırmak/skor için yüksek kaliteli bir ML.NET modeli (serileştirilmiş model. zip dosyası) ve örnek C# kodu oluşturmak kolaydır. Ayrıca, bu modeli oluşturmak/eğitebilmek için C# kodu da oluşturulur. böylece, bu oluşturulan "en iyi model" için kullanılan algoritmayı ve ayarları araştırıp yineleyebilirsiniz.
 
-![Görüntü](media/automate-training-with-cli/cli-high-level-process.png "CLI ML.NET içinde çalışan AutoML motoru")
+![görüntüyle](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLı içinde çalışan oto ml altyapısı")
 
-Bu varlıkları kendi veri kümelerinizden kendi kodlamadan oluşturabilirsiniz, bu nedenle ML.NET bildiğiniz halde üretkenliğinizi de artırır.
+Kendi veri kümelerinizde, sizin tarafınızdan kodlamadan bu varlıkları oluşturabilirsiniz. bu sayede, ML.NET zaten tanıyor olsanız bile üretkenliğinizi de artırır.
 
-Şu anda, CLI ML.NET tarafından desteklenen ML Görevleri şunlardır:
+Şu anda, ML.NET CLı tarafından desteklenen ML görevleri şunlardır:
 
 - `binary-classification`
 - `multiclass-classification`
 - `regression`
-- Gelecek: gibi diğer makine `recommendation` `ranking`öğrenme `anomaly-detection`görevleri , , ,`clustering`
+- Gelecekte:,,,,,,,,,,,,, `recommendation` `ranking` `anomaly-detection``clustering`
 
 Kullanım örneği:
 
@@ -46,59 +46,59 @@ mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" 
 
 ![image](media/automate-training-with-cli/cli-model-generation.gif)
 
-*Windows PowerShell*, *macOS/Linux bash veya *Windows CMD'de*aynı şekilde çalıştırabilirsiniz. Ancak, tabular otomatik tamamlama (parametre önerileri) *Windows CMD*üzerinde çalışmaz.
+*Windows PowerShell*, *MacOS/Linux Bash*veya *Windows cmd*' de aynı şekilde çalıştırabilirsiniz. Ancak, tablo otomatik tamamlama (parametre önerileri) *WINDOWS cmd*'de çalışmaz.
 
-## <a name="output-assets-generated"></a>Üretilen çıktı varlıkları
+## <a name="output-assets-generated"></a>Oluşturulan çıkış varlıkları
 
-CLI `auto-train` komutu çıktı klasöründe aşağıdaki varlıkları oluşturur:
+CLı `auto-train` komutu, çıkış klasöründe aşağıdaki varlıkları oluşturur:
 
-- Serileştirilmiş bir model .zip ("en iyi model") tahminleri çalıştırmak için kullanıma hazır.
-- C# çözeltisi:
-  - C# kodu ( bu model ile son kullanıcı uygulamalarında öngörüler yapmak için) oluşturulan modeli çalıştırmak / puan.
-  - Bu modeli oluşturmak için kullanılan eğitim kodu ile C# kodu (öğrenme amaçlı veya model yeniden eğitim için).
-- Ayrıntılı yapılandırma/ardışık hatlar da dahil olmak üzere, değerlendirilen birden çok algoritma arasında tüm yinelemelerin/taramaların bilgilerini içeren günlük dosyası.
+- Bir seri hale getirilmiş model. zip ("en iyi model"), tahminleri çalıştırmak için kullanıma uygun.
+- İle C# çözümü:
+  - Oluşturulan modeli çalıştırmak/öğrenmek için C# kodu (bu modelle Son Kullanıcı uygulamalarınızda tahminleri yapmak için).
+  - Bu modeli oluşturmak için kullanılan eğitim koduna sahip C# kodu (öğrenme amaçları veya model yeniden eğitimi için).
+- Ayrıntılı yapılandırma/işlem hattı da dahil olmak üzere, değerlendirilen birden çok algoritmayana tüm yinelemeler/sweeps bilgileri içeren günlük dosyası.
 
-İlk iki varlık, oluşturulan ML modeliyle öngörülerde bulunmak için son kullanıcı uygulamalarınızda (ASP.NET Core web uygulaması, hizmetler, masaüstü uygulaması, vb.) doğrudan kullanılabilir.
+İlk iki varlık, bu oluşturulmuş ML modeliyle tahminler yapmak için Son Kullanıcı uygulamalarınızda (ASP.NET Core Web uygulaması, hizmetler, masaüstü uygulaması vb.) doğrudan kullanılabilir.
 
-Üçüncü varlık, eğitim kodu, oluşturulan modeli eğitmek için CLI tarafından ne ML.NET API kodunun kullanıldığını gösterir, böylece modelinizi yeniden eğitebilir ve cli ve AutoML tarafından kapakların altında belirli eğitmen/algoritma ve hiperparametrelerin seçildiğini araştırabilir ve yineleyebilirsiniz.
+Eğitim kodu olan üçüncü varlık, CLı tarafından oluşturulan modeli eğitemek için hangi ML.NET API kodunun kullanıldığını gösterir. böylece, modelinize yeniden eğitebilir ve tüm özel bir oran/algoritma ve hiper parametrelerin, kapsamaların altındaki CLı ve oto ml tarafından seçili olduğunu araştırın ve yineleyebilirsiniz.
 
 ## <a name="understanding-the-quality-of-the-model"></a>Modelin kalitesini anlama
 
-CLI aracıyla bir 'en iyi model' oluşturduğunuzda, hedeflediğiniz ML görevi için uygun olarak kalite ölçümleri (doğruluk ve R-Squared gibi) görürsünüz.
+CLı aracıyla ' en iyi model ' oluşturduğunuzda, hedeflediğiniz ML görevi için uygun olan kalite ölçümlerini (doğruluk ve R-kare gibi) görürsünüz.
 
-Burada bu ölçümler ML görev tarafından gruplandırılır, böylece otomatik olarak oluşturulan 'en iyi model'in kalitesini anlayabilirsiniz.
+Burada, otomatik olarak oluşturulan ' en iyi modellerinizin kalitesini anlayabilmeniz için bu ölçümler ML görevine göre gruplandırılır.
 
-### <a name="metrics-for-binary-classification-models"></a>İkili Sınıflandırma modelleri için ölçümler
+### <a name="metrics-for-binary-classification-models"></a>Ikili sınıflandırma modelleriyle ilgili ölçümler
 
-Aşağıdaki cli tarafından bulunan ilk beş model için ikili sınıflandırma ML görev ölçümleri listesini görüntüler:
+Aşağıda, CLı tarafından bulunan en iyi beş modelin ikili sınıflandırma ML görev ölçümleri listesi görüntülenir:
 
 ![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
-Doğruluk sınıflandırma sorunları için popüler bir metriktir, ancak doğruluk her zaman aşağıdaki başvurularda açıklandığı gibi en iyi modeli seçmek için en iyi metrik değildir. Ek ölçümlerle modelinizin kalitesini değerlendirmeniz gereken durumlar vardır.
+Doğruluk, sınıflandırma sorunları için popüler bir ölçümdür, ancak doğruluk, aşağıdaki başvurularda açıklanacak şekilde en iyi modeli seçmek için her zaman en iyi ölçüm değildir. Ek ölçümler ile modelinizin kalitesini değerlendirmeniz gereken durumlar vardır.
 
-CLI tarafından çıktı edilen ölçümleri keşfetmek ve anlamak [için ikili sınıflandırma için Değerlendirme ölçümlerine](resources/metrics.md#evaluation-metrics-for-binary-classification)bakın.
+CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [ikili sınıflandırma Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-binary-classification).
 
-### <a name="metrics-for-multi-class-classification-models"></a>Çok Sınıflı Sınıflandırma modelleri için ölçümler
+### <a name="metrics-for-multi-class-classification-models"></a>Çok sınıflı sınıflandırma modelleriyle ilgili ölçümler
 
-CLI tarafından bulunan ilk beş model için çok sınıflı sınıflandırma ML görev ölçümleri listesini aşağıda görüntüler:
+Aşağıda, CLı tarafından bulunan en iyi beş model için çok sınıf sınıflandırma ML görev ölçümleri listesi görüntülenir:
 
 ![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-CLI tarafından çıktı edilen ölçümleri keşfetmek ve anlamak [için, çok sınıflı sınıflandırma için Değerlendirme ölçümlerine](resources/metrics.md#evaluation-metrics-for-multi-class-classification)bakın.
+CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [birden çok Lass sınıflandırması Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
-### <a name="metrics-for-regression-and-recommendation-models"></a>Regresyon ve Öneri modelleri için ölçümler
+### <a name="metrics-for-regression-and-recommendation-models"></a>Gerileme ve öneri modelleriyle ilgili ölçümler
 
-Gözlenen değerler ile modelin öngörülen değerleri arasındaki farklar küçük ve tarafsızsa, bir regresyon modeli verilere iyi uyar. Regresyon belirli ölçümlerle değerlendirilebilir.
+Gözlemlenen değerler ve modelin öngörülen değerleri arasındaki farklılıklar küçük ve taraflı değilse, regresyon modeli verileri iyi bir şekilde sığdırır. Gerileme, belirli ölçümler ile değerlendirilebilir.
 
-CLI tarafından bulunan en iyi beş kaliteli model için benzer bir ölçüm listesi görürsünüz. Bu özel durumda bir regresyon ML görev ile ilgili:
+CLı tarafından bulunan en iyi önde gelen beş kalite modeli için aynı ölçüm listesini görürsünüz. Regresyon ML göreviyle ilgili bu durumda:
 
 ![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
-CLI tarafından çıktı edilen ölçümleri keşfetmek ve anlamak [için, regresyon için Değerlendirme ölçümlerine](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)bakın.
+CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [gerileme Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ML.NET CLI aracı nasıl yüklenir?](how-to-guides/install-ml-net-cli.md)
-- [Öğretici: CLI ML.NET kullanarak duyguları analiz edin](tutorials/sentiment-analysis-cli.md)
-- [ML.NET CLI komut başvurusu](reference/ml-net-cli-reference.md)
-- [ML.NET CLI'de telemetri](resources/ml-net-cli-telemetry.md)
+- [ML.NET CLı aracını yüklemek](how-to-guides/install-ml-net-cli.md)
+- [Öğretici: ML.NET CLı kullanarak yaklaşımı çözümleme](tutorials/sentiment-analysis-cli.md)
+- [ML.NET CLı komut başvurusu](reference/ml-net-cli-reference.md)
+- [ML.NET CLı 'de telemetri](resources/ml-net-cli-telemetry.md)

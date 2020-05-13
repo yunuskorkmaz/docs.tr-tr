@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137791"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213198"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus Yöntemi
 Yalnızca kendi kodum Adımlama için bu ICorDebugFunction2 tarafından temsil edilen işlevi işaretler.  
@@ -35,7 +35,7 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametreler  
  `bIsJustMyCode`  
- 'ndaki İşlevi Kullanıcı kodu olarak işaretlemek için `true` olarak ayarlayın; Aksi takdirde, `false`olarak ayarlayın.  
+ 'ndaki `true`İşlevi Kullanıcı kodu olarak işaretlemek için olarak ayarlayın; Aksi takdirde, olarak ayarlayın `false` .  
   
 ## <a name="return-values"></a>Dönüş Değerleri  
   
@@ -48,10 +48,10 @@ HRESULT SetJMCStatus (
  Bir Yalnızca kendi kodum Stepper, Kullanıcı olmayan kodu atlar. Kullanıcı kodu hata ayıklanabilir kodunun bir alt kümesi olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
