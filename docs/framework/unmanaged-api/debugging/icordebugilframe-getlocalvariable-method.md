@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8706356-d50b-4f87-a40c-39c3b7f4fd38
 topic_type:
 - apiref
-ms.openlocfilehash: 85f06b49aab1f1d1745bd7e359ed311c2ba1e44d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d6ce5a5cc64a5eb805faa5bb17a42a662940affe
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130976"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210260"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable Metodu
 Bu Microsoft ara dili (MSIL) yığın çerçevesinde belirtilen yerel değişkenin değerini alır.  
@@ -42,13 +42,13 @@ HRESULT GetLocalVariable (
  dışı Alınan değeri temsil eden ICorDebugValue nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetLocalVariable` yöntemi bir MSIL yığın çerçevesinde veya tam zamanında (JıT) derlenmiş çerçevede kullanılabilir.  
+ `GetLocalVariable`Yöntemi, BIR MSIL yığın çerçevesinde veya tam zamanında (JIT) derlenmiş bir çerçevede kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

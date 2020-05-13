@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 722d0d74-e0df-491f-98c4-62d501dfaf6f
 topic_type:
 - apiref
-ms.openlocfilehash: 715ff5d4a06b53361d550f04e5154023d0b641bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9020fed83b1c57cae3cc492872a279afb0195983
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095118"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205169"
 ---
 # <a name="icordebugilframe2enumeratetypeparameters-method"></a>ICorDebugILFrame2::EnumerateTypeParameters Yöntemi
-Bu çerçevede <xref:System.Type> parametrelerini içeren bir ICorDebugTypeEnum nesnesi alır.  
+Bu çerçevedeki parametreleri içeren bir ICorDebugTypeEnum nesnesi alır <xref:System.Type> .  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,15 +40,15 @@ HRESULT EnumerateTypeParameters (
  Tür parametrelerinin listesi, sınıf türü parametreleri (varsa) ve ardından Yöntem türü parametreleri (varsa) içerir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu listenin kaç sınıf türü parametre ve yöntem türü parametrelerinin içerdiğini öğrenmek için [IMetaDataImport2:: EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) metodunu kullanın.  
+ Bu listenin kaç sınıf türü parametre ve yöntem türü parametrelerinin içerdiğini öğrenmek için [IMetaDataImport2:: EnumGenericParams](../metadata/imetadataimport2-enumgenericparams-method.md) metodunu kullanın.  
   
  Tür parametreleri her zaman kullanılabilir değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

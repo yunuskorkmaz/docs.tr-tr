@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781528"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210208"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception Yöntemi
 Hata ayıklayıcıya bir özel durum işleyici aramasının başlatıldığını bildirir.  
@@ -46,10 +46,10 @@ HRESULT Exception (
  'ndaki Özel durumun oluşturulduğu iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
  `pFrame`  
- 'ndaki `dwEventType` parametresi tarafından belirlendiği şekilde, bir çerçeveyi temsil eden ICorDebugFrame nesnesine yönelik bir işaretçi. Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
+ 'ndaki Parametresi tarafından belirlendiği şekilde, bir çerçeveyi temsil eden ICorDebugFrame nesnesine yönelik bir işaretçi `dwEventType` . Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
   
  `nOffset`  
- 'ndaki `dwEventType` parametresi tarafından belirlendiği şekilde, bir sapmayı belirten tamsayı. Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
+ 'ndaki Parametresi tarafından belirlendiği şekilde, bir sapmayı belirten tamsayı `dwEventType` . Daha fazla bilgi için, açıklamalar bölümündeki tabloya bakın.  
   
  `dwEventType`  
  'ndaki Bu özel durum geri çağrısının türünü belirten CorDebugExceptionCallbackType numaralandırması değeri.  
@@ -58,13 +58,13 @@ HRESULT Exception (
  'ndaki Özel durum hakkında ek bilgi belirten [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) sabit listesinin bir değeri  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Exception` geri çağırması, özel durum işleme işleminin arama aşamasında çeşitli noktalarda çağrılır. Diğer bir deyişle, özel durum geriye doğru bir şekilde bir kez çağrılabilir.  
+ `Exception`Geri çağırma, özel durum işleme sürecinin arama aşamasında çeşitli noktalarda çağrılır. Diğer bir deyişle, özel durum geriye doğru bir şekilde bir kez çağrılabilir.  
   
- İşlenmekte olan özel durum, `pThread` parametresi tarafından başvurulan ICorDebugThread nesnesinden alınabilir.  
+ İşlenmekte olan özel durum, parametrenin başvurduğu ICorDebugThread nesnesinden alınabilir `pThread` .  
   
- Belirli bir çerçeve ve fark, `dwEventType` parametresine göre belirlenir:  
+ Belirli bir çerçeve ve konum `dwEventType` parametresi tarafından aşağıdaki gibi belirlenir:  
   
-|`dwEventType` değeri|`pFrame` değeri|`nOffset` değeri|  
+|Değeri`dwEventType`|Değeri`pFrame`|Değeri`nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Özel durumu oluşturan çerçeve.|Çerçevedeki yönerge işaretçisi.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Oluşturulan özel durum noktasına en yakın Kullanıcı kodu çerçevesi.|Çerçevedeki yönerge işaretçisi.|  
@@ -72,13 +72,13 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Tanımlayan.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

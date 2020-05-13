@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139394"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83211553"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub Yöntemi
 Bir adresin, yönetilen koda geçişe neden olacak bir saplama içinde olup olmadığını gösteren bir değer alır.  
@@ -35,21 +35,21 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- 'ndaki Söz konusu adresi belirten bir `CORDB_ADDRESS` değeri.  
+ 'ndaki `CORDB_ADDRESS`Söz konusu adresi belirten bir değer.  
   
  `pbTransitionStub`  
- dışı Belirtilen adres, yönetilen koda geçişe neden olacak bir saplama içindeyse, `true` Boole değeri işaretçisi; Aksi halde *`pbTransitionStub` `false`.  
+ dışı `true`Belirtilen adres, yönetilen koda geçişe neden olacak bir saplama içindeyse bir Boole değeri işaretçisi; Aksi takdirde * `pbTransitionStub` olur `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsTransitionStub` yöntemi, yönetilmeyen atlama kodu tarafından, yönetilen Stepper üzerinde atlama denetimini ne zaman döneceğine karar vermek için kullanılabilir.  
+ `IsTransitionStub`Yöntemi, yönetilmeyen atlama kodu tarafından, yönetilen Stepper üzerinde atlama denetimini ne zaman döneceğine karar vermek için kullanılabilir.  
   
  Taşınabilir çalıştırılabilir (PE) dosyasındaki bilgilere bakarak da geçiş saplamalarını de kullanabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

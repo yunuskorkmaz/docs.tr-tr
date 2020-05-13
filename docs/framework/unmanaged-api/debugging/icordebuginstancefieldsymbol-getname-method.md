@@ -1,15 +1,15 @@
 ---
-title: ICorDebugInstanceFieldSymbol::GetName Yöntemi
+title: 'Icordebugınstancefieldsymbol:: GetName Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: dd925cc213ed8a6c5d1def85b3e6335751c1b594
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f1b648f494a2f2676374cfd13db46b70f1f195c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178768"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210000"
 ---
-# <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName Yöntemi
+# <a name="icordebuginstancefieldsymbolgetname-method"></a>Icordebugınstancefieldsymbol:: GetName Yöntemi
 Örnek alanının adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -24,27 +24,27 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [içinde] `szName` Arabellekteki karakter sayısı.  
+ 'ndaki Arabellekteki karakterlerin sayısı `szName` .  
   
  `pcchName`  
- [çıkış] Arabelleğe yazılan karakter sayısına `szName` işaretçi.  
+ dışı Gerçekte arabelleğe yazılan karakter sayısına yönelik bir işaretçi `szName` .  
   
  `szName`  
- [çıkış] Döndürülen adı depolayan bir karakter dizisi.  
+ dışı Döndürülen adı depolayan bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: aff8fb0a2316817e413f10e82215556f1f54fbc4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9270afa1d8c8ddd74cfe6dd05e39c1480f5767e6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109632"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206945"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress Yöntemi
 Modülün temel adresini alır.  
@@ -35,18 +35,18 @@ HRESULT GetBaseAddress(
   
 ## <a name="parameters"></a>Parametreler  
  `pAddress`  
- dışı Modülün temel adresini belirten bir `CORDB_ADDRESS`.  
+ dışı `CORDB_ADDRESS`Modülün temel adresini belirten bir.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Modül yerel bir görüntüdür (yani, modül yerel görüntü Oluşturucu, NGen. exe) tarafından üretildiyse, taban adresi sıfır olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

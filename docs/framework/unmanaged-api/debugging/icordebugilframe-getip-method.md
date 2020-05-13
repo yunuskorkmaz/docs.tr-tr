@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: f30516a8f59b90de9b4c052d92a8c88575ace3c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3890cb4236f113bc6efc23bfb606d19a525ec234
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178832"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210273"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP Metodu
-Yönerge işaretçisinin değerini ve yönerge işaretçisinin değerinin nasıl elde edildiğini açıklayan bitwise birleşim değerini alır.  
+Yönerge işaretçisinin değerini ve yönerge işaretçisi değerinin nasıl elde edileceğini açıklayan bit düzeyinde birleşim değerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,21 +36,21 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parametreler  
  `pnOffset`  
- [çıkış] Yönerge işaretçisinin değeri.  
+ dışı Yönerge işaretçisinin değeri.  
   
  `pMappingResult`  
- [çıkış] Yönerge işaretçisinin değerinin nasıl elde edildiğini açıklayan CorDebugMappingResult numaralandırma değerlerinin bitwise birleşimine işaretçi.  
+ dışı Yönerge işaretçisinin değerinin nasıl elde edildiğini tanımlayan CorDebugMappingResult numaralandırma değerlerinin bit düzeyinde birleşimine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yönerge işaretçisinin değeri, yığın çerçevesinin işlevin Microsoft ara dili (MSIL) koduna mahsup çalışmasıdır. Yığın çerçevesi etkinse, bu adres yürütülecek bir sonraki yönergedir. Yığın çerçevesi etkin değilse, bu adres, yığın çerçevesi yeniden etkinleştirildiğinde yürütülecek sonraki yönergedir.  
+ Yönerge işaretçisinin değeri, yığın çerçevesinin işlevin Microsoft ara dil (MSIL) koduna olan aralıkdır. Yığın çerçevesi etkinse, bu adres yürütülecek sonraki yönergedir. Yığın çerçevesi etkin değilse, bu adres yığın çerçevesi yeniden etkinleştirildiğinde yürütülecek sonraki yönergedir.  
   
- Bu çerçeve tam zamanında (JIT) derlenmiş bir çerçeveyse, yönerge işaretçisinin değeri gerçek yerel yönerge işaretçisinden geriye doğru eşlenerek belirlenir, böylece değer yalnızca yaklaşık olabilir.  
+ Bu çerçeve tam zamanında (JıT) derlenmiş bir çerçevedir, yönerge işaretçisinin değeri gerçek yerel yönerge işaretçisinden geriye doğru eşleme yaparak belirlenir, bu nedenle değer yalnızca yaklaşık olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea574c84-c622-4589-9a14-b55771af5e06
 topic_type:
 - apiref
-ms.openlocfilehash: b28e457ea0b51d320581c0fbe36574698081ea36
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f73919634ba15dfd16694676d1389875fc2d79bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792956"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210195"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>ICorDebugModule2::SetJITCompilerFlags Yöntemi
 Bu ICorDebugModule2 'ın tam zamanında (JıT) derlemesini denetleyen bayrakları ayarlar.  
@@ -38,17 +38,17 @@ HRESULT SetJITCompilerFlags (
  'ndaki [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) numaralandırma değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `dwFlags` değeri geçersizse, `SetJITCompilerFlags` yöntemi başarısız olur.  
+ `dwFlags`Değer geçersizse, `SetJITCompilerFlags` Yöntem başarısız olur.  
   
- `SetJITCompilerFlags` yöntemi yalnızca bu modül için [ICorDebugManagedCallback:: LoadModule](icordebugmanagedcallback-loadmodule-method.md) geri çağırması içinden çağrılabilir. `ICorDebugManagedCallback::LoadModule` geri çağırma işlemi teslim edildikten sonra bu aramayı çağırma girişimleri başarısız olur.  
+ `SetJITCompilerFlags`Yöntemi yalnızca bu modül Için [ICorDebugManagedCallback:: LoadModule](icordebugmanagedcallback-loadmodule-method.md) geri çağırması içinden çağrılabilir. Geri çağırma işlemi geri alındıktan sonra çağrı denemeleri `ICorDebugManagedCallback::LoadModule` başarısız olur.  
   
- Düzenle ve devam et, 64-bit veya Win9x platformlarında desteklenmez. Bu nedenle, bu iki platformda `SetJITCompilerFlags` yöntemini `dwFlags`CORDEBUG_JIT_ENABLE_ENC bayrağıyla ayarlarsanız çağırırsanız, `SetJITCompilerFlags` yöntemi ve [ICorDebugModule2:: ApplyChanges](icordebugmodule2-applychanges-method.md)gibi Düzenle ve devam et 'e özgü tüm yöntemler başarısız olur.  
+ Düzenle ve devam et, 64-bit veya Win9x platformlarında desteklenmez. Bu nedenle, `SetJITCompilerFlags` yöntemi ' de ayarlanmış CORDEBUG_JIT_ENABLE_ENC bayrağı ile bu iki platformundan birine çağırırsanız `dwFlags` , `SetJITCompilerFlags` [ICorDebugModule2:: ApplyChanges](icordebugmodule2-applychanges-method.md)gibi, düzenleme ve devam etme yöntemine özgü Yöntem ve tüm yöntemler başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

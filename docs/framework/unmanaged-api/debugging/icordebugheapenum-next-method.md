@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: f5af8e559b4fbfeb60530372185ca10104ade987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178859"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208479"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next Yöntemi
-Yönetilen yığındaki nesneler hakkında bilgi içeren belirtilen COR_HEAPOBJECT [örnek](cor-heapobject-structure.md) sayısını alır.  
+Yönetilen yığında nesneler hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,26 +35,26 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- Celt  
- [içinde] Alınacak nesne sayısı.  
+ celt  
+ 'ndaki Alınacak nesne sayısı.  
   
   nesneleri  
- [çıkış] Her biri yönetilen yığındaki bir nesne hakkında bilgi sağlayan [COR_HEAPOBJECT](cor-heapobject-structure.md) nesneyi işaret eden bir dizi işaretçi.  
+ dışı Her biri yönetilen yığında bir nesne hakkında bilgi sağlayan [cor_heapobject](cor-heapobject-structure.md) nesnesine işaret eden işaretçiler dizisi.  
   
- pceltFetched  
- [çıkış] Gerçekte döndürülen [COR_HEAPOBJECT](cor-heapobject-structure.md) nesne sayısına `objects`işaretçi Bu değer `null` 1 `celt` ise olabilir.  
+ Pceltfettiz  
+ dışı Aslında ' de döndürülen [cor_heapobject](cor-heapobject-structure.md) nesnelerinin sayısına yönelik bir işaretçi `objects` . Bu değer 1 ise `null` olabilir `celt` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alan, `COR_HEAPOBJECT.type` iç içe başvuru sayılan COM arabiriminin tanımlayıcısIdır. Bu başvuru, `ICorDebugHeapEnum::Next`'' 'yi arayan kişi tarafından serbest bırakılmalıdır.  
+ `COR_HEAPOBJECT.type`Alan, iç içe geçmiş bir başvuru SAYıLı com arabiriminin tanımlayıcısıdır. Bu başvuru, çağıran tarafından yayınlanmalıdır `ICorDebugHeapEnum::Next` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178617"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209701"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences Yöntemi
-Bir işlemde çöp olarak toplanacak olan tüm nesneler için bir sayısallaştırıcı alır.  
+Bir işlemde çöp toplanabilecek tüm nesneler için bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>Parametreler  
  `enumerateWeakReferences`  
- [içinde] Zayıf başvuruların da numaralandırılıp numaralandırılmayacağını gösteren bir Boolean değeri. `enumerateWeakReferences` Ise, `true` `ppEnum` sayısallaştırıcı hem güçlü başvurular hem de zayıf referanslar içerir. `enumerateWeakReferences` Ise, `false`sayısallaştırıcı yalnızca güçlü başvurular içerir.  
+ 'ndaki Zayıf başvuruların da oluşturulup oluşturulmayacağını gösteren bir Boolean değer. `enumerateWeakReferences`İse `true` , `ppEnum` Numaralandırıcı hem güçlü başvuruları hem de zayıf başvuruları içerir. `enumerateWeakReferences`İse `false` , Numaralandırıcı yalnızca güçlü başvurular içerir.  
   
  `ppEnum`  
- [çıkış] Nesnelerin çöp olarak toplanması için bir sayıyalı olan [bir ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) adresine işaretçi.  
+ dışı Çöp toplanabilecek nesneler için bir Numaralandırıcı olan [ıcorıtcggcreferenceenum](icordebuggcreferenceenum-interface.md) adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir işlemde yönetilen herhangi bir nesne için tam köklenme zincirini belirlemek için bir yol sağlar ve bir nesnenin neden hala hayatta olduğunu belirlemek için kullanılabilir.  
+ Bu yöntem, bir işlemdeki yönetilen herhangi bir nesne için tam kök zinciri belirlemenin bir yolunu sağlar ve bir nesnenin neden hala etkin olduğunu tespit etmek için kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

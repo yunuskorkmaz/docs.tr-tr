@@ -17,29 +17,30 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff40e8759b1732d4ad228b1414f96f9c37e5ac5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180612"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209779"
 ---
-# <a name="using-udp-services"></a>UDP Hizmetleri Kullanma
-Sınıf <xref:System.Net.Sockets.UdpClient> UDP kullanarak ağ hizmetleri ile iletişim kurar. <xref:System.Net.Sockets.UdpClient> Sınıfın özellikleri ve yöntemleri UDP kullanarak <xref:System.Net.Sockets.Socket> veri istemek ve almak için oluşturma ayrıntılarını özetler.
+# <a name="use-udp-services"></a>UDP hizmetlerini kullanma
 
-Kullanıcı Datagram Protokolü (UDP), uzak bir ana bilgisayara veri sağlamak için en iyi çabayı gösteren basit bir protokoldür. Ancak, UDP protokolü bağlantısız bir protokol olduğundan, uzak uç noktasına gönderilen UDP verigramlarının gelmesi garanti edilmez ve gönderildikleri sırayla ulaşmaları garanti edilmez. UDP kullanan uygulamalar eksik, yinelenen ve sıra dışı veri gramlarını işlemek için hazırlanmalıdır.
+<xref:System.Net.Sockets.UdpClient>Sınıfı, UDP kullanarak ağ hizmetleriyle iletişim kurar. Sınıfının özellikleri ve yöntemleri, <xref:System.Net.Sockets.UdpClient> <xref:System.Net.Sockets.Socket> UDP kullanarak veri istemek ve almak için oluşturma ayrıntılarını soyutlar.
 
-UDP kullanarak bir veri gramı göndermek için, gereksinim duyduğunuz hizmeti barındıran ağ aygıtının ağ adresini ve hizmetin iletişim kurmak için kullandığı UDP bağlantı noktası numarasını bilmeniz gerekir. Internet Atanmış Sayılar Yetkilisi (Iana), ortak hizmetler için bağlantı noktası numaralarını tanımlar (bkz. [Hizmet Adı ve Taşıma Protokolü Bağlantı Noktası Numarası Kayıt Defteri).](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) Iana listesinde olmayan hizmetlerin bağlantı noktası numaraları 1.024 ile 65.535 arasında olabilir.
+Kullanıcı veri birimi Protokolü (UDP), uzak bir konağa veri teslim etmeyi en iyi şekilde kolaylaştıran bir basit protokoldür. Bununla birlikte, UDP protokolü bağlantısız bir protokol olduğundan, uzak uç noktaya gönderilen UDP veri birimlerinin gelmesi garanti edilmez, ne de gönderildikleri sırada gelmesi garanti edilir. UDP kullanan uygulamalar eksik, yinelenen ve dizi dışı datagramları işleyecek şekilde hazırlanmalıdır.
 
-ÖZEL ağ adresleri, IP tabanlı ağlardaki UDP yayın iletilerini desteklemek için kullanılır. Aşağıdaki tartışma, Internet'te kullanılan IP sürüm 4 adresi ailesini örnek olarak kullanır.
+UDP kullanarak bir veri birimi göndermek için, ihtiyacınız olan hizmeti barındıran ağ cihazının ağ adresini ve hizmetin iletişim kurmak için kullandığı UDP bağlantı noktası numarasını bilmeniz gerekir. Internet atanmış numaralar yetkilisi (ıANA), ortak hizmetler için bağlantı noktası numaralarını tanımlar (bkz. [hizmet adı ve Aktarım Protokolü bağlantı noktası numarası kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). IANA listesinde bulunmayan hizmetler 1.024-65.535 aralığında bağlantı noktası numaralarına sahip olabilir.
 
-IP sürüm 4 adresleri bir ağ adresi belirtmek için 32 bit kullanır. 255.255.255.0 netmask kullanarak C sınıfı adresler için bu bitler dört sekizliye ayrılır. Ondalık olarak ifade edildiğinde, dört sekizli 192.168.100.2 gibi tanıdık noktalı dörtlü gösterimi oluşturur. İlk iki sekizli (bu örnekte 192.168) ağ numarasını oluşturur, üçüncü sekizli (100) alt ağı tanımlar ve son sekizli (2) ana bilgisayar tanımlayıcısIdır.
+Özel ağ adresleri IP tabanlı ağlardaki UDP yayın iletilerini desteklemek için kullanılır. Aşağıdaki tartışmada, Internet üzerinde kullanılan IP sürüm 4 adres ailesi bir örnek olarak kullanılmaktadır.
 
-Bir IP adresinin tüm bitlerini bir veya 255.255.255.255 olarak ayarlamak sınırlı yayın adresini oluşturur. Bu adrese bir UDP veri gramı göndermek, iletiyi yerel ağ segmentindeki herhangi bir ana bilgisayara gönderir. Yönlendiriciler bu adrese gönderilen iletileri hiçbir zaman iletmediğinden, yayın iletisini yalnızca ağ segmentindeki ana bilgisayarlar alır.
+IP sürüm 4 adresleri bir ağ adresi belirtmek için 32 bit kullanır. 255.255.255.0 ağ maskesini kullanan sınıf C adresleri için, bu bitler dört sekizlik ile ayrılır. Ondalık olarak ifade edildiğinde, dört sekizli, 192.168.100.2 gibi tanıdık noktalı dörtlü gösterimi oluşturur. İlk iki sekizli (Bu örnekteki 192,168) ağ numarasını, üçüncü sekizli (100) alt ağı tanımlar ve son sekizli (2) konak tanımlayıcısıdır.
 
-Yayınlar, ana bilgisayar tanımlayıcısının tüm bitlerini ayarlayarak ağın belirli bölümlerine yönlendirilebilir. Örneğin, 192.168.1 ile başlayan IP adresleri tarafından tanımlanan ağdaki tüm ana bilgisayarlara yayın göndermek için 192.168.1.255 adresini kullanın.
+Bir IP adresinin tüm bitlerini bir veya 255.255.255.255 olarak ayarlamak, sınırlı yayın adresini oluşturur. Bu adrese bir UDP veri birimi gönderilmesi, iletiyi yerel ağ kesimindeki herhangi bir konağa gönderir. Yönlendiriciler bu adrese gönderilen iletileri hiçbir şekilde iletmediği için, yalnızca ağ kesimindeki konaklar yayın iletisini alır.
 
-Aşağıdaki kod örneği, <xref:System.Net.Sockets.UdpClient> bağlantı noktası 11.000'deki UDP verigramlarını dinlemek için bir örnek kullanır. İstemci bir ileti dizesi alır ve iletiyi konsola yazar.
+Yayınlar, ana bilgisayar tanımlayıcısının tüm bitlerini ayarlayarak bir ağın belirli bölümlerine yönlendirilebilir. Örneğin, 192.168.1 ile başlayan IP adresleri tarafından tanımlanan ağdaki tüm konaklara bir yayın göndermek için 192.168.1.255 aralığındaki adresini kullanın.
+
+Aşağıdaki kod örneği, <xref:System.Net.Sockets.UdpClient> bağlantı noktası 11.000 ' DEKI UDP datagramları dinlemek için bir kullanır. İstemci bir ileti dizesi alır ve iletiyi konsola yazar.
 
 ```vb
 Imports System.Net
@@ -115,7 +116,7 @@ public class UDPListener
 }
 ```
 
-Aşağıdaki kod örneği, <xref:System.Net.Sockets.Socket> 11.000 no'lu bağlantı noktasını kullanarak UDP veri gramlarını yönlendirilmiş yayın adresi 192.168.1.255'e göndermek için kullanılır. İstemci komut satırında belirtilen ileti dizesini gönderir.
+Aşağıdaki kod örneği, <xref:System.Net.Sockets.Socket> 11.000 numaralı bağlantı noktasını kullanarak 192.168.1.255 aralığındaki yönlendirilmiş yayın ADRESINE UDP veri birimleri göndermek için bir kullanır. İstemci, komut satırında belirtilen ileti dizesini gönderir.
 
 ```vb
 Imports System.Net

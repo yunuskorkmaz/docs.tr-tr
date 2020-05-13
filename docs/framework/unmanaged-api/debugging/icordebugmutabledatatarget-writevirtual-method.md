@@ -2,12 +2,12 @@
 title: 'Icordebugmutabledatatarget:: WriteVirtual yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 2b4bd1dc97f37f5a514ab54f9e4d778fe3b91736
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6325dba99fba0ab5e2f752a0635fdd428d3065eb
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792827"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206750"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>Icordebugmutabledatatarget:: WriteVirtual yöntemi
 Belleği hedef işlem adres alanına yazar.  
@@ -23,28 +23,28 @@ HRESULT WriteVirtual(
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- 'ndaki `pBuffer`içeriğinin yazılacağı adres.  
+ 'ndaki İçeriğin yazılacağı adres `pBuffer` .  
   
  `pBuffer`  
  'ndaki Yazılacak baytları içeren bir bayt dizisine yönelik bir işaretçi.  
   
  `address`  
- 'ndaki `pBuffer`bayt sayısı.  
+ 'ndaki İçindeki bayt sayısı `pBuffer` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- başarılı veya hata durumunda başka bir `HRESULT` `S_OK`.  
+ `S_OK`başarılı veya `HRESULT` başarısız olduğunda.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Herhangi bir bayt yazılamaz ise, yöntem çağrısı, hedef adres alanındaki herhangi bir bayt değiştirilmeden başarısız olur. (Aksi halde, hedef, güvenli olmayan bir şekilde hata ayıklama olanağı sunan tutarsız bir durumda olabilir.)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

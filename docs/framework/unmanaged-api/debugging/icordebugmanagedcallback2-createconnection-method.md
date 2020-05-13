@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 51d34e68851bc6a60d25f643f63d112396abdc4e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781589"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209077"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection Yöntemi
 Hata ayıklayıcıya yeni bir bağlantı oluşturulduğunu bildirir.  
@@ -46,20 +46,20 @@ HRESULT CreateConnection (
  'ndaki Yeni bağlantının adı için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateConnection` geri çağırma aşağıdaki durumlardan biri içinde tetiklenir:  
+ `CreateConnection`Aşağıdaki durumlardan birinde bir geri çağırma harekete geçirilir:  
   
-- Bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirayarlandığında. Bu durumda, çalışma zamanı, işlemdeki her bağlantı için bir `CreateConnection` olayı ve bir [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) olayı oluşturur ve gönderir.  
+- Bir hata ayıklayıcı bağlantıları içeren bir işleme iliştirayarlandığında. Bu durumda, çalışma zamanı `CreateConnection` işlemdeki her bağlantı için bir olay ve bir [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md) olayı oluşturur ve gönderir.  
   
-- Bir ana bilgisayar [BARıNDıRMA API](../../../../docs/framework/unmanaged-api/hosting/index.md)'Sinde [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) öğesini çağırdığında.  
+- Bir ana bilgisayar [BARıNDıRMA API](../hosting/index.md)'Sinde [ICLRDebugManager:: BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) öğesini çağırdığında.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

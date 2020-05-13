@@ -2,15 +2,15 @@
 title: ICorDebugProcess6::GetCode Metodu
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-ms.openlocfilehash: 94882c67752705f9f13b858ae3b386a19dc103a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 178d1df7e6c8246b18afed442e944c49051b6597
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178550"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209272"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode Metodu
-Belirli bir kod adresindeyönetilen kod hakkında bilgi alır.  
+Belirli bir kod adresindeki yönetilen kodla ilgili bilgileri alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,24 +22,24 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>Parametreler  
  `codeAddress`  
- [içinde] Yönetilen kod kesiminin başlangıç adresini belirten [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) değeri.  
+ 'ndaki Yönetilen kod segmentinin başlangıç adresini belirten [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) değeri.  
   
  `ppCode`  
- [çıkış] Yönetilen kodun bir kesimini temsil eden "ICorDebugCode" nesnesinin adresine işaretçi.  
+ dışı Yönetilen kod segmentini temsil eden bir "ICorDebugCode" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

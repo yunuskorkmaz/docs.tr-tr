@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 15900fab59d172ada67d8aefeab698e1b44f808e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 923e9b0821788143fff59eafe10d1802583df7a6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794385"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210429"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList Yöntemi
 Bir izleyici kilidi ile ilişkili olayda sıraya alınan iş parçacıklarının sıralı bir listesini sağlar.  
@@ -45,27 +45,27 @@ HRESULT GetMonitorEventWaitList (
 |S_OK|Liste boş değil.|  
 |S_FALSE|Liste boş.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
- Listedeki ilk iş parçacığı, <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>sonraki çağrısıyla yayınlanan ilk iş parçacığıdır. Listedeki bir sonraki iş parçacığı aşağıdaki çağrıda yayımlanır ve bu şekilde devam eder.  
+ Listedeki ilk iş parçacığı, sonraki çağrısıyla yayınlanan ilk iş parçacığıdır <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType> . Listedeki bir sonraki iş parçacığı aşağıdaki çağrıda yayımlanır ve bu şekilde devam eder.  
   
  Liste boş değilse, bu yöntem S_OK döndürür. Liste boşsa, yöntem S_FALSE döndürür; Bu durumda, numaralandırma hala geçerlidir, ancak boş olur.  
   
  Her iki durumda da, numaralandırma arabirimi yalnızca geçerli eşitlenmiş durumun süresi boyunca kullanılabilir. Ancak, iş parçacığından gelen arabirimler, iş parçacığı çıkıncaya kadar geçerlidir.  
   
- `ppThreadEnum` geçerli bir işaretçi değilse, sonuç tanımsızdır.  
+ `ppThreadEnum`Geçerli bir işaretçi değilse, sonuç tanımsızdır.  
   
  Bir hata oluşursa, herhangi bir iş parçacığı izleyiciden bekliyorsa, yöntem hata belirten bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

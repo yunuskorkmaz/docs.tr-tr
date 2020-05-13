@@ -11,15 +11,15 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: d5e51e86c4c37c882c8a061e60d2d21587d0d3d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559428"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212210"
 ---
 # <a name="globalization-and-localization"></a>Genelleştirme ve Yerelleştirme
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], dünya çapında sunulan uygulamaların geliştirilmesi için kapsamlı destek sağlar.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Dünya çapında sunulan uygulamaların geliştirilmesi için kapsamlı destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış](wpf-globalization-and-localization-overview.md)  
@@ -27,7 +27,7 @@ ms.locfileid: "75559428"
  [Otomatik Düzen Kullanımına Genel Bakış](use-automatic-layout-overview.md)  
  [Yerelleştirme Öznitelikleri ve Yorumlar](localization-attributes-and-comments.md)  
  [WPF Genel Bakışında Çift Yönlü Özellikler](bidirectional-features-in-wpf-overview.md)  
- [Nasıl Yapılır Konuları](globalization-and-localization-how-to-topics.md)  
+ [Nasıl Yapılır Konuları](how-to-localize-an-application.md)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Globalization>  

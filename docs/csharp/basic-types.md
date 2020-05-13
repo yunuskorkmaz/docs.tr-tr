@@ -1,88 +1,88 @@
 ---
-title: Temel Türler - C# Rehberi
-description: Tüm C# programlarındaki çekirdek türleri (sayısallar, dizeleri ve nesne) hakkında bilgi edinin
+title: Temel türler-C# Kılavuzu
+description: Tüm C# programlarında çekirdek türleri (Numerics, dizeler ve nesne) hakkında bilgi edinin
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673270"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205807"
 ---
-# <a name="types-variables-and-values"></a>Türleri, değişkenleri ve değerleri
+# <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
-C# güçlü bir şekilde yazılan bir dildir. Her değişken ve sabit, bir değere değer biçen her ifade gibi bir türü vardır. Her yöntem imzası, her giriş parametresi ve iade değeri için bir tür belirtir. .NET Framework sınıf kitaplığı, dosya sistemi, ağ bağlantıları, koleksiyonlar ve nesne dizileri ve tarihler gibi çok çeşitli mantıksal yapıları temsil eden yerleşik sayısal türlerin yanı sıra daha karmaşık türleri tanımlar. Tipik bir C# programı, sınıf kitaplığından gelen türlerin yanı sıra programın sorunlu etki alanına özgü kavramları modelleyen kullanıcı tanımlı türleri kullanır.  
+C# türü kesin belirlenmiş bir dildir. Her değişken ve sabitin, bir değeri değerlendiren her ifadeyi olduğu gibi bir türü vardır. Her yöntem imzası her giriş parametresi ve dönüş değeri için bir tür belirtir. .NET Framework sınıf kitaplığı, dosya sistemi, ağ bağlantıları, koleksiyon ve nesne dizileri ve tarihler gibi çok çeşitli mantıksal yapıları temsil eden daha karmaşık türler ve yerleşik sayısal türlerin bir kümesini tanımlar. Tipik bir C# programı, sınıf kitaplığından türleri ve programın sorunlu etki alanına özgü kavramları modeleden Kullanıcı tanımlı türleri kullanır.  
   
-Bir türde depolanan bilgiler aşağıdakileri içerebilir:  
+Bir tür içinde depolanan bilgiler şunları içerebilir:  
   
-- Türünün bir değişkeninin gerektirdiği depolama alanı.  
+- Türün bir değişkeninin gerektirdiği depolama alanı.  
   
-- Temsil edebileceği maksimum ve minimum değerler.  
+- Temsil ettiği maksimum ve en düşük değerler.  
   
-- İçerdiği üyeler (yöntemler, alanlar, olaylar vb.)  
+- İçerdiği Üyeler (Yöntemler, alanlar, olaylar vb.).  
   
-- Devraldığı temel türü.  
+- Devraldığı temel tür.  
   
-- Değişkenler için belleğin çalışma zamanında ayrılacağı konum.  
+- Değişkenlere yönelik belleğin çalışma zamanında ayrılabileceği konum.  
   
 - İzin verilen işlem türleri.  
   
-Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür güvenli*olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, tür [int](language-reference/builtin-types/integral-numeric-types.md)bir değişken bildirirseniz, derleyici ek ve çıkarma işlemlerinde değişken kullanmanıza olanak sağlar. Aynı işlemleri tür [bool](language-reference/builtin-types/bool.md)değişkeninde gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:  
+Derleyici, kodunuzda gerçekleştirilen tüm işlemlerin *tür açısından güvenli*olduğundan emin olmak için tür bilgilerini kullanır. Örneğin, [int](language-reference/builtin-types/integral-numeric-types.md)türünde bir değişken bildirirseniz, derleyici değişkeni toplama ve çıkarma işlemlerinde kullanmanıza izin verir. [Bool](language-reference/builtin-types/bool.md)türünde bir değişkende aynı işlemleri gerçekleştirmeye çalışırsanız, derleyici aşağıdaki örnekte gösterildiği gibi bir hata oluşturur:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C ve C++ geliştiricileri, C#'da [bool'un](language-reference/builtin-types/bool.md) [int'e](language-reference/builtin-types/integral-numeric-types.md)dönüştürülemez olduğuna dikkat edin.  
+> C ve C++ geliştiricileri, C# ' ta [bool](language-reference/builtin-types/bool.md) ' ın [int](language-reference/builtin-types/integral-numeric-types.md)'e dönüştürülebilir olmadığına dikkat edin.  
   
-Derleyici, tür bilgilerini yürütülebilir dosyaya meta veri olarak yerzetir. Ortak dil çalışma süresi (CLR), bellek tahsis ettiğinde ve geri aldığında tür güvenliğini daha da garanti etmek için bu meta verileri çalışma zamanında kullanır.  
+Derleyici, tür bilgilerini yürütülebilir dosyaya meta veriler olarak katıştırır. Ortak dil çalışma zamanı (CLR), bellek ayırdığı ve geri kazanır daha fazla güvence altına almak için çalışma zamanında bu meta verileri kullanır.  
 
-## <a name="specifying-types-in-variable-declarations"></a>Değişken bildirimlerde türleri belirtme
+## <a name="specifying-types-in-variable-declarations"></a>Değişken bildirimlerinde türleri belirtme
 
-Bir programda bir değişken veya sabit beyan ettiğinizde, derleyicinin türü çıkarmasına izin vermek için türünü belirtmeniz veya [var](language-reference/keywords/var.md) anahtar sözcükünü kullanmanız gerekir. Aşağıdaki örnek, hem yerleşik sayısal türleri hem de karmaşık kullanıcı tanımlı türleri kullanan bazı değişken bildirimleri gösterir:  
+Bir programda bir değişken veya sabit belirttiğinizde, onun türünü belirtmeniz veya [var](language-reference/keywords/var.md) anahtar sözcüğünü kullanarak derleyicinin türü saymasına izin vermelisiniz. Aşağıdaki örnek, hem yerleşik sayısal türler hem de Kullanıcı tanımlı karmaşık türler kullanan bazı değişken bildirimlerini gösterir:  
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-Yöntem imzasında yöntem parametreleri ve iade değerleri belirtilir. Aşağıdaki imza, giriş bağımsız değişkeni olarak bir [int](language-reference/builtin-types/integral-numeric-types.md) gerektiren bir yöntemi gösterir ve bir dize döndürür:  
+Yöntem parametrelerinin türleri ve dönüş değerleri Yöntem imzasında belirtilmiştir. Aşağıdaki imza, giriş bağımsız değişkeni olarak bir [int](language-reference/builtin-types/integral-numeric-types.md) gerektiren ve bir dize döndüren bir yöntemi gösterir:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Bir değişken beyan edildikten sonra, yeni bir türle yeniden bildirilemez ve beyan edilen türüyle uyumlu olmayan bir değer atanamaz. Örneğin, bir [int](language-reference/builtin-types/integral-numeric-types.md) bildiremez ve sonra bir Boolean `true`değeri atayabilirsiniz. Ancak, değerler, örneğin yeni değişkenlere atandığında veya yöntem bağımsız değişkenleri olarak geçirildiğinde diğer türlere dönüştürülebilir. Veri kaybına neden olmayan bir *tür dönüştürme* derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme, kaynak kodunda bir *döküm* gerektirir.
+Bir değişken oluşturulduktan sonra, yeni bir türle yeniden bildirilemez ve belirtilen türle uyumlu olmayan bir değer atanamaz. Örneğin, bir [int](language-reference/builtin-types/integral-numeric-types.md) bildiremez ve bunu Boolean değeri atayabilirsiniz `true` . Ancak, değerler başka türlere dönüştürülebilir (örneğin, yeni değişkenlere atandığında veya yöntem bağımsız değişkenleri olarak geçirildiğinde). Veri kaybına neden olmayan bir *tür dönüştürmesi* , derleyici tarafından otomatik olarak gerçekleştirilir. Veri kaybına neden olabilecek bir dönüştürme, kaynak kodda bir *tür dönüştürme* gerektirir.
 
-Daha fazla bilgi için [Bkz. Döküm ve tür dönüşümleri.](programming-guide/types/casting-and-type-conversions.md)
+Daha fazla bilgi için bkz. [atama ve tür dönüştürmeleri](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Yerleşik türler
 
-C#, tamsayılar, kayan nokta değerleri, Boolean ifadeleri, metin karakterleri, ondalık değerler ve diğer veri türlerini temsil edecek standart bir yerleşik sayısal türleri kümesi sağlar. Yerleşik **dize** ve **nesne** türleri de vardır. Bunlar herhangi bir C# programında kullanabileceğiniz bir programdır. Yerleşik türlerin tam listesi için Yerleşik [türleri'ne](language-reference/builtin-types/built-in-types.md)bakın.
+C#, tamsayıları, kayan nokta değerlerini, Boole ifadelerini, metin karakterlerini, ondalık değerleri ve diğer veri türlerini temsil etmek için standart bir yerleşik sayısal türler kümesi sağlar. Ayrıca yerleşik **dize** ve **nesne** türleri de vardır. Bunlar, herhangi bir C# programında kullanabileceğiniz şekilde kullanılabilir. Yerleşik türlerin tam listesi için bkz. [Yerleşik türler](language-reference/builtin-types/built-in-types.md).
   
-## <a name="custom-types"></a>Özel türleri
+## <a name="custom-types"></a>Özel türler
 
-Kendi özel türleri oluşturmak için [yapı,](language-reference/keywords/class.md) [sınıf,](language-reference/keywords/class.md) [arayüz](language-reference/keywords/interface.md)ve [enum](language-reference/builtin-types/enum.md) yapıları kullanın. .NET Framework sınıf kitaplığı, Microsoft tarafından sağlanan ve kendi uygulamalarınızda kullanabileceğiniz özel türler topluluğudur. Varsayılan olarak, sınıf kitaplığında en sık kullanılan türler herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyici derlemeye bir başvuru yaptıktan sonra, bu derlemede bildirilen türlerin değişkenlerini (ve sabitlerini) kaynak kodunda bildirebilirsiniz.
+Kendi özel türlerinizi oluşturmak için [struct](language-reference/builtin-types/struct.md), [Class](language-reference/keywords/class.md), [Interface](language-reference/keywords/interface.md)ve [enum](language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET Framework sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler, herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz.
   
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağlayacağı gerçek tür *(somut tür)* için yer tutucu olarak hizmet veren bir veya daha fazla *tür parametresiyle* bildirilebilir. Bu tür *türler genel türleri*denir. Örneğin, .NET Framework <xref:System.Collections.Generic.List%601> türünde, kuralla *T*adı verilen bir tür parametresi vardır. Türbir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü( örneğin, dizeyi) belirtirsiniz:  
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, .NET Framework türü, <xref:System.Collections.Generic.List%601> kuralına göre bir tür parametresine sahiptir. *T* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Tür parametresinin kullanılması, her öğeyi [nesneye](language-reference/builtin-types/reference-types.md#the-object-type)dönüştürmek zorunda kalmadan, her tür öğeyi tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici koleksiyonun öğelerinin belirli türünü bildiğinden ve örneğin önceki örnekteki `strings` nesneye bir arastım eklemeye çalışırsanız derleme zamanında hata kaldırabileceğinden, genel koleksiyon sınıfları güçlü şekilde yazılan *koleksiyonlar* olarak adlandırılır. Daha fazla bilgi için [Genel Bilgiler'e](programming-guide/generics/index.md)bakın.
+Tür parametresinin kullanımı, her öğeyi [nesneye](language-reference/builtin-types/reference-types.md#the-object-type)dönüştürmek zorunda kalmadan her türlü öğe türünü tutmak için aynı sınıfı yeniden kullanmayı mümkün kılar. Derleyici, koleksiyon öğelerinin belirli türünü bildiğinden ve derleme zamanında bir hata, örneğin, önceki örnekteki nesnesine bir tamsayı eklemeye çalışırsanız, genel koleksiyon sınıfları *kesin türü belirtilmiş koleksiyonlar* olarak adlandırılır `strings` . Daha fazla bilgi için bkz. [Genel türler](programming-guide/generics/index.md).
 
-## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Örtük türler, anonim türleri ve tuple türleri
+## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Örtülü türler, anonim türler ve demet türleri
 
-Daha önce belirtildiği gibi, [var](language-reference/keywords/var.md) anahtar sözcük kullanarak örtülü olarak yerel bir değişken (ancak sınıf üyeleri değil) yazabilirsiniz. Değişken hala derleme zamanında bir tür alır, ancak tür derleyici tarafından sağlanır. Daha fazla bilgi için [bkz.](programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
+Daha önce belirtildiği gibi, [var](language-reference/keywords/var.md) anahtar sözcüğünü kullanarak yerel bir değişkeni (sınıf üyelerini değil) örtük olarak yazabilirsiniz. Değişken hala derleme zamanında bir tür alır, ancak tür derleyici tarafından sağlanır. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-Bazı durumlarda, depolamak veya yöntem sınırları dışında geçmek niyetinde olmadığınız ilgili değerlerin basit kümeleri için adlandırılmış bir tür oluşturmak sakıncalıdır. Bu amaçla *anonim türleri* oluşturabilirsiniz. Daha fazla bilgi için [Bkz. Anonim türleri.](programming-guide/classes-and-structs/anonymous-types.md)
+Bazı durumlarda, yöntem sınırlarını depolamayı veya geçişi istemediğiniz ilgili değerlerin basit kümeleri için adlandırılmış bir tür oluşturmak uygun değildir. Bu amaçla *anonim türler* oluşturabilirsiniz. Daha fazla bilgi için bkz. [anonim türler](programming-guide/classes-and-structs/anonymous-types.md).
 
-Bir yöntemden birden fazla değer döndürmek istemek yaygındır. Tek bir yöntem çağrısında birden çok değer döndüren *tuple türleri* oluşturabilirsiniz. Daha fazla bilgi için Bkz. [Tuples.](tuples.md)
+Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir yöntem çağrısında birden çok değer döndüren *demet türleri* oluşturabilirsiniz. Daha fazla bilgi için bkz. [tanımlama](tuples.md)bilgileri.
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 
-.NET Çerçevesi'nde tür sistemi ile ilgili iki temel noktayı anlamak önemlidir:  
+.NET Framework sistem hakkında iki temel noktayı anlamak önemlidir:  
   
-- Miras ilkesini destekler. Türleri, *temel türleri*olarak adlandırılan diğer türlerden türetilebilir. Türetilen tür , yöntemleri, özellikleri ve temel türün diğer üyelerini (bazı kısıtlamalarla) devralır. Taban türü sırayla başka bir türden türetilebilir ve bu durumda türemiş tür, devralma hiyerarşisinde her iki temel türün üyelerini devralır. <xref:System.Int32> (C# anahtar kelimesi: `int`), sonuçta tek bir temel türden türetilmiş <xref:System.Object> (C# anahtar kelimesi: ). `object` Bu birleşik tür hiyerarşisi [Ortak tür sistemi](../standard/common-type-system.md) (CTS) olarak adlandırılır. C#'daki kalıtım hakkında daha fazla bilgi için [bkz.](programming-guide/classes-and-structs/inheritance.md)  
+- Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü:) gibi yerleşik sayısal türler de dahil olmak üzere tüm türler, <xref:System.Int32> `int` sonunda <xref:System.Object> (c# anahtar sözcüğü:) tek bir temel türden türetilir `object` . Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
-- CTS'deki her tür bir *değer türü* veya *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığındaki tüm özel türleri ve aynı zamanda kendi kullanıcı tanımlı türlerinizi içerir. Veya `enum` anahtar sözcüğü `struct` kullanarak tanımladığınız türler değer türleridir. Değer türleri hakkında daha fazla bilgi için [Bkz. Değer türleri.](language-reference/builtin-types/value-types.md) [Sınıf](language-reference/keywords/class.md) anahtar sözcük kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için [Sınıflar'a](programming-guide/classes-and-structs/classes.md)bakın. Başvuru türleri ve değer türleri farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışı vardır.
+- CTS içindeki her tür, bir *değer türü* veya bir *başvuru türü*olarak tanımlanır. Bu, .NET sınıf kitaplığı 'ndaki tüm özel türleri ve ayrıca kendi Kullanıcı tanımlı türlerinizi içerir. `struct`Veya anahtar sözcüğünü kullanarak tanımladığınız türler `enum` değer türlerdir. Değer türleri hakkında daha fazla bilgi için bkz. [değer türleri](language-reference/builtin-types/value-types.md). [Sınıf](language-reference/keywords/class.md) anahtar sözcüğünü kullanarak tanımladığınız türler başvuru türleridir. Başvuru türleri hakkında daha fazla bilgi için bkz. [sınıflar](programming-guide/classes-and-structs/classes.md). Başvuru türleri ve değer türlerinde farklı derleme zamanı kuralları ve farklı çalışma zamanı davranışları vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,15 +2,15 @@
 title: ICorDebugProcess6::GetExportStepInfo Metodu
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: 6580fdaacaea17fcf886bfd7ac5e236925acf453
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d195c61d95f084c7b6b40d2c81623fd81cd94cf
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178526"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206353"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo Metodu
-Yönetilen kod üzerinden adım yardımcı olmak için çalışma zamanı dışa aktarılan işlevler hakkında bilgi sağlar.  
+Yönetilen kodda adım adım yardım için çalışma zamanına aktarılmış işlevler hakkında bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -23,36 +23,36 @@ HRESULT GetExportStepInfo(
   
 ## <a name="parameters"></a>Parametreler  
  pszExportName  
- [içinde] PE dışa aktarma tablosunda yazıldığı gibi bir çalışma zamanı dışa aktarma işlevinin adı.  
+ 'ndaki PE dışarı aktarma tablosunda yazıldığı şekilde bir çalışma zamanı dışa aktarma işlevinin adı.  
   
- ınvokekınd  
- [çıkış] Dışa aktarılan işlevin yönetilen kodu nasıl çağıracağını açıklayan [CorDebugCodeInvokeKind](cordebugcodeinvokekind-enumeration.md) numaralandırmasının bir üyesine işaretçi.  
+ invokeKind  
+ dışı İçe aktarılmış işlevin yönetilen kodu nasıl çağıracağına ilişkin [cordebugcodeınvokekind](cordebugcodeinvokekind-enumeration.md) numaralandırması üyesine yönelik bir işaretçi.  
   
- invokeAmaç  
- [çıkış] Dışa aktarılan işlevin neden yönetilen kodu arayacağını açıklayan [CorDebugCodeInvokePurpose](cordebugcodeinvokepurpose-enumeration.md) numaralandırmasının bir üyesine işaretçi.  
+ ınvokeamaç  
+ dışı İçe aktarılmış işlevin neden yönetilen kodu çağıradığına ilişkin bir [Cordebugcodeınvokeamaç](cordebugcodeinvokepurpose-enumeration.md) numaralandırması üyesine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem, aşağıdaki tabloda listelenen değerleri döndürebilir.  
+ Yöntemi aşağıdaki tabloda listelenen değerleri döndürebilir.  
   
 |Döndürülen değer|Açıklama|  
 |------------------|-----------------|  
 |`S_OK`|Yöntem çağrısı başarılı oldu.|  
-|`E_POINTER`|`pInvokeKind`veya `pInvokePurpose` **null**olduğunu .|  
-|Diğer `HRESULT` başarısız değerler.|Uygun olduğu kadar.|  
+|`E_POINTER`|`pInvokeKind`ya `pInvokePurpose` da **null**.|  
+|Diğer başarısız `HRESULT` değerler.|Uygun şekilde.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

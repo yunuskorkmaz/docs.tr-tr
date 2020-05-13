@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f850b3cd35fda8bd554b99e14553100008cb4eca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793292"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208531"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification Yöntemi
 Kod yürütmenin ayıklanmakta olan uygulamada yönetilen hata ayıklama Yardımcısı (MDA) ile karşılaştığından bildirim sağlar.  
@@ -44,7 +44,7 @@ HRESULT MDANotification(
  `pThread`  
  'ndaki Hata ayıklama olayının gerçekleştiği yönetilen iş parçacığını sunan ICorDebugThread arabirimine yönelik bir işaretçi.  
   
- Bir yönetilmeyen iş parçacığında MDA oluştuysa, `pThread` değeri null olur.  
+ Bir yönetilmeyen iş parçacığında MDA oluştuysa, değeri `pThread` null olur.  
   
  MDA nesnesinden işletim sistemi (OS) iş parçacığı KIMLIĞI almalısınız.  
   
@@ -58,19 +58,19 @@ HRESULT MDANotification(
   
  MDAs 'ler kuyruğa alınmış ve kısa bir süre sonra da tetiklenebilir. Bunun nedeni, çalışma zamanının mda ' ı tetiklemenin bir güvenli noktaya ulaşıncaya kadar beklemesi gerekir. Ayrıca, çalışma zamanının tek bir sıraya alınmış geri çağırmalar kümesinde ("iliştirme" olay işlemine benzer) çok sayıda MDAs tetikleneceği anlamına gelir.  
   
- Hata ayıklayıcı, CLR 'nin bir MDA tarafından tüketilen belleği geri dönüştürmesini sağlamak için `MDANotification` geri çağrısından geri dönmeden hemen sonra bir `ICorDebugMDA` örneğine başvuruyu serbest bırakmalıdır. Birçok MDAs tetikleme durumunda örneği serbest bırakmak performansı iyileştirebilir.  
+ Hata ayıklayıcı, `ICorDebugMDA` `MDANotification` clr 'nın bir mda tarafından tüketilen belleği geri dönüştürmesini sağlamak için geri aramadan dönmeden bir örneğe başvuruyu serbest bırakmalıdır. Birçok MDAs tetikleme durumunda örneği serbest bırakmak performansı iyileştirebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [ICorDebugManagedCallback2 Arabirimi](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback Arabirimi](icordebugmanagedcallback-interface.md)

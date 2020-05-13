@@ -2,15 +2,15 @@
 title: ICorDebugProcess6::EnableVirtualModuleSplitting Yöntemi
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-ms.openlocfilehash: 8ad15d11ce81323b30434b3db98259a74a198f29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac61ffc553191aa70bdf5c04822a25b1074c2099
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178565"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209376"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting Yöntemi
-Sanal modülün bölünmesini sağlar veya devre dışı kılabilir.  
+Sanal modül bölmeyi etkinleştirilir veya devre dışı bırakır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,93 +22,93 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parametreler  
  `enableSplitting`  
- `true`sanal modülün bölünmesini etkinleştirmek için; `false` devre dışı kılabilir.  
+ `true`sanal modül bölmeyi etkinleştirmek için; `false`devre dışı bırakın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sanal modül bölme [işlemi, ICorDebug'un](icordebug-interface.md) yapı işlemi sırasında birleştirilmiş modülleri tanımasına ve bunları tek bir büyük modül yerine ayrı modüller grubu olarak sunmasını neden eder. Bunu yapmak, aşağıda açıklanan çeşitli [ICorDebug](icordebug-interface.md) yöntemlerinin davranışını değiştirir.  
+ Sanal modül bölünmesi, [ICorDebug](icordebug-interface.md) 'ın derleme işlemi sırasında birlikte birleştirilmiş modülleri tanımasını ve bunları tek bir büyük modül yerine ayrı modüller grubu olarak sunmasını sağlar. Bunun yapılması, aşağıda açıklanan çeşitli [ICorDebug](icordebug-interface.md) yöntemlerinin davranışını değiştirir.  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
- Bu yöntem çağrılabilir ve `enableSplitting` değeri herhangi bir zamanda değiştirilebilir. Sanal modül bölmede listelenen yöntemlerin davranışını ve çağrıldıkları anda [yönetilmeyen hata ayıklama API'leri](#APIs) bölümünü değiştirmek dışında, bir [ICorDebug](icordebug-interface.md) nesnesinde durumsal işlevsel değişikliklere neden olmaz. Sanal modüllerin kullanılması, bu yöntemleri ararken bir performans cezasına neden olur. Buna ek olarak, sanallaştırılmış meta verilerin önemli bellek önbelleğe alınması [iMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) API'lerini doğru bir şekilde uygulamak için gerekli olabilir ve sanal modül bölme söndükten sonra bile bu önbellekler tutulabilir.  
+ Bu yöntem çağrılabilir ve değeri `enableSplitting` herhangi bir zamanda değiştirilebilir. Bir [ICorDebug](icordebug-interface.md) nesnesinde durum bilgisi olan herhangi bir işlev değişikliğine neden olmaz, bu, [sanal modül bölme ve yönetilmeyen hata ayıklama API 'leri](#APIs) bölümünde listelenen yöntemlerin davranışını değiştirdikleri sırada değiştirmemiştir. Sanal modüllerin kullanılması, bu yöntemler çağrılırken bir performans cezası uygular. Ayrıca, [IMetaDataImport](../metadata/imetadataimport-interface.md) API 'lerinin doğru bir şekilde uygulanması için sanallaştırılan önemli bellek içi önbelleğe alma gerekebilir ve sanal modül bölünmesi devre dışı bırakılsa bile bu önbellekler korunabilir.  
   
 ## <a name="terminology"></a>Terminoloji  
- Sanal modül bölme yi tanımlarken aşağıdaki terimler kullanılır:  
+ Sanal modül bölünmesi açıklanırken aşağıdaki terimler kullanılır:  
   
- konteyner modülleri veya konteynerler  
- Agrega modülleri.  
+ kapsayıcı modülleri veya kapsayıcılar  
+ Toplama modülleri.  
   
  alt modüller veya sanal modüller  
- Bir kapta bulunan modüller.  
+ Kapsayıcıda bulunan modüller.  
   
- düzenli modüller  
- Oluşturma zamanında birleştirilemeyen modüller. Bunlar ne konteyner modülleri ne de alt modülleridir.  
+ normal modüller  
+ Derleme zamanında birleştirilmeyen modüller. Bunlar kapsayıcı modülleri veya alt modüller değildir.  
   
- Hem konteyner modülleri hem de alt modülleri ICorDebugModule arabirim nesneleri ile temsil edilir. Ancak, \<x-ref bölüm> bölümünde açıklandığı gibi, arabirimin davranışı her durumda biraz farklıdır.  
+ Hem kapsayıcı modülleri hem de alt modüller ICorDebugModule arabirim nesneleriyle temsil edilir. Ancak, arabirimin davranışı her durumda biraz farklılık gösterebilir. Bu bölümde \< x-ref ' i bölüm> bölümünde açıklanmaktadır.  
   
-## <a name="modules-and-assemblies"></a>Modüller ve montajlar  
- Çok modüllü derlemeler derleme birleştirme senaryoları için desteklenmez, bu nedenle modül ve derleme arasında bire bir ilişki vardır. Her ICorDebugModule nesnesi, bir kapsayıcı modülveya bir alt modülü temsil edip etmediğine bakılmaksızın, karşılık gelen bir ICorDebugAssembly nesnesi vardır. [ICorDebugModule::GetAssembly](icordebugmodule-getassembly-method.md) yöntemi modülden montaja dönüşür. Diğer yönde haritalamak için, [ICorDebugAssembly::Sayısal Modüller](icordebugassembly-enumeratemodules-method.md) yöntemi yalnızca 1 modül numarası verir. Montaj ve modül bu durumda sıkıca birleştirilmiş bir çift oluşturduğundan, montaj ve modül terimleri büyük ölçüde değiştirilebilir hale gelir.  
+## <a name="modules-and-assemblies"></a>Modüller ve derlemeler  
+ Birden çok modüllü derlemeler derleme birleştirme senaryolarında desteklenmez, bu nedenle bir modül ve derleme arasında bire bir ilişki vardır. Her ICorDebugModule nesnesi, bir kapsayıcı modülünü mi yoksa bir alt modülün mi temsil ettiğini bağımsız olarak karşılık gelen bir ICorDebugAssembly nesnesine sahiptir. [ICorDebugModule:: GetAssembly](icordebugmodule-getassembly-method.md) yöntemi modülünden derlemeye dönüştürür. Diğer yönde eşlemek için [ICorDebugAssembly:: EnumerateModules](icordebugassembly-enumeratemodules-method.md) yöntemi yalnızca 1 modül numaralandırır. Derleme ve modül bu durumda sıkı bir şekilde bağlanmış bir çift biçimli olduğundan, hüküm derlemesi ve modülü büyük ölçüde değiştirilebilir hale gelir.  
   
-## <a name="behavioral-differences"></a>Davranış farklılıkları  
- Konteyner modülleri aşağıdaki davranış ve özelliklere sahiptir:  
+## <a name="behavioral-differences"></a>Davranış farkları  
+ Kapsayıcı modülleri aşağıdaki davranış ve özelliklere sahiptir:  
   
-- Tüm kurucu alt modüller için meta verileri birleştirilir.  
+- Tüm bileşen alt modüllerinin meta verileri birlikte birleştirilir.  
   
-- Tür adları ezilmiş olabilir.  
+- Tür adları karışmış olabilir.  
   
-- [ICorDebugModule::GetName](icordebugmodule-getname-method.md) yöntemi yolu bir disk modülüne döndürür.  
+- [ICorDebugModule:: GetName](icordebugmodule-getname-method.md) yöntemi, disk üzerindeki bir modülün yolunu döndürür.  
   
-- [ICorDebugModule::GetSize](icordebugmodule-getsize-method.md) yöntemi bu görüntünün boyutunu döndürür.  
+- [ICorDebugModule:: GetSize](icordebugmodule-getsize-method.md) yöntemi bu görüntünün boyutunu döndürür.  
   
-- ICorDebugAssembly3.EnumerateContainedAssemblies yöntemi alt modülleri listeler.  
+- ICorDebugAssembly3. EnumerateContainedAssemblies yöntemi alt modülleri listeler.  
   
-- ICorDebugAssembly3.GetContainerAssembly yöntemi `S_FALSE`döndürür.  
+- ICorDebugAssembly3. GetContainerAssembly yöntemi döndürür `S_FALSE` .  
   
  Alt modüller aşağıdaki davranış ve özelliklere sahiptir:  
   
-- Yalnızca birleştirilen özgün derlemeye karşılık gelen azaltılmış bir meta veri kümeleri vardır.  
+- Yalnızca birleştirilen özgün derlemeye karşılık gelen azaltılmış meta veri kümesine sahiptirler.  
   
-- Meta veri adları ezilmiş değildir.  
+- Meta veri adları karışmış değil.  
   
-- Meta veri belirteçlerinin, yapı işleminde birleştirilmeden önce orijinal derlemedeki belirteçlerle eşleşmesi olası değildir.  
+- Meta veri belirteçleri, derleme sürecinde birleştirilmeden önce özgün derlemedeki belirteçlerle eşleşmek düşüktür.  
   
-- [ICorDebugModule::GetName](icordebugmodule-getname-method.md) yöntemi bir dosya yolu değil, derleme adını döndürür.  
+- [ICorDebugModule:: GetName](icordebugmodule-getname-method.md) metodu, bir dosya yolu değil, derleme adını döndürür.  
   
-- [ICorDebugModule::GetSize](icordebugmodule-getsize-method.md) yöntemi orijinal birleştirilmiş görüntü boyutunu döndürür.  
+- [ICorDebugModule:: GetSize](icordebugmodule-getsize-method.md) yöntemi orijinal birleştirilmemiş görüntünün boyutunu döndürür.  
   
-- ICorDebugModule3.EnumerateContainedAssemblies yöntemi `S_FALSE`döndürür.  
+- ICorDebugModule3. EnumerateContainedAssemblies yöntemi döndürür `S_FALSE` .  
   
-- ICorDebugAssembly3.GetContainerAssembly yöntemi içeren modülü döndürür.  
+- ICorDebugAssembly3. GetContainerAssembly yöntemi kapsayan modülü döndürür.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Modüllerden alınan arabirimler  
- Modüllerden çeşitli arabirimler oluşturulabilir veya alınabilir. Bunlardan bazıları:  
+ Modüllerden çeşitli arabirimler oluşturulabilir veya alınalınabilir. Bunlardan bazıları:  
   
-- [ICorDebugModule::GetClassFromToken](icordebugmodule-getclassfromtoken-method.md) yöntemi ile döndürülen bir ICorDebugClass nesnesi.  
+- [ICorDebugModule:: GetClassFromToken](icordebugmodule-getclassfromtoken-method.md) yöntemi tarafından döndürülen bir ICorDebugClass nesnesi.  
   
-- [ICorDebugModule::GetAssembly](icordebugmodule-getassembly-method.md) yöntemi ile döndürülen bir ICorDebugAssembly nesnesi.  
+- [ICorDebugModule:: GetAssembly](icordebugmodule-getassembly-method.md) yöntemi tarafından döndürülen bir ICorDebugAssembly nesnesi.  
   
- Bu nesneler her zaman [ICorDebug](icordebug-interface.md)tarafından önbelleğe alınır ve kapsayıcı modülünden veya alt modülden oluşturulup oluşturulmadığına bakılmaksızın aynı işaretçi kimliğine sahip olurlar. Alt modül, kendi kopyaları ile ayrı bir önbellek değil, bu önbelleğe alınmış nesnelerin filtrelenmiş bir görünüm sağlar.  
+ Bu nesneler her zaman [ICorDebug](icordebug-interface.md)tarafından önbelleğe alınır ve kapsayıcı modülünden veya bir alt modülden oluşturulup sorgulanmadığına bakılmaksızın aynı işaretçi kimliğine sahip olur. Alt modül, bu önbelleğe alınmış nesnelerin filtrelenmiş bir görünümünü sağlar, kendi kopyaları olan ayrı bir önbellek değildir.  
   
 <a name="APIs"></a>
-## <a name="virtual-module-splitting-and-the-unmanaged-debugging-apis"></a>Sanal modül bölme ve yönetilmeyen hata ayıklama API'leri  
- Aşağıdaki tablo, sanal modül bölmenin yönetilmeyen hata ayıklama API'sındaki diğer yöntemlerin davranışını nasıl etkilediğini gösterir.  
+## <a name="virtual-module-splitting-and-the-unmanaged-debugging-apis"></a>Sanal modül bölme ve yönetilmeyen hata ayıklama API 'Leri  
+ Aşağıdaki tabloda, sanal modül ayırmanın yönetilmeyen hata ayıklama API 'sindeki diğer yöntemlerin davranışını nasıl etkilediği gösterilmektedir.  
   
 |Yöntem|`enableSplitting` = `true`|`enableSplitting` = `false`|  
 |------------|---------------------------------|----------------------------------|  
-|[ICorDebugFunction::GetModule](icordebugfunction-getmodule-method.md)|Bu işlevin başlangıçta tanımlandığı alt modülü döndürür|Bu işlevin birleştiği kapsayıcı modülünü döndürür|  
-|[ICorDebugClass::GetModule](icordebugclass-getmodule-method.md)|Bu sınıfın başlangıçta tanımlandığı alt modülü döndürür.|Bu sınıfın birleştiği kapsayıcı modülünü döndürür.|  
-|ICorDebugModuleDebugOlay::GetModule|Yüklenen konteyner modüllerini döndürür. Alt modüllere bu ayara bakılmaksızın yük olayları verilmez.|Yüklenen konteyner modüllerini döndürür.|  
-|[ICorDebugAppDomain::Sayısal Montajlar](icordebugappdomain-enumerateassemblies-method.md)|Alt derlemelerin ve düzenli derlemelerin listesini verir; konteyner derlemeleri dahil değildir. **Not:**  Herhangi bir kapsayıcı derlemesi sembolleri eksikse, alt derlemelerinin hiçbiri numaralandırılmayacak. Herhangi bir normal montaj sembolleri eksikse, numaralandırılabilir veya numaralandırılmayabilir.|Konteyner derlemelerinin ve düzenli montajların listesini verir; alt derlemeler dahil değildir. **Not:**  Herhangi bir normal montaj sembolleri eksikse, numaralandırılabilir veya numaralandırılmayabilir.|  
-|[ICorDebugCode::GetCode](icordebugcode-getcode-method.md) (yalnızca IL koduna atıfta bulunulurken)|Birleştirme öncesi derleme görüntüsünde geçerli olacak IL'yi döndürür. Özellikle, atıfta bulunulan türler IL içeren sanal modülde tanımlanmadığında, satır içinde herhangi bir meta veri belirteçleri doğru bir şekilde TypeRef veya MemberRef belirteçleri olacaktır. Bu TypeRef veya MemberRef belirteçleri, ilgili sanal ICorDebugModule nesnesi için [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) nesnesinde aranabilir.|Birleştirme sonrası derleme görüntüsünde IL'yi döndürür.|  
+|[ICorDebugFunction:: GetModule](icordebugfunction-getmodule-method.md)|Bu işlevin ilk olarak tanımlandığı alt modülü döndürür|Bu işlevin birleştirildiği kapsayıcı modülünü döndürür|  
+|[ICorDebugClass:: GetModule](icordebugclass-getmodule-method.md)|Bu sınıfın başlangıçta tanımlandığı alt modülü döndürür.|Bu sınıfın birleştirildiği kapsayıcı modülünü döndürür.|  
+|Icordebugmoduledebugger gevent:: GetModule|Yüklenen kapsayıcı modülünü döndürür. Bu ayardan bağımsız olarak alt modüllere, yük olayları verilmez.|Yüklenen kapsayıcı modülünü döndürür.|  
+|[ICorDebugAppDomain:: EnumerateAssemblies](icordebugappdomain-enumerateassemblies-method.md)|Alt derlemelerin ve normal derlemelerin bir listesini döndürür; kapsayıcı derlemeleri dahil değildir. **Note:**  Herhangi bir kapsayıcı derlemesinde sembol yoksa, alt derlemelerin hiçbiri NUMARALANDIRILAMAZ. Herhangi bir normal derlemede sembol eksikse, bu, numaralandırılabilir veya Numaralandırılmayabilir.|Kapsayıcı derlemelerinin ve normal derlemelerin bir listesini döndürür; hiçbir alt derleme dahil değildir. **Note:**  Herhangi bir normal derlemede sembol eksikse, bu, numaralandırılabilir veya Numaralandırılmayabilir.|  
+|[ICorDebugCode:: GetCode](icordebugcode-getcode-method.md) (yalnızca Il koduna başvuru yaparken)|Bir birleştirme öncesi derleme görüntüsünde geçerli olacak Il 'yi döndürür. Özellikle, başvuruda bulunulan türler Il 'yi içeren sanal modülde tanımlanmadığında, satır içi meta veri belirteçleri doğru şekilde TypeRef veya MemberRef belirteçleri olacaktır. Bu TypeRef veya MemberRef belirteçleri, karşılık gelen sanal ICorDebugModule nesnesi için [IMetaDataImport](../metadata/imetadataimport-interface.md) nesnesinde aranabilir.|Birleştirme sonrası derleme görüntüsündeki Il 'yi döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

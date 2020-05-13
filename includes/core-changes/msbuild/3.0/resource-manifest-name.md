@@ -1,85 +1,43 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968294"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206227"
 ---
-### <a name="resource-manifest-file-names"></a>Kaynak bildirimi dosya adları
+### <a name="resource-manifest-file-name-change"></a>Kaynak bildirimi dosya adı değişikliği
 
-.NET Core 3.0'dan başlayarak oluşturulan kaynak bildirimi dosya adı değişti.
+.NET Core 3,0 ' den başlayarak, MSBuild varsayılan durumda kaynak dosyaları için farklı bir bildirim dosyası adı oluşturur.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
 3,0
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-MSBuild proje dosyasındaki bir kaynak (*.resx*) dosyası için [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) meta verileri ayarlandığında ,.NET Core 3.0'dan önce oluşturulan bildirim adı *Namespace.Classname.resources*idi. [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) ayarlanmadığında, oluşturulan bildirim adı *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*oldu.
+.NET Core 3,0 ' den önce `LogicalName` `ManifestResourceName` `DependentUpon` Proje dosyasındaki bir öğe için bir, veya meta veri belirtilmemişse, `EmbeddedResource` MSBuild, düzende bir bildirim dosyası adı oluşturdu `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` . `RootNamespace`Proje dosyasında tanımlanmamışsa, varsayılan olarak proje adı olur. Örneğin, kök proje dizininde *Form1. resx* adlı bir kaynak dosyası için oluşturulan bildirim adı *Myprojem. Form1. resources*idi.
 
-.NET Core 3.0'dan başlayarak, bir *.resx* dosyası aynı adı taşıyan bir kaynak dosyayla birlikte konumlandığında, örneğin Windows Forms uygulamalarında kaynak bildirimi adı kaynak dosyadaki ilk türün tam adından oluşturulur. Örneğin, *Type.cs* *Type.resx*ile birlikte bulunursa, oluşturulan bildirim adı *Namespace.Classname.resources'tır.* Ancak, *.resx* dosyasının `EmbeddedResource` özelliğindeki özniteliklerden herhangi birini değiştirirseniz, oluşturulan bildirim dosyası adı farklı olabilir:
+.NET Core 3,0 ' den itibaren, bir kaynak dosyası aynı ada sahip bir kaynak dosya (örneğin, *Form1. resx* ve *Form1.cs*) ile birlikte bulunuyorsa MSBuild, kaynak dosyasındaki tür bilgilerini kullanarak bildirim dosyası adını oluşturur `<Namespace>.<ClassName>.resources` . Ad alanı ve sınıf adı, birlikte bulunan kaynak dosyadaki ilk türden ayıklanır. Örneğin, *Form1.cs* adlı bir kaynak dosyayla birlikte bulunan *Form1. resx* adlı bir kaynak dosyası Için üretilen bildirim adı *MyNamespace. Form1. resources*' dir. Önemli şey, dosya adının ilk bölümünün .NET Core 'un önceki sürümleriyle ( *MyProject*yerine*MyNamespace* ) farklı olmasıdır.
 
-- `LogicalName` Özellik teki öznitelik `EmbeddedResource` ayarlanırsa, bu değer kaynak bildirimi dosya adı olarak kullanılır.
+> [!NOTE]
+> `LogicalName` `ManifestResourceName` `DependentUpon` Proje dosyasındaki bir öğe üzerinde, veya meta veriler belirtilmişse, `EmbeddedResource` Bu değişiklik bu kaynak dosyasını etkilemez.
 
-  Örnekler:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
-
-  **Oluşturulan kaynak bildirimi dosya adı**: *SomeName.resources* *(.resx* dosya adı veya kültürü veya diğer meta verilerden bağımsız olarak).
-
-- `LogicalName` Ayarlanmaz, ancak `ManifestResourceName` `EmbeddedResource` özellik üzerindeki öznitelik ayarlanırsa, değeri, dosya uzantısı *.resources*ile birlikte, kaynak bildirimi dosya adı olarak kullanılır.
-
-  Örnekler:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
-  ```
-
-  **Oluşturulan kaynak bildirimi dosya adı**: *SomeName.resources* veya *SomeName.fr-FR.resources*.
-
-- Önceki kurallar geçerli değilse ve `DependentUpon` `EmbeddedResource` öğedeki öznitelik bir kaynak dosyasına ayarlanırsa, kaynak dosyasındaki birinci sınıfın tür adı kaynak bildirimi dosya adında kullanılır. Daha spesifik olarak, oluşturulan dosya adı *\[Namespace.Classname olduğunu. Kültür].kaynaklar*.
-
-  Örnekler:
-
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  **Oluşturulan kaynak bildirimi dosya adı**: *Namespace.Classname.resources* veya `Namespace.Classname` *Namespace.Classname.fr-FR.resources* *(MyTypes.cs'daki*birinci sınıfın adı nerededir).
-
-- Önceki kurallar `EmbeddedResourceUseDependentUponConvention` geçerli değilse, (.NET `true` Core için varsayılan varsayılan) ve aynı temel dosya adı olan bir *.resx* dosyasıyla birlikte bir kaynak dosyası varsa, *.resx* dosyası eşleşen kaynak dosyaya bağımlı hale getirilir ve oluşturulan ad önceki kuraldakiyle aynıdır. Bu, .NET Core projeleri için "varsayılan ayarlar" kuralıdır.
-  
-  Örnekler:
-  
-  MyTypes.cs *MyTypes.cs* ve *MyTypes.resx* veya *MyTypes.fr-FR.resx* dosyaları aynı klasörde bulunur.
-  
-  **Oluşturulan kaynak bildirimi dosya adı**: *Namespace.Classname.resources* veya `Namespace.Classname` *Namespace.Classname.fr-FR.resources* *(MyTypes.cs'daki*birinci sınıfın adı nerededir).
-
-- Önceki kuralların hiçbiri geçerli değilse, oluşturulan kaynak bildirimi dosya adı *RootNamespace.RelativePathWithDotsForSlashes olduğunu.\[ Kültür.] kaynaklar*. Göreli yol, ayarlanırsa `Link` `EmbeddedResource` öğenin özniteliğinin değeridir. Aksi takdirde, göreli yol `Identity` `EmbeddedResource` öğenin özniteliğinin değeridir. Visual Studio'da bu, çözüm gezgininde proje kökünden dosyaya giden yoldur.
+Bu son değişiklik, `EmbeddedResourceUseDependentUponConvention` özelliğin .NET Core projelerine eklenmesiyle birlikte sunulmuştur. Varsayılan olarak, kaynak dosyaları .NET Core proje dosyasında açık olarak listelenmez, bu nedenle `DependentUpon` oluşturulan *. resources* dosyasının adını belirtmek için meta verileri yoktur. , `EmbeddedResourceUseDependentUponConvention` `true` Varsayılan olan olarak ayarlandığında, MSBuild, birlikte bulunan bir kaynak dosyayı arar ve bu dosyadan bir ad alanı ve sınıf adı ayıklar. `EmbeddedResourceUseDependentUponConvention`Olarak ayarlarsanız `false` , MSBuild, bildirim adını, `RootNamespace` ve göreli dosya yolunu birleştiren önceki davranışa göre oluşturur.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Oluşturulan bildirim adlarıyla memnun değilseniz şunları yapabilirsiniz:
+Çoğu durumda, geliştiricinin bölümünde herhangi bir eylem gerekmez ve uygulamanız çalışmaya devam etmelidir. Ancak, bu değişiklik uygulamanızı kopararsa şunlardan birini yapabilirsiniz:
 
-- Kaynak dosyası meta verilerinizi daha önce açıklanan adlandırma kurallarından birine göre değiştirin.
+- Kodunuzu, yeni bildirim adını beklediği şekilde değiştirin.
 
-- Yeni kuralı tamamen devre dışı bırakmak için proje dosyanızda ayarlayın: `EmbeddedResourceUseDependentUponConvention` `false`
+- Yeni adlandırma kuralını, `EmbeddedResourceUseDependentUponConvention` proje dosyanızda olarak ayarlayarak geri çevirin `false` .
 
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > `LogicalName` Öznitelikler varsa, bunların değerleri yine de oluşturulan dosya adı için `ManifestResourceName` kullanılır.
+  ```xml
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+  ```
 
 #### <a name="category"></a>Kategori
 

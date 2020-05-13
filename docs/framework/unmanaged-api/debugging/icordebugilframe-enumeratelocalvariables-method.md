@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad1a91e42f582ce96906da5cbf00ca89acb18499
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178838"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210303"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables Yöntemi
-Bu çerçevedeki yerel değişkenler için bir sayısallaştırıcı alır.  
+Bu çerçevedeki yerel değişkenler için bir Numaralandırıcı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,16 +35,16 @@ HRESULT EnumerateLocalVariables(
   
 ## <a name="parameters"></a>Parametreler  
  `ppValueEnum`  
- [çıkış] Bu çerçevedeki yerel değişkenlerin sayıcısı olan bir ICorDebugValueEnum nesnesinin adresine işaretçi.  
+ dışı Bu çerçevedeki yerel değişkenlerin numaralandırıcısı olan ICorDebugValueEnum nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `EnumerateLocalVariables`bu ICorDebugILFrame nesnesi tarafından temsil edilen çağrı çerçevesinde bulunan yerel değişkenleri listeleyen bir enumerator alır. Bazıları etkin olmadığından, liste çalışan işlevdeki tüm yerel değişkenleri içermeyebilir.  
+ `EnumerateLocalVariables`Bu ICorDebugILFrame nesnesi tarafından temsil edilen çağrı çerçevesinde kullanılabilen yerel değişkenleri listeleyerek bir Numaralandırıcı alır. Liste, çalışan işlevdeki tüm yerel değişkenleri içermeyebilir, çünkü bazıları etkin olmayabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

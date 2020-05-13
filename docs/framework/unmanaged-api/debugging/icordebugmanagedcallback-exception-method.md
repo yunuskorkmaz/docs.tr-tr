@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: 328c10c1895f65b43dc365b1be6b4ec5ef01e720
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2d0461709accf1a9300c072b62bd58734cb33fb8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777355"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209819"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception Yöntemi
 Hata ayıklayıcıya yönetilen koddan bir özel durum gerçekleştiğini bildirir.  
@@ -43,19 +43,19 @@ HRESULT Exception (
  'ndaki Özel durumun oluşturulduğu iş parçacığını temsil eden ICorDebugThread nesnesine yönelik bir işaretçi.  
   
  `unhandled`  
- 'ndaki Bu değer `false`, özel durum henüz uygulama tarafından işlenmemiştir; Aksi takdirde, özel durum işlenmemiş olur ve işlemi sonlandırır.  
+ 'ndaki Bu değer ise `false` , özel durum uygulama tarafından henüz işlenmemiştir; Aksi takdirde, özel durum işlenmemiş olur ve işlemi sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
  Belirli özel durum iş parçacığı nesnesinden alınabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

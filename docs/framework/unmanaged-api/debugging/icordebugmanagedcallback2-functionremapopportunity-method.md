@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d2fc59621cbb6752830c7a8392ce4e0c476ef9e7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793341"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210065"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity Yöntemi
 Kod yürütmenin, düzenlenmiş bir işlevin daha eski bir sürümündeki bir sıra noktasına ulaştığı hata ayıklayıcıya bildirir.  
@@ -54,18 +54,18 @@ HRESULT FunctionRemapOpportunity (
  'ndaki İşlevin eski sürümündeki yönerge işaretçisinin Microsoft ara dili (MSIL) boşluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar. Hata ayıklayıcı [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce `RemapFunction` çağırmadığından, çalışma zamanı eski kodu yürütmeye devam eder ve bir sonraki dizi noktasında başka bir `FunctionRemapOpportunity` geri çağırma işlemini harekete geçmeyecektir.  
+ Bu geri çağırma, [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) metodunu çağırarak, yönerge işaretçisini belirtilen işlevin yeni sürümünde doğru yere yeniden eşlemek için bir fırsat sağlar. Hata ayıklayıcı `RemapFunction` [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) metodunu çağırmadan önce çağrıdıysa, çalışma zamanı eski kodu yürütmeye devam eder ve `FunctionRemapOpportunity` sonraki dizi noktasında başka bir geri çağırma harekete geçmeyecektir.  
   
  Bu geri çağırma, hata ayıklayıcı S_OK dönene kadar verilen işlevin daha eski bir sürümünü yürüten her çerçeve için çağrılacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

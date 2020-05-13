@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792598"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212080"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess Arabirimi
 Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugController öğesinin bir alt sınıfıdır.  
@@ -31,11 +31,11 @@ Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugCon
 |[ClearCurrentException Yöntemi](icordebugprocess-clearcurrentexception-method.md)|Belirtilen iş parçacığında geçerli yönetilmeyen özel durumu temizler.|  
 |[EnableLogMessages Yöntemi](icordebugprocess-enablelogmessages-method.md)|Hata ayıklayıcıya günlük iletilerinin gönderilmesini sağlar ve devre dışı bırakır.|  
 |[EnumerateAppDomains Yöntemi](icordebugprocess-enumerateappdomains-method.md)|İşlemdeki tüm uygulama etki alanlarını numaralandırır.|  
-|[EnumerateObjects Yöntemi](icordebugprocess-enumerateobjects-method.md)|Uygulanmadı.|  
+|[EnumerateObjects Yöntemi](icordebugprocess-enumerateobjects-method.md)|Uygulanmaz.|  
 |[GetHandle Yöntemi](icordebugprocess-gethandle-method.md)|İşlem için bir tanıtıcı alır.|  
 |[GetHelperThreadID Yöntemi](icordebugprocess-gethelperthreadid-method.md)|Hata ayıklayıcının iç yardımcı iş parçacığı için işletim sistemi (OS) iş parçacığı KIMLIĞINI alır.|  
 |[GetID Yöntemi](icordebugprocess-getid-method.md)|İşlemin işletim sistemi (OS) KIMLIĞINI alır.|  
-|[GetObject Yöntemi](icordebugprocess-getobject-method.md)|Uygulanmadı.|  
+|[GetObject Metodu](icordebugprocess-getobject-method.md)|Uygulanmaz.|  
 |[GetThread Yöntemi](icordebugprocess-getthread-method.md)|Belirtilen işletim sistemi iş parçacığı KIMLIĞINE sahip ICorDebugThread örneğini alır.|  
 |[GetThreadContext Yöntemi](icordebugprocess-getthreadcontext-method.md)|Verilen iş parçacığının bağlamını alır.|  
 |[IsOSSuspended Yöntemi](icordebugprocess-isossuspended-method.md)|Hata ayıklayıcının işlemi durdurmasının bir sonucu olarak iş parçacığının askıya alınıp alınmadığını belirler.|  
@@ -52,13 +52,13 @@ Yönetilen bir kodu yürüten bir işlemi temsil eder. Bu arabirim, ICorDebugCon
 > Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

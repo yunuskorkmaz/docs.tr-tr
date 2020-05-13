@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: 4f6940f863504a9aedd9539e121c7b3791f746b9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c5527f3bd0b04857a1ebc520016b81ddbe3c23f8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788303"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208934"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection Metodu
 Hata ayıklayıcıyı belirtilen bağlantının sonlandırıldığını bildirir.  
@@ -42,16 +42,16 @@ HRESULT DestroyConnection (
  'ndaki Yok edilen bağlantının KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [BARıNDıRMA API](../../../../docs/framework/unmanaged-api/hosting/index.md)'sinde bir ana bilgisayar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) çağırdığında, bir `DestroyConnection` geri çağırması tetiklenir.  
+ `DestroyConnection` [Barındırma API](../hosting/index.md)'sinde bir ana bilgisayar [ICLRDebugManager:: EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) çağırdığında bir geri çağırma tetiklenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

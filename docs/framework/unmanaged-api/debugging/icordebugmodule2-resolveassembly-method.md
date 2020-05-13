@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125300"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210046"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly Yöntemi
 
@@ -38,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parametreler
 
 `tkAssemblyRef`\
-'ndaki Derlemeye başvuran bir `mdToken` değeri.
+'ndaki `mdToken`Derlemeye başvuran bir değer.
 
 `ppAssembly`\
 dışı Derlemeyi temsil eden ICorDebugAssembly nesnesinin adresine yönelik bir işaretçi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`ResolveAssembly` çağrıldığında derleme zaten yüklü değilse, CORDBG_E_CANNOT_RESOLVE_ASSEMBLY HRESULT değeri döndürülür.
+, Çağrıldığında derleme zaten yüklü değilse `ResolveAssembly` , CORDBG_E_CANNOT_RESOLVE_ASSEMBLY HRESULT değeri döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi:** CorDebug. IDL, CorDebug. h
 
 **Kitaplık:** Corguid. lib
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

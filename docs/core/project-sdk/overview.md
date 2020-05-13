@@ -1,38 +1,39 @@
 ---
-title: .NET Core projesi SDK'ya genel bakış
-description: .NET Core projesi SDK'ları hakkında bilgi edinin.
+title: .NET Core proje SDK 'sına genel bakış
+titleSuffix: ''
+description: .NET Core proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389664"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206054"
 ---
-# <a name="net-core-project-sdks"></a>.NET Çekirdek projesi SDK'ları
+# <a name="net-core-project-sdks"></a>.NET Core proje SDK 'Ları
 
-.NET Core projeleri bir yazılım geliştirme kiti (SDK) ile ilişkilidir. Her *proje SDK,* kod derleme, paketleme ve yayımlamadan sorumlu bir MSBuild [hedefleri](/visualstudio/msbuild/msbuild-targets) ve ilişkili [görevler](/visualstudio/msbuild/msbuild-tasks) kümesidir. SDK projesine başvuran bir proje bazen *SDK tarzı proje*olarak adlandırılır.
+.NET Core projeleri bir yazılım geliştirme seti (SDK) ile ilişkilendirilir. Her *Proje SDK 'sı* , bir dizi MSBuild [hedefi](/visualstudio/msbuild/msbuild-targets) ve kodu derleme, paketleme ve yayımlama ile ilgili [görevlerden](/visualstudio/msbuild/msbuild-tasks) oluşur. Proje SDK 'Sına başvuran bir proje bazen bir *SDK stili proje*olarak adlandırılır.
 
-## <a name="available-sdks"></a>Kullanılabilir SDK'lar
+## <a name="available-sdks"></a>Kullanılabilir SDK 'lar
 
-.NET Core için aşağıdaki SDK'lar mevcuttur:
+.NET Core için aşağıdaki SDK 'lar mevcuttur:
 
-| Kimlik | Açıklama | Repo|
+| Kimlik | Açıklama | Depo|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Çekirdek SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | .NET Çekirdek [Web SDK](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
-| `Microsoft.NET.Sdk.Razor` | .NET [ÇekirdekLi Jilet SDK](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | .NET Çekirdek İşçi Servisi SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | .NET Çekirdek Kazanç Formları ve WPF SDK |
+| `Microsoft.NET.Sdk` | .NET Core SDK | https://github.com/dotnet/sdk |
+| `Microsoft.NET.Sdk.Web` | .NET Core [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK 'sı](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | .NET Core Worker hizmeti SDK 'Sı |
+| `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms ve WPF SDK |
 
-.NET Core SDK, .NET Core'un temel SDK'sudur. Diğer SDK'lar .NET Core SDK'ya başvurur ve diğer SDK'larla ilişkili projeler de mevcut tüm .NET Core SDK özelliklerine sahiptir. Örneğin Web SDK hem .NET Core SDK'ya hem de Razor SDK'ya bağlıdır.
+.NET Core SDK, .NET Core için temel SDK 'dir. Diğer SDK 'lar .NET Core SDK başvuruda bulunur ve diğer SDK 'lar ile ilişkili projeler için kullanılabilen tüm .NET Core SDK özellikleri vardır. Örneğin, Web SDK 'Sı, hem .NET Core SDK hem de Razor SDK 'sına bağlıdır.
 
-Ayrıca NuGet üzerinden dağıtılabilir kendi SDK yazabilirsiniz.
+Ayrıca kendi SDK 'nizi, NuGet aracılığıyla dağıtılabilecek şekilde yazabilirsiniz.
 
 ## <a name="project-files"></a>Proje dosyaları
 
-.NET Core projeleri [MSBuild](/visualstudio/msbuild/msbuild) formatına dayanır. C# projeleri için *.csproj* ve F# projeleri için *.fsproj* gibi uzantıları olan proje dosyaları XML formatındadır. MSBuild proje dosyasının kök öğesi [Proje](/visualstudio/msbuild/project-element-msbuild) öğesidir. Öğe, `Project` hangi `Sdk` SDK'nın (ve sürümünün) kullanılacağını belirten isteğe bağlı bir özniteliğe sahiptir. .NET Core araçlarını kullanmak ve kodunuzu `Sdk` oluşturmak için, özniteliği [Kullanılabilir SDK'lar](#available-sdks) tablosundaki iYe'lerden birine ayarlayın.
+.NET Core projeleri [MSBuild](/visualstudio/msbuild/msbuild) biçimine dayanır. C# projeleri için *. csproj* ve F # projelerinde *. fsproj* gibi uzantılara sahıp proje dosyaları, XML biçimindedir. MSBuild proje dosyasının kök öğesi [Proje](/visualstudio/msbuild/project-element-msbuild) öğesidir. `Project`Öğesi `Sdk` Hangi SDK (ve sürümü) kullanacağınızı belirten isteğe bağlı bir özniteliğe sahiptir. .NET Core araçlarını kullanmak ve kodunuzu derlemek için, `Sdk` özniteliğini [kullanılabilir SDK](#available-sdks) 'lar tablosundaki kimliklerden birine ayarlayın.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -40,7 +41,7 @@ Ayrıca NuGet üzerinden dağıtılabilir kendi SDK yazabilirsiniz.
 </Project>
 ```
 
-NuGet'den gelen bir SDK belirtmek için, adın sonundaki sürümü ekleyin veya *global.json* dosyasında adı ve sürümü belirtin.
+NuGet 'den gelen bir SDK belirtmek için, adın sonundaki sürümü ekleyin veya *Global. JSON* dosyasındaki adı ve sürümü belirtin.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -48,7 +49,7 @@ NuGet'den gelen bir SDK belirtmek için, adın sonundaki sürümü ekleyin veya 
 </Project>
 ```
 
-SDK belirtmek için başka bir yolu üst düzey [Sdk](/visualstudio/msbuild/sdk-element-msbuild) elemanı ile:
+SDK 'yı belirtmenin bir başka yolu da en üst düzey [SDK](/visualstudio/msbuild/sdk-element-msbuild) öğesidir:
 
 ```xml
 <Project>
@@ -57,7 +58,7 @@ SDK belirtmek için başka bir yolu üst düzey [Sdk](/visualstudio/msbuild/sdk-
 </Project>
 ```
 
-Bir SDK'ya bu yollardan biriyle başvurmak ,NET Core için proje dosyalarını büyük ölçüde basitleştirir. MSBuild, projeyi değerlendirirken proje `Sdk.props` dosyasının üst kısmında ve `Sdk.targets` en altta örtülü içeri aktarım ekler.
+Bu yollarla bir SDK 'ya başvurmak, .NET Core için proje dosyalarını büyük ölçüde basitleştirir. Proje değerlendirilirken MSBuild, `Sdk.props` Proje dosyasının üst kısmına ve alt kısmına örtük içeri aktarmalar ekler `Sdk.targets` .
 
 ```xml
 <Project>
@@ -70,76 +71,80 @@ Bir SDK'ya bu yollardan biriyle başvurmak ,NET Core için proje dosyalarını b
 ```
 
 > [!TIP]
-> Bir Windows makinesinde, *Sdk.props* ve *Sdk.targets* dosyaları *%ProgramFiles%\dotnet\sdk\\[sürüm]\Sdks\Microsoft.NET.Sdk\Sdk* klasöründe bulunabilir.
+> Bir Windows makinesinde, *%ProgramFiles%\dotnet\sdk \\ [Version] \Sdks\Microsoft.net.Sdk\Sdk* klasöründe *SDK. props* ve *SDK. targets* dosyaları bulunabilir.
 
 ### <a name="preprocess-the-project-file"></a>Proje dosyasını ön işleme
 
-MSBuild SDK ve hedefleri `dotnet msbuild -preprocess` komutu kullanarak dahil edildikten sonra gördüğü gibi tamamen genişletilmiş proje görebilirsiniz. Komutun [`dotnet msbuild`](../tools/dotnet-msbuild.md) [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı, hangi dosyaların içe aktarıldığı, kaynakları ve projeyi gerçekten oluşturmadan yapıya katkıları gösterir.
+SDK ve hedefleri komutu kullanılarak eklendikten sonra, tam genişletilmiş projeyi MSBuild olarak görebilirsiniz `dotnet msbuild -preprocess` . Komutun [ön işlem](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) anahtarı [`dotnet msbuild`](../tools/dotnet-msbuild.md) hangi dosyaların içeri aktarılacağını, kaynaklarını ve derleme için gerçekten projeyi oluşturmadan yapıya katkılarını gösterir.
 
-Projenin birden çok hedef çerçevesi varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odakla. Örneğin:
+Projede birden çok hedef çerçeve varsa, komutun sonuçlarını MSBuild özelliği olarak belirterek yalnızca bir çerçeveye odaklayın. Örneğin:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>Varsayılan derleme içerir
+### <a name="default-compilation-includes"></a>Varsayılan derleme şunları içerir
 
-Varsayılan öğeler ve katıştırılmış kaynaklar derlemek için içerir ve hariç SDK tanımlanır. SDK dışı .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından, bu öğeleri proje dosyanızda belirtmeniz gerekmez. Bu, anlaşılması daha kolay olan ve gerekirse elle düzenleme nin daha kolay olduğu daha küçük proje dosyalarına yol açar.
+Derleme öğeleri, katıştırılmış kaynaklar ve öğeler için varsayılan içerir ve `None` DıŞLARDıR SDK 'da tanımlanmıştır. SDK olmayan .NET Framework projelerinin aksine, varsayılanlar en yaygın kullanım durumlarını kapsadığından proje dosyanızda bu öğeleri belirtmeniz gerekmez. Bu, proje dosyasını daha küçük ve gerekirse, el ile anlamanız ve düzenlemeyi kolaylaştırır.
 
-Aşağıdaki tabloda .NET Core SDK'da hangi elementin ve hangi [globs'lerin](https://en.wikipedia.org/wiki/Glob_(programming)) dahil edildiği ve dışlandığı gösterilmektedir:
+Aşağıdaki tablo, hangi öğelerin ve hangi [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) dahil edileceğini ve .NET Core SDK hariç tutulduğunu gösterir:
 
-| Öğe           | Glob dahil et                              | Glob hariç                                                  | Glob'u çıkarın              |
+| Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Derlemek           | \*\*/\*.cs (veya diğer dil uzantıları) | \*\*/\*.kullanıcı;  \*\*/\*. \*proj;  \* \* / \*  \* \* / \*  | Yok                      |
-| EmbeddedResource  | \*\*/\*Resx                              | \*\*/\*.kullanıcı; \*\*/\*. \*proj; \* \* / \* \* \* / \*     | Yok                      |
-| None              | \*\*/\*                                   | \*\*/\*.kullanıcı; \*\*/\*. \*proj; \* \* / \* \* \* / \*     | \*\*/\*.cs; \* \* /.resx \* |
+| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
+| Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
 
 > [!NOTE]
-> `./bin` VE `./obj` `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` MSBuild özellikleri tarafından temsil edilen klasörler varsayılan olarak globs dışında tutulur. Hariç tutmalar özellik `$(DefaultItemExcludes)`tarafından temsil edilir.
+> Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak özelliği tarafından temsil edilir `$(DefaultItemExcludes)` .
 
-Proje dosyanızda bu öğeleri açıkça tanımlarsanız, büyük olasılıkla aşağıdaki hatayı alırsınız:
+#### <a name="build-errors"></a>Derleme hataları
 
-**Yinelenen Derleme öğeleri dahil edildi. .NET SDK varsayılan olarak proje dizininizdeki öğeleri derle içerir. Bu öğeleri proje dosyanızdan kaldırabilir veya proje dosyanıza açıkça eklemek istiyorsanız 'Varsayılan Derleme Öğeleri' özelliğini 'false' olarak ayarlayabilirsiniz.**
+Proje dosyanızda bu öğelerden herhangi birini açıkça tanımlarsanız, büyük olasılıkla aşağıdakine benzer bir "NETSDK1022" derleme hatası alırsınız:
 
-Hatayı gidermek için, önceki `Compile` tabloda listelenen örtük öğelerle eşleşen açık `EnableDefaultCompileItems` öğeleri `false`kaldırın veya özelliği örtük eklemeyi devre dışı bırakan "aşağıdakilere" göre ayarlayın:
+  > Yinelenen ' Compile ' öğeleri eklendi. .NET SDK varsayılan olarak proje dizininizdeki ' derleme ' öğelerini içerir. Bu öğeleri proje dosyanıza kaldırabilir ya da bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' Enabledefaultcompileıtems ' özelliğini ' false ' olarak ayarlayabilirsiniz.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-</PropertyGroup>
-```
+  > Yinelenen ' EmbeddedResource ' öğeleri eklendi. .NET SDK varsayılan olarak proje dizininizdeki ' EmbeddedResource ' öğelerini içerir. Bu öğeleri proje dosyanıza kaldırabilir ya da bunları proje dosyanıza açıkça dahil etmek istiyorsanız ' Enabledefaultembeddedresourceıtems ' özelliğini ' false ' olarak ayarlayabilirsiniz.
 
-Örneğin, uygulamanızla birlikte yayımlanmak üzere bazı dosyaların belirtilmek isterseniz, örneğin bu öğe için bilinen MSBuild mekanizmalarını `Content` kullanmaya devam edebilirsiniz.
+Hataları gidermek için aşağıdakilerden birini yapın:
 
-`EnableDefaultCompileItems`yalnızca `Compile` globs devre dışı kalır, ancak .cs öğeleri `None` için \*de geçerli olan örtük glob gibi diğer globs etkilemez. Bu nedenle, Visual Studio'daki \*Solution Explorer,.cs öğelerini projenin `None` bir parçası olarak, öğe olarak gösterir. Örtük `None` glob devre dışı `EnableDefaultNoneItems` kalmak `false`için, ayarlayın:
+- `Compile` `EmbeddedResource` `None` Önceki tabloda listelenenlerin bulunduğu açık, veya öğeleri kaldırın.
 
-```xml
-<PropertyGroup>
-  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
-</PropertyGroup>
-```
+- `EnableDefaultItems` `false` Tüm örtük dosya eklemeyi devre dışı bırakmak için özelliğini olarak ayarlayın:
 
-*Tüm* örtük globs devre dışı `EnableDefaultItems` kalmak `false`için, özelliği ayarlayın:
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  ```
 
-```xml
-<PropertyGroup>
-  <EnableDefaultItems>false</EnableDefaultItems>
-</PropertyGroup>
-```
+  Uygulamanızla yayımlanacak dosyaları belirtmek istiyorsanız, bu gibi bilinen MSBuild mekanizmalarını yine de kullanabilirsiniz (örneğin, `Content` öğesi).
 
-## <a name="customize-the-build"></a>Yapıyı özelleştirme
+- ,, Veya özelliğini olarak ayarlayarak yalnızca,, `Compile` veya genelleştirmeler öğesini seçime bağlı olarak devre dışı bırakın `EmbeddedResource` `None` `EnableDefaultCompileItems` `EnableDefaultEmbeddedResourceItems` `EnableDefaultNoneItems` `false` :
 
-Bir [yapıyı özelleştirmenin](/visualstudio/msbuild/customize-your-build)çeşitli yolları vardır. Bir özelliği bir [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) veya [dotnet](../tools/index.md) komutuna bağımsız değişken olarak geçirerek geçersiz kılmak isteyebilirsiniz. Özelliği proje dosyasına veya *Dizin.Build.props* dosyasına da ekleyebilirsiniz. .NET Core projelerinin yararlı özelliklerinin listesi [için ,.NET Core SDK projeleri için MSBuild özelliklerine](msbuild-props.md)bakın.
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  ```
+
+  Yalnızca genelleştirmeler 'yi devre dışı bırakırsanız `Compile` , Visual Studio 'daki Çözüm Gezgini, \* öğe olarak da dahil olmak üzere projenin bir parçası olarak. cs öğelerini gösterir `None` . Örtük glob 'yi devre dışı bırakmak için `None` , `EnableDefaultNoneItems` çok olarak ayarlayın `false` .
+
+## <a name="customize-the-build"></a>Derlemeyi özelleştirme
+
+[Bir derlemeyi özelleştirmek](/visualstudio/msbuild/customize-your-build)için çeşitli yollar vardır. Bir [MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) veya [DotNet](../tools/index.md) komutuna bir bağımsız değişken olarak geçirerek bir özelliği geçersiz kılmak isteyebilirsiniz. Ayrıca, özelliği proje dosyasına veya bir *Dizin. Build. props* dosyasına ekleyebilirsiniz. .NET Core projelerinin yararlı özelliklerinin bir listesi için bkz. [.NET Core SDK projeleri Için MSBuild başvurusu](msbuild-props.md).
 
 ### <a name="custom-targets"></a>Özel hedefler
 
-.NET Core projeleri, paketi tüketen projeler tarafından kullanılmak üzere özel MSBuild hedeflerini ve özelliklerini paketleyebilir. İstediğince bu tür genişletilebilirlik kullanın:
+.NET Core projeleri, paketi tüketen projeler tarafından kullanılmak üzere özel MSBuild hedeflerini ve özelliklerini paketleyebilir. Şunları yapmak istediğinizde bu tür bir genişletilebilirlik kullanın:
 
-- Yapı işlemini genişletin.
-- Oluşturulan dosyalar gibi yapı işleminin yapı yapılarının yapı yapılarına erişin.
-- Yapının çağrıldığı yapılandırmayı denetleyin.
+- Yapı sürecini genişletin.
+- Oluşturulan dosyalar gibi yapı sürecinin yapılarına erişin.
+- Yapılandırmanın çağrıldığı yapılandırmayı inceleyin.
 
-Dosyaları `<package_id>.targets` forma `<package_id>.props` veya (örneğin) `Contoso.Utility.UsefulStuff.targets`projenin *yapı* klasörüne yerleştirerek özel yapı hedefleri veya özellikleri eklersiniz.
+Dosyaları forma `<package_id>.targets` veya `<package_id>.props` (örneğin, `Contoso.Utility.UsefulStuff.targets` ) projenin *Build* klasörüne yerleştirerek özel derleme hedefleri veya özellikleri eklersiniz.
 
-Aşağıdaki XML, [`dotnet pack`](../tools/dotnet-pack.md) ne paketlenir komutu söyleyen bir *.csproj* dosyasından bir parçacıktır. Öğe, `<ItemGroup Label="dotnet pack instructions">` hedef dosyalarını paketin içindeki *yapı* klasörüne yerleştirir. Öğe `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">` derlemeleri ve *.json* dosyalarını *yapı* klasörüne yerleştirir.
+Aşağıdaki XML, bir *. csproj* dosyasındaki, [`dotnet pack`](../tools/dotnet-pack.md) komuta neyin paketlenecek olduğunu bildiren bir kod parçacıdır. `<ItemGroup Label="dotnet pack instructions">`Öğesi, hedef dosyalarını paketin içindeki *derleme* klasörüne koyar. `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">`Öğesi derlemeler ve *. JSON* dosyalarını *Build* klasörüne koyar.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -165,12 +170,12 @@ Aşağıdaki XML, [`dotnet pack`](../tools/dotnet-pack.md) ne paketlenir komutu 
 </Project>
 ```
 
-Projenizde özel bir hedef tüketmek `PackageReference` için pakete ve sürümüne işaret eden bir öğe ekleyin. Araçlardan farklı olarak, özel hedefler paketi, tüketen projenin bağımlılık kapatması dahildir.
+Projenizde özel bir hedef kullanmak için `PackageReference` pakete ve sürümüne işaret eden bir öğesi ekleyin. Araçların aksine, özel hedefler paketi, tüketen projenin bağımlılık kapanışına dahil edilir.
 
-Özel hedefin nasıl kullanılacağını yapılandırabilirsiniz. Bir MSBuild hedefi olduğundan, belirli bir hedefe bağlı olabilir, başka bir hedefin peşinden koşabilir veya `dotnet msbuild -t:<target-name>` komutu kullanarak el ile çağrılabilir. Ancak, daha iyi bir kullanıcı deneyimi sağlamak için proje başına araçları ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, proje başına araç gereken parametreleri kabul eder ve [`dotnet msbuild`](../tools/dotnet-msbuild.md) bunu hedefi yürüten gerekli çağrıya çevirir. [Projedeki MVP Summit 2016 Hackathon örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) repo'da [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) bu tür bir sinerji örneği görebilirsiniz.
+Özel hedefin nasıl kullanılacağını yapılandırabilirsiniz. Bir MSBuild hedefi olduğundan, belirli bir hedefe bağlı olabilir, başka bir hedeften sonra çalıştırılabilir veya komutu kullanılarak el ile çağrılabilir `dotnet msbuild -t:<target-name>` . Ancak, daha iyi bir kullanıcı deneyimi sağlamak için proje başına araçları ve özel hedefleri birleştirebilirsiniz. Bu senaryoda, proje başına aracı her türlü parametreyi kabul eder ve [`dotnet msbuild`](../tools/dotnet-msbuild.md) hedefi yürüten gerekli çağrıya çevirir. Bu tür sinerjiden bahsederek denemelerini 'nin bir örneğini projede [MVP Zirvesi 2016 Hackathon örnekleri](https://github.com/dotnet/MVPSummitHackathon2016) deposunda görebilirsiniz [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core'u yükle](../install/index.md)
-- [MSBuild proje SDK'ları nasıl kullanılır?](/visualstudio/msbuild/how-to-use-project-sdk)
-- [NuGet ile özel MSBuild hedeflerini ve sahnelerini paketle](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)
+- [.NET Core 'ı yükler](../install/index.md)
+- [MSBuild proje SDK 'larını kullanma](/visualstudio/msbuild/how-to-use-project-sdk)
+- [NuGet ile özel MSBuild hedeflerini ve props paketleme](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

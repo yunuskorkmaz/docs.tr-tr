@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178604"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207288"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject Metodu
-Nesne adresini "ICorDebugObjectValue" nesnesine dönüştürür.  
+Bir nesne adresini bir "ICorDebugObjectValue" nesnesine dönüştürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>Parametreler  
  `addr`  
- [içinde] Nesne adresi.  
+ 'ndaki Nesne adresi.  
   
  `ppObject`  
- [çıkış] "ICorDebugObjectValue" nesnesinin adresine işaretçi.  
+ dışı "ICorDebugObjectValue" nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçerli `addr` yönetilen nesneyi işaret `GetObject` etmiyorsa, `E_FAIL`yöntem döndürür.  
+ `addr`Geçerli bir yönetilen nesneye işaret etmez, `GetObject` yöntemi döndürür `E_FAIL` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

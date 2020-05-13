@@ -1,57 +1,59 @@
 ---
-title: char türü - C# referans
-ms.date: 11/22/2019
+title: Char türü-C# başvurusu
+ms.date: 05/11/2020
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739061"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205788"
 ---
-# <a name="char-c-reference"></a>char (C# referansı)
+# <a name="char-c-reference"></a>Char (C# Başvurusu)
 
-Tür `char` anahtar kelimesi, UNicode UTF-16 karakterini temsil eden .NET <xref:System.Char?displayProperty=nameWithType> yapı türüiçin bir diğer addır.
+`char`Type anahtar sözcüğü, <xref:System.Char?displayProperty=nameWithType> BIR Unicode UTF-16 karakteri temsil eden .net yapı türü için bir diğer addır.
 
 |Tür|Aralık|Boyut|.NET türü|
 |----------|-----------|----------|-------------------------|
-|`char`|U+0000 için U+FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|U + 0000-U + FFFF|16 bit|<xref:System.Char?displayProperty=nameWithType>|
 
-`char` Türünün varsayılan değeri `\0`, yani U+0000'dir.
+Türün varsayılan değeri, yani `char` `\0` u + 0000 olur.
 
-[Dize](reference-types.md#the-string-type) türü, metni bir `char` değerler dizisi olarak temsil eder.
+`char`Tür [karşılaştırma](../operators/comparison-operators.md), [eşitlik](../operators/equality-operators.md), [artış](../operators/arithmetic-operators.md#increment-operator-)ve [azaltma](../operators/arithmetic-operators.md#decrement-operator---) işleçlerini destekler. Üstelik, `char` işlenenler, [Aritmetik](../operators/arithmetic-operators.md) ve [bit düzeyinde mantıksal](../operators/bitwise-and-shift-operators.md) işleçler için ilgili karakter kodları üzerinde bir işlem gerçekleştirir ve türün sonucunu üretir `int` .
+
+[Dize](reference-types.md#the-string-type) türü, metni bir dizi değer olarak temsil eder `char` .
 
 ## <a name="literals"></a>Sabit değerler
 
-Aşağıdakilerle bir `char` değer belirtebilirsiniz:
+Şunu `char` içeren bir değer belirtebilirsiniz:
 
-- gerçek bir karakter.
-- bir karakter kodunun dört `\u` sembollü hexadecimal gösterimi tarafından izlenen bir Unicode kaçış sırası.
-- bir karakter kodunun hexadecimal gösterimi takip eden `\x` bir hexadecimal kaçış dizisi.
+- bir karakter sabit değeri.
+- bir Unicode kaçış sırası, bu, `\u` bir karakter kodunun dört symbol onaltılı gösterimi izler.
+- `\x`bir karakter kodunun onaltılı gösteriminden sonra gelen onaltılı kaçış sırası.
 
 [!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
-Önceki örnekte de görüldüğü gibi, karakter kodunun değerini karşılık `char` gelen değere de atabilirsiniz.
+Yukarıdaki örnekte gösterildiği gibi, bir karakter kodunun değerini karşılık gelen değere de çevirebilirsiniz `char` .
 
 > [!NOTE]
-> Unicode kaçış sırası durumunda, dört hexadecimal basamak belirtmeniz gerekir. Diğer bir `\u006A` süre geçerli bir `\u06A` kaçış `\u6A` dizisidir ve geçerli değildir.
+> Unicode kaçış sırası söz konusu olduğunda, dört onaltılık basamağı de belirtmeniz gerekir. Yani, `\u006A` geçerli bir kaçış sırası, `\u06A` ve `\u6A` geçerli değildir.
 >
-> Bir hexadecimal kaçış sırası durumunda, önde gelen sıfırları atlayabilirsiniz. Diğer bir `\x006A`şey, , , `\x06A`ve `\x6A` kaçış dizileri geçerlidir ve aynı karaktere karşılık gelir.
+> Onaltılı kaçış sırası söz konusu olduğunda, öndeki sıfırları atlayabilirsiniz. Diğer bir deyişle, `\x006A` , `\x06A` ve `\x6A` kaçış dizileri geçerlidir ve aynı karaktere karşılık gelir.
 
 ## <a name="conversions"></a>Dönüşümler
 
-Türü `char` örtülü olarak aşağıdaki [integral](integral-numeric-types.md) türlerine `ushort`dönüştürülebilir: `long`, `ulong`, `int` `uint`, ve . Ayrıca dahili [kayan nokta](floating-point-numeric-types.md) sayısal türlerine dolaylı olarak dönüştürülebilir: `float` `double`, `decimal`, ve . Açıkça dönüştürülebilir `sbyte`, `byte`, ve `short` integral türleri.
+`char`Türü örtük olarak şu [integral](integral-numeric-types.md) türlerine dönüştürülebilir: `ushort` ,,, `int` `uint` `long` ve `ulong` . Ayrıca, yerleşik [kayan nokta](floating-point-numeric-types.md) sayısal türlerine örtülü olarak dönüştürülebilir: `float` , `double` ve `decimal` . Açık olarak `sbyte` , `byte` ve `short` tam sayı türlerine dönüştürülebilir.
 
-Diğer türlerden `char` türe örtülü dönüşüm yoktur. Ancak, herhangi bir [integral](integral-numeric-types.md) veya [kayan nokta](floating-point-numeric-types.md) sayısal türü `char`açıkça dönüştürülebilir .
+Diğer türlerden türe örtük dönüştürme yok `char` . Ancak, tüm [integral](integral-numeric-types.md) veya [kayan nokta](floating-point-numeric-types.md) sayısal türleri açıkça dönüştürülebilir `char` .
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [İntegral türleri](~/_csharplang/spec/types.md#integral-types) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Integral türler](~/_csharplang/spec/types.md#integral-types) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

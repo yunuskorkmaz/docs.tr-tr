@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-ms.openlocfilehash: 29c9d9dde4776ef729c0bbae7b644171a265e3ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 86e2b28448caf2a872e44490e8ee4763b056ed44
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137463"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206962"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>ICorDebugModule::GetAssembly Metodu
 Bu modülün kapsayan derlemesini alır.  
@@ -38,10 +38,10 @@ HRESULT GetAssembly(
  dışı Bu modülü içeren derlemeyi temsil eden ICorDebugAssembly nesnesine yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

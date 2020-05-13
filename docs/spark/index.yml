@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: .NET Apache Spark belgeleri için
-summary: '.NET kodunu yazdığınız her yerde Apache Spark ile veri toplu, gerçek zamanlı akış, makine öğrenimi ve geçici sorguları işlemek için Apache Spark için .NET''i nasıl kullanacağınızı öğrenin.'
+title: Apache Spark belgeleri için .NET
+summary: .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgular işlemek için Apache Spark .NET kullanmayı öğrenin.
 metadata:
-  title: .NET Apache Spark belgeleri için
-  description: '.NET kodunu yazdığınız her yerde Apache Spark ile veri toplu, gerçek zamanlı akış, makine öğrenimi ve geçici sorguları işlemek için Apache Spark için .NET''i nasıl kullanacağınızı öğrenin.'
+  title: Apache Spark belgeleri için .NET
+  description: .NET kodu yazdığınız her yerde Apache Spark veri, gerçek zamanlı akış, makine öğrenimi ve geçici sorgular işlemek için Apache Spark .NET kullanmayı öğrenin.
   services: service
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,44 +11,62 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
+  ms.openlocfilehash: 5b477daf0f52d48a6f068fa8eafeb1b787d19c39
+  ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83212233"
 landingContent:
-  - title: Apache Spark için .NET Hakkında
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: ​.NET belgelerindeki yenilikler
-            url: /dotnet/whats-new/index
-      - linkListType: overview
-        links:
-          - text: Apache Spark için .NET nedir?
-            url: what-is-apache-spark-dotnet.md
-      - linkListType: reference
-        links:
-          - text: API Başvurusu
-            url: /dotnet/api/?view=spark-dotnet
-          - text: GitHub
-            url: 'https://github.com/dotnet/spark'
-  - title: Kullanmaya başlayın
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Apache Spark için .NET ile başlayın
-            url: tutorials/get-started.md
-      - linkListType: learn
-        links:
-          - text: Windows veya Linux'ta 10 dakika içinde başlayın
-            url: 'https://dotnet.microsoft.com/learn/data/spark-tutorial/intro'
-  - title: Apache Spark uygulaması için .NET'inizi dağıtın
-    linkLists:
-      - linkListType: deploy
-        links:
-          - text: Azure HDInsight’a dağıtma
-            url: tutorials/hdinsight-deployment.md
-          - text: AWS EMR Spark’a dağıtma
-            url: tutorials/amazon-emr-spark-deployment.md
-          - text: Databricks’e dağıtma
-            url: tutorials/databricks-deployment.md
-      - linkListType: how-to-guide
-        links:
-          - text: Uygulamanızda hata ayıklama
-            url: how-to-guides/debug.md
+- title: Apache Spark temel kavramları için .NET
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: ​.NET belgelerindeki yenilikler
+      url: /dotnet/whats-new/index
+  - linkListType: overview
+    links:
+    - text: Apache Spark için .NET nedir?
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: API Başvurusu
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: 10 dakikada kullanmaya başlayın
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Apache Spark için .NET ile çalışmaya başlama
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: Windows veya Linux 'ta 10 dakika içinde çalışmaya başlama
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: .NET Apache Spark uygulamanızı dağıtma
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Azure HDInsight’a dağıtma
+      url: tutorials/hdinsight-deployment.md
+    - text: AWS EMR Spark’a dağıtma
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Databricks’e dağıtma
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: Uygulamanızda hata ayıklama
+      url: how-to-guides/debug.md
+    - text: Çalışan ve UDF ikililerini dağıtma
+      url: how-to-guides/deploy-worker-udf-binaries.md
+- title: Büyük veri işleme
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Toplu işleme
+      url: tutorials/batch-processing.md
+    - text: Yapılandırılmış akış
+      url: tutorials/streaming.md
+    - text: Yaklaşım analizi
+      url: tutorials/ml-sentiment-analysis.md

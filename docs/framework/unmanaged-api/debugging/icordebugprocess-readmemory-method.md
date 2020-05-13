@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178657"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210481"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory Yöntemi
-Bu işlem için belirli bir bellek alanını okur.  
+Bu işlem için belirtilen bellek alanını okur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,29 +37,29 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Parametreler  
  `address`  
- [içinde] Okunacak belleğin temel adresini belirten bir `CORDB_ADDRESS` değer.  
+ 'ndaki `CORDB_ADDRESS`Okunacak belleğin temel adresini belirten bir değer.  
   
  `size`  
- [içinde] Bellekten okunacak bayt sayısı.  
+ 'ndaki Bellekten okunacak bayt sayısı.  
   
  `buffer`  
- [çıkış] Belleğin içeriğini alan bir arabellek.  
+ dışı Belleğin içeriğini alan bir arabellek.  
   
  `read`  
- [çıkış] Belirtilen arabelleğe aktarılan bayt sayısına işaretçi.  
+ dışı Belirtilen arabelleğe aktarılan bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem `ReadMemory` öncelikle hata ayıklama nın yönetilmeyen bölümü tarafından kullanılan bellek bölgelerini incelemek için interop hata ayıklama tarafından kullanılmak üzere tasarlanmıştır. Bu yöntem, Microsoft ara dili (MSIL) kodunu ve yerel JIT tarafından derlenen kodu okumak için de kullanılabilir.  
+ `ReadMemory`Yöntemi öncelikle, hata ayıklanan yönetilmeyen bölümü tarafından kullanılmakta olan bellek bölgelerini incelemek için birlikte çalışma hata ayıklaması tarafından kullanılmak üzere tasarlanmıştır. Bu yöntem, Microsoft ara dili (MSIL) kodu ve yerel JıT derlenmiş kod okumak için de kullanılabilir.  
   
- Yönetilen kesme noktaları `buffer` parametrede döndürülen verilerden kaldırılır. ICorDebugProcess2 tarafından ayarlanan yerel kesme noktaları için ayarlama [yapılmaz::SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Yönetilen kesme noktaları, parametrede döndürülen verilerden kaldırılır `buffer` . [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)tarafından ayarlanan yerel kesme noktaları için hiçbir değişiklik yapılmayacak.  
   
- İşlem belleği önbelleğe alma işlemi yapılmaz.  
+ İşlem belleğini önbelleğe alma işlemi yapılmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

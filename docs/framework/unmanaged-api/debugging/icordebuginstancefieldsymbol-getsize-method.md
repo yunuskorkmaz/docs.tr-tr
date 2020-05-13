@@ -2,12 +2,12 @@
 title: 'Icordebugınstancefieldsymbol:: GetSize yöntemi'
 ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
-ms.openlocfilehash: eb70c441441954e2ffce6ca832c58369c606b128
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3d3c6881ecd54fc48be92e5ea0dc74a5cfdabd8f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782278"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209959"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a>Icordebugınstancefieldsymbol:: GetSize yöntemi
 Örnek alanının bayt cinsinden boyutunu alır.  
@@ -30,13 +30,13 @@ HRESULT GetSize(
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

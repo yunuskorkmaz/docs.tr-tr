@@ -1,21 +1,21 @@
 ---
 title: dotnet-install scripts
-description: .NET Core SDK'yı ve paylaşılan çalışma süresini yüklemek için dotnet yükleme komut dosyaları hakkında bilgi edinin.
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
+ms.date: 04/30/2020
+ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463671"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205924"
 ---
-# <a name="dotnet-install-scripts-reference"></a>dotnet yükleme komut dosyaları başvurusu
+# <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet-install.ps1` | `dotnet-install.sh`- .NET Core SDK'yı ve paylaşılan çalışma süresini yüklemek için kullanılan komut dosyası.
+`dotnet-install.ps1` | `dotnet-install.sh`-.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 Windows:
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macO'lar:
+Linux/macOs:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -46,75 +46,77 @@ dotnet-install.sh --help
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-install` Komut dosyaları,.NET Core CLI ve paylaşılan çalışma süresini içeren .NET Core SDK'nın yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
+`dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
 
-Komut dosyalarının kararlı sürümünü kullanmanızı öneririz:
+Betiklerin kararlı sürümünü kullanmanızı öneririz:
 
 - Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
-Bu komut dosyalarının temel kullanışlılığı otomasyon senaryoları ve yönetici olmayan yüklemelerdedir. İki komut dosyası vardır: biri Windows'da çalışan bir PowerShell komut dosyası, diğeri ise Linux/macOS üzerinde çalışan bir bash komut dosyasıdır. Her iki komut dosyası da aynı davranışa sahiptir. Bash komut dosyası da PowerShell anahtarları okur, böylece Linux / macOS sistemlerinde komut dosyası ile PowerShell anahtarları kullanabilirsiniz.
+Bu betiklerin temel kullanışlılığı Otomasyon senaryolarında ve yönetici olmayan yüklemelerde bulunur. İki komut dosyası vardır: biri Windows üzerinde çalışan bir PowerShell betiğtir ve diğeri de Linux/macOS üzerinde çalışan bir bash komut dosyasıdır. Her iki komut dosyası da aynı davranışa sahiptir. Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-Yükleme komut dosyaları, Zip/tarball dosyasını CLI yapılarından indirir ve varsayılan konuma veya tarafından `-InstallDir|--install-dir`belirtilen bir konuma yüklemeye devam eder. Varsayılan olarak, yükleme komut dosyaları SDK'yı karşıdan yükler ve yükler. Yalnızca paylaşılan çalışma süresini elde etmek istiyorsanız, bağımsız değişkeni belirtin. `-Runtime|--runtime`
+Yükleme betikleri, ZIP/tarbol dosyasını CLı derleme bırakmalarından indirir ve varsayılan konuma ya da tarafından belirtilen bir konuma yüklemeye devam edebilir `-InstallDir|--install-dir` . Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `-Runtime|--runtime` bağımsız değişkenini belirtin.
 
-Varsayılan olarak, komut dosyası yükleme konumunu geçerli oturumun $PATH ekler. `-NoPath|--no-path` Bağımsız değişkeni belirterek bu varsayılan davranışı geçersiz kılın.
+Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` .
 
-Komut dosyasını çalıştırmadan önce, gerekli [bağımlılıkları](../install/dependencies.md)yükleyin.
+Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/dependencies.md)yükler.
 
-Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü yükleyebilirsiniz. Sürüm üç bölümlü bir sürüm olarak belirtilmelidir `2.1.0`(örneğin, ). Sağlanmadıysa, `latest` sürümü kullanır.
+Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` . Sürüm üç bölümlü bir sürüm olarak belirtilmelidir (örneğin, `2.1.0` ). Sağlanmazsa, `latest` sürümünü kullanır.
+
+Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca daraltılmış ikilileri indirir ve bir klasöre kopyalar. Kayıt defteri anahtarı değerlerinin güncelleştirilmesini istiyorsanız .NET Core yükleyicileri ' ni kullanın.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  .NET Çekirdek ikililerinin mimarisini yüklemek. Olası değerler `<auto>` `amd64`, `x64` `x86`, `arm64`, `arm`, , ve . Varsayılan değer, `<auto>`şu anda çalışan işletim sistemi mimarisini temsil eden değerdir.
+  Yüklenecek .NET Core ikililerinin mimarisi. Olası değerler şunlardır,,,, `<auto>` `amd64` `x64` `x86` `arm64` ve `arm` . Varsayılan değer `<auto>` , çalışmakta olan işletim sistemi mimarisini temsil eder.
 
 - **`-AzureFeed|--azure-feed`**
 
-  Azure akışının URL'sini yükleyiciye belirtir. Bu değeri değiştirmemenizi tavsiye ettik. Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.
+  Yükleyicideki Azure akışına ait URL 'YI belirtir. Bu değeri değiştirmemenizi öneririz. Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  Yükleme için kaynak kanalı belirtir. Olası değerler şunlardır:
+  Yükleme için kaynak kanalını belirtir. Olası değerler şunlardır:
 
-  - `Current`- En güncel sürüm.
-  - `LTS`- Uzun Vadeli Destek kanalı (en güncel desteklenen sürüm).
-  - Belirli bir sürümü temsil eden X.Y formatında `2.1` iki `3.0`parçalı sürüm (örneğin, veya).
-  - Şube adı: `release/3.1.1xx` örneğin, `master` ya da (gece sürümleri için). Önizleme kanalından bir sürüm yüklemek için bu seçeneği kullanın. [Yükleyiciler ve İkili'lerde](https://github.com/dotnet/core-sdk#installers-and-binaries)listelenen kanalın adını kullanın.
+  - `Current`-En güncel sürüm.
+  - `LTS`-Uzun süreli destek kanalı (desteklenen en güncel sürüm).
+  - Belirli bir yayını temsil eden X. Y biçimindeki iki bölümlü sürüm (örneğin, `2.1` veya `3.0` ).
+  - Dal adı: Örneğin, `release/3.1.1xx` veya `master` (gecelik yayınlar için). Bir önizleme kanalından sürüm yüklemek için bu seçeneği kullanın. Bir kanalın adını [yükleyiciler ve Ikili dosyalar](https://github.com/dotnet/core-sdk#installers-and-binaries)bölümünde listelendiği şekilde kullanın.
 
-  Varsayılan değer: `LTS`. .NET destek kanalları hakkında daha fazla bilgi için [.NET Destek Politikası](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfasına bakın.
+  Varsayılan değer: `LTS`. .NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.
 
 - **`-DryRun|--dry-run`**
 
-  Ayarlanırsa, komut dosyası yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI'nin istenen sürümünü tutarlı bir şekilde yüklemek için hangi komut satırını kullanacağını görüntüler. Örneğin, sürüm `latest`belirtirseniz, bu komutun bir yapı komut dosyasında deterministically kullanılabilmesi için belirli sürümile bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ederseniz ikilinin konumunu da görüntüler.
+  Ayarlanırsa, betik yüklemeyi gerçekleştirmez. Bunun yerine, .NET Core CLI Şu anda istenen sürümünü tutarlı bir şekilde yüklemek için kullanılacak komut satırını görüntüler. Örneğin, sürümünü belirtirseniz `latest` , bu komutun bir yapı betiğine göre belirleyici olarak kullanılabilmesi için belirli bir sürümle birlikte bir bağlantı görüntüler. Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ediyorsanız ikilinin konumunu da görüntüler.
 
 - **`-FeedCredential|--feed-credential`**
 
-  Azure akışına eklemek için sorgu dizesi olarak kullanılır. Genel olmayan blob depolama hesaplarını kullanmak için URL'yi değiştirmenize olanak tanır.
+  Azure akışına eklemek için sorgu dizesi olarak kullanılır. Bu, URL 'nin genel olmayan BLOB depolama hesaplarını kullanmak üzere değiştirilmesini sağlar.
 
 - **`-Help|--help`**
 
-  Komut dosyası için yardım yazdırır.
+  Betiğe yönelik yardım yazdırır.
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Yükleme yolunu belirtir. Dizin yoksa oluşturulur. Varsayılan değer *%LocalAppData%\Microsoft\dotnet'tir.* İkili doğrudan bu dizine yerleştirilir.
+  Yükleme yolunu belirtir. Dizin yoksa oluşturulur. Varsayılan değer *%LocalAppData%\microsoft\dotnet*değeridir. İkili dosyalar doğrudan bu dizine yerleştirilir.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  SDK sürümünü belirlemek için kullanılacak [global.json](global-json.md) dosyasına giden bir yol belirtir. *global.json* dosyasının bir değeri `sdk:version`olmalıdır.
+  SDK sürümünü belirlemekte kullanılacak [Global. JSON](global-json.md) dosyasının yolunu belirtir. *Global. JSON* dosyası için bir değere sahip olmalıdır `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
-  [Azure İçerik Teslim Ağı'ndan (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) indirmeyi devre dışı bırakıp doğrudan önyüklemesiz akışı kullanır.
+  [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) ile indirmeyi devre dışı bırakır ve önbelleğe alınmamış akışı doğrudan kullanır.
 
 - **`-NoPath|--no-path`**
 
-  Ayarlanırsa, yükleme klasörü geçerli oturumun yoluna dışa aktarılmaz. Varsayılan olarak, komut dosyası PATH'i değiştirir ve bu da .NET Core CLI'yi yükledikten hemen sonra kullanılabilir hale getirir.
+  Ayarlanırsa, yükleme klasörü geçerli oturum için yola aktarılmaz. Varsayılan olarak, komut dosyası yolu değiştirir ve bu, .NET Core CLI yüklemeden hemen sonra kullanılabilir hale getirir.
 
 - **`-ProxyAddress`**
 
-  Ayarlanırsa, yükleyici web isteklerini yaparken proxy'yi kullanır. (Yalnızca Windows için geçerlidir.)
+  Ayarlanırsa, yükleyici Web istekleri yaparken proxy 'yi kullanır. (Yalnızca Windows için geçerlidir.)
 
 - **`ProxyUseDefaultCredentials`**
 
@@ -122,30 +124,30 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  SDK'nın tamamını değil, sadece paylaşılan çalışma süresini yükler. Olası değerler şunlardır:
+  Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanını kurar. Olası değerler şunlardır:
 
-  - `dotnet`- `Microsoft.NETCore.App` paylaşılan çalışma süresi.
-  - `aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma süresi.
-  - `windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma süresi.
+  - `dotnet`- `Microsoft.NETCore.App` paylaşılan çalışma zamanı.
+  - `aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.
+  - `windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.
 
 - **`--runtime-id <RID>`**
 
-  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. Taşınabilir `linux-x64` Linux için kullanın. (Yalnızca Linux/macOS için geçerlidir.)
+  Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir. `linux-x64`Taşınabilir Linux için kullanın. (Yalnızca Linux/macOS için geçerlidir.)
 
 - **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
-  > Bu parametre eskidir ve komut dosyasının gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif `-Runtime|--runtime` seçenektir.
+  > Bu parametre artık kullanılmıyor ve betiğin gelecekteki bir sürümünde kaldırılabilir. Önerilen alternatif, `-Runtime|--runtime` seçenektir.
 
-  SDK'nın tamamını değil, paylaşılan çalışma zamanı bitlerini yükler. Bu seçenek belirtmeye `-Runtime|--runtime dotnet`eşdeğerdir.
+  Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanı bitlerini kurar. Bu seçenek belirtmeye eşdeğerdir `-Runtime|--runtime dotnet` .
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  *Dotnet.exe*gibi sürümdışı dosyaları yüklemeyi atlar, zaten varsa.
+  Zaten varsa *DotNet. exe*gibi sürümlenmemiş dosyaları yüklemeyi atlar.
 
 - **`-UncachedFeed|--uncached-feed`**
 
-  Bu yükleyici tarafından kullanılan cached beslemesi için URL'yi değiştirmenize olanak sağlar. Bu değeri değiştirmemenizi tavsiye ettik.
+  Bu yükleyici tarafından kullanılan önbelleğe alınmamış akışın URL 'sini değiştirmeye izin verir. Bu değeri değiştirmemenizi öneririz.
 
 - **`-Verbose|--verbose`**
 
@@ -153,17 +155,17 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
 
 - **`-Version|--version <VERSION>`**
 
-  Belirli bir yapı sürümünü temsil eder. Olası değerler şunlardır:
+  Belirli bir derleme sürümünü temsil eder. Olası değerler şunlardır:
 
-  - `latest`- Kanalüzerinde son yapı `-Channel` (seçeneği ile birlikte kullanılır).
-  - `coherent`- Kanalüzerinde son tutarlı yapı; en son kararlı paket birleşimini `-Channel` kullanır (Şube adı seçenekleriyle kullanılır).
-  - X.Y.Z formatında belirli bir yapı sürümünü temsil eden üç parçalı sürüm; seçeneğin yerini `-Channel` adakalır. Örneğin: `2.0.0-preview2-006120`.
+  - `latest`-Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).
+  - `coherent`-Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).
+  - Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; seçeneğinin yerini alır `-Channel` . Örneğin: `2.0.0-preview2-006120`.
 
-  Belirtilmemişse, `-Version` `latest`varsayılan olarak .
+  Belirtilmemişse, `-Version` Varsayılan olarak olur `latest` .
 
 ## <a name="examples"></a>Örnekler
 
-- En son uzun vadeli desteklenen (LTS) sürümünü varsayılan konuma yükleyin:
+- En son uzun süreli desteklenen (LTS) sürümü varsayılan konuma yükler:
 
   Windows:
 
@@ -177,7 +179,7 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
   ./dotnet-install.sh --channel LTS
   ```
 
-- En son sürümü 3.1 kanalından belirtilen konuma yükleyin:
+- 3,1 kanaldan en son sürümü belirtilen konuma yükler:
 
   Windows:
 
@@ -191,7 +193,7 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
   ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- Paylaşılan çalışma süresinin 3.0.0 sürümünü yükleyin:
+- Paylaşılan çalışma zamanının 3.0.0 sürümünü yükler:
 
   Windows:
 
@@ -205,14 +207,14 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
   ./dotnet-install.sh --runtime dotnet --version 3.0.0
   ```
 
-- Komut dosyası edinin ve bir şirket proxy arkasında 2.1.2 sürümünü yükleyin (yalnızca Windows):
+- Bir kurumsal proxy 'nin arkasında betiği alma ve 2.1.2 'yi sürümünü yüklemeye (yalnızca Windows):
 
   ```powershell
   Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- Komut dosyası edinin ve .NET Core CLI tek satırlık örnekler yükleyin:
+- Tek bir Oluşturucu örnek .NET Core CLI betiği alın ve yüklemeyi yapın:
 
   Windows:
 
@@ -229,5 +231,5 @@ Bağımsız değişkeni `-Version|--version` kullanarak belirli bir sürümü y�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core bültenleri](https://github.com/dotnet/core/releases)
-- [.NET Çekirdek Çalışma Süresi ve SDK indirme arşivi](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET Core yayınları](https://github.com/dotnet/core/releases)
+- [.NET Core çalışma zamanı ve SDK indirme Arşivi](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

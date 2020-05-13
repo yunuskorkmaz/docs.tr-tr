@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 728a6c83dc321fa28dc4ff84c4e874d886524b36
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c6fdb7040620bb7a5b6aea6e0dc41e08d6f346d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788566"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210364"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -36,7 +36,7 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="parameters"></a>Parametreler  
  cMap  
- 'ndaki `map` dizisinin depolama kapasitesi. Daha fazla bilgi için Açıklamalar bölümüne bakın.  
+ 'ndaki Dizinin depolama kapasitesi `map` . Daha fazla bilgi için Açıklamalar bölümüne bakın.  
   
  pcMap  
  dışı Harita dizisine yazılan COR_IL_MAP değerlerinin sayısı.  
@@ -45,23 +45,23 @@ HRESULT GetInstrumentedILMap(
  dışı Profil Oluşturucu tarafından izlenen Il 'den özgün yöntemin Il 'ye eşlemeler hakkında bilgi sağlayan COR_IL_MAP değerleri dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metodunu çağırarak eşlemeyi ayarlarsa, hata ayıklayıcı eşlemeyi almak için bu yöntemi çağırabilir ve yığın izlemeleri ve değişken yaşam SÜRELERI için Il farklarını hesaplarken dahili eşlemeyi kullanır.  
+ Profil Oluşturucu [ICorProfilerInfo:: SetILInstrumentedCodeMap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) metodunu çağırarak eşlemeyi ayarlarsa, hata ayıklayıcı eşlemeyi almak için bu yöntemi çağırabilir ve yığın izlemeleri ve değişken yaşam SÜRELERI için Il farklarını hesaplarken dahili eşlemeyi kullanır.  
   
- `cMap` 0 ise ve `pcMap`**null**değilse `pcMap` kullanılabilir COR_IL_MAP değer sayısına ayarlanır. Sıfır olmayan `cMap`, `map` dizisinin depolama kapasitesini temsil eder. Yöntemi döndürüldüğünde, `map` en fazla `cMap` öğesi içerir ve `pcMap` aslında `map` dizisine yazılmış COR_IL_MAP değerlerinin sayısına ayarlanır.  
+ `cMap`0 ise ve `pcMap` **null**değilse, `pcMap` kullanılabilir COR_IL_MAP değeri sayısı olarak ayarlanır. `cMap`Sıfır olmayan ise, dizinin depolama kapasitesini temsil eder `map` . Yöntemi döndürüldüğünde, `map` en fazla `cMap` öğe içerir ve `pcMap` gerçekten diziye yazılan COR_IL_MAP değerlerinin sayısına ayarlanır `map` .  
   
- Il düzenlenmemişse veya eşleme bir profil oluşturucu tarafından sağlanmamışsa, bu yöntem `S_OK` döndürür ve `pcMap` 0 olarak ayarlar.  
+ Il düzenlenmemişse veya eşleme bir profil oluşturucu tarafından sağlanmamışsa, bu yöntem döndürür `S_OK` ve `pcMap` 0 olarak ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo:: Setilınstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorProfilerInfo:: Setilınstrumentedcodemap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [ICorDebugILCode2 Arabirimi](icordebugilcode2-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

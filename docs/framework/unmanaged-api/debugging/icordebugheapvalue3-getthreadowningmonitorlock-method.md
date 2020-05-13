@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788618"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210416"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock Metodu
 Bu nesne üzerinde izleyici kilidine sahip yönetilen iş parçacığını döndürür.  
@@ -49,7 +49,7 @@ HRESULT GetThreadOwningMonitorLock (
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |S_FALSE|Bu nesnede izleyici kilidine sahip yönetilen iş parçacığı yok.|  
   
-## <a name="exceptions"></a>Özel Durumlar  
+## <a name="exceptions"></a>Özel durumlar  
   
 ## <a name="remarks"></a>Açıklamalar  
  Yönetilen bir iş parçacığının bu nesne üzerindeki izleyici kilidine sahip olması durumunda:  
@@ -58,20 +58,20 @@ HRESULT GetThreadOwningMonitorLock (
   
 - İş parçacığı nesnesi, iş parçacığı çıkış yapılıncaya kadar geçerlidir.  
   
- Bu nesnede izleyici kilidine sahip yönetilen bir iş parçacığı yoksa, `ppThread` ve `pAcquisitionCount` değiştirilmez ve Yöntem S_FALSE döndürür.  
+ Bu nesnede izleyici kilidine sahip yönetilen bir iş parçacığı yoksa ve `ppThread` `pAcquisitionCount` değiştirilmez ve Yöntem S_FALSE döndürür.  
   
- `ppThread` veya `pAcquisitionCount` geçerli bir işaretçi değilse, sonuç tanımsızdır.  
+ `ppThread`Veya `pAcquisitionCount` geçerli bir işaretçi değilse, sonuç tanımsızdır.  
   
  Bir hata oluşursa, eğer varsa, iş parçacığı bu nesnede izleyici kilidine sahipse, yöntem hata belirten bir HRESULT döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

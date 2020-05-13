@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 8a267ec7123edb73ad51f0781a78344119ec6f21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178889"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210182"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next Yöntemi
-Yönetilen [yığının](cor-heapobject-structure.md) bellek bölgeleri hakkında bilgi içeren COR_HEAPOBJECT örneklerinin belirtilen sayısını alır.  
+Yönetilen yığının bellek bölgeleri hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,25 +35,25 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- Celt  
- [içinde] Alınacak segment sayısı.  
+ celt  
+ 'ndaki Alınacak parçaların sayısı.  
   
  segmentler  
- [çıkış] Her biri yönetilen yığındaki bellek bölgesi hakkında bilgi sağlayan [bir COR_HEAPOBJECT](cor-heapobject-structure.md) nesneyi işaret eden bir dizi işaretçi.  
+ dışı Her biri yönetilen yığında bir bellek bölgesi hakkında bilgi sağlayan bir [cor_heapobject](cor-heapobject-structure.md) nesnesine işaret eden işaretçiler dizisi.  
   
- pceltFetched  
- [çıkış] Gerçekte döndürülen [COR_HEAPOBJECT](cor-heapobject-structure.md) nesne sayısına `segments`işaretçi Bu değer `null` 1 `celt` ise olabilir.  
+ Pceltfettiz  
+ dışı Aslında ' de döndürülen [cor_heapobject](cor-heapobject-structure.md) nesnelerinin sayısına yönelik bir işaretçi `segments` . Bu değer 1 ise `null` olabilir `celt` .  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
