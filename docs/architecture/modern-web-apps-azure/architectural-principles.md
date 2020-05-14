@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Mima
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975413"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396240"
 ---
 # <a name="architectural-principles"></a>Mimari ilkeleri
 
@@ -22,9 +22,9 @@ Bakım yaparken yazılım çözümlerini mimariyle mimarın ve tasarlayabilmelis
 
 ### <a name="separation-of-concerns"></a>Kaygıları ayırma
 
-Geliştirme, **kaygılara ayrımı**olduğunda bir temel ilke. Bu ilke, yazılımın gerçekleştirdiği iş türlerine göre ayrılması gerektiğini onaylar. Örneğin, kullanıcıya görüntülenecek önemli öğeleri tanımlamaya yönelik mantığı ve bu tür öğeleri daha dikkat çekici hale getirmek için belirli bir şekilde biçimlendiren bu uygulamayı düşünün. Yalnızca birbirleriyle ilişkili olan ayrı konular olduğundan, hangi öğelerin biçimlendirileceğini seçmekten sorumlu davranış, öğelerin biçimlendirmesinden sorumlu davranışlardan ayrı tutulmalıdır.
+Geliştirme, **kaygılara ayrımı**olduğunda bir temel ilke. Bu ilke, yazılımın gerçekleştirdiği iş türlerine göre ayrılması gerektiğini onaylar. Örneğin, kullanıcıya görüntülenecek önemli öğeleri tanımlamaya yönelik mantığı ve bu tür öğeleri daha dikkat çekici hale getirmek için belirli bir şekilde biçimlendiren bu uygulamayı düşünün. Bu davranışlar yalnızca birbirleriyle ilişkili olan ayrı sorunlar olduğundan, hangi öğelerin biçimlendirileceğini seçmekten sorumlu davranış, öğelerin biçimlendirmesinden sorumlu olan davranışlardan ayrı tutulmalıdır.
 
-Mimari türsel uygulamalar, temel iş davranışını altyapı ve Kullanıcı arabirimi mantığından ayırarak bu ilkeyi izlemek üzere mantıksal olarak derlenebilir. İdeal olarak, iş kuralları ve Logic, uygulamadaki diğer projelere bağlı olmaması gereken ayrı bir projede yer almalıdır. Bu, iş modelinin test etmek kolay olduğundan ve alt düzey uygulama ayrıntılarına sıkı bir şekilde yönlendirilmeden geliştirilebilen sağlanmasına yardımcı olur. Kaygıları ayrımı, uygulama mimarilerinde katmanların kullanımı arkasında önemli bir noktadır.
+Mimari türsel uygulamalar, temel iş davranışını altyapı ve Kullanıcı arabirimi mantığından ayırarak bu ilkeyi izlemek üzere mantıksal olarak derlenebilir. İdeal olarak, iş kuralları ve Logic, uygulamadaki diğer projelere bağlı olmaması gereken ayrı bir projede yer almalıdır. Bu ayrım, iş modelinin test etmek kolay olduğundan ve alt düzey uygulama ayrıntılarına sıkı bir şekilde ayrılmadan gelişebilmenizi sağlamaya yardımcı olur. Kaygıları ayrımı, uygulama mimarilerinde katmanların kullanımı arkasında önemli bir noktadır.
 
 ### <a name="encapsulation"></a>Kapsül
 
@@ -34,7 +34,7 @@ Sınıflarda, sınıfın iç durumuna erişimi dışarıdan kısıtlamak için k
 
 ### <a name="dependency-inversion"></a>Bağımlılık Inversion
 
-Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, çalışma zamanı yürütme yönündeki derleme zamanı bağımlılığı akışları gibi yazılır. Bu, doğrudan bağımlılık grafiği oluşturur. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlev çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olur.
+Uygulamanın içindeki bağımlılığın yönü, uygulama ayrıntıları değil soyutlama yönünde olmalıdır. Çoğu uygulama, derleme zamanı bağımlılık akışları çalışma zamanı yürütme yönünde yazılır ve doğrudan bağımlılık grafiği üretir. Diğer bir deyişle, A modülü C modülünde bir işlevi çağıran Modül B 'de bir işlev çağırırsa, sonra da şekil 4-1 ' de gösterildiği gibi C 'ye bağlı olan B 'ye bağlı olur.
 
 ![Doğrudan bağımlılık grafiği](./media/image4-1.png)
 
@@ -52,7 +52,7 @@ Bağımlılık Inversion ilkesini uygulamak, bir soyutlamalarda b 'nin uyguladı
 
 **Yöntemler ve sınıflar, doğru çalışması için ihtiyaç duydukları tüm işbirliği nesneleri açıkça gerektirmelidir.** Sınıf oluşturucular, sınıfların geçerli bir durumda olması ve düzgün çalışması için ihtiyaç duydukları şeyleri belirlemesine yönelik bir fırsat sağlar. Oluşturulabilecek ve çağrılabilen sınıflar tanımlarsanız ancak bu, yalnızca belirli küresel veya altyapı bileşenleri mevcutsa düzgün şekilde çalışır, ancak bu sınıflar *istemcilerle birlikte kabul* edilir. Oluşturucu sözleşmesi, istemciye yalnızca belirtilen şeyleri (sınıf parametresiz bir Oluşturucu kullanıyorsa Nothing) ister, daha sonra çalışma zamanında nesneyi, başka bir şeye ihtiyaç duyması durumunda olduğunu bildiriyor.
 
-Açık bağımlılıklar ilkesini izleyerek, sınıflarınız ve yöntemleriniz, işlevleri çalışması için ihtiyaç duydukları gibi istemcilerle birlikte kullanılır. Bu, kodunuzun daha kolay belgelendikleri ve kodlarınızın, yöntem veya Oluşturucu parametreleri biçiminde gerekli olanları sağladıkları sürece, birlikte çalıştıkları nesneler çalışma zamanında doğru şekilde davrandığından emin olmak için daha fazla Kullanıcı dostu olur.
+Açık bağımlılıklar ilkesini izleyerek, sınıflarınız ve yöntemleriniz, işlevleri çalışması için ihtiyaç duydukları gibi istemcilerle birlikte kullanılır. İlkeyi takip etmek, kodunuzun daha kolay belgelenme ve kodlamanızı daha kolay bir şekilde sunduğundan, kullanıcılar Yöntem veya Oluşturucu parametreleri biçiminde gerekli olanları sağladıklarında, birlikte çalıştıkları nesneler çalışma zamanında doğru şekilde davranır.
 
 ### <a name="single-responsibility"></a>Tek sorumluluk
 
@@ -66,7 +66,7 @@ Bu ilke uygulama mimarisine uygulandığında ve mantıksal uç noktasına göt�
 
 ### <a name="dont-repeat-yourself-dry"></a>Kendinizi yinelemeyin (kuru)
 
-Uygulama, sık karşılaşılan hataların bir kaynağı olduğundan, birden çok yerde belirli bir kavram ile ilgili davranışları belirtmekten kaçınmalıdır. Bir noktada, gereksinimlerde bir değişiklik bu davranışın değiştirilmesini gerektirir. Davranışın en az bir örneği güncelleştirilemeyebilir ve bu durum sistemin tutarsız davranışına neden olur.
+Uygulama, sık karşılaşılan hataların bir kaynağı olduğundan, birden çok yerde belirli bir kavram ile ilgili davranışları belirtmekten kaçınmalıdır. Bir noktada, gereksinimlerde bir değişiklik bu davranışın değiştirilmesini gerektirir. Büyük olasılıkla davranışın en az bir örneği güncelleştirilemeyebilir ve sistem tutarsız şekilde davranır.
 
 Mantığı çoğaltmak yerine bir programlama yapısında kapsülleyebilirsiniz. Bu davranış üzerinde tek bir yetki oluşturun ve uygulamanın bu davranışı gerektiren başka bir bölümü yeni yapıyı kullanın.
 
@@ -105,5 +105,5 @@ En azından, bireysel Web uygulamaları, bir veritabanını diğer uygulamalarla
 - [Sınırlanmış bağlam](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Önceki](choose-between-traditional-web-and-single-page-apps.md)
->[İleri](common-web-application-architectures.md)
+>[Önceki](choose-between-traditional-web-and-single-page-apps.md) 
+> [Sonraki](common-web-application-architectures.md)

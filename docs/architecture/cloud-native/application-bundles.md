@@ -1,29 +1,29 @@
 ---
 title: Bulutta Yerel Uygulama Paketleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulama demeti
-ms.date: 06/30/2019
-ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/12/2020
+ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895676"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395483"
 ---
 # <a name="cloud-native-application-bundles"></a>Bulutta Yerel Uygulama Paketleri
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bulutta yerel uygulamaların anahtar özelliği, geliştirmeyi hızlandırmak için bulutun özelliklerinden faydalandıklarından. Bu genellikle tam bir uygulamanın farklı teknoloji türlerini kullandığı anlamına gelir. Uygulamalar Docker kapsayıcılarından yüklenebilir, bazı hizmetler Azure Işlevlerini kullanarak diğer parçalar donanım GPU hızlandırmalı büyük metal sunucularda ayrılan sanal makinelerde doğrudan çalışabilir. İki bulut Yerel uygulaması aynı değildir; bu nedenle, sevk etmek için tek bir mekanizma sağlamak zordur.
+Bulutta yerel uygulamaların anahtar özelliği, geliştirmeyi hızlandırmak için bulutun özelliklerinden faydalandıklarından. Bu tasarım genellikle tam uygulamanın farklı teknoloji türlerini kullandığı anlamına gelir. Uygulamalar Docker kapsayıcılarında sevk edilebilir, ancak bazı hizmetler Azure Işlevlerini kullanabilir, ancak diğer parçalar donanım GPU hızlandırmalı büyük metal sunucularda ayrılan sanal makinelerde doğrudan çalışabilir. İki bulut Yerel uygulaması aynı değildir; bu nedenle, sevk etmek için tek bir mekanizma sağlamak zordur.
 
 Docker kapsayıcıları, dağıtım için bir helk grafiği kullanılarak Kubernetes üzerinde çalışabilir. Azure Işlevleri Terrayform şablonları kullanılarak ayrılabilir. Son olarak, sanal makineler Terrayform kullanılarak ayrılabilir ancak anormal kullanılarak oluşturulmuş olabilir. Bu bir bütün teknolojiden oluşur ve bunları makul bir pakette paketetmenin bir yolu yoktur. Şimdi.
 
-Cloud Native uygulama demeti (CNABs), dağıtılmış uygulamaları paketlemeyi sağlamak için bir belirtim geliştirmek üzere Microsoft, Docker ve HashiCorp gibi çeşitli topluluk odaklı şirketlerin Birleşik bir çabadır.
+Bulut Yerel uygulama paketleri (CNABs), dağıtılmış uygulamaları paketlemeyle bir belirtim geliştirmek için Microsoft, Docker ve HashiCorp gibi topluluk tarafından yapılan bir dizi şirket tarafından sunulan bir iş malzemelidir.
 
 Çaba, Aralık 2018 ' de duyuruldu. bu nedenle, daha fazla topluluğun çabasını sergilemek için bir iş gücü de daha fazla. Ancak, zaten [Duffle](https://duffle.sh/)olarak bilinen [açık bir belirtim](https://github.com/deislabs/cnab-spec) ve başvuru uygulamanız vardır. Go 'da yazılmış olan bu araç, Docker ve Microsoft arasındaki bir birleşme çabadır.
 
 CNABs, farklı türlerde yükleme teknolojileri içerebilir. Bu, Helm grafikleri, Terkaform şablonları ve anormal PlayBook gibi öğelerin aynı pakette yer almasına imkan tanır. Oluşturulduktan sonra paketler kendi içinde ve taşınabilir; Bu, USB Stick yüklenebilir.  Paketler, talep ettikleri taraftan kaynaklandıklarından emin olmak için şifreli olarak imzalanır.
 
-CNAB 'nin çekirdeği adlı `bundle.json`bir dosyadır. Bu dosya, paket içeriğini tanımlar, bu, bunlar veya resimler ya da başka bir şey olabilir. Şekil 11-9, bazı Tersform çağıran bir CNAB tanımlar. Bununla birlikte, aslında Terrayform çağırmak için kullanılan bir çağırma görüntüsünü tanımladığına dikkat edin. Paket oluşturulduğunda, *CNAB* dizininde bulunan Docker dosyası, pakete dahil edilecek bir Docker görüntüsüne yerleşik olarak bulunur. Terşform 'ın paket içindeki bir Docker kapsayıcısı içinde yüklü olması, kullanıcıların paketlemeyi çalıştırması için makinenizde Terırform 'ın yüklü olması gerekmediği anlamına gelir.
+CNAB 'nin çekirdeği adlı bir dosyadır `bundle.json` . Bu dosya, paket içeriğini tanımlar, bu, bunlar veya resimler ya da başka bir şey olabilir. Şekil 11-9, bazı Tersform çağıran bir CNAB tanımlar. Bununla birlikte, aslında Terrayform çağırmak için kullanılan bir çağırma görüntüsünü tanımladığına dikkat edin. Paket oluşturulduğunda, *CNAB* dizininde bulunan Docker dosyası, pakete dahil edilecek bir Docker görüntüsüne yerleşik olarak bulunur. Terşform 'ın paket içindeki bir Docker kapsayıcısı içinde yüklü olması, kullanıcıların paketlemeyi çalıştırması için makinenizde Terırform 'ın yüklü olması gerekmediği anlamına gelir.
 
 ```json
 {
@@ -70,9 +70,9 @@ CNAB 'nin çekirdeği adlı `bundle.json`bir dosyadır. Bu dosya, paket içeriğ
 }
 ```
 
-**Şekil 11-13** -örnek bir Terrayform dosyası
+**Şekil 10-18** -örnek bir Terrayform dosyası
 
-Ayrıca `bundle.json` , Terrayform 'a geçirilmiş bir parametre kümesi tanımlar. Paketin Parametreleştirme özelliği, çeşitli farklı ortamlarda yüklemeye izin verir.
+`bundle.json`Ayrıca, Terrayform 'a geçirilmiş bir parametre kümesi tanımlar. Paketin Parametreleştirme özelliği, çeşitli farklı ortamlarda yüklemeye izin verir.
 
 CNAB biçimi de esnektir ve bu da tüm bulutlarca kullanılmasına izin verir. Bu, [OpenStack](https://www.openstack.org/)gibi şirket içi çözümlere karşı bile kullanılabilir.
 
@@ -80,6 +80,13 @@ CNAB biçimi de esnektir ve bu da tüm bulutlarca kullanılmasına izin verir. B
 
 DevOps alanında bu günlerde çok sayıda harika araç ve hatta daha fazla harika kitap ve bilgi DevOps yolculuğuna başlamak için sık kullanılan bir kitap, NoOps 'dan DevOps 'a kurgusal bir şirketin dönüşümünü izleyen [Phoenix projenidir](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/). Bir şey belirli bir şeydir: DevOps, karmaşık, bulut Yerel uygulamaları dağıtımında artık "daha iyi" olsun. Bu bir gereksinimdir ve herhangi bir projenin başlangıcında planlanmış ve kaynakları planlı olmalıdır.
 
+## <a name="references"></a>Referanslar
+
+- [Azure DevOps](https://azure.microsoft.com/services/devops/)
+- [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Terraform](https://www.terraform.io/)
+- [Azure CLI](https://docs.microsoft.com/cli/azure/)
+
 >[!div class="step-by-step"]
->[Önceki](infrastructure-as-code.md)
->[İleri](summary.md)
+>[Önceki](infrastructure-as-code.md) 
+> [Sonraki](summary.md)

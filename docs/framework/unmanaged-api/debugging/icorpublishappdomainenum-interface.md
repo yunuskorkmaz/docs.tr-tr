@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-ms.openlocfilehash: 61cac0922423acabef3d47618d98ddf082d071da
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a48e20413f466e25a9145e9dbf1ba93d90155770
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790670"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397040"
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum Arabirimi
 Bir işlemde mevcut olan [ICorPublishAppDomain](icorpublishappdomain-interface.md) nesnelerinin bir koleksiyonunu gezme yöntemleri sağlayan [ICorPublishEnum](icorpublishenum-interface.md) arabiriminin bir alt sınıfı.  
@@ -28,21 +28,21 @@ Bir işlemde mevcut olan [ICorPublishAppDomain](icorpublishappdomain-interface.m
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](icorpublishappdomainenum-next-method.md)|Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda `ICorPublishAppDomain` örneği alır.|  
+|[Next Yöntemi](icorpublishappdomainenum-next-method.md)|`ICorPublishAppDomain`Geçerli konumdan başlayarak koleksiyondan belirtilen sayıda örnek alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorPublishAppDomainEnum` arabirimi, [ICorPublishEnum](icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
+ `ICorPublishAppDomainEnum`Arabirim, [ICorPublishEnum](icorpublishenum-interface.md)soyut arabiriminin yöntemlerini uygular.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [CorpubPublish Coclass](corpubpublish-coclass.md)
+- [CorpubPublish Ortak Sınıfı](corpubpublish-coclass.md)

@@ -1,25 +1,29 @@
 ---
 title: Kod olarak altyapı
-description: Azure için Cloud Native .NET uygulamaları tasarlama | Kod olarak altyapı
-ms.date: 06/30/2019
-ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+description: Bulutta yerel uygulamalarla kod olarak altyapı (IAC)
+ms.date: 05/12/2020
+ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087243"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395343"
 ---
 # <a name="infrastructure-as-code"></a>Kod olarak altyapı
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Bulutta yerel uygulamalar, bir hizmet olarak platform (PaaS) bileşeni olan her türlü sıralamayı kullanır. Azure gibi bir bulut platformunda, bu bileşenler depolama, Service Bus ve SignalR hizmeti gibi şeyleri içerebilir. Uygulamalar daha karmaşık hale geldiğinde, kullanımdaki bu hizmetlerin sayısı büyük olasılıkla büyüyebilir. Sürekli teslimin bir ortama el ile dağıtım yaptığı geleneksel modeli ne kadar hızlı bir şekilde dağıttığı gibi, değişikliğin hızlı bir şekilde bir merkezi BT grubu ortamlarını yönetme modeli de vardır.
+Bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Tutarlı ve kalite kodu sağlamak için otomatik derleme ve sürüm aşamaları sağlar. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız?
 
-Ortamları derleme ve ayrıca, aynı zamanda otomatik hale getirilebilir. İşlemi kolay hale getirmek için çok sayıda iyi düşünce sunan araçlar vardır.
+Modern bulutla yerel uygulamalar, [altyapının kod olarak](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)kabul edilen yaygın olarak benimsenme yöntemini benimseyin `IaC` .  IAC ile platform sağlamayı otomatikleştirin. Aslında DevOps uygulamalarınıza test ve sürüm oluşturma gibi yazılım mühendisliği uygulamalarını uygularsınız. Altyapınız ve dağıtımlarınız otomatik, tutarlı ve yinelenebilir. Sürekli teslim, el ile yapılan dağıtımların geleneksel modelini otomatik olarak, kod olarak altyapı (IAC), uygulama ortamlarının nasıl yönetildiğini de gelişiyor.
+
+Azure Resource Manager (ARM), Terkform ve Azure komut satırı arabirimi (CLı) gibi araçlar, ihtiyacınız olan bulut altyapısını bildirimli olarak betiğe olanak sağlar.
 
 ## <a name="azure-resource-manager-templates"></a>Azure Resource Manager şablonları
 
-Azure Resource Manager şablonlar, Azure 'da çeşitli kaynakları tanımlamaya yönelik JSON tabanlı bir dildir. Temel şema Şekil 11-10 gibi bir şey arar.
+ARM [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)için temsil eder. Bu, Azure 'da yerleşik olan ve API hizmeti olarak sunulan bir API sağlama altyapısıdır. ARM, Azure Kaynak grubu 'nda bulunan kaynakları tek ve eşgüdümlü bir işlem halinde dağıtmanıza, güncelleştirmenize, silmenizi ve yönetmenize olanak sağlar. Altyapıyı, ihtiyacınız olan kaynakları ve bunların yapılandırmalarını belirten bir JSON tabanlı şablonla birlikte sağlarsınız. ARM, dağıtımı otomatik olarak doğru sırada düzenler ve bağımlılıkları kolaylaştırır. Motor, üst sınırı sağlar. Aynı yapılandırmaya sahip istenen bir kaynak zaten varsa, sağlama yok sayılır.
+
+Azure Resource Manager şablonlar, Azure 'da çeşitli kaynakları tanımlamaya yönelik JSON tabanlı bir dildir. Temel şema Şekil 10-14 gibi bir şey arar.
 
 ```json
 {
@@ -34,7 +38,7 @@ Azure Resource Manager şablonlar, Azure 'da çeşitli kaynakları tanımlamaya 
 }
 ```
 
-**Şekil 11-10** -Kaynak Yöneticisi şablonun şeması
+**Şekil 10-14** -Kaynak Yöneticisi şablonun şeması
 
 Bu şablon içinde, bir depolama kapsayıcısını kaynaklar bölümünde şöyle tanımlayabilir:
 
@@ -54,21 +58,21 @@ Bu şablon içinde, bir depolama kapsayıcısını kaynaklar bölümünde şöyl
   ],
 ```
 
-**Şekil 11-11** -Kaynak Yöneticisi şablonunda tanımlanan bir depolama hesabı örneği
+**Şekil 10-15** -Kaynak Yöneticisi şablonunda tanımlanan bir depolama hesabı örneği
 
-Şablonlar, bir şablonun geliştirme, QA ve üretim ortamlarını tanımlamak üzere farklı ayarlarla yeniden kullanılabilmesi için parametreli hale getirilmiş olabilir. Bu, düşük ortamlardan farklı şekilde ayarlanan daha yüksek bir ortama geçiş yaparken sürprizleri ortadan kaldırmaya yardımcı olur. Bir şablonda tanımlanan kaynaklar genellikle Azure 'daki tek bir kaynak grubu içinde oluşturulur (tek bir Kaynak Yöneticisi şablonunda birden fazla kaynak grubu tanımlamak mümkündür ancak olağan dışı). Bu, yalnızca kaynak grubunu bir bütün olarak silerek bir ortamı silmeyi çok kolay hale getirir. Maliyet analizi, kaynak grubu düzeyinde de çalıştırılabilir, böylece her bir ortamın maliyetlendirilmesi için hızlı bir hesaplama yapılabilir.
+ARM şablonu, dinamik ortam ve yapılandırma bilgileriyle parametrelenebilir. Bunun yapılması, geliştirme, QA veya üretim gibi farklı ortamları tanımlamak için yeniden kullanılmasını sağlar. Normalde, şablon tek bir Azure Kaynak grubu içindeki tüm kaynakları oluşturur. Gerekirse, tek bir Kaynak Yöneticisi şablonunda birden fazla kaynak grubu tanımlamak mümkündür. Kaynak grubunun kendisini silerek, bir ortamdaki tüm kaynakları silebilirsiniz. Maliyet analizi, kaynak grubu düzeyinde de çalıştırılabilir, böylece her bir ortamın maliyetlendirilmesi için hızlı bir hesaplama yapılabilir.
 
-GitHub 'da [Azure hızlı başlangıç şablonları](https://github.com/Azure/azure-quickstart-templates) projesinde tanımlanmış birçok örnek şablon vardır. Bu, yeni bir şablon üzerinde Başlarken veya var olan bir şablona ekleme yaparken bir bacının başlamasını sağlar.
+GitHub 'da [Azure hızlı başlangıç şablonları](https://github.com/Azure/azure-quickstart-templates) projesinde birçok örnek veya ARM şablonu mevcuttur. Yeni bir şablon oluşturmayı veya var olan bir şablonu değiştirmeyi hızlandırmaya yardımcı olabilirler.
 
-Kaynak Yöneticisi şablonlar, çeşitli yollarla çalıştırılabilir. Belki de en kolay yolu Azure portal yapıştırmanız yeterlidir. Deneysel dağıtımlar için bu yöntem çok hızlı olabilir. Azure DevOps 'da derleme veya yayın sürecinin bir parçası olarak da çalıştırılabilirler. Şablonları çalıştırmak için Azure ile bağlantıları kullanacak görevler vardır. Kaynak Yöneticisi şablonlarındaki değişiklikler artımlı olarak uygulanır, yani yeni bir kaynak eklemek için şablona eklemek yeterlidir. Araç, geçerli kaynak grubunu şablonda tanımlanmış istenen kaynak grubuyla birlikte işleyecek. Daha sonra, kaynaklar şablonda tanımlananla eşleşecek şekilde oluşturulur veya değiştirilir.  
+Kaynak Yöneticisi şablonlar birçok şekilde çalıştırılabilir. Belki de en kolay yolu Azure portal yapıştırmanız yeterlidir. Deneysel dağıtımlar için bu yöntem hızlı olabilir. Azure DevOps 'da derleme veya yayın sürecinin bir parçası olarak da çalıştırılabilirler. Şablonları çalıştırmak için Azure ile bağlantıları kullanacak görevler vardır. Kaynak Yöneticisi şablonlarındaki değişiklikler artımlı olarak uygulanır, yani yeni bir kaynak eklemek için şablona eklemek yeterlidir. Araç, geçerli kaynaklar ile şablonda tanımlananlar arasındaki farkları uzlaştıracaktır. Daha sonra, kaynaklar şablonda tanımlananla eşleşecek şekilde oluşturulur veya değiştirilir.  
 
 ## <a name="terraform"></a>Terraform
 
-Kaynak Yöneticisi şablonlarının algılanan bir dezavantajı, Azure bulutuna özgü olduklarından emin olmalarıdır. Birden fazla buluttan kaynak içeren uygulamalar oluşturmak olağan dışı bir durumlardır, ancak işin yansımalı çalışma süresine dayanmasına neden olduğu durumlarda, birden fazla bulutu destekleme maliyeti çok uzun olabilir. Her bulut genelinde kullanılabilecek bir şablon oluşturma dili varsa, geliştirici becerilerinin çok daha taşınabilir olmasını da sağlar.
+Bulutta yerel uygulamalar genellikle olarak oluşturulur `cloud agnostic` . Bu şekilde, uygulamanın belirli bir bulut satıcısına sıkı bir şekilde bağlı olmaması ve herhangi bir genel buluta dağıtılması anlamına gelir.
 
-Yalnızca bunu yapan çeşitli teknolojiler vardır! Bu alandaki en çok sayıda teklif [Terrayform](https://www.terraform.io/)olarak bilinir. Terminform, Azure, Google Cloud Platform, AWS ve AliCloud gibi her büyük bulut oynatıcıyı destekler ve ayrıca Heroku ve DigitalOcean gibi düzinelerce küçük oyuncuları da destekler. Şablon tanımlama dili olarak JSON kullanmak yerine, biraz daha terse YAML kullanır.
+[Terminform](https://www.terraform.io/) , tüm büyük bulut oynatıcılarda bulutta yerel uygulamalar sağlayabileceğiniz ticari şablon oluşturma aracıdır: Azure, Google Cloud Platform, AWS ve alicloud. Şablon tanımlama dili olarak JSON kullanmak yerine, biraz daha terse YAML kullanır.
 
-Şekil 11-12 ' de, önceki Kaynak Yöneticisi şablonuyla aynı olan bir örnek Teraform dosyası (Şekil 11-11) gösterilmektedir:
+Şekil 10-16 ' de, önceki Kaynak Yöneticisi şablonuyla aynı olan bir örnek Teraform dosyası (Şekil 10-15) gösterilmektedir:
 
 ```terraform
 provider "azurerm" {
@@ -90,14 +94,40 @@ resource "azurerm_storage_account" "testsa" {
 }
 ```
 
-**Şekil 11-12** -Kaynak Yöneticisi Şablon örneği
+**Şekil 10-16** -Kaynak Yöneticisi Şablon örneği
 
-Terkform, şablondaki bir hata nedeniyle bir kaynak dağıtılırsa, daha iyi bir hata iletileri sağlamaya yönelik daha iyi bir iş oluşturur. Bu, Kaynak Yöneticisi şablonlarının devam eden zorluklara sahip olduğu bir alandır. Ayrıca, şablon hatalarının erken yakalanması için derleme aşamasında kullanılabilecek çok kullanışlı bir görev vardır.
+Terrayform, sorun şablonları için sezgisel hata iletileri de sağlar. Ayrıca, şablon hatalarının erken yakalanması için derleme aşamasında kullanılabilecek yararlı bir doğrulama görevi vardır.
 
-Kaynak Yöneticisi şablonlarda olduğu gibi, Terrayform şablonlarını dağıtmak için kullanılabilecek komut satırı araçları vardır. Ayrıca, Azure Pipelines ' de, Terkform şablonlarını doğrulayabilen ve uygulayabilen topluluk tarafından oluşturulan görevler de vardır.
+Kaynak Yöneticisi şablonlarda olduğu gibi, Terrayform şablonlarını dağıtmak için komut satırı araçları kullanılabilir. Ayrıca, Azure Pipelines ' de, Terkform şablonlarını doğrulayabilen ve uygulayabilen topluluk tarafından oluşturulan görevler de vardır.
 
-Terrayform veya Kaynak Yöneticisi şablonunun, yeni oluşturulan bir veritabanına bağlantı dizesi gibi ilginç değerler çıktılarına çıkış durumunda, derleme ardışık düzeninde yakalanıp sonraki görevlerde kullanılabilir.
+Bazen Terkform ve ARM şablonları, yeni oluşturulan bir veritabanına yönelik bağlantı dizesi gibi anlamlı değerler çıktı. Bu bilgiler derleme ardışık düzeninde yakalanıp sonraki görevlerde kullanılabilir.
+
+## <a name="azure-cli-scripts-and-tasks"></a>Azure CLı betikleri ve görevleri
+
+Son olarak, bulut altyapınıza bildirimli olarak betik eklemek için [Azure CLI](https://docs.microsoft.com/cli/azure/) özelliğinden yararlanabilirsiniz. Azure CLı betikleri, neredeyse tüm Azure kaynakları sağlamak ve yapılandırmak için oluşturulabilir, bulunabilir ve paylaşılabilir. CLı, Gentle öğrenme eğrisi ile kullanımı basittir. Betikler PowerShell veya bash içinde yürütülür. Bunlar, özellikle de ARM şablonlarıyla karşılaştırıldığında hata ayıklama yapmak için de oldukça kolaydır.
+
+Azure CLı betikleri, altyapınızı bölmek ve yeniden dağıtmanız gerektiğinde iyi çalışır. Mevcut bir ortamı güncelleştirmek karmaşık olabilir. Birçok CLı komutu ıdempotent değildir. Diğer bir deyişle, kaynak zaten mevcut olsa bile, her çalıştırıldığında kaynağı yeniden oluşturur. Her zaman oluşturmadan önce her bir kaynağın varlığını denetleyen kodu eklemek mümkündür. Ancak, bunun yapılması, betiğinizin kaldırılması ve yönetilmesi zor hale gelebilir.
+
+Bu betikler aynı zamanda Azure DevOps işlem hatları ile de katıştırılabilir `Azure CLI tasks` . İşlem hattının yürütülmesi betiği çağırır.
+
+Şekil 10-17, Azure CLı sürümünü ve aboneliğin ayrıntılarını listeleyen bir YAML kod parçacığını gösterir. Azure CLı komutlarının satır içi bir betiğe nasıl dahil edildiğini aklınızda edin.
+
+```yaml
+- task: AzureCLI@2
+  displayName: Azure CLI
+  inputs:
+    azureSubscription: <Name of the Azure Resource Manager service connection>
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az account show
+```
+
+**Şekil 10-17** -Azure CLI betiği
+
+Makalesinde [kod olarak altyapı nedir](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), Sam Guckenheimer yazar, "IAC 'Yı uygulayan ekipler, kararlı ortamları hızla ve ölçekte teslim edebilir. Takımlar ortamların el ile yapılandırılmasını önler ve ortamları kod aracılığıyla istenen durumunu temsil ederek tutarlılığı zorlar. IAC ile altyapı dağıtımları tekrarlanabilir ve yapılandırma DRIP veya eksik bağımlılıklara neden olan çalışma zamanı sorunlarını önler. DevOps ekipleri, uygulamaları ve destekleyici altyapıyı hızlı, güvenilir ve ölçeklenebilir bir şekilde sunmak için birleştirilmiş bir uygulama ve araç kümesiyle birlikte çalışabilir. "
 
 >[!div class="step-by-step"]
->[Önceki](devops.md)
->[İleri](application-bundles.md)
+>[Önceki](feature-flags.md) 
+> [Sonraki](application-bundles.md)

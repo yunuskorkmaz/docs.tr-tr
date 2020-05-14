@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumMethodInstancesByAddress yöntemi
+title: 'IXCLRDataProcess:: Startenummethodınstancesbyaddress yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752679"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394943"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress yöntemi
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: Startenummethodınstancesbyaddress yöntemi
 
-Yöntem örneklerini listelemek için bir tanıtıcı sağlar `AppDomain` belirli bir adreste başlayan.
+Verilen bir adresten başlayarak Yöntem örneklerinin numaralandırılacağı bir tanıtıcı sağlar `AppDomain` .
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,27 +41,27 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parametreler
 
 `address`\
-[in] İlk yöntem örneği adresi.
+'ndaki İlk yöntem örneğinin adresi.
 
 `appDomain`\
-[in] AppDomain yöntemi örnekleri.
+'ndaki Yöntem örneklerinin AppDomain 'i.
 
 `handle`\
-[out] Yöntem örnekleri numaralandırma tanıtıcısı.
+dışı Metot örneklerini numaralandırmak için bir tanıtıcı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tablosunu 27 yuvaya karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataProcess` ve sanal yöntem tablosunun 28 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
 - [Hata Ayıklama](index.md)
-- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess Arabirimi](ixclrdataprocess-interface.md)

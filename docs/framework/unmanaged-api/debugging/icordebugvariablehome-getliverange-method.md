@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: 28e41106ffcaf1ed2ed87166e641bb5e5f447e47
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791022"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396580"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>Icordebugvariablehome:: GetLiveRange yöntemi
 Bu değişkenin canlı olduğu yerel aralığı alır.  
@@ -42,13 +42,13 @@ HRESULT GetLiveRange(
  dışı Değişkenin son yaşam olduğu noktadan hemen sonra mantıksal konum.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

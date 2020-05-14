@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetModuleData yöntemi
+title: 'Iosdacınterface:: GetModuleData yöntemi'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetModuleData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97b297def9fba329ff6d9573f7b2e7cc811273f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764712"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396919"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData yöntemi
+# <a name="isosdacinterfacegetmoduledata-method"></a>Iosdacınterface:: GetModuleData yöntemi
 
-Belirli bir adreste yüklü modülü karşılık gelen verileri getirir.
+Verilen bir adreste yüklü olan modüle karşılık gelen verileri getirir.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetModuleData(
 ## <a name="parameters"></a>Parametreler
 
 `moduleAddr`\
-[in] Modül için daha fazla bilgi almak için adresi.
+'ndaki Bilgi alınacak modülün adresi.
 
 `data`\
-[out] [DacpModuleData yapısı](dacpmoduledata-structure.md) yüklenen bir modülün bilgilerini tutacak.
+dışı Yüklü modülün bilgilerini tutacak olan [Dadcpmoduledata yapısı](dacpmoduledata-structure.md) .
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tablosunu 13 yuvaya karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `ISOSDacInterface` ve sanal yöntem tablosunun 14 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)
+- [ISOSDacInterface Arabirimi](isosdacinterface-interface.md)

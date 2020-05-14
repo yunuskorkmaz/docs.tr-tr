@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134591"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397137"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next Yöntemi
 Geçerli konumdan başlayarak Numaralandırmadaki belirtilen "ICorDebugValue" örneklerinin sayısını alır.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- 'ndaki Alınacak `ICorDebugValue` örneklerinin sayısı.  
+ 'ndaki `ICorDebugValue`Alınacak örnek sayısı.  
   
  `values`  
- dışı Her biri bir `ICorDebugValue` nesnesine işaret eden işaretçiler dizisi.  
+ dışı Her biri bir nesneye işaret eden işaretçiler dizisi `ICorDebugValue` .  
   
  `pceltFetched`  
- dışı Aslında döndürülen `ICorDebugValue` örneklerinin sayısına yönelik işaretçi. `celt` bir tane ise bu değer null olabilir.  
+ dışı `ICorDebugValue`Aslında döndürülen örnek sayısına yönelik işaretçi. Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

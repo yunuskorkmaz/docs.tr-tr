@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::Request yöntemi
+title: 'IXCLRDataModule:: Request Yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632220"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395264"
 ---
-# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request yöntemi
+# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule:: Request Yöntemi
 
-Modülün verilerle verilen arabelleği doldurmak için istek sayısı.
+Modülün verileriyle verilen arabelleği doldurma istekleri.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,30 +41,30 @@ HRESULT Request([in] ULONG32 reqCode,
 ## <a name="parameters"></a>Parametreler
 
 `reqCode`\
-[in] İstek gönderilmesine izin türü.
+'ndaki Gönderilecek istek türü.
 
 `inBufferSize`\
-[in] geçirilmesi giriş arabellek boyutu.
+[in] geçirilecek giriş arabelleğinin boyutu.
 
 `inBuffer`\
-[size_is(inBufferSize)] İstekte gönderilmek üzere ham verileri arabellek işaretçisi.
+[in, size_is (InBufferSize)] İstekte ham verilerin gönderileceği arabellek işaretçisi.
 
 `outBufferSize`\
-[in] Çıkış arabelleği boyutu.
+'ndaki Çıkış arabelleğinin boyutu.
 
 `outBuffer`\
-[out, size_is(outBufferSize)] İstek yanıt depolamak için kullanılan arabellek işaretçisi.
+[Out, size_is (outBufferSize)] İstek yanıtını depolamak için kullanılan arabellek işaretçisi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataModule` arabirim ve sanal yöntem tablosunu 36th yuvaya karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataModule` ve sanal yöntem tablosunun 37yuvası yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
-**Üst bilgi:** Hiçbiri **kitaplığı:** Hiçbiri **.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Üst bilgi:** Hiçbiri **Kitaplığı:** hiçbiri **.NET Framework sürümler:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)
+- [IXCLRDataModule Arabirimi](ixclrdatamodule-interface.md)

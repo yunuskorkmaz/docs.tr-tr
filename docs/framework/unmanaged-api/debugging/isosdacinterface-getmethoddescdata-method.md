@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescData yöntemi
+title: 'Iosdacınterface:: GetMethodDescData yöntemi'
 ms.date: 01/16/2019
 api.name:
 - ISOSDacInterface::GetMethodDescData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764828"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396941"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData yöntemi
+# <a name="isosdacinterfacegetmethoddescdata-method"></a>Iosdacınterface:: GetMethodDescData yöntemi
 
-Verileri için belirli MethodDesc işaretçi alır.
+Verilen MethodDesc işaretçisi için verileri alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,35 +44,35 @@ HRESULT GetMethodDescData(
 ## <a name="parameters"></a>Parametreler
 
 `methodDesc`\
-[in] MethodDesc adresi.
+'ndaki MethodDesc adresi.
 
 `ip`\
-[in] Yöntem IP adresi.
+'ndaki Metodun IP adresi.
 
 `data`\
-[out] İç API'lerinden döndürülen MethodDesc ile ilişkili veriler.
+dışı İç API 'lerden döndürülen MethodDesc ile ilişkili veriler.
 
 `cRevertedRejitVersions`\
-[out] Geri döndürülen rejit sürüm sayısı.
+dışı Geri döndürülen yeniden JIT sürümü sayısı.
 
 `rgRevertedRejitData`\
-[out] İç API'lerinden döndürülen şekilde geri döndürülen rejit sürümleriyle ilişkili veriler.
+dışı İç API 'lerden döndürülen geri döndürülen yeniden JIT sürümleriyle ilişkili veriler.
 
 `pcNeededRevertedRejitData`\
-[out] Geri döndürülen ReJit sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.
+dışı Geri döndürülen ReJIT sürümleriyle ilişkili verileri depolamak için gereken bayt sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tablosunu 20 yuvaya karşılık gelir. Kullanmaya devam edebilmek için [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) 64-bit işaretsiz tamsayı tanımlanması gerekir.
+Belirtilen yöntem arabirimin bir parçasıdır `ISOSDacInterface` ve sanal yöntem tablosunun 21 yuvasına karşılık gelir. Bunları kullanabilmeniz için, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) 64 bitlik işaretsiz bir tamsayı olarak tanımlanmalıdır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)
+- [ISOSDacInterface Arabirimi](isosdacinterface-interface.md)

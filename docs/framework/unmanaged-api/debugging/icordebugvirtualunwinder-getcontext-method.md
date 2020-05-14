@@ -2,12 +2,12 @@
 title: 'ICorDebugVirtualUnwinder:: GetContext yöntemi'
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: ff5e5bdd66ec44a0931b51212f07485718507576
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e203db78b40bf4305316046cfcd679f3d10d1876
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790840"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396442"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder:: GetContext yöntemi
 Bu unwinder 'in geçerli bağlamını alır.  
@@ -28,19 +28,19 @@ HRESULT GetContext(
  'ndaki İçeriğin hangi bölümlerinin döndürüleceği (WinNT. h içinde tanımlanır) belirleyen bayraklar.  
   
  `cbContextBuf`  
- 'ndaki `contextBuf`bayt sayısı.  
+ 'ndaki İçindeki bayt sayısı `contextBuf` .  
   
  `contextSize`  
- dışı Gerçekten `contextBuf`yazılan bayt sayısına yönelik bir işaretçi.  
+ dışı Gerçekten üzerine yazılan bayt sayısına yönelik bir işaretçi `contextBuf` .  
   
  `contextBuf`  
  dışı Bu unwinder 'in geçerli bağlamını içeren bir bayt dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Mscordbi tarafından alınan başarısız olan HRESULT değeri, önemli olarak değerlendirilir ve ICorDebug API 'Lerinin `CORDBG_E_DATA_TARGET_ERROR`döndürmesini sağlar.  
+ Mscordbi tarafından alınan başarısız olan HRESULT değeri, önemli olarak değerlendirilir ve ICorDebug API 'Lerinin dönmesini sağlar `CORDBG_E_DATA_TARGET_ERROR` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `contextBuf` bağımsız değişkeninin başlangıç değerini [ıcordebugstackizlenecek yol:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini çağırarak döndürülen bağlam arabelleğine ayarlarsınız.  
+ `contextBuf`Bağımsız değişkenin başlangıç değerini [ıcordebugstackyürüme:: GetContext](icordebugstackwalk-getcontext-method.md) yöntemini çağırarak döndürülen bağlam arabelleğine ayarlarsınız.  
   
 > [!NOTE]
 > Bu yöntem yalnızca .NET Native kullanılabilir.  
@@ -48,13 +48,13 @@ HRESULT GetContext(
  Geri sarma, yalnızca geçici olmayan Yazmaçları gibi yazmaçların bir alt kümesini geri yükleyebilir, çünkü bağlam gerçek Yöntem çağrısı sırasında kayıt durumuyla tam olarak eşleşmeyebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

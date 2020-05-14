@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178435"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396414"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses Yöntemi
-Uzak bir bilgisayarda çalışan işlemleri sayısalhale eder.  
+Uzak bir bilgisayarda çalışan işlemi numaralandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,32 +38,32 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>Parametreler  
  `pcProcs`  
- [çıkış] Döndürülen işlem `ppProcs`sayısı. Bu değer 0 (sıfır) olabilir.  
+ dışı İçinde döndürülen işlem sayısı `ppProcs` . Bu değer 0 (sıfır) olabilir.  
   
  `ppProcs`  
- [çıkış] Uzak bilgisayarda çalışan işlemleri temsil eden bir dizi [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) yapıları.  
+ dışı Uzak bilgisayarda çalışan süreçler temsil eden bir [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) yapıları dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  S_OK  
  Başarılı.  
   
- E_outofmemory  
- `ppProcs`'ye yeterli bellek ayrılamıyor.  
+ E_OUTOFMEMORY  
+ İçin yeterli bellek ayrılamıyor `ppProcs` .  
   
- E_FAIL (veya diğer E_ iade kodları)  
- Diğer başarısızlıklar.  
+ E_FAIL (veya diğer E_ dönüş kodları)  
+ Diğer sorunlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemle ayrılan belleği serbest etmek için [ICoreClrDebugTarget::FreeMemory](icoreclrdebugtarget-freememory-method.md) yöntemini arayın.  
+ Bu yöntem tarafından ayrılan belleği boşaltmak için, [ıreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) metodunu çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CoreClrRemoteDebuggingInterfaces.h  
+ **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Kütüphane:** mscordbi_macx86.dll  
+ **Kitaplık:** mscordbi_macx86. dll  
   
- **.NET Çerçeve Sürümleri:** 3.5 SP1  
+ **.NET Framework sürümleri:** 3,5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

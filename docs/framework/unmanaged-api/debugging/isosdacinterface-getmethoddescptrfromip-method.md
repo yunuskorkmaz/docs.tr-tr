@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescPtrFromIP yöntemi
+title: 'Iosdacınterface:: Getmethoddescptrfromıp yöntemi'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetMethodDescPtrFromIP Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764746"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396936"
 ---
-# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP yöntemi
+# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Iosdacınterface:: Getmethoddescptrfromıp yöntemi
 
-Belirtilen yerel yönerge adresini içeren yöntemi karşılık gelen MethodDesc işaretçi alır.
+Verilen yerel yönerge adresini içeren yöntemi karşılık gelen MethodDesc işaretçisini alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDescPtrFromIP(
 ## <a name="parameters"></a>Parametreler
 
 `ip`\
-[in] Çalışma zamanında yöntemi içinden bir adres.
+'ndaki Çalışma zamanında yöntemi içindeki bir adres.
 
 `ppMD`\
-[out] Adresini `MethodDesc` belirli yöntemi.
+dışı `MethodDesc`Belirli yöntemin adresi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır [ `ISOSDacInterface` arabirimi](isosdacinterface-interface.md) ve sanal yöntem tablosunu 21 yuvaya karşılık gelir.
+Belirtilen yöntem [ `ISOSDacInterface` arabirimin](isosdacinterface-interface.md) bir parçasıdır ve sanal yöntem tablosunun 22 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)
+- [ISOSDacInterface Arabirimi](isosdacinterface-interface.md)

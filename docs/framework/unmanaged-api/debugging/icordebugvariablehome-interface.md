@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790963"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396547"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome Arabirimi
 Bir işlevin yerel bir değişkenini veya bağımsız değişkenini temsil eder.  
@@ -31,15 +31,15 @@ Bir işlevin yerel bir değişkenini veya bağımsız değişkenini temsil eder.
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetArgumentIndex Yöntemi](icordebugvariablehome-getargumentindex-method.md)|Bir işlev bağımsız değişkeninin dizinini alır.|  
-|[GetCode Yöntemi](icordebugvariablehome-getcode-method.md)|Bu `ICorDebugVariableHome` nesnesini içeren "ICorDebugCode" örneğini alır.|  
+|[GetCode Yöntemi](icordebugvariablehome-getcode-method.md)|Bu nesneyi içeren "ICorDebugCode" örneğini alır `ICorDebugVariableHome` .|  
 |[GetLiveRange Yöntemi](icordebugvariablehome-getliverange-method.md)|Bu değişkenin canlı olduğu yerel aralığı alır.|  
 |[GetLocationType Yöntemi](icordebugvariablehome-getlocationtype-method.md)|Değişkenin yerel konumunun türünü alır.|  
 |[GetOffset Yöntemi](icordebugvariablehome-getoffset-method.md)|Bir değişken için temel kaydın konumunu alır.|  
-|[GetRegister Yöntemi](icordebugvariablehome-getregister-method.md)|`VLT_REGISTER`konum türüne sahip bir değişken içeren kaydı alır ve `VLT_REGISTER_RELATIVE`konum türü olan bir değişken için temel kayıt olur.|  
+|[GetRegister Yöntemi](icordebugvariablehome-getregister-method.md)|Konum türü olan bir değişken içeren kaydı `VLT_REGISTER` ve konum türü olan bir değişken için temel kaydı alır `VLT_REGISTER_RELATIVE` .|  
 |[GetSlotIndex Yöntemi](icordebugvariablehome-getslotindex-method.md)|Yerel bir değişkenin yönetilen yuva dizinini alır.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod parçası `pCode4`adlı [ICorDebugCode4](icordebugcode4-interface.md) nesnesini kullanır.  
+ Aşağıdaki kod parçası adlı [ICorDebugCode4](icordebugcode4-interface.md) nesnesini kullanır `pCode4` .  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,13 +81,13 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

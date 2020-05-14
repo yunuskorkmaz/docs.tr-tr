@@ -2,12 +2,12 @@
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728583"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394874"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
 
@@ -25,8 +25,9 @@ Genellikle, uygulamaların aşağıdaki senaryolardan bazılarını veya tümün
 - Arka uç Web API 'Lerine erişen diğer uygulamalar (etkin bir kullanıcı veya Kullanıcı arabirimi olmadan).
 - Herhangi bir uygulamanın kendi kimliğini kullanarak veya kullanıcının kimliğine temsilci atamak için diğer Web API 'Leriyle etkileşmesi gerekebilir.
 
-**şekil 8-1**](./media/application-types.png)
-uygulama türlerini ve senaryolarını ![. Uygulama türleri ve senaryolar.
+![Uygulama türleri ve senaryolar](./media/application-types.png)
+
+**Şekil 8-1**. Uygulama türleri ve senaryolar.
 
 Bu senaryoların her birinde, sunulan işlevlerin yetkisiz kullanıma karşı korunması gerekir. Bu, genellikle bir kaynak için istek yapan kullanıcının veya sorumlunun kimlik doğrulamasını gerektirir. Bu kimlik doğrulaması SAML2p, WS-beslenir veya OpenID Connect gibi birkaç ortak protokolden birini kullanabilir. API 'lerle iletişim kurmak genellikle OAuth2 protokolünü ve güvenlik belirteçleri desteğini kullanır. Bu kritik çapraz güvenlik sorunlarının ve uygulama ayrıntılarının uygulamalardan ayrılması, tutarlılığı sağlar ve güvenlik ve bakım özelliklerini geliştirir. Bu kaygıları IdentityServer gibi özel bir ürünle dış olarak eklemek, her uygulamanın bu sorunların kendisini çözmesine yardımcı olur.
 
@@ -47,7 +48,7 @@ Identityserver4 açık kaynak ve ücretsiz olarak kullanılabilir. Bunu, NuGet p
 
 ## <a name="configuration"></a>Yapılandırma
 
-IdentityServer, her bir özel yüklemenin parçası olarak yapılandırılabilen farklı protokol türlerini ve sosyal kimlik doğrulama sağlayıcılarını destekler. Bu, genellikle `ConfigureServices` yönteminde ASP.NET Core uygulamasının `Startup` sınıfında yapılır. Yapılandırma desteklenen protokollerin ve kullanılacak sunucuların ve uç noktaların yollarını belirtmeyi içerir. Şekil 8-2, ıdentityserver4 hızlı başlangıç Kullanıcı arabirimi projesinden alınan bir örnek yapılandırmayı gösterir:
+IdentityServer, her bir özel yüklemenin parçası olarak yapılandırılabilen farklı protokol türlerini ve sosyal kimlik doğrulama sağlayıcılarını destekler. Bu, genellikle yönteminde ASP.NET Core uygulamanın `Startup` sınıfında yapılır `ConfigureServices` . Yapılandırma desteklenen protokollerin ve kullanılacak sunucuların ve uç noktaların yollarını belirtmeyi içerir. Şekil 8-2, ıdentityserver4 hızlı başlangıç Kullanıcı arabirimi projesinden alınan bir örnek yapılandırmayı gösterir:
 
 ```csharp
 public class Startup
@@ -92,11 +93,11 @@ public class Startup
 
 **Şekil 8-2**. IdentityServer yapılandırılıyor.
 
-IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için kullanılabilecek bir genel tanıtım sitesi de barındırır. [https://demo.identityserver.io/](https://demo.identityserver.io/) konumunda bulunur ve kendisine sunulan `client_id` göre davranışının nasıl yapılandırılacağı hakkında bilgi içerir.
+IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için kullanılabilecek bir genel tanıtım sitesi de barındırır. Bu, üzerinde bulunur [https://demo.identityserver.io/](https://demo.identityserver.io/) ve davranışını buna göre yapılandırma hakkında bilgi içerir `client_id` .
 
 ## <a name="javascript-clients"></a>JavaScript istemcileri
 
-Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer, oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir [JavaScript istemcisi](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) sağlar.
+Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer [JavaScript client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` , oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir JavaScript istemcisi () sağlar.
 
 ## <a name="references"></a>Referanslar
 
@@ -105,5 +106,5 @@ Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin i
 - [JavaScript OıDC istemcisi](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
->[Önceki](azure-active-directory.md)
->[İleri](security.md)
+>[Önceki](azure-active-directory.md) 
+> [Sonraki](security.md)

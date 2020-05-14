@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetVersionId yöntemi
+title: 'IXCLRDataModule:: Getversionıd yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetVersionId Method
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5bd84f784ea92e7b2ce2465e64972dc84e16a16c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff8ccf42d1131fb15d7473ae12ecefde9d55177f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744693"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395287"
 ---
-# <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule::GetVersionId yöntemi
+# <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule:: Getversionıd yöntemi
 
 Modülün sürüm tanımlayıcısını alır.
 
@@ -39,20 +39,20 @@ HRESULT GetVersionId(
 ## <a name="parameters"></a>Parametreler
 
 `vid`\
-[out] Modülün sürüm tanımlayıcısı.
+dışı Modülün sürüm tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataModule` arabirim ve sanal yöntem tablosunu 40th yuvaya karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataModule` ve sanal yöntem tablosunun 41 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)
+- [IXCLRDataModule Arabirimi](ixclrdatamodule-interface.md)

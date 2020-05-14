@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 72560de9777b2d826418e63b4a4fcccf1e4fa8b9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790438"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396476"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: Enumınstance yöntemi
 
@@ -47,18 +47,18 @@ dışı Numaralandırılmış örnek.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirtilen yöntem `IXCLRDataMethodDefinition` arabiriminin bir parçasıdır ve sanal yöntem tablosunun dördüncü yuvasına karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataMethodDefinition` ve sanal yöntem tablosunun 6 yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
 - [Hata Ayıklama](index.md)
-- [IXCLRDataMethodDefinition arabirimi](ixclrdatamethoddefinition-interface.md)
-- [IXCLRDataMethodInstance arabirimi](ixclrdatamethodinstance-interface.md)
+- [IXCLRDataMethodDefinition Arabirimi](ixclrdatamethoddefinition-interface.md)
+- [IXCLRDataMethodInstance Arabirimi](ixclrdatamethodinstance-interface.md)

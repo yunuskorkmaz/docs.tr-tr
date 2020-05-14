@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790991"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396759"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Icordebugvariablehome:: GetOffset Yöntemi
 Bir değişken için temel kaydın konumunu alır.  
@@ -46,13 +46,13 @@ HRESULT GetOffset(
 |`E_FAIL`|Değişken, YAZMAÇ göreli bir bellek konumunda değil.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

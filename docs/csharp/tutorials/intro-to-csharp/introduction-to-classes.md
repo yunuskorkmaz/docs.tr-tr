@@ -1,22 +1,22 @@
 ---
-title: Sınıflar ve nesneler - C# eğitimine giriş
-description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları keşfedin
+title: Sınıflar ve nesneler-C# öğreticisine giriş
+description: İlk C# programınızı oluşturun ve nesne yönelimli kavramları keşfedebilirsiniz
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156599"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396872"
 ---
-# <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesnelerle nesne yönelimli programlamayı keşfedin
+# <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Sınıflar ve nesneler ile nesne odaklı programlamayı keşfet
 
-Bu öğretici, geliştirme için kullanabileceğiniz bir makineniz olmasını bekler. .NET öğretici [Hello World 10 dakika içinde](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) Windows, Linux veya macOS'ta yerel geliştirme ortamınızı ayarlama talimatları na sahiptir. Kullanacağınız komutların hızlı bir genel bakışı, daha fazla ayrıntıya bağlantılar içeren [geliştirme araçlarına aşina olun'da](local-environment.md) dır.
+Bu öğreticide, geliştirme için kullanabileceğiniz bir makineniz olması beklenir. [10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) .NET öğreticisi, Windows, Linux veya MacOS 'ta yerel geliştirme ortamınızı ayarlamaya yönelik yönergeler içerir. Kullanacağınız komutlara hızlı bir genel bakış, daha fazla ayrıntı için bağlantılarla birlikte [geliştirme araçları hakkında bilgi sahibi olmaya gelmiştir](local-environment.md) .
 
-## <a name="create-your-application"></a>Uygulamanızı oluşturun
+## <a name="create-your-application"></a>Uygulamanızı oluşturma
 
-Terminal pencereyi kullanarak, *sınıflar*adlı bir dizin oluşturun. Başvurunuzu orada oluşturacaksınız. Bu dizini değiştirin `dotnet new console` ve konsol penceresine yazın. Bu komut uygulamanızı oluşturur. Açık *Program.cs*. Şu şekilde görünmelidir:
+Bir Terminal penceresi kullanarak, *sınıflar*adlı bir dizin oluşturun. Uygulamanızı burada oluşturacaksınız. Bu dizine geçin ve `dotnet new console` konsol penceresinde yazın. Bu komut uygulamanızı oluşturur. *Program.cs*'i açın. Şu şekilde görünmelidir:
 
 ```csharp
 using System;
@@ -33,21 +33,21 @@ namespace classes
 }
 ```
 
-Bu öğreticide, bir banka hesabını temsil eden yeni türler oluşturacaksınız. Genellikle geliştiriciler her sınıfı farklı bir metin dosyasında tanımlar. Bu, bir programın boyutu arttıkça yönetimi kolaylaştırır. *Sınıflar* dizininde *BankAccount.cs* adlı yeni bir dosya oluşturun.
+Bu öğreticide, bir banka hesabını temsil eden yeni türler oluşturacaksınız. Genellikle geliştiriciler her bir sınıfı farklı bir metin dosyasında tanımlar. Bu, bir program boyutunun büyüdükçe daha kolay yönetilmesini sağlar. *Classes* dizininde *BankAccount.cs* adlı yeni bir dosya oluşturun.
 
-Bu dosya bir banka ***hesabının***tanımını içerecektir. Nesne Yönelimli programlama ***sınıflar***şeklinde türleri oluşturarak kodu düzenler. Bu sınıflar belirli bir varlığı temsil eden kodu içerir. Sınıf `BankAccount` bir banka hesabını temsil eder. Kod, yöntemler ve özellikler aracılığıyla belirli işlemleri uygular. Bu öğreticide, banka hesabı bu davranışı destekler:
+Bu dosya, bir ***Banka hesabının***tanımını içerir. Nesne odaklı programlama, ***sınıf***biçiminde türler oluşturarak kodu düzenler. Bu sınıflar, belirli bir varlığı temsil eden kodu içerir. `BankAccount`Sınıfı bir banka hesabını temsil eder. Kod, Yöntemler ve özellikler aracılığıyla belirli işlemleri uygular. Bu öğreticide, banka hesabı bu davranışı destekler:
 
-1. Banka hesabını benzersiz olarak tanımlayan 10 basamaklı bir numarası vardır.
-1. Sahiplerinin adlarını veya adlarını depolayan bir dize vardır.
+1. Bu, banka hesabını benzersiz bir şekilde tanımlayan 10 basamaklı bir sayı içerir.
+1. Sahiplerinin adını veya adlarını depolayan bir dizesi vardır.
 1. Bakiye alınabilir.
-1. Depozito kabul ediyor.
-1. Para çekmeyi kabul ediyor.
-1. İlk denge pozitif olmalıdır.
-1. Para çekme işlemi negatif bir denge yle sonuçlanamaz.
+1. Mevduat kabul eder.
+1. Çekme kabul eder.
+1. İlk bakiye pozitif olmalıdır.
+1. Çekme işlemleri negatif bir bakiyeye neden olamaz.
 
-## <a name="define-the-bank-account-type"></a>Banka hesap türünü tanımlama
+## <a name="define-the-bank-account-type"></a>Banka hesap türünü tanımlayın
 
-Bu davranışı tanımlayan bir sınıfın temellerini oluşturarak başlayabilirsiniz. Bu gibi görünecek:
+Bu davranışı tanımlayan bir sınıfın temellerini oluşturarak başlayabilirsiniz. **Dosya: New** komutunu kullanarak yeni bir dosya oluşturun. *BankAccount.cs*olarak adlandırın. Aşağıdaki kodu *BankAccount.cs* dosyanıza ekleyin:
 
 ```csharp
 using System;
@@ -71,15 +71,15 @@ namespace classes
 }
 ```
 
-Devam etmeden önce, ne inşa ettiğinize bir göz atalım.  Bildirim, `namespace` kodunuzu mantıksal olarak düzenlemek için bir yol sağlar. Bu öğretici nispeten küçüktür, bu nedenle tüm kodu tek bir ad alanına koyarsınız.
+Başlamadan önce, derleydiklerinize göz atalım.  `namespace`Bildirimi, kodunuzu mantıksal olarak düzenlemek için bir yol sağlar. Bu öğretici nispeten küçüktür, bu nedenle tüm kodu bir ad alanına yerleştirebilirsiniz.
 
-`public class BankAccount`oluşturduğunuz sınıfı veya türü tanımlar. Sınıf `{` bildiriminin `}` içindeki ve izleyen her şey sınıfın durumunu ve davranışını tanımlar. Sınıfın beş üyesi var. ***members*** `BankAccount` İlk üçü ***özellikleridir.*** Özellikler veri öğeleridir ve doğrulama yı veya diğer kuralları zorlayan bir koda sahip olabilir. Son iki ***yöntem***dir. Yöntemler, tek bir işlev icra eden kod bloklarıdır. Üyelerin her birinin adlarını okumak, sınıfın ne yaptığını anlamak için sizin veya başka bir geliştiriciiçin yeterli bilgi sağlamalıdır.
+`public class BankAccount`oluşturmakta olduğunuz sınıfı veya türü tanımlar. `{`Sınıf bildirimini izleyen ve içindeki her şey, `}` sınıfının durumunu ve davranışını tanımlar. Sınıfının beş ***üyesi*** vardır `BankAccount` . İlk üçü ***özelliklerdir***. Özellikler veri öğeleridir ve doğrulamayı veya diğer kuralları zorlayan koda sahip olabilir. Son ikisi ***metodlardır***. Yöntemler, tek bir işlevi gerçekleştiren kod bloklarıdır. Her üyenin adını okumak, siz veya başka bir geliştirici tarafından sınıfın ne yaptığını anlamak için yeterli bilgi sağlamalıdır.
 
-## <a name="open-a-new-account"></a>Yeni bir hesap açma
+## <a name="open-a-new-account"></a>Yeni bir hesap açın
 
-Uygulanacak ilk özellik bir banka hesabı açmaktır. Bir müşteri bir hesap açtığında, bir başlangıç bakiyesi ve bu hesabın sahibi veya sahipleri hakkında bilgi sağlaması gerekir.
+Uygulanacak ilk özellik bir banka hesabı açmak. Bir müşteri bir hesabı açtığında, bir başlangıç bakiyesi ve bu hesabın sahibi veya sahipleri hakkında bilgi sağlamalıdır.
 
-`BankAccount` Türünden yeni bir nesne oluşturmak, bu değerleri atayan bir ***oluşturucu*** tanımlama anlamına gelir. ***Oluşturucu,*** sınıfla aynı ada sahip bir üyedir. Bu sınıf türünesneleri başlatılması için kullanılır. Türüne aşağıdaki oluşturucu `BankAccount` ekleyin:
+Türünde yeni bir nesne oluşturmak, `BankAccount` Bu değerleri atayan bir ***Oluşturucu*** tanımlamayı gösterir. ***Oluşturucu*** , sınıfıyla aynı ada sahip olan bir üyedir. Bu sınıf türündeki nesneleri başlatmak için kullanılır. Türe aşağıdaki oluşturucuyu ekleyin `BankAccount` . Aşağıdaki kodu bildiriminin üzerine yerleştirin `MakeDeposit` :
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -89,69 +89,69 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Bir nesne oluşturduğunuzda yapıcılar [`new`](../../language-reference/operators/new-operator.md)çağrılır. `Console.WriteLine("Hello World!");` satırı *Program.cs* aşağıdaki kodla değiştirin `<name>` (adınız ile değiştirin):
+Oluşturucular, kullanarak bir nesne oluşturduğunuzda çağrılır [`new`](../../language-reference/operators/new-operator.md) . `Console.WriteLine("Hello World!");` *Program.cs* içindeki satırı aşağıdaki kodla değiştirin ( `<name>` adınızla değiştirin):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
-Ne `dotnet run` olacağını görmek için yazın.  
+Şimdiye kadar derlediğiniz şeyi çalıştıralım. Visual Studio kullanıyorsanız, **Çalıştır** menüsünden **hata ayıklama olmadan Başlat** ' ı seçin. Bir komut satırı kullanıyorsanız, `dotnet run` projenizi oluşturduğunuz dizini yazın.
 
-Hesap numarasının boş olduğunu fark ettin mi? Bunu düzeltmenin zamanı oldu. Nesne oluşturulduğunda hesap numarası atanmalıdır. Ama onu oluşturmak arayan kişinin sorumluluğu nda olmamalıdır. Sınıf `BankAccount` kodu yeni hesap numaraları atamayı bilmelidir.  Bunu yapmanın basit bir yolu 10 basamaklı bir sayı ile başlamaktır. Her yeni hesap oluşturulduğunda artım. Son olarak, bir nesne oluşturulduğunda cari hesap numarasını depolayın.
+Hesap numarasının boş olduğunu fark muydunuz? Bunun düzeltilmesi zaman alabilir. Nesne oluşturulduğunda hesap numarası atanmalıdır. Ancak bunu oluşturmak için çağıranın sorumluluğunda olmaması gerekir. `BankAccount`Sınıf kodu, yeni hesap numaralarının nasıl atanacağını bilmelidir.  Bunu yapmanın basit bir yolu, 10 basamaklı bir sayıyla başlamamaktır. Her yeni hesap oluşturulduğunda bunu artırın. Son olarak, bir nesne oluşturulduğunda geçerli hesap numarasını saklayın.
 
-Sınıfa aşağıdaki üye `BankAccount` bildirimini ekleyin:
+Sınıfına bir üye bildirimi ekleyin `BankAccount` . Sınıfın başındaki açılış ayracından sonra aşağıdaki kod satırını yerleştirin `{` `BankAccount` :
 
 ```csharp
 private static int accountNumberSeed = 1234567890;
 ```
 
-Bu bir veri üyesi. Yani `private`sadece `BankAccount` sınıf içindeki kodla erişilebiliyor. Bu, genel sorumlulukları (hesap numarasına sahip olmak gibi) özel uygulamadan (hesap numaralarının nasıl oluşturulduğunu) ayırmanın bir yoludur. Aynı zamanda, `static`tüm `BankAccount` nesneler tarafından paylaşılır anlamına gelir. Statik olmayan bir değişkenin değeri `BankAccount` nesnenin her örneğine özgüdür. Hesap numarasını atamak için aşağıdaki iki satırı oluşturucuya ekleyin:
+Bu bir veri üyesidir. Bu `private` , yalnızca sınıfın içindeki kodla erişilebilen anlamına gelir `BankAccount` . Bu, genel sorumlulukları (hesap numarası gibi) özel uygulamadan (hesap numaraları nasıl oluşturulur) ayırmaktan bir yoldur. Ayrıca `static` , tüm nesneler tarafından paylaşıldıkları anlamına gelir `BankAccount` . Statik olmayan bir değişkenin değeri, nesnenin her bir örneği için benzersizdir `BankAccount` . Hesap numarasını atamak için oluşturucuya aşağıdaki iki satırı ekleyin. Bu satırları şöyle yerleştir `this.Balance = initialBalance` :
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
 accountNumberSeed++;
 ```
 
-Sonuçları `dotnet run` görmek için yazın.
+`dotnet run`Sonuçları görmek için yazın.
 
-## <a name="create-deposits-and-withdrawals"></a>Para yatırma ve çekme işlemleri oluşturun
+## <a name="create-deposits-and-withdrawals"></a>Mevdular ve çekme işlemleri oluşturma
 
-Banka hesap sınıfınızın doğru çalışması için para yatırma ve para çekme işlemlerini kabul etmesi gerekir. Hesap için her işlemin bir günlüğünü oluşturarak para yatırma ve çekme işlemlerini uygulayalım. Bu sadece her işlem üzerinde bakiyegüncelleme üzerinde birkaç avantajı vardır. Geçmiş, tüm hareketleri denetlemek ve günlük bakiyeleri yönetmek için kullanılabilir. Gerektiğinde tüm hareketlerin geçmişinden gelen bakiye hesaplandığında, sabit olan tek bir işlemdeki hatalar bir sonraki hesaplamadaki bakiyeye doğru şekilde yansıtılır.
+Banka hesabı sınıfınızın, doğru şekilde çalışması için mevdular ve çekme alları kabul etmesi gerekir. Hesap için her bir işlemin günlüğünü oluşturarak mevduları ve çekme bilgilerini uygulayalim. Bu, her bir işlemin bakiyesini güncelleştirmek için birkaç avantaj sunar. Geçmiş, tüm işlemleri denetlemek ve günlük bakiyeleri yönetmek için kullanılabilir. Gerektiğinde, tüm işlemlerin geçmişinden gelen dengeyi hesaplarken, düzeltilen tek bir işlemdeki tüm hatalar, sonraki hesaplamanın bakiyesine doğru şekilde yansıtılır.
 
-Bir hareketi temsil edecek yeni bir tür oluşturarak başlayalım. Bu herhangi bir sorumluluk yok basit bir türüdür. Birkaç özelliğe ihtiyacı var. *Transaction.cs*adlı yeni bir dosya oluşturun. Buna aşağıdaki kodu ekleyin:
+Bir işlemi temsil etmek için yeni bir tür oluşturarak başlayalım. Bu, herhangi bir sorumluluğu bulunmayan basit bir türdür. Birkaç özelliğe ihtiyaç duyuyor. *Transaction.cs*adlı yeni bir dosya oluşturun. Buna aşağıdaki kodu ekleyin:
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-Şimdi, `BankAccount` sınıfa bir <xref:System.Collections.Generic.List%601> `Transaction` nesne ekleyelim. Aşağıdaki bildirimi ekleyin:
+Şimdi sınıfa bir nesne ekleyelim <xref:System.Collections.Generic.List%601> `Transaction` `BankAccount` . *BankAccount.cs* dosyanızdaki oluşturucudan sonra aşağıdaki bildirimi ekleyin:
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
-Sınıf, <xref:System.Collections.Generic.List%601> farklı bir ad alanı almanızı gerektirir. *BankAccount.cs*başında aşağıdakileri ekleyin:
+<xref:System.Collections.Generic.List%601>Sınıfı, farklı bir ad alanını içeri aktarmanızı gerektirir. *BankAccount.cs*'nin başlangıcına şunu ekleyin:
 
 ```csharp
 using System.Collections.Generic;
 ```
 
-Şimdi, rapor `Balance` edilenin şeklini değiştirelim.  Tüm hareketlerin değerlerini özetleyerek bulunabilir. Sınıftaki `BankAccount` bildirimi `Balance` aşağıdaki şekilde değiştirin:
+Şimdi, raporun nasıl bildirileceğini değiştirelim `Balance` .  Bu, tüm işlemlerin değerlerini toplayarak bulunabilir. `Balance` `BankAccount` Sınıfında bildirimini aşağıdaki şekilde değiştirin:
 
 [!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
-Bu örnek, ***özelliklerin***önemli bir yönünü gösterir. Başka bir programcı değeri sorduğunda bakiyeyi hesaplıyorsun. Hesaplamanız tüm hareketleri sıralar ve toplamı geçerli bakiye olarak sağlar.
+Bu örnekte, ***özelliklerin***önemli bir yönü gösterilmektedir. Artık, başka bir programcı değer istediğinde bakiyeyi hesaplıyor. Hesaplama tüm işlemleri numaralandırır ve toplamı geçerli Bakiye olarak verir.
 
-Sonra, ve `MakeDeposit` `MakeWithdrawal` yöntemleri uygulayın. Bu yöntemler son iki kuralı uygular: başlangıç bakiyesinin pozitif olması ve herhangi bir geri çekilmenin negatif bir denge oluşturmaması gerekir.
+Sonra, `MakeDeposit` ve yöntemlerini uygulayın `MakeWithdrawal` . Bu yöntemler, son iki kuralı zorunlu tutar: ilk Bakiyenin pozitif olması ve tüm çekme allarının negatif bir bakiye oluşturmamalıdır.
 
-Bu ***özel durumlar***kavramını tanıttı. Bir yöntemin çalışmasını başarıyla tamamlayamayacağını belirtmenin standart yolu, bir özel durum atmaktır. Özel durum türü ve onunla ilişkili ileti hatayı açıklar. Burada, `MakeDeposit` depozito miktarı negatif sayılsa, yöntem bir istisna oluşturur. Yöntem, `MakeWithdrawal` para çekme miktarı negatifse veya para çekme işleminin uygulanması negatif bakiyeyle sonuçlanması durumunda bir istisna oluşturur:
+Bu, ***özel durum***kavramını tanıtır. Bir yöntemin işini başarıyla tamamlayamadığını belirten standart yol, bir özel durum oluşturmak şeklindedir. Özel durum türü ve onunla ilişkili ileti hatayı anlatmaktadır. Burada, `MakeDeposit` depozito miktarı negatifse Yöntem bir özel durum oluşturur. `MakeWithdrawal`Çekme miktarı negatifse veya çekme sonuçları negatif bir bakiyeye uygulanırsa Yöntem bir özel durum oluşturur. Listenin bildiriminden sonra aşağıdaki kodu ekleyin `allTransactions` :
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-İfade [`throw`](../../language-reference/keywords/throw.md) bir özel durum **oluşturur.** Geçerli bloğun yürütülmesi sona erer ve denetim `catch` çağrı yığınında bulunan ilk eşleşen bloğa aktarın. Bu kodu daha `catch` sonra sınamak için bir blok eklersiniz.
+[`throw`](../../language-reference/keywords/throw.md)İfade bir özel durum **oluşturur** . Geçerli bloğun yürütülmesi sonlanır ve çağrı yığınında bulunan ilk eşleşen bloğa yapılan aktarımları denetler `catch` . `catch`Daha sonra bu kodu test etmek için bir blok ekleyeceksiniz.
 
-Oluşturucu, bakiyeyi doğrudan güncelleştirmek yerine ilk hareketi ekleyen bir değişiklik almalıdır. Yöntemi zaten yazdığınız için, `MakeDeposit` yapıcınızdan arayın. Bitmiş yapıcı aşağıdaki gibi görünmelidir:
+Oluşturucunun, bakiyeyi doğrudan güncelleştirmek yerine bir ilk işlem eklemesi için bir değişiklik alması gerekir. Yöntemi zaten yazmış olduğundan `MakeDeposit` , bunu oluşturucudan çağırın. Tamamlanmış Oluşturucu şöyle görünmelidir:
 
 [!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType>geçerli tarih ve saati döndüren bir özelliktir. Yönteminize birkaç para yatırma ve para `Main` çekme ekleyerek bunu test edin:
+<xref:System.DateTime.Now?displayProperty=nameWithType>, geçerli tarih ve saati döndüren bir özelliktir. Bu `Main` , yeni bir oluşturan kodun ardından, yönteyinizdeki birkaç mevdug ve çekme bilgilerini ekleyerek test edin `BankAccount` :
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -160,7 +160,7 @@ account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
-Ardından, negatif bakiyesi olan bir hesap oluşturmaya çalışarak hata koşullarını yakaladığınızı test edin:
+Daha sonra, negatif bakiyeyle bir hesap oluşturmayı deneyerek hata koşullarını yakalamak için test edin. Yeni eklediğiniz kodun ardından aşağıdaki kodu ekleyin:
 
 ```csharp
 // Test that the initial balances must be positive.
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-Özel durumlar atabilecek bir kod bloğunu işaretlemek ve beklediğiniz hataları yakalamak için ifadeleri kullanırsınız. [ `try` `catch` ](../../language-reference/keywords/try-catch.md) Negatif bakiye için özel durum atan kodu sınamak için aynı tekniği kullanabilirsiniz:
+[ `try` Ve `catch` deyimlerini](../../language-reference/keywords/try-catch.md) , özel durum oluşturabilecek bir kod bloğunu işaretlemek ve beklediğinizi bu hataları yakalamak için kullanırsınız. Negatif bir bakiye için özel durum oluşturan kodu test etmek için aynı tekniği kullanabilirsiniz. Yönteminizin sonuna aşağıdaki kodu ekleyin `Main` :
 
 ```csharp
 // Test for a negative balance.
@@ -190,26 +190,26 @@ catch (InvalidOperationException e)
 }
 ```
 
-Dosyayı kaydedin ve denemek için yazın. `dotnet run`
+Dosyayı kaydedin ve `dotnet run` denemek için yazın.
 
-## <a name="challenge---log-all-transactions"></a>Challenge - tüm işlemleri günlük
+## <a name="challenge---log-all-transactions"></a>Sınama-tüm işlemleri günlüğe kaydet
 
-Bu öğreticiyi bitirmek için, `GetAccountHistory` işlem geçmişi `string` için bir yöntem oluşturabilirsiniz. Bu yöntemi türe `BankAccount` ekleyin:
+Bu öğreticiyi bitirebilmeniz için, `GetAccountHistory` işlem geçmişi için oluşturan yöntemini yazabilirsiniz `string` . Bu yöntemi `BankAccount` türe ekleyin:
 
 [!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
-Bu, <xref:System.Text.StringBuilder> her işlem için bir satır içeren bir dize biçimlendirmek için sınıfı kullanır. Bu öğreticilerde dize biçimlendirme kodunu daha önce gördünüz. Yeni bir `\t`karakter. Bu, çıktıyı biçimlendirmek için bir sekme ekler.
+Bu, <xref:System.Text.StringBuilder> her işlem için bir satır içeren bir dizeyi biçimlendirmek için sınıfını kullanır. Bu öğreticilerde daha önce dize biçimlendirme kodunu gördünüz. Yeni bir karakter `\t` . Bu, çıktıyı biçimlendirmek için bir sekme ekler.
 
-*Program.cs*olarak test etmek için bu satırı ekleyin:
+*Program.cs*içinde test etmek için bu satırı ekleyin:
 
 ```csharp
 Console.WriteLine(account.GetAccountHistory());
 ```
 
-Sonuçları `dotnet run` görmek için yazın.
+Sonuçları görmek için programınızı çalıştırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Eğer sıkışmış varsa, [bizim GitHub repo](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)bu öğretici için kaynak görebilirsiniz.
+Çıkdıysanız, Bu öğreticinin kaynağını [GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/)deponuzda görebilirsiniz.
 
-Tebrikler, C# eğitimlerine girişimizi bitirdiniz. Daha fazla bilgi edinmek istiyorsanız, [öğreticilerimizden](../index.md)daha fazlasını deneyin.
+Tebrikler, C# öğreticilerine giriş yaptığımızı tamamladınız. Daha fazla bilgi edinmek istiyorsanız [öğreticilerimizi](../index.md)deneyin.

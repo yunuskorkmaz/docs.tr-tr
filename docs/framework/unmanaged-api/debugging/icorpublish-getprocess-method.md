@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: 46f047dbec7ff008873540806b76ffe7085086b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cd2238ac67713564922be440ce64a2ebc4bbf44
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178429"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396329"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess Yöntemi
-Belirtilen tanımlayıcıile işlemi temsil eden bir [ICorPublishProcess](icorpublishprocess-interface.md) örneği alır.  
+Belirtilen tanımlayıcıya sahip işlemi temsil eden bir [ICorPublishProcess](icorpublishprocess-interface.md) örneğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,22 +36,22 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>Parametreler  
  `pid`  
- [içinde] İşlemin tanımlayıcısı.  
+ 'ndaki İşlemin tanımlayıcısı.  
   
  `ppProcess`  
- [çıkış] İşlemi temsil eden `ICorPublishProcess` bir örneğin adresine işaretçi.  
+ dışı İşlemi temsil eden bir örneğin adresine yönelik bir işaretçi `ICorPublishProcess` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetProcess`işlem yoksa veya geçerli kullanıcı tarafından debugged olabilir yönetilen bir işlem değilse başarısız olur.  
+ `GetProcess`işlem yoksa veya geçerli kullanıcı tarafından hata ayıklanabilecek yönetilen bir işlem değilse başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

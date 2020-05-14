@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 542bfa05c55ef224d1b9111f9af6c069e9e23542
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790966"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396561"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Icordebugvariablehome:: Getslotındex yöntemi
 Yerel bir değişkenin yönetilen yuva dizinini alır.  
@@ -42,20 +42,20 @@ HRESULT GetSlotIndex(
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`S_OK`|Yöntem çağrısı `pSlotIndex`bir yuva dizini değeri döndürdü.|  
+|`S_OK`|Yöntem çağrısı ' de bir yuva dizini değeri döndürdü `pSlotIndex` .|  
 |`E_FAIL`|Geçerli [ıcordebugvariablehome](icordebugvariablehome-interface.md) örneği bir işlev bağımsız değişkenini temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yerel değişken için meta verileri almak için yuva dizini kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

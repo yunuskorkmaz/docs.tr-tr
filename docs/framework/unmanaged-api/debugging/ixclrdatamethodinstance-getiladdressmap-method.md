@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetILAddressMap yöntemi
+title: 'IXCLRDataMethodInstance:: Getıladdressmap yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744687"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396814"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap yöntemi
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance:: Getıladdressmap yöntemi
 
-IL adresi eşleme bilgileri alır.
+Eşleme bilgilerini ele almak için Il 'yi alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,26 +41,26 @@ HRESULT GetILAddressMap(
 ## <a name="parameters"></a>Parametreler
 
 `mapLen`\
-[in] Sağlanan haritalar dizinin uzunluğu.
+'ndaki Belirtilen haritalar dizisinin uzunluğu.
 
 `mapNeeded`\
-[out] Gereken yöntemini eşleme girişleri sayısı.
+dışı Metodun ihtiyacı olan eşleme girdilerinin sayısı.
 
 `maps`\
-[out, size_is(mapLen)] Eşleme girişleri depolamak için dizi.
+[Out, size_is (mapLen)] Harita girdilerini depolamak için dizi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataMethodInstance` arabirim ve sanal yöntem tablosunu 14 yuvaya karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataMethodInstance` ve sanal yöntem tablosunun 15. yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** None  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [IXCLRDataMethodInstance arabirimi](ixclrdatamethodinstance-interface.md)
+- [IXCLRDataMethodInstance Arabirimi](ixclrdatamethodinstance-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: ICorDebugVariableSymbol::GetName Yöntemi
+title: 'ICorDebugVariableSymbol:: GetName metodu'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: abc0e368f259df1a3542b0fc8e7fbfd7e06cf6eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea414a39e140c74df736764dbbb1bb3934bda78f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178449"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397125"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName Yöntemi
+# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol:: GetName metodu
 Bir değişkenin adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -24,27 +24,27 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [içinde] `szName` Arabellekteki karakter sayısı.  
+ 'ndaki Arabellekteki karakterlerin sayısı `szName` .  
   
  `pcchName`  
- [çıkış] Arabelleğe yazılan karakter sayısına `szName` işaretçi.  
+ dışı Gerçekte arabelleğe yazılan karakter sayısına yönelik bir işaretçi `szName` .  
   
  `szName`  
- Değişken adını içeren bir karakter dizisiiçin işaretçi.  
+ Değişken adını içeren bir karakter dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

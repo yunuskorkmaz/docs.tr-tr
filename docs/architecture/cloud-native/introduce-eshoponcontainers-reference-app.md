@@ -2,12 +2,12 @@
 title: EShopOnContainers başvuru uygulamasına giriş
 description: ASP.NET Core ve Azure için eShopOnContainers bulutu yerel mikro hizmetleri başvuru uygulamasına giriş.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895535"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395396"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers başvuru uygulamasına giriş
 
@@ -50,7 +50,7 @@ Uygulamanın aşağıdaki işlevsel olmayan gereksinimleri de vardır:
 
 EShopOnContainers uygulamasına, ASP.NET Core MVC sunucu uygulamasını ya da uygun bir API ağ geçidini hedefleyen HTTPS üzerinden uygulamaya erişen Web veya mobil istemcilerden erişilebilir. API ağ geçitleri, arka uç hizmetlerini ayrı ayrı ön uç istemcilerinden ayırma ve daha iyi güvenlik sağlama gibi çeşitli avantajlar sunar. Uygulama ayrıca her ön uç istemci için ayrı API ağ geçitleri oluşturulmasını öneren backends-for-Frontends (BFF) olarak bilinen ilgili bir model kullanır. Başvuru mimarisi, isteğin bir Web veya mobil istemciden geldiğini temel alarak API ağ geçitlerinin bölünmesini gösterir.
 
-Uygulamanın işlevselliği çeşitli farklı mikro hizmetlere ayrılmıştır. Kimlik doğrulama ve kimlikten sorumlu hizmetler, ürün kataloğundan öğe listeleme, kullanıcıların alışveriş sepetlerini yönetme ve sipariş yerleştirme hizmetleri bulunur. Bu ayrı hizmetlerin her biri kendi kalıcı depolamasına sahiptir. Tüm hizmetlerin etkileşimde bulunduğu tek bir ana veri deposu olmadığını unutmayın. Bunun yerine, hizmetler arasındaki koordinasyon ve iletişim, bir ileti veri yolu kullanımı ile gerekli bir şekilde yapılır.
+Uygulamanın işlevselliği çeşitli farklı mikro hizmetlere ayrılmıştır. Kimlik doğrulama ve kimlikten sorumlu hizmetler, ürün kataloğundan öğe listeleme, kullanıcıların alışveriş sepetlerini yönetme ve sipariş yerleştirme hizmetleri bulunur. Bu ayrı hizmetlerin her biri kendi kalıcı depolamasına sahiptir. Tüm hizmetlerin etkileşimde bulunduğu tek bir ana veri deposu yoktur. Bunun yerine, hizmetler arasındaki koordinasyon ve iletişim, bir ileti veri yolu kullanımı ile gerekli bir şekilde yapılır.
 
 Farklı mikro hizmetlerin her biri, bireysel gereksinimlerine göre farklı şekilde tasarlanmıştır. Bu, .NET Core kullanılarak oluşturulmuştur ve bulut için tasarlansa da teknoloji yığınının farklı olabileceği anlamına gelir. Daha basit hizmetler temeldeki veri depolarına temel oluşturma-okuma-güncelleştirme-silme (CRUD) erişimi sağlar, ancak daha gelişmiş hizmetler iş karmaşıklığını yönetmek için etki alanı odaklı tasarım yaklaşımlarını ve desenlerini kullanır.
 
@@ -73,5 +73,5 @@ Kod, farklı mikro hizmetleri desteklemek üzere düzenlenmiştir ve her mikro h
 Bu kitap, Azure teknolojisi kullanılarak oluşturulan bulutta yerel uygulamalara odaklanır. Mikro hizmetler en iyi uygulamaları ve mikro hizmet tabanlı uygulamaların nasıl mimarinin nasıl kullanılacağı hakkında daha fazla bilgi edinmek için yardımcı kitabı, [.net mikro hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimariyi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)okuyun.
 
 >[!div class="step-by-step"]
->[Önceki](candidate-apps.md)
->[İleri](map-eshoponcontainers-azure-services.md)
+>[Önceki](candidate-apps.md) 
+> [Sonraki](map-eshoponcontainers-azure-services.md)

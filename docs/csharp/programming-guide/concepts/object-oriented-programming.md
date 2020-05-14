@@ -1,13 +1,13 @@
 ---
 title: Nesne odaklı programlama (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200099"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396683"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -91,9 +91,8 @@ class SampleClass
 
 Daha fazla bilgi için bkz.
 
-- [get](../../language-reference/keywords/get.md)
-
-- [kurmak](../../language-reference/keywords/set.md)
+- [Al](../../language-reference/keywords/get.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Yöntemler
 
@@ -104,7 +103,7 @@ Bir sınıfın yöntemini tanımlamak için:
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ Bir sınıf, parametrelerin veya parametre türlerinin sayısında farklı olan 
 Bir yöntemi aşırı yüklemek için:
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 Çoğu durumda, bir sınıf tanımı içinde bir yöntemi bildirirsiniz. Ancak C#, sınıfın gerçek tanımının dışında mevcut bir sınıfa Yöntemler eklemenize olanak tanıyan *genişletme yöntemlerini* de destekler.
@@ -156,10 +155,8 @@ Sonlandırıcı, sınıf örneklerinin çıkarılması için kullanılır. .NET 
 Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler*olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
 
 - Bir sınıfında bir olay bildirmek için [Event](../../language-reference/keywords/event.md) anahtar sözcüğünü kullanın.
-
 - Bir olayı yükseltmek için olay temsilcisini çağırın.
-
-- Bir olaya abone olmak için `+=` işlecini kullanın; bir olaydan aboneliğinizi kaldırmak için `-=` işlecini kullanın.
+- Bir olaya abone olmak için `+=` işlecini kullanın; bir olayın aboneliğini kaldırmak için `-=` işlecini kullanın.
 
 #### <a name="nested-classes"></a>İç içe geçmiş sınıflar
 
@@ -187,14 +184,14 @@ Tüm sınıflar ve sınıf üyeleri, *erişim değiştiricilerini*kullanarak di�
 
 Aşağıdaki erişim değiştiriciler kullanılabilir:
 
-|C# değiştiricisi|Tanım|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir.|
-|[private](../../language-reference/keywords/private.md)|Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir.|
-|[protected](../../language-reference/keywords/protected.md)|Türe veya üyeye yalnızca aynı sınıftaki veya türetilmiş bir sınıftaki kodla erişilebilir.|
-|[internal](../../language-reference/keywords/internal.md)|Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|Türe veya üyeye aynı derlemedeki herhangi bir kod ya da başka bir derlemedeki türetilmiş bir sınıf tarafından erişilebilir.|
-|[private protected](../../language-reference/keywords/private-protected.md)|Türe veya üyeye aynı sınıftaki veya temel sınıf derlemesi içindeki türetilmiş bir sınıftaki kodla erişilebilir.|
+| C# değiştiricisi | Tanım |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir. |
+| [private](../../language-reference/keywords/private.md) | Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir. |
+| [protected](../../language-reference/keywords/protected.md) | Türe veya üyeye yalnızca aynı sınıftaki veya türetilmiş bir sınıftaki kodla erişilebilir. |
+| [internal](../../language-reference/keywords/internal.md) | Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir. |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | Türe veya üyeye aynı derlemedeki herhangi bir kod ya da başka bir derlemedeki türetilmiş bir sınıf tarafından erişilebilir. |
+| [private protected](../../language-reference/keywords/private-protected.md) | Türe veya üyeye aynı sınıftaki veya temel sınıf derlemesi içindeki türetilmiş bir sınıftaki kodla erişilebilir. |
 
 Daha fazla bilgi için bkz. [erişim değiştiricileri](../classes-and-structs/access-modifiers.md).
 
@@ -212,15 +209,18 @@ Bir sınıfı örnekledikten sonra, örneğin özelliklerine ve alanlarına değ
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 Sınıf örnek oluşturma işlemi sırasında özelliklere değer atamak için, nesne başlatıcıları kullanın:
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Daha fazla bilgi için bkz.
@@ -259,15 +259,18 @@ Anonim türün bir örneğini oluşturmak için:
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 Daha fazla bilgi için bkz: [anonim türler](../classes-and-structs/anonymous-types.md).
 
 ## <a name="inheritance"></a>Devralma
 
-Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak, C# ' deki tüm sınıflar dolaylı olarak .NET <xref:System.Object> sınıf hiyerarşisini destekleyen sınıftan devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
+Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, genişleten ve değiştiren yeni bir sınıf oluşturmanıza olanak sağlar. Üyeleri devralınmış olan sınıfa *temel sınıf*denir ve bu üyeleri devralan sınıfa *türetilmiş sınıf*denir. Ancak, C# ' deki tüm sınıflar dolaylı olarak <xref:System.Object> .NET sınıf hiyerarşisini destekleyen sınıftan devralınır ve tüm sınıflara alt düzey hizmetler sağlar.
 
 > [!NOTE]
 > C# birden fazla devralmayı desteklemez. Diğer bir deyişle, türetilmiş bir sınıf için yalnızca bir temel sınıf belirtebilirsiniz.
@@ -275,7 +278,7 @@ Devralma, başka bir sınıfta tanımlanan davranışı yeniden kullanan, geniş
 Temel sınıftan devralması için:
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 Varsayılan olarak, tüm sınıflar devralınabilir. Ancak, bir sınıfın temel sınıf olarak kullanılması gerekip gerekmediğini belirtebilir veya yalnızca temel sınıf olarak kullanılabilecek bir sınıf oluşturmanız gerekir.
@@ -295,8 +298,7 @@ public abstract class B { }
 Daha fazla bilgi için bkz.
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
-- [Soyut](../../language-reference/keywords/abstract.md)
+- [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Üyeleri geçersiz kılma
 
@@ -304,12 +306,12 @@ Varsayılan olarak, türetilmiş bir sınıf kendi temel sınıfından tüm üye
 
 Özelliklerin ve yöntemlerin nasıl geçersiz kılınabileceğini denetlemek için aşağıdaki değiştiriciler kullanılır:
 
-|C# değiştiricisi|Tanım|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir.|
-|[override](../../language-reference/keywords/override.md)|Temel sınıfta tanımlanan bir sanal (geçersiz kılınabilir) üyeyi geçersiz kılar.|
-|[Soyut](../../language-reference/keywords/abstract.md)|Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir.|
-|[new Değiştiricisi](../../language-reference/keywords/new-modifier.md)|Temel sınıftan devralınan bir üyeyi gizler|
+| C# değiştiricisi | Tanım |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. |
+| [override](../../language-reference/keywords/override.md) | Temel sınıfta tanımlanan bir sanal (geçersiz kılınabilir) üyeyi geçersiz kılar. |
+| [abstract](../../language-reference/keywords/abstract.md) | Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir. |
+| [new Değiştiricisi](../../language-reference/keywords/new-modifier.md) | Temel sınıftan devralınan bir üyeyi gizler |
 
 ## <a name="interfaces"></a>Arabirimler
 
@@ -320,7 +322,7 @@ Bir arabirim tanımlamak için:
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ Bir sınıfa bir arabirim uygulamak için:
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 Genel sınıfın bir örneğini oluşturmak için:
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 Daha fazla bilgi için bkz.
 
-- [Genel Türler](../../../standard/generics/index.md)
-
-- [Genel Türler](../generics/index.md)
+- [.NET içindeki Genel Türler](../../../standard/generics/index.md)
+- [Genel türler-C# Programlama Kılavuzu](../generics/index.md)
 
 ## <a name="delegates"></a>Temsilciler
 
@@ -383,10 +384,11 @@ Temsilci tarafından belirtilen imzayla eşleşen bir yönteme başvuru oluştur
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {
