@@ -86,9 +86,11 @@
       items:
         - name: Bulutta yerel uygulamalar için Azure Güvenliği
           href: azure-security.md
-    - name: Bulutta yerel DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: Özellik bayrakları
+          href: feature-flags.md
         - name: Kod olarak Altyapı
           href: infrastructure-as-code.md
         - name: Bulutta Yerel Uygulama Paketleri
