@@ -1,0 +1,15 @@
+- name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
+  href: index.md
+  items:
+    - name: Neden modern masaüstü uygulamalarını seçmelisiniz?
+      href: why-modern-applications.md
+    - name: Masaüstü için .NET Core’da ne gibi yenilikler var?
+      href: whats-new-dotnet-core.md
+    - name: Modern Masaüstü Uygulamalarını Geçirme
+      href: migrate-modern-applications.md
+    - name: Windows 10 Geçişi
+      href: windows-migration.md
+    - name: .NET Core 3.1’e geçiş örneği
+      href: example-migration-core.md
+    - name: Modern Masaüstü Uygulamalarını Dağıtma
+      href: deploy-modern-applications.md

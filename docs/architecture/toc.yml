@@ -15,6 +15,8 @@
       href: microservices/
     - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       href: serverless/
+    - name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
+      href: modernize-desktop/
 - name: E-kitapların önizlemesini görüntüleme
   expanded: true
   items:
