@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: da14d159b1933112e95a9a8973b2fad62f25288f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126862"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617041"
 ---
-# <a name="icatalogservices-interface"></a><span data-ttu-id="a8107-102">ICatalogServices Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a8107-102">ICatalogServices Interface</span></span>
-<span data-ttu-id="a8107-103">Hizmet kataloğu için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a8107-103">Provides methods for cataloging services.</span></span>  
+# <a name="icatalogservices-interface"></a><span data-ttu-id="d26fd-102">ICatalogServices Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d26fd-102">ICatalogServices Interface</span></span>
+<span data-ttu-id="d26fd-103">Hizmet kataloğu için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="d26fd-103">Provides methods for cataloging services.</span></span>  
   
- <span data-ttu-id="a8107-104">Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="a8107-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="d26fd-104">Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.</span><span class="sxs-lookup"><span data-stu-id="d26fd-104">This interface supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a8107-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="a8107-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d26fd-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="d26fd-105">Methods</span></span>  
   
-|<span data-ttu-id="a8107-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="a8107-106">Method</span></span>|<span data-ttu-id="a8107-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a8107-107">Description</span></span>|  
+|<span data-ttu-id="d26fd-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="d26fd-106">Method</span></span>|<span data-ttu-id="d26fd-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d26fd-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a8107-108">Autodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a8107-108">Autodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|<span data-ttu-id="a8107-109">Yalnızca iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="a8107-109">Reserved for internal use only.</span></span>|  
-|[<span data-ttu-id="a8107-110">NotAutodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a8107-110">NotAutodone Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|<span data-ttu-id="a8107-111">Yalnızca iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="a8107-111">Reserved for internal use only.</span></span>|  
+|[<span data-ttu-id="d26fd-108">Autodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d26fd-108">Autodone Method</span></span>](icatalogservices-autodone-method.md)|<span data-ttu-id="d26fd-109">Yalnızca iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="d26fd-109">Reserved for internal use only.</span></span>|  
+|[<span data-ttu-id="d26fd-110">NotAutodone Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d26fd-110">NotAutodone Method</span></span>](icatalogservices-notautodone-method.md)|<span data-ttu-id="d26fd-111">Yalnızca iç kullanım için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="d26fd-111">Reserved for internal use only.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a8107-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8107-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d26fd-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d26fd-112">See also</span></span>
 
-- [<span data-ttu-id="a8107-113">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="a8107-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="d26fd-113">Barındırma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="d26fd-113">Hosting Interfaces</span></span>](hosting-interfaces.md)
