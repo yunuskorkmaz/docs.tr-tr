@@ -1,32 +1,30 @@
 ---
-title: Buluta özgü uygulamalarda kimlik doğrulama ve yetkilendirme
-description: Azure için Cloud Native .NET Uygulamalarını Temel Alma | Bulut Yerel Uygulamalarında Kimlik Doğrulama ve Yetkilendirme
-ms.date: 03/02/2020
-ms.openlocfilehash: 6261a0a72405bc1c984a04a7851aea4dd6664ddf
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+title: Bulutta yerel uygulamalarda kimlik doğrulama ve yetkilendirme
+description: Azure için Cloud Native .NET uygulamaları tasarlama | Bulutta yerel uygulamalarda kimlik doğrulama ve yetkilendirme
+ms.date: 05/13/2020
+ms.openlocfilehash: e5254560ac82662e5e3ea6a25997516cd2b478b0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805548"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614311"
 ---
 # <a name="authentication-and-authorization-in-cloud-native-apps"></a>Bulutta yerel uygulamalarda kimlik doğrulaması ve yetkilendirme
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+*Kimlik doğrulaması* , bir güvenlik sorumlusunun kimliğini belirleme işlemidir. *Yetkilendirme* , bir eylem gerçekleştirmek veya bir kaynağa erişmek için kimliği doğrulanmış bir sorumlu izin verme işlemidir. Bazen kimlik doğrulaması kısaltıldı `AuthN` ve yetkilendirme olarak kısaltıldı `AuthZ` . Her iki istemci ve uygulama da herhangi bir platformda veya cihazda dünyanın herhangi bir yerinden çalıştığından, bulutta yerel uygulamalar, güvenlik sorumlularının kimlik doğrulaması için açık HTTP tabanlı protokollere güvenmelidir. Tek ortak etken HTTP 'dir.
 
-*Kimlik doğrulama,* bir güvenlik ilkesinin kimliğini belirleme işlemidir. *Yetkilendirme,* bir eylemi gerçekleştirmek veya kaynağa erişmek için kimlik doğrulaması verilen bir asıl izin verme eylemidir. Bazen kimlik doğrulama kısaltılır `AuthN` ve yetkilendirme `AuthZ`' ya kısaltılır. Hem istemciler hem de uygulamalar dünyanın herhangi bir platformuveya aygıtında çalışıyor olabileceğinden, bulut tabanlı uygulamaların güvenlik ilkelerini doğrulamak için açık HTTP tabanlı protokollere dayanması gerekir. Tek ortak faktör HTTP'dir.
+Birçok kuruluş hala Active Directory Federasyon Hizmetleri (AD FS) (ADFS) gibi yerel kimlik doğrulama hizmetlerini kullanır. Bu yaklaşım, şirket içi kimlik doğrulaması ihtiyaçlarına yönelik olarak kuruluşların iyi şekilde sunulmasını sağlarken, bulutta yerel uygulamalar, özellikle bulut için tasarlanan sistemlerden faydalanır. Son 2019 Birleşik Krallık Ulusal Cyber Güvenlik Merkezi (NCSC) danışmanlığı, "birincil kimlik doğrulama kaynağı olarak Azure AD kullanan kuruluşların, ADFS 'ye kıyasla risk azaltmasına neden olduğunu belirtir." [Bu analizde](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) özetlenen bazı nedenler şunlardır:
 
-Birçok kuruluş hala Active Directory Federation Services (ADFS) gibi yerel kimlik doğrulama hizmetlerine güvenir. Bu yaklaşım geleneksel olarak kuruluşlara şirket içi kimlik doğrulama gereksinimlerine iyi hizmet etmiş olsa da, bulut yerel uygulamalar bulut için özel olarak tasarlanmış sistemlerden yararlanır. Yakın tarihli bir 2019 Birleşik Krallık Ulusal Siber Güvenlik Merkezi (NCSC) danışma belgesinde, "Azure AD'yi birincil kimlik doğrulama kaynağı olarak kullanan kuruluşların ADFS'ye göre risklerini düşüreceği" belirtiliyor. [Bu analizde](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) özetlenen bazı nedenler şunlardır:
-
-- Tam microsoft kimlik bilgisi koruma teknolojilerine erişim.
-- Çoğu kuruluş bir dereceye kadar Azure AD'ye güveniyor.
-- NTLM karmalarının çift karma olması, yerel Active Directory'de çalışan kimlik bilgilerinin uzlaştırılmamasından ödün verir.
+- Tüm Microsoft kimlik bilgileri koruma teknolojileri kümesine erişim.
+- Çoğu kuruluş zaten Azure AD 'ye bir ölçüde bağlıdır.
+- NTLM karmalarının çift karması, güvenliğinin, yerel Active Directory çalışan kimlik bilgilerine izin vermez.
 
 ## <a name="references"></a>Başvurular
 
 - [Kimlik doğrulaması temel bilgileri](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
-- [Erişim belirteçleri ve talepler](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
-- [Şirket içi kimlik doğrulama hizmetlerinizi bırakmanın zamanı gelebilir](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
+- [Belirteçleri ve talepleri erişim](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+- [Şirket içi kimlik doğrulama hizmetlerinizin Ditch zaman alabilir](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
->[Önceki](identity.md)
->[Sonraki](azure-active-directory.md)
+>[Önceki](identity.md) 
+> [Sonraki](azure-active-directory.md)

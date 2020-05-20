@@ -2,19 +2,19 @@
 title: Azure için Cloud Native .NET uygulamaları tasarlama
 description: Kapsayıcılardan, mikro hizmetlerden ve sunucusuz özelliklerden yararlanarak bulutta yerel uygulamalar oluşturmaya yönelik bir kılavuz.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507396"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614011"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure için Cloud Native .NET uygulamaları tasarlama
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![kapak resmi](./media/cover.png)
+
+**SÜRÜM v. 1.0**
 
 YAYIMLAYAN
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif &copy; hakkı 2019 Microsoft Corporation
+Telif hakkı &copy; 2020 Microsoft Corporation
 
 Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
@@ -34,7 +34,7 @@ Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi
 
 Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "ticari markalar" https://www.microsoft.com Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve https://www.microsoft.com "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
 Mac ve macOS, Apple Inc. ' in ticari markalarıdır.
 
@@ -58,11 +58,13 @@ Katılımcılar ve gözden geçirenler:
 >
 > **Cecil Phillip**, üst düzey bulut Danışmanı, Microsoft
 
-EShopOnContainers hakkında daha fazla bilgi edinin
-
 Edit
 
 > **Maira Wenzel**, program Yöneticisi, .NET ekibi, Microsoft
+
+## <a name="version"></a>Sürüm
+
+Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde yazılmıştır.
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 
@@ -83,6 +85,10 @@ Bu kılavuz, bulut Native 'i tanımlayarak başlar ve bulut Yerel ilkeleri ve te
 - DevOps
 
 Bu kılavuz hem PDF form hem de çevrimiçi olarak kullanılabilir. Bu konu başlıklarının yaygın olarak anlaşılmasına yardımcı olmak için bu belgeyi veya çevrimiçi sürümünün bağlantısını ekibinize iletmekten çekinmeyin. Bu konuların çoğu, temel ilkelerin ve desenlerin tutarlı bir şekilde anlaşılmasından ve bu konularla ilgili kararlara dahil olan kararların dengelerinden yararlanır. Bu belge ile olan amacınız, donatı ekiplerine ve liderlerine, uygulamalarının mimarisine, geliştirmeye ve barındırılmasına yönelik iyi bilinçli kararlar vermek için ihtiyaç duydukları bilgileri sunmaktır.
+
+## <a name="send-your-feedback"></a>Geri bildiriminizi gönderin
+
+Bu kitap ve ilgili örnekler sürekli gelişiyor, bu nedenle geri bildiriminiz kullanıma açıldı! Bu kitabın nasıl iyileştirilen hakkında açıklamalara sahipseniz, [GitHub sorunları](https://github.com/dotnet/docs/issues)üzerinde oluşturulmuş herhangi bir sayfanın altındaki geri bildirim bölümünü kullanın.
 
 >[!div class="step-by-step"]
 >[Sonraki](introduction.md)

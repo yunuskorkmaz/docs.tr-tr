@@ -1,17 +1,15 @@
 ---
 title: Kimlik
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IDENTITY
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183051"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614025"
 ---
 # <a name="identity"></a>Kimlik
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Çoğu yazılım uygulamasının, bunları çağıran kullanıcı veya işlemle ilgili bazı bilgileri olması gerekir. Bir uygulamayla etkileşim kuran kullanıcı veya işlem güvenlik sorumlusu olarak bilinir ve bu sorumluların kimlik doğrulama ve yetkilendirme süreci kimlik yönetimi veya yalnızca *kimlik*olarak bilinir. Basit uygulamalar uygulama içindeki tüm kimlik yönetimini içerebilir, ancak bu yaklaşım birçok uygulamayla ve birçok güvenlik sorumlusu ile iyi ölçeklenmez. Windows, merkezi kimlik doğrulaması ve yetkilendirme sağlamak için Active Directory kullanımını destekler.
 
@@ -27,10 +25,10 @@ Modern bulutla yerel kimlik çözümleri, genellikle bir güvenli belirteç hizm
 
 Genellikle STS yalnızca Sorumlunun kimliğini doğrulamaktan sorumludur. Kaynaklara erişim düzeyini belirleme, uygulamanın diğer bölümlerine bırakılır.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
-- [Microsoft Identity platformu](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft kimlik platformu](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
->[Önceki](azure-monitor.md)
->[İleri](authentication-authorization.md)
+>[Önceki](azure-monitor.md) 
+> [Sonraki](authentication-authorization.md)

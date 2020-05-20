@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3feb4796-2fab-45ce-beca-6f5bc530b971
 topic_type:
 - apiref
-ms.openlocfilehash: 458faedea418e626a6494ca2afcdbf0e034472e8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 44f9284f0a89f0941940cf379c48b2b138149122
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447738"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614948"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces Metodu
 Bu sembol deposu içindeki genel kapsamda tanımlanan ad alanlarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetNamespaces (  
@@ -54,4 +54,4 @@ HRESULT GetNamespaces (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

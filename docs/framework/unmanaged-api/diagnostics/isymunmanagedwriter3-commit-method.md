@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 5985257a186839a297c245b23f093f0b18a798fe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4331728a4766d81b723c439747e5e1181815394f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438273"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614675"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit Metodu
 Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Commit();  
@@ -39,4 +39,4 @@ HRESULT Commit();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter3 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [ISymUnmanagedWriter3 Arabirimi](isymunmanagedwriter3-interface.md)

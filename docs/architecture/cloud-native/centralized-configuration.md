@@ -1,17 +1,15 @@
 ---
 title: Merkezi yapılandırma
 description: Azure Uygulama yapılandırması ve AzureKey kasasını kullanarak bulutta yerel uygulamalar için yapılandırmayı merkezileştirme.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895651"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614233"
 ---
 # <a name="centralized-configuration"></a>Merkezi yapılandırma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Her şeyin tek bir örnek içinde çalıştığı tek parçalı bir uygulamanın aksine, bulutta yerel bir uygulama, sanal makineler, kapsayıcılar ve coğrafi bölgeler arasında dağıtılan bağımsız hizmetlerden oluşur. Onlarca birbirine bağlı hizmetlerin yapılandırma ayarlarını yönetmek zor olabilir. Yapılandırma ayarlarının farklı konumlarda yinelenen kopyaları, yönetim açısından hataya açıktır ve zor olur. Merkezi yapılandırma, dağıtılmış bulutta yerel uygulamalar için kritik bir gereksinimdir.
 
@@ -68,5 +66,5 @@ EShopOnContainers uygulaması, her mikro hizmetle yerel uygulama ayarları dosya
 - [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
->[Önceki](deploy-eshoponcontainers-azure.md)
->[İleri](scale-applications.md)
+>[Önceki](deploy-eshoponcontainers-azure.md) 
+> [Sonraki](scale-applications.md)

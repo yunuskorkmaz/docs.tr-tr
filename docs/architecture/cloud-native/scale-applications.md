@@ -1,17 +1,15 @@
 ---
 title: Bulutta yerel uygulamaları ölçeklendirme
 description: Azure Kubernetes hizmeti ve Azure Işlevleri ile bulut Yerel uygulamalarını ölçeklendirerek Kullanıcı talebini uygun maliyetli bir şekilde karşılayın.
-ms.date: 04/13/2020
-ms.openlocfilehash: 91d925778e9dfcf8a1ec2486fe8961037409f207
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: d425976eed248461a9c2e4fe03596f9f6dfd2eba
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199951"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613739"
 ---
 # <a name="scaling-cloud-native-applications"></a>Bulutta yerel uygulamaları ölçeklendirme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulut barındırma ortamına geçme için en sık kullanılan ve en sık kullanılan avantajlardan biri ölçeklenebilirlik sağlar. Ölçeklenebilirlik veya bir uygulamanın, her kullanıcı için performansı tehlikeye atmadan ek kullanıcı yükünü kabul etmesine olanak tanır. En sık, her birine gerek duydukları kaynakları verilmeyen küçük parçalara kadar bir uygulamayı kırarak elde edilir. Bulut satıcıları dünyanın her yerindeki ve her yerde büyük ölçeklenebilirlik sağlar.
 
@@ -22,5 +20,5 @@ Bulut barındırma ortamına geçme için en sık kullanılan ve en sık kullan�
 - Sunucusuz bilgi işlem
 
 >[!div class="step-by-step"]
->[Önceki](centralized-configuration.md)
->[İleri](leverage-containers-orchestrators.md)
+>[Önceki](centralized-configuration.md) 
+> [Sonraki](leverage-containers-orchestrators.md)

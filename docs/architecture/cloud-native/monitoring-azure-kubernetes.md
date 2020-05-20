@@ -1,17 +1,15 @@
 ---
 title: Azure Kubernetes Service'te İzleme
 description: Azure Kubernetes Service'te İzleme
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450069"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613830"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Service'te İzleme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kubernetes 'te yerleşik günlük oluşturma basit bir. Ancak, günlükleri Kubernetes dışında ve düzgün çözümlenebilecekleri bir yere almak için bazı harika seçenekler vardır. AKS kümelerinizi izlemeniz gerekiyorsa, Kubernetes için elastik yığının yapılandırılması harika bir çözümdür.
 
@@ -19,8 +17,8 @@ Kubernetes 'te yerleşik günlük oluşturma basit bir. Ancak, günlükleri Kube
 
 [Kapsayıcılar Için Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) , yalnızca Kubernetes değil de, DC/OS, Docker Sısınma ve Red Hat OpenShift gibi diğer düzenleme altyapılarından günlük kullanmayı destekler.
 
-farklı kapsayıcılardan günlük ![](./media/containers-diagram.png)
-**şekil 7-10**. Çeşitli kapsayıcılardan günlükleri kullanma
+![Çeşitli kapsayıcılardan günlükleri kullanma ](./media/containers-diagram.png)
+ **Şekil 7-10**. Çeşitli kapsayıcılardan günlükleri kullanma
 
 [Prometheus](https://prometheus.io/) , popüler bir açık kaynak ölçüm izleme çözümüdür. Bulut Yerel Işlem altyapısı 'nın bir parçasıdır. Genellikle, Prometheus 'ın kullanılması için kendi deposu ile bir Prometheus sunucusunun yönetilmesi gerekir. Ancak, [kapsayıcılar Için Azure izleyici, Prometheus ölçüm uç noktaları ile doğrudan tümleştirme sağlar](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), bu yüzden ayrı bir sunucu gerekli değildir.
 
@@ -30,13 +28,13 @@ Günlük toplayıcıların yüklenmesi [Windows](https://docs.microsoft.com/azur
 
 Hangi Orchestrator veya işletim sisteminin Azure Izleyici arka plan programını çalıştırıyor olduğuna bakılmaksızın, günlük bilgileri kullanıcıların tanıdık olduğu Azure Izleyici araçlarına iletilir. Bu, karma bir Kubernetes/Azure Işlevleri ortamı gibi farklı günlük kaynaklarını karıştırarak oluşan ortamlarda paralel bir deneyim sağlar.
 
-çeşitli çalışan kapsayıcılardan günlük ve ölçüm bilgilerini gösteren örnek bir pano ![. **şekil 7-11**](./media/containers-dashboard.png)
-. Bir dizi çalışan kapsayıcıyı günlüğe kaydetme ve ölçüm bilgilerini gösteren örnek bir Pano.
+![Bir dizi çalışan kapsayıcıyı günlüğe kaydetme ve ölçüm bilgilerini gösteren örnek bir Pano. ](./media/containers-dashboard.png)
+ **Şekil 7-11**. Bir dizi çalışan kapsayıcıyı günlüğe kaydetme ve ölçüm bilgilerini gösteren örnek bir Pano.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 
 Günlüğe kaydetme, her türlü uygulamayı ölçeklendirmenin en fazla ve en önemli bölümlerinden biridir. Uygulamaların boyutu ve karmaşıklığı artdıkça, bunları hata ayıklamanın zorluğunu ortadan kaldırın. Kullanılabilir en yüksek kaliteli günlüklere sahip olmak, hata ayıklamayı çok daha kolay hale getirir ve "neredeyse olanaksız" olarak "bir Pleasant deneyimi" bölgesine taşımaktır.
 
 >[!div class="step-by-step"]
->[Önceki](logging-with-elastic-stack.md)
->[İleri](azure-monitor.md)
+>[Önceki](logging-with-elastic-stack.md) 
+> [Sonraki](azure-monitor.md)

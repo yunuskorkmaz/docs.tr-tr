@@ -1,17 +1,15 @@
 ---
 title: Kod olarak altyapı
 description: Bulutta yerel uygulamalarla kod olarak altyapı (IAC)
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395343"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613960"
 ---
 # <a name="infrastructure-as-code"></a>Kod olarak altyapı
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulut Yerel sistemleri, hızlı ve çeviklik sağlamak için mikro hizmetleri, kapsayıcıları ve modern sistem tasarımını imine dönüştürür. Tutarlı ve kalite kodu sağlamak için otomatik derleme ve sürüm aşamaları sağlar. Ancak bu yalnızca hikayenin bir parçasıdır. Bu sistemlerin üzerinde çalıştığı bulut ortamlarını nasıl sağlayacaksınız?
 

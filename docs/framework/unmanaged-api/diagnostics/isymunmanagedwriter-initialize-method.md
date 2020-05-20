@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427969"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614779"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize Yöntemi
 Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar ve hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar.  
   
  Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir yazıcı yönteminden önce çağrılmalıdır. Bazı yazarlar bir dosya adı gerektirebilir. Ancak, dosya adını kullanmayan yazarlar üzerinde herhangi bir olumsuz etkisi olmadan bu yönteme her zaman bir dosya adı geçirebilirsiniz.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Initialize(  
@@ -45,10 +45,10 @@ HRESULT Initialize(
  'ndaki Hata ayıklama simgelerinin yazıldığı dosya adı. Dosya adları kullanmayan bir yazıcı için dosya adı belirtilmişse, bu parametre yoksayılır.  
   
  `pIStream`  
- 'ndaki Belirtilmişse, sembol yazıcı sembolleri `filename` parametresinde belirtilen dosya yerine verilen <xref:System.Runtime.InteropServices.ComTypes.IStream> yayar. `pIStream` parametresi isteğe bağlıdır.  
+ 'ndaki Belirtilmişse, sembol yazıcı sembolleri <xref:System.Runtime.InteropServices.ComTypes.IStream> parametresinde belirtilen dosya yerine verilen öğesine yayar `filename` . `pIStream`Parametresi isteğe bağlıdır.  
   
  `fFullBuild`  
- [in] Bu bir tam yeniden oluşturma ise `true`; Bu, artımlı bir derleme ise `false`.  
+ [in] `true` Bu bir tam yeniden oluşturma ise `false`Bu bir artımlı derleme ise.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -58,5 +58,5 @@ HRESULT Initialize(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [Initialize2 Yöntemi](isymunmanagedwriter-initialize2-method.md)

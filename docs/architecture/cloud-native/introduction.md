@@ -2,17 +2,15 @@
 title: Bulutta yerel uygulamalara giriş
 description: Bulutta yerel bilgi işlem hakkında bilgi edinin
 author: robvet
-ms.date: 08/26/2019
-ms.openlocfilehash: e1f7683b6f3722bb91e611f199f2e9ce2bbefc63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895529"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613947"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Bulutta yerel uygulamalara giriş
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Diğer bir gün, ofiste "bir sonraki büyük şey" üzerinde çalışıyor.
 
@@ -22,7 +20,7 @@ Ancak bu süre farklıdır: başlangıç, hisse senedi ve çok sayıda komik.
 
 Bulut ve son teknoloji teknolojisinin bahsetme, sizi kenar altına iter.
 
-Birkaç hafta ileri sarma ve artık bir tasarım oturumunda, önemli bir Duytadaki bir uygulama mimarisi olan yeni bir çalışanınız. Diğer önde gelen eticaret siteleriyle rekabet eteceğiz.
+Birkaç hafta ileri sarma ve artık bir tasarım oturumunda, önemli bir Duytadaki bir uygulama mimarisi olan yeni bir çalışanınız. Önde gelen eticaret siteleriyle yarışmaya devam edersiniz.
 
 Nasıl oluşturacaksınız?
 
@@ -46,12 +44,12 @@ Hepsi kötü değildir. Tek tek avantajlar, bazı farklı avantajlar sunmaktadı
 
 Günümüzde mevcut birçok başarılı uygulama tek bir şekilde oluşturulmuştur. Uygulama bir isabet ediyor ve gelişmeye devam ediyor, yineleme sonrasında yineleme, daha fazla işlevsellik ve daha fazla işlev ekliyor.
 
-Ancak, bir noktada rahatsız duymaktan başlayabilirsiniz. Uygulamanın kayıp denetimini bulabilirsiniz. Zaman kaldığında, çok daha yoğun hale gelir ve sonunda **korku çevrimi**olarak bilinen bir durum girersiniz.
+Ancak, bir noktada rahatsız duymaktan başlayabilirsiniz. Uygulamanın kayıp denetimini bulabilirsiniz. Zaman kaldığında, en yoğun hale gelir ve sonunda olarak bilinen bir durum girersiniz `Fear Cycle` .
 
 - Uygulama, tek bir kişi tarafından anlasız overwhelmingly karmaşık hale geldi.
 - Değişiklikler yapılıyor-her değişiklik istenmeden ve pahalı yan etkilere sahiptir.
 - Yeni özellikler/düzeltmeler, uygulama için karmaşık, zaman alan ve pahalı hale gelir.
-- Her yayın, tüm uygulamanın tam dağıtımını gerektirir.
+- Her yayın mümkün olduğunca küçük ve tüm uygulamanın tam dağıtımını gerektirir.
 - Kararsız bir bileşen sistemin tamamını kilitedebilir.
 - Yeni teknolojiler ve çerçeveler bir seçenek değildir.
 - Çevik teslim yöntemlerinin uygulanması zordur.
@@ -64,22 +62,22 @@ Birçok kuruluş, sistem oluşturmaya yönelik bulut Yerel yaklaşımını benim
 
 **Şekil 1-2**. Bulutta yerel tasarım
 
-Uygulamanın, küçük bir yalıtılmış mikro hizmetler kümesi üzerinde nasıl oluştuğunu aklınızda edin. Her hizmet kendi içinde bulunur ve kendi kodunu, verilerini ve bağımlılıklarını kapsüller. Her biri bir yazılım kapsayıcısında dağıtılır ve bir kapsayıcı Orchestrator tarafından yönetilir. Büyük bir ilişkisel veritabanı yerine, her hizmet kendi veri deposuna sahiptir ve veri ihtiyaçlarına göre farklılık gösteren tür. Bazı hizmetlerin, NoSQL veritabanlarında diğer bir ilişkisel veritabanına nasıl bağlı olduğunu not edin. Bir hizmet, durumunu dağıtılmış bir önbellekte depolar. Tüm trafiğin, ana arka uç hizmetleriyle trafiği yönlendirmekten ve birçok çapraz kesme ile ilgili sorunları zorlarken sorumlu bir API ağ geçidi hizmeti üzerinden nasıl yönlendirdiğine dikkat edin. En önemlisi, uygulama modern bulut platformlarında bulunan ölçeklenebilirlik ve dayanıklılık özelliklerinden tam olarak yararlanır.
+Uygulamanın, küçük bir yalıtılmış mikro hizmetler kümesi üzerinde nasıl oluştuğunu aklınızda edin. Her hizmet kendi içinde bulunur ve kendi kodunu, verilerini ve bağımlılıklarını kapsüller. Her biri bir yazılım kapsayıcısında dağıtılır ve bir kapsayıcı Orchestrator tarafından yönetilir. Büyük bir ilişkisel veritabanı yerine, her hizmet kendi veri deposuna sahiptir ve veri ihtiyaçlarına göre farklılık gösteren tür. Bazı hizmetlerin, NoSQL veritabanlarında diğer bir ilişkisel veritabanına nasıl bağlı olduğunu not edin. Bir hizmet, durumunu dağıtılmış bir önbellekte depolar. Tüm trafiğin, trafiği çekirdek arka uç hizmetlerine yönlendirmekten sorumlu bir API ağ geçidi hizmeti üzerinden nasıl yönlendirdiğini ve birçok çapraz kesme ile ilgili kaygıları zoryacağını unutmayın. En önemlisi, uygulama modern bulut platformlarında bulunan ölçeklenebilirlik, kullanılabilirlik ve dayanıklılık özelliklerinden tam olarak yararlanır.
 
 ### <a name="cloud-native-computing"></a>Bulutta yerel bilgi işlem
 
-Hmm... "*Cloud Native*" terimini kullandık. Önce "Bu anlamı nedir?" olarak düşündük. Daha fazla bilgi pazarlamak için yazılım satıcıları tarafından başka bir sektör Buzzword tarafından işbirliği yapılıyor mu? "
+Hmm... Yalnızca _Cloud Native_terimini kullandık. İlk düşünce "Bu anlamı nedir?" olabilir. Daha fazla bilgi pazarlamak için yazılım satıcıları tarafından başka bir sektör Buzzword tarafından işbirliği yapılıyor mu? "
 
 Neyse ki, bu kitapta çok farklı ve bu kitabın sizi ikna etmeye yardımcı olacak.
 
 Kısa bir süre içinde, Cloud Native, yazılım sektörde bir gidiş eğilimi haline geldi. Modern yazılım geliştirme uygulamalarından, teknolojisinden ve bulut altyapısından yararlanan bir yaklaşım olan büyük, karmaşık sistemler oluşturmayı düşünmek için yeni bir yoldur. Yaklaşım, sistemleri tasarlama, uygulama, dağıtma ve gerçekleştirme şeklini değiştirir.
 
-Sektörünü çalıştıran sürekli hype aksine, Cloud Native, "*for-Real*" olur. Bulut Yerel bilgi işlem altyapısı 'nı (cncf), bulutta yerel bilgi işlem, teknoloji ve bulut yığınları genelinde bir arada bulundurmamıza yardımcı olan 300 ana kurumdan oluşan bir [konsorsiyunuzu](https://www.cncf.io/) düşünün. En etkili açık kaynaklı gruplardan biri olarak, GitHub 'da en hızlı büyüyen açık kaynaklı projelerin birçoğunu barındırır. [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Held](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)ve [GRPC](https://grpc.io/)gibi projeleri içerirler.
+Sektörünü çalıştıran sürekli hype aksine, Cloud Native, _gerçek için_. Bulut Yerel bilgi işlem altyapısı 'nı (cncf), bulutta yerel bilgi işlem, teknoloji ve bulut yığınları genelinde bir arada bulundurmamıza yardımcı olan 300 ana kurumdan oluşan bir [konsorsiyunuzu](https://www.cncf.io/) düşünün. En etkili açık kaynaklı gruplardan biri olarak, GitHub 'da en hızlı büyüyen açık kaynaklı projelerin birçoğunu barındırır. [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Held](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)ve [GRPC](https://grpc.io/)gibi projeleri içerirler.
 
-CNCF, açık kaynaklı ve satıcıya özgü bir ekosistemi bir arada bulunan. Bundan sonra, teknolojiden bağımsız olarak bulut Yerel ilkeleri, desenleri ve en iyi uygulamaları sunuyoruz. Aynı zamanda, bulutta yerel sistemler oluşturmak için Microsoft Azure bulutu 'nda bulunan hizmetleri ve altyapıyı tartıştık.
+CNCF, açık kaynaklı ve satıcıya özgü bir ekosistemi bir arada bulunan. Bu müşteri adayının ardından, bu kitapta platformdan bağımsız ilkeler, desenler ve teknoloji açısından en iyi uygulamalar sunulmaktadır. Aynı zamanda, bulutta yerel sistemler oluşturmak için Microsoft Azure bulutu 'nda bulunan hizmetleri ve altyapıyı tartıştık.
 
 Bu nedenle, yerel olarak bulut Native nedir? Geri dönerek bu yeni dünyayı araştırmanıza yardımcı olun.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)
->[İleri](definition.md)
+>[Önceki](index.md) 
+> [Sonraki](definition.md)

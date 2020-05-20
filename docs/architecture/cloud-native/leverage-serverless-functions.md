@@ -1,17 +1,15 @@
 ---
 title: Sunucusuz işlevlerden yararlanma
 description: Bulutta yerel uygulamalarda sunucusuz ve Azure Işlevlerini kullanma
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199748"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613869"
 ---
 # <a name="leveraging-serverless-functions"></a>Sunucusuz işlevlerden yararlanma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulut yeteneklerini kullanmak için fiziksel makineleri yönetme ucundan, sunucusuz çok daha az çaba yaşar. Yalnızca sizin sorumluluğunuzdadır ve kodunuz çalışırken ödeyin. Azure Işlevleri, bulutta yerel uygulamalarınız için sunucusuz yetenekler oluşturmanın bir yolunu sunar.
 
@@ -54,8 +52,8 @@ Sunucusuz çözümler sağlama ve isteğe bağlı ölçekleme. Yeni bir örnek �
 
 Şekil 3-10, soğuk başlangıç modelini gösterir. Uygulama soğuk olduğunda gereken ek adımlara göz önünde edin.
 
-![Soğuk, sıcak başlangıç](./media/cold-start-warm-start.png)
-**şekli 3-10**. Soğuk başlatma ve sıcak başlangıç.
+![Soğuk, sıcak başlangıç ](./media/cold-start-warm-start.png)
+ **şekli 3-10**. Soğuk başlatma ve sıcak başlangıç.
 
 Soğuk tamamen başlamasını önlemek için bir [Tüketim planından adanmış plana](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)geçebilirsiniz. Premium plan yükseltmesine sahip bir veya daha fazla [önceden çarpımış örnek](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) de yapılandırabilirsiniz. Bu durumlarda, başka bir örnek eklemeniz gerektiğinde, zaten çalışır durumda ve gönderilmeye hazırız. Bu seçenekler, sunucusuz bilgi işlem ile ilişkili soğuk başlatma sorununu azaltmaya yardımcı olabilir.
 
@@ -64,5 +62,5 @@ Bulut sağlayıcıları, işlem yürütme süresi ve tüketilen bellek temelinde
 Son olarak, uygulama görevleri için Azure Işlevleri 'nden yararlanmak karmaşıklık sağlar. Uygulamanızı modüler ve gevşek olarak bağlanmış bir tasarımla ilk kez mimarın. Daha sonra, avantajlar sunucusuz olup olmadığını ve ek karmaşıklığın nasıl olacağını belirleyebilirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](leverage-containers-orchestrators.md)
->[İleri](combine-containers-serverless-approaches.md)
+>[Önceki](leverage-containers-orchestrators.md) 
+> [Sonraki](combine-containers-serverless-approaches.md)

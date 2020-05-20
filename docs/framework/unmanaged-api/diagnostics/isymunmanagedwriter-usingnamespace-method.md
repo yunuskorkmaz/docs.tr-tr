@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4348cc59924b65b6c6bb53a9c2a98f1a1161b50
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427461"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614740"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace Yöntemi
 Verilen tam ad alanı adının şu anda açık olan sözlü kapsam içinde kullanıldığını belirtir. Ad alanı şu anda açık olan kapsamdan devraldığı tüm kapsamlar içinde kullanılacaktır. Geçerli kapsamın kapatılması, ad alanının kullanımını da durdurur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT UsingNamespace(  
@@ -44,4 +44,4 @@ HRESULT UsingNamespace(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)

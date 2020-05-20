@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: 2b901a3dac499f1ce3f843c59122dd8fd5022147
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427955"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614792"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo Yöntemi
-Bir derleyicinin taşınabilir yürütülebilir (PE) dosya üstbilgisine hata ayıklama dizini girişini yazması için gereken bilgileri döndürür. Sembol yazıcı, `TimeDateStamp` ve `PointerToRawData`hariç tüm alanları doldurur. (Derleyici, bu iki alanı uygun şekilde ayarlamaktan sorumludur.)  
+Bir derleyicinin taşınabilir yürütülebilir (PE) dosya üstbilgisine hata ayıklama dizini girişini yazması için gereken bilgileri döndürür. Sembol yazıcı, ve hariç tüm alanları doldurur `TimeDateStamp` `PointerToRawData` . (Derleyici, bu iki alanı uygun şekilde ayarlamaktan sorumludur.)  
   
- Bir derleyici bu yöntemi çağırmalıdır, veri blobunu PE dosyasına yayar, IMAGE_DEBUG_DIRECTORY `PointerToRawData` alanını, yayan verileri gösterecek şekilde ayarlar ve IMAGE_DEBUG_DIRECTORY PE dosyasına yazar. Derleyici Ayrıca `TimeDateStamp` alanını oluşturulan PE dosyasının `TimeDateStamp` eşit olacak şekilde ayarlamış olmalıdır.  
+ Bir derleyici bu yöntemi çağırmalıdır, veri blobunu PE dosyasına yayar, IMAGE_DEBUG_DIRECTORY alanı, yayan `PointerToRawData` verileri gösterecek şekilde ayarlayın ve IMAGE_DEBUG_DIRECTORY pe dosyasına yazar. Derleyici Ayrıca `TimeDateStamp` alanı oluşturulan PE dosyasının değerine eşit olacak şekilde ayarlamış olmalıdır `TimeDateStamp` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDebugInfo(  
@@ -43,10 +43,10 @@ HRESULT GetDebugInfo(
  [in, out] Sembol yazıcısının dolduracağı IMAGE_DEBUG_DIRECTORY işaretçisi.  
   
  `cData`  
- 'ndaki Hata ayıklama verilerinin boyutunu içeren bir `DWORD`.  
+ 'ndaki `DWORD`Hata ayıklama verilerinin boyutunu içeren bir.  
   
  `pcData`  
- dışı Hata ayıklama verilerini içermesi için gereken arabelleğin boyutunu alan bir `DWORD` işaretçisi.  
+ dışı `DWORD`Hata ayıklama verilerini içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `data`  
  dışı Simge deposu için hata ayıklama verilerini tutabilecek kadar büyük bir arabellek işaretçisi.  
@@ -59,4 +59,4 @@ HRESULT GetDebugInfo(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433966"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615117"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName Yöntemi
 Bu ad alanının adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName(  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` arabelleğinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Arabellek boyutunu belirten bir `szName` .  
   
  `pcchName`  
- dışı Null sonlandırma dahil olmak üzere ad alanı adını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Null sonlandırma dahil olmak üzere ad alanı adını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Ad alanı adını içeren bir arabelleğin işaretçisi.  
@@ -53,4 +53,4 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace Arabirimi](isymunmanagednamespace-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 9e8139a822c877e70731e18ae5a75b83e6b7578e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448960"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614467"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters Metodu
 Bu yöntemin parametrelerini alır. Parametreler, yöntemin imzasında tanımlandıkları sırada döndürülür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetParameters(  
@@ -37,10 +37,10 @@ HRESULT GetParameters(
   
 ## <a name="parameters"></a>Parametreler  
  `cParams`  
- 'ndaki `params` dizisinin boyutu.  
+ 'ndaki `params`Dizinin boyutu.  
   
  `pcParams`  
- 'ndaki Parametreleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ 'ndaki `ULONG32`Parametreleri içermesi için gereken arabelleğin boyutunu alan öğesine bir işaretçisi.  
   
  `params`  
  dışı Parametreleri alan arabelleğin işaretçisi.  
@@ -53,4 +53,4 @@ HRESULT GetParameters(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

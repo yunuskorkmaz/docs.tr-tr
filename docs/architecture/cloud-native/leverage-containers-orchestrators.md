@@ -1,17 +1,15 @@
 ---
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895544"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613933"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kapsayıcılar ve düzenleyiciler, tek parçalı dağıtım yaklaşımları için ortak olan sorunları çözmeye yönelik olarak tasarlanmıştır.
 
@@ -19,7 +17,7 @@ Kapsayıcılar ve düzenleyiciler, tek parçalı dağıtım yaklaşımları içi
 
 Geleneksel olarak, çoğu uygulama tek bir birim olarak dağıtılır. Bu tür uygulamalar tek bir olarak adlandırılır. Bu genel yaklaşım, birden çok modülden oluşsa bile veya derlemeler şekil 3-1 ' de gösterildiği gibi tek parçalı mimari olarak bilinir.
 
-![Tek parçalı mimari.](./media/monolithic-architecture.png)
+![Tek parçalı mimari.](./media/monolithic-design.png)
 
 **Şekil 3-1**. Tek parçalı mimari.
 
@@ -57,8 +55,9 @@ Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı
 
 Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı şekilde yeniden oluşturabilir ve çalıştırabilirsiniz. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri diğerlerinden farklı şekilde geliştikçe, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
 
-![Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek. ](./media/breaking-up-monolith-with-backend-microservices.png)
- **Şekil 3-2**. Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.
+![Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.](./media/cloud-native-design.png)
+
+**Şekil 3-2**. Tek parçalı bir uygulamayı, mikro hizmetlere çok parçalı bir uygulama oluşturmayı kaldırma.
 
 Her bulut Yerel hizmeti ayrı bir kapsayıcıda oluşturulup dağıtılır. Her biri gerektiğinde güncelleştirebilir. Her hizmet için uygun kaynakları olan düğümlerde tek tek hizmetler barındırılabilir. Her hizmetin çalıştığı ortam, geliştirme, test ve üretim ortamlarında paylaşılan ve kolayca sürümlü bir sabittir. Uygulamanın farklı alanlarında, tek başına derleme zamanı bağımlılıkları değil, hizmetler arasında doğrudan çağrı veya ileti olarak gerçekleştirilir. Ayrıca, uygulamanın geri kalanında değişiklik gerektirmeden belirli bir özelliği en iyi şekilde sunan teknolojiyi de seçebilirsiniz.
 
@@ -111,7 +110,7 @@ Kubernetes hem bildirime dayalı hem de kesinlik temelli yapılandırmayı deste
 
 Zorunlu komutların öğrenimi ve etkileşimli deneme için harika olması. Ancak, güvenilir ve tekrarlanabilir dağıtımlar sağlayan bir altyapıyı kod yaklaşımı olarak ayraç içine almak için, bildirimli olarak Kubernetes bildirim dosyalarını oluşturmak isteyeceksiniz. Bildirim dosyası bir proje yapıtı haline gelir ve Kubernetes dağıtımlarını otomatikleştirmek için CI/CD işlem hattınızda kullanılır.
 
-Kümenizi tanımlayıcı komutları kullanarak zaten yapılandırdıysanız, kullanarak `kubectl get svc SERVICENAME -o yaml > service.yaml`bildirim temelli bir bildirimi dışarı aktarabilirsiniz. Bu komut aşağıda gösterilene benzer bir bildirim üretir:
+Kümenizi tanımlayıcı komutları kullanarak zaten yapılandırdıysanız, kullanarak bildirim temelli bir bildirimi dışarı aktarabilirsiniz `kubectl get svc SERVICENAME -o yaml > service.yaml` . Bu komut aşağıda gösterilene benzer bir bildirim üretir:
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-Bildirim temelli yapılandırma kullanırken, yapılandırma dosyalarınızın bulunduğu klasöre `kubectl diff -f FOLDERNAME` karşı uygulamadan önce yapılacak değişikliklerin önizlemesini yapabilirsiniz. Değişiklikleri uygulamak istediğinize emin olduktan sonra çalıştırın `kubectl apply -f FOLDERNAME`. Bir `-R` klasör hiyerarşisini yinelemeli olarak işlemeye ekleyin.
+Bildirim temelli yapılandırma kullanırken, `kubectl diff -f FOLDERNAME` yapılandırma dosyalarınızın bulunduğu klasöre karşı uygulamadan önce yapılacak değişikliklerin önizlemesini yapabilirsiniz. Değişiklikleri uygulamak istediğinize emin olduktan sonra çalıştırın `kubectl apply -f FOLDERNAME` . `-R`Bir klasör hiyerarşisini yinelemeli olarak işlemeye ekleyin.
 
 Ayrıca, biri dağıtımları olan diğer Kubernetes özellikleriyle bildirim temelli yapılandırma de kullanabilirsiniz. Bildirim temelli dağıtımlar, yayınları, güncelleştirmeleri ve ölçeklendirmeyi yönetmeye yardımcı olur. Bu kişiler, Kubernetes dağıtım denetleyicisine yeni değişiklikler dağıtma, yük genişletme veya önceki bir düzeltmeye geri dönme işlemlerini yönlendirir. Bir küme kararsız durumdaysa, bildirime dayalı bir dağıtım otomatik olarak kümeyi istenen duruma geri döndürür. Örneğin, bir düğüm kilitlenmelidir, dağıtım mekanizması istediğiniz duruma ulaşmak için bir değişikliği yeniden dağıtırsınız
 
@@ -181,7 +180,7 @@ Minikube nedir? Minikube projesi, "Minikube macOS, Linux ve Windows üzerinde ye
 - Kapsayıcı ağ arabirimini etkinleştirme (CNı)
 - Giriş
 
-Minikube yükledikten sonra, bir görüntüyü yükleyen ve yerel Kubernetes kümesini başlatan `minikube start` komutunu çalıştırarak hızlı bir şekilde kullanmaya başlayabilirsiniz. Küme başlatıldıktan sonra, standart Kubernetes `kubectl` komutlarını kullanarak onunla etkileşime geçin.
+Minikube yükledikten sonra, `minikube start` bir görüntüyü yükleyen ve yerel Kubernetes kümesini Başlatan komutunu çalıştırarak hızlı bir şekilde kullanmaya başlayabilirsiniz. Küme başlatıldıktan sonra, standart Kubernetes komutlarını kullanarak onunla etkileşime geçin `kubectl` .
 
 ### <a name="docker-desktop"></a>Docker Masaüstü
 
@@ -201,29 +200,29 @@ Visual Studio, Web tabanlı uygulamalar için Docker geliştirmeyi destekler. Ye
 
 **Şekil 3-5**. Visual Studio Docker desteğini etkinleştir
 
-Bu seçenek belirlendiğinde proje, bir Docker kapsayıcısında uygulamayı derlemek ve `Dockerfile` barındırmak için kullanılabilen bir kökünde oluşturulur. Şekil 3 -6. git 'de örnek bir Dockerfile gösterilmektedir
+Bu seçenek belirlendiğinde proje, bir `Dockerfile` Docker kapsayıcısında uygulamayı derlemek ve barındırmak için kullanılabilen bir kökünde oluşturulur. Şekil 3 -6. git 'de örnek bir Dockerfile gösterilmektedir
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **Şekil 3-6**. Visual Studio tarafından oluşturulan Dockerfile
@@ -236,13 +235,17 @@ Uygulamanın çalışması için varsayılan davranış, Docker 'ı kullanmak ü
 
 [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) , yerel geliştirmeye ek olarak, birden çok geliştiricinin Azure 'Da kendi Kubernetes yapılandırmalarına göre çalışması için kullanışlı bir yol sağlar. Şekil 3-7 ' de görebileceğiniz gibi, uygulamayı Azure Dev Spaces de çalıştırabilirsiniz.
 
-Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ tıklayın ve**Docker desteği** **ekleyin** > .
+Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteği ekleyebilirsiniz. Visual Studio Çözüm Gezgini, Şekil 3-8 ' de gösterildiği gibi projeye sağ **Add**tıklayın ve  >  **Docker desteği**ekleyin.
+
+![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
 
 **Şekil 3-8**. Visual Studio 'ya Docker desteği ekleme
 
-Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosya eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir `charts` klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
+Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra `azds.yaml` Proje köküne bir dosya eklenir ve `charts` uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 
-Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra proje köküne bir `azds.yaml` dosya eklenir ve uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir `charts` klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
+Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra `azds.yaml` Proje köküne bir dosya eklenir ve `charts` uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
+
+![Visual Studio Orchestrator desteği ekle](./media/visual-studio-add-orchestrator-support.png)
 
 **Şekil 3-9**. Visual Studio 'ya düzenleme desteği ekleme
 
@@ -253,5 +256,5 @@ Docker geliştirmeyi destekleyen Visual Studio Code için kullanılabilen birço
 Microsoft, [Visual Studio Code uzantısı Için Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)sağlar. Bu uzantı, uygulamalara kapsayıcı desteği ekleme sürecini basitleştirir. Gerekli dosyaları, Docker görüntülerini oluşturur ve bir kapsayıcı içinde uygulamanızın hatalarını ayıklamanızı sağlar. Uzantı; başlatma, durdurma, İnceleme, kaldırma ve daha fazlasını içeren kapsayıcılar ve görüntüler üzerinde işlem yapmayı kolaylaştıran bir görsel gezgin sunar. Uzantı Ayrıca birden çok çalışan kapsayıcıyı tek bir birim olarak yönetmenizi sağlayan Docker Compose destekler.
 
 >[!div class="step-by-step"]
->[Önceki](scale-applications.md)
->[İleri](leverage-serverless-functions.md)
+>[Önceki](scale-applications.md) 
+> [Sonraki](leverage-serverless-functions.md)

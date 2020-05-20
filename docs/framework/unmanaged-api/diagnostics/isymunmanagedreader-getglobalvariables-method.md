@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448321"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615026"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables Metodu
 Tüm genel değişkenleri döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetGlobalVariables(  
@@ -37,10 +37,10 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>Parametreler  
  `cVars`  
- 'ndaki `pcVars`tarafından işaret edilen arabelleğin uzunluğu.  
+ 'ndaki Tarafından işaret edilen arabelleğin uzunluğu `pcVars` .  
   
  `pcVars`  
- dışı Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `pVars`  
  dışı Değişkenleri içeren bir arabellek.  
@@ -53,4 +53,4 @@ HRESULT GetGlobalVariables(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

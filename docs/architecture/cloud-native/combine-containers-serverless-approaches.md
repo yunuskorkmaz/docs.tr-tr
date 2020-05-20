@@ -1,17 +1,15 @@
 ---
 title: Bulutta yerel hizmetler için kapsayıcıları ve sunucusuz yaklaşımları birleştirme
 description: Kapsayıcıları ve Kubernetes 'i sunucusuz yaklaşımlar ile birleştirme
-ms.date: 04/23/2020
-ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 67eee89659026db06eb16ef6f1154ab6935725a4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895646"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614207"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>Kapsayıcıları ve sunucusuz yaklaşımları birleştirme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulutta yerel uygulamalar genellikle kapsayıcılardan ve düzenleme özelliğinden yararlanan hizmetleri uygular. Genellikle bazı uygulama hizmetlerini Azure Işlevleri olarak kullanıma sunma fırsatları vardır. Ancak, Kubernetes 'e dağıtılan bir bulutta yerel uygulama sayesinde, bu araç takımı içindeki Azure Işlevlerinin yararlanmak iyi bir uygulamadır. Neyse ki, Docker Kapsayıcıları içindeki Azure Işlevlerini kaydırabilirsiniz ve Kubernetes tabanlı uygulamanızın geri kalanı ile aynı işlemleri ve araçları kullanarak bunları dağıtabilirsiniz.
 
@@ -31,16 +29,16 @@ Bir Docker kapsayıcısında bir Azure Işlevini kaydırmak için [Azure Functio
 func init ProjectName --worker-runtime dotnet --docker
 ```
 
-Proje oluşturulduğunda, bir Dockerfile ve ile `dotnet`yapılandırılan çalışan çalışma zamanı dahil edilir. Şimdi, işlevinizi yerel olarak oluşturup test edebilirsiniz. `docker build` Ve `docker run` komutlarını kullanarak derleyin ve çalıştırın. Docker desteğiyle Azure Işlevleri oluşturmaya başlamanıza yönelik ayrıntılı adımlar için bkz. [Linux üzerinde bir Işlev oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) öğreticisini kullanarak.
+Proje oluşturulduğunda, bir Dockerfile ve ile yapılandırılan çalışan çalışma zamanı dahil edilir `dotnet` . Şimdi, işlevinizi yerel olarak oluşturup test edebilirsiniz. Ve komutlarını kullanarak derleyin ve çalıştırın `docker build` `docker run` . Docker desteğiyle Azure Işlevleri oluşturmaya başlamanıza yönelik ayrıntılı adımlar için bkz. [Linux üzerinde bir Işlev oluşturma](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) öğreticisini kullanarak.
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>KEDA ile sunucusuz ve Kubernetes 'i birleştirme
 
-Bu bölümde, Azure Işlevleri 'nin platformunun talebi karşılamak için otomatik olarak ölçeklendirilen olduğunu gördünüz. Ancak, Kapsayıcılı işlevleri AKS 'e dağıttığınızda, yerleşik ölçeklendirme işlevini kaybedersiniz. Kurtarma için [Kubernetes tabanlı olay temelli (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda). Kapsayıcılı işlevleri dahil etmek için `event-driven Kubernetes workloads,` hassas otomatik ölçeklendirme imkanı sunar.
+Bu bölümde, Azure Işlevleri 'nin platformunun talebi karşılamak için otomatik olarak ölçeklendirilen olduğunu gördünüz. Ancak, Kapsayıcılı işlevleri AKS 'e dağıttığınızda, yerleşik ölçeklendirme işlevini kaybedersiniz. Kurtarma için [Kubernetes tabanlı olay temelli (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda). Kapsayıcılı işlevleri dahil etmek için hassas otomatik ölçeklendirme imkanı sunar `event-driven Kubernetes workloads,` .
 
-KEDA, Docker kapsayıcısında Işlevlerin çalışma zamanına olay odaklı ölçeklendirme işlevselliği sağlar. KEDA `n instances`, yük temelinde (herhangi bir olay gerçekleşirken) sıfır örneklerinden ölçeklendirebilir. Bu, Kubernetes otomatik ölçeklendirme (yatay Pod otomatik Scaler) için özel ölçümleri ortaya çıkaran otomatik ölçeklendirmeyi sağlar. Bir Kubernetes kümesinde, Işlev kapsayıcılarını KEDA kullanarak, sunucusuz işlev yeteneklerini çoğaltabilirsiniz.
+KEDA, Docker kapsayıcısında Işlevlerin çalışma zamanına olay odaklı ölçeklendirme işlevselliği sağlar. KEDA, yük temelinde (herhangi bir olay gerçekleşirken) sıfır örneklerinden ölçeklendirebilir `n instances` . Bu, Kubernetes otomatik ölçeklendirme (yatay Pod otomatik Scaler) için özel ölçümleri ortaya çıkaran otomatik ölçeklendirmeyi sağlar. Bir Kubernetes kümesinde, Işlev kapsayıcılarını KEDA kullanarak, sunucusuz işlev yeteneklerini çoğaltabilirsiniz.
 
 KEDA projesinin artık Cloud Native Computing Foundation (CNCF) tarafından yönetildiğini belirten bir değer.
 
 >[!div class="step-by-step"]
->[Önceki](leverage-serverless-functions.md)
->[İleri](deploy-containers-azure.md)
+>[Önceki](leverage-serverless-functions.md) 
+> [Sonraki](deploy-containers-azure.md)

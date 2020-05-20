@@ -2,17 +2,15 @@
 title: Bulutta yerel iletişim desenleri
 description: Bulutta yerel uygulamalarda önemli hizmet iletişim sorunları hakkında bilgi edinin
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895626"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614220"
 ---
 # <a name="cloud-native-communication-patterns"></a>Bulutta yerel iletişim desenleri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bir bulutta yerel sistem oluştururken, iletişim önemli bir tasarım kararı haline gelir. Ön uç istemci uygulaması, arka uç mikro hizmeti ile nasıl iletişim kurar? Arka uç mikro hizmetleri birbirleriyle nasıl iletişim kurar? Bulutta yerel uygulamalarda iletişim uygularken dikkate alınması gereken ilkeler, desenler ve en iyi uygulamalar nelerdir?
 
@@ -49,5 +47,5 @@ Birçok avantaj sağlarken, mikro hizmetler ücretsiz öğle yemeği değildir. 
 Bu bölümde, önce ön uç uygulamaları ve arka uç mikro hizmetleri arasındaki iletişimi ele alacağız. Ardından arka uç mikro hizmetlerinin birbirleriyle iletişim kurmasına bakacağız. Yukarı ve gRPC iletişim teknolojisini keşfereceğiz. Son olarak, hizmet kafesi teknolojisini kullanarak yeni yenilikçi iletişim desenleri inceleyeceğiz. Ayrıca, Azure bulutunun bulut Yerel iletişimini desteklemek için farklı türlerde *yedekleme hizmetleri* sağladığını de göreceğiz.
 
 >[!div class="step-by-step"]
->[Önceki](other-deployment-options.md)
->[İleri](front-end-communication.md)
+>[Önceki](other-deployment-options.md) 
+> [Sonraki](front-end-communication.md)

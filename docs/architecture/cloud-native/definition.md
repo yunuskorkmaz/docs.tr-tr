@@ -2,21 +2,19 @@
 title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895613"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614192"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Yaptığımız şeyi ve iş arkadaşlarınızın on metnini durdurun. "Cloud native" terimini tanımlamasını isteyin. On farklı yanıt elde etmenizde yarar vardır.
 
-Yaptığımız şeyi ve iş arkadaşlarınızın on metnini durdurun. "Cloud native" terimini tanımlamasını isteyin. Sekiz farklı yanıt elde etmenizde yarar vardır.
-
-Cloud Native, önemli iş sistemlerini oluşturma hakkında düşündüğünüzden daha fazla değişiklik yaptığımız bir yöntemdir.
+Cloud Native, kritik iş sistemlerini oluşturma hakkında düşündüğünüzden herhangi bir şekilde değişiklik yapmanızı ister.
 
 Bulutta yerel sistemler, hızlı değişim, büyük ölçek ve esnekliği için tasarlanmıştır.
 
@@ -72,7 +70,7 @@ Bulutta yerel bir uygulamayı nasıl tasarlıyorsunuz? Mimariniz nasıl görün�
 
 Bulut tabanlı uygulamalar oluşturmak için yaygın olarak kabul edilen bir metodolojide, [on Iki öğeli uygulama](https://12factor.net/)vardır. Geliştiricilerin modern bulut ortamları için iyileştirilmiş uygulamalar oluşturmak üzere izlediği bir ilkeler ve uygulamalar kümesini açıklar. Ortamlar ve bildirim temelli Otomasyon genelinde taşınabilirliği için özel dikkat edilmelidir.
 
-Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, buluta yerel uygulamalar oluşturmaya yönelik sağlam bir temel olarak kabul etmesidir. Bu kurallara göre oluşturulan sistemler hızla dağıtabilir ve ölçeklendirebilir ve Pazar değişikliklerine hızlı bir şekilde tepki vermek için özellikler ekleyebilir.
+Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, bulutta yerel uygulamalar oluşturmaya yönelik katı bir temel olarak on Iki etmeni düşünmelidir. Bu kurallara göre oluşturulan sistemler hızla dağıtabilir ve ölçeklendirebilir ve Pazar değişikliklerine hızlı bir şekilde tepki vermek için özellikler ekleyebilir.
 
 Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 
@@ -88,10 +86,10 @@ Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 | 8 | Eşzamanlılık | Hizmetler, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine çok sayıda küçük özdeş işleme (kopya) arasında ölçeği genişleme. |
 | 9 | Disposability | Hizmet örnekleri, sistem doğru bir durumda kalacak şekilde ölçeklenebilirlik fırsatlarını ve düzgün kapanmaların artırılmasını sağlamak için atılabilir, favoring hızlı başlatmalar olmalıdır. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. |
 | 10 | Geliştirme ve üretim eşliği | Ortamları uygulama yaşam döngüsü genelinde mümkün olduğunca benzer şekilde tutun, maliyetli kısayollardan kaçının. Burada, kapsayıcıları benimseme, aynı yürütme ortamını yükselterek büyük ölçüde katkıda bulunabilir. |
-| 11 | Günlüğe Kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
+| 11 | Günlüğe kaydetme | Mikro hizmetler tarafından oluşturulan günlükleri olay akışları olarak değerlendirin. Bunları bir Olay Toplayıcısı ile işleyin ve verileri Azure Izleyici veya splunk gibi veri madenciliği/günlük yönetim araçlarına ve sonuçta uzun süreli arşivleme ' ye yayın. |
 | 12 | Yönetici süreçler | Yönetim/Yönetim görevlerini tek bir işlem olarak çalıştırın. Görevler, bir rapor için veri temizleme ve çekme analizlerini içerebilir. Bu görevleri yürüten araçlar, üretim ortamından, ancak uygulamadan ayrı olarak çağrılmalıdır. |
 
-Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, kitap, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken de sağlar.
+Kitapta, [on Iki öğeli uygulamanın ötesinde](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), ilk 12 faktörün (2011 ' de yazılmıştır) her biri Için Kevin Hoffman ayrıntılarına bakın. Ayrıca, günümüzün modern bulut uygulaması tasarımını yansıtan üç ek etken ele alınmaktadır.
 
 |    |  Yeni faktör | Açıklama  |
 | :-------- | :-------- | :-------- |
@@ -155,7 +153,7 @@ Paylaşılan bir yapı aracılığıyla etkileşen, bir dağıtılmış küçük
 
 Mikro hizmetlerin "bir kod temeli, bir uygulama" ilkesini, daha önce bölümünde açıklanan [on Iki öğeli uygulamadan](https://12factor.net/)nasıl yükseltileceğini aklınızda edin.
 
-> *Faktör \#1, "her bir mikro hizmet için kendi deposunda depolanan tek bir kod temeli belirler. Sürüm denetimiyle izlenen, birden çok ortama dağıtabilir. "*
+> *Faktör \# 1, "her bir mikro hizmet için kendi deposunda depolanan tek bir kod temeli belirler. Sürüm denetimiyle izlenen, birden çok ortama dağıtabilir. "*
 
 ### <a name="why-microservices"></a>Mikro hizmetlerdeki neden?
 
@@ -197,7 +195,7 @@ Her kapsayıcının kendi bağımlılık ve çalışma zamanı kümesini nasıl 
 
 Kapsayıcı modelinin, [on Iki öğeli uygulamadan](https://12factor.net/)"bağımlılıklar" ilkesini ne kadar iyi kapsayıyacağını göz önünde ayırın.
 
-> *2 \#. faktör, "her mikro hizmet kendi bağımlılıklarını yalıtır ve paketler, tüm sistemi etkilemeden değişiklikleri benimsemesini belirtir."*
+> *2. faktör \# , "her mikro hizmet kendi bağımlılıklarını yalıtır ve paketler, tüm sistemi etkilemeden değişiklikleri benimsemesini belirtir."*
 
 Kapsayıcılar hem Linux hem de Windows iş yüklerini destekler. Azure bulutu her ikisi de birlikte yer açar. Bu, Azure 'da en popüler işletim sistemi haline gelen Windows Server değil, bu Linux.
 
@@ -236,9 +234,9 @@ Aşağıdaki tabloda, yaygın düzenleme görevleri açıklanmaktadır.
 
 Düzenleyen 'in elden atılan ve eşzamanlılık ilkelerini, daha önce bölümünde tartışılan [on Iki öğeli uygulamadan](https://12factor.net/)nasıl anlayacağını aklınızda edin.
 
-> *Faktör \#9 "hizmet örneklerinin atılabilir olması gerektiğini belirtir, ölçeklenebilirlik fırsatlarını artırmak için hızlı başlatmalar favoring ve sistemi doğru bir durumda bırakmak için düzgün kapatmalar. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. "*
+> *Faktör \# 9 "hizmet örneklerinin atılabilir olması gerektiğini belirtir, ölçeklenebilirlik fırsatlarını artırmak için hızlı başlatmalar favoring ve sistemi doğru bir durumda bırakmak için düzgün kapatmalar. Doğal olarak bu gereksinimi karşılayan Docker kapsayıcıları ve bir Orchestrator ile birlikte. "*
 
-> *Faktör \#8, "hizmetlerin çok sayıda küçük özdeş işleme (kopya) arasında ölçeğini, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine belirtir."*
+> *Faktör \# 8, "hizmetlerin çok sayıda küçük özdeş işleme (kopya) arasında ölçeğini, en güçlü makinede bulunan tek bir büyük örneği ölçeklendirmenin aksine belirtir."*
 
 Birçok kapsayıcı grubu mevcut olsa da, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) , bulutta yerel dünya için de standart hale geldi. Kapsayıcılı iş yüklerini yönetmek için taşınabilir, genişletilebilir ve açık kaynaklı bir platformdur.
 
@@ -258,7 +256,7 @@ Bulutta yerel sistemler, veri depoları, ileti aracıları, izleme ve kimlik hiz
 
 Yedekleme Hizmetleri, "Statelesstik" ilkesini, bu bölümde daha önce açıklanan [on Iki öğeli uygulamadan](https://12factor.net/)yükseltir.
 
->*Faktör \#6* , "her mikro hizmetin kendi sürecinde yürütülmesi gerektiğini, çalışan diğer hizmetlerden yalıtılmış olduğunu belirtir. Externalize, dağıtılmış önbellek veya veri deposu gibi bir yedekleme hizmetine gerekli durumu. "
+>*Faktör \# 6* , "her mikro hizmetin kendi sürecinde yürütülmesi gerektiğini, çalışan diğer hizmetlerden yalıtılmış olduğunu belirtir. Externalize, dağıtılmış önbellek veya veri deposu gibi bir yedekleme hizmetine gerekli durumu. "
 
 Kendi destek hizmetlerinizi barındırabilmeniz, ancak bu kaynakları lisanslamayı, sağlamaktan ve yönetmekten siz sorumlusunuz.
 
@@ -268,9 +266,9 @@ Bulutta yerel sistemler, yönetilen destek hizmetlerini bulut satıcılarından 
 
 Bir yedekleme hizmetini, bir dış yapılandırmada depolanan bilgiler (URL ve kimlik bilgileri) ile bir mikro hizmete dinamik olarak bağlı bir *kaynak*olarak değerlendirmek en iyi uygulamadır. Bu kılavuz, bölümünde daha önce açıklanan [on Iki öğeli uygulamada](https://12factor.net/)yer alınmıştır.
 
->*Faktör \#4* ' te, bir adreslenebilir URL aracılığıyla "yedekleme hizmetleri" gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir olarak etkinleştirir. "
+>*Faktör \# 4* ' te, bir adreslenebilir URL aracılığıyla "yedekleme hizmetleri" gösterilmelidir. Bunu yapmak, kaynağı uygulamadan ayırır ve bu sayede, bunu değiştirilebilir olarak etkinleştirir. "
 
->*Faktör \#3* "yapılandırma bilgilerinin, kod dışında bir yapılandırma yönetim aracı aracılığıyla mikro hizmetten ve externalized dışına taşındığını belirtir."
+>*Faktör \# 3* "yapılandırma bilgilerinin, kod dışında bir yapılandırma yönetim aracı aracılığıyla mikro hizmetten ve externalized dışına taşındığını belirtir."
 
 Bu düzende, bir yedekleme hizmeti kod değişikliği yapılmadan iliştirilebilir ve ayrılabilir. Bir mikro hizmeti QA 'den hazırlama ortamına yükseltebilirsiniz. Mikro hizmet yapılandırmasını, hazırlama ' daki yedekleme hizmetlerini işaret etmek ve bir ortam değişkeni aracılığıyla kapsayıcınıza eklemek için güncelleştirin.
 
@@ -298,7 +296,7 @@ Makalesinde [kod olarak altyapı nedir](https://docs.microsoft.com/azure/devops/
 
 Daha önce bahsedilen [on Iki öğeli uygulama](https://12factor.net/), tamamlanan kodu çalışan bir uygulamaya dönüştürürken ayrı adımlar çağırır.
 
-> *Faktör \#5* , "her sürümün derleme, yayınlama ve çalıştırma aşamaları genelinde katı ayrımı zorunlu kılacak olduğunu belirtir. Her birinin benzersiz bir KIMLIKLE etiketlenmesi ve geri alma özelliğini desteklemesi gerekir. "
+> *Faktör \# 5* , "her sürümün derleme, yayınlama ve çalıştırma aşamaları genelinde katı ayrımı zorunlu kılacak olduğunu belirtir. Her birinin benzersiz bir KIMLIKLE etiketlenmesi ve geri alma özelliğini desteklemesi gerekir. "
 
 Modern CI/CD sistemleri bu ilkeyi karşılamanın sağlanmasına yardımcı olur. Bunlar ayrı dağıtım adımları sağlar ve kullanıcılar için hazır olan tutarlı ve kalite kodu sağlanmasına yardımcı olur.
 
@@ -340,5 +338,5 @@ Azure Pipelines, sürekli tümleştirme (CI) ve sürekli teslimi (CD) birleştir
 Azure Pipelines hizmeti, çoğu git sağlayıcısını destekler ve Linux, macOS veya Windows platformlarında yazılan uygulamalar için dağıtım işlem hatları oluşturabilir. Java, .NET, JavaScript, Python, PHP, Go, XCode ve C++ için destek içerir.
 
 >[!div class="step-by-step"]
->[Önceki](introduction.md)
->[İleri](candidate-apps.md)
+>[Önceki](introduction.md) 
+> [Sonraki](candidate-apps.md)

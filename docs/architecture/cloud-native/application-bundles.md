@@ -1,17 +1,15 @@
 ---
 title: Bulutta Yerel Uygulama Paketleri
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulama demeti
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395483"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614350"
 ---
 # <a name="cloud-native-application-bundles"></a>Bulutta Yerel Uygulama Paketleri
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulutta yerel uygulamaların anahtar özelliği, geliştirmeyi hızlandırmak için bulutun özelliklerinden faydalandıklarından. Bu tasarım genellikle tam uygulamanın farklı teknoloji türlerini kullandığı anlamına gelir. Uygulamalar Docker kapsayıcılarında sevk edilebilir, ancak bazı hizmetler Azure Işlevlerini kullanabilir, ancak diğer parçalar donanım GPU hızlandırmalı büyük metal sunucularda ayrılan sanal makinelerde doğrudan çalışabilir. İki bulut Yerel uygulaması aynı değildir; bu nedenle, sevk etmek için tek bir mekanizma sağlamak zordur.
 
@@ -80,7 +78,7 @@ CNAB biçimi de esnektir ve bu da tüm bulutlarca kullanılmasına izin verir. B
 
 DevOps alanında bu günlerde çok sayıda harika araç ve hatta daha fazla harika kitap ve bilgi DevOps yolculuğuna başlamak için sık kullanılan bir kitap, NoOps 'dan DevOps 'a kurgusal bir şirketin dönüşümünü izleyen [Phoenix projenidir](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/). Bir şey belirli bir şeydir: DevOps, karmaşık, bulut Yerel uygulamaları dağıtımında artık "daha iyi" olsun. Bu bir gereksinimdir ve herhangi bir projenin başlangıcında planlanmış ve kaynakları planlı olmalıdır.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
 - [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)

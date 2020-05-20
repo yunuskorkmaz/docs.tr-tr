@@ -2,17 +2,15 @@
 title: Service Mesh iletişim altyapısı
 description: Hizmet ağı teknolojilerinin bulut Yerel mikro hizmet iletişimini nasıl kolaylaştırması hakkında bilgi edinin
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199956"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613699"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh iletişim altyapısı
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bu bölümde, mikro hizmet iletişiminin sorunlarını araştırdık. Geliştirme ekiplerinin, arka uç hizmetlerinin birbirleriyle iletişim kurmasına duyarlı olmaları gerektiğini belirledik. İdeal olarak, hizmet içi iletişim, daha iyi. Ancak, arka uç hizmetleri genellikle işlemleri tamamlamaya yönelik bir diğerine bağlı olduğu için engelleme her zaman mümkün değildir.
 
@@ -44,7 +42,7 @@ Bulutta yerel sistemlerde iletişimin sağlanmasına yardımcı olabilecek, yön
 
 - [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
-- [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
+- [Azure SignalR Hizmeti](https://azure.microsoft.com/services/signalr-service/)
 - [Azure Depolama Kuyrukları](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
@@ -73,5 +71,5 @@ Daha sonra bulut Yerel sistemlerdeki dağıtılmış verilere ve sunmakta olduğ
 - [.NET videosu ile gRPC hizmetleri oluşturma](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[Önceki](grpc.md)
->[İleri](distributed-data.md)
+>[Önceki](grpc.md) 
+> [Sonraki](distributed-data.md)

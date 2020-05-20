@@ -2,17 +2,15 @@
 title: gRPC
 description: GRPC, bulutta yerel uygulamalardaki rolü ve HTTP ile gerçekleşen iletişimin nasıl farklı olduğunu öğrenin.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895561"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614051"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Şimdiye kadar bu kitapta, [REST tabanlı](https://docs.microsoft.com/azure/architecture/best-practices/api-design) iletişime odaklandık. REST 'in varlık kaynaklarına karşı CRUD tabanlı işlemleri tanımlayan esnek bir mimari stili olduğunu gördük. İstemciler, istek/yanıt iletişim modeliyle HTTP genelindeki kaynaklarla etkileşime geçin. DIĞER bir deyişle, daha yeni bir iletişim teknolojisi olan gRPC, buluta özgü topluluk genelinde inanılmaz itici güç elde etti.
 
@@ -39,9 +37,9 @@ gRPC hafif ve yüksek performanslı. % 60-80 daha küçük iletilerle JSON seril
 
 ## <a name="protocol-buffers"></a>Protokol Arabellekleri
 
-gRPC, [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview)adlı açık kaynaklı bir teknolojinin ayraçları. Hizmetlerin birbirlerine gönderdikleri yapılandırılmış iletileri serileştirmek için yüksek düzeyde etkili ve platformdan bağımsız bir serileştirme biçimi sağlar. Platformlar arası arabirim tanım dili (IDL) kullanarak, geliştiriciler her mikro hizmet için bir hizmet sözleşmesi tanımlar. Metin tabanlı `.proto` dosya olarak uygulanan sözleşme, her hizmet için yöntemleri, girişleri ve çıkışları açıklar. Aynı sözleşme dosyası, farklı geliştirme platformları üzerine inşa olan gRPC istemcileri ve hizmetleri için de kullanılabilir.
+gRPC, [protokol arabellekleri](https://developers.google.com/protocol-buffers/docs/overview)adlı açık kaynaklı bir teknolojinin ayraçları. Hizmetlerin birbirlerine gönderdikleri yapılandırılmış iletileri serileştirmek için yüksek düzeyde etkili ve platformdan bağımsız bir serileştirme biçimi sağlar. Platformlar arası arabirim tanım dili (IDL) kullanarak, geliştiriciler her mikro hizmet için bir hizmet sözleşmesi tanımlar. Metin tabanlı dosya olarak uygulanan sözleşme, `.proto` her hizmet için yöntemleri, girişleri ve çıkışları açıklar. Aynı sözleşme dosyası, farklı geliştirme platformları üzerine inşa olan gRPC istemcileri ve hizmetleri için de kullanılabilir.
 
-Prototiparabelleği derleyicisi `protoc`olan proto dosyasını kullanarak, hedef platformunuz için hem istemci hem de hizmet kodu üretir. Kod aşağıdaki bileşenleri içerir:
+Prototiparabelleği derleyicisi olan proto dosyasını kullanarak, `protoc` hedef platformunuz için hem istemci hem de hizmet kodu üretir. Kod aşağıdaki bileşenleri içerir:
 
 - İstemci ve hizmet tarafından paylaşılan, bir ileti için hizmet işlemlerini ve veri öğelerini temsil eden türü kesin belirlenmiş nesneler.
 - Uzak gRPC hizmetinin devralmasını ve uzatabtiği, gerekli ağ tesisat gerektiren, kesin olarak belirtilmiş bir temel sınıf.
@@ -114,5 +112,5 @@ Bağımsız olarak, mikro hizmetleri zaman uyumsuz iletişim desenleriyle ayıra
 İleriye bakarak, gRPC, bulutta yerel sistemler için bir işlem yapmaya devam edecektir. Performans avantajları ve geliştirme kolaylığı etkileyici. Ancak REST büyük olasılıkla uzun bir süre içinde olabilir. Bu, genel kullanıma açık API 'Ler ve geriye dönük uyumluluk nedenleriyle daha fazla.
 
 >[!div class="step-by-step"]
->[Önceki](service-to-service-communication.md)
->[İleri](service-mesh-communication-infrastructure.md)
+>[Önceki](service-to-service-communication.md) 
+> [Sonraki](service-mesh-communication-infrastructure.md)

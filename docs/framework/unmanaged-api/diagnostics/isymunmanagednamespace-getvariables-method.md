@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448365"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615091"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables Metodu
 Bu ad alanı içinde genel kapsamda tanımlanan tüm değişkenleri döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetVariables(  
@@ -37,10 +37,10 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametreler  
  `cVars`  
- 'ndaki `pVars` dizisinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Dizi boyutunu belirten bir `pVars` .  
   
  `pcVars`  
- dışı Ad alanlarını içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Ad alanlarını içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `pVars`  
  dışı Ad alanlarını içeren bir arabelleğin işaretçisi.  
@@ -53,4 +53,4 @@ HRESULT GetVariables(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace Arabirimi](isymunmanagednamespace-interface.md)

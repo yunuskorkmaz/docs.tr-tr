@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40fcdbc5-3bb2-41e9-b995-40984c209a7f
 topic_type:
 - apiref
-ms.openlocfilehash: 402b5b4bc9734be59ff342a4f86f2c4a1ed23b5f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2b5a42c89e0e3efed61b1b471c227e0df85a51aa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446403"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614909"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Yöntemi
 Sembol arama bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSymbolSearchInfo(  
@@ -37,13 +37,13 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="parameters"></a>Parametreler  
  `cSearchInfo`  
- 'ndaki `rgpSearchInfo`boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Boyutunu gösteren bir `rgpSearchInfo` .  
   
  `pcSearchInfo`  
- dışı Arama bilgilerini içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Arama bilgilerini içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `rgpSearchInfo`  
- dışı Döndürülen [ıdimunmanagedsymbolsearchınfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) arabirimine ayarlanmış bir işaretçi.  
+ dışı Döndürülen [ıdimunmanagedsymbolsearchınfo](isymunmanagedsymbolsearchinfo-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -53,4 +53,4 @@ HRESULT GetSymbolSearchInfo(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReaderSymbolSearchInfo Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [ISymUnmanagedReaderSymbolSearchInfo Arabirimi](isymunmanagedreadersymbolsearchinfo-interface.md)

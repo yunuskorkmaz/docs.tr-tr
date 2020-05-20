@@ -2,12 +2,12 @@
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4b789bb3fb465c17c5c4445a1d3dc9dffa47a152
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396269"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614415"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
 
@@ -19,9 +19,9 @@ Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama
 
 **Şekil 7-3**. Bir CQRS mikro hizmetindeki sorgular için en basit yaklaşım
 
-Basitleştirilmiş bir CQRS yaklaşımında bulunan sorgular-tarafı için en basit yaklaşım, yalnızca bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Yalnızca Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
+Basitleştirilmiş bir CQRS yaklaşımında sorgu tarafı için en basit yaklaşım, bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
 
-Bu basit bir yaklaşım olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bunu gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
+Bu yaklaşım basit olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bunu gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
 
 ![Sıralama. API projesinin sorgular klasörünün ekran görüntüsü.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -31,13 +31,13 @@ Bu basit bir yaklaşım olduğundan, sorgular tarafı için gereken kod (örneğ
 
 Sorgular, istemci uygulamaları için gereken verileri elde etmek üzere gerçekleştirildiğinden, bu tür sorgular tarafından döndürülen verilere bağlı olarak istemciler için de yapılabilir. Bu modeller veya Veri Aktarımı nesneleri (DTOs) Viewmodeller olarak adlandırılır.
 
-Döndürülen veriler (ViewModel), veritabanındaki birden çok varlık veya tablodan ya da işlem alanı için etki alanı modelinde tanımlanan birden çok toplama arasında veri birleştirme sonucu olabilir. Bu durumda, etki alanı modelinden bağımsız sorgular oluştururken, toplamalar sınırları ve kısıtlamaları tamamen yok sayılır ve ihtiyacınız olan herhangi bir tabloyu ve sütunu sorgulayabilirsiniz. Bu yaklaşım, sorguları oluşturan veya güncelleştiren geliştiriciler için harika esneklik ve verimlilik sağlar.
+Döndürülen veriler (ViewModel), veritabanındaki birden çok varlık veya tablodan ya da işlem alanı için etki alanı modelinde tanımlanan birden çok toplama arasında veri birleştirme sonucu olabilir. Bu durumda, etki alanı modelinden bağımsız sorgular oluştururken, toplamalar sınırları ve kısıtlamaları yok sayılır ve ihtiyacınız olan herhangi bir tabloyu ve sütunu sorgulayabilirsiniz. Bu yaklaşım, sorguları oluşturan veya güncelleştiren geliştiriciler için harika esneklik ve verimlilik sağlar.
 
 Viewmodeller sınıflarda tanımlanmış statik türler olabilir. Ya da geliştiriciler için çok çevik olan, gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir (sıralama mikro hizmetinde uygulandığı gibi).
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Sorguları gerçekleştirmek için mikro ORM olarak kaber kullanma
 
-Sorgulamak için herhangi bir mikro ORM, Entity Framework Core veya hatta düz ADO.NET kullanabilirsiniz. Örnek uygulamada, Gamze 'nin eShopOnContainers 'daki sıralama mikro hizmeti, popüler mikro ORM 'nin iyi bir örneği olarak seçilmiştir. Çok hafif bir çerçeve olduğundan, harika performans ile düz SQL sorguları çalıştırabilir. Kaber kullanarak, birden fazla tabloya erişebilen ve birleştiren bir SQL sorgusu yazabilirsiniz.
+Sorgulamak için herhangi bir mikro ORM, Entity Framework Core veya hatta düz ADO.NET kullanabilirsiniz. Örnek uygulamada, Gamze 'nin eShopOnContainers 'daki sıralama mikro hizmeti, popüler mikro ORM 'nin iyi bir örneği olarak seçilmiştir. Hafif bir çatı olduğundan, harika performans ile düz SQL sorguları çalıştırabilir. Kaber kullanarak, birden fazla tabloya erişebilen ve birleştiren bir SQL sorgusu yazabilirsiniz.
 
 Kaber, açık kaynaklı bir projem (orijinal, Sam Saffron tarafından oluşturulan) ve [Stack Overflow](https://stackoverflow.com/)' de kullanılan yapı taşlarının bir parçasıdır. Kaber 'yi kullanmak için, aşağıdaki şekilde gösterildiği gibi, bunu yalnızca [kaber NuGet paketi](https://www.nuget.org/packages/Dapper)aracılığıyla yüklemeniz gerekir:
 
@@ -51,7 +51,7 @@ Kodunuzda kaber kullandığınızda, <xref:System.Data.SqlClient.SqlConnection> 
 
 Sunucu tarafından istemci uygulamalarına Viewmodeller döndürürken, Viewmodeller verileri istemci uygulamasına ihtiyaç duyduğunda tutacağından, varlık modelinizin iç etki alanı varlıklarıyla farklı olabilecek bu ViewModel (Veri Aktarımı nesneleri) olarak düşünebilirsiniz. Bu nedenle, birçok durumda, birden fazla etki alanı varlıklarından gelen verileri toplayabilir ve istemci uygulamasının bu verilere nasıl ihtiyaç duyuşına göre Viewmodellerini tam olarak oluşturabilirsiniz.
 
-Bu Viewmodeller veya DTOs, daha sonraki bir kod parçacığında gösterilen sınıf gibi açık bir şekilde (veri sahibi sınıfları olarak) tanımlanabilir `OrderSummary` veya yalnızca sorgularda, dinamik bir tür olarak döndürülen özniteliklere göre dinamik Viewmodeller veya dinamik DTOS döndürebilir.
+Bu Viewmodeller veya DTOs, `OrderSummary` daha sonraki bir kod parçacığında gösterilen sınıf gibi açıkça (veri sahibi sınıfları olarak) tanımlanabilir. Ya da, dinamik bir tür olarak sorgularınız tarafından döndürülen özniteliklere göre dinamik Viewmodeller veya dinamik DTOs döndürebilirsiniz.
 
 ### <a name="viewmodel-as-dynamic-type"></a>Dinamik tür olarak ViewModel
 
@@ -87,19 +87,19 @@ public class OrderQueries : IOrderQueries
 
 Önemli nokta, dinamik bir tür kullanarak, döndürülen veri koleksiyonu, dinamik olarak ViewModel olarak toplanır.
 
-**Uzmanları:** Bu yaklaşım, bir sorgunun SQL cümlesini her güncelleştirdiğinizde statik ViewModel sınıflarını değiştirme gereksinimini azaltır. Bu tasarımın ardından, kodlama, basit ve hızlı bir şekilde, gelecekteki değişikliklere göre geliştikçe oldukça çevik bir yaklaşım sağlar.
+**Uzmanları:** Bu yaklaşım, bir sorgunun SQL cümlesini her güncelleştirdiğinizde bu tasarımın, basit ve hızlı bir şekilde geliştikçe, gelecekteki değişikliklere göre gelişdiğinde çevik hale getirilmesi durumunda statik ViewModel sınıflarını değiştirme gereksinimini azaltır.
 
 **Dezavantajlarını:** Uzun dönemde dinamik türler, istemci uygulamalarıyla bir hizmetin netliğini ve uyumluluğunu olumsuz yönde etkileyebilir. Ayrıca, swashbuckle gibi ara yazılım yazılımı, dinamik türler kullanılıyorsa döndürülen türlerde belge düzeyini sağlayamaz.
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>Önceden tanımlanmış DTO sınıfları olarak ViewModel
 
-**Uzmanları**: "sözleşmeler" gibi, açık DTO sınıfları temel alan "sözleşmeler" gibi, statik önceden tanımlanmış ViewModel sınıfları olması, genel API 'ler için kesinlikle daha iyidir, ancak aynı uygulama tarafından kullanılsa bile uzun süreli mikro hizmetler için de kullanılır.
+**Profesyonelleri**: statik, önceden tanımlanmış ViewModel sınıfları olan "sözleşmeler" gibi açık DTO sınıfları temel alan, genel API 'ler için kesinlikle daha iyidir, ancak aynı uygulama tarafından kullanılsa bile uzun vadeli mikro hizmetler için de daha iyidir.
 
 Swagger için yanıt türleri belirtmek isterseniz, dönüş türü olarak açık DTO sınıfları kullanmanız gerekir. Bu nedenle, önceden tanımlanmış DTO sınıfları Swagger 'dan daha zengin bilgiler sunmanıza olanak tanır. Bu, API belgelerini ve API 'YI tükettiği uyumluluğu geliştirir.
 
 **Dezavantajların**: daha önce belirtildiği gibi, kodu güncelleştirirken, DTO sınıflarını güncelleştirmek için bazı adımlar daha fazla sürer.
 
-*İpucu deneyimimize göre ipucu*: eShopOnContainers 'daki sıralama mikro hizmetinde uygulanan sorgularda, dinamik görünüm modellerini kullanarak geliştirmekte ve erken geliştirme aşamalarında çok basittir ve çevik. Ancak, geliştirme işlemi bir kez alındıktan sonra, mikro hizmetin tüketicilerinin "sözleşmeler" olarak kullanılan açık bir tür olduğunu bilmesini sağlamak için, API 'Leri yeniden oluşturmayı ve ViewModel için statik veya önceden tanımlanmış DTOs kullanmayı seçtik.
+*İpucu deneyimimize göre ipucu*: eShopOnContainers 'da sıralama mikro hizmetinde uygulanan sorgularda, basit ve çevik bir geliştirme aşamasında olan dinamik görünüm modellerini kullanarak geliştirmeye başladık. Ancak, geliştirme işlemi bir kez alındıktan sonra, mikro hizmetin tüketicilerinin "sözleşmeler" olarak kullanılan açık bir tür olduğunu bilmesini sağlamak için, API 'Leri yeniden oluşturmayı ve ViewModel için statik veya önceden tanımlanmış DTOs kullanmayı seçtik.
 
 Aşağıdaki örnekte, sorgunun nasıl veri döndürünü bir açık ViewModel DTO sınıfı kullanarak görebilirsiniz: OrderSummary sınıfı.
 
@@ -134,7 +134,7 @@ public class OrderQueries : IOrderQueries
 
 #### <a name="describe-response-types-of-web-apis"></a>Web API 'lerinin yanıt türlerini açıkla
 
-Web API 'Leri ve mikro hizmetleri kullanan geliştiriciler, özellikle yanıt türleri ve hata kodları (Standart değilse) ile ilgili olarak en iyi şekilde verilen şeydir. Bunlar XML açıklamaları ve veri ek açıklamalarında işlenir.
+Web API 'Leri ve mikro hizmetleri kullanan geliştiriciler, özellikle yanıt türleri ve hata kodları (Standart değilse) ile ilgili olarak en iyi şekilde verilen şeydir. Yanıt türleri XML açıklamaları ve veri ek açıklamalarında işlenir.
 
 Swagger Kullanıcı arabiriminde doğru belgeler olmadan, tüketici hangi türlerin döndürülmekte olduğunu veya hangi HTTP kodlarının döndürüleceğini bilmede değildir. Bu sorun eklenerek düzeltildiği için <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> , swashbuckle aşağıdaki kodda gösterildiği gıbı API dönüş modeli ve değerleri hakkında daha zengin bilgiler oluşturabilir:
 
@@ -181,7 +181,7 @@ Aşağıdaki görüntüde, Swagger Kullanıcı arabiriminin ResponseType bilgile
 
 **Şekil 7-5**. Bir Web API 'sinden yanıt türlerini ve olası HTTP durum kodlarını gösteren Swagger Kullanıcı arabirimi
 
-Görüntüde, ViewModel türlerine ve döndürülebilecek olası HTTP durum kodlarına göre bazı örnek değerlerin üzerine bakabilirsiniz.
+Görüntüde, ViewModel türlerine ve döndürülebilecek olası HTTP durum kodlarına göre bazı örnek değerler gösterilir.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

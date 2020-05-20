@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895668"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613596"
 ---
 # <a name="net-docs"></a>.NET belgeleri
 
@@ -12,7 +12,6 @@ ms.locfileid: "82895668"
 
 Bu depo, .NET kavramsal belgelerini içerir. [.Net belgeleri sitesi](https://docs.microsoft.com/dotnet) buna ek olarak birden çok depodan oluşturulmuştur:
 
-- [Kod örnekleri ve kod parçacıkları](https://github.com/dotnet/samples)
 - [API başvurusu](https://github.com/dotnet/dotnet-api-docs)
 - [.NET Derleyici Platformu SDK’sı başvurusu](https://github.com/dotnet/roslyn-api-docs)
 

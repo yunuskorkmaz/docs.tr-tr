@@ -1,17 +1,16 @@
 ---
 title: Özellik bayrakları
 description: Azure uygulama yapılandırma özelliğinden yararlanarak bulutta yerel uygulamalarda Özellik bayraklarını uygulama
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398311"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614077"
 ---
 # <a name="feature-flags"></a>Özellik bayrakları
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bölüm 1 ' de, bulut yerelin hız ve çeviklik hakkında çok daha fazla olduğunu belirledik. Kullanıcılar hızlı yanıt verme, yenilikçi özellikler ve sıfır kapalı kalma süresi bekler. `Feature flags`, bulutta yerel uygulamalar için çevikliği artırmaya yardımcı olan modern bir dağıtım tekniğidir. Bunlar bir üretim ortamına yeni özellikler dağıtmanızı sağlar, ancak bunların kullanılabilirliğini kısıtlayabilir. Bir anahtarın hareketiyle, uygulamayı yeniden başlatmadan veya yeni kod dağıtmaya gerek kalmadan, belirli kullanıcılar için yeni bir özelliği etkinleştirebilirsiniz. Yeni özelliklerin serbest bırakılması, kod dağıtımlarından ayrıdır.
 

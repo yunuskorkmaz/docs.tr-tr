@@ -1,17 +1,15 @@
 ---
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394766"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614259"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulutta yerel uygulamalar, geleneksel uygulamalardan güvenli şekilde daha kolay ve daha zor olabilir. Alt tarafta, daha küçük uygulamalar için güvenli hale getirmeniz ve güvenlik altyapısını oluşturmak için daha fazla enerji ayırmanız gerekir. Çoğu hizmet dağıtımında programlama dillerinin ve stillerinin heterojen doğası da birçok farklı sağlayıcıdan güvenlik bültenlerine daha fazla dikkat etmeniz gereken anlamına gelir.
 

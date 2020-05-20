@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438299"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614701"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 Yöntemi
-Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak, bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
+Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineLocalVariable2(  
@@ -76,5 +76,5 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [DefineLocalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [ISymUnmanagedWriter2 Arabirimi](isymunmanagedwriter2-interface.md)
+- [DefineLocalVariable Yöntemi](isymunmanagedwriter-definelocalvariable-method.md)

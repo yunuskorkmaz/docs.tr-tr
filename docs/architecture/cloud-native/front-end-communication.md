@@ -2,17 +2,15 @@
 title: Ön uç istemci iletişimi
 description: Ön uç istemcilerinin, bulutta yerel sistemlerle nasıl iletişim kuracağını öğrenin
 author: robvet
-ms.date: 09/08/2019
-ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895582"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614064"
 ---
 # <a name="front-end-client-communication"></a>Ön uç istemci iletişimi
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bulutta yerel bir sistemde, ön uç istemcileri (mobil, Web ve Masaüstü uygulamaları) bağımsız arka uç mikro hizmetleriyle etkileşim kurmak için bir iletişim kanalı gerektirir.  
 
@@ -163,5 +161,5 @@ Azure SignalR hizmeti 'nin başka bir avantajı da sunucusuz bulut Yerel Hizmetl
 Azure SignalR hizmeti, Azure SQL veritabanı, Service Bus veya Redis Cache gibi diğer Azure hizmetleriyle yakından tümleştirilir, bulutta yerel uygulamalarınız için birçok olasılıktan fazlasını açıyor.
 
 >[!div class="step-by-step"]
->[Önceki](communication-patterns.md)
->[İleri](service-to-service-communication.md)
+>[Önceki](communication-patterns.md) 
+> [Sonraki](service-to-service-communication.md)

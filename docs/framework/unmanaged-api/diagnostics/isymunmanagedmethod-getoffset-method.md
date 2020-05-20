@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358f3d3d7c231a2baa9d2c467935ba3a5867e36b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448940"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614480"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset Metodu
 Bu yöntemin içindeki, bir belge içinde verilen konuma karşılık gelen sapmayı döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -46,7 +46,7 @@ HRESULT GetOffset(
  'ndaki Kaydırın istendiği belge sütunu.  
   
  `pRetVal`  
- dışı Uzaklıkları alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`Uzaklıkları alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -56,4 +56,4 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

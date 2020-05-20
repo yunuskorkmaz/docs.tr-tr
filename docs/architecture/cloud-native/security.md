@@ -1,17 +1,15 @@
 ---
 title: Güvenlik
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Güven
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184773"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613674"
 ---
 # <a name="security"></a>Güvenlik
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bir gün değil, bir şirketle ilgili olarak bir şirketin verileri kaybetmekte olduğu bir hikayeyi veya bir müşteri verilerini kaybetmesini veya bir kısmını bulundurmaz. Hatta ülkeler, güvenliği düşündük olarak davranarak oluşturulan sorunlara karşı etkilenmez. Müşteriler, müşteri verilerinin güvenliğini ve aslında tüm ağlarını "sahip olma" gibi bir şey olarak kabul ediyor. Windows Server 'lar, düzeltme eki eklenmiş, PHP 'nin çalışır durumda tutulduğu ve MongoDB veritabanlarının dünyanın dört bir yanındaki Dünya çapında açık olduğu bir şekilde kalmadı.
 
@@ -24,5 +22,5 @@ Ayrıca, kişisel veriler için belirli veri korumalarının artması için bir 
 Kısacası, güvenlik önemli bir işletme.
 
 >[!div class="step-by-step"]
->[Önceki](identity-server.md)
->[İleri](azure-security.md)
+>[Önceki](identity-server.md) 
+> [Sonraki](azure-security.md)

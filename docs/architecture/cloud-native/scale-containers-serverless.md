@@ -1,13 +1,13 @@
 ---
 title: Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
 description: Azure Kubernetes hizmeti ile bulutta yerel uygulamaları, Kullanıcı talebini karşılayacak şekilde ölçeklendirin.
-ms.date: 04/13/2020
-ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: a5e1e8df785fd08901d9be41c0a06db35e09296b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199930"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613726"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>Kapsayıcıları ve sunucusuz uygulamaları ölçeklendirme
 
@@ -44,5 +44,5 @@ Azure Işlevleri isteğe bağlı olarak otomatik olarak ölçeklendirilir. Sunuc
 Varsayılan tüketim planı çoğu uygulama için ekonomik ve ölçeklenebilir bir çözüm sağlarken Premium seçeneği, geliştiricilerin özel Azure Işlevleri gereksinimlerine yönelik esnekliğe olanak sağlar. Premium planına yükseltme, örnek boyutları üzerinde denetim, önceden çarpımış örnekler (soğuk başlangıç gecikmelerini önlemek için) ve adanmış VM 'Ler üzerinde denetim sağlar.
 
 >[!div class="step-by-step"]
->[Önceki](deploy-containers-azure.md)
->[İleri](other-deployment-options.md)
+>[Önceki](deploy-containers-azure.md) 
+> [Sonraki](other-deployment-options.md)

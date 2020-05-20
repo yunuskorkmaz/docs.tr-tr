@@ -2,19 +2,19 @@
 title: ISymUnmanagedWriter4::GetDebugInfoWithPadding Metodu
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-ms.openlocfilehash: 274bf79175bda9e880b1ef3cf8f125a017ad0734
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfc6c22558cee780823c8cca0c36b883147e9496
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121667"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614649"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding Metodu
-Dize verilerini sabit bir `MAX_PATH`boyutuna getirmek için, yol dizesinin Sonlandırıcı null karakteri izleyen sıfırlarla doldurulmasının dışında, [GetDebugInfo yöntemiyle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) aynı işlevi görür. Padding yalnızca yol dize uzunluğunun `MAX_PATH`' den küçük olması durumunda verilir.  
+Dize verilerini sabit boyutlu hale getirmek için, bir yol dizesinin Sonlandırıcı null karakteri izleyen sıfırlarla doldurulmasının dışında, [GetDebugInfo yöntemiyle](isymunmanagedwriter-getdebuginfo-method.md) aynı işlevi görür `MAX_PATH` . Yalnızca yol dize uzunluğu değerinden küçükse doldurma verilir `MAX_PATH` .  
   
  Bu, farklı PE dosyalarına sahip araçların yazmayı kolaylaştırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```idl  
 HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [in] DWORD cData,    [out] DWORD *pcData,    [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
@@ -30,11 +30,11 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
 |`data`||  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `HRESULT`döndürür.  
+ `HRESULT` döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter4 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)
+- [ISymUnmanagedWriter4 Arabirimi](isymunmanagedwriter4-interface.md)

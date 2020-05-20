@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: fde7e21d-1169-4bed-a34d-792e69652bf9
 topic_type:
 - apiref
-ms.openlocfilehash: e97dc1d06eb4f5eb110923db20896d7d12c41710
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3f6cea68a4379f8769ccbdbc6911cc5c425d3369
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446386"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614883"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfo-interface"></a>ISymUnmanagedReaderSymbolSearchInfo Arabirimi
-Sembol arama bilgilerini alan yöntemler sağlar. [Idimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.  
+Sembol arama bilgilerini alan yöntemler sağlar. `QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetSymbolSearchInfo Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|Sembol arama bilgilerini alır.|  
-|[GetSymbolSearchInfoCount Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|Sembol arama bilgilerinin sayısını alır.|  
+|[GetSymbolSearchInfo Yöntemi](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|Sembol arama bilgilerini alır.|  
+|[GetSymbolSearchInfoCount Yöntemi](isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|Sembol arama bilgilerinin sayısını alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

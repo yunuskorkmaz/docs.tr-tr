@@ -1,17 +1,15 @@
 ---
 title: Elastik Yığın ile günlüğe kaydetme
 description: Elastik yığın, Logstash ve kibana kullanarak günlüğe kaydetme
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448935"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613856"
 ---
 # <a name="logging-with-elastic-stack"></a>Elastik Yığın ile günlüğe kaydetme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Birçok iyi Merkezi günlük aracı vardır ve daha pahalı seçeneklere karşı ücretsiz, açık kaynaklı araçlar ve maliyet bakımından farklılık gösterir. Birçok durumda, ücretsiz araçlar ücretli tekliflerle veya daha iyi bir seçenektir. Bu tür bir araç, üç açık kaynaklı bileşen birleşimidir: elastik arama, Logstash ve kibana.
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 Bu, küme üzerinde elaa araması yükleyecek ve tüm küme günlüklerini buna gönderen hedeflenecek.
 
-Kubernetes](./media/kibana-dashboard.png)
-**şekil 7-6**' den alınan günlüklere yönelik sorgu sonuçlarının gösterildiği bir kibana panosu örneği ![. Kubernetes 'ten alınan günlüklere yönelik bir sorgunun sonuçlarını gösteren bir kibana panosu örneği
+![Kubernetes ](./media/kibana-dashboard.png)
+ **Şekil 7-6**' den alınan günlüklere yönelik bir sorgunun sonuçlarını gösteren bir kibana panosu örneği. Kubernetes 'ten alınan günlüklere yönelik bir sorgunun sonuçlarını gösteren bir kibana panosu örneği
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Esnek yığının avantajları nelerdir?
 
@@ -81,7 +79,7 @@ Elastik arama, geldikçe günlükleri dizinlebilecekleri güçlü bir arama alty
 
 Parametreleri içermesi için üretilmiş olan veya parametreleri Logstash işleme aracılığıyla bölüşdüğü olan günlük iletileri, bu bilgileri koruyan şekilde doğrudan sorgulanabilir.
 
-`jill@example.com`tarafından ziyaret edilen ilk 10 sayfayı arayan sorgu Şekil 7-9 ' de görünür.
+Tarafından ziyaret edilen ilk 10 sayfayı arayan bir sorgu `jill@example.com` , şekil 7-9 ' de görünür.
 
 ```
 "query": {
@@ -118,5 +116,5 @@ Diğer bir seçenek [de, son bildirilen bir hizmet olarak yeni tekliftir](https:
 - [Azure 'da elastik yığın yüklemesi](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
->[Önceki](observability-patterns.md)
->[İleri](monitoring-azure-kubernetes.md)
+>[Önceki](observability-patterns.md) 
+> [Sonraki](monitoring-azure-kubernetes.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428027"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615208"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable Yöntemi
 Tek bir genel değişkeni tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineGlobalVariable(  
@@ -41,13 +41,13 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- 'ndaki Genel değişken adını tanımlayan bir `WCHAR` işaretçisi.  
+ 'ndaki `WCHAR`Genel değişken adını tanımlayan bir işaretçisi.  
   
  `attributes`  
  'ndaki Genel değişken öznitelikleri.  
   
  `cSig`  
- 'ndaki `signature` arabelleğinin karakter cinsinden boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Bu, arabelleğin karakter cinsinden boyutunu belirten bir `signature` .  
   
  `signature`  
  'ndaki Genel değişken imzası.  
@@ -72,6 +72,6 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineLocalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [DefineGlobalVariable2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [DefineLocalVariable Yöntemi](isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2 Yöntemi](isymunmanagedwriter2-defineglobalvariable2-method.md)

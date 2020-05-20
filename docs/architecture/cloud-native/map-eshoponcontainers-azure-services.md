@@ -1,24 +1,22 @@
 ---
 title: eShopOnContainers'ı Azure Hizmetlerine eşleme
 description: EShopOnContainers 'ı Azure Kubernetes hizmeti, API Gateway ve Azure Service Bus gibi Azure hizmetleriyle eşleme.
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895507"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613843"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers'ı Azure Hizmetlerine eşleme
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Gerekli olmasa da, proje bulutta yerel bir uygulama olarak oluşturulduğundan, Azure eShopOnContainers 'ı desteklemeye uygundur. Uygulama .NET Core ile oluşturulmuştur, bu nedenle Docker konağına bağlı olarak Linux veya Windows kapsayıcıları üzerinde çalışabilir. Uygulama, her biri kendi verileri olan birden çok otonom mikro hizmetten oluşur. Farklı mikro hizmetler, basit CRUD işlemlerinden daha karmaşık DDD ve CQRS desenlerine kadar farklı yaklaşımlar gösterimi. Mikro hizmetler, HTTP üzerinden ve ileti tabanlı iletişim aracılığıyla bir diğeri ile istemcilerle iletişim kurar. Uygulama, HTTP 'yi standart iletişim protokolü olarak benimsediğinden ve Android, iOS ve Windows platformlarında çalışan ASP.NET Core ve Xamarin mobil uygulamaları içerdiğinden, istemciler için birden çok platformu destekler.
 
 Uygulamanın mimarisi Şekil 2-5 ' de gösterilmiştir. Sol tarafta, mobil, geleneksel web ve Web tek sayfalı uygulama (SPA) türleri ile ayrılmış olan istemci uygulamalar vardır. Sağ tarafta, her biri Docker kapsayıcılarında ve Kubernetes kümelerinde barındırılabilen sistem oluşturan sunucu tarafı bileşenleridir. Geleneksel Web uygulaması, sarı renkle gösterilen ASP.NET Core MVC uygulaması tarafından desteklenir. Bu uygulama ve mobil ve Web SPA uygulamaları, tek tek mikro hizmetlerle bir veya daha fazla API ağ geçidi üzerinden iletişim kurar. API ağ geçitleri, her bir ağ geçidinin belirli bir ön uç istemcisini destekleyecek şekilde tasarlandığı anlamına gelen "ön uçlar için arka uçlar" (BFF) düzenine uyar. Tek tek mikro hizmetler, API ağ geçitlerinin sağında listelenir ve hem iş mantığını hem de bazı kalıcılık deposu türlerini içerir. Farklı hizmetler SQL Server veritabanları, Redsıs Cache örnekleri ve MongoDB/CosmosDB mağazalarını kullanır. En sağdaki, mikro hizmetler arasında iletişim kurmak için kullanılan sistemin olay veri yolu.
 
-![eshoponcontainers mimari](./media/eshoponcontainers-architecture.png)
-**Şekil 2-5**. EShopOnContainers mimarisi.
+![eShopOnContainers mimari ](./media/eshoponcontainers-architecture.png)
+ **Şekil 2-5**. EShopOnContainers mimarisi.
 
 Bu mimarinin sunucu tarafı bileşenleri, Azure hizmetlerine kolayca eşlenir.
 
@@ -65,5 +63,5 @@ Uygulama, farklı hizmetler arasındaki değişiklikleri iletmek için olayları
 Üretim ortamına dağıtıldıktan sonra, eShopOnContainers uygulaması, dayanıklılığını artırmak için kullanılabilen çeşitli Azure hizmetlerinden yararlanabilir. Uygulama, uygulamanın kullanılabilirliğine göre raporlama ve uyarılar sağlamak üzere Application Insights ile tümleştirilebilen sistem durumu denetimleri yayımlar. Azure kaynakları, hataları ve performans sorunlarını belirlemek ve düzeltmek için kullanılabilecek tanılama günlükleri de sağlar. Kaynak günlükleri, uygulama tarafından farklı Azure kaynaklarının ne zaman ve nasıl kullanıldığı hakkında ayrıntılı bilgi sağlar. [Bölüm 6](resiliency.md)' da bulutta yerel dayanıklılık özellikleri hakkında daha fazla bilgi edineceksiniz.
 
 >[!div class="step-by-step"]
->[Önceki](introduce-eshoponcontainers-reference-app.md)
->[İleri](deploy-eshoponcontainers-azure.md)
+>[Önceki](introduce-eshoponcontainers-reference-app.md) 
+> [Sonraki](deploy-eshoponcontainers-azure.md)

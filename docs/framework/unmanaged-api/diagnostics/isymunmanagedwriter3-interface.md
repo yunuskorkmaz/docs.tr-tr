@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: a034c21e-e371-4360-b470-29e88288948f
 topic_type:
 - apiref
-ms.openlocfilehash: 115d4b58b01606c29719fb88ab7dbf5a858b1251
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 006045ce101884119f676e4f6324815eb21a10a4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438162"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614662"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>ISymUnmanagedWriter3 Arabirimi
-Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar. Bu arabirim [ıstreamunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) arabirimini genişletir.  
+Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar. Bu arabirim [ıstreamunmanagedwriter](isymunmanagedwriter-interface.md) arabirimini genişletir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Commit Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-commit-method.md)|Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.|  
-|[OpenMethod2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)|Bir yöntemi açar ve görüntüde gerçek bölüm konumunu sağlar.|  
+|[COMMIT yöntemi](isymunmanagedwriter3-commit-method.md)|Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.|  
+|[OpenMethod2 Yöntemi](isymunmanagedwriter3-openmethod2-method.md)|Bir yöntemi açar ve görüntüde gerçek bölüm konumunu sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter2 Arabirimi](isymunmanagedwriter2-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 048d784a55fd7c29c837a54fbd5adcdcf62a7a2c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448851"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615163"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken Yöntemi
 Bu yöntem için meta veri belirtecini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetToken(  
@@ -34,7 +34,7 @@ HRESULT GetToken(
   
 ## <a name="parameters"></a>Parametreler  
  `pToken`  
- dışı Meta verileri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `mdMethodDef` işaretçisi.  
+ dışı `mdMethodDef`Meta verileri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,4 +44,4 @@ HRESULT GetToken(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

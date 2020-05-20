@@ -2,16 +2,14 @@
 title: Azure’da kapsayıcıları dağıtma
 description: Azure Container Registry, Azure Kubernetes hizmeti ve Azure Dev Spaces Azure 'da kapsayıcı dağıtma.
 ms.date: 04/13/2020
-ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895597"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614155"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure’da kapsayıcıları dağıtma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bu bölümde ve Bölüm 1 ' de kapsayıcılar tartışıyoruz. Kapsayıcıların taşınabilirlik dahil olmak üzere bulutta yerel uygulamalara birçok avantaj sunduğumuz görüldü. Azure bulutunda, aynı Kapsayıcılı Hizmetleri hazırlama ve üretim ortamları arasında dağıtabilirsiniz. Azure, bu Kapsayıcılı iş yüklerini barındırmak için çeşitli seçenekler sunar:
 
@@ -21,11 +19,11 @@ Bu bölümde ve Bölüm 1 ' de kapsayıcılar tartışıyoruz. Kapsayıcıların
 
 ## <a name="azure-container-registry"></a>Azure Container Registry
 
-Bir mikro hizmeti kapsayıcıında ilk olarak bir derleme kapsayıcısına "Image" olursunuz. Görüntü, hizmet kodu, bağımlılıklar ve çalışma zamanının ikili bir gösterimidir. Docker API 'sindeki `Docker Build` komutunu kullanarak el ile bir görüntü oluşturmanıza karşın, otomatik derleme sürecinin bir parçası olarak daha iyi bir yaklaşım oluşturmanız daha iyidir.
+Bir mikro hizmeti kapsayıcıında ilk olarak bir derleme kapsayıcısına "Image" olursunuz. Görüntü, hizmet kodu, bağımlılıklar ve çalışma zamanının ikili bir gösterimidir. Docker API 'sindeki komutunu kullanarak el ile bir görüntü oluşturmanıza karşın `Docker Build` , otomatik derleme sürecinin bir parçası olarak daha iyi bir yaklaşım oluşturmanız daha iyidir.
 
 Oluşturulduktan sonra kapsayıcı görüntüleri kapsayıcı kayıt defterlerine depolanır. Kapsayıcı görüntülerini oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar. Hem ortak hem de özel çok sayıda kayıt defterleri mevcuttur. Azure Container Registry (ACR), Azure bulutundaki tam olarak yönetilen bir kapsayıcı kayıt defteri hizmetidir. Azure ağ içindeki görüntülerinizi devam ettirir ve bunları Azure Container konaklarına dağıtma süresini azaltır. Ayrıca, diğer Azure kaynakları için kullandığınız güvenlik ve kimlik yordamlarını kullanarak bunları da güvenli hale getirebilirsiniz.
 
-[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak bir Azure Container Registry oluşturursunuz. Azure 'da bir kayıt defteri oluşturmak basittir. Azure aboneliği, kaynak grubu ve benzersiz bir ad gerektirir. Şekil 3-11, üzerinde `registryname.azurecr.io`barındırılacak bir kayıt defteri oluşturmak için temel seçenekleri gösterir.
+[Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)veya [PowerShell araçlarını](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)kullanarak bir Azure Container Registry oluşturursunuz. Azure 'da bir kayıt defteri oluşturmak basittir. Azure aboneliği, kaynak grubu ve benzersiz bir ad gerektirir. Şekil 3-11, üzerinde barındırılacak bir kayıt defteri oluşturmak için temel seçenekleri gösterir `registryname.azurecr.io` .
 
 ![Kapsayıcı kayıt defteri oluşturma](./media/create-container-registry.png)
 
@@ -43,7 +41,7 @@ Kimliği doğrulandıktan sonra Docker komutlarını kullanarak kapsayıcı gör
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Görüntüyü etiketledikten sonra, görüntüyü ACR örneğinize `docker push` göndermek için komutunu kullanın.
+Görüntüyü etiketledikten sonra, `docker push` görüntüyü ACR örneğinize göndermek için komutunu kullanın.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -59,7 +57,7 @@ En iyi uygulama olarak, geliştiricilerin resimleri bir kapsayıcı kayıt defte
 
 ## <a name="acr-tasks"></a>ACR Görevleri
 
-[ACR görevleri](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) , Azure Container Registry kullanılabilen bir özellikler kümesidir. Azure bulutunda kapsayıcı görüntüleri oluşturup yöneterek [iç döngü geliştirme döngünüzü](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) genişletir. Geliştirme makinenizde bir `docker build` ve `docker push` yerel olarak çağırmak yerine, bulutta ACR görevleri tarafından otomatik olarak işlenir.
+[ACR görevleri](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) , Azure Container Registry kullanılabilen bir özellikler kümesidir. Azure bulutunda kapsayıcı görüntüleri oluşturup yöneterek [iç döngü geliştirme döngünüzü](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) genişletir. `docker build` `docker push` Geliştirme makinenizde bir ve yerel olarak çağırmak yerine, bulutta ACR görevleri tarafından otomatik olarak işlenir.
 
 Aşağıdaki AZ CLı komutu her ikisi de bir kapsayıcı görüntüsü oluşturur ve ACR 'ye gönderir:
 
@@ -124,11 +122,11 @@ Bu adımların tümü, Azure CLı ve yeni `azds` komut satırı araçları kulla
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Ardından, uygulamayı çalıştırmak için gerekli `azds prep` Docker ve hele grafik varlıklarını oluşturmak için komutunu kullanabilirsiniz. Ardından, kodunuzu kullanarak `azds up`aks 'de çalıştırırsınız. Bu komutu ilk kez çalıştırdığınızda HELI grafiği yüklenecektir. Kapsayıcılar, yönergelerinizi temel alarak oluşturulup dağıtılacak. Bu görev ilk kez çalıştırıldığında birkaç dakika sürebilir. Bununla birlikte, değişiklikleri yaptıktan sonra kendi alt geliştirme alanınıza `azds space select` bağlanarak bunları yalıtılmış alt geliştirme alanınızda dağıtıp hata ayıklaması yapabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, `azds up` komutu yeniden yayımlayarak bu güncelleştirme gönderebilirsiniz veya Visual Studio veya Visual Studio Code yerleşik araçları kullanabilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
+Ardından, `azds prep` uygulamayı çalıştırmak için gerekli Docker ve hele grafik varlıklarını oluşturmak için komutunu kullanabilirsiniz. Ardından, kodunuzu kullanarak AKS 'de çalıştırırsınız `azds up` . Bu komutu ilk kez çalıştırdığınızda HELI grafiği yüklenecektir. Kapsayıcılar, yönergelerinizi temel alarak oluşturulup dağıtılacak. Bu görev ilk kez çalıştırıldığında birkaç dakika sürebilir. Bununla birlikte, değişiklikleri yaptıktan sonra kendi alt geliştirme alanınıza bağlanarak bunları `azds space select` yalıtılmış alt geliştirme alanınızda dağıtıp hata ayıklaması yapabilirsiniz. Geliştirme alanınızı çalışır durumda yaptıktan sonra, komutu yeniden yayımlayarak bu güncelleştirme gönderebilirsiniz `azds up` veya Visual Studio veya Visual Studio Code yerleşik araçları kullanabilirsiniz. VS Code, geliştirme alanınıza bağlanmak için komut paletini kullanın. Şekil 3-12, Visual Studio 'da Azure Dev Spaces kullanarak Web uygulamanızı nasıl başlatacağınızı gösterir.
 
-![Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-**Şekil 3-12**' de Azure dev Spaces bağlanın. Visual Studio 'da Azure Dev Spaces bağlanma
+![Visual Studio ](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+ **Şekil 3-12**' de Azure dev Spaces bağlanın. Visual Studio 'da Azure Dev Spaces bağlanma
 
 >[!div class="step-by-step"]
->[Önceki](combine-containers-serverless-approaches.md)
->[İleri](scale-containers-serverless.md)
+>[Önceki](combine-containers-serverless-approaches.md) 
+> [Sonraki](scale-containers-serverless.md)

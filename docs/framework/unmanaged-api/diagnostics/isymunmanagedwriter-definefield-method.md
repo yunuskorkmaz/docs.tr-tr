@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428042"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614844"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField Yöntemi
 Bir yöntem içinde olmayan tek bir değişkeni tanımlar. Bu yöntem, sınıflardaki belirli alanlar, bit alanları vb. için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineField(  
@@ -51,7 +51,7 @@ HRESULT DefineField(
  'ndaki Alan öznitelikleri.  
   
  `cSig`  
- 'ndaki Alan imzasını içermesi için gereken arabelleğin karakter cinsinden boyutu. `ULONG32`  
+ 'ndaki `ULONG32`Bu, alan imzasını içermesi için gereken arabelleğin karakter cinsinden boyutudur.  
   
  `signature`  
  'ndaki Alan imzalarının dizisi.  
@@ -76,4 +76,4 @@ HRESULT DefineField(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)

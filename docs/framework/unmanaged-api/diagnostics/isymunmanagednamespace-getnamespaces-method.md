@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433890"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615104"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces Metodu
 Bu ad alanının alt öğelerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetNamespaces(  
@@ -37,10 +37,10 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parametreler  
  `cNameSpaces`  
- 'ndaki `namespaces` dizisinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Dizi boyutunu belirten bir `namespaces` .  
   
  `pcNameSpaces`  
- dışı Ad alanlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Ad alanlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `namespaces`  
  dışı Ad alanlarını içeren arabelleğin işaretçisi.  
@@ -53,4 +53,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedNamespace Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace Arabirimi](isymunmanagednamespace-interface.md)

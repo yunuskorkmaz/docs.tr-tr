@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448880"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615152"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints Yöntemi
 Bu yöntemin içindeki tüm sıra noktalarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSequencePoints(  
@@ -41,10 +41,10 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parametreler  
  `cPoints`  
- 'ndaki `offsets`, `documents`, `lines`, `columns`, `endLines`ve `endColumns` dizilerinin boyutunu alan bir `ULONG32`.  
+ 'ndaki ,,,,, `ULONG32` `offsets` `documents` `lines` `columns` `endLines` Ve `endColumns` dizilerinin boyutunu alan bir.  
   
  `pcPoints`  
- dışı Sıra noktalarını içermesi için gereken arabelleğin uzunluğunu alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`Dizi noktalarını içermesi için gereken arabelleğin uzunluğunu alan öğesine bir işaretçisi.  
   
  `offsets`  
  'ndaki Dizi noktaları için yöntemin başlangıcından Microsoft ara dili (MSIL) uzaklıklarını depolayan bir dizi.  
@@ -72,4 +72,4 @@ HRESULT GetSequencePoints(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

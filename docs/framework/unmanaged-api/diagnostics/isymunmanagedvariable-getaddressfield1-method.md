@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 25788ed1-0ce3-4b97-96fc-88f8997812a3
 topic_type:
 - apiref
-ms.openlocfilehash: a59b50009e7f0ab2fff1b8439e368234403822c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 253fd17178c03bc0c4d8ea031888a404ad56f876
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446136"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615286"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>ISymUnmanagedVariable::GetAddressField1 Metodu
 Bu değişken için ilk adres alanını alır. Bunun anlamı, adresin türüne bağlıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAddressField1(  
@@ -34,7 +34,7 @@ HRESULT GetAddressField1(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı İlk adres alanını alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`İlk adres alanını alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,7 +44,7 @@ HRESULT GetAddressField1(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetAddressField2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
-- [GetAddressField3 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield3-method.md)
-- [GetAddressKind Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+- [ISymUnmanagedVariable Arabirimi](isymunmanagedvariable-interface.md)
+- [GetAddressField2 Yöntemi](isymunmanagedvariable-getaddressfield2-method.md)
+- [GetAddressField3 Yöntemi](isymunmanagedvariable-getaddressfield3-method.md)
+- [GetAddressKind Yöntemi](isymunmanagedvariable-getaddresskind-method.md)

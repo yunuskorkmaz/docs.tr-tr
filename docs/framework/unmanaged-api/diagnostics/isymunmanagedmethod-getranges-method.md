@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448930"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615182"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges Yöntemi
 Belgedeki bir konum verildiğinde, konumun bu yöntem içinde kapsamakta olduğu Microsoft ara dili (MSIL) aralıklarına karşılık gelen başlangıç ve bitiş konumu çiftleri dizisini döndürür. Dizi tamsayılar dizisidir ve [Start, End, Start, End] biçiminde olur. Aralık çifti sayısı, dizinin uzunluğu 2 ' ye bölünür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRanges(  
@@ -49,10 +49,10 @@ HRESULT GetRanges(
  'ndaki Aralıklara karşılık gelen belge sütunu.  
   
  `cRanges`  
- 'ndaki `ranges` dizisinin boyutu.  
+ 'ndaki `ranges`Dizinin boyutu.  
   
  `pcRanges`  
- dışı Aralıkları içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Aralıkları içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `ranges`  
  dışı Aralıkları alan arabelleğin işaretçisi.  
@@ -65,4 +65,4 @@ HRESULT GetRanges(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

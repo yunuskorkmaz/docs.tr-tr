@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446363"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614870"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren Metodu
 Bu kapsamın alt öğelerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetChildren(  
@@ -37,10 +37,10 @@ HRESULT GetChildren(
   
 ## <a name="parameters"></a>Parametreler  
  `cChildren`  
- 'ndaki `children` dizisinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Dizi boyutunu belirten bir `children` .  
   
  `pcChildren`  
- dışı Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
  `children`  
  dışı Döndürülen alt öğe dizisi.  
@@ -53,5 +53,5 @@ HRESULT GetChildren(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetParent Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [ISymUnmanagedScope Arabirimi](isymunmanagedscope-interface.md)
+- [GetParent Yöntemi](isymunmanagedscope-getparent-method.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6ddb0631-4569-41b3-93e4-50fdfaa486dc
 topic_type:
 - apiref
-ms.openlocfilehash: d5f42e5ed3ce7829cfcf921f3002c238985710a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 60fbccabd21fb8bee118689a524efa9031bb2124
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426754"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615000"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion Metodu
 Yöntem belirteci ve bir düzenleme ve kopyalama sürümü numarası verilen bir sembol okuyucu yöntemi alır. Sürüm numaraları 1 ' den başlar ve bir düzenleme ve kopyalama işleminin sonucu olarak yöntemin her değiştirildiği her seferinde artırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethodByVersion (  
@@ -52,4 +52,4 @@ HRESULT GetMethodByVersion (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

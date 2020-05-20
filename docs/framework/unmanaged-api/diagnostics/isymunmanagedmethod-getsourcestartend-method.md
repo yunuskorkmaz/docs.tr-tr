@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448870"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614428"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd Yöntemi
 Bu yöntemin kaynağı için başlangıç ve bitiş belgesi konumlarını alır. İlk dizi konumu başlangıç ' dir ve ikinci dizi konumu son ' dır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSourceStartEnd(  
@@ -46,7 +46,7 @@ HRESULT GetSourceStartEnd(
  'ndaki Karşılık gelen kaynak belgelerindeki başlangıç ve bitiş sütunları.  
   
  `pRetVal`  
- [out] pozisyonlar tanımlanmışsa `true`; Aksi takdirde, `false`.  
+ [out] `true` pozisyonlar tanımlanmışsa; Aksi takdirde, `false` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -56,4 +56,4 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod Yöntemi](isymunmanagedmethod-interface.md)

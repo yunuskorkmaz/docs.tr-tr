@@ -2,17 +2,15 @@
 title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895504"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613713"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ön uç istemcisinden geçiş yapmak için artık arka uç mikro hizmetleri birbirleriyle iletişim kuracak şekilde adresliyoruz.
 
@@ -50,7 +48,7 @@ Başka bir mikro hizmete tek bir doğrudan HTTP çağrısı yapan seyrek erişim
 
 **Şekil 4-9**. HTTP sorgularını zincirleme
 
-Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. 3. adım \#başarısız olursa ne olur? Ya da \#8. adım başarısız oldu mu? Nasıl kurtarılır? Temel alınan hizmet \#meşgul olduğu için 6. adım yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
+Önceki görüntüde gösterilen tasarımda riski tamamen hayal edebilirsiniz. 3. adım \# başarısız olursa ne olur? Ya da \# 8. adım başarısız oldu mu? Nasıl kurtarılır? \#Temel alınan hizmet meşgul olduğu için 6. adım yavaşsa ne olur? Nasıl devam edersiniz? Tümü doğru çalışıyor olsa bile, her adımın gecikme süresinin toplamı olan bu çağrının tabi olacağı gecikmeyi düşünün.
 
 Önceki görüntüde geçen büyük ölçüde, hizmetlerin en iyi modellenmedi. Bu, takımın tasarımını yeniden ziyaret behoove.
 
@@ -144,7 +142,7 @@ Ancak bazı önemli uyarılar vardır: Service Bus kuyruk boyutu 80 GB ile sın�
 
 Önceki şekilde, noktadan noktaya ilişkisini aklınızda yapın. Aynı sağlayıcının iki örneği iletileri tek bir Service Bus kuyruğuna sıraya ayırır. Her ileti, sağdaki üç tüketici örneğinin yalnızca biri tarafından kullanılır. Daha sonra, farklı tüketicilerin aynı iletiyle ilgilendiği mesajlaşmayı nasıl uygulayabileceğinizi anladık.
 
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
 
 Message Queuing, bir üreticinin zaman uyumsuz olarak bir tüketici ileti gönderebildiği iletişim uygulamak için etkili bir yoldur. Ancak, aynı iletiyle *birçok farklı tüketici* ilgilendiğinde ne olur? Her tüketiciye yönelik adanmış bir ileti kuyruğu iyi ölçeklendirilmez ve yönetimi zor hale gelir.
 
@@ -166,7 +164,7 @@ Olay ile, sıraya alma teknolojisinden *konulara*geçiş yaptık. Bir [Konu](htt
 
 **Şekil 4-16**. Konu mimarisi
 
-Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, abonelik \#1 ve abonelik \#3 ' e (abonelik \#2 ' ye değil) bir "CreateOrder" olayı gönderilebilir. Abonelik \#2 ve abonelik \#3 ' e bir "ordercompleted" olayı gönderilebilir.
+Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, abonelik \# 1 ve abonelik 3 ' e (abonelik \# 2 ' ye değil) bir "CreateOrder" olayı gönderilebilir \# . Abonelik \# 2 ve abonelik 3 ' e bir "OrderCompleted" olayı gönderilebilir \# .
 
 Azure bulutu iki farklı konu hizmetini destekler: Azure Service Bus konuları ve Azure EventGrid.
 
@@ -231,5 +229,5 @@ Aynı kaynaktan okumak yerine, her tüketici grubu ileti akışının bir alt k�
 Çok sayıda olayı akışı gereken bulutta yerel uygulamalar için, Azure Olay Hub 'ı sağlam ve uygun maliyetli bir çözüm olabilir.
 
 >[!div class="step-by-step"]
->[Önceki](front-end-communication.md)
->[İleri](grpc.md)
+>[Önceki](front-end-communication.md) 
+> [Sonraki](grpc.md)

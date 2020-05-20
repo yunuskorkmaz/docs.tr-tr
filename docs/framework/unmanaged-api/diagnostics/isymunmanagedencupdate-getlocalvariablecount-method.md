@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9777d8bb-4abc-4be8-aa7c-34f853eceb9c
 topic_type:
 - apiref
-ms.openlocfilehash: cba4af737cc6a6441d38ba0f940fffe54f5c4f09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d04c9865d8272bf8d04080f6049ddfb1d4c643bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449065"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614584"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount Yöntemi
 Yerel değişkenlerin sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLocalVariableCount(  
@@ -38,7 +38,7 @@ HRESULT GetLocalVariableCount(
  'ndaki Yöntemlerin meta veri belirteci.  
   
  `pcLocals`  
- dışı Yerel değişken sayısını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Yerel değişken sayısını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -48,4 +48,4 @@ HRESULT GetLocalVariableCount(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedENCUpdate Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate Arabirimi](isymunmanagedencupdate-interface.md)

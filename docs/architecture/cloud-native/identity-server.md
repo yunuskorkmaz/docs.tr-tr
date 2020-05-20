@@ -1,17 +1,15 @@
 ---
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394874"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614038"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer, ASP.NET Core için OpenID Connect (OıDC) ve OAuth 2,0 standartları uygulayan açık kaynaklı bir kimlik doğrulama sunucusudur. Web, yerel, mobil veya API uç noktaları olsun, tüm uygulamalarınıza yönelik isteklerin kimliklerinin doğrulanması için ortak bir yol sağlamak üzere tasarlanmıştır. IdentityServer, birden çok uygulama ve uygulama türü için çoklu oturum açma (SSO) uygulamak için kullanılabilir. Kullanıcı arabirimi olmadan, genellikle belirteç verme, doğrulama ve yenileme içeren hizmet tabanlı kimlik doğrulaması ile, oturum açma formları ve benzer kullanıcı arabirimleri aracılığıyla gerçek kullanıcıların kimliğini doğrulamak için kullanılabilir. IdentityServer, özelleştirilebilir bir çözüm olarak tasarlanmıştır. Her örnek genellikle tek bir kuruluşa ve/veya uygulama gereksinimlerine uyacak şekilde özelleştirilir.
 
@@ -99,7 +97,7 @@ IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için k
 
 Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer [JavaScript client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` , oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir JavaScript istemcisi () sağlar.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 - [IdentityServer belgeleri](http://docs.identityserver.io/en/latest/)
 - [Uygulama türleri](https://docs.microsoft.com/azure/active-directory/develop/app-types)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448999"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614519"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines Yöntemi
 Yeniden derlenmedi ancak satırları bağımsız olarak taşınmış olan bir yöntem için satır bilgilerinin güncelleştirilmesini sağlar. Her ifadeye yönelik bir Delta kullanımına izin verilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT UpdateMethodLines(  
@@ -39,10 +39,10 @@ HRESULT UpdateMethodLines(
  'ndaki Yöntem belirtecinin meta verileri.  
   
  `pDeltas`  
- 'ndaki Yöntemdeki her bir sıra noktası için değişimleri belirten `INT32` değerleri dizisi.  
+ 'ndaki `INT32`Yöntemdeki her bir sıra noktası için değişimleri 'yi gösteren bir değerler dizisi.  
   
  `cDeltas`  
- 'ndaki `pDeltas` parametresinin boyutunu içeren bir `ULONG`.  
+ 'ndaki `ULONG`Parametresinin boyutunu içeren bir `pDeltas` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -52,4 +52,4 @@ HRESULT UpdateMethodLines(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedENCUpdate Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate Arabirimi](isymunmanagedencupdate-interface.md)

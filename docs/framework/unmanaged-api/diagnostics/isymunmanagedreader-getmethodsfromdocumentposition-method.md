@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: 923a92ea256f79a1b0130b61c4fd99460fda96a0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bba0fc039c403d45e8a5b60f2b0231eb24226280
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441803"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614961"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition Yöntemi
 Her biri bir belgede verilen konumdaki kesme noktasını içeren bir yöntem dizisi döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -49,13 +49,13 @@ HRESULT GetMethodsFromDocumentPosition (
  'ndaki Belirtilen belgenin sütunu.  
   
  `cMethod`  
- 'ndaki `pRetVal` dizisinin boyutu.  
+ 'ndaki `pRetVal`Dizinin boyutu.  
   
  `pcMethod`  
- dışı `pRetVal` dizisinde döndürülen öğelerin sayısını alan bir değişkene yönelik işaretçi.  
+ dışı Dizide döndürülen öğelerin sayısını alan bir değişken işaretçisi `pRetVal` .  
   
  `pRetVal`  
- dışı Her biri, kesme noktasını içeren bir yöntemi temsil eden bir [ıstreamunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) nesnesine işaret eden bir işaretçiler dizisi.  
+ dışı Her biri, kesme noktasını içeren bir yöntemi temsil eden bir [ıstreamunmanagedmethod](isymunmanagedmethod-interface.md) nesnesine işaret eden bir işaretçiler dizisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -65,4 +65,4 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

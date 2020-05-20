@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: Bulutta yerel uygulamalar için DevOps konuları
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395802"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614129"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Yazılım danışmanlarına yönelik sık kullanılan mantradır, ortaya çıkar. Yazılım danışmanları bir konum olmadığı için bu değildir. Bunun nedeni, yazılımdaki sorulara hiç bir doğru yanıt olmaması nedeniyle oluşur. Mutlak doğru ve yanlış yoktur, ancak Opposites arasında bir denge vardır.
 

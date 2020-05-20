@@ -1,17 +1,15 @@
 ---
 title: EShopOnContainers başvuru uygulamasına giriş
 description: ASP.NET Core ve Azure için eShopOnContainers bulutu yerel mikro hizmetleri başvuru uygulamasına giriş.
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395396"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613973"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers başvuru uygulamasına giriş
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft, önde gelen topluluk uzmanlarıyla ortaklık altında, tam özellikli bir bulut Yerel mikro hizmetler başvuru uygulaması olan eShopOnContainers üretti. Bu uygulama, çevrimiçi bir storefront oluşturmak için .NET Core ve Docker ve isteğe bağlı olarak Azure, Kubernetes ve Visual Studio kullanılarak tanıtıma göre oluşturulmuştur.
 
@@ -32,7 +30,7 @@ Uygulamanın Özellikler ve gereksinimlerinin bir gözden geçirimiyle başlayal
 - Sepetten öğe düzenleme veya kaldırma
 - Kullanıma alma
 - Hesap kaydetme
-- Oturum açma
+- Oturum aç
 - Oturumu kapat
 - Siparişleri gözden geçirme
 

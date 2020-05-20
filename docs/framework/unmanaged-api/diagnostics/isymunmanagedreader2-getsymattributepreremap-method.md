@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446427"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614922"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap Metodu
 Özel bir özniteliği adına göre alır. Meta veri özel özniteliklerinin aksine, bu öznitelikler sembol deposunda tutulur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSymAttributePreRemap(  
@@ -42,13 +42,13 @@ HRESULT GetSymAttributePreRemap(
  'ndaki Üst öğenin meta veri belirteci.  
   
  `name`  
- 'ndaki Adı içeren `WCHAR` işaretçisi.  
+ 'ndaki Adını içeren bir işaretçisi `WCHAR` .  
   
  `cBuffer`  
- 'ndaki `buffer` dizisinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Dizi boyutunu belirten bir `buffer` .  
   
  `pcBuffer`  
- dışı Öznitelik baytlarını içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Öznitelik baytlarını içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `buffer`  
  dışı Öznitelik baytlarını alan arabelleğin işaretçisi.  
@@ -61,4 +61,4 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 Yöntemi](isymunmanagedreader2-interface.md)

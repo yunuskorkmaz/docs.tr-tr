@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: f6a741df3ea57b5e9b4fa8bc5d304bfedd1d6c15
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428014"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614831"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable Yöntemi
-Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak, bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
+Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar. Bu yöntem, bir kapsam genelinde birden çok evye sahip olan aynı ada sahip bir değişken için birden çok kez çağrılabilir. Ancak bu durumda, `startOffset` ve `endOffset` parametrelerinin değerleri çakışmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineLocalVariable(  
@@ -43,13 +43,13 @@ HRESULT DefineLocalVariable(
   
 ## <a name="parameters"></a>Parametreler  
  `name`  
- 'ndaki Yerel değişken adını tanımlayan bir `WCHAR` işaretçisi.  
+ 'ndaki `WCHAR`Yerel değişken adını tanımlayan bir işaretçisi.  
   
  `attributes`  
  'ndaki Yerel değişken öznitelikleri.  
   
  `cSig`  
- 'ndaki `signature` arabelleğinin boyutunu bayt cinsinden belirten bir `ULONG32`.  
+ 'ndaki `ULONG32`Bu, arabelleğin bayt cinsinden boyutunu belirten bir `signature` .  
   
  `signature`  
  'ndaki Yerel değişken imzası.  
@@ -80,6 +80,6 @@ HRESULT DefineLocalVariable(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineGlobalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [DefineLocalVariable2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable Yöntemi](isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 Yöntemi](isymunmanagedwriter2-definelocalvariable2-method.md)

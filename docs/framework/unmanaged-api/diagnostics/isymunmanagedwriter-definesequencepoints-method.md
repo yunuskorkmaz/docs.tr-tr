@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427988"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614805"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints Yöntemi
 Geçerli yöntem içindeki bir dizi noktası grubunu tanımlar. Her başlangıç satırı ve başlangıç sütunu, bir yöntem içinde bir deyimin başlangıcını tanımlar. Her bitiş satırı ve bitiş sütunu, bir yöntem içindeki bir deyimin sonunu tanımlar. Dizilerin, uzaklıklarda artan sırada sıralanması gerekir. Konum her zaman yöntemin başından (bayt cinsinden) ölçülür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineSequencePoints(  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  'ndaki Sıra noktalarının tanımlandığı belge nesnesi.  
   
  `spCount`  
- 'ndaki `offsets`, `lines`, `columns`, `endLines`ve `endColumns` arabelleklerinin her birinin boyutunu belirten `ULONG32`.  
+ 'ndaki ,,, `ULONG32` `offsets` `lines` `columns` `endLines` Ve `endColumns` arabelleklerinin her birinin boyutunu belirten bir.  
   
  `offsets`  
  'ndaki Yöntemin başından itibaren ölçülen dizi noktalarının boşluğu.  
@@ -68,4 +68,4 @@ HRESULT DefineSequencePoints(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
