@@ -15,12 +15,12 @@
       href: microservices/
     - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       href: serverless/
+    - name: Azure için bulutta yerel .NET uygulamaları tasarlama
+      href: cloud-native/
     - name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
       href: modernize-desktop/
 - name: E-kitapların önizlemesini görüntüleme
   expanded: true
   items:
-    - name: Azure için bulutta yerel .NET uygulamaları tasarlama
-      href: cloud-native/
     - name: ASP.NET Web Forms geliştiricileri için Blazor
       href: blazor-for-web-forms-developers/
