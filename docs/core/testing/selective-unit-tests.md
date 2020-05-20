@@ -2,30 +2,37 @@
 title: Seçmeli birim testleri çalıştırma
 description: .NET Core 'da DotNet test komutuyla seçmeli birim testlerini çalıştırmak için bir filtre ifadesi kullanma.
 author: smadala
-ms.date: 04/29/2020
-ms.openlocfilehash: 50642126f3b470180ddd303ed4a2d2d90bfa5b8f
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.date: 05/18/2020
+zone_pivot_groups: unit-testing-framework-set-one
+ms.openlocfilehash: 6a6bbb0687742d1e3288d64fb88f6825dc678e28
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728190"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702986"
 ---
 # <a name="run-selective-unit-tests"></a>Seçmeli birim testleri çalıştırma
 
-.NET Core `dotnet test` 'daki komutla, seçmeli testleri çalıştırmak için bir filtre ifadesi kullanabilirsiniz. Bu makalede hangi testlerin çalıştırılacağını nasıl filtreleneceği gösterilir. Aşağıdaki örnekler kullanır `dotnet test`. Kullanıyorsanız `vstest.console.exe`, ile `--filter` `--testcasefilter:`değiştirin.
+[`dotnet test`](../tools/dotnet-test.md).NET Core 'daki komutla, seçmeli testleri çalıştırmak için bir filtre ifadesi kullanabilirsiniz. Bu makalede hangi testlerin çalıştırılacağını nasıl filtreleneceği gösterilir. Aşağıdaki örnekler kullanır `dotnet test` . Kullanıyorsanız `vstest.console.exe` , `--filter` ile değiştirin `--testcasefilter:` .
 
 ## <a name="character-escaping"></a>Karakter kaçış
 
-' De `*nix` ünlem işareti (!) içeren filtrelerin kullanılması `!` , ayrılmış olduğundan kaçış gerektirir. Örneğin, ad alanı ıntegrationtests içeriyorsa, bu filtre tüm testleri atlar: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
-Ünlem işaretiyle önceki ters eğik çizgiyi unutmayın.
+Ünlem işareti içeren filtrelerin kullanılması `!` `*nix` , ayrılmış olduğundan kaçış gerektirir `!` . Örneğin, ad alanı ıntegrationtests içeriyorsa, bu filtre tüm testleri atlar:
 
-Genel `FullyQualifiedName` tür parametreleri için virgül içeren değerler için, virgülle kaçış `%2C`. Örneğin:
+```dotnetcli
+dotnet test --filter FullyQualifiedName\!~IntegrationTests
+```
+
+> [!IMPORTANT]
+> Ters eğik çizgi, kaçış karakteri olduğunu göstermek için ünlem işaretiyle önce gelir `\!` .
+
+`FullyQualifiedName`Genel tür parametreleri için virgül içeren değerler için, virgülle kaçış `%2C` . Örnek:
 
 ```dotnetcli
 dotnet test --filter "FullyQualifiedName=MyNamespace.MyTestsClass<ParameterType1%2CParameterType2>.MyTestMethod"
 ```
 
-## <a name="mstest"></a>MSTest
+:::zone pivot="mstest"
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -35,15 +42,12 @@ namespace MSTestNamespace
     [TestClass]
     public class UnitTest1
     {
-        [TestCategory("CategoryA")]
-        [Priority(1)]
-        [TestMethod]
+        [TestMethod, Priority(1), TestCategory("CategoryA")]
         public void TestMethod1()
         {
         }
 
-        [Priority(2)]
-        [TestMethod]
+        [TestMethod, Priority(2)]
         public void TestMethod2()
         {
         }
@@ -51,24 +55,37 @@ namespace MSTestNamespace
 }
 ```
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| `dotnet test --filter Method` | `FullyQualifiedName` İçeren `Method`testleri çalıştırır. Uygulamasında `vstest 15.1+`kullanılabilir. |
-| `dotnet test --filter Name~TestMethod1` | Adında bulunan testleri çalıştırır `TestMethod1`. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Sınıfında `MSTestNamespace.UnitTest1`olan testleri çalıştırır.<br>**Note:** `ClassName` Değer bir ad alanına sahip olmalıdır, bu `ClassName=UnitTest1` nedenle çalışmaz. |
-| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Hariç `MSTestNamespace.UnitTest1.TestMethod1`tüm testleri çalıştırır. |
-| `dotnet test --filter TestCategory=CategoryA` | İle `[TestCategory("CategoryA")]`açıklamalı testleri çalıştırır. |
-| `dotnet test --filter Priority=2` | İle `[Priority(2)]`açıklamalı testleri çalıştırır.<br>
+| İfade | Sonuç |
+|--|--|
+| `dotnet test --filter Method` | İçeren testleri çalıştırır <xref:System.Reflection.Module.FullyQualifiedName> `Method` . Uygulamasında kullanılabilir `vstest 15.1+` . |
+| `dotnet test --filter Name~TestMethod1` | Adında bulunan testleri çalıştırır `TestMethod1` . |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Sınıfında olan testleri çalıştırır `MSTestNamespace.UnitTest1` .<br>**Note:** `ClassName`Değer bir ad alanına sahip olmalıdır, bu nedenle `ClassName=UnitTest1` çalışmaz. |
+| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Hariç tüm testleri çalıştırır `MSTestNamespace.UnitTest1.TestMethod1` . |
+| `dotnet test --filter TestCategory=CategoryA` | İle açıklamalı testleri çalıştırır `[TestCategory("CategoryA")]` . |
+| `dotnet test --filter Priority=2` | İle açıklamalı testleri çalıştırır `[Priority(2)]` . |
 
-**Koşullu işleçleri kullanma | '&amp;**
+Koşullu işleçleri kullanan örnekler `|` `&` :
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1` `FullyQualifiedName` **or** Veya `TestCategory` olan testleri çalıştırır `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1` `FullyQualifiedName` **Ve** içinde olan testleri çalıştırır `CategoryA` `TestCategory` |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | İçeren `FullyQualifiedName` `UnitTest1` **ve** `Priority` ya da 1 olan testleri çalıştırır. **or** `TestCategory` `CategoryA` |
+Veya içinde olan testleri çalıştırmak için `UnitTest1` <xref:System.Reflection.Module.FullyQualifiedName> **or** <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute> `"CategoryA"` .
 
-## <a name="xunit"></a>xUnit
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~UnitTest1|TestCategory=CategoryA"
+```
+
+Ve içinde olan testleri çalıştırmak için `UnitTest1` <xref:System.Reflection.Module.FullyQualifiedName> **and** <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute> `"CategoryA"` .
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"
+```
+
+<xref:System.Reflection.Module.FullyQualifiedName>İçeren `UnitTest1` **ve** <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute> `"CategoryA"` **or** <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute> önceliği olan veya `1` sahibi olan testleri çalıştırmak için.
+
+```dotnetcli
+dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)|Priority=1"
+```
+
+:::zone-end
+:::zone pivot="xunit"
 
 ```csharp
 using Xunit;
@@ -77,15 +94,12 @@ namespace XUnitNamespace
 {
     public class TestClass1
     {
-        [Trait("Category", "CategoryA")]
-        [Trait("Priority", "1")]
-        [Fact]
+        [Fact, Trait("Priority", "1"), Trait("Category", "CategoryA")]
         public void Test1()
         {
         }
 
-        [Trait("Priority", "2")]
-        [Fact]
+        [Fact, Trait("Priority", "2")]
         public void Test2()
         {
         }
@@ -93,28 +107,41 @@ namespace XUnitNamespace
 }
 ```
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Yalnızca bir test çalıştırır, `XUnitNamespace.TestClass1.Test1`. |
-| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Hariç `XUnitNamespace.TestClass1.Test1`tüm testleri çalıştırır. |
-| `dotnet test --filter DisplayName~TestClass1` | Görünen adı bulunan testleri çalıştırır `TestClass1`. |
+| İfade | Sonuç |
+|--|--|
+| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | Yalnızca bir test çalıştırır, `XUnitNamespace.TestClass1.Test1` . |
+| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | Hariç tüm testleri çalıştırır `XUnitNamespace.TestClass1.Test1` . |
+| `dotnet test --filter DisplayName~TestClass1` | Görünen adı bulunan testleri çalıştırır `TestClass1` . |
 
-Kod örneğinde, anahtarlar `Category` ile tanımlanmış nitelikler ve `Priority` filtreleme için kullanılabilir.
+Kod örneğinde, anahtarlar ile tanımlanmış nitelikler `"Category"` ve `"Priority"` filtreleme için kullanılabilir.
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| `dotnet test --filter XUnit` | `FullyQualifiedName` İçeren `XUnit`testleri çalıştırır.  Uygulamasında `vstest 15.1+`kullanılabilir. |
-| `dotnet test --filter Category=CategoryA` | Olan testleri çalıştırır `[Trait("Category", "CategoryA")]`. |
+| İfade | Sonuç |
+|--|--|
+| `dotnet test --filter XUnit` | İçeren testleri çalıştırır <xref:System.Reflection.Module.FullyQualifiedName> `XUnit` .  Uygulamasında kullanılabilir `vstest 15.1+` . |
+| `dotnet test --filter Category=CategoryA` | Olan testleri çalıştırır `[Trait("Category", "CategoryA")]` . |
 
-**Koşullu işleçleri kullanma | '&amp;**
+Koşullu işleçleri kullanan örnekler `|` `&` :
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `TestClass1` `FullyQualifiedName` **or** Veya `Category` olan testleri çalıştırır `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `TestClass1` `FullyQualifiedName` **Ve** içinde olan testleri çalıştırır `CategoryA` `Category` |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | İçeren `FullyQualifiedName` `TestClass1` **ve** `Priority` ya da 1 olan testleri çalıştırır. **or** `Category` `CategoryA` |
+İçinde olan veya ' ın `TestClass1` <xref:System.Reflection.Module.FullyQualifiedName> **or** `Trait` anahtarı `"Category"` ve değeri olan `"CategoryA"` Testleri çalıştırmak için.
 
-## <a name="nunit"></a>NUnit
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~TestClass1|Category=CategoryA"
+```
+
+`TestClass1`İçinde olan <xref:System.Reflection.Module.FullyQualifiedName> **ve** `Trait` `"Category"` değerleri ve değeri olan `"CategoryA"` Testleri çalıştırmak için.
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"
+```
+
+<xref:System.Reflection.Module.FullyQualifiedName>İçeren `TestClass1` **ve** değerine sahip olan ve `Trait` değeri olan `"Category"` `"CategoryA"` **veya** anahtarı `Trait` `"Priority"` ve `1` değeri olan testleri çalıştırmak için.
+
+```dotnetcli
+dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)|Priority=1"
+```
+
+:::zone-end
+:::zone pivot="nunit"
 
 ```csharp
 using NUnit.Framework;
@@ -123,15 +150,12 @@ namespace NUnitNamespace
 {
     public class UnitTest1
     {
-        [Category("CategoryA")]
-        [Property("Priority", 1)]
-        [Test]
+        [Test, Property("Priority", 1), Category("CategoryA")]
         public void TestMethod1()
         {
         }
 
-        [Property("Priority", 2)]
-        [Test]
+        [Test, Property("Priority", 2)]
         public void TestMethod2()
         {
         }
@@ -139,21 +163,45 @@ namespace NUnitNamespace
 }
 ```
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| `dotnet test --filter Method` | `FullyQualifiedName` İçeren `Method`testleri çalıştırır. Uygulamasında `vstest 15.1+`kullanılabilir. |
-| `dotnet test --filter Name~TestMethod1` | Adında bulunan testleri çalıştırır `TestMethod1`. |
-| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | Sınıfında `NUnitNamespace.UnitTest1`olan testleri çalıştırır.<br>
-| `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | Hariç `NUnitNamespace.UnitTest1.TestMethod1`tüm testleri çalıştırır. |
-| `dotnet test --filter TestCategory=CategoryA` | İle `[Category("CategoryA")]`açıklamalı testleri çalıştırır. |
-| `dotnet test --filter Priority=2` | İle `[Priority(2)]`açıklamalı testleri çalıştırır.<br>
+| İfade | Sonuç |
+|--|--|
+| `dotnet test --filter Method` | İçeren testleri çalıştırır <xref:System.Reflection.Module.FullyQualifiedName> `Method` . Uygulamasında kullanılabilir `vstest 15.1+` . |
+| `dotnet test --filter Name~TestMethod1` | Adında bulunan testleri çalıştırır `TestMethod1` . |
+| `dotnet test --filter FullyQualifiedName~NUnitNamespace.UnitTest1` | Sınıfında olan testleri çalıştırır `NUnitNamespace.UnitTest1` . |
+| `dotnet test --filter FullyQualifiedName!=NUnitNamespace.UnitTest1.TestMethod1` | Hariç tüm testleri çalıştırır `NUnitNamespace.UnitTest1.TestMethod1` . |
+| `dotnet test --filter TestCategory=CategoryA` | İle açıklamalı testleri çalıştırır `[Category("CategoryA")]` . |
+| `dotnet test --filter Priority=2` | İle açıklamalı testleri çalıştırır `[Priority(2)]` . |
 
-**Koşullu işleçleri kullanma | '&amp;**
+Koşullu işleçleri kullanan örnekler `|` `&` :
 
-| İfadeler | Sonuç |
-| ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1` `FullyQualifiedName` **or** Veya `TestCategory` olan testleri çalıştırır `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1` `FullyQualifiedName` **Ve** içinde olan testleri çalıştırır `CategoryA` `TestCategory` |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | İçeren `FullyQualifiedName` `UnitTest1` **ve** `Priority` ya da 1 olan testleri çalıştırır. **or** `TestCategory` `CategoryA` |
+Veya içinde olan testleri çalıştırmak için `UnitTest1` <xref:System.Reflection.Module.FullyQualifiedName> **or** `Category` `"CategoryA"` .
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~UnitTest1|TestCategory=CategoryA"
+```
+
+Ve içinde olan testleri çalıştırmak için `UnitTest1` <xref:System.Reflection.Module.FullyQualifiedName> **and** `Category` `"CategoryA"` .
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"
+```
+
+<xref:System.Reflection.Module.FullyQualifiedName>İçeren `UnitTest1` **ve '** a sahip olan ve içeren testleri çalıştırmak için `Category` `"CategoryA"` **or** `Property` `"Priority"` `1` .
+
+```dotnetcli
+dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)|Priority=1"
+```
 
 Daha fazla bilgi için bkz. [TestCase filtresi](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+
+:::zone-end
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [dotnet test](../tools/dotnet-test.md)
+- [DotNet test--filtre](../tools/dotnet-test.md#filter-option-details)
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+> [!div class="nextstepaction"]
+> [Birim testlerini Sırala](order-unit-tests.md)

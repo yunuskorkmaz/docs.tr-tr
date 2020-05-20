@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-ms.openlocfilehash: e980356ad592e137df7d08dadd77431b0e295380
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 52fc21044d345998ad72c045cdf5e80a8a03a38e
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140995"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703806"
 ---
 # <a name="iclrmemorynotificationcallback-interface"></a>ICLRMemoryNotificationCallback Arabirimi
-Konağın, Win32 `CreateMemoryResourceNotification` işleviyle benzer bir yaklaşım kullanarak bellek baskısı koşullarını rapor etmesine olanak tanır.  
+Konağın, Win32 işlevine benzer bir yaklaşım kullanarak bellek baskısı koşullarını rapor etmesine olanak tanır `CreateMemoryResourceNotification` .  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnMemoryNotification Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|Bilgisayardaki bellek yükünün ortak dil çalışma zamanına (CLR) bildirir.|  
+|[OnMemoryNotification Yöntemi](iclrmemorynotificationcallback-onmemorynotification-method.md)|Bilgisayardaki bellek yükünün ortak dil çalışma zamanına (CLR) bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Konak, CLR boş bellek kaynakları istemek için `ICLRMemoryNotificationCallback` arabirimini kullanır.  
+ Ana bilgisayar, `ICLRMemoryNotificationCallback` clr boş bellek kaynaklarını istemek için arabirimini kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostMemoryManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [IHostMemoryManager Arabirimi](ihostmemorymanager-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

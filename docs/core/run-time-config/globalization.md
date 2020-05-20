@@ -1,21 +1,21 @@
 ---
 title: Genelleştirme yapılandırma ayarları
 description: .NET Core uygulamasının Genelleştirme yönlerini yapılandıran çalışma zamanı ayarları hakkında bilgi edinin. Örneğin, Japonca tarihleri nasıl ayrıştırır.
-ms.date: 11/27/2019
+ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 7668c345181d7c08cfca9c5cb76b8addd76223ec
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 2561e66e6d18cb4036b0719f7e34ea66540fe095
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506811"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703133"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Genelleştirme için çalışma zamanı yapılandırma seçenekleri
 
 ## <a name="invariant-mode"></a>Sabit mod
 
 - .NET Core uygulamasının kültüre özgü verilere ve davranışa erişim olmadan Genelleştirme sabit modunda çalışıp çalışmadığını belirler.
-- Varsayılan: uygulamayı, kültürel verileri (`false`) erişimi ile çalıştırın.
+- Varsayılan: uygulamayı, kültürel verileri () erişimi ile çalıştırın `false` .
 - Daha fazla bilgi için bkz. [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Ayar adı | Değerler |
@@ -52,8 +52,8 @@ Proje dosyası:
 
 ## <a name="era-year-ranges"></a>Dönem yıl aralıkları
 
-- Birden çok dönemi destekleyen takvimler için Aralık denetimlerinin gevşek olduğunu veya bir dönem tarih aralığını taşan tarihlerin bir oluşturma <xref:System.ArgumentOutOfRangeException>yapıp olmadığını belirler.
-- Varsayılan: Aralık denetimleri gevşek (`false`).
+- Birden çok dönemi destekleyen takvimler için Aralık denetimlerinin gevşek olduğunu veya bir dönem tarih aralığını taşan tarihlerin bir oluşturma yapıp olmadığını belirler <xref:System.ArgumentOutOfRangeException> .
+- Varsayılan: Aralık denetimleri gevşek ( `false` ).
 - Daha fazla bilgi için bkz. [takvimler, eras ve tarih aralıkları: gevşek Aralık denetimleri](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks).
 
 | | Ayar adı | Değerler |
@@ -64,7 +64,7 @@ Proje dosyası:
 ## <a name="japanese-date-parsing"></a>Japonca Tarih ayrıştırma
 
 - Yıl olarak "1" veya "gannen" içeren bir dizenin başarıyla ayrıştıranıp desteklenmediğini veya yalnızca "1" desteklenip desteklenmediğini belirler.
-- Varsayılan: yıl (`false`) olarak "1" veya "gannen" Içeren dizeleri ayrıştırın.
+- Varsayılan: yıl () olarak "1" veya "gannen" içeren dizeleri ayrıştırın `false` .
 - Daha fazla bilgi için bkz. [birden çok dönemi ile takvimlerdeki tarihleri temsil](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)etme.
 
 | | Ayar adı | Değerler |
@@ -75,10 +75,21 @@ Proje dosyası:
 ## <a name="japanese-year-format"></a>Japon yıl biçimi
 
 - Japonca takvim çağının ilk yılının "gannen" olarak mı yoksa sayı olarak mı biçimlendirildiğini belirler.
-- Varsayılan: ilk yılı "gannen" (`false`) olarak biçimlendirin.
+- Varsayılan: ilk yılı "gannen" () olarak biçimlendirin `false` .
 - Daha fazla bilgi için bkz. [birden çok dönemi ile takvimlerdeki tarihleri temsil](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)etme.
 
 | | Ayar adı | Değerler |
 | - | - | - |
 | **runtimeconfig. JSON** | `Switch.System.Globalization.FormatJapaneseFirstYearAsANumber` | `false`"gannen" olarak biçimlendirin<br/>`true`-sayı olarak Biçimlendir |
 | **Ortam değişkeni** | Yok | Yok |
+
+## <a name="nls"></a>NLS
+
+- .NET 'in, Windows uygulamaları için, Unicode (ıCU) genelleştirme API 'Leri için ulusal dil desteği (NLS) veya uluslararası bileşenleri kullanıp kullanmadığını belirler. .NET 5,0 ve sonraki sürümleri, Windows 10 Mayıs 2019 güncelleştirme ve sonraki sürümlerinde ıCU genelleştirme API 'Lerini kullanır.
+- Bu ayarı atlarsanız, .NET varsayılan olarak ıCU genelleştirme API 'Lerini kullanır. Bu değeri değerine ayarlamaya eşdeğerdir `false` .
+- Daha fazla bilgi için bkz. [genelleştirme API 'Leri Windows üzerinde IU kitaplıklarını kullanma](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+
+| | Ayar adı | Değerler | Dağıtıla |
+| - | - | - | - |
+| **runtimeconfig. JSON** | `System.Globalization.UseNls` | `false`-ICU genelleştirme API 'Lerini kullanma<br/>`true`-NLS genelleştirme API 'Lerini kullanma | .NET 5,0 |
+| **Ortam değişkeni** | `DOTNET_SYSTEM_GLOBALIZATION_USENLS` | `false`-ICU genelleştirme API 'Lerini kullanma<br/>`true`-NLS genelleştirme API 'Lerini kullanma | .NET 5,0 |

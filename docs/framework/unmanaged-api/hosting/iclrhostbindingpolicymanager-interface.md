@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9da168b-366b-4b2b-bdb9-330b6bad5a6b
 topic_type:
 - apiref
-ms.openlocfilehash: 9ed317a451e6e35aeac3bc1b83f78d1400ea5c07
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cf2a945607bf85a51dbec35342ff5ac46878bca
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136435"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703572"
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a>ICLRHostBindingPolicyManager Arabirimi
 Ana bilgisayarın geçerli bağlama ilkesini değerlendirmesi ve belirtilen bir derlemede ilke değişikliklerini iletişim kurması için yöntemler sağlar.  
@@ -28,20 +28,20 @@ Ana bilgisayarın geçerli bağlama ilkesini değerlendirmesi ve belirtilen bir 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EvaluatePolicy Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-evaluatepolicy-method.md)|Bağlama ilkesini konak adına değerlendirir.|  
-|[ModifyApplicationPolicy Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|Belirtilen derleme için bağlama ilkesini değiştirir ve ilkenin yeni bir sürümünü oluşturur.|  
+|[EvaluatePolicy Yöntemi](iclrhostbindingpolicymanager-evaluatepolicy-method.md)|Bağlama ilkesini konak adına değerlendirir.|  
+|[ModifyApplicationPolicy Yöntemi](iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|Belirtilen derleme için bağlama ilkesini değiştirir ve ilkenin yeni bir sürümünü oluşturur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [IHostAssemblyStore Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRAssemblyIdentityManager Arabirimi](iclrassemblyidentitymanager-interface.md)
+- [IHostAssemblyStore Arabirimi](ihostassemblystore-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

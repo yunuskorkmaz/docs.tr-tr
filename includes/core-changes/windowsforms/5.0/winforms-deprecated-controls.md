@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 27bd38edd81abb5ce5893021bcc96e7eeae7ae2c
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140890"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702474"
 ---
 ### <a name="removed-status-bar-controls"></a>Durum çubuğu denetimleri kaldırıldı
 
@@ -57,7 +57,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.StatusBar`
 - `T:System.Windows.Forms.StatusBarDrawItemEventArgs`

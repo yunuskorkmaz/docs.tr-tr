@@ -1,104 +1,147 @@
 ---
-title: Unit test Visual Basic in .NET Core ile dotnet testi ve xUnit
-description: Noktanet testi ve xUnit kullanarak örnek bir Visual Basic çözümü adım adım oluşturma etkileşimli bir deneyim le .NET Core'daki birim test kavramlarını öğrenin.
+title: DotNet test ve xUnit ile .NET Core 'da birim testi Visual Basic
+description: .NET Core 'da, DotNet test ve xUnit kullanarak örnek Visual Basic çözüm adım adım oluşturma adlı etkileşimli bir deneyim aracılığıyla birim testi kavramlarını öğrenin.
 author: billwagner
 ms.author: wiwagn
-ms.date: 09/01/2017
-ms.openlocfilehash: 9a99d9031711a3e958132416d0235df76f4a9092
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/18/2020
+ms.openlocfilehash: ed1291a980f9a39284525877bab8d0a93389fbd0
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240954"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702964"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Unit test Visual Basic .NET Core kitaplıkları dotnet testi ve xUnit kullanarak
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core kitaplıkları Visual Basic birim testi
 
-Bu öğretici, birim test kavramlarını öğrenmek için adım adım örnek bir çözüm oluşturma etkileşimli bir deneyim sunar. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ederseniz, başlamadan önce [örnek kodu görüntüleyin veya indirin.](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-dotnet-test) İndirme talimatları için [Örnekler ve Öğreticiler'e](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)bakın.
+Bu öğreticide, birim testi projesi ve kitaplık projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
+## <a name="create-the-solution"></a>Çözümü oluşturma
 
-## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
-
-Bir kabuk penceresi açın. Çözümü tutmak için *birim-test-vb-using-dotnet-testi* adlı bir dizin oluşturun.
-Bu yeni dizinin içinde, yeni bir çözüm oluşturmak için çalıştırın. [`dotnet new sln`](../tools/dotnet-new.md) Bu uygulama, hem sınıf kitaplığını hem de birim test projesini yönetmeyi kolaylaştırır.
-Çözüm dizininin içinde bir *PrimeService* dizini oluşturun. Şimdiye kadar aşağıdaki dizin ve dosya yapısına sahipsiniz:
+Bu bölümde, kaynak ve test projelerini içeren bir çözüm oluşturulur. Tamamlanmış çözüm aşağıdaki dizin yapısına sahiptir:
 
 ```
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
-```
-
-*PrimeService'i* geçerli dizin [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) yapın ve kaynak projeyi oluşturmak için çalıştırın. *Class1.VB'yi* *PrimeService.VB*olarak yeniden adlandırın. `PrimeService` Sınıfın başarısız bir uygulamasını oluşturursunuz:
-
-```vb
-Namespace Prime.Services
-    Public Class PrimeService
-        Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
-        End Function
-    End Class
-End Namespace
-```
-
-Dizin geri *birim-test-vb-using-dotnet-test* dizini değiştirin. Sınıf [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) kitaplığı projesini çözüme eklemek için çalıştırın.
-
-## <a name="creating-the-test-project"></a>Test projesini oluşturma
-
-Ardından, *PrimeService.Tests* dizinini oluşturun. Aşağıdaki anahat dizin yapısını gösterir:
-
-```
-/unit-testing-vb-using-dotnet-test
-    unit-testing-vb-using-dotnet-test.sln
-    /PrimeService
-        Source Files
+        PrimeService.vb
         PrimeService.vbproj
     /PrimeService.Tests
-```
-
-*PrimeService.Tests* dizinini geçerli dizini oluşturun ve yeni [`dotnet new xunit -lang VB`](../tools/dotnet-new.md)bir proje oluşturun. Bu komut, test kitaplığı olarak xUnit kullanan bir test projesi oluşturur. Oluşturulan şablon *PrimeServiceTests.vbproj*test koşucusu yapılandırır:
-
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-  <PackageReference Include="xunit" Version="2.2.0" />
-  <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
-</ItemGroup>
-```
-
-Test projesi, birim testleri oluşturmak ve çalıştırmak için diğer paketler gerektirir. `dotnet new`önceki adımda xUnit ve xUnit runner eklendi. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. Komutu [`dotnet add reference`](../tools/dotnet-add-reference.md) kullanın:
-
-```dotnetcli
-dotnet add reference ../PrimeService/PrimeService.vbproj
-```
-
-Tüm dosyayı GitHub'daki [örnek deposunda](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService.Tests.vbproj) görebilirsiniz.
-
-Aşağıdaki son klasör düzenine sahipsiniz:
-
-```
-/unit-testing-using-dotnet-test
-    unit-testing-using-dotnet-test.sln
-    /PrimeService
-        Source Files
-        PrimeService.vbproj
-    /PrimeService.Tests
-        Test Source Files
+        PrimeService_IsPrimeShould.vb
         PrimeServiceTests.vbproj
 ```
 
-[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) *Birim-test-vb-using-dotnet-test* dizininde yürütün.
+Aşağıdaki yönergeler, test çözümünü oluşturmak için gereken adımları sağlar. Test çözümünü tek bir adımda oluşturmaya yönelik yönergeler için bkz. [Test çözümü oluşturma komutları](#create-test-cmd) .
 
-## <a name="creating-the-first-test"></a>İlk testi oluşturma
+* Bir kabuk penceresi açın.
+* Şu komutu çalıştırın:
 
-Başarısız bir test yazarsın, geçer ve işlemi tekrarlarsın. *UnitTest1.vb'i* *PrimeService.Tests* dizininden kaldırın ve *PrimeService_IsPrimeShould.VB*adlı yeni bir Visual Basic dosyası oluşturun. Aşağıdaki kodu ekleyin:
+  ```dotnetcli
+  dotnet new sln -o unit-testing-using-dotnet-test
+  ```
+
+  Bu [`dotnet new sln`](../tools/dotnet-new.md) komut, *birim-test-using-DotNet-test* dizininde yeni bir çözüm oluşturur.
+* Dizini *birim-test-using-DotNet-test* klasörü ile değiştirin.
+* Şu komutu çalıştırın:
+
+  ```dotnetcli
+  dotnet new classlib -o PrimeService --lang VB
+  ```
+
+   [`dotnet new classlib`](../tools/dotnet-new.md)Komut, *Primeservice* klasöründe yeni bir sınıf kitaplığı projesi oluşturur. Yeni sınıf kitaplığı sınanacak kodu içerecektir.
+* *Class1. vb* ' i *primeservice. vb*olarak yeniden adlandırın.
+* *Primeservice. vb* içindeki kodu aşağıdaki kodla değiştirin:
+  
+  ```vb
+  Imports System
+  
+  Namespace Prime.Services
+      Public Class PrimeService
+          Public Function IsPrime(candidate As Integer) As Boolean
+              Throw New NotImplementedException("Not implemented.")
+          End Function
+      End Class
+  End Namespace
+  ```
+
+* Yukarıdaki kod:
+  * <xref:System.NotImplementedException>Uygulanmadığını belirten bir ileti içeren bir iletisi oluşturur.
+  * , Öğreticide daha sonra güncelleştirilir.
+
+<!-- preceding code shows an english bias. Message makes no sense outside english -->
+
+* *Birim-test-using-DotNet-test* dizini ' nde, sınıf kitaplığı projesini çözüme eklemek için aşağıdaki komutu çalıştırın:
+
+  ```dotnetcli
+  dotnet sln add ./PrimeService/PrimeService.vbproj
+  ```
+
+* Aşağıdaki komutu çalıştırarak *Primeservice. Tests* projesini oluşturun:
+
+  ```dotnetcli
+  dotnet new xunit -o PrimeService.Tests
+  ```
+
+* Yukarıdaki komut:
+  * *Primeservice* . *Tests projesindeki primeservice. Tests* projesini oluşturur. Test projesi, test kitaplığı olarak [xUnit](https://xunit.net/) kullanır.
+  * , Aşağıdaki öğeleri proje dosyasına ekleyerek Test Çalıştırıcısı 'nı yapılandırır `<PackageReference />` :
+    * "Microsoft. NET. test. SDK"
+    * xUnit
+    * "xUnit. Runner. VisualStudio"
+
+* Aşağıdaki komutu çalıştırarak test projesini çözüm dosyasına ekleyin:
+
+  ```dotnetcli
+  dotnet sln add ./PrimeService.Tests/PrimeService.Tests.vbproj
+  ```
+
+* `PrimeService`Sınıf kitaplığını, *Primeservice. Tests* projesine bağımlılık olarak ekleyin:
+
+  ```dotnetcli
+  dotnet add ./PrimeService.Tests/PrimeService.Tests.vbproj reference ./PrimeService/PrimeService.vbproj  
+  ```
+
+<a name="create-test-cmd"></a>
+
+### <a name="commands-to-create-the-solution"></a>Çözüm oluşturma komutları
+
+Bu bölüm, önceki bölümdeki tüm komutları özetler. Önceki bölümdeki adımları tamamladığınız takdirde bu bölümü atlayın.
+
+Aşağıdaki komutlar, bir Windows makinesinde test çözümünü oluşturur. MacOS ve UNIX için, `ren` komutunu `ren` bir dosyayı yeniden adlandırmak üzere işletim sistemi sürümüne güncelleştirin:
+
+```dotnetcli
+dotnet new sln -o unit-testing-using-dotnet-test
+cd unit-testing-using-dotnet-test
+dotnet new classlib -o PrimeService
+ren .\PrimeService\Class1.vb PrimeService.vb
+dotnet sln add ./PrimeService/PrimeService.vbproj
+dotnet new xunit -o PrimeService.Tests
+dotnet add ./PrimeService.Tests/PrimeService.Tests.vbproj reference ./PrimeService/PrimeService.vbproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.vbproj
+```
+
+Önceki bölümde " *Primeservice. vb* Içindeki kodu değiştirin" konusundaki yönergeleri izleyin.
+
+## <a name="create-a-test"></a>Test oluşturma
+
+Test odaklı geliştirme (TDD) içinde popüler bir yaklaşım, hedef kodu uygulamadan önce bir test yazmaktır. Bu öğretici, TDD yaklaşımını kullanır. `IsPrime`Yöntem çağrılabilir, ancak uygulanmaz. Test çağrısı `IsPrime` başarısız. TDD ile başarısız olarak bilinen bir test yazılır. Hedef kodu test geçişini yapmak için güncellenir. Bu yaklaşımı tekrarlayarak, başarısız bir test yazarak ve ardından hedef kodu geçirilecek şekilde güncelleyebilirsiniz.
+
+*Primeservice. Tests* projesini güncelleştirin:
+
+* *Primeservice. Tests/UnitTest1. vb*öğesini silin.
+* Bir *Primeservice. Tests/PrimeService_IsPrimeShould. vb* dosyası oluşturun.
+* *PrimeService_IsPrimeShould. vb* içindeki kodu aşağıdaki kodla değiştirin:
 
 ```vb
 Imports Xunit
 
 Namespace PrimeService.Tests
     Public Class PrimeService_IsPrimeShould
-        Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
+        Private ReadOnly _primeService As Prime.Services.PrimeService
+
+        Public Sub New()
+            _primeService = New Prime.Services.PrimeService()
+        End Sub
+
 
         <Fact>
         Sub IsPrime_InputIs1_ReturnFalse()
@@ -111,35 +154,80 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-Öznitelik, `<Fact>` test koşucusu tarafından çalıştırılabilen bir test yöntemini gösterir. *Birim-test-using-dotnet-testinden,* testleri [`dotnet test`](../tools/dotnet-test.md) ve sınıf kitaplığını oluşturmak ve testleri çalıştırmak için çalıştırın. xUnit test koşucusu, testlerinizi çalıştırmak için program giriş noktasını içerir. `dotnet test`oluşturduğunuz birim test projesini kullanarak test koşucusu başlatın.
+`[Fact]`Özniteliği, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemi bildirir. *Primeservice. Tests* klasöründen çalıştırın `dotnet test` . [DotNet test](../tools/dotnet-test.md) komutu her iki projeyi de oluşturur ve testleri çalıştırır. XUnit Test Çalıştırıcısı, testleri çalıştırmak için program giriş noktasını içerir. `dotnet test`birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
-Sınavın başarısız oldu. Uygulamayı henüz oluşturmadın. Bu testin çalışmasını sağlayan `PrimeService` sınıftaki en basit kodu yazarak geçmesini sağla:
+Test başarısız oldu, çünkü `IsPrime` uygulanmadı. TDD yaklaşımını kullanarak, bu testin başarılı olması için yalnızca yeterli kodu yazın. `IsPrime`Aşağıdaki kodla güncelleştirin:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first.")
+    Throw New NotImplementedException("Not implemented.")
 End Function
 ```
 
-*Birim-test-vb-using-dotnet-test* dizininde, yeniden `dotnet test` çalıştırın. Komut, `dotnet test` proje ve ardından `PrimeService.Tests` proje için bir yapı çalışır. `PrimeService` Her iki projeyi de yaptıktan sonra, bu tek testi çalıştırAr. Geçiyor.
+`dotnet test` öğesini çalıştırın. Test geçirilir.
 
-## <a name="adding-more-features"></a>Daha fazla özellik ekleme
+### <a name="add-more-tests"></a>Daha fazla test ekleyin
 
-Artık bir test sınavını geçtiğine göre, daha fazla yazma nın zamanı. Asal sayılar için birkaç basit durum daha vardır: 0, -1. Bu durumları öznitelik ile `<Fact>` yeni testler olarak ekleyebilirsiniz, ancak bu hızla sıkıcı olur. Benzer testler paketi yazmanızı sağlayan başka xUnit öznitelikleri de vardır.  Öznitelik, `<Theory>` aynı kodu çalıştıran ancak farklı giriş bağımsız değişkenleri olan bir test paketini temsil eder. Bu girişler `<InlineData>` için değerleri belirtmek için özniteliği kullanabilirsiniz.
-
-Yeni testler oluşturmak yerine, tek bir teori oluşturmak için bu iki özniteliği uygulayın. Teori, ikiden küçük birkaç değeri test eden bir yöntemdir ve bu yöntem en düşük asal sayıdır:
-
-[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-dotnet-test/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
-
-Çalıştır `dotnet test`Ve bu testlerin iki başarısız. Tüm testlerin geçmesi için yöntemin başındaki `if` tümceyi değiştirin:
+0 ve-1 için asal sayı testleri ekleyin. Önceki testi kopyalayabilir ve aşağıdaki kodu 0 ve-1 kullanacak şekilde değiştirebilirsiniz:
 
 ```vb
-if candidate < 2
+Dim result As Boolean = _primeService.IsPrime(1)
+
+Assert.False(result, "1 should not be prime")
 ```
 
-Ana kitaplığa daha fazla test, daha fazla teori ve daha fazla kod ekleyerek yinelemeye devam edin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tam uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb)sahipsiniz.
+Yalnızca bir parametre değiştiğinde test kodu kopyalama, kod yineleme ve test blobunun sonuçlarını değiştirir. Aşağıdaki xUnit öznitelikleri benzer testlerin bir paketini yazmayı etkinleştirir:
 
-O kitaplık için küçük bir kitaplık ve bir dizi birim testi inşa ettin. Yeni paketler ve testler eklemek normal iş akışının bir parçası olacak şekilde çözümü yapılandırdınız. Zamanınızın ve çabanızın çoğunu uygulamanın hedeflerini çözmeye yoğunlaşmışsınız.
+- `[Theory]`aynı kodu çalıştıran, ancak farklı giriş bağımsız değişkenlerine sahip olan testlerin paketini temsil eder.
+- `[InlineData]`öznitelik, bu girişlerin değerlerini belirtir.
+
+Yeni test oluşturmak yerine, tek bir teorisi oluşturmak için önceki xUnit özniteliklerini uygulayın. Aşağıdaki kodu değiştirin:
+
+```vb
+<Fact>
+Sub IsPrime_InputIs1_ReturnFalse()
+    Dim result As Boolean = _primeService.IsPrime(1)
+
+    Assert.False(result, "1 should not be prime")
+End Sub
+```
+
+aşağıdaki kodla:
+
+```vb
+<Theory>
+<InlineData(-1)>
+<InlineData(0)>
+<InlineData(1)>
+Sub IsPrime_ValuesLessThan2_ReturnFalse(ByVal value As Integer)
+    Dim result As Boolean = _primeService.IsPrime(value)
+
+    Assert.False(result, $"{value} should not be prime")
+End Sub
+```
+
+Önceki kodda, `[Theory]` `[InlineData]` ikiden küçük olan birkaç değeri test etmeyi etkinleştirin. İki, en küçük asal sayıdır.
+
+Çalıştırılan `dotnet test` testlerin ikisi de başarısız olur. Tüm testlerin geçişini yapmak için `IsPrime` yöntemini aşağıdaki kodla güncelleştirin:
+
+```vb
+Public Function IsPrime(candidate As Integer) As Boolean
+    If candidate < 2 Then
+        Return False
+    End If
+    Throw New NotImplementedException("Not fully implemented.")
+End Function
+```
+
+TDD yaklaşımını izleyerek, daha fazla başarısız test ekleyin ve ardından hedef kodu güncelleştirin. [Testlerin tamamlanmış sürümüne](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb) ve [kitaplığın tüm uygulamasına](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.vb)bakın.
+
+Tamamlanan `IsPrime` Yöntem, test açısından etkili bir algoritma değildir.
+
+### <a name="additional-resources"></a>Ek kaynaklar
+
+- [xUnit.net resmi site](https://xunit.net/)
+- [ASP.NET Core 'de test denetleyicisi mantığı](/aspnet/core/mvc/controllers/testing)
+- [`dotnet add reference`](../tools/dotnet-add-reference.md)

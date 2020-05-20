@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-ms.openlocfilehash: 1b07029990ef529ded57bc569beff1061ad0f938
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 52da5ec7ccd6ce48871e13a94f5957fa00d2a613
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140873"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703541"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime Yöntemi
 
-Bir barındırma ilkesi, yönetilen derleme, sürüm dizesi ve yapılandırma akışı temelinde ortak dil çalışma zamanının (CLR) tercih edilen bir sürümüne arabirim sağlar. Bu yöntem, CLR 'yi gerçekten yüklemez veya etkinleştirmez, ancak ilke sonucunu temsil eden [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimini geri döndürür. Bu yöntem, [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)ve [GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) yöntemlerinin yerini alır.
+Bir barındırma ilkesi, yönetilen derleme, sürüm dizesi ve yapılandırma akışı temelinde ortak dil çalışma zamanının (CLR) tercih edilen bir sürümüne arabirim sağlar. Bu yöntem, CLR 'yi gerçekten yüklemez veya etkinleştirmez, ancak ilke sonucunu temsil eden [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimini geri döndürür. Bu yöntem, [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)ve [GetCORRequiredVersion](getcorrequiredversion-function.md) yöntemlerinin yerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetRequestedRuntime(
@@ -46,28 +46,28 @@ HRESULT GetRequestedRuntime(
 
 |Name|Açıklama|
 |----------|-----------------|
-|`dwPolicyFlags`|'ndaki Gerekli. Bir bağlama ilkesini ve herhangi bir sayıda değiştiriciyi temsil eden [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) numaralandırması üyesini belirtir. Şu anda kullanılabilir olan tek ilke [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)' dir.<br /><br /> Değiştiriciler şunlardır [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)ve [METAHOST_POLICY_ ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
+|`dwPolicyFlags`|'ndaki Gerekli. Bir bağlama ilkesini ve herhangi bir sayıda değiştiriciyi temsil eden [METAHOST_POLICY_FLAGS](metahost-policy-flags-enumeration.md) numaralandırması üyesini belirtir. Şu anda kullanılabilir olan tek ilke [METAHOST_POLICY_HIGHCOMPAT](metahost-policy-flags-enumeration.md).<br /><br /> Değiştiriciler [METAHOST_POLICY_EMULATE_EXE_LAUNCH](metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](metahost-policy-flags-enumeration.md)ve [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](metahost-policy-flags-enumeration.md)içerir.|
 |`pwzBinary`|'ndaki Seçim. Derleme dosyası yolunu belirtir.|
-|`pCfgStream`|'ndaki Seçim. Yapılandırma dosyasını <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>olarak belirtir.|
+|`pCfgStream`|'ndaki Seçim. Yapılandırma dosyasını bir olarak belirtir <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> .|
 |`pwzVersion`|[in, out] Seçim. Yüklenecek tercih edilen CLR sürümünü belirtir veya döndürür.|
-|`pcchVersion`|[in, out] Gerekli. Arabellek taşmalarını önlemek için beklenen `pwzVersion` boyutunu giriş olarak belirtir. `pwzVersion` null ise, `pcchVersion`, ön ayırmaya izin vermek için `GetRequestedRuntime` döndüğünde beklenen `pwzVersion` boyutunu içerir; Aksi takdirde, `pcchVersion` `pwzVersion`yazılan karakter sayısını içerir.|
-|`pwzImageVersion`|dışı Seçim. `GetRequestedRuntime` döndüğünde, döndürülen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimine KARŞıLıK gelen CLR sürümünü içerir.|
-|`pcchImageVersion`|[in, out] Seçim. Arabellek taşmalarını önlemek için `pwzImageVersion`, giriş olarak boyutunu belirtir. `pwzImageVersion` null ise, `pcchImageVersion`, ön ayırmaya izin vermek için `GetRequestedRuntime` döndüğünde `pwzImageVersion` gereken boyutunu içerir.|
-|`pdwConfigFlags`|dışı Seçim. `GetRequestedRuntime` bağlama işlemi sırasında bir yapılandırma dosyası kullanıyorsa, `pdwConfigFlags`, [\<startup >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) öğesinin `useLegacyV2RuntimeActivationPolicy` özniteliği kümesine sahip olup olmadığını belirten bir [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) değeri içerir ve değerini özniteliği. `useLegacyV2RuntimeActivationPolicy`ilgili değerleri almak için `pdwConfigFlags` için [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) maskesini uygulayın.|
-|`riid`|'ndaki İstenen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi için IID_ICLRRuntimeInfo arabirim tanımlayıcısını belirtir.|
-|`ppRuntime`|dışı `GetRequestedRuntime` döndüğünde, karşılık gelen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimine bir işaretçi içerir.|
+|`pcchVersion`|[in, out] Gerekli. `pwzVersion`Arabellek taşmalarını önlemek için, giriş olarak beklenen boyutu belirtir. `pwzVersion`Null ise, `pcchVersion` `pwzVersion` `GetRequestedRuntime` ön ayırmaya izin vermek için, geri dönüşün beklenen boyutunu içerir; Aksi takdirde, `pcchVersion` üzerine yazılan karakter sayısını içerir `pwzVersion` .|
+|`pwzImageVersion`|dışı Seçim. `GetRequestedRuntime`Döndüğünde, döndürülen [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) ARABIRIMINE karşılık gelen CLR sürümünü içerir.|
+|`pcchImageVersion`|[in, out] Seçim. `pwzImageVersion`Arabellek taşmalarını önlemek için giriş olarak boyutu belirtir. `pwzImageVersion`Null ise, `pcchImageVersion` `pwzImageVersion` `GetRequestedRuntime` ön ayırmaya izin vermek için, geri dönüşün gereken boyutunu içerir.|
+|`pdwConfigFlags`|dışı Seçim. `GetRequestedRuntime`Bağlama işlemi sırasında bir yapılandırma dosyası kullanıyorsa, bu, döndüğünde, `pdwConfigFlags` [ \< Başlangıç>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) öğesinin öznitelik kümesine sahip olup olmadığını ve özniteliği değerini belirten [METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md) bir değer içerir `useLegacyV2RuntimeActivationPolicy` . İle [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](metahost-config-flags-enumeration.md) `pdwConfigFlags` ilgili değerleri almak için METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK maskesini uygulayın `useLegacyV2RuntimeActivationPolicy` .|
+|`riid`|'ndaki İstenen [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi için IID_ICLRRuntimeInfo arabirim tanımlayıcısını belirtir.|
+|`ppRuntime`|dışı `GetRequestedRuntime`Döndüğünde, karşılık gelen [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimine bir işaretçi içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yöntem başarılı olduğunda, ek bayrakları, döndürülen çalışma zamanı arabiriminin geçerli varsayılan başlatma bayraklarıyla Birleştirme yan etkisi vardır ve yalnızca `<configuration><runtime>` içindeki yapılandırma akışında aşağıdaki öğelerden biri veya birkaçı varsa kısmı
+Bu yöntem başarılı olduğunda, ek bayrakları, döndürülen çalışma zamanı arabiriminin geçerli varsayılan başlatma bayraklarıyla birleştirmenin yan etkisi vardır ve yalnızca, bölüm içindeki yapılandırma akışında aşağıdaki öğelerden biri veya birkaçı varsa `<configuration><runtime>` :
 
-- `<gcServer enabled="true"/>` `STARTUP_SERVER_GC` ayarlamaya neden olur.
+- `<gcServer enabled="true"/>``STARTUP_SERVER_GC`ayarlanmasının nedeni.
 
-- `<etwEnable enabled="true"/>` `STARTUP_ETW` ayarlamaya neden olur.
+- `<etwEnable enabled="true"/>``STARTUP_ETW`ayarlanmasının nedeni.
 
-- `<appDomainResourceMonitoring enabled="true"/>` `STARTUP_ARM` ayarlamaya neden olur.
+- `<appDomainResourceMonitoring enabled="true"/>``STARTUP_ARM`ayarlanmasının nedeni.
 
-Elde edilen varsayılan `STARTUP_FLAGS` değeri, yukarıdaki listeden varsayılan başlangıç bayraklarıyla ayarlanan değerlerin bit seviyesinde veya birleşimidir.
+Elde edilen varsayılan `STARTUP_FLAGS` değer, yukarıdaki listeden varsayılan başlangıç bayraklarıyla ayarlanan değerlerin bit SEVIYESINDE veya birleşimidir.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
@@ -76,24 +76,24 @@ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını be
 |HRESULT|Açıklama|
 |-------------|-----------------|
 |S_OK|Yöntem başarıyla tamamlandı.|
-|E_POINTER|`pwzVersion` null değil ve `pcchVersion` null.<br /><br /> veya<br /><br /> `pwzImageVersion` null değil ve `pcchImageVersion` null.|
-|E_INVALIDARG|`dwPolicyFlags` `METAHOST_POLICY_HIGHCOMPAT`belirtmiyor.|
-|ERROR_INSUFFICIENT_BUFFER|`pwzVersion` için ayrılan bellek yetersiz.<br /><br /> veya<br /><br /> `pwzImageVersion` için ayrılan bellek yetersiz.|
-|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags`, METAHOST_POLICY_APPLY_UPGRADE_POLICY içerir ve hem `pwzVersion` hem de `pcchVersion` null.|
+|E_POINTER|`pwzVersion`null değil ve `pcchVersion` null.<br /><br /> -veya-<br /><br /> `pwzImageVersion`null değil ve `pcchImageVersion` null.|
+|E_INVALIDARG|`dwPolicyFlags`belirtmiyor `METAHOST_POLICY_HIGHCOMPAT` .|
+|ERROR_INSUFFICIENT_BUFFER|Ayrılan bellek `pwzVersion` yetersiz.<br /><br /> -veya-<br /><br /> Ayrılan bellek `pwzImageVersion` yetersiz.|
+|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags`METAHOST_POLICY_APPLY_UPGRADE_POLICY içerir ve her ikisi `pwzVersion` de `pcchVersion` null.|
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi:** MetaHost. h
 
 **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRMetaHostPolicy Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)
-- [.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHostPolicy Arabirimi](iclrmetahostpolicy-interface.md)
+- [.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

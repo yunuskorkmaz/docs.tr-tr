@@ -1,32 +1,32 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888182"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702264"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo ve TextElementEnumerator artık UAX29 uyumlu
 
-Bu değişiklik önce <xref:System.Globalization.StringInfo?displayProperty=fullName> <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName> ve düzgün tüm grafme kümeleri işlemedi. Bazı grafemeler bir arada tutulmak yerine bileşenlerine bölündü. Şimdi, <xref:System.Globalization.StringInfo> <xref:System.Globalization.TextElementEnumerator> ve Unicode Standardı'nın en son sürümüne göre grafen kümeleri işleme.
+Bu değişiklikten önce, <xref:System.Globalization.StringInfo?displayProperty=fullName> <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName> Tüm grafem kümelerini düzgün şekilde işlemedi. Bazı graphemes, birlikte tutulması yerine bileşen bileşenlerine bölündü. Şimdi, <xref:System.Globalization.StringInfo> <xref:System.Globalization.TextElementEnumerator> Unicode standardının en son sürümüne göre grafem kümelerini işleyin.
 
-Buna ek <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> olarak, Visual Basic'teki bir dizedeki karakterleri tersine çeviren yöntem, şimdi grafme kümeleri için Unicode standardını da izler.
+Ayrıca, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> Visual Basic bir dizedeki karakterleri ters döndüren yöntem, artık grafem kümeleri için Unicode standardını da izler.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-[Grafeme](https://www.unicode.org/glossary/#grapheme) veya [genişletilmiş grafeme kümesi,](https://www.unicode.org/glossary/#extended_grapheme_cluster) birden çok Unicode kod noktasından oluşabilir tek bir kullanıcı tarafından algılanan karakterdir. Örneğin, Tay karakteri "kam" ():::no-loc text="กำ":::içeren dize aşağıdaki iki karakterden oluşur:
+[Grafem](https://www.unicode.org/glossary/#grapheme) veya [genişletilmiş grafem kümesi](https://www.unicode.org/glossary/#extended_grapheme_cluster) , birden çok Unicode kod noktasından oluşan tek bir kullanıcı tarafından algılanan karakterdir. Örneğin, "kaI" () Tayland karakterini içeren dize :::no-loc text="กำ"::: aşağıdaki iki karakterden oluşur:
 
-- :::no-loc text="ก":::(= '\u0e01') TAY KARAKTER KO KAI
-- :::no-loc text=" ำ":::(= '\u0e33') TAY KARAKTER SARA
+- :::no-loc text="ก":::(= ' \u0e01 ') TAY DILI KO KAI KARAKTERI
+- :::no-loc text=" ำ":::(= ' \u0e33 ') TAY DILI SARA HAR KARAKTERI
 
-Kullanıcıya görüntülendiğinde, işletim sistemi tek ekran karakteri (veya grapheme) "kam" veya :::no-loc text="กำ":::. Emoji, benzer şekilde görüntülenmek için birleştirilen birden çok karakterden de oluşabilir.
+Kullanıcıya görüntülendiğinde, işletim sistemi iki karakteri birleştirerek tek bir görüntüleme karakteri (veya grapheme) "kam" ya da oluşturur :::no-loc text="กำ"::: . Emoji Ayrıca, benzer bir şekilde görüntülenmek üzere birleştirilmiş birden fazla karakterden oluşabilir.
 
 > [!TIP]
-> .NET dokümantasyonu bazen grafiğe atıfta bulunarak "metin öğesi" terimini kullanır.
+> .NET belgeleri bazen bir grapheme 'ya başvururken "metin öğesi" terimini kullanır.
 
-Ve <xref:System.Globalization.StringInfo> <xref:System.Globalization.TextElementEnumerator> sınıflar dizeleri inceler ve içerdikleri grafimeler hakkında bilgi döndürün. .NET Framework (tüm sürümler) ve .NET Core 3.x ve daha önce, bu iki sınıf bazı birleştirme sınıfları işleyen ancak [Unicode Standardına](https://www.unicode.org/reports/tr29/tr29-35.html#Grapheme_Cluster_Boundaries)tam olarak uymayan özel mantık kullanır. Örneğin, <xref:System.Globalization.StringInfo> ve <xref:System.Globalization.TextElementEnumerator> sınıflar yanlış yerine onları bir arada tutmak yerine kurucu bileşenlerine tek Tay karakteri "kam" bölünmüş. Bu sınıflar ayrıca yanlış bir şekilde emoji karakterini "🤷🏽 ♀️" olarak tek bir grafi kümesi olarak bir arada tutmak yerine dört kümeye (kişi omuz silkme, cilt tonu değiştirici, cinsiyet değiştirici ve görünmez bir birleşimleyici) böler.
+<xref:System.Globalization.StringInfo>Ve <xref:System.Globalization.TextElementEnumerator> sınıfları dizeleri inceler ve içerdikleri grafemes hakkındaki bilgileri döndürür. .NET Framework (tüm sürümler) ve .NET Core 3. x ve önceki sürümlerde, bu iki sınıf birleştirme bazı sınıfları işleyen ancak [Unicode standardına](https://www.unicode.org/reports/tr29/tr29-35.html#Grapheme_Cluster_Boundaries)tam olarak uyumlu olmayan özel mantık kullanır. Örneğin, <xref:System.Globalization.StringInfo> ve sınıfları, <xref:System.Globalization.TextElementEnumerator> tek Tayland "Kad" karakterini birlikte tutmak yerine onun bileşen bileşenlerine doğru şekilde ayırır. Bu sınıflar ayrıca "🤷🏽 ♀️" emoji karakterini, tek bir grafem kümesi olarak birlikte tutmak yerine dört kümeye (Person Shrugging, Skin Tone değiştirici, cinsiyet değiştiricisi ve görünmeyen bir birleştirici) yanlış şekilde ayırır.
 
-.NET 5 ile <xref:System.Globalization.StringInfo> başlayarak, ve <xref:System.Globalization.TextElementEnumerator> sınıflar [Unicode Standart \#Ek 29, rev. 35, sn. 3](https://www.unicode.org/reports/tr29/tr29-35.html)tarafından tanımlanan Unicode standardını uygular. Özellikle, şimdi tüm birleştirici sınıflar için [genişletilmiş grafme kümeleri](https://www.unicode.org/glossary/#extended_grapheme_cluster) döndürün.
+.NET 5 ' den itibaren, <xref:System.Globalization.StringInfo> ve <xref:System.Globalization.TextElementEnumerator> sınıfları [Unicode standart ek \# 29, Rev. 35, sec. 3](https://www.unicode.org/reports/tr29/tr29-35.html)tarafından tanımlanan şekilde Unicode standardı uygular. Özellikle, artık tüm birleştirme sınıfları için [genişletilmiş grafem kümeleri](https://www.unicode.org/glossary/#extended_grapheme_cluster) döndürüyor.
 
 Aşağıdaki C# kodunu göz önünde bulundurun:
 
@@ -55,7 +55,7 @@ static void PrintGraphemes(string str)
 }
 ```
 
-.NET Framework ve .NET Core 3.x ve önceki sürümlerde grafemeler ayrılır ve konsol çıktısı aşağıdaki gibidir:
+.NET Framework ve .NET Core 3. x ve önceki sürümlerinde, grak 'lar bölünür ve konsol çıktısı aşağıdaki gibidir:
 
 ```txt
 Printing graphemes of "กำ"...
@@ -71,7 +71,7 @@ Grapheme 4: "♀️"
 (4 grapheme(s) total.)
 ```
 
-.NET 5 ve sonraki sürümlerde grafemeler bir arada tutulur ve konsol çıktısı aşağıdaki gibidir:
+.NET 5 ve sonraki sürümlerinde, graphemes birlikte tutulur ve konsol çıktısı aşağıdaki gibidir:
 
 ```txt
 Printing graphemes of "กำ"...
@@ -83,29 +83,31 @@ Grapheme 1: "🤷🏽‍♀️"
 (1 grapheme(s) total.)
 ```
 
-Buna ek olarak, .NET <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> 5'ten başlayarak Visual Basic'teki bir dizedeki karakterleri tersine çeviren yöntem, şimdi grafme kümeleri için Unicode standardını da izler.
+Ayrıca, .NET 5 ' ten itibaren, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> Visual Basic bir dizedeki karakterleri ters döndüren yöntem, artık grafem kümeleri için Unicode standardını da izler.
 
-Bu değişiklikler, .NET Core 3.0 <xref:System.Text.Rune?displayProperty=fullName> türüyle tanıtılan Unicode skaler değer numaralandırma API'lerini tamamlamak için genişletilmiş bir grafeme küme numaralandırma API'si de dahil olmak üzere .NET'teki daha geniş bir Unicode ve UTF-8 iyileştirmelerinin bir parçasıdır.
+Bu değişiklikler .net <xref:System.Text.Rune?displayProperty=fullName> Core 3,0 ' de bulunan türle birlikte sunulan Unicode skaler değer numaralandırma API 'lerini tamamlamak için genişletilmiş bir grafem kümesi sıralama API 'si de dahil olmak üzere, .net 'teki daha geniş bir Unicode ve UTF-8 geliştirmelerinden oluşan bir parçasıdır.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5.0 Önizleme 1
+.NET 5,0 Preview 1
 
-### <a name="recommended-action"></a>Önerilen eylem
+#### <a name="recommended-action"></a>Önerilen eylem
 
-Harekete geçmene gerek yok. Uygulamalarınız, küreselleşmeyle ilgili çeşitli senaryolarda otomatik olarak standartlara uygun bir şekilde davranacaktır.
+Herhangi bir işlem yapmanız gerekmez. Uygulamalarınız, Genelleştirme ile ilgili çeşitli senaryolarda otomatik olarak daha fazla standartlara uygun bir şekilde davranır.
 
-### <a name="category"></a>Kategori
+#### <a name="category"></a>Kategori
 
 Genelleştirme
 
-### <a name="affected-apis"></a>Etkilenen API’ler
+#### <a name="affected-apis"></a>Etkilenen API’ler
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

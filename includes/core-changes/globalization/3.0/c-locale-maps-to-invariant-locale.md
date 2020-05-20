@@ -1,37 +1,39 @@
 ---
-ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0551fa086644497c631cd9b6d7058398ff9ccfa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567775"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702320"
 ---
-### <a name="c-locale-maps-to-the-invariant-locale"></a>Değişmez yerel ekiyle "C" yerel eşlemleri
+### <a name="c-locale-maps-to-the-invariant-locale"></a>"C" yerel ayarı, sabit yerel ayara eşlenir
 
-.NET Core 2.2 ve önceki sürümler, "C" yerelsini en_US_POSIX yerel le eşleyen varsayılan Yoğun Bakım Davranışı'na bağlıdır. Büyük/küçük harf duyarsız dize karşılaştırmalarını desteklemediği için en_US_POSIX yerel alanı istenmeyen bir harmanlama davranışına sahiptir. Bazı Linux dağıtımları "C" yerel ayarını varsayılan yerel ayar olarak ayarladıklarından, kullanıcılar beklenmeyen davranışlar yaşıyordu.
+.NET Core 2,2 ve önceki sürümleri, "C" yerel ayarını en_US_POSIX yerel ayarıyla eşleyen varsayılan ıCU davranışına bağımlıdır. Büyük/küçük harfe duyarsız dize karşılaştırmaları desteklemediğinden en_US_POSIX yerel ayarı istenmeyen harmanlama davranışına sahiptir. Bazı Linux dağıtımları varsayılan yerel ayar olarak "C" yerel ayarını ayarlamadığı için, kullanıcılar beklenmeyen davranışlarla karşılaşıyor.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3.0 ile başlayarak, "C" yerel eşleme en_US_POSIX yerine Değişmez yerel eşlemi kullanmak üzere değiştirildi. Değişmez eşleme için "C" yerel eşleme tutarlılık için Windows'a da uygulanır.
+.NET Core 3,0 ile başlayarak, "C" yerel ayar eşlemesi en_US_POSIX yerine sabit yerel ayarı kullanacak şekilde değiştirilmiştir. Sabit eşleme için "C" yerel ayarı Windows 'a tutarlılık için de uygulanır.
 
-"C"yi en_US_POSIX kültüre eşleme, en_US_POSIX hızlı servis talebi duyarsız sıralama/arama dize işlemlerini desteklemediği için müşteri karışıklığına neden oldu. "C" yerel alanı, Linux dağıtımlarının bazılarında varsayılan bir yerel alan olarak kullanıldığından, müşteriler bu işletim sistemlerinde bu istenmeyen davranışı yaşadılar.
+"C" öğesini en_US_POSIX kültür ile eşleme, müşteri karışıklığına neden oldu, çünkü en_US_POSIX büyük/küçük harfe duyarsız sıralama/arama dizesi işlemlerini desteklemez "C" yerel ayarı bazı Linux dışı bir yerel ayar olarak kullanıldığından, müşteriler bu işletim sistemlerinde bu istenmeyen davranışla karşılaşmıştır.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
-### <a name="recommended-action"></a>Önerilen eylem
+#### <a name="recommended-action"></a>Önerilen eylem
 
-Bu değişikliğin farkındalığından daha özel bir şey yok. Bu değişiklik yalnızca "C" yerel eşleme eşlemesi kullanan uygulamaları etkiler.
+Bu değişikliğin farkından daha fazla hiçbir şey yok. Bu değişiklik yalnızca "C" yerel ayar eşlemesini kullanan uygulamaları etkiler.
 
-### <a name="category"></a>Kategori
+#### <a name="category"></a>Kategori
 
 Genelleştirme
 
-### <a name="affected-apis"></a>Etkilenen API’ler
+#### <a name="affected-apis"></a>Etkilenen API’ler
 
-Tüm harmanlama ve kültür API'leri bu değişiklikden etkilenir.
+Tüm harmanlama ve kültür API 'Leri bu değişiklikten etkilenir.
 
 <!--
+
+#### Affected APIs
 
 -->

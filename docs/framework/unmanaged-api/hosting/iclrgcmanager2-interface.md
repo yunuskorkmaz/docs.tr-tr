@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: 72ffd7b47795ee8e46f8fbff07559133843793e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f3ecc0d497eaee937647df47ba0956335a2fe41
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141150"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703947"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 Arabirimi
 Bir konağın ortak dil çalışma zamanının çöp toplama sistemiyle etkileşime geçmesini sağlayan yöntemler sağlar.  
@@ -28,27 +28,27 @@ Bir konağın ortak dil çalışma zamanının çöp toplama sistemiyle etkileş
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0 ' nın en büyük boyutunu ayarlar. Nesil 0 ve kesim boyutlarını `DWORD`daha büyük bir şekilde sunar.|  
+|[SetGCStartupLimitsEx Yöntemi](iclrgcmanager2-setgcstartuplimitsex-method.md)|Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0 ' nın en büyük boyutunu ayarlar. 1. nesil ve kesim boyutlarını daha büyük olarak sunar `DWORD` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim [ICLRGCManager arabiriminden](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)devralır.  
+ Bu arabirim [ICLRGCManager arabiriminden](iclrgcmanager-interface.md)devralır.  
   
- Ortak dil çalışma zamanı (CLR), atık toplama mekanizmasını yönetilen <xref:System.GC> türüyle uygular. Çöp toplama sistemi hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
+ Ortak dil çalışma zamanı (CLR), kendi çöp toplama mekanizmasını yönetilen türle uygular <xref:System.GC> . Çöp toplama sistemi hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik Bellek Yönetimi](../../../standard/automatic-memory-management.md)
-- [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Otomatik bellek yönetimi](../../../standard/automatic-memory-management.md)
+- [COR_GC_STATS Yapısı](cor-gc-stats-structure.md)
+- [ICLRControl Arabirimi](iclrcontrol-interface.md)
+- [.NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

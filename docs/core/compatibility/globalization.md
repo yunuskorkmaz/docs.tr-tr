@@ -1,24 +1,29 @@
 ---
-title: Küreselleşme kırılma değişiklikleri
-description: .NET Core'da küreselleşmedeki kırılma değişikliklerini listeler.
+title: Genelleştirme son değişiklikleri
+description: .NET Core 'da Genelleştirme 'deki son değişiklikleri listeler.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1436f9e2ec540b0f8b1e710b25c2115646d4e5b4
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 0c3367cb3515c6f473f53be6062b54f2e836b8c5
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888181"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702318"
 ---
-# <a name="globalization-breaking-changes"></a>Küreselleşme kırılma değişiklikleri
+# <a name="globalization-breaking-changes"></a>Genelleştirme son değişiklikleri
 
-Aşağıdaki kesme değişiklikleri bu sayfada belgelenmiştir:
+Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
-| Son dakika değişikliği | Sürüm tanıtıldı |
+| Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Genelleştirme API 'Leri Windows üzerinde ıCU kitaplıklarını kullanır](#globalization-apis-use-icu-libraries-on-windows) | 5.0 |
 | [StringInfo ve TextElementEnumerator artık UAX29 uyumlu](#stringinfo-and-textelementenumerator-are-now-uax29-compliant) | 5.0 |
-| [Değişmez yerel ekiyle "C" yerel eşlemleri](#c-locale-maps-to-the-invariant-locale) | 3,0 |
+| ["C" yerel ayarı, sabit yerel ayara eşlenir](#c-locale-maps-to-the-invariant-locale) | 3.0 |
 
-## <a name="net-50"></a>.NET 5.0
+## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [icu-globalization-api](../../../includes/core-changes/globalization/5.0/icu-globalization-api.md)]
+
+***
 
 [!INCLUDE [uax29-compliant-grapheme-enumeration](../../../includes/core-changes/globalization/5.0/uax29-compliant-grapheme-enumeration.md)]
 

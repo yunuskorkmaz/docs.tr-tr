@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: 1a1bc7609042422de876fe167a9e61655aaf62b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 070c52258b66dcc352f2beef81b9a0694b8301ce
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176415"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703280"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain Yöntemi
-Belirtilen yönetilen derlemede belirtilen türde belirtilen yöntemi çağırır.  
+Belirtilen yönetilen derlemede belirtilen türde belirtilen metodu çağırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ExecuteInDefaultAppDomain (  
@@ -39,49 +39,49 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="parameters"></a>Parametreler  
  `pwzAssemblyPath`  
- [içinde] <xref:System.Reflection.Assembly> Kimin yönteminin <xref:System.Type> çağrılmasını tanımlayan yol.  
+ 'ndaki <xref:System.Reflection.Assembly>Yöntemi çağrılacak öğesini tanımlayan öğesine yolu <xref:System.Type> .  
   
  `pwzTypeName`  
- [içinde] <xref:System.Type> Çağırmak için yöntemi tanımlayan adı.  
+ 'ndaki <xref:System.Type>Çağrılacak yöntemi tanımlayan öğesinin adı.  
   
  `pwzMethodName`  
- [içinde] Çağırmak için yöntemin adı.  
+ 'ndaki Çağrılacak yöntemin adı.  
   
  `pwzArgument`  
- [içinde] Yönteme geçmek için dize parametresi.  
+ 'ndaki Yönteme geçirilecek dize parametresi.  
   
  `pReturnValue`  
- [çıkış] Çağrılan yöntem tarafından döndürülen tümseci değeri.  
+ dışı Çağrılan yöntem tarafından döndürülen tamsayı değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain`başarıyla döndürülür.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
-|HOST_E_TIMEOUT|Arama zaman doldu.|  
-|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
+|S_OK|`ExecuteInDefaultAppDomain`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürürse, CRL artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CRL artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağrılan yöntemaşağıdaki imzaya sahip olmalıdır:  
+ Çağrılan yöntem aşağıdaki imzaya sahip olmalıdır:  
   
 ```cpp  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- çağrılan `pwzMethodName` yöntemin adını temsil eder `pwzArgument` ve bu yönteme parametre olarak geçen dize değerini temsil eder. HRESULT değeri S_OK olarak ayarlanırsa, `pReturnValue` çağrılan yöntem tarafından döndürülen tamsayı değerine ayarlanır. Aksi `pReturnValue` takdirde, ayarlanmaz.  
+ , `pwzMethodName` çağrılan yöntemin adını temsil eder ve `pwzArgument` Bu yönteme parametre olarak geçirilen dize değerini temsil eder. HRESULT değeri S_OK olarak ayarlandıysa, `pReturnValue` çağrılan yöntem tarafından döndürülen tamsayı değerine ayarlanır. Aksi takdirde, `pReturnValue` ayarlı değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost Arabirimi](iclrruntimehost-interface.md)
