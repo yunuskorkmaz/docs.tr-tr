@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0036fc10-e768-47a8-b9cf-bf47faf8d194
 topic_type:
 - apiref
-ms.openlocfilehash: 00be35e9a15349b8bca5f76b948b8477dd240888
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8e20d2e0f3d5cb6dc7444c8e78665b6c8b82d2de
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449244"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441480"
 ---
 # <a name="isymunmanagedconstantgetvalue-method"></a>ISymUnmanagedConstant::GetValue Metodu
 Sabitin değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetValue(  
@@ -45,6 +45,6 @@ HRESULT GetValue(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedConstant Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetSignature Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+- [ISymUnmanagedConstant Arabirimi](isymunmanagedconstant-interface.md)
+- [GetName Yöntemi](isymunmanagedconstant-getname-method.md)
+- [GetSignature Yöntemi](isymunmanagedconstant-getsignature-method.md)

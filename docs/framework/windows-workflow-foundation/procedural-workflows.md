@@ -1,19 +1,20 @@
 ---
 title: Yordam İş Akışları
+description: Workflow Foundation 'da, yordamsal iş akışları, yordamsal dillerde bulunanlara benzer akış denetimi yöntemlerini kullanır.
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: d1edd73b2276d0a3918b61c8da2d04769d09e7c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 97664c1352928e7d05c2ed15fc118dd21474cfc3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956111"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421442"
 ---
 # <a name="procedural-workflows"></a>Yordam İş Akışları
-Yordamsal iş akışları, yordamsal dillerde bulunanlara benzer akış denetimi yöntemlerini kullanır. Bu yapılar ve `While` `If`içerir. Bu iş akışları <xref:System.Activities.Statements.Flowchart> , ve <xref:System.Activities.Statements.Sequence>gibi diğer akış denetimi etkinlikleri kullanılarak serbestçe oluşturulabilir.  
+Yordamsal iş akışları, yordamsal dillerde bulunanlara benzer akış denetimi yöntemlerini kullanır. Bu yapılar `While` ve içerir `If` . Bu iş akışları, ve gibi diğer akış denetimi etkinlikleri kullanılarak serbestçe oluşturulabilir <xref:System.Activities.Statements.Flowchart> <xref:System.Activities.Statements.Sequence> .  
   
 ## <a name="controlling-execution-flow"></a>Yürütme akışını denetleme  
- İş akışı etkinlik kitaplığı, yordamsal dillerde kullanılan akış denetimi yöntemlerinin çoğunu modellemeye yönelik etkinlikleri içerir. Bu güncelleştirmeler şunlardır:  
+ İş akışı etkinlik kitaplığı, yordamsal dillerde kullanılan akış denetimi yöntemlerinin çoğunu modellemeye yönelik etkinlikleri içerir. Bu modüller şunlardır:  
   
 - <xref:System.Activities.Statements.While>  
   

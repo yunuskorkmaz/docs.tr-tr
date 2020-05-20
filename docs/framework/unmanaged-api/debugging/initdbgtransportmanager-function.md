@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e18ceb25b9c58a9710ef967cb071e3ef55beea8c
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103284"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421052"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager İşlevi
 İşlem ve çalışma zamanı numaralandırması için uzak hedefe bağlanmak üzere aktarım yöneticisini başlatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT InitDbgTransportManager ();  
@@ -39,11 +39,11 @@ HRESULT InitDbgTransportManager ();
  E_OUTOFMEMORY  
  İşlev, bir taşıma yöneticisi için bellek ayıramadı.  
   
- E_FAıL (veya diğer E_ dönüş kodları)  
+ E_FAIL (veya diğer E_ dönüş kodları)  
  Diğer sorunlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CoreClrRemoteDebuggingInterfaces. h  
   

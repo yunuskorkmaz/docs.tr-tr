@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-ms.openlocfilehash: e7c60355d4c0e0f34f591a48270e388d0ff53a29
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d1076d5c1f4300666fbb1e91a8c0feddecd14e2f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790604"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421152"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset Yöntemi
 İmlecini numaralandırmanın başlangıcına taşımalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Reset ();  
 ```  
   
 ## <a name="parameters"></a>Parametreler  
- `Reset` hiçbir parametre alır.  
+ `Reset`Hiçbir parametre alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

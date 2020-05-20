@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449288"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441597"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 Arabirimi
-Sembol bağlayıcı arabirimini genişletir. `ISymUnmanagedBinder` arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.  
+Sembol bağlayıcı arabirimini genişletir. Bu arabirimi `QueryInterface` arabirimini uygulayan bir nesne çağırarak edinin `ISymUnmanagedBinder` .  
   
 > [!IMPORTANT]
 > Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
@@ -31,13 +31,13 @@ Sembol bağlayıcı arabirimini genişletir. `ISymUnmanagedBinder` arabirimini u
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetReaderFromCallback Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Kullanıcının bellekten hata ayıklama dizini bilgilerini elde etmek için bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` geri çağırma yoluyla uygulama veya sağlama olanağı sağlar|  
+|[GetReaderFromCallback Yöntemi](isymunmanagedbinder3-getreaderfromcallback-method.md)|Kullanıcının `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizini bilgilerini elde etmek için bir veya geri çağırma yoluyla veya sağlaması sağlar|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [ISymUnmanagedBinder2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder Arabirimi](isymunmanagedbinder-interface.md)
+- [ISymUnmanagedBinder2 Arabirimi](isymunmanagedbinder2-interface.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396919"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420987"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Iosdacınterface:: GetModuleData yöntemi
 
@@ -28,7 +28,7 @@ Verilen bir adreste yüklü olan modüle karşılık gelen verileri getirir.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetModuleData(
@@ -51,7 +51,7 @@ Belirtilen yöntem arabirimin bir parçasıdır `ISOSDacInterface` ve sanal yön
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  
 **.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

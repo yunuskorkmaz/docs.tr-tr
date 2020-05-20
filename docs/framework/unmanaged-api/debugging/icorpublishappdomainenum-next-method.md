@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178393"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421221"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next Yöntemi
-Geçerli konumdan başlayarak, şu anda işlemde bulunan belirtilen uygulama etki alanı sayısını alır.  
+Geçerli konumdan başlayarak, işlemde mevcut olan uygulama etki alanı sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next (  
@@ -38,22 +38,22 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametreler  
  `celt`  
- [içinde] Alınacak öğe sayısı.  
+ 'ndaki Alınacak öğe sayısı.  
   
  `objects`  
- [çıkış] Her biri bir uygulama etki alanını temsil eden, alınan [ICorPublishAppDomain](icorpublishappdomain-interface.md) nesnelerinin dizine işaretçi.  
+ dışı Her biri bir uygulama etki alanını temsil eden [ICorPublishAppDomain](icorpublishappdomain-interface.md) nesneleri dizisine yönelik bir işaretçi.  
   
  `pceltFetched`  
- [çıkış] Gerçekte döndürülen uygulama etki alanlarının sayısına işaretçi. Bu değer, varsa `celt` null olabilir.  
+ dışı Aslında döndürülen uygulama etki alanlarının sayısına yönelik işaretçi. Bu değer bir ise null olabilir `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

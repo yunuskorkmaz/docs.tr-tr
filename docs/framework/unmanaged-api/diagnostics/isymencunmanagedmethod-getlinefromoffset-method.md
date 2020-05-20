@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: 94a571a4bc01b805387aebe5a6e23bad0b735313
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448644"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441922"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset Yöntemi
-Bir uzaklığa ilişkin satır bilgilerini alır. Eğer (`dwOffset`) fark parametresi bir sıra noktası değilse, bu yöntem önceki uzaklığa ilişkin satır bilgilerini alır.  
+Bir uzaklığa ilişkin satır bilgilerini alır. Eğer fark parametresi ( `dwOffset` ) bir sıra noktası değilse, bu yöntem önceki uzaklığa ilişkin satır bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLineFromOffset(  
@@ -39,22 +39,22 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `dwOffset`  
- 'ndaki Sapmayı içeren bir `ULONG32`.  
+ 'ndaki `ULONG32`Bu, sapmayı içeren bir.  
   
  `pline`  
- dışı Satırı alan `ULONG32` işaretçisi.  
+ dışı Satırı alan bir işaretçisi `ULONG32` .  
   
  `pcolumn`  
- dışı Sütunu alan `ULONG32` için bir işaretçi.  
+ dışı Sütununu alan öğesine yönelik bir işaretçi `ULONG32` .  
   
  `pendLine`  
- dışı Bitiş satırını alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`Bitiş satırını alan bir işaretçisi.  
   
  `pendColumn`  
- dışı Bitiş sütununu alan `ULONG32` işaretçisi.  
+ dışı Bitiş sütununu alan öğesine yönelik bir işaretçi `ULONG32` .  
   
  `pdwStartOffset`  
- dışı İlişkili dizi noktasını alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`İlişkili dizi noktasını alan öğesine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -64,4 +64,4 @@ HRESULT GetLineFromOffset(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod Arabirimi](isymencunmanagedmethod-interface.md)

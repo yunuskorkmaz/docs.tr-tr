@@ -1,24 +1,25 @@
 ---
-title: Windows iş akışı senaryoları
+title: Windows Workflow senaryoları
+description: Yerleşik etkinlik kitaplığını kullanan senaryolar ve iş akışı hizmetleri etkinliklerini kullanarak senaryolar gibi Windows Workflow Foundation senaryoların örneklerini görüntüleyin.
 ms.date: 03/30/2017
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-ms.openlocfilehash: 9e4d4023ee18305b843c62785fa454bb1cbe2787
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c758d8f98380084886ab5e4465c8109e074e7d6f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785937"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421364"
 ---
 # <a name="scenario"></a>Senaryo
 
-Bu bölüm, Windows Workflow Foundation (WF) senaryo örnekleri içerir.  
+Bu bölüm Windows Workflow Foundation (WF) senaryolarının örneklerini içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Etkinlik Kitaplığı](activity-library.md) -senaryoları yerleşik etkinlik kitaplığı kullanarak gösteren örnekler içerir.  
+[Etkinlik kitaplığı](activity-library.md) -yerleşik etkinlik kitaplığını kullanan senaryoları gösteren örnekleri içerir.  
   
-[Hizmetleri](accessing-operationcontext.md) -iş akışı hizmetleri etkinliklerini kullanarak senaryoları gösteren örnekler içerir.  
+[Hizmetler](accessing-operationcontext.md) -iş akışı hizmetleri etkinliklerini kullanan senaryoları gösteren örnekleri içerir.  
   
-[WPF ve WF tümleştirmesi XAML](wpf-and-wf-integration-in-xaml.md) -tek bir XAML belgesi içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu yapmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.  
+[Xaml 'de WPF ve WF tümleştirmesi](wpf-and-wf-integration-in-xaml.md) -tek XAML belgesinde WINDOWS PRESENTATION FOUNDATION (WPF) ve WINDOWS Workflow FOUNDATION (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu gerçekleştirmek için örnek Windows Workflow Foundation (WF) ve XAML genişletilebilirliği kullanır.  
   
-[Dış kural kümesi Araç Seti](external-ruleset-toolkit.md) - yönetin ve bir veritabanında RuleSets düzenleyin yapmayı gösteren ve çalışma zamanında bir iş akışı bu RuleSets erişebilir.
+[Dış RuleSet Toolkit](external-ruleset-toolkit.md) -bir veritabanında RuleSets 'in nasıl yönetileceğini ve düzenleneceğini ve çalışma zamanında bu RuleSets 'ler iş akışından nasıl erişebileceğini gösterir.

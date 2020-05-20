@@ -1,35 +1,31 @@
 ---
 title: Özel SQLite sürümleri
-ms.date: 12/13/2019
+ms.date: 05/14/2020
 description: Yerel SQLite kitaplığı 'nın özel bir sürümünü nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15db10db26bc7c5017313ca020a0e1e528ba207a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746983"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440843"
 ---
 # <a name="custom-sqlite-versions"></a>Özel SQLite sürümleri
 
-Microsoft. Data. SQLite, SQLitePCLRaw üzerine kurulmuştur. Bir paket kullanarak veya bir SQLitePCLRaw sağlayıcısı yapılandırarak yerel SQLite kitaplığının özel sürümlerini kullanabilirsiniz.
+`Microsoft.Data.Sqlite`, üzerine kurulmuştur `SQLitePCLRaw` . Bir paket kullanarak veya bir sağlayıcıyı yapılandırarak yerel SQLite kitaplığının özel sürümlerini kullanabilirsiniz `SQLitePCLRaw` .
 
 ## <a name="bundles"></a>Paketi
 
-SQLitePCLRaw, farklı platformlarda doğru bağımlılıklara kolayca getirmeyi kolaylaştıran paket paketleri sağlar.
-
-Ana Microsoft. Data. SQLite paketi varsayılan olarak SQLitePCLRaw. bundle_e_sqlite3 ' ye getirir.
-
-Farklı bir paket kullanmak için, kullanmak istediğiniz `Microsoft.Data.Sqlite.Core` paket paketiyle birlikte bunun yerine paketini de yükleyebilirsiniz. Paketleri Microsoft. Data. SQLite tarafından otomatik olarak başlatılır.
+`SQLitePCLRaw`, farklı platformlarda doğru bağımlılıklara kolayca gelmesini kolaylaştıran, kullanışlı tabanlı paket paketleri sağlar. Ana `Microsoft.Data.Sqlite` paket varsayılan olarak ' i sunar `SQLitePCLRaw.bundle_e_sqlite3` . Farklı bir paket kullanmak için, kullanmak istediğiniz paket `Microsoft.Data.Sqlite.Core` paketiyle birlikte bunun yerine paketini de yükleyebilirsiniz. Paketleri tarafından otomatik olarak başlatılır `Microsoft.Data.Sqlite` .
 
 | Paket | Açıklama |
-| --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve R * ağaç uzantılarını içerir. Bu varsayılandır. |
-| SQLitePCLRaw. bundle_green | System SQLite kitaplığını kullandığı iOS dışında bundle_e_sqlite3 ile aynıdır. |
-| SQLitePCLRaw. bundle_zetetic | Zetetik 'dan (dahil değil) resmi SQLCipher derlemelerini kullanır. |
-| SQLitePCLRaw. bundle_winsqlite3 | Windows 10 ' da sistem SQLite kitaplığı olan winsqlite3. dll ' yi kullanır. |
-| SQLitePCLRaw. bundle_e_sqlcipher | , Bir SQLCipher 'ın resmi olmayan, açık kaynaklı bir derlemesini sağlar. |
+|--|--|
+| [SQLitePCLRaw. bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve R * ağaç uzantılarını içerir. Bu varsayılandır. |
+| [SQLitePCLRaw. bundle_e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlcipher) | Resmi olmayan, açık kaynaklı bir yapı sağlar `SQLCipher` . |
+| [SQLitePCLRaw. bundle_green](https://www.nuget.org/packages/SQLitePCLRaw.bundle_green) | `bundle_e_sqlite3`İOS dışında, sistem SQLite kitaplığını kullandığında, ile aynıdır. |
+| [SQLitePCLRaw. bundle_winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_winsqlite3) | `winsqlite3.dll`, Windows 10 ' da sistem SQLite Kitaplığı ' nı kullanır. |
+| [SQLitePCLRaw. bundle_zetetic](https://www.nuget.org/packages/SQLitePCLRaw.bundle_zetetic) | `SQLCipher`Zetetik 'dan (dahil değil) resmi derlemeler kullanır. |
 
-Örneğin, bir SQLCipher 'ın resmi olmayan, açık kaynaklı derlemesini kullanmak için aşağıdaki komutları kullanın.
+Örneğin, resmi olmayan, açık kaynaklı bir derlemesini kullanmak için `SQLCipher` aşağıdaki komutları kullanın.
 
 ### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
@@ -47,14 +43,51 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ---
 
-## <a name="sqlitepclraw-providers"></a>SQLitePCLRaw sağlayıcıları
+## <a name="sqlitepclraw-available-providers"></a>SQLitePCLRaw kullanılabilir sağlayıcılar
 
-`SQLitePCLRaw.provider.dynamic_cdecl` Paketten yararlanarak kendi SQLite yapınızı kullanabilirsiniz. Bu durumda, yerel kitaplığı uygulamanızla dağıtmaktan sorumlu olursunuz. Bu şekilde, uygulamanıza yerel kitaplıklar dağıtmanın ayrıntıları, kullandığınız .NET platformu ve çalışma zamanına bağlı olarak önemli ölçüde farklılık gösterir.
+Bir pakete bağlı olmadığında, çekirdek derleme ile kullanılabilir SQLite sağlayıcıları kullanabilirsiniz.
 
-İlk olarak, IGetFunctionPointer uygulamanız gerekir. Uygulama .NET Core üzerinde oldukça basit.
+| Sağlayıcı | Açıklama |
+|--|--|
+| [SQLitePCLRaw. Provider. Dynamic](https://www.nuget.org/packages/SQLitePCLRaw.provider.dynamic) | `dynamic`Sağlayıcı, öznitelikleri kullanmak yerine yerel kitaplığı yükler <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType> . Bu sağlayıcıyı kullanma hakkında daha fazla bilgi için bkz. [dinamik sağlayıcıyı kullanma](#use-the-dynamic-provider). |
+| [SQLitePCLRaw. Provider. e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3) | `e_sqlite3`Varsayılan sağlayıcıdır. |
+| [SQLitePCLRaw. Provider. e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlcipher) | `e_sqlcipher`Sağlayıcı, resmi olmayan ve desteklenmeyen bir sağlayıcıdır `SQLCipher` . |
+| [SQLitePCLRaw. Provider. SQLite3](https://www.nuget.org/packages/SQLitePCLRaw.provider.sqlite3) | `sqlite3`Sağlayıcı `SQLite` IOS, MacOS ve Linux için sunulan bir sistemdir. |
+| [SQLitePCLRaw. Provider. sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.provider.sqlcipher) | Sağlayıcı, ' `sqlcipher` den resmi `SQLCipher` derlemeler içindir `Zetetic` . |
+| [SQLitePCLRaw. Provider. winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.provider.winsqlite3) | `winsqlite3`Sağlayıcı, Windows 10 ortamları içindir. |
+
+Sağlayıcıyı kullanmak için `sqlite3` aşağıdaki komutları kullanın:
+
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+
+```dotnetcli
+dotnet add package Microsoft.Data.Sqlite.Core
+dotnet add package SQLitePCLRaw.core
+dotnet add package SQLitePCLRaw.provider.sqlite3
+```
+
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
+
+``` PowerShell
+Install-Package Microsoft.Data.Sqlite.Core
+Install-Package SQLitePCLRaw.core
+Install-Package SQLitePCLRaw.provider.sqlite3
+```
+
+---
+
+Paketler yüklü olduğunda, sağlayıcıyı `sqlite3` örnekle ayarlarsınız.
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/SqliteProviderSample/Program.cs)]
+
+## <a name="use-the-dynamic-provider"></a>Dinamik sağlayıcıyı kullan
+
+Paketten yararlanarak kendi SQLite yapınızı kullanabilirsiniz `SQLitePCLRaw.provider.dynamic_cdecl` . Bu durumda, yerel kitaplığı uygulamanızla dağıtmaktan sorumlu olursunuz. Bu şekilde, uygulamanıza yerel kitaplıklar dağıtmanın ayrıntıları, kullandığınız .NET platformu ve çalışma zamanına bağlı olarak önemli ölçüde farklılık gösterir.
+
+Öncelikle uygulamanız gerekir `IGetFunctionPointer` . .NET Core üzerinde uygulama aşağıdaki gibidir:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/SystemLibrarySample/Program.cs?name=snippet_NativeLibraryAdapter)]
 
-Sonra, SQLitePCLRaw sağlayıcısını yapılandırın. Uygulamanızda Microsoft. Data. SQLite kullanılmadan önce bunun yapıldığından emin olun. Ayrıca, sağlayıcınızı geçersiz kılabilecek bir SQLitePCLRaw demeti paketi kullanmaktan kaçının.
+Ardından, sağlayıcıyı yapılandırın `SQLitePCLRaw` . Uygulamanızda kullanılmadan önce bunun yapıldığından emin olun `Microsoft.Data.Sqlite` . Ayrıca, `SQLitePCLRaw` sağlayıcınızı geçersiz kılabilecek bir paket paketi kullanmaktan kaçının.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/SystemLibrarySample/Program.cs?name=snippet_SetProvider)]

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178383"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421130"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName Metodu
-Bu [ICorPublishProcess](icorpublishprocess-interface.md)tarafından başvurulan işlem için yürütülebilir tam yolu alır.  
+Bu [ICorPublishProcess](icorpublishprocess-interface.md)tarafından başvurulan işlem için yürütülebilir dosyanın tam yolunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDisplayName (  
@@ -38,22 +38,22 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [içinde] `szName` Dizinin boyutu.  
+ 'ndaki `szName`Dizinin boyutu.  
   
  `pcchName`  
- [çıkış] `szName` Dizide döndürülen geniş karakter sayısı.  
+ dışı Dizide döndürülen geniş karakter sayısı `szName` .  
   
  `szName`  
- [çıkış] Yürütülebilir in tam yolu da dahil olmak üzere adı depolamak için bir dizi. Ad geçersiz sayılabilir.  
+ dışı Yürütülebilir dosyanın tam yolu da dahil olmak üzere, adı depolayan bir dizi. Ad null ile sonlandırılmış.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorPub.idl, CorPub.h  
+ **Üst bilgi:** CorPub. IDL, CorPub. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

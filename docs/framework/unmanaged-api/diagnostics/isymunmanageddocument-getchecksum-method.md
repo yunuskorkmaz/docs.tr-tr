@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449207"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441103"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum Metodu
 Sağlama toplamını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCheckSum(  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>Parametreler  
  `cData`  
- 'ndaki `data` parametresi tarafından belirtilen arabelleğin uzunluğu  
+ 'ndaki Parametre tarafından belirtilen arabelleğin uzunluğu `data`  
   
  `pcData`  
  dışı Sağlama toplamı için bayt cinsinden boyut ve uzunluk.  
@@ -49,4 +49,4 @@ HRESULT GetCheckSum(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument Arabirimi](isymunmanageddocument-interface.md)

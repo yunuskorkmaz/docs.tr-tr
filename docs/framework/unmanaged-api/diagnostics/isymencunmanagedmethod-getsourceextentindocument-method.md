@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448618"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441909"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument Yöntemi
 Belirli bir belgedeki Yöntem için en küçük başlangıç satırını ve en büyük bitiş satırını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSourceExtentInDocument(  
@@ -39,10 +39,10 @@ HRESULT GetSourceExtentInDocument(
  'ndaki Belgeye yönelik bir işaretçi.  
   
  `pstartLine`  
- dışı Başlangıç satırını alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`Başlangıç satırını alan bir işaretçisi.  
   
  `pendLine`  
- dışı Bitiş satırını alan `ULONG32` işaretçisi.  
+ dışı `ULONG32`Bitiş satırını alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -52,4 +52,4 @@ HRESULT GetSourceExtentInDocument(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod Arabirimi](isymencunmanagedmethod-interface.md)

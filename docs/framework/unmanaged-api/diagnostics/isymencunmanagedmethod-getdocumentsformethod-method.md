@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89be772ee3d8a6fc5acb74d5ebe6d3c691764f89
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176636"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441961"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod Yöntemi
-Bu yöntemin satırları olan belgeleri alır.  
+Bu yöntemin içindeki satırları içeren belgeleri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
@@ -36,20 +36,20 @@ HRESULT GetDocumentsForMethod(
   
 ## <a name="parameters"></a>Parametreler  
  `cDocs`  
- [içinde] Arabelleğe işaret edilen tampon `pcDocs`uzunluğu.  
+ 'ndaki Tarafından işaret edilen arabelleğin uzunluğu `pcDocs` .  
   
  `pcDocs`  
- [çıkış] Belgeleri içermek `ULONG32` için gereken arabelleğe in boyutlarını, karakterlerdeki boyutu alan bir işaretçi.  
+ dışı `ULONG32`Belgeyi içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
   
  `documents`  
- [içinde] Belgeleri içeren arabellek.  
+ 'ndaki Belgeleri içeren arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- yöntem başarılı olursa S_OK; aksi takdirde, bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod Arabirimi](isymencunmanagedmethod-interface.md)

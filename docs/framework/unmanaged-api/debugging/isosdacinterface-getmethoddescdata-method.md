@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 105149d0abf312c33a8498e7428e3a8b23d6ae7d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396941"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421026"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Iosdacınterface:: GetMethodDescData yöntemi
 
@@ -28,7 +28,7 @@ Verilen MethodDesc işaretçisi için verileri alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMethodDescData(
@@ -67,7 +67,7 @@ Belirtilen yöntem arabirimin bir parçasıdır `ISOSDacInterface` ve sanal yön
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  
 **.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

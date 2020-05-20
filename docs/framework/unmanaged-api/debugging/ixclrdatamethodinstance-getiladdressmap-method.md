@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0acfa9ffd6f4bc3be567855008dccd08c9c74153
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396814"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420922"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance:: Getıladdressmap yöntemi
 
@@ -28,7 +28,7 @@ Eşleme bilgilerini ele almak için Il 'yi alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetILAddressMap(
@@ -55,7 +55,7 @@ Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataMethodInstance` ve san
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  
 **.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

@@ -12,19 +12,19 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790486"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421039"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind Numaralandırması
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen yerel değişkenlere veya koda erişip erişemeyeceğini belirten değerler sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 typedef enum ILCodeKind {  
@@ -41,19 +41,19 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|Hata ayıklayıcının, ReJIT araçlarından bilgilere erişimi vardır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hata ayıklayıcının profil oluşturucu ReJIT [Araçları ' na](icordebugilframe4-getlocalvariableex-method.md) eklenen değişkenlere erişip [erişemeyeceğini ve hata](icordebugilframe4-enumeratelocalvariablesex-method.md) ayıklayıcının işaretlenmiş Il 'ye erişip erişemeyeceğini tespit etmek için [GetCodeEx](icordebugilframe4-getcodeex-method.md) yöntemine `ILCodeKind` numaralandırmanın bir üyesi geçirilebilir.  
+ `ILCodeKind`Hata ayıklayıcının profil oluşturucu ReJIT araçları 'nda eklenen değişkenlere [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) erişip erişemeyeceğini ve hata ayıklayıcının [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) belgelenmiş Il 'ye erişip erişemeyeceğini anlamak için [GetCodeEx](icordebugilframe4-getcodeex-method.md) yöntemine bir numaralandırma üyesi iletilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Sabit Listeleri](debugging-enumerations.md)
+- [Hata Ayıklama Numaralandırmaları](debugging-enumerations.md)
 - [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
 - [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

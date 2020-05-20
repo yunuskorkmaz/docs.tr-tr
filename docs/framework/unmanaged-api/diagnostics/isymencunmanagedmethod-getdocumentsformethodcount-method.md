@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-ms.openlocfilehash: 057b901337ded7b5336ef673624d8d6c827c8932
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d096101189d52401c407a4108c9c81e201d3f30d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448674"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441948"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethodCount Metodu
 Bu yöntemin içinde satır bulunan belge sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDocumentsForMethodCount(  
@@ -34,7 +34,7 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı Belgeleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Belgeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,4 +44,4 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod Arabirimi](isymencunmanagedmethod-interface.md)

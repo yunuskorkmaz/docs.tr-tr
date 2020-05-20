@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 924feaeb91b42404461ad5d276c0cb77279d4dc4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449284"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441649"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName Yöntemi
 Sabitin adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetName(  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` parametresinin işaret ettiği arabelleğin uzunluğu.  
+ 'ndaki `szName`Parametrenin işaret ettiği arabelleğin uzunluğu.  
   
  `pcchName`  
- dışı Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Null sonlandırma dahil olmak üzere, adı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Adı depolayan arabellek.  
@@ -53,6 +53,6 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedConstant Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetSignature Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
-- [GetValue Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant Arabirimi](isymunmanagedconstant-interface.md)
+- [GetSignature Yöntemi](isymunmanagedconstant-getsignature-method.md)
+- [GetValue Yöntemi](isymunmanagedconstant-getvalue-method.md)

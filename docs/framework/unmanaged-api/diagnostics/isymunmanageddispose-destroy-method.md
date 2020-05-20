@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: e930a9a3753ccf2b8aff798916c876fbedad4df4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5bd94cb851d4bb044d4ce03b97d6342a2c9652e4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430708"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441324"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy Yöntemi
 Alttaki nesnenin tüm iç başvuruları serbest bırakmaya ve sonraki yöntem çağrılarında hata döndürmesine neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Destroy();  
@@ -39,4 +39,4 @@ HRESULT Destroy();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedDispose Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [ISymUnmanagedDispose Arabirimi](isymunmanageddispose-interface.md)

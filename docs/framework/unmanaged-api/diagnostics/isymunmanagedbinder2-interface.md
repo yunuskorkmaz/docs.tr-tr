@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: 8300e3a7b324a2ff4acabeb30b30d2cdabc7c776
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a4fbb40ec2426d000628fbd6d5f0241d3152c18
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449315"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441675"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 Arabirimi
-Yönetilmeyen kod için bir sembol cildi temsil eder ve [ıstreamunmanagedciltçi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) arabirimini genişletir.  
+Yönetilmeyen kod için bir sembol cildi temsil eder ve [ıstreamunmanagedciltçi](isymunmanagedbinder-interface.md) arabirimini genişletir.  
   
 > [!IMPORTANT]
 > Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
@@ -31,13 +31,13 @@ Yönetilmeyen kod için bir sembol cildi temsil eder ve [ıstreamunmanagedciltç
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetReaderForFile2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|Meta veri arabirimi ve dosya adı verildiğinde, modülle ilişkili hata ayıklama sembollerini okuyacak doğru [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimini döndürür. [Istreamunmanagedciltçi:: GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) yönteminden daha kapsamlı bir arama sağlar.|  
+|[GetReaderForFile2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|Meta veri arabirimi ve dosya adı verildiğinde, modülle ilişkili hata ayıklama sembollerini okuyacak doğru [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimini döndürür. [Istreamunmanagedciltçi:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) yönteminden daha kapsamlı bir arama sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [ISymUnmanagedBinder3 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder Arabirimi](isymunmanagedbinder-interface.md)
+- [ISymUnmanagedBinder3 Arabirimi](isymunmanagedbinder3-interface.md)

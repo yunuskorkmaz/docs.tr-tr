@@ -1,19 +1,20 @@
 ---
-title: .NET framework 4.5 yerleşik etkinlik kitaplığı
+title: .NET Framework 4,5 yerleşik etkinlik kitaplığı
+description: Bu makalede, .NET Framework 4,5 ' nin bir parçası olan genişletilmiş işlevlere sahip yeni etkinlik kitaplığı açıklanır.
 ms.date: 03/30/2017
 ms.assetid: e559e87b-6aed-491d-9546-e92bcec16fdf
-ms.openlocfilehash: 6d47c36a55829684a0eefb2a560e65f7b91462a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ce4420759512ec3adfff70bf0c365014d96ec7b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786015"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421494"
 ---
-# <a name="net-framework-45-built-in-activity-library"></a>.NET framework 4.5 yerleşik etkinlik kitaplığı
+# <a name="net-framework-45-built-in-activity-library"></a>.NET Framework 4,5 yerleşik etkinlik kitaplığı
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Yeni bir etkinlik kitaplığı ile genişletilen işlevsellik içerir. Etkinlik türleri şunlardır:
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]genişletilmiş işlevselliğe sahip yeni bir etkinlik kitaplığı içerir. Etkinlik türleri şunları içerir:
 
-- [Denetim Akışı](control-flow-activities-in-wf.md)
+- [Denetim akışı](control-flow-activities-in-wf.md)
 
 - [Akış Çizelgesi](flowchart-activities-in-wf.md)
 
@@ -29,8 +30,8 @@ ms.locfileid: "61786015"
 
 - [Koleksiyon](collection-activities-in-wf.md)
 
-- [Hata İşleme](error-handling-activities-in-wf.md)
+- [Hata Işleme](error-handling-activities-in-wf.md)
 
 - [Geçiş](migration-activity-in-wf.md)
 
-Yerleşik etkinlik Kitaplığı'ndaki etkinlikleri iş akışlarına oluşur veya özel etkinlikler ile birlikte kullanılır. Yerleşik etkinlik Kitaplığı'ndaki etkinlikleri korumalıdır; Devralma yoluyla yeni işlevler oluşturmak için kullanılması amaçlanmamıştır.
+Yerleşik etkinlik kitaplığındaki etkinlikler iş akışlarına eklenebilir veya özel etkinliklerle birlikte kullanılabilir. Yerleşik etkinlik kitaplığındaki etkinlikler mühürlü; devralma yoluyla yeni işlevsellik oluşturmak için kullanılması amaçlanmamıştır.

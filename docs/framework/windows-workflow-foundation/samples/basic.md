@@ -1,13 +1,14 @@
 ---
 title: Temel-WF
+description: Bu makale, yerleşik ve özel etkinlikler gibi temel Windows Workflow Foundation işlevlerini gösteren örneklere başvurur.
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 5e7084a405dce0f57cb4ef391415b69041b6de6e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2f5ba92b6bb2718773f6ae965596ff175f92cbfc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716767"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421377"
 ---
 # <a name="basic"></a>Temel
 Bu bölüm, temel Windows Workflow Foundation (WF) işlevlerini gösteren örnekler sağlar.  
@@ -16,13 +17,13 @@ Bu bölüm, temel Windows Workflow Foundation (WF) işlevlerini gösteren örnek
  [Yerleşik Etkinlikler](built-in-activities.md)  
  Yerleşik etkinlik kitaplığını kullanan örnekleri içerir.  
   
- [Özel Etkinlikler](custom-activities.md)  
+ [Özel etkinlikler](custom-activities.md)  
  Özel etkinlikler oluşturmayı gösteren örnekleri içerir.  
   
- [Tasarımcı](designer.md)  
+ [Layana](designer.md)  
  Windows İş Akışı Tasarımcısı kullanmayı gösteren örnekleri içerir.  
   
- [Tasarımcıyı Yeniden Barındırma](designer-rehosting.md)  
+ [Tasarımcı yeniden barındırma](designer-rehosting.md)  
  Etkinlik tasarımcısını yeniden barındırmayı gösteren örnekleri içerir.  
   
  [Yürütme](execution.md)  

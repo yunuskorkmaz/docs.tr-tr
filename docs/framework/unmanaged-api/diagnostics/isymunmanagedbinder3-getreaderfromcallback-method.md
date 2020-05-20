@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: a0cccc0adfc666cc8e373bc1f89c8f6f97068fde
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449304"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441662"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback Metodu
-Kullanıcının bellekten hata ayıklama dizini bilgilerini elde etmek için bir `IID_IDiaReadExeAtRVACallback` veya `IID_IDiaReadExeAtOffsetCallback` geri çağırma yoluyla uygulama veya sağlama olanağı sağlar.  
+Kullanıcının `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` bellekten hata ayıklama dizini bilgilerini elde etmek için bir veya geri çağırma yoluyla uygulama veya sağlama yapmasına izin verir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetReaderFromCallback(  
@@ -48,13 +48,13 @@ HRESULT GetReaderFromCallback(
  'ndaki Arama yoluna yönelik bir işaretçi.  
   
  `searchPolicy`  
- 'ndaki Bir sembol okuyucu ararken kullanılacak ilkeyi belirten [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) numaralandırması değeri.  
+ 'ndaki Bir sembol okuyucu ararken kullanılacak ilkeyi belirten [CorSymSearchPolicyAttributes](corsymsearchpolicyattributes-enumeration.md) numaralandırması değeri.  
   
  `callback`  
  'ndaki Geri çağırma işlevine yönelik bir işaretçi.  
   
  `pRetVal`  
- dışı Döndürülen [ıdimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimine ayarlanmış bir işaretçi.  
+ dışı Döndürülen [ıdimunmanagedreader](isymunmanagedreader-interface.md) arabirimine ayarlanmış bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -64,4 +64,4 @@ HRESULT GetReaderFromCallback(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedBinder3 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [ISymUnmanagedBinder3 Arabirimi](isymunmanagedbinder3-interface.md)

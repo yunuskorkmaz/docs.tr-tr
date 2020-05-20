@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c3de9e5ffe23a13c126343c6f74f042bf1239609
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396936"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421013"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Iosdacınterface:: Getmethoddescptrfromıp yöntemi
 
@@ -28,7 +28,7 @@ Verilen yerel yönerge adresini içeren yöntemi karşılık gelen MethodDesc i�
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMethodDescPtrFromIP(
@@ -51,7 +51,7 @@ Belirtilen yöntem [ `ISOSDacInterface` arabirimin](isosdacinterface-interface.m
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
 **Üst bilgi:** Seçim  
 **Kitaplık:** Seçim  
 **.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

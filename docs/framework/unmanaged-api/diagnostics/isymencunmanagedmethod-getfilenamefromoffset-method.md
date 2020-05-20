@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448660"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441935"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset Yöntemi
 Bir uzaklığa ilişkin dosya adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFileNameFromOffset(  
@@ -38,13 +38,13 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `dwOffset`  
- 'ndaki Sapmayı içeren bir `ULONG32`.  
+ 'ndaki `ULONG32`Bu, sapmayı içeren bir.  
   
  `cchName`  
- 'ndaki `szName` arabelleğinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Arabellek boyutunu belirten bir `szName` .  
   
  `pcchName`  
- dışı Dosya adlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Dosya adlarını içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `szName`  
  dışı Dosya adlarını içeren arabellek.  
@@ -57,4 +57,4 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymENCUnmanagedMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod Arabirimi](isymencunmanagedmethod-interface.md)

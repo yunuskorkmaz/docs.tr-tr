@@ -1,21 +1,22 @@
 ---
-title: 'Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için kalıcılığı etkinleştirme'
+title: 'Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için Kalıcılığı Etkinleştirme'
+description: İş akışları ve iş akışı hizmetleri için bir yapılandırma dosyası kullanarak, SQL Iş akışı örnek deposunu yapılandırmayı nasıl yapılandıracağınızı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 31fe6e3f06989e9a42254747565342cf97e4b9f1
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460886"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421520"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için kalıcılığı etkinleştirme
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için Kalıcılığı Etkinleştirme
 
 Bu konuda, iş akışları ve iş akışı hizmetleri için kalıcılığın nasıl etkinleştirileceği açıklanır.
 
 ## <a name="enable-persistence-for-workflows"></a>Iş akışları için kalıcılığı etkinleştir
 
-<xref:System.Activities.WorkflowApplication> sınıfının <xref:System.Activities.WorkflowApplication.InstanceStore%2A> özelliğini kullanarak bir örnek depoyu bir **WorkflowApplication** ile ilişkilendirebilirsiniz. <xref:System.Activities.WorkflowApplication.Persist%2A> yöntemi bir iş akışını uygulamayla ilişkili örnek deposuna kaydeder veya devam ettirir. <xref:System.Activities.WorkflowApplication.Unload%2A> yöntemi bir iş akışını örnek deposuna devam ettirir ve sonra örneği bellekten kaldırır. **Load** yöntemi, örnek kalıcılık deposunda depolanan iş akışı verilerini kullanarak bir iş akışını belleğe yükler.
+Sınıfının özelliğini kullanarak bir örnek depoyu bir **WorkflowApplication** ile ilişkilendirebilirsiniz <xref:System.Activities.WorkflowApplication.InstanceStore%2A> <xref:System.Activities.WorkflowApplication> . <xref:System.Activities.WorkflowApplication.Persist%2A>Yöntemi, bir iş akışını uygulamayla ilişkili örnek deposuna kaydeder veya devam ettirir. <xref:System.Activities.WorkflowApplication.Unload%2A>Yöntemi, örnek deposunda bir iş akışı devam ettirir ve sonra örneği bellekten kaldırır. **Load** yöntemi, örnek kalıcılık deposunda depolanan iş akışı verilerini kullanarak bir iş akışını belleğe yükler.
 
 **Persist** yöntemi aşağıdaki adımları gerçekleştirir:
 
@@ -37,7 +38,7 @@ Bu konuda, iş akışları ve iş akışı hizmetleri için kalıcılığın nas
 
 ## <a name="enable-persistence-for-workflow-services-in-code"></a>Koddaki Iş akışı hizmetleri için kalıcılığı etkinleştir
 
-<xref:System.ServiceModel.WorkflowServiceHost> sınıfının **DurableInstancingOptions** üyesi, bir örnek deposunu **WorkflowServiceHost**ile Ilişkilendirmek için kullanabileceğiniz, **InstanceStore** adlı bir özelliğe sahiptir.
+Sınıfın **DurableInstancingOptions** üyesi, <xref:System.ServiceModel.WorkflowServiceHost> bir örnek deposunu **WorkflowServiceHost**Ile ilişkilendirmek için kullanabileceğiniz, **InstanceStore** adlı bir özelliğe sahiptir.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class

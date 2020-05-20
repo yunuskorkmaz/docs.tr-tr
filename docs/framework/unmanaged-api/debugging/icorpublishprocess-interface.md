@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 3ae48df9e66890161c1aef944d37b0a279939d56
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8d958e949612b502ab218f5c6b75779174d34e19
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790536"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421091"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess Arabirimi
 Bir işlem hakkında görüntülenecek bilgilere erişen yöntemler sağlar.  
@@ -28,21 +28,21 @@ Bir işlem hakkında görüntülenecek bilgilere erişen yöntemler sağlar.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumAppDomains Yöntemi](icorpublishprocess-enumappdomains-method.md)|Bu `ICorPublishProcess`başvurduğu işlem içindeki uygulama etki alanlarını içeren bir [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) örneği alır.|  
-|[GetDisplayName Yöntemi](icorpublishprocess-getdisplayname-method.md)|Bu `ICorPublishProcess`başvurduğu işlem için yürütülebilir dosyanın tam yolunu alır.|  
-|[GetProcessID Yöntemi](icorpublishprocess-getprocessid-method.md)|Bu `ICorPublishProcess`başvurduğu işlemin işletim sistemi tanımlayıcısını alır.|  
-|[IsManaged Yöntemi](icorpublishprocess-ismanaged-method.md)|Bu `ICorPublishProcess` başvurduğu işlemin yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
+|[EnumAppDomains Yöntemi](icorpublishprocess-enumappdomains-method.md)|Bu tarafından başvurulan işlemdeki uygulama etki alanlarını içeren bir [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) örneği alır `ICorPublishProcess` .|  
+|[GetDisplayName Yöntemi](icorpublishprocess-getdisplayname-method.md)|Bu tarafından başvurulan işlem için yürütülebilir dosyanın tam yolunu alır `ICorPublishProcess` .|  
+|[GetProcessID Yöntemi](icorpublishprocess-getprocessid-method.md)|Bu tarafından başvurulan işlem için işletim sistemi tanımlayıcısını alır `ICorPublishProcess` .|  
+|[IsManaged Yöntemi](icorpublishprocess-ismanaged-method.md)|Bu tarafından başvurulan işlemin `ICorPublishProcess` yönetilen kodu çalıştırıp çalıştırmadığını gösteren bir değer alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorPub. IDL, CorPub. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [CorpubPublish Coclass](corpubpublish-coclass.md)
+- [CorpubPublish Ortak Sınıfı](corpubpublish-coclass.md)

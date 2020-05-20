@@ -2,17 +2,17 @@
 title: ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset Metodu
 ms.date: 03/30/2017
 ms.assetid: d5f88656-433d-447c-b21c-2a12bed2e72a
-ms.openlocfilehash: fa588056bdb83978659ccb97ed6dc09ec9c55f30
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f45b9a53909ab23428a8d51be2e672bfdd15d951
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123794"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441857"
 ---
 # <a name="isymunmanagedasyncmethodgetcatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset Metodu
-Bkz. [Definecatch Handlerılsapmasını metodu](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
+Bkz. [Definecatch Handlerılsapmasını metodu](isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```idl  
 HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);  
@@ -25,11 +25,11 @@ HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);
 |`pRetVal`||  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `HRESULT`döndürür.  
+ `HRESULT` döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedAsyncMethod Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+- [ISymUnmanagedAsyncMethod Arabirimi](isymunmanagedasyncmethod-interface.md)
