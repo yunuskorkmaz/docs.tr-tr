@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448321"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615026"
 ---
-# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="21c96-102">ISymUnmanagedReader::GetGlobalVariables Metodu</span><span class="sxs-lookup"><span data-stu-id="21c96-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
-<span data-ttu-id="21c96-103">Tüm genel değişkenleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="21c96-103">Returns all global variables.</span></span>  
+# <a name="isymunmanagedreadergetglobalvariables-method"></a><span data-ttu-id="23203-102">ISymUnmanagedReader::GetGlobalVariables Metodu</span><span class="sxs-lookup"><span data-stu-id="23203-102">ISymUnmanagedReader::GetGlobalVariables Method</span></span>
+<span data-ttu-id="23203-103">Tüm genel değişkenleri döndürür.</span><span class="sxs-lookup"><span data-stu-id="23203-103">Returns all global variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21c96-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="21c96-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23203-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="23203-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGlobalVariables(  
@@ -35,22 +35,22 @@ HRESULT GetGlobalVariables(
         length_is(*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="21c96-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="21c96-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23203-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="23203-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="21c96-106">'ndaki `pcVars`tarafından işaret edilen arabelleğin uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="21c96-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
+ <span data-ttu-id="23203-106">'ndaki Tarafından işaret edilen arabelleğin uzunluğu `pcVars` .</span><span class="sxs-lookup"><span data-stu-id="23203-106">[in] The length of the buffer pointed to by `pcVars`.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="21c96-107">dışı Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="21c96-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
+ <span data-ttu-id="23203-107">dışı `ULONG32`Değişkenleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="23203-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the variables.</span></span>  
   
  `pVars`  
- <span data-ttu-id="21c96-108">dışı Değişkenleri içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="21c96-108">[out] A buffer that contains the variables.</span></span>  
+ <span data-ttu-id="23203-108">dışı Değişkenleri içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="23203-108">[out] A buffer that contains the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="21c96-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="21c96-109">Return Value</span></span>  
- <span data-ttu-id="21c96-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="21c96-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23203-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="23203-109">Return Value</span></span>  
+ <span data-ttu-id="23203-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="23203-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21c96-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21c96-111">Requirements</span></span>  
- <span data-ttu-id="21c96-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="21c96-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23203-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="23203-111">Requirements</span></span>  
+ <span data-ttu-id="23203-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="23203-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21c96-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21c96-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23203-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23203-113">See also</span></span>
 
-- [<span data-ttu-id="21c96-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="21c96-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="23203-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="23203-114">ISymUnmanagedReader Interface</span></span>](isymunmanagedreader-interface.md)

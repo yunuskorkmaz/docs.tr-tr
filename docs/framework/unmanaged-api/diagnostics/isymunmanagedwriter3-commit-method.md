@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 5985257a186839a297c245b23f093f0b18a798fe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4331728a4766d81b723c439747e5e1181815394f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438273"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614675"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="b8d22-102">ISymUnmanagedWriter3::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="b8d22-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="b8d22-103">Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.</span><span class="sxs-lookup"><span data-stu-id="b8d22-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="de6c3-102">ISymUnmanagedWriter3::Commit Metodu</span><span class="sxs-lookup"><span data-stu-id="de6c3-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="de6c3-103">Şimdiye kadar yazılı olan değişiklikleri akışa kaydeder.</span><span class="sxs-lookup"><span data-stu-id="de6c3-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8d22-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b8d22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de6c3-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="de6c3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="b8d22-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b8d22-105">Return Value</span></span>  
- <span data-ttu-id="b8d22-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b8d22-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="de6c3-105">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="de6c3-105">Return Value</span></span>  
+ <span data-ttu-id="de6c3-106">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="de6c3-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b8d22-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b8d22-107">Requirements</span></span>  
- <span data-ttu-id="b8d22-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="b8d22-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de6c3-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="de6c3-107">Requirements</span></span>  
+ <span data-ttu-id="de6c3-108">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="de6c3-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8d22-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b8d22-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de6c3-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="de6c3-109">See also</span></span>
 
-- [<span data-ttu-id="b8d22-110">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b8d22-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="de6c3-110">ISymUnmanagedWriter3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="de6c3-110">ISymUnmanagedWriter3 Interface</span></span>](isymunmanagedwriter3-interface.md)

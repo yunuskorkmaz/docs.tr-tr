@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446363"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614870"
 ---
-# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="01510-102">ISymUnmanagedScope::GetChildren Metodu</span><span class="sxs-lookup"><span data-stu-id="01510-102">ISymUnmanagedScope::GetChildren Method</span></span>
-<span data-ttu-id="01510-103">Bu kapsamın alt öğelerini alır.</span><span class="sxs-lookup"><span data-stu-id="01510-103">Gets the children of this scope.</span></span>  
+# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="07832-102">ISymUnmanagedScope::GetChildren Metodu</span><span class="sxs-lookup"><span data-stu-id="07832-102">ISymUnmanagedScope::GetChildren Method</span></span>
+<span data-ttu-id="07832-103">Bu kapsamın alt öğelerini alır.</span><span class="sxs-lookup"><span data-stu-id="07832-103">Gets the children of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01510-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01510-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07832-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="07832-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetChildren(  
@@ -35,23 +35,23 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01510-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01510-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07832-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="07832-105">Parameters</span></span>  
  `cChildren`  
- <span data-ttu-id="01510-106">'ndaki `children` dizisinin boyutunu belirten `ULONG32`.</span><span class="sxs-lookup"><span data-stu-id="01510-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
+ <span data-ttu-id="07832-106">'ndaki `ULONG32`Dizi boyutunu belirten bir `children` .</span><span class="sxs-lookup"><span data-stu-id="07832-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
   
  `pcChildren`  
- <span data-ttu-id="01510-107">dışı Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="01510-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
+ <span data-ttu-id="07832-107">dışı `ULONG32`Alt öğeleri içermesi için gereken arabelleğin boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="07832-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
   
  `children`  
- <span data-ttu-id="01510-108">dışı Döndürülen alt öğe dizisi.</span><span class="sxs-lookup"><span data-stu-id="01510-108">[out] The returned array of children.</span></span>  
+ <span data-ttu-id="07832-108">dışı Döndürülen alt öğe dizisi.</span><span class="sxs-lookup"><span data-stu-id="07832-108">[out] The returned array of children.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="01510-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="01510-109">Return Value</span></span>  
- <span data-ttu-id="01510-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="01510-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07832-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="07832-109">Return Value</span></span>  
+ <span data-ttu-id="07832-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="07832-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01510-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01510-111">Requirements</span></span>  
- <span data-ttu-id="01510-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="01510-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07832-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="07832-111">Requirements</span></span>  
+ <span data-ttu-id="07832-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="07832-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01510-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01510-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07832-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07832-113">See also</span></span>
 
-- [<span data-ttu-id="01510-114">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01510-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="01510-115">GetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01510-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [<span data-ttu-id="07832-114">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="07832-114">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
+- [<span data-ttu-id="07832-115">GetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="07832-115">GetParent Method</span></span>](isymunmanagedscope-getparent-method.md)

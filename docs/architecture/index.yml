@@ -1,55 +1,61 @@
 ### YamlMime:Landing
-title: .NET uygulama mimarisi dokümantasyonu
-summary: Üretime hazır .NET uygulamaları oluşturmayı veya varolan uygulamaları buluta nasıl geçirteceklerini öğrenin.
+title: .NET uygulama mimarisi belgeleri
+summary: Üretime yönelik olarak hazırlanmaya yönelik .NET uygulamaları oluşturmayı veya mevcut uygulamaları buluta geçirmeyi öğrenin.
 metadata:
-  title: .NET uygulama mimarisi dokümantasyonu
-  description: .NET uygulamalarını mimarlandırmak, oluşturmak ve geçirmek için önerilen uygulamaları öğrenin.
+  title: .NET uygulama mimarisi belgeleri
+  description: .NET uygulamaları tasarlama, derleme ve geçirmeye yönelik önerilen uygulamaları öğrenin.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228593"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613648"
 landingContent:
 - title: ASP.NET Core uygulamaları geliştirme
   linkLists:
   - linkListType: concept
     links:
-    - text: ASP.NET Core ve Azure ile modern web uygulamalarını mimar
+    - text: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın
       url: modern-web-apps-azure/index.md
-    - text: Blazor web formları geliştiricileri ASP.NET için (Önizleme)
+    - text: ASP.NET Web Forms geliştiricileri için Blazor (Önizleme)
       url: blazor-for-web-forms-developers/index.md
     - text: WCF geliştiricileri için ASP.NET Core gRPC
       url: grpc-for-wcf-developers/index.md
-- title: Azure için bulut ayarı .NET uygulamaları geliştirme
+- title: Azure için bulutta yerel .NET uygulamaları geliştirin
   linkLists:
   - linkListType: concept
     links:
-    - text: Azure için bulut ayarı .NET uygulamalarını oluşturma (Önizleme)
+    - text: Azure için bulutta yerel .NET uygulamaları tasarlama
       url: cloud-native/index.md
     - text: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       url: serverless/index.md
-    - text: '.NET Microservices: Konteynerleştirilmiş .NET uygulamaları için mimari'
+    - text: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi'
       url: microservices/index.md
   - linkListType: learn
     links:
-    - text: Merhaba Dünya Microservice öğretici
+    - text: Merhaba Dünya mikro hizmet öğreticisi
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
-- title: .NET uygulamalarını Azure'a geçirin
+- title: .NET uygulamalarını Azure 'a geçirme
   linkLists:
   - linkListType: concept
     links:
-    - text: Azure bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernize edin
+    - text: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin
       url: modernize-with-azure-containers/index.md
-    - text: .NET uygulamanızı Azure'a geçirin
+    - text: .NET uygulamanızı Azure 'a geçirme
       url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
-- title: .NET için DevOps'leri anlayın
+- title: .NET için DevOps 'u anlama
   linkLists:
   - linkListType: concept
     links:
     - text: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
       url: containerized-lifecycle/index.md
-    - text: Azure ile ASP.NET Core DevOps
+    - text: Azure ile DevOps ASP.NET Core
       url: /aspnet/core/azure/devops/
+- title: Modernleştirin masaüstü uygulamaları
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
+      url: modernize-desktop/index.md
