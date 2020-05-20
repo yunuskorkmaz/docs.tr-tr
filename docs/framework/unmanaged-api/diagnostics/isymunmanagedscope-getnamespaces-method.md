@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f11a69671864ba4627c2bb8c86e0c9beb27eeb1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446308"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83611126"
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="630be-102">ISymUnmanagedScope::GetNamespaces Metodu</span><span class="sxs-lookup"><span data-stu-id="630be-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="630be-103">Bu kapsam içinde kullanılmakta olan ad alanlarını alır.</span><span class="sxs-lookup"><span data-stu-id="630be-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="ad491-102">ISymUnmanagedScope::GetNamespaces Metodu</span><span class="sxs-lookup"><span data-stu-id="ad491-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="ad491-103">Bu kapsam içinde kullanılmakta olan ad alanlarını alır.</span><span class="sxs-lookup"><span data-stu-id="ad491-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="630be-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="630be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad491-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="ad491-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespaces(  
@@ -36,22 +36,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="630be-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="630be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ad491-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ad491-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="630be-106">'ndaki `namespaces` dizisinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="630be-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="ad491-106">'ndaki `namespaces`Dizinin boyutu.</span><span class="sxs-lookup"><span data-stu-id="ad491-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="630be-107">dışı Ad alanlarını içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="630be-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="ad491-107">dışı `ULONG32`Ad alanlarını içermesi için gereken arabellek boyutunu alan bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="ad491-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="630be-108">dışı Ad alanlarını alan dizi.</span><span class="sxs-lookup"><span data-stu-id="630be-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="ad491-108">dışı Ad alanlarını alan dizi.</span><span class="sxs-lookup"><span data-stu-id="ad491-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="630be-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="630be-109">Return Value</span></span>  
- <span data-ttu-id="630be-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="630be-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ad491-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ad491-109">Return Value</span></span>  
+ <span data-ttu-id="ad491-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="ad491-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="630be-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="630be-111">Requirements</span></span>  
- <span data-ttu-id="630be-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="630be-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad491-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ad491-111">Requirements</span></span>  
+ <span data-ttu-id="ad491-112">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="ad491-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="630be-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="630be-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad491-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad491-113">See also</span></span>
 
-- [<span data-ttu-id="630be-114">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="630be-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="ad491-114">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ad491-114">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
