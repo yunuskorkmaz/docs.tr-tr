@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429744"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615481"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
 Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle birlikte modülün dosya adı ile başlatır.  
@@ -28,7 +28,7 @@ Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle
 > [!NOTE]
 > Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir okuyucu yönteminden önce çağrılmalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Initialize (  
@@ -43,7 +43,7 @@ HRESULT Initialize (
  'ndaki Bu okuyucunun ilişkilendirileceği meta veri alma arabirimi.  
   
  `filename`  
- 'ndaki Modülün dosya adı. Bunun yerine `pIStream` parametresini kullanabilirsiniz.  
+ 'ndaki Modülün dosya adı. `pIStream`Bunun yerine parametresini kullanabilirsiniz.  
   
  `searchPath`  
  'ndaki Arama yolu. Bu parametre isteğe bağlıdır.  
@@ -55,11 +55,11 @@ HRESULT Initialize (
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `filename` veya `pIStream` parametrelerinden yalnızca birini belirtmeniz gerekir, ikisi birden değil. `searchPath` parametresi isteğe bağlıdır.  
+ Ya da parametrelerinden yalnızca birini belirtmeniz gerekir `filename` `pIStream` . `searchPath`Parametresi isteğe bağlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: e052d9b7b2abd57b176dfe3b00afac626d422c58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446465"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615442"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore Yöntemi
 Var olan sembol deposunu bir Delta sembol deposu ile güncelleştirir. Bu yöntem, sembol deposunu değişimleri ile orijinal taşınabilir yürütülebilir (PE) dosyası eşleşecek şekilde güncelleştirmek için Düzenle ve devam et senaryolarında kullanılır.  
   
 > [!NOTE]
-> `filename` veya `pIStream` parametrelerinden yalnızca birini belirtmeniz gerekir, ikisi birden değil. `filename` belirtilirse, sembol deposu bu dosyadaki simgelerle güncelleştirilir. `pIStream` belirtilirse mağaza, <xref:System.Runtime.InteropServices.ComTypes.IStream>verilerle güncelleştirilir.  
+> Ya da parametrelerinden yalnızca birini belirtmeniz gerekir `filename` `pIStream` . `filename`Belirtilmişse, sembol deposu bu dosyadaki simgelerle güncelleştirilir. `pIStream`Belirtilmişse, mağaza içindeki verilerle güncelleştirilir <xref:System.Runtime.InteropServices.ComTypes.IStream> .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT UpdateSymbolStore (  
@@ -41,7 +41,7 @@ HRESULT UpdateSymbolStore (
  'ndaki Sembol deposunu içeren dosyanın adı.  
   
  `pIStream`  
- 'ndaki `filename` parametresine alternatif olarak kullanılan dosya akışı.  
+ 'ndaki Parametresi için alternatif olarak kullanılan dosya akışı `filename` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -51,4 +51,4 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

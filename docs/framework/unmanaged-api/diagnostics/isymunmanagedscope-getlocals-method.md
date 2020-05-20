@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446334"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615390"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals Metodu
 Bu kapsam içinde tanımlanan yerel değişkenleri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetLocals(  
@@ -37,10 +37,10 @@ HRESULT GetLocals(
   
 ## <a name="parameters"></a>Parametreler  
  `cLocals`  
- 'ndaki `locals` dizisinin boyutunu belirten `ULONG32`.  
+ 'ndaki `ULONG32`Dizi boyutunu belirten bir `locals` .  
   
  `pcLocals`  
- dışı Yerel değişkenleri içermesi için gereken arabelleğin boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Yerel değişkenleri içermesi için gereken arabellek boyutunu alan bir işaretçisi.  
   
  `locals`  
  dışı Yerel değişkenleri alan dizi.  
@@ -53,4 +53,4 @@ HRESULT GetLocals(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [ISymUnmanagedScope Arabirimi](isymunmanagedscope-interface.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136942"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616560"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication İşlevi
 Belirtilen bildirimleri ve diğer uygulama verilerini kullanarak belirtilen ağ yolundaki uygulamayı başlatır.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorLaunchApplication (  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parametreler  
  `dwClickOnceHost`  
- 'ndaki Uygulamayı başlatan konak türünü belirten [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) numaralandırması değeri.  
+ 'ndaki Uygulamayı başlatan konak türünü belirten [HOST_TYPE](host-type-enumeration.md) numaralandırması değeri.  
   
  `pwzAppFullName`  
  'ndaki Başlatılmakta olan uygulamanın tam adı.  
@@ -64,14 +64,14 @@ HRESULT CorLaunchApplication (
  dışı Uygulamanın yüklendiği işlem hakkındaki bilgilere yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

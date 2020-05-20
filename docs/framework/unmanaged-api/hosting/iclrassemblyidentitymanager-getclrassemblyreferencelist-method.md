@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-ms.openlocfilehash: 54c11e78438ae97e1fc0c715c9161361784b3be6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f09cb2264b21fdfbc892069f2c2f0a963b131f8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126726"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615975"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Metodu
-Sağlanan kısmi derleme kimlikleri listesinden bir [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) örneğine yönelik bir arabirim işaretçisi alır.  
+Sağlanan kısmi derleme kimlikleri listesinden bir [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) örneğine yönelik bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT  GetCLRAssemblyReferenceList (  
@@ -40,10 +40,10 @@ HRESULT  GetCLRAssemblyReferenceList (
  'ndaki "Ad, özellik = değer..." biçiminde null ile sonlandırılmış dizeler dizisi Bu, kısmi derleme kimliklerinin bir listesini belirtir.  
   
  `dwNumOfReferences`  
- 'ndaki `ppwzAssemblyReferences`öğe sayısı.  
+ 'ndaki İçindeki öğe sayısı `ppwzAssemblyReferences` .  
   
  `ppReferenceList`  
- dışı `ppwzAssemblyReferences`belirtilen derlemelerin listesi için derleme kimliği verilerini içeren `ICLRAssemblyReferenceList` nesnesine yönelik bir arabirim işaretçisi.  
+ dışı `ICLRAssemblyReferenceList`İçinde belirtilen derlemelerin listesi için derleme kimliği verilerini içeren bir nesneye yönelik arabirim işaretçisi `ppwzAssemblyReferences` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -54,18 +54,18 @@ HRESULT  GetCLRAssemblyReferenceList (
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [ICLRAssemblyIdentityManager Arabirimi](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList Arabirimi](iclrassemblyreferencelist-interface.md)

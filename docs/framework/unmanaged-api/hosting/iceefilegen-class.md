@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176402"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617015"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen Sınıfı
-Yerel taşınabilir çalıştırılabilir (PE) dosya oluşturmak için işlevsellik sağlar. Arabirim genellikle derlenmiş çıktı yürütülebilir oluşturmak için derleyiciler tarafından kullanılacaktır.  
+Yerel bir Taşınabilir çalıştırılabilir (PE) dosyası oluşturmak için işlevsellik sağlar. Arabirim, genellikle derleyiciler tarafından derlenen çıkış yürütülebiliri oluşturmak için kullanılır.  
   
 > [!NOTE]
-> `ICeeFileGen`.NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılması amaçlanmamıştır.  
+> `ICeeFileGen`.NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
- Bu arabirim amortismana kaldırıldı ve gelecekteki bir sürümde kaldırılacak.  
+ Bu arabirim kullanımdan kaldırılmıştır ve gelecekte yayınlanacak bir sürümde kaldırılacak.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 class ICeeFileGen {  
@@ -235,12 +235,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** ICeeFileGen.h  
+ **Üst bilgi:** ICeeFileGen. h  
   
- **.NET Framework Versiyon:** 1.0  
+ **.NET Framework sürümü:** 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

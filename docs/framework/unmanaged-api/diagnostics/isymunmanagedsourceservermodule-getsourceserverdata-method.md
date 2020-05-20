@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a3a6c07a9cace0ac9834cdb05925a301285204c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176584"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615325"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData Metodu
-Modülün kaynak sunucu verilerini verir. Arayan kişi kaynakları kullanarak `CoTaskMemFree`serbest etmelidir.  
+Modülün kaynak sunucu verilerini döndürür. Çağıran, kullanarak kaynakları serbest vermelidir `CoTaskMemFree` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSourceServerData(  
@@ -35,17 +35,17 @@ HRESULT GetSourceServerData(
   
 ## <a name="parameters"></a>Parametreler  
  `pDataByteCount`  
- [çıkış] Kaynak sunucu `ULONG32` verilerinin bayt boyutunda alan bir işaretçi.  
+ dışı `ULONG32`Kaynak sunucu verilerinin bayt cinsinden boyutunu alan bir bir işaretçisi.  
   
  `ppData`  
- [çıkış] Döndürülen `pDataByteCount` değeriçin bir işaretçi.  
+ dışı Döndürülen değere yönelik bir işaretçi `pDataByteCount` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- yöntem başarılı olursa S_OK; aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedSourceServerModule Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+- [ISymUnmanagedSourceServerModule Arabirimi](isymunmanagedsourceservermodule-interface.md)

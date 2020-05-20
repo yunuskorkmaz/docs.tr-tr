@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: 44578595b3cb790570c5359e714bd39c109cf1f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a60805e1fd78cb14835957a7afc14fe279cb20fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176467"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616573"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess İşlevi
 Geçerli yönetilmeyen işlemi kapatır.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır. Bunun yerine [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) yöntemini kullanın.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır. Bunun yerine [ICLRMetaHost:: ExitProcess](iclrmetahost-exitprocess-method.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 void STDMETHODCALLTYPE CorExitProcess (
@@ -40,22 +40,22 @@ void STDMETHODCALLTYPE CorExitProcess (
   
 ## <a name="parameters"></a>Parametreler  
  `exitCode`  
- İşlem çıkış kodunu belirten bir sonsayı.  
+ İşlem çıkış kodunu belirten bir tamsayı.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> .NET Framework 4'ten `CorExitProcess` başlayarak, sadece eski API'lerin bağlı olduğu çalışma zamanı değil, işlemdeki her başlangıç çalışma zamanından çıkar.  
+> .NET Framework 4 ' ten başlayarak, `CorExitProcess` yalnızca eski API 'lerin bağlandığı çalışma zamanına değil, işlemdeki tüm başlatılan çalışma zamanından çıkılıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

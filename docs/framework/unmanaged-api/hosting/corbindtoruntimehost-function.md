@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 6566adc442034763e0209869404b60b5afa63866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176493"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616625"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost İşlevi
-Ana bilgisayarların ortak dil çalışma zamanının (CLR) belirli bir sürümünü bir işleme yüklemesini sağlar.  
+Ana bilgisayarların belirli bir ortak dil çalışma zamanı (CLR) sürümünü bir işleme yüklemesine olanak sağlar.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorBindToRuntimeHost (  
@@ -43,54 +43,54 @@ HRESULT CorBindToRuntimeHost (
   
 ## <a name="parameters"></a>Parametreler  
  `pwszVersion`  
- [içinde] Yüklemek istediğiniz CLR sürümünü açıklayan bir dize.  
+ 'ndaki Yüklemek istediğiniz CLR sürümünü tanımlayan bir dize.  
   
- .NET Framework'deki bir sürüm numarası dönemlere göre ayrılmış dört bölümden oluşur: *major.minor.build.revision*. Dize olarak `pwszVersion` "v" karakteri ve ardından sürüm numarasının ilk üç bölümü (örneğin, "v1.0.1529" ile başlamak gerekir) ile geçildi.  
+ .NET Framework bir sürüm numarası, noktalarla ayrılmış dört bölümden oluşur: *ana. ikincil. derleme. düzeltme*. Geçirilen dize, `pwszVersion` "v" karakteriyle başlamalı ve ardından sürüm numarasının ilk üç bölümü gelmelidir (örneğin, "v 1.0.1529").  
   
- CLR'nin bazı sürümleri, CLR'nin önceki sürümleriyle uyumluluğu belirten bir ilke bildirimiyle yüklenir. Varsayılan olarak, başlangıç şimi `pwszVersion` ilke deyimlerine göre değerlendirir ve istenen sürümle uyumlu çalışma zamanının en son sürümünü yükler. Bir ana bilgisayar, şimi ilke değerlendirmesini atlamaya `pwszVersion` ve parametre için `startupFlags` STARTUP_LOADER_SAFEMODE değerini geçirerek belirtilen tam sürümü yüklemeye zorlayabilir.  
+ CLR 'nin bazı sürümleri, CLR 'nin önceki sürümleriyle uyumluluğu belirten bir ilke bildirimiyle yüklenir. Varsayılan olarak, başlangıç dolgusu `pwszVersion` ilke deyimlerine göre değerlendirilir ve çalışma zamanının istenen sürümle uyumlu olan en son sürümünü yükler. Bir konak, bu dolgunun ilke değerlendirmesini atlamasını ve ' de `pwszVersion` parametre için bir STARTUP_LOADER_SAFEMODE değeri geçirerek belirtilen tam sürümü yüklemesini zorunlu hale getirebilirsiniz `startupFlags` .  
   
- Yöntem `pwszVersion` `null,` ise CLR herhangi bir sürümünü yüklemez. Bunun yerine, çalışma süresini yüklemeyi başaramadıCLR_E_SHIM_RUNTIMELOAD döndürür.  
+ `pwszVersion`, `null,` Yöntemi clr 'nin herhangi bir sürümünü yüklemez. Bunun yerine, çalışma zamanını yükleyemediğini belirten CLR_E_SHIM_RUNTIMELOAD döndürür.  
   
  `pwszBuildFlavor`  
- [içinde] Sunucuyu veya CLR'nin iş istasyonu oluşturmasını yükleyip yükleymeyeceğini belirten bir dize. Geçerli değerler `svr` `wks`ve . Sunucu yapısı çöp koleksiyonları için birden çok işlemciden yararlanacak şekilde optimize edilse de, iş istasyonu yapısı tek işlemcili bir makinede çalışan istemci uygulamaları için optimize edilsin.  
+ 'ndaki CLR 'nin sunucunun mi yoksa iş istasyonu derlemesinin mi yükleneceğini belirten bir dize. Geçerli değerler `svr` ve ' dir `wks` . Sunucu derlemesi, çöp koleksiyonları için birden fazla işlemciden yararlanmak üzere iyileştirilmiştir ve iş istasyonu derlemesi, tek işlemcili bir makinede çalışan istemci uygulamaları için iyileştirilmiştir.  
   
- Null `pwszBuildFlavor` ayarlanırsa, iş istasyonu yapısı yüklenir. Tek işlemcili bir makinede çalışırken, iş istasyonu yapısı `pwszBuildFlavor` her zaman `svr`yüklenir, buna göre ayarlanmış olsa bile. Ancak, `pwszBuildFlavor` ayarlanır `svr` ve eşzamanlı çöp toplama belirtilirse `startupFlags` (parametreaçıklamasına bakın), sunucu yapısı yüklenir.  
+ `pwszBuildFlavor`Null olarak ayarlanırsa, iş istasyonu derlemesi yüklenir. Tek işlemcili bir makinede çalışırken, olarak ayarlanmış olsa bile iş istasyonu derlemesi her zaman yüklenir `pwszBuildFlavor` `svr` . Ancak, `pwszBuildFlavor` olarak ayarlanmışsa `svr` ve eşzamanlı çöp toplama belirtilirse (parametresinin açıklamasına bakın `startupFlags` ), sunucu derlemesi yüklenir.  
   
 > [!NOTE]
-> Intel Itanium mimarisini (eski adıyla IA-64) uygulayan 64 bit sistemlerde WOW64 x86 emülatörü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için [32 bit Uygulamaları Çalıştırma'ya](/windows/desktop/WinProg64/running-32-bit-applications)bakın.  
+> Intel Itanium mimarisini (daha önce IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde WOW64 x86 öykünücüsünü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [32-bit uygulamaları çalıştırma](/windows/desktop/WinProg64/running-32-bit-applications).  
   
  `pwszHostConfigFile`  
- [içinde] ClR'nin yüklenmesi için sürümünü belirten bir ana bilgisayar yapılandırma dosyasının adı. Dosya adı tam nitelikli bir yol içermiyorsa, dosyanın aramayı yapan yürütülebilir ile aynı dizinde olduğu varsayılır.  
+ 'ndaki Yüklenecek CLR sürümünü belirten bir ana bilgisayar yapılandırma dosyasının adı. Dosya adı tam nitelikli bir yol içermiyorsa, dosyanın çağrıyı yapan çalıştırılabilirle aynı dizinde olduğu varsayılır.  
   
  `pReserved`  
- [içinde] Gelecekteki genişletilebilirlik için ayrılmıştır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.  
   
  `startupFlags`  
- [içinde] Eşzamanlı çöp toplama, etki alanı nötr kod ve `pwszVersion` parametre davranışını kontrol eden bayraklar kümesi. Bayrak ayarlıdeğilse varsayılan değer tek alan adıdır. Desteklenen değerlerin listesi için [numaralandırmaSTARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)bakın.  
+ 'ndaki Eşzamanlı çöp toplamayı, etki alanını bağımsız kodu ve parametresinin davranışını denetleyen bir bayrak kümesi `pwszVersion` . Hiçbir bayrak ayarlanmamışsa varsayılan, tek etki alanıdır. Desteklenen değerlerin listesi için bkz. [startup_flags numaralandırması](startup-flags-enumeration.md).  
   
  `rclsid`  
- [içinde] `CLSID` [ICorRuntimeHost veya ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) ya uygular coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
+ 'ndaki `CLSID` [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [ICLRRuntimeHost](iclrruntimehost-interface.md) arabirimini uygulayan coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
   
  `riid`  
- [içinde] `IID` İstediğinin arayüzü. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
+ 'ndaki `IID`İstediğiniz arabirim. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
   
  `ppv`  
- [çıkış] Yüklenen çalışma zamanı sürümüne bir arabirim işaretçisi.  
+ dışı Yüklenen çalışma zamanının sürümüne yönelik bir arabirim işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE. IDL  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CorBindToCurrentRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeEx İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime İşlevi](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime İşlevi](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg İşlevi](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeEx İşlevi](corbindtoruntimeex-function.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

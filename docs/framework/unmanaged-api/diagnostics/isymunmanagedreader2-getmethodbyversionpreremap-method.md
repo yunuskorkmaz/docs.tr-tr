@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: 2063856389b122b150a2d2744169a4a567592287
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b12ecfdaf7c90589ce2e96b39f7437444cb91b09
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446441"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615429"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap Metodu
 Bir yöntem belirteci ve bir Düzenle ve devam et sürüm numarası verilen bir sembol okuyucu yöntemi alır. Sürüm numaraları 1 ' den başlar ve bir düzenleme ve devam etme işleminin sonucu olarak yöntemin her değiştirildiği her seferinde artırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethodByVersionPreRemap(  
@@ -42,7 +42,7 @@ HRESULT GetMethodByVersionPreRemap(
  'ndaki Yöntem sürümü.  
   
  `pRetVal`  
- dışı Döndürülen [ıdimunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) arabirimine yönelik bir işaretçi.  
+ dışı Döndürülen [ıdimunmanagedmethod](isymunmanagedmethod-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -52,4 +52,4 @@ HRESULT GetMethodByVersionPreRemap(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 Yöntemi](isymunmanagedreader2-interface.md)

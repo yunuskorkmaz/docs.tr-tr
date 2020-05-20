@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d31b0190ef9a697fb27c849db080bec6c57618ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131210"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616391"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories Numaralandırması
 Ana bilgisayarın kısmen güvenilen kodda çalışmasını engelleyebilecekleri yetenekler kategorilerini açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum {  
@@ -46,7 +46,7 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eAll`|Diğer `EApiCategories` alanları kapsamındaki tüm yönetilen sınıfların ve üyelerin kısmen güvenilen kodda çalıştırılmasını engellenemediğini belirtir.|  
+|`eAll`|Diğer alanlar kapsamındaki tüm yönetilen sınıfların ve üyelerin `EApiCategories` kısmen güvenilen kodda çalıştırılmasını engellenemediğini belirtir.|  
 |`eExternalProcessMgmt`|Dış işlemlerin oluşturulmasına, yönetilmesine ve yok edilmesiyle kısmen güvenilen kodda çalışmasına izin veren yönetilen sınıfların ve üyelerin engellenip engellenmediğini belirtir.|  
 |`eExternalThreading`|Dış iş parçacıklarının oluşturulmasına, yönetilmesine ve yok edilmesiyle kısmen güvenilen kodda çalışmasına izin veren yönetilen sınıfların ve üyelerin engellenip engellenmediğini belirtir.|  
 |`eMayLeakOnAbort`|Durdurma sırasında belleği potansiyel olarak sızan yönetilen türlerin ve üyelerin kısmen güvenilen kodda çalıştırılmasını engellenebileceği belirtir.|  
@@ -59,20 +59,20 @@ typedef enum {
 |`eUI`|İnsan etkileşiminin kısmen güvenilen kodda çalışmasına izin veren veya bunları gerektiren yönetilen sınıfların ve üyelerin engellenip engellenmediğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICLRHostProtectionManager:: SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) yöntemi, `EApiCategories`türünde bir parametre alır.  
+ [ICLRHostProtectionManager:: SetProtectedCategories](iclrhostprotectionmanager-setprotectedcategories-method.md) yöntemi türünde bir parametre alır `EApiCategories` .  
   
- `EApiCategories` numaralandırması ve `SetProtectedCategories` yöntemi, yönetilen <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> sınıfıyla doğrudan ilgilidir. Yönetilen sınıf, `EApiCategories`tarafından tanımlanan kategorilere karşılık gelen özellikleri kullanıma sunan yönetilen türleri ve üyeleri işaretlemek için değerleri doğrudan `EApiCategories` değerlerine karşılık gelen <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> numaralandırmasında kullanılır.  
+ `EApiCategories`Sabit listesi ve `SetProtectedCategories` yöntemi doğrudan yönetilen <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> sınıfla ilgilidir. Yönetilen sınıf, <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> `EApiCategories` tarafından açıklanan kategorilere karşılık gelen özellikleri açığa çıkaran yönetilen türleri ve üyeleri işaretlemek için değerleri doğrudan değerlere karşılık gelen numaralandırmada kullanılır `EApiCategories` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRHostProtectionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRHostProtectionManager Arabirimi](iclrhostprotectionmanager-interface.md)
+- [Barındırma Sabit Listeleri](hosting-enumerations.md)

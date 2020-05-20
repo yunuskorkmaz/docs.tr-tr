@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: 3520af5f55f43183920dce7fbd24b70359c023a2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176506"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616638"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx İşlevi
-Yönetilmeyen ana bilgisayarların ortak dil çalışma süresini (CLR) bir işleme yüklemesini sağlar. [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) ve `CorBindToRuntimeEx` işlevleri aynı işlemi gerçekleştirir, ancak `CorBindToRuntimeEx` işlev CLR davranışını belirtmek için bayrakları ayarlamanızı sağlar.  
+Yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını (CLR) bir işleme yüklemesini sağlar. [CorBindToRuntime](corbindtoruntime-function.md) ve `CorBindToRuntimeEx` işlevleri aynı işlemi gerçekleştirir, ancak `CorBindToRuntimeEx` işlevi clr 'nin davranışını belirtmek için bayraklar ayarlamanıza olanak sağlar.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
- Bu işlev, bir ana bilgisayar aşağıdakileri yapmasına izin veren bir dizi parametre alır:  
+ Bu işlev, bir ana bilgisayarın aşağıdakileri yapmasına izin veren bir parametre kümesi alır:  
   
 - Yüklenecek çalışma zamanının sürümünü belirtin.  
   
-- Sunucu veya iş istasyonu yapısının yüklenip yüklenmemesi gerektiğini belirtin.  
+- Sunucu veya iş istasyonu derlemesinin yüklenip yüklenmeyeceğini belirtin.  
   
-- Eşzamanlı çöp toplama veya eşzamanlı olmayan çöp toplama yapılıp yapılmadığını denetler.  
+- Eşzamanlı atık toplama veya eşzamanlı olmayan çöp toplamanın gerçekleştirilip yapılmadığını denetleyin.  
   
 > [!NOTE]
-> Intel Itanium mimarisini (eski adıyla IA-64) uygulayan 64 bit sistemlerde WOW64 x86 emülatörü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için [32 bit Uygulamaları Çalıştırma'ya](/windows/desktop/WinProg64/running-32-bit-applications)bakın.  
+> Intel Itanium mimarisini (daha önce IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde WOW64 x86 öykünücüsünü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [32-bit uygulamaları çalıştırma](/windows/desktop/WinProg64/running-32-bit-applications).  
   
-- Derlemelerin etki alanı nötr olarak yüklenip yüklenmediğini denetle.  
+- Derlemelerin etki alanı nötr olarak yüklenip yüklenmediğini denetleyin.  
   
-- Başlatılmadan önce CLR'nin bir örneğini yapılandırmak için ek seçenekler ayarlamak için kullanılabilecek bir [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi işaretçisi edinin.  
+- Bir [ICorRuntimeHost](icorruntimehost-interface.md) için, başlamadan önce clr örneğini yapılandırmak için ek seçenekler ayarlamak üzere kullanılabilecek bir arabirim işaretçisi edinin.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorBindToRuntimeEx (  
@@ -57,21 +57,21 @@ HRESULT CorBindToRuntimeEx (
   
 ## <a name="parameters"></a>Parametreler  
  `pwszVersion`  
- [içinde] Yüklemek istediğiniz CLR sürümünü açıklayan bir dize.  
+ 'ndaki Yüklemek istediğiniz CLR sürümünü tanımlayan bir dize.  
   
- .NET Framework'deki bir sürüm numarası dönemlere göre ayrılmış dört bölümden oluşur: *major.minor.build.revision*. Dize olarak `pwszVersion` "v" karakteri ve ardından sürüm numarasının ilk üç bölümü (örneğin, "v1.0.1529" ile başlamak gerekir) ile geçildi.  
+ .NET Framework bir sürüm numarası, noktalarla ayrılmış dört bölümden oluşur: *ana. ikincil. derleme. düzeltme*. Geçirilen dize, `pwszVersion` "v" karakteriyle başlamalı ve ardından sürüm numarasının ilk üç bölümü gelmelidir (örneğin, "v 1.0.1529").  
   
- CLR'nin bazı sürümleri, CLR'nin önceki sürümleriyle uyumluluğu belirten bir ilke bildirimiyle yüklenir. Varsayılan olarak, başlangıç şimi `pwszVersion` ilke deyimlerine göre değerlendirir ve istenen sürümle uyumlu çalışma zamanının en son sürümünü yükler. Bir ana bilgisayar, şimi ilke değerlendirmesini atlamaya `pwszVersion` ve aşağıda `STARTUP_LOADER_SAFEMODE` açıklandığı `startupFlags` gibi parametre için bir değer geçirerek belirtilen tam sürümü yüklemeye zorlayabilir.  
+ CLR 'nin bazı sürümleri, CLR 'nin önceki sürümleriyle uyumluluğu belirten bir ilke bildirimiyle yüklenir. Varsayılan olarak, başlangıç dolgusu `pwszVersion` ilke deyimlerine göre değerlendirilir ve çalışma zamanının istenen sürümle uyumlu olan en son sürümünü yükler. Bir ana bilgisayar, `pwszVersion` `STARTUP_LOADER_SAFEMODE` `startupFlags` aşağıda açıklandığı gibi, bu dolgunun ilke değerlendirmesini atlamasını ve parametresi için bir değer geçirerek belirtilen tam sürümü yüklemesini zorlayabilir.  
   
- Arayan için null `pwszVersion`belirtirse, `CorBindToRuntimeEx` sürüm numaraları .NET Framework 4 çalışma zamanından daha düşük olan yüklü çalışma süreleri kümesini tanımlar ve çalışma zamanının en son sürümünü bu kümeden yükler. .NET Framework 4 veya sonraki yüklenmez ve önceki sürüm yüklenmezse başarısız olur. Null'u geçmek, ana bilgisayara çalışma zamanının hangi sürümünün yüklendiği üzerinde denetim vermez. Bu yaklaşım bazı senaryolarda uygun olsa da, ana bilgisayara yüklemek için belirli bir sürüm sağlaması önerilir.  
+ Çağıran için null belirtiyorsa `pwszVersion` , `CorBindToRuntimeEx` sürüm numaraları .NET Framework 4 çalışma zamanından daha düşük olan yüklü çalışma zamanları kümesini tanımlar ve bu kümeden çalışma zamanının en son sürümünü yükler. .NET Framework 4 veya sonraki bir sürümü yüklemez ve eski sürüm yüklenmemişse başarısız olur. Null geçirildiğine, ana bilgisayarın hangi çalışma zamanının sürümünün yüklü olmadığını belirten bir denetim verilmiştir. Bu yaklaşım bazı senaryolarda uygun olabilir, ancak konağın yüklemek için belirli bir sürüm sağlaması önemle önerilir.  
   
  `pwszBuildFlavor`  
- [içinde] Sunucuyu veya CLR'nin iş istasyonu oluşturmasını yükleyip yükleymeyeceğini belirten bir dize. Geçerli değerler `svr` `wks`ve . Sunucu yapısı çöp koleksiyonları için birden çok işlemciden yararlanacak şekilde optimize edilse de, iş istasyonu yapısı tek işlemcili bir makinede çalışan istemci uygulamaları için optimize edilsin.  
+ 'ndaki CLR 'nin sunucunun mi yoksa iş istasyonu derlemesinin mi yükleneceğini belirten bir dize. Geçerli değerler `svr` ve ' dir `wks` . Sunucu derlemesi, çöp koleksiyonları için birden fazla işlemciden yararlanmak üzere iyileştirilmiştir ve iş istasyonu derlemesi, tek işlemcili bir makinede çalışan istemci uygulamaları için iyileştirilmiştir.  
   
- Null `pwszBuildFlavor` ayarlanırsa, iş istasyonu yapısı yüklenir. Tek işlemcili bir makinede çalışırken, iş istasyonu yapısı `pwszBuildFlavor` her zaman `svr`yüklenir, buna göre ayarlanmış olsa bile. Ancak, `pwszBuildFlavor` ayarlanır `svr` ve eşzamanlı çöp toplama belirtilirse `startupFlags` (parametreaçıklamasına bakın), sunucu yapısı yüklenir.  
+ `pwszBuildFlavor`Null olarak ayarlanırsa, iş istasyonu derlemesi yüklenir. Tek işlemcili bir makinede çalışırken, olarak ayarlanmış olsa bile iş istasyonu derlemesi her zaman yüklenir `pwszBuildFlavor` `svr` . Ancak, `pwszBuildFlavor` olarak ayarlanmışsa `svr` ve eşzamanlı çöp toplama belirtilirse (parametresinin açıklamasına bakın `startupFlags` ), sunucu derlemesi yüklenir.  
   
  `startupFlags`  
- [içinde] [numaralandırma STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) değerlerinin birleşimi. Bu bayraklar eşzamanlı çöp toplama, etki alanı nötr `pwszVersion` kodu ve parametredavranışını denetler. Bayrak ayarlıdeğilse varsayılan değer tek alan adıdır. Aşağıdaki değerler geçerlidir:  
+ 'ndaki [Startup_flags](startup-flags-enumeration.md) numaralandırması değerlerinin birleşimi. Bu bayraklar, eşzamanlı atık toplamayı, etki alanını bağımsız kodu ve parametresinin davranışını denetler `pwszVersion` . Hiçbir bayrak ayarlanmamışsa varsayılan, tek etki alanıdır. Aşağıdaki değerler geçerlidir:  
   
 - `STARTUP_CONCURRENT_GC`  
   
@@ -99,49 +99,49 @@ HRESULT CorBindToRuntimeEx (
   
 - `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
- Bu bayrakların açıklamaları için [numaralandırmanın STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) bakın.  
+ Bu bayrakların açıklamaları için [startup_flags](startup-flags-enumeration.md) sabit listesine bakın.  
   
  `rclsid`  
- [içinde] `CLSID` [ICorRuntimeHost veya ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) ya uygular coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
+ 'ndaki `CLSID` [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [ICLRRuntimeHost](iclrruntimehost-interface.md) arabirimini uygulayan coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
   
  `riid`  
- [içinde] İstenen `IID` arabirimin `rclsid`. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
+ 'ndaki `IID`İçindeki istenen arabirimin `rclsid` . Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
   
  `ppv`  
- [çıkış] Döndürülen arabirim `riid`işaretçisi .  
+ dışı Döndürülen arabirim işaretçisi `riid` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Var `pwszVersion` olmayan bir çalışma zamanı sürümü belirtirse, `CorBindToRuntimeEx` CLR_E_SHIM_RUNTIMELOAD Bir HRESULT değeri döndürür.  
+ `pwszVersion`Mevcut olmayan bir çalışma zamanı sürümünü belirtiyorsa, `CorBindToRuntimeEx` CLR_E_SHIM_RUNTIMELOAD HRESULT değerini döndürür.  
   
-## <a name="execution-context-and-flow-of-windows-identity"></a>Yürütme Bağlamı ve Windows Kimliğinin Akışı  
- CLR'nin sürüm <xref:System.Security.Principal.WindowsIdentity> 1'inde, nesne yeni iş parçacıkları, iş parçacığı havuzları veya zamanlayıcı geri aramaları gibi eşzamanlı noktalar arasında akmaz. CLR'nin sürüm 2.0'ında, bir <xref:System.Threading.ExecutionContext> nesne şu anda çalıştırılamakta olan iş parçacığı yla ilgili bazı bilgileri sarar ve uygulama etki alanı sınırları boyunca değil, herhangi bir eşzamanlı nokta boyunca akar. Benzer şekilde, <xref:System.Security.Principal.WindowsIdentity> nesne de herhangi bir asynchronous noktası boyunca akar. Bu nedenle, iş parçacığı üzerinde geçerli kimliğe bürünme, varsa, çok akar.  
+## <a name="execution-context-and-flow-of-windows-identity"></a>Windows kimliğinin yürütme bağlamı ve akışı  
+ CLR sürüm 1 ' de, nesne, <xref:System.Security.Principal.WindowsIdentity> yeni iş parçacıkları, iş parçacığı havuzları veya zamanlayıcı geri çağırmaları gibi zaman uyumsuz noktalarda akış yapmaz. CLR sürüm 2,0 ' de, <xref:System.Threading.ExecutionContext> nesne yürütülmekte olan iş parçacığı hakkında bazı bilgileri sarmalanmış ve uygulama etki alanı sınırları boyunca değil, herhangi bir zaman uyumsuz noktada akar. Benzer şekilde, <xref:System.Security.Principal.WindowsIdentity> nesne Ayrıca herhangi bir zaman uyumsuz noktada akar. Bu nedenle, iş parçacığında geçerli kimliğe bürünme, varsa, akış.  
   
  Akışı iki şekilde değiştirebilirsiniz:  
   
-1. İş parçacığı <xref:System.Threading.ExecutionContext> başına akışı bastırmak için ayarları değiştirerek (bkz. <xref:System.Threading.ExecutionContext.SuppressFlow%2A> <xref:System.Security.SecurityContext.SuppressFlow%2A> <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>  
+1. <xref:System.Threading.ExecutionContext>Her iş parçacığı temelinde akışı bastırmak için ayarları değiştirerek (bkz.,, <xref:System.Threading.ExecutionContext.SuppressFlow%2A> <xref:System.Security.SecurityContext.SuppressFlow%2A> ve <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> yöntemleri).  
   
-2. İşlem varsayılan modunu, geçerli iş parçacığındaki <xref:System.Security.Principal.WindowsIdentity> <xref:System.Threading.ExecutionContext> ayarlardan bağımsız olarak nesnenin herhangi bir eşyoknom noktası boyunca akmayan sürüm 1 uyumluluk moduna değiştirerek. Varsayılan modu nasıl değiştirdiğiniz, CLR'yi yüklemek için yönetilen bir yürütülebilir veya yönetilmeyen bir barındırma arabirimi kullanıp kullanmadığınıza bağlıdır:  
+2. İşlem varsayılan modunu sürüm 1 uyumluluk modu olarak değiştirerek, <xref:System.Security.Principal.WindowsIdentity> <xref:System.Threading.ExecutionContext> geçerli iş parçacığındaki ayarlardan bağımsız olarak nesnenin herhangi bir zaman uyumsuz noktada akış yapmaz. Varsayılan modu değiştirme, CLR 'yi yüklemek için yönetilen bir çalıştırılabiliri veya yönetilmeyen barındırma arabirimini kullanıp kullanmayacağınızı bağlıdır:  
   
-    1. Yönetilen yürütülebilir ler için `enabled` [ \<legacyImpersonationPolicy>](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) öğesinin özniteliğini `true`.  
+    1. Yönetilen yürütülebilir dosyalar için, `enabled` [ \< legacyımpersonationpolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) öğesinin özniteliğini olarak ayarlamanız gerekir `true` .  
   
-    2. Yönetilmeyen barındırma arabirimleri `STARTUP_LEGACY_IMPERSONATION` `startupFlags` `CorBindToRuntimeEx` için, işlevi ararken parametredeki bayrağı ayarlayın.  
+    2. Yönetilmeyen barındırma arabirimleri için, `STARTUP_LEGACY_IMPERSONATION` `startupFlags` işlevini çağırırken parametresindeki bayrağı ayarlayın `CorBindToRuntimeEx` .  
   
      Sürüm 1 uyumluluk modu tüm işlem ve işlemdeki tüm uygulama etki alanları için geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CorBindToCurrentRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeHost İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime İşlevi](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime İşlevi](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg İşlevi](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeHost İşlevi](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

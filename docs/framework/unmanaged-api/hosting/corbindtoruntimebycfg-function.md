@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 4fbc6e7ea531f65a6b1cd0ec93f4847ab8e4fe83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9326484c6a9f96d245e3c61a0ac3e3465a8a6dcd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178240"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616651"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg İşlevi
-XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma süresini (CLR) işleme yükler.  
+Bir XML dosyasından okunan sürüm bilgilerini kullanarak ortak dil çalışma zamanını (CLR) bir işleme yükler.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorBindToRuntimeByCfg (  
@@ -41,40 +41,40 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>Parametreler  
  `pCfgStream`  
- [içinde] XML dosyasını okuyan bir `IStream` nesneye işaretçi.  
+ 'ndaki `IStream`XML dosyasını okuyan bir nesne işaretçisi.  
   
  `reserved`  
- [içinde] İleride kullanım için ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
+ 'ndaki Gelecekte kullanılmak üzere ayrılmıştır. Değer olarak 0 (sıfır) kullanın.  
   
  `startupFlags`  
- [içinde] CLR'nin başlangıç davranışını belirten [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) numaralandırmadeğeri.  
+ 'ndaki CLR 'nin başlangıç davranışını belirten [startup_flags](startup-flags-enumeration.md) numaralandırması değeri.  
   
  `rclsid`  
- [içinde] `CLSID` [ICorRuntimeHost veya ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) ya uygular coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
+ 'ndaki `CLSID` [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) veya [ICLRRuntimeHost](iclrruntimehost-interface.md) arabirimini uygulayan coclass. Desteklenen değerler CLSID_CorRuntimeHost veya CLSID_CLRRuntimeHost.  
   
  `riid`  
- [içinde] Ya `IID` `ICorRuntimeHost` arayüz ya `ICLRRuntimeHost` da. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
+ 'ndaki `IID` `ICorRuntimeHost` Ya da `ICLRRuntimeHost` arabirimi. Desteklenen değerler IID_ICorRuntimeHost veya IID_ICLRRuntimeHost.  
   
  `ppv`  
- [çıkış] Döndürülen arabirimin adresine işaretçi.  
+ dışı Döndürülen arabirimin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- XML dosyasının biçimi standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için [Configuration File Schema'ya](../../../../docs/framework/configure-apps/file-schema/index.md)bakın.  
+ XML dosyasının biçimi, standart uygulama yapılandırma dosyasından sonra modellenir. XML dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosya şeması](../../configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CorBindToCurrentRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeEx İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [CorBindToRuntimeHost İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime İşlevi](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime İşlevi](corbindtoruntime-function.md)
+- [CorBindToRuntimeEx İşlevi](corbindtoruntimeex-function.md)
+- [CorBindToRuntimeHost İşlevi](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

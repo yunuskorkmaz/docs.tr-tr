@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176623"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615338"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants Yöntemi
-Bu kapsamda tanımlanan yerel sabitleri alır.  
+Bu kapsam içinde tanımlanan yerel sabitleri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetConstants(  
@@ -38,20 +38,20 @@ HRESULT GetConstants(
   
 ## <a name="parameters"></a>Parametreler  
  `cConstants`  
- [içinde] `pcConstants` Parametrenin işaret ettiği arabelleğe in uzunluğu.  
+ 'ndaki `pcConstants`Parametrenin işaret ettiği arabelleğin uzunluğu.  
   
  `pcConstants`  
- [çıkış] Sabitleri içermek için gereken arabelleğe in boyutlarını karakterlerde alan bir `ULONG32` işaretçi.  
+ dışı `ULONG32`Sabitleri içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
  `constants`  
- [çıkış] Sabitleri depolayan arabellek.  
+ dışı Sabitleri depolayan arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- yöntem başarılı olursa S_OK; aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedScope2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [ISymUnmanagedScope2 Arabirimi](isymunmanagedscope2-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: 512dd4055a0aad8498db6ef2241c9363aecee9c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95ae081d61200e4fd020609a4d23783f265d2cc6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446295"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615364"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent Yöntemi
 Bu kapsamın üst kapsamını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetParent(  
@@ -34,7 +34,7 @@ HRESULT GetParent(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı Döndürülen [ıdimunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimine yönelik bir işaretçi.  
+ dışı Döndürülen [ıdimunmanagedscope](isymunmanagedscope-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,5 +44,5 @@ HRESULT GetParent(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetChildren Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)
+- [ISymUnmanagedScope Arabirimi](isymunmanagedscope-interface.md)
+- [GetChildren Yöntemi](isymunmanagedscope-getchildren-method.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-ms.openlocfilehash: 348a8cebe0fd746f3ae490484ffcca2fcb77684b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cdbffe71540b51ff539a45861546efd761761892
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446321"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615377"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod Yöntemi
 Bu kapsamı içeren yöntemi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethod(  
@@ -34,7 +34,7 @@ HRESULT GetMethod(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı Döndürülen [ıdimunmanagedmethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) arabirimine yönelik bir işaretçi.  
+ dışı Döndürülen [ıdimunmanagedmethod](isymunmanagedmethod-interface.md) arabirimine yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,4 +44,4 @@ HRESULT GetMethod(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [ISymUnmanagedScope Arabirimi](isymunmanagedscope-interface.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: 0073a532f680d8764ec9e76ea22326a630457043
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 822396e28d000a5309738680fec502e1aeacd67c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176441"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616222"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable Numaralandırması
-Bilgisayardaki boş fiziksel bellek miktarını gösteren değerler içerir. Bu değerler, Windows API'daki `CreateMemoryResourceNotification` işlevden döndürülen yüksek ve düşük bellek olaylarının mantıksal olarak eşlenir.  
+Bilgisayardaki boş fiziksel bellek miktarını belirten değerleri içerir. Bu değerler, Windows API 'sindeki işlevden döndürülen yüksek ve düşük bellek olaylarına mantıksal olarak eşlenir `CreateMemoryResourceNotification` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum {  
@@ -38,22 +38,22 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Çok sayıda fiziksel bellek mevcuttur.|  
+|`eMemoryAvailableHigh`|Yeterince fiziksel bellek mevcuttur.|  
 |`eMemoryAvailableLow`|Çok az fiziksel bellek mevcuttur.|  
-|`eMemoryAvailableNeutral`|Kullanılabilir fiziksel bellek nötrdür.|  
+|`eMemoryAvailableNeutral`|Kullanılabilir fiziksel bellek nötr.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değer, [iCLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) yöntemine bir çağrı kullanılarak ana bilgisayar tarafından ortak dil çalışma süresine (CLR) aktarılır.  
+ Bu değer, [ICLRMemoryNotificationCallback:: OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md) yöntemine yapılan bir çağrı kullanılarak ana bilgisayar tarafından ortak dil çalışma zamanına (CLR) geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Barındırma Sabit Listeleri](hosting-enumerations.md)

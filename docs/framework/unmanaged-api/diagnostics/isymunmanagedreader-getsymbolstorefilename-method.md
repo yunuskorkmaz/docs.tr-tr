@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431234"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615520"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi
 Sembol deposunun disk üzerindeki dosya adını sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSymbolStoreFileName (  
@@ -37,10 +37,10 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- 'ndaki `szName` arabelleğinin boyutu.  
+ 'ndaki `szName`Arabelleğin boyutu.  
   
  `pcchName`  
- dışı Null sonlandırma dahil olmak üzere, `szName`döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi.  
+ dışı Null sonlandırma dahil olmak üzere içinde döndürülen adın uzunluğunu alan değişkene yönelik bir işaretçi `szName` .  
   
  `szName`  
  dışı Sembol deposunun dosya adını alan değişkene yönelik bir işaretçi.  
@@ -53,4 +53,4 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

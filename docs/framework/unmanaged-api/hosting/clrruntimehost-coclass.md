@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40766ce5837053493f2e3f1f25fe7d1d63ec695f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129463"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616811"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass’ı
 Çalışma zamanı tarafından kod yürütmeyi yönetmek için arabirimler sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 coclass CLRRuntimeHost {  
@@ -37,18 +37,18 @@ coclass CLRRuntimeHost {
   
 |Arabirim|Açıklama|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Çalışma zamanı tarafından uygulamaların yürütülmesini denetlemek için yöntemler sağlar.|  
-|[ICLRValidator Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Taşınabilir yürütülebilir görüntülerin doğrulanması ve doğrulama hatalarının ayrıntılı raporlanması için yöntemler sağlar.|  
+|[ICLRRuntimeHost Arabirimi](iclrruntimehost-interface.md)|Çalışma zamanı tarafından uygulamaların yürütülmesini denetlemek için yöntemler sağlar.|  
+|[ICLRValidator Arabirimi](iclrvalidator-interface.md)|Taşınabilir yürütülebilir görüntülerin doğrulanması ve doğrulama hatalarının ayrıntılı raporlanması için yöntemler sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. IDL  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Barındırma Yardımcı Sınıfları](hosting-coclasses.md)

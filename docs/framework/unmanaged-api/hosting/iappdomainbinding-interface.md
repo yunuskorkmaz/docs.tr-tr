@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 368881ab-c4ea-4731-bf22-c596aac7c66c
 topic_type:
 - apiref
-ms.openlocfilehash: cf4fa9c5ec35391a0e772e25112f305bfa6e1564
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f368f4288f8203067c1f9ff350ce0f3389f514
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126895"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617104"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding Arabirimi
 , Bir uygulama etki alanının oluşturulduğunu ana bilgisayar uygulamasına bildirmek için ortak dil çalışma zamanı (CLR) tarafından çağrılan bir yöntem sağlar.  
@@ -28,17 +28,17 @@ ms.locfileid: "73126895"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[OnAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Bir uygulama etki alanının oluşturulduğunu konağa bildirmek için ortak dil çalışma zamanı (CLR) tarafından çağırılır.|  
+|[OnAppDomain Yöntemi](iappdomainbinding-onappdomain-method.md)|Bir uygulama etki alanının oluşturulduğunu konağa bildirmek için ortak dil çalışma zamanı (CLR) tarafından çağırılır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

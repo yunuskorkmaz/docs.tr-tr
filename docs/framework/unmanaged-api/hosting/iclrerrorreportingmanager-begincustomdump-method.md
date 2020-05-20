@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4c83ffaf920abe005ba987e0a744e13aa0d3c016
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615676"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump Yöntemi
 Hata raporlama için özel yığın dökümlerinin yapılandırmasını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT BeginCustomDump (  
@@ -38,13 +38,13 @@ HRESULT BeginCustomDump (
   
 ## <a name="parameters"></a>Parametreler  
  `dwFlavor`  
- 'ndaki Özel yığın dökümünden sonra oluşturulacak yığın dökümü türünü gösteren bir [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) değeri.  
+ 'ndaki Özel yığın dökümünden sonra oluşturulacak yığın dökümü türünü gösteren bir [ECustomDumpFlavor](ecustomdumpflavor-enumeration.md) değeri.  
   
  `dwNumItems`  
- 'ndaki `items` dizisinin uzunluğu. `dwFlavor` DUMP_FLAVOR_Mini değilse, `dwNumItems` sıfır olmalıdır.  
+ 'ndaki `items`Dizinin uzunluğu. `dwFlavor`DUMP_FLAVOR_Mini değilse, sıfır olmalıdır `dwNumItems` .  
   
  `items`  
- 'ndaki Mini döküme eklenecek öğeleri belirten bir [Customdumpitem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) örnekleri dizisi. `dwFlavor` DUMP_FLAVOR_Mini değilse, `items` null olmalıdır.  
+ 'ndaki Mini döküme eklenecek öğeleri belirten bir [Customdumpitem](customdumpitem-structure.md) örnekleri dizisi. `dwFlavor`DUMP_FLAVOR_Mini değilse, null olmalıdır `items` .  
   
  `dwReserved`  
  'ndaki Gelecekte kullanılmak üzere ayrılmıştır.  
@@ -58,25 +58,25 @@ HRESULT BeginCustomDump (
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `BeginCustomDump` yöntemi özel yığın dökümü yapılandırmasını ayarlar. [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) yöntemi özel yığın dökümü yapılandırmasını temizler ve ilişkili tüm durumları serbest bırakır. Özel yığın dökümü tamamlandıktan sonra çağrılmalıdır.  
+ `BeginCustomDump`Yöntemi özel yığın dökümü yapılandırmasını ayarlar. [EndCustomDump](iclrerrorreportingmanager-endcustomdump-method.md) yöntemi özel yığın dökümü yapılandırmasını temizler ve ilişkili tüm durumları serbest bırakır. Özel yığın dökümü tamamlandıktan sonra çağrılmalıdır.  
   
 > [!IMPORTANT]
-> `EndCustomDump` çağıramaması, belleğin sızmasına neden olur.  
+> Çağırma hatası, `EndCustomDump` belleğin sızmasını sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CustomDumpItem Yapısı](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
-- [ECustomDumpFlavor Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
-- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [CustomDumpItem Yapısı](customdumpitem-structure.md)
+- [ECustomDumpFlavor Sabit Listesi](ecustomdumpflavor-enumeration.md)
+- [ICLRErrorReportingManager Arabirimi](iclrerrorreportingmanager-interface.md)

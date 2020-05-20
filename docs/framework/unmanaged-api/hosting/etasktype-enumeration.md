@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138195"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616174"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType Numaralandırması
-Bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.  
+Bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [IHostTask](ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum ETaskType {  
@@ -59,14 +59,14 @@ typedef enum ETaskType {
 |`TT_USER`|Arabirim bir Kullanıcı görevini temsil eder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Barındırma Sabit Listeleri](hosting-enumerations.md)

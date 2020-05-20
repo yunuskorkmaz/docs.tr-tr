@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7115e920-aaff-440a-824e-39497139c6f6
 topic_type:
 - apiref
-ms.openlocfilehash: a18e1efd246b0d6895d18ae0e7089a78703eae0e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 933edf734a0e02b4ac9c88d9f193277d963adada
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129437"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615806"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl Metodu
 Bu yöntem uygulanmadı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDacl (  
@@ -44,17 +44,17 @@ HRESULT GetDacl (
 |E_NOTIMPL|Yöntem uygulanmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRDebugManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [SetDacl Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
-- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [ICLRControl Arabirimi](iclrcontrol-interface.md)
+- [ICLRDebugManager Arabirimi](iclrdebugmanager-interface.md)
+- [SetDacl Yöntemi](iclrdebugmanager-setdacl-method.md)
+- [IHostControl Arabirimi](ihostcontrol-interface.md)

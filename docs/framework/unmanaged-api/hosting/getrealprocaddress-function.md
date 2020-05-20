@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178168"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617210"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress İşlevi
-Ortak dil çalışma zamanının (CLR) en son yüklenen sürümünden dışa aktarılan belirtilen işlevin adresini alır.  
+Ortak dil çalışma zamanının (CLR) en son yüklenen sürümünden aktarılmış olan belirtilen işlevin adresini alır.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRealProcAddress (  
@@ -37,29 +37,29 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>Parametreler  
  `pwszProcName`  
- [içinde] Fonksiyonun adı.  
+ 'ndaki İşlevin adı.  
   
  `ppv`  
- [çıkış] İşlevin adresine işaretçi alan konum.  
+ dışı İşlevin adresine bir işaretçi alan konum.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, WinError.h'de tanımlandığı gibi standart Bileşen Nesne Modeli (COM) hata kodlarını, CorError.h'de tanımlanan aşağıdaki değerlere ek olarak döndürür.  
+ Bu yöntem, CorError. h içinde tanımlanan aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`ppv`geçerli değildir.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|İşlev çalışma zamanından dışa aktarılmaz.|  
+|E_POINTER|`ppv`geçerli değil.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|İşlev çalışma zamanından dışarıya aktarılmamış.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 86a09871-33e4-412c-aeb8-4d18f924595b
 topic_type:
 - apiref
-ms.openlocfilehash: 2644a36e9a2901ef1007ebf3180b9fc55b5ca67a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a7f92878678bc546be802652718236eab159fe21
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127191"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617028"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NotAutodone ( );  
@@ -33,4 +33,4 @@ HRESULT NotAutodone ( );
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

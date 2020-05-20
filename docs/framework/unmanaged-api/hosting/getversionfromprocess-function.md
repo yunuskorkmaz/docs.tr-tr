@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: a04a0c5e6865c3664d2cb5fb341c3625e35d4d7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaf45da0902ded8a2f7bf0d470aaed3b5f531aa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178123"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617132"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess İşlevi
 Belirtilen işlem tanıtıcısıyla ilişkili ortak dil çalışma zamanının (CLR) sürüm numarasını alır.  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetVersionFromProcess (  
@@ -40,38 +40,38 @@ HRESULT GetVersionFromProcess (
   
 ## <a name="parameters"></a>Parametreler  
  `hProcess`  
- [içinde] Bir işlemin sapı.  
+ 'ndaki Bir işleme yönelik bir tanıtıcı.  
   
  `pVersion`  
- [çıkış] Yöntemin başarıyla tamamlanmasından sonra sürüm numarası dizesini içeren bir arabellek.  
+ dışı Yöntemi başarıyla tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
   
  `cchBuffer`  
- [içinde] Sürüm arabelleği uzunluğu.  
+ 'ndaki Sürüm arabelleğinin uzunluğu.  
   
  `pdwLength`  
- [çıkış] Sürüm numarası dizesinin uzunluğuna işaretçi.  
+ dışı Sürüm numarası dizesinin uzunluğuna yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerlere ek olarak WinError.h'de tanımlandığı şekilde standart Bileşen Nesne Modeli (COM) hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak, WinError. h içinde tanımlanan standart bileşen nesne modeli (COM) hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_ınvalıdarg|`pVersion`null ve `cchBuffer` null değildir, ya da tersi.<br /><br /> -veya-<br /><br /> `hProcess`bir işlem için geçerli bir tutamaç değildir.<br /><br /> -veya-<br /><br /> CLR dolu değil.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`null veya sürüm dize uzunluğu daha azdır.|  
-|E_notımpl|Bu yöntem Microsoft Windows 95, Microsoft Windows 98 veya Microsoft Windows Millennium Edition işletim sisteminde kullanılamaz.|  
+|E_INVALIDARG|`pVersion`null ve `cchBuffer` null ya da tam tersi.<br /><br /> -veya-<br /><br /> `hProcess`bir işleme geçerli bir tanıtıcı değil.<br /><br /> -veya-<br /><br /> CLR yüklü değil.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`null veya sürüm dizesinin uzunluğundan daha küçük.|  
+|E_NOTIMPL|Bu yöntem Microsoft Windows 95, Microsoft Windows 98 veya Microsoft Windows Millennium Edition işletim sisteminde kullanılamaz.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetRequestedRuntimeInfo İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [GetRequestedRuntimeVersion İşlevi](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [GetRequestedRuntimeInfo İşlevi](getrequestedruntimeinfo-function.md)
+- [GetRequestedRuntimeVersion İşlevi](getrequestedruntimeversion-function.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

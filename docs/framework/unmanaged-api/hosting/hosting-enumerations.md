@@ -6,112 +6,112 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 67a3617335db395b9d8f43c804c4eda65894723b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126997"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616118"
 ---
 # <a name="hosting-enumerations"></a>Barındırma Numaralandırmaları
 Bu bölümde, barındırma API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CLSID_RESOLUTION_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/clsid-resolution-flags-enumeration.md)  
- Ortak dil çalışma zamanının (CLR) `CLSID`nasıl çözümleneceğini belirten değerleri içerir.  
+ [CLSID_RESOLUTION_FLAGS Sabit Listesi](clsid-resolution-flags-enumeration.md)  
+ Ortak dil çalışma zamanının (CLR) bir kaç çözüm içermesi gerektiğini belirten değerleri içerir `CLSID` .  
   
- [COR_GC_STAT_TYPES Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)  
+ [COR_GC_STAT_TYPES Sabit Listesi](cor-gc-stat-types-enumeration.md)  
  Çöp toplama için kaydedilecek istatistikleri belirtir.  
   
- [COR_GC_THREAD_STATS_TYPES Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-types-enumeration.md)  
+ [COR_GC_THREAD_STATS_TYPES Sabit Listesi](cor-gc-thread-stats-types-enumeration.md)  
  Bir iş parçacığının çöp toplama istatistiklerini gösterir.  
   
- [EApiCategories Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)  
+ [EApiCategories Numaralandırması](eapicategories-enumeration.md)  
  Ana bilgisayarın kısmen güvenilen kodda çalışmasını engelleyebilecekleri yetenekler kategorilerini açıklar.  
   
- [EBindPolicyLevels Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md)  
+ [EBindPolicyLevels Numaralandırması](ebindpolicylevels-enumeration.md)  
  Derleme ilkesini uygulamak veya değiştirmek için kullanılacak düzeyi belirleyen bayraklar sağlar.  
   
- [ECLRAssemblyIdentityFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md)  
+ [ECLRAssemblyIdentityFlags Sabit Listesi](eclrassemblyidentityflags-enumeration.md)  
  Bir derlemenin kimliğinin türünü gösterir.  
   
- [EClrEvent Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)  
+ [EClrEvent Sabit Listesi](eclrevent-enumeration.md)  
  Konağın geri çağırmaları kaydedebileceği CLR olaylarını açıklar.  
   
- [EClrFailure Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
+ [EClrFailure Sabit Listesi](eclrfailure-enumeration.md)  
  Bir konağın ilke eylemlerini ayarlayabileceği başarısızlık kümesini açıklar.  
   
- [EClrOperation Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
+ [EClrOperation Sabit Listesi](eclroperation-enumeration.md)  
  Bir konağın ilke eylemlerini uygulayabileceği işlemler kümesini açıklar.  
   
- [EClrUnhandledException Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)  
+ [EClrUnhandledException Sabit Listesi](eclrunhandledexception-enumeration.md)  
  Kullanıcı kodunda işlenmemiş özel durumları yönetmeye yönelik kullanılabilir seçenekleri açıklar.  
   
- [EContextType Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)  
+ [EContextType Sabit Listesi](econtexttype-enumeration.md)  
  Yürütülmekte olan iş parçacığının güvenlik bağlamını açıklar.  
   
- [ECustomDumpFlavor Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)  
+ [ECustomDumpFlavor Sabit Listesi](ecustomdumpflavor-enumeration.md)  
  Hataları bildirirken yığın dökümünün özel bir alt kümesine hangi öğelerin ekleneceğini belirten değerler içerir.  
   
- [ECustomDumpItemKind Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [CustomDumpItem yapısı](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) yapısının gelecekteki uzantısı için ayrılmıştır.  
+ [ECustomDumpItemKind Numaralandırması](ecustomdumpitemkind-enumeration.md)  
+ [CustomDumpItem yapısı](customdumpitem-structure.md) yapısının gelecekteki uzantısı için ayrılmıştır.  
   
- [EHostApplicationPolicy Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ehostapplicationpolicy-enumeration.md)  
- Bir [IHostAssemblyManager arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) nesnesinin nasıl değiştirileceğini gösterir. Bu numaralandırma kullanım dışı bırakıldı.  
+ [EHostApplicationPolicy Sabit Listesi](ehostapplicationpolicy-enumeration.md)  
+ Bir [IHostAssemblyManager arabirimi](ihostassemblymanager-interface.md) nesnesinin nasıl değiştirileceğini gösterir. Bu numaralandırma kullanım dışı bırakıldı.  
   
- [EHostBindingPolicyModifyFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)  
+ [EHostBindingPolicyModifyFlags Sabit Listesi](ehostbindingpolicymodifyflags-enumeration.md)  
  Ana bilgisayarın bir kaynak derlemeden hedef derlemeye ilke değişiklikleri uygularken, CLR 'nin gerçekleştirmesi gereken yeniden yönlendirme türünü belirtmesini sağlar.  
   
- [EInitializeNewDomainFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)  
+ [EInitializeNewDomainFlags Numaralandırması](einitializenewdomainflags-enumeration.md)  
  Bir uygulama etki alanının başlatılması hakkında bilgi içeren konağın çalışma zamanına olanak sağlar.  
   
- [EMemoryAvailable Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ememoryavailable-enumeration.md)  
+ [EMemoryAvailable Sabit Listesi](ememoryavailable-enumeration.md)  
  Bilgisayardaki boş fiziksel bellek miktarını belirten değerleri içerir.  
   
- [EMemoryCriticalLevel Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)  
+ [EMemoryCriticalLevel Sabit Listesi](ememorycriticallevel-enumeration.md)  
  Belirli bir bellek ayırma talep edildiğinde, ancak karşılanamaması durumunda hatanın etkisini gösteren değerleri içerir.  
   
- [EPolicyAction Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [EClrOperation numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) tarafından tanımlanan Işlemler ve [EClrFailure numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)tarafından tanımlanan hatalar için konağın ayarlayaşabilemeyen ilke eylemlerini açıklar.  
+ [EPolicyAction Sabit Listesi](epolicyaction-enumeration.md)  
+ [EClrOperation numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) tarafından tanımlanan Işlemler ve [EClrFailure numaralandırması](eclrfailure-enumeration.md)tarafından tanımlanan hatalar için konağın ayarlayaşabilemeyen ilke eylemlerini açıklar.  
   
- [ESymbolReadingPolicy Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md)  
+ [ESymbolReadingPolicy Numaralandırması](esymbolreadingpolicy-enumeration.md)  
  Program veritabanı (PDB) dosyalarını okumaya yönelik ilkeyi belirten değerleri içerir.  
   
- [ETaskType Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md)  
- Bir [ICLRTask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya bir [IHostTask Interface](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü belirten değerleri içerir.  
+ [ETaskType Numaralandırması](etasktype-enumeration.md)  
+ Bir [ICLRTask arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya bir [IHostTask Interface](ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü belirten değerleri içerir.  
   
- [HOST_TYPE Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)  
+ [HOST_TYPE Numaralandırması](host-type-enumeration.md)  
  Bir uygulamayı başlatan ana bilgisayar türünü belirten değerleri içerir.  
   
- [MALLOC_TYPE Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/malloc-type-enumeration.md)  
+ [MALLOC_TYPE Sabit Listesi](malloc-type-enumeration.md)  
  Ayrılmakta olan belleğin özelliklerini belirten değerleri içerir.  
   
- [METAHOST_CONFIG_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)  
- [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) yönteminin `pdwConfigFlags` parametresinde döndürülen olası bayrakları açıklar.  
+ [METAHOST_CONFIG_FLAGS Numaralandırması](metahost-config-flags-enumeration.md)  
+ `pdwConfigFlags` [ICLRMetaHostPolicy:: GetRequestedRuntime](iclrmetahostpolicy-getrequestedruntime-method.md) yönteminin parametresinde döndürülen olası bayrakları açıklar.  
   
- [METAHOST_POLICY_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)  
+ [METAHOST_POLICY_FLAGS Sabit Listesi](metahost-policy-flags-enumeration.md)  
  Çoğu çalışma zamanı ana bilgisayarı için ortak olan bağlama ilkeleri sağlar.  
   
- [RUNTIME_INFO_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md)  
+ [RUNTIME_INFO_FLAGS Sabit Listesi](runtime-info-flags-enumeration.md)  
  CLR ile ilgili hangi bilgilerin döndürüleceğini belirten değerleri içerir.  
   
- [StackOverflowType Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)  
+ [StackOverflowType Sabit Listesi](stackoverflowtype-enumeration.md)  
  Yığın taşması olayının temel nedenini gösteren değerleri içerir.  
   
- [STARTUP_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)  
+ [STARTUP_FLAGS Sabit Listesi](startup-flags-enumeration.md)  
  CLR 'nin başlangıç davranışını gösteren değerleri içerir.  
   
- [ValidatorFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)  
- Bir [metodu doğrulamaya](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)yönelik çağrıda gerçekleştirilmesi gereken doğrulamanın türünü belirten değerleri içerir.  
+ [ValidatorFlags Numaralandırması](validatorflags-enumeration.md)  
+ Bir [metodu doğrulamaya](iclrvalidator-validate-method.md)yönelik çağrıda gerçekleştirilmesi gereken doğrulamanın türünü belirten değerleri içerir.  
   
- [WAIT_OPTION Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)  
+ [WAIT_OPTION Sabit Listesi](wait-option-enumeration.md)  
  CLR blokları tarafından istenen işlem için bir konağın yapması gereken eylemi belirtir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Barındırma Coclassları](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ [Barındırma Yardımcı Sınıfları](hosting-coclasses.md)  
   
- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Barındırma Arabirimleri](hosting-interfaces.md)  
   
- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)  
   
- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+ [Barındırma Yapıları](hosting-structures.md)

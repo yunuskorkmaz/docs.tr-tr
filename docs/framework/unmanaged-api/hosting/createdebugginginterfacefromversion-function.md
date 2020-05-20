@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-ms.openlocfilehash: adc8ea16f0ab2bf383f8a63c49ba7d61c6bac113
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e1395229b67c4054df62935375a4136edf63078
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176454"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616495"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion İşlevi
-Belirtilen sürüm bilgilerini temel alan bir [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) nesnesi oluşturur.  
+Belirtilen sürüm bilgilerini temel alan bir [ICorDebug](../debugging/icordebug-interface.md) nesnesi oluşturur.  
   
- Bu işlev .NET Framework 4'te geçersizdir. Bunun yerine, ortak dil çalışma süresi (CLR) 2.0 için bir arayüz elde etmek [için, ICLRRuntimeInfo kullanın::GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) yöntemi ve sınıf tanımlayıcıCLSID_CLRDebuggingLegacy ve arayüz tanımlayıcıIID_ICorDebug belirtin. CLR 4 veya sonraki bir arabirim almak için [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) işlevini arayın ve sınıf tanımlayıcısını CLSID_CLRDebugging ve arayüz tanımlayıcısını IID_ICLRDebugging belirtin.  
+ Bu işlev .NET Framework 4 ' te kullanılmıyor. Bunun yerine, ortak dil çalışma zamanı (CLR) 2,0 için bir arabirim almak üzere [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) yöntemini kullanın ve sınıf tanımlayıcısını CLSID_CLRDebuggingLegacy ve arabirim tanımlayıcısını IID_ICorDebug belirtin. CLR 4 veya üzeri bir arabirim almak için, [CLRCreateInstance](clrcreateinstance-function.md) işlevini çağırın ve sınıf tanımlayıcısını CLSID_CLRDebugging ve arabirim tanımlayıcısı IID_ICLRDebugging belirtin.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
@@ -39,34 +39,34 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>Parametreler  
  `iDebuggerVersion`  
- [içinde] Bunun sürümü `ICorDebug` hata ayıklayıcı tarafından bekleniyor. Geçerli değerler için [CorDebugInterfaceVersion](../../../../docs/framework/unmanaged-api/debugging/cordebuginterfaceversion-enumeration.md) numaralandırmabölümüne bakın.  
+ 'ndaki `ICorDebug`Hata ayıklayıcı tarafından beklenen sürümü. Geçerli değerler için [CorDebugInterfaceVersion](../debugging/cordebuginterfaceversion-enumeration.md) numaralandırması bölümüne bakın.  
   
  `szDebuggeeVersion`  
- [içinde] Hata ayıklanacak uygulama veya işlemle ilişkili ortak dil çalışma zamanı sürümü. Bu değeri alma hakkında bilgi almak için [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) veya [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) yöntemine bakın.  
+ 'ndaki Hata Ayıklanacak uygulamayla veya işlemle ilişkili ortak dil çalışma zamanı sürümü. Bu değeri alma hakkında bilgi için bkz. [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) veya [GetRequestedRuntimeVersion](getrequestedruntimeversion-function.md) yöntemi.  
   
  `ppCordb`  
- [çıkış] `ICorDebug` Nesneye işaretçi alan konum.  
+ dışı Nesneye bir işaretçi alan konum `ICorDebug` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerlere ek olarak WinError.h dosyasında tanımlandığı gibi standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak WinError. h dosyasında tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_ınvalıdarg|`szDebuggeeVersion`veya `ppCordb` null veya sürüm dizesi yanlıştır.|  
+|E_INVALIDARG|`szDebuggeeVersion`ya `ppCordb` da null ya da sürüm dizesi yanlış.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `szDebuggeeVersion` Parametre, MSCorDbi.dll'nin ilgili sürümüyle eşler.  
+ `szDebuggeeVersion`Parametresi, MSCorDbi. dll ' nin ilgili sürümüyle eşlenir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** Mscoree.dll  
+ **Kitaplık:** MSCorEE. dll  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

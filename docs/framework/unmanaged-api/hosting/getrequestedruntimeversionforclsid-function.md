@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178111"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617145"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID İşlevi
-Belirtilen `CLSID`sınıf için uygun ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
+Belirtilen sınıf için uygun ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır `CLSID` .  
   
- Bu işlev .NET Framework 4'te amortismana hazırlanmıştır.  
+ Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
@@ -40,41 +40,41 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Parametreler  
  `rclsid`  
- [içinde]  Bileşenin. `CLSID`  
+ 'ndaki  `CLSID`Bileşen.  
   
  `pVersion`  
- [çıkış]  Başarılı bir şekilde tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
+ dışı  Başarılı bir şekilde tamamlandıktan sonra sürüm numarası dizesini içeren bir arabellek.  
   
  `cchBuffer`  
- [içinde]  Geniş karakterlerdeki arabelleğin `pVersion` boyutu.  
+ 'ndaki  Arabelleğin geniş karakterdeki boyutu `pVersion` .  
   
  `dwLength`  
- [çıkış] Döndürülen arabelleğe baytlar halindeki uzunluğu.  
+ dışı Döndürülen arabelleğin bayt cinsinden uzunluğu.  
   
  `dwResolutionFlags`  
- [içinde]  CLSID_RESOLUTION_FLAGS değerlerinden biri. Aşağıdaki değerler desteklenir:  
+ 'ndaki  CLSID_RESOLUTION_FLAGS değerlerinden biri. Aşağıdaki değerler desteklenir:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) Varsayılan interop davranışının kullanılması gerektiğini belirtir.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) varsayılan birlikte çalışma davranışının kullanılması gerektiğini belirtir.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) Kayıt defterinin aranması ve şim ilkesinin uygulanması gerektiğini belirtir.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) kayıt defterinin aranması gerektiğini ve dolgu ilkesinin uygulanacağını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|İşlev başarıyla döndü.|  
-|E_ınvalıdarg|Parametrelerden birinin geçersiz türü veya biçimi vardır.|  
-|ERROR_INSUFFICIENT_BUFFER|Arabellek `pVersion` tüm sürüm dizesini tutacak kadar büyük değil.|  
-|REGDB_E_CLASSNOTREG|Belirtilen `CLSID`sınıfa kayıtlı bir sınıf yok.|  
-|E_POINTER|`dwLength`null veya `cchBuffer` sürüm dizesini tutmak için `pVersion` yeterince büyük, ancak null.|  
+|S_OK|İşlev başarıyla döndürüldü.|  
+|E_INVALIDARG|Parametrelerden birinde geçersiz bir tür veya biçim vardır.|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion`Arabellek, tüm sürüm dizesini tutabilecek kadar büyük değil.|  
+|REGDB_E_CLASSNOTREG|Belirtilen ile kayıtlı bir sınıf yok `CLSID` .|  
+|E_POINTER|`dwLength`null veya `cchBuffer` Sürüm dizesini tutabilecek kadar büyük, ancak `pVersion` null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

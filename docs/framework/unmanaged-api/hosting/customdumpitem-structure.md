@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c77a332593ba470d2e29b87cba182a770d5db7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176480"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616443"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem Yapısı
-Hata bildiriminde özel bir döküme eklenecek bir öğeyi açıklar.  
+Hata raporlamada özel bir döküme eklenecek bir öğe tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 struct {  
@@ -39,21 +39,21 @@ struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`itemKind`|Eklenecek öğe türünü gösteren [bir ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) değeri.|  
-|`pReserved`|Şu anda kullanılmaz. Birliğe eklenen öğeler işaretçi boyutundan büyük olmamalıdır. A `struct` gerekiyorsa, ayrı ayrı ayırmanız ve işaret etmeniz gerekir.|  
+|`itemKind`|Eklenecek öğe türünü gösteren bir [ECustomDumpItemKind](ecustomdumpitemkind-enumeration.md) değeri.|  
+|`pReserved`|Şu anda kullanılmıyor. Birleşime eklenen öğelerin işaretçi boyutundan büyük olmaması gerekir. Bir `struct` gerekliyse, onu ayrı olarak ayırmanız ve üzerine işaret etmeniz gerekir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) türünden `CustomDumpItem`bir parametre alır.  
+ [ICLRErrorReportingManager:: BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md) türünde bir parametre alır `CustomDumpItem` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.idl  
+ **Üst bilgi:** MSCorEE. IDL  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Yapıları](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Barındırma Yapıları](hosting-structures.md)

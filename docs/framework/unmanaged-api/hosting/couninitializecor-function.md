@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 50a95b8b-9766-470e-bb29-2c7ecddfd4a1
 topic_type:
 - apiref
-ms.openlocfilehash: eddc2f29da0efd9e56df710203b1d7621ffc27a0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8a8c2764398d737192190f91646d45f4edf3a0e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136865"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616484"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor İşlevi
-`CoUninitializeCor` artık kullanılmıyor.  
+`CoUninitializeCor`artık kullanılmıyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 STDAPI_(void) CoUninitializeCor(void);  
@@ -36,4 +36,4 @@ STDAPI_(void) CoUninitializeCor(void);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Meta Veri Genel Statik İşlevleri](../metadata/metadata-global-static-functions.md)

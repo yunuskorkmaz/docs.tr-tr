@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-ms.openlocfilehash: f19ac39737d08c10c23ce0bde03131f52b660cac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 685d303b31b8f8c20cbbdb8aec6fc127650aa32a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126822"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616053"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated Metodu
 , Atık olarak toplanmış olan belleği çıkarmadan, uygulama etki alanı tarafından yapılan tüm bellek ayırmalarının bayt cinsinden toplam boyutunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,  
@@ -48,20 +48,20 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|Uygulama etki alanı kaldırıldı veya yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, yönetilen <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> özelliğinin yönetilmeyen eşdeğeridir.  
+ Bu yöntem, yönetilen özelliğin yönetilmeyen eşdeğeridir <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRAppDomainResourceMonitor Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Uygulama Etki Alanı Kaynak İzleme](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRAppDomainResourceMonitor Arabirimi](iclrappdomainresourcemonitor-interface.md)
+- [Uygulama etki alanı kaynak Izleme](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

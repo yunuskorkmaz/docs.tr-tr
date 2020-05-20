@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: 5e82f542bdc364a52fc558e582134a7d8d554ec3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ceb68410e808bf7843149e3f05a39c7a98d0c000
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131153"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616300"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType Numaralandırması
 Yürütülmekte olan iş parçacığının güvenlik bağlamını açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum {  
@@ -37,23 +37,23 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`eCurrentContext`|Ortak dil çalışma zamanı (CLR), [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) metodunu çağıran ve [IHostSecurityManager:: SETSECURITYCONTEXT çağrısında CLR tarafından istenen bağlamı belirten geçerli iş parçacığındaki bağlamı gösterir. ](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)yöntemi.|  
+|`eCurrentContext`|Ortak dil çalışma zamanı (CLR) için [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) metodunu çağıran ve [IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md) metoduna yapılan çağrıda CLR tarafından istenen bağlamı belirten geçerli iş parçacığındaki bağlamı gösterir.|  
 |`eRestrictedContext`|Konağın çöp toplayıcı veya sınıf ya da modül oluşturucuları gibi daha düşük ayrıcalıklara sahip olduğu bir bağlamı gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, `IHostSecurityManager::GetSecurityContext` ve `IHostSecurityManager::SetSecurityContext` yöntemlerine yapılan çağrılarında bir parametre değeri olarak `EContextType` değerlerinden birini sağlar.  
+ CLR, `EContextType` ve yöntemlerine yapılan çağrılarında bir parametre değeri olarak değerlerden birini sağlar `IHostSecurityManager::GetSecurityContext` `IHostSecurityManager::SetSecurityContext` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostSecurityContext Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [IHostSecurityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
-- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [IHostSecurityContext Arabirimi](ihostsecuritycontext-interface.md)
+- [IHostSecurityManager Arabirimi](ihostsecuritymanager-interface.md)
+- [Barındırma Sabit Listeleri](hosting-enumerations.md)

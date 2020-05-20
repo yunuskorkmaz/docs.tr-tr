@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8202fe4ec3ae6ef96440f203c5aea6db84744a72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136956"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616593"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 İşlevi
 Giriş noktasını belirtilen bellek eşlemeli kodda yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
@@ -41,7 +41,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  'ndaki Bellek eşlemeli koda yönelik bir işaretçi.  
   
  `cUnmappedPE`  
- 'ndaki `pUnmappedPE` öğe sayısı olabilir.  
+ 'ndaki Öğelerin sayısı `pUnmappedPE` tutabilirler.  
   
  `pImageNameIn`  
  'ndaki Yürütülebilir görüntünün adı için bir işaretçi.  
@@ -53,14 +53,14 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  'ndaki Varsa komut satırı parametreleri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Meta Veri Genel Statik İşlevleri](../metadata/metadata-global-static-functions.md)

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e36e1fd8-8456-4359-bdc3-3ec1765f041f
 topic_type:
 - apiref
-ms.openlocfilehash: de27851b4afc3eccad46531848c68723bff346d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 294b82efd66704014aab1b73171afe9165f17664
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136831"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616456"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen İşlevi
-Bir [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) nesnesi oluşturur.  
+Bir [ICeeFileGen](iceefilegen-class.md) nesnesi oluşturur.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateICeeFileGen (  
@@ -38,25 +38,25 @@ HRESULT CreateICeeFileGen (
   
 ## <a name="parameters"></a>Parametreler  
  `ceeFileGen`  
- dışı Yeni bir `ICeeFileGen` nesnesinin adresine yönelik bir işaretçi.  
+ dışı Yeni bir nesnenin adresine yönelik bir işaretçi `ICeeFileGen` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, standart COM hata kodlarını döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICeeFileGen` nesnesi, ortak dil çalışma zamanı (CLR) taşınabilir yürütülebilir (PE) dosyalarını oluşturmak için kullanılır.  
+ `ICeeFileGen`Nesnesi, ortak dil çalışma zamanı (CLR) taşınabilir yürütülebilir (PE) dosyaları oluşturmak için kullanılır.  
   
- `ICeeFileGen` nesnesini tamamlandığında yok etmek için [Destroyııceefilegen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md) işlevini çağırın.  
+ Sona erdiğinde nesneyi yok etmek için [Destroııceefilegen](destroyiceefilegen-function.md) işlevini çağırın `ICeeFileGen` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** ICeeFileGen. h  
   
  **Kitaplık:** MSCorPE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

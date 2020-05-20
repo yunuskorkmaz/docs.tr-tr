@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: fe9849c1-c3fc-477b-a31f-e8619f5516f5
 topic_type:
 - apiref
-ms.openlocfilehash: f4c200ad23ff7a71298e84fda857912da53978a5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f06dd7b85446eec986055418d2cf558b9b5bd7a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126691"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615936"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream Yöntemi
-Belirtilen akıştaki derleme tarafından başvurulan derlemeler için derleme kimliği verilerini içeren bir [ICLRReferenceAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md) nesnesine yönelik bir işaretçi alır.  
+Belirtilen akıştaki derleme tarafından başvurulan derlemeler için derleme kimliği verilerini içeren bir [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) nesnesine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetReferencedAssembliesFromStream (  
@@ -38,16 +38,16 @@ HRESULT GetReferencedAssembliesFromStream (
   
 ## <a name="parameters"></a>Parametreler  
  `pStream`  
- 'ndaki Değerlendirilecek derlemeyi içeren `IStream` bir arabirim işaretçisi.  
+ 'ndaki `IStream`Değerlendirilecek derlemeyi içeren bir arabirim işaretçisi.  
   
  `dwFlags`  
  'ndaki Gelecekteki genişletilebilirlik için verilmiştir. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT, ortak dil çalışma zamanının (CLR) geçerli sürümünün desteklediği tek değerdir.  
   
  `pExcludeAssembliesList`  
- 'ndaki `ppReferenceEnum`dışında tutulacak derlemeler için derleme kimliği verilerini içeren [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) nesnesine yönelik bir işaretçi.  
+ 'ndaki Dışlanacak derlemeler için derleme kimliği verilerini içeren [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) nesnesine yönelik bir işaretçi `ppReferenceEnum` .  
   
  `ppReferenceEnum`  
- dışı `pExcludeAssembliesList`derlemeleri hariç `pStream`derleme tarafından başvurulan derlemeler için derleme kimliği verilerini içeren `ICLRReferenceAssemblyEnum` nesnesinin adresine yönelik bir işaretçi.  
+ dışı İçindeki `ICLRReferenceAssemblyEnum` derlemeler hariç, içindeki derleme tarafından başvurulan derlemeler için derleme kimliği verilerini içeren bir nesnenin adresine yönelik bir işaretçi `pStream` `pExcludeAssembliesList` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -58,22 +58,22 @@ HRESULT GetReferencedAssembliesFromStream (
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çağıran, bir bilinen derleme başvuruları kümesini döndürülen listeden dışlamayı tercih edebilir. Bu küme `pExcludeAssembliesList`tarafından tanımlanır.  
+ Çağıran, bir bilinen derleme başvuruları kümesini döndürülen listeden dışlamayı tercih edebilir. Bu küme tarafından tanımlanır `pExcludeAssembliesList` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [ICLRReferenceAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)
+- [ICLRAssemblyIdentityManager Arabirimi](iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList Arabirimi](iclrassemblyreferencelist-interface.md)
+- [ICLRReferenceAssemblyEnum Arabirimi](iclrreferenceassemblyenum-interface.md)

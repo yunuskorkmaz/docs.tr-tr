@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 4932e1fd6294f4a01264e982835dd0707324082a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 585287f63f57f55e877c94684820833b6d1add60
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178226"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616547"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading İşlevi
-Yönetilen modül görüntüleri boşaltıldığında yükleyiciye bilgi verilir.  
+Yönetilen modül görüntüleri kaldırıldığında yükleyiciyi bilgilendirir.  
   
- Bu işlev uygulanmaz. Çağrılsa, E_NOTIMPL döndürür.  
+ Bu işlev uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 STDAPI (VOID) _CorImageUnloading(
@@ -36,17 +36,17 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parametreler  
  `ImageBase`  
- [içinde] Boşaltmak için görüntünün başlangıç konumuna bir işaretçi.  
+ 'ndaki Boşaltılacak görüntünün başlangıç konumuna yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [Meta Veri Genel Statik İşlevleri](../metadata/metadata-global-static-functions.md)

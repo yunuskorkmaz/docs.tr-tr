@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c1d796c6ef5f707f865a60023899d3b451c2085b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131950"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616833"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance İşlevi
-Üç arabirimden birini sunar: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+Üç arabirimden birini sunar: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CLRCreateInstance(  
@@ -43,7 +43,7 @@ HRESULT CLRCreateInstance(
  'ndaki Üç arabirim tanımlayıcılarından biri (IIDS): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.  
   
  `ppInterface`  
- dışı Üç arabirimden biri: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
+ dışı Üç arabirimden biri: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
@@ -51,10 +51,10 @@ HRESULT CLRCreateInstance(
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`ppInterface` null.|  
+|E_POINTER|`ppInterface`null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki tabloda `clsid` ve `riid`için desteklenen birleşimler gösterilmektedir.  
+ Aşağıdaki tabloda ve için desteklenen birleşimler gösterilmektedir `clsid` `riid` .  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
@@ -62,7 +62,7 @@ HRESULT CLRCreateInstance(
 |CLSID_CLRMetaHostPolicy|IID_ICLRMetaHostPolicy|  
 |CLSID_CLRDebugging|IID_ICLRDebugging|  
   
- Aşağıdaki kod, üç arabirimi de almak için `CLRCreateInstance` nasıl kullanacağınızı gösterir:  
+ Aşağıdaki kod, `CLRCreateInstance` üç arabirimi de almak için nasıl kullanılacağını gösterir:  
   
 ```cpp  
 #include <metahost.h>  
@@ -81,14 +81,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [Barındırma](index.md)

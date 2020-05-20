@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3fd3a34c-d176-46e9-9996-fb1646cff9b0
 topic_type:
 - apiref
-ms.openlocfilehash: 50f41bb55b7c3dc45646a465032074ce90be0abf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d465f830fa73016c3cf3f7df3a4a4d0c42bc0980
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444513"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615507"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint Metodu
 Varsa modül için Kullanıcı giriş noktası olarak belirtilen yöntemi döndürür. Örneğin, bu yöntem, Main yönteminden önce derleyicinin ürettiği saplamalar yerine kullanıcının ana yöntemi olabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetUserEntryPoint (  
@@ -44,4 +44,4 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedReader Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader Arabirimi](isymunmanagedreader-interface.md)

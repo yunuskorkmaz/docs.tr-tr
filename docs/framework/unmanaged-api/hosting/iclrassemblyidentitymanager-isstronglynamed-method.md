@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: 288620eba867160e13a5ebee501a9afcf5623cce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d388f366671f50c3dcb3bd9d387300dd1bbb168f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126644"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615910"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed Yöntemi
 Belirtilen derlemenin kesin olarak adlandırılmış olup olmadığını gösteren bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 RESULT IsStronglyNamed (  
@@ -39,7 +39,7 @@ RESULT IsStronglyNamed (
  'ndaki Değerlendirilecek derlemenin donuk kurallı derleme kimlik verileri.  
   
  `pbIsStronglyNamed`  
- [out] `pwzAssemblyIdentity` parametresi tarafından başvurulan derleme kesin olarak adlandırılmışsa, `true`. Aksi takdirde, `false`.  
+ [out] `true` parametre tarafından başvurulan derleme `pwzAssemblyIdentity` kesin olarak adlandırılmışsa, tersi durumda `false` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -50,17 +50,17 @@ RESULT IsStronglyNamed (
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyIdentityManager Arabirimi](iclrassemblyidentitymanager-interface.md)
