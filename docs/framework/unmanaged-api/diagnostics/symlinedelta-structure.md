@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: a1e83e4b8cb6603029f3b42b1a3b9ba4810c9039
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438006"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609306"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA Yapısı
 Düzenleme sonucu olarak taşınan yöntemler hakkında sembol işleyicisine bilgi sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef struct _SYMLINEDELTA  
@@ -34,9 +34,9 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`mdMethod`|Metodun meta veri belirteci.|  
 |`delta`|Yöntemin taşındığı satır sayısı.|  
@@ -46,4 +46,4 @@ typedef struct _SYMLINEDELTA
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [Tanılama Sembol Deposu Yapıları](diagnostics-symbol-store-structures.md)

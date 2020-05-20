@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 91117eae23d38f3bc608f3203ebe53f92516c9c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446071"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610502"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset Yöntemi
 Bu değişkenin üst sapmasını üst öğesi içinde alır. Bu bir kapsamdaki yerel değişkense, bitiş boşluğu kapsam için tanımlanan uzaklıklar içinde kalır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetEndOffset(  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı Bitiş sapmasını alan `ULONG32` işaretçisi.  
+ dışı Bitiş sapmasını alan bir işaretçisine bir işaretçisi `ULONG32` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,5 +44,5 @@ HRESULT GetEndOffset(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetStartOffset Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+- [ISymUnmanagedVariable Arabirimi](isymunmanagedvariable-interface.md)
+- [GetStartOffset Yöntemi](isymunmanagedvariable-getstartoffset-method.md)

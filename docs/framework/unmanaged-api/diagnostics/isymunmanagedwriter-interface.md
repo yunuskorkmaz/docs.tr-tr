@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: fc19ee25e903046daef376e4297c8feb3d01ad47
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f0bbd26bde562df5482d167c9d2775e01426f55
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427930"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610060"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter Arabirimi
 Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük temelli kapsamları ve değişkenleri tanımlamak için yöntemler sağlar.  
@@ -28,36 +28,36 @@ Bir sembol yazıcısını temsil eder ve belgeleri, dizi noktalarını, sözcük
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Abort Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Sembol deposuna sembolleri kaydetmeden sembol yazıcısını kapatır.|  
-|[Close Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Sembolleri sembol deposuna kaydettikten sonra sembol yazıcısını kapatır.|  
-|[CloseMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)|Geçerli yöntemi kapatır. Bir yöntem kapatıldıktan sonra bunun içinde başka semboller tanımlanamaz.|  
-|[CloseNamespace Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)|En son açılan ad alanını kapatır.|  
-|[CloseScope Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)|Geçerli sözcük temelli kapsamı kapatır.|  
-|[DefineConstant Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)|Sabit değer için bir ad tanımlar.|  
-|[DefineDocument Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definedocument-method.md)|Bir kaynak belge tanımlar.|  
-|[DefineField Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definefield-method.md)|Bir yöntem içinde olmayan tek bir değişkeni tanımlar.|  
-|[DefineGlobalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)|Tek bir genel değişkeni tanımlar.|  
-|[DefineLocalVariable Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)|Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar.|  
-|[DefineParameter Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineparameter-method.md)|Geçerli yöntemde tek bir parametre tanımlar.|  
-|[DefineSequencePoints Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definesequencepoints-method.md)|Geçerli yöntem içindeki bir dizi noktası grubunu tanımlar.|  
-|[GetDebugInfo Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)|Bir derleyicinin taşınabilir yürütülebilir (PE) dosya üstbilgisine hata ayıklama dizini girişini yazması için gereken bilgileri döndürür.|  
-|[Initialize Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)|Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar ve hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar.|  
-|[Initialize2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)|Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar, hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar ve program veritabanı (PDB) dosyasının son konumunu ayarlar.|  
-|[OpenMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)|Sembol bilgisinin yayıldığını bir yöntem açar.|  
-|[OpenNamespace Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)|Yeni bir ad alanı açar.|  
-|[OpenScope Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)|Geçerli yöntemde yeni bir sözlü kapsam açar.|  
-|[RemapToken Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-remaptoken-method.md)|Meta veri yayıldığından, meta veri belirtecinin yeniden eşlenme olduğunu sembol yazıcısına bildirir.|  
-|[SetMethodSourceRange Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setmethodsourcerange-method.md)|Kaynak dosya içindeki bir yöntemin doğru başlangıcını ve sonunu belirtir.|  
-|[SetScopeRange Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md)|Belirtilen sözcük temelli kapsamın fark aralığını tanımlar.|  
-|[SetSymAttribute Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setsymattribute-method.md)|Özel bir özniteliği adına göre tanımlar.|  
-|[SetUserEntryPoint Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setuserentrypoint-method.md)|Bu modülün giriş noktası olan Kullanıcı tanımlı yöntemi belirtir.|  
-|[UsingNamespace Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-usingnamespace-method.md)|Verilen tam ad alanı adının şu anda açık olan sözlü kapsam içinde kullanıldığını belirtir.|  
+|[Abort Yöntemi](isymunmanagedwriter-abort-method.md)|Sembol deposuna sembolleri kaydetmeden sembol yazıcısını kapatır.|  
+|[Close yöntemi](isymunmanagedwriter-close-method.md)|Sembolleri sembol deposuna kaydettikten sonra sembol yazıcısını kapatır.|  
+|[CloseMethod Yöntemi](isymunmanagedwriter-closemethod-method.md)|Geçerli yöntemi kapatır. Bir yöntem kapatıldıktan sonra bunun içinde başka semboller tanımlanamaz.|  
+|[CloseNamespace Yöntemi](isymunmanagedwriter-closenamespace-method.md)|En son açılan ad alanını kapatır.|  
+|[CloseScope Yöntemi](isymunmanagedwriter-closescope-method.md)|Geçerli sözcük temelli kapsamı kapatır.|  
+|[DefineConstant Yöntemi](isymunmanagedwriter-defineconstant-method.md)|Sabit değer için bir ad tanımlar.|  
+|[DefineDocument Yöntemi](isymunmanagedwriter-definedocument-method.md)|Bir kaynak belge tanımlar.|  
+|[DefineField Yöntemi](isymunmanagedwriter-definefield-method.md)|Bir yöntem içinde olmayan tek bir değişkeni tanımlar.|  
+|[DefineGlobalVariable Yöntemi](isymunmanagedwriter-defineglobalvariable-method.md)|Tek bir genel değişkeni tanımlar.|  
+|[DefineLocalVariable Yöntemi](isymunmanagedwriter-definelocalvariable-method.md)|Geçerli sözcük kapsamındaki tek bir değişkeni tanımlar.|  
+|[DefineParameter Yöntemi](isymunmanagedwriter-defineparameter-method.md)|Geçerli yöntemde tek bir parametre tanımlar.|  
+|[DefineSequencePoints Yöntemi](isymunmanagedwriter-definesequencepoints-method.md)|Geçerli yöntem içindeki bir dizi noktası grubunu tanımlar.|  
+|[GetDebugInfo Yöntemi](isymunmanagedwriter-getdebuginfo-method.md)|Bir derleyicinin taşınabilir yürütülebilir (PE) dosya üstbilgisine hata ayıklama dizini girişini yazması için gereken bilgileri döndürür.|  
+|[Initialize Yöntemi](isymunmanagedwriter-initialize-method.md)|Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar ve hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar.|  
+|[Initialize2 Yöntemi](isymunmanagedwriter-initialize2-method.md)|Bu yazıcının ilişkilendirileceği meta veri verici arabirimini ayarlar, hata ayıklama simgelerinin yazılacağı çıkış dosyası adını ayarlar ve program veritabanı (PDB) dosyasının son konumunu ayarlar.|  
+|[OpenMethod Yöntemi](isymunmanagedwriter-openmethod-method.md)|Sembol bilgisinin yayıldığını bir yöntem açar.|  
+|[OpenNamespace Yöntemi](isymunmanagedwriter-opennamespace-method.md)|Yeni bir ad alanı açar.|  
+|[OpenScope Yöntemi](isymunmanagedwriter-openscope-method.md)|Geçerli yöntemde yeni bir sözlü kapsam açar.|  
+|[RemapToken Yöntemi](isymunmanagedwriter-remaptoken-method.md)|Meta veri yayıldığından, meta veri belirtecinin yeniden eşlenme olduğunu sembol yazıcısına bildirir.|  
+|[SetMethodSourceRange Yöntemi](isymunmanagedwriter-setmethodsourcerange-method.md)|Kaynak dosya içindeki bir yöntemin doğru başlangıcını ve sonunu belirtir.|  
+|[SetScopeRange Yöntemi](isymunmanagedwriter-setscoperange-method.md)|Belirtilen sözcük temelli kapsamın fark aralığını tanımlar.|  
+|[SetSymAttribute Yöntemi](isymunmanagedwriter-setsymattribute-method.md)|Özel bir özniteliği adına göre tanımlar.|  
+|[SetUserEntryPoint Yöntemi](isymunmanagedwriter-setuserentrypoint-method.md)|Bu modülün giriş noktası olan Kullanıcı tanımlı yöntemi belirtir.|  
+|[UsingNamespace Yöntemi](isymunmanagedwriter-usingnamespace-method.md)|Verilen tam ad alanı adının şu anda açık olan sözlü kapsam içinde kullanıldığını belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedWriter2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [ISymUnmanagedWriter3 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedWriter2 Arabirimi](isymunmanagedwriter2-interface.md)
+- [ISymUnmanagedWriter3 Arabirimi](isymunmanagedwriter3-interface.md)

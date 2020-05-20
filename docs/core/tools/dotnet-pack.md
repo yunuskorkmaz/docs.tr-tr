@@ -2,18 +2,18 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595760"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442234"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
 `dotnet pack`-Kodu bir NuGet paketine paketler.
 
@@ -32,21 +32,21 @@ dotnet pack -h|--help
 
 ## <a name="description"></a>Açıklama
 
-`dotnet pack` Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
+`dotnet pack`Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
 
 Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız iki seçeneğiniz vardır:
 
 - `--include-symbols`-Bu, semboller paketini oluşturur.
-- `--include-source`-Bu, kaynak dosyaları içeren içindeki bir `src` klasörü içeren semboller paketini oluşturur.
+- `--include-source`-Bu, `src` kaynak dosyaları içeren içindeki bir klasörü içeren semboller paketini oluşturur.
 
 Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
 Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önlemek istiyorsanız, `--no-build` seçeneğini geçirin. Bu seçenek genellikle kodun daha önce oluşturulduğunu bildiğiniz sürekli tümleştirme (CI) derleme senaryolarında yararlıdır.
 
 > [!NOTE]
-> Bazı durumlarda, örtük derleme gerçekleştirilemez. Bu, ayarlandığında, `GeneratePackageOnBuild` derleme ve paket hedefleri arasındaki döngüsel bağımlılığı önlemek için oluşabilir. Ayrıca, kilitli bir dosya veya başka bir sorun varsa derleme başarısız olabilir.
+> Bazı durumlarda, örtük derleme gerçekleştirilemez. Bu, `GeneratePackageOnBuild` ayarlandığında, derleme ve paket hedefleri arasındaki döngüsel bağımlılığı önlemek için oluşabilir. Ayrıca, kilitli bir dosya veya başka bir sorun varsa derleme başarısız olabilir.
 
-Paketleme işlemi için `dotnet pack` komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
+`dotnet pack`Paketleme işlemi için komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
 
 Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için, *. csproj* dosyanıza aşağıdaki özelliği ekleyin:
 
@@ -60,17 +60,17 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
-  Paket için proje veya çözüm. Bu, bir [csproj dosyası](csproj.md), çözüm dosyası veya bir dizin yoludur. Belirtilmemişse, komut geçerli dizinde bir proje veya çözüm dosyası arar.
+  Paket için proje veya çözüm. Bu bir [csproj dosyası](csproj.md), VBPROJ dosyası, fsproj dosyası, çözüm dosyası ya da bir dizin yoludur. Belirtilmemişse, komut geçerli dizinde bir proje veya çözüm dosyası arar.
 
 ## <a name="options"></a>Seçenekler
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılandır `Debug`, ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
+  Yapı yapılandırmasını tanımlar. Çoğu proje için varsayılandır `Debug` , ancak projenizde derleme yapılandırma ayarlarını geçersiz kılabilirsiniz.
 
 - **`--force`**
 
@@ -82,7 +82,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--include-source`**
 
-  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir. Kaynak dosyaları, semboller paketinin içindeki `src` klasörüne dahil edilmiştir.
+  Çıkış dizinindeki normal NuGet paketlerine ek olarak hata ayıklama sembolleri NuGet paketlerini içerir. Kaynak dosyaları, `src` semboller paketinin içindeki klasörüne dahil edilmiştir.
 
 - **`--include-symbols`**
 
@@ -94,7 +94,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--no-build`**
 
-  Paketleme öncesinde projeyi oluşturmaz. Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.
+  Paketleme öncesinde projeyi oluşturmaz. Ayrıca bayrağı örtülü olarak ayarlar `--no-restore` .
 
 - **`--no-dependencies`**
 
@@ -122,11 +122,11 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  Projedeki `$(VersionSuffix)` MSBuild özelliğinin değerini tanımlar.
+  `$(VersionSuffix)`Projedeki MSBuild özelliğinin değerini tanımlar.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]`,,, ve `diag[nostic]`.
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .
 
 ## <a name="examples"></a>Örnekler
 
@@ -136,7 +136,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack
   ```
 
-- `app1` Projeyi paketleme:
+- Projeyi paketleme `app1` :
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj
@@ -148,7 +148,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack --output nupkgs
   ```
 
-- Geçerli dizindeki projeyi `nupkgs` klasöre paketlayın ve derleme adımını atlayın:
+- Geçerli dizindeki projeyi klasöre paketlayın `nupkgs` ve derleme adımını atlayın:
 
   ```dotnetcli
   dotnet pack --no-build --output nupkgs
@@ -160,7 +160,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- Paket sürümünü `PackageVersion` MSBuild özelliği ile `2.1.0` olarak ayarlayın:
+- Paket sürümünü `2.1.0` MSBuild özelliği ile olarak ayarlayın `PackageVersion` :
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
@@ -184,7 +184,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
 
-  , `NuspecFile` `NuspecBasePath`Ve `NuspecProperties`kullanma hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın:
+  , Ve kullanma hakkında daha fazla bilgi için `NuspecFile` `NuspecBasePath` `NuspecProperties` aşağıdaki kaynaklara bakın:
   
   - [. Nuspec kullanarak paketleme](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Özelleştirilmiş paket oluşturmak için gelişmiş uzantı noktaları](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)

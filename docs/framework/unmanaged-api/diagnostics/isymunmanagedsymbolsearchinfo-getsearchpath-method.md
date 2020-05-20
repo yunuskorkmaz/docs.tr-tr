@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b588d470-53c2-4492-be8c-957323eaca0b
 topic_type:
 - apiref
-ms.openlocfilehash: 8477f53bec44675d7cb0a9bc6c4f11097a4fcc87
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d9431a533a32fd15931072cfbabd10bbc0e6d4ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446165"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610684"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPath Yöntemi
 Arama yolunu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSearchPathLength(  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>Parametreler  
  `pcchPath`  
- dışı Arama yolunu içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`Arama yolunu içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,4 +44,4 @@ HRESULT GetSearchPathLength(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedSymbolSearchInfo Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [ISymUnmanagedSymbolSearchInfo Arabirimi](isymunmanagedsymbolsearchinfo-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: fb90cb7f-af88-45e8-a99f-80a0bbddb08b
 topic_type:
 - apiref
-ms.openlocfilehash: 7b13ca9884516e95e0bb922efc5bc1a845344e38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d2d16ab0a29fadd3a64d906a64fc46c422e01c45
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427924"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610047"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod Yöntemi
 Sembol bilgisinin yayıldığını bir yöntem açar. Verilen yöntem, dizi noktalarını, parametreleri ve sözcük temelli kapsamları tanımlamak için çağrılar için geçerli yöntem haline gelir. Tüm yöntem etrafında örtük bir sözcük temelli kapsam vardır. Daha önce kapatılan bir yöntemi yeniden açmak, bu yöntem için önceden tanımlanmış tüm sembolleri siler. Tek seferde yalnızca bir açık yöntem olabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT OpenMethod(  
@@ -44,6 +44,6 @@ HRESULT OpenMethod(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [CloseMethod Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
-- [OpenMethod2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [CloseMethod Yöntemi](isymunmanagedwriter-closemethod-method.md)
+- [OpenMethod2 Yöntemi](isymunmanagedwriter3-openmethod2-method.md)

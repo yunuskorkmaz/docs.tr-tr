@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7f74d9c5-1377-4958-b842-6306d611cbd5
 topic_type:
 - apiref
-ms.openlocfilehash: b29e66a4e124f6d593fc0c8aed9a63fcc660f8df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7a4ffc0c417ae839e5c97ffe6884bc3230a603b7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428094"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610112"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>ISymUnmanagedWriter::CloseNamespace Yöntemi
 En son açılan ad alanını kapatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CloseNamespace();  
@@ -39,5 +39,5 @@ HRESULT CloseNamespace();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [OpenNamespace Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)
+- [ISymUnmanagedWriter Arabirimi](isymunmanagedwriter-interface.md)
+- [OpenNamespace Yöntemi](isymunmanagedwriter-opennamespace-method.md)

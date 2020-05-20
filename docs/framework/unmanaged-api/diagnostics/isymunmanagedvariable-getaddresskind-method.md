@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a71563c0-62f2-4eb4-970c-825d61827613
 topic_type:
 - apiref
-ms.openlocfilehash: 4d2de38e5e506873a6db262dcec19c7af9d8a0d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 093c5e3e64395c8946acd9201990d132e8111fc7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446099"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610593"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind Yöntemi
 Bu değişkenin adres türünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAddressKind(  
@@ -34,7 +34,7 @@ HRESULT GetAddressKind(
   
 ## <a name="parameters"></a>Parametreler  
  `pRetVal`  
- dışı Değeri alan `ULONG32` işaretçisi. Olası değerler [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) numaralandırması içinde tanımlanmıştır.  
+ dışı Değerini alan bir işaretçisi `ULONG32` . Olası değerler [CorSymAddrKind](corsymaddrkind-enumeration.md) numaralandırması içinde tanımlanmıştır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
@@ -44,4 +44,4 @@ HRESULT GetAddressKind(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable Arabirimi](isymunmanagedvariable-interface.md)

@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: a19b23bd-2061-476e-b67d-252f57404f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 9eac87d7627f502b13d805b8c5656e01ac578e7f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d90a55b53ba00540137e44fc190790c4710903e3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446201"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610801"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>ISymUnmanagedSourceServerModule Arabirimi
-Bir modül için kaynak sunucu verisi sağlar. [Idimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.  
+Bir modül için kaynak sunucu verisi sağlar. `QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetSourceServerData Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Modülün kaynak sunucu verilerini döndürür.|  
+|[GetSourceServerData Yöntemi](isymunmanagedsourceservermodule-getsourceserverdata-method.md)|Modülün kaynak sunucu verilerini döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

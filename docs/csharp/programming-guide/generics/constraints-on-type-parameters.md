@@ -1,121 +1,121 @@
 ---
-title: Tür parametrelerindeki kısıtlamalar - C# Programlama Kılavuzu
+title: Tür parametrelerine yönelik kısıtlamalar-C# Programlama Kılavuzu
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 376befe4c969ac653e234479c8946d7fd4242999
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738261"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442221"
 ---
-# <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür parametreleri üzerindeki kısıtlamalar (C# Programlama Kılavuzu)
+# <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 
-Kısıtlamalar derleyiciyi bir tür bağımsız değişkeninin sahip olması gereken özellikler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan, tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca herhangi bir <xref:System.Object?displayProperty=nameWithType>.NET türü için nihai taban sınıf olan üyeleri varsayar. Daha fazla bilgi için neden [kısıtlamaları kullanın'a](#why-use-constraints)bakın. İstemci kodu kısıtlamayı karşılamayan bir tür kullanıyorsa, derleyici bir hata yayınlar. Kısıtlamalar `where` bağlamsal anahtar kelime kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenebvardır:
+Kısıtlamalar, derleyicisini bir tür bağımsız değişkeni olması gereken yetenekler hakkında bilgilendirir. Herhangi bir kısıtlama olmadan tür bağımsız değişkeni herhangi bir tür olabilir. Derleyici yalnızca <xref:System.Object?displayProperty=nameWithType> , tüm .net türleri için en son temel sınıf olan üyelerini kabul edebilir. Daha fazla bilgi için bkz. [kısıtlamaların neden kullanılması](#why-use-constraints). İstemci kodu bir kısıtlamayı karşılamayan bir tür kullanıyorsa, derleyici bir hata verir. Kısıtlamalar, `where` bağlamsal anahtar sözcüğü kullanılarak belirtilir. Aşağıdaki tabloda yedi tür kısıtlama listelenmektedir:
 
-|Kısıtlama|Açıklama|
+|Kısıtlaması|Açıklama|
 |----------------|-----------------|
-|`where T : struct`|Tür bağımsız değişkeni nullable olmayan bir değer türü olmalıdır. Nullable değer türleri hakkında bilgi için, [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md)bakın. Tüm değer türlerinin erişilebilir bir parametresiz `struct` oluşturucusu olduğundan, kısıtlama `new()` kısıtlamayı `new()` ima eder ve kısıtlamayla birleştirilemez. Kısıtlamaile `struct` kısıtlamayı birleştiremezsiniz. `unmanaged`|
-|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir. C# 8.0 veya sonraki bir şekilde `T` nullable bağlamında, nullable olmayan bir başvuru türü olmalıdır. |
-|`where T : class?`|Tür bağımsız değişkeni, geçersiz veya nullable olmayan bir başvuru türü olmalıdır. Bu kısıtlama herhangi bir sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
-|`where T : notnull`|Tür bağımsız değişkeni nullable olmayan bir tür olmalıdır. Bağımsız değişken, C# 8.0 veya sonraki bir şekilde nullable olmayan bir başvuru türü veya nullable olmayan bir değer türü olabilir. |
-|`where T : unmanaged`|Tür bağımsız değişkeni, geçersiz olmayan [yönetilmeyen](../../language-reference/builtin-types/unmanaged-types.md)bir tür olmalıdır. Kısıtlama `unmanaged` kısıtlamayı `struct` ima eder ve kısıtlamalarla `struct` `new()` birleştirilemez.|
-|`where T : new()`|Tür bağımsız değişkeninin ortak parametresiz bir oluşturucusu olmalıdır. Diğer kısıtlamalarla birlikte kullanıldığında, `new()` kısıtlama nın en son belirtilmesi gerekir. Kısıtlama `new()` `struct` ve `unmanaged` kısıtlamalarla birleştirilemez.|
-|`where T :`taban sınıf adı>* \<*|Tür bağımsız değişkeni, belirtilen taban sınıftan türemelidir. C# 8.0 ve sonraki nullable `T` bağlamında, belirtilen taban sınıftan türetilen bir nullable olmayan bir başvuru türü olmalıdır. |
-|`where T :`taban sınıf adı>? * \<*|Tür bağımsız değişkeni, belirtilen taban sınıftan türemelidir. C# 8.0 ve sonraki bir şekilde `T` nullable bağlamında, belirtilen taban sınıftan türetilen nullable veya unnullable türü olabilir. |
-|`where T :`arayüz adı>* \<*|Tür bağımsız değişkeni, belirtilen arabirimi olmalıdır veya uygulamalıdır. Birden çok arabirim kısıtlaması belirtilebilir. Kısıtlayıcı arabirim de genel olabilir. C# 8.0 ve sonraki bir nullable bağlamında, `T` belirtilen arabirimi uygulayan nullable olmayan bir tür olmalıdır.|
-|`where T :`arayüz adı>? * \<*|Tür bağımsız değişkeni, belirtilen arabirimi olmalıdır veya uygulamalıdır. Birden çok arabirim kısıtlaması belirtilebilir. Kısıtlayıcı arabirim de genel olabilir. C# 8.0'daki nullable `T` bağlamında, nullable başvuru türü, nullable olmayan bir başvuru türü veya bir değer türü olabilir. `T`nullable değer türü olmayabilir.|
-|`where T : U`|Için `T` verilen tür bağımsız değişkeni, '' için `U`verilen bağımsız değişkenden türemelidir. Nullable bağlamında, nullable olmayan bir başvuru türü `T` ise, `U` nullable olmayan başvuru türü olmalıdır. Nullable `U` bir başvuru türü `T` ise, nullable veya unnullable olabilir. |
+|`where T : struct`|Tür bağımsız değişkeni null yapılamayan bir değer türü olmalıdır. Nullable değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](../../language-reference/builtin-types/nullable-value-types.md). Tüm değer türlerinde erişilebilir parametresiz bir Oluşturucu olduğundan, kısıtlama `struct` `new()` kısıtlamayı gösterir ve `new()` kısıtlamayla birleştirilemez. Kısıtlamayı `struct` `unmanaged` kısıtlamasıyla birleştiremezsiniz.|
+|`where T : class`|Tür bağımsız değişkeni bir başvuru türü olmalıdır. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir. C# 8,0 veya sonraki bir sürümde null yapılabilir bir bağlamda, `T` null atanamaz bir başvuru türü olmalıdır. |
+|`where T : class?`|Tür bağımsız değişkeni, null yapılabilir veya null yapılamayan bir başvuru türü olmalıdır. Bu kısıtlama, her sınıf, arabirim, temsilci veya dizi türü için de geçerlidir.|
+|`where T : notnull`|Tür bağımsız değişkeni null yapılamayan bir tür olmalıdır. Bağımsız değişken, C# 8,0 veya sonraki bir sürümde null atanamaz bir başvuru türü veya null yapılamayan bir değer türü olabilir. |
+|`where T : unmanaged`|Tür bağımsız değişkeni null atanamaz bir [yönetilmeyen tür](../../language-reference/builtin-types/unmanaged-types.md)olmalıdır. `unmanaged`Kısıtlama `struct` kısıtlamayı gösterir ve ya da kısıtlamalarıyla birleştirilemez `struct` `new()` .|
+|`where T : new()`|Tür bağımsız değişkeni Ortak parametresiz bir oluşturucuya sahip olmalıdır. Diğer kısıtlamalarla birlikte kullanıldığında, `new()` kısıtlama en son belirtilmelidir. `new()`Kısıtlama `struct` ve `unmanaged` kısıtlamalarıyla birleştirilemez.|
+|`where T :`* \< temel sınıf adı>*|Tür bağımsız değişkeni belirtilen temel sınıftan olmalıdır veya türetilmelidir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen temel sınıftan türetilmiş null atanamaz bir başvuru türü olmalıdır. |
+|`where T :`* \< temel sınıf adı>?*|Tür bağımsız değişkeni belirtilen temel sınıftan olmalıdır veya türetilmelidir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen temel sınıftan türetilmiş null yapılabilen veya null yapılamayan bir tür olabilir. |
+|`where T :`* \< arabirim adı>*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir. C# 8,0 ve üzeri bir null yapılabilir bağlamda, `T` belirtilen arabirimi uygulayan null yapılamayan bir tür olmalıdır.|
+|`where T :`* \< arabirim adı>?*|Tür bağımsız değişkeni belirtilen arabirimi içermelidir veya uygulamalıdır. Birden çok arabirim kısıtlaması belirlenebilir. Kısıtlama arabirimi de genel olabilir. C# 8,0 ' de null yapılabilir bir bağlamda, `T` null yapılabilir bir başvuru türü, null olamayan bir başvuru türü veya değer türü olabilir. `T`null yapılabilen bir değer türü olmayabilir.|
+|`where T : U`|İçin sağlanan tür bağımsız değişkeni, `T` için sağlanan bağımsız değişkenden türetilmiş veya türetilmiş olmalıdır `U` . Null yapılabilir bir bağlamda, `U` null atanamaz bir başvuru türü ise, `T` null olamayan bir başvuru türü olmalıdır. `U`Null yapılabilir bir başvuru türü ise, `T` null yapılabilir veya null atanamaz olabilir. |
 
-## <a name="why-use-constraints"></a>Neden kısıtlamaları kullanın
+## <a name="why-use-constraints"></a>Neden kısıtlama kullanılmalıdır
 
-Kısıtlamalar, bir tür parametresinin yeteneklerini ve beklentilerini belirtir. Bu kısıtlamaları bildirmek, kısıtlama türündeki işlemleri ve yöntem çağrılarını kullanabileceğiniz anlamına gelir. Genel sınıfınız veya yönteminiz, genel üyeler üzerinde basit atamanın ötesinde <xref:System.Object?displayProperty=nameWithType>herhangi bir işlem kullanıyorsa veya desteklenmeyen yöntemleri arıyorsa, tür parametresine kısıtlamalar uygulamanız gerekir. Örneğin, taban sınıf kısıtlaması derleyiciye yalnızca bu türdeki veya bu türden türetilen nesnelerin tür bağımsız değişkeni olarak kullanılacağını söyler. Derleyici bu garantiye sahip olduktan sonra, bu tür yöntemlerin genel sınıfta çağrılmasını sağlayabilir. Aşağıdaki kod örneği, taban sınıf kısıtlaması `GenericList<T>` uygulayarak sınıfa [(Genel Lere](../../../standard/generics/index.md)Giriş'te) ekleyebileceğiniz işlevselliği gösterir.
+Kısıtlamalar, bir tür parametresinin yeteneklerini ve beklentilerini belirtir. Bu kısıtlamaları bildirmek, kısıtlama türünün işlemlerini ve Yöntem çağrılarını kullanabileceğiniz anlamına gelir. Genel bir sınıf veya yönteminiz, Genel Üyeler üzerinde basit atamanın ötesinde veya tarafından desteklenmeyen herhangi bir yöntemi çağıran herhangi bir işlem kullanıyorsa <xref:System.Object?displayProperty=nameWithType> , tür parametresine kısıtlamalar uygulamanız gerekir. Örneğin, temel sınıf kısıtlaması derleyiciye yalnızca bu türden veya bu türden türetilmiş nesnelerin tür bağımsız değişkenleri olarak kullanılacağını söyler. Derleyiciye bu garanti verildikten sonra, genel sınıfta bu tür yöntemlerin çağrılmasına izin verebilir. Aşağıdaki kod örneği, `GenericList<T>` bir temel sınıf kısıtlaması uygulayarak sınıfına ekleyebileceğiniz işlevselliği gösterir ( [Genel türlere giriş](../../../standard/generics/index.md)olarak).
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
-Kısıtlama, genel sınıfın `Employee.Name` özelliği kullanmasını sağlar. Kısıtlama, türdeki `T` tüm öğelerin bir `Employee` nesne veya devralan bir nesne olarak `Employee`garanti edilir olduğunu belirtir.
+Kısıtlama, genel sınıfın özelliğini kullanmasını sağlar `Employee.Name` . Kısıtlama, türündeki tüm öğelerin `T` bir `Employee` nesne ya da öğesinden devralan nesne olduğunu belirtir `Employee` .
 
-Aynı tür parametresine birden çok kısıtlama uygulanabilir ve kısıtlamaların kendileri aşağıdaki gibi genel türler olabilir:
+Aynı tür parametresine birden çok kısıtlama uygulanabilir ve kısıtlamalar aşağıdaki gibi genel türler olabilir:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#10)]
 
-Kısıtlamayı `where T : class` uygularken, bu `==` `!=` işleçler değer eşitliği için değil, yalnızca referans kimliği için test edecek tür parametresi üzerinde ve işleçleri kaçının. Bu davranış, bu işleçler bağımsız değişken olarak kullanılan bir türde aşırı yüklenmiş olsa bile oluşur. Aşağıdaki kod bu noktayı göstermektedir; <xref:System.String> sınıf `==` işleci aşırı yüklese bile çıktı yanlıştır.
+`where T : class`Kısıtlama uygulanırken `==` `!=` tür parametresindeki ve işleçlerden kaçının, çünkü bu işleçler yalnızca başvuru kimliğini test edecek, değer eşitlik için değil. Bu davranış, bu işleçler bağımsız değişken olarak kullanılan bir türde aşırı yüklense bile oluşur. Aşağıdaki kod bu noktayı gösterir; sınıf işleci aşırı yüklese de çıkış yanlış olur <xref:System.String> `==` .
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
 
-Derleyici yalnızca derleme `T` zamanında bir başvuru türü olduğunu bilir ve tüm başvuru türleri için geçerli olan varsayılan işleçleri kullanması gerekir. Değer eşitliği için sınamanız gerekiyorsa, önerilen yol `where T : IEquatable<T>` `where T : IComparable<T>` aynı zamanda kısıtlamayı uygulamak ve genel sınıfı oluşturmak için kullanılacak herhangi bir sınıfta arabirimi uygulamaktır.
+Derleyici yalnızca `T` derleme zamanında bir başvuru türü olduğunu ve tüm başvuru türleri için geçerli olan varsayılan işleçleri kullanması gerektiğini bilir. Değer eşitlik için test etmeniz gerekiyorsa, önerilen yol, `where T : IEquatable<T>` veya `where T : IComparable<T>` kısıtlamasını uygulamak ve genel sınıfı oluşturmak için kullanılacak herhangi bir sınıfta arabirimini uygulamaktır.
 
-## <a name="constraining-multiple-parameters"></a>Birden çok parametreyi zorlama
+## <a name="constraining-multiple-parameters"></a>Birden çok parametreyi kısıtlama
 
-Aşağıdaki örnekte gösterildiği gibi, kısıtlamaları birden çok parametreye ve birden çok kısıtlamayı tek bir parametreye uygulayabilirsiniz:
+Aşağıdaki örnekte gösterildiği gibi birden çok parametreye kısıtlama uygulayabilir ve tek bir parametreye birden çok kısıtlama uygulayabilirsiniz:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#12)]
 
-## <a name="unbounded-type-parameters"></a>Sınırsız tür parametreleri
+## <a name="unbounded-type-parameters"></a>Sınırlandırılmamış tür parametreleri
 
- Ortak sınıfta `SampleClass<T>{}`Ki'si gibi kısıtlaması olmayan tür parametreleri, sınırsız tür parametreleri olarak adlandırılır. Sınırsız tür parametreleri aşağıdaki kurallara sahiptir:
+ Public sınıfında T gibi hiçbir kısıtlaması olmayan tür parametrelerine, `SampleClass<T>{}` sınırlandırılmamış tür parametreleri denir. Sınırlandırılmamış tür parametreleri aşağıdaki kurallara sahiptir:
 
-- Somut `!=` `==` tür bağımsız değişkeninin bu işleçleri destekleyeceğinin garantisi olmadığından, ve işleçler kullanılamaz.
-- Bunlar herhangi bir arabirim `System.Object` türüne dönüştürülebilir veya açıkça herhangi bir arabirim türüne dönüştürülebilir.
-- Null [ile](../../language-reference/keywords/null.md)karşılaştırabilirsiniz. Sınırlanmamış bir parametre ile `null`karşılaştırıldığında, tür bağımsız değişkeni bir değer türüise karşılaştırma her zaman yanlış döndürecektir.
+- `!=`Ve `==` işleçleri, somut tür bağımsız değişkeninin bu işleçleri destekleyeceği garantisi olmadığından kullanılamaz.
+- Bunlar, `System.Object` herhangi bir arabirim türüne dönüştürülebilir veya buradan dönüştürülebilir ya da açıkça dönüştürülebilir.
+- Bunları [null](../../language-reference/keywords/null.md)ile karşılaştırabilirsiniz. Sınırlandırılmamış bir parametre ile karşılaştırılabiliyorsanız `null` , tür bağımsız değişkeni bir değer türündeyse karşılaştırma her zaman yanlış olarak döndürülür.
 
-## <a name="type-parameters-as-constraints"></a>Parametreleri kısıtlama olarak yazın
+## <a name="type-parameters-as-constraints"></a>Parametreleri kısıtlamalar olarak yazın
 
-Genel bir tür parametresinin kısıtlama olarak kullanılması, kendi türü parametresine sahip bir üye işlevin, aşağıdaki örnekte gösterildiği gibi, bu parametreyi içeren tür türü parametresiyle sınırlandırması gerektiğinde yararlıdır:
+Genel tür parametresinin bir kısıtlama olarak kullanılması, aşağıdaki örnekte gösterildiği gibi, kendi tür parametresine sahip bir üye işlevi bu parametreyi kapsayan türün tür parametresiyle kısıtlamak için yararlıdır:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#13)]
 
-Önceki örnekte, `T` `Add` yöntem bağlamında bir tür kısıtlaması ve `List` sınıf bağlamında sınırsız bir tür parametresi vardır.
+Önceki örnekte, `T` yönteminin bağlamındaki bir tür kısıtlamasıdır `Add` ve sınıfı bağlamında sınırsız bir tür parametresi olur `List` .
 
-Tür parametreleri, genel sınıf tanımlarında kısıtlama olarak da kullanılabilir. Tip parametresi, açı braketi içinde diğer tip parametrelerle birlikte bildirilmelidir:
+Tür parametreleri, genel sınıf tanımlarında kısıtlama olarak da kullanılabilir. Tür parametresi, diğer tür parametreleriyle birlikte açılı ayraç içinde bildirilmelidir:
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#14)]
 
-Derleyici, `System.Object`tür parametresi hakkında türetilmiştir dışında hiçbir şey varsayamayacağından, genel sınıflarla birlikte kısıtlama olarak tür parametrelerinin kullanışlılığı sınırlıdır. İki tür paramı arasında devralma ilişkisini zorlamak istediğiniz senaryolarda genel sınıflarda tür parametrelerini kısıtlama olarak kullanın.
+Tür parametrelerinin genel sınıflarla kısıtlamalar olarak yararlılığı sınırlıdır, çünkü derleyici tür parametresi hakkında türetilmediği hariç hiçbir şey kabul edebilir `System.Object` . Tür parametrelerini, iki tür parametresi arasında bir devralma ilişkisi uygulamak istediğiniz senaryolarda genel sınıflarda kısıtlamalar olarak kullanın.
 
-## <a name="notnull-constraint"></a>NotNull kısıtlama
+## <a name="notnull-constraint"></a>NotNull kısıtlaması
 
-Nullable bağlamında C# 8.0 ile başlayarak, `notnull` tür bağımsız değişkeninin nullable olmayan bir değer türü veya nullable olmayan başvuru türü olması gerektiğini belirtmek için kısıtlamak kullanabilirsiniz. Kısıtlama `notnull` yalnızca bir `nullable enable` bağlam içinde kullanılabilir. Kısıtlamayı `notnull` boş bir içeriğe eklerseniz derleyici bir uyarı oluşturur.
+Bağımsız değişken olmayan bir bağlamda C# 8,0 ile başlayarak, `notnull` tür bağımsız değişkeninin null yapılamayan bir değer türü veya null yapılamayan bir başvuru türü olması gerektiğini belirtmek için kısıtlamasını kullanabilirsiniz. `notnull`Kısıtlama yalnızca bir `nullable enable` bağlamda kullanılabilir. `notnull`Kısıtlama, null yapılabilir bir zorunluluvou bağlamına eklerseniz bir uyarı oluşturur.
 
-Diğer kısıtlamaların aksine, bir tür `notnull` bağımsız değişkeni kısıtlamayı ihlal ettiğinde, derleyici bu `nullable enable` kod bir bağlam içinde derlendiğinde bir uyarı oluşturur. Kod boş bir şekilde derlenirse, derleyici herhangi bir uyarı veya hata oluşturmaz.
+Diğer kısıtlamaların aksine, bir tür bağımsız değişkeni kısıtlamayı ihlal ettiğinde `notnull` , derleyici bu kod bir bağlamda derlenirse bir uyarı oluşturur `nullable enable` . Kod, null yapılabilir bir zorunluluvou bağlamında derlenmişse, derleyici hiçbir uyarı veya hata oluşturmaz.
 
-Nullable bağlamında C# 8.0 ile `class` başlayarak, kısıtlama türü bağımsız değişkeninin nullable olmayan bir başvuru türü olması gerektiğini belirtir. Nullable bağlamında, bir tür parametresi nullable başvuru türü olduğunda, derleyici bir uyarı oluşturur.
+Null olabilen bir bağlamda C# 8,0 ' den başlayarak `class` kısıtlama, tür bağımsız değişkeninin null yapılamayan bir başvuru türü olması gerektiğini belirtir. Null yapılabilir bir bağlamda, bir tür parametresi null olabilen bir başvuru türü olduğunda, derleyici bir uyarı oluşturur.
 
 ## <a name="unmanaged-constraint"></a>Yönetilmeyen kısıtlama
 
-C# 7.3 ile başlayarak, `unmanaged` tür parametresinin geçersiz olmayan [yönetilmeyen](../../language-reference/builtin-types/unmanaged-types.md)bir tür olması gerektiğini belirtmek için kısıtlamayı kullanabilirsiniz. Kısıtlama, `unmanaged` aşağıdaki örnekte gösterildiği gibi, bellek blokları olarak değiştirilebilen türlerle çalışmak için yeniden kullanılabilir yordamlar yazmanızı sağlar:
+C# 7,3 ' den başlayarak, `unmanaged` tür parametresinin null atanamaz [yönetilmeyen bir tür](../../language-reference/builtin-types/unmanaged-types.md)olması gerektiğini belirtmek için kısıtlamasını kullanabilirsiniz. `unmanaged`Kısıtlama, aşağıdaki örnekte gösterildiği gibi, bellek blokları olarak işlenebilen türlerle çalışmak için yeniden kullanılabilir yordamlar yazmanızı sağlar:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-İşleç, yerleşik bir tür `unsafe` olarak bilinen bir türde işleci kullandığından, önceki yöntem bir bağlamda derlenmelidir. `sizeof` Kısıtlama `unmanaged` `sizeof` olmadan, işleç kullanılamaz.
+Önceki yöntem, `unsafe` `sizeof` yerleşik bir tür olarak bilinen bir tür üzerinde işleç kullandığından bir bağlamda derlenmelidir. Kısıtlama olmadan `unmanaged` `sizeof` işleç kullanılamaz.
 
-Kısıtlama `unmanaged` kısıtlamayı `struct` ima eder ve onunla birleştirilemez. `struct` Kısıtlama kısıtlamayı `new()` ima ettiği `unmanaged` için, kısıtlama `new()` kısıtlamayla da birleştirilemez.
+`unmanaged`Kısıtlama `struct` kısıtlamayı belirtir ve onunla birleştirilemez. Kısıtlama `struct` kısıtlamayı gösterdiği için kısıtlama `new()` `unmanaged` kısıtlama ile birleştirilemez `new()` .
 
 ## <a name="delegate-constraints"></a>Temsilci kısıtlamaları
 
-Ayrıca C# 7.3 ile başlayarak, kullanabilirsiniz <xref:System.Delegate?displayProperty=nameWithType> veya <xref:System.MulticastDelegate?displayProperty=nameWithType> bir taban sınıf kısıtlaması olarak. CLR her zaman bu kısıtlamaya izin verdi, ancak C# dili buna izin vermedi. Kısıtlama, `System.Delegate` temsilcilerle tür güvenli bir şekilde çalışan kod yazmanızı sağlar. Aşağıdaki kod, aynı türde olmaları koşuluyla iki temsilciyi birleştiren bir uzantı yöntemi tanımlar:
+C# 7,3 ' den itibaren, <xref:System.Delegate?displayProperty=nameWithType> ya da <xref:System.MulticastDelegate?displayProperty=nameWithType> temel sınıf kısıtlaması olarak kullanabilirsiniz. CLR bu kısıtlamaya her zaman izin verilir, ancak C# dili izin vermez. `System.Delegate`Kısıtlama, temsilcilerle birlikte, tür açısından güvenli bir şekilde kod yazmanıza olanak sağlar. Aşağıdaki kod, iki temsilciyi aynı tür olduklarından birleştiren bir genişletme yöntemi tanımlar:
 
 [!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
 
-Yukarıdaki yöntemi, aynı türdeki temsilcileri birleştirmek için kullanabilirsiniz:
+Aynı türdeki temsilcileri birleştirmek için yukarıdaki yöntemi kullanabilirsiniz:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-Son satırı açıklamazsanız, derleme olmaz. Her `first` `test` ikisi de ve temsilci türleri, ancak farklı temsilci türleri.
+Son satırın açıklamasını kaldırırsanız, derlenmez. Hem hem de `first` `test` temsilci türlerdir, ancak farklı temsilci türleridir.
 
-## <a name="enum-constraints"></a>Enum kısıtlamaları
+## <a name="enum-constraints"></a>Sabit listesi kısıtlamaları
 
-C# 7.3'ten başlayarak, <xref:System.Enum?displayProperty=nameWithType> türü taban sınıf kısıtlaması olarak da belirtebilirsiniz. CLR her zaman bu kısıtlamaya izin verdi, ancak C# dili buna izin vermedi. Genel olarak `System.Enum` kullanan genel `System.Enum`ler, statik yöntemleri kullanarak sonuçları önbelleğe almak için tür için güvenli programlama sağlar. Aşağıdaki örnek, bir enum türü için tüm geçerli değerleri bulur ve sonra bu değerleri dize gösterimi ile eşleyen bir sözlük oluşturur.
+C# 7,3 ' den başlayarak, <xref:System.Enum?displayProperty=nameWithType> türü temel sınıf kısıtlaması olarak da belirtebilirsiniz. CLR bu kısıtlamaya her zaman izin verilir, ancak C# dili izin vermez. Kullanan genel türler `System.Enum` , içindeki statik yöntemleri kullanarak sonuçları önbelleğe almak için tür kullanımı uyumlu programlama sağlar `System.Enum` . Aşağıdaki örnek, bir sabit listesi türü için geçerli tüm değerleri bulur ve sonra bu değerleri dize gösterimiyle eşleyen bir sözlük oluşturur.
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Performans etkileri olan yansımakullanımı nda kullanılan yöntemler. Bu yöntemi, yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için arayabilirsiniz.
+`Enum.GetValues`ve `Enum.GetName` performans etkilerine sahip olan yansıma kullanın. `EnumNamedValues`Yansıma gerektiren çağrıları yinelemek yerine önbelleğe alınmış ve yeniden kullanılan bir koleksiyon oluşturmak için öğesini çağırabilirsiniz.
 
-Bir enum oluşturmak ve değerleri ve adlarından oluşan bir sözlük oluşturmak için aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz:
+Aşağıdaki örnekte gösterildiği gibi, bir sabit listesi oluşturmak ve değerlerini ve adlarını bir sözlüğü oluşturmak için kullanabilirsiniz:
 
 [!code-csharp[enum definition](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#19)]
 
@@ -127,4 +127,4 @@ Bir enum oluşturmak ve değerleri ve adlarından oluşan bir sözlük oluşturm
 - [C# Programlama Kılavuzu](../index.md)
 - [Genel Türlere Giriş](./index.md)
 - [Genel Sınıflar](./generic-classes.md)
-- [yeni Kısıtlama](../../language-reference/keywords/new-constraint.md)
+- [Yeni kısıtlama](../../language-reference/keywords/new-constraint.md)

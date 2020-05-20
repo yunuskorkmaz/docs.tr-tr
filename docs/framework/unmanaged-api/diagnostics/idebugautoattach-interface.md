@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-ms.openlocfilehash: 64e9d5e4bf43c8dac39850dafcd58a547191fc99
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8eb1e7baf950e978bd921be20769810619658bc3
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445513"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442117"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach Arabirimi
 Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme arabirimini tanımlar.  
@@ -28,11 +28,11 @@ Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme arabirimin
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AutoAttach Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.|  
+|[AutoAttach Yöntemi](idebugautoattach-autoattach-method.md)|Sunucu tarafından çağrılan hata ayıklayıcı otomatik iliştirme işlemini gerçekleştirir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** Dbgoto Attach. IDL  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)

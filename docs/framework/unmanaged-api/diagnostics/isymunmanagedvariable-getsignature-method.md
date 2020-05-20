@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446039"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610450"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature Metodu
 Bu değişkenin imzasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parametreler  
  `cSig`  
- 'ndaki `sig` parametresi tarafından işaret edilen arabelleğin uzunluğu.  
+ 'ndaki Parametre tarafından işaret edilen arabelleğin uzunluğu `sig` .  
   
  `pcSig`  
- dışı İmzayı içermesi için gereken arabelleğin karakter cinsinden boyutunu alan bir `ULONG32` işaretçisi.  
+ dışı `ULONG32`İmzayı içermesi için gereken arabelleğin boyutunu, karakter cinsinden alan bir işaretçisi.  
   
  `sig`  
  dışı İmzayı depolayan arabellek.  
@@ -53,4 +53,4 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ISymUnmanagedVariable Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable Arabirimi](isymunmanagedvariable-interface.md)

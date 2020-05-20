@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: d7371361b074454e8aa359c49b964193c12f3034
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446152"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610671"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo Arabirimi
-Arama yolu hakkında bilgi almak için yöntemler sağlar. [Idimunmanagedreader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne üzerinde `QueryInterface` çağırarak bu arabirimi elde edin.  
+Arama yolu hakkında bilgi almak için yöntemler sağlar. `QueryInterface` [Istreamunmanagedreader](isymunmanagedreader-interface.md) arabirimini uygulayan bir nesne çağırarak bu arabirimi elde edin.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetHRESULT Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-gethresult-method.md)|HRESULT 'yi alır.|  
-|[GetSearchPath Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|Arama yolunu alır.|  
-|[GetSearchPathLength Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|Arama yolu uzunluğunu alır.|  
+|[GetHRESULT Yöntemi](isymunmanagedsymbolsearchinfo-gethresult-method.md)|HRESULT 'yi alır.|  
+|[GetSearchPath Yöntemi](isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|Arama yolunu alır.|  
+|[GetSearchPathLength Yöntemi](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|Arama yolu uzunluğunu alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)
