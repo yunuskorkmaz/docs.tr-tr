@@ -1,30 +1,31 @@
 ---
-title: WF akış etkinliği
+title: WF 'de denetim akışı etkinlikleri
+description: Bu makalede, bir iş akışı içinde yürütme akışını denetlemek için .NET Framework 4.6.1 etkinlikleri özetlenmektedir.
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-ms.openlocfilehash: bcbb12210af2d0172977dca6f81355031baa043a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18ff982d3f215e3fd46108eb2411f3d1a5ab9745
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945918"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420077"
 ---
-# <a name="control-flow-activities-in-wf"></a>WF akış etkinliği
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Çeşitli etkinlikler, bir iş akışındaki yürütmenin akışını denetlemek için sağlar. Bu etkinliklerin bazıları (gibi `Switch` ve `If`) akış denetim yapıları ortamları Visual gibi programlama benzer uygulamak C#, başkalarının çalışırken (gibi `Pick`) yeni programlama yapıları model.  
+# <a name="control-flow-activities-in-wf"></a>WF 'de denetim akışı etkinlikleri
+, [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bir iş akışı içinde yürütme akışını denetlemek için çeşitli etkinlikler sağlar. Bu etkinliklerin bazıları ( `Switch` ve gibi `If` ), Visual C# gibi programlama ortamlarından benzer şekilde akış denetim yapılarını uygular, diğerleri ise `Pick` yeni programlama yapılarını modelleyebilir.  
   
- Etkinlikleri sırasında gibi unutmayın `Parallel` ve `ParallelForEach` etkinlikleri birden çok alt etkinlik yürütmesi için aynı anda zamanlayın, tek bir iş parçacığı bir iş akışı için kullanılır. Her bir alt etkinlik bu etkinlikleri sırayla yürütür ve ardışık etkinlikler önceki etkinliklere tamamlamak veya boşta Git kadar yürütülmez. Sonuç olarak, bu etkinlikler birkaç olası engelleme etkinliği bir araya eklemeli biçimde yürütülmesi gereken uygulamalar için en kullanışlıdır. Bu etkinliklerin alt etkinliklerin hiçbiri boş giderseniz bir `Parallel` etkinliği yürütür olduğu gibi bir `Sequence` etkinliği ve bir `ParallelForEach` etkinliği yürütür olduğu gibi bir `ForEach` etkinlik. Eğer, ancak zaman uyumsuz etkinlikler (türetilen etkinlikleri gibi <xref:System.Activities.AsyncCodeActivity>) veya Mesajlaşma etkinlikleri kullanılır, denetimi kendi ileti alınabilmesi bir alt etkinlik beklediği sırada sonraki dal ya da tamamlanacak zaman uyumsuz çalışmasını geçecek.  
+ `Parallel`Ve etkinlikleri gibi etkinliklerin `ParallelForEach` birden çok alt etkinliği aynı anda yürütmeye zamanlarken, iş akışı için yalnızca tek bir iş parçacığının kullanıldığını unutmayın. Bu etkinliklerin her bir alt etkinliği sırayla yürütülür ve önceki etkinlikler tamamlanana veya boşta olana kadar ardışık etkinlikler yürütülmez. Sonuç olarak, bu etkinlikler birçok olası engelleme etkinliklerinin araya eklemeli bir biçimde yürütülmesi gereken uygulamalar için en yararlı seçenektir. Bu etkinliklerin alt etkinliklerinin hiçbiri boşta kalırsa, etkinlik tıpkı etkinlik gibi `Parallel` yürütülür ve etkinlik tıpkı `Sequence` `ParallelForEach` etkinlik gibi yürütülür `ForEach` . Ancak, zaman uyumsuz etkinlikler (örneğin, öğesinden türetilen etkinlikler <xref:System.Activities.AsyncCodeActivity> ) veya mesajlaşma etkinlikleriyle birlikte kullanılırsa, alt etkinlik iletinin alınmasını veya zaman uyumsuz işinin tamamlanmasını beklediği sırada denetim sonraki dala geçer.  
   
-## <a name="flow-control-activities"></a>Akış denetimi etkinlikleri  
+## <a name="flow-control-activities"></a>Akış denetim etkinlikleri  
   
 |Etkinlik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Activities.Statements.DoWhile>|İçerilen etkinlikleri bir kez çalıştırır ve bir koşulu sırada bunu yapmak devam `true`.|  
-|<xref:System.Activities.Statements.ForEach%601>|Sıralı bir koleksiyondaki her öğe için bir katıştırılmış deyim yürütür. <xref:System.Activities.Statements.ForEach%601> anahtar sözcük benzer `foreach`, ancak bir dil ifadesi yerine bir etkinlik olarak uygulanır.|  
-|<xref:System.Activities.Statements.If>|Bir koşul ise, içerilen etkinlikleri yürütür `true`ve içerdiği etkinlikler yürütebilir <xref:System.Activities.Statements.If.Else%2A> koşul ise özellik `false`.|  
+|<xref:System.Activities.Statements.DoWhile>|İçerilen etkinlikleri bir kez yürütür ve bir koşul olduğunda bunu yapmaya devam eder `true` .|  
+|<xref:System.Activities.Statements.ForEach%601>|Bir koleksiyondaki her öğe için sırayla gömülü bir ifade yürütür. <xref:System.Activities.Statements.ForEach%601>, anahtar sözcüğüne benzerdir `foreach` , ancak bir dil ifadesinin yerine etkinlik olarak uygulanır.|  
+|<xref:System.Activities.Statements.If>|Bir koşul varsa içerilen etkinlikleri yürütür `true` ve <xref:System.Activities.Statements.If.Else%2A> Koşul ise özellikte içerilen etkinlikleri yürütebilir `false` .|  
 |<xref:System.Activities.Statements.Parallel>|İçerilen etkinlikleri paralel olarak yürütür.|  
-|<xref:System.Activities.Statements.ParallelForEach%601>|Bir koleksiyondaki her öğe için paralel bir katıştırılmış deyim yürütür.|  
-|<xref:System.Activities.Statements.Pick>|Olay tabanlı denetim akış modelleme sağlar.|  
-|<xref:System.Activities.Statements.PickBranch>|Olası bir yürütme yolunu temsil ettiği bir <xref:System.Activities.Statements.Pick> etkinlik.|  
+|<xref:System.Activities.Statements.ParallelForEach%601>|Bir koleksiyondaki her öğe için gömülü bir ifadeyi paralel olarak yürütür.|  
+|<xref:System.Activities.Statements.Pick>|Olay tabanlı denetim akışı modelleme sağlar.|  
+|<xref:System.Activities.Statements.PickBranch>|Bir etkinlikte yürütmenin olası yolunu temsil eder <xref:System.Activities.Statements.Pick> .|  
 |<xref:System.Activities.Statements.Sequence>|İçerilen etkinlikleri sırayla yürütür.|  
-|<xref:System.Activities.Statements.Switch%601>|Bir seçenek, belirli bir ifadenin değerine göre yürütmek için etkinlikler arasında bir sayı seçer.|  
-|<xref:System.Activities.Statements.While>|İçerilen etkinlikleri bir koşulu sırada yürütür `true`.|
+|<xref:System.Activities.Statements.Switch%601>|Belirli bir ifadenin değerine bağlı olarak, çalıştırılacak sayıda etkinlikten bir seçim seçer.|  
+|<xref:System.Activities.Statements.While>|Bir koşul olduğunda içerilen etkinlikleri yürütür `true` .|

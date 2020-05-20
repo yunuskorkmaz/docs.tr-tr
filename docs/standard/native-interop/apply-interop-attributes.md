@@ -1,5 +1,6 @@
 ---
 title: Birlikte Çalışma Özniteliklerini Uygulama
+description: Bu makale, System. Runtime. InteropServices ad alanının tasarım zamanı ve dönüştürme aracı öznitelikleri dahil COM birlikte çalışma özniteliklerini özetler.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
@@ -13,15 +14,15 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159253"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420545"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
-<xref:System.Runtime.InteropServices> Ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme IŞLEMI sırasında com birlikte çalışma araçları ve API 'leri tarafından uygulanan ve sizin tarafınızdan ya da com birlikte çalışma tarafından uygulanan bunlar.  
+<xref:System.Runtime.InteropServices>Ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi SıRASıNDA com birlikte çalışma araçları ve API 'leri tarafından uygulanan ve sizin tarafınızdan ya da com birlikte çalışma tarafından uygulanan bunlar.  
   
  Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../../../docs/standard/attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
   

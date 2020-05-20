@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EnumModule yöntemi
+title: 'IXCLRDataProcess:: EnumModule yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumModule Method
@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 40ab90a3218d4309cda709004a191e9440fe505d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5caadcfe091393a8ff79106d57a50a532c349829
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769574"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420787"
 ---
-# <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule yöntemi
+# <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess:: EnumModule yöntemi
 
-Bu işlemin modülleri numaralandırır.
+Bu işlemin modüllerini numaralandırır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumModule(
@@ -40,25 +40,25 @@ HRESULT EnumModule(
 ## <a name="parameters"></a>Parametreler
 
 `handle`\
-[out içinde] Modülleri numaralandırma tanıtıcısı.
+[in, out] Modülleri numaralandırmak için bir tanıtıcı.
 
 `mod`\
-[out] Numaralandırılmış modülü.
+dışı Numaralandırılmış modül.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve 25 sanal yöntem tablosunu yuvasına karşılık gelir.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataProcess` ve sanal yöntem tablosunun 25th yuvasına karşılık gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [CLRDataSourceType numaralandırması](clrdatasourcetype-enumeration.md)
 - [Hata Ayıklama](index.md)
-- [IXCLRDataModule arabirimi](ixclrdatamodule-interface.md)
-- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)
+- [IXCLRDataModule Arabirimi](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess Arabirimi](ixclrdataprocess-interface.md)

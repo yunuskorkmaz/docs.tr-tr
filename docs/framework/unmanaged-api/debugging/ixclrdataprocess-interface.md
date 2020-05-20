@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e7e53615e38d0ab76f9e7c0a753be3c13780057d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178371"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420766"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess Arabirimi
 
-Bir işlem hakkında bilgi sorgulama yöntemleri sağlar.
+İşlem hakkındaki bilgileri sorgulamak için yöntemler sağlar.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,26 +32,26 @@ Bir işlem hakkında bilgi sorgulama yöntemleri sağlar.
 
 | Yöntem                                                                                                                                               | Açıklama                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Kendine `AppDomain` özgü kimliğiyle bir süreçten geçer.                                              |
-| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Bir işlemin modüllerini sayısallandırmak için bir tutamaç sağlar.                                        |
-| [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Bu işlemin modüllerini oyalar.                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Modül numaralandırması sırasında kullanılan dahili yinelemeciler tarafından kullanılan kaynakları serbest bırakır.               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Belirli bir adresten `AppDomain` başlama yöntemi örneklerini sayısallandırmak için bir tutamaç sağlar. |
-| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Bir adres mahsup adresinden başlayan bu işlemin yöntem örneklerini dizir.                  |
-| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Örnek numaralandırma sırasında kullanılan iç yinelemeciler tarafından kullanılan kaynakları söyler.             |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Bir `AppDomain` işlem içinde kendi benzersiz kimliğine göre alır.                                              |
+| [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Bir işlemin modüllerini numaralandırmak için bir tanıtıcı sağlar.                                        |
+| [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Bu işlemin modüllerini numaralandırır.                                                         |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | Modül numaralandırması sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | Verilen bir adresten başlayarak Yöntem örneklerinin numaralandırılacağı bir tanıtıcı sağlar `AppDomain` . |
+| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Bir adres uzaklığında başlayarak bu işlemin Yöntem örneklerini numaralandırır.                  |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Örnek numaralandırması sırasında kullanılan iç yineleyiciler tarafından kullanılan kaynakları serbest bırakır.             |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu arabirim çalışma zamanı içinde yaşar ve üstbilgi veya kitaplık dosyaları aracılığıyla açıklanmaz. Ancak, her zamanki COM mekanizmaları ile `IUnknown` elde `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` edilebilir GUID ile türetilmiştir bir COM arayüzü.
+Bu arabirim çalışma zamanının içinde bulunur ve herhangi bir üst bilgi veya kitaplık dosyası aracılığıyla gösterilmez. Ancak, `IUnknown` `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` normal com mekanizmalarından elde edilebilir GUID ile TÜRETILEN bir com arabirimidir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
-**Üstbilgi:** Hiçbiri  
-**Kütüphane:** Hiçbiri  
-**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Üst bilgi:** Seçim  
+**Kitaplık:** Seçim  
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklama](index.md)
+- [Hata Ayıklama](index.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)

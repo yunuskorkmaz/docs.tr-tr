@@ -2,12 +2,12 @@
 title: Temel sınıf kitaplığı bölünmesi değişiklikleri
 description: Çekirdek .NET kitaplıklarında son değişiklikleri listeler.
 ms.date: 09/20/2019
-ms.openlocfilehash: a2eb4be89d78f50d201272f3449374bc27d8c785
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859935"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420441"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Çekirdek .NET kitaplıklarının parçalara bölünmesi
 
@@ -18,26 +18,27 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
 | [SSE ve SSE2 CompareGreaterThan yöntemleri NaN girdilerini doğru bir şekilde işler](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
-| [Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil](#apis-that-report-version-now-report-product-and-not-file-version) | 3,0 |
-| [Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3,0 |
-| [Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri](#floating-point-formatting-and-parsing-behavior-changed) | 3,0 |
-| [Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3,0 |
-| [InvalidAsynchronousStateException başka bir derlemeye taşındı](#invalidasynchronousstateexception-moved-to-another-assembly) | 3,0 |
-| [Hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirme Unicode yönergelerine uyar](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3,0 |
-| [TypeDescriptionProviderAttribute başka bir derlemeye taşındı](#typedescriptionproviderattribute-moved-to-another-assembly) | 3,0 |
-| [ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3,0 |
-| [JsonException iken NotSupportedException olarak değiştirilen JSON seri hale getirici özel durum türü](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3,0 |
-| [Utf8JsonWriter içinde (String) null semantiğinin değiştirilmesi](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3,0 |
-| [JsonEncodedText. Encode yöntemlerinde ek bir JavaScriptEncoder bağımsız değişkeni vardır](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3,0 |
-| [JsonFactoryConverter. CreateConverter imzası değişti](#jsonfactoryconvertercreateconverter-signature-changed) | 3,0 |
-| [JsonElement API değişiklikleri](#jsonelement-api-changes) | 3,0 |
-| [FieldInfo. SetValue statik, yalnızca init alanları için özel durum oluşturur](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3,0 |
+| [Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [InvalidAsynchronousStateException başka bir derlemeye taşındı](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [Hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirme Unicode yönergelerine uyar](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
+| [TypeDescriptionProviderAttribute başka bir derlemeye taşındı](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [JsonException iken NotSupportedException olarak değiştirilen JSON seri hale getirici özel durum türü](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
+| [Utf8JsonWriter içinde (String) null semantiğinin değiştirilmesi](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [JsonEncodedText. Encode yöntemlerinde ek bir JavaScriptEncoder bağımsız değişkeni vardır](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [JsonFactoryConverter. CreateConverter imzası değişti](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [JsonElement API değişiklikleri](#jsonelement-api-changes) | 3.0 |
+| [FieldInfo. SetValue statik, yalnızca init alanları için özel durum oluşturur](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [Yerleşik yapı türlerine eklenen özel alanlar](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [MacOS üzerinde OpenSSL sürümleri](#openssl-versions-on-macos) | 2.1 |
 | [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 | [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
 | [UriBuilder özellikleri artık önde gelen karakterlerin önüne alınmaz](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
+| [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
 
@@ -128,5 +129,9 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 ***
 
 [!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
 ***

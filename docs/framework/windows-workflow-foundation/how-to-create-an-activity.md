@@ -1,106 +1,107 @@
 ---
-title: 'Nasıl yapılır: Etkinlik Oluşturma'
+title: 'Nasıl Yapılır: Etkinlik Oluşturma'
+description: "Bu makalede, Workflow Foundation 'da iki etkinlik oluşturma gösterilmektedir: bir tane, mantığını uygulamak için kod kullanan ve diğeri diğer etkinlikleri kullanarak tanımlanmış."
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 6d74af6af6cea0d65c33db67ecbfd71ac1d5c346
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dae099d102b0c85d09a1ef8bcce56e8a9096bd20
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636958"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419596"
 ---
-# <a name="how-to-create-an-activity"></a>Nasıl yapılır: Etkinlik Oluşturma
+# <a name="how-to-create-an-activity"></a>Nasıl Yapılır: Etkinlik Oluşturma
 
-Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Bir etkinlik yürütülme mantığı yönetilen kodda uygulanabilir veya diğer etkinlikleri kullanarak uygulanabilir. Bu konu, iki etkinliği oluşturma işlemini gösterir. İlk Etkinlik yürütme mantığını uygulamak için kodu kullanan basit bir etkinliktir. İkinci etkinlik uygulaması, diğer etkinlikleri kullanarak tanımlanır. Bu etkinlikler, aşağıdaki adımlarda öğreticide kullanılır.
+Etkinlikler, içindeki temel davranış birimidir [!INCLUDE[wf1](../../../includes/wf1-md.md)] . Bir etkinliğin yürütme mantığı yönetilen kodda uygulanabilir veya diğer etkinlikler kullanılarak uygulanabilir. Bu konuda, iki etkinliğin nasıl oluşturulacağı gösterilmektedir. İlk etkinlik, yürütme mantığını uygulamak için kod kullanan basit bir etkinliktir. İkinci etkinliğin uygulanması diğer etkinlikler kullanılarak tanımlanır. Bu etkinlikler öğreticideki aşağıdaki adımlarda kullanılır.
 
 > [!NOTE]
-> Öğreticinin tamamlanmış bir sürümünü indirmek için bkz [Windows Workflow Foundation (WF45) - başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).
 
-## <a name="create-the-activity-library-project"></a>Etkinlik kitaplığı projesi oluşturun
+## <a name="create-the-activity-library-project"></a>Etkinlik kitaplığı projesi oluşturma
 
-1. Visual Studio açıp seçin **yeni** > **proje** gelen **dosya** menüsü.
+1. Visual Studio 'yu açın ve **New**  >  **Dosya** menüsünden Yeni**Proje** ' yi seçin.
 
-2. İçinde **yeni proje** iletişim altında **yüklü** kategorisi, select **Visual C#** > **iş akışı** (veya **Visual Basic** > **iş akışı**).
+2. **Yeni proje** iletişim kutusunda, **yüklü** kategori altında, **Visual C#**  >  **iş akışı** (veya **Visual Basic**  >  **iş akışı**) öğesini seçin.
 
     > [!NOTE]
-    > Görmüyorsanız **iş akışı** şablon kategorisi yüklemeniz gerekebilir **Windows Workflow Foundation** Visual Studio bileşen. Seçin **açık Visual Studio yükleyicisi** sol tarafındaki bağlantıyı **yeni proje** iletişim. Visual Studio Yükleyicisi'nde seçin **tek tek bileşenler** sekmesi. Ardından, altında **geliştirme etkinliklerini** kategorisi seçin **Windows Workflow Foundation** bileşeni. Seçin **Değiştir** bileşeni.
+    > **Iş akışı** şablonu kategorisini görmüyorsanız, Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekebilir. **Yeni proje** iletişim kutusunun sol tarafındaki **Visual Studio yükleyicisi aç** bağlantısını seçin. Visual Studio Yükleyicisi, **tek tek bileşenler** sekmesini seçin. Ardından, **geliştirme etkinlikleri** kategorisi altında **Windows Workflow Foundation** bileşenini seçin. Bileşeni yüklemek için **Değiştir** ' i seçin.
 
-3. Seçin **etkinlik Kitaplığı** proje şablonu. Tür `NumberGuessWorkflowActivities` içinde **adı** kutusuna ve ardından **Tamam**.
+3. **Etkinlik kitaplığı** proje şablonunu seçin. `NumberGuessWorkflowActivities` **Ad** kutusuna yazın ve ardından **Tamam**' a tıklayın.
 
-4. Sağ **gt;activity1.XAML** içinde **Çözüm Gezgini** ve **Sil**. Tıklayın **Tamam** onaylamak için.
+4. **Çözüm Gezgini** 'de **Activity1. xaml** öğesine sağ tıklayın ve **Sil**' i seçin. Onaylamak için **Tamam** ' ı tıklatın.
 
-## <a name="create-the-readint-activity"></a>ReadInt etkinliği oluşturma
+## <a name="create-the-readint-activity"></a>ReadInt etkinliğini oluşturma
 
-1. Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
+1. **Proje** menüsünden **Yeni öğe Ekle** ' yi seçin.
 
-2. İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **kod etkinliği** gelen **iş akışı** listesi.
+2. **Yüklü**  >  **ortak öğeler** düğümünde **iş akışı**' nı seçin. **Iş akışı** listesinden **kod etkinliği** ' ni seçin.
 
-3. Tür `ReadInt` içine **adı** kutusuna ve ardından **Ekle**.
+3. `ReadInt` **Ad** kutusuna yazın ve ardından **Ekle**' ye tıklayın.
 
-4. Varolan `ReadInt` aşağıdaki tanımını tanımıyla.
+4. Mevcut `ReadInt` tanımı aşağıdaki tanım ile değiştirin.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` Etkinlik türetilir <xref:System.Activities.NativeActivity%601> yerine <xref:System.Activities.CodeActivity>, kod etkinlik şablonu için varsayılan değerdir. <xref:System.Activities.CodeActivity%601> Etkinlik aracılığıyla sunulan tek bir sonuç sağlıyorsa kullanılabilir <xref:System.Activities.Activity%601.Result%2A> bağımsız değişkeni, ancak <xref:System.Activities.CodeActivity%601> kullanımı yer işaretleri, bu nedenle desteklemiyor <xref:System.Activities.NativeActivity%601> kullanılır.
+    > `ReadInt`Etkinlik, <xref:System.Activities.NativeActivity%601> <xref:System.Activities.CodeActivity> kod etkinlik şablonu için varsayılan olan yerine öğesinden türetilir. <xref:System.Activities.CodeActivity%601>etkinlik bağımsız değişken aracılığıyla ortaya çıkarılan <xref:System.Activities.Activity%601.Result%2A> ancak <xref:System.Activities.CodeActivity%601> yer işaretlerinin kullanımını desteklemeyen tek bir sonuç sağlıyorsa, bu nedenle kullanılır <xref:System.Activities.NativeActivity%601> .
 
-## <a name="create-the-prompt-activity"></a>Komut istemi etkinliği oluşturma
+## <a name="create-the-prompt-activity"></a>Istem etkinliğini oluşturma
 
-1. Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için. Proje etkinleştirir oluşturmaya `ReadInt` etkinlik bu projede Bu adımdan özel etkinlik oluşturmak için kullanılacak.
+1. **Ctrl** + **Shift** + Projeyi derlemek için CTRL SHIFT**B** tuşlarına basın. Projeyi oluşturmak, bu `ReadInt` projedeki etkinliğin özel etkinlik oluşturmak için kullanılmasını sağlar.
 
-2. Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
+2. **Proje** menüsünden **Yeni öğe Ekle** ' yi seçin.
 
-3. İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.
+3. **Yüklü**  >  **ortak öğeler** düğümünde **iş akışı**' nı seçin. **Iş akışı** listesinden **etkinlik** ' i seçin.
 
-4. Tür `Prompt` içine **adı** kutusuna ve ardından **Ekle**.
+4. `Prompt` **Ad** kutusuna yazın ve ardından **Ekle**' ye tıklayın.
 
-5. Çift **Prompt.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, tasarımcıda görüntülenecek.
+5. Daha önce görüntülenmiyorsa, tasarımcıda göstermek için **Çözüm Gezgini** **. xaml** öğesine çift tıklayın.
 
-6. Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek etkinlik Tasarımcısı **bağımsız değişkenleri** bölmesi.
+6. **Bağımsız değişkenler** bölmesini göstermek için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.
 
-7. Tıklayın **bağımsız değişken oluşturma**.
+7. **Bağımsız değişken Oluştur**' a tıklayın.
 
-8. Tür `BookmarkName` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **dize** gelen**Bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna **Enter** bağımsız değişkeni kaydetmek için.
+8. `BookmarkName` **Ad** kutusuna yazın, **Yön** açılan listesinden **'** ı seçin, **bağımsız değişken türü** açılan listesinden **dize** ' yi seçin ve sonra bağımsız değişkeni kaydetmek için **ENTER** tuşuna basın.
 
-9. Tıklayın **bağımsız değişken oluşturma**.
+9. **Bağımsız değişken Oluştur**' a tıklayın.
 
-10. Tür `Result` içine **adı** altında yeni eklenen kutusunu `BookmarkName` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinde seçin **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna **Enter**.
+10. `Result`Yeni eklenen bağımsız değişkenin altında bulunan **ad** kutusuna yazın `BookmarkName` , **Yön** açılan listesinden Seç **Out** ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından **ENTER**tuşuna basın.
 
-11. Tıklayın **bağımsız değişken oluşturma**.
+11. **Bağımsız değişken Oluştur**' a tıklayın.
 
-12. Tür `Text` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **dize** gelen**Bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna **Enter** bağımsız değişkeni kaydetmek için.
+12. `Text` **Ad** kutusuna yazın, **Yön** açılan listesinden **'** ı seçin, **bağımsız değişken türü** açılan listesinden **dize** ' yi seçin ve sonra bağımsız değişkeni kaydetmek için **ENTER** tuşuna basın.
 
-     Bu üç bağımsız değişken için karşılık gelen bağımsız bağlı <xref:System.Activities.Statements.WriteLine> ve `ReadInt` eklenen etkinlikler `Prompt` aşağıdaki adımlarda etkinlik.
+     Bu üç bağımsız değişken, <xref:System.Activities.Statements.WriteLine> `ReadInt` Aşağıdaki adımlarda etkinliğe eklenen ve etkinliklerinin karşılık gelen bağımsız değişkenlerine bağlanır `Prompt` .
 
-13. Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.
+13. **Bağımsız değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.
 
-14. Sürükle bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** etiketi **İstemi** etkinlik Tasarımcısı.
-
-    > [!TIP]
-    > Varsa **araç kutusu** penceresi görüntülenmiyorsa, seçin **araç kutusu** gelen **görünümü** menüsü.
-
-15. Sürükle bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** etiketi **Dizisi** etkinlik.
-
-16. Bağlama **metin** bağımsız değişkeni **WriteLine** etkinliğini **metin** bağımsız değişkeni **istemi** yazarak etkinlik `Text` içine **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusunda **özellikleri** penceresi ve ENTER tuşuna **sekmesini** iki kez anahtarı. Bu, IntelliSense listesi üyeleri penceresi kapatılır ve özellik değeri özelliği devre dışı seçim taşıyarak kaydeder. Bu özellik ayrıca yazarak ayarlanabilir `Text` içine **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** etkinlik çubuğundaki.
+14. **Araç kutusunun** **Denetim akışı** bölümünden bir **dizi** etkinliği sürükleyin ve **sor** etkinlik Tasarımcısı ' nın **buradan bırakma etkinliği** etiketine bırakın.
 
     > [!TIP]
-    > Varsa **Özellikler penceresi** görüntülenen, select değil **Özellikler penceresi** gelen **görünümü** menüsü.
+    > **Araç kutusu** penceresi görüntülenmiyorsa, **Görünüm** menüsünden **araç kutusu** ' nu seçin.
 
-17. Sürükleme bir **readInt** etkinliğinden **NumberGuessWorkflowActivities** bölümünü **araç kutusu** sürükleyip **dizisi** Böylece onun etkinlik **WriteLine** etkinlik.
+15. **Araç kutusu** ' nu **temel elemanlar** bölümünden bir **WriteLine** etkinliği sürükleyin ve **dizi** etkinliğinin **buraya bırakma etkinliğine** bırakın.
 
-18. Bağlama **YerİşaretiAdı** bağımsız değişkeni **readInt** etkinliğini **YerİşaretiAdı** bağımsız değişkeni **istemi** yazaraketkinliği`BookmarkName` içine **zadejte Výraz jazyka vb.** kutusunun sağındaki **YerİşaretiAdı** değişkeninde **Özellikler penceresi**ve tuşuna**Sekmesini** anahtar IntelliSense liste üyelerini penceresini kapatın ve özelliğini kaydetmek için iki kez.
+16. **WriteLine** etkinliğinin **metin** **bağımsız değişkenini,** **Prompt** `Text` **bir C# ifadesi girin** veya **Özellikler** penceresinde **bir vb ifadesi girin** ve ardından SEKME tuşuna iki kez basın ve ardından **sekme** tuşuna basın. Bu, IntelliSense liste üyeleri penceresini devre dışı bırakır ve seçimi özelliğin dışına taşıyarak özellik değerini kaydeder. Bu özellik ayrıca, `Text` **bir C# ifadesi girin** veya etkinliğin kendısı için **bir vb ifadesi** kutusu girerek ayarlanabilir.
 
-19. Bağlama **sonucu** bağımsız değişkeni **readInt** etkinliğini **sonucu** bağımsız değişkeni **istemi** yazarak etkinlik `Result` içine **zadejte Výraz jazyka vb.** kutusunun sağındaki **sonucu** değişkeninde **Özellikler penceresi**ve tuşuna **sekmesi** anahtar iki kez.
+    > [!TIP]
+    > **Özellikler penceresi** görüntülenmiyorsa, **Görünüm** menüsünden **Özellikler penceresi** ' ni seçin.
 
-20. Tuşuna **Ctrl**+**Shift**+**B** çözümü derlemek için.
+17. **Araç kutusu** 'Nun **NumberGuessWorkflowActivities** bölümünden bir **readInt** etkinliği sürükleyin ve **WriteLine** etkinliğinin ardından onu **sıraya** koyun.
+
+18. **ReadInt** etkinliğinin **BookmarkName** bağımsız değişkenini, **Prompt** **BookmarkName** `BookmarkName` **Özellikler penceresinde** **BookmarkName** bağımsız değişkeninin sağ tarafındaki **bir vb ifadesi girin** kutusuna yazarak istem etkinliğinin BookmarkName bağımsız değişkenine bağlayın ve sonra IntelliSense liste üyeleri penceresini kapatmak ve özelliği kaydetmek için iki kez **Tab** tuşuna basın.
+
+19. **ReadInt** etkinliğinin **sonuç** bağımsız değişkenini, **Result** **Prompt** `Result` **Özellikler penceresinde** **sonuç** bağımsız değişkeninin sağ tarafındaki **bir vb ifadesi girin** kutusuna yazarak istem etkinliğinin sonuç bağımsız değişkenine bağlayın ve ardından **sekme** tuşuna iki kez basın.
+
+20. **Ctrl** + **Shift** + Çözümü derlemek için CTRL SHIFT**B** tuşlarına basın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Öğreticide, bir sonraki adım için bkz. Bu etkinlikleri kullanarak bir iş akışı oluşturmak yönergeler [nasıl yapılır: Bir iş akışı oluşturmak](how-to-create-a-workflow.md).
+Bu etkinlikleri kullanarak iş akışı oluşturma yönergeleri için bkz. öğreticideki bir sonraki adım, [nasıl yapılır: Iş akışı oluşturma](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -108,5 +109,5 @@ Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/w
 - <xref:System.Activities.NativeActivity%601>
 - [Özel Etkinlikler Tasarlama ve Uygulama](designing-and-implementing-custom-activities.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Bir iş akışı oluşturma](how-to-create-a-workflow.md)
+- [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)
 - [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

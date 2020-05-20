@@ -1,22 +1,23 @@
 ---
 title: 'Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma'
+description: Bu makale, StateMachine etkinliği ve özel etkinlikler gibi yerleşik etkinlikleri kullanan bir iş akışı oluşturur.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: e93f84f0bacf7ac205294c12c55afcab8d7319b7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8a9342c07c15d65df0310c0cb35b4b2c6f2ba686
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989819"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419661"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma
-İş akışları, yerleşik etkinliklerin yanı sıra özel etkinliklerden de oluşturulabilir. Bu konu, <xref:System.Activities.Statements.StateMachine> etkinlik gibi yerleşik etkinlikleri ve önceki [nasıl yapılacağı özel etkinlikleri kullanan bir iş akışı oluşturma ile ilgili adımları izleyerek yapılır: Etkinlik](how-to-create-an-activity.md) konusu oluşturun. İş akışı, sayıyı tahmin eden bir oyunu modelleyen.  
+İş akışları, yerleşik etkinliklerin yanı sıra özel etkinliklerden de oluşturulabilir. Bu konu, etkinlik gibi yerleşik etkinlikleri <xref:System.Activities.Statements.StateMachine> ve önceki [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md) konusunun özel etkinliklerini kullanan bir iş akışı oluşturmaya yönelik adımları açıklamaktadır. İş akışı, sayıyı tahmin eden bir oyunu modelleyen.  
   
 > [!NOTE]
-> Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [şunları yapmanız gerekir: Etkinlik](how-to-create-an-activity.md)oluşturun.  
+> Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md)' yı tamamlamalısınız.  
   
 > [!NOTE]
 > Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -27,7 +28,7 @@ ms.locfileid: "70989819"
   
 2. **Yüklü**, **ortak öğeler** düğümünde **iş akışı**' nı seçin. **Iş akışı** listesinden **etkinlik** ' i seçin.  
   
-3. Ad `StateMachineNumberGuessWorkflow` kutusuna yazın ve **Ekle**' ye tıklayın.  
+3. `StateMachineNumberGuessWorkflow` **Ad** kutusuna yazın ve **Ekle**' ye tıklayın.  
   
 4. **Araç kutusunun** **durum makinesi** ' nden bir **StateMachine** etkinliğini sürükleyin ve iş akışı tasarım yüzeyinde **buraya bırakma etkinliği** etiketini bırakın.  
   
@@ -39,11 +40,11 @@ ms.locfileid: "70989819"
   
 3. **Bağımsız değişken Oluştur**' a tıklayın.  
   
-4. Ad `MaxNumber` kutusuna yazın , **Yön** açılan listesinden **'** i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
+4. `MaxNumber` **Ad** kutusuna yazın, **Yön** açılan listesinden **'** i seçin, **bağımsız değişken türü** açılan listesinden **ıNT32** ' i seçin ve ardından bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
 5. **Bağımsız değişken Oluştur**' a tıklayın.  
   
-6. Yeni `Turns` eklenen bağımsız değişkenin altında bulunan ad kutusuna yazın, Yön açılan listesinden Seç ' i seçin, bağımsız değişken türü açılan listesinden Int32 ' i seçin ve ardından ENTER tuşuna basın. `MaxNumber`  
+6. `Turns`Yeni eklenen bağımsız değişkenin altında bulunan **ad** kutusuna yazın `MaxNumber` , **Yön** açılan listesinden Seç **Out** ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından ENTER tuşuna basın.  
   
 7. **Bağımsız değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.  
   
@@ -52,26 +53,26 @@ ms.locfileid: "70989819"
 9. **Değişken Oluştur**' a tıklayın.  
   
     > [!TIP]
-    > **Değişken Oluştur** kutusu görüntülenmiyorsa, iş akışı Tasarımcısı yüzeyinde <xref:System.Activities.Statements.StateMachine> etkinlik ' i tıklatarak seçin.  
+    > **Değişken Oluştur** kutusu görüntülenmiyorsa, <xref:System.Activities.Statements.StateMachine> iş akışı Tasarımcısı yüzeyinde etkinlik ' i tıklatarak seçin.  
   
-10. Ad `Guess` kutusuna yazın , **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
+10. `Guess` **Ad** kutusuna yazın, **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
   
 11. **Değişken Oluştur**' a tıklayın.  
   
-12. Ad `Target` kutusuna yazın , **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
+12. `Target` **Ad** kutusuna yazın, **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
   
 13. **Değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **değişkenler** ' e tıklayın.  
   
 ### <a name="to-add-the-workflow-activities"></a>İş akışı etkinliklerini eklemek için  
   
-1. Seçmek için **State1** öğesine tıklayın. **Özellikler penceresinde** **DisplayName** olarak `Initialize Target`değiştirin.  
+1. Seçmek için **State1** öğesine tıklayın. **Özellikler penceresinde** **DisplayName** olarak değiştirin `Initialize Target` .  
   
     > [!TIP]
     > **Özellikler penceresi** görüntülenmiyorsa, **Görünüm** menüsünden **Özellikler penceresi** ' ni seçin.  
   
 2. İş akışı tasarımcısında yeni yeniden adlandırılmış **başlatma hedefini** açmak için çift tıklayın.  
   
-3. **Araç kutusunun** **temel öğeler** bölümünden bir **atama** etkinliği sürükleyin ve durumun **giriş** bölümüne bırakın. Buraya `Target` yazın veya bir  **C# ifade girin** veya bir **vb ifadesi girin** .  
+3. **Araç kutusunun** **temel öğeler** bölümünden bir **atama** etkinliği sürükleyin ve durumun **giriş** bölümüne bırakın. `Target` **Bir C# ifadesi girin** veya bir **vb ifadesi girin** kutusuna **to** kutusuna ve aşağıdaki ifadeye yazın.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -88,7 +89,7 @@ ms.locfileid: "70989819"
   
 5. **Araç kutusunun** **durum makinesi** bölümünden bir **durum** etkinliğini, Iş akışı tasarımcısına sürükleyin ve **hedefi başlatma** durumuna getirin. Yeni durum bunun üzerinde olduğunda, **hedefi Başlat** durumunun etrafında dört üçgenin görüneceğini unutmayın. Yeni durumu, **başlatma hedefi** durumunun hemen altındaki üçgende bırakın. Bu, yeni durumu iş akışına koyar ve **hedef başlatma** durumundan yeni duruma bir geçiş oluşturur.  
   
-6. Seçmek için **State1** ' e tıklayın, **DisplayName** olarak `Enter Guess`değiştirin ve ardından iş akışı tasarımcısında duruma çift tıklayarak genişletin.  
+6. Seçmek için **State1** ' e tıklayın, **DisplayName** olarak değiştirin `Enter Guess` ve ardından iş akışı tasarımcısında duruma çift tıklayarak genişletin.  
   
 7. **Araç kutusunun** **temel öğeler** bölümünden bir **WriteLine** etkinliği sürükleyin ve durumun **giriş** bölümüne bırakın.  
   
@@ -104,11 +105,11 @@ ms.locfileid: "70989819"
   
 9. **Araç kutusu** ' nu **temel elemanlar** bölümünden bir **atama** etkinliği sürükleyin ve durumun **Çıkış** bölümüne bırakın.  
   
-10. To `Turns` kutusuna ve `Turns + 1` **bir C# ifade girin** veya bir **vb ifadesi girin** kutusuna yazın.  
+10. `Turns` **To** kutusuna ve `Turns + 1` **bir C# IFADESI girin** veya **bir vb ifadesi kutusu girin** .  
   
 11. İş akışı Tasarımcısı ' nın en üstünde bulunan içerik haritası ' nda **StateMachine** ' e tıklayarak iş akışı tasarımcısında genel durum makinesi görünümüne geri dönün.  
   
-12. **Araç kutusunun** **durum makinesi** bölümünden bir **FinalState** etkinliği sürükleyin, **tahmin** etme durumunun üzerine gelin ve bir geçişin doğru olması için **tahmin** durumunun sağında görüntülenen üçgene bırakın **ENTER tahmini** ve **FinalState**arasında oluşturulur.  
+12. **Araç kutusunun** **durum makinesi** ' nden bir **FinalState** etkinliği sürükleyin **, tahmin etme** durumunun üzerine gelin ve **tahmin ve** **sonlandırmasız**değer arasında bir geçiş oluşturulacak şekilde, **tahmin durumu gir** ' in sağında görüntülenen üçgenin üzerine bırakın.  
   
 13. Geçişin varsayılan adı **T2**'dir. İş akışı tasarımcısında geçişe tıklayarak seçin ve **DisplayName** değerini **tahmin**olarak ayarlayın. Ardından, **sonlandırıdurumu**' na tıklayıp seçin ve tam geçiş adının iki durumdan birinin üzerine bulunmadığından görüntülenecek bir oda olması için sağa sürükleyin. Bu, öğreticideki kalan adımların tamamlanmasını daha kolay hale getirir.  
   
@@ -116,7 +117,7 @@ ms.locfileid: "70989819"
   
 15. **Araç kutusunun** **NumberGuessWorkflowActivities** bölümünden **readInt** etkinliğini sürükleyin ve geçişin **tetikleyici** bölümüne bırakın.  
   
-16. **ReadInt** `"EnterGuess"` etkinliğinin **Özellikler penceresinde** , tırnak işareti **adı** Özellik değeri kutusuna tırnak işareti dahil yazın ve `Guess` **sonuç** özelliği değeri kutusuna yazın  
+16. **ReadInt** etkinliğinin **Özellikler penceresinde** , `"EnterGuess"` tırnak işareti **adı** Özellik değeri kutusuna tırnak işareti dahil yazın ve `Guess` **sonuç** özelliği değeri kutusuna yazın  
   
 17. **Tahmin doğru** geçişinin **koşul** özelliği değeri kutusuna aşağıdaki ifadeyi yazın.  
   
@@ -131,15 +132,15 @@ ms.locfileid: "70989819"
 18. İş akışı Tasarımcısı ' nın en üstünde bulunan içerik haritası ' nda **StateMachine** ' e tıklayarak iş akışı tasarımcısında genel durum makinesi görünümüne geri dönün.  
   
     > [!NOTE]
-    > Tetikleyici olayı alındığında ve <xref:System.Activities.Statements.Transition.Condition%2A>varsa, olarak `True`değerlendirilen bir geçiş gerçekleşir. Bu geçiş için, Kullanıcı `Guess` rastgele oluşturulmuş `Target`ile eşleşiyorsa denetim **sonlandırna** geçer ve iş akışı tamamlanır.  
+    > Tetikleyici olayı alındığında ve varsa, olarak değerlendirilen bir geçiş gerçekleşir <xref:System.Activities.Statements.Transition.Condition%2A> `True` . Bu geçiş için, Kullanıcı `Guess` rastgele oluşturulmuş ile eşleşiyorsa `Target` Denetim **sonlandırna** geçer ve iş akışı tamamlanır.  
   
 19. Tahminin doğru olup olmadığına bağlı olarak, iş akışı, başka bir TRY için **FinalState** 'e ya da tahmin durumuna **gir** 'e geçiş yapılmalıdır. Her iki geçiş de, kullanıcının tahminin **readInt** etkinliği aracılığıyla alınması için bekleyen tetikleyiciyi paylaşır. Buna paylaşılan geçiş adı verilir. Paylaşılan bir geçiş oluşturmak için, **tahmin doğru** geçişinin başlangıcını belirten daireye tıklayın ve istediğiniz duruma sürükleyin. Bu durumda, geçiş bir kendinden geçiştir, bu nedenle **tahmin doğru** geçişinin başlangıç noktasını sürükleyin ve **tahmin** durumunun sonuna geri bırakın. Geçişi oluşturduktan sonra iş akışı tasarımcısında seçin ve **DisplayName** özelliğini **tahmin yanlış**olarak ayarlayın.  
   
     > [!NOTE]
-    > Paylaşılan geçişler, geçiş Tasarımcısı ' nın altında **Paylaşılan tetikleyici geçişi ekle** ' ye tıklayıp, ardından **bağlantı kurmak için kullanılabilir durumlar** ' da istenen hedef durumu seçilerek geçiş Tasarımcısı içinden da oluşturulabilir açılır liste.  
+    > Paylaşılan geçişler, geçiş Tasarımcısı ' nın altında **Paylaşılan tetikleyici geçişi ekle** ' ye tıklayarak geçiş Tasarımcısı içinden de oluşturulabilir ve sonra, bağlantı açılan listesinden, **kullanılabilir durumlar** ' da istenen hedef durumu seçebilirsiniz.  
   
     > [!NOTE]
-    > Bir geçiş `false` `false`işleminin (veya paylaşılan bir tetikleyici geçişinin tüm koşullarını değerlendirmesi) değerlendirilirse, geçişin gerçekleşmeyeceğini ve durumdan gelen tüm geçişler için tüm tetikleyicilerinin olacağını unutmayın. <xref:System.Activities.Statements.Transition.Condition%2A> zamanlandı. Bu öğreticide, koşulların yapılandırıldığı şekilde bu durum gerçekleşmemelidir (tahminin doğru veya hatalı olması için özel eylemlerdir).  
+    > <xref:System.Activities.Statements.Transition.Condition%2A>Bir geçiş işleminin `false` (veya paylaşılan bir tetikleyici geçişinin tüm koşullarını değerlendirmesi `false` ) değerlendirilirse, geçişin gerçekleşmeyeceğini ve durumdan gelen tüm geçişlerin her tetikleyicisinin yeniden planlanacağını unutmayın. Bu öğreticide, koşulların yapılandırıldığı şekilde bu durum gerçekleşmemelidir (tahminin doğru veya hatalı olması için özel eylemlerdir).  
   
 20. İş akışı tasarımcısında **tahmin yanlış** geçişine çift tıklayarak genişletin. **Tetikleyicinin** , **tahmin doğru** geçişi tarafından kullanılan **readInt** etkinliğine zaten ayarlanmış olduğunu unutmayın.  
   
@@ -183,9 +184,9 @@ ms.locfileid: "70989819"
   
 ### <a name="to-build-the-workflow"></a>İş akışını derlemek için  
   
-1. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+1. Çözümü derlemek için CTRL+SHIFT+B'ye basın.  
   
-     İş akışının nasıl çalıştırılacağı hakkında yönergeler için lütfen sonraki konuya [bakın: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın. ' Nin [nasıl yapılacağını zaten tamamladıysanız: Farklı bir iş](how-to-run-a-workflow.md) akışı stiliyle iş akışı adımı çalıştırın ve bu adımda durum makinesi iş akışını [kullanarak çalıştırmak istiyorsanız,](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) [nasıl yapılır: Bir Iş akışı](how-to-run-a-workflow.md)çalıştırın.  
+     İş akışının nasıl çalıştırılacağı hakkında yönergeler için, bkz. [nasıl yapılır: Iş akışını çalıştırma](how-to-run-a-workflow.md). [Nasıl yapılır: bir](how-to-run-a-workflow.md) iş akışı adımını farklı bir iş akışı ile çalıştırma ve bu adımdaki durum makinesi iş akışını kullanarak çalıştırmak istediğinizde, nasıl [yapılır: iş akışı çalıştırma](how-to-run-a-workflow.md)konusunun [Uygulama bölümünü derlemek ve çalıştırmak için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) ' a atlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -194,5 +195,5 @@ ms.locfileid: "70989819"
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Etkinlik oluşturma](how-to-create-an-activity.md)
-- [Nasıl yapılır: Iş akışı çalıştırma](how-to-run-a-workflow.md)
+- [Nasıl Yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)

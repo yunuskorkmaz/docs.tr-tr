@@ -1,37 +1,38 @@
 ---
 title: Akış Çizelgesi İş Akışları
+description: Bu makalede, genellikle Workflow Foundation 'da ardışık olmayan iş akışlarını uygulamak için kullanılan akış çizelgesi etkinliği açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-ms.openlocfilehash: b84b0de34f8869d9775fe0694e74c340cc16a6b3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ce0661653a1d50b3f7264246b810faabbd12bf5f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249070"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419921"
 ---
 # <a name="flowchart-workflows"></a>Akış Çizelgesi İş Akışları
 
-Akış şeması, programlar tasarlamak için iyi bilinen bir paradigmadır. Akış Şeması etkinliği genellikle sıralı olmayan iş akışlarını uygulamak için kullanılır, ancak `FlowDecision` düğüm kullanılmazsa sıralı iş akışları için kullanılabilir.
+Akış çizelgesi, programları tasarlamak için iyi bilinen bir paradigdır. Akış çizelgesi etkinliği genellikle sıralı olmayan iş akışlarını uygulamak için kullanılır, ancak hiçbir düğüm kullanılmazsa sıralı iş akışları için kullanılabilir `FlowDecision` .
 
-## <a name="flowchart-workflow-structure"></a>Akış şeması iş akışı yapısı
+## <a name="flowchart-workflow-structure"></a>Akış çizelgesi iş akışı yapısı
 
- Akış Şeması etkinliği, yürütülecek bir etkinlik koleksiyonu içeren bir etkinliktir.  Akış şemaları, değişkenlerin <xref:System.Activities.Statements.FlowDecision> değerlerine dayalı olarak içerdiği etkinlikler arasında doğrudan yürütme gibi akış <xref:System.Activities.Statements.FlowSwitch%601> kontrol öğeleri de içerir.
+ Akış çizelgesi etkinliği, yürütülecek etkinlik koleksiyonunu içeren bir etkinliktir.  Akış çizelgeleri Ayrıca gibi akış denetim öğelerini <xref:System.Activities.Statements.FlowDecision> ve <xref:System.Activities.Statements.FlowSwitch%601> bağımsız etkinlikler arasında değişken değerlerine göre doğrudan yürütmeyi içerir.
 
 ## <a name="types-of-flow-nodes"></a>Akış düğümleri türleri
 
- Eleman yürüdüğünde gereken akış denetimi türüne bağlı olarak farklı türde öğeler kullanılır. Akış şeması öğelerinin türleri şunlardır:
+ Farklı öğe türleri, öğe yürütüldüğünde gereken akış denetimi türüne bağlı olarak kullanılır. Akış çizelgesi öğelerinin türleri şunlardır:
 
-- `FlowStep`- Akış şemasında bir yürütme adımı modeller.
+- `FlowStep`-Akış çizelgesinde bir yürütme adımını modeller.
 
-- `FlowDecision`- Boolean durumuna göre dal yürütme, benzer <xref:System.Activities.Statements.If>.
+- `FlowDecision`-Öğesine benzer bir Boolean koşulu temelinde dal yürütme <xref:System.Activities.Statements.If> .
 
-- `FlowSwitch`– Özel bir anahtara dayalı <xref:System.Activities.Statements.Switch%601>şube yürütme, benzer .
+- `FlowSwitch`– Öğesine benzer şekilde, özel bir anahtara göre dal yürütme <xref:System.Activities.Statements.Switch%601> .
 
-Her bağlantı, `Action` alt etkinlikleri <xref:System.Activities.ActivityAction> yürütmek için kullanılabilecek bir özelliği tanımlayan bir `Next` özelliğe ve geçerli öğe yürütmeyi bitirdiğinde hangi öğenin veya öğelerin yürütülmesini tanımlayan bir veya daha fazla özelliğe sahiptir.
+Her bağlantı `Action` <xref:System.Activities.ActivityAction> , alt etkinlikleri yürütmek için kullanılabilecek bir özelliğini ve `Next` geçerli öğe yürütmeyi bitirdiğinde hangi öğe veya öğelerin yürütüleceğini tanımlayan bir veya daha fazla özelliği içerir.
 
-### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>FlowStep düğümüyle temel etkinlik dizisi oluşturma
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a>FlowStep düğümü ile temel etkinlik dizisi oluşturma
 
-İki işlemin sırayla yürütüldettiği temel `FlowStep` bir diziyi modellemek için öğe kullanılır. Aşağıdaki örnekte, `FlowStep` iki öğe sırayla iki etkinlik yürütmek için kullanılır.
+İki etkinliğin sırayla yürütüleceği temel bir diziyi modellemek için, `FlowStep` öğesi kullanılır. Aşağıdaki örnekte iki `FlowStep` öğe sırayla iki etkinlik yürütmek için kullanılır.
 
 ```xml
 <Flowchart>
@@ -53,9 +54,9 @@ Her bağlantı, `Action` alt etkinlikleri <xref:System.Activities.ActivityAction
 </Flowchart>
 ```
 
-### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>FlowDecision düğümü ile koşullu akış şeması oluşturma
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a>Flowkarar düğümüyle koşullu bir akış çizelgesi oluşturma
 
-Akış şeması iş akışında koşullu akış düğümlerini modellemek için (diğer bir deyişle, geleneksel akış şemasının karar simgesi olarak işlev görebilen bir bağlantı oluşturmak için), bir <xref:System.Activities.Statements.FlowDecision> düğüm kullanılır. <xref:System.Activities.Statements.FlowDecision.Condition%2A> Düğümün özelliği durumu tanımlayan bir ifadeye ayarlanır ve <xref:System.Activities.Statements.FlowDecision.True%2A> ifade <xref:System.Activities.Statements.FlowDecision.False%2A> yi değerlendirirse ve özellikler yürütülecek <xref:System.Activities.Statements.FlowNode> örneklere `false` `true` ayarlanır. Aşağıdaki örnek, <xref:System.Activities.Statements.FlowDecision> düğüm kullanan bir iş akışının nasıl tanımlandığını gösterir.
+Bir akış çizelgesi iş akışında koşullu akış düğümünü modellemek için (diğer bir deyişle, geleneksel akış çizelgesinin karar simgesi olarak işlev gören bir bağlantı oluşturmak için), bir <xref:System.Activities.Statements.FlowDecision> düğüm kullanılır. <xref:System.Activities.Statements.FlowDecision.Condition%2A>Düğümünün özelliği, koşulu tanımlayan bir ifadeye ayarlanır ve <xref:System.Activities.Statements.FlowDecision.True%2A> <xref:System.Activities.Statements.FlowDecision.False%2A> <xref:System.Activities.Statements.FlowNode> ifade veya olarak değerlendirilirse, ve özellikleri yürütülecek örneklere ayarlanır `true` `false` . Aşağıdaki örnek, bir düğümü kullanan bir iş akışının nasıl tanımlanacağını gösterir <xref:System.Activities.Statements.FlowDecision> .
 
 ```xml
 <Flowchart>
@@ -80,9 +81,9 @@ Akış şeması iş akışında koşullu akış düğümlerini modellemek için 
 </Flowchart>
 ```
 
-### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>FlowSwitch düğümüyle özel bir anahtar oluşturma
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a>FlowSwitch düğümü ile dışlamalı anahtar oluşturma
 
-Eşleşen bir değere göre özel bir yolun seçildiği bir <xref:System.Activities.Statements.FlowSwitch%601> akış çizelgesini modellemek için düğüm kullanılır. Özellik, <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> seçimleri eşleşecek değeri tanımlayan <xref:System.Object> bir tür parametresi ile a <xref:System.Activities.Activity%601> olarak ayarlanır. Özellik, <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> koşullu ifadeyle <xref:System.Activities.Statements.FlowNode> eşleşecek anahtarlar ve nesneler sözlüğü ve <xref:System.Activities.Statements.FlowNode> verilen servis talebi koşullu ifadeyle eşleşiyorsa yürütmenin nasıl akması gerektiğini tanımlayan bir nesne kümesi tanımlar. Ayrıca, <xref:System.Activities.Statements.FlowSwitch%601> koşul <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> ifadesiyle eşleşen bir durum yoksa yürütmenin nasıl akması gerektiğini tanımlayan bir özellik tanımlar. Aşağıdaki örnek, bir <xref:System.Activities.Statements.FlowSwitch%601> öğe kullanan bir iş akışının nasıl tanımlandığını gösterir.
+Eşleşen bir değere göre özel bir yolun seçildiği bir akış çizelgesini modellemek için, <xref:System.Activities.Statements.FlowSwitch%601> düğüm kullanılır. <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A>Özelliği, <xref:System.Activities.Activity%601> <xref:System.Object> seçimleri ile eşleşecek değeri tanımlayan bir tür parametresi olan öğesine ayarlanır. <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A>Özelliği <xref:System.Activities.Statements.FlowNode> , koşullu ifadeyle eşleşecek anahtar ve nesnelerin sözlüğünü ve <xref:System.Activities.Statements.FlowNode> verilen Case koşullu ifadeyle eşleşiyorsa yürütmenin nasıl akmasını tanımlayan bir nesne kümesi tanımlar. <xref:System.Activities.Statements.FlowSwitch%601>Ayrıca, <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> koşul ifadesiyle eşleşen hiçbir durum yoksa yürütmenin nasıl akmasını tanımlayan bir özelliği tanımlar. Aşağıdaki örnek, bir öğesi kullanan bir iş akışının nasıl tanımlanacağını göstermektedir <xref:System.Activities.Statements.FlowSwitch%601> .
 
 ```xml
 <Flowchart>

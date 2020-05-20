@@ -1,22 +1,23 @@
 ---
 title: 'Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma'
+description: Bu makalede, önceki makaledeki yerleşik etkinlikleri ve özel etkinlikleri kullanan bir iş akışı oluşturma açıklanır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 0faf4d77b1ea2881ba8e029d544f2e42cf552349
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6b3fa423200f5c5cfece60f07372ce9678fc0072
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989681"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419713"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
-İş akışları, yerleşik etkinliklerin yanı sıra özel etkinliklerden de oluşturulabilir. Bu konu, <xref:System.Activities.Statements.Flowchart> etkinliği gibi yerleşik etkinlikleri ve önceki [özel etkinlikleri kullanan bir iş akışı oluşturma adımları ile nasıl yapılır: Etkinlik](how-to-create-an-activity.md) konu başlığı oluşturun. İş akışı, sayıyı tahmin eden bir oyunu modelleyen.  
+İş akışları, yerleşik etkinliklerin yanı sıra özel etkinliklerden de oluşturulabilir. Bu konu, etkinlik gibi yerleşik etkinlikleri <xref:System.Activities.Statements.Flowchart> ve önceki [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md) konusunun özel etkinliklerini kullanan bir iş akışı oluşturmaya yönelik adımları açıklamaktadır. İş akışı, sayıyı tahmin eden bir oyunu modelleyen.  
   
 > [!NOTE]
-> Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılacağını tamamlamalısınız: Etkinlik](how-to-create-an-activity.md)oluşturun.  
+> Başlangıç öğreticisindeki her konu, önceki konulara bağlıdır. Bu konuyu tamamlayabilmeniz için öncelikle [nasıl yapılır: etkinlik oluşturma](how-to-create-an-activity.md)' yı tamamlamalısınız.  
   
 > [!NOTE]
 > Öğreticinin tamamlanmış bir sürümünü indirmek için, bkz. [Windows Workflow Foundation (WF45)-Başlangıç Öğreticisi](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -27,7 +28,7 @@ ms.locfileid: "70989681"
   
 2. **Yüklü**, **ortak öğeler** düğümünde **iş akışı**' nı seçin. **Iş akışı** listesinden **etkinlik** ' i seçin.  
   
-3. **Ad** kutusuna `FlowchartNumberGuessWorkflow` yazın ve **Ekle**' ye tıklayın.  
+3. `FlowchartNumberGuessWorkflow` **Ad** kutusuna yazın ve **Ekle**' ye tıklayın.  
   
 4. **Araç çubuğu** ' nın **akış çizelgesi** ' nden bir **akış çizelgesi** etkinliği sürükleyin ve iş akışı tasarım yüzeyinde **buraya bırakma etkinliği** etiketini bırakın.  
   
@@ -39,11 +40,11 @@ ms.locfileid: "70989681"
   
 3. **Bağımsız değişken Oluştur**' a tıklayın.  
   
-4. **Ad** kutusuna `MaxNumber` yazın, **Yön** açılan listesinden Seç ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' **i seçin ve** sonra bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
+4. `MaxNumber` **Ad** kutusuna yazın, **Yön** açılan listesinden **'** i seçin, **bağımsız değişken türü** açılan listesinden **ıNT32** ' i seçin ve ardından bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
 5. **Bağımsız değişken Oluştur**' a tıklayın.  
   
-6. Yeni eklenen `MaxNumber` bağımsız değişkeninin altında bulunan **ad** kutusuna `Turns` yazın, **Yön** açılan **listesinden Seç ' i seçin,** **bağımsız değişken türü** AÇıLAN listesinden **Int32** ' yi seçin ve ardından ENTER tuşuna basın.  
+6. `Turns`Yeni eklenen bağımsız değişkenin altında bulunan **ad** kutusuna yazın `MaxNumber` , **Yön** açılan listesinden Seç **Out** ' i seçin, **bağımsız değişken türü** açılan listesinden **Int32** ' i seçin ve ardından ENTER tuşuna basın.  
   
 7. **Bağımsız değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **bağımsız değişkenler** ' e tıklayın.  
   
@@ -52,13 +53,13 @@ ms.locfileid: "70989681"
 9. **Değişken Oluştur**' a tıklayın.  
   
     > [!TIP]
-    > **Değişken Oluştur** kutusu görüntülenmiyorsa, iş akışı tasarımcısı yüzeyinde <xref:System.Activities.Statements.Flowchart> etkinliği ' ne tıklayarak seçin.  
+    > **Değişken Oluştur** kutusu görüntülenmiyorsa, <xref:System.Activities.Statements.Flowchart> iş akışı Tasarımcısı yüzeyinde etkinlik ' i tıklatarak seçin.  
   
-10. **Ad** kutusuna `Guess` yazın, **değişken türü** açılır listesinden **Int32** ' i SEÇIN ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
+10. `Guess` **Ad** kutusuna yazın, **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
   
 11. **Değişken Oluştur**' a tıklayın.  
   
-12. **Ad** kutusuna `Target` yazın, **değişken türü** açılır listesinden **Int32** ' i SEÇIN ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
+12. `Target` **Ad** kutusuna yazın, **değişken türü** açılır listesinden **Int32** ' i seçin ve ardından değişkeni kaydetmek için ENTER tuşuna basın.  
   
 13. **Değişkenler** bölmesini kapatmak için etkinlik tasarımcısının sol alt tarafındaki **değişkenler** ' e tıklayın.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "70989681"
     > [!NOTE]
     > Etkinlikler, iş akışındaki başlangıç etkinliği olarak, etkinlik etkinliklerini başlangıç düğümüne el ile bağlayarak da belirtilebilir. Bunu yapmak için, fareyi **Başlangıç** düğümünün üzerine getirin, fare **Başlangıç** düğümünün üzerindeyken görüntülenen dikdörtgenlerden birine tıklayın ve bağlama satırı ' nı istenen etkinliğe sürükleyin ve görüntülenen dikdörtgenlerden birine bırakın. Ayrıca, bir etkinliği sağ tıklayıp **başlangıç düğümü olarak ayarla**' yı seçerek başlangıç etkinliği olarak da belirleyebilirsiniz.  
   
-2. **Bir C# ifade gırın** veya bir **vb ifadesi girin** kutusuna **to** kutusuna `Target` ve aşağıdaki ifadeyi yazın.  
+2. `Target` **Bir C# ifadesi girin** veya bir **vb ifadesi girin** kutusuna **to** kutusuna ve aşağıdaki ifadeye yazın.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,7 +85,7 @@ ms.locfileid: "70989681"
   
 3. **Araç kutusu**'Nun **NumberGuessWorkflowActivities** bölümünden bir **istem** etkinliğini sürükleyin, önceki adımdan **atama** etkinliğinin altına bırakın ve **istem** etkinliğini **ata** etkinliğine bağlayın. İki etkinliği bağlamak için üç yol vardır. İlk yöntem, iş akışı üzerinde **istem** etkinliğini bıraktığınızda bunları birbirine bağlamanız gerekir. **İstem** etkinliğini iş akışına sürüklerken, **ata** etkinliğinin üzerine gelin ve **Prompt** etkinliği **ata** etkinliğinin üzerindeyken görüntülenen dört üçgenden birine bırakın. İkinci yol, **Prompt** etkinliğinin istenen konumdaki iş akışına düşürülme yöntemidir. Ardından, fareyi **ata** etkinliğinin üzerine getirin ve **komut istemi** etkinliğine aşağı doğru görünen dikdörtgenlerden birini sürükleyin. **Ata** etkinliğinin bağlantı çizgisinin, **istem** etkinliğinin dikdörtgenlerinin birine bağlanmasını sağlamak için fareyi sürükleyin, sonra fare düğmesini bırakın. Üçüncü yol, **araç kutusu**'ndan **istem** etkinliğini sürüklemek yerine, iş akışı tasarım yüzeyindeki konumundan Sürükleyeceğinize, bu dosyayı **ata** etkinliğinin üzerine getirdiğinizde ve görüntülenen üçgenlerden birine bırakmalısınız.  
   
-4. **İstem** etkinliğinin **Özellikler penceresinde** , tırnak işareti **adı** özellik değeri kutusuna tırnak işareti dahil `"EnterGuess"` yazın. **Sonuç** özelliği değeri kutusuna `Guess` yazın ve **metin** özellik kutusuna aşağıdaki ifadeyi yazın.  
+4. **İstem** etkinliğinin **Özellikler penceresinde** , `"EnterGuess"` tırnak işareti **adı** Özellik değeri kutusuna tırnak işareti ekleme yazın. `Guess` **Sonuç** özelliği değeri kutusuna yazın ve **metin** özellik kutusuna aşağıdaki ifadeyi yazın.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -99,7 +100,7 @@ ms.locfileid: "70989681"
   
 5. **Araç kutusunun** **temel elemanlar** bölümünden bir **atama** etkinliği sürükleyin ve bu eylemi, önceki adımda açıklanan yöntemlerden birini kullanarak bağlayın, böylece **istem** etkinliğinin altında olur.  
   
-6. **To** kutusuna `Turns` yazın ve  **C# BIR ifade girin** veya bir **vb ifadesi girin** kutusuna `Turns + 1`.  
+6. `Turns` **To** kutusuna ve `Turns + 1` **bir C# IFADESI girin** veya **bir vb ifadesi kutusu girin** .  
   
 7. **Araç kutusunun** **akış çizelgesi** bölümünden bir **flowkararı** sürükleyin ve **assign** etkinliğinin altına bağlayın. **Özellikler penceresinde**, **koşul** özelliği değeri kutusuna aşağıdaki ifadeyi yazın.  
   
@@ -146,9 +147,9 @@ ms.locfileid: "70989681"
   
 ### <a name="to-build-the-workflow"></a>İş akışını derlemek için  
   
-1. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+1. Çözümü derlemek için CTRL+SHIFT+B'ye basın.  
   
-     İş akışının nasıl çalıştırılacağı hakkında yönergeler için bkz. bir sonraki konu, [nasıl yapılır: ](how-to-run-a-workflow.md)Iş akışı çalıştırın. [Şu anda tamamladıysanız: Farklı bir iş akışı stiliyle Iş akışı](how-to-run-a-workflow.md) adımı çalıştırın ve bu adımda akış çizelgesi iş akışını kullanarak çalıştırmak istiyorsanız, "nasıl yapılır:" konusunun uygulama [bölümünü [derlemek ve çalıştırmak için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) ' a atlayın. ](how-to-run-a-workflow.md)Iş akışı çalıştırın.  
+     İş akışının nasıl çalıştırılacağı hakkında yönergeler için, bkz. [nasıl yapılır: Iş akışını çalıştırma](how-to-run-a-workflow.md). [Nasıl yapılır: bir](how-to-run-a-workflow.md) iş akışı adımını farklı bir iş akışı ile çalıştırma ve bu adımda akış çizelgesi iş akışını kullanarak çalıştırmak istediğinizde, nasıl [yapılır: iş akışı çalıştırma](how-to-run-a-workflow.md)konusunun [Uygulama bölümünü derlemek ve çalıştırmak için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) ' a atlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -157,5 +158,5 @@ ms.locfileid: "70989681"
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Etkinlik](how-to-create-an-activity.md) oluşturma
-- [Nasıl yapılır: Iş akışı çalıştırma](how-to-run-a-workflow.md)
+- [Nasıl Yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)

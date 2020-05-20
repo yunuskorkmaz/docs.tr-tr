@@ -1,22 +1,22 @@
 ---
 title: Sorgu İfadeleri
-description: F# Programlama dilinde LINQ için sorgu ifadesi desteği hakkında bilgi edinin.
+description: 'F # programlama dilinde LINQ için sorgu ifadesi desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f0c7245a930a06576487a61d73a1e5b94190ee59
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424893"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419193"
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 
 > [!NOTE]
 > Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
 
-Sorgu ifadeleri bir veri kaynağını sorgulamanızı ve verileri istenen bir biçimde yerleştirlamanızı sağlar. Sorgu ifadeleri, F#LINQ için destek sağlar.
+Sorgu ifadeleri bir veri kaynağını sorgulamanızı ve verileri istenen bir biçimde yerleştirlamanızı sağlar. Sorgu ifadeleri, F # ' ta LINQ desteği sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```fsharp
 query { expression }
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sorgu ifadeleri, dizi ifadelerine benzer bir hesaplama ifadesi türüdür. Bir dizi ifadesinde kod sağlayarak bir sıra belirttiğinizde, bir sorgu ifadesinde kod sağlayarak bir veri kümesi belirtirsiniz. Dizi ifadesinde `yield` anahtar sözcüğü, sonuç sırasının bir parçası olarak döndürülecek verileri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü aynı işlevi gerçekleştirir. `select` anahtar kelimesinin yanı sıra, F# BIR SQL SELECT ifadesinin bölümlerine çok benzeyen bir dizi sorgu işlecini da destekler. İşte, Northwind OData kaynağına bağlanan kodun yanı bir basit sorgu ifadesi örneği.
+Sorgu ifadeleri, dizi ifadelerine benzer bir hesaplama ifadesi türüdür. Bir dizi ifadesinde kod sağlayarak bir sıra belirttiğinizde, bir sorgu ifadesinde kod sağlayarak bir veri kümesi belirtirsiniz. Bir Sequence ifadesinde, `yield` anahtar sözcüğü sonuç sırasının bir parçası olarak döndürülecek verileri tanımlar. Sorgu ifadelerinde `select` anahtar sözcüğü aynı işlevi gerçekleştirir. `select`Anahtar kelimesinin yanı sıra, F # Ayrıca BIR SQL SELECT ifadesinin bölümlerine çok benzeyen bir dizi sorgu işlecini destekler. İşte, Northwind OData kaynağına bağlanan kodun yanı bir basit sorgu ifadesi örneği.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,17 +46,17 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-Önceki kod örneğinde sorgu ifadesi küme ayraçları içinde bulunur. İfadedeki kodun anlamı, sorgu sonuçlarındaki veritabanındaki Müşteriler tablosuna her müşteriyi döndürür. Sorgu ifadeleri <xref:System.Linq.IQueryable%601> ve <xref:System.Collections.Generic.IEnumerable%601>uygulayan bir tür döndürür ve bu nedenle örnek gösterildiği gibi [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) kullanılarak yinelenebilir.
+Önceki kod örneğinde sorgu ifadesi küme ayraçları içinde bulunur. İfadedeki kodun anlamı, sorgu sonuçlarındaki veritabanındaki Müşteriler tablosuna her müşteriyi döndürür. Sorgu ifadeleri <xref:System.Linq.IQueryable%601> , ve ' i uygulayan bir tür döndürür <xref:System.Collections.Generic.IEnumerable%601> ve bu nedenle örnek gösterildiği gibi [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) kullanılarak yinelenebilir.
 
-Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder`. Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [LINQ. QueryBuilder Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder` . Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [LINQ. QueryBuilder Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
 
 ## <a name="query-operators"></a>Sorgu Işleçleri
 
-Sorgu işleçleri, döndürülecek kayıtlara ölçüt koymak veya sonuçların sıralama sırasını belirtmek gibi, sorgunun ayrıntılarını belirtmenize olanak tanır. Sorgu kaynağı sorgu işlecini desteklemelidir. Desteklenmeyen bir sorgu işleci kullanmaya çalışırsanız `System.NotSupportedException` oluşturulur.
+Sorgu işleçleri, döndürülecek kayıtlara ölçüt koymak veya sonuçların sıralama sırasını belirtmek gibi, sorgunun ayrıntılarını belirtmenize olanak tanır. Sorgu kaynağı sorgu işlecini desteklemelidir. Desteklenmeyen bir sorgu işleci kullanmaya çalışırsanız, `System.NotSupportedException` oluşturulur.
 
-Sorgu ifadelerinde yalnızca SQL 'e çevrilebilen ifadelere izin verilir. Örneğin, `where` sorgu işlecini kullandığınızda ifadelerde hiçbir işlev çağrısı yapılmasına izin verilmez.
+Sorgu ifadelerinde yalnızca SQL 'e çevrilebilen ifadelere izin verilir. Örneğin, sorgu işlecini kullandığınızda ifadelerde hiçbir işlev çağrısı yapılmasına izin verilmez `where` .
 
-Tablo 1 kullanılabilir sorgu işleçlerini gösterir. Ayrıca, bu konunun ilerleyen kısımlarında SQL sorgularını ve denk F# sorgu Ifadelerini karşılaştıran Table2, bkz. Bazı sorgu işleçleri bazı tür sağlayıcıları tarafından desteklenmez. Özellikle OData tür sağlayıcısı, OData 'teki sınırlamalar nedeniyle desteklediği sorgu işleçleri ile sınırlıdır. Daha fazla bilgi için bkz. [ODataService tür sağlayıcısıF#()](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tablo 1 kullanılabilir sorgu işleçlerini gösterir. Ayrıca, bu konunun ilerleyen kısımlarında SQL sorgularını ve eşdeğer F # sorgu ifadelerini karşılaştıran Table2, bkz.. Bazı sorgu işleçleri bazı tür sağlayıcıları tarafından desteklenmez. Özellikle OData tür sağlayıcısı, OData 'teki sınırlamalar nedeniyle desteklediği sorgu işleçleri ile sınırlıdır. Daha fazla bilgi için bkz. [ODataService tür sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Bu tabloda bir veritabanı aşağıdaki biçimde varsayılmaktadır:
 
@@ -83,7 +83,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 <table style="width:100%">
   <tr>
-    <th>İşleç</th>
+    <th>Operatör</th>
     <th>Açıklama</th>
   </tr>
   <tr>
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td>Belirtilen sıralama anahtarına göre artan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>veya <code>thenByDescending</code>sonra kullanılabilir.<br/><br/>
+<td><code>thenBy</code></td><td>Belirtilen sıralama anahtarına göre artan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca,, veya sonrasında kullanılabilir <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td>Belirtilen sıralama anahtarına göre azalan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca bir <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>veya <code>thenByDescending</code>sonra kullanılabilir.<br/><br/>
+<td><code>thenByDescending</code></td><td>Belirtilen sıralama anahtarına göre azalan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca,, veya sonrasında kullanılabilir <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td>Eşleşen anahtarlar temelinde seçili değerlerin iki kümesini ilişkilendirir. Bir JOIN ifadesinde = işareti etrafında anahtarların sırasının önemli olduğunu unutmayın. Tüm birleşimlerde, çizgi <code>-&gt;</code> simgesinden sonra bölündüğünde, girintileme en azından anahtar sözcüğü <code>for</code>kadar girintili olmalıdır.<br/><br/>
+<td><code>join</code></td><td>Eşleşen anahtarlar temelinde seçili değerlerin iki kümesini ilişkilendirir. Bir JOIN ifadesinde = işareti etrafında anahtarların sırasının önemli olduğunu unutmayın. Tüm birleşimlerde, çizgi simgeden sonra bölündüğünde <code>-&gt;</code> , girintileme en azından anahtar sözcüğü kadar girintili olmalıdır <code>for</code> .<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td>Belirtilen boş değer atanabilir sıralama anahtarına göre artan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>veya <code>thenByDescending</code>ya da null yapılabilir varyantından hemen sonra kullanılabilir.<br/><br/>
+<td><code>thenByNullable</code></td><td>Belirtilen boş değer atanabilir sıralama anahtarına göre artan sırada seçili öğelerin sonraki bir sıralamasını uygular. Bu işleç yalnızca,,, veya ya da <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> null yapılabilir varyantından hemen sonra kullanılabilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td>Belirtilen boş değer atanabilir sıralama anahtarına göre azalan sırada seçili öğelerin sonraki sıralamasını uygular. Bu işleç yalnızca <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>veya <code>thenByDescending</code>ya da null yapılabilir varyantından hemen sonra kullanılabilir.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Belirtilen boş değer atanabilir sıralama anahtarına göre azalan sırada seçili öğelerin sonraki sıralamasını uygular. Bu işleç yalnızca,,, veya ya da <code>sortBy</code> <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> null yapılabilir varyantından hemen sonra kullanılabilir.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -500,14 +500,14 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL ve F# Sorgu İfadelerini Karşılaştırma
 
-Aşağıdaki tabloda bazı ortak Transact-SQL sorguları ve bunların eşdeğerleri gösterilmektedir F#. Bu tablodaki kod ayrıca, önceki tabloyla aynı veritabanını ve tür sağlayıcısını ayarlamak için de aynı ilk kodu varsayar.
+Aşağıdaki tabloda, bazı ortak Transact-SQL sorguları ve F # ile eşdeğerleri gösterilmektedir. Bu tablodaki kod ayrıca, önceki tabloyla aynı veritabanını ve tür sağlayıcısını ayarlamak için de aynı ilk kodu varsayar.
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tablo 2. Transact-SQL ve F# Sorgu İfadeleri
 
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (büyük/küçük harfe duyarlı değil)</th>
-    <th>F#Sorgu Ifadesi (büyük/küçük harfe duyarlı)</th>
+    <th>F # sorgu Ifadesi (büyük/küçük harfe duyarlı)</th>
   </tr>
 <tr><td>
 Tablodaki tüm alanlar ' ı seçin.<br>
@@ -543,11 +543,14 @@ query {
 <td><code>EXISTS</code>
 <br />
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE EXISTS
   (SELECT * FROM CourseSelection
    WHERE CourseSelection.StudentID = Student.StudentID)
 </code></pre>
+<!-- markdownlint-restore -->
 </td>
 
 <td>
@@ -608,11 +611,14 @@ query {
 </td></tr><tr><td>
 Sayı koşulu ile gruplandırma.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -652,12 +658,15 @@ query {
 </td></tr><tr><td>
 Sayıya göre gruplandırma, sayma ve sıralama.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
 GROUP BY Student.Age
 HAVING COUNT( * ) > 1
 ORDER BY COUNT( * ) DESC
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -673,8 +682,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>belirtilen değerler kümesi 
-<code>IN</code><br/>
+</td></tr><tr><td>
+<code>IN</code>belirtilen değerler kümesi<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -714,8 +723,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>Model eşleştirme kümesiyle 
-<code>LIKE</code>.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>Model eşleştirme kümesiyle.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -731,8 +740,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>Set hariç tutma düzeniyle 
-<code>LIKE</code>.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>küme dışlama düzeniyle.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -750,8 +759,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>bir alan üzerinde 
-<code>LIKE</code>, ancak farklı bir alan seçin.<br/>
+</td></tr><tr><td>
+<code>LIKE</code>bir alanda, ancak farklı bir alan seçin.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -783,7 +792,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-İki tabloyla basit <code>JOIN</code>.<br/>
+<code>JOIN</code>İki tabloyla basit.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -801,7 +810,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>iki tabloyla <code>LEFT JOIN</code>.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>iki tablo ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -820,7 +829,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>COUNT</code> <code>JOIN</code><br/>
+</td></tr><tr><td><code>JOIN</code>kullanılarak<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -903,7 +912,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>sıralamada <code>OR</code><br/>
+</td></tr><tr><td><code>OR</code>sıralama ile<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -921,7 +930,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>TOP</code>, <code>OR</code>ve sıralaması.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code> ve sıralaması.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -943,12 +952,15 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>iki sorgunun <code>UNION</code>.<br/>
+</td></tr><tr><td><code>UNION</code>iki sorgudan oluşur.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
 SELECT * FROM lastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 
 </td><td>
 
@@ -970,10 +982,13 @@ query2.Union (query1)
 
 </td></tr><tr><td>İki sorgunun kesişimi.<br/>
 
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable no-space-in-emphasis -->
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
 SELECT * FROM LastStudent
 </code></pre>
+<!-- markdownlint-restore -->
 </td><td>
 
 <pre><code class="lang-fsharp">
@@ -992,7 +1007,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code> koşulu.<br/>
+</td></tr><tr><td><code>CASE</code>koşul.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1861,7 +1876,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-İşte bu kod etkileşimli olarak F# çalıştırıldığında tam çıkış.
+Bu kod, F# Etkileşimli içinde çalıştırıldığında tam çıktı olur.
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2424,6 +2439,6 @@ end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dili Başvurusu](index.md)
+- [F # dil başvurusu](index.md)
 - [LINQ. QueryBuilder Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Hesaplama İfadeleri](Computation-Expressions.md)

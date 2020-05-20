@@ -1,26 +1,27 @@
 ---
 title: İş Akışı Kalıcılığı
+description: .NET Framework 4.6.1, iş akışı verilerinin ve meta verilerin bir SQL Server veritabanına kalıcılığını sağlayan SqlWorkflowInstanceStore sınıfını içerir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837538"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419310"
 ---
 # <a name="workflow-persistence"></a>İş Akışı Kalıcılığı
-İş akışı kalıcılığı, işlem veya bilgisayar bilgilerini bağımsız bir iş akışı örneğinin durumunun dayanıklı yakalamasıdır. Bu işlem, sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak ya da etkin bir şekilde iş yapmakta olmayan iş akışı örneklerini kaldırarak belleği korumak veya iş akışı örneğinin durumunu bir düğümden diğerine taşımak için yapılır bir sunucu grubundaki düğüm.  
+İş akışı kalıcılığı, işlem veya bilgisayar bilgilerini bağımsız bir iş akışı örneğinin durumunun dayanıklı yakalamasıdır. Bu işlem, sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak ya da etkin bir şekilde iş yapmakta olmayan iş akışı örneklerini kaldırarak belleği korumak veya iş akışı örneğinin durumunu bir düğümden bir sunucu grubundaki başka bir düğüme taşımak için yapılır.  
   
  Kalıcılık, işlem çevikliği, ölçeklenebilirlik, hata durumunda kurtarma ve belleği daha verimli bir şekilde yönetme olanağı sağlar. Kalıcılık süreci, kalıcılık noktası tanımlamayı, kaydedilecek verilerin toplanması ve son olarak verilerin gerçek depolamanın bir kalıcılık sağlayıcısına devredilmesi içerir.  
   
  Bir iş akışı için kalıcılığı etkinleştirmek üzere, [nasıl yapılır: Iş akışları ve Iş akışı hizmetleri Için kalıcılığı etkinleştirme](how-to-enable-persistence-for-workflows-and-workflow-services.md)bölümünde bahsedilen bir örnek depoyu **WorkflowApplication** veya **WorkflowServiceHost** ile ilişkilendirmeniz gerekir. **WorkflowApplication** ve **WorkflowServiceHost** , kalıcı iş akışı örneklerinin bir kalıcılık deposuna etkinleştirilmesi ve iş akışı örneklerinin kalıcılık deposunda depolanan iş akışı örneği verilerine göre belleğe yüklenmesi için kendileriyle ilişkili örnek deposunu kullanır.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], iş akışı örnekleri hakkında SQL Server 2005 veya SQL Server 2008 veritabanına verilerin ve meta verilerin kalıcılığını sağlayan **SqlWorkflowInstanceStore** sınıfıyla birlikte gelir. Daha fazla bilgi için bkz. [SQL Workflow örnek deposu](sql-workflow-instance-store.md) .  
+ , [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İş akışı örnekleri hakkında bir SQL Server 2005 veya SQL Server 2008 veritabanına verilerin ve meta verilerin kalıcılığını sağlayan **SqlWorkflowInstanceStore** sınıfıyla birlikte gelir. Daha fazla bilgi için bkz. [SQL Workflow örnek deposu](sql-workflow-instance-store.md) .  
   
- İş akışı örneğiyle ilgili bilgilerle birlikte, uygulamaya özgü verilerinizi depolamak ve yüklemek için <xref:System.Activities.Persistence.PersistenceParticipant> sınıfını genişleten Kalıcılık katılımcıları oluşturabilirsiniz. Kalıcılık Katılımcısı, özel seri hale getirilebilir verileri kalıcılık deposuna kaydetmek, örnek deposundan verileri belleğe yüklemek ve bir kalıcılık işlemi altında ek mantık gerçekleştirmek için kalıcılık sürecine katılıyorsa. Daha fazla bilgi için bkz. [Kalıcılık katılımcıları](persistence-participants.md).  
+ İş akışı örneğiyle ilgili bilgilerle birlikte, uygulamaya özgü verilerinizi depolamak ve yüklemek için, sınıfı genişleten Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> . Kalıcılık Katılımcısı, özel seri hale getirilebilir verileri kalıcılık deposuna kaydetmek, örnek deposundan verileri belleğe yüklemek ve bir kalıcılık işlemi altında ek mantık gerçekleştirmek için kalıcılık sürecine katılıyorsa. Daha fazla bilgi için bkz. [Kalıcılık katılımcıları](persistence-participants.md).  
   
  Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric Ile Kalıcılık kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
   

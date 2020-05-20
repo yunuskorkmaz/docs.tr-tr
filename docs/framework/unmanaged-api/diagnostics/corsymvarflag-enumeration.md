@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176649"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420597"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag Numaralandırması
-Bir değişkenin derleyici tarafından oluşturulup oluşturulmadığını gösterir.  
+Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -37,11 +37,11 @@ typedef enum CorSymVarFlag
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Verilen değişkenin derleyici tarafından oluşturulduğunu gösterir.|  
+|`VAR_IS_COMP_GEN`|Verilen değişkenin derleyicinin ürettiği olduğunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)

@@ -1,5 +1,6 @@
 ---
 title: Sınıf, Yapı ve Arabirimlerin Adları
+description: .NET kitaplıklarını genişleten ve etkileşime geçen kitaplıklar tasarlamanın bir parçası olarak sınıfları, yapıları ve arabirimleri adlandırma yönergelerini kullanın.
 ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
@@ -12,42 +13,42 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: 2c528348c0e84037a80df9797c56f03b51c73adc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7eee414c5bf5c69f63543ef240e50a4d2d948a3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400598"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419089"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Sınıf, Yapı ve Arabirimlerin Adları
-İzleyen adlandırma yönergeleri genel tür adlandırma için geçerlidir.
+Aşağıdaki adlandırma yönergeleri genel tür adlandırması için geçerlidir.
 
- PascalCasing kullanarak ad sınıfları ve yapılarını isim veya isim tümcecikleriyle ✔️.
+ ✔️ sınıfları ve yapıları, Pascalbüyük harfleri kullanarak isimler veya isim tümcecikleriyle adlandırın.
 
- Bu, tür adlarını fiil tümcecikleriyle birlikte isimlendirilen yöntemlerden ayırır.
+ Bu, tür adlarını, fiil tümcecikleriyle adlandırılan metotlardan ayırır.
 
- ✔️ DO isim arabirimleri sıfat tümcecikleri veya bazen isim veya isim tümcecikleri ile.
+ ✔️, sıfatıcı tümceciklerle ya da isimler veya isim tümcecikleriyle ara sıra ad arabirimleri YAPıN.
 
- Alelade ve isme tümcecikleri nadiren kullanılmalıdır ve bu tür bir arabirim değil soyut bir sınıf olması gerektiğini gösterebilir.
+ İsimler ve ad tümcecikleri nadiren kullanılmalıdır ve bu, türün bir arabirim değil, soyut bir sınıf olması gerektiğini gösteriyor olabilir.
 
- ❌Sınıf adlarını bir önek vermeyin (örneğin, "C").
+ ❌Sınıf adlarına bir ön ek vermeyin (ör. "C").
 
- ✔️ taban sınıfın adı ile türemiş sınıfların adını sona erdirme düşünün.
+ ✔️, türetilmiş sınıfların adını temel sınıfın adı ile sona erdirmenizi düşünün.
 
- Bu çok okunabilir ve açıkça ilişki açıklar. Kodda buna örnek olarak `ArgumentOutOfRangeException`şunlar verilebilir: `Exception`, `SerializableAttribute`bir tür , `Attribute`ve , bir tür . Ancak, bu kılavuzun uygulanmasında makul bir yargı kullanmak önemlidir; örneğin, `Button` sınıf bir tür `Control` olaydır, `Control` ancak kendi adında görünmez.
+ Bu çok okunabilir ve ilişkiyi açık bir şekilde açıklar. Kodda buna örnek olarak şunlar verilebilir:, `ArgumentOutOfRangeException` `Exception` ve türü `SerializableAttribute` `Attribute` . Ancak, bu kılavuz uygulanırken makul bir karardır kullanılması önemlidir; Örneğin, `Button` sınıfı bir tür `Control` olaydır, ancak `Control` adında görünmez.
 
- ✔️, türünün bir arabirim olduğunu belirtmek için I harfi ile önek arabirim adları.
+ türün bir arabirim olduğunu göstermek için ı harfiyle önek arabirim adları ✔️.
 
- Örneğin, `IComponent` (açıklayıcı isim), `ICustomAttributeProvider` (isim tümceciği) `IPersistable` ve (sıfat) uygun arabirim adlarıdır. Diğer tür adlarında olduğu gibi kısaltmalardan kaçının.
+ Örneğin, `IComponent` (açıklayıcı ad), `ICustomAttributeProvider` (ad tümceciği) ve `IPersistable` (sıfatıcı) uygun arabirim adlarıdır. Diğer tür adlarında olduğu gibi kısaltmaların önüne kaçının.
 
- ✔️ DO, sınıfın arabirimin standart bir uygulaması olduğu bir sınıf-arabirim çifti tanımlarken, adların yalnızca arabirim adı üzerindeki "I" önekine göre farklılık gösterir olmasını sağlar.
+ ✔️, sınıfın standart bir uygulama olduğu bir sınıf-arabirim çifti tanımlarken adların yalnızca arabirim adındaki "I" ön ekiyle farklı olduğundan emin olun.
 
-## <a name="names-of-generic-type-parameters"></a>Genel Tip Parametrelerin Adları
- Genel ler .NET Framework 2.0'a eklendi. Özellik, *tür parametresi*adı verilen yeni bir tanımlayıcı türünü tanıttı.
+## <a name="names-of-generic-type-parameters"></a>Genel tür parametrelerinin adları
+ .NET Framework 2,0 ' e Genel türler eklendi. Özellik, *Type parametresi*olarak adlandırılan yeni bir tanımlayıcı türü sunmuştur.
 
- ✔️ DO, tek harfli bir ad tamamen açıklayıcı olmadığı ve açıklayıcı bir ad değer katmadığı sürece genel tür parametrelerini açıklayıcı adlarla adlandırın.
+ ✔️, genel tür parametrelerini açıklayıcı adlarla, tek bir harf adı tamamen kendi kendine açıklama olmadığından ve açıklayıcı bir ad değer eklemedikçe tanımlayıcı adlarla adlandırın.
 
- ✔️ Tek `T` harfli tür parametresi olan türler için tür parametre adı olarak kullanmayı düşünün.
+ ✔️ `T` tek harfli bir tür parametresine sahip türler için tür parametre adı olarak KULLANMAYı düşünün.
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +56,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️ DO öneki tanımlayıcı türü parametre `T`adları ile .
+ öneki tanımlayıcı tür parametre adlarını ile ✔️ `T` .
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,43 +64,43 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- ✔️ Parametre adına bir tür parametresine yerleştirilen kısıtlamaları gösteren göz önünde bulundurun.
+ ✔️ parametre adında bir tür parametresine yerleştirilmiş olan kısıtlamaları belirtmeyi düşünün.
 
- Örneğin, sınırlandırılmış `ISession` bir parametre . `TSession`
+ Örneğin, ile kısıtlanmış bir parametre `ISession` çağrılabilir `TSession` .
 
-## <a name="names-of-common-types"></a>Ortak Türlerin Adları
- ✔️ DO, belirli .NET Framework türlerinden türetilen veya uygularken aşağıdaki tabloda açıklanan yönergeleri izleyin.
+## <a name="names-of-common-types"></a>Ortak türlerin adları
+ ✔️, belirli .NET Framework türlerinden türetilen türleri adlandırırken veya BUNLARı uygulamadan aşağıdaki tabloda açıklanan yönergeleri izleyin.
 
-|Taban Türü|Tür Yönergesi Tür Yönergesi|
+|Temel tür|Türetilmiş/uygulama türü Kılavuzu|
 |---------------|------------------------------------------|
-|`System.Attribute`|✔️ DO özel öznitelik sınıflarının adlarına "Öznitelik" soneki ekleyin.|
-|`System.Delegate`|✔️ etkinliklerde kullanılan temsilci adlarına "EventHandler" eki ekleyin.<br /><br /> ✔️ OLAY İşleyicisi olarak kullanılanlar dışındaki temsilci adlarına "Geri Arama" ekini ekleyin.<br /><br /> ❌Bir temsilciye "Temsilci" ekini EKLEMEYIN.|
-|`System.EventArgs`|✔️ "EventArgs" eki ekleyin.|
-|`System.Enum`|❌BU DERSTEN TÜRETİn; bunun yerine diliniz tarafından desteklenen anahtar kelimeyi kullanın; örneğin, C#'da anahtar `enum` sözcük kullanın.<br /><br /> ❌"Enum" veya "Bayrak" ekini EKLEMEYIN.|
-|`System.Exception`|✔️ "Özel Durum" eki ekleyin.|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️ "Sözlük" soneki ekleyin. Belirli `IDictionary` bir koleksiyon türü olduğunu unutmayın, ancak bu kılavuz aşağıdaki daha genel koleksiyonlar kılavuzundan önce gelir.|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️ DO sonek "Koleksiyon ekleyin."|
-|`System.IO.Stream`|✔️ DO sonek "Akış ekleyin."|
-|`CodeAccessPermission IPermission`|✔️ "İzin" eki ekleyin.|
+|`System.Attribute`|✔️ "özniteliğini" sonekini özel öznitelik sınıflarının adlarına ekleme.|
+|`System.Delegate`|✔️ "EventHandler" sonekini, olaylarda kullanılan temsilcilerin adlarına ekler.<br /><br /> ✔️, "geri çağırma" sonekini olay işleyicileri olarak kullanıldıkları dışındaki temsilcilerin adlarına ekler.<br /><br /> ❌"Temsilci" sonekini bir temsilciye eklemeyin.|
+|`System.EventArgs`|"EventArgs" sonekini eklemek ✔️.|
+|`System.Enum`|❌Bu sınıftan türemeyin; Bunun yerine diliniz tarafından desteklenen anahtar sözcüğü kullanın; Örneğin, C# ' de `enum` anahtar sözcüğünü kullanın.<br /><br /> ❌"Enum" veya "Flag" sonekini eklemeyin.|
+|`System.Exception`|son eki "özel durum" ✔️ ekler.|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|"Sözlük" sonekini eklemek ✔️. `IDictionary`Bu, belirli bir koleksiyon türüdür, ancak bu kılavuz, aşağıdaki genel Koleksiyonlar Kılavuzu ' na göre önceliklidir.|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|"Collection" sonekini eklemek ✔️.|
+|`System.IO.Stream`|"Stream" sonekini eklemek ✔️.|
+|`CodeAccessPermission IPermission`|✔️ sonek "Iznini" ekleyin.|
 
-## <a name="naming-enumerations"></a>Adlandırma Tümumerations
- Genel olarak numaralandırma türlerinin adları (enums olarak da adlandırılır) standart tür adlandırma kurallarına (PascalCasing, vb.) uymalıdır. Ancak, özellikle enumlar için geçerli olan ek yönergeler vardır.
+## <a name="naming-enumerations"></a>Sabit listeleri adlandırma
+ Genel olarak numaralandırma türlerinin (numaralandırmalar olarak da bilinir) adları, standart tür adlandırma kurallarını (Pascalbüyük harfleri, vb.) izlemelidir. Ancak, özel olarak Numaralandırmalar için uygulanan ek yönergeler vardır.
 
- ✔️ d değerleri bit alanları olmadığı sürece numaralandırma için tekil bir tür adı kullanın.
+ ✔️, değerleri bit alanları olmadığı takdirde sabit listesi için tekil tür adı kullanın.
 
- ✔️ D'ye, bayraklar enum olarak da adlandırılan bit alanları değerlerini içeren bir numaralandırma için çoğul tür adı kullanın.
+ ✔️, bit alanları olan bir numaralandırma için, Flags sabit listesi olarak da adlandırılan bir çoğul tür adı kullanın.
 
- ❌ENUM türü adlarında "Enum" soneki kullanmaYIN.
+ ❌Enum türü adlarında bir "enum" soneki kullanmayın.
 
- ❌ENUM türü adlarında "Bayrak" veya "Bayraklar" soneki kullanmayın.
+ ❌Enum türü adlarında "Flag" veya "Flags" soneklerini kullanmayın.
 
- ❌Numaralandırma değer adlarında önek (örneğin, ADO enumları için "reklam", zengin metin enumları için "rtf") bir önek KULLANMAYIN.
+ ❌Sabit listesi değer adlarında bir ön ek kullanmayın (örn. "ad" with ADO numaralandırmaları, zengin metin numaralandırmaları için "RTF" vb.).
 
- *2005, 2009 Microsoft Corporation © bölümleri. Tüm hakları saklıdır.*
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *Pearson Education, Inc.'in izniyle [Framework Design Guidelines: Conventions, Idioms and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina ve Brad Abrams tarafından 22 Ekim 2008'de Addison-Wesley Professional tarafından Microsoft Windows Geliştirme Serisi'nin bir parçası olarak yayımlandı.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)

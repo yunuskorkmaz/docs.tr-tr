@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: e2fa5d5a998f51e0e90cfde22b40ec12f278307b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 455fd06dbdbfd5d9753f3d7270647a742751d804
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178358"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420662"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType Sabit Listesi
 Bir değişkenin yerel konum türünü gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum VariableLocationType  
@@ -39,21 +39,21 @@ typedef enum VariableLocationType
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`VLT_REGISTER`|Değişken bir kayıtta.|  
-|`VLT_REGISTER_RELATIVE`|Değişken, kayıt bağıyla göreli bellek konumundadır.|  
-|`VLT_INVALID`|Değişken bir kayıt ta veya bir kayıt göreli bellek konumunda depolanmaz.|  
+|`VLT_REGISTER`|Değişken bir yazmaç içinde.|  
+|`VLT_REGISTER_RELATIVE`|Değişken, YAZMAÇ göreli bir bellek konumudur.|  
+|`VLT_INVALID`|Değişken, YAZMAÇ veya yazmaç göreli bellek konumunda depolanmaz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Numaralandırmanın `VariableLocationType` bir üyesi [ICorDebugVariableHome::GetLocationType](icordebugvariablehome-getlocationtype-method.md) yöntemi ile döndürülür.  
+ Sabit listesinin bir üyesi `VariableLocationType` [ıcordebugvariablehome:: GetLocationType](icordebugvariablehome-getlocationtype-method.md) yöntemi tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi:** CorDebug. IDL, CorDebug. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

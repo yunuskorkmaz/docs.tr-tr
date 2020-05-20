@@ -4,12 +4,12 @@ description: Bu gelişmiş öğreticide, zaman uyumsuz akışlar oluşturma ve k
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200112"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420376"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: C# 8,0 ve .NET Core 3,0 kullanarak zaman uyumsuz akışlar oluşturma ve kullanma
 
@@ -42,33 +42,33 @@ Bu öğreticide, Visual Studio veya .NET Core CLI dahil olmak üzere C# ve .NET 
 
 ## <a name="run-the-starter-application"></a>Başlangıç uygulamasını çalıştırma
 
-Bu öğreticide kullanılan başlangıç uygulamasının kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
+Bu öğreticide kullanılan başlangıç uygulamasının kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
 
-Başlangıç uygulaması, [DotNet/docs](https://github.com/dotnet/docs) deposunda yazılan son sorunları almak Için [GitHub graphql](https://developer.github.com/v4/) arabirimini kullanan bir konsol uygulamasıdır. Başlangıç uygulaması `Main` yöntemi için aşağıdaki koda bakarak başlayın:
+Başlangıç uygulaması, [DotNet/docs](https://github.com/dotnet/docs) deposunda yazılan son sorunları almak Için [GitHub graphql](https://developer.github.com/v4/) arabirimini kullanan bir konsol uygulamasıdır. Başlangıç uygulaması yöntemi için aşağıdaki koda bakarak başlayın `Main` :
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-Kişisel erişim belirtecinize bir `GitHubKey` ortam değişkeni ayarlayabilir veya çağrısındaki `GenEnvVariable` son bağımsız değişkeni kişisel erişim belirtecinizle değiştirebilirsiniz. Kaynağı başkalarıyla paylaşacaksanız, erişim kodunuzu kaynak koda yerleştirmeyin. Erişim kodlarını bir paylaşılan kaynak deposuna hiçbir daha yükleme.
+`GitHubKey`Kişisel erişim belirtecinize bir ortam değişkeni ayarlayabilir veya çağrısındaki son bağımsız değişkeni `GenEnvVariable` kişisel erişim belirtecinizle değiştirebilirsiniz. Kaynağı başkalarıyla paylaşacaksanız, erişim kodunuzu kaynak koda yerleştirmeyin. Erişim kodlarını bir paylaşılan kaynak deposuna hiçbir daha yükleme.
 
-GitHub istemcisini oluşturduktan sonra, içindeki `Main` kod bir ilerleme raporlama nesnesi ve bir iptal belirteci oluşturur. Bu nesneler oluşturulduktan sonra, `Main` en son `runPagedQueryAsync` 250 oluşturulan sorunları almak için çağırır. Bu görev bittikten sonra sonuçlar görüntülenir.
+GitHub istemcisini oluşturduktan sonra, içindeki kod `Main` bir ilerleme raporlama nesnesi ve bir iptal belirteci oluşturur. Bu nesneler oluşturulduktan sonra, `Main` `runPagedQueryAsync` en son 250 oluşturulan sorunları almak için çağırır. Bu görev bittikten sonra sonuçlar görüntülenir.
 
 Başlangıç uygulamasını çalıştırdığınızda, bu uygulamanın nasıl çalıştığı hakkında bazı önemli gözlemlerinizi yapabilirsiniz.  GitHub 'dan döndürülen her sayfa için ilerleme durumunu görürsünüz. GitHub her yeni sorun sayfasını geri döndürdüğünden, dikkat çekici bir duraklama gözlemleyebilirsiniz. Son olarak, sorunlar yalnızca GitHub 'dan 10 sayfa alındıktan sonra görüntülenir.
 
 ## <a name="examine-the-implementation"></a>Uygulamayı İnceleme
 
-Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi ortaya çıkarır. Kodu inceleyin `runPagedQueryAsync`:
+Uygulama, önceki bölümde ele alınan davranışı neden gözlemlediğinizi ortaya çıkarır. Kodu inceleyin `runPagedQueryAsync` :
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
-Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync` Yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve önceki sayfaya devam `pageInfo` etmek için yanıtın yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, bir `pageInfo` `hasPreviousPages` değeri ve önceki sayfayı istemek için kullanılan bir `startCursor` değeri içeren bir nesnesi içerir. Sorunlar `nodes` dizide bulunur. Yöntemi `runPagedQueryAsync` , tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
+Yukarıdaki kodun disk belleği algoritmasına ve zaman uyumsuz yapısına odaklanalım. (GitHub GraphQL API 'SI ile ilgili ayrıntılar için [GitHub graphql belgelerine](https://developer.github.com/v4/guides/) başvurabilirsiniz.) `runPagedQueryAsync`Yöntemi en sonuncudan en eskiye doğru olan sorunları numaralandırır. Sayfa başına 25 sorun ister ve `pageInfo` önceki sayfaya devam etmek için yanıtın yapısını inceler. Bu, çok sayfalı yanıtlar için GraphQL 'in standart disk belleği desteğini izler. Yanıt, `pageInfo` bir `hasPreviousPages` değeri ve `startCursor` önceki sayfayı istemek için kullanılan bir değeri içeren bir nesnesi içerir. Sorunlar `nodes` dizide bulunur. `runPagedQueryAsync`Yöntemi, tüm sayfalardaki sonuçları içeren bir diziye bu düğümleri ekler.
 
-Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir <xref:System.OperationCanceledException>oluşturur.
+Bir sonuç sayfasını aldıktan ve geri yükledikten sonra, `runPagedQueryAsync` ilerlemeyi raporlar ve iptal olup olmadığını denetler. İptal isteniyorsa, `runPagedQueryAsync` bir oluşturur <xref:System.OperationCanceledException> .
 
-Bu kodda iyileştirilen birkaç öğe vardır. En önemlisi, `runPagedQueryAsync` döndürülen tüm sorunlar için depolama alanı ayırmalıdır. Tüm açık sorunların alınması, alınan tüm sorunları depolamak için çok daha fazla bellek gerektirdiğinden, bu örnek 250 sorunlarını durduruyor. İlerleme raporlarını ve iptali destekleme protokolleri, ilk okuma sırasında algoritmayı daha zor hale getirir. Diğer türler ve API 'Ler dahil değildir. İptalin istendiği ve nerede verildiğini anlamak <xref:System.Threading.CancellationTokenSource> <xref:System.Threading.CancellationToken> için, ve arasındaki iletişimleri takip etmeniz gerekir.
+Bu kodda iyileştirilen birkaç öğe vardır. En önemlisi, `runPagedQueryAsync` döndürülen tüm sorunlar için depolama alanı ayırmalıdır. Tüm açık sorunların alınması, alınan tüm sorunları depolamak için çok daha fazla bellek gerektirdiğinden, bu örnek 250 sorunlarını durduruyor. İlerleme raporlarını ve iptali destekleme protokolleri, ilk okuma sırasında algoritmayı daha zor hale getirir. Diğer türler ve API 'Ler dahil değildir. <xref:System.Threading.CancellationTokenSource> <xref:System.Threading.CancellationToken> İptalin istendiği ve nerede verildiğini anlamak için, ve arasındaki iletişimleri takip etmeniz gerekir.
 
 ## <a name="async-streams-provide-a-better-way"></a>Zaman uyumsuz akışlar daha iyi bir yol sağlar
 
-Zaman uyumsuz akışlar ve ilişkili dil desteği Bu kaygıların tümünü ele. Diziyi oluşturan kod artık `yield return` `async` değiştiriciyle tanımlanmış bir yöntemde öğe döndürmek için kullanabilir. Döngü kullanarak bir zaman uyumsuz akışı `await foreach` , bir `foreach` döngüyü kullanarak herhangi bir diziyi tüketiğinizde kullanabilirsiniz.
+Zaman uyumsuz akışlar ve ilişkili dil desteği Bu kaygıların tümünü ele. Diziyi oluşturan kod artık `yield return` değiştiriciyle tanımlanmış bir yöntemde öğe döndürmek için kullanabilir `async` . Döngü kullanarak bir zaman uyumsuz akışı, bir `await foreach` döngüyü kullanarak herhangi bir diziyi tüketiğinizde kullanabilirsiniz `foreach` .
 
 Bu yeni dil özellikleri, 2,1 .NET Standard eklenen ve .NET Core 3,0 ' de uygulanan üç yeni arabirime bağımlıdır:
 
@@ -82,11 +82,11 @@ Bu üç arabirim çoğu C# geliştiricisi için tanıdık olmalıdır. Zaman uyu
 - <xref:System.Collections.Generic.IEnumerator%601?displayProperty=nameWithType>
 - <xref:System.IDisposable?displayProperty=nameWithType>
 
-Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType>. `ValueTask` Struct, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> sınıfa benzer bir API sağlar. `ValueTask`performans nedenleriyle bu arabirimlerde kullanılır.
+Alışkın olabilecek bir tür <xref:System.Threading.Tasks.ValueTask?displayProperty=nameWithType> . `ValueTask`Struct, sınıfa benzer BIR API sağlar <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> . `ValueTask`performans nedenleriyle bu arabirimlerde kullanılır.
 
 ## <a name="convert-to-async-streams"></a>Zaman uyumsuz akışlara Dönüştür
 
-Sonra, zaman uyumsuz `runPagedQueryAsync` akış oluşturmak için yöntemini dönüştürün. İlk olarak, `runPagedQueryAsync` `IAsyncEnumerable<JToken>`öğesini döndürmek için imzasını değiştirin ve aşağıdaki kodda gösterildiği gibi parametre listesinden iptal belirtecini ve ilerleme nesnelerini kaldırın:
+Sonra, `runPagedQueryAsync` zaman uyumsuz akış oluşturmak için yöntemini dönüştürün. İlk olarak, `runPagedQueryAsync` öğesini döndürmek için imzasını değiştirin `IAsyncEnumerable<JToken>` ve aşağıdaki kodda gösterildiği gibi parametre listesinden iptal belirtecini ve ilerleme nesnelerini kaldırın:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetUpdateSignature" :::
 
@@ -98,13 +98,13 @@ Bu üç satırı aşağıdaki kodla değiştirin:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetYieldReturnPage" :::
 
-Ayrıca, bu yöntemin `finalResults` önceki bildirimini ve değiştirdiğiniz döngüyü izleyen `return` ifadeyi de kaldırabilirsiniz.
+Ayrıca, `finalResults` Bu yöntemin önceki bildirimini ve `return` değiştirdiğiniz döngüyü izleyen ifadeyi de kaldırabilirsiniz.
 
 Zaman uyumsuz akış oluşturma değişikliklerini tamamladınız. Tamamlanan yöntem aşağıdaki koda benzemelidir:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateAsyncStream" :::
 
-Daha sonra, zaman uyumsuz akışı kullanmak için koleksiyonu tüketen kodu değiştirirsiniz. Sorun koleksiyonunu işleyen ' de `Main` aşağıdaki kodu bulun:
+Daha sonra, zaman uyumsuz akışı kullanmak için koleksiyonu tüketen kodu değiştirirsiniz. Sorun koleksiyonunu işleyen ' de aşağıdaki kodu bulun `Main` :
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetEnumerateOldStyle" :::
 
@@ -112,7 +112,7 @@ Bu kodu aşağıdaki `await foreach` döngüyle değiştirin:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
 
-Yeni arabirim <xref:System.Collections.Generic.IAsyncEnumerator%601> öğesinden <xref:System.IAsyncDisposable>türetilir. Diğer bir deyişle, döngü tamamlandığında önceki döngünün akışı zaman uyumsuz olarak elden atacaktır. Döngünün aşağıdaki kod gibi göründüğünü hayal edebilirsiniz:
+Yeni arabirim <xref:System.Collections.Generic.IAsyncEnumerator%601> öğesinden türetilir <xref:System.IAsyncDisposable> . Diğer bir deyişle, döngü tamamlandığında önceki döngünün akışı zaman uyumsuz olarak elden atacaktır. Döngünün aşağıdaki kod gibi göründüğünü hayal edebilirsiniz:
 
 ```csharp
 int num = 0;
@@ -134,21 +134,21 @@ try
 
 Akış öğeleri varsayılan olarak yakalanan bağlamda işlenir. Bağlam yakalamayı devre dışı bırakmak istiyorsanız, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> genişletme yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz model](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)kullanma başlıklı makaleye bakın.
 
-Zaman uyumsuz akışlar, diğer `async` yöntemlerle aynı protokolü kullanarak iptali destekler. İptali desteklemek için zaman uyumsuz Yineleyici yönteminin imzasını aşağıdaki şekilde değiştirirsiniz:
+Zaman uyumsuz akışlar, diğer yöntemlerle aynı protokolü kullanarak iptali destekler `async` . İptali desteklemek için zaman uyumsuz Yineleyici yönteminin imzasını aşağıdaki şekilde değiştirirsiniz:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
 
-<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType> Özniteliği, derleyicinin, <xref:System.Collections.Generic.IAsyncEnumerator%601> belirtecin zaman uyumsuz yineleyicinin gövdesine bu bağımsız değişken olarak geçirilmesini `GetAsyncEnumerator` sağlayan kod oluşturmasını sağlar. İçinde `runQueryAsync`, belirtecin durumunu inceleyebilir ve istenirse daha fazla çalışmayı iptal edebilirsiniz.
+<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType>Özniteliği, derleyicinin, <xref:System.Collections.Generic.IAsyncEnumerator%601> belirtecin `GetAsyncEnumerator` zaman uyumsuz yineleyicinin gövdesine bu bağımsız değişken olarak geçirilmesini sağlayan kod oluşturmasını sağlar. İçinde `runQueryAsync` , belirtecin durumunu inceleyebilir ve istenirse daha fazla çalışmayı iptal edebilirsiniz.
 
-İptal belirtecini zaman uyumsuz akışa geçirmek <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>için başka bir genişletme yöntemi kullanın. Sorunları şu şekilde numaralandırarak aşağıdaki gibi düzenleyin:
+<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>İptal belirtecini zaman uyumsuz akışa geçirmek için başka bir genişletme yöntemi kullanın. Sorunları şu şekilde numaralandırarak aşağıdaki gibi düzenleyin:
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-Tamamlanan öğreticinin kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
+Tamamlanan öğreticinin kodunu [CSharp/öğreticiler/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) klasöründeki [DotNet/docs](https://github.com/dotnet/docs) deposundan alabilirsiniz.
 
 ## <a name="run-the-finished-application"></a>Tamamlanmış uygulamayı çalıştırma
 
-Uygulamayı yeniden çalıştırın. Davranışını, başlangıç uygulamasının davranışıyla kontrast. Sonuçların ilk sayfası, kullanılabilir duruma geldiğinde numaralandırılır. Her yeni sayfa istendiği ve alındığı için bir observable durakladıkça, sonraki sayfanın sonuçları hızla numaralandırılır. İptali işlemek için `catch` blok gerekmez: çağıran, koleksiyonu listemeyi durdurabilir. `try`  /  Zaman uyumsuz akış, her sayfa indirildiğinden sonuçlar oluşturduğundan, ilerleme durumu açıkça raporlanır. Döndürülen her bir sorunun durumu, `await foreach` döngüye sorunsuz bir şekilde dahildir. İlerlemeyi izlemek için bir geri çağırma nesnesine gerek yoktur.
+Uygulamayı yeniden çalıştırın. Davranışını, başlangıç uygulamasının davranışıyla kontrast. Sonuçların ilk sayfası, kullanılabilir duruma geldiğinde numaralandırılır. Her yeni sayfa istendiği ve alındığı için bir observable durakladıkça, sonraki sayfanın sonuçları hızla numaralandırılır. `try`  /  `catch` İptali işlemek için blok gerekmez: çağıran, koleksiyonu listemeyi durdurabilir. Zaman uyumsuz akış, her sayfa indirildiğinden sonuçlar oluşturduğundan, ilerleme durumu açıkça raporlanır. Döndürülen her bir sorunun durumu, döngüye sorunsuz bir şekilde dahildir `await foreach` . İlerlemeyi izlemek için bir geri çağırma nesnesine gerek yoktur.
 
 Kodu inceleyerek, bellek kullanımıyla iyileştirmeleri görebilirsiniz. Artık tüm sonuçları numaralandırılmadan önce depolamak için bir koleksiyon ayırmanız gerekmez. Çağıran, sonuçların nasıl kullanıldığını ve bir depolama koleksiyonu gerekip gerekmediğini belirleyebilir.
 

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - diagnostics symbol store enumerations [.NET Framework]
 - enumerations [.NET Framework debugging]
 ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
-ms.openlocfilehash: 44ff50994f707dbd7eb9a55c05fe2b4540759aac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c1715341726c0ee33bfcaecc7e02b452db6a1fd7
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448544"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420571"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>Tanılama Sembol Deposu Numaralandırmaları
 Bu konuda, tanılama sembol deposu API 'sinin kullandığı yönetilmeyen numaralandırmalar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [CorSymAddrKind Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md)  
+ [CorSymAddrKind Sabit Listesi](corsymaddrkind-enumeration.md)  
  Bellek adresi türünü gösterir.  
   
- [CorSymSearchPolicyAttributes Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
+ [CorSymSearchPolicyAttributes Sabit Listesi](corsymsearchpolicyattributes-enumeration.md)  
  Sembol okuyucu ararken kullanılacak ilkeyi belirtir.  
   
- [CorSymVarFlag Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
+ [CorSymVarFlag Sabit Listesi](corsymvarflag-enumeration.md)  
  Bir değişkenin derleyici tarafından oluşturulup oluşturulmayacağını gösterir.  
   
- [NOTIFY_FILTER Sabit Listesi](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)  
+ [NOTIFY_FILTER Sabit Listesi](notify-filter-enumeration.md)  
  Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [Tanılama Simge Deposu Arabirimleri](diagnostics-symbol-store-interfaces.md)  
   
- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)  
+ [Tanılama Sembol Deposu Yapıları](diagnostics-symbol-store-structures.md)  
   
- [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [Hata Ayıklama](../debugging/index.md)

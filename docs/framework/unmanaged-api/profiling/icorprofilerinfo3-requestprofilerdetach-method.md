@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 8520f5fc0a6ff7e71f40cd7fbb1caf68aab63197
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: dbcf9230a953069d311c3908aa3ed21fcfd5075c
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868518"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420272"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 Çalışma zamanına profil oluşturucuyu ayırmasını söyler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT RequestProfilerDetach(  
@@ -41,19 +41,19 @@ HRESULT RequestProfilerDetach(
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|Ayırma isteği geçerli ve ayırma yordamı artık başka bir iş parçacığında devam ediyor. Ayırma tam olarak tamamlandığında `ProfilerDetachSucceeded` bir olay verilir.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|Profil Oluşturucu, ayırma işlemini desteklemek için uygulanması gereken [ICorProfilerCallback3](icorprofilercallback3-interface.md) arabirimi için [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) girişimi başarısız oldu. Ayırma denenmedi.|  
+|S_OK|Ayırma isteği geçerli ve ayırma yordamı artık başka bir iş parçacığında devam ediyor. Ayırma tam olarak tamamlandığında bir `ProfilerDetachSucceeded` olay verilir.|  
+|E_CORPROF_E_CALLBACK3_REQUIRED|Profil Oluşturucu, ayırma işlemini desteklemek için uygulanması gereken [ICorProfilerCallback3](icorprofilercallback3-interface.md) arabirimi için [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) girişimi başarısız oldu. Ayırma denenmedi.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Profil Oluşturucu başlangıçta sabit bayraklar ayarlandığı için, kesilmesi olanaksızdır. Kesilmesi denenmedi; Profil Oluşturucu hala tam olarak iliştirildi.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Profil Oluşturucu, belgelenmiş Microsoft ara dili (MSIL) kodu tarafından kullanılan veya `enter`/`leave` kancaları eklenmiş olduğundan, bu, kesilmesi olanaksızdır. Kesilmesi denenmedi; Profil Oluşturucu hala tam olarak iliştirildi.<br /><br /> **Göz önünde** Belgelenmiş MSIL, [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) yöntemi kullanılarak profil oluşturucu tarafından belirtilen koddur.|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Profil Oluşturucu, belgelenmiş Microsoft ara dili (MSIL) kodu veya eklenmiş kancalar tarafından kullanıldığından, bu, kesilmesi olanaksızdır `enter` / `leave` . Kesilmesi denenmedi; Profil Oluşturucu hala tam olarak iliştirildi.<br /><br /> **Göz önünde** Belgelenmiş MSIL, [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) yöntemi kullanılarak profil oluşturucu tarafından belirtilen koddur.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|Çalışma zamanı, yönetilen uygulamada henüz başlatılmadı. (Diğer bir deyişle, çalışma zamanı tam olarak yüklenmemiştir.) Bu hata kodu, profil oluşturucu geri çağrısının [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) yöntemi içinde, bir hastame istendiğinde döndürülebilir.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` desteklenmeyen bir zamanda çağrıldı. Bu, yöntemi yönetilen bir iş parçacığında çağrılırsa veya bir [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinden ya da bir atık toplamaya tolerans yamayan [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinden çağrıldığında oluşur. Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach`, desteklenmeyen bir zamanda çağrıldı. Bu, yöntemi yönetilen bir iş parçacığında çağrılırsa veya bir [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinden ya da bir atık toplamaya tolerans yamayan [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinden çağrıldığında oluşur. Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ayırma yordamı sırasında, ayırma iş parçacığı (profil oluşturucuyu ayırmak için özel olarak oluşturulan iş parçacığı) zaman zaman, tüm iş parçacıklarının profil oluşturucunun kodundan çıkılmadığını denetler. Profil Oluşturucu, bunun `dwExpectedCompletionMilliseconds` parametresinden ne kadar süreceğine ilişkin bir tahmin sağlamalıdır. Kullanım için iyi bir değer, profil oluşturucunun verilen `ICorProfilerCallback*` yöntemi içinde harcadığı tipik zamandır; Bu değer, profil oluşturucunun harcamayı beklediği maksimum sürenin yarısından daha az olmamalıdır.  
+ Ayırma yordamı sırasında, ayırma iş parçacığı (profil oluşturucuyu ayırmak için özel olarak oluşturulan iş parçacığı) zaman zaman, tüm iş parçacıklarının profil oluşturucunun kodundan çıkılmadığını denetler. Profil Oluşturucu, bu parametrenin ne kadar süreceğine ilişkin bir tahmin sağlamalıdır `dwExpectedCompletionMilliseconds` . Kullanım için iyi bir değer, profil oluşturucunun verilen herhangi bir yöntem içinde harcadığı tipik süredir `ICorProfilerCallback*` . Bu değer, profil oluşturucunun harcamayı beklediği maksimum sürenin yarısından daha az olmamalıdır.  
   
- Ayırma iş parçacığı, profil oluşturucu geri çağırma kodunun tüm yığınların yapılıp yapılmayacağını kontrol etmeden önce ne kadar uyku moduna geçmeye karar vermek için `dwExpectedCompletionMilliseconds` kullanır. Aşağıdaki algoritmanın ayrıntıları CLR 'nin gelecek sürümlerinde değişebilir, ancak `dwExpectedCompletionMilliseconds` profil oluşturucunun kaldırılması ne zaman güvenli olduğunun belirlenmesi sırasında kullanılabilecek bir yolu gösterir. Ayırma iş parçacığı ilk olarak `dwExpectedCompletionMilliseconds` milisaniyelik için uykuya geçer. Uyandırma başlatıldıktan sonra CLR, profil oluşturucu geri çağırma kodunun hala mevcut olduğunu bulur, bu kez iki kez `dwExpectedCompletionMilliseconds` milisaniyelik. Bu ikinci Uykudan uyandırma sonra, ayırma iş parçacığı profil oluşturucu geri çağırma kodunun hala mevcut olduğunu belirlerse, yeniden denetlemeden önce 10 dakika boyunca uykuya geçer. Ayırma iş parçacığı her 10 dakikada bir yeniden denetlemeye devam eder.  
+ Ayırma iş parçacığı, `dwExpectedCompletionMilliseconds` Profil Oluşturucu geri çağırma kodunun tüm yığınların yapılıp yapılmayacağını denetlemeden önce ne kadar uyku moduna geçmeye karar vermek için kullanır. Aşağıdaki algoritmanın ayrıntıları CLR 'nin gelecek sürümlerinde değişebilir, ancak `dwExpectedCompletionMilliseconds` profil oluşturucunun kaldırılması ne zaman güvenli olduğunun belirlenmesi sırasında bir yol gösterilir. Ayırma iş parçacığı ilk olarak milisaniye için uykuya geçer `dwExpectedCompletionMilliseconds` . Uyandırma sonrasında, CLR, profil oluşturucu geri çağırma kodunun hala mevcut olduğunu bulur, bu kez bu kez iki kez geçen süreyi ayırın `dwExpectedCompletionMilliseconds` . Bu ikinci Uykudan uyandırma sonra, ayırma iş parçacığı profil oluşturucu geri çağırma kodunun hala mevcut olduğunu belirlerse, yeniden denetlemeden önce 10 dakika boyunca uykuya geçer. Ayırma iş parçacığı her 10 dakikada bir yeniden denetlemeye devam eder.  
   
- Profil Oluşturucu 0 (sıfır) olarak `dwExpectedCompletionMilliseconds` belirtiyorsa, CLR varsayılan 5000 değerini kullanır. Bu, 5 saniye sonra, 10 saniye sonra yeniden denetim gerçekleştirecek ve sonrasında her 10 dakikada bir kontrol gerçekleştireceği anlamına gelir.  
+ Profil Oluşturucu `dwExpectedCompletionMilliseconds` 0 (sıfır) olarak belirtirse, clr varsayılan bir 5000 değeri kullanır. Bu, 5 saniye sonra, 10 saniye sonra ve sonrasında 10 dakikada bir denetim gerçekleştirecek anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,10 +62,10 @@ HRESULT RequestProfilerDetach(
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
 - [Profil Oluşturma](index.md)

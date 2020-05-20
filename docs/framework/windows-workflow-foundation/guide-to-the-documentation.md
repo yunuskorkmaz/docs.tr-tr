@@ -1,38 +1,39 @@
 ---
 title: Windows Workflow Belgeleri Kılavuzu
+description: Bu makale, Windows Workflow Foundation belgelerinin nasıl kullanılacağı hakkında bilgiler içerir ve bu, ilgi alanları ve uzmanlık düzeylerine göre gruplandırılır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-ms.openlocfilehash: 7697b5ab61d4be19223dc912900595f5431109fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9d9bf834946233e176abc463d31a99d476b86be
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753823"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419778"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow Belgeleri Kılavuzu
-Bu konu, Windows Workflow Foundation belgeleri kullanma hakkında bilgiler içerir. Bağlantılı belgeleri başlangıç noktaları belirli ilgi alanlarına ve uzmanlık düzeylerine göre gruplandırılmış önerilir.  
+Bu konu, Windows Workflow Foundation belgelerinin nasıl kullanılacağına ilişkin bilgiler içerir. Bağlantılı belgeler, belirli ilgi alanları ve uzmanlık düzeylerine göre gruplanan başlangıç noktaları için önerilir.  
   
-## <a name="new-to-windows-workflow-foundation-programming"></a>Yeni Windows Workflow Foundation programlama  
+## <a name="new-to-windows-workflow-foundation-programming"></a>Windows Workflow Foundation programlamaya yeni  
   
-- İle Windows Workflow Foundation programlama kullanmaya yeni başladıysanız ve yalnızca iş, altında listelenen konulara bakın bazı örnek uygulamalar öğrenmek istiyorsanız [Windows Workflow örnekleri](./samples/index.md).  
+- Windows Workflow Foundation ile programlama konusunda yeni olduğunuzda ve yalnızca çalışan bazı örnek uygulamaları görmek istiyorsanız, [Windows Workflow örnekleri](./samples/index.md)altında listelenen konulara bakın.  
   
-- Çeşitli Windows Workflow Foundation akış denetimi modelleri için bkz [iş akışları tasarlama](designing-workflows.md).  
+- Çeşitli Windows Workflow Foundation akış denetimi modelleriyle ilgili bir tartışma için bkz. [Iş akışlarını tasarlama](designing-workflows.md).  
   
-- Windows Workflow Foundation uygulama oluşturma temel adımları anlatan bir öğretici için bkz. [başlangıç Öğreticisi](getting-started-tutorial.md).  
+- Windows Workflow Foundation uygulaması oluşturmanın temel adımlarında izlenecek bir öğretici için bkz. [Başlangıç Öğreticisi](getting-started-tutorial.md).  
   
-- Windows Workflow Foundation kavramları yer ilgileniyorsanız bkz [Windows Workflow'a kavramsal genel bakış](conceptual-overview.md) bölümü.  
+- Windows Workflow Foundation arkasındaki kavramlarla ilgileniyorsanız, [Windows Workflow kavramsal genel bakış](conceptual-overview.md) bölümündeki konulara bakın.  
   
-- Windows Workflow Foundation belgelerinde kullanılan terimlerin bir listesi için bkz. [.NET Framework 4.5 için Windows Workflow Foundation sözlüğü](glossary.md).  
+- Windows Workflow Foundation belgelerinde kullanılan koşulların bir listesi için, bkz. [.NET Framework için Windows Workflow Foundation sözlüğü 4,5](glossary.md).  
   
-- Yeni kavramları ve İşlevler listesi için bkz. [Windows Workflow Foundation'daki yenilikler](whats-new.md).  
+- Yeni kavramların ve işlevlerin bir listesi için bkz. [Windows Workflow Foundation](whats-new.md)yenilikleri.  
   
-## <a name="programming-in-depth"></a>Ayrıntılı programlama  
+## <a name="programming-in-depth"></a>Derinlemesine programlama  
   
-- Windows Workflow Foundation nesne modeli ilgili ayrıntılı bir tartışma için bkz: [Windows Workflow mimarisi](architecture.md).  
+- Windows Workflow Foundation nesne modeli hakkında ayrıntılı bir tartışma için bkz. [Windows Workflow mimarisi](architecture.md).  
   
-- Uygulama geliştirmeye başlamak için bkz hazırsanız [Windows Workflow Foundation programlama](programming.md).  
+- Uygulama geliştirmeye başlamaya hazırsanız, bkz. [Windows Workflow Foundation programlama](programming.md).  
   
-- Genişletme veya gereksinimlerinize uydurmak için bkz, Windows Workflow Foundation'ı özelleştirmek istiyorsanız, [Windows Workflow Foundation'ı genişletme](extend.md).
+- Windows Workflow Foundation gereksinimlerinize uyacak şekilde genişletmek veya özelleştirmek istiyorsanız, bkz. [genişletme Windows Workflow Foundation](extend.md).

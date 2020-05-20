@@ -3,12 +3,12 @@ title: Son değişiklikler-.NET Core 'a .NET Framework
 titleSuffix: ''
 description: .NET Framework 'den .NET Core 'a yapılan son değişiklikleri listeler.
 ms.date: 05/05/2020
-ms.openlocfilehash: 613c4e41e12be57d5631b347055140a4418e7207
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206456"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420454"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a geçiş için son değişiklikler
 
@@ -23,6 +23,7 @@ ms.locfileid: "83206456"
 - [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported)
 - [UriBuilder özellikleri artık önde gelen karakterlerin önüne alınmaz](#uribuilder-properties-no-longer-prepend-leading-characters)
+- [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -41,6 +42,10 @@ ms.locfileid: "83206456"
 ***
 
 [!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
 ***
 

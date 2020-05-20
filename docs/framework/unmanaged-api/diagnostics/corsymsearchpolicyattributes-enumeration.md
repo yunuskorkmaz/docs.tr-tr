@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 786e53d43ecde0bc3a97fadb77184d25d41430bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cd451854d4dbb3b243339efdc33d7dcd7860eb7
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178342"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420610"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes Numaralandırması
-Sembol okuyucu için arama yaparken kullanılacak ilkeyi belirtir. Bu sabitler [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) ve [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri tarafından kullanılır.  
+Sembol okuyucu ararken kullanılacak ilkeyi belirtir. Bu sabitler, [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) ve [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri tarafından kullanılır.  
   
 > [!IMPORTANT]
-> Güvenilmeyen bir kaynaktan bir program veritabanı (PDB) dosyası açmak için bir güvenlik riskidir.  
+> Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef enum CorSymSearchPolicyAttributes  
@@ -43,14 +43,14 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Simge arama yolları için kayıt defterini sorgular.|  
+|`AllowRegistryAccess`|Sembol arama yolları için kayıt defterini sorgular.|  
 |`AllowSymbolServerAccess`|Bir sembol sunucusuna erişir.|  
-|`AllowOriginalPathAccess`|Hata Ayıklama dizininde belirtilen yolu arar.|  
-|`AllowReferencePathAccess`|.exe dosyasının bulunduğu yerde PDB'yi arar.|  
+|`AllowOriginalPathAccess`|Hata ayıklama dizininde belirtilen yolu arar.|  
+|`AllowReferencePathAccess`|PDB 'yi. exe dosyasının olduğu yerde arar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üstbilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi:** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [Tanılama Simge Deposu Sabit Listeleri](diagnostics-symbol-store-enumerations.md)

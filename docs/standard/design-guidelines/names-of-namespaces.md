@@ -1,5 +1,6 @@
 ---
 title: Ad Alanlarının Adları
+description: .NET kitaplıklarını genişleten ve bunlarla etkileşime geçen kitaplıklar tasarlamanın bir parçası olarak ad alanlarını adlandırmak için bu yönergeleri kullanın.
 ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -8,19 +9,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 52fee0dfaff284c2c1a6afcb8aa7530c28a60d65
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744145"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419063"
 ---
 # <a name="names-of-namespaces"></a>Ad Alanlarının Adları
 Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanın amacı, programlama çerçevesini kullanarak, ad alanının içeriğinin büyük olasılıkla ne olduğunu hemen bilmenin ne kadar anlaşılır olduğunu oluşturmaktır. Aşağıdaki şablon ad alanlarını adlandırmak için genel kuralı belirtir:
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
 
- Aşağıda örnekler verilmiştir:
+ Aşağıda örnekleri verilmektedir:
 
  `Fabrikam.Math` `Litware.Security`
 
@@ -28,34 +29,34 @@ Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanı
 
  ✔️ bir ad alanı adının ikinci düzeyinde kararlı, sürümden bağımsız bir ürün adı kullanın.
 
- ❌, şirketler içindeki Grup adları kısa süreli olmaya eğiltiğinden, ad alanı hiyerarşilerindeki adların temeli olarak kurumsal hiyerarşileri kullanmayın. İlgili teknolojilerin grupları etrafında ad alanlarının hiyerarşisini düzenleyin.
+ ❌Kurumların içindeki Grup adları kısa süreli olmaya eğiltiğinden, kuruluş hiyerarşilerini ad alanı hiyerarşilerindeki adların temeli olarak kullanmayın. İlgili teknolojilerin grupları etrafında ad alanlarının hiyerarşisini düzenleyin.
 
- ✔️ Pascalbüyük harfleri kullanır ve ad alanı bileşenlerini noktalarla ayırın (örn. `Microsoft.Office.PowerPoint`). Markanız geleneksel olmayan büyük harfe kullanıyorsa, normal ad alanı büyük küçük harfe göre farklılık gösterir olsa da markanız tarafından tanımlanan büyük/küçük harfleri izlemeniz gerekir.
+ ✔️ Pascalbüyük harfleri kullanır ve ad alanı bileşenlerini noktalarla ayırın (ör. `Microsoft.Office.PowerPoint` ). Markanız geleneksel olmayan büyük harfe kullanıyorsa, normal ad alanı büyük küçük harfe göre farklılık gösterir olsa da markanız tarafından tanımlanan büyük/küçük harfleri izlemeniz gerekir.
 
  ✔️ Çoğul ad alanı adlarını kullanmayı göz önünde bulundurun.
 
- Örneğin, `System.Collection`yerine `System.Collections` kullanın. Ancak, marka adları ve kısaltmalar bu kuralın istisnalardır. Örneğin, `System.IOs`yerine `System.IO` kullanın.
+ Örneğin `System.Collection` yerine `System.Collections` kullanın. Ancak, marka adları ve kısaltmalar bu kuralın istisnalardır. Örneğin `System.IOs` yerine `System.IO` kullanın.
 
- ❌ ad alanı için aynı adı ve bu ad alanındaki türü kullanmaz.
+ ❌Ad alanı için aynı adı ve bu ad alanındaki türü kullanmayın.
 
- Örneğin, `Debug` ad alanı adı olarak kullanmayın ve ayrıca aynı ad alanında `Debug` adlı bir sınıf sağlayın. Çeşitli derleyiciler, bu tür türlerin tam nitelikli olmasını gerektirir.
+ Örneğin, `Debug` ad alanı adı olarak kullanmayın ve ayrıca `Debug` aynı ad alanında adlı bir sınıf sağlayın. Çeşitli derleyiciler, bu tür türlerin tam nitelikli olmasını gerektirir.
 
 ### <a name="namespaces-and-type-name-conflicts"></a>Ad alanları ve tür adı çakışmaları
- ❌ `Element`, `Node`, `Log`ve `Message`gibi genel tür adları sunmaz.
+ ❌,, Ve gibi genel tür adları sunmaz `Element` `Node` `Log` `Message` .
 
- Bunu yapmanın çok büyük bir olasılığı, yaygın senaryolarda tür adı çakışmalarına yol açacaktır. Genel tür adlarını (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`) nitelemeniz gerekir.
+ Bunu yapmanın çok büyük bir olasılığı, yaygın senaryolarda tür adı çakışmalarına yol açacaktır. Genel tür adlarını (,,,) nitelemeniz gerekir `FormElement` `XmlNode` `EventLog` `SoapMessage` .
 
  Farklı ad alanları kategorileri için tür adı çakışmalarını önlemeye yönelik özel yönergeler vardır.
 
 - **Uygulama modeli ad alanları**
 
-     Tek bir uygulama modeline ait olan ad alanları birlikte çok sık kullanılır, ancak bunlar, diğer uygulama modelleriyle ilgili ad alanları ile neredeyse hiç kullanılmaz. Örneğin, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı <xref:System.Web.UI?displayProperty=nameWithType> ad alanıyla birlikte çok seyrek kullanılır. Aşağıda, iyi bilinen uygulama modeli ad alanı gruplarının listesi verilmiştir:
+     Tek bir uygulama modeline ait olan ad alanları birlikte çok sık kullanılır, ancak bunlar, diğer uygulama modelleriyle ilgili ad alanları ile neredeyse hiç kullanılmaz. Örneğin, ad alanı, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanıyla birlikte çok seyrek kullanılır <xref:System.Web.UI?displayProperty=nameWithType> . Aşağıda, iyi bilinen uygulama modeli ad alanı gruplarının listesi verilmiştir:
 
      `System.Windows*` `System.Web.UI*`
 
-     ❌, tek bir uygulama modeli içindeki ad alanlarında bulunan türlere aynı adı vermez.
+     ❌Tek bir uygulama modelinde ad alanlarında bulunan türlere aynı adı vermeyin.
 
-     Örneğin, <xref:System.Web.UI?displayProperty=nameWithType> ad alanı zaten `Page`adlı bir tür içerdiğinden, <xref:System.Web.UI.Adapters?displayProperty=nameWithType> ad alanına `Page` adlı bir tür eklemeyin.
+     Örneğin, ad alanı `Page` <xref:System.Web.UI.Adapters?displayProperty=nameWithType> <xref:System.Web.UI?displayProperty=nameWithType> zaten adlı bir tür içerdiğinden ad alanına adlı bir tür eklemeyin `Page` .
 
 - **Altyapı ad alanları**
 
@@ -63,19 +64,19 @@ Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanı
 
 - **Çekirdek ad alanları**
 
-     Çekirdek ad alanları, uygulama modellerinin ad alanları ve altyapı ad alanları hariç tüm `System` ad alanlarını içerir. Temel ad alanları, diğerleri, `System`, `System.IO`, `System.Xml`ve `System.Net`arasında yer alır.
+     Çekirdek ad alanları `System` , uygulama modellerinin ad alanları ve altyapı ad alanları hariç tüm ad alanlarını içerir. Çekirdek ad alanları, diğerleri,,, ve arasında bulunur `System` `System.IO` `System.Xml` `System.Net` .
 
-     ❌, çekirdek ad alanlarında herhangi bir türle çakışacak tür adları vermez.
+     ❌Çekirdek ad alanlarında herhangi bir türle çakışabilecek tür adları vermeyin.
 
-     Örneğin, hiçbir `Stream` tür adı olarak kullanmayın. Yaygın olarak kullanılan bir tür olan <xref:System.IO.Stream?displayProperty=nameWithType>ile çakışır.
+     Örneğin, hiçbir koşulda `Stream` tür adı olarak kullanmayın. <xref:System.IO.Stream?displayProperty=nameWithType>Yaygın olarak kullanılan bir tür ile çakışır.
 
 - **Teknoloji ad alanı grupları**
 
-     Bu kategori, `Microsoft.Build.Utilities` ve `Microsoft.Build.Tasks`gibi aynı ilk iki ad alanı düğümüne sahip tüm ad alanlarını içerir `(<Company>.<Technology>*`). Tek bir teknolojiye ait olan türlerin birbirleriyle çakışmaması önemlidir.
+     Bu kategori, ve gibi aynı ilk iki ad alanı düğümüne sahip tüm ad alanlarını içerir `(<Company>.<Technology>*` `Microsoft.Build.Utilities` `Microsoft.Build.Tasks` . Tek bir teknolojiye ait olan türlerin birbirleriyle çakışmaması önemlidir.
 
-     ❌, tek bir teknoloji içindeki diğer türlerle çakışacak tür adları atamayın.
+     ❌Tek bir teknoloji içindeki diğer türlerle çakışacak tür adları atamayın.
 
-     ❌, teknoloji ad alanları ve uygulama modeli ad alanındaki türler arasında tür adı çakışmaları sunmaz (teknoloji uygulama modeliyle kullanılmak amaçlanmamışsa).
+     ❌Teknoloji ad alanları ve uygulama modeli ad alanındaki türler arasında tür adı çakışmalarını tanıtmayın (teknoloji uygulama modeliyle kullanılmak amaçlanmamışsa).
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -83,5 +84,5 @@ Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)

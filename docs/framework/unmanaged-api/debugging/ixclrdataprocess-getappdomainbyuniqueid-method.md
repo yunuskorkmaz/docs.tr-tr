@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::GetAppDomainByUniqueId Method
+title: 'IXCLRDataProcess:: Getappdomainbyuniqueıd yöntemi'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::GetAppDomainByUniqueId Method
@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775271"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420792"
 ---
-# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId Method
+# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess:: Getappdomainbyuniqueıd yöntemi
 
-Alır bir `AppDomain` bir işlemde kendi benzersiz tanımlayıcısına göre.
+`AppDomain`Benzersiz tanımlayıcısına göre bir işlem içinde alır.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAppDomainByUniqueID(
@@ -40,21 +40,21 @@ HRESULT GetAppDomainByUniqueID(
 ## <a name="parameters"></a>Parametreler
 
 `id`\
-[in] AppDomain benzersiz tanımlayıcısı
+'ndaki AppDomain 'in benzersiz tanımlayıcısı
 
 `appDomain`\
-[out] Uygulama etki alanı
+dışı AppDomain
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tablosunu 20 yuvaya karşılık gelir. `IXCLRDataAppDomain*` Döndürülen diğer API'ler ile etkileşim için kullanılır.
+Belirtilen yöntem arabirimin bir parçasıdır `IXCLRDataProcess` ve sanal yöntem tablosunun 20. yuvasına karşılık gelir. `IXCLRDataAppDomain*`Döndürülen diğer API 'lerle etkileşim için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
-**Üst bilgi:** Hiçbiri **kitaplığı:** Hiçbiri **.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
+**Üst bilgi:** Hiçbiri **Kitaplığı:** hiçbiri **.NET Framework sürümler:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess Arabirimi](ixclrdataprocess-interface.md)
