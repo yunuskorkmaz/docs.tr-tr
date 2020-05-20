@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-ms.openlocfilehash: 3374097c8d343fed6badf046742ca556d2a92f3e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 886ba693183a6b99eb03635e95a9661d105de40e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446223"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610866"
 ---
-# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="90aff-102">ISymUnmanagedScope2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="90aff-102">ISymUnmanagedScope2 Interface</span></span>
-<span data-ttu-id="90aff-103">Bir yöntem içindeki bir sözcük temelli kapsamı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="90aff-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="90aff-104">Bu arabirim, [ıstreamunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimini kapsam içinde tanımlanan sabitler hakkında bilgi alan yöntemlerle genişletir.</span><span class="sxs-lookup"><span data-stu-id="90aff-104">This interface extends the [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
+# <a name="isymunmanagedscope2-interface"></a><span data-ttu-id="c5a39-102">ISymUnmanagedScope2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5a39-102">ISymUnmanagedScope2 Interface</span></span>
+<span data-ttu-id="c5a39-103">Bir yöntem içindeki bir sözcük temelli kapsamı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c5a39-103">Represents a lexical scope within a method.</span></span> <span data-ttu-id="c5a39-104">Bu arabirim, [ıstreamunmanagedscope](isymunmanagedscope-interface.md) arabirimini kapsam içinde tanımlanan sabitler hakkında bilgi alan yöntemlerle genişletir.</span><span class="sxs-lookup"><span data-stu-id="c5a39-104">This interface extends the [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface with methods that get information about constants defined within the scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="90aff-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="90aff-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c5a39-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="c5a39-105">Methods</span></span>  
   
-|<span data-ttu-id="90aff-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="90aff-106">Method</span></span>|<span data-ttu-id="90aff-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="90aff-107">Description</span></span>|  
+|<span data-ttu-id="c5a39-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="c5a39-106">Method</span></span>|<span data-ttu-id="c5a39-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5a39-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="90aff-108">GetConstantCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="90aff-108">GetConstantCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="90aff-109">Bu kapsam içinde tanımlanan sabitlerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="90aff-109">Gets a count of the constants defined within this scope.</span></span>|  
-|[<span data-ttu-id="90aff-110">GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="90aff-110">GetConstants Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="90aff-111">Bu kapsam içinde tanımlanan yerel sabitleri alır.</span><span class="sxs-lookup"><span data-stu-id="90aff-111">Gets the local constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="c5a39-108">GetConstantCount Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5a39-108">GetConstantCount Method</span></span>](isymunmanagedscope2-getconstantcount-method.md)|<span data-ttu-id="c5a39-109">Bu kapsam içinde tanımlanan sabitlerin sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="c5a39-109">Gets a count of the constants defined within this scope.</span></span>|  
+|[<span data-ttu-id="c5a39-110">GetConstants Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c5a39-110">GetConstants Method</span></span>](isymunmanagedscope2-getconstants-method.md)|<span data-ttu-id="c5a39-111">Bu kapsam içinde tanımlanan yerel sabitleri alır.</span><span class="sxs-lookup"><span data-stu-id="c5a39-111">Gets the local constants defined within this scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="90aff-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="90aff-112">Requirements</span></span>  
- <span data-ttu-id="90aff-113">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="90aff-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5a39-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c5a39-112">Requirements</span></span>  
+ <span data-ttu-id="c5a39-113">**Üst bilgi:** CorSym. IDL, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="c5a39-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90aff-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="90aff-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c5a39-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5a39-114">See also</span></span>
 
-- [<span data-ttu-id="90aff-115">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="90aff-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="90aff-116">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="90aff-116">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="c5a39-115">Tanılama Simge Deposu Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c5a39-115">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="c5a39-116">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5a39-116">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
