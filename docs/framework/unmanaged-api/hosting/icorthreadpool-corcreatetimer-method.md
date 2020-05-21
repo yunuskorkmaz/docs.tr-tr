@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0d56ef25-30f1-4499-8a1f-76e7654ec614
 topic_type:
 - apiref
-ms.openlocfilehash: 17afd0922930bc6db122e8dc07125dcafd483cf5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bd48b9167a803da6e27c8d8ebc3a2b13508ff5c9
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133303"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760356"
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>ICorThreadpool::CorCreateTimer Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorCreateTimer (  
@@ -39,14 +39,14 @@ HRESULT CorCreateTimer (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorThreadpool Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool Arabirimi](icorthreadpool-interface.md)

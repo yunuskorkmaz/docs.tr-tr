@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ccad76e1c8a49222d4f527f8b7b18d4e40ff8cae
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127689"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760413"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start Yöntemi
 Ortak dil çalışma zamanını (CLR) başlatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Start ();  
@@ -37,14 +37,14 @@ HRESULT Start ();
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlemde kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, CLR artık işlemde kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, yönetilen kodu çalıştırmak için ilk istekten sonra otomatik olarak başlatıldığı için `Start` yöntemini çağırmak genellikle gerekli değildir.  
+ Genellikle yöntemi çağırmak gerekmez `Start` , çünkü clr yönetilen kodu çalıştırmak için ilk istekten sonra otomatik olarak başlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -54,4 +54,4 @@ HRESULT Start ();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

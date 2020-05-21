@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: 20f2041599e85b8df20a7a9cf44680da9f17244e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195936"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762194"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString Yöntemi
 Belirtilen kültür için bir HRESULT değerini uygun bir hata iletisine çevirir.  
   
  Bu yöntem aşağıdaki işlevlerin yerini alır:  
   
-- [LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+- [LoadStringRC](loadstringrc-function.md)  
   
-- [LoadStringRCEx](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+- [LoadStringRCEx](loadstringrcex-function.md)  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LoadErrorString(  
@@ -49,7 +49,7 @@ HRESULT LoadErrorString(
  dışı Verilen HRESULT ile ilişkilendirilen ileti dizesi.  
   
  `pcchBuffer`  
- [in, out] Arabellek taşmalarını önlemek için `pwzbuffer` boyutu. `pwzbuffer` null ise, `pcchBuffer`, ön ayırmaya izin vermek için beklenen `pwzbuffer` boyutunu sağlar.  
+ [in, out] `pwzbuffer`Arabellek taşmalarını önlemek için boyutu. `pwzbuffer`Null ise, `pcchBuffer` `pwzbuffer` ön ayırmaya izin vermek için beklenen boyutunu sağlar.  
   
  `iLocaleID`  
  'ndaki Kültür tanımlayıcısı. Varsayılan kültürü kullanmak için-1 ' i belirtmeniz gerekir.  
@@ -60,20 +60,20 @@ HRESULT LoadErrorString(
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pcchBuffer` null.|  
-|E_INVALIDARG|`pwzBuffer` null.|  
+|E_POINTER|`pcchBuffer`null.|  
+|E_INVALIDARG|`pwzBuffer`null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

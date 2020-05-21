@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 96b74995-0cde-4876-b6df-7fc164e6a5d1
 topic_type:
 - apiref
-ms.openlocfilehash: e5a1642f968228c5815732ecd470cb8f02a0eb83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a97471e1c257902633b7eb363c3cc51288c70917
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139589"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762259"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains Yöntemi
 Geçerli işlemdeki etki alanları için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumDomains (  
@@ -43,11 +43,11 @@ HRESULT EnumDomains (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -57,4 +57,4 @@ HRESULT EnumDomains (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

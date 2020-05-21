@@ -3,12 +3,12 @@ title: Derleme yapılandırması ayarları
 description: JıT derleyicisinin .NET Core uygulamaları için nasıl çalıştığını yapılandıran çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506850"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762012"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Derleme için çalışma zamanı yapılandırma seçenekleri
 
@@ -98,7 +98,7 @@ Proje dosyası:
 - JıT derleyicisinin döngüleri içeren yöntemlerde hızlı JıT kullanıp kullanmadığını yapılandırır.
 - Döngüler için hızlı JıT 'nin etkinleştirilmesi, başlangıç performansını iyileştirebilir. Ancak uzun süreli döngüler, uzun süreler için daha az iyileştirilmiş kod ile takılmasına sahip olabilir.
 - [Hızlı JIT](#quick-jit) devre dışıysa, bu ayarın etkisi yoktur.
-- Varsayılan: devre dışı`false`().
+- Bu ayarı atlarsanız, döngüleri içeren yöntemler için hızlı JıT kullanılmaz. Bu değeri değerine ayarlamaya eşdeğerdir `false` .
 
 | | Ayar adı | Değerler |
 | - | - | - |
@@ -136,7 +136,7 @@ Proje dosyası:
 
 - .NET Core çalışma zamanının, kullanılabilir ReadyToRun verilerine sahip görüntüler için önceden derlenmiş kod kullanıp kullanmadığını yapılandırır. Bu seçeneği devre dışı bırakmak, çalışma zamanını JıT derleme çerçevesi koduna zorlar.
 - Daha fazla bilgi için bkz. [Readytorun](../whats-new/dotnet-core-3-0.md#readytorun-images).
-- Varsayılan: etkin (`1`).
+- Bu ayarı atlarsanız, .NET kullanılabilir olduğunda ReadyToRun verilerini kullanır. Bu değeri değerine ayarlamaya eşdeğerdir `1` .
 
 | | Ayar adı | Değerler |
 | - | - | - |

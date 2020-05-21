@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-ms.openlocfilehash: b42079d138e754996470e07b884d49c1ebb625c3
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 081df31d1e3b1ca3345fe44b60cff6af27386953
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901163"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762129"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob Metodu
 Belirtilen karma algoritmasını kullanarak, belirtilen bellek adresindeki derlemenin karmasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHashFromBlob (  
@@ -52,23 +52,23 @@ HRESULT GetHashFromBlob (
  dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- 'ndaki İstenen en büyük boyut `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash` .  
   
  `pchHash`  
- dışı Döndürülen `pbHash`bayt cinsinden boyutu.  
+ dışı Döndürülen bayt cinsinden boyutu `pbHash` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarıyla tamamlanırsa `S_OK`; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
+ `S_OK`Yöntem başarıyla tamamlanırsa; Aksi takdirde, hata belirten bir HRESULT değeri (bkz. bir liste için [genel HRESULT değerleri](/windows/win32/seccrypto/common-hresult-values) ).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [ICLRStrongName Arabirimi](iclrstrongname-interface.md)

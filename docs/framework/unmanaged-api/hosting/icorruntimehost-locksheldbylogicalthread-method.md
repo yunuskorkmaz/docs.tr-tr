@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 265ab5ae03b7b42c4f5f429df5d659d60e55f18e
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139535"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760725"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread Yöntemi
 Geçerli iş parçacığının tuttuğu kilit sayısını alır.  
   
  Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LocksHeldByLogicalThread(  
@@ -40,7 +40,7 @@ HRESULT LocksHeldByLogicalThread(
  dışı Geçerli iş parçacığının tuttuğu kilit sayısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -50,4 +50,4 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

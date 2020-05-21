@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 34ffc4a6-6553-43df-9b43-779effb67e2c
 topic_type:
 - apiref
-ms.openlocfilehash: 4598e3588cbcb6f5e6911709692152969071cd5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13b0cdb5f1bd90d04ff52042de892e3defc5ff84
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139592"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762285"
 ---
 # <a name="icorruntimehostdeletelogicalthreadstate-method"></a>ICorRuntimeHost::DeleteLogicalThreadState Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DeleteLogicalThreadState ( );  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -42,4 +42,4 @@ HRESULT DeleteLogicalThreadState ( );
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

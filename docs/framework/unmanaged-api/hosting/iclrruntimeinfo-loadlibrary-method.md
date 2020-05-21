@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 8c72f58bb65bd862b0625bfa0398b26bad0197e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192082"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762181"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary Yöntemi
-Bir [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi tarafından temsil edilen ortak dil çalışma ZAMANıNDAN (CLR) bir .NET Framework kitaplığı yükler.  
+Bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi tarafından temsil edilen ortak dil çalışma ZAMANıNDAN (CLR) bir .NET Framework kitaplığı yükler.  
   
- Bu yöntem [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) işlevinin yerini alır.  
+ Bu yöntem [LoadLibraryShim](loadlibraryshim-function.md) işlevinin yerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LoadLibrary(  
@@ -48,23 +48,23 @@ HRESULT LoadLibrary(
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pwzDllName` veya `phndModule` null.|  
+|E_POINTER|`pwzDllName`ya da `phndModule` null.|  
 |E_OUTOFMEMORY|İsteği işlemek için yeterli kullanılabilir bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yöntem yalnızca .NET Framework yeniden dağıtılabilir pakette bulunan dll 'Leri yükler. Kullanıcı tarafından oluşturulan derlemeler yükleyemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

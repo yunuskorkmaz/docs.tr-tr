@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-ms.openlocfilehash: 6dc25cbeef2576a2ecc6ec39b2cb3f9abb7b9964
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a23083777d0cd5965511f3689578a60220008420
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139560"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762236"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>ICorRuntimeHost::GetDefaultDomain Yöntemi
-Geçerli işlem için varsayılan etki alanını temsil eden <xref:System._AppDomain?displayProperty=nameWithType> türünde bir arabirim işaretçisi alır.  
+<xref:System._AppDomain?displayProperty=nameWithType>Geçerli işlem için varsayılan etki alanını temsil eden türün bir arabirim işaretçisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetDefaultDomain (  
@@ -35,9 +35,9 @@ HRESULT GetDefaultDomain (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- dışı İşlem için varsayılan uygulama etki alanını temsil eden <xref:System.AppDomain> örneğine <xref:System._AppDomain?displayProperty=nameWithType> türünde bir arabirim işaretçisi.  
+ dışı <xref:System._AppDomain?displayProperty=nameWithType> <xref:System.AppDomain> İşlemin varsayılan uygulama etki alanını temsil eden örneğe türünde bir arabirim işaretçisi.  
   
- Bu işaretçi `IUnknown`yazılır, bu nedenle çağıranlar genellikle <xref:System._AppDomain?displayProperty=nameWithType>türünde bir arabirim işaretçisi almak için `QueryInterface` çağırmalıdır.  
+ Bu işaretçi yazıldığı `IUnknown` için, arayanların genellikle `QueryInterface` türünde bir arabirim işaretçisi almak için çağrı yapmaları gerekir <xref:System._AppDomain?displayProperty=nameWithType> .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -45,11 +45,11 @@ HRESULT GetDefaultDomain (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -61,4 +61,4 @@ HRESULT GetDefaultDomain (
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

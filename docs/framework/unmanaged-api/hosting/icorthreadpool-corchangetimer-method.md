@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-ms.openlocfilehash: bb3778a55e7f395ad65f6a9841ca1f31f1de4ebc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2174afe0ee96bd153b7b40c73c0185d9058a0dc
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178251"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760357"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer Yöntemi
-Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere tasarlanmamıştır.  
+Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CorChangeTimer (  
@@ -37,14 +37,14 @@ HRESULT CorChangeTimer (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorThreadpool Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool Arabirimi](icorthreadpool-interface.md)

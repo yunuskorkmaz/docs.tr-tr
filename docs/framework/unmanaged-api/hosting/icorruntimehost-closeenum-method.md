@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-ms.openlocfilehash: e2eddfab68e5c9e2ebffe2c96c9348f3cd799c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5a86df3ac1f50ca624490ad80a6fed903433436
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127757"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762376"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum Yöntemi
 Bir etki alanı numaralandırıcısını etki alanı listesinin başına geri döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CloseEnum (  
@@ -43,11 +43,11 @@ HRESULT CloseEnum (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -57,5 +57,5 @@ HRESULT CloseEnum (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CorBindToRuntimeEx İşlevi](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [CorBindToRuntimeEx İşlevi](corbindtoruntimeex-function.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

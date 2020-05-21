@@ -1,29 +1,29 @@
 ---
 title: İfade Yorumlama
-description: İfade ağacının yapısını incelemek için kod yazmayı öğrenin.
+description: Bir ifade ağacının yapısını incelemek için kod yazmayı öğrenin.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146014"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761869"
 ---
 # <a name="interpreting-expressions"></a>İfade Yorumlama
 
-[Önceki -- İfadeleri Yürütme](expression-trees-execution.md)
+[Önceki--Ifadeler yürütülüyor](expression-trees-execution.md)
 
-Şimdi, bir *ifade ağacının*yapısını incelemek için bazı kodlar yazalım. İfade ağacındaki her düğüm, türetilen bir sınıfın nesnesi `Expression`olacaktır.
+Şimdi bir *ifade ağacının*yapısını incelemek için bazı kodlar yazalım. Bir ifade ağacındaki her düğüm, öğesinden türetilmiş bir sınıfın nesnesi olur `Expression` .
 
-Bu tasarım, bir ifade ağacındaki tüm düğümleri ziyaret etmeyi nispeten yalın bir özyinelemeli işlem haline getirir. Genel strateji kök düğümden başlamak ve ne tür bir düğüm olduğunu belirlemektir.
+Bu tasarım, bir ifade ağacındaki tüm düğümleri görece düz ileri özyinelemeli bir işlem olarak ziyaret etmenizi sağlar. Genel strateji, kök düğümde başlamak ve ne tür bir düğüm olduğunu belirlemektir.
 
-Düğüm türünde çocuklar varsa, özyinelemeli olarak çocukları ziyaret edin. Her alt düğümde, kök düğümünde kullanılan işlemi tekrarlayın: türünü belirleyin ve türde çocuk varsa, her bir çocuğu ziyaret edin.
+Düğüm türünün alt öğeleri varsa, yinelemeli olarak alt öğeleri ziyaret edin. Her alt düğümde, kök düğümde kullanılan işlemi yineleyin: türü belirleme ve türün alt öğeleri varsa, alt öğelerin her birini ziyaret edin.
 
-## <a name="examining-an-expression-with-no-children"></a>Çocuksuz Bir İfadeyi İnceleme
-Çok basit bir ifade ağacında her düğüm ziyaret ederek başlayalım.
-Burada sabit bir ifade oluşturur ve sonra özelliklerini inceler kod:
+## <a name="examining-an-expression-with-no-children"></a>Alt öğe Içermeyen bir Ifadeyi İnceleme
+Her düğümü çok basit bir ifade ağacında ziyaret ederek başlayalım.
+Sabit bir ifade oluşturan ve sonra özelliklerini incelediği kod aşağıda verilmiştir:
 
 ```csharp
 var constant = Expression.Constant(24, typeof(int));
@@ -33,7 +33,7 @@ Console.WriteLine($"The type of the constant value is {constant.Type}");
 Console.WriteLine($"The value of the constant value is {constant.Value}");
 ```
 
-Bu aşağıdaki leri yazdırır:
+Bu işlem şunları yazdırır:
 
 ```output
 This is an Constant expression type
@@ -41,21 +41,21 @@ The type of the constant value is System.Int32
 The value of the constant value is 24
 ```
 
-Şimdi, bu ifadeyi inceleyecek kodu yazalım ve bununla ilgili bazı önemli özellikleri yazalım. İşte o kod:
+Şimdi, bu ifadeyi inceleyecek ve ilgili bazı önemli özellikleri yazacak olan kodu yazalım. Bu kod şu şekildedir:
 
-## <a name="examining-a-simple-addition-expression"></a>Basit Bir Ek İfadenin İncelenmesi
+## <a name="examining-a-simple-addition-expression"></a>Basit bir toplama Ifadesi İnceleme
 
-Bu bölüme girişten ek örnek ile başlayalım.
+Bu bölüme giriş bölümünde ek örnekle başlayalım.
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Atamanın sağ `var` tarafı örtülü olarak yazıldığı için bu ifade ağacını bildirmek için kullanmıyorum. Bu daha derinden anlamak için, [burada](implicitly-typed-lambda-expressions.md)okuyun .
+> `var`Atamanın sağ tarafı örtük olarak yazıldığından, bu ifade ağacını bildirmek için kullanmıyorum.
 
-Kök düğüm bir `LambdaExpression`. `=>` Operatörün sağ tarafında ilginç kodu almak için, bir çocuk bulmak gerekir `LambdaExpression`. Bunu bu bölümdeki tüm ifadelerle yapacağız. Üst düğüm, `LambdaExpression`'nin dönüş türünü bulmamıza yardımcı olur.
+Kök düğüm bir `LambdaExpression` . İşlecin sağ tarafındaki ilginç kodu almak için, `=>` öğesinin alt öğelerinden birini bulmanız gerekir `LambdaExpression` . Bu bölümdeki tüm ifadelerle bunu yapacağız. Üst düğüm, öğesinin dönüş türünü bulmamıza yardımcı olur `LambdaExpression` .
 
-Bu ifadedeki her düğümü incelemek için, bir dizi düğümü özyinelemeli olarak ziyaret etmemiz gerekir. İşte basit bir ilk uygulama:
+Bu ifadedeki her bir düğümü incelemek için, bir dizi düğümü yinelemeli olarak ziyaret etmemiz gerekir. Basit bir ilk uygulama aşağıda verilmiştir:
 
 ```csharp
 Expression<Func<int, int, int>> addition = (a, b) => a + b;
@@ -95,9 +95,9 @@ The right side is a Parameter expression
         Parameter Type: System.Int32, Name: b
 ```
 
-Yukarıdaki kod örneğinde çok fazla tekrar göreceksiniz.
-Bunu temizleyelim ve daha genel amaçlı bir ifade düğümü oluşturalım. Bu da özyinelemeli bir algoritma yazmamızı gerektirecek. Herhangi bir düğüm çocuk sahibi olabilecek bir tür olabilir.
-Çocukları olan herhangi bir düğüm, bu çocukları ziyaret etmemizi ve düğümün ne olduğunu belirlememizi gerektirir. Ek işlemleri ziyaret etmek için özyinelemekullanan temizlenmiş sürüm aşağıda veda edilmiştir:
+Yukarıdaki kod örneğinde çok fazla yineleme olduğunu fark edeceksiniz.
+Bunu temizleyelim ve daha genel amaçlı bir ifade düğümü ziyaretçisi oluşturalım. Bu, özyinelemeli bir algoritma yazmamızı gerektireceğiz. Herhangi bir düğüm, alt öğelerine sahip olabilecek bir türde olabilir.
+Alt öğeleri olan herhangi bir düğüm, bu alt öğeleri ziyaret etmemizi ve bu düğümün ne olduğunu belirlemenizi ister. Ek işlemleri ziyaret eden özyineleme kullanan temizlenmiş bir sürüm aşağıda verilmiştir:
 
 ```csharp
 // Base Visitor class:
@@ -215,9 +215,9 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Bu algoritma, herhangi bir rasgele `LambdaExpression`ziyaret edebilirsiniz bir algoritmanın temelidir. Bir sürü delik vardır, yani oluşturduğum kod sadece karşılaşabileceği olası ifade ağacı düğümlerinin çok küçük bir örneğini arar. Ancak, hala ne üretir biraz öğrenebilirsiniz. (Yöntemdeki `Visitor.CreateFromExpression` varsayılan durum, yeni bir düğüm türüne rastlandığında hata konsoluna bir ileti yazdırır. Bu şekilde, yeni bir ifade türü eklemeyi bilirsiniz.)
+Bu algoritma, rastgele bir şekilde ziyaret edebildikleri bir algoritmanın temelini oluşturur `LambdaExpression` . Oluşturduğum kodun yalnızca, karşılaşabileceği ifade ağacı düğümlerinin çok küçük bir örneğine bakabilmesini sağlayan çok sayıda delik vardır. Bununla birlikte, ne kadar çok şey ürettiğini de öğrenirsiniz. (Yönteminde varsayılan durum, `Visitor.CreateFromExpression` Yeni bir düğüm türüyle karşılaşıldığında hata konsoluna bir ileti yazdırır. Bu şekilde, yeni bir ifade türü eklemeyi bilirsiniz.)
 
-Bu ziyaretçiyi yukarıda gösterilen ek ifadede çalıştırdığınızda, aşağıdaki çıktıyı alırsınız:
+Yukarıda gösterilen ekleme ifadesinde bu ziyaretçisini çalıştırdığınızda aşağıdaki çıktıyı alırsınız:
 
 ```output
 This expression is a/an Lambda expression type
@@ -238,17 +238,17 @@ The expression body is:
                 Type: System.Int32, Name: b, ByRef: False
 ```
 
-Artık daha genel bir ziyaretçi uygulaması oluştursanız, çok daha farklı türde ifadeleri ziyaret edebilir ve işleyebilirsiniz.
+Artık daha genel bir ziyaretçi uygulamasına sahip olduğunuza göre, daha birçok farklı tür ifadeyi ziyaret edebilir ve işleyebilirsiniz.
 
-## <a name="examining-an-addition-expression-with-many-levels"></a>Birçok Düzeyde Bir Ek İfadeyi İnceleme
+## <a name="examining-an-addition-expression-with-many-levels"></a>Birçok düzey içeren bir toplama Ifadesi inceleniyor
 
-Daha karmaşık bir örnek deneyelim, yine de düğüm türlerini yalnızca eklemeyle sınırlandıralım:
+Daha karmaşık bir örnek deneyelim, ancak yine de düğüm türlerini yalnızca ekleme ile sınırlandıralım:
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-Bunu ziyaretçi algoritması üzerinde çalıştırmadan önce, çıktının ne olabileceğini bulmak için bir düşünce alıştırması deneyin. İşleticinin `+` bir *ikili işleç*olduğunu unutmayın: sol ve sağ operandları temsil eden iki çocuğu olmalıdır. Doğru olabilecek bir ağaç oluşturmanın birkaç olası yolu vardır:
+Bunu ziyaretçi algoritmasında çalıştırmadan önce, çıktının ne kadar olabileceğini öğrenmek için düşündüyü deneyin. `+`İşlecin bir *ikili işleç*olduğunu unutmayın: sol ve sağ işlenenleri temsil eden iki alt öğeye sahip olması gerekir. Doğru olabilecek bir ağaç oluşturmak için birkaç olası yol vardır:
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -259,18 +259,18 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-En umut verici vurgulamak için iki olası cevaplar içine ayrım görebilirsiniz. İlk *doğru bağdaştırıcı* ifadeler temsil eder. İkinci *sol bağdaştırıcı* ifadeleri temsil eder.
-Bu iki biçimden her ikisinin de avantajı, biçimin herhangi bir rasgele ek ifade sayısına ölçeklendirmesidir.
+En fazla taahhüdün vurgulanmasını sağlamak için ayrımı iki olası yanıt halinde görebilirsiniz. İlki, *doğru ilişkilendirilebilir* ifadeleri temsil eder. İkincisi *sol ilişkilendirilebilir* ifadeleri temsil eder.
+Bu iki biçimin her ikisi de, biçimin rastgele herhangi bir dizi ek ifadeye ölçeklenmesinin avantajına sahiptir.
 
-Bu ifadeyi ziyaretçi aracılığıyla çalıştırarsanız, basit ek ifadesinin *birleştirici bırakıldığını*doğrulayan bu çıktıyı görürsünüz.
+Bu ifadeyi ziyaretçi aracılığıyla çalıştırırsanız, bu çıktıyı görürsünüz ve basit toplama ifadesinin *ilişkilendirilebilir*olduğunu doğrulayın.
 
-Bu örneği çalıştırmak ve tam ifade ağacını görmek için kaynak ifade ağacında bir değişiklik yapmam gerekiyordu. İfade ağacı tüm sabitleri içerdiğinde, ortaya çıkan ağaç `10`yalnızca . Derleyici tüm eklemeyi gerçekleştirir ve ifadeyi en basit biçimine indirir. İfadeye yalnızca bir değişken eklemek özgün ağacı görmek için yeterlidir:
+Bu örneği çalıştırmak ve tam ifade ağacına bakmak için kaynak ifade ağacında bir değişiklik yapmam gerekiyordu. İfade ağacı tüm sabitleri içerdiğinde, sonuçta elde edilen ağaç yalnızca sabit değerini içerir `10` . Derleyici tüm ekleme işlemini gerçekleştirir ve ifadeyi en basit biçimine düşürür. Özgün ağacı görmek için ifadede yalnızca bir değişken eklemek yeterlidir:
 
 ```csharp
 Expression<Func<int, int>> sum = (a) => 1 + a + 3 + 4;
 ```
 
-Bu meblağ için bir ziyaretçi oluşturun ve bu çıktıyı göreceksiniz ziyaretçiçalıştırın:
+Bu Sum için bir ziyaretçi oluşturun ve ziyaretçi çalıştırın bu çıktıyı görürsünüz:
 
 ```output
 This expression is a/an Lambda expression type
@@ -302,13 +302,13 @@ The expression body is:
                 The value of the constant value is 4
 ```
 
-Ayrıca, diğer örneklerden herhangi birini ziyaretçi kodu üzerinden çalıştırabilir ve hangi ağacı temsil ettiğinizi görebilirsiniz. Yukarıdaki `sum3` ifadenin bir örneği (derleyicinin sabiti hesaplamasını önlemek için ek bir parametreyle birlikte):
+Diğer örneklerden herhangi birini ziyaretçi kodu aracılığıyla da çalıştırabilir ve hangi ağacın temsil ettiğini görebilirsiniz. `sum3`Yukarıdaki ifadeye örnek olarak (derleyicinin sabiti bilgi işlem yapmasını engellemek için ek bir parametre ile):
 
 ```csharp
 Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
 ```
 
-İşte ziyaretçinin çıktısı:
+Ziyaretçinin çıkışı şöyledir:
 
 ```output
 This expression is a/an Lambda expression type
@@ -341,11 +341,11 @@ The expression body is:
                         Type: System.Int32, Name: b, ByRef: False
 ```
 
-Parantezlerin çıktının bir parçası olmadığını unutmayın. İfade ağacında giriş ifadesinde parantezi temsil eden düğüm yok. İfade ağacının yapısı, önceliği iletmek için gereken tüm bilgileri içerir.
+Ayraçların çıktının parçası olmadığına dikkat edin. İfade ağacında giriş ifadesindeki ayraçları temsil eden hiçbir düğüm yok. İfade ağacının yapısı, önceliği iletmek için gereken tüm bilgileri içerir.
 
 ## <a name="extending-from-this-sample"></a>Bu örnekten genişletme
 
-Örnek sadece en ilkel ifade ağaçları ile ilgilidir. Bu bölümde gördüğünüz kod yalnızca sabit tamsayıları ve ikili `+` işleci işler. Son bir örnek olarak, daha karmaşık bir ifade işlemek için ziyaretçi güncelleştirelim. Bunun için işe yarayalım:
+Örnek yalnızca en ilkel ifade ağaçları ile ilgilidir. Bu bölümde gördüğünüz kod yalnızca sabit tamsayıları ve ikili `+` işleci işler. Son bir örnek olarak, ziyaretçisini daha karmaşık bir ifadeyi işleyecek şekilde güncelleştirelim. Bunun için bu işi yapalim:
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
@@ -354,17 +354,17 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Bu kod matematiksel *faktöriyel* fonksiyon için olası bir uygulamayı temsil eder. Bu kodu yazma şeklim, Expressions'a lambda ifadeleri atayarak ifade ağaçları oluşturmanın iki sınırlamasını vurgular. İlk olarak, ifade lambdas izin verilmez. Bu döngüler, bloklar, eğer / else ifadeleri ve C # ortak diğer kontrol yapıları kullanamazsınız anlamına gelir. İfadelerle sınırlıyım. İkincisi, aynı ifadeyi tekrartekrar söyleyemem.
-Zaten bir delege olsaydı yapabilirdim, ama ifade ağacı şeklinde diyemem. İfade ağaçları [inşa](expression-trees-building.md) etme bölümünde bu sınırlamaları aşmak için teknikler öğreneceksiniz.
+Bu kod matematik *çarpınımı* işlevi için olası bir uygulamayı temsil eder. Bu kodu yazdığım şekilde, deyimlere lambda ifadeleri atayarak ifade ağaçları oluşturmanın iki sınırlaması vurgulanmıştır. İlk olarak, ifade lambdaları kullanılamaz. Bu, döngüleri, blokları, if/else deyimlerini ve C# dilinde ortak olan diğer denetim yapılarını kullanmıyorum anlamına gelir. İfadeleri kullanma sınırlıyorum. İkinci olarak aynı ifadeyi özyinelemeli olarak çağıramıyorum.
+Ben zaten bir temsilciyiysem, ancak ifade ağaç biçiminde çağıramıyorum. [İfade ağaçları oluşturma](expression-trees-building.md) bölümünde bu sınırlamaları aşmaya yönelik teknikler öğreneceksiniz.
 
-Bu ifadede, tüm bu tür düğümlerle karşılaşırsınız:
+Bu ifadede, tüm bu türlerin düğümleri ile karşılaşırsınız:
 
-1. Eşit (ikili ifade)
-2. Çarpma (ikili ifade)
-3. Koşullu (? : ifade)
-4. Yöntem Çağrı İfadesi (arama `Range()` ve `Aggregate()`)
+1. Eşittir (ikili ifade)
+2. Çarp (ikili ifade)
+3. Koşullu (? ifadesini
+4. Yöntem çağrısı Ifadesi (çağrı `Range()` ve çağırma `Aggregate()` )
 
-Ziyaretçi algoritmasını değiştirmenin bir yolu, onu yürütmeye devam etmek ve yan `default` tümcenize her ulaştığınızda düğüm türünü yazmaktır. Birkaç yinelemeden sonra, olası düğümlerin her birini görmüş olacaksınız. O zaman ihtiyacın olan her şeye sahipsin. Sonuç şu şekilde olurdu:
+Ziyaretçi algoritmasını değiştirmek için bir yol, bunu yürütmeyi sürdürmek ve yan tümcesine her ulaştığınızda düğüm türünü yazmaktır `default` . Birkaç yinelemeden sonra potansiyel düğümlerin her birini gördünüz. Ardından, ihtiyacınız olan her şey vardır. Sonuç şuna benzer olacaktır:
 
 ```csharp
 public static Visitor CreateFromExpression(Expression node)
@@ -392,7 +392,7 @@ public static Visitor CreateFromExpression(Expression node)
 }
 ```
 
-ConditionalVisitor ve MethodCallVisitor bu iki düğüm leri işlemeyi:
+ConditionalVisitor ve MethodCallVisitor bu iki düğümü işler:
 
 ```csharp
 public class ConditionalVisitor : Visitor
@@ -451,7 +451,7 @@ public class MethodCallVisitor : Visitor
 }
 ```
 
-Ve ifade ağacı için çıkış olacaktır:
+Ve ifade ağacı için çıkış şu şekilde olur:
 
 ```output
 This expression is a/an Lambda expression type
@@ -507,18 +507,18 @@ The expression body is:
                                         Type: System.Int32, Name: factor, ByRef: False
 ```
 
-## <a name="extending-the-sample-library"></a>Örnek Kitaplığı Genişletme
+## <a name="extending-the-sample-library"></a>Örnek kitaplığı genişletme
 
-Bu bölümdeki örnekler, bir ifade ağacındaki düğümleri ziyaret etmek ve incelemek için temel teknikleri gösterir. Bir ifade ağacındaki düğümleri ziyaret etme ve düğümlere erişme temel görevlerine odaklanmak için ihtiyaç duyabileceğiniz birçok eylem üzerinde parlattım.
+Bu bölümdeki örneklerde, bir ifade ağacındaki düğümleri ziyaret etmek ve incelemek için temel teknikler gösterilmektedir. Bir ifade ağacındaki düğümleri ziyaret ederek ve bunlara erişen temel görevlere odaklanmak için ihtiyacınız olabilecek çok sayıda eylemi glossed.
 
-İlk olarak, ziyaretçiler yalnızca toplamlı olan sabitleri işler. Sabit değerler başka sayısal türler olabilir ve C# dili bu türler arasındaki dönüşümleri ve promosyonları destekler. Bu kodun daha sağlam bir sürümü tüm bu yetenekleri yansıtacak.
+Birincisi, ziyaretçiler yalnızca tamsayı olan sabitleri işler. Sabit değerler başka herhangi bir sayısal tür olabilir ve C# dili bu türler arasındaki dönüşümleri ve yükseltmeleri destekler. Bu kodun daha sağlam bir sürümü tüm bu özellikleri yansıtır.
 
-Hatta son örnek olası düğüm türlerinin bir alt kümesi tanır.
-Yine de başarısız olmasına neden olacak birçok ifadeleri besleyebilirsiniz.
-.NET Standard adı <xref:System.Linq.Expressions.ExpressionVisitor> altında tam bir uygulama dahildir ve tüm olası düğüm türlerini işleyebilir.
+Son örnek bile olası düğüm türlerinin bir alt kümesini tanır.
+Yine de, başarısız olmasına neden olacak çok sayıda ifade akışı yapabilirsiniz.
+Tam bir uygulama, .NET Standard adı altında bulunur <xref:System.Linq.Expressions.ExpressionVisitor> ve tüm olası düğüm türlerini işleyebilir.
 
-Son olarak, bu makalede kullanılan kütüphane gösteri ve öğrenme için inşa edilmiştir. Optimize edilmiş değil. Yapıları çok net yapmak ve düğümleri ziyaret etmek ve orada ne olduğunu analiz etmek için kullanılan teknikleri vurgulamak için yazdım. Bir üretim uygulaması performansa benden daha fazla önem verirdi.
+Son olarak, bu makalede kullandığım kitaplık tanıtım ve öğrenme için oluşturulmuştur. En iyi duruma getirilmemiştir. Bu yapıyı, yapıları çok açık hale getirmek ve düğümleri ziyaret etmek ve ne olduğunu çözümlemek için kullanılan teknikleri vurgulamak için yazdım. Bir üretim uygulamasının performanstan daha fazla dikkat edin.
 
-Bu sınırlamalar bile, iyi okuma ve ifade ağaçları anlamak algoritmaları yazma yolunda olmalıdır.
+Bu sınırlamalara rağmen, ifade ağaçlarını okuyan ve anlayan algoritmalar yazmak için size iyi bir yol olmalıdır.
 
-[Sonraki -- Bina İfadeleri](expression-trees-building.md)
+[Next--Ifadeleri oluşturma](expression-trees-building.md)

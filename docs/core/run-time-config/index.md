@@ -2,12 +2,12 @@
 title: Çalışma zamanı yapılandırma seçenekleri
 description: Çalışma zamanı yapılandırma ayarlarını kullanarak .NET Core uygulamalarını nasıl yapılandıracağınızı öğrenin.
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506795"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761960"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core çalışma zamanı yapılandırma ayarları
 
@@ -20,7 +20,7 @@ ms.locfileid: "82506795"
 > [!NOTE]
 > Bu belge devam eden bir çalışmadır. Burada sunulan bilgilerin eksik veya yanlış olduğunu fark ederseniz, bunun hakkında bilgi sahibi olmak için [bir sorun açın](https://github.com/dotnet/docs/issues) veya sorunu çözmek için [bir çekme isteği gönderin](https://github.com/dotnet/docs/pulls) . DotNet/docs deposu için çekme istekleri gönderme hakkında daha fazla bilgi için bkz. [katkıda bulunan Kılavuzu](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
 
-.NET Core, çalışma zamanı uygulama davranışını yapılandırmak için aşağıdaki mekanizmaları sağlar:
+.NET Core, çalışma zamanında uygulama davranışını yapılandırmak için aşağıdaki mekanizmaları sağlar:
 
 - [Runtimeconfig. JSON dosyası](#runtimeconfigjson)
 
@@ -28,7 +28,10 @@ ms.locfileid: "82506795"
 
 - [Ortam değişkenleri](#environment-variables)
 
-Bazı yapılandırma değerleri, <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> yöntemi çağırarak programlı bir şekilde ayarlanabilir.
+> [!TIP]
+> Bir ortam değişkeni kullanarak bir çalışma zamanı seçeneğinin yapılandırılması, ayarı tüm .NET Core uygulamalarına uygular. *Runtimeconfig. JSON* veya proje dosyasında bir çalışma zamanı seçeneğinin yapılandırılması, ayarı yalnızca bu uygulamaya uygular.
+
+Bazı yapılandırma değerleri, yöntemi çağırarak programlı bir şekilde ayarlanabilir <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .
 
 Belgelerin bu bölümündeki makaleler, bir kategoriye göre düzenlenir, örneğin [hata ayıklama](debugging-profiling.md) ve [çöp toplama](garbage-collector.md). Uygun olduğunda, yapılandırma seçenekleri için *runtimeconfig. JSON* dosyaları, MSBuild özellikleri, ortam değişkenleri ve .NET Framework projeler için çapraz başvuru, *app. config* dosyaları için gösterilir.
 
@@ -50,7 +53,7 @@ Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde *[A
 
 ### <a name="example-appnameruntimeconfigjson-file"></a>Örnek [AppName]. runtimeconfig. JSON dosyası
 
-Seçenekleri çıkış JSON dosyasına yerleştiriyorsanız, `runtimeOptions` özelliğin altına yerleştirin.
+Seçenekleri çıkış JSON dosyasına yerleştiriyorsanız, özelliğin altına yerleştirin `runtimeOptions` .
 
 ```json
 {
@@ -106,11 +109,11 @@ Aşağıda, çalışma zamanı davranışını yapılandırmak için MSBuild öz
 </Project>
 ```
 
-Çalışma zamanı davranışını yapılandırmaya yönelik MSBuild özellikleri, her bir alana yönelik her bir makalede (örneğin, [çöp toplama](garbage-collector.md)) belirtilmiştir.
+Çalışma zamanı davranışını yapılandırmaya yönelik MSBuild özellikleri, her bir alana yönelik her bir makalede (örneğin, [çöp toplama](garbage-collector.md)) belirtilmiştir. Bunlar ayrıca SDK stili projelerin MSBuild özellikleri başvurusunun [çalışma zamanı yapılandırması](../project-sdk/msbuild-props.md#run-time-configuration-properties) bölümünde listelenir.
 
 ## <a name="environment-variables"></a>Ortam değişkenleri
 
-Ortam değişkenleri, bazı çalışma zamanı yapılandırma bilgilerini sağlamak için kullanılabilir. Ortam değişkenleri olarak belirtilen yapılandırma örneklerinin genellikle **COMPlus_** öneki vardır.
+Ortam değişkenleri, bazı çalışma zamanı yapılandırma bilgilerini sağlamak için kullanılabilir. Bir ortam değişkeni kullanarak bir çalışma zamanı seçeneğinin yapılandırılması, ayarı tüm .NET Core uygulamalarına uygular. Ortam değişkenleri olarak belirtilen yapılandırma örneklerinin genellikle **COMPlus_** öneki vardır.
 
 Ortam değişkenlerini Windows Denetim masasından, komut satırında veya <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> yöntemini hem Windows hem de UNIX tabanlı sistemlerde çağırarak programlı bir şekilde tanımlayabilirsiniz.
 

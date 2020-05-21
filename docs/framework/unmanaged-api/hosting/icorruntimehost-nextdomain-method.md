@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 36eacedfb83c1248fc252091872bcfeecdbcd874
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 079164d15141983711e976e0209cc22c818d9cd9
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139501"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760426"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain Yöntemi
 Numaralandırmadaki bir sonraki etki alanına bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT NextDomain (  
@@ -36,10 +36,10 @@ HRESULT NextDomain (
   
 ## <a name="parameters"></a>Parametreler  
  `hEnum`  
- 'ndaki [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)çağrısıyla edinilen Numaralandırıcı.  
+ 'ndaki [EnumDomains](icorruntimehost-enumdomains-method.md)çağrısıyla edinilen Numaralandırıcı.  
   
  `pAppDomain`  
- dışı Numaralandırmadaki bir sonraki etki alanını temsil eden <xref:System._AppDomain?displayProperty=nameWithType> türüne yönelik bir arabirim işaretçisi veya daha fazla etki alanı yoksa null.  
+ dışı <xref:System._AppDomain?displayProperty=nameWithType>Numaradaki bir sonraki etki alanını temsil eden tür için bir arabirim işaretçisi veya daha fazla etki alanı yoksa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -47,11 +47,11 @@ HRESULT NextDomain (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı veya numaralandırmada başka etki alanı yok.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -63,4 +63,4 @@ HRESULT NextDomain (
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

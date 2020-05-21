@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: f2249d10159b1ff0be7ead0783efb8a2742d26b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 38042876cf4397418d2e6e6ed2bfbeb2df2d62d8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139611"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762298"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain Yöntemi
-Geçerli iş parçacığında yüklü olan etki alanını temsil eden <xref:System.AppDomain?displayProperty=nameWithType> türünde bir arabirim işaretçisi alır.  
+<xref:System.AppDomain?displayProperty=nameWithType>Geçerli iş parçacığında yüklü olan etki alanını temsil eden türün bir arabirim işaretçisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CurrentDomain (  
@@ -35,7 +35,7 @@ HRESULT CurrentDomain (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppDomain`  
- dışı İş parçacığının geçerli uygulama etki alanını temsil eden <xref:System.AppDomain?displayProperty=nameWithType> türünde bir işaretçi. Bu işaretçi `IUnknown`yazılır, bu nedenle çağıranlar genellikle <xref:System._AppDomain>türünde bir işaretçi elde etmek için `QueryInterface` çağırmalıdır.  
+ dışı <xref:System.AppDomain?displayProperty=nameWithType>İş parçacığının geçerli uygulama etki alanını temsil eden tür işaretçisi. Bu işaretçi yazıldığı `IUnknown` için çağıranlar genellikle `QueryInterface` türünde bir işaretçi almak için çağrı çağırmalıdır <xref:System._AppDomain> .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -43,11 +43,11 @@ HRESULT CurrentDomain (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -59,4 +59,4 @@ HRESULT CurrentDomain (
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

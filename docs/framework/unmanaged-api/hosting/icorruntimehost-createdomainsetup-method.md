@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa1ce70311cd4ef0204c1c31efee8bd7b313c81d
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139654"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762337"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup Yöntemi
-Bir <xref:System.AppDomainSetup?displayProperty=nameWithType> örneğine IAppDomainSetup türünde bir arabirim işaretçisi alır. `IAppDomainSetup`, bir uygulama etki alanının oluşturulmadan önce özelliklerini yapılandırmak için yöntemler sağlar.  
+Bir örneğe IAppDomainSetup türünde bir arabirim işaretçisi alır <xref:System.AppDomainSetup?displayProperty=nameWithType> . `IAppDomainSetup`, bir uygulama etki alanının oluşturulmadan önce özelliklerini yapılandırmak için yöntemler sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateDomainSetup (  
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppDomainSetup`  
- dışı <xref:System.AppDomainSetup?displayProperty=nameWithType> örneğine yönelik arabirim işaretçisi. Bu parametre `IUnknown`olarak yazılır, bu nedenle çağıranlar genellikle `IAppDomainSetup`türünde bir arabirim işaretçisi almak için bu işaretçi üzerinde `QueryInterface` çağırmalıdır.  
+ dışı Bir örneğe yönelik arabirim işaretçisi <xref:System.AppDomainSetup?displayProperty=nameWithType> . Bu parametre olarak yazılır `IUnknown` , bu nedenle çağıranlar `QueryInterface` türü bir arabirim işaretçisi almak için genellikle bu işaretçiye çağrı yapmalıdır `IAppDomainSetup` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
@@ -43,14 +43,14 @@ HRESULT CreateDomainSetup (
 |-------------|-----------------|  
 |S_OK|İşlem başarılı oldu.|  
 |S_FALSE|İşlem tamamlanamadı.|  
-|E_FAıL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAıL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen, çok zararlı bir hata oluştu. Bir yöntem E_FAIL döndürürse, ortak dil çalışma zamanı (CLR) işlemde artık kullanılamaz. Herhangi bir barındırma API 'si için sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntemden döndürülen işaretçi genellikle [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metoduna parametre olarak geçirilir.  
+ Bu yöntemden döndürülen işaretçi genellikle [CreateDomainEx](icorruntimehost-createdomainex-method.md) metoduna parametre olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -64,4 +64,4 @@ HRESULT CreateDomainSetup (
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

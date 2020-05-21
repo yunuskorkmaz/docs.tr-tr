@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 36851ac4573d0d65caffaa3f82a1f6fc8440a2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092748"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762168"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags Yöntemi
-Çalışma zamanını başlatmak için kullanılacak başlangıç bayraklarını ve ana bilgisayar yapılandırma dosyasını ayarlar. Bu yöntem [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ve [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) işlevlerinde `startupFlags` parametresinin kullanımını yerini alır.  
+Çalışma zamanını başlatmak için kullanılacak başlangıç bayraklarını ve ana bilgisayar yapılandırma dosyasını ayarlar. Bu yöntem `startupFlags` , [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ve [CorBindToRuntimeHost](corbindtoruntimehost-function.md) işlevlerinde parametresinin kullanımını yerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetDefaultStartupFlags(  
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>Parametreler  
  `dwStartupFlags`  
- 'ndaki Ayarlanacak konak başlangıç bayrakları. [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ve [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) işlevleriyle aynı bayrakları kullanın.  
+ 'ndaki Ayarlanacak konak başlangıç bayrakları. [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ve [CorBindToRuntimeHost](corbindtoruntimehost-function.md) işlevleriyle aynı bayrakları kullanın.  
   
  `pwzHostConfigFile`  
  'ndaki Ayarlanacak ana bilgisayar yapılandırma dosyasının dizin yolu.  
@@ -48,19 +48,19 @@ HRESULT SetDefaultStartupFlags(
 |S_OK|Yöntem başarıyla tamamlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çok iş parçacıklı bir ana bilgisayar çağrıları bu yöntemle eşitlemelidir. Aksi takdirde, A iş parçacığı B, bir `SetStartupFlags` çağrısını tamamladıktan sonra ve iş parçacığı B çalışma zamanını başlatmadan önce `SetStartupFlags` yöntemi çağırabilir.  
+ Çok iş parçacıklı bir ana bilgisayar çağrıları bu yöntemle eşitlemelidir. Aksi takdirde, A iş parçacığı b iş parçacığını `SetStartupFlags` başlattıktan önce ve ' a çağrı tamamladıktan sonra yöntemini çağırabilir `SetStartupFlags` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MetaHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRRuntimeInfo Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo Arabirimi](iclrruntimeinfo-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [Barındırma](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2edd0a10-77fb-4173-91eb-f2970cc364d0
 topic_type:
 - apiref
-ms.openlocfilehash: 483d647028d1a05ea20ab836730099afe3e09374
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e071f9cba7e991c59bf697647e0e4badea57573a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127841"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762051"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator Arabirimi
 Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama hatalarını doğrulamak için yöntemler sağlar.  
@@ -28,20 +28,20 @@ Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[FormatEventInfo Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hatası hakkında ayrıntılı bir ileti alır.|  
-|[Validate Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Belirtilen dosyadaki taşınabilir yürütülebilir dosyayı veya Microsoft ara dilini (MSIL) doğrular.|  
+|[FormatEventInfo Yöntemi](iclrvalidator-formateventinfo-method.md)|Belirtilen doğrulama hatası hakkında ayrıntılı bir ileti alır.|  
+|[Validate Yöntemi](iclrvalidator-validate-method.md)|Belirtilen dosyadaki taşınabilir yürütülebilir dosyayı veya Microsoft ara dilini (MSIL) doğrular.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** IValidator. IDL, IValidator. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLRRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [ICLRErrorReportingManager Arabirimi](iclrerrorreportingmanager-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [CLRRuntimeHost Coclass’ı](clrruntimehost-coclass.md)
