@@ -1,48 +1,48 @@
 ---
-ms.openlocfilehash: 8790637c31d503455eb8ba722cca827c2a24b7c9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: a4476fbff572c004632153e5a98812c241efca57
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021466"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721069"
 ---
-### <a name="openssl-versions-on-macos"></a>macOS'ta OpenSSL sürümleri
+### <a name="openssl-versions-on-macos"></a>MacOS üzerinde OpenSSL sürümleri
 
-.NET Core 3.0 ve daha sonra macOS'taki çalışma süreleri artık OpenSSL 1.1.x sürümlerini <xref:System.Security.Cryptography.AesCcm> <xref:System.Security.Cryptography.AesGcm>OpenSSL <xref:System.Security.Cryptography.RSAOpenSsl>1.0.x sürümleriiçin <xref:System.Security.Cryptography.SafeEvpPKeyHandle> <xref:System.Security.Cryptography.DSAOpenSsl> <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl>tercih ediyor.
+MacOS 'ta .NET Core 3,0 ve üzeri çalışma zamanları artık OpenSSL 1.1. x sürümlerini,,,,, <xref:System.Security.Cryptography.AesCcm> <xref:System.Security.Cryptography.AesGcm> <xref:System.Security.Cryptography.DSAOpenSsl> <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl> <xref:System.Security.Cryptography.RSAOpenSsl> ve <xref:System.Security.Cryptography.SafeEvpPKeyHandle> türleri için OpenSSL 1.0. x sürümlerine tercih ediyor.
 
-.NET Core 2.1 çalışma süresi artık OpenSSL 1.1.x sürümlerini destekler, ancak yine de OpenSSL 1.0.x sürümlerini tercih eder.
+.NET Core 2,1 çalışma zamanı artık OpenSSL 1.1. x sürümlerini destekliyor, ancak yine de OpenSSL 1.0. x sürümlerini tercih ediyor.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-Daha önce,.NET Core çalışma zamanı OpenSSL ile etkileşime geçen türler için macOS'ta OpenSSL 1.0.x sürümlerini kullansA. En son OpenSSL 1.0.x sürümü OpenSSL 1.0.2, şimdi destek dışında. OpenSSL'nin desteklenen sürümlerinde OpenSSL kullanan türleri tutmak için .NET Core 3.0 ve daha sonraki çalışma süreleri artık macOS'ta OpenSSL'nin yeni sürümlerini kullansın.
+Daha önce .NET Core çalışma zamanı, OpenSSL ile etkileşime geçen türler için macOS üzerinde OpenSSL 1.0. x sürümlerini kullandı. En son OpenSSL 1.0. x sürümü olan OpenSSL 1.0.2 artık destek dışındadır. OpenSSL 'nin desteklenen sürümlerinde OpenSSL kullanan türleri tutmak için, .NET Core 3,0 ve üzeri çalışma zamanları artık macOS 'ta OpenSSL 'nin daha yeni sürümlerini kullanıyor.
 
-Bu değişiklikle, macOS'taki .NET Core çalışma sürelerini içeren davranış aşağıdaki gibidir:
+Bu değişiklik ile, macOS 'ta .NET Core çalışma zamanları için davranış aşağıdaki gibidir:
 
-- .NET Core 3.0 ve sonraki sürüm çalışma süreleri OpenSSL 1.1.x'i kullanır, eğer varsa ve yalnızca 1.1.x sürümü yoksa OpenSSL 1.0.x'e geri döner.
+- .NET Core 3,0 ve sonraki sürüm çalışma zamanları, varsa OpenSSL 1.1. x kullanır ve yalnızca 1.1. x sürümü yoksa OpenSSL 1.0. x ' e geri döner.
 
-  OpenSSL interop türlerini özel P/Invokes ile kullanan arayanlar <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> için, açıklamalartaki kılavuzu izleyin. <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion> Değeri kontrol etmezseniz uygulamanız çökebilir.
+  Özel P/Invoke ile OpenSSL birlikte çalışma türlerini kullanan çağıranlar için, açıklamalar bölümündeki yönergeleri izleyin <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> . Değeri denetmezseniz uygulamanız kilitlenebilir <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion> .
 
-- .NET Core 2.1 çalışma süresi varsa OpenSSL 1.0.x kullanır ve varsa OpenSSL 1.1.x sürümü yoksa geri düşer.
+- .NET Core 2,1 çalışma zamanı, varsa OpenSSL 1.0. x kullanır ve kullanılabilir 1.0. x sürümü yoksa OpenSSL 1.1. x ' e geri döner.
 
-  <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> Özellik .NET Core 2.1'de bulunmadığından, 2.1 çalışma süresi OpenSSL'in önceki sürümünü tercih eder, bu nedenle OpenSSL sürümü çalışma zamanında güvenilir bir şekilde belirlenemez.
+  2,1 çalışma zamanı, OpenSSL 'nin önceki sürümünü tercih eder çünkü <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> özellik .NET Core 2,1 ' de mevcut olmadığından, OpenSSL sürümü çalışma zamanında güvenilir bir şekilde belirlenemez.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-- .NET Çekirdek 2.1.16
-- .NET Çekirdek 3.0.3
-- .NET Çekirdek 3.1.2
+- .NET Core 2.1.16
+- .NET Core 3.0.3
+- .NET Core 3.1.2
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-- Artık gerekli değilse OpenSSL sürüm 1.0.2'yi kaldırın.
+- Artık gerekmiyorsa OpenSSL sürüm 1.0.2 'yi kaldırın.
 
-- OpenSSL 1.1.x'i <xref:System.Security.Cryptography.AesCcm>yüklerseniz , <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl>, <xref:System.Security.Cryptography.RSAOpenSsl> <xref:System.Security.Cryptography.AesGcm> <xref:System.Security.Cryptography.DSAOpenSsl>, <xref:System.Security.Cryptography.SafeEvpPKeyHandle> , , veya türleri kullanın.
+- ,,,,, <xref:System.Security.Cryptography.AesCcm> <xref:System.Security.Cryptography.AesGcm> <xref:System.Security.Cryptography.DSAOpenSsl> <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> <xref:System.Security.Cryptography.ECDsaOpenSsl> <xref:System.Security.Cryptography.RSAOpenSsl> Veya <xref:System.Security.Cryptography.SafeEvpPKeyHandle> türlerini kullanıyorsanız OpenSSL 1.1. x ' i yükler.
 
-- OpenSSL interop türlerini özel P/Invokes ile kullanıyorsanız, <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> açıklamalartaki kılavuzu izleyin.
+- OpenSSL birlikte çalışma türlerini özel P/Invoke ile birlikte kullanıyorsanız, açıklamalar bölümündeki yönergeleri izleyin <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> .
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
@@ -56,7 +56,7 @@ Bu değişiklikle, macOS'taki .NET Core çalışma sürelerini içeren davranı�
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Security.Cryptography.AesCcm``
 - `T:System.Security.Cryptography.AesGcm`

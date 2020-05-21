@@ -1,21 +1,21 @@
 ---
-ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 3dfacadb5127319d4ce27f367803637cfb1ed00f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888154"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721579"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>Windows Formlarından Kaldırılan Yinelenen API'ler
+### <a name="duplicated-apis-removed-from-windows-forms"></a>Yinelenen API 'Ler Windows Forms kaldırıldı
 
-.NET Core 3.0 Preview <xref:System.Windows.Forms?displayProperty=fullName> 4'ten başlayarak ad alanında yanlışlıkla yinelenen bir dizi API ,NET Core 3.0 RC1'de kaldırıldı.
+.NET Core 3,0 Preview 4 ' te başlayan ad alanında yanlışlıkla çoğaltılan bir dizi API 'Ler <xref:System.Windows.Forms?displayProperty=fullName> .net core 3,0 RC1 sürümünde kaldırılmıştır.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3.0 Preview 4, <xref:System.Windows.Forms?displayProperty=fullName> <xref:System.ComponentModel.Design?displayProperty=fullName> ad alanında zaten var olan ad alanında yanlışlıkla bir dizi türü yineledi. .NET Core 3.0 RC1 ile başlayarak, bu yinelenen türleri artık kullanılamaz. Aşağıdaki tabloda özgün türü ve yinelenen türü listelenir:
+.NET Core 3,0 Preview 4 istenmeden yinelenen ad alanında zaten varolan bir tür türü <xref:System.Windows.Forms?displayProperty=fullName> <xref:System.ComponentModel.Design?displayProperty=fullName> . .NET Core 3,0 RC1 ile başlayarak, bu yinelenen türler artık kullanılamaz. Aşağıdaki tabloda, özgün tür ve onun yinelenen türü listelenmektedir:
 
 > [!div class="mx-tdCol2BreakAll"]
-> |Orijinal tür|Yinelenen tür|
+> |Özgün tür|Yinelenen tür|
 > |---|---|
 > |<xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs?displayProperty=fullName>|`System.Windows.Forms.DesignerActionListsChangedEventArgs`|
 > |<xref:System.ComponentModel.Design.DesignerActionListsChangedEventHandler?displayProperty=fullName>|`System.Windows.Forms.DesignerActionListsChangedEventHandler`|
@@ -23,13 +23,13 @@ ms.locfileid: "80888154"
 > |<xref:System.ComponentModel.Design.DesignerActionUIService?displayProperty=fullName>|`System.Windows.Forms.DesignerActionUIService`|
 > |<xref:System.ComponentModel.Design.DesignerCommandSet?displayProperty=fullName>|`System.Windows.Forms.DesignerCommandSet`|
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 RC1
+3,0 RC1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Tablonun **Özgün türü** sütununda gösterildiği gibi, özgün türe başvurmak için kodu güncelleştirin.
+Kodu, tablonun **özgün tür** sütununda gösterildiği gibi özgün türe başvuracak şekilde güncelleştirin.
 
 #### <a name="category"></a>Kategori
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

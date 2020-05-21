@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 57ca2ad839aab8d61da1a929660920efe1190334
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2617f27dfd6bb527ff6d408fae6382075f24ae
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147542"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721361"
 ---
-### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute başka bir derleme taşındı
+### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute başka bir derlemeye taşındı
 
-Sınıf <xref:System.ComponentModel.TypeDescriptionProviderAttribute> taşındı.
+<xref:System.ComponentModel.TypeDescriptionProviderAttribute>Sınıf taşınmış.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 2.2 ve önceki <xref:System.ComponentModel.TypeDescriptionProviderAttribute> sürümlerinde, class *System.ComponentModel.TypeConverter* derlemesinde bulunur.
+.NET Core 2,2 ve önceki sürümlerinde, <xref:System.ComponentModel.TypeDescriptionProviderAttribute> sınıfı *System. ComponentModel. TypeConverter* derlemesinde bulunur.
 
-.NET Core 3.0 ile başlayarak *System.ObjectModel* derlemesinde bulunur.
+.NET Core 3,0 ile başlayarak, *System. ObjectModel* derlemesinde bulunur.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu değişiklik yalnızca tür gibi <xref:System.ComponentModel.TypeDescriptionProviderAttribute> <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> bir yöntem veya tür belirli bir derleme <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> olduğunu varsayar aşırı yük çağırarak türü yüklemek için yansıma kullanan uygulamaları etkiler. Bu durumda, yöntem çağrısında başvurulan derleme, türün yeni derleme konumunu yansıtacak şekilde güncelleştirilmelidir.
+Bu değişiklik yalnızca, <xref:System.ComponentModel.TypeDescriptionProviderAttribute> <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> veya <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> türü belirli bir derlemede olduğunu varsayan bir aşırı yüklemesi çağırarak, türü yüklemek için yansıma kullanan uygulamaları etkiler. Bu durumda, yöntem çağrısında başvurulan derleme, türün yeni derleme konumunu yansıtacak şekilde güncellenmelidir.
 
 #### <a name="category"></a>Kategori
 
@@ -34,7 +34,7 @@ Yok.
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

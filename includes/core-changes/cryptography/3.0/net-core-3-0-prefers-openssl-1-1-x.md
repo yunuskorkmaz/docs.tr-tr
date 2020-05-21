@@ -1,32 +1,32 @@
 ---
-ms.openlocfilehash: 65d8ca480d41a3807473583355fe8be41e0e9701
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 877f9d99b660c4af843e4d8d525219c1df6c99a9
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275095"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721052"
 ---
-### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 OpenSSL 1.1.x openssl 1.0.x tercih
+### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder
 
-Birden fazla Linux dağıtımında çalışan .NET Core for Linux, OpenSSL 1.0.x ve OpenSSL 1.1.x'i destekleyebilir.  .NET Core 2.1 ve .NET Core 2.2 önce 1.0.x arayın, sonra 1.1.x'e geri düşer; .NET Core 3.0 önce 1.1.x arar. Bu değişiklik, yeni şifreleme standartları için destek eklemek için yapıldı.
+Birden çok Linux dağıtımı arasında çalışarak Linux için .NET Core, hem OpenSSL 1.0. x hem de OpenSSL 1.1. x ' i destekleyebilir.  .NET Core 2,1 ve .NET Core 2,2 önce 1.0. x için arama yapın ve ardından 1.1. x ' e geri dönün ve .NET Core 3,0, önce 1.1. x için arama yapar. Yeni şifreleme standartları desteği eklemek için bu değişiklik yapılmıştır.
 
-Bu değişiklik, .NET Core'daki OpenSSL'ye özgü interop türleri ile platform interop yapan kitaplıkları veya uygulamaları etkileyebilir.
+Bu değişiklik, .NET Core 'da OpenSSL 'e özgü birlikte çalışma türleriyle platform birlikte çalışabilirliğine yönelik kitaplıkları veya uygulamaları etkileyebilir.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 2.2 ve önceki sürümlerde, çalışma zamanı OpenSSL 1.0.x'i 1.1.x'in üzerine yüklemeyi tercih eder. Bu openssl ile interop için <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> türleri ve libcrypto.so.1.0.0 / libcrypto.so.1.0 / libcrypto.so.10 tercihe göre kullanılır anlamına gelir.
+.NET Core 2,2 ve önceki sürümlerinde, çalışma zamanı OpenSSL 1.0. x sürümünü 1.1. x üzerinden yüklemeyi tercih eder. Bu, <xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> OpenSSL ile birlikte çalışabilirlik için ve türlerinin libşifre ile kullanıldığı anlamına gelir. bu nedenle. 1.0.0/libşifre. so. 1.0/libşifre. so. 10 tercihe göre.
 
-.NET Core 3.0 ile başlayarak, çalışma zamanı OpenSSL 1.0.x üzerinden OpenSSL <xref:System.IntPtr> 1.1.x yüklemeyi tercih eder, bu nedenle OpenSSL ile interop <xref:System.Runtime.InteropServices.SafeHandle> türleri libcrypto.so.1.1 / libcrypto.so.11 / libcrypto.so.1.1.1.0 / crypto lib.so.so.1.1.1.1.1 tercihe göre kullanılır. Sonuç olarak, OpenSSL ile doğrudan çalışan kitaplıklar ve uygulamalar,.NET Core 2.1 veya .NET Core 2.2'den yükseltme yaparken .NET Core'a maruz kalan değerlerle uyumsuz işaretçilere sahip olabilir.
+.NET Core 3,0 ile başlayarak, çalışma zamanı OpenSSL 1.0. x üzerinden OpenSSL 1.1. x yüklemesini tercih eder, bu <xref:System.IntPtr> nedenle <xref:System.Runtime.InteropServices.SafeHandle> OpenSSL ile birlikte çalışabilirlik için ve türleri libşifre ile birlikte kullanılır. bu nedenle. 1.1/libşifre. so. 11/libşifre. so. 1.1.0/libşifre. bu. Sonuç olarak, OpenSSL ile birlikte çalışan kitaplıklar ve uygulamalar, .NET Core 2,1 veya .NET Core 2,2 ' den yükseltirken .NET Core tarafından sunulan değerlerle uyumsuz işaretçilere sahip olabilir.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-OpenSSL ile doğrudan işlem yapan kitaplıklar ve uygulamalar, OpenSSL'nin .NET Core çalışma zamanı ile aynı sürümünü kullandıklarından emin olmak için dikkatli olmalıdır.
+OpenSSL ile doğrudan işlem yapan kitaplıklar ve uygulamaların, .NET Core çalışma zamanı ile aynı OpenSSL sürümünü kullandığından emin olmak için dikkatli olması gerekir.
 
-.NET Core şifreleme <xref:System.IntPtr> türlerini doğrudan OpenSSL ile kullanan <xref:System.Runtime.InteropServices.SafeHandle> tüm kitaplıklar veya uygulamalar, işaretçilerin <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> uyumlu olduğundan emin olmak için kullandıkları kitaplığın sürümünü yeni özellik ile karşılaştırmalıdır.
+<xref:System.IntPtr> <xref:System.Runtime.InteropServices.SafeHandle> Doğrudan OpenSSL Ile .NET Core şifreleme türlerinden veya kullanan tüm kitaplıklar veya uygulamalar <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> , işaretçilerin uyumlu olduğundan emin olmak için yeni özellik ile birlikte kullandıkları kitaplığın sürümünü karşılaştırmalıdır.
 
 #### <a name="category"></a>Kategori
 
@@ -51,7 +51,7 @@ OpenSSL ile doğrudan işlem yapan kitaplıklar ve uygulamalar, OpenSSL'nin .NET
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Security.Cryptography.SafeEvpPKeyHandle.#ctor`
 - `M:System.Security.Cryptography.RSAOpenSsl.#ctor(System.IntPtr)`

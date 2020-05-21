@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b35e99b1516c3236d07153cf0b69dae55a4bff7d
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643958"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721697"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute bazı Windows Forms türlerinden kaldırıldı
 
-Bilinen <xref:System.SerializableAttribute> ikili serileştirme senaryoları olmayan bazı Windows Forms sınıflarından kaldırıldı.
+, <xref:System.SerializableAttribute> Bilinen bir ikili serileştirme senaryosu olmayan bazı Windows Forms sınıflarından kaldırılmıştır.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-Aşağıdaki türler .NET Framework <xref:System.SerializableAttribute> ile dekore edilmiştir, ancak öznitelik .NET Core kaldırıldı:
+Aşağıdaki türler <xref:System.SerializableAttribute> .NET Framework içindeki ile tasarlanmıştır, ancak öznitelik .NET Core 'da kaldırılmıştır:
 
 - `System.InvariantComparer`
 - <xref:System.ComponentModel.Design.ExceptionCollection?displayProperty=nameWithType>
@@ -26,17 +26,17 @@ Aşağıdaki türler .NET Framework <xref:System.SerializableAttribute> ile deko
 - `System.Windows.Forms.NativeMethods.MSOCRINFOSTRUCT`
 - `System.Windows.Forms.NativeMethods.MSG`
 
-Tarihsel olarak, bu serileştirme mekanizması ciddi bakım ve güvenlik endişeleri olmuştur. `SerializableAttribute` Türleri korumak, bu türlerin sürümden sürüme serileştirme değişiklikleri ve potansiyel olarak çerçeveden çerçeveye serileştirme değişiklikleri için sınanması gerektiği anlamına gelir. Bu, bu tür geliştirmek için daha zor hale getirir ve korumak için pahalıya mal olabilir. Bu türler, özniteliği kaldırmanın etkisini en aza indiren bilinen ikili serileştirme senaryolarına sahip değildir.
+Tarihsel olarak, bu serileştirme mekanizması ciddi bakım ve güvenlik sorunlarına sahipti. `SerializableAttribute`Türlerin sürdürülmesi, bu türlerin sürümden sürüme serileştirme değişiklikleri ve potansiyel olarak çerçeve serileştirme değişiklikleri için test olması gerektiği anlamına gelir. Bu, bu türleri daha da gelişmesini zorlaştırır ve bakım açısından maliyetli olabilir. Bu türlerin bilinen bir ikili serileştirme senaryosu yoktur, bu da özniteliği kaldırmanın etkilerini en aza indirir.
 
-Daha fazla bilgi için [Ikili serileştirme](~/docs/standard/serialization/binary-serialization.md)ye bakın.
+Daha fazla bilgi için bkz. [ikili serileştirme](~/docs/standard/serialization/binary-serialization.md).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 Önizleme 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu tür serileştirilebilir olarak işaretlenmiş bağlı olabilecek tüm kodu güncelleştirin.
+Seri hale getirilebilir olarak işaretlenmekte olan bu türlere bağlı olabilecek tüm kodları güncelleştirin.
 
 #### <a name="category"></a>Kategori
 
@@ -44,11 +44,11 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- None
+- Yok
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

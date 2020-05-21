@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 7f528510e4158dad71280a7b1f269a231b8c60f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a35de09b9a7bb9686433205359c3cc55954c29c3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116359"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721444"
 ---
-### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Microsoft.VisualBasic.Devices ad alanında türleri kullanılamıyor
+### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Microsoft. VisualBasic. Devices ad alanındaki türler kullanılamıyor
 
-<xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> Ad alanındaki türler kullanılamıyor.
+<xref:Microsoft.VisualBasic.Devices?displayProperty=fullName>Ad alanındaki türler kullanılamıyor.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-.NET Core 3.0 Önizleme 8
+.NET Core 3,0 Preview 8
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-<xref:Microsoft.VisualBasic.Devices?displayProperty=fullName> Ad alanındaki türler bazı .NET Core 3.0 Önizleme sürümlerinde kullanılabilirdi. .NET Core 3.0 Preview 9 ile başlayarak artık kullanılamazlar.
+<xref:Microsoft.VisualBasic.Devices?displayProperty=fullName>Ad alanındaki türler, bazı .NET Core 3,0 önizleme sürümlerinde mevcuttur. .NET Core 3,0 Preview 9 ' dan itibaren artık kullanılabilir değildir.
 
-Türler, gereksiz derleme bağımlılıklarını veya sonraki sürümlerde değişiklikleri kırmayı önlemek için kaldırıldı.
+Gereksiz bütünleştirilmiş kod bağımlılıklarından veya sonraki sürümlerde son değişikliklerden kaçınmak için türler kaldırılmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Kodunuz <xref:Microsoft.VisualBasic.Devices> türlerin ve üyelerinin kullanımına bağlıysa, .NET sınıf kitaplığında karşılık gelen bir türü veya üyeyi kullanabilirsiniz. Örneğin, <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> sınıfa eşdeğer işlevsellik <xref:System.DateTime?displayProperty=nameWithType> ve <xref:System.Environment?displayProperty=nameWithType> türleri tarafından sağlanır ve <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> sınıfa eşdeğer işlevsellik <xref:System.IO.Ports?displayProperty=nameWithType> ad alanındaki türler tarafından sağlanır.
+Kodunuz <xref:Microsoft.VisualBasic.Devices> türlerin ve üyelerinin kullanımına bağımlıysa, .NET sınıf kitaplığı 'nda karşılık gelen bir türü veya üyeyi kullanabilirsiniz. Örneğin, sınıfına denk işlevsellik <xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> <xref:System.DateTime?displayProperty=nameWithType> ve türleri tarafından sağlanır <xref:System.Environment?displayProperty=nameWithType> ve sınıfa denk işlevsellik, <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> ad alanındaki türler tarafından sağlanır <xref:System.IO.Ports?displayProperty=nameWithType> .
 
 #### <a name="category"></a>Kategori
 
@@ -34,7 +34,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.Devices`
 

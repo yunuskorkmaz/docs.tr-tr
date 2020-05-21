@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: b736ab743a628fdcbc53c5ee51551e5dad986885
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 4a34a64eba72ea24c1d830566565ce4fbee8e5b7
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888155"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721475"
 ---
-### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>Araç ipucu gösterilirse CellFormatting olayı yükseltilmez
+### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz
 
-Şimdi, <xref:System.Windows.Forms.DataGridView> bir fare tarafından gezinildiğinde ve klavye den seçildiğinde hücrenin metin ve hata araç uçlarını gösterir. Bir araç ipucu gösterilirse, <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> olay yükseltilmez.
+<xref:System.Windows.Forms.DataGridView>Şimdi bir fare ve klavye aracılığıyla seçildiğinde bir hücrenin metin ve hata araç ipuçlarını gösterir. Bir araç ipucu gösteriliyorsa, <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> olay oluşturulmaz.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3.1'den <xref:System.Windows.Forms.DataGridView> önce, <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> hücre `true` fare tarafından havada yken hücre metni ve hataları için bir araç ucu gösterebilecek özellik ayarlanmış bir özellik. Bir hücre klavye den seçildiğinde (örneğin, Sekme tuşu, kısayol tuşları veya ok gezintisi kullanılarak) araç ipuçları gösterilmedi. Kullanıcı bir hücreyi düzenlediyse ve <xref:System.Windows.Forms.DataGridView> daha sonra, düzenleme modundayken, <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> özellik kümesi olmayan bir hücrenin <xref:System.Windows.Forms.DataGridView.CellFormatting> üzerinde gezinilmişse, hücremetnini hücrede görüntülenmek üzere biçimlendirmek için bir olay yükseltildi.
+.NET Core 3,1 ' den önce, <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> özelliği, `true` hücrenin bir fare tarafından nasıl ele alındığı zaman bir hücrenin metin ve hataları için bir araç ipucu gösterilmişti olarak ayarlanmıştır. Klavye aracılığıyla bir hücre seçildiğinde araç ipuçları gösterilmez (örneğin, sekme tuşunu, kısayol tuşlarını veya ok gezintisini kullanarak). Kullanıcı bir hücreyi düzenlediyseniz ve sonra <xref:System.Windows.Forms.DataGridView> hala düzenleme modundayken, özelliği ayarlanmış olmayan bir hücrenin üzerine gelindiğinde, hücrede <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> <xref:System.Windows.Forms.DataGridView.CellFormatting> görüntülenecek hücre metnini biçimlendirmek için bir olay harekete geçirildi.
 
-.NET Core 3.1'den başlayarak erişilebilirlik <xref:System.Windows.Forms.DataGridView> standartlarını karşılamak <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> için, `true` hücrenin metniiçin araç ipuçlarını ve yalnızca hücre havada yken değil, klavye aracılığıyla seçildiğinde de hatalar için araç ipuçlarını gösteren bir özellik kümesi vardır. Bu değişikliğin bir sonucu <xref:System.Windows.Forms.DataGridView.CellFormatting> olarak, <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> özellik kümesi olmayan hücreler akışlı olduğunda <xref:System.Windows.Forms.DataGridView> olay *yükseltilmez.* Havada gezinilen hücrenin içeriği hücrede görüntülenmek yerine bir araç ucu olarak gösterildiğinden, olay yükseltilmez.
+.NET Core 3,1 ' den başlayarak erişilebilirlik standartlarını karşılamak için, özelliği, bir <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A> `true` hücrenin metin ve hataları yalnızca hücre üzerine gelindiğinde değil, ancak klavye aracılığıyla seçilme durumunda olmayan bir hücrenin metin ve hatalarının araç ipuçlarını gösterir. Bu değişikliğin bir sonucu olarak, <xref:System.Windows.Forms.DataGridView.CellFormatting> özellik kümesi olmayan hücreler *not* <xref:System.Windows.Forms.DataGridViewCell.ToolTipText> düzenleme modunda olduğunda olay oluşturulmaz <xref:System.Windows.Forms.DataGridView> . Vurgulanan hücrenin içeriği hücrede görüntülenmek yerine bir araç ipucu olarak gösterildiğinden olay oluşturulmaz.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.1
+3,1
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Düzenleme modundayken <xref:System.Windows.Forms.DataGridView.CellFormatting> <xref:System.Windows.Forms.DataGridView> olaya bağlı olan herhangi bir kodu yeniden düzenleme.
+<xref:System.Windows.Forms.DataGridView.CellFormatting>Düzenleme modundayken olaya bağlı tüm kodu <xref:System.Windows.Forms.DataGridView> yeniden düzenleyin.
 
 #### <a name="category"></a>Kategori
 
@@ -30,11 +30,11 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis.
 

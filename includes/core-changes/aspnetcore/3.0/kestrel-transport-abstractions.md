@@ -1,47 +1,47 @@
 ---
-ms.openlocfilehash: f95c3916f4da8164cf927344f60f2845f04ddc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb23418816abcae125106c93b339a546aa9bc2ee
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393985"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721540"
 ---
-### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kerkenez: Ulaşım soyutlamaları kaldırıldı ve kamuya açıklandı
+### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: kaldırılan ve genel kullanıma açık olan taşıma soyutlamaları
 
-"Pubternal" API'lerden uzaklaşmanın bir parçası olarak, Kerkenez aktarım katmanı `Microsoft.AspNetCore.Connections.Abstractions` API'leri kütüphanede genel bir arayüz olarak ortaya çıkar.
+"Pubternal" API 'lerinden uzaklaşma kapsamında, Kestrel aktarım katmanı API 'Leri kitaplıkta ortak bir arabirim olarak sunulur `Microsoft.AspNetCore.Connections.Abstractions` .
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 
-- Taşımayla ilgili soyutlamalar kütüphanede `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` mevcuttü.
-- Tesis `ListenOptions.NoDelay` müsaitti.
+- Taşıma ile ilgili soyutlamalar `Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions` kitaplıkta kullanılabilir.
+- `ListenOptions.NoDelay`Özellik kullanılabilir.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-- Arabirim, `IConnectionListener` `Microsoft.AspNetCore.Connections.Abstractions` `...Transport.Abstractions` kitaplıktan en çok kullanılan işlevselliği ortaya çıkarmak için kitaplıkta tanıtıldı.
-- Şimdi `NoDelay` taşıma seçenekleri mevcuttur`LibuvTransportOptions` ( `SocketTransportOptions`ve ).
+- Arabirim, kitaplıkta `IConnectionListener` `Microsoft.AspNetCore.Connections.Abstractions` en çok kullanılan işlevselliği kullanıma sunmak için kitaplıkta tanıtılmıştı `...Transport.Abstractions` .
+- `NoDelay`Artık aktarım seçeneklerinde ( `LibuvTransportOptions` ve `SocketTransportOptions` ) kullanılabilir.
 - `SchedulingMode`artık kullanılamıyor.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-ASP.NET Core 3.0 uzak "pubternal" API'ler taşındı.
+ASP.NET Core 3,0, "pubternal" API 'Lerinden uzağa taşındı.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-None
+Yok
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis
 

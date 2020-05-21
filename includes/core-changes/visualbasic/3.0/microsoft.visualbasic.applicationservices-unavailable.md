@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09027863ff2f0009a14578db35db870c27369726
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116356"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720904"
 ---
-### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.VisualBasic.ApplicationServices ad alanında türleri kullanılamıyor
+### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft. VisualBasic. ApplicationServices ad alanındaki türler kullanılamıyor
 
-<xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> Ad alanındaki türler kullanılamıyor.
+<xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName>Ad alanındaki türler kullanılamıyor.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-.NET Core 3.0 Önizleme 8
+.NET Core 3,0 Preview 8
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-<xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> Ad alanındaki türler bazı .NET Core 3.0 Önizleme sürümlerinde kullanılabilir. .NET Core 3.0 Preview 9 ile başlayarak artık kullanılamazlar.
+Ad alanındaki türler, <xref:Microsoft.VisualBasic.ApplicationServices?displayProperty=fullName> bazı .NET Core 3,0 önizleme sürümlerinde mevcuttur. .NET Core 3,0 Preview 9 ' dan itibaren artık kullanılabilir değildir.
 
-Türler, gereksiz derleme bağımlılıklarını veya sonraki sürümlerde değişiklikleri kırmayı önlemek için kaldırıldı.
+Gereksiz bütünleştirilmiş kod bağımlılıklarından veya sonraki sürümlerde son değişikliklerden kaçınmak için türler kaldırılmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Kodunuz <xref:Microsoft.VisualBasic.ApplicationServices> türlerin ve üyelerinin kullanımına bağlıysa, .NET sınıf kitaplığında karşılık gelen bir türü veya üyeyi kullanabilirsiniz. Örneğin, bazı <xref:System.Environment?displayProperty=nameWithType> <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> ve üyeler <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> sınıfın özelliklerine eşdeğer işlevsellik sağlar.
+Kodunuz <xref:Microsoft.VisualBasic.ApplicationServices> türlerin ve üyelerinin kullanımına bağımlıysa, .NET sınıf kitaplığı 'nda karşılık gelen bir türü veya üyeyi kullanabilirsiniz. Örneğin, bazıları <xref:System.Environment?displayProperty=nameWithType> ve <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> üyeleri sınıfının özelliklerine denk işlevsellik sağlar <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> .
 
 #### <a name="category"></a>Kategori
 
@@ -34,7 +34,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 

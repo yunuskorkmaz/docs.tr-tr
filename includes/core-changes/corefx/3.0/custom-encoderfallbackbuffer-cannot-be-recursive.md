@@ -1,44 +1,44 @@
 ---
-ms.openlocfilehash: 820825f0545aa78729414c388385b339225b1235
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 00c32c10f77995284264e795d386f699082dcb84
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021603"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721313"
 ---
-### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Özel EncoderFallbackBuffer örnekleri özyinelemeli geri düşemez
+### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez
 
-Özel <xref:System.Text.EncoderFallbackBuffer> örnekler özyinelemeli olarak geri alınamaz. Uygulanması hedef <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> kodlama dönüştürülebilir bir karakter dizisi neden olmalıdır. Aksi takdirde, bir özel durum oluşur.
+Özel <xref:System.Text.EncoderFallbackBuffer> örnekler yinelemeli olarak geri dönemez. Uygulamasının uygulanması, <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> hedef kodlamaya dönüştürülebilir bir karakter sırası ile sonuçlanmalıdır. Aksi takdirde, bir özel durum oluşur.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-Karakterden bayta transkodlama işlemi sırasında, çalışma zamanı yanlış biçimlendirilmiş veya dönüştürülemeyen UTF-16 dizilerini algılar <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> ve bu karakterleri yönteme sağlar. Yöntem, `Fallback` hangi karakterlerin özgün dönüştürülemez verilerle değiştirilmesi gerektiğini belirler ve bu karakterler bir <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> döngü içinde çağrılarak boşaltılır.
+Bir karakterden bayta dönüştürme işlemi sırasında, çalışma zamanı hatalı biçimlendirilmiş veya dönüştürülebilir UTF-16 dizileri algılar ve bu karakterleri <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemine sağlar. `Fallback`Yöntemi, orijinal olmayan veriler için hangi karakterlerin yerine geçmeli olduğunu belirler ve bu karakterler bir döngüde çağırarak boşaltılır <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> .
 
-Çalışma süresi daha sonra bu ikame karakterleri hedef kodlamaya aktarmaya çalışır. Bu işlem başarılı olursa, çalışma süresi özgün giriş dizesinde kaldığı yerden kodlamaya devam eder.
+Çalışma zamanı daha sonra bu değiştirme karakterlerini hedef kodlamaya dönüştürme girişiminde bulunur. Bu işlem başarılı olursa, çalışma zamanı özgün giriş dizesinde bıraktığınız yerden kodlamaya devam eder.
 
-.NET Core Preview 7 ve önceki sürümlerinde, <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> hedef kodlamaya dönüştürülemeyen karakter dizilerini özel uygulamalar döndürebilir. Değiştirilen karakterler hedef kodlamaya aktarılamıyorsa, çalışma zamanı <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi değiştirme karakterleri ile bir kez daha çağırır ve <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> yöntemin yeni bir değiştirme sırası döndürmesini bekleyiş eder. Bu işlem, çalışma süresi sonunda iyi biçimlendirilmiş, dönüştürülebilir bir ikame görene veya maksimum özyineleme sayısına ulaşılAna kadar devam eder.
+.NET Core Preview 7 ve önceki sürümlerinde, özel uygulamaları <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> hedef kodlamaya dönüştürülebilir olmayan karakter dizileri döndürebilir. Değiştirilen karakterler hedef kodlamaya dönüştürülemiyorsa, çalışma zamanı <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi değiştirme karakterleriyle bir kez çağırır ve <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> yöntemin yeni bir değiştirme sırası döndürmesini bekliyor. Bu işlem, çalışma zamanı sonunda iyi biçimlendirilmiş, dönüştürülebilir bir değiştirme veya en fazla özyineleme sayısına ulaşılana kadar devam eder.
 
-.NET Core 3.0 ile başlayarak, hedef kodlamaya dönüştürülebilen karakter dizilerini özel uygulamaları <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> döndürmelidir. Değiştirilen karakterler hedef kodlamaya çevrilemiyorsa, bir <xref:System.ArgumentException> atılmıştır. Çalışma süresi artık <xref:System.Text.EncoderFallbackBuffer> örneğine özyinelemeli çağrılar yapmaz.
+.NET Core 3,0 ile başlayarak, özel uygulamalarının <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> hedef kodlamaya dönüştürülebilir karakter dizilerini döndürmesi gerekir. Değiştirilen karakterler hedef kodlamaya dönüştürülemiyorsa, bir oluşturulur <xref:System.ArgumentException> . Çalışma zamanı artık örneğe özyinelemeli çağrılar yapmayacaktır <xref:System.Text.EncoderFallbackBuffer> .
 
-Bu davranış yalnızca aşağıdaki koşulların üçü karşılandığında geçerlidir:
+Bu davranış yalnızca aşağıdaki koşulların üçü de karşılandığında geçerlidir:
 
-- Çalışma zamanı, hedef kodlamaya dönüştürülemeyen kötü biçimlendirilmiş bir UTF-16 dizisi veya UTF-16 dizisi algılar.
-- Bir <xref:System.Text.EncoderFallback> özel belirtildi.
-- Özel <xref:System.Text.EncoderFallback> girişimleri yeni bir kötü biçimli veya dönüştürülemez UTF-16 dizisi yerine.
+- Çalışma zamanı, hatalı biçimlendirilmiş bir UTF-16 sırası veya hedef kodlamaya dönüştürülemeyen bir UTF-16 sırası algılar.
+- Özel bir <xref:System.Text.EncoderFallback> belirtildi.
+- Özel <xref:System.Text.EncoderFallback> bir hatalı oluşturulmuş veya DÖNÜŞTÜRÜLEBILIR UTF-16 sırasını değiştirme girişimleri.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Çoğu geliştiricinin herhangi bir işlem yapmanıza gerek yoktur.
+Çoğu geliştirici herhangi bir işlem yapması gerekli değildir.
 
-Bir <xref:System.Text.EncoderFallback> uygulama özel ve <xref:System.Text.EncoderFallbackBuffer> sınıf kullanıyorsa, <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> yöntem ilk çalıştırma zamanı tarafından çağrıldığınızda doğrudan hedef kodlamadönüştürülebilir iyi biçimlendirilmiş UTF-16 verileri ile geri dönüş arabelleği doldurulur uygulanması nı sağlamak.
+Bir uygulama özel bir <xref:System.Text.EncoderFallback> ve sınıfı kullanıyorsa <xref:System.Text.EncoderFallbackBuffer> , uygulama <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> <xref:System.Text.EncoderFallbackBuffer.Fallback%2A> çalışma zamanı tarafından ilk kez çağrıldığında, uygulamanın, geri dönüş arabelleğini, hedef kodlamaya doğrudan dönüştürülebilir UTF-16 verileriyle doldurmasıdır.
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
@@ -47,7 +47,7 @@ Bir <xref:System.Text.EncoderFallback> uygulama özel ve <xref:System.Text.Encod
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Text.EncoderFallbackBuffer.Fallback`
 - `M:System.Text.EncoderFallbackBuffer.GetNextChar`

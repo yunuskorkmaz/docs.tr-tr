@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 5aca2b8b3ca6572194692888eae3c5614245b481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ada05a13ec7acde1d8374ed733d0d51cdfb408c
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936986"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721133"
 ---
 ### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor
 
-.NET Framework 4.7.2'de tanıtılan `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` uyumluluk anahtarı ,NET Core 3.0'daki Windows Formlar'da desteklenmez.
+`Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue`.NET Framework 4.7.2 ' de tanıtılan uyumluluk anahtarı .NET Core 3,0 ' de Windows Forms desteklenmez.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Framework 4.7.2 ile `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` başlayarak, uyumluluk anahtarı geliştiricinin <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> artık kaynak denetimine bir başvuru döndüren özelliğin yeni davranışını devre dışı bırakmasına olanak tanır. Özelliğin önceki davranışı dönmek `null`oldu. Daha fazla bilgi için [ \<AppContextSwitchOverrides> öğesine](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)bakın.
+.NET Framework 4.7.2 ile başlayarak, `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` Uyumluluk anahtarı, geliştiricinin özelliğin yeni davranışını devre dışı bırakmanıza olanak tanır <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> . Bu, şimdi kaynak denetimine bir başvuru döndürür. Özelliğin önceki davranışı döndürülecek `null` . Daha fazla bilgi için bkz. [ \< AppContextSwitchOverrides> öğesi](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
 
-.NET Core'da `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` anahtar desteklenmez.
+.NET Core 'da, `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` anahtar desteklenmez.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 Önizleme 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Anahtarı çıkarın. Anahtar desteklenmez ve alternatif bir işlevsellik yok.
+Anahtarı kaldırın. Anahtar desteklenmez ve alternatif bir işlev kullanılamaz.
 
 #### <a name="category"></a>Kategori
 
@@ -34,7 +34,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Windows.Forms.ContextMenuStrip.SourceControl`
 

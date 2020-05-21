@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 1580c8c8b7bdad91656f494537230293dbaaf93b
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: bb264e406c6604c3606e564d99018eda0f9e8d89
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021623"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721238"
 ---
-### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>Rapor sürümünü rapor eden API'ler artık ürünü rapor eder, dosya sürümünü bildirmez
+### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil
 
-.NET Core'da sürümleri döndüren API'lerin çoğu artık dosya sürümü yerine ürün sürümünü döndürüyor.
+.NET Core sürümlerini döndüren API 'lerin birçoğu, artık dosya sürümü yerine ürün sürümünü döndürüyor.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 2.2 ve önceki sürümlerde <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>, , , ve .NET Core derlemeleri için dosya özellikleri iletişim kutusu gibi <xref:System.Environment.Version?displayProperty=nameWithType>yöntemler dosya sürümünü yansıtır. .NET Core 3.0 ile başlayarak ürün sürümünü yansıtırlar.
+.NET Core 2,2 ve önceki sürümlerde,,, <xref:System.Environment.Version?displayProperty=nameWithType> <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> ve .NET Core derlemeleri için dosya özellikleri iletişim kutusu gibi yöntemler dosya sürümünü yansıtır. .NET Core 3,0 ile başlayarak ürün sürümünü yansıtmaktadır.
 
-Aşağıdaki şekilde *System.Runtime.dll* assemblyi için .NET Core 2.2 (solda) ve .NET Core 3.0 (sağda) için windows **explorer** dosya özellikleri iletişim kutusunda görüntülenen sürüm bilgileri arasındaki farkı gösterilmektedir.
+Aşağıdaki şekilde, **Windows Gezgini** dosya özellikleri iletişim kutusunda gösterildiği gibi .net Core 2,2 (solda) ve .net Core 3,0 (sağdaki) için *System. Runtime. dll* derlemesi için sürüm bilgileri arasındaki fark gösterilmektedir.
 
-![Ürün sürüm bilgilerindeki fark](~/docs/images/core-changes/corefx/version-information-changes/file-details.png)
+![Ürün sürümü bilgilerinde fark](~/docs/images/core-changes/corefx/version-information-changes/file-details.png)
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Yok. Bu değişiklik, sürüm algılamayı kalın kullanmaktan çok sezgisel hale getirmelidir.
+Yok. Bu değişiklik, sürüm algılamayı obtuse yerine sezgisel hale getirir.
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
@@ -37,7 +37,7 @@ Yok. Bu değişiklik, sürüm algılamayı kalın kullanmaktan çok sezgisel hal
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Environment.Version`
 - `P:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription`

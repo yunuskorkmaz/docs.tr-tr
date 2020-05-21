@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: b90991affe158286f535f3cc17232efd0b730fec
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275234"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721446"
 ---
-### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms varsayılan olarak AES-256 şifrelemesi için
+### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms varsayılan değer AES-256 şifrelemesi
 
-Kullanılan `EnvelopedCms` varsayılan simetrik şifreleme algoritması TripleDES'ten AES-256'ya değiştirildi.
+Tarafından kullanılan varsayılan simetrik şifreleme algoritması, `EnvelopedCms` TripleDES 'TEN AES-256 ' e değişmiştir.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core Preview 7 ve <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> önceki sürümlerinde, bir yapıcı aşırı yük yoluyla simetrik şifreleme algoritması belirtmeden verileri şifrelemek için kullanıldığında, veriler TripleDES/3DES/3DEA/DES3-EDE algoritması ile şifrelenmiştir.
+.NET Core Preview 7 ve önceki sürümlerinde, <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> bir Oluşturucu aşırı yüklemesi aracılığıyla simetrik şifreleme algoritması belirtmeden verileri şifrelemek için kullanıldığında, veriler TripleDES/3DES/3DEA/DES3-engelleyebilecek algoritmayla şifrelenir.
 
-.NET Core 3.0 Preview 8 ile başlayarak [(System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet paketinin 4.6.0 sürümü üzerinden) varsayılan algoritma algoritma modernizasyonu ve varsayılan seçeneklerin güvenliğini artırmak için AES-256 olarak değiştirildi. İleti alıcısı sertifikasında (EC olmayan) diffie-Hellman ortak anahtarı varsa, <xref:System.Security.Cryptography.CryptographicException> şifreleme işlemi temel platformdaki sınırlamalar nedeniyle başarısız olabilir.
+.NET Core 3,0 Preview 8 ' den itibaren ( [System. Security. Cryptography. Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet paketinin sürümü 4.6.0 aracılığıyla), varsayılan algoritma, algoritma modernleştirme için AES-256 olarak değiştirilmiştir ve varsayılan seçeneklerin güvenliğini artırır. Bir ileti alıcı sertifikasında (EC olmayan) bir Diffie-Hellman ortak anahtarı varsa, <xref:System.Security.Cryptography.CryptographicException> temel platformdaki sınırlamalar nedeniyle şifreleme işlemi başarısız olabilir.
 
-Aşağıdaki örnek kodda, .NET Core 3.0 Preview 7 veya daha önce çalışıyorsa veriler TripleDES ile şifrelenir. .NET Core 3.0 Preview 8 veya sonraki saatlerde çalışıyorsa, AES-256 ile şifrelenir.
+Aşağıdaki örnek kodda, veriler .NET Core 3,0 Preview 7 veya daha önceki sürümlerde çalışıyorsa üç aylık bir şekilde şifrelenir. .NET Core 3,0 Preview 8 veya üzeri sürümlerde çalışıyorsa, AES-256 ile şifrelenir.
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -24,13 +24,13 @@ cms.Encrypt(recipient);
 return cms.Encode();
 ```
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 Önizleme 8
+3,0 Preview 8
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Değişiklikten olumsuz etkilenirseniz, aşağıdakigibi bir tür <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier>parametresi içeren bir oluşturucudaki şifreleme algoritma tanımlayıcısını açıkça belirterek TripleDES şifrelemesini geri yükleyebilirsiniz:
+Değişiklik tarafından olumsuz bir şekilde etkilenmiyorsanız, <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> Bu tür bir parametre içeren bir oluşturucuda, şifreleme algoritması tanımlayıcısını açıkça belirterek TripleDES şifrelemesini geri yükleyebilirsiniz <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> :
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);
@@ -53,7 +53,7 @@ return cms.Encode()l
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor`
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo)`

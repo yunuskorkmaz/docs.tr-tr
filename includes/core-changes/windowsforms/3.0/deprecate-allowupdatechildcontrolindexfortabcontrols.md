@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1c55eab0b968daab7322350e201b49149e63215
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937075"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721315"
 ---
 ### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor
 
-Uyumluluk `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` anahtarı .NET Framework 4.6 ve sonraki sürümlerde Windows Formlar'da desteklenir, ancak .NET Core 3.0 ile başlayan Windows Formlar'da desteklenmez.
+`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`Uyumluluk anahtarı .NET Framework 4,6 ve sonraki sürümlerde Windows Forms desteklenir, ancak .NET Core 3,0 ' den başlayarak Windows Forms desteklenmez.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Framework 4.6 ve sonraki sürümlerinde, bir sekme seçilerek denetim koleksiyonunu yeniden sipariş eder. Uyumluluk `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` anahtarı, bu davranış istenmediğinde bir uygulamanın bu yeniden sıralamayı atlamasına olanak tanır.
+.NET Framework 4,6 ve sonraki sürümlerde, bir sekmeyi seçmek denetim koleksiyonunu yeniden sıralar. `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`Uyumluluk anahtarı, bu davranış istenmeyen olduğunda bir uygulamanın bu yeniden sıralamayı atlamasına izin verir.
 
-.NET Core'da `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` anahtar desteklenmez.
+.NET Core 'da, `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` anahtar desteklenmez.
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 Önizleme 9
+3,0 Preview 9
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Anahtarı çıkarın. Anahtar desteklenmez ve alternatif bir işlevsellik yok.
+Anahtarı kaldırın. Anahtar desteklenmez ve alternatif bir işlev kullanılamaz.
 
 #### <a name="category"></a>Kategori
 
@@ -30,11 +30,11 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- None
+- Yok
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

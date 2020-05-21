@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: c9547cdc2f127cf13a3610118a26736930fcd8bd
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 13da0ef6155d65fbc894c5747cc36bb3483ba518
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021627"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721701"
 ---
-### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter `(string)null` semantik değişikliği
+### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter içindeki semantiğinin değişikliği `(string)null`
 
-.NET Core 3.0 Preview 7'de null string ' <xref:System.Text.Json.Utf8JsonWriter>deki boş dize olarak kabul edilir. .NET Core 3.0 Preview 8 ile başlayarak, null string özellik adı olarak kullanıldığında bir özel durum atar ve değer olarak kullanıldığında JSON null belirteci yakar.
+.NET Core 3,0 Preview 7 ' de, null dize içinde boş dize olarak kabul edilir <xref:System.Text.Json.Utf8JsonWriter> . .NET Core 3,0 Preview 8 ' den itibaren, null dize bir özellik adı olarak kullanıldığında bir özel durum oluşturur ve bir değer olarak kullanıldığında JSON null belirtecini yayar.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Core 3.0 Preview `null` 7'de, `""` dize hem özellik adlarını yazarken hem de değerler yazarken işlem gördü.  
+.NET Core 3,0 Preview 7 ' de, `null` dize `""` özellik adlarını yazarken ve değer yazılırken her ikisi de olarak değerlendirilir.  
 
-.NET Core 3.0 Preview 8 `null` ile başlayarak, bir özellik `ArgumentNullException`adı bir ,' atar ve bir `null` değer bir çağrı <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> olarak kabul edilir veya <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>.
+.NET Core 3,0 Preview 8 ' den itibaren, bir `null` özellik adı bir oluşturur `ArgumentNullException` ve bir `null` değer veya çağrısı olarak değerlendirilir <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType> .
 
 Aşağıdaki kodu inceleyin:
 
@@ -40,37 +40,37 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 }
 ```
 
-.NET Core 3.0 Preview 7 ile çalıştırılırsa, yazar aşağıdaki çıktıyı üretir:
+.NET Core 3,0 Preview 7 ile çalıştırırsanız, yazıcı aşağıdaki çıktıyı üretir:
 
 ```js
 [{"":"","prop2":""},""]
 ```
 
-.NET Core 3.0 Preview 8 ile `writer.WriteString(propertyName1, propertyValue1)` başlayarak, bir . <xref:System.ArgumentNullException>  Ile `propertyName1 = null` `propertyName1 = string.Empty`değiştirilirse, çıktı şimdi olacaktır:
+.NET Core 3,0 Preview 8 ' den itibaren çağrısı `writer.WriteString(propertyName1, propertyValue1)` bir oluşturur <xref:System.ArgumentNullException> .  `propertyName1 = null`İle değiştirilirse `propertyName1 = string.Empty` , çıkış şu şekilde olur:
 
 ```js
 [{"":null,"prop2":null},null]
 ```
 
-Bu değişiklik, arayan ların değerlere `null` yönelik beklentileriyle daha iyi uyumlu hale getirilebilmek için yapıldı.
+Bu değişiklik, değerler için çağrı beklentileri ile daha iyi uyum sağlamak üzere yapılmıştır `null` .
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.0 Önizleme 8
+3,0 Preview 8
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-<xref:System.Text.Json.Utf8JsonWriter> Sınıfla özellik adları ve değerleri yazarken:
+Sınıf ile özellik adlarını ve değerleri yazarken <xref:System.Text.Json.Utf8JsonWriter> :
 
-- `null` Olmayan dizeleri özellik adları olarak kullanıldığından emin olun.
+- Dizelerin olmayan bir `null` özellik adı olarak kullanıldığından emin olun.
 
-- Önceki davranış isteniyorsa, null coalescing çağrı kullanın; örneğin, `writer.WriteString(propertyName1 ?? "", propertyValue1)`.
+- Önceki davranış isteniyorsa, null birleşim çağırma kullanın; Örneğin, `writer.WriteString(propertyName1 ?? "", propertyValue1)` .
 
-- Bir `null` `null` dize değeri için bir edebi yazma istif değilse, null coalescing çağırma kullanın; örneğin, `writer.WriteString(propertyName2, propertyValue2 ?? "")`.
+- `null`Bir `null` dize değeri için değişmez değer yazmak istenmediğinde, null birleşim çağırma kullanın; örneğin, `writer.WriteString(propertyName2, propertyValue2 ?? "")` .
 
 #### <a name="category"></a>Kategori
 
-Çekirdek .NET kitaplıkları
+Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
@@ -98,7 +98,7 @@ Bu değişiklik, arayan ların değerlere `null` yönelik beklentileriyle daha i
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.Utf8JsonWriter.WriteBase64String(System.String,System.ReadOnlySpan{System.Byte})`
 - `M:System.Text.Json.Utf8JsonWriter.WriteBoolean(System.String,System.Boolean)`

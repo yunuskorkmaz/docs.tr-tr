@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888153"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721300"
 ---
-### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog modernizasyonu
+### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog 'u modernleştirme
 
-Denetim,.NET <xref:System.Windows.Forms.FolderBrowserDialog> Core için Windows Forms uygulamalarında değişti.
+<xref:System.Windows.Forms.FolderBrowserDialog>Denetim, .NET Core için Windows Forms uygulamalarda değişmiştir.
 
-#### <a name="change-description"></a>Açıklamayı değiştir
+#### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET Framework'de, Windows formları <xref:System.Windows.Forms.FolderBrowserDialog> denetim için aşağıdaki iletişim kutusunu kullanır:
+.NET Framework, Windows Forms denetim için aşağıdaki iletişim kutusunu kullanır <xref:System.Windows.Forms.FolderBrowserDialog> :
 
-![.NET Çerçevesinde FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
+![.NET Framework FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-.NET Core 3.0'da, Windows Formlar kullanıcıları Windows Vista'da tanıtılan daha yeni bir COM tabanlı denetim:
+.NET Core 3,0 ' de, kullanıcılara Windows Vista 'da tanıtılan daha yeni bir COM tabanlı denetim Windows Forms:
 
-![.NET Çekirdeğinde FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
+![.NET Core 'da FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-İletişim otomatik olarak yükseltilir.
+İletişim kutusu otomatik olarak yükseltilir.
 
-Özgün iletişim kutusunu korumak istiyorsanız, aşağıdaki <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> kod `false` parçasında gösterildiği gibi, iletişim kutusunu göstermeden önce özelliği ayarlayın:
+Özgün iletişim kutusunu saklamayı istiyorsanız, <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> `false` Aşağıdaki kod parçası tarafından gösterildiği gibi, iletişim kutusunu göstermeden önce özelliğini olarak ayarlayın:
 
 ```csharp
 var dialog = new FolderBrowserDialog();
@@ -46,7 +46,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.FolderBrowserDialog`
 
