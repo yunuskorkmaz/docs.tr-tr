@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b1a0cd9a1dfba6f33a20416f2a10c967f871a06
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139513"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762675"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile Yöntemi
 Belirtilen dosyayı belleğe eşler. Bu yöntem artık kullanılmıyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT MapFile(  
@@ -42,7 +42,7 @@ HRESULT MapFile(
  dışı Dosyanın eşlenmesinin başlayacağı başlangıç belleği adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
@@ -52,4 +52,4 @@ HRESULT MapFile(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost Arabirimi](icorruntimehost-interface.md)

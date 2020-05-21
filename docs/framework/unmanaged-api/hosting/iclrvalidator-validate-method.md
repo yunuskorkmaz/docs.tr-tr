@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 427895ffea94e6c657d775ebdeb8571070a61c6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178058"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762636"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate Yöntemi
-Belirtilen dosyadaki taşınabilir yürütülebilir (PE) veya Microsoft ara dilini (MSIL) doğrular.  
+Belirtilen dosyadaki taşınabilir yürütülebilir (PE) veya Microsoft ara dili 'ni (MSIL) doğrular.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Validate (  
@@ -42,49 +42,49 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>Parametreler  
  `veh`  
- [içinde] Doğrulama hatalarını `IVEHandler` işleyen bir örneğin işaretçisi.  
+ 'ndaki `IVEHandler`Doğrulama hatalarını işleyen bir örneğe yönelik işaretçi.  
   
  `ulAppDomainId`  
- [içinde] Geçerli <xref:System.AppDomain>için tanımlayıcı .  
+ 'ndaki Geçerli için tanımlayıcı <xref:System.AppDomain> .  
   
  `ulFlags`  
- [içinde] Yapılması gereken doğrulama türünü gösteren [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) değerlerinin birleşimi.  
+ 'ndaki Gerçekleştirilmesi gereken doğrulamanın türünü belirten [ValidatorFlags](validatorflags-enumeration.md) değerlerinin birleşimi.  
   
  `ulMaxError`  
- [içinde] Doğrulamadan çıkmadan önce izin verilebilen maksimum hata sayısı.  
+ 'ndaki Doğrulamadan çıkmadan önce izin verilen en fazla hata sayısı.  
   
  `token`  
- [içinde] Kullanılma -yan.  
+ 'ndaki Kullanılmayan.  
   
  `fileName`  
- [içinde] Doğrulanacak dosyanın adı.  
+ 'ndaki Doğrulanacak dosyanın adı.  
   
  `pe`  
- [içinde] Dosya arabelleği için bir işaretçi.  
+ 'ndaki Dosya arabelleği işaretçisi.  
   
  `ulSize`  
- [içinde] Doğrulanacak dosyanın boyutu, baytlar halinde.  
+ 'ndaki Doğrulanacak dosyanın bayt cinsinden boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`Validate`başarıyla döndürülür.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
-|HOST_E_TIMEOUT|Arama zaman doldu.|  
-|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
+|S_OK|`Validate`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** IValidator.idl, IValidator.h  
+ **Üst bilgi:** IValidator. IDL, IValidator. h  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRValidator Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+- [ICLRValidator Arabirimi](iclrvalidator-interface.md)
