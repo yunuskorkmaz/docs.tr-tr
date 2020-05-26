@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 91c9a92d83312efcfd90a15aa0a60cccb6b44d7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 587861529c340fad9fd817b904e4d3651b236e8d
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134731"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805080"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore Yöntemi
-Konak tarafından yüklenen derlemelerin listesini temsil eden bir [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) için bir arabirim işaretçisi alır.  
+Konak tarafından yüklenen derlemelerin listesini temsil eden bir [IHostAssemblyStore](ihostassemblystore-interface.md) için bir arabirim işaretçisi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssemblyStore (  
@@ -35,36 +35,36 @@ HRESULT GetAssemblyStore (
   
 ## <a name="parameters"></a>Parametreler  
  `ppAssemblyStore`  
- dışı `IHostAssemblyStore` örneğine yönelik bir işlev işaretçisi veya konak `IHostAssemblyStore`uygulamadıysanız null.  
+ dışı Örnek için bir işlev işaretçisi `IHostAssemblyStore` veya ana bilgisayar uygulamadıysanız null `IHostAssemblyStore` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore` başarıyla döndürüldü.|  
+|S_OK|`GetAssemblyStore`başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_NOINTERFACE|Ana bilgisayar `IHostAssemblyStore`bir uygulamasını sağlamıyor.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_NOINTERFACE|Konak, uygulamasının bir uygulamasını sağlamaz `IHostAssemblyStore` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostAssemblyStore`, bir konağın CLR 'den bağımsız olarak derlemelere ve modüllere bağlanmasına izin veren yöntemler sağlar. Konaklar genellikle derlemelerin dosya sistemi dışındaki biçimlerden yüklenmesine izin vermek için derleme depoları sağlar.  
+ `IHostAssemblyStore`bir konağın CLR 'den bağımsız olarak derlemelere ve modüllere bağlanmasına izin veren yöntemler sağlar. Konaklar genellikle derlemelerin dosya sistemi dışındaki biçimlerden yüklenmesine izin vermek için derleme depoları sağlar.  
   
 > [!NOTE]
-> Ana bilgisayar `IHostAssemblyStore`uygulamadıysanız, `GetAssemblyStore` bir HRESULT değeri döndürmelidir ve `ppAssemblyStore` null olarak ayarlanmalıdır.  
+> Konak uygulamadıysanız `IHostAssemblyStore` , `GetAssemblyStore` E_NOINTERFACE HRESULT değeri döndürmelidir ve `ppAssemblyStore` null olarak ayarlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostAssemblyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [IHostAssemblyStore Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [IHostAssemblyManager Arabirimi](ihostassemblymanager-interface.md)
+- [IHostAssemblyStore Arabirimi](ihostassemblystore-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2eb56ea9-8b7e-452b-a209-3d2be719fca6
 topic_type:
 - apiref
-ms.openlocfilehash: d8e4f65c9a7b183ef5031726b8398926f16b8526
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3476e46391b633c3dab2ff79a88b4c863930e855
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134831"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805161"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl Arabirimi
 Çöp toplayıcısının, sanal bellek sınırlarını değiştirmesini sağlamak için konak istemesine izin veren bir yöntem sağlar.  
@@ -28,17 +28,17 @@ ms.locfileid: "73134831"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[RequestVirtualMemLimit Yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|Konağı, sanal bellek sınırlarını değiştirecek şekilde ister.|  
+|[RequestVirtualMemLimit Yöntemi](igchostcontrol-requestvirtualmemlimit-method.md)|Konağı, sanal bellek sınırlarını değiştirecek şekilde ister.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

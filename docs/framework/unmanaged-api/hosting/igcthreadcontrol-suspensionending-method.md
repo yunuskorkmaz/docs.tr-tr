@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-ms.openlocfilehash: 8d8efccde56d8d37a75b1d9bbec706411c6b1f45
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8300daf0d39745ceda80f6c56da7e3c459a97468
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134791"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805112"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding Yöntemi
 Bir atık toplama ya da başka bir askıya alma işleminden sonra çalışma zamanının iş parçacıklarını sürdürüyor olduğunu konağa bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SuspensionEnding (  
@@ -38,17 +38,17 @@ HRESULT SuspensionEnding (
  'ndaki Çöp toplamanın gerçekleştirildiği oluşturma.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SuspensionEnding` geri çağırma sırasında herhangi bir iş parçacığını yeniden zamanlamayın.  
+ Geri çağırma sırasında herhangi bir iş parçacığını yeniden zamanlamayın `SuspensionEnding` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IGCThreadControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+- [IGCThreadControl Arabirimi](igcthreadcontrol-interface.md)

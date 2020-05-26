@@ -1,7 +1,7 @@
 - name: Uygulama ayarları şeması
   href: index.md
   items:
-    - name: <appSettings> için <configuration> öğesi
+    - name: <configuration> için <appSettings> öğesi
       href: appsettings-element-for-configuration.md
       items:
         - name: <add> öğesi

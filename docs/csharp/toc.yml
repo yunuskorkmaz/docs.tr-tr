@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'Öğretici: Sorguları Birbirine Zincirleme'
-                              items:
-                                - name: LINQ to XML’de Ertelenmiş Yürütme ve Geç Değerlendirme
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: Ertelenmiş Yürütme Örneği
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: Sorguları Zincirleme Örneği
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: Ara Gerçekleştirme
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: Standart Sorgu İşleçlerini Birbirine Zincirleme
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'Öğretici: WordprocessingML Belgesindeki İçeriği Düzenleme'
                               items:
                                 - name: WordprocessingML Belgelerinin Şekli

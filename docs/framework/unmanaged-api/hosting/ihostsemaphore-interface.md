@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0765321-656c-441e-bab5-58176292be1e
 topic_type:
 - apiref
-ms.openlocfilehash: 2cf490bcd167b7a498ae21f479f616694ccb5521
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8345d85502087568cb05dd262cccf181e3ca07ac
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139485"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803699"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore Arabirimi
 Ana bilgisayarın iş parçacığı için semafor uygulamasını temsil eder.  
@@ -28,22 +28,22 @@ Ana bilgisayarın iş parçacığı için semafor uygulamasını temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ReleaseSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)|Geçerli `IHostSemaphore` örneğinin sayısını belirtilen miktarda artırır.|  
-|[Wait Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md)|Geçerli `IHostSemaphore` örneğinin, ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.|  
+|[ReleaseSemaphore Yöntemi](ihostsemaphore-releasesemaphore-method.md)|Geçerli `IHostSemaphore` Örneğin sayısını belirtilen miktarda artırır.|  
+|[Wait Yöntemi](ihostsemaphore-wait-method.md)|Geçerli örneğin, `IHostSemaphore` ait olana veya belirtilen süre geçtikten sonra beklemesini sağlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostAutoEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [IHostManualEvent Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSyncManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRSyncManager Arabirimi](iclrsyncmanager-interface.md)
+- [IHostAutoEvent Arabirimi](ihostautoevent-interface.md)
+- [IHostManualEvent Arabirimi](ihostmanualevent-interface.md)
+- [IHostSyncManager Arabirimi](ihostsyncmanager-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

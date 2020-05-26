@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4a7a2da58e197749d492f24c7a12134508efef57
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134898"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805228"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats Yöntemi
 Çöp toplama için iş parçacığı başına istatistikleri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetThreadStats (  
@@ -39,17 +39,17 @@ HRESULT GetThreadStats (
  'ndaki İstatistiklerin alınacağı iş parçacığını belirten bir fiber tanımlama bilgisine yönelik bir işaretçi.  
   
  `pStats`  
- [in, out] Belirtilen iş parçacığı için çöp toplama istatistiklerini içeren bir [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) yapısına yönelik işaretçi.  
+ [in, out] Belirtilen iş parçacığı için çöp toplama istatistiklerini içeren [COR_GC_THREAD_STATS](cor-gc-thread-stats-structure.md) yapısına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IGCHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [IGCHost Arabirimi](igchost-interface.md)

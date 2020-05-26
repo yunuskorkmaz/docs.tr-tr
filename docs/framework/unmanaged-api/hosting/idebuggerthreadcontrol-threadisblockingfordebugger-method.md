@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cdc3fe9d52db56d0280bc602d3a9f2f54e8246
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134948"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805260"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger Yöntemi
 Konağa, bu geri aramayı gönderen iş parçacığının hata ayıklama Hizmetleri içinde engellemek üzere olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ThreadIsBlockingForDebugger` yöntemi her zaman bir çalışma zamanı iş parçacığında çağrılır.  
+ `ThreadIsBlockingForDebugger`Yöntemi her zaman bir çalışma zamanı iş parçacığında çağrılır.  
   
- `ThreadIsBlockingForDebugger` yöntemi, ana bilgisayara iş parçacığı blokları sırasında başka bir eylem gerçekleştirme fırsatı verir.  
+ `ThreadIsBlockingForDebugger`Yöntemi, iş parçacığı engellediğinde ana bilgisayara başka bir eylem gerçekleştirme fırsatı verir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **Net Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Net Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IDebuggerThreadControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [IDebuggerThreadControl Arabirimi](idebuggerthreadcontrol-interface.md)

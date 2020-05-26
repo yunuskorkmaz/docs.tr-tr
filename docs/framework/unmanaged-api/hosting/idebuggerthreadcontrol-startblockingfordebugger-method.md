@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c8f11b4-35d3-4c39-9bbd-58b896ba5ba6
 topic_type:
 - apiref
-ms.openlocfilehash: 72f7bee79e74c69acff90861ceada8a91afe2157
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 878dba37728734a777d2f95226b60bfbe9aae16a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134913"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805265"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger Yöntemi
 Tüm iş parçacıklarını engellemeye başlamak için hata ayıklama hizmetlerinin olduğunu konağa bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT StartBlockingForDebugger (  
@@ -38,17 +38,17 @@ HRESULT StartBlockingForDebugger (
  'ndaki Gelecekte kullanılmak üzere ayrılmıştır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StartBlockingForDebugger` yöntemi bir çalışma zamanı iş parçacığında çağrılabilir.  
+ `StartBlockingForDebugger`Yöntemi bir çalışma zamanı iş parçacığında çağrılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IDebuggerThreadControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [IDebuggerThreadControl Arabirimi](idebuggerthreadcontrol-interface.md)

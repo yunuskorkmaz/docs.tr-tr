@@ -1,5 +1,5 @@
 ---
-title: -ana (C# Derleyici Seçenekleri)
+title: -Main (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /main
@@ -8,44 +8,55 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602728"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802840"
 ---
-# <a name="-main-c-compiler-options"></a>-ana (C# Derleyici Seçenekleri)
-Bu seçenek, birden fazla sınıf **bir Ana** yöntem içeriyorsa, programa giriş noktası içeren sınıfı belirtir.  
+# <a name="-main-c-compiler-options"></a>-Main (C# derleyici seçenekleri)
+Bu seçenek, birden fazla sınıf bir **Main** yöntemi içeriyorsa programa giriş noktasını içeren sınıfı belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -main:class  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `class`  
- **Ana** yöntemi içeren tür.  
- Verilen sınıf adı tam nitelikli olmalıdır; sınıfı içeren tam ad alanını içermelidir ve ardından sınıf adı olmalıdır. Örneğin, `Main` yöntem `Program` `MyApplication.Core` ad alanında sınıfın içinde bulunduğunda, derleyici seçeneği . `-main:MyApplication.Core.Program`
+ **Main** metodunu içeren tür.  
+ Belirtilen sınıf adı tam olarak nitelenmiş olmalıdır; sınıfını içeren tam ad alanını ve ardından sınıf adını içermelidir. Örneğin, `Main` yöntemi `Program` `MyApplication.Core` ad alanındaki sınıfının içindeyse, derleyici seçeneğinin olması gerekir `-main:MyApplication.Core.Program` .
   
 ## <a name="remarks"></a>Açıklamalar  
- Derlemeniz [Ana](../../programming-guide/main-and-command-args/index.md) yönteme sahip birden fazla tür içeriyorsa, programa giriş noktası olarak kullanmak istediğiniz **Ana** yöntemi hangi türde içerdiğini belirtebilirsiniz.  
+ Derlemeniz bir [ana](../../programming-guide/main-and-command-args/index.md) yöntemle birden fazla tür içeriyorsa, programa giriş noktası olarak kullanmak istediğiniz **ana** yöntemi içeren türü belirtebilirsiniz.  
   
- Bu seçenek, bir .exe dosyası derlenirken kullanım içindir.  
+ Bu seçenek bir. exe dosyası derlenirken kullanım içindir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikleri** sayfasını açın.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. **Uygulama** özelliği sayfasını tıklatın.  
+2. **Uygulama** Özellik sayfasına tıklayın.  
   
-3. Başlangıç **nesnesi** özelliğini değiştirin.  
+3. **Başlangıç nesnesi** özelliğini değiştirin.  
   
-     Bu derleyici seçeneğini programlı olarak <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>ayarlamak için bkz.  
+     Bu derleyici seçeneğini program aracılığıyla ayarlamak için, bkz <xref:VSLangProj80.ProjectProperties3.StartupObject%2A> ..  
   
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>Bu derleyici seçeneğini. csproj dosyasını el ile düzenleyerek ayarlamak için
+  
+Bu seçeneği,. csproj dosyasını düzenleyerek ve bölümünün içine bir öğe ekleyerek ayarlayabilirsiniz `StartupObject` `PropertyGroup` . Örneğin:
+
+```
+  <PropertyGroup>
+    ...
+    <StartupObject>MyApplication.Core.Program</StartupObject>
+  </PropertyGroup>
+```
+
 ## <a name="example"></a>Örnek  
- Derleme `t2.cs` ve `t3.cs`, **Ana** yöntem in `Test2`bulunacağını belirten:  
+ `t2.cs`Ve `t3.cs` ' de **Main** yönteminin bulunduğunu belirterek derleyin `Test2` :  
   
 ```console  
 csc t2.cs t3.cs -main:Test2  
@@ -53,5 +64,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

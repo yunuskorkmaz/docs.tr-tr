@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205924"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802717"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -100,7 +100,7 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  Yükleme yolunu belirtir. Dizin yoksa oluşturulur. Varsayılan değer *%LocalAppData%\microsoft\dotnet*değeridir. İkili dosyalar doğrudan bu dizine yerleştirilir.
+  Yükleme yolunu belirtir. Dizin yoksa oluşturulur. Varsayılan değer, Windows üzerinde *%LocalAppData%\microsoft\dotnet* ve Linux/MacOS üzerinde */usr/share/DotNet* değeridir. İkili dosyalar doğrudan bu dizine yerleştirilir.
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

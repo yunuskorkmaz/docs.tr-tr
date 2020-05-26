@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615221"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802929"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 
@@ -92,10 +92,10 @@ Değer türleri öğesinden türetilir <xref:System.ValueType?displayProperty=na
 
 Değer türlerinin iki kategorisi vardır: [struct](../../language-reference/builtin-types/struct.md) ve [enum](../../language-reference/builtin-types/enum.md).
 
-Yerleşik sayısal türler yapı birimleridir ve erişebileceğiniz özelliklere ve yöntemlere sahiptirler:
+Yerleşik sayısal türler yapı birimleridir ve erişebileceğiniz alanlar ve yöntemlere sahiptirler:
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 
