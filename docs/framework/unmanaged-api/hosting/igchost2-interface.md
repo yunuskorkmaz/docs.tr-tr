@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 43c16415c91521194e0d88be84dd176c3fdadad1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 976673a0caab4e041cc80e5536544c195fcf692a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134844"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805174"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 Arabirimi
 Çöp toplama sistemi hakkında bilgi edinmek ve çöp toplamanın bazı yönlerini denetlemek için yöntemler sağlar.  
   
 > [!NOTE]
-> Yeni geliştirme için, bunun yerine [ICLRGCManager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md) arabirimini kullanmanızı öneririz.  
+> Yeni geliştirme için, bunun yerine [ICLRGCManager2](iclrgcmanager2-interface.md) arabirimini kullanmanızı öneririz.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)|Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar. Nesil 0 ve kesim boyutlarını `DWORD`daha büyük bir şekilde sunar.|  
+|[SetGCStartupLimitsEx Yöntemi](igchost2-setgcstartuplimitsex-method.md)|Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar. 1. nesil ve kesim boyutlarını daha büyük olarak sunar `DWORD` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [CLR Barındırma Arabirimleri](clr-hosting-interfaces.md)
+- [CorRuntimeHost Coclass](corruntimehost-coclass.md)

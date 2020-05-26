@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-ms.openlocfilehash: d78f81093e61c40eaec334f957d8583eeb593f5e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca9566168b8aae361af8d61539066624697a2d04
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134813"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805153"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx Yöntemi
 Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetGCStartupLimitsEx (  
@@ -42,17 +42,17 @@ HRESULT SetGCStartupLimitsEx (
  'ndaki 0 üretimi için en büyük boyut.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetGCStartupLimitsEx` kümelerinin değerleri yalnızca konak başlatılmadan önce belirtilebilir. Bu değerler daha sonra değiştirilemez.  
+ `SetGCStartupLimitsEx`Ayarlayan değerler yalnızca konak başlatılmadan önce belirtilebilir. Bu değerler daha sonra değiştirilemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** GCHost. IDL, GCHost. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IGCHost2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+- [IGCHost2 Arabirimi](igchost2-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: fef2f56fd000a8610a40661a30aa306ae5a7884e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177993"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841990"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask Yöntemi
-Ana bilgisayaryeni bir görev oluşturmasını ister.  
+Konağın yeni bir görev oluşturmasını ister.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CreateTask (  
@@ -38,44 +38,44 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>Parametreler  
  `stacksize`  
- [içinde] İstenen yığındaki istenen boyut, baytlar veya varsayılan boyut için 0 (sıfır).  
+ 'ndaki İstenen yığının bayt cinsinden istenen boyutu veya varsayılan boyut için 0 (sıfır).  
   
  `pStartAddress`  
- [içinde] Görev in işlevi için bir işaretçi yürütmektir.  
+ 'ndaki Görevin yürütüleceği işleve yönelik bir işaretçi.  
   
  `pParameter`  
- [içinde] İşleviçin geçirilecek kullanıcı verilerine işaretçi veya işlev parametre yoksa null.  
+ 'ndaki İşleve geçirilecek Kullanıcı verilerine yönelik bir işaretçi veya işlev hiçbir parametre alırsa null.  
   
  `ppTask`  
- [çıkış] Ana bilgisayar tarafından oluşturulan bir [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneğinin adresine işaretçi veya görev oluşturulamıyorsa geçersiz kılın. Görev, Açıkça IHostTask için bir çağrı tarafından başlatılana kadar askıya alınmış durumda [kalır::Başlat.](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)  
+ dışı Konak tarafından oluşturulan bir [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneğinin adresine yönelik bir işaretçi veya görev oluşturulanmadıysa null. Görev, [IHostTask:: Start](ihosttask-start-method.md)çağrısıyla açıkça başlatılana kadar askıya alınmış durumda kalır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`CreateTask`başarıyla döndürülür.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma süresi (CLR) bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
-|HOST_E_TIMEOUT|Arama zaman doldu.|  
-|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
+|S_OK|`CreateTask`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
-|E_outofmemory|İstenen görevi oluşturmak için yeterli bellek yoktu.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_OUTOFMEMORY|İstenen görevi oluşturmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, `CreateTask` ana bilgisayaryeni bir görev oluşturmasını istemek için çağırır. Ana bilgisayar, bir `IHostTask` örnek için bir arabirim işaretçisi döndürür. Döndürülen görev, `IHostTask::Start`'' için yapılan bir çağrı tarafından açıkça başlatılana kadar askıya alınmalı  
+ CLR, `CreateTask` konağın yeni bir görev oluşturmasını istemek için çağırır. Konak, bir örneğe bir arabirim işaretçisi döndürür `IHostTask` . Döndürülen görev, öğesine yapılan bir çağrı tarafından açıkça başlatılana kadar askıya alınmalıdır `IHostTask::Start` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask Arabirimi](iclrtask-interface.md)
+- [ICLRTaskManager Arabirimi](iclrtaskmanager-interface.md)
+- [IHostTask Arabirimi](ihosttask-interface.md)
+- [IHostTaskManager Arabirimi](ihosttaskmanager-interface.md)
