@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: c23773dce448c8c98d4926dff3fa51100e683fd0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25e931ec17cad3508d548fb4ca7e53b0ade3f119
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192045"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804963"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager Yöntemi
-Ana bilgisayarın, belirtilen `IID`sahip olduğu arabirim uygulamasına yönelik bir arabirim işaretçisi alır.  
+Konağın, belirtilen arabirim uygulamasına yönelik bir arabirim işaretçisini alır `IID` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetHostManager (  
@@ -36,7 +36,7 @@ HRESULT GetHostManager (
   
 ## <a name="parameters"></a>Parametreler  
  `riid`  
- 'ndaki Ortak dil çalışma zamanının (CLR) sorgulamakta olduğu arabirimin `IID`.  
+ 'ndaki `IID`Ortak dil çalışma zamanının (CLR) sorguladığını belirten arabirim.  
   
  `ppObject`  
  dışı Konak tarafından uygulanan arabirime yönelik bir işaretçi veya konak bu arabirimi desteklemiyorsa NULL.  
@@ -45,49 +45,49 @@ HRESULT GetHostManager (
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager` başarıyla döndürüldü.|  
+|S_OK|`GetHostManager`başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_FAıL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
 |E_INVALIDARG|İstenen `IID` geçerli değil.|  
 |E_NOINTERFACE|İstenen arabirim desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  CLR, aşağıdaki arabirimlerden birini veya birkaçını destekleyip desteklemediğini öğrenmek için Konağı sorgular:  
   
-- [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+- [IHostMemoryManager](ihostmemorymanager-interface.md)  
   
-- [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+- [IHostTaskManager](ihosttaskmanager-interface.md)  
   
-- [IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+- [IHostThreadPoolManager](ihostthreadpoolmanager-interface.md)  
   
-- [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+- [IHostIoCompletionManager](ihostiocompletionmanager-interface.md)  
   
-- [IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+- [IHostSyncManager](ihostsyncmanager-interface.md)  
   
-- [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+- [IHostAssemblyManager](ihostassemblymanager-interface.md)  
   
-- [IHostGCManager](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+- [IHostGCManager](ihostgcmanager-interface.md)  
   
-- [IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+- [IHostPolicyManager](ihostpolicymanager-interface.md)  
   
-- [IHostSecurityManager](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+- [IHostSecurityManager](ihostsecuritymanager-interface.md)  
   
- Ana bilgisayar belirtilen arabirimi destekliyorsa, bu arabirimin uygulamasına `ppObject` ayarlar. Aksi takdirde, `ppObject` null olarak ayarlar.  
+ Ana bilgisayar belirtilen arabirimi destekliyorsa, `ppObject` Bu arabirimin uygulamasına ayarlanır. Aksi halde, `ppObject` null olarak ayarlanır.  
   
- CLR, siz kapatsanız bile konak yöneticilerinde `Release` çağırmaz.  
+ Siz `Release` kapatsanız bile, clr konak yöneticilerinde çağrı yapmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [IHostControl Arabirimi](ihostcontrol-interface.md)

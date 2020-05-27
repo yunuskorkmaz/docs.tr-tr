@@ -1,39 +1,39 @@
 ---
-title: dotnet listesi referans komutu
-description: Dotnet listesi başvuru komutu, proje başvurularını projeye listelemek için kullanışlı bir seçenek sağlar.
+title: DotNet liste başvurusu komutu
+description: DotNet liste başvurusu komutu, projeyi Proje başvurularına göre listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
-ms.openlocfilehash: c0ea46298123e69ae527870e50d204d8fcf5cc85
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b9b34c17102c6218f3d99f6e2620e99f70140284
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463653"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802758"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet list reference`- Projeden projeye referansları listeler.
+`dotnet list reference`-Projeden projeye başvuruları listeler.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] reference
+dotnet list [<PROJECT>] reference
 
 dotnet list -h|--help
 ```
 
 ## <a name="description"></a>Açıklama
 
-Komut, `dotnet list reference` belirli bir proje veya çözüm için proje başvurularını listelemek için kullanışlı bir seçenek sağlar.
+`dotnet list reference`Komut, belirli bir proje için proje başvurularını listelemek üzere uygun bir seçenek sağlar.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-* **`PROJECT | SOLUTION`**
+* **`PROJECT`**
 
-  Başvuruları listeleme için kullanılacak proje veya çözüm dosyasını belirtir. Belirtilmemişse, komut bir proje dosyası için geçerli dizini arar.
+  Üzerinde çalışılacak proje dosyası. Bir dosya belirtilmemişse, komut geçerli dizinde bir arama yapılır.
 
 ## <a name="options"></a>Seçenekler
 
@@ -43,13 +43,13 @@ Komut, `dotnet list reference` belirli bir proje veya çözüm için proje başv
 
 ## <a name="examples"></a>Örnekler
 
-* Belirtilen proje için proje başvurularını listele:
+* Belirtilen proje için proje başvurularını listeleyin:
 
   ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* Proje başvurularını geçerli dizindeki listele:
+* Geçerli dizindeki projenin proje başvurularını listeleyin:
 
   ```dotnetcli
   dotnet list reference

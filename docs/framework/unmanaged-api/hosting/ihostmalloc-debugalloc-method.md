@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 20ad5485b8603cc7de1c27c00d53c8939871d525
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178031"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804631"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc Yöntemi
-Ana bilgisayar, yığından belirtilen bellek miktarını ayırmasını ve ayrıca belleğin nereye tahsis edildiğini izlemesini ister.  
+Konağın yığından belirtilen miktarda bellek ayırmasını ve ayrıca belleğin nerede ayrıldığını izlemelerini ister.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DebugAlloc (  
@@ -39,45 +39,45 @@ HRESULT DebugAlloc (
   
 ## <a name="parameters"></a>Parametreler  
  `cbSize`  
- [içinde] Geçerli bellek ayırma isteğinin baytboyutu.  
+ 'ndaki Geçerli bellek ayırma isteğinin bayt cinsinden boyutu.  
   
  `dwCriticalLevel`  
- [içinde] Bir ayırma hatasının etkisini gösteren [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) değerlerinden biri.  
+ 'ndaki Bir ayırma hatasının etkisini belirten [Ememorycriticalhandle düzey](ememorycriticallevel-enumeration.md) değerlerinden biri.  
   
  `pszFileName`  
- [içinde] Yürütülebilir kod dosyası debugged ediliyor.  
+ 'ndaki Hata ayıklanan yürütülebilir dosyanın kod dosyası.  
   
  `iLineNo`  
- [içinde] Ayırmanın istendiği `pszFileName` satır numarası.  
+ 'ndaki Ayırmanın istendiği satır numarası `pszFileName` .  
   
  `ppMem`  
- [çıkış] Ayrılan belleğe işaretçi veya istek tamamlanamadıysa null.  
+ dışı Ayrılan belleğe yönelik bir işaretçi veya istek tamamlanmayabilir null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`başarıyla döndürülür.|  
-|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmedi veya CLR yönetilen kodu çalıştıramadığı veya aramayı başarıyla işleyemediği bir durumdadır.|  
-|HOST_E_TIMEOUT|Arama zaman doldu.|  
-|HOST_E_NOT_OWNER|Arayan kilidin sahibi değildir.|  
+|S_OK|`DebugAlloc`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
 |HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
-|E_faıl|Bilinmeyen bir felaket hatası meydana geldi. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılabilir. Barındırma yöntemleri sonraki aramalar HOST_E_CLRNOTAVAILABLE döndürün.|  
-|E_outofmemory|Ayırma isteğini tamamlamak için yeterli bellek yoktu.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAIL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_OUTOFMEMORY|Ayırma isteğini tamamlamaya yetecek miktarda bellek yoktu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR IHostMemoryManager arayarak bir [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) örnek için bir arayüz işaretçisi [alır::CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemi. `DebugAlloc`hata ayıklama sırasında kullanılmak üzere kod dosyası bilgilerini almak için çalışma süresi sağlar.  
+ CLR [IHostMemoryManager:: Createmayırma](ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) örneğine bir arabirim işaretçisi alır. `DebugAlloc`çalışma zamanının hata ayıklama sırasında kullanılmak üzere kod dosyası bilgilerini almasına izin verir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** MSCorEE.h  
+ **Üst bilgi:** MSCorEE. h  
   
- **Kütüphane:** MSCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostMemoryManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager Arabirimi](ihostmemorymanager-interface.md)
+- [IHostMalloc Arabirimi](ihostmalloc-interface.md)

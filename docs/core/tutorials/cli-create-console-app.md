@@ -1,68 +1,68 @@
 ---
 title: CLI kullanarak .NET Core kullanmaya başlama
-description: .NET Core CLI'yi kullanarak Windows, Linux veya macOS'ta .NET Core ile nasıl başlaşmak gerektiğini gösteren adım adım bir öğretici.
+description: .NET Core CLI kullanarak Windows, Linux veya macOS 'ta .NET Core ile çalışmaya başlama hakkında adım adım öğretici.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7658f2498b87a90b3925d83628f6ea9247a2fc15
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240863"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840877"
 ---
-# <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI'yi kullanarak .NET Core ile başlayın
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI kullanarak .NET Core ile çalışmaya başlama
 
-Bu makalede, .NET Core CLI'yi kullanarak Windows, Linux ve macOS'ta çalışan .NET Core uygulamalarını geliştirmeye nasıl başlayacağınızı gösterecektir.
+Bu makalede, .NET Core CLI kullanarak Windows, Linux ve macOS üzerinde çalışan .NET Core uygulamaları geliştirmeye nasıl başlayacaksınız.
 
-.NET Core CLI'ye aşina [değilseniz,.NET Core CLI genel](../tools/index.md)bakış'ına bakın.
+.NET Core CLI hakkında bilgi sahibi değilseniz, [.NET Core CLI genel bakış ' a](../tools/index.md)bakın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) veya sonraki sürümler.
+- [.NET Core SDK 3,1](https://dotnet.microsoft.com/download) veya sonraki sürümler.
 - Tercih ettiğiniz bir metin veya kod düzenleyicisi.
 
-## <a name="hello-console-app"></a>Merhaba, Konsol Uygulaması!
+## <a name="hello-console-app"></a>Merhaba, konsol uygulaması!
 
-Örnek kodu dotnet/samples GitHub deposundan [görüntüleyebilir veya indirebilirsiniz.](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) İndirme talimatları için [Örnekler ve Öğreticiler'e](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)bakın.
+Örnek kodu DotNet/Samples GitHub deposundan [görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Komut istemini açın ve *Merhaba*adlı bir klasör oluşturun. Oluşturduğunuz klasöre gidin ve aşağıdakileri yazın.
+Bir komut istemi açın ve *Hello*adlı bir klasör oluşturun. Oluşturduğunuz klasöre gidin ve aşağıdakini yazın.
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-Hızlı bir gözden geçirme yapalım:
+Hızlı bir yol açalım:
 
 01. `dotnet new console`
 
-    [dotnet yeni](../tools/dotnet-new.md) bir konsol uygulaması oluşturmak için gerekli bağımlılıkları ile güncel bir *Hello.csproj* proje dosyası oluşturur. Ayrıca, uygulama için giriş noktasını içeren temel bir dosya olan *Program.cs*oluşturur.
+    [DotNet New](../tools/dotnet-new.md) , bir konsol uygulaması oluşturmak için gereken bağımlılıklara sahip bir güncel *Hello. csproj* proje dosyası oluşturur. Ayrıca, uygulamanın giriş noktasını içeren temel bir dosya olan bir *program.cs*oluşturur.
 
-    *Merhaba.csproj*:
+    *Merhaba. csproj*:
 
     [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
-    Proje dosyası, bağımlılıkları geri yüklemek ve programı oluşturmak için gereken her şeyi belirtir.
+    Proje dosyası, bağımlılıkları geri yüklemek ve programı derlemek için gereken her şeyi belirtir.
 
-    - Öğe, `<OutputType>` bir yürütülebilir, başka bir deyişle bir konsol uygulaması oluşturuyoruz belirtir.
-    - Öğe, `<TargetFramework>` hedeflediğimiz .NET uygulamasını belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçevesi belirtebilir ve tek bir işlemdeki herkese oluşturun. Bu eğitimde, sadece .NET Core 3.1 için oluşturmaya devam edeceğiz.
+    - `<OutputType>`Öğesi, bir konsol uygulaması diğer bir deyişle yürütülebilir bir dosya oluşturduğumuz olduğunu belirtir.
+    - `<TargetFramework>`Öğesi hangi .NET uygulamasını hedefliyoruz belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeve belirtebilir ve tek bir işlemde bunların tümüne derleme yapabilirsiniz. Bu öğreticide yalnızca .NET Core 3,1 için derleme yapacağız.
 
     *Program.cs*:
 
     [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
-    Program `using System`, `System` "bu dosya için kapsamına ad alanında her şeyi getirmek" anlamına gelir başlar. Ad `System` alanı `Console` sınıfı içerir.
+    Program tarafından başlar `using System` , bu, " `System` ad alanındaki her şeyi bu dosya için kapsama getir" anlamına gelir. `System`Ad alanı sınıfını içerir `Console` .
 
-    Daha sonra bir ad `Hello`alanı olarak tanımlanır. Bunu istediğin şeyle değiştirebilirsin. Adlı `Program` bir sınıf, adlı `Main` `args`dizeleri bir dizi alan bir yöntem ile, bu ad alanı içinde tanımlanır. Bu dizi, program çalıştırıldığında geçirilen bağımsız değişkenlerin listesini içerir. Olduğu gibi, bu dizi kullanılmaz ve program sadece metin "Merhaba Dünya yazıyor!" metnini görüntülemelidir. Daha sonra, bu bağımsız değişkenden yararlanacak kodda değişiklikler yapacağız.
+    Daha sonra adlı bir ad alanı tanımlayacağız `Hello` . Bunu istediğiniz herhangi bir şekilde değiştirebilirsiniz. Adlı bir sınıf `Program` , `Main` adlandırılmış bir dize dizisi alan bir yöntem ile bu ad alanı içinde tanımlanır `args` . Bu dizi, program çalıştırıldığında geçirilen bağımsız değişkenlerin listesini içerir. Çünkü bu dizi kullanılmaz ve program yalnızca "Merhaba Dünya!" metnini yazar metnini görüntülemelidir. Daha sonra, bu bağımsız değişken tarafından kullanılacak kodda değişiklik yapacağız.
 
-    `dotnet new`[dotnet geri yükleme](../tools/dotnet-restore.md) çağırır örtülü olarak. `dotnet restore`bağımlılıklar ağacını geri yüklemek için [NuGet'e](https://www.nuget.org/) (.NET paket yöneticisi) çağrır. NuGet *Hello.csproj* dosyasını analiz eder, dosyada tanımlanan bağımlılıkları karşıdan yükler (veya makinenizdeki bir önbellekten yakalar) ve örneği derlemek ve çalıştırmak için gerekli olan *obj/project.assets.json* dosyasını yazar.
+    `dotnet new`[DotNet restore](../tools/dotnet-restore.md) dolaylı olarak çağırır. `dotnet restore`Bağımlılıklar ağacını geri yüklemek için [NuGet](https://www.nuget.org/) (.net Package Manager) çağrısı yapın. NuGet, *Hello. csproj* dosyasını analiz eder, dosyada tanımlanan bağımlılıkları indirir (veya makinenizde bir önbellekten Dallarınızla) ve örneği derlemek ve çalıştırmak için gerekli olan *obj/Project. varlıklar. JSON* dosyasını yazar.
 
 02. `dotnet run`
 
-    [dotnet,](../tools/dotnet-run.md) yapı hedeflerinin inşa edildiğinden emin olmak için [dotnet yapılı](../tools/dotnet-build.md) çağrıları çalıştırır ve ardından hedef uygulamayı çalıştırmak için çağrılar da yapar. `dotnet <assembly.dll>`
+    [DotNet Run](../tools/dotnet-run.md) , derleme hedeflerinin oluşturulduğundan emin olmak için [DotNet derlemesini](../tools/dotnet-build.md) çağırır ve ardından `dotnet <assembly.dll>` Hedef uygulamayı çalıştırmak için çağırır.
 
     ```dotnetcli
     dotnet run
@@ -74,7 +74,7 @@ Hızlı bir gözden geçirme yapalım:
     Hello World!
     ```
 
-    Alternatif olarak, yapı `dotnet build` konsolu uygulamalarını çalıştırmadan kodu derlemek için de çalıştırabilirsiniz. Bu, projenin adını temel alan bir DLL dosyası olarak derlenmiş bir uygulamayla sonuçlanır. Bu durumda, oluşturulan dosya *Hello.dll*olarak adlandırılır. Bu uygulama `dotnet bin\Debug\netcoreapp3.1\Hello.dll` Windows'da çalıştırılabilir `/` (Windows olmayan sistemler için kullanın).
+    Alternatif olarak, `dotnet build` derleme konsolu uygulamalarını çalıştırmadan kodu derlemek için de çalıştırabilirsiniz. Bu, bir DLL dosyası olarak proje adına bağlı olarak derlenmiş bir uygulama ile sonuçlanır. Bu durumda, oluşturulan dosya *Hello. dll*olarak adlandırılır. Bu uygulama, `dotnet bin\Debug\netcoreapp3.1\Hello.dll` Windows üzerinde ile çalıştırılabilir ( `/` Windows dışı sistemler için kullanın).
 
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
@@ -86,7 +86,7 @@ Hızlı bir gözden geçirme yapalım:
     Hello World!
     ```
 
-    Uygulama derlendiğinde, işletim sistemine özgü bir çalıştırılabilir `Hello.dll` Windows'da, bu `Hello.exe`olurdu; Linux veya macOS, bu `hello`olurdu . Yukarıdaki örnekte, dosya ile `Hello.exe` adlandırılır `Hello`veya . Bu çalıştırılabilir doğrudan çalıştırabilirsiniz.
+    Uygulama derlendiğinde, ile birlikte işletim sistemine özgü bir yürütülebilir dosya oluşturulur `Hello.dll` . Windows 'ta, bu, `Hello.exe` Linux veya macOS üzerinde olduğu gibi olacaktır `hello` . Yukarıdaki örnekte, dosya veya ile adlandırılır `Hello.exe` `Hello` . Bu yürütülebilir dosyayı doğrudan çalıştırabilirsiniz.
 
     ```console
     .\bin\Debug\netcoreapp3.1\Hello.exe
@@ -96,15 +96,15 @@ Hızlı bir gözden geçirme yapalım:
 
 ## <a name="modify-the-program"></a>Programı değiştirme
 
-Programı biraz değiştirelim. Fibonacci numaraları eğlenceli, bu yüzden bunu ekleyelim ve ayrıca uygulamayı çalıştıran kişiyi karşılamak için argümanı kullanalım.
+Programı bir bit olarak değiştirelim. Fibonaccı numaraları eğlencelidir. bu nedenle, uygulamayı çalıştıran kişiyi almak için bağımsız değişkenini de kullanarak ekleyelim.
 
 01. *Program.cs* dosyanızın içeriğini aşağıdaki kodla değiştirin:
 
     [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
-02. Değişiklikleri derlemek için [dotnet yapısını](../tools/dotnet-build.md) çalıştırın.
+02. Değişiklikleri derlemek için [DotNet derlemesini](../tools/dotnet-build.md) çalıştırın.
 
-03. Uygulamaya bir parametre geçen programı çalıştırın. Bir uygulamayı `dotnet` çalıştırmak için komutu `--` kullandığınızda, sonuna ekleyin. Sağdaki her `--` şey uygulamaya parametre olarak geçirilecektir. Aşağıdaki örnekte, değer `John` uygulamaya aktarılır.
+03. Uygulamaya bir parametre geçirerek programı çalıştırın. `dotnet`Bir uygulamayı çalıştırmak için komutunu kullandığınızda, `--` sonuna ekleyin. Sağına doğru bir şey, `--` uygulamaya parametre olarak geçirilir. Aşağıdaki örnekte, değer `John` uygulamaya geçirilir.
 
     ```dotnetcli
     dotnet run -- John
@@ -132,23 +132,23 @@ Programı biraz değiştirelim. Fibonacci numaraları eğlenceli, bu yüzden bun
     15: 377
     ```
 
-Hepsi bu! *İstediğiniz Program.cs* değiştirebilirsiniz.
+Hepsi bu! Dilediğiniz gibi *program.cs* değiştirebilirsiniz.
 
-## <a name="working-with-multiple-files"></a>Birden çok dosyayla çalışma
+## <a name="working-with-multiple-files"></a>Birden çok dosya ile çalışma
 
-Tek dosyalar basit tek seferlik programlar için iyidir, ancak daha karmaşık bir uygulama oluşturuyorsanız, büyük olasılıkla projenizde birden çok kod dosyanız olacaktır. Bazı Fibonacci değerlerini önbelleğe alarak önceki Fibonacci örneğini oluşturalım ve bazı özyinelemeli özellikler ekleyelim.
+Tek dosyalar basit bir tek başına programlar için uygundur, ancak daha karmaşık bir uygulama oluşturuyorsanız, muhtemelen projenizde birden çok kod dosyasına sahip olursunuz. Önceki Fibonaccı örneğini, bazı Fipriaccı değerlerini önbelleğe alarak ve bazı özyinelemeli özellikler ekleyerek oluşturalım.
 
-01. Aşağıdaki kodla *FibonacciGenerator.cs* adlı *Merhaba* dizininin içine yeni bir dosya ekleyin:
+01. Aşağıdaki kodla *FibonacciGenerator.cs* adlı *Hello* dizininin içine yeni bir dosya ekleyin:
 
     [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. Yeni `Main` sınıfı anında açmak ve yöntemiaşağıdaki örnekte olduğu gibi çağırmak için *Program.cs* dosyanızdaki yöntemi değiştirin:
+02. `Main` *Program.cs* dosyanızdaki yöntemi, yeni sınıfı başlatmak ve metodunu aşağıdaki örnekte olduğu gibi çağırmak için değiştirin:
 
     [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
-03. Değişiklikleri derlemek için [dotnet yapısını](../tools/dotnet-build.md) çalıştırın.
+03. Değişiklikleri derlemek için [DotNet derlemesini](../tools/dotnet-build.md) çalıştırın.
 
-04. [dotnet çalıştırarak](../tools/dotnet-run.md)uygulamanızı çalıştırın.
+04. [DotNet çalıştırmasını](../tools/dotnet-run.md)yürüterek uygulamanızı çalıştırın.
 
     ```dotnetcli
     dotnet run
@@ -176,13 +176,13 @@ Tek dosyalar basit tek seferlik programlar için iyidir, ancak daha karmaşık b
 
 ## <a name="publish-your-app"></a>Uygulamanızı yayımlama
 
-Uygulamanızı dağıtmaya hazır olduğunuzda, _bin\\debug\\netcoreapp3.1\\publish\\ _ 'de _yayımlama_ klasörünü oluşturmak için [dotnet yayımlama](../tools/dotnet-publish.md) komutunu kullanın (Windows dışı sistemler için kullanın). `/` Dotnet çalışma süresini yükledikleri sürece _yayımlama_ klasörünün içeriğini diğer platformlara dağıtabilirsiniz.
+Uygulamanızı dağıtmaya hazırladıktan sonra, _ \\ hata ayıklama \\ netcoreapp 3.1 \\ Yayımla \\ _ ' da _Yayımla_ klasörünü oluşturmak için [DotNet Publish](../tools/dotnet-publish.md) komutunu kullanın ( `/` Windows dışı sistemler için kullanın). Daha önce DotNet çalışma zamanını yükledikleri sürece _Publish_ klasörünün içeriğini diğer platformlara dağıtabilirsiniz.
 
 ```dotnetcli
 dotnet publish
 ```
 
-Aşağıdakine benzer çıktı alırsınız.
+Aşağıdakine benzer bir çıktı alırsınız.
 
 ```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
@@ -193,9 +193,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   Hello -> C:\Code\Temp\Hello\bin\Debug\netcoreapp3.1\publish\
 ```
 
-Yukarıdaki çıktı geçerli klasörünüze ve işletim sisteminize bağlı olarak farklılık gösterebilir, ancak çıktı benzer olmalıdır.
+Yukarıdaki çıkış, geçerli klasörünüze ve işletim sisteminize göre farklılık gösterebilir, ancak çıktının benzer olması gerekir.
 
-Yayınlanan uygulamanızı [dotnet](../tools/dotnet.md) komutu ile çalıştırabilirsiniz:
+Yayımlanmış uygulamanızı [DotNet](../tools/dotnet.md) komutuyla çalıştırabilirsiniz:
 
 ```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
@@ -204,23 +204,51 @@ dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
 Aşağıdaki çıktıyı alırsınız.
 
 ```console
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
-Bu makalenin başında belirtildiği gibi, bir işletim sistemi özel çalıştırılabilir `Hello.dll`ile birlikte oluşturuldu . Windows'da, bu `Hello.exe`olurdu; Linux veya macOS, bu `hello`olurdu . Yukarıdaki örnekte, dosya ile `Hello.exe` adlandırılır `Hello`veya . Bu yayımlanabilir çalıştırılabilir çalıştırAbilirsiniz.
+Bu makalenin başlangıcında belirtildiği gibi, işletim sistemine özgü bir yürütülebilir dosya ile birlikte oluşturulmuştur `Hello.dll` . Windows 'ta, bu, `Hello.exe` Linux veya macOS üzerinde olduğu gibi olacaktır `hello` . Yukarıdaki örnekte, dosya veya ile adlandırılır `Hello.exe` `Hello` . Bu yayınlanan yürütülebilir dosyayı doğrudan çalıştırabilirsiniz.
 
 ```console
 .\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 ## <a name="conclusion"></a>Sonuç
 
-Hepsi bu! Şimdi, kendi programlarınızı oluşturmak için burada öğrenilen temel kavramları kullanmaya başlayabilirsiniz.
+Hepsi bu! Şimdi kendi programlarınızı oluşturmak için burada öğrenilen temel kavramları kullanmaya başlayabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core CLI ile projelerin düzenlenmesi ve test edilmesi](testing-with-cli.md)
-- [.NET Core CLI ile .NET Core uygulamalarını yayımla](../deploying/deploy-with-cli.md)
+- [.NET Core CLI projeleri düzenleme ve test etme](testing-with-cli.md)
+- [.NET Core CLI .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
 - [.NET Core uygulama dağıtımı](../deploying/index.md)

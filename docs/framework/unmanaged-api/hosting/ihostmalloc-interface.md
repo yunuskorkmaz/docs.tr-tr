@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3c6643b-6fc7-4a99-959d-4b7b4e63fdee
 topic_type:
 - apiref
-ms.openlocfilehash: abc6cca185b318be016f92ac8c97d21f7af5940a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f4e1cd7586df7d8e2a577d26f06eaed6b2c8bb7
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136773"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804612"
 ---
 # <a name="ihostmalloc-interface"></a>IHostMalloc Arabirimi
 Ortak dil çalışma zamanının (CLR) ana bilgisayar aracılığıyla yığından hassas ayırmalar istemesine izin veren yöntemler sağlar.  
@@ -28,23 +28,23 @@ Ortak dil çalışma zamanının (CLR) ana bilgisayar aracılığıyla yığınd
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Alloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)|Konağın, istenen bellek miktarını yığından ayırmasını ister.|  
-|[DebugAlloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-debugalloc-method.md)|Konağın, istenen bellek miktarını yığından ayırmasını ister ve ayrıca belleğin nerede ayrıldığını izler.|  
-|[Free Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-free-method.md)|`Alloc` yöntemi kullanılarak ayrılan belleği serbest bırakır.|  
+|[Alloc Yöntemi](ihostmalloc-alloc-method.md)|Konağın, istenen bellek miktarını yığından ayırmasını ister.|  
+|[DebugAlloc Yöntemi](ihostmalloc-debugalloc-method.md)|Konağın, istenen bellek miktarını yığından ayırmasını ister ve ayrıca belleğin nerede ayrıldığını izler.|  
+|[Free Yöntemi](ihostmalloc-free-method.md)|Yöntemi kullanılarak ayrılan belleği boşaltır `Alloc` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, [IHostMemoryManager:: Createmayırma](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir `IHostMalloc` örneğine yönelik bir arabirim işaretçisi alır.  
+ CLR, `IHostMalloc` [IHostMemoryManager:: createmayırma](ihostmemorymanager-createmalloc-method.md) yöntemini çağırarak bir örneğe bir arabirim işaretçisi alır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IHostMemoryManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [IHostMemoryManager Arabirimi](ihostmemorymanager-interface.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
