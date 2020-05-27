@@ -1,55 +1,55 @@
 ---
-title: dotnet listesi referans komutu
-description: Dotnet listesi başvuru komutu, proje başvurularını projeye listelemek için kullanışlı bir seçenek sağlar.
+title: DotNet liste başvurusu komutu
+description: DotNet liste başvurusu komutu, projeyi Proje başvurularına göre listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 02/14/2020
-ms.openlocfilehash: c0ea46298123e69ae527870e50d204d8fcf5cc85
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b9b34c17102c6218f3d99f6e2620e99f70140284
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463653"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802758"
 ---
-# <a name="dotnet-list-reference"></a><span data-ttu-id="ffd4c-103">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="ffd4c-103">dotnet list reference</span></span>
+# <a name="dotnet-list-reference"></a><span data-ttu-id="92b24-103">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="92b24-103">dotnet list reference</span></span>
 
-<span data-ttu-id="ffd4c-104">**Bu makale şu şekilde dir:** ✔️ .NET Core 2.x SDK ve sonraki sürümler</span><span class="sxs-lookup"><span data-stu-id="ffd4c-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="92b24-104">**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="92b24-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="ffd4c-105">Adı</span><span class="sxs-lookup"><span data-stu-id="ffd4c-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="92b24-105">Name</span><span class="sxs-lookup"><span data-stu-id="92b24-105">Name</span></span>
 
-<span data-ttu-id="ffd4c-106">`dotnet list reference`- Projeden projeye referansları listeler.</span><span class="sxs-lookup"><span data-stu-id="ffd4c-106">`dotnet list reference` - Lists project-to-project references.</span></span>
+<span data-ttu-id="92b24-106">`dotnet list reference`-Projeden projeye başvuruları listeler.</span><span class="sxs-lookup"><span data-stu-id="92b24-106">`dotnet list reference` - Lists project-to-project references.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="ffd4c-107">Özet</span><span class="sxs-lookup"><span data-stu-id="ffd4c-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="92b24-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="92b24-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] reference
+dotnet list [<PROJECT>] reference
 
 dotnet list -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="ffd4c-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ffd4c-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="92b24-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="92b24-108">Description</span></span>
 
-<span data-ttu-id="ffd4c-109">Komut, `dotnet list reference` belirli bir proje veya çözüm için proje başvurularını listelemek için kullanışlı bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="ffd4c-109">The `dotnet list reference` command provides a convenient option to list project references for a given project or solution.</span></span>
+<span data-ttu-id="92b24-109">`dotnet list reference`Komut, belirli bir proje için proje başvurularını listelemek üzere uygun bir seçenek sağlar.</span><span class="sxs-lookup"><span data-stu-id="92b24-109">The `dotnet list reference` command provides a convenient option to list project references for a given project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="ffd4c-110">Bağımsız Değişkenler</span><span class="sxs-lookup"><span data-stu-id="ffd4c-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="92b24-110">Bağımsız değişkenler</span><span class="sxs-lookup"><span data-stu-id="92b24-110">Arguments</span></span>
 
-* **`PROJECT | SOLUTION`**
+* **`PROJECT`**
 
-  <span data-ttu-id="ffd4c-111">Başvuruları listeleme için kullanılacak proje veya çözüm dosyasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="ffd4c-111">Specifies the project or solution file to use for listing references.</span></span> <span data-ttu-id="ffd4c-112">Belirtilmemişse, komut bir proje dosyası için geçerli dizini arar.</span><span class="sxs-lookup"><span data-stu-id="ffd4c-112">If not specified, the command searches the current directory for a project file.</span></span>
+  <span data-ttu-id="92b24-111">Üzerinde çalışılacak proje dosyası.</span><span class="sxs-lookup"><span data-stu-id="92b24-111">The project file to operate on.</span></span> <span data-ttu-id="92b24-112">Bir dosya belirtilmemişse, komut geçerli dizinde bir arama yapılır.</span><span class="sxs-lookup"><span data-stu-id="92b24-112">If a file is not specified, the command will search the current directory for one.</span></span>
 
-## <a name="options"></a><span data-ttu-id="ffd4c-113">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="ffd4c-113">Options</span></span>
+## <a name="options"></a><span data-ttu-id="92b24-113">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="92b24-113">Options</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="ffd4c-114">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="ffd4c-114">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="92b24-114">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="92b24-114">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="ffd4c-115">Örnekler</span><span class="sxs-lookup"><span data-stu-id="ffd4c-115">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="92b24-115">Örnekler</span><span class="sxs-lookup"><span data-stu-id="92b24-115">Examples</span></span>
 
-* <span data-ttu-id="ffd4c-116">Belirtilen proje için proje başvurularını listele:</span><span class="sxs-lookup"><span data-stu-id="ffd4c-116">List the project references for the specified project:</span></span>
+* <span data-ttu-id="92b24-116">Belirtilen proje için proje başvurularını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="92b24-116">List the project references for the specified project:</span></span>
 
   ```dotnetcli
   dotnet list app/app.csproj reference
   ```
 
-* <span data-ttu-id="ffd4c-117">Proje başvurularını geçerli dizindeki listele:</span><span class="sxs-lookup"><span data-stu-id="ffd4c-117">List the project references for the project in the current directory:</span></span>
+* <span data-ttu-id="92b24-117">Geçerli dizindeki projenin proje başvurularını listeleyin:</span><span class="sxs-lookup"><span data-stu-id="92b24-117">List the project references for the project in the current directory:</span></span>
 
   ```dotnetcli
   dotnet list reference
