@@ -81,59 +81,95 @@
   href: compatibility/
 - name: Öğreticiler
   items:
-    - name: Genel Bakış
+    - name: Visual Studio kullanma
+      items:
+        - name: Konsol uygulaması oluşturma
+          href: tutorials/with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Uygulamada hata ayıklama
+          href: tutorials/debugging-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Uygulama yayımlama
+          href: tutorials/publishing-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Kitaplık oluşturma
+          href: tutorials/library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Kitaplığa birim testi yapma
+          href: tutorials/testing-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Kitaplık kullanma
+          href: tutorials/consuming-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: Canlı birim testi
+          href: /visualstudio/test/live-unit-testing-start
+        - name: Paket yükleme ve kullanma
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+        - name: Paket oluşturma ve yayımlama
+          href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+    - name: Visual Studio Code kullanma
+      items:
+        - name: Konsol uygulaması oluşturma
+          href: tutorials/with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Konsol uygulaması oluşturma ve yayımlama
+          href: tutorials/cli-create-console-app.md
+          displayName: 'tutorials, cli'
+        - name: Kitaplık oluşturma ve bu kitaplığa birim testi yapma - macOS
+          href: tutorials/using-on-macos.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: Paket yükleme ve kullanma
+          href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+          displayName: 'tutorials, cli'
+        - name: Paket oluşturma ve yayımlama
+          href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+          displayName: tutorials
+    - name: Mac için Visual Studio’yu kullanma
+      items:
+        - name: Konsol uygulaması oluşturma
+          href: tutorials/using-on-mac-vs.md
+          displayName: tutorials
+        - name: Kitaplık oluşturma ve bu kitaplığa birim testi yapma
+          href: tutorials/using-on-mac-vs-full-solution.md
+          displayName: tutorials
+        - name: Paket yükleme ve kullanma
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+          displayName: tutorials
+    - name: Gelişmiş konular
+      items:
+        - name: xUnit ile bir uygulamaya birim testi yapma
+          href: tutorials/testing-with-cli.md
+          displayName: 'tutorials, cli'
+        - name: Sınıf kitaplıkları oluşturma
+          href: tutorials/libraries.md
+        - name: CLI için şablonlar oluşturma
+          items:
+            - name: 1 - Öğe şablonu oluşturma
+              href: tutorials/cli-templates-create-item-template.md
+              displayName: 'tutorials, cli'
+            - name: 2 - Proje şablonu oluşturma
+              href: tutorials/cli-templates-create-project-template.md
+              displayName: 'tutorials, cli'
+            - name: 3 - Şablon paketi oluşturma
+              href: tutorials/cli-templates-create-template-pack.md
+              displayName: 'tutorials, cli'
+        - name: CLI için araçlar oluşturma
+          items:
+            - name: 1 - Araç oluşturma
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-create.md
+            - name: 2 - Genel araç kullanma
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-use.md
+            - name: 3 - Yerel araç kullanma
+              href: tools/local-tools-how-to-use.md
+              displayName: 'tools, tutorials, cli'
+        - name: Eklentiler ile uygulama oluşturma
+          href: tutorials/creating-app-with-plugin-support.md
+    - name: Diğer öğreticiler
       href: tutorials/index.md
-    - name: Visual Studio kullanarak .NET Core kullanmaya başlama
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio Code kullanarak .NET Core kullanmaya başlama
-      href: tutorials/with-visual-studio-code.md
-    - name: CLI kullanarak .NET Core kullanmaya başlama
-      href: tutorials/cli-create-console-app.md
-    - name: macOS üzerinde Visual Studio Code kullanarak .NET Core kullanmaya başlama
-      href: tutorials/using-on-macos.md
-    - name: Mac için Visual Studio kullanarak .NET Core kullanmaya başlama
-      href: tutorials/using-on-mac-vs.md
-    - name: Visual Studio kullanarak uygulamada hata ayıklama
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio kullanarak uygulamayı yayımlama
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığı oluşturma
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığını test etme
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio’da bir .NET Standard kitaplığını kullanma
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: macOS üzerinde kapsamlı bir .NET Core çözümü oluşturma
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: .NET Core CLI ile projeleri düzenleme ve test etme
-      href: tutorials/testing-with-cli.md
-    - name: Platformlar arası araçlarla kitaplık geliştirme
-      href: tutorials/libraries.md
-    - name: Eklentilerle .NET Core uygulaması oluşturma
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: ASP.NET Core uygulamaları geliştirme
-      href: tutorials/aspnet-core.md
-    - name: Yerel koddan .NET Core barındırma
-      href: tutorials/netcore-hosting.md
-    - name: CLI için şablonlar oluşturma
-      items:
-        - name: 1 - Öğe şablonu oluşturma
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - Proje şablonu oluşturma
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - Şablon paketi oluşturma
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: CLI için araçlar oluşturma
-      items:
-        - name: 1 - Araç oluşturma
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 - Genel araç kullanma
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 - Yerel araç kullanma
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
 - name: Proje SDK’leri
   items:
     - name: Genel Bakış
@@ -441,6 +477,8 @@
   href: distribution-packaging.md
 - name: .NET Core bileşenlerini COM’da kullanıma sunma
   href: native-interop/expose-components-to-com.md
+- name: Yerel koddan .NET Core barındırma
+  href: tutorials/netcore-hosting.md
 - name: 'Paketler, meta paketler ve çerçeveler'
   href: packages.md
 - name: Sürekli tümleştirme

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-ms.openlocfilehash: 7becace679b62a635d8231c3d42213f247f44190
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d11fefe220fdb00457cc48a6cd166673350be049
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444171"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006044"
 ---
-# <a name="ceesectionrelocextra-union"></a><span data-ttu-id="c11e5-102">CeeSectionRelocExtra Birleşimi</span><span class="sxs-lookup"><span data-stu-id="c11e5-102">CeeSectionRelocExtra Union</span></span>
-<span data-ttu-id="c11e5-103">Bir bölümün yerini değiştirmek için [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) arabirimi tarafından kullanılan bir adres sapmasını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="c11e5-103">Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section.</span></span>  
+# <a name="ceesectionrelocextra-union"></a><span data-ttu-id="52a81-102">CeeSectionRelocExtra Birleşimi</span><span class="sxs-lookup"><span data-stu-id="52a81-102">CeeSectionRelocExtra Union</span></span>
+<span data-ttu-id="52a81-103">Bir bölümün yerini değiştirmek için [ICeeGen](iceegen-interface.md) arabirimi tarafından kullanılan bir adres sapmasını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="52a81-103">Represents an address offset that is used by the [ICeeGen](iceegen-interface.md) interface to relocate a section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c11e5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c11e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52a81-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="52a81-104">Syntax</span></span>  
   
 ```cpp  
 typedef union  {  
@@ -32,21 +32,21 @@ typedef union  {
 } CeeSectionRelocExtra;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c11e5-105">Üyeleri</span><span class="sxs-lookup"><span data-stu-id="c11e5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="52a81-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="52a81-105">Members</span></span>  
   
-|<span data-ttu-id="c11e5-106">Üyesi</span><span class="sxs-lookup"><span data-stu-id="c11e5-106">Member</span></span>|<span data-ttu-id="c11e5-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c11e5-107">Description</span></span>|  
+|<span data-ttu-id="52a81-106">Üye</span><span class="sxs-lookup"><span data-stu-id="52a81-106">Member</span></span>|<span data-ttu-id="52a81-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="52a81-107">Description</span></span>|  
 |------------|-----------------|  
-|`highAdj`|<span data-ttu-id="c11e5-108">Bölüm için üst adres ayarlama.</span><span class="sxs-lookup"><span data-stu-id="c11e5-108">The upper address adjustment for the section.</span></span>|  
+|`highAdj`|<span data-ttu-id="52a81-108">Bölüm için üst adres ayarlama.</span><span class="sxs-lookup"><span data-stu-id="52a81-108">The upper address adjustment for the section.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c11e5-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c11e5-109">Requirements</span></span>  
- <span data-ttu-id="c11e5-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c11e5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52a81-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="52a81-109">Requirements</span></span>  
+ <span data-ttu-id="52a81-110">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52a81-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c11e5-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c11e5-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="52a81-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="52a81-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c11e5-112">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="c11e5-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="52a81-112">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="52a81-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c11e5-113">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c11e5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="52a81-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52a81-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c11e5-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c11e5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52a81-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="52a81-114">See also</span></span>
 
-- [<span data-ttu-id="c11e5-115">Meta Veri Birleşimleri</span><span class="sxs-lookup"><span data-stu-id="c11e5-115">Metadata Unions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+- [<span data-ttu-id="52a81-115">Meta Veri Birleşimleri</span><span class="sxs-lookup"><span data-stu-id="52a81-115">Metadata Unions</span></span>](metadata-unions.md)
