@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 2f9325f3795262a0c33af02f87fc5d3a020658cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177647"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008371"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope Yöntemi
-Bellekte yeni meta veriler oluşturabileceğiniz yeni bir alan oluşturur.  
+Bellekte yeni meta veri oluşturabileceğiniz yeni bir alan oluşturur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineScope (  
@@ -38,37 +38,37 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>Parametreler  
  `rclsid`  
- [içinde] Oluşturulacak meta veri yapılarının sürümünün CLSID'si. Bu değer .NET Framework sürüm 2.0 için CLSID_CorMetaDataRuntime olmalıdır.  
+ 'ndaki Oluşturulacak meta veri yapıları sürümünün CLSID değeri. Bu değer, .NET Framework sürüm 2,0 için CLSID_CorMetaDataRuntime olmalıdır.  
   
  `dwCreateFlags`  
- [içinde] Seçenekleri belirten bayraklar. Bu değer .NET Framework 2.0 için sıfır olmalıdır.  
+ 'ndaki Seçenekleri belirten bayraklar. Bu değer, .NET Framework 2,0 için sıfır olmalıdır.  
   
  `riid`  
- [içinde] Döndürülecek istenilen meta veri arabiriminin IID'si; arayan yeni meta verileri oluşturmak için arabirimi kullanır.  
+ 'ndaki Döndürülecek istenen meta veri arabiriminin IID 'si; çağıran, yeni meta verileri oluşturmak için arabirimini kullanır.  
   
- Değeri "yayılt" arabirimlerinden birini `riid` belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit veya IID_IMetaDataEmit2.  
+ Değerinin `riid` "yayma" arabirimlerinden birini belirtmesi gerekir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit veya IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [çıkış] Döndürülen arabirimin işaretçisi.  
+ dışı Döndürülen arabirime yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `DefineScope`bellek içi meta veri tabloları kümesi oluşturur, meta veriler için benzersiz bir GUID (modül sürüm tanımlayıcısı veya MVID) oluşturur ve yayılan derleme birimi için modül tablosunda bir giriş oluşturur.  
+ `DefineScope`bellek içi meta veri tabloları kümesi oluşturur, meta veriler için benzersiz bir GUID (Modül sürümü tanımlayıcısı veya MVıD) oluşturur ve yayılmakta olan derleme biriminin modül tablosunda bir giriş oluşturur.  
   
- [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) veya [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) yöntemini kullanarak meta veri kapsamına uygun şekilde öznitelikleri ekleyebilirsiniz.  
+ [Imetadatayayma:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) veya [ımetadatayayma::D efineCustomAttribute](imetadataemit-definecustomattribute-method.md) metodunu uygun şekilde kullanarak bir bütün olarak meta veri kapsamına öznitelikler ekleyebilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataDispenser Yöntemi](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx Arabirimi](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit Arabirimi](imetadataassemblyemit-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

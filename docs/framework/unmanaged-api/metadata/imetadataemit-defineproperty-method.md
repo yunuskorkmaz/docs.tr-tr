@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175791"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009385"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty Yöntemi
-Belirtilen tür için, belirtilen `get` ve `set` yöntem etekleri ile bir özellik tanımı oluşturur ve bu özellik tanımı için bir belirteç alır.  
+Belirtilen ve Yöntem erişimcilerine sahip olan belirtilen tür için bir özellik tanımı oluşturur `get` `set` ve bu özellik tanımına bir belirteç alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineProperty (
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [içinde] Özelliğin tanımlandığı sınıf veya arabirim için belirteç.  
+ 'ndaki Üzerinde özelliğin tanımlandığı sınıf veya arabirim için belirteç.  
   
  `szProperty`  
- [içinde] Mülkün adı.  
+ 'ndaki Özelliğin adı.  
   
  `dwPropFlags`  
- [içinde] Mülk bayrakları.  
+ 'ndaki Özellik bayrakları.  
   
  `pvSig`  
- [içinde] Mülk imzası.  
+ 'ndaki Özellik imzası.  
   
  `cbSig`  
- [içinde] Bayt `pvSig`sayısı.  
+ 'ndaki İçindeki bayt sayısı `pvSig` .  
   
  `dwCPlusTypeFlag`  
- [içinde] Özelliğin varsayılan değerinin türü.  
+ 'ndaki Özelliğin varsayılan değerinin türü.  
   
  `pValue`  
- [içinde] Özellik için varsayılan değer.  
+ 'ndaki Özelliğin varsayılan değeri.  
   
  `cchValue`  
- [içinde] (Unicode) karakter `pValue`sayısı.  
+ 'ndaki İçindeki (Unicode) karakterlerin sayısı `pValue` .  
   
  `mdSetter`  
- [içinde] Özellik değerini ayarlayan yöntem.  
+ 'ndaki Özellik değerini ayarlayan yöntem.  
   
  `mdGetter`  
- [içinde] Özellik değerini alan yöntem.  
+ 'ndaki Özellik değerini alan yöntem.  
   
  `rmdOtherMethods[]`  
- [içinde] Özellik ile ilişkili diğer yöntemler dizisi. Diziyi bir `mdTokenNil`ile sonlandırın  
+ 'ndaki Özelliği ile ilişkili diğer yöntemlerin dizisi. Diziyi bir ile sonlandırın `mdTokenNil` .  
   
  `pmdProp`  
- [çıkış] Atanan `mdProperty` belirteç.  
+ dışı `mdProperty`Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

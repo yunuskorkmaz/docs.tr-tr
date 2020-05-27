@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b74d7629-5f46-458f-8d67-2456a1e7030c
 topic_type:
 - apiref
-ms.openlocfilehash: 69c3ee366dbb8505e0df744037c480da996bb836
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aee258c49e6726ebef990257456fd273b01b9ef0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175622"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007851"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps Yöntemi
-[Başvuruları IMetaDataEmit::DefineModuleRef'e](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)önceden yapılan bir çağrıyla tanımlanan bir modüle güncelleştirir.  
+Imetadatayayma için önceki bir çağrı tarafından tanımlanan bir modüle yapılan başvuruları güncelleştirir [::D efineModuleRef](imetadataemit-definemoduleref-method.md).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetModuleProps (
@@ -35,18 +35,18 @@ HRESULT SetModuleProps (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [içinde] Unicode'daki modül adı. Bu yalnızca dosya adıdır ve tam yol adı değildir.  
+ 'ndaki Unicode 'daki modül adı. Bu, yalnızca dosya adıdır ve tam yol adı değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

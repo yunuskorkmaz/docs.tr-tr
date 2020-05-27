@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81d6c972b53221ee53cbcf31639d65c30858b48b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177874"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008165"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType Yöntemi
-Belirtilen dışa aktarılan tür için meta veri içeren bir `ExportedType` yapı oluşturur ve ilişkili meta veri belirteci döndürür.  
+`ExportedType`Belirtilen içe aktarılmış tür için meta veri içeren bir yapı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineExportedType (  
@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [içinde] Dışa aktarılacak türün adı. Ortak dil çalışma zamanının sürüm 1.1 sürümü için, dışa aktarılan türün `TypeDef` adı, tür için verilen adla tam olarak eşleşmelidir.  
+ 'ndaki Aktarılacak türün adı. Ortak dil çalışma zamanının 1,1 sürümü için, verilen türün adı, türü için verilen adla tam olarak eşleşmelidir `TypeDef` .  
   
  `tkImplementation`  
- [içinde] Dışa aktarılan türün nerede uygulandığını belirten bir belirteç. Geçerli değerler ve bunlara bağlı anlamları şunlardır:  
+ 'ndaki İçe aktarılmış türün nerede uygulandığını belirten bir belirteç. Geçerli değerler ve bunlarla ilişkili anlamları şunlardır:  
   
-- `mdFile`Tür, bu derleme içinde farklı bir dosyada uygulanır.  
+- `mdFile`Bu derleme içindeki farklı bir dosyada tür uygulandı.  
   
-- `mdAssemblyRef`Tür farklı bir derlemede uygulanır.  
+- `mdAssemblyRef`Tür, farklı bir derlemede uygulanır.  
   
-- `mdExportedTYpe`Tür başka bir tür içinde iç içe.  
+- `mdExportedTYpe`Tür başka bir tür içinde iç içe geçmiş.  
   
-- `mdFileNil`Tür, bildirimle aynı dosyadadır ve iç içe geçen bir tür değildir.  
+- `mdFileNil`Tür, bildirimle aynı dosyada ve iç içe geçmiş bir tür değil.  
   
  `tkTypeDef`  
- [içinde] Dışa aktarılacak türü belirten meta verilerin belirteci. Bu değer, türü `TypeDef` uygulayan dosyadaki tabloya girilir ve yalnızca bu dosya bu derlemedeyse alakalıdır.  
+ 'ndaki Meta veriye aktarılacak türü belirten bir belirteç. Bu değer `TypeDef` , türü uygulayan dosyanın tablosuna girilir ve yalnızca söz konusu dosya bu derlemede olduğunda ilgilidir.  
   
  `dwExportedTypeFlags`  
- [içinde] Dışa aktarılan türiçin özellik ayarlarını tanımlayan [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırma değerlerinin bitwise kombinasyonu.  
+ 'ndaki İçe aktarılmış tür için özellik ayarlarını tanımlayan [CorTypeAttr](cortypeattr-enumeration.md) numaralandırma değerlerinin bit düzeyinde birleşimi.  
   
  `pmdct`  
- [çıkış] Dışa aktarılan türü gösteren döndürülen meta veri belirteci için bir işaretçi.  
+ dışı Verilen türü gösteren döndürülen meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu `ExportedType` derleme tarafından maruz kalan ve manifestoyu içeren bir modül dışında bir modülde uygulanan her tür için bir meta veri yapısı tanımlanmalıdır.  
+ `ExportedType`Bu derleme tarafından sunulan ve bildirimi içeren bir modülde uygulanan her tür için bir meta veri yapısı tanımlanmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit Arabirimi](imetadataassemblyemit-interface.md)

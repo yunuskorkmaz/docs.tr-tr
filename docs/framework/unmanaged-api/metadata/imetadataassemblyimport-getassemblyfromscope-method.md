@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b437f70-561d-48c7-abe0-0cb9ace10c08
 topic_type:
 - apiref
-ms.openlocfilehash: 953aa16566c2a15939fbd556f478bbdb3c0c77d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: adcaac02526c7d72ffb75ba6c7552632173032cf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448241"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009047"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope Metodu
 Geçerli kapsamdaki derleme için bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssemblyFromScope (  
@@ -35,17 +35,17 @@ HRESULT GetAssemblyFromScope (
   
 ## <a name="parameters"></a>Parametreler  
  `ptkAssembly`  
- dışı Derlemeyi tanımlayan, alınan `mdAssembly` belirtecine yönelik bir işaretçi.  
+ dışı `mdAssembly`Derlemeyi tanımlayan alınan belirtecin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)

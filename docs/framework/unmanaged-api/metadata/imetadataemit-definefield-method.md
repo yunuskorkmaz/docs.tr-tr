@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177709"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004822"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField Yöntemi
 Belirtilen meta veri imzasına sahip bir alan için tanım oluşturur ve bu alan tanımına bir belirteç alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineField (
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [içinde] Çevreleyen `mdTypeDef` sınıf veya arabirim için belirteç.  
+ 'ndaki `mdTypeDef`Kapsayan sınıf veya arabirim için belirteç.  
   
  `szName`  
- [içinde] Unicode'daki alan adı.  
+ 'ndaki Unicode 'daki alan adı.  
   
  `dwFieldFlags`  
- [içinde] Alan öznitelikleri. Bu `CorFieldAttr` değerlerin bir bitmask olduğunu.  
+ 'ndaki Alan öznitelikleri. Bu bir değer bit değeridir `CorFieldAttr` .  
   
  `pvSigBlob`  
- [içinde] BLOB olarak alan imzası.  
+ 'ndaki BLOB olarak alan imzası.  
   
  `cbSigBlob`  
- [içinde] Bayt `pvSigBlob`sayısı.  
+ 'ndaki İçindeki bayt sayısı `pvSigBlob` .  
   
  `dwCPlusTypeFlag`  
- [içinde] Sabit `ELEMENT_TYPE_` *\** değer için. Bu bir `CorElementType` değerdir. Alan için sabit bir değer tanımlanmıyorsanız, kullanın. `ELEMENT_TYPE_END`  
+ 'ndaki `ELEMENT_TYPE_` *\** Sabit değer için. Bu bir `CorElementType` değerdir. Alan için sabit bir değer tanımlamadıysanız kullanın `ELEMENT_TYPE_END` .  
   
  `pValue`  
- [içinde] Alan için sabit değer.  
+ 'ndaki Alanın sabit değeri.  
   
  `cchValue`  
- [içinde] (Unicode) karakterlerinin `pValue`boyutu.  
+ 'ndaki (Unicode) karakter boyutu `pValue` .  
   
  `pmd`  
- [çıkış] Atanan `mdFieldDef` belirteç.  
+ dışı `mdFieldDef`Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

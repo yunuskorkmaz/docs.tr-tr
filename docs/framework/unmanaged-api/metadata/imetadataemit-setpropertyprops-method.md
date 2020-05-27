@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177471"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007786"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps Yöntemi
-[DefineProperty Yöntemi'ne](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)önceki bir çağrıyla tanımlanan bir özellik için meta verilerde depolanan özellikleri ayarlar.  
+[DefineProperty metoduna](imetadataemit-defineproperty-method.md)önceki bir çağrı tarafından tanımlanan bir özellik için meta verilerde depolanan özellikleri ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetPropertyProps (
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `pr`  
- [içinde] Özelliğin değiştirilecek belirteci  
+ 'ndaki Değiştirilecek özelliğin belirteci  
   
  `dwPropFlags`  
- [içinde] Özellik bayrakları.  
+ 'ndaki Özellik bayrakları.  
   
  `dwCPlusTypeFlag`  
- [içinde] Özelliğin varsayılan değerinin türü.  
+ 'ndaki Özelliğin varsayılan değerinin türü.  
   
  `pValue`  
- [içinde] Özellik için varsayılan değer.  
+ 'ndaki Özelliğin varsayılan değeri.  
   
  `cchValue`  
- [içinde] (Unicode) karakter `pValue`sayısı.  
+ 'ndaki İçindeki (Unicode) karakterlerin sayısı `pValue` .  
   
  `mdSetter`  
- [içinde] Özellik değerini ayarlayan yöntem.  
+ 'ndaki Özellik değerini ayarlayan yöntem.  
   
  `mdGetter`  
- [içinde] Özellik değerini alan yöntem.  
+ 'ndaki Özellik değerini alan yöntem.  
   
  `rmdOtherMethods[]`  
- [içinde] Özellik ile ilişkili diğer yöntemler dizisi. Bu diziyi `mdTokenNil` bir belirteçle sonlandırın.  
+ 'ndaki Özelliği ile ilişkili diğer yöntemlerin dizisi. Bu diziyi bir belirteçle sonlandırın `mdTokenNil` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

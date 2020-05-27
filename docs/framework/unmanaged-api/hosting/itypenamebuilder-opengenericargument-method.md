@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 476feeac-e8e9-46cf-9f8d-be103181d0ab
 topic_type:
 - apiref
-ms.openlocfilehash: 0f92a52ff495eb95a2661a09cd3b4c7c6fb8e8a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 930177916030f78611873e05d605080b5bb893da
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125247"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008657"
 ---
 # <a name="itypenamebuilderopengenericargument-method"></a>ITypeNameBuilder::OpenGenericArgument Yöntemi
 Bu yöntem .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -32,14 +32,14 @@ HRESULT OpenGenericArgument ( );
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)

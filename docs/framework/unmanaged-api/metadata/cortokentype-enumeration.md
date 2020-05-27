@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436458"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007500"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType Numaralandırması
 Meta veri belirtecinin türünü gösterir.  
@@ -59,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`mdtModule`|`mdModule` belirteci.|  
-|`mdtTypeRef`|`mdTypeRef` belirteci.|  
-|`mdtTypeDef`|`mdTypeDef` belirteci.|  
-|`mdtFieldDef`|`mdFieldDef` belirteci.|  
-|`mdtMethodDef`|`mdMethodDef` belirteci.|  
-|`mdtParamDef`|`mdParamDef` belirteci.|  
-|`mdtInterfaceImpl`|`mdInterfaceImpl` belirteci.|  
-|`mdtMemberRef`|`mdMemberRef` belirteci.|  
-|`mdtCustomAttribute`|`mdCustomAttribute` belirteci.|  
-|`mdtPermission`|`mdPermission` belirteci.|  
-|`mdtSignature`|`mdSignature` belirteci.|  
-|`mdtEvent`|`mdEvent` belirteci.|  
-|`mdtProperty`|`mdProperty` belirteci.|  
-|`mdtModuleRef`|`mdModuleRef` belirteci.|  
-|`mdtTypeSpec`|`mdTypeSpec` belirteci.|  
-|`mdtAssembly`|`mdAssembly` belirteci.|  
-|`mdtAssemblyRef`|`mdAssemblyRef` belirteci.|  
-|`mdtFile`|`mdFile` belirteci.|  
-|`mdtExportedType`|`mdExportedType` belirteci.|  
-|`mdtManifestResource`|`mdManifestResource` belirteci.|  
-|`mdtGenericParam`|`mdGenericParam` belirteci.|  
-|`mdtMethodSpec`|`mdMethodSpec` belirteci.|  
-|`mdtGenericParamConstraint`|`mdGenericParamConstraint` belirteci.|  
-|`mdtString`|`mdString` belirteci.|  
-|`mdtName`|`mdName` belirteci.|  
-|`mdtBaseType`|Kullanılmıyor.|  
+|`mdtModule`|`mdModule`Belirteç.|  
+|`mdtTypeRef`|`mdTypeRef`Belirteç.|  
+|`mdtTypeDef`|`mdTypeDef`Belirteç.|  
+|`mdtFieldDef`|`mdFieldDef`Belirteç.|  
+|`mdtMethodDef`|`mdMethodDef`Belirteç.|  
+|`mdtParamDef`|`mdParamDef`Belirteç.|  
+|`mdtInterfaceImpl`|`mdInterfaceImpl`Belirteç.|  
+|`mdtMemberRef`|`mdMemberRef`Belirteç.|  
+|`mdtCustomAttribute`|`mdCustomAttribute`Belirteç.|  
+|`mdtPermission`|`mdPermission`Belirteç.|  
+|`mdtSignature`|`mdSignature`Belirteç.|  
+|`mdtEvent`|`mdEvent`Belirteç.|  
+|`mdtProperty`|`mdProperty`Belirteç.|  
+|`mdtModuleRef`|`mdModuleRef`Belirteç.|  
+|`mdtTypeSpec`|`mdTypeSpec`Belirteç.|  
+|`mdtAssembly`|`mdAssembly`Belirteç.|  
+|`mdtAssemblyRef`|`mdAssemblyRef`Belirteç.|  
+|`mdtFile`|`mdFile`Belirteç.|  
+|`mdtExportedType`|`mdExportedType`Belirteç.|  
+|`mdtManifestResource`|`mdManifestResource`Belirteç.|  
+|`mdtGenericParam`|`mdGenericParam`Belirteç.|  
+|`mdtMethodSpec`|`mdMethodSpec`Belirteç.|  
+|`mdtGenericParamConstraint`|`mdGenericParamConstraint`Belirteç.|  
+|`mdtString`|`mdString`Belirteç.|  
+|`mdtName`|`mdName`Belirteç.|  
+|`mdtBaseType`|Kullanılmadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Her değer, karşılık gelen meta veri belirtecindeki en üstteki baytın değerine eşittir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

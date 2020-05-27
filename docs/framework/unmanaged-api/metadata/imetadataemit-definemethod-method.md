@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: d4f3c95428d6f0f8807e284c5b54582428176511
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177676"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004536"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod Yöntemi
-Belirtilen imzaile bir yöntem veya global işlev için bir tanım oluşturur ve bu yöntem tanımına bir belirteç döndürür.  
+Belirtilen imzaya sahip bir yöntem veya genel işlev için tanım oluşturur ve bu yöntem tanımına bir belirteç döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineMethod (
@@ -42,75 +42,75 @@ HRESULT DefineMethod (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [içinde] Yöntemin `mdTypedef` üst sınıf veya üst arabiriminin belirteci. `td` Genel `mdTokenNil`bir işlev tanımlıyorsanız,  
+ 'ndaki `mdTypedef`Metodun üst sınıfının veya üst arabiriminin belirteci. `td` `mdTokenNil` Genel bir işlev tanımlıyorsanız, olarak ayarlayın.  
   
  `szName`  
- [içinde] Unicode'daki üye adı.  
+ 'ndaki Unicode 'daki üye adı.  
   
  `dwMethodFlags`  
- [içinde] Yöntemin veya genel işlevin özniteliklerini belirten [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) numaralandırmasının değeri.  
+ 'ndaki Metodun veya genel işlevin özniteliklerini belirten [Cormethodadttr](cormethodattr-enumeration.md) numaralandırması değeri.  
   
  `pvSigBlob`  
- [içinde] Yöntem imzası. İmza verilen şekilde devam etti. Herhangi bir parametre için ek bilgi belirtmeniz gerekiyorsa, [IMetaDataEmit::SetParamProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md) yöntemini kullanın.  
+ 'ndaki Yöntem imzası. İmza, belirtilen şekilde kalıcı hale getirilir. Herhangi bir parametre için ek bilgi belirtmeniz gerekiyorsa, [ımetadatayayma:: SetParamProps](imetadataemit-setparamprops-method.md) metodunu kullanın.  
   
  `cbSigBlob`  
- [içinde] Bayt `pvSigBlob`sayısı.  
+ 'ndaki İçindeki bayt sayısı `pvSigBlob` .  
   
  `ulCodeRVA`  
- [içinde] Kodun adresi.  
+ 'ndaki Kodun adresi.  
   
  `dwImplFlags`  
- [içinde] Yöntemin uygulama özelliklerini belirten [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) numaralandırmadeğeri.  
+ 'ndaki Metodun uygulama özelliklerini belirten [CorMethodImpl](cormethodimpl-enumeration.md) numaralandırması değeri.  
   
  `pmd`  
- [çıkış] Üye belirteci.  
+ dışı Üye belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta veri API' si, yöntemleri arayanın `td` parametrede belirtilen belirli bir çevreleyen sınıf veya arabirim için yayıdığı sırada devam etmesini garanti eder.  
+ Meta veri API 'SI, bu yöntemleri, bu parametre içinde belirtilen bir kapsayan sınıf veya arabirim için arayanla aynı sırada kalıcı hale getirme garantisi verir `td` .  
   
- Kullanımı `DefineMethod` ve belirli parametre ayarları ile ilgili ek bilgiler aşağıda verilmiştir.  
+ `DefineMethod`Ve belirli parametre ayarlarının kullanımıyla ilgili ek bilgiler aşağıda verilmiştir.  
   
 ## <a name="slots-in-the-v-table"></a>V tablosundaki yuvalar  
- Çalışma zamanı, v-table yuvalarını ayarlamak için yöntem tanımlarını kullanır. Com arabirim düzeniyle pariteyi korumak gibi bir veya daha fazla yuvanın atlanmaları gerektiğinde, v-tablosundaki yuva veya yuvaları almak için sahte bir yöntem tanımlanır; CorMethodAttr numaralandırma değerini ayarlayın ve adını şu şekilde belirtin: [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) `dwMethodFlags` `mdRTSpecialName`  
+ Çalışma zamanı, v tablosu yuvaları ayarlamak için yöntem tanımlarını kullanır. Bir veya daha fazla yuvanın bir COM arabirim düzeniyle eşlik koruması olması gibi bir veya daha fazla yuva atlanması gerektiği durumlarda, v tablosundaki yuva veya yuvaları almak için bir kukla Yöntem tanımlanmıştır; öğesini `dwMethodFlags` `mdRTSpecialName` [Cormethodadttr](cormethodattr-enumeration.md) numaralandırmasının değerine ayarlayın ve adı şu şekilde belirtin:  
   
- _VtblGap\<*DizisiSayı*>\<\_*Sayısı*>
+ _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- *SequenceNumber* yöntemin sıra numarası ve *CountOfSlots* v-tablosunda atlamak için yuva sayısıdır. *CountOfSlots* atlanırsa, 1 kabul edilir. Bu sahte yöntemler yönetilen veya yönetilmeyen koddan çağrılabilir değildir ve yönetilen veya yönetilmeyen koddan bunları çağırma girişimi bir özel durum oluşturur. Tek amaçları, çalışma zamanının COM tümleştirmesi için oluşturduğu v tablosunda yer açmaktır.  
+ Burada *SequenceNumber* , yöntemin dizi numarasıdır ve *Countofslotlar* , v tablosundaki atlanacak yuva sayısıdır. *Countofslotlar* atlanırsa, 1 varsayılır. Bu kukla Yöntemler yönetilen veya yönetilmeyen koddan çağrılabilir değildir ve bunları, yönetilen veya yönetilmeyen koddan çağırma girişimleri bir özel durum oluşturur. Tek amacı, çalışma zamanının COM tümleştirmesi için oluşturduğu v tablosunda yer kaplamesidir.  
   
 ## <a name="duplicate-methods"></a>Yinelenen Yöntemler  
- Yinelenen yöntemleri tanımlamamalısınız. Diğer bir deyişle, `DefineMethod` `td`, ve `wzName` `pvSig` parametreleri değerleri yinelenen bir dizi ile aramamalısınız. (Bu üç parametre birlikte benzersiz yöntemi tanımlar.). Ancak, yöntem tanımlarından biri için `mdPrivateScope` `dwMethodFlags` parametredeki biti ayarlamanız koşuluyla yinelenen üçlü kullanabilirsiniz. (Bit, `mdPrivateScope` derleyicinin bu yöntem tanımına bir başvuru yayılmayacağı anlamına gelir.)  
+ Yinelenen yöntemleri tanımlamamalısınız. Diğer bir deyişle,, `DefineMethod` ve parametrelerinde yinelenen bir değer kümesiyle çağırmamalıdır `td` `wzName` `pvSig` . (Bu üç parametre birlikte, yöntemini benzersiz bir şekilde tanımlar.). Ancak, yöntem tanımlarından biri için `mdPrivateScope` parametreyi parametre içinde ayarlayabilmeniz için yinelenen bir üçlü kullanabilirsiniz `dwMethodFlags` . ( `mdPrivateScope` Bit, derleyicinin bu yöntem tanımına bir başvuru yaymayacağı anlamına gelir.)  
   
-## <a name="method-implementation-information"></a>Yöntem Uygulama Bilgileri  
- Yöntem in ekinde yöntem uygulaması hakkında bilgiler genellikle bilinmemektedir. Bu nedenle, ararken `ulCodeRVA` `dwImplFlags` `DefineMethod`değerleri ve parametreleri geçmek gerekmez. Değerler daha sonra [IMetaDataEmit::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) veya [IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md), uygun şekilde sağlanabilir.  
+## <a name="method-implementation-information"></a>Yöntem uygulama bilgileri  
+ Yöntem uygulamasıyla ilgili bilgiler genellikle yöntemin bildirildiği sırada bilinmez. Bu nedenle, `ulCodeRVA` çağırma sırasında ve parametrelerinde değerleri geçirmeniz gerekmez `dwImplFlags` `DefineMethod` . Değerler, daha sonra [ımetadatayayma:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md) veya [ımetadatayayma:: SetRVA](imetadataemit-setrva-method.md)aracılığıyla uygun şekilde sağlanabilir.  
   
- Platform çağırma (PInvoke) veya COM interop senaryoları gibi bazı durumlarda, yöntem gövdesi `ulCodeRVA` sağlanmaz ve sıfıra ayarlanmalıdır. Çalışma zamanı uygulamayı bulacağı için, bu gibi durumlarda yöntem soyut olarak etiketlenmemiştir.  
+ Platform çağrısı (PInvoke) veya COM birlikte çalışma senaryoları gibi bazı durumlarda, Yöntem gövdesi sağlanmaz ve `ulCodeRVA` sıfıra ayarlanmalıdır. Bu durumlarda, çalışma zamanı uygulamayı bulacağından yöntem soyut olarak etiketlenmemelidir.  
   
-## <a name="defining-a-method-for-pinvoke"></a>PInvoke için Bir Yöntem Tanımlama  
- Yönetilmeyen her işlevin PInvoke aracılığıyla çağrılabilmesi için, hedef yönetilmeyen işlevi temsil eden yönetilen bir yöntem tanımlamanız gerekir. Yönetilen yöntemi tanımlamak için, PInvoke'in nasıl kullanıldığına bağlı olarak belirli değerlere ayarlanmış bazı parametreleri kullanın: `DefineMethod`  
+## <a name="defining-a-method-for-pinvoke"></a>PInvoke için bir yöntem tanımlama  
+ Her yönetilmeyen işlevin PInvoke aracılığıyla çağrılması için, hedef yönetilmeyen işlevi temsil eden bir yönetilen yöntem tanımlamanız gerekir. Yönetilen yöntemi tanımlamak için, `DefineMethod` PInvoke 'un kullanıldığı yönteme bağlı olarak belirli değerlere ayarlanmış parametrelerden bazıları ile kullanın:  
   
-- True PInvoke - yönetilmeyen bir DLL'de bulunan harici yönetilmeyen bir yöntemin çağrılması içerir.  
+- Doğru PInvoke-yönetilmeyen bir DLL 'de bulunan harici bir yönetilmeyen yöntemin çağrılmasını içerir.  
   
-- Yerel PInvoke - geçerli yönetilen modüle katıştırılmış yerel bir yönetilmeyen yöntem invocation içerir.  
+- Yerel PInvoke-geçerli yönetilen modüle eklenmiş yerel bir yönetilmeyen yöntemin çağrılmasını içerir.  
   
  Parametre ayarları aşağıdaki tabloda verilmiştir.  
   
-|Parametre|Gerçek PInvoke değerleri|Yerel PInvoke değerleri|  
+|Parametre|Doğru PInvoke için değerler|Yerel PInvoke için değerler|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||Set `mdStatic`; açık `mdSynchronized` `mdAbstract`ve .|  
-|`pvSigBlob`|Geçerli yönetilen türleri parametreleri ile geçerli bir ortak dil çalışma zamanı (CLR) yöntemi imza.|Geçerli yönetilen türleri parametreleri ile geçerli bir CLR yöntemi imza.|  
+|`dwMethodFlags`||Ayarla `mdStatic` ; clear `mdSynchronized` ve `mdAbstract` .|  
+|`pvSigBlob`|Geçerli yönetilen türler içeren parametrelere sahip geçerli bir ortak dil çalışma zamanı (CLR) yöntemi imzası.|Geçerli yönetilen türler içeren parametrelere sahip geçerli bir CLR yöntemi imzası.|  
 |`ulCodeRVA`||0|  
-|`dwImplFlags`|Ayarlayın `miCil` `miManaged`ve .|Ayarlayın `miNative` `miUnmanaged`ve .|  
+|`dwImplFlags`|`miCil`Ve ayarlayın `miManaged` .|`miNative`Ve ayarlayın `miUnmanaged` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

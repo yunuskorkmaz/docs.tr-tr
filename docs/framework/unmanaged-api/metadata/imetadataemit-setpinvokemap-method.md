@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d34c7a2992a2779b96ec87f1a0175d8fcbce34a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175596"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007799"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap Yöntemi
-Bir yöntemin PInvoke imzasının özelliklerini ayarlar veya değiştirir, [iMetaDataEmit::DefinePinvokeMap.](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)  
+Bir yöntemin PInvoke imzasının, [ımetadatayay::D Efinepınvokemap](imetadataemit-definepinvokemap-method.md)'e yönelik önceki bir çağrı tarafından tanımlanan özellikleri ayarlar veya değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetPinvokeMap (
@@ -38,27 +38,27 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [içinde] Haritalama bilgilerinin `mdToken` uygulandığı yer.  
+ 'ndaki `mdToken`Eşleme bilgileri geçerli.  
   
  `dwMappingFlags`  
- [içinde] Eşleme yapmak için PInvoke tarafından kullanılan bayraklar. Bu `CorPinvokeMap` değerlerin bir bitmask olduğunu.  
+ 'ndaki PInvoke tarafından eşlemeyi yapmak için kullanılan bayraklar. Bu bir değer bit değeridir `CorPinvokeMap` .  
   
  `szImportName`  
- [içinde] Yerel DLL'deki hedef dışa aktarmanın adı.  
+ 'ndaki Yerel DLL 'de hedef dışarı aktarmanın adı.  
   
  `mrImportDLL`  
- [içinde] Hedef `mdModuleRef` in belirteç leri yönetilmemiş DLL.  
+ 'ndaki `mdModuleRef`Hedef YÖNETILMEYEN dll için belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

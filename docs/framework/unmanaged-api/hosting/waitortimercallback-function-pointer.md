@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092032"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009460"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK İşlev İşaretçisi
-Ana bilgisayarı bir bekleme tutamacının (<xref:System.Threading.WaitHandle>) sinyal ettiğini veya zaman aşımına uğradığını bildiren bir işleve işaret eder.  
+Ana bilgisayarı bir bekleme tutamacının ( <xref:System.Threading.WaitHandle> ) sinyal ettiğini veya zaman aşımına uğradığını bildiren bir işleve işaret eder.  
   
  Bu işlev işaretçisi .NET Framework 4 ' te kullanım dışı bırakıldı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
@@ -40,20 +40,20 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
  'ndaki Ana bilgisayar tarafından tanımlanan bilgileri içeren bir nesne işaretçisi.  
   
  `TimerOrWaitFired`  
- [in] bekleme işlemi zaman aşımına uğradı veya sinyal edildiyse `false` `true`.  
+ [in] `true` bekleme işlemi zaman aşımına uğradı veya sinyal edildiyse `false` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `WAITORTIMERCALLBACK` işaret eden, bir geri çağırma işlevi olduğu ve barındırma uygulamasının yazarı tarafından uygulanması gereken işlev.  
+ `WAITORTIMERCALLBACK`Noktaların bir geri çağırma işlevi olduğu ve barındırma uygulamasının yazarı tarafından uygulanması gereken işlev.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorWks. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

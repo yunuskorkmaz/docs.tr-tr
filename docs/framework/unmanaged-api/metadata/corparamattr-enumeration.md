@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7ff90ad-dad8-48e8-917d-4aa9a118cbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 1d58c8c0413346536c3e61e67ca0077c08c2b387
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e8afcb972cab9757458c7032c3678d45c6418fac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436492"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007578"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr Numaralandırması
 Bir yöntem parametresinin meta verilerini tanımlayan değerleri içerir.  
@@ -42,9 +42,9 @@ typedef enum CorParamAttr {
 } CorParamAttr;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`pdIn`|Parametrenin yöntem çağrısına geçtiğini belirtir.|  
 |`pdOut`|Parametrenin dönüş yönteminden geçtiğini belirtir.|  
@@ -52,15 +52,15 @@ typedef enum CorParamAttr {
 |`pdReservedMask`|Ortak dil çalışma zamanı tarafından iç kullanım için ayrılmıştır.|  
 |`pdHasDefault`|Parametrenin varsayılan bir değere sahip olduğunu belirtir.|  
 |`pdHasFieldMarshal`|Parametrenin sıralama bilgilerine sahip olduğunu belirtir.|  
-|`pdUnused`|Kullanılmayan.|  
+|`pdUnused`|Kullanılmıyor.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

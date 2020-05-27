@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29f2401e2e3faccae05ca5249fcd7d9e89aacb46
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176168"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007617"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType Numaralandırması
-Yerel koda bağlı türü gösteren değerler sağlar.  
+Yerel kodda bağlantılı türü gösteren değerler sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,22 +42,22 @@ typedef enum
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`nltNone`|Anahtar kelimelerden hiçbirinin belirtilmemiş olduğunu gösterir.|  
-|`nltAnsi`|ANSI anahtar kelimesinin belirtildiğini gösterir.|  
-|`nltUnicode`|Unicode anahtar kelimesinin belirtildiğini gösterir|  
-|`nltAuto`|Otomatik anahtar kelimenin belirtildiğini gösterir.|  
-|`nltOle`|OLE anahtar kelimesinin belirtildiğini gösterir.|  
+|`nltNone`|Anahtar sözcüklerin hiçbirinin belirtilmediğini belirtir.|  
+|`nltAnsi`|Bir ANSI anahtar sözcüğünün belirtildiğini belirtir.|  
+|`nltUnicode`|Unicode anahtar sözcüğünün belirtildiğini belirtir|  
+|`nltAuto`|Bir auto anahtar sözcüğünün belirtildiğini gösterir.|  
+|`nltOle`|OLE anahtar sözcüğünün belirtildiğini belirtir.|  
 |`nltMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

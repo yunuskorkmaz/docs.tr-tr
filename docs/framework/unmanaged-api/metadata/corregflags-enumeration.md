@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8d7a43848929e49a8cb48fb957f37213ac78f2e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177936"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007357"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags Numaralandırması
 Modül veya bileşik görüntü yüklerken kayıt için kullanılan bayrak değerlerini sağlar.  
@@ -40,18 +40,18 @@ typedef enum
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`regNoCopy`|Dosyaların hedefe kopyalanmaması gerektiğini belirtir.|  
-|`regConfig`|Modülün veya bileşimin bir yapılandırma olduğunu belirtir.|  
-|`regHasRefs`|Modülün veya bileşimin sınıf başvuruları olduğunu belirtir.|  
+|`regConfig`|Modülün veya kompozit 'in bir yapılandırma olduğunu belirtir.|  
+|`regHasRefs`|Modülün veya Composite sınıf başvurularına sahip olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

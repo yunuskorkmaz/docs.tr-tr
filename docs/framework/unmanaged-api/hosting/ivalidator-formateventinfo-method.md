@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c60631b5e034bc46d74412440d35d526359d043
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123308"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008579"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo Yöntemi
 Belirtilen doğrulama hatasına karşılık gelen hata iletisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FormatEventInfo(  
@@ -42,7 +42,7 @@ HRESULT FormatEventInfo(
  'ndaki Doğrulama hata işleyicisine geçirilen HRESULT değeri.  
   
  `Context`  
- 'ndaki Doğrulama hatası hakkında bağlam bilgilerini içeren bir `VEContext` örneği.  
+ 'ndaki `VEContext`Doğrulama hatası hakkında bağlam bilgilerini içeren bir örnek.  
   
  `msg`  
  [in, out] Döndürülen hata iletisini içeren bir dize.  
@@ -54,10 +54,10 @@ HRESULT FormatEventInfo(
  'ndaki Hatayı açıklayan ek parametreler içeren bir güvenli dizi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** IValidator. IDL, IValidator. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

@@ -4,20 +4,20 @@ ms.date: 11/08/2019
 helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
-ms.openlocfilehash: 4031ff19131c905072696837d1622dbb6e54ae61
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978377"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004744"
 ---
-# <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize > öğesi
+# <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> öğesi
 
 Sunucu GC iş parçacıklarının CPU 'Lara yapılıp yapılmayacağını belirtir.
 
-\<Yapılandırma > \
-&nbsp;&nbsp;\<çalışma zamanı > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCNoAffinitize >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCNoAffinitize>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -56,11 +56,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, sunucu GC iş parçacıkları ilgili CPU 'Ları ile birlikte zordur. Sistemin kullanılabilir işlemcilerin her birinin kendi GC yığını ve iş parçacığı vardır. Bu, genellikle, önbellek kullanımını optimize eden tercih edilen ayardır. .NET Framework 4.6.2 ile başlayarak, **GCNoAffinitize** öğesinin `enabled` özniteliğini `false`olarak ayarlayarak, sunucu GC iş parçacıklarının ve CPU 'ların sıkı bir şekilde bağlı olmaması gerektiğini belirtebilirsiniz.
+Varsayılan olarak, sunucu GC iş parçacıkları ilgili CPU 'Ları ile birlikte zordur. Sistemin kullanılabilir işlemcilerin her birinin kendi GC yığını ve iş parçacığı vardır. Bu, genellikle, önbellek kullanımını optimize eden tercih edilen ayardır. .NET Framework 4.6.2 ile başlayarak, **GCNoAffinitize** öğesinin özniteliğini olarak ayarlayarak, `enabled` `true` Sunucu GC iş parçacıklarının ve CPU 'ların sıkı bir şekilde bağlı olmaması gerektiğini belirtebilirsiniz.
 
 **GCNoAffinitize** yapılandırma öğesini CPU Ile Sunucu GC iş parçacıklarını hiçbir şekilde yok etmek için tek başına belirtebilirsiniz. Ayrıca, bir uygulama tarafından kullanılan GC yığınlarının ve iş parçacıklarının sayısını denetlemek için [Gcheapcount](gcheapcount-element.md) öğesiyle birlikte da kullanabilirsiniz.
 
-**GCNoAffinitize** öğesinin `enabled` özniteliği `false` (varsayılan değeri) ise, GC iş parçacıklarının ve yığınların hangi işlemcileri belirlemek Için [Gcheapaffinitizemask](gcheapaffinitizemask-element.md) öğesiyle birlikte GC iş parçacıklarının ve yığınların sayısını belirtmek Için [gcheapcount](gcheapcount-element.md) öğesini de kullanabilirsiniz.
+`enabled` **GCNoAffinitize** öğesinin özniteliği `false` (varsayılan değeri) Ise, [gcheapcount](gcheapcount-element.md) öğesini Ayrıca, GC iş parçacıklarının ve yığınların hangi Işlemcilerin kullanılacağını belirtmek Için [Gcheapaffinitizemask](gcheapaffinitizemask-element.md) öğesiyle birlikte GC iş parçacıkları ve yığınların sayısını belirtmek için de kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
@@ -93,5 +93,5 @@ Aşağıdaki örnek, sunucu GC iş parçacıklarını göstermez ve GC Heap/iş 
 - [GCHeapAffinitizeMask öğesi](gcheapaffinitizemask-element.md)
 - [GCHeapCount öğesi](gcheapcount-element.md)
 - [Çöp toplamanın temelleri](../../../../standard/garbage-collection/fundamentals.md)
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

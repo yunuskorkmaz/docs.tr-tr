@@ -1,19 +1,19 @@
 ---
 title: "C 'de zaman uyumsuz programlama #"
 description: Async, await, Task ve Task kullanılarak zaman uyumsuz programlama için C# dil desteğine genel bakış<T>
-ms.date: 03/18/2019
-ms.openlocfilehash: 4bf00d5c77138dfa2d527a262a6cd54a72a688f5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.date: 05/26/2020
+ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761856"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007968"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile asenkron programlama
 
-Görev zaman uyumsuz programlama modeli (TAP), zaman uyumsuz kod üzerinde bir soyutlama sağlar. Her zaman olduğu gibi, kodu deyimler dizisi olarak yazarsınız. Bu kodu, bir sonraki başlamadan önce her bir deyimin tamamlansa da okuyabilirsiniz. Derleyici bir dizi dönüştürme gerçekleştirir, çünkü bu deyimlerden bazıları işe başlayabilir ve <xref:System.Threading.Tasks.Task> devam eden çalışmayı temsil eden bir döndürür.
+[Görev zaman uyumsuz programlama modeli (TAP)](task-asynchronous-programming-model.md) , zaman uyumsuz kod üzerinde bir soyutlama sağlar. Her zaman olduğu gibi, kodu deyimler dizisi olarak yazarsınız. Bu kodu, bir sonraki başlamadan önce her bir deyimin tamamlansa da okuyabilirsiniz. Derleyici bir dizi dönüştürme gerçekleştirir, çünkü bu deyimlerden bazıları işe başlayabilir ve <xref:System.Threading.Tasks.Task> devam eden çalışmayı temsil eden bir döndürür.
 
-Bu sözdiziminin amacı: bir deyim dizisi gibi okuyan kodu etkinleştirin, ancak dış kaynak ayırmaya ve görevler tamamlandığında çok daha karmaşık bir sırayla yürütülür. Kullanıcıların zaman uyumsuz görevler içeren işlemlere yönelik yönergeler verme yöntemi benzerdir. Bu makalede, `async` ve `await` anahtar sözcüklerinin, bir dizi zaman uyumsuz yönergeler içeren kodla ilgili neden olmasının nasıl daha kolay olduğunu görmek için bir yönergeler örneği kullanacaksınız. Daha hızlı nasıl yapılacağını açıklamak için aşağıdaki listeye benzer yönergeler yazın:
+Bu sözdiziminin amacı: bir deyim dizisi gibi okuyan kodu etkinleştirin, ancak dış kaynak ayırmaya ve görevler tamamlandığında çok daha karmaşık bir sırayla yürütülür. Kullanıcıların zaman uyumsuz görevler içeren işlemlere yönelik yönergeler verme yöntemi benzerdir. Bu makalede, `async` ve `await` anahtar kelimelerin, bir dizi zaman uyumsuz yönergeler içeren kod hakkında neden daha kolay olduğunu görmek için bir yönergeler örneği kullanacaksınız. Daha hızlı nasıl yapılacağını açıklamak için aşağıdaki listeye benzer yönergeler yazın:
 
 1. Kahve kupa dök.
 1. Bir Pan, sonra da iki Yumura kadar bir kaydır.
@@ -30,7 +30,10 @@ Paralel bir algoritma için birden çok ortak iş (veya iş parçacığı) gerek
 
 Şimdi C# deyimleri olarak yazılmış yönergeleri göz önünde bulundurun:
 
-[!code-csharp[SynchronousBreakfast](./snippets/index/AsyncBreakfast-starter/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
+
+> [!NOTE]
+> `Coffee`,, `Egg` , `Bacon` `Toast` Ve `Juice` sınıfları boş. Bunlar yalnızca tanıtım amaçlı sınıflardır, hiçbir özellik içermez ve başka bir amaç sunabilir.
 
 Bilgisayarlar bu yönergeleri insanlar ile aynı şekilde yorumlamaz. Bir sonraki ifadeye geçmeden önce, bilgisayar her bir bildirimde, iş tamamlanana kadar engeller. Bu, karşılanunan bir Breakfast oluşturur. Daha sonraki görevler, önceki görevler tamamlanana kadar başlatılamaz. Daha uzun sürer ve bazı öğeler sunulmadan önce soğuk hale gelir.
 
@@ -46,7 +49,10 @@ Yukarıdaki kodda kötü bir uygulama gösterilmektedir: zaman uyumsuz işlemler
 
 İş parçacığı, görevler çalışırken engellenmemesi için bu kodu güncelleyerek başlayalım. `await`Anahtar sözcüğü, bir görevi başlatmak için engellenmeyen bir yöntem sağlar ve ardından bu görev tamamlandığında yürütmeye devam eder. Bir Breakfast kodu oluştur 'un basit bir zaman uyumsuz sürümü aşağıdaki kod parçacığına benzer:
 
-[!code-csharp[SimpleAsyncBreakfast](./snippets/index/AsyncBreakfast-V2/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!TIP]
+> , Ve ' nin tüm ve sırasıyla,, ve ' ın bir bütün olarak, ve ' ı `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` döndürecek şekilde güncelleştirilmiştir `Task<Egg>` `Task<Bacon>` `Task<Toast>` . Yöntemler özgün sürümlerinden "Async" sonekini içerecek şekilde yeniden adlandırılır. Uygulamaları, bu makalenin ilerleyen bölümlerinde [son sürümün](#final-version) bir parçası olarak gösterilir.
 
 Bu kod, yumurtalar veya Bacon pişirirken engellenmez. Bu kod, diğer görevleri de başlatmayacaktır. Yine de bildirim, siz de bir araya gelene kadar Toaster 'a yerleştirirsiniz. Ancak en azından, ilgilenmeniz istenen herkese yanıt verirsiniz. Birden çok siparişin yerleştirildiği bir restoran içinde, ilk pişirme sırasında Cook bir daha hızlı başlatılabilir.
 
@@ -65,20 +71,23 @@ Bu değişiklikleri Breakfast kodunda yapalim. İlk adım, işlemler için göre
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
 Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
-Task<Bacon> baconTask = FryBacon(3);
+
+Task<Bacon> baconTask = FryBaconAsync(3);
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Toast> toastTask = ToastBreadAsync(2);
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
 Console.WriteLine("toast is ready");
+
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
-
 Console.WriteLine("Breakfast is ready!");
 ```
 
@@ -87,9 +96,11 @@ Daha sonra, bir sonraki `await` ve yumurg deyimlerini, Breakfast sunmadan önce 
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
-Task<Bacon> baconTask = FryBacon(3);
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
+Task<Bacon> baconTask = FryBaconAsync(3);
+Task<Toast> toastTask = ToastBreadAsync(2);
+
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
@@ -116,11 +127,11 @@ Yukarıdaki kod daha iyi çalışmaktadır. Tüm zaman uyumsuz görevleri aynı 
 
 Yukarıdaki kod, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> çalışan görevleri tutmak için veya nesneleri kullanacağınızı gösterdi. `await`Sonucunu kullanmadan önce her görevi gerçekleştirebilirsiniz. Sonraki adım, diğer çalışmanın birleşimini temsil eden yöntemler oluşturmaktır. Kahvileri sunmadan önce, Butter ve sıkışmadan önce Ekleyici 'yi temsil eden görevi beklemek istersiniz. Bu işi aşağıdaki kodla temsil edebilirsiniz:
 
-[!code-csharp[ComposeToastTask](./snippets/index/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
 
 Önceki Yöntem `async` imzasında değiştiriciye sahiptir. Bu yöntemin bir ifade içerdiğini derleyiciye bildirir `await` ; zaman uyumsuz işlemler içerir. Bu yöntem, Ekleyici ve sıkışıklığı ekleyen görevi temsil eder. Bu yöntem, bu <xref:System.Threading.Tasks.Task%601> üç işlemin oluşumunu temsil eden bir döndürür. Kodun ana bloğu şu şekilde olur:
 
-[!code-csharp[StartConcurrentTasks](./snippets/index/AsyncBreakfast-V3/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
 
 Önceki değişiklik, zaman uyumsuz kod ile çalışmak için önemli bir teknik gösterilmiştir. İşlemleri bir görevi döndüren yeni bir yönteme ayırarak görevleri oluşturursunuz. Bu görevin ne zaman bekleme seçeneğini belirleyebilirsiniz. Diğer görevleri eşzamanlı olarak başlatabilirsiniz.
 
@@ -138,10 +149,33 @@ Console.WriteLine("Breakfast is ready!");
 
 Diğer bir seçenek de <xref:System.Threading.Tasks.Task.WhenAny%2A> , `Task<Task>` bağımsız değişkenlerinden herhangi biri tamamlandığında tamamlanan bir döndürür. Döndürülen görevi, zaten bitdiğinin farkında olacak şekilde beklede olursunuz. Aşağıdaki kod, <xref:System.Threading.Tasks.Task.WhenAny%2A> ilk görevin bitmesini beklemek için nasıl kullanabileceğinizi gösterir ve sonra sonucunu işleyebilir. Tamamlanan görevden elde edilen sonucu işledikten sonra, bu tamamlanmış görevi öğesine geçirilen görev listesinden kaldırırsınız `WhenAny` .
 
-[!code-csharp[AwaitAnyTask](./snippets/index/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+```csharp
+var breakfastTasks = new List<Task> { eggsTask, baconTask, toastTask };
+while (breakfastTasks.Count > 0)
+{
+    Task finishedTask = await Task.WhenAny(breakfastTasks);
+    if (finishedTask == eggsTask)
+    {
+        Console.WriteLine("eggs are ready");
+    }
+    else if (finishedTask == baconTask)
+    {
+        Console.WriteLine("bacon is ready");
+    }
+    else if (finishedTask == toastTask)
+    {
+        Console.WriteLine("toast is ready");
+    }
+    breakfastTasks.Remove(finishedTask);
+}
+```
 
-Tüm bu değişiklikler yapıldıktan sonra nihai sürümü `Main` Aşağıdaki kod gibi görünür:
-
-[!code-csharp[Final](./snippets/index/AsyncBreakfast-final/Program.cs#Main)]
+Tüm bu değişiklikler yapıldıktan sonra, kodun son sürümü şöyle görünür:<a id="final-version"></a>
+:::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
 Bu son kod zaman uyumsuzdur. Bu, bir kişinin ne kadar hızlı bir şekilde bir kahtacağını daha doğru yansıtır. Yukarıdaki kodu, bu makaledeki ilk kod örneğiyle karşılaştırın. Temel eylemler, kodu okumayı hala temizler. Bu kodu, bu makalenin başlangıcında bir daha hızlı hale getirmek için bu talimatları okuduğunuzdan aynı şekilde okuyabilirsiniz. İçin dil özellikleri `async` ve `await` çeviri, her birinin bu yazılı yönergeleri izlemesini sağlar: Başlangıç görevleri, yaptığınız gibi başlatın ve görevlerin tamamlanmasını beklemeyi engellemez.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+> [!div class="nextstepaction"]
+> [Görev zaman uyumsuz programlama modeli hakkında bilgi edinin](task-asynchronous-programming-model.md)

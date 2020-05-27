@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177748"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008033"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap Yöntemi
-Belirtilen belirteç tarafından başvurulan yöntemin PInvoke imzasının özelliklerini ayarlar.  
+Belirtilen belirteç tarafından başvurulan metodun PInvoke imzasının özelliklerini ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefinePinvokeMap (
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [içinde] Hedef yönteminin belirteci.  
+ 'ndaki Hedef yöntemi için belirteç.  
   
  `dwMappingFlags`  
- [içinde] Eşleme yapmak için PInvoke tarafından kullanılan bayraklar.  
+ 'ndaki PInvoke tarafından eşlemeyi yapmak için kullanılan bayraklar.  
   
  `szImportName`  
- [içinde] Yönetilmeyen bir DLL'de hedef dışa aktarma yönteminin adı.  
+ 'ndaki Yönetilmeyen DLL içindeki hedef dışarı aktarma yönteminin adı.  
   
  `mrImportDLL`  
- [içinde] Hedef yerel DLL için belirteç.  
+ 'ndaki Hedef yerel DLL için belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450202"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007669"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl Numaralandırması
 Yöntem uygulama özelliklerini tanımlayan değerleri içerir.  
@@ -52,9 +52,9 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Kod türünü tanımlayan bayraklar.|  
 |`miIL`|Yöntem uygulamasının Microsoft ara dil (MSIL) olduğunu belirtir.|  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|Metodun satır içine alınamıyor olduğunu belirtir.|  
 |`miAggressiveInlining`|Mümkünse yöntemin satır içine alınmış olması gerektiğini belirtir.|  
 |`miNoOptimization`|Yöntemin iyileştirilmemelidir.|  
-|`miMaxMethodImplVal`|`CorMethodImpl`için geçerli en büyük değer.|  
+|`miMaxMethodImplVal`|İçin geçerli en büyük değer `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

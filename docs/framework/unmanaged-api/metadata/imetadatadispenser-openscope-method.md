@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175947"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007474"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope Yöntemi
-Varolan, diskteki bir dosyayı açar ve meta verilerini belleğe eşler.  
+Mevcut, disk üzerindeki bir dosyayı açar ve meta verilerini belleğe eşler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT OpenScope (  
@@ -38,44 +38,44 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parametreler  
  `szScope`  
- [içinde] Açılacak dosyanın adı. Dosya ortak dil çalışma zamanı (CLR) meta verileri içermelidir.  
+ 'ndaki Açılacak dosyanın adı. Dosya, ortak dil çalışma zamanı (CLR) meta verilerini içermelidir.  
   
  `dwOpenFlags`  
- [içinde] Açılış kipini (okuma, yazma vb.) belirtmek için [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) numaralandırmasının değeri.  
+ 'ndaki Açma için modu (okuma, yazma, vb.) belirtmek için [CorOpenFlags](coropenflags-enumeration.md) numaralandırması değeri.  
   
  `riid`  
- [içinde] Döndürülecek istenilen meta veri arabiriminin IID'si; arayan, meta verileri almak (okumak) veya yayacak (yazmak) için arabirimi kullanır.  
+ 'ndaki Döndürülecek istenen meta veri arabiriminin IID 'si; çağıran, meta verileri içeri aktarmak (okumak) veya yayma (yazmak) için arabirimini kullanır.  
   
- Değeri "içe aktarma" veya "yayış" arabirimlerinden birini `riid` belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
+ Değeri, `riid` "import" veya "yayma" arabirimlerinden birini belirtmelidir. Geçerli değerler IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [çıkış] Döndürülen arabirimin işaretçisi.  
+ dışı Döndürülen arabirime yönelik işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta verilerin bellek içi kopyası ,"alma" arabirimlerinden birinden yöntemler kullanılarak sorgulanabilir veya "yaslamak" arabirimlerinden yöntemler kullanılarak sorgulanabilir.  
+ Meta verilerin bellek içi kopyası, "içeri aktarma" arabirimlerinden birindeki yöntemler kullanılarak sorgulanabilir veya "yayma" arabirimlerinden birindeki yöntemleri kullanarak eklenebilir.  
   
- Hedef dosya CLR meta verileri içermiyorsa, `OpenScope` yöntem başarısız olur.  
+ Hedef dosya CLR meta verileri içermiyorsa, `OpenScope` Yöntem başarısız olur.  
   
- .NET Framework sürüm 1.0 ve sürüm 1.1'de, `dwOpenFlags` ofRead'e ayarlı bir kapsam açılırsa, paylaşım için uygundur. Diğer bir deyişle, `OpenScope` daha önce açılmış bir dosyanın adına sonraki çağrıları geçmek için, varolan kapsam yeniden kullanılır ve yeni bir veri yapıları kümesi oluşturulmaz. Ancak, sorunlar bu paylaşım nedeniyle ortaya çıkabilir.  
+ .NET Framework sürüm 1,0 ve sürüm 1,1 ' de bir kapsam, `dwOpenFlags` ofRead olarak ayarlandıysa, paylaşım için uygundur. Diğer bir deyişle, `OpenScope` daha önce açılan bir dosyanın adında sonraki çağrılar varsa, mevcut kapsam yeniden kullanılır ve yeni bir veri yapıları kümesi oluşturulmaz. Ancak, bu paylaşım nedeniyle sorunlar ortaya çıkabilir.  
   
- .NET Framework sürüm 2.0'da, `dwOpenFlags` ofRead'e ayarlı olarak açılan kapsamlar artık paylaşılmaz. Kapsamın paylaşılmasına izin vermek için ReadOnly değerini kullanın. Kapsam paylaşıldığında, "okuma/yazma" meta veri arabirimleri kullanan sorgular başarısız olur.  
+ .NET Framework sürüm 2,0 ' de, `dwOpenFlags` ofRead olarak ayarlanan ile açılan kapsamlar artık paylaşılmaz. Kapsamın paylaşılmasını sağlamak için ofReadOnly değerini kullanın. Bir kapsam paylaşıldığında, "okuma/yazma" meta veri arabirimlerini kullanan sorgular başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser Yöntemi](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx Arabirimi](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit Arabirimi](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

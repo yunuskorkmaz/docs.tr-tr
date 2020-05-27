@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177917"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008891"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer Yöntemi
-Bir yöntem için belirtilen boyutta bir arabellek oluşturur ve yöntemin göreli sanal adresini alır.  
+Bir yöntem için belirtilen boyutun bir arabelleğini oluşturur ve yöntemin göreli sanal adresini alır.  
   
- Bu yöntem eskidir ve kullanılmamalıdır.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AllocateMethodBuffer (
@@ -39,23 +39,23 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>Parametreler  
  `cchBuffer`  
- [içinde] Oluşturulacak arabellek uzunluğu.  
+ 'ndaki Oluşturulacak arabelleğin uzunluğu.  
   
  `lpBuffer`  
- [çıkış] Döndürülen arabellek.  
+ dışı Döndürülen arabellek.  
   
  `RVA`  
- [çıkış] Yöntemin göreli sanal adresi.  
+ dışı Metodun göreli sanal adresi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen Arabirimi](iceegen-interface.md)

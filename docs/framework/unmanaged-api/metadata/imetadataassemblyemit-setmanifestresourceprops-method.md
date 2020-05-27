@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177835"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009151"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps Yöntemi
 Belirtilen `ManifestResource` meta veri yapısını değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetManifestResourceProps (  
@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mr`  
- [içinde] Değiştirilecek `ManifestResource` meta veri yapısını belirten belirteç.  
+ 'ndaki `ManifestResource`Değiştirilecek meta veri yapısını belirten belirteç.  
   
  `tkImplementation`  
- [içinde] Kaynak sağlayıcısıyla eşlenebilen belirteç, tür `File` veya `AssemblyRef`kaynak sağlayıcısı.  
+ 'ndaki `File`Kaynak sağlayıcısına eşlenen veya türündeki belirteç `AssemblyRef` .  
   
  `dwOffset`  
- [içinde] Dosya içindeki kaynağın başına mahsup.  
+ 'ndaki Dosyanın içindeki kaynağın başlangıcına olan Aralık.  
   
  `dwResourceFlags`  
- [içinde] Kaynağın özniteliklerini belirten bayrak değerlerinin bityişli bir leşimi.  
+ 'ndaki Kaynak özniteliklerini belirleyen bayrak değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Meta `ManifestResource` veri yapısı oluşturmak için [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) yöntemini kullanın.  
+ `ManifestResource`Meta veri yapısı oluşturmak Için [IMetaDataAssemblyEmit::D efineManifestResource](imetadataassemblyemit-definemanifestresource-method.md) metodunu kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit Arabirimi](imetadataassemblyemit-interface.md)

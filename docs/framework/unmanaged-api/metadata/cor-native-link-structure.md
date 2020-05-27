@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: 812b70a594b5aa933f52d36f32d96d712267ecf4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a11b7d5939c4c20504b1ff3dfb4613f85bca0db4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177955"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007981"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK Yapısı
 Yerel kodu bağlamak için kullanılan bilgileri içerir.  
@@ -39,21 +39,21 @@ typedef struct
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`m_linkType`|Yerel kodda bağlanacak tür. Bu değer [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) değerlerinden biridir.|  
-|`m_flags`|Yerel kodu bağlarken bağlayıcı tarafından kullanılan bayraklar. Bu değer [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) değerlerinden biridir.|  
+|`m_linkType`|Yerel koda bağlanacak tür. Bu değer, [Cornativelınktype](cornativelinktype-enumeration.md) değerlerinden biridir.|  
+|`m_flags`|Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayraklar. Bu değer, [Cornativelınkflags](cornativelinkflags-enumeration.md) değerlerinden biridir.|  
 |`m_entryPoint`|Giriş noktasını temsil eden MemberRef meta veri belirteci. Biçim şöyledir: `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [CorNativeLinkType Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
-- [CorNativeLinkFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+- [Meta Veri Yapıları](metadata-structures.md)
+- [CorNativeLinkType Sabit Listesi](cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags Sabit Listesi](cornativelinkflags-enumeration.md)

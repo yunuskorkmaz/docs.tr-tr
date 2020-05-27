@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176194"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007912"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor Numaralandırması
-Yinelenenler için denetlenecek meta veri belirteçlerini belirtir.  
+Çoğaltılanların denetlenme meta veri belirteçlerini belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -68,41 +68,41 @@ typedef enum CorCheckDuplicatesFor {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`MDDupAll`|Yinelenenler için tüm meta veri belirteçlerini denetleyin.|  
+|`MDDupAll`|Yinelenen öğeler için tüm meta veri belirteçlerini denetleyin.|  
 |`MDDupENC`|Kullanılmadı.|  
-|`MDNoDupChecks`|Yinelenenler için meta veri belirteçlerini denetlemeyin.|  
-|`MDDupTypeDef`|`mdTypeDef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupInterfaceImpl`|`mdInterfaceImpl` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupMethodDef`|`mdMethodDef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupTypeRef`|`mdTypeRef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupMemberRef`|`mdMemberRef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupCustomAttribute`|`mdCustomAttribute` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupParamDef`|`mdParamDef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupPermission`|`mdPermission` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupProperty`|`mdProperty` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupEvent`|`mdEvent` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupFieldDef`|`mdFieldDef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupSignature`|`mdSignature` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupModuleRef`|`mdModuleRef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupTypeSpec`|`mdTypeSpec` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupImplMap`|`mdImplMap` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupAssemblyRef`|`mdAssemblyRef` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupFile`|`mdFile` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupExportedType`|`mdExportedType` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupManifestResource`|`mdManifestResource` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupGenericParam`|`mdGenericParam` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupMethodSpec`|`mdMethodSpec` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupGenericParamConstraint`|`mdGenericParamConstraint` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupAssembly`|`mdAssembly` Belirteçlerin yinelenenlerini denetleyin.|  
-|`MDDupDefault`|`mdMemberRef`, `mdTypeRef`, `mdSignature` `mdTypeSpec`, ve `mdMethodSpec` belirteçlerinin kopyalarını denetleyin.|  
+|`MDNoDupChecks`|Yinelemeler için meta veri belirteçlerini denetlemeyin.|  
+|`MDDupTypeDef`|Belirteçlerin yinelemelerini denetleyin `mdTypeDef` .|  
+|`MDDupInterfaceImpl`|Belirteçlerin yinelemelerini denetleyin `mdInterfaceImpl` .|  
+|`MDDupMethodDef`|Belirteçlerin yinelemelerini denetleyin `mdMethodDef` .|  
+|`MDDupTypeRef`|Belirteçlerin yinelemelerini denetleyin `mdTypeRef` .|  
+|`MDDupMemberRef`|Belirteçlerin yinelemelerini denetleyin `mdMemberRef` .|  
+|`MDDupCustomAttribute`|Belirteçlerin yinelemelerini denetleyin `mdCustomAttribute` .|  
+|`MDDupParamDef`|Belirteçlerin yinelemelerini denetleyin `mdParamDef` .|  
+|`MDDupPermission`|Belirteçlerin yinelemelerini denetleyin `mdPermission` .|  
+|`MDDupProperty`|Belirteçlerin yinelemelerini denetleyin `mdProperty` .|  
+|`MDDupEvent`|Belirteçlerin yinelemelerini denetleyin `mdEvent` .|  
+|`MDDupFieldDef`|Belirteçlerin yinelemelerini denetleyin `mdFieldDef` .|  
+|`MDDupSignature`|Belirteçlerin yinelemelerini denetleyin `mdSignature` .|  
+|`MDDupModuleRef`|Belirteçlerin yinelemelerini denetleyin `mdModuleRef` .|  
+|`MDDupTypeSpec`|Belirteçlerin yinelemelerini denetleyin `mdTypeSpec` .|  
+|`MDDupImplMap`|Belirteçlerin yinelemelerini denetleyin `mdImplMap` .|  
+|`MDDupAssemblyRef`|Belirteçlerin yinelemelerini denetleyin `mdAssemblyRef` .|  
+|`MDDupFile`|Belirteçlerin yinelemelerini denetleyin `mdFile` .|  
+|`MDDupExportedType`|Belirteçlerin yinelemelerini denetleyin `mdExportedType` .|  
+|`MDDupManifestResource`|Belirteçlerin yinelemelerini denetleyin `mdManifestResource` .|  
+|`MDDupGenericParam`|Belirteçlerin yinelemelerini denetleyin `mdGenericParam` .|  
+|`MDDupMethodSpec`|Belirteçlerin yinelemelerini denetleyin `mdMethodSpec` .|  
+|`MDDupGenericParamConstraint`|Belirteçlerin yinelemelerini denetleyin `mdGenericParamConstraint` .|  
+|`MDDupAssembly`|Belirteçlerin yinelemelerini denetleyin `mdAssembly` .|  
+|`MDDupDefault`|,,, `mdMemberRef` `mdTypeRef` `mdSignature` `mdTypeSpec` Ve `mdMethodSpec` belirteçlerin yinelemelerini denetleyin.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

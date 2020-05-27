@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79bd8901641ee587e94861c0aec85b812591ea48
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177627"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008423"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData Yöntemi
-Belirtilen kitaplık `ITypeLib` ve modül adlarına sahip tür kitaplığını temsil eden bir örneğin işaretçisini alır.  
+`ITypeLib`Belirtilen kitaplık ve modül adlarına sahip tür kitaplığını temsil eden bir örneğe yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeLibFromMetaData (  
@@ -37,23 +37,23 @@ HRESULT GetTypeLibFromMetaData (
   
 ## <a name="parameters"></a>Parametreler  
  `strModule`  
- [içinde] Tür kitaplığı modülünün adı.  
+ 'ndaki Tür kitaplığının modülünün adı.  
   
  `strTlbName`  
- [içinde] Tür kitaplığın adı.  
+ 'ndaki Tür kitaplığının adı.  
   
  `ppITL`  
- [çıkış] Tür kitaplığını temsil eden `ITypeLib` örneğin adresini alan bir konuma işaretçi.  
+ dışı Tür kitaplığını temsil eden örneğin adresini alan konuma yönelik bir işaretçi `ITypeLib` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataConverter Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+- [IMetaDataConverter Arabirimi](imetadataconverter-interface.md)

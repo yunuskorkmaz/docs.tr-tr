@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc064b00e32bb6b1d8c2d0c20f571b35919eae23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175765"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009346"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef Yöntemi
-Ortak bir dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
+Ortak dil çalışma zamanı türü için bir tür tanımı oluşturur ve bu tür tanımı için bir meta veri belirteci alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineTypeDef (
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parametreler  
  `szTypeDef`  
- [içinde] Unicode'daki türün adı.  
+ 'ndaki Unicode 'daki türün adı.  
   
  `dwTypeDefFlags`  
- [içinde] `TypeDef` öznitelikleri. Bu `CoreTypeAttr` değerlerin bir bitmask olduğunu.  
+ [in] `TypeDef` özelliklerine. Bu bir değer bit değeridir `CoreTypeAttr` .  
   
  `tkExtends`  
- [içinde] Taban sınıfın belirteci. Ya bir `mdTypeDef` belirteç `mdTypeRef` ya da bir belirteç olmalı.  
+ 'ndaki Taban sınıfının belirteci. `mdTypeDef`Ya da bir `mdTypeRef` belirteç olmalıdır.  
   
  `rtkImplements`  
- [içinde] Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir dizi belirteç.  
+ 'ndaki Bu sınıfın veya arabirimin uyguladığı arabirimleri belirten bir belirteç dizisi.  
   
  `ptd`  
- [çıkış] Atanan `mdTypeDef` belirteç.  
+ dışı `mdTypeDef`Atanan belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `dwTypeDefFlags` bayrak, oluşturulan türün ortak bir tür sistem başvuru türü (sınıf veya arabirim) veya ortak bir tür sistem değer türü olup olmadığını belirtir.  
+ İçindeki bayrak `dwTypeDefFlags` , oluşturulan türün ortak bir tür sistem başvuru türü (sınıf veya arabirim) mi yoksa ortak bir tür sistemi değer türü mi olduğunu belirtir.  
   
- Sağlanan parametrelere bağlı olarak, bu yöntem, bir yan etki `mdInterfaceImpl` olarak, aynı zamanda bu tür tarafından devralınan veya uygulanan her arabirim için bir kayıt oluşturabilir. Ancak, bu yöntem bu `mdInterfaceImpl` belirteçlerin hiçbirini döndürmez. İstemci daha sonra bir `mdInterfaceImpl` belirteç eklemek veya `IMetaDataImport` değiştirmek isterse, bunları sayısallandırmak için arabirimi kullanmalıdır. `[default]` Arabirimin COM semantiklerini kullanmak istiyorsanız, varsayılan arabirimi ilk öğe olarak `rtkImplements`sağlamanız gerekir; sınıfa ayarlanan özel bir öznitelik, sınıfın varsayılan arabirimi olduğunu gösterir (bu her zaman sınıf için bildirilen ilk `mdInterfaceImpl` belirteç olarak kabul edilir).  
+ Sağlanan parametrelere bağlı olarak, bu yöntem yan bir efekt olarak `mdInterfaceImpl` Bu tür tarafından devralınan veya uygulanan her arabirim için bir kayıt da oluşturabilir. Ancak, bu yöntem bu belirteçlerden herhangi birini döndürmez `mdInterfaceImpl` . Bir istemci daha sonra bir belirteç eklemek veya bir belirteci değiştirmek isterse `mdInterfaceImpl` , `IMetaDataImport` bunları numaralandırmak için arabirimini kullanması gerekir. Arabirimin COM semantiğini kullanmak istiyorsanız `[default]` , varsayılan arabirimi ' de ilk öğe olarak sağlamalısınız `rtkImplements` ; sınıfta ayarlanan özel bir öznitelik, sınıfın varsayılan bir arabirime sahip olduğunu belirtir (Bu, her zaman `mdInterfaceImpl` sınıf için belirtilen ilk belirteç olduğunu varsayacaktır).  
   
- `rtkImplements` Dizinin her öğesi bir `mdTypeDef` `mdTypeRef` veya belirteç tutar. Dizideki son öğe `mdTokenNil`.  
+ Dizideki her öğe `rtkImplements` bir `mdTypeDef` veya `mdTypeRef` belirtecini barındırır. Dizideki son öğe olmalıdır `mdTokenNil` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133772"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008501"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion İşlevi
 Konağın, CLR 'yi açıkça başlatmadan önce işlem içinde ortak dil çalışma zamanının (CLR) hangi sürümünün kullanılacağını belirlemesine izin verir.  
   
  Bu işlev .NET Framework 4 ' te kullanım dışıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LockClrVersion (  
@@ -56,7 +56,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|Bağımsız değişkenlerden biri veya birkaçı null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Konak, CLR 'yi başlatmadan önce `LockClrVersion` çağırır. `LockClrVersion`, tümü [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)türünde geri çağırmalar olan üç parametre alır. Bu tür aşağıdaki gibi tanımlanır.  
+ CLR başlatmadan önce konak çağırır `LockClrVersion` . `LockClrVersion`tümü [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md)türünde geri çağırmalar olan üç parametre alır. Bu tür aşağıdaki gibi tanımlanır.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -64,33 +64,33 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  Çalışma zamanının başlatılması sırasında aşağıdaki adımlar oluşur:  
   
-1. Konak [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya diğer çalışma zamanı başlatma işlevlerinden birini çağırır. Alternatif olarak, ana bilgisayar COM nesne etkinleştirmesini kullanarak çalışma zamanını başlatabilir.  
+1. Konak [CorBindToRuntimeEx](corbindtoruntimeex-function.md) veya diğer çalışma zamanı başlatma işlevlerinden birini çağırır. Alternatif olarak, ana bilgisayar COM nesne etkinleştirmesini kullanarak çalışma zamanını başlatabilir.  
   
-2. Çalışma zamanı, `hostCallback` parametresi tarafından belirtilen işlevi çağırır.  
+2. Çalışma zamanı, parametresi tarafından belirtilen işlevi çağırır `hostCallback` .  
   
-3. `hostCallback` tarafından belirtilen işlev, aşağıdaki çağrı dizisini yapar:  
+3. Daha sonra belirtilen işlev `hostCallback` aşağıdaki çağrı dizisini yapar:  
   
-    - `pBeginHostSetup` parametresi tarafından belirtilen işlev.  
+    - Parametresi tarafından belirtilen işlev `pBeginHostSetup` .  
   
-    - `CorBindToRuntimeEx` (veya başka bir çalışma zamanı başlatma işlevi).  
+    - `CorBindToRuntimeEx`(veya başka bir çalışma zamanı başlatma işlevi).  
   
-    - [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: SetHostControl](iclrruntimehost-sethostcontrol-method.md).  
   
-    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md).  
   
-    - `pEndHostSetup` parametresi tarafından belirtilen işlev.  
+    - Parametresi tarafından belirtilen işlev `pEndHostSetup` .  
   
- `pEndHostSetup` `pBeginHostSetup` olan tüm çağrılar, aynı mantıksal yığın ile tek bir iş parçacığında veya fiber üzerinde gerçekleşmelidir. Bu iş parçacığı `hostCallback` çağrıldığı iş parçacığından farklı olabilir.  
+ ' Den ' e yapılan tüm çağrılar, `pBeginHostSetup` `pEndHostSetup` aynı mantıksal yığın ile tek bir iş parçacığında veya fiber üzerinde gerçekleşmelidir. Bu iş parçacığı, üzerinde çağrılan iş parçacığından farklı olabilir `hostCallback` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)

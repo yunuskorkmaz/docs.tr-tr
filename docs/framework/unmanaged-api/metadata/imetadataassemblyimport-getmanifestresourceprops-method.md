@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177656"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009034"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps Yöntemi
-Belirtilen meta veri imzasıyla bildirim kaynağının özellikleri kümesini alır.  
+Belirtilen meta veri imzasıyla bildirim kaynağının özellik kümesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdmr`  
- [içinde] Özellikleri `mdManifestResource` almak için kaynağı temsil eden bir belirteç.  
+ 'ndaki `mdManifestResource`Özelliklerinin alınacağı kaynağı temsil eden bir belirteç.  
   
  `szName`  
- [çıkış] Kaynağın adı.  
+ dışı Kaynağın adı.  
   
  `cchName`  
- [içinde] Boyutu, geniş chars, `szName`ve .  
+ 'ndaki , Öğesinin geniş karakter cinsinden boyutu `szName` .  
   
  `pchName`  
- [çıkış] Geniş karakter sayısına işaretçi aslında `szName`döndürülür.  
+ dışı Aslında ' de döndürülen geniş karakter sayısının bir işaretçisi `szName` .  
   
  `ptkImplementation`  
- [çıkış] Kaynağı içeren `mdFile` dosya yı `mdAssemblyRef` veya derlemeyi temsil eden bir belirteç veya belirteç için işaretçi.  
+ dışı `mdFile` `mdAssemblyRef` Kaynağı içeren, sırasıyla, dosya veya derlemeyi temsil eden belirtece veya belirtece yönelik bir işaretçi.  
   
  `pdwOffset`  
- [çıkış] Dosya içindeki kaynağın başına mahsup belirten bir değer için işaretçi.  
+ dışı Dosyanın içindeki kaynağın başlangıcına olan sapmayı belirten bir değer işaretçisi.  
   
  `pdwResourceFlags`  
- [çıkış] Kaynağa uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) değerinin bir leşimidir.  
+ dışı Bir kaynağa uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorManifestResourceFlags](cormanifestresourceflags-enumeration.md) değeri birleşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)

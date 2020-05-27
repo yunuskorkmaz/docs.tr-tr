@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177896"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008189"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly Yöntemi
-Belirtilen derleme `Assembly` için meta veri içeren bir yapı oluşturur ve ilişkili meta veri belirteci döndürür.  
+`Assembly`Belirtilen derleme için meta veriler içeren bir yapı oluşturur ve ilişkili meta veri belirtecini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineAssembly (  
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>Parametreler  
  `pbPublicKey`  
- [içinde] Derlemenin yayımcısını tanımlayan ortak anahtar veya derleme nin güçlü bir şekilde adlandırılmadıysa NULL.  
+ 'ndaki Derlemenin yayımcısını tanımlayan ortak anahtar veya derleme kesin olarak adlandırılmamışsa NULL.  
   
  `cbPublicKey`  
- [içinde] `pbPublicKey`Baytboyutu.  
+ 'ndaki Bayt cinsinden boyut `pbPublicKey` .  
   
  `uHashAlgId`  
- [içinde] Derlemedeki dosyaları şifrelemek için kullanılacak karma algoritmanın tanımlayıcısı veya SHA-1 algoritmasını belirtmek için NULL.  
+ 'ndaki Derlemedeki dosyaları şifrelemek için kullanılan karma algoritmanın tanımlayıcısı ya da SHA-1 algoritmasını belirtmek için NULL.  
   
  `szName`  
- [içinde] Derlemenin insan tarafından okunabilen metin adı. Bu değer 1024 karakteri geçmemelidir.  
+ 'ndaki Derlemenin insanların okunabilir metin adı. Bu değerin 1024 karakteri aşmaması gerekir.  
   
  `pMetaData`  
- [içinde] Derlemenin sürümünü, platformlarını ve yerel bilgilerini içeren bir ASSEMBLYMETADATA örneğine işaretçi.  
+ 'ndaki Derleme için sürüm, platform ve yerel ayar bilgilerini içeren bir ASSEMBLYMETADATA örneğine yönelik bir işaretçi.  
   
  `dwAssemblyFlags`  
- [içinde] Derlemenin özelliklerini açıklayan [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerlerinin birleşimi.  
+ 'ndaki Derlemenin özelliklerini tanımlayan [CorAssemblyFlags](corassemblyflags-enumeration.md) değerlerinin birleşimi.  
   
  `pmda`  
- [çıkış] Meta veri belirteci için bir işaretçi.  
+ dışı Meta veri belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir `Assembly` bildirim içinde yalnızca bir meta veri yapısı tanımlanabilir.  
+ `Assembly`Bir bildirim içinde yalnızca bir meta veri yapısı tanımlanabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit Arabirimi](imetadataassemblyemit-interface.md)

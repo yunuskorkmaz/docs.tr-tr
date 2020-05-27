@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450307"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007409"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr Numaralandırması
 Bir alanla ilgili meta verileri tanımlayan değerleri içerir.  
@@ -56,9 +56,9 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|Erişilebilirlik bilgilerini belirtir.|  
 |`fdPrivateScope`|Alana başvurulmadığını belirtir.|  
@@ -81,12 +81,12 @@ typedef enum CorFieldAttr {
 |`fdHasFieldRVA`|Alanın göreli bir sanal adresi olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

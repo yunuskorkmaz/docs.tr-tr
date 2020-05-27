@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa4247c4-f4f1-4855-9241-e04d737f5f73
 topic_type:
 - apiref
-ms.openlocfilehash: f224ecc60822862d7c587d7094011d8232fb2b09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5356ae201dcab423bcb9539031a1a61d23cbb131
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123324"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008618"
 ---
 # <a name="itypenamefactory-interface"></a>ITypeNameFactory Arabirimi
 Bir tür adının çıkarılması için yöntemler sağlar.  
@@ -27,15 +27,15 @@ Bir tür adının çıkarılması için yöntemler sağlar.
  Bu arabirim .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [TypeNameFactory Coclass](../../../../docs/framework/unmanaged-api/hosting/typenamefactory-coclass.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [TypeNameFactory Coclass’ı](typenamefactory-coclass.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450195"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007630"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags Numaralandırması
 Yerel kod bağlanırken bağlayıcı tarafından kullanılan bayrak değerlerini sağlar.  
@@ -41,19 +41,19 @@ typedef enum
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`nlfNone`|Bayrak olmadığını gösterir.|  
-|`nlfLastError`|Bir `setLastError` anahtar sözcüğünü gösterir.|  
-|`nlfNoMangle`|Bir `nomangle` anahtar sözcüğünü gösterir.|  
+|`nlfLastError`|Bir `setLastError` anahtar sözcüğü gösterir.|  
+|`nlfNoMangle`|Bir `nomangle` anahtar sözcüğü gösterir.|  
 |`nlfMaxValue`|Kullanılmadı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

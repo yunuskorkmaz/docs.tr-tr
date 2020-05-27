@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-ms.openlocfilehash: f00fe5bce2f808265add228406dfaa2ccc267545
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 514488c6e0d2e89de0d8ee483def485ec9f3ef25
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176012"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009112"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes Yöntemi
-Derleme bildiriminde başvurulan dışa aktarılan türleri geçerli meta veri kapsamında günceller.  
+Geçerli meta veri kapsamındaki derleme bildiriminde başvurulan verilen türleri numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumExportedTypes (  
@@ -38,33 +38,33 @@ HRESULT EnumExportedTypes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi. `EnumExportedTypes` Yöntem ilk kez çağrıldığında bu null bir değer olmalıdır.  
+ [in, out] Numaralandırıcı için bir işaretçi. Yöntem ilk kez çağrıldığında bu null bir değer olmalıdır `EnumExportedTypes` .  
   
  `rExportedTypes`  
- [çıkış] `mdExportedType` Meta veri belirteçlerinin numaralandırması.  
+ dışı `mdExportedType`Meta veri belirteçlerinin numaralandırılması.  
   
  `cMax`  
- [içinde] `rExportedTypes` Diziye yerleştirilebilir `mdExportedType` belirteçleri maksimum sayısı.  
+ 'ndaki `mdExportedType`Diziye yerleştirilebilecek en fazla belirteç sayısı `rExportedTypes` .  
   
  `pcTokens`  
- [çıkış] Yerleştirilen belirteçlerin `mdExportedType` `rExportedTypes`sayısı.  
+ dışı `mdExportedType`Gerçekte içine yerleştirilmiş olan belirteçlerin sayısı `rExportedTypes` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTokens` sıfıra ayarlanır.|  
+|`S_OK`|`EnumExportedTypes`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTokens` sıfır olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)

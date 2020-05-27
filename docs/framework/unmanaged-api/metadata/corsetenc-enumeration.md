@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432766"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009164"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC Numaralandırması
 Meta veri oluşturma sırasında davranışı etkilemek için kullanılan değerleri içerir.  
@@ -53,15 +53,15 @@ typedef enum CorSetENC {
 |`MDUpdateExtension`|Güncelleştirmelerin yalnızca eklemelerden oluşabileceğini gösterir. Belirteçler taşınamaz.|  
 |`MDUpdateIncremental`|Derlemenin artımlı olduğunu gösterir.|  
 |`MDUpdateDelta`|Yalnızca değiştirilen meta verilerin kaydedilmesi gerektiğini gösterir.|  
-|`MDUpdateMask`|`MDUpdateENC`, `MDUpdateFull` ve `MDUpdateIncremental`içerir.|  
+|`MDUpdateMask`|`MDUpdateENC`, `MDUpdateFull` Ve içerir `MDUpdateIncremental` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

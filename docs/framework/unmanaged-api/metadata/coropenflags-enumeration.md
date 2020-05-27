@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436497"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007591"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags Numaralandırması
 Bildirim dosyalarını açtıktan sonra meta veri davranışını denetleyen bayrak değerlerini içerir.  
@@ -46,31 +46,31 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`ofRead`|Dosyanın yalnızca okuma için açılması gerektiğini gösterir.|  
-|`ofWrite`|Dosyanın yazma için açılması gerektiğini gösterir.<br /><br /> Bir. winmd dosyasını açarken `ofWrite` bayrağını kullanıyorsanız `ofNoTransform` bayrağını da geçirmeniz gerekir.|  
+|`ofWrite`|Dosyanın yazma için açılması gerektiğini gösterir.<br /><br /> `ofWrite`Bir. winmd dosyasını açarken bayrak kullanıyorsanız, bayrağını da geçirmeniz gerekir `ofNoTransform` .|  
 |`ofReadWriteMask`|Okuma ve yazma için bir maske.|  
 |`ofCopyMemory`|Dosyanın belleğe okunup okunmayacağını belirtir. Meta veriler kendi kopyasını korumalıdır.|  
 |`ofCacheImage`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
 |`ofManifestMetadata`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
-|`ofReadOnly`|Dosyanın okuma için açılması gerektiğini ve bir [ımetadatayayma](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) için `QueryInterface` çağrısının yapılamayacağını gösterir.|  
+|`ofReadOnly`|Dosyanın okuma için açılması gerektiğini ve bir `QueryInterface` [ımetadatayayın](imetadataemit-interface.md) çağrısı yapılamıyor olduğunu gösterir.|  
 |`ofTakeOwnership`|Belleğin [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) çağrısı kullanılarak ayrıldığını belirtir ve meta veriler tarafından serbest bırakılır.|  
 |`ofNoTypeLib`|Kullanımdan kalktı. Bu bayrak yoksayıldı.|  
 |`ofNoTransform`|. Winmd dosyalarının otomatik dönüştürmesinin devre dışı bırakılacağını belirtir. Diğer bir deyişle, bir Windows Çalışma Zamanı türünün .NET Framework türüne projeksiyonu devre dışı bırakılmalıdır. Daha fazla bilgi için bkz. [.net ve Windows çalışma zamanı ile birlikte Windows çalışma zamanı ve clr](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
-|`ofReserved1`|İç kullanım için ayrılmış.|  
-|`ofReserved2`|İç kullanım için ayrılmış.|  
-|`ofReserved`|İç kullanım için ayrılmış.|  
+|`ofReserved1`|Dahili kullanım için ayrılmıştır.|  
+|`ofReserved2`|Dahili kullanım için ayrılmıştır.|  
+|`ofReserved`|Dahili kullanım için ayrılmıştır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

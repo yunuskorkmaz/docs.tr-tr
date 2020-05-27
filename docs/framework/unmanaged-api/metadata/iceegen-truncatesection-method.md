@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 387f5f01f2d2589c0b34e50b69398e1feb0e77e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426120"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008254"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection Yöntemi
 Belirtilen uzunluğa göre belirtilen kod bölümünü keser.  
   
  Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT TruncateSection (  
@@ -44,17 +44,17 @@ HRESULT TruncateSection (
  'ndaki Bölümün kesirli kısmını kesmek için bayt cinsinden uzunluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca diğer yöntemler tarafından işlenmeyen özel bölüm gereksinimleriniz varsa `TruncateSection` çağırın.  
+ `TruncateSection`Yalnızca diğer yöntemler tarafından işlenmemiş özel bölüm gereksinimleriniz varsa çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen Arabirimi](iceegen-interface.md)

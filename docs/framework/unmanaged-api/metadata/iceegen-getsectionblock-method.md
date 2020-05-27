@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176090"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008343"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock Metodu
 Kod tabanının bir bölüm bloğunu alır.  
   
- Bu yöntem eskidir ve kullanılmamalıdır.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetSectionBlock (  
@@ -40,29 +40,29 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [içinde] Kod tabanının bir bloğunu almak için hangi bölüm.  
+ 'ndaki Kod tabanı bloğunun alınacağı bölüm.  
   
  `len`  
- [içinde] Alınacak bloğun uzunluğu.  
+ 'ndaki Alınacak bloğun uzunluğu.  
   
  `align`  
- [içinde] Bloğun ilk baytını hizalamak için bölümün başına göre bayt. Bu, bloğun bölüm içindeki konumudur.  
+ 'ndaki Bloğunun ilk baytını hizalamak için, bölümünün başlangıcına göre bayt. Bu, bloğunun bölüm içindeki konumudur.  
   
  `ppBytes`  
- [çıkış] Alınan bloğun adresini alan bir konuma işaretçi.  
+ dışı Alınan bloğun adresini alan konuma yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca `GetSectionBlock` diğer yöntemlerle işlenmemiş özel bölüm gereksinimleriniz varsa arayın.  
+ `GetSectionBlock`Yalnızca diğer yöntemler tarafından işlenmemiş özel bölüm gereksinimleriniz varsa çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen Arabirimi](iceegen-interface.md)

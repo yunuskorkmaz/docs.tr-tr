@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78c192f10f629a0c1316ae7af7fc774819f4de8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175986"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007487"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps Metodu
 Belirtilen meta veri imzasıyla dosyanın özelliklerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFileProps (  
@@ -41,35 +41,35 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdf`  
- [içinde] Özellikleri `mdFile` almak için dosyayı temsil eden meta veri belirteci.  
+ 'ndaki `mdFile`Özelliklerinin alınacağı dosyayı temsil eden meta veri belirteci.  
   
  `szName`  
- [çıkış] Dosyanın basit adı.  
+ dışı Dosyanın basit adı.  
   
  `cchName`  
- [içinde] Boyutu, geniş chars, `szName`ve .  
+ 'ndaki , Öğesinin geniş karakter cinsinden boyutu `szName` .  
   
  `pchName`  
- [çıkış] Geniş karakter sayısı aslında döndü `szName`.  
+ dışı Aslında ' de döndürülen geniş karakter sayısı `szName` .  
   
  `ppbHashValue`  
- [çıkış] Karma değeri için bir işaretçi. Bu, SHA-1 algoritmasını kullanarak dosyanın karma.  
+ dışı Karma değere yönelik bir işaretçi. Bu, dosyanın SHA-1 algoritmasını kullanan karmadır.  
   
  `pcbHashValue`  
- [çıkış] Döndürülen karma değerdeki geniş karakter sayısı.  
+ dışı Döndürülen karma değerindeki geniş karakter sayısı.  
   
  `pdwFileFlags`  
- [çıkış] Bir dosyaya uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) değerinin bir leşimidir.  
+ dışı Bir dosyaya uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorFileFlags](corfileflags-enumeration.md) değerinin birleşimidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)

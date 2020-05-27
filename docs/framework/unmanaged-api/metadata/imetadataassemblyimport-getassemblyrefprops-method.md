@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2858e924ab6effe192955ce53dad9d333d2d244d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175973"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009073"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps Yöntemi
-Belirtilen meta veri imzasıyla derleme başvurusu için özellik kümesini alır.  
+Belirtilen meta veri imzasıyla derleme başvurusunun özellik kümesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
@@ -44,47 +44,47 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mdar`  
- [içinde] Özellikleri `mdAssemblyRef` almak için derleme başvurutemsil meta veri belirteci.  
+ 'ndaki `mdAssemblyRef`Özelliklerinin alınacağı derleme başvurusunu temsil eden meta veri belirteci.  
   
  `ppbPublicKeyOrToken`  
- [çıkış] Ortak anahtarveya meta veri belirteci için bir işaretçi.  
+ dışı Ortak anahtara veya meta veri belirtecine yönelik bir işaretçi.  
   
  `pcbPublicKeyOrToken`  
- [çıkış] Döndürülen ortak anahtar veya belirteçteki bayt sayısı.  
+ dışı Döndürülen ortak anahtar veya belirteçteki bayt sayısı.  
   
  `szName`  
- [çıkış] Derlemenin basit adı.  
+ dışı Derlemenin basit adı.  
   
  `cchName`  
- [içinde] Boyutu, geniş chars, `szName`ve .  
+ 'ndaki , Öğesinin geniş karakter cinsinden boyutu `szName` .  
   
  `pchName`  
- [çıkış] Geniş karakter sayısına işaretçi aslında `szName`döndürülür.  
+ dışı Aslında ' de döndürülen geniş karakter sayısının bir işaretçisi `szName` .  
   
  `pMetaData`  
- [çıkış] Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına işaretçi.  
+ dışı Derleme meta verilerini içeren bir ASSEMBLYMETADATA yapısına yönelik işaretçi.  
   
  `ppbHashValue`  
- [çıkış] Karma değeri için bir işaretçi. Bu, Sha-1 algoritmasını kullanarak, `PublicKey` [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) numaralandırmasının arfFullOriginator bayrağı ayarlanmadığı sürece, başvurulan derleme özelliğinin karmadır.  
+ dışı Karma değere yönelik bir işaretçi. Bu, `PublicKey` [AssemblyRefFlags](assemblyrefflags-enumeration.md) numaralandırması Için arfFullOriginator bayrağı ayarlanmadığı takdirde, başvurulan derlemenin özelliğinin SHA-1 algoritmasını kullanan karmadır.  
   
  `pcbHashValue`  
- [çıkış] Döndürülen karma değerdeki geniş karakter sayısı.  
+ dışı Döndürülen karma değerindeki geniş karakter sayısı.  
   
  `pdwAssemblyRefFlags`  
- [çıkış] Bir derlemeye uygulanan meta verileri açıklayan bayraklar için bir işaretçi. Bayrak değeri, bir veya daha fazla [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) değerinin bir leşimidir.  
+ dışı Bir derlemeye uygulanan meta verileri tanımlayan bayrakların işaretçisi. Flags değeri bir veya daha fazla [CorAssemblyFlags](corassemblyflags-enumeration.md) değeri birleşimidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem başarılı olursa S_OK döndürür; aksi takdirde, Winerror.h üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
+ Bu yöntem başarılı olursa S_OK döndürür; Aksi takdirde, Winerror. h üstbilgi dosyasında tanımlanan hata kodlarından birini döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177524"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008761"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps Yöntemi
-[IMetaDataEmit::DefineEvent'e](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)yapılan bir önceki çağrıyla tanımlanan bir olayın belirtilen özelliğini ayarlar veya güncelleştirir.  
+[Imetadatayayma::D efineEvent](imetadataemit-defineevent-method.md)için önceki bir çağrı tarafından tanımlanan bir olayın belirtilen özelliğini ayarlar veya güncelleştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetEventProps (  
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ev`  
- [içinde] Olay belirteci.  
+ 'ndaki Olay belirteci.  
   
  `dwEventFlags`  
- [içinde] Olay bayrakları. Bu `CorEventAttr` değerlerin bir bitmask olduğunu.  
+ 'ndaki Olay bayrakları. Bu bir değer bit değeridir `CorEventAttr` .  
   
  `tkEventType`  
- [içinde] Olay sınıfının belirteci. Bu ya `mdTypeDef` bir `mdTypeRef` ya da bir belirteç.  
+ 'ndaki Olay sınıfı için belirteç. Bu bir ya da `mdTypeDef` bir `mdTypeRef` belirteç.  
   
  `mdAddOn`  
- [içinde] Olaya abone olmak için kullanılan yöntem veya null.  
+ 'ndaki Olaya abone olmak için kullanılan yöntem veya null.  
   
  `mdRemoveOn`  
- [içinde] Olaya aboneliğini iptal etmek veya geçersiz kılmak için kullanılan yöntem.  
+ 'ndaki Olayın aboneliğini kaldırmak için kullanılan yöntem veya null.  
   
  `mdFire`  
- [içinde] Olayı yükseltmek için (türetilmiş bir sınıf tarafından) kullanılan yöntem.  
+ 'ndaki Olayı yükseltmek için kullanılan Yöntem (türetilmiş bir sınıf tarafından).  
   
  `rmdOtherMethods[]`  
- [içinde] Olayla ilişkili diğer yöntemler için bir dizi belirteç. Dizinin son öğesi `mdMethodDefNil`.  
+ 'ndaki Olayla ilişkili diğer yöntemler için bir belirteç dizisi. Dizinin son öğesi olmalıdır `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

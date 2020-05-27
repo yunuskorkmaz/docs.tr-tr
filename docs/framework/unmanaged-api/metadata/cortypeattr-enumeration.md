@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436450"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008969"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr Numaralandırması
 Tür meta verilerini gösteren değerleri içerir.  
@@ -73,9 +73,9 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Tür görünürlük bilgileri için kullanılır.|  
 |`tdNotPublic`|Türün ortak kapsamda değil olduğunu belirtir.|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|Bu türün bir LPTSTR öğesini ANSI olarak yorumlaması gerektiğini belirtir.|  
 |`tdUnicodeClass`|Bu türün bir LPTSTR öğesini Unicode olarak yorumlayacağını belirtir.|  
 |`tdAutoClass`|Bu türün bir LPTSTR öğesini otomatik olarak yorumlayacağını belirtir.|  
-|`tdCustomFormatClass`|Türün, `CustomFormatMask`tarafından belirtilen standart olmayan bir kodlamaya sahip olduğunu belirtir.|  
+|`tdCustomFormatClass`|Türünün, tarafından belirtildiği gibi standart olmayan bir kodlamaya sahip olduğunu belirtir `CustomFormatMask` .|  
 |`tdCustomFormatMask`|Yerel birlikte çalışma için standart olmayan kodlama bilgilerini almak için bu maskeyi kullanın. Bu iki bitin değerlerinin anlamı belirtilmemiş.|  
 |`tdBeforeFieldInit`|Statik alana ilk erişim denemesinden önce türün başlatılması gerektiğini belirtir.|  
 |`tdForwarder`|Türün verildiğini ve bir tür ileticisi olduğunu belirtir.|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Türün onunla ilişkili güvenlik olduğunu belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175895"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005635"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute Yöntemi
-Belirtilen meta veri imzasıyla özel bir öznitelik için, belirtilen nesneye eklenecek bir tanım oluşturur ve bu özel öznitelik tanımına bir belirteç alır.  
+Belirtilen nesneye iliştirililmesi için belirtilen meta veri imzasına sahip özel bir öznitelik için bir tanım oluşturur ve bu özel öznitelik tanımına bir belirteç alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineCustomAttribute (
@@ -39,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parametreler  
  `tkObj`  
- [içinde] Sahibi öğesinin belirteci.  
+ 'ndaki Sahip öğesi için belirteç.  
   
  `tkType`  
- [içinde] Özel özniteliği tanımlayan belirteç.  
+ 'ndaki Özel özniteliği tanımlayan belirteç.  
   
  `pCustomAttribute`  
- [içinde] Özel öznitelik için bir işaretçi.  
+ 'ndaki Özel özniteliğe yönelik bir işaretçi.  
   
  `cbCustomAttribute`  
- [içinde] Bayt `pCustomAttribute`sayısı.  
+ 'ndaki İçindeki bayt sayısı `pCustomAttribute` .  
   
  `pcv`  
- [çıkış] Atanan `mdCustomAttribute` belirteç.  
+ dışı `mdCustomAttribute`Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

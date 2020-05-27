@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1a83f07f03ddb17d5c306453cf838101a77ed65
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443915"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007942"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags Numaralandırması
 Bir derleme derlemesine uygulanan meta verileri tanımlayan değerleri içerir.  
@@ -53,9 +53,9 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`afPublicKey`|Derleme başvurusunun tam, karma olmayan ortak anahtarı tuttuğunda olduğunu gösterir.|  
 |`afPA_None`|İşlemci mimarisinin belirtilmemiş olduğunu gösterir.|  
@@ -64,25 +64,25 @@ typedef enum CorAssemblyFlags {
 |`afPA_IA64`|İşlemci mimarisinin Itanium (PE32 +) olduğunu gösterir.|  
 |`afPA_AMD64`|İşlemci mimarisinin AMD x64 (PE32 +) olduğunu gösterir.|  
 |`afPA_ARM`|İşlemci mimarisinin ARM (PE32) olduğunu gösterir.|  
-|`afPA_NoPlatform`|Derlemenin bir başvuru derlemesi olduğunu belirtir; diğer bir deyişle, her türlü mimari için geçerlidir, ancak herhangi bir mimaride çalıştırılamaz. Bu nedenle, bayrak `afPA_Mask`ile aynıdır.|  
-|`afPA_Specified`|İşlemci mimarisi bayraklarının `AssemblyRef` kaydına yayıldığını gösterir.|  
+|`afPA_NoPlatform`|Derlemenin bir başvuru derlemesi olduğunu belirtir; diğer bir deyişle, her türlü mimari için geçerlidir, ancak herhangi bir mimaride çalıştırılamaz. Bu nedenle, bayrak ile aynıdır `afPA_Mask` .|  
+|`afPA_Specified`|İşlemci mimarisi bayraklarının kayda yayıldığını gösterir `AssemblyRef` .|  
 |`afPA_Mask`|İşlemci mimarisini tanımlayan bir maske.|  
 |`afPA_FullMask`|İşlemci mimarisi açıklamasının dahil edildiğini belirtir.|  
 |`afPA_Shift`|Dizin ve dizinden gelen işlemci mimarisi bayraklarının bir kaydırma sayısını gösterir.|  
-|`afEnableJITcompileTracking`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> karşılık gelen değeri gösterir.|  
-|`afDisableJITcompileOptimizer`|<xref:System.Diagnostics.DebuggableAttribute><xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> karşılık gelen değeri gösterir.|  
+|`afEnableJITcompileTracking`|Öğesinden karşılık gelen değeri gösterir <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
+|`afDisableJITcompileOptimizer`|Öğesinden karşılık gelen değeri gösterir <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> <xref:System.Diagnostics.DebuggableAttribute> .|  
 |`afRetargetable`|Derlemenin çalışma zamanında farklı bir yayımcıdan bir derlemeye yeniden hedeflenebileceğini belirtir.|  
 |`afContentType_Mask`|İçerik türünü tanımlayan bir maske.|  
 |`afContentType_Default`|Varsayılan içerik türünü gösterir.|  
 |`afContentType_WindowsRuntime`|Windows Çalışma Zamanı içerik türünü gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

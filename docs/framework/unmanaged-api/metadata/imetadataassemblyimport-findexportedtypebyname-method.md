@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175999"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009398"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName Yöntemi
-Adı ve çevreleyen türü verilen dışa aktarılan bir türü işaretçialır.  
+Adı ve kapsayan türü verilen, verilen bir türe yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parametreler  
  `szName`  
- [içinde] Dışa aktarılan türün adı.  
+ 'ndaki İçe aktarılmış türün adı.  
   
  `mdtExportedType`  
- [içinde] Dışa aktarılan türdeki enilgili sınıfın meta veri belirteci. İstenilen dışa aktarılan tür iç içe bir tür değilse, bu değerdir. `mdExportedTypeNil`  
+ 'ndaki İçe aktarılmış türün kapsayan sınıfına ait meta veri belirteci. Bu değer, `mdExportedTypeNil` istenen dışarıya alınan türün iç içe bir tür olmaması durumunda olur.  
   
  `ptkExportedType`  
- [çıkış] Dışa `mdExportedType` aktarılan türü temsil eden belirteç için bir işaretçi.  
+ dışı Bir belirteç için, `mdExportedType` dışarıya eklenen türü temsil eden bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem, `FindExportedTypeByName` başvuruları çözmek için ortak dil çalışma zamanı tarafından kullanılan standart kuralları kullanır.  
+ `FindExportedTypeByName`Yöntemi, başvuruları çözümlemek için ortak dil çalışma zamanı tarafından çalıştırılan standart kuralları kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport Arabirimi](imetadataassemblyimport-interface.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../deployment/how-the-runtime-locates-assemblies.md)

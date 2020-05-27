@@ -1,84 +1,83 @@
 ---
-title: Visual Studio 'da .NET Core ile Merhaba Dünya uygulaması oluşturma
-description: Visual Studio kullanarak C# veya Visual Basic ilk .NET Core konsol uygulamanızı oluşturmayı öğrenin.
+title: Visual Studio 'da .NET Core ile bir konsol uygulaması oluşturma
+description: Visual Studio kullanarak C# veya Visual Basic .NET Core konsol uygulaması oluşturmayı öğrenin.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/09/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 738fc49a820c3c5d94fb35c1bf7a8b718ed75cb3
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7dcd7957a9a160b3caf2692e9888c70a838bffc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394820"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005030"
 ---
-# <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019 ' de ilk .NET Core konsol uygulamanızı oluşturma
+# <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019 'de .NET Core konsol uygulaması oluşturma
 
-Bu makalede, Visual Studio 2019 ' de Merhaba Dünya .NET Core konsol uygulaması oluşturmak ve çalıştırmak için adım adım bir giriş sunulmaktadır. Bir Merhaba Dünya uygulaması, genellikle yeni bir programlama diline yeni başlayanlar tanıtmak için kullanılır. Bu program yalnızca "Merhaba Dünya!" ifadesini görüntüler iletisini yazdırdı.
+Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,4 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
+- **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK 'Sı, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
-Daha fazla bilgi için, [.NET Core SDK](../install/sdk.md?pivots=os-windows) makalesine [Visual Studio ile install](../install/sdk.md?pivots=os-windows#install-with-visual-studio) bölümüne bakın.
+  Daha fazla bilgi için, [.NET Core SDK](../install/sdk.md?pivots=os-windows) makalesine [Visual Studio ile install](../install/sdk.md?pivots=os-windows#install-with-visual-studio) bölümüne bakın.
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-Aşağıdaki yönergeler basit bir Merhaba Dünya konsol uygulaması oluşturur:
-
 <!-- markdownlint-disable MD025 -->
-
-# <a name="c"></a>[C#](#tab/csharp)
 
 1. Visual Studio 2019 ' i açın.
 
-1. "HelloWorld" adlı yeni bir C# .NET Core konsol uygulaması projesi oluşturun.
+1. "HelloWorld" adlı yeni bir .NET Core konsol uygulaması projesi oluşturun.
 
-   1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+   1. Başlangıç sayfasında **Yeni proje oluştur**' u seçin.
 
-      ![Visual Studio başlangıç penceresinde yeni bir proje oluştur düğmesi seçili](./media/with-visual-studio/start-window.png)
+      ![Visual Studio başlangıç sayfasında yeni bir proje oluştur düğmesi seçili](./media/with-visual-studio/start-window.png)
 
-   1. **Yeni proje oluştur** sayfasında, arama kutusuna **konsol** girin. Ardından, dil listesinden **C#** öğesini seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+   1. **Yeni proje oluştur** sayfasında, arama kutusuna **konsol** girin. Ardından, dil listesinden **C#** veya **Visual Basic** ' yi seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
       ![Filtreler seçiliyken yeni bir proje penceresi oluştur](./media/with-visual-studio/create-new-project.png)
 
       > [!TIP]
-      > .NET Core şablonlarını görmüyorsanız, muhtemelen gerekli iş yükünün yüklü olması eksik olabilir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
+      > .NET Core şablonlarını görmüyorsanız, muhtemelen gerekli iş yükünün eksik olması gerekir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
 
-   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **HelloWorld** girin. Ardından **Oluştur**' u seçin.
+   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **HelloWorld** girin. Ardından **Oluştur**’u seçin.
 
       ![Yeni proje pencerenizi proje adı, konum ve çözüm adı alanlarıyla yapılandırın](./media/with-visual-studio/configure-new-project.png)
 
-   .NET Core için C# konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını otomatik olarak tanımlar <xref:System.String> . `Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
+   .NET Core konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını tanımlar <xref:System.String> . `Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
 
-   ![Visual Studio ve yeni HelloWorld projesi](./media/with-visual-studio/visual-studio-main-window.png)
+   Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçicisini değiştirin.
 
-# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
+   ```csharp
+   using System;
 
-1. Visual Studio 2019 ' i açın.
+   namespace HelloWorld
+   {
+       class Program
+       {
+           static void Main(string[] args)
+           {
+               Console.WriteLine("Hello World!");
+           }
+       }
+   }
+   ```
 
-1. "HelloWorld" adlı yeni bir Visual Basic .NET Core konsol uygulaması projesi oluşturun.
+   ```vb
+   Imports System
 
-   1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+   Module Program
+       Sub Main(args As String())
+           Console.WriteLine("Hello World!")
+       End Sub
+   End Module
+   ```
 
-      ![Visual Studio başlangıç penceresinde yeni bir proje oluştur düğmesi seçili](./media/with-visual-studio/start-window.png)
-
-   1. **Yeni proje oluştur** sayfasında, arama kutusuna **konsol** girin. Ardından, dil listesinden **Visual Basic** ' yi seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin. **Konsol uygulaması (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
-
-      ![Konsol uygulaması için Visual Basic şablonu seçin (.NET Framework)](./media/with-visual-studio/vb/create-new-project.png)
-
-      > [!TIP]
-      > .NET Core şablonlarını görmüyorsanız, muhtemelen gerekli iş yükünün yüklü olması eksik olabilir. **Aradığınızı bulmuyor musunuz?** iletisi altında, **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın. Visual Studio Yükleyicisi açılır. **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğundan emin olun.
-
-   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **HelloWorld** girin. Ardından **Oluştur**' u seçin.
-
-   .NET Core konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını otomatik olarak tanımlar <xref:System.String> . `Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni `args` parametresinde kullanılabilir.
-
-   ![Visual Studio ve yeni HelloWorld projesi](./media/with-visual-studio/vb/visual-studio-main-window.png)
-
----
-
-   Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>"Merhaba Dünya!" değişmez dizesini göstermek için yöntemini çağırır Konsol penceresinde.
+   Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>"Merhaba Dünya!" öğesini göstermek için yöntemini çağırır Konsol penceresinde.
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
@@ -94,35 +93,19 @@ Aşağıdaki yönergeler basit bir Merhaba Dünya konsol uygulaması oluşturur:
 
 ## <a name="enhance-the-app"></a>Uygulamayı geliştirin
 
-Uygulamanızı, adını ve Tarih ve saat ile birlikte göstermek için kullanıcıyı geliştirin. Aşağıdaki yönergeler uygulamayı yeniden değiştirip çalıştırın:
-
-# <a name="c"></a>[C#](#tab/csharp)
+Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin. Aşağıdaki yönergeler uygulamayı değiştirip yeniden çalıştırır:
 
 1. `Main`Aşağıdaki kod ile Şu anda yalnızca çağıran satırı olan yönteminin içeriğini değiştirin `Console.WriteLine` :
 
    [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/HelloWorld.cs#1)]
 
-   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Son olarak, bu değerleri konsol penceresinde göstermek için bir [enterpolasyonlu dize](../../csharp/language-reference/tokens/interpolated.md) kullanır.
-
-1. **Build**  >  **Build Solution**öğesini seçerek programı derleyin.
-
-1. Programı çalıştırmak için araç çubuğunda **HelloWorld** ' ı seçin veya **F5**tuşuna basın.
-
-1. Bir ad girip **ENTER** tuşuna basarak istemi yanıtlayın.
-
-   ![Değiştirilen program çıkışıyla konsol penceresi](./media/with-visual-studio/hello-world-update.png)
-
-1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
-
-# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
-
-1. `Main`Aşağıdaki kod ile Şu anda yalnızca çağıran satırı olan yönteminin içeriğini değiştirin `Console.WriteLine` :
-
    [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/Program.vb#1)]
 
-   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Son olarak, bu değerleri konsol penceresinde göstermek için bir [enterpolasyonlu dize](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) kullanır.
+   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene `date` ( `currentDate` Visual Basic) atar. Son olarak, bu değerleri konsol penceresinde görüntüler.
 
-1. **Build**  >  **Build Solution**öğesini seçerek programı derleyin.
+   `\n`( `vbCrLf` Visual Basic), bir yeni satır karakterini temsil eder.
+
+   `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 
 1. Programı çalıştırmak için araç çubuğunda **HelloWorld** ' ı seçin veya **F5**tuşuna basın.
 
@@ -131,12 +114,10 @@ Uygulamanızı, adını ve Tarih ve saat ile birlikte göstermek için kullanıc
    ![Değiştirilen program çıkışıyla konsol penceresi](./media/with-visual-studio/hello-world-update.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
-
----
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede ilk .NET Core uygulamanızı oluşturdunuz ve çalıştırdık. Sonraki adımda, uygulamanızda hata ayıklaması yapın.
+Bu öğreticide, bir .NET Core uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da bir .NET Core Merhaba Dünya uygulamasında hata ayıklama](debugging-with-visual-studio.md)
+> [Visual Studio 'da bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md)

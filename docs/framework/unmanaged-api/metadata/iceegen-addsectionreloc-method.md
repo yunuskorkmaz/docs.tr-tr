@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176116"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008904"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc Yöntemi
-Kod tabanına bir .reloc yönergesi ekler.  
+Kod tabanına bir. reloc yönergesi ekler.  
   
- Bu yöntem eskidir ve kullanılmamalıdır.  
+ Bu yöntem kullanılmıyor ve kullanılmamalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AddSectionReloc (  
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>Parametreler  
  `section`  
- [içinde] .reloc yönergesi ekleyeceğiniz bellek içi kod bölümü.  
+ 'ndaki . Reloc yönergesinin ekleneceği bellek içi kodun bölümü.  
   
  `offset`  
- [içinde] Bölümün mahsup.  
+ 'ndaki Bölümün boşluğu.  
   
  `relativeTo`  
- [içinde] Başvurulan `offset` bölüm.  
+ 'ndaki `offset`Başvurduğu bölüm.  
   
  `relocType`  
- [içinde] [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) değerlerinden biri, eklemek için .reloc yönergesi türünü gösteren.  
+ 'ndaki Add. reloc yönergesinin türünü gösteren [CeeSectionRelocType](ceesectionreloctype-enumeration.md) değerlerinden biri.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICeeGen Arabirimi](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen Arabirimi](iceegen-interface.md)
