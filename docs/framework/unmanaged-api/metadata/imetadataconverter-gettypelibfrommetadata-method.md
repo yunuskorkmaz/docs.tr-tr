@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79bd8901641ee587e94861c0aec85b812591ea48
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177627"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008423"
 ---
-# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="29b0f-102">IMetaDataConverter::GetTypeLibFromMetaData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="29b0f-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
-<span data-ttu-id="29b0f-103">Belirtilen kitaplık `ITypeLib` ve modül adlarına sahip tür kitaplığını temsil eden bir örneğin işaretçisini alır.</span><span class="sxs-lookup"><span data-stu-id="29b0f-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
+# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="20d53-102">IMetaDataConverter::GetTypeLibFromMetaData Yöntemi</span><span class="sxs-lookup"><span data-stu-id="20d53-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
+<span data-ttu-id="20d53-103">`ITypeLib`Belirtilen kitaplık ve modül adlarına sahip tür kitaplığını temsil eden bir örneğe yönelik bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="20d53-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29b0f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="29b0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20d53-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="20d53-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeLibFromMetaData (  
@@ -35,25 +35,25 @@ HRESULT GetTypeLibFromMetaData (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="29b0f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="29b0f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20d53-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="20d53-105">Parameters</span></span>  
  `strModule`  
- <span data-ttu-id="29b0f-106">[içinde] Tür kitaplığı modülünün adı.</span><span class="sxs-lookup"><span data-stu-id="29b0f-106">[in] The name of the type library's module.</span></span>  
+ <span data-ttu-id="20d53-106">'ndaki Tür kitaplığının modülünün adı.</span><span class="sxs-lookup"><span data-stu-id="20d53-106">[in] The name of the type library's module.</span></span>  
   
  `strTlbName`  
- <span data-ttu-id="29b0f-107">[içinde] Tür kitaplığın adı.</span><span class="sxs-lookup"><span data-stu-id="29b0f-107">[in] The name of the type library.</span></span>  
+ <span data-ttu-id="20d53-107">'ndaki Tür kitaplığının adı.</span><span class="sxs-lookup"><span data-stu-id="20d53-107">[in] The name of the type library.</span></span>  
   
  `ppITL`  
- <span data-ttu-id="29b0f-108">[çıkış] Tür kitaplığını temsil eden `ITypeLib` örneğin adresini alan bir konuma işaretçi.</span><span class="sxs-lookup"><span data-stu-id="29b0f-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
+ <span data-ttu-id="20d53-108">dışı Tür kitaplığını temsil eden örneğin adresini alan konuma yönelik bir işaretçi `ITypeLib` .</span><span class="sxs-lookup"><span data-stu-id="20d53-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29b0f-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="29b0f-109">Requirements</span></span>  
- <span data-ttu-id="29b0f-110">**Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29b0f-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20d53-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="20d53-109">Requirements</span></span>  
+ <span data-ttu-id="20d53-110">**Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20d53-110">**Platform:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="29b0f-111">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="29b0f-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="20d53-111">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="20d53-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="29b0f-112">**Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="29b0f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="20d53-112">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="20d53-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="29b0f-113">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29b0f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="20d53-113">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20d53-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29b0f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="29b0f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20d53-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20d53-114">See also</span></span>
 
-- [<span data-ttu-id="29b0f-115">IMetaDataConverter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="29b0f-115">IMetaDataConverter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+- [<span data-ttu-id="20d53-115">IMetaDataConverter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="20d53-115">IMetaDataConverter Interface</span></span>](imetadataconverter-interface.md)
