@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576f4561ed782f091840ac378831110a1bfef9c6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175843"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004705"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef Yöntemi
-Geçerli kapsam dışında bir modülün üyesine başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
+Geçerli kapsam dışındaki bir modülün üyesine yönelik bir başvuru tanımlar ve bu başvuru tanımına bir belirteç alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineMemberRef (
@@ -39,30 +39,30 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tkImport`  
- [içinde] Üye genel değilse, hedef üyenin sınıfı veya arabirimi için belirteç; üye genel ise, `mdModuleRef` diğer dosyaiçin belirteç.  
+ 'ndaki Üye genel değilse hedef üyenin sınıfı veya arabirimi için belirteç; üye geneldir ise, `mdModuleRef` diğer dosyanın belirteci.  
   
  `szName`  
- [içinde] Hedef üyenin adı.  
+ 'ndaki Hedef üyenin adı.  
   
  `pvSigBlob`  
- [içinde] Hedef üyenin imzası.  
+ 'ndaki Hedef üyenin imzası.  
   
  `cbSigBlob`  
- [içinde] Bayt `pvSigBlob`sayısı.  
+ 'ndaki İçindeki bayt sayısı `pvSigBlob` .  
   
  `pmr`  
- [çıkış] Atanan `mdMemberRef` belirteç.  
+ dışı `mdMemberRef`Atanan belirteç.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

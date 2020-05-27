@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: a7449ffc8a8ccf2db62ab3cff2f9cfaffd0c72a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175869"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004601"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember Yöntemi
-Geçerli kapsam dışında tanımlanan bir tür veya modülün belirtilen üyesine bir başvuru oluşturur ve bu başvuru için bir belirteç tanımlar.  
+Geçerli kapsamın dışında tanımlanan bir tür veya modülün belirtilen üyesine bir başvuru oluşturur ve bu başvuru için bir belirteç tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineImportMember (
@@ -42,50 +42,50 @@ HRESULT DefineImportMember (
   
 ## <a name="parameters"></a>Parametreler  
  `pAssemImport`  
- [içinde] Hedef üyenin içe aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi.  
+ 'ndaki Hedef üyenin içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) arabirimi.  
   
  `pbHashValue`  
- [içinde] Tarafından belirtilen derleme için karma içeren `pAssemImport`bir dizi.  
+ 'ndaki Tarafından belirtilen derlemenin karmasını içeren bir dizi `pAssemImport` .  
   
  `cbHashValue`  
- [içinde] Dizideki `pbHashValue` bayt sayısı.  
+ 'ndaki Dizideki bayt sayısı `pbHashValue` .  
   
  `pImport`  
- [içinde] Hedef üyenin içe aktarıldığı meta veri kapsamını temsil eden bir [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) arabirimi.  
+ 'ndaki Hedef üyenin içeri aktarıldığı meta veri kapsamını temsil eden bir [IMetaDataImport](imetadataimport-interface.md) arabirimi.  
   
  `mbMember`  
- [içinde] Hedef üyeyi belirten meta veri belirteci. Belirteç bir `mdMethodDef` (üye yöntemi için), `mdProperty` (üye özellik `mdFieldDef` için) veya (üye alan için) belirteç olabilir.  
+ 'ndaki Hedef üyeyi belirten meta veri belirteci. Belirteç bir `mdMethodDef` (üye yöntemi için), `mdProperty` (üye özelliği için) veya `mdFieldDef` (bir üye alanı için) belirteci olabilir.  
   
  `pAssemEmit`  
- [içinde] Hedef üyenin içe aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) arabirimi.  
+ 'ndaki Hedef üyenin içeri aktarıldığı derlemeyi temsil eden bir [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) arabirimi.  
   
  `tkParent`  
- [içinde] Hedef `mdTypeRef` `mdModuleRef` üyenin sahibi olan tür veya modülün belirteci.  
+ 'ndaki `mdTypeRef` `mdModuleRef` Hedef üyeye sahip olan, sırasıyla tür veya modül için belirteç.  
   
  `pmr`  
- [çıkış] `mdMemberRef` Üye başvurusu için geçerli kapsamda tanımlanan belirteç.  
+ dışı `mdMemberRef`Üye başvurusu için geçerli kapsamda tanımlanan belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem, `DefineImportMember` başka bir kapsamda `mbMember`tanımlanan, belirtilen `pImport`üyeyi arar ve özelliklerini alır. Bu bilgileri, üye başvurusu oluşturmak için geçerli kapsamdaki [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) yöntemini aramak için kullanır.  
+ Yöntemi tarafından belirtilen, tarafından belirtilen `DefineImportMember` `mbMember` başka bir kapsamda tanımlanan üyeyi arar `pImport` ve özelliklerini alır. Bu bilgileri, üye başvurusunu oluşturmak için geçerli kapsamdaki [ımetadatayayma::D efineMemberRef](imetadataemit-definememberref-method.md) metodunu çağırmak üzere kullanır.  
   
- Genellikle, `DefineImportMember` yöntemi kullanmadan önce, geçerli kapsamda, hedef üyenin ana sınıfı, arabirimi veya modülü için bir tür başvurusu veya modül başvurusu oluşturmanız gerekir. Bu başvuru için meta veri belirteci `tkParent` sonra bağımsız değişkengeçirilir. Derleyici veya bağlayıcı tarafından daha sonra çözülecekse, hedef üyenin üst öğesine bir başvuru oluşturmanız gerekmez. Özetlersek:  
+ Genellikle, yöntemini kullanmadan önce, `DefineImportMember` hedef üyenin üst sınıfı, arabirimi veya modülü için geçerli kapsamda, bir tür başvurusu veya modül başvurusu oluşturmanız gerekir. Bu başvurunun meta veri belirteci daha sonra `tkParent` bağımsız değişkenine geçirilir. Derleyici veya bağlayıcı tarafından daha sonra çözülebiliyorsa, hedef üyenin üst öğesine bir başvuru oluşturmanız gerekmez. Özetlersek:  
   
-- Hedef üye bir alan veya yöntemse, [iMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) veya [iMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) yöntemini kullanarak, geçerli kapsamda, üyenin üst sınıfı veya üst arabirimi için bir tür başvurusu oluşturun.  
+- Hedef üye bir alan veya yöntem ise, üyenin üst sınıfı veya üst arabirimi için geçerli kapsamda bir tür başvurusu oluşturmak için [ımetadatayayma::D efineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) veya [ımetadatayayma::D Efineımporttype](imetadataemit-defineimporttype-method.md) metodunu kullanın.  
   
-- Hedef üye küresel bir değişken veya global bir işlevse (yani bir sınıfın veya arabirimin üyesi değilse), üyenin ana modülü için geçerli kapsamda bir modül başvurusu oluşturmak için [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) yöntemini kullanın.  
+- Hedef üye bir genel değişken veya genel işlevse (yani, bir sınıfın veya arabirimin üyesi değil), üyenin üst modülünün geçerli kapsamındaki bir modül başvurusu oluşturmak için [ımetadatayayma::D efineModuleRef](imetadataemit-definemoduleref-method.md) metodunu kullanın.  
   
-- Hedef üyenin üst öğesi daha sonra derleyici veya bağlayıcı tarafından `mdTokenNil` çözülecekse, 'yi `tkParent`geçin. Bunun geçerli olduğu tek senaryo, küresel bir işlev in veya global değişkenin sonunda geçerli modüle bağlanacak ve meta veriler birleştirilecek bir .obj dosyasından içe aktarıldığı zamandır.  
+- Hedef üyenin üst öğesi daha sonra derleyici veya bağlayıcı tarafından çözülecektir, sonra da geçiş yapın `mdTokenNil` `tkParent` . Bu tek senaryo, genel bir işlev veya genel değişken, son olarak geçerli modüle ve birleştirilmiş meta veriler ile bağlantılandırılan bir. obj dosyasından içeri aktarılırken yapılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

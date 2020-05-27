@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 038e2ec20e5fd01edf9835080e0f7a15ec862fd9
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448765"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008943"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType Numaralandırması
 Modülün türünü belirtir.  
@@ -44,22 +44,22 @@ typedef enum
 |Üye|Açıklama|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|Modül geçersiz bir tür.|  
-|`ValidatorModuleTypeMin`|`CorValidatorModuleType` numaralandırmasının en küçük değeri.|  
+|`ValidatorModuleTypeMin`|Sabit listesinin en küçük değeri `CorValidatorModuleType` .|  
 |`ValidatorModuleTypePE`|Modül, taşınabilir bir çalıştırılabilir (PE) dosyasıdır.|  
 |`ValidatorModuleTypeObj`|Modül bir. obj dosyasıdır.|  
 |`ValidatorModuleTypeEnc`|Modül, Düzenle ve devam et hata ayıklayıcı oturumundur.|  
 |`ValidatorModuleTypeIncr`|Modül artımlı olarak oluşturulan bir modüldür.|  
-|`ValidatorModuleTypeMax`|`CorValidatorModuleType` numaralandırmasının en büyük değeri.|  
+|`ValidatorModuleTypeMax`|Sabit listesinin en büyük değeri `CorValidatorModuleType` .|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937956"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007877"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType Numaralandırması
 
-Ortak dil çalışma zamanı <xref:System.Type>, tür değiştiricisini veya meta veri türü imzasında bir tür hakkında bilgi belirtir.
+Ortak dil çalışma zamanını <xref:System.Type> , tür değiştiricisini veya meta veri türü imzasında bir tür hakkındaki bilgileri belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -118,34 +118,34 @@ typedef enum CorElementType {
 
 ## <a name="remarks"></a>Açıklamalar
 
-Tür değiştiricileri, daha karmaşık türleri temsil etme temelini oluşturur. Tür imzasında hemen takip eden değere bir `CorElementType` türü değiştirici değeri uygulanır. `CorElementType` türü değiştirici değerini izleyen değer, aşağıdaki tabloda belirtildiği gibi bir `CorElementType` basit tür değeri, meta veri belirteci veya başka bir değer olabilir.
+Tür değiştiricileri, daha karmaşık türleri temsil etme temelini oluşturur. Tür `CorElementType` imzasında hemen takip eden değere bir tür değiştirici değeri uygulanır. `CorElementType`Tür değiştirici değerini izleyen değer, `CorElementType` Aşağıdaki tabloda belirtildiği gibi basit bir tür değeri, meta veri belirteci veya başka bir değer olabilir.
 
 > [!NOTE]
 > Tüm sayılar (*sayı*, *bağımsız değişken sayısı*, *meta veri belirteci*, *derece*, *sayı*ve *bağlantılı*) sıkıştırılmış tamsayılar olarak depolanır. Ayrıntılar için bkz. ECMA Web sitesinde [standart ECMA-335-ortak dil altyapısı (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) .
 
-|Tür değiştiricisi|Biçimi|
+|Tür değiştiricisi|Biçimlendir|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR bir `CorElementType` değeri \<|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF bir `CorElementType` değeri \<|
-|`ELEMENT_TYPE_VALUETYPE`|`mdTypeDef` meta veri belirteci \<ELEMENT_TYPE_VALUETYPE >|
-|`ELEMENT_TYPE_CLASS`|`mdTypeDef` meta veri belirteci \<ELEMENT_TYPE_CLASS >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<sayı >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` değeri > \<Rank > \<count1 > \<bound1 >... \<countN > \<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` meta veri belirteci > \<bağımsız değişken sayısı > \<arg1 >... \<argN >|
-|`ELEMENT_TYPE_FNPTR`|Çağırma kuralı dahil olmak üzere işlev için ELEMENT_TYPE_FNPTR \<imzayı doldurun >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY bir `CorElementType` değeri \<|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<sayı >|
-|`ELEMENT_TYPE_CMOD_REQD`|`mdTypeRef` veya `mdTypeDef` meta veri belirteci\<ELEMENT_TYPE_ >|
-|`ELEMENT_TYPE_CMOD_OPT`|`mdTypeRef` veya `mdTypeDef` meta veri belirteci \<E_T_CMOD_OPT >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN>\<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ...\<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi:** CorHdr. h
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

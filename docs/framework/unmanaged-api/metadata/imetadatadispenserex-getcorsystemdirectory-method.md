@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a76c17e663fdf6555ed878cca1b86b6a9395730e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175921"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008801"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory Metodu
-Geçerli ortak dil çalışma saatini (CLR) tutan dizini alır. Bu yöntem yalnızca işlem dışı hata ayıklayıcılar tarafından kullanılmak üzere desteklenir. Başka bir bileşenden çağrılırsa, E_NOTIMPL döndürecek.  
+Geçerli ortak dil çalışma zamanını (CLR) tutan dizini alır. Bu yöntem yalnızca işlem dışı hata ayıklayıcıları tarafından kullanılmak üzere desteklenir. Başka bir bileşenden çağrılırsa E_NOTIMPL döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetCORSystemDirectory (  
@@ -37,24 +37,24 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametreler  
  `szBuffer`  
- [çıkış] Dizin adını almak için arabellek.  
+ dışı Dizin adını almak için arabellek.  
   
  `cchBuffer`  
- [içinde] Boyutu, bayt, ve. `szBuffer`  
+ 'ndaki Bayt cinsinden boyutu `szBuffer` .  
   
  `pchBuffer`  
- [çıkış] Bayt sayısı aslında `szBuffer`döndü.  
+ dışı Aslında ' de döndürülen bayt sayısı `szBuffer` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataDispenserEx Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx Arabirimi](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser Yöntemi](imetadatadispenser-interface.md)

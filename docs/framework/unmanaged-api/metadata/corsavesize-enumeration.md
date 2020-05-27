@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22a7f87a5803dc185052a5ce7ed427eff9f8fb18
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176142"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009190"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize Numaralandırması
-Bir kaydet işlemi nin boyutunu sorgularken gereken kesinlik düzeyini gösteren değerleri içerir.  
+Bir kaydetme işleminin boyutunu sorgularken gereken duyarlık düzeyini gösteren değerleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ typedef enum CorSaveSize {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`cssAccurate`|İade değerinin tam olması gerektiğini belirtir.|  
-|`cssQuick`|İade değerinin tahmin edilmesi gerektiğini belirtir.|  
-|`cssDiscardTransientCAs`|Atılabilir türlerin kaldırılması gerektiğini belirtir.|  
+|`cssAccurate`|Dönüş değerinin tam olarak doğru olması gerektiğini belirtir.|  
+|`cssQuick`|Dönüş değerinin tahmini olması gerektiğini belirtir.|  
+|`cssDiscardTransientCAs`|Discardable türlerinin kaldırılması gerektiğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorHdr.h  
+ **Üst bilgi:** CorHdr. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Numaralandırmalar](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

@@ -3,6 +3,8 @@
   items:
     - name: Genelleştirme
       href: globalization.md
+    - name: Genelleştirme ve ICU
+      href: globalization-icu.md
     - name: Yerelleştirilebilirlik incelemesi
       href: localizability-review.md
     - name: Yerelleştirme

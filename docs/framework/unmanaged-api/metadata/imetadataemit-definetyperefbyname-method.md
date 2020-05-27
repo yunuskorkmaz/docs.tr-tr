@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: 23a6931b31ea2d7e4e8d1cb3dc8adf3a51216315
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae30140e69926be32570960a32524a74b850bda4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175752"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009359"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName Yöntemi
-Geçerli kapsam dışında, belirtilen kapsamda tanımlanan bir tür için bir meta veri belirteci alır.  
+Geçerli kapsamın dışında belirtilen kapsamda tanımlı bir tür için meta veri belirteci alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineTypeRefByName (
@@ -37,34 +37,34 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parametreler  
  `tkResolutionScope`  
- [içinde] Çözüm kapsamını belirten belirteç. Aşağıdaki belirteç türleri geçerlidir:  
+ 'ndaki Çözümleme kapsamını belirten belirteç. Aşağıdaki belirteç türleri geçerlidir:  
   
-- `mdModuleRef`, tür, arayanın tanımlandığı aynı derlemede tanımlanırsa.  
+- `mdModuleRef`, türü çağıranın tanımlandığı derlemede tanımlanmışsa.  
   
-- `mdAssemblyRef`, tür, arayanın tanımlandığı derleme den başka bir derlemede tanımlanmışsa.  
+- `mdAssemblyRef`tür, çağıranın tanımlandığı bir derlemede tanımlıysa.  
   
-- `mdTypeRef`, tür iç içe bir tür ise.  
+- `mdTypeRef`türü, iç içe bir tür ise.  
   
-- `mdModule`, tür, arayanın tanımlandığı aynı modülde tanımlanmışsa.  
+- `mdModule`, türü çağıranın tanımlandığı modülde tanımlanmışsa.  
   
-- Null, tür genel olarak tanımlanırsa.  
+- Tür genel olarak tanımlanmışsa null.  
   
  `szName`  
- [içinde] Unicode'da hedef türün adı.  
+ 'ndaki Unicode 'daki hedef türünün adı.  
   
  `ptr`  
- [çıkış] Türe `mdTypeRef` atanan belirteç için bir işaretçi.  
+ dışı `mdTypeRef`Türe atanmış belirtece yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)
