@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141461"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006421"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS Numaralandırması
 Ortak dil çalışma zamanının (CLR) başlangıç davranışını gösteren değerleri içerir. Varsayılan olarak, atık toplama eşzamanlı değildir ve yalnızca temel sınıf kitaplığı, etki alanı nötr alanına yüklenir.  
@@ -68,19 +68,19 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|Kimliğe bürünme özelliğinin, varsayılan olarak zaman uyumsuz noktalara akmamalıdır belirtir.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Tam iş parçacığı yığınının iş parçacığı çalışmaya başladığında uygulanmamalıdır.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Platform çağırma aracılığıyla elde edilen yönetilen ımpersonations ve ımpersontiklerde zaman uyumsuz noktalarda akacağı belirtir. Varsayılan olarak, yalnızca yönetilen ımpersontiklerde zaman uyumsuz noktalarda akış yapılır.|  
-|`STARTUP_TRIM_GC_COMMIT`|Çöp toplamanın sistem belleği azaldığında daha az işlenmiş alan kullanacağınızı belirtir. Bkz. `gcTrimCommitOnLowMemory` [Paylaşılan Web barındırma Için iyileştirme](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Windows için olay izlemenin (ETW) ortak dil çalışma zamanı olayları için etkinleştirildiğini belirtir. Windows Vista ile başlayarak, olay izleme her zaman etkindir, bu nedenle bu bayrağın bir etkisi yoktur. Bkz. [.NET Framework günlüğünü denetleme](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> özelliğine ve [\<appDomainResourceMonitoring > öğesine](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)bakın.|  
+|`STARTUP_TRIM_GC_COMMIT`|Çöp toplamanın sistem belleği azaldığında daha az işlenmiş alan kullanacağınızı belirtir. Bkz `gcTrimCommitOnLowMemory` . [Paylaşılan Web barındırma için iyileştirme](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Windows için olay izlemenin (ETW) ortak dil çalışma zamanı olayları için etkinleştirildiğini belirtir. Windows Vista ile başlayarak, olay izleme her zaman etkindir, bu nedenle bu bayrağın bir etkisi yoktur. Bkz. [.NET Framework günlüğünü denetleme](../../performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. Bkz <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> . özelliği ve [ \<appDomainResourceMonitoring> öğesi](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** MSCorEE. h  
   
  **Kitaplık:** MSCorEE. dll  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Sabit Listeleri](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [Barındırma Sabit Listeleri](hosting-enumerations.md)

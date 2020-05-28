@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 027694cee1b3e4d990796ba31300918f6d859679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176077"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008202"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map Yöntemi
-Meta veri imzalarını kullanarak derlemeler arasındaki ilişkiyi eşler.  
+Meta veri imzalarını kullanarak derlemeler arasında bir ilişki eşler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Map (  
@@ -36,23 +36,23 @@ HRESULT Map (
   
 ## <a name="parameters"></a>Parametreler  
  `tkImp`  
- [içinde] İçe aktarılan kod nesnesini temsil eden meta veri belirteci.  
+ 'ndaki İçeri aktarılan kod nesnesini temsil eden meta veri belirteci.  
   
  `tkEmit`  
- [içinde] Yayılan kod nesnesini temsil eden meta veri belirteci.  
+ 'ndaki Yayınlanan kod nesnesini temsil eden meta veri belirteci.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirteç yeniden eşlemi birleştirme sırasında gerçekleştiğinde, özgün belirteç içe aktarılan (kaynak) meta veri kapsamında ve yeni belirteç yayılan (hedef) meta veri kapsamında kapsamlıdır.  
+ Belirteç yeniden eşlemesi bir birleştirme sırasında gerçekleştiğinde, özgün belirteç içeri aktarılan (kaynak) meta veri kapsamında kapsamlandırılır ve yeni belirteç, yayılan (hedef) meta veri kapsamında kapsamdadır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMapToken Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [IMapToken Arabirimi](imaptoken-interface.md)

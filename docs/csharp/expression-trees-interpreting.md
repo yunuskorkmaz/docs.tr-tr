@@ -4,12 +4,12 @@ description: Bir ifade ağacının yapısını incelemek için kod yazmayı öğ
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761869"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004653"
 ---
 # <a name="interpreting-expressions"></a>İfade Yorumlama
 
@@ -22,7 +22,7 @@ Bu tasarım, bir ifade ağacındaki tüm düğümleri görece düz ileri özyine
 Düğüm türünün alt öğeleri varsa, yinelemeli olarak alt öğeleri ziyaret edin. Her alt düğümde, kök düğümde kullanılan işlemi yineleyin: türü belirleme ve türün alt öğeleri varsa, alt öğelerin her birini ziyaret edin.
 
 ## <a name="examining-an-expression-with-no-children"></a>Alt öğe Içermeyen bir Ifadeyi İnceleme
-Her düğümü çok basit bir ifade ağacında ziyaret ederek başlayalım.
+Basit bir ifade ağacındaki her bir düğümü ziyaret ederek başlayalım.
 Sabit bir ifade oluşturan ve sonra özelliklerini incelediği kod aşağıda verilmiştir:
 
 ```csharp
@@ -215,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Bu algoritma, rastgele bir şekilde ziyaret edebildikleri bir algoritmanın temelini oluşturur `LambdaExpression` . Oluşturduğum kodun yalnızca, karşılaşabileceği ifade ağacı düğümlerinin çok küçük bir örneğine bakabilmesini sağlayan çok sayıda delik vardır. Bununla birlikte, ne kadar çok şey ürettiğini de öğrenirsiniz. (Yönteminde varsayılan durum, `Visitor.CreateFromExpression` Yeni bir düğüm türüyle karşılaşıldığında hata konsoluna bir ileti yazdırır. Bu şekilde, yeni bir ifade türü eklemeyi bilirsiniz.)
+Bu algoritma, rastgele bir şekilde ziyaret edebildikleri bir algoritmanın temelini oluşturur `LambdaExpression` . Çok sayıda delik vardır; Yani, oluşturduğum kodun yalnızca, karşılaşabileceği ifade ağacı düğümlerinin olası kümelerinin çok küçük bir örneğini arar. Bununla birlikte, ne kadar çok şey ürettiğini de öğrenirsiniz. (Yönteminde varsayılan durum, `Visitor.CreateFromExpression` Yeni bir düğüm türüyle karşılaşıldığında hata konsoluna bir ileti yazdırır. Bu şekilde, yeni bir ifade türü eklemeyi bilirsiniz.)
 
 Yukarıda gösterilen ekleme ifadesinde bu ziyaretçisini çalıştırdığınızda aşağıdaki çıktıyı alırsınız:
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
 ```
 
 Bu kod matematik *çarpınımı* işlevi için olası bir uygulamayı temsil eder. Bu kodu yazdığım şekilde, deyimlere lambda ifadeleri atayarak ifade ağaçları oluşturmanın iki sınırlaması vurgulanmıştır. İlk olarak, ifade lambdaları kullanılamaz. Bu, döngüleri, blokları, if/else deyimlerini ve C# dilinde ortak olan diğer denetim yapılarını kullanmıyorum anlamına gelir. İfadeleri kullanma sınırlıyorum. İkinci olarak aynı ifadeyi özyinelemeli olarak çağıramıyorum.
-Ben zaten bir temsilciyiysem, ancak ifade ağaç biçiminde çağıramıyorum. [İfade ağaçları oluşturma](expression-trees-building.md) bölümünde bu sınırlamaları aşmaya yönelik teknikler öğreneceksiniz.
+Ben zaten bir temsilciyiysem, ancak ifade ağaç biçiminde çağıramıyorum. [İfade ağaçları oluşturma](expression-trees-building.md)bölümünde bu sınırlamaları aşmaya yönelik teknikler öğreneceksiniz.
 
 Bu ifadede, tüm bu türlerin düğümleri ile karşılaşırsınız:
 
@@ -517,7 +517,7 @@ Son örnek bile olası düğüm türlerinin bir alt kümesini tanır.
 Yine de, başarısız olmasına neden olacak çok sayıda ifade akışı yapabilirsiniz.
 Tam bir uygulama, .NET Standard adı altında bulunur <xref:System.Linq.Expressions.ExpressionVisitor> ve tüm olası düğüm türlerini işleyebilir.
 
-Son olarak, bu makalede kullandığım kitaplık tanıtım ve öğrenme için oluşturulmuştur. En iyi duruma getirilmemiştir. Bu yapıyı, yapıları çok açık hale getirmek ve düğümleri ziyaret etmek ve ne olduğunu çözümlemek için kullanılan teknikleri vurgulamak için yazdım. Bir üretim uygulamasının performanstan daha fazla dikkat edin.
+Son olarak, bu makalede kullandığım kitaplık tanıtım ve öğrenme için oluşturulmuştur. En iyi duruma getirilmemiştir. Bu yapıyı, yapıları ve düğümleri ziyaret etmek ve ne olduğunu çözümlemek için kullanılan teknikleri vurgulamak için yazdım. Bir üretim uygulamasının performanstan daha fazla dikkat edin.
 
 Bu sınırlamalara rağmen, ifade ağaçlarını okuyan ve anlayan algoritmalar yazmak için size iyi bir yol olmalıdır.
 

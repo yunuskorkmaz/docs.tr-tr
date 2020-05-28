@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef7851ddb33003b0b4b51065cf1fea3696ca6abd
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444271"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005953"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR Numaralandırması
-[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) tarafından ortak dil çalışma zamanını başlatırken kullanılan sabitleri belirtir.  
+[CoInitializeCor](../hosting/coinitializecor-function.md) tarafından ortak dil çalışma zamanını başlatırken kullanılan sabitleri belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,21 +33,21 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |`COINITCOR`|Varsayılan başlatma modunu gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

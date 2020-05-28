@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177700"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004380"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam Yöntemi
-Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaile bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.  
+Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaya sahip bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT DefineParam (  
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parametreler  
  `md`  
- [içinde] Parametresi tanımlanan yöntemin belirteci.  
+ 'ndaki Parametresi tanımlanmakta olan metodun belirteci.  
   
  `ulParamSeq`  
- [içinde] Parametre sıra numarası.  
+ 'ndaki Parametre sıra numarası.  
   
  `szName`  
- [içinde] Unicode'daki parametrenin adı.  
+ 'ndaki Parametrenin Unicode olarak adı.  
   
  `dwParamFlags`  
- [içinde] Parametre için bayraklar. Bu `CorParamAttr` değerlerin bir bitmask olduğunu.  
+ 'ndaki Parametre bayrakları. Bu bir değer bit değeridir `CorParamAttr` .  
   
  `dwCPlusTypeFlag`  
- [içinde] `ELEMENT_TYPE_` sabit değer *\** için.  
+ [in] `ELEMENT_TYPE_` *\** sabit değer için.  
   
  `pValue`  
- [içinde] Parametrenin sabit değeri.  
+ 'ndaki Parametrenin sabit değeri.  
   
  `cchValue`  
- [içinde] Unicode karakterlerinin boyutu. `pValue`  
+ 'ndaki ' Nin Unicode karakterdeki boyutu `pValue` .  
   
  `ppd`  
- [çıkış] Atanan `mdParamDef` belirteç.  
+ dışı `mdParamDef`Atanan belirteç.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Parametreler için `ulParamSeq` 1 ile başlarda sıra değerleri. İade değerinin sıra numarası 0'dır.  
+ İçindeki sıra değerleri, `ulParamSeq` Parametreler için 1 ile başlar. Dönüş değerinin sıra numarası 0 ' dır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)

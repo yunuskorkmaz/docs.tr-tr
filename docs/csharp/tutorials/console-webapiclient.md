@@ -3,12 +3,12 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dilinde birçok özellik öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420389"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004861"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -37,10 +37,10 @@ En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklama
 İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. Konsol penceresine aşağıdaki komutu girin:
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur. Proje adı "WebApiClient" dir. Bu yeni bir proje olduğundan, bağımlılıklardan hiçbiri yerinde değildir. İlk çalıştırma .NET Core Framework 'ü indirir, bir geliştirme sertifikası yükler ve eksik bağımlılıkları geri yüklemek için NuGet Paket Yöneticisi 'ni çalıştırır.
+Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur. Proje adı "WebAPIClient" dir. Bu yeni bir proje olduğundan, bağımlılıklardan hiçbiri yerinde değildir. İlk çalıştırma .NET Core Framework 'ü indirir, bir geliştirme sertifikası yükler ve eksik bağımlılıkları geri yüklemek için NuGet Paket Yöneticisi 'ni çalıştırır.
 
 Değişiklik yapmaya başlamadan önce, `dotnet run` uygulamanızı çalıştırmak için komut isteminde ([bkz. Note](#dotnet-restore-note)) yazın. `dotnet run``dotnet restore`ortamınızda bağımlılıklar eksik olursa otomatik olarak gerçekleştirilir. Uygulamanızın yeniden oluşturulması gerekiyorsa de çalışır `dotnet build` .
 İlk kurulumdan sonra, yalnızca `dotnet restore` `dotnet build` projeniz için anlamlı olduğunda veya çalıştırmanız gerekir.

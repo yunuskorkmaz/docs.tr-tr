@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-ms.openlocfilehash: e6c3c9b842bd823e8975661964480fd801779b2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ce6f5993b9c1aeb63e121b3567ee468cea1c9318
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450126"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007526"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck Numaralandırması
 Kodu iyileştirmek için hangi başvurulan öğelerin tanımlarına dönüştürüleceğini denetleyen bayrakları belirtir.  
@@ -36,23 +36,23 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a>Üyeleri  
+## <a name="members"></a>Üyeler  
   
-|Üyesi|Açıklama|  
+|Üye|Açıklama|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Tür başvurularının ve üye başvurularının tanımlara dönüştürülmesi gerektiğini belirtir. Bu varsayılan değerdir (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefDefault`|Tür başvurularının ve üye başvurularının tanımlara dönüştürülmesi gerektiğini belirtir. Bu varsayılan değerdir ( `MDTypeRefToDef` &#124; `MDMemberRefToDef` ).|  
 |`MDRefToDefAll`|Başvurulan tüm öğelerin tanımlara dönüştürülmesi gerektiğini belirtir.|  
 |`MDRefToDefNone`|Başvurulan hiçbir öğenin tanımlara dönüştürülmesi gerektiğini belirtir.|  
 |`MDTypeRefToDef`|Yalnızca tür başvurularının tür tanımlarına dönüştürülmesi gerektiğini belirtir.|  
 |`MDMemberRefToDef`|Yalnızca üye başvurularının tanımlara dönüştürülmesi gerektiğini belirtir. Diğer bir deyişle, üye başvuruları Yöntem tanımlarına veya alan tanımlarına dönüştürülmelidir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorHdr. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Sabit Listeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [Meta Veri Numaralandırmalar](metadata-enumerations.md)

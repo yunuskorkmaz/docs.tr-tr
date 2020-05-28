@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d8e5ab607f9310341ded482b35f02f3845926328
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123293"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008566"
 ---
 # <a name="ivalidator-interface"></a>IValidator Arabirimi
 Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama hatalarını doğrulamak için yöntemler sağlar.  
@@ -28,19 +28,19 @@ Taşınabilir çalıştırılabilir (PE) görüntüleri ve raporlama doğrulama 
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|Doğrulamalısınız|Belirtilen PE veya Microsoft ara dili (MSIL) dosyasını doğrular.|  
+|Doğrulama|Belirtilen PE veya Microsoft ara dili (MSIL) dosyasını doğrular.|  
 |FormatEventInfo|Belirtilen doğrulama hatasına karşılık gelen hata iletisini alır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** IValidator. IDL, IValidator. h  
   
  **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Barındırma Arabirimleri](hosting-interfaces.md)
+- [CorRuntimeHost Coclass](corruntimehost-coclass.md)
