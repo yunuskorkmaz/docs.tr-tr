@@ -98,11 +98,6 @@
         - name: Kitaplığa birim testi yapma
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: Kitaplık kullanma
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: Canlı birim testi
-          href: /visualstudio/test/live-unit-testing-start
         - name: Paket yükleme ve kullanma
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'
