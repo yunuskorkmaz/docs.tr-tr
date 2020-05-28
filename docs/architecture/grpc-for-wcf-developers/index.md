@@ -1,13 +1,13 @@
 ---
-title: WCF Geliştiricileri için ASP.NET Core gRPC - WCF Geliştiricileri için gRPC
-description: WCF geliştiricileri için Core 3.0'ASP.NET gRPC hizmetleri oluşturmaya giriş
+title: WCF geliştiricileri için ASP.NET Core gRPC-WCF geliştiricileri için gRPC
+description: WCF geliştiricileri için ASP.NET Core 3,0 ' de gRPC hizmetleri oluşturmaya giriş
 ms.date: 09/02/2019
-ms.openlocfilehash: 175dfbf1880a0937615543c248fba3bed0e25c23
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988966"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144363"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF Geliştiricileri için ASP.NET Core gRPC
 
@@ -15,57 +15,57 @@ ms.locfileid: "80988966"
 
 YAYIMLAYAN
 
-Microsoft Developer Division, .NET ve Visual Studio ürün ekipleri
+Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri
 
-Microsoft Corporation'ın bir bölümü
+Microsoft Corporation 'ın bir bölümü
 
 One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif Hakkı © 2019 Microsoft Corporation tarafından
+Telif hakkı © 2019 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin hiçbir bölümü, yayımcının yazılı izni olmadan herhangi bir biçimde veya herhangi bir şekilde çoğaltılamaz veya aktarılamaz.
+Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
-Bu kitap "olduğu gibi" sağlanır ve yazarın görüş ve görüşlerini ifade eder. URL ve diğer Internet web sitesi referansları da dahil olmak üzere bu kitapta ifade edilen görüşler, görüşler ve bilgiler önceden haber verilmeden değişebilir.
+Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.
 
 Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır. Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.
 
-Microsoft ve "Ticari https://www.microsoft.com Markalar" web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
+Microsoft ve <https://www.microsoft.com> "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.
 
-Docker balina logosu, Docker, Inc. şirketinin izni yle kullanılan tescilli ticari markasıdır.
+Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.
 
-Diğer tüm işaretler ve logolar ilgili sahiplerinin mülkiyetindedir.
+Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.
 
-Yazar:
+Düzenliyor
 
-> **Mark Rendle** - Baş Teknik Sorumlu - [Görsel Recode](https://visualrecode.com)
+> Yeniden **işaretle** -BT Teknik Müdürü- [görsel recode](https://visualrecode.com)
 >
-> **Miranda Steiner** - Teknik Yazar
+> **MDA bu,** teknik yazar
 
-Düzenleyicisi:
+Düzenleyen
 
-> **Maira Wenzel** - Sr. İçerik Geliştiricisi - Microsoft
+> **Maira Wenzel** -SR. Content Developer-Microsoft
 
 ## <a name="introduction"></a>Giriş
 
-gRPC, ağa bağlı hizmetler ve dağıtılmış uygulamalar oluşturmak için modern bir çerçevedir. Windows Communication Foundation (WCF) NetTCP bağlamalarının performansını, SOAP'ın çapraz platform birlikte çalışabilirliğiyle birleştiğinde düşünün. gRPC, uygulamalar ve hizmetler arasında yüksek performanslı, düşük bant genişliğine bağlı iletişim sağlamak için HTTP/2 ve Protobuf ileti kodlama protokolü üzerine inşa edilmiştir. .NET, Java, Python, Node.js, Go ve C++ gibi en popüler programlama dilleri ve platformlarında sunucu ve istemci kodu oluşturmayı destekler. ASP.NET Core 3.0'da gRPC için birinci sınıf desteği, .NET 4.x için mevcut gRPC araçları ve kütüphanelerinin yanı sıra, organizasyonlarında .NET Core'u benimsemek isteyen geliştirme ekipleri için WCF'ye mükemmel bir alternatiftir.
+gRPC, ağa bağlı hizmetler ve dağıtılmış uygulamalar oluşturmaya yönelik modern bir çerçevedir. SOAP 'ın platformlar arası birlikte çalışabilirliğiyle birlikte Windows Communication Foundation (WCF) NetTCP bağlamalarının performansını düşünün. , uygulamalar ve hizmetler arasında yüksek performans, düşük bant genişliğine sahip bir iletişim sağlamak için HTTP/2 ve prototip ileti kodlama protokolü üzerinde gRPC derlemeleri. .NET, Java, Python, Node. js, Go ve C++ dahil çoğu popüler programlama dili ve platformu genelinde sunucu ve istemci kodu oluşturmayı destekler. ASP.NET Core 3,0 ' de gRPC için birinci sınıf destek sayesinde, mevcut gRPC araçları ve .NET 4. x kitaplıklarının yanı sıra, kuruluşlarda .NET Core 'u benimsemek isteyen geliştirme ekiplerine yönelik WCF için mükemmel bir alternatiftir.
 
-## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalı?
+## <a name="who-should-use-this-guide"></a>Bu kılavuzu kimler kullanmalıdır?
 
-Bu kılavuz, .NET Framework veya .NET Core'da daha önce WCF kullanan ve uygulamalarını .NET Core 3.0 ve sonraki sürümler için modern bir RPC ortamına geçirmek isteyen geliştiriciler için yazılmıştır. Daha genel olarak, .NET Core 3.0'a yükseltme veya yükseltme yi düşünüyorsanız ve yerleşik gRPC araçlarını kullanmak istiyorsanız, bu kılavuz da yararlıdır.
+Bu kılavuz, daha önce WCF kullanan .NET Framework veya .NET Core 'da çalışan geliştiriciler için yazılmıştır ve uygulamalarını .NET Core 3,0 ve üzeri sürümler için modern bir RPC ortamına geçirmeyi arayan kişiler. Daha genel olarak, yükseltme yapıyorsanız veya yükseltmeyi .NET Core 3,0 ' e ve yerleşik gRPC araçlarını kullanmak istiyorsanız, bu kılavuz de yararlı olur.
 
-## <a name="how-you-can-use-this-guide"></a>Bu kılavuzu nasıl kullanabilirsiniz?
+## <a name="how-you-can-use-this-guide"></a>Bu Kılavuzu nasıl kullanabileceğiniz
 
-Bu, ASP.NET Core 3.0'da gRPC Hizmetleri oluşturmaya kısa bir giriştir ve özellikle wcf'ye benzer bir platform olarak atıfta bulunulmaktadır. Her kavramı WCF'nin eşdeğer özellikleriyle ilişkilendiren gRPC ilkelerini açıklar ve mevcut bir WCF uygulamasını gRPC'ye geçirmek için kılavuz sunar. Ayrıca, WCF ile deneyime sahip olan ve yeni hizmetler oluşturmak için gRPC öğrenmek isteyen geliştiriciler için de yararlıdır. Örnek uygulamaları kendi projeleriniz için bir şablon veya başvuru olarak kullanabilirsiniz ve kitaptan veya örneklerinden kodu kopyalayıp yeniden kullanmakta özgürüz.
+Bu, ASP.NET Core 3,0 ' de gRPC hizmetlerini, benzer bir platform olarak WCF 'ye belirli bir şekilde oluşturmaya yönelik kısa bir giriş niteliğindedir. GRPC 'nin ilkelerini açıklar, her bir kavramı WCF 'nin eşdeğer özellikleriyle birbirleriyle ilgili olarak, mevcut bir WCF uygulamasının gRPC 'ye geçirilmesi için rehberlik sunar. Ayrıca, WCF ile karşılaşan ve yeni hizmetler oluşturmak üzere gRPC 'yi öğrenmek isteyen geliştiriciler için de yararlıdır. Örnek uygulamaları kendi projeleriniz için bir şablon veya başvuru olarak kullanabilir ve kodu kitap veya örneklerinden kopyalayabilir ve yeniden kullanabilirsiniz.
 
-Bu hususların ve fırsatların ortak bir şekilde anlaşılmasını sağlamaya yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Herkesin ortak bir terimler ve temel ilkeler kümesinden çalışması mimari örüntülerin ve uygulamaların tutarlı bir şekilde uygulanmasını sağlamaya yardımcı olur.
+Bu noktaların ve fırsatların yaygın olarak anlaşılmasına yardımcı olmak için bu kılavuzu ekibinize iletmekten çekinmeyin. Her birinin ortak bir terim kümesinden ve temel ilkelerin üzerinde çalışmasını sağlamak, mimari desenlerinin ve uygulamaların tutarlı olmasını sağlamaya yardımcı olur.
 
 ## <a name="references"></a>Başvurular
 
-- **gRPC web sitesi**
+- **gRPC Web sitesi**
   <https://grpc.io>
-- **Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapmak**
+- **Sunucu uygulamaları için .NET Core ve .NET Framework arasında seçim yapma**
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]

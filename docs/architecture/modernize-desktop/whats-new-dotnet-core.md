@@ -2,12 +2,12 @@
 title: Masaüstü için .NET Core’da ne gibi yenilikler var?
 description: .NET Core, .NET Core ve .NET Framework arasındaki farklar ve eklenen yeni özellikler hakkında bilgi edinin.
 ms.date: 05/12/2020
-ms.openlocfilehash: 9ec4f3002dc9d9ea80fd2b6db8095930867a5c65
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423266"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144265"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>Masaüstü için .NET Core’da ne gibi yenilikler var?
 
@@ -19,7 +19,7 @@ ms.locfileid: "83423266"
 
 Bu platformlardan yalnızca birini hedefliyorsanız, bu modeli kullanabilirsiniz. Ancak çoğu durumda, aynı çözümde birden fazla hedef platforma gerek duyabilirsiniz. Örneğin, uygulamanızda bir sunucu üzerinde çalışan arka uç mantığını paylaşan ve hatta bir mobil istemci olan bir masaüstü yönetim parçası olabilir. Bu durumda, tüm bu .NET verticallerine yayılabilen Birleşik bir kodlama deneyimine ihtiyacınız vardır.
 
-Windows 8 ' in piyasaya sürülme zamanına göre, taşınabilir sınıf kitaplıkları (PCLs) kavramı doğuyordu. Başlangıçta .NET Framework, her zaman tek bir birim olarak dağıtılmasının varsayımına göre tasarlandığından, [düzenleme](http://en.wikipedia.org/wiki/Decomposition_(computer_science)) bir sorun olmamıştı. Verticlar arasında kod paylaşımı sorununu çözmek için, itici kuvvet Framework 'ün yeniden nasıl yeniden düzenlenmesi üzerinde oldu. Sözleşmelerin fikri, iyi bir API yüzey alanı sağlamaktır. Sözleşmeler, bunlara göre derleyebileceğiniz derlemelerdir ve bunlar arasındaki bağımlılıklara dikkat etmeniz için uygun düzenleme ile tasarlanmıştır.
+Windows 8 ' in piyasaya sürülme zamanına göre, taşınabilir sınıf kitaplıkları (PCLs) kavramı doğuyordu. Başlangıçta .NET Framework, her zaman tek bir birim olarak dağıtılmasının varsayımına göre tasarlandığından, [düzenleme](https://wikipedia.org/wiki/Decomposition_(computer_science)) bir sorun olmamıştı. Verticlar arasında kod paylaşımı sorununu çözmek için, itici kuvvet Framework 'ün yeniden nasıl yeniden düzenlenmesi üzerinde oldu. Sözleşmelerin fikri, iyi bir API yüzey alanı sağlamaktır. Sözleşmeler, bunlara göre derleyebileceğiniz derlemelerdir ve bunlar arasındaki bağımlılıklara dikkat etmeniz için uygun düzenleme ile tasarlanmıştır.
 
 Bu, daha önce yaptığımız tek API düzeyinin aksine, derleme düzeyindeki ifade arasındaki API farklılıkları hakkında bilgi almak için yol gösterir. Bu boyut, taşınabilir sınıf kitaplıkları olarak da bilinen birden çok ifade hedefleyebilir bir sınıf kitaplığı deneyimini etkinleştirdi.
 

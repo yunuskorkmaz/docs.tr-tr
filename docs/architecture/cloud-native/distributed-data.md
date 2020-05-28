@@ -3,12 +3,12 @@ title: Dağıtılmış veriler
 description: Tek parçalı ve bulutta yerel uygulamalardaki veri depolama alanını kontrast.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614142"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144402"
 ---
 # <a name="distributed-data"></a>Dağıtılmış veriler
 
@@ -120,7 +120,7 @@ Ancak, yüksek hacimli bir veri senaryosu, okuma ve yazma işlemleri için ayrı
 
 **Şekil 5-7**. CQRS uygulama
 
-Önceki şekilde, ayrı komut ve sorgu modelleri uygulanır. Her veri yazma işlemi, yazma deposuna kaydedilir ve sonra okuma deposuna yayılır. Veri yayma işleminin [nihai tutarlılık](http://www.cloudcomputingpatterns.org/eventual_consistency/)ilkesi üzerinde nasıl çalıştığı hakkında daha fazla dikkat edin. Okuma modeli, sonunda yazma modeliyle eşitlenir, ancak işlemde bazı gecikme olabilir. Sonraki bölümde nihai tutarlılığı tartıştık.
+Önceki şekilde, ayrı komut ve sorgu modelleri uygulanır. Her veri yazma işlemi, yazma deposuna kaydedilir ve sonra okuma deposuna yayılır. Veri yayma işleminin [nihai tutarlılık](https://www.cloudcomputingpatterns.org/eventual_consistency/)ilkesi üzerinde nasıl çalıştığı hakkında daha fazla dikkat edin. Okuma modeli, sonunda yazma modeliyle eşitlenir, ancak işlemde bazı gecikme olabilir. Sonraki bölümde nihai tutarlılığı tartıştık.
 
 Bu ayrım, okuma ve yazma işlemlerini bağımsız olarak ölçeklendirmeye olanak sağlar. Okuma işlemleri sorgularda en iyi duruma getirilmiş şemayı kullanır, yazma işlemleri güncelleştirmeler için iyileştirilmiş bir şema kullanır. Okuma sorguları, yoğun verilere karşı, karmaşık iş mantığı ise yazma modeline uygulanabilirler. Ayrıca, yazma işlemlerinde, okumaların açığa çıkarmadan daha sıkı güvenlik sağlayabilirsiniz.
 

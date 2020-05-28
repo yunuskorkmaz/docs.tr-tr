@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963771"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143569"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen bir barındırma ortamında ve belirli bir makinede çok sayıda uygulamayı barındırma olanağı sunan, hem HTTP hem de HTTP olmayan protokolleri (net. TCP gibi) kullanmasına izin verir.  
@@ -36,9 +36,9 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (W
   
 |Senaryo|Site bağlamaları|Uygulama yolu|Temel uygulama URI 'Leri|  
 |--------------|-------------------|----------------------|---------------------------|  
-|Yalnızca HTTP|http: *: 80:\*|/appTwo|http://localhost/appTwo/|  
-|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> net. TCP: 808:\*|/appTwo|http://localhost/appTwo/<br />net. TCP://localhost/appTwo/|  
-|Yalnızca HTTP olmayan|net. pipe: *|/appThree|net. pipe:/\ Appthree/|  
+|Yalnızca HTTP|http: *: 80:\*|/appTwo|`http://localhost/appTwo/`|  
+|Hem HTTP hem de HTTP olmayan|http: *: 80:\*<br /><br /> net. TCP: 808:\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|Yalnızca HTTP olmayan|net. pipe: *|/appThree|`net.pipe://appThree/`|  
   
  Bir uygulama içindeki hizmetler ve kaynaklar da çözülebilir. Bir uygulama içinde uygulama kaynakları, temel uygulama yoluna göre karşılanır. Örneğin, contoso.com makine adındaki bir sitenin, hem HTTP hem de net. TCP protokolleri için site bağlamaları olduğunu varsayalım. Ayrıca, sitenin, GetOrders. svc ' de bir hizmet sunan,/faturalandırma konumunda bulunan bir uygulama içerdiğini varsayın. Daha sonra, GetOrders. svc hizmeti SecureEndpoint 'in göreli adresiyle bir uç nokta açıkalıyorsa, hizmet uç noktası aşağıdaki iki URI 'de gösterilebilir:  
   

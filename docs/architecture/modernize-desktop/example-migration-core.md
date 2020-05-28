@@ -2,12 +2,12 @@
 title: .NET Core 3.1’e geçiş örneği
 description: .NET Framework Hedefleme örnek uygulamaların .NET Core 3,1 ' ye nasıl geçirileceği gösteriliyor.
 ms.date: 05/12/2020
-ms.openlocfilehash: ef8a0c24ec81a21eb89411ed4c9a543d4d70d89f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8b1219cf4bd89ada5b71a60ef27eaabb94997c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423385"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144272"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>.NET Core 3.1’e geçiş örneği
 
@@ -43,7 +43,7 @@ Paket başvurularını geçirdikten sonra her bir başvuruyu uyumluluk için den
 
 ![Role. Wın_sor paketi için NuGet bağımlılıklarının ekran görüntüsü](./media/example-migration-core/nuget-dependencies.png)
 
-Paket uyumluluğunu denetlemek için, <http://fuget.org> sürümler ve Bağımlılıklar hakkında daha ayrıntılı bilgi sunan aracı kullanabilirsiniz.
+Paket uyumluluğunu denetlemek için, <https://fuget.org> sürümler ve Bağımlılıklar hakkında daha ayrıntılı bilgi sunan aracı kullanabilirsiniz.
 
 Proje, .NET Core 'u desteklemeyen eski paket sürümlerine başvuruyor, ancak bunu destekleyen daha yeni sürümleri bulabilirsiniz. Bu nedenle, paketleri daha yeni sürümlere güncelleştirmek genellikle iyi bir öneriydi. Ancak, paket sürümünün güncelleştirilmesi, kodunuzun güncelleştirilmesini zorlayan bazı önemli değişiklikler getirebileceğini göz önünde bulundurmanız gerekir.
 
@@ -133,7 +133,7 @@ Bu son adımda, uygulamanızın karmaşıklığına ve kullanmakta olduğunuz ba
 
 Hatalar için bir diğer neden, `BeginInvoke` `EndInvoke` .NET Core üzerinde desteklenmediğinden ve yöntemlerinin kullanılmasının bir nedenidir. .NET Core üzerinde mevcut olmayan bir uzaktan Iletişim bağımlılığı olduğundan, .NET Core üzerinde desteklenmez. Bu sorunu gidermek için `await` anahtar sözcüğünü (kullanılabilir olduğunda) veya yöntemini kullanmayı deneyin <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> .
 
-Kodunuzda .NET Core ile çalışma zamanında sorunlara neden olabilecek API 'Leri ve kod düzenlerini tanımlamanızı sağlamak için uyumluluk Çözümleyicileri ' ni kullanabilirsiniz. <http://github.com/dotnet/platform-compat>' A gidin ve projenizde .NET API Çözümleyicisi ' ni kullanın.
+Kodunuzda .NET Core ile çalışma zamanında sorunlara neden olabilecek API 'Leri ve kod düzenlerini tanımlamanızı sağlamak için uyumluluk Çözümleyicileri ' ni kullanabilirsiniz. <https://github.com/dotnet/platform-compat>' A gidin ve projenizde .NET API Çözümleyicisi ' ni kullanın.
 
 ## <a name="migrating-a-windows-forms-application"></a>Windows Forms uygulamasını geçirme
 

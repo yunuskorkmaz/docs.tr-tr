@@ -2,18 +2,18 @@
 title: UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40944129ce3b01d8422d5aba4cfbf913c56265ed
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185250"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144636"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP Taşıma Kullanarak Çok Noktaya Yayın Yapan Uygulamalar Oluşturma
-Çok noktaya yayın uygulamaları, bağlantı noktası oluşturmaya gerek kalmadan aynı anda çok sayıda alıcıya küçük iletiler gönderir. Bu tür uygulamaların vurgu güvenilirlik üzerinde hızdır. Başka bir deyişle, belirli bir iletinin gerçekten alındığından emin olmaktançok zamanında veri göndermek daha önemlidir. WCF artık <xref:System.ServiceModel.UdpBinding>multicasting uygulamaları kullanarak yazmayı destekler. Bu aktarım, bir hizmetin aynı anda birkaç istemciye küçük iletiler göndermesi gereken senaryolarda yararlıdır. Hisse senedi işaretçisi uygulaması böyle bir hizmete örnektir.  
+Çok noktaya yayın uygulamaları, bağlantı noktası bağlantıları oluşturmak gerekmeden çok sayıda alıcıya aynı anda küçük iletiler gönderir. Bu tür uygulamaların vurgulaması, güvenilirlik üzerinde hızlanır. Diğer bir deyişle, belirli bir iletinin gerçekten alındığından emin olmak için verilerin zamanında gönderilmesi daha önemlidir. WCF artık kullanarak çok noktaya yayın uygulamaları yazmayı desteklemektedir <xref:System.ServiceModel.UdpBinding> . Bu aktarım, bir hizmetin bir dizi istemciye aynı anda küçük iletiler gönderebilmesi gereken senaryolarda yararlıdır. Bir stok şeridi uygulaması, bu tür bir hizmete örnektir.  
   
-## <a name="implementing-a-multicast-application"></a>Çok Noktaya Yayın Uygulaması Uygulama  
- Çok noktaya yayın uygulaması uygulamak için bir hizmet sözleşmesi tanımlayın ve çok noktaya yayın iletilerine yanıt vermesi gereken her yazılım bileşeni için hizmet sözleşmesini uygulayın. Örneğin, bir hisse senedi işaretleyici uygulaması bir hizmet sözleşmesi tanımlayabilir:  
+## <a name="implementing-a-multicast-application"></a>Çok noktaya yayın uygulaması uygulama  
+ Bir çok noktaya yayın uygulaması uygulamak için, bir hizmet sözleşmesi tanımlayın ve çok noktaya yayın iletilerine yanıt vermesi gereken her yazılım bileşeni için hizmet sözleşmesini uygulayın. Örneğin, bir stok şeridi uygulaması bir hizmet sözleşmesini tanımlayabilir:  
   
 ```csharp
 // Shared contracts between the client and the service  
@@ -41,7 +41,7 @@ class StockInfo
 }
 ```  
   
- Çok noktaya yayın iletileri almak isteyen her uygulama, bu arabirimi ortaya çıkaran bir hizmeti barındırmalıdır.  Örneğin, çoklu noktaya yayın iletilerinin nasıl alındığını gösteren bir kod örneği aşağıda verilmiştir:  
+ Çok noktaya yayın iletileri almak isteyen her uygulama, bu arabirimi kullanıma sunan bir hizmeti barındırmalıdır.  Örneğin, çok noktaya yayın iletilerinin nasıl alınacağını gösteren bir kod örneği aşağıda verilmiştir:  
   
 ```csharp
 // Service Address
@@ -59,9 +59,9 @@ Console.WriteLine("Start receiving stock information");
 Console.ReadLine();
 ```  
   
- Uygulama, tüm hizmetlerin dinleyeceği UDP adresini belirtir. Yeni <xref:System.ServiceModel.ServiceHost> bir oluşturulur ve bir hizmet bitiş <xref:System.ServiceModel.UdpBinding>noktası . Daha <xref:System.ServiceModel.ServiceHost> sonra açılır ve gelen iletileri dinlemeye başlar.  
+ Uygulama, tüm hizmetlerin dinlediği UDP adresini belirtir. Yeni bir <xref:System.ServiceModel.ServiceHost> oluşturulur ve kullanılarak bir hizmet uç noktası gösterilir <xref:System.ServiceModel.UdpBinding> . <xref:System.ServiceModel.ServiceHost>Daha sonra açılır ve gelen iletileri dinlemeye başlayacaktır.  
   
- Bu tür bir senaryoda, çok noktaya yayın yapan istemcidir. Doğru UDP adresinden dinleyen her hizmet çok noktaya yayın iletileri alır. Aşağıda, çok noktaya yayın iletileri gönderen bir istemci örneği verilmiştir:  
+ Bu tür bir senaryoda, gerçekte çok noktaya yayın iletilerini gönderen istemcdir. Doğru UDP adresini dinleyen her hizmet çok noktaya yayın iletilerini alır. Aşağıda çok noktaya yayın iletileri gönderen bir istemciye örnek verilmiştir:  
   
 ```csharp
 // Multicast Address
@@ -88,13 +88,13 @@ while (true)
 }
 ```  
   
- Bu kod stok bilgileri oluşturur ve ardından doğru UDP adresini dinleyen hizmetleri çağırmak için çok noktaya yayın iletileri göndermek için hizmet sözleşmesi IStockTicker'ı kullanır.  
+ Bu kod, stok bilgilerini oluşturur ve ardından doğru UDP adresinde dinleme yapan Hizmetleri çağırmak üzere çok noktaya yayın iletileri göndermek için ıtockticker hizmet sözleşmesini kullanır.  
   
-### <a name="udp-and-reliable-messaging"></a>UDP ve Güvenilir Mesajlaşma  
- UDP bağlama, UDP protokolünün hafif yapısı nedeniyle güvenilir iletileri desteklemez. İletilerin uzak bir bitiş noktası tarafından alındığını onaylamanız gerekiyorsa, HTTP veya TCP gibi güvenilir iletileri destekleyen bir aktarım kullanın. Güvenilir mesajlaşma hakkında daha fazla bilgi için bkz.https://go.microsoft.com/fwlink/?LinkId=231830  
+### <a name="udp-and-reliable-messaging"></a>UDP ve güvenilir mesajlaşma  
+  UDP bağlaması, UDP protokolünün hafif doğası nedeniyle güvenilir mesajlaşma özelliğini desteklemez. İletilerin uzak bir uç nokta tarafından alındığını onaylamanız gerekiyorsa, HTTP veya TCP gibi güvenilir mesajlaşmayı destekleyen bir aktarım kullanın. Güvenilir Mesajlaşma hakkında daha fazla bilgi için bkz <https://go.microsoft.com/fwlink/?LinkId=231830> ..  
   
-### <a name="two-way-multicast-messaging"></a>İki Yönlü Çok Noktaya Yayın  
- Çok noktaya yayın iletileri genellikle tek yönlü olsa da, UdpBinding istek/yanıt iletisi alışverişini destekler. UDP aktarımını kullanarak gönderilen iletiler hem Gelen hem de To adresi içerir. Rotada kötü niyetle değiştirilebildiği için From adresi kullanılarak dikkatli olunmalıdır.  Adres aşağıdaki kod kullanılarak kontrol edilebilir:  
+### <a name="two-way-multicast-messaging"></a>İki yönlü çok noktaya yayın Iletisi  
+ Çok noktaya yayın iletileri genellikle tek yönlü olsa da, UdpBinding istek/yanıt iletisi değişimini destekler. UDP taşıması kullanılarak gönderilen iletiler hem kimden hem de kime adresini içerir. Kimden adresi kötü amaçlı olarak değiştirilecekse, kimden adresini kullanırken dikkatli olunmalıdır.  Adres aşağıdaki kod kullanılarak denetlenebilir:  
   
 ```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
@@ -110,9 +110,9 @@ else
 }
 ```  
   
- Bu kod, Adres'in çok dökümlü bir adres olduğunu gösteren 0xE0 içerdiğini görmek için From adresinin ilk baytını denetler.  
+ Bu kod, adresin çok noktaya yayın adresi olduğunu belirten 0xE0 içerip içermediğini görmek için kimden adresinin ilk baytını denetler.  
   
 ### <a name="security-considerations"></a>Güvenlikle İlgili Dikkat Edilmesi Gerekenler  
- Çok noktaya yayın iletilerini dinlerken, yönlendiriciye çok noktaya yayın adresini dinlediğinizi bildiren bir ICMP paketi gönderilir. İzinleri olan yerel alt ağdaki herkes bu tür paketleri dinleyebilir ve hangi çok noktaya yayın adresini ve bağlantı noktasını dinlediğinizi belirleyebilir.  
+ Çok noktaya yayın iletilerini dinlerken, yönlendiriciye, çok noktaya yayın adresini dinlediğini bildiren bir ıCMP paketi gönderilir. Yerel alt ağ üzerindeki izinleri olan herkes bu paket türlerini dinleyebilir ve hangi çok noktaya yayın adresini ve hangi bağlantı noktasını dinleyeceğini belirleyebilir.  
   
- Gönderenin IP adresini herhangi bir güvenlik amacıyla kullanmayın. Bu bilgiler sahte olabilir ve bir uygulamanın yanlış makineye yanıt göndermesine neden olabilir. Bu tehdidi azaltmanın bir yolu ileti düzeyi güvenliğini sağlamaktır. Ağ düzeyinde IPSec (Internet Protocol Security) ve/veya NAP (Ağ Erişim Koruması) da kullanılabilir.
+ Tüm güvenlik amaçları için gönderenin IP adresini kullanmayın. Bu bilgiler sahte olabilir ve bir uygulamanın yanlış makineye yanıt göndermesini sağlayabilir. Bu tehdidi hafifletmek için bir yol ileti düzeyi güvenliği etkinleştirmektir. Ağ düzeyinde IPSec (Internet Protokolü güvenliği) ve/veya NAP (ağ erişim koruması) de kullanılabilir.

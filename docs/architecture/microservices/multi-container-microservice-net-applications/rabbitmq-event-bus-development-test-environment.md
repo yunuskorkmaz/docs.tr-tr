@@ -1,27 +1,27 @@
 ---
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Geliştirme veya test ortamları için tümleştirme etkinlikleri için bir olay veri günü mesajlaşması uygulamak için RabbitMQ'yi kullanın.
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988303"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144298"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
-EShopOnContainers uygulamasının yaptığı gibi, bir konteynerde çalışan RabbitMQ'ye dayalı özel etkinlik otobüsünüzü oluşturursanız, bunun yalnızca geliştirme ve test ortamlarınız için kullanılması gerektiğini söyleyerek başlamalıyız. Üretime hazır servis veri tonunun bir parçası olarak oluşturmadığınız sürece, üretim ortamınız için kullanmamalısınız. Basit bir özel olay veri otobüsü, ticari servis verine sahip olduğu üretime hazır birçok kritik özelliği eksik olabilir.
+Bir kapsayıcıda çalışan kbbitmq tabanlı özel olay veri yolunu oluşturursanız, eShopOnContainers uygulamasının yaptığı, yalnızca geliştirme ve test ortamlarınız için kullanılması gerektiğini söyleyerek başlayacağız. Üretim için kullanıma yönelik bir Service Bus kapsamında oluşturulmadığınız sürece bunu üretim ortamınız için kullanmamalısınız. Basit bir özel olay veri yolu, ticari bir Service Bus 'ın sahip olduğu çok sayıda üretime hazırlı kritik özelliği eksik olabilir.
 
-EShopOnContainers olay otobüs özel uygulama biri temelde RabbitMQ API kullanarak bir kütüphane. (Azure Hizmet Veri Yolunda'na dayalı başka bir uygulama daha vardır.)
+EShopOnContainers 'daki olay veri yolu özel uygulamasından biri, temel olarak Kbbitmq API kullanan bir kitaplıktır. (Azure Service Bus göre başka bir uygulama vardır.)
 
-RabbitMQ ile etkinlik otobüsü uygulaması, mikro hizmetlerin olaylara abone olmasını, olayları yayınlamasını ve Şekil 6-21'de gösterildiği gibi etkinlikleri almasını sağlar.
+Kbbitmq ile olay veri yolu uygulamasının, Şekil 6-21 ' de gösterildiği gibi mikro hizmetlerin olaylara abone olma, olayları yayımlama ve olayları almasına izin verir.
 
-![İleti gönderen ve ileti alıcısı arasında RabbitMQ gösteren diyagram.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
+![İleti gönderici ve ileti alıcısı arasında Kbbitmq gösteren diyagram.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
-**Şekil 6-21.** Bir olay otobüs RabbitMQ uygulaması
+**Şekil 6-21.** Bir olay veri yolunun Kbıbitmq uygulama
 
-RabbitMQ, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı işlevi görür. Kodda, EventBusRabbitMQ sınıfı genel IEventBus arabirimini uygular. Bu, bu geliştirme/test sürümünden üretim sürümüne değiş tokuş yapabilmeniz için Bağımlılık Enjeksiyonu'na dayanır.
+Kbbitmq, dağıtımı işlemek için ileti yayımcısı ve aboneler arasında bir aracı olarak çalışır. Kodda, Eventbuskbbitmq sınıfı, genel ıeventbus arabirimini uygular. Bu, bu geliştirme/test sürümünden üretim sürümüne geçiş yapabilmeniz için bağımlılık ekleme tabanlıdır.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -31,11 +31,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-Bir örnek dev/test olay veri tobunun RabbitMQ uygulaması ortak koddur. RabbitMQ sunucusuna olan bağlantıyı işlemeli ve kuyruklara bir ileti olayı yayımlamak için kod sağlaması gerekiyor. Ayrıca, her olay türü için tümleştirme olay işleyicileri koleksiyonları bir sözlük uygulamak zorundadır; bu etkinlik türleri, Şekil 6-21'de gösterildiği gibi, her alıcı mikro hizmeti için farklı bir anlık kullanım ve farklı aboneliklere sahip olabilir.
+Örnek bir geliştirme/test olay veri yolunun Kbbitmq uygulamasının ortak kodlamasıdır. Bu, kbbitmq sunucusuyla bağlantıyı işleymelidir ve sıralara bir ileti olayı yayımlamaya yönelik kod sağlar. Ayrıca, her olay türü için tümleştirme olay işleyicisi koleksiyonlarının bir sözlüğünü uygulamak gerekir; Bu olay türlerinde, Şekil 6-21 ' de gösterildiği gibi, her bir alıcı mikro hizmeti için farklı bir örnek oluşturma ve farklı abonelikler bulunabilir.
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ ile basit bir yayın yöntemi uygulama
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Kbbitmq ile basit bir yayımlama yöntemi uygulama
 
-Aşağıdaki kod, tüm senaryoyu sergilemek için RabbitMQ için bir olay veri otobüsü uygulamasının ***basitleştirilmiş*** bir sürümüdür. Bağlantıyı bu şekilde halletmiyorsun. Tam uygulamayı görmek [için, dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek kodu görün.
+Aşağıdaki kod, tüm senaryoyu göstermek için, Kbbitmq için bir Event Bus uygulamasının ***Basitleştirilmiş*** bir sürümüdür. Bu şekilde bağlantıyı gerçekten işlemezsiniz. Tam uygulamayı görmek için, [DotNet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) deposundaki gerçek koda bakın.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -63,13 +63,13 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-eShopOnContainers uygulamasında Yayımlama yönteminin [gerçek kodu,](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) RabbitMQ kapsayıcısının hazır olmaması durumunda görevi belirli sayıda yeniden deneen [Polly](https://github.com/App-vNext/Polly) yeniden deneme ilkesi kullanılarak geliştirilir. Bu, docker-compose kapsayıcıları başlatırken oluşabilir; örneğin, RabbitMQ kapsayıcısı diğer kaplardan daha yavaş başlayabilir.
+EShopOnContainers uygulamasındaki Publish yönteminin [gerçek kodu](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) bir [Polly](https://github.com/App-vNext/Polly) yeniden deneme ilkesi kullanılarak geliştirilmiştir ve bu da, kbbitmq kapsayıcısının hazırlanmadığından, görevi belirli sayıda kez yeniden dener. Docker-Compose kapsayıcıları başlattığında bu durum oluşabilir; Örneğin, Korbbitmq kapsayıcısı diğer kapsayıcılardan daha yavaş başlayabilir.
 
-Daha önce de belirtildiği gibi, RabbitMQ birçok olası yapılandırmaları vardır, bu nedenle bu kod sadece dev / test ortamları için kullanılmalıdır.
+Daha önce belirtildiği gibi, kbbitmq ' de birçok olası yapılandırma vardır, bu nedenle bu kod yalnızca geliştirme ve test ortamları için kullanılmalıdır.
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>RabbitMQ API ile abonelik kodunun uygulanması
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Kbbitmq API 'siyle abonelik kodunu uygulama
 
-Yayımlama kodunda olduğu gibi, aşağıdaki kod RabbitMQ için olay veri otobüsü uygulamasının bir kısmının basitleştirilmesidir. Yine, genellikle bunu geliştirmek sürece değiştirmek gerekmez.
+Yayımlama kodunda olduğu gibi, aşağıdaki kod, kbbitmq için olay veri yolu uygulamasının bir kısmının basitleştirmesidir. Yine de, onu geliştirmediğiniz müddetçe genellikle değiştirmeniz gerekmez.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -104,24 +104,24 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-Her olay türü RabbitMQ olayları almak için ilgili bir kanal vardır. Daha sonra kanal ve olay türü başına gerektiği kadar olay işleyicileri olabilir.
+Her olay türünün, kbıbitmq 'dan olayları almak için ilgili bir kanalı vardır. Daha sonra, kanal başına çok sayıda olay işleyicisine ve gerektiğinde olay türüne sahip olabilirsiniz.
 
-Abone Ol yöntemi, geçerli microservice bir geri çağırma yöntemi gibi bir IIntegrationEventHandler nesnesi, artı ilgili IntegrationEvent nesnesi kabul eder. Kod daha sonra olay işleyicisi her tümleştirme olay türü istemci microservice başına olabilir olay işleyicileri listesine ekler. İstemci kodu etkinliğe zaten abone edilmemişse, kod olay türü için bir kanal oluşturur, böylece bu olay başka bir hizmetten yayımlandığında RabbitMQ'den itme stilinde olayları alabilir.
+Subscribe yöntemi, geçerli mikro hizmette geri çağırma yöntemi ve ilgili ıntegrationevent nesnesi gibi bir ııntegrationeventhandler nesnesini kabul eder. Kod daha sonra bu olay işleyicisini her bir tümleştirme olay türünün istemci mikro hizmeti başına sahip olduğu olay işleyicileri listesine ekler. İstemci kodu henüz olaya abone olunmamışsa, kod, olay türü için bir kanal oluşturur, böylece bu olay başka bir hizmetten yayımlandığında, bu olay bir anında iletme stilinde olayları alabilir.
 
-Yukarıda belirtildiği gibi, eShopOnContainers uygulanan olay otobüs sadece ve eğitim amacı vardır, sadece ana senaryoları işler beri, bu yüzden üretim için hazır değil.
+Yukarıda belirtildiği gibi, eShopOnContainers 'da uygulanan olay veri yolu yalnızca ve eğitim amacını içerir, bu nedenle üretim için hazırlanma.
 
-Üretim senaryoları için, RabbitMQ'ye özgü aşağıdaki ek kaynakları ve mikro hizmetler bölümü [arasındaki etkinlik tabanlı iletişimi uygulayın.](./integration-event-based-microservice-communications.md#additional-resources)
+Üretim senaryolarında, aşağıdaki ek kaynakları, Kbbitmq için özel ve [mikro hizmetler arasında olay tabanlı Iletişim uygulama](./integration-event-based-microservice-communications.md#additional-resources) bölümüne bakın.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-RabbitMQ desteği ile üretime hazır çözümler.
+Kbbitmq desteğiyle üretime hazırlamış çözümler.
 
-- **EasyNetQ** - RabbitMQ için Açık Kaynak .NET API istemcisi \
-  <http://easynetq.com/>
+- **Easynetq** -Kbıbitmq \ Için açık kaynak .NET API istemcisi
+  <https://easynetq.com/>
 
-- **Toplu Taşıma** \
+- **Masstransıya** \
   <https://masstransit-project.com/>
   
 > [!div class="step-by-step"]
-> [Önceki](integration-event-based-microservice-communications.md)
-> [Sonraki](subscribe-events.md)
+> [Önceki](integration-event-based-microservice-communications.md) 
+>  [Sonraki](subscribe-events.md)

@@ -2,15 +2,15 @@
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: e5b2b56da1989b9a7110a1ad3eee814560942c89
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972439"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144714"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
-Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarının WCF hizmetlerini çağırmasını sağlar. Çoğu WCF hizmeti, istemcinin kimlik doğrulama ve yetkilendirme için kimlik bilgilerini belirtmesini gerektirir. WCF istemcisinden bir WCF hizmetini çağırırken bu kimlik bilgilerini yönetilen kodda veya bir uygulama yapılandırma dosyasında belirtebilirsiniz. Bir WCF hizmetini bir com uygulamasından çağırırken, kimlik bilgilerini belirtmek için <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimini kullanabilirsiniz. Bu konu, <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi kullanarak kimlik bilgilerini belirtmek için çeşitli yollar gösterir.  
+Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarının WCF hizmetlerini çağırmasını sağlar. Çoğu WCF hizmeti, istemcinin kimlik doğrulama ve yetkilendirme için kimlik bilgilerini belirtmesini gerektirir. WCF istemcisinden bir WCF hizmetini çağırırken bu kimlik bilgilerini yönetilen kodda veya bir uygulama yapılandırma dosyasında belirtebilirsiniz. Bir WCF hizmetini bir COM uygulamasından çağırırken, <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirimini kullanabilirsiniz. Bu konu, arabirimi kullanarak kimlik bilgilerini belirtmek için çeşitli yollar gösterir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> .  
   
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials>, IDispatch tabanlı bir arabirimdir ve Visual Studio ortamında IntelliSense işlevselliği almaz.  
@@ -23,11 +23,11 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 2. Ileti güvenliği projesini açın.  
   
-3. Arabirim tanımına ekleyin `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`. `ICalculator`  
+3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` `ICalculator` Arabirim tanımına ekleyin.  
   
-4. Hizmetin `bindingNamespace="http://Microsoft.ServiceModel.Samples"` App. config dosyasındaki Endpoint etiketine ekleyin.  
+4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`Hizmetin App. config dosyasındaki Endpoint etiketine ekleyin.  
   
-5. Ileti güvenlik örneğini oluşturun ve Service. exe ' yi çalıştırın. Internet Explorer 'ı kullanın ve hizmetin URI 'sine gidin (http://localhost:8000/ServiceModelSamples/Service) hizmetin çalıştığından emin olmak için).  
+5. Ileti güvenlik örneğini oluşturun ve Service. exe ' yi çalıştırın. Hizmetin çalıştığından emin olmak için Internet Explorer 'ı kullanın ve hizmetin URI 'sine ( `http://localhost:8000/ServiceModelSamples/Service` ) gidin.  
   
 6. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 7. Visual Basic uygulamayı çalıştırın ve sonuçları doğrulayın.  
   
-     Visual Basic uygulama, Add (3, 4) çağırmanın sonucunu içeren bir ileti kutusu görüntüler. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29>Ayrıca, istemci sertifikasını ayarlamak <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> için yerinde de kullanılabilir: <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>  
+     Visual Basic uygulama, Add (3, 4) çağırmanın sonucunu içeren bir ileti kutusu görüntüler. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29><xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>Ayrıca, <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> istemci sertifikasını ayarlamak için yerinde de kullanılabilir:  
   
     ```vb  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 ### <a name="to-specify-user-name-and-password"></a>Kullanıcı adı ve parola belirtmek için  
   
-1. Kullanmak için Service App. config dosyasını değiştirin `wsHttpBinding`. Bu, Kullanıcı adı ve parola doğrulaması için gereklidir:  
+1. Kullanmak için Service App. config dosyasını değiştirin `wsHttpBinding` . Bu, Kullanıcı adı ve parola doğrulaması için gereklidir:  
 
-2. Şunu Kullanıcı adı olarak ayarla: `clientCredentialType`  
+2. Şunu `clientCredentialType` Kullanıcı adı olarak ayarla:  
 
 3. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
@@ -87,11 +87,11 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
 4. Visual Basic uygulamayı çalıştırın ve sonuçları doğrulayın. Visual Basic uygulama, Add (3, 4) çağırmanın sonucunu içeren bir ileti kutusu görüntüler.  
   
     > [!NOTE]
-    > Bu örnekteki hizmet takma adı 'nda belirtilen bağlama WSHttpBinding_ICalculator olarak değiştirilmiştir. Ayrıca, çağrısına, için <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>geçerli bir Kullanıcı adı ve parola belirtmeniz gerektiğini unutmayın.  
+    > Bu örnekteki hizmet takma adı 'nda belirtilen bağlama WSHttpBinding_ICalculator olarak değiştirildi. Ayrıca, çağrısına, için geçerli bir Kullanıcı adı ve parola belirtmeniz gerektiğini unutmayın <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> .  
   
 ### <a name="to-specify-windows-credentials"></a>Windows kimlik bilgilerini belirtmek için  
   
-1. Service `clientCredentialType` App. config dosyasında Windows olarak ayarlayın:  
+1. `clientCredentialType`Service App. config dosyasında Windows olarak ayarlayın:  
 
 2. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
@@ -117,7 +117,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 1. Sorun belirteçleri yalnızca Federe güvenlik kullanan uygulamalar için kullanılır. Federasyon güvenliği hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) ve [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-     Aşağıdaki Visual Basic kod örneği, <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> yönteminin nasıl çağrılacağını göstermektedir:  
+     Aşağıdaki Visual Basic kod örneği, yönteminin nasıl çağrılacağını göstermektedir <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> :  
   
     ```vb
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -129,12 +129,12 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Bu yöntemin parametreleri hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     Bu yöntemin parametreleri hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> ..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Federe Istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

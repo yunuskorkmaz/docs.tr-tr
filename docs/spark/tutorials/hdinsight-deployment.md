@@ -4,12 +4,12 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895692"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144766"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
@@ -30,7 +30,7 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 Başlamadan önce, aşağıdaki görevleri yapın:
 
 * Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/)oluşturun.
-* [Azure Portal](https://portal.azure.com/) oturum açın.
+* [Azure portalında](https://portal.azure.com/) oturum açın.
 * [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)veya [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) bilgisayarınıza Azure Depolama Gezgini ' yi yükler.
 * [Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
@@ -60,7 +60,7 @@ Başlamadan önce, aşağıdaki görevleri yapın:
     |Özellik  |Açıklama  |
     |---------|---------|
     |Abonelik  | Açılan listeden, etkin Azure aboneliklerinizden birini seçin. |
-    |Kaynak grubu | Yeni bir kaynak grubu oluşturmayı veya mevcut bir kaynak grubunu kullanmayı seçin. Kaynak grubu, bir Azure çözümü için ilgili kaynakları bir arada tutan kapsayıcıdır. |
+    |Kaynak grubu | Yeni bir kaynak grubu oluşturmayı veya mevcut bir kaynak grubunu kullanmayı seçin. Kaynak grubu, bir Azure çözümüne ilişkin kaynakları tutan bir kapsayıcıdır. |
     |Küme adı | HDInsight Spark kümenize bir ad verin.|
     |Konum   | Kaynak grubu için bir konum seçin. Şablon hem kümeyi oluşturmak için hem de varsayılan küme depolaması için bu konumu kullanır. |
     |Küme türü| Küme türü olarak **Spark** ' ı seçin.|
@@ -152,7 +152,7 @@ Kümeniz çalışır olduktan sonra dosyalarınızı Azure 'a yükledikten sonra
    |---------|---------|
    | Betik türü |Özel|
    | Name | Çalışanı yükler|
-   | Bash betiği URI 'SI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Bu URI 'yi onaylamak için Azure Depolama Gezgini 'de install-worker.sh öğesine sağ tıklayın ve Özellikler ' i seçin. |
+   | Bash betiği URI 'SI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Bu URI 'yi onaylamak için Azure Depolama Gezgini 'de install-worker.sh öğesine sağ tıklayın ve Özellikler ' i seçin. |
    | Düğüm türleri| Indan|
    | Parametreler | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 

@@ -2,12 +2,12 @@
 title: Cloud Native uygulamalar için IdentityServer
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614038"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144376"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Bulutta yerel uygulamalar için IdentityServer
 
@@ -29,7 +29,7 @@ Genellikle, uygulamaların aşağıdaki senaryolardan bazılarını veya tümün
 
 Bu senaryoların her birinde, sunulan işlevlerin yetkisiz kullanıma karşı korunması gerekir. Bu, genellikle bir kaynak için istek yapan kullanıcının veya sorumlunun kimlik doğrulamasını gerektirir. Bu kimlik doğrulaması SAML2p, WS-beslenir veya OpenID Connect gibi birkaç ortak protokolden birini kullanabilir. API 'lerle iletişim kurmak genellikle OAuth2 protokolünü ve güvenlik belirteçleri desteğini kullanır. Bu kritik çapraz güvenlik sorunlarının ve uygulama ayrıntılarının uygulamalardan ayrılması, tutarlılığı sağlar ve güvenlik ve bakım özelliklerini geliştirir. Bu kaygıları IdentityServer gibi özel bir ürünle dış olarak eklemek, her uygulamanın bu sorunların kendisini çözmesine yardımcı olur.
 
-IdentityServer, bir ASP.NET Core uygulaması içinde çalışan ara yazılım sağlar ve OpenID Connect ve OAuth2 için destek ekler (bkz. [desteklenen özellikler](http://docs.identityserver.io/en/latest/intro/specs.html)). Kuruluşlar, tüm belirteç tabanlı güvenlik protokollerinde STS görevi gören IdentityServer ara yazılımını kullanarak kendi ASP.NET Core uygulamalarını oluşturur. IdentityServer ara yazılımı, aşağıdakiler dahil olmak üzere standart işlevleri desteklemek için uç noktalar sunar:
+IdentityServer, bir ASP.NET Core uygulaması içinde çalışan ara yazılım sağlar ve OpenID Connect ve OAuth2 için destek ekler (bkz. [desteklenen özellikler](https://docs.identityserver.io/en/latest/intro/specs.html)). Kuruluşlar, tüm belirteç tabanlı güvenlik protokollerinde STS görevi gören IdentityServer ara yazılımını kullanarak kendi ASP.NET Core uygulamalarını oluşturur. IdentityServer ara yazılımı, aşağıdakiler dahil olmak üzere standart işlevleri desteklemek için uç noktalar sunar:
 
 - Yetkilendirme (son kullanıcının kimliğini doğrulama)
 - Belirteç (bir belirteci programlama yoluyla isteme)
@@ -95,13 +95,13 @@ IdentityServer, çeşitli protokolleri ve konfigürasyonları test etmek için k
 
 ## <a name="javascript-clients"></a>JavaScript istemcileri
 
-Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer [JavaScript client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` , oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir JavaScript istemcisi () sağlar.
+Birçok bulutta yerel uygulama, Ön uçtaki sunucu tarafı API 'Leri ve zengin istemci tek sayfa uygulamaları (maça 'lar) ile faydalanır. IdentityServer [JavaScript client](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) `oidc-client.js` , oturum açma, oturumu kapatma ve Web API 'lerinin belirteç tabanlı kimlik doğrulaması için IdentityServer 'ı kullanabilmesi amacıyla, NPM aracılığıyla bir JavaScript istemcisi () sağlar.
 
 ## <a name="references"></a>Başvurular
 
-- [IdentityServer belgeleri](http://docs.identityserver.io/en/latest/)
+- [IdentityServer belgeleri](https://docs.identityserver.io/en/latest/)
 - [Uygulama türleri](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OıDC istemcisi](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [JavaScript OıDC istemcisi](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Önceki](azure-active-directory.md) 

@@ -1,120 +1,120 @@
 ---
 title: Mikro hizmet etki alan modeli tasarlama
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | DDD yönelimli etki alanı modeli tasarlarken temel kavramları anlayın.
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-yönelimli bir etki alanı modeli tasarlarken temel kavramları anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988420"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144597"
 ---
-# <a name="design-a-microservice-domain-model"></a>Microservice etki alanı modeli tasarla
+# <a name="design-a-microservice-domain-model"></a>Mikro hizmet etki alanı modeli tasarlama
 
-*Her iş microservice veya Sınırlı Bağlam için bir zengin etki alanı modeli tanımlayın.*
+*Her bir iş mikro hizmeti veya sınırlanmış bağlam için bir zengin etki alanı modeli tanımlayın.*
 
-Amacınız, her iş microservice veya Bounded Context (BC) için tek bir uyumlu etki alanı modeli oluşturmaktır. Ancak, bir BC veya iş microservice bazen tek bir etki alanı modeli paylaşan birkaç fiziksel hizmetlerden oluşabileceğini unutmayın. Etki alanı modeli, temsil ettiği tek Sınırlı Bağlam'ın veya iş mikro hizmetinin kurallarını, davranışını, iş dilini ve kısıtlamalarını yakalamalıdır.
+Amacınız, her bir iş mikro hizmeti veya sınırlı bağlam (BC) için tek bir ortak etki alanı modeli oluşturmaktır. Ancak, bir BC veya iş mikro hizmetinin bazen tek bir etki alanı modelini paylaşan birkaç fiziksel hizmetten oluşmayabileceğini aklınızda bulundurun. Etki alanı modeli, temsil edilen tek sınırlanmış bağlamın veya iş mikro hizmetinin kurallarını, davranışını, iş dilini ve kısıtlamalarını yakalamalıdır.
 
-## <a name="the-domain-entity-pattern"></a>Etki Alanı Varlık deseni
+## <a name="the-domain-entity-pattern"></a>Etki alanı varlık deseninin
 
-Varlıklar etki alanı nesnelerini temsil eder ve öncelikle kimlikleri, süreklilikleri ve zaman içinde kalıcılıkları ile tanımlanırlar ve yalnızca onları oluşturan özniteliklerle değil. Eric Evans'ın dediği gibi, "öncelikle kimliğiyle tanımlanan bir nesneye Varlık denir." Varlıklar etki alanı modelinde çok önemlidir, çünkü bir modelin temelini onlardır. Bu nedenle, bunları dikkatle tanımlamalı ve tasarlamanız gerekir.
+Varlıklar, etki alanı nesnelerini temsil eder ve öncelikle kimlik, sürekliliği ve zaman içinde kalıcı olarak tanımlanır ve yalnızca bunları oluşturan özniteliklere göre değil. Eric Evans olarak, "kimliği tarafından birincil olarak tanımlanan bir nesne bir varlık olarak adlandırılır." Varlıklar, bir modelin temeli olduklarından, etki alanı modelinde çok önemlidir. Bu nedenle, bunları dikkatle belirleyip tasarlamanız gerekir.
 
-*Bir varlığın kimliği birden çok mikro hizmeti veya Sınırlı Bağlamları geçebilir.*
+*Bir varlığın kimliği birden fazla mikro hizmet veya sınırlı bağlamlara çapraz olabilir.*
 
-Aynı kimlik (yani aynı `Id` değer, belki aynı etki alanı varlığı olmasa da) birden çok Bağlı Bağlamveya mikro hizmetler arasında modellenebilir. Ancak, bu aynı varlık, aynı öznitelikleri ve mantığı ile birden çok Bağlı Bağlamlarda uygulanacağı anlamına gelmez. Bunun yerine, her Bağlı Bağlam'daki varlıklar özniteliklerini ve davranışlarını bu Bağlı Bağlam'ın etki alanında gerekli olanlarla sınırlandırın.
+Aynı kimlik (diğer bir deyişle, aynı `Id` etki alanı varlığı olmamakla birlikte aynı değer) birden çok sınırlanmış bağlam veya mikro hizmet arasında modellenebilir. Ancak, aynı özniteliğe ve mantığa sahip aynı varlığın birden çok sınırlanmış bağlamda uygulandığını göstermez. Bunun yerine, her sınırlı bağlamdaki varlıklar, özniteliklerini ve davranışlarını Bu sınırlanmış bağlamın etki alanında gerekli olanlarla sınırlar.
 
-Örneğin, alıcı varlık, kimlik de dahil olmak üzere profil veya kimlik mikrohizmetinde kullanıcı varlığında tanımlanan bir kişinin özniteliklerinin çoğuna sahip olabilir. Ancak, yalnızca belirli alıcı verileri sipariş işlemiyle ilgili olduğundan, sipariş mikrohizmetindeki alıcı varlığı daha az özniteliklere sahip olabilir. Her microservice veya Bounded Context bağlamı etki alanı modelini etkiler.
+Örneğin, alıcı varlığı, kimlik dahil olmak üzere profil veya kimlik mikro hizmetindeki Kullanıcı varlığında tanımlanmış bir kişi özniteliklerinin çoğuna sahip olabilir. Ancak, yalnızca belirli alıcı verileri sipariş sürecleriyle ilişkili olduğundan sıralama mikro hizmetindeki alıcı varlığı daha az özniteliğe sahip olabilir. Her mikro hizmet veya sınırlı bağlamın bağlamı, etki alanı modelini etkiler.
 
-*Etki alanı varlıkları, veri özniteliklerini uygulamaya ek olarak davranışı uygulamalıdır.*
+*Etki alanı varlıklarının, veri özniteliklerini uygulamaya ek olarak davranış uygulaması gerekir.*
 
-DDD'deki bir etki alanı varlığı, varlık verileriyle (bellekte erişilen nesne) etki alanı mantığını veya davranışını uygulamalıdır. Örneğin, bir sipariş varlık sınıfının bir parçası olarak, sipariş öğesi, veri doğrulaması ve toplam hesaplama ekleme gibi görevler için yöntem olarak uygulanan iş mantığı ve işlemleri olmalıdır. Varlığın yöntemleri, bu kuralların uygulama katmanına yayılması yerine varlığın değişmezleri ve kurallarıyla ilgilenir.
+DDD alanındaki bir etki alanı varlığı, varlık verileriyle ilgili etki alanı mantığını veya davranışını uygulamalıdır (bellekte erişilen nesne). Örneğin, bir sipariş varlığı sınıfının bir parçası olarak, bir sipariş öğesi, veri doğrulama ve toplam hesaplama gibi görevler için yöntemler olarak uygulanan iş mantığı ve işlemler olmalıdır. Varlığın yöntemleri, bu kuralların uygulama katmanında yayılmasını yerine varlığın ıntürevlerini ve kurallarını ele alır.
 
-Şekil 7-8, yalnızca veri özniteliklerini değil, ilgili etki alanı mantığına sahip işlemleri veya yöntemleri uygulayan bir etki alanı varlığını gösterir.
+Şekil 7-8, yalnızca veri öznitelikleri değil, işlemler veya ilgili etki alanı mantığına sahip Yöntemler uygulayan bir etki alanı varlığını gösterir.
 
-![Etki Alanı Varlığı deseni gösteren diyagram.](./media/microservice-domain-model/domain-entity-pattern.png)
+![Bir etki alanı varlığının deseninin gösterildiği diyagram.](./media/microservice-domain-model/domain-entity-pattern.png)
 
-**Şekil 7-8**. Veri artı davranışı uygulayan bir etki alanı varlık tasarımı örneği
+**Şekil 7-8**. Veri ve davranış uygulayan bir etki alanı varlığı tasarımı örneği
 
-Etki alanı modeli varlık yöntemleri ile davranışları uygular, yani bir "anemik" model değil. Tabii ki, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklar olabilir. Mantığın çoğu toplam kökünde tanımlandığı için, alt varlığın özel bir mantığı yoksa, bu durum bir toplam içindeki alt varlıklarda gerçekleşebilir. Etki alanı varlıkları yerine hizmet sınıflarında uygulanan çok fazla mantığa sahip karmaşık bir mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşebilirsiniz.
+Bir etki alanı modeli varlığı, davranışları yöntemler aracılığıyla uygular, yani bir "anemik" modeli değildir. Kuşkusuz, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklara sahip olabilirsiniz. Bu, bir toplama içindeki alt varlıklarda, mantığın büyük çoğunluğu toplam kökte tanımlanmış olduğu için özel bir mantık yoksa meydana gelebilir. Etki alanı varlıkları yerine hizmet sınıflarında çok fazla mantığı uygulanmış karmaşık bir mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşeceksiniz.
 
-### <a name="rich-domain-model-versus-anemic-domain-model"></a>Anemik etki alanı modeline karşı zengin etki alanı modeli
+### <a name="rich-domain-model-versus-anemic-domain-model"></a>Zengin etki alanı modeline karşı, anemik etki alanı modeli
 
-Onun sonrası [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomainModel.html)olarak, Martin Fowler bu şekilde bir anemik etki alanı modeli açıklar:
+Post [Anemicdomainmodel](https://martinfowler.com/bliki/AnemicDomainModel.html)içinde, Marwler bu şekilde bir anemik etki alanı modeli tanımlar:
 
-Bir Anemik Etki Alanı Modeli temel belirtisi ilk allık gerçek bir şey gibi görünüyor olmasıdır. Birçok nesne, etki alanı içinde isimler sonra adlandırılmış ve bu nesnelerin zengin ilişkiler ve gerçek etki alanı modelleri sahip yapısı ile bağlı. Bu davranışa baktığınızda, ve bu nesnelerde neredeyse hiç davranış olmadığını fark ettiğinizde, onları buli ve ayarlayıcı torbalarından biraz daha fazlası haline getirirsiniz.
+Anemik etki alanı modelinin temel belirtisi, ilk lavanta 'de gerçek bir şey gibi görünüyor. Etki alanı alanındaki isimler sonrasında birçok adlandırılmış nesne vardır ve bu nesneler, doğru etki alanı modellerinin sahip olduğu zengin ilişkilerle ve yapıyla bağlanır. Bu, davranışa baktığınızda ve bu nesneler üzerinde herhangi bir davranışın sağlam olduğunu fark etmekle birlikte, daha fazla sayıda
 
-Tabii ki, bir anemik etki alanı modeli kullandığınızda, bu veri modelleri tüm etki alanı veya iş mantığı yakalamak hizmet nesneleri kümesi (geleneksel olarak adlandırılan *iş katmanı)* kullanılacaktır. İş katmanı veri modelinin üstüne oturur ve veri modelini veri gibi kullanır.
+Tabii ki, bir anemik etki alanı modeli kullandığınızda, bu veri modelleri, tüm etki alanı veya iş mantığını yakalayan bir hizmet nesneleri kümesinden (geleneksel olarak *iş katmanı*olarak adlandırılır) kullanılacaktır. İş katmanı, veri modeli üzerinde bulunur ve veri modelini yalnızca veri olarak kullanır.
 
-Anemik etki alanı modeli sadece bir prosedür tarzı tasarımdır. Anemik varlık nesneleri, davranış (yöntem) eksikliği nden dolayı gerçek nesneler değildir. Bunlar yalnızca veri özelliklerine sahiptir ve bu nedenle nesne yönelimli tasarım değildir. Tüm davranışları hizmet nesnelerine (iş katmanına) koyarak aslında [spagetti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) veya [işlem komut dosyalarıyla](https://martinfowler.com/eaaCatalog/transactionScript.html)sonuçlanır ve bu nedenle etki alanı modelinin sağladığı avantajları kaybedersiniz.
+Anemik etki alanı modeli yalnızca bir yordamsal stil tasarımdır. Anemik varlık nesneleri, davranış yetersizliğinden (metotlar) gerçek nesneler değildir. Yalnızca veri özelliklerini tutar ve bu nedenle nesne odaklı tasarım değildir. Tüm davranışı, aslında [spaghfeti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) veya [işlem betikleri](https://martinfowler.com/eaaCatalog/transactionScript.html)ile sona erdirmek için, bir etki alanı modelinin sağladığı avantajları kaybedersiniz.
 
-Ne olursa olsun, microservice veya Bounded Context çok basit (CRUD hizmeti), sadece veri özellikleri ile varlık nesneleri şeklinde anemik etki alanı modeli yeterince iyi olabilir ve daha karmaşık DDD desenleri uygulamaya değer olmayabilir. Bu durumda, kasıtlı olarak CRUD amaçları için yalnızca veri içeren bir varlık oluşturduğunuziçin, bu yalnızca bir kalıcılık modeli olacaktır.
+Mikro hizmetiniz veya sınırlı Içeriğiniz çok basittir (bir CRUD hizmeti), yalnızca veri özelliklerine sahip varlık nesneleri biçimindeki anemik etki alanı modeli yeterince iyi olabilir ve bu da daha karmaşık DDD desenlerinin uygulanması için değer olmayabilir. Bu durumda, özellikle CRUD amacıyla yalnızca verileri olan bir varlık oluşturmuş olduğunuzdan, tek bir Kalıcılık modeli olacaktır.
 
-Bu nedenle mikrohizmet mimarileri, her Sınırlı İçerime bağlı olarak çok mimari bir yaklaşım için mükemmeldir. Örneğin, eShopOnContainers, sipariş microservice DDD desenleri uygular, ancak basit bir CRUD hizmeti olan katalog microservice, değil.
+Mikro hizmet mimarilerinin her sınırlanmış Içeriğe bağlı olarak çok mimarili bir yaklaşım için mükemmel olmasının nedeni budur. Örneğin, eShopOnContainers 'da, sıralama mikro hizmeti DDD desenlerini uygular, ancak basit bir CRUD hizmeti olan Katalog mikro hizmeti desteklemez.
 
-Bazı insanlar anemik etki alanı modeli bir anti-desen olduğunu söylüyorlar. Gerçekten ne uyguladığınıza bağlıdır. Oluşturduğunuz microservice yeterince basit ise (örneğin, bir CRUD hizmeti), anemik etki alanı modelini takip bir anti-desen değildir. Ancak, sürekli değişen iş kuralları bir yeri olan bir microservice etki alanı karmaşıklığı mücadele etmek gerekiyorsa, anemik etki alanı modeli bu microservice veya Bounded Context için bir anti-desen olabilir. Bu durumda, veri artı davranış içeren varlıklar ile zengin bir model olarak tasarlanması yanı sıra ek DDD desenleri (agregalar, değer nesneleri, vb) uygulanması gibi bir mikrohizmetin uzun vadeli başarısı için büyük faydalar olabilir.
+Bazı kişiler, anemik etki alanı modelinin bir anti-model olduğunu söylüyor. Bu, sizin uygulamadığınıza bağlıdır. Oluşturmakta olduğunuz mikro hizmet yeterince basittir (örneğin, bir CRUD hizmeti), anemik etki alanı modelini izleyerek bir anti-model değildir. Ancak, çok sayıda sürekli değişen iş kuralına sahip bir mikro hizmet etki alanının karmaşıklığının üstesinden gelmeniz gerekiyorsa, anemik etki alanı modeli söz konusu mikro hizmet veya sınırlanmış bağlam için bir anti-model olabilir. Bu durumda, veri ve davranış içeren varlıklar içeren zengin bir model olarak tasarlamak ve ek DDD desenleri (toplamalar, değer nesneleri vb.) uygulamak, bu tür bir mikro hizmetin uzun süreli başarısı için büyük avantajlardan yararlanmaktadır.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **DevIQ mı? Etki Alanı Varlığı** \
+- **Sapq. Etki alanı varlığı** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler' ı. Etki Alanı Modeli** \
+- **Marwler. Etki alanı modeli** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler' ı. Anemik Etki Alanı Modeli** \
+- **Marwler. Anemik etki alanı modeli** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
-### <a name="the-value-object-pattern"></a>Değer Nesnesi deseni
+### <a name="the-value-object-pattern"></a>Değer nesne deseninin
 
-Eric Evans'ın belirttiği gibi, "Birçok nesne kavramsal bir kimliğe sahip değildir. Bu nesneler bir şeyin belirli özelliklerini tanımlar."
+Eric Evans, "birçok nesnenin kavramsal kimliği yoktur. Bu nesneler bir şeyi belirli özelliklerini anlatmaktadır. "
 
-Bir varlık bir kimlik gerektirir, ancak değer nesnesi deseni gibi bir sistemde olmayan birçok nesne vardır. Değer nesnesi, etki alanı yönünü açıklayan kavramsal kimliği olmayan bir nesnedir. Bunlar, yalnızca sizi geçici olarak ilgilendiren tasarım öğelerini temsil etmek için anlık olarak yaptığınız nesnelerdir. *Ne* olduklarını önemsiyorsun, *kim* olduklarını değil. Örnekler sayılar ve dizeleri içerir, ancak öznitelik grupları gibi üst düzey kavramlar da olabilir.
+Bir varlık bir kimlik gerektirir, ancak bir sistemde, değer nesne düzeniyle benzer birçok nesne vardır. Değer nesnesi, bir etki alanı alanını açıklayan kavramsal kimlik olmayan bir nesnedir. Bunlar, yalnızca geçici olarak sizi ilgilendiren tasarım öğelerini göstermek için örneğini oluşturduğunuz nesnelerdir. Ne olduklarını, *kim* olduğunu değil, bunların *ne* olduğunu size özen gösterin. Sayılar ve dizeler verilebilir, ancak öznitelik grupları gibi daha üst düzey kavramlar da olabilir.
 
-Bir mikro hizmetteki bir varlık başka bir microservice'teki bir varlık olmayabilir, çünkü ikinci durumda, Bağlı Bağlam farklı bir anlama sahip olabilir. Örneğin, bir e-ticaret uygulamasındaki bir adresin kimliği hiç olmayabilir, çünkü yalnızca bir kişi veya şirket için müşterinin profilinin öznitelikleri grubunu temsil edebilir. Bu durumda, adres bir değer nesnesi olarak sınıflandırılmalıdır. Ancak, bir elektrik elektrik şirketi için bir uygulamada, müşteri adresi iş etki alanı için önemli olabilir. Bu nedenle, faturalandırma sisteminin doğrudan adrese bağlanabilmesi için adresin bir kimliği olmalıdır. Bu durumda, bir adres etki alanı varlığı olarak sınıflandırılmalıdır.
+Mikro hizmetteki bir varlık başka bir mikro hizmette varlık olmayabilir, çünkü ikinci durumda, sınırlanmış bağlamın farklı bir anlamı olabilir. Örneğin, bir e-ticaret uygulamasındaki bir adresin hiç bir kimliği olmayabilir, çünkü yalnızca bir kişi veya şirket için müşterinin profilinin bir öznitelik grubunu temsil edebilir. Bu durumda, adres bir değer nesnesi olarak sınıflandırılmalıdır. Ancak, elektrik güç yardımcı programı şirketi için bir uygulamada, müşteri adresi iş etki alanı için önemli olabilir. Bu nedenle, fatura sisteminin doğrudan adresle bağlantılı olması için adreste bir kimlik olması gerekir. Bu durumda, bir adres bir etki alanı varlığı olarak sınıflandırılmalıdır.
 
-Ad ve soyad taşıyan bir kişi, ad ve soyad başka bir değer kümesiyle çakışsa bile, bu ad ve soyadı farklı bir kişi için de atıfta bulunuyorsa, bir kişinin kimliği olduğundan genellikle bir varlıktır.
+Adı ve soyadı olan bir kişi genellikle bir varlıktır, çünkü ad ve soyadı başka bir değer kümesiyle aynı olsa da, bu adlar farklı bir kişiye başvuruyor olabilir.
 
-Değer nesnelerinin varlık çerçevesi (EF) gibi ilişkisel veritabanlarında ve ORM'larda yönetilmesi zorken, belge yönelimli veritabanlarında uygulanması ve kullanılması daha kolaydır.
+Değer nesneleri, ilişkisel veritabanlarında ve ORMs Entity Framework (EF) gibi daha kolay bir şekilde yönetilmesi zor olduğundan, belge odaklı veritabanlarında daha kolay uygulanması ve kullanılması daha kolaydır.
 
-EF Core 2.0 ve sonraki sürümler, daha sonra ayrıntılı olarak göreceğimiz gibi değer nesnelerinin işlemesini kolaylaştıran [Sahip olunan Varlıklar](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) özelliğini içerir.
+EF Core 2,0 ve sonraki sürümler, daha sonra ayrıntılı olarak göreceğiniz gibi, değer nesnelerinin daha kolay işlemesini sağlayan [varlıklar](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) özelliğini içerir.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Martin Fowler' ı. Değer Nesnesi deseni** \
+- **Marwler. Değer nesnesi kalıbı** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Değer Nesnesi** \
+- **Değer nesnesi** \
   <https://deviq.com/value-object/>
 
-- **Test Odaklı Geliştirmede Değer Nesneleri** \
+- **Test odaklı geliştirmede değer nesneleri** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans' ı. Etki Alanı Odaklı Tasarım: Yazılımın Kalbinde Karmaşıklıkla Mücadele.** (Kitap; değer nesnelerinin bir tartışma içerir) \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-### <a name="the-aggregate-pattern"></a>Agrega deseni
+### <a name="the-aggregate-pattern"></a>Toplam model
 
-Etki alanı modeli, sipariş yerine getirme veya envanter gibi önemli bir işlevsellik alanını denetlenebilen farklı veri varlıkları ve işlem kümeleri içerir. Daha ince taneli DDD birimi, bir kümeyi veya karma birim olarak kabul edilebilen varlık ve davranış grubunu açıklayan toplamdır.
+Bir etki alanı modeli, sipariş tamamlama veya stok gibi önemli bir işlev alanını denetleyebilmek için farklı veri varlıklarının ve işlemlerin kümelerini içerir. Daha hassas bir birim birimi, bir küme veya bir varlık grubunu ve bir arada bulunan bir birim olarak kabul edilebilir davranışları tanımlayan topladır.
 
-Genellikle gereksinim duyduğunuz hareketleri temel alan bir toplam tanımlarsınız. Klasik bir örnek, sipariş öğelerinin listesini de içeren bir sipariştir. Bir sipariş öğesi genellikle bir varlık olacaktır. Ancak, genellikle toplu kök olarak adlandırılan, kök varlığı olarak sipariş varlığını da içerecek olan sipariş toplamı içinde bir alt varlık olacaktır.
+Genellikle ihtiyacınız olan işlemlere göre bir toplama tanımlarsınız. Klasik bir örnek, sipariş öğelerinin bir listesini de içeren bir sıradır. Bir sipariş öğesi genellikle bir varlık olur. Ancak, sıra toplama içinde bir alt varlık olur ve bu da, genellikle toplam kök olarak adlandırılan kök varlık olarak sıra varlığını içerir.
 
-Agregaları tanımlamak zor olabilir. Toplam, birlikte tutarlı olması gereken bir nesne grubudur, ancak bir nesne grubunu seçip bunları bir toplu olarak etiketleyemezsiniz. Bir etki alanı kavramıyla başlamalı ve bu kavramla ilgili en yaygın işlemlerde kullanılan varlıkları düşünmelisiniz. İşlemsel olarak tutarlı olması gereken varlıklar, bir toplamı oluşturan varlıklardır. İşlem işlemleri hakkında düşünme, muhtemelen toplamları tanımlamanın en iyi yoludur.
+Toplamaları tanımlama zor olabilir. Toplama, birlikte tutarlı olması gereken bir nesne grubudur, ancak bir nesne grubunu seçip bunları bir toplama etiketlenemez. Bir etki alanı kavramıyla başlamalı ve bu kavram ile ilgili en yaygın işlemlerde kullanılan varlıkları düşünmeniz gerekir. İşlemsel olarak tutarlı olması gereken varlıklar, bir toplama oluşturan şeydir. İşlem işlemleri hakkında düşünce, büyük olasılıkla toplamaları belirlemenin en iyi yoludur.
 
-### <a name="the-aggregate-root-or-root-entity-pattern"></a>Toplam Kök veya Kök Varlık deseni
+### <a name="the-aggregate-root-or-root-entity-pattern"></a>Toplam kök veya kök varlık deseninin
 
-Bir toplam en az bir varlıktan oluşur: kök varlık veya birincil varlık olarak da adlandırılan toplam kök. Ayrıca, gerekli davranış ve hareketleri uygulamak için tüm varlıklar ve nesneler birlikte çalışan birden çok alt varlıklar ve değer nesneleri olabilir.
+Toplama, en az bir varlıktan oluşur: kök varlık veya birincil varlık olarak da adlandırılan toplam kök. Ayrıca, gerekli davranış ve işlemleri uygulamak için birlikte çalışan tüm varlıklar ve nesneler ile birden çok alt varlık ve değer nesnesi olabilir.
 
-Bir toplam kökün amacı, agreganın tutarlılığını sağlamaktır; bu toplam kök sınıfında yöntemler veya işlemler yoluyla toplam güncelleştirmeleri için tek giriş noktası olmalıdır. Yalnızca toplam kökü üzerinden toplam içindeki varlıklarda değişiklik yapmalısınız. Toplu olarak uymanız gerekebilecek tüm değişmezleri ve tutarlılık kurallarını göz önünde bulundurarak, toplamın tutarlılık koruyucusudur. Bir alt varlığı veya değer nesnesini bağımsız olarak değiştirirseniz, toplam kök, toplamın geçerli bir durumda olduğundan emin olamaz. Gevşek bacaklı bir masa gibi olurdu. Tutarlılığı korumak, toplam kökün temel amacıdır.
+Toplama kökünün amacı, toplamanın tutarlılığını sağlamaktır; Toplam kök sınıfında Yöntemler veya işlemler aracılığıyla toplanacak güncelleştirmelerin tek giriş noktası olması gerekir. Toplama içindeki varlıklarda yalnızca toplama köküyle değişiklik yapmanız gerekir. Toplamanız için gerekli olan tüm ınvaryantlar ve tutarlılık kurallarını dikkate alarak, toplamanın tutarlılık koruyucusu vardır. Bir alt varlık veya değer nesnesini bağımsız olarak değiştirirseniz, toplam kök, toplamanın geçerli bir durumda olduğundan emin olamaz. Bu, boştaki bir baya sahip bir tablo gibi olacaktır. Tutarlılığı korumak, toplam kökünün ana amacı olur.
 
-Şekil 7-9'da, tek bir varlık (toplam kök Alıcı) içeren alıcı toplamı gibi örnek agregaları görebilirsiniz. Sipariş toplamı birden çok varlık ve bir değer nesnesi içerir.
+Şekil 7-9 ' de, tek bir varlık (Toplam kök alıcı) içeren alıcı toplaması gibi örnek toplamalar görebilirsiniz. Sıra toplaması birden çok varlık ve bir değer nesnesi içerir.
 
-![Alıcı toplamı ve sipariş toplamına karşılaştırıldığında diyagram.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
+![Bir alıcı toplamasını ve bir sıra toplamasını karşılaştıran diyagram.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
-**Şekil 7-9**. Birden fazla veya tek tüzel kişilikli agrega örneği
+**Şekil 7-9**. Birden çok veya tek varlık içeren toplamalar örneği
 
-Bir DDD etki alanı modeli agregalardan oluşur, bir agrega yalnızca bir varlık veya daha fazla olabilir ve değer nesneleri de içerebilir. EShopOnContainers başvuru uygulamasında sipariş mikroservice yaptığı gibi Alıcı toplu, etki alanıbağlı olarak ek alt varlıklar olabilir unutmayın. Şekil 7-9 yalnızca toplam kök içeren bir toplam örneği olarak, alıcının tek bir varlığa sahip olduğu bir durumu göstermektedir.
+DDD etki alanı modeli toplamalarda oluşur, bir toplama yalnızca bir varlık veya daha fazla olabilir ve değer nesneleri de içerebilir. Alıcı toplamanın, etki alanına bağlı olarak, eShopOnContainers başvuru uygulamasındaki mikro hizmette sıralama yaptığı gibi ek alt varlıklara sahip olabileceğini unutmayın. Şekil 7-9 yalnızca Birleşik bir kök içeren bir toplama örneği olarak, alıcının tek bir varlığa sahip olduğu bir durumu gösterir.
 
-Agregaların ayrılığını korumak ve aralarındaki sınırları korumak için, ddd etki alanı modelinde, agregalar arasında doğrudan gezinmeye izin vermemek ve eShopOnContainers'daki [Sipariş mikrohizmet etki alanı modelinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) uygulandığı gibi yalnızca yabancı anahtar (FK) alanına sahip olmak iyi bir uygulamadır. Sipariş varlığı yalnızca alıcı için bir FK alanına sahiptir, ancak aşağıdaki kodda gösterildiği gibi bir EF Core navigasyon özelliği ne değildir:
+Toplamaların ayrılmasını sürdürmek ve aralarında Temizleme sınırları tutmak için, bir DDD etki alanı modelinde, toplamalar arasında doğrudan gezinmeye ve yalnızca yabancı anahtar (FK) alanına sahip olmak üzere eShopOnContainers 'da bir [sıralama mikro hizmet etki alanı modelinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) uygulanan şekilde, bu işlem iyi bir uygulamadır. Sipariş varlığı, alıcı için yalnızca bir FK alanına sahiptir, ancak aşağıdaki kodda gösterildiği gibi EF Core gezinti özelliği değildir:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -129,28 +129,28 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Agregaların tanımlanması ve çalışılması araştırma ve deneyim gerektirir. Daha fazla bilgi için aşağıdaki Ek kaynaklar listesine bakın.
+Toplamaları tanımlama ve bunlarla çalışma için araştırma ve deneyim gerekir. Daha fazla bilgi için aşağıdaki ek kaynaklar listesine bakın.
 
 #### <a name="additional-resources"></a>Ek kaynaklar
 
-- **Vaughn Vernon' u. Etkili Agrega Tasarımı - Bölüm I: Tek Bir Agreganın Modelleilmesi** (from) <http://dddcommunity.org/>\
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
+- **Vaughn versuz. Geçerli toplama tasarımı-Bölüm ı: tek bir toplama** (öğesinden <https://dddcommunity.org/> ) modelleme
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon' u. Etkili Agrega Tasarımı - Bölüm II: Agregaların Birlikte Çalışmasını Sağlama** (from) <http://dddcommunity.org/>\
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
+- **Vaughn versuz. Geçerli toplama tasarımı-Bölüm II: toplamalar birlikte çalışır hale getirme** (öğesinden <https://dddcommunity.org/> ) \
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon' u. Etkili Toplam Tasarım - Bölüm III: Discovery through Insight Kazanma** (dan) <http://dddcommunity.org/>\
-  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
+- **Vaughn versuz. Etkili toplu tasarım-Bölüm III: bulma** (Kimden) ile Ilgili Öngörüler elde etme <https://dddcommunity.org/>
+  <https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. DDD Taktik Tasarım Desenleri** \
+- **Sergey Gryıbniak. DDD Politiktasarım desenleri** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson' ı. Agregaları Kullanarak İşlemsel Mikro Hizmetler Geliştirme** \
+- **Chris Richardson. Toplamaları kullanarak Işlem mikro hizmetleri geliştirme** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ mı? Agrega deseni** \
+- **Sapq. Toplam model** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Önceki](ddd-oriented-microservice.md)
->[Sonraki](net-core-microservice-domain-model.md)
+>[Önceki](ddd-oriented-microservice.md) 
+> [Sonraki](net-core-microservice-domain-model.md)

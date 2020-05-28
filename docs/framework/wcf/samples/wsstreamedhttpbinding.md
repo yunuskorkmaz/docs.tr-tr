@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 36b4db5270205aec55ad52db40500c8d434a1560
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 663b7921e4e8a66d9b905404bad00f613e2f04cc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714545"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144662"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -21,7 +21,7 @@ ms.locfileid: "74714545"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`
 
@@ -29,7 +29,7 @@ ms.locfileid: "74714545"
 
 1. Yeni bir standart bağlama oluştur
 
-    BasicHttpBinding ve netTcpBinding gibi Windows Communication Foundation (WCF) içindeki standart bağlamalar, belirli gereksinimler için temel taşımaları ve kanal yığınını yapılandırır. Bu örnekte `WSStreamedHttpBinding` kanal yığınını akışı destekleyecek şekilde yapılandırır. Varsayılan olarak, WS-Security ve güvenilir mesajlaşma, her iki özellik de akış tarafından desteklenmediğinden kanal yığınına eklenmez. Yeni bağlama, <xref:System.ServiceModel.Channels.Binding>türetilen sınıf `WSStreamedHttpBinding` uygulanır. `WSStreamedHttpBinding` aşağıdaki bağlama öğelerini içerir: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Sınıfı, aşağıdaki örnek kodda gösterildiği gibi, sonuçta elde edilen bağlama yığınını yapılandırmak için bir `CreateBindingElements()` yöntemi sağlar.
+    BasicHttpBinding ve netTcpBinding gibi Windows Communication Foundation (WCF) içindeki standart bağlamalar, belirli gereksinimler için temel taşımaları ve kanal yığınını yapılandırır. Bu örnekte, `WSStreamedHttpBinding` Kanal yığınını akışı destekleyecek şekilde yapılandırır. Varsayılan olarak, WS-Security ve güvenilir mesajlaşma, her iki özellik de akış tarafından desteklenmediğinden kanal yığınına eklenmez. Yeni bağlama, `WSStreamedHttpBinding` öğesinden türetilen sınıfta uygulanır <xref:System.ServiceModel.Channels.Binding> . , `WSStreamedHttpBinding` Aşağıdaki bağlama öğelerini içerir: <xref:System.ServiceModel.Channels.HttpTransportBindingElement> , <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> , <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> . Sınıfı, `CreateBindingElements()` Aşağıdaki örnek kodda gösterildiği gibi, elde edilen bağlama yığınını yapılandırmak için bir yöntem sağlar.
 
     ```csharp
     public override BindingElementCollection CreateBindingElements()
@@ -53,7 +53,7 @@ ms.locfileid: "74714545"
 
 2. Yapılandırma desteği ekle
 
-    Aktarımı yapılandırma yoluyla göstermek için örnek iki sınıf daha uygular —`WSStreamedHttpBindingConfigurationElement` ve `WSStreamedHttpBindingSection`. `WSStreamedHttpBindingSection` sınıfı, WCF yapılandırma sistemine `WSStreamedHttpBinding` sunan bir <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>. Uygulamanın toplu işlemi, <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen `WSStreamedHttpBindingConfigurationElement`için temsilci olarak oluşturulur. `WSStreamedHttpBindingConfigurationElement` sınıfı, `WSStreamedHttpBinding`özelliklerine karşılık gelen özelliklere ve her yapılandırma öğesini bir bağlamaya eşlemek için işlevlere sahiptir.
+    Aktarımı yapılandırma yoluyla göstermek için örnek iki sınıf daha uygular — `WSStreamedHttpBindingConfigurationElement` ve `WSStreamedHttpBindingSection` . Sınıfı, `WSStreamedHttpBindingSection` <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> `WSStreamedHttpBinding` WCF yapılandırma sistemine yönelik bir ' dir. Uygulamanın toplu işlemi, `WSStreamedHttpBindingConfigurationElement` ' den türetilen için Temsilcili <xref:System.ServiceModel.Configuration.StandardBindingElement> . Sınıfı `WSStreamedHttpBindingConfigurationElement` , özelliklerine karşılık gelen özelliklere `WSStreamedHttpBinding` ve her yapılandırma öğesini bir bağlamaya eşlemek için işlevlere sahiptir.
 
     Hizmetin yapılandırma dosyasına aşağıdaki bölümü ekleyerek işleyiciyi yapılandırma sistemine kaydedin.
 
@@ -105,7 +105,7 @@ ms.locfileid: "74714545"
 
 ## <a name="the-wsstreamedhttpbinding-sample-service"></a>WSStreamedHttpBinding örnek hizmeti
 
-`WSStreamedHttpBinding` kullanan örnek hizmet, hizmet alt dizininde bulunur. `OperationContract` uygulanması, `MemoryStream`döndürmeden önce gelen akıştan tüm verileri almak için bir `MemoryStream` kullanır. Örnek hizmet Internet Information Services (IIS) tarafından barındırılır.
+Tarafından kullanılan örnek hizmet, `WSStreamedHttpBinding` hizmet alt dizininde bulunur. Uygulamasının uygulamasını `OperationContract` `MemoryStream` döndürmeden önce gelen akıştan tüm verileri almak için bir kullanır `MemoryStream` . Örnek hizmet Internet Information Services (IIS) tarafından barındırılır.
 
 ```csharp
 [ServiceContract]
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding örnek Istemcisi
 
-`WSStreamedHttpBinding` kullanılarak hizmetle etkileşim kurmak için kullanılan istemci, istemci alt dizininde bulunur. Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızda https://localhost/servicemodelsamples/service.svc gibi bir HTTPS adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir. WCF istemcisinin yerinde bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken kod ve eşlik eden sınıf gerekli değildir.
+Kullanılarak hizmetle etkileşim kurmak için kullanılan istemci, `WSStreamedHttpBinding` istemci alt dizininde bulunur. Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızda bir HTTPS adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir `https://localhost/servicemodelsamples/service.svc` . WCF istemcisinin yerinde bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken kod ve eşlik eden sınıf gerekli değildir.
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

@@ -2,78 +2,78 @@
 title: WSDL ve İlke
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929668"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144688"
 ---
 # <a name="wsdl-and-policy"></a>WSDL ve İlke
-Bu konu, Windows Communication Foundation (WCF) WSDL 1.1, uygulama ayrıntıları, WS-Policy ve WS-PolicyAttachment yanı sıra ek WS-Policy onaylar ve WCF tarafından sunulan WSDL 1.1 uzantılar içerir.  
+Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-PolicyAttachment uygulama ayrıntılarının yanı sıra WCF tarafından sunulan ek WS-Policy onayları ve WSDL 1,1 uzantıları ele alınmaktadır.  
   
- WCF için W3C kısıtlamaları ve bu belgede açıklanan açıklamalar ile gönderilen WS-Policy ve WS-PolicyAttachment belirtimleri uygular.  
+ WCF, bu belgede açıklanan kısıtlamalar ve açıklamalar ile W3C 'a gönderilen WS-Policy ve WS-PolicyAttachment belirtimlerini uygular.  
   
- Bu belge, aşağıdaki tabloda gösterilen ad alanlarını ve önekleri kullanır.  
+ Bu belge, aşağıdaki tabloda gösterilen ön ekleri ve ad alanlarını kullanır.  
   
-|Ön eki|Ad Alanı|  
+|Ön ek|Ad Alanı|  
 |------------|---------------|  
-|WSP (WS-Policy 1.2)|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|WSP (WS-Policy 1.5)|http://www.w3.org/ns/ws-policy|  
-|http|http://schemas.microsoft.com/ws/06/2004/policy/http|  
-|msmq|http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq|  
-|msf|http://schemas.microsoft.com/ws/2006/05/framing/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
-|msc|http://schemas.microsoft.com/ws/2005/12/wsdl/contract|  
-|CDP|http://schemas.microsoft.com/net/2006/06/duplex|  
+|WSP (WS-Policy 1,2)|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|WSP (WS-Policy 1,5)|`http://www.w3.org/ns/ws-policy`|  
+|http|`http://schemas.microsoft.com/ws/06/2004/policy/http`|  
+|'yu|`http://schemas.microsoft.com/ws/06/2004/mspolicy/msmq`|  
+|'si|`http://schemas.microsoft.com/ws/2006/05/framing/policy`|  
+|MSSP|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
+|msc|`http://schemas.microsoft.com/ws/2005/12/wsdl/contract`|  
+|'si|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
-## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 uzantıları  
- WCF sözleşmesi oturumu gereksinimlerini tanımlamak için aşağıdaki WSDL1.1 uzantıları kullanır.  
+## <a name="wcf-wsdl11-extensions"></a>WCF WSDL 1.1 uzantıları  
+ WCF, sözleşme oturumu gereksinimlerini anlatmak için aşağıdaki WSDL 1.1 uzantılarını kullanır.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:Boolean, bu işlem bir WCF oturumunu başlatan gösterir. Varsayılan değer `false`.  
+ xs: Boolean, bu işlemin bir WCF oturumu başlattığını belirtir; Varsayılan değer `false` .  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:Boolean, bu işlem bir WCF oturumu sona erer gösterir. Varsayılan değer `false`.  
+ xs: Boolean, bu işlemin bir WCF oturumunu sonlandırdığını belirtir; Varsayılan değer `false` .  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
- xs:Boolean, gösteren bu anlaşma için session kurulması gerekiyor.  
+ xs: Boolean, bu sözleşmenin oturumun kurulmasını gerektirip gerektirmediğini belirtir.  
   
-### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP bağlama aktarım URI'ler  
- WCF şu Urı'lere WSDL 1.1, SOAP 1.1 ve SOAP 1.2 bağlama uzantısı öğeleri için kullanılacak taşımalar belirtmek için kullanır.  
+### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1. x HTTP bağlama taşıma URI 'Leri  
+ WCF, WSDL 1,1, SOAP 1,1 ve SOAP 1,2 bağlama uzantı öğeleri için kullanılacak aktarımları göstermek üzere aşağıdaki URI 'Leri kullanır.  
   
-|Taşıma|URI|  
+|Aktarım|URI|  
 |---------------|---------|  
-|HTTP|http://schemas.xmlsoap.org/soap/http|  
-|TCP|http://schemas.microsoft.com/soap/tcp|  
-|MSMQ|http://schemas.microsoft.com/soap/msmq|  
-|Adlandırılmış Kanallar|http://schemas.microsoft.com/soap/named-pipe|  
+|HTTP|`http://schemas.xmlsoap.org/soap/http`|  
+|TCP|`http://schemas.microsoft.com/soap/tcp`|  
+|MSMQ|`http://schemas.microsoft.com/soap/msmq`|  
+|Adlandırılmış Kanallar|`http://schemas.microsoft.com/soap/named-pipe`|  
   
-## <a name="policy-assertions-implemented-by-wcf"></a>WCF tarafından uygulanan ilke onaylamalarını  
- İlke onaylamalarını sunulan Web Hizmetleri özelliklere ek olarak (WS-*) ve bu belgenin diğer bölümlerinde belirtildiği gibi WCF aşağıdaki ilke eklemeleri uygular.  
+## <a name="policy-assertions-implemented-by-wcf"></a>WCF tarafından uygulanan ilke onayları  
+ Web Hizmetleri belirtimlerinde (WS-*) tanıtılan ve bu belgenin diğer bölümlerinde bahsedilen ilke onaylamalarına ek olarak, WCF aşağıdaki ilke onaylamalarını uygular.  
   
-|İlke onaylama|Konu İlkesi|Açıklama|  
+|İlke onaylama|İlke konusu|Açıklama|  
 |----------------------|--------------------|-----------------|  
-|http:HttpBasicAuthentication|Uç Noktası|Uç nokta HTTP temel kimlik doğrulaması kullanır.|  
-|http:HttpDigestAuthentication|Uç Noktası|Uç nokta HTTP Digest kimlik doğrulaması kullanır.|  
-|http:HttpNegotiateAuthentication|Uç Noktası|Uç nokta HTTP anlaşması kimlik doğrulaması kullanır.|  
-|http:HttpNtlmAuthentication|Uç Noktası|Uç nokta HTTP NTLM kimlik doğrulaması kullanır.|  
-|msf:Streamed|Uç Noktası|Uç nokta akış ileti sınırlandırmasını kullanır. Bu onay, TCP ve adlandırılmış kanallar gibi taşımalar için sağlanan ileti çerçeveleme protokolü ile kullanılır.|  
-|msf:SslTransportSecurity|Uç Noktası|Uç nokta, Aktarım Katmanı Güvenliği (TLS) ile ileti sınırlandırmasını kullanır.|  
-|msf:WindowsTransportSecurity|Uç Noktası|Uç nokta ileti çerçeveleme ile güvenlik sağlayıcısı anlaşması (SPNEGO) kullanır.|  
-|msmq:MsmqBestEffort|Uç Noktası|MSMQ en yüksek çaba garanti eder.|  
-|MSMQ:MsmqSession|Uç Noktası|MSMQ Oturumu ile garanti eder.|  
-|msmq:MsmqVolatile|Uç Noktası|MSMQ geçici.|  
-|MSMQ: kimlik doğrulaması|Uç Noktası|MSMQ taşıma ile kimlik doğrulaması kullanılır.|  
-|msmq:WindowsDomain|Uç Noktası|MSMQ Windows etki alanı kimlik doğrulaması kullanır.|  
-|cdp:CompositeDuplex|Uç Noktası|Uç nokta, iki ayrı ters taşıma bağlantısı için giriş ve çıkış iletileri kullanır.|  
-|mssp:RsaToken|İç içe geçmiş|RSA anahtar belirteci onaylar. Bu gereksinim, doğrudan onaylanan bir imza anahtar bilgileri bir parçası olarak seri hale getirilmiş bir RSA anahtarı tarafından genellikle uyulmuş olur.|  
-|mssp:SslContextToken|İç içe geçmiş|WS-Trust kullanarak ikili TLS anlaşması kullanılarak elde edilen bir SecurityContextToken kullanılmasını gerektirir. İç içe geçmiş bir onayları Ekle: sp:RequireDerivedKeys, mssp:MustNotSendCancel mssp:RequireClientCertificate.|  
-|mssp:MustNotSendCancel|İç içe geçmiş|İstek bir güvenlik belirteci (k) iptal bağlama [WS-Trust, WS-SC] kullanarak iletileri WS-Trust isteği bir gereksinim belirtir verilen SecurityContextToken yayınlayanla gönderme. Bu onay varsa, ardından gibi istek iletilerinin yayınlayanla gönderilmelidir değil. Bu onay mevcut değilse, bu istek iletilerinin yayınlayanla gönderilebilir.|  
-|mssp:RequireClientCertificate|İç içe geçmiş|Bu isteğe bağlı öğe TLSNEGO protokolünün bir parçası sağlanması için bir istemci sertifikası için bir gereksinim belirtir. Bu onay varsa, bir istemci sertifikası sağlanmalıdır. Bu onay mevcut değilse, bir istemci sertifikası verilmemelidir. Bu onay mssp:SslContextToken dışında kullanılmamalıdır.|  
+|http: HttpBasicAuthentication|Uç Nokta|Uç nokta HTTP temel kimlik doğrulaması kullanıyor.|  
+|http: HttpDigestAuthentication|Uç Nokta|Uç nokta HTTP Özet kimlik doğrulamasını kullanır.|  
+|http: HttpNegotiateAuthentication|Uç Nokta|Uç nokta HTTP anlaşma kimlik doğrulamasını kullanır.|  
+|http: HttpNtlmAuthentication|Uç Nokta|Uç nokta HTTP NTLM kimlik doğrulamasını kullanır.|  
+|MSF: akışla|Uç Nokta|Uç nokta akış ileti çerçeveleme kullanır. Bu onaylama, TCP ve adlandırılmış kanallar gibi aktarımlar için sunulan Ileti çerçeveleme protokolüyle birlikte kullanılır.|  
+|MSF: SslTransportSecurity|Uç Nokta|Uç nokta, ileti çerçevelemesi ile Aktarım Katmanı Güvenliği 'ni (TLS) kullanır.|  
+|MSF: WindowsTransportSecurity|Uç Nokta|Uç noktası, ileti çerçevelemesi ile güvenlik sağlayıcısı anlaşmasını (SPNEGO) kullanır.|  
+|MSMQ: MsmqBestEffort|Uç Nokta|En iyi çaba garantisi olan MSMQ.|  
+|MSMQ: MsmqSession|Uç Nokta|Oturum garantisi olan MSMQ.|  
+|MSMQ: MsmqVolatile|Uç Nokta|MSMQ geçici.|  
+|MSMQ: kimliği doğrulanmış|Uç Nokta|Kimlik doğrulaması MSMQ taşıması ile kullanılır.|  
+|MSMQ: WindowsDomain|Uç Nokta|MSMQ Windows etki alanı kimlik doğrulamasını kullanır.|  
+|CDP: CompositeDuplex|Uç Nokta|Uç nokta, gelen ve giden iletilerde iki ayrı convera aktarım bağlantısı kullanır.|  
+|mssp: RsaToken|Ble|RSA anahtar belirteci onaylama. Bu gereksinim, genellikle bir onaylama imzasında anahtar bilgisinin bir parçası olarak doğrudan seri hale getirilen bir RSA anahtarı tarafından karşılanır.|  
+|mssp: SslContextToken|Ble|WS-Trust kullanılarak ikili TLS el sıkışması kullanılarak elde edilen bir SecurityContextToken gerektirir. İç içe onaylama işlemleri şunlardır: SP: RequireDerivedKeys, mssp: MustNotSendCancel, mssp: RequireClientCertificate.|  
+|mssp: MustNotSendCancel|Ble|Belirli bir SecurityContextToken veren için Iptal bağlamayı [WS-Trust, WS-SC] kullanan bir istek güvenlik belirteci (RST) istek iletisi (WS-Trust]) için bir gereksinim belirtir. Bu onay varsa, bu tür istek iletileri veren 'e gönderilmemelidir. Bu onaylama yoksa, bu tür istek iletileri verene gönderilebilir.|  
+|mssp: RequireClientCertificate|Ble|Bu isteğe bağlı öğe, TLSNEGO protokolünün bir parçası olarak bir istemci sertifikasının sağlanması gereksinimini belirtir. Bu onay varsa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama yoksa, bir istemci sertifikasının sağlanması gerekir. Bu onaylama, mssp: SslContextToken dışında kullanılmamalıdır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel WSDL Yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Nasıl yapılır: Özel WSDL dışarı aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Nasıl yapılır: Özel WSDL içeri aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL Dışa Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL İçe Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

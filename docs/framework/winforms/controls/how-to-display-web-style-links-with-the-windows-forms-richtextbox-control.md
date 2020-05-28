@@ -10,31 +10,31 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 06ed304e566bb437a2353dd330d7de5328f2a729
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745533"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144831"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme
 
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, web bağlantılarını renkli ve altı çizili olarak gösterebilir. Bağlantı tıklandığında bağlantı metninde belirtilen Web sitesini gösteren tarayıcı penceresi açan bir kod yazabilirsiniz.
+Windows Forms <xref:System.Windows.Forms.RichTextBox> Denetim, web bağlantılarını renkli ve altı çizili olarak gösterebilir. Bağlantı tıklandığında bağlantı metninde belirtilen Web sitesini gösteren tarayıcı penceresi açan bir kod yazabilirsiniz.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox denetimiyle bir Web sayfasına bağlantı sağlamak için
 
-1. <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğini geçerli bir URL (örneğin, "http://www.microsoft.com/") içeren bir dizeye ayarlayın.
+1. <xref:System.Windows.Forms.RichTextBox.Text%2A>Özelliğini geçerli BIR URL (örneğin, "") içeren bir dizeye ayarlayın https://www.microsoft.com/ .
 
-2. <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliğinin `true` (varsayılan) olarak ayarlandığından emin olun.
+2. <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>Özelliğin (varsayılan) olarak ayarlandığından emin olun `true` .
 
-3. <xref:System.Diagnostics.Process> nesnesinin yeni bir genel örneğini oluşturun.
+3. Nesnenin yeni bir genel örneğini oluşturun <xref:System.Diagnostics.Process> .
 
-4. Tarayıcıya istenen metni gönderen <xref:System.Windows.Forms.RichTextBox.LinkClicked> olayı için bir olay işleyicisi yazın.
+4. <xref:System.Windows.Forms.RichTextBox.LinkClicked>Tarayıcıya istenen metni gönderen olay için bir olay işleyicisi yazın.
 
-    Aşağıdaki örnekte <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay, bir Internet Explorer örneğini <xref:System.Windows.Forms.RichTextBox> denetiminin <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğinde belirtilen URL 'ye açar. Bu örnekte, bir <xref:System.Windows.Forms.RichTextBox> denetimi olan bir form varsayılır.
+    Aşağıdaki örnekte, <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay, bir Internet Explorer örneğini denetimin özelliğinde BELIRTILEN URL 'ye açar <xref:System.Windows.Forms.RichTextBox.Text%2A> <xref:System.Windows.Forms.RichTextBox> . Bu örnekte, bir denetimi olan bir form varsayılır <xref:System.Windows.Forms.RichTextBox> .
 
     > [!IMPORTANT]
-    > <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi çağrılırken, yetersiz ayrıcalıklar nedeniyle kodu kısmi güven bağlamında çalıştırıyorsanız, bir <xref:System.Security.SecurityException> özel durumuyla karşılaşırsınız. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../misc/code-access-security-basics.md).
+    > <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>Yöntemi çağırırken, <xref:System.Security.SecurityException> yetersiz ayrıcalıklar nedeniyle kodu kısmi güven bağlamında çalıştırıyorsanız bir özel durumla karşılaşacaksınız. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,13 +75,13 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, web bağlantıla
        }
     ```
 
-    (Görsel C++) Aşağıdaki ifadeyi formunuzun oluşturucusuna ekleyerek yapabileceğiniz işlem `p`' u başlatmalısınız:
+    (Visual C++) `p`Aşağıdaki deyiminizi formunuzun yapıcısına ekleyerek yapabileceğiniz işlemi başlatmalısınız:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();
     ```
 
-    (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.
+    (Visual C#, Visual C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.
 
     ```csharp
     this.richTextBox1.LinkClicked += new
@@ -123,4 +123,4 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, web bağlantıla
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

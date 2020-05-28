@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206054"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144245"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core proje SDK 'Ları
 
@@ -19,10 +19,10 @@ ms.locfileid: "83206054"
 
 .NET Core için aşağıdaki SDK 'lar mevcuttur:
 
-| Kimlik | Açıklama | Depo|
+| ID | Açıklama | Depo|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | .NET Core [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET Core [Web SDK 'sı](/aspnet/core/razor-pages/web-sdk) | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK 'sı](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Core Worker hizmeti SDK 'Sı |
 | `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms ve WPF SDK |
@@ -89,8 +89,8 @@ Aşağıdaki tablo, hangi öğelerin ve hangi [genelleştirmeler](https://en.wik
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
+| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | YOK                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | YOK                      |
 | Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
 
 > [!NOTE]
