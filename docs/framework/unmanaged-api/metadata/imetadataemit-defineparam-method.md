@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177700"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004380"
 ---
-# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="d8be3-102">IMetaDataEmit::DefineParam Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d8be3-102">IMetaDataEmit::DefineParam Method</span></span>
-<span data-ttu-id="d8be3-103">Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaile bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="d8be3-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
+# <a name="imetadataemitdefineparam-method"></a><span data-ttu-id="75790-102">IMetaDataEmit::DefineParam Yöntemi</span><span class="sxs-lookup"><span data-stu-id="75790-102">IMetaDataEmit::DefineParam Method</span></span>
+<span data-ttu-id="75790-103">Belirtilen belirteç tarafından başvurulan yöntem için belirtilen imzaya sahip bir parametre tanımı oluşturur ve bu parametre tanımı için bir belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="75790-103">Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8be3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d8be3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75790-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="75790-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineParam (  
@@ -40,44 +40,44 @@ HRESULT DefineParam (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8be3-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d8be3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75790-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="75790-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="d8be3-106">[içinde] Parametresi tanımlanan yöntemin belirteci.</span><span class="sxs-lookup"><span data-stu-id="d8be3-106">[in] The token for the method whose parameter is being defined.</span></span>  
+ <span data-ttu-id="75790-106">'ndaki Parametresi tanımlanmakta olan metodun belirteci.</span><span class="sxs-lookup"><span data-stu-id="75790-106">[in] The token for the method whose parameter is being defined.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="d8be3-107">[içinde] Parametre sıra numarası.</span><span class="sxs-lookup"><span data-stu-id="d8be3-107">[in] The parameter sequence number.</span></span>  
+ <span data-ttu-id="75790-107">'ndaki Parametre sıra numarası.</span><span class="sxs-lookup"><span data-stu-id="75790-107">[in] The parameter sequence number.</span></span>  
   
  `szName`  
- <span data-ttu-id="d8be3-108">[içinde] Unicode'daki parametrenin adı.</span><span class="sxs-lookup"><span data-stu-id="d8be3-108">[in] The name of the parameter in Unicode.</span></span>  
+ <span data-ttu-id="75790-108">'ndaki Parametrenin Unicode olarak adı.</span><span class="sxs-lookup"><span data-stu-id="75790-108">[in] The name of the parameter in Unicode.</span></span>  
   
  `dwParamFlags`  
- <span data-ttu-id="d8be3-109">[içinde] Parametre için bayraklar.</span><span class="sxs-lookup"><span data-stu-id="d8be3-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="d8be3-110">Bu `CorParamAttr` değerlerin bir bitmask olduğunu.</span><span class="sxs-lookup"><span data-stu-id="d8be3-110">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="75790-109">'ndaki Parametre bayrakları.</span><span class="sxs-lookup"><span data-stu-id="75790-109">[in] Flags for the parameter.</span></span> <span data-ttu-id="75790-110">Bu bir değer bit değeridir `CorParamAttr` .</span><span class="sxs-lookup"><span data-stu-id="75790-110">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="d8be3-111">[içinde] `ELEMENT_TYPE_` sabit değer *\** için.</span><span class="sxs-lookup"><span data-stu-id="d8be3-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
+ <span data-ttu-id="75790-111">[in] `ELEMENT_TYPE_` *\** sabit değer için.</span><span class="sxs-lookup"><span data-stu-id="75790-111">[in] `ELEMENT_TYPE_`*\** for the constant value.</span></span>  
   
  `pValue`  
- <span data-ttu-id="d8be3-112">[içinde] Parametrenin sabit değeri.</span><span class="sxs-lookup"><span data-stu-id="d8be3-112">[in] The constant value for the parameter.</span></span>  
+ <span data-ttu-id="75790-112">'ndaki Parametrenin sabit değeri.</span><span class="sxs-lookup"><span data-stu-id="75790-112">[in] The constant value for the parameter.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="d8be3-113">[içinde] Unicode karakterlerinin boyutu. `pValue`</span><span class="sxs-lookup"><span data-stu-id="d8be3-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="75790-113">'ndaki ' Nin Unicode karakterdeki boyutu `pValue` .</span><span class="sxs-lookup"><span data-stu-id="75790-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
  `ppd`  
- <span data-ttu-id="d8be3-114">[çıkış] Atanan `mdParamDef` belirteç.</span><span class="sxs-lookup"><span data-stu-id="d8be3-114">[out] The `mdParamDef` token assigned.</span></span>  
+ <span data-ttu-id="75790-114">dışı `mdParamDef`Atanan belirteç.</span><span class="sxs-lookup"><span data-stu-id="75790-114">[out] The `mdParamDef` token assigned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8be3-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d8be3-115">Remarks</span></span>  
- <span data-ttu-id="d8be3-116">Parametreler için `ulParamSeq` 1 ile başlarda sıra değerleri.</span><span class="sxs-lookup"><span data-stu-id="d8be3-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="d8be3-117">İade değerinin sıra numarası 0'dır.</span><span class="sxs-lookup"><span data-stu-id="d8be3-117">A return value has a sequence number of 0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="75790-115">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="75790-115">Remarks</span></span>  
+ <span data-ttu-id="75790-116">İçindeki sıra değerleri, `ulParamSeq` Parametreler için 1 ile başlar.</span><span class="sxs-lookup"><span data-stu-id="75790-116">The sequence values in `ulParamSeq` begin with 1 for parameters.</span></span> <span data-ttu-id="75790-117">Dönüş değerinin sıra numarası 0 ' dır.</span><span class="sxs-lookup"><span data-stu-id="75790-117">A return value has a sequence number of 0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8be3-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d8be3-118">Requirements</span></span>  
- <span data-ttu-id="d8be3-119">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8be3-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75790-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="75790-118">Requirements</span></span>  
+ <span data-ttu-id="75790-119">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75790-119">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8be3-120">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d8be3-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="75790-120">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="75790-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d8be3-121">**Kütüphane:** MSCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="d8be3-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="75790-121">**Kitaplık:** MSCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="75790-121">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d8be3-122">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8be3-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="75790-122">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75790-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8be3-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8be3-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75790-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75790-123">See also</span></span>
 
-- [<span data-ttu-id="d8be3-124">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d8be3-124">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="d8be3-125">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d8be3-125">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="75790-124">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="75790-124">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="75790-125">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="75790-125">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
