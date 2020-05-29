@@ -6,31 +6,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158057"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202348"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme
-XPath 2,0 veri modelinin bir örneği olarak, <xref:System.Xml.XPath.XPathNavigator> sınıfı ortak dil çalışma zamanı (CLR) türleriyle eşleşen kesin türü belirtilmiş verileri içerebilir. XPath 2,0 veri modeline göre yalnızca öğeler ve öznitelikler kesin türü belirtilmiş veri içerebilir. Sınıfı <xref:System.Xml.XPath.XPathNavigator> , bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesnesi içindeki verilere, türü kesin belirlenmiş verilerin yanı sıra bir veri türünden diğerine dönüştürme mekanizmalarına yönelik mekanizmalar sağlar.  
+XPath 2,0 veri modelinin bir örneği olarak, <xref:System.Xml.XPath.XPathNavigator> sınıfı ortak dil çalışma zamanı (CLR) türleriyle eşleşen kesin tür belirtilmiş verileri içerebilir. XPath 2,0 veri modeline göre yalnızca öğeler ve öznitelikler kesin türü belirtilmiş veri içerebilir. Sınıfı, bir <xref:System.Xml.XPath.XPathNavigator> veya nesnesi içindeki verilere, türü <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> kesin belirlenmiş verilerin yanı sıra bir veri türünden diğerine dönüştürmeye yönelik mekanizmalar sağlar.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator tarafından sunulan tür bilgileri  
  XML 1,0 verileri, bir DTD, XML şeması tanım dili (XSD) şeması veya başka bir mekanizmasıyla işlenmediği sürece Teknik olarak tür olmadan yapılır. Bir XML öğesi veya özniteliği ile ilişkilendirilebilen tür bilgileri kategorileri vardır.  
   
-- Basit CLR türleri: XML şema dillerinin hiçbiri doğrudan ortak dil çalışma zamanı (CLR) türlerini desteklemez. En uygun CLR türü olarak basit öğe ve öznitelik içeriğini görüntüleyebilmek yararlı olduğundan, tüm basit içerikler, eklenen herhangi bir şema bilgileriyle şema bilgileri yokluğunda <xref:System.String> olarak yazılabilir ve bu içeriği daha uygun bir türe göre iyileştiriyor. <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> Özelliğini kullanarak, basit öğe ve öznitelik içeriğinin en ıyı eşleşen clr türünü bulabilirsiniz. Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Basit CLR türleri: XML şema dillerinin hiçbiri doğrudan ortak dil çalışma zamanı (CLR) türlerini desteklemez. En uygun CLR türü olarak basit öğe ve öznitelik içeriğini görüntüleyebilmek yararlı olduğundan, tüm basit içerikler, <xref:System.String> eklenen herhangi bir şema bilgileriyle şema bilgileri yokluğunda olarak yazılabilir ve bu içeriği daha uygun bir türe göre iyileştiriyor. Özelliğini kullanarak, basit öğe ve öznitelik içeriğinin en iyi eşleşen CLR türünü bulabilirsiniz <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> . Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
 - Basit (CLR) türleri listeleri: basit içeriğe sahip bir öğe veya öznitelik, boşluk ile ayrılmış bir değerler listesi içerebilir. Değerler bir XML şeması tarafından bir "liste türü" olarak belirtilir. XML şeması yokluğunda, bu gibi basit içerik tek bir metin düğümü olarak değerlendirilir. Bir XML şeması kullanılabilir olduğunda, bu basit içerik her biri bir CLR nesneleri koleksiyonuyla eşleşen basit bir türe sahip bir dizi Atomik değer olarak gösterilebilir. Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-- Yazılan değer: şema tarafından doğrulanan bir öznitelik veya basit bir türe sahip öğe türü belirtilmiş bir değer içeriyor. Bu değer, sayısal, dize veya tarih türü gibi temel bir türdür. XSD içindeki yerleşik basit türler, bir <xref:System.String>düğümün değerine yalnızca gibi daha uygun bir tür olarak ERIŞIM sağlayan CLR türleriyle eşleştirilebilir. Öznitelikleri veya öğe alt öğesi olan bir öğe karmaşık bir tür olarak kabul edilir. Basit içeriğe sahip bir karmaşık türün türü belirlenmiş değeri (yalnızca alt öğe olarak metin düğümleri), içeriğinin basit türü ile aynıdır. Karmaşık içerik (bir veya daha fazla alt öğesi) olan bir karmaşık türün tür değeri, bir <xref:System.String>olarak döndürülen tüm alt metin düğümlerinin birleştirilmesiyle ilgili dize değeridir. Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
+- Yazılan değer: şema tarafından doğrulanan bir öznitelik veya basit bir türe sahip öğe türü belirtilmiş bir değer içeriyor. Bu değer, sayısal, dize veya tarih türü gibi temel bir türdür. XSD içindeki yerleşik basit türler, bir düğümün değerine yalnızca gibi daha uygun bir tür olarak erişim sağlayan CLR türleriyle eşleştirilebilir <xref:System.String> . Öznitelikleri veya öğe alt öğesi olan bir öğe karmaşık bir tür olarak kabul edilir. Basit içeriğe sahip bir karmaşık türün türü belirlenmiş değeri (yalnızca alt öğe olarak metin düğümleri), içeriğinin basit türü ile aynıdır. Karmaşık içerik (bir veya daha fazla alt öğesi) olan bir karmaşık türün tür değeri, bir olarak döndürülen tüm alt metin düğümlerinin birleştirilmesiyle ilgili dize değeridir <xref:System.String> . Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-- Şema diline özgü tür adı: çoğu durumda, bir dış şema uygulamanın yan etkisi olarak ayarlanan CLR türleri, bir düğümün değerine erişim sağlamak için kullanılır. Ancak, bir XML belgesine uygulanan belirli bir şema ile ilişkili türü incelemek isteyebileceğiniz durumlar olabilir. Örneğin, ekli bir şemaya göre "PurchaseOrder" türünde içeriğe sahip olacak şekilde belirlenen tüm öğeleri ayıklayarak bir XML belgesinde arama yapmak isteyebilirsiniz. Bu tür bilgiler yalnızca şema doğrulamasının sonucu olarak ayarlanabilir ve bu bilgilere <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> sınıfının ve özellikleri aracılığıyla erişilir. Daha fazla bilgi için aşağıdaki şema doğrulama bilgi kümesi (PSVı) bölümüne bakın.  
+- Şema diline özgü tür adı: çoğu durumda, bir dış şema uygulamanın yan etkisi olarak ayarlanan CLR türleri, bir düğümün değerine erişim sağlamak için kullanılır. Ancak, bir XML belgesine uygulanan belirli bir şema ile ilişkili türü incelemek isteyebileceğiniz durumlar olabilir. Örneğin, ekli bir şemaya göre "PurchaseOrder" türünde içeriğe sahip olacak şekilde belirlenen tüm öğeleri ayıklayarak bir XML belgesinde arama yapmak isteyebilirsiniz. Bu tür bilgiler yalnızca şema doğrulamasının sonucu olarak ayarlanabilir ve bu bilgilere <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> sınıfının ve özellikleri aracılığıyla erişilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> . Daha fazla bilgi için aşağıdaki şema doğrulama bilgi kümesi (PSVı) bölümüne bakın.  
   
-- Şemaya özgü tür yansıtma: başka durumlarda, bir XML belgesine uygulanan şemaya özgü türün daha ayrıntılı ayrıntılarını elde etmek isteyebilirsiniz. Örneğin, bir XML dosyası okurken, bazı özel hesaplamalar gerçekleştirmek için XML belgesindeki her `maxOccurs` bir geçerli düğüm için özniteliğini ayıklamak isteyebilirsiniz. Bu bilgiler yalnızca şema doğrulaması aracılığıyla ayarlandığından, <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> sınıfının özelliği aracılığıyla erişilir. Daha fazla bilgi için aşağıdaki şema doğrulama bilgi kümesi (PSVı) bölümüne bakın.  
+- Şemaya özgü tür yansıtma: başka durumlarda, bir XML belgesine uygulanan şemaya özgü türün daha ayrıntılı ayrıntılarını elde etmek isteyebilirsiniz. Örneğin, bir XML dosyası okurken, `maxOccurs` bazı özel hesaplamalar gerçekleştirmek IÇIN XML belgesindeki her bir geçerli düğüm için özniteliğini ayıklamak isteyebilirsiniz. Bu bilgiler yalnızca şema doğrulaması aracılığıyla ayarlandığından, <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> sınıfının özelliği aracılığıyla erişilir <xref:System.Xml.XPath.XPathNavigator> . Daha fazla bilgi için aşağıdaki şema doğrulama bilgi kümesi (PSVı) bölümüne bakın.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator türü erişimciler  
- Aşağıdaki tabloda, bir düğümle ilgili tür bilgilerine erişmek için kullanılabilecek <xref:System.Xml.XPath.XPathNavigator> sınıfının çeşitli özellikleri ve yöntemleri gösterilmektedir.  
+ Aşağıdaki tabloda, <xref:System.Xml.XPath.XPathNavigator> bir düğümle ilgili tür bilgilerine erişmek için kullanılabilecek sınıfının çeşitli özellikleri ve yöntemleri gösterilmektedir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
@@ -38,25 +38,25 @@ XPath 2,0 veri modelinin bir örneği olarak, <xref:System.Xml.XPath.XPathNaviga
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Bu, doğrulamadan sonra eklenen düğümün şema doğrulama doğrulaması bilgi kümesini içerir. Bu, XML şema türü bilgilerinin yanı sıra geçerlilik bilgilerini de içerir.|  
 |<xref:System.Xml.XPath.XPathNavigator.ValueType%2A>|Düğümün türü belirlenmiş değeri CLR türü.|  
 |<xref:System.Xml.XPath.XPathNavigator.TypedValue%2A>|Düğümün içeriği, bir veya daha fazla CLR değeri olarak türü, düğümün XML şema türüyle en yakın eşleşme olan.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsBoolean%2A>|Geçerli <xref:System.String> düğümün değeri, için <xref:System.Boolean> `xs:boolean`XPath 2,0 atama kurallarına göre bir değere dönüştürüldü.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsDateTime%2A>|Geçerli <xref:System.String> düğümün değeri, için <xref:System.DateTime> `xs:datetime`XPath 2,0 atama kurallarına göre bir değere dönüştürüldü.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>|Geçerli <xref:System.String> düğümün değeri, için <xref:System.Double> `xsd:double`XPath 2,0 atama kurallarına göre bir değere dönüştürüldü.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>|Geçerli <xref:System.String> düğümün değeri, için <xref:System.Int32> `xs:integer`XPath 2,0 atama kurallarına göre bir değere dönüştürüldü.|  
-|<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|Geçerli <xref:System.String> düğümün değeri, için <xref:System.Int64> `xs:integer`XPath 2,0 atama kurallarına göre bir değere dönüştürüldü.|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsBoolean%2A>|<xref:System.String>Geçerli düğümün değeri <xref:System.Boolean> , için XPath 2,0 atama kurallarına göre bir değere dönüştürüldü `xs:boolean` .|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsDateTime%2A>|<xref:System.String>Geçerli düğümün değeri <xref:System.DateTime> , için XPath 2,0 atama kurallarına göre bir değere dönüştürüldü `xs:datetime` .|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A>|<xref:System.String>Geçerli düğümün değeri <xref:System.Double> , için XPath 2,0 atama kurallarına göre bir değere dönüştürüldü `xsd:double` .|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A>|<xref:System.String>Geçerli düğümün değeri <xref:System.Int32> , için XPath 2,0 atama kurallarına göre bir değere dönüştürüldü `xs:integer` .|  
+|<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|<xref:System.String>Geçerli düğümün değeri <xref:System.Int64> , için XPath 2,0 atama kurallarına göre bir değere dönüştürüldü `xs:integer` .|  
 |<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|Düğüm içeriği, XPath 2,0 atama kurallarına göre hedef türüne atama yapılır.|  
   
  Şema yerleşik türlerinden CLR türlerine eşleme hakkında daha fazla bilgi için bkz. [System. xml sınıflarında tür desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Şema sonrası doğrulama bilgi kümesi (PSVı)  
- Bir XML şeması işlemcisi, girdi olarak bir XML Infoset 'i kabul eder ve şema doğrulama bilgisi kümesine (PSVı) dönüştürür. PSVı, yeni bilgi öğeleri eklenen ve mevcut bilgi öğelerine eklenen yeni özellikler içeren özgün giriş XML bilgi kümesidir. Tarafından sunulan PSVı içindeki XML Infoset 'e eklenen üç geniş bilgi sınıfı vardır <xref:System.Xml.XPath.XPathNavigator>.  
+ Bir XML şeması işlemcisi, girdi olarak bir XML Infoset 'i kabul eder ve şema doğrulama bilgisi kümesine (PSVı) dönüştürür. PSVı, yeni bilgi öğeleri eklenen ve mevcut bilgi öğelerine eklenen yeni özellikler içeren özgün giriş XML bilgi kümesidir. Tarafından sunulan PSVı içindeki XML Infoset 'e eklenen üç geniş bilgi sınıfı vardır <xref:System.Xml.XPath.XPathNavigator> .  
   
-1. Doğrulama sonuçları: bir öğe veya özniteliğin başarıyla doğrulanıp doğrulanmayacağı hakkında bilgi. Bu, <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> sınıfının özelliğinin özelliği tarafından gösterilir.  
+1. Doğrulama sonuçları: bir öğe veya özniteliğin başarıyla doğrulanıp doğrulanmayacağı hakkında bilgi. Bu, <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> sınıfının özelliğinin özelliği tarafından gösterilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> .  
   
-2. Varsayılan bilgiler: öğe veya öznitelik değerinin şemada belirtilen varsayılan değerlerle elde edilip edilmeyeceğini belirtir. Bu, <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> sınıfının özelliğinin özelliği tarafından gösterilir.  
+2. Varsayılan bilgiler: öğe veya öznitelik değerinin şemada belirtilen varsayılan değerlerle elde edilip edilmeyeceğini belirtir. Bu, <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> sınıfının özelliğinin özelliği tarafından gösterilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> .  
   
-3. Tür açıklamaları: tür tanımları veya öğe ve öznitelik bildirimleri olabilecek şema bileşenlerine başvurular. Öğesinin <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> özelliği, geçerli <xref:System.Xml.XPath.XPathNavigator> ise düğümün belirli tür bilgilerini içerir. Bir düğümün geçerliliği bilinmiyorsa (örneğin, doğrulanıp daha sonra düzenlendiğinde). sonra <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> özellik olarak `null` ayarlanır, ancak <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> sınıf özelliğinin farklı özelliklerinden tür bilgisi hala kullanılabilir.  
+3. Tür açıklamaları: tür tanımları veya öğe ve öznitelik bildirimleri olabilecek şema bileşenlerine başvurular. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>Öğesinin özelliği, <xref:System.Xml.XPath.XPathNavigator> geçerli ise düğümün belirli tür bilgilerini içerir. Bir düğümün geçerliliği bilinmiyorsa (örneğin, doğrulanıp daha sonra düzenlendiğinde). sonra <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> özellik olarak ayarlanır, `null` ancak sınıf özelliğinin farklı özelliklerinden tür bilgisi hala kullanılabilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> <xref:System.Xml.XPath.XPathNavigator> .  
   
- Aşağıdaki örnek, <xref:System.Xml.XPath.XPathNavigator>tarafından kullanıma sunulan gönderi şeması doğrulama bilgi kümesindeki bilgilerin kullanımını gösterir.  
+ Aşağıdaki örnek, tarafından kullanıma sunulan gönderi şeması doğrulama bilgi kümesindeki bilgilerin kullanımını gösterir <xref:System.Xml.XPath.XPathNavigator> .  
   
 ```vb  
 Dim settings As XmlReaderSettings = New XmlReaderSettings()  
@@ -108,7 +108,7 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
 </books>  
 ```  
   
- Örnek ayrıca `books.xsd` şemayı giriş olarak alır.  
+ Örnek ayrıca `books.xsd` Şemayı giriş olarak alır.  
   
 ```xml  
 <xs:schema xmlns="http://www.contoso.com/books"
@@ -138,7 +138,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>ValueAs özelliklerini kullanarak yazılan değerleri Al  
- Bir düğümün yazılan değeri öğesinin <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> özelliğine erişerek alınabilir. <xref:System.Xml.XPath.XPathNavigator> Belirli durumlarda, bir düğümün türü belirlenmiş değerini farklı bir türe dönüştürmek isteyebilirsiniz. Ortak bir örnek, bir XML düğümünden sayısal bir değer almaya yönelik bir örnektir. Örneğin, aşağıdaki doğrulanmamış ve türsüz XML belgesini göz önünde bulundurun.  
+ Bir düğümün yazılan değeri <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> öğesinin özelliğine erişerek alınabilir <xref:System.Xml.XPath.XPathNavigator> . Belirli durumlarda, bir düğümün türü belirlenmiş değerini farklı bir türe dönüştürmek isteyebilirsiniz. Ortak bir örnek, bir XML düğümünden sayısal bir değer almaya yönelik bir örnektir. Örneğin, aşağıdaki doğrulanmamış ve türsüz XML belgesini göz önünde bulundurun.  
   
 ```xml  
 <books>  
@@ -150,9 +150,9 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 </books>  
 ```  
   
- <xref:System.Xml.XPath.XPathNavigator> <xref:System.String> <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> `10.00`Öğesi `null`üzerinde <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> , özelliği olur, özelliği olur ve özellik dize <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> `price`  
+ Öğesi üzerinde konumlandırılmışsa, özelliği olur, özelliği olur <xref:System.Xml.XPath.XPathNavigator> `price` <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> `null` <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> <xref:System.String> ve <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> özellik dize olur `10.00` .  
   
- Ancak,, <xref:System.Xml.XPath.XPathItem.ValueAs%2A>,, veya <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A> <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A> <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A> yöntemini ve özelliklerini kullanarak değeri sayısal bir değer olarak ayıklamak yine de mümkündür. Aşağıdaki örnek, <xref:System.Xml.XPath.XPathItem.ValueAs%2A> yöntemini kullanarak böyle bir tür dönüştürme işlemini gösterir.  
+ Ancak,,,, <xref:System.Xml.XPath.XPathItem.ValueAs%2A> <xref:System.Xml.XPath.XPathNavigator.ValueAsDouble%2A> <xref:System.Xml.XPath.XPathNavigator.ValueAsInt%2A> veya <xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A> yöntemini ve özelliklerini kullanarak değeri sayısal bir değer olarak ayıklamak yine de mümkündür. Aşağıdaki örnek, yöntemini kullanarak böyle bir tür dönüştürme işlemini gösterir <xref:System.Xml.XPath.XPathItem.ValueAs%2A> .  
   
 ```vb  
 Dim document As New XmlDocument()  

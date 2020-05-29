@@ -3,17 +3,18 @@ title: C# etkileşimli öğreticilerine giriş
 description: Tarayıcınızda C# öğrenin ve kendi geliştirme ortamınızı kullanmaya başlayın
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007708"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202428"
 ---
 # <a name="introduction-to-c"></a>C 'ye giriş\#
 
 C# öğreticilerine giriş konusuna hoş geldiniz. Bu dersler, tarayıcınızda çalıştırabileceğiniz etkileşimli kodla başlar. Bu etkileşimli dersleri başlatmadan önce [C# 101 video serisinde](https://aka.ms/dotnet3-csharp) c# temel bilgilerini öğrenebilirsiniz.
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 İlk dersler, kodun küçük kod parçacıklarını kullanarak C# kavramlarını açıklamaktadır. C# sözdiziminin temel bilgilerini ve dizeler, sayılar ve Boole değerleri gibi veri türleriyle nasıl çalışacağınızı öğreneceksiniz. Bu, tüm etkileşimlidir ve dakikalar içinde kod yazmak ve çalıştırmak isteyeceksiniz. Bu ilk dersler, programlama veya C# dilinin önceki bir bilgisine sahip olmadığını varsayar.

@@ -2,16 +2,16 @@
 title: Bağlantı Dizeleri
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 3f56a487121757706ef6b4dfd11fcd761657431a
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980242"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202273"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET içinde bağlantı dizeleri
 
-Bir bağlantı dizesi, veri sağlayıcısından bir veri kaynağına parametre olarak geçirilen başlatma bilgilerini içerir. Veri sağlayıcısı, <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> özelliğinin değeri olarak bağlantı dizesini alır. Sağlayıcı bağlantı dizesini ayrıştırır ve sözdiziminin doğru olduğundan ve anahtar sözcüklerin desteklendiğinden emin olmanızı sağlar. <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> yöntemi, ayrıştırılmış bağlantı parametrelerini veri kaynağına geçirir. Veri kaynağı daha fazla doğrulama gerçekleştirir ve bir bağlantı oluşturur.
+Bir bağlantı dizesi, veri sağlayıcısından bir veri kaynağına parametre olarak geçirilen başlatma bilgilerini içerir. Veri sağlayıcısı, bağlantı dizesini özelliğin değeri olarak alır <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> . Sağlayıcı bağlantı dizesini ayrıştırır ve sözdiziminin doğru olduğundan ve anahtar sözcüklerin desteklendiğinden emin olmanızı sağlar. Daha sonra <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> yöntemi, ayrıştırılmış bağlantı parametrelerini veri kaynağına geçirir. Veri kaynağı daha fazla doğrulama gerçekleştirir ve bir bağlantı oluşturur.
 
 ## <a name="connection-string-syntax"></a>Bağlantı dizesi sözdizimi
 
@@ -51,29 +51,29 @@ Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Her değer bir sonraki noktalı virgül veya dize sonuna kadar okunduğundan, ikinci örnekteki değer `a=b=c`ve son noktalı virgül isteğe bağlıdır.
+Her değer bir sonraki noktalı virgül veya dize sonuna kadar okunduğundan, ikinci örnekteki değer `a=b=c` ve son noktalı virgül isteğe bağlıdır.
 
-Tüm bağlantı dizeleri yukarıda açıklanan temel sözdizimini paylaşır. Tanınan anahtar sözcükler kümesi, sağlayıcıya bağlıdır ve *ODBC*gibi önceki API 'lerden yıllarca yaşmıştır. *SQL Server* (`SqlClient`) için *.NET Framework* veri sağlayıcısı, eski API 'lerden birçok anahtar sözcüğü destekler, ancak genellikle daha esnektir ve ortak bağlantı dizesi anahtar sözcüklerinin birçoğu için eş anlamlıları kabul eder.
+Tüm bağlantı dizeleri yukarıda açıklanan temel sözdizimini paylaşır. Tanınan anahtar sözcükler kümesi, sağlayıcıya bağlıdır ve *ODBC*gibi önceki API 'lerden yıllarca yaşmıştır. *SQL Server* () için *.NET Framework* veri sağlayıcısı `SqlClient` , eski API 'lerden birçok anahtar sözcüğü destekler, ancak genellikle daha esnektir ve ortak bağlantı dizesi anahtar sözcüklerinin birçoğu için eş anlamlıları kabul eder.
 
-Yazım hataları hatalara neden olabilir. Örneğin, `Integrated Security=true` geçerlidir, ancak `IntegratedSecurity=true` bir hataya neden olur.
+Yazım hataları hatalara neden olabilir. Örneğin, `Integrated Security=true` geçerlidir, ancak `IntegratedSecurity=true` hataya neden olur.
 
 Kimliği doğrulanmamış Kullanıcı girişinden, çalışma zamanında el ile oluşturulan bağlantı dizeleri, dize ekleme saldırılarına karşı savunmasız kalır ve veri kaynağındaki güvenliği tehlikeye at. Bu sorunları gidermek için, *ADO.NET* 2,0 her bir *.NET Framework* veri sağlayıcısı için [bağlantı dizesi oluşturucuları](connection-string-builders.md) sunmuştur. Bu bağlantı dizesi oluşturucuları, parametreleri kesin türü belirtilmiş özellikler olarak kullanıma sunar ve veri kaynağına gönderilmeden önce bağlantı dizesinin doğrulanmasını mümkün hale getirir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [Bağlantı dizesi oluşturucuları](connection-string-builders.md)\
-Çalışma zamanında geçerli bağlantı dizeleri oluşturmak için `ConnectionStringBuilder` sınıflarının nasıl kullanılacağını gösterir.
+`ConnectionStringBuilder`Çalışma zamanında geçerli bağlantı dizeleri oluşturmak için sınıfların nasıl kullanılacağını gösterir.
 
 [Bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md)\
 Yapılandırma dosyalarındaki bağlantı dizelerinin nasıl depolanacağını ve alınacağını gösterir.
 
 [Bağlantı dizesi sözdizimi](connection-string-syntax.md)\
-`SqlClient`, `OracleClient`, `OleDb`ve `Odbc`için sağlayıcıya özgü bağlantı dizelerinin nasıl yapılandırılacağını açıklar.
+,, Ve için sağlayıcıya özel bağlantı dizelerinin nasıl yapılandırılacağını `SqlClient` açıklar `OracleClient` `OleDb` `Odbc` .
 
 [Bağlantı bilgilerini koruma](protecting-connection-information.md)\
 Bir veri kaynağına bağlanmak için kullanılan bilgileri koruma tekniklerini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Kaynağına Bağlanma](/cpp/data/odbc/connecting-to-a-data-source)
+- [Bir veri kaynağına bağlanma](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

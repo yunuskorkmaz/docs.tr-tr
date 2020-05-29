@@ -3,12 +3,12 @@ title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761986"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202093"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -78,7 +78,7 @@ Proje dosyası:
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **MSBuild özelliği** | `ConcurrentGarbageCollection` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
-| **Ortam değişkeni** | `COMPlus_gcConcurrent` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
+| **Ortam değişkeni** | `COMPlus_gcConcurrent` | `1`-arka plan GC<br/>`0`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **.NET Framework için App. config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC |  |
 
 ### <a name="examples"></a>Örnekler

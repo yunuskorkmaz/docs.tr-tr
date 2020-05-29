@@ -6,22 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b6e6f2c4b28e9220727bf0fe1a958a7b69111571
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711096"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202157"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML Veri Türlerini Dönüştürme
-Bir **XmlConvert** sınıfında bulunan yöntemlerin çoğu, dizeler ve kesin türü belirtilmiş biçimler arasında veri dönüştürmek için kullanılır. Yöntemler yerel olarak bağımsızdır. Bu, dönüştürme yaparken herhangi bir yerel ayarı dikkate almaz demektir.  
+**XmlConvert** sınıfında bulunan yöntemlerin çoğu, dizeleri ve kesin belirlenmiş biçimleri arasında veri dönüştürmek için kullanılır. Yöntemler yerel olarak bağımsızdır. Bu, dönüştürme yaparken herhangi bir yerel ayarı dikkate almaz demektir.  
   
 ## <a name="reading-string-as-types"></a>Dize tür olarak okunuyor  
  Aşağıdaki örnek bir dize okur ve bunu bir **Tarih saat** türüne dönüştürür.  
   
  Aşağıdaki XML girişi verildi:  
   
- **Giriş**  
+ **Girdi**  
   
 ```xml  
 <Element>2001-02-27T11:13:23</Element>  
@@ -46,7 +46,7 @@ Console.WriteLine(vDateTime);
   
  Aşağıdaki XML girişi verildi:  
   
- **Giriş**  
+ **Girdi**  
   
 ```xml  
 <TestInt32>-2147483648</TestInt32>  

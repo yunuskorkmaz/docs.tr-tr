@@ -3,12 +3,12 @@ title: gRPC
 description: GRPC, bulutta yerel uygulamalardaki rolü ve HTTP ile gerçekleşen iletişimin nasıl farklı olduğunu öğrenin.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614051"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201327"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -42,7 +42,7 @@ gRPC, [protokol arabellekleri](https://developers.google.com/protocol-buffers/do
 Prototiparabelleği derleyicisi olan proto dosyasını kullanarak, `protoc` hedef platformunuz için hem istemci hem de hizmet kodu üretir. Kod aşağıdaki bileşenleri içerir:
 
 - İstemci ve hizmet tarafından paylaşılan, bir ileti için hizmet işlemlerini ve veri öğelerini temsil eden türü kesin belirlenmiş nesneler.
-- Uzak gRPC hizmetinin devralmasını ve uzatabtiği, gerekli ağ tesisat gerektiren, kesin olarak belirtilmiş bir temel sınıf.
+- Uzak gRPC hizmetinin devralmasını ve uzatabtiği, gerekli ağ tesisat gerektiren, türü kesin belirlenmiş bir temel sınıf.
 - Uzak gRPC hizmetini çağırmak için gereken sıhhi tesisat 'yi içeren bir istemci saplaması.
 
 Çalışma zamanında, her ileti standart bir Prototipme temsili olarak serileştirilir ve istemci ile uzak hizmet arasında değiş tokuş yapılır. JSON veya XML 'den farklı olarak, prototipli mesajlar derlenmiş ikili bayt olarak serileştirilir.
@@ -83,7 +83,7 @@ GRPC 'yi aşağıdaki senaryolar için tercih edin:
 
 Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcıların çoğu, ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya Blazor WebAssembly teknolojileriyle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [erken bir girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır. [.Net Için GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
 
-- Kesin tür belirtilmiş kod tarafından oluşturulan istemciler
+- Türü kesin belirlenmiş, kod tarafından oluşturulan istemciler
 - Küçük mesajlar
 - Sunucu akışı
 

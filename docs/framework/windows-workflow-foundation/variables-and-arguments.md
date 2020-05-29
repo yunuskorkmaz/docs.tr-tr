@@ -3,12 +3,12 @@ title: Değişkenler ve Bağımsız Değişkenler
 description: Bu makalede, veri depolamayı temsil eden değişkenler ve Iş akışı temeli içindeki bir etkinliğe/içinden veri akışını temsil eden bağımsız değişkenler açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421312"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201953"
 ---
 # <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler
 Windows Workflow Foundation (WF) içinde, değişkenler verilerin ve bağımsız değişkenlerin depolanmasını temsil eder. Etkinliğin bir dizi bağımsız değişkeni vardır ve etkinliğin imzasını yapar. Ayrıca, bir etkinlik, bir geliştiricinin iş akışının tasarımı sırasında değişkenler ekleyebileceği veya kaldırabileceği değişkenlerin bir listesini de koruyabilir. Bir bağımsız değişken, bir değer döndüren bir ifade kullanılarak bağlanır.  

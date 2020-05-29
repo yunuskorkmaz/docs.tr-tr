@@ -2,28 +2,28 @@
 title: Entity SQL’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4fe852847d8b1b4bc0b80e3ba8e1f5b4aae9ff7
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150382"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202256"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL’e Genel Bakış
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]Varlık Çerçevesi'ndeki kavramsal modelleri sorgulamanızı sağlayan SQL benzeri bir dildir. Kavramsal modeller verileri varlıklar ve ilişkiler [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olarak temsil ediyor ve bu varlıkları ve ilişkileri SQL kullananlara tanıdık bir biçimde sorgulamanızı sağlar.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)], Entity Framework kavramsal modelleri sorgulamanızı sağlayan bir SQL benzeri dildir. Kavramsal modeller verileri varlıklar ve ilişkiler olarak temsil eder ve [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bu varlıkları ve ılışkılerı SQL kullanan kullanıcılara tanıdık bir biçimde sorgulamanızı sağlar.  
 
- Varlık Çerçevesi, genel [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olarak depolamaya özgü sorgulara çevirmek için depolamaya özgü veri sağlayıcılarıyla birlikte çalışır. EntityClient sağlayıcısı, bir varlık [!INCLUDE[esql](../../../../../../includes/esql-md.md)] modeline karşı bir komut yürütmek ve skaler sonuçlar, sonuç kümeleri ve nesne grafikleri de dahil olmak üzere zengin veri türlerini döndürmek için bir yol sağlar. Nesneleri oluşturduğunuzda, <xref:System.Data.EntityClient.EntityCommand> [!INCLUDE[esql](../../../../../../includes/esql-md.md)] <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> bir sorgu dizesi atayarak depolanmış yordam adı veya sorgu metnini belirtebilirsiniz. Bir <xref:System.Data.EntityClient.EntityDataReader> EDM'ye karşı <xref:System.Data.EntityClient.EntityCommand> bir uygulamanın sonuçlarını ortaya çıkarır. Döndüren komutu <xref:System.Data.EntityClient.EntityDataReader>yürütmek <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>için , çağrı .  
+ Entity Framework, genel olarak depolamaya özgü sorgulara çevirmek için depolama 'ya özgü veri sağlayıcılarıyla birlikte kullanılabilir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . EntityClient sağlayıcısı bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] varlık modeline karşı bir komut yürütmek ve skaler sonuçlar, sonuç kümeleri ve nesne grafikleri dahil zengin veri türlerini döndürmek için bir yol sağlar. <xref:System.Data.EntityClient.EntityCommand>Nesneleri oluştururken, özelliğine bir sorgu dizesi atayarak bir saklı yordam adı veya bir sorgu metni belirtebilirsiniz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> . , <xref:System.Data.EntityClient.EntityDataReader> BIR EDM için yürütme sonuçlarını sunar <xref:System.Data.EntityClient.EntityCommand> . Öğesini döndüren komutunu yürütmek için <xref:System.Data.EntityClient.EntityDataReader> çağrısı yapın <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> .  
   
- EntityClient sağlayıcısına ek olarak, Entity Framework, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorguları kavramsal bir modele karşı yürütmek ve verileri varlık türlerinin örnekleri olan güçlü bir şekilde yazılan CLR nesneleri olarak döndürmek için kullanmanıza olanak tanır. Daha fazla bilgi için [bkz.](../working-with-objects.md)  
+ EntityClient sağlayıcısına ek olarak Entity Framework, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorguları kavramsal bir modele karşı yürütmek ve verileri varlık türlerinin örnekleri olan kesin türü BELIRTILMIŞ clr nesneleri olarak döndürmek için kullanmanıza olanak sağlar. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).  
   
- Bu bölümde. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]  
+ Bu bölüm hakkında kavramsal bilgiler sağlar [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Entity SQL ile Transact-SQL Arasındaki Farklar](how-entity-sql-differs-from-transact-sql.md)  
   
  [Entity SQL Hızlı Başvurusu](entity-sql-quick-reference.md)  
   
- [Tür Sistemi](type-system-entity-sql.md)  
+ [Tür sistemi](type-system-entity-sql.md)  
   
  [Tür Tanımları](type-definitions-entity-sql.md)  
   
@@ -35,13 +35,13 @@ ms.locfileid: "79150382"
   
  [Tanımlayıcılar](identifiers-entity-sql.md)  
   
- [Parametre](parameters-entity-sql.md)  
+ [Parametreler](parameters-entity-sql.md)  
   
  [Değişkenler](variables-entity-sql.md)  
   
  [Desteklenmeyen İfadeler](unsupported-expressions-entity-sql.md)  
   
- [Sabit değerler](literals-entity-sql.md)  
+ [Değişmez Değerler](literals-entity-sql.md)  
   
  [Null Değişmez Değerler ve Tür Çıkarımı](null-literals-and-type-inference-entity-sql.md)  
   
@@ -49,9 +49,9 @@ ms.locfileid: "79150382"
   
  [Sorgu İfadeleri](query-expressions-entity-sql.md)  
   
- [Işlev](functions-entity-sql.md)  
+ [İşlevler](functions-entity-sql.md)  
   
- [İşleç Önceliği](operator-precedence-entity-sql.md)  
+ [İşleç önceliği](operator-precedence-entity-sql.md)  
   
  [Sayfalama](paging-entity-sql.md)  
   

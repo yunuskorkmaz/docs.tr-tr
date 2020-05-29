@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 780a2c7fe240ed624ff106e8157661f8b76b32bd
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212184"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202367"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme
 
@@ -15,7 +15,7 @@ URL ayırması, URL 'lerden veya URL kümesinden ileti alabilen kişileri kısı
   
  Varsayılan işletim sistemi yapılandırması kapsamında, Windows Communication Foundation (WCF), tüm kullanıcıların çift yönlü iletişim için çift HTTP bağlaması kullanan uygulamaları çalıştırmasını sağlamak üzere 80 numaralı bağlantı noktası için genel olarak erişilebilen bir ayırma oluşturur. Bu ayırmayla ilgili ACL herkes için olduğundan, yöneticiler bir URL 'yi veya URL kümesini dinlemek için açıkça izin vermeyebilir veya izin vermez. Bu konu, bu ayırmayı silmenin yanı sıra kısıtlı ACL ile ayırmayı yeniden oluşturmayı açıklar.  
   
-Windows Vista veya Windows Server 2008 ' de, `netsh http show urlacl`girerek yükseltilmiş bir komut isteminden HTTP URL ayırmalarını görüntüleyebilirsiniz. Aşağıdaki örnek, bir WCF URL ayırmasını şuna benzemesi gerektiğini gösterir:
+Windows Vista veya Windows Server 2008 ' de, bir yükseltilmiş komut isteminden HTTP URL ayırmaları ' i girerek görüntüleyebilirsiniz `netsh http show urlacl` . Aşağıdaki örnek, bir WCF URL ayırmasını şuna benzemesi gerektiğini gösterir:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -31,7 +31,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin, **Donatılar**' a tıklayın, **komut istemi** ' ne sağ tıklayın ve açılan bağlam menüsünde **yönetici olarak çalıştır** ' a tıklayın. Kullanıcı hesabı denetimi (UAC) penceresinde, devam etmek için izinleri sorabileceğiniz **devam** ' a tıklayın.  
   
-2. Komut istemi penceresinde **netsh http Delete urlacl URL =http://+:80/Temporary_Listen_Addresses/** yazın.  
+2. `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/`Komut istemi penceresine yazın.  
   
 3. Ayırma başarıyla silinirse, aşağıdaki ileti görüntülenir. **URL ayırması başarıyla silindi**  
   
@@ -42,7 +42,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin, **Donatılar**' a tıklayın, **komut istemi** ' ne sağ tıklayın ve açılan bağlam menüsünde **yönetici olarak çalıştır** ' a tıklayın. Kullanıcı hesabı denetimi (UAC) penceresinde, devam etmek için izinleri sorabileceğiniz **devam** ' a tıklayın.  
   
-2. **Net localgroup "\<güvenlik grubu adı >"/Comment: "\<güvenlik grubu açıklaması >"/Add** komut isteminde yazın. **\<güvenlik grubu adı >** , oluşturmak istediğiniz güvenlik grubunun adı ve güvenlik grubu **açıklaması >\<** güvenlik grubu için uygun bir açıklama ile değiştirin.  
+2. `net localgroup "<security group name>" /comment:"<security group description>" /add`Komut istemine yazın. **\<security group name>** Oluşturmak istediğiniz güvenlik grubunun adıyla ve **\<security group description>** güvenlik grubu için uygun bir açıklamayla değiştirme.  
   
 3. Güvenlik grubu başarıyla oluşturulursa, aşağıdaki ileti görüntülenir. **Komut başarıyla tamamlandı.**  
   
@@ -56,6 +56,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin, **Donatılar**' a tıklayın, **komut istemi** ' ne sağ tıklayın ve açılan bağlam menüsünde **yönetici olarak çalıştır** ' a tıklayın. Kullanıcı hesabı denetimi (UAC) penceresinde, devam etmek için izinleri sorabileceğiniz **devam** ' a tıklayın.  
   
-2. **Netsh http Add urlacl URL =http://+:80/Temporary_Listen_Addresses/ user = "\< makine adı >\\ < güvenlik grubu adı\>** komut istemine yazın. **\<makine adı >** , grubun oluşturulması gereken bilgisayar adıyla ve **güvenlik grubu adı >\<** daha önce oluşturduğunuz güvenlik grubunun adıyla değiştirin.  
+2. `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>`Komut istemine yazın. **\<machine name>** Grubun oluşturulması gereken bilgisayar adıyla ve **\<security group name>** daha önce oluşturduğunuz güvenlik grubunun adıyla değiştirme.  
   
 3. Rezervasyon başarıyla oluşturulursa, aşağıdaki ileti görüntülenir. **URL ayırması başarıyla eklendi**.

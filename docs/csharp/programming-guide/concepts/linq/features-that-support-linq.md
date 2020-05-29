@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635801"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202403"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 
-Aşağıdaki bölümde C# 3.0'da tanıtılan yeni dil yapıları tanıtılır. Bu yeni özelliklerin tümü LINQ sorgularında bir dereceye kadar kullanılsa da, linq ile sınırlı değildir ve bunları yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
+Aşağıdaki bölümde C# 3,0 ' de tanıtılan yeni dil yapıları tanıtılmaktadır. Bu yeni özelliklerin tümü LINQ sorgularıyla bir dereceye kadar kullanılsa da, LINQ ile sınırlı değildir ve yararlı bulduğunuz herhangi bir bağlamda kullanılabilir.
 
 ## <a name="query-expressions"></a>Sorgu İfadeleri
 
-Sorgu ifadeleri, Tamamlanamayan koleksiyonlar üzerinde sorgulamak için SQL veya XQuery'ye benzer bir bildirim sözdizimi kullanır. Derleme zaman sorgu sözdizimi, bir LINQ sağlayıcısının standart sorgu işleci uzantısı yöntemlerini uygulamasına yöntem çağrılarına dönüştürülür. Uygulamalar, bir `using` yönergeyle uygun ad alanını belirterek kapsamda olan standart sorgu işleçlerini denetler. Aşağıdaki sorgu ifadesi bir dizi dize alır, dizedeki ilk karaktere göre gruplanır ve grupları emreder.
+Sorgu ifadeleri, IEnumerable koleksiyonlarını sorgulamak için SQL veya XQuery ile benzer bir bildirime dayalı sözdizimi kullanır. Derleme zamanı sorgu söz dizimi, bir LINQ sağlayıcısının standart sorgu işleci genişletme yöntemlerinin uygulamasına yönelik yöntem çağrılarına dönüştürülür. Uygulamalar, uygun ad alanını bir yönergeyle belirterek kapsamdaki standart sorgu işleçlerini denetler `using` . Aşağıdaki sorgu ifadesi bir dize dizisi alır, bunları dizedeki ilk karaktere göre gruplandırır ve grupları sıralar.
 
 ```csharp
 var query = from str in stringArray
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Daha fazla bilgi için [LINQ Sorgu İfadeleri'ne](../../../linq/index.md)bakın.
+Daha fazla bilgi için bkz. [LINQ sorgu ifadeleri](../../../linq/index.md).
 
-## <a name="implicitly-typed-variables-var"></a>Örtülü Olarak Yazılan Değişkenler (var)
+## <a name="implicitly-typed-variables-var"></a>Örtük olarak yazılan değişkenler (var)
 
-Bir değişkeni beyan ve başharfe çevirirken bir türü açıkça belirtmek yerine, burada gösterildiği gibi derleyiciye türü çıkartmasını ve atamasını bildirmek için [var](../../../language-reference/keywords/var.md) değiştiricisini kullanabilirsiniz:
+Bir değişkeni bildirdiğinizde ve başlattığınızda açıkça bir tür belirtmek yerine, derleyicinin türü çıkarması ve atamasını bildirmek için, burada gösterildiği gibi [var](../../../language-reference/keywords/var.md) değiştiricisini kullanabilirsiniz:
 
 ```csharp
 var number = 5;
@@ -40,19 +40,19 @@ var query = from str in stringArray
             select str;
 ```
 
-Olarak `var` bildirilen değişkenler, türünü açıkça belirttiğiniz değişkenler kadar güçlü bir şekilde yazılır. Kullanımı, `var` anonim türleri oluşturmayı mümkün kılar, ancak yalnızca yerel değişkenler için kullanılabilir. Diziler de örtülü yazarak ilan edilebilir.
+Olarak belirtilen değişkenler `var` , türü açıkça belirttiğiniz değişkenler olarak kesin şekilde türdedir. Öğesinin kullanımı `var` anonim türler oluşturmayı mümkün kılar, ancak yalnızca yerel değişkenler için kullanılabilir. Diziler, örtük yazma ile de bildirilemez.
 
-Daha fazla bilgi için [bkz.](../../classes-and-structs/implicitly-typed-local-variables.md)
+Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 ## <a name="object-and-collection-initializers"></a>Nesne ve Koleksiyon Başlatıcıları
 
-Nesne ve koleksiyon başharfleri, nesne için açıkça bir oluşturucu çağırmadan nesneleri başlatmayı mümkün kılar. Başlangıç layıcılar genellikle kaynak verileri yeni bir veri türüne yansıttığında sorgu ifadelerinde kullanılır. Ortak `Name` ve `Phone` `Customer` özellikleri ile adlı bir sınıf varsayarsak, nesne baş harfizer aşağıdaki kod olarak kullanılabilir:
+Nesne ve koleksiyon başlatıcıları nesne için bir oluşturucu açıkça çağrılmadan nesneleri başlatmayı mümkün hale getirir. Başlatıcılar, genellikle, kaynak verileri yeni bir veri türüne proje yaparken sorgu ifadelerinde kullanılır. Public ve Properties ile adlandırılmış bir sınıf varsayıldığında `Customer` `Name` `Phone` , nesne Başlatıcısı aşağıdaki kodda olduğu gibi kullanılabilir:
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
-Sınıfımıza `Customer` devam ederek, "büyük" adlı `IncomingOrders`bir veri kaynağı olduğunu ve `OrderSize`her sipariş için bu `Customer` siparişten yeni bir tabanlı oluşturmak istediğimizi varsayalım. Bir LINQ sorgusu bu veri kaynağında yürütülebilir ve bir koleksiyonu doldurmak için nesne başlatmayı kullanabilir:
+Sınıfımızla devam ederek, `Customer` adlı bir veri kaynağı olduğunu `IncomingOrders` ve her sıra büyük bir sipariş için bu `OrderSize` sırada yeni bir temel oluşturmak istiyoruz `Customer` . Bir LINQ sorgusu bu veri kaynağında yürütülebilir ve bir koleksiyonu doldurarak nesne başlatma işlemi kullanılabilir:
 
 ```csharp
 var newLargeOrderCustomers = from o in IncomingOrders
@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-Veri kaynağı, başlık `Customer` altında sınıf , `OrderSize`ancak nesne başlatma ile, sorgudan döndürülen veri istenilen veri türüne kalıplanmış daha fazla özelliklere sahip olabilir; sınıfımızla ilgili verileri seçeriz. Sonuç olarak, şimdi istediğimiz `IEnumerable` yeni `Customer`s ile dolu bir var. Yukarıdaki ler LINQ'nin yöntem sözdiziminde de yazılabilir:
+Veri kaynağı, gibi bir sınıftan çok daha fazla özelliğe sahip olabilir `Customer` `OrderSize` , ancak nesne başlatma ile sorgudan döndürülen veriler istenen veri türüne kopyalanır; sınıfımızla ilgili verileri seçiyoruz. Sonuç olarak, şimdi `IEnumerable` `Customer` yaptığımız yeni s 'leri doldurduk. Yukarıdaki, LINQ yöntem sözdiziminde de yazılabilir:
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
@@ -74,32 +74,32 @@ Daha fazla bilgi için bkz.
 
 ## <a name="anonymous-types"></a>Anonim Türler
 
-Anonim bir tür derleyici tarafından oluşturulur ve tür adı yalnızca derleyici için kullanılabilir. Adsız türler, ayrı bir adlandırılmış tür tanımlamak zorunda kalmadan, bir dizi özelliği geçici olarak sorgu sonucuna gruplandırmak için kullanışlı bir yol sağlar. Anonim türleri burada gösterildiği gibi, yeni bir ifade ve bir nesne baş harfi ile baş harfe
+Anonim bir tür derleyici tarafından oluşturulur ve tür adı yalnızca derleyici tarafından kullanılabilir. Anonim türler, farklı bir adlandırılmış tür tanımlamak zorunda kalmadan bir özellik kümesini geçici olarak bir sorgu sonucuyla gruplamak için kullanışlı bir yol sağlar. Anonim türler aşağıda gösterildiği gibi yeni bir ifadeyle ve bir nesne başlatıcısıyla başlatılır:
 
 ```csharp
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-Daha fazla bilgi için [Bkz. Anonim Türler.](../../classes-and-structs/anonymous-types.md)
+Daha fazla bilgi için bkz. [anonim türler](../../classes-and-structs/anonymous-types.md).
 
-## <a name="extension-methods"></a>Genişletme Yöntemleri
+## <a name="extension-methods"></a>Uzantı Metotları
 
-Uzantı yöntemi, bir türle ilişkilendirilebilen statik bir yöntemdir, böylece türüzerinde bir örnek yöntemi yatılabilir. Bu özellik, gerçekte, gerçekte bunları değiştirmeden varolan türlere yeni yöntemler "eklemek" sağlar. Standart sorgu işleçleri, linq sorgusu işlevselliği sağlayan bir uzantı yöntemi kümesidir. <xref:System.Collections.Generic.IEnumerable%601>
+Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, uygulayan herhangi bir tür için LINQ sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir <xref:System.Collections.Generic.IEnumerable%601> .
 
-Daha fazla bilgi için [Uzantı Yöntemleri'ne](../../classes-and-structs/extension-methods.md)bakın.
+Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Lambda İfadeleri
 
-Lambda ifadesi, giriş parametrelerini işlev gövdesinden ayırmak için => işleci kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır dışı işlevdir. LINQ programlamada, standart sorgu işleçlerine doğrudan yöntem aramaları yaptığınızda lambda ifadelerle karşılaşırsınız.
+Lambda ifadesi, işlev gövdesinden giriş parametrelerini ayırmak için => işlecini kullanan ve derleme zamanında bir temsilciye veya bir ifade ağacına dönüştürülebilen bir satır içi işlevdir. LINQ programlamada, standart sorgu işleçleri için doğrudan Yöntem çağrıları yaptığınızda lambda ifadeleriyle karşılaşacaksınız.
 
 Daha fazla bilgi için bkz.
 
-- [Anonim Fonksiyonlar](../../statements-expressions-operators/anonymous-functions.md)
+- [Anonim Işlevler](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda İfadeler](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda Ifadeleri](../../statements-expressions-operators/lambda-expressions.md)
 
-- [İfade Ağaçları (C#)](../expression-trees/index.md)
+- [İfade ağaçları (C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil-Tümleşik Sorgu (LINQ) (C#)](./index.md)
+- [Dil ile tümleşik sorgu (LINQ) (C#)](./index.md)

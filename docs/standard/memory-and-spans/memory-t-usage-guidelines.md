@@ -5,14 +5,14 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380008"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201934"
 ---
-# <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T > ve Span\<T > kullanım yönergeleri
+# <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> ve Span\<T> kullanım yönergeleri
 
 .NET Core, belleğin rastgele bir bitişik bölgesini temsil eden bir dizi tür içerir. .NET Core 2,0 <xref:System.Span%601> <xref:System.ReadOnlySpan%601> , yönetilen veya yönetilmeyen bellekle desteklenen basit bellek arabellekleri olan ve tarafından kullanıma sunulmuştur. Bu türler yalnızca yığında depolanabileceğinden, zaman uyumsuz yöntem çağrıları dahil olmak üzere çok sayıda senaryo için uygun değildir. .NET Core 2,1,,, ve dahil olmak üzere çeşitli ek türler ekler <xref:System.Memory%601> <xref:System.ReadOnlyMemory%601> <xref:System.Buffers.IMemoryOwner%601> <xref:System.Buffers.MemoryPool%601> . Benzer <xref:System.Span%601> şekilde <xref:System.Memory%601> ve ilgili türleri hem yönetilen hem de yönetilmeyen bellekle desteklenir. Aksine <xref:System.Span%601> , <xref:System.Memory%601> yönetilen yığında depolanabilir.
 
@@ -65,7 +65,7 @@ Arabellek iki tüketiciye sahiptir `WriteInt32ToBuffer` ve `DisplayBufferToConso
 
 Yöntemi, `WriteInt32ToBuffer` yöntem çağrısının başlangıcı ve yöntemin döndürdüğü zaman arasındaki arabelleği (tüketebilir) üzerinde bir kira içerir. Benzer şekilde, `DisplayBufferToConsole` yürütülürken arabellekte bir kiralama vardır ve kira yöntemi zaman içinde serbest bırakılır. (Kiralama Yönetimi için bir API yoktur; "Kira" kavramsal bir kavramdır.)
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Bellek \< T> ve sahip/tüketici modeli
+## <a name="memoryt-and-the-ownerconsumer-model"></a>Bellek \<T> ve sahip/tüketici modeli
 
 [Sahipler, tüketiciler ve ömür yönetimi](#owners-consumers-and-lifetime-management) bölümünde, bir arabelleğin her zaman bir sahibi vardır. .NET Core iki sahiplik modelini destekler:
 
@@ -73,7 +73,7 @@ Yöntemi, `WriteInt32ToBuffer` yöntem çağrısının başlangıcı ve yöntemi
 
 - Sahiplik aktarımını destekleyen bir model. Bir arabelleğin sahipliği, özgün sahibinden (Oluşturucu) başka bir bileşene aktarılabilir ve bu da arabelleğin yaşam süresi yönetiminden sorumludur. Bu sahip, sahipliği başka bir bileşene aktarabilir ve bu şekilde devam eder.
 
-<xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>Bir arabelleğin sahipliğini açıkça yönetmek için arabirimini kullanırsınız. <xref:System.Buffers.IMemoryOwner%601>Her iki sahiplik modelini destekler. Bir başvurusuna sahip olan bileşen <xref:System.Buffers.IMemoryOwner%601> , arabelleğe aittir. Aşağıdaki örnek, bir <xref:System.Buffers.IMemoryOwner%601?> arabelleğin sahipliğini yansıtmak için bir örneği kullanır <xref:System.Memory%601> .
+<xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>Bir arabelleğin sahipliğini açıkça yönetmek için arabirimini kullanırsınız. <xref:System.Buffers.IMemoryOwner%601>Her iki sahiplik modelini destekler. Bir başvurusuna sahip olan bileşen <xref:System.Buffers.IMemoryOwner%601> , arabelleğe aittir. Aşağıdaki örnek, <xref:System.Buffers.IMemoryOwner%601?> bir arabelleğin sahipliğini yansıtmak için bir örneği kullanır <xref:System.Memory%601> .
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
@@ -87,9 +87,9 @@ Bu kodda:
 
 - `WriteInt32ToBuffer`Ve `DisplayBufferToConsole` yöntemleri <xref:System.Memory%601> ortak bir API olarak kabul eder. Bu nedenle, arabelleğin tüketicilerinden oluşur. Ve tek seferde yalnızca bir tane tüketir.
 
-Yöntemi, `WriteInt32ToBuffer` arabelleğe bir değer yazmaya yönelik olarak düşünülse de `DisplayBufferToConsole` yöntem değildir. Bunu yansıtmak için, türünde bir bağımsız değişkeni kabul etmiş olabilir <xref:System.ReadOnlyMemory%601> . Hakkında daha fazla bilgi için <xref:System.ReadOnlyMemory%601> bkz. [Kural #2: \< \< arabelleğin Salt-okunabilir olması gerekiyorsa, readonlyspan t> veya readonlymemory t> kullanın](#rule-2).
+Yöntemi, `WriteInt32ToBuffer` arabelleğe bir değer yazmaya yönelik olarak düşünülse de `DisplayBufferToConsole` yöntem değildir. Bunu yansıtmak için, türünde bir bağımsız değişkeni kabul etmiş olabilir <xref:System.ReadOnlyMemory%601> . Hakkında daha fazla bilgi için <xref:System.ReadOnlyMemory%601> bkz. [Kural #2: \<T> \<T> arabelleğin Salt-okunabilir olması gerekiyorsa Readonlyspan veya readonlymemory kullanın](#rule-2).
 
-### <a name="ownerless-memoryt-instances"></a>"OwnerLeSs" bellek \< T> örnekleri
+### <a name="ownerless-memoryt-instances"></a>"OwnerLeSs" bellek \<T> örnekleri
 
 Kullanmadan bir örnek oluşturabilirsiniz <xref:System.Memory%601> <xref:System.Buffers.IMemoryOwner%601> . Bu durumda, arabelleğin sahipliği açık yerine örtük olur ve yalnızca tek sahip modeli desteklenir. Bunu şu şekilde yapabilirsiniz:
 
@@ -113,9 +113,9 @@ Bir bellek bloğunun sahibi olduğu, ancak bazıları aynı anda belirli bir bel
 
 Aşağıdakiler ve ilgili türleri başarıyla kullanılarak önerimlerimiz aşağıda verilmiştir <xref:System.Memory%601> . İçin geçerli olan <xref:System.Memory%601> ve <xref:System.Span%601> Ayrıca <xref:System.ReadOnlyMemory%601> , <xref:System.ReadOnlySpan%601> açıkça aksi belirtilmedikçe ve için geçerli olan rehberlik.
 
-**Kural #1: zaman uyumlu bir API Için, \< \< Mümkünse bir parametre olarak> bellek t yerine> span t kullanın.**
+**Kural #1: zaman uyumlu bir API Için mümkünse, \<T> bellek yerine span kullanın \<T> .**
 
-<xref:System.Span%601>daha çok daha hızlıdır <xref:System.Memory%601> ve çok sayıda bitişik bellek arabelleğini temsil edebilir. <xref:System.Span%601>Ayrıca, daha iyi performans sunar <xref:System.Memory%601> . Son olarak, <xref:System.Memory%601.Span?displayProperty=nameWithType> özelliği <xref:System.Memory%601> bir örneği bir örneğine dönüştürmek için kullanabilirsiniz <xref:System.Span%601> , ancak \< t>-bellek \< t> dönüştürme mümkün olmaz. Bu nedenle, arayanların bir örneği varsa <xref:System.Memory%601> , yöntemlerinizi <xref:System.Span%601> yine de parametrelerle çağırabileceksiniz.
+<xref:System.Span%601>daha çok daha hızlıdır <xref:System.Memory%601> ve çok sayıda bitişik bellek arabelleğini temsil edebilir. <xref:System.Span%601>Ayrıca, daha iyi performans sunar <xref:System.Memory%601> . Son olarak, <xref:System.Memory%601.Span?displayProperty=nameWithType> özelliği bir örneği dönüştürmek için kullanabilirsiniz, ancak bu, noktadan <xref:System.Memory%601> <xref:System.Span%601> \<T> belleğe \<T> dönüştürme mümkün değildir. Bu nedenle, arayanların bir örneği varsa <xref:System.Memory%601> , yöntemlerinizi <xref:System.Span%601> yine de parametrelerle çağırabileceksiniz.
 
 Türü yerine türünde bir parametre kullanılması <xref:System.Span%601> <xref:System.Memory%601> , doğru bir tüketen Yöntem uygulamasını yazmanıza de yardımcı olur. Metodun kira süresinin ötesinde (daha sonra bu konuda daha fazla) arabelleğe erişmeye girişdiğinizden emin olmak için otomatik olarak derleme zamanı denetimleri alacaksınız.
 
@@ -123,7 +123,7 @@ Bazen, <xref:System.Memory%601> <xref:System.Span%601> tam olarak zaman uyumlu o
 
 <a name="rule-2" />
 
-**Kural #2: \< \< arabelleğin Salt okunabilir olması gerekiyorsa ReadOnlySpan t> veya ReadOnlyMemory t> kullanın.**
+**Kural #2: \<T> \<T> arabelleğin Salt okunabilir olması gerekiyorsa ReadOnlySpan veya ReadOnlyMemory kullanın.**
 
 Önceki örneklerde `DisplayBufferToConsole` Yöntem yalnızca arabellekten okur; arabelleğin içeriğini değiştirmez. Yöntem imzası aşağıdaki şekilde değiştirilmelidir.
 
@@ -139,7 +139,7 @@ void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 
 `DisplayBufferToConsole`Yöntemi artık hemen her arabellek türü kodlamalardaki: `T[]` , [stackalloc](../../csharp/language-reference/operators/stackalloc.md)ile ayrılmış depolama ve benzeri ile çalışmaktadır. Hatta doğrudan ' a geçirebilirsiniz <xref:System.String> !
 
-**Kural #3: yönteminiz \< , bellek t> ve döndürürse `void` , \< yönteminizin döndürdüğü bir bellek t> örneğini kullanmamalıdır.**
+**Kural #3: yönteminizin belleği \<T> ve geri dönerse `void` , yönteminizin döndürdüğü bir bellek örneğini kullanmanız gerekir \<T> .**
 
 Bu, daha önce bahsedilen "Kira" kavramıyla ilgilidir. Örnek üzerinde void döndüren bir yöntemin kirası, <xref:System.Memory%601> Yöntem girildiğinde başlar ve Yöntem çıktığında sonlanır. `Log`Bir döngüde konsolundan gelen giriş temelinde çağıran aşağıdaki örneği göz önünde bulundurun.
 
@@ -173,7 +173,7 @@ Bu sorunu çözmek için birkaç yol vardır:
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 
-**Kural #4: yönteminiz bir bellek \< t> kabul eder ve bir görevi döndürürse, \< görev bir Terminal durumuna geçirdikten sonra bellek t> örneğini kullanmanız gerekir.**
+**Kural #4: yönteminiz bir belleği kabul eder \<T> ve bir görevi döndürürse, \<T> görev, bir Terminal durumuna geçtikten sonra bellek örneğini kullanmamalıdır.**
 
 Bu yalnızca kural #3 zaman uyumsuz bir değişkendir. `Log`Önceki örnekteki yöntem bu kurala uymak için aşağıdaki gibi yazılabilir:
 
@@ -183,7 +183,7 @@ Burada "Terminal durumu", görevin tamamlanmış, hatalı veya iptal edilmiş du
 
 Bu kılavuz,,, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.ValueTask%601> veya benzer bir tür döndüren yöntemler için geçerlidir.
 
-**Kural #5: oluşturucunuz \< bir parametre olarak bellek t> kabul ediyorsa, oluşturulan nesnedeki örnek yöntemlerinin, bellek t> örneğinin tüketicileri olduğu varsayılır \< .**
+**Kural #5: Oluşturucu belleği \<T> bir parametre olarak kabul ediyorsa, oluşturulan nesnedeki örnek yöntemlerinin, bellek örneğinin tüketicileri olduğu varsayılır \<T> .**
 
 Aşağıdaki örneği inceleyin:
 
@@ -206,7 +206,7 @@ void PrintAllOddValues(ReadOnlyMemory<int> input)
 
 Burada Oluşturucu bir `OddValueExtractor` `ReadOnlyMemory<int>` Oluşturucu parametresi olarak kabul eder, bu nedenle oluşturucunun kendisi `ReadOnlyMemory<int>` Örneğin bir tüketicisidir ve döndürülen değer içindeki tüm örnek yöntemleri de orijinal Örneğin tüketicisidir `ReadOnlyMemory<int>` . Bu, `TryReadNextOddValue` `ReadOnlyMemory<int>` Örneğin, örnek doğrudan yöntemine geçirilmese de örneği tükettiği anlamına gelir `TryReadNextOddValue` .
 
-**Kural #6: türinizde ayarlanabilir bir> bellek \< (veya eşdeğer bir örnek yöntemi) varsa, söz konusu nesnedeki örnek yöntemleri bellek t> örneğinin tüketicileri olduğu varsayılır \< .**
+**Kural #6: türinizde ayarlanabilir bir bellek \<T> türü Özellik (veya eşdeğer bir örnek yöntemi) varsa, söz konusu nesnedeki örnek yöntemleri bellek örneğinin tüketicileri olduğu varsayılır \<T> .**
 
 Bu, yalnızca kural #5 bir değişkendir. Bu kural, özellik ayarlayıcıları veya eşdeğer Yöntemler girdilerini yakalama ve kalıcı hale getirilemediği için vardır, bu nedenle aynı nesne üzerindeki örnek yöntemleri yakalanan durumu kullanabilir.
 
@@ -226,7 +226,7 @@ class Person
 }
 ```
 
-**Kural #7: bir ımemoryowner \< T> başvurunuz varsa, bu dosyanın bir noktası atılmalıdır veya sahipliğini (her ikisi de değil) aktarırsınız.**
+**Kural #7: bir ımemoryowner \<T> başvurunuz varsa, bu dosyanın bir noktasını atmaya veya sahipliğini aktarmaya (her ikisi değil) sahip olmanız gerekir.**
 
 Bir <xref:System.Memory%601> örnek yönetilen veya yönetilmeyen bellek tarafından yönetilebileceği için, <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> örnek üzerinde gerçekleştirilen iş tamamlandığında sahip çağrısı gerekir <xref:System.Memory%601> . Alternatif olarak, sahip, <xref:System.Buffers.IMemoryOwner%601> Örneğin sahipliğini farklı bir bileşene aktarabilir, bu noktada alma bileşeni <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> uygun zamanda (Bu daha sonra daha fazla) (daha fazla daha fazla) çağrı yapmaktan sorumlu olur.
 
@@ -234,7 +234,7 @@ Yöntemi çağıramaması, <xref:System.Buffers.MemoryPool%601.Dispose%2A> yöne
 
 Bu kural, gibi Fabrika yöntemlerini çağıran kod için de geçerlidir <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> . Çağıran, döndürülen sahibi olur <xref:System.Buffers.IMemoryOwner%601> ve tamamlandığında örneği elden atma sorumludur.
 
-**Kural #8: API yüzeyinizde bir ımemoryowner \< T> parametresi varsa, bu örneğin sahipliğini kabul etmiş olursunuz.**
+**Kural #8: API yüzeyinizde bir ımemoryowner \<T> parametresi varsa, bu örneğin sahipliğini kabul etmiş olursunuz.**
 
 Bu tür bir örneği kabul etmek, bileşeninizin bu örneğin sahipliğini almayı amaçladığı sinyallere işaret eder. Bileşeniniz, kural #7 göre uygun elden çıkarılmasından sorumludur.
 
@@ -243,7 +243,7 @@ Bu tür bir örneği kabul etmek, bileşeninizin bu örneğin sahipliğini almay
 > [!IMPORTANT]
 > Oluşturucunuzu <xref:System.Buffers.IMemoryOwner%601> bir parametre olarak kabul ediyorsa, türünün uygulanması gerekir <xref:System.IDisposable> ve <xref:System.IDisposable.Dispose%2A> yöntemi çağırmalıdır <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> .
 
-**Kural #9: zaman uyumlu bir p/Invoke yöntemini sardıysanız, API 'niz \< bir parametre olarak span T> kabul etmelidir.**
+**Kural #9: zaman uyumlu bir p/Invoke yöntemi sarmalandıysanız, API 'niz bir parametre olarak yayılmasını kabul etmelidir \<T> .**
 
 Kural #1 göre <xref:System.Span%601> genellikle zaman uyumlu API 'ler için kullanılan doğru türdür. <xref:System.Span%601> [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) Aşağıdaki örnekte olduğu gibi, örnekleri anahtar sözcük aracılığıyla sabitleyebilirsiniz.
 
@@ -283,7 +283,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-**Kural #10: zaman uyumsuz bir p/Invoke yöntemi sarmalandıysanız, API 'niz \< bir parametre olarak bellek T> kabul etmelidir.**
+**Kural #10: zaman uyumsuz bir p/Invoke yöntemi sarmalandıysanız, API 'niz \<T> bir parametre olarak belleği kabul etmelidir.**
 
 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md)Anahtar sözcüğünü zaman uyumsuz işlemler arasında kullanamıyorsanız, <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> <xref:System.Memory%601> Örneğin ardışık bellek türünden bağımsız olarak örnekleri sabitlemek için yöntemini kullanırsınız. Aşağıdaki örnek, bu API 'nin zaman uyumsuz p/Invoke çağrısı gerçekleştirmek için nasıl kullanılacağını gösterir.
 

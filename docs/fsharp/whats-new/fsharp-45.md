@@ -1,25 +1,25 @@
 ---
-title: F# 4.5 -F# Kılavuzu'ndaki yenilikler
-description: F# 4.5'te bulunan yeni özelliklere genel bir bakış alın.
+title: 'F # 4,5-F # kılavuzundaki yenilikler'
+description: "F # 4,5 ' de bulunan yeni özelliklere genel bakış alın."
 ms.date: 11/27/2019
-ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c978c66a4bf231398508cbc1cbb8839228ea8e9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186129"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202359"
 ---
-# <a name="whats-new-in-f-45"></a>F# 4.5'teki yenilikler
+# <a name="whats-new-in-f-45"></a>F # 4,5 ' deki yenilikler
 
-F# 4.5, F# diline birden fazla iyileştirme ekler. Bu özelliklerin çoğu, f# ile verimli kod yazmanızı sağlarken aynı zamanda bu kodun güvenli olmasını sağlamak için bir araya getirildi. Bunu yapmak, bu yapıları kullanırken dile birkaç kavram ve önemli miktarda derleyici çözümlemesi eklemek anlamına gelir.
+F # 4,5, F # diline birden çok geliştirme ekler. Bu özelliklerin birçoğu, F # ' ta verimli kod yazmanızı sağlamak için birlikte eklenmiştir ve ayrıca bu kodun güvenli olmasını sağlar. Bunun yapılması, bu yapılar kullanılırken dile birkaç kavram ve önemli miktarda derleyici analizini ekleme anlamına gelir.
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>başlarken
 
-F# 4.5 tüm .NET Core dağıtımlarında ve Visual Studio araçlamalarında mevcuttur. Daha fazla bilgi edinmek için [F# ile başlayın.](../get-started/index.md)
+F # 4,5 tüm .NET Core dağıtımları ve Visual Studio Araçları 'nda mevcuttur. Daha fazla bilgi edinmek için [F # ile çalışmaya](../get-started/index.md) başlayın.
 
-## <a name="span-and-byref-like-structs"></a>Span ve byref benzeri structs
+## <a name="span-and-byref-like-structs"></a>Span ve ByRef benzeri yapılar
 
-.NET Core'da tanıtılan <xref:System.Span%601> tür, bellekteki arabellekleri güçlü bir şekilde temsil etmenizi sağlar ve f# 4.5 ile başlayarak F# ile izin verilir. Aşağıdaki örnek, farklı arabellek gösterimleri <xref:System.Span%601> ile çalışan bir işlevi nasıl yeniden kullanabileceğinizi gösterir:
+<xref:System.Span%601>.NET Core 'da tanıtılan tür, artık f # 4,5 ile başlayan f # ' da izin verilen kesin olarak belirlenmiş bir şekilde bellekteki arabellekleri temsil etmenize olanak tanır. Aşağıdaki örnek, <xref:System.Span%601> farklı arabellek temsilleri ile bir üzerinde çalışan bir işlevi nasıl yeniden kullanabileceğinizi gösterir:
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-Bunun önemli bir yönü, Span ve diğer [byref benzeri structs](../language-reference/structures.md#byreflike-structs) beklenmeyen bulabileceğiniz şekillerde kullanımlarını kısıtlayan derleyici tarafından gerçekleştirilen çok katı statik analiz olmasıdır. Bu, F# 4.5'te sunulan performans, ifade ve güvenlik arasındaki temel dengedir.
+Bunun önemli bir yönü, yayılma ve diğer [ByRef benzeri yapıların](../language-reference/structures.md#byreflike-structs) , kullanımlarını beklenmedik şekilde bulacağınız yöntemlerle sınırlayan, derleyicinin gerçekleştirdiği çok rigıd statik analizine sahip olmasını sağlar. Bu, F # 4,5 ' de sunulan performans, ifade ve güvenlik arasındaki temel zorunluluğunu getirir.
 
-## <a name="revamped-byrefs"></a>Yenilenen byrefs
+## <a name="revamped-byrefs"></a>Revaed ByRef 'ler
 
-F# 4.5'den önce, F# [byrefs](../language-reference/byrefs.md) güvensiz ve çok sayıda uygulama için sağlıksız edildi. Byrefs etrafında sağlamlık sorunları F # 4.5 ele alınmıştır ve span ve byref benzeri structs için yapılan aynı statik analiz de uygulanmıştır.
+F # 4,5 ' den önce, F # ' ta [Byrefs](../language-reference/byrefs.md) güvenli değildi ve çok sayıda uygulama için ses geri alındı. F # 4,5 ' de ve ayrıca, span ve ByRef benzeri yapılar için yapılan aynı statik analizler de, ByRef 'ler etrafında ses sorunları ele alındı.
 
-### <a name="inreft-and-outreft"></a>inref<'T> ve outref<'T>
+### <a name="inreft-and-outreft"></a>ınref< 'T> ve outref< 'T>
 
-Yalnızca okuma, yalnızca yazma ve okuma/yazma yönetilen işaretçisi kavramını temsil etmek için, F# 4.5 sırasıyla salt okunur ve yalnızca yazma işaretçilerini temsil etmek için `inref<'T>`, türleri `outref<'T>` tanıtır. Her birinin farklı anlambilimi var. Örneğin, bir `inref<'T>`yazamazsınız:
+Salt okunurdur, salt yazılır ve okuma/yazma yönetilen işaretçisinin kavramını göstermek için F # 4,5, `inref<'T>` `outref<'T>` sırasıyla salt okunurdur ve salt yazılır işaretçileri temsil edecek olan türleri tanıtır. Her birinin farklı anlamları vardır. Örneğin, bir öğesine yazamaz `inref<'T>` :
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-Varsayılan olarak, bir şey zaten değişken olarak `inref<'T>` bildirilmedikçe, tür çıkarım, F# kodunun değişmez yapısına uygun olarak yönetilen işaretçilerçıkaracaktır. Bir şeyi yazılabilir hale getirmek için, bir `mutable` türü, adresini onu manipüle eden bir işleve veya üyeye geçirmeden önce olduğu gibi bildirmeniz gerekir. Daha fazla bilgi için [Byrefs'](../language-reference/byrefs.md)e bakın.
+Varsayılan olarak, tür çıkarımı, `inref<'T>` zaten değişebilir olarak bildirilmemiş olmadığı sürece, yönetilen işaretçileri gerçek F # kodu ile satır içinde olacak şekilde çıkarmış olur. Bir şeyi yazılabilir yapmak için, `mutable` adresini onu işleyen bir işleve veya üyeye geçirmeden önce bir tür bildirmeniz gerekir. Daha fazla bilgi için bkz. [Byrefs](../language-reference/byrefs.md).
 
-## <a name="readonly-structs"></a>Yalnızca okuma structs
+## <a name="readonly-structs"></a>ReadOnly yapılar
 
-F# 4.5 ile başlayarak, bir yapıya şu <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> şekilde açıklama ekleyebilirsiniz:
+F # 4,5 ile başlayarak, bir yapısına şu şekilde açıklama ekleyebilirsiniz <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> :
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Bu, yapıda mutable bir üye ilan etmenizi sağlar ve F# ve C# bir derleme tüketilen zaman okunmuş olarak tedavi etmek için izin meta veri yakar. Daha fazla bilgi için [readOnly structs'a](../language-reference/structures.md#readonly-structs)bakın.
+Bu, yapıda kesilebilir üye bildirmesinin yanı sıra F # ve C# ' nin bir derlemeden tüketilirken onu ReadOnly olarak görmesini sağlayan meta verileri yayar. Daha fazla bilgi için bkz. [ReadOnly yapılar](../language-reference/structures.md#readonly-structs).
 
-## <a name="void-pointers"></a>Geçersiz işaretçiler
+## <a name="void-pointers"></a>Void işaretçileri
 
-F# 4.5'e `voidptr` aşağıdaki işlevler gibi türü eklenir:
+`voidptr`Türü, aşağıdaki işlevlerde olduğu gibi F # 4,5 ' a eklenir:
 
-* `NativePtr.ofVoidPtr`geçersiz bir işaretçiyi yerel int işaretçisine dönüştürmek için
-* `NativePtr.toVoidPtr`bir int işaretçisini geçersiz bir işaretçiye dönüştürmek için
+* `NativePtr.ofVoidPtr`void işaretçiyi yerel bir int işaretçisine dönüştürmek için
+* `NativePtr.toVoidPtr`Yerel bir int işaretçisini void işaretçiye dönüştürmek için
 
-Bu, geçersiz işaretçileri kullanan yerel bir bileşenle çalışırken yararlıdır.
+Bu, void işaretçilerin kullanıldığı bir yerel bileşenle birlikte çalışırken yararlıdır.
 
 ## <a name="the-match-keyword"></a>`match!` anahtar sözcüğü
 
-Anahtar `match!` kelime, bir hesaplama ifadesinin içindeyken desen eşleştirmesini geliştirir:
+`match!`Anahtar sözcüğü, bir hesaplama ifadesi içindeyken model eşleştirmeyi geliştirir:
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -111,11 +111,11 @@ let funcWithString (s: string) =
 }
 ```
 
-Bu, genellikle karıştırma seçeneklerini (veya diğer türleri) async gibi hesaplama ifadeleriyle içeren kodu kısaltmanızı sağlar. Daha fazla bilgi için, [maç bakın!](../language-reference/computation-expressions.md#match).
+Bu, genellikle zaman uyumsuz gibi hesaplama ifadelerle seçenekleri (veya diğer türleri) kapsayan kodu kısaltmaya olanak tanır. Daha fazla bilgi için bkz. [Match!](../language-reference/computation-expressions.md#match).
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Dizi, liste ve sıra lı ifadelerde rahat upcasting gereksinimleri
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Dizi, liste ve dizi ifadelerinde gevşek yukarı atama gereksinimleri
 
-Bir dizi, liste ve dizi ifadeleri içinde başka bir devralabilir karıştırma türleri geleneksel olarak kendi üst `:>` türüne `upcast`veya . Bu şimdi rahat, aşağıdaki gibi gösterilmiştir:
+Dizi, liste ve sıra ifadeleri içindeki başka bir diğerinin devraldığı türlerin karıştırma, genellikle türetilmiş herhangi bir türü ya da ile üst türüne yukarı atama yapmak için gereklidir `:>` `upcast` . Bu, aşağıda gösterildiği gibi gevşek bir şekilde yapılır:
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,9 +125,9 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Dizi ve liste ifadeleri için girintinasyon gevşemesi
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Dizi ve liste ifadeleri için girinti ayırma
 
-F# 4.5'den önce, yöntem çağrılarına bağımsız değişken olarak geçtiğinde aşırı girintisli dizi ve liste ifadeleri gerekiyordu. Bu artık gerekli değildir:
+F # 4,5 ' den önce, yöntem çağrılarına bağımsız değişken olarak geçirildiğinde dizi ve liste ifadelerini aşırı girintilendirmek gerekir. Bu artık gerekli değildir:
 
 ```fsharp
 module NoExcessiveIndenting =

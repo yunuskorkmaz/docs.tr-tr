@@ -2,22 +2,22 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 04d160535126cf2383cd9d0fa98d99cd76445735
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c421273d1d08db047a51f1f1e4f9d6c908f12986
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399603"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201780"
 ---
-# <a name="servicemetadata"></a>\<serviceMetadata >
+# \<serviceMetadata>
 Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceMetadata >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceMetadata>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,33 +42,33 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |externalMetadataLocation|Otomatik olarak oluşturulan WSDL yerine WSDL ve MEX isteklerine yanıt olarak döndürülen WSDL dosyasının konumunu içeren bir URI. Bu öznitelik ayarlanmamışsa varsayılan WSDL döndürülür. Varsayılan değer boş bir dizedir.|  
-|Bilgilerinie başvuran HttpGetBinding|HTTP GET aracılığıyla meta veri alımı için kullanılacak bağlama türünü belirten bir dize. Bu ayar isteğe bağlıdır. Belirtilmemişse, varsayılan bağlamalar kullanılacaktır.<br /><br /> Yalnızca destekleyen <xref:System.ServiceModel.Channels.IReplyChannel> iç bağlama öğeleri olan bağlamalar desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpGetBindingConfiguration|Bu bağlamanın ek yapılandırma bilgilerine başvuran `httpGetBinding` özniteliğinde belirtilen bağlamanın adını ayarlayan bir dize. `<bindings>` Bölümünde aynı ad tanımlanmalıdır.|  
-|httpGetEnabled|Bir HTTP/GET isteği kullanılarak alma için hizmet meta verilerinin yayınlanıp yayınlanmayacağını belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> HttpGetUrl özniteliği belirtilmemişse, meta verilerin yayımlandığı adres hizmet adresi artı "? wsdl" dir. Örneğin, hizmet adresi "http://localhost:8080/CalculatorService" ise, http/get meta veri adresi "http://localhost:8080/CalculatorService?wsdl" olur.<br /><br /> Bu özellik ise `false`veya hizmetin adresi http veya https tabanlı değilse, "? wsdl" yok sayılır.|  
+|Bilgilerinie başvuran HttpGetBinding|HTTP GET aracılığıyla meta veri alımı için kullanılacak bağlama türünü belirten bir dize. Bu ayar isteğe bağlıdır. Belirtilmemişse, varsayılan bağlamalar kullanılacaktır.<br /><br /> Yalnızca destekleyen iç bağlama öğeleri olan bağlamalar <xref:System.ServiceModel.Channels.IReplyChannel> desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A> .|  
+|httpGetBindingConfiguration|`httpGetBinding`Bu bağlamanın ek yapılandırma bilgilerine başvuran özniteliğinde belirtilen bağlamanın adını ayarlayan bir dize. Bölümünde aynı ad tanımlanmalıdır `<bindings>` .|  
+|httpGetEnabled|Bir HTTP/GET isteği kullanılarak alma için hizmet meta verilerinin yayınlanıp yayınlanmayacağını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> HttpGetUrl özniteliği belirtilmemişse, meta verilerin yayımlandığı adres hizmet adresi artı "? wsdl" dir. Örneğin, hizmet adresi ise `http://localhost:8080/CalculatorService` , http/get meta veri adresi olur `http://localhost:8080/CalculatorService?wsdl` .<br /><br /> Bu özellik ise `false` veya hizmetin adresı http veya https tabanlı değilse, "? wsdl" yok sayılır.|  
 |httpGetUrl|Bir HTTP/GET isteği kullanılarak alınması için meta verilerin yayımlanacağı adresi belirten bir URI. Göreli bir URI belirtilmişse, hizmetin temel adresine göreli olarak değerlendirilir.|  
-|Bilgilerinie başvuran HttpsGetBinding|HTTPS GET aracılığıyla meta veri alımı için kullanılacak bağlama türünü belirten bir dize. Bu ayar isteğe bağlıdır. Belirtilmemişse, varsayılan bağlamalar kullanılacaktır.<br /><br /> Yalnızca destekleyen <xref:System.ServiceModel.Channels.IReplyChannel> iç bağlama öğeleri olan bağlamalar desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.|  
-|httpsGetBindingConfiguration|Bu bağlamanın ek yapılandırma bilgilerine başvuran `httpsGetBinding` özniteliğinde belirtilen bağlamanın adını ayarlayan bir dize. `<bindings>` Bölümünde aynı ad tanımlanmalıdır.|  
-|httpsGetEnabled|Bir HTTPS/GET isteği kullanılarak alma için hizmet meta verilerinin yayınlanıp yayınlanmayacağını belirten bir Boole değeri. Varsayılan, `false` değeridir.<br /><br /> HttpsGetUrl özniteliği belirtilmemişse, meta verilerin yayımlandığı adres, hizmet adresi artı bir "? wsdl" dir. Örneğin, hizmet adresi "https://localhost:8080/CalculatorService" ise, http/get meta veri adresi "https://localhost:8080/CalculatorService?wsdl" olur.<br /><br /> Bu özellik ise `false`veya hizmetin adresi http veya https tabanlı değilse, "? wsdl" yok sayılır.|  
+|Bilgilerinie başvuran HttpsGetBinding|HTTPS GET aracılığıyla meta veri alımı için kullanılacak bağlama türünü belirten bir dize. Bu ayar isteğe bağlıdır. Belirtilmemişse, varsayılan bağlamalar kullanılacaktır.<br /><br /> Yalnızca destekleyen iç bağlama öğeleri olan bağlamalar <xref:System.ServiceModel.Channels.IReplyChannel> desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A> .|  
+|httpsGetBindingConfiguration|`httpsGetBinding`Bu bağlamanın ek yapılandırma bilgilerine başvuran özniteliğinde belirtilen bağlamanın adını ayarlayan bir dize. Bölümünde aynı ad tanımlanmalıdır `<bindings>` .|  
+|httpsGetEnabled|Bir HTTPS/GET isteği kullanılarak alma için hizmet meta verilerinin yayınlanıp yayınlanmayacağını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> HttpsGetUrl özniteliği belirtilmemişse, meta verilerin yayımlandığı adres, hizmet adresi artı bir "? wsdl" dir. Örneğin, hizmet adresi " https://localhost:8080/CalculatorService " ise, http/get meta veri adresi " https://localhost:8080/CalculatorService?wsdl " olur.<br /><br /> Bu özellik ise `false` veya hizmetin adresı http veya https tabanlı değilse, "? wsdl" yok sayılır.|  
 |httpsGetUrl|Bir HTTPS/GET isteği kullanılarak almak için meta verilerin yayımlanacağı adresi belirten bir URI.|  
-|policyVersion|Kullanılan WS-Policy belirtiminin sürümünü belirten bir dize. Bu öznitelik türü <xref:System.ServiceModel.Description.PolicyVersion>.|  
+|policyVersion|Kullanılan WS-Policy belirtiminin sürümünü belirten bir dize. Bu öznitelik türü <xref:System.ServiceModel.Description.PolicyVersion> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu yapılandırma öğesi, bir hizmetin meta veri yayımlama özelliklerini denetlemenize olanak tanır. Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil. exe gibi) kullanamazsınız. Bu yapılandırma öğesini kullanarak hizmetiniz için bu yayımlama davranışını etkinleştirebilirsiniz.  
   
  Bu davranışı yapılandırmanın ayrıntılı bir örneği için bkz. [meta veri yayımlama davranışı](../../../wcf/samples/metadata-publishing-behavior.md).  
   
- İsteğe bağlı `httpGetBinding` ve `httpsGetBinding` öznitelikleri, http get (veya https Get) aracılığıyla meta veri alımı için kullanılan bağlamaları yapılandırmanıza olanak tanır. Bu değerler belirtilmemişse, varsayılan bağlamalar (`HttpTransportBindingElement`http durumunda ve `HttpsTransportBindingElement`https durumunda), uygun şekilde meta veri alımı için kullanılır. Bu öznitelikleri yerleşik WCF bağlamaları ile kullanamazsınız. Yalnızca destekleyen <xref:System.ServiceModel.Channels.IReplyChannel> iç bağlama öğeleri olan bağlamalar desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
+ İsteğe bağlı `httpGetBinding` ve `httpsGetBinding` ÖZNITELIKLERI, http get (veya https Get) aracılığıyla meta veri alımı için kullanılan bağlamaları yapılandırmanıza olanak tanır. Bu değerler belirtilmemişse, varsayılan bağlamalar ( `HttpTransportBindingElement` http durumunda ve `HttpsTransportBindingElement` https durumunda), uygun şekilde meta veri alımı için kullanılır. Bu öznitelikleri yerleşik WCF bağlamaları ile kullanamazsınız. Yalnızca destekleyen iç bağlama öğeleri olan bağlamalar <xref:System.ServiceModel.Channels.IReplyChannel> desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion> bağlamanın özelliği olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None%2A> .  
   
- Bir hizmetin kötü amaçlı kullanıcılara maruz kalmasını azaltmak için, HTTP (HTTPS) üzerinden SSL (HTTPS) mekanizmasını kullanarak aktarımı güvenli hale getirmek mümkündür. Bunu yapmak için, önce uygun bir X. 509.952 sertifikasını hizmeti barındıran bilgisayardaki belirli bir bağlantı noktasına bağlamanız gerekir. (Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).) İkinci olarak, bu öğeyi hizmet yapılandırmasına ekleyin ve `httpsGetEnabled` özniteliğini olarak `true`ayarlayın. Son olarak, aşağıdaki `httpsGetUrl` örnekte gösterildiği gibi, özniteliğini hizmet meta veri uç noktasının URL 'si olarak ayarlayın.  
+ Bir hizmetin kötü amaçlı kullanıcılara maruz kalmasını azaltmak için, HTTP (HTTPS) üzerinden SSL (HTTPS) mekanizmasını kullanarak aktarımı güvenli hale getirmek mümkündür. Bunu yapmak için, önce uygun bir X. 509.952 sertifikasını hizmeti barındıran bilgisayardaki belirli bir bağlantı noktasına bağlamanız gerekir. (Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).) İkinci olarak, bu öğeyi hizmet yapılandırmasına ekleyin ve `httpsGetEnabled` özniteliğini olarak ayarlayın `true` . Son olarak, `httpsGetUrl` Aşağıdaki örnekte gösterildiği gibi, özniteliğini hizmet meta veri uç noktasının URL 'si olarak ayarlayın.  
   
 ```xml  
 <behaviors>
@@ -82,7 +82,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, \<serviceMetadata > öğesini kullanarak meta verileri açığa çıkarmak için bir hizmet yapılandırır. Ayrıca, `IMetadataExchange` bir uç noktasını bir WS-MetadataExchange (MEX) protokolünün bir uygulama olarak kullanıma sunmak için yapılandırır. Örnek, güvenlik modu `mexHttpBinding`olarak `None`ayarlanmış `wsHttpBinding` olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır. Uç noktada "mex" göreli adresi kullanılır `http://localhost/servicemodelsamples/service.svc/mex`. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur.  
+ Aşağıdaki örnek, öğesini kullanarak meta verileri açığa çıkarmak için bir hizmet yapılandırır \<serviceMetadata> . Ayrıca, bir uç noktasını bir `IMetadataExchange` WS-MetadataExchange (MEX) protokolünün bir uygulama olarak kullanıma sunmak için yapılandırır. Örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` .  
   
 ```xml  
 <configuration>

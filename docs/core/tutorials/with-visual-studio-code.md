@@ -1,142 +1,124 @@
 ---
-title: C# ve Visual Studio Code kullanmaya başlama
-description: Visual Studio Code kullanarak C# ' de ilk .NET Core uygulamanızı nasıl oluşturacağınızı ve hata ayıklacağınızı öğrenin.
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma
+description: Visual Studio Code ve .NET Core CLI kullanarak .NET Core konsol uygulaması oluşturmayı öğrenin.
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506924"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201702"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma
 
-.NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar. C# IntelliSense ile Visual Studio Code kullanın (akıllı kod tamamlama) ve hata ayıklama için tam destek sayesinde güçlü bir düzen deneyimi alın.
+Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri CLı kullanılarak yapılır, bu nedenle bu öğreticiyi bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
-2. [.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.
-3. Visual Studio Code için [C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
+1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
+2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
 
-## <a name="hello-world"></a>Hello World
+## <a name="create-the-app"></a>Uygulama oluşturma
 
-.NET Core üzerinde basit bir "Merhaba Dünya" programı ile çalışmaya başlayın:
+1. Visual Studio Code'u açın.
 
-1. Bir proje açın:
+1. Bir proje oluşturun.
 
-    - Visual Studio Code'u açın.
-    - Ana menüden **Dosya** > **Aç klasörünü** seçin.
-    - *HelloWorld*adlı bir klasör oluşturun ve **Klasör Seç**' e tıklayın. Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu `HelloWorld`varsayan öğreticide kod ekleyeceksiniz.
+   1. **Dosya**  >  **Aç klasör**aç... ' ı seçin, / **Open...** ana menüden bir *HelloWorld* klasörü oluşturun ve klasör aç **Seç**' e tıklayın / **Open**.
 
-1. C# projesi Başlat:
+      Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .
 
-    - Ana menüden **Görünüm** > **terminali** ' i seçerek Visual Studio Code terminalden açın.
-    - Terminal penceresinde, girin `dotnet new console`.
+   1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
 
-      Bu komut, klasörünüzde zaten yazılmış olan basit bir "Merhaba Dünya" programı ile birlikte *HelloWorld. csproj*adlı bir C# proje dosyası içeren bir *program.cs* dosyası oluşturur.
+      **Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.
 
-      ![DotNet yeni komutu](media/with-visual-studio-code/dotnet-new-command.png)
+   1. **Terminalde**aşağıdaki komutu girin:
 
-1. "Merhaba Dünya" programını çalıştırın:
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - Terminal penceresinde, girin `dotnet run`.
+.NET Core konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını tanımlar <xref:System.String> . *Program.cs* dosyası aşağıdaki koda sahiptir:
 
-      ![DotNet Run komutu](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a>Hata ayıklama
-
-1. Üzerine tıklayarak *program.cs* açın. Visual Studio Code bir C# dosyasını ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) düzenleyicide yüklenir.
-
-    ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
-
-1. Visual Studio Code, uygulamanızda derleme ve hata ayıklama için eksik varlıkları eklemenizi ister. **Evet**' i seçin.
-
-    ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
-
-1. Hata ayıklama görünümünü açmak için sol taraftaki menüdeki hata ayıklama simgesine tıklayın.
-
-    ![Visual Studio Code hata ayıkla sekmesini açın](media/with-visual-studio-code/open-debug-tab.png)
-
-1. Bölmenin en üstündeki yeşil oku bulun. ' In yanındaki açılan kutuda **.NET Core başlatma (konsol)** seçili olduğundan emin olun.
-
-    ![Visual Studio Code .NET Core seçme](media/with-visual-studio-code/select-net-core.png)
-
-1. Düzenleyicide satır numaralarının solundaki boşluk olan **Düzenleyici kenar boşluğuna**, 9. satırın yanında bir kesme noktası ekleyin veya metin imlecini düzenleyicide 9. satıra taşıyın ve <kbd>F9</kbd>tuşuna basın.
-
-    ![Kesme noktası ayarlama](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. Hata ayıklamayı başlatmak için <kbd>F5</kbd> 'e basın veya yeşil oku seçin. Hata ayıklayıcı, önceki adımda ayarladığınız kesme noktasına ulaştığında programınızın yürütülmesini durduruyor.
-    - Hata ayıklarken, sol üst bölmedeki yerel değişkenlerinizi görüntüleyebilir veya hata ayıklama konsolunu kullanabilirsiniz.
-
-1. Hata ayıklamaya devam etmek için üstteki mavi oku seçin ya da durdurmak için üstteki kırmızı kareyi seçin.
-
-    ![Visual Studio Code Çalıştır ve hata ayıkla](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> .NET Core hata ayıklama hakkında daha fazla bilgi ve Visual Studio Code ile ilgili sorun giderme ipuçları için, [.NET Core hata ayıklayıcısını ayarlama yönergelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.
-
-## <a name="add-a-class"></a>Sınıf ekleme
-
-1. Yeni bir sınıf eklemek için, *program.cs* aşağıdaki vscode Explorer ' a sağ tıklayıp **yeni dosya**' yı seçin. Bu, VSCode 'da açtığınız klasöre yeni bir dosya ekler.
-1. Dosyanızı *MyClass.cs*olarak adlandırın. Bir CSharp dosyası olarak tanınabilmesi `.cs` için onu sonda bir uzantıyla kaydetmelisiniz.
-1. İlk sınıfınızı oluşturmak için aşağıdaki kodu ekleyin.
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. Program.cs içindeki kodu aşağıdaki kodla değiştirerek `Main` , yönteinizden yeni sınıfınızı çağırın *Program.cs* :
+`Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
 
-    ```csharp
-    using System;
+Şablon, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> "Merhaba Dünya!" öğesini göstermek için yöntemi çağıran basit bir uygulama oluşturur. Konsol penceresinde.
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a>Uygulamayı çalıştırma
+
+**Terminalde**aşağıdaki komutu çalıştırın:
+
+```dotnetcli
+dotnet run
+```
+
+Program "Merhaba Dünya!" görüntülüyor ve bitiyor.
+
+![DotNet Run komutu](media/with-visual-studio-code/dotnet-run-command.png)
+
+## <a name="enhance-the-app"></a>Uygulamayı geliştirin
+
+Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin.
+
+1. Üzerine tıklayarak *program.cs* açın.
+
+   Visual Studio Code bir C# dosyasını ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) düzenleyicide yüklenir.
+
+   ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
+
+1. Visual Studio Code, uygulamanızda derlemek ve hata ayıklamak için eksik varlıkları eklemenizi istediğinizde **Evet** ' i seçin.
+
+   ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
+
+1. `Main`Aşağıdaki kodla, şu anda yalnızca çağıran satırı olan *program.cs*içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından **ENTER** tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Son olarak, bu değerleri konsol penceresinde görüntüler.
+
+   `\n`Bir yeni satır karakterini temsil eder.
+
+   `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 
 1. Yaptığınız değişiklikleri kaydedin.
 
-1. Programı yeniden çalıştırın.
+   > [!IMPORTANT]
+   > Visual Studio Code, değişiklikleri açıkça kaydetmeniz gerekir. Visual Studio 'dan farklı olarak, bir uygulamayı derleyip çalıştırdığınızda dosya değişiklikleri otomatik olarak kaydedilmez.
 
-    ```dotnetcli
-    dotnet run
-    ```
+1. Programı yeniden çalıştırın:
 
-    Yeni ileti eklenmiş dize ile görüntülenir.
+   ```dotnetcli
+   dotnet run
+   ```
 
-    ```console
-    Hello World! Happy coding!
-    ```
+1. Bir ad girip **ENTER** tuşuna basarak istemi yanıtlayın.
 
-## <a name="faq"></a>SSS
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Değiştirilen program çıkışındaki Terminal penceresi":::
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code C# derlemek ve hatalarını ayıklamak için gerekli varlıkların yok. Hata ayıklayıcı "yapılandırma yok" diyor.
+1. Programdan çıkmak için herhangi bir tuşa basın.
 
-Visual Studio Code C# uzantısı sizin için derlemek ve hata ayıklamak için varlıklar oluşturabilir. Visual Studio Code, ilk olarak bir C# projesi açtığınızda bu varlıkları oluşturmanızı ister. Daha sonra varlık oluşturmadıysanız, bu komutu yine de komut paletini açıp **>**(derleme ve hata ayıklama Için varlık oluştur) "> .net: varlıkları oluşturma ve hata ayıklama" yazarak çalıştırabilirsiniz. Bunu seçtiğinizde, ihtiyacınız olan *. vscode*, *Launch. JSON*ve *Tasks. JSON* yapılandırma dosyaları oluşturulur.
-
-## <a name="see-also"></a>Ayrıca bkz.
+## <a name="additional-resources"></a>Ek kaynaklar
 
 - [Visual Studio Code ayarlama](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Visual Studio Code 'de hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging)
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Bu öğreticide, bir .NET Core uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
+
+> [!div class="nextstepaction"]
+> [Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-code.md)
