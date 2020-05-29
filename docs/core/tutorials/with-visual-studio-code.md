@@ -1,142 +1,124 @@
 ---
-title: C# ve Visual Studio Code kullanmaya başlama
-description: Visual Studio Code kullanarak C# ' de ilk .NET Core uygulamanızı nasıl oluşturacağınızı ve hata ayıklacağınızı öğrenin.
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma
+description: Visual Studio Code ve .NET Core CLI kullanarak .NET Core konsol uygulaması oluşturmayı öğrenin.
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506924"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201702"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="54066-103">C# ve Visual Studio Code kullanmaya başlama</span><span class="sxs-lookup"><span data-stu-id="54066-103">Get started with C# and Visual Studio Code</span></span>
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a><span data-ttu-id="8f94a-103">Öğretici: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="8f94a-103">Tutorial: Create a console application with .NET Core using Visual Studio Code</span></span>
 
-<span data-ttu-id="54066-104">.NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar.</span><span class="sxs-lookup"><span data-stu-id="54066-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="54066-105">C# IntelliSense ile Visual Studio Code kullanın (akıllı kod tamamlama) ve hata ayıklama için tam destek sayesinde güçlü bir düzen deneyimi alın.</span><span class="sxs-lookup"><span data-stu-id="54066-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
+<span data-ttu-id="8f94a-104">Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-104">This tutorial shows how to create and run a .NET Core console application by using Visual Studio Code and the .NET Core CLI.</span></span> <span data-ttu-id="8f94a-105">Proje oluşturma, derleme ve çalıştırma gibi proje görevleri CLı kullanılarak yapılır, bu nedenle bu öğreticiyi bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8f94a-105">Project tasks, such as creating, compiling, and running a project are done by using the CLI, so you can follow this tutorial with a different code editor and run commands in a terminal if you prefer.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="54066-106">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="54066-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="8f94a-106">Ön koşullar</span><span class="sxs-lookup"><span data-stu-id="8f94a-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="54066-107">[Visual Studio Code](https://code.visualstudio.com/)'i yükler.</span><span class="sxs-lookup"><span data-stu-id="54066-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
-2. <span data-ttu-id="54066-108">[.NET Core SDK](https://dotnet.microsoft.com/download)'i yükler.</span><span class="sxs-lookup"><span data-stu-id="54066-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span>
-3. <span data-ttu-id="54066-109">Visual Studio Code için [C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yükler.</span><span class="sxs-lookup"><span data-stu-id="54066-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="54066-110">Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="54066-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+1. <span data-ttu-id="8f94a-107">[C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) .</span><span class="sxs-lookup"><span data-stu-id="8f94a-107">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="8f94a-108">Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).</span><span class="sxs-lookup"><span data-stu-id="8f94a-108">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+2. <span data-ttu-id="8f94a-109">[.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="8f94a-109">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
 
-## <a name="hello-world"></a><span data-ttu-id="54066-111">Hello World</span><span class="sxs-lookup"><span data-stu-id="54066-111">Hello World</span></span>
+## <a name="create-the-app"></a><span data-ttu-id="8f94a-110">Uygulama oluşturma</span><span class="sxs-lookup"><span data-stu-id="8f94a-110">Create the app</span></span>
 
-<span data-ttu-id="54066-112">.NET Core üzerinde basit bir "Merhaba Dünya" programı ile çalışmaya başlayın:</span><span class="sxs-lookup"><span data-stu-id="54066-112">Get started with a simple "Hello World" program on .NET Core:</span></span>
+1. <span data-ttu-id="8f94a-111">Visual Studio Code'u açın.</span><span class="sxs-lookup"><span data-stu-id="8f94a-111">Open Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="54066-113">Bir proje açın:</span><span class="sxs-lookup"><span data-stu-id="54066-113">Open a project:</span></span>
+1. <span data-ttu-id="8f94a-112">Bir proje oluşturun.</span><span class="sxs-lookup"><span data-stu-id="8f94a-112">Create a project.</span></span>
 
-    - <span data-ttu-id="54066-114">Visual Studio Code'u açın.</span><span class="sxs-lookup"><span data-stu-id="54066-114">Open Visual Studio Code.</span></span>
-    - <span data-ttu-id="54066-115">Ana menüden **Dosya** > **Aç klasörünü** seçin.</span><span class="sxs-lookup"><span data-stu-id="54066-115">Select **File** > **Open Folder** from the main menu.</span></span>
-    - <span data-ttu-id="54066-116">*HelloWorld*adlı bir klasör oluşturun ve **Klasör Seç**' e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="54066-116">Create a folder named *HelloWorld*, and click **Select Folder**.</span></span> <span data-ttu-id="54066-117">Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur.</span><span class="sxs-lookup"><span data-stu-id="54066-117">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="54066-118">Daha sonra, proje ad alanının olduğunu `HelloWorld`varsayan öğreticide kod ekleyeceksiniz.</span><span class="sxs-lookup"><span data-stu-id="54066-118">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
+   1. <span data-ttu-id="8f94a-113">**Dosya**  >  **Aç klasör**aç... ' ı seçin, / **Open...** ana menüden bir *HelloWorld* klasörü oluşturun ve klasör aç **Seç**' e tıklayın / **Open**.</span><span class="sxs-lookup"><span data-stu-id="8f94a-113">Select **File** > **Open Folder**/**Open...** from the main menu, create a *HelloWorld* folder, and click **Select Folder**/**Open**.</span></span>
 
-1. <span data-ttu-id="54066-119">C# projesi Başlat:</span><span class="sxs-lookup"><span data-stu-id="54066-119">Initialize a C# project:</span></span>
+      <span data-ttu-id="8f94a-114">Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur.</span><span class="sxs-lookup"><span data-stu-id="8f94a-114">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="8f94a-115">Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .</span><span class="sxs-lookup"><span data-stu-id="8f94a-115">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
 
-    - <span data-ttu-id="54066-120">Ana menüden **Görünüm** > **terminali** ' i seçerek Visual Studio Code terminalden açın.</span><span class="sxs-lookup"><span data-stu-id="54066-120">Open the Terminal from Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
-    - <span data-ttu-id="54066-121">Terminal penceresinde, girin `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="54066-121">In the terminal window, enter `dotnet new console`.</span></span>
+   1. <span data-ttu-id="8f94a-116">Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .</span><span class="sxs-lookup"><span data-stu-id="8f94a-116">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
 
-      <span data-ttu-id="54066-122">Bu komut, klasörünüzde zaten yazılmış olan basit bir "Merhaba Dünya" programı ile birlikte *HelloWorld. csproj*adlı bir C# proje dosyası içeren bir *program.cs* dosyası oluşturur.</span><span class="sxs-lookup"><span data-stu-id="54066-122">This command creates a *Program.cs* file in your folder with a simple "Hello World" program already written, along with a C# project file named *HelloWorld.csproj*.</span></span>
+      <span data-ttu-id="8f94a-117">**Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.</span><span class="sxs-lookup"><span data-stu-id="8f94a-117">The **Terminal** opens with the command prompt in the *HelloWorld* folder.</span></span>
 
-      ![DotNet yeni komutu](media/with-visual-studio-code/dotnet-new-command.png)
+   1. <span data-ttu-id="8f94a-118">**Terminalde**aşağıdaki komutu girin:</span><span class="sxs-lookup"><span data-stu-id="8f94a-118">In the **Terminal**, enter the following command:</span></span>
 
-1. <span data-ttu-id="54066-124">"Merhaba Dünya" programını çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="54066-124">Run the "Hello World" program:</span></span>
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - <span data-ttu-id="54066-125">Terminal penceresinde, girin `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="54066-125">In the terminal window, enter `dotnet run`.</span></span>
+<span data-ttu-id="8f94a-119">.NET Core konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını tanımlar <xref:System.String> .</span><span class="sxs-lookup"><span data-stu-id="8f94a-119">The Console Application template for .NET Core defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="8f94a-120">*Program.cs* dosyası aşağıdaki koda sahiptir:</span><span class="sxs-lookup"><span data-stu-id="8f94a-120">The *Program.cs* file has the following code:</span></span>
 
-      ![DotNet Run komutu](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a><span data-ttu-id="54066-127">Hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="54066-127">Debug</span></span>
-
-1. <span data-ttu-id="54066-128">Üzerine tıklayarak *program.cs* açın.</span><span class="sxs-lookup"><span data-stu-id="54066-128">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="54066-129">Visual Studio Code bir C# dosyasını ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) düzenleyicide yüklenir.</span><span class="sxs-lookup"><span data-stu-id="54066-129">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
-
-    ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
-
-1. <span data-ttu-id="54066-131">Visual Studio Code, uygulamanızda derleme ve hata ayıklama için eksik varlıkları eklemenizi ister.</span><span class="sxs-lookup"><span data-stu-id="54066-131">Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="54066-132">**Evet**' i seçin.</span><span class="sxs-lookup"><span data-stu-id="54066-132">Select **Yes**.</span></span>
-
-    ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
-
-1. <span data-ttu-id="54066-134">Hata ayıklama görünümünü açmak için sol taraftaki menüdeki hata ayıklama simgesine tıklayın.</span><span class="sxs-lookup"><span data-stu-id="54066-134">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
-
-    ![Visual Studio Code hata ayıkla sekmesini açın](media/with-visual-studio-code/open-debug-tab.png)
-
-1. <span data-ttu-id="54066-136">Bölmenin en üstündeki yeşil oku bulun.</span><span class="sxs-lookup"><span data-stu-id="54066-136">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="54066-137">' In yanındaki açılan kutuda **.NET Core başlatma (konsol)** seçili olduğundan emin olun.</span><span class="sxs-lookup"><span data-stu-id="54066-137">Make sure the drop-down next to it has **.NET Core Launch (console)** selected.</span></span>
-
-    ![Visual Studio Code .NET Core seçme](media/with-visual-studio-code/select-net-core.png)
-
-1. <span data-ttu-id="54066-139">Düzenleyicide satır numaralarının solundaki boşluk olan **Düzenleyici kenar boşluğuna**, 9. satırın yanında bir kesme noktası ekleyin veya metin imlecini düzenleyicide 9. satıra taşıyın ve <kbd>F9</kbd>tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="54066-139">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9, or move the text cursor onto line 9 in the editor and  press <kbd>F9</kbd>.</span></span>
-
-    ![Kesme noktası ayarlama](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. <span data-ttu-id="54066-141">Hata ayıklamayı başlatmak için <kbd>F5</kbd> 'e basın veya yeşil oku seçin.</span><span class="sxs-lookup"><span data-stu-id="54066-141">To start debugging, press <kbd>F5</kbd> or select the green arrow.</span></span> <span data-ttu-id="54066-142">Hata ayıklayıcı, önceki adımda ayarladığınız kesme noktasına ulaştığında programınızın yürütülmesini durduruyor.</span><span class="sxs-lookup"><span data-stu-id="54066-142">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
-    - <span data-ttu-id="54066-143">Hata ayıklarken, sol üst bölmedeki yerel değişkenlerinizi görüntüleyebilir veya hata ayıklama konsolunu kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="54066-143">While debugging, you can view your local variables in the top-left pane or use the debug console.</span></span>
-
-1. <span data-ttu-id="54066-144">Hata ayıklamaya devam etmek için üstteki mavi oku seçin ya da durdurmak için üstteki kırmızı kareyi seçin.</span><span class="sxs-lookup"><span data-stu-id="54066-144">Select the blue arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
-
-    ![Visual Studio Code Çalıştır ve hata ayıkla](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> <span data-ttu-id="54066-146">.NET Core hata ayıklama hakkında daha fazla bilgi ve Visual Studio Code ile ilgili sorun giderme ipuçları için, [.NET Core hata ayıklayıcısını ayarlama yönergelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="54066-146">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
-
-## <a name="add-a-class"></a><span data-ttu-id="54066-147">Sınıf ekleme</span><span class="sxs-lookup"><span data-stu-id="54066-147">Add a class</span></span>
-
-1. <span data-ttu-id="54066-148">Yeni bir sınıf eklemek için, *program.cs* aşağıdaki vscode Explorer ' a sağ tıklayıp **yeni dosya**' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="54066-148">To add a new class, right-click in the VSCode Explorer below *Program.cs* and select **New File**.</span></span> <span data-ttu-id="54066-149">Bu, VSCode 'da açtığınız klasöre yeni bir dosya ekler.</span><span class="sxs-lookup"><span data-stu-id="54066-149">This adds a new file to the folder you have open in VSCode.</span></span>
-1. <span data-ttu-id="54066-150">Dosyanızı *MyClass.cs*olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="54066-150">Name your file *MyClass.cs*.</span></span> <span data-ttu-id="54066-151">Bir CSharp dosyası olarak tanınabilmesi `.cs` için onu sonda bir uzantıyla kaydetmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="54066-151">You must save it with a `.cs` extension at the end for it to be recognized as a csharp file.</span></span>
-1. <span data-ttu-id="54066-152">İlk sınıfınızı oluşturmak için aşağıdaki kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="54066-152">Add the following code to create your first class.</span></span>
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. <span data-ttu-id="54066-153">Program.cs içindeki kodu aşağıdaki kodla değiştirerek `Main` , yönteinizden yeni sınıfınızı çağırın *Program.cs* :</span><span class="sxs-lookup"><span data-stu-id="54066-153">Call your new class from your `Main` method by replacing the code in *Program.cs* with the following code:</span></span>
+<span data-ttu-id="8f94a-121">`Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-121">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="8f94a-122">Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-122">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
 
-    ```csharp
-    using System;
+<span data-ttu-id="8f94a-123">Şablon, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> "Merhaba Dünya!" öğesini göstermek için yöntemi çağıran basit bir uygulama oluşturur.</span><span class="sxs-lookup"><span data-stu-id="8f94a-123">The template creates a simple application that calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display "Hello World!"</span></span> <span data-ttu-id="8f94a-124">Konsol penceresinde.</span><span class="sxs-lookup"><span data-stu-id="8f94a-124">in the console window.</span></span>
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a><span data-ttu-id="8f94a-125">Uygulamayı çalıştırma</span><span class="sxs-lookup"><span data-stu-id="8f94a-125">Run the app</span></span>
 
-1. <span data-ttu-id="54066-154">Yaptığınız değişiklikleri kaydedin.</span><span class="sxs-lookup"><span data-stu-id="54066-154">Save your changes.</span></span>
+<span data-ttu-id="8f94a-126">**Terminalde**aşağıdaki komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="8f94a-126">Run the following command in the **Terminal**:</span></span>
 
-1. <span data-ttu-id="54066-155">Programı yeniden çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="54066-155">Run the program again.</span></span>
+```dotnetcli
+dotnet run
+```
 
-    ```dotnetcli
-    dotnet run
-    ```
+<span data-ttu-id="8f94a-127">Program "Merhaba Dünya!" görüntülüyor</span><span class="sxs-lookup"><span data-stu-id="8f94a-127">The program displays "Hello World!"</span></span> <span data-ttu-id="8f94a-128">ve bitiyor.</span><span class="sxs-lookup"><span data-stu-id="8f94a-128">and ends.</span></span>
 
-    <span data-ttu-id="54066-156">Yeni ileti eklenmiş dize ile görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="54066-156">The new message appears with the appended string.</span></span>
+![DotNet Run komutu](media/with-visual-studio-code/dotnet-run-command.png)
 
-    ```console
-    Hello World! Happy coding!
-    ```
+## <a name="enhance-the-app"></a><span data-ttu-id="8f94a-130">Uygulamayı geliştirin</span><span class="sxs-lookup"><span data-stu-id="8f94a-130">Enhance the app</span></span>
 
-## <a name="faq"></a><span data-ttu-id="54066-157">SSS</span><span class="sxs-lookup"><span data-stu-id="54066-157">FAQ</span></span>
+<span data-ttu-id="8f94a-131">Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uygulamayı geliştirin.</span><span class="sxs-lookup"><span data-stu-id="8f94a-131">Enhance the application to prompt the user for their name and display it along with the date and time.</span></span>
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a><span data-ttu-id="54066-158">Visual Studio Code C# derlemek ve hatalarını ayıklamak için gerekli varlıkların yok.</span><span class="sxs-lookup"><span data-stu-id="54066-158">I'm missing required assets to build and debug C# in Visual Studio Code.</span></span> <span data-ttu-id="54066-159">Hata ayıklayıcı "yapılandırma yok" diyor.</span><span class="sxs-lookup"><span data-stu-id="54066-159">My debugger says "No Configuration."</span></span>
+1. <span data-ttu-id="8f94a-132">Üzerine tıklayarak *program.cs* açın.</span><span class="sxs-lookup"><span data-stu-id="8f94a-132">Open *Program.cs* by clicking on it.</span></span>
 
-<span data-ttu-id="54066-160">Visual Studio Code C# uzantısı sizin için derlemek ve hata ayıklamak için varlıklar oluşturabilir.</span><span class="sxs-lookup"><span data-stu-id="54066-160">The Visual Studio Code C# extension can generate assets to build and debug for you.</span></span> <span data-ttu-id="54066-161">Visual Studio Code, ilk olarak bir C# projesi açtığınızda bu varlıkları oluşturmanızı ister.</span><span class="sxs-lookup"><span data-stu-id="54066-161">Visual Studio Code prompts you to generate these assets when you first open a C# project.</span></span> <span data-ttu-id="54066-162">Daha sonra varlık oluşturmadıysanız, bu komutu yine de komut paletini açıp **>**(derleme ve hata ayıklama Için varlık oluştur) "> .net: varlıkları oluşturma ve hata ayıklama" yazarak çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="54066-162">If you didn't generate assets then, you can still run this command by opening the Command Palette (**View > Command Palette**) and typing ">.NET: Generate Assets for Build and Debug".</span></span> <span data-ttu-id="54066-163">Bunu seçtiğinizde, ihtiyacınız olan *. vscode*, *Launch. JSON*ve *Tasks. JSON* yapılandırma dosyaları oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="54066-163">Selecting this generates the *.vscode*, *launch.json*, and *tasks.json* configuration files that you need.</span></span>
+   <span data-ttu-id="8f94a-133">Visual Studio Code bir C# dosyasını ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) düzenleyicide yüklenir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-133">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="54066-164">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="54066-164">See also</span></span>
+   ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
 
-- [<span data-ttu-id="54066-165">Visual Studio Code ayarlama</span><span class="sxs-lookup"><span data-stu-id="54066-165">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
-- [<span data-ttu-id="54066-166">Visual Studio Code 'de hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="54066-166">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)
+1. <span data-ttu-id="8f94a-135">Visual Studio Code, uygulamanızda derlemek ve hata ayıklamak için eksik varlıkları eklemenizi istediğinizde **Evet** ' i seçin.</span><span class="sxs-lookup"><span data-stu-id="8f94a-135">Select **Yes** when Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span>
+
+   ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
+
+1. <span data-ttu-id="8f94a-137">`Main`Aşağıdaki kodla, şu anda yalnızca çağıran satırı olan *program.cs*içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :</span><span class="sxs-lookup"><span data-stu-id="8f94a-137">Replace the contents of the `Main` method in *Program.cs*, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   <span data-ttu-id="8f94a-138">Bu kod "adınız nedir?" görüntüler</span><span class="sxs-lookup"><span data-stu-id="8f94a-138">This code displays "What is your name?"</span></span> <span data-ttu-id="8f94a-139">Konsol penceresinde ve ardından **ENTER** tuşuna basarak Kullanıcı bir dize girene kadar bekler.</span><span class="sxs-lookup"><span data-stu-id="8f94a-139">in the console window and waits until the user enters a string followed by the **Enter** key.</span></span> <span data-ttu-id="8f94a-140">Bu dizeyi adlı bir değişkende depolar `name` .</span><span class="sxs-lookup"><span data-stu-id="8f94a-140">It stores this string in a variable named `name`.</span></span> <span data-ttu-id="8f94a-141">Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` .</span><span class="sxs-lookup"><span data-stu-id="8f94a-141">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="8f94a-142">Son olarak, bu değerleri konsol penceresinde görüntüler.</span><span class="sxs-lookup"><span data-stu-id="8f94a-142">Finally, it displays these values in the console window.</span></span>
+
+   <span data-ttu-id="8f94a-143">`\n`Bir yeni satır karakterini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="8f94a-143">The `\n` represents a newline character.</span></span>
+
+   <span data-ttu-id="8f94a-144">`$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır.</span><span class="sxs-lookup"><span data-stu-id="8f94a-144">The dollar sign (`$`) in front of a string lets you put expressions such as variable names in curly braces in the string.</span></span> <span data-ttu-id="8f94a-145">İfade değeri, ifadenin yerine dizeye eklenir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-145">The expression value is inserted into the string in place of the expression.</span></span> <span data-ttu-id="8f94a-146">Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="8f94a-146">This syntax is referred to as [interpolated strings](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+
+1. <span data-ttu-id="8f94a-147">Yaptığınız değişiklikleri kaydedin.</span><span class="sxs-lookup"><span data-stu-id="8f94a-147">Save your changes.</span></span>
+
+   > [!IMPORTANT]
+   > <span data-ttu-id="8f94a-148">Visual Studio Code, değişiklikleri açıkça kaydetmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="8f94a-148">In Visual Studio Code, you have to explicitly save changes.</span></span> <span data-ttu-id="8f94a-149">Visual Studio 'dan farklı olarak, bir uygulamayı derleyip çalıştırdığınızda dosya değişiklikleri otomatik olarak kaydedilmez.</span><span class="sxs-lookup"><span data-stu-id="8f94a-149">Unlike Visual Studio, file changes are not automatically saved when you build and run an app.</span></span>
+
+1. <span data-ttu-id="8f94a-150">Programı yeniden çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="8f94a-150">Run the program again:</span></span>
+
+   ```dotnetcli
+   dotnet run
+   ```
+
+1. <span data-ttu-id="8f94a-151">Bir ad girip **ENTER** tuşuna basarak istemi yanıtlayın.</span><span class="sxs-lookup"><span data-stu-id="8f94a-151">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
+
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Değiştirilen program çıkışındaki Terminal penceresi":::
+
+1. <span data-ttu-id="8f94a-153">Programdan çıkmak için herhangi bir tuşa basın.</span><span class="sxs-lookup"><span data-stu-id="8f94a-153">Press any key to exit the program.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="8f94a-154">Ek kaynaklar</span><span class="sxs-lookup"><span data-stu-id="8f94a-154">Additional resources</span></span>
+
+- [<span data-ttu-id="8f94a-155">Visual Studio Code ayarlama</span><span class="sxs-lookup"><span data-stu-id="8f94a-155">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
+
+## <a name="next-steps"></a><span data-ttu-id="8f94a-156">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="8f94a-156">Next steps</span></span>
+
+<span data-ttu-id="8f94a-157">Bu öğreticide, bir .NET Core uygulaması oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="8f94a-157">In this tutorial, you created a .NET Core application.</span></span> <span data-ttu-id="8f94a-158">Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8f94a-158">In the next tutorial, you debug the app.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="8f94a-159">Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama</span><span class="sxs-lookup"><span data-stu-id="8f94a-159">Debug a .NET Core console application using Visual Studio Code</span></span>](debugging-with-visual-studio-code.md)
