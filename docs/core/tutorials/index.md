@@ -4,12 +4,12 @@ description: Mac, Linux ve Windows 'da uygulamalar ve kitaplıklar oluşturmak i
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 5a33158bdf02c5ac81379cfcdabb2f79230033e2
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 31f63a2bbafc7f1c8dacea0fa8d3a40f36f69e55
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202184"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241480"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri inceleyerek .NET Core ve .NET Core SDK araçları hakkında bilgi edinin
 
@@ -18,7 +18,6 @@ ms.locfileid: "84202184"
 ## <a name="use-visual-studio"></a>Visual Studio kullanma
 
 - [Konsol uygulaması oluşturma](with-visual-studio.md)
-- [F # konsol uygulaması oluşturma](../../fsharp/get-started/get-started-visual-studio.md)
 - [Uygulamada hata ayıklama](debugging-with-visual-studio.md)
 - [Uygulama yayımlama](publishing-with-visual-studio.md)
 - [Sınıf kitaplığı oluşturma](library-with-visual-studio.md)
@@ -27,17 +26,20 @@ ms.locfileid: "84202184"
 - [Paket yükleme ve kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 - [Paket oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
+- [F # konsol uygulaması oluşturma](../../fsharp/get-started/get-started-visual-studio.md)
+
 ## <a name="use-visual-studio-code"></a>Visual Studio Code kullanma
 
 Visual Studio Code veya başka bir kod Düzenleyicisi kullanmak istiyorsanız bu öğreticileri seçin. Hepsi .NET Core geliştirme görevleri için CLı kullanır, bu nedenle hata ayıklama öğreticisi hariç tüm kod düzenleyiciyle kullanılabilir.
 
 - [Konsol uygulaması oluşturma](with-visual-studio-code.md)
 - [Uygulamada hata ayıklama](debugging-with-visual-studio-code.md)
-- [Konsol uygulaması oluşturma ve yayımlama](cli-create-console-app.md)
-- [F # konsol uygulaması oluşturma](../../fsharp/get-started/get-started-vscode.md)
+- [Uygulama yayımlama](publishing-with-visual-studio-code.md)
 - [Kitaplık oluşturma ve bu kitaplığa birim testi yapma - macOS](using-on-macos.md)
 - [Paket yükleme ve kullanma](/nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli)
 - [Paket oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+
+- [F # konsol uygulaması oluşturma](../../fsharp/get-started/get-started-vscode.md)
 
 ## <a name="use-visual-studio-for-mac"></a>Mac için Visual Studio’yu kullanma
 

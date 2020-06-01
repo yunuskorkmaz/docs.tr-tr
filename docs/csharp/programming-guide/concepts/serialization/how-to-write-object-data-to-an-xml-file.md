@@ -1,16 +1,16 @@
 ---
-title: Bir XML dosyasına nesne verileri yazma (C#)
+title: Nesne verilerini bir XML dosyasına yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: f7ffb47a22d3cd94cd7cb6f702b64180a8790eb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f18ae194d2ed70f633665a29772622319ea9493
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167524"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84242000"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Bir XML dosyasına nesne verileri yazma (C#)
-Bu örnek, sınıfı kullanarak nesneyi bir sınıftan xml dosyasına <xref:System.Xml.Serialization.XmlSerializer> yazar.  
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>Nesne verilerini bir XML dosyasına yazma (C#)
+Bu örnek, sınıfını kullanarak bir sınıftan bir XML dosyasına nesne yazar <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Örnek  
   
@@ -45,24 +45,24 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Serihale alınan sınıfın parametreleri olmayan bir ortak oluşturucusu olmalıdır.  
+ Seri hale getirilen sınıfın parametre içermeyen bir ortak Oluşturucusu olmalıdır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Serihale edilen sınıfın ortak, parametresiz bir oluşturucusu yoktur.  
+- Seri hale getirilen sınıfın ortak, parametresiz bir oluşturucusu yok.  
   
-- Dosya var ve salt okunur<xref:System.IO.IOException>( ).  
+- Dosya var ve salt okunurdur ( <xref:System.IO.IOException> ).  
   
-- Yol çok uzun<xref:System.IO.PathTooLongException>( ).  
+- Yol çok uzun ( <xref:System.IO.PathTooLongException> ).  
   
-- Disk dolu (<xref:System.IO.IOException>).  
+- Disk dolu ( <xref:System.IO.IOException> ).  
   
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasöre erişmesi gerekir. `Create` Dosya zaten varsa, uygulamanın `Write` yalnızca daha az bir ayrıcalıkla erişmesi gerekir. Mümkün olduğunda, dosyayı dağıtım sırasında oluşturmak ve bir `Read` klasöre erişmek yerine `Create` yalnızca tek bir dosyaya erişim vermek daha güvenlidir.  
+## <a name="net-security"></a>.NET güvenliği  
+ Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın `Create` klasöre erişmesi gerekir. Dosya zaten mevcutsa, uygulamanın yalnızca daha `Write` az bir ayrıcalığa erişmesi gerekir. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması daha güvenlidir ve `Read` `Create` bir klasör için erişim yerine yalnızca tek bir dosyaya erişim izni verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [XML dosyasından nesne verileri nasıl okunur (C#)](./how-to-read-object-data-from-an-xml-file.md)
+- [XML dosyasından nesne verilerini okuma (C#)](./how-to-read-object-data-from-an-xml-file.md)
 - [Serileştirme (C# )](./index.md)

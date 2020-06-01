@@ -9,34 +9,34 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337251"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241662"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 
-Bu bölümde,.NET Framework aracılığıyla C# için erişilebilir anahtar C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi verilmektedir.  
+Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi sağlar.  
   
- Bu bölümün çoğu zaten C # ve genel programlama kavramları hakkında bir şeyler bildiğinizi varsayar. Programlama veya C# ile tam bir acemi iseniz, [c# Öğreticiler](../tutorials/intro-to-csharp/index.md) veya [.NET Tarayıcı İçi Öğretici](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)Giriş ziyaret etmek isteyebilirsiniz , hiçbir önceki programlama bilgisi gereklidir.  
+ Bu bölümün çoğu, C# ve genel programlama kavramları hakkında bir şeyi zaten bildiğiniz varsayılmaktadır. Programlama veya C# ile tam bir başlangıç yapıyorsanız, önceden programlama bilgisi gerekli olmayan [C# öğreticilerine](../tutorials/intro-to-csharp/index.md) veya [.net-tarayıcı öğreticisine](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)giriş ' i ziyaret etmek isteyebilirsiniz.  
   
- Belirli anahtar kelimeler, operatörler ve önişlemci yönergeleri hakkında bilgi için [C# Referans'a](../language-reference/index.md)bakın. C# Dil Belirtimi hakkında bilgi için [C# Language Specification'a](/dotnet/csharp/language-reference/language-specification/introduction)bakın.  
+ Belirli anahtar sözcükler, işleçler ve Önişlemci yönergeleri hakkında daha fazla bilgi için bkz. [C# başvurusu](../language-reference/index.md). C# dil belirtimi hakkında daha fazla bilgi için bkz. [C# dil belirtimi](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Program bölümleri
 
-[C# Programı İçinde](./inside-a-program/index.md)  
+[C# programı içinde](./inside-a-program/index.md)  
   
-[Ana() ve Komut Satırı Bağımsız Değişkenleri](./main-and-command-args/index.md)  
+[Main () ve komut satırı bağımsız değişkenleri](./main-and-command-args/index.md)  
 
-## <a name="language-sections"></a>Dil Bölümleri
+## <a name="language-sections"></a>Dil bölümleri
 
-[İfadeler, İfadeler ve Operatörler](./statements-expressions-operators/index.md)  
+[Deyimler, Ifadeler ve Işleçler](./statements-expressions-operators/index.md)  
 
  [Türler](./types/index.md)  
 
- [Sınıflar ve Structs](./classes-and-structs/index.md)  
+ [Sınıflar ve yapılar](./classes-and-structs/index.md)  
   
  [Arabirimler](./interfaces/index.md)  
 
@@ -44,29 +44,29 @@ Bu bölümde,.NET Framework aracılığıyla C# için erişilebilir anahtar C# d
 
  [Diziler](./arrays/index.md)  
   
- [Dize](./strings/index.md)  
+ [Dizeler](./strings/index.md)  
   
  [Özellikler](./classes-and-structs/properties.md)  
   
  [Dizin Oluşturucular](./indexers/index.md)  
   
- [Olaylar](./events/index.md)  
+ [Ekinlikler](./events/index.md)  
   
  [Genel Türler](./generics/index.md)  
   
  [Yineleyiciler](./concepts/iterators.md)
   
- [LINQ Sorgu İfadeleri](../linq/index.md)  
+ [LINQ sorgu Ifadeleri](../linq/index.md)  
   
- [Lambda İfadeler](./statements-expressions-operators/lambda-expressions.md)  
+ [Lambda Ifadeleri](./statements-expressions-operators/lambda-expressions.md)  
   
- [Ad Alanları](./namespaces/index.md)  
+ [Ad alanları](./namespaces/index.md)  
   
  [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
   
- [XML Dokümantasyon Yorumları](./xmldoc/index.md)  
+ [XML belge açıklamaları](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Platform Bölümleri
+## <a name="platform-sections"></a>Platform bölümleri
 
  [Uygulama Etki Alanları](../../framework/app-domains/application-domains.md)  
   
@@ -76,14 +76,14 @@ Bu bölümde,.NET Framework aracılığıyla C# için erişilebilir anahtar C# d
   
  [Koleksiyonlar](./concepts/collections.md)  
   
- [Özel Durumlar ve Özel Durum Kullanımı](./exceptions/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](./exceptions/index.md)  
   
  [Dosya Sistemi ve Kayıt Defteri (C# Programlama Kılavuzu)](./file-system/index.md)  
   
- [Birlikte çalışabilirlik](./interop/index.md)  
+ [Birlikte Çalışabilirlik](./interop/index.md)  
   
  [Yansıma](./concepts/reflection.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../language-reference/index.md)
+- [C# başvurusu](../language-reference/index.md)

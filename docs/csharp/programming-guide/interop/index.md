@@ -1,5 +1,5 @@
 ---
-title: Birlikte çalışabilirlik - C# Programlama Kılavuzu
+title: Birlikte çalışabilirlik-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,44 +7,45 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75712058"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84242013"
 ---
 # <a name="interoperability-c-programming-guide"></a>Birlikte Çalışabilirlik (C# Programlama Kılavuzu)
-Birlikte çalışabilirlik, yönetilmeyen koddaki mevcut yatırımları korumanızı ve bunlardan yararlanmanızı sağlar. Ortak dil çalışma zamanı (CLR) denetimi altında çalışan kod *yönetilen kod*olarak adlandırılır ve CLR dışında çalışan kod *yönetilmeyen kod*olarak adlandırılır. COM, COM+, C++ bileşenleri, ActiveX bileşenleri ve Microsoft Windows API'sı yönetilmeyen kod örnekleridir.  
+
+Birlikte çalışabilirlik, yönetilmeyen koddaki mevcut yatırımlardan korunmanızı ve avantajlarını yapmanızı sağlar. Ortak dil çalışma zamanının (CLR) denetimi altında çalışan koda *yönetilen kod*adı verılır ve CLR dışında çalışan koda *yönetilmeyen kod*denir. COM, COM+, C++ bileşenleri, ActiveX bileşenleri ve Microsoft Windows API, yönetilmeyen kod örnekleridir.  
   
- .NET Framework, platform çağırma hizmetleri, <xref:System.Runtime.InteropServices> ad alanı, C++ birlikte çalışabilirlik ve COM birlikte çalışabilirlik (COM interop) aracılığıyla yönetilmeyen kodla birlikte çalışabilirlik sağlar.  
+.NET, platform çağırma Hizmetleri, <xref:System.Runtime.InteropServices> ad alanı, C++ birlikte çalışabilirliği ve com birlikte çalışabilirliği (com birlikte çalışma) aracılığıyla yönetilmeyen kod ile birlikte çalışabilirliği etkinleştirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Birlikte Çalışabilirliğe Genel Bakış](./interoperability-overview.md)  
- C# yönetilen kod ve yönetilmeyen kod arasında etkileşim yöntemlerini açıklar.  
+ C# yönetilen kodu ve yönetilmeyen kod arasında birlikte çalışma yöntemlerini açıklar.  
   
  [Visual C# özelliklerini kullanarak Office birlikte çalışma nesnelerine erişim](./how-to-access-office-onterop-objects.md)  
- Office programlamayı kolaylaştırmak için Visual C# 'da tanıtılan özellikleri açıklar.  
+ Visual C# ' de Office programlamayı kolaylaştırmak Için sunulan özellikleri açıklar.  
   
  [COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Parametreleri olan COM özelliklerine erişmek için dizinlenmiş özelliklerin nasıl kullanılacağını açıklar.  
   
  [WAV dosyasını oynatmak için platform çağırma kullanma](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
- Windows işletim sisteminde bir .wav ses dosyası çalmak için platform çağırma hizmetlerinin nasıl kullanılacağını açıklar.  
+ Windows işletim sisteminde bir. wav ses dosyası oynatmak için platform çağırma Hizmetleri ' nin nasıl kullanılacağını açıklar.  
   
- [Walkthrough: Office Programlama](./walkthrough-office-programming.md)  
- Excel çalışma kitabı nın ve çalışma kitabına bağlantı içeren bir Word belgesinin nasıl oluşturulup oluşturulabildiğini gösterir.  
+ [İzlenecek yol: Office programlama](./walkthrough-office-programming.md)  
+ Çalışma kitabının bir bağlantısını içeren bir Excel çalışma kitabı ve Word belgesi oluşturmayı gösterir.  
   
  [Örnek COM Sınıfı](./example-com-class.md)  
- Bir C# sınıfının COM nesnesi olarak nasıl ortaya çıkarılabildiğini gösterir.  
+ C# sınıfının bir COM nesnesi olarak nasıl kullanıma sunuleceğini gösterir.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [C# Language Specification'daki](/dotnet/csharp/language-reference/language-specification/introduction) [Temel kavramlara](~/_csharplang/spec/unsafe-code.md) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [temel kavramlar](~/_csharplang/spec/unsafe-code.md) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
 - [C# Programlama Kılavuzu](../index.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)
-- [Walkthrough: Office Programlama](./walkthrough-office-programming.md)
+- [İzlenecek yol: Office programlama](./walkthrough-office-programming.md)

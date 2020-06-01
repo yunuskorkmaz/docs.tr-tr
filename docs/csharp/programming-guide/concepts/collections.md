@@ -2,12 +2,12 @@
 title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201128"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241402"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>Koleksiyon türleri
 
-Birçok ortak koleksiyon .NET Framework tarafından sağlanır. Her koleksiyon türü belirli bir amaç için tasarlanmıştır.
+Birçok ortak koleksiyon .NET tarafından sağlanır. Her koleksiyon türü belirli bir amaç için tasarlanmıştır.
 
 Ortak koleksiyon sınıflarından bazıları bu bölümde açıklanmıştır:
 
@@ -214,7 +214,7 @@ Daha fazla bilgi için bkz. [yaygın olarak kullanılan koleksiyon türleri](../
 
 ### <a name="systemcollectionsconcurrent-classes"></a>System. Collections. eşzamanlı sınıflar
 
-.NET Framework 4 veya daha yeni bir sürümde, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar.
+.NET Framework 4 ve sonraki sürümlerinde, <xref:System.Collections.Concurrent> ad alanındaki koleksiyonlar, koleksiyon öğelerine birden çok iş parçacığından erişmek için verimli iş parçacığı güvenli işlemleri sağlar.
 
 <xref:System.Collections.Concurrent> <xref:System.Collections.Generic?displayProperty=nameWithType> <xref:System.Collections?displayProperty=nameWithType> Birden çok iş parçacığının koleksiyona aynı anda eriştiği her seferinde ve ad alanındaki ilgili türler yerine ad alanındaki sınıflar kullanılmalıdır. Daha fazla bilgi için bkz. [Iş parçacığı güvenli koleksiyonlar](../../../standard/collections/thread-safe/index.md) ve <xref:System.Collections.Concurrent> .
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 Veya arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerable> .
 
-Özel bir koleksiyon tanımlamanızı mümkün olsa da, bu konunun önceki kısımlarında yer alan [koleksiyonlar türlerinde](#BKMK_KindsOfCollections) açıklanan .NET Framework dahil edilen koleksiyonları kullanmak genellikle daha iyidir.
+Özel bir koleksiyon tanımlamanızı mümkün olsa da, bu makalenin önceki kısımlarında yer alan [koleksiyonlar türlerinde](#BKMK_KindsOfCollections) açıklanan .net ' e dahil edilen koleksiyonları kullanmak genellikle daha iyidir.
 
 Aşağıdaki örnek adlı özel bir koleksiyon sınıfını tanımlar `AllColors` . Bu sınıf, <xref:System.Collections.IEnumerable> yönteminin uygulanması için arabirimini uygular <xref:System.Collections.IEnumerable.GetEnumerator%2A> .
 

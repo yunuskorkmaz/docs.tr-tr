@@ -1,49 +1,50 @@
 ---
-title: Özel Durumları Kullanma - C# Programlama Kılavuzu
+title: Özel durumlar kullanma-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705268"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241701"
 ---
-# <a name="using-exceptions-c-programming-guide"></a>Özel Durumlar Kullanma (C# Programlama Kılavuzu)
-C#'da, programdaki hatalar çalışma zamanında özel durumlar adı verilen bir mekanizma kullanılarak program aracılığıyla yayılır. Özel durumlar, bir hatayla karşılaşan ve hatayı düzeltebilecek kod tarafından yakalanan kod tarafından atılır. Özel durumlar .NET Framework ortak dil çalışma zamanı (CLR) veya bir programdaki kod tarafından atılabilir. Bir özel durum atıldığında, özel durum `catch` bildirimi bulunana kadar çağrı yığınını yayır. Yakalanmayan özel durumlar, iletişim kutusu görüntüleyen sistem tarafından sağlanan genel bir özel durum işleyicisi tarafından işlenir.  
+# <a name="use-exceptions-c-programming-guide"></a>Özel durumlar kullanma (C# Programlama Kılavuzu)
+
+C# ' de, çalışma zamanında programdaki hatalar, özel durumlar adlı bir mekanizma kullanılarak program aracılığıyla dağıtılır. Özel durumlar, hata ile karşılaştığında ve hatayı düzeltebileceğiniz kodla yakalanan kodla oluşturulur. Özel durumlar .NET çalışma zamanı veya bir programdaki kodla oluşturulabilir. Bir özel durum oluşturulduktan sonra, özel durum için bir ifade bulunana kadar çağrı yığınını yayar `catch` . Yakalanamayan özel durumlar, bir iletişim kutusu görüntüleyen sistem tarafından sunulan genel bir özel durum işleyicisi tarafından işlenir.  
   
- Özel durumlar, 'den <xref:System.Exception>türetilen sınıflar tarafından temsil edilir. Bu sınıf özel durum türünü tanımlar ve özel durum la ilgili ayrıntıları olan özellikleri içerir. Özel durum atma, özel durum türetilmiş bir sınıfın bir örneğini oluşturmayı, isteğe `throw` bağlı olarak özel durum özelliklerini yapılandırmayı ve ardından anahtar kelimeyi kullanarak nesneyi atmayı içerir. Örnek:  
+ Özel durumlar, öğesinden türetilmiş sınıflar tarafından temsil edilir <xref:System.Exception> . Bu sınıf, özel durum türünü tanımlar ve özel durumla ilgili ayrıntıları içeren özellikleri içerir. Özel durum oluşturmak, özel durum türetilmiş sınıfın bir örneğini oluşturmayı, isteğe bağlı olarak özel durumun özelliklerini yapılandırmayı ve sonra anahtar sözcüğünü kullanarak nesneyi oluşturmayı içerir `throw` . Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#1)]  
   
- Bir özel durum atıldıktan sonra, çalışma zamanı bir `try` blok içinde olup olmadığını görmek için geçerli deyimi denetler. Bu ysa, `catch` `try` özel durumu yakalayıp yakalayamayacaklarını görmek için blokla ilişkili bloklar denetlenir. `Catch`bloklar genellikle özel durum türlerini belirtir; `catch` bloğun türü özel durumla aynı türdeyse veya özel durum taban `catch` sınıfıysa, blok yöntemi işleyebilir. Örnek:  
+ Bir özel durum oluşturulduktan sonra, çalışma zamanı bir blok içinde olup olmadığını görmek için geçerli ifadeyi denetler `try` . Eğer ise, `catch` bloğuyla ilişkili herhangi bir blok, `try` özel durumu yakalayıp yakalayamayacağını görmek için denetlenir. `Catch`bloklar genellikle özel durum türlerini belirtir; `catch`bloğun türü özel durumla aynı türde veya özel durumun temel bir sınıfı ise, `catch` blok yöntemi işleyebilir. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#2)]  
   
- Özel durum atan deyim `try` bir blok içinde değilse `try` veya içine giren bloğun eşleşen `catch` bir bloğu yoksa, çalışma zamanı `try` deyimi `catch` ve blokları için arama yöntemini denetler. Çalışma süresi, uyumlu `catch` bir blok aramak için arama yığınına kadar devam ediyor. `catch` Blok bulunduktan ve yürütüldükten sonra, denetim `catch` bu bloktan sonra bir sonraki ifadeye geçirilir.  
+ Bir özel durum oluşturan ifade bir blok içinde değilse `try` veya `try` kendisini kapsayan blok eşleşen bir `catch` blok içindeyse, çalışma zamanı bir `try` deyimin ve blokların çağırma yöntemini denetler `catch` . Çalışma zamanı, arama yığınını devam ettirir ve uyumlu bir blok arar `catch` . Blok bulduktan `catch` ve yürütüldükten sonra, denetim bu blok sonrasında sonraki ifadeye geçirilir `catch` .  
   
- Bir `try` deyim birden `catch` fazla blok içerebilir. Özel `catch` durum işleyebilir ilk deyimi yürütülür; uyumlu `catch` olsalar bile aşağıdaki ifadeler göz ardı edilir. Bu nedenle, catch blokları her zaman en özel (veya en türetilmiş) en az özel sıralanmalıdır. Örnek:  
+ Bir `try` ifade, birden fazla blok içerebilir `catch` . `catch`Özel durumu işleyebilen ilk deyim yürütülür; `catch` uyumlu olsalar bile aşağıdaki deyimler yok sayılır. Bu nedenle, catch blokları her zaman en belirli (veya en çok türetilen) en azından belirli bir şekilde sıralanmalıdır. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#3)]  
   
- Blok `catch` yürütülmeden önce, çalışma `finally` zamanı blokları denetler. `Finally`bloklar, programcının iptal edilmiş `try` bir bloktan arta kalan herhangi bir belirsiz durumu temizlemesini veya nesneleri sonuçlandırmak için çalışma zamanında çöp toplayıcısını beklemeden herhangi bir dış kaynağı (grafik tutamaçları, veritabanı bağlantıları veya dosya akışları gibi) serbest bırakmasına olanak tanır. Örnek:  
+ `catch`Blok yürütülmeden önce, çalışma zamanı `finally` blokları denetler. `Finally`bloklar, programcı 'nin durdurulmuş bir `try` bloktan veya herhangi bir dış kaynağın (grafik tutamaçları, veritabanı bağlantıları veya dosya akışları gibi), çalışma zamanındaki çöp toplayıcısının nesneleri sonlandırmasına gerek kalmadan serbest bırakılmış olan herhangi bir durumu temizlemesini sağlar. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#4)]  
   
- Bir `WriteByte()` özel durum atılırsa, `try` dosyayı yeniden açmaya çalışan ikinci `file.Close()` bloktaki kod çağrılmazsa başarısız olur ve dosya kilitli kalır. Bir `finally` özel durum atılsa bile `finally` bloklar yürütüldeğinden, önceki örnekteki blok dosyanın doğru şekilde kapatılmasına izin verir ve bir hatayı önlemeye yardımcı olur.  
+ `WriteByte()`Bir özel durum, `try` çağrılırsa dosyayı yeniden açmaya çalışan ikinci bloktaki kod başarısız olur `file.Close()` ve dosya kilitli kalır. `finally`Bir özel durum oluşsa bile bloklar yürütüldüğü `finally` için, önceki örnekteki blok dosyanın düzgün şekilde kapatılmasını sağlar ve bir hatadan kaçınmaya yardımcı olur.  
   
- Özel durum `catch` atıldıktan sonra çağrı yığınında uyumlu bir blok bulunamazsa, üç şeyden biri oluşur:  
+ `catch`Bir özel durum oluşturulduktan sonra çağrı yığınında uyumlu bir blok bulunmazsa, üç durumdan biri oluşur:  
   
-- İstisna bir sonlandırıcı içinde yse, sonlandırıcı iptal edilir ve varsa temel sonlandırıcı çağrılır.  
+- Özel durum bir Sonlandırıcı içindeyse Sonlandırıcı iptal edilir ve varsa taban sonlandırıcısı çağırılır.  
   
-- Çağrı yığını statik bir oluşturucu veya statik alan baş <xref:System.TypeInitializationException> harflerini içeriyorsa, yeni <xref:System.Exception.InnerException%2A> özel durum özelliğine atanan özgün özel durumla birlikte bir atılmıştır.  
+- Çağrı yığını statik bir Oluşturucu içeriyorsa veya bir statik alan başlatıcısı varsa, <xref:System.TypeInitializationException> özgün özel durum <xref:System.Exception.InnerException%2A> Yeni özel durumun özelliğine atanır.  
   
-- İş parçacığının başlangıcına ulaşılırsa, iş parçacığı sonlandırılır.  
+- İş parçacığının başlangıcına ulaşıldığında, iş parçacığı sonlandırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Özel Durumlar ve Özel Durum Kullanımı](./index.md)
+- [Özel Durumlar ve Özel Durum İşleme](./index.md)

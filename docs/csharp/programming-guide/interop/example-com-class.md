@@ -1,37 +1,37 @@
 ---
-title: Örnek COM Sınıfı - C# Programlama Kılavuzu
+title: Örnek COM sınıfı-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712084"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241857"
 ---
 # <a name="example-com-class-c-programming-guide"></a>Örnek COM Sınıfı (C# Programlama Kılavuzu)
-Aşağıda, COM nesnesi olarak ortaya çıkaracağınız bir sınıf örneği verilmiştir. Bu kod bir .cs dosyasına yerleştirildikten ve projenize eklendikten sonra COM **Interop özelliğini** **True**olarak ayarlayın. Daha fazla bilgi için [bkz: COM Interop için bir Bileşen kaydedin.](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))
+Aşağıda bir COM nesnesi olarak kullanıma sunabileceğiniz bir sınıf örneği verilmiştir. Bu kod bir. cs dosyasına yerleştirildikten ve projenize eklendikten sonra, **com birlikte çalışma özelliğini kaydet** özelliğini **doğru**olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: bir BILEŞENI com birlikte çalışması Için kaydetme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
- Visual C# nesnelerinin COM'a teşhir edilmesi için bir sınıf arabirimi, gerekirse olaylar arabirimi ve sınıfın kendisini bildirme gerekir. Sınıf üyeleri COM tarafından görülebilmek için aşağıdaki kurallara uymalıdır:  
+ Visual C# nesnelerini COM 'a göstermek için bir sınıf arabirimi, gerekliyse bir olay arabirimi ve sınıfın kendisi için bildirim gerekir. Sınıf üyelerinin COM 'a görünür olması için bu kuralları izlemesi gerekir:  
   
-- Sınıf halka açık olmalı.  
+- Sınıf ortak olmalıdır.  
   
-- Özellikler, yöntemler ve olaylar herkese açık olmalıdır.  
+- Özellikler, Yöntemler ve olaylar ortak olmalıdır.  
   
-- Özellikler ve yöntemler sınıf arabiriminde bildirilmelidir.  
+- Özellikler ve Yöntemler sınıf arabiriminde bildirilmelidir.  
   
 - Olaylar olay arabiriminde bildirilmelidir.  
   
- Bu arabirimlerde bildirilmemiş sınıfdaki diğer ortak üyeler COM tarafından görülemez, ancak diğer .NET Framework nesneleri tarafından görünür olacaktır.  
+ Bu arabirimlerde bildirilmeyen sınıftaki diğer genel Üyeler COM 'a görünmez, ancak diğer .NET nesneleri tarafından görülecektir.  
   
- Özellikleri ve yöntemleri COM'a maruz bırakmak için, bunları sınıf `DispId` arabiriminde bildirmeniz ve bir öznitelikle işaretlemeniz ve bunları sınıfta uygulamanız gerekir. Üyelerin arabirimde beyan edildiği sıra, COM vtable için kullanılan sıradır.  
+ Özellikleri ve yöntemleri COM 'a sunmak için, bunları sınıf arabiriminde bildirmeniz ve bir `DispId` özniteliğiyle işaretlemeniz ve bunları sınıfında uygulamanız gerekir. Üyelerin arabirimde bildirildiği sıra, COM vtable için kullanılan sıradır.  
   
- Sınıfınızdaki olayları ortaya çıkarmak için, bunları olaylar arabiriminde `DispId` bildirmeniz ve bunları bir öznitelikle işaretlemeniz gerekir. Sınıf bu arabirimi uygulamamalıdır.  
+ Sınıfınızdan olayları göstermek için bunları olaylar arabiriminde bildirmeniz ve bir özniteliğiyle işaretlemeniz gerekir `DispId` . Sınıf bu arabirimi uygulamamalıdır.  
   
- Sınıf arabirimini uygular; birden fazla arabirim uygulayabilir, ancak ilk uygulama varsayılan sınıf arabirimi olacaktır. COM'a maruz kalan yöntemleri ve özellikleri burada uygulayın. Bunlar genel olarak işaretlenmeli ve sınıf arabirimindeki bildirimlerle eşleşmelidir. Ayrıca, burada sınıf tarafından yetiştirilen olayları bildirin. Bunlar genel olarak işaretlenmeli ve olaylar arabirimindeki bildirimlerle eşleşmelidir.  
+ Sınıfı sınıfı arabirimini uygular; birden fazla arabirim uygulayabilir, ancak ilk uygulama varsayılan sınıf arabirimi olur. COM 'a sunulan yöntemleri ve özellikleri buraya uygulayın. Bunların ortak olarak işaretlenmesi ve sınıf arabirimindeki bildirimlerle eşleşmesi gerekir. Ayrıca, burada sınıf tarafından oluşturulan olayları bildirin. Bunların ortak olarak işaretlenmesi ve olaylar arabirimindeki bildirimlerle eşleşmesi gerekir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[csProgGuideInterop#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/ExampleCOM.cs#8)]  
@@ -39,5 +39,5 @@ Aşağıda, COM nesnesi olarak ortaya çıkaracağınız bir sınıf örneği ve
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Birlikte çalışabilirlik](./index.md)
+- [Birlikte Çalışabilirlik](./index.md)
 - [Derleme Sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

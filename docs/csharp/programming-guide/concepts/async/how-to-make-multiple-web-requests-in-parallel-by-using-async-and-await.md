@@ -1,22 +1,22 @@
 ---
-title: Async ve await (C#) kullanarak paralel olarak birden fazla web istekleri yapmak için nasıl
+title: Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169955"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241805"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Async ve await (C#) kullanarak paralel olarak birden fazla web istekleri yapmak için nasıl
-Async yönteminde, görevler oluşturulduklarında başlatılır. [Bekleme](../../../language-reference/operators/await.md) işleci, görev bitene kadar işlemenin devam edilemeyebildiği yöntemdeki noktada göreve uygulanır. Genellikle bir görev, aşağıdaki örnekte görüldüğü gibi, oluşturulduğu anda beklenilir.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)
+Zaman uyumsuz bir yöntemde görevler oluşturulduğunda başlatılır. [Await](../../../language-reference/operators/await.md) işleci, görev bitene kadar işlemin devam edemediği yöntemdeki noktada göreve uygulanır. Aşağıdaki örnekte gösterildiği gibi, genellikle bir görev, oluşturulduktan hemen sonra beklediğinde.  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
 ```  
   
- Ancak, programınızın gerçekleştirmesi gereken ve görevin tamamlanmasına bağlı olmayan başka işleri varsa, görevi beklemekten görevi ayırabilirsiniz.  
+ Ancak, programın gerçekleştirmeye yönelik başka bir işi olması durumunda görevin tamamlanmasına bağlı olmaması durumunda görevi bekleyen görev oluşturmayı ayırabilirsiniz.  
   
 ```csharp  
 // The following line creates and starts the task.  
@@ -30,32 +30,32 @@ var myTask = someWebAccessMethodAsync(url);
 var result = await myTask;  
 ```  
   
- Bir görevi başlatmak ve beklemek arasında, diğer görevleri başlatabilirsiniz. Ek görevler örtülü olarak paralel olarak çalışır, ancak ek iş parçacığı oluşturulmaz.  
+ Bir görevi başlatma ve bekleme arasında başka görevler de başlatabilirsiniz. Ek görevler dolaylı olarak paralel olarak çalışır, ancak ek iş parçacığı oluşturulmaz.  
   
- Aşağıdaki program üç eşzamanlı web indirme başlar ve daha sonra çağrıldıkları sırada onları bekliyor. Programı çalıştırdığınızda, görevlerin her zaman oluşturuldukları ve beklendikleri sırada bitmediklerine dikkat edin. Oluşturulduklarında çalışmaya başlarlar ve yöntem bekleyen ifadelere ulaşmadan önce görevlerden biri veya birkaçı tamamlanabilir.  
+ Aşağıdaki program, üç zaman uyumsuz Web yüklemesi başlatır ve ardından bunların çağrıldıkları sırayla bekler. Programı çalıştırdığınızda, görevlerin Oluşturulma sırasında ve bekledikleri sırada her zaman bitmediğine dikkat edin. Bunlar oluşturulduğunda çalışmaya başlar ve Yöntem await ifadelerine ulaşmadan önce bir veya daha fazla görev bitebilirler.  
   
 > [!NOTE]
-> Bu projeyi tamamlamak için Visual Studio 2012 veya üstü ve .NET Framework 4.5 veya daha yüksek bilgisayarınıza yüklü olması gerekir.  
+> Bu projeyi tamamlayabilmeniz için, bilgisayarınızda Visual Studio 2012 veya üzeri ve .NET Framework 4,5 veya üzeri yüklü olmalıdır.  
   
- Aynı anda birden çok görevi başlatan başka bir örnek için, [Task.WhenAll (C#) kullanarak async walkthrough'u nasıl genişletirebilirsiniz.](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+ Aynı anda birden çok görevi Başlatan başka bir örnek için, bkz. [Task. WhenAll (C#) kullanarak zaman uyumsuz izlenecek yolu genişletme](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
- Bu örnek için kodu [Geliştirici Kodu Örneklerinden](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)indirebilirsiniz.  
+ Bu örnek için kodu [Geliştirici kodu örneklerinden](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)indirebilirsiniz.  
   
 ### <a name="to-set-up-the-project"></a>Projeyi ayarlamak için  
   
-1. Bir WPF uygulaması ayarlamak için aşağıdaki adımları tamamlayın. [Walkthrough: Access ingsync kullanarak web'e erişim ve (C#) bekliyor.](./walkthrough-accessing-the-web-by-using-async-and-await.md)  
+1. WPF uygulaması ayarlamak için aşağıdaki adımları izleyin. [Izlenecek yol: Async ve await (C#) kullanarak Web 'e erişmek](./walkthrough-accessing-the-web-by-using-async-and-await.md)için bu adımlarla ilgili ayrıntılı yönergeleri bulabilirsiniz.  
   
-    - Metin kutusu ve düğme içeren bir WPF uygulaması oluşturun. Düğmeyi `startButton`adlandırın ve metin `resultsTextBox`kutusunu adlandırın.  
+    - Metin kutusu ve düğme içeren bir WPF uygulaması oluşturun. Düğmeyi adlandırın `startButton` ve metin kutusunu adlandırın `resultsTextBox` .  
   
-    - Için <xref:System.Net.Http>bir başvuru ekleyin.  
+    - İçin bir başvuru ekleyin <xref:System.Net.Http> .  
   
-    - MainWindow.xaml.cs dosyasında, `using` `System.Net.Http`için bir yönerge ekleyin.  
+    - MainWindow.xaml.cs dosyasında, için bir yönerge ekleyin `using` `System.Net.Http` .  
   
 ### <a name="to-add-the-code"></a>Kodu eklemek için  
   
-1. Tasarım penceresinde, MainWindow.xaml, MainWindow.xaml.cs olay işleyicisi `startButton_Click` oluşturmak için düğmesini çift tıklatın.  
+1. Tasarım penceresinde, MainWindow. xaml, `startButton_Click` MainWindow.xaml.cs içinde olay işleyicisini oluşturmak için düğmeye çift tıklayın.  
   
-2. Aşağıdaki kodu kopyalayın ve MainWindow.xaml.cs'nin `startButton_Click` gövdesine yapıştırın.  
+2. Aşağıdaki kodu kopyalayın ve `startButton_Click` MainWindow.xaml.cs içindeki gövdesine yapıştırın.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -63,15 +63,15 @@ var result = await myTask;
     resultsTextBox.Text += "\r\n\r\nControl returned to startButton_Click.\r\n";  
     ```  
   
-     Kod, `CreateMultipleTasksAsync`uygulamayı yönlendiren bir eşzamanlı yöntem çağırır.  
+     Kod, uygulamayı yönlendiren bir zaman uyumsuz yöntemini çağırır `CreateMultipleTasksAsync` .  
   
-3. Projeye aşağıdaki destek yöntemlerini ekleyin:  
+3. Aşağıdaki destek yöntemlerini projeye ekleyin:  
   
-    - `ProcessURLAsync`bir <xref:System.Net.Http.HttpClient> web sitesinin içeriğini bayt dizisi olarak indirmek için bir yöntem kullanır. Destek yöntemi, `ProcessURLAsync` daha sonra dizinin uzunluğunu görüntüler ve döndürür.  
+    - `ProcessURLAsync`<xref:System.Net.Http.HttpClient>bir Web sitesinin içeriğini bayt dizisi olarak indirmek için bir yöntem kullanır. Destek yöntemi, `ProcessURLAsync` ardından dizinin uzunluğunu görüntüler ve döndürür.  
   
-    - `DisplayResults`her URL için bayt dizisinde bayt sayısını görüntüler. Bu ekran, her görevin karşıdan yüklemeyi ne zaman tamamlarolduğunu gösterir.  
+    - `DisplayResults`her URL için bayt dizisindeki bayt sayısını görüntüler. Bu ekranda, her görevin indirilmesi tamamlandığında gösterilir.  
   
-     Aşağıdaki yöntemleri kopyalayın ve MainWindow.xaml.cs `startButton_Click` olay işleyicisi sonra yapıştırın.  
+     Aşağıdaki yöntemleri kopyalayın ve `startButton_Click` MainWindow.xaml.cs içindeki olay işleyicisinden sonra yapıştırın.  
   
     ```csharp  
     async Task<int> ProcessURLAsync(string url, HttpClient client)  
@@ -93,17 +93,17 @@ var result = await myTask;
     }  
     ```  
   
-4. Son olarak, `CreateMultipleTasksAsync`aşağıdaki adımları gerçekleştiren yöntemi tanımlayın.  
+4. Son olarak, `CreateMultipleTasksAsync` aşağıdaki adımları gerçekleştiren yöntemi tanımlayın.  
   
-    - Yöntem, `ProcessURLAsync`'de `HttpClient` metne <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> erişmeniz gereken bir nesneyi bildirir.  
+    - Yöntemi `HttpClient` , içindeki yöntemine erişmeniz gereken bir nesne bildirir <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> `ProcessURLAsync` .  
   
-    - Yöntem oluşturur ve bir <xref:System.Threading.Tasks.Task%601>karşıcı türü `TResult` , üç görev başlatır. Her görev sona `DisplayResults` ererken, görevin URL'sini ve indirilen içeriğin uzunluğunu görüntüler. Görevler eşzamanlı olarak çalıştığı için, sonuçların görüntülenme sırası, beyan edildikleri sırayla farklı olabilir.  
+    - Yöntemi, türünde üç görev oluşturur ve başlatır <xref:System.Threading.Tasks.Task%601> , burada `TResult` bir tamsayıdır. Her görev bittiğinde, `DisplayResults` görevin URL 'sini ve indirilen içeriklerin uzunluğunu görüntüler. Görevler zaman uyumsuz olarak çalıştığından, sonuçların göründüğü sıra, bildirildiği sırayla farklılık gösterebilir.  
   
-    - Yöntem, her görevin tamamlanmasını bekler. Her `await` işleç, `CreateMultipleTasksAsync` beklenen görev tamamlanana kadar yürütmeyi askıya adatır. İşletici ayrıca, tamamlanan her `ProcessURLAsync` görevden aramadan iade değerini de alır.  
+    - Yöntemi her görevin tamamlanmasını bekler. Her `await` operatör, `CreateMultipleTasksAsync` beklelen görev tamamlanana kadar yürütmeyi askıya alır. İşleci, her tamamlanan görevden öğesine yapılan çağrıdan döndürülen değeri de alır `ProcessURLAsync` .  
   
-    - Görevler tamamlandığında ve sonda değerleri alındığında, yöntem web sitelerinin uzunluklarını toplama gelir ve sonucu görüntüler.  
+    - Görevler tamamlandığında ve tamsayı değerleri alınırsa, yöntemi web sitelerinin uzunluklarını toplar ve sonucu görüntüler.  
   
-     Aşağıdaki yöntemi kopyalayın ve çözüme yapıştırın.  
+     Aşağıdaki yöntemi kopyalayın ve çözümünüze yapıştırın.  
   
     ```csharp  
     private async Task CreateMultipleTasksAsync()  
@@ -134,9 +134,9 @@ var result = await myTask;
     }  
     ```  
   
-5. Programı çalıştırmak için F5 tuşunu seçin ve ardından **Başlat** düğmesini seçin.  
+5. Programı çalıştırmak için F5 tuşunu seçin ve sonra **Başlat** düğmesini seçin.  
   
-     Üç görevin her zaman aynı sırada tamamlanmadığını ve bitirdikleri sıranın oluşturuldukları ve beklendikleri sıra olmadığını doğrulamak için programı birkaç kez çalıştırın.  
+     Üç görevin her zaman aynı sırada bitmeyeceğini ve bunların tamamların oluşturulma sırası ve bekledikleri sıra olması gerektiğini doğrulamak için programı birkaç kez çalıştırın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod tam örneği içerir.  
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Walkthrough: Async kullanarak Web'e erişim ve bekleme (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async ve await ile Asynchronous Programlama (C#)](./index.md)
-- [Task.WhenAll (C#) kullanarak async walkthrough nasıl genişletilir](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async ve await ile zaman uyumsuz programlama (C#)](./index.md)
+- [Task. WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

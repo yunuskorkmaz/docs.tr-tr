@@ -1,5 +1,5 @@
 ---
-title: Birlikte çalışabilirlik Genel Bakış - C# Programlama Kılavuzu
+title: Birlikte çalışabilirlik genel bakış-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,60 +8,60 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700737"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241740"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
-Konu, C# yönetilen kod ve yönetilmeyen kod arasında birlikte çalışabilirlik sağlamak için yöntemleri açıklar.  
+Konu C# yönetilen kodu ve yönetilmeyen kod arasında birlikte çalışabilirliği etkinleştirme yöntemlerini açıklar.  
   
-## <a name="platform-invoke"></a>Platform Invoke  
- *Platform çağırma,* yönetilen kodun Microsoft Windows API'si gibi dinamik bağlantı kitaplıklarında (DLLs) uygulanan yönetilmeyen işlevleri çağırmasını sağlayan bir hizmettir. Dışa aktarılan bir işlevi bulur ve çağırır ve gerektiğinde interişlem sınırı boyunca bağımsız değişkenlerini (karşıtlar, dizeleri, diziler, yapılar vb.) sıralar.  
+## <a name="platform-invoke"></a>Platform çağırma  
+ *Platform çağırma* , yönetilen kodun, MICROSOFT Windows API 'dakiler gibi dinamik bağlantı kitaplıkları (dll 'ler) içinde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. İçe aktarılmış bir işlevi bulur ve çağırır ve bağımsız değişkenlerini (tamsayılar, dizeler, diziler, yapılar vb.) gerektiğinde birlikte çalışma sınırında sıralar.  
   
-Daha fazla bilgi için, [Yönetilmeyen DLL Fonksiyonlarını Tüketme](../../../framework/interop/consuming-unmanaged-dll-functions.md) ve [WAV dosyasını oynatmak için platform çağırmanın nasıl kullanılacağı konusuna](./how-to-use-platform-invoke-to-play-a-wave-file.md)bakın.
+Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/interop/consuming-unmanaged-dll-functions.md) [kullanma ve bir wav dosyasını oynatmak için platform çağırma kullanma](./how-to-use-platform-invoke-to-play-a-wave-file.md).
   
 > [!NOTE]
-> [Ortak Dil Çalışma Süresi](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. CLR dışında yönetilmeyen kod çağrı bu güvenlik mekanizması atlar ve bu nedenle bir güvenlik riski sunar. Örneğin, yönetilmeyen kod, CLR güvenlik mekanizmalarını atlayarak doğrudan yönetilmeyen koddaki kaynakları arayabilir. Daha fazla bilgi için [.NET'teki Güvenlik'e](../../../standard/security/index.md)bakın.  
+> [Ortak dil çalışma zamanı](../../../standard/clr.md) (CLR) sistem kaynaklarına erişimi yönetir. CLR dışındaki yönetilmeyen kodu çağırmak bu güvenlik mekanizmasını atlar ve bu nedenle bir güvenlik riski oluşturur. Örneğin, yönetilmeyen kod, CLR Güvenlik mekanizmalarını atlayarak doğrudan yönetilmeyen koddaki kaynakları çağırabilir. Daha fazla bilgi için bkz. [.net 'Teki güvenlik](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>C++ Birlikte Çalışma  
- C# veya başka bir .NET Framework dilinde yazılmış kod tarafından tüketilebilmesi için yerel bir C++ sınıfına sarılbilmek için It Just Works (IJW) olarak da bilinen C++ interop'u kullanabilirsiniz. Bunu yapmak için, yerel bir DLL veya COM bileşenini sarmak için C++ kodu yazarsınız. Diğer .NET Framework dillerinden farklı olarak Visual C++, yönetilen ve yönetilmeyen kodun aynı uygulamada ve hatta aynı dosyada bulunmasını sağlayan birlikte çalışabilirlik desteğine sahiptir. Daha sonra yönetilen bir derleme oluşturmak için **/clr** derleyici anahtarını kullanarak C++ kodunu oluşturursunuz. Son olarak, C# projenizdeki derlemeye bir başvuru ekler ve diğer yönetilen sınıfları kullandığınız gibi sarılmış nesneleri kullanırsınız.  
+ C# veya başka bir .NET dilinde yazılmış kod tarafından tüketilebilmesi için yerel bir C++ sınıfını kaydırmak için de bilinen C++ birlikte çalışma (ıJW) seçeneğini kullanabilirsiniz. Bunu yapmak için, bir yerel DLL veya COM bileşeni kaydırmak üzere C++ kodu yazarsınız. Diğer .NET dillerinin aksine, Visual C++ yönetilen ve yönetilmeyen kodun aynı uygulamada ve hatta aynı dosyada yer almasını sağlayan birlikte çalışabilirlik desteğine sahiptir. Daha sonra, yönetilen bir derleme üretmek için **/clr** derleyici anahtarını kullanarak C++ kodunu derleyebilirsiniz. Son olarak, C# projenizde derlemeye bir başvuru ekler ve sarmalanmış nesneleri diğer yönetilen sınıfları kullandığınız gibi kullanırsınız.  
   
-## <a name="exposing-com-components-to-c"></a>COM Bileşenlerinin C'ye Teşhir Edilmesi\#
- Bir C# projesinden bir COM bileşeni ni tüketebilirsiniz. Genel adımlar şu şekildedir:  
+## <a name="exposing-com-components-to-c"></a>COM bileşenlerini C 'ye gösterme\#
+ Bir C# projesinden bir COM bileşeni kullanabilirsiniz. Genel adımlar şu şekildedir:  
   
-1. Kullanmak ve kaydetmek için bir COM bileşeni bulun. Bir COM DLL'ye kaydolmak veya kaydını bırakmak için regsvr32.exe'yi kullanın.  
+1. Kullanmak için bir COM bileşeni bulun ve kaydedin. Bir COM DLL kaydını kaydetmek veya kaydını silmek için Regsvr32. exe ' yi kullanın.  
   
-2. Projeye COM bileşenine veya tür kitaplığına bir başvuru ekleyin.  
+2. Projeye COM bileşenine veya tür kitaplığına başvuru ekleyin.  
   
-     Başvuruyu eklediğinizde Visual Studio, bir .NET Framework interop derlemesini çıktılamak için bir tür kitaplığını girdi olarak alan [Tlbimp.exe 'yi (Tip Kitaplığı İçlemi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)kullanır. Çalışma zamanı çağrılabilir sarıcı (RCW) olarak da adlandırılan derleme, com sınıflarını ve tür kitaplığındaki arabirimleri saran yönetilen sınıflar ve arabirimler içerir. Visual Studio projeye oluşturulan derlemeye bir başvuru ekler.  
+     Başvuruyu eklediğinizde, Visual Studio bir .NET birlikte çalışma derlemesini çıkarmak için giriş olarak bir tür kitaplığı alan [Tlbimp. exe (tür kitaplığı alma)](../../../framework/tools/tlbimp-exe-type-library-importer.md)kullanır. Ayrıca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı derleme, tür kitaplığındaki COM sınıflarını ve arabirimlerini sarmalayan yönetilen sınıfları ve arabirimleri içerir. Visual Studio, oluşturulan derleme için projeye bir başvuru ekler.  
   
-3. RCW'de tanımlanan bir sınıfın örneğini oluşturun. Bu, sırayla, COM nesnesinin bir örneğini oluşturur.  
+3. RCW 'da tanımlanan bir sınıfın örneğini oluşturun. Bu, sırasıyla COM nesnesinin bir örneğini oluşturur.  
   
-4. Nesneyi, yönetilen diğer nesneleri kullandığınız gibi kullanın. Nesne çöp toplama tarafından geri kazanıldığında, COM nesnesinin örneği de bellekten serbest bırakılır.  
+4. Nesneyi diğer yönetilen nesneleri kullandığınız şekilde kullanın. Nesne çöp toplama tarafından geri kazanılır, COM nesnesinin örneği de bellekten serbest bırakılır.  
   
- Daha fazla bilgi için [bkz.](../../../framework/interop/exposing-com-components.md)  
+ Daha fazla bilgi için bkz. [com bileşenlerini .NET Framework gösterme](../../../framework/interop/exposing-com-components.md).  
   
-## <a name="exposing-c-to-com"></a>C#'nin COM'a teşhir edilmesi  
- COM istemcileri doğru şekilde maruz kalmış C# türlerini tüketebilir. C# türlerini ortaya çıkarmak için temel adımlar şunlardır:  
+## <a name="exposing-c-to-com"></a>C# ' den COM ' a gösterme  
+ COM istemcileri, doğru bir şekilde kullanıma sunulan C# türlerini kullanabilir. C# türlerini sergilemek için temel adımlar şunlardır:  
   
-1. C# projesinde interop öznitelikleri ekleyin.  
+1. C# projesine birlikte çalışma özniteliklerini ekleyin.  
   
-     Visual C# proje özelliklerini değiştirerek derleme COM'u görünür hale getirebilirsiniz. Daha fazla bilgi için [Montaj Bilgileri İletişim Kutusu'na](/visualstudio/ide/reference/assembly-information-dialog-box)bakın.  
+     Visual C# proje özelliklerini değiştirerek bir derlemeyi COM görünebilir hale getirebilirsiniz. Daha fazla bilgi için bkz. [derleme bilgileri Iletişim kutusu](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
-2. Com türü kitaplığı oluşturun ve COM kullanımına kaydedin.  
+2. Bir COM tür kitaplığı oluşturun ve bunu COM kullanımı için kaydedin.  
   
-     Visual C# proje özelliklerini değiştirerek C# derlemesini COM interop'a otomatik olarak kaydedebilirsiniz. Visual Studio, bir tür kitaplığı oluşturmak için yönetilen `/tlb` bir derlemeyi girdi olarak alan komut satırı anahtarını kullanarak [Regasm.exe (Montaj Kayıt Aracı)](../../../framework/tools/regasm-exe-assembly-registration-tool.md)kullanır. Bu tür kitaplık, derlemedeki `public` türleri açıklar ve COM istemcilerinin yönetilen sınıflar oluşturabilmesi için kayıt defteri girişleri ekler.  
+     Visual C# proje özelliklerini değiştirerek, COM birlikte çalışma için C# derlemesini otomatik olarak kaydedebilirsiniz. Visual Studio, bir tür kitaplığı oluşturmak için yönetilen bir derlemeyi giriş olarak alan komut satırı anahtarını kullanarak [Regasm. exe ' yi (derleme kayıt aracı)](../../../framework/tools/regasm-exe-assembly-registration-tool.md)kullanır `/tlb` . Bu tür kitaplığı `public` derlemedeki türleri açıklar ve com istemcilerinin yönetilen sınıflar oluşturabilmesi için kayıt defteri girişleri ekler.  
   
- Daha fazla bilgi için [bkz.](../../../framework/interop/exposing-dotnet-components-to-com.md) [Example COM Class](./example-com-class.md)  
+ Daha fazla bilgi için bkz. COM ve [örnek com sınıfına](./example-com-class.md) [.NET Framework bileşenleri gösterme](../../../framework/interop/exposing-dotnet-components-to-com.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Interop Performansını Artırma](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
-- [COM ve .NET arasında birlikte çalışabilirlik giriş](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
-- [Visual Basic'te COM Interop'a Giriş](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
-- [Yönetilen ve Yönetilmeyen Kod arasında Marshaling](../../../framework/interop/interop-marshaling.md)
+- [Birlikte çalışma performansını iyileştirme](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [COM ve .NET arasında birlikte çalışabilirliğe giriş](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
+- [Visual Basic COM birlikte çalışabilirliğine giriş](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Yönetilen ve yönetilmeyen kod arasında sıralama](../../../framework/interop/interop-marshaling.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)
 - [C# Programlama Kılavuzu](../index.md)

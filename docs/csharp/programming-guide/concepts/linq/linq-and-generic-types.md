@@ -6,35 +6,35 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 9a2d1ac72f70e7cd314d349e81ab2bc815a5bf13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635580"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241766"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
-LINQ sorguları, .NET Framework'ün 2.0 sürümünde tanıtılan genel türleri temel almaktadır. Sorgu yazmaya başlamadan önce jenerik hakkında derinlemesine bilgi sahibi olmanız gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
+LINQ sorguları, .NET Framework sürüm 2,0 ' de tanıtılan genel türleri temel alır. Sorgu yazmaya başlayabilmeniz için önce genel türler hakkında ayrıntılı bilgi sahibi olmanız gerekmez. Ancak, iki temel kavramı anlamak isteyebilirsiniz:  
   
-1. "T" gibi <xref:System.Collections.Generic.List%601>genel bir koleksiyon sınıfı örneği oluşturduğunuzda, listenin tutacağı nesne türüyle "T"yi değiştirirsiniz. Örneğin, dizeler in bir listesi `List<string>`olarak ifade `Customer` edilir ve nesnelerin `List<Customer>`listesi olarak ifade edilir. Genel bir liste güçlü bir şekilde dizilir ve öğelerini <xref:System.Object>. A'ya `Customer` `List<string>`bir eklemeye çalışırsanız, derleme zamanında bir hata alırsınız. Çalışma zamanı tür döküm gerçekleştirmek zorunda olmadığını zedebilirsiniz, çünkü genel koleksiyonları kullanmak kolaydır.  
+1. Gibi bir genel koleksiyon sınıfının bir örneğini oluşturduğunuzda <xref:System.Collections.Generic.List%601> , "T" öğesini listenin tutacaksınız nesne türüyle değiştirirsiniz. Örneğin, dizelerin bir listesi olarak ifade edilir `List<string>` ve `Customer` nesne listesi olarak ifade edilir `List<Customer>` . Genel liste kesin bir şekilde yazılır ve öğelerini olarak depolayan koleksiyonlar üzerinde birçok avantaj sağlar <xref:System.Object> . Bir `Customer` ' a eklemeye çalışırsanız `List<string>` , derleme zamanında bir hata alırsınız. Çalışma zamanı türü atama gerçekleştirmeniz zorunda olmadığınızdan genel koleksiyonları kullanmak kolaydır.  
   
-2. <xref:System.Collections.Generic.IEnumerable%601>`foreach` genel toplama sınıflarının ifade kullanılarak numaralandırılmasını sağlayan arabirimdir. Genel toplama <xref:System.Collections.Generic.IEnumerable%601> sınıfları, destek gibi genel <xref:System.Collections.ArrayList> <xref:System.Collections.IEnumerable>olmayan toplama sınıfları gibi destekler.  
+2. <xref:System.Collections.Generic.IEnumerable%601>, genel koleksiyon sınıflarının ifadesini kullanarak numaralandırılacağını sağlayan arabirimdir `foreach` . Genel koleksiyon sınıfları, <xref:System.Collections.Generic.IEnumerable%601> destek gibi genel olmayan koleksiyon sınıfları gibi desteklenir <xref:System.Collections.ArrayList> <xref:System.Collections.IEnumerable> .  
   
- Jenerikler hakkında daha fazla bilgi için [Bkz. Generics.](../../generics/index.md)  
+ Genel türler hakkında daha fazla bilgi için bkz. [Genel türler](../../generics/index.md).  
   
-## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ Sorgularında T\> değişkenleri<Tanımlanabilir  
- LINQ sorgu değişkenleri olarak <xref:System.Collections.Generic.IEnumerable%601> veya türemiş <xref:System.Linq.IQueryable%601>türde olarak yazılır. `IEnumerable<Customer>`Olarak yazılan bir sorgu değişkeni gördüğünüzde, bu yalnızca sorgunun yürütüldüğünde sıfır veya daha `Customer` fazla nesneden oluşan bir dizi oluşturacağı anlamına gelir.  
+## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ sorgularında IEnumerable<T \> değişkenleri  
+ LINQ sorgu değişkenleri, gibi <xref:System.Collections.Generic.IEnumerable%601> bir türetilmiş tür veya olarak yazılır <xref:System.Linq.IQueryable%601> . Olarak yazılmış bir sorgu değişkeni gördüğünüzde, `IEnumerable<Customer>` yalnızca sorgunun çalıştırıldığı zaman, sıfır veya daha fazla nesne dizisi üreten anlamına gelir `Customer` .  
   
  [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   
- Daha fazla bilgi için [LINQ Sorgu İşlemlerinde Tür İlişkileri'ne](./type-relationships-in-linq-query-operations.md)bakın.  
+ Daha fazla bilgi için bkz. [LINQ sorgu Işlemlerinde tür ilişkileri](./type-relationships-in-linq-query-operations.md).  
   
-## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Derleyicinin Genel Tür Bildirimlerini işlemesine izin verme  
- İsterseniz, [var](../../../language-reference/keywords/var.md) anahtar sözcük lerini kullanarak genel sözdizimini önleyebilirsiniz. Anahtar `var` kelime, `from` derleyiciye, yan tümcede belirtilen veri kaynağına bakarak sorgu değişkeninin türünü çıkarmasını söyler. Aşağıdaki örnek, önceki örnekle aynı derlenmiş kodu üretir:  
+## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Derleyicinin genel tür bildirimleri tanıtıcısına izin verme  
+ Tercih ederseniz, [var](../../../language-reference/keywords/var.md) anahtar sözcüğünü kullanarak genel sözdiziminden kaçınabilirsiniz. `var`Anahtar sözcüğü, derleyiciye, yan tümcesinde belirtilen veri kaynağına bakarak bir sorgu değişkeninin türünü çıkarmasını söyler `from` . Aşağıdaki örnek, önceki örnekle aynı derlenmiş kodu üretir:  
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
- Anahtar `var` kelime, değişkenin türü açık olduğunda veya grup sorguları tarafından üretilenler gibi iç içe gelişmiş genel türleri açıkça belirtmek önemli olmadığında yararlıdır. Genel olarak, kullanıyorsanız, `var`kodunuzun başkalarının okumasını zorlaştırabileceğini fark etmenizi öneririz. Daha fazla bilgi için [bkz.](../../classes-and-structs/implicitly-typed-local-variables.md)  
+ `var`Anahtar sözcüğü, değişkenin türü belirgin olduğunda veya grup sorguları tarafından üretilenler gibi iç içe geçmiş genel türleri açıkça belirtmek önemli olmadığında yararlıdır. Genel olarak, kullanmanız durumunda `var` kodunuzun başkalarının okuması için daha zor hale yapabileceğini fark ederiz. Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

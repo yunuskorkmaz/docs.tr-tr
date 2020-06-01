@@ -1,16 +1,16 @@
 ---
-title: XML dosyasından nesne verileri nasıl okunur (C#)
+title: XML dosyasından nesne verilerini okuma (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167824"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241883"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML dosyasından nesne verileri nasıl okunur (C#)
-Bu örnek, <xref:System.Xml.Serialization.XmlSerializer> sınıfı kullanarak daha önce bir XML dosyasına yazılmış nesne verilerini okur.  
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML dosyasından nesne verilerini okuma (C#)
+Bu örnek, daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Örnek  
   
@@ -43,27 +43,27 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-"c:\temp\SerializationOverview.xml" dosya adını serileştirilmiş verileri içeren dosyanın adı ile değiştirin. Verileri serileştirme hakkında daha fazla bilgi için, [nesne verilerinin XML dosyasına (C#) nasıl yazılması](./how-to-write-object-data-to-an-xml-file.md)nabakını görün.
+"C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [BIR XML dosyasına nesne verileri yazma (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
- Sınıfın parametreleri olmayan bir ortak oluşturucusu olmalıdır.  
+ Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.  
   
- Yalnızca ortak özellikler ve alanlar deserialized vardır.  
+ Yalnızca ortak özellikler ve alanların serisi kaldırılır.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
-- Serihale edilen sınıfın ortak, parametresiz bir oluşturucusu yoktur.  
+- Seri hale getirilen sınıfın ortak, parametresiz bir oluşturucusu yok.  
   
-- Dosyadaki veriler, seri olmaktan çıkarılacak sınıftaki verileri temsil etmez.  
+- Dosyadaki veriler, seri durumdan çıkarılacak sınıftan verileri temsil etmez.  
   
-- Dosya yok (<xref:System.IO.IOException>).  
+- Dosya yok ( <xref:System.IO.IOException> ).  
   
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktan gelen verileri asla deserialize edin. Yeniden oluşturulan nesne, onu deserialize eden kodun izinleriyle yerel bir bilgisayarda çalışır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
+## <a name="net-security"></a>.NET güvenliği  
+ Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktaki verileri hiçbir zaman serisini kaldırma. Yeniden oluşturulan nesne, yerel bir bilgisayarda, serisi kaldırılan kodun izinleriyle çalışır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [Bir XML dosyasına nesne verileri yazma (C#)](./how-to-write-object-data-to-an-xml-file.md)
+- [Nesne verilerini bir XML dosyasına yazma (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [Serileştirme (C# )](./index.md)
 - [C# Programlama Kılavuzu](../../index.md)

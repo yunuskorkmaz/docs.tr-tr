@@ -1,38 +1,38 @@
 ---
-title: İfade Ağaçları (C#)
+title: İfade ağaçları (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169642"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241558"
 ---
-# <a name="expression-trees-c"></a>İfade Ağaçları (C#)
-İfade ağaçları, her düğümün bir ifade olduğu ağaç benzeri bir veri yapısındaki kodu temsil ediyor, örneğin bir yöntem çağrısı veya . gibi `x < y`ikili bir işlem.  
+# <a name="expression-trees-c"></a>İfade ağaçları (C#)
+İfade ağaçları, her düğümün bir ifade olduğu, örneğin bir yöntem çağrısı veya gibi bir ikili işlem olduğu ağaç benzeri bir veri yapısında kodu temsil eder `x < y` .  
   
- İfade ağaçları tarafından temsil edilen kodu derleyebilir ve çalıştırabilirsiniz. Bu, yürütülebilir kodun dinamik olarak değiştirilmesini, çeşitli veritabanlarında LINQ sorgularının yürütülmesini ve dinamik sorguların oluşturulmasını sağlar. LINQ'daki ifade ağaçları hakkında daha fazla bilgi [için, dinamik sorgular (C#) oluşturmak için ifade ağaçlarının nasıl kullanılacağına](./how-to-use-expression-trees-to-build-dynamic-queries.md)bakın.
+ İfade ağaçları ile temsil edilen kodu derleyebilir ve çalıştırabilirsiniz. Bu, yürütülebilir kodun dinamik olarak değiştirilmesini, çeşitli veritabanlarındaki LINQ sorgularının yürütülmesini ve dinamik sorguların oluşturulmasını mümkün bir şekilde sunar. LINQ içindeki ifade ağaçları hakkında daha fazla bilgi için bkz. [dinamik sorgular oluşturmak için ifade ağaçları kullanma (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
   
- İfade ağaçları, dinamik diller ve .NET Framework arasında birlikte çalışabilirlik sağlamak ve derleyici yazarların Microsoft ara dili (MSIL) yerine ifade ağaçları yayatmasını sağlamak için dinamik dil çalışma süresinde (DLR) de kullanılır. DLR hakkında daha fazla bilgi için [Dinamik Dil Çalışma Süresine Genel Bakış'a](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)bakın.  
+ İfade ağaçları ayrıca dinamik diller ve .NET arasında birlikte çalışabilirlik sağlamak ve derleyici yazıcılarının Microsoft ara dili (MSIL) yerine ifade ağaçları sunmak için dinamik dil çalışma zamanı (DLR) içinde de kullanılır. DLR hakkında daha fazla bilgi için bkz. [dinamik dil çalışma zamanına genel bakış](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
- C# veya Visual Basic derleyicisinin anonim bir lambda ifadesine dayalı olarak sizin için bir ifade ağacı <xref:System.Linq.Expressions> oluşturmasını sağlayabilir veya ad alanını kullanarak ifade ağaçları el ile oluşturabilirsiniz.  
+ C# veya Visual Basic derleyicisinin anonim lambda ifadesine göre sizin için bir ifade ağacı oluşturmasını sağlayabilir veya ad alanını kullanarak el ile ifade ağaçları oluşturabilirsiniz <xref:System.Linq.Expressions> .  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>Lambda İfadelerinden İfade Ağaçları Oluşturma  
- Bir lambda ifadesi bir tür <xref:System.Linq.Expressions.Expression%601>değişkenine atandığında, derleyici lambda ifadesini temsil eden bir ifade ağacı oluşturmak için kod yakar.  
+## <a name="creating-expression-trees-from-lambda-expressions"></a>Lambda Ifadelerinden Ifade ağaçları oluşturma  
+ Lambda ifadesi türünde bir değişkene atandığında <xref:System.Linq.Expressions.Expression%601> , derleyici lambda ifadesini temsil eden bir ifade ağacı oluşturmak için kodu yayar.  
   
- C# derleyicisi ifade ağaçları sadece ifade lambdas (veya tek satırlambdas) üretebilir. İfade lambdas (veya çok çizgili lambdas) ayrıştırılamaz. C#'daki lambda ifadeleri hakkında daha fazla bilgi için [Lambda İfadeleri'ne](../../statements-expressions-operators/lambda-expressions.md)bakın.  
+ C# derleyicisi yalnızca ifade lambdaları (veya tek satırlık Lambdalar) için ifade ağaçları oluşturabilir. İfade lambdaları (veya çok satırlı Lambdalar) ayrıştırılamaz. C# ' deki lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../statements-expressions-operators/lambda-expressions.md).  
   
- Aşağıdaki kod örnekleri, C# derleyicisinin lambda ifadesini `num => num < 5`temsil eden bir ifade ağacı oluşturmasını gösterir.  
+ Aşağıdaki kod örnekleri, C# derleyicisinin lambda ifadesini temsil eden bir ifade ağacının nasıl oluşturulduğunu gösterir `num => num < 5` .  
   
 ```csharp  
 Expression<Func<int, bool>> lambda = num => num < 5;  
 ```  
   
-## <a name="creating-expression-trees-by-using-the-api"></a>API'yi Kullanarak İfade Ağaçları Oluşturma  
- API'yi kullanarak ifade ağaçları oluşturmak <xref:System.Linq.Expressions.Expression> için sınıfı kullanın. Bu sınıf, örneğin, <xref:System.Linq.Expressions.ParameterExpression>bir değişken veya parametreyi temsil eden veya <xref:System.Linq.Expressions.MethodCallExpression>bir yöntem çağrısını temsil eden, belirli türlerdeki ifade ağacı düğümlerini oluşturan statik fabrika yöntemleri içerir. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, ve diğer ifadeye özgü türleri <xref:System.Linq.Expressions> de ad alanında tanımlanır. Bu tür soyut türünden <xref:System.Linq.Expressions.Expression>türetilmiştir.  
+## <a name="creating-expression-trees-by-using-the-api"></a>API kullanarak Ifade ağaçları oluşturma  
+ API kullanarak ifade ağaçları oluşturmak için <xref:System.Linq.Expressions.Expression> sınıfını kullanın. Bu sınıf, bir <xref:System.Linq.Expressions.ParameterExpression> değişken veya parametre temsil eden veya <xref:System.Linq.Expressions.MethodCallExpression> bir yöntem çağrısını temsil eden belirli türlerin ifade ağacı düğümlerini oluşturan statik fabrika yöntemleri içerir. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> ve diğer ifadeye özgü türler de <xref:System.Linq.Expressions> ad alanında tanımlanmıştır. Bu türler soyut türden türetilir <xref:System.Linq.Expressions.Expression> .  
   
- Aşağıdaki kod örneği, API'yi kullanarak lambda ifadesini `num => num < 5` temsil eden bir ifade ağacının nasıl oluşturulabildiğini gösterir.  
+ Aşağıdaki kod örneğinde, API kullanarak lambda ifadesini temsil eden bir ifade ağacının nasıl oluşturulacağı gösterilmektedir `num => num < 5` .  
   
 ```csharp  
 // Add the following using directive to your code file:  
@@ -49,7 +49,7 @@ Expression<Func<int, bool>> lambda1 =
         new ParameterExpression[] { numParam });  
 ```  
   
- .NET Framework 4 veya sonraki durumlarda, ifade ağaçları API ayrıca döngüler, koşullu bloklar `try-catch` ve bloklar gibi atamaları ve denetim akış ifadelerini destekler. API'yi kullanarak, C# derleyicisi tarafından lambda ifadelerinden oluşturulabilenifadelerden daha karmaşık ifade ağaçları oluşturabilirsiniz. Aşağıdaki örnek, bir sayının faktöriyelini hesaplayan bir ifade ağacının nasıl oluşturulabildiğini gösterir.  
+ .NET Framework 4 veya sonraki sürümlerde, ifade ağaçları API 'SI, döngüleri, koşullu blokları ve blokları gibi atamaları ve denetim akışı ifadelerini de destekler `try-catch` . API 'yi kullanarak, C# derleyicisi tarafından lambda ifadelerinden oluşturulanlardan daha karmaşık ifade ağaçları oluşturabilirsiniz. Aşağıdaki örnek, bir sayının faktöriyelini hesaplayan bir ifade ağacının nasıl oluşturulacağını göstermektedir.  
   
 ```csharp  
 // Creating a parameter expression.  
@@ -91,10 +91,10 @@ Console.WriteLine(factorial);
 // Prints 120.  
 ```
 
-Daha fazla bilgi için Visual [Studio 2010'da İfade Ağaçlarıyla Dinamik Yöntemler Oluşturma](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/)bölümüne bakın ve bu yöntemler Visual Studio'nun sonraki sürümleri için de geçerlidir.
+Daha fazla bilgi için bkz. Visual Studio 'nun sonraki sürümleri için de geçerli olan [Visual studio 2010 ' de Ifade ağaçları Ile dinamik yöntemler üretme](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/).
   
-## <a name="parsing-expression-trees"></a>Ayrışma İfade Ağaçları  
- Aşağıdaki kod örneği, lambda ifadesini `num => num < 5` temsil eden ifade ağacının parçalarına nasıl ayrıştırılabildiğini gösterir.  
+## <a name="parsing-expression-trees"></a>Ifade ağaçlarını ayrıştırma  
+ Aşağıdaki kod örneği, lambda ifadesini temsil eden ifade ağacının parçalar halinde nasıl birleştirilebileceğini gösterir `num => num < 5` .  
   
 ```csharp  
 // Add the following using directive to your code file:  
@@ -117,13 +117,13 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 // Decomposed expression: num => num LessThan 5  
 ```  
   
-## <a name="immutability-of-expression-trees"></a>İfade Ağaçlarının Değişmezliği  
- İfade ağaçları değişmez olmalıdır. Bu, bir ifade ağacını değiştirmek istiyorsanız, varolan bir ifadeyi kopyalayarak ve düğümleri değiştirerek yeni bir ifade ağacı oluşturmanız gerektiği anlamına gelir. Varolan ifade ağacını geçmek için bir ifade ağacı ziyaretçisi kullanabilirsiniz. Daha fazla bilgi için [ifade ağaçlarını (C#) nasıl değiştirebilirsiniz'](./how-to-modify-expression-trees.md)e bakın.
+## <a name="immutability-of-expression-trees"></a>Ifade ağaçlarının dengeszlik düzeyini bilme  
+ İfade ağaçları sabit olmalıdır. Yani, bir ifade ağacını değiştirmek istiyorsanız, var olan birini kopyalayarak ve içindeki düğümleri değiştirerek yeni bir ifade ağacı oluşturmanız gerekir. Varolan ifade ağacında çapraz geçiş yapmak için bir ifade ağacı Visitor kullanabilirsiniz. Daha fazla bilgi için bkz. [ifade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md).
   
-## <a name="compiling-expression-trees"></a>İfade Ağaçlarını Derleme  
- Tür, <xref:System.Linq.Expressions.Expression%601> bir <xref:System.Linq.Expressions.Expression%601.Compile%2A> ifade ağacı tarafından temsil edilen kodu yürütülebilir bir temsilciye derleyen yöntemi sağlar.  
+## <a name="compiling-expression-trees"></a>Ifade ağaçlarını derleme  
+ <xref:System.Linq.Expressions.Expression%601>Türü, <xref:System.Linq.Expressions.Expression%601.Compile%2A> bir ifade ağacı tarafından temsil edilen kodu bir çalıştırılabilir temsilciye derlenen yöntemi sağlar.  
   
- Aşağıdaki kod örneği, bir ifade ağacının nasıl derlenebildiğini ve ortaya çıkan kodunasıl çalıştırılabildiğini gösterir.  
+ Aşağıdaki kod örneği, bir ifade ağacının nasıl derlendiğini ve sonuçta elde edilen kodu nasıl çalıştıracağınızı gösterir.  
   
 ```csharp  
 // Creating an expression tree.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Daha fazla bilgi için [ifade ağaçlarının (C#) nasıl yürütüldürüne](./how-to-execute-expression-trees.md)bakın.
+ Daha fazla bilgi için bkz. [ifade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Expressions>
-- [İfade ağaçları nasıl yürütülür (C#)](./how-to-execute-expression-trees.md)
-- [İfade ağaçları nasıl değiştirilir (C#)](./how-to-modify-expression-trees.md)
-- [Lambda İfadeler](../../statements-expressions-operators/lambda-expressions.md)
-- [Dinamik Dil Çalışma Süresine Genel Bakış](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [Programlama Kavramları (C#)](../index.md)
+- [İfade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md)
+- [İfade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md)
+- [Lambda Ifadeleri](../../statements-expressions-operators/lambda-expressions.md)
+- [Dinamik dil çalışma zamanına genel bakış](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [Programlama kavramları (C#)](../index.md)

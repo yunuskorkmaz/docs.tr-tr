@@ -1,19 +1,19 @@
 ---
-title: .NET Framework yönergeleri ile uyumlu olayları yayımlama-C# Programlama Kılavuzu
+title: .NET yönergeleriyle uyumlu olayları yayımlama-C# Programlama Kılavuzu
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144805"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240752"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>.NET Framework yönergelerine uygun olayları yayımlama (C# Programlama Kılavuzu)
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>.NET yönergeleriyle uyumlu olayları yayımlama (C# Programlama Kılavuzu)
 
-Aşağıdaki yordam, sınıflarınıza ve yapılarına standart .NET Framework modelini izleyen olayların nasıl ekleneceğini göstermektedir. .NET Framework sınıf kitaplığındaki tüm olaylar <xref:System.EventHandler> , aşağıdaki şekilde tanımlanan temsilciyi temel alır:
+Aşağıdaki yordamda, sınıflarınıza ve yapılarına standart .NET modelini izleyen olayların nasıl ekleneceği gösterilmektedir. .NET Framework sınıf kitaplığındaki tüm olaylar <xref:System.EventHandler> , aşağıdaki şekilde tanımlanan temsilciyi temel alır:
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
@@ -22,11 +22,11 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 > .NET Framework 2,0, bu temsilcinin genel bir sürümünü sunmaktadır <xref:System.EventHandler%601> . Aşağıdaki örneklerde her iki sürümün de nasıl kullanılacağı gösterilmektedir.
 
-Tanımladığınız sınıflardaki olaylar geçerli temsilci türlerini temel alabilir, hatta bir değer döndüren temsilciler olsa da, <xref:System.EventHandler> Aşağıdaki örnekte gösterildiği gibi, kullanarak olaylarınızın .NET Framework düzeniyle temel almanız önerilir.
+Tanımladığınız sınıflardaki olaylar geçerli temsilci türlerini temel alabilir, hatta bir değer döndüren temsilciler bile, <xref:System.EventHandler> Aşağıdaki örnekte gösterildiği gibi kullanarak olaylarınızı .net düzenine dayandırırsınız.
 
 Bu ad, `EventHandler` olayı gerçekten işlemediği için bir karışıklığına neden olabilir. <xref:System.EventHandler>, Ve genel <xref:System.EventHandler%601> temsilci türleridir. İmza, temsilci tanımıyla eşleşen bir yöntem veya lambda ifadesi *olay işleyicisidir* ve olay harekete çıktığında çağrılacaktır.
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Olayları EventHandler düzenine göre yayımlamak için
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>Etkinlik, EventHandler düzenine göre yayımlayın
 
 1. (Bu adımı atlayın ve olaylarınız ile özel veriler göndermeniz gerekmez. adıma gidin.) Özel verilerinize ait sınıfı, hem Yayımcı hem de abone sınıflarınızda görünen bir kapsamda bildirin. Ardından, özel olay verilerinizi tutmak için gerekli üyeleri ekleyin. Bu örnekte basit bir dize döndürülür.
 
@@ -78,5 +78,5 @@ Aşağıdaki örnek, bir özel EventArgs sınıfı ve olay türü olarak önceki
 
 - <xref:System.Delegate>
 - [C# Programlama Kılavuzu](../index.md)
-- [Olaylar](index.md)
+- [Ekinlikler](index.md)
 - [Temsilciler](../delegates/index.md)

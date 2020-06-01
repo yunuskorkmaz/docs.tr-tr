@@ -2,12 +2,12 @@
 title: Nesne odaklı programlama (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396683"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241896"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -91,8 +91,8 @@ class SampleClass
 
 Daha fazla bilgi için bkz.
 
-- [Al](../../language-reference/keywords/get.md)
-- [set](../../language-reference/keywords/set.md)
+- [get](../../language-reference/keywords/get.md)
+- [kurmak](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Yöntemler
 
@@ -124,7 +124,7 @@ public int SampleMethod(int sampleParam) { }
 Daha fazla bilgi için bkz.
 
 - [Yöntemler](../classes-and-structs/methods.md)
-- [Genişletme Yöntemleri](../classes-and-structs/extension-methods.md)
+- [Uzantı Metotları](../classes-and-structs/extension-methods.md)
 
 #### <a name="constructors"></a>Oluşturucular
 
@@ -146,11 +146,11 @@ Daha fazla bilgi için bkz. [oluşturucular](../classes-and-structs/constructors
 
 #### <a name="finalizers"></a>Sonlandırıcılar
 
-Sonlandırıcı, sınıf örneklerinin çıkarılması için kullanılır. .NET Framework, çöp toplayıcı uygulamanızdaki yönetilen nesneler için bellek ayırmayı ve serbest bırakma işlemini otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu yönetilmeyen kaynakları temizlemek için sonlandırıcılardan yine de ihtiyacınız olabilir. Bir sınıf için yalnızca bir Sonlandırıcı olabilir.
+Sonlandırıcı, sınıf örneklerinin çıkarılması için kullanılır. .NET sürümünde çöp toplayıcı, uygulamanızdaki yönetilen nesneler için bellek ayırmayı ve serbest bırakma işlemini otomatik olarak yönetir. Ancak, uygulamanızın oluşturduğu yönetilmeyen kaynakları temizlemek için sonlandırıcılardan yine de ihtiyacınız olabilir. Bir sınıf için yalnızca bir Sonlandırıcı olabilir.
 
-.NET Framework sonlandırıcılar ve çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).
+.NET 'teki sonlandırıcılar ve çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>Olaylar
+#### <a name="events"></a>Ekinlikler
 
 Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler*olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
 
@@ -298,7 +298,7 @@ public abstract class B { }
 Daha fazla bilgi için bkz.
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [Soyut](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Üyeleri geçersiz kılma
 
@@ -310,7 +310,7 @@ Varsayılan olarak, türetilmiş bir sınıf kendi temel sınıfından tüm üye
 |--|--|
 | [virtual](../../language-reference/keywords/virtual.md) | Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. |
 | [override](../../language-reference/keywords/override.md) | Temel sınıfta tanımlanan bir sanal (geçersiz kılınabilir) üyeyi geçersiz kılar. |
-| [abstract](../../language-reference/keywords/abstract.md) | Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir. |
+| [Soyut](../../language-reference/keywords/abstract.md) | Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir. |
 | [new Değiştiricisi](../../language-reference/keywords/new-modifier.md) | Temel sınıftan devralınan bir üyeyi gizler |
 
 ## <a name="interfaces"></a>Arabirimler
@@ -342,7 +342,7 @@ Daha fazla bilgi için [arabirim](../../language-reference/keywords/interface.md
 
 ## <a name="generics"></a>Genel Türler
 
-.NET Framework sınıflar, yapılar, arabirimler ve Yöntemler, depolayabilecekleri veya kullanabileceği nesne türlerini tanımlayan *tür parametreleri* içerebilir. En yaygın genel türler örneği, bir koleksiyonda depolanacak nesne türlerini belirtebileceğiniz bir koleksiyondur.
+.NET 'teki sınıflar, yapılar, arabirimler ve Yöntemler, depolayabilecekleri veya kullanabileceği nesne türlerini tanımlayan *tür parametreleri* içerebilir. En yaygın genel türler örneği, bir koleksiyonda depolanacak nesne türlerini belirtebileceğiniz bir koleksiyondur.
 
 Genel bir sınıf tanımlamak için:
 

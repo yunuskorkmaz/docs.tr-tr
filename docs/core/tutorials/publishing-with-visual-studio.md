@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005131"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241506"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>Öğretici: Visual Studio ile .NET Core konsol uygulaması yayımlama
 
@@ -59,25 +59,25 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
    Görüntüde gösterildiği gibi, yayımlanan çıktı aşağıdaki dosyaları içerir:
 
-      * *HelloWorld. Deps. JSON*
+   * *HelloWorld. Deps. JSON*
 
-         Bu, uygulamanın çalışma zamanı bağımlılıkları dosyasıdır. Uygulamayı çalıştırmak için gereken .NET Core bileşenlerini ve kitaplıklarını (uygulamanızı içeren dinamik bağlantı kitaplığı dahil) tanımlar. Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+      Bu, uygulamanın çalışma zamanı bağımlılıkları dosyasıdır. Uygulamayı çalıştırmak için gereken .NET Core bileşenlerini ve kitaplıklarını (uygulamanızı içeren dinamik bağlantı kitaplığı dahil) tanımlar. Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
-      * *HelloWorld. dll*
+   * *HelloWorld. dll*
 
-         Bu, uygulamanın [çerçeveye bağımlı dağıtım](../deploying/deploy-with-cli.md#framework-dependent-deployment) sürümüdür. Bu dinamik bağlantı kitaplığını yürütmek için `dotnet HelloWorld.dll` bir komut istemine girin.
+      Bu, uygulamanın [çerçeveye bağımlı dağıtım](../deploying/deploy-with-cli.md#framework-dependent-deployment) sürümüdür. Bu dinamik bağlantı kitaplığını yürütmek için `dotnet HelloWorld.dll` bir komut istemine girin. Uygulamayı çalıştırma yöntemi, .NET Core çalışma zamanının yüklü olduğu tüm platformlarda çalışır.
 
-      * *HelloWorld. exe*
+   * *HelloWorld. exe*
 
-         Bu, uygulamanın [çerçeveye bağımlı yürütülebilir](../deploying/deploy-with-cli.md#framework-dependent-executable) sürümüdür. Çalıştırmak için `HelloWorld.exe` bir komut istemine girin.
+      Bu, uygulamanın [çerçeveye bağımlı yürütülebilir](../deploying/deploy-with-cli.md#framework-dependent-executable) sürümüdür. Çalıştırmak için `HelloWorld.exe` bir komut istemine girin. Dosya işletim sistemine özgüdür.
 
-      * *HelloWorld. pdb* (dağıtım için isteğe bağlı)
+   * *HelloWorld. pdb* (dağıtım için isteğe bağlı)
 
-         Bu, hata ayıklama sembolleri dosyasıdır. Bu dosyayı uygulamanızla birlikte dağıtmanız gerekmez, ancak uygulamanızın yayımlanan sürümünde hata ayıklaması yapmanız gereken bir olaya kaydetmeniz gerekir.
+      Bu, hata ayıklama sembolleri dosyasıdır. Bu dosyayı uygulamanızla birlikte dağıtmanız gerekmez, ancak uygulamanızın yayımlanan sürümünde hata ayıklaması yapmanız gereken bir olaya kaydetmeniz gerekir.
 
-      * *HelloWorld. runtimeconfig. JSON*
+   * *HelloWorld. runtimeconfig. JSON*
 
-         Bu, uygulamanın çalışma zamanı yapılandırma dosyasıdır. Uygulamanızın üzerinde çalışmak üzere oluşturulduğu .NET Core sürümünü tanımlar. Ayrıca, buna yapılandırma seçenekleri de ekleyebilirsiniz. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
+      Bu, uygulamanın çalışma zamanı yapılandırma dosyasıdır. Uygulamanızın üzerinde çalışmak üzere oluşturulduğu .NET Core sürümünü tanımlar. Ayrıca, buna yapılandırma seçenekleri de ekleyebilirsiniz. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="run-the-published-app"></a>Yayımlanan uygulamayı çalıştırma
 
@@ -91,13 +91,13 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
 1. Yürütülebilir dosyayı kullanarak uygulamayı çalıştırın:
 
-   1. Yazın `HelloWorld.exe` ve ENTER tuşuna basın.
+   1. Yazın `HelloWorld.exe` ve ENTER <kbd>Enter</kbd>tuşuna basın.
 
    1. İstemine yanıt olarak bir ad girin ve çıkmak için herhangi bir tuşa basın.
 
 1. Şu komutu kullanarak uygulamayı çalıştırın `dotnet` :
 
-   1. Yazın `dotnet HelloWorld.dll` ve ENTER tuşuna basın.
+   1. Yazın `dotnet HelloWorld.dll` ve ENTER <kbd>Enter</kbd>tuşuna basın.
 
    1. İstemine yanıt olarak bir ad girin ve çıkmak için herhangi bir tuşa basın.
 

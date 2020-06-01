@@ -1,39 +1,39 @@
 ---
-title: LINQ - XML Genel Bakış (C#)
+title: LINQ to XML genel bakış (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 334788a50832b8fe42ecc9a3272dd71f2f2af4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd41d8607ef3f2e6e6be9a1f3964ef0ae937e2ac
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168421"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241844"
 ---
-# <a name="linq-to-xml-overview-c"></a>LINQ - XML Genel Bakış (C#)
+# <a name="linq-to-xml-overview-c"></a>LINQ to XML genel bakış (C#)
 
-LINQ to XML, .NET Dil-Tümleşik Sorgu (LINQ) Çerçevesi'nden yararlanan bir bellek içi XML programlama arabirimi sağlar. LINQ to XML .NET özelliklerini kullanır ve güncelleştirilmiş, yeniden tasarlanmış Belge Nesnesi Modeli (DOM) XML programlama arabirimiile karşılaştırılabilir.
+LINQ to XML, .NET dil ile tümleşik sorgu (LINQ) çerçevesini kullanan bellek içi bir XML programlama arabirimi sağlar. LINQ to XML, .NET yeteneklerini kullanır ve güncelleştirilmiş, yeniden tasarlanan Belge Nesne Modeli (DOM) XML programlama arabirimine benzer.
 
-XML yaygın olarak birçok bağlamda veri biçimlendirmek için bir yol olarak kabul edilmiştir. Örneğin, XML'i Web'de, yapılandırma dosyalarında, Microsoft Office Word dosyalarında ve veritabanlarında bulabilirsiniz.
+XML, çok sayıda bağlamdaki verileri biçimlendirmeye yönelik bir yöntem olarak çok daha benimsemiştir. Örneğin, Web 'de, yapılandırma dosyalarında, Microsoft Office Word dosyalarında ve veritabanlarında XML bulabilirsiniz.
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML ile programlamaya güncel, yeniden tasarlanmış bir yaklaşımdır. Belge Nesnesi Modeli'nin (DOM) bellek içi belge değişiklik özelliklerini sağlar ve LINQ sorgu ifadelerini destekler. Bu sorgu ifadeleri sözdizimi olarak XPath'ten farklı olsa da, benzer işlevler sağlar.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML ile programlamaya yönelik güncel ve yeniden tasarlanan bir yaklaşımdır. Belge Nesne Modeli (DOM) için bellek içi belge değiştirme yeteneklerini sağlar ve LINQ sorgu ifadelerini destekler. Bu sorgu ifadeleri XPath 'ten farklı bir şekilde farklılık içerse de, benzer işlevler sağlarlar.
 
-## <a name="linq-to-xml-developers"></a>LINQ XML Geliştiriciler için
+## <a name="linq-to-xml-developers"></a>LINQ to XML geliştiriciler
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]geliştiricilerin çeşitli hedefler. Sadece bir şey yapmak isteyen ortalama [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir geliştirici için, SQL benzer bir sorgu deneyimi sağlayarak XML kolaylaştırır. Sadece biraz çalışma ile, programcılar tercih ettikleri programlama dilinde kısa ve güçlü sorgular yazmayı öğrenebilirsiniz.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]çeşitli geliştiricileri hedefler. Yalnızca bir şey yapmak isteyen ortalama bir geliştirici için, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] SQL 'e benzer bir sorgu deneyimi sağlayarak xml 'i daha kolay hale getirir. Yalnızca bir çok çalışma sayesinde programcılar, tercih ettiğiniz programlama dilinde kısa ve güçlü sorgular yazmayı öğreniyor.
 
-Profesyonel geliştiriciler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] büyük ölçüde verimliliklerini artırmak için kullanabilirsiniz. Ile [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], onlar daha anlamlı, daha kompakt ve daha güçlü daha az kod yazabilirsiniz. Aynı anda birden çok veri etki alanından gelen sorgu ifadelerini kullanabilirler.
+Profesyonel geliştiriciler, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] üretkenliğini önemli ölçüde artırmak için kullanabilir. İle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , daha açıklayıcı, daha kompakt ve daha güçlü bir kod yazabilir. Aynı anda birden çok veri etki alanından sorgu ifadeleri kullanabilirler.
 
-## <a name="what-is-linq-to-xml"></a>XML'e LINQ Nedir?
+## <a name="what-is-linq-to-xml"></a>LINQ to XML nedir?
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].NET Framework programlama dillerinden XML ile çalışmanızı sağlayan LINQ özellikli, bellek içi XML programlama arabirimidir.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], .NET programlama dillerinin içinden XML ile çalışmanıza olanak sağlayan, LINQ özellikli, bellek içi bir XML programlama arabirimidir.
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML belgesini belleğe getirdiği Belge Nesnesi Modeli (DOM) gibidir. Belgeyi sorgulayabilir ve değiştirebilir, değiştirdikten sonra da belgeyi bir dosyaya kaydedebilir veya seri hale getirebilir ve Internet üzerinden gönderebilirsiniz. Ancak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM farklıdır: Daha hafif ve çalışması daha kolay yeni bir nesne modeli sağlar ve C#'daki dil özelliklerinden yararlanır.
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], XML belgesini belleğe getiren Belge Nesne Modeli (DOM) gibidir. Belgeyi sorgulayabilir ve değiştirebilir ve değişiklik yaptıktan sonra dosyayı bir dosyaya kaydedebilir veya seri hale getirebilirsiniz ve Internet üzerinden gönderebilirsiniz. Ancak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Dom 'dan farklıdır: daha hafif ve daha kolay bir şekilde çalışmak ve C# ' deki dil özelliklerinden yararlanmak için daha kolay olan yeni bir nesne modeli sağlar.
 
-Bunun en önemli [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] avantajı, Dil-Entegre Sorgu (LINQ) ile bütünleşmesidir. Bu tümleştirme, öğelerin ve özniteliklerin koleksiyonlarını almak için bellek içi XML belgesine sorgu yazmanızı sağlar. Sorgu yeteneği [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] xpath ve XQuery işlevsellik (sözdiziminde olmasa da) karşılaştırılabilir. LINQ'nin C# ile tümleştirilmesi daha güçlü yazma, derleme zamanı denetimi ve geliştirilmiş hata ayıklama desteği sağlar.
+Uygulamasının en önemli avantajı, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dil Ile tümleşik sorgu (LINQ) ile tümleştirmedir. Bu tümleştirme, öğelerin ve özniteliklerin koleksiyonlarını almak için bellek içi XML belgesi üzerinde sorgular yazmanızı sağlar. Öğesinin sorgu özelliği, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath ve XQuery için işlevsellik (sözdiziminde değil) ile karşılaştırılabilir. C# ' deki LINQ tümleştirmesi daha güçlü yazma, derleme zamanı denetimi ve geliştirilmiş hata ayıklayıcı desteği sağlar.
 
-Bir diğer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] avantajı da sorgu sonuçlarını parametreler <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> olarak kullanabilmektir ve nesne oluşturucular XML ağaçları oluşturmak için güçlü bir yaklaşım sağlar. *İşlevsel yapı*adı verilen bu yaklaşım, geliştiricilerin XML ağaçlarını bir şekilden diğerine kolayca dönüştürmelerine olanak tanır.
+' In başka bir avantajı, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu sonuçlarının parametre olarak kullanılması <xref:System.Xml.Linq.XElement> ve <xref:System.Xml.Linq.XAttribute> nesne oluşturucuları, xml ağaçları oluşturmaya yönelik güçlü bir yaklaşım sağlar. *İşlevsel oluşturma*olarak adlandırılan bu yaklaşım, geliştiricilerin XML ağaçlarını bir şekilden diğerine kolayca dönüştürmelerine olanak sağlar.
 
-Örneğin, Örnek XML Dosyasında açıklandığı gibi tipik bir XML satın alma siparişine sahip [olabilirsiniz: Tipik Satınalma Siparişi (LINQ-XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Kullanarak, satınalma siparişindeki her madde öğesi için parça numarası özniteliği değerini elde etmek için aşağıdaki sorguyu çalıştırabilirsiniz:
+Örneğin, örnek XML dosyasında açıklandığı gibi tipik bir XML satın alma siparişiniz olabilir [: tipik satın alma siparişi (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). Kullanarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , satın alma sırasındaki her öğe öğesi için bölüm numarası öznitelik değerini almak üzere aşağıdaki sorguyu çalıştırabilirsiniz:
 
 ```csharp
 // Load the XML file from our project directory containing the purchase orders
@@ -47,13 +47,13 @@ IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")
                                select (string) item.Attribute("PartNumber");
 ```
 
-Bu yöntem sözdizimi şeklinde yeniden yazılabilir:
+Bu, yöntem sözdizimi biçiminde yeniden yazılabilir:
 
 ```csharp
 IEnumerable<string> partNos = purchaseOrder.Descendants("Item").Select(x => (string) x.Attribute("PartNumber"));
 ```
 
-Başka bir örnek olarak, değeri 100 TL'den büyük olan öğelerin parça numarasına göre sıralanmış bir liste isteyebilirsiniz. Bu bilgileri elde etmek için aşağıdaki sorguyu çalıştırabilirsiniz:
+Başka bir örnek olarak, $100 'den büyük bir değere sahip olan öğelerin bölüm numarasına göre sıralanmış bir liste olmasını isteyebilirsiniz. Bu bilgileri almak için aşağıdaki sorguyu çalıştırabilirsiniz:
 
 ```csharp
 // Load the XML file from our project directory containing the purchase orders
@@ -69,7 +69,7 @@ IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants(
                                  select item;
 ```
 
-Yine, bu yöntem sözdizimi şeklinde yeniden yazılabilir:
+Bu, yöntem sözdizimi biçiminde yeniden yazılabilir:
 
 ```csharp
 IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
@@ -77,25 +77,25 @@ IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
                                         .OrderBy(order => order.Element("PartNumber"));
 ```
 
-Bu LINQ yeteneklerine ek [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olarak, geliştirilmiş bir XML programlama arabirimi sağlar. Kullanarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]şunları yapabilirsiniz:
+Bu LINQ özelliklerine ek olarak, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] geliştirilmiş BIR XML programlama arabirimi sağlar. Kullanarak şunları [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] yapabilirsiniz:
 
-- [XML'i dosyalardan](how-to-load-xml-from-a-file.md) veya [akışlardan](how-to-stream-xml-fragments-from-an-xmlreader.md)yükleyin.
+- [Dosyalardan](how-to-load-xml-from-a-file.md) veya [akışlardan](how-to-stream-xml-fragments-from-an-xmlreader.md)XML yükleyin.
 
-- XML'i dosyalara veya akışlara seri leştirin.
+- XML 'yi dosyalara veya akışlara seri hale getirme.
 
-- Fonksiyonel yapıyı kullanarak sıfırdan XML oluşturun.
+- İşlevsel oluşturma kullanarak sıfırdan XML oluşturun.
 
-- XPath benzeri eksenler kullanarak XML sorgula.
+- XPath benzeri eksenleri kullanarak XML 'yi sorgula.
 
-- Bellek içi XML <xref:System.Xml.Linq.XContainer.Add%2A>ağacını , , <xref:System.Xml.Linq.XNode.Remove%2A> <xref:System.Xml.Linq.XNode.ReplaceWith%2A>, ve <xref:System.Xml.Linq.XElement.SetValue%2A>.
+- ,, Ve gibi yöntemleri kullanarak bellek içi xml ağacını işleme <xref:System.Xml.Linq.XContainer.Add%2A> <xref:System.Xml.Linq.XNode.Remove%2A> <xref:System.Xml.Linq.XNode.ReplaceWith%2A> <xref:System.Xml.Linq.XElement.SetValue%2A> .
 
 - XSD kullanarak XML ağaçlarını doğrulayın.
 
-- XML ağaçlarını bir şekilden diğerine dönüştürmek için bu özelliklerin bir birleşimini kullanın.
+- XML ağaçlarını bir şekilden diğerine dönüştürmek için bu özelliklerin birleşimini kullanın.
 
 ## <a name="creating-xml-trees"></a>XML Ağaçları Oluşturma
 
-Programlamanın en önemli avantajlarından [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] biri XML ağaçları oluşturmak kolay olmasıdır. Örneğin, küçük bir XML ağacı oluşturmak için aşağıdaki gibi kod yazabilirsiniz:
+Programlama kullanmanın en önemli avantajlarından biri, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] xml ağaçları oluşturmak kolaydır. Örneğin, küçük bir XML ağacı oluşturmak için aşağıdaki gibi bir kod yazabilirsiniz:
 
 ```csharp
 XElement contacts =
@@ -116,11 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-Daha fazla bilgi için Bkz. [XML Ağaçları Oluşturma (C#)](./creating-xml-trees-linq-to-xml-2.md).
+Daha fazla bilgi için bkz. [xml ağaçları oluşturma (C#)](./creating-xml-trees-linq-to-xml-2.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başvuru (LINQ to XML)](./reference-linq-to-xml.md)
-- [LINQ - XML vs. DOM (C#)](./linq-to-xml-vs-dom.md)
-- [LINQ ve XML ve Diğer XML Teknolojileri](./linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML vs. DOM (C#)](./linq-to-xml-vs-dom.md)
+- [LINQ to XML ile Diğer XML Teknolojileri Karşılaştırması](./linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>

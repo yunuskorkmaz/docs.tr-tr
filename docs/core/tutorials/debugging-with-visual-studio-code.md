@@ -2,12 +2,12 @@
 title: Visual Studio Code ile bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Code bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202591"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241519"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
@@ -29,7 +29,13 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 Kesme noktası, kesme noktası olan satır yürütülmeden *önce* uygulamanın yürütülmesini geçici olarak keser.
 
-1. *Program.cs*' de, kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için başka bir yol ise imleci kod satırına yerleştirip <kbd>F9</kbd>tuşuna basarak olur.
+1. Visual Studio Code'u açın.
+
+1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz *HelloWorld* proje klasörünü açın.
+
+1. *Program.cs* dosyasını açın.
+
+1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için başka bir yol ise imleci kod satırına yerleştirip <kbd>F9</kbd>tuşuna basarak olur.
 
    Aşağıdaki görüntüde gösterildiği gibi, Visual Studio Code sol kenar boşluğunda kırmızı bir nokta görüntüleyerek kesme noktasının ayarlandığı satırı gösterir.
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide hata ayıklama araçları Visual Studio Code kullandınız. Uygulamanın dağıtılabilir bir sürümünü yayımlamayı öğrenmek için bkz. [uygulamanızı yayımlama](cli-create-console-app.md#publish-your-app).
-
-<!--In the next tutorial, you publish a deployable version of the app.
+Bu öğreticide hata ayıklama araçları Visual Studio Code kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [Visual Studio Code bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)

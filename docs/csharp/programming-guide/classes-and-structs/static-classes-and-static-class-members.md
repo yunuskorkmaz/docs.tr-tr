@@ -1,5 +1,5 @@
 ---
-title: Statik Sınıflar ve Statik Sınıf Üyeleri - C# Programlama Kılavuzu
+title: Statik sınıflar ve statik sınıf üyeleri-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705437"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241467"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 
-[Statik](../../language-reference/keywords/static.md) bir sınıf temelde statik olmayan bir sınıfla aynıdır, ancak bir fark vardır: statik bir sınıf anında kullanılamaz. Başka bir deyişle, sınıf türünden bir değişken oluşturmak için [yeni](../../language-reference/operators/new-operator.md) işleci kullanamazsınız. Örnek değişken olmadığından, sınıf adının kendisini kullanarak statik sınıfın üyelerine erişebilirsiniz. Örneğin, adlandırılmış `UtilityClass` bir statik sınıfıniz varsa, buna `MethodA`aşağıdaki örnekte gösterildiği gibi çağrıbilirsiniz:  
+[Statik](../../language-reference/keywords/static.md) bir sınıf temelde statik olmayan bir sınıfla aynıdır, ancak bir fark vardır: statik bir sınıf örneği oluşturulamıyor. Diğer bir deyişle, sınıf türünde bir değişken oluşturmak için [New](../../language-reference/operators/new-operator.md) işlecini kullanamazsınız. Örnek değişkeni olmadığından, bir statik sınıfın üyelerine sınıf adının kendisini kullanarak erişirsiniz. Örneğin, ortak statik bir yöntemi adlı adlı bir statik sınıfınız varsa `UtilityClass` `MethodA` , yöntemi aşağıdaki örnekte gösterildiği gibi çağırın:  
   
 ```csharp  
 UtilityClass.MethodA();  
 ```  
   
- Statik bir sınıf, giriş parametreleri üzerinde çalışan ve herhangi bir iç örnek alanını almak veya ayarlamak zorunda olmayan yöntem kümeleri için uygun bir kapsayıcı olarak kullanılabilir. Örneğin, .NET Framework Class Kitaplığı'nda statik <xref:System.Math?displayProperty=nameWithType> sınıf, <xref:System.Math> sınıfın belirli bir örneğine özgü verileri depolamaveya alma gereksinimi olmadan matematiksel işlemleri gerçekleştiren yöntemler içerir. Diğer bir deyişle, aşağıdaki örnekte gösterildiği gibi sınıf adını ve yöntem adını belirterek sınıf üyelerini uygularsınız.  
+ Statik bir sınıf, yalnızca giriş parametrelerinde çalışan yöntemlerin kümeleri için uygun bir kapsayıcı olarak kullanılabilir ve herhangi bir iç örnek alanı almak veya ayarlamak zorunda değildir. Örneğin, .NET sınıf kitaplığı 'nda statik <xref:System.Math?displayProperty=nameWithType> sınıf, sınıfının belirli bir örneğine özgü verileri depolamak veya almak için herhangi bir gereksinim olmadan matematik işlemleri gerçekleştiren yöntemler içerir <xref:System.Math> . Diğer bir deyişle, aşağıdaki örnekte gösterildiği gibi sınıf adını ve yöntem adını belirterek sınıfının üyelerini uygularsınız.  
   
 ```csharp  
 double dub = -3.14;  
@@ -37,62 +37,62 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Tüm sınıf türlerinde olduğu gibi, statik bir sınıfın tür bilgileri,.NET Framework ortak dil çalışma zamanı (CLR) tarafından sınıfa başvurulan program yüklendiğinde yüklenir. Program sınıfın tam olarak ne zaman yüklendiğini belirtemez. Ancak, programda ilk kez sınıfbaşvurulmadan önce, yükleme ve alanlarının başlatılması ve statik oluşturucusu çağrılması garanti edilir. Statik bir oluşturucu yalnızca bir kez çağrılır ve statik bir sınıf, programınızın bulunduğu uygulama etki alanının ömrü boyunca bellekte kalır.  
+ Tüm sınıf türlerinde olduğu gibi, bir statik sınıf için tür bilgisi, sınıfa başvuran program yüklendiğinde .NET çalışma zamanı tarafından yüklenir. Program, sınıf yüklendiğinde tam olarak belirtemez. Ancak, yüklenmesi ve alanları başlatılmış olması garantidir ve bu sınıfın, sınıf ilk kez bir kez başvurulmadan önce çağrılan statik Oluşturucusu çağırılır. Statik bir Oluşturucu yalnızca bir kez çağrılır ve programınızın bulunduğu uygulama etki alanının ömrü boyunca statik bir sınıf bellekte kalır.  
   
 > [!NOTE]
-> Yalnızca bir örneğinin oluşturulmasına izin veren statik olmayan bir sınıf oluşturmak için [bkz.](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)  
+> Yalnızca tek bir örneğinin oluşturulmasına izin veren statik olmayan bir sınıf oluşturmak için, bkz. [C# ' de](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)tek bir örnek uygulama.  
   
- Aşağıdaki liste statik bir sınıfın ana özelliklerini sağlar:  
+ Aşağıdaki liste, bir statik sınıfın ana özelliklerini sağlar:  
   
-- Yalnızca statik üyeler içerir.  
+- Yalnızca statik üyeleri içerir.  
   
-- Anlık olarak yapılamaz.  
+- Örneği oluşturulamıyor.  
   
 - Mühürlü.  
   
-- Örnek [Oluşturucular](./instance-constructors.md)içeremez.  
+- [Örnek oluşturucular](./instance-constructors.md)içeremez.  
   
- Bu nedenle statik bir sınıf oluşturmak temelde yalnızca statik üyeler ve özel bir oluşturucu içeren bir sınıf oluşturmakla aynıdır. Özel bir oluşturucu sınıfın anlık olmasını engeller. Statik bir sınıf kullanmanın avantajı, derleyicinin hiçbir örnek üyenin yanlışlıkla eklenmediğinden emin olmak için denetlemesidir. Derleyici, bu sınıfın örneklerinin oluşturulamayacağını garanti eder.  
+ Statik sınıf oluşturmak, bu nedenle temelde yalnızca statik üyeler ve özel bir Oluşturucu içeren bir sınıf oluşturma ile aynıdır. Özel Oluşturucu sınıfın oluşturulmasını engeller. Statik sınıf kullanmanın avantajı, derleyicinin yanlışlıkla hiç örnek üye bulunmadığından emin olmak için denetim yapamamasına olanak sağlar. Derleyici, bu sınıfın örneklerinin oluşturuoluşturulamadığı garantisi alacak.  
   
- Statik sınıflar mühürlenir ve bu nedenle devralınamaz. Onlar dışında <xref:System.Object>herhangi bir sınıftan miras olamaz. Statik sınıflar örnek oluşturucu içeremez; ancak statik bir oluşturucu içerebilirler. Non-statik sınıflar da bir statik oluşturucu tanımlamak gerekir sınıf önemsiz olmayan başlatma gerektiren statik üyeler içeriyorsa. Daha fazla bilgi için Statik [Oluşturucular'a](./static-constructors.md)bakın.  
+ Statik sınıflar mühürlenmiş ve bu nedenle devralınamaz. Dışında herhangi bir sınıftan devralınabilir <xref:System.Object> . Statik sınıflar bir örnek oluşturucu içeremez; Ancak, bir statik Oluşturucu içerebilirler. Statik olmayan sınıflar Ayrıca, sınıf önemsiz olmayan başlatma gerektiren statik üyeler içeriyorsa statik bir Oluşturucu tanımlamalıdır. Daha fazla bilgi için bkz. [statik oluşturucular](./static-constructors.md).  
   
 ## <a name="example"></a>Örnek  
- Sıcaklığı Santigrat'tan Fahrenhayt'a ve Fahrenhayt'tan Santigrat'a dönüştüren iki yöntem içeren statik bir sınıf örneği aşağıda verilmiştir:  
+ Aşağıda, sıcaklığın Fahrenhayt 'e ve Fahrenhayt 'e kadar olan iki yöntem içeren bir statik sınıfa örnek verilmiştir:  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Statik Üyeler  
- Statik olmayan bir sınıf statik yöntemler, alanlar, özellikler veya olaylar içerebilir. Statik üye, sınıfın hiçbir örneği oluşturulmasa bile bir sınıfta çağrılabilir. Statik üyeye her zaman örnek adı değil, sınıf adı tarafından erişilir. Sınıfın kaç örneği oluşturulduğundan bağımsız olarak statik bir üyenin yalnızca bir kopyası vardır. Statik yöntemler ve özellikler, içeren türünde statik olmayan alanlara ve olaylara erişemez ve yöntem parametresinde açıkça geçilmediği sürece herhangi bir nesnenin örnek değişkenine erişemezler.  
+ Statik olmayan bir sınıf statik yöntemler, alanlar, özellikler veya olaylar içerebilir. Statik üye, sınıfın bir örneği oluşturulmasa bile bir sınıf üzerinde çağrılabilir. Statik üyeye, örnek adı değil, her zaman sınıf adı tarafından erişilir. Statik üyenin yalnızca bir kopyası, sınıfının kaç örneğinin oluşturulduğuna bakılmaksızın vardır. Statik yöntemler ve özellikler, kendi kapsayıcı türündeki statik olmayan alanlara ve olaylara erişemez ve bir yöntem parametresine açıkça geçirilmediği takdirde herhangi bir nesnenin örnek değişkenine erişemez.  
   
- Tüm bir sınıfı statik olarak bildirmektense, bazı statik üyelerle statik olmayan bir sınıfı bildirmek daha tipiktir. Statik alanların iki yaygın kullanımı, anında alınan nesne sayısının sayısını tutmak veya tüm örnekler arasında paylaşılması gereken bir değeri depolamak içindir.  
+ Statik olmayan bir sınıfı bazı statik üyelere bildirmek daha tipik bir deyişle, bir sınıfın tamamını statik olarak bildirmek daha normaldir. Statik alanların iki ortak kullanımı, örneği oluşturulmuş nesne sayısının sayısını tutmak veya tüm örnekler arasında paylaşılması gereken bir değeri depolamak için kullanılır.  
   
- Statik yöntemler, sınıfın herhangi bir örneğine değil, sınıfa ait olduğundan aşırı yüklenebilir, ancak geçersiz kılınabilir.  
+ Statik yöntemler, sınıfın herhangi bir örneğine değil, sınıfına ait olduğundan aşırı yüklenebilir ancak geçersiz kılınmaz.  
   
- Bir alan olarak `static const`bildirilemese de, [const](../../language-reference/keywords/const.md) alan aslında davranışında statiktir. Türe ait, tür örneklerine değil. Bu nedenle, const alanlara statik `ClassName.MemberName` alanlar için kullanılan aynı gösterim kullanılarak erişilebilir. Nesne örneği gerekmez.  
+ Bir alan olarak bildirilemez olsa da `static const` , bir [const](../../language-reference/keywords/const.md) alanı, davranışında temelde statiktir. Tür örneklerine değil, türüne aittir. Bu nedenle, sabit alanlara `ClassName.MemberName` statik alanlar için kullanılan aynı gösterim kullanılarak erişilebilir. Nesne örneği gerekli değil.  
   
- C# statik yerel değişkenleri (yöntem kapsamında bildirilen değişkenler) desteklemez.  
+ C# statik yerel değişkenleri (Yöntem kapsamında belirtilen değişkenler) desteklemez.  
   
- Aşağıdaki örnekte gösterildiği gibi, üyenin `static` dönüş türünden önce anahtar sözcüğü kullanarak statik sınıf üyelerini beyan emzmiş olursunuz:  
+ `static`Aşağıdaki örnekte gösterildiği gibi, üyenin dönüş türünden önce anahtar sözcüğünü kullanarak statik sınıf üyeleri bildirirsiniz:  
   
  [!code-csharp[csProgGuideObjects#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#29)]  
   
- Statik üyeye ilk kez erişilmeden önce ve statik yapıcı dan önce statik üyeler ekime denilir. Statik bir sınıf üyesine erişmek için, aşağıdaki örnekte gösterildiği gibi, üyenin konumunu belirtmek için değişken adı yerine sınıfın adını kullanın:  
+ Statik üyeler, statik üyeye ilk kez erişilmeden ve statik oluşturucu bir tane varsa, önce başlatılır. Statik sınıf üyesine erişmek için, aşağıdaki örnekte gösterildiği gibi, üyenin konumunu belirtmek için değişken adı yerine sınıfın adını kullanın:  
   
  [!code-csharp[csProgGuideObjects#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#30)]  
   
- Sınıfınız statik alanlar içeriyorsa, sınıf yüklendiğinde bunları başlatifleştiren statik bir oluşturucu sağlayın.  
+ Sınıfınız statik alanlar içeriyorsa, sınıfı yüklendiğinde bunları başlatan bir statik Oluşturucu sağlayın.  
   
- Statik bir yönteme yapılan çağrı, Microsoft ara dilinde (MSIL) bir çağrı yönergesi oluştururken, örnek yöntemine yapılan bir çağrı, boş nesne başvurularını da denetleyen bir `callvirt` yönerge oluşturur. Ancak, çoğu zaman ikisi arasındaki performans farkı önemli değildir.  
+ Statik bir yönteme yapılan çağrı, Microsoft ara dili (MSIL) içinde bir çağrı yönergesi oluşturur, ancak bir örnek yöntemine yapılan çağrı bir yönerge oluşturur `callvirt` , bu da null nesne başvurularını denetler. Ancak, ikisi arasındaki performans farkı çoğu zaman önemli değildir.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Statik sınıflar](~/_csharplang/spec/classes.md#static-classes) ve Statik ve [örnek üyelere](~/_csharplang/spec/classes.md#static-and-instance-members) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [statik sınıflar](~/_csharplang/spec/classes.md#static-classes) ve [statik ve örnek üyeleri](~/_csharplang/spec/classes.md#static-and-instance-members) bölümüne bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Statik](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)
 - [Sınıflar](./classes.md)
-- [Sınıfı](../../language-reference/keywords/class.md)
+- [sınıfı](../../language-reference/keywords/class.md)
 - [Statik Oluşturucular](./static-constructors.md)
 - [Örnek Oluşturucuları](./instance-constructors.md)

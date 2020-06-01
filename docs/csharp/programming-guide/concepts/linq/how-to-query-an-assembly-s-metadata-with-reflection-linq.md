@@ -1,19 +1,19 @@
 ---
-title: Yansıma (LINQ) (C#) ile bir derlemenin meta verisi nasıl sorgulanır?
+title: Bir derlemenin meta verilerini yansıma ile sorgulama (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 6e68cfea2bf3e03aed9de3e4a18cf9941ece34e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 092cb386af0c3f2e2241c2c2ac8e50eab74cc43b
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168927"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241545"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Yansıma (LINQ) (C#) ile bir derlemenin meta verisi nasıl sorgulanır?
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Bir derlemenin meta verilerini yansıma ile sorgulama (LINQ) (C#)
 
-.NET Framework sınıf kitaplık yansıtma API'leri, bir .NET derlemesindeki meta verileri incelemek ve bu derlemede bulunan tür, tür üyeleri, parametreler ve benzeri koleksiyonlar oluşturmak için kullanılabilir. Bu koleksiyonlar genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi desteklediğinden, LINQ kullanılarak sorgulanabilirler.  
+.NET yansıma API 'Leri, bir .NET derlemesinde meta verileri incelemek ve bu derlemede bulunan tür koleksiyonları, tür üyelerini, parametreleri ve benzerlerini oluşturmak için kullanılabilir. Bu koleksiyonlar genel arabirimi desteklediklerinden <xref:System.Collections.Generic.IEnumerable%601> , LINQ kullanılarak sorgulanırlar.  
   
-Aşağıdaki örnek, linq'in belirli bir arama ölçütüyle eşleşen yöntemler le ilgili belirli meta verileri almak için yansımayla nasıl kullanılabileceğini gösterir. Bu durumda, sorgu diziler gibi sayısal türleri döndüren derlemedeki tüm yöntemlerin adlarını bulur.  
+Aşağıdaki örnek, belirtilen bir arama ölçütüyle eşleşen yöntemler hakkında belirli meta verileri almak için, LINQ 'in yansıma ile nasıl kullanılabileceğini gösterir. Bu durumda sorgu, derlemede diziler gibi sıralanabilir türler döndüren tüm yöntemlerin adlarını bulur.  
   
 ## <a name="example"></a>Örnek  
   
@@ -51,8 +51,8 @@ class ReflectionHowTO
 }
 ```  
 
-Örnek, belirtilen <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> derlemedeki bir dizi türü döndürmek için yöntemi kullanır. Yalnızca genel türlerin döndürülebilmeleri için filtrenin uygulandığı [yer.](../../../language-reference/keywords/where-clause.md) Her ortak tür için, <xref:System.Reflection.MethodInfo> <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> çağrıdan döndürülen dizi kullanılarak bir alt sorgu oluşturulur. Bu sonuçlar yalnızca iade türü bir dizi veya başka bir tür uygulayan <xref:System.Collections.Generic.IEnumerable%601>bu yöntemleri döndürmek için filtre uygulanmaktadır. Son olarak, bu sonuçlar anahtar olarak tür adı kullanılarak gruplandırılır.  
+Örnek, <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> belirtilen derlemedeki türlerin bir dizisini döndürmek için yöntemini kullanır. Yalnızca ortak türlerin döndürülmemesi için [WHERE](../../../language-reference/keywords/where-clause.md) filtresi uygulanır. Her genel tür için, çağrıdan döndürülen dizi kullanılarak bir alt sorgu oluşturulur <xref:System.Reflection.MethodInfo> <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> . Bu sonuçlar yalnızca, dönüş türü bir dizi veya başka bir türü olan yöntemleri döndürecek şekilde filtrelenir <xref:System.Collections.Generic.IEnumerable%601> . Son olarak, bu sonuçlar tür adı anahtar olarak kullanılarak gruplandırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesnelere LINQ (C#)](./linq-to-objects.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

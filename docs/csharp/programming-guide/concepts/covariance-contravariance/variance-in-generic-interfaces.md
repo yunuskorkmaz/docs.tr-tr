@@ -2,49 +2,49 @@
 title: Genel Arabirimlerde Varyans (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169668"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241337"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Genel Arabirimlerde Varyans (C#)
 
-.NET Framework 4, varolan birkaç genel arabirim için varyans desteği sundu. Varyans desteği, bu arabirimleri uygulayan sınıfların örtülü olarak dönüştürülmesini sağlar.
+.NET Framework 4, mevcut birçok genel arabirim için varyans desteği getirmiştir. Varyans desteği, bu arabirimleri uygulayan sınıfların örtük dönüştürülmesini mümkün.
 
-.NET Framework 4 ile başlayarak, aşağıdaki arabirimler değişkendir:
+.NET Framework 4 ' te başlayarak, aşağıdaki arabirimler değişkendir:
 
-- <xref:System.Collections.Generic.IEnumerable%601>(T eşdeğişkendir)
+- <xref:System.Collections.Generic.IEnumerable%601>(T değişkenle birlikte)
 
-- <xref:System.Collections.Generic.IEnumerator%601>(T eşdeğişkendir)
+- <xref:System.Collections.Generic.IEnumerator%601>(T değişkenle birlikte)
 
-- <xref:System.Linq.IQueryable%601>(T eşdeğişkendir)
+- <xref:System.Linq.IQueryable%601>(T değişkenle birlikte)
 
-- <xref:System.Linq.IGrouping%602>(`TKey` `TElement` ve eşdeğişkendir)
+- <xref:System.Linq.IGrouping%602>( `TKey` ve `TElement` değişkenle birlikte)
 
-- <xref:System.Collections.Generic.IComparer%601>(T zıt değişkendir)
+- <xref:System.Collections.Generic.IComparer%601>(T değişken karşıtı)
 
-- <xref:System.Collections.Generic.IEqualityComparer%601>(T zıt değişkendir)
+- <xref:System.Collections.Generic.IEqualityComparer%601>(T değişken karşıtı)
 
-- <xref:System.IComparable%601>(T zıt değişkendir)
+- <xref:System.IComparable%601>(T değişken karşıtı)
 
-.NET Framework 4.5 ile başlayarak, aşağıdaki arabirimler değişkendir:
+.NET Framework 4,5 ' den başlayarak, aşağıdaki arabirimler değişkendir:
 
-- <xref:System.Collections.Generic.IReadOnlyList%601>(T eşdeğişkendir)
+- <xref:System.Collections.Generic.IReadOnlyList%601>(T değişkenle birlikte)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T eşdeğişkendir)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T değişkenle birlikte)
 
-Covariance, bir yöntemin arabirimin genel türü parametresi tarafından tanımlanandan daha türetilmiş bir iade türüne sahip olmasını sağlar. Tutarlılık özelliğini göstermek için, bu genel arabirimleri göz önünde bulundurun: `IEnumerable<Object>` ve `IEnumerable<String>`. `IEnumerable<Object>` Arabirim, `IEnumerable<String>` arabirimi devralmaz. Ancak, `String` `Object` tür türü devralmak yok ve bazı durumlarda bu arabirimlerin nesneleri birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
+Kovaryans, bir metodun, arabirimin genel tür parametresiyle tanımlananla daha türetilmiş bir dönüş türüne sahip olmasını sağlar. Kovaryans özelliğini göstermek için şu genel arabirimleri göz önünde bulundurun: `IEnumerable<Object>` ve `IEnumerable<String>` . `IEnumerable<String>`Arabirim, `IEnumerable<Object>` arabirimini almıyor. Ancak, `String` tür devralınır `Object` ve bazı durumlarda bu arabirimlerin nesnelerini birbirlerine atamak isteyebilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```csharp
 IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-.NET Framework'ün önceki sürümlerinde, bu kod C#'da `Option Strict` ve üzerindeyse Visual Basic'te bir derleme hatasına neden olur. Ancak `strings` `objects`şimdi, <xref:System.Collections.Generic.IEnumerable%601> önceki örnekte gösterildiği gibi, arabirim ortak olduğundan, bunun yerine kullanabilirsiniz.
+.NET Framework önceki sürümlerinde, bu kod C# ' de derleme hatasına ve açık ise Visual Basic ' a neden olur `Option Strict` . Ancak, bu, `strings` `objects` Önceki örnekte gösterildiği gibi yerine kullanabilirsiniz, çünkü <xref:System.Collections.Generic.IEnumerable%601> arabirim değişkenle birlikte değişkendir.
 
-Kontravariance, arabirimin genel parametresi tarafından belirtilenden daha az türemiş bağımsız değişken türlerine sahip bir yönteme izin verir. Kontraşeyi göstermek için, sınıfın örneklerini `BaseComparer` karşılaştırmak için bir `BaseClass` sınıf oluşturduğunuzu varsayalım. `BaseComparer` sınıfı, `IEqualityComparer<BaseClass>` arabirimini uygular. <xref:System.Collections.Generic.IEqualityComparer%601> Arabirim artık karşıt olduğundan, `BaseComparer` `BaseClass` sınıfı devralan sınıf örneklerini karşılaştırmak için kullanabilirsiniz. Bu, aşağıdaki kod örneğinde gösterilmiştir.
+Değişken Varyans, bir metodun, arabirimin genel parametresiyle belirtilenden daha az türetilmiş bağımsız değişken türlerine sahip olmasını sağlar. Değişken varyansı göstermek için, `BaseComparer` sınıfının örneklerini karşılaştırmak üzere bir sınıf oluşturduğunuzu varsayalım `BaseClass` . `BaseComparer` sınıfı, `IEqualityComparer<BaseClass>` arabirimini uygular. Arabirim artık değişken karşıtı olduğundan <xref:System.Collections.Generic.IEqualityComparer%601> , `BaseComparer` sınıfı miras alan sınıfların örneklerini karşılaştırmak için kullanabilirsiniz `BaseClass` . Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```csharp
 // Simple hierarchy of classes.
@@ -76,9 +76,9 @@ class Program
 }
 ```
 
-Daha fazla örnek için bkz: [Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md).
+Daha fazla örnek için bkz. [Genel Koleksiyonlar Için Arabirimlerde Varyans kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md).
 
-Genel arabirimlerdeki varyans yalnızca başvuru türleri için desteklenir. Değer türleri varyansı desteklemez. Örneğin, `IEnumerable<int>` tamsayılar bir değer `IEnumerable<object>`türü tarafından temsil edildiğinden, dolaylı olarak dönüştürülemez.
+Genel Arabirimlerde Varyans yalnızca başvuru türleri için desteklenir. Değer türleri varyansı desteklemez. Örneğin, `IEnumerable<int>` `IEnumerable<object>` tamsayılar bir değer türü tarafından temsil edildiği için örtük olarak öğesine dönüştürülemez.
 
 ```csharp
 IEnumerable<int> integers = new List<int>();
@@ -87,7 +87,7 @@ IEnumerable<int> integers = new List<int>();
 // IEnumerable<Object> objects = integers;
 ```
 
-Varyant arabirimleri uygulayan sınıfların hala değişmez olduğunu da unutmamak önemlidir. Örneğin, ortak <xref:System.Collections.Generic.List%601> değişken <xref:System.Collections.Generic.IEnumerable%601>arabirimi uygulasa da, `List<String>` `List<Object>`örtülü olarak . Bu, aşağıdaki kod örneğinde gösterilmiştir.
+Ayrıca, VARIANT arabirimlerini uygulayan sınıfların hala sabit olduğunu unutmamak önemlidir. Örneğin, <xref:System.Collections.Generic.List%601> covaryant arabirimini uygular <xref:System.Collections.Generic.IEnumerable%601> , ancak öğesini örtülü olarak dönüştüremezsiniz `List<String>` `List<Object>` . Bu, aşağıdaki kod örneğinde gösterilmiştir.
 
 ```csharp
 // The following line generates a compiler error
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md)
-- [Varyant Genel Arabirimler Oluşturma (C#)](./creating-variant-generic-interfaces.md)
+- [Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [VARIANT genel arabirimleri oluşturma (C#)](./creating-variant-generic-interfaces.md)
 - [Genel Arabirimler](../../../../standard/generics/interfaces.md)
-- [Temsilcilerde Varyans (C#)](./variance-in-delegates.md)
+- [Temsilcilerde varyans (C#)](./variance-in-delegates.md)
