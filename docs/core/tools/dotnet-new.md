@@ -2,12 +2,12 @@
 title: DotNet yeni komut
 description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442247"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283981"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -30,7 +30,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet new`Komut bir şablonu temel alan bir .NET Core projesi veya diğer yapılar oluşturur.
 
@@ -75,6 +75,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 | MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2.0        |
 | Blazor sunucusu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | Web/Blazor                            | 3.0        |
+| Blazor WebAssembly uygulaması                       | `blazorwasm`                    | Þ         | Web/Blazor/WebAssembly                            | 3.1.300    |
 | ASP.NET Core boş                           | [Web](#web)                     | [C#], F #     | Web/boş                             | 1.0        |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | [MVC](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web uygulaması                         | [WEBAPP, Razor](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -148,7 +149,7 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
   Bu seçeneğe bir parametre belirtmezseniz, komut, yüklü şablonları ve bunlarla ilgili ayrıntıları listeler.
 
   > [!NOTE]
-  > Bir şablonu kullanarak kaldırmak için `PATH` , yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/kullanıcıları/ \< Kullanıcı>/Documents/Templates/garciasoftware.consoletemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
+  > Bir şablonu kullanarak kaldırmak için `PATH` , yolu tam olarak nitelemeniz gerekir. Örneğin, *C:/Users/ \<USER> /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* çalışır, ancak içeren klasörden *./GarciaSoftware.ConsoleTemplate.CSharp* olmayacaktır.
   > Şablon yolunuzda son Sonlandırıcı Dizin eğik çizgisi eklemeyin.
 
 - **`--update-apply`**

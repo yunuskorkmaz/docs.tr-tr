@@ -8,24 +8,24 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 60df814e18f473d84c260511292666c524fda7b7
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 627f1327a9fe87fc226dfbb40df50ec4855edfb9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588074"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284903"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ'te Hızlandırmayı Anlama
-PLINQ'nin birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini paralel olarak yürüterek LINQ to Objects sorgularının yürütülmesini hızlandırmaktır. PLINQ, bir kaynak koleksiyonundaki her öğenin işlenmesi bağımsız olduğunda ve tek tek temsilciler arasında paylaşılan bir durum söz konusu olmadığında en iyi performansı gösterir. Bu tür işlemler Linq to Objects ve PLINQ'da yaygındır ve genellikle "*nefis paralel*" olarak adlandırılır, çünkü birden çok iş parçacığı üzerinde zamanlamaya kolayca ödünç verirler. Ancak, tüm sorgular tamamen nefis paralel işlemlerden oluşmaz; çoğu durumda, bir sorgu paralelleştirileemeyen veya paralel yürütmeyi yavaşlatan bazı işleçler içerir. Ve tamamen nefis paralel sorguları bile, PLINQ hala veri kaynağı bölüm ve iş parçacıkları üzerinde çalışma zamanlama ve genellikle sorgu tamamlandığında sonuçları birleştirmek gerekir. Tüm bu işlemler paralelleştirmenin hesaplama maliyetine eklenir; paralelleştirme eklemenin bu *maliyetlerine genel gider*denir. PLINQ sorgusunda optimum performans elde etmek için amaç, nefis paralel olan parçaları en üst düzeye çıkarmak ve ek yükü gerektiren parçaları en aza indirmektir. Bu makalede, hala doğru sonuçlar verirken mümkün olduğunca verimli PLINQ sorguları yazmanıza yardımcı olacak bilgiler sağlar.  
+PLıNQ 'in birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini paralel olarak yürüterek LINQ to Objects sorgularının yürütülmesini hızlandırmaya yönelik olur. PLıNQ, bir kaynak koleksiyondaki her öğenin işlenmesi bağımsız temsilciler arasında herhangi bir paylaşılan durum olmadan bağımsız olduğunda en iyi şekilde çalışır. Bu gibi işlemler LINQ to Objects ve PLıNQ ' de ortaktır ve genellikle birden çok iş parçacığında zamanlamaya göre kolayca bir şekilde çalıştıkları için "*delightfully Parallel*" olarak adlandırılır. Ancak, tüm sorgular tamamen eş dışı paralel işlemlerden oluşamaz; Çoğu durumda, bir sorgu paralelleştirilmedi veya paralel yürütmeyi yavaşlatabilecek bazı işleçleri içerir. Tamamen de tamamen paralel olan sorgularda, PLıNQ hala veri kaynağını bölümleyip iş parçacıkları üzerinde işi zamanlamaya ve genellikle sorgu tamamlandığında sonuçları birleştirmelidir. Tüm bu işlemler paralelleştirme hesaplama maliyetine ekler; paralel hale getirme ekleme maliyetlerine *ek yük*denir. Bir PLıNQ sorgusunda en iyi performansı elde etmek için, amaç paralel olan parçaları en üst düzeye çıkarmaktır ve ek yük gerektiren parçaları en aza indirmektir. Bu makalede, doğru sonuçları sunarken mümkün olduğunca verimli olan PLıNQ sorgularını yazmanıza yardımcı olacak bilgiler sağlanmaktadır.  
   
-## <a name="factors-that-impact-plinq-query-performance"></a>PLINQ Sorgu Performansını Etkileyen Faktörler  
- Aşağıdaki bölümlerde paralel sorgu performansını etkileyen en önemli etkenlerden bazıları listelemektedir. Bunlar, tüm durumlarda sorgu performansını tahmin etmek için tek başlarına yeterli olmayan genel ifadelerdir. Her zaman olduğu gibi, temsili yapılandırmaları ve yükleri bir dizi bilgisayarlarda belirli sorguların gerçek performansını ölçmek önemlidir.  
+## <a name="factors-that-impact-plinq-query-performance"></a>PLıNQ sorgu performansını etkileyen faktörler  
+ Aşağıdaki bölümlerde, paralel sorgu performansını etkileyen en önemli faktörlerin bazıları listelenmiştir. Bunlar, her durumda sorgu performansını tahmin etmek için yeterli olmayan genel deyimlerdir. Her zaman olduğu gibi, bilgisayarlardaki belirli sorguların gerçek performansını, bir dizi temsili yapılandırması ve yükleri ile ölçmek önemlidir.  
   
 1. Genel çalışmanın hesaplama maliyeti.  
   
-     Hız elde etmek için, bir PLINQ sorgusu nun genel yükü dengelemek için yeterli nefis paralel çalışma olması gerekir. Çalışma, her temsilcinin hesaplama maliyeti, kaynak koleksiyondaki öğe sayısıyla çarpılırken ifade edilebilir. Bir işlemin paralelleştirilebildiği, hesaplama olarak ne kadar pahalı olursa, hızlandırma fırsatı da o kadar büyük olur. Örneğin, bir işlevin yürütülmesi bir milisaniye sürerse, 1000 öğenin üzerindeki sıralı bir sorgunun bu işlemi gerçekleştirmesi bir saniye sürerken, dört çekirdekli bir bilgisayardaki paralel sorgu yalnızca 250 milisaniye sürebilir. Bu, 750 milisaniyelik bir hız verir. İşlevher öğe için çalıştırmak için bir saniye gerekiyorsa, o zaman hız 750 saniye olacaktır. Temsilci çok pahalıysa, PLINQ kaynak koleksiyonunda yalnızca birkaç öğeyle önemli bir hız sağlayabilir. Tersine, önemsiz delegeler ile küçük kaynak koleksiyonları genellikle PLINQ için iyi adaylar değildir.  
+     Bir PLıNQ sorgusunun daha hızlı bir şekilde elde edilebilmesi için, ek yükü kaydırarak çok fazla sayıda paralel iş olması gerekir. İş, her temsilcinin hesaplama maliyeti olarak kaynak koleksiyondaki öğelerin sayısıyla çarpılarak ifade edilebilir. Bir işlemin paralelleştirilmesine ne olduğunu varsayarsak, daha fazla hesaplama, daha iyi hale getirilmiş bir fırsattır. Örneğin, bir işlevin yürütülmesi için bir milisaniyelik sürerse 1000 öğeden oluşan sıralı bir sorgu bu işlemi gerçekleştirmek için bir saniye sürer, ancak dört çekirdekli bir bilgisayardaki paralel sorgu yalnızca 250 milisaniyeye sahip olur. Bu, 750 milisaniyeden daha hızlı bir hızlandırın verir. İşlevin her öğe için bir saniyede yürütülmesi gerekiyorsa, bu durumda hızlı bir süre 750 saniye olur. Temsilci çok pahalıdır, PLıNQ, kaynak koleksiyondaki yalnızca birkaç öğeyle önemli bir hızlı işlem sunabilir. Buna karşılık, önemsiz temsilcilerle küçük kaynak koleksiyonları genellikle PLıNQ için iyi adaylardır.  
   
-     Aşağıdaki örnekte, queryA muhtemelen PLINQ için iyi bir adaydır ve Select işlevinin çok fazla iş içerdiğini varsayarak. queryB, Select deyiminde yeterli çalışma olmadığından ve paralelleştirmenin yükü hızın çoğunu veya tamamını dengeleyeceği için büyük olasılıkla iyi bir aday değildir.  
+     Aşağıdaki örnekte, select işlevinin çok sayıda iş içerdiği varsayılarak, queryA PLıNQ için iyi bir adaydır. Select ifadesinde yeterli iş olmadığından ve paralelleştirme yükünün en fazla ya da tüm hızlı bir şekilde kaydırılacağı için queryB büyük olasılıkla iyi bir aday değildir.  
   
     ```vb  
     Dim queryA = From num In numberList.AsParallel()  
@@ -47,41 +47,41 @@ PLINQ'nin birincil amacı, çok çekirdekli bilgisayarlarda sorgu temsilcilerini
   
 2. Sistemdeki mantıksal çekirdek sayısı (paralellik derecesi).  
   
-     Bu nokta önceki bölüme bariz bir corollary, iş daha eşzamanlı iş parçacıkları arasında bölünebilir, çünkü nefis paralel daha çekirdekli makinelerde daha hızlı çalıştırmak sorguları. Toplam hız lanma miktarı, sorgunun genel çalışmasının yüzde kaçının paralelleştirilebilir olduğuna bağlıdır. Ancak, tüm sorguların dört çekirdekli bir bilgisayardan sekiz çekirdekli bilgisayarda iki kat daha hızlı çalışacağını düşünmeyin. En iyi performans için sorguları alarken, çeşitli sayıda çekirdek içeren bilgisayarlarda gerçek sonuçları ölçmek önemlidir. Bu nokta #1 noktasıile ilgilidir: daha büyük veri kümelerinin daha büyük bilgi işlem kaynaklarından yararlanması gerekir.  
+     Bu nokta, önceki bölümde yer alan ve daha fazla çekirdeğe sahip makinelerde daha hızlı bir şekilde paralel şekilde çalışan sorgular daha fazla eş zamanlı iş parçacığı arasında ayrılamadığından, daha fazla çekirdeğe sahip olan çok daha açık bir eş olabilir. Toplam hızlı çalışma miktarı, sorgunun genel işinin toplam yüzdesine paralelleştirilebilir. Ancak, tüm sorguların dört çekirdekli bilgisayar olarak sekiz çekirdekli bir bilgisayarda hızlı bir şekilde çalışacağını varsaymayın. En iyi performans için sorguları ayarlamaya çalışırken, gerçek sonuçların çeşitli çekirdekler içeren bilgisayarlarda ölçülmesi önemlidir. Bu nokta #1 nokta ile ilgilidir: daha büyük bilgi işlem kaynaklarından yararlanmak için daha büyük veri kümeleri gereklidir.  
   
-3. Operasyonların sayısı ve türü.  
+3. İşlem sayısı ve türü.  
   
-     PLINQ, kaynak dizideki öğelerin sırasını korumak için gerekli olan durumlar için AsOrdered işleci sağlar. Sipariş ile ilişkili bir maliyet vardır, ancak bu maliyet genellikle mütevazı. GroupBy ve Join işlemleri de aynı şekilde ek yükü ne durumdadır. PLINQ, kaynak koleksiyonundaki öğeleri herhangi bir sırada işlemesine ve hazır olur olmaz bir sonraki işleceye geçirmesine izin verildiğinde en iyi performansı gösterir. Daha fazla bilgi için [PLINQ'da Sipariş Koruma'ya](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)bakın.  
+     PLıNQ, kaynak dizideki öğelerin sırasını korumak için gerekli olduğu durumlar için Asorimli işleci sağlar. Sıralamaya ilişkin bir maliyet vardır, ancak bu maliyet genellikle Modest 'dir. GroupBy ve JOIN işlemleri aynı şekilde ek yüke neden olur. PLıNQ, kaynak koleksiyondaki öğeleri herhangi bir sırada işlemeye izin verildiğinde en iyi şekilde çalışır ve bunları bir sonraki işleçle uygun hale gelir. Daha fazla bilgi için bkz. [PLıNQ 'Te sıra koruma](order-preservation-in-plinq.md).  
   
 4. Sorgu yürütme biçimi.  
   
-     Bir sorgunun sonuçlarını ToArray veya ToList'i arayarak saklıyorsanız, tüm paralel iş parçacıklarının sonuçlarıtek bir veri yapısında birleştirilmelidir. Bu kaçınılmaz bir hesaplama maliyeti içerir. Aynı şekilde, sonuçları foreach (Visual Basic'teki her biri için) döngü kullanarak yinelerseniz, alt iş parçacığının sonuçlarının da sayısaliş iş parçacığına serileştirilmesi gerekir. Ancak, her iş parçacığının sonucuna göre bazı eylem gerçekleştirmek istiyorsanız, birden çok iş parçacığı üzerinde bu işi gerçekleştirmek için ForAll yöntemini kullanabilirsiniz.  
+     ToArray veya ToList çağırarak bir sorgunun sonuçlarını depoluyorsanız, tüm paralel iş parçacıklarından elde edilen sonuçlar tek veri yapısına birleştirilmelidir. Bu, kaçınılmaz bir hesaplama maliyeti içerir. Benzer şekilde, bir foreach (her biri Visual Basic) döngüsünde sonuçları yinelemek istiyorsanız, çalışan iş parçacıklarının sonuçlarının Numaralandırıcı iş parçacığı üzerinde serileştirilmesi gerekir. Ancak, her iş parçacığının sonucunu temel alan bazı eylemler gerçekleştirmek istiyorsanız, bu işi birden çok iş parçacığı üzerinde gerçekleştirmek için ForAll metodunu kullanabilirsiniz.  
   
 5. Birleştirme seçeneklerinin türü.  
   
-     PLINQ, çıktısını arabelleğe alacak şekilde yapılandırılabilir ve tüm sonuç kümesi üretildikten sonra parçalar halinde veya tek seferde üretilebilir veya tek tek sonuçları üretildikçe aktarabilir. Eski sonuçlar genel yürütme süresini azaltmış ve ikincisi verim öğeleri arasındaki gecikme süresinin azalmasına neden olur.  Birleştirme seçenekleri her zaman genel sorgu performansı üzerinde önemli bir etkiye sahip olmasa da, kullanıcının sonuçları görmek için ne kadar beklemesi gerektiğini denetlediği için algılanan performansı etkileyebilir. Daha fazla bilgi için [PLINQ'daki Seçenekleri Birleştir'e](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)bakın.  
+     PLıNQ, çıktısını arabelleğe almak için yapılandırılabilir ve tüm sonuç kümesi üretildikten sonra tek seferde veya her seferinde bir kez oluşturulur. Daha önce, genel yürütme süresi azalır ve ikinci sonuçlar, diğer bir deyişle, diğer bir deyişle, sonuçlandırılan öğeler arasında  Birleştirme seçenekleri her zaman genel sorgu performansı üzerinde önemli bir etkiye sahip olmasa da, bir kullanıcının sonuçları görmeyi beklemesi gereken süreyi denetlemediğinden, algılanan performansı etkileyebilir. Daha fazla bilgi için bkz. [PLıNQ 'Te birleştirme seçenekleri](merge-options-in-plinq.md).  
   
-6. Bir tür bölümleme.  
+6. Bölümleme türü.  
   
-     Bazı durumlarda, dizine eklenebilir kaynak koleksiyonu üzerinde plinq sorgusu dengesiz bir iş yükü neden olabilir. Bu durumda, özel bir bölümleyici oluşturarak sorgu performansını artırmak mümkün olabilir. Daha fazla bilgi [için PLINQ ve TPL için Özel Bölümleyiciler'e](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)bakın.  
+     Bazı durumlarda, Dizin oluşturamayacak bir kaynak koleksiyonu üzerinde PLıNQ sorgusu, dengesiz bir iş yüküne neden olabilir. Bu gerçekleştiğinde, özel bir bölümleyici oluşturarak sorgu performansını artırabilirsiniz. Daha fazla bilgi için bkz. [PLıNQ ve TPL Için Özel Bölümleyiciler](custom-partitioners-for-plinq-and-tpl.md).  
   
-## <a name="when-plinq-chooses-sequential-mode"></a>PLINQ Sıralı Modu Seçtiğinde  
- PLINQ her zaman sorgunun sırayla çalıştırılacaya kadar en az bir sorguyu yürütmeyi dener. PLINQ, kullanıcı temsilcilerinin hesaplama açısından ne kadar pahalı olduğuna veya giriş kaynağının ne kadar büyük olduğuna bakmasa da, belirli sorgu "şekilleri" arar. Özellikle, sorgu işleçleri veya genellikle paralel modda daha yavaş yürütmek için bir sorgu neden işleçleri kombinasyonları arar. Bu şekilleri bulduğunda, PLINQ varsayılan olarak sıralı moda geri düşer.  
+## <a name="when-plinq-chooses-sequential-mode"></a>PLıNQ sıralı modu seçtiğinde  
+ PLıNQ, sorgu sırayla çalışır şekilde her zaman bir sorguyu en az hızlı bir şekilde yürütmeye çalışır. PLıNQ, Kullanıcı temsilcilerinin ne kadar pahalı olduğunu veya giriş kaynağının ne kadar büyük olduğunu fark etmez, bazı sorgu "şekillerini" arar. Özellikle, genellikle bir sorgunun paralel modda daha yavaş yürütülmesine neden olan sorgu işleçlerini veya işleç birleşimlerini arar. Böyle bir şekil bulduğunda, PLıNQ varsayılan olarak sıralı moda geri döner.  
   
- Ancak, belirli bir sorgunun performansını ölçtükten sonra, gerçekte paralel modda daha hızlı çalıştığını belirleyebilirsiniz. Bu gibi durumlarda, <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> plinq <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> sorguparalelleştirmek için talimat yöntemi ile bayrağı kullanabilirsiniz. Daha fazla bilgi için [bkz: PLINQ'da Yürütme Modunu belirtin.](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
+ Ancak, belirli bir sorgunun performansını ölçdikten sonra, aslında paralel modda daha hızlı çalıştığını belirleyebilirsiniz. Bu gibi durumlarda, <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> sorguyu paralel hale getirmek için PLINQ 'a yönlendirmek üzere yöntemi aracılığıyla bayrağını kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: PLıNQ 'Te yürütme modunu belirtme](how-to-specify-the-execution-mode-in-plinq.md).  
   
- Aşağıdaki liste plinq varsayılan olarak sıralı modda yürütecek sorgu şekilleri açıklanır:  
+ Aşağıdaki listede, PLıNQ 'ın varsayılan olarak sıralı modda yürütüleceği sorgu şekilleri açıklanmaktadır:  
   
-- Özgün endeksleri kaldıran veya yeniden düzenleyen bir sipariş veya filtreleme işlecinden sonra Select, indexdWhere, indexdSelectMany veya ElementAt yan tümcesi içeren sorgular.  
+- Bir SELECT, Indexed WHERE, Indexed SelectMany veya ElementAt yan tümcesi içeren sorgular, özgün dizinleri kaldırmış veya yeniden düzenlenmiş bir sıralama veya filtreleme işlecinden sonra.  
   
-- Take, TakeWhile, Skip, SkipWhile işleci ve kaynak dizisindeki endekslerin özgün sırada olmadığı sorgular.  
+- Al, TakeWhile, Skip, SkipWhile operatörü ve kaynak dizideki dizinlerin özgün sırada olmadığı sorgular.  
   
-- Veri kaynaklarından biri özgün olarak sıralanmış bir diziye sahip değilse ve diğer veri kaynağı dizinlenebilir (örneğin, bir dizi veya IList(T)) yoksa Zip veya SequenceEquals içeren sorgular.  
+- ZIP veya SequenceEquals içeren sorgular, veri kaynaklarından biri özgün olarak sıralanmış bir dizine sahip olmadığı ve diğer veri kaynağı dizinlenebilir (yani bir dizi veya IList (T)).  
   
-- Dizine eklenebilir veri kaynaklarına uygulanmadığı sürece Concat içeren sorgular.  
+- Dizine eklenebilir veri kaynaklarına uygulanmadığı takdirde Concat içeren sorgular.  
   
-- Dizinlenebilir bir veri kaynağına uygulanmadığı sürece Ters içeren sorgular.  
+- Dizine eklenebilir bir veri kaynağına uygulanmadıysa ters içeren sorgular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Paralel LINQ (PLINQ)](introduction-to-plinq.md)

@@ -8,28 +8,28 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 5d108937e6ab2483cd1633d4b398c1e250f5c098
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77453019"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278538"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme
-Ve <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı yüklemeler, atılabilecek özel durumları işlemek için özel bir mekanizmaya sahip değildir. Bu bakımdan, normal `for` `foreach` ve döngülere benzerler (`For` ve `For Each` Visual Basic'te); işlenmemiş bir özel durum, şu anda çalışan tüm yinelemeler biter bitmez döngünün sonlandırılmasına neden olur.
+<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı yüklemelerin, oluşturulan özel durumları işlemek için özel bir mekanizması yoktur. Bu şekilde, düzenli `for` ve `foreach` döngülere ( `For` ve `For Each` Visual Basic) benzeirler; işlenmeyen bir özel durum, çalışmakta olan tüm yinelemeler sona erdiğinde döngünün sonlandırılmasına neden olur.
   
- Paralel döngülere kendi özel durum işleme mantığınızı eklediğinizde, aynı anda birden çok iş parçacığına benzer özel durumların atılabileceği ve bir iş parçacığına atılan özel durumun başka bir özel durum diğerine atılmasına neden olduğu durumu işleme Iş parçacığı. Döngüdeki tüm özel durumları bir <xref:System.AggregateException?displayProperty=nameWithType>'de saran her iki servis vakasını da işleyebilirsiniz. Aşağıdaki örnek, olası bir yaklaşımı gösterir.  
+ Paralel döngülere kendi özel durum işleme mantığınızı eklediğinizde, benzer özel durumların aynı anda birden çok iş parçacığında oluşturulması ve bir iş parçacığında oluşan bir özel durumun başka bir iş parçacığında başka bir özel durumun oluşturulmasına neden olduğu büyük/küçük harf işleme. İçindeki döngüden tüm özel durumları sarmalayarak her iki durumu da işleyebilirsiniz <xref:System.AggregateException?displayProperty=nameWithType> . Aşağıdaki örnekte olası bir yaklaşım gösterilmektedir.  
   
 > [!NOTE]
-> "Yalnızca Kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satırda kırılır ve "kullanıcı kodu tarafından işlenmemiş özel durum" yazan bir hata iletisi görüntüler. Bu hata iyi huylu. Devam etmek için F5 tuşuna basabilir ve aşağıdaki örnekte gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio'nun ilk hatayı kırmasını önlemek **için, Araçlar, Seçenekler, Hata Ayıklama, Genel**altında "Sadece Kodum" onay kutusunun işaretlerini kaldırın.  
+> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örnekte gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, tüm özel durumlar yakalanır ve <xref:System.AggregateException?displayProperty=nameWithType> sonra atılan bir sarılır. Arayan, hangi özel durumların işleyeceğini belirleyebilir.  
+ Bu örnekte, tüm özel durumlar yakalandıktan sonra bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur. Çağıran, hangi özel durumların işleneceğini karar verebilir.  
   
  [!code-csharp[TPL_Exceptions#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#08)]
  [!code-vb[TPL_Exceptions#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionsinloops.vb#08)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [PLINQ ve TPL'deki Lambda İfadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Veri paralelliği](data-parallelism-task-parallel-library.md)
+- [PLıNQ ve TPL 'deki lambda Ifadeleri](lambda-expressions-in-plinq-and-tpl.md)

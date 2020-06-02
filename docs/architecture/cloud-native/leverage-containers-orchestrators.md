@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 05/13/2020
-ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613933"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282590"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -53,30 +53,11 @@ Kapsayıcılar, proje yapıtları haline gelen ve kaynak denetimine işaretlenmi
 
 Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı şekilde yeniden oluşturabilir ve çalıştırabilirsiniz. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri diğerlerinden farklı şekilde geliştikçe, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
 
-Kapsayıcılar sabittir. Bir kapsayıcı tanımladıktan sonra, tam olarak aynı şekilde yeniden oluşturabilir ve çalıştırabilirsiniz. Bu, bu şekilde bileşen tabanlı tasarıma yönelik olarak kullanılabilirlik sağlar. Bir uygulamanın bazı bölümleri diğerlerinden farklı şekilde geliştikçe, en sık değiştiren parçaları yalnızca dağıtırken uygulamanın tamamını yeniden dağıtmanız gerekir mi? Bir uygulamanın farklı özellikleri ve çapraz kesme sorunları ayrı birimlere ayrılabilir. Şekil 3-2, tek parçalı bir uygulamanın belirli özellikler veya işlevler için kapsayıcılardan ve mikro hizmetlerden nasıl yararlanabileceğiz gösterir. Uygulamanın kendisindeki diğer işlevsellik de Kapsayıcılı hale getirilir.
-
 ![Arka uçta mikro hizmetleri kullanmak için tek parçalı bir uygulamayı bölmek.](./media/cloud-native-design.png)
 
 **Şekil 3-2**. Tek parçalı bir uygulamayı, mikro hizmetlere çok parçalı bir uygulama oluşturmayı kaldırma.
 
 Her bulut Yerel hizmeti ayrı bir kapsayıcıda oluşturulup dağıtılır. Her biri gerektiğinde güncelleştirebilir. Her hizmet için uygun kaynakları olan düğümlerde tek tek hizmetler barındırılabilir. Her hizmetin çalıştığı ortam, geliştirme, test ve üretim ortamlarında paylaşılan ve kolayca sürümlü bir sabittir. Uygulamanın farklı alanlarında, tek başına derleme zamanı bağımlılıkları değil, hizmetler arasında doğrudan çağrı veya ileti olarak gerçekleştirilir. Ayrıca, uygulamanın geri kalanında değişiklik gerektirmeden belirli bir özelliği en iyi şekilde sunan teknolojiyi de seçebilirsiniz.
-
-Kapsayıcılı hizmetler otomatik yönetim gerektirir. Bağımsız olarak dağıtılan kapsayıcıların büyük bir kümesini el ile yönetmek mümkün değildir. Örneğin, aşağıdaki görevleri göz önünde bulundurun:
-
-- Kapsayıcı örnekleri birçok makinenin bir kümesi arasında nasıl sağlanacak?
-- Dağıtıldıktan sonra kapsayıcılar birbirleriyle nasıl keşfedilir ve birbirleriyle iletişim kurar?
-- Kapsayıcılar isteğe bağlı olarak nasıl ölçeklenebilen veya kullanıma hazır?
-- Her kapsayıcının durumunu nasıl izleyebilirim?
-- Bir kapsayıcıyı donanım ve yazılım hatalarıyla nasıl koruyabilirim?
-- Canlı bir uygulama için kapsayıcıları sıfır kapalı kalma süresiyle nasıl yükseltebilirim?
-
-Kapsayıcı yöneticileri bu ve diğer kaygıları ele alır ve otomatikleştirin.
-
-Bulut Yerel ekonomik sistemde, Kubernetes, kapsayıcı Orchestrator ' ı d haline geldi. Bu, bulut Yerel Bilgi Işlem altyapısı (CNCF) tarafından yönetilen açık kaynaklı bir platformdur. Kubernetes, bir makine kümesi içindeki Kapsayıcılı iş yüklerinin dağıtım, ölçeklendirme ve işlevsel sorunlarını otomatikleştirir. Ancak, Kubernetes 'nin yüklenmesi ve yönetilmesi, önemli bir karmaşıkdır.
-
-Daha iyi bir yaklaşım, Kubernetes 'in bir bulut satıcısından yönetilen hizmet olarak faydalanmasıdır. Azure bulut, [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/)ile tam olarak yönetilen bir Kubernetes platformu sunar. AKS, Kubernetes yönetiminin karmaşıklık ve operasyonel yükünü soyutlar. Kubernetes 'i bir bulut hizmeti olarak kullanırsınız; Microsoft, yönetim ve destekleme sorumluluğunu kullanır. AKS, diğer Azure hizmetleri ve geliştirme araçlarıyla da sıkı bir şekilde tümleşir.
-
-AKS, küme temelli bir teknolojidir. Federasyon sanal makineleri veya düğümleri havuzu Azure bulutuna dağıtılır. Bunlar, yüksek oranda kullanılabilir bir ortam veya küme oluşturur. Küme, bulutta yerel uygulamanıza sorunsuz, tek bir varlık olarak görünür. Bu şekilde, AKS 'ler, yükü eşit bir şekilde dağıtan önceden tanımlanmış bir stratejiye göre Kapsayıcılı hizmetlerinizi bu düğümler arasında dağıtır.
 
 Kapsayıcılı hizmetler otomatik yönetim gerektirir. Bağımsız olarak dağıtılan kapsayıcıların büyük bir kümesini el ile yönetmek mümkün değildir. Örneğin, aşağıdaki görevleri göz önünde bulundurun:
 
@@ -240,8 +221,6 @@ Ayrıca, dilediğiniz zaman mevcut bir ASP.NET Core uygulamasına Docker desteğ
 ![Visual Studio Docker desteği ekle](./media/visual-studio-add-docker-support.png)
 
 **Şekil 3-8**. Visual Studio 'ya Docker desteği ekleme
-
-Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra `azds.yaml` Proje köküne bir dosya eklenir ve `charts` uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 
 Ayrıca şekil 3-8 ' de gösterilen kapsayıcı düzenleme desteği ekleyebilirsiniz. Varsayılan olarak Orchestrator, Kubernetes ve Held kullanır. Orchestrator 'ı seçtikten sonra `azds.yaml` Proje köküne bir dosya eklenir ve `charts` uygulamayı yapılandırmak ve Kubernetes 'e dağıtmak Için kullanılan helk grafiklerini içeren bir klasör eklenir. Şekil 3-9 yeni bir projedeki sonuç dosyalarını gösterir.
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: d4a1f379a88231654c710b1df7b505316377c915
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 30277507050091de6b1e9293401d61ac5e351a1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741798"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280627"
 ---
 # <a name="arrays"></a>Diziler
-✔️ ortak API 'lerde diziler üzerinde koleksiyonları kullanmayı tercih eder. [Koleksiyonlar](../../../docs/standard/design-guidelines/guidelines-for-collections.md) bölümü koleksiyonlar ve diziler arasında nasıl seçim yapılacağı hakkında ayrıntılar sağlar.
+✔️ ortak API 'lerde diziler üzerinde koleksiyonları kullanmayı tercih eder. [Koleksiyonlar](guidelines-for-collections.md) bölümü koleksiyonlar ve diziler arasında nasıl seçim yapılacağı hakkında ayrıntılar sağlar.
 
- ❌ salt okuma dizisi alanları kullanmayın. Alanın kendisi salt okunurdur ve değiştirilemez, ancak dizideki öğeler değiştirilebilir.
+ ❌Salt okunurdur dizi alanlarını kullanmayın. Alanın kendisi salt okunurdur ve değiştirilemez, ancak dizideki öğeler değiştirilebilir.
 
  ✔️ çok boyutlu diziler yerine pürüzlü Diziler kullanmayı düşünün.
 
@@ -30,5 +30,5 @@ ms.locfileid: "76741798"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Array>
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Kullanım yönergeleri](usage-guidelines.md)

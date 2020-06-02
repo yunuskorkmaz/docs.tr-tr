@@ -1,6 +1,6 @@
 ---
-title: .NET'te Temel Dize İşlemleri
-description: Dizelerüzerinde gerçekleştirebileceğiniz temel işlemler hakkında bilgi edinin.
+title: .NET 'te temel dize Işlemleri
+description: Dizeler üzerinde gerçekleştirebileceğiniz temel işlemler hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8c19f6bcbdf5e4829c91aee1e2fd631537ed2e0a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523984"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277758"
 ---
-# <a name="basic-string-operations-in-net"></a>.NET'teki temel dize işlemleri
+# <a name="basic-string-operations-in-net"></a>.NET 'te temel dize işlemleri
 
-Uygulamalar genellikle kullanıcı girişine dayalı iletiler oluşturarak kullanıcılara yanıt verir. Örneğin, web sitelerinin yeni oturum açmış bir kullanıcıya kullanıcının adını içeren özel bir karşılamayla yanıt vermesi sık rastlanan bir durumdur.
+Uygulamalar genellikle kullanıcı girişine göre iletiler oluşturarak kullanıcılara yanıt verir. Örneğin, Web sitelerinin Kullanıcı adını içeren özelleştirilmiş bir karşılama ile yeni bir oturum açan kullanıcıya yanıt vermesi yaygın bir durumdur.
 
-<xref:System.String?displayProperty=nameWithType> Ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> sınıflardaki çeşitli yöntemler, kullanıcı arabiriminizde görüntülenecek özel dizeleri dinamik olarak oluşturmanıza olanak tanır. Bu yöntemler, bayt dizilerinden yeni dizeler oluşturma, dizelerin değerlerini karşılaştırma ve varolan dizeleri değiştirme gibi bir dizi temel dize işlemi gerçekleştirmenize de yardımcı olur.
+<xref:System.String?displayProperty=nameWithType>Ve sınıflardaki çeşitli yöntemler, <xref:System.Text.StringBuilder?displayProperty=nameWithType> Kullanıcı arabiriminizdeki görüntülenecek özel dizeleri dinamik olarak oluşturmanız için izin verir. Bu yöntemler Ayrıca bayt dizelerinden yeni dizeler oluşturma, dizelerin değerlerini karşılaştırma ve mevcut dizeleri değiştirme gibi birçok temel dize işlemi gerçekleştirmenize yardımcı olur.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[.NET'te Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)\
-Bir türü başka bir türe dönüştürme yi açıklar.  
+[.NET 'te tür dönüştürme](type-conversion.md)\
+Bir türün başka bir türe nasıl dönüştürüleceğini açıklar.  
 
-[Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)\
-Biçim belirteçlerini kullanarak dizeleri nasıl biçimlendireceklerini açıklar.
+[Biçimlendirme türleri](formatting-types.md)\
+Biçim belirticilerini kullanarak dizelerin nasıl biçimlendirileceğini açıklar.

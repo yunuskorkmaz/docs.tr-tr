@@ -8,42 +8,42 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 86011cff71fabed5e47e085f91b1759238638c9a
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 80e199d75471eba219f1f3da12d307b6cd1d90cf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588498"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285462"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Sıralama Denetimi
-Bu örnekler, uzantı yöntemini kullanarak PLINQ sorgusunda sıralamanın nasıl denetlenebildiğini <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> gösterir.  
+Bu örneklerde, genişletme yöntemi kullanılarak bir PLıNQ sorgusunda sıralamayı denetleme gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> .  
   
 > [!WARNING]
-> Bu örnekler öncelikle kullanımı göstermek için tasarlanmıştır ve Nesneler sorgularına eşdeğer ardışık LINQ'dan daha hızlı çalışabilir veya çalışmayabilir.  
+> Bu örnekler öncelikle kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgularından daha hızlı çalışmayabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kaynak dizinin sırasını korur. Bu bazen gereklidir; örneğin, bazı sorgu işleçleri doğru sonuçlar üretmek için sıralı bir kaynak sıragerektirir.  
+ Aşağıdaki örnek, kaynak sırasının sıralamasını korur. Bu bazen gereklidir; Örneğin, bazı sorgu işleçleri doğru sonuçlar üretmek için sıralı bir kaynak sırası gerektirir.  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kaynak sırası büyük olasılıkla sıralanmış olması beklenen bazı sorgu işleçleri gösterir. Bu işleçler sıralanmamış diziler üzerinde çalışır, ancak beklenmeyen sonuçlar üretebilir.  
+ Aşağıdaki örnek, kaynak sırası büyük olasılıkla sıralanmalıdır beklenen bazı sorgu işleçlerini gösterir. Bu işleçler sıralanmamış diziler üzerinde çalışır, ancak bunlar beklenmedik sonuçlara neden olabilirler.  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- Bu yöntemi çalıştırmak için [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesinde PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
+ Bu yöntemi çalıştırmak için, [PLINQ veri örneği](plinq-data-sample.md) projesindeki PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sorgunun ilk bölümü için sıralamayı nasıl koruyacağını, ardından birleştirilmiş tümcenin performansını artırmak için sıralamayı nasıl kaldıracağını ve ardından son sonuç dizisine sıralamayı yeniden uygulayacağını gösterir.  
+ Aşağıdaki örnek, bir sorgunun ilk bölümü için sıralamayı nasıl koruyabileceğiniz gösterir, sonra bir JOIN yan tümcesinin performansını artırmak için sıralamayı kaldırır ve sonra sıralamayı son sonuç dizisine yeniden uygular.  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- Bu yöntemi çalıştırmak için [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesinde PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
+ Bu yöntemi çalıştırmak için, [PLINQ veri örneği](plinq-data-sample.md) projesindeki PLINQDataSample sınıfına yapıştırın ve F5 tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Paralel LINQ (PLINQ)](introduction-to-plinq.md)

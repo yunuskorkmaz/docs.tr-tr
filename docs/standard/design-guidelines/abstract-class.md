@@ -10,16 +10,16 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-ms.openlocfilehash: 018dd353024e75e9819f5a97008f2f422ecad291
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e6a5923f293ed536fb272f6fe6c805067aede0ab
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739063"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280783"
 ---
 # <a name="abstract-class-design"></a>Soyut Sınıf Tasarımı
 
-❌ soyut türlerde ortak veya korumalı iç oluşturucular tanımlamaz.
+❌Soyut türlerde ortak veya korumalı iç oluşturucular tanımlamayın.
 
  Oluşturucular, yalnızca kullanıcıların türün örneklerini oluşturması gerekiyorsa genel olmalıdır. Soyut bir türün örneklerini oluşturamadığı için ortak Oluşturucusu olan bir soyut tür, kullanıcılar için yanlış tasarlanmış ve yanıltıcı olur.
 
@@ -31,7 +31,7 @@ ms.locfileid: "76739063"
 
  ✔️, sevk ettiğiniz her soyut sınıftan devralan en az bir somut tür sağlar.
 
- Bunu yapmak, soyut sınıfın tasarımını doğrulamaya yardımcı olur. Örneğin, <xref:System.IO.FileStream?displayProperty=nameWithType>, <xref:System.IO.Stream?displayProperty=nameWithType> soyut sınıfının bir uygulamasıdır.
+ Bunu yapmak, soyut sınıfın tasarımını doğrulamaya yardımcı olur. Örneğin, <xref:System.IO.FileStream?displayProperty=nameWithType> <xref:System.IO.Stream?displayProperty=nameWithType> soyut sınıfın bir uygulamasıdır.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -39,5 +39,5 @@ ms.locfileid: "76739063"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Tür tasarım yönergeleri](type.md)
+- [Çerçeve tasarım yönergeleri](index.md)

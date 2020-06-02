@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420506"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285969"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM birlikte çalışma için .NET türlerini nitelendirme
 Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zamanında COM birlikte çalışma gereksinimlerini göz önünde bulundurun. Yönetilen türler (sınıf, arabirim, yapı ve numaralandırma) aşağıdaki yönergelere uydığınızda COM türleriyle sorunsuz bir şekilde tümleşir:  
@@ -49,7 +49,7 @@ Türleri bir derlemede COM uygulamalarına sunmak istiyorsanız, tasarım zaman�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [.NET Framework Bileşenlerini COM'da Gösterme](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface)
-- [Birlikte Çalışma Özniteliklerini Uygulama](../../../docs/standard/native-interop/apply-interop-attributes.md)
-- [COM için bir .NET Framework derlemesi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Birlikte Çalışma Özniteliklerini Uygulama](apply-interop-attributes.md)
+- [COM için bir .NET Framework derlemesi paketleme](../../framework/interop/packaging-an-assembly-for-com.md)

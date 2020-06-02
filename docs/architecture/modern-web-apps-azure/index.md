@@ -3,13 +3,13 @@ title: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
 description: ASP.NET Core ve Azure kullanarak tek parçalı Web uygulamaları oluşturmaya yönelik uçtan uca rehberlik sağlayan bir kılavuz.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/4/2019
-ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.date: 5/25/2020
+ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144545"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284461"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core ve Microsoft Azure ile Modern Web Uygulamaları Tasarlama
 
@@ -86,6 +86,10 @@ Daha fazla kuruluş, Microsoft Azure gibi hizmetleri kullanarak Web uygulamalar�
 - Esnek kapasite; gerçek ihtiyaçlarına göre ölçeği artırma veya azaltma.
 
 Azure 'da barındırılan ASP.NET Core ile Web uygulamaları oluşturmak, geleneksel alternatifler üzerinde birçok rekabet avantajı sunar. ASP.NET Core Modern Web uygulaması geliştirme uygulamaları ve bulut barındırma senaryoları için iyileştirilmiştir. Bu kılavuzda, bu özelliklerden en iyi şekilde yararlanmak için ASP.NET Core uygulamalarınızı nasıl mimareceğinizi öğreneceksiniz.
+
+## <a name="version"></a>Sürüm
+
+Bu kılavuz, .NET Core 3,1 sürümüyle aynı "Wave" teknolojileri (Azure ve ek üçüncü taraf teknolojileri) ile ilgili birçok ek güncelleştirme ile birlikte **.net core 3,1** sürümünü kapsayacak şekilde değiştirilmiştir. Kitap sürümü de **3,1**sürümüne güncelleştirilmiştir.
 
 ## <a name="purpose"></a>Amaç
 
