@@ -1,21 +1,22 @@
 ---
 title: DataTable’a Veri Ekleme
+description: Bir DataTable oluşturduktan sonra ve sütununu ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, ADO.NET içindeki bir tabloya yeni veri satırları eklemek için bu örnek koda bakın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151539"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286940"
 ---
-# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="76cc4-102">DataTable’a Veri Ekleme</span><span class="sxs-lookup"><span data-stu-id="76cc4-102">Adding Data to a DataTable</span></span>
-<span data-ttu-id="76cc4-103">Sütunlar ve <xref:System.Data.DataTable> kısıtlamalar kullanarak bir yapı oluşturduktan ve yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="76cc4-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="76cc4-104">Yeni bir satır eklemek için, yeni <xref:System.Data.DataRow>bir değişkeni tür olarak bildirin.</span><span class="sxs-lookup"><span data-stu-id="76cc4-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="76cc4-105">Yöntemi aradığınızda yeni bir **DataRow** nesnesi <xref:System.Data.DataTable.NewRow%2A> döndürülür.</span><span class="sxs-lookup"><span data-stu-id="76cc4-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="76cc4-106">**DataTable** daha sonra tablonun yapısına göre **Veri Satırı** nesnesi <xref:System.Data.DataColumnCollection>oluşturur, tarafından tanımlanan .</span><span class="sxs-lookup"><span data-stu-id="76cc4-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
+# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="333d6-103">DataTable’a Veri Ekleme</span><span class="sxs-lookup"><span data-stu-id="333d6-103">Adding Data to a DataTable</span></span>
+<span data-ttu-id="333d6-104">' <xref:System.Data.DataTable> I oluşturup, sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="333d6-104">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="333d6-105">Yeni bir satır eklemek için yeni bir değişkeni tür olarak bildirin <xref:System.Data.DataRow> .</span><span class="sxs-lookup"><span data-stu-id="333d6-105">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="333d6-106">Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür <xref:System.Data.DataTable.NewRow%2A> .</span><span class="sxs-lookup"><span data-stu-id="333d6-106">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="333d6-107">**DataTable** daha sonra, tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur <xref:System.Data.DataColumnCollection> .</span><span class="sxs-lookup"><span data-stu-id="333d6-107">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
   
- <span data-ttu-id="76cc4-107">Aşağıdaki örnek, **NewRow** yöntemini arayarak yeni bir satırOluşturmanın nasıl olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="76cc4-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
+ <span data-ttu-id="333d6-108">Aşağıdaki örnek, **NewRow** yöntemini çağırarak yeni bir satır oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="333d6-108">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +26,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- <span data-ttu-id="76cc4-108">Ardından, aşağıdaki örnekte gösterildiği gibi, bir dizin veya sütun adını kullanarak yeni eklenen satırı işleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="76cc4-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
+ <span data-ttu-id="333d6-109">Daha sonra, aşağıdaki örnekte gösterildiği gibi, yeni eklenen satırı bir dizin veya sütun adı kullanarak düzenleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="333d6-109">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +38,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- <span data-ttu-id="76cc4-109">Veriler yeni satıra eklendikten sonra, **satırı** aşağıdaki kodda gösterilen <xref:System.Data.DataRowCollection>sıraya eklemek için Ekle yöntemi kullanılır.</span><span class="sxs-lookup"><span data-stu-id="76cc4-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
+ <span data-ttu-id="333d6-110">Veriler yeni satıra eklendikten sonra, **Add** <xref:System.Data.DataRowCollection> aşağıdaki kodda gösterildiği gibi ekleme yöntemi satırı öğesine eklemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="333d6-110">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +48,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- <span data-ttu-id="76cc4-110">Aşağıdaki örnekte **Add** gösterildiği gibi, <xref:System.Object>bir dizi değer geçirerek yeni bir satır eklemek için Ekle yöntemini de arayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="76cc4-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
+ <span data-ttu-id="333d6-111">Ayrıca **Add** <xref:System.Object> , aşağıdaki örnekte gösterildiği gibi, bir değerler dizisine geçirerek yeni bir satır eklemek için Add yöntemini çağırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="333d6-111">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +58,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- <span data-ttu-id="76cc4-111">**Nesne**olarak yazılan bir dizi değerin **Ekle** yöntemine geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerlere ayarlar.</span><span class="sxs-lookup"><span data-stu-id="76cc4-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="76cc4-112">Dizideki değerlerin, tabloda göründükleri sıraya göre sütunlar ile sırayla eşleştiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="76cc4-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
+ <span data-ttu-id="333d6-112">**Add** yöntemine **nesne**olarak yazılan bir değer dizisinin geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerler olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="333d6-112">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="333d6-113">Dizideki değerlerin, tabloda göründükleri sıraya göre sütunları sırayla eşleştirdiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="333d6-113">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
   
- <span data-ttu-id="76cc4-113">Aşağıdaki örnek, yeni oluşturulan **Müşteriler** tablosuna 10 satır ekler.</span><span class="sxs-lookup"><span data-stu-id="76cc4-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
+ <span data-ttu-id="333d6-114">Aşağıdaki örnek, yeni oluşturulan **müşteriler** tablosuna 10 satır ekler.</span><span class="sxs-lookup"><span data-stu-id="333d6-114">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
   
 ```vb  
 Dim workRow As DataRow  
@@ -85,11 +86,11 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="76cc4-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="76cc4-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="333d6-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="333d6-115">See also</span></span>
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [<span data-ttu-id="76cc4-115">DataTable Verilerini Düzenleme</span><span class="sxs-lookup"><span data-stu-id="76cc4-115">Manipulating Data in a DataTable</span></span>](manipulating-data-in-a-datatable.md)
-- [<span data-ttu-id="76cc4-116">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="76cc4-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="333d6-116">DataTable Verilerini Düzenleme</span><span class="sxs-lookup"><span data-stu-id="333d6-116">Manipulating Data in a DataTable</span></span>](manipulating-data-in-a-datatable.md)
+- [<span data-ttu-id="333d6-117">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="333d6-117">ADO.NET Overview</span></span>](../ado-net-overview.md)

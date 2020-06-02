@@ -1,24 +1,25 @@
 ---
-title: "Nasıl yapılır: oluşturulan SQL 'i görüntüleme"
+title: 'Nasıl yapılır: Oluşturulan SQL’i Görüntüleme'
+description: LINQ to SQL işlevlerinin ve hata ayıklamanın anlaşılmasına yardımcı olmak için Log özelliğini kullanarak sorgular için oluşturulan SQL kodunu görüntülemeyi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002974"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286384"
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="78fbf-102">Nasıl yapılır: oluşturulan SQL 'i görüntüleme</span><span class="sxs-lookup"><span data-stu-id="78fbf-102">How to: Display Generated SQL</span></span>
-<span data-ttu-id="78fbf-103">Sorgular için oluşturulan SQL kodunu ve <xref:System.Data.Linq.DataContext.Log%2A> özelliğini kullanarak değişiklik işlemeyi görüntüleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="78fbf-103">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="78fbf-104">Bu yaklaşım, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliğini anlamak ve belirli sorunları gidermek için yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="78fbf-104">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="66fbc-103">Nasıl yapılır: Oluşturulan SQL’i Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="66fbc-103">How to: Display Generated SQL</span></span>
+<span data-ttu-id="66fbc-104">Özelliğini kullanarak sorgular için oluşturulan SQL kodunu ve değişiklik işlemeyi görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> .</span><span class="sxs-lookup"><span data-stu-id="66fbc-104">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="66fbc-105">Bu yaklaşım, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği anlamak ve belirli sorunların hatalarını ayıklamak için yararlı olabilir.</span><span class="sxs-lookup"><span data-stu-id="66fbc-105">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="78fbf-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="78fbf-105">Example</span></span>  
- <span data-ttu-id="78fbf-106">Aşağıdaki örnek, kod yürütülmeden önce konsol penceresinde SQL kodunu göstermek için <xref:System.Data.Linq.DataContext.Log%2A> özelliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="78fbf-106">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="78fbf-107">Bu özelliği sorgu, INSERT, Update ve DELETE komutlarıyla birlikte kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="78fbf-107">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="66fbc-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="66fbc-106">Example</span></span>  
+ <span data-ttu-id="66fbc-107">Aşağıdaki örnek, <xref:System.Data.Linq.DataContext.Log%2A> kod yürütülmeden önce konsol PENCERESINDE SQL kodunu göstermek için özelliğini kullanır.</span><span class="sxs-lookup"><span data-stu-id="66fbc-107">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="66fbc-108">Bu özelliği sorgu, INSERT, Update ve DELETE komutlarıyla birlikte kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="66fbc-108">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="78fbf-108">Konsol penceresindeki satırlar, aşağıdaki Visual Basic veya C# kodu yürüttüğünüzde gördüğünüz şeydir.</span><span class="sxs-lookup"><span data-stu-id="78fbf-108">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
+ <span data-ttu-id="66fbc-109">Konsol penceresindeki satırlar, aşağıdaki Visual Basic veya C# kodunu çalıştırdığınızda gördüğünüz şeydir.</span><span class="sxs-lookup"><span data-stu-id="66fbc-109">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,6 +43,6 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="78fbf-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="78fbf-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66fbc-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="66fbc-110">See also</span></span>
 
-- [<span data-ttu-id="78fbf-110">Hata Ayıklama Desteği</span><span class="sxs-lookup"><span data-stu-id="78fbf-110">Debugging Support</span></span>](debugging-support.md)
+- [<span data-ttu-id="66fbc-111">Hata Ayıklama Desteği</span><span class="sxs-lookup"><span data-stu-id="66fbc-111">Debugging Support</span></span>](debugging-support.md)
