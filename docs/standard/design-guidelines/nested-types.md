@@ -10,12 +10,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: dd13116b13ac8e2d7a3af6ef014eb4f393909515
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a3b090b39e1e907826551ed152d4eece4885ce41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743706"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290142"
 ---
 # <a name="nested-types"></a>İç içe Geçmiş Türler
 İç içe bir tür, kapsayan tür olarak adlandırılan başka bir türün kapsamı içinde tanımlanan bir türdür. İç içe bir tür, kapsayan türünün tüm üyelerine erişebilir. Örneğin, kapsayan tür ' de tanımlanan özel alanlara ve kapsayan türün tüm yokler ' de tanımlanan korumalı alanlara erişimi vardır.
@@ -26,19 +26,19 @@ ms.locfileid: "76743706"
 
  iç içe geçmiş türü ve onun dış türü arasındaki ilişki, üye erişilebilirlik semantiklerine göre istenmediğinde iç içe türler kullanın ✔️.
 
- ❌, genel iç içe türler mantıksal gruplandırma yapısı olarak kullanılmaz; Bu ad alanlarını kullanın.
+ ❌Genel iç içe türler mantıksal gruplandırma yapısı olarak kullanmayın; Bu ad alanlarını kullanın.
 
- ❌ genel kullanıma açık iç içe türler kullanmaktan kaçının. Bunun tek istisnası, iç içe türün değişkenlerinin yalnızca altsınıflama veya diğer gelişmiş özelleştirme senaryoları gibi nadir senaryolarda bildirilmesine ihtiyaç duymalıdır.
+ ❌Genel kullanıma açık iç içe türler kullanmaktan kaçının. Bunun tek istisnası, iç içe türün değişkenlerinin yalnızca altsınıflama veya diğer gelişmiş özelleştirme senaryoları gibi nadir senaryolarda bildirilmesine ihtiyaç duymalıdır.
 
- ❌, türü kapsayan tür dışında başvuruluyorsa iç içe türler kullanmayın.
+ ❌Tür, kapsayan tür dışında başvuruluyorsa iç içe türler kullanmayın.
 
  Örneğin, bir sınıfta tanımlanan bir metoda geçirilen Enum, sınıfta iç içe geçmiş bir tür olarak tanımlanmamalıdır.
 
- ❌, iç içe türler istemci kodu tarafından örneklenmeleri gerekiyorsa kullanmayın.  Bir türün ortak Oluşturucusu varsa, muhtemelen iç içe olmamalıdır.
+ ❌İç içe türler, istemci kodu tarafından örneklenmeleri gerekiyorsa kullanmayın.  Bir türün ortak Oluşturucusu varsa, muhtemelen iç içe olmamalıdır.
 
  Bir tür örneği oluşturulabilir, bu, türün kendi çerçevesinde bir yerde yer aldığı anlamına gelir (bunu oluşturabilir, onunla çalışabilir ve dış türü kullanmadan yok edebilir) ve bu nedenle iç içe geçmemelidir. İç türler, dış tür herhangi bir ilişki olmadan dış türün dışında yaygın olarak yeniden kullanılmamalıdır.
 
- ❌ iç içe bir türü arabirimin üyesi olarak tanımlamaz. Birçok dil böyle bir yapıyı desteklemez.
+ ❌İç içe bir türü arabirimin üyesi olarak tanımlamayın. Birçok dil böyle bir yapıyı desteklemez.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -46,5 +46,5 @@ ms.locfileid: "76743706"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Tür tasarım yönergeleri](type.md)
+- [Çerçeve tasarım yönergeleri](index.md)

@@ -8,44 +8,44 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242731"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291181"
 ---
 # <a name="mutexes"></a>Zaman Uyumu Sağlayıcılar
-Bir kaynağa <xref:System.Threading.Mutex> özel erişim sağlamak için bir nesne kullanabilirsiniz. Sınıf <xref:System.Threading.Mutex> sınıftan <xref:System.Threading.Monitor> daha fazla sistem kaynakları kullanır, ancak uygulama etki alanı sınırları arasında marshaled olabilir, birden çok bekleme ile kullanılabilir ve farklı işlemlerde iş parçacıkları eşitlemek için kullanılabilir. Yönetilen eşitleme mekanizmalarının karşılaştırılması için, [Eşitleme İlkellerine Genel Bakış'a](../../../docs/standard/threading/overview-of-synchronization-primitives.md)bakın.  
+<xref:System.Threading.Mutex>Bir kaynağa özel erişim sağlamak için bir nesnesi kullanabilirsiniz. <xref:System.Threading.Mutex>Sınıfı sınıfından daha fazla sistem kaynağı kullanır <xref:System.Threading.Monitor> , ancak uygulama etki alanı sınırları arasında sıralanabilir, birden fazla bekleme ile birlikte kullanılabilir ve farklı işlemlerdeki iş parçacıklarını eşzamanlı hale getirmek için kullanılabilir. Yönetilen eşitleme mekanizmalarının karşılaştırması için bkz. [eşitleme temelleri 'Ne genel bakış](overview-of-synchronization-primitives.md).  
   
- Kod örnekleri için, oluşturucular <xref:System.Threading.Mutex.%23ctor%2A> için başvuru belgelerine bakın.  
+ Kod örnekleri için, oluşturucuların başvuru belgelerine bakın <xref:System.Threading.Mutex.%23ctor%2A> .  
   
-## <a name="using-mutexes"></a>Mutexes kullanma  
- Bir iş <xref:System.Threading.WaitHandle.WaitOne%2A> parçacığı sahiplik istemek için bir mutex yöntemi çağırır. Mutex kullanılabilir olana veya isteğe bağlı zaman aşımı aralığı bitene kadar arama blokları. Bir mutex durumu hiçbir iş parçacığı sahibi ise sinyal verilir.  
+## <a name="using-mutexes"></a>Birbirini kapsamayan kullanma  
+ Bir iş parçacığı <xref:System.Threading.WaitHandle.WaitOne%2A> sahiplik istemek için bir mutex yöntemini çağırır. Çağrı, mutex kullanılabilir olana kadar ya da isteğe bağlı zaman aşımı aralığı aşana kadar engeller. Bir mutex 'in durumu, kendisine ait bir iş parçacığı yoksa sinyal edilir.  
   
- Bir iş parçacığı yöntemini <xref:System.Threading.Mutex.ReleaseMutex%2A> çağırarak bir mutex bültenleri. Mutexes iplik afinite var; diğer bir şey, mutex yalnızca ona sahip olan iş parçacığı tarafından serbest bırakılabilir. Bir iş parçacığı sahibi olmayan bir mutex salgılarsa, iş parçacığına bir mitex <xref:System.ApplicationException> atılır.  
+ Bir iş parçacığı yöntemini çağırarak bir mutex yayınlar <xref:System.Threading.Mutex.ReleaseMutex%2A> . Zaman uyumu sağlayıcılar iş parçacığı benzeşimine sahiptir; diğer bir deyişle, mutex yalnızca sahibi olan iş parçacığı tarafından kullanılabilir. Bir iş parçacığı sahip olmadığı bir mutex yayınlarsa, iş parçacığında bir bir zaman <xref:System.ApplicationException> atılır.  
   
- <xref:System.Threading.Mutex> <xref:System.Threading.WaitHandle>Sınıf türetilmiştir çünkü, statik <xref:System.Threading.WaitHandle.WaitAll%2A> veya <xref:System.Threading.WaitHandle.WaitAny%2A> diğer bekleme <xref:System.Threading.WaitHandle> tutamaçları ile <xref:System.Threading.Mutex> birlikte bir sahipliğini istemek için yöntemler de arayabilirsiniz.  
+ <xref:System.Threading.Mutex>Sınıfı öğesinden türetildiğinden <xref:System.Threading.WaitHandle> , <xref:System.Threading.WaitHandle.WaitAll%2A> <xref:System.Threading.WaitHandle.WaitAny%2A> <xref:System.Threading.WaitHandle> <xref:System.Threading.Mutex> diğer bekleme tutamaçlarına sahip bir birleşiminin sahipliğini istemek için statik veya yöntemlerini de çağırabilirsiniz.  
   
- Bir iş parçacığı, <xref:System.Threading.Mutex>bu iş parçacığı, yürütme engellemeden yinelenen bekleme isteği aramalarında aynı <xref:System.Threading.Mutex> belirtebilirsiniz sahibi; ancak, sahiplik <xref:System.Threading.Mutex> serbest bırakmak için birçok kez serbest bırakmak gerekir.  
+ Bir iş parçacığı bir sürümüne sahipse <xref:System.Threading.Mutex> , bu iş parçacığı <xref:System.Threading.Mutex> yürütmeyi engellemeden yinelenen bekleme istek çağrılarında aynısını belirtebilir; ancak, <xref:System.Threading.Mutex> sahipliği serbest bırakmak için kaç kez serbest bırakmalıdır.  
   
-## <a name="abandoned-mutexes"></a>Terk Edilmiş Mutexes  
- Bir iş parçacığı bir <xref:System.Threading.Mutex>serbest bırakmadan sona ererse, mutex terk olduğu söyleniyor. Bu genellikle ciddi bir programlama hatası gösterir, çünkü mutex'in koruduğu kaynak tutarsız bir durumda bırakılabilir. .NET Framework sürüm 2.0'da, mutex'i alan bir sonraki iş parçacığına bir <xref:System.Threading.AbandonedMutexException> atılmıştır.  
+## <a name="abandoned-mutexes"></a>Bırakılan mutex 'ler  
+ Bir iş parçacığı bir serbest bırakılmadan sonlandığında <xref:System.Threading.Mutex> , mutex terk edilir. Bu genellikle, mutex 'in koruduğu kaynak tutarsız bir durumda bırakılmış olduğundan ciddi bir programlama hatası gösterir. .NET Framework sürüm 2,0 ' de, mutex 'i alan bir <xref:System.Threading.AbandonedMutexException> sonraki iş parçacığında bir oluşturulur.  
   
 > [!NOTE]
-> .NET Framework sürümleri1.0 ve 1.1'de <xref:System.Threading.Mutex> terk edilmiş bir durum sinyal durumuna ayarlanır ve bir sonraki bekleme iş parçacığı sahiplik alır. İş parçacığı beklemiyorsa, <xref:System.Threading.Mutex> sinyalli durumda kalır. Özel durum oluşturulmaz.  
+> 1,0 ve 1,1 .NET Framework sürümlerinde, bırakılan <xref:System.Threading.Mutex> durum sinyal durumuna ayarlanır ve bir sonraki bekleme iş parçacığı sahiplik alır. Bekleyen bir iş parçacığı yoksa, <xref:System.Threading.Mutex> sinyal sinyali verilmiş durumda kalır. Özel durum oluşturulmaz.  
   
- Sistem çapında bir mutex durumunda, terk edilmiş bir mutex bir uygulama aniden (örneğin, Windows Görev Yöneticisi kullanılarak) sonlandırıldığını gösterebilir.  
+ Sistem genelinde bir mutex söz konusu olduğunda, bırakılan bir mutex, bir uygulamanın aniden sonlandırıldığı (örneğin, Windows Görev Yöneticisi kullanılarak) anlamına gelebilir.  
   
-## <a name="local-and-system-mutexes"></a>Yerel ve Sistem Mutexes  
- Mutexes iki tür vardır: yerel mutexes ve adlı sistem mutexes. Bir <xref:System.Threading.Mutex> ad kabul eden bir oluşturucu kullanarak bir nesne oluşturursanız, bu addaki bir işletim sistemi nesnesi ile ilişkilidir. Adlandırılmış sistem mutexes işletim sistemi boyunca görülebilir ve süreçlerin faaliyetlerini senkronize etmek için kullanılabilir. Aynı adlı <xref:System.Threading.Mutex> sistem mutex temsil eden birden çok nesne oluşturabilir <xref:System.Threading.Mutex.OpenExisting%2A> ve varolan bir adlandırılmış sistem mutex açmak için yöntemi kullanabilirsiniz.  
+## <a name="local-and-system-mutexes"></a>Yerel ve sistem zaman uyumu sağlayıcılar  
+ Birbirini kapsamayan iki tür vardır: yerel zaman uyumu sağlayıcılar ve adlandırılmış sistem zaman uyumu. Bir <xref:System.Threading.Mutex> adı kabul eden bir Oluşturucu kullanarak bir nesne oluşturursanız, bu ad bir işletim sistemi nesnesi ile ilişkilendirilir. Adlandırılmış sistem zaman uyumu sağlayıcılar, işletim sistemi genelinde görünür ve işlem etkinliklerini eşzamanlı hale getirmek için kullanılabilir. <xref:System.Threading.Mutex>Aynı adlı sistem mutex 'i temsil eden birden çok nesne oluşturabilirsiniz ve bu <xref:System.Threading.Mutex.OpenExisting%2A> yöntemi kullanarak var olan bir adlandırılmış sistem mutex 'i açabilirsiniz.  
   
- Yerel bir mutex yalnızca işlem içinde var. İşleminizdeki yerel <xref:System.Threading.Mutex> nesneye başvuru olan herhangi bir iş parçacığı tarafından kullanılabilir. Her <xref:System.Threading.Mutex> nesne ayrı bir yerel mutex olduğunu.  
+ Yerel bir mutex yalnızca işlem içinde bulunur. Bu, işleinizdeki yerel nesneye yönelik bir başvuruya sahip herhangi bir iş parçacığı tarafından kullanılabilir <xref:System.Threading.Mutex> . Her <xref:System.Threading.Mutex> nesne ayrı bir yerel mutex.  
   
-### <a name="access-control-security-for-system-mutexes"></a>Sistem Mutexes için Erişim Kontrol Güvenliği  
- .NET Framework sürüm 2.0, adlandırılmış sistem nesneleri için Windows erişim denetimi güvenliğini sorgulama ve ayarlama olanağı sağlar. Sistem nesneleri genel olduğundan ve bu nedenle kendi kodla kilitlenebilir, çünkü oluşturma andan itibaren sistem mutexes korunması önerilir.  
+### <a name="access-control-security-for-system-mutexes"></a>Sistem zaman uyumu sağlayıcılar için Access Control güvenliği  
+ .NET Framework sürüm 2,0, adlandırılmış sistem nesneleri için Windows erişim denetimi güvenliğini sorgulama ve ayarlama yeteneği sağlar. Sistem nesneleri genel olduğundan ve bu nedenle kendi dışında bir kodla kilitlenebildiğinden, oluşturma aşamasından sistem zaman uyumu koruması önerilir.  
   
- Mutexes için erişim denetimi güvenliği hakkında <xref:System.Security.AccessControl.MutexSecurity> <xref:System.Security.AccessControl.MutexAccessRule> bilgi <xref:System.Security.AccessControl.MutexRights> için, sınıfları, <xref:System.Threading.Mutex.GetAccessControl%2A>numaralandırma, , <xref:System.Threading.Mutex.SetAccessControl%2A>ve <xref:System.Threading.Mutex.OpenExisting%2A> <xref:System.Threading.Mutex> sınıfın <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> yöntemleri ve oluşturucu bakın.  
+ Zaman uyumu sağlayıcılar için erişim denetimi güvenliği hakkında daha fazla bilgi için, bkz <xref:System.Security.AccessControl.MutexSecurity> <xref:System.Security.AccessControl.MutexAccessRule> . ve <xref:System.Security.AccessControl.MutexRights> sınıfı, sabit listesi,,, <xref:System.Threading.Mutex.GetAccessControl%2A> <xref:System.Threading.Mutex.SetAccessControl%2A> ve <xref:System.Threading.Mutex.OpenExisting%2A> yöntemi <xref:System.Threading.Mutex> ve <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> Oluşturucu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

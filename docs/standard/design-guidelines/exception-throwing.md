@@ -7,33 +7,33 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 18927d242c2ed957d2bc9f8b481beeed775a4e4e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6bbc6e8fa11759afbd3a1fb2d785f476a6c178ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741667"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289817"
 ---
 # <a name="exception-throwing"></a>Özel Durum Oluşturma
-Özel durum-bu bölümde açıklanan oluşturma yönergeleri, yürütme hatası anlamı için iyi bir tanım gerektirir. Yürütme hatası, bir üye için tasarlandıkları şeyi (üye adının ne kadar gösterdiği) yapamayacağı zaman oluşur. Örneğin, `OpenFile` yöntemi çağırana bir açık dosya tutamacı döndüremez, bir yürütme hatası olarak kabul edilir.
+Özel durum-bu bölümde açıklanan oluşturma yönergeleri, yürütme hatası anlamı için iyi bir tanım gerektirir. Yürütme hatası, bir üye için tasarlandıkları şeyi (üye adının ne kadar gösterdiği) yapamayacağı zaman oluşur. Örneğin, `OpenFile` Yöntem çağırana bir açık dosya tutamacı döndüremez, bir yürütme hatası olarak kabul edilir.
 
  Çoğu geliştirici, sıfıra bölme veya null başvurular gibi kullanım hataları için özel durumları kullanma konusunda rahat hale gelmiştir. Çerçevede, yürütme hataları da dahil olmak üzere tüm hata koşulları için özel durumlar kullanılır.
 
- ❌ hata kodları döndürmez.
+ ❌Hata kodlarını döndürmeyin.
 
  Özel durumlar, çerçeveler içindeki hataların bildirilme yöntemidir.
 
  özel durumlar oluşturarak rapor yürütme hatalarıyla ✔️.
 
- ✔️, kodunuzun daha fazla yürütme için güvenli olmadığı bir durumla karşılaştığında bir özel durum oluşturmak yerine `System.Environment.FailFast` (.NET Framework 2,0 özelliği) çağırarak işlemi sonlandırmaktan yarar.
+ ✔️, `System.Environment.FailFast` kodunuz daha fazla yürütme için güvenli olmayan bir durumla karşılaştığında bir özel durum oluşturmak yerine (.NET Framework 2,0 özelliği) işlemi SONLANDıRARAK deneyin.
 
- ❌, mümkünse normal denetim akışı için özel durumlar kullanmaz.
+ ❌Mümkünse normal denetim akışı için özel durumlar kullanmayın.
 
  Olası yarış koşullarına sahip sistem arızaları ve işlemler haricinde, çerçeve tasarımcıları, kullanıcıların özel durum oluşturmayan kodlar yazabilmesi için API 'Ler tasarlaması gerekir. Örneğin, kullanıcılar özel durum oluşturmayan bir kod yazabilmesi için bir üyeyi çağırmadan önce önkoşulları denetlemek için bir yol sağlayabilirsiniz.
 
  Başka bir üyenin ön koşulları 'nı denetlemek için kullanılan üye, genellikle test edici olarak adlandırılır ve işi gerçekten yapan üyeye bir doer denir.
 
- Sınayıcı-doer deseninin kabul edilemez bir performans yükü olabilir. Bu gibi durumlarda, bu şekilde adlandırılan TRY-Parse deseninin göz önünde bulundurulmaları gerekir (daha fazla bilgi için bkz. [özel durumlar ve performans](../../../docs/standard/design-guidelines/exceptions-and-performance.md) ).
+ Sınayıcı-doer deseninin kabul edilemez bir performans yükü olabilir. Bu gibi durumlarda, bu şekilde adlandırılan TRY-Parse deseninin göz önünde bulundurulmaları gerekir (daha fazla bilgi için bkz. [özel durumlar ve performans](exceptions-and-performance.md) ).
 
  ✔️ özel durum oluşturma performansı etkilerini göz önünde bulundurun. Saniyede 100 ' den yüksek olan throw ücretleri, çoğu uygulamanın performansını önemli ölçüde etkileyebilir.
 
@@ -41,9 +41,9 @@ ms.locfileid: "76741667"
 
  Sözleşmenin bir parçası olan özel durumlar bir sürümden sonrakine değişmemelidir (yani, özel durum türü değişmemelidir ve yeni özel durumlar eklenmemelidir).
 
- ❌, herhangi bir seçeneğe göre oluşturabilecek veya olmayan ortak üyelere sahip DEĞILDIR.
+ ❌Herhangi bir seçeneğe göre oluşturabilecek veya olmayan ortak üyelere sahip değilsiniz.
 
- ❌, dönüş değeri veya bir `out` parametresi olarak özel durumlar döndüren ortak üyelere sahip DEĞILDIR.
+ ❌Dönüş değeri veya bir parametre olarak özel durumlar döndüren ortak üyelere sahip DEĞILDIR `out` .
 
  Özel durum tabanlı hata raporlama avantajlarının çoğunu yapmak yerine ortak API 'lerden özel durumlar döndürme.
 
@@ -53,11 +53,11 @@ ms.locfileid: "76741667"
 
  Ayrıca, özel durum oluşturan Üyeler satır içine alınır. Throw deyiminizi oluşturucunun içinde taşımak üyenin satır içine eklenmesine izin verebilir.
 
- ❌ özel durum filtresi bloklarından özel durumlar oluşturmaz.
+ ❌Özel durum filtresi bloklarından özel durumlar atamayın.
 
  Özel durum filtresi bir özel durum harekete geçirirse, özel durum CLR tarafından yakalanır ve filtre false değerini döndürür. Bu davranış, yürütülen filtreden ayırt edilemez ve açıkça false döndürüyor ve bu nedenle hata ayıklama çok zor.
 
- ❌ finally bloklarından özel durumları açıkça oluşturmaktan kaçının. Oluşturulan çağırma yöntemlerinin sonucu olarak, örtülü olarak oluşan özel durumlar kabul edilebilir.
+ ❌Finally bloklarından özel durumları açıkça oluşturmaktan kaçının. Oluşturulan çağırma yöntemlerinin sonucu olarak, örtülü olarak oluşan özel durumlar kabul edilebilir.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -65,5 +65,5 @@ ms.locfileid: "76741667"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Özel Durumlar için Tasarım Yönergeleri](exceptions.md)

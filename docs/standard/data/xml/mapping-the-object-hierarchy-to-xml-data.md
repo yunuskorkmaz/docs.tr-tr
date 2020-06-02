@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794396"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289141"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>XML Verilerine Nesne Hiyerarşisi Eşleme
 Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programlama için ağacın düğümlerine erişmek üzere bir nesne hiyerarşiniz vardır. Aşağıdaki örnek, XML içeriğinin düğüm haline geldiğini gösterir.  
@@ -30,10 +30,10 @@ Bir XML belgesi bellekte olduğunda, kavramsal temsil bir ağaç olur. Programla
   
  Giriş, atanan düğüm türü özelliği ile aşağıdaki düğüm ağacı olarak bellekte temsil edilir:  
   
- ![örnek düğüm ağacı](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![örnek düğüm ağacı](media/simple-xml.gif "Simple_XML")  
 Kitap ve başlık düğümü ağaç gösterimi  
   
- `book` Öğesi bir **XmlElement** nesnesi olur, Next öğesi `title`de bir **XmlElement**olur, ancak öğe içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
+ Öğesi `book` bir **XmlElement** nesnesi olur, Next öğesi `title` de bir **XmlElement**olur, ancak öğe içeriği bir **XmlText** nesnesi haline gelir. **XmlElement** yöntemlerine ve özelliklerine bakarak, Yöntemler ve özellikler, **XmlText** nesnesinde bulunan yöntemlerden ve özelliklerden farklıdır. Bu nedenle, XML biçimlendirmesinin hangi düğüm türünde olacağını bilmek, düğüm türü gerçekleştirilebilecek eylemleri belirlediği için çok önemlidir.  
   
  Aşağıdaki örnek, XML verilerinde okur ve düğüm türüne bağlı olarak farklı metin yazar. Aşağıdaki XML veri dosyasını input, **Items. xml**olarak kullanma:  
   
@@ -186,38 +186,38 @@ public class Sample
   
 |Girdi|Çıktı|Düğüm türü testi|  
 |-----------|------------|--------------------|  
-|\<? XML Version = "1.0"? >|\<? XML sürümü = ' 1.0 '? >|XmlNodeType. Xmlbildirimi|  
-|\<Örnek bir XML belgesi olan!---->|\<Örnek bir XML belgesi olan!---->|XmlNodeType. Comment|  
-|\<! DOCTYPE öğeleri [\<! VARLıK numarası "123" >] >|\<! DOCTYPE öğeleri [\<! "123" VARLıK numarası >]|XmlNodeType. DocumentType|  
-|\<Öğe>|\<Öğe>|XmlNodeType. element|  
-|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType. Xmlbildirimi|  
+|\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType. Comment|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">] >|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType. DocumentType|  
+|\<Items>|\<Items>|XmlNodeType. element|  
+|\<Item>|\<Item>|XmlNodeType. element|  
 |Bir varlıkla test edin:&number;|Bir varlıkla test: 123|XmlNodeType. Text|  
-|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
-|\<Öğe>|\<Öğe>|XmNodeType. element|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<Item>|\<Item>|XmNodeType. element|  
 |alt öğe ile test etme|alt öğe ile test etme|XmlNodeType. Text|  
-|\<daha fazla>|\<daha fazla>|XmlNodeType. element|  
+|\<more>|\<more>|XmlNodeType. element|  
 |Çocuk|Çocuk|XmlNodeType. Text|  
-|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
-|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<Item>|\<Item>|XmlNodeType. element|  
 |CDATA bölümüyle test etme|CDATA bölümüyle test etme|XmlTest. Text|  
-|<! [CDATA [\<456>]]\>|<! [CDATA [\<456>]]\>|XmlTest. CDATA|  
+|<! [CDATA [ \<456> ]]\>|<! [CDATA [ \<456> ]]\>|XmlTest. CDATA|  
 |def|def|XmlNodeType. Text|  
-|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
-|\<Öğe>|\<Öğe>|XmlNodeType. element|  
-|Bir Char varlığıyla test: &\#65;|Bir Char varlığı ile test: A|XmlNodeType. Text|  
-|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
-|\<Bu öğede on dört karakter!--.-->|\<--Bu öğedeki on dört karakter.-->|XmlNodeType. Comment|  
-|\<Öğe>|\<Öğe>|XmlNodeType. element|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<Item>|\<Item>|XmlNodeType. element|  
+|Bir Char varlığıyla test: &\# 65;|Bir Char varlığı ile test: A|XmlNodeType. Text|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
+|\<!-- Fourteen chars in this element.-->|\<--Fourteen chars in this element.-->|XmlNodeType. Comment|  
+|\<Item>|\<Item>|XmlNodeType. element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType. Text|  
-|\</İtem>|\</İtem>|XmlNodeType. EndElement|  
+|\</Item>|\</Item>|XmlNodeType. EndElement|  
 |\</Items>|\</Items>|XmlNodeType. EndElement|  
   
  Düğüm türü ne tür eylemlerin geçerli olduğunu ve ne tür özellikleri ayarlayabileceğinizi ve alabildiğinizi kontrol etmek için hangi düğüm türünün atandığını bilmeniz gerekir.  
   
- Veriler DOM 'a **PreserveWhitespace** bayrağıyla yüklendiğinde, boşluk için düğüm oluşturma denetlenir. Daha fazla bilgi için bkz. [Dom yüklenirken beyaz boşluk ve önemli boşluk işleme](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ Veriler DOM 'a **PreserveWhitespace** bayrağıyla yüklendiğinde, boşluk için düğüm oluşturma denetlenir. Daha fazla bilgi için bkz. [Dom yüklenirken beyaz boşluk ve önemli boşluk işleme](white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- DOM 'a yeni düğümler eklemek için bkz. [XML belgesine düğüm ekleme](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). DOM 'dan düğüm kaldırmak için bkz. [BIR XML belgesinden düğümleri, içeriği ve değerleri kaldırma](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). DOM 'daki düğümlerin içeriğini değiştirmek için bkz. [BIR XML belgesindeki düğümleri, içeriği ve değerleri değiştirme](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ DOM 'a yeni düğümler eklemek için bkz. [XML belgesine düğüm ekleme](inserting-nodes-into-an-xml-document.md). DOM 'dan düğüm kaldırmak için bkz. [BIR XML belgesinden düğümleri, içeriği ve değerleri kaldırma](removing-nodes-content-and-values-from-an-xml-document.md). DOM 'daki düğümlerin içeriğini değiştirmek için bkz. [BIR XML belgesindeki düğümleri, içeriği ve değerleri değiştirme](modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

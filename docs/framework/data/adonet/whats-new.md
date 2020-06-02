@@ -1,13 +1,14 @@
 ---
 title: Yenilikler
+description: .NET Framework 4,5 ' deki yeni özellikler hakkında bilgi edinin, SqlClient veri sağlayıcısı ve ADO.NET Entity Framework için yeni özellikler de dahildir.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979764"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286177"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET’teki Yenilikler
 
@@ -17,7 +18,7 @@ Aşağıdaki özellikler .NET Framework 4,5 ' de yeni ADO.NET.
 
 Aşağıdaki özellikler .NET Framework 4,5 ' de SQL Server için .NET Framework Veri Sağlayıcısı yenidir:
 
-- ConnectRetryCount ve ConnectRetryInterval bağlantı dizesi anahtar sözcükleri (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>), boştaki bağlantı dayanıklılığı özelliğini denetlemenizi sağlar.
+- ConnectRetryCount ve ConnectRetryInterval bağlantı dizesi anahtar sözcükleri ( <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> ), boştaki bağlantı dayanıklılığı özelliğini denetlemenizi sağlar.
 
 - SQL Server bir uygulamaya akış desteği, sunucudaki verilerin yapılandırılmamış olduğu senaryoları destekler.  Daha fazla bilgi için bkz. [SqlClient akış desteği](sqlclient-streaming-support.md) .
 
@@ -27,9 +28,9 @@ Aşağıdaki özellikler .NET Framework 4,5 ' de SQL Server için .NET Framework
 
 - SqlClient artık SQL Server yüksek kullanılabilirlik, olağanüstü durum kurtarma özelliği, AlwaysOn desteğine sahiptir. Daha fazla bilgi için bkz. [yüksek kullanılabilirlik Için SqlClient desteği, olağanüstü durum kurtarma](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Bir parola, SQL Server kimlik doğrulaması kullanılırken <xref:System.Security.SecureString> olarak geçirilebilir. Daha fazla bilgi edinmek için bkz. <xref:System.Data.SqlClient.SqlCredential>.
+- Parola, <xref:System.Security.SecureString> SQL Server kimlik doğrulaması kullanılırken bir olarak geçirilebilir. Daha fazla bilgi edinmek için bkz. <xref:System.Data.SqlClient.SqlCredential>.
 
-- `TrustServerCertificate` false olduğunda ve `Encrypt` doğru olduğunda, bir SQL Server SSL sertifikasındaki sunucu adı (veya IP adresi), bağlantı dizesinde belirtilen sunucu adı (veya IP adresi) ile tam olarak eşleşmelidir. Aksi takdirde, bağlantı denemesi başarısız olur. Daha fazla bilgi için <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>`Encrypt` bağlantı seçeneğinin açıklamasına bakın.
+- `TrustServerCertificate`Yanlış olduğunda ve `Encrypt` doğru olduğunda, BIR SQL Server SSL sertifikasındaki sunucu adı (veya IP adresi), bağlantı dizesinde belirtilen sunucu adı (veya IP adresi) ile tam olarak eşleşmelidir. Aksi takdirde, bağlantı denemesi başarısız olur. Daha fazla bilgi için, `Encrypt` bağlantısındaki bağlantı seçeneğinin açıklamasına bakın <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> .
 
   Bu değişiklik, mevcut bir uygulamanın artık bağlanmasına neden olursa, aşağıdakilerden birini kullanarak uygulamayı çözebilirsiniz:
 
@@ -43,9 +44,9 @@ Aşağıdaki özellikler .NET Framework 4,5 ' de SQL Server için .NET Framework
 
 - SqlClient, LocalDB veritabanlarına bağlantıları destekler. Daha fazla bilgi için bkz. [LocalDB Için SqlClient desteği](./sql/sqlclient-support-for-localdb.md).
 
-- `Type System Version=SQL Server 2012;`, `Type System Version` Connection özelliğine geçirilecek yeni bir değerdir. `Type System Version=Latest;` değeri artık kullanımdan kaldırılmıştır ve `Type System Version=SQL Server 2008;`eşdeğer hale getirilir. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- `Type System Version=SQL Server 2012;`, bağlantı özelliğine geçirilecek yeni bir değerdir `Type System Version` . `Type System Version=Latest;`Değer artık kullanılmıyor ve ile eşdeğer hale getirilir `Type System Version=SQL Server 2008;` . Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient, SQL Server 2008 ' de eklenen bir özellik olan seyrek sütunlar için ek destek sağlar. Uygulamanız seyrek sütun kullanan bir tablodaki verilere zaten eriştiğinde performansta bir artış görmeniz gerekir. <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> IsColumnSet sütunu, bir sütunun bir sütun kümesinin üyesi olan seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> bir sütunun seyrek sütun olup olmadığını gösterir (daha fazla bilgi için bkz. [SQL Server şema koleksiyonlarına](sql-server-schema-collections.md) bakın). Seyrek sütunlar hakkında daha fazla bilgi için bkz. [seyrek sütun kullanma](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient, SQL Server 2008 ' de eklenen bir özellik olan seyrek sütunlar için ek destek sağlar. Uygulamanız seyrek sütun kullanan bir tablodaki verilere zaten eriştiğinde performansta bir artış görmeniz gerekir. Icolumnset sütunu, <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> bir sütunun bir sütun kümesinin üyesi olan seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>bir sütunun seyrek sütun olup olmadığını gösterir (daha fazla bilgi için bkz. [SQL Server şeması koleksiyonları](sql-server-schema-collections.md) ). Seyrek sütunlar hakkında daha fazla bilgi için bkz. [seyrek sütun kullanma](/sql/relational-databases/tables/use-sparse-columns).
 
 - Uzamsal veri türlerini içeren Microsoft. SqlServer. Types. dll derlemesi sürüm 10,0 ' den sürüm 11,0 ' den yükseltildi. Bu derlemeye başvuran uygulamalar başarısız olabilir. Daha fazla bilgi için bkz. [veritabanı altyapısı özelliklerine yönelik son değişiklikler](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 

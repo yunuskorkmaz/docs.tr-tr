@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288296"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET uygulamalarını genelleştirmek ve yerelleştirme
 
@@ -30,7 +30,7 @@ Bu adım kültür ve dil açısından nötr olan ve tüm kullanıcılar için ye
 
 Bu adım, bir uygulamanın kod ve tasarımının, kolayca yerelleştirilebilir olmasını sağlamak ve yerelleştirme için olası engelleri tanımlamak üzere gözden geçirilmesi ve uygulamanın yürütülebilir kodunun kaynaklarından ayrı olduğunun doğrulanması ile ilgilidir. Genelleştirme aşaması etkili olduysa, yerelleştirme incelemesi, genelleştirme sırasında yapılan tasarım ve kodlama seçimlerini onaylar. Yerelleştirilebilirlik aşaması, bir uygulamanın kaynak kodunu yerelleştirme aşamasında değiştirmek zorunda kalmamanızı sağlayacak şekilde geri kalan sorunları tanımlayabilir.
 
-[Localization (Yerelleştirme)](localization.md)
+[Yerelleştirme](localization.md)
 
 Bu adım özel kültürler veya bölgeler için bir uygulamanın özelleştirilmesini içerir. Genelleştirme ve yerelleştirme adımları doğru olarak gerçekleştirilmişse, yerelleştirme, öncelikli olarak kullanıcı arabirimini çevirmeyi içerir.
 
@@ -58,7 +58,7 @@ Nötr kültüre ve nötr dile sahip bir uygulama tasarlamayı ve kodlamayı da i
 
 Yerelleştirmede potansiyel bariyerler tanımlamayı da içeren yerelleştirilmiş uygulama oluşturmanın ikinci aşamasını açıklar.
 
-[Localization (Yerelleştirme)](localization.md)
+[Yerelleştirme](localization.md)
 
 Özel bölgeler ve kültürler için bir uygulamanın kullanıcı arabirimini özelleştirmeyi içeren yerelleştirilmiş bir uygulama oluşturmanın son adımını açıklar.
 
@@ -84,10 +84,10 @@ Genelleştirme, yerelleştirme ve dünya çapında kullanılmaya hazır ASP.NET 
 
    ASCII, ANSI, Unicode ve diğer karakter kodlamalarını temsil eden sınıfları içerir.
 
-- [Resgen. exe (kaynak dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen. exe (kaynak dosya Oluşturucu)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    .txt dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını ortak dil çalışma zamanı ikili .resources dosyalarına dönüştürmek için Resgen.exe öğesinin nasıl kullanılacağını açıklar.
 
-- [Winres. exe (Windows Forms Kaynak Düzenleyicisi)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres. exe (Windows Forms Kaynak Düzenleyicisi)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Windows Forms formlarını yerelleştirmek için Winres.exe yürütme dosyasının nasıl kullanılacağını açıklar.

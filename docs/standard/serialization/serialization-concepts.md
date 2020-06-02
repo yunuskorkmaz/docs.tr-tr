@@ -3,12 +3,12 @@ title: Serileştirme kavramları
 description: Serileştirme bir nesnenin durumunu yakalamak veya bir uygulama etki alanından diğerine bir nesne değere göre göndermek için kullanılabilir.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378735"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291324"
 ---
 # <a name="serialization-concepts"></a>Serileştirme kavramları
 Neden serileştirme kullanmak istiyor? İki en önemli bir tam kopya daha sonraki bir aşamada yeniden oluşturulabilir için bir depolama ortamına bir nesne durumunu sürdürülmesi için ve nesne değerine göre bir uygulama etki alanından diğerine gönderilecek nedenleridir. Örneğin, serileştirme ASP.NET oturum durumu Kaydet ve Pano'ya Windows Forms nesneleri kopyalamak için kullanılır. Bu aynı zamanda nesneleri değerine göre bir uygulama etki alanından diğerine geçmesine uzaktan iletişim tarafından kullanılır.
@@ -18,7 +18,7 @@ Neden serileştirme kullanmak istiyor? İki en önemli bir tam kopya daha sonrak
 ## <a name="persistent-storage"></a>Kalıcı depolama
 Genellikle bir nesnenin alanlarının değerini diske depolamak ve daha sonra bu verileri almak için gereklidir. Bu yaklaşım, serileştirme 'e bağlı kalmadan elde etmek kolaydır, ancak bir dizi nesnenin hiyerarşisini izlemeniz gerektiğinde giderek daha karmaşık hale gelir. Nesneleri binlerce içeren bir büyük iş uygulaması yazma ve Kaydet ve alanlar ve özellikler için ve her nesne için diskten geri yüklemek için kod yazmadan düşünün. Serileştirme bu amaç elde etmek için kullanışlı bir mekanizma sağlar.
 
-Ortak dil çalışma zamanı, nesnelerin bellekte nasıl depolandığını yönetir ve [yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)kullanarak otomatikleştirilmiş bir serileştirme mekanizması sağlar. Bir nesne seri olduğunda, sınıf, derleme ve tüm veri üyeleri sınıf örneği adı için depolama yazılır. Üye değişkenleri genellikle depolama başvurularının diğer örnekleri nesneleri. Sınıf serileştirildiğinde, serileştirme altyapısı, aynı nesnenin birden çok kez serileştirilmemesini sağlamak için başvurulan nesneleri izler, zaten serileştirilir. .NET Framework ile birlikte sunulan serileştirme mimarisi, nesne grafiklerini ve döngüsel başvuruları otomatik olarak işler. Nesne grafiklerine uygulanan tek gereksinim, serileştirilmiş nesne tarafından başvurulan tüm nesnelerin aynı zamanda `Serializable` (daha fazla bilgi için bkz. [temel serileştirme](basic-serialization.md)) de işaretlenmiş olması olabilir. Bu yapılmadığı, işaretsiz nesneyi serileştirmek seri hale getirici girişiminde bulunduğunda bir özel durum.
+Ortak dil çalışma zamanı, nesnelerin bellekte nasıl depolandığını yönetir ve [yansıma](../../framework/reflection-and-codedom/reflection.md)kullanarak otomatikleştirilmiş bir serileştirme mekanizması sağlar. Bir nesne seri olduğunda, sınıf, derleme ve tüm veri üyeleri sınıf örneği adı için depolama yazılır. Üye değişkenleri genellikle depolama başvurularının diğer örnekleri nesneleri. Sınıf serileştirildiğinde, serileştirme altyapısı, aynı nesnenin birden çok kez serileştirilmemesini sağlamak için başvurulan nesneleri izler, zaten serileştirilir. .NET Framework ile birlikte sunulan serileştirme mimarisi, nesne grafiklerini ve döngüsel başvuruları otomatik olarak işler. Nesne grafiklerine uygulanan tek gereksinim, serileştirilmiş nesne tarafından başvurulan tüm nesnelerin aynı zamanda `Serializable` (daha fazla bilgi için bkz. [temel serileştirme](basic-serialization.md)) de işaretlenmiş olması olabilir. Bu yapılmadığı, işaretsiz nesneyi serileştirmek seri hale getirici girişiminde bulunduğunda bir özel durum.
 
 Serileştirilmiş sınıf seri durumdan çıkarılmışsa, sınıf yeniden oluşturulur ve tüm veri üyelerinin değerleri otomatik olarak geri yüklenir.
 
@@ -28,11 +28,11 @@ Nesneleri oluşturulan burada yalnızca uygulama etki alanında geçerli değil.
 Bir nesne öğesinden `MarshalByRefObject` türetilirse, nesne başvurusu nesnenin kendisi yerine bir uygulama etki alanından diğerine geçirilir. Ayrıca, ' den türetilen bir nesneyi de işaretleyebilirsiniz `MarshalByRefObject` `Serializable` . Bu nesne uzaktan iletişim ile kullanıldığında, serileştirme işleminden sorumlu olan ve bir yedek seçiciyle () önceden yapılandırılmış olan biçimlendirici, `SurrogateSelector` serileştirme işleminin denetimini alır ve `MarshalByRefObject` bir ara sunucu ile türetilmiş tüm nesneleri değiştirir. Yerine, `SurrogateSelector` serileştirme mimarisi, [serileştirme işlemindeki adımlarda](steps-in-the-serialization-process.md)açıklanan standart serileştirme kurallarını izler.  
 
 ## <a name="related-sections"></a>İlgili bölümler  
- [İkili serileştirme](../../../docs/standard/serialization/binary-serialization.md)  
+ [İkili serileştirme](binary-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği ikili serileştirme mekanizması açıklanmaktadır.  
   
  [.NET uzaktan Iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Çeşitli iletişimleri .NET Framework için kullanılabilecek yöntemleri Uzaktan iletişimler açıklar.  
   
- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [XML ve SOAP serileştirme](xml-and-soap-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği XML ve SOAP serileştirme mekanizması açıklanmaktadır.

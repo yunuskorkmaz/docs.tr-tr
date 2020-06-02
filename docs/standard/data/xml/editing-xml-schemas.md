@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794591"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292065"
 ---
 # <a name="editing-xml-schemas"></a>XML Şemalarını Düzenleme
 
@@ -22,25 +22,25 @@ SOM 'a yüklenen bir şemayı düzenlemenin ilk adımı şemanın gezedir. Bir �
 
 ## <a name="editing-an-xml-schema"></a>XML şeması düzenleniyor
 
-Bu bölümde, iki kod örneği sağlanır, ikisi de [derleme XML şemaları](../../../../docs/standard/data/xml/building-xml-schemas.md) içinde oluşturulan müşteri şemasını düzenler konu. İlk `PhoneNumber` kod örneği, `Customer` öğesine yeni bir öğesi ekler ve ikinci kod örneği `Title` `FirstName` öğeye yeni bir öznitelik ekler. İlk örnek ayrıca, ikinci kod örneği şema öncesi derleme <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> koleksiyonunu kullandığında, şema sonrası-derleme koleksiyonunu müşteri şemasına geçme yöntemi olarak kullanır.
+Bu bölümde, iki kod örneği sağlanır, ikisi de [derleme XML şemaları](building-xml-schemas.md) içinde oluşturulan müşteri şemasını düzenler konu. İlk kod örneği, öğesine yeni bir `PhoneNumber` öğesi ekler `Customer` ve ikinci kod örneği öğeye yeni bir `Title` öznitelik ekler `FirstName` . İlk örnek ayrıca, <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> İkinci kod örneği şema öncesi derleme koleksiyonunu kullandığında, şema sonrası-derleme koleksiyonunu müşteri şemasına geçme yöntemi olarak kullanır <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> .
 
 ### <a name="phonenumber-element-example"></a>PhoneNumber öğesi örneği
 
-Bu ilk kod örneği, müşteri şemasının `PhoneNumber` `Customer` öğesine yeni bir öğesi ekler. Kod örneği aşağıdaki adımlarda müşteri şemasını düzenler.
+Bu ilk kod örneği, `PhoneNumber` Müşteri şemasının öğesine yeni bir öğesi ekler `Customer` . Kod örneği aşağıdaki adımlarda müşteri şemasını düzenler.
 
-1. Müşteri şemasını yeni <xref:System.Xml.Schema.XmlSchemaSet> bir nesneye ekler ve bunu derler. Şemayı okurken veya derlerken karşılaşılan tüm şema doğrulama uyarıları ve hataları <xref:System.Xml.Schema.ValidationEventHandler> temsilci tarafından işlenir.
+1. Müşteri şemasını yeni bir <xref:System.Xml.Schema.XmlSchemaSet> nesneye ekler ve bunu derler. Şemayı okurken veya derlerken karşılaşılan tüm şema doğrulama uyarıları ve hataları temsilci tarafından işlenir <xref:System.Xml.Schema.ValidationEventHandler> .
 
-2. Özelliği üzerinde <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Schema.XmlSchemaSet> yineleerek derlenmiş nesneyi öğesinden alır. <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Şema derlendiğinden, Schema-Compilation-Infoset (PSCı) özelliklerine erişilebilir.
+2. <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Schema.XmlSchemaSet> Özelliği üzerinde yineleerek derlenmiş nesneyi öğesinden alır <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> . Şema derlendiğinden, Schema-Compilation-Infoset (PSCı) özelliklerine erişilebilir.
 
-3. , `PhoneNumber` <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> `PhoneNumber` Ve sınıflarını kullanarak `xs:string` basit tür kısıtlaması olan sınıfını kullanarak öğesi oluşturur, kısıtlamanın özelliğine bir model modeli ekler ve kısıtlama, basit türdeki ve basit tür özelliğine öğesi öğesine <xref:System.Xml.Schema.XmlSchemaSimpleType> eklenir.
+3. , `PhoneNumber` <xref:System.Xml.Schema.XmlSchemaElement> `xs:string` Ve sınıflarını kullanarak basit tür kısıtlaması olan sınıfını kullanarak öğesi oluşturur <xref:System.Xml.Schema.XmlSchemaSimpleType> <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> , kısıtlamanın özelliğine bir model modeli ekler <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> ve kısıtlama, <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> basit türdeki ve basit tür özelliğine öğesi öğesine eklenir <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> `PhoneNumber` .
 
-4. Şema sonrası derleme <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonu koleksiyonundaki her birinin üzerinde dolaşır.
+4. <xref:System.Xml.Schema.XmlSchemaElement> <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> Şema sonrası derleme koleksiyonu koleksiyonundaki her birinin üzerinde dolaşır <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> .
 
-5. <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> Öğesi ise `"Customer"`, sınıfını kullanarak ve karmaşık türün `Customer` <xref:System.Xml.Schema.XmlSchemaComplexType> <xref:System.Xml.Schema.XmlSchemaSequence> dizi partiküyi kullanarak öğenin karmaşık türünü alır.
+5. Öğesi ise, sınıfını kullanarak <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> `"Customer"` `Customer` <xref:System.Xml.Schema.XmlSchemaComplexType> ve karmaşık türün dizi partiküyi kullanarak öğenin karmaşık türünü alır <xref:System.Xml.Schema.XmlSchemaSequence> .
 
-6. Yeni `PhoneNumber` öğeyi, sıranın ön şema derlemesini `FirstName` `LastName` <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> kullanarak var olan ve öğeleri içeren diziye ekler.
+6. Yeni öğeyi, `PhoneNumber` `FirstName` `LastName` sıranın ön şema derlemesini kullanarak var olan ve öğeleri içeren diziye ekler <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> .
 
-7. Son olarak, <xref:System.Xml.Schema.XmlSchema> değiştirilen nesneyi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> sınıfının ve yöntemlerini kullanarak yeniden işler ve derler ve konsola yazar.
+7. Son olarak, değiştirilen <xref:System.Xml.Schema.XmlSchema> nesneyi sınıfının ve yöntemlerini kullanarak yeniden işler ve derler ve <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> konsola yazar.
 
 Aşağıda kodun tamamı verilmiştir.
 
@@ -48,7 +48,7 @@ Aşağıda kodun tamamı verilmiştir.
 [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
 [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]
 
-Aşağıda, [XML şemaları oluşturma](../../../../docs/standard/data/xml/building-xml-schemas.md) konusunda oluşturulan değiştirilmiş müşteri şeması yer almaktadır.
+Aşağıda, [XML şemaları oluşturma](building-xml-schemas.md) konusunda oluşturulan değiştirilmiş müşteri şeması yer almaktadır.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -73,38 +73,38 @@ Aşağıda, [XML şemaları oluşturma](../../../../docs/standard/data/xml/build
 
 ### <a name="title-attribute-example"></a>Title özniteliği örneği
 
-Bu ikinci kod örneği, müşteri şemasının `Title` `FirstName` öğesine yeni bir öznitelik ekler. İlk kod örneğinde, `FirstName` öğesinin türü. `xs:string` `FirstName` Öğesinin dize içeriğiyle birlikte bir özniteliğe sahip olması için, türü basit bir içerik uzantısı içerik modeli olan karmaşık bir türe değiştirilmelidir.
+Bu ikinci kod örneği, `Title` Müşteri şemasının öğesine yeni bir öznitelik ekler `FirstName` . İlk kod örneğinde, `FirstName` öğesinin türü `xs:string` . `FirstName`Öğesinin dize içeriğiyle birlikte bir özniteliğe sahip olması için, türü basit bir içerik uzantısı içerik modeli olan karmaşık bir türe değiştirilmelidir.
 
 Kod örneği aşağıdaki adımlarda müşteri şemasını düzenler.
 
-1. Müşteri şemasını yeni <xref:System.Xml.Schema.XmlSchemaSet> bir nesneye ekler ve bunu derler. Şemayı okurken veya derlerken karşılaşılan tüm şema doğrulama uyarıları ve hataları <xref:System.Xml.Schema.ValidationEventHandler> temsilci tarafından işlenir.
+1. Müşteri şemasını yeni bir <xref:System.Xml.Schema.XmlSchemaSet> nesneye ekler ve bunu derler. Şemayı okurken veya derlerken karşılaşılan tüm şema doğrulama uyarıları ve hataları temsilci tarafından işlenir <xref:System.Xml.Schema.ValidationEventHandler> .
 
-2. Özelliği üzerinde <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Schema.XmlSchemaSet> yineleerek derlenmiş nesneyi öğesinden alır. <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Şema derlendiğinden, Schema-Compilation-Infoset (PSCı) özelliklerine erişilebilir.
+2. <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Schema.XmlSchemaSet> Özelliği üzerinde yineleerek derlenmiş nesneyi öğesinden alır <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> . Şema derlendiğinden, Schema-Compilation-Infoset (PSCı) özelliklerine erişilebilir.
 
-3. <xref:System.Xml.Schema.XmlSchemaComplexType> Sınıfını kullanarak `FirstName` öğesi için yeni bir karmaşık tür oluşturur.
+3. Sınıfını kullanarak öğesi için yeni bir karmaşık tür oluşturur `FirstName` <xref:System.Xml.Schema.XmlSchemaComplexType> .
 
-4. Ve sınıflarını kullanarak temel türü `xs:string`ile yeni bir basit içerik uzantısı oluşturur. <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> <xref:System.Xml.Schema.XmlSchemaSimpleContent>
+4. `xs:string`Ve sınıflarını kullanarak temel türü ile yeni bir basit içerik uzantısı oluşturur <xref:System.Xml.Schema.XmlSchemaSimpleContent> <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension> .
 
-5. , ' A `Title` <xref:System.Xml.Schema.XmlSchemaAttribute> <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> sahip sınıfını kullanarak yeni özniteliğini oluşturur `xs:string` ve özniteliğini basit içerik uzantısına ekler.
+5. , `Title` <xref:System.Xml.Schema.XmlSchemaAttribute> ' A sahip sınıfını kullanarak yeni özniteliğini oluşturur <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> `xs:string` ve özniteliğini basit içerik uzantısına ekler.
 
 6. Basit içeriğin içerik modelini basit içerik uzantısına ve karmaşık türün içerik modelini basit içeriğe ayarlar.
 
 7. Yeni karmaşık türü, şema öncesi derleme <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> koleksiyonuna ekler.
 
-8. Şema öncesi derleme <xref:System.Xml.Schema.XmlSchemaObject> <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> koleksiyonundaki her birinin üzerinde yinelenir.
+8. <xref:System.Xml.Schema.XmlSchemaObject>Şema öncesi derleme koleksiyonundaki her birinin üzerinde yinelenir <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> .
 
 > [!NOTE]
-> `FirstName` Öğe şemada genel bir öğe olmadığından, <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> veya <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonlarda kullanılamaz. Kod örneği, öğesini önce `FirstName` `Customer` öğesini bularak konumlandırır.
+> `FirstName`Öğe şemada genel bir öğe olmadığından, <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> veya <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonlarda kullanılamaz. Kod örneği, öğesini `FirstName` önce öğesini bularak konumlandırır `Customer` .
 >
-> İlk kod örneği, şema sonrası-derleme <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonu kullanılarak şemanın yerine geçen. Bu örnekte, şemanın çapraz geçişini yapmak için şema öncesi <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> derleme koleksiyonu kullanılır. Her iki koleksiyon de şemadaki genel öğelere erişim sağlarken, şemadaki tüm genel öğeleri yinelemek ve <xref:System.Xml.Schema.XmlSchema.Items%2A> herhangi bir PSCI özelliği olmaması gerektiğinden, koleksiyonda yineleme daha fazla zaman alır. Psci koleksiyonları (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType>vb.), genel öğelerine, özniteliklerine ve türlerine ve bunların pSCI özelliklerine doğrudan erişim sağlar.
+> İlk kod örneği, şema sonrası-derleme koleksiyonu kullanılarak şemanın yerine geçen <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> . Bu örnekte, <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> şemanın çapraz geçişini yapmak için şema öncesi derleme koleksiyonu kullanılır. Her iki koleksiyon de şemadaki genel öğelere erişim sağlarken, <xref:System.Xml.Schema.XmlSchema.Items%2A> şemadaki tüm genel öğeleri yinelemek ve herhangi BIR PSCI özelliği olmaması gerektiğinden, koleksiyonda yineleme daha fazla zaman alır. Psci koleksiyonları ( <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> , <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType> , vb <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> .), genel öğelerine, özniteliklerine ve türlerine ve bunların pSCI özelliklerine doğrudan erişim sağlar.
 
-1. <xref:System.Xml.Schema.XmlSchemaObject> Öğesi bir <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> öğesi ise, sınıfını kullanarak `"Customer"` `Customer` <xref:System.Xml.Schema.XmlSchemaComplexType> sınıfı ve karmaşık türün <xref:System.Xml.Schema.XmlSchemaSequence> dizi partiküyi kullanarak öğenin karmaşık türünü alır.
+1. <xref:System.Xml.Schema.XmlSchemaObject>Öğesi bir öğesi ise, sınıfını kullanarak <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> `"Customer"` `Customer` <xref:System.Xml.Schema.XmlSchemaComplexType> sınıfı ve karmaşık türün dizi partiküyi kullanarak öğenin karmaşık türünü alır <xref:System.Xml.Schema.XmlSchemaSequence> .
 
-2. Şema öncesi derleme <xref:System.Xml.Schema.XmlSchemaParticle> <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> koleksiyonundaki her birinin üzerinde yinelenir.
+2. <xref:System.Xml.Schema.XmlSchemaParticle>Şema öncesi derleme koleksiyonundaki her birinin üzerinde yinelenir <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> .
 
-3. <xref:System.Xml.Schema.XmlSchemaParticle> <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> Öğesi ise, kim `"FirstName"`ise, <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> `FirstName` öğesinin öğesini yeni `FirstName` karmaşık türe ayarlar.
+3. Öğesi ise <xref:System.Xml.Schema.XmlSchemaParticle> , kim ise, <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> `"FirstName"` <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> `FirstName` öğesinin öğesini yeni `FirstName` karmaşık türe ayarlar.
 
-4. Son olarak, <xref:System.Xml.Schema.XmlSchema> değiştirilen nesneyi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> sınıfının ve yöntemlerini kullanarak yeniden işler ve derler ve konsola yazar.
+4. Son olarak, değiştirilen <xref:System.Xml.Schema.XmlSchema> nesneyi sınıfının ve yöntemlerini kullanarak yeniden işler ve derler ve <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> konsola yazar.
 
 Aşağıda kodun tamamı verilmiştir.
 
@@ -112,7 +112,7 @@ Aşağıda kodun tamamı verilmiştir.
 [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
 [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]
 
-Aşağıda, [XML şemaları oluşturma](../../../../docs/standard/data/xml/building-xml-schemas.md) konusunda oluşturulan değiştirilmiş müşteri şeması yer almaktadır.
+Aşağıda, [XML şemaları oluşturma](building-xml-schemas.md) konusunda oluşturulan değiştirilmiş müşteri şeması yer almaktadır.
 
 ```xml
 <?xml version="1.0" encoding=" utf-8"?>
@@ -137,10 +137,10 @@ Aşağıda, [XML şemaları oluşturma](../../../../docs/standard/data/xml/build
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML Şemaları Okuma ve Yazma](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML Şema Nesne Modeline (SOM) Genel Bakış](xml-schema-object-model-overview.md)
+- [XML Şemaları Okuma ve Yazma](reading-and-writing-xml-schemas.md)
+- [XML Şemaları Derleme](building-xml-schemas.md)
+- [XML Şemalarını Çapraz Geçirme](traversing-xml-schemas.md)
+- [XML Şemalarını Dahil Etme veya İçeri Aktarma](including-or-importing-xml-schemas.md)
+- [Şema Derleme için XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [Şema Derleme Sonrası Bilgi Kümesi](post-schema-compilation-infoset.md)

@@ -1,16 +1,17 @@
 ---
 title: Tablo Değerli Parametreler
+description: Tablo değerli parametreleri kullanarak bir istemci uygulamasından birden çok veri satırını SQL Server nasıl sıraleyeceğinizi öğrenin.
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202169"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286203"
 ---
 # <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
 Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satırını, verilerin işlenmesine yönelik birden çok gidiş dönüş veya özel sunucu tarafı mantığı gerekmeden SQL Server için kolay bir yol sağlar. Bir istemci uygulamasındaki veri satırlarını kapsüllemek ve verileri sunucuya tek parametreli bir komutta göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları, daha sonra Transact-SQL kullanılarak üzerinde çalışabilecek bir tablo değişkeninde depolanır.  
@@ -22,7 +23,7 @@ Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satır
   
  Tablo değerli parametreler hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Açıklama|  
+|Kaynak|Description|  
 |--------------|-----------------|  
 |[Tablo değerli parametreleri kullanın (veritabanı altyapısı)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Tablo değerli parametrelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
 |[Kullanıcı tanımlı tablo türleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Tablo değerli parametreleri bildirmek için kullanılan Kullanıcı tanımlı tablo türlerini açıklar.|  

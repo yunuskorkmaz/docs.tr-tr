@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: dcd5fa2777d2f1e351179570806a95eb835ad843
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83376001"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289661"
 ---
 # <a name="custom-serialization"></a>Özel serileştirme
 Özel serileştirme, bir türün serileştirme ve serisini kaldırma işlemidir. Serileştirme ' i denetleyerek, bir türün sürümleri arasında serileştirme ve seri durumdan çıkarma özelliği olan serileştirme uyumluluğunu sağlamak mümkündür. Örneğin, bir tür ilk sürümü olabilir yalnızca iki alan. Sonraki sürümünde bir tür, pek çok daha fazla alan eklenir. Henüz bir uygulamanın ikinci sürümü seri hale getirmek ve her iki türü seri durumdan olması gerekir. Aşağıdaki bölümlerde serileştirme denetiminin nasıl yapılacağı açıklanır.
@@ -184,4 +184,4 @@ End Class
 
 - [İkili serileştirme](binary-serialization.md)
 - [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
-- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)
+- [Güvenlik ve Serileştirme](../../framework/misc/security-and-serialization.md)

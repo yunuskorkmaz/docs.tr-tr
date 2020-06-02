@@ -10,21 +10,21 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378456"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276705"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serileştirmeyi Denetleyen Öznitelikler
-Sınıfının bir örneğini seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için aşağıdaki tablodaki öznitelikleri sınıflar ve sınıf üyelerine uygulayabilirsiniz <xref:System.Xml.Serialization.XmlSerializer> . Bu özniteliklerin XML serileştirmesini denetlemesini anlamak için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
+Sınıfının bir örneğini seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için aşağıdaki tablodaki öznitelikleri sınıflar ve sınıf üyelerine uygulayabilirsiniz <xref:System.Xml.Serialization.XmlSerializer> . Bu özniteliklerin XML serileştirmesini denetlemesini anlamak için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](controlling-xml-serialization-using-attributes.md).  
   
- Bu öznitelikler, bir XML Web hizmeti tarafından oluşturulan SOAP iletilerini denetlemek için de kullanılabilir. Bu öznitelikleri bir XML Web Hizmetleri yöntemine uygulama hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md).  
+ Bu öznitelikler, bir XML Web hizmeti tarafından oluşturulan SOAP iletilerini denetlemek için de kullanılabilir. Bu öznitelikleri bir XML Web Hizmetleri yöntemine uygulama hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](xml-serialization-with-xml-web-services.md).  
   
- Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikler](../../../docs/standard/attributes/index.md).  
+ Öznitelikler hakkında daha fazla bilgi için bkz. [öznitelikler](../attributes/index.md).  
   
-|Öznitelik|Uygulandığı öğe:|Belirler|  
+|Öznitelik|Şunlara uygulanır|Belirler|  
 |---------------|----------------|---------------|  
 |<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|Ortak alan, özelliği, parameTRe veya bir dizi döndürür dönüş değeri <xref:System.Xml.XmlAttribute> nesneleri.|Seri durumdan çıkarılırken, dizi, <xref:System.Xml.XmlAttribute> şemaya bilinmeyen tüm XML özniteliklerini temsil eden nesneleriyle doldurulur.|  
 |<xref:System.Xml.Serialization.XmlAnyElementAttribute>|Ortak alan, özelliği, parameTRe veya bir dizi döndürür dönüş değeri <xref:System.Xml.XmlElement> nesneleri.|İşlenirken, dizi renkle doldurulup <xref:System.Xml.XmlElement> şemaya bilinmeyen tüm XML öğeleri temsil eden nesneleri.|  
@@ -42,13 +42,13 @@ Sınıfının bir örneğini seri hale getirmenin veya seri hale getirmenin yolu
   
  Ad alanında bulunan bu özniteliklerin yanı sıra <xref:System.Xml.Serialization> , <xref:System.ComponentModel.DefaultValueAttribute> bir alana özniteliği de uygulayabilirsiniz. **DefaultValueAttribute** değeri belirtilmemişse, üyeye otomatik olarak atanacak değeri ayarlar.  
   
- Kodlanmış SOAP XML serileştirmesini denetlemek için bkz. [KODLANMıŞ SOAP serileştirmesini denetleyen öznitelikler](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+ Kodlanmış SOAP XML serileştirmesini denetlemek için bkz. [KODLANMıŞ SOAP serileştirmesini denetleyen öznitelikler](attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Nasıl yapılır: Nesne Serileştirme](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Öznitelikleri Kullanarak XML Serileştirmeyi Denetleme](controlling-xml-serialization-using-attributes.md)
+- [Nasıl yapılır: XML Akışı için Alternatif Öğe Adı Belirtme](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Nasıl yapılır: Nesne Serileştirme](how-to-serialize-an-object.md)
+- [Nasıl yapılır: Nesneyi Seri Durumdan Çıkarma](how-to-deserialize-an-object.md)

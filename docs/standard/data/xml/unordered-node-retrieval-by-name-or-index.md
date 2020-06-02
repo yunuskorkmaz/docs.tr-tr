@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6847f3c5d233b720f8f4c41cfc52ac663e5e810f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155743"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288634"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Ada veya Dizine Göre Sırasız Düğüm Alma
 **XmlNamedNodeMap** , world WIDE Web KONSORSIYUMU (W3C) belirtiminde NamedNodeMap olarak tanımlanır ve düğümler adına veya dizinine göre başvuru yeteneğine sahip sıralanmamış bir düğüm kümesini işlemek için gereklidir. **XmlNamedNodeMap** 'e erişiminizin tek yolu, bir **XmlNamedNodeMap** bir yöntem veya özellik aracılığıyla döndürüldüğünde olur. **XmlNamedNodeMap**döndüren üç yöntem veya özellik vardır:  
@@ -22,7 +22,7 @@ ms.locfileid: "78155743"
   
 - XmlDocumentType. gösterimler  
   
- Örneğin, **XmlDocumentType. Entities** özelliği, belge türü bildiriminde belirtilen **XmlEntity** düğümlerinin koleksiyonunu alır. Bu koleksiyon bir **XmlNamedNodeMap**olarak döndürülür ve koleksiyon içinde **Count** özelliğinin kullanımıyla ve varlık bilgilerini görüntüleyecek şekilde yineleyebilirsiniz. Bir **XmlNamedNodeMap**aracılığıyla yineleme örneği için bkz <xref:System.Xml.XmlDocumentType.Entities%2A>..  
+ Örneğin, **XmlDocumentType. Entities** özelliği, belge türü bildiriminde belirtilen **XmlEntity** düğümlerinin koleksiyonunu alır. Bu koleksiyon bir **XmlNamedNodeMap**olarak döndürülür ve koleksiyon içinde **Count** özelliğinin kullanımıyla ve varlık bilgilerini görüntüleyecek şekilde yineleyebilirsiniz. Bir **XmlNamedNodeMap**aracılığıyla yineleme örneği için bkz <xref:System.Xml.XmlDocumentType.Entities%2A> ..  
   
  **XmlAttributeCollection** , **XmlNamedNodeMap** 'ten türetilir ve yalnızca öznitelikler değiştirilebilir, ancak gösterimler ve varlıklar salt okunurdur. Öznitelikler için **XmlNamedNodeMap** ' i kullanarak, XML adlarına göre bu özniteliklerin düğümlerini alabilirsiniz. Bu, bir öğe düğümündeki özniteliklerin koleksiyonunu işlemek için kolay bir yöntem sağlar. Bu, doğrudan **XmlNodeList**ile oluşturulabilir, bu da **IEnumerable** arabirimini de uygular, ancak bir dize yerine dizin erişimcisi vardır. **Removenamedidıtem** ve **setnamedidıtem** yöntemleri yalnızca bir **XmlAttributeCollection**ile kullanılır. Öznitelik koleksiyonunu ekleme veya kaldırma, **AttributeCollection** veya **XmlNamedNodeMap** uygulamasının kullanılmasına bakılmaksızın, öğesindeki öznitelik koleksiyonunu değiştirir. Aşağıdaki kod örneği, bir özniteliğin nasıl taşınacağını ve yeni bir özniteliğin nasıl oluşturulacağını gösterir.  
   
@@ -119,4 +119,4 @@ class test {
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

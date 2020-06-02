@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 7dab759ba48104530fc41e46f6f2bba18d6c4456
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741662"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289804"
 ---
 # <a name="events-and-callbacks"></a>Etkinlikler ve Geri Aramalar
 Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı koduna geri çağırmasını sağlayan genişletilebilirlik noktalarıdır. Bu temsilciler genellikle bir yöntemin parametresi aracılığıyla çerçeveye geçirilir.
 
- Olaylar, temsilciyi (bir olay işleyicisi) sağlamak için uygun ve tutarlı sözdizimini destekleyen, geri çağırmaların özel bir durumdur. Ayrıca, Visual Studio 'nun bildirim tamamlama ve tasarımcıları, olay tabanlı API 'Leri kullanma konusunda yardım sağlar. (Bkz. [olay tasarımı](../../../docs/standard/design-guidelines/event.md).)
+ Olaylar, temsilciyi (bir olay işleyicisi) sağlamak için uygun ve tutarlı sözdizimini destekleyen, geri çağırmaların özel bir durumdur. Ayrıca, Visual Studio 'nun bildirim tamamlama ve tasarımcıları, olay tabanlı API 'Leri kullanma konusunda yardım sağlar. (Bkz. [olay tasarımı](event.md).)
 
  ✔️, kullanıcıların çerçeve tarafından yürütülmesi için özel kod sağlamasına izin vermek için geri çağırmaları kullanmayı düşünün.
 
@@ -26,15 +26,15 @@ Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı kod
 
  ✔️, daha geniş bir geliştirici yelpazdakilere daha tanıdık ve Visual Studio deyimin tamamlanmasına tümleştirildiği için düz geri çağırmalar üzerinde olayları tercih etme.
 
- ❌, performans duyarlı API 'lerde geri çağırmaları kullanmaktan kaçının.
+ ❌Performans duyarlı API 'lerde geri çağırmaları kullanmaktan kaçının.
 
- ✔️, geri çağırmalar ile API 'Leri tanımlarken özel temsilciler yerine yeni `Func<...>`, `Action<...>`veya `Expression<...>` türlerini kullanır.
+ ✔️, `Func<...>` `Action<...>` `Expression<...>` geri çağırmalar ile API 'leri tanımlarken özel temsilciler yerine yeni, veya türlerini kullanın.
 
- `Func<...>` ve `Action<...>` genel temsilcileri temsil eder. `Expression<...>`, derlenebilecek ve sonra çalışma zamanında çağrılabilen ancak aynı zamanda seri hale getirilebilir ve uzak işlemlere geçirilebilecek işlev tanımlarını temsil eder.
+ `Func<...>`ve `Action<...>` genel temsilcileri temsil eder. `Expression<...>`derlenebilecek ve daha sonra çalışma zamanında çağrılan ve aynı zamanda seri hale getirilebilir ve uzak işlemlere geçirilebilecek işlev tanımlarını temsil eder.
 
- ✔️, `Func<...>` ve `Action<...>` temsilcileri kullanmak yerine `Expression<...>`kullanmanın performansını ölçmenize ve anlayamalıdır.
+ ✔️ `Expression<...>` , ve temsilcileri yerine kullanmanın performans etkilerine ilişkin etkilerini anlayın `Func<...>` `Action<...>` .
 
- `Expression<...>` türler çoğu durumda `Func<...>` ve `Action<...>` temsilcilerle mantıksal olarak eşdeğerdir. Aralarındaki temel fark, temsilcilerin yerel işlem senaryolarında kullanılması amaçlanmasıdır; ifadeler, uzak bir işlem veya makinedeki ifadeyi değerlendirmek yararlı ve mümkün olduğu durumlar için tasarlanmıştır.
+ `Expression<...>`türler çoğu durumda mantıksal olarak eşit `Func<...>` ve `Action<...>` Temsilcilerde bulunur. Aralarındaki temel fark, temsilcilerin yerel işlem senaryolarında kullanılması amaçlanmasıdır; ifadeler, uzak bir işlem veya makinedeki ifadeyi değerlendirmek yararlı ve mümkün olduğu durumlar için tasarlanmıştır.
 
  ✔️, bir temsilciyi çağırarak, rastgele kod yürüttüğünü ve güvenlik, doğruluk ve uyumluluk repercusumu olduğunu anlamış olursunuz.
 
@@ -44,5 +44,5 @@ Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı kod
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)
+- [Çerçeve tasarım yönergeleri](index.md)

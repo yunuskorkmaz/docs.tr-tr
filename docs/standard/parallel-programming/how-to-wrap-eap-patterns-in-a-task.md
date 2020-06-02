@@ -8,15 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eab94ac91be0c755a1da74e2f2220e3b76cc4249
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106817"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290791"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Nasıl yapılır: Bir Görevde EAP Desenlerini Sarmalama
-Aşağıdaki örnekte, olay tabanlı Eşzamanlı Desen (EAP) işlemlerinin rasgele bir sırasını bir <xref:System.Threading.Tasks.TaskCompletionSource%601>görev olarak bir görev olarak nasıl gösterin. Örnek, nesnelerüzerinde yerleşik <xref:System.Threading.CancellationToken> iptal yöntemlerini çağırmak için a'nın nasıl kullanılacağını <xref:System.Net.WebClient> da gösterir.  
+Aşağıdaki örnek, kullanarak bir olay tabanlı zaman uyumsuz model (EAP) işlemlerini bir görev olarak bir görev olarak ortaya çıkarmak gösterilmektedir <xref:System.Threading.Tasks.TaskCompletionSource%601> . Örnek ayrıca, <xref:System.Threading.CancellationToken> nesneleri üzerinde yerleşik iptal yöntemlerini çağırmak için nasıl kullanılacağını gösterir <xref:System.Net.WebClient> .  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]
@@ -24,4 +24,4 @@ Aşağıdaki örnekte, olay tabanlı Eşzamanlı Desen (EAP) işlemlerinin rasge
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)
+- [TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama](tpl-and-traditional-async-programming.md)

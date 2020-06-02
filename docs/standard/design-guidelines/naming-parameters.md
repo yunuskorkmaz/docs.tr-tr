@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: ebe2e2db4b109057bf576d4e18cfe511c657707e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d5c5cd144fbae88439ee981fbdb6e30ff487005
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743833"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290168"
 ---
 # <a name="naming-parameters"></a>Adlandırma Parametreleri
 Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağladığınızda, bir okunabilirlik işleminin belirgin olmasının ötesinde parametre adları için yönergeleri izlemek önemlidir.
@@ -23,13 +23,13 @@ Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağla
  ✔️, parametre türü yerine parametrenin anlamı temelinde adları kullanmayı düşünün.
 
 ### <a name="naming-operator-overload-parameters"></a>Adlandırma Işleci aşırı yükleme parametreleri
- ✔️, parametrelere bir anlamı yoksa ikili işleç aşırı yüklemesi parametre adları için `left` ve `right` kullanın.
+ `left`parametrelere bir anlamı yoksa `right` ikili işleç aşırı yüklemesi parametre adları için ve kullanın ✔️.
 
- parametrelere bir anlamı yoksa birli işleç aşırı yüklemesi parametre adları için `value` ✔️.
+ `value`parametrelere bir anlamı yoksa birli işleç aşırı yüklemesi parametre adları için ✔️ kullanın.
 
  ✔️, işleç aşırı yükleme parametreleri için anlamlı adları göz önünde bulundurun.
 
- ❌ işleç aşırı yüklemesi parametre adları için kısaltmalar veya sayısal dizinler kullanmaz.
+ ❌İşleç aşırı yüklemesi parametre adları için kısaltmalar veya sayısal dizinler kullanmayın.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -37,5 +37,5 @@ Görsel tasarım araçları IntelliSense ve sınıf tarama işlevselliği sağla
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Adlandırma yönergeleri](naming-guidelines.md)

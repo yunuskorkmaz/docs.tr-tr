@@ -7,17 +7,17 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 652a88e25f59cd905e47ef71351e47e67f375286
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375819"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289648"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> öğesi
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> Öğesi
 Serileştirme modu belirler <xref:System.DateTime> nesneleri.  
   
- \<yapılandırma>  
+ \<configuration>  
 \<dateTimeSerialization>  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -33,7 +33,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelikler|Açıklama|  
+|Öznitelikler|Description|  
 |----------------|-----------------|  
 |`mode`|İsteğe bağlı. Serileştirme modunu belirtir. Birine ayarlayın <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> değerleri. Varsayılan **gidiş dönüş**'dir.|  
   
@@ -42,7 +42,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |dizileştirme mekanizmasını System.xml.Serialization|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   
@@ -56,7 +56,7 @@ Serileştirme modu belirler <xref:System.DateTime> nesneleri.
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [Yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<SchemaImporterExtensions> öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<\<SchemaImporterExtensions için> öğesi ekleme>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [Yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions>Dosyalarında](schemaimporterextensions-element.md)
+- [\<add>İçin öğesi\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)

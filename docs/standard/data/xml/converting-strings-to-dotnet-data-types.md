@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fda5441c58d14b91a9eca16fff9149c8795f95b9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160358"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289232"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>.NET Framework Veri Türleri için Dizeleri Dönüştürme
-Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert>..  
+Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın. **XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert> ..  
   
  **ToString** yönteminden döndürülen dize, geçirilen verilerin dize bir sürümüdür. Ayrıca, **XmlConvert** sınıfını kullanarak dönüştüren birkaç .NET Framework türü vardır ancak **System. Convert** sınıfındaki yöntemleri kullanmaz. **XmlConvert** sınıfı, XML ŞEMASı (xsd) veri türü belirtimini Izler ve **XmlConvert** 'in eşleyebileceğiniz bir veri türüne sahiptir.  
   
@@ -28,7 +28,7 @@ Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama 
 |Double. PositiveInfinity|'SI|  
 |Double. NegativeInfinity|"-INF"|  
 |DateTime|Biçim "yyyy-MM-ddTHH: mm: sszzzzzz" ve alt kümeleridir.|  
-|Timespan|Biçim, 2 yıl, 10 ay, 15 gün, 10 saat `P2Y10M15DT10H30M20S` , 30 dakika ve 20 saniye olmak üzere Pnazmntnhnmns 'dir|  
+|Timespan|Biçim, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika ve 20 saniye olmak üzere Pnazmntnhnmns 'dir|  
   
 > [!NOTE]
 > Tabloda listelenen .NET Framework türlerinden herhangi birini **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.  
@@ -119,7 +119,7 @@ Console.WriteLine(bvalue);
 |'SI|Double. PositiveInfinity|  
 |"-INF"|Double. NegativeInfinity|  
   
- Aşağıdaki kod yazılır `<Infinity>INF</Infinity>`:  
+ Aşağıdaki kod yazılır `<Infinity>INF</Infinity>` :  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
@@ -133,5 +133,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Veri Türlerini Dönüştürme](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [.NET Framework Türlerini Dizelere Dönüştürme](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [XML Veri Türlerini Dönüştürme](conversion-of-xml-data-types.md)
+- [.NET Framework Türlerini Dizelere Dönüştürme](converting-dotnet-types-to-strings.md)

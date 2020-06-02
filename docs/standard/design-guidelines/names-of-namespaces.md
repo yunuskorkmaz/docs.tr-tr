@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419063"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290207"
 ---
 # <a name="names-of-namespaces"></a>Ad Alanlarının Adları
 Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanın amacı, programlama çerçevesini kullanarak, ad alanının içeriğinin büyük olasılıkla ne olduğunu hemen bilmenin ne kadar anlaşılır olduğunu oluşturmaktır. Aşağıdaki şablon ad alanlarını adlandırmak için genel kuralı belirtir:
@@ -84,5 +84,5 @@ Diğer adlandırma kılavuzlarında olduğu gibi, ad alanlarını Adlandırmanı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve tasarım yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma yönergeleri](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Adlandırma yönergeleri](naming-guidelines.md)

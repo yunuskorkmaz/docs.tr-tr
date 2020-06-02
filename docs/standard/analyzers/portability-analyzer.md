@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209373"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278369"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -20,7 +20,7 @@ Projenizi, .NET Core gibi yeni platformu hedefleyecek şekilde dönüştürdükt
 ## <a name="common-targets"></a>Ortak hedefler
 
 - [.NET Core](../../core/index.yml): modüler bir tasarıma sahiptir, yan yana yüklemeyi destekler ve platformlar arası senaryoları hedefler. Yan yana yükleme, diğer uygulamaları bozmadan yeni .NET Core sürümlerini benimsemenizi sağlar. Amacınız uygulamanızın .NET Core 'a bağlantı noktası olması ve birden çok platformu desteklemesi gerekiyorsa, bu önerilen hedeftir.
-- . [NET Standard](../../standard/net-standard.md): tüm .NET uygulamalarında bulunan .NET Standard API 'leri içerir. Amacınız, kitaplığınızı .NET tarafından desteklenen tüm platformlarda çalıştırmak ise, bu önerilen hedeftir.
+- . [NET Standard](../net-standard.md): tüm .NET uygulamalarında bulunan .NET Standard API 'leri içerir. Amacınız, kitaplığınızı .NET tarafından desteklenen tüm platformlarda çalıştırmak ise, bu önerilen hedeftir.
 - [ASP.NET Core](/aspnet/core): .NET Core üzerinde oluşturulmuş modern bir Web çerçevesi. Amacınız, Web uygulamanızın birden çok platformu desteklemek üzere .NET Core 'a bağlantı noktası olması durumunda önerilen hedeftir.
 - .NET Core + [Platform uzantıları](../../core/porting/windows-compat-pack.md): .NET Core API 'lerinin yanı sıra, .NET Framework kullanılabilir teknolojilerin çoğunu sağlayan Windows Uyumluluk Paketi ' ne ek olarak dahildir. Bu, uygulamanızın Windows 'da .NET Framework .NET Core 'a taşıma için önerilen bir hedeftir.
 - .NET Standard + [Platform uzantıları](../../core/porting/windows-compat-pack.md): .NET Framework kullanılabilir teknolojilerin çoğunu sağlayan Windows Uyumluluk Paketi 'ne ek olarak .NET Standard API 'leri içerir. Bu, kitaplığınızın .NET Framework Windows üzerinde .NET Core 'a taşıma için önerilen bir hedeftir.

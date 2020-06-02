@@ -13,79 +13,79 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5be98a5a213592b169bee430d84c4fc3a1d5fcef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159227"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290532"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Normal İfadelerdeki Gruplandırma Yapıları
-Gruplandırma yapıları, normal bir ifadenin alt ifadelerini demi ve giriş dizesinin alt dizeleri yakalar. Gruplandırma yapılarını aşağıdakileri yapmak için kullanabilirsiniz:  
+Yapıları gruplandırma, normal bir ifadenin alt ifadelerini ayırıcıları ve bir giriş dizesinin alt dizelerini yakalar. Aşağıdakileri yapmak için gruplandırma yapılarını kullanabilirsiniz:  
   
-- Giriş dizesinde yinelenen bir alt ifadeeşleştirin.  
+- Giriş dizesinde yinelenen bir alt ifadeyi eşleştirin.  
   
-- Birden çok normal ifade dili öğesi olan bir alt ifadeye niceleyici uygulayın. Niceleyiciler hakkında daha fazla bilgi için, [bkz.](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- Birden çok normal ifade dili öğesine sahip olan bir alt ifade için nicelik belirteci uygulayın. Nicelik belirteçleri hakkında daha fazla bilgi için bkz. [nicelik belirteçleri](quantifiers-in-regular-expressions.md).  
   
-- Dize <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> yöntemlerle döndürülen bir alt ifade ekleyin.  
+- Ve yöntemleri tarafından döndürülen dizeye bir alt ifade ekleyin <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
-- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> Özellikten tek tek alt ifadeleri alın ve bunları eşleşen metinden ayrı ayrı bir bütün olarak işleyin.  
+- Özellikten tek tek alt ifadeleri alın <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> ve eşleşen metinden bir bütün olarak onları ayrı olarak işleyin.  
   
- Aşağıdaki tabloda .NET normal ifade altyapısı tarafından desteklenen gruplandırma yapıları listelenir ve yakalama olup olmadığını gösterir.  
+ Aşağıdaki tabloda, .NET normal ifade altyapısı tarafından desteklenen gruplandırma yapıları listelenmekte ve yakalanıp yakalanmayacağını veya yakalanmadığını belirtir.  
   
-|Yapıyı gruplandırma|Yakalama veya yakalamama|  
+|Yapıyı gruplandırma|Yakalama veya Yakalama yapmayan|  
 |------------------------|-------------------------------|  
-|[Eşleşen alt ifadeler](#matched_subexpression)|Yakalama|  
-|[Adlandırılmış eşleşen alt ifadeler](#named_matched_subexpression)|Yakalama|  
-|[Grup tanımlarını dengeleme](#balancing_group_definition)|Yakalama|  
-|[Yakalamayan gruplar](#noncapturing_group)|Yakalamama|  
-|[Grup seçenekleri](#group_options)|Yakalamama|  
-|[Sıfır genişlikpozitif ileriye dönük iddialar](#zerowidth_positive_lookahead_assertion)|Yakalamama|  
-|[Sıfır genişliknegatif ileriye dönük iddialar](#zerowidth_negative_lookahead_assertion)|Yakalamama|  
-|[İddiaların arkasında sıfır genişlik pozitif bakış](#zerowidth_positive_lookbehind_assertion)|Yakalamama|  
-|[İddiaların arkasında sıfır genişliknegatif bakış](#zerowidth_negative_lookbehind_assertion)|Yakalamama|  
-|[Atomik gruplar](#atomic_groups)|Yakalamama|  
+|[Eşleşen alt ifadeler](#matched_subexpression)|Yakalayan|  
+|[Adlandırılmış eşleşen alt ifadeler](#named_matched_subexpression)|Yakalayan|  
+|[Grup tanımlarını Dengeleme](#balancing_group_definition)|Yakalayan|  
+|[Yakalama olmayan gruplar](#noncapturing_group)|Yakalama yapmayan|  
+|[Grup seçenekleri](#group_options)|Yakalama yapmayan|  
+|[Sıfır genişlikli pozitif ileri yönlü onaylar](#zerowidth_positive_lookahead_assertion)|Yakalama yapmayan|  
+|[Sıfır Genişlik negatif ileri düzey onaylama](#zerowidth_negative_lookahead_assertion)|Yakalama yapmayan|  
+|[Sıfır Genişlik pozitif geriye yönelik onaylar](#zerowidth_positive_lookbehind_assertion)|Yakalama yapmayan|  
+|[Sıfır Genişlik negatif geriye yönelik onaylar](#zerowidth_negative_lookbehind_assertion)|Yakalama yapmayan|  
+|[Atomik gruplar](#atomic_groups)|Yakalama yapmayan|  
   
- Gruplar ve normal ifade nesnesi modeli hakkında bilgi için yapı ve [normal ifade nesnelerini gruplandırma](#Objects)konusuna bakın.  
+ Gruplar ve normal ifade nesne modeli hakkında bilgi için bkz. [gruplandırma yapıları ve normal ifade nesneleri](#Objects).  
   
 <a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Eşleşen Alt İfadeler  
  Aşağıdaki gruplandırma yapısı eşleşen bir alt ifadeyi yakalar:  
   
- `(`*alt ifade*`)`  
+ `(`alt *ifade*`)`  
   
- *alt ifadenin* geçerli bir normal ifade deseni olduğu yerde. Parantez kullanan yakalar, normal ifadedeki açılış parantezlerinin sırasına göre soldan sağa otomatik olarak numaralandırılır. Sıfır numaralı yakalama, tüm normal ifade deseniyle eşleşen metindir.  
+ Burada alt *ifade* geçerli bir normal ifade deseninin olduğu yerdir. Parantez kullanan yakalamalar, normal ifadede yer alan açılış parantezleri sırasına göre otomatik olarak soldan sağa numaralandırılır. Sıfır Numaralandırılmış yakalama, tüm normal ifade deseninin eşleştirildiği metindir.  
   
 > [!NOTE]
-> Varsayılan olarak, `(` *alt ifade* `)` dili öğesi eşleşen alt ifadeyi yakalar. Ancak normal <xref:System.Text.RegularExpressions.RegexOptions> bir ifade deseni eşleştirme yönteminin parametresi bayrağı içeriyorsa <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> veya `n` seçenek bu alt ifadeye uygulanıyorsa (bu konunun ilerleyen saatlerinde Grup [seçeneklerine](#group_options) bakın), eşleşen alt ifade yakalanmaz.  
+> Varsayılan olarak, alt `(` *ifade* `)` Language öğesi eşleşen alt ifadeyi yakalar. Ancak <xref:System.Text.RegularExpressions.RegexOptions> , bir normal ifade deseninin eşleştirme yönteminin parametresi <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> bayrağını içeriyorsa veya `n` seçenek bu alt ifadeye uygulanmışsa (Bu konunun ilerleyen kısımlarında [Grup seçeneklerine](#group_options) bakın), eşleşen alt ifade yakalanmaz.  
   
  Yakalanan gruplara dört şekilde erişebilirsiniz:  
   
-- Normal ifade içinde backreference yapı kullanarak. Eşleşen alt ifade, yakalanan alt ifadenin ordinal `\`numarası *olan* sözdizimi *numarası*kullanılarak aynı normal ifadede başvurulur.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
-- Normal ifade içinde adlandırılmış backreference yapı kullanarak. Eşleşen alt `\k<`ifade, sözdizimi *adı*`>`kullanılarak aynı normal ifadede başvurulur, burada *ad* bir `\k<`yakalama grubunun adı veya *numarası*`>`, *numara* nın bir yakalama grubunun ordinal numarası olduğu yerdir. Yakalama grubunun varsayılan adı, kendi ordinal numarasıyla aynıdır. Daha fazla bilgi için, bu konunun ilerleyen saatlerinde [Adlandırılmış eşleşen alt ifadelere](#named_matched_subexpression) bakın.  
+- Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* bir yakalama grubunun adı veya `\k<` *sayı* `>` , burada *sayı* bir yakalama grubunun sıra numarasıdır. Yakalama grubu, sıra numarasıyla aynı olan varsayılan bir ada sahiptir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında bulunan [eşleşen alt ifadeler](#named_matched_subexpression) bölümüne bakın.  
   
-- `$` *Numara* değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> bir veya yöntem çağrısında, *yakalanan* alt ifadenin sıra numarası dır.  
+- `$`Bir veya yöntem çağrısında *sayı* değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
-- Programlı olarak, özellik <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesneyi <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> kullanarak. Koleksiyondaki sıfır konumundaki üye, tüm normal ifade eşleşmesini temsil eder. Sonraki her üye eşleşen bir alt ifadeyi temsil eder. Daha fazla bilgi için [Yapı ve Düzenli İfade Nesneleri Gruplandırma](#Objects) bölümüne bakın.  
+- Program aracılığıyla, <xref:System.Text.RegularExpressions.GroupCollection> özelliği tarafından döndürülen nesnesini kullanarak <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Koleksiyonda sıfır konumundaki üye, tüm normal ifade eşleşmesini temsil eder. Sonraki her üye, eşleşen bir alt ifadeyi temsil eder. Daha fazla bilgi için bkz. [Grup yapıları ve normal Ifade nesneleri](#Objects) bölümü.  
   
- Aşağıdaki örnekte, metindeki yinelenen sözcükleri tanımlayan normal bir ifade gösteredilmektedir. Normal ifade deseninin iki yakalama grubu, yinelenen sözcüğün iki örneğini temsil eder. İkinci örnek, giriş dizesinde başlangıç konumunu bildirmek için yakalanır.  
+ Aşağıdaki örnek, metinde yinelenen sözcükleri tanımlayan bir normal ifadeyi gösterir. Normal ifade deseninin iki yakalama grubu, yinelenen sözcüğün iki örneğini temsil eder. İkinci örnek, giriş dizesindeki başlangıç konumunu raporlamak için yakalanır.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping1.cs#1)]
  [!code-vb[RegularExpressions.Language.Grouping#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping1.vb#1)]  
   
- Normal ifade deseni aşağıdaki gibidir:  
+ Normal ifade deseninin nedeni şunlardır:  
   
 `(\w+)\s(\1)\W`  
   
- Aşağıdaki tablo, normal ifade deseninin nasıl yorumlandığını gösterir.  
+ Aşağıdaki tabloda, normal ifade deseninin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
-|`(\1)`|Yakalanan ilk gruptaki dizeyle eşleştirin. Bu ikinci yakalama grubudur. Örnek, yinelenen sözcüğün başlangıç `Match.Index` konumunun özellikten alınabilmesi için onu yakalanan bir gruba atar.|  
-|`\W`|Beyaz boşluk ve noktalama işaretleri de dahil olmak üzere sözcük olmayan bir karakteri eşleştirin. Bu, normal ifade deseni ilk yakalanan gruptan kelime ile başlayan bir sözcük eşleştirmesini engeller.|  
+|`(\1)`|Yakalanan ilk gruptaki dizeyle eşleştirin. Bu ikinci yakalama grubudur. Örnek, yinelenen sözcüğün başlangıç konumunun özelliğinden alınabilmesi için onu yakalanan bir gruba atar `Match.Index` .|  
+|`\W`|Boşluk ve noktalama işaretleri de dahil olmak üzere sözcüksiz bir karakterle eşleştirin. Bu, normal ifade deseninin, ilk yakalanan gruptan kelimeyle başlayan bir sözcükle eşleşmesini önler.|  
   
 <a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>Adlandırılmış Eşleşen Alt İfadeler  
@@ -97,28 +97,28 @@ Gruplandırma yapıları, normal bir ifadenin alt ifadelerini demi ve giriş diz
   
 `(?'name'subexpression)`  
   
- *adın* geçerli bir grup adı olduğu ve *alt ifadenin* geçerli bir normal ifade deseni olduğu. *ad* herhangi bir noktalama karakteri içermemelidir ve bir sayı ile başlayamaz.  
+ Burada *Name* geçerli bir grup adıdır ve alt *ifade* geçerli bir normal ifade örüntü. *ad* , herhangi bir noktalama karakteri içermemelidir ve bir sayıyla başlayamaz.  
   
 > [!NOTE]
-> Normal <xref:System.Text.RegularExpressions.RegexOptions> ifade deseni eşleştirme yönteminin parametresi bayrağı <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> `n` içeriyorsa veya seçenek bu alt ifadeye uygulanıyorsa (bu konunun ilerleyen saatlerinde [Grup seçeneklerine](#group_options) bakın), bir alt ifadeyi yakalamanın tek yolu yakalama gruplarını açıkça adlandırmaktır.  
+> <xref:System.Text.RegularExpressions.RegexOptions>Bir normal ifade deseninin eşleştirme yönteminin parametresi <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> bayrağını içeriyorsa veya `n` seçenek bu alt ifadeye uygulanmışsa (Bu konunun Ilerleyen kısımlarında bulunan [Grup seçeneklerine](#group_options) bakın), bir alt ifadeyi yakalamaya yönelik tek yol, yakalama gruplarının açıkça adı olarak adlandırılmalıdır.  
   
  Adlandırılmış yakalanan gruplara aşağıdaki yollarla erişebilirsiniz:  
   
-- Normal ifade içinde adlandırılmış backreference yapı kullanarak. Eşleşen alt ifade, yakalanan alt ifadenin `\k<`adının *sözdizimi* *adı*`>`kullanılarak aynı normal ifadede başvurulur.  
+- Normal ifade içinde adlandırılmış yeniden başvuru yapısını kullanarak. Eşleşen alt ifadeye, sözdizimi adı kullanılarak aynı normal ifadede başvurulur `\k<` *name* `>` ; burada *ad* , yakalanan alt ifadenin adıdır.  
   
-- Normal ifade içinde backreference yapı kullanarak. Eşleşen alt ifade, yakalanan alt ifadenin ordinal `\`numarası *olan* sözdizimi *numarası*kullanılarak aynı normal ifadede başvurulur. Eşleşen alt ifadeler eşleştikten sonra soldan sağa doğru ardışık olarak numaralandırılır.  
+- Normal ifade içinde geri başvuru yapısını kullanarak. Eşleşen alt ifadeye, söz dizimi numarası kullanılarak aynı normal ifadede başvurulur `\` *number*, burada *sayı* yakalanan alt ifadenin sıra numarasıdır. Adlandırılmış eşleşen alt ifadeler, eşleşen alt ifadelerden sonra soldan sağa doğru numaralandırılır.  
   
-- `${` *name* Ad`}` değiştirme sırasını bir <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> veya yöntem çağrısında kullanarak, *yakalanan* alt ifadenin adı dır.  
+- `${` *name* `}` Bir veya yöntem çağrısında ad değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , *adı* yakalanan alt ifadenin adıdır.  
   
-- `$` *Numara* değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> bir veya yöntem çağrısında, *yakalanan* alt ifadenin sıra numarası dır.  
+- `$`Bir veya yöntem çağrısında *sayı* değiştirme sırasını kullanarak <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , *sayı* yakalanan alt ifadenin sıra numarasıdır.  
   
-- Programlı olarak, özellik <xref:System.Text.RegularExpressions.GroupCollection> tarafından döndürülen nesneyi <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> kullanarak. Koleksiyondaki sıfır konumundaki üye, tüm normal ifade eşleşmesini temsil eder. Sonraki her üye eşleşen bir alt ifadeyi temsil eder. Adlandırılmış yakalanan gruplar, numaralandırılmış yakalanan gruplardan sonra koleksiyonda depolanır.  
+- Program aracılığıyla, <xref:System.Text.RegularExpressions.GroupCollection> özelliği tarafından döndürülen nesnesini kullanarak <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . Koleksiyonda sıfır konumundaki üye, tüm normal ifade eşleşmesini temsil eder. Sonraki her üye, eşleşen bir alt ifadeyi temsil eder. Adlandırılmış yakalanan gruplar, yakalanan grupların numaralandırıldıktan sonra koleksiyonda depolanır.  
   
-- Programlı olarak, alt ifade adını nesnenin <xref:System.Text.RegularExpressions.GroupCollection> dizinleyicisine (C#' da) veya <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliğine (Visual Basic'te) sağlayarak.  
+- Programlama yoluyla, <xref:System.Text.RegularExpressions.GroupCollection> nesnenin dizin oluşturucusuna (C# ' de) veya <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> özelliğine (Visual Basic) alt ifade adı sağlayarak.  
   
- Basit bir normal ifade deseni, numaralandırılmış (adsız) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceğini gösterir. Normal ifade, `((?<One>abc)\d+)?(?<Two>xyz)(.*)` aşağıdaki yakalama gruplarını sayıya ve ada göre üretir. İlk yakalama grubu (sayı 0) her zaman tüm deseni ifade eder.  
+ Basit bir normal ifade modelinde, numaralandırılmış (adlandırılmamış) ve adlandırılmış grupların programlı olarak veya normal ifade dili sözdizimi kullanılarak nasıl başvurulabileceği gösterilmektedir. Normal ifade, `((?<One>abc)\d+)?(?<Two>xyz)(.*)` aşağıdaki yakalama gruplarını numaraya göre ve adına göre oluşturur. İlk yakalama grubu (sayı 0) her zaman tüm modele başvurur.  
   
-|Sayı|Adı|Desen|  
+|Sayı|Name|Desen|  
 |------------|----------|-------------|  
 |0|0 (varsayılan ad)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (varsayılan ad)|`((?<One>abc)\d+)`|  
@@ -126,44 +126,44 @@ Gruplandırma yapıları, normal bir ifadenin alt ifadelerini demi ve giriş diz
 |3|Bir|`(?<One>abc)`|  
 |4|İki|`(?<Two>xyz)`|  
   
- Aşağıdaki örnekte, yinelenen sözcükleri ve yinelenen her sözcüğü hemen izleyen sözcüğü tanımlayan normal bir ifade gösterilmiştir. Normal ifade deseni iki adlandırılmış `duplicateWord`alt ifadetanımlar: , yinelenen sözcüğü temsil eder; ve `nextWord`, yinelenen sözcüğü izleyen sözcüğü temsil eder.  
+ Aşağıdaki örnek, yinelenen kelimeleri ve her bir yinelenen sözcüğü hemen izleyen kelimeyi tanımlayan bir normal ifade gösterir. Normal ifade deseninin iki adlandırılmış alt ifadesi tanımlar: `duplicateWord` , çoğaltılan kelimeyi temsil `nextWord` eden ve yinelenen kelimeyi izleyen kelimeyi temsil eden.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping2.cs#2)]
  [!code-vb[RegularExpressions.Language.Grouping#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping2.vb#2)]  
   
- Normal ifade deseni aşağıdaki gibidir:  
+ Normal ifade deseninin aşağıdaki gibidir:  
   
 `(?<duplicateWord>\w+)\s\k<duplicateWord>\W(?<nextWord>\w+)`  
   
- Aşağıdaki tablo, normal ifadenin nasıl yorumlandığını gösterir.  
+ Aşağıdaki tabloda, normal ifadenin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`(?<duplicateWord>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunu `duplicateWord`adlandırın.|  
+|`(?<duplicateWord>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunu adlandırın `duplicateWord` .|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
-|`\k<duplicateWord>`|Yakalanan gruptan gelen dizeyle `duplicateWord`eşleştirin.|  
-|`\W`|Beyaz boşluk ve noktalama işaretleri de dahil olmak üzere sözcük olmayan bir karakteri eşleştirin. Bu, normal ifade deseni ilk yakalanan gruptan kelime ile başlayan bir sözcük eşleştirmesini engeller.|  
-|`(?<nextWord>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunu `nextWord`adlandırın.|  
+|`\k<duplicateWord>`|Adlı yakalanan gruptaki dizeyle eşleştirin `duplicateWord` .|  
+|`\W`|Boşluk ve noktalama işaretleri de dahil olmak üzere sözcüksiz bir karakterle eşleştirin. Bu, normal ifade deseninin, ilk yakalanan gruptan kelimeyle başlayan bir sözcükle eşleşmesini önler.|  
+|`(?<nextWord>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunu adlandırın `nextWord` .|  
   
- Bir grup adının normal bir ifadede yinelenebileni unutmayın. Örneğin, aşağıdaki örnekte gösterildiği gibi, birden `digit`fazla grubun adlandırılması mümkündür. Yinelenen adlar söz konusu olduğunda, <xref:System.Text.RegularExpressions.Group> nesnenin değeri giriş dizesinde son başarılı yakalama tarafından belirlenir. Buna ek <xref:System.Text.RegularExpressions.CaptureCollection> olarak, grup adı çoğaltılmış değilse olduğu gibi her yakalama hakkında bilgi ile doldurulur.  
+ Bir grup adının normal bir ifadede tekrarlanabilir olduğunu unutmayın. Örneğin, aşağıdaki örnekte gösterildiği gibi, birden fazla grubun adlandırılması mümkündür `digit` . Yinelenen adlar söz konusu olduğunda, <xref:System.Text.RegularExpressions.Group> nesne değeri giriş dizesindeki son başarılı yakalama tarafından belirlenir. Bunlara ek olarak, <xref:System.Text.RegularExpressions.CaptureCollection> Grup adı yinelenmediğinden olduğu gibi her yakalama hakkındaki bilgilerle doldurulur.  
   
- Aşağıdaki örnekte, normal `\D+(?<digit>\d+)\D+(?<digit>\d+)?` ifade adlı bir grubun `digit`iki oluşumunu içerir. İlk `digit` adlandırılmış grup bir veya daha fazla basamak lı karakteri yakalar. İkinci `digit` adlandırılmış grup, bir veya daha fazla basamaklı karakterin sıfır veya bir oluşumunu yakalar. Örnekteki çıktının gösterdiği gibi, ikinci yakalama grubu metne başarıyla eşleşirse, bu <xref:System.Text.RegularExpressions.Group> metnin değeri nesnenin değerini tanımlar. İkinci yakalama grubu giriş dizesini eşleştiremezse, son başarılı eşleşmenin değeri <xref:System.Text.RegularExpressions.Group> nesnenin değerini tanımlar.  
+ Aşağıdaki örnekte, normal ifade `\D+(?<digit>\d+)\D+(?<digit>\d+)?` adlı bir grubun iki örneğini içerir `digit` . İlk `digit` adlandırılmış grup bir veya daha fazla rakam karakteri yakalar. İkinci `digit` adlandırılmış Grup, bir veya daha fazla basamak karakterinin sıfır veya bir oluşumunu yakalar. Örneğin çıkışının gösterdiği gibi, ikinci yakalama grubu metinle başarıyla eşleşiyorsa, metnin değeri nesnenin değerini tanımlar <xref:System.Text.RegularExpressions.Group> . İkinci yakalama grubu giriş dizesiyle eşleşmezse, son başarılı eşleşmenin değeri nesnenin değerini tanımlar <xref:System.Text.RegularExpressions.Group> .  
   
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
   
- Aşağıdaki tablo, normal ifadenin nasıl yorumlandığını gösterir.  
+ Aşağıdaki tabloda, normal ifadenin nasıl yorumlanacağı gösterilmektedir.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`\D+`|Bir veya daha fazla ondalık basamak olmayan karakterleri eşleştirin.|  
-|`(?<digit>\d+)`|Bir veya daha fazla ondalık basamak karakterini eşleştirin. Eşleşmeyi `digit` adlandırılmış gruba atayın.|  
-|`\D+`|Bir veya daha fazla ondalık basamak olmayan karakterleri eşleştirin.|  
+|`\D+`|Ondalık olmayan bir veya daha fazla karakter eşleştirin.|  
+|`(?<digit>\d+)`|Bir veya daha fazla ondalık basamak karakteri eşleştirin. Eşleşmeyi `digit` adlandırılmış gruba atayın.|  
+|`\D+`|Ondalık olmayan bir veya daha fazla karakter eşleştirin.|  
 |`(?<digit>\d+)?`|Bir veya daha fazla ondalık basamak karakterinin sıfır veya bir oluşumunu eşleştirin. Eşleşmeyi `digit` adlandırılmış gruba atayın.|  
   
 <a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Grup Tanımlarını Dengeleme  
- Dengeleme grubu tanımı, daha önce tanımlanmış bir grubun tanımını siler ve geçerli gruptaki depolar, önceden tanımlanmış grup ile geçerli grup arasındaki aralığı siler. Bu gruplandırma yapısı aşağıdaki biçime sahiptir:  
+ Bir Dengeleme grubu tanımı, daha önce tanımlanmış bir grubun tanımını ve geçerli grupta, daha önce tanımlanan grup ve geçerli grup arasındaki aralığı siler. Bu gruplandırma yapısı aşağıdaki biçimdedir:  
   
 `(?<name1-name2>subexpression)`  
   
@@ -171,114 +171,114 @@ Gruplandırma yapıları, normal bir ifadenin alt ifadelerini demi ve giriş diz
   
 `(?'name1-name2' subexpression)`
   
- *name1* geçerli grup (isteğe bağlı), *name2* önceden tanımlanmış bir grup ve *alt ifade* herhangi bir geçerli düzenli ifade desenidir. Dengeleme grubu tanımı *name2* tanımını siler ve *name2* ve *name1* arasındaki aralığı *depolar1.* *Ad2* grubu tanımlanmamışsa, eşleşme geri teyidi. *Name2'nin* son tanımını sildikçe *ad2'nin*önceki tanımı ortaya çıksA, bu yapı, parantez açma veya açma ve kapatma gibi iç içe yapıları izlemek için grup *adı2* için yakalama yığınını sayaç olarak kullanmanıza olanak tanır.  
+ Burada *name1* geçerli grup (isteğe bağlı) ise, *AD2* daha önce tanımlanmış bir gruptur ve alt *ifade* geçerli bir normal ifade örünyordu. Dengeleme grubu tanımı, *AD2* tanımını siler ve *name1*içinde *AD2* ve *name1* arasındaki aralığı depolar. Hiçbir *AD2* grubu tanımlanmamışsa, eşleşme geri izler. N} öğesinin son tanımını silmek, *AD2* *'ın önceki tanımını ortaya* çıkardığı için, bu yapı, boşluk olarak grup *AD2* için yakalama yığınını, parantez gibi iç içe yapıları izlemek için bir sayaç olarak kullanmanıza olanak sağlar.  
   
- Dengeleme grubu *tanımı, ad2'yi* yığın olarak kullanır. İç içe geçen her yapının başlangıç karakteri gruba <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ve koleksiyonuna yerleştirilir. Kapanış karakteri eşleştirildiğinde, karşılık gelen açılış karakteri gruptan çıkarılır <xref:System.Text.RegularExpressions.Group.Captures%2A> ve koleksiyon bir oranında azalır. İç içe bütün yapıların açılış ve kapanış karakterleri eşleştikten *sonra, name2* boştur.  
+ Dengeleme grubu tanımı bir yığın olarak *AD2* kullanır. İç içe yerleştirilmiş her yapının başlangıç karakteri gruba ve <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonuna yerleştirilir. Kapanış karakteri eşleştiğinde, karşılık gelen açma karakteri gruptan kaldırılır ve <xref:System.Text.RegularExpressions.Group.Captures%2A> koleksiyon bir ile azaltılır. Tüm iç içe yapıların açılış ve kapanış karakterleri eşleştirdikten sonra, *AD2* boş olur.  
   
 > [!NOTE]
-> İç içe bir yapının uygun açılış ve kapanış karakterini kullanmak için aşağıdaki örnekteki normal ifadeyi değiştirdikten sonra, matematiksel ifadeler veya program kodu satırları gibi iç içe olan yapıları işlemek için kullanabilirsiniz birden çok iç içe geçme yöntemi çağırır.  
+> Aşağıdaki örnekte yer alan, iç içe bir yapının uygun açılış ve kapanış karakterini kullanmak için normal ifadeyi değiştirdikten sonra, matematiksel ifadeler veya birden çok iç içe geçmiş yöntem çağrısı içeren program kodu satırları gibi iç içe geçmiş yapıları işlemek için kullanabilirsiniz.  
   
- Aşağıdaki örnekte, giriş dizesinde sol ve sağ açı ayraçlarını (<>) eşleştirmek için dengeleme grubu tanımı kullanır. Örnek, `Open` iki adlandırılmış grup `Close`tanımlar ve , açı braketleri eşleşen çiftleri izlemek için bir yığın gibi kullanılır. Yakalanan her sol açı braketi `Open` grubun yakalama koleksiyonuna itilir ve yakalanan her bir `Close` dik açı braketi grubun yakalama koleksiyonuna itilir. Dengeleme grubu tanımı, her sol açı ayraç için eşleşen bir dik açı ayraç olmasını sağlar. Yoksa, son alt desen, `(?(Open)(?!))`yalnızca `Open` grup boş değilse (ve bu nedenle iç içe olan tüm yapılar kapatılmadıysa) değerlendirilir. Son alt desen değerlendirilirse, alt desen `(?!)` her zaman başarısız olan sıfır genişliknegatif ileriye dönük bir görünüm olduğundan, eşleşme başarısız olur.  
+ Aşağıdaki örnek, bir giriş dizesinde Left ve Right açılı ayraçları (<>) ile eşleştirmek için bir Dengeleme grubu tanımı kullanır. Örnek, `Open` `Close` eşleşen açılı ayraç çiftlerini izlemek için bir yığın gibi kullanılan iki adlandırılmış grubu tanımlar. Her yakalanan sol açılı ayraç grubun yakalama koleksiyonuna gönderilir `Open` ve her yakalanan sağ açılı ayraç grubun yakalama koleksiyonuna gönderilir `Close` . Dengeleme grubu tanımı, her bir sol açılı ayraç için eşleşen bir sağ açılı ayraç olmasını sağlar. Aksi takdirde, son alt model `(?(Open)(?!))` yalnızca `Open` Grup boş değilse değerlendirilir (ve bu nedenle, iç içe yerleştirilmiş tüm yapılar kapatılmamıştır). Son alt model değerlendiriliyorsa, eşleştirme başarısız olur, çünkü `(?!)` alt model her zaman başarısız olan sıfır Genişlik negatif ileriye yönelik bir onaylama yöntemidir.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping3.cs#3)]
  [!code-vb[RegularExpressions.Language.Grouping#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping3.vb#3)]  
   
- Normal ifade deseni:  
+ Normal ifade deseninin:  
   
 `^[^<>]*(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*(?(Open)(?!))$`  
   
  Normal ifade aşağıdaki gibi yorumlanır:  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`^`|Dize başında başlayın.|  
-|`[^<>]*`|Sol veya sağ açı ayraçları olmayan sıfır veya daha fazla karakteri eşleştirin.|  
-|`(?'Open'<)`|Sol açı ayracı eşleştirin ve `Open`adı geçen bir gruba atayın.|  
-|`[^<>]*`|Sol veya sağ açı ayraçları olmayan sıfır veya daha fazla karakteri eşleştirin.|  
-|`((?'Open'<)[^<>]*)+`|Sol açılı braketin bir veya daha fazla oluşumlarını ve ardından sol veya sağ açı braketleri olmayan sıfır veya daha fazla karakterle eşleştirin. Bu ikinci yakalama grubudur.|  
-|`(?'Close-Open'>)`|Dik açılı bir ayraç eşleştirin, `Open` grup la geçerli `Close` grup arasındaki alt dizeyi gruba atayın ve grubun tanımını `Open` silin.|  
-|`[^<>]*`|Ne sol ne de doğru açı ayraç olan herhangi bir karakterin sıfır veya daha fazla oluşumlarını eşleştirin.|  
-|`((?'Close-Open'>)[^<>]*)+`|Bir veya daha fazla olay, bir sol ne de bir sağ açı braketi olan herhangi bir karakterin sıfır veya daha fazla oluşumları takip maç. Doğru açı braketi eşleştirirken, `Open` grup ve geçerli grup arasındaki `Close` alt dizeyi gruba `Open` atayın ve grubun tanımını silin. Bu, üçüncü yakalama grubudur.|  
-|`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|Aşağıdaki desenin sıfır veya daha fazla oluşumlarını eşleştirin: bir veya daha fazla sol açı braketinin, ardından sıfır veya daha fazla açı olmayan köşeli ayraç karakterlerinin, ardından bir veya daha fazla dik açı ayraç oluşumunun, ardından sıfır veya daha fazla oluşum açı olmayan braketler. Doğru açı ayraçeş, `Open` grubun tanımını silmek ve `Open` grup ve geçerli grup arasındaki `Close` alt dizeyi gruba atayın. Bu ilk yakalama grubudur.|  
-|`(?(Open)(?!))`|`Open` Grup varsa, boş bir dize eşleşebiliyorsa, ancak dizedeki normal ifade altyapısının konumunu ilerletmeyin. Bu sıfır genişliknegatif ileriye dönük bir iddiadır. Boş bir dize her zaman dolaylı olarak bir giriş dizesinde olduğundan, bu eşleşme her zaman başarısız olur. Bu eşleşmenin başarısızlığı, açı braketlerinin dengeli olmadığını gösterir.|  
+|`^`|Dizenin başlangıcında başlayın.|  
+|`[^<>]*`|Sol veya sağ açılı parantez olmayan sıfır veya daha fazla karakterle eşleştirin.|  
+|`(?'Open'<)`|Sol açılı köşeli ayracı eşleştirin ve adlı bir gruba atayın `Open` .|  
+|`[^<>]*`|Sol veya sağ açılı parantez olmayan sıfır veya daha fazla karakterle eşleştirin.|  
+|`((?'Open'<)[^<>]*)+`|Sol açılı köşeli ayracın bir veya daha fazla tekrarından sonra sıfır veya sol açılı köşeli ayraç olmayan bir veya daha fazla karakterle eşleştirin. Bu ikinci yakalama grubudur.|  
+|`(?'Close-Open'>)`|Sağ açılı köşeli ayracı eşleştirin, `Open` Grup ve geçerli grup arasındaki alt dizeyi `Close` gruba atayın ve grubun tanımını silin `Open` .|  
+|`[^<>]*`|Sol veya sağ açılı parantez olmayan herhangi bir karakterin sıfır veya daha fazla tekrarını eşleştirin.|  
+|`((?'Close-Open'>)[^<>]*)+`|Sağ açılı köşeli ayracın bir veya daha fazla tekrarını, ardından sıfır veya sağ açılı parantez olmayan herhangi bir karakterin sıfır veya daha fazla tekrarını eşleştirin. Sağ açılı köşeli ayracı eşleştirirken grup `Open` ve geçerli grup arasındaki alt dizeyi `Close` gruba atayın ve grubun tanımını silin `Open` . Bu, üçüncü yakalama grubudur.|  
+|`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|Aşağıdaki düzenin sıfır veya daha fazla tekrarını eşleştirin: sol açılı köşeli ayracın bir veya daha fazla tekrarı, ardından sıfır veya daha fazla açılı ayraç karakteri ve ardından sıfır veya daha fazla açılı ayracın bir veya daha fazla tekrarı tarafından izlenen bir ya da daha fazla açı köşeli ayraçın bir veya daha fazla tekrarı. Sağ açılı ayraç eşleştirirken, grubun tanımını silin `Open` ve grup `Open` ile geçerli grup arasındaki alt dizeyi gruba atayın `Close` . Bu ilk yakalama grubudur.|  
+|`(?(Open)(?!))`|`Open`Grup varsa, boş bir dize eşleştirilemezse eşleşmeyi iptal edin, ancak dizedeki normal ifade altyapısının konumunu ilerletin. Bu sıfır Genişlik negatif ileriye yönelik bir onaylama işlemi. Bir giriş dizesinde boş bir dize her zaman örtük olarak bulunduğundan, bu eşleşme her zaman başarısız olur. Bu eşleşmesinin başarısız olması, Açılı ayraçların dengelenmediğini belirtir.|  
 |`$`|Giriş dizesinin sonuyla eşleş.|  
   
- Son alt ifade, `(?(Open)(?!))`giriş dizesinde iç içe geçme yapılarının düzgün dengelenip dengelenmediğini (örneğin, her sol açı ayracının bir dik açı ayracıyla eşleşip eşleşmediğini) gösterir. Yakalanan geçerli bir gruba göre koşullu eşleştirme kullanır; daha fazla bilgi için [alternation Constructs](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)'a bakın. `Open` Grup tanımlanırsa, normal ifade altyapısı giriş dizesinde alt ifade `(?!)` eşleşmeye çalışır. Grup `Open` yalnızca iç içe geçme yapıları dengesizse tanımlanmalıdır. Bu nedenle, giriş dizesinde eşleşecek desen her zaman eşleşmenin başarısız olması için neden olan bir desen olmalıdır. Bu durumda, `(?!)` boş bir dize her zaman giriş dizesinde bir sonraki konumda her zaman örtülü olarak mevcut olduğundan, her zaman başarısız sıfır genişliknegatif ileriye dönük bir iddiadır.  
+ Son alt ifade, `(?(Open)(?!))` Giriş dizesindeki iç içe geçme yapılarının düzgün şekilde dengelenip dengelenmediğini belirtir (örneğin, her bir sol açılı ayracın dik açılı ayraç ile eşleştiğini belirtir). Geçerli bir yakalanan gruba göre koşullu eşleme kullanır; daha fazla bilgi için bkz. [değişim yapıları](alternation-constructs-in-regular-expressions.md). `Open`Grup tanımlanmışsa, normal ifade altyapısı giriş dizesindeki alt ifadeyi eşleştirmeye çalışır `(?!)` . `Open`Grup yalnızca iç içe yapılar dengesiz ise tanımlanmalıdır. Bu nedenle, giriş dizesinde eşleştirilecek model her zaman eşleşenlerin başarısız olmasına neden olan bir olmalıdır. Bu durumda, `(?!)` her zaman başarısız olan sıfır Genişlik negatif ileriye yönelik bir onaylama işlemi, giriş dizesindeki bir sonraki konumda boş bir dize her zaman örtük olarak yer almıyor.  
   
- Örnekte, normal ifade altyapısı aşağıdaki tabloda\<gösterildiği gibi\<" abc><mno xyz>>" giriş dizesini değerlendirir.  
+ Örnekte, normal ifade altyapısı, \<abc> Aşağıdaki tabloda gösterildiği gibi "<MNO>" giriş dizesini değerlendirir \<xyz> .  
   
 |Adım|Desen|Sonuç|  
 |----------|-------------|------------|  
-|1|`^`|Eşleşmeyi giriş dizesinin başında başlatır|  
-|2|`[^<>]*`|Sol açı ayraç önce non-angle braket karakterleri arar;eşleşme bulur.|  
-|3|`(((?'Open'<)`|" abc>"ndeki\<sol açı ayracıyla `Open` eşleşir ve gruba atar.|  
-|4|`[^<>]*`|"Abc" ile eşleşiyor.|  
-|5|`)+`|"<abc" yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesinde bir sonraki karakter sol açı ayraç değildir, bu nedenle `(?'Open'<)[^<>]*)` normal ifade altyapısı alt desengeri döngü değildir.|  
-|6|`((?'Close-Open'>)`|"abc\<>"deki dik açı ayracıyla eşleşir, `Open` grup ile doğru açı ayracı arasındaki alt `Close` dize olan "abc"yi gruba atar `Open` ve grubun geçerli değerini ("<") siler ve boş bırakır.|  
-|7|`[^<>]*`|Doğru açı braketi sonra non-angle braket karakterleri arar; eşleşme bulur.|  
-|8|`)+`|Yakalanan üçüncü grubun değeri ">"dir.<br /><br /> Giriş dizesinde bir sonraki karakter dik açı ayraç değildir, bu nedenle `((?'Close-Open'>)[^<>]*)` normal ifade altyapısı alt desengeri döngü değildir.|  
-|9|`)*`|Yakalanan ilk grubun değeri "abc\<>"dir.<br /><br /> Giriş dizesinde bir sonraki karakter sol açı ayraç, böylece normal `(((?'Open'<)` ifade motoru alt desen geri döngüler.|  
-|10|`(((?'Open'<)`|"mno"daki\<sol açı braketini eşler ve `Open` gruba atar. Koleksiyonu <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> artık tek bir değere sahiptir, "<".|  
-|11|`[^<>]*`|"Mno" ile eşleşiyor.|  
-|12|`)+`|"<mno" yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesinde bir sonraki karakter sol açı ayraç, böylece normal `(?'Open'<)[^<>]*)` ifade motoru alt desen geri döngüler.|  
-|13|`(((?'Open'<)`|"\<xyz>" sol açı ayraç eşleşir `Open` ve gruba atar. `Open` Grubun <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> koleksiyonu nda artık iki yakalama vardır: "mno"dan\<sol açı braketi\<ve " xyz>"den sol açı braketi.|  
-|14|`[^<>]*`|"xyz" ile eşleşiyor.|  
-|15|`)+`|"<xyz" yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesinde bir sonraki karakter sol açı ayraç değildir, bu nedenle `(?'Open'<)[^<>]*)` normal ifade altyapısı alt desengeri döngü değildir.|  
-|16|`((?'Close-Open'>)`|" xyz>"\<deki dik açı direğinde eşleşir. "xyz", `Open` grup ve doğru açı ayraç arasındaki alt `Close` dizeyi gruba atar ve `Open` grubun geçerli değerini siler. Önceki yakalamanın değeri ("\<mno"daki sol açı braketi) `Open` grubun geçerli değeri olur. Grubun koleksiyonu artık tek bir yakalama, "\<xyz>" sol açı braketi içerir. <xref:System.Text.RegularExpressions.Group.Captures%2A> `Open`|  
-|17|`[^<>]*`|Açı olmayan köşeli ayraç karakterlerini arar; eşleşme bulur.|  
-|18|`)+`|Yakalanan üçüncü grubun değeri ">"dir.<br /><br /> Giriş dizesinde bir sonraki karakter dik açılı bir köşeli ayraçtır, bu nedenle normal ifade altyapısı `((?'Close-Open'>)[^<>]*)` alt desene geri döner.|  
-|19|`((?'Close-Open'>)`|"xyz>>"deki son dik açı ayracıyla\<eşleşir, "mno xyz `Open`>" (grup ve `Close` doğru açı ayracı arasındaki alt `Open` dize) gruba atar ve grubun geçerli değerini siler. Grup `Open` artık boş.|  
-|20|`[^<>]*`|Açı olmayan köşeli ayraç karakterlerini arar; eşleşme bulur.|  
-|21|`)+`|Yakalanan üçüncü grubun değeri ">"dir.<br /><br /> Giriş dizesinde bir sonraki karakter dik açı ayraç değildir, bu nedenle `((?'Close-Open'>)[^<>]*)` normal ifade altyapısı alt desengeri döngü değildir.|  
-|22|`)*`|Yakalanan ilk grubun değeri "<mno\<xyz>>"dır.<br /><br /> Giriş dizesinde bir sonraki karakter sol açı ayraç değildir, bu nedenle `(((?'Open'<)` normal ifade altyapısı alt desengeri döngü değildir.|  
-|23|`(?(Open)(?!))`|Grup `Open` tanımlı olmadığından eşleşme denmez.|  
+|1|`^`|Giriş dizesinin başlangıcında eşleşmeyi başlatır|  
+|2|`[^<>]*`|Sol açılı ayraçtan önce açılı olmayan köşeli ayraç karakterleri arar; eşleşme bulmazsa.|  
+|3|`(((?'Open'<)`|"" İçindeki sol açılı parantezle eşleşir \<abc> ve `Open` gruba atar.|  
+|4|`[^<>]*`|"Abc" ile eşleşir.|  
+|5|`)+`|"<ABC" değeri, yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesindeki sonraki karakter sol açılı ayraç değildir, bu nedenle normal ifade altyapısı alt modele geri döngülemez `(?'Open'<)[^<>]*)` .|  
+|6|`((?'Close-Open'>)`|"" İçindeki sağ açılı parantezle eşleşir, Grup \<abc> ile sağ açılı ayraç arasında alt dize olan "abc" atar `Open` `Close` ve grubun geçerli değerini ("<") siler ve `Open` boş bırakır.|  
+|7|`[^<>]*`|Sağ açılı parantezden sonra açılı olmayan köşeli ayraç karakterleri arar; eşleşme buluyor.|  
+|8|`)+`|Yakalanan üçüncü grubun değeri ">".<br /><br /> Giriş dizesindeki sonraki karakter sağ açılı ayraç değildir, bu nedenle normal ifade altyapısı alt modele geri döngülemez `((?'Close-Open'>)[^<>]*)` .|  
+|9|`)*`|Yakalanan ilk grubun değeri " \<abc> ".<br /><br /> Giriş dizesindeki sonraki karakter sol açılı köşeli ayraçdır, bu nedenle normal ifade altyapısı alt modele geri döngü sağlar `(((?'Open'<)` .|  
+|10|`(((?'Open'<)`|" \<mno" and assigns it to the `Open` group. Its <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> Koleksiyonda artık tek bir değer," < "olan sol açılı parantezle eşleşir.|  
+|11|`[^<>]*`|"MNO" ile eşleşir.|  
+|12|`)+`|"<MNO" değeri, yakalanan ikinci grubun değeridir.<br /><br /> Giriş dizesindeki sonraki karakter bir sol açılı köşeli ayraç, bu nedenle normal ifade altyapısı alt modele geri döngü sağlar `(?'Open'<)[^<>]*)` .|  
+|13|`(((?'Open'<)`|"" İçindeki sol açılı parantezle eşleşir \<xyz> ve `Open` gruba atar. <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> `Open` Grubun koleksiyonu şu anda iki yakalama içerir: sol açılı köşeli ayraç " \<mno", and the left angle bracket from "\<xyz> ".|  
+|14|`[^<>]*`|"XYZ" ile eşleşir.|  
+|15|`)+`|"<XYZ", ikinci yakalanan grubun değeridir.<br /><br /> Giriş dizesindeki sonraki karakter sol açılı ayraç değildir, bu nedenle normal ifade altyapısı alt modele geri döngülemez `(?'Open'<)[^<>]*)` .|  
+|16|`((?'Close-Open'>)`|"" İçindeki sağ açılı parantezle eşleşir \<xyz> . "XYZ", Grup `Open` ile sağ açılı ayraç arasına alt dizeyi atar `Close` ve grubun geçerli değerini siler `Open` . Önceki yakalamanın değeri (grubun sol açılı ayraç \<mno") becomes the current value of the `Open` group. The <xref:System.Text.RegularExpressions.Group.Captures%2A> `Open` , "", sol açılı ayraç olan tek bir yakalama içerir \<xyz> .|  
+|17|`[^<>]*`|Açı olmayan köşeli ayraç karakterleri arar; eşleşme buluyor.|  
+|18|`)+`|Yakalanan üçüncü grubun değeri ">".<br /><br /> Giriş dizesindeki sonraki karakter sağ açılı bir köşeli ayraçdır, bu nedenle normal ifade altyapısı alt modele geri döngü sağlar `((?'Close-Open'>)[^<>]*)` .|  
+|19|`((?'Close-Open'>)`|"Xyz>>" içindeki son sağ açılı parantezle eşleşir, "MNO \<xyz> " ( `Open` Grup ve sağ açılı ayraç arasındaki alt dize) `Close` gruba atar ve grubun geçerli değerini siler `Open` . `Open`Grup artık boş.|  
+|20|`[^<>]*`|Açı olmayan köşeli ayraç karakterleri arar; eşleşme buluyor.|  
+|21|`)+`|Yakalanan üçüncü grubun değeri ">".<br /><br /> Giriş dizesindeki sonraki karakter sağ açılı ayraç değildir, bu nedenle normal ifade altyapısı alt modele geri döngülemez `((?'Close-Open'>)[^<>]*)` .|  
+|22|`)*`|Yakalanan ilk grubun değeri "<MNO \<xyz>>".<br /><br /> Giriş dizesindeki sonraki karakter sol açılı ayraç değildir, bu nedenle normal ifade altyapısı alt modele geri döngülemez `(((?'Open'<)` .|  
+|23|`(?(Open)(?!))`|`Open`Grup tanımlı değil, bu nedenle hiçbir eşleşme denenmedi.|  
 |24|`$`|Giriş dizesinin sonuyla eşleşir.|  
   
 <a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>Yakalama Yapmayan Gruplar  
- Aşağıdaki gruplandırma yapısı, bir alt ifadeyle eşleşen alt dizeyi yakalamaz:  
+ Aşağıdaki gruplandırma yapısı bir alt ifade ile eşleşen alt dizeyi yakalamaz:  
   
 `(?:subexpression)`
   
- *alt ifadenin* geçerli bir normal ifade deseni olduğu yerde. Yakalamayan grup yapısı genellikle bir niceleyici bir gruba uygulandığında kullanılır, ancak grup tarafından yakalanan alt dizeleri ilgi alanı değildir.  
+ Burada alt *ifade* geçerli bir normal ifade deseninin olduğu yerdir. Yakalama olmayan Grup yapısı genellikle bir gruba bir nicelik belirteci uygulandığında kullanılır, ancak grup tarafından yakalanan alt dizeler hiçbir ilgi değildir.  
   
 > [!NOTE]
-> Normal bir ifade iç içe gruplama yapıları içeriyorsa, dış yakalama grubu yapısı iç iç içe grup yapıları için geçerli değildir.  
+> Normal bir ifade iç içe gruplandırma yapıları içeriyorsa, iç içe geçmiş grup yapılarına bir dış yakalama olmayan Grup yapısı uygulanmaz.  
   
- Aşağıdaki örnekte, yakalamama grupları içeren normal bir ifade gösterin. Çıktının yakalanan grupları içermediğini unutmayın.  
+ Aşağıdaki örnek, yakalama olmayan gruplar içeren bir normal ifadeyi gösterir. Çıktının yakalanan grupları içermediğinden emin olmanız gerektiğini unutmayın.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/noncapture1.cs#5)]
  [!code-vb[RegularExpressions.Language.Grouping#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/noncapture1.vb#5)]  
   
- Normal ifade, `(?:\b(?:\w+)\W*)+\.` bir dönem tarafından sonlandırılan bir cümleyle eşleşir. Normal ifade tek tek sözcüklere değil, cümlelere odaklandığından, gruplandırma yapıları yalnızca ölçüleyici olarak kullanılır. Normal ifade deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade, `(?:\b(?:\w+)\W*)+\.` bir noktayla sonlandırılan bir cümle ile eşleşir. Normal ifade tek sözcüklerde değil, cümlelere odaklandığı ve gruplandırma yapıları özel olarak nicelik belirteçleri olarak kullanılır. Normal ifade deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`(?:\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Eşleşen metni yakalanan gruba atamayın.|  
-|`\W*`|Sıfır veya daha fazla sözcük olmayan karakterleri eşleştirin.|  
-|`(?:\b(?:\w+)\W*)+`|Bir sözcük sınırından başlayarak bir veya daha fazla sözcük karakterinin deseniyle eşleşin ve ardından bir veya daha fazla sözcük olmayan karakter, bir veya daha fazla kez. Eşleşen metni yakalanan gruba atamayın.|  
-|`\.`|Bir periyodu eşleştirin.|  
+|`(?:\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Eşleşen metni yakalanan bir gruba atamayın.|  
+|`\W*`|Sıfır veya daha fazla sözcük olmayan karakter eşleştirin.|  
+|`(?:\b(?:\w+)\W*)+`|Bir sözcük sınırında başlayan bir veya daha fazla sözcük karakterinin örüntüsünün ardından sıfır veya daha fazla sözcük olmayan karakter, bir veya daha fazla kez olacak şekilde eşleştirin. Eşleşen metni yakalanan bir gruba atamayın.|  
+|`\.`|Bir noktayla eşleştirin.|  
   
 <a name="group_options"></a>
 ## <a name="group-options"></a>Grup Seçenekleri  
- Aşağıdaki gruplandırma yapısı, bir alt ifade içinde belirtilen seçenekleri uygular veya devre dışı eder:  
+ Aşağıdaki gruplandırma yapısı, bir alt ifade içinde belirtilen seçenekleri uygular veya devre dışı bırakır:  
   
- `(?imnsx-imnsx:`*alt ifade*`)`  
+ `(?imnsx-imnsx:`alt *ifade*`)`  
   
- *alt ifadenin* geçerli bir normal ifade deseni olduğu yerde. Örneğin, `(?i-s:)` büyük/küçük harf duyarsızlığını açar ve tek satırlı modu devre dışı kılabilir. Belirtebileceğiniz satır altı seçenekleri hakkında daha fazla bilgi için [Düzenli İfade Seçenekleri'ne](../../../docs/standard/base-types/regular-expression-options.md)bakın.  
+ Burada alt *ifade* geçerli bir normal ifade deseninin olduğu yerdir. Örneğin, `(?i-s:)` büyük/küçük harf duyarlı modunu etkinleştirir ve tek satırlık modu devre dışı bırakır. Belirtebileceğiniz satır içi seçenekler hakkında daha fazla bilgi için bkz. [normal Ifade seçenekleri](regular-expression-options.md).  
   
 > [!NOTE]
-> Bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucu susini veya statik bir yöntem kullanarak bir alt ifade yerine tüm normal ifadeiçin geçerli olan seçenekleri belirtebilirsiniz. Dil yapısını kullanarak `(?imnsx-imnsx)` normal bir ifadede belirli bir noktadan sonra geçerli olan satır satır seçeneklerini de belirtebilirsiniz.  
+> Bir sınıf oluşturucusu veya statik bir yöntem kullanarak, bir alt ifade yerine tüm normal ifadeye uygulanan seçenekleri belirtebilirsiniz <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> . Ayrıca, bir normal ifadede belirli bir noktadan sonra, dil yapısını kullanarak uygulanan satır içi seçenekleri de belirtebilirsiniz `(?imnsx-imnsx)` .  
   
- Grup seçenekleri yapısı bir yakalama grubu değildir. Diğer bir deyişle, *alt ifade* tarafından yakalanan bir dize herhangi bir bölümü eşleme dahil olmasına rağmen, yakalanan <xref:System.Text.RegularExpressions.GroupCollection> bir gruba dahil edilmez ne de nesne doldurmak için kullanılır.  
+ Grup seçenekleri yapısı bir yakalama grubu değil. Diğer bir deyişle, alt *ifade* tarafından yakalanan bir dizenin herhangi bir kısmı eşleştirmeye dahil edilse de, yakalanan bir grupta yer almaz ve nesneyi doldurmak için kullanılır <xref:System.Text.RegularExpressions.GroupCollection> .  
   
- Örneğin, aşağıdaki örnekteki normal ifade, `\b(?ix: d \w+)\s` büyük/küçük harf duyarsız eşleştirmeyi etkinleştirmek ve "d" harfiyle başlayan tüm sözcükleri tanımlarken desen beyaz alanı yok saymak için gruplandırma yapısında satır içi seçenekleri kullanır. Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Örneğin, aşağıdaki örnekteki normal ifade, `\b(?ix: d \w+)\s` büyük/küçük harfe duyarsız eşleştirmeyi etkinleştirmek ve "d" harfiyle başlayan tüm sözcükleri tanımlamak için bir gruplandırma yapısında satır içi seçenekler kullanır. Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`(?ix: d \w+)`|Bu desendeki büyük/küçük harf duyarsız eşleştirme ve beyaz alanı yok sayma kullanarak, bir veya daha fazla sözcük karakteri nin ardından bir "d" ile eşleştirin.|  
+|`(?ix: d \w+)`|Büyük/küçük harf duyarsız eşleştirme ve bu düzende boşluk yok sayılıyor, "d" ile ve bir veya daha fazla sözcük karakteri ile eşleşir.|  
 |`\s`|Bir boşluk karakteri ile eşleştirin.|  
   
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
@@ -286,173 +286,173 @@ Gruplandırma yapıları, normal bir ifadenin alt ifadelerini demi ve giriş diz
   
 <a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>Sıfır Genişlik Pozitif İleriye Yönelik Onaylar  
- Aşağıdaki gruplandırma yapısı sıfır genişlikpozitif ileriye doğru bir iddia tanımlar:  
+ Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif ileri yönlü bir onaylama işlemi tanımlar:  
   
- `(?=`*alt ifade*`)`  
+ `(?=`alt *ifade*`)`  
   
- *alt ifadenin* herhangi bir normal ifade deseni olduğu yerde. Bir eşleşmenin başarılı olabilmesi için, eşleşen substring eşleşme sonucuna dahil edilmese de, giriş dizesi *alt ifadedeki*normal ifade deseniyle eşleşmelidir. Sıfır genişlikte pozitif ileriye dönük iddia geri adım atmaz.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Bir eşleşmenin başarılı olması için, eşleşen alt dizenin eşleşme sonucuna dahil edilmemesine rağmen giriş dizesinin alt *ifade*içindeki normal ifade düzeniyle eşleşmesi gerekir. Sıfır genişlikli pozitif ileri yönlü onaylama işlemi geri izlememez.  
   
- Genellikle, normal bir ifade deseninin sonunda sıfır genişlikpozitif ileriye dönük bir görünüm bulunur. Bir eşleşmenin oluşması için dize sonunda bulunması gereken ancak eşleşmeye dahil edilmemesi gereken bir alt dize tanımlar. Aşırı geri izlemeyi önlemek için de yararlıdır. Yakalanan belirli bir grubun yakalanan grup için tanımlanan desenin bir alt kümesiyle eşleşen metinle başladığından emin olmak için sıfır genişlikpozitif görünüm iddiası kullanabilirsiniz. Örneğin, bir yakalama grubu ardışık sözcük karakterleriyle eşleşirse, ilk karakterin alfabetik bir büyük harf karakter olmasını gerektirecek sıfır genişlikpozitif görünüm iddiası kullanabilirsiniz.  
+ Genellikle, normal ifade deseninin sonunda sıfır genişlikli pozitif ileri yönlü onaylama işlemi bulunur. Bir eşleşmenin gerçekleşmesi için bir dizenin sonunda bulunması gereken ancak eşleştirmeye dahil olmaması gereken bir alt dize tanımlar. Aşırı geri izlemeyi önlemek için de kullanışlıdır. Belirli bir yakalanan grubun, yakalanan grup için tanımlanan bir düzenin alt kümesiyle eşleşen metinle başladığından emin olmak için sıfır genişlikli pozitif ileriye yönelik bir onaylama işlemi kullanabilirsiniz. Örneğin, bir yakalama grubu ardışık sözcük karakterleriyle eşleşiyorsa, ilk karakterin alfabetik bir büyük harf karakter olmasını gerektirmek için sıfır genişlikli pozitif ileri yönlü bir onaylama işlemi kullanabilirsiniz.  
   
- Aşağıdaki örnek, giriş dizesinde "is" fiilinden önce gelen sözcüğü eşleştirmek için sıfır genişlikpozitif görünüm iddiası kullanır.  
+ Aşağıdaki örnek, giriş dizesinde "," fiilinin önündeki kelimeyi eşleştirmek için sıfır genişlikli pozitif ileriye yönelik bir onaylama işlemi kullanır.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#6](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookahead1.cs#6)]
  [!code-vb[RegularExpressions.Language.Grouping#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookahead1.vb#6)]  
   
- Normal ifade `\b\w+(?=\sis\b)` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade `\b\w+(?=\sis\b)` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
-|`(?=\sis\b)`|Karakter sözcüğünün bir beyaz boşluk karakteri ve sözcük sınırında biten "is" dizesi tarafından izlenip izlenmediğini belirleyin. Eğer öyleyse, maç başarılı olur.|  
+|`(?=\sis\b)`|Sözcük karakterlerinin ardından bir boşluk karakteri ve "olup olmadığını" dizesinin bir sözcük sınırı üzerinde bittiğini belirleme. Öyleyse, eşleşme başarılı olur.|  
   
 <a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>Sıfır Genişlik Negatif İleriye Yönelik Onaylar  
- Aşağıdaki gruplandırma yapısı sıfır genişliknegatif ileriye doğru bir iddia tanımlar:  
+ Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif ileriye yönelik bir onaylama tanımlar:  
   
- `(?!`*alt ifade*`)`  
+ `(?!`alt *ifade*`)`  
   
- *alt ifadenin* herhangi bir normal ifade deseni olduğu yerde. Eşleşmenin başarılı olabilmesi için, eşleşen dize eşleşme sonucuna dahil edilmese de giriş dizesi *alt ifadedeki*normal ifade deseniyle eşleşmemelidir.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Eşleşmenin başarılı olması için, eşleşen dize eşleşme sonucuna dahil olmasa da giriş dizesinin alt *ifade*içindeki normal ifade düzeniyle eşleşmesi gerekir.  
   
- Sıfır genişliknegatif ileriye dönük görünüm genellikle normal bir ifadenin başında veya sonunda kullanılır. Normal bir ifadenin başında, normal ifadenin başlangıcı eşlenecek benzer ancak daha genel bir deseni tanımladığında eşleşmemesi gereken belirli bir desen tanımlayabilir. Bu durumda, genellikle geri izleme sınırlamak için kullanılır. Normal bir ifadenin sonunda, eşleşmenin sonunda oluşamayan bir alt ifade tanımlayabilirsiniz.  
+ Sıfır genişlikli negatif ileri yönlü onaylama genellikle normal bir ifadenin başında veya sonunda kullanılır. Normal bir ifadenin başlangıcında, normal ifadenin başlangıcı eşleşmesi gereken benzer ancak daha fazla genel bir model tanımladığı zaman eşleştirileceği belirli bir model tanımlayabilir. Bu durumda, genellikle geri izlemeyi sınırlandırmak için kullanılır. Normal bir ifadenin sonunda, bir eşleşmenin sonunda gerçekleşmeyecek bir alt ifade tanımlayabilir.  
   
- Aşağıdaki örnekte, "un" ile başlamayan sözcükleri eşleştirmek için normal ifadenin başında sıfır genişlikte bir ileriye dönük görünüm kullanan normal bir ifade tanımlanır.  
+ Aşağıdaki örnek, "un" ile başlamayan kelimeleri eşleştirmek için normal ifadenin başlangıcında sıfır genişlikli ileri yönlü bir onaylama işlemi kullanan bir normal ifade tanımlar.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#7](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead1.cs#7)]
  [!code-vb[RegularExpressions.Language.Grouping#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead1.vb#7)]  
   
- Normal ifade `\b(?!un)\w+\b` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade `\b(?!un)\w+\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`(?!un)`|Sonraki iki karakterin "un" olup olmadığını belirleyin. Eğer değilse, bir eşleşme mümkündür.|  
+|`(?!un)`|Sonraki iki karakterin "un" olup olmadığını belirleme. Aksi takdirde eşleşme mümkündür.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
- Aşağıdaki örnek, noktalama işareti karakteriyle bitmeyen sözcükleri eşleştirmek için normal ifadenin sonunda sıfır genişlikte bir görünüm ifadesi kullanan normal bir ifade tanımlar.  
+ Aşağıdaki örnek, bir noktalama karakteriyle bitolmayan kelimeleri eşleştirmek için normal ifadenin sonunda sıfır genişlikli ileri bir onaylama işlemi kullanan bir normal ifade tanımlar.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#8](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookahead2.cs#8)]
  [!code-vb[RegularExpressions.Language.Grouping#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookahead2.vb#8)]  
   
- Normal ifade `\b\w+\b(?!\p{P})` aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade `\b\w+\b(?!\p{P})` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
-|`\p{P})`|Bir sonraki karakter noktalama işareti simgesi değilse (dönem veya virgül gibi), eşleşme başarılı olur.|  
+|`\p{P})`|Sonraki karakter bir noktalama simgesi (nokta veya virgül gibi) değilse, eşleşme başarılı olur.|  
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Sıfır Genişlik Pozitif Geriye Yönelik Onaylar  
- Aşağıdaki gruplandırma yapısı sıfır genişlikpozitif görünüm iddiasını tanımlar:  
+ Aşağıdaki gruplandırma yapısı sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi tanımlar:  
   
- `(?<=`*alt ifade*`)`  
+ `(?<=`alt *ifade*`)`  
   
- *alt ifadenin* herhangi bir normal ifade deseni olduğu yerde. Bir eşleşmenin başarılı olabilmesi için, eşleşme sonucuna dahil edilmese de, `subexpression` geçerli konumun solundaki giriş dizesinde alt *ifadenin* oluşması gerekir. Sıfır genişlikte pozitif bir bakış iddiası geri adım atmaz.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Bir eşleşmenin başarılı olması için, alt *ifade* geçerli konumun solundaki giriş dizesinde gerçekleşmelidir, ancak bu `subexpression` , eşleşme sonucuna dahil değildir. Sıfır genişlikli pozitif geriye yönelik onaylama işlemi geri izlememez.  
   
- Sıfır genişlik pozitif görünümler genellikle normal ifadelerin başında kullanılır. Tanımladıkları desen, eşleşme sonucunun bir parçası olmasa da, eşleşme için bir ön koşuldur.  
+ Sıfır genişlikli pozitif geriye yönelik Onaylamalar genellikle normal ifadelerin başlangıcında kullanılır. Tanımladıkları model, eşleşme sonucunun bir parçası olmasa da bir eşleşmenin ön koşuludur.  
   
- Örneğin, aşağıdaki örnek yirmi birinci yüzyıl için yılın son iki basamağı yla eşleşir (diğer bir süre, "20" rakamlarının eşleşen dizeden önce olmasını gerektirir).  
+ Örneğin, aşağıdaki örnek, yirmi ilk yüzyıl için yılın son iki basamağıyla eşleşir (yani, "20" basamağının eşleşen dizeden önce gelmesini gerektirir).  
   
  [!code-csharp[RegularExpressions.Language.Grouping#9](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookbehind1.cs#9)]
  [!code-vb[RegularExpressions.Language.Grouping#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookbehind1.vb#9)]  
   
- Normal ifade `(?<=\b20)\d{2}\b` deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `(?<=\b20)\d{2}\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`\d{2}`|İki ondalık basamak eşleştirin.|  
-|`(?<=\b20)`|İki ondalık basamak, sözcük sınırında "20" ondalık basamaklardan önce yse, eşlebe devam edin.|  
+|`\d{2}`|İki ondalık basamağı eşleştirin.|  
+|`(?<=\b20)`|İki ondalık basamak bundan önce bir sözcük sınırında "20" ondalık haneleri içeriyorsa eşleştirmeye devam edin.|  
 |`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
- Yakalanan bir gruptaki son karakter veya karakterler, grubun normal ifade deseniyle eşleşen karakterlerin bir alt kümesi olması gerektiğinde, geri izlemeyi sınırlamak için de sıfır genişlikpozitif görünümler kullanılır. Örneğin, bir grup birbirini izleyen tüm sözcük karakterlerini yakalarsa, son karakterin alfabetik olmasını gerektirecek sıfır genişlikpozitif görünüm iddiası kullanabilirsiniz.  
+ Sıfır genişlikli pozitif geriye yönelik onaylar Ayrıca, yakalanan bir gruptaki son karakter veya karakterlerin, bu grubun normal ifade düzeniyle eşleşen karakterlerin bir alt kümesi olması gerektiğinde geri izlemeyi sınırlandırmak için de kullanılır. Örneğin, bir grup tüm ardışık kelime karakterlerini yakaladığında, son karakterin alfabetik olmasını gerektirmek için sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi kullanabilirsiniz.  
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Sıfır Genişlik Negatif Geriye Yönelik Onaylar  
- Aşağıdaki gruplandırma yapısı sıfır genişliknegatif görünüm iddiasını tanımlar:  
+ Aşağıdaki gruplandırma yapısı sıfır Genişlik negatif geriye yönelik bir onaylama işlemi tanımlar:  
   
- `(?<!`*alt ifade*`)`  
+ `(?<!`alt *ifade*`)`  
   
- *alt ifadenin* herhangi bir normal ifade deseni olduğu yerde. Bir eşleşmenin başarılı olabilmesi için, alt *ifadenin* geçerli konumun solundaki giriş dizesinde oluşmaması gerekir. Ancak, eşleşmeyen `subexpression` herhangi bir alt dize maç sonucuna dahil edilmez.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir. Bir eşleşmenin başarılı olması için alt *ifade* , geçerli konumun solundaki giriş dizesinde gerçekleşmemelidir. Ancak eşleşmeyen herhangi bir alt dize, `subexpression` eşleşme sonucuna dahil edilmez.  
   
- Sıfır genişliknegatif görünümleri genellikle normal ifadelerin başında kullanılır. Tanımladıkları desen, izleyen dizedeki bir eşleşmeyi engeller. Yakalanan bir gruptaki son karakter veya karakter, o grubun normal ifade deseniyle eşleşen karakterlerden biri veya daha fazlası olmadığında geri izlemeyi sınırlamak için de kullanılır. Örneğin, bir grup tüm ardışık sözcük karakterlerini yakalarsa, son karakterin alt düzeye uygun olmamasını\_gerektirecek sıfır genişlikpozitif görünüm iddiası kullanabilirsiniz.  
+ Sıfır Genişlik negatif geriye yönelik onaylar genellikle normal ifadelerin başlangıcında kullanılır. Tanımladıkları model, izleyen dizedeki bir eşleşmeyi daha fazla haline aşıyor. Ayrıca, yakalanan bir gruptaki son karakter veya karakterlerin, bu grubun normal ifade düzeniyle eşleşen bir veya daha fazla karakter olmaması gerektiğinde geri izlemeyi sınırlandırmak için de kullanılır. Örneğin, bir grup tüm ardışık kelime karakterlerini yakaladığında, son karakterin alt çizgi () olmaması için sıfır genişlikli pozitif geriye yönelik bir onaylama işlemi kullanabilirsiniz \_ .  
   
- Aşağıdaki örnek, hafta sonu olmayan haftanın herhangi bir gününün tarihiyle eşleşir (diğer bir gün, ne Cumartesi ne de Pazar).  
+ Aşağıdaki örnek, hafta sonu olmayan (yani, Cumartesi veya Pazar olmayan) haftanın herhangi bir gününe ait tarihle eşleşir.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#10](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookbehind1.cs#10)]
  [!code-vb[RegularExpressions.Language.Grouping#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookbehind1.vb#10)]  
   
- Normal ifade `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` deseni aşağıdaki tabloda gösterildiği gibi yorumlanır.  
+ Normal ifade deseninin `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`\w+`|Bir veya daha fazla sözcük karakterini ve ardından bir beyaz boşluk karakterini eşleştirin.|  
-|`\d{1,2},`|Bir veya iki ondalık basamakla, ardından bir beyaz boşluk karakteri ve virgül eşleştirin.|  
-|`\d{4}\b`|Dört ondalık basamak eşleştirin ve eşleşmeyi sözcük sınırında sonla.|  
-|<code>(?<!(Saturday&#124;Sunday) )</code>|Eşleşmeden önce "Cumartesi" veya "Pazar" dizeleri ve ardından bir boşluk dışında bir şey varsa, maç başarılı olur.|  
+|`\w+`|Bir veya daha fazla sözcük karakteri ve ardından bir boşluk karakteri eşleştirin.|  
+|`\d{1,2},`|Bir veya iki ondalık basamakla, sonra da boşluk karakteri ve virgül ile eşleştirin.|  
+|`\d{4}\b`|Dört ondalık basamağı eşleştirin ve eşleşmeyi bir sözcük sınırında sonlandırın.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Eşleşmeden önce "Cumartesi" veya "Pazar" dizelerinden sonra bir boşluk gelmesi durumunda eşleşme başarılı olur.|  
   
 <a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Atomik gruplar  
- Aşağıdaki gruplandırma yapısı bir atomik grubu temsil eder (diğer bazı normal ifade motorlarında geri dönüşsüz alt ifade, atomik alt ifade veya yalnızca bir kez kullanılan alt ifade olarak bilinir):
+ Aşağıdaki gruplandırma yapısı bir atomik grubu temsil eder (diğer bazı normal ifade altyapılarında geri alma olmayan alt ifade, atomik alt ifade veya yalnızca bir kez alt ifade olarak bilinir):
   
- `(?>`*alt ifade*`)`  
+ `(?>`alt *ifade*`)`  
   
- *alt ifadenin* herhangi bir normal ifade deseni olduğu yerde.  
+ Burada alt *ifade* herhangi bir normal ifade deseninin olduğu yerdir.  
   
- Normalde, normal bir ifade isteğe bağlı veya alternatif eşleştirme deseni içeriyorsa ve eşleşme başarılı değilse, normal ifade altyapısı bir giriş dizesini desenle eşleştirmek için birden çok yönde dallanabilir. Bir eşleşme ilk dalı aldığında bulunamazsa, normal ifade altyapısı ilk eşleşmeyi aldığı noktaya yedekleme yapabilir veya geri dönebilir ve ikinci dalı kullanarak eşleşmeyi deneyebilir. Bu işlem, tüm dallar denenene kadar devam edebilir.  
+ Genellikle, normal bir ifade isteğe bağlı veya alternatif eşleşen bir model içeriyorsa ve bir eşleşme başarılı olmazsa, normal ifade altyapısı, bir giriş dizesiyle bir Düzenle eşleştirmek için birden çok yönde Dalla çalışabilir. İlk dalı aldığında bir eşleşme bulunamazsa, normal ifade altyapısı ilk eşleşmeyi geçen noktaya yedekleyebilir veya geri izleyebilir ve ikinci dalı kullanarak eşleşmeyi dener. Bu işlem, tüm dallar denenene kadar devam edebilir.  
   
- `(?>` *Alt ifade* `)` dili yapısı geri izlemeyi devre dışı kılabilir. Normal ifade altyapısı, giriş dizesinde olabildiğince çok karakterle eşleşir. Başka eşleşme mümkün olmadığında, alternatif desen eşleşmeleri denemek için geri izleme olmaz. (Diğer bir şekilde, alt ifade yalnızca alt ifadeyle eşleşecek dizelerle eşleşir; alt tümmeye ve izleyen alt ifadelere dayalı bir dizeyle eşleşmeye çalışmaz.)  
+ Alt `(?>` *ifade* `)` dil yapısı geri izlemeyi devre dışı bırakır. Normal ifade altyapısı, giriş dizesindeki gibi çok sayıda karakterle eşleştirecektir. Başka bir eşleşme mümkün olmadığında, alternatif kalıp eşleşmelerini denemek için geri izlemecektir. (Yani, alt ifade yalnızca alt ifade tarafından eşleştirilecek dizeleriyle eşleşir; alt ifadeyi ve bunu izleyen tüm alt ifadeleri temel alan bir dizeyle eşleştirmeye çalışmaz.)  
   
- Geri izlemenin başarılı olmayacağını biliyorsanız bu seçenek önerilir. Normal ifade altyapısının gereksiz arama gerçekleştirmesini engellemek performansı artırır.  
+ Geri izlemenin başarısız olacağını biliyorsanız bu seçenek önerilir. Normal ifade altyapısının gereksiz arama gerçekleştirmesini önlemek performansı geliştirir.  
   
- Aşağıdaki örnek, bir atom grubunun bir desen eşleşmesinin sonuçlarını nasıl modifelemelerini göstermektedir. Geri izleme normal ifade başarıyla yinelenen karakterler bir dizi eşleşen bir sözcük sınırında aynı karakterin bir daha oluşumu, ancak geri izleme normal ifade yok.  
+ Aşağıdaki örnek, bir atomik grubun bir model eşleşme sonuçlarını nasıl değiştirdiği gösterilmektedir. Geri izleme normal ifadesi, bir dizi yinelenen karakterle başarıyla eşleşir, ancak bir sözcük sınırında aynı karakterin daha fazla tekrarı gelir, ancak geri dönüş olmayan normal ifade değildir.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
- Geri dönüşümsüz normal `(?>(\w)\1+).\b` ifade aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Geri dönüş olmayan normal ifadesi `(?>(\w)\1+).\b` Aşağıdaki tabloda gösterildiği gibi tanımlanır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`(\w)`|Tek bir sözcük karakterini eşleştirin ve ilk yakalama grubuna atayın.|  
-|`\1+`|Yakalanan ilk alt dizenin değerini bir veya daha fazla kez eşleştirin.|  
-|`.`|Herhangi bir karakteri eşleştirin.|  
-|`\b`|Eşleşmeyi sözcük sınırında sonla.|  
-|`(?>(\w)\1+)`|Yinelenen sözcük karakterinin bir veya daha fazla olayını eşleştirin, ancak sözcük sınırında son karakteri eşleştirmek için geri izleme yapmayın.|  
+|`(\w)`|Tek bir sözcük karakteriyle eşleştirin ve ilk yakalama grubuna atayın.|  
+|`\1+`|İlk yakalanan alt dizenin değerini bir veya daha fazla kez eşleştirin.|  
+|`.`|Herhangi bir karakterle eşleştirin.|  
+|`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|  
+|`(?>(\w)\1+)`|Yinelenen bir sözcük karakterinin bir veya daha fazla tekrarı ile eşleşir, ancak bir sözcük sınırının son karakteriyle eşleşecek şekilde geri izlememeyin.|  
   
 <a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Yapıları ve Normal İfade Nesnelerini Gruplandırma  
- Normal bir ifade yakalama grubuyla eşleşen alt dizeleri, <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> özellik tarafından döndürülen nesneden alınabilen nesnelerle temsil edilir. Nesne <xref:System.Text.RegularExpressions.GroupCollection> aşağıdaki gibi doldurulur:  
+ Normal bir ifade yakalama grubuyla eşleşen alt dizeler <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> özelliği tarafından döndürülen nesneden alınabilecek nesneler tarafından temsil edilir <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . <xref:System.Text.RegularExpressions.GroupCollection>Nesnesi aşağıdaki gibi doldurulur:  
   
-- Koleksiyondaki <xref:System.Text.RegularExpressions.Group> ilk nesne (dizin sıfırdaki nesne) tüm eşleşmeyi temsil eder.  
+- Koleksiyondaki ilk <xref:System.Text.RegularExpressions.Group> nesne (sıfır dizinindeki nesne) tüm eşleşmeyi temsil eder.  
   
-- Sonraki <xref:System.Text.RegularExpressions.Group> nesne kümesi, adsız (numaralanmış) yakalama gruplarını temsil eder. Bunlar, normal ifadede soldan sağa tanımlandıkları sırada görünürler. Bu grupların dizin değerleri 1 ile koleksiyondaki adsız yakalama gruplarının sayısı arasında değişir. (Belirli bir grubun dizin, numaralanmış geri referansına eşdeğerdir. Geri göndermeler hakkında daha fazla bilgi için Bkz. [Backreference Yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Sonraki <xref:System.Text.RegularExpressions.Group> nesne kümesi adlandırılmamış (numaralandırılmış) yakalama gruplarını temsil eder. Bunlar, soldan sağa doğru normal ifadede tanımlandıkları sırada görünürler. Bu grupların Dizin değerleri 1 ' den koleksiyondaki adlandırılmamış yakalama grupları sayısına göre değişir. (Belirli bir grubun dizini numaralandırılmış geribaşvuruya eşdeğerdir. Geri başvurular hakkında daha fazla bilgi için bkz. [Backreference yapıları](backreference-constructs-in-regular-expressions.md).)  
   
-- Son <xref:System.Text.RegularExpressions.Group> nesne kümesi adlandırılmış yakalama gruplarını temsil eder. Bunlar, normal ifadede soldan sağa tanımlandıkları sırada görünürler. İlk adlandırılmış yakalama grubunun dizin değeri, son adlandırılmış yakalama grubunun dizininden bir büyüktür. Normal ifadede adsız yakalama grupları yoksa, ilk adlı yakalama grubunun dizin değeri birdir.  
+- Son nesne kümesi, <xref:System.Text.RegularExpressions.Group> adlandırılmış yakalama gruplarını temsil eder. Bunlar, soldan sağa doğru normal ifadede tanımlandıkları sırada görünürler. İlk adlandırılmış yakalama grubunun dizin değeri, son adlandırılmamış yakalama grubunun dizininden bir daha büyük. Normal ifadede adlandırılmamış bir yakalama grubu yoksa, ilk adlandırılmış yakalama grubunun dizin değeri bir olur.  
   
- Bir yakalama grubuna niceleyici uygularsanız, karşılık <xref:System.Text.RegularExpressions.Group> gelen <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>nesnenin <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> ve özellikleri bir yakalama grubu tarafından yakalanan son alt dizeyi yansıtır. Özellik tarafından döndürülen <xref:System.Text.RegularExpressions.CaptureCollection> nesneden niceleyicileri olan gruplar tarafından yakalanan tam bir alt dizeleri kümesini alabilirsiniz. <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>  
+ Bir yakalama grubuna nicelik belirteci uygularsanız, karşılık gelen <xref:System.Text.RegularExpressions.Group> nesnenin <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> , <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> ve <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> özellikleri bir yakalama grubu tarafından yakalanan son alt dizeyi yansıtır. <xref:System.Text.RegularExpressions.CaptureCollection>Özelliği tarafından döndürülen nesneden nicelik belirteçleri olan gruplar tarafından yakalanan tüm alt dizeler kümesini alabilirsiniz <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
- Aşağıdaki örnek, nesneler <xref:System.Text.RegularExpressions.Group> ve <xref:System.Text.RegularExpressions.Capture> nesneler arasındaki ilişkiyi açıklar.  
+ Aşağıdaki örnek, ve nesneleri arasındaki ilişkiyi açıklar <xref:System.Text.RegularExpressions.Group> <xref:System.Text.RegularExpressions.Capture> .  
   
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- Normal ifade `(\b(\w+)\W+)+` deseni, bir dizeden tek tek sözcükleri ayıklar. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
+ Normal ifade deseninin `(\b(\w+)\W+)+` tek tek kelimeleri bir dizeden ayıklar. Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
-|`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Birlikte, bu karakterler bir kelime oluştururlar. Bu ikinci yakalama grubudur.|  
+|`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Birlikte, bu karakterler bir kelime oluşturur. Bu ikinci yakalama grubudur.|  
 |`\W+`|Bir veya daha fazla sözcük olmayan karakteri eşleştirin.|  
-|`(\b(\w+)\W+)`|Bir veya daha fazla sözcük karakterinin deseni yle eşleşin ve ardından bir veya daha fazla sözcük olmayan karakter bir veya daha fazla kez eşleştirin. Bu ilk yakalama grubudur.|  
+|`(\b(\w+)\W+)`|Bir veya daha fazla sözcük karakteri ve ardından bir veya daha fazla sözcük olmayan karakter örüntüsünün bir veya daha fazla kez eşleşmesini eşleştirin. Bu ilk yakalama grubudur.|  
   
- İkinci yakalama grubu tümcenin her sözcüğüyle eşleşir. İlk yakalama grubu, kelimeyi izleyen noktalama işaretleri ve beyaz boşlukla birlikte her sözcüğü eşler. Dizini 2 olan <xref:System.Text.RegularExpressions.Group> nesne, ikinci yakalama grubuyla eşleşen metin hakkında bilgi sağlar. Yakalama grubu tarafından yakalanan sözcüklerin tam <xref:System.Text.RegularExpressions.CaptureCollection> <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> kümesi, özellik tarafından döndürülen nesneden kullanılabilir.  
+ İkinci yakalama grubu, cümlenin her sözcüğüyle eşleşir. İlk yakalama grubu, sözcüğü izleyen noktalama ve boşluk ile birlikte her sözcükle eşleşir. <xref:System.Text.RegularExpressions.Group>Dizini 2 olan nesne ikinci yakalama grubuyla eşleşen metin hakkında bilgi sağlar. Yakalama grubu tarafından yakalanan tüm sözcüklerin kümesi <xref:System.Text.RegularExpressions.CaptureCollection> , özelliği tarafından döndürülen nesneden kullanılabilir <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [Normal İfade Dili - Hızlı Başvuru](regular-expression-language-quick-reference.md)
+- [Geri Dönüş](backtracking-in-regular-expressions.md)

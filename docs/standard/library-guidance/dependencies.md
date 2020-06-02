@@ -2,12 +2,12 @@
 title: Bağımlılıklar ve .NET kitaplıkları
 description: .NET kitaplıklarında NuGet bağımlılıklarını yönetmeye yönelik en iyi yöntem önerileri.
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895700"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291376"
 ---
 # <a name="dependencies"></a>Bağımlılıklar
 
@@ -24,7 +24,7 @@ Derleme zamanında, NuGet, bağımlılıkların bağımlılıkları da dahil olm
 Çoğu elmas bağımlılığı kolayca çözülür; Ancak, belirli koşullarda sorunlar oluşturabilirler:
 
 1. **Çakışan NuGet paket başvuruları** , paketin geri yükleme sırasında bir sürümün çözümlenmesini engelliyor.
-2. **Sürümler arasındaki son değişiklikler,** çalışma zamanında hatalara ve özel durumlara neden oluyor.
+2. **Sürümler arasındaki son değişiklikler** çalışma zamanında hatalara ve özel durumlara neden olur.
 3. **Paket derlemesi tanımlayıcı adlı**, derleme sürümü değişti ve uygulama .NET Framework çalışıyor. Derleme bağlama yeniden yönlendirmeleri gereklidir.
 
 Hangi paketlerin sizin de birlikte kullanılacağını Bileme olanaksızdır. Bir elmas bağımlılığını düşürmenin olasılığını azaltmanın iyi bir yolu, bağlı olduğunuz paket sayısını en aza indirmektir.
@@ -76,19 +76,19 @@ Paylaşılan kaynak paketleri, küçük işlevsellik parçaları için harika. �
 
 ![Paylaşılan kaynak proje](./media/dependencies/shared-source-project.png "Paylaşılan kaynak proje")
 
-Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca tarafından `PackageReference`başvurulabilirler, bu nedenle eski `packages.config` projeler hariç tutulur. Ayrıca, paylaşılan kaynak paketleri yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Bu sınırlamalar nedeniyle, paylaşılan kaynak paketleri, bir açık kaynak proje içindeki işlevselliği paylaşmak için en iyi şekilde kullanılır.
+Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca tarafından başvurulabilirler, bu `PackageReference` nedenle eski `packages.config` projeler hariç tutulur. Ayrıca, paylaşılan kaynak paketleri yalnızca aynı dil türüne sahip projeler tarafından kullanılabilir. Bu sınırlamalar nedeniyle, paylaşılan kaynak paketleri, bir açık kaynak proje içindeki işlevselliği paylaşmak için en iyi şekilde kullanılır.
 
 ✔️ küçük, iç işlevsellik parçaları için paylaşılan kaynak paketlerine başvurmayı göz önünde bulundurun.
 
 ✔️, küçük, iç işlevsellik parçaları sağlıyorsa paketinizi paylaşılan bir kaynak paketi yapmayı düşünün.
 
-✔️ Paylaşılan kaynak paketlerine başvuru YAPıN `PrivateAssets="All"`.
+✔️ Paylaşılan kaynak paketlerine başvuru YAPıN `PrivateAssets="All"` .
 
 > Bu ayar NuGet 'e paketin yalnızca geliştirme zamanında kullanılacağını ve genel bağımlılık olarak sunulmayacağını söyler.
 
 ❌Ortak API 'niz içinde paylaşılan kaynak paketi türleri yok.
 
-> Paylaşılan kaynak türleri, başvurulan derlemeye derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, bir projedeki paylaşılan kaynak `IRepository` türü, başka bir projede aynı paylaşılan kaynaktan `IRepository` ayrı bir tür. Paylaşılan kaynak paketlerindeki türlerin `internal` görünürlüğe sahip olması gerekir.
+> Paylaşılan kaynak türleri, başvurulan derlemeye derlenir ve derleme sınırları arasında değiştirilemez. Örneğin, `IRepository` bir projedeki paylaşılan kaynak türü, başka bir projede aynı paylaşılan kaynaktan ayrı bir tür `IRepository` . Paylaşılan kaynak paketlerindeki türlerin görünürlüğe sahip olması gerekir `internal` .
 
 ❌Paylaşılan kaynak paketlerini NuGet.org 'e yayımlamayın.
 
@@ -97,5 +97,5 @@ Paylaşılan kaynak paketlerinde bazı sınırlamalar vardır. Yalnızca tarafı
 > Paylaşılan kaynak paketlerini yerel bir akışa yayımlayın veya bunları projenizde dahili olarak tüketmek üzere [MyGet](./publish-nuget-package.md) yapın.
 
 >[!div class="step-by-step"]
->[Önceki](nuget.md)
->[İleri](sourcelink.md)
+>[Önceki](nuget.md) 
+> [Sonraki](sourcelink.md)

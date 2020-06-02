@@ -7,19 +7,19 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-ms.openlocfilehash: 6804a79e8beee1d42e313509966b46239e66c25f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8e332a6382cf644c82d5e26cf5234cea08dcc693
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743557"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289557"
 ---
 # <a name="unsealed-classes"></a>Mühürsüz Sınıflar
 Korumalı sınıflar öğesinden devralınamaz ve genişletilebilirliği engeller. Buna karşılık, öğesinden devralınılabilecek sınıflar korumasız sınıflar olarak adlandırılır.
 
  ✔️, bir çerçeveye pahalı ve çok daha fazla bir genişletilebilirlik sağlamak için, eklenmiş bir sanal veya korumalı üye olmadan korumasız sınıflar kullanmayı düşünün.
 
- Geliştiriciler, özel oluşturucular, yeni yöntemler veya yöntem aşırı yüklemeleri gibi kolay Üyeler eklemek için genellikle korumasız sınıflardan devralması ister. Örneğin, `System.Messaging.MessageQueue` korumasız olur ve bu sayede kullanıcıların belirli bir sıra yolu için varsayılan olarak özel kuyruklar oluşturmalarına veya belirli senaryolar için API 'YI basitleştiren özel yöntemler eklemesine olanak tanır.
+ Geliştiriciler, özel oluşturucular, yeni yöntemler veya yöntem aşırı yüklemeleri gibi kolay Üyeler eklemek için genellikle korumasız sınıflardan devralması ister. Örneğin, `System.Messaging.MessageQueue` korumasız olduğundan, kullanıcıların belirli bir sıra yoluna varsayılan olarak özel kuyruklar oluşturmalarına veya belirli senaryolar için API 'yi basitleştiren özel yöntemler eklemesine olanak tanır.
 
  Sınıflar çoğu programlama dilinde varsayılan olarak korumasız olur ve çerçeveler içindeki çoğu sınıf için de önerilen varsayılan değer budur. Korumasız türler tarafından sağlanan genişletilebilirlik, çatı kullanıcıları tarafından çok daha fazla teşekkürler ve korumasız türlerle ilişkili görece düşük test maliyetlerinden dolayı sağlanması oldukça ucuzdur.
 
@@ -29,6 +29,6 @@ Korumalı sınıflar öğesinden devralınamaz ve genişletilebilirliği engelle
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
-- [Mühürleme](../../../docs/standard/design-guidelines/sealing.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)
+- [Mühürleme](sealing.md)

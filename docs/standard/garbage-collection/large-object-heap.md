@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420584"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286034"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows sistemlerinde büyük nesne yığını
 
@@ -203,7 +203,7 @@ Gördüğünüz gibi, bu çok basit bir sınamadır ve yalnızca kendi yöntemin
 
 ### <a name="a-debugger"></a>Bir hata ayıklayıcı
 
-Bir bellek dökümünlükleriniz varsa ve hangi nesnelerin gerçekten LOH üzerinde olduğuna bakmanız gerekiyorsa, .NET tarafından sunulan [sos hata ayıklayıcı uzantısını](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) kullanabilirsiniz.
+Bir bellek dökümünlükleriniz varsa ve hangi nesnelerin gerçekten LOH üzerinde olduğuna bakmanız gerekiyorsa, .NET tarafından sunulan [sos hata ayıklayıcı uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) kullanabilirsiniz.
 
 > [!NOTE]
 > Bu bölümde bahsedilen hata ayıklama komutları [Windows hata ayıklayıcıları](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)için geçerlidir.

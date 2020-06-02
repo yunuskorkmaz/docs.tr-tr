@@ -15,22 +15,22 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160137"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276822"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Kültüre Duyarsız Büyük/Küçük Değişikliklerini Gerçekleştirme
-, <xref:System.String.ToUpper%2A?displayProperty=nameWithType> <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>ve <xref:System.Char.ToLower%2A?displayProperty=nameWithType> yöntemler herhangi bir parametre kabul etmez aşırı yükleri sağlar. Varsayılan olarak, parametreleri olmayan bu aşırı yükler, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>'nin değerini temel alan büyük/küçük harf değişiklikleri gerçekleştirir. Bu, kültüre göre değişebilen büyük/küçük harf duyarlı sonuçlar üretir. Büyük/küçük harf değişikliklerinin kültüre duyarlı mı yoksa kültüre duyarlı mı olmasını istediğinizi açıklığa kavuşturmak için, `culture` bir parametreyi açıkça belirtmenizi gerektiren bu yöntemlerin aşırı yüklerini kullanmanız gerekir. Kültüre duyarlı servis talebi `CultureInfo.CurrentCulture` değişiklikleri `culture` için parametreyi belirtin. Kültüre duyarlı örnek değişiklikler `CultureInfo.InvariantCulture` için `culture` parametreyi belirtin.  
+<xref:System.String.ToUpper%2A?displayProperty=nameWithType>,, <xref:System.String.ToLower%2A?displayProperty=nameWithType> <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> Ve <xref:System.Char.ToLower%2A?displayProperty=nameWithType> yöntemleri herhangi bir parametreyi kabul etmayan aşırı yüklemeler sağlar. Varsayılan olarak, parametreleri olmayan bu aşırı yüklemeler, değerine göre değişiklik yapar <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> . Bu, kültüre göre değişebilen büyük/küçük harfe duyarlı sonuçlar üretir. Büyük/küçük harf duyarlı ya da kültüre duyarsız olmasını isteyip istemediğinizi net hale getirmek için, açıkça bir parametre belirtmenizi gerektiren bu yöntemlerin aşırı yüklerini kullanmanız gerekir `culture` . Kültüre duyarlı durum değişiklikleri için `CultureInfo.CurrentCulture` parametresi için öğesini belirtin `culture` . Kültüre duyarsız büyük/küçük harf değişiklikleri için `CultureInfo.InvariantCulture` parametresi için öğesini belirtin `culture` .  
   
- Genellikle, dizeleri daha sonra daha kolay arama sağlamak için standart bir servis talebi dönüştürülür. Dizeleri bu şekilde kullanıldığında, `CultureInfo.InvariantCulture` `culture` parametre için belirtmeniz gerekir, <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> çünkü değer büyük/küçük harfin değiştirilme süresi ile aramanın oluştuğu saat arasında değişebilir.  
+ Genellikle, dizeler daha sonra daha kolay arama sağlamak için standart bir büyük harfe dönüştürülür. Dizeler bu şekilde kullanıldığında parametresini belirtmeniz gerekir `CultureInfo.InvariantCulture` `culture` , çünkü değeri <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> büyük olasılıkla durumun değiştiği zaman ve aramanın gerçekleştiği zaman arasında değişebilir.  
   
- Bir güvenlik kararı bir servis talebi değiştirme işlemine dayanıyorsa, sonucun değerinden etkilenmediğinden emin `CultureInfo.CurrentCulture`olmak için işlem kültüre duyarsız olmalıdır. Kültüre duyarlı dize işlemlerinin tutarsız sonuçlar üretebileceğini gösteren bir örnek için [Dizeleri Kullanmak için En İyi Uygulamalar](../../../docs/standard/base-types/best-practices-strings.md) makalesinin "Geçerli Kültürü Kullanan Dize Karşılaştırmaları" bölümüne bakın.  
+ Bir güvenlik kararı bir durum değişikliği işlemini temel alıyorsa, sonucun değerinden etkilenmemesini sağlamak için işlem kültür duyarsız olmalıdır `CultureInfo.CurrentCulture` . Kültüre duyarlı dize işlemlerinin nasıl tutarsız sonuçlar üretediğini gösteren bir örnek için, [dizeler kullanmanın En Iyi yöntemleri](../base-types/best-practices-strings.md) olan "geçerli kültürü kullanan dize karşılaştırmaları" bölümüne bakın.  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>String.ToUpper ve String.ToLower Yöntemlerini Kullanma  
- Kod netliği için, bir `String.ToUpper` `String.ToLower` `culture` parametreyi açıkça belirtmenize olanak tanıyan yöntemlerin ve yöntemlerin her zaman aşırı yüklerini kullanmanız önerilir. Örneğin, aşağıdaki kod tanımlayıcı bir arama gerçekleştirir. İşlem `key.ToLower` varsayılan olarak kültüre duyarlıdır, ancak bu davranış kodu okumaktan net değildir.  
+ Kod netliği için, `String.ToUpper` ve yöntemlerinin her zaman `String.ToLower` açıkça bir parametre belirtmenizi sağlayan aşırı yüklerini kullanmanız önerilir `culture` . Örneğin, aşağıdaki kod bir tanımlayıcı araması gerçekleştirir. `key.ToLower`İşlem varsayılan olarak kültüre duyarlıdır, ancak bu davranışın kodu okumasından net değildir.  
   
 ### <a name="example"></a>Örnek  
   
@@ -47,7 +47,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- İşlemin `key.ToLower` kültüre duyarsız olmasını istiyorsanız, servis talebi `CultureInfo.InvariantCulture` değiştirilirken aşağıdaki örneği açıkça kullanmak için aşağıdaki örneği değiştirmeniz gerekir.  
+ `key.ToLower`İşlemin kültüre duyarsız olmasını istiyorsanız, önceki örneği aşağıdaki şekilde değiştirmeniz gerekir ve bu `CultureInfo.InvariantCulture` durumda, servis talebi değiştirirken açık bir şekilde kullanılır.  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -63,7 +63,7 @@ static object LookupKey(string key)
 ```  
   
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Char.ToUpper ve Char.ToLower Yöntemlerini Kullanma  
- Metodlar `Char.ToUpper` `Char.ToLower` ve `String.ToLower` metotlar ile aynı özelliklere sahip olmakla birlikte, etkilenen kültürler sadece Türk (Türkiye) ve Azeri (Latince, Azerbaycan) 'dır. `String.ToUpper` Bunlar tek karakterli kasa farklılıkları olan iki kültürdür. Bu benzersiz servis talebi eşleme hakkında daha fazla bilgi <xref:System.String> için sınıf konusundaki "Kasa" bölümüne bakın. Kod netliği ve tutarlı sonuçlar sağlamak için, bir `culture` parametreyi açıkça belirtmenize olanak tanıyan bu yöntemlerin aşırı yüklerini her zaman kullanmanız önerilir.  
+ `Char.ToUpper`Ve `Char.ToLower` yöntemleri ve yöntemleriyle aynı özelliklere sahip olsa da `String.ToUpper` `String.ToLower` , etkilenen tek kültürler Türkçe (Türkiye) ve Azerbaycan dili (Latin, Azerbaycan). Bunlar tek karakterli büyük/küçük harf farklılığı olan tek iki kültürde. Bu benzersiz durum eşleştirmesi hakkında daha fazla ayrıntı için, sınıf konusunun "büyük küçük harf" bölümüne bakın <xref:System.String> . Kod netliği ve tutarlı sonuçlar sağlamak için, bu yöntemlerin her zaman açıkça bir parametre belirtmenize olanak tanıyan aşırı yüklemeleri kullanmanız önerilir `culture` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -71,4 +71,4 @@ static object LookupKey(string key)
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
-- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](performing-culture-insensitive-string-operations.md)

@@ -7,22 +7,22 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bf1078d52f5e9056da6b28acc8dd2fc257eb3636
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710420"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291259"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma
-Şema nesne modeli (SOM) API 'SI, dosyalardan veya diğer kaynaklardan XML şeması tanım dili (XSD) şemalarını okumak ve yazmak ve World Wide Web Konsorsiyumu (W3C) XML şeması önerisi içinde tanımlanan yapılara eşlenen <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki SıNıFLARı kullanarak XML şemaları oluşturmak için kullanılabilir.  
+Şema nesne modeli (SOM) API 'SI, dosyalardan veya diğer kaynaklardan XML şeması tanım dili (XSD) şemalarını okumak ve yazmak ve <xref:System.Xml.Schema?displayProperty=nameWithType> World Wide Web Konsorsiyumu (W3C) XML şeması önerisi içinde tanımlanan yapılara eşlenen ad alanındaki sınıfları kullanarak XML şemaları oluşturmak için kullanılabilir.  
   
 ## <a name="reading-and-writing-xml-schemas"></a>XML Şemaları Okuma ve Yazma  
- <xref:System.Xml.Schema.XmlSchema> Sınıfı, <xref:System.Xml.Schema.XmlSchema.Read%2A> ve <xref:System.Xml.Schema.XmlSchema.Write%2A> XML şemaları okumak ve yazmak için yöntemler sağlar. Yöntemi <xref:System.Xml.Schema.XmlSchema.Read%2A> , XML şemasını <xref:System.Xml.Schema.XmlSchema> temsil eden bir nesne döndürür ve şema doğrulama uyarılarını <xref:System.Xml.Schema.ValidationEventHandler> ve bir XML Şeması okunurken karşılaşılan hataları işlemek için isteğe bağlı olarak bir parametre olarak alır.  
+ <xref:System.Xml.Schema.XmlSchema>Sınıfı, <xref:System.Xml.Schema.XmlSchema.Read%2A> ve <xref:System.Xml.Schema.XmlSchema.Write%2A> XML şemaları okumak ve yazmak için yöntemler sağlar. <xref:System.Xml.Schema.XmlSchema.Read%2A>Yöntemi, <xref:System.Xml.Schema.XmlSchema> XML şemasını temsil eden bir nesne döndürür ve <xref:System.Xml.Schema.ValidationEventHandler> şema doğrulama UYARıLARıNı ve bir XML Şeması okunurken karşılaşılan hataları işlemek için isteğe bağlı olarak bir parametre olarak alır.  
   
- <xref:System.Xml.Schema.XmlSchema.Write%2A> Yöntemi <xref:System.IO.Stream>, <xref:System.IO.TextWriter> ve <xref:System.Xml.XmlWriter> nesnelerine XML şemaları Yazar ve isteğe bağlı <xref:System.Xml.XmlNamespaceManager> bir nesneyi parametre olarak alabilir. Bir <xref:System.Xml.XmlNamespaceManager> XML şemasında karşılaşılan ad alanlarını işlemek için kullanılır. <xref:System.Xml.XmlNamespaceManager> Sınıfı hakkında daha fazla bilgi için bkz. [XML belgesinde ad alanlarını yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md).  
+ <xref:System.Xml.Schema.XmlSchema.Write%2A>Yöntemi <xref:System.IO.Stream> , ve nesnelerine XML şemaları Yazar <xref:System.IO.TextWriter> <xref:System.Xml.XmlWriter> ve isteğe bağlı bir <xref:System.Xml.XmlNamespaceManager> nesneyi parametre olarak alabilir. Bir <xref:System.Xml.XmlNamespaceManager> XML şemasında karşılaşılan ad alanlarını işlemek için kullanılır. Sınıfı hakkında daha fazla bilgi için <xref:System.Xml.XmlNamespaceManager> bkz. [XML belgesinde ad alanlarını yönetme](managing-namespaces-in-an-xml-document.md).  
   
- Aşağıdaki kod örneği, ve bir dosyasına XML şemaları okuma ve yazma hakkında bilgi gösterir. Kod `example.xsd` örneği dosyayı alır, <xref:System.Xml.Schema.XmlSchema> `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> yöntemini kullanarak bir nesnesine okur ve sonra dosyayı konsola ve yeni `new.xsd` bir dosyaya yazar. Kod örneği Ayrıca, XML şemasını <xref:System.Xml.Schema.ValidationEventHandler> okurken herhangi bir şema doğrulama `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> uyarısı veya hata ile karşılaşılan hataları işlemek için yöntemine bir parametre olarak da sağlar. <xref:System.Xml.Schema.ValidationEventHandler> Belirtilmemişse`null`, hiçbir uyarı veya hata bildirilmemiştir.  
+ Aşağıdaki kod örneği, ve bir dosyasına XML şemaları okuma ve yazma hakkında bilgi gösterir. Kod örneği `example.xsd` dosyayı alır, <xref:System.Xml.Schema.XmlSchema> yöntemini kullanarak bir nesnesine okur `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> ve sonra dosyayı konsola ve yeni bir `new.xsd` dosyaya yazar. Kod örneği Ayrıca, <xref:System.Xml.Schema.ValidationEventHandler> `static` <xref:System.Xml.Schema.XmlSchema.Read%2A> XML şemasını okurken herhangi bir şema doğrulama uyarısı veya hata ile karşılaşılan hataları işlemek için yöntemine bir parametre olarak da sağlar. Belirtilmemişse, <xref:System.Xml.Schema.ValidationEventHandler> `null` hiçbir uyarı veya hata bildirilmemiştir.  
   
  [!code-cpp[XmlSchemaReadWriteExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaReadWriteExample/CPP/XmlSchemaReadWriteExample.cpp#1)]
  [!code-csharp[XmlSchemaReadWriteExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaReadWriteExample/CS/XmlSchemaReadWriteExample.cs#1)]
@@ -47,11 +47,11 @@ ms.locfileid: "75710420"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şema Nesne Modeline (SOM) Genel Bakış](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [XML Şemaları Derleme](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [XML Şemalarını Çapraz Geçirme](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [XML Şemalarını Düzenleme](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [XML Şemalarını Dahil Etme veya İçeri Aktarma](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [Şema Derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Şema Derleme Sonrası Bilgi Kümesi](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
-- [XML Belgesinde Ad Alanlarını Yönetme](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)
+- [XML Şema Nesne Modeline (SOM) Genel Bakış](xml-schema-object-model-overview.md)
+- [XML Şemaları Derleme](building-xml-schemas.md)
+- [XML Şemalarını Çapraz Geçirme](traversing-xml-schemas.md)
+- [XML Şemalarını Düzenleme](editing-xml-schemas.md)
+- [XML Şemalarını Dahil Etme veya İçeri Aktarma](including-or-importing-xml-schemas.md)
+- [Şema Derleme için XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [Şema Derleme Sonrası Bilgi Kümesi](post-schema-compilation-infoset.md)
+- [XML Belgesinde Ad Alanlarını Yönetme](managing-namespaces-in-an-xml-document.md)

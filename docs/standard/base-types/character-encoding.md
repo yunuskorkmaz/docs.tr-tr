@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624949"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290584"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET 'te karakter kodlama sınıfları kullanma
 
@@ -24,26 +24,26 @@ Bu makalede, .NET 'in çeşitli kodlama düzenlerini kullanarak kodlama ve kod �
 
 ## <a name="encoders-and-decoders"></a>Kodlayıcılar ve kod çözücüleri
 
-.NET, çeşitli kodlama sistemlerini kullanarak metin kodlayan ve kodu çözen kodlama sınıfları sağlar. Örneğin, <xref:System.Text.UTF8Encoding> sınıfı, UTF-8 ' e kodlama ve kod çözme kurallarını açıklar. .NET, örnekler için <xref:System.Text.UnicodeEncoding> `string` UTF-16 kodlaması (sınıfıyla temsil edilir) kullanır. Kodlayıcılar ve kod çözücüleri diğer kodlama şemaları için kullanılabilir.
+.NET, çeşitli kodlama sistemlerini kullanarak metin kodlayan ve kodu çözen kodlama sınıfları sağlar. Örneğin, sınıfı, <xref:System.Text.UTF8Encoding> UTF-8 ' e kodlama ve kod çözme kurallarını açıklar. .NET, örnekler için UTF-16 kodlaması (sınıfıyla temsil edilir <xref:System.Text.UnicodeEncoding> ) kullanır `string` . Kodlayıcılar ve kod çözücüleri diğer kodlama şemaları için kullanılabilir.
 
-Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin, <xref:System.Text.UnicodeEncoding> sınıfı, yedek aralıktaki tüm `char` örnekleri denetleyerek geçerli vekil çiftlerde olduklarından emin olun. Bir geri dönüş stratejisi, bir kodlayıcı 'nın geçersiz karakterleri nasıl işlediğini veya bir kod çözücünün geçersiz baytları nasıl işlediğini belirler.
+Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin, sınıfı, <xref:System.Text.UnicodeEncoding> `char` yedek aralıktaki tüm örnekleri denetleyerek geçerli vekil çiftlerde olduklarından emin olun. Bir geri dönüş stratejisi, bir kodlayıcı 'nın geçersiz karakterleri nasıl işlediğini veya bir kod çözücünün geçersiz baytları nasıl işlediğini belirler.
 
 > [!WARNING]
 > .NET Encoding sınıfları, karakter verilerini depolamak ve dönüştürmek için bir yol sağlar. İkili verileri dize biçiminde depolamak için kullanılmamaları gerekir. Kullanılan kodlamaya bağlı olarak, kodlama sınıflarıyla ikili veriyi dize biçimine dönüştürmek beklenmedik davranışa sebep olabilir ve doğru olmayan ya da bozuk veriler üretebilir. İkili verileri bir dize biçimine dönüştürmek için, <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> yöntemini kullanın.
 
-.NET 'teki tüm karakter kodlama sınıfları, tüm karakter <xref:System.Text.Encoding?displayProperty=nameWithType> kodlamaları için ortak işlevselliği tanımlayan bir soyut sınıf olan sınıfından devralınır. .NET ' te uygulanan bağımsız kodlama nesnelerine erişmek için aşağıdakileri yapın:
+.NET 'teki tüm karakter kodlama sınıfları <xref:System.Text.Encoding?displayProperty=nameWithType> , tüm karakter kodlamaları için ortak işlevselliği tanımlayan bir soyut sınıf olan sınıfından devralınır. .NET ' te uygulanan bağımsız kodlama nesnelerine erişmek için aşağıdakileri yapın:
 
-- .NET (ASCII, UTF- <xref:System.Text.Encoding> 7, UTF-8, UTF-16 ve utf-32) içindeki standart karakter kodlamalarını temsil eden nesneleri döndüren sınıfının statik özelliklerini kullanın. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. Daha fazla bilgi için bkz. [değiştirme geri dönüş](../../../docs/standard/base-types/character-encoding.md#Replacement).
+- <xref:System.Text.Encoding>.Net (ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32) içindeki standart karakter kodlamalarını temsil eden nesneleri döndüren sınıfının statik özelliklerini kullanın. Örneğin, <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> özelliği bir <xref:System.Text.UnicodeEncoding> nesnesini döndürür. Her bir nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır. Daha fazla bilgi için bkz. [değiştirme geri dönüş](character-encoding.md#Replacement).
 
-- Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. Daha fazla bilgi için bkz. [değiştirme geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Replacement) ve [özel durum geri dönüşü](../../../docs/standard/base-types/character-encoding.md#Exception).
+- Kodlamanın sınıf oluşturucusunu çağırın. ASCII, UTF-7, UTF-8, UTF-16 ve UTF-32 kodlamalarına ait nesneler bu şekilde örneklenebilir. Varsayılan olarak her nesne, kodlayamadığı dizeleri ve kodunu çözemediği baytları işlemek için değiştirme geri dönüşünü kullanır, ancak bunun yerine bir özel durumun oluşturulmasını da belirtebilirsiniz. Daha fazla bilgi için bkz. [değiştirme geri dönüşü](character-encoding.md#Replacement) ve [özel durum geri dönüşü](character-encoding.md#Exception).
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. Daha fazla bilgi için bkz. [en uygun geri dönüş](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> oluşturucusunu çağırın ve kodlamayı temsil eden bir tamsayı geçirin. Kodlanamayan dizeleri ve kodu çözülemeyen baytları işlemek için, standart kodlama nesneleri değiştirme geri dönüşünü kullanır ve kod sayfası ile çift bayt karakter kümesi (DBCS) kodlama nesneleri, en uygun geri dönüşü kullanır. Daha fazla bilgi için bkz. [en uygun geri dönüş](character-encoding.md#BestFit).
 
 - .NET ' <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> te kullanılabilen tüm standart, kod sayfası veya DBCS kodlamasını döndüren yöntemini çağırın. Aşırı yüklemeler, hem kodlayıcı hem de kod çözücü için bir geri dönüş nesnesi belirtmenizi sağlar.
 
-<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> Yöntemini çağırarak .net 'te bulunan tüm Kodlamalar hakkında bilgi alabilirsiniz. .NET, aşağıdaki tabloda listelenen karakter kodlama düzenlerini destekler.
+Yöntemini çağırarak .NET 'te bulunan tüm Kodlamalar hakkında bilgi alabilirsiniz <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> . .NET, aşağıdaki tabloda listelenen karakter kodlama düzenlerini destekler.
 
-|Kodlama sınıfı|Açıklama|
+|Kodlama sınıfı|Description|
 |--------------|-----------|
 |[ASCII](xref:System.Text.ASCIIEncoding)|Bir baytın alt yedi bitini kullanarak sınırlı bir karakter aralığını kodlar. Bu kodlama yalnızca U+0000 ile U+007F arasındaki karakter değerlerini desteklediğinden, çoğu zaman uluslararası uygulamalar için yeterli değildir.|
 |[UTF-7](xref:System.Text.UTF7Encoding)|Karakterleri 7-bitlik ASCII karakter dizileri olarak temsil eder. ASCII olmayan Unicode karakterleri, ASCII karakterlerinin bir kaçış dizisi ile temsil edilir. UTF-7, e-posta ve haber grubu gibi protokolleri destekler. Ancak, UTF-7 özellikle güvenli veya sağlam değildir. Bazı durumlarda bir biti değiştirmek, bütün bir UTF-7 dizesinin yorumunu tamamen değiştirebilir. Diğer durumlarda, farklı UTF-7 dizeleri aynı metni kodlayabilir. ASCII olmayan karakterleri içeren diziler için UTF-7, UTF-8'den daha fazla alan gerektirir ve kodlama/kod çözme daha yavaştır. Sonuç olarak, mümkünse UTF-7 yerine UTF-8 kullanmanız gerekir.|
@@ -63,7 +63,7 @@ Varsayılan olarak, .NET Core kod sayfası 28591 dışında herhangi bir kod say
 
 ## <a name="selecting-an-encoding-class"></a>Bir Kodlama Sınıfı Seçme
 
-Eğer uygulamanız tarafından kullanılacak kodlamayı seçme olanağınız varsa, bir Unicode kodlamasını, tercihen <xref:System.Text.UTF8Encoding> veya <xref:System.Text.UnicodeEncoding>'i kullanmanız gerekir. (.NET ayrıca üçüncü bir Unicode kodlamasını destekler <xref:System.Text.UTF32Encoding>.)
+Eğer uygulamanız tarafından kullanılacak kodlamayı seçme olanağınız varsa, bir Unicode kodlamasını, tercihen <xref:System.Text.UTF8Encoding> veya <xref:System.Text.UnicodeEncoding>'i kullanmanız gerekir. (.NET ayrıca üçüncü bir Unicode kodlamasını destekler <xref:System.Text.UTF32Encoding> .)
 
 Eğer bir ASCII kodlaması (<xref:System.Text.ASCIIEncoding>) kullanmayı planlıyorsanız, bunun yerine <xref:System.Text.UTF8Encoding>'i seçin. Bu iki kodlama ASCII karakter kümesi için aynıdır, ancak <xref:System.Text.UTF8Encoding> aşağıdaki avantajlara sahiptir:
 
@@ -127,10 +127,10 @@ Bir yöntem, bir karakter için kodlamayı veya kod çözmeyi denediğinde ancak
 
 ### <a name="best-fit-fallback"></a>En Uygun Geri Dönüş
 
-Bir karakter hedef kodlamada tam bir eşleşmeye sahip olmadığında, kodlayıcı bu karakteri benzer bir karakterle eşlemeyi deneyebilir. (En uygun geri dönüş genellikle bir kod çözme sorunu değil, bir kodlama sorunudur. Unicode ile başarıyla eşleştirilenemeyen karakterler içeren çok az sayıda kod sayfası vardır.) En uygun geri dönüş, kod sayfası ve <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> ve <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> aşırı yükleme tarafından alınan çift baytlık karakter kümesi kodlamaları için varsayılan seçenektir.
+Bir karakter hedef kodlamada tam bir eşleşmeye sahip olmadığında, kodlayıcı bu karakteri benzer bir karakterle eşlemeyi deneyebilir. (En uygun geri dönüş genellikle bir kod çözme sorunu değil, bir kodlama sorunudur. Unicode ile başarıyla eşleştirilenemeyen karakterler içeren çok az sayıda kod sayfası vardır.) En uygun geri dönüş, kod sayfası ve <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> ve aşırı yükleme tarafından alınan çift baytlık karakter kümesi kodlamaları için varsayılan seçenektir <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> .
 
 > [!NOTE]
-> Teorik olarak, .net (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>ve <xref:System.Text.UTF32Encoding>) içinde sunulan Unicode kodlama sınıfları her karakter kümesindeki her karakteri destekler, bu nedenle en uygun geri dönüş sorunlarını ortadan kaldırmak için kullanılabilirler.
+> Teorik olarak, .NET (, ve) içinde sunulan Unicode kodlama sınıfları <xref:System.Text.UTF8Encoding> <xref:System.Text.UnicodeEncoding> <xref:System.Text.UTF32Encoding> her karakter kümesindeki her karakteri destekler, bu nedenle en uygun geri dönüş sorunlarını ortadan kaldırmak için kullanılabilirler.
 
 En uygun stratejiler farklı kod sayfaları için farklılık gösterir. Örneğin, bazı kod sayfalarında tam genişlikteki Latin karakterler, daha yaygın olan yarım genişlikteki Latin karakterlerle eşlenir. Diğer kod sayfaları için bu eşleme yapılmaz. Agresif bir en uygun stratejide bile, bazı kodlamalardaki bazı karakterler için mümkün olan hiçbir uygun karakter yoktur. Örneğin, bir Çince ideogramın kod sayfası 1252 için hiçbir mantıklı eşlemesi yoktur. Bu durumda, bir değiştirme dizesi kullanılır. Varsayılan olarak bu dize, yalnızca tek bir SORU İŞARETİ (U+003F) karakteridir.
 
@@ -145,7 +145,7 @@ Aşağıdaki örnek, kod sayfası 1252'yi (Batı Avrupa dilleri için Windows ko
 En uygun eşleme, Unicode verilerini kod sayfası verisine kodlayan bir <xref:System.Text.Encoding> nesnesi için varsayılan davranıştır ve bu davranışı kullanan eski uygulamalar vardır. Ancak, güvenlik gerekçesiyle çoğu yeni uygulamanın, en uygun davranışından kaçınması gerekir. Örneğin, uygulamalar bir etki alanı adını en uygun kodlama ile koymamalıdır.
 
 > [!NOTE]
-> Bir kodlama için aynı zamanda özel bir en uygun geri dönüş eşlemesi uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](../../../docs/standard/base-types/character-encoding.md#Custom) bölümüne bakın.
+> Bir kodlama için aynı zamanda özel bir en uygun geri dönüş eşlemesi uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](character-encoding.md#Custom) bölümüne bakın.
 
 Eğer en uygun geri dönüş bir kodlama nesnesi için varsayılansa, <xref:System.Text.Encoding> veya <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> aşırı yüklemesini çağırarak bir <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> nenesi aldığınızda başka bir geri dönüş stratejisi seçebilirsiniz. Aşağıdaki bölüm, kod sayfası 1252 ile eşleşemeyen her karakteri yıldız işareti (*) ile değiştiren bir örnek içerir.
 
@@ -161,13 +161,13 @@ Bir karakterin hedef düzende tam eşleşmesi olmadığında ancak eşlenebilece
 [!code-csharp[Conceptual.Encoding#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/replacementascii.cs#2)]
 [!code-vb[Conceptual.Encoding#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/replacementascii.vb#2)]
 
-.NET, <xref:System.Text.EncoderReplacementFallback> bir karakter <xref:System.Text.DecoderReplacementFallback> kodlama veya kod çözme işleminde tam olarak eşlenmezse değiştirme dizesini yerine geçen ve sınıflarını içerir. Varsayılan olarak bu değiştirme dizesi bir soru işaretidir, ancak farklı dize seçmek için bir sınıf oluşturucusu aşırı yüklemesini çağırabilirsiniz. Genellikle, değiştirme karakteri tek bir karakterdir, ancak bu, bir gereksinim değildir. Aşağıdaki örnek, değişim dizesi olarak yıldız işareti (*) kullanan bir <xref:System.Text.EncoderReplacementFallback> nesnesinin örneğini oluşturarak kod sayfası 1252'nin davranışını değiştirir.
+.NET, <xref:System.Text.EncoderReplacementFallback> <xref:System.Text.DecoderReplacementFallback> bir karakter kodlama veya kod çözme işleminde tam olarak eşlenmezse değiştirme dizesini yerine geçen ve sınıflarını içerir. Varsayılan olarak bu değiştirme dizesi bir soru işaretidir, ancak farklı dize seçmek için bir sınıf oluşturucusu aşırı yüklemesini çağırabilirsiniz. Genellikle, değiştirme karakteri tek bir karakterdir, ancak bu, bir gereksinim değildir. Aşağıdaki örnek, değişim dizesi olarak yıldız işareti (*) kullanan bir <xref:System.Text.EncoderReplacementFallback> nesnesinin örneğini oluşturarak kod sayfası 1252'nin davranışını değiştirir.
 
 [!code-csharp[Conceptual.Encoding#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1a.cs#3)]
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> Bir kodlama için ayrıca bir değiştirme sınıfı da uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](../../../docs/standard/base-types/character-encoding.md#Custom) bölümüne bakın.
+> Bir kodlama için ayrıca bir değiştirme sınıfı da uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](character-encoding.md#Custom) bölümüne bakın.
 
 SORU İŞARETİ (U+003F) karakterine ek olarak, özellikle Unicode karakterlerine başarıyla çevrilemeyen bayt dizilerinin kodunu çözerken Unicode DEĞİŞTİRME KARAKTERİ (U+FFFD) de bir değiştirme dizesi olarak kullanılır. Ancak, istediğiniz değiştirme dizesini seçebilirsiniz ve bu dize birden çok karakteri içerebilir.
 
@@ -181,7 +181,7 @@ Bir en uygun geri dönüş veya değiştirme dizesi sağlamak yerine bir kodlay�
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> Ayrıca bir kodlama işlemi için özel bir özel durum işleyicisi uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](../../../docs/standard/base-types/character-encoding.md#Custom) bölümüne bakın.
+> Ayrıca bir kodlama işlemi için özel bir özel durum işleyicisi uygulayabilirsiniz. Daha fazla bilgi için [özel bir geri dönüş stratejisi uygulama](character-encoding.md#Custom) bölümüne bakın.
 
 <xref:System.Text.EncoderFallbackException> ve <xref:System.Text.DecoderFallbackException> nesneleri, özel durumu oluşturan durum hakkında aşağıdaki bilgileri sağlar:
 
@@ -268,4 +268,4 @@ Aşağıdaki kod, daha sonra `CustomMapper` nesnesinin örneğini oluşturur ve 
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [Genelleştirme ve yerelleştirme](../../../docs/standard/globalization-localization/index.md)
+- [Genelleştirme ve yerelleştirme](../globalization-localization/index.md)

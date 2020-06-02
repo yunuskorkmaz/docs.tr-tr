@@ -9,39 +9,39 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 34fc8eef5270369419b76899f0dbe1ace106caf6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd36b98af25db2921c164ac359188997d379a270
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741697"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280056"
 ---
 # <a name="equality-operators"></a>Eşitlik İşleçleri
-Bu bölümde eşitlik işleçlerini aşırı yükleme ve `operator==` ve eşitlik işleçleri olarak `operator!=` açıklanır.
+Bu bölüm, eşitlik işleçlerini aşırı yüklemeyi ve `operator==` `operator!=` eşitlik işleçlerini gösterir.
 
- ❌ eşitlik işleçlerinden birini aşırı yüklemeyin.
+ ❌Farklı bir eşitlik işleçlerinden birini aşırı yüklemeyin.
 
- ✔️ <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçleri tam olarak aynı semantiğe ve benzer performans özelliklerine sahip olduğundan emin olun.
+ ✔️, <xref:System.Object.Equals%2A?displayProperty=nameWithType> ve eşitlik işleçlerinin tam olarak aynı semantiğe ve benzer performans özelliklerine sahip olduğundan emin olun.
 
- Bu genellikle eşitlik işleçleri aşırı yüklendiğinde `Object.Equals` geçersiz kılınmasının gerektiği anlamına gelir.
+ Bu genellikle `Object.Equals` eşitlik işleçleri aşırı yüklendiğinde geçersiz kılınması gereken anlamına gelir.
 
- ❌ eşitlik işleçlerinden özel durumlar oluşturmaktan kaçının.
+ ❌Eşitlik işleçlerinden özel durumlar oluşturmaktan kaçının.
 
- Örneğin, `NullReferenceException`yapmak yerine bağımsız değişkenlerden biri null ise false döndürün.
+ Örneğin, bağımsız değişkenlerden biri oluşturmak yerine null ise false döndürün `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Değer türlerinde eşitlik Işleçleri
  eşitlik anlamlı ise, değer türlerinde eşitlik işleçlerini aşırı yükleme ✔️.
 
- Çoğu programlama dilinde, değer türleri için `operator==` varsayılan bir uygulama yoktur.
+ Çoğu programlama dilinde, değer türleri için varsayılan bir uygulama yoktur `operator==` .
 
 ## <a name="equality-operators-on-reference-types"></a>Başvuru türlerinde eşitlik Işleçleri
- ❌ kesilebilir başvuru türlerinde eşitlik işleçlerini aşırı yüklemeyi ÖNLEYIN.
+ ❌Değişebilir başvuru türlerinde eşitlik işleçlerini aşırı yüklemeyi ÖNLEYIN.
 
  Birçok dilde başvuru türleri için yerleşik eşitlik işleçleri vardır. Yerleşik operatörler genellikle başvuru eşitliğini uygular ve varsayılan davranış değer eşitliğine değiştirildiğinde çok sayıda geliştirici şaşırtır.
 
  Bu sorun, sabit başvuru türleri için azaltıldığı için, değişiklik, başvuru eşitliği ve değer eşitlik arasındaki farkı fark ettiğini çok daha zor hale getirir.
 
- ❌, başvuru eşitlemeden önemli ölçüde daha yavaş olacaksa, başvuru türlerinde eşitlik işleçlerini aşırı yüklemeyi ÖNLEYIN.
+ ❌Uygulama, başvuru eşitlemeden önemli ölçüde daha yavaş olacaksa, başvuru türlerinde eşitlik işleçlerini aşırı yüklemeden KAÇıNıN.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -49,5 +49,5 @@ Bu bölümde eşitlik işleçlerini aşırı yükleme ve `operator==` ve eşitli
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Kullanım yönergeleri](usage-guidelines.md)

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 78eb07503810e75d14bcd73740fe429e2f73475e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743669"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290103"
 ---
 # <a name="parameter-design"></a>Parametre tasarımı
 
-Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren bölümler dahil olmak üzere parametre tasarımı hakkında kapsamlı yönergeler sağlar. Ayrıca, [adlandırma parametrelerinde](../../../docs/standard/design-guidelines/naming-parameters.md)açıklanan yönergelere başvurmalısınız.
+Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren bölümler dahil olmak üzere parametre tasarımı hakkında kapsamlı yönergeler sağlar. Ayrıca, [adlandırma parametrelerinde](naming-parameters.md)açıklanan yönergelere başvurmalısınız.
 
  ✔️, üyenin gerektirdiği işlevselliği sağlayan en az türetilmiş parametre türünü kullanır.
 
- Örneğin, bir koleksiyonu tasarlandıran ve her öğeyi konsola yazdıran bir yöntem tasarlamak istediğinizi varsayalım. Bu tür bir yöntem, örneğin <xref:System.Collections.ArrayList> veya <xref:System.Collections.IList>değil parametre olarak <xref:System.Collections.IEnumerable> almalıdır.
+ Örneğin, bir koleksiyonu tasarlandıran ve her öğeyi konsola yazdıran bir yöntem tasarlamak istediğinizi varsayalım. Bu tür bir yöntem, <xref:System.Collections.IEnumerable> veya değil parametre olarak ele <xref:System.Collections.ArrayList> alınmalıdır <xref:System.Collections.IList> .
 
- ❌ ayrılmış parametreleri kullanmayın.
+ ❌Ayrılmış parametreleri kullanmayın.
 
  Daha sonraki bir sürümde bir üyeye daha fazla giriş gerekiyorsa, yeni bir aşırı yükleme eklenebilir.
 
- ❌, işaretçi, işaretçi dizileri veya çok boyutlu dizileri parametre olarak alan genel kullanıma açık yöntemlere sahip DEĞILDIR.
+ ❌İşaretçi, işaretçi dizileri veya çok boyutlu diziler parametre olarak alan genel kullanıma açık yöntemlere sahip DEĞILDIR.
 
  İşaretçiler ve çok boyutlu diziler düzgün şekilde kullanılması nispeten zordur. Neredeyse tüm durumlarda, bu türleri parametre olarak almayı önlemek için API 'Ler yeniden dağıtılabilir.
 
- ✔️, tüm `out` parametrelerini tüm değer ve `ref` parametrelerine (parametre dizileri hariç) izleyerek, aşırı yüklemeler arasındaki parametre sıralaması içinde tutarsızlığa neden olsa bile (bkz. [üye aşırı yüklemesi](../../../docs/standard/design-guidelines/member-overloading.md)).
+ ✔️ `out` , tüm parametreleri ve `ref` parametreleri (parametre dizileri hariç), aşırı yüklemeler arasındaki parametre sıralaması içinde tutarsızlığa neden olsa bile tüm parametreleri (bkz. [üye aşırı yükleme](member-overloading.md)).
 
- `out` parametreler ek dönüş değerleri olarak görülebilir ve bunları birlikte gruplandırmak yöntem imzasının anlaşılması daha kolay hale gelir.
+ `out`Parametreler ek dönüş değerleri olarak görülebilir ve bunları birlikte gruplandırmak yöntem imzasının daha kolay anlaşılmasını sağlar.
 
  ✔️, Üyeler geçersiz kılınırken veya arabirim üyeleri uygularken adlandırma parametrelerinde tutarlıdır.
 
@@ -43,43 +43,43 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 ### <a name="choose-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapın
  ✔️, bir üyenin iki veya daha fazla Boole parametresine sahip olması halinde numaralandırmalar kullanın.
 
- iki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, ❌ Boolean kullanmayın.
+ ❌İki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, Boolean kullanmayın.
 
- Numaralandırmalar, daha sonra değerlerin eklenmesi için bir yer sağlar, ancak [enum tasarımında açıklanan numaralandırıcılara](../../../docs/standard/design-guidelines/enum.md)değer eklemenin tüm etkilerine dikkat etmeniz gerekir.
+ Numaralandırmalar, daha sonra değerlerin eklenmesi için bir yer sağlar, ancak [enum tasarımında açıklanan numaralandırıcılara](enum.md)değer eklemenin tüm etkilerine dikkat etmeniz gerekir.
 
  ✔️, gerçekten iki durumlu değerler olan Oluşturucu parametreleri için Boolean kullanmayı düşünün ve yalnızca Boole özelliklerini başlatmak için kullanılır.
 
 ### <a name="validate-arguments"></a>Bağımsız değişkenleri doğrula
- ✔️ ortak, korumalı veya açıkça uygulanmış üyelere geçirilen bağımsız değişkenleri doğrular. Doğrulama başarısız olursa, <xref:System.ArgumentException?displayProperty=nameWithType>veya alt sınıflarından birini oluşturun.
+ ✔️ ortak, korumalı veya açıkça uygulanmış üyelere geçirilen bağımsız değişkenleri doğrular. <xref:System.ArgumentException?displayProperty=nameWithType>Doğrulama başarısız olursa, veya alt sınıflarından biri oluşturun.
 
  Gerçek doğrulamanın ortak veya korumalı üyenin kendisinde olması gerekmediğini unutmayın. Bu, bazı özel veya iç bir yordamın daha düşük bir düzeyinde gerçekleşecektir. Ana nokta, son kullanıcılara sunulan tüm yüzey alanının bağımsız değişkenleri denetlemesini sağlar.
 
- null bir bağımsız değişken geçirilirse ve üye null bağımsız değişkenleri desteklemiyorsa ✔️ <xref:System.ArgumentNullException> throw.
+ <xref:System.ArgumentNullException>null bir bağımsız değişken geçirilmezse ve üye null bağımsız değişkenleri desteklemiyorsa ✔️ throw.
 
  Enum parametrelerini doğrulamak ✔️.
 
  Enum bağımsız değişkenlerinin enum tarafından tanımlanan aralıkta olacağını varsaymayın. CLR, değer numaralandırmasında tanımlanmasa bile herhangi bir tamsayı değerini bir sabit listesi değerine dönüştürmeyi sağlar.
 
- ❌ enum Aralık denetimleri için <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> kullanmayın.
+ ❌<xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>Enum Aralık denetimleri için kullanmayın.
 
  ✔️, kesilebilir bağımsız değişkenlerin doğrulandıktan sonra değişmiş olabileceğini unutmayın.
 
  Üye güvenliğe duyarlı ise, bir kopya yapmanız ve sonra bağımsız değişkeni doğrulamanız ve işlemesi önerilir.
 
-### <a name="pass-parameters"></a>Parametreleri geçir
- Bir çerçeve tasarımcısının perspektifinden, üç temel parametre grubu vardır: değere göre parametreler, `ref` parametreleri ve `out` parametreleri.
+### <a name="pass-parameters"></a>Parametre geçirme
+ Bir çerçeve tasarımcısının perspektifinden, üç temel parametre grubu vardır: değere göre parametreler, `ref` Parametreler ve `out` Parametreler.
 
- Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Visual Basic, ve C++gibi en popüler CLR dilleri değere göre parametreleri geçirmek için varsayılan değer.
+ Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Visual Basic ve C++ gibi en popüler CLR dilleri, parametreleri değere göre geçirmek için varsayılan değer.
 
- Bir bağımsız değişken bir `ref` parametresi aracılığıyla geçirildiğinde, üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref` parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.
+ Bir bağımsız değişken bir parametre aracılığıyla geçirildiğinde `ref` , üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref`Parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.
 
- `Out` parametreler, bazı küçük farklılıklar ile `ref` parametrelere benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.
+ `Out`parametreler `ref` , bazı küçük farklılıklar ile parametrelere benzerdir. Parametre başlangıçta atanmamış olarak kabul edilir ve bir değer atanmadan önce üye gövdesinde okunamaz. Ayrıca, parametreye, üyenin döndürdüğü bir değere atanmalıdır.
 
- `out` veya `ref` parametreleri kullanmaktan kaçının ❌.
+ ❌`out`Veya parametreleri kullanmaktan kaçının `ref` .
 
- `out` veya `ref` parametrelerinin kullanılması işaretçilerle deneyim gerektirir, değer türlerinin ve başvuru türlerinin nasıl farklı olduğunu ve birden çok dönüş değeriyle yöntemleri işleme. Ayrıca, `out` ve `ref` parametreleri arasındaki fark yaygın olarak anlaşılmaz. Genel bir hedef kitle için tasarlayan çerçeve mimarları, kullanıcıların `out` veya `ref` parametreleriyle birlikte çalışmasını beklememelidir.
+ `out`Veya `ref` parametrelerinin kullanılması, işaretçilerle deneyim gerektirir, değer türlerinin ve başvuru türlerinin nasıl farklı olduğunu ve birden çok dönüş değeriyle yöntemleri işleme. Ayrıca, `out` ve parametreleri arasındaki fark `ref` yaygın olarak anlaşılmaz. Genel bir hedef kitle için tasarlayan çerçeve mimarları, kullanıcıların, veya parametreleriyle birlikte çalışmasını beklememelidir `out` `ref` .
 
- ❌ başvuru türlerini başvuruya göre geçirmez.
+ ❌Başvuru türlerini başvuruya göre geçirmeyin.
 
  Kural için, başvuruları değiştirmek için kullanılabilecek bir yöntem gibi bazı sınırlı özel durumlar vardır.
 
@@ -92,11 +92,11 @@ public class String {
 }
 ```
 
- Daha sonra bir Kullanıcı <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemini aşağıdaki şekilde çağırabilir:
+ Bir Kullanıcı daha sonra <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi aşağıdaki şekilde çağırabilir:
 
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`
 
- C# Params anahtar sözcüğünü bir dizi parametresine eklemek, parametreyi bir so adlı params dizi parametresine değiştirir ve geçici bir dizi oluşturmak için bir kısayol sağlar.
+ C# params anahtar sözcüğünü bir dizi parametresine eklemek, parametreyi bir so adlı params dizi parametresine değiştirir ve geçici bir dizi oluşturmak için bir kısayol sağlar.
 
 ```csharp
 public class String {
@@ -112,11 +112,11 @@ public class String {
 
  Son kullanıcıların dizileri az sayıda öğe ile geçmesini bekleseniz, dizi parametrelerine params anahtar sözcüğünü eklemeyi düşünün ✔️. Yaygın senaryolarda çok sayıda öğenin geçirilmesi bekleniyorsa, kullanıcılar muhtemelen bu öğeleri de satır içine geçirmeyecektir ve bu nedenle params anahtar sözcüğü gerekli değildir.
 
- ❌, arayan girişi neredeyse her zaman bir dizide zaten olacaksa params dizilerini kullanmaktan kaçının.
+ ❌Arayan girişi neredeyse her zaman bir dizide zaten olacaksa params dizilerini kullanmaktan kaçının.
 
  Örneğin, bayt dizi parametrelerine sahip Üyeler tek tek baytlar ileterek neredeyse hiçbir şekilde çağrılmaz. Bu nedenle, .NET Framework bayt dizi parametreleri params anahtar sözcüğünü kullanmaz.
 
- ❌, dizi params dizi parametresini alan üye tarafından değiştirilmişse params dizilerini kullanmayın.
+ ❌Dizi params dizi parametresini alan üye tarafından değiştirilirse params dizilerini kullanmayın.
 
  Birçok derleyicilerin bağımsız değişkenlerini çağrı sitesinde geçici bir diziye değiştirdiğinden, dizi geçici bir nesne olabilir ve bu nedenle dizideki tüm değişiklikler kaybedilir.
 
@@ -136,16 +136,16 @@ public class String {
 
  İşlemeden önce dizinin null olduğunu doğrulamanız gerekir.
 
- ❌, üç nokta olarak da bilinen `varargs` yöntemlerini kullanmaz.
+ ❌`varargs`Üç nokta olarak da bilinen yöntemleri kullanmayın.
 
- Gibi bazı CLR dilleri C++, `varargs` Yöntemler adlı değişken parametre listelerinin geçirilmesi için alternatif bir kural destekler. Bu kural, CLS uyumlu olmadığından çerçeve içinde kullanılmamalıdır.
+ C++ gibi bazı CLR dilleri, yöntem olarak adlandırılan değişken parametre listelerinin geçirilmesi için alternatif bir kural destekler `varargs` . Bu kural, CLS uyumlu olmadığından çerçeve içinde kullanılmamalıdır.
 
 ### <a name="pointer-parameters"></a>İşaretçi parametreleri
  Genel olarak, işaretçiler iyi tasarlanmış bir yönetilen kod çerçevesinin genel yüzey alanında görünmemelidir. Çoğu zaman işaretçiler kapsüllenmelidir. Ancak bazı durumlarda, birlikte çalışabilirlik nedenleriyle işaretçiler gereklidir ve bu gibi durumlarda işaretçiler kullanılması uygundur.
 
  ✔️, işaretçiler CLS uyumlu olmadığından, işaretçi bağımsız değişkeni alan tüm Üyeler için bir alternatif sağlar.
 
- ❌ işaretçi bağımsız değişkenlerinin pahalı bağımsız değişken denetimini yapmaktan KAÇıNıN.
+ ❌İşaretçi bağımsız değişkenlerinin pahalı bağımsız değişken denetimini yapmaktan KAÇıNıN.
 
  ✔️ işaretçileri olan üyeleri tasarlarken, işaretçiyle ilgili genel kuralları izleyin.
 
@@ -157,5 +157,5 @@ public class String {
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Üye tasarımı yönergeleri](member.md)
+- [Çerçeve tasarım yönergeleri](index.md)

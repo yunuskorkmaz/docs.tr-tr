@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289374"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
 
@@ -56,7 +56,7 @@ Dizeleri kullanırken aşağıdaki uygulamalardan kaçının:
 
 .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.
 
-|StringComparison üyesi|Açıklama|
+|StringComparison üyesi|Description|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|Geçerli kültürü kullanarak büyük/küçük harfe duyarlı bir karşılaştırma gerçekleştirir.|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Geçerli kültürü kullanarak büyük/küçük harfe duyarsız bir karşılaştırma gerçekleştirir.|
@@ -309,7 +309,7 @@ Aşağıdaki örnek, <xref:System.Collections.Hashtable> özelliği tarafından 
 Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, aşağıdaki hepsi biçimlendirme işlemlerinde geçerli iş parçacığı kültürünü kullanır:
 
 - [C#](../../csharp/language-reference/tokens/interpolated.md) ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) derleyicileri tarafından desteklenen enterpolasyonlu dizeler.
-- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçlerini kullanan veya yöntemi doğrudan çağıran dize birleştirme işlemleri <xref:System.String.Concat%2A?displayProperty=nameWithType> .
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) birleştirme işleçlerini kullanan veya yöntemi doğrudan çağıran dize birleştirme işlemleri <xref:System.String.Concat%2A?displayProperty=nameWithType> .
 - <xref:System.String.Format%2A?displayProperty=nameWithType>Yöntemi.
 - `ToString`Sayısal türlerin ve Tarih ve saat türlerinin yöntemleri.
 

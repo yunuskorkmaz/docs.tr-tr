@@ -12,25 +12,25 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3490b6fb89bfe6d7ac778078f58381bb5172e2fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124780"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288491"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Nasıl yapılır: Bir Windows Formları Uygulamasında Olayları Kullanma
-web formları uygulamalarında ASP.NET yaygın bir senaryo, bir web sayfasını denetimlerle doldurmak ve ardından kullanıcının tıklatmalarını denetlediği belirli bir eylemi gerçekleştirmektir. Örneğin, kullanıcı <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> web sayfasında tıkladığında bir denetim bir olayı yükseltir. Olayı işleyerek, uygulamanız bu düğme tıklaması için uygun uygulama mantığını gerçekleştirebilir.  
+ASP.NET Web Forms uygulamalarında yaygın bir senaryo, bir Web sayfasını denetimlerle doldurmaktır ve sonra kullanıcının tıkladığı denetime göre belirli bir eylem gerçekleştirir. Örneğin, bir <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> Denetim Kullanıcı Web sayfasında tıkladığı zaman bir olay oluşturur. Olayı işleyerek, uygulamanız ilgili düğme tıklayan için uygun uygulama mantığını gerçekleştirebilir.  
   
 ### <a name="to-handle-a-button-click-event-on-a-webpage"></a>Bir Web sayfasında düğme tıklatma olayını işlemek için  
   
-1. Bir sonraki adımda tanımladığınız yöntemin <xref:System.Web.UI.WebControls.Button> adına `OnClick` ayarlanan değerle denetimi olan bir ASP.NET Web Forms sayfası (web sayfası) oluşturun.  
+1. Bir <xref:System.Web.UI.WebControls.Button> `OnClick` sonraki adımda tanımlayacaksınız yöntemin adı olarak ayarlanmış bir denetimi olan bir ASP.NET Web Forms sayfası (Web sayfası) oluşturun.  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  
     ```  
   
-2. Olay temsilcisi imzasıyla <xref:System.Web.UI.WebControls.Button.Click> eşleşen ve değer için tanımladığınız adı `OnClick` içeren bir olay işleyicisi tanımlayın.  
+2. <xref:System.Web.UI.WebControls.Button.Click>Olay temsilcisi imzasıyla eşleşen ve değer için tanımladığınız ada sahip bir olay işleyicisi tanımlayın `OnClick` .  
   
     ```csharp  
     protected void Button1_Click(object sender, EventArgs e)  
@@ -45,10 +45,10 @@ web formları uygulamalarında ASP.NET yaygın bir senaryo, bir web sayfasını 
     End Sub  
     ```  
   
-     Olay, <xref:System.Web.UI.WebControls.Button.Click> temsilci <xref:System.EventHandler> türü için sınıfı <xref:System.EventArgs> ve olay verileri için sınıfı kullanır. ASP.NET sayfası çerçevesi otomatik olarak bir örnek oluşturan <xref:System.EventHandler> kod oluşturur ve <xref:System.Web.UI.WebControls.Button.Click> <xref:System.Web.UI.WebControls.Button> bu temsilci örneğini örnek olayına ekler.  
+     <xref:System.Web.UI.WebControls.Button.Click>Olay, <xref:System.EventHandler> temsilci türü için sınıfını ve <xref:System.EventArgs> Olay verileri için sınıfını kullanır. ASP.NET Page Framework bir örneği oluşturan kodu otomatik olarak oluşturur <xref:System.EventHandler> ve bu temsilci örneğini <xref:System.Web.UI.WebControls.Button.Click> Örneğin olayına ekler <xref:System.Web.UI.WebControls.Button> .  
   
-3. Adım 2'de tanımladığınız olay işleyicisi yönteminde, olay oluştuğunda gerekli olan eylemleri gerçekleştirmek için kod ekleyin.  
+3. 2. adımda tanımladığınız olay işleyicisi yönteminde, olay gerçekleştiğinde gerekli olan herhangi bir eylemi gerçekleştirmek için kod ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olaylar](../../../docs/standard/events/index.md)
+- [Ekinlikler](index.md)

@@ -18,79 +18,79 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 360ed985575358dd9603a55fc2d5d6c297621ec8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73197587"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290428"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 
-Aşağıdaki örnek, bir dize geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.
+Aşağıdaki örnek bir dizenin geçerli e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.
 
 ## <a name="example"></a>Örnek
 
-Örnek, dize `IsValidEmail` geçerli bir `true` e-posta adresi içeriyorsa ve `false` yoksa döndüren, ancak başka bir işlem yapamayan bir yöntem tanımlar.
+Örnek, `IsValidEmail` `true` dize geçerli bir e-posta adresi içeriyorsa ve yoksa ancak başka bir eylem içermiyorsa döndüren bir yöntemi tanımlar `false` .
 
-E-posta adresinin geçerli olduğunu `IsValidEmail` doğrulamak <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> için yöntem, etki alanı adını e-posta adresinden ayırmak için `(@)(.+)$` normal ifade deseniyle yöntemi çağırır. Üçüncü parametre, <xref:System.Text.RegularExpressions.MatchEvaluator> eşleşen metni işleyen ve değiştiren yöntemi temsil eden bir temsilcidir. Normal ifade deseni aşağıdaki gibi yorumlanır.
+E-posta adresinin geçerli olduğunu doğrulamak için yöntemi, `IsValidEmail` <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> `(@)(.+)$` etki alanı adını e-posta adresinden ayırmak üzere normal ifade düzeniyle yöntemi çağırır. Üçüncü parametre, <xref:System.Text.RegularExpressions.MatchEvaluator> eşleşen metni işleyen ve değiştiren yöntemi temsil eden bir temsilcisidir. Normal ifade deseninin aşağıdaki şekilde yorumlanması.
 
-|Desen|Açıklama|
+|Desen|Description|
 |-------------|-----------------|
-|`(@)`|@ karakterini eşleştirin. Bu ilk yakalama grubudur.|
-|`(.+)`|Herhangi bir karakterin bir veya daha fazla olayını eşleştirin. Bu ikinci yakalama grubudur.|
-|`$`|Dize sonunda maç sona erdirin.|
+|`(@)`|@ Karakteriyle eşleştirin. Bu ilk yakalama grubudur.|
+|`(.+)`|Herhangi bir karakterin bir veya daha fazla tekrarı ile eşleştirin. Bu ikinci yakalama grubudur.|
+|`$`|Dizenin sonundaki eşleşmeyi sonlandırın.|
 
-@ karakteri ile birlikte etki alanı `DomainMapper` adı Punycode <xref:System.Globalization.IdnMapping> IÇIN ABD-ASCII karakter aralığı dışında Unicode karakterleri çevirmek için sınıf kullanan yönteme geçirilir. Yöntem, etki `invalid` alanı `True` adında <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> geçersiz karakterler algılarsa bayrağı da ayarlar. Yöntem, @ sembolünden önceki Punycode etki alanı `IsValidEmail` adını yönteme döndürür.
+@ Karakteriyle birlikte etki alanı adı yöntemine geçirilir ve bu, `DomainMapper` <xref:System.Globalization.IdnMapping> US-ASCII karakter aralığının dışındaki Unicode karakterleri, Punyıcode 'a dönüştürmek için sınıfını kullanır. Yöntemi, `invalid` `True` <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> yöntemi etki alanı adında geçersiz karakterler algılarsa, bayrağını da ayarlar. Yöntemi, önüne @ simgesinden önce gelen Punyıcode etki alanı adını döndürür `IsValidEmail` .
 
-Yöntem `IsValidEmail` daha sonra, adresin <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> normal bir ifade desenine uydurluğunu doğrulamak için yöntemi çağırır.
+`IsValidEmail`Yöntemi daha sonra, <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType> adresin bir normal ifade düzenine uygun olduğunu doğrulamak için yöntemini çağırır.
 
-Yöntemin `IsValidEmail` e-posta adresini doğrulamak için kimlik doğrulaması gerçekleştirmediğini unutmayın. Yalnızca biçiminin bir e-posta adresi için geçerli olup olmadığını belirler. Buna ek `IsValidEmail` olarak, yöntem üst düzey etki alanı adının [IANA Kök Bölgesi Veritabanı'nda](https://www.iana.org/domains/root/db)listelenen geçerli bir etki alanı adı olduğunu doğrulamaz, bu da bir arama işlemi gerektirir. Bunun yerine, normal ifade yalnızca üst düzey etki alanı adının alfasayısal birinci ve son karakterler ve kalan karakterler alfasayısal veya tire (-) olmak üzere iki ila yirmi dört ASCII karakterden oluştuğunu doğrular.
+`IsValidEmail`Yönteminin, e-posta adresini doğrulamak için kimlik doğrulaması gerçekleştirmediğini unutmayın. Yalnızca biçiminin bir e-posta adresi için geçerli olup olmadığını belirler. Ayrıca `IsValidEmail` Yöntem, üst düzey etki alanı adının, [IANA kök bölgesi veritabanında](https://www.iana.org/domains/root/db)listelenen geçerli bir etki alanı adı olduğunu doğrulamaz, bu da bir arama işlemi gerektirir. Bunun yerine, normal ifade yalnızca en üst düzey etki alanı adının, alfasayısal ve son karakterlerden oluşan iki ve Yirmi dört ASCII karakterden oluştuğunu doğrular ve geri kalan karakterlerin alfasayısal ya da kısa çizgi (-) olacağını doğrular.
 
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-Bu örnekte, normal ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` ifade deseni aşağıdaki göstergede gösterildiği gibi yorumlanır. Normal ifade <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> bayrak kullanılarak derlenir.
+Bu örnekte, normal ifade deseninin ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` aşağıdaki göstergede gösterildiği gibi yorumlanacaktır. Normal ifade, bayrağı kullanılarak derlenir <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .
 
-Desen `^`: Dize başında maç başlar.
+Model `^` : dizenin başlangıcında eşleşmeyi Başlat.
 
-Desen `(?(")`: İlk karakterin tırnak işareti olup olmadığını belirleyin. `(?(")`bir değişim yapısının başlangıcıdır.
+Model `(?(")` : ilk karakterin bir tırnak işareti olup olmadığını belirleme. `(?(")`, değişim yapısının başlangıcıdır.
 
-Desen `(?(")(".+?(?<!\\)"@)`: İlk karakter bir tırnak işaretiyse, bir başlangıç tırnak işaretini eşleştirin ve ardından herhangi bir karakterin en az bir oluşumunu ve ardından bitiş tırnak işaretini eşleştirin. Bitiş tırnak işareti bir ters eğik çizgi karakteri\\( ) önce olmamalıdır. `(?<!`sıfır genişlikteki negatif bir bakış iddiasının başlangıcıdır. Dize bir at işareti (@) ile sonuçlandırılmalıdır.
+Model `(?(")(".+?(?<!\\)"@)` : ilk karakter bir tırnak işareti ise, bir başlangıç tırnak işaretiyle, ardından herhangi bir karakterin en az bir örneğinden ve ardından bir bitiş tırnak işaretiyle eşleştirin. Bitiş tırnak işareti önünde ters eğik çizgi karakteri ( \\ ) olmamalıdır. `(?<!`Sıfır Genişlik negatif geriye yönelik bir onaylama işlemi başlangıcının başlangıcıdır. Dize bir at işareti (@) ile sona ermelidir.
 
-Desen `|(([0-9a-z]`: İlk karakter bir tırnak işareti değilse, a'dan z'ye veya A'dan Z'ye herhangi bir alfabetik karakteri (karşılaştırma duyarsız dır) veya 0'dan 9'a kadar sayısal bir karakterle eşleştirin.
+Model `|(([0-9a-z]` : ilk karakter bir tırnak işareti değilse, a 'dan z 'ye veya a 'Dan z 'ye (karşılaştırma büyük/küçük harfe duyarsız) veya 0 ile 9 arasında bir sayısal karakter eşleştirin.
 
-Desen `(\.(?!\.))`: Bir sonraki karakter bir dönemse, eşleştirin. Bu bir dönem değilse, bir sonraki karaktere bakın ve maça devam edin. `(?!\.)`bir e-posta adresinin yerel bölümünde görünmesini iki ardışık dönem engelleyen sıfır genişliknegatif ileriye dönük bir iddiadır.
+Model `(\.(?!\.))` : sonraki karakter bir nokta ise, bunu eşleştirin. Bir nokta değilse, sonraki karaktere bakın ve eşleştirmeye devam edin. `(?!\.)`, iki ardışık dönemin bir e-posta adresinin yerel bölümünde görünmesini engelleyen sıfır Genişlik negatif ileriye yönelik bir onaylama işlemi.
 
-Desen ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``: Bir sonraki karakter bir nokta değilse, herhangi bir sözcük karakteri yle veya\*aşağıdaki karakterlerden\`{}biriyle eşleşin: -!#$%&' +/=?^ |~
+Model ``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]`` : sonraki karakter bir nokta değilse, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleştirin:-! # $% & ' \* +/=? ^ \` {} | ~
 
-Desen ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``: Sıfır veya daha fazla kez değiştirme desenini (bir dönem, bir dönem veya bir karakter sayısından biri) eşleştirin.
+Model ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*`` : değişim düzeniyle (bir dönem, dönem olmayan bir nokta veya bir dizi karakterden biri) sıfır veya daha fazla kez eşleştirin.
 
-Desen `@`: @ karakteri eşleştirin.
+Model `@` : @ karakteriyle eşleştirin.
 
-Desen `(?<=[0-9a-z])`: @ karakterinden önce gelen karakter A'dan Z'ye, a'dan z'ye veya 0'dan 9'a kadar ise maça devam edin. Bu desen, sıfır genişlikpozitif görünüm iddiasını tanımlar.
+Model `(?<=[0-9a-z])` : @ karakterinden önce gelen karakter bir-z, a-z veya 0 ile 9 arasında bir karakter olduğunda eşleştirmeye devam edin. Bu model sıfır Genişlik pozitif geriye yönelik bir onaylama işlemi tanımlar.
 
-Desen `(?(\[)`: @'yi izleyen karakterin bir açılım ayraç olup olmadığını kontrol edin.
+Model `(?(\[)` : @ sözcüğünden sonra gelen karakterin bir açılış ayracı olup olmadığını kontrol edin.
 
-Desen `(\[(\d{1,3}\.){3}\d{1,3}\])`: Bir açılım ayraç ise, bir IP adresi (her bir set bir döneme ayrılmış dört set) ve bir kapanış ayraç ardından açılış braketi eşleştirin.
+Model `(\[(\d{1,3}\.){3}\d{1,3}\])` : bir açma köşeli ayracı ise, açma köşeli ayracından sonra BIR IP adresi (her bir noktayla ayırarak dört adet bir ve üç basamaklı dört küme) ve bir kapanış ayracı eşleştirin.
 
-Desen `|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`: @'ı izleyen karakter bir açılış parantezi değilse, bir alfanümerik karakteri A-Z, a-z veya 0-9 değeriyle eşleştirin, ardından bir tirenin sıfır veya daha fazla oluşumunu, ardından a-Z, a-z veya 0-9 değerine sahip sıfır veya bir alfasayısal karakter, ardından bir dönem gelir. Bu desen bir veya daha fazla kez yinelenebilir ve üst düzey etki alanı adı tarafından izlenmelidir.
+Model `|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+` : @ ' i izleyen karakter bir açılış ayracı değilse, bir alfasayısal karakteri a-z, a-z veya 0-9 ile eşleştirin, ardından sıfır veya daha fazla tire, a-z, a-z veya 0-9 değerli bir alfasayısal karakter ve ardından bir nokta gelir. Bu kalıp bir veya daha fazla kez tekrarlanabilir ve ardından üst düzey etki alanı adı gelmelidir.
 
-Desen `[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`: Üst düzey etki alanı adı alfasayısal bir karakter (a-z, A-Z ve 0-9) ile başlamalı ve bitmelidir. Ayrıca alfasayısal veya tire olan sıfırdan 22 ASCII karakter içerebilir.
+Model `[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))` : en üst düzey etki alanı adı alfasayısal bir karakterle başlamalı ve bitmelidir (a-z, a-z ve 0-9). Ayrıca, alfasayısal veya kısa çizgi olan sıfır ile 22 ASCII karakter arasında da olabilir.
 
-Desen `$`: Eşleşmeyi dize sonunda bitirin.
+Model `$` : dizenin sonundaki eşleşmeyi sonlandırın.
 
-## <a name="compile-the-code"></a>Kodu derleme
+## <a name="compile-the-code"></a>Kodu derle
 
-Ve `IsValidEmail` `DomainMapper` yöntemleri düzenli ifade yardımcı yöntemleri bir kitaplık dahil edilebilir, ya da uygulama sınıfında özel statik veya örnek yöntemleri olarak dahil edilebilir.
+`IsValidEmail`Ve `DomainMapper` yöntemleri bir normal ifade yardımcı programı yöntemlerine dahil edilebilir veya uygulama sınıfına özel statik veya örnek yöntemleri olarak dahil edilebilir.
 
-Bu normal ifadeyi normal bir ifade kitaplığına eklemek için <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> yöntemi de kullanabilirsiniz.
+<xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>Bu normal ifade bir normal ifade kitaplığına dahil etmek için yöntemini de kullanabilirsiniz.
 
-Normal bir ifade kitaplığında kullanılırsa, aşağıdaki gibi bir kod kullanarak onları arayabilirsiniz:
+Bunlar bir normal ifade kitaplığında kullanılıyorsa, bunları aşağıdaki gibi bir kod kullanarak çağırabilirsiniz:
 
 [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
 [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework Normal İfadeleri](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Framework Normal İfadeleri](regular-expressions.md)

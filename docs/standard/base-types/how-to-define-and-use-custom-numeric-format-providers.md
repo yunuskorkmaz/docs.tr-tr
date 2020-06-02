@@ -15,73 +15,73 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523931"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290519"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
-.NET Framework, sayısal değerlerin dize gösterimi üzerinde kapsamlı bir denetim sağlar. Sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
+.NET Framework sayısal değerlerin dize temsili üzerinde kapsamlı denetim elde etmenizi sağlar. Sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
   
-- Sayıları dize gösterimlerine dönüştürmek için önceden tanımlanmış biçimler kümesi sağlayan standart sayısal biçim dizeleri. Parametresi olan <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> `format` sayısal biçimlendirme yöntemiyle kullanabilirsiniz. Ayrıntılar için [Standart Sayısal Biçim Dizeleri'ne](../../../docs/standard/base-types/standard-numeric-format-strings.md)bakın.  
+- Sayıları dize gösterimlerine dönüştürmek için önceden tanımlanmış bir biçim kümesi sağlayan standart sayısal biçim dizeleri. Bunları parametresi olan, gibi herhangi bir sayısal biçimlendirme yöntemiyle kullanabilirsiniz <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> `format` . Ayrıntılar için bkz. [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md).  
   
-- Özel sayısal biçim belirteçleri tanımlamak için birleştirilebilir semboller kümesi sağlayan özel sayısal biçim dizeleri. Parametresi olan <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> `format` sayısal biçimlendirme yöntemiyle de kullanılabilirler. Ayrıntılar için Bkz. [Özel Sayısal Biçim Dizeleri.](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- Özel sayısal biçim belirticileri tanımlamak için birleştirilebilecek bir sembol kümesi sağlayan özel sayısal biçim dizeleri. Ayrıca, bir parametresi olan gibi herhangi bir sayısal biçimlendirme yöntemiyle de kullanılabilirler <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> `format` . Ayrıntılar için bkz. [özel sayısal biçim dizeleri](custom-numeric-format-strings.md).  
   
-- Sayısal <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> değerlerin dize gösterimlerini gösterirken kullanılan sembolleri ve biçim desenlerini tanımlayan özel veya nesneler. Parametresi olan <xref:System.Int32.ToString%2A> `provider` sayısal biçimlendirme yöntemiyle kullanabilirsiniz. Genellikle, `provider` parametre kültüre özgü biçimlendirme belirtmek için kullanılır.  
+- <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> Sayısal değerlerin dize temsillerini görüntülerken kullanılan sembolleri ve biçim desenlerini tanımlayan özel veya nesneler. Bunları parametresi olan, gibi herhangi bir sayısal biçimlendirme yöntemiyle kullanabilirsiniz <xref:System.Int32.ToString%2A> `provider` . Genellikle, `provider` parametresi kültüre özgü biçimlendirmeyi belirtmek için kullanılır.  
   
- Bazı durumlarda (örneğin, bir uygulamanın biçimlendirilmiş bir hesap numarası, kimlik numarası veya posta kodu görüntülemesi gerektiği gibi) bu üç teknik uygun değildir. .NET Framework ayrıca sayısal bir değerin nasıl biçimlendiğini <xref:System.Globalization.CultureInfo> belirlemek <xref:System.Globalization.NumberFormatInfo> için ne bir ne de nesne olan bir biçimlendirme nesnesi tanımlamanızı sağlar. Bu konu, böyle bir nesneyi uygulamak için adım adım yönergeleri sağlar ve telefon numaralarını biçimlendiren bir örnek sağlar.  
+ Bazı durumlarda (bir uygulamanın biçimli hesap numarası, kimlik numarası veya posta kodu görüntülemesi gerektiğinde), bu üç teknik uygun değildir. .NET Framework Ayrıca bir <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> sayısal değerin nasıl biçimlendirildiğini belirlemek için ne bir veya bir nesnesi olan bir biçimlendirme nesnesi tanımlamanızı da sağlar. Bu konu, böyle bir nesne uygulamak için adım adım yönergeler sağlar ve telefon numaralarını biçimlendiren bir örnek sağlar.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Özel biçim sağlayıcısı tanımlamak için  
   
-1. Arabirimleri ve arabirimleri uygulayan bir sınıf tanımlayın. <xref:System.IFormatProvider> <xref:System.ICustomFormatter>  
+1. Ve arabirimlerini uygulayan bir sınıf tanımlayın <xref:System.IFormatProvider> <xref:System.ICustomFormatter> .  
   
-2. Yöntemi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> uygulayın. <xref:System.IFormatProvider.GetFormat%2A>biçimlendirme yönteminin <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> (yöntem gibi) özel biçimlendirme gerçekleştirmekten gerçekten sorumlu olan nesneyi almak için çağırdığı bir geri arama yöntemidir. Tipik bir <xref:System.IFormatProvider.GetFormat%2A> uygulama aşağıdakileri yapar:  
+2. Yöntemini uygulayın <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> . <xref:System.IFormatProvider.GetFormat%2A>, biçimlendirme yönteminin ( <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi gibi) özel biçimlendirme gerçekleştirmekten gerçekten sorumlu olan nesneyi almak için çağırdığı bir geri çağırma yöntemidir. Öğesinin tipik bir uygulanması <xref:System.IFormatProvider.GetFormat%2A> aşağıdakileri yapar:  
   
-    1. Yöntem parametresi olarak geçirilen nesnenin <xref:System.Type> <xref:System.ICustomFormatter> bir arabirimi temsil edip etmediğini belirler.  
+    1. <xref:System.Type>Yöntem parametresi olarak geçirilen nesnenin bir arabirimi temsil edip etmediğini belirler <xref:System.ICustomFormatter> .  
   
-    2. Parametre <xref:System.ICustomFormatter> arabirimi temsil ederse, <xref:System.IFormatProvider.GetFormat%2A> özel biçimlendirme <xref:System.ICustomFormatter> sağlamakla sorumlu arabirimi uygulayan bir nesne döndürür. Genellikle, özel biçimlendirme nesnesi kendi kendine döndürür.  
+    2. Parametresi arabirimini temsil ediyorsa <xref:System.ICustomFormatter> , <xref:System.IFormatProvider.GetFormat%2A> <xref:System.ICustomFormatter> özel biçimlendirme sağlamaktan sorumlu arabirimi uygulayan bir nesne döndürür. Genellikle, özel biçimlendirme nesnesi kendisini döndürür.  
   
-    3. Parametre arabirimi temsil <xref:System.ICustomFormatter> etmiyorsa, <xref:System.IFormatProvider.GetFormat%2A> döndürür. `null`  
+    3. Parametresi arabirimini temsil etmez <xref:System.ICustomFormatter> , <xref:System.IFormatProvider.GetFormat%2A> döndürür `null` .  
   
-3. Yöntemi <xref:System.ICustomFormatter.Format%2A> uygulayın. Bu yöntem <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntem tarafından çağrılır ve bir sayının dize gösterimini döndürmekten sorumludur. Yöntemin uygulanması genellikle aşağıdakileri içerir:  
+3. Yöntemini uygulayın <xref:System.ICustomFormatter.Format%2A> . Bu yöntem yöntemi tarafından çağrılır <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ve bir sayının dize gösterimini döndürmekten sorumludur. Yöntemi uygulamak, genellikle aşağıdakileri içerir:  
   
-    1. İsteğe bağlı olarak, yöntemin `provider` yasal olarak parametreyi inceleyerek biçimlendirme hizmetleri sağlamak amacıyla tasarlandıklarına emin olun. Her ikisini de <xref:System.IFormatProvider> <xref:System.ICustomFormatter>uygulayan nesneleri biçimlendirmek `provider` için bu, geçerli biçimlendirme nesnesiyle eşitlik için parametreyi sınama yı içerir.  
+    1. İsteğe bağlı olarak, yöntemin, parametreyi inceleyerek biçimlendirme hizmetleri sağlaması için meşru bir şekilde hedeflendiğini doğrulayın `provider` . Hem hem de uygulayan nesneleri biçimlendirmek <xref:System.IFormatProvider> için <xref:System.ICustomFormatter> , `provider` geçerli biçimlendirme nesnesi ile eşitlik için parametreyi test etmeyi de kapsar.  
   
-    2. Biçimlendirme nesnesinin özel biçim belirleyicilerini destekleyip desteklememesi gerektiğini belirleyin. (Örneğin, bir "N" biçim belirtici, bir ABD telefon numarasının NANP biçiminde çıktı olması gerektiğini gösterebilir ve "I" ITU-T Recommendation E.123 biçiminde çıktı gösterebilir.) Biçim belirteçleri kullanılırsa, yöntem belirli biçim belirtici işlemelidir. Parametredeki yönteme `format` aktarılır. Herhangi bir belirtim yoksa, `format` parametrenin değeri <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Biçimlendirme nesnesinin özel biçim belirticilerini destekleyip desteklemediğini belirleme. (Örneğin, "N" Biçim belirleyicisi bir ABD telefon numarasının NANP biçiminde çıkış olması gerektiğini belirtebilir ve bir "I", ITU-T önerisi E. 123 biçiminde bir çıktıyı gösterebilir.) Biçim belirticileri kullanılıyorsa, yöntemi belirli biçim belirticisini işlemelidir. Bu, parametresindeki yöntemine geçirilir `format` . Hiçbir tanımlayıcı yoksa, `format` parametresinin değeri olur <xref:System.String.Empty?displayProperty=nameWithType> .  
   
-    3. Yönteme `arg` parametre olarak geçen sayısal değeri alın. Dize gösterimine dönüştürmek için gereken tüm manipülasyonları gerçekleştirin.  
+    3. Yöntemine parametre olarak geçirilen sayısal değeri alın `arg` . Dize gösterimine dönüştürmek için gereken tüm düzenlemeleri gerçekleştirin.  
   
-    4. Parametrenin dize `arg` gösterimini döndürün.  
+    4. Parametresinin dize temsilini döndürün `arg` .  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>Özel sayısal biçimlendirme nesnesi kullanmak için  
+### <a name="to-use-a-custom-numeric-formatting-object"></a>Özel bir sayısal biçimlendirme nesnesi kullanmak için  
   
 1. Özel biçimlendirme sınıfının yeni bir örneğini oluşturun.  
   
-2. Biçimlendirme <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemini çağırın, özel biçimlendirme nesnesini, biçimlendirme <xref:System.String.Empty?displayProperty=nameWithType>belirticisini (veya kullanılmamışsa) ve biçimlendirilecek sayısal değeri geçirin.  
+2. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>Biçimlendirme yöntemini çağırın, özel biçimlendirme nesnesini, biçimlendirme belirticisini (veya <xref:System.String.Empty?displayProperty=nameWithType> biri kullanılmazsa) ve biçimlendirilecek sayısal değeri geçirerek.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ABD telefon numarasını temsil `TelephoneFormatter` eden bir sayıyı NANP veya E.123 biçimine dönüştüren özel bir sayısal biçim sağlayıcısını tanımlar. Yöntem, "N" (NANP biçimini oluşturan) ve "I" (uluslararası E.123 biçimini çıkaran) olmak üzere iki biçim belirteçlerini işler.  
+ Aşağıdaki örnek, `TelephoneFormatter` bir ABD telefon numarasını temsil eden bir SAYıYı NANP veya E. 123 biçimine dönüştüren adlı özel bir sayısal biçim sağlayıcısını tanımlar. Yöntemi iki biçim belirticilerini işler, "N" (NANP biçimini çıkarır) ve "I" (Uluslararası E. 123 biçimini verir).  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
  [!code-vb[Formatting.HowTo.NumericValue#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#1)]  
   
- Özel sayısal biçim sağlayıcısı yalnızca <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemle kullanılabilir. Bir `ToString`tür <xref:System.IFormatProvider> parametresi olan sayısal biçimlendirme yöntemlerinin (örneğin) diğer aşırı <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yükleri, uygulamanın <xref:System.Type> <xref:System.Globalization.NumberFormatInfo> türünü temsil eden bir nesneyi geçer. Buna karşılık, yöntemin bir <xref:System.Globalization.NumberFormatInfo> nesneyi döndürmesini beklerler. Yoksa, özel sayısal biçim sağlayıcısı yoksayılır ve geçerli <xref:System.Globalization.NumberFormatInfo> kültürün nesnesi onun yerine kullanılır. Örnekte, `TelephoneFormatter.GetFormat` yöntem, yöntem parametresini inceleyerek ve `null` <xref:System.ICustomFormatter>başka bir türü temsil ediyorsa döndürerek, uygun olmayan bir şekilde sayısal biçimlendirme yöntemine geçirilme olasılığını işler.  
+ Özel sayısal biçim sağlayıcısı yalnızca yöntemiyle birlikte kullanılabilir <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> . Tüm sayısal biçimlendirme yöntemlerinin (gibi `ToString` ), türü bir parametreye sahip diğer aşırı yüklemeler, <xref:System.IFormatProvider> <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> uygulamayı <xref:System.Type> türü temsil eden bir nesne olarak iletir <xref:System.Globalization.NumberFormatInfo> . Sonuç olarak, yöntemin bir nesne döndürmesini bekler <xref:System.Globalization.NumberFormatInfo> . Değilse, özel sayısal biçim sağlayıcısı yok sayılır ve <xref:System.Globalization.NumberFormatInfo> geçerli kültür için nesnesi kendi yerine kullanılır. Örnekte `TelephoneFormatter.GetFormat` Yöntem, yöntem parametresini inceleyerek ve dışında `null` bir türü temsil ediyorsa, bir sayısal biçimlendirme yöntemine uygun şekilde geçirilme olasılığını işler <xref:System.ICustomFormatter> .  
   
- Özel bir sayısal biçim sağlayıcısı bir biçim belirtileyiciler kümesini destekliyorsa, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntem çağrısında kullanılan biçim öğesinde biçim belirtici sağlanmışsa varsayılan bir davranış sağladığından emin olun. Örnekte, "N" varsayılan biçim belirtimidir. Bu, açık bir biçim belirtici sağlayarak bir sayının biçimlendirilmiş bir telefon numarasına dönüştürülmesine olanak tanır. Aşağıdaki örnekte böyle bir yöntem çağrısı gösteriş.  
+ Özel bir sayısal biçim sağlayıcısı bir biçim belirticileri kümesini destekliyorsa, yöntem çağrısında kullanılan biçim öğesinde biçim belirticisi sağlanmadığında, varsayılan bir davranış sağladığınızdan emin olun <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> . Örnekte, "N" varsayılan biçim belirticisidir. Bu, bir sayının bir açık Biçim belirleyicisi sağlayarak biçimlendirilmiş bir telefon numarasına dönüştürülmesini sağlar. Aşağıdaki örnekte bu tür bir yöntem çağrısı gösterilmektedir.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- Ancak, biçim belirteci yoksa dönüştürmenin gerçekleşmesine de izin verir. Aşağıdaki örnekte böyle bir yöntem çağrısı gösteriş.  
+ Ancak, biçimlendirme belirticisi yoksa dönüştürmenin oluşmasına de izin verir. Aşağıdaki örnekte bu tür bir yöntem çağrısı gösterilmektedir.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
   
- Varsayılan biçim belirtimi tanımlanmamışsa, <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> .NET'in kodunuzu desteklemediği biçimlendirmeyi sağlayabilmeleri için yöntemin uygulanmasınız aşağıdaki gibi kodlar içermelidir.  
+ Varsayılan biçim belirticisi tanımlanmamışsa, <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> .net 'in kodunuzun desteklemediği biçimlendirme sağlayabilmesi için yöntemi uygulamanız aşağıdaki gibi kod içermelidir.  
   
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- Bu örnekte, uygulayan <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntem yöntem için bir geri arama yöntemi olarak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> hizmet etmek için tasarlanmıştır. Bu nedenle, geçerli `formatProvider` `TelephoneFormatter` nesneye bir başvuru içerip içermediğini belirlemek için parametreyi inceler. Ancak, yöntem doğrudan koddan da çağrılabilir. Bu durumda, kültüre `formatProvider` özgü biçimlendirme <xref:System.Globalization.CultureInfo> bilgileri <xref:System.Globalization.NumberFormatInfo> sağlayan bir veya nesne sağlamak için parametreyi kullanabilirsiniz.
+ Bu örnekte, uygulayan yöntemi <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi için bir geri çağırma yöntemi işlevi sunacak şekilde tasarlanmıştır <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> . Bu nedenle, `formatProvider` geçerli nesneye bir başvuru içerip içermediğini anlamak için parametresini inceler `TelephoneFormatter` . Ancak, yöntemi doğrudan koddan de çağrılabilir. Bu durumda, `formatProvider` <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme bilgileri sağlayan bir veya nesnesi sağlamak için parametresini kullanabilirsiniz.

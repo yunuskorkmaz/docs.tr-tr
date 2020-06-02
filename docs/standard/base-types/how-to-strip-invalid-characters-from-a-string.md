@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: cc90e6609f9335b7e2f08271e5540b182901e8c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f2a1e7a3202b14d32ed02c6808fe2411465d9b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127646"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290441"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma
-Aşağıdaki örnek, geçersiz <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> karakterleri bir dizeden sökmek için statik yöntemi kullanır.  
+Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> bir dizeden geçersiz karakterleri atmak için statik yöntemi kullanır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `CleanInput` tanımlanan yöntemi, kullanıcı girişini kabul eden bir metin alanına girilmiş zararlı olabilecek karakterleri şeritlemek için kullanabilirsiniz. Bu durumda, `CleanInput` dönemler (.), semboller (@) ve tireler (-) dışındaki tüm alfasayısal olmayan karakterleri şeritler ve kalan dizeyi döndürür. Ancak, giriş dizesinde yer almaması gereken karakterleri silecek şekilde normal ifade deseni değiştirebilirsiniz.  
+ `CleanInput`Kullanıcı girişini kabul eden bir metin alanına girilmiş olabilecek zararlı karakterleri birleştirmek için bu örnekte tanımlanan yöntemi kullanabilirsiniz. Bu durumda, `CleanInput` noktalar (.), semboller (@) ve tire (-) dışındaki tüm alfasayısal olmayan karakterleri kaldırır ve kalan dizeyi döndürür. Ancak, normal ifade deseninin bir giriş dizesine dahil olmaması gereken herhangi bir karakteri şeritleri için değişiklik yapabilirsiniz.  
   
  [!code-csharp[RegularExpressions.Examples.StripChars#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.StripChars/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.StripChars#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.StripChars/vb/Example.vb#1)]  
   
- Normal ifade `[^\w\.@-]` deseni, sözcük karakteri, dönem, bir @ sembolü veya tire olmayan herhangi bir karakterle eşleşir. Sözcük karakteri, alt puan gibi herhangi bir harf, ondalık basamak veya noktalama bağlayıcısıdır. Bu deseneşleşen herhangi bir karakter, değiştirme deseni tarafından tanımlanan dize ile değiştirilir. <xref:System.String.Empty?displayProperty=nameWithType> Kullanıcı girişindeki ek karakterlere izin vermek için, bu karakterleri normal ifade desenindeki karakter sınıfına ekleyin. Örneğin, normal ifade `[^\w\.@-\\%]` deseni de bir yüzde sembolü ve bir giriş dizesi bir ters çizgi sağlar.  
+ Normal ifade stili, bir `[^\w\.@-]` sözcük karakteri, nokta, @ simge veya kısa çizgi olmayan herhangi bir karakterle eşleşir. Bir sözcük karakteri, alt çizgi gibi herhangi bir harf, ondalık basamak veya noktalama bağlayıcıdır. Bu düzenle eşleşen herhangi bir karakter <xref:System.String.Empty?displayProperty=nameWithType> , değiştirme düzeniyle tanımlanan dize olan ile değiştirilmiştir. Kullanıcı girişinde ek karakterlere izin vermek için, bu karakterleri normal ifade deseninin karakter sınıfına ekleyin. Örneğin, normal ifade deseninin de bir `[^\w\.@-\\%]` yüzde simgesine ve bir giriş dizesinde ters eğik çizgiye izin verir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Düzenli İfadeler](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET normal Ifadeleri](regular-expressions.md)

@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 63278f1aa1fe47377d2dae322a9d12338bbe45dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0dd68e8c9beadf26f858a4a5100e2824bbbd4a19
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710537"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292039"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable Kullanarak Nesne Karşılaştırma
-Oluşturulan **XMLDocuments**, bu belge için özel olarak oluşturulan bir ad tablosuna sahiptir. XML belgeye yüklendiğinde veya yeni öğeler ya da öznitelikler oluşturulduğunda, öznitelik ve öğe adları **XmlNameTable**içine konur. Ayrıca, başka bir belgedeki mevcut bir **NameTable** kullanarak bir **XmlDocument** oluşturabilirsiniz. **XMLDocuments** bir **XmlNameTable** parametresi alan Oluşturucu ile oluşturulduğunda, belge, **XmlNameTable**içinde depolanmış olan düğüm adlarına, ad alanlarına ve öneklere erişebilir. Ad tablosunun adlarla nasıl yüklenediğine bakılmaksızın, adlar tabloda depolandıktan sonra, adlar dize karşılaştırması yerine nesne karşılaştırması kullanılarak hızlı bir şekilde karşılaştırılabilir. Dizeler, <xref:System.Xml.NameTable.Add%2A>kullanılarak ad tablosuna da eklenebilir. Aşağıdaki kod örneği, oluşturulmakta olan bir ad tablosunu ve tabloya eklenen **MyString** dizesini gösterir. Bundan sonra, bu tablo kullanılarak bir **XmlDocument** oluşturulur ve **Dosyam. xml** ' deki öğe ve öznitelik adları var olan ad tablosuna eklenir.  
+Oluşturulan **XMLDocuments**, bu belge için özel olarak oluşturulan bir ad tablosuna sahiptir. XML belgeye yüklendiğinde veya yeni öğeler ya da öznitelikler oluşturulduğunda, öznitelik ve öğe adları **XmlNameTable**içine konur. Ayrıca, başka bir belgedeki mevcut bir **NameTable** kullanarak bir **XmlDocument** oluşturabilirsiniz. **XMLDocuments** bir **XmlNameTable** parametresi alan Oluşturucu ile oluşturulduğunda, belge, **XmlNameTable**içinde depolanmış olan düğüm adlarına, ad alanlarına ve öneklere erişebilir. Ad tablosunun adlarla nasıl yüklenediğine bakılmaksızın, adlar tabloda depolandıktan sonra, adlar dize karşılaştırması yerine nesne karşılaştırması kullanılarak hızlı bir şekilde karşılaştırılabilir. Dizeler, kullanılarak ad tablosuna da eklenebilir <xref:System.Xml.NameTable.Add%2A> . Aşağıdaki kod örneği, oluşturulmakta olan bir ad tablosunu ve tabloya eklenen **MyString** dizesini gösterir. Bundan sonra, bu tablo kullanılarak bir **XmlDocument** oluşturulur ve **Dosyam. xml** ' deki öğe ve öznitelik adları var olan ad tablosuna eklenir.  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -53,4 +53,4 @@ if (((object)node1.Name) == ((object)node2.Name))
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

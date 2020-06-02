@@ -8,43 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400570"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289739"
 ---
 # <a name="operator-overloads"></a>İşleç Aşırı Yüklemeleri
-İşleç aşırı yükleri, çerçeve türlerinin yerleşik dil ilkelleri gibi görünmesine izin verir.
+İşleç aşırı yüklemeleri, çerçeve türlerinin yerleşik dil temelleri gibi görünmesine izin verir.
 
- İzin verilen ve bazı durumlarda yararlı olsa da, operatör aşırı yükleri dikkatli kullanılmalıdır. Framework tasarımcılarının basit yöntemler olması gereken işlemler için işleçler kullanmaya başlaması gibi, operatör aşırı yüklemenin kötüye kullanıldığı birçok durum vardır. Aşağıdaki yönergeler, operatör aşırı yüklemesinin ne zaman ve nasıl kullanılacağına karar vermenize yardımcı olur.
+ Bazı durumlarda izin verilen ve yararlı olsa da, işleç aşırı yüklemeleri dikkatle kullanılmalıdır. Çerçeve tasarımcılarının basit yöntemler olması gereken işlemler için İşleçleri kullanmaya başladığı durumlar gibi, operatör aşırı yüklemesinde çok sayıda durum vardır. Aşağıdaki kılavuzlar, işleç aşırı yüklemesini ne zaman ve nasıl kullanacağınızı belirlemenize yardımcı olmalıdır.
 
- ❌İlkel (yerleşik) türler gibi hissetmesi gereken türler dışında, işleciaşırı tanımlamaktan kaçının.
+ ❌İlkel (yerleşik) türler gibi olması gereken türler dışında işleç aşırı yüklemeleri tanımlamaktan KAÇıNıN.
 
- ✔️, operatör aşırı yüklerini ilkel bir tür gibi hissetmesi gereken bir türde tanımlamayı göz önünde bulundurun.
+ ✔️, bir temel tür gibi olması gereken bir türde operatör aşırı yüklerini tanımlamayı düşünün.
 
- Örneğin, <xref:System.String?displayProperty=nameWithType> var `operator==` `operator!=` ve tanımlanır.
+ Örneğin, <xref:System.String?displayProperty=nameWithType> `operator==` ve `operator!=` tanımlı.
 
- ✔️ DO işleci nin sayıları temsil eden (örneğin) <xref:System.Decimal?displayProperty=nameWithType>yapıtlarında aşırı yüklerini tanımlar.
+ ✔️, sayıları temsil eden yapılarda işleç aşırı yüklerini tanımlama (örneğin <xref:System.Decimal?displayProperty=nameWithType> ).
 
- ❌Operatör aşırı yükleri tanımlarken SEVIMLI OLMAYIN.
+ ❌Operatör aşırı yüklerini tanımlarken şirin olun.
 
- Operatör aşırı yüklemesi, işlemin sonucunun ne olacağı hemen belli olduğu durumlarda yararlıdır. Örneğin, birini <xref:System.DateTime> diğerinden `DateTime` çıkarabilmek ve bir <xref:System.TimeSpan>. Ancak, mantıksal birleşim işlecinin iki veritabanı sorgusunu birleşim için kullanması veya akışa yazmak için kaydırma işlecinin kullanılması uygun değildir.
+ İşleç aşırı yüklemesi, işlemin sonucunun anında daha açık olduğu durumlarda faydalıdır. Örneğin, bir diğerinden çıkartabilir <xref:System.DateTime> `DateTime` ve bir alabilir <xref:System.TimeSpan> . Ancak, iki veritabanı sorgusu UNION veya bir akışa yazmak için SHIFT işlecini kullanmak üzere mantıksal UNION işlecini kullanmak uygun değildir.
 
- ❌Operandlardan en az biri aşırı yükü tanımlayan türden olmadıkça operatöre aşırı yükleme YAPMAYIN.
+ ❌İşlenenlerin en az biri aşırı yüklemeyi tanımlayan türde değilse, işleç aşırı yüklemeleri sağlamadığınız.
 
- ✔️ do operatörleri simetrik bir şekilde aşırı yükleyin.
+ aşırı yükleme işleçlerini bir simetrik biçimde ✔️.
 
- Örneğin, aşırı `operator==`yüklerseniz, `operator!=`'yi de aşırı yüklemeniz gerekir. Benzer şekilde, aşırı `operator<`yüklerseniz, ayrıca aşırı `operator>`yüklemeniz gerekir, ve benzeri.
+ Örneğin, öğesini tekrar yüklüyorsanız, `operator==` öğesini de aşırı yükleyebilirsiniz `operator!=` . Benzer şekilde, öğesini aşırı yüklüyorsanız, `operator<` ve de ' i de aşırı yükleyebilirsiniz `operator>` .
 
- ✔️ Her aşırı yüklenilebilen operatöre karşılık gelen dost adlarla yöntemler sağlamayı düşünün.
+ ✔️, her bir aşırı yüklenmiş işlece karşılık gelen kolay adlara sahip Yöntemler sağlamayı düşünün.
 
- Birçok dil operatör aşırı yükleme desteklemez. Bu nedenle, aşırı yükleme işleçleri türleri eşdeğer işlevsellik sağlayan uygun bir etki alanına özgü ada sahip ikincil bir yöntem içermelidir önerilir.
+ Birçok dil, işleç aşırı yüklemesini desteklemez. Bu nedenle, aşırı yükleme işleçleri 'nin eşdeğer işlevselliği sağlayan uygun bir etki alanına özgü ada sahip ikincil bir yöntem içermesi önerilir.
 
- Aşağıdaki tablo, işleçlerin ve karşılık gelen dostu yöntem adlarının bir listesini içerir.
+ Aşağıdaki tabloda, işleçler ve ilgili kolay yöntem adları listelenmiştir.
 
-|C# Operatör Sembolü|Meta veri adı|Dost Adı|
+|C# işleç simgesi|Meta veri adı|Kolay ad|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,33 +85,33 @@ ms.locfileid: "79400570"
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>Aşırı Yükleme Operatörü ==
- Aşırı `operator ==` yükleme oldukça karmaşıktır. İşleticinin anlamtisi gibi <xref:System.Object.Equals%2A?displayProperty=nameWithType>diğer birkaç üye ile uyumlu olması gerekir.
+### <a name="overloading-operator-"></a>Aşırı yükleme Işleci = =
+ Aşırı yükleme `operator ==` oldukça karmaşıktır. İşlecinin semantiğinin, gibi diğer birçok üye ile uyumlu olması gerekir <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Dönüşüm İşleçleri
- Dönüşüm işleçleri, bir türden diğerine dönüştürmeye izin veren unary işleçlerdir. İşleçler, operand veya dönüş türünde statik üyeler olarak tanımlanmalıdır. İki tür dönüştürme işleci vardır: örtük ve açık.
+ Dönüştürme işleçleri, bir türden diğerine dönüştürmeye izin veren birli işleçlerdir. İşleçler, işlenen ya da dönüş türü üzerinde statik üye olarak tanımlanmalıdır. İki tür dönüştürme işleci vardır: örtük ve açık.
 
- ❌Son kullanıcılar tarafından bu tür bir dönüşüm açıkça beklenmiyorsa, bir dönüşüm işleci sağlamayın.
+ ❌Bu dönüştürme, son kullanıcılar tarafından açıkça beklenmiyorsa, bir dönüştürme işleci sağlamayan.
 
- ❌Dönüşüm işleçlerini bir türün etki alanı nın dışında tanımlamaYIN.
+ ❌Dönüştürme işleçlerini bir türün etki alanı dışında tanımlamayın.
 
- Örneğin, <xref:System.Int32>, <xref:System.Double>, <xref:System.Decimal> ve tüm sayısal türleri, <xref:System.DateTime> oysa değildir. Bu nedenle, a'yı `Double(long)` bir `DateTime`.'e dönüştürmek için dönüştürme işleci olmamalıdır. Böyle bir durumda bir yapıcı tercih edilir.
+ Örneğin,, <xref:System.Int32> <xref:System.Double> ve <xref:System.Decimal> tüm sayısal türlerdir, ancak bu <xref:System.DateTime> değildir. Bu nedenle, bir öğesine dönüştürmek için bir dönüştürme işleci olmamalıdır `Double(long)` `DateTime` . Böyle bir durumda bir Oluşturucu tercih edilir.
 
- ❌Dönüştürme potansiyel olarak kayıpsa örtülü bir dönüştürme işleci sağlamaYIN.
+ ❌Dönüştürme potansiyel olarak kayıplı ise örtük bir dönüştürme işleci sağlamaın.
 
- Örneğin, `Double` 'den daha geniş bir `Int32` aralığı `Double` var çünkü `Int32`örtülü bir dönüştürme olmamalıdır. Dönüştürme potansiyel olarak kayıp olsa bile açık bir dönüştürme işleci sağlanabilir.
+ Örneğin, öğesinden öğesine örtük bir dönüşüm olmaması gerekir, `Double` çünkü öğesinden `Int32` `Double` daha geniş bir Aralık vardır `Int32` . Dönüştürme potansiyel olarak kayıplı olsa bile açık bir dönüştürme işleci sağlayabilirsiniz.
 
- ❌Örtük dökümlerden istisnalar ATMAYIN.
+ ❌Örtülü kaynaklardan özel durumlar atamayın.
 
- Bir dönüştürmenin gerçekleştiğinin farkında olmadıklarından, son kullanıcıların neler olduğunu anlamaları çok zordur.
+ Son kullanıcıların ne olduğunu anlaması çok zordur, çünkü bir dönüştürmenin gerçekleştiğinden haberdar olmayabilir.
 
- ✔️ bir <xref:System.InvalidCastException?displayProperty=nameWithType> döküm operatörüne yapılan bir çağrı kayıplı dönüşümle sonuçlanırsa ve işleç sözleşmesi kayıplı dönüşümlere izin vermiyorsa ATAMAYIN.
+ <xref:System.InvalidCastException?displayProperty=nameWithType>bir cast işlecine yapılan bir çağrı kayıplı dönüştürmeye neden olursa ve işlecin sözleşmesi kayıplı Dönüştürmelere izin vermezse throw ✔️.
 
- *2005, 2009 Microsoft Corporation © bölümleri. Tüm hakları saklıdır.*
+ *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
- *Pearson Education, Inc.'in izniyle [Framework Design Guidelines: Conventions, Idioms and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina ve Brad Abrams tarafından 22 Ekim 2008'de Addison-Wesley Professional tarafından Microsoft Windows Geliştirme Serisi'nin bir parçası olarak yayımlandı.*
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Üye tasarımı yönergeleri](member.md)
+- [Çerçeve tasarım yönergeleri](index.md)

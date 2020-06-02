@@ -9,29 +9,29 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: afa4e748599781a5979823320d8913ff5357d415
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a558547f0e6770e7e76ca31f760d6e2f55c712db
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741648"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289791"
 ---
 # <a name="exceptions-and-performance"></a>Özel Durumlar ve Performans
 Özel durumlarla ilgili yaygın bir sorun, düzenli olarak başarısız olan kod için özel durumlar kullanılıyorsa, uygulamanın performansının kabul edilemez olacağı bir konudur. Bu, geçerli bir konudur. Bir üye özel durum oluşturduğunda, performansı daha yavaş olabilir. Ancak, hata kodlarının kullanılmasına izin vermeyen özel durum yönergelerine tam olarak uyurken iyi bir performans elde etmek mümkündür. Bu bölümde açıklanan iki desen bunu yapmak için yollar önerir.
 
- ❌, özel durumların performansı olumsuz yönde etkileyebileceğinden sorunlar nedeniyle hata kodlarını kullanmayın.
+ ❌Özel durumların performansı olumsuz etkileyebilecek sorunlar nedeniyle hata kodlarını kullanmayın.
 
  Performansı artırmak için, sonraki iki bölümde açıklanan sınayıcı-doer deseninin veya TRY-Parse deseninin kullanılması mümkündür.
 
 ## <a name="tester-doer-pattern"></a>Sınayıcı-doer stili
- Bazen özel durum atma üyesinin performansı, üyenin iki içine bölünerek artırılabilir. <xref:System.Collections.Generic.ICollection%601> arabiriminin <xref:System.Collections.Generic.ICollection%601.Add%2A> yöntemine bakalım.
+ Bazen özel durum atma üyesinin performansı, üyenin iki içine bölünerek artırılabilir. <xref:System.Collections.Generic.ICollection%601.Add%2A>Arabirimin yöntemine bakalım <xref:System.Collections.Generic.ICollection%601> .
 
 ```csharp
 ICollection<int> numbers = ...
 numbers.Add(1);
 ```
 
- Koleksiyon salt okunurdur `Add` yöntemi atar. Bu, yöntem çağrısının genellikle başarısız olması beklenen senaryolarda bir performans sorunu olabilir. Sorunu hafifletmenin yöntemlerinden biri, bir değer eklemeye çalışmadan önce koleksiyonun yazılabilir olup olmadığını test eteklemektir.
+ `Add`Koleksiyon salt okunurdur, yöntemi atar. Bu, yöntem çağrısının genellikle başarısız olması beklenen senaryolarda bir performans sorunu olabilir. Sorunu hafifletmenin yöntemlerinden biri, bir değer eklemeye çalışmadan önce koleksiyonun yazılabilir olup olmadığını test eteklemektir.
 
 ```csharp
 ICollection<int> numbers = ...
@@ -42,12 +42,12 @@ if (!numbers.IsReadOnly)
 }
 ```
 
- Bir koşulu test etmek için kullanılan üye, örneğimizdeki `IsReadOnly`özellik, sınayıcı olarak adlandırılır. Olası bir atma işlemini gerçekleştirmek için kullanılan üye, örneğimizdeki `Add` yöntemi, doer olarak adlandırılır.
+ Örneğimizde bir koşulu test etmek için kullanılan üye, `IsReadOnly` sınayıcı olarak adlandırılır. Olası bir atma işlemini gerçekleştirmek için kullanılan üye, `Add` örneğimizdeki yöntemi, doer olarak adlandırılır.
 
  ✔️ özel durumlarla ilgili performans sorunlarından kaçınmak için ortak senaryolarda özel durumlar oluşturabilecek Üyeler için sınayıcı-doer modelini göz önünde bulundurun.
 
 ## <a name="try-parse-pattern"></a>TRY-Parse kriteri
- Son derece performansa duyarlı API 'Ler için, önceki bölümde açıklanan sınayıcı-doer deseninin daha da hızlı bir şekilde kullanılması gerekir. Model, üye semantiğinin bir parçası olarak iyi tanımlanmış bir test çalışması yapmak için üye adını ayarlamayı çağırır. Örneğin, <xref:System.DateTime> bir dizeyi ayrıştırma başarısız olursa bir özel durum oluşturan <xref:System.DateTime.Parse%2A> yöntemini tanımlar. Ayrıca, ayrıştırmaya deneyen karşılık gelen bir <xref:System.DateTime.TryParse%2A> yöntemi tanımlar, ancak ayrıştırma başarısız olursa false döndürür ve bir `out` parametresi kullanarak başarılı bir ayrıştırma sonucunu döndürür.
+ Son derece performansa duyarlı API 'Ler için, önceki bölümde açıklanan sınayıcı-doer deseninin daha da hızlı bir şekilde kullanılması gerekir. Model, üye semantiğinin bir parçası olarak iyi tanımlanmış bir test çalışması yapmak için üye adını ayarlamayı çağırır. Örneğin, <xref:System.DateTime> <xref:System.DateTime.Parse%2A> bir dizeyi ayrıştırma başarısız olursa özel durum oluşturan bir yöntemi tanımlar. Ayrıca <xref:System.DateTime.TryParse%2A> , ayrıştırmaya deneyen karşılık gelen bir yöntemi tanımlar, ancak ayrıştırma başarısız olursa false döndürür ve bir parametre kullanarak başarılı bir ayrıştırma sonucunu döndürür `out` .
 
 ```csharp
 public struct DateTime
@@ -77,5 +77,5 @@ public struct DateTime
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Özel Durumlar için Tasarım Yönergeleri](exceptions.md)
