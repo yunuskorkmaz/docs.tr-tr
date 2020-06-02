@@ -9,15 +9,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: c9cb178e838aab99c22089b527a6bd2e86b325de
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6a2cd6d4dd293a7f4a408e1ee97a125c9454be41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727845"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289011"
 ---
 # <a name="member-overloading"></a>Üye Aşırı Yüklemesi
-Üye aşırı yüklemesi, aynı türde yalnızca parametre sayısı veya türünde farklı ancak aynı ada sahip iki veya daha fazla üye oluşturma anlamına gelir. Örneğin, aşağıdaki `WriteLine` yöntemi aşırı yüklenmiştir:
+Üye aşırı yüklemesi, aynı türde yalnızca parametre sayısı veya türünde farklı ancak aynı ada sahip iki veya daha fazla üye oluşturma anlamına gelir. Örneğin, aşağıdaki, `WriteLine` yöntemi aşırı yüklenmiştir:
 
 ```csharp
 public static class Console {
@@ -34,19 +34,19 @@ public static class Console {
 
  ✔️ daha kısa aşırı yüklemeler tarafından kullanılan varsayılan adı belirtmek için açıklayıcı parametre adları kullanmayı deneyin.
 
- aşırı yüklerde rastgele değişen parametre adlarından KAÇıNıN ❌. Bir aşırı yükteki bir parametre başka bir aşırı yükteki parametre ile aynı girişi gösteriyorsa, parametrelerin aynı ada sahip olması gerekir.
+ ❌Aşırı yüklerde rasgele değişen parametre adlarından KAÇıNıN. Bir aşırı yükteki bir parametre başka bir aşırı yükteki parametre ile aynı girişi gösteriyorsa, parametrelerin aynı ada sahip olması gerekir.
 
- ❌ aşırı yüklenmiş üyelerlerdeki parametrelerin sıralanmasından tutarsızmaya özen gösterin. Aynı ada sahip parametreler tüm aşırı yüklerdeki aynı konumda görünmelidir.
+ ❌Aşırı yüklenmiş Üyeler içindeki parametrelerin sıralaması için tutarsız yapmaktan kaçının. Aynı ada sahip parametreler tüm aşırı yüklerdeki aynı konumda görünmelidir.
 
  ✔️ yalnızca en uzun aşırı yükleme sanal (genişletilebilirlik gerekliyse) yapın. Daha kısa aşırı yüklemeler yalnızca daha uzun bir aşırı yüklemeye çağrı yapmanız gerekir.
 
- ❌ üyeleri aşırı yüklemek için `ref` veya `out` değiştiricileri kullanmayın.
+ ❌`ref` `out` Üyeleri aşırı yüklemek için veya değiştiricilerini kullanmayın.
 
  Bazı diller bunun gibi aşırı yüklemelerin çağrılarını çözemez. Buna ek olarak, bu aşırı yüklemeler genellikle tamamen farklı semantiklere sahiptir ve muhtemelen aşırı yükleme olmaması gerekir, bunun yerine iki ayrı Yöntem
 
- ❌ aynı konumdaki ve benzer türlerde parametrelere sahip aşırı yüklemeler yoktur, ancak bu farklı semantiklerdir.
+ ❌Aynı konumda ve benzer türlerde parametrelere sahip tekrar yüklemeler yoktur, ancak bu farklı semantiklerdir.
 
- isteğe bağlı bağımsız değişkenler için `null` geçirilmesine izin ✔️.
+ `null`isteğe bağlı bağımsız değişkenler için ✔️ izin verme.
 
  ✔️ Varsayılan bağımsız değişkenlerle üyeleri tanımlamak yerine üye aşırı yüklemeyi kullanın.
 
@@ -58,5 +58,5 @@ public static class Console {
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Üye tasarımı yönergeleri](member.md)
+- [Çerçeve tasarım yönergeleri](index.md)

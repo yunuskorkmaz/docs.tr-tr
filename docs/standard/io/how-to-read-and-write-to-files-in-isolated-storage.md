@@ -16,18 +16,18 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c95f418ff85654dceed296b7a891c025ab2e62
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706692"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291805"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma
-Yalıtılmış bir depodaki bir dosyadan okumak veya <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> yazmak için,<xref:System.IO.StreamReader> akış okuyucusu (nesne) veya akış yazarı (nesne)<xref:System.IO.StreamWriter> olan bir nesne kullanın.  
+Yalıtılmış bir depodaki bir dosyayı okumak veya yazmak için, <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> Stream Reader ( <xref:System.IO.StreamReader> nesne) veya Stream Writer (nesne) ile bir nesne kullanın <xref:System.IO.StreamWriter> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği yalıtılmış bir depo alır ve TestStore.txt adlı bir dosyanın mağazada bulunup bulunmadığına denetler. Yoksa, dosyayı oluşturur ve dosyaya "Hello İzole Depolama" yazar. TestStore.txt zaten varsa, örnek kodu dosyadan okur.  
+ Aşağıdaki kod örneği yalıtılmış bir depo edinir ve mağaza 'da TestStore. txt adlı bir dosyanın var olup olmadığını denetler. Yoksa, dosyayı oluşturur ve dosyaya "Hello yalıtılmış depolama" yazar. TestStore. txt zaten varsa, örnek kod dosyadan okur.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
@@ -40,5 +40,5 @@ Yalıtılmış bir depodaki bir dosyadan okumak veya <xref:System.IO.IsolatedSto
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
-- [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)
+- [Dosya ve akış g/ç](index.md)
+- [Yalıtılmış depolama](isolated-storage.md)

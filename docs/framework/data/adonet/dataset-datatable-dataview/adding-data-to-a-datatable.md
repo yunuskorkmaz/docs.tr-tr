@@ -1,21 +1,22 @@
 ---
 title: DataTable’a Veri Ekleme
+description: Bir DataTable oluşturduktan sonra ve sütununu ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, ADO.NET içindeki bir tabloya yeni veri satırları eklemek için bu örnek koda bakın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151539"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286940"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
-Sütunlar ve <xref:System.Data.DataTable> kısıtlamalar kullanarak bir yapı oluşturduktan ve yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için, yeni <xref:System.Data.DataRow>bir değişkeni tür olarak bildirin. Yöntemi aradığınızda yeni bir **DataRow** nesnesi <xref:System.Data.DataTable.NewRow%2A> döndürülür. **DataTable** daha sonra tablonun yapısına göre **Veri Satırı** nesnesi <xref:System.Data.DataColumnCollection>oluşturur, tarafından tanımlanan .  
+' <xref:System.Data.DataTable> I oluşturup, sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişkeni tür olarak bildirin <xref:System.Data.DataRow> . Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür <xref:System.Data.DataTable.NewRow%2A> . **DataTable** daha sonra, tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur <xref:System.Data.DataColumnCollection> .  
   
- Aşağıdaki örnek, **NewRow** yöntemini arayarak yeni bir satırOluşturmanın nasıl olduğunu gösterir.  
+ Aşağıdaki örnek, **NewRow** yöntemini çağırarak yeni bir satır oluşturmayı gösterir.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +26,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- Ardından, aşağıdaki örnekte gösterildiği gibi, bir dizin veya sütun adını kullanarak yeni eklenen satırı işleyebilirsiniz.  
+ Daha sonra, aşağıdaki örnekte gösterildiği gibi, yeni eklenen satırı bir dizin veya sütun adı kullanarak düzenleyebilirsiniz.  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +38,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Veriler yeni satıra eklendikten sonra, **satırı** aşağıdaki kodda gösterilen <xref:System.Data.DataRowCollection>sıraya eklemek için Ekle yöntemi kullanılır.  
+ Veriler yeni satıra eklendikten sonra, **Add** <xref:System.Data.DataRowCollection> aşağıdaki kodda gösterildiği gibi ekleme yöntemi satırı öğesine eklemek için kullanılır.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +48,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Aşağıdaki örnekte **Add** gösterildiği gibi, <xref:System.Object>bir dizi değer geçirerek yeni bir satır eklemek için Ekle yöntemini de arayabilirsiniz.  
+ Ayrıca **Add** <xref:System.Object> , aşağıdaki örnekte gösterildiği gibi, bir değerler dizisine geçirerek yeni bir satır eklemek için Add yöntemini çağırabilirsiniz.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +58,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- **Nesne**olarak yazılan bir dizi değerin **Ekle** yöntemine geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerlere ayarlar. Dizideki değerlerin, tabloda göründükleri sıraya göre sütunlar ile sırayla eşleştiğini unutmayın.  
+ **Add** yöntemine **nesne**olarak yazılan bir değer dizisinin geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerler olarak ayarlar. Dizideki değerlerin, tabloda göründükleri sıraya göre sütunları sırayla eşleştirdiğini unutmayın.  
   
- Aşağıdaki örnek, yeni oluşturulan **Müşteriler** tablosuna 10 satır ekler.  
+ Aşağıdaki örnek, yeni oluşturulan **müşteriler** tablosuna 10 satır ekler.  
   
 ```vb  
 Dim workRow As DataRow  

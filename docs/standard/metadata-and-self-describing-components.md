@@ -15,18 +15,18 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121940"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290064"
 ---
 # <a name="metadata-and-self-describing-components"></a>Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler
 
-Geçmişte, bir dilde yazılmış bir yazılım bileşeni (.exe veya .dll) başka bir dilde yazılmış bir yazılım bileşenini kolayca kullanamaz. COM bu sorunu çözme yolunda bir adım sağladı. .NET Framework, derleyicilerin tüm modüllere ve derlemelere ek bildirim bilgileri yarayabilmelerine izin vererek bileşen etkileşimini daha da kolaylaştırır. Meta veri adı verilen bu bilgiler, bileşenlerin sorunsuz bir şekilde etkileşimkurmasına yardımcı olur.
+Geçmişte, bir dilde yazılmış bir yazılım bileşeni (. exe veya. dll), başka bir dilde yazılmış bir yazılım bileşenini kolayca kullanamaz. COM, bu sorunu çözmeye yönelik bir adım sağladı. .NET Framework, derleyicilerin tüm modüller ve derlemelere ek bildirime dayalı bilgiler yaymasına izin vererek bileşeni birlikte çalışabilirliği daha da kolaylaştırır. Meta veri olarak adlandırılan bu bilgiler, bileşenlerin sorunsuz bir şekilde etkileşim kurmasına yardımcı olur.
 
- Meta veriler, programınızı açıklayan ve ortak bir dilde taşınabilir yürütülebilir (PE) dosyada veya bellekte depolanan ikili bilgilerdir. Kodunuzu bir PE dosyasına derlediğinizde, meta veriler dosyanın bir bölümüne eklenir ve kodunuz Microsoft ara diline (MSIL) dönüştürülür ve dosyanın başka bir bölümüne eklenir. Bir modül veya derlemede tanımlanan ve başvurulan her tür ve üye meta veriler içinde tanımlanır. Kod yürütüldüğünde, çalışma zamanı meta verileri belleğe yükler ve kodunuzun sınıfları, üyeleri, kalıtım ve benzeri bilgileri bulmak için bu verilere başvurur.
+ Meta veriler, programınızı ortak bir dil çalışma zamanı Taşınabilir çalıştırılabilir (PE) dosyasında ya da bellekte depolanan bir ikili bilgi olarak tanımlar. Kodunuzu bir PE dosyasına derlerken meta veriler dosyanın bir kısmına eklenir ve kodunuz Microsoft ara dili 'ne (MSIL) dönüştürülüp dosyanın başka bir bölümüne eklenir. Bir modülde veya derlemede tanımlanan ve başvurulan her tür ve üye meta veriler içinde açıklanmıştır. Kod yürütüldüğünde, çalışma zamanı meta verileri belleğe yükler ve kodunuzun sınıfları, üyeleri, devralma vb. hakkında bilgi edinmek için ona başvurur.
 
  Meta veriler, kodunuzda tanımlanan her tür ve üyeyi dilden bağımsız bir şekilde tanımlar. Meta veriler aşağıdaki bilgileri depolar:
 
@@ -34,41 +34,41 @@ Geçmişte, bir dilde yazılmış bir yazılım bileşeni (.exe veya .dll) başk
 
   - Kimlik (ad, sürüm, kültür, ortak anahtar).
 
-  - Dışa aktarılan türler.
+  - İçe aktarılmış türler.
 
-  - Bu derlemenin bağlı olduğu diğer derlemeler.
+  - Bu derlemenin bağımlı olduğu diğer derlemeler.
 
-  - Çalıştırmak için güvenlik izinleri gerekiyordu.
+  - Çalıştırmak için gereken güvenlik izinleri.
 
 - Türlerin açıklaması.
 
-  - Ad, görünürlük, taban sınıf ve uygulanan arabirimler.
+  - Ad, görünürlük, temel sınıf ve arabirimler uygulandı.
 
-  - Üyeler (yöntemler, alanlar, özellikler, olaylar, iç içe türleri).
+  - Üyeler (Yöntemler, alanlar, özellikler, olaylar, iç içe türler).
 
-- Öznitelik.
+- Özelliklerine.
 
-  - Türleri ve üyeleri değiştiren ek açıklayıcı öğeler.
+  - Türleri ve üyeleri değiştiren ek tanımlayıcı öğeler.
 
-## <a name="benefits-of-metadata"></a>Meta verilerin Faydaları
+## <a name="benefits-of-metadata"></a>Meta verilerin avantajları
 
-Meta veriler daha basit bir programlama modelinin anahtarıdır ve Arabirim Tanımı Dili (IDL) dosyaları, üstbilgi dosyaları veya bileşen başvurusu için herhangi bir dış yöntem gereksinimini ortadan kaldırır. Meta veriler .NET Framework dillerinin kendilerini hem geliştirici hem de kullanıcı tarafından görülmeyen, dilden bağımsız bir şekilde otomatik olarak tanımlamasını sağlar. Ayrıca, meta veriler özniteliklerin kullanımı yoluyla genişletilebilir. Meta veriler aşağıdaki önemli yararları sağlar:
+Meta veriler, daha basit bir programlama modelinin anahtarıdır ve arabirim tanım dili (IDL) dosyaları, üst bilgi dosyaları veya bileşen başvurusunun herhangi bir dış yöntemi için gereksinimi ortadan kaldırır. Meta veriler, hem geliştirici hem de Kullanıcı tarafından görülmeyen .NET Framework dillerin kendisini otomatik olarak dilden bağımsız bir şekilde tanımlamasını sağlar. Ayrıca, meta veriler özniteliklerin kullanımı ile genişletilebilir. Meta veriler aşağıdaki başlıca avantajları sağlar:
 
-- Kendi kendini açıklayan dosyalar.
+- Kendi kendine açıklama dosyaları.
 
-  Ortak dil çalışma zamanı modülleri ve derlemeleri kendi kendini tanımlar. Bir modülün meta verileri, başka bir modülle etkileşim kurmak için gereken her şeyi içerir. Meta veriler COM'da IDL işlevselliğini otomatik olarak sağlar, böylece hem tanım hem de uygulama için bir dosya kullanabilirsiniz. Çalışma zamanı modülleri ve montajları bile işletim sistemi ile kayıt gerektirmez. Sonuç olarak, çalışma zamanı tarafından kullanılan açıklamalar her zaman derlenmiş dosyanızdaki gerçek kodu yansıtır ve bu da uygulama güvenilirliğini artırır.
+  Ortak dil çalışma zamanı modülleri ve derlemeleri kendi kendini tanımlar. Modülün meta verileri, başka bir modülle etkileşimde bulunmak için gereken her şeyi içerir. Meta veriler, COM 'daki IDL işlevlerini otomatik olarak sağlar, böylece hem tanım hem de uygulama için bir dosya kullanabilirsiniz. Çalışma zamanı modülleri ve derlemeler, işletim sistemiyle kayıt gerektirmez. Sonuç olarak, çalışma zamanı tarafından kullanılan açıklamalar her zaman derlenmiş dosyanızdaki gerçek kodu yansıtır ve bu da uygulama güvenilirliğini artırır.
 
 - Dil birlikte çalışabilirliği ve daha kolay bileşen tabanlı tasarım.
 
-  Meta veriler, farklı bir dilde yazılmış bir PE dosyasından bir sınıfı devralmanız için derlenmiş kod hakkında gereken tüm bilgileri sağlar. Herhangi bir yönetilen dilde yazılmış herhangi bir sınıfın örneğini (ortak dil çalışma süresini hedefleyen herhangi bir dil) açık bir şekilde işleme konusunda endişelenmeden veya özel birlikte çalışabilirlik kodu kullanmadan oluşturabilirsiniz.
+  Meta veriler, farklı bir dilde yazılmış bir PE dosyasından bir sınıfı devralması için derlenmiş kod hakkında gereken tüm bilgileri sağlar. Açık sıralama veya özel birlikte çalışabilirlik kodu kullanma hakkında endişelenmeden, herhangi bir yönetilen dilde (ortak dil çalışma zamanını hedefleyen herhangi bir dilde) yazılmış herhangi bir sınıfın örneğini oluşturabilirsiniz.
 
-- Öznitelik.
+- Özelliklerine.
 
-  .NET Framework, derlenen dosyanızda öznitelikler olarak adlandırılan belirli türde meta veri beyan etmenizi sağlar. Öznitelikler .NET Framework boyunca bulunabilir ve programınızın çalışma zamanında nasıl davranışta bulunduğunu daha ayrıntılı olarak denetlemek için kullanılır. Ayrıca, kullanıcı tanımlı özel öznitelikler aracılığıyla kendi özel meta verilerinizi .NET Framework dosyalarına yatabilirsiniz. Daha fazla bilgi için [Özniteliklere](../../docs/standard/attributes/index.md)bakın.
+  .NET Framework, derlenmiş dosyanızda öznitelikler olarak adlandırılan belirli meta veri türlerini bildirmenize olanak tanır. Öznitelikler, .NET Framework tamamında bulunabilir ve programınızın çalışma zamanında nasıl davranacağını daha ayrıntılı olarak denetlemek için kullanılır. Ayrıca, Kullanıcı tanımlı özel öznitelikler aracılığıyla .NET Framework dosyalara kendi özel meta verilerinizi de yayabilirsiniz. Daha fazla bilgi için bkz. [öznitelikler](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Meta Veri ve PE Dosya Yapısı
 
-Metaveriler .NET Framework taşınabilir yürütülebilir (PE) dosyasının bir bölümünde saklanırken, Microsoft ara dili (MSIL) PE dosyasının başka bir bölümünde saklanır. Dosyanın metaveri bölümü bir dizi tablo ve yığın veri yapısı içerir. MSIL bölümü, MSIL kodu ve PE dosyasının metaveri bölümüne atıfta bulunan metaveri belirteçleri içerir. Örneğin, kodunuzu MSIL görüntülemek için [MSIL Desassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md) gibi araçları kullandığınızda meta veri belirteçleri ile karşılaşabilirsiniz.
+Metaveriler .NET Framework taşınabilir yürütülebilir (PE) dosyasının bir bölümünde saklanırken, Microsoft ara dili (MSIL) PE dosyasının başka bir bölümünde saklanır. Dosyanın metaveri bölümü bir dizi tablo ve yığın veri yapısı içerir. MSIL bölümü, MSIL kodu ve PE dosyasının metaveri bölümüne atıfta bulunan metaveri belirteçleri içerir. Örneğin, kodunuzun MSIL 'sini görüntülemek için [MSIL Disassembler (ıldadsm. exe)](../framework/tools/ildasm-exe-il-disassembler.md) gibi araçları kullandığınızda meta veri belirteçleriyle karşılaşabilirsiniz.
 
 ### <a name="metadata-tables-and-heaps"></a>Metaveri Tabloları ve Yığınlar
 
@@ -84,7 +84,7 @@ Metaveri belirteci, dört baytlık bir sayıdır. Üstteki bayt, belirtecin atı
 
 `0x06000004`
 
-Üst bayt`0x06`( ) bunun bir **MethodDef** belirteci olduğunu gösterir. Alt üç bayt`000004`( ) bu yöntem tanımıaçıklayan bilgiler için **MethodDef** tablosunun dördüncü satırında bakmak için ortak dil çalışma zamanı söyler.
+Üstteki bayt ( `0x06` ), bu bir **MethodDef** belirteci olduğunu gösterir. Daha az üç bayt ( `000004` ), ortak dil çalışma zamanına, bu yöntem tanımını açıklayan bilgiler Için **MethodDef** tablosunun dördüncü satırına bakmasını söyler.
 
 ### <a name="metadata-within-a-pe-file"></a>Bir PE Dosyasının İçindeki Metaveriler
 
@@ -98,7 +98,7 @@ Bir program ortak dil çalışma zamanı için derlendiğinde, üç bölümden o
 
 ## <a name="run-time-use-of-metadata"></a>Meta Verilerin Çalışma Zamanında Kullanımı
 
-Meta verileri ve ortak dil çalışma süresindeki rolünü daha iyi anlamak için, basit bir program oluşturmak ve meta verilerin çalışma süresini nasıl etkilediğini göstermek yararlı olabilir. Aşağıdaki kod örneği, bir sınıf `MyApp`içinde iki yöntem gösterir. Yöntem `Main` sadece iki toplam bağımsız `Add` değişkenin toplamını döndürürken, yöntem program giriş noktasıdır.
+Ortak dil çalışma zamanında meta verileri ve rolünü daha iyi anlamak için, basit bir program oluşturmak ve meta verilerin çalışma zamanı ömrünü nasıl etkilediğini göstermek yararlı olabilir. Aşağıdaki kod örneği, adlı bir sınıf içinde iki yöntemi gösterir `MyApp` . Yöntemi `Main` program giriş noktasıdır, ancak `Add` Yöntem yalnızca iki tamsayı bağımsız değişkenin toplamını döndürür.
 
 ```vb
 Public Class MyApp
@@ -132,9 +132,9 @@ public class MyApp
 }
 ```
 
-Kod çalıştığında, çalışma zamanı modülü belleğe yükler ve bu sınıfın meta verilerine başvurur. Yüklendikten sonra, çalışma zamanı yöntemin Microsoft ara dili (MSIL) akışının hızlı yerel makine yönergelerine dönüştürmek için kapsamlı bir çözümleme gerçekleştirir. Çalışma süresi, MSIL yönergelerini gerektiğinde bir defada yerel makine koduna dönüştürmek için tam zamanında (JIT) derleyici kullanır.
+Kod çalıştığında, çalışma zamanı modülü belleğe yükler ve bu sınıfa ait meta verileri çalıştırır. Yüklendikten sonra, çalışma zamanı, yöntemin Microsoft ara dili (MSIL) akışının kapsamlı analizini gerçekleştirerek hızlı yerel makine yönergelerine dönüştürür. Çalışma zamanı tam zamanında (JıT) derleyicisini kullanarak MSIL talimatlarını aynı anda bir yönteme yerel makine koduna dönüştürür.
 
-Aşağıdaki örnek, önceki kodun `Main` işlevinden üretilen MSIL bölümünü gösterir. [MSIL Desassembler (Ildasm.exe)](../../docs/framework/tools/ildasm-exe-il-disassembler.md)kullanarak herhangi bir .NET Framework uygulamasından MSIL ve meta verileri görüntüleyebilirsiniz.
+Aşağıdaki örnek, önceki kodun işlevinden üretilen MSIL 'in bir parçasını gösterir `Main` . MSIL [Disassembler (ıldadsm. exe)](../framework/tools/ildasm-exe-il-disassembler.md)kullanarak herhangi bir .NET Framework uygulamadan MSIL ve meta verileri görüntüleyebilirsiniz.
 
 ```console
 .entrypoint
@@ -153,24 +153,24 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-JIT derleyicisi tüm yöntem için MSIL okur, iyice analiz eder ve yöntem için verimli yerel talimatlar oluşturur. At `IL_000d`, `Add` yöntem için bir meta`/*` `06000003 */`veri belirteci ( ) karşılaşılan ve çalışma zamanı **MethodDef** tablosunun üçüncü satırına danışmak için belirteci kullanır.
+JıT derleyicisi, tüm yöntemi için MSIL 'yi okur, onu tamamen analiz eder ve yöntemi için etkili yerel yönergeler oluşturur. `IL_000d`' De, yöntemi () için bir meta veri belirtecine `Add` `/*` `06000003 */` rastlandı ve çalışma zamanı, **MethodDef** tablosunun üçüncü satırına danışması için belirteci kullanır.
 
-Aşağıdaki tablo, **metodu** açıklayan meta veri belirteci tarafından `Add` başvurulan MethodDef tablosunun bir bölümünü gösterir. Diğer meta veri tabloları bu derlemede var ve kendi benzersiz değerleri olsa da, yalnızca bu tablo tartışılır.
+Aşağıdaki tabloda, yöntemini açıklayan meta veri belirtecinin başvurduğu **MethodDef** tablosunun bir kısmı gösterilmektedir `Add` . Bu derlemede diğer meta veri tabloları var ve kendi benzersiz değerleri var olsa da, yalnızca bu tablo ele alınmıştır.
 
-|Satır|Göreli Sanal Adres (RVA)|ImplFlags|Bayraklar|Adı<br /><br /> (String yığınına işaret eder.)|İmza (Blob yığınına işaret eder.)|
+|Satır|Göreli sanal adres (RVA)|ImplFlags|Bayraklar|Name<br /><br /> (Dize yığınına işaret eder.)|İmza (blob yığınına Işaret eder.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Yönetilen|Genel<br /><br /> ReuseSlot<br /><br /> Specialname<br /><br /> RTSpecialName<br /><br /> Ctor|.ctor (yapıcı)||
-|2|0x00002058|IL<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> ReuseSlot|Ana|Dize|
-|3|0x0000208c|IL<br /><br /> Yönetilen|Genel<br /><br /> Statik<br /><br /> ReuseSlot|Ekle|int, int, int|
+|1|0x00002050|IL<br /><br /> Yönetilen|Ortak<br /><br /> Reusespartisi<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Oluşturucu)||
+|2|0x00002058|IL<br /><br /> Yönetilen|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ana|Dize|
+|3|0x0000208c|IL<br /><br /> Yönetilen|Ortak<br /><br /> Statik<br /><br /> Reusespartisi|Ekle|int, int, int|
 
-Tablonun her sütunu kodunuz hakkında önemli bilgiler içerir. **RVA** sütunu, çalışma zamanının bu yöntemi tanımlayan MSIL'in başlangıç bellek adresini hesaplamasına olanak tanır. **ImplFlags** ve **Flags** sütunları yöntemi açıklayan bit maskeleri içerir (örneğin, yöntemin ortak mı yoksa özel mi olduğu). **Ad** sütunu dize yığınından yöntemin adını diziye diziler. **İmza** sütunu, yöntemin imzasının blob yığınındaki tanımını dizine dizine dizine dizir.
+Tablonun her sütunu, kodunuz hakkında önemli bilgiler içerir. **RVA** sütunu, çalışma zamanının bu YÖNTEMI tanımlayan MSIL 'nin başlangıç belleği adresini hesaplamasını sağlar. **ImplFlags** ve **Flags** sütunları, yöntemi tanımlayan bitmaskeleri içerir (örneğin, yöntemin genel mi yoksa özel mi olduğunu belirtir). **Ad** sütunu, dize yığınından yöntemin adını dizine ekler. **İmza** sütunu, blob yığınındaki yöntem imzasının tanımını dizinler.
 
-Çalışma süresi, üçüncü satırdaki **RVA** sütunundan istenen mahsup adresini hesaplar ve bu adresi JIT derleyicisine döndürür ve bu adres yeni adrese gider. JIT derleyicisi, başka bir meta veri belirteciyle karşılaşAna ve işlem yinelenene kadar MSIL'i yeni adreste işlemeye devam eder.
+Çalışma zamanı, üçüncü satırdaki **RVA** sütunundan istenen konum adresini hesaplar ve bu adresi, daha sonra yeni adrese devam eden JIT derleyicisine döndürür. JıT derleyicisi, başka bir meta veri belirteciyle karşılaşana kadar yeni adreste MSIL işlemeye devam eder ve işlem yinelenir.
 
-Meta verileri kullanarak, çalışma zamanı, kodunuzu yüklemek ve yerel makine yönergelerine işlemek için gereken tüm bilgilere erişebilir. Bu şekilde, meta veriler kendi kendini açıklayan dosyaları ve ortak tür sistemiyle birlikte diller arası devralmayı sağlar.
+Meta verileri kullanarak, çalışma zamanının kodunuzu yüklemesi ve yerel makine yönergelerine işlemesi için gereken tüm bilgilere erişimi vardır. Bu şekilde meta veriler, ortak tür sistemi, çapraz dil devralma ile birlikte kendi kendine açıklanabilen dosyaları ve bir arada sunar.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Öznitelikler](../../docs/standard/attributes/index.md)|Öznitelikleri nasıl uygulayacağımı, özel öznitelikleri nasıl yazacağıve özniteliklerde depolanan bilgileri nasıl alınacağı açıklanır.|
+|[Öznitelikler](attributes/index.md)|Özniteliklerin nasıl uygulanacağını, özel özniteliklerin nasıl yazılacağını ve özniteliklerde depolanan bilgilerin nasıl alınacağını açıklar.|

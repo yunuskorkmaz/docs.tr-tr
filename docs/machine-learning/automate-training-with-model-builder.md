@@ -1,14 +1,14 @@
 ---
 title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616937"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289505"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -27,7 +27,7 @@ Model Oluşturucuyu kullanmak için Machine Learning uzmanlığına ihtiyacını
 
 Uygulamanız için bir makine öğrenimi modeli oluşturmak için model Oluşturucu 'ya birçok farklı senaryo getirebilirsiniz.
 
-Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açıklamasıdır. Örnek:
+Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açıklamasıdır. Örneğin:
 
 - geçmiş satış verilerine göre gelecek ürün satış hacmini tahmin edin
 - müşterilerin gözden geçirmeleri temelinde olumlu veya olumsuz şekilde sınıflandırın
@@ -119,7 +119,7 @@ Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 
 ## <a name="train"></a>Eğitim
 
-Senaryonuzu, verilerinizi ve etiketini seçtikten sonra model Oluşturucu modeli izleyin.
+Senaryonuzu, ortamınızı, verilerinizi ve etiketini seçtikten sonra model Oluşturucu modeli izleyin.
 
 ### <a name="what-is-training"></a>Eğitim nedir?
 
@@ -149,6 +149,8 @@ Bu numaralar yalnızca bir kılavuzdur. Eğitimin tam uzunluğu şu şekilde ba�
 - sütun türü
 - ML görevi
 - Eğitim için kullanılan makinenin CPU, disk ve bellek performansı
+
+Genellikle, herhangi bir sonuç oluşturmayabilir ve daha uzun bir süre daha 100 fazla zaman alabilir.
 
 ## <a name="evaluate"></a>Değerlendir
 
@@ -193,7 +195,7 @@ Model performans puanınız istediğiniz kadar iyi değilse şunları yapabilirs
 
 - Daha uzun bir süre için eğitme. Daha fazla zaman, otomatik makine öğrenme altyapısı, daha fazla algoritmalarla ve ayarlarla denemeleri.
 
-- Daha fazla veri ekleyin. Bazen veri miktarı yüksek kaliteli bir makine öğrenimi modelini eğitmek için yeterli değildir.
+- Daha fazla veri ekleyin. Bazen veri miktarı yüksek kaliteli bir makine öğrenimi modelini eğitmek için yeterli değildir. Bu özellikle, az sayıda örneğe sahip veri kümeleriyle geçerlidir.
 
 - Verilerinizi dengeleyin. Sınıflandırma görevleri için, eğitim kümesinin Kategoriler genelinde dengeli olduğundan emin olun. Örneğin, 100 eğitim örnekleri için dört sınıfınız varsa ve bu iki sınıf (etiket1 ve etiket2), 90 kayıt için kullanılırsa, ancak diğer iki (etiket3 ve TAG4) yalnızca kalan 10 kayıtta kullanılıyorsa, dengeli verilerin olmaması modelinizin, etiket3 veya TAG4 doğru tahmin etmeye yönelik olarak, modelinize neden olabilir.
 

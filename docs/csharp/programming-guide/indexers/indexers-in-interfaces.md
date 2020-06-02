@@ -1,41 +1,41 @@
 ---
-title: Arayüzlerde Dizinleyiciler - C# Programlama Kılavuzu
+title: Arabirimlerde Dizin oluşturucular-C# Programlama Kılavuzu
 ms.date: 02/08/2020
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 667a4213626ee37bfc5bf8c4fe78c2cf7186a73e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9ce6e4f0e0533c2880c6241f44409435248a336a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627844"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287486"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Arabirimlerdeki Dizin Oluşturucular (C# Programlama Kılavuzu)
 
-Dizin leyiciler bir [arabirimde](../../language-reference/keywords/interface.md)bildirilebilir. Arabirim dizinleyicilerinin erişenleri [sınıf](../../language-reference/keywords/class.md) dizinleyicilerinin erişimcilerinden aşağıdaki şekillerde farklıdır:
+Dizin oluşturucular bir [arabirimde](../../language-reference/keywords/interface.md)bildirilemez. Arabirim dizin oluşturucularının erişimcileri, [sınıf](../../language-reference/keywords/class.md) dizin oluşturucularının erişimcilerine aşağıdaki yollarla göre farklılık gösterir:
 
-- Arabirim erişimcileri değiştirici kullanmaz.
-- Arabirim erişimcisi genellikle bir gövdeye sahip değildir.
+- Arabirim erişimcileri değiştiriciler kullanmaz.
+- Arabirim erişimcisinin genellikle gövdesi yoktur.
 
-Erişimamacının amacı, dizin leyicinin okuma-yazma, salt okuma veya yalnızca yazma olup olmadığını belirtmektir. Arabirimde tanımlanan bir dizinleyici için bir uygulama sağlayabilirsiniz, ancak bu nadirdir. Dizin leyiciler genellikle veri alanlarına erişmek için bir API tanımlar ve veri alanları bir arabirimde tanımlanamaz.
+Erişimcinin amacı, dizin oluşturucunun okuma-yazma, salt okunurdur veya salt yazılır olduğunu belirtsağlamaktır. Bir arabirimde tanımlanmış bir Dizin Oluşturucu için uygulama sağlayabilirsiniz, ancak bu nadir bir durumdur. Dizin oluşturucular genellikle veri alanlarına erişmek için bir API tanımlar ve veri alanları bir arabirimde tanımlanamaz.
 
-Aşağıda bir arabirim dizinleyici erişime yenisi örneği verilmiştir:
+Arabirim dizin oluşturucu erişimcisine bir örnek aşağıda verilmiştir:
 
 [!code-csharp[DefineInterface](~/samples/snippets/csharp/interfaces/indexers.cs#DefineIndexer)]
 
-Bir dizinleyicinin imzası, aynı arabirimde bildirilen diğer tüm dizinleyicilerin imzalarından farklı olmalıdır.
+Bir dizin oluşturucunun imzası aynı arabirimde belirtilen diğer tüm dizin oluşturucularının imzalarından farklı olmalıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, arabirim dizinleyicilerin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, arabirim dizin oluşturucularının nasıl uygulanacağını gösterir.
 
 [!code-csharp[Implement](~/samples/snippets/csharp/interfaces/indexers.cs#ImplementInterface)]
 
 [!code-csharp[DefineInterface](~/samples/snippets/csharp/interfaces/indexers.cs#ExampleCode)]
 
-Önceki örnekte, arabirim üyesinin tam nitelikli adını kullanarak açık arabirim üyesi uygulamasını kullanabilirsiniz. Örneğin:
+Yukarıdaki örnekte, arabirim üyesinin tam adını kullanarak açık arabirim üye uygulamasını kullanabilirsiniz. Örneğin:
 
 ```csharp
 string IIndexInterface.this[int index]
@@ -43,15 +43,15 @@ string IIndexInterface.this[int index]
 }
 ```
 
-Ancak, tam nitelikli ad yalnızca sınıf aynı dizinleyici imzası ile birden fazla arabirim uygularken belirsizliği önlemek için gereklidir. Örneğin, bir `Employee` sınıf iki arabirim uyguluyorsa `ICitizen` ve `IEmployee`her iki arabirim de aynı dizinleyici imzaya sahipse, açık arabirim üyesi uygulaması gereklidir. Diğer bir şey, aşağıdaki dizinleyici bildirimi:
+Ancak, tam adı yalnızca, sınıf aynı Dizin Oluşturucu imzasına sahip birden fazla arabirim uygularken karışıklığı önlemek için gereklidir. Örneğin, bir `Employee` Sınıf iki arabirim uygusa ve `ICitizen` `IEmployee` her iki arabirimde de aynı Dizin Oluşturucu imzası varsa, açık arabirim üye uygulaması gereklidir. Diğer bir deyişle, aşağıdaki Dizin Oluşturucu bildirimi:
 
 ```csharp
 string IEmployee.this[int index]
 {
 }
-``
+```
 
-implements the indexer on the `IEmployee` interface, while the following declaration:
+arabirim üzerinde dizin oluşturucuyu uygular `IEmployee` , aşağıdaki bildirim:
 
 ```csharp
 string ICitizen.this[int index]
@@ -59,7 +59,7 @@ string ICitizen.this[int index]
 }
 ```
 
-arabirim deki dizinleyiciyi `ICitizen` uygular.
+arabirimindeki Dizin oluşturucuyu uygular `ICitizen` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

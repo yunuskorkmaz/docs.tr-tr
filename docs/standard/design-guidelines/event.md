@@ -10,25 +10,25 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: b44ee5933f8629b4dddbf3be1b79b2e77b0254f7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741679"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289830"
 ---
 # <a name="event-design"></a>Olay Tasarımı
-Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün Kullanıcı koduna çağrı yapmasına izin veren yapılar). Diğer geri çağırma mekanizmaları, temsilciler, sanal üyeler ve arabirim tabanlı eklentiler alan üyeleri içerir. kullanılabilirlik çalışmalarından veriler, geliştiricilerin büyük bir bölümünün diğer geri çağırma mekanizmalarını kullandıklarından daha rahat olduğunu belirtir . Olaylar, Visual Studio ve birçok dil ile tamamen tümleşiktir.
+Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün Kullanıcı koduna çağrı yapmasına izin veren yapılar). Diğer geri çağırma mekanizmaları, temsilciler, sanal üyeler ve arabirim tabanlı eklentiler alan üyeleri içerir. kullanılabilirlik çalışmalarından veriler, geliştiricilerin büyük bölümünün diğer geri çağırma mekanizmalarını kullandıklarından daha rahat olduğunu gösterir. Olaylar, Visual Studio ve birçok dil ile tamamen tümleşiktir.
 
- İki olay grubu olduğunu unutmamak önemlidir: bir sistem değişikliği durumu, ön olaylar adı ve durum değişikliklerinden sonra oluşturulan olaylar, olaylar sonrası olarak adlandırılır. Bir form kapatılmadan önce oluşturulan `Form.Closing`ön olaya bir örnektir. Bir form kapatıldıktan sonra oluşturulan olay sonrası `Form.Closed`bir örnektir.
+ İki olay grubu olduğunu unutmamak önemlidir: bir sistem değişikliği durumu, ön olaylar adı ve durum değişikliklerinden sonra oluşturulan olaylar, olaylar sonrası olarak adlandırılır. Bir form kapatılmadan önce oluşturulan bir ön olaya bir örnek olabilir `Form.Closing` . Bir form kapatıldıktan sonra oluşturulan olay sonrası bir örnek olabilir `Form.Closed` .
 
  ✔️ "yangın" veya "tetikleyici" yerine olaylar için "Raise" terimini kullanır.
 
- ✔️ olay işleyicileri olarak kullanılacak yeni temsilciler el ile oluşturmak yerine <xref:System.EventHandler%601?displayProperty=nameWithType> kullanın.
+ <xref:System.EventHandler%601?displayProperty=nameWithType>olay işleyicileri olarak kullanılacak yeni temsilcileri el ile oluşturmak yerine ✔️ kullanın.
 
- ✔️, olayın olay işleme yöntemine hiçbir şekilde herhangi bir veri taşıması gerekmeyeceğinden kesinlikle emin olmadığınız sürece, olay bağımsız değişkeni olarak <xref:System.EventArgs> bir alt sınıfını kullanmayı düşünün. Bu durumda, `EventArgs` türünü doğrudan kullanabilirsiniz.
+ ✔️ olay <xref:System.EventArgs> işleme yöntemine herhangi bir veriyi hiçbir şekilde hiçbir şekilde hiçbir şekilde bir veri taşıması gerekmeyeceğinden emin olmadığınız sürece, türü doğrudan kullanabilmeniz için olay bağımsız değişkeni olarak ' ın bir alt sınıfını KULLANMAYı düşünün `EventArgs` .
 
- Doğrudan `EventArgs` kullanarak bir API dağıtırsanız, hiçbir veri, hiçbir şekilde, hiçbir verileri hiçbir şekilde uyumluluk olmadan bu olayla birlikte ekleyemezsiniz. Bir alt sınıf kullanırsanız, başlangıçta tamamen boş olsalar bile, gerektiğinde alt sınıfa özellikler ekleyebilirsiniz.
+ Doğrudan kullanarak bir API 'yi dağıtırsanız `EventArgs` , hiçbir veri, hiçbir hiçbir veriyi hiçbir şekilde uyumluluk olmadan, olayla birlikte hiçbir hiçbir şekilde ekleyemeyeceksiniz. Bir alt sınıf kullanırsanız, başlangıçta tamamen boş olsalar bile, gerektiğinde alt sınıfa özellikler ekleyebilirsiniz.
 
  ✔️ her olayı yükseltmek için korumalı bir sanal yöntem kullanın. Bu yalnızca korumasız sınıflarda, yapıları, mühürlü sınıfları veya statik olayları değil, statik olmayan olaylar için geçerlidir.
 
@@ -38,32 +38,32 @@ Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün
 
  ✔️, bir olayı başlatan korumalı yönteme tek bir parametre alır.
 
- Parametresi `e` olarak adlandırılmalıdır ve olay bağımsız değişkeni sınıfı olarak yazılmalıdır.
+ Parametrenin adlandırılması `e` ve olay bağımsız değişkeni sınıfı olarak yazılması gerekir.
 
- statik olmayan bir olay oluşturulurken ❌ gönderen olarak null geçirmeyin.
+ ❌Statik olmayan bir olay oluşturulurken Gönderici olarak null geçirmeyin.
 
  statik bir olay oluştururken ✔️ gönderen olarak null geçirin.
 
- ❌ bir olayı oluştururken olay verileri parametresi olarak null geçirmeyin.
+ ❌Bir olayı oluştururken olay verileri parametresi olarak null geçirmeyin.
 
- Herhangi bir veriyi olay işleme yöntemine geçirmek istemiyorsanız `EventArgs.Empty` geçirmeniz gerekir. Geliştiriciler bu parametrenin null olmasını bekler.
+ `EventArgs.Empty`Herhangi bir veriyi olay işleme yöntemine geçirmek istemiyorsanız, geçişi yapmalısınız. Geliştiriciler bu parametrenin null olmasını bekler.
 
  ✔️ Son kullanıcının iptal edebilmesini sağlayan olayları kullanmayı düşünün. Bu yalnızca ön olaylar için geçerlidir.
 
- Son kullanıcının olayları iptal edebilmesini sağlamak için olay bağımsız değişkeni olarak <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> veya alt sınıfını kullanın.
+ <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>Son kullanıcının olayları iptal edebilmesini sağlamak için olay bağımsız değişkeni olarak veya alt sınıfını kullanın.
 
 ### <a name="custom-event-handler-design"></a>Özel olay Işleyicisi tasarımı
- Framework 'ün, genel türleri desteklemeyen CLR 'nin önceki sürümleriyle çalışması gerektiği durumlar gibi `EventHandler<T>` kullanılamaz. Bu gibi durumlarda, özel bir olay işleyicisi temsilcisi tasarlamanızı ve geliştirmeniz gerekebilir.
+ `EventHandler<T>`Çerçevenin, genel türleri DESTEKLEMEYEN clr 'nin önceki sürümleriyle çalışması gerektiğinde olduğu gibi, kullanılamayan durumlar vardır. Bu gibi durumlarda, özel bir olay işleyicisi temsilcisi tasarlamanızı ve geliştirmeniz gerekebilir.
 
  ✔️ olay işleyicileri için void dönüş türü kullanın.
 
  Bir olay işleyicisi, muhtemelen birden çok nesnede çok sayıda olay işleme yöntemini çağırabilir. Olay işleme yöntemlerinin bir değer döndürmesine izin veriliyorsa, her olay çağrısı için birden fazla dönüş değeri olacaktır.
 
- ✔️ olay işleyicisinin ilk parametresinin türü olarak `object` kullanın ve `sender`çağırır.
+ ✔️ `object` olay işleyicisinin ilk parametresinin türü olarak kullanın ve bunu çağırın `sender` .
 
- ✔️ <xref:System.EventArgs?displayProperty=nameWithType> veya alt sınıfını olay işleyicisinin ikinci parametresinin türü olarak kullanın ve `e`çağırın.
+ ✔️ <xref:System.EventArgs?displayProperty=nameWithType> veya alt sınıfını olay işleyicisinin ikinci parametresinin türü olarak kullanın ve çağırın `e` .
 
- ❌ olay işleyicilerinde ikiden fazla parametre yok.
+ ❌Olay işleyicilerinde ikiden fazla parametre yok.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -71,5 +71,5 @@ Olaylar en yaygın olarak kullanılan geri çağırma biçimidir (Framework 'ün
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Üye tasarımı yönergeleri](member.md)
+- [Çerçeve tasarım yönergeleri](index.md)

@@ -1,5 +1,5 @@
 ---
-title: .NET'te Dizeleri Karşılaştırma
+title: .NET 'teki dizeleri karşılaştırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,40 +18,40 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101665"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289336"
 ---
-# <a name="comparing-strings-in-net"></a>.NET'te Dizeleri Karşılaştırma
-.NET dizeleri değerlerini karşılaştırmak için çeşitli yöntemler sağlar. Aşağıdaki tablo listeler ve değer karşılaştırma yöntemleri açıklanır.  
+# <a name="comparing-strings-in-net"></a>.NET 'teki dizeleri karşılaştırma
+.NET, dizelerin değerlerini karşılaştırmak için çeşitli yöntemler sağlar. Aşağıdaki tabloda değer karşılaştırma yöntemleri listelenmekte ve açıklanmaktadır.  
   
 |Yöntem adı|Kullanım|  
 |-----------------|---------|  
-|<xref:System.String.Compare%2A?displayProperty=nameWithType>|İki dizenin değerlerini karşılaştırır. Bir sonda değeri verir.|  
-|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Yerel kültüre bakılmaksızın iki dizeyi karşılaştırır. Bir sonda değeri verir.|  
-|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|Geçerli dize nesnesini başka bir dizeyle karşılaştırır. Bir sonda değeri verir.|  
-|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Bir dize geçirilen dize ile başlar olup olmadığını belirler. Boolean değerini döndürür.|  
-|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Bir dize dize geçti ile sona erer olup olmadığını belirler. Boolean değerini döndürür.|  
-|<xref:System.String.Equals%2A?displayProperty=nameWithType>|İki dize aynı olup olmadığını belirler. Boolean değerini döndürür.|  
-|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|İncelediğiniz dizenin başından başlayarak bir karakterin veya dizenin dizin konumunu döndürür. Bir sonda değeri verir.|  
-|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|İncelediğiniz dizenin sonundan başlayarak bir karakterin veya dizenin dizin konumunu döndürür. Bir sonda değeri verir.|  
+|<xref:System.String.Compare%2A?displayProperty=nameWithType>|İki dizenin değerlerini karşılaştırır. Bir tamsayı değeri döndürür.|  
+|<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Yerel kültürle ilgili olmadan iki dizeyi karşılaştırır. Bir tamsayı değeri döndürür.|  
+|<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|Geçerli dize nesnesini başka bir dizeyle karşılaştırır. Bir tamsayı değeri döndürür.|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Bir dizenin geçilen dizeyle başlayıp başlamadığını belirler. Boole değeri döndürür.|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Bir dizenin geçtiğini dize ile bitip bitmeyeceğini belirler. Boole değeri döndürür.|  
+|<xref:System.String.Equals%2A?displayProperty=nameWithType>|İki dizenin aynı olup olmadığını belirler. Boole değeri döndürür.|  
+|<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|İncelediğiniz dizenin başından başlayarak bir karakterin veya dizenin dizin konumunu döndürür. Bir tamsayı değeri döndürür.|  
+|<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|İncelediğiniz dizenin sonundan başlayarak bir karakterin veya dizenin dizin konumunu döndürür. Bir tamsayı değeri döndürür.|  
   
 ## <a name="compare"></a>Karşılaştır  
- Statik <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntem, iki dizeleri karşılaştırmanın tam bir yolunu sağlar. Bu yöntem kültürel olarak farkındadır. Bu işlevi, iki dizeden iki dize veya alt dizeleri karşılaştırmak için kullanabilirsiniz. Ayrıca, aşırı yükler dikkate alma veya durum ve kültürel varyans göz ardı sağlanır. Aşağıdaki tablo, bu yöntemin dönebileceği üç tamsayı değerini gösterir.  
+ Statik <xref:System.String.Compare%2A?displayProperty=nameWithType> Yöntem, iki dizeyi karşılaştıran kapsamlı bir yol sağlar. Bu yöntem, önemli ölçüde farkında değildir. Bu işlevi, iki dizenin iki dizesini veya alt dizelerini karşılaştırmak için kullanabilirsiniz. Ek olarak, büyük/küçük harf ve kültürel varyansı dikkate alan veya gözardı eden aşırı yüklemeler Aşağıdaki tabloda, bu yöntemin döndürebileceğini üç tamsayı değeri gösterilmektedir.  
   
 |Döndürülen değer|Koşul|  
 |------------------|---------------|  
-|Negatif bir tamsayı|İlk dize sıralama sırasına göre ikinci dizeden önce gelir.<br /><br /> -veya-<br /><br /> İlk dize. `null`|  
-|0|Birinci dize ve ikinci dize eşittir.<br /><br /> -veya-<br /><br /> Her iki `null`dize de.|  
-|Pozitif bir tamsayı<br /><br /> -veya-<br /><br /> 1|İlk dize sıralama sırasına göre ikinci dize izler.<br /><br /> -veya-<br /><br /> İkinci dize. `null`|  
+|Negatif bir tamsayı|İlk dize sıralama düzeninde ikinci dizeden önce gelir.<br /><br /> -veya-<br /><br /> İlk dize `null` .|  
+|0|İlk dize ve ikinci dize eşittir.<br /><br /> -veya-<br /><br /> Her iki dize de `null` .|  
+|Pozitif bir tamsayı<br /><br /> -veya-<br /><br /> 1|İlk dize sıralama düzeninde ikinci dizeyi izler.<br /><br /> -veya-<br /><br /> İkinci dize `null` .|  
   
 > [!IMPORTANT]
-> Yöntem, <xref:System.String.Compare%2A?displayProperty=nameWithType> öncelikle dizeleri sıralarken veya sıralarken kullanılmak üzere tasarlanmıştır. Eşitliği sınamak <xref:System.String.Compare%2A?displayProperty=nameWithType> için yöntemi kullanmamalısınız (diğer bir deyişle, bir dize diğerinden daha az veya daha büyük olup olmadığına bakılmaksızın açıkça 0'ın geri dönüş değerini aramak için). Bunun yerine, iki dize eşit olup <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> olmadığını belirlemek için yöntemi kullanın.  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType>Yöntemi, birincil olarak dizeleri sıralama veya sıralama sırasında kullanılmak üzere tasarlanmıştır. <xref:System.String.Compare%2A?displayProperty=nameWithType>Eşitlik için test etmek için yöntemini kullanmamalısınız (yani, bir dizenin diğerine göre veya ondan daha büyük olup olmadığı konusunda hiçbir şekilde 0 dönüş değerini açıkça araması için). Bunun yerine, iki dizenin eşit olup olmadığını anlamak için yöntemini kullanın <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- Aşağıdaki örnek, <xref:System.String.Compare%2A?displayProperty=nameWithType> iki dize göreli değerlerini belirlemek için yöntemi kullanır.  
+ Aşağıdaki örnek, <xref:System.String.Compare%2A?displayProperty=nameWithType> iki dizenin göreli değerlerini belirlemede yöntemini kullanır.  
   
  [!code-cpp[Conceptual.String.BasicOps#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#6)]
  [!code-csharp[Conceptual.String.BasicOps#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#6)]
@@ -59,15 +59,15 @@ ms.locfileid: "73101665"
   
  Bu örnek `-1` konsola görüntülenir.  
   
- Önceki örnek varsayılan olarak kültüre duyarlıdır. Kültüre duyarlı bir dize karşılaştırması yapmak için, bir <xref:System.String.Compare%2A?displayProperty=nameWithType> *kültür* parametresi sağlayarak kullanılacak kültürü belirtmenize olanak tanıyan yöntemin aşırı yüklenmesini kullanın. Kültüre duyarsız bir karşılaştırma yapmak <xref:System.String.Compare%2A?displayProperty=nameWithType> için yöntemin nasıl kullanılacağını gösteren bir örnek [için](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)bkz.  
+ Yukarıdaki örnek, varsayılan olarak kültüre duyarlıdır. Kültüre duyarsız bir dize karşılaştırması gerçekleştirmek için, <xref:System.String.Compare%2A?displayProperty=nameWithType> bir *kültür* parametresi sağlayarak kullanılacak kültürü belirtmenize izin veren yönteminin bir aşırı yüklemesini kullanın. <xref:System.String.Compare%2A?displayProperty=nameWithType>Kültüre duyarsız bir karşılaştırma gerçekleştirmek için yönteminin nasıl kullanılacağını gösteren bir örnek için bkz. [kültüre duyarsız dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
-## <a name="compareordinal"></a>KarşılaştırmaOrdinal  
- Yöntem, <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> yerel kültürü düşünmeden iki dize nesnesini karşılaştırır. Bu yöntemin dönüş değerleri, önceki tablodaki **Karşılaştırma** yöntemi yle döndürülen değerlerle aynıdır.  
+## <a name="compareordinal"></a>CompareOrdinal  
+ <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>Yöntemi, yerel kültürü düşünmeksizin iki dize nesnesini karşılaştırır. Bu yöntemin dönüş değerleri, önceki tabloda **Compare** yöntemi tarafından döndürülen değerlerle aynıdır.  
   
 > [!IMPORTANT]
-> Yöntem, <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> öncelikle dizeleri sıralarken veya sıralarken kullanılmak üzere tasarlanmıştır. Eşitliği sınamak <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> için yöntemi kullanmamalısınız (diğer bir deyişle, bir dize diğerinden daha az veya daha büyük olup olmadığına bakılmaksızın açıkça 0'ın geri dönüş değerini aramak için). Bunun yerine, iki dize eşit olup <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> olmadığını belirlemek için yöntemi kullanın.  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>Yöntemi, birincil olarak dizeleri sıralama veya sıralama sırasında kullanılmak üzere tasarlanmıştır. <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>Eşitlik için test etmek için yöntemini kullanmamalısınız (yani, bir dizenin diğerine göre veya ondan daha büyük olup olmadığı konusunda hiçbir şekilde 0 dönüş değerini açıkça araması için). Bunun yerine, iki dizenin eşit olup olmadığını anlamak için yöntemini kullanın <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- Aşağıdaki örnekte, iki dizenin değerlerini karşılaştırmak için **CompareOrdinal** yöntemi ni kullanır.  
+ Aşağıdaki örnek, iki dizenin değerlerini karşılaştırmak için **CompareOrdinal** yöntemini kullanır.  
   
  [!code-cpp[Conceptual.String.BasicOps#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#7)]
  [!code-csharp[Conceptual.String.BasicOps#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#7)]
@@ -75,13 +75,13 @@ ms.locfileid: "73101665"
   
  Bu örnek `-32` konsola görüntülenir.  
   
-## <a name="compareto"></a>karşılaştırmak  
- Yöntem, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> geçerli dize nesnesinin kapsülletiyi başka bir dize veya nesneyle karşılaştırır. Bu yöntemin dönüş değerleri, önceki tabloda <xref:System.String.Compare%2A?displayProperty=nameWithType> yöntem tarafından döndürülen değerlerle aynıdır.  
+## <a name="compareto"></a>CompareTo  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType>Yöntemi, geçerli dize nesnesinin sarmaladığı dizeyi başka bir dize veya nesne ile karşılaştırır. Bu yöntemin dönüş değerleri, önceki tabloda yöntemi tarafından döndürülen değerlerle aynıdır <xref:System.String.Compare%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
-> Yöntem, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> öncelikle dizeleri sıralarken veya sıralarken kullanılmak üzere tasarlanmıştır. Eşitliği sınamak <xref:System.String.CompareTo%2A?displayProperty=nameWithType> için yöntemi kullanmamalısınız (diğer bir deyişle, bir dize diğerinden daha az veya daha büyük olup olmadığına bakılmaksızın açıkça 0'ın geri dönüş değerini aramak için). Bunun yerine, iki dize eşit olup <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> olmadığını belirlemek için yöntemi kullanın.  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType>Yöntemi, birincil olarak dizeleri sıralama veya sıralama sırasında kullanılmak üzere tasarlanmıştır. <xref:System.String.CompareTo%2A?displayProperty=nameWithType>Eşitlik için test etmek için yöntemini kullanmamalısınız (yani, bir dizenin diğerine göre veya ondan daha büyük olup olmadığı konusunda hiçbir şekilde 0 dönüş değerini açıkça araması için). Bunun yerine, iki dizenin eşit olup olmadığını anlamak için yöntemini kullanın <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
- Aşağıdaki örnek, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> nesneyi `string1` `string2` nesneyle karşılaştırmak için yöntemi kullanır.  
+ Aşağıdaki örnek, <xref:System.String.CompareTo%2A?displayProperty=nameWithType> nesnesini nesnesiyle karşılaştırmak için yöntemini kullanır `string1` `string2` .  
   
  [!code-cpp[Conceptual.String.BasicOps#8](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#8)]
  [!code-csharp[Conceptual.String.BasicOps#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#8)]
@@ -89,10 +89,10 @@ ms.locfileid: "73101665"
   
  Bu örnek `-1` konsola görüntülenir.  
   
- Yöntemin <xref:System.String.CompareTo%2A?displayProperty=nameWithType> tüm aşırı varsayılan olarak kültüre duyarlı ve büyük/küçük harf duyarlı karşılaştırmalar gerçekleştirir. Kültüre duyarsız bir karşılaştırma gerçekleştirmenize olanak tanıyan bu yöntemin aşırı yüklemesi sağlanmaz. Kod netliği için, kültüre duyarlı işlemler veya <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> kültüre <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> duyarlı işlemler için belirterek **String.Compare** yöntemini kullanmanızı öneririz. Hem kültüre duyarlı hem de kültüre duyarlı olmayan karşılaştırmalar gerçekleştirmek için **String.Compare** yönteminin nasıl kullanılacağını gösteren örnekler [için](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)bkz.  
+ Metodun tüm aşırı yüklemeleri <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Varsayılan olarak kültüre duyarlı ve büyük/küçük harfe duyarlı karşılaştırmalar gerçekleştirir. Kültüre duyarsız bir karşılaştırma gerçekleştirmenize olanak tanıyan bu yöntemin hiçbir aşırı yüklemesi sağlanmaz. Kod netliği için, **String.Compare** <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> kültür duyarlı işlemler veya <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> kültüre duyarsız Işlemler için belirtmek yerine String. Compare yöntemini kullanmanızı öneririz. Her iki kültüre duyarlı ve kültüre duyarsız karşılaştırmalar gerçekleştirmek için **String. Compare** metodunu nasıl kullanacağınızı gösteren örnekler için bkz. [kültüre duyarsız dize karşılaştırmaları gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## <a name="equals"></a>Eşittir  
- **String.Equals** yöntemi, iki dize aynı olup olmadığını kolayca belirleyebilir. Bu büyük/küçük harf duyarlı yöntem **gerçek** veya **yanlış** Boolean değeri döndürür. Bir sonraki örnekte gösterildiği gibi, varolan bir sınıftan kullanılabilir. Aşağıdaki **örnekte,** bir dize nesnesinin "Merhaba Dünya" ifadesini bulunup içermediğini belirlemek için Eşittir yöntemini kullanır.  
+ **String. Equals** yöntemi, iki dizenin aynı olup olmadığını kolayca belirleyebilir. Bu büyük/küçük harfe duyarlı Yöntem, **doğru** veya **yanlış** Boole değeri döndürür. Sonraki örnekte gösterildiği gibi mevcut bir sınıftan kullanılabilir. Aşağıdaki örnek, bir dize nesnesinin "Merhaba Dünya" ifadesini içerip içermediğini anlamak için **Equals** yöntemini kullanır.  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
  [!code-csharp[Conceptual.String.BasicOps#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#9)]
@@ -100,7 +100,7 @@ ms.locfileid: "73101665"
   
  Bu örnek `True` konsola görüntülenir.  
   
- Bu yöntem statik bir yöntem olarak da kullanılabilir. Aşağıdaki örnek, statik bir yöntem kullanarak iki dize nesnesi karşılaştırır.  
+ Bu yöntem, statik bir yöntem olarak da kullanılabilir. Aşağıdaki örnek, statik bir yöntem kullanarak iki dize nesnesini karşılaştırır.  
   
  [!code-cpp[Conceptual.String.BasicOps#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#10)]
  [!code-csharp[Conceptual.String.BasicOps#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#10)]
@@ -109,7 +109,7 @@ ms.locfileid: "73101665"
  Bu örnek `True` konsola görüntülenir.  
   
 ## <a name="startswith-and-endswith"></a>StartsWith ve EndsWith  
- **String.StartsWith** yöntemini kullanarak bir dize nesnesinin başka bir dizeyi kapsayan aynı karakterlerle başlayıp başlamadığını belirleyebilirsiniz. Geçerli dize nesnesi geçirilen dize ile başlar ve değilse **yanlış** bu büyük/küçük harf duyarlı yöntem **doğru** döndürür. Aşağıdaki örnek, bir dize nesnesinin "Merhaba" ile başedip başlamayamasını belirlemek için bu yöntemi kullanır.  
+ String **. StartsWith** metodunu kullanarak, bir dize nesnesinin başka bir dizeyi çevreleyen karakterlerle başlayıp başlamamadığını belirleyebilirsiniz. Bu büyük/küçük harf duyarlı Yöntem, geçerli dize nesnesi geçen dizeyle başlıyorsa **true** , değilse **false** döndürür. Aşağıdaki örnek, bir dize nesnesinin "Hello" ile başlayıp başlamadığını anlamak için bu yöntemi kullanır.  
   
  [!code-cpp[Conceptual.String.BasicOps#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#11)]
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
@@ -117,7 +117,7 @@ ms.locfileid: "73101665"
   
  Bu örnek `True` konsola görüntülenir.  
   
- **String.EndsWith** yöntemi, geçirilen bir dizeyi geçerli dize nesnesinin sonunda bulunan karakterlerle karşılaştırır. Ayrıca bir Boolean değeri döndürür. Aşağıdaki örnek, **EndsWith** yöntemini kullanarak bir dize sonunu denetler.  
+ **String. EndsWith** yöntemi, geçirilen bir dizeyi geçerli dize nesnesinin sonunda bulunan karakterlerle karşılaştırır. Ayrıca bir Boole değeri döndürür. Aşağıdaki örnek, **EndsWith** metodunu kullanarak bir dizenin sonunu denetler.  
   
  [!code-cpp[Conceptual.String.BasicOps#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#12)]
  [!code-csharp[Conceptual.String.BasicOps#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#12)]
@@ -126,9 +126,9 @@ ms.locfileid: "73101665"
  Bu örnek `False` konsola görüntülenir.  
   
 ## <a name="indexof-and-lastindexof"></a>IndexOf ve LastIndexOf  
- **String.IndexOf** yöntemini, bir dize içinde belirli bir karakterin ilk oluşumunun konumunu belirlemek için kullanabilirsiniz. Bu büyük/küçük harf duyarlı yöntem bir dizenin başından saymaya başlar ve sıfır tabanlı dizin kullanarak geçen bir karakterin konumunu döndürür. Karakter bulunamazsa, -1 değeri döndürülür.  
+ Bir dize içindeki belirli bir karakterin ilk geçtiği konumu bulmak için **String. IndexOf** yöntemini kullanabilirsiniz. Bu büyük/küçük harf duyarlı Yöntem bir dizenin başından itibaren sayıma başlar ve sıfır tabanlı bir dizin kullanarak geçen karakterin konumunu döndürür. Karakter bulunamazsa – 1 değeri döndürülür.  
   
- Aşağıdaki örnek, bir dizedeki ' '`l`karakterinilk oluşumunu aramak için **IndexOf** yöntemini kullanır.  
+ Aşağıdaki örnek, bir dizedeki ' ' karakterinin ilk oluşumunu aramak için **IndexOf** metodunu kullanır `l` .  
   
  [!code-cpp[Conceptual.String.BasicOps#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#13)]
  [!code-csharp[Conceptual.String.BasicOps#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#13)]
@@ -136,9 +136,9 @@ ms.locfileid: "73101665"
   
  Bu örnek `2` konsola görüntülenir.  
   
- **String.LastIndexOf** yöntemi **string.IndexOf** yöntemine benzer, ancak bir dize içinde belirli bir karakterin son oluşumunun konumunu döndürür. Büyük/küçük harf duyarlıdır ve sıfır tabanlı bir dizin kullanır.  
+ String **. LastIndexOf** yöntemi String **. IndexOf** yöntemine benzer, ancak bir dize içindeki belirli bir karakterin son geçtiği konumu döndürür. Büyük/küçük harfe duyarlıdır ve sıfır tabanlı bir dizin kullanır.  
   
- Aşağıdaki örnekte **LastIndexOf** yöntemibir dizedeki '`l`' karakterin son oluşumunu aramak için kullanır.  
+ Aşağıdaki örnek, bir dizedeki ' ' karakterinin son oluşumunu aramak için **LastIndexOf** metodunu kullanır `l` .  
   
  [!code-cpp[Conceptual.String.BasicOps#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#14)]
  [!code-csharp[Conceptual.String.BasicOps#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#14)]
@@ -146,11 +146,11 @@ ms.locfileid: "73101665"
   
  Bu örnek `9` konsola görüntülenir.  
   
- **String.Remove** yöntemi ile birlikte kullanıldığında her iki yöntem de yararlıdır. Bir karakterin konumunu almak için **IndexOf** veya **LastIndexOf** yöntemlerini kullanabilir ve ardından bu karakteri veya bu karakterle başlayan bir sözcüğü kaldırmak için bu konumu **Kaldır** metoduna sağlayabilirsiniz.  
+ Her iki yöntem de **String. Remove** yöntemiyle birlikte kullanıldığında yararlıdır. Bir karakterin konumunu almak için **IndexOf** veya **LastIndexOf** yöntemlerini kullanabilir ve sonra bu karakterle başlayan bir karakteri ya da kelimeyi kaldırmak için bu konumu **Remove** yöntemine sağlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Dize İşlemleri](../../../docs/standard/base-types/basic-string-operations.md)
-- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Ağırlık Tablolarını Sıralama (Windows'ta .NET için)](https://www.microsoft.com/download/details.aspx?id=10921)
-- [Varsayılan Unicode Collation Element Table (Linux ve macOS'ta .NET Core için)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)
+- [Temel dize Işlemleri](basic-string-operations.md)
+- [Kültüre Duyarsız Dize İşlemlerini Gerçekleştirme](../globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Sıralama ağırlığı tabloları (Windows üzerinde .NET için)](https://www.microsoft.com/download/details.aspx?id=10921)
+- [Varsayılan Unicode harmanlama öğesi tablosu (Linux ve macOS 'ta .NET Core için)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

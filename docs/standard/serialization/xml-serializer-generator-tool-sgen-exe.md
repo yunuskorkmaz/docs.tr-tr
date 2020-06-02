@@ -3,12 +3,12 @@ title: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir XML serileştirme derlemesi oluşturur ve bu da XmlSerializer 'ın başlangıç performansını geliştirir.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380038"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288946"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
 
@@ -23,11 +23,11 @@ sgen [options]
 ```
   
 > [!TIP]
-> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. SDK> \v2.0\Bin dizininde bulunan SDKVars. bat dosyasını çalıştırarak bu ortam değişkenlerini ayarlayın \< . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
+> .NET Framework araçlarının düzgün çalışması için,, `Path` `Include` ve `Lib` ortam değişkenlerinizi doğru şekilde ayarlamanız gerekir. \V2.0\Bin dizininde bulunan SDKVars. bat dosyasını çalıştırarak bu ortam değişkenlerini ayarlayın \<SDK> . Her komut kabuğu'nu SDKVars.bat yürütülmelidir.
   
 ## <a name="parameters"></a>Parametreler  
   
-|Seçenek|Açıklama|  
+|Seçenek|Description|  
 |------------|-----------------|  
 |**/a \[ erleme \] :**_dosya adı_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
 |**/c \[ ompiler \] :**_Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  
@@ -64,5 +64,5 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araçlar](../../../docs/framework/tools/index.md)
-- [Komut Istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Araçlar](../../framework/tools/index.md)
+- [Komut Istemleri](../../framework/tools/developer-command-prompt-for-vs.md)

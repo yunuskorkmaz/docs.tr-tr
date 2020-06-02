@@ -14,16 +14,16 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 73f21c7f7d0670022d757e6c4c00280bb79709b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 98cc4a983c9703e6c5ab132f6110a327c6081b6c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379174"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289635"
 ---
 # <a name="examples-of-xml-serialization"></a>XML Serileştirme Örnekleri
 
-XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, [XML serileştirmesini tanıtma](../../../docs/standard/serialization/introducing-xml-serialization.md)bölümünde gösterildiği gibi, yalnızca genel alanlardan ve özelliklerden oluşan bir sınıfı seri hale getirebilirsiniz. Aşağıdaki kod örnekleri, belirli bir XML şeması (XSD) belgesine uyan bir XML akışı oluşturmak için XML serileştirmesini kullanma dahil çeşitli gelişmiş senaryolara yönelik olarak ele verilmektedir.
+XML serileştirme birden fazla formdan, karmaşık için basit sürebilir. Örneğin, [XML serileştirmesini tanıtma](introducing-xml-serialization.md)bölümünde gösterildiği gibi, yalnızca genel alanlardan ve özelliklerden oluşan bir sınıfı seri hale getirebilirsiniz. Aşağıdaki kod örnekleri, belirli bir XML şeması (XSD) belgesine uyan bir XML akışı oluşturmak için XML serileştirmesini kullanma dahil çeşitli gelişmiş senaryolara yönelik olarak ele verilmektedir.
 
 ## <a name="serializing-a-dataset"></a>Bir veri kümesi seri hale getirilmedi
 

@@ -1,5 +1,5 @@
 ---
-title: <paramref>- C# programlama kılavuzu
+title: <paramref>-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - paramref
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f3b521d24c8b4677a05b0b145cb36c31b2793f2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793398"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287317"
 ---
-# <a name="paramref-c-programming-guide"></a>\<paramref> (C# programlama kılavuzu)
+# <a name="paramref-c-programming-guide"></a>\<paramref>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <paramref name="name"/>
@@ -27,13 +27,13 @@ ms.locfileid: "76793398"
 
 - `name`
 
-  Başvurmak için parametrenin adı. Adı çift tırnak işaretlerine (" ") ekin.
+  Başvurabileceğiniz parametrenin adı. Adı çift tırnak işareti ("") içine alın.
 
 ## <a name="remarks"></a>Açıklamalar
 
-\<Paramref> etiketi, kod açıklamalarında, örneğin \<bir özet> veya \<blok> açıklamadaki bir sözcüğün bir parametreye atıfta bulunduğunu belirtmeniz için bir yol sunar. XML dosyası, bu sözcüğü kalın veya italik yazı tipi gibi farklı şekillerde biçimlendirmek için işlenebilir.
+`<paramref>`Etiketi, kod açıklamalarındaki bir sözcüğün, örneğin bir `<summary>` veya bloğunda bir parametreye başvurduğunu göstermek için bir yol sağlar `<remarks>` . Bu sözcüğü, kalın veya italik yazı tipiyle olduğu gibi farklı bir şekilde biçimlendirmek için XML dosyası işlenebilir.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılsın: Dizinleri kopyalama'
+title: 'Nasıl yapılır: dizinleri kopyalama'
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159461"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288582"
 ---
-# <a name="how-to-copy-directories"></a>Nasıl yapılsın: Dizinleri kopyalama
-Bu konu, bir dizinin içeriğini başka bir konuma eşit olarak kopyalamak için G/Ç sınıflarının nasıl kullanılacağını gösterir.
+# <a name="how-to-copy-directories"></a>Nasıl yapılır: dizinleri kopyalama
+Bu konu, bir dizinin içeriğini farklı bir konuma eşzamanlı olarak kopyalamak için g/ç sınıflarının nasıl kullanılacağını gösterir.
 
-Eşzamanlı dosya kopyalama örneği için Bkz. [Asynchronous file I/O](../../../docs/standard/io/asynchronous-file-i-o.md).
+Zaman uyumsuz dosya kopyalama örneği için bkz. [zaman uyumsuz dosya g/ç](asynchronous-file-i-o.md).
 
-Bu örnek, `copySubDirs` `DirectoryCopy` yöntemin 'i ' ye `true`ayarlayarak alt dizinleri kopyalar. Yöntem, `DirectoryCopy` kopyalayane kadar her alt dizinde kendisini çağırarak alt dizinleri özyinelemeli olarak kopyalar.  
+Bu örnekte, yönteminin öğesini olarak ayarlayarak alt dizinler kopyalanır `copySubDirs` `DirectoryCopy` `true` . Bu `DirectoryCopy` Yöntem, kopyalamak daha fazla olana kadar alt dizinleri her alt dizine çağırarak özyinelemeli olarak kopyalar.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -37,6 +37,6 @@ Bu örnek, `copySubDirs` `DirectoryCopy` yöntemin 'i ' ye `true`ayarlayarak alt
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [Dosya ve akış G/Ç](../../../docs/standard/io/index.md)
-- [Yaygın G/Ç görevleri](../../../docs/standard/io/common-i-o-tasks.md)
-- [Asynchronous dosya I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Dosya ve akış G/Ç](index.md)
+- [Ortak G/Ç görevleri](common-i-o-tasks.md)
+- [Zaman uyumsuz dosya G/Ç](asynchronous-file-i-o.md)

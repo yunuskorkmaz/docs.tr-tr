@@ -9,12 +9,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 95aff35569e58eacfd064609140a29b53e0036da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 762ba99c4751ba40f5f33e99455cf950af35cdf6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743820"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290155"
 ---
 # <a name="naming-resources"></a>Adlandırma Kaynakları
 Yerelleştirilebilir kaynaklara, özellikler gibi belirli nesneler aracılığıyla başvurulabildiğinden, kaynaklarla ilgili adlandırma yönergeleri Özellik yönergelerine benzer.
@@ -23,7 +23,7 @@ Yerelleştirilebilir kaynaklara, özellikler gibi belirli nesneler aracılığı
 
  ✔️, kısa tanımlayıcılar yerine açıklayıcı bir ad sağlar.
 
- ❌ ana CLR dillerinin dile özgü anahtar sözcüklerini kullanmayın.
+ ❌Ana CLR dillerinin dile özgü anahtar sözcüklerini kullanmayın.
 
  ✔️, adlandırma kaynaklarında yalnızca alfasayısal karakterler ve alt çizgi kullanır.
 
@@ -40,5 +40,5 @@ Yerelleştirilebilir kaynaklara, özellikler gibi belirli nesneler aracılığı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Adlandırma yönergeleri](naming-guidelines.md)

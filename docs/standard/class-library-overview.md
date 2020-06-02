@@ -1,5 +1,5 @@
 ---
-title: .NET sınıf kitaplığı genel bakış
+title: .NET sınıf kitaplığına genel bakış
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,79 +37,79 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400486"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289258"
 ---
-# <a name="net-class-library-overview"></a>.NET sınıf kitaplığı genel bakış
+# <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
-.NET uygulamaları, geliştirme işlemini hızlandıran ve optimize eden ve sistem işlevselliği sağlayan sınıflar, arabirimler, temsilciler ve değer türlerini içerir. Diller arasında birlikte çalışabilirliği kolaylaştırmak için, çoğu .NET türü CLS uyumludur ve bu nedenle derleyiciortak dil belirtimine (CLS) uygun olan herhangi bir programlama dilinden kullanılabilir.  
+.NET uygulamaları, geliştirme sürecini hızlandırmak ve iyileştirmek ve sistem işlevlerine erişim sağlamak için sınıflar, arabirimler, temsilciler ve değer türlerini içerir. Diller arasında birlikte çalışabilirliği kolaylaştırmak için, çoğu .NET türü CLS uyumludur ve bu nedenle, derleyicisinin ortak dil belirtimine (CLS) uygun olan herhangi bir programlama dilinden kullanılabilir.  
   
- .NET türleri,.NET uygulamalarının, bileşenlerinin ve denetimlerinin temelidir. .NET uygulamaları aşağıdaki işlevleri gerçekleştiren türleri içerir:  
+ .NET türleri, .NET uygulamaları, bileşenleri ve denetimlerinin oluşturulduğu temel uygulamalardır. .NET uygulamaları aşağıdaki işlevleri gerçekleştiren türleri içerir:  
   
-- Temel veri türlerini ve özel durumlarını temsil eder.  
+- Temel veri türlerini ve özel durumları temsil eder.  
   
-- Veri yapılarını kapsülle.  
+- Veri yapılarını yalıt.  
   
-- I/O gerçekleştirin.  
+- G/ç gerçekleştirin.  
   
-- Yüklenen türler hakkındaki bilgilere erişin.  
+- Yüklenen türlerle ilgili bilgilere erişin.  
   
-- .NET Framework güvenlik denetimlerini çağırın.  
+- .NET Framework güvenlik denetimlerini çağır.  
   
-- Veri erişimi, zengin istemci tarafı GUI ve sunucu kontrollü, istemci tarafı GUI sağlayın.  
+- Veri erişimi, zengin istemci tarafı GUI ve sunucu denetimli, istemci tarafı GUI sağlar.  
   
- .NET, zengin bir arabirim kümesinin yanı sıra soyut ve somut (soyut olmayan) sınıflar da sağlar. Somut sınıfları olduğu gibi kullanabilir veya birçok durumda kendi sınıflarınızı onlardan türetebilirsiniz. Arabirimin işlevselliğini kullanmak için, arabirimi uygulayan bir sınıf oluşturabilir veya arabirimi uygulayan .NET sınıflarından birinden bir sınıf türetebilirsiniz.  
+ .NET, soyut ve somut (soyut olmayan) sınıfların yanı sıra zengin bir arabirim kümesi sağlar. Somut sınıfları olduğu gibi kullanabilir veya çoğu durumda kendi sınıflarınızı bunlardan türetebilirsiniz. Bir arabirimin işlevselliğini kullanmak için, arabirimini uygulayan bir sınıf oluşturabilir veya arabirimini uygulayan .NET sınıflarından birinden bir sınıf türetebilirsiniz.  
   
 ## <a name="naming-conventions"></a>Adlandırma kuralları
 
- .NET türleri, bir hiyerarşiyi ifade eden nokta sözdizimi adlandırma düzeni kullanır. Bu teknik, ilgili türleri ad alanlarına gruplandırarak daha kolay aranıp başvurulabilmeleri için gruplandırılır. Tam adın ilk bölümü - en sağdaki nokta - ad alanı adıdır. Adın son bölümü tür adıdır. Örneğin, `System.Collections.Generic.List<T>` `System.Collections.Generic` ad `List<T>` alanına ait türü temsil eder. Bu tür <xref:System.Collections.Generic> genel koleksiyonlarla çalışmak için kullanılabilir.  
+ .NET türleri bir hiyerarşiyi karşılayan bir nokta sözdizimi adlandırma şeması kullanır. Bu teknik, arama yapmak ve daha kolay başvurulabilmeleri için ilgili türleri ad alanları halinde gruplandırır. Tam adın ilk bölümü — en sağdaki noktaya kadar — ad alanı adıdır. Adın son bölümü tür adıdır. Örneğin, `System.Collections.Generic.List<T>` `List<T>` ad alanına ait olan türü temsil eder `System.Collections.Generic` . İçindeki türler <xref:System.Collections.Generic> genel koleksiyonlarla çalışmak için kullanılabilir.  
   
- Bu adlandırma şeması, kütüphane geliştiricilerinin .NET Framework'ü genişleterek hiyerarşik tür grupları oluşturmasını ve bunları tutarlı ve bilgilendirici bir şekilde adlandırmasını kolaylaştırır. Ayrıca, türlerin tam adlarıyla (diğer bir şekilde ad alanı ve tür adı ile) kesin olarak tanımlanmasına izin verir ve bu da tür adı çakışmalarını önler. Kitaplık geliştiricilerin ad alanları için ad oluştururken aşağıdaki kuralı kullanmaları beklenir:  
+ Bu adlandırma şeması, .NET Framework genişleten kitaplık geliştiricilerinin hiyerarşik tür grupları oluşturmasını ve bunları tutarlı, bilgilendirici bir şekilde adlandırmasını kolaylaştırır. Ayrıca, türlerin tam adı (yani ad alanı ve tür adlarıyla) tarafından kesin bir şekilde tanımlanmasına izin verir ve bu da tür adı çakışmalarını önler. Kitaplık geliştiricilerinin ad alanları için ad oluştururken aşağıdaki kuralı kullanması beklenir:  
   
- *Şirket Adı*. *TechnologyName*  
+ *CompanyName*. *TechnologyName*  
   
- Örneğin, ad alanı `Microsoft.Word` bu kılavuza uygundur.  
+ Örneğin, ad alanı `Microsoft.Word` bu kılavuza uyar.  
   
- İlişkili türleri ad alanlarına gruplandırmak için adlandırma desenleri kullanımı, sınıf kitaplıkları oluşturmak ve belgelemek için çok yararlı bir yoldur. Ancak, bu adlandırma düzeninin görünürlük, üye erişimi, devralma, güvenlik veya bağlama üzerinde hiçbir etkisi yoktur. Ad alanı birden çok derleme arasında bölümlenebilir ve tek bir derleme birden çok ad alanından türler içerebilir. Derleme, ortak dil çalışma zamanında sürüm, dağıtım, güvenlik, yükleme ve görünürlük için resmi bir yapı sağlar.  
+ İlgili türleri ad alanlarına gruplamak için adlandırma desenlerinin kullanımı, sınıf kitaplıklarını derlemek ve belgelemek için çok faydalı bir yoldur. Ancak, bu adlandırma şemasının görünürlük, üye erişimi, devralma, güvenlik veya bağlama üzerinde hiçbir etkisi yoktur. Bir ad alanı birden çok derlemede bölümlenebilir ve tek bir derleme birden çok ad alanından türleri içerebilir. Derleme, ortak dil çalışma zamanında sürüm oluşturma, dağıtım, güvenlik, yükleme ve görünürlük için biçimsel yapı sağlar.  
   
- Ad alanları ve tür adları hakkında daha fazla bilgi için [Ortak Tür Sistemi'ne](../../docs/standard/base-types/common-type-system.md)bakın.  
+ Ad alanları ve tür adları hakkında daha fazla bilgi için bkz. [ortak tür sistemi](base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>Sistem ad alanı
 
- Ad <xref:System> alanı,.NET'teki temel türlerin kök ad alanıdır. Bu ad alanı, tüm uygulamalar tarafından kullanılan temel <xref:System.Object> veri türlerini temsil eden <xref:System.Byte>sınıfları içerir: (kalıtım hiyerarşisinin kökü), , , <xref:System.Char> <xref:System.Array> <xref:System.Int32>, <xref:System.String>, , vb. Bu türlerin çoğu, programlama dilinizin kullandığı ilkel veri türlerine karşılık gelir. .NET Framework türlerini kullanarak kod yazarken, .NET Framework base veri türü beklendiğinde dilinizin karşılık gelen anahtar sözcüklerini kullanabilirsiniz.  
+ <xref:System>Ad alanı, .net 'teki temel türler için kök ad alanıdır. Bu ad alanı, tüm uygulamalar tarafından kullanılan temel veri türlerini temsil eden sınıfları içerir: <xref:System.Object> (devralma hiyerarşisinin kökü),,,,, vb <xref:System.Byte> <xref:System.Char> <xref:System.Array> <xref:System.Int32> <xref:System.String> . Bu türlerin çoğu, programlama dilinizin kullandığı temel veri türlerine karşılık gelir. .NET Framework türlerini kullanarak kod yazdığınızda, bir .NET Framework temel veri türü beklendiğinde dilinizin karşılık gelen anahtar sözcüğünü kullanabilirsiniz.  
   
- Aşağıdaki tabloda .NET'in sağladığı temel türleri listeler, her türü kısaca açıklar ve Visual Basic, C#, C++ve F#'da karşılık gelen türü gösterir.  
+ Aşağıdaki tabloda, .NET 'in sağladığı temel türler listelenmekte, her tür kısaca açıklanmakta ve Visual Basic, C#, C++ ve F # içinde karşılık gelen tür gösterilmektedir.  
   
-|Kategori|Sınıf adı|Açıklama|Visual Basic veri türü|C# veri türü|C++/CLI veri türü|F# veri türü|  
+|Kategori|Sınıf adı|Description|Visual Basic veri türü|C# veri türü|C++/CLı veri türü|F # veri türü|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Tamsayı|<xref:System.Byte>|8 bit imzasız bir sonda.|**Bayt**|**Bayt**|**unsigned char**|**Bayt**|  
-||<xref:System.SByte>|8 bitlik imzalı bir sonda.<br /><br /> CLS uyumlu değil.|**Sbyte**|**Sbyte**|**char**<br /> -veya-<br /> **imzalı** **char**|**Sbyte**|  
-||<xref:System.Int16>|16 bit imzalı tamsayı.|**Kısa**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 bit imzalı tamsayı.|**Tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|64 bit imzalı tamsayı.|**Uzun**|**long**|**__int64**|**int64**|  
-||<xref:System.UInt16>|16 bit imzasız tamsayı.<br /><br /> CLS uyumlu değil.|**Ushort**|**ushort**|**imzasız short**|**uint16**|  
-||<xref:System.UInt32>|32 bit imzasız tamsayı.<br /><br /> CLS uyumlu değil.|**Uınteger**|**Uint**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**uint32**|  
-||<xref:System.UInt64>|64 bit imzasız tamsayı.<br /><br /> CLS uyumlu değil.|**Ulong**|**ulong**|**imzasız __int64**|**uint64**|  
-|Kayan nokta|<xref:System.Single>|Tek duyarlıklı (32 bit) kayan nokta numarası.|**Tek**|**float**|**float**|**Float32**<br> or<br>**Tek**|  
-||<xref:System.Double>|Çift duyarlıklı (64 bit) kayan nokta numarası.|**Çift**|**double**|**double**|**float**<br> or <br> **double**|  
-|Mantıksal|<xref:System.Boolean>|Boolean değeri (doğru veya yanlış).|**Boole**|**bool**|**bool**|**bool**|  
-|Diğer|<xref:System.Char>|Unicode (16-bit) karakter.|**Char**|**char**|**wchar_t**|**char**|  
-||<xref:System.Decimal>|Ondalık (128-bit) bir değer.|**On -da -lık**|**decimal**|**On -da -lık**|**decimal**|  
-||<xref:System.IntPtr>|Boyutu temel platforma (32 bit platformda 32 bit lik bir değer ve 64 bit platformda 64 bit lik bir değer) bağlı olan imzalı bir tamsayı.|**ıntptr**<br /><br /> Yerleşik bir tür yok.|**ıntptr**<br /><br /> Yerleşik bir tür yok.|**ıntptr**<br /><br /> Yerleşik bir tür yok.|**Unativeint**|  
-||<xref:System.UIntPtr>|Boyutu temel platforma (32 bit platformda 32 bit lik bir değer ve 64 bit platformda 64 bit lik bir değer) bağlı olan imzasız bir tamsayı.<br /><br /> CLS uyumlu değil.|**Uıntptr**<br /><br /> Yerleşik bir tür yok.|**Uıntptr**<br /><br /> Yerleşik bir tür yok.|**Uıntptr**<br /><br /> Yerleşik bir tür yok.|**Unativeint**|  
-||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Nesne**|**Nesne**|**Nesne^**|**obj**|  
-||<xref:System.String>|Değişmez, sabit uzunlukta Unicode karakter dizesi.|**Dize**|**Dize**|**Dize^**|**Dize**|  
+|Tamsayı|<xref:System.Byte>|8 bit işaretsiz tamsayı.|**Bayt**|**bayt**|**unsigned char**|**bayt**|  
+||<xref:System.SByte>|8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değildir.|**SByte**|**SByte**|**char**<br /> -veya-<br /> **işaretli** **karakter**|**SByte**|  
+||<xref:System.Int16>|16 bit işaretli tamsayı.|**Kısadır**|**short**|**short**|**Int16**|  
+||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Gir**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
+||<xref:System.Int64>|64 bitlik işaretli tamsayı.|**Kalacağını**|**long**|**__int64**|**tutulamaz**|  
+||<xref:System.UInt16>|16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UShort**|**ushort**|**imzasız short**|**Int16**|  
+||<xref:System.UInt32>|32 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UInteger**|**u**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**Int32**|  
+||<xref:System.UInt64>|64 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**'Tur**|**ulong**|**imzasız __int64**|**Int64**|  
+|Kayan nokta|<xref:System.Single>|Tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**<br> veya<br>**sunuculu**|  
+||<xref:System.Double>|Çift duyarlıklı (64-bit) kayan noktalı sayı.|**Çift**|**double**|**double**|**float**<br> veya <br> **double**|  
+|Mantıksal|<xref:System.Boolean>|Boole değeri (true veya false).|**Boole**|**bool**|**bool**|**bool**|  
+|Diğer|<xref:System.Char>|Unicode (16 bit) karakteri.|**Char**|**char**|**wchar_t**|**char**|  
+||<xref:System.Decimal>|Ondalık (128-bit) bir değer.|**Kategori**|**decimal**|**Kategori**|**decimal**|  
+||<xref:System.IntPtr>|Boyutu temel platforma bağlı olan işaretli bir tamsayı (32 bit platformda 32 bitlik bir değer ve bir 64-bit platformunda 64 bit değeri).|**Serisi**<br /><br /> Yerleşik tür yok.|**Serisi**<br /><br /> Yerleşik tür yok.|**Serisi**<br /><br /> Yerleşik tür yok.|**unativeint**|  
+||<xref:System.UIntPtr>|Boyutu temeldeki platforma bağlı işaretsiz bir tamsayı (32 bitlik bir platformda 32 bitlik bir değer ve bir 64-bit platformunda 64 bit değeri).<br /><br /> CLS uyumlu değildir.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
+||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Nesne**|**nesne**|**Nesne ^**|**obj**|  
+||<xref:System.String>|Unicode karakterlerinden oluşan sabit ve sabit uzunlukta bir dize.|**Dize**|**string**|**Dize ^**|**string**|  
   
- Ad alanı, temel veri <xref:System> türlerine ek olarak, özel durumları işleyen sınıflardan uygulama etki alanları ve çöp toplayıcı gibi temel çalışma zamanı kavramlarıyla ilgili sınıflara kadar 100'den fazla sınıf içerir. Ad <xref:System> alanı da birçok ikinci düzey ad alanları içerir.  
+ Temel veri türlerine ek olarak, <xref:System> ad alanı, uygulama etki alanları ve çöp toplayıcı gibi çekirdek çalışma zamanı kavramlarıyla ilgilenen sınıflarda özel durumları işleyen sınıflardan farklı olarak 100 ' den fazla sınıf içerir. <xref:System>Ad alanı da birçok ikinci düzey ad alanı içerir.  
   
- Ad alanları hakkında daha fazla bilgi için .NET Sınıf Kitaplığı'na göz atmak için [.NET API Tarayıcısını](https://docs.microsoft.com/dotnet/api) kullanın. API başvuru belgeleri, her ad alanı, türleri ve üyelerinin her biri hakkında belgeler sağlar.  
+ Ad alanları hakkında daha fazla bilgi için .net [API tarayıcısı](https://docs.microsoft.com/dotnet/api) ' nı kullanarak .NET sınıf kitaplığı 'na gidin. API başvuru belgeleri, her bir ad alanı, türleri ve üyelerinin her biri için belgeler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ortak Tür Sistemi](../../docs/standard/base-types/common-type-system.md)
-- [.NET API Tarayıcısı](../../api/index.md)
-- [Genel bakış](../../docs/framework/get-started/overview.md)
+- [Ortak tür sistemi](base-types/common-type-system.md)
+- [.NET API tarayıcısı](../../api/index.md)
+- [Genel Bakış](../framework/get-started/overview.md)

@@ -8,22 +8,22 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ac81a61691ec20daafc9e18978ba5814a150383
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141647"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288075"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme
-Aşağıdaki örnek, bir ağaç veri yapısında geçiş yapmak için paralel görevlerin kullanılabileceğini iki şekilde gösterir. Ağacın kendisi bir egzersiz olarak bırakılır.  
+Aşağıdaki örnekte, bir ağaç veri yapısına çapraz geçiş yapmak için paralel görevlerin kullanılabileceği iki yol gösterilmektedir. Ağacın kendisi bir alıştırma olarak kalır.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[TPL#16](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/tpl.cs#16)]
  [!code-vb[TPL#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/treewalk.vb#16)]  
   
- Gösterilen iki yöntem işlevsel olarak eşdeğerdir. Görevleri oluşturmak <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> ve çalıştırmak için yöntemi kullanarak, görevleri beklemek ve özel durumları işlemek için kullanılabilecek görevlerden bir tanıtıcı alırsınız.  
+ Gösterilen iki yöntem işlevsel olarak eşdeğerdir. <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>Görevleri oluşturmak ve çalıştırmak için yöntemini kullanarak, görevleri beklemek ve özel durumları işlemek için kullanılabilecek görevlerden geri bir tanıtıcı alırsınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Görev Paralel Kitaplığı (TPL)](task-parallel-library-tpl.md)

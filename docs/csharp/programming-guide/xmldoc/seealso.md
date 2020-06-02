@@ -1,5 +1,5 @@
 ---
-title: <seealso> - C# programlama kılavuzu
+title: <seealso> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093467"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287226"
 ---
-# <a name="seealso-c-programming-guide"></a>\<seealso> (C# programlama kılavuzu)
+# <a name="seealso-c-programming-guide"></a>\<seealso>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <seealso cref="member"/>
@@ -29,21 +29,21 @@ ms.locfileid: "77093467"
 
 ## <a name="parameters"></a>Parametreler
 
-- cref = `member`" "
+- cref = " `member` "
 
-  Geçerli derleme ortamından çağrılabilecek bir üye veya alana başvuru. Derleyici, verilen kod öğesinin var `member` olduğunu denetler ve XML çıkışındaki öğe adına geçer.`member` çift tırnak işaretleri içinde görünmelidir (" ").
+  Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve `member` çıkış XML dosyasında öğe adına geçirir.`member` Çift tırnak işaretleri ("") içinde yer almalıdır.
 
-  Genel bir türe nasıl bir cref başvurusu oluşturabilirsiniz hakkında bilgi için [bkz.](./cref-attribute.md)
+  Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [cref özniteliği](./cref-attribute.md).
 
 ## <a name="remarks"></a>Açıklamalar
 
-Seealso> etiketi, \<Bkz. Ayrıca bölümünde görünmesini isteyebileceğiniz metni belirtmenize olanak tanır. Metin içinden bir bağlantı belirtmek için [ \<bkz.>](./see.md) kullanın.
+`<seealso>`Etiketi, Ayrıca bkz. bölümünde görünmesini isteyebileceğiniz metni belirtmenize imkan sağlar. [\<see>](./see.md)Metnin içinden bir bağlantı belirtmek için kullanın.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 
-Seealso> kullanma \<örneği için özet [ \<>](./summary.md) bakın.
+[\<summary>](./summary.md)Hakkında bir örnek için bkz \<seealso> ..
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

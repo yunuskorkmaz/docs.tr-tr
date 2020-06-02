@@ -3,26 +3,26 @@ title: Basit Türlerin Çıkarımını Yapma Kuralları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710238"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289076"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Basit Türlerin Çıkarımını Yapma Kuralları
-<xref:System.Xml.Schema.XmlSchemaInference> Sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
+<xref:System.Xml.Schema.XmlSchemaInference>Sınıfının öznitelikler ve öğeler için veri türünü nasıl kullandığını açıklar.  
   
- <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı, öznitelikler ve öğeler için veri türünü basit türler olarak anlar. Bu bölümde, birden çok farklı değerin tek bir türe göre nasıl mutabık kılınmasıyla ve şema tanımlama `xsi` özniteliklerinin nasıl işlendiği açıklanmaktadır.  
+ <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, öznitelikler ve öğeler için veri türünü basit türler olarak anlar. Bu bölümde, birden çok farklı değerin tek bir türe göre nasıl mutabık kılınmasıyla ve şema tanımlama `xsi` özniteliklerinin nasıl işlendiği açıklanmaktadır.  
   
 ## <a name="inferred-types"></a>Çıkartılan türler  
- Sınıfı <xref:System.Xml.Schema.XmlSchemaInference> , öğe ve öznitelik değerlerini basit türler olarak anlar ve sonuç şemasında bir tür özniteliği içerir. Tüm çıkartılan türler basit türlerdir. Ortaya çıkan şemanın bir parçası olarak hiçbir temel tür veya model dahil değildir.  
+ <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, öğe ve öznitelik değerlerini basit türler olarak anlar ve sonuç şemasında bir tür özniteliği içerir. Tüm çıkartılan türler basit türlerdir. Ortaya çıkan şemanın bir parçası olarak hiçbir temel tür veya model dahil değildir.  
   
  Değerler, XML belgesinde karşılaştığı şekilde ayrı ayrı incelenir. Tür, İncelenme sırasında bir değer için algılanır. Bir öznitelik veya öğe için bir tür çıkarsanmışsa ve şu anda çıkartılan türle eşleşmeyen öznitelik veya öğe için bir değer ile karşılaşılırsa, <xref:System.Xml.Schema.XmlSchemaInference> sınıf her bir kural kümesinin türünü yükseltir. Bu kurallar, bu konunun ilerleyen kısımlarında bulunan yükseltme türü bölümünde ele alınmıştır.  
   
  Aşağıdaki tabloda, sonuçta elde edilen şema için olası çıkartılan türler listelenmektedir.  
   
-|Basit tür|Açıklama|  
+|Basit tür|Description|  
 |-----------------|-----------------|  
 |boole|True, false, 0, 1.|  
 |byte|-128 ile 127 arasında tamsayılar.|  
@@ -45,7 +45,7 @@ ms.locfileid: "75710238"
 |string|Bir veya daha fazla Unicode karakteri.|  
   
 ## <a name="type-promotion"></a>Tür Yükseltme  
- <xref:System.Xml.Schema.XmlSchemaInference> Sınıfı özniteliği ve öğe değerlerini tek seferde inceler. Değerlerle karşılaşıldığında, en kısıtlayıcı, imzasız tür algılanır. Bir tür öznitelik veya öğe için çıkarsanmışsa ve şu anda çıkartılan türle eşleşmeyen yeni bir değerle karşılaşılırsa, çıkartılan tür, şu anda çıkartılan tür ve yeni değer için geçerli olan yeni bir türe yükseltilir. Sınıfı <xref:System.Xml.Schema.XmlSchemaInference> , çıkartılan türü yükseltirken önceki değerleri dikkate almaz.  
+ <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı özniteliği ve öğe değerlerini tek seferde inceler. Değerlerle karşılaşıldığında, en kısıtlayıcı, imzasız tür algılanır. Bir tür öznitelik veya öğe için çıkarsanmışsa ve şu anda çıkartılan türle eşleşmeyen yeni bir değerle karşılaşılırsa, çıkartılan tür, şu anda çıkartılan tür ve yeni değer için geçerli olan yeni bir türe yükseltilir. <xref:System.Xml.Schema.XmlSchemaInference>Sınıfı, çıkartılan türü yükseltirken önceki değerleri dikkate almaz.  
   
  Örneğin, iki XML belgelerinden aşağıdaki XML parçalarını göz önünde bulundurun:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75710238"
   
  `<MyElement1 attr1="52344" />`  
   
- İlk `attr1` değer ile karşılaşıldığında, türü `attr1` değerine `unsignedByte` `12`göre çıkarılır. İkinciden `attr1` karşılaşıldığında, türü şu anda çıkartılan tür `unsignedShort` `unsignedByte` ve geçerli değer `52344`temel alınarak öğesine yükseltilir.  
+ İlk `attr1` değer ile karşılaşıldığında, türü `attr1` `unsignedByte` değerine göre çıkarılır `12` . İkinciden `attr1` karşılaşıldığında, türü `unsignedShort` Şu anda çıkartılan tür ve geçerli değer temel alınarak öğesine yükseltilir `unsignedByte` `52344` .  
   
  Şimdi iki XML belgelerinden aşağıdaki XML 'i göz önünde bulundurun:  
   
@@ -61,21 +61,21 @@ ms.locfileid: "75710238"
   
  `<MyElement2 attr2="true" />`  
   
- İlk `attr2` değer ile karşılaşıldığında, türü `attr2` değerine `unsignedByte` `0`göre çıkarılır. İkinciden `attr2` `string` karşılaşıldığında, türü şu anda çıkartılan türe `unsignedByte` ve geçerli değere `true` göre yükseltilir çünkü sınıf, <xref:System.Xml.Schema.XmlSchemaInference> çıkartılan türü yükseltirken önceki değerleri dikkate alır. Ancak, aynı XML belgesinde ve `attr2` yukarıda gösterildiği gibi ıkı farklı XML belgesinde olmayan her iki örneğe de karşılaşılırsa, `attr2` olarak `boolean`çıkarılırdı.  
+ İlk `attr2` değer ile karşılaşıldığında, türü `attr2` `unsignedByte` değerine göre çıkarılır `0` . İkinciden `attr2` karşılaşıldığında, türü `string` Şu anda çıkartılan türe `unsignedByte` ve geçerli değere göre yükseltilir `true` çünkü <xref:System.Xml.Schema.XmlSchemaInference> sınıf, çıkartılan türü yükseltirken önceki değerleri dikkate alır. Ancak, `attr2` aynı XML belgesinde ve yukarıda gösterildiği gibi iki farklı XML belgesinde olmayan her iki örneğe de karşılaşılırsa, `attr2` olarak çıkarılırdı `boolean` .  
   
-### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a><https://www.w3.org/2001/XMLSchema-instance> Ad alanından yoksayılan öznitelikler
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Ad alanından yoksayılan öznitelikler <https://www.w3.org/2001/XMLSchema-instance>
 
 Şema, şema çıkarımı sırasında yoksayılan öznitelikleri tanımlar.  
   
-|Öznitelik|Açıklama|  
+|Öznitelik|Description|  
 |---------------|-----------------|  
-|`xsi:type`|`xsi:type` Belirtilen `xsi:type` bir öğeyle karşılaşılırsa, yok sayılır.|  
-|`xsi:nil`|`xsi:nil` Özniteliği olan bir öğe ile karşılaşılırsa, çıkarılan şemadaki öğe bildiriminin değeri olur `nillable="true"`. `xsi:nil` Özniteliği olarak `true` ayarlanmış bir öğenin alt öğeleri olamaz.|  
-|`xsi:schemaLocation`|`xsi:schemaLocation` Karşılaşılırsa, yok sayılır.|  
-|`xsi:noNamespaceSchemaLocation`|`xsi:noNamespaceSchemaLocation` Karşılaşılırsa, yok sayılır.|  
+|`xsi:type`|Belirtilen bir öğeyle karşılaşılırsa, yok `xsi:type` `xsi:type` sayılır.|  
+|`xsi:nil`|Özniteliği olan bir öğe ile `xsi:nil` karşılaşılırsa, çıkarılan şemadaki öğe bildiriminin değeri olur `nillable="true"` . `xsi:nil`Özniteliği olarak ayarlanmış bir öğenin `true` alt öğeleri olamaz.|  
+|`xsi:schemaLocation`|`xsi:schemaLocation`Karşılaşılırsa, yok sayılır.|  
+|`xsi:noNamespaceSchemaLocation`|`xsi:noNamespaceSchemaLocation`Karşılaşılırsa, yok sayılır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [XML Belgelerinden Şema Çıkarımı Yapma](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [XML Şema Nesne Modeli (SOM)](xml-schema-object-model-som.md)
+- [XML Belgelerinden Şema Çıkarımı Yapma](inferring-schemas-from-xml-documents.md)
+- [Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları](rules-for-inferring-schema-node-types-and-structure.md)

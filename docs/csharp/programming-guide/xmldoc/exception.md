@@ -1,5 +1,5 @@
 ---
-title: <exception>- C# programlama kılavuzu
+title: <exception>-C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789797"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287405"
 ---
-# <a name="exception-c-programming-guide"></a>\<özel durum> (C# programlama kılavuzu)
+# <a name="exception-c-programming-guide"></a>\<exception>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <exception cref="member">description</exception>
@@ -25,23 +25,23 @@ ms.locfileid: "76789797"
 
 ## <a name="parameters"></a>Parametreler
 
-- cref = `member`" "
+- cref = " `member` "
 
-  Geçerli derleme ortamından kullanılabilen bir özel durum için bir başvuru. Derleyici, verilen özel durum var `member` olduğunu denetler ve xml çıkışındaki kanonik öğe adına çevirir. `member`çift tırnak işaretleri içinde görünmelidir (" ").
+  Geçerli derleme ortamında kullanılabilir bir özel duruma başvuru. Derleyici verilen özel durumun var olduğunu denetler ve `member` çıkış XML dosyasında kurallı öğe adına çevirir. `member`Çift tırnak işaretleri ("") içinde yer almalıdır.
 
-  Genel bir türe `member` başvurmak için biçimlendirme hakkında daha fazla bilgi için Bkz. [XML Dosyasını İşleme.](processing-the-xml-file.md)
+  Genel bir türe başvurmak için biçimlendirme hakkında daha fazla bilgi için `member` bkz. [XML dosyasını işleme](processing-the-xml-file.md).
 
 - `description`
 
-  Özel durum açıklaması.
+  Özel durumun açıklaması.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özel \<durum> etiketi, hangi özel durumların atılacağını belirtmenize olanak tanır. Bu etiket, yöntemler, özellikler, olaylar ve dizin leyiciler için tanımlara uygulanabilir.
+`<exception>`Etiketi hangi özel durumların atılamayacağını belirtmenizi sağlar. Bu etiket Yöntemler, özellikler, olaylar ve Dizin oluşturucular için tanımlara uygulanabilir.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
-Özel durum işleme hakkında daha fazla bilgi için [bkz.](../exceptions/index.md)
+Özel durum işleme hakkında daha fazla bilgi için bkz. [özel durumlar ve özel durum işleme](../exceptions/index.md).
 
 ## <a name="example"></a>Örnek
 

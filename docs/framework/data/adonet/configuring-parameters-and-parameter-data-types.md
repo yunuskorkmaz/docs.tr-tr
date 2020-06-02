@@ -1,107 +1,108 @@
 ---
-title: Yapılandırma parametreleri ve parametre veri türleri
+title: Parametreleri ve parametre veri türlerini yapılandırma
+description: Komut nesneleri, ADO.NET içinde tür denetimi ve doğrulama sağlayarak SQL deyimlerine veya saklı yordamlara değerler geçirmek için parametreler kullanır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a426eeae785274b0484a84a2fae2dce4572fb4c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879962"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287122"
 ---
-# <a name="configuring-parameters-and-parameter-data-types"></a>Yapılandırma parametreleri ve parametre veri türleri
+# <a name="configuring-parameters-and-parameter-data-types"></a>Parametreleri ve parametre veri türlerini yapılandırma
 
-Komut nesneleri SQL deyimleri ya da saklı yordamlar, tür denetlemesi ve doğrulama sağlayan değerleri geçirmek için parametreleri kullanın. Komut metni parametre girişi yürütülebilir kod olarak değil, değişmez değer olarak kabul edilir. Bu, bu sunucuda ödün güvenlik SQL deyimi içinde bir saldırganın komut ekler "SQL ekleme" saldırılarına karşı önlem yardımcı olur.
+Komut nesneleri, tür denetimi ve doğrulama sağlamak için değerleri SQL deyimlerine veya saklı yordamlara geçirmek için parametreler kullanır. Komut metninin aksine, parametre girişi, çalıştırılabilir kod olarak değil, değişmez değer olarak değerlendirilir. Bu, bir saldırganın sunucuda güvenlik altına bir SQL bildirimine güvenmesini sağlayan bir komut eklediği "SQL ekleme" saldırılarına karşı koruma sağlamaya yardımcı olur.
 
-Çünkü bunlar doğru gelen komutu bir uygun önbelleğe alınmış sorgu planı ile aynı veritabanı sunucusu yardımcı parametreli komutların da sorgu yürütme performansı artırır. Daha fazla bilgi için [planlama, yürütme önbelleğe alma ve yeniden](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) ve [parametreleri ve yürütme planı yeniden](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Güvenlik ve performans avantajlarına ek olarak, parametreli komutların bir veri kaynağına iletilen değerlere düzenlemek için kullanışlı bir yöntem sağlar.
+Parametreli Komutlar, veritabanı sunucusunun doğru bir önbelleğe alınmış sorgu planıyla gelen komutla doğru bir şekilde eşleştiğinden yardımcı olduklarından sorgu yürütme performansını da iyileştirebilir. Daha fazla bilgi için bkz. [yürütme planı önbelleğe alma ve yeniden kullanma](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) ve [Parametreler ve yürütme planı yeniden kullanımı](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Güvenlik ve performans avantajlarına ek olarak, Parametreli Komutlar bir veri kaynağına geçirilen değerleri düzenlemek için kullanışlı bir yöntem sağlar.
 
-A <xref:System.Data.Common.DbParameter> nesne oluşturulabilir, oluşturucu kullanılarak ya da eklemeden <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> çağırarak `Add` yöntemi <xref:System.Data.Common.DbParameterCollection> koleksiyonu. `Add` Yöntemi olarak alacağınız oluşturucu bağımsız değişkenleri veya veri sağlayıcısına bağlı olarak var olan bir parametre nesnesi girin.
+Bir <xref:System.Data.Common.DbParameter> nesnesi, Oluşturucusu kullanılarak veya <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> koleksiyonun yöntemi çağırarak öğesine eklenerek oluşturulabilir `Add` <xref:System.Data.Common.DbParameterCollection> . `Add`Yöntemi, veri sağlayıcısına bağlı olarak, Oluşturucu bağımsız değişkenleri veya var olan bir parametre nesnesi olarak giriş olarak alır.
 
 ## <a name="supplying-the-parameterdirection-property"></a>ParameterDirection özelliği sağlama
 
-Parametreleri eklerken, sağlamalısınız bir <xref:System.Data.ParameterDirection> özelliği için giriş parametrelerini farklı parametreler. Aşağıdaki tabloda `ParameterDirection` ile kullanabileceğiniz değerler <xref:System.Data.ParameterDirection> sabit listesi.
+Parametreleri eklerken, <xref:System.Data.ParameterDirection> Giriş parametrelerinden başka parametreler için bir özellik sağlamalısınız. Aşağıdaki tabloda, `ParameterDirection` numaralandırmada kullanabileceğiniz değerler gösterilmektedir <xref:System.Data.ParameterDirection> .
 
-|Üye adı|Açıklama|
+|Üye adı|Description|
 |-----------------|-----------------|
-|<xref:System.Data.ParameterDirection.Input>|Bir giriş parametresidir. Bu varsayılandır.|
-|<xref:System.Data.ParameterDirection.InputOutput>|Parametresi hem giriş hem de çıkış gerçekleştirebilirsiniz.|
-|<xref:System.Data.ParameterDirection.Output>|Parametre bir çıktı parametresidir.|
-|<xref:System.Data.ParameterDirection.ReturnValue>|Parametre, dönüş değeri bir saklı yordam, yerleşik işlev veya kullanıcı tanımlı işlevi gibi bir işlemi temsil eder.|
+|<xref:System.Data.ParameterDirection.Input>|Parametresi bir giriş parametresidir. Bu varsayılandır.|
+|<xref:System.Data.ParameterDirection.InputOutput>|Parametresi hem giriş hem de çıkış gerçekleştirebilir.|
+|<xref:System.Data.ParameterDirection.Output>|Parametresi bir çıkış parametresidir.|
+|<xref:System.Data.ParameterDirection.ReturnValue>|Parametresi, saklı yordam, yerleşik işlev veya Kullanıcı tanımlı işlev gibi bir işlemden bir dönüş değeri temsil eder.|
 
 ## <a name="working-with-parameter-placeholders"></a>Parametre yer tutucuları ile çalışma
 
-Parametre yer tutucuları sözdizimi veri kaynağına bağlıdır. .NET Framework veri sağlayıcıları adlandırma ve parametreleri ve parametre yer tutucuları farklı belirterek işleyin. Bu sözdizimi, aşağıdaki tabloda açıklandığı gibi belirli veri kaynağına özelleştirilir.
+Parametre yer tutucuları için sözdizimi veri kaynağına bağlıdır. .NET Framework veri sağlayıcıları, adlandırma ve parametreleri ve parametre yer tutucuları farklı şekilde belirtmeyi işler. Bu söz dizimi, aşağıdaki tabloda açıklandığı gibi belirli bir veri kaynağına özelleştirilir.
 
-|Veri sağlayıcısı|Parametre adlandırma söz dizimi|
+|Veri sağlayıcısı|Parametre adlandırma sözdizimi|
 |-------------------|-----------------------------|
-|<xref:System.Data.SqlClient>|Adlı parametreleri biçimde `@` *parametername*.|
-|<xref:System.Data.OleDb>|Bir soru işaretiyle gösterilen konumsal parametre işareti kullanır (`?`).|
-|<xref:System.Data.Odbc>|Bir soru işaretiyle gösterilen konumsal parametre işareti kullanır (`?`).|
-|<xref:System.Data.OracleClient>|Adlı parametreleri biçimde `:` *parmname* (veya *parmname*).|
+|<xref:System.Data.SqlClient>|Parametre adı olarak adlandırılmış parametreleri kullanır `@` *parametername*.|
+|<xref:System.Data.OleDb>|Bir soru işaretiyle () belirtilen Konumsal parametre işaretçilerini kullanır `?` .|
+|<xref:System.Data.Odbc>|Bir soru işaretiyle () belirtilen Konumsal parametre işaretçilerini kullanır `?` .|
+|<xref:System.Data.OracleClient>|, `:` *Parmname* (veya *parmname*) biçiminde adlandırılmış parametreleri kullanır.|
 
 ## <a name="specifying-parameter-data-types"></a>Parametre veri türlerini belirtme
 
-Bir parametrenin veri türü .NET Framework veri sağlayıcısı için özeldir. Değerini dönüştürür türünü belirterek `Parameter` veri kaynağına değer geçirmeden önce .NET Framework veri sağlayıcısı türü. Türünü de belirtebilirsiniz bir `Parameter` ayarlayarak genel bir şekilde `DbType` özelliği `Parameter` belirli bir nesneye <xref:System.Data.DbType>.
+Bir parametrenin veri türü .NET Framework veri sağlayıcısına özeldir. Türü belirtmek, `Parameter` değerini veri kaynağına geçirmeden önce değerini .NET Framework veri sağlayıcısı türüne dönüştürür. Ayrıca, `Parameter` `DbType` nesnesinin özelliğini belirli bir şekilde ayarlayarak bir genel şekilde türünü de belirtebilirsiniz `Parameter` <xref:System.Data.DbType> .
 
-.NET Framework veri sağlayıcısı türü bir `Parameter` nesne .NET Framework türünden çıkarılan `Value` , `Parameter` nesnesi veya `DbType` , `Parameter` nesne. Aşağıdaki tabloda gösterilen gösterilmektedir `Parameter` türüne dayalı olarak geçirilen nesnede `Parameter` değer veya belirtilen `DbType`.
+Bir nesnenin .NET Framework veri sağlayıcısı türü, nesnenin `Parameter` .NET Framework türünden `Value` `Parameter` veya nesnesinin içinden algılanır `DbType` `Parameter` . Aşağıdaki tabloda, `Parameter` değer olarak geçirilen nesneye `Parameter` veya belirtilen değere göre gösterilen tür gösterilmektedir `DbType` .
 
 |.NET Framework türü|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boole değeri|bit|Boole değeri|bit|Bayt|
-|<xref:System.Byte>|Bayt|Mini tamsayı|UnsignedTinyInt|Mini tamsayı|Bayt|
-|byte[]|İkili|Değişken İkili. 8000 bayt olan bayt dizisini ikili, en yüksek boyuttan büyük olması durumunda bu örtülü dönüştürme başarısız olur. 8000 bayt değerinden daha büyük bayt dizileri için açıkça ayarlanmış <xref:System.Data.SqlDbType>.|VarBinary|İkili|Ham|
-|<xref:System.Char>| |Çıkarımını yapma bir <xref:System.Data.SqlDbType> char desteklenmiyor.|Char|Char|Bayt|
+|<xref:System.Boolean>|Boole|Sürümleri|Boole|Sürümleri|Bayt|
+|<xref:System.Byte>|Bayt|Iç|Unsignedtınyıınt|Iç|Bayt|
+|Byte []|İkili|İkili. Bayt dizisi, bir VarBinary 'ın 8000 bayt olan en büyük boyutundan daha büyükse bu örtük dönüştürme başarısız olur. 8000 bayttan daha büyük bayt dizileri için, açıkça öğesini ayarlayın <xref:System.Data.SqlDbType> .|Ikili|İkili|Ham|
+|<xref:System.Char>| |Bir <xref:System.Data.SqlDbType> char 'ın bir karakter oluşturma işlemi desteklenmez.|Char|Char|Bayt|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
-|<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008'de DateTimeOffset. Çıkarımını yapma bir <xref:System.Data.SqlDbType> DateTimeOffset SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|||DateTime|
-|<xref:System.Decimal>|Ondalık|Ondalık|Ondalık|Numeric|Sayı|
-|<xref:System.Double>|Çift|Float|çift|çift|Çift|
+|<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008 ' de DateTimeOffset. <xref:System.Data.SqlDbType>SQL Server 2008 ' den önceki SQL Server sürümlerinde, DateTimeOffset 'den bir|||DateTime|
+|<xref:System.Decimal>|Ondalık|Ondalık|Ondalık|Sayısal|Sayı|
+|<xref:System.Double>|Çift|Float|Çift|Çift|Çift|
 |<xref:System.Single>|Tek|Gerçek|Tek|Gerçek|Float|
 |<xref:System.Guid>|Guid|Benzersiz tanımlayıcı|Guid|Benzersiz tanımlayıcı|Ham|
-|<xref:System.Int16>|Int16|Smallint|Smallint|Smallint|Int16|
+|<xref:System.Int16>|Int16|Small|Small|Small|Int16|
 |<xref:System.Int32>|Int32|int|int|int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Sayı|
-|<xref:System.Object>|Nesne|Değişken|Değişken|Nesneden bir OdbcType çıkarımını yapma desteklenmiyor.|Blob|
-|<xref:System.String>|Dize|NVarChar. Dize, 4000 karakter olan bir NVarChar en yüksek boyuttan büyük olması durumunda bu örtülü dönüştürme başarısız olur. 4000 karakterden uzun dizeler için açıkça ayarlanmış <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
-|<xref:System.TimeSpan>|Zaman|SQL Server 2008'de saat. Çıkarımını yapma bir <xref:System.Data.SqlDbType> TimeSpan SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|DBTime|Zaman|DateTime|
-|<xref:System.UInt16>|UInt16|Çıkarımını yapma bir <xref:System.Data.SqlDbType> UInt16 desteklenmiyor.|UnsignedSmallInt|int|UInt16|
-|<xref:System.UInt32>|UInt32|Çıkarımını yapma bir <xref:System.Data.SqlDbType> UInt32 desteklenmiyor.|unsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Çıkarımını yapma bir <xref:System.Data.SqlDbType> Uınt64 ' desteklenmiyor.|UnsignedBigInt|Numeric|Sayı|
-||AnsiString|VarChar|VarChar|VarChar|VarChar|
+|<xref:System.Object>|Nesne|Değişken|Değişken|Nesnesinden OdbcType 'ı göstermek desteklenmez.|Blob|
+|<xref:System.String>|Dize|NVarChar. Dize, 4000 karakter olan bir NVarChar 'nin en büyük boyutundan daha büyükse bu örtük dönüştürme başarısız olur. 4000 karakterden daha büyük dizeler için, açıkça öğesini ayarlayın <xref:System.Data.SqlDbType> .|VarWChar|NVarChar|NVarChar|
+|<xref:System.TimeSpan>|Saat|SQL Server 2008 ' de zaman. Bir <xref:System.Data.SqlDbType> TimeSpan değeri, SQL Server 2008 ' den önceki SQL Server sürümlerinde desteklenmez.|DBTime|Saat|DateTime|
+|<xref:System.UInt16>|UInt16|UInt16 'den bir veya daha fazla <xref:System.Data.SqlDbType> destek desteklenmez.|UnsignedSmallInt|int|UInt16|
+|<xref:System.UInt32>|UInt32|Bir <xref:System.Data.SqlDbType> UInt32 'den bir, göstermek desteklenmez.|UnsignedInt|BigInt|UInt32|
+|<xref:System.UInt64>|UInt64|Bir UInt64 'nin bir veya daha fazla <xref:System.Data.SqlDbType> olması desteklenmiyor.|UnsignedBigInt|Sayısal|Sayı|
+||Ansıtring|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Para Birimi|money|Para Birimi|Çıkarımını yapma bir `OdbcType` gelen `Currency` desteklenmiyor.|Sayı|
-||Tarih|SQL Server 2008'de tarih. Çıkarımını yapma bir <xref:System.Data.SqlDbType> tarihinden itibaren SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|DBDate|Tarih|DateTime|
-||SByte|Çıkarımını yapma bir <xref:System.Data.SqlDbType> SByte desteklenmiyor.|Mini tamsayı|Çıkarımını yapma bir `OdbcType` SByte desteklenmiyor.|SByte|
-||StringFixedLength|nChar|WChar|nChar|nChar|
-||Zaman|SQL Server 2008'de saat. Çıkarımını yapma bir <xref:System.Data.SqlDbType> zamandan SQL Server'ın SQL Server 2008'den önceki sürümlerinde desteklenmez.|DBTime|Zaman|DateTime|
-||VarNumeric|Çıkarımını yapma bir <xref:System.Data.SqlDbType> VarNumeric desteklenmiyor.|VarNumeric|Çıkarımını yapma bir `OdbcType` VarNumeric desteklenmiyor.|Sayı|
-|Kullanıcı tanımlı tür (bir nesne ile <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Nesnesi veya dize, sağlayıcıya bağlı olarak (SqlClient her zaman döndüren bir nesne, Odbc her zaman bir dize döndürür ve OleDb yönetilen veri sağlayıcısı ya da görebilirsiniz.|SqlDbType.Udt varsa <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> olan mevcut, aksi halde değişken|(Değer null ise) OleDbType.VarWChar aksi OleDbType.Variant.|OdbcType.NVarChar|Desteklenmiyor|
+||Para Birimi|Para|Para Birimi|İçinden bir, ' den fazla bir `OdbcType` `Currency` değer erteleme desteklenmez.|Sayı|
+||Tarih|SQL Server 2008 ' de tarih. <xref:System.Data.SqlDbType>SQL Server SQL Server 2008 ' den önceki sürümlerde bir from tarihi arasında bir değer olmaması desteklenmez.|DBDate|Tarih|DateTime|
+||SByte|Bir SByte 'nin bir listesini göstermek <xref:System.Data.SqlDbType> desteklenmez.|Iç|Bir `OdbcType` SByte 'tan çıkarma desteklenmez.|SByte|
+||StringFixedLength|NChar|WChar|NChar|NChar|
+||Saat|SQL Server 2008 ' de zaman. <xref:System.Data.SqlDbType>SQL Server SQL Server 2008 ' den önceki sürümlerde bir süre içinde, desteklenmez.|DBTime|Saat|DateTime|
+||VarNumeric|<xref:System.Data.SqlDbType>VarNumeric arasında bir değer göstermek desteklenmez.|VarNumeric|`OdbcType`VarNumeric bir değer göstermek desteklenmez.|Sayı|
+|Kullanıcı tanımlı tür (içeren bir nesne<xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Sağlayıcıya bağlı olarak nesne veya dize (SqlClient her zaman bir nesne döndürür, ODBC her zaman bir dize döndürür ve OleDb tarafından yönetilen veri sağlayıcısı her birini görebilir|SqlDbType. udt varsa <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> , aksi takdirde varyant|OleDbType. VarWChar (değer null ise), aksi halde OleDbType. VARIANT.|OdbcType. NVarChar|desteklenmiyor|
 
 > [!NOTE]
-> Ondalık Dönüştürmelere diğer türlere ondalık değeri sıfıra doğru en yakın tam sayı değerine YUVARLA dönüştürmeleri daraltma. Dönüştürmenin sonucu hedef türü içinde gösterilebilir değilse bir <xref:System.OverflowException> oluşturulur.
+> Ondalığa diğer türlere dönüştürme, ondalık değeri, en yakın tamsayı değerine doğru yuvarlamak için daraltma dönüştürmelerinde. Dönüştürme sonucu hedef türünde gösterilemeyen bir tablo değilse, bir oluşturulur <xref:System.OverflowException> .
 
 > [!NOTE]
-> Null parametre değeri sunucuya gönderdiğinizde, belirtmelisiniz <xref:System.DBNull>değil `null` (`Nothing` Visual Basic'te). Null değer sisteminde herhangi bir değer olan boş bir nesnedir. <xref:System.DBNull> Null değerleri temsil etmek için kullanılır. Veritabanı null değerler hakkında daha fazla bilgi için bkz. [boş değerler işleme](./sql/handling-null-values.md).
+> Sunucuya null bir parametre değeri gönderdiğinizde, <xref:System.DBNull> `null` (Visual Basic) öğesini belirtmeniz gerekir `Nothing` . Sistemdeki null değeri, değeri olmayan boş bir nesnedir. <xref:System.DBNull>null değerleri temsil etmek için kullanılır. Veritabanı boş değerleri hakkında daha fazla bilgi için bkz. [null değerlerini işleme](./sql/handling-null-values.md).
 
 ## <a name="deriving-parameter-information"></a>Parametre bilgileri türetme
 
-Parametreler de türetilmiş kullanarak bir saklı yordam `DbCommandBuilder` sınıfı. Hem `SqlCommandBuilder` ve `OleDbCommandBuilder` sınıfları sağlar bir statik yöntem `DeriveParameters`, hangi otomatik olarak dolduran bir saklı yordam parametre bilgilerini kullanan bir komut nesnesi parametreleri koleksiyonu. Unutmayın `DeriveParameters` komutu mevcut tüm parametre bilgilerini üzerine yazar.
+Parametreler, sınıfı kullanılarak saklı bir yordamdan de türetilebilir `DbCommandBuilder` . Hem `SqlCommandBuilder` hem de `OleDbCommandBuilder` sınıfları, saklı bir `DeriveParameters` yordamdan parametre bilgilerini kullanan bir komut nesnesinin Parameters koleksiyonunu otomatik olarak dolduran statik bir yöntem sağlar. `DeriveParameters`Komutuna ait varolan parametre bilgilerinin üzerine yazar.
 
 > [!NOTE]
-> İlave bir gidiş dönüş bilgileri almak için veri kaynağına gerektiğinden bir performans cezası parametre bilgileri türetme artmasına neden olur. Parametre bilgileri tasarım zamanında biliniyorsa, açıkça parametreleri ayarlayarak uygulamanızın performansını artırabilir.
+> Parametre bilgilerini türeten, bilgilerin alınması için veri kaynağına ek bir gidiş dönüş gerektiğinden, bir performans cezası oluşur. Parametre bilgileri tasarım zamanında biliniyorsa, parametreleri açıkça ayarlayarak uygulamanızın performansını artırabilirsiniz.
 
-Daha fazla bilgi için [CommandBuilders ile komut oluşturma](generating-commands-with-commandbuilders.md).
+Daha fazla bilgi için bkz. [CommandBuilder 'lar Ile komut oluşturma](generating-commands-with-commandbuilders.md).
 
-## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand ve bir saklı yordam parametreleri kullanma
+## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Bir SqlCommand ve saklı yordamla parametreleri kullanma
 
-Saklı yordamlar, veri odaklı uygulamalarda birçok avantaj sunar. Saklı yordamları kullanarak, veritabanı işlemleri tek bir komutta kapsüllenmiş, en iyi performans için iyileştirilmiş ve ek güvenlik ile Gelişmiş. Bir saklı yordam parametre bağımsız değişkenler kullanarak bir SQL deyimi, ardından saklı yordam adı geçirerek de <xref:System.Data.Common.DbCommand.Parameters%2A> ADO.NET koleksiyonunu <xref:System.Data.Common.DbCommand> nesne, daha açık saklı yordam tanımlamanıza imkan tanır parametreleri ve çıkış parametreleri erişmek ve dönüş değerleri için.
+Saklı yordamlar, veri odaklı uygulamalarda birçok avantaj sunar. Saklı yordamları kullanarak veritabanı işlemleri, en iyi performans için iyileştirilen ve ek güvenlikle geliştirilmiş tek bir komutta kapsüllenebilir. Saklı yordam adının ardından parametre bağımsız değişkenleri bir SQL ifadesiyle geçirilmesiyle bir saklı yordam çağrılabilir ancak, <xref:System.Data.Common.DbCommand.Parameters%2A> ADO.NET nesnesinin koleksiyonunu kullanarak, <xref:System.Data.Common.DbCommand> saklı yordam parametrelerini daha açık bir şekilde tanımlamanıza ve çıkış parametrelerine ve dönüş değerlerine erişebilmenize olanak sağlar.
 
 > [!NOTE]
-> Parametreleri deyimleri kullanarak sunucu üzerinde yürütülen `sp_executesql,` için sorgu planı yeniden izin verir. Yerel işaretçiler veya değişkenleri `sp_executesql` batch çağıran toplu görünür değildir `sp_executesql`. Veritabanı bağlamında son için yalnızca en son değişiklikleri `sp_executesql` deyimi. Daha fazla bilgi için [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
+> Parametreli deyimler, `sp_executesql,` sorgu planı yeniden kullanımına izin veren kullanılarak sunucusunda yürütülür. Toplu işteki yerel imleçler veya değişkenler, `sp_executesql` çağıran toplu işe görünür değildir `sp_executesql` . Veritabanı bağlamındaki değişiklikler yalnızca deyimin sonuna kadar `sp_executesql` . Daha fazla bilgi için bkz. [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Parametrelerle kullanırken bir <xref:System.Data.SqlClient.SqlCommand> bir SQL Server çalıştırmak için saklı yordamı, eklenen parametrelerinin adları <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> koleksiyonu içinde saklı yordam parametre işaretlerinin adları aynı olmalıdır. SQL Server için .NET Framework veri sağlayıcısı, bir SQL deyimi veya saklı yordam parametreleri geçirmek için soru işareti (?) yer tutucu desteklemez. Bu parametreleri saklı yordamda adlandırılmış parametreler olarak değerlendirir ve parametre işaretçileri eşleştirmek için arar. Örneğin, `CustOrderHist` saklı yordam adlı bir parametre kullanarak tanımlanan `@CustomerID`. Kodunuzu saklı yordamı yürütüldüğünde, ayrıca adlı bir parametre kullanmalısınız `@CustomerID`.
+<xref:System.Data.SqlClient.SqlCommand>SQL Server saklı yordamı yürütmek için ile parametreleri kullanılırken, koleksiyona eklenen parametrelerin adları, <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> saklı yordamdaki parametre işaretlerinin adlarıyla eşleşmelidir. SQL Server için .NET Framework Veri Sağlayıcısı, parametreleri bir SQL ifadesine veya saklı yordama geçirmek için soru işareti (?) yer tutucusunu desteklemez. Saklı yordamdaki parametrelere adlandırılmış parametreler olarak davranır ve eşleşen parametre işaretçilerini arar. Örneğin, `CustOrderHist` saklı yordam adlı bir parametre kullanılarak tanımlanır `@CustomerID` . Kodunuz saklı yordamı yürüttüğünde, ayrıca adlı bir parametre da kullanmalıdır `@CustomerID` .
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -109,25 +110,25 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ### <a name="example"></a>Örnek
 
-Bu örnek bir SQL Server saklı yordam çağırmak nasıl gösterir `Northwind` örnek veritabanı. Saklı yordam adı `dbo.SalesByCategory` ve adlı bir giriş parametresine sahiptir `@CategoryName` veri türüne sahip `nvarchar(15)`. Yeni bir kod oluşturur <xref:System.Data.SqlClient.SqlConnection> iç kullanarak bir engelleme böylece yordamı sona erdiğinde bağlantıyı atıldı. <xref:System.Data.SqlClient.SqlCommand> Ve <xref:System.Data.SqlClient.SqlParameter> nesneleri oluşturulur ve özelliklerini ayarlayın. A <xref:System.Data.SqlClient.SqlDataReader> yürütür `SqlCommand` ve sonuç kümesi saklı yordamdan konsol penceresinde çıktıyı görüntülerken döndürür.
+Bu örnek, örnek veritabanında SQL Server saklı yordamının nasıl çağrılacağını gösterir `Northwind` . Saklı yordamın adı `dbo.SalesByCategory` ve `@CategoryName` veri türü olan adlı bir giriş parametresi vardır `nvarchar(15)` . Bu kod, <xref:System.Data.SqlClient.SqlConnection> işlem sona erdiğinde bağlantının atılabilmesi için bir using bloğu içinde yeni bir oluşturur. <xref:System.Data.SqlClient.SqlCommand>Ve <xref:System.Data.SqlClient.SqlParameter> nesneleri oluşturulur ve özellikleri ayarlanır. <xref:System.Data.SqlClient.SqlDataReader>, Öğesini yürütür `SqlCommand` ve, çıktı, konsol penceresinde çıktıyı görüntüleyerek saklı yordamdan sonuç kümesini döndürür.
 
 > [!NOTE]
-> Oluşturmak yerine `SqlCommand` ve `SqlParameter` nesneleri ve sonra ayrı deyimlerinde özelliklerini ayarlayarak, bunun yerine seçebilirsiniz aşırı yüklü oluşturucular biri tek bir deyimde birden çok özelliği ayarlamak için kullanılacak.
+> `SqlCommand`Ve nesneleri oluşturmak ve `SqlParameter` ardından ayrı deyimlerde özellikleri ayarlamak yerine, tek bir deyimde birden fazla özellik ayarlamak için aşırı yüklenmiş oluşturuculardan birini kullanmayı seçebilirsiniz.
 
 [!code-csharp[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]
 
-## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Bir OleDbCommand ya da OdbcCommand parametrelerini kullanma
+## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>OleDbCommand veya OdbcCommand ile parametreleri kullanma
 
-Parametrelerle kullanırken bir <xref:System.Data.OleDb.OleDbCommand> veya <xref:System.Data.Odbc.OdbcCommand>, eklenen parametrelerinin sırasını `Parameters` koleksiyonu, depolanmış yordamınızdaki tanımlanan parametrelerin sırasını eşleşmesi gerekir. OLE DB için .NET Framework veri sağlayıcısı ve ODBC için .NET Framework veri sağlayıcısı parametreleri saklı yordam, yer tutucu olarak davran ve parametre değerlerini sırayla uygulayın. Ayrıca, eklenen ilk parametre değeri parametreleri olmalıdır döndürür `Parameters` koleksiyonu.
+Ya da ile parametreleri kullanırken <xref:System.Data.OleDb.OleDbCommand> <xref:System.Data.Odbc.OdbcCommand> , koleksiyona eklenen parametrelerin sırası, `Parameters` saklı yordamınıza tanımlanan parametrelerin sırasıyla aynı olmalıdır. ODBC için OLE DB ve .NET Framework Veri Sağlayıcısı için .NET Framework Veri Sağlayıcısı, saklı yordamdaki parametreleri yer tutucu olarak değerlendirin ve parametre değerlerini sırasıyla uygulayın. Buna ek olarak, dönüş değeri parametreleri koleksiyona eklenen ilk parametre olmalıdır `Parameters` .
 
-OLE DB için .NET Framework veri sağlayıcısı ve ODBC için .NET Framework veri sağlayıcısı için bir SQL deyimi veya saklı yordam parametreleri geçirmek için adlandırılmış parametreleri desteklemez. Bu durumda, aşağıdaki örnekte olduğu gibi soru işareti (?) yer tutucu kullanmanız gerekir.
+ODBC için OLE DB ve .NET Framework Veri Sağlayıcısı için .NET Framework Veri Sağlayıcısı, parametreleri bir SQL ifadesine veya saklı yordama geçirmek için adlandırılmış parametreleri desteklemez. Bu durumda, aşağıdaki örnekte olduğu gibi soru işareti (?) yer tutucusunu kullanmanız gerekir.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?
 ```
 
-Sonuç olarak, bir sırayı `Parameter` nesneleri eklenir `Parameters` koleksiyon konumuna doğrudan gelmelidir? parametresi için yer tutucu.
+Sonuç olarak, `Parameter` nesnelerin koleksiyona eklendiği sıra `Parameters` , ' nin konumuna doğrudan karşılık gelmelidir mi? parametre için yer tutucu.
 
 ### <a name="oledb-example"></a>OleDb örneği
 

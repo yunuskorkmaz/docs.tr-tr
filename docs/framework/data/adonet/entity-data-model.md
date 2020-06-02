@@ -1,20 +1,21 @@
 ---
 title: Varlık Veri Modeli
+description: Varlık Veri Modeli, depolanan formdan bağımsız olarak verilerin yapısını açıklar ve bu da verileri birçok biçimde depolamaktan kaynaklanan sorunları giderir.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: ed834c57104e9f03ac337f6c1d30a0498bd42a06
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738418"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286746"
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
 Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapısını tanımlayan bir kavram kümesidir. Varlık ilişkisi modelinden 1976 ' de Peter Chen tarafından tanımlanan EDM bulunamadığında, ancak aynı zamanda varlık ilişkisi modelinde oluşturulup geleneksel kullanımları genişletiyor.  
   
  EDM, verilerin birçok biçimde depolanmasından kaynaklanan zorlukları ele alır. Örneğin, verileri ilişkisel veritabanlarında, metin dosyalarında, XML dosyalarında, elektronik tablolarda ve raporlarda depolayan bir işletmeyi düşünün. Bu, veri modellemesi, uygulama tasarımı ve veri erişimi konularında önemli zorluk gösterir. Veri odaklı bir uygulama tasarlarken, sınama, verimli veri erişimi, depolama ve ölçeklenebilirlik olmadan verimli ve sürdürülebilir kodlar yazmak olacaktır. Veriler ilişkisel bir yapıya sahip olduğunda, veri erişimi, depolama ve ölçeklenebilirlik oldukça etkilidir, ancak verimli ve sürdürülebilir kod yazmak daha zor hale gelir. Verilerin bir nesne yapısına sahip olduğu durumlarda, denge ters kaydedilir: etkili ve sürdürülebilir kodun yazılması, verimli veri erişimi, depolama ve ölçeklenebilirlik maliyetlerine gelir. Bu denge arasındaki doğru denge bulunabildiğinden bile, veriler bir formdan diğerine taşındığında yeni sorunlar oluşur. Varlık Veri Modeli, verilerin yapısını herhangi bir depolama şemadan bağımsız olan varlıklar ve ilişkiler bakımından açıklayarak bu zorlukları ele alır. Bu, depolanmış veri formunu uygulama tasarımı ve geliştirmeyle ilgisiz hale getirir. Ayrıca, varlıklar ve ilişkiler bir uygulamada (saklı form değil) kullanılan verilerin yapısını açıkladığı için, bir uygulama geliştikçe gelişir.  
   
- `conceptual model`, verilerin yapısının varlık ve ilişkiler olarak belirli bir gösterimidir ve genellikle EDM kavramlarını uygulayan, etki alanına özgü bir dilde (DSL) tanımlanır. [Kavramsal şema tanım dili (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec) , bu tür bir etki alanına özgü dilin bir örneğidir. Kavramsal modelde tanımlanan varlıklar ve ilişkiler, bir uygulamadaki nesne ve ilişkilerin soyutlamalarını olarak düşünülebilir. Bu, geliştiricilerin depolama şemasına gerek kalmadan kavramsal modele odaklanmasını sağlar ve verimlilik ve bakımsız kod yazmasına izin verir. Bu arada, depolama şeması tasarımcıları veri erişimi, depolama ve ölçeklenebilirlik verimliliğine odaklanabilir.  
+ , `conceptual model` Verilerin yapısının varlık ve ilişkiler olarak belirli bir gösterimidir ve genellıkle EDM kavramlarını uygulayan, etki alanına özgü bir dilde (DSL) tanımlanır. [Kavramsal şema tanım dili (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec) , bu tür bir etki alanına özgü dilin bir örneğidir. Kavramsal modelde tanımlanan varlıklar ve ilişkiler, bir uygulamadaki nesne ve ilişkilerin soyutlamalarını olarak düşünülebilir. Bu, geliştiricilerin depolama şemasına gerek kalmadan kavramsal modele odaklanmasını sağlar ve verimlilik ve bakımsız kod yazmasına izin verir. Bu arada, depolama şeması tasarımcıları veri erişimi, depolama ve ölçeklenebilirlik verimliliğine odaklanabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  Bu bölümdeki konular Varlık Veri Modeli kavramlarını anlatmaktadır. EDM 'yi uygulayan herhangi bir DSL, burada açıklanan kavramları içermelidir. [ADO.NET Entity Framework](./ef/index.md) 'nin, kavramsal modelleri tanımlamak için csdl kullandığını unutmayın. Daha fazla bilgi için bkz. [csdl belirtimi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).  
@@ -57,7 +58,7 @@ Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapıs
   
  [navigation property](navigation-property.md)  
   
- [property](property.md)  
+ [özelliði](property.md)  
   
  [referential integrity constraint](referential-integrity-constraint.md)  
   
@@ -65,4 +66,4 @@ Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapıs
 
 - [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [CSDL Belirtimi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)
+- [CSDL belirtimi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

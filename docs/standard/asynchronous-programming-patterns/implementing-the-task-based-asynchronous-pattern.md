@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421234"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289375"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
 Görev tabanlı zaman uyumsuz model ' i (dokunarak) üç şekilde uygulayabilirsiniz: C# ve Visual Basic derleyicileri, Visual Studio 'da, el ile veya derleyicinin ve el ile yapılan yöntemlerin bir birleşimi aracılığıyla. Aşağıdaki bölümlerde her bir yöntem ayrıntılı olarak ele alınmaktadır. İşlem-bağlantılı ve g/ç ile bağlantılı zaman uyumsuz işlemleri uygulamak için dokunma düzenine de yararlanabilirsiniz. [Iş yükleri](#workloads) bölümü her bir işlem türünü ele alır.
@@ -28,7 +28,7 @@ Görev tabanlı zaman uyumsuz model ' i (dokunarak) üç şekilde uygulayabilirs
 .NET Framework 4,5 ' den başlayarak, `async` anahtar kelimesiyle ( `Async` Visual Basic) nitelendirilen tüm yöntemler zaman uyumsuz bir yöntem olarak değerlendirilir ve C# ve Visual Basic DERLEYICILERI, dokunarak yöntemi zaman uyumsuz olarak uygulamak için gereken dönüştürmeleri gerçekleştirir. Zaman uyumsuz bir yöntem, ya da <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> bir <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> nesnesi döndürmelidir. İkincisi için, işlevin gövdesi bir döndürmelidir `TResult` ve derleyici bu sonucun elde edilen görev nesnesi aracılığıyla kullanılabilir hale gelmesini sağlar. Benzer şekilde, yöntemin gövdesinde işlenmemiş olan tüm özel durumlar, çıkış görevine göre sıralanır ve sonuçta elde edilen görevin durumunda sonlanmasına neden olur <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> . Bu kuralın istisnası, bir <xref:System.OperationCanceledException> (ya da türetilmiş tür) işlenmemiş olduğunda, sonuçta elde edilen görevin durumu sona erdiği durumdur <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .
 
 ### <a name="generating-tap-methods-manually"></a>DOKUNMA yöntemlerini el ile oluşturma
-Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasını sağlayabilirsiniz. Derleyici, ad <xref:System.Threading.Tasks?displayProperty=nameWithType> alanı ve ad alanındaki destekleme türlerinden açığa çıkarılan genel yüzey alanını kullanır <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . DOKUNARAK kendinize uygulamak için bir <xref:System.Threading.Tasks.TaskCompletionSource%601> nesne oluşturur, zaman uyumsuz işlem gerçekleştirir ve tamamlandığında,, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> veya <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> yöntemini ya da `Try` Bu yöntemlerin birinin sürümünü çağırın. DOKUNMA yöntemini el ile uyguladığınızda, gösterilen zaman uyumsuz işlem tamamlandığında ortaya çıkan görevi tamamlamalısınız. Örnek:
+Uygulama üzerinde daha iyi denetim için dokunma deseninin el ile uygulanmasını sağlayabilirsiniz. Derleyici, ad <xref:System.Threading.Tasks?displayProperty=nameWithType> alanı ve ad alanındaki destekleme türlerinden açığa çıkarılan genel yüzey alanını kullanır <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> . DOKUNARAK kendinize uygulamak için bir <xref:System.Threading.Tasks.TaskCompletionSource%601> nesne oluşturur, zaman uyumsuz işlem gerçekleştirir ve tamamlandığında,, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A> <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> veya <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> yöntemini ya da `Try` Bu yöntemlerin birinin sürümünü çağırın. DOKUNMA yöntemini el ile uyguladığınızda, gösterilen zaman uyumsuz işlem tamamlandığında ortaya çıkan görevi tamamlamalısınız. Örneğin:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -98,10 +98,10 @@ Zaman uyumsuz yöntemler yalnızca işlem ile bağlantılı veya g/ç bağlantı
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-Bu örnek ayrıca, çoklu zaman uyumsuz işlemler aracılığıyla tek bir iptal belirtecinin nasıl iş parçacıklı olabileceğini gösterir. Daha fazla bilgi için, [görev tabanlı zaman uyumsuz model](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)kullanma konusunun iptal kullanımı bölümüne bakın.
+Bu örnek ayrıca, çoklu zaman uyumsuz işlemler aracılığıyla tek bir iptal belirtecinin nasıl iş parçacıklı olabileceğini gösterir. Daha fazla bilgi için, [görev tabanlı zaman uyumsuz model](consuming-the-task-based-asynchronous-pattern.md)kullanma konusunun iptal kullanımı bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Görev Tabanlı Zaman Uyumsuz Desen Kullanma](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
-- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](task-based-asynchronous-pattern-tap.md)
+- [Görev Tabanlı Zaman Uyumsuz Desen Kullanma](consuming-the-task-based-asynchronous-pattern.md)
+- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](interop-with-other-asynchronous-patterns-and-types.md)

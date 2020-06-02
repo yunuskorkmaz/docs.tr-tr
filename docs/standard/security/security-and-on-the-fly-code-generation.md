@@ -1,6 +1,6 @@
 ---
 title: Güvenlik ve Çalışma Sırasında Kod Oluşturma
-description: Daha yüksek bir güvenle çalışan daha az güven kodu adına kod oluşturmak, özellikle bir arayan kod oluşturmayı etkileyebiliyorsa, bir güvenlik sorunudur.
+description: Daha yüksek bir güvende çalışan daha az güven kodu adına kod üretme, özellikle bir arayan kod oluşturmayı etkileyebileceği durumlarda güvenlik konusudur.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186795"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291038"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Güvenlik ve Çalışma Sırasında Kod Oluşturma
-Bazı kitaplıklar kod oluşturarak ve arayan için bazı işlemi gerçekleştirmek için çalıştırarak çalışır. Temel sorun, daha az güven kodu adına kod oluşturmak ve daha yüksek bir güven de çalıştırmaktır. Arayan kod oluşturmayı etkileyebildiği zaman sorun daha da kötüleşir, bu nedenle yalnızca güvenli olduğunu düşündüğünüz kodun oluşturulduğundan emin olmalısınız.  
+Bazı kitaplıklar kod oluşturarak ve çağıran için bir işlem gerçekleştirmek üzere çalıştırılarak çalışır. Temel sorun, daha az güven kodu adına kod oluşturuyor ve daha yüksek bir güvende çalışıyor. Worsens sorunu, çağıran kod oluşturmayı etkileyebileceğinden, yalnızca güvenli olduğunu düşündüğünüz kodun oluşturulduğundan emin olmanız gerekir.  
   
- Her zaman tam olarak hangi kodu ürettiğinizi bilmeniz gerekir. Bu, bir kullanıcıdan aldığınız değerler üzerinde sıkı denetimlere sahip olduğunuz anlamına gelir, bunlar teklif eklenmiş dizeleri (beklenmeyen kod öğeleri içeremez, bu yüzden kaçılmalıdır), tanımlayıcılar (geçerli olup olmadığını doğrulamak için kontrol edilmelidir tanımlayıcılar) veya başka bir şey. Tanımlayıcıları garip karakterler içerecek şekilde değiştirilebilir, çünkü tanımlayıcıları tehlikeli olabilir (bu nadiren bir güvenlik açığı olmasına rağmen).  
+ Her zaman hangi kodu ürettiğinizi tam olarak bilmeniz gerekir. Bu, bir kullanıcıdan aldığınız herhangi bir değer üzerinde katı denetimler olması gerektiği anlamına gelir, bu, tırnak içine alınmış dizeler (beklenmeyen kod öğeleri dahil edilemez), tanımlayıcılar (geçerli tanımlayıcılar olduklarını doğrulamak için denetlenmelidir) veya başka bir şey olabilir. Derlenmiş bir bütünleştirilmiş kod, tanımlayıcılarının büyük olasılıkla bir güvenlik açığı olsa da bunları bozabilecek olan garip karakterler içermesi için değiştirilebildiğinden, tanımlayıcılar tehlikeli olabilir.  
   
- Genellikle bu sorunların çoğunu önlemenize yardımcı olan yansıma yayıyla kod oluşturmanız önerilir.  
+ Yansıma Yayma ile kod oluşturmanız önerilir, bu da genellikle bu sorunlardan çoğunu önlemenize yardımcı olur.  
   
- Kodu derlediğinizde, kötü amaçlı bir programın kodu değiştirmenin bir yolu olup olmadığını göz önünde bulundurun. Derleyici okumadan önce veya kodun .dll dosyasını yüklemeden önce kötü amaçlı kodun diskteki kaynak kodunu değiştirebileceği küçük bir zaman penceresi var mı? Bu durumda, dosya sisteminde ki Bir Erişim Denetim Listesi kullanarak bu dosyaları içeren dizini uygun şekilde korumanız gerekir.  
+ Kodu derlerken bir kötü amaçlı programın değişiklik yapıp görmediğini göz önünde bulundurun. Kötü amaçlı kodun, derleyici onu okumadan önce veya Code. dll dosyasını yüklemeden önce diskteki kaynak kodu değiştirebileceği küçük bir zaman penceresi var mı? Bu durumda, dosya sistemindeki bir Access Control listesini kullanarak bu dosyaları içeren dizini korumanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Güvenli Kodlama Yönergeleri](secure-coding-guidelines.md)

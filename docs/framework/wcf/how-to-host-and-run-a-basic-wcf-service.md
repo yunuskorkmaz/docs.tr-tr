@@ -1,5 +1,5 @@
 ---
-title: 'Öğretici: Temel bir Windows Communication Foundation hizmetini barındırın ve çalıştırın'
+title: 'Öğretici: temel bir Windows Communication Foundation hizmetini barındırma ve çalıştırma'
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,78 +8,78 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 30eb86987b83427b94c6fff22755cde3d73dd9f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184077"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291402"
 ---
-# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Öğretici: Temel bir Windows Communication Foundation hizmetini barındırın ve çalıştırın
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Öğretici: temel bir Windows Communication Foundation hizmetini barındırma ve çalıştırma
 
-Bu öğretici, temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin üçüncüsüni açıklar. Öğreticilere genel bir bakış için [Bkz. Öğretici: Windows Communication Foundation uygulamalarıyla başlayın.](getting-started-tutorial.md)
+Bu öğreticide, temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken üçüncü beş görev açıklanmaktadır. Öğreticilere genel bakış için bkz. [öğretici: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-WCF uygulaması oluşturmak için bir sonraki görev, bir konsol uygulamasında bir WCF hizmetini barındırmaktır. WCF hizmeti, her biri bir veya daha fazla hizmet operasyonunu ortaya çıkaran bir veya daha fazla *uç noktayı*ortaya çıkarır. Hizmet bitiş noktası aşağıdaki bilgileri belirtir:
+WCF uygulaması oluşturmaya yönelik sonraki görev bir konsol uygulamasında bir WCF hizmeti barındırmanıza yöneliktir. Bir WCF hizmeti, her biri bir veya daha fazla hizmet işlemi sunan bir veya daha fazla *uç nokta*sunar. Hizmet uç noktası aşağıdaki bilgileri belirtir:
 
 - Hizmeti bulabileceğiniz bir adres.
-- İstemci hizmeti ile nasıl iletişim kurması gerektiğini açıklayan bilgileri içeren bir bağlayıcı.
-- Hizmetin istemcilerine sağladığı işlevselliği tanımlayan sözleşme.
+- İstemcinin hizmetle nasıl iletişim kurması gerektiğini açıklayan bilgileri içeren bir bağlama.
+- Hizmetin istemcilerine sağladığı işlevselliği tanımlayan bir anlaşma.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
-> - Bir WCF hizmeti barındırmak için bir konsol uygulaması projesi oluşturun ve yapılandırın.
+> - WCF hizmetini barındırmak için bir konsol uygulaması projesi oluşturun ve yapılandırın.
 > - WCF hizmetini barındırmak için kod ekleyin.
 > - Yapılandırma dosyasını güncelleştirin.
 > - WCF hizmetini başlatın ve çalıştığını doğrulayın.
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Hizmeti barındırmak için bir konsol uygulaması projesi oluşturma ve yapılandırma
 
-1. Visual Studio'da bir konsol uygulaması projesi oluşturun:
+1. Visual Studio 'da bir konsol uygulaması projesi oluşturun:
 
-    1. **Dosya** menüsünden**Proje/Çözüm** **Aç'ı** > seçin ve daha önce oluşturduğunuz **Başlangıç** çözümüne göz atın *(GettingStarted.sln).* **Aç**'ı seçin.
+    1. **Dosya** menüsünde **Open**  >  **Proje/çözüm** aç ' ı seçin ve daha önce oluşturduğunuz **gettingstarted** çözümüne (*gettingstarted. sln*) gidin. **Aç**'ı seçin.
 
-    2. **Görünüm** menüsünden **Çözüm Gezgini'ni**seçin.
+    2. **Görünüm** menüsünden **Çözüm Gezgini**' yi seçin.
 
-    3. Çözüm **Gezgini** penceresinde, **Başlangıç** Çözümünü (üst düğüm) seçin ve ardından kısayol menüsünden**Yeni Proje** **Ekle'yi** > seçin.
+    3. **Çözüm Gezgini** penceresinde, **gettingstarted** çözümünü (üst düğüm) seçin ve sonra **Add**  >  kısayol menüsünden**Yeni proje** Ekle ' yi seçin.
 
-    4. Yeni **Proje Ekle** penceresinde, sol tarafta, **Visual C#** veya **Visual Basic**altında Windows **Masaüstü** kategorisini seçin.
+    4. **Yeni Proje Ekle** penceresinde, sol taraftaki **Visual C#** veya **Visual Basic**altındaki **Windows Masaüstü** kategorisini seçin.
 
-    5. Konsol **Uygulaması (.NET Framework)** şablonunu seçin ve **Ad**için *GettingStartedHost'u* girin. **Tamam'ı**seçin.
+    5. **Konsol uygulaması (.NET Framework)** şablonunu seçin ve **ad**Için *GettingStartedHost* yazın. **Tamam**’ı seçin.
 
-2. **GettingStartedLib** projesine **GettingStartedHost** projesine bir başvuru ekleyin:
+2. **GettingStartedHost** projesinde **GettingStartedLib** projesine bir başvuru ekleyin:
 
-    1. Çözüm **Gezgini** penceresinde, **GettingStartedHost** projesinin altındaki **Başvurular** klasörünü seçin ve ardından kısayol menüsünden **Başvuru Ekle'yi** seçin.
+    1. **Çözüm Gezgini** penceresinde, **GettingStartedHost** projesi altındaki **Başvurular** klasörünü seçin ve sonra kısayol menüsünden **Başvuru Ekle** ' yi seçin.
 
-    2. Başvuru **Ekle** iletişim kutusunda, pencerenin sol tarafındaki **Projeler** altında **Çözüm'ü**seçin.
+    2. **Başvuru Ekle** iletişim kutusunda, pencerenin sol tarafındaki **Projeler** altında **çözüm**' ü seçin.
 
-    3. Pencerenin orta bölümünde **GettingStartedLib'i** seçin ve ardından **Tamam'ı**seçin.
+    3. Pencerenin orta bölümündeki **GettingStartedLib** ' i seçin ve ardından **Tamam**' ı seçin.
 
-       Bu eylem, **GettingStartedLib** projesinde tanımlanan türleri **GettingStartedHost** projesiiçin kullanılabilir hale getirir.
+       Bu eylem, **GettingStartedLib** projesinde tanımlanan türlerin **GettingStartedHost** projesi için kullanılabilir olmasını sağlar.
 
-3. **Derlemeye GettingStartedHost** projesinde <xref:System.ServiceModel> bir başvuru ekleyin:
+3. **GettingStartedHost** projesinde derlemeye bir başvuru ekleyin <xref:System.ServiceModel> :
 
-    1. Çözüm **Gezgini** penceresinde, **GettingStartedHost** projesinin altındaki **Başvurular** klasörünü seçin ve ardından kısayol menüsünden **Başvuru Ekle'yi** seçin.
+    1. **Çözüm Gezgini** penceresinde, **GettingStartedHost** projesi altındaki **Başvurular** klasörünü seçin ve sonra kısayol menüsünden **Başvuru Ekle** ' yi seçin.
 
-    2. Başvuru **Ekle** penceresinde, pencerenin sol tarafındaki **Derlemeler** altında **Çerçeve'yi**seçin.
+    2. **Başvuru Ekle** penceresinde pencerenin sol tarafındaki **derlemeler** altında **Framework**' ü seçin.
 
-    3. **System.ServiceModel'i**seçin ve ardından **Tamam'ı**seçin.
+    3. **System. ServiceModel**' i seçin ve ardından **Tamam**' ı seçin.
 
-    4. **Tümünü Kaydet'i** > seçerek çözümü**kaydedin.**
+    4. **Dosya**  >  **Tümünü Kaydet**' i seçerek çözümü kaydedin.
 
 ## <a name="add-code-to-host-the-service"></a>Hizmeti barındırmak için kod ekleme
 
-Hizmeti barındırmak için aşağıdaki adımları yapmak için kod eklersiniz:
+Hizmeti barındırmak için aşağıdaki adımları uygulamak üzere kod ekleyin:
 
 1. Temel adres için bir URI oluşturun.
 2. Hizmeti barındırmak için bir sınıf örneği oluşturun.
-3. Bir hizmet bitiş noktası oluşturun.
-4. Meta veri alışverişini etkinleştirin.
-5. Gelen iletileri dinlemek için servis ana bilgisayarını açın.
+3. Hizmet uç noktası oluşturun.
+4. Meta veri değişimini etkinleştirin.
+5. Gelen iletileri dinlemek için hizmet ana bilgisayarını açın.
   
 Kodda aşağıdaki değişiklikleri yapın:
 
-1. **GettingStartedHost** projesinde **Program.cs** veya **Module1.vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
+1. **GettingStartedHost** projesinde **program.cs** veya **Module1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
 
     ```csharp
     using System;
@@ -107,7 +107,7 @@ Kodda aşağıdaki değişiklikleri yapın:
                     // Step 4: Enable metadata exchange.
                     ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
                     smb.HttpGetEnabled = true;
-                    selfHost.Description.Behaviors.Add(smb)    ;
+                    selfHost.Description.Behaviors.Add(smb);
 
                     // Step 5: Start the service.
                     selfHost.Open();
@@ -176,65 +176,65 @@ Kodda aşağıdaki değişiklikleri yapın:
     End Module
     ```
 
-    Bu kodun nasıl çalıştığı hakkında bilgi için [Hizmet barındırma programı adımlarını](#service-hosting-program-steps)görün.
+    Bu kodun nasıl çalıştığı hakkında bilgi için bkz. [hizmet barındırma programı adımları](#service-hosting-program-steps).
 
 2. Proje özelliklerini güncelleştirin:
 
-   1. Solution **Explorer** penceresinde, **GettingStartedHost** klasörünü seçin ve ardından kısayol menüsünden **Özellikler'i** seçin.
+   1. **Çözüm Gezgini** penceresinde **GettingStartedHost** klasörünü seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
 
-   2. **GettingStartedHost** özellikleri sayfasında **Uygulama** sekmesini seçin:
+   2. **GettingStartedHost** özellikleri sayfasında **uygulama** sekmesini seçin:
 
-      - C# projeleri için **Başlangıç nesne** listesinden **GettingStartedHost.Program'ı** seçin.
+      - C# projeleri için **Başlangıç nesne** listesinden **GettingStartedHost. program** ' ı seçin.
 
-      - Visual Basic projeleri için **Başlangıç nesne** listesinden **Service.Program'ı** seçin.
+      - Visual Basic projeleri için **Başlangıç nesne** listesinden **Service. program** ' ı seçin.
 
-   3. **Dosya** menüsünden **Tümünü Kaydet'i**seçin.
+   3. **Dosya** menüsünde **Tümünü Kaydet**' i seçin.
 
-## <a name="verify-the-service-is-working"></a>Hizmetin çalıştığını doğrulayın
+## <a name="verify-the-service-is-working"></a>Hizmetin çalıştığını doğrulama
 
-1. Çözümü oluşturun ve Ardından Visual Studio'nun içinden **GettingStartedHost** konsol uygulamasını çalıştırın.
+1. Çözümü derleyin ve ardından Visual Studio içinden **GettingStartedHost** konsol uygulamasını çalıştırın.
 
-    Hizmet yönetici ayrıcalıkları ile çalıştırılmalıdır. Visual Studio'yu yönetici ayrıcalıklarıyla açtığınız için, **Visual Studio'da GettingStartedHost'u** çalıştırdığınızda, uygulama yönetici ayrıcalıklarıyla da çalıştırılır. Alternatif olarak, yönetici olarak yeni bir komut istemi açabilir (kısayol menüsünden yönetici olarak **Daha Fazla** > **Çalıştır'ı** seçin) ve içinde **GettingStartedHost.exe'yi** çalıştırabilirsiniz.
+    Hizmetin yönetici ayrıcalıklarıyla çalıştırılması gerekir. Visual Studio 'Yu yönetici ayrıcalıklarıyla açtığınızdan, Visual Studio 'da **GettingStartedHost** çalıştırdığınızda uygulama da yönetici ayrıcalıklarıyla çalıştırılır. Alternatif olarak, yeni bir komut istemi 'ni yönetici olarak açabilirsiniz (kısayol menüsünden **daha fazla**  >  **Çalıştır Yöneticisi** ' ni seçin) ve içinde **GettingStartedHost. exe** ' yi çalıştırın.
 
-2. Bir web tarayıcısı açın ve hizmetin `http://localhost:8000/GettingStarted/CalculatorService`sayfasına 'da göz atın.
+2. Bir Web tarayıcısı açın ve konumundaki hizmetin sayfasına gidin `http://localhost:8000/GettingStarted/CalculatorService` .
 
    > [!NOTE]
-   > Bu gibi hizmetler dinlemek için makineye HTTP adresleri kaydetmek için uygun izni gerektirir. Yönetici hesaplarıbu izne sahiptir, ancak yönetici olmayan hesaplara HTTP ad alanları için izin verilmesi gerekir. Ad alanı rezervasyonlarını yapılandırma hakkında daha fazla bilgi için [http ve HTTPS yapılandırma](feature-details/configuring-http-and-https.md)bölümüne bakın.
+   > Bu gibi hizmetler, dinlemek üzere makineye HTTP adreslerini kaydetmek için uygun izni gerektirir. Yönetici hesaplarında bu izin vardır ancak yönetici olmayan hesaplara HTTP ad alanları için izin verilmesi gerekir. Ad alanı ayırmalarını yapılandırma hakkında daha fazla bilgi için bkz. [http ve https yapılandırma](feature-details/configuring-http-and-https.md).
 
 ## <a name="service-hosting-program-steps"></a>Hizmet barındırma programı adımları
 
 Hizmeti barındırmak için eklediğiniz koddaki adımlar aşağıdaki gibi açıklanmıştır:
 
-- **Adım 1**: Hizmetin `Uri` temel adresini tutmak için sınıfın bir örneğini oluşturun. Temel adres içeren bir URL'de, hizmeti tanımlayan isteğe bağlı bir URI vardır. Temel adres aşağıdaki gibi biçimlendirilir: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`. Hesap makinesi hizmetinin temel adresi HTTP transport, localhost, port 8000 ve URI segmenti Olan GettingStarted'ı kullanır.
+- **1. adım**: `Uri` hizmetin temel adresini tutmak için sınıfın bir örneğini oluşturun. Temel adresi içeren bir URL 'nin bir hizmeti tanımlayan isteğe bağlı bir URI 'SI vardır. Taban adresi şu şekilde biçimlendirilir: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>` . Hesaplayıcı hizmeti için temel adres HTTP taşıması, localhost, bağlantı noktası 8000 ve URI segmentini, GettingStarted kullanır.
 
-- **Adım 2**: Hizmeti <xref:System.ServiceModel.ServiceHost> barındırmak için kullandığınız sınıfın bir örneğini oluşturun. Oluşturucu iki parametre alır: hizmet sözleşmesini uygulayan sınıfın türü ve hizmetin temel adresi.
+- **2. adım**: <xref:System.ServiceModel.ServiceHost> hizmeti barındırmak için kullandığınız sınıfının bir örneğini oluşturun. Oluşturucu iki parametre alır: hizmet sözleşmesini uygulayan sınıfın türü ve hizmetin taban adresi.
 
-- **Adım 3**: <xref:System.ServiceModel.Description.ServiceEndpoint> Bir örnek oluşturun. Hizmet bitiş noktası bir adres, bağlama ve hizmet sözleşmesinden oluşur. Oluşturucu, <xref:System.ServiceModel.Description.ServiceEndpoint> hizmet sözleşmesi arabirim türü, bir bağlama ve bir adresten oluşur. Hizmet sözleşmesi, `ICalculator`hizmet türünde tanımladığınız ve uyguladığınız sözleşmedir. Bu örnek için <xref:System.ServiceModel.WSHttpBinding>bağlayıcı, yerleşik bir bağlama ve WS-* belirtimlerine uygun uç noktalara bağlanır. WCF ciltleri hakkında daha fazla bilgi için [WCF bağlamalarına genel bakış](bindings-overview.md)alabın. Bitiş noktasını belirlemek için adresi temel adrese eklersiniz. Kod, adresi Hesap Makinesi Hizmeti olarak ve bitiş noktası için `http://localhost:8000/GettingStarted/CalculatorService`tam nitelikli adresi olarak belirtir.
+- **3. adım**: bir <xref:System.ServiceModel.Description.ServiceEndpoint> örnek oluşturun. Hizmet uç noktası bir adresten, bağlamaya ve hizmet sözleşmesinden oluşur. <xref:System.ServiceModel.Description.ServiceEndpoint>Oluşturucu, hizmet sözleşmesi arabirim türünden, bağlamalardan ve bir adresten oluşur. Hizmet sözleşmesi, `ICalculator` hizmet türünde tanımladığınız ve uyguladığınız hizmet sözleşmedir. Bu örnek için bağlama, <xref:System.ServiceModel.WSHttpBinding> yerleşik bir bağlama ve WS-* belirtimlerine uygun uç noktalara bağlanır. WCF bağlamaları hakkında daha fazla bilgi için bkz. [WCF bağlamalarına genel bakış](bindings-overview.md). Uç noktayı tanımlamak için adresi temel adrese ekleyin. Kod, adresi Hesaplatorservice olarak ve uç noktanın tam adresini olarak belirtir `http://localhost:8000/GettingStarted/CalculatorService` .
 
     > [!IMPORTANT]
-    > .NET Framework Version 4 ve sonraki sürümler için bir hizmet bitiş noktası eklemek isteğe bağlıdır. Bu sürümler için, kodunuzu veya yapılandırmanızı eklemezseniz, WCF hizmet tarafından uygulanan her temel adres ve sözleşme kombinasyonu için bir varsayılan bitiş noktası ekler. Varsayılan uç noktalar hakkında daha fazla bilgi için [bkz.](specifying-an-endpoint-address.md) Varsayılan uç noktalar, bağlamalar ve davranışlar hakkında daha fazla bilgi için WCF hizmetleri için [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve [Basitleştirilmiş yapılandırmaya](samples/simplified-configuration-for-wcf-services.md)bakın.
+    > .NET Framework sürüm 4 ve üzeri için bir hizmet uç noktası eklemek isteğe bağlıdır. Bu sürümler için, kodunuzu veya yapılandırmanızı eklememeniz durumunda WCF, hizmet tarafından uygulanan her temel adres ve sözleşmenin birleşimi için bir varsayılan uç nokta ekler. Varsayılan uç noktalar hakkında daha fazla bilgi için bkz. [bir uç nokta adresi belirtme](specifying-an-endpoint-address.md). Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve Basitleştirilmiş yapılandırma.
 
-- **Adım 4**: Meta veri alışverişini etkinleştirin. İstemciler, hizmet işlemlerini çağırmak için yakınlık oluşturmak için meta veri alışverişini kullanır. Meta veri alışverişini <xref:System.ServiceModel.Description.ServiceMetadataBehavior> etkinleştirmek için, `true`bir örnek `ServiceMetadataBehavior` oluşturun, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> özelliğini <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> <xref:System.ServiceModel.ServiceHost> "" olarak ayarlayın ve nesneyi örnek koleksiyonuna ekleyin.
+- **4. adım**: meta veri değişimini etkinleştirin. İstemciler, hizmet işlemlerini çağırmak için proxy oluşturmak üzere meta veri değişimi kullanır. Meta veri değişimini etkinleştirmek için bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örnek oluşturun, <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> özelliğini olarak ayarlayın `true` ve `ServiceMetadataBehavior` nesneyi <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> örnek koleksiyonuna ekleyin <xref:System.ServiceModel.ServiceHost> .
 
-- **Adım 5** <xref:System.ServiceModel.ServiceHost> : Gelen iletileri dinlemek için açın. Uygulama **Enter**tuşuna basmanızı bekler. Uygulama instantiates <xref:System.ServiceModel.ServiceHost>sonra, bir try /catch bloğu yürütür. Tarafından atılan özel durumları güvenli bir <xref:System.ServiceModel.ServiceHost>şekilde yakalamak hakkında daha fazla bilgi [için WCF istemci kaynaklarını serbest bırakmak için Kapat ve İptal'i kullan'a](samples/use-close-abort-release-wcf-client-resources.md)bakın.
+- **5. adım**: <xref:System.ServiceModel.ServiceHost> gelen iletileri dinlemek için açın. Uygulama, **ENTER**tuşuna basmanız için bekler. Uygulama başlatıldıktan sonra <xref:System.ServiceModel.ServiceHost> bir try/catch bloğu yürütür. Tarafından oluşturulan özel durumları güvenli bir şekilde yakalama hakkında daha fazla bilgi için <xref:System.ServiceModel.ServiceHost> bkz. [Close ve Abort kullanarak WCF istemci kaynaklarını serbest bırakma](samples/use-close-abort-release-wcf-client-resources.md).
 
 > [!IMPORTANT]
-> Bir WCF hizmet kitaplığı eklediğinizde, bir hizmet ana bilgisayar başlatarak hata ayıklama nız durumunda Visual Studio, bu kitap sizin için barındırır. Çakışmaları önlemek için Visual Studio'nun WCF hizmet kitaplığını barındırmasını engelleyebilirsiniz.
+> Bir WCF hizmet kitaplığı eklediğinizde, bir hizmet ana bilgisayarı başlatarak hata ayıklaması yaparsanız, Visual Studio bunu sizin için barındırır. Çakışmaları önlemek için, Visual Studio 'Nun WCF hizmeti kitaplığını barındırmasını engelleyebilirsiniz.
 >
-> 1. **Solution Explorer'da** **GettingStartedLib** projesini seçin ve kısayol menüsünden **Özellikler'i** seçin.
-> 2. Aynı çözümde başka bir projehataayıklarken **WCF Seçenekleri'ni** seçin ve **WCF Hizmet Ana Bilgisayarını Başlat'ın denetimini**kaldırın.
+> 1. **Çözüm Gezgini** ' de **GettingStartedLib** projesini seçin ve kısayol menüsünden **Özellikler** ' i seçin.
+> 2. **WCF seçeneklerini** belirleyin ve **aynı çözümdeki başka bir projede hata ayıklarken WCF hizmeti ana bilgisayarının Başlat**seçimini kaldırın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
 >
-> - Bir WCF hizmeti barındırmak için bir konsol uygulaması projesi oluşturun ve yapılandırın.
+> - WCF hizmetini barındırmak için bir konsol uygulaması projesi oluşturun ve yapılandırın.
 > - WCF hizmetini barındırmak için kod ekleyin.
 > - Yapılandırma dosyasını güncelleştirin.
 > - WCF hizmetini başlatın ve çalıştığını doğrulayın.
 
-WCF istemcisi oluşturmayı öğrenmek için bir sonraki öğreticiye ilerleyin.
+Bir WCF istemcisi oluşturmayı öğrenmek için bir sonraki öğreticiye ilerleyin.
 
 > [!div class="nextstepaction"]
 > [Öğretici: WCF istemcisi oluşturma](how-to-create-a-wcf-client.md)

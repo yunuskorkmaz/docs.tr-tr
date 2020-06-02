@@ -1,17 +1,21 @@
 ---
-title: ''
+title: C#-.NET kullanarak JSON serileştirmek ve serisini kaldırma
 description: Bu makalede, System.Text.Json .net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanabileceğiniz gösterilmektedir. Örnek kod içerir.
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702236"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289518"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET içinde JSON ve seri hale getirme (sıralama ve kaldırma)
 
@@ -380,46 +384,10 @@ Tüm null değer özelliklerini dışlamak için, <xref:System.Text.Json.JsonSer
 Seri hale getirmek ve JSON çıktısı için örnek bir nesne aşağıda verilmiştir:
 
 |Özellik |Değer  |
-|---
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanabileceğiniz gösterilmektedir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Tarih | 8/1/2019 12:00:00-07:00 | | TemperatureCelsius | 25 | | Özet | null |
+|---------|---------|
+| Tarih    | 8/1/2019 12:00:00-07:00|
+| TemperatureCelsius| 25 |
+| Özet| null|
 
 ```json
 {
@@ -524,7 +492,7 @@ Bu davranış, türetilmiş çalışma zamanında oluşturulan bir türdeki veri
 
 Yukarıdaki örnekteki türetilmiş türün özelliklerini seri hale getirmek için aşağıdaki yaklaşımlardan birini kullanın:
 
-* <xref:System.Text.Json.JsonSerializer.Serialize%2A>Çalışma zamanında türü belirtmenize izin veren aşırı yüklemesini çağırın:
+* <xref:System.Text.Json.JsonSerializer.Serialize%2A>Çalışma zamanında türü belirtmenize olanak sağlayan aşırı yüklemesini çağırın:
 
   [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
 
@@ -672,65 +640,13 @@ Gösterilen türde gösterilen JSON serisini kaldırırsanız, `DatesAvailable` 
 Daha önce Bu örnek türünde gösterilen JSON serisini kaldırdığınızda, ek veri özelliğin anahtar-değer çiftleri haline gelir `ExtensionData` :
 
 |Özellik |Değer  |Notlar  |
-|---
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanabileceğiniz gösterilmektedir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|---title: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'a seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanabileceğiniz gösterilmektedir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-Başlık: Açıklama: ' Bu makalede, System.Text.Json .net 'TEKI JSON 'dan seri hale getirmek ve seri durumdan çıkarmak için ad alanını nasıl kullanacağınızı gösterir. Örnek kod içerir. '
-MS. Date: No-loc:
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Tarih | 8/1/2019 12:00:00-07:00 | | | TemperatureCelsius | 0 | Büyük/küçük harfe duyarlı uyuşmazlık ( `temperatureCelsius` JSON 'da), bu nedenle özellik ayarlanmadı. | | Özet | Sık erişimli | | | ExtensionData | temperatureCelsius: 25 | Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur. | || DatesAvailable:<br>  8/1/2019 12:00:00-07:00<br>8/2/2019 12:00:00-07:00 | JSON 'daki fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir. | | | SummaryWords:<br>Seyrek Erişimli<br>Rüzgarlı<br>İnsankimliği | JSON 'daki fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir. |
+|---------|---------|---------|
+| Tarih    | 8/1/2019 12:00:00-07:00||
+| TemperatureCelsius| 0 | Büyük/küçük harfe duyarlı uyuşmazlık ( `temperatureCelsius` JSON 'da), bu nedenle özellik ayarlanmadı. |
+| Özet | Sık Erişimli ||
+| ExtensionData | temperatureCelsius: 25 |Büyük/küçük harf eşleşmediğinden, bu JSON özelliği çok fazla olur ve sözlükte anahtar-değer çifti olur.|
+|| DatesAvailable:<br>  8/1/2019 12:00:00-07:00<br>8/2/2019 12:00:00-07:00 |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
+| |SummaryWords:<br>Seyrek Erişimli<br>Rüzgarlı<br>İnsankimliği |JSON 'dan fazladan özellik, değer nesnesi olarak bir dizi ile anahtar-değer çifti haline gelir.|
 
 Hedef nesne serileştirildiğinde, uzantı veri anahtarı değer çiftleri, gelen JSON 'da olduğu gibi JSON özellikleri olur:
 

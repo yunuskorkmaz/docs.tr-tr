@@ -12,34 +12,34 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156055"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289947"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
-Olay tabanlı Asynchronous Pattern, tanıdık olay ve temsilci semantiği ile sınıflarda asynchronous davranışı ortaya çıkarmak için etkili bir yol sağlar. Olay tabanlı Eşzamanlılık uygulamak için bazı belirli davranış gereksinimlerini izlemeniz gerekir. Aşağıdaki bölümlerde, Olay tabanlı Asynchronous Deseni'ni izleyen bir sınıf uygularken göz önünde bulundurmanız gereken gereksinimler ve yönergeler açıklanmaktadır.  
+Olay tabanlı zaman uyumsuz model, tanıdık olay ve temsilci semantiğinin bulunduğu sınıflarda zaman uyumsuz davranışı açığa çıkarmak için etkili bir yol sağlar. Olay tabanlı zaman uyumsuz model uygulamak için bazı belirli davranış gereksinimlerini izlemeniz gerekir. Aşağıdaki bölümlerde, olay tabanlı zaman uyumsuz düzeniyle takip eden bir sınıfı uyguladığınızda göz önünde bulundurmanız gereken gereksinimler ve yönergeler açıklanır.  
   
- Genel bakış için bkz: [Olay tabanlı Asynchronous Deseni'ni uygulama.](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ Genel bakış için bkz. [olay tabanlı zaman uyumsuz model uygulama](implementing-the-event-based-asynchronous-pattern.md).  
   
-## <a name="required-behavioral-guarantees"></a>Gerekli Davranış Salahiyetleri  
- Olay tabanlı Eşzamanlı Desen'i uygularsanız, sınıfınızın düzgün davranmasını ve sınıfınızın istemcilerinin bu tür davranışlara güvenebilmesini sağlamak için bir dizi garanti sağlamanız gerekir.  
+## <a name="required-behavioral-guarantees"></a>Gerekli davranış garantisi  
+ Olay tabanlı zaman uyumsuz model uygularsanız, sınıfınızın düzgün şekilde davrandığından ve sınıfınızın istemcilerinin bu davranışa güvendiğinden emin olmak için bir dizi garanti sağlamanız gerekir.  
   
 ### <a name="completion"></a>Tamamlama  
- Başarılı bir tamamlanma, hata veya iptal olduğunda Her zaman <em>MethodName</em>**Tamamlanmış** olay işleyicisini çağırın. Uygulamalar boşta kaldıkları ve tamamlanmadıkları bir durumla asla karşılaşmamalıdır. Bu kuralın bir istisnası, eşzamanlı işlemin kendisi asla tamamlanamayacak şekilde tasarlanmış olmasıdır.  
+ Başarılı bir tamamlama, hata veya iptal ettiğiniz durumlarda <em>MethodName</em>**tamamlandı** olay işleyicisini her zaman çağırın. Uygulamalar, boşta kaldığı ve tamamlanmanın asla gerçekleşmediği hiçbir durumda hiçbir şekilde karşılaşmamalıdır. Bu kural için bir özel durum, zaman uyumsuz işlemin kendisi tarafından tamamlanmaması için tasarlandıysa.  
   
-### <a name="completed-event-and-eventargs"></a>Tamamlanan Etkinlik ve EventArgs  
- Her ayrı <em>MethodName</em>**Async** yöntemi için aşağıdaki tasarım gereksinimlerini uygulayın:  
+### <a name="completed-event-and-eventargs"></a>Tamamlanan olay ve EventArgs  
+ Her ayrı <em>MethodName</em>**zaman uyumsuz** yöntemi için aşağıdaki tasarım gereksinimlerini uygulayın:  
   
-- Yöntemle aynı sınıfta bir <em>MethodName</em>**Tamamlandı** olayını tanımlayın.  
+- Yöntemiyle aynı sınıfta <em>MethodName</em>**tamamlandı** olayını tanımlayın.  
   
-- Sınıftan <xref:System.EventArgs> türeyen <em>MethodName</em>**Completed** olayı için bir sınıf <xref:System.ComponentModel.AsyncCompletedEventArgs> ve beraberindeki temsilci tanımlayın. Varsayılan sınıf adı <em>MethodName</em>**CompletedEventArgs**şeklinde olmalıdır.  
+- <xref:System.EventArgs>Sınıfından türetilen <em>MethodName</em>**tamamlandı** olayı için bir sınıf ve eşlik eden temsilci tanımlayın <xref:System.ComponentModel.AsyncCompletedEventArgs> . Varsayılan sınıf adı <em>MethodName</em>**CompletedEventArgs**biçiminde olmalıdır.  
   
-- <xref:System.EventArgs> Sınıfın <em>MethodName</em> yönteminin iade değerlerine özgü olduğundan emin olun. <xref:System.EventArgs> Sınıfı kullandığınızda, geliştiricilerin sonucu kullanmasını asla gerektirmezsiniz.  
+- <xref:System.EventArgs>Sınıfın <em>MethodName</em> yönteminin dönüş değerlerine özgü olduğundan emin olun. <xref:System.EventArgs>Sınıfını kullandığınızda, geliştiricilerin sonucu saçmasını asla gerektirmemelidir.  
   
-     Aşağıdaki kod örneği, bu tasarım gereksiniminin sırasıyla iyi ve kötü bir şekilde uygulanmasını gösterir.  
+     Aşağıdaki kod örneği, bu tasarım gereksiniminin sırasıyla iyi ve hatalı uygulanmasını gösterir.  
   
 ```csharp  
 // Good design  
@@ -55,93 +55,93 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 }  
 ```  
   
-- Döndüren <xref:System.EventArgs> yöntemler için bir sınıf `void`tanımlamayın. Bunun yerine, sınıfın <xref:System.ComponentModel.AsyncCompletedEventArgs> bir örneğini kullanın.  
+- Döndüren metotları döndürmek için bir sınıf tanımlamayın <xref:System.EventArgs> `void` . Bunun yerine, sınıfının bir örneğini kullanın <xref:System.ComponentModel.AsyncCompletedEventArgs> .  
   
-- <em>MethodName</em>**Tamamlanan** olayı her zaman yükselttiğinizden emin olun. Bu olay başarılı bir şekilde tamamlandığında, bir hatada veya iptalde yükseltilmelidir. Uygulamalar boşta kaldıkları ve tamamlanmadıkları bir durumla asla karşılaşmamalıdır.  
+- <em>MethodName</em>**tamamlandı** olayını her zaman yükseltdiğinizden emin olun. Bu olay başarıyla tamamlandığında, bir hatada veya İptalde oluşturulmalıdır. Uygulamalar, boşta kaldığı ve tamamlanmanın asla gerçekleşmediği hiçbir durumda hiçbir şekilde karşılaşmamalıdır.  
   
-- Eşzamanlı işlemde oluşan özel durumları yakaladığınızı ve yakalanan özel durumu <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> özelliğe atadığınızdan emin olun.  
+- Zaman uyumsuz işlemde oluşan tüm özel durumları yakatığınızdan ve yakalanan özel durumu özelliğe atadığınızdan emin olun <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> .  
   
-- Görevi tamamlayan bir hata varsa, sonuçlara erişilememelidir. <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> Özellik olmadığında, `null`yapıdaki herhangi bir özelliğe erişimin bir özel durum doğurduğundan <xref:System.EventArgs> emin olun. Bu <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> doğrulamayı gerçekleştirmek için yöntemi kullanın.  
+- Görev tamamlanırken bir hata oluşursa, sonuçlara erişilememelidir. <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>Özelliği olmadığında `null` , yapıdaki herhangi bir özelliğe erişmenin <xref:System.EventArgs> bir özel durum harekete geçirdiğinden emin olun. <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A>Bu doğrulamayı gerçekleştirmek için yöntemini kullanın.  
   
-- Bir zaman dilimini hata olarak modelle. Bir zaman dışında kalma gerçekleştiğinde, <em>MethodName</em>**Tamamlanan** <xref:System.TimeoutException> olayı <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> yükseltin ve tesise bir aat layın.  
+- Bir hata olarak zaman aşımı modeli. Zaman aşımı oluştuğunda, <em>MethodName</em>**tamamlandı** olayını yükseltin ve <xref:System.TimeoutException> özelliğine atayın <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> .  
   
-- Sınıfınız birden çok eşzamanlı çağrıyı destekliyorsa, <em>MethodName</em>**Tamamlanan** olayın uygun `userSuppliedState` nesneyi içerdiğinden emin olun.  
+- Sınıfınız birden çok eşzamanlı çağırmaları destekliyorsa, <em>MethodName</em>**tamamlandı** olayının uygun nesneyi içerdiğinden emin olun `userSuppliedState` .  
   
-- <em>MethodName</em>**Tamamlanan** olayın uygun iş parçacığı üzerinde ve uygulama yaşam döngüsünde uygun zamanda yükseltilmesini sağlayın. Daha fazla bilgi için İş Parçacığı ve Bağlamlar bölümüne bakın.  
+- <em>MethodName</em>**tamamlandı** olayının uygun iş parçacığında ve uygulama yaşam döngüsünde uygun zamanda yapıldığından emin olun. Daha fazla bilgi için bkz. Threading ve bağlamları bölümü.  
   
-### <a name="simultaneously-executing-operations"></a>İşlemleri Aynı Anda Yürütme  
+### <a name="simultaneously-executing-operations"></a>Eşzamanlı olarak çalıştırılan Işlemler  
   
-- Sınıfınız birden çok eşzamanlı çağrıyı destekliyorsa, nesne değerinde bir durum parametresi veya görev kimliği alan <em>MethodName</em>**Async** aşırı yükünü `userSuppliedState`tanımlayarak geliştiricinin her çağrıyı ayrı ayrı izlemesini sağlar. Bu parametre her zaman <em>MethodName</em>**Async** yönteminin imzasındaki son parametre olmalıdır.  
+- Sınıfınız birden çok eş zamanlı çağrıyı destekliyorsa, bir nesne değerli durum parametresi ya da çağrılan görev KIMLIĞI olan <em>MethodName</em>**zaman uyumsuz** aşırı yüklemeyi tanımlayarak her çağrıyı ayrı olarak izlemek için geliştiriciyi etkinleştirin `userSuppliedState` . Bu parametrenin her zaman <em>MethodName</em>**zaman uyumsuz** yöntemin imzasında son parametre olması gerekir.  
   
-- Sınıfınız, nesne değerinde bir durum parametresi veya görev kimliği alan <em>MethodName</em>**Async** aşırı yükünü tanımlıyorsa, bu görev kimliğiyle işlemin ömrünü izlediğinizden emin olun ve bunu tamamlama işleyicisine geri sağladığınızdan emin olun. Yardımcı sınıflar yardımcı olabilir. Eşzamanlılık yönetimi hakkında daha fazla bilgi için [bkz: Olay tabanlı Asynchronous Deseni destekleyen bir Bileşeni uygulama.](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+- Sınıfınız, nesne değerli durum parametresi veya görev KIMLIĞI alan <em>MethodName</em>**zaman uyumsuz** aşırı yüklemesini TANıMLıYORSA, bu görev kimliğiyle birlikte işlemin ömrünü izlemediğinizden emin olun ve tamamlama işleyicisine geri sağladığınızdan emin olun. Yardım için kullanılabilen yardımcı sınıflar vardır. Eşzamanlılık yönetimi hakkında daha fazla bilgi için bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz kalıbı destekleyen bir bileşen uygulama](component-that-supports-the-event-based-asynchronous-pattern.md).  
   
-- Sınıfınız, durum parametresi olmadan <em>MethodName</em>**Async** yöntemini tanımlıyorsa ve birden çok eşzamanlı çağrıyı desteklemiyorsa, önceki <em>MethodName</em>**Async** çağırması <xref:System.InvalidOperationException>tamamlanmadan önce <em>MethodName</em>**Async'i** çağırmak için herhangi bir girişimin bir .  
+- Sınıfınız, durum parametresi olmadan <em>MethodName</em>**zaman uyumsuz** yöntemini tanımlar ve birden çok eşzamanlı çağırma 'Yı desteklemiyorsa, önceki <em>MethodName</em>**zaman uyumsuz** çağrının tamamlanmadan önce <em>MethodName</em>**zaman uyumsuz** çağırma girişiminin bir örneğini başlattığınızdan emin olun <xref:System.InvalidOperationException> .  
   
-- Genel olarak, `userSuppliedState` parametresi olmayan <em>MethodName</em>**Async** yöntemi birden çok kez çağrılması durumunda, birden çok bekleyen işlem olması için bir özel durum çıkarmayın. Sınıfınız açıkça bu durumu kaldıramıyorsa bir özel durum yükseltebilirsiniz, ancak geliştiricilerin bu birden çok ayırt edilemeyen geri aramaları işleyebileceğini varsayabilirsiniz  
+- Genel olarak, parametresi olmayan <em>MethodName</em>**zaman uyumsuz** yöntemi `userSuppliedState` birden çok kez çağrıldığında, birden çok bekleyen işlem olması için bir özel durum oluşturmaz. Sınıfınız açıkça bu durumu işleyemezse bir özel durum oluşturabilir, ancak geliştiricilerin bu birden fazla ayırt edilemeyen geri çağırmaları işleyebileceğini varsayabilirsiniz  
   
-### <a name="accessing-results"></a>Sonuçlara Erişim  
+### <a name="accessing-results"></a>Sonuçlara erişme  
   
-- Eşil işlemin yürütülmesi sırasında bir hata varsa, sonuçlara erişilemez. Herhangi <xref:System.ComponentModel.AsyncCompletedEventArgs> bir özelliğe erişimin, <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> `null` başvurulan <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>özel durumu yükseltmediğinden emin olun. Sınıf <xref:System.ComponentModel.AsyncCompletedEventArgs> bu <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> amaç için yöntemi sağlar.  
+- Zaman uyumsuz işlemin yürütülmesi sırasında bir hata oluşursa, sonuçlara erişilemeyebilir. ' Deki herhangi bir özelliğe erişmenin, <xref:System.ComponentModel.AsyncCompletedEventArgs> <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> `null` tarafından başvurulan özel durumu harekete geçirmediğinden emin olun <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> . <xref:System.ComponentModel.AsyncCompletedEventArgs>Sınıfı <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> Bu amaçla yöntemi sağlar.  
   
-- Sonuca erişim için herhangi bir <xref:System.InvalidOperationException> girişimin, işlemin iptal edildiğini belirten bir artış olduğundan emin olun. Bu <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType> doğrulamayı gerçekleştirmek için yöntemi kullanın.  
+- Sonuca erişim girişiminin işlemin iptal edildiğini belirten bir sonuç aldığından emin olun <xref:System.InvalidOperationException> . <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType>Bu doğrulamayı gerçekleştirmek için yöntemini kullanın.  
   
-### <a name="progress-reporting"></a>İlerleme Raporlama  
+### <a name="progress-reporting"></a>İlerleme raporlaması  
   
-- Mümkünse ilerleme raporlamayı destekleyin. Bu, geliştiricilerin sınıfınızı kullanırken daha iyi bir uygulama kullanıcı deneyimi sağlamasına olanak tanır.  
+- Mümkünse ilerleme raporlamayı destekler. Bu, geliştiricilerin sınıfınızı kullandıklarında daha iyi bir uygulama kullanıcı deneyimi sağlamasına olanak sağlar.  
   
-- **Bir ProgressChanged** veya <em>MethodName</em>**ProgressChanged** olayı uygularsanız, bu işlemin <em>MethodName</em>**Tamamlanan** olayı yükseltildikten sonra belirli bir eşzamanlı işlem için bu tür olayların yükseltilmiş olmadığından emin olun.  
+- Bir **ProgressChanged & lt** veya <em>MethodName</em>**ProgressChanged & lt** olayı uygularsanız, söz konusu işlemin <em>MethodName</em>**olayı oluşturulduktan** sonra belirli bir zaman uyumsuz işlem için oluşturulan bir olay olmadığından emin olun.  
   
-- Standart <xref:System.ComponentModel.ProgressChangedEventArgs> dolduruluyorsa, standardın <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> her zaman bir yüzde olarak yorumlanadığından emin olun. Yüzdenin doğru olması gerekmez, ancak bir yüzdeyi temsil etmelidir. İlerleme raporlama ölçümünüzün yüzdeden başka bir şey olması <xref:System.ComponentModel.ProgressChangedEventArgs> gerekiyorsa, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> sınıftan bir sınıf türetin ve 0'da ayrılın. Yüzde dışında bir raporlama ölçümü kullanmaktan kaçının.  
+- Standart <xref:System.ComponentModel.ProgressChangedEventArgs> Doldurulmakta ise, <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> her zaman yüzde olarak yorumlanabileceğinden emin olun. Yüzdenin doğru olması gerekmez, ancak bir yüzdeyi temsil etmelidir. İlerleme raporlama ölçümünüzün bir yüzdeden başka bir şey olması gerekiyorsa, sınıftan bir sınıf türetirsiniz <xref:System.ComponentModel.ProgressChangedEventArgs> ve 0 ' dan ayrılın <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> . Yüzde dışında bir raporlama ölçümü kullanmaktan kaçının.  
   
-- `ProgressChanged` Olayın uygun iş parçacığı üzerinde ve uygulama yaşam döngüsünde uygun zamanda yükseltilmesini sağlayın. Daha fazla bilgi için İş Parçacığı ve Bağlamlar bölümüne bakın.  
+- `ProgressChanged`Olayın uygun iş parçacığında ve uygulama yaşam döngüsünde uygun zamanda yapıldığından emin olun. Daha fazla bilgi için bkz. Threading ve bağlamları bölümü.  
   
-### <a name="isbusy-implementation"></a>IsBusy Uygulaması  
+### <a name="isbusy-implementation"></a>Imeşgul uygulama  
   
-- Sınıfınız birden `IsBusy` çok eşzamanlı çağrıyı destekliyorsa bir özelliği açığa çıkarmayın. Örneğin, XML Web hizmeti vekilleri, `IsBusy` eşzamanlı eşzamanlı yöntemlerin birden çok çağrılarını destekledikleri için bir özelliği açığa çıkarmaz.  
+- `IsBusy`Sınıfınız birden çok eşzamanlı çağırmaları destekliyorsa, bir özelliği açığa çıkarın. Örneğin, XML Web hizmeti proxy 'leri, `IsBusy` zaman uyumsuz yöntemlerin birden çok eş zamanlı etkinleştirmeleri desteklediklerinden bir özelliği kullanıma sunmuyor.  
   
-- `IsBusy` Özellik, MethodName**Async** yöntemi çağrıldıktan ve <em>MethodName</em> <em>MethodName</em>**Tamamlanan** olay yükseltilmeden önce geri dönmelidir. `true` Aksi takdirde `false`geri dönmelidir. Ve <xref:System.ComponentModel.BackgroundWorker> <xref:System.Net.WebClient> bileşenleri bir `IsBusy` özelliği ortaya sınıfların örnekleridir.  
+- `IsBusy`Özelliği, `true` <em>MethodName</em>**zaman uyumsuz** yöntemi çağrıldıktan sonra ve <em>MethodName</em>**Completed** olayı oluşturulduktan önce döndürmelidir. Aksi takdirde, döndürmelidir `false` . <xref:System.ComponentModel.BackgroundWorker>Ve <xref:System.Net.WebClient> bileşenleri, bir özelliği kullanıma sunan sınıfların örnekleridir `IsBusy` .  
   
 ### <a name="cancellation"></a>İptal  
   
-- Mümkünse iptali destekleyin. Bu, geliştiricilerin sınıfınızı kullanırken daha iyi bir uygulama kullanıcı deneyimi sağlamasına olanak tanır.  
+- Mümkünse iptali destekler. Bu, geliştiricilerin sınıfınızı kullandıklarında daha iyi bir uygulama kullanıcı deneyimi sağlamasına olanak sağlar.  
   
-- İptal durumunda, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> <xref:System.ComponentModel.AsyncCompletedEventArgs> nesneye bayrağı ayarlayın.  
+- İptal durumunda, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> nesnesinde bayrağını ayarlayın <xref:System.ComponentModel.AsyncCompletedEventArgs> .  
   
-- Sonuca erişim için herhangi bir <xref:System.InvalidOperationException> girişimin, işlemin iptal edildiğini belirten bir artış olduğundan emin olun. Bu <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType> doğrulamayı gerçekleştirmek için yöntemi kullanın.  
+- Sonuca erişim girişiminin işlemin iptal edildiğini belirten bir sonuç aldığından emin olun <xref:System.InvalidOperationException> . <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType>Bu doğrulamayı gerçekleştirmek için yöntemini kullanın.  
   
-- İptal yöntemine yapılan çağrıların her zaman başarılı bir şekilde geri döndüğünden ve asla bir özel durum çıkarmadığından emin olun. Genel olarak, bir istemciye herhangi bir zamanda bir işlemin gerçekten iptal edilip edilemeyeceği bildirilmez ve daha önce verilmiş bir iptalişleminin başarılı olup olmadığı konusunda bilgilendirilmez. Ancak, başvuru tamamlanma durumunda yer aldığından, iptal başarılı olduğunda başvuruya her zaman bildirim verilir.  
+- Bir iptal yöntemine yapılan çağrıların her zaman başarıyla geri dönmesi ve hiçbir zaman özel durum geçirmeyeceğinden emin olun. Genel olarak, bir işlem belirli bir zamanda bir işlemin gerçekten iptal edilebilir olup olmadığı konusunda bilgilendirilmez ve daha önce verilen İptalin başarılı olup olmadığı bildirilmiyor. Ancak, uygulama tamamlanma durumunda bir parçası olduğundan, bir iptal işlemi başarılı olduğunda uygulamaya her zaman bildirim verilir.  
   
-- İşlem iptal edildiğinde <em>MethodName</em>**Tamamlandı** olayını yükseltin.  
+- İşlem iptal edildiğinde <em>MethodName</em>**tamamlandı** olayını yükseltin.  
   
 ### <a name="errors-and-exceptions"></a>Hatalar ve Özel Durumlar  
   
-- Eşzamanlı işlemde oluşan özel durumları yakalayın ve özelliğin <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> değerini bu özel durum için ayarlayın.  
+- Zaman uyumsuz işlemde oluşan tüm özel durumları yakalayın ve <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> özelliğin değerini bu özel duruma ayarlayın.  
   
-### <a name="threading-and-contexts"></a>İş Parçacığı ve Bağlamlar  
- Sınıfınızın doğru çalışması için, istemcinin olay işleyicilerinin ASP.NET ve Windows Forms uygulamaları da dahil olmak üzere, verilen uygulama modeli için uygun iş parçacığı veya bağlam üzerinde çağrılması önemlidir. Eşkron sınıfın herhangi bir uygulama modeli altında doğru şekilde şekilde şekilde diğinden emin <xref:System.ComponentModel.AsyncOperation> <xref:System.ComponentModel.AsyncOperationManager>olmak için iki önemli yardımcı sınıf sağlanır: ve .  
+### <a name="threading-and-contexts"></a>İş parçacığı oluşturma ve bağlamlar  
+ Sınıfınızın doğru çalışması için, istemcinin olay işleyicilerinin ASP.NET ve Windows Forms uygulamaları da dahil olmak üzere, belirtilen uygulama modeli için uygun iş parçacığında veya bağlamda çağrılması önemlidir. Zaman uyumsuz sınıfınızın herhangi bir uygulama modelinde doğru şekilde davrandığından emin olmak için iki önemli yardımcı sınıfı sağlanır: <xref:System.ComponentModel.AsyncOperation> ve <xref:System.ComponentModel.AsyncOperationManager> .  
   
- <xref:System.ComponentModel.AsyncOperationManager>bir <xref:System.ComponentModel.AsyncOperation>yöntem <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>sağlar, bir . <em>MethodName</em>**Async** yönteminiz çağrıları <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve <xref:System.ComponentModel.AsyncOperation> sınıfınız, asynchronous görevin ömrünü izlemek için döndürülenleri kullanır.  
+ <xref:System.ComponentModel.AsyncOperationManager>, döndüren bir yöntem sağlar <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> <xref:System.ComponentModel.AsyncOperation> . <em>MethodName</em>**zaman uyumsuz** Yöntem çağrılarınız <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> ve sınıfınız, <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz görevin ömrünü izlemek için döndürülen öğesini kullanır.  
   
- İlerlemeyi, artımlı sonuçları ve tamamlanması nı istemciye <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> bildirmek <xref:System.ComponentModel.AsyncOperation>için, ''nin ' üzerindeki <xref:System.ComponentModel.AsyncOperation.Post%2A> yöntemleri ve yöntemleri ni <xref:System.ComponentModel.AsyncOperation>istemcinin olay işleyicilerine yapılan çağrıları uygun iş parçacığına veya bağlama ya da bağlama da mareşallemekten sorumludur.  
+ İlerleme durumunu, artımlı sonuçları ve tamamlanmayı istemciye bildirmek için, <xref:System.ComponentModel.AsyncOperation.Post%2A> ve <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> üzerindeki yöntemlerini çağırın <xref:System.ComponentModel.AsyncOperation> . <xref:System.ComponentModel.AsyncOperation>, istemcinin olay işleyicilerinde yapılan çağrıların doğru iş parçacığına veya içeriğe sıralanmasından sorumludur.  
   
 > [!NOTE]
-> Uygulama modelinin ilkesine açıkça karşı çıkmak istiyorsanız, ancak yine de Olay tabanlı Asynchronous Deseni'ni kullanmanın diğer avantajlarından yararlanın. Örneğin, Windows Forms'ta çalışan bir sınıfın serbest iş parçacığı olmasını isteyebilirsiniz. Geliştiriciler zımni kısıtlamaları anladığı sürece, ücretsiz iş parçacığı sınıfı oluşturabilirsiniz. Konsol uygulamaları çağrıların yürütülmesini <xref:System.ComponentModel.AsyncOperation.Post%2A> eşitlemez. Bu, `ProgressChanged` olayların sıra dışı olarak yükseltilmesine neden olabilir. Çağrıları seri olarak yürütmek <xref:System.ComponentModel.AsyncOperation.Post%2A> istiyorsanız, bir <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> sınıf uygulayın ve yükleyin.  
+> Uygulama modeli ilkesine karşı açıkça gitmek istiyorsanız bu kuralları atlayabilirsiniz, ancak hala olay tabanlı zaman uyumsuz model kullanmanın diğer avantajlarından faydalanabilirsiniz. Örneğin, Windows Forms üzerinde çalışan bir sınıfın ücretsiz olarak iş parçacıklı olmasını isteyebilirsiniz. Geliştiriciler kapsanan kısıtlamaları anlamış olduğu sürece, ücretsiz bir iş parçacıklı sınıf oluşturabilirsiniz. Konsol uygulamaları çağrıların yürütülmesini eşitlemez <xref:System.ComponentModel.AsyncOperation.Post%2A> . Bu, olayların sırada oluşturulmasına neden olabilir `ProgressChanged` . Çağrıların serileştirilmiş yürütülmesini istiyorsanız <xref:System.ComponentModel.AsyncOperation.Post%2A> , bir sınıfı uygulayın ve yükleyebilirsiniz <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> .  
   
- Eşzamanlı işlemlerinizi <xref:System.ComponentModel.AsyncOperation> kullanma <xref:System.ComponentModel.AsyncOperationManager> ve etkinleştirme hakkında daha fazla bilgi için [bkz: Olay tabanlı Eşzamanlı Deseni destekleyen bir Bileşen uygulama.](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ <xref:System.ComponentModel.AsyncOperation>' I kullanma ve zaman uyumsuz işlemlerinizi etkinleştirme hakkında daha fazla bilgi için <xref:System.ComponentModel.AsyncOperationManager> bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz bir şekli destekleyen bir bileşen uygulama](component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Yönergeler  
   
-- İdeal olarak, her yöntem çağırma diğerlerinden bağımsız olmalıdır. Çağrıları paylaşılan kaynaklarla birleştirmekten kaçınmalısınız. Kaynaklar davetler arasında paylaşılacaksa, uygulamanızda uygun bir eşitleme mekanizması sağlamanız gerekir.  
+- İdeal olarak, her yöntem çağrısı diğerlerinden bağımsız olmalıdır. Paylaşılan kaynaklarla ilgili bağlantısı önlemeyi kullanmaktan kaçının. Kaynaklar, çağırmaları arasında paylaşılırsa, uygulamanızda uygun bir eşitleme mekanizması sağlamanız gerekir.  
   
-- İstemcinin eşitleme uygulamasını gerektiren tasarımlar önerilmez. Örneğin, parametre olarak global statik bir nesne alan bir eşzamanlı yöntem olabilir; böyle bir yöntemin birden çok eşzamanlı çağrıları veri bozulması veya kilitlenmelere neden olabilir.  
+- İstemcinin eşitleme uygulaması için gerekli olan tasarımlar önerilmez. Örneğin, bir parametre olarak genel statik nesne alan zaman uyumsuz bir metoda sahip olabilirsiniz; Böyle bir yöntemin birden çok eş zamanlı çağırma verisi bozulmaya veya kilitlenmeleri oluşmasına neden olabilir.  
   
-- Birden çok çağrı lı aşırı yükleme (imzada)`userState` içeren bir yöntem uygularsanız, sınıfınızın kullanıcı durumları veya görev kimliklerini ve bunların karşılık gelen bekleyen işlemleri bir koleksiyon yönetmesi gerekir. Çeşitli çağırmalar koleksiyondaki nesneleri ekleyip kaldırdığından, `lock` `userState` bu koleksiyon bölgelerle birlikte korunmalıdır.  
+- Birden çok çağırma aşırı yüklemesiyle (İmzada) bir yöntem uygularsanız `userState` , sınıfınızın Kullanıcı durumlarının veya görev kimliklerinin ve bunlara karşılık gelen bekleyen işlemlerin bir koleksiyonunu yönetmesi gerekir. `lock`Çeşitli etkinleştirmeleri koleksiyondaki nesneleri ekleyip kaldırmasına yönelik olan bu koleksiyonun bölgeleriyle korunması gerekir `userState` .  
   
-- Mümkün ve `CompletedEventArgs` uygun olan yerlerde sınıfları yeniden kullanmayı düşünün. Belirli bir temsilci ve <xref:System.EventArgs> tür tek bir yönteme bağlı olmadığından, bu durumda adlandırma yöntem adı ile tutarlı değildir. Ancak, geliştiricileri bir mülkten alınan değeri <xref:System.EventArgs> bir mülkte atmaya zorlamak asla kabul edilemez.  
+- `CompletedEventArgs`Uygun yerlerde sınıfları yeniden kullanmayı düşünün. Bu durumda, belirtilen bir temsilci ve <xref:System.EventArgs> tür tek bir yönteme bağlı olmadığından, adlandırma yöntem adı ile tutarlı değildir. Ancak, geliştiricilerin ' de bir özellikten alınan değeri dönüştürmeyi zorlamak <xref:System.EventArgs> hiç kabul edilebilir değildir.  
   
-- Eğer türetilmiş bir sınıf <xref:System.ComponentModel.Component>yazarsanız, uygulamak ve kendi <xref:System.Threading.SynchronizationContext> sınıf yüklemeyin. Uygulama modelleri, bileşenleri değil, kullanılan kontrol. <xref:System.Threading.SynchronizationContext>  
+- Öğesinden türetilen bir sınıf yazıyorsanız <xref:System.ComponentModel.Component> kendi sınıfınızı uygulamaz ve yüklemeyin <xref:System.Threading.SynchronizationContext> . Uygulama modelleri, bileşen değil, kullanılan denetim <xref:System.Threading.SynchronizationContext> .  
   
-- Herhangi bir türde çoklu iş parçacığı kullandığınızda, kendinizi çok ciddi ve karmaşık hatalara maruz bırakabilirsiniz. Çok iş parçacığı kullanan herhangi bir çözüm uygulamadan önce, [Yönetilen İş Parçacığı En İyi Uygulamaları'na](../../../docs/standard/threading/managed-threading-best-practices.md)bakın.  
+- Herhangi bir sıralama için çoklu iş parçacığı kullandığınızda, kendinizi çok önemli ve karmaşık hatalara maruz kalırsınız. Çoklu iş parçacığı kullanan herhangi bir çözümü uygulamadan önce bkz. [yönetilen Iş parçacığı En Iyi yöntemleri](../threading/managed-threading-best-practices.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -150,9 +150,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Olay Tabanlı Zaman Uyumsuz Deseni Uygulama](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Olay Tabanlı Zaman Uyumsuz Deseni Uygulama](implementing-the-event-based-asynchronous-pattern.md)
+- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](event-based-asynchronous-pattern-eap.md)
+- [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)

@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507526"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291077"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (dil ile tümleşik sorgu)
 
@@ -36,7 +36,7 @@ Dim linqExperts = From p in programmers
                   Select New LINQExpert(p)
 ```
 
-`IEnumerable<T>` API kullanarak aynı örnek:
+API kullanarak aynı örnek `IEnumerable<T>` :
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
@@ -50,7 +50,7 @@ Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
 
 ## <a name="linq-is-expressive"></a>LINQ, Ifade
 
-Evcil hayvan listenizin bir listesini olduğunu düşünün ancak onu doğrudan `RFID` değerine göre erişebileceğiniz bir sözlüğe dönüştürmek istiyorsunuz.
+Evcil hayvan listenizin bir listesini olduğunu düşünün ancak onu doğrudan değerine göre erişebileceğiniz bir sözlüğe dönüştürmek istiyorsunuz `RFID` .
 
 Geleneksel kesinlik kodu:
 
@@ -71,7 +71,7 @@ For Each pet in pets
 Next
 ```
 
-Kodun arkasındaki amaç, yeni `Dictionary<int, Pet>` bir oluşturma ve bir döngü aracılığıyla buna ekleme değil, var olan bir listeyi bir sözlüğe dönüştürmektir! LINQ, zorunlu kod değil, amaç korur.
+Kodun arkasındaki amaç, yeni bir oluşturma `Dictionary<int, Pet>` ve bir döngü aracılığıyla buna ekleme değil, var olan bir listeyi bir sözlüğe dönüştürmektir! LINQ, zorunlu kod değil, amaç korur.
 
 Denk LINQ ifadesi:
 
@@ -113,7 +113,7 @@ End Function
 
 Bu görevi gerçekleştirmek için XML belgesine el ile çapraz geçiş yapmak üzere kod yazmak çok daha zor olabilir.
 
-XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi belirleyen bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
+XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi belirleyen bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
 
 ## <a name="why-use-the-query-syntax"></a>Sorgu söz dizimini neden kullanmalısınız?
 
@@ -165,7 +165,7 @@ LINQ örneklerinin gerçekten kapsamlı bir listesi için, [101 LINQ örnekleri]
 
 Aşağıda, LINQ 'ın bazı temel parçaları için hızlı bir gösterim verilmiştir. Bu, LINQ olarak daha fazla işlevsellik sağladığından, bu kapsamda önemli değildir.
 
-* İçerik- `Where`, `Select`, ve: `Aggregate`
+* İçerik- `Where` , `Select` , ve `Aggregate` :
 
 ```csharp
 // Filtering a list.
@@ -352,7 +352,7 @@ End Function
 
 ## <a name="plinq"></a>PLINQ
 
-PLıNQ veya Parallel LINQ, LINQ ifadeleri için bir paralel yürütme altyapısıdır. Diğer bir deyişle, normal bir LINQ ifadesi herhangi bir sayıda iş parçacığı üzerinde oldukça paralelleştirilmiş olabilir. Bu, önceki ifadeye yönelik `AsParallel()` bir çağrı aracılığıyla yapılır.
+PLıNQ veya Parallel LINQ, LINQ ifadeleri için bir paralel yürütme altyapısıdır. Diğer bir deyişle, normal bir LINQ ifadesi herhangi bir sayıda iş parçacığı üzerinde oldukça paralelleştirilmiş olabilir. Bu, önceki ifadeye yönelik bir çağrı aracılığıyla yapılır `AsParallel()` .
 
 Aşağıdaki topluluklara bir göz atın:
 
@@ -384,7 +384,7 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 }
 ```
 
-Bu kod, gereken `facebookUsers` şekilde sistem iş parçacıkları arasında bölümlenir, her iş parçacığında her bir iş parçacığının toplam beğeni paralel olarak toplayın, her bir iş parçacığı tarafından hesaplanan sonuçları ve iyi bir dizeye neden olan projeyi toplayın.
+Bu kod `facebookUsers` , gereken şekilde sistem iş parçacıkları arasında bölümlenir, her iş parçacığında her bir iş parçacığının toplam beğeni paralel olarak toplayın, her bir iş parçacığı tarafından hesaplanan sonuçları ve iyi bir dizeye neden olan projeyi toplayın.
 
 Diyagram formu:
 

@@ -1,13 +1,14 @@
 ---
 title: Zaman Uyumsuz Programlama
+description: .NET Framework 4,5 ' de tanıtılan geliştirmeler de dahil olmak üzere SQL Server için .NET Framework Veri Sağlayıcısı zaman uyumsuz programlama hakkında bilgi edinin.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937586"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287109"
 ---
 # <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
 
@@ -15,7 +16,7 @@ Bu konu, .NET Framework 4,5 ' de tanıtılan zaman uyumsuz programlama işlevler
 
 ## <a name="legacy-asynchronous-programming"></a>Eski zaman uyumsuz programlama
 
-.NET Framework 4,5 ' dan önce, SqlClient ile zaman uyumsuz programlama aşağıdaki yöntemlerle ve `Asynchronous Processing=true` bağlantısı özelliği ile gerçekleştirildi:
+.NET Framework 4,5 ' dan önce, SqlClient ile zaman uyumsuz programlama aşağıdaki yöntemlerle ve `Asynchronous Processing=true` bağlantı özelliğiyle gerçekleştirildi:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -26,7 +27,7 @@ Bu konu, .NET Framework 4,5 ' de tanıtılan zaman uyumsuz programlama işlevler
 Bu işlevsellik .NET Framework 4,5 ' de SqlClient içinde kalır.
 
 > [!TIP]
-> .NET Framework 4,5 ' den başlayarak, bu eski yöntemler artık bağlantı dizesinde `Asynchronous Processing=true` gerektirmez.
+> .NET Framework 4,5 ' den başlayarak, bu eski yöntemler artık `Asynchronous Processing=true` bağlantı dizesinde gerekli değildir.
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4,5 ' de zaman uyumsuz programlama özellikleri eklendi
 
@@ -34,7 +35,7 @@ Yeni zaman uyumsuz programlama özelliği, kodu zaman uyumsuz hale getirmek içi
 
 .NET Framework 4,5 ' de tanıtılan zaman uyumsuz programlama özelliği hakkında daha fazla bilgi için bkz.:
 
-- [İçinde zaman uyumsuz programlamaC#](../../../csharp/async.md)
+- [C 'de zaman uyumsuz programlama #](../../../csharp/async.md)
 
 - [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -46,12 +47,12 @@ Kullanıcı arabiriminiz yanıt vermiyorsa veya sunucunuz ölçeklenmezse, kodun
 
 Artık geri çağırmaları kullanmadan ve kodunuzu birden çok yöntemde veya Lambda ifadelerinde bölmeden zaman uyumsuz yöntemlere çağrı yapabilirsiniz.
 
-`async` değiştiricisi bir yöntemin zaman uyumsuz olduğunu belirtir. Bir `async` yöntemi çağrılırken bir görev döndürülür. `await` işleci bir göreve uygulandığında, geçerli yöntem hemen çıkar. Görev tamamlandığında, yürütme aynı yöntemde devam eder.
+`async`Değiştirici bir yöntemin zaman uyumsuz olduğunu belirtir. Bir yöntemi çağırırken `async` bir görev döndürülür. `await`İşleci bir göreve uygulandığında, geçerli yöntem hemen çıkar. Görev tamamlandığında, yürütme aynı yöntemde devam eder.
 
 > [!WARNING]
 > Bir uygulama `Context Connection` bağlantı dizesi anahtar sözcüğünü de kullanıyorsa, zaman uyumsuz çağrılar desteklenmez.
 
-`async` bir yöntemi çağırmak hiçbir ek iş parçacığı ayırmaz. Var olan g/ç Tamamlama iş parçacığını sonunda kısa bir süre içinde kullanılabilir.
+Bir `async` yöntemi çağırmak hiçbir ek iş parçacığı ayırmaz. Var olan g/ç Tamamlama iş parçacığını sonunda kısa bir süre içinde kullanılabilir.
 
 Zaman uyumsuz programlamayı desteklemek için .NET Framework 4,5 ' ye aşağıdaki yöntemler eklenmiştir:
 
@@ -92,7 +93,7 @@ Zaman uyumsuz programlamayı desteklemek için .NET Framework 4,5 ' ye aşağıd
  Diğer zaman uyumsuz Üyeler [SqlClient akış desteğini](sqlclient-streaming-support.md)desteklemek için eklenmiştir.
 
 > [!TIP]
-> Yeni zaman uyumsuz yöntemler bağlantı dizesinde `Asynchronous Processing=true` gerektirmez.
+> Yeni zaman uyumsuz yöntemler `Asynchronous Processing=true` bağlantı dizesinde gerekli değildir.
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Zaman uyumsuz bağlantıyla zaman uyumlu aç
 
@@ -356,7 +357,7 @@ class Program {
 
 ### <a name="cancelling-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem iptal ediliyor
 
-<xref:System.Threading.CancellationToken>kullanarak zaman uyumsuz bir isteği iptal edebilirsiniz.
+Kullanarak bir zaman uyumsuz isteği iptal edebilirsiniz <xref:System.Threading.CancellationToken> .
 
 ```csharp
 using System;
@@ -397,7 +398,7 @@ namespace Samples {
 
 ### <a name="asynchronous-operations-with-sqlbulkcopy"></a>SqlBulkCopy ile zaman uyumsuz Işlemler
 
-<xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>ile <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> zaman uyumsuz yetenekler de eklenmiştir.
+İle öğesine zaman uyumsuz yetenekler de <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> eklenmiştir <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> .
 
 ```csharp
 using System;
@@ -640,7 +641,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>MARS ile birden çok komut kullanılarak zaman uyumsuz
 
-Örnek, **AdventureWorks** veritabanına tek bir bağlantı açar. Bir <xref:System.Data.SqlClient.SqlCommand> nesnesi kullanarak bir <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanıldığı için ikinci bir <xref:System.Data.SqlClient.SqlDataReader>, ikinci okuyucu için WHERE yan tümcesine girdi olarak ilk <xref:System.Data.SqlClient.SqlDataReader> verileri kullanılarak açılır.
+Örnek, **AdventureWorks** veritabanına tek bir bağlantı açar. <xref:System.Data.SqlClient.SqlCommand>Bir nesnesi kullanılarak <xref:System.Data.SqlClient.SqlDataReader> oluşturulur. Okuyucu kullanıldığı için, ikinci bir <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataReader> okuyucu için WHERE yan tümcesine giriş olarak ilk girdi kullanılarak ikinci bir saniye açılır.
 
 > [!NOTE]
 > Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yerel bilgisayarda yüklü ve kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.
@@ -713,7 +714,7 @@ class Class1 {
 
 MARS, bir bağlantının hem okuma işlemleri hem de veri işleme dili (DML) işlemleri için birden fazla bekleyen işlemle kullanılmasına izin verir. Bu özellik, bir uygulamanın bağlantı meşgul hatalarıyla ilgilenmesi gereksinimini ortadan kaldırır. Ayrıca, MARS, genellikle daha fazla kaynak kullanan sunucu tarafı imleçlerinin kullanıcısını değiştirebilir. Son olarak, birden çok işlem tek bir bağlantı üzerinde çalışabildiklerinden, aynı işlem bağlamını paylaşabilir, **sp_getbindtoken** kullanma gereksinimini ortadan kaldırır ve sistem saklı yordamlarını **sp_bindsession** .
 
-Aşağıdaki konsol uygulaması, üç <xref:System.Data.SqlClient.SqlCommand> nesnesi ile iki <xref:System.Data.SqlClient.SqlDataReader> nesnesinin nasıl kullanılacağını ve MARS ile tek bir <xref:System.Data.SqlClient.SqlConnection> nesnesini nasıl kullanacağınızı gösterir. İlk komut nesnesi, kredi derecelendirmesi 5 olan satıcıların bir listesini alır. İkinci komut nesnesi, belirli bir satıcının tüm ürünleriyle ikinci <xref:System.Data.SqlClient.SqlDataReader> yüklemek için bir <xref:System.Data.SqlClient.SqlDataReader> tarafından belirtilen satıcı KIMLIĞINI kullanır. Her ürün kaydı ikinci <xref:System.Data.SqlClient.SqlDataReader>ziyaret edilir. Yeni **Onordermik** 'in ne olması gerektiğini belirlemek için bir hesaplama gerçekleştirilir. Ardından, üçüncü komut nesnesi, **ProductVendor** tablosunu yeni değerle güncelleştirmek için kullanılır. Bu işlemin tamamı, sonunda geri alınan tek bir işlem içinde gerçekleşir.
+Aşağıdaki konsol uygulaması, üç nesne ile iki nesnenin nasıl kullanılacağını <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlCommand> ve Mars ile tek bir nesneyle nasıl kullanıldığını gösterir <xref:System.Data.SqlClient.SqlConnection> . İlk komut nesnesi, kredi derecelendirmesi 5 olan satıcıların bir listesini alır. İkinci komut nesnesi, <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataReader> belirli bir satıcıya ait tüm ürünlerle ikincisini yüklemek için bir kaynağından BELIRTILEN satıcı kimliğini kullanır. Her ürün kaydı ikinciden ziyaret edilir <xref:System.Data.SqlClient.SqlDataReader> . Yeni **Onordermik** 'in ne olması gerektiğini belirlemek için bir hesaplama gerçekleştirilir. Ardından, üçüncü komut nesnesi, **ProductVendor** tablosunu yeni değerle güncelleştirmek için kullanılır. Bu işlemin tamamı, sonunda geri alınan tek bir işlem içinde gerçekleşir.
 
 > [!NOTE]
 > Aşağıdaki örnek, SQL Server eklenen örnek **AdventureWorks** veritabanını kullanır. Örnek kodda sağlanan bağlantı dizesi, veritabanının yerel bilgisayarda yüklü ve kullanılabilir olduğunu varsayar. Bağlantı dizesini ortamınız için gereken şekilde değiştirin.

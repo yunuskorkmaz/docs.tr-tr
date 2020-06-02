@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287733"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme
 XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derleme doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir.  
@@ -85,7 +85,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
     </xsl:stylesheet>  
     ```  
   
-- XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml`.  
+- XML dosyasını yerel bilgisayarınıza kopyalayın ve adlandırın `books.xml` .  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,7 +130,7 @@ XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme olu�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Komut dosyası etkinken stil sayfasını derlemek için.  
   
-1. Komut satırından aşağıdaki komutu yürütmek, ve `Transform.dll` `Transform_Script1.dll` adlı iki derleme oluşturur (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
+1. Komut satırından aşağıdaki komutu yürütmek, ve adlı iki derleme oluşturur `Transform.dll` `Transform_Script1.dll` (Bu, varsayılan davranıştır. Aksi belirtilmedikçe, sınıfın adı ve derleme varsayılan olarak ana stil sayfasının adını alır):  
   
     ```console  
     xsltc /settings:script+ Transform.xsl  
@@ -177,11 +177,11 @@ xslt.Load(typeof(Transform));
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz <xref:System.Reflection.Assembly.Load%2A>..  
+Yukarıdaki örnekte. Assembly. Load yöntemi hakkında daha fazla bilgi için bkz <xref:System.Reflection.Assembly.Load%2A> ..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [XSLT Derleyicisi (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
-- [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT Derleyicisi (xsltc.exe)](xslt-compiler-xsltc-exe.md)
+- [XSLT Dönüşümleri](xslt-transformations.md)
 - [csc.exe Kullanarak Komut Satırı Derleme](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

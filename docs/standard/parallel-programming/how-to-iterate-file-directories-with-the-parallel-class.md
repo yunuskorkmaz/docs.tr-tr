@@ -8,28 +8,28 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: fda8443666d1c90b31cf02c2f925d1c89243a8e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5639f4bdb83906273b60ed20494c288286f32560
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091325"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288205"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
-Çoğu durumda, dosya yineleme kolayca paralelleştirilebilen bir işlemdir. Konu [Nasıl Olur: PLINQ ile Dosya Dizinlerini Yineleyin,](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) birçok senaryo için bu görevi gerçekleştirmenin en kolay yolunu gösterir. Ancak, kodunuzu dosya sistemine erişirken ortaya çıkabilecek özel durumlar birçok türde uğraşmak zorunda olduğunda komplikasyonlar ortaya çıkabilir. Aşağıdaki örnek, soruna bir yaklaşım gösterir. Belirli bir dizin altında tüm dosya ve klasörleri geçiş yapmak için yığın tabanlı yineleme kullanır ve kodunuzu yakalamak ve çeşitli özel durumları işlemek için sağlar. Tabii ki, istisnaları ele yolu size kalmış.  
+Çoğu durumda, dosya yinelemesi kolayca paralelleştirilmiş bir işlemdir. [Nasıl yapılır: dosya dizinlerini PLINQ Ile yineleme](how-to-iterate-file-directories-with-plinq.md) , bu görevi birçok senaryo için yapmanın en kolay yolunu gösterir. Ancak, kodunuzun dosya sistemine erişirken ortaya çıkabilecek çok sayıda özel durum türüyle uğraşmak gerektiğinde karmaşıklıklar ortaya çıkabilir. Aşağıdaki örnek, soruna yönelik bir yaklaşımı gösterir. Belirtilen bir dizin altındaki tüm dosya ve klasörleri çapraz bir şekilde geçirmek için yığın tabanlı yineleme kullanır ve kodunuzun çeşitli özel durumları yakalayıp işlemesini sağlar. Kuşkusuz, özel durumları işlemenin yolu size ait olur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dizinleri sırayla yineler, ancak dosyaları paralel olarak işler. Büyük bir dosya-dizin oranına sahip olduğunuzda bu muhtemelen en iyi yaklaşımdır. Dizin yinelemesini paralelleştirmek ve her dosyaya sırayla erişmek de mümkündür. Özellikle çok sayıda işlemciye sahip bir makineyi hedeflemediğiniz sürece, her iki döngüyü de paralelleştirmek büyük olasılıkla etkili değildir. Ancak, her durumda olduğu gibi, en iyi yaklaşımı belirlemek için uygulamanızı iyice test etmeniz gerekir.  
+ Aşağıdaki örnek, dizinleri sırayla yineler, ancak dosyaları paralel olarak işler. Bu, büyük bir dosya-dizin oranına sahip olduğunuzda en iyi yaklaşımdan kaynaklanıyor olabilir. Ayrıca, Dizin yinelemesi paralel hale getirmek ve her dosyaya sıralı olarak erişebilirsiniz. Özellikle çok sayıda işlemciye sahip bir makineyi hedefliyorsanız, her iki döngüden paralel hale getirmek için de verimli değildir. Ancak, her durumda olduğu gibi, en iyi yaklaşımı belirleyebilmek için uygulamanızı iyice test etmelisiniz.  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- Bu örnekte, G/Ç dosyası eşzamanlı olarak gerçekleştirilir. Büyük dosyalarla veya yavaş ağ bağlantılarıyla uğraşırken, dosyalara eşit olarak erişmek tercih edilebilir. Asynchronous G/Ç tekniklerini paralel yineleme ile birleştirebilirsiniz. Daha fazla bilgi için [TPL ve Traditional .NET Framework Asynchronous Programming'e](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)bakın.  
+ Bu örnekte, g/ç dosyası eşzamanlı olarak gerçekleştirilir. Büyük dosyalarla veya yavaş ağ bağlantılarıyla ilgilenirken, dosyalara zaman uyumsuz olarak erişmek tercih edilebilir. Zaman uyumsuz g/ç tekniklerini paralel yineleme ile birleştirebilirsiniz. Daha fazla bilgi için bkz. [TPL ve geleneksel .NET Framework zaman uyumsuz programlama](tpl-and-traditional-async-programming.md).  
   
- Örnek, işlenen `fileCount` toplam dosya sayısının sayısını korumak için yerel değişkeni kullanır. Değişkene aynı anda birden çok görev le erişilebildiği için, <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> bu değişkene erişim yöntemi çağırArak eşitlenir.  
+ Örnek, `fileCount` işlenen toplam dosya sayısının sayısını korumak için yerel değişkenini kullanır. Birden çok görev tarafından aynı anda erişilebilir olabileceğinden, yöntemi çağırarak bu değişkene erişim eşitlenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> .  
   
- Ana iş parçacığına bir özel durum atılırsa, <xref:System.Threading.Tasks.Parallel.ForEach%2A> yöntem tarafından başlatılan iş parçacıklarının çalışmaya devam edebileceğini unutmayın. Bu iş parçacığı durdurmak için, özel durum işleyicileri bir Boolean değişkeni ayarlayabilir ve paralel döngü her yineleme üzerindeki değerini kontrol edebilirsiniz. Değer bir özel durum atıldığını gösteriyorsa, döngüyü <xref:System.Threading.Tasks.ParallelLoopState> durdurmak veya kırmak için değişkeni kullanın. Daha fazla bilgi için [bkz: Nasıl: Bir Parallel.For Loop'u Durdurun veya Kırın.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))  
+ Ana iş parçacığında bir özel durum oluşturulursa, yöntemi tarafından başlatılan iş parçacıklarının çalışmaya <xref:System.Threading.Tasks.Parallel.ForEach%2A> devam edebileceğini unutmayın. Bu iş parçacıklarını durdurmak için özel durum İşleyicileriniz içinde bir Boole değişkeni ayarlayabilir ve paralel döngünün her yinelemesinde değerini kontrol edebilirsiniz. Değer bir özel durumun yapıldığını gösteriyorsa, <xref:System.Threading.Tasks.ParallelLoopState> döngüyü durdurmak ya da kesmek için değişkeni kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: bir Parallel. for döngüsü durdurma veya kesme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Paralelliği](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [Veri paralelliği](data-parallelism-task-parallel-library.md)

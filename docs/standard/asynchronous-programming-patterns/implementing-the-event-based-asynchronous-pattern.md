@@ -17,68 +17,68 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 9865fa169e0776765f9a97ec0a7b4555bf253886
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 484050b45b5da72386e9ac29805d7faf0ca9cbd6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67663703"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289388"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 
-Fark edilebilir gecikmelere neden olabilecek bazı işlemlere sahip bir sınıf yazıyorsanız, Olay tabanlı Eşzamanlı [Desen Genel Bakış'ı](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)uygulayarak sınıfa eşzamanlı işlevsellik vermeyi düşünün.
+Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız, [olay tabanlı zaman uyumsuz düzene genel bakış](event-based-asynchronous-pattern-overview.md)uygulayarak zaman uyumsuz işlevsellik vermeyi düşünün.
 
-Olay tabanlı Asynchronous Pattern, eşzamanlı özelliklere sahip bir sınıfı paketlemek için standartlaştırılmış bir yol sağlar. Gibi yardımcı sınıflarla <xref:System.ComponentModel.AsyncOperationManager>uygulanırsa, ASP.NET, Konsol uygulamaları ve Windows Forms uygulamaları da dahil olmak üzere herhangi bir uygulama modeli altında sınıfınız doğru şekilde çalışır.
+Olay tabanlı zaman uyumsuz model, zaman uyumsuz özellikleri olan bir sınıfı paketlemek için standartlaştırılmış bir yol sağlar. Gibi yardımcı sınıflarla uygulanmışsa <xref:System.ComponentModel.AsyncOperationManager> , sınıfınız ASP.net, konsol uygulamaları ve Windows Forms uygulamalar dahil olmak üzere herhangi bir uygulama modelinde doğru şekilde çalışır.
 
-Olay tabanlı Asynchronous Deseni'ni uygulayan bir örnek için [bkz.](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+Olay tabanlı zaman uyumsuz model uygulayan bir örnek için bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz kalıbı destekleyen bir bileşen uygulama](component-that-supports-the-event-based-asynchronous-pattern.md).
 
-Basit asynchronous işlemleri için <xref:System.ComponentModel.BackgroundWorker> bileşeni uygun bulabilirsiniz. Hakkında <xref:System.ComponentModel.BackgroundWorker>daha fazla bilgi için [bkz: Arka Planda Bir İşlem çalıştırın.](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+Basit zaman uyumsuz işlemler için <xref:System.ComponentModel.BackgroundWorker> uygun bileşeni bulabilirsiniz. Hakkında daha fazla bilgi için <xref:System.ComponentModel.BackgroundWorker> bkz. [nasıl yapılır: arka planda işlem çalıştırma](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
 
-Aşağıdaki listede, bu konuda tartışılan Olay tabanlı Eşzamanlı Desen'in özellikleri açıklanmaktadır.
+Aşağıdaki listede, bu konuda açıklanan olay tabanlı zaman uyumsuz düzenin özellikleri açıklanmaktadır.
 
-- Olay Tabanlı Asynchronous Modelini Uygulama Fırsatları
+- Olay tabanlı zaman uyumsuz model uygulama olanakları
 
-- Adsız Yöntemler adlandırma
+- Zaman uyumsuz yöntemleri adlandırma
 
-- İsteğe Bağlı Destek İptali
+- İsteğe bağlı olarak Iptali destekler
 
-- İsteğe Bağlı Olarak IsBusy Özelliğini Destekleyin
+- İsteğe bağlı olarak IsBusy özelliğini destekler
 
-- İsteğe Bağlı Olarak İlerleme Raporlaması için Destek Sağlayın
+- İsteğe bağlı olarak Ilerleme raporlaması için destek sağlama
 
-- İsteğe Bağlı Olarak Artan Sonuçları Döndürmek Için Destek Sağlayın
+- İsteğe bağlı olarak artımlı sonuçlar döndürme desteği sağlar
 
-- Yöntemlerde Çıkış ve Ref Parametrelerinin İşlemi
+- Metotlarda çıkış ve başvuru parametrelerini işleme
 
-## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Asynchronous Modelini Uygulama Fırsatları
+## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz model uygulama olanakları
 
-Aşağıdaki halde Event tabanlı Eşzamanlı Desen'i uygulamayı düşünün:
+Şu durumlarda olay tabanlı zaman uyumsuz model uygulamayı düşünün:
 
-- Sınıfınızın istemcileri gerekmez <xref:System.Threading.WaitHandle> <xref:System.IAsyncResult> ve nesneleri eşzamanlı işlemler için kullanılabilir, yani <xref:System.Threading.WaitHandle.WaitAll%2A> yoklama ve veya <xref:System.Threading.WaitHandle.WaitAny%2A> istemci tarafından inşa edilmesi gerekir.
+- Sınıfınızın istemcilerine <xref:System.Threading.WaitHandle> ve <xref:System.IAsyncResult> zaman uyumsuz işlemler için kullanılabilen nesnelere gerek yoktur, bu, yoklamanın ve <xref:System.Threading.WaitHandle.WaitAll%2A> veya istemcinin oluşturulması gereken anlamına gelir <xref:System.Threading.WaitHandle.WaitAny%2A> .
 
-- Eşzamanlı işlemlerin tanıdık olay/temsilci modeliyle istemci tarafından yönetilmesini istiyorsunuz.
+- Zaman uyumsuz işlemlerin istemci tarafından tanıdık olay/temsilci modeliyle yönetilmesini istiyorsunuz.
 
-Herhangi bir işlem eşzamanlı bir uygulama için bir adaydır, ancak uzun gecikmelere maruz kalmak için beklediğiniz olanlar dikkate alınmalıdır. Özellikle uygun olan, müşterilerin bir metodu aradığı ve tamamlandığında bilgilendirildiği ve başka bir müdahale gerektirmeden bilgilendirildiği işlemlerdir. Ayrıca, sürekli çalışan, düzenli olarak ilerleme, artımlı sonuçlar veya durum değişiklikleri istemcileri bildiren işlemlerdir.
+Herhangi bir işlem, zaman uyumsuz bir uygulama için adaydır, ancak uzun gecikme sürelerine yol açmaya beklediğinizi göz önünde bulundurmanız gerekir. Özellikle uygun olan istemciler, daha fazla müdahale gerekmeden, istemcilerin bir yöntemi çağırması ve tamamlanmasıyla ilgili bilgilendirilir işlemlerdir. Ayrıca, sürekli olarak çalışan, ilerleme durumunu, artımlı sonuçları veya durum değişikliklerini düzenli olarak bildiren işlemlerdir.
 
-Olay tabanlı Eşzamanlı Deseni'ni ne zaman destekleyeceğine karar verme hakkında daha fazla bilgi için olay tabanlı Eşzamanlı [Deseni'nin ne zaman uygulanacağına karar](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)verme konusuna bakın.
+Olay tabanlı zaman uyumsuz deseninin ne zaman desteklenmeyeceğine karar verme hakkında daha fazla bilgi için, bkz. [olay tabanlı zaman uyumsuz düzenin ne zaman uygulanacağını seçme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md).
 
-## <a name="naming-asynchronous-methods"></a>Adsız Yöntemler adlandırma
+## <a name="naming-asynchronous-methods"></a>Zaman uyumsuz yöntemleri adlandırma
 
-Asynchronous muadili sağlamak istediğiniz her senkron yöntem *MethodName* için:
+Zaman uyumsuz bir karşılığı sağlamak istediğiniz her zaman uyumlu yöntemin *MethodName* için:
 
-Bir _MethodName_**Async** yöntemi tanımlayın:
+Şunu içeren bir _MethodName_**zaman uyumsuz** yöntemi tanımlayın:
 
 - `void` döndürür.
 
 - *MethodName* yöntemiyle aynı parametreleri alır.
 
-- Birden çok çağrı kabul eder.
+- Birden çok çağırmaları kabul eder.
 
-İsteğe bağlı olarak, MethodName**Async**ile aynı olan, ancak nesne değeri olan `userState`ek bir parametre adı verilen bir _MethodName_ _MethodName_**Async** aşırı yükünü tanımlayın. Yönteminizin birden çok eşzamanlı çağrılarını yönetmeye hazırsanız bunu yapın, `userState` bu durumda değer yöntemin çağrılarını ayırt etmek için tüm olay işleyicilerine geri teslim edilir. Ayrıca, bunu yalnızca daha sonra alma için kullanıcı durumunu depolamak için bir yer olarak yapmayı seçebilirsiniz.
+İsteğe bağlı olarak, _MethodName_**Async**ile özdeş, ancak başka bir nesne değerli parametresi adlı bir _MethodName_**zaman uyumsuz** aşırı yüklemesi tanımlayın `userState` . Yönteminizin birden çok eş zamanlı çağırma yönetimini yönetmeye hazırlandıysanız bunu yapın. Bu durumda `userState` değer, yöntemin etkinleştirmeleri ayırt edilebilmesi için tüm olay işleyicilerine geri gönderilir. Bunu, daha sonra alımı için Kullanıcı durumunu depolamak üzere bir yerde yapmayı da tercih edebilirsiniz.
 
-Her ayrı _MethodName_**Async** yöntemi imzası için:
+Her ayrı _MethodName_**zaman uyumsuz** Yöntem imzası için:
 
-1. Yöntemle aynı sınıfta aşağıdaki olayı tanımlayın:
+1. Aşağıdaki olayı, yöntemiyle aynı sınıfta tanımlayın:
 
     ```vb
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler
@@ -88,7 +88,7 @@ Her ayrı _MethodName_**Async** yöntemi imzası için:
     public event MethodNameCompletedEventHandler MethodNameCompleted;
     ```
 
-2. Aşağıdaki temsilciyi <xref:System.ComponentModel.AsyncCompletedEventArgs>tanımlayın ve . Bunlar büyük olasılıkla sınıfın kendisi dışında, ancak aynı ad alanında tanımlanır.
+2. Aşağıdaki temsilciyi ve tanımlayın <xref:System.ComponentModel.AsyncCompletedEventArgs> . Bunlar muhtemelen sınıfın kendisi dışında, ancak aynı ad alanında tanımlanacaktır.
 
     ```vb
     Public Delegate Sub MethodNameCompletedEventHandler( _
@@ -111,114 +111,114 @@ Her ayrı _MethodName_**Async** yöntemi imzası için:
     }
     ```
 
-    - _MethodName_**CompletedEventArgs** sınıfının, alanlar veri bağlamayı önlediği için, üyelerini alan olarak değil, salt okunur özellikler olarak ortaya çıkardığından emin olun.
+    - Alan veri bağlamayı engellediği için, _MethodName_**CompletedEventArgs** sınıfının üyelerini salt okuma özellikleri olarak gösterdiğinden emin olun.
 
-    - Sonuç üretmeyen <xref:System.ComponentModel.AsyncCompletedEventArgs>yöntemler için türetilmiş sınıfları tanımlamayın. Sadece kendi bir <xref:System.ComponentModel.AsyncCompletedEventArgs> örneğini kullanın.
+    - <xref:System.ComponentModel.AsyncCompletedEventArgs>Sonuç üretmeyen yöntemler için herhangi bir türetilmiş sınıf tanımlamayın. Yalnızca kendi örneğini kullanmanız yeterlidir <xref:System.ComponentModel.AsyncCompletedEventArgs> .
 
       > [!NOTE]
-      > Temsilci ve <xref:System.ComponentModel.AsyncCompletedEventArgs> türleri yeniden kullanmak mümkün ve uygun olduğunda son derece kabul edilebilir. Bu durumda, belirli bir temsilci ve <xref:System.ComponentModel.AsyncCompletedEventArgs> tek bir yönteme bağlı olmayacaktır, çünkü adlandırma yöntem adı ile tutarlı olmayacaktır.
+      > Uygun olduğunda, temsilci ve türleri yeniden kullanmak için uygun olduğunda kusursuz kabul edilebilir <xref:System.ComponentModel.AsyncCompletedEventArgs> . Bu durumda, belirtilen bir temsilciden ve <xref:System.ComponentModel.AsyncCompletedEventArgs> tek bir yönteme bağlanmayacaksa, adlandırma yöntem adı ile tutarlı olmayacaktır.
 
-## <a name="optionally-support-cancellation"></a>İsteğe Bağlı Destek İptali
+## <a name="optionally-support-cancellation"></a>İsteğe bağlı olarak Iptali destekler
 
-Sınıfınız eşzamanlı işlemleri iptal etmeyi destekleyecekse, iptal işlemi aşağıda açıklandığı gibi istemciye açıklanmalıdır. İptal desteğinizi tanımlamadan önce ulaşılması gereken iki karar noktası olduğunu unutmayın:
+Sınıfınız zaman uyumsuz işlemleri iptal etmeyi destekleyecektir, iptal etme işlemi istemciye aşağıda açıklandığı gibi gösterilmelidir. İptal desteğini tanımlamadan önce erişilmesi gereken iki karar noktası olduğunu unutmayın:
 
-- Sınıfınızın, gelecekte beklenen eklemeler de dahil olmak üzere, iptali destekleyen tek bir eşzamanlı işlemi var mı?
+- Sınıfınızın daha sonra bu işleme eklemeleri de dahil olmak üzere, yalnızca iptali destekleyen bir zaman uyumsuz işlem var mı?
 
-- İptali destekleyen eşzamanlı işlemler birden çok bekleyen işlemi destekleyebilir mi? Diğer bir deyişle, _MethodName_**Async** yöntemi bir parametre alır ve herhangi bir `userState` bitirmek için beklemeden önce birden çok çağrıizin verir?
+- İptali destekleyen zaman uyumsuz işlemler birden çok bekleyen işlemi destekliyor mu? Yani, _MethodName_**zaman uyumsuz** yöntemi bir `userState` parametre alır ve herhangi birinin bitmesini beklemeden birden çok yüklemeye izin veriyor mu?
 
-İptal yönteminiziçin imzanın ne olması gerektiğini belirlemek için aşağıdaki tablodaki bu iki sorunun yanıtlarını kullanın.
+İptal yönteminiz için imzanın ne olduğunu belirlemek için aşağıdaki tabloda bu iki soruya verilen yanıtları kullanın.
 
 ### <a name="visual-basic"></a>Visual Basic
 
-||Birden Fazla Eşzamanlı Operasyon Desteklendi|Aynı Anda Yalnızca Bir İşlem|
+||Birden çok eşzamanlı Işlem destekleniyor|Tek seferde yalnızca bir Işlem|
 |------|------------------------------------------------|----------------------------------|
-|Tüm sınıfta bir Async İşlemi|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|
-|Sınıfta Birden Çok Async İşlemleri|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|
+|Sınıfın tamamında bir zaman uyumsuz Işlem|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|
+|Sınıfta birden çok zaman uyumsuz Işlem|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|
 
 ### <a name="c"></a>C\#
 
-||Birden Fazla Eşzamanlı Operasyon Desteklendi|Aynı Anda Yalnızca Bir İşlem|
+||Birden çok eşzamanlı Işlem destekleniyor|Tek seferde yalnızca bir Işlem|
 |------|------------------------------------------------|----------------------------------|
-|Tüm sınıfta bir Async İşlemi|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|
-|Sınıfta Birden Çok Async İşlemleri|`void CancelAsync(object userState);`|`void CancelAsync();`|
+|Sınıfın tamamında bir zaman uyumsuz Işlem|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|
+|Sınıfta birden çok zaman uyumsuz Işlem|`void CancelAsync(object userState);`|`void CancelAsync();`|
 
-`CancelAsync(object userState)` Yöntemi tanımlarsanız, istemciler, yalnızca tek bir eşzamanlı yöntemin tüm çağrıları arasında değil, nesne üzerinde çağrılan tüm eşzamanlı yöntemler arasında ayırt yeteneğine sahip yapmak için durum değerlerini seçerken dikkatli olmalıdır.
+`CancelAsync(object userState)`Yöntemini tanımlarsanız istemciler, tek bir zaman uyumsuz yöntemin yalnızca tüm etkinleştirmeleri arasında değil, nesne üzerinde çağrılan tüm zaman uyumsuz yöntemler arasında ayrım yapabilmeleri için durum değerlerini seçerken dikkatli olmalıdır.
 
-Tek async-operation sürümü _MethodName_**AsyncCancel** adlandırma kararı daha kolay Visual Studio's IntelliSense gibi bir tasarım ortamında yöntemi keşfetmek mümkün dayanmaktadır. Bu, ilgili üyeleri gruplar ve onları eşzamanlı işlevsellikle ilgisi olmayan diğer üyelerden ayırır. Sonraki sürümlerde ek eşzamanlı işlemler ekleyebileceğini bekliyorsanız, tanımlamak `CancelAsync`daha iyidir.
+Tek zaman uyumsuz-işlem sürümü _MethodName_**asynccancel** olarak adlandırma kararı, yöntemi Visual Studio 'nun IntelliSense gibi bir tasarım ortamında daha kolay bir şekilde keşfetmenizi temel alır. Bu, ilgili üyeleri gruplandırır ve bunları zaman uyumsuz işlevlerle hiçbir şey olmayan diğer üyelerden ayırır. Sonraki sürümlere eklenmiş ek zaman uyumsuz işlemler olabileceğini düşünüyorsanız, tanımlanması daha iyidir `CancelAsync` .
 
-Aynı sınıfta yukarıdaki tablodan birden fazla yöntem tanımlamayın. Bu mantıklı olmayacaktır, ya da yöntemlerin çoğalması ile sınıf arayüzü darmadağın olacaktır.
+Aynı sınıfta yukarıdaki tabloda birden çok yöntem tanımlamayın. Bu anlamlı olmayacak veya bir dizi yöntem ile sınıf arabirimini yığacak hale getirir.
 
-Bu yöntemler genellikle hemen geri döner ve işlem gerçekten iptal edebilir veya olmayabilir. _MethodName_**Completed** olayının olay işleyicisinde, _MethodName_**CompletedEventArgs** nesnesi, istemcilerin iptalin gerçekleşip gerçekleşmediğini belirlemek için kullanabileceği bir `Cancelled` alan içerir.
+Bu yöntemler genellikle hemen döndürülür ve işlem gerçekten iptal edebilir veya olmayabilir. _MethodName_**tamamlandı** olayının olay işleyicisinde, _MethodName_**CompletedEventArgs** nesnesi, `Cancelled` istemcilerin İptalin oluşup oluşmadığını belirlemede kullanabileceği bir alan içerir.
 
-[Olay tabanlı Asynchronous Desen Uygulamak için En İyi Uygulamalar](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)açıklanan iptal semantik uymak.
+[Olay tabanlı zaman uyumsuz model uygulamak Için En Iyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)bölümünde açıklanan iptal semantiğine göre ABIDE.
 
-## <a name="optionally-support-the-isbusy-property"></a>İsteğe Bağlı Olarak IsBusy Özelliğini Destekleyin
+## <a name="optionally-support-the-isbusy-property"></a>İsteğe bağlı olarak IsBusy özelliğini destekler
 
-Sınıfınız birden çok eşzamanlı çağrıyı desteklemiyorsa, `IsBusy` bir özelliği açığa çıkarmayı düşünün. Bu, geliştiricilerin _MethodName_**Async** yönteminden bir özel durum yakalamadan bir _MethodName_**Async** yönteminin çalışıp çalışmadığını belirlemesine olanak tanır.
+Sınıfınız birden çok eş zamanlı çağırma desteklemiyorsa, bir özellik kullanıma sunulmasını düşünün `IsBusy` . Bu, bir _MethodName_zaman**uyumsuz** yönteminin _MethodName_**zaman** uyumsuz yönteminden bir özel durum yakalanmadan çalışıp çalışmadığını belirlemesine olanak sağlar.
 
-Olay tabanlı `IsBusy` [Asynchronous Desen Uygulamak için En İyi Uygulamalar](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)açıklanan semantik tarafından abide.
+`IsBusy` [Olay tabanlı zaman uyumsuz model uygulamak Için en iyi uygulamalar](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)bölümünde açıklanan semantiğe göre ABIDE.
 
-## <a name="optionally-provide-support-for-progress-reporting"></a>İsteğe Bağlı Olarak İlerleme Raporlaması için Destek Sağlayın
+## <a name="optionally-provide-support-for-progress-reporting"></a>İsteğe bağlı olarak Ilerleme raporlaması için destek sağlama
 
-Eşzamanlı bir işlemin çalışması sırasında ilerlemeyi bildirmesi sık sık istenir. Olay tabanlı Asynchronous Pattern bunu yapmak için bir kılavuz sağlar.
+Zaman uyumsuz bir işlemin işlem sırasında ilerleme durumunu raporlamak için sık tercih edilir. Olay tabanlı zaman uyumsuz model bu işlemi gerçekleştirmek için bir kılavuz sağlar.
 
-- İsteğe bağlı olarak, eşzamanlı işlem tarafından yükseltilecek ve uygun iş parçacığıüzerinde çağrılacak bir olay tanımlayın. Nesne, <xref:System.ComponentModel.ProgressChangedEventArgs> 0 ile 100 arasında olması beklenen bir veyasede değerli ilerleme göstergesi taşır.
+- İsteğe bağlı olarak, zaman uyumsuz işlem tarafından oluşturulacak ve uygun iş parçacığında çağrılan bir olayı tanımlar. <xref:System.ComponentModel.ProgressChangedEventArgs>Nesne, 0 ile 100 arasında olması beklenen bir tamsayı değerli ilerleme göstergesi taşır.
 
-- Bu olayı aşağıdaki gibi adlandırın:
+- Bu olayı aşağıdaki şekilde adlandırın:
 
-  - `ProgressChanged`sınıfın birden çok eşzamanlı işlemi varsa (veya gelecekteki sürümlerde birden çok eşzamanlı işlem içerecek şekilde büyümesi bekleniyorsa);
+  - `ProgressChanged`sınıfta birden çok zaman uyumsuz işlem varsa (veya gelecekteki sürümlerde birden çok zaman uyumsuz işlem içermesi için büyüme bekleniyorsa);
 
-  - _MethodName_ProgressSınıfın tek bir eşzamanlı işlemi varsa**değiştirildi.**
+  - _MethodName_**ProgressChanged & lt** sınıfında tek bir zaman uyumsuz işlem varsa MethodName.
 
-  Bu adlandırma seçimi, İsteğe Bağlı Destek İptali bölümünde açıklandığı gibi, iptal yöntemi için yapılan larla paraleldir.
+  Bu adlandırma seçeneği, Isteğe bağlı destek Iptali bölümünde açıklandığı gibi, iptal yöntemi için oluşturulan paraleller.
 
-Bu olay temsilci <xref:System.ComponentModel.ProgressChangedEventHandler> imzasını <xref:System.ComponentModel.ProgressChangedEventArgs> ve sınıfı kullanmalıdır. Alternatif olarak, daha fazla etki alanına özgü ilerleme göstergesi sağlanabilirse (örneğin, bir indirme işlemi için bayt okuma <xref:System.ComponentModel.ProgressChangedEventArgs>ve toplam bayt), türetilmiş bir sınıf tanımlamalısınız.
+Bu olay, <xref:System.ComponentModel.ProgressChangedEventHandler> temsilci imzasını ve <xref:System.ComponentModel.ProgressChangedEventArgs> sınıfını kullanmalıdır. Alternatif olarak, daha fazla alana özgü bir ilerleme göstergesi sağlandıysa (örneğin, okunan bayt sayısı ve bir indirme işlemi için toplam bayt), türetilmiş bir sınıfı tanımlamanız gerekir <xref:System.ComponentModel.ProgressChangedEventArgs> .
 
-Desteklediği eşzamanlı yöntem `ProgressChanged` sayısına bakılmaksızın, sınıf için yalnızca bir veya _MethodName_**ProgressChanged** olayı olduğunu unutmayın. İstemcilerin, `userState` birden çok eşzamanlı işlemdeki ilerleme güncelleştirmelerini ayırt etmek için _MethodName_**Async** yöntemlerine geçirilen nesneyi kullanması beklenir.
+`ProgressChanged`Desteklediği zaman uyumsuz yöntemlerin sayısından bağımsız olarak, sınıfı için yalnızca bir veya _MethodName_**ProgressChanged & lt** olayı olduğunu unutmayın. İstemcilerin, `userState` birden çok eşzamanlı işlemde ilerleme güncelleştirmelerini ayırt etmek Için _MethodName_**zaman uyumsuz** yöntemlerine geçirilen nesneyi kullanması beklenir.
 
-Birden çok operasyonun ilerlemeyi desteklediği ve her birinin ilerleme için farklı bir gösterge döndürdettiği durumlar olabilir. Bu durumda, tek `ProgressChanged` bir olay uygun değildir ve birden `ProgressChanged` çok olayı desteklemeyi düşünebilirsiniz. Bu durumda, her _MethodName_**Async** yöntemi için _MethodName_**ProgressChanged'in** bir adlandırma deseni kullanın.
+Birden çok işlemin ilerleme durumunu desteklediği ve her biri ilerleme için farklı bir gösterge döndüren durumlar olabilir. Bu durumda, tek bir `ProgressChanged` olay uygun değildir ve birden çok olayı desteklemeyi düşünebilirsiniz `ProgressChanged` . Bu durumda, her _MethodName_**zaman uyumsuz** yöntemi için _MethodName_**ProgressChanged & lt** 'in bir adlandırma modelini kullanır.
 
-İlerleme raporlama semantik tarafından olay [tabanlı Asynchronous Desen uygulanması için En İyi Uygulamalar](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)açıklanan uymak.
+İlerleme durumuna göre ABIDE [olay tabanlı zaman uyumsuz model uygulamak Için En Iyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)açıklanmıştır.
 
-## <a name="optionally-provide-support-for-returning-incremental-results"></a>İsteğe Bağlı Olarak Artan Sonuçları Döndürmek Için Destek Sağlayın
+## <a name="optionally-provide-support-for-returning-incremental-results"></a>İsteğe bağlı olarak artımlı sonuçlar döndürme desteği sağlar
 
-Bazen bir eşzamanlı işlem tamamlanmadan önce artımlı sonuçlar döndürebilir. Bu senaryoyu desteklemek için kullanılabilecek birkaç seçenek vardır. Bazı örnekler izleyin.
+Bazen zaman uyumsuz bir işlem, tamamlanmadan önce artımlı sonuçlar döndürebilir. Bu senaryoyu desteklemek için kullanılabilecek birçok seçenek vardır. Bazı örnekler aşağıda verilmiştir.
 
-### <a name="single-operation-class"></a>Tek İşlemli Sınıf
+### <a name="single-operation-class"></a>Tek işlem sınıfı
 
-Sınıfınız yalnızca tek bir eşzamanlı işlemi destekliyorsa ve bu işlem artımlı sonuçlar döndürebiliyorsa, o zaman:
+Sınıfınız yalnızca tek bir zaman uyumsuz işlemi destekliyorsa ve bu işlem artımlı sonuçlar döndürebiliyor, sonra:
 
-- Türü artımlı sonuç verilerini taşımak için genişletin ve bu genişletilmiş verilerle bir _MethodName_**ProgressChanged** olayını tanımlayın. <xref:System.ComponentModel.ProgressChangedEventArgs>
+- <xref:System.ComponentModel.ProgressChangedEventArgs>Türü artımlı sonuç verilerini taşımak için genişletin ve bu genişletilmiş verilerle bir _MethodName_**ProgressChanged & lt** olayı tanımlayın.
 
-- Rapor etmek için artımlı bir sonuç olduğunda bu _MethodName_**ProgressChanged** olayını yükseltin.
+- Raporlamak için artımlı bir sonuç olduğunda bu _MethodName_**ProgressChanged & lt** olayını yükseltin.
 
-Bu çözüm, _MethodName_**ProgressChanged** olayının yaptığı gibi "tüm işlemler"de artımlı sonuçlar döndürmek için aynı olayla ilgili bir sorun olmadığından, tek eşli çalışma sınıfı için özel olarak geçerlidir.
+Bu çözüm, özel olarak tek bir zaman uyumsuz-Operation sınıfına uygulanır çünkü "All Operations" üzerinde artımlı sonuçlar döndürmek için bir sorun yoktur, çünkü _MethodName_**ProgressChanged & lt** olayı.
 
-### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Homojen Artımlı Sonuçlarla Çoklu İşlem Sınıfı
+### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Homojen artımlı sonuçları olan birden çok işlem sınıfı
 
-Bu durumda, sınıfınız her biri artımlı sonuçlar döndürebilen birden çok eşzamanlı yöntemi destekler ve bu artımlı sonuçların tümü aynı veri türüne sahiptir.
+Bu durumda, sınıfınız birden çok zaman uyumsuz yöntemi destekler, her biri artımlı sonuçları döndürmüştür ve bu artımlı sonuçların hepsi aynı türde verilere sahiptir.
 
-Aynı <xref:System.EventArgs> yapı tüm artımlı sonuçlar için çalışacağından, tek işlemli sınıflar için yukarıda açıklanan modeli izleyin. Birden `ProgressChanged` çok eşzamanlı yöntem için geçerli olduğundan, _Bir YöntemAdı_**İlerlemeDeğiştirildi** olayı yerine bir olay tanımlayın.
+Aynı <xref:System.EventArgs> yapı tüm artımlı sonuçlar için çalışacaktır, tek işlem sınıfları için yukarıda açıklanan modeli izleyin. `ProgressChanged`Birden çok zaman uyumsuz yöntem için geçerli olduğundan _MethodName_**ProgressChanged & lt** olayı yerine bir olay tanımlayın.
 
-### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Heterojen Artımlı Sonuçlarla Çoklu İşlem Sınıfı
+### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Heterojen artımlı sonuçlarla çoklu işlem sınıfı
 
-Sınıfınız, her biri farklı türde veri döndüren birden çok eşzamanlı yöntemi destekliyorsa, şunları
+Sınıfınız, her biri farklı türde veriler döndüren birden çok zaman uyumsuz yöntemi destekliyorsa şunları yapmalısınız:
 
-- Artımlı sonuç raporlamanızı ilerleme raporlamanızdan ayırın.
+- Artımlı sonuç raporlarınızı ilerleme raporınızdan ayırın.
 
-- Bu yöntemin artımlı sonuç <xref:System.EventArgs> verilerini işlemek için her bir eşzamanlı yöntem için uygun olan ayrı bir _MethodName_**ProgressChanged** olayı tanımlayın.
+- _MethodName_**ProgressChanged** <xref:System.EventArgs> Bu yöntemin artımlı sonuç verilerini işlemek için her zaman uyumsuz yöntem Için uygun olan ayrı bir MethodName ProgressChanged & lt olayı tanımlayın.
 
-[Olay tabanlı Asynchronous Deseni'ni Uygulamak için En İyi Uygulamalar'da](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)açıklandığı gibi, bu olay işleyicisini uygun iş parçacığına çağırın.
+[Olay tabanlı zaman uyumsuz model uygulamak Için En Iyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)bölümünde açıklandığı gibi ilgili iş parçacığında bu olay işleyicisini çağırın.
 
-## <a name="handling-out-and-ref-parameters-in-methods"></a>Yöntemlerde Çıkış ve Ref Parametrelerinin İşlemi
+## <a name="handling-out-and-ref-parameters-in-methods"></a>Metotlarda çıkış ve başvuru parametrelerini işleme
 
-Genel olarak `out` .NET Çerçevesi'nde kullanımı ve `ref` kullanımı önerilse de, mevcut olduklarında uyulması gereken kurallar şunlardır:
+Ve ' nin kullanımı, genel olarak, .NET Framework önerilse de `out` `ref` , mevcut olduklarında izlenecek kurallar aşağıda verilmiştir:
 
-Senkron bir yöntem verilen *MethodName*:
+Zaman uyumlu bir yöntem *MethodName*:
 
-- `out`*MethodName* parametreleri _MethodName_**Async'in**bir parçası olmamalıdır. Bunun yerine, _MethodName'deki_parametre eşdeğeri ile aynı ada sahip *MethodName* MethodName**CompletedEventArgs'ın** bir parçası olmalıdırlar (daha uygun bir ad yoksa).
+- `out`*MethodName* parametresi _MethodName_**Async**öğesinin bir parçası olmamalıdır. Bunun yerine _, MethodName parametresinin bir parçası_olmaları *gerekir (daha* uygun bir ad olmadıkça) parametre eşdeğeri olarak aynı**ada sahip.**
 
-- `ref`*MethodName* parametreleri _MethodName_**Async'in**bir parçası olarak ve _MethodName'deki_parametre eşdeğeri ile *MethodName* aynı ada sahip MethodName**CompletedEventArgs'ın** bir parçası olarak görünmelidir (daha uygun bir ad yoksa).
+- `ref`*MethodName* parametresi, _MethodName_**zaman uyumsuz**değerinin bir parçası olarak ve *MethodName (daha* uygun bir ad olmadıkça) parametresi ile aynı ada sahip _MethodName_**CompletedEventArgs** öğesinin bir parçası olarak görünmelidir.
 
 Örneğin, verilen:
 
@@ -230,7 +230,7 @@ Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg
 public int MethodName(string arg1, ref string arg2, out string arg3);
 ```
 
-Asynchronous yönteminiz <xref:System.ComponentModel.AsyncCompletedEventArgs> ve sınıfı şu na benzerdi:
+Zaman uyumsuz yönteminiz ve <xref:System.ComponentModel.AsyncCompletedEventArgs> sınıfı şu şekilde görünür:
 
 ```vb
 Public Sub MethodNameAsync(ByVal arg1 As String, ByVal arg2 As String)
@@ -261,9 +261,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+- [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](event-based-asynchronous-pattern-eap.md)

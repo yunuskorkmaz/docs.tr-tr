@@ -1,5 +1,5 @@
 ---
-title: <permission> - C# programlama kılavuzu
+title: <permission> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb7172042f0b472d03c3fa2d9dbd0d4d4265076b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093480"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287278"
 ---
-# <a name="permission-c-programming-guide"></a>\<izin> (C# programlama kılavuzu)
+# <a name="permission-c-programming-guide"></a>\<permission>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <permission cref="member">description</permission>
@@ -25,21 +25,21 @@ ms.locfileid: "77093480"
 
 ## <a name="parameters"></a>Parametreler
 
-- cref = `member`" "
+- cref = " `member` "
 
-  Geçerli derleme ortamından çağrılabilecek bir üye veya alana başvuru. Derleyici, verilen kod öğesinin var `member` olduğunu denetler ve XML çıkışındaki kanonik öğe adına çevirir. *üye* çift tırnak içinde görünmelidir (" ").
+  Geçerli derleme ortamından çağrılabilen bir üyeye veya alana başvuru. Derleyici verilen kod öğesinin var olduğunu denetler ve `member` çıkış XML dosyasında kurallı öğe adına çevirir. *üye* çift tırnak işareti ("") içinde yer almalıdır.
 
-  Genel bir türe nasıl bir cref başvurusu oluşturabilirsiniz hakkında bilgi için [bkz.](./cref-attribute.md)
+  Genel bir türe cref başvurusu oluşturma hakkında daha fazla bilgi için bkz. [cref özniteliği](./cref-attribute.md).
 
 - `description`
 
-  Üyeye erişimin açıklaması.
+  Üyeye erişim açıklaması.
 
 ## <a name="remarks"></a>Açıklamalar
 
-İzin \<> etiketi, bir üyenin erişimini belgelemenize olanak tanır. Sınıf, <xref:System.Security.PermissionSet> bir üyeye erişimi belirtmenizi sağlar.
+`<permission>`Etiketi bir üyenin erişimini belgelemenizi sağlar. <xref:System.Security.PermissionSet>Sınıfı, bir üyeye erişim belirtmenize olanak sağlar.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

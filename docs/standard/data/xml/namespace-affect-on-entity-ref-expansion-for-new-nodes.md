@@ -3,15 +3,15 @@ title: Öğe ve Öznitelikler İçeren Yeni Düğümler için Varlık Başvurusu
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05ec622f09106978281cd3e6f0a82f13703c2097
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710628"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288816"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Öğe ve Öznitelikler İçeren Yeni Düğümler için Varlık Başvurusu Genişlemesine Ad Alanı Etkisi
-Bir varlık bildiriminin içeriği neredeyse her şey içerebildiğinden, içeriğin gibi `<!ENTITY aname "<elem>test</elem>">`bir öğe içerebildiği bir olasılık vardır.  
+Bir varlık bildiriminin içeriği neredeyse her şey içerebildiğinden, içeriğin gibi bir öğe içerebildiği bir olasılık vardır `<!ENTITY aname "<elem>test</elem>">` .  
   
  XML ayrıştırıldığında, `&aname;` ayrıştırma zamanında değiştirme içeriğiyle genişletilmez. XML genişletmesi bitmedi çünkü öğe için ad alanının çözümlenmesi, düğüm belgeye yerleştirilene kadar gerçekleşemez. Bu saate kadar, kapsamda ne ad alanı olduğuna ilişkin bir bilgi yoktur. Düğüm belgeye eklendiğinde, ad alanı çözümlemesi oluşur ve sonuçta elde edilen varlık içeriği ilgili düğümlere ayrıştırılır.  
   
@@ -20,4 +20,4 @@ Bir varlık bildiriminin içeriği neredeyse her şey içerebildiğinden, içeri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

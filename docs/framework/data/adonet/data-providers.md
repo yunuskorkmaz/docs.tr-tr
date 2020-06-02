@@ -1,52 +1,53 @@
 ---
 title: .NET Framework Veri Sağlayıcıları
+description: Bir veritabanına bağlanmak, komut çalıştırmak ve ADO.NET içinde sonuçları almak için bir .NET Framework veri sağlayıcısının nasıl kullanıldığını öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347807"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287005"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
-Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için kullanılır. Bu sonuçlar doğrudan işlenirler, gerektiğinde kullanıcıya sunulmak, birden çok kaynaktan alınan verilerle birlikte veya katmanlar arasında uzaktan bir <xref:System.Data.DataSet> yerleştirildi. .NET Framework veri sağlayıcıları hafif, veri kaynağı ve kod arasında en az bir katman oluşturarak, işlevselliği ödün vermeden performansı artırır.  
+Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için kullanılır. Bu sonuçlar doğrudan işlenirler, <xref:System.Data.DataSet> gerektiğinde kullanıcıya sunulmak üzere, birden fazla kaynaktaki verilerle birlikte veya katmanlar arasında uzaktan bir şekilde yerleştirilir. .NET Framework veri sağlayıcıları hafif, veri kaynağı ve kod arasında en az bir katman oluşturarak, işlevselliği ödün vermeden performansı artırır.  
   
  Aşağıdaki tabloda .NET Framework dahil edilen veri sağlayıcıları listelenmektedir.  
   
-|.NET Framework veri sağlayıcısı|Açıklama|  
+|.NET Framework veri sağlayıcısı|Description|  
 |-------------------------------------------------------------------------------|-----------------|  
-|SQL Server için .NET Framework Veri Sağlayıcısı|Microsoft SQL Server için veri erişimi sağlar. <xref:System.Data.SqlClient> ad alanını kullanır.|  
-|OLE DB için .NET Framework Veri Sağlayıcısı|OLE DB kullanılarak sunulan veri kaynakları için. <xref:System.Data.OleDb> ad alanını kullanır.|  
-|ODBC için .NET Framework Veri Sağlayıcısı|ODBC kullanılarak sunulan veri kaynakları için. <xref:System.Data.Odbc> ad alanını kullanır.|  
+|SQL Server için .NET Framework Veri Sağlayıcısı|Microsoft SQL Server için veri erişimi sağlar. <xref:System.Data.SqlClient>Ad alanını kullanır.|  
+|OLE DB için .NET Framework Veri Sağlayıcısı|OLE DB kullanılarak sunulan veri kaynakları için. <xref:System.Data.OleDb>Ad alanını kullanır.|  
+|ODBC için .NET Framework Veri Sağlayıcısı|ODBC kullanılarak sunulan veri kaynakları için. <xref:System.Data.Odbc>Ad alanını kullanır.|  
 |Oracle için .NET Framework Veri Sağlayıcısı|Oracle veri kaynakları için. Oracle için .NET Framework Veri Sağlayıcısı Oracle istemci yazılımı sürümü 8.1.7 ve üstünü destekler ve <xref:System.Data.OracleClient> ad alanını kullanır.|  
-|EntityClient sağlayıcı|Varlık Veri Modeli (EDM) uygulamaları için veri erişimi sağlar. <xref:System.Data.EntityClient> ad alanını kullanır.|  
+|EntityClient sağlayıcı|Varlık Veri Modeli (EDM) uygulamaları için veri erişimi sağlar. <xref:System.Data.EntityClient>Ad alanını kullanır.|  
 |SQL Server Compact 4,0 için Veri Sağlayıcısı .NET Framework.|Microsoft SQL Server Compact 4,0 için veri erişimi sağlar. [System. Data. SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) ad alanını kullanır.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework veri sağlayıcılarının temel nesneleri  
  Aşağıdaki tabloda .NET Framework veri sağlayıcısı oluşturan dört çekirdekli nesne özetlenmektedir.  
   
-|Nesne|Açıklama|  
+|Nesne|Description|  
 |------------|-----------------|  
-|`Connection`|Belirli bir veri kaynağına bağlantı kurar. Tüm `Connection` nesneleri için temel sınıf <xref:System.Data.Common.DbConnection> sınıfıdır.|  
-|`Command`|Bir veri kaynağına karşı bir komut yürütür. `Parameters` gösterir ve bir `Connection``Transaction` kapsamında çalıştırılabilir. Tüm `Command` nesneleri için temel sınıf <xref:System.Data.Common.DbCommand> sınıfıdır.|  
-|`DataReader`|Bir veri kaynağından salt ileri, salt okunur bir veri akışını okur. Tüm `DataReader` nesneleri için temel sınıf <xref:System.Data.Common.DbDataReader> sınıfıdır.|  
-|`DataAdapter`|Bir `DataSet` doldurur ve güncelleştirmeleri veri kaynağıyla çözer. Tüm `DataAdapter` nesneleri için temel sınıf <xref:System.Data.Common.DbDataAdapter> sınıfıdır.|  
+|`Connection`|Belirli bir veri kaynağına bağlantı kurar. Tüm nesneler için temel sınıf `Connection` <xref:System.Data.Common.DbConnection> sınıfındır.|  
+|`Command`|Bir veri kaynağına karşı bir komut yürütür. `Parameters`' Dan bir öğesinin kapsamında sunar ve çalıştırılabilir `Transaction` `Connection` . Tüm nesneler için temel sınıf `Command` <xref:System.Data.Common.DbCommand> sınıfındır.|  
+|`DataReader`|Bir veri kaynağından salt ileri, salt okunur bir veri akışını okur. Tüm nesneler için temel sınıf `DataReader` <xref:System.Data.Common.DbDataReader> sınıfındır.|  
+|`DataAdapter`|Bir `DataSet` ' i doldurur ve veri kaynağıyla güncelleştirmeleri çözümler. Tüm nesneler için temel sınıf `DataAdapter` <xref:System.Data.Common.DbDataAdapter> sınıfındır.|  
   
  Bu belgede daha önce açıklanan tabloda listelenen çekirdek sınıflarının yanı sıra, bir .NET Framework veri sağlayıcısı aşağıdaki tabloda listelenen sınıfları da içerir.  
   
-|Nesne|Açıklama|  
+|Nesne|Description|  
 |------------|-----------------|  
-|`Transaction`|İşlemler içindeki komutları veri kaynağında listeler. Tüm `Transaction` nesneleri için temel sınıf <xref:System.Data.Common.DbTransaction> sınıfıdır. ADO.NET ayrıca <xref:System.Transactions> ad alanındaki sınıfları kullanan işlemler için destek sağlar.|  
-|`CommandBuilder`|Bir `DataAdapter` komut özelliklerini otomatik olarak oluşturan veya saklı bir yordamdan parametre bilgisi türeten ve bir `Command` nesnesinin `Parameters` koleksiyonunu dolduran yardımcı nesne. Tüm `CommandBuilder` nesneleri için temel sınıf <xref:System.Data.Common.DbCommandBuilder> sınıfıdır.|  
-|`ConnectionStringBuilder`|`Connection` nesneleri tarafından kullanılan bağlantı dizelerinin içeriğini oluşturmak ve yönetmek için basit bir yol sağlayan yardımcı nesne. Tüm `ConnectionStringBuilder` nesneleri için temel sınıf <xref:System.Data.Common.DbConnectionStringBuilder> sınıfıdır.|  
-|`Parameter`|Komutlar ve saklı yordamlar için giriş, çıkış ve dönüş değeri parametrelerini tanımlar. Tüm `Parameter` nesneleri için temel sınıf <xref:System.Data.Common.DbParameter> sınıfıdır.|  
-|`Exception`|Veri kaynağında bir hata ile karşılaşıldığında döndürülür. İstemcide karşılaşılan bir hata için .NET Framework veri sağlayıcıları bir .NET Framework özel durumu oluşturur. Tüm `Exception` nesneleri için temel sınıf <xref:System.Data.Common.DbException> sınıfıdır.|  
+|`Transaction`|İşlemler içindeki komutları veri kaynağında listeler. Tüm nesneler için temel sınıf `Transaction` <xref:System.Data.Common.DbTransaction> sınıfındır. ADO.NET ayrıca, ad alanındaki sınıfları kullanan işlemler için destek sağlar <xref:System.Transactions> .|  
+|`CommandBuilder`|`DataAdapter`Saklı bir yordamdan bir veya türetilmiş parametre bilgisinin otomatik olarak oluşturduğu ve `Parameters` bir nesnenin koleksiyonunu dolduran yardımcı nesne `Command` . Tüm nesneler için temel sınıf `CommandBuilder` <xref:System.Data.Common.DbCommandBuilder> sınıfındır.|  
+|`ConnectionStringBuilder`|Nesneler tarafından kullanılan bağlantı dizelerinin içeriğini oluşturmak ve yönetmek için basit bir yol sağlayan yardımcı nesne `Connection` . Tüm nesneler için temel sınıf `ConnectionStringBuilder` <xref:System.Data.Common.DbConnectionStringBuilder> sınıfındır.|  
+|`Parameter`|Komutlar ve saklı yordamlar için giriş, çıkış ve dönüş değeri parametrelerini tanımlar. Tüm nesneler için temel sınıf `Parameter` <xref:System.Data.Common.DbParameter> sınıfındır.|  
+|`Exception`|Veri kaynağında bir hata ile karşılaşıldığında döndürülür. İstemcide karşılaşılan bir hata için .NET Framework veri sağlayıcıları bir .NET Framework özel durumu oluşturur. Tüm nesneler için temel sınıf `Exception` <xref:System.Data.Common.DbException> sınıfındır.|  
 |`Error`|Bir veri kaynağı tarafından döndürülen bir uyarı veya hatadan bilgileri gösterir.|  
-|`ClientPermission`|.NET Framework veri sağlayıcısı kod erişimi güvenlik öznitelikleri için verilmiştir. Tüm `ClientPermission` nesneleri için temel sınıf <xref:System.Data.Common.DBDataPermission> sınıfıdır.|  
+|`ClientPermission`|.NET Framework veri sağlayıcısı kod erişimi güvenlik öznitelikleri için verilmiştir. Tüm nesneler için temel sınıf `ClientPermission` <xref:System.Data.Common.DBDataPermission> sınıfındır.|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı  
  SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı, SQL Server ile iletişim kurmak için kendi protokolünü kullanır. Hafif ve bir OLE DB ya da açık veritabanı bağlantısı (ODBC) katmanı eklemeden SQL Server doğrudan erişmek için iyileştirildi. Aşağıdaki çizim, Veri Sağlayıcısı için .NET Framework OLE DB ile SQL Server için .NET Framework Veri Sağlayıcısı karşıttır. OLE DB .NET Framework Veri Sağlayıcısı, bağlantı havuzu oluşturma ve işlem hizmetleri ve veri kaynağı için OLE DB sağlayıcı sağlayan OLE DB hizmeti bileşeni aracılığıyla bir OLE DB veri kaynağına iletişim kurar.  
@@ -59,9 +60,9 @@ SQL Server için .NET Framework Veri Sağlayıcısı ve Veri Sağlayıcısı iç
   
  SQL Server sınıfları için .NET Framework Veri Sağlayıcısı <xref:System.Data.SqlClient> ad alanında bulunur.  
   
- SQL Server için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework SQL Server Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden veya <xref:System.Transactions>işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
+ SQL Server için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework SQL Server Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden veya işlem ayrıntılarını alır <xref:System.Transactions> . Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
- Aşağıdaki kod örneği, `System.Data.SqlClient` ad alanının uygulamalarınıza nasıl ekleneceğini gösterir.  
+ Aşağıdaki kod örneği, `System.Data.SqlClient` uygulamalarınıza nasıl ad alanı ekleneceğini gösterir.  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -80,7 +81,7 @@ using System.Data.SqlClient;
 |------------|--------------|  
 |SQLOLEDB|SQL Server için Microsoft OLE DB sağlayıcısı|  
 |MSDAORA|Oracle için Microsoft OLE DB sağlayıcısı|  
-|Microsoft.Jet.OLEDB.4.0|Microsoft Jet için OLE DB sağlayıcısı|  
+|Microsoft. Jet. OLEDB. 4.0|Microsoft Jet için OLE DB sağlayıcısı|  
   
 > [!NOTE]
 > ASP.NET uygulamaları gibi çok iş parçacıklı uygulamalar için bir veri kaynağı olarak erişim (Jet) veritabanı kullanılması önerilmez. Bir ASP.NET uygulaması için bir veri kaynağı olarak Jet kullanmanız gerekiyorsa, bir Access veritabanına bağlanan ASP.NET uygulamalarının bağlantı sorunlarıyla karşılaşabileceği farkında olun.  
@@ -89,7 +90,7 @@ using System.Data.SqlClient;
   
  OLE DB için .NET Framework Veri Sağlayıcısı, ODBC için OLE DB sağlayıcısıyla (MSDASQL) çalışmaz. ADO.NET kullanarak bir ODBC veri kaynağına erişmek için, ODBC için .NET Framework Veri Sağlayıcısı kullanın.  
   
- OLE DB sınıfları için .NET Framework Veri Sağlayıcısı <xref:System.Data.OleDb> ad alanında bulunur. Aşağıdaki kod örneği, `System.Data.OleDb` ad alanının uygulamalarınıza nasıl ekleneceğini gösterir.  
+ OLE DB sınıfları için .NET Framework Veri Sağlayıcısı <xref:System.Data.OleDb> ad alanında bulunur. Aşağıdaki kod örneği, `System.Data.OleDb` uygulamalarınıza nasıl ad alanı ekleneceğini gösterir.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -112,7 +113,7 @@ using System.Data.OleDb;
   
  ODBC sınıfları için .NET Framework Veri Sağlayıcısı <xref:System.Data.Odbc> ad alanında bulunur.  
   
- Aşağıdaki kod örneği, `System.Data.Odbc` ad alanının uygulamalarınıza nasıl ekleneceğini gösterir.  
+ Aşağıdaki kod örneği, `System.Data.Odbc` uygulamalarınıza nasıl ad alanı ekleneceğini gösterir.  
   
 ```vb  
 Imports System.Data.Odbc  
@@ -130,9 +131,9 @@ using System.Data.Odbc;
   
  Oracle için .NET Framework Veri Sağlayıcısı, bir Oracle veri kaynağına bağlanabilmeniz için sistemde Oracle istemci yazılımı (sürüm 8.1.7 veya sonraki bir sürüm) gerektirir.  
   
- .NET Framework Veri Sağlayıcısı Oracle sınıfları <xref:System.Data.OracleClient> ad alanında bulunur ve `System.Data.OracleClient.dll` derlemesinde yer alır. Veri sağlayıcısını kullanan bir uygulamayı derlerken hem `System.Data.dll` hem de `System.Data.OracleClient.dll` başvurmanız gerekir.  
+ Oracle sınıfları için .NET Framework Veri Sağlayıcısı <xref:System.Data.OracleClient> ad alanında bulunur ve derlemede yer alır `System.Data.OracleClient.dll` . `System.Data.dll` `System.Data.OracleClient.dll` Veri sağlayıcısını kullanan bir uygulamayı derlerken, ve ' a başvurmanız gerekir.  
   
- Aşağıdaki kod örneği, `System.Data.OracleClient` ad alanının uygulamalarınıza nasıl ekleneceğini gösterir.  
+ Aşağıdaki kod örneği, `System.Data.OracleClient` uygulamalarınıza nasıl ad alanı ekleneceğini gösterir.  
   
 ```vb  
 Imports System.Data  

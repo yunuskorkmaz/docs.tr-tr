@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: Dağıtılmış, veri paylaşımı uygulamaları oluşturmaya yönelik .NET Framework programcıları için veri erişim hizmetlerini açığa çıkaran ADO.NET hakkında bilgi edinin.
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094403"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286733"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -21,7 +22,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  [ADO.NET’e Genel Bakış](ado-net-overview.md)  
  ADO.NET 'in tasarımına ve bileşenlerine bir giriş sağlar.  
   
- [Entity Framework](/ef/ef6/index)  
+ [Varlık Çerçevesi](/ef/ef6/index)  
  Entity Framework kullanarak uygulama oluşturmayı açıklar.  
   
  [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)  
@@ -31,13 +32,13 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  .NET Framework veri türleri ve .NET Framework veri sağlayıcıları arasındaki veri türü eşlemelerini açıklar.  
   
  [DataSets, DataTables ve DataViews](./dataset-datatable-dataview/index.md)  
- `DataSets`, `DataSets`, `DataTables`ve `DataViews`oluşturmayı ve kullanmayı açıklar.  
+ ' Nin nasıl oluşturulduğunu ve kullanılacağını açıklar, `DataSets` türü, `DataSets` `DataTables` ve `DataViews` .  
   
  [LINQ to DataSet](linq-to-dataset.md)  
  Programlama örnekleri de dahil olmak üzere LINQ to DataSet hakkında bilgi sağlar.  
   
  [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)  
- Bir veri kaynağına bağlanmayı ve `Commands`, `DataReaders`ve `DataAdapters`kullanarak verileri nasıl alacağınızı ve değiştirebileceğinizi açıklar.  
+ , Ve kullanarak veri kaynağına bağlanmayı ve verilerin nasıl alınacağını ve değiştirileceğini açıklar `Commands` `DataReaders` `DataAdapters` .  
   
  [SQL Server ve ADO.NET](./sql/index.md)  
  SQL Server özgü özellikler ve işlevlerle nasıl çalışabileceğinizi açıklar.  
@@ -46,8 +47,8 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  Oracle için .NET Framework Veri Sağlayıcısı özgü özellikleri ve davranışları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Dil ile tümleşik sorgu (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Kullanılarak C#LINQ konularına ve örneklere bağlantılar sağlar.  
+ [Dil ile tümleşik sorgu (LINQ)-C #](../../../csharp/programming-guide/concepts/linq/index.md)  
+ C# kullanarak LINQ konularına ve örneklere bağlantılar sağlar.  
   
  [Dil ile tümleşik sorgu (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Visual Basic kullanarak LINQ konularına ve örneklere bağlantılar sağlar.  
@@ -55,7 +56,7 @@ ADO.NET, .NET Framework programcıları için veri erişim hizmetlerini kullanı
  [WCF Veri Hizmetleri 4.5](../wcf/index.md)  
  Web 'de veya açık veri Protokolü 'Nü (OData) uygulayan bir intranette veri hizmetlerini dağıtmak için WCF Veri Hizmetleri kullanmayı açıklar.  
   
- [.NET Framework geliştirme Kılavuzu](../../development-guide.md)  
+ [.NET Framework Geliştirme Kılavuzu](../../development-guide.md)  
  .NET Framework standart geliştirme görevleriyle ilgili bilgilere bağlantılar sağlar.  
   
  [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)  

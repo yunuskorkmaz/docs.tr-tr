@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378385"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287499"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -79,7 +79,7 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     Bilinen türlerin listesinin statik olarak bilinmediği durumlarda ( **kişi** sınıfı derlendiğinde), **KnownTypeAttribute** , çalışma zamanında bilinen türlerin bir listesini döndüren bir yönteme da işaret edebilir.  
+     Bilinen türlerin listesinin statik olarak bilinmediği durumlarda ( **kişi** sınıfı derlendiğinde), **KnownTypeAttribute** Ayrıca çalışma zamanında bilinen türlerin bir listesini döndüren bir yönteme işaret edebilir.  
   
 5. Oluştururken veya serializable türler değiştirme İleri ve geriye dönük uyumluluk düşünün.  
   
@@ -92,7 +92,7 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+     Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 #### <a name="supporting-xml-serialization"></a>XML Serileştirmeyi destekleme  
  Veri anlaşması serileştirme .NET Framework, ancak veri sözleşmesi serileştirmesi tarafından desteklenmeyen serileştirme senaryoları vardır. Örneğin, seri hale getirici tarafından üretilen veya tüketilen XML şekli üzerinde size tam denetim vermez. Bu tür hassas denetim gerekliyse, *XML serileştirmesi* kullanılmalıdır ve bu serileştirme teknolojisini desteklemek için türlerinizi tasarlamanız gerekir.  
@@ -140,10 +140,10 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Sözleşmesi Seri Hale Getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Anlaşmalarını Kullanma](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmesi Seri Hale Getirici](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [İkili serileştirme](binary-serialization.md)
 - [.NET uzaktan iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
-- [Güvenlik ve Serileştirme](../../../docs/framework/misc/security-and-serialization.md)
+- [Güvenlik ve Serileştirme](../../framework/misc/security-and-serialization.md)

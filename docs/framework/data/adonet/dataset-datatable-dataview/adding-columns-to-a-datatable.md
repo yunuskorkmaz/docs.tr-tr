@@ -1,21 +1,22 @@
 ---
 title: DataTable’a Sütun Ekleme
+description: DataTable, tablonun Columns özelliği tarafından başvurulan DataColumn nesnelerini içerir. ADO.NET içindeki bir tabloya sütun eklemek için bu örnek kodu kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784849"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286953"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable’a Sütun Ekleme
-, Tablonun **Columns** özelliği tarafından <xref:System.Data.DataColumn> başvurulan nesnelerin bir koleksiyonunu içerir.<xref:System.Data.DataTable> Bu sütun koleksiyonu, tüm kısıtlamalarla birlikte, tablonun şemasını veya yapısını tanımlar.  
+<xref:System.Data.DataTable> <xref:System.Data.DataColumn> , Tablonun **Columns** özelliği tarafından başvurulan nesnelerin bir koleksiyonunu içerir. Bu sütun koleksiyonu, tüm kısıtlamalarla birlikte, tablonun şemasını veya yapısını tanımlar.  
   
- **DataColumn** oluşturucusunu kullanarak veya tablosunun **Columns** özelliğinin <xref:System.Data.DataColumnCollection> **Add** metodunu çağırarak bir tablo içinde **DataColumn** nesneleri oluşturun. **Add** yöntemi, Isteğe bağlı **ColumnName**, **DataType**ve **Expression** bağımsız değişkenlerini kabul eder ve koleksiyonun bir üyesi olarak yeni bir **DataColumn** oluşturur. Ayrıca, var olan bir **DataColumn** nesnesini kabul eder ve koleksiyona ekler ve Isteniyorsa eklenen **DataColumn** öğesine bir başvuru döndürür. **DataTable** nesneleri herhangi bir veri kaynağına özgü olmadığından, bir **DataColumn**veri türü belirtirken .NET Framework türleri kullanılır.  
+ **DataColumn** oluşturucusunu kullanarak veya tablosunun **Columns** özelliğinin **Add** metodunu çağırarak bir tablo içinde **DataColumn** nesneleri oluşturun <xref:System.Data.DataColumnCollection> . **Add** yöntemi, Isteğe bağlı **ColumnName**, **DataType**ve **Expression** bağımsız değişkenlerini kabul eder ve koleksiyonun bir üyesi olarak yeni bir **DataColumn** oluşturur. Ayrıca, var olan bir **DataColumn** nesnesini kabul eder ve koleksiyona ekler ve Isteniyorsa eklenen **DataColumn** öğesine bir başvuru döndürür. **DataTable** nesneleri herhangi bir veri kaynağına özgü olmadığından, bir **DataColumn**veri türü belirtirken .NET Framework türleri kullanılır.  
   
  Aşağıdaki örnek, bir **DataTable**'a dört sütun ekler.  
   
@@ -49,7 +50,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 > Bir sütun için bir sütun adı sağlanmazsa, sütuna, **DataColumnCollection**'a eklendiğinde "Sütun1"*ile başlayan, sütun için* artımlı bir varsayılan ad verilir. Sağladığınız ad, **DataColumnCollection**içinde varolan bir varsayılan sütun adıyla çakışabileceğinden, bir sütun adı belirttiğinizde "sütun*N*" adlandırma kuralına engel olmasını öneririz. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
- <xref:System.Xml.Linq.XElement> İçindeki bir <xref:System.Data.DataColumn.DataType%2A> '<xref:System.Data.DataTable>ıolarak kullanıyorsanız, verileri okurken XML serileştirme çalışmaz. <xref:System.Data.DataColumn> Örneğin, <xref:System.Xml.XmlDocument> `DataTable.WriteXml` yöntemini kullanarak bir yazarsanız, XML 'e Serileştirmeden sonra içinde <xref:System.Xml.Linq.XElement>ek bir üst düğüm vardır. Bu sorunu geçici olarak çözmek için <xref:System.Data.SqlTypes.SqlXml> <xref:System.Xml.Linq.XElement>yerine türünü kullanın. `ReadXml`ve `WriteXml` ile<xref:System.Data.SqlTypes.SqlXml>düzgün çalışır.  
+ <xref:System.Xml.Linq.XElement> <xref:System.Data.DataColumn.DataType%2A> İçindeki bir ' ı olarak kullanıyorsanız, <xref:System.Data.DataColumn> <xref:System.Data.DataTable> verileri okurken XML serileştirme çalışmaz. Örneğin, <xref:System.Xml.XmlDocument> yöntemini kullanarak bir yazarsanız `DataTable.WriteXml` , XML 'e Serileştirmeden sonra içinde ek bir üst düğüm vardır <xref:System.Xml.Linq.XElement> . Bu sorunu geçici olarak çözmek için <xref:System.Data.SqlTypes.SqlXml> yerine türünü kullanın <xref:System.Xml.Linq.XElement> . `ReadXml`ve `WriteXml` ile düzgün çalışır <xref:System.Data.SqlTypes.SqlXml> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

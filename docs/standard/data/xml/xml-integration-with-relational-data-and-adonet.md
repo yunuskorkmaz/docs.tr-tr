@@ -3,12 +3,12 @@ title: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f54c7a890ada01f2cffdd54c024cfbc98777200d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155626"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289024"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** sınıfı, **XmlDocument**'ın TÜRETILMIŞ bir sınıfıdır ve XML verisi içerir. **XmlDataDocument** 'in avantajı, ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu, bir **veri kümesine** bağlanabilen ve iki sınıfta bulunan veriler üzerinde yapılan değişiklikleri eşitleyebileceğiniz bir **XmlDocument** . Bir **veri kümesine** bağlanan bir **XmlDocument** , XML 'nin ilişkisel verilerle tümleştirilmesine olanak tanır ve verilerinizin XML veya ilişkisel biçimde temsil edilebilmesi gerekmez. Her ikisini de yapabilirsiniz ve verilerin tek bir gösterimiyle sınırlandırmayın.  
@@ -41,10 +41,10 @@ ms.locfileid: "78155626"
 |Kaynak XML 'de öğe sıralamasını koruma kritik değildir.|Kaynak XML 'de öğe sıralamasını koruma kritik öneme sahiptir.|  
 |Öğe ve biçimlendirme arasındaki boşluk, kaynak XML 'de korunması gerekmez.|Kaynak XML 'de boşluk ve biçimlendirme koruması kritik öneme sahiptir.|  
   
- Bir **veri kümesinin** içine ve DıŞıNA doğrudan XML yükleme ve yazma için, bkz. xml 'den veri kümesi [yükleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verisi olarak veri kümesi yazma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Bir **veri kümesinin** içine ve DıŞıNA doğrudan XML yükleme ve yazma için, bkz. xml 'den veri kümesi [yükleme](../../../framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verisi olarak veri kümesi yazma](../../../framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
   
- **Veri kümesinin** bir **XmlDataDocument** 'ten yüklenmesi gereksinimlerinize göre, bkz. [XML belgesi ile veri kümesini eşitleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ **Veri kümesinin** bir **XmlDataDocument** 'ten yüklenmesi gereksinimlerinize göre, bkz. [XML belgesi ile veri kümesini eşitleme](../../../framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet içinde XML kullanma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [DataSet içinde XML kullanma](../../../framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 8ed519a01162056151d8ae6398c0d06495911afd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743532"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288504"
 ---
 # <a name="virtual-members"></a>Sanal Üyeler
 Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değiştirilir. Bunlar, sağladıkları genişletilebilirlik açısından geri çağırmaları oldukça benzerdir ancak yürütme performansı ve bellek tüketimi açısından daha iyidir. Ayrıca, sanal Üyeler var olan türde (özelleşme) özel bir tür oluşturulmasını gerektiren senaryolarda daha doğal bir şekilde çalışır.
@@ -23,7 +23,7 @@ Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değ
 
  Bir sanal üyeye yapılan herhangi bir çağrı öngörülemeyen yollarla geçersiz kılınabileceğinden ve rastgele kod yürütebildiğinden, geri çağırmalar (ve geri çağırmaların daha fazlası) gibi sanal Üyeler tasarım, test ve bakım açısından maliyetlidir. Ayrıca, sanal üyelerin sözleşmesini açıkça tanımlamak için çok daha fazla çaba gerekir. bu nedenle, bunları tasarlama ve belgeleme maliyeti daha yüksektir.
 
- ❌, bunu yapmak için iyi bir nedeniniz yoksa, sanal üyeleri tasarlama, test etme ve sürdürme ile ilgili tüm maliyetlerden haberdar olmanız durumunda, Üyeler sanal yapmayın.
+ ❌Bunu yapmak için iyi bir nedeniniz olmadığı için, Üyeler sanal yapmayın ve sanal üyelerin tasarlanması, sınanması ve saklanması ile ilgili tüm maliyetlerden haberdar olmanız gerekir.
 
  Sanal üyeler, uyumluluk bozmadan bu kullanıcılara yapılabilecek değişikliklere göre daha az yasaklamalıdır. Ayrıca bunlar sanal olmayan üyelerden daha yavaştır, ancak sanal üyelere yapılan çağrılar satır içine alınmadı.
 
@@ -39,5 +39,5 @@ Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)

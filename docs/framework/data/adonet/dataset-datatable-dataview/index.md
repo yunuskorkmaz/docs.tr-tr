@@ -1,66 +1,67 @@
 ---
 title: DataSets, DataTables ve DataViews
+description: Tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimi olan ADO.NET veri kümesiyle çalışmanın birkaç yolunu öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786187"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286901"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables ve DataViews
-ADO.net <xref:System.Data.DataSet> , içerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. Bir <xref:System.Data.DataSet> , verileri içeren tablolar ve tablolar arasındaki ilişkiler dahil olmak üzere tüm veri kümesini temsil eder.  
+ADO.NET, <xref:System.Data.DataSet> içerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. Bir, <xref:System.Data.DataSet> verileri içeren tablolar ve tablolar arasındaki ilişkiler dahil olmak üzere tüm veri kümesini temsil eder.  
   
- Bağımsız olarak veya birleşimine uygulanabilecek bir <xref:System.Data.DataSet>ile çalışmanın birkaç yolu vardır. Şunları yapabilirsiniz:  
+ Bağımsız olarak veya birleşimine uygulanabilecek bir ile çalışmanın birkaç yolu vardır <xref:System.Data.DataSet> . Seçenekleriniz şunlardır:  
   
-- Programlı olarak <xref:System.Data.DataRelation>bir <xref:System.Data.DataTable> <xref:System.Data.Constraint> , veiçindevetablolarıverilerledoldurma.<xref:System.Data.DataSet>  
+- Programlı olarak <xref:System.Data.DataTable> bir, <xref:System.Data.DataRelation> ve <xref:System.Data.Constraint> içinde ve <xref:System.Data.DataSet> tabloları verilerle doldurma.  
   
-- ' İ kullanarak var olan bir `DataAdapter`ilişkisel veri kaynağından veri tabloları iledoldurun.<xref:System.Data.DataSet>  
+- ' İ <xref:System.Data.DataSet> kullanarak var olan bir ilişkisel veri kaynağından veri tabloları ile doldurun `DataAdapter` .  
   
-- XML kullanarak <xref:System.Data.DataSet> içerikleri yükleyin ve kalıcı hale getirin. Daha fazla bilgi için bkz. [veri KÜMESINDE XML kullanma](using-xml-in-a-dataset.md).  
+- XML kullanarak içerikleri yükleyin ve kalıcı hale getirin <xref:System.Data.DataSet> . Daha fazla bilgi için bkz. [veri KÜMESINDE XML kullanma](using-xml-in-a-dataset.md).  
   
- Türü kesin belirlenmiş <xref:System.Data.DataSet> bir XML Web hizmeti kullanılarak da taşıyabilirsiniz. Tasarımı, XML Web <xref:System.Data.DataSet> Hizmetleri kullanarak verileri aktarmak için ideal hale getirir. XML Web hizmetlerine genel bakış için bkz. [XML Web Hizmetleri 'Ne genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). XML Web hizmetinden alınan bir <xref:System.Data.DataSet> örnek için bkz. [XML Web hizmetinden veri kümesi](consuming-a-dataset-from-an-xml-web-service.md)kullanma.  
+ Türü kesin belirlenmiş bir <xref:System.Data.DataSet> XML Web hizmeti kullanılarak da taşıyabilirsiniz. Tasarımı, <xref:System.Data.DataSet> XML Web Hizmetleri kullanarak verileri aktarmak için ideal hale getirir. XML Web hizmetlerine genel bakış için bkz. [XML Web Hizmetleri 'Ne genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). <xref:System.Data.DataSet>XML Web hizmetinden alınan bir örnek için bkz. [XML Web hizmetinden veri kümesi](consuming-a-dataset-from-an-xml-web-service.md)kullanma.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataSet Oluşturma](creating-a-dataset.md)  
- Bir <xref:System.Data.DataSet>örneğini oluşturmak için söz dizimini açıklar.  
+ Bir örneğini oluşturmak için söz dizimini açıklar <xref:System.Data.DataSet> .  
   
  [DataSet’e DataTable Ekleme](adding-a-datatable-to-a-dataset.md)  
- ' A <xref:System.Data.DataSet>tablo ve sütun oluşturmayı ve eklemeyi açıklar.  
+ ' A tablo ve sütun oluşturmayı ve eklemeyi açıklar <xref:System.Data.DataSet> .  
   
  [DataRelations Ekleme](adding-datarelations.md)  
- İçindeki tablolar arasında ilişki oluşturmayı açıklar <xref:System.Data.DataSet>.  
+ İçindeki tablolar arasında ilişki oluşturmayı açıklar <xref:System.Data.DataSet> .  
   
  [DataRelations İçinde Gezinme](navigating-datarelations.md)  
  Bir <xref:System.Data.DataSet> üst-alt ilişkisinin alt veya üst satırlarını döndürmek için içindeki tablolar arasındaki ilişkilerin nasıl kullanılacağını açıklar.  
   
  [DataSet İçeriklerini Birleştirme](merging-dataset-contents.md)  
- Bir <xref:System.Data.DataSet>, veya dizisinin içeriğinin başka bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>veya <xref:System.Data.DataRow> dizisinin içeriğini nasıl birleştirebileceğinizi açıklar.  
+ Bir <xref:System.Data.DataSet> , <xref:System.Data.DataTable> veya dizisinin içeriğinin başka bir, veya dizisinin içeriğini <xref:System.Data.DataRow> nasıl birleştirebileceğinizi açıklar <xref:System.Data.DataSet> .  
   
  [DataSet İçeriklerini Kopyalama](copying-dataset-contents.md)  
- Bir <xref:System.Data.DataSet> öğesinin, belirtilen verilerin yanı sıra şema içerebilen bir kopyasının nasıl oluşturulduğunu açıklar.  
+ Bir öğesinin, <xref:System.Data.DataSet> belirtilen verilerin yanı sıra şema içerebilen bir kopyasının nasıl oluşturulduğunu açıklar.  
   
  [DataSet Olaylarını İşleme](handling-dataset-events.md)  
- ' A <xref:System.Data.DataSet> ait olayları ve bunların nasıl kullanılacağını açıklar.  
+ ' A ait olayları <xref:System.Data.DataSet> ve bunların nasıl kullanılacağını açıklar.  
   
  [Türü Belirtilmiş DataSets](typed-datasets.md)  
- Türü <xref:System.Data.DataSet> nelerin olduğunu ve nasıl oluşturulacağını ve kullanılacağını açıklar.  
+ Türü nelerin <xref:System.Data.DataSet> olduğunu ve nasıl oluşturulacağını ve kullanılacağını açıklar.  
   
  [DataTables](datatables.md)  
- Oluşturma <xref:System.Data.DataTable>, şema tanımlama ve verileri işleme işlemlerinin nasıl yapılacağını açıklar.  
+ Oluşturma <xref:System.Data.DataTable> , şema tanımlama ve verileri işleme işlemlerinin nasıl yapılacağını açıklar.  
   
  [DataTableReaders](datatablereaders.md)  
- Oluşturmayı ve kullanmayı <xref:System.Data.DataTableReader>açıklar.  
+ Oluşturmayı ve kullanmayı açıklar <xref:System.Data.DataTableReader> .  
   
  [DataViews](dataviews.md)  
- Oluşturma ve `DataViews` bunlarla çalışmayı ve <xref:System.Data.DataView> olayları nasıl kullanacağınızı açıklar.  
+ Oluşturma ve bunlarla çalışmayı ve olayları nasıl kullanacağınızı açıklar `DataViews` <xref:System.Data.DataView> .  
   
  [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
- Bir veri kaynağı <xref:System.Data.DataSet> olarak XML ile nasıl etkileşime gireceğini açıklar ve bir <xref:System.Data.DataSet> XML verisi olarak içeriğini yükleme ve kalıcı hale getirme de dahildir.  
+ <xref:System.Data.DataSet>Bir veri kaynağı olarak XML ile nasıl etkileşime gireceğini açıklar ve BIR XML verisi olarak içeriğini yükleme ve kalıcı hale getirme de dahildir <xref:System.Data.DataSet> .  
   
  [XML Web Hizmetinden DataSet Kullanma](consuming-a-dataset-from-an-xml-web-service.md)  
- Verileri aktarmak için kullanan bir <xref:System.Data.DataSet> XML Web hizmeti oluşturmayı açıklar.  
+ Verileri aktarmak için kullanan bir XML Web hizmeti oluşturmayı açıklar <xref:System.Data.DataSet> .  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET’teki Yenilikler](../whats-new.md)  

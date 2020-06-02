@@ -1,13 +1,14 @@
 ---
 title: SQL Server’da Yetkilendirme ve İzinler
+description: Oluşturduğunuz veritabanı nesnelerini ADO.NET ile SQL Server kullanıcılara erişilebilir hale getirmek için açıkça izin vermeyi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782592"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286539"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server’da Yetkilendirme ve İzinler
 Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların erişimini sağlamak için açıkça izin vermeniz gerekir. Her güvenli kılınabilir nesne, izin deyimleri kullanılarak bir sorumluya verilebilecek izinlere sahiptir.  
@@ -31,16 +32,16 @@ Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların eri�
 ## <a name="permission-statements"></a>İzin deyimleri  
  Üç Transact-SQL izin deyimleri aşağıdaki tabloda açıklanmıştır.  
   
-|İzin ekstresi|Açıklama|  
+|İzin ekstresi|Description|  
 |--------------------------|-----------------|  
 |SEMANTIĞI|İzin verir.|  
 |HEDEFINI|Bir izni iptal eder. Bu, yeni bir nesnenin varsayılan durumudur. Bir kullanıcı veya rolden iptal edilen izin, hala asıl rolün atandığı diğer gruplardan veya rollerden devralınabilir.|  
-|REDDEDEBILIR|REDDETME, devralınmaması için bir izni iptal eder. Reddet, ' nin nesne sahipleri veya üyeleri için uygulanmadığından, tüm izinlerin önünde `sysadmin`önceliklidir. Bir nesne üzerindeki izinleri bir `public` rol için reddetmeniz durumunda, nesne sahipleri ve `sysadmin` üyeleri hariç tüm kullanıcılar ve roller için reddedilir.|  
+|REDDET|REDDETME, devralınmaması için bir izni iptal eder. Reddet, ' nin nesne sahipleri veya üyeleri için uygulanmadığından, tüm izinlerin önünde önceliklidir `sysadmin` . Bir nesne üzerindeki izinleri bir rol için reddetmeniz durumunda, `public` nesne sahipleri ve üyeleri hariç tüm kullanıcılar ve roller için reddedilir `sysadmin` .|  
   
 - GRANT deyimleri, veritabanı kullanıcıları tarafından devralınabilir bir gruba veya role izin atayabilir. Ancak reddetme deyimi diğer tüm izin deyimlerine göre önceliklidir. Bu nedenle, izin reddedilmiş bir Kullanıcı başka bir rolden onu alamaz.  
   
 > [!NOTE]
-> `sysadmin` Sabit sunucu rolü ve nesne sahiplerinin üyelerine izin verilmez.  
+> `sysadmin`Sabit sunucu rolü ve nesne sahiplerinin üyelerine izin verilmez.  
   
 ## <a name="ownership-chains"></a>Sahiplik zincirleri  
  SQL Server, yalnızca izin verilen sorumlular nesnelere erişebilmesini sağlar. Birden çok veritabanı nesnesi birbirlerine erişebildiğinde, dizi bir zincir olarak bilinir. SQL Server zincirdeki bağlantılardan geçiş yaparken, izinleri her öğeye ayrı olarak erişeceklerinden farklı şekilde değerlendirir. Bir nesne bir zincir aracılığıyla erişildiğinde, SQL Server önce nesnenin sahibini çağıran nesnenin sahibine (zincirdeki önceki bağlantı) karşılaştırır. Her iki nesne de aynı sahibe sahip ise, başvurulan nesne üzerindeki izinler denetlenmez. Bir nesne farklı bir sahibe sahip olan başka bir nesneye eriştiğinde, sahiplik zinciri bozulur ve SQL Server çağıranın güvenlik bağlamını denetlemesi gerekir.  
@@ -54,7 +55,7 @@ Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların eri�
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Açıklama|  
+|Kaynak|Description|  
 |--------------|-----------------|  
 |[İzinler](/sql/relational-databases/security/permissions-database-engine)|İzin hiyerarşisini, katalog görünümlerini ve sabit sunucu ve veritabanı rollerinin izinlerini açıklayan konuları içerir.|
   

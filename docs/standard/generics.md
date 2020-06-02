@@ -1,25 +1,25 @@
 ---
-title: Genel türler (genel bilgiler) genel bakış
-description: Genel olarak, gerçek bir veri türüne bağlanmadan tür güvenliğine uygun veri yapılarını tanımlamanıza olanak tanıyan kod şablonları olarak nasıl davrandığını öğrenin.
+title: Genel türler (genel türler) genel bakış
+description: Genel türlerin, gerçek bir veri türüne uygulamadan tür kullanımı uyumlu veri yapılarını tanımlamanızı sağlayan kod şablonları olarak nasıl davranması gerektiğini öğrenin.
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: f51d69088b0d5c798f3aa3a6c1f5b62b3ea81d39
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 99e3b589cd67c9d7026966d3d48d0e06a91fcc86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635279"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287551"
 ---
 # <a name="generic-types-overview"></a>Genel türlere genel bakış
 
-Geliştiriciler genel jenerikleri .NET'te her zaman, ister örtülü ister açık olarak kullanırlar. .NET'te LINQ kullandığınızda, birlikte <xref:System.Collections.Generic.IEnumerable%601>çalıştığınızı fark ettin mi? Ya da Varlık Çerçevesi'ni kullanarak veritabanlarıyla konuşmak için "genel depo" içeren çevrimiçi bir örnek `IQueryable<T>`gördüyseniz, çoğu yöntemin geri döndüğünü gördünüz mü? Bu örneklerde **T'nin** ne olduğunu ve neden orada olduğunu merak etmiş olabilirsiniz.
+Geliştiriciler, örtük olarak veya açık olsun, .NET 'te her zaman genel türler kullanır. .NET ' te LINQ kullandığınızda, ile çalıştığınızı fark muydunuz <xref:System.Collections.Generic.IEnumerable%601> ? Ya da Entity Framework kullanarak veritabanlarıyla iletişim için "genel deponun" çevrimiçi bir örneğini görüyorsanız, çoğu yöntemin geri döndüğünüzü gördünüz `IQueryable<T>` mi? **T** 'nin Bu örneklerde ne olduğunu ve neden orada olduğunu merak etmiş olabilirsiniz.
 
-İlk olarak .NET Framework 2.0'da tanıtılan genel bilgiler, geliştiricilerin gerçek bir veri türüne bağlanmadan [tür egelenebilir](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) veri yapılarını tanımlamasına olanak tanıyan bir "kod şablonu"dur. <xref:System.Collections.Generic.List%601> Örneğin, beyan edilebilen ve herhangi bir türle kullanılabilen `List<string>`genel `List<Person>`bir [koleksiyondur,](xref:System.Collections.Generic) `List<int>`örneğin , , veya .
+İlk olarak .NET Framework 2,0 ' de tanıtılan genel türler temelde, geliştiricilerin gerçek bir veri türüne işlemeden [tür açısından güvenli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) veri yapıları tanımlamasına olanak sağlayan bir "kod şablonu" dir. Örneğin,, <xref:System.Collections.Generic.List%601> veya gibi herhangi bir tür ile bildirilebilecek ve kullanılabilen [genel bir koleksiyondur](xref:System.Collections.Generic) `List<int>` `List<string>` `List<Person>` .
 
-Jeneriklerin neden yararlı olduğunu anlamak için, jenerik eklemeden önce ve <xref:System.Collections.ArrayList>sonra belirli bir sınıfa göz atalım: . .NET Framework 1.0'da `ArrayList` elemanlar türdedir. <xref:System.Object> Koleksiyona eklenen herhangi bir öğe sessizce `Object`bir . Aynı listedeki öğeleri okurken de olur. Bu [işlem, kutulama ve unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)olarak bilinir ve performansı etkiler. Ancak performans dışında, derleme zamanında listedeki veri türünü belirlemenin bir yolu yoktur, bu da bazı kırılgan kodlar sağlar. Genel ler, listenin her örneğinin içereceği veri türünü tanımlayarak bu sorunu çözer. Örneğin, yalnızca sensager ekleyebilir `List<int>` ve yalnızca `List<Person>`Kişiler'e ekleyebilirsiniz.
+Genel türlerin neden yararlı olduğunu anlamak için, genel türleri eklemeden önce ve sonra belirli bir sınıfa göz atalım: <xref:System.Collections.ArrayList> . .NET Framework 1,0 ' de `ArrayList` öğeler türündedir <xref:System.Object> . Koleksiyona eklenen herhangi bir öğe sessizce bir öğesine dönüştürüldü `Object` . Aynı durum, listedeki öğeleri okurken de gerçekleşir. Bu işlem [kutulama ve kutudan](../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma olarak bilinir ve performansı etkiler. Ancak, performans dışında, derleme zamanında listedeki verilerin türünü belirlemenin bir yolu yoktur ve bu da bazı kırılacak kod oluşturur. Genel türler, her liste örneğinin içereceği veri türünü tanımlayarak bu sorunu çözmez. Örneğin, yalnızca öğesine tamsayılar ekleyebilir `List<int>` ve yalnızca kişileri ekleyebilirsiniz `List<Person>` .
 
-Jenerikler çalışma zamanında da kullanılabilir. Çalışma zamanı, ne tür bir veri yapısı kullandığınızı bilir ve bellekte daha verimli bir şekilde depolayabilir.
+Genel türler çalışma zamanında da kullanılabilir. Çalışma zamanı, ne tür veri yapısını kullandığınızı bilir ve bunu bellekte daha verimli bir şekilde depolayabilirler.
 
 Aşağıdaki örnek, çalışma zamanında veri yapısı türünü bilmenin verimliliğini gösteren küçük bir programdır:
 
@@ -53,7 +53,7 @@ Aşağıdaki örnek, çalışma zamanında veri yapısı türünü bilmenin veri
   }
 ```
 
-Bu program aşağıdakilere benzer çıktı üretir:
+Bu program aşağıdakine benzer bir çıktı üretir:
 
 ```console
 Generic Sort: System.Collections.Generic.List`1[System.Int32]
@@ -62,10 +62,10 @@ Non-Generic Sort: System.Collections.ArrayList
  Time taken: 0.2592ms
 ```
 
-Burada fark edebilirsiniz ilk şey, genel liste sıralama önemli ölçüde genel olmayan liste sıralama daha hızlı olmasıdır. Ayrıca, genel liste için yazın farklı olduğunu da fark edebilirsiniz ([System.Int32]), genel olmayan liste için tür genelleştirilmiş ise. Çalışma zamanı genel in `List<int>` türünün <xref:System.Int32>genel olduğunu bildiğinden, liste öğelerini bellekte altta yatan bir `ArrayList` arayıcı dizisinde depolayabilirken, genel olmayan ların her liste öğesini bir nesneye dökmesi gerekir. Bu örnekte de görüldüğü gibi, ekstra dökümler zaman alır ve liste sıralamasını yavaşlatıyor.
+Burada fark ettiğiniz ilk şey, genel listenin sıralanması genel olmayan listeyi sıralamayla önemli ölçüde daha hızlıdır. Ayrıca genel liste türünün farklı olduğunu ([System. Int32]), ancak genel olmayan listenin türü Genelleştirilmiş olduğunu fark edebilirsiniz. Çalışma zamanı genel `List<int>` türünde olduğunu bildiğinden <xref:System.Int32> , liste öğelerini bellekte bir temel alınan tamsayı dizisinde saklayabilir, ancak genel olmayan `ArrayList` her liste öğesini bir nesneye atamalısınız. Bu örnekte gösterildiği gibi, ek yayınlar zaman alır ve liste sıralamasını yavaşlatır.
 
-Genel ürününüzün türünü bilmenin çalışma zamanının ek bir avantajı da daha iyi bir hata ayıklama deneyimidir. C#'da bir genel hata ayıklama yaparken, veri yapınızda her öğenin türünde olduğunu bilirsiniz. Jenerik olmadan, her öğenin türü hakkında hiçbir fikriniz olmazdı.
+Çalışma zamanının, genel sitenizin türünü bilmenin daha iyi bir avantajı, daha iyi bir hata ayıklama deneyimidir. C# dilinde genel bir hata ayıklaması yaparken her bir öğenin veri yapınıza ne tür olduğunu öğrenmiş olursunuz. Genel türler olmadan, her öğe ne tür bir fikriniz yoktur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Programlama Kılavuzu - Genel](../../docs/csharp/programming-guide/generics/index.md)
+- [C# Programlama Kılavuzu-genel türler](../csharp/programming-guide/generics/index.md)

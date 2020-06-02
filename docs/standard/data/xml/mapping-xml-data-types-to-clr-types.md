@@ -3,19 +3,19 @@ title: XML Veri Türlerini CLR Türleriyle Eşleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710667"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289115"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML Veri Türlerini CLR Türleriyle Eşleme
 
 Aşağıdaki tabloda, XML veri türleri ve ortak dil çalışma zamanı (CLR) türleri arasındaki varsayılan eşleme açıklanmaktadır.
 
 > [!NOTE]
-> `xs` Ve `xdt` ön ekler sırasıyla <https://www.w3.org/2001/XMLSchema> ve <https://www.w3.org/2003/05/xpath-datatypes> ad alanı URI 'leri ile eşleştirilir.
+> `xs`Ve `xdt` ön ekler <https://www.w3.org/2001/XMLSchema> <https://www.w3.org/2003/05/xpath-datatypes> sırasıyla ve ad alanı URI 'leri ile eşleştirilir.
 
 |XML türü|CLR türü|
 |--------------|--------------|
@@ -78,4 +78,4 @@ Aşağıdaki tabloda, XML veri türleri ve ortak dil çalışma zamanı (CLR) t�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [System.Xml Sınıflarında Tür Desteği](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [System.Xml Sınıflarında Tür Desteği](type-support-in-the-system-xml-classes.md)

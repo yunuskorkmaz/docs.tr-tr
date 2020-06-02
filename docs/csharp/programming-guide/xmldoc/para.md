@@ -1,5 +1,5 @@
 ---
-title: <para> - C# programlama kılavuzu
+title: <para> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793414"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287304"
 ---
-# <a name="para-c-programming-guide"></a>\<para> (C# programlama kılavuzu)
+# <a name="para-c-programming-guide"></a>\<para>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <para>content</para>
@@ -31,13 +31,13 @@ ms.locfileid: "76793414"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Para> etiketi, [ \<özet>, ](./summary.md) [ \<açıklamalar>](./remarks.md)veya [ \<>döndürür ](./returns.md)ve metne yapı eklemenize olanak tanır gibi bir etiketin içinde kullanılır. \<
+`<para>`Etiketi,, veya gibi bir etiket içinde kullanım içindir [\<summary>](./summary.md) [\<remarks>](./remarks.md) [\<returns>](./returns.md) ve metne yapı eklemenizi sağlar.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 
-Para> kullanma \<örneği için özet [ \<>](./summary.md) bakın.
+[\<summary>](./summary.md)Hakkında bir örnek için bkz `<para>` ..
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

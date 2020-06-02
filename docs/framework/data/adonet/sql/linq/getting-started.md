@@ -1,23 +1,24 @@
 ---
 title: Başlarken
+description: Bu örnek kod ile, bir bellek içi koleksiyona erişirken olduğu gibi SQL veritabanlarına erişmek için LINQ teknolojisini kullanmak üzere LINQ to SQL kullanmaya başlayın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a46c42e917bdab0d32ee594bbcd604ee9e3d26bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634701"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286423"
 ---
 # <a name="getting-started"></a>Başlarken
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanarak, bir bellek içi koleksiyona erişirken olduğu gibi SQL veritabanlarına erişmek için LINQ teknolojisini kullanabilirsiniz.  
+Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , bir bellek içi koleksiyona erişirken olduğu gıbı SQL veritabanlarına erişmek IÇIN LINQ teknolojisini kullanabilirsiniz.  
   
- Örneğin, `Northwind` veritabanını temsil etmek için aşağıdaki kodda `nw` nesnesi oluşturulur, `Customers` tablosu hedeflenmiş, satırlar `London``Customers` için filtrelenmiştir ve alma için `CompanyName` için bir dize seçilir.  
+ Örneğin, `nw` aşağıdaki koddaki nesne veritabanını temsil etmek için oluşturulur `Northwind` , `Customers` tablo hedeflenir, satırlar kaynağından filtrelenir `Customers` `London` ve `CompanyName` alma için bir dizesi seçilidir.  
   
- Döngü yürütüldüğünde `CompanyName` değerleri koleksiyonu alınır.  
+ Döngü yürütüldüğünde, `CompanyName` değerler koleksiyonu alınır.  
   
  [!code-csharp[DLinqGettingStarted#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#1)]
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
@@ -25,13 +26,13 @@ ms.locfileid: "75634701"
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Ekleme ve güncelleştirme gibi bazı ek örnekler için, [LINQ to SQL Ile neler yapabileceğinizi](what-you-can-do-with-linq-to-sql.md)görün.  
   
- Daha sonra, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kullanma konusunda uygulamalı bir deneyim sunmak için bazı izlenecek yollar ve öğreticiler deneyin. Bkz. [Gözden Geçirdiklerinizi öğrenme](learning-by-walkthroughs.md).  
+ Daha sonra, kullanma konusunda uygulamalı bir deneyim sunmak için bazı izlenecek yollar ve öğreticiler deneyin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Bkz. [Gözden Geçirdiklerinizi öğrenme](learning-by-walkthroughs.md).  
   
- Son olarak, [LINQ to SQL kullanmaya yönelik tipik adımları](typical-steps-for-using-linq-to-sql.md)okuyarak kendi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projenize nasıl başlaleyeceğinizi öğrenin.  
+ Son olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] [LINQ to SQL kullanmak Için tipik adımları](typical-steps-for-using-linq-to-sql.md)okuyarak kendi projenize nasıl başlaleyeceğinizi öğrenin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to SQL](index.md)
-- [LINQ (C#) uygulamasına giriş](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ 'e giriş (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ 'e giriş (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [LINQ to SQL Nesne Modeli](the-linq-to-sql-object-model.md)

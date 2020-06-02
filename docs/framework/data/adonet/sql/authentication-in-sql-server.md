@@ -1,13 +1,14 @@
 ---
 title: SQL Server’da Kimlik Doğrulaması
+description: Windows kimlik doğrulama modu ve karma mod dahil olmak üzere ADO.NET için SQL Server kimlik doğrulaması hakkında bilgi edinin.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959976"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286552"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik doğrulama modunu destekler.  
@@ -19,7 +20,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
 > [!IMPORTANT]
 > Mümkün olan yerlerde Windows kimlik doğrulaması kullanmanızı öneririz. Windows kimlik doğrulaması, SQL Server kullanıcıların kimliğini doğrulamak için bir dizi şifrelenmiş ileti kullanır. SQL Server oturumlar kullanıldığında, SQL Server oturum açma adları ve şifreli parolalar ağ üzerinden geçirilir ve bu da daha az güvenli hale gelir.  
   
- Windows kimlik doğrulaması ile kullanıcılar zaten Windows 'da oturum açar ve SQL Server için ayrı olarak oturum açmanız gerekmez. Aşağıdaki `SqlConnection.ConnectionString`, kullanıcıların Kullanıcı adı veya parola sağlamasına gerek kalmadan Windows kimlik doğrulamasını belirtir.  
+ Windows kimlik doğrulaması ile kullanıcılar zaten Windows 'da oturum açar ve SQL Server için ayrı olarak oturum açmanız gerekmez. Aşağıda, `SqlConnection.ConnectionString` kullanıcıların bir Kullanıcı adı veya parola sağlaması gerekmeden Windows kimlik doğrulaması belirtilir.  
   
 ```csharp  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
@@ -64,24 +65,24 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
  Karma mod kimlik doğrulaması kullanmanız gerekiyorsa, SQL Server depolanan SQL Server oturum açma bilgileri oluşturmanız gerekir. Daha sonra çalışma zamanında SQL Server Kullanıcı adı ve parola sağlamalısınız.  
   
 > [!IMPORTANT]
-> SQL Server, `sa` ("Sistem Yöneticisi" kısaltması) adlı SQL Server bir oturum açma ile yüklenir. `sa` oturum açma için güçlü bir parola atayın ve uygulamanızda `sa` oturum açma kullanmayın. `sa` oturum açma, tüm sunucuda yönetici kimlik bilgilerini geri alınamaz olan `sysadmin` sabit sunucu rolüne eşlenir. Bir saldırgan sistem yöneticisi olarak erişim kazanırsa olası hasara yönelik bir sınır yoktur. Windows `BUILTIN\Administrators` grubunun tüm üyeleri (yerel yönetici grubu) varsayılan olarak `sysadmin` rolünün üyeleridir, ancak bu rolden kaldırılabilir.  
+> SQL Server, `sa` ("Sistem Yöneticisi" kısaltması) adlı SQL Server bir oturum açma ile yüklenir. Oturum açmak için güçlü bir parola atayın `sa` ve `sa` uygulamanızdaki oturum açma bilgilerini kullanmayın. `sa`Oturum açma, `sysadmin` Tüm sunucuda yönetici kimlik bilgilerini geri alınamaz olan sabit sunucu rolüyle eşlenir. Bir saldırgan sistem yöneticisi olarak erişim kazanırsa olası hasara yönelik bir sınır yoktur. Windows `BUILTIN\Administrators` grubunun (yerel yönetici grubu) tüm üyeleri, `sysadmin` Varsayılan olarak rolün üyeleridir, ancak bu rolden kaldırılabilir.  
   
  SQL Server, SQL Server oturum açma işlemleri için Windows parola ilke mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, SQL Server içinde kullanılan parolalara aynı karmaşıklık ve süre sonu ilkelerini uygulayabilir.  
   
 > [!IMPORTANT]
-> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için <xref:System.Data.SqlClient.SqlConnectionStringBuilder> kullanın. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
+> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. <xref:System.Data.SqlClient.SqlConnectionStringBuilder>Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için öğesini kullanın. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Açıklama|  
+|Kaynak|Description|  
 |--------------|-----------------|  
-|[Sorumlusu](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server oturum açma işlemlerini ve diğer güvenlik sorumlularını açıklar.|  
+|[Sorumlular](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server oturum açma işlemlerini ve diğer güvenlik sorumlularını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
-- [Veri Kaynağına Bağlanma](../connecting-to-a-data-source.md)
-- [Bağlantı Dizeleri](../connection-strings.md)
+- [Bir veri kaynağına bağlanma](../connecting-to-a-data-source.md)
+- [Bağlantı dizeleri](../connection-strings.md)
 - [ADO.NET’e Genel Bakış](../ado-net-overview.md)

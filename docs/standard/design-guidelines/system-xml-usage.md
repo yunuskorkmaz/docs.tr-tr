@@ -3,23 +3,23 @@ title: System.Xml Kullanımı
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: 2ecb709684834a8280c841eb8eef4f024481f7a4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 07828219f2e17be925d060fa3bb33a9209ecb62b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743586"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291675"
 ---
 # <a name="systemxml-usage"></a>System.Xml Kullanımı
-Bu bölüm, XML verilerini temsil etmek için kullanılabilecek <xref:System.Xml?displayProperty=nameWithType> ad alanlarında bulunan çeşitli türlerin kullanımı hakkında konuşur.
+Bu bölüm, <xref:System.Xml?displayProperty=nameWithType> XML verilerini temsil etmek için kullanılabilecek ad alanlarında bulunan çeşitli türlerin kullanımı hakkında konuşur.
 
- ❌, XML verilerini temsil etmek için <xref:System.Xml.XmlNode> veya <xref:System.Xml.XmlDocument> kullanmaz. Bunun yerine <xref:System.Xml.Linq.XNode> <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>veya alt türlerinden birini kullanmayı tercih edin. `XmlNode` ve `XmlDocument` ortak API 'lerde kullanıma sunulmasına yönelik olarak tasarlanmamıştır.
+ ❌<xref:System.Xml.XmlNode> <xref:System.Xml.XmlDocument> XML verilerini temsil etmek için veya kullanmayın. Yerine,,, veya alt türlerinden birini kullanmayı tercih edin <xref:System.Xml.XPath.IXPathNavigable> <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> <xref:System.Xml.Linq.XNode> . `XmlNode`ve `XmlDocument` ortak API 'lerde kullanıma sunulmadan tasarlanmıyor.
 
- ✔️, XML 'yi kabul eden veya döndüren üyelerin giriş veya çıkış olarak `XNode` `XmlReader`, `IXPathNavigable`veya alt türlerini kullanır.
+ `XmlReader` `IXPathNavigable` `XNode` XML 'i kabul eden veya döndüren üyelerin giriş veya çıkış olarak kullanımı, veya alt türleri ✔️.
 
- `XmlDocument`, `XmlNode`veya <xref:System.Xml.XPath.XPathDocument>yerine bu soyutlamaları kullanın çünkü bu, yöntemleri bellek içi bir XML belgesinin belirli uygulamalarından ayırır ve `XNode`, `XmlReader`veya <xref:System.Xml.XPath.XPathNavigator>sunan sanal XML veri kaynaklarıyla çalışmasına izin verir.
+ Bu soyutlamaları,, veya yerine, `XmlDocument` `XmlNode` <xref:System.Xml.XPath.XPathDocument> BIR bellek içi xml belgesi içindeki belirli uygulamalardan ayırarak, ve, veya sunan sanal XML veri kaynaklarıyla çalışmasına izin veren, veya gibi `XNode` `XmlReader` bu soyutlamaları kullanın <xref:System.Xml.XPath.XPathNavigator> .
 
- temel alınan bir nesne modelinin veya veri kaynağının XML görünümünü temsil eden bir tür oluşturmak istiyorsanız `XmlDocument` alt sınıfı ❌.
+ ❌`XmlDocument`Temel alınan nesne modelinin veya veri KAYNAĞıNıN XML görünümünü temsil eden bir tür oluşturmak istiyorsanız alt sınıf kullanmayın.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -27,5 +27,5 @@ Bu bölüm, XML verilerini temsil etmek için kullanılabilecek <xref:System.Xml
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Kullanım yönergeleri](usage-guidelines.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380028"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288933"
 ---
-# <a name="xmlserializer-element"></a>\<xmlSerializer> öğesi
+# <a name="xmlserializer-element"></a>\<xmlSerializer> Öğesi
 Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> yapılır.  
   
- \<yapılandırma>  
-\<System. xml. Serialization>  
+ \<configuration>  
+\<system.xml.serialization>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,7 +31,7 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Açıklama|  
+|Öznitelik|Description|  
 |---------------|-----------------|  
 |**Checkdeserializeavanslar**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan değer "true" dır.|  
 |**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan değer **false**'dur.|  
@@ -41,9 +41,9 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
-|[\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
+|[\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, <xref:System.Xml.Serialization.XmlSerializer> Güvenilmeyen verilerin serisi kaldırılırken olası hizmet reddi saldırılarına karşı ek bir güvenlik katmanı sağlar. Bunu seri durumundan çıkarma sırasında sonsuz döngü algılamak deneyerek yapar. Böyle bir koşul algılanırsa, şu iletiyle bir özel durum oluşturulur: "Iç hata: seri kaldırma, temel alınan akışın üzerinde ilerleyemedi."  
@@ -64,5 +64,5 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [XML ve SOAP serileştirme](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)
+- [XML ve SOAP serileştirme](xml-and-soap-serialization.md)

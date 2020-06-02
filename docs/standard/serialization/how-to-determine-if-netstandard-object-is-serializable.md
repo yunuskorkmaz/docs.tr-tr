@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-ms.openlocfilehash: 4037dee36aeb619eb2757016904fd877158e57cf
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b6791ae0666aeb0ac02d8a38ca419d7de2b263cf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159903"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289609"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>.NET Standard nesnenin seri hale getirilebilir olup olmadığını belirleme
 
@@ -21,7 +21,7 @@ ms.locfileid: "78159903"
 
 .NET Standard hedefleyen bir kitaplık geliştirdiyseniz, kitaplığınız .NET Standard destekleyen herhangi bir .NET uygulaması tarafından tüketilebilir. Bu, belirli bir türün serileştirilebilir olup olmadığını önceden belirleyemeyeceğiniz anlamına gelir. çalışma zamanında seri hale getirilebilir olup olmadığını belirleyebilirsiniz.
 
-Nesnenin türünü temsil eden <xref:System.Type.IsSerializable> <xref:System.Type> nesnenin özelliğinin değerini alarak çalışma zamanında bir nesnenin seri hale getirilebilir olup olmadığını belirleyebilirsiniz. Aşağıdaki örnek bir uygulama sağlar. Herhangi <xref:System.Object> bir örneğin `IsSerializable(Object)` seri hale getirilemeyeceğini belirten bir genişletme yöntemi tanımlar.
+Nesnenin <xref:System.Type.IsSerializable> <xref:System.Type> türünü temsil eden nesnenin özelliğinin değerini alarak, bir nesnenin çalışma zamanında seri hale getirilebilir olup olmadığını belirleyebilirsiniz. Aşağıdaki örnek bir uygulama sağlar. `IsSerializable(Object)`Herhangi bir örneğin seri hale getirilemeyeceğini belirten bir genişletme yöntemi tanımlar <xref:System.Object> .
 
 [!code-csharp[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/csharp/program.cs#2)]
 [!code-vb[is-a-type-serializable](~/samples/snippets/standard/serialization/is-serializable/vb/library.vb#2)]

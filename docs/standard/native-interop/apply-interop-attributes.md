@@ -14,22 +14,22 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420545"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291337"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
 <xref:System.Runtime.InteropServices>Ad alanı, birlikte çalışabilirlik 'e özgü özniteliklerin üç kategorisini sağlar: tasarım zamanında sizin tarafınızdan, dönüştürme işlemi SıRASıNDA com birlikte çalışma araçları ve API 'leri tarafından uygulanan ve sizin tarafınızdan ya da com birlikte çalışma tarafından uygulanan bunlar.  
   
- Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../../../docs/standard/attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
+ Yönetilen koda öznitelik uygulama görevi hakkında bilginiz yoksa, bkz. [öznitelikleri kullanarak meta verileri genişletme](../attributes/index.md). Diğer özel öznitelikler gibi türler, Yöntemler, özellikler, parametreler, alanlar ve diğer üyelere birlikte çalışma için özel öznitelikler de uygulayabilirsiniz.  
   
 ## <a name="design-time-attributes"></a>Tasarım zamanı öznitelikleri  
  Tasarım zamanı özniteliklerini kullanarak, COM birlikte çalışma araçları ve API 'Leri tarafından gerçekleştirilen dönüştürme sürecinin sonucunu ayarlayabilirsiniz. Aşağıdaki tabloda, yönetilen kaynak kodunuza uygulayabileceğiniz öznitelikler açıklanmaktadır. COM birlikte çalışma araçları, bazen bu tabloda açıklanan öznitelikleri de uygulayabilir.  
   
-|Öznitelik|Açıklama|  
+|Öznitelik|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Türün Otomasyon sıralayıcısı veya özel bir ara sunucu ve saplama kullanılarak sıralanması gerekip gerekmediğini belirtir.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Bir sınıf için oluşturulan arabirimin türünü denetler.|  
@@ -57,7 +57,7 @@ ms.locfileid: "83420545"
 ## <a name="conversion-tool-attributes"></a>Dönüştürme-araç öznitelikleri  
  Aşağıdaki tabloda, dönüştürme işlemi sırasında COM birlikte çalışma araçlarının uygulandığı öznitelikler açıklanmaktadır. Bu öznitelikleri tasarım zamanında uygulamayın.  
   
-|Öznitelik|Açıklama|  
+|Öznitelik|Description|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Bir parametre veya alan türü için COM diğer adını gösterir. Parametreleri, alanları veya dönüş değerlerini öznitelik olarak kullanabilirsiniz.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Bir sınıf veya arabirim ile ilgili bilgilerin bir tür kitaplığından derlemeye aktarıldığında kaybedildiğini gösterir.|  
@@ -70,7 +70,7 @@ ms.locfileid: "83420545"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices>
-- [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Öznitelikler](../../../docs/standard/attributes/index.md)
-- [Birlikte Çalışma için Niteleyici .NET Türleri](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [COM için bir .NET Framework derlemesi paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [.NET Framework Bileşenlerini COM'da Gösterme](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [Öznitelikler](../attributes/index.md)
+- [Birlikte Çalışma için Niteleyici .NET Türleri](qualify-net-types-for-interoperation.md)
+- [COM için bir .NET Framework derlemesi paketleme](../../framework/interop/packaging-an-assembly-for-com.md)

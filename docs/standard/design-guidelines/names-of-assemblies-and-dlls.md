@@ -8,25 +8,25 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: f3c5997f777c937e9726b271afa0ae6d7a19b37d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744165"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291961"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Bütünleştirilmiş Kod ve DLL Adları
 Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derlemeler bir veya daha fazla dosyaya yayılabilse de, genellikle bir derleme DLL ile bire bir eşler. Bu nedenle, bu bölümde yalnızca DLL adlandırma kuralları açıklanmakta ve bu daha sonra derleme adlandırma kurallarına eşlenebilir.
 
  ✔️, System. Data gibi büyük işlevsellik öbeklerini öneren derleme dll 'lerinizin adlarını seçin.
 
- Derleme ve DLL adlarının ad alanı adlarına karşılık gelmesi gerekmez, ancak derlemeleri adlandırırken ad alanı adını izlemek mantıklı değildir. Parmak izi iyi bir kuralı, derlemede bulunan ad alanlarının ortak ön ekine göre DLL 'yi adlandırma. Örneğin, `MyCompany.MyTechnology.FirstFeature` ve `MyCompany.MyTechnology.SecondFeature`iki ad alanı olan bir derleme `MyCompany.MyTechnology.dll`çağrılabilir.
+ Derleme ve DLL adlarının ad alanı adlarına karşılık gelmesi gerekmez, ancak derlemeleri adlandırırken ad alanı adını izlemek mantıklı değildir. Parmak izi iyi bir kuralı, derlemede bulunan ad alanlarının ortak ön ekine göre DLL 'yi adlandırma. Örneğin, iki ad alanı olan bir derleme `MyCompany.MyTechnology.FirstFeature` ve `MyCompany.MyTechnology.SecondFeature` , çağrılabilir `MyCompany.MyTechnology.dll` .
 
  ✔️ Dll 'Leri aşağıdaki modele göre adlandırmayı düşünün:
 
  `<Company>.<Component>.dll`
 
- Burada `<Component>` bir veya daha fazla noktayla ayrılmış yan tümce içerir. Örneğin:
+ Burada `<Component>` bir veya daha fazla noktayla ayrılmış yan tümce bulunur. Örneğin:
 
  `Litware.Controls.dll`.
 
@@ -36,5 +36,5 @@ Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derleme
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Adlandırma yönergeleri](naming-guidelines.md)

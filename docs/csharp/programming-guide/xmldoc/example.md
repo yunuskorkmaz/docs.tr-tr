@@ -1,5 +1,5 @@
 ---
-title: <example> - C# programlama kılavuzu
+title: <example> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <example>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d26f82562cc5140662f5b32ea9fedf5481d8f8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789812"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287407"
 ---
-# <a name="example-c-programming-guide"></a>\<örnek> (C# programlama kılavuzu)
+# <a name="example-c-programming-guide"></a>\<example>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <example>description</example>
@@ -31,9 +31,9 @@ ms.locfileid: "76789812"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Örnek \<> etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilgili bir örnek belirtmenize olanak tanır. Bu genellikle [ \<kod>](./code.md) etiketini kullanmayı içerir.
+`<example>`Etiketi, bir yöntemi veya diğer kitaplık üyesini nasıl kullanacağınızı gösteren bir örnek belirtmenizi sağlar. Bu genellikle etiketinin kullanılmasını içerir [\<code>](./code.md) .
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

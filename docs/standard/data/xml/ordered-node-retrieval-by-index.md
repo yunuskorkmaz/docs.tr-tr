@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 715ce65bd932a45cc22d00a2346d18f3c5526229
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156393"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288725"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Dizine Göre Sıralı Düğüm Alma
 World Wide Web Konsorsiyumu (W3C) XML Belge Nesne Modeli (DOM), **XmlNamedNodeMap**tarafından işlenen sıralanmamış bir küme aksine, sıralı düğüm listesini işleyebilme özelliğine sahip bir NodeList ' i de açıklar. Microsoft .NET çerçevesindeki NodeList, **XmlNodeList**olarak adlandırılır. Bir **XmlNodeList** döndüren yöntemler ve özellikler şunlardır:  
@@ -53,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- **Count** özelliğine ek olarak, **XmlNodeList**içindeki düğümlerin **GetEnumerator** koleksiyonu üzerinde bir `foreach` stil yinelemesi sağlayan bir GetEnumerator yöntemi vardır. Aşağıdaki kod örneği, `foreach` ifadesinin kullanımını gösterir.  
+ **Count** özelliğine ek olarak, **GetEnumerator** `foreach` **XmlNodeList**içindeki düğümlerin koleksiyonu üzerinde bir stil yinelemesi sağlayan bir GetEnumerator yöntemi vardır. Aşağıdaki kod örneği, ifadesinin kullanımını gösterir `foreach` .  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -90,8 +90,8 @@ End While
   }  
 ```  
   
- **XmlNodeList**üzerinde bulunan Yöntemler ve özellikler hakkında daha fazla bilgi için bkz <xref:System.Xml.XmlNodeList>..  
+ **XmlNodeList**üzerinde bulunan Yöntemler ve özellikler hakkında daha fazla bilgi için bkz <xref:System.Xml.XmlNodeList> ..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Belge Nesne Modeli (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Belge Nesne Modeli (DOM)](xml-document-object-model-dom.md)

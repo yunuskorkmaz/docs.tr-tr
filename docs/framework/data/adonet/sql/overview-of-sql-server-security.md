@@ -1,13 +1,14 @@
 ---
 title: SQL Server Güvenliğine Genel Bakış
+description: Hangi özellik ve işlev sayacının bilinen tehditleri anlamak ve gelecekteki tehditleri tahmin etmek için SQL Server güvenlik mimarisi hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780943"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286281"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server Güvenliğine Genel Bakış
 Çakışan güvenlik katmanlarında derinlemesine savunma stratejisi, güvenlik tehditlerini sayaca yönelik en iyi yoldur. SQL Server, veritabanı yöneticilerinin ve geliştiricilerin güvenli veritabanı uygulamaları ve sayaç tehditleri oluşturmalarına olanak tanımak için tasarlanan bir güvenlik mimarisi sağlar. SQL Server her sürümü, yeni özellikler ve işlevlerin kullanıma sunulmasıyla önceki SQL Server sürümlerinde geliştirilmiştir. Ancak, güvenlik kutuya teslim edilmez. Her uygulama güvenlik gereksinimlerinde benzersizdir. Geliştiricilerin, bilinen tehditler ve gelecekte ortaya çıkabilecek tehditleri tahmin etmek için hangi özellik ve işlevsellik bileşiminin en uygun olduğunu anlaması gerekir.  

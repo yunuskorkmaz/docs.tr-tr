@@ -1,25 +1,26 @@
 ---
 title: Null Değerleri İşleme
+description: SQL Server için .NET Framework Veri Sağlayıcısı null işleme hakkında bilgi edinin ve null ve SqlBoolean, üç değerli mantığı ve null değerler atamayı okuyun.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4d086d81f1c2c959780366cfeb59f2d265bc40c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249083"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286461"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
-Bir sütundaki değer bilinmiyor veya eksik olduğunda ilişkisel veritabanındaki null değeri kullanılır. Null ne boş bir dize (karakter veya datetime veri türleri için) ne de sıfır değeri (sayısal veri türleri için) olduğunu. ANSI SQL-92 belirtimi, tüm veri türleri için bir null'un aynı olması gerektiğini, böylece tüm null'ların tutarlı bir şekilde işleneceğini belirtir. Ad <xref:System.Data.SqlTypes> alanı <xref:System.Data.SqlTypes.INullable> arabirimi uygulayarak null semantik sağlar. Veri <xref:System.Data.SqlTypes> türlerinin her birinin `IsNull` kendi özelliği `Null` ve bu veri türünün bir örneğine atanabilecek bir değeri vardır.  
+Bir sütundaki değer bilinmiyorsa veya eksik olduğunda, ilişkisel veritabanında null değer kullanılır. Null, boş bir dize (karakter veya tarih saat veri türleri için) veya sıfır değeri (sayısal veri türleri için) değil. ANSI SQL-92 belirtimi, tüm null değerleri tutarlı bir şekilde işlenebilmesi için null değeri tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes>Ad alanı, arabirimini uygulayarak null semantikler sağlar <xref:System.Data.SqlTypes.INullable> . İçindeki veri türlerinin her biri <xref:System.Data.SqlTypes> kendi `IsNull` özelliğine sahiptir ve `Null` Bu veri türü örneğine atanabilecek bir değerdir.  
   
 > [!NOTE]
-> .NET Framework sürüm 2.0, programcıların temel türün tüm değerlerini temsil edecek bir değer türünü genişletmesine olanak tanıyan geçersiz değer türleri için destek sunmuyorum. Bu CLR nullable değer türleri <xref:System.Nullable> yapının bir örneğini temsil. Bu özellik, özellikle değer türleri kutulandığında ve kutudan çözüldüğünde, nesne türleri ile gelişmiş uyumluluk sağlar. BIR ANSI SQL null `null` bir başvuru (veya `Nothing` Visual Basic) aynı şekilde tedavi etmez, çünkü CLR nullable değer türleri veritabanı nulls depolama için tasarlanmamıştır. Veritabanı ANSI SQL null değerleri <xref:System.Data.SqlTypes> ile çalışmak <xref:System.Nullable>için, yerine nulls kullanın. Visual Basic'teki CLR değeri nullable türleri ile çalışma hakkında daha fazla bilgi için [Nullable Value Types'a](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)ve C# için [Nullable değer türlerine](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)bakın.  
+> .NET Framework sürüm 2,0,, programcıların bir değer türünü temel alınan türün tüm değerlerini temsil edecek şekilde genişletmesine izin veren null yapılabilir değer türleri için destek sunmuştur. Bu CLR null yapılabilir değer türleri yapının bir örneğini temsil eder <xref:System.Nullable> . Bu özellik, özellikle değer türleri kutulanmış ve kutulandığında, nesne türleriyle gelişmiş uyumluluk sağlayan yararlı olur. ANSI SQL null değeri bir `null` başvuru (veya Visual Basic) ile aynı şekilde davranmadığından, clr null yapılabilir değer türleri veritabanı boş değerlerini depolamak için tasarlanmamıştır `Nothing` . Veritabanı ANSI SQL null değerleriyle çalışma için yerine null değerleri kullanın <xref:System.Data.SqlTypes> <xref:System.Nullable> . Visual Basic ' de CLR değeri null yapılabilir türleriyle çalışma hakkında daha fazla bilgi için bkz. [Nullable değer türlerini](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)görüntüle ve C# için bkz. [Nullable değer türleri](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
-## <a name="nulls-and-three-valued-logic"></a>Nulls ve Üç Değerli Mantık  
- Sütun tanımlarında null değerlerine izin vermek, uygulamanıza üç değerli mantık sunar. Bir karşılaştırma üç koşuldan birine değerlendirilebilir:  
+## <a name="nulls-and-three-valued-logic"></a>Null değerler ve üç değerli mantık  
+ Sütun tanımlarında null değerlere izin verilmesi, uygulamanıza üç değerli mantık getirir. Karşılaştırma, üç koşuldan birini değerlendirebilir:  
   
 - True  
   
@@ -27,29 +28,29 @@ Bir sütundaki değer bilinmiyor veya eksik olduğunda ilişkisel veritabanında
   
 - Bilinmiyor  
   
- Null bilinmeyen olarak kabul edilir, birbirlerine göre iki null değerleri eşit olarak kabul edilmez. Aritmetik işleçler kullanılarak yapılan ifadelerde, operandlardan herhangi biri null ise, sonuç da null'dur.  
+ Null değeri bilinmiyor olarak değerlendirildiğinden, birbirleriyle karşılaştırılan iki null değer eşit kabul edilmez. Aritmetik işleçleri kullanan ifadelerde, İşlenenlerden herhangi biri null ise sonuç de null olur.  
   
-## <a name="nulls-and-sqlboolean"></a>Nulls ve SqlBoolean  
- Herhangi <xref:System.Data.SqlTypes> bir döndürecek arasında karşılaştırma bir <xref:System.Data.SqlTypes.SqlBoolean>. Her `IsNull` `SqlType` bir a <xref:System.Data.SqlTypes.SqlBoolean> döndürür ve null değerleri denetlemek için kullanılabilir işlevi. Aşağıdaki doğruluk tabloları, AND, OR ve NOT işleçlerinin null bir değerin varlığında nasıl çalıştığını gösterir. (T=true, F=false ve U=bilinmeyen veya null.)  
+## <a name="nulls-and-sqlboolean"></a>Null değerler ve SqlBoolean  
+ Aralarında karşılaştırma <xref:System.Data.SqlTypes> , döndürür <xref:System.Data.SqlTypes.SqlBoolean> . `IsNull`Her biri için işlevi `SqlType` bir döndürür <xref:System.Data.SqlTypes.SqlBoolean> ve null değerleri denetlemek için kullanılabilir. Aşağıdaki Truth tablolarında, ve, veya DEĞIL işleçlerinin bir null değer varlığı içinde nasıl çalıştığı gösterilmektedir. (T = true, F = false, ve U = Unknown veya null.)  
   
- ![Hakikat Tablosu](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth tablosu](./media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
-### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS Seçeneğini Anlama  
- <xref:System.Data.SqlTypes>ANSI_NULLS seçeneği SQL Server'da ayarlandığında olduğu gibi aynı anlambilimi sağlar. Tüm aritmetik işleçler \*(+, -, ,,,%), \|bitwise işleçleri (~, &, ), ve çoğu fonksiyon, `IsNull`operands veya bağımsız değişkenlerden herhangi biri geçersiz ise, özellik dışında geçersiz dir.  
+### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS seçeneğini anlama  
+ <xref:System.Data.SqlTypes>SQL Server ' de ANSI_NULLS seçeneğinin ayarlandığı anlamlarını sağlar. Tüm aritmetik işleçler (+,-, \* ,/,%), bit düzeyinde işleçler (~, &, \| ) ve çoğu işlev, özellik hariç, işlenen veya bağımsız değişkenlerden biri null ise null döndürür `IsNull` .  
   
- ANSI SQL-92 standardı WHERE yan tümcesindeki *columnName* = NULL'u desteklemez. SQL Server'da, ANSI_NULLS seçeneği hem veritabanındaki varsayılan nullability'ı hem de null değerlerle karşılaştırmaların değerlendirilmesini denetler. ANSI_NULLS açıksa (varsayılan), null değerleri sınarken IS NULL işleci ifadelerde kullanılmalıdır. Örneğin, aşağıdaki karşılaştırma her zaman ANSI_NULLS olduğunda bilinmeyen verir:  
+ ANSI SQL-92 standardı, WHERE yan tümcesinde *ColumnName* = null değerini desteklemez. SQL Server, ANSI_NULLS seçeneği veritabanında hem varsayılan null değer alabilme durumunu hem de null değerlere karşı karşılaştırmalar değerlendirmesini denetler. ANSI_NULLS açıksa (varsayılan), null değerleri için test edilirken deyimlerde NULL işleci kullanılmalıdır. Örneğin, ANSI_NULLS olduğunda aşağıdaki karşılaştırma her zaman bilinmiyor olarak verir:  
   
 ```sql
 colname > NULL  
 ```  
   
- Null değeri içeren bir değişkenle karşılaştırıldığında da bilinmeyen verir:  
+ Null değer içeren bir değişkene karşılaştırma de bilinmeyen bir değer verir:  
   
 ```sql
 colname > @MyVariable  
 ```  
   
- Null değeri için test etmek için IS NULL veya NOT NULL yüklemi kullanın. Bu, WHERE yan tümcesine karmaşıklık ekleyebilir. Örneğin, AdventureWorks Müşteri tablosundaki TerritoryID sütunu null değerlere izin verir. SELECT deyimi diğerlerine ek olarak null değerleri sınamak için sınanacaksa, bir IS NULL yüklemi içermelidir:  
+ Null değer için test etmek üzere null veya NULL koşulunu kullanın. Burada WHERE yan tümcesine karmaşıklık eklenebilir. Örneğin, AdventureWorks Customer tablosundaki TerritoryID sütunu null değerlere izin verir. Bir SELECT ifadesinin diğer kullanıcılara ek olarak null değerler için test olması gerekiyorsa, bir IS NULL koşulu içermelidir:  
   
 ```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
@@ -58,69 +59,69 @@ WHERE TerritoryID IN (1, 2, 3)
    OR TerritoryID IS NULL  
 ```  
   
- ANSI_NULLS SQL Server'da ayarlarsanız, null ile karşılaştırmak için eşitlik işlecikullanan ifadeler oluşturabilirsiniz. Ancak, farklı bağlantıların bu bağlantı için null seçenekleri ayarlamasını engelleyemezsiniz. Null değerlerini sınamak için IS NULL'u kullanmak, bağlantı ayarlarının ANSI_NULLS bakılmaksızın her zaman çalışır.  
+ SQL Server ANSI_NULLS devre dışı bırakırsanız, null ile karşılaştırmak için eşitlik işlecini kullanan ifadeler oluşturabilirsiniz. Ancak, bu bağlantı için farklı bağlantıların null seçeneklerini ayarlamamasını önleyebilirsiniz. Bir bağlantı için ANSI_NULLS ayarlarından bağımsız olarak, null değerler test etmek için using NULL değeri her zaman işe yarar.  
   
- ANSI_NULLS'yi kapatma, her `DataSet`zaman null değerlerini işlemek için ANSI SQL-92 <xref:System.Data.SqlTypes>standardını izleyen bir ' de desteklenmez.  
+ ANSI_NULLS OFF ayarı, içinde `DataSet` null değerleri işlemek için her zaman ANSI SQL-92 standardını izleyen bir içinde desteklenmez <xref:System.Data.SqlTypes> .  
   
-## <a name="assigning-null-values"></a>Null Değerleri Atama  
- Null değerleri özeldir ve depolama ve atama semantikfarklı tip sistemleri ve depolama sistemleri arasında farklılık gösterir. A `Dataset` farklı tip ve depolama sistemleri ile kullanılmak üzere tasarlanmıştır.  
+## <a name="assigning-null-values"></a>Null değerler atama  
+ Null değerler özeldir ve depolama ve atama semantiği farklı tür sistemleri ve depolama sistemleri arasında farklılık gösterir. `Dataset`, Farklı tür ve depolama sistemleriyle kullanılmak üzere tasarlanmıştır.  
   
- Bu bölümde, farklı tür sistemlerinde bir null <xref:System.Data.DataColumn> <xref:System.Data.DataRow> değerleri atamak için null semantics açıklanır.  
+ Bu bölüm <xref:System.Data.DataColumn> <xref:System.Data.DataRow> , farklı tür sistemlerinde bir içindeki öğesine null değerler atamaya yönelik null semantiğini açıklamaktadır.  
   
  `DBNull.Value`  
- Bu atama herhangi `DataColumn` bir tür için geçerlidir. Tür `INullable`uygularsa, `DBNull.Value` uygun güçlü olarak yazılan Null değerine zorlanılır.  
+ Bu atama herhangi bir tür için geçerlidir `DataColumn` . Tür uygularsa `INullable` , `DBNull.Value` uygun kesin türü belirtilmiş null değere zorlanır.  
   
  `SqlType.Null`  
- Tüm <xref:System.Data.SqlTypes> veri `INullable`türleri uygular. Güçlü bir şekilde yazılan null değeri, örtülü döküm işleçleri kullanılarak sütunun veri türüne dönüştürülebilirse, atama geçmelidir. Aksi takdirde geçersiz bir döküm özel durum atılır.  
+ Tüm <xref:System.Data.SqlTypes> veri türleri uygular `INullable` . Türü kesin belirlenmiş null değer, örtük atama işleçleri kullanılarak sütunun veri türüne dönüştürülebiliyorsanız, atama devam etmelidir. Aksi takdirde geçersiz bir tür dönüştürme özel durumu oluşturulur.  
   
  `null`  
- 'Null' verilen `DataColumn` `DbNull.Value` veri türü için yasal bir değerse, uygun veya `Null` `INullable` türle ilişkili`SqlType.Null`olarak zorlanır ( )  
+ ' Null ' verili veri türü için geçerli bir değer ise `DataColumn` , ilgili `DbNull.Value` veya `Null` `INullable` türü () ile ilişkili olan veya ilişkilendirilen `SqlType.Null`  
   
  `derivedUdt.Null`  
- UDT sütunları için nulls her zaman . `DataColumn` Alt sınıfı uygularken uygulanmayan `DataColumn` `INullable` bir UDT'nin durumunu göz önünde bulundurun. Bu durumda, türemiş sınıfla ilişkili güçlü bir şekilde yazılan null değeri atanmışsa, null depolama her zaman DataColumn'un veri türüyle tutarlı olduğundan, bu değer yazılmamış `DbNull.Value`olarak depolanır.  
+ UDT sütunlarında, null değerler her zaman ile ilişkili türüne göre saklanır `DataColumn` . `DataColumn`Alt sınıfı yaparken uygulamayana BIR udt ile ilişkili BIR udt durumunu göz önünde bulundurun `INullable` . Bu durumda, türetilmiş sınıfla ilişkili kesin olarak belirlenmiş null değeri atanırsa, `DbNull.Value` null depolama her zaman DataColumn 'ın veri türüyle tutarlı olduğundan türsüz olarak depolanır.  
   
 > [!NOTE]
-> Veya `Nullable<T>` <xref:System.Nullable> yapı şu anda `DataSet`desteklenmiyor.  
+> `Nullable<T>`Veya <xref:System.Nullable> yapısı ' de şu anda desteklenmemektedir `DataSet` .  
   
-### <a name="multiple-column-row-assignment"></a>Çoklu Sütun (Satır) Atama  
- `DataTable.Add`, `DataTable.LoadDataRow`' veya bir satıra eşlenen bir <xref:System.Data.DataRow.ItemArray%2A> kabul eden diğer API'ler, DataColumn'un varsayılan değerine 'null' eşle. Dizideki bir nesne `DbNull.Value` veya güçlü bir şekilde yazılan karşıtlığını içeriyorsa, yukarıda açıklandığı gibi aynı kurallar uygulanır.  
+### <a name="multiple-column-row-assignment"></a>Birden çok sütun (satır) ataması  
+ `DataTable.Add`, `DataTable.LoadDataRow` veya bir satıra eşlenmiş bir satırı kabul eden diğer API 'ler <xref:System.Data.DataRow.ItemArray%2A> , ' null ' değerini DataColumn 'ın varsayılan değerine eşleyin. Dizideki bir nesne `DbNull.Value` veya türü kesin belirlenmiş karşılığı içeriyorsa, yukarıda açıklanan kurallar uygulanır.  
   
- Buna ek olarak, boş atamaların `DataRow.["columnName"]` bir örneği için aşağıdaki kurallar geçerlidir:  
+ Ayrıca, aşağıdaki kurallar null atamalarının bir örneği için geçerlidir `DataRow.["columnName"]` :  
   
-1. Varsayılan *varsayılan* değer, `DbNull.Value` uygun olarak güçlü bir şekilde yazılan null değeri olan güçlü bir şekilde yazılan null sütunlar hariç tüm değerler içindir.  
+1. Varsayılan *varsayılan* değer, kesin tür belirtilmiş null sütunları hariç, kesin olarak belirlenmiş null `DbNull.Value` değer olan null sütunlarıdır.  
   
-2. Null değerleri XML dosyalarına serileştirme sırasında asla yazılmaz ("xsi:nil"de olduğu gibi).  
+2. XML dosyalarına serileştirme sırasında null değerler hiçbir şekilde yazılmaz ("xsi: Nil" içinde olduğu gibi).  
   
-3. Varsayılanlar da dahil olmak üzere tüm null olmayan değerler, XML'e seri yazarken her zaman yazılır. Bu, null değerinin (xsi:nil) açık olduğu ve varsayılan değerin örtülü olduğu XSD/XML semantiklerinden farklı olarak (XML'de yoksa, doğrulayıcı bir parlayıcı bunu ilişkili bir XSD şemasından alabilir). Tersi bir `DataTable`için geçerlidir: null değeri örtülü ve varsayılan değer açık.  
+3. Varsayılanlar dahil tüm null olmayan değerler, XML 'e serileştirilirken her zaman yazılır. Bu, null bir değer (xsi: Nil) açık ve varsayılan değer örtük (XML 'de yoksa, bir doğrulama ayrıştırıcısı onu ilişkili bir XSD şemasından alabilir) olduğu XSD/XML semantiğinin aksine. Bunun için ters değer true 'dur `DataTable` : null değeri örtük ve varsayılan değer açıktır.  
   
-4. XML girişinden okunan satırlar için tüm eksik sütun değerleri NULL atanır. Veri Sütunu <xref:System.Data.DataTable.NewRow%2A> varsayılan değeri kullanılarak oluşturulan satırlara veya benzer yöntemlere atanır.  
+4. XML girişinden okunan satırlar için eksik olan tüm sütun değerlerine NULL atanır. <xref:System.Data.DataTable.NewRow%2A>Veya benzer yöntemler kullanılarak oluşturulan satırlara, DataColumn 'ın varsayılan değeri atanır.  
   
-5. Yöntem <xref:System.Data.DataRow.IsNull%2A> her `true` ikisi `DbNull.Value` `INullable.Null`için de döndürür ve .  
+5. <xref:System.Data.DataRow.IsNull%2A>Yöntemi hem hem `true` de için `DbNull.Value` döndürür `INullable.Null` .  
   
-## <a name="assigning-null-values"></a>Null Değerleri Atama  
- Herhangi bir <xref:System.Data.SqlTypes> örnek için varsayılan değer null'dur.  
+## <a name="assigning-null-values"></a>Null değerler atama  
+ Herhangi bir örnek için varsayılan değer <xref:System.Data.SqlTypes> null.  
   
- Nulls <xref:System.Data.SqlTypes> türüne özgüdür ve `DbNull`gibi tek bir değerle temsil edilemez. Nulls `IsNull` kontrol etmek için özelliği kullanın.  
+ İçindeki null değerlere <xref:System.Data.SqlTypes> tür özgüdür ve gibi tek bir değerle temsil edilemez `DbNull` . Null değerleri `IsNull` denetlemek için özelliğini kullanın.  
   
- Null değerleri aşağıdaki kod <xref:System.Data.DataColumn> örneğinde gösterildiği gibi bir atanabilir. Bir özel durum tetiklemeden değişkenlere `SqlTypes` doğrudan null değerleri atayabilirsiniz.  
+ <xref:System.Data.DataColumn>Aşağıdaki kod örneğinde gösterildiği gibi, null değerler öğesine atanabilir. `SqlTypes`Özel durum tetiklemeden, değişkenlere doğrudan null değerler atayabilirsiniz.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki kod örneği olarak <xref:System.Data.DataTable> <xref:System.Data.SqlTypes.SqlInt32> tanımlanan iki sütun <xref:System.Data.SqlTypes.SqlString>ve . Kod, bilinen değerlerden oluşan bir satır, bir null değer <xref:System.Data.DataTable>satırı ve ardından değişkenlere değerleri atama ve çıktıyı konsol penceresinde görüntüleme yoluyla yineler.  
+ Aşağıdaki kod örneği, <xref:System.Data.DataTable> ve şeklinde tanımlanmış iki sütunlu bir ile <xref:System.Data.SqlTypes.SqlInt32> oluşturur <xref:System.Data.SqlTypes.SqlString> . Kod, bir dizi null değeri olan bilinen değerlerin bir satırını ekler ve sonra, <xref:System.Data.DataTable> değerlerini değişkenlere atayarak ve çıktıyı konsol penceresinde görüntüleyerek ' de dolaşır.  
   
  [!code-csharp[DataWorks SqlTypes.IsNull#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.IsNull#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.IsNull/VB/source.vb#1)]  
   
- Bu örnekte aşağıdaki sonuçlar görüntülenir:  
+ Bu örnek aşağıdaki sonuçları görüntüler:  
   
 ```output
 isColumnNull=False, ID=123, Description=Side Mirror  
 isColumnNull=True, ID=Null, Description=Null  
 ```  
   
-## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Null Değerlerini SqlTypes ve CLR Türleri ile Karşılaştırma  
- Null değerleri karşılaştırırken, `Equals` yöntemin null değerleri <xref:System.Data.SqlTypes> CLR türleri ile çalışma şekliyle karşılaştırıldığında değerlendirme şekli arasındaki farkı anlamak önemlidir. <xref:System.Data.SqlTypes> Tüm yöntemler null değerlerini değerlendirmek için veritabanı semantiklerini kullanır: değerlerden biri veya her ikisi de null ise, karşılaştırma null `Equals` verir. Diğer taraftan, clr `Equals` yöntemini iki <xref:System.Data.SqlTypes> de kullanmak, her ikisi de null ise doğru olacaktır. Bu, CLR `String.Equals` yöntemi gibi bir örnek yöntemi kullanarak statik/paylaşılan yöntemi kullanma `SqlString.Equals`arasındaki farkı yansıtır.  
+## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Null değerleri SqlTypes ve CLR türleriyle karşılaştırma  
+ Null değerleri karşılaştırırken, `Equals` YÖNTEMIN clr türleriyle çalışma yöntemiyle karşılaştırıldığında ' de null değerleri değerlendirme şekli arasındaki farkı anlamak önemlidir <xref:System.Data.SqlTypes> . Tüm <xref:System.Data.SqlTypes> `Equals` Yöntemler null değerlerini değerlendirmek için veritabanı semantiğini kullanır: değerlerden biri veya her ikisi null ise, karşılaştırma null değerini verir. Öte yandan, `Equals` her ikisi de null ise, clr yönteminin ikisi üzerinde kullanılması <xref:System.Data.SqlTypes> true olur. Bu, CLR yöntemi gibi bir örnek yöntemi kullanma `String.Equals` ve statik/paylaşılan yöntemi kullanma arasındaki farkı yansıtır `SqlString.Equals` .  
   
- Aşağıdaki örnek, yöntem ve `SqlString.Equals` `String.Equals` yöntem arasındaki sonuçlardaki farkı, her biri bir null değer çifti ve daha sonra boş dizeleri bir çift geçirildiğinde gösterir.  
+ Aşağıdaki örnek, `SqlString.Equals` `String.Equals` her biri null değer çifti ve daha sonra boş dizeler çifti geçirildiğinde yöntemi ve yöntemi arasındaki sonuçların farkını gösterir.  
   
  [!code-csharp[DataWorks SqlTypes.CompareNulls#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.CompareNulls/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.CompareNulls#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.CompareNulls/VB/source.vb#1)]  

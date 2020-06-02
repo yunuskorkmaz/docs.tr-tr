@@ -12,35 +12,35 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a2d02a8ebe5e2611db3bc284bb022470ff77f601
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123668"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290363"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Birden Çok Platformu Hedefleyen Kitaplıklar için Uygulama Kaynakları
-Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildiğinden emin olmak için .NET Framework [taşınabilir sınıf kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) proje türünü kullanabilirsiniz. Bu proje türü, Visual Studio 2012 ' de kullanılabilir ve .NET Framework sınıfı kitaplığının taşınabilir alt kümesini hedefler. Taşınabilir sınıf kitaplığı kullanmak, kitaplığınıza masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları ve Windows 8. x Mağazası uygulamaları üzerinden erişilebilmesini sağlar.
+Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildiğinden emin olmak için .NET Framework [taşınabilir sınıf kitaplığı](cross-platform-development-with-the-portable-class-library.md) proje türünü kullanabilirsiniz. Bu proje türü, Visual Studio 2012 ' de kullanılabilir ve .NET Framework sınıfı kitaplığının taşınabilir alt kümesini hedefler. Taşınabilir sınıf kitaplığı kullanmak, kitaplığınıza masaüstü uygulamaları, Silverlight uygulamaları, Windows Phone uygulamaları ve Windows 8. x Mağazası uygulamaları üzerinden erişilebilmesini sağlar.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- Taşınabilir sınıf kitaplığı projesi, uygulamanızın kullanabildiği <xref:System.Resources> ad alanındaki türlerin yalnızca çok sınırlı bir alt kümesini oluşturur, ancak kaynakları almak için <xref:System.Resources.ResourceManager> sınıfını kullanmanıza izin verir. Ancak, Visual Studio 'Yu kullanarak bir uygulama oluşturuyorsanız, <xref:System.Resources.ResourceManager> sınıfını doğrudan kullanmak yerine, Visual Studio tarafından oluşturulan türü kesin belirlenmiş sarmalayıcı kullanmanız gerekir.
+ Taşınabilir sınıf kitaplığı projesi, yalnızca uygulamanızın kullanabildiği ad alanındaki türlerin çok sınırlı bir alt kümesini oluşturur <xref:System.Resources> , ancak <xref:System.Resources.ResourceManager> kaynakları almak için sınıfı kullanmanıza izin verir. Ancak, Visual Studio 'Yu kullanarak bir uygulama oluşturuyorsanız, sınıfı doğrudan kullanmak yerine Visual Studio tarafından oluşturulan türü kesin belirlenmiş sarmalayıcı kullanmanız gerekir <xref:System.Resources.ResourceManager> .
 
- Visual Studio 'da türü kesin belirlenmiş bir sarmalayıcı oluşturmak için, Visual Studio kaynak tasarımcısında ana kaynak dosyasının **erişim değiştiricisini** **Public**olarak ayarlayın. Böylece, türü ksin belirlenmiş ResourceManager sarmalayıcısını içeren bir [resourceFileName].designer.cs veya [resourceFileName].designer.vb dosyası oluşturulur . Türü kesin belirlenmiş kaynak sarmalayıcı kullanımı hakkında daha fazla bilgi için, [Resgen. exe (kaynak dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) konusunun "türü kesin belirlenmiş kaynak sınıfı oluşturma" bölümüne bakın.
+ Visual Studio 'da türü kesin belirlenmiş bir sarmalayıcı oluşturmak için, Visual Studio kaynak tasarımcısında ana kaynak dosyasının **erişim değiştiricisini** **Public**olarak ayarlayın. Böylece, türü ksin belirlenmiş ResourceManager sarmalayıcısını içeren bir [resourceFileName].designer.cs veya [resourceFileName].designer.vb dosyası oluşturulur . Türü kesin belirlenmiş kaynak sarmalayıcı kullanımı hakkında daha fazla bilgi için, [Resgen. exe (kaynak dosya Oluşturucu)](../../framework/tools/resgen-exe-resource-file-generator.md) konusunun "türü kesin belirlenmiş kaynak sınıfı oluşturma" bölümüne bakın.
 
 ## <a name="resource-manager-in-the-portable-class-library"></a>Taşınabilir Sınıf kitaplığındaki Kaynak Yöneticisi
- Taşınabilir bir sınıf kitaplığı projesinde, kaynaklara tüm erişim <xref:System.Resources.ResourceManager> sınıfı tarafından işlenir. <xref:System.Resources.ResourceReader> ve <xref:System.Resources.ResourceSet>gibi <xref:System.Resources> ad alanındaki türlere taşınabilir bir sınıf kitaplığı projesinden erişilemediğinden, kaynaklara erişmek için kullanılamaz.
+ Taşınabilir bir sınıf kitaplığı projesinde, kaynaklara tüm erişim sınıf tarafından işlenir <xref:System.Resources.ResourceManager> . <xref:System.Resources>Ve gibi ad alanındaki türlere <xref:System.Resources.ResourceReader> <xref:System.Resources.ResourceSet> taşınabilir bir sınıf kitaplığı projesinden erişilemediğinden, bu kişiler kaynaklara erişmek için kullanılamaz.
 
- Taşınabilir sınıf kitaplığı projesi, aşağıdaki tabloda listelenen dört <xref:System.Resources.ResourceManager> üyesini içerir. Bu oluşturucular ve yöntemler bir <xref:System.Resources.ResourceManager> nesnesi örneği oluşturup dize kaynaklarını almanızı sağlar.
+ Taşınabilir sınıf kitaplığı projesi, <xref:System.Resources.ResourceManager> Aşağıdaki tabloda listelenen dört üyeyi içerir. Bu oluşturucular ve yöntemler bir <xref:System.Resources.ResourceManager> nesne örneği oluşturup dize kaynaklarını almanızı sağlar.
 
-|`ResourceManager` üyesi|Açıklama|
+|`ResourceManager`üyesidir|Description|
 |------------------------------|-----------------|
-|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Belirtilen derlemede bulunan adlandırılmış kaynak dosyasına erişmek için bir <xref:System.Resources.ResourceManager> örneği oluşturur.|
-|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Belirtilen türe karşılık gelen bir <xref:System.Resources.ResourceManager> örneği oluşturur.|
+|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<xref:System.Resources.ResourceManager>Belirtilen derlemede bulunan adlandırılmış kaynak dosyasına erişmek için bir örnek oluşturur.|
+|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|<xref:System.Resources.ResourceManager>Belirtilen türe karşılık gelen bir örnek oluşturur.|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%29>|Geçerli kültür için adlandırılmış bir kaynağı alır.|
 |<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|Belirtilen kültüre ait olan bir adlandırılmış kaynağı alır.|
 
- Taşınabilir sınıf kitaplığından diğer <xref:System.Resources.ResourceManager> üyelerinin dışlamasıdır, serileştirilmiş nesneler, dize olmayan veriler ve görüntülerin bir kaynak dosyasından alınamadığı anlamına gelir. Taşınabilir bir sınıf kitaplığındaki kaynakları kullanmak için tüm nesne verilerini dize biçiminde depolamanız gerekir. Örneğin, sayısal değerleri dizelere dönüştürerek bir kaynak dosyasında saklayabilir ve bunları alabilir ve ardından sayısal veri türünün `Parse` veya `TryParse` metodunu kullanarak bunları sayıya geri dönüştürebilirsiniz. <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> yöntemini çağırarak ve <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> metodunu çağırarak bir bayt dizisine geri yükleyerek görüntüleri veya diğer ikili verileri bir dize gösterimine dönüştürebilirsiniz.
+ <xref:System.Resources.ResourceManager>Taşınabilir sınıf kitaplığından diğer üyelerin dışlamasıdır, serileştirilmiş nesneler, dize olmayan veriler ve görüntülerin bir kaynak dosyasından alınamadığı anlamına gelir. Taşınabilir bir sınıf kitaplığındaki kaynakları kullanmak için tüm nesne verilerini dize biçiminde depolamanız gerekir. Örneğin, sayısal değerleri dizelere dönüştürerek bir kaynak dosyasında saklayabilir ve bunları alabilir ve ardından sayısal veri türünün veya yöntemini kullanarak bunları sayıya geri dönüştürebilirsiniz `Parse` `TryParse` . Metodu çağırarak resimleri veya diğer ikili verileri bir dize gösterimine dönüştürebilirsiniz <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> ve yöntemini çağırarak bir bayt dizisine geri yükleyebilirsiniz <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> .
 
 ## <a name="the-portable-class-library-and-windows-store-apps"></a>Taşınabilir sınıf kitaplığı ve Windows Mağazası uygulamaları
  Taşınabilir sınıf kitaplığı projeleri, daha sonra. resources dosyalarına derlenen ve derleme zamanında ana derlemeye veya uydu Derlemeleriyle gömülü olan. resx dosyalarında kaynakları depolar. Diğer yandan Windows 8. x Mağazası uygulamaları, kaynakların. resw dosyalarında depolanmasını gerektirir ve bu, daha sonra tek bir paket kaynak dizini (PRı) dosyasında derlenir. Ancak, uyumsuz dosya biçimlerine rağmen, taşınabilir sınıf kitaplığınız bir Windows 8. x mağaza uygulamasında çalışacaktır.
@@ -59,28 +59,28 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 |Doğum Uzunluğu|12|
 |İşe Alma|İşe Giriş Tarihi|
 |İşe Alma Uzunluğu|12|
-|Kimlik|Kimlik|
+|ID|ID|
 |KİMLİK.Uzunluğu|12|
-|Ad|Ad|
+|Name|Name|
 |Ad Uzunluğu|25|
 |Başlık|Personel Veritabanı|
 
- Aşağıdaki kod, dosya için **erişim değiştiricisi** **Public**olarak değiştirildiğinde, Visual Studio tarafından oluşturulan `resources` adlı Kaynak Yöneticisi sarmalayıcı kullanan bir `UILibrary` sınıfını tanımlar. UILibrary sınıfı, dize verilerini gerektiği gibi ayrıştırır. biçimindeki telefon numarasıdır. Sınıfının `MyCompany.Employees` ad alanında olduğunu unutmayın.
+ Aşağıdaki kod, `UILibrary` `resources` Dosya Için **erişim değiştiricisi** **Public**olarak değiştirildiğinde, Visual Studio tarafından oluşturulan Kaynak Yöneticisi sarmalayıcı kullanan bir sınıfı tanımlar. UILibrary sınıfı, dize verilerini gerektiği gibi ayrıştırır. . Sınıfının `MyCompany.Employees` ad alanında olduğunu unutmayın.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- Aşağıdaki kod, `UILibrary` sınıfına ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceğini gösterir. Konsol uygulaması projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
+ Aşağıdaki kodda, `UILibrary` sınıfının ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceği gösterilmektedir. Konsol uygulaması projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- Aşağıdaki kod, `UILibrary` sınıfına ve kaynaklarına Windows 8. x mağaza uygulamasından nasıl erişilebileceğini gösterir. Windows Mağazası uygulama projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
+ Aşağıdaki kod, `UILibrary` sınıfının ve kaynaklarının bir Windows 8. x mağaza uygulamasından nasıl erişilebilir olduğunu gösterir. Windows Mağazası uygulama projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
 ## <a name="example-localized-portable-class-library"></a>Örnek: yerelleştirilmiş taşınabilir sınıf kitaplığı
- Aşağıdaki yerelleştirilmiş taşınabilir sınıf kitaplığı örneği, Fransızca (Fransa) ve Ingilizce (Birleşik Devletler) kültürlerin kaynaklarını içerir. Ingilizce (Birleşik Devletler) kültürü uygulamanın varsayılan kültürüdür; kaynakları, [önceki bölümdeki](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)tabloda gösterilir. Fransızca (Fransa) kültürü için kaynaklar dosyası LibResources.fr-FR.resx olarak adlandırılmıştır ve aşağıdaki tabloda listelenen dize kaynaklarından oluşur. `UILibrary` sınıfı için kaynak kodu, önceki bölümde gösterilenle aynıdır.
+ Aşağıdaki yerelleştirilmiş taşınabilir sınıf kitaplığı örneği, Fransızca (Fransa) ve Ingilizce (Birleşik Devletler) kültürlerin kaynaklarını içerir. Ingilizce (Birleşik Devletler) kültürü uygulamanın varsayılan kültürüdür; kaynakları, [önceki bölümdeki](app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)tabloda gösterilir. Fransızca (Fransa) kültürü için kaynaklar dosyası LibResources.fr-FR.resx olarak adlandırılmıştır ve aşağıdaki tabloda listelenen dize kaynaklarından oluşur. Sınıfının kaynak kodu, `UILibrary` önceki bölümde gösterilenle aynıdır.
 
 |Kaynak adı|Kaynak değeri|
 |-------------------|--------------------|
@@ -88,16 +88,16 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 |Doğum Uzunluğu|20|
 |İşe Alma|İşe Giriş Tarihi|
 |İşe Alma Uzunluğu|16|
-|Kimlik|Kimlik|
-|Ad|Ad|
+|ID|ID|
+|Name|Ad|
 |Başlık|Çalışanlar veritabanı|
 
- Aşağıdaki kod, `UILibrary` sınıfına ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceğini gösterir. Konsol uygulaması projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
+ Aşağıdaki kodda, `UILibrary` sınıfının ve kaynaklarına konsol modundaki bir uygulamadan nasıl erişilebileceği gösterilmektedir. Konsol uygulaması projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir.
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- Aşağıdaki kod, `UILibrary` sınıfına ve kaynaklarına Windows 8. x mağaza uygulamasından nasıl erişilebileceğini gösterir. Windows Mağazası uygulama projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir. Uygulamanın tercih edilen dilini Fransızca olarak ayarlamak için statik `ApplicationLanguages.PrimaryLanguageOverride` özelliğini kullanır.
+ Aşağıdaki kod, `UILibrary` sınıfının ve kaynaklarının bir Windows 8. x mağaza uygulamasından nasıl erişilebilir olduğunu gösterir. Windows Mağazası uygulama projesine eklenmek üzere Uııbrary. dll ' ye bir başvuru gerektirir. `ApplicationLanguages.PrimaryLanguageOverride`Uygulamanın tercih edilen dilini Fransızca olarak ayarlamak için static özelliğini kullanır.
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
@@ -105,5 +105,5 @@ Sınıf kitaplıklarınızdaki kaynaklara birden çok platformdan erişilebildi�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Resources.ResourceManager>
-- [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
-- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Masaüstü uygulamalarındaki kaynaklar](../../framework/resources/index.md)
+- [Kaynakları Paketleme ve Dağıtma](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -9,30 +9,30 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a9b963ce6a8554a581f9d5d0f77cf4edfa71b4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139821"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289466"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
-Asynchronous işlemleriyle çalışmak için Görev Tabanlı Eşenkron Desen'i (TAP) kullandığınızda, engellemeden beklemeyi başarmak için geri aramaları kullanabilirsiniz.  Görevler için bu, <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Dil tabanlı eşzamanlı destek, normal denetim akışı içinde asenkron işlemlerin beklenmesine izin vererek geri aramaları gizler ve derleyici tarafından oluşturulan kod aynı API düzeyinde destek sağlar.
+Zaman uyumsuz işlemlerle çalışmak için görev tabanlı zaman uyumsuz model (TAP) kullandığınızda geri çağırmaları kullanarak, engellemeden beklemeyi elde edebilirsiniz.  Görevler için, bu gibi yöntemler aracılığıyla elde edilir <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> . Dil tabanlı zaman uyumsuz destek, zaman uyumsuz işlemlerin normal Denetim akışında beklemesine izin vererek geri çağırmaları gizler ve derleyicinin ürettiği kod aynı API düzeyi desteğini sağlar.
 
-## <a name="suspending-execution-with-await"></a>Bekleme ile Yürütmeyi Askıya Alma
- .NET Framework 4.5'ten başlayarak C#'daki [bekleme](../../csharp/language-reference/operators/await.md) anahtar sözcüklerini ve Visual Basic'teki <xref:System.Threading.Tasks.Task%601> Bekleme [Operatör'üni](../../visual-basic/language-reference/operators/await-operator.md) eşzamanlı olarak bekliyor <xref:System.Threading.Tasks.Task> ve nesneleri kullanabilirsiniz. Bir <xref:System.Threading.Tasks.Task>, `await` ifade yi beklerken. `void` Bir <xref:System.Threading.Tasks.Task%601>, `await` ifade yi beklerken. `TResult` Bir `await` ifade bir asynchronous yönteminin gövdesi içinde meydana gelmelidir. .NET Framework 4.5'te C# ve Visual Basic dil desteği hakkında daha fazla bilgi için C# ve Visual Basic dil belirtimleri'ne bakın.
+## <a name="suspending-execution-with-await"></a>Await ile yürütmeyi askıya alma
+ .NET Framework 4,5 ' den başlayarak, zaman uyumsuz olarak await ve nesneler için C# ' de [await](../../csharp/language-reference/operators/await.md) anahtar sözcüğünü ve Visual Basic [await işlecini](../../visual-basic/language-reference/operators/await-operator.md) kullanabilirsiniz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Bir <xref:System.Threading.Tasks.Task> ' ı beklerken, `await` ifade türündedir `void` . Bir <xref:System.Threading.Tasks.Task%601> ' ı beklerken, `await` ifade türündedir `TResult` . Bir `await` ifade, zaman uyumsuz bir metodun gövdesinde gerçekleşmelidir. .NET Framework 4,5 ' de C# ve Visual Basic dil desteği hakkında daha fazla bilgi için bkz. C# ve Visual Basic dil belirtimleri.
 
- Kapakların altında, bekleme işlevi bir devamı kullanarak göreve bir geri arama yükler.  Bu geri arama süspansiyon noktasında asynchronous yöntemi devam eder. Eşkron yöntem sürdürüldüğünde, beklenen işlem başarıyla tamamlanıp , <xref:System.Threading.Tasks.Task%601>onun `TResult` döndürülür.  Beklenen <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> beklenen <xref:System.Threading.Tasks.TaskStatus.Canceled> durumda sona erdiyse, <xref:System.OperationCanceledException> bir özel durum atılır.  Beklenen <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> beklenen <xref:System.Threading.Tasks.TaskStatus.Faulted> durum sona erdiyse, hataya neden olan özel durum atılır. A, `Task` birden çok özel durum sonucunda hata yapabilir, ancak bu özel durumlardan yalnızca biri yayılır. Ancak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özellik tüm <xref:System.AggregateException> hataları içeren bir özel durum döndürür.
+ Kapakların altında, await işlevi bir devamlılık kullanarak göreve bir geri çağırma işlemini kurar.  Bu geri çağırma, askıya alma noktasındaki zaman uyumsuz yöntemi sürdürür. Zaman uyumsuz yöntem devam ettirildiğinde, abeklelen işlem başarıyla tamamlanırsa ve bir ise <xref:System.Threading.Tasks.Task%601> , `TResult` döndürülür.  Durum, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> durumunda sonlandıysa <xref:System.Threading.Tasks.TaskStatus.Canceled> , bir <xref:System.OperationCanceledException> özel durum oluşturulur.  Durum, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> durumunda sonlandıysa <xref:System.Threading.Tasks.TaskStatus.Faulted> , hataya neden olan özel durum atılır. Bir `Task` , birden çok özel durumun sonucu olarak hata verebilir, ancak bu özel durumların yalnızca biri yayılır. Ancak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği <xref:System.AggregateException> tüm hataları içeren bir özel durum döndürür.
 
- Bir eşitleme bağlamı<xref:System.Threading.SynchronizationContext> (nesnesi) askıya alma sırasında asenkron yöntemi ni gerçekleştiren iş parçacığıyla <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> ilişkilendirilirse (örneğin, özellik değilse), `null`eş zamanlı yöntem bağlamın <xref:System.Threading.SynchronizationContext.Post%2A> yöntemini kullanarak aynı eşitleme bağlamında devam eder. Aksi takdirde, askıya alma sırasında<xref:System.Threading.Tasks.TaskScheduler> geçerli olan görev zamanlayıcısına (nesne) dayanır. Genellikle, bu iş parçacığı havuzu<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>hedefleyen varsayılan görev zamanlayıcısı ( ), olduğunu. Bu görev zamanlayıcısı, beklenen eşsenkronize işlemin tamamlandığı yerde devam edip etmeyeceğini veya yeniden başlamanın zamanlanıp zamanlanmayacağını belirler. Varsayılan zamanlayıcı genellikle devamın beklenen işlemin tamamlandığı iş parçacığında çalışmasına izin verir.
+ Bir eşitleme bağlamı ( <xref:System.Threading.SynchronizationContext> nesne) askıya alma sırasında zaman uyumsuz yöntemi yürüten iş parçacığıyla ilişkiliyse (örneğin, <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> özellik değilse `null` ), zaman uyumsuz yöntem, bağlam yöntemi kullanılarak aynı eşitleme bağlamında devam eder <xref:System.Threading.SynchronizationContext.Post%2A> . Aksi takdirde, <xref:System.Threading.Tasks.TaskScheduler> askıya alma sırasında geçerli olan görev zamanlayıcısını (nesne) kullanır. Genellikle, bu, <xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType> iş parçacığı havuzunu hedefleyen varsayılan Görev Zamanlayıcı () ' dır. Bu görev zamanlayıcı, beklenen zaman uyumsuz işlemin tamamlandığında veya sürdürme zamanlanıp zamanlanmayacağını belirler. Varsayılan Zamanlayıcı genellikle devamlılığın tamamlanan işlemin tamamlandığı iş parçacığında çalışmasına izin verir.
 
- Bir eşzamanlı yöntem çağrıldığında, çağrının arayana döndüğü, henüz tamamlanmamış bir bekleyen örnekte ilk bekleyen ifadeye kadar işlevin gövdesini eşzamanlı olarak yürütür. Eşsenkron yöntem geri dönmezse, `void` <xref:System.Threading.Tasks.Task> devam <xref:System.Threading.Tasks.Task%601> eden hesaplamayı temsil etmek için bir veya nesne döndürülür. Geçersiz olmayan bir eşzamanlı yöntemde, bir iade deyimiyle karşılaşılırsa veya yöntem gövdesinin sonuna ulaşılırsa, <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> görev son durumda tamamlanır. Işlenmemiş bir özel durum denetimin eşzamanlı yöntemin gövdesinden ayrılmasına neden <xref:System.Threading.Tasks.TaskStatus.Faulted> olursa, görev durumla biter. Bu özel durum <xref:System.OperationCanceledException>bir ise, görev <xref:System.Threading.Tasks.TaskStatus.Canceled> yerine durumda sona erer. Bu şekilde, sonuç veya özel durum sonunda yayımlanır.
+ Zaman uyumsuz bir yöntem çağrıldığında, henüz tamamlanmamış olan bir awasever örneğine ilk await ifadesi kadar zaman uyumlu olarak çalışır; bu noktada çağrı çağırana döner. Zaman uyumsuz yöntem döndürmezse `void` , <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> devam eden hesaplamayı temsil eden bir veya nesnesi döndürülür. Void olmayan bir zaman uyumsuz yöntemde, bir return ifadesine karşılaşılırsa veya Yöntem gövdesinin sonuna ulaşılırsa, görev <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> son durumda tamamlanır. İşlenmeyen bir özel durum denetimin zaman uyumsuz yöntemin gövdesinden ayrılmasına neden olursa, görev <xref:System.Threading.Tasks.TaskStatus.Faulted> durumunda sonlanır. Bu özel durum bir ise <xref:System.OperationCanceledException> , görev durumunda sona erer <xref:System.Threading.Tasks.TaskStatus.Canceled> . Bu şekilde, sonuç veya özel durum sonunda yayımlanmıştır.
 
- Bu davranışın birkaç önemli varyasyonları vardır.  Performans nedenleriyle, görev beklenene kadar bir görev zaten tamamlanmışsa, denetim verim verilmeyecek ve işlev yürütmeye devam eder.  Ayrıca, özgün içeriğe dönmek her zaman istenen davranış değildir ve değiştirilebilir; bu sonraki bölümde daha ayrıntılı olarak açıklanmıştır.
+ Bu davranışın çeşitli önemli çeşitlemeleri vardır.  Performans nedenleriyle, görev beklenerek görevin zaten tamamlanmışsa, denetim bir şekilde uygulanmaz ve işlev yürütülmeye devam eder.  Ayrıca, özgün bağlamına dönmek her zaman istenen davranış değildir ve değiştirilebilir; Bu, sonraki bölümde daha ayrıntılı olarak açıklanmıştır.
 
-### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>Verim ve Yapılandırma Ile Süspansiyon ve Devamı Yapılandırma
- Çeşitli yöntemler, bir eşzamanlı yöntemin yürütülmesi üzerinde daha fazla denetim sağlar. Örneğin, asynchronous <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> yöntemine bir verim noktası tanıtmak için yöntemi kullanabilirsiniz:
+### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>Yield ve ConfigureAwait ile askıya alma ve sürdürme yapılandırma
+ Çeşitli yöntemler zaman uyumsuz yöntemin yürütülmesi üzerinde daha fazla denetim sağlar. Örneğin, <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> zaman uyumsuz metoda bir yield noktası tanıtmak için yöntemini kullanabilirsiniz:
 
 ```csharp
 public class Task : …
@@ -42,7 +42,7 @@ public class Task : …
 }
 ```
 
- Bu, eşzamanlı olarak geçerli içeriğe yeniden deftere nakletmeye veya zamanlamaya eşdeğerdir.
+ Bu, zaman uyumsuz naklin veya geçerli bağlamına yeniden zamanlama ile eşdeğerdir.
 
 ```csharp
 Task.Run(async delegate
@@ -55,16 +55,16 @@ Task.Run(async delegate
 });
 ```
 
- Ayrıca asynchronous yöntemi süspansiyon ve devamı üzerinde daha iyi kontrol için <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> yöntemi kullanabilirsiniz.  Daha önce de belirtildiği gibi, varsayılan olarak, geçerli bağlam bir eşzamanlı yöntem askıya alındı ve yakalanan bağlam devam ı üzerine asynchronous yöntemin devamını çağırmak için kullanılır yakalanır.  Çoğu durumda, bu tam olarak istediğiniz davranıştır.  Diğer durumlarda, devam bağlamını önemsemeyebilirsiniz ve bu tür gönderileri özgün içeriğe geri döndürerek daha iyi performans elde edebilirsiniz.  Bunu etkinleştirmek için, bekleme işlemini bağlamında yakalamamak ve devam ettirmek için değil, beklenen eşzamanlı işlemin tamamlandığı her yerde yürütmeye devam etmek için bu <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> yöntemi kullanın:
+ Ayrıca, <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> zaman uyumsuz bir yöntemde askıya alma ve sürdürme üzerinde daha iyi denetim için yöntemini de kullanabilirsiniz.  Daha önce belirtildiği gibi, varsayılan olarak, geçerli bağlam zaman uyumsuz bir yöntem askıya alındığında yakalanır ve sürdürme üzerinde zaman uyumsuz yöntemin devamlılığını çağırmak için yakalanan bağlam kullanılır.  Çoğu durumda bu, istediğiniz tam davranışdır.  Diğer durumlarda, devamlılık bağlamıyla ilgilenmeyebilirsiniz ve bu gibi gönderilerin özgün bağlamına geri giderek daha iyi performans elde edebilirsiniz.  Bunu etkinleştirmek için, <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> await işleminin bağlam üzerinde yakalanıp sürdürülmeyeceğini bilgilendirmek için yöntemini kullanın, ancak beklenen zaman uyumsuz işlemin tamamlandığı her yerde yürütmeye devam etmek için:
 
 ```csharp
 await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
-## <a name="canceling-an-asynchronous-operation"></a>Eşkron İşlemi İptal Etme
- .NET Framework 4'ten başlayarak, iptali destekleyen TAP yöntemleri, iptal jetonu<xref:System.Threading.CancellationToken> (nesne) kabul eden en az bir aşırı yükleme sağlar.
+## <a name="canceling-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem iptal ediliyor
+ .NET Framework 4 ' ten başlayarak, iptali destekleyen yöntemler ' e dokunarak iptal belirtecini kabul eden en az bir aşırı yükleme sağlayın ( <xref:System.Threading.CancellationToken> nesne).
 
- İptal belirteci, iptal jetonu kaynağı<xref:System.Threading.CancellationTokenSource> (nesne) aracılığıyla oluşturulur.  Kaynağın <xref:System.Threading.CancellationTokenSource.Token%2A> özelliği, kaynağın <xref:System.Threading.CancellationTokenSource.Cancel%2A> yöntemi çağrıldığında işaretlenecek iptal belirteci döndürür.  Örneğin, tek bir web sayfası indirmek istiyorsanız ve işlemi iptal etmek istiyorsanız, <xref:System.Threading.CancellationTokenSource> bir nesne oluşturursunuz, belirteciTAP yöntemine geçer <xref:System.Threading.CancellationTokenSource.Cancel%2A> ve işlemi iptal etmeye hazır olduğunuzda kaynağın yöntemini ararsınız:
+ İptal belirteci bir iptal belirteci kaynağı (nesne) ile oluşturulur <xref:System.Threading.CancellationTokenSource> .  Kaynağın özelliği, <xref:System.Threading.CancellationTokenSource.Token%2A> kaynağın yöntemi çağrıldığında işaret edilecek iptal belirtecini döndürür <xref:System.Threading.CancellationTokenSource.Cancel%2A> .  Örneğin, tek bir Web sayfasını indirmek isterseniz ve işlemi iptal etmek istiyorsanız, bir <xref:System.Threading.CancellationTokenSource> nesnesi oluşturur, BELIRTECINI tap yöntemine geçitirsiniz ve ardından <xref:System.Threading.CancellationTokenSource.Cancel%2A> işlemi iptal etmeye hazırsanız kaynağın metodunu çağırın:
 
 ```csharp
 var cts = new CancellationTokenSource();
@@ -73,7 +73,7 @@ string result = await DownloadStringAsync(url, cts.Token);
 cts.Cancel();
 ```
 
- Birden çok eşzamanlı çağrıyı iptal etmek için, aynı belirteci tüm çağırmalara geçirebilirsiniz:
+ Birden çok zaman uyumsuz çağırma işlemini iptal etmek için, tüm etkinleştirmeleri için aynı belirteci geçirebilirsiniz:
 
 ```csharp
 var cts = new CancellationTokenSource();
@@ -83,7 +83,7 @@ var cts = new CancellationTokenSource();
     cts.Cancel();
 ```
 
- Veya, aynı belirteci seçici bir işlem alt kümesine geçirebilirsiniz:
+ Ya da aynı belirteci bir işlem seçmeli alt kümesine geçirebilirsiniz:
 
 ```csharp
 var cts = new CancellationTokenSource();
@@ -93,22 +93,22 @@ var cts = new CancellationTokenSource();
     cts.Cancel();
 ```
 
- İptal talepleri herhangi bir iş parçacığı başlatılabilir.
+ İptal istekleri herhangi bir iş parçacığından başlatılabilir.
 
- <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> İptal talebinde bulunulamayacağını belirtmek için değeri iptal jetonu kabul eden herhangi bir yönteme geçirebilirsiniz.  Bu özelliğin <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> dönmesine `false`neden olur ve çağrılan yöntem buna göre en iyi duruma getirebilir.  Test amacıyla, belirteç zaten iptal edilmiş veya iptal edilemeyen bir durumda başlaması gerektiğini belirtmek için Boolean değerini kabul eden oluşturucuyu kullanarak anında iptal edilmiş bir iptal belirteci de geçebilirsiniz.
+ <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType>Bu değeri, İptalin hiçbir şekilde istenmeyeceğini göstermek için iptal belirteci kabul eden herhangi bir yönteme geçirebilirsiniz.  Bu, <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> özelliğin döndürülmesini sağlar `false` ve çağrılan yöntem buna göre iyileştirebilirler.  Sınama amacıyla, belirtecin zaten iptal edilmiş veya iptal edilemez durumunda başlaması gerekip gerekmediğini belirtmek için bir Boole değeri kabul eden oluşturucuyu kullanarak, önceden iptal edilmiş bir iptal belirteci de geçirebilirsiniz.
 
- İptal için bu yaklaşımın birkaç avantajı vardır:
+ Bu iptale yönelik bu yaklaşım birkaç avantaj sağlar:
 
-- Aynı iptal belirtecinizi herhangi bir sayıda ki eşzamanlı ve eşzamanlı işlemlere aktarabilirsiniz.
+- Aynı iptal belirtecini herhangi bir sayıda zaman uyumsuz ve zaman uyumlu işleme geçirebilirsiniz.
 
-- Aynı iptal isteği herhangi bir sayıda dinleyiciye çoğaltılabilir.
+- Aynı iptal isteği herhangi bir sayıda dinleyiciyle aynı olabilir.
 
-- Eşzamanlı API'nin geliştiricisi, iptalin istenip istenmeyeceğini ve ne zaman yürürlüğe girebileceğini tam olarak kontrol eder.
+- Zaman uyumsuz API 'nin geliştiricisi, İptalin istenip istenmeyeceğini ve ne zaman etkili olabileceğini kontrol ediyor.
 
-- API'yi tüketen kod, iptal isteklerinin yayılacağı asynchronous davetlerini seçişle belirleyebilir.
+- API 'YI tüketen kod, iptal isteklerinin yayılacağı zaman uyumsuz çağırmaları seçmeli olarak belirleyebilir.
 
 ## <a name="monitoring-progress"></a>İlerlemeyi İzleme
- Bazı eşzamanlı yöntemler, asynchronous yöntemine aktarılan ilerleme arabirimi aracılığıyla ilerlemeyi ortaya çıkarır.  Örneğin, eş senkronize bir metin dizesini karşıdan yükleyen ve yol boyunca şimdiye kadar tamamlanan karşıdan yükleme yüzdesini içeren ilerleme güncelleştirmelerini yükselten bir işlev düşünün.  Böyle bir yöntem bir Windows Presentation Foundation (WPF) uygulamasında aşağıdaki gibi tüketilebilir:
+ Bazı zaman uyumsuz yöntemler, zaman uyumsuz metoda geçirilen bir ilerleme arabirimiyle ilerlemeyi açığa çıkarır.  Örneğin, bir metin dizesini zaman uyumsuz olarak indiren bir işlevi düşünün ve bu nedenle, şu ana kadar tamamlanan indirme yüzdesini içeren ilerleme güncellemeleri yayınlar.  Böyle bir yöntem, aşağıdaki gibi bir Windows Presentation Foundation (WPF) uygulamasında tüketilebilir:
 
 ```csharp
 private async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -124,11 +124,11 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 <a name="combinators"></a>
-## <a name="using-the-built-in-task-based-combinators"></a>Yerleşik Görev Tabanlı Kombinatörleri Kullanma
- Ad <xref:System.Threading.Tasks> alanı, görevleri oluşturmak ve çalışmak için çeşitli yöntemler içerir.
+## <a name="using-the-built-in-task-based-combinators"></a>Yerleşik görev tabanlı kombinatör kullanma
+ <xref:System.Threading.Tasks>Ad alanı, görevler oluşturmak ve bunlarla çalışmak için birkaç yöntem içerir.
 
-### <a name="taskrun"></a>Görev.Çalıştır
- Sınıf, <xref:System.Threading.Tasks.Task> örneğin <xref:System.Threading.Tasks.Task.Run%2A> iş parçacığı havuzunda <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> çalışmayı kolayca boşaltmanızı sağlayan çeşitli yöntemler içerir:
+### <a name="taskrun"></a>Task. Run
+ <xref:System.Threading.Tasks.Task>Sınıfı, <xref:System.Threading.Tasks.Task.Run%2A> iş parçacığı havuzu olarak iş parçacığını kolayca boşaltmenizi sağlayan çeşitli yöntemler içerir <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> , örneğin:
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -141,7 +141,7 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- Aşırı yükleme <xref:System.Threading.Tasks.Task.Run%2A> gibi bu yöntemlerden <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> bazıları yöntem için kısaltma olarak bulunur. <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>  Diğer aşırı yüklemeler, <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>örneğin, boşaltılmış iş içinde beklemeyi kullanmanıza olanak sağlar:
+ Bu yöntemlerin bazıları (aşırı yükleme gibi), <xref:System.Threading.Tasks.Task.Run%2A> <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> yöntemi için toplu olarak mevcuttur <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> .  Gibi diğer aşırı yüklemeler, <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> boşaltılan iş içinde await kullanmanıza olanak sağlar, örneğin:
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -155,10 +155,10 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- Bu tür aşırı yüklemeler, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> Görev Paralel Kitaplığı'ndaki <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> uzantı yöntemiyle birlikte yöntemi kullanmaya mantıksal olarak eşdeğerdir.
+ Bu tür aşırı yüklemeler, <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> görev paralel kitaplığındaki genişletme yöntemiyle birlikte yöntemi kullanılarak mantıksal olarak eşdeğerdir.
 
-### <a name="taskfromresult"></a>Görev.Kaynak
- Verilerin <xref:System.Threading.Tasks.Task.FromResult%2A> zaten mevcut olabileceği ve görev döndürme yönteminden döndürülmesi gereken senaryolarda yöntemi <xref:System.Threading.Tasks.Task%601>kullanın:
+### <a name="taskfromresult"></a>Task. FromResult
+ <xref:System.Threading.Tasks.Task.FromResult%2A>Verilerin zaten kullanılabildiği senaryolarda yöntemi kullanın ve yalnızca bir görev döndüren yöntem yükseltilmemiş ' a geri döndürülüyor <xref:System.Threading.Tasks.Task%601> :
 
 ```csharp
 public Task<int> GetValueAsync(string key)
@@ -176,16 +176,16 @@ private async Task<int> GetValueAsyncInternal(string key)
 ```
 
 ### <a name="taskwhenall"></a>Task.WhenAll
- Görev <xref:System.Threading.Tasks.Task.WhenAll%2A> olarak temsil edilen birden çok eşzamanlı işlemi eş senkronize olarak beklemek için yöntemi kullanın.  Yöntem, genel olmayan bir görev kümesini veya tek düze olmayan genel görevleri (örneğin, birden çok geçersiz döndüren işlemi bekleyen veya her değerin farklı bir türü olabileceği birden çok değer döndüren yöntemi bekleyen) ve tek tip genel `TResult`görevleri (eşzamanlı olarak birden çok dönen yöntemleri beklemek gibi) destekleyen birden çok fazla yüklemeye sahiptir.
+ <xref:System.Threading.Tasks.Task.WhenAll%2A>Görev olarak temsil edilen birden çok zaman uyumsuz işlemde zaman uyumsuz olarak beklemek için yöntemini kullanın.  Yönteminde, genel olmayan bir görev kümesini veya tek biçimli genel görev kümesini (örneğin, birden çok void döndüren işlemleri bekleniyor veya her değerin farklı bir türü olan birden çok değer döndüren yöntemler için zaman uyumsuz) destekleyen birden çok aşırı yükleme vardır ve tek bir genel görev kümesini (zaman uyumsuz olarak birden çok `TResult` dönen yöntemler için bekleyen) destekleyebilirsiniz.
 
- Birkaç müşteriye e-posta iletisi göndermek istediğinizi varsayalım. İletileri göndermenin çakışmasını sağlayabilirsiniz, böylece bir sonraki iletiyi göndermeden önce bir iletinin tamamlanmasını beklemezsiniz. Ayrıca, gönderme işlemlerinin ne zaman tamamlandığını ve herhangi bir hata nın oluşup oluşmadığını da öğrenebilirsiniz:
+ Birkaç müşteriye e-posta iletileri göndermek istediğinizi varsayalım. Bir sonraki göndermeden önce bir iletinin tamamlanmasını beklemmeniz için iletilerin gönderilmesini örtüştürüyorsunuz. Gönderme işlemlerinin ne zaman tamamlandığını ve herhangi bir hata oluşup oluşmadığını da öğrenebilirsiniz:
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);
 ```
 
- Bu kod, oluşabilecek özel durumları açıkça işlemez, ancak özel durumlar `await` <xref:System.Threading.Tasks.Task.WhenAll%2A>' dan gelen 'den kaynaklanan görevin dışına yayılmasına izin verir.  Özel durumları işlemek için aşağıdaki gibi kod kullanabilirsiniz:
+ Bu kod, oluşabilecek özel durumları açıkça işlemez, ancak özel durumların `await` kaynağından elde edilen görevin dışına yayılmasını sağlar <xref:System.Threading.Tasks.Task.WhenAll%2A> .  Özel durumları işlemek için aşağıdakiler gibi bir kod kullanabilirsiniz:
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- Bu durumda, herhangi bir eşyokolün işlemi başarısız olursa, tüm <xref:System.AggregateException> özel durumlar <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task.WhenAll%2A> yöntemden döndürülen depolanan bir özel durum olarak birleştirilir.  Ancak, bu özel durumlardan yalnızca biri `await` anahtar kelime tarafından yayılır.  Tüm özel durumları incelemek istiyorsanız, önceki kodu aşağıdaki gibi yeniden yazabilirsiniz:
+ Bu durumda, zaman uyumsuz bir işlem başarısız olursa, tüm özel durumlar, <xref:System.AggregateException> yönteminden döndürülen ' de depolanan bir özel durumla birleştirilir <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task.WhenAll%2A> .  Ancak, bu özel durumlardan yalnızca biri anahtar sözcük tarafından yayılır `await` .  Tüm özel durumları incelemek istiyorsanız, önceki kodu aşağıdaki gibi yeniden yazabilirsiniz:
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();
@@ -216,14 +216,14 @@ catch(Exception exc)
 }
 ```
 
- Web'den eşzamanlı olarak birden fazla dosya indirme örneğini ele alalım.  Bu durumda, tüm eşzamanlı işlemlerhomojen sonuç türlerine sahiptir ve sonuçlara erişmek kolaydır:
+ Web 'den zaman uyumsuz olarak birden çok dosya indirme örneği ele alalım.  Bu durumda, tüm zaman uyumsuz işlemlerin homojen sonuç türleri vardır ve sonuçlara erişmek kolaydır:
 
 ```csharp
 string [] pages = await Task.WhenAll(
     from url in urls select DownloadStringAsync(url));
 ```
 
- Önceki geçersiz döndürme senaryosunda tartıştığımız aynı özel durum işleme tekniklerini kullanabilirsiniz:
+ Önceki void döndüren senaryoda açıklandığımız aynı özel durum işleme tekniklerini kullanabilirsiniz:
 
 ```csharp
 Task [] asyncOps =
@@ -243,18 +243,18 @@ catch(Exception exc)
 ```
 
 ### <a name="taskwhenany"></a>Task.WhenAny
- <xref:System.Threading.Tasks.Task.WhenAny%2A> Tamamlanmagörevi olarak temsil edilen birden çok eşzamanlı işlemden yalnızca birini beklemek için yöntemi kullanabilirsiniz.  Bu yöntem dört birincil kullanım örnekleri ne hizmet vermektedir:
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>İşlem için görev olarak temsil edilen birden çok zaman uyumsuz işlemden yalnızca birini zaman uyumsuz olarak beklemek için yöntemini kullanabilirsiniz.  Bu yöntem dört birincil kullanım durumu sunar:
 
-- Artıklık: Bir işlemi birden çok kez gerçekleştirmek ve ilk tamamlananı seçmek (örneğin, tek bir sonuç üretecek birden çok hisse senedi teklifi web hizmetleriyle iletişim kurmak ve en hızlı tamamlananı seçmek).
+- Yedeklilik: bir işlemi birden çok kez gerçekleştirme ve ilk olarak tamamlanan birini seçme (örneğin, tek bir sonuç üreten ve en hızlı şekilde tamamlanarak birden çok hisse senedi teklifiyle Web hizmetine bağlantı kurma).
 
-- Ayrılma: Birden çok işlemi başlatmak ve hepsinin tamamlanmasını beklemek, ancak tamamlandıkça işleme.
+- Araya ekleme: birden çok işlem başlatma ve tümünün tamamlanmasını bekleme, ancak tamamlandıkları gibi işleme.
 
-- Azaltma: Diğerleri tamamlandıkça ek işlemlerin başlamasına izin verme.  Bu, ayrılma senaryosunun bir uzantısıdır.
+- Daraltma: diğer işlemlerin, diğerleri tamamlanana kadar başlaması sağlanır.  Bu, araya ekleme senaryosunun bir uzantısıdır.
 
-- Erken kurtarma: Örneğin, görev t1 tarafından temsil edilen bir <xref:System.Threading.Tasks.Task.WhenAny%2A> işlem başka bir görev t2 ile <xref:System.Threading.Tasks.Task.WhenAny%2A> bir görev gruplandırılabilir ve görev üzerinde bekleyebilirsiniz. Görev t2 bir zaman-out veya iptal veya t1 <xref:System.Threading.Tasks.Task.WhenAny%2A> tamamlanmadan önce görev tamamlanmasına neden başka bir sinyal temsil edebilir.
+- Erken baılout: Örneğin, görev T1 ile temsil edilen bir işlem, <xref:System.Threading.Tasks.Task.WhenAny%2A> başka bir görev T2 ile bir görevde gruplandırılabilir ve <xref:System.Threading.Tasks.Task.WhenAny%2A> görevde bekleyebilirsiniz. Görev T2, bir zaman aşımını veya iptali ya da bir görevin T1 tamamlanmadan önce tamamlanmasını sağlayan başka bir sinyali temsil ediyor <xref:System.Threading.Tasks.Task.WhenAny%2A> .
 
 #### <a name="redundancy"></a>Yedeklilik
- Hisse senedi alıp almayacağınız konusunda karar vermek istediğiniz bir durumu düşünün.  Güvendiğiniz birkaç hisse senedi tavsiyesi web hizmetleri vardır, ancak günlük yüke bağlı olarak, her hizmet farklı zamanlarda yavaş sona erebilir.  Herhangi bir <xref:System.Threading.Tasks.Task.WhenAny%2A> işlem tamamlandığında bildirim almak için yöntemi kullanabilirsiniz:
+ Bir stok satın alıp almayacağı konusunda bir karar vermek istediğiniz bir durum düşünün.  Güvendiğiniz birkaç hisse senedi önerisi Web hizmeti bulunur, ancak günlük yüküne bağlı olarak her hizmet farklı zamanlarda yavaş yavaş çalışabilir.  <xref:System.Threading.Tasks.Task.WhenAny%2A>Herhangi bir işlem tamamlandığında bildirim almak için yöntemini kullanabilirsiniz:
 
 ```csharp
 var recommendations = new List<Task<bool>>()
@@ -267,9 +267,9 @@ Task<bool> recommendation = await Task.WhenAny(recommendations);
 if (await recommendation) BuyStock(symbol);
 ```
 
- Başarıyla tamamlanan tüm görevlerin paketlenmemiş sonuçlarını <xref:System.Threading.Tasks.Task.WhenAll%2A>döndüren, tamamlanan görevi <xref:System.Threading.Tasks.Task.WhenAny%2A> döndürür. Bir görev başarısız olursa, başarısız olduğunu bilmek önemlidir ve bir görev başarılı olursa, iade değerinin hangi görevle ilişkili olduğunu bilmek önemlidir.  Bu nedenle, döndürülen görevin sonucuna erişmeniz veya bu örneğin gösterdiği gibi daha fazla beklemeniz gerekir.
+ <xref:System.Threading.Tasks.Task.WhenAll%2A>Başarıyla tamamlanan tüm görevlerin sarmalanmamış sonuçlarını döndüren aksine, <xref:System.Threading.Tasks.Task.WhenAny%2A> Tamamlanan görevi döndürür. Bir görev başarısız olursa, başarısız olması ve bir görevin başarılı olması durumunda, döndürülen değerin hangi görevi ilişkilendirildiğini bilmemiz önemlidir.  Bu nedenle, döndürülen görevin sonucuna erişmeniz veya bu örnekte gösterildiği gibi daha fazla beklemek gerekir.
 
- Olduğu <xref:System.Threading.Tasks.Task.WhenAll%2A>gibi, özel durumlara uyum sağlamak gerekir.  Tamamlanan görevi geri aldığınızdan, döndürülen görevi hataların yayılmasını ve `try/catch` uygun şekilde yayılmasını bekleyebilirsiniz; örneğin:
+ İle olduğu gibi <xref:System.Threading.Tasks.Task.WhenAll%2A> , özel durumlara uyum sağlayabilmeniz gerekir.  Tamamlanan görevi geri aldığınıza göre döndürülen görevi, hata yayılmasını ve `try/catch` bunları uygun şekilde almanızı sağlayabilirsiniz; örneğin:
 
 ```csharp
 Task<bool> [] recommendations = …;
@@ -288,7 +288,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Ayrıca, ilk görev başarıyla tamamlaşsa bile, sonraki görevler başarısız olabilir.  Bu noktada, özel durumlarla başa çıkmak için çeşitli seçenekleriniz vardır: Başlatılan tüm görevler tamamlanana <xref:System.Threading.Tasks.Task.WhenAll%2A> kadar bekleyebilir, bu durumda yöntemi kullanabilirsiniz veya tüm özel durumların önemli olduğuna ve günlüğe kaydedilmesi gerektiğine karar verebilirsiniz.  Bunun için, görevler eşeşitle tamamlandığında bildirim almak için devamları kullanabilirsiniz:
+ Ayrıca, bir ilk görev başarıyla tamamlanırsa bile sonraki görevler başarısız olabilir.  Bu noktada, özel durumlarla uğraşmaya yönelik çeşitli seçenekleriniz vardır: tüm başlatılan görevler tamamlanana kadar bekleyebilirsiniz, bu durumda <xref:System.Threading.Tasks.Task.WhenAll%2A> yöntemini kullanabilir veya tüm özel durumların önemli olduğuna ve günlüğe kaydedilecek şekilde çalışmanıza karar verebilirsiniz.  Bu şekilde, görevler zaman uyumsuz olarak tamamlandığında bir bildirim almak için devamlılıkları kullanabilirsiniz:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -308,7 +308,7 @@ foreach(Task recommendation in recommendations)
 }
 ```
 
- hatta:
+ Hatta:
 
 ```csharp
 private static async void LogCompletionIfFailed(IEnumerable<Task> tasks)
@@ -339,8 +339,8 @@ cts.Cancel();
 if (await recommendation) BuyStock(symbol);
 ```
 
-#### <a name="interleaving"></a>Aralaması
- Web'den resim indirdiğiniz ve her görüntüyü işlediğiniz (örneğin, görüntüyü ui denetimine ekleme) bir durum düşünün.  İşlemi UI iş parçacığıüzerinde sırayla yapmanız gerekir, ancak görüntüleri mümkün olduğunca aynı anda indirmek istersiniz. Ayrıca, görüntüleri indirilene kadar UI'ye eklemeyi ertelemek istemezsiniz— tamamlanırken eklemek istiyorsunuz:
+#### <a name="interleaving"></a>Araya
+ Web 'den görüntü indirirken ve her görüntüyü işlerken (örneğin, bir kullanıcı arabirimi denetimine görüntü ekleme) bir durum düşünün.  İşlem arabirimini Kullanıcı arabirimi iş parçacığında sırayla yapmanız gerekir, ancak görüntüleri mümkün olduğunca eşzamanlı olarak indirmek istersiniz. Ayrıca, tümünün indirilene kadar Kullanıcı arabirimine eklemek istemezsiniz, ancak bunları tamamlandığı gibi eklemek istersiniz:
 
 ```csharp
 List<Task<Bitmap>> imageTasks =
@@ -359,7 +359,7 @@ while(imageTasks.Count > 0)
 }
 ```
 
- İndirilen görüntülerin üzerinde <xref:System.Threading.ThreadPool> hesaplama açısından yoğun işlem içeren bir senaryoya ara ayrılma da uygulayabilirsiniz; örneğin:
+ Ayrıca, indirilen görüntülerin üzerinde yoğun işlem tüketen işleme içeren bir senaryoya araya ekleme uygulayabilirsiniz <xref:System.Threading.ThreadPool> ; Örneğin:
 
 ```csharp
 List<Task<Bitmap>> imageTasks =
@@ -380,7 +380,7 @@ while(imageTasks.Count > 0)
 ```
 
 #### <a name="throttling"></a>Azaltma
- Kullanıcının o kadar çok resim indiriyor olması ve indirmelerin azaltılması gerektiği dışında, ara ayrılma örneğini göz önünde bulundurun; örneğin, yalnızca belirli sayıda indirmenin aynı anda gerçekleşmesini istiyorsunuz. Bunu başarmak için, eşzamanlı işlemlerin bir alt kümesini başlatabilirsiniz.  İşlemler tamamlandıkça, onların yerini almak için ek işlemler başlatabilirsiniz:
+ Kullanıcının indirdiği, indirmelerin kısıtlanacak birçok görüntünün olması dışında, araya ekleme örneğini düşünün; Örneğin, aynı anda yalnızca belirli sayıda indirmelerin gerçekleşmesini istiyorsunuz. Bunu başarmak için, zaman uyumsuz işlemlerin bir alt kümesini başlatabilirsiniz.  İşlemler tamamlandıktan sonra, bunların yerini almak için ek işlemler başlatabilirsiniz:
 
 ```csharp
 const int CONCURRENCY_LEVEL = 15;
@@ -413,8 +413,8 @@ while(imageTasks.Count > 0)
 }
 ```
 
-#### <a name="early-bailout"></a>Erken Kurtarma
- Bir kullanıcının iptal isteğine aynı anda yanıt verirken bir işlemin tamamlanmasını eş zamanlı olarak beklediğiniz göz önünde bulundurun (örneğin, kullanıcı bir iptal düğmesini tıklattı). Aşağıdaki kod bu senaryoyu göstermektedir:
+#### <a name="early-bailout"></a>Erken Baılout
+ Bir işlemin tamamlanması için zaman uyumsuz olarak bir kullanıcının iptal isteğine (örneğin, Kullanıcı bir iptal düğmesine tıkladığını) göz önünde bulundurdığınızı düşünün. Aşağıdaki kod bu senaryoyu göstermektedir:
 
 ```csharp
 private CancellationTokenSource m_cts;
@@ -452,7 +452,7 @@ private static async Task UntilCompletionOrCancellation(
 }
 ```
 
- Bu uygulama, siz ödemeye karar verir vermez kullanıcı arabirimini yeniden etkinleştirir, ancak temel asenkron işlemleri iptal etmez.  Başka bir alternatif, kurtarma kararı aldığınızda bekleyen işlemleri iptal etmek, ancak iptal isteği nedeniyle erken sona ermesi nedeniyle işlemler gerçekten tamamlanana kadar kullanıcı arabirimini yeniden kurmamak olacaktır:
+ Bu uygulama, zaman aşımına uğrar, ancak temeldeki zaman uyumsuz işlemleri iptal etmez, Kullanıcı arabirimini yeniden sağlar.  Diğer bir seçenek de, iptal etme isteği nedeniyle erken bitebileceği için, işlem gerçekten tamamlanana kadar Kullanıcı arabirimini yeniden kurmamaya kadar bekleyen işlemleri iptal etmek olacaktır:
 
 ```csharp
 private CancellationTokenSource m_cts;
@@ -474,14 +474,14 @@ public async void btnRun_Click(object sender, EventArgs e)
 }
 ```
 
- Erken kurtarma başka bir <xref:System.Threading.Tasks.Task.WhenAny%2A> örnek, bir <xref:System.Threading.Tasks.Task.Delay%2A> sonraki bölümde ele alındığı gibi, yöntem ile birlikte yöntemi kullanarak içerir.
+ Erken bailout 'ın başka bir örneği, yönteminin <xref:System.Threading.Tasks.Task.WhenAny%2A> <xref:System.Threading.Tasks.Task.Delay%2A> sonraki bölümde anlatıldığı gibi yöntemiyle birlikte kullanılmasını içerir.
 
 ### <a name="taskdelay"></a>Task.Delay
- Asynchronous <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> yöntemyürütme içine duraklatma tanıtmak için yöntemi kullanabilirsiniz.  Bu, yoklama döngüleri oluşturma ve kullanıcı girişinin işlenmesini önceden belirlenmiş bir süre için geciktirme de dahil olmak üzere birçok işlevsellik türü için yararlıdır.  Yöntem, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> bekleme lerde zaman <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> çıkışları uygulamak için birlikte de yararlı olabilir.
+ <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>Bir zaman uyumsuz yöntemin yürütülmesine duraklamalar tanıtmak için yöntemini kullanabilirsiniz.  Bu, yoklama döngüleri oluşturma ve önceden belirlenmiş bir süre için Kullanıcı girişinin işlenmesini erteleme dahil olmak üzere çok sayıda işlevsellik için yararlıdır.  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>Yöntemi, <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> await üzerinde zaman aşımlarını uygulamak için ile birlikte da yararlı olabilir.
 
- Daha büyük bir eşzamanlı işlemin parçası olan bir görevin (örneğin, ASP.NET bir web hizmetinin) tamamlanması çok uzun sürerse, genel işlem özellikle tamamlanmamışsa zarar görebilir.  Bu nedenle, bir eşzamanlı işlemi beklerken zaman dışarı edebilmek önemlidir.  Senkron <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>ve <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> yöntemler zaman dışarı değerleri kabul, <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ancak karşılık gelen <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ve daha önce belirtilen yöntemler yok.  Bunun yerine, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> bir <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> zaman-out uygulamak için kullanabilirsiniz ve birlikte.
+ Daha büyük bir zaman uyumsuz işlemin (örneğin, bir ASP.NET Web hizmeti) parçası olan bir görevin tamamlanabilmesi çok uzun sürerse, bu durum özellikle tamamlanamazsa, genel işlem zarar verebilir.  Bu nedenle, zaman uyumsuz bir işlem beklerken zaman aşımına uğrar.  Zaman uyumlu <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> , <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> yöntemleri zaman aşımı değerlerini kabul eder, ancak karşılık gelen <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ve yukarıda bahsedilen <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> Yöntemler değildir.  Bunun yerine, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> zaman aşımı uygulamak için ve birleşimini kullanabilirsiniz.
 
- Örneğin, Kullanıcı Arabirimi uygulamanızda, bir resim indirmek ve görüntü indirirken Kullanıcı Arabirimi'ni devre dışı bırakmak istediğinizi varsayalım. Ancak, indirme çok uzun sürerse, UI'yi yeniden etkinleştirmek ve karşıdan yüklemeyi atmak istiyorsunuz:
+ Örneğin, Kullanıcı arabirimi uygulamanızda bir görüntü indirmek ve görüntü indirilirken Kullanıcı arabirimini devre dışı bırakmak istediğinizi varsayalım. Ancak indirme çok uzun sürerse, Kullanıcı arabirimini yeniden etkinleştirmek ve indirmeyi atmak istersiniz:
 
 ```csharp
 public async void btnDownload_Click(object sender, EventArgs e)
@@ -508,7 +508,7 @@ public async void btnDownload_Click(object sender, EventArgs e)
 }
 ```
 
- Aynı durum birden çok indirme <xref:System.Threading.Tasks.Task.WhenAll%2A> için de geçerlidir, çünkü bir görevi döndürür:
+ Aynı durum birden çok indirme için geçerlidir, çünkü <xref:System.Threading.Tasks.Task.WhenAll%2A> bir görevi döndürür:
 
 ```csharp
 public async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -533,11 +533,11 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="building-task-based-combinators"></a>Görev Tabanlı Kombinatörler Oluşturma
- Bir görev tamamen bir eşzamanlı işlemi temsil edebilir ve operasyona katılmak, sonuçlarını almak ve benzeri için senkron ve eşzamanlı yetenekler sağlayabildiği için, görevleri oluşturan kombinatörlerin yararlı kitaplıklarını oluşturabilirsiniz daha büyük desenler oluşturun.  Önceki bölümde ele alındığı gibi, .NET Framework birkaç yerleşik kombinör içerir, ancak kendi de oluşturabilirsiniz. Aşağıdaki bölümlerde potansiyel kombinatör yöntemleri ve türleri birkaç örnek sağlar.
+## <a name="building-task-based-combinators"></a>Görev tabanlı kombinatör oluşturma
+ Bir görev, zaman uyumsuz bir işlemi tamamen temsil edebildiğinden ve işlemle birleştirmek için zaman uyumlu ve zaman uyumsuz yetenekler sağladığından, sonuçlarını almakla ve bu şekilde devam ediyorsa, daha büyük desenler oluşturmak için görevler oluşturan yararlı kombinatör kitaplıkları oluşturabilirsiniz.  Önceki bölümde anlatıldığı gibi .NET Framework çeşitli yerleşik kombinatör içerir, ancak kendi kodunuzu da oluşturabilirsiniz. Aşağıdaki bölümlerde olası Combinator yöntemlerine ve türlerine birkaç örnek verilmiştir.
 
 ### <a name="retryonfault"></a>RetryOnFault
- Birçok durumda, önceki bir deneme başarısız olursa bir işlemi yeniden denemek isteyebilirsiniz.  Senkron kod için, bunu gerçekleştirmek için aşağıdaki `RetryOnFault` örnekte olduğu gibi bir yardımcı yöntemi oluşturabilirsiniz:
+ Birçok durumda, önceki bir deneme başarısız olursa bir işlemi yeniden denemek isteyebilirsiniz.  Zaman uyumlu kod için, `RetryOnFault` bunu gerçekleştirmek için aşağıdaki örnekte gibi bir yardımcı yöntem oluşturabilirsiniz:
 
 ```csharp
 public static T RetryOnFault<T>(
@@ -552,7 +552,7 @@ public static T RetryOnFault<T>(
 }
 ```
 
- TAP ile uygulanan eşzamanlı işlemler için hemen hemen aynı yardımcı yöntemi oluşturabilir ve böylece görevleri döndürebilirsiniz:
+ DOKUNARAK uygulanan ve bu nedenle görevleri döndüren zaman uyumsuz işlemler için neredeyse özdeş bir yardımcı yöntem oluşturabilirsiniz:
 
 ```csharp
 public static async Task<T> RetryOnFault<T>(
@@ -567,7 +567,7 @@ public static async Task<T> RetryOnFault<T>(
 }
 ```
 
- Daha sonra bu kombinatörün uygulamanın mantığına yeniden denemeleri kodlamak için kullanabilirsiniz; örneğin:
+ Daha sonra bu Combinator kullanarak yeniden denemeleri uygulamanın mantığına dönüştürebilirsiniz; Örneğin:
 
 ```csharp
 // Download the URL, trying up to three times in case of failure
@@ -575,7 +575,7 @@ string pageContents = await RetryOnFault(
     () => DownloadStringAsync(url), 3);
 ```
 
- İşlevi daha `RetryOnFault` da genişletebilirsiniz. Örneğin, işlev, işlemi `Func<Task>` yeniden ne zaman deneyeceğini belirlemek için yeniden denemeler arasında çağrılacak başka bir işlevi kabul edebilir; örneğin:
+ `RetryOnFault`İşlevi daha fazla genişletebilirsiniz. Örneğin, işlev `Func<Task>` işlemin ne zaman denenmesini anlamak için yeniden denemeler arasında çağrılacak bir tane kabul edebilir. Örneğin:
 
 ```csharp
 public static async Task<T> RetryOnFault<T>(
@@ -591,7 +591,7 @@ public static async Task<T> RetryOnFault<T>(
 }
 ```
 
- Daha sonra işlemi yeniden denemeden önce bir saniye beklemek için aşağıdaki işlevi kullanabilirsiniz:
+ Ardından, işlemi yeniden denemeden önce bir saniye beklemek için işlevini aşağıdaki şekilde kullanabilirsiniz:
 
 ```csharp
 // Download the URL, trying up to three times in case of failure,
@@ -600,8 +600,8 @@ string pageContents = await RetryOnFault(
     () => DownloadStringAsync(url), 3, () => Task.Delay(1000));
 ```
 
-### <a name="needonlyone"></a>NeedOnlyOne
- Bazen, bir işlemin gecikmesini ve başarı şansını artırmak için artıklılılılılılılılığınızdan yararlanabilirsiniz.  Hisse senedi fiyatları sağlayan birden çok web hizmetini düşünün, ancak günün çeşitli saatlerinde, her hizmet farklı kalite ve yanıt süreleri sağlayabilir.  Bu dalgalanmalarla başa çıkmak için tüm web hizmetlerine istekler verebilir ve birinden yanıt alır almaz kalan istekleri iptal edebilirsiniz.  Birden çok işlem başlatma, herhangi bir bekleyen ve daha sonra geri kalanını iptal bu ortak desen uygulamak için daha kolay hale getirmek için bir yardımcı işlevi uygulayabilirsiniz. Aşağıdaki `NeedOnlyOne` örnekteki işlev bu senaryoyu göstermektedir:
+### <a name="needonlyone"></a>Gereksiz bir
+ Bazen bir işlemin gecikme süresini ve başarılı olma olasılığını artırmak için yedekliliğe sahip olabilirsiniz.  Hisse senedi fiyatları sağlayan birden çok Web hizmeti düşünün, ancak günün çeşitli saatlerinde her hizmet farklı düzeylerde kalite ve yanıt süreleri sağlayabilir.  Bu dalgalanmalara ulaşmak için tüm Web hizmetlerine istek verebilir ve birinden yanıt aldığınızda, kalan istekleri iptal edebilirsiniz.  Birden çok işlem başlatmanın bu ortak deseninin uygulanmasını kolaylaştırmak için bir yardımcı işlevi uygulayabilir, herhangi bir bekliyor ve geri kalanını iptal edebilirsiniz. `NeedOnlyOne`Aşağıdaki örnekteki işlev bu senaryoyu göstermektedir:
 
 ```csharp
 public static async Task<T> NeedOnlyOne(
@@ -621,7 +621,7 @@ public static async Task<T> NeedOnlyOne(
 }
 ```
 
- Daha sonra aşağıdaki gibi bu işlevi kullanabilirsiniz:
+ Daha sonra bu işlevi aşağıdaki şekilde kullanabilirsiniz:
 
 ```csharp
 double currentPrice = await NeedOnlyOne(
@@ -630,8 +630,8 @@ double currentPrice = await NeedOnlyOne(
     ct => GetCurrentPriceFromServer3Async("msft", ct));
 ```
 
-### <a name="interleaved-operations"></a>Ara İşlemler
- Çok büyük görev kümeleriyle <xref:System.Threading.Tasks.Task.WhenAny%2A> çalışırken, ayrılmalar arası senaryoyu desteklemek için yöntemi kullanmada olası bir performans sorunu vardır. Her arama, her göreve kaydolarak devam edilmesiyle <xref:System.Threading.Tasks.Task.WhenAny%2A> sonuçlanır. N görev sayısı için bu, ayrılma işleminin ömrü boyunca oluşturulan O(N<sup>2)</sup>devamlarına neden olur. Büyük bir görev kümesiyle çalışıyorsanız, performans sorununu gidermek için`Interleaved` bir kombinatör (aşağıdaki örnekte) kullanabilirsiniz:
+### <a name="interleaved-operations"></a>Araya eklemeli Işlemler
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>Çok büyük görev kümeleriyle çalışırken bir araya ekleme senaryosunu desteklemek için yöntemini kullanmayla ilgili olası bir performans sorunu vardır. <xref:System.Threading.Tasks.Task.WhenAny%2A>Her bir görevde bir devamlılığın sonucunu elde etmek için her çağrı. N sayıda görev için, bu, araya ekleme işleminin ömrü boyunca oluşturulan (N<sup>2</sup>) devamlılıklar ile sonuçlanır. Büyük bir görev kümesiyle çalışıyorsanız, `Interleaved` performans sorununu gidermek için bir Combinator (aşağıdaki örnekte) kullanabilirsiniz:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -660,7 +660,7 @@ static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
 }
 ```
 
- Daha sonra, görevlerin sonuçlarını tamamlanırken işlemek için kombinatörü kullanabilirsiniz; örneğin:
+ Daha sonra, görevlerin sonuçlarını tamamlarsa işlemek için Combinator kullanabilirsiniz; Örneğin:
 
 ```csharp
 IEnumerable<Task<int>> tasks = ...;
@@ -671,8 +671,8 @@ foreach(var task in Interleaved(tasks))
 }
 ```
 
-### <a name="whenallorfirstexception"></a>WhenallOrFirstException
- Belirli dağılım/toplama senaryolarında, bu hatalardan biri hatalar olmadığı sürece, bir kümedeki tüm görevleri beklemek isteyebilirsiniz ve bu durumda özel durum oluşur oluşmaz beklemeyi durdurmak isteyebilirsiniz.  Bunu aşağıdaki örnekte olduğu gibi `WhenAllOrFirstException` bir kombinatör yöntemiyle gerçekleştirebilirsiniz:
+### <a name="whenallorfirstexception"></a>WhenAllOrFirstException
+ Belirli dağılım/toplama senaryolarında, bir küme içindeki tüm görevleri beklemek isteyebilirsiniz, bu durumda, özel durum meydana geldiğinde beklemeyi durdurmak isteyebilirsiniz.  Bunu, aşağıdaki örnekte olduğu gibi bir Combinator yöntemi ile gerçekleştirebilirsiniz `WhenAllOrFirstException` :
 
 ```csharp
 public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
@@ -694,11 +694,11 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 }
 ```
 
-## <a name="building-task-based-data-structures"></a>Görev Tabanlı Veri Yapıları Oluşturma
- Özel görev tabanlı kombinleyiciler oluşturma yeteneğine ek olarak, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> içinde bir veri yapısına sahip ve bu da hem bir eşzamanlı işlemin sonuçlarını hem de onunla birleştirilmesi için gerekli eşitlemeyi temsil eder, bu da onu eşzamanlı senaryolarda kullanılacak özel veri yapıları oluşturmak için çok güçlü bir tür yapar.
+## <a name="building-task-based-data-structures"></a>Görev tabanlı veri yapıları oluşturma
+ Özel görev tabanlı kombinatör oluşturma özelliğine ek olarak, ' de bir veri yapısına sahip olmak ve <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> hem zaman uyumsuz bir işlemin sonuçlarını hem de bununla birleştirmek için gereken eşitlemeyi temsil eden, zaman uyumsuz senaryolarda kullanılacak özel veri yapılarını oluşturmak için çok güçlü bir tür yapar.
 
-### <a name="asynccache"></a>AsyncÖnbellek
- Bir görevin önemli bir yönü birden fazla tüketiciye dağıtılabilir, hepsi de onu bekleyebilir, onunla devam ları kaydedebilir, <xref:System.Threading.Tasks.Task%601>sonucunu veya özel durumlarını (durumunda) alabilir.  Bu <xref:System.Threading.Tasks.Task> yapar <xref:System.Threading.Tasks.Task%601> ve mükemmel bir asynchronöz önbelleğe alma altyapısında kullanılmak üzere uygundur.  Burada küçük ama güçlü bir asynchronous önbellek üstüne <xref:System.Threading.Tasks.Task%601>inşa bir örnek:
+### <a name="asynccache"></a>AsyncCache
+ Bir görevin önemli bir yönü, birden fazla tüketiciye, hepsi tarafından bekleme, devamlılık veya özel durumları (söz konusu olduğunda) elde ettirebilir <xref:System.Threading.Tasks.Task%601> .  Bu <xref:System.Threading.Tasks.Task> , <xref:System.Threading.Tasks.Task%601> zaman uyumsuz bir önbelleğe alma altyapısında kullanılmasını sağlar ve idealdir.  Aşağıda, üzerine inşa eden küçük ancak güçlü bir zaman uyumsuz önbellek örneği verilmiştir <xref:System.Threading.Tasks.Task%601> :
 
 ```csharp
 public class AsyncCache<TKey, TValue>
@@ -725,16 +725,16 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- [AsyncCache\<TKey,TValue>](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) sınıfı, bir alır `TKey` ve bir <xref:System.Threading.Tasks.Task%601>döndürür bir işlevi oluşturucu bir temsilci olarak kabul eder.  Önbellekten daha önce erişilen değerler iç sözlükte depolanır ve önbelleğe aynı anda erişilmiş olsa bile anahtar başına yalnızca bir görevin oluşturulmasını `AsyncCache` sağlar.
+ [AsyncCache \<TKey,TValue> ](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) sınıfı, Oluşturucusu için bir temsilci olarak kabul eder `TKey` ve döndürür <xref:System.Threading.Tasks.Task%601> .  Ön belleğe daha önce erişilen tüm değerler iç sözlükte depolanır ve `AsyncCache` önbelleğe eşzamanlı olarak erişilse bile, her anahtar için yalnızca bir görevin oluşturulmasını sağlar.
 
- Örneğin, indirilen web sayfaları için bir önbellek oluşturabilirsiniz:
+ Örneğin, indirilen Web sayfaları için bir önbellek oluşturabilirsiniz:
 
 ```csharp
 private AsyncCache<string,string> m_webPages =
     new AsyncCache<string,string>(DownloadStringAsync);
 ```
 
- Daha sonra, bir web sayfasının içeriğine ihtiyaç duyduğunuzda bu önbelleği eşzamanlı yöntemlerle kullanabilirsiniz. Sınıf, `AsyncCache` mümkün olduğunca az sayfa indirmenizi sağlar ve sonuçları önbelleğe almaz.
+ Böylece, bir Web sayfasının içeriğine ihtiyacınız olduğunda bu önbelleği zaman uyumsuz metotlarda kullanabilirsiniz. `AsyncCache`Sınıfı mümkün olduğunca az sayfa indirmenizi ve sonuçları önbelleğe almanızı sağlar.
 
 ```csharp
 private async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -749,9 +749,9 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ```
 
 ### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection
- Eşzamanlı etkinlikleri koordine etmek için veri yapıları oluşturmak için görevleri de kullanabilirsiniz.  Klasik paralel tasarım desenlerinden birini düşünün: üretici/tüketici.  Bu modelde, üreticiler tüketiciler tarafından tüketilen verileri üretirler ve üreticiler ve tüketiciler paralel olarak çalışabilirler. Örneğin, tüketici, daha önce madde 2'yi üreten bir üretici tarafından oluşturulan madde 1'i işler.  Üretici/tüketici modeli için, tüketicilerin yeni verilerden haberdar edilebilmeleri ve mevcut olduğunda bulabilmeleri için üreticiler tarafından oluşturulan çalışmayı depolamak için her zaman bazı veri yapısına ihtiyacınız vardır.
+ Ayrıca, zaman uyumsuz etkinlikleri koordine etmek üzere veri yapıları oluşturmak için görevleri de kullanabilirsiniz.  Klasik paralel tasarım desenlerinden birini göz önünde bulundurun: Producer/Consumer.  Bu düzende, üreticileri tüketiciler tarafından tüketilen verileri oluşturur ve üreticileri ve tüketiciler paralel olarak çalışabilir. Örneğin, tüketici daha önce öğe 2 ' yi üreten bir üretici tarafından oluşturulan öğe 1 ' i işler.  Üretici/tüketici düzeninde, müşteriler yeni veriler hakkında bildirim almak ve kullanılabilir olduğunda bulmak için üreticileri tarafından oluşturulan işi depolamak üzere bazı veri yapısına ihtiyacınız vardır.
 
- Asynchronous yöntemlerinin üretici ve tüketici olarak kullanılmasını sağlayan görevlerin üzerine inşa edilmiş basit bir veri yapısı aşağıda verilmiştir:
+ Aşağıda, zaman uyumsuz yöntemlerin üreticileri ve tüketiciler olarak kullanılmasını sağlayan görevlerin üzerine oluşturulmuş basit bir veri yapısı verilmiştir:
 
 ```csharp
 public class AsyncProducerConsumerCollection<T>
@@ -790,7 +790,7 @@ public class AsyncProducerConsumerCollection<T>
 }
 ```
 
- Bu veri yapısı yerinde olduğundan, aşağıdaki gibi kod yazabilirsiniz:
+ Bu veri yapısıyla birlikte, aşağıdaki gibi bir kod yazabilirsiniz:
 
 ```csharp
 private static AsyncProducerConsumerCollection<int> m_data = …;
@@ -810,7 +810,7 @@ private static void Produce(int data)
 }
 ```
 
-Ad <xref:System.Threading.Tasks.Dataflow> alanı, <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> benzer bir şekilde kullanabileceğiniz, ancak özel bir koleksiyon türü oluşturmak zorunda kalmadan türünü içerir:
+<xref:System.Threading.Tasks.Dataflow>Ad alanı, <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> benzer bir şekilde kullanabileceğiniz, ancak özel bir koleksiyon türü oluşturmak zorunda kalmadan türü içerir:
 
 ```csharp
 private static BufferBlock<int> m_data = …;
@@ -831,10 +831,10 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> İsim <xref:System.Threading.Tasks.Dataflow> alanı **NuGet**üzerinden .NET Framework 4.5'te mevcuttur. Ad alanını içeren derlemeyi <xref:System.Threading.Tasks.Dataflow> yüklemek için Visual Studio'da projenizi açın, Proje menüsünden **NuGet Paketlerini Yönet'i** seçin ve Microsoft.Tpl.Dataflow paketini çevrimiçi olarak arayın.
+> <xref:System.Threading.Tasks.Dataflow>Ad alanı, **NuGet**aracılığıyla .NET Framework 4,5 ' de kullanılabilir. Ad alanını içeren derlemeyi yüklemek için <xref:System.Threading.Tasks.Dataflow> projenizi Visual Studio 'da açın, proje menüsünden **NuGet Paketlerini Yönet** ' i seçin ve Microsoft. tpl. Dataflow paketini çevrimiçi olarak arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [Görev Tabanlı Zaman Uyumsuz Deseni Uygulama](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [Görev Tabanlı Zaman Uyumsuz Desen (TAP)](task-based-asynchronous-pattern-tap.md)
+- [Görev Tabanlı Zaman Uyumsuz Deseni Uygulama](implementing-the-task-based-asynchronous-pattern.md)
+- [Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma](interop-with-other-asynchronous-patterns-and-types.md)

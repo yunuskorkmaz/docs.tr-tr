@@ -8,47 +8,47 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 8abe64476a5d3d1319dfa30dd7a06dc2bb541a0f
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 5a4edca70844a2b2a3972381b34efe85664f353d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904620"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276042"
 ---
 # <a name="framework-design-guidelines"></a>Çerçeve Tasarım Yönergeleri
 Bu bölüm, .NET Framework genişleten ve etkileşime geçen kitaplıklar tasarlamak için yönergeler sağlar. Amaç, geliştirme için kullanılan programlama dilinden bağımsız bir Birleşik programlama modeli sunarak, kitaplık tasarımcılarının API tutarlılığını ve kullanım kolaylığını sağladığından yardım sağlamaktır. .NET Framework genişleten sınıfları ve bileşenleri geliştirirken bu tasarım kılavuzlarını izlemenizi öneririz. Tutarsız kitaplık tasarımı, geliştirici üretkenliğini ve etkilenmeden benimsemesini olumsuz etkiler.  
   
- Yönergeler `Do`, `Consider`, `Avoid`ve `Do not`koşullara önek olarak basit öneriler olarak düzenlenir. Bu yönergeler, sınıf kitaplığı tasarımcılarının farklı çözümler arasındaki dengeleri anlamalarına yardımcı olmak için tasarlanmıştır. İyi kitaplık tasarımının bu tasarım kılavuzlarını ihlal etmeniz gerektiği durumlar olabilir. Bu tür durumlar nadir olmalıdır ve kararınız için açık ve ilgi çekici bir nedeniniz olması önemlidir.  
+ Yönergeler,, ve koşulları ön eki olan basit öneriler olarak `Do` düzenlenir `Consider` `Avoid` `Do not` . Bu yönergeler, sınıf kitaplığı tasarımcılarının farklı çözümler arasındaki dengeleri anlamalarına yardımcı olmak için tasarlanmıştır. İyi kitaplık tasarımının bu tasarım kılavuzlarını ihlal etmeniz gerektiği durumlar olabilir. Bu tür durumlar nadir olmalıdır ve kararınız için açık ve ilgi çekici bir nedeniniz olması önemlidir.  
   
  Bu yönergeler kitap *çerçevesi tasarım yönergelerinden alınmıştır: kurallar, deyimler ve yeniden kullanılabilir .NET kitaplıkları, 2. sürüm*, Vazysztof Cwalina ve atacan Abkms tarafından yapılır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Adlandırma Kuralları](../../../docs/standard/design-guidelines/naming-guidelines.md)  
+ [Adlandırma yönergeleri](naming-guidelines.md)  
  Derleme derlemeleri, ad alanları, türler ve sınıf kitaplıkları içindeki Üyeler için yönergeler sağlar.  
   
- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)  
+ [Tür tasarım yönergeleri](type.md)  
  Statik ve soyut sınıflar, arabirimler, numaralandırmalar, yapılar ve diğer türleri kullanmak için yönergeler sağlar.  
   
- [Üye Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/member.md)  
+ [Üye tasarımı yönergeleri](member.md)  
  Özellikleri, yöntemleri, oluşturucuları, alanları, olayları, işleçleri ve parametreleri tasarlamak ve kullanmak için yönergeler sağlar.  
   
- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+ [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)  
  Olaylar, sanal üyeler ve geri çağırmalar kullanılarak altsınıflama gibi genişletilebilirlik mekanizmalarını açıklar ve çerçeve gereksinimlerinizi en iyi şekilde karşılayan mekanizmaların nasıl seçileceğini açıklar.  
   
- [Özel Durumlar için Tasarım Yönergeleri](../../../docs/standard/design-guidelines/exceptions.md)  
+ [Özel Durumlar için Tasarım Yönergeleri](exceptions.md)  
  Özel durumları tasarlamak, oluşturmak ve yakalamak için tasarım yönergeleri açıklar.  
   
- [Kullanım Yönergeleri](../../../docs/standard/design-guidelines/usage-guidelines.md)  
+ [Kullanım yönergeleri](usage-guidelines.md)  
  Diziler, öznitelikler ve Koleksiyonlar gibi ortak türleri kullanma, serileştirme destekleme ve eşitlik işleçlerini aşırı yükleme için yönergeleri açıklar.  
   
- [Ortak Tasarım Desenleri](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Ortak tasarım desenleri](common-design-patterns.md)  
  Bağımlılık özelliklerini seçme ve uygulama için yönergeler sağlar.  
   
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*  
   
- *İzni Pearson eğitim, Inc. tarafından yeniden yazdırılmaları [çerçeve tasarım yönergeleri: kuralları, deyimlerini ve yeniden kullanılabilir .NET kitaplıkları, sürüm 2 için desenler](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina ve Brad Abrams, 22 Eki 2008 tarafından yayımlanan Microsoft Windows geliştirme serisi bir parçası olarak Addison Wesley Professional.*  
+ *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel bakış](../../../docs/framework/get-started/overview.md)
-- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)
+- [Genel Bakış](../../framework/get-started/overview.md)
+- [Geliştirme Kılavuzu](../../framework/development-guide.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379908"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290947"
 ---
 # <a name="assemblies-in-net"></a>.NET’te bütünleştirilmiş kodlar
 
@@ -86,7 +86,7 @@ Derlemeler içerik, sürüm oluşturma ve Bağımlılıklar hakkında bilgi içe
 Bir uygulamada bir derlemeyi kullanmak için buna bir başvuru eklemeniz gerekir. Bir derlemeye başvurulduktan sonra, tüm erişilebilir türler, özellikler, Yöntemler ve ad alanlarının diğer üyeleri, kodu kaynak dosyanızın bir parçası olduğundan, uygulamanız için kullanılabilir.
 
 > [!NOTE]
-> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya *. csproj* veya *. vbproj* projesine derleme için bir [ \< packagereference>](../../core/tools/dependencies.md#the-packagereference-element) öğesi ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya `-reference` [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
+> .NET sınıf kitaplığındaki çoğu derlemeye otomatik olarak başvurulur. Bir sistem derlemesine otomatik olarak başvurulmazsa, .NET Core için derlemeyi içeren NuGet paketine bir başvuru ekleyebilirsiniz. Visual Studio 'da NuGet paket yöneticisini kullanın veya [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) *. csproj* veya *. vbproj* projesine derleme için bir öğe ekleyin. .NET Framework, Visual Studio 'da **Başvuru Ekle** iletişim kutusunu kullanarak veya `-reference` [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) veya [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) derleyicileri için komut satırı seçeneğini kullanarak derlemeye bir başvuru ekleyebilirsiniz.
 
 C# ' de, tek bir uygulamada aynı derlemenin iki sürümünü kullanabilirsiniz. Daha fazla bilgi için bkz. [extern diğer ad](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -102,8 +102,8 @@ C# ' de, tek bir uygulamada aynı derlemenin iki sürümünü kullanabilirsiniz.
 |[Derleme sürümü oluşturma](versioning.md)|.NET Framework sürüm oluşturma ilkesine genel bakış.|
 |[Derleme yerleştirme](../../framework/app-domains/assembly-placement.md)|Derlemelerin nerede bulunacağı.|
 |[Derlemeler ve yan yana yürütme](side-by-side-execution.md)|Çalışma zamanının veya derlemenin birden çok sürümünü aynı anda kullanın.|
-|[Dinamik metotları ve bütünleştirilmiş kodları yayma](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler oluşturma.|
-|[Çalışma zamanının derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework çalışma zamanında derleme başvurularını nasıl çözümler.|
+|[Dinamik metotları ve bütünleştirilmiş kodları yayma](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Dinamik derlemeler oluşturma.|
+|[Çalışma zamanının derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework çalışma zamanında derleme başvurularını nasıl çözümler.|
 
 ## <a name="reference"></a>Başvuru
 

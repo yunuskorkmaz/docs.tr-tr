@@ -14,262 +14,262 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160020"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276154"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
-Niceleyiciler, eşleşmenin bulunabilmesi için girişte bir karakter, grup veya karakter sınıfının kaç örneğinin bulunması gerektiğini belirtir.  Aşağıdaki tabloda .NET tarafından desteklenen niceleyiciler listelenir.  
+Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane karakter, Grup veya karakter sınıfının olması gerektiğini belirtir.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik belirteçleri listelenmektedir.  
   
-|Açgözlü niceleyici|Tembel niceleyici|Açıklama|  
+|Greedy nicelik belirteci|Geç nicelik belirteci|Description|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Sıfır veya daha fazla kez eşleştirin.|  
 |`+`|`+?`|Bir veya daha fazla kez eşleştirin.|  
-|`?`|`??`|Sıfırı ya da bir kez eşleştirin.|  
-|`{`*n*`}`|`{`*n*`}?`|Tam olarak *n* kez maç.|  
-|`{`*n*`,}`|`{`*n*`,}?`|En az *n* kez eşleştirin.|  
-|`{`*n* `,` *m*`}`|`{`*n* `,` *m*`}?`|*N'den* *m'ye* kadar olan zamanları eşleştirin.|  
+|`?`|`??`|Sıfır veya bir kez eşleştirin.|  
+|`{`*n*`}`|`{`*n*`}?`|Tam *n* kez Eşleştir.|  
+|`{`*n*`,}`|`{`*n*`,}?`|En az *n* kez Eşleştir.|  
+|`{`*n* `,` *e*`}`|`{`*n* `,` *e*`}?`|*N* ile *k* arasında bir kez eşleştirin.|  
   
- Miktarları `n` `m` ve onsa sabitleri vardır. Normalde, niceleyiciler açgözlüdür; normal ifade altyapısının belirli desenlerdeki birçok olayla mümkün olduğunca eşleşmesine neden olurlar. `?` Karakteri bir niceleyiciye eklemek onu tembelleştirir; normal ifade altyapısının mümkün olduğunca az olayla eşleşmesine neden olur. Açgözlü ve tembel niceleyiciler arasındaki farkın tam bir açıklaması için, bu konuda daha sonra bölüm [Açgözlü ve Tembel Quantifiers](#Greedy) bakın.  
+ Miktarlar `n` ve `m` tamsayı sabitleri. Normalde, nicelik belirteçleri DOYUMLAR; normal ifade altyapısının mümkün olduğunca çok sayıda tekrarla eşleşmesini sağlar. `?`Karakteri bir nicelik sonuna eklemek, yavaş hale getirir; normal ifade altyapısının mümkün olduğunca az oluşum ile eşleşmesini sağlar. Doyumsuz ve yavaş nicelik belirteçleri arasındaki fark hakkında açıklayıcı bir açıklama için, bu konunun ilerleyen kısımlarında bulunan [doyumsuz ve geç nicelik belirteçleri](#Greedy) bölümüne bakın.  
   
 > [!IMPORTANT]
-> İç içe niceleyiciler (örneğin, normal ifade `(a*)*` deseni gibi) giriş dizesinde karakter sayısının üstel bir işlevi olarak, normal ifade altyapısının gerçekleştirmesi gereken karşılaştırma sayısını artırabilir. Bu davranış ve geçici geçici işleri hakkında daha fazla bilgi için [Geri İzleme'ye](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)bakın.  
+> Nicelik belirteçleri iç içe (örneğin, normal ifade deseninin olduğu gibi `(a*)*` ), giriş dizesindeki karakter sayısının üstel işlevi olarak, normal ifade altyapısının gerçekleştirmesi gereken karşılaştırmalar sayısını artırabilir. Bu davranış ve geçici çözümleri hakkında daha fazla bilgi için bkz. [geri izleme](backtracking-in-regular-expressions.md).  
   
-## <a name="regular-expression-quantifiers"></a>Düzenli İfade Niceleyicileri  
- Aşağıdaki bölümlerde .NET düzenli ifadeleri tarafından desteklenen niceleyiciler listelenir.  
+## <a name="regular-expression-quantifiers"></a>Normal Ifade nicelik belirteçleri  
+ Aşağıdaki bölümlerde .NET normal ifadeleri tarafından desteklenen nicelik belirteçleri listelenmektedir.  
   
 > [!NOTE]
-> *, +, ?, {, ve } karakterleri normal bir ifade deseninde karşılaşılırsa, normal ifade altyapısı bunları bir [karakter sınıfına](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)dahil edilmedikçe niceleyici veya niceleyici yapılarının bir parçası olarak yorumlar. Bunları bir karakter sınıfının dışındaki gerçek karakterler olarak yorumlamak için, onlardan önce bir ters eğik çizgi ile kaçmalısınız. Örneğin, normal `\*` bir ifade desenindeki dize, gerçek bir yıldız\*işareti (" ") karakter olarak yorumlanır.  
+> Normal ifade düzeninde *, +,?, {, ve} karakter ile karşılaşılırsa, normal ifade altyapısı onları nicelik belirteçleri veya bir [karakter sınıfına](character-classes-in-regular-expressions.md)dahil olmadıkları sürece belirleyici yapıların bir parçası olarak yorumlar. Bunları bir karakter sınıfı dışında değişmez karakterler olarak yorumlamak için, üzerlerine ters eğik çizgi koyarak kaçış yapmanız gerekir. Örneğin, `\*` bir normal ifade deseninin dizesi, sabit bir yıldız işareti (" \* ") karakteri olarak yorumlanır.  
   
-### <a name="match-zero-or-more-times-"></a>Match Zero veya More Times: *  
- `*` Niceleyici, önceki öğe sıfır veya daha fazla kez eşleşir. `{0,}` Niceleyiciye eşdeğerdir. `*`tembel eşdeğeri olan açgözlü bir niceleyicidir. `*?`  
+### <a name="match-zero-or-more-times-"></a>Sıfır veya daha fazla kez eşleştir: *  
+ `*`Nicelik belirteci önceki öğeyle sıfır veya daha fazla kez eşleşir. `{0,}`Nicelik belirleyici eşdeğerdir. `*`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `*?` .  
   
- Aşağıdaki örnekte bu normal ifade gösteriş. Giriş dizesinde dokuz basamak, beş eşler desen`95`ve `929` `9219`dört `9919`( , , , ve ) yok.  
+ Aşağıdaki örnekte bu normal ifade gösterilmektedir. Giriş dizesindeki dokuz basamak, (,,, ve) ve dört (,, `95` `929` `9219` , ve) düzeniyle eşleşir `9919` .  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`91*`|Bir "9"u sıfır veya daha fazla "1" karakterle eşleştirin.|  
+|`91*`|"9" öğesini ve ardından sıfır veya daha fazla "1" karakteri eşleştirin.|  
 |`9*`|Sıfır veya daha fazla "9" karakteri eşleştirin.|  
 |`\b`|Bir sözcük sınırında bit.|  
   
-### <a name="match-one-or-more-times-"></a>Bir veya Daha Fazla Kez Eşleştir: +  
- `+` Niceleyici, önceki öğeyle bir veya daha fazla kez eşleşir. Bu eşdeğerdir `{1,}`. `+`tembel eşdeğeri olan açgözlü bir niceleyicidir. `+?`  
+### <a name="match-one-or-more-times-"></a>Bir veya daha fazla kez eşleştir: +  
+ `+`Nicelik belirteci önceki öğeyle bir veya daha fazla kez eşleşir. Eşdeğerdir `{1,}` . `+`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `+?` .  
   
- Örneğin, normal ifade `\ban+\w*?\b` harfi `n`bir veya daha fazla `a` örnek ardından harf ile başlayan tüm sözcükleri eşleştirmeye çalışır. Aşağıdaki örnekte bu normal ifade gösteriş. Normal ifade, , `an` `annual`, `announcement`, `antique`ve , kelimeleri `autumn` eşleşir ve doğru bir şekilde eşleşmiyor ve `all`.  
+ Örneğin, normal ifade, `\ban+\w*?\b` harfle başlayan tüm kelimeleri ve `a` sonra bir veya daha fazla harf örneğini eşleştirmeyi dener `n` . Aşağıdaki örnekte bu normal ifade gösterilmektedir. Normal ifade,,, `an` ve ile `annual` eşleşir `announcement` `antique` ve doğru şekilde eşleşemez `autumn` `all` .  
   
  [!code-csharp[RegularExpressions.Quantifiers#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#2)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`an+`|Bir "a" ve ardından bir veya daha fazla "n" karakterini eşleştirin.|  
-|`\w*?`|Bir sözcük karakterini sıfır veya daha fazla kez, ancak mümkün olduğunca az kez eşleştirin.|  
+|`an+`|Bir "a" ve arkasından bir veya daha fazla "n" karakteri eşleştirin.|  
+|`\w*?`|Bir sözcük karakterini sıfır veya daha fazla kez ve mümkün olduğunca az eşleştirin.|  
 |`\b`|Bir sözcük sınırında bit.|  
   
-### <a name="match-zero-or-one-time-"></a>Maç Sıfır veya One Time: ?  
- `?` Niceleyici, bir önceki öğe sıfır veya bir kez eşleşir. Bu eşdeğerdir `{0,1}`. `?`tembel eşdeğeri olan açgözlü bir niceleyicidir. `??`  
+### <a name="match-zero-or-one-time-"></a>Sıfır veya bir kez eşleştir:?  
+ `?`Nicelik belirteci, önceki öğeyle sıfır veya bir kez eşleşir. Eşdeğerdir `{0,1}` . `?`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `??` .  
   
- Örneğin, normal ifade `\ban?\b` harfi sıfır veya harfin `a` `n`bir örneği ardından gelen harfle başlayan tüm sözcükleri eşleştirmeye çalışır. Başka bir deyişle, kelimeleri `a` eşleştirmeye `an`çalışır ve . Aşağıdaki örnekte bu normal ifade gösteriş.  
+ Örneğin, normal ifade, `\ban?\b` harfle başlayan tüm kelimeleri ve `a` ardından sıfır veya mektubun bir örneğini eşleştirmeyi dener `n` . Diğer bir deyişle, kelimeleri ve sözcüklerini eşleştirmeyi dener `a` `an` . Aşağıdaki örnekte bu normal ifade gösterilmektedir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#3)]
  [!code-vb[RegularExpressions.Quantifiers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#3)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`an?`|Bir "a" ve ardından sıfır veya bir "n" karakterini eşleştirin.|  
+|`an?`|Bir "a" ve arkasından sıfır veya bir "n" karakteri ile eşleştirin.|  
 |`\b`|Bir sözcük sınırında bit.|  
   
-### <a name="match-exactly-n-times-n"></a>Tam olarak n Times maç: {n}  
- `{` *n* n`}` ölçüleyicisi, *n'nin* herhangi bir tamsayı olduğu önceki öğeyle tam olarak *n* kez eşleşir. `{`*n* `}` olan tembel eşdeğer `{` *n*`}?`açgözlü bir niceleyici olduğunu .  
+### <a name="match-exactly-n-times-n"></a>Tam n kez eşleştir: {n}  
+ `{` *N* `}` nicelik belirteci önceki öğeyle tam olarak *n* kez eşleşir, burada *n* herhangi bir tamsayıdır. `{`*n* `}` , geç eşdeğeri n olan doyumsuz nicelik belirleyicisi `{` *n* `}?` .  
   
- Örneğin, normal ifade `\b\d+\,\d{3}\b` bir sözcük sınırını eşleştirmeye çalışır ve ardından bir veya daha fazla ondalık basamak ve ardından üç ondalık basamak ve ardından bir sözcük sınırı nı takip eder. Aşağıdaki örnekte bu normal ifade gösteriş.  
+ Örneğin, normal ifade bir `\b\d+\,\d{3}\b` sözcük sınırını, ardından bir veya daha fazla ondalık basamağı ve ardından bir sözcük sınırının ardından üç ondalık basamak ile eşleştirmeye çalışır. Aşağıdaki örnekte bu normal ifade gösterilmektedir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#4](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#4)]
  [!code-vb[RegularExpressions.Quantifiers#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#4)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
-|`\,`|Virgül karakterini eşleştirin.|  
+|`\,`|Virgül karakteriyle eşleştirin.|  
 |`\d{3}`|Üç ondalık basamakla eşleş.|  
 |`\b`|Bir sözcük sınırında bit.|  
   
-### <a name="match-at-least-n-times-n"></a>En Az n Kez Maç: {n,}  
- `{` *n* n`,}` ölçüleyicisi, *n'nin* herhangi bir karşıcı olduğu önceki öğeyle en az *n* kez eşleşir. `{`*n* `,}` olan tembel eşdeğer `{` *n*`,}?`açgözlü bir niceleyici olduğunu .  
+### <a name="match-at-least-n-times-n"></a>En az n kez eşleştir: {n,}  
+ `{` *N* `,}` nicelik belirteci önceki öğeyle en az *n* kez eşleşir, burada *n* herhangi bir tamsayıdır. `{`*n* `,}` , geç eşdeğeri n olan doyumsuz nicelik belirleyicisi `{` *n* `,}?` .  
   
- Örneğin, normal ifade, `\b\d{2,}\b\D+` bir sözcük sınırı ve ardından en az iki basamak la eşleşmeye çalışır ve ardından bir sözcük sınırı ve basamaksız bir karakter. Aşağıdaki örnekte bu normal ifade gösteriş. Normal ifade, yalnızca bir `"7 days"` ondalık basamak içerdiğinden tümcecikle eşleşmiyor, ancak tümceciklerle `"10 weeks and 300 years"`başarıyla eşleşiyor.  
+ Örneğin, normal ifade, `\b\d{2,}\b\D+` en az iki basamakla ve ardından bir sözcük sınırı ve basamaklı bir karakter gelen bir sözcük sınırını eşleştirmeyi dener. Aşağıdaki örnekte bu normal ifade gösterilmektedir. Normal ifade `"7 days"` yalnızca bir ondalık basamak içerdiğinden, tümcecikle eşleşemez, ancak ifadelerle başarıyla eşleşiyor `"10 weeks and 300 years"` .  
   
  [!code-csharp[RegularExpressions.Quantifiers#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#5)]
  [!code-vb[RegularExpressions.Quantifiers#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#5)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`\d{2,}`|En az iki ondalık basamak eşleştirin.|  
+|`\d{2,}`|En az iki ondalık basamakla eşleştirin.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
-|`\D+`|En az bir ondalık olmayan basamak eşleştirin.|  
+|`\D+`|En az bir ondalık olmayan basamakla eşleştirin.|  
   
-### <a name="match-between-n-and-m-times-nm"></a>n ve m Saatleri Arasındaki Eşleşme: {n,m}  
- `{` *n*n`,`*m* `}` m niceleyici, bir önceki elemanla en az *n* kez eşleşir, ancak *n* ve *m'nin* sayılattığı *m* kereden fazla olamaz. `{`*n*`,`*m* `}` olan tembel eşdeğer `{` *n*`,`*m*`}?`olan açgözlü bir niceleyici olduğunu .  
+### <a name="match-between-n-and-m-times-nm"></a>N ve y zamanları arasında eşleştir: {n, d}  
+ `{` *N*. `,` *m* `}` nicelik belirteci, önceki öğeyle en az *n* kez eşleşir, ancak *n* ve *d* tamsayılardır. *m* `{`*n* `,` *k* `}` , geç eşdeğeri `{` *n* `,` *d*olan doyumsuz nicelik belirleyicgidir `}?` .  
   
- Aşağıdaki örnekte, normal `(00\s){2,4}` ifade iki sıfır basamak iki ve dört oluşumları arasında eşleşmeye çalışır ve ardından bir boşluk. Giriş dizesinin son bölümünün bu deseni en fazla dört yerine beş kez içerdiğini unutmayın. Ancak, bu alt dizenin yalnızca ilk bölümü (boşluk ve beşinci sıfır çifti) normal ifade deseniyle eşleşir.  
+ Aşağıdaki örnekte, normal ifade `(00\s){2,4}` iki sıfır basamağının iki ve dört tekrarı ile izleyen bir boşluk ile eşleştirmeye çalışır. Giriş dizesinin son bölümünün, en fazla dört kez bu kalıbı içerdiğini unutmayın. Ancak, bu alt dizenin yalnızca başlangıç kısmı (alana kadar ve sıfır ikilisi) normal ifade düzeniyle eşleşir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#6](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#6)]
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
-### <a name="match-zero-or-more-times-lazy-match-"></a>Match Zero or More Times (Lazy Match): *?  
- `*?` Niceleyici, önceki öğe sıfır veya daha fazla kez eşleşir, ancak mümkün olduğunca az kez. Bu açgözlü niceleyici tembel `*`meslektaşıdır.  
+### <a name="match-zero-or-more-times-lazy-match-"></a>Sıfır veya daha fazla kez Eşleştir (geç eşleşme): *?  
+ `*?`Nicelik belirteci önceki öğeyle sıfır veya daha fazla kez eşleşir, ancak mümkün olduğunca az. Bu, doyumsuz nicelik sayısının geç karşılığından oluşur `*` .  
   
- Aşağıdaki örnekte, normal `\b\w*?oo\w*?\b` ifade dize `oo`içeren tüm sözcükleri eşleşir.  
+ Aşağıdaki örnekte, normal ifade `\b\w*?oo\w*?\b` dizeyi içeren tüm sözcüklerle eşleşir `oo` .  
   
  [!code-csharp[RegularExpressions.Quantifiers#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#7)]
  [!code-vb[RegularExpressions.Quantifiers#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#7)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`\w*?`|Sıfır veya daha fazla sözcük karakterini eşleştirin, ancak mümkün olduğunca az karakter.|  
-|`oo`|"oo" dizesini eşleştirin.|  
-|`\w*?`|Sıfır veya daha fazla sözcük karakterini eşleştirin, ancak mümkün olduğunca az karakter.|  
-|`\b`|Bir sözcük sınırında sona erdirin.|  
+|`\w*?`|Sıfır veya daha fazla sözcük karakteri ile mümkün olduğunca az karakter eşleştirin.|  
+|`oo`|"Oo" dizesiyle eşleşir.|  
+|`\w*?`|Sıfır veya daha fazla sözcük karakteri ile mümkün olduğunca az karakter eşleştirin.|  
+|`\b`|Bir sözcük sınırında sonlandır.|  
   
-### <a name="match-one-or-more-times-lazy-match-"></a>Bir veya Daha Fazla Kez Maç (Lazy Match): +?  
- `+?` Niceleyici, önceki öğeyle bir veya daha fazla kez, ancak mümkün olduğunca az kez eşleşir. Bu açgözlü niceleyici tembel `+`meslektaşıdır.  
+### <a name="match-one-or-more-times-lazy-match-"></a>Bir veya daha fazla kez Eşleştir (geç eşleşme): +?  
+ `+?`Nicelik belirteci önceki öğeyle bir veya daha fazla kez eşleşir, ancak mümkün olduğunca az. Bu, doyumsuz nicelik sayısının geç karşılığından oluşur `+` .  
   
- Örneğin, normal ifade, `\b\w+?\b` sözcük sınırlarına göre ayrılmış bir veya daha fazla karakterle eşleşir. Aşağıdaki örnekte bu normal ifade gösteriş.  
+ Örneğin, normal ifade `\b\w+?\b` sözcük sınırlarıyla ayrılmış bir veya daha fazla karakterle eşleşir. Aşağıdaki örnekte bu normal ifade gösterilmektedir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#8)]
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
-### <a name="match-zero-or-one-time-lazy-match-"></a>Maç Sıfır veya Bir Kez (Tembel Maç): ??  
- `??` Niceleyici, bir önceki öğe sıfır veya bir kez eşleşir, ancak mümkün olduğunca az kez. Bu açgözlü niceleyici tembel `?`meslektaşıdır.  
+### <a name="match-zero-or-one-time-lazy-match-"></a>Sıfır veya bir kez Eşleştir (geç eşleşme):??  
+ `??`Nicelik belirteci, önceki öğeyle sıfır veya bir kez, ancak mümkün olduğunca az eşleşir. Bu, doyumsuz nicelik sayısının geç karşılığından oluşur `?` .  
   
- Örneğin, normal ifade `^\s*(System.)??Console.Write(Line)??\(??` "Console.Write" veya "Console.WriteLine" dizelerini eşleştirmeye çalışır. Dize "Sistem" de içerebilir. önce "Konsol", ve bir açılış parantez tarafından takip edilebilir. Dize bir çizginin başında olmalıdır, ancak beyaz boşluk tan önce gelebilir. Aşağıdaki örnekte bu normal ifade gösteriş.  
+ Örneğin, normal ifade `^\s*(System.)??Console.Write(Line)??\(??` "Console. Write" veya "Console. WriteLine" dizeleriyle eşleştirmeye çalışır. Dize Ayrıca "sistem" i içerebilir. "konsolundan" ve ardından bir açılış ayracı gelebilir. Dize bir satırın başında olmalıdır, ancak önünde boşluk olabilir. Aşağıdaki örnekte bu normal ifade gösterilmektedir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#9](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#9)]
  [!code-vb[RegularExpressions.Quantifiers#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#9)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`^`|Giriş akışının başlangıcını eşleştirin.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
-|`(System.)??`|"Sistem" dizesinin sıfır veya bir oluşumunu eşleştirin.|  
-|`Console.Write`|"Console.Write" dizesini eşleştirin.|  
+|`(System.)??`|"System." dizesinin sıfır veya bir oluşumunu eşleştirin.|  
+|`Console.Write`|"Console. Write" dizesiyle eşleştirin.|  
 |`(Line)??`|"Line" dizesinin sıfır veya bir oluşumunu eşleştirin.|  
-|`\(??`|Açılış parantezinin sıfır veya bir oluşumunu eşleştirin.|  
+|`\(??`|Açma parantezinin sıfır veya bir oluşumunu eşleştirin.|  
   
-### <a name="match-exactly-n-times-lazy-match-n"></a>Tam olarak n Times (Lazy Match): {n}?  
- `{` *n* n`}?` ölçüleyicisi, n'nin `n` herhangi bir tamsayı *olduğu* önceki öğeyle tam olarak kez eşleşir. Bu açgözlü niceleyici `{` *n*`}`tembel meslektaşıdır.  
+### <a name="match-exactly-n-times-lazy-match-n"></a>Tam n kez Eşleştir (geç eşleşme): {n}?  
+ `{` *N* `}?` nicelik belirteci önceki öğeyle tam olarak eşleşir `n` , burada *n* herhangi bir tamsayıdır. Bu, doyumsuz nicelik sayısının geç karşılığı `{` *n* `}` .  
   
- Aşağıdaki örnekte, normal `\b(\w{3,}?\.){2}?\w{3,}?\b` ifade bir Web sitesi adresini tanımlamak için kullanılır. "www.microsoft.com" ve "msdn.microsoft.com" ile eşleştiğini, ancak "web sitem" veya "mycompany.com" ile eşleşmediğini unutmayın.  
+ Aşağıdaki örnekte, normal ifade `\b(\w{3,}?\.){2}?\w{3,}?\b` bir Web sitesi adresini belirlemek için kullanılır. "Www.microsoft.com" ve "msdn.microsoft.com" ile eşleşir, ancak "mywebsite" veya "mycompany.com" ile eşleşmez.  
   
  [!code-csharp[RegularExpressions.Quantifiers#10](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#10)]
  [!code-vb[RegularExpressions.Quantifiers#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#10)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`(\w{3,}?\.)`|Maç en az 3 kelime karakterleri, ancak mümkün olduğunca az karakter, bir nokta veya nokta karakteri takip. Bu ilk yakalama grubudur.|  
-|`(\w{3,}?\.){2}?`|İlk gruptaki deseni iki kez, ancak mümkün olduğunca az kez eşleştirin.|  
-|`\b`|Eşleşmeyi sözcük sınırında sonla.|  
+|`(\w{3,}?\.)`|En az 3 sözcük karakteri, ancak mümkün olduğunca az karakter ve nokta veya nokta karakteriyle eşleştirin. Bu ilk yakalama grubudur.|  
+|`(\w{3,}?\.){2}?`|İlk gruptaki stili iki kez, ancak mümkün olduğunca az eşleştirin.|  
+|`\b`|Eşleşmeyi bir sözcük sınırında sonlandır.|  
   
-### <a name="match-at-least-n-times-lazy-match-n"></a>Maç en az n Kez (Tembel Maç): {n,}?  
- `{` *n* n`,}?` nicelleyici, *n'nin* herhangi `n` bir karşıcı olduğu, ancak mümkün olduğunca az kez önceki öğeyle en az eşleşir. Bu açgözlü niceleyici `{` *n*`,}`tembel meslektaşıdır.  
+### <a name="match-at-least-n-times-lazy-match-n"></a>En az n kez Eşleştir (geç eşleşme): {n,}?  
+ `{` *N* `,}?` nicelik belirteci, önceki öğeyle en az `n` kez eşleşir, burada *n* herhangi bir tamsayıdır, ancak mümkün olduğunca az olur. Bu, doyumsuz nicelik sayısının geç karşılığı `{` *n* `,}` .  
   
- Bir resim için `{`önceki bölümdeki *n* `}?` niceleyici örneğine bakın. Bu örnekteki normal ifade, bir dönemin ardından en az üç karaktere sahip bir dizeyle eşleştirmek için `{` *n* `,}` nicelini kullanır.  
+ `{` *n* `}?` Bir çizim için önceki bölümde yer aldığı n nicelik için örneğe bakın. Bu örnekteki normal ifade, `{` *n* `,}` en az üç karakteri ve ardından bir nokta gelen bir dizeyi eşleştirmek için n nicelik belirteci kullanır.  
   
-### <a name="match-between-n-and-m-times-lazy-match-nm"></a>N ve m Times Arasındaki Eşleşme (Tembel Maç): {n,m}?  
- `{` *n*`}?` `n` `m` *n* *m* *m* m niceleyici, n ve m'nin hemdemeger olduğu, ancak mümkün olduğunca az kez olduğu zaman ile arasındaki önceki öğeyle eşleşir.`,` Bu açgözlü `{`niceleyici *n*`,`*m*`}`tembel meslektaşıdır.  
+### <a name="match-between-n-and-m-times-lazy-match-nm"></a>N ve k kez Eşleştir (geç eşleşme): {n, d}?  
+ `{` *N*. `,` *m* `}?` nicelik belirteci önceki öğeyle `n` ve `m` zamanlardır; burada *n* ve *b* , mümkün olduğunca az sayıda tamdır. Bu, doyumsuz nicelik sayısının yavaş karşılığı `{` *n* `,` *m* `}` .  
   
- Aşağıdaki örnekte, normal `\b[A-Z](\w*?\s*?){1,10}[.!?]` ifade, bir ile on arasında sözcük içeren tümcelerle eşleşir. 18 sözcük içeren bir tümce dışında giriş dizesindeki tüm tüm cümlelerle eşleşir.  
+ Aşağıdaki örnekte, normal ifade `\b[A-Z](\w*?\s*?){1,10}[.!?]` bir ve on sözcükten oluşan cümleler ile eşleşir. 18 sözcük içeren bir cümle hariç giriş dizesindeki tüm cümlelere eşleşir.  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
   
- Normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanır.  
+ Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`[A-Z]`|A'dan Z'ye bir büyük harf karakteri eşleştirin.|  
-|`(\w*?\s*?)`|Sıfır veya daha fazla sözcük karakterini eşleştirin, ardından bir veya daha fazla boşluk karakteri, ancak mümkün olduğunca az kez. Bu ilk yakalama grubu.|  
-|`{1,10}`|Önceki deseni 1 ile 10 kez eşleştirin.|  
-|`[.!?]`|Noktalama işaretlerinden herhangi birini ".", "!", veya "?".|  
+|`[A-Z]`|A 'dan Z 'ye büyük harfli bir karakter eşleştirin.|  
+|`(\w*?\s*?)`|Sıfır veya daha fazla sözcük karakterini, ardından bir veya daha fazla boşluk karakterini ve mümkün olduğunca az kez eşleştirin. Bu ilk yakalama grubudur.|  
+|`{1,10}`|Önceki Düzenle 1 ila 10 kez eşleştirin.|  
+|`[.!?]`|".", "!" Veya "?" noktalama karakterlerinden birini eşleştirin.|  
   
 <a name="Greedy"></a>
-## <a name="greedy-and-lazy-quantifiers"></a>Açgözlü ve Tembel Niceleyiciler  
- Niceleyicilerin bir dizi iki sürümü vardır:  
+## <a name="greedy-and-lazy-quantifiers"></a>Greedy ve yavaş nicelik belirteçleri  
+ Nicelik belirteçleri sayısının iki sürümü vardır:  
   
-- Açgözlü bir versiyonu.  
+- Doyumsuz sürümü.  
   
-     Açgözlü bir niceleyici mümkün olduğunca çok kez bir öğe eşleşmeye çalışır.  
+     Doyumsuz nicelik sayısı bir öğeyi mümkün olduğunca çok kez eşleştirmeyi dener.  
   
-- Açgözlü olmayan (veya tembel) bir sürüm.  
+- Doyumsuz olmayan (veya geç) bir sürüm.  
   
-     Açgözlü olmayan bir nicel, bir öğeyi mümkün olduğunca az kez eşleştirmeye çalışır. Açgözlü bir niceleyiciyi sadece bir `?`.  
+     Doyumsuz olmayan nicelik süreleri, bir öğeyi mümkün olduğunca az eşleştirmeyi dener. Yalnızca bir ekleyerek bir doyumsuz nicelik sayısını yavaş bir nicelik noktasına dönüştürebilirsiniz `?` .  
   
- Kredi kartı numarası gibi bir sayı dizesinden son dört rakamı ayıklamak için tasarlanmış basit bir normal ifade düşünün. `*` Açgözlü niceleyici kullanan normal ifade sürümü . `\b.*([0-9]{4})\b` Ancak, bir dize iki sayı içeriyorsa, bu normal ifade aşağıdaki örnekte görüldüğü gibi yalnızca ikinci sayının son dört basamağıyla eşleşir.  
+ Kredi kartı numarası gibi bir sayı dizesinden son dört basamağı çıkarmak amaçlanan basit bir normal ifade düşünün. Doyumsuz nicelik sayısını kullanan normal ifade sürümü `*` `\b.*([0-9]{4})\b` . Ancak, bir dize iki sayı içeriyorsa, bu normal ifade yalnızca ikinci sayının son dört basamağıyla eşleşir, aşağıdaki örnekte gösterildiği gibi.  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#1)]  
   
- `*` Niceleyici önceki öğeyi tüm dizede mümkün olduğunca çok kez eşleştirmeye çalıştığından ve böylece dize sonunda eşleşmesini bulduğundan, normal ifade ilk sayıyla eşleşmez.  
+ `*`Nicelik belirteci, tüm dizede olabildiğince çok kez eşleşmesi ve bu nedenle dizenin sonunda eşleşmesini bulduğundan, normal ifade ilk sayıyla eşleşemez.  
   
- Bu istenilen davranış değildir. Bunun yerine, aşağıdaki `*?`örnekte görüldüğü gibi, her iki sayıdan da basamak ayıklamak için tembel niceleyiciyi kullanabilirsiniz.  
+ Bu, istenen davranış değildir. Bunun yerine, `*?` Aşağıdaki örnekte gösterildiği gibi, her iki sayıdan de basamak çıkarmak için yavaş nicelik sayısını kullanabilirsiniz.  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#2)]  
   
- Çoğu durumda, açgözlü ve tembel niceleyiciler ile düzenli ifadeler aynı eşleşmeleri döndürün. Onlar en sık herhangi bir karakter eşleşen joker`.`( ) metakarakter ile kullanıldığında farklı sonuçlar verir.  
+ Çoğu durumda, doyumsuz ve yavaş nicelik belirteçleri olan normal ifadeler aynı eşleşmeleri döndürür. Bunlar `.` , herhangi bir karakterle eşleşen joker karakter () metakarakteriyle birlikte kullanıldıkları zaman genellikle farklı sonuçlar döndürür.  
   
-## <a name="quantifiers-and-empty-matches"></a>Niceleyiciler ve Boş Eşleşmeler  
- Ölçüleyiciler `*` `+`, ve `{` *n*`,`*m* `}` ve onların tembel meslektaşları yakalamalar minimum sayıda bulunduğunda boş bir maç sonra tekrarlamak asla. Bu kural, olası grup yakalama sayısı sonsuz veya sonsuza yakın olduğunda, niceleyicilerin boş alt ifade eşleşmelerine sonsuz döngüler girmesini önler.  
+## <a name="quantifiers-and-empty-matches"></a>Nicelik belirteçleri ve boş eşleşmeler  
+ `*` `+` En az sayıda yakalama işlemi bulunduğunda,, ve n. nicelik belirteçleri, ve `{` *n* `,` *m* `}` her biri boş bir eşleşmesinden sonra hiçbir zaman yinelemez. Bu kural, olası grup sayısı en fazla sonsuz veya sonsuz olduğunda, nicelik belirteçleri boş alt ifade üzerinde sonsuz döngüler girmesini engeller.  
   
- Örneğin, aşağıdaki kod, sıfır veya bir <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> "a" karakteri `(a?)*`sıfır veya daha fazla kez eşleşen normal ifade deseni ile yönteme yapılan çağrının sonucunu gösterir. Tek yakalama grubunun her "a"yı ve <xref:System.String.Empty?displayProperty=nameWithType>ikinci boş eşleşmeyi yakaladığını, çünkü ilk boş eşleşmenin niceleyicinin yinelemeyi durdurmasına neden olduğunu unutmayın.  
+ Örneğin, aşağıdaki kod, <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> `(a?)*` sıfıra veya bir "a" karakteriyle veya daha fazla kez eşleşen normal ifade düzeniyle yöntemine yapılan çağrının sonucunu gösterir. Tek yakalama grubunun her bir "a" ve <xref:System.String.Empty?displayProperty=nameWithType> ' ı yakaladığı, ancak ikinci boş eşleşme olmadığından, ilk boş eşleşme nicelik belirleyicinin yinelemeyi durdurmasına neden olduğundan emin olmanız gerekir.  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch1.vb#1)]  
   
- En az ve maksimum sayıda yakalama yı tanımlayan bir yakalama grubu ile sabit sayıda yakalama tanımlayan grup arasındaki pratik farkı `(a\1|(?(1)\1)){0,2}` `(a\1|(?(1)\1)){2}`görmek için, normal ifade modellerini düşünün ve . Her iki normal ifade de aşağıdaki tabloda gösterildiği gibi tanımlanan tek bir yakalama grubundan oluşur.  
+ En az ve en fazla sayıda yakalama tanımlayan bir yakalama grubu arasındaki pratik farkı görmek için ve sabit sayıda yakalama tanımlayan bir tane, normal ifade desenlerini ve ' yi göz önünde bulundurun `(a\1|(?(1)\1)){0,2}` `(a\1|(?(1)\1)){2}` . Her iki normal ifade de, aşağıdaki tabloda gösterildiği gibi tanımlanan tek bir yakalama grubundan oluşur.  
   
-|Desen|Açıklama|  
+|Desen|Description|  
 |-------------|-----------------|  
-|`(a\1`|Ya maç "a" ilk yakalanan grubun değeri ile birlikte ...|  
-|<code>&#124;(?(1)</code>|… veya yakalanan ilk grubun tanımlanıp tanımlanmadığını test edin. (Yapının `(?(1)` bir yakalama grubu tanımlamadığını unutmayın.)|  
-|`\1))`|Yakalanan ilk grup varsa, değerini eşleştirin. Grup yoksa, grup eşleşir. <xref:System.String.Empty?displayProperty=nameWithType>|  
+|`(a\1`|"A" ile birlikte yakalanan ilk grubun değerini eşleştirin...|  
+|<code>&#124;(?(1)</code>|… ya da ilk yakalanan grubun tanımlanıp tanımlanmadığını test edin. ( `(?(1)` Yapının bir yakalama grubu tanımlamadığını unutmayın.)|  
+|`\1))`|Yakalanan ilk grup varsa, değeriyle eşleştirin. Grup yoksa, Grup eşleşmeyecektir <xref:System.String.Empty?displayProperty=nameWithType> .|  
   
- İlk normal ifade bu deseni sıfır ile iki kez eşleştirmeye çalışır; ikincisi, tam olarak iki kez. İlk desen ilk yakalama ile yakalama en az <xref:System.String.Empty?displayProperty=nameWithType>sayıda ulaştığından, o maç `a\1`denemek için tekrarasla ; `{0,2}` niceleyici son yinelemede yalnızca boş eşleşmeler sağlar. Buna karşılık, ikinci kez değerlendirir `a\1` çünkü ikinci normal ifade "a" eşleşir; en az yineleme sayısı, 2, motoru boş bir eşleşmeden sonra yinelemeye zorlar.  
+ İlk normal ifade, bu kalıbı sıfır ve iki kez eşleştirmeye çalışır; İkincisi, tam olarak iki kez. İlk model en az sayıda yakalamaya ilk yakalamasına ulaştığından <xref:System.String.Empty?displayProperty=nameWithType> , eşleşme hiçbir şekilde yinelenmez `a\1` ; `{0,2}` belirleyici, son yinelemede yalnızca boş eşleşmelerin kullanılmasına izin verir. Buna karşılık ikinci normal ifade, ikinci bir kez değerlendirildiğinden "a" ile eşleşir `a\1` ; en az yineleme sayısı, 2, altyapıyı boş bir eşleşmesinden sonra yinelemeye zorlar.  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal İfade Dili - Hızlı Başvuru](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [Geri Dönüş](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+- [Normal İfade Dili - Hızlı Başvuru](regular-expression-language-quick-reference.md)
+- [Geri Dönüş](backtracking-in-regular-expressions.md)

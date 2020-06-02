@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 401d1ba9cc2f97e93d7851f96f73b552e6ed6356
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378475"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288335"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<\<SchemaImporterExtensions için> öğesi ekleme>
-Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türlerini .NET Framework türleriyle eşlemek için. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../../docs/framework/configure-apps/file-schema/index.md).  
+# <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> için \<add> öğesi
+Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türlerini .NET Framework türleriyle eşlemek için. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md).  
   
- \<yapılandırma>  
-\<System. xml. Serialization>  
-\<SchemaImporterExtensions>  
-\<> Ekle  
+ \<configuration>  
+\<system.xml.serialization>  
+\<schemaImporterExtensions>  
+\<add>  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,7 +32,7 @@ Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaI
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Açıklama|  
+|Öznitelik|Description|  
 |---------------|-----------------|  
 |**ada**|Örnek bulmak için kullanılan basit bir ad.|  
 |**türüyle**|Gereklidir. Eklemek için şema uzantısı sınıfını belirtir. **Tür** özniteliği değeri bir satırda olmalı ve tam nitelikli tür adını içermelidir. Derlemesi Genel Derleme Önbelleği'ne (GAC) yerleştirildiğinde, sürüm, kültür ve ortak anahtar belirteci imzalı derleme, aynı zamanda içermelidir.|  
@@ -42,9 +42,9 @@ Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaI
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
-|\<SchemaImporterExtensions>|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
+|\<schemaImporterExtensions>|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneğinde XmlSchemaImporter türleri eşlerken kullanabileceğiniz bir uzantı türü ekler.  
@@ -64,5 +64,5 @@ Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaI
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<System. xml. Serialization> öğesi](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<SchemaImporterExtensions> öğesi](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions>Dosyalarında](schemaimporterextensions-element.md)

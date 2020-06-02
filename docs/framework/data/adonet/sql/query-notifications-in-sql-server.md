@@ -1,24 +1,25 @@
 ---
 title: SQL Server'da Sorgu Bildirimleri
+description: SQL Server veritabanında veri değiştirildiğinde uygulamalara bildirim almak için sorgu bildirimlerini nasıl kullanacağınızı öğrenin, örneğin, uygulama ekranları yenilemek için.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 11d9a1a800bea4224853a57b128ca89c9f2cf781
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1351c83b6cc5837115321d53e8779c0f364c3099
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452376"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286229"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da Sorgu Bildirimleri
 Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler değiştiğinde uygulamalara bildirim gönderilmesini sağlar. Bu özellik özellikle bir Web uygulaması gibi bir veritabanından bilgi önbelleği sağlayan ve kaynak veriler değiştirildiğinde bildirilmesi gereken uygulamalar için yararlıdır.  
   
  ADO.NET kullanarak sorgu bildirimleri uygulayabileceğiniz üç yol vardır:  
   
-1. Düşük düzey uygulama, sunucu tarafı işlevselliği kullanıma sunan `SqlNotificationRequest` sınıfı tarafından sağlanır ve bir komut, bildirim isteğiyle birlikte yürütmelerine olanak tanır.  
+1. Düşük düzey uygulama, `SqlNotificationRequest` sunucu tarafı işlevselliğini kullanıma sunan sınıf tarafından sağlanır ve bir komut, bildirim isteğiyle birlikte yürütmelerine olanak tanır.  
   
-2. Üst düzey uygulama, kaynak uygulama ve SQL Server arasında yüksek düzeyde bir bildirim işlevselliği sağlayan bir sınıf olan `SqlDependency` sınıfı tarafından sağlanır ve bu, sunucudaki değişiklikleri algılamak için bir bağımlılık kullanmanıza olanak sağlar. Çoğu durumda bu, SQL Server için .NET Framework Veri Sağlayıcısı kullanarak yönetilen istemci uygulamaları tarafından SQL Server bildirim yeteneğinin faydalanacak en basit ve en etkili yoldur.  
+2. Üst düzey uygulama, `SqlDependency` kaynak uygulama ve SQL Server arasında yüksek düzeyde bir bildirim işlevselliği sağlayan sınıfı tarafından sağlanır ve bu, sunucudaki değişiklikleri algılamak için bir bağımlılık kullanmanıza olanak sağlar. Çoğu durumda bu, SQL Server için .NET Framework Veri Sağlayıcısı kullanarak yönetilen istemci uygulamaları tarafından SQL Server bildirim yeteneğinin faydalanacak en basit ve en etkili yoldur.  
   
-3. Ayrıca, ASP.NET 2,0 veya üzeri kullanılarak oluşturulan Web uygulamaları `SqlCacheDependency` yardımcı sınıflarını kullanabilir.  
+3. Ayrıca, ASP.NET 2,0 veya üzeri kullanılarak oluşturulan Web uygulamaları `SqlCacheDependency` yardımcı sınıfları kullanabilir.  
   
  Sorgu bildirimleri, temel verilerdeki değişikliklere yanıt olarak, ekranları veya önbellekleri yenilemesi gereken uygulamalar için kullanılır. Microsoft SQL Server, .NET Framework uygulamaların SQL Server bir komut göndermesini ve aynı komutun yürütülmesi, başlangıçta alınanlardan farklı sonuç kümeleri üretmesi durumunda bildirim istemesi için izin verir. Sunucuda oluşturulan bildirimler daha sonra işlenmek üzere kuyruklarla gönderilir.  
   
@@ -49,17 +50,17 @@ Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler de
  Sorgu sonuçlarının başlangıçta alınanlardan farklı olacağını nasıl algılayabileceğinizi gösterir.  
   
  [Bir SqlNotificationRequest ile SqlCommand Yürütme](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
- Bir <xref:System.Data.SqlClient.SqlCommand> nesnesinin sorgu bildirimiyle çalışması için nasıl yapılandırılacağını gösterir.  
+ Bir <xref:System.Data.SqlClient.SqlCommand> nesneyi sorgu bildirimiyle çalışacak şekilde yapılandırmayı gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- <xref:System.Data.Sql.SqlNotificationRequest> sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Data.Sql.SqlNotificationRequest>Sınıfını ve tüm üyelerini açıklar.  
   
  <xref:System.Data.SqlClient.SqlDependency>  
- <xref:System.Data.SqlClient.SqlDependency> sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Data.SqlClient.SqlDependency>Sınıfını ve tüm üyelerini açıklar.  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- <xref:System.Web.Caching.SqlCacheDependency> sınıfını ve tüm üyelerini açıklar.  
+ <xref:System.Web.Caching.SqlCacheDependency>Sınıfını ve tüm üyelerini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

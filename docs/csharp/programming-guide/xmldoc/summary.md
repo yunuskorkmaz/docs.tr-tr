@@ -1,5 +1,5 @@
 ---
-title: <summary> - C# programlama kılavuzu
+title: <summary> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a8c9d61e61eae7ba6bf7f0c1b9d2a8dc8a4171
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789667"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287213"
 ---
-# <a name="summary-c-programming-guide"></a>\<özet> (C# programlama kılavuzu)
+# <a name="summary-c-programming-guide"></a>\<summary>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <summary>description</summary>
@@ -27,21 +27,21 @@ ms.locfileid: "76789667"
 
 - `description`
 
-  Nesnenin bir özeti.
+  Nesnenin Özeti.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özet \<> etiketi, bir türü veya bir tür üyesini tanımlamak için kullanılmalıdır. Tür açıklamasına ek bilgi eklemek için [ \<açıklamaları>](./remarks.md) kullanın. Kod öğeleri için dokümantasyon sayfalarına dahili köprüler oluşturmak için [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) gibi dokümantasyon araçlarını etkinleştirmek için [cref Attribute'ı](./cref-attribute.md) kullanın.
+`<summary>`Etiket bir tür veya tür üyesini tanımlamakta kullanılmalıdır. [\<remarks>](./remarks.md)Bir tür açıklamasına ek bilgi eklemek için kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçlarını etkinleştirmek için [cref özniteliğini](./cref-attribute.md) kullanın.
 
-Özet> \<etiketinin metni IntelliSense'deki tür le ilgili tek bilgi kaynağıdır ve Nesne Tarayıcı Penceresinde de görüntülenir.
+Etiket metni, `<summary>` IntelliSense 'deki türle ilgili tek bilgi kaynağıdır ve ayrıca nesne tarayıcısı penceresinde de görüntülenir.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [DocFX](https://dotnet.github.io/docfx/) veya [Sandcastle](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin. Derleyici tarafından oluşturulan dosyayı temel alan son belgeleri oluşturmak için özel bir araç oluşturabilir veya [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
 [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]
 
-Önceki örnek, aşağıdaki XML dosyasını üretir.
+Önceki örnek aşağıdaki XML dosyasını üretir.
 
 ```xml
 <?xml version="1.0"?>
@@ -68,11 +68,11 @@ Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/c
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, genel bir `cref` türe nasıl başvuru yapılacağını gösterir.
+Aşağıdaki örnek, genel bir türe nasıl başvuru yapılacağını gösterir `cref` .
 
 [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]
 
-Önceki örnek, aşağıdaki XML dosyasını üretir.
+Önceki örnek aşağıdaki XML dosyasını üretir.
 
 ```xml
 <?xml version="1.0"?>

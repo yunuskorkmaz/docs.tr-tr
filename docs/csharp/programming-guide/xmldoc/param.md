@@ -1,5 +1,5 @@
 ---
-title: <param> - C# programlama kılavuzu
+title: <param> -C# Programlama Kılavuzu
 ms.date: 07/20/2015
 f1_keywords:
 - param
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d16070a82531519dd276b2ea999623017769d716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 396ed716c246091a674268020261069f36dd2be8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789768"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287330"
 ---
-# <a name="param-c-programming-guide"></a>\<param> (C# programlama kılavuzu)
+# <a name="param-c-programming-guide"></a>\<param>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <param name="name">description</param>
@@ -27,19 +27,19 @@ ms.locfileid: "76789768"
 
 - `name`
 
-  Yöntem parametresinin adı. Adı çift tırnak işaretlerine (" ") ekin.
+  Bir yöntem parametresinin adı. Adı çift tırnak işareti ("") içine alın.
 
 - `description`
 
-  Parametre için bir açıklama.
+  Parametresi için bir açıklama.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Param \<> etiketi, yöntemin parametrelerinden birini açıklamak için bir yöntem bildirimi için açıklama da kullanılmalıdır. Birden çok parametreyi \<belgelemek için birden çok param> etiketi kullanın.
+`<param>`Yöntemi, yöntemin parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada kullanılmalıdır. Birden çok parametreyi belgelemek için birden çok `<param>` etiket kullanın.
 
-Param> \<etiketinin metni IntelliSense, Object Browser ve Code Comment Web Report'ta görüntülenir.
+`<param>`Etiket metni IntelliSense, nesne tarayıcısı ve kod açıklaması Web raporu ' nda görüntülenir.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

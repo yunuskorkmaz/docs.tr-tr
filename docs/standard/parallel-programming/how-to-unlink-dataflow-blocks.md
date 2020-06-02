@@ -10,28 +10,28 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af978ca2ca237988dae8328656d70574dbc1f14
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139301"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288062"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma
-Bu belge, hedef veri akışı bloğunun kaynağından nasıl çıkarılabildiğini açıklar.
+Bu belge, hedef veri akışı bloğunun kaynağından nasıl bağlantısını kaldırmayı açıklar.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, her <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> biri bir değeri `TrySolution` hesaplamak için yöntemi çağıran üç nesne oluşturur. Bu örnek, yalnızca bitirmek için `TrySolution` ilk çağrıdan sonucu gerektirir.  
+ Aşağıdaki örnek <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> , her biri `TrySolution` bir değeri hesaplamak için yöntemini çağıran üç nesne oluşturur. Bu örnek, yalnızca ilk çağrının `TrySolution` bitmesini gerektirir.  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]
  [!code-vb[TPLDataflow_ReceiveAny#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_receiveany/vb/dataflowreceiveany.vb#1)]  
   
- Bu örnek, tamamlayan <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> ilk nesneden değeri almak için `ReceiveFromAny(T)` yöntemi tanımlar. Yöntem `ReceiveFromAny(T)` bir <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> dizi nesne kabul eder ve bu nesnelerin <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> her birini bir nesneye bağlar. Kaynak veri <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> akışı bloğunu hedef bloğa bağlamak için metodu kullandığında, kaynak veri kullanılabilir hale geldiğinde iletileri hedefe yayır. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> Sınıf yalnızca sunulduğu ilk iletiyi kabul ettiği `ReceiveFromAny(T)` için, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> yöntem yöntemi çağırarak sonucunu üretir. Bu, <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> nesneye sunulan ilk iletiyi üretir. Yöntem, <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> hedef <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages> `1`kaynaktan bir ileti aldıktan sonra kaynak bloğunun hedeften bağlantısını kaldırmasını söyleyen bir nesneyi bir özelliğe sahip alan aşırı yüklü bir sürüme sahiptir. Nesne bir ileti aldıktan sonra kaynak ve <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> nesne dizisi arasındaki ilişki artık gerekli olmadığından, nesnenin kaynaklarından bağlantısını kaldırması önemlidir. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>  
+ Bunu izleyen ilk nesneden değeri almak için <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> , bu örnek `ReceiveFromAny(T)` yöntemini tanımlar. `ReceiveFromAny(T)`Yöntemi nesne dizisini kabul eder <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> ve bu nesnelerin her birini bir nesnesine bağlar <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> . <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>Kaynak veri akışı bloğunu bir hedef bloğa bağlamak için yöntemini kullandığınızda, kaynak verileri kullanılabilir hale geldiğinde, kaynak iletileri hedefe yayar. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>Sınıfı yalnızca sunulan ilk iletiyi kabul ettiğinden, yöntemi `ReceiveFromAny(T)` yöntemini çağırarak sonucunu üretir <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> . Bu, nesnesine sunulan ilk iletiyi oluşturur <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> . <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>Yöntemi, olarak ayarlandığında bir özelliği olan bir nesneyi alan aşırı yüklenmiş bir sürüme sahiptir <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages> `1` , hedef kaynaktan bir ileti aldıktan sonra kaynak bloğunu hedefin bağlantısını kesmeyi söyler. <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>Kaynak dizisi ile nesne arasındaki ilişki <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> artık <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> nesne bir ileti aldıktan sonra gerekli olmadığından, nesnenin kaynaklarından bağlantısı kaldırmak önemlidir.  
   
- Kalan `TrySolution` çağrıların bir değeri hesapladıktan sonra sona ermesini `TrySolution` sağlamak <xref:System.Threading.CancellationToken> için, yöntem geri döndürme `ReceiveFromAny(T)` çağrısından sonra iptal edilen bir nesne alır. Bu <xref:System.Threading.SpinWait.SpinUntil%2A> <xref:System.Threading.CancellationToken> nesne iptal edildiğinde yöntem döndürür.  
+ Kalan çağrıların bir `TrySolution` değer hesapladıktan sonra sona erdirmek için, `TrySolution` Bu yöntem, <xref:System.Threading.CancellationToken> dönüş çağrısının ardından iptal edilen bir nesneyi alır `ReceiveFromAny(T)` . <xref:System.Threading.SpinWait.SpinUntil%2A>Yöntemi, bu <xref:System.Threading.CancellationToken> nesne iptal edildiğinde döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Veri akışı](dataflow-task-parallel-library.md)
