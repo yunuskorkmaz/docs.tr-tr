@@ -6,21 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 59fb399d80e1d4d33d1a3c659d2ff74a37fd367d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709757"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282824"
 ---
 # <a name="xpathnavigator-in-transformations"></a>Dönüşümlerde XPathNavigator
-Sınıfı <xref:System.Xml.XPath.XPathNavigator> , verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. , Ve <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument>üzerinde uygulanır. , <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi world WIDE Web KONSORSIYUMU (W3C) veri modelini temel alır.  
+<xref:System.Xml.XPath.XPathNavigator>Sınıfı, verilere salt okunurdur ve dönüşümler (XSLT) Için Genişletilebilir Stil sayfası dili girişi olarak kullanılmak üzere tasarlanmıştır. , Ve üzerinde uygulanır <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDataDocument> <xref:System.Xml.XmlDocument> . , <xref:System.Xml.XPath.XPathNavigator> XML yol dili (XPath) önerisinin 5. bölümünde açıklandığı gibi World Wide Web Konsorsiyumu (W3C) veri modelini temel alır.  
   
- , <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. Ayrıca <xref:System.Xml.XPath.XPathNavigator> , sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
+ , <xref:System.Xml.XPath.XPathNavigator> Herhangi bir mağaza üzerinde bir imleç modeli tanımlar ve tüm veri depolarındaki hızlı, salt okuma XPath sorguları sağlar. <xref:System.Xml.XPath.XPathNavigator>Ayrıca, sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır.  
   
- API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar. , <xref:System.Xml.XPath.XPathNavigator> Bir **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir. , <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğüm üzerinde konumlandırılır. Başarısız olan herhangi bir **Move** yöntemi <xref:System.Xml.XPath.XPathNavigator> değişmeden bırakılamaz.  
+ API, depodaki geçerli düğümden bilgi almanızı ve bağlantılı düğümlere taşımanızı sağlar. , Bir <xref:System.Xml.XPath.XPathNavigator> **taşıma** yöntemleri kümesi kullanarak bir mağaza üzerinde geçiş yapan bir imleç stil modelidir. , <xref:System.Xml.XPath.XPathNavigator> Her zaman bir düğüm üzerinde konumlandırılır. Başarısız olan herhangi bir **Move** yöntemi değişmeden bırakılamaz <xref:System.Xml.XPath.XPathNavigator> .  
   
- , <xref:System.Xml.XPath.XPathNavigator> Sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren parametresiyle `fragment`işlevi çağırarak bir sonuç ağacı parçası oluşturur.  
+ , <xref:System.Xml.XPath.XPathNavigator> Sonuç ağacı parçaları üzerinde yineleme için kullanılacak sınıftır. Aşağıdaki kod örneği, bir stil sayfası içinde, XML içeren parametresiyle işlevi çağırarak bir sonuç ağacı parçası oluşturur `fragment` .  
   
 ## <a name="testxsl"></a>test. Xsl  
   
@@ -116,4 +116,4 @@ public class sample
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XslTransform Sınıfı XSLT İşlemcisini Uygular](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform Sınıfı XSLT İşlemcisini Uygular](xsltransform-class-implements-the-xslt-processor.md)

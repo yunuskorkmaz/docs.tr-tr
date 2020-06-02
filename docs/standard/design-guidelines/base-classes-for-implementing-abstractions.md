@@ -6,19 +6,19 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: b22923338f8488b6f7684e565f62d9afc16e6aa0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741770"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280575"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Soyutlama Uygulamak için Temel Sınıflar
 Kesinlikle konuşurken, bir sınıf başka bir sınıf bundan türetildiği zaman bir temel sınıf haline gelir. Ancak, bu bölümün amacına yönelik olarak, temel sınıf genellikle ortak bir soyutlama sağlamak için veya diğer sınıfların devralma sırasında bazı varsayılan uygulamaları yeniden kullanabilmesi için tasarlanmış bir sınıftır. Temel sınıflar genellikle, bir hiyerarşinin kökündeki bir soyutlama ve alt kısımdaki birkaç özel uygulama arasındaki devralma hiyerarşilerinin ortasında yer vardır.
 
- Soyutlamalar uygulamak için uygulama yardımcıları olarak görev yapar. Örneğin, çatı öğe koleksiyonları için çerçeve soyutlarından biri <xref:System.Collections.Generic.IList%601> arabirimidir. <xref:System.Collections.Generic.IList%601> uygulamak önemsiz değildir ve bu nedenle Framework, özel koleksiyonlar uygulamak için yardımcılar olarak işlev gösteren <xref:System.Collections.ObjectModel.Collection%601> ve <xref:System.Collections.ObjectModel.KeyedCollection%602>gibi çeşitli temel sınıflar sağlar.
+ Soyutlamalar uygulamak için uygulama yardımcıları olarak görev yapar. Örneğin, çerçevenin sıralı koleksiyonları için çerçeve soyutlarından biri <xref:System.Collections.Generic.IList%601> arayüzüdür. Uygulama <xref:System.Collections.Generic.IList%601> önemsiz değildir ve bu nedenle Framework, ve gibi çeşitli temel sınıflar sağlar <xref:System.Collections.ObjectModel.Collection%601> ve <xref:System.Collections.ObjectModel.KeyedCollection%602> Özel Koleksiyonlar uygulamak için yardımcılar olarak işlev yapar.
 
- Temel sınıflar genellikle çok fazla uygulama içereceğinden, kendilerine soyut olarak sunulacak şekilde uygun değildir. Örneğin, `Collection<T>` temel sınıfı, genel olmayan `IList` arabirimini (genel olmayan koleksiyonlarla daha iyi tümleşecek şekilde) ve alanlarından birinde bellekte depolanan öğelerin bir koleksiyonu olduğunu bulmadan ilgili çok sayıda uygulama içerir.
+ Temel sınıflar genellikle çok fazla uygulama içereceğinden, kendilerine soyut olarak sunulacak şekilde uygun değildir. Örneğin, `Collection<T>` temel sınıf, genel olmayan `IList` arabirimi (genel olmayan koleksiyonlarla daha iyi tümleşecek şekilde) ve kendi alanlarından birinde bellekte depolanan öğelerin bir koleksiyonu olduğu olgusuna ilişkin büyük bir uygulama içerir.
 
  Daha önce anlatıldığı gibi temel sınıflar, soyutlamalar uygulaması gereken kullanıcılar için değerli yardım sağlayabilir, ancak aynı zamanda önemli bir yükümlülük olabilir. Bunlar yüzey alanı ekler ve devralma hiyerarşilerinin derinliğini artırır ve bu sayede Framework 'ü karmaşıklaştırır. Bu nedenle, temel sınıfların yalnızca Framework kullanıcılarına önemli bir değer sağladıklarında kullanılması gerekir. Yalnızca çerçevenin uygulayıcılarına değer sağladıklarında kaçınılması gerekir, bu durum bir temel sınıftan devralınması yerine bir iç uygulamaya yönelik temsilinin kesin olarak dikkate alınması gerekir.
 
@@ -26,7 +26,7 @@ Kesinlikle konuşurken, bir sınıf başka bir sınıf bundan türetildiği zama
 
  ✔️ temel sınıfları ana hat senaryo türlerinden ayrı bir ad alanına yerleştirmeyi düşünün. Tanım olarak, temel sınıflar gelişmiş genişletilebilirlik senaryolarına yöneliktir ve bu nedenle kullanıcıların çoğunluğu için ilginç değildir.
 
- sınıfın ortak API 'lerde kullanılması amaçlanıyorsa, temel sınıfların bir "temel" sonekiyle adlandırılmasının önüne ❌.
+ ❌Sınıfın ortak API 'lerde kullanılması amaçlanıyorsa, temel sınıfların bir "temel" sonekiyle adlandırılmasını ÖNLEYIN.
 
  *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
@@ -34,5 +34,5 @@ Kesinlikle konuşurken, bir sınıf başka bir sınıf bundan türetildiği zama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)

@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005381"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283942"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -35,7 +35,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet test`Komut, belirli bir çözümde birim testlerini yürütmek için kullanılır. `dotnet test`Komut çözümü oluşturur ve çözümdeki her test projesi için bir test ana bilgisayarı uygulaması çalıştırır. Test ana bilgisayarı, test çerçevesini (örneğin, MSTest, NUnit veya xUnit) kullanarak belirtilen projedeki testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür.
 
@@ -51,7 +51,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Bağımsız değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
@@ -134,7 +134,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  `.runsettings`Testleri çalıştırmak için kullanılacak dosya. `TargetPlatform`Öğesinin (x86 | x64) için hiçbir etkisi olmadığını unutmayın `dotnet test` . X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *DotNet. exe* ' nin bit genişliği, testleri çalıştırmak için kullanılacak şeydir. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+  `.runsettings`Testleri çalıştırmak için kullanılacak dosya. `TargetPlatform`Öğesinin (x86 | x64) için bir etkisi yoktur `dotnet test` . X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *DotNet. exe* ' nin bit genişliği, testleri çalıştırmak için kullanılacak şeydir. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   - [Birim testlerini bir dosya kullanarak yapılandırın `.runsettings` .](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Test çalıştırması yapılandırma](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)

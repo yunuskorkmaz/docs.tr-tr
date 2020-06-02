@@ -8,49 +8,49 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 5ccddfb01d6b173900dfffc465292c7812626ddc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 4097d222b5fa51cc638a2d07d3fd2eddf5d9859c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278655"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme
 
-Bu konudaki ilk örnek, bir <xref:System.AggregateException?displayProperty=nameWithType> PLINQ sorgusundan yürütüldüğünde atılabilir nasıl işleyeceğini gösterir. İkinci örnek, özel durum atılacağına mümkün olduğunca yakın, temsilciler içinde try-catch blokları koymak nasıl gösterir. Bu şekilde, bunları en kısa sürede onlar meydana gelir gelmez yakalamak ve büyük olasılıkla sorgu yürütme devam edebilirsiniz. Özel durumların birleştirme iş parçacığına geri dönmesine izin verildiğinde, özel durum yükseltildikten sonra bir sorgunun bazı öğeleri işlemeye devam etmesi mümkündür.
+Bu konudaki ilk örnek, çalıştırıldığında PLıNQ sorgusundan oluşturulabilecek öğesinin nasıl işleneceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> . İkinci örnek, temsilcilerin içindeki try-catch bloklarının, özel durumun oluştuğu yere mümkün olduğunca yakın şekilde nasıl yerleştirileceğini gösterir. Bu şekilde, bunları gerçekleştikleri anda yakalayabilir ve muhtemelen sorgu yürütmeye devam edebilirsiniz. Özel durumların katılan iş parçacığına balon ekleme yapmasına izin verildiğinde, bir sorgu özel durum oluşturulduktan sonra bazı öğeleri işlemeye devam edebilir.
 
-PlinQ'un sıralı yürütmeye geri düştüğü ve bir özel durum oluştuğu bazı durumlarda, özel durum <xref:System.AggregateException>doğrudan yayılabilir ve bir . Ayrıca, <xref:System.Threading.ThreadAbortException>s her zaman doğrudan yayılır.
+PLıNQ, sıralı yürütmeye geri düştüğünde bazı durumlarda özel durum ortaya çıkabilir ve bir özel durum oluşur <xref:System.AggregateException> . Ayrıca, <xref:System.Threading.ThreadAbortException> s her zaman doğrudan yayılır.
 
 > [!NOTE]
-> "Yalnızca Kodum" etkinleştirildiğinde, Visual Studio özel durumu atan satırda kırılır ve "kullanıcı kodu tarafından işlenmemiş özel durum" yazan bir hata iletisi görüntüler. Bu hata iyi huylu. Devam etmek için F5 tuşuna basabilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışını görebilirsiniz. Visual Studio'nun ilk hatayı kırmasını önlemek **için, Araçlar, Seçenekler, Hata Ayıklama, Genel**altında "Sadece Kodum" onay kutusunun işaretlerini kaldırın.
+> "Yalnızca kendi kodum" etkinleştirildiğinde, Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.
 >
-> Bu örnek, kullanımı göstermek için tasarlanmıştır ve Nesneler sorgusuna eşdeğer ardışık LINQ'dan daha hızlı çalışmayabilir. Hız hakkında daha fazla bilgi için [PLINQ'da Hızları Anlama'ya](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)bakın.
+> Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](understanding-speedup-in-plinq.md).
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, atılan <xref:System.AggregateException?displayProperty=nameWithType>s'leri yakalamak için sorguyu yürüten kodun etrafına try-catch bloklarının nasıl yerleştirilebildiğini gösterir.
+Bu örnek, her türlü oluşturulan öğeleri yakalamak için sorguyu yürüten kodun çevresine try-catch bloklarının nasıl yerleştirileceğini gösterir <xref:System.AggregateException?displayProperty=nameWithType> .
 
 [!code-csharp[PLINQ#41](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#41)]
 [!code-vb[PLINQ#41](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#41)]
 
-Bu örnekte, özel durum atıldıktan sonra sorgu devam edemez. Uygulama kodunuz özel durumu yakaladığında, PLINQ tüm iş parçacıklarındaki sorguyu zaten durdurmuştur.
+Bu örnekte, özel durum oluşturulduktan sonra sorgu devam edemez. Uygulama kodunuzun özel durumu yakalamasına göre PLıNQ, sorguyu tüm iş parçacıklarında zaten durdurdu.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir özel durum yakalamak ve sorgu yürütme ile devam etmek mümkün kılmak için bir temsilci bir try-catch blok koymak nasıl gösterir.
+Aşağıdaki örnek, bir özel durum yakalamak ve sorgu yürütmeye devam etmek için bir temsilciye bir try-catch bloğunun nasıl yerleştirileceğini gösterir.
 
 [!code-csharp[PLINQ#42](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#42)]
 [!code-vb[PLINQ#42](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#42)]
 
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-- Bu örnekleri derlemek ve çalıştırmak için bunları PLINQ Veri Örneği örneğine kopyalayın ve yöntemi Main'den arayın.
+- Bu örnekleri derlemek ve çalıştırmak için onları PLıNQ veri örneği örneğine kopyalayın ve Main 'den yöntemi çağırın.
 
 ## <a name="robust-programming"></a>Güçlü Programlama
 
-Programınızın durumunu bozmamak için nasıl işleyeceğinizkonusunda bir özel durum yakalamayın.
+Programınızın durumunu bozmadığınız için nasıl işleneceğini bilmiyorsanız bir özel durum yakalamayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Paralel LINQ (PLINQ)](introduction-to-plinq.md)

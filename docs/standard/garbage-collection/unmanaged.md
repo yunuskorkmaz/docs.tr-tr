@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396983"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287616"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Yönetilmeyen kaynakları Temizleme
 
@@ -44,11 +44,11 @@ Daha sonra, bu tür tüketicileri, <xref:System.IDisposable.Dispose%2A?displayPr
 
 [Dispose yöntemi uygulamak](implementing-dispose.md) , yönetilmeyen kaynakları serbest bırakmak için Dispose deseninin nasıl uygulanacağını açıklar.
 
-[Uygulayan `IDisposable` nesneleri kullanma](../../../docs/standard/garbage-collection/using-objects.md) bir türün tüketicilerinin uygulamanın çağrılması için nasıl emin olduğunu açıklar <xref:System.IDisposable.Dispose%2A> . `using`Bunu yapmak Için C# (veya Visual Basic `Using` ) ifadesinin kullanılmasını öneririz.
+[Uygulayan `IDisposable` nesneleri kullanma](using-objects.md) bir türün tüketicilerinin uygulamanın çağrılması için nasıl emin olduğunu açıklar <xref:System.IDisposable.Dispose%2A> . `using`Bunu yapmak Için C# (veya Visual Basic `Using` ) ifadesinin kullanılmasını öneririz.
 
 ## <a name="reference"></a>Başvuru
 
-| Tür/üye | Açıklama |
+| Tür/üye | Description |
 |--|--|
 | <xref:System.IDisposable?displayProperty=nameWithType> | <xref:System.IDisposable.Dispose%2A>Yönetilmeyen kaynakları serbest bırakma yöntemini tanımlar. |
 | <xref:System.Object.Finalize%2A?displayProperty=nameWithType> | Yönetilmeyen kaynaklar yöntemi tarafından yayımlanamadığında nesne sonlandırması sağlar <xref:System.IDisposable.Dispose%2A> . |

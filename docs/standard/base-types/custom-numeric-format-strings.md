@@ -16,25 +16,25 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1e2456da9fd1b9bd26d0317c0d04c6d1b61cf16d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440922"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278966"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
-Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel bir sayısal biçim dizesi, [Standart sayısal biçim dizesi](../../../docs/standard/base-types/standard-numeric-format-strings.md)olmayan herhangi bir biçim dizesidir.
+Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha fazla özel sayısal tanımlayıcıdan oluşan özel bir sayısal biçim dizesi oluşturabilirsiniz. Özel bir sayısal biçim dizesi, [Standart sayısal biçim dizesi](standard-numeric-format-strings.md)olmayan herhangi bir biçim dizesidir.
 
-Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> türünün ve yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> . Özel sayısal biçim dizeleri, [composite formatting feature](../../../docs/standard/base-types/composite-formatting.md) `Write` ve sınıflarının bazı ve `WriteLine` yöntemleri <xref:System.Console> <xref:System.IO.StreamWriter> , yöntemi ve <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi tarafından kullanılan .net Composite biçimlendirme özelliği tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
+Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> türünün ve yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> <xref:System.Int32> . Özel sayısal biçim dizeleri, [composite formatting feature](composite-formatting.md) `Write` ve sınıflarının bazı ve `WriteLine` yöntemleri <xref:System.Console> <xref:System.IO.StreamWriter> , yöntemi ve <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi tarafından kullanılan .net Composite biçimlendirme özelliği tarafından da desteklenir. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
 
 > [!TIP]
 > Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
 <a name="table"></a>Aşağıdaki tabloda özel sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Özel sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesCustomFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
-|Biçim belirteci|Name|Açıklama|Örnekler|
+|Biçim belirteci|Name|Description|Örnekler|
 |----------------------|----------|-----------------|--------------|
 |"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234,5678 ("00000")-> 01235<br /><br /> 0,45678 ("0,00", en-US)-> 0,46<br /><br /> 0,45678 ("0,00", fr-FR)-> 0, 46|
 |"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen basamak, önemli olmayan 0 ise sonuç dizesinde bir basamak göründüğünü unutmayın. Örneğin, 0003 ("# # # #")-> 3.<br /><br /> Daha fazla bilgi: ["#" özel Belirleyicisi](#SpecifierD).|1234,5678 ("# # # # #")-> 1235<br /><br /> 0,45678 ("#. # #", en-US)->.46<br /><br /> 0,45678 ("#. # #", fr-FR)->, 46|
@@ -84,7 +84,7 @@ Aşağıdaki örnek basamak yer tutucu karakterleri içeren özel biçim dizeler
 [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
 [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]
 
-Eksik basamakların veya baştaki sıfırların boşluklarla değiştirildiği bir sonuç dizesi döndürmek için, [Bileşik biçimlendirme özelliğini](../../../docs/standard/base-types/composite-formatting.md) kullanın ve aşağıdaki örnekte gösterildiği gibi bir alan genişliği belirleyin.
+Eksik basamakların veya baştaki sıfırların boşluklarla değiştirildiği bir sonuç dizesi döndürmek için, [Bileşik biçimlendirme özelliğini](composite-formatting.md) kullanın ve aşağıdaki örnekte gösterildiği gibi bir alan genişliği belirleyin.
 
 [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
 [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
@@ -205,7 +205,7 @@ Aşağıdaki örnek, biçimlendirme işleminin "#", "0" ve " \\ " karakterlerini
 
 Noktalı virgül (;), sayının değerinin pozitif, negatif veya sıfır olma durumuna göre farklı biçimlendirme işlemi uygulayan bir koşullu biçim tanımlayıcısıdır. Bu davranışı oluşturmak için, bir özel biçim dizesi noktalı virgüllerle ayrılan en çok üç bölüm içerebilir. Bu bölümler aşağıdaki tabloda açıklanır.
 
-|Bölüm sayısı|Açıklama|
+|Bölüm sayısı|Description|
 |------------------------|-----------------|
 |Bir bölüm|Biçim dizesi tüm değerlere uygulanır.|
 |İki bölüm|İlk bölüm pozitif değerlere ve sıfırlara, ikinci bölüm de negatif değerlere uygulanır.<br /><br /> Eğer biçimlendirilen değer negatif ise, ama ikinci bölümdeki biçimlendirmeden sonra yuvarlama ile sıfır olursa, sonuçtaki sıfır ilk bölüme göre biçimlendirilir.|
@@ -288,8 +288,8 @@ Aşağıdaki örnek iki özel sayısal biçim dizesini gösterir. Her iki durumd
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
-- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
-- [Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Biçimlendirme Türleri](formatting-types.md)
+- [Standart sayısal biçim dizeleri](standard-numeric-format-strings.md)
+- [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](how-to-pad-a-number-with-leading-zeros.md)
 - [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

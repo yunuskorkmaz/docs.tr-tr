@@ -10,50 +10,50 @@ helpviewer_keywords:
 - providers [.NET Framework], in observer design pattern
 - observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: f5bb3cda0caa39ba3fd094b80e0b769a4bfc1f85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f8a213c0df3ef3c633106b7249a4947fe77c0d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141547"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280029"
 ---
 # <a name="how-to-implement-a-provider"></a>Nasıl yapılır: Sağlayıcıyı Uygulama
-Gözlemci tasarım deseni, verileri izleyen ve bildirim gönderen sağlayıcı ile sağlayıcıdan bildirim (geri arama) alan bir veya daha fazla gözlemci arasında bir bölünme gerektirir. Bu konu, sağlayıcının nasıl oluşturulabildiğini tartışır. İlgili bir konu, [Nasıl: Bir Gözlemci uygulayın](../../../docs/standard/events/how-to-implement-an-observer.md), nasıl bir gözlemci oluşturmak için tartışır.  
+Gözlemci tasarım deseninin, sağlayıcıyı izleyen ve bildirim gönderen bir veya daha fazla observers ve sağlayıcıdan bildirimler alan bir veya daha fazla Observer arasında bir bölüm olması gerekir. Bu konuda, bir sağlayıcının nasıl oluşturulacağı açıklanmaktadır. İlgili konu başlığı, [nasıl yapılır: gözlemci uygulama](how-to-implement-an-observer.md), gözlemci oluşturmayı açıklar.  
   
-### <a name="to-create-a-provider"></a>Sağlayıcı oluşturmak için  
+### <a name="to-create-a-provider"></a>Bir sağlayıcı oluşturmak için  
   
-1. Sağlayıcının gözlemcilere göndermekten sorumlu olduğu verileri tanımlayın. Sağlayıcı ve gözlemcilere gönderdiği veriler tek bir tür olabilir, ancak genellikle farklı türlerle temsil edilir. Örneğin, bir sıcaklık izleme uygulamasında `Temperature` yapı, sağlayıcının (bir sonraki adımda tanımlanan `TemperatureMonitor` sınıf tarafından temsil edilen) izlediği ve gözlemcilerin abone olduğu verileri tanımlar.  
+1. Sağlayıcının observers 'a göndermekten sorumlu olduğu verileri tanımlayın. Sağlayıcı ve kendisi gözlemcilerin 'a gönderdiği veriler tek bir tür olabilir, ancak bunlar genellikle farklı türlerle temsil edilir. Örneğin, bir sıcaklık izleme uygulamasında `Temperature` Yapı, sağlayıcının (bir `TemperatureMonitor` sonraki adımda tanımlanan sınıf tarafından temsil edilen) izleyicilerin ve hangi gözlemcilerin 'in abone olduğu verileri tanımlar.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2. Arabirimi uygulayan bir tür olan veri <xref:System.IObservable%601?displayProperty=nameWithType> sağlayıcısını tanımlayın. Sağlayıcının genel tür bağımsız değişkeni, sağlayıcının gözlemcilere gönderdiği türdür. Aşağıdaki örnek, genel `TemperatureMonitor` bir tür bağımsız <xref:System.IObservable%601?displayProperty=nameWithType> değişkeni `Temperature`ile oluşturulmuş bir uygulama olan bir sınıf tanımlar.  
+2. Arabirimini uygulayan bir tür olan veri sağlayıcısını tanımlayın <xref:System.IObservable%601?displayProperty=nameWithType> . Sağlayıcının genel tür bağımsız değişkeni, sağlayıcının observers 'a gönderdiği türdür. Aşağıdaki örnek `TemperatureMonitor` , <xref:System.IObservable%601?displayProperty=nameWithType> genel tür bağımsız değişkeni ile oluşturulmuş bir uygulama olan bir sınıfı tanımlar `Temperature` .  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3. Her gözlemcinin uygun olduğunda bilgilendirilebilmeleri için sağlayıcının gözlemcilere nasıl referanslar depolayacağını belirleyin. En sık, genel <xref:System.Collections.Generic.List%601> bir nesne gibi bir koleksiyon nesnesi bu amaç için kullanılır. Aşağıdaki örnek, <xref:System.Collections.Generic.List%601> `TemperatureMonitor` sınıf oluşturucuda anında bulunan özel bir nesneyi tanımlar.  
+3. Her gözlemciye uygun olduğunda bildirim gönderilmesini sağlamak için sağlayıcının gözlemciye başvuruları nasıl depolayacağınızı belirleme. En yaygın olarak, genel nesne gibi bir koleksiyon nesnesi <xref:System.Collections.Generic.List%601> Bu amaçla kullanılır. Aşağıdaki örnek, <xref:System.Collections.Generic.List%601> sınıf oluşturucusunda örneği oluşturulan özel bir nesneyi tanımlar `TemperatureMonitor` .  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
   
-4. Sağlayıcının <xref:System.IDisposable> abonelere iade edebileceği bir uygulama tanımlayın, böylece bildirimleri istedikleri zaman durdurabilecekler. Aşağıdaki örnek, sınıf anında `Unsubscriber` yapıldığında abone koleksiyonuna ve aboneye başvuruda bulunulan iç içe geçmiş bir sınıf tanımlar. Bu kod, abonenin kendisini abone koleksiyonundan kaldırmak için nesnenin <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> uygulamasını aramasını sağlar.  
+4. <xref:System.IDisposable>Sağlayıcının abonelere döndürebilecekleri bir uygulama tanımlayın, böylece herhangi bir zamanda bildirim almayı durdurabilir. Aşağıdaki örnek, `Unsubscriber` abone koleksiyonuna ve sınıf örneği oluşturulduğunda aboneye bir başvuru aktarılan iç içe bir sınıfı tanımlar. Bu kod, abonenin <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> kendisini aboneler koleksiyonundan kaldırmak için nesnenin uygulamasını çağırmasını sağlar.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5. Yöntemi <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> uygulayın. Yöntem <xref:System.IObserver%601?displayProperty=nameWithType> arabirime bir başvuru geçirilir ve adım 3'te bu amaç için tasarlanmış nesnede depolanmalıdır. Yöntem daha sonra <xref:System.IDisposable> adım 4 geliştirilen uygulama döndürmeniz gerekir. Aşağıdaki örnek, <xref:System.IObservable%601.Subscribe%2A> `TemperatureMonitor` yöntemin sınıftaki uygulamasını gösterir.  
+5. Yöntemini uygulayın <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> . Yöntemine bir başvuru geçirilir <xref:System.IObserver%601?displayProperty=nameWithType> ve adım 3 ' te bu amaçla tasarlanan nesnede depolanmalıdır. Yöntemi daha sonra <xref:System.IDisposable> Adım 4 ' te geliştirilen uygulamayı döndürmelidir. Aşağıdaki örnek, <xref:System.IObservable%601.Subscribe%2A> sınıfındaki yönteminin uygulamasını gösterir `TemperatureMonitor` .  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
   
-6. Gözlemcileri uygun şekilde, <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>uygulamalarını <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> ve uygulamalarını arayarak bildirin. Bazı durumlarda, bir hata oluştuğunda bir sağlayıcı <xref:System.IObserver%601.OnError%2A> yöntemi aramayabilir. Örneğin, aşağıdaki `GetTemperature` yöntem, sıcaklık verilerini her beş saniyede bir okuyan bir monitörü simüle eder ve sıcaklık önceki okumadan bu yana en az 0,1 derece değişip değişmediğini gözlemcilere haber vetir. Cihaz bir sıcaklık bildirmezse (yani değeri null ise), sağlayıcı gözlemcilere iletimin tamamladığını bildirir. Her gözlemcinin <xref:System.IObserver%601.OnCompleted%2A> yöntemini çağırmanın yanı sıra, yöntemin <xref:System.Collections.Generic.List%601> `GetTemperature` koleksiyonu temize temizler. Bu durumda, sağlayıcı gözlemcilerinyöntemini <xref:System.IObserver%601.OnError%2A> hiçbir çağrı yapar.  
+6. <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, Ve uygulamalarını çağırarak, gözlemcilerin 'ı uygun şekilde bilgilendirin <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> . Bazı durumlarda, bir hata oluştuğunda sağlayıcı yöntemi çağırmayabilir <xref:System.IObserver%601.OnError%2A> . Örneğin, aşağıdaki yöntem, `GetTemperature` beş saniyede bir sıcaklık verisini okuyan bir izleyiciyi taklit eder ve önceki okumadan bu yana sıcaklığın en az 1 olarak değişmesi durumunda gözlemcilerin 'a bildirimde bulunur. Cihaz bir sıcaklık bildirmezse (yani değeri null ise), sağlayıcı gözlemi aktarımın tamamlandığını bildirir. Her gözlemci yöntemini çağırmanın yanı sıra, <xref:System.IObserver%601.OnCompleted%2A> `GetTemperature` yöntemi <xref:System.Collections.Generic.List%601> koleksiyonu temizler. Bu durumda, sağlayıcı <xref:System.IObserver%601.OnError%2A> observers yöntemine hiçbir çağrı yapmaz.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#6)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir sıcaklık izleme uygulaması <xref:System.IObservable%601> için bir uygulama tanımlamak için tam kaynak kodunu içerir. Gözlemcilere `Temperature` gönderilen veri olan yapıyı ve uygulama `TemperatureMonitor` olan <xref:System.IObservable%601> sınıfı içerir.  
+ Aşağıdaki örnek, <xref:System.IObservable%601> bir sıcaklık izleme uygulaması için uygulama tanımlamaya yönelik tüm kaynak kodunu içerir. Bu, `Temperature` observers 'a gönderilen veriler ve `TemperatureMonitor` uygulama olan sınıf olan yapıyı içerir <xref:System.IObservable%601> .  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
@@ -61,6 +61,6 @@ Gözlemci tasarım deseni, verileri izleyen ve bildirim gönderen sağlayıcı i
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IObservable%601>
-- [Gözlemci Tasarım Deseni](../../../docs/standard/events/observer-design-pattern.md)
-- [Nasıl yapılır: Gözlemci Uygulama](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Gözlemci Tasarım Deseni En İyi Yöntemleri](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [Gözlemci tasarım kalıbı](observer-design-pattern.md)
+- [Nasıl yapılır: gözlemci uygulama](how-to-implement-an-observer.md)
+- [Gözlemci Tasarım Deseni En İyi Yöntemleri](observer-design-pattern-best-practices.md)

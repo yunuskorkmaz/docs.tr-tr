@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: JSON serileştirme-.NET için özel dönüştürücüler yazma
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703613"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279769"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -26,7 +31,7 @@ Ayrıca, `System.Text.Json` geçerli sürüme dahil olmayan işlevlerle özelle�
 * [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties).
 * [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key).
 * [Polimorfik serisini destekler](#support-polymorphic-deserialization).
-* [Yığın \< için gidiş dönüş desteği T>](#support-round-trip-for-stackt).
+* [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
 
 ## <a name="custom-converter-patterns"></a>Özel dönüştürücü desenleri
 
@@ -44,7 +49,7 @@ Temel model tarafından işlenebilen türlerin bazı örnekleri şunlardır:
 * `DateTime`
 * `Int32`
 
-Temel model, bir türü işleyebileceğini bir sınıf oluşturur. Factory stili, çalışma zamanında belirli bir türün gerekli olduğunu ve uygun dönüştürücüyü dinamik olarak oluşturduğunu belirleyen bir sınıf oluşturur.
+Temel model, bir türü işleyebileceğini bir sınıf oluşturur. Fabrika stili, çalışma zamanında, belirli bir türün gerekli olduğunu ve uygun dönüştürücüyü dinamik olarak oluşturduğunu belirleyen bir sınıf oluşturur.
 
 ## <a name="sample-basic-converter"></a>Örnek temel dönüştürücü
 
@@ -175,7 +180,7 @@ Aşağıdaki bölümlerde, yerleşik işlevlerin sağlamadığı bazı yaygın s
 * [Çıkartılan türlerin nesne özelliklerine serisini kaldırma](#deserialize-inferred-types-to-object-properties)
 * [Dize olmayan anahtarla destek sözlüğü](#support-dictionary-with-non-string-key)
 * [Polimorfik serisini destekler](#support-polymorphic-deserialization)
-* [Yığın \< için gidiş dönüş desteği T>](#support-round-trip-for-stackt).
+* [Yığın \<T> için gidiş dönüş desteği](#support-round-trip-for-stackt).
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Çıkartılan türlerin nesne özelliklerine serisini kaldırma
 
@@ -252,7 +257,7 @@ Ad alanındaki [birim testleri klasörü](https://github.com/dotnet/runtime/blob
 
 Yerleşik özellikler sınırlı sayıda [polimorfik serileştirme](system-text-json-how-to.md#serialize-properties-of-derived-classes) sağlar, ancak hiçbir zaman serisini kaldırma desteği yoktur. Seri durumdan çıkarma özel bir dönüştürücü gerektirir.
 
-Örneğin, `Person` `Employee` ve türetilmiş sınıflar içeren bir soyut taban sınıfınız olduğunu varsayalım `Customer` . Polimorfik seri kaldırma, tasarım zamanında `Person` , seri durumdan çıkarma hedefi olarak belirtebileceğiniz ve `Customer` `Employee` JSON 'daki nesneler çalışma zamanında doğru şekilde seri durumdan çıkarılan anlamına gelir. Seri durumdan çıkarma sırasında, JSON 'da gerekli türü tanımlayan ipuçları bulmanız gerekir. Kullanılabilir ipuçları türleri her senaryoya göre farklılık gösterir. Örneğin, bir Ayrıştırıcı özelliği kullanılabilir olabilir veya belirli bir özelliğin varlığına veya yokluğuna güvenebilirsiniz. Geçerli sürümü, çok `System.Text.Json` biçimli seri kaldırma senaryolarını nasıl işleyeceğinizi belirtmek için öznitelikler sağlamaz, bu nedenle özel dönüştürücüler gereklidir.
+Örneğin, `Person` `Employee` ve türetilmiş sınıflar içeren bir soyut taban sınıfınız olduğunu varsayalım `Customer` . Polimorfik seri kaldırma, tasarım zamanında `Person` , seri durumdan çıkarma hedefi olarak belirtebileceğiniz ve `Customer` `Employee` JSON 'daki nesnelerin çalışma zamanında doğru bir şekilde seri durumdan çıkarılması anlamına gelir. Seri durumdan çıkarma sırasında, JSON 'da gerekli türü tanımlayan ipuçları bulmanız gerekir. Kullanılabilir ipuçları türleri her senaryoya göre farklılık gösterir. Örneğin, bir Ayrıştırıcı özelliği kullanılabilir olabilir veya belirli bir özelliğin varlığına veya yokluğuna güvenebilirsiniz. Geçerli sürümü, çok `System.Text.Json` biçimli seri kaldırma senaryolarını nasıl işleyeceğinizi belirtmek için öznitelikler sağlamaz, bu nedenle özel dönüştürücüler gereklidir.
 
 Aşağıdaki kod, temel sınıfı, iki türetilmiş sınıfı ve bunlar için özel bir dönüştürücüyü gösterir. Dönüştürücü, çok biçimli seri kaldırma işlemi yapmak için bir Ayrıştırıcı özelliği kullanır. Tür ayrıştırıcısı sınıf tanımlarında değildir, ancak serileştirme sırasında oluşturulur ve seri durumundan çıkarma sırasında okunabilir.
 
@@ -283,7 +288,7 @@ Dönüştürücü, serileştirme için aynı dönüştürücü kullanılarak olu
 
 Yukarıdaki örnekteki dönüştürücü kodu, her bir özelliği el ile okur ve yazar. Bir alternatif, çalışmanın bir `Deserialize` kısmını çağırmak veya yapmak için kullanılır `Serialize` . Bir örnek için, [Bu StackOverflow gönderisini](https://stackoverflow.com/a/59744873/12509023)inceleyin.
 
-### <a name="support-round-trip-for-stackt"></a>Yığın T> için gidiş dönüş desteği \<
+### <a name="support-round-trip-for-stackt"></a>Yığın için gidiş dönüş desteği\<T>
 
 Bir JSON dizesini bir nesneye serisini çıkardıysanız <xref:System.Collections.Generic.Stack%601> ve sonra bu nesneyi serileştirmek istiyorsanız, yığının içeriği ters sıralardır. Bu davranış, aşağıdaki türler ve arabirim için ve bunlardan türetilmiş Kullanıcı tanımlı türler için geçerlidir:
 
@@ -312,7 +317,7 @@ Kaynak kodundaki [birim testleri klasörü](https://github.com/dotnet/runtime/bl
 * [Seri durumdan çıkarma sırasında null değeri 0 olarak dönüştüren Int32 Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
 * [Seri durumdan çıkarma sırasında hem dize hem de sayı değerlerine izin veren Int32 Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [Sabit Listesi Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
-* [\<Dış verileri kabul eden T> Dönüştürücüsü listeleyin](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [\<T>Dış verileri kabul eden liste Dönüştürücüsü](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
 * [Long [] bir sayı listesi ile birlikte çalışma](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 Varolan bir yerleşik dönüştürücünün davranışını değiştiren bir dönüştürücü yapmanız gerekiyorsa, varolan dönüştürücünün özelleştirme için bir başlangıç noktası olarak sunmak üzere [kaynak kodunu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters) alabilirsiniz.

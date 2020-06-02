@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123681"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288855"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
-Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri birden çok platformda paylaşmak için .NET Framework [taşınabilir sınıf kitaplığını](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) kullanabilirsiniz.
+Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri birden çok platformda paylaşmak için .NET Framework [taşınabilir sınıf kitaplığını](cross-platform-development-with-the-portable-class-library.md) kullanabilirsiniz.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
@@ -50,7 +50,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> sınıfı
 
-- <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> ad alanındaki tüm sınıflar
+- Ad alanındaki tüm sınıflar <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
 
 ## <a name="implementing-mvvm"></a>MVVM uygulama
  MVVM uygulamak için, taşınabilir bir sınıf kitaplığı projesi taşınabilir olmayan bir projeye başvuramadığı için genellikle bir taşınabilir sınıf kitaplığı projesinde hem model hem de görünüm modeli oluşturursunuz. Model ve görünüm modeli aynı projede veya ayrı projelerde olabilir. Ayrı projeler kullanıyorsanız, model projesine görünüm modeli projesinden bir başvuru ekleyin.
@@ -74,7 +74,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- <xref:System.Windows.Input.ICommand> arabiriminin uygulanması, genellikle MVVM düzeniyle birlikte kullanılır. Aşağıdaki örnek, <xref:System.Windows.Input.ICommand> arabiriminin bir uygulamasını gösterir.
+ Arabirim bir uygulama, <xref:System.Windows.Input.ICommand> genellikle MVVM düzeniyle birlikte kullanılır. Aşağıdaki örnek, arabiriminin bir uygulamasını gösterir <xref:System.Windows.Input.ICommand> .
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
@@ -91,4 +91,4 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Taşınabilir Sınıf Kitaplığı](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Taşınabilir Sınıf Kitaplığı](cross-platform-development-with-the-portable-class-library.md)
