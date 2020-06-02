@@ -8,15 +8,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6a4f511af72aad916d367153090504e2a8e11cb8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741815"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280620"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Soyutlamalar (Soyut Türler ve Arabirimler)
-Soyutlama, sözleşmeyi tanımlayan, ancak sözleşmenin tam bir uygulamasını sağlamayan bir türdür. Soyutlamalar genellikle soyut sınıflar veya arabirimler olarak uygulanır ve sözleşmeyi uygulayan türlerin gereken semantiğini açıklayan, iyi tanımlanmış bir başvuru belgeleri kümesiyle gelir. .NET Framework en önemli soyutlamalar <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>ve <xref:System.Object>içerir.
+Soyutlama, sözleşmeyi tanımlayan, ancak sözleşmenin tam bir uygulamasını sağlamayan bir türdür. Soyutlamalar genellikle soyut sınıflar veya arabirimler olarak uygulanır ve sözleşmeyi uygulayan türlerin gereken semantiğini açıklayan, iyi tanımlanmış bir başvuru belgeleri kümesiyle gelir. .NET Framework en önemli soyutlamalar şunlardır <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.Object> .
 
  Bir soyutlamayı destekleyen somut bir tür uygulayarak ve soyutlamayı kullanan (üzerinde çalışan) çerçeve API 'Leriyle bu somut türü kullanarak çerçeveleri genişletebilirsiniz.
 
@@ -26,7 +26,7 @@ Soyutlama, sözleşmeyi tanımlayan, ancak sözleşmenin tam bir uygulamasını 
 
  Ancak soyutlamalar, diğer genişletilebilirlik mekanizmalarının sıklıkla eşleşemesinden çok güçlü bir genişletilebilirlik sağlar. Eklentiler, denetim (IOC), işlem hatları vb. gibi birçok mimari deseninden oluşur. Çerçeveler için test edilebilirlik için de oldukça önemlidir. İyi soyutlamalar, birim testi amacıyla ağır bağımlılıkların yerine koymasını mümkün kılar. Özet olarak, modern nesne yönelimli çerçevelerin zenginleştirmesinden sonra soyutlamalar sorumludur.
 
- ❌ soyutlamaları kullanan çeşitli somut uygulamalar ve API 'Ler geliştirilirken test olmadıkları müddetçe soyutlamalar sağlamaz.
+ ❌Soyutlamaları kullanan çeşitli somut uygulamalar ve API 'Ler geliştirilirken test olmadıkları müddetçe soyutlamalar sağlamayan.
 
  bir soyutlama tasarlarken bir soyut sınıf ve arabirim arasında dikkatli bir şekilde seçim YAPıN. ✔️
 
@@ -38,5 +38,5 @@ Soyutlama, sözleşmeyi tanımlayan, ancak sözleşmenin tam bir uygulamasını 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
-- [Genişletilebilirlik için Tasarlama](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [Çerçeve tasarım yönergeleri](index.md)
+- [Genişletilebilirlik için Tasarlama](designing-for-extensibility.md)

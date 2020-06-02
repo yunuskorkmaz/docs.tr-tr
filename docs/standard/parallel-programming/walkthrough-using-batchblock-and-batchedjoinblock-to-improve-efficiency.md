@@ -9,41 +9,41 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091354"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284591"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
 
-TPL Veri Akışı Kitaplığı, bir veya daha fazla kaynaktan veri alıp arabelleğe almanız ve sonra arabelleğe alınan verileri tek bir koleksiyon olarak yayabileceğiniz ve <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> sınıfları sağlar. Bu toplu işlem mekanizması, bir veya daha fazla kaynaktan veri toplayıp birden çok veri öğesini toplu olarak işlediğinde yararlıdır. Örneğin, kayıtları veritabanına eklemek için veri akışını kullanan bir uygulama düşünün. Bu işlem, birer birer sırayla yerine aynı anda birden çok öğe eklenirse daha verimli olabilir. Bu belge, bu <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> tür veritabanı ekleme işlemlerinin verimliliğini artırmak için sınıfın nasıl kullanılacağını açıklar. Ayrıca, hem sonuçları <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> hem de program veritabanından okuduğunda oluşan özel durumları yakalamak için sınıfın nasıl kullanılacağını açıklar.
+TPL veri akışı kitaplığı, <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve sınıflarını, <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> bir veya daha fazla kaynaktan veri alıp arabelleğe almak ve ardından bu arabelleğe alınmış verileri tek bir koleksiyon olarak yayabilmeniz için sağlar. Bu toplu işlem mekanizması, bir veya daha fazla kaynaktan veri topladığınızda ve sonra birden çok veri öğesini toplu iş olarak işyaparken yararlıdır. Örneğin, bir veritabanına kayıt eklemek için veri akışı kullanan bir uygulamayı düşünün. Aynı anda birden çok öğe bir kez eklenirse, bu işlem daha verimli olabilir. Bu belgede, bu <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> tür veritabanı ekleme işlemlerinin verimliliğini artırmak için sınıfının nasıl kullanılacağı açıklanmaktadır. Ayrıca, <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> hem sonuçları hem de program bir veritabanından okurken oluşan tüm özel durumları yakalamak için sınıfının nasıl kullanılacağını açıklar.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-1. Bu gözden geçirmeyi başlatmadan önce [Veri Akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belgesindeki Blokları Birleştir bölümünü okuyun.
+1. Bu yönergeyi başlamadan önce [veri akışı](dataflow-task-parallel-library.md) belgesindeki JOIN blokları bölümünü okuyun.
 
-2. Northwind veritabanınorthwind.sdf, bilgisayarınızda bulunan bir kopyasını olduğundan emin olun. Bu dosya genellikle %Program Dosyaları%\Microsoft SQL Server Compact Edition\v3.5\Samples\\klasöründe bulunur.
+2. Bilgisayarınızda bulunan Northwind. sdf veritabanının bir kopyasına sahip olduğunuzdan emin olun. Bu dosya genellikle% Program Files%\Microsoft SQL Server Compact Edition \V3.5\samples klasöründe bulunur \\ .
 
     > [!IMPORTANT]
-    > Windows'un bazı sürümlerinde, Visual Studio yönetici olmayan bir modda çalışıyorsa Northwind.sdf'ye bağlanamazsınız. Northwind.sdf'ye bağlanmak için Visual Studio'yu veya Yönetici modunda **Visual** Studio için Geliştirici Komut Komut Ustem'i başlatın.
+    > Windows 'un bazı sürümlerinde, Visual Studio yönetici olmayan bir modda çalışıyorsa Northwind. sdf 'ye bağlanamazsınız. Northwind. sdf 'ye bağlanmak için Visual Studio 'yu veya Visual Studio için bir Geliştirici Komut İstemi **yönetici olarak çalıştır** modunda başlatın.
 
-Bu izksiyon aşağıdaki bölümleri içerir:
+Bu izlenecek yol aşağıdaki bölümleri içerir:
 
 - [Konsol Uygulaması Oluşturma](#creating)
 
-- [Çalışan Sınıfının Tanımlanması](#employeeClass)
+- [Çalışan sınıfını tanımlama](#employeeClass)
 
-- [Çalışan Veritabanı İşlemlerinin Tanımlanması](#operations)
+- [Çalışan veritabanı Işlemlerini tanımlama](#operations)
 
-- [Arabelleğe Alma Kullanmadan Veritabanına Çalışan Verilerini Ekleme](#nonBuffering)
+- [Arabelleğe alma kullanmadan çalışan verileri veritabanına ekleme](#nonBuffering)
 
-- [Çalışan Verilerini Veritabanına Eklemek Için Arabelleğe Alma Kullanma](#buffering)
+- [Veritabanına çalışan verileri eklemek için arabelleğe alma kullanma](#buffering)
 
-- [Veritabanından Çalışan Verilerini Okumak için Arabelleğe Alma Birleştirme'yi Kullanma](#bufferedJoin)
+- [Veritabanından çalışan verilerini okumak için arabellekli katılmayı kullanma](#bufferedJoin)
 
 - [Tam Örnek](#complete)
 
@@ -51,84 +51,84 @@ Bu izksiyon aşağıdaki bölümleri içerir:
 
 ## <a name="creating-the-console-application"></a>Konsol Uygulaması Oluşturma
 
-1. Visual Studio'da Visual C# veya Visual Basic **Console Application** projesi oluşturun. Bu belgede, proje adı `DataflowBatchDatabase`.
+1. Visual Studio 'da, Visual C# veya Visual Basic **konsol uygulaması** projesi oluşturun. Bu belgede, proje adlandırılır `DataflowBatchDatabase` .
 
-2. Projenizde System.Data.SqlServerCe.dll'ye bir referans ve System.Threading.Tasks.Dataflow.dll adresine bir başvuru ekleyin.
+2. Projenizde, System. Data. SqlServerCe. dll ' ye bir başvuru ve System. Threading. Tasks. Dataflow. dll başvurusu ekleyin.
 
-3. Form1.cs (Visual Basic için Form1.vb) `using` aşağıdaki`Imports` ifadeleri içerdiğinden emin olun ( Visual Basic'te).
+3. Form1.cs (Visual Basic için Form1. vb) `using` içinde aşağıdaki ( `Imports` Visual Basic) deyimlerini içerdiğinden emin olun.
 
     [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
     [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]
 
-4. Aşağıdaki veri üyelerini sınıfa `Program` ekleyin.
+4. Sınıfına aşağıdaki veri üyelerini ekleyin `Program` .
 
     [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
     [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]
 
 <a name="employeeClass"></a>
 
-## <a name="defining-the-employee-class"></a>Çalışan Sınıfının Tanımlanması
+## <a name="defining-the-employee-class"></a>Çalışan sınıfını tanımlama
 
-Sınıfa `Program` sınıfı `Employee` ekleyin.
+Sınıfına sınıfına ekleyin `Program` `Employee` .
 
 [!code-csharp[TPLDataflow_BatchDatabase#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#3)]
 [!code-vb[TPLDataflow_BatchDatabase#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#3)]
 
-Sınıf `Employee` üç özellik `EmployeeID`içerir, `LastName` `FirstName`, , ve . Bu özellikler Northwind `Last Name`veritabanındaki `First Name` `Employees` tablodaki `Employee ID`, ve sütunlara karşılık gelir. Bu gösteri için `Employee` sınıf, özellikleri `Random` için rasgele değerlere sahip bir `Employee` nesne oluşturan yöntemi de tanımlar.
+`Employee`Sınıfı üç özellik içerir,, `EmployeeID` `LastName` ve `FirstName` . Bu özellikler, `Employee ID` `Last Name` `First Name` Northwind veritabanındaki tablodaki, ve sütunlarına karşılık gelir `Employees` . Bu gösterim için, `Employee` sınıfı, `Random` `Employee` özellikleri için rastgele değerler içeren bir nesne oluşturan yöntemini de tanımlar.
 
 <a name="operations"></a>
 
-## <a name="defining-employee-database-operations"></a>Çalışan Veritabanı İşlemlerinin Tanımlanması
+## <a name="defining-employee-database-operations"></a>Çalışan veritabanı Işlemlerini tanımlama
 
-Sınıfa `Program` `InsertEmployees`, ve `GetEmployeeCount` `GetEmployeeID` yöntemleri ekleyin.
+`Program` `InsertEmployees` , `GetEmployeeCount` Ve yöntemlerine sınıfına ekleyin `GetEmployeeID` .
 
 [!code-csharp[TPLDataflow_BatchDatabase#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#4)]
 [!code-vb[TPLDataflow_BatchDatabase#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#4)]
 
-Yöntem `InsertEmployees` veritabanına yeni çalışan kayıtları ekler. Yöntem, `GetEmployeeCount` `Employees` tablodaki giriş sayısını alır. Yöntem, `GetEmployeeID` sağlanan adı taşıyan ilk çalışanın tanımlayıcısını alır. Bu yöntemlerin her biri Northwind veritabanına bir bağlantı `System.Data.SqlServerCe` dizesi alır ve veritabanı ile iletişim kurmak için ad alanında işlevselliği kullanır.
+`InsertEmployees`Yöntemi veritabanına yeni çalışan kayıtları ekler. `GetEmployeeCount`Yöntemi, tablodaki giriş sayısını alır `Employees` . `GetEmployeeID`Yöntemi, belirtilen ada sahip ilk çalışanın tanımlayıcısını alır. Bu yöntemlerin her biri, Northwind veritabanına bir bağlantı dizesi alır ve `System.Data.SqlServerCe` veritabanı ile iletişim kurmak için ad alanındaki işlevleri kullanır.
 
 <a name="nonBuffering"></a>
 
-## <a name="adding-employee-data-to-the-database-without-using-buffering"></a>Arabelleğe Alma Kullanmadan Veritabanına Çalışan Verilerini Ekleme
+## <a name="adding-employee-data-to-the-database-without-using-buffering"></a>Arabelleğe alma kullanmadan çalışan verileri veritabanına ekleme
 
-Sınıfa `Program` yöntemleri `AddEmployees` ve `PostRandomEmployees` yöntemleri ekleyin.
+`Program` `AddEmployees` Ve yöntemlerini sınıfına ekleyin `PostRandomEmployees` .
 
 [!code-csharp[TPLDataflow_BatchDatabase#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#5)]
 [!code-vb[TPLDataflow_BatchDatabase#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#5)]
 
-Yöntem, `AddEmployees` veri akışını kullanarak veritabanına rasgele çalışan verileri ekler. Veritabanına `InsertEmployees` çalışan <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> girişi eklemek için yöntemi çağıran bir nesne oluşturur. Yöntem `AddEmployees` daha sonra `PostRandomEmployees` <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> nesneye `Employee` birden çok nesne göndermek için yöntemi çağırır. Yöntem `AddEmployees` daha sonra tüm ekleme işlemlerinin tamamlanmasını bekler.
+Yöntemi, veri `AddEmployees` akışı kullanarak veritabanına rastgele çalışan verileri ekler. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> `InsertEmployees` Veritabanına bir çalışan girişi eklemek için yöntemini çağıran bir nesnesi oluşturur. `AddEmployees`Yöntemi daha sonra `PostRandomEmployees` nesnesine birden fazla nesne göndermek için yöntemini çağırır `Employee` <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> . `AddEmployees`Yöntemi daha sonra tüm ekleme işlemlerinin bitmesini bekler.
 
 <a name="buffering"></a>
 
-## <a name="using-buffering-to-add-employee-data-to-the-database"></a>Çalışan Verilerini Veritabanına Eklemek Için Arabelleğe Alma Kullanma
+## <a name="using-buffering-to-add-employee-data-to-the-database"></a>Veritabanına çalışan verileri eklemek için arabelleğe alma kullanma
 
-Sınıfa `Program` yöntemi `AddEmployeesBatched` ekleyin.
+`Program`Yöntemine sınıfına ekleyin `AddEmployeesBatched` .
 
 [!code-csharp[TPLDataflow_BatchDatabase#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#6)]
 [!code-vb[TPLDataflow_BatchDatabase#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#6)]
 
-Bu yöntem, `AddEmployees`bu nesneleri <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> `Employee` <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> nesneye göndermeden önce birden çok nesneyi arabelleğe almak için sınıfı kullanması dışında benzer. Sınıf <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> koleksiyon olarak birden çok öğe yaydığından, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> nesne bir dizi `Employee` nesne üzerinde hareket etmek üzere değiştirilir. `AddEmployees` Yöntemde olduğu `AddEmployeesBatched` gibi, `PostRandomEmployees` yöntemi birden `Employee` çok nesneyi göndermek için çağırır; ancak, `AddEmployeesBatched` bu nesneleri <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> nesneye gönderir. Yöntem `AddEmployeesBatched` ayrıca tüm ekleme işlemlerinin tamamlanmasını bekler.
+Bu yöntem `AddEmployees` , bu <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> nesneleri nesnesine göndermeden önce birden çok nesneyi arabelleğe almak için sınıfını da kullandığından, buna benzer `Employee` <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> . <xref:System.Threading.Tasks.Dataflow.BatchBlock%601>Sınıfı bir koleksiyon olarak birden çok öğe yaydığı <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> için nesne bir nesne dizisi üzerinde çalışacak şekilde değiştirilir `Employee` . Yönteminde olduğu gibi `AddEmployees` , `AddEmployeesBatched` `PostRandomEmployees` birden çok nesne göndermek için yöntemini çağırır `Employee` ; ancak, `AddEmployeesBatched` Bu nesneleri <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> nesnesine gönderir. `AddEmployeesBatched`Yöntemi ayrıca tüm ekleme işlemlerinin bitmesini bekler.
 
 <a name="bufferedJoin"></a>
 
-## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Veritabanından Çalışan Verilerini Okumak için Arabelleğe Alma Birleştirme'yi Kullanma
+## <a name="using-buffered-join-to-read-employee-data-from-the-database"></a>Veritabanından çalışan verilerini okumak için arabellekli katılmayı kullanma
 
-Sınıfa `Program` yöntemi `GetRandomEmployees` ekleyin.
+`Program`Yöntemine sınıfına ekleyin `GetRandomEmployees` .
 
 [!code-csharp[TPLDataflow_BatchDatabase#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#7)]
 [!code-vb[TPLDataflow_BatchDatabase#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#7)]
 
-Bu yöntem, rasgele çalışanlar hakkındaki bilgileri konsola yazdırır. Birkaç rasgele `Employee` nesne oluşturur ve `GetEmployeeID` her nesne için benzersiz tanımlayıcıyı almak için yöntemi çağırır. `GetEmployeeID` Yöntem, verilen ad ve soyadlarla eşleşen bir çalışan yoksa bir `GetRandomEmployees` özel durum <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> attığından, yöntem sınıfı başarılı çağrılar için nesneleri depolamak `Employee` `GetEmployeeID` için kullanır ve <xref:System.Exception?displayProperty=nameWithType> başarısız olan çağrılar için nesneler. Bu <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> örnekteki nesne, <xref:System.Tuple%602> `Employee` nesnelerin ve <xref:System.Exception> nesnelerin listesini tutan bir nesne üzerinde hareket eder. Alınan <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> `Employee` ve <xref:System.Exception> nesne sayısı toplu iş boyutuna eşit olduğunda nesne bu verileri yaşar.
+Bu yöntem, rastgele çalışanlar hakkındaki bilgileri konsola yazdırır. Birkaç rastgele nesne oluşturur `Employee` ve `GetEmployeeID` her bir nesnenin benzersiz tanımlayıcısını almak için yöntemini çağırır. `GetEmployeeID`Verilen ilk ve son adlarla eşleşen bir çalışan yoksa Yöntem bir özel durum oluşturduğundan, `GetRandomEmployees` yöntemi <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> `Employee` başarılı olan çağrılar için nesneleri `GetEmployeeID` ve <xref:System.Exception?displayProperty=nameWithType> başarısız çağrılar için nesneleri depolamak üzere sınıfını kullanır. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>Bu örnekteki nesne, nesne <xref:System.Tuple%602> listesini ve nesne listesini tutan bir nesnesi üzerinde davranır `Employee` <xref:System.Exception> . <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602>Alınan `Employee` ve nesne sayısı toplamı <xref:System.Exception> toplu iş boyutuna eşitse nesne bu verileri yayar.
 
 <a name="complete"></a>
 
 ## <a name="the-complete-example"></a>Tam Örnek
 
-Aşağıdaki örnek, kodun tamamını gösterir. Yöntem, `Main` toplu veritabanı eklemelerini gerçekleştirmek için gereken süreyle toplu olmayan veritabanı eklemelerini gerçekleştirme süresini karşılaştırır. Ayrıca, veritabanından çalışan verilerini okumak ve hataları bildirmek için arabelleğe alınan birleştirme kullanımını da gösterir.
+Aşağıdaki örnek, tüm kodu gösterir. `Main`Yöntemi, toplu veritabanı eklemeleri gerçekleştirmek için gereken süreyi, toplu olmayan veritabanı ekleme işlemini gerçekleştirmek için zaman karşılaştırır. Ayrıca, veritabanından çalışan verilerini okumak ve ayrıca hataları raporlamak için, arabelleğe alınmış birleştirmenin kullanımını gösterir.
 
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [Veri akışı](dataflow-task-parallel-library.md)

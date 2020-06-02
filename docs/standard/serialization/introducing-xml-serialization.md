@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421273"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277966"
 ---
 # <a name="xml-serialization"></a>XML serileştirme
 
@@ -33,7 +33,7 @@ Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemi
 
  Nesnelerinizin verileri, diziler, alanlar, özellikler, ilkel türler, diziler ve hatta katıştırılmış XML gibi programlama dili yapılarını **XmlElement** veya **XmlAttribute** nesneleri biçiminde kullanarak açıklanır. Kendi sınıflarınızı oluşturma, özniteliklerle açıklama eklenmiş veya XML şema tanımı aracını kullanarak mevcut bir XML şemasına göre sınıfları oluşturma seçeneğiniz vardır.
 
- XML şemanız varsa, şemaya kesin olarak yazılan ve özniteliklerle açıklanan bir sınıf kümesi oluşturmak için XML şema tanımı aracını çalıştırabilirsiniz. Bu tür bir sınıfının bir örneğini serileştirilmiş olduğunda, oluşturulan XML için XML Şeması uyar. Bu tür bir sınıf ile programlayabileceğiniz sağlanan kolay yönetilebilen nesne modeli olan sırasında oluşturulan XML XML şemaya uygun olduğunu garanti. Bu, bir XML akışı ayrıştırmak ve yazmak için **XmlReader** ve **XmlWriter** sınıfları gibi .NET Framework diğer sınıfların kullanılmasına bir alternatiftir. Daha fazla bilgi için bkz. [XML belgeleri ve verileri](../../../docs/standard/data/xml/index.md). Bu sınıflar herhangi bir XML akışını ayrıştırabilmeniz için izin verir. Buna karşılık, XML akışının bilinen bir XML şemasına uyması beklendiğinde **XmlSerializer** 'ı kullanın.
+ XML şemanız varsa, şemaya kesin olarak yazılan ve özniteliklerle açıklanan bir sınıf kümesi oluşturmak için XML şema tanımı aracını çalıştırabilirsiniz. Bu tür bir sınıfının bir örneğini serileştirilmiş olduğunda, oluşturulan XML için XML Şeması uyar. Bu tür bir sınıf ile programlayabileceğiniz sağlanan kolay yönetilebilen nesne modeli olan sırasında oluşturulan XML XML şemaya uygun olduğunu garanti. Bu, bir XML akışı ayrıştırmak ve yazmak için **XmlReader** ve **XmlWriter** sınıfları gibi .NET Framework diğer sınıfların kullanılmasına bir alternatiftir. Daha fazla bilgi için bkz. [XML belgeleri ve verileri](../data/xml/index.md). Bu sınıflar herhangi bir XML akışını ayrıştırabilmeniz için izin verir. Buna karşılık, XML akışının bilinen bir XML şemasına uyması beklendiğinde **XmlSerializer** 'ı kullanın.
 
  Öznitelikler, XML akışının XML ad alanını, öğe adını, öznitelik adını ve benzerlerini ayarlamanıza olanak tanıyan **XmlSerializer** sınıfı tarafından oluşturulan XML akışını denetler. Bu öznitelikler ve XML serileştirmesini denetleme hakkında daha fazla bilgi için bkz. [öznitelikleri kullanarak XML serileştirmesini denetleme](controlling-xml-serialization-using-attributes.md). Oluşturulan XML 'yi denetlemek için kullanılan özniteliklerin bir tablosu için bkz. [XML serileştirme denetleyen öznitelikler](attributes-that-control-xml-serialization.md).
 

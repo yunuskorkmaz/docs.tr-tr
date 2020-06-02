@@ -12,36 +12,36 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: b89f7f88233ecdab25ba2a74647aafeb4d8b74af
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 54f14a4f31bef00dd222686cc523935b2d9dd5fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344186"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279044"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Normal İfadelerde Derleme ve Yeniden Kullanma
-Normal ifade altyapısının ifadeleri nasıl derlediğini anlayarak ve normal ifadelerin önbelleğe nasıl kullanıldığını anlayarak normal ifadeleri yaygın olarak kullanan uygulamaların performansını en iyi duruma getirebilirsiniz. Bu konu hem derleme hem de önbelleğe alma konur.  
+Normal ifade altyapısının ifadeleri nasıl derlediğini ve normal ifadelerin nasıl önbelleğe alınacağını anlamak için düzenli ifadeleri yoğun şekilde kullanan uygulamaların performansını en iyi hale getirebilirsiniz. Bu konuda hem derleme hem de önbelleğe alma açıklanmaktadır.  
   
-## <a name="compiled-regular-expressions"></a>Derlenmiş Düzenli İfadeler  
- Varsayılan olarak, normal ifade altyapısı bir iç yönerge dizisine normal bir ifade derler (bunlar Microsoft ara dilinden veya MSIL'den farklı olan üst düzey kodlardır). Motor düzenli bir ifade yürütürken, iç kodları yorumlar.  
+## <a name="compiled-regular-expressions"></a>Derlenmiş normal Ifadeler  
+ Varsayılan olarak, normal ifade altyapısı bir normal ifadeyi iç yönergeler dizisine derler (Bunlar, Microsoft ara dili veya MSIL 'den farklı olan üst düzey kodlardır). Motor bir normal ifadeyi yürüttüğünde, iç kodları yorumlar.  
   
- Bir <xref:System.Text.RegularExpressions.Regex> nesne <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> seçeneğiyle oluşturulmuşsa, üst düzey normal ifade iç yönergeleri yerine normal ifadeyi açık MSIL koduna derler. Bu sağlar. NET'in tam zamanında (JIT) derleyicisi daha yüksek performans için ifadeyi yerel makine koduna dönüştürür.  Nesneyi <xref:System.Text.RegularExpressions.Regex> oluşturmanın maliyeti daha yüksek olabilir, ancak onunla eşleşen performans maliyeti çok daha küçük olması muhtemeldir.
+ Seçeneğiyle bir <xref:System.Text.RegularExpressions.Regex> nesne oluşturulursa <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> , normal ifadeyi üst düzey normal ifade iç yönergeleri yerıne açık MSIL koduna derler. Bu izin verir. Daha yüksek performans için ifadeyi yerel makine koduna dönüştürmek üzere NET-Time (JıT) derleyicisi.  <xref:System.Text.RegularExpressions.Regex>Nesnenin oluşturulması maliyeti daha yüksek olabilir, ancak ile eşleşme gerçekleştirme maliyeti büyük olasılıkla çok daha küçüktür.
 
- Bir alternatif önceden derlenmiş düzenli ifadeler kullanmaktır. Tüm ifadelerinizi <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> yöntemi kullanarak yeniden kullanılabilir bir DLL'ye kopyalayabilirsiniz. Bu, derlenmiş düzenli ifadelerin hızından yararlanırken çalışma zamanında derleme gereksinimini önler.  
+ Alternatif olarak, önceden derlenmiş normal ifadelerin kullanılması. Yöntemini kullanarak tüm ifadelerinizi yeniden kullanılabilir bir DLL olarak derleyebilirsiniz <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> . Bu, derlenmiş normal ifadelerin hızından hala yararlanırken, çalışma zamanında derleme ihtiyacını önler.  
   
-## <a name="the-regular-expressions-cache"></a>Normal İfadeler Önbelleği  
- Performansı artırmak için, normal ifade altyapısı derlenmiş düzenli ifadelerin uygulama çapında önbelleğini tutar. Önbellek, yalnızca statik yöntem çağrılarında kullanılan düzenli ifade desenleri depolar. (Örnek yöntemlerine verilen normal ifade desenleri önbelleğe alınmaz.) Bu, bir ifadenin her kullanıldığında üst düzey bayt koduna reparse gereksinimini önler.  
+## <a name="the-regular-expressions-cache"></a>Normal Ifadeler önbelleği  
+ Normal ifade altyapısı, performansı artırmak için derlenmiş normal ifadelerin uygulama genelinde bir önbelleğini korur. Önbellek, yalnızca statik yöntem çağrılarında kullanılan normal ifade desenlerini depolar. (Örnek yöntemlerine sağlanan normal ifade desenleri önbelleğe alınmaz.) Bu, her kullanıldığı sırada bir ifadeyi üst düzey bayt koduna yeniden ayrıştırma gereksinimini ortadan kaldırır.  
   
- Önbelleğe alınan en fazla normal ifade sayısı `static` (`Shared` Visual Basic'teki) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> özelliğinin değerine göre belirlenir. Varsayılan olarak, normal ifade altyapısı 15'e kadar derlenmiş normal ifadeleri önbelleğe alır. Derlenen normal ifadelerin sayısı önbellek boyutunu aşıyorsa, en son kullanılan normal ifade atılır ve yeni normal ifade önbelleğe çıkar.  
+ Önbelleğe alınan en fazla normal ifade sayısı, `static` ( `Shared` Visual Basic) özelliğinin değerine göre belirlenir <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> . Varsayılan olarak, normal ifade altyapısı, en fazla 15 derlenmiş normal ifadeyi önbelleğe alır. Derlenmiş normal ifadelerin sayısı önbellek boyutunu aşarsa, en az kullanılan normal ifade atılır ve yeni normal ifade önbelleğe alınır.  
   
- Uygulamanız normal ifadeleri aşağıdaki iki şekilde yeniden kullanabilir:  
+ Uygulamanız, normal ifadeleri aşağıdaki iki şekilde kullanabilir:  
   
-- Normal ifadeyi tanımlamak <xref:System.Text.RegularExpressions.Regex> için nesnenin statik bir yöntem kullanarak. Başka bir statik yöntem çağrısı yla zaten tanımlanmış olan normal bir ifade deseni kullanıyorsanız, normal ifade altyapısı önbellekten almaya çalışır. Önbellekte kullanılamıyorsa, motor normal ifadeyi derler ve önbelleğe ekler.
+- <xref:System.Text.RegularExpressions.Regex>Normal ifadeyi tanımlamak için nesnesinin statik bir yöntemini kullanarak. Zaten başka bir statik yöntem çağrısıyla tanımlanmış bir normal ifade deseninin kullanılması durumunda, normal ifade altyapısı onu önbellekten almaya çalışır. Önbellekte yoksa, altyapı normal ifadeyi derler ve önbelleğe ekler.
   
-- Varolan <xref:System.Text.RegularExpressions.Regex> bir nesneyi normal ifade deseni gerekli olduğu sürece yeniden kullanarak.  
+- Varolan bir <xref:System.Text.RegularExpressions.Regex> nesneyi normal ifade deseninin gerektiği sürece yeniden kullanma.  
   
- Çünkü nesne anlık ve düzenli ifade derleme yükü, oluşturma ve hızla <xref:System.Text.RegularExpressions.Regex> çok sayıda nesne yok çok pahalı bir süreçtir. Çok sayıda farklı normal ifade kullanan uygulamalar da, statik `Regex` yöntemlere yapılan çağrıları kullanarak ve büyük olasılıkla normal ifade önbelleğinin boyutunu artırarak performansı en iyi duruma getirebilirsiniz.  
+ Nesne örneği oluşturma ve normal ifade derleme ek yükü nedeniyle çok sayıda nesne oluşturmak ve hızlıca yok etmek <xref:System.Text.RegularExpressions.Regex> çok pahalı bir işlemdir. Çok sayıda farklı normal ifade kullanan uygulamalar için, statik yöntemlere yapılan çağrıları kullanarak `Regex` ve muhtemelen normal ifade önbelleğinin boyutunu artırarak performansı iyileştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Düzenli İfadeler](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET normal Ifadeleri](regular-expressions.md)

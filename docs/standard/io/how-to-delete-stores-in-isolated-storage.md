@@ -15,22 +15,22 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 885dc8e3ca0ea99de460cee7dd093b061f916388
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707833"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291896"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme
-Sınıf, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> yalıtılmış depolama dosyalarını siler için iki yöntem sağlar:  
+<xref:System.IO.IsolatedStorage.IsolatedStorageFile>Sınıfı yalıtılmış depolama dosyalarını silmek için iki yöntem sunar:  
   
-- Örnek yöntem <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> herhangi bir bağımsız değişken almaz ve onu çağıran mağazayı siler. Bu işlem için izin gerekmez. Depoya erişebilen herhangi bir kod içindeki verileri veya tümünü silebilir.  
+- Örnek yöntemi <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> herhangi bir bağımsız değişken almaz ve bunu çağıran depoyu siler. Bu işlem için izin gerekli değildir. Mağazaya erişebilen tüm kodlar, içindeki verilerin herhangi birini veya tümünü silebilir.  
   
-- Statik yöntem <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> numaralandırma değerini alır <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> ve kodu çalıştıran kullanıcı için tüm depoları siler. Bu <xref:System.Security.Permissions.IsolatedStorageFilePermission> <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> işlem, değer için izin gerektirir.  
+- Statik yöntem, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> numaralandırma değerini alır ve kodu çalıştıran kullanıcının tüm depolarını siler. Bu işlem <xref:System.Security.Permissions.IsolatedStorageFilePermission> değer için izin gerektiriyor <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği statik ve örnek <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> yöntemlerinin kullanımını gösterir. Sınıf iki mağaza alır; biri kullanıcı ve derleme için yalıtılmış, diğeri kullanıcı, etki alanı ve derleme için yalıtılmış. Kullanıcı, etki alanı ve montaj deposu sonra <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> yalıtılmış depolama `isoStore1`dosyasının yöntemini arayarak silinir. Daha sonra, kullanıcı için kalan tüm mağazalar <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>statik yöntem çağırılarak silinir.  
+ Aşağıdaki kod örneği, statik ve örnek yöntemlerinin kullanımını gösterir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> . Sınıfı iki depo edinir; biri Kullanıcı ve derleme için yalıtılmıştır ve diğeri Kullanıcı, etki alanı ve derleme için yalıtılmıştır. Kullanıcı, etki alanı ve derleme deposu daha sonra <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> yalıtılmış depolama dosyasının yöntemi çağırarak silinir `isoStore1` . Ardından, kullanıcının tüm geri kalan depoları statik yöntem çağırarak silinir <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> .  
   
  [!code-cpp[Conceptual.IsolatedStorage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source3.cpp#3)]
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
@@ -39,4 +39,4 @@ Sınıf, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> yalıtılmış dep
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)
+- [Yalıtılmış depolama](isolated-storage.md)

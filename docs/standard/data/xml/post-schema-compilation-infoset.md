@@ -7,19 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710485"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291519"
 ---
 # <a name="post-schema-compilation-infoset"></a>Şema Derleme Sonrası Bilgi Kümesi
-[World Wide Web Konsorsiyumu (W3C) XML şeması önerisi](https://www.w3.org/XML/Schema) , şema öncesi doğrulama ve şema sonrası derleme için açığa çıkarılması gereken bilgi kümesini (Infoset) açıklar. XML şeması nesne modeli (SOM), <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> Bu pozlamayı ' ın yönteminden önce ve sonra görüntüler.  
+[World Wide Web Konsorsiyumu (W3C) XML şeması önerisi](https://www.w3.org/XML/Schema) , şema öncesi doğrulama ve şema sonrası derleme için açığa çıkarılması gereken bilgi kümesini (Infoset) açıklar. XML şeması nesne modeli (SOM), bu pozlamayı ' ın yönteminden önce ve sonra görüntüler <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> .  
   
- Şema düzenlemesi sırasında şema öncesi doğrulama bilgi kümesi oluşturulur. Şema sonrası derleme bilgi kümesi, şema derlenirken, öğesinin <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> yöntemi çağırılır ve özellikler olarak gösterilir.  
+ Şema düzenlemesi sırasında şema öncesi doğrulama bilgi kümesi oluşturulur. Şema sonrası derleme bilgi kümesi, <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> <xref:System.Xml.Schema.XmlSchemaSet> şema derlenirken, öğesinin yöntemi çağırılır ve özellikler olarak gösterilir.  
   
- SOM, şema öncesi doğrulama ve şema sonrası derleme bilgi kümelerini temsil eden nesne modelidir; <xref:System.Xml.Schema?displayProperty=nameWithType> ad alanındaki sınıflardan oluşur. <xref:System.Xml.Schema> Ad alanındaki sınıfların tüm okuma ve yazma özellikleri, ön şema doğrulama bilgi kümesine aittir, ancak <xref:System.Xml.Schema> ad alanındaki sınıfların tüm salt okuma özellikleri şema sonrası derleme bilgi kümesine aittir. Bu kuralın istisnası, hem şema öncesi doğrulama bilgi kümesi hem de şema sonrası derleme bilgi kümesi özellikleri olan aşağıdaki özelliklerdir.  
+ SOM, şema öncesi doğrulama ve şema sonrası derleme bilgi kümelerini temsil eden nesne modelidir; <xref:System.Xml.Schema?displayProperty=nameWithType>ad alanındaki sınıflardan oluşur. Ad alanındaki sınıfların tüm okuma ve yazma özellikleri <xref:System.Xml.Schema> , ön şema doğrulama bilgi kümesine aittir, ancak ad alanındaki sınıfların tüm salt okuma özellikleri <xref:System.Xml.Schema> şema sonrası derleme bilgi kümesine aittir. Bu kuralın istisnası, hem şema öncesi doğrulama bilgi kümesi hem de şema sonrası derleme bilgi kümesi özellikleri olan aşağıdaki özelliklerdir.  
   
 |Sınıf|Özellik|  
 |-----------|--------------|  
@@ -30,9 +30,9 @@ ms.locfileid: "75710485"
 |<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>, <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaComplexType>|<xref:System.Xml.Schema.XmlSchemaComplexType.AnyAttribute%2A>|  
   
- Örneğin, <xref:System.Xml.Schema.XmlSchemaElement> ve <xref:System.Xml.Schema.XmlSchemaComplexType> sınıflarının her ikisi de `BlockResolved` ve `FinalResolved` özelliklerdir. Bu özellikler, `Block` şema derlendikten ve doğrulandıktan sonra ve `Final` özellikleri için değerleri tutmak üzere kullanılır. `BlockResolved`ve `FinalResolved` şema sonrası derleme bilgi kümesinin parçası olan salt yazılır özelliklerdir.  
+ Örneğin, <xref:System.Xml.Schema.XmlSchemaElement> ve <xref:System.Xml.Schema.XmlSchemaComplexType> sınıflarının her ikisi de `BlockResolved` ve `FinalResolved` özelliklerdir. Bu özellikler, `Block` `Final` şema derlendikten ve doğrulandıktan sonra ve özellikleri için değerleri tutmak üzere kullanılır. `BlockResolved`ve `FinalResolved` şema sonrası derleme bilgi kümesinin parçası olan salt yazılır özelliklerdir.  
   
- Aşağıdaki örnek, şema doğrulandıktan <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> sonra <xref:System.Xml.Schema.XmlSchemaElement> sınıf kümesinin özelliğini gösterir. Doğrulamadan önce, özelliği bir `null` başvuru içerir ve bu, <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> söz konusu türün adına ayarlanır. Doğrulamadan <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> sonra, geçerli bir tür olarak çözümlenir ve tür nesnesi <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> özelliği aracılığıyla kullanılabilir.  
+ Aşağıdaki örnek, <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> <xref:System.Xml.Schema.XmlSchemaElement> şema doğrulandıktan sonra sınıf kümesinin özelliğini gösterir. Doğrulamadan önce, özelliği bir başvuru içerir `null` ve bu, <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> söz konusu türün adına ayarlanır. Doğrulamadan sonra, <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> geçerli bir tür olarak çözümlenir ve tür nesnesi özelliği aracılığıyla kullanılabilir <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> .  
   
  [!code-cpp[PsciSample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/PsciSample/CPP/PsciSample.cpp#1)]
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
@@ -40,4 +40,4 @@ ms.locfileid: "75710485"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şema Nesne Modeli (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Şema Nesne Modeli (SOM)](xml-schema-object-model-som.md)

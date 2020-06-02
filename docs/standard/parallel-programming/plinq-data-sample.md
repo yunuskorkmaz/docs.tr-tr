@@ -8,30 +8,30 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588605"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291714"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
-Bu örnek, .csv formatında örnek veriler ve müşteri, ürün, sipariş ve sipariş ayrıntılarının bellek içi koleksiyonlarına dönüştüren yöntemler içerir. PLINQ ile daha fazla deneme yapmak için, bu konudaki koda diğer bazı `Main` konulardan kod örneklerini yapıştırabilir ve yöntemden çağırabilirsiniz. Bu verileri kendi PLINQ sorgularınızla da kullanabilirsiniz.  
+Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLıNQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
   
- Veriler Northwind veritabanının bir alt kümesini temsil eder. Elli (50) müşteri kaydı dahildir, ancak tüm alanlar dahil değildir. Siparişler'den gelen satırların bir alt kümesi ve her Müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm Ürünler dahildir.  
+ Veriler, Northwind veritabanının bir alt kümesini temsil eder. 50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez. Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm ürünler dahil edilmiştir.  
   
 > [!NOTE]
-> Veri kümesi, PLINQ'nin yalnızca temel `where` ve `select` yan tümceleri içeren sorgular için LINQ'dan Nesnelere linq'ten daha hızlı olduğunu gösterecek kadar büyük değildir. Bunun gibi küçük veri kümelerinin hız artışlarını gözlemlemek için, veri kümesindeki her öğede hesaplama açısından pahalı işlemler içeren sorgular kullanın.  
+> Veri kümesi, PLıNQ 'in yalnızca temel `where` ve yan tümceleri içeren sorgular için LINQ to Objects daha hızlı olduğunu göstermek için yeterince büyük değil `select` . Bu gibi küçük veri kümeleri için hız artışı gözlemlemek için, veri kümesindeki her öğe üzerinde hesaplama maliyetli işlemler içeren sorguları kullanın.  
   
 ### <a name="to-set-up-this-sample"></a>Bu örneği ayarlamak için  
   
-1. Visual Basic veya Visual C# konsol uygulama projesi oluşturun.  
+1. Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.  
   
-2. Bu adımları izleyen kodu kullanarak Module1.vb veya Program.cs içeriğini değiştirin.  
+2. Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.  
   
-3. **Proje** menüsünde **Yeni Öğe Ekle'yi**tıklatın. **Metin Dosyası'nı** seçin ve ardından **Tamam'ı**tıklatın. Bu konuyla ilgili verileri kopyalayın ve yeni metin dosyasına yapıştırın. **Dosya** menüsünde **Kaydet,** Plinqdata.csv dosyasını adlandır'ı ve ardından kaynak kod dosyalarınızı içeren klasöre kaydedin'i tıklatın.  
+3. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın. Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın. **Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı plinqdata. csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.  
   
-4. Projenin doğru oluşturduğunu ve çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıktı konsol penceresinde görüntülenmelidir.  
+4. Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.  
   
     ```console  
     Customer count: 50  
@@ -862,4 +862,4 @@ END PRODUCTS
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Paralel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Paralel LINQ (PLINQ)](introduction-to-plinq.md)

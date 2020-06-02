@@ -12,17 +12,17 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 76042bef1475f2fdf14e309390dcba6654ccfaa9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741751"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280367"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
 Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü Sınıf (başvuru türü) veya yapı (değer türü) olarak tasarlamayacağındır. Bu seçimi yapmak için başvuru türleri ve değer türleri davranışlarındaki farkları iyi anlamak çok önemlidir.
 
- Başvuru türleri ve değer türleri arasındaki ilk fark, başvuru türlerinin yığın ve atık toplama üzerinde ayrıldığı, ancak değer türlerinin yığın üzerinde ayrıldığı ya da yığın üzerinde serbest bırakıldığı ve yığın olduğunda serbest bırakıldığı durumlarda dikkate alınması gerektiğini düşüneceğiz. ya da içerdiği tür serbest bırakılır. Bu nedenle, değer türlerinin ayırmaları ve ayırması, genel bir ucuz 'da, başvuru türlerinin tahsislerini ve ayırmayı kaldırır.
+ Başvuru türleri ve değer türleri arasındaki ilk fark, başvuru türlerinin yığında ve atık toplanmış olarak ayrıldığı, ancak değer türlerinin yığın üzerinde ayrıldığı ya da yığın olarak ya da kendi kapsayıcı türü serbest bırakıldığında serbest bırakıldığı durumlarda serbest bırakıldığı ' dır. Bu nedenle, değer türlerinin ayırmaları ve ayırması, genel bir ucuz 'da, başvuru türlerinin tahsislerini ve ayırmayı kaldırır.
 
  Daha sonra, başvuru türü dizileri satır dışı ayrılır, yani dizi öğeleri yalnızca yığında bulunan başvuru türünün örneklerine başvurudur. Değer türü dizileri satır içi olarak ayrılır, yani dizi öğeleri değer türünün gerçek örnekleridir. Bu nedenle, değer türü dizilerinin ayırmaları ve ayırmaları, başvuru türü dizilerinin ayırmaya ve ayırmaya göre çok daha ucuz. Bunlara ek olarak, çoğu durumda değer türü dizileri başvurunun çok daha iyi yer aldığı yeri gösterir.
 
@@ -36,9 +36,9 @@ Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü 
 
  ✔️, türün örnekleri küçük ve genellikle kısa süreli ise veya genellikle diğer nesnelere katıştırılmışsa sınıf yerine bir struct tanımlamayı düşünün.
 
- tür aşağıdaki özelliklerin tümüne sahip olmadığı takdirde bir struct tanımlamaktan KAÇıNıN: ❌
+ ❌Türün şu özelliklere sahip olmadığı durumlar dışında bir struct tanımlamaktan KAÇıNıN:
 
-- Temel türler (`int`, `double`, vb.) gibi tek bir değeri mantıksal olarak temsil eder.
+- Temel türler ( `int` , `double` , vb.) gibi tek bir değeri mantıksal olarak temsil eder.
 
 - 16 baytlık bir örnek boyutu vardır.
 
@@ -54,5 +54,5 @@ Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Tasarımı Yönergeleri](../../../docs/standard/design-guidelines/type.md)
-- [Çerçeve Tasarım Yönergeleri](../../../docs/standard/design-guidelines/index.md)
+- [Tür tasarım yönergeleri](type.md)
+- [Çerçeve tasarım yönergeleri](index.md)

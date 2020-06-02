@@ -1,5 +1,5 @@
 ---
-title: .NET'te Dizeleri Ayrışdırma
+title: .NET 'te dizeleri ayrıştırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 717022e5d2e292c1624e6155bd7571e4daa997b9
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: ab446a8f868cabdeff73d1b72e1399b7c2beb1e1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523811"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277420"
 ---
-# <a name="parsing-strings-in-net"></a>.NET'te Dizeleri Ayrışdırma
-Ayrıştma işlemi, .NET taban türünü temsil eden bir dizeyi bu taban türüne dönüştürür. Örneğin, bir ayrıştırma işlemi, bir dizeyi kayan nokta numarasına veya tarih ve saat değerine dönüştürmek için kullanılır. Ayrıştırma işlemini gerçekleştirmek için en sık `Parse` kullanılan yöntem yöntemdir. Ayrıştırma biçimlendirmenin ters işlemi olduğundan (bir taban türünü dize gösterimine dönüştürmeyi içerir), aynı kural ve kuralların çoğu geçerlidir. Biçimlendirme, kültüre duyarlı biçimlendirme <xref:System.IFormatProvider> bilgileri sağlamak için arabirimi uygulayan bir nesne kullandığı gibi, <xref:System.IFormatProvider> ayrıştırma da dize gösterimini nasıl yorumlayacaklarını belirlemek için arabirimi uygulayan bir nesne kullanır. Daha fazla bilgi için bkz. [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md).  
+# <a name="parsing-strings-in-net"></a>.NET 'te dizeleri ayrıştırma
+Bir ayrıştırma işlemi, .NET temel türünü temsil eden bir dizeyi bu temel türe dönüştürür. Örneğin, bir dizeyi bir kayan noktalı sayıya veya tarih ve saat değerine dönüştürmek için bir ayrıştırma işlemi kullanılır. Bir ayrıştırma işlemi gerçekleştirmek için en yaygın olarak kullanılan yöntem `Parse` yöntemidir. Ayrıştırma, biçimlendirme işlemi (bir temel türü dize gösterimine dönüştürmeyi içerir) olduğundan, aynı kuralların ve kuralların birçoğu da geçerlidir. Biçimlendirme <xref:System.IFormatProvider> , kültüre duyarlı biçimlendirme bilgilerini sağlamak için arabirimini uygulayan bir nesne kullandığından, ayrıştırma aynı zamanda <xref:System.IFormatProvider> bir dize gösterimini nasıl yorumlayacağını belirleme arabirimini uygulayan bir nesne kullanır. Daha fazla bilgi için bkz. [Biçimlendirme Türleri](formatting-types.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Sayısal Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-numeric.md)  
- Dizeleri .NET sayısal türlerine nasıl dönüştüreceklerini açıklar.  
+ [Sayısal Dizeleri Ayrıştırma](parsing-numeric.md)  
+ Dizelerin .NET sayısal türlerine nasıl dönüştürüleceğini açıklar.  
   
- [Tarih ve Saat Dizelerini Ayrıştırma](../../../docs/standard/base-types/parsing-datetime.md)  
- Dizeleri .NET **DateTime** türlerine nasıl dönüştüreceklerini açıklar.  
+ [Tarih ve Saat Dizelerini Ayrıştırma](parsing-datetime.md)  
+ Dizelerin .NET **DateTime** türlerine nasıl dönüştürüleceğini açıklar.  
   
- [Diğer Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-other.md)  
- Dizeleri **Char,** **Boolean**ve **Enum** türlerine nasıl dönüştüreceklerini açıklar.  
+ [Diğer Dizeleri Ayrıştırma](parsing-other.md)  
+ Dizelerin **char**, **Boolean**ve **enum** türlerine nasıl dönüştürüleceğini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)  
- Biçim belirteciler ve biçim sağlayıcıları gibi temel biçimlendirme kavramlarını açıklar.  
+ [Biçimlendirme Türleri](formatting-types.md)  
+ Biçim belirticileri ve biçim sağlayıcıları gibi temel biçimlendirme kavramlarını açıklar.  
   
- [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)  
- Türlerin nasıl dönüştürülür şekilde dönüştürülür açıklanır.
+ [.NET 'te tür dönüştürme](type-conversion.md)  
+ Türlerin nasıl dönüştürüleceğini açıklar.

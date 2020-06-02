@@ -3,33 +3,33 @@ title: XPathNavigator Kullanarak XML Verilerini Düzenleme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
-ms.openlocfilehash: 3b9225f1efcca0f4874a98f2b83d1964aacef735
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11395c52e399068e5242a1e041ebd9ed94bc2881
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710966"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292078"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Düzenleme
-Sınıfı <xref:System.Xml.XPath.XPathNavigator> , bir <xref:System.Xml.XmlDocument> nesnede bulunan bir XML belgesinden düğüm ve değer ekleme, değiştirme ve kaldırma yöntemleri sağlar. Düğüm ve değerleri eklemek, değiştirmek ve kaldırmak için bu yöntemlerden herhangi birini kullanmak üzere, <xref:System.Xml.XPath.XPathNavigator> nesne düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği doğru olmalıdır.  
+<xref:System.Xml.XPath.XPathNavigator>Sınıfı, bir nesnede bulunan BIR XML belgesinden düğüm ve değer ekleme, değiştirme ve kaldırma yöntemleri sağlar <xref:System.Xml.XmlDocument> . Düğüm ve değerleri eklemek, değiştirmek ve kaldırmak için bu yöntemlerden herhangi birini kullanmak üzere, <xref:System.Xml.XPath.XPathNavigator> nesne düzenlenebilir olmalıdır, yani <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> özelliği doğru olmalıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [XPathNavigator Kullanarak XML Verileri Ekleme](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnesine eşdüzey, alt, öznitelik düğümleri ve değerlerin nasıl ekleneceğini açıklar.  
+ [XPathNavigator Kullanarak XML Verileri Ekleme](insert-xml-data-using-xpathnavigator.md)  
+ Sınıfını kullanarak bir nesnesine eşdüzey, alt, öznitelik düğümleri ve değerlerin nasıl ekleneceğini açıklar <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathNavigator> .  
   
- [XPathNavigator Kullanarak XML Verilerini Değiştirme](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesnedeki düğümlerin ve değerlerin nasıl değiştirileceğini açıklar.  
+ [XPathNavigator Kullanarak XML Verilerini Değiştirme](modify-xml-data-using-xpathnavigator.md)  
+ Sınıfını kullanarak bir nesnedeki düğümlerin ve değerlerin nasıl değiştirileceğini açıklar <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathNavigator> .  
   
- [XPathNavigator Kullanarak XML Verilerini Kaldırma](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
- <xref:System.Xml.XPath.XPathNavigator> Sınıfını kullanarak bir <xref:System.Xml.XmlDocument> nesneden düğümlerin ve değerlerin nasıl kaldırılacağını açıklar.  
+ [XPathNavigator Kullanarak XML Verilerini Kaldırma](remove-xml-data-using-xpathnavigator.md)  
+ Sınıfını kullanarak bir nesneden düğümlerin ve değerlerin nasıl kaldırılacağını açıklar <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathNavigator> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)
-- [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
-- [XPathNavigator Kullanarak XML Verilerine Erişme](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [XPathNavigator Kullanarak Şema Doğrulama](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+- [XPath Veri Modelini Kullanarak XML Verilerini İşleme](process-xml-data-using-the-xpath-data-model.md)
+- [XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma](reading-xml-data-using-xpathdocument-and-xmldocument.md)
+- [XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [XPathNavigator Kullanarak XML Verilerine Erişme](accessing-xml-data-using-xpathnavigator.md)
+- [XPathNavigator Kullanarak Şema Doğrulama](schema-validation-using-xpathnavigator.md)
