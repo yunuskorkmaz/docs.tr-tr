@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144337"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306961"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -53,13 +53,13 @@ Mikro hizmetler mimarisinde, istemci uygulamalarının genellikle birden fazla m
 
 Bu nedenle, bir ara düzeyi veya yöneltme (ağ geçidi) katmanının olması, mikro hizmet tabanlı uygulamalar için çok kullanışlı olabilir. API ağ geçitleriniz yoksa, istemci uygulamalar istekleri doğrudan mikro hizmetlere göndermelidir ve aşağıdaki sorunlar gibi sorunlar oluşturur:
 
-- **Eşlenmesiz**: API ağ geçidi kalıbı olmadan, istemci uygulamaları iç mikro hizmetlerle birlikte bulunur. İstemci uygulamaları, uygulamanın birden çok alanının mikro hizmetlerde nasıl parçalanduğuna bilmelidir. İç mikro hizmetleri geliştirme ve yeniden düzenleme işlemleri sırasında, istemci uygulamalarından gelen iç mikro hizmetlere doğrudan başvuru nedeniyle istemci uygulamalarında olumsuz değişikliklere neden olduğu için bu eylemlerin bakımı oldukça kötü olur. İstemci uygulamalarının sıklıkla güncelleştirilmeleri gerekir, çözüm daha zor hale getirir.
+- **Eşlenmesiz**: API ağ geçidi kalıbı olmadan, istemci uygulamaları iç mikro hizmetlerle birlikte bulunur. İstemci uygulamaları, uygulamanın birden çok alanının mikro hizmetlerde nasıl parçalanduğuna bilmelidir. İç mikro hizmetleri gelişen ve yeniden düzenleme sırasında, istemci uygulamalarından gelen iç mikro hizmetlere doğrudan başvuru nedeniyle istemci uygulamalarında olumsuz değişikliklere neden olduğundan bu eylemler Bakımı etkiler. İstemci uygulamalarının sıklıkla güncelleştirilmeleri gerekir, çözüm daha zor hale getirir.
 
 - **Çok fazla gidiş dönüş**: istemci uygulamasındaki tek bir sayfa/ekran birden fazla hizmete çok sayıda çağrı gerektirebilir. Bu, istemci ile sunucu arasında birden çok ağ gidiş dönüşde oluşmasına neden olabilir, önemli gecikme süresi ekler. Ara düzeyde işlenen toplama, istemci uygulaması için performans ve Kullanıcı deneyimini iyileştirebilir.
 
 - **Güvenlik sorunları**: ağ geçidi olmadan, tüm mikro hizmetler "dış dünya" olarak gösterilmelidir ve bu, doğrudan istemci uygulamaları tarafından kullanılmayan iç mikro hizmetleri gizleyerek saldırı yüzeyini daha büyük hale getirir. Saldırı yüzeyi ne kadar küçük olursa, uygulamanız daha güvenli olabilir.
 
-- **Çapraz kesme sorunları**: herkese açık yayımlanan her mikro hizmet, YETKILENDIRME, SSL vb. gibi sorunları ele almalıdır. Birçok durumda, iç mikro hizmetlerin basitleşilmesi için bu konular tek bir katmanda işlenebilir.
+- **Çapraz kesme sorunları**: herkese açık yayımlanan her mikro hizmet, YETKILENDIRME ve SSL gibi sorunları ele almalıdır. Birçok durumda, iç mikro hizmetlerin basitleşilmesi için bu konular tek bir katmanda işlenebilir.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>API ağ geçidi deseninin anlamı nedir?
 
@@ -75,7 +75,7 @@ Bu nedenle, API Gateway istemci uygulamaları ve mikro hizmetler arasında yer a
 
 Uygulamalar, istekleri bağımsız mikro hizmetlere iletmek üzere yapılandırılmış tek bir uç noktaya, API ağ geçidine bağlanır. Bu örnekte, API Gateway bir kapsayıcı olarak çalışan özel bir ASP.NET Core WebHost hizmeti olarak uygulanır.
 
-Bu diyagramda, birden çok ve farklı istemci uygulamalarına yönelik tek bir özel API Gateway hizmeti kullandığınızı vurgulamak önemlidir. API Gateway hizmetiniz, istemci uygulamalarından birçok farklı gereksinime göre büyümekte ve gelişeceğinden, bu olgu önemli bir risk olabilir. Sonuç olarak, bu farklı gereksinimler ve etkili bir şekilde tek parçalı bir uygulamaya veya tek parçalı bir hizmete benzer bir şekilde, bu uygulama için de şişecektir. Bu nedenle, API ağ geçidini birden çok hizmete veya birden çok daha küçük API ağ geçidine, örneğin istemci uygulaması form faktörü türüne göre ayırmak çok fazla önerilir.
+Bu diyagramda, birden çok ve farklı istemci uygulamalarına yönelik tek bir özel API Gateway hizmeti kullandığınızı vurgulamak önemlidir. API Gateway hizmetiniz, istemci uygulamalarından birçok farklı gereksinime göre büyümekte ve gelişeceğinden, bu olgu önemli bir risk olabilir. Sonuç olarak, bu farklı gereksinimler ve etkili bir şekilde tek parçalı bir uygulamaya ya da tek parçalı bir hizmete benzer olabilir. Bu nedenle, API ağ geçidini birden çok hizmete veya birden çok daha küçük API ağ geçidine, örneğin istemci uygulaması form faktörü türüne göre ayırmak çok fazla önerilir.
 
 API ağ geçidi modelini uygularken dikkatli olmanız gerekir. Genellikle uygulamanızın tüm iç mikro hizmetlerini toplayarak tek bir API ağ geçidinin olması iyi bir fikir değildir. Bunu yapıyorsa, tek parçalı bir toplayıcı veya Orchestrator gibi davranır ve mikro hizmet bağımsız çalışma sınırı tüm mikro hizmetlere eşlenerek çiğneniyor.
 
@@ -93,7 +93,7 @@ API ağ geçidi katmanını birden çok API ağ geçidine bölmek için, uygulam
 
 Bir API ağ geçidi, birden çok özellik sunabilir. Ürüne bağlı olarak, daha zengin veya daha basit özellikler sunabilir, ancak herhangi bir API ağ geçidi için en önemli ve temel özellikler aşağıdaki tasarım desenlerinden gelir:
 
-**Ters proxy veya ağ geçidi yönlendirmesi.** API Gateway, istekleri (katman 7 yönlendirme, genellikle HTTP istekleri) iç mikro hizmetlerin uç noktalarına yönlendirmek veya yönlendirmek için ters bir ara sunucu sunar. Ağ Geçidi, istemci uygulamaları için tek bir uç nokta veya URL sağlar ve istekleri dahili bir mikro hizmet grubuyla dahili olarak eşler. Bu yönlendirme özelliği, istemci uygulamalarının mikro hizmetlerden ayrılmaya yardımcı olur, ancak tek parçalı API ve istemci uygulamaları arasındaki API ağ geçidine oturarak tek parçalı bir API 'YI modernleştirirken oldukça uygundur. daha sonra, daha sonra da eski tek parçalı API 'yi kullanmaya devam ederken yeni mikro hizmetler gibi yeni API 'Ler ekleyebilirsiniz. API ağ geçidi nedeniyle, kullanılan API 'Lerin iç mikro hizmetler veya tek parçalı bir API olarak uygulanıp uygulanmadığı ve daha önemlisi, tek parçalı API 'yi, API ağ geçidi yönlendirmesi sayesinde, istemci uygulamaları da herhangi bir URI değişikliğine etkilemediği zaman fark görmez.
+**Ters proxy veya ağ geçidi yönlendirmesi.** API Gateway, istekleri (katman 7 yönlendirme, genellikle HTTP istekleri) iç mikro hizmetlerin uç noktalarına yönlendirmek veya yönlendirmek için ters bir ara sunucu sunar. Ağ Geçidi, istemci uygulamaları için tek bir uç nokta veya URL sağlar ve istekleri dahili bir mikro hizmet grubuyla dahili olarak eşler. Bu yönlendirme özelliği, istemci uygulamalarını mikro hizmetlerden ayırt etmeye yardımcı olur, ancak tek parçalı API ve istemci uygulamaları arasındaki API ağ geçidini oturarak tek parçalı bir API 'YI modernleştirirken, daha sonra eski tek parçalı API 'yi kullanmaya devam ederken yeni mikro hizmetler olarak yeni API 'Ler ekleyebilirsiniz. API ağ geçidi nedeniyle, kullanılan API 'Lerin iç mikro hizmetler veya tek parçalı bir API olarak uygulanıp uygulanmadığı ve daha önemlisi, tek parçalı API 'yi, API ağ geçidi yönlendirmesi sayesinde, istemci uygulamaları da herhangi bir URI değişikliğine etkilemediği zaman fark görmez.
 
 Daha fazla bilgi için bkz. [ağ geçidi yönlendirme model](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
 
@@ -105,7 +105,7 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.c
 
 **Çapraz kesme sorunları veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürünü tarafından sunulan özelliklere bağlı olarak, her bir mikro hizmetten bağımsız olarak tek bir katmanda çapraz kesme sorunlarını birleştirerek her bir mikro hizmetin uygulanmasını kolaylaştıran ağ geçidine işlevsellik devreolursunuz. Bu özellikle, aşağıdaki işlev gibi her iç mikro hizmette düzgün şekilde uygulanması karmaşık olabilecek özelleştirilmiş özellikler için kullanışlıdır:
 
-- Kimlik doğrulama ve yetkilendirme
+- Kimlik doğrulaması ve yetkilendirme
 - Hizmet bulma tümleştirmesi
 - Yanıtları Önbelleğe Alma
 - Yeniden deneme ilkeleri, devre kesici ve QoS
@@ -144,7 +144,7 @@ Bu kılavuzda ve başvuru örnek uygulamasında (eShopOnContainers), mimari Azur
 
 ### <a name="ocelot"></a>Ocelot
 
-[Ocelot](https://github.com/ThreeMammals/Ocelot) , daha basit yaklaşımlar için önerilen hafıf bir API ağ geçididir. Ocelot, özellikle sistemlerinde Birleşik giriş noktaları gerektiren mikro hizmetler mimarisi için oluşturulmuş açık kaynaklı bir .NET Core API ağ geçididir. Hafif, hızlı, ölçeklenebilir ve diğer birçok özellik arasında yönlendirme ve kimlik doğrulaması sağlar.
+[Ocelot](https://github.com/ThreeMammals/Ocelot) , daha basit yaklaşımlar için önerilen hafıf bir API ağ geçididir. Ocelot, özellikle sistemlerine Birleşik giriş noktaları gerektiren mikro hizmet mimarileri için oluşturulan açık kaynaklı bir .NET Core API ağ geçididir. Hafif, hızlı ve ölçeklenebilir ve birçok diğer özellik arasında yönlendirme ve kimlik doğrulaması sağlar.
 
 [Eshoponcontainers başvuru uygulaması](https://github.com/dotnet-architecture/eShopOnContainers) Için Ocelot ' ı seçmek, Ocelot 'Nin bir Docker Konağı, Kubernetes vb. gibi mikro Hizmetleri/kapsayıcıları dağıttığınız aynı uygulama dağıtım ortamına dağıtabileceğiniz bir .NET Core hafif API ağ geçididir. .NET Core temel alınarak, Linux veya Windows üzerinde dağıtmanıza izin veren platformlar arası bir platformdur.
 
@@ -188,7 +188,7 @@ Ayrıca, Pazar sunumu API ağ geçitleri özelliklerinde, Apiayıklanan, Kong, M
 - **Clemens Valar. GIT 2016 ' de mesajlaşma ve mikro hizmetler (video)** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **Bir Nutshell Içinde API ağ geçidi** (ASP.NET Core API Gateway öğreticisi serisi) \
+- **Bir Nutshell 'de API Gateway** (ASP.NET Core API Gateway öğretici serisi) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]

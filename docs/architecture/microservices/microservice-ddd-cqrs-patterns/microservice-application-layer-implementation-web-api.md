@@ -2,12 +2,12 @@
 title: Web API’si kullanarak mikro hizmet uygulama katmanını uygulama
 description: Bağımlılık ekleme ve ortalama düzenlerini ve bunların uygulama ayrıntılarını Web API 'SI uygulama katmanında anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144610"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306935"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API 'sini kullanarak mikro hizmet uygulama katmanını uygulama
 
@@ -25,7 +25,7 @@ Sıralama. API mikro hizmeti 'nin, uygulama klasörü altındaki alt klasörleri
 
 ASP.NET Core, varsayılan olarak Oluşturucu ekleme işlemini destekleyen basit bir [yerleşik IOC kapsayıcısı](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (IServiceProvider arabirimi tarafından temsil edilir) içerir ve ASP.net, belırlı Hizmetleri dı üzerinden kullanılabilir hale getirir. ASP.NET Core, YAZMAÇ aracılığıyla eklenecek olan herhangi bir türden herhangi biri için *hizmet* koşulları 'nı kullanır. Yerleşik kapsayıcının hizmetlerini uygulamanızın başlangıç sınıfındaki ConfigureServices yönteminde yapılandırırsınız. Bağımlılıklarınız, bir tür için gereken ve IOC kapsayıcısına kaydolmanızı sağlayan hizmetlerde uygulanır.
 
-Genellikle, altyapı nesneleri uygulayan bağımlılıklar eklemek istersiniz. Ekleme için çok tipik bir bağımlılık, bir depodur. Ancak sahip olduğunuz herhangi bir altyapı bağımlılığı ekleyebilirsiniz. Daha basit uygulamalar için, DBContext aynı zamanda altyapı Kalıcılık nesnelerinizin uygulanması olduğundan, çalışma birimi nesnesi (EF DbContext nesnesi) birimini doğrudan ekleyebiliriniz.
+Genellikle, altyapı nesneleri uygulayan bağımlılıklar eklemek istersiniz. Ekleme için tipik bir bağımlılık, bir depodur. Ancak sahip olduğunuz herhangi bir altyapı bağımlılığı ekleyebilirsiniz. Daha basit uygulamalar için, DBContext aynı zamanda altyapı Kalıcılık nesnelerinizin uygulanması olduğundan, çalışma birimi nesnesi (EF DbContext nesnesi) birimini doğrudan ekleyebiliriniz.
 
 Aşağıdaki örnekte, .NET Core 'un Oluşturucu aracılığıyla gerekli depo nesnelerini nasıl ekleme görürsünüz. Sınıfı, sonraki bölümde ele alacak bir komut işleyicisidir.
 
@@ -433,7 +433,7 @@ Yukarıdaki diyagramda, görüntü 7-24 ' den bir yakınlaştırma gösterilmekt
 
 Mediator deseninin kullanılması, kurumsal uygulamalarda işleme isteklerinin karmaşık hale gelmesini sağlar. Günlüğe kaydetme, doğrulama, denetim ve güvenlik gibi çeşitli çapraz kesme sorunları ekleyebilmek istiyorsunuz. Bu durumlarda, bu ek davranışlar veya çapraz kesme sorunları için bir yol sağlamak üzere bir Mediator işlem hattına (bkz. [Mediator düzeni](https://en.wikipedia.org/wiki/Mediator_pattern)) güvenebilirsiniz.
 
-Bir Mediator, bu işlemin "nasıl" olduğunu kapsülleyen bir nesnedir: durumu, bir komut işleyicisinin çağrılması ya da işleyiciye sağladığınız yük olarak, yürütme şeklini temel alarak düzenler. Bir Mediator bileşeni ile, dekoratörler (veya [mediaTR 3](https://www.nuget.org/packages/MediatR/3.0.0)' den beri işlem [hattı davranışları](https://github.com/jbogard/MediatR/wiki/Behaviors) ) uygulayarak merkezi ve saydam bir şekilde çapraz kesme sorunları uygulayabilirsiniz. Daha fazla bilgi için bkz. [dekoratör deseninin](https://en.wikipedia.org/wiki/Decorator_pattern).
+Bir Mediator, bu işlemin "nasıl" olduğunu kapsülleyen bir nesnedir: durumu, bir komut işleyicisinin çağrılması ya da işleyiciye sağladığınız yük olarak, yürütme şeklini temel alarak düzenler. Bir Mediator bileşeniyle, dekoratörler (veya [mediaTR 3](https://www.nuget.org/packages/MediatR/3.0.0)' den beri işlem [hattı davranışları](https://github.com/jbogard/MediatR/wiki/Behaviors) ) uygulayarak merkezi ve saydam bir şekilde çapraz kesme sorunları uygulayabilirsiniz. Daha fazla bilgi için bkz. [dekoratör deseninin](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Dekoratörler ve davranışlar, yalnızca Mediator bileşeni tarafından yönetilen belirli bir işlem ardışık düzenine uygulanan, [en boy Yönelimli Programlamaya (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)benzerdir. Çapraz kesme sorunları uygulayan AOP 'nin yönleri, derleme zamanında eklenen veya nesne çağrı yakalaşmaya bağlı olan *en büyük hava* alanları temelinde uygulanır. Tipik AOP yaklaşımları bazen "Magic" gibi çalışarak, ne kadar AOP 'nin çalıştığını görmek çok kolay. Ciddi sorunlar veya hatalarla ilgilenirken, AOP 'nin hata ayıklaması zor olabilir. Öte yandan, bu dekoratörler/davranışlar açık ve yalnızca ortalama bağlamında uygulandı, bu nedenle hata ayıklama çok daha öngörülebilir ve kolaydır.
 
@@ -477,7 +477,7 @@ Mediator deseninin kullanılması için başka bir neden, bu kılavuzu gözden g
 
 > Burada test etmeyi düşünüyordum. sisteminizin davranışına yönelik iyi bir tutarlı pencere sağlar. İstek, yanıt verme. Bu en boy, düzenli olarak davranmakta olan testlerin oluşturulmasına oldukça değerlidir.
 
-İlk olarak, yalnızca Mediator nesnesini kullanacağınız örnek bir WebAPI denetleyicisine göz atalım. Mediator nesnesini kullanmıyorsanız, bu denetleyiciye yönelik tüm bağımlılıkları, bir günlükçü nesnesi ve diğerleri gibi öğeleri eklemeniz gerekir. Bu nedenle, Oluşturucu oldukça karmaşıktır. Diğer taraftan, Mediator nesnesini kullanırsanız, aşağıdaki örnekte olduğu gibi, her bir çapraz kesme işlemi için bir tane olmak üzere yalnızca birkaç bağımlılıkda olmak üzere denetleyicinizin Oluşturucusu çok daha basit olabilir.
+İlk olarak, yalnızca Mediator nesnesini kullanacağınız örnek bir WebAPI denetleyicisine göz atalım. Mediator nesnesini kullanmıyorsanız, bu denetleyiciye yönelik tüm bağımlılıkları, bir günlükçü nesnesi ve diğerleri gibi öğeleri eklemeniz gerekir. Bu nedenle, Oluşturucu karmaşık olacaktır. Diğer taraftan, Mediator nesnesini kullanırsanız, aşağıdaki örnekte olduğu gibi, her bir çapraz kesme işlemi için bir tane olmak üzere yalnızca birkaç bağımlılıkda olmak üzere denetleyicinizin Oluşturucusu çok daha basit olabilir.
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,7 +526,7 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-Bununla birlikte, Ayrıca, ıdempotent komutlarını da uygulamamız gerektiğinden, bu durum biraz daha gelişmiş bir bittir. CreateOrderCommand işleminin ıdempotent olması gerekir, bu nedenle aynı ileti ağ üzerinden yinelenirse, yeniden denemeler gibi her nedenden dolayı aynı iş siparişi yalnızca bir kez işlenecektir.
+Ancak, Ayrıca, ıdempotent komutlarını da uygulamamız nedeniyle, bu durum biraz daha gelişmiş bir durumdur. CreateOrderCommand işleminin ıdempotent olması gerekir, bu nedenle aynı ileti ağ üzerinden yinelenirse, yeniden denemeler gibi her nedenden dolayı aynı iş siparişi yalnızca bir kez işlenecektir.
 
 Bu, iş komutu sarmalanarak (Bu durumda CreateOrderCommand) ve ıdempotent olması gereken ağ üzerinden gelen her iletinin KIMLIĞI tarafından izlenen genel bir IdentifiedCommand gömülerek uygulanır.
 
@@ -590,9 +590,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-IdentifiedCommand bir iş komutunun zarfı gibi davrandığı için, iş komutunun, tekrarlanmış bir kimlik olmadığından, bu dahili iş komutunu alıp, çalışırken yukarıda gösterilen kodun son bölümünde olduğu gibi, bu iç iş komutunu bir kez daha yeniden gönderir ve `_mediator.Send(message.Command)` [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+IdentifiedCommand bir iş komutunun zarfı gibi davrandığı için, iş komutunun yinelenen bir KIMLIK olmadığından işlenmek üzere olması gerektiğinde, bu iç iş komutunu ve resubmits, çalışırken yukarıda gösterilen kodun son bölümünde olduğu gibi, `_mediator.Send(message.Command)` [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Bunu yaparken, aşağıdaki kodda gösterildiği gibi, işlem veritabanına karşı işlemleri çalıştıran [Createordercommandhandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) olan bu örnekte iş komut işleyicisini bağlar ve çalıştırır.
+Bunu yaparken, aşağıdaki kodda gösterildiği gibi, bu durumda, sıralama veritabanına karşı işlem çalıştıran [Createordercommandhandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)olan iş komut işleyicisini bağlar ve çalıştırır.
 
 ```csharp
 // CreateOrderCommandHandler.cs

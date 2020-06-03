@@ -2,18 +2,18 @@
 title: Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Geliştirme veya test ortamları için tümleştirme olayları için bir olay veri yolu mesajlaşma uygulamak üzere Kbbitmq kullanın.
 ms.date: 10/02/2018
-ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144298"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306896"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Geliştirme veya test ortamı için RabbitMQ ile bir olay veri yolu uygulama
 
-Bir kapsayıcıda çalışan kbbitmq tabanlı özel olay veri yolunu oluşturursanız, eShopOnContainers uygulamasının yaptığı, yalnızca geliştirme ve test ortamlarınız için kullanılması gerektiğini söyleyerek başlayacağız. Üretim için kullanıma yönelik bir Service Bus kapsamında oluşturulmadığınız sürece bunu üretim ortamınız için kullanmamalısınız. Basit bir özel olay veri yolu, ticari bir Service Bus 'ın sahip olduğu çok sayıda üretime hazırlı kritik özelliği eksik olabilir.
+Bir kapsayıcıda çalışan kbbitmq tabanlı özel olay veri yolunu oluşturursanız, eShopOnContainers uygulamasının yaptığı, yalnızca geliştirme ve test ortamlarınız için kullanılması gerektiğini söyleyerek başlayacağız. Üretim için kullanıma yönelik bir Service Bus kapsamında oluşturulmadığınız sürece bunu üretim ortamınız için kullanmayın. Basit bir özel olay veri yolu, ticari bir Service Bus 'ın sahip olduğu çok sayıda üretime hazırlı kritik özelliği eksik olabilir.
 
-EShopOnContainers 'daki olay veri yolu özel uygulamasından biri, temel olarak Kbbitmq API kullanan bir kitaplıktır. (Azure Service Bus göre başka bir uygulama vardır.)
+EShopOnContainers 'daki olay veri yolu özel uygulamalarından biri, temel olarak Kbbitmq API kullanan bir kitaplıktır. (Azure Service Bus göre başka bir uygulama vardır.)
 
 Kbbitmq ile olay veri yolu uygulamasının, Şekil 6-21 ' de gösterildiği gibi mikro hizmetlerin olaylara abone olma, olayları yayımlama ve olayları almasına izin verir.
 
@@ -114,7 +114,7 @@ Yukarıda belirtildiği gibi, eShopOnContainers 'da uygulanan olay veri yolu yal
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Kbbitmq desteğiyle üretime hazırlamış çözümler.
+Kbbitmq desteğiyle üretime Ready bir çözüm.
 
 - **Easynetq** -Kbıbitmq \ Için açık kaynak .NET API istemcisi
   <https://easynetq.com/>

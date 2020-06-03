@@ -7,4 +7,4 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "64761375"
 ---
 > [!NOTE]
-> TPL Veri Akışı Kitaplığı <xref:System.Threading.Tasks.Dataflow> (ad alanı) .NET ile dağıtılmaz. <xref:System.Threading.Tasks.Dataflow> Visual Studio'da ad alanını yüklemek için projenizi açın, **Proje** menüsünden `System.Threading.Tasks.Dataflow` **NuGet Paketlerini Yönet'i** seçin ve paketi çevrimiçi arayın. Alternatif olarak, [.NET Core CLI](~/docs/core/tools/index.md)kullanarak `dotnet add package System.Threading.Tasks.Dataflow`yüklemek için , çalıştırın.
+> TPL veri akışı kitaplığı ( <xref:System.Threading.Tasks.Dataflow> ad alanı) .NET ile dağıtılmaz. <xref:System.Threading.Tasks.Dataflow>Visual Studio 'da ad alanını yüklemek için projenizi açın, **Proje** menüsünden **NuGet Paketlerini Yönet** ' i seçin ve paketi çevrimiçi olarak arayın `System.Threading.Tasks.Dataflow` . Alternatif olarak, [.NET Core CLI](~/docs/core/tools/index.md)kullanarak yüklemek için öğesini çalıştırın `dotnet add package System.Threading.Tasks.Dataflow` .

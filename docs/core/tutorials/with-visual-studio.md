@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9c3456cd8c940e53e8a70c1d3a7c3b09de77c21d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 144d7bb087034839ad2cde2fa28a4961cff4321f
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201593"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307000"
 ---
 # <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019 'de .NET Core konsol uygulaması oluşturma
 
 Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK 'Sı, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
@@ -97,9 +97,8 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
 1. `Main`Aşağıdaki kod ile Şu anda yalnızca çağıran satırı olan yönteminin içeriğini değiştirin `Console.WriteLine` :
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
-
-   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="Snippet1":::
+   [!code-csharp[GettingStarted#1](./snippets/with-visual-studio/csharp/Program.cs#1)]
+   [!code-vb[GettingStarted#1](./snippets/with-visual-studio/vb/Program.vb#1)]
 
    Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından ENTER tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene `date` ( `currentDate` Visual Basic) atar. Son olarak, bu değerleri konsol penceresinde görüntüler.
 

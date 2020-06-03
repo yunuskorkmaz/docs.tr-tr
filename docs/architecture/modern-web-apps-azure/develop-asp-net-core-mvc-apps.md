@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144558"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307013"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -51,7 +51,7 @@ app.UseEndpoints(endpoints =>
 
 Bu örnekte, yönlendirme tablosuna "default" adlı bir yol eklenmiştir. _Denetleyici_, _eylem_ve _kimlik_yer tutucuları olan bir rota şablonu tanımlar. Denetleyici ve eylem yer tutucuları, varsayılan olarak belirtilmiştir (sırasıyla "Home" ve "Dizin") ve kimlik yer tutucusu isteğe bağlıdır (bir "?" öğesinin virtuale tarafından). Burada tanımlanan kural, bir isteğin ilk bölümünün denetleyicinin adına, eylemin ikinci bölümüne karşılık gelmesi ve gerekirse üçüncü bir parçanın bir kimlik parametresini temsil etmesi gerektiğini belirtir. Geleneksel yollar genellikle uygulama için, başlangıç sınıfındaki configure yönteminde olduğu gibi bir yerde tanımlanır.
 
-Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örneğin:
+Öznitelik yolları, genel olarak belirtitense, denetleyicilere ve eylemlere doğrudan uygulanır. Bu, belirli bir yönteme baktığınızda çok daha keşfedilebilir hale getirme avantajına sahiptir, ancak yönlendirme bilgilerinin uygulamada tek bir yerde tutulmadığından emin olur. Öznitelik rotalarıyla, belirli bir eylem için kolayca birden çok yol belirtebilir ve ayrıca, denetleyiciler ve Eylemler arasındaki yolları birleştirebilirsiniz. Örnek:
 
 ```csharp
 [Route("Home")]
@@ -88,7 +88,7 @@ Razor Pages öznitelik yönlendirme kullanmaz. Bir Razor sayfasına yönelik ek 
 "/Products/123"
 ```
 
-Verilen bir istek bir rota ile eşleştirildiği halde, eylem yöntemi çağrılmadan önce ASP.NET Core MVC, istek üzerinde [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulaması](/aspnet/core/mvc/models/validation) gerçekleştirir. Model bağlama, gelen HTTP verilerini çağrılacak eylem metodunun parametreleri olarak belirtilen .NET türlerine dönüştürmekten sorumludur. Örneğin, eylem yöntemi bir int ID parametresi beklediğinde, model bağlama isteğin bir parçası olarak sağlanmış bir değerden bu parametreyi sağlamaya çalışacaktır. Bunu yapmak için model bağlama, postalanan bir formdaki değerleri, yolun kendisindeki değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değerinin bulunduğu varsayıldığında, eylem yöntemine geçirilmeden önce tamsayıya dönüştürülecektir.
+Verilen bir istek bir rota ile eşleştirildiği halde, eylem yöntemi çağrılmadan önce ASP.NET Core MVC, istek üzerinde [model bağlama](/aspnet/core/mvc/models/model-binding) ve [model doğrulaması](/aspnet/core/mvc/models/validation) gerçekleştirir. Model bağlama, gelen HTTP verilerini çağrılacak eylem metodunun parametreleri olarak belirtilen .NET türlerine dönüştürmekten sorumludur. Örneğin, eylem yöntemi bir parametre beklediğinde `int id` , model bağlama isteğin bir parçası olarak sağlanmış bir değerden bu parametreyi sağlamaya çalışacaktır. Bunu yapmak için model bağlama, postalanan bir formdaki değerleri, yolun kendisindeki değerleri ve sorgu dizesi değerlerini arar. Bir kimlik değerinin bulunduğu varsayıldığında, eylem yöntemine geçirilmeden önce tamsayıya dönüştürülecektir.
 
 Modeli bağladıktan sonra ancak eylem yöntemini çağırmadan önce, model doğrulaması oluşur. Model doğrulama, model türü üzerinde isteğe bağlı öznitelikleri kullanır ve sağlanan model nesnesinin belirli veri gereksinimlerine uygun olduğundan emin olmanıza yardımcı olabilir. Belirli değerler gerekli olarak belirtilebilir veya belirli bir uzunluk veya sayısal aralığa, vb. sınırlı olabilir. Doğrulama öznitelikleri belirtilmişse ancak model gereksinimlerine uygun değilse, ModelState. IsValid özelliği false olur ve başarısız doğrulama kuralları kümesi, isteği yapan istemciye gönderilmek üzere kullanılabilir olacaktır.
 
@@ -158,7 +158,7 @@ Başlangıç sınıfı, ASP.NET Core uygulamanızın diğer bölümlerini denetl
 
 ## <a name="structuring-the-application"></a>Uygulamayı yapılandırma
 
-Tek parçalı uygulamalar genellikle tek bir giriş noktasına sahiptir. ASP.NET Core Web uygulaması söz konusu olduğunda, giriş noktası ASP.NET Core Web projesi olur. Ancak bu, çözümün yalnızca tek bir projeden oluşması anlamına gelmez. Kaygıları ayırmayı izlemek için uygulamayı farklı katmanlara bölmek yararlı olur. Katmanlara bölüntikten sonra, daha iyi kapsülleme elde etmenize yardımcı olacak şekilde klasörlerin ötesine geçme yararlı olur. ASP.NET Core bir uygulamayla bu hedeflere ulaşmak için en iyi yaklaşım, Bölüm 5 ' te ele alınan temiz mimarinin bir çeşitlemesi. Bu yaklaşımda, uygulamanın çözümü, UI, altyapı ve ApplicationCore için ayrı kitaplıklardan oluşur.
+Tek parçalı uygulamalar genellikle tek bir giriş noktasına sahiptir. ASP.NET Core Web uygulaması söz konusu olduğunda, giriş noktası ASP.NET Core Web projesi olur. Ancak bu, çözümün yalnızca tek bir projeden oluşması anlamına gelmez. Kaygıları ayırmayı izlemek için uygulamayı farklı katmanlara bölmek yararlı olur. Katmanlara bölüntikten sonra, daha iyi kapsülleme elde etmenize yardımcı olacak şekilde klasörlerin ötesine geçme yararlı olur. ASP.NET Core bir uygulamayla bu hedeflere ulaşmak için en iyi yaklaşım, Bölüm 5 ' te ele alınan temiz mimarinin bir çeşitlemesi. Bu yaklaşımda, uygulamanın çözümü UI, altyapı ve ApplicationCore için ayrı kitaplıklar oluşturur.
 
 Bu projelere ek olarak, ayrı test projeleri de dahildir (test, Bölüm 9 ' da ele alınmıştır).
 
@@ -323,7 +323,7 @@ Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden
 
 Web uygulamalarının güvenliğini sağlamak, çok sayıda konuyla büyük bir konudur. En temel düzeyinde güvenlik, belirli bir isteğin geldiği kişiyi öğrendiğinizden ve isteğin yalnızca gereken kaynaklara erişimi olduğundan emin olmanızı içerir. Kimlik doğrulaması, isteğin bilinen bir varlıktan geldiği kabul edilmesinin gerekip gerekmediğini görmek için, güvenilir bir veri deposundaki bir istekle girilen kimlik bilgilerini karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara erişimi kullanıcı kimliğine göre kısıtlama işlemidir. Üçüncü bir güvenlik konusu, isteklerin, en azından [SSL 'nin uygulamanız tarafından kullanıldığından emin](/aspnet/core/security/enforcing-ssl)olmanız gereken üçüncü taraflar tarafından dinleyerek dinleme yaptığı isteklerden korunuyor.
 
-### <a name="authentication"></a>Kimlik Doğrulama
+### <a name="authentication"></a>Kimlik Doğrulaması
 
 ASP.NET Core kimlik, uygulamanız için oturum açma işlevlerini desteklemek için kullanabileceğiniz bir üyelik sistemidir. Bu, yerel kullanıcı hesaplarının yanı sıra Microsoft hesabı, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılardan dış oturum açma sağlayıcısı desteği için destek içerir. ASP.NET Core kimliğe ek olarak, uygulamanız Windows kimlik doğrulamasını veya [kimlik sunucusu](https://github.com/IdentityServer/IdentityServer4)gibi bir üçüncü taraf kimlik sağlayıcısını kullanabilir.
 
@@ -501,7 +501,7 @@ Etki alanı odaklı tasarım (DDD), _iş etki alanı_üzerinde odaklanan bir yaz
 
 Bir DDD yaklaşımına göre yazılım oluştururken ekibiniz (Teknik olmayan hissedarlar ve katkıda bulunanlar dahil), sorun alanı için bir _ubititous dili_ geliştirmelidir. Diğer bir deyişle, modellenen gerçek dünya kavramı, yazılım eşdeğeri ve kavramı kalıcı hale getirmek için mevcut olabilecek tüm yapılar için aynı terminoloji kullanılmalıdır (örneğin, veritabanı tabloları). Bu nedenle, ubititous dilinde açıklanan kavramlar, _etki alanı modelinizin_temelini oluşturmalıdır.
 
-Etki alanı modeliniz, sistem davranışlarını göstermek için birbirleriyle etkileşim kuran nesnelerden oluşur. Bu nesneler aşağıdaki kategorilere ayrılabilir:
+Etki alanı modeliniz, sistemin davranışını temsil eden birbirleriyle etkileşim kuran nesneler içerir. Bu nesneler aşağıdaki kategorilere ayrılabilir:
 
 - [Varlıklar](https://deviq.com/entity/), bir kimlik iş parçacığına sahip nesneleri temsil eder. Varlıklar genellikle daha sonra alınabilebilecekleri bir anahtarla kalıcı olarak depolanır.
 
@@ -537,7 +537,7 @@ DDD, önemli iş (yalnızca teknik değil) karmaşıklığa sahip büyük uygula
 
 DDD, modelleme, mimari ve iletişim için, aslında yalnızca CRUD (oluşturma/okuma/güncelleştirme/silme) olan daha küçük uygulamalar veya uygulamalar için gerekmeyebilir. Uygulamanızı DDD ' dan sonra yaklaşımınızı tercih ediyorsanız, ancak etki alanınızı hiçbir davranış olmadan bir anemik modeli olduğunu fark ederseniz, yaklaşımınızı yeniden düşünmek zorunda kalabilirsiniz. Uygulamanız DDD gerektirebilir veya uygulamanızın, veritabanınız veya Kullanıcı arabiriminiz yerine etki alanı modelinde iş mantığını kapsüllemek üzere yeniden düzenlenmesi için yardıma ihtiyacınız olabilir.
 
-Karma yaklaşım yalnızca, uygulamanın işlem veya daha fazla karmaşık alanı için DDD, ancak uygulamanın daha basit CRUD veya salt okunurdur. Örneğin, bir raporu görüntüleyecek veya bir Pano için verileri görselleştirmeye yönelik verileri sorguladığınız takdirde bir toplamanın kısıtlamalarına sahip olmanız gerekmez. Bu tür gereksinimlere yönelik ayrı, daha basit bir okuma modeline sahip olmak mükemmel bir şekilde kabul edilebilir.
+Karma yaklaşım yalnızca, uygulamanın işlem veya daha fazla karmaşık alanı için DDD, ancak uygulamanın daha basit CRUD veya salt okunurdur. Örneğin, bir raporu görüntüleyecek veya bir Pano için verileri görselleştirmeye yönelik verileri sorguladığınız takdirde bir toplamanın kısıtlamalarına gerek yoktur. Bu tür gereksinimlere yönelik ayrı, daha basit bir okuma modeline sahip olmak mükemmel bir şekilde kabul edilebilir.
 
 > ### <a name="references--domain-driven-design"></a>Başvurular – etki alanı odaklı tasarım
 >

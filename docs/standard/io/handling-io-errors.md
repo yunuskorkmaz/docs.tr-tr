@@ -1,5 +1,5 @@
 ---
-title: .NET'teki G/Ç hatalarını işleme
+title: .NET 'te g/ç hatalarını işleme
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,74 +18,74 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81242679"
 ---
-# <a name="handling-io-errors-in-net"></a>.NET'teki G/Ç hatalarını işleme
+# <a name="handling-io-errors-in-net"></a>.NET 'te g/ç hatalarını işleme
 
-Herhangi bir yöntem çağrısında atılabilen özel durumlara <xref:System.OutOfMemoryException> ek olarak (örneğin, bir sistem stresli olduğunda veya programcı hatasından dolayı bir <xref:System.NullReferenceException> hata gibi), .NET dosya sistemi yöntemleri aşağıdaki özel durumları da ekleyebilir:
+Herhangi bir yöntem çağrısında oluşturulabilecek özel durumlara ek olarak (örneğin <xref:System.OutOfMemoryException> , bir sistem ne zaman, <xref:System.NullReferenceException> Programcı hatası nedeniyle), .NET dosya sistemi yöntemleri aşağıdaki özel durumları oluşturabilir:
 
-- <xref:System.IO.IOException?displayProperty=nameWithType>, tüm <xref:System.IO> özel durum türlerinin taban sınıfı. İşletim sisteminden gelen iade kodları doğrudan başka bir özel durum türüyle eşlenen hatalar için atılır.
+- <xref:System.IO.IOException?displayProperty=nameWithType>, tüm <xref:System.IO> özel durum türlerinin temel sınıfı. İşletim sisteminden gelen dönüş kodları başka bir özel durum türüyle doğrudan eşlenmediğinde hatalar için oluşturulur.
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
 - <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
 - <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
 - <xref:System.OperationCanceledException?displayProperty=nameWithType>.
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
-- <xref:System.ArgumentException?displayProperty=nameWithType>.NET Framework ve .NET Core 2.0 ve önceki sürümlerde geçersiz yol karakterleri için atılır.
-- <xref:System.NotSupportedException?displayProperty=nameWithType>, .NET Framework'de geçersiz üst üsteler için atılır.
-- <xref:System.Security.SecurityException?displayProperty=nameWithType>, yalnızca .NET Framework üzerinde gerekli izinlere sahip olmayan sınırlı güvenle çalışan uygulamalar için atılır. (Tam güven .NET Framework'de varsayılandır.)
+- <xref:System.ArgumentException?displayProperty=nameWithType>.NET Framework ve .NET Core 2,0 ve önceki sürümlerde geçersiz yol karakterleri için oluşturulur.
+- <xref:System.NotSupportedException?displayProperty=nameWithType>, .NET Framework geçersiz iki nokta için oluşturulur.
+- <xref:System.Security.SecurityException?displayProperty=nameWithType>sınırlı güvende çalışan uygulamalar için, yalnızca .NET Framework için gerekli izinlere sahip olmayan uygulamalar için oluşturulur. (Tam güven, .NET Framework varsayılandır.)
 
 ## <a name="mapping-error-codes-to-exceptions"></a>Hata kodlarını özel durumlara eşleme
 
-Dosya sistemi bir işletim sistemi kaynağı olduğundan, hem .NET Core hem de .NET Framework wrap'daki G/Ç yöntemleri temel işletim sistemine çağrı verir. İşletim sistemi tarafından yürütülen kodda Bir G/Ç hatası oluştuğunda, işletim sistemi hata bilgilerini .NET G/Ç yöntemine döndürür. Yöntem daha sonra hata bilgilerini genellikle hata kodu biçiminde bir .NET özel durum türüne çevirir. Çoğu durumda, hata kodunu doğrudan karşılık gelen özel durum türüne çevirerek bunu yapar; yöntem çağrısının bağlamına göre hatanın özel eşlemesi gerçekleştirmez.
+Dosya sistemi bir işletim sistemi kaynağı, hem .NET Core 'daki g/ç yöntemleri hem de temel işletim sistemine .NET Framework çağrıları sarmalıdır. İşletim sistemi tarafından yürütülen kodda bir g/ç hatası oluştuğunda, işletim sistemi .NET ı/O metoduna hata bilgilerini döndürür. Yöntemi daha sonra genellikle hata kodu biçimindeki hata bilgilerini bir .NET özel durum türüne çevirir. Çoğu durumda, hata kodunu doğrudan karşılık gelen özel durum türüne çevirerek bunu yapar; yöntem çağrısının bağlamına göre hatanın özel eşlemesini gerçekleştirmez.
 
-Örneğin, `ERROR_FILE_NOT_FOUND` Windows işletim sisteminde, bir hata kodunu (veya 0x02) haritaları n <xref:System.IO.FileNotFoundException>için döndüren `ERROR_PATH_NOT_FOUND` bir yöntem çağrısı ve (veya <xref:System.IO.DirectoryNotFoundException>0x03) haritaların hata kodunu bir .
+Örneğin, Windows işletim sisteminde, bir hata kodu `ERROR_FILE_NOT_FOUND` (veya 0x02) ile haritalar döndüren bir yöntem çağrısı <xref:System.IO.FileNotFoundException> ve `ERROR_PATH_NOT_FOUND` (veya 0x03) hata kodu ile eşlenir <xref:System.IO.DirectoryNotFoundException> .
 
-Ancak, işletim sisteminin belirli hata kodlarını döndürdeği kesin koşullar genellikle belgesiz veya kötü belgelenmiştir. Sonuç olarak, beklenmeyen özel durumlar oluşabilir. Örneğin, bir dosya yerine bir dizinle çalıştığınız için, oluşturucuya geçersiz bir dizin <xref:System.IO.DirectoryInfo.%23ctor%2A> yolu sağlamanın <xref:System.IO.DirectoryNotFoundException>bir . Ancak, aynı zamanda <xref:System.IO.FileNotFoundException>bir atabilir .
+Ancak, işletim sisteminin belirli hata kodlarını döndürdüğü kesin koşullar genellikle belgelenmemiş veya kötü belgeli şekilde belgelenmiştir. Sonuç olarak, beklenmeyen özel durumlar oluşabilir. Örneğin, bir dosya yerine bir dizinle çalıştığınızdan, oluşturucuya geçersiz bir dizin yolu sağlanması beklenir <xref:System.IO.DirectoryInfo.%23ctor%2A> <xref:System.IO.DirectoryNotFoundException> . Ancak, bir de oluşturabilir <xref:System.IO.FileNotFoundException> .
 
-## <a name="exception-handling-in-io-operations"></a>G/Ç işlemlerinde özel durum işleme
+## <a name="exception-handling-in-io-operations"></a>G/ç işlemlerinde özel durum işleme
 
-İşletim sistemine olan bu güven nedeniyle, aynı özel durum koşulları (örneğimizde hata bulunmayan dizin gibi) Bir G/Ç yönteminin tüm G/Ç özel durumları sınıfından herhangi birini atamasından kaynaklanabilir. Bu, G/Ç API'lerini ararken, kodunuzu aşağıdaki tabloda gösterildiği gibi bu özel durumların çoğunu veya tümlerini işlemek için hazır olması gerektiği anlamına gelir:
+Bu, işletim sistemine güvendiğimiz için, aynı özel durum koşulları (örneğimizde dizin bulunamadı hatası gibi), tüm g/ç özel durum sınıfından birini oluşturan g/ç yöntemine neden olabilir. Diğer bir deyişle, g/ç API 'Leri çağrılırken kodunuzun bu özel durumların çoğunu veya tümünü, aşağıdaki tabloda gösterildiği gibi işleyecek şekilde hazırlanmalıdır.
 
 | Özel durum türü | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | Evet | Evet |
-| <xref:System.IO.FileNotFoundException> | Evet | Evet |
-| <xref:System.IO.DirectoryNotFoundException> | Evet | Evet |
-| <xref:System.IO.DriveNotFoundException?> | Evet | Evet |
-| <xref:System.IO.PathTooLongException> | Evet | Evet |
-| <xref:System.OperationCanceledException> | Evet | Evet |
-| <xref:System.UnauthorizedAccessException> | Evet | Evet |
-| <xref:System.ArgumentException> | .NET Core 2.0 ve önceki| Evet |
+| <xref:System.IO.IOException> | Yes | Yes |
+| <xref:System.IO.FileNotFoundException> | Yes | Yes |
+| <xref:System.IO.DirectoryNotFoundException> | Yes | Yes |
+| <xref:System.IO.DriveNotFoundException?> | Yes | Yes |
+| <xref:System.IO.PathTooLongException> | Yes | Yes |
+| <xref:System.OperationCanceledException> | Yes | Yes |
+| <xref:System.UnauthorizedAccessException> | Yes | Yes |
+| <xref:System.ArgumentException> | .NET Core 2,0 ve öncesi| Yes |
 | <xref:System.NotSupportedException> | Hayır | Evet |
 | <xref:System.Security.SecurityException> | Hayır | Yalnızca sınırlı güven |
 
-## <a name="handling-ioexception"></a>Kullanım IOException
+## <a name="handling-ioexception"></a>IOException işleniyor
 
-<xref:System.IO> Ad alanındaki özel durumlar için taban <xref:System.IO.IOException> sınıf olarak, önceden tanımlanmış bir özel durum türüne eş olmayan herhangi bir hata kodu için de atılır. Bu, herhangi bir G/Ç işlemi tarafından atılabilir anlamına gelir.
+Ad alanındaki özel durumlar için temel sınıf olarak <xref:System.IO> , <xref:System.IO.IOException> önceden tanımlanmış bir özel durum türüyle eşleşmeyen herhangi bir hata kodu için de oluşturulur. Bu, herhangi bir g/ç işlemi tarafından oluşturulabilecek anlamına gelir.
 
 > [!IMPORTANT]
-> Ad alanındaki diğer özel durum türlerinin taban sınıfı <xref:System.IO.IOException> olduğundan, diğer G/Ç ile ilgili özel durumları işledikten sonra bir `catch` blokta işlemeniz gerekir. <xref:System.IO>
+> , <xref:System.IO.IOException> Ad alanındaki diğer özel durum türlerinin temel sınıfı olduğundan <xref:System.IO> , `catch` diğer g/ç ile ilgili özel durumları tamamladıktan sonra bir blok içinde işlemeniz gerekir.
 
-Buna ek olarak, .NET Core 2.1 ile başlayarak, yol doğruluğunu (örneğin, geçersiz karakterlerin bir yolda bulunmadığından emin olmak için) doğrulama denetimleri kaldırıldı ve çalışma zamanı kendi doğrulama koduyerine bir işletim sistemi hata kodundan eşlenen bir özel durum atar. Bu durumda atılması en olası özel <xref:System.IO.IOException>durum, başka bir özel durum türü de atılabilir rağmen.
+Ayrıca, .NET Core 2,1 ' den itibaren doğrulama, yolun doğruluğunu denetler (örneğin, geçersiz karakterlerin bir yolda olmamasını sağlamak için) kaldırıldığından, çalışma zamanı kendi doğrulama kodu yerine bir işletim sistemi hata kodundan eşlenmiş bir özel durum oluşturur. Bu durumda <xref:System.IO.IOException> , diğer özel durum türlerinin de oluşturulması mümkün olsa da, bu örnekte oluşturulacak en olası özel durum bir ' dır.
 
-Özel durum işleme kodunuzda her zaman <xref:System.IO.IOException> sonuncuyu işlemeniz gerektiğini unutmayın. Aksi takdirde, diğer tüm IO özel durumlarının taban sınıfı olduğundan, türemiş sınıfların catch blokları değerlendirilmez.
+Özel durum işleme kodunuzda her zaman son ' u işlemeniz gerektiğini unutmayın <xref:System.IO.IOException> . Aksi takdirde, diğer tüm GÇ özel durumlarının temel sınıfı olduğundan, türetilmiş sınıfların catch blokları değerlendirilmeyecektir.
 
-Bir <xref:System.IO.IOException>durumunda, [IOException.HResult](xref:System.Exception.HResult) özelliğinden ek hata bilgileri alabilirsiniz. HResult değerini Win32 hata koduna dönüştürmek için, 32 bit değerinin üst 16 bitini sökersiniz. Aşağıdaki tabloda bir <xref:System.IO.IOException>' ye sarılmış olabilecek hata kodları listelenebilir.
+Bir durumda <xref:System.IO.IOException> , [IOException. HRESULT](xref:System.Exception.HResult) özelliğinden ek hata bilgileri alabilirsiniz. HResult değerini bir Win32 hata koduna dönüştürmek için 32 bitlik değerin üst 16 bitini bir adım adım. Aşağıdaki tabloda, içine kaydırılmış olabilecek hata kodları listelenmektedir <xref:System.IO.IOException> .
 
-| Hresult | Sabit | Açıklama |
+| HResult | Sabit | Description |
 | --- | --- | --- |
-| ERROR_SHARING_VIOLATION | 32 | Dosya adı eksik veya dosya veya dizin kullanılıyor. |
+| ERROR_SHARING_VIOLATION | 32 | Dosya adı eksik veya dosya ya da Dizin kullanımda. |
 | ERROR_FILE_EXISTS | 80 | Dosya zaten var. |
-| ERROR_INVALID_PARAMETER | 87 | Yönteme verilen bir bağımsız değişken geçersizdir. |
+| ERROR_INVALID_PARAMETER | 87 | Yönteme sağlanan bir bağımsız değişken geçersiz. |
 | ERROR_ALREADY_EXISTS | 183 | Dosya veya dizin zaten var. |
 
-Aşağıdaki örnekte görüldüğü `When` gibi, bunları yakalama deyiminde bir yan tümce kullanarak işleyebilirsiniz.
+`When`Aşağıdaki örnekte gösterildiği gibi, bunları bir catch deyimindeki bir yan tümce kullanarak işleyebilirsiniz.
 
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET'te özel durumları işleme ve atma](../exceptions/index.md)
-- [Özel durum işleme (Görev Paralel Kitaplığı)](../parallel-programming/exception-handling-task-parallel-library.md)
+- [.NET 'te özel durumları işleme ve atma](../exceptions/index.md)
+- [Özel durum işleme (görev paralel kitaplığı)](../parallel-programming/exception-handling-task-parallel-library.md)
 - [Özel durumlar için en iyi uygulamalar](../exceptions/best-practices-for-exceptions.md)
-- [Yakalama bloğunda belirli özel durumlar nasıl kullanılır?](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Bir catch bloğunda belirli özel durumları kullanma](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

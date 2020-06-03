@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144350"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306974"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -35,7 +35,7 @@ Tek alıcıdaki ileti tabanlı iletişim, bu yaklaşımı gösteren şekil 4-18 
 
 **Şekil 4-18**. Tek bir mikro hizmet zaman uyumsuz ileti alıyor
 
-Komutların istemci uygulamalardan geldiği durumlarda, bunların HTTP zaman uyumlu komutları olarak uygulanmaları gerektiğini unutmayın. Daha yüksek ölçeklenebilirlik gerektiğinde veya ileti tabanlı bir iş sürecinizdeki ileti tabanlı komutları kullanmanız gerekir.
+Komutlar istemci uygulamalardan geldiğinde, HTTP zaman uyumlu komutları olarak uygulanabilir. Daha yüksek ölçeklenebilirlik gerektiğinde veya ileti tabanlı bir iş sürecinizdeki ileti tabanlı komutları kullanın.
 
 ## <a name="multiple-receivers-message-based-communication"></a>Birden çok alıcılar ileti tabanlı iletişim
 
@@ -57,7 +57,7 @@ Daha önce [Dağıtılmış veri yönetimi sorunları ve çözümleri](distribut
 
 **Şekil 4-19**. Zaman uyumsuz olay odaklı ileti iletişimi
 
-Zaman uyumsuz olay odaklı iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet bu hizmete abone olabilir ve bu, bildirim alabilir ve üzerinde işlem yapabilir. Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
+Olay temelli zaman uyumsuz iletişimde, bir mikro hizmet olayları bir olay veri yoluna yayımlar ve çok sayıda mikro hizmet, bildirim almak ve bu hizmete işlem yapmak için abone olabilir. Uygulamanız, olay odaklı ileti tabanlı iletişimler için kullanılacak protokolü tespit eder. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) , güvenilir sıraya alınmış iletişimin sağlanmasına yardımcı olabilir.
 
 Bir olay veri yolu kullandığınızda, [Kbbitmq](https://www.rabbitmq.com/) gibi bir ileti ARACıSıDıR API kullanarak kod içeren bir soyutlama düzeyi (bir olay veri yolu arabirimi gibi) ve [konularla birlikte Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)gibi bir hizmet veri yolu kullanmak isteyebilirsiniz. Alternatif olarak, Event Bus ve Yayımla/abone ol sisteminizi ifade etmek için NServiceBus, Masstransıya ya da daha parlak gibi daha yüksek düzeyde bir Service Bus kullanmak isteyebilirsiniz.
 

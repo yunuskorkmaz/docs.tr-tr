@@ -2,12 +2,12 @@
 title: Mikro hizmet etki alan modeli tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-yönelimli bir etki alanı modeli tasarlarken temel kavramları anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144597"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306922"
 ---
 # <a name="design-a-microservice-domain-model"></a>Mikro hizmet etki alanı modeli tasarlama
 
@@ -35,7 +35,7 @@ DDD alanındaki bir etki alanı varlığı, varlık verileriyle ilgili etki alan
 
 **Şekil 7-8**. Veri ve davranış uygulayan bir etki alanı varlığı tasarımı örneği
 
-Bir etki alanı modeli varlığı, davranışları yöntemler aracılığıyla uygular, yani bir "anemik" modeli değildir. Kuşkusuz, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklara sahip olabilirsiniz. Bu, bir toplama içindeki alt varlıklarda, mantığın büyük çoğunluğu toplam kökte tanımlanmış olduğu için özel bir mantık yoksa meydana gelebilir. Etki alanı varlıkları yerine hizmet sınıflarında çok fazla mantığı uygulanmış karmaşık bir mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşeceksiniz.
+Bir etki alanı modeli varlığı, davranışları yöntemler aracılığıyla uygular, yani bir "anemik" modeli değildir. Kuşkusuz, bazen varlık sınıfının bir parçası olarak herhangi bir mantık uygulamayan varlıklara sahip olabilirsiniz. Bu, bir toplama içindeki alt varlıklarda, mantığın büyük çoğunluğu toplam kökte tanımlanmış olduğu için özel bir mantık yoksa meydana gelebilir. Etki alanı varlıkları yerine hizmet sınıflarında mantıksal olarak uygulanan bir karmaşık mikro hizmetiniz varsa, aşağıdaki bölümde açıklanan anemik etki alanı modeline düşkabilir olabilirsiniz.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Zengin etki alanı modeline karşı, anemik etki alanı modeli
 
@@ -45,7 +45,7 @@ Anemik etki alanı modelinin temel belirtisi, ilk lavanta 'de gerçek bir şey g
 
 Tabii ki, bir anemik etki alanı modeli kullandığınızda, bu veri modelleri, tüm etki alanı veya iş mantığını yakalayan bir hizmet nesneleri kümesinden (geleneksel olarak *iş katmanı*olarak adlandırılır) kullanılacaktır. İş katmanı, veri modeli üzerinde bulunur ve veri modelini yalnızca veri olarak kullanır.
 
-Anemik etki alanı modeli yalnızca bir yordamsal stil tasarımdır. Anemik varlık nesneleri, davranış yetersizliğinden (metotlar) gerçek nesneler değildir. Yalnızca veri özelliklerini tutar ve bu nedenle nesne odaklı tasarım değildir. Tüm davranışı, aslında [spaghfeti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) veya [işlem betikleri](https://martinfowler.com/eaaCatalog/transactionScript.html)ile sona erdirmek için, bir etki alanı modelinin sağladığı avantajları kaybedersiniz.
+Anemik etki alanı modeli yalnızca bir yordamsal stil tasarımdır. Anemik varlık nesneleri, davranış yetersizliğinden (metotlar) gerçek nesneler değildir. Yalnızca veri özelliklerini tutar ve bu nedenle nesne odaklı tasarım değildir. Tüm davranışı hizmet nesnelerine (iş katmanı) koyarak, aslında [spaghfeti kodu](https://en.wikipedia.org/wiki/Spaghetti_code) veya [işlem betikleri](https://martinfowler.com/eaaCatalog/transactionScript.html)ile sona erdir ve bu nedenle bir etki alanı modelinin sağladığı avantajları kaybedersiniz.
 
 Mikro hizmetiniz veya sınırlı Içeriğiniz çok basittir (bir CRUD hizmeti), yalnızca veri özelliklerine sahip varlık nesneleri biçimindeki anemik etki alanı modeli yeterince iyi olabilir ve bu da daha karmaşık DDD desenlerinin uygulanması için değer olmayabilir. Bu durumda, özellikle CRUD amacıyla yalnızca verileri olan bir varlık oluşturmuş olduğunuzdan, tek bir Kalıcılık modeli olacaktır.
 
@@ -72,7 +72,7 @@ Bir varlık bir kimlik gerektirir, ancak bir sistemde, değer nesne düzeniyle b
 
 Mikro hizmetteki bir varlık başka bir mikro hizmette varlık olmayabilir, çünkü ikinci durumda, sınırlanmış bağlamın farklı bir anlamı olabilir. Örneğin, bir e-ticaret uygulamasındaki bir adresin hiç bir kimliği olmayabilir, çünkü yalnızca bir kişi veya şirket için müşterinin profilinin bir öznitelik grubunu temsil edebilir. Bu durumda, adres bir değer nesnesi olarak sınıflandırılmalıdır. Ancak, elektrik güç yardımcı programı şirketi için bir uygulamada, müşteri adresi iş etki alanı için önemli olabilir. Bu nedenle, fatura sisteminin doğrudan adresle bağlantılı olması için adreste bir kimlik olması gerekir. Bu durumda, bir adres bir etki alanı varlığı olarak sınıflandırılmalıdır.
 
-Adı ve soyadı olan bir kişi genellikle bir varlıktır, çünkü ad ve soyadı başka bir değer kümesiyle aynı olsa da, bu adlar farklı bir kişiye başvuruyor olabilir.
+Adı ve soyadı olan bir kişi genellikle bir varlıktır, çünkü ad ve soyadı farklı bir değer kümesiyle aynı olsa bile, bu adlar farklı bir kişiye de başvuruda bulunur.
 
 Değer nesneleri, ilişkisel veritabanlarında ve ORMs Entity Framework (EF) gibi daha kolay bir şekilde yönetilmesi zor olduğundan, belge odaklı veritabanlarında daha kolay uygulanması ve kullanılması daha kolaydır.
 
@@ -114,14 +114,14 @@ Toplama kökünün amacı, toplamanın tutarlılığını sağlamaktır; Toplam 
 
 DDD etki alanı modeli toplamalarda oluşur, bir toplama yalnızca bir varlık veya daha fazla olabilir ve değer nesneleri de içerebilir. Alıcı toplamanın, etki alanına bağlı olarak, eShopOnContainers başvuru uygulamasındaki mikro hizmette sıralama yaptığı gibi ek alt varlıklara sahip olabileceğini unutmayın. Şekil 7-9 yalnızca Birleşik bir kök içeren bir toplama örneği olarak, alıcının tek bir varlığa sahip olduğu bir durumu gösterir.
 
-Toplamaların ayrılmasını sürdürmek ve aralarında Temizleme sınırları tutmak için, bir DDD etki alanı modelinde, toplamalar arasında doğrudan gezinmeye ve yalnızca yabancı anahtar (FK) alanına sahip olmak üzere eShopOnContainers 'da bir [sıralama mikro hizmet etki alanı modelinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) uygulanan şekilde, bu işlem iyi bir uygulamadır. Sipariş varlığı, alıcı için yalnızca bir FK alanına sahiptir, ancak aşağıdaki kodda gösterildiği gibi EF Core gezinti özelliği değildir:
+Toplamaların ayrılmasını sürdürmek ve aralarında Temizleme sınırları tutmak için, bir DDD etki alanı modelinde, toplamalar arasında doğrudan gezinmeye ve yalnızca yabancı anahtar (FK) alanına sahip olmak üzere eShopOnContainers 'da bir [sıralama mikro hizmet etki alanı modelinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) uygulanan şekilde, bu işlem iyi bir uygulamadır. Sipariş varlığı, alıcı için yalnızca bir yabancı anahtar alanına sahiptir, ancak aşağıdaki kodda gösterildiği gibi EF Core gezinti özelliği değildir:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

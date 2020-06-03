@@ -4,12 +4,12 @@ description: Mevcut bir ASP.NET Web Forms uygulamasını Blazor 'e geçirmeye na
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144415"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306987"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den Blazor 'ye geçiş
 
@@ -285,7 +285,7 @@ Paketleme ve küçültmeye yönelik daha fazla bilgi için, bkz. [ASP.NET Core s
 
 Web Forms uygulamasındaki bir sayfa *. aspx* uzantılı bir dosyadır. Bir Web Forms sayfası, genellikle Blazor ' deki bir bileşenle eşleştirilebilir. Bir Blazor bileşeni *. Razor* uzantılı bir dosyada yazılır. EShop projesi için beş sayfa Razor sayfasına dönüştürülür.
 
-Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosyadan oluşur: *details. aspx*, *details.aspx.cs*ve *details.aspx.Designer.cs*. Blazor 'e dönüştürürken, arka plan kodu ve biçimlendirme *details. Razor*içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini**görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
+Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs*ve *details.aspx.Designer.cs*. Blazor 'e dönüştürürken, arka plan kodu ve biçimlendirme *details. Razor*içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini**görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>

@@ -30,7 +30,7 @@ Yeni biçim \* olan. csproj, XML tabanlı bir biçimdir. Aşağıdaki örnek, ku
 
 ## <a name="common-top-level-properties"></a>Ortak en üst düzey Özellikler
 
-### <a name="name"></a>ad
+### <a name="name"></a>name
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
 title: Visual Basic programcıları için ek kaynaklar
-description: Öğrenmeniz, soru sormanız ve Visual Basic hakkında daha fazla bilgi edinmeniz için web'deki kaynakları keşfedin.
+description: Bilgi edinmek için Web 'de kaynakları bulun, sorular sorun ve Visual Basic hakkında daha fazla bilgi bulabilirsiniz.
 ms.date: 02/21/2018
 helpviewer_keywords:
 - Visual Basic, additional resources
@@ -17,51 +17,51 @@ ms.locfileid: "81243212"
 ---
 # <a name="additional-resources"></a>Ek kaynaklar
 
-Aşağıdaki web siteleri rehberlik sağlar ve sık karşılaşılan sorunlara yanıt bulmanıza yardımcı olabilir.
+Aşağıdaki Web siteleri rehberlik sağlar ve yaygın sorunların yanıtlarını bulmanıza yardımcı olabilir.
 
 ## <a name="microsoft-resources"></a>Microsoft kaynakları
 
 ### <a name="on-the-web"></a>Web’de
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[Visual Basic .NET Dil Tasarımı](https://github.com/dotnet/vblang)|Visual Basic .NET dil tasarımı için GitHub'da resmi depo.|
-|[Microsoft Visual Basic Team Blog](https://devblogs.microsoft.com/vbteam/)|Visual Basic takım bloguna erişim sağlar.|
+|[Visual Basic .NET dil tasarımı](https://github.com/dotnet/vblang)|Visual Basic .NET dil tasarımı için GitHub 'da resmi depo.|
+|[Microsoft Visual Basic ekip blogu](https://devblogs.microsoft.com/vbteam/)|Visual Basic ekip bloguna erişim sağlar.|
 
 ### <a name="code-samples"></a>Kod örnekleri
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[Visual Basic dokümantasyon örnekleri](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic ve .NET dokümantasyonları boyunca kullanılan örnekleri içerir.|
+|[Visual Basic belge örnekleri](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic ve .NET belgelerinin tamamında kullanılan örnekleri içerir.|
 
 ### <a name="forums"></a>Forumlar
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[Görsel Temel Forumlar](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Genel Visual Basic konularını tartışır.|
+|[Visual Basic forumları](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Genel Visual Basic sorunları açıklanmaktadır.|
 
-### <a name="videos-and-webcasts"></a>Videolar ve web yayınları
+### <a name="videos-and-webcasts"></a>Videolar ve Web yayınları
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[Kanal9](https://channel9.msdn.com/)|Videolar, Vikiler ve forumlar aracılığıyla sürekli topluluk sağlar.|
+|[Channel9](https://channel9.msdn.com/)|Videolar, Wiklar ve Forumlar aracılığıyla sürekli topluluk sağlar.|
 
 ### <a name="support"></a>Destek
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[Microsoft Destek](https://support.microsoft.com)|Bilgi Bankası (KB) makalelerine, indirmelere ve güncellemelerine, destek web yayınlarına ve diğer hizmetlere erişim sağlar.|
-|[Visual Studio Soruları](https://developercommunity.visualstudio.com)|.NET ve Visual Studio hakkında Microsoft'a hata dosyası açmanızı veya önerilerde bulunmanızı sağlar. Visual Studio'da Geri**Bildirim** >  **Gönder'e Yardım** > **Et'i** seçerek bir hatayı da bildirebilirsiniz.|
+|[Microsoft Destek](https://support.microsoft.com)|Bilgi Bankası (KB) makalelerine, indirmelere ve güncelleştirmelere, destek Web yayınlarına ve diğer hizmetlere erişim sağlar.|
+|[Visual Studio Soruları](https://developercommunity.visualstudio.com)|Hataları dosyalamanıza veya Microsoft 'a .NET ve Visual Studio hakkında öneriler sağlamanıza olanak sağlar. Ayrıca, **Help**  >  Visual Studio 'da**geri bildirim gönder**  >  **sorun bildir** Yardım ' a tıklayarak da bir hata bildirebilirsiniz.|
 
 ## <a name="third-party-resources"></a>Üçüncü taraf kaynakları
 
-|URL'si|Açıklama|
+|URL|Description|
 |----------|----------------|
-|[VBForums](http://www.vbforums.com/)|Visual Basic, .NET ve daha fazlasını tartışmak için bir forum sağlar.|
-|[vbŞehir](http://vbcity.com/)|Visual Basic ve .NET hakkında insanların öğrenmesi ve soru sorması için bir topluluk sitesi.|
-|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Yığın Taşma geliştiriciler için bir soru ve cevap sitesidir.|
+|[Vbforumları](http://www.vbforums.com/)|Visual Basic, .NET ve daha fazlasını tartışmak için bir forum sağlar.|
+|[vbCity](http://vbcity.com/)|Kişilerin Visual Basic ve .NET hakkında sorular öğrenmesini ve sormasını sağlamak için bir topluluk sitesi.|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow, geliştiriciler için bir soru ve yanıt sitesidir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic kullanmaya başlama](../../visual-basic/getting-started/index.md)
-- [Bizimle Konuşun](/visualstudio/ide/feedback-options)
+- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)

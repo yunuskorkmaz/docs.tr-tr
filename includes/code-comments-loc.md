@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627405"
 ---
-İngilizce dışındaki dillere çevrilmiş kod yorumlarını görmek istiyorsanız, [bu GitHub tartışma sayısında](https://github.com/MicrosoftDocs/feedback/issues/2515)bize bildirin.
+Ingilizce dışındaki dillere çevrilmiş kod açıklamalarını görmek isterseniz, [Bu GitHub tartışma sorununu](https://github.com/MicrosoftDocs/feedback/issues/2515)bize tanıyın.

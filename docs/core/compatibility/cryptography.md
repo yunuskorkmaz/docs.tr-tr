@@ -15,11 +15,11 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
-| [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3,0 |
-| [EnvelopedCms varsayılan değer AES-256 şifrelemesi](#envelopedcms-defaults-to-aes-256-encryption) | 3,0 |
-| [RSAOpenSsl anahtar üretimi için en düşük boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3,0 |
-| [.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3,0 |
-| [Pkcs8PrivateKeyInfo oluşturucusunda daha iyi bağımsız değişken doğrulaması](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3,0 |
+| [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
+| [EnvelopedCms varsayılan değer AES-256 şifrelemesi](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [RSAOpenSsl anahtar üretimi için en düşük boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [Pkcs8PrivateKeyInfo oluşturucusunda daha iyi bağımsız değişken doğrulaması](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
 | [SignedCms. ComputeSignature Boolean parametresi dikkate alındı](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0

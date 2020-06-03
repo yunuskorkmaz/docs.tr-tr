@@ -2,18 +2,18 @@
 title: Genel kılavuz
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Genel rehberlik
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144571"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306883"
 ---
 # <a name="general-guidance"></a>Genel kılavuz
 
 Bu bölüm, ne zaman .NET Core veya .NET Framework seçme hakkında bir Özet sağlar. İzleyen bölümlerde bu seçimler hakkında daha fazla ayrıntı sağlıyoruz.
 
-Şu durumlarda Kapsayıcılı Docker sunucu uygulamanızda .NET Core 'u Linux veya Windows kapsayıcıları ile kullanmanız gerekir:
+Şu durumlarda Kapsayıcılı Docker sunucu uygulamanız için Linux veya Windows kapsayıcılarıyla .NET Core kullanın:
 
 - Platformlar arası gereksinimleriniz var. Örneğin, hem Linux hem de Windows kapsayıcılarını kullanmak istiyorsunuz.
 
@@ -25,7 +25,7 @@ Kısacası, yeni Kapsayıcılı .NET uygulamaları oluşturduğunuzda, .NET Core
 
 .NET Core kullanmanın ek avantajları, aynı makine içindeki uygulamalar için yan yana .NET sürümlerini çalıştırabilmeniz. Bu avantaj, kapsayıcılar kullanmayan sunucular veya VM 'Ler için daha önemlidir çünkü kapsayıcılar, uygulamanın ihtiyaç duyacağı .NET sürümlerini yalıtır. (Temel alınan IŞLETIM sistemiyle uyumlu oldukları sürece.)
 
-Kapsayıcılı Docker sunucu uygulamanız için .NET Framework şu durumlarda kullanmanız gerekir:
+Kapsayıcılı Docker sunucu uygulamanız için .NET Framework şu durumlarda kullanın:
 
 - Uygulamanız Şu anda .NET Framework kullanıyor ve Windows üzerinde güçlü bağımlılıklara sahip.
 

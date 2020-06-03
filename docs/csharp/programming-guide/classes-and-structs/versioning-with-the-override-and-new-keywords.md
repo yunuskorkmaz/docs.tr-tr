@@ -68,11 +68,11 @@ C# dili, farklı kitaplıklarda [temel](../../language-reference/keywords/base.m
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- `DoWork`, Bir örneği üzerinde çağrıldığında `Derived` , C# derleyicisi ilk olarak çağrıyı üzerinde ilk olarak bildirildiği sürümlerle uyumlu hale getirme denenir `DoWork` `Derived` . Geçersiz kılma yöntemleri bir sınıfta bildirildiği gibi düşünülmez, bir temel sınıfta belirtilen metodun yeni uygulamalarıdır. Yalnızca C# derleyicisi ' de bir özgün metoda yönelik yöntem çağrısını eşleşemez, `Derived` geçersiz kılınan bir yönteme yapılan çağrıyı aynı ada ve uyumlu parametrelere eşleştirmeye çalışır. Örneğin:  
+ `DoWork`, Bir örneği üzerinde çağrıldığında `Derived` , C# derleyicisi ilk olarak çağrıyı üzerinde ilk olarak bildirildiği sürümlerle uyumlu hale getirme denenir `DoWork` `Derived` . Geçersiz kılma yöntemleri bir sınıfta bildirildiği gibi düşünülmez, bir temel sınıfta belirtilen metodun yeni uygulamalarıdır. Yalnızca C# derleyicisi ' de bir özgün metoda yönelik yöntem çağrısını eşleşemez, `Derived` geçersiz kılınan bir yönteme yapılan çağrıyı aynı ada ve uyumlu parametrelere eşleştirmeye çalışır. Örnek:  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Değişken örtük olarak `val` bir Double 'a dönüştürülebildiğinden, C# derleyicisi yerine ' ı çağırır `DoWork(double)` `DoWork(int)` . Bunu önlemenin iki yolu vardır. İlk olarak, sanal yöntemlerle aynı ada sahip yeni yöntemler bildirmemeye özen gösterin. İkincisi, C# derleyicisine, örneğini ' a aktararak temel sınıf yöntemi listesinde arama yaparak sanal yöntemi çağırabilmeniz için talimat verebilirsiniz `Derived` `Base` . Yöntemi sanal olduğu için, üzerinde uygulamasının uygulanması `DoWork(int)` `Derived` çağrılır. Örneğin:  
+ Değişken örtük olarak `val` bir Double 'a dönüştürülebildiğinden, C# derleyicisi yerine ' ı çağırır `DoWork(double)` `DoWork(int)` . Bunu önlemenin iki yolu vardır. İlk olarak, sanal yöntemlerle aynı ada sahip yeni yöntemler bildirmemeye özen gösterin. İkincisi, C# derleyicisine, örneğini ' a aktararak temel sınıf yöntemi listesinde arama yaparak sanal yöntemi çağırabilmeniz için talimat verebilirsiniz `Derived` `Base` . Yöntemi sanal olduğu için, üzerinde uygulamasının uygulanması `DoWork(int)` `Derived` çağrılır. Örnek:  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
@@ -81,6 +81,6 @@ C# dili, farklı kitaplıklarda [temel](../../language-reference/keywords/base.m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve Yapılar](./index.md)
+- [Sınıflar ve yapılar](./index.md)
 - [Yöntemler](./methods.md)
 - [Devralma](./inheritance.md)

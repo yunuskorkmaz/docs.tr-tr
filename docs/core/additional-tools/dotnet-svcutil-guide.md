@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 <!-- markdownlint-disable MD025 -->
 
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 
 ---
 
-## <a name="getting-started"></a>Başlarken
+## <a name="getting-started"></a>Kullanmaya başlama
 
 Aşağıdaki örnek, bir .NET Core Web projesine Web hizmeti başvurusu eklemek ve hizmeti çağırmak için gereken adımlarda size yol gösterir. *Merhaba Svcutil* adlı bir .NET Core Web uygulaması oluşturacak ve aşağıdaki sözleşmeyi uygulayan bir Web hizmetine başvuru ekleyeceğiz:
 

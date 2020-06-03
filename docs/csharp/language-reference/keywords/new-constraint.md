@@ -13,19 +13,19 @@ ms.locfileid: "82795345"
 ---
 # <a name="new-constraint-c-reference"></a>New kısıtlaması (C# Başvurusu)
 
-Kısıtlama `new` , genel sınıf bildirimindeki bir tür bağımsız değişkeninin Ortak parametresiz bir oluşturucuya sahip olması gerektiğini belirtir. `new` Kısıtlamayı kullanmak için tür soyut olamaz.
+`new`Kısıtlama, genel sınıf bildirimindeki bir tür bağımsız değişkeninin Ortak parametresiz bir oluşturucuya sahip olması gerektiğini belirtir. Kısıtlamayı kullanmak için `new` tür soyut olamaz.
 
-Aşağıdaki örnekte `new` gösterildiği gibi, genel bir sınıf türün yeni örneklerini oluşturduğunda, kısıtlamayı bir tür parametresine uygulayın:
+`new`Aşağıdaki örnekte gösterildiği gibi, genel bir sınıf türün yeni örneklerini oluşturduğunda, kısıtlamayı bir tür parametresine uygulayın:
 
 [!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
 
-`new()` Kısıtlamayı diğer kısıtlamalarla birlikte kullandığınızda, en son belirtilmelidir:
+`new()`Kısıtlamayı diğer kısıtlamalarla birlikte kullandığınızda, en son belirtilmelidir:
 
 [!code-csharp[csrefKeywordsOperator#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#6)]
 
 Daha fazla bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md).
 
-Anahtar sözcüğünü, `new` [bir tür örneği](../operators/new-operator.md) veya bir [üye bildirimi değiştiricisi](new-modifier.md)olarak oluşturmak için de kullanabilirsiniz.
+`new`Anahtar sözcüğünü, [bir tür örneği](../operators/new-operator.md) veya bir [üye bildirimi değiştiricisi](new-modifier.md)olarak oluşturmak için de kullanabilirsiniz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 

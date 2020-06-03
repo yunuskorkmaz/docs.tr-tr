@@ -25,7 +25,7 @@ Bir metin dosyasını okuyan ve bu metin dosyasının içeriğini konsola yansı
 
 Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Makinenizi .NET Core çalıştıracak şekilde ayarlayın. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya Docker kapsayıcısında çalıştırabilirsiniz.
 
@@ -33,13 +33,13 @@ Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. `dotnet new console` Komutu komut istemine yazın. Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur.
+İlk adım yeni bir uygulama oluşturmaktır. Bir komut istemi açın ve uygulamanız için yeni bir dizin oluşturun. Geçerli dizini oluşturun. Komutu `dotnet new console` komut istemine yazın. Bu, temel bir "Merhaba Dünya" uygulaması için başlangıç dosyalarını oluşturur.
 
-Değişiklik yapmaya başlamadan önce, basit Merhaba Dünya uygulamasını çalıştırmak için adımları ilerlim. Uygulamayı oluşturduktan sonra komut istemine yazın `dotnet restore` . Bu komut NuGet paketi geri yükleme işlemini çalıştırır. NuGet bir .NET paket yöneticisidir. Bu komut, projeniz için eksik bağımlılıkları indirir. Bu yeni bir proje olduğundan, bağımlılıklardan hiçbiri yerinde değildir, bu nedenle ilk çalıştırma .NET Core çerçevesini indirir. Bu ilk adımdan sonra yalnızca yeni bağımlı paketler eklediğinizde veya bağımlılıklarınızın herhangi birinin sürümlerini güncelleştirdiğinizde çalıştırmanız `dotnet restore` gerekir.
+Değişiklik yapmaya başlamadan önce, basit Merhaba Dünya uygulamasını çalıştırmak için adımları ilerlim. Uygulamayı oluşturduktan sonra `dotnet restore` komut istemine yazın. Bu komut NuGet paketi geri yükleme işlemini çalıştırır. NuGet bir .NET paket yöneticisidir. Bu komut, projeniz için eksik bağımlılıkları indirir. Bu yeni bir proje olduğundan, bağımlılıklardan hiçbiri yerinde değildir, bu nedenle ilk çalıştırma .NET Core çerçevesini indirir. Bu ilk adımdan sonra yalnızca `dotnet restore` yeni bağımlı paketler eklediğinizde veya bağımlılıklarınızın herhangi birinin sürümlerini güncelleştirdiğinizde çalıştırmanız gerekir.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Paketleri geri yükledikten sonra çalıştırın `dotnet build`. Bu, yapı altyapısını yürütür ve uygulamanızı çalıştırılabilir olarak oluşturur. Son olarak, uygulamanızı `dotnet run` çalıştırmak için yürütün.
+Paketleri geri yükledikten sonra çalıştırın `dotnet build` . Bu, yapı altyapısını yürütür ve uygulamanızı çalıştırılabilir olarak oluşturur. Son olarak, `dotnet run` uygulamanızı çalıştırmak için yürütün.
 
 Basit Merhaba Dünya uygulama kodu Program.cs ' de bulunur. Bu dosyayı en sevdiğiniz metin düzenleyicinizle açın. İlk değişikliklerimizi yapmak bizim için çalışıyoruz. Dosyanın en üstünde, bkz. using deyimleri:
 
@@ -47,7 +47,7 @@ Basit Merhaba Dünya uygulama kodu Program.cs ' de bulunur. Bu dosyayı en sevdi
 using System;
 ```
 
-Bu ifade, derleyiciye `System` ad alanındaki herhangi bir türün kapsam içinde olduğunu söyler. Kullandığınız diğer nesne yönelimli diller gibi, C#, türleri düzenlemek için ad alanlarını kullanır. Bu Merhaba Dünya program farklı değildir. Programın adı ile geçerli dizinin adına bağlı olarak ad alanı içinde bulunduğunu görebilirsiniz. Bu öğretici için ad alanının adını şu şekilde `TeleprompterConsole`değiştirelim:
+Bu ifade, derleyiciye ad alanındaki herhangi bir türün `System` kapsam içinde olduğunu söyler. Kullandığınız diğer nesne yönelimli diller gibi, C#, türleri düzenlemek için ad alanlarını kullanır. Bu Merhaba Dünya program farklı değildir. Programın adı ile geçerli dizinin adına bağlı olarak ad alanı içinde bulunduğunu görebilirsiniz. Bu öğretici için ad alanının adını şu şekilde değiştirelim `TeleprompterConsole` :
 
 ```csharp
 namespace TeleprompterConsole
@@ -57,7 +57,7 @@ namespace TeleprompterConsole
 
 Eklenecek ilk özellik, bir metin dosyasını okuma ve bu metnin tümünü konsola görüntüleme olanağıdır. İlk olarak bir metin dosyası ekleyelim. Bu [örnek](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) için GitHub deposundan [samplequotes. txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) dosyasını proje dizininize kopyalayın. Bu, uygulamanız için komut dosyası olarak görev yapar. Bu konu için örnek uygulamanın nasıl indirileceği hakkında bilgi isterseniz, [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) konusundaki yönergelere bakın.
 
-Sonra, sınıfınıza `Program` aşağıdaki yöntemi ekleyin ( `Main` yöntemin altına doğru):
+Sonra, sınıfınıza aşağıdaki yöntemi ekleyin `Program` (yöntemin altına doğru `Main` ):
 
 ```csharp
 static IEnumerable<string> ReadFrom(string file)
@@ -80,15 +80,15 @@ using System.Collections.Generic;
 using System.IO;
 ```
 
-<xref:System.Collections.Generic.IEnumerable%601> Arabirim <xref:System.Collections.Generic> ad alanında tanımlanır. <xref:System.IO.File> Sınıf <xref:System.IO> ad alanında tanımlanır.
+<xref:System.Collections.Generic.IEnumerable%601>Arabirim <xref:System.Collections.Generic> ad alanında tanımlanır. <xref:System.IO.File>Sınıf <xref:System.IO> ad alanında tanımlanır.
 
-Bu yöntem, *yineleyici yöntemi*olarak adlandırılan özel bir C# yöntemi türüdür. Numaralandırıcı yöntemleri değerlendirilen dizileri döndürür geç. Bu, dizideki her öğe, diziyi kullanan kod tarafından istenerek oluşturulduğu anlamına gelir. Numaralandırıcı yöntemleri bir veya daha fazla [`yield return`](../language-reference/keywords/yield.md) deyim içeren yöntemlerdir. `ReadFrom` Yöntemi tarafından döndürülen nesne, dizideki her bir öğeyi oluşturmak için kodu içerir. Bu örnekte, kaynak dosyadaki bir sonraki metin satırını okumayı ve bu dizeyi döndürmeyle ilgilidir. Çağıran kod, sıradaki bir sonraki öğeyi her istediğinde, kod dosyadaki metnin bir sonraki satırını okur ve döndürür. Dosya tamamen okunmadığında, dizi daha fazla öğe olmadığını gösterir.
+Bu yöntem, *yineleyici yöntemi*olarak adlandırılan özel bir C# yöntemi türüdür. Numaralandırıcı yöntemleri değerlendirilen dizileri döndürür geç. Bu, dizideki her öğe, diziyi kullanan kod tarafından istenerek oluşturulduğu anlamına gelir. Numaralandırıcı yöntemleri bir veya daha fazla deyim içeren yöntemlerdir [`yield return`](../language-reference/keywords/yield.md) . Yöntemi tarafından döndürülen nesne, `ReadFrom` dizideki her bir öğeyi oluşturmak için kodu içerir. Bu örnekte, kaynak dosyadaki bir sonraki metin satırını okumayı ve bu dizeyi döndürmeyle ilgilidir. Çağıran kod, sıradaki bir sonraki öğeyi her istediğinde, kod dosyadaki metnin bir sonraki satırını okur ve döndürür. Dosya tamamen okunmadığında, dizi daha fazla öğe olmadığını gösterir.
 
-Sizin için yeni olabilecek iki C# sözdizimi öğesi vardır. Bu [`using`](../language-reference/keywords/using-statement.md) yöntemdeki deyimin kaynağı temizleme işlemini yönetir. `using` İfadesinde başlatılan değişken (`reader`Bu örnekte) <xref:System.IDisposable> arabirimini uygulamalıdır. Bu arabirim, kaynak yayımlanacaksa çağrılması `Dispose`gereken tek bir yöntemini tanımlar. , Yürütme `using` deyimin kapanış ayracına ulaştığında derleyici bu çağrıyı oluşturur. Derleyici tarafından oluşturulan kod, using ifadesiyle tanımlanan bloktaki koddan bir özel durum oluşsa bile kaynağın serbest bırakılacağını sağlar.
+Sizin için yeni olabilecek iki C# sözdizimi öğesi vardır. [`using`](../language-reference/keywords/using-statement.md)Bu yöntemdeki deyimin kaynağı temizleme işlemini yönetir. İfadesinde başlatılan değişken `using` ( `reader` Bu örnekte) <xref:System.IDisposable> arabirimini uygulamalıdır. Bu arabirim, `Dispose` kaynak yayımlanacaksa çağrılması gereken tek bir yöntemini tanımlar. , Yürütme deyimin kapanış ayracına ulaştığında derleyici bu çağrıyı oluşturur `using` . Derleyici tarafından oluşturulan kod, using ifadesiyle tanımlanan bloktaki koddan bir özel durum oluşsa bile kaynağın serbest bırakılacağını sağlar.
 
-`reader` Değişkeni, `var` anahtar sözcüğü kullanılarak tanımlanır. [`var`](../language-reference/keywords/var.md)*örtük olarak yazılmış bir yerel değişken*tanımlar. Bu, değişkenin türü değişkene atanan nesnenin derleme zamanı türü tarafından belirlendiği anlamına gelir. Burada, bir <xref:System.IO.File.OpenText(System.String)> <xref:System.IO.StreamReader> nesnesi olan yönteminden döndürülen değer.
+`reader`Değişkeni, anahtar sözcüğü kullanılarak tanımlanır `var` . [`var`](../language-reference/keywords/var.md)*örtük olarak yazılmış bir yerel değişken*tanımlar. Bu, değişkenin türü değişkene atanan nesnenin derleme zamanı türü tarafından belirlendiği anlamına gelir. Burada, <xref:System.IO.File.OpenText(System.String)> bir nesnesi olan yönteminden döndürülen değer <xref:System.IO.StreamReader> .
 
-Şimdi, `Main` yöntemi içindeki dosyayı okumak için kodu dolduralım:
+Şimdi, yöntemi içindeki dosyayı okumak için kodu dolduralım `Main` :
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
@@ -98,13 +98,13 @@ foreach (var line in lines)
 }
 ```
 
-Programı çalıştırın (kullanarak `dotnet run`) ve konsolda yazdırılan her satırı görebilirsiniz.
+Programı çalıştırın (kullanarak `dotnet run` ) ve konsolda yazdırılan her satırı görebilirsiniz.
 
 ## <a name="adding-delays-and-formatting-output"></a>Gecikme ve biçimlendirme çıktısı ekleme
 
 Ne kadar hızlı görüntülendikleriniz çok yüksek. Şimdi çıktıdaki gecikmeleri eklemeniz gerekir. Başladığınızda, zaman uyumsuz işleme sağlayan çekirdek koddan bazılarını oluşturacaksınız. Bununla birlikte, bu ilk adımlar birkaç tane kenar deseninden daha izlenecek. Siz kodu eklerken yorumlara desenler görüntülenir ve kod sonraki adımlarda güncelleştirilir.
 
-Bu bölümde iki adım vardır. İlk olarak, yineleyici yöntemini tüm satırlar yerine tek bir sözcük döndürecek şekilde güncelleştireceksiniz. Bu değişiklikler bu değişikliklerle yapılır. `yield return line;` İfadesini aşağıdaki kodla değiştirin:
+Bu bölümde iki adım vardır. İlk olarak, yineleyici yöntemini tüm satırlar yerine tek bir sözcük döndürecek şekilde güncelleştireceksiniz. Bu değişiklikler bu değişikliklerle yapılır. `yield return line;`İfadesini aşağıdaki kodla değiştirin:
 
 ```csharp
 var words = line.Split(' ');
@@ -115,7 +115,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-Ardından, dosyanın satırlarını nasıl kullanacağınızı değiştirmeniz ve her bir kelime yazıldıktan sonra bir gecikme eklemeniz gerekir. `Main` Yöntemi içindeki `Console.WriteLine(line)` ifadesini aşağıdaki bloğa değiştirin:
+Ardından, dosyanın satırlarını nasıl kullanacağınızı değiştirmeniz ve her bir kelime yazıldıktan sonra bir gecikme eklemeniz gerekir. `Console.WriteLine(line)`Yöntemi içindeki ifadesini `Main` aşağıdaki bloğa değiştirin:
 
 ```csharp
 Console.Write(line);
@@ -129,19 +129,19 @@ if (!string.IsNullOrWhiteSpace(line))
 }
 ```
 
-<xref:System.Threading.Tasks.Task> Sınıf <xref:System.Threading.Tasks> ad alanında olduğundan, bu `using` ifadeyi dosyanın en üstüne eklemeniz gerekir:
+<xref:System.Threading.Tasks.Task>Sınıf <xref:System.Threading.Tasks> ad alanında olduğundan, bu `using` ifadeyi dosyanın en üstüne eklemeniz gerekir:
 
 ```csharp
 using System.Threading.Tasks;
 ```
 
-Örneği çalıştırın ve çıktıyı denetleyin. Şimdi, her bir sözcük yazdırılır ve ardından 200 ms gecikme gelir. Ancak, görüntülenen çıktıda bazı sorunlar gösterilmektedir çünkü kaynak metin dosyasında satır sonu olmadan 80 ' ten fazla karakter içeren birkaç satır vardır. Bu, kaydırma sırasında okunması zor olabilir. Bu, düzeltilmesi kolay bir işlemdir. Her satırın uzunluğunu takip edersiniz ve satır uzunluğu belirli bir eşiğe ulaştığında yeni bir satır oluşturacaksınız. Satır uzunluğunu tutan `words` `ReadFrom` yöntemde öğesinin bildiriminden sonra bir yerel değişken bildirin:
+Örneği çalıştırın ve çıktıyı denetleyin. Şimdi, her bir sözcük yazdırılır ve ardından 200 ms gecikme gelir. Ancak, görüntülenen çıktıda bazı sorunlar gösterilmektedir çünkü kaynak metin dosyasında satır sonu olmadan 80 ' ten fazla karakter içeren birkaç satır vardır. Bu, kaydırma sırasında okunması zor olabilir. Bu, düzeltilmesi kolay bir işlemdir. Her satırın uzunluğunu takip edersiniz ve satır uzunluğu belirli bir eşiğe ulaştığında yeni bir satır oluşturacaksınız. `words`Satır uzunluğunu tutan yöntemde öğesinin bildiriminden sonra bir yerel değişken bildirin `ReadFrom` :
 
 ```csharp
 var lineLength = 0;
 ```
 
-Sonra, `yield return word + " ";` deyimden sonra aşağıdaki kodu ekleyin (kapanış ayracından önce):
+Sonra, deyimden sonra aşağıdaki kodu ekleyin `yield return word + " ";` (kapanış ayracından önce):
 
 ```csharp
 lineLength += word.Length + 1;
@@ -156,9 +156,9 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>Zaman uyumsuz görevler
 
-Bu son adımda, çıktıyı zaman uyumsuz olarak bir görevde yazacak şekilde, Ayrıca metin görüntüsünü hızlandırmak veya yavaşlatacak şekilde Kullanıcı girişini okumak için başka bir görevi çalıştırırken, metin görüntülemeyi tamamen durdurmak için kodu ekleyeceksiniz. Bunun içinde ve sonunda birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmelere sahip olacaksınız. İlk adım, dosyayı okuyup görüntülemesi için oluşturduğunuz <xref:System.Threading.Tasks.Task> kodu temsil eden zaman uyumsuz bir döndürme yöntemi oluşturmaktır.
+Bu son adımda, çıktıyı zaman uyumsuz olarak bir görevde yazacak şekilde, Ayrıca metin görüntüsünü hızlandırmak veya yavaşlatacak şekilde Kullanıcı girişini okumak için başka bir görevi çalıştırırken, metin görüntülemeyi tamamen durdurmak için kodu ekleyeceksiniz. Bunun içinde ve sonunda birkaç adım vardır, ihtiyacınız olan tüm güncelleştirmelere sahip olacaksınız. İlk adım, <xref:System.Threading.Tasks.Task> dosyayı okuyup görüntülemesi için oluşturduğunuz kodu temsil eden zaman uyumsuz bir döndürme yöntemi oluşturmaktır.
 
-Bu yöntemi sınıfınıza `Program` ekleyin ( `Main` yönteminizin gövdesinden alınır):
+Bu yöntemi `Program` sınıfınıza ekleyin (yönteminizin gövdesinden alınır `Main` ):
 
 ```csharp
 private static async Task ShowTeleprompter()
@@ -175,16 +175,16 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-İki değişiklik fark edeceksiniz. İlk olarak, yöntemin gövdesinde, bir görevin bitmesini zaman uyumlu <xref:System.Threading.Tasks.Task.Wait> olarak beklemek yerine, bu sürüm `await` anahtar sözcüğünü kullanır. Bunu yapmak için, yöntem imzasına `async` değiştiricisini eklemeniz gerekir. Bu yöntem bir `Task`döndürür. Bir `Task` nesne döndüren return deyimi olmadığına dikkat edin. Bunun yerine, `Task` `await` işleci kullandığınızda derleyicinin oluşturduğu kodla bu nesne oluşturulur. Bu yöntemin bir `await`öğesine ulaştığında geri döndüğünü hayal edebilirsiniz. Döndürülen `Task` iş tamamlanmadığını gösterir. Yöntemi, beklenen görev tamamlandığında devam eder. Tamamlanmayı yürütüldüğünde, döndürülen `Task` bunun tamamlandığını gösterir.
-Çağıran kod, ne zaman tamamlandığını `Task` anlamak için döndürülen ' i izleyebilir.
+İki değişiklik fark edeceksiniz. İlk olarak, yöntemin gövdesinde, <xref:System.Threading.Tasks.Task.Wait> bir görevin bitmesini zaman uyumlu olarak beklemek yerine, bu sürüm `await` anahtar sözcüğünü kullanır. Bunu yapmak için, `async` Yöntem imzasına değiştiricisini eklemeniz gerekir. Bu yöntem bir döndürür `Task` . Bir nesne döndüren return deyimi olmadığına dikkat edin `Task` . Bunun yerine, `Task` işleci kullandığınızda derleyicinin oluşturduğu kodla bu nesne oluşturulur `await` . Bu yöntemin bir öğesine ulaştığında geri döndüğünü hayal edebilirsiniz `await` . Döndürülen `Task` iş tamamlanmadığını gösterir. Yöntemi, beklenen görev tamamlandığında devam eder. Tamamlanmayı yürütüldüğünde, döndürülen `Task` bunun tamamlandığını gösterir.
+Çağıran kod, `Task` ne zaman tamamlandığını anlamak için döndürülen ' i izleyebilir.
 
-Bu yeni yöntemi, yönteyinizdeki `Main` çağırabilirsiniz:
+Bu yeni yöntemi, yönteyinizdeki çağırabilirsiniz `Main` :
 
 ```csharp
 ShowTeleprompter().Wait();
 ```
 
-Burada, ' `Main`de, kod zaman uyumlu olarak bekler. Mümkün olduğunca zaman uyumlu `await` bekleme yerine işlecini kullanmanız gerekir. Ancak, bir konsol uygulamasının `Main` yönteminde `await` işlecini kullanamazsınız. Bu, uygulamanın tüm görevler tamamlanmadan çıkılması ile sonuçlanır.
+Burada, ' de, `Main` kod zaman uyumlu olarak bekler. `await`Mümkün olduğunca zaman uyumlu bekleme yerine işlecini kullanmanız gerekir. Ancak, bir konsol uygulamasının `Main` yönteminde `await` işlecini kullanamazsınız. Bu, uygulamanın tüm görevler tamamlanmadan çıkılması ile sonuçlanır.
 
 > [!NOTE]
 > C# 7,1 veya sonraki bir sürümünü kullanıyorsanız, [ `async` `Main` yöntemiyle](../whats-new/csharp-7-1.md#async-main)konsol uygulamaları oluşturabilirsiniz.
@@ -217,11 +217,11 @@ private static async Task GetInput()
 }
 ```
 
-Bu, konsolundan bir anahtarı okuyan bir <xref:System.Action> temsilciyi temsil eden bir lambda ifadesi oluşturur ve kullanıcı ' < ' (küçüktür) veya ' > ' (büyüktür) anahtarlarına bastığında gecikmeyi temsil eden yerel bir değişkeni değiştirir. Temsilci yöntemi, Kullanıcı ' X ' veya ' x ' tuşlarına bastığında sona erdiğinde, kullanıcının metin görüntüsünü istediğiniz zaman durdurmasına izin verir. Bu yöntem engellemek <xref:System.Console.ReadKey> için kullanır ve kullanıcının bir tuşa basması için bekler.
+Bu, konsolundan bir anahtarı okuyan bir temsilciyi temsil eden bir lambda ifadesi oluşturur <xref:System.Action> ve Kullanıcı ' < ' (küçüktür) veya ' > ' (büyüktür) anahtarlarına bastığında gecikmeyi temsil eden yerel bir değişkeni değiştirir. Temsilci yöntemi, Kullanıcı ' X ' veya ' x ' tuşlarına bastığında sona erdiğinde, kullanıcının metin görüntüsünü istediğiniz zaman durdurmasına izin verir. Bu yöntem <xref:System.Console.ReadKey> engellemek için kullanır ve kullanıcının bir tuşa basması için bekler.
 
-Bu özelliği bitirebilmeniz için, bu görevlerin her ikisini de `async Task` (`GetInput` ve `ShowTeleprompter`) Başlatan yeni bir döndürme yöntemi oluşturmanız ve ayrıca bu iki görev arasındaki paylaşılan verileri de yönetmesi gerekir.
+Bu özelliği bitirebilmeniz için, bu `async Task` görevlerin her ikisini de (ve) Başlatan yeni bir döndürme yöntemi oluşturmanız `GetInput` `ShowTeleprompter` ve ayrıca bu iki görev arasındaki paylaşılan verileri de yönetmesi gerekir.
 
-Bu iki görev arasında paylaşılan verileri işleyebilen bir sınıf oluşturmak zaman alabilir. Bu sınıf iki genel özellik içerir: gecikme ve dosyanın tamamen okunduğunu belirten `Done` bir bayrak:
+Bu iki görev arasında paylaşılan verileri işleyebilen bir sınıf oluşturmak zaman alabilir. Bu sınıf iki genel özellik içerir: gecikme ve `Done` dosyanın tamamen okunduğunu belirten bir bayrak:
 
 ```csharp
 namespace TeleprompterConsole
@@ -247,13 +247,13 @@ namespace TeleprompterConsole
 }
 ```
 
-Bu sınıfı yeni bir dosyaya yerleştirin ve bu sınıfı yukarıda gösterildiği gibi `TeleprompterConsole` ad alanına iliştirin. Ayrıca, `using static` `Min` kapsayan sınıf veya ad alanı adları olmadan ve `Max` yöntemlerine başvurabilmeniz için bir ifade eklemeniz gerekecektir. Bir [`using static`](../language-reference/keywords/using-static.md) ifade yöntemleri bir sınıftan içeri aktarır. Bu, bir ad alanından tüm `using` sınıfları içeri aktarmış olan bu noktaya kadar kullanılan deyimlerle aynıdır.
+Bu sınıfı yeni bir dosyaya yerleştirin ve bu sınıfı `TeleprompterConsole` yukarıda gösterildiği gibi ad alanına iliştirin. Ayrıca `using static` , `Min` `Max` kapsayan sınıf veya ad alanı adları olmadan ve yöntemlerine başvurabilmeniz için bir ifade eklemeniz gerekecektir. Bir [`using static`](../language-reference/keywords/using-static.md) ifade yöntemleri bir sınıftan içeri aktarır. Bu, `using` bir ad alanından tüm sınıfları içeri aktarmış olan bu noktaya kadar kullanılan deyimlerle aynıdır.
 
 ```csharp
 using static System.Math;
 ```
 
-Ardından, yeni `ShowTeleprompter` `GetInput` `config` nesnesini kullanmak için ve yöntemlerini güncelleştirmeniz gerekir. Her iki görevi `Task` başlatmak `async` için bir son döndürme yöntemi yazın ve ilk görev tamamlandığında çıkış yapın:
+Ardından, `ShowTeleprompter` `GetInput` Yeni nesnesini kullanmak için ve yöntemlerini güncelleştirmeniz gerekir `config` . `Task` `async` Her iki görevi başlatmak için bir son döndürme yöntemi yazın ve ilk görev tamamlandığında çıkış yapın:
 
 ```csharp
 private static async Task RunTeleprompter()
@@ -266,9 +266,9 @@ private static async Task RunTeleprompter()
 }
 ```
 
-<xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> Çağrı burada yeni bir yöntemdir. Bu, bağımsız `Task` değişken listesindeki görevlerden herhangi biri tamamlandıktan hemen sonra tamamlanmış bir oluşturur.
+Çağrı burada yeni bir yöntemdir <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> . Bu, `Task` bağımsız değişken listesindeki görevlerden herhangi biri tamamlandıktan hemen sonra tamamlanmış bir oluşturur.
 
-Sonra, gecikme için `ShowTeleprompter` `GetInput` `config` nesnesini kullanmak üzere hem hem de yöntemlerini güncelleştirmeniz gerekir:
+Sonra, `ShowTeleprompter` `GetInput` gecikme için nesnesini kullanmak üzere hem hem de yöntemlerini güncelleştirmeniz gerekir `config` :
 
 ```csharp
 private static async Task ShowTeleprompter(TelePrompterConfig config)
@@ -303,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Bu yeni sürümü, `ShowTeleprompter` `TeleprompterConfig` sınıfında yeni bir yöntemi çağırır. Şimdi aşağıdakileri yerine çağırmak `Main` `RunTeleprompter` için güncelleştirmeniz gerekir: `ShowTeleprompter`
+Bu yeni sürümü `ShowTeleprompter` , sınıfında yeni bir yöntemi çağırır `TeleprompterConfig` . Şimdi aşağıdakileri `Main` yerine çağırmak için güncelleştirmeniz gerekir `RunTeleprompter` `ShowTeleprompter` :
 
 ```csharp
 RunTeleprompter().Wait();

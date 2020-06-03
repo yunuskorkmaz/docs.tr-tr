@@ -55,4 +55,4 @@ Aşağıdaki örnek `using static` <xref:System.Console> ,, ve sınıflarının 
 - [C# başvurusu](../index.md)
 - [C# anahtar sözcükleri](index.md)
 - [Ad alanlarını kullanma](../../programming-guide/namespaces/using-namespaces.md)
-- [Ad Alanları](../../programming-guide/namespaces/index.md)
+- [Ad alanları](../../programming-guide/namespaces/index.md)

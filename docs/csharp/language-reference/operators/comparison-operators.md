@@ -78,4 +78,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [C# başvurusu](../index.md)
 - [C# işleçleri](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
-- [Eşitlik İşleçleri](equality-operators.md)
+- [Eşitlik işleçleri](equality-operators.md)

@@ -36,7 +36,7 @@ Bir tanımlayıcı ad (varsa) ile birlikte üç öznitelik, bir derlemenin kimli
 
 Aşağıdaki tabloda sürüm ve kültür öznitelikleri açıklanmaktadır.
 
-|Bütünleştirilmiş kod kimliği özniteliği|Açıklama|
+|Bütünleştirilmiş kod kimliği özniteliği|Description|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|Derlemenin desteklediği kültürü gösteren numaralandırılmış alan. Bir bütünleştirilmiş kod ayrıca kültür bağımsızlığını belirtebilir ve bu, varsayılan kültürün kaynaklarını içerdiğini belirtir. **Note:**  Çalışma zamanı, kültür özniteliği olmayan herhangi bir derlemeyi uydu derlemesi olarak null olarak ayarlanmış şekilde değerlendirir. Bu tür derlemeler uydu derleme bağlama kurallarına tabidir. Daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Derlemenin yan yana çalıştırılıp çalıştırılmayacağı gibi, derleme özniteliklerini ayarlayan değer.|
@@ -69,7 +69,7 @@ Aşağıdaki kod örneği, bir derlemeye sürüm ve kültür özniteliklerinin n
 
 Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda, bir derlemeye uygulayabileceğiniz bilgilendirici öznitelikler açıklanmaktadır.
 
-|Bilgilendirici özniteliği|Açıklama|
+|Bilgilendirici özniteliği|Description|
 |-----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Şirket adını belirten dize değeri.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Telif hakkı bilgilerini belirten dize değeri.|
@@ -84,7 +84,7 @@ Bu öznitelikler, derlemenin Windows özellikleri sayfasında görünebilir veya
 
 Derleme bildiriminde başlık, açıklama, varsayılan diğer ad ve yapılandırma dahil olmak üzere bilgi sağlamak için bütünleştirilmiş kod bildirim özniteliklerini kullanabilirsiniz. Aşağıdaki tabloda, derleme bildirim öznitelikleri açıklanmaktadır.
 
-|Bütünleştirilmiş kod bildirim özniteliği|Açıklama|
+|Bütünleştirilmiş kod bildirim özniteliği|Description|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Derlemenin, perakende veya hata ayıklama gibi yapılandırmasını gösteren dize değeri. Çalışma zamanı bu değeri kullanmaz.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Başvurulan derlemelere göre kullanılacak varsayılan bir diğer ad belirten dize değeri. Bu değer, derlemenin kendisinin adı kolay değil (bir GUID değeri gibi) kolay bir ad sağlar. Bu değer, tam derleme adının kısa bir biçimi olarak da kullanılabilir.|
@@ -95,7 +95,7 @@ Derleme bildiriminde başlık, açıklama, varsayılan diğer ad ve yapılandır
 
 Bir derleme için tanımlayıcı ad ayarlamak üzere tanımlayıcı ad öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda tanımlayıcı ad öznitelikleri açıklanmaktadır.
 
-|Tanımlayıcı ad özniteliği|Açıklama|
+|Tanımlayıcı ad özniteliği|Description|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Gecikme imzasının kullanıldığını gösteren Boolean değeri.|
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Ortak anahtar (gecikme imzalamayı kullanıyorsanız) veya bu özniteliğin oluşturucusuna parametre olarak geçirilen ortak ve özel anahtarları içeren dosyanın adını gösteren dize değeri. Dosya adının, kaynak dosya yolu değil çıkış dosyası yoluna ( *. exe* veya *. dll*) göreli olduğunu unutmayın.|

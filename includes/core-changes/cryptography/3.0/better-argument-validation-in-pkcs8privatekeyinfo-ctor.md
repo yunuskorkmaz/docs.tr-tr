@@ -24,7 +24,7 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 byte[] encoded = info.Encode();
 ```
 
-.NET Core 3,0 Preview 9 ' dan itibaren bağımsız değişken oluşturucuda onaylanır ve geçersiz bir değer, oluşturan yöntemi ile sonuçlanır <xref:System.Security.Cryptography.CryptographicException> . Bu değişiklik, özel durumu veri hatasının kaynağına yaklaştırır. Örneğin:
+.NET Core 3,0 Preview 9 ' dan itibaren bağımsız değişken oluşturucuda onaylanır ve geçersiz bir değer, oluşturan yöntemi ile sonuçlanır <xref:System.Security.Cryptography.CryptographicException> . Bu değişiklik, özel durumu veri hatasının kaynağına yaklaştırır. Örnek:
 
 ```csharp
 byte[] algorithmParameters = { 0x05, 0x00, 0x05, 0x00 };

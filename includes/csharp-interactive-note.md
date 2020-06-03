@@ -8,4 +8,4 @@ ms.locfileid: "66722065"
 ---
 
 > [!NOTE]
-> Bu makaledeki C# örnekleri [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) satır lı kod koşucusu ve oyun alanında çalışır. Etkileşimli bir pencerede bir örnek çalıştırmak için **Çalıştır** düğmesini seçin. Kodu çalıştırdıktan sonra, yeniden **Çalıştır'ı** seçerek kodu değiştirebilir ve değiştirilmiş kodu çalıştırabilirsiniz. Değiştirilen kod etkileşimli pencerede çalışır veya derleme başarısız olursa, etkileşimli pencere tüm C# derleyici hata iletilerini görüntüler.  
+> Bu makaledeki C# örnekleri [TRY.net](https://dotnet.microsoft.com/platform/try-dotnet) satır içi kod Çalıştırıcısı ve PLAYIN içinde çalışır. Etkileşimli bir pencerede örnek çalıştırmak için **Çalıştır** düğmesini seçin. Kodu yürüttüğünüzde, bunu değiştirebilir ve yeniden **Çalıştır** ' ı seçerek değiştirilen kodu çalıştırabilirsiniz. Değiştirilen kod etkileşimli pencerede çalışır veya derleme başarısız olursa etkileşimli pencerede tüm C# Derleyici hata iletileri görüntülenir.  

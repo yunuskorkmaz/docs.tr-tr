@@ -2,23 +2,23 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144584"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306921"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
-Önceki bölümde, bir etki alanı modeli tasarlamaya yönelik temel tasarım ilkeleri ve desenleri açıklanmıştı. Artık, .NET Core (düz C \# kodu) ve EF Core kullanarak etki alanı modelini uygulamak için olası yolları keşfetmeye yönelik bir zaman vardır. Etki alanı modelinizin yalnızca kodunuzun oluşyacağını unutmayın. Yalnızca EF Core model gereksinimlerine sahip olur ancak EF üzerinde gerçek bağımlılıklara sahip olmaz. Etki alanı modelinizdeki EF Core veya başka bir ORM için sabit bağımlılıklara veya başvuru içermemelidir.
+Önceki bölümde, bir etki alanı modeli tasarlamaya yönelik temel tasarım ilkeleri ve desenleri açıklanmıştı. Artık, .NET Core (düz C \# kodu) ve EF Core kullanarak etki alanı modelini uygulamak için olası yolları keşfetmeye yönelik bir zaman vardır. Etki alanı modeliniz yalnızca kodunuzla oluşturulur. Yalnızca EF Core model gereksinimlerine sahip olur ancak EF üzerinde gerçek bağımlılıklara sahip olmaz. Etki alanı modelinizdeki EF Core veya başka bir ORM için sabit bağımlılıklara veya başvuru içermemelidir.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Özel bir .NET Standard kitaplığındaki etki alanı model yapısı
 
 EShopOnContainers başvuru uygulaması için kullanılan klasör organizasyonu, uygulamanın DDD modelini gösterir. Farklı bir klasör kuruluşun, uygulamanız için yapılan tasarım seçimlerini daha net bir şekilde iletişim kuracağını fark edebilirsiniz. Şekil 7-10 ' de görebileceğiniz gibi, sıralama etki alanı modelinde, sipariş toplama ve alıcı toplama olmak üzere iki toplama vardır. Her toplama, bir etki alanı varlıkları ve değer nesneleri grubudur, ancak tek bir etki alanı varlığından (Toplam kök veya kök varlık) oluşan bir toplama işlemi de olabilir.
 
 :::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Çözüm Gezgini içinde sıralama. Domain projesinin ekran görüntüsü.":::
-BuyerAggregate ve OrderAggregate klasörlerini içeren AggregatesModel klasörünü gösteren sıralama. Domain projesi için Çözüm Gezgini görünümü, her biri varlık sınıflarını, değer nesne dosyalarını ve bu şekilde devam eder.
+BuyerAggregate ve OrderAggregate klasörlerini içeren AggregatesModel klasörünü gösteren sıralama. Domain projesi için Çözüm Gezgini görünümü, her biri varlık sınıflarını, değer nesne dosyalarını ve bunu içerir.
 :::image-end:::
 
 **Şekil 7-10**. EShopOnContainers 'da sıralama mikro hizmeti için etki alanı model yapısı
@@ -95,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Bu, POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğunu unutmamak önemlidir. Entity Framework Core veya başka bir altyapı çerçevesine doğrudan bağımlılığı yoktur. Bu uygulama, DDD, yalnızca \# bir etki alanı modeli uygulayan C koduna sahip olmalıdır.
+Bu, POCO sınıfı olarak uygulanan bir etki alanı varlığı olduğunu unutmamak önemlidir. Entity Framework Core veya başka bir altyapı çerçevesine doğrudan bağımlılığı yoktur. Bu uygulama, DDD, yalnızca bir etki alanı modeli uygulayan C# koddayıdır.
 
 Ayrıca, sınıfı IAggregateRoot adlı bir arabirimle birlikte tasarlanmıştır. Bu arabirim, bazen yalnızca bu varlık sınıfının de bir toplam kök olduğunu göstermek için kullanılan *boş bir arabirimdir*.
 
@@ -154,7 +154,7 @@ Ayrıca, yeni OrderItem (params) işlemi de düzen toplama kökünden Addorderı
 
 Entity Framework Core 1,1 veya sonraki bir sürümü kullandığınızda, özelliklere ek olarak [alanlarla eşleştirmeye](https://docs.microsoft.com/ef/core/modeling/backing-field) ızın verdiğinden ddd varlığı daha iyi ifade edilebilir. Bu, alt varlıkların veya değer nesnelerinin koleksiyonlarını koruurken yararlı olur. Bu geliştirmelerden bazıları özellikler yerine basit özel alanları kullanabilir ve genel yöntemlerde alan koleksiyonuna herhangi bir güncelleştirmeyi uygulayabilir ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlayabilirsiniz.
 
-DDD 'da, verilerin herhangi bir kısmını ve tutarlılığını denetlemek için yalnızca varlıktaki yöntemler aracılığıyla varlığı (veya Oluşturucu) güncellemek isteyebilirsiniz, böylece özellikler yalnızca bir get erişimcisi ile tanımlanmıştır. Özellikler özel alanlarla desteklenir. Özel üyelere yalnızca sınıfının içinden erişilebilir. Ancak, bir özel durum vardır: EF Core bu alanları da ayarlaması gerekir (Bu nedenle, nesneyi doğru değerlerle döndürebilir).
+DDD 'da, verilerin herhangi bir kısmını ve tutarlılığını denetlemek için yalnızca varlıktaki yöntemler aracılığıyla varlığı (veya Oluşturucu) güncellemek istersiniz. böylece özellikler yalnızca bir get erişimcisi ile tanımlanmıştır. Özellikler özel alanlarla desteklenir. Özel üyelere yalnızca sınıfının içinden erişilebilir. Ancak, bir özel durum vardır: EF Core bu alanları da ayarlaması gerekir (Bu nedenle, nesneyi doğru değerlerle döndürebilir).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Özellikleri veritabanı tablosundaki alanlara yalnızca get erişimcileri ile eşleyin
 

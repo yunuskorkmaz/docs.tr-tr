@@ -191,7 +191,7 @@ Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 |Uyumlu olmayan tür|Description|CLS uyumlu alternatif|
 |-------------------------|-----------------|--------------------------------|
 |<xref:System.SByte>|8 bit işaretli tamsayı veri türü|<xref:System.Int16>|
-|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Hiçbiri|
+|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok|
 |<xref:System.UInt16>|16 bit işaretsiz tamsayı|<xref:System.Int32>|
 |<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|
 |<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64>(taşma olabilir), <xref:System.Numerics.BigInteger> veya<xref:System.Double>|

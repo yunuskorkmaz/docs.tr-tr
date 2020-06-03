@@ -2,12 +2,12 @@
 title: eShopOnContainers üzerinde bir DDD mikro hizmetine CQRS ve CQS yaklaşımları uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin eShopOnContainers 'daki sıralama mikro hizmetinde uygulanma biçimini anlayın.
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144285"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306948"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>EShopOnContainers içindeki DDD mikro hizmetinde CQRS ve CQS yaklaşımları uygulama
 
@@ -27,7 +27,7 @@ Bu tür bir model, daha sonraki bölümlerde daha fazla bilgi yaptığımız top
 
 "Sorgular tarafını" uygulamak için EF Core, Automaber projeksiyonu, saklı yordamlar, görünümler, gerçekleştirilmiş görünümler veya mikro ORM gibi tam blown ORM arasından birçok yaklaşım arasından seçim yapabilirsiniz.
 
-Bu kılavuzda ve eShopOnContainers 'da (özellikle sıralama mikro hizmeti), mikro [bir gibi mikro](https://github.com/StackExchange/dapper-dot-net)bir sorgu kullanarak düz sorgular uygulamayı seçtik. Bu, en iyi performansı elde etmek için SQL deyimlerine dayalı herhangi bir sorgu uygulayıp çok az ek yük içeren bir açık çatı sayesinde uygulamanızı yapmanızı sağlar.
+Bu kılavuzda ve eShopOnContainers 'da (özellikle sıralama mikro hizmeti), mikro [bir gibi mikro](https://github.com/StackExchange/dapper-dot-net)bir sorgu kullanarak düz sorgular uygulamayı seçtik. Bu, en iyi performansı elde etmek için SQL deyimlerine dayalı herhangi bir sorgu uygulamanızı sağlar.
 
 Bu yaklaşımı kullandığınızda, modelinizdeki varlıkların bir SQL veritabanına nasıl kalıcı olduğunu etkileyen tüm güncelleştirmeler aynı zamanda, sorgulama için bir veya daha fazla farklı (EF olmayan) yaklaşım tarafından kullanılan SQL sorgularına ayrı güncelleştirmeler de gerekir.
 

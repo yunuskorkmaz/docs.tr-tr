@@ -12,15 +12,15 @@ ms.locfileid: "82796073"
 
 Nesneleri, değerleri depolamanızı ve nesnenin bir sonraki açılışında bunları almanızı sağlayan örnekler arasında bir nesnenin verilerini kalıcı hale getirmek için serileştirme kullanabilirsiniz.
 
-Bu kılavuzda, temel `Loan` bir nesne oluşturacak ve verilerini bir dosyaya kalıcı hale getirilecektir. Daha sonra nesneyi yeniden oluşturduğunuzda dosyadaki verileri buradan alırsınız.
+Bu kılavuzda, temel bir `Loan` nesne oluşturacak ve verilerini bir dosyaya kalıcı hale getirilecektir. Daha sonra nesneyi yeniden oluşturduğunuzda dosyadaki verileri buradan alırsınız.
 
 > [!IMPORTANT]
-> Bu örnek, dosya henüz yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için izni `Create` olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın daha az izne sahip yalnızca `Write` izne ihtiyacı vardır. Mümkün olduğunda, dağıtım sırasında dosyayı oluşturmak ve yalnızca tek bir dosyaya (bir klasör için `Read` izinler oluşturmak yerine) izin vermek daha güvenlidir. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya Program Files klasöründen daha güvenlidir.
+> Bu örnek, dosya henüz yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın `Create` klasör için izni olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın daha az izne sahip yalnızca `Write` izne ihtiyacı vardır. Mümkün olduğunda, dağıtım sırasında dosyayı oluşturmak ve yalnızca `Read` tek bir dosyaya (bir klasör için Izinler oluşturmak yerine) izin vermek daha güvenlidir. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya Program Files klasöründen daha güvenlidir.
 
 > [!IMPORTANT]
 > Bu örnek, verileri bir ikili biçim dosyasında depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Derlemek ve çalıştırmak için [.NET Core SDK](https://dotnet.microsoft.com/download)' yi çalıştırın.
 
@@ -35,15 +35,15 @@ Bu kılavuzda, temel `Loan` bir nesne oluşturacak ve verilerini bir dosyaya kal
 
 ## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma
 
-İlk adım, sınıfını kullanan bir `Loan` sınıf ve konsol uygulaması oluşturmaktır:
+İlk adım, sınıfını `Loan` kullanan bir sınıf ve konsol uygulaması oluşturmaktır:
 
-1. Yeni bir uygulama oluşturun. Adlı `dotnet new console -o serialization` `serialization`bir alt dizinde yeni bir konsol uygulaması oluşturmak için yazın.
-1. Düzenleyicinizde uygulamayı açın ve adlı `Loan.cs`yeni bir sınıf ekleyin.
-1. Sınıfınıza `Loan` aşağıdaki kodu ekleyin:
+1. Yeni bir uygulama oluşturun. `dotnet new console -o serialization`Adlı bir alt dizinde yeni bir konsol uygulaması oluşturmak için yazın `serialization` .
+1. Düzenleyicinizde uygulamayı açın ve adlı yeni bir sınıf ekleyin `Loan.cs` .
+1. Sınıfınıza aşağıdaki kodu ekleyin `Loan` :
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
-Ayrıca, `Loan` sınıfını kullanan bir uygulama da oluşturmanız gerekecektir.
+Ayrıca, sınıfını kullanan bir uygulama da oluşturmanız gerekecektir `Loan` .
 
 ## <a name="serialize-the-loan-object"></a>Kredi nesnesini seri hale getirme
 
@@ -51,7 +51,7 @@ Ayrıca, `Loan` sınıfını kullanan bir uygulama da oluşturmanız gerekecekti
 
 [!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
-`PropertyChanged` Olay için bir olay işleyicisi ve `Loan` nesneyi değiştirmek ve değişiklikleri göstermek için birkaç satır ekleyin. Eklemeleri aşağıdaki kodda görebilirsiniz:
+Olay için bir olay işleyicisi `PropertyChanged` ve `Loan` nesneyi değiştirmek ve değişiklikleri göstermek için birkaç satır ekleyin. Eklemeleri aşağıdaki kodda görebilirsiniz:
 
 [!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
@@ -67,15 +67,15 @@ Bu uygulamayı sürekli olarak çalıştırmak her zaman aynı değerleri yazar.
 
 ## <a name="using-serialization-to-persist-the-object"></a>Nesneyi kalıcı hale getirmek için serileştirme kullanma
 
-Kredi sınıfının değerlerini kalıcı hale getirmek için, önce sınıfı `Serializable` özniteliğiyle işaretlemeniz gerekir. Aşağıdaki kodu ödünç verme sınıfı tanımının üzerine ekleyin:
+Kredi sınıfının değerlerini kalıcı hale getirmek için, önce sınıfı özniteliğiyle işaretlemeniz gerekir `Serializable` . Aşağıdaki kodu ödünç verme sınıfı tanımının üzerine ekleyin:
 
 [!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
-, <xref:System.SerializableAttribute> Derleyiciye sınıftaki her şeyin bir dosyaya kalıcı olarak devam edebilir olduğunu söyler. `PropertyChanged` Olay, nesne grafiğinin depolanması gereken parçasını temsil etmediğinden, serileştirilmemelidir. Bunun yapılması, bu olaya eklenmiş tüm nesneleri serileştirilir. Olay işleyicisi için alan bildirimine ekleyebilirsiniz <xref:System.NonSerializedAttribute> `PropertyChanged`
+, <xref:System.SerializableAttribute> Derleyiciye sınıftaki her şeyin bir dosyaya kalıcı olarak devam edebilir olduğunu söyler. Olay, `PropertyChanged` nesne grafiğinin depolanması gereken parçasını temsil etmediğinden, serileştirilmemelidir. Bunun yapılması, bu olaya eklenmiş tüm nesneleri serileştirilir. <xref:System.NonSerializedAttribute>Olay işleyicisi için alan bildirimine ekleyebilirsiniz `PropertyChanged` .
 
 [!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
-C# 7,3 ' den başlayarak, `field` hedef değeri kullanarak otomatik uygulanan bir özelliğin yedekleme alanına öznitelikler ekleyebilirsiniz. Aşağıdaki kod bir `TimeLastLoaded` özellik ekler ve onu seri hale getirilebilir değil olarak işaretler:
+C# 7,3 ' den başlayarak, hedef değeri kullanarak otomatik uygulanan bir özelliğin yedekleme alanına öznitelikler ekleyebilirsiniz `field` . Aşağıdaki kod bir özellik ekler `TimeLastLoaded` ve onu seri hale getirilebilir değil olarak işaretler:
 
 [!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
@@ -87,13 +87,13 @@ Sonraki adım, nesne oluşturulduğunda nesnenin serisini kaldırmak için kod e
 
 [!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
-Sonra, `TestLoan` nesneyi oluşturan satırdan sonra aşağıdaki kodu ekleyin:
+Sonra, nesneyi oluşturan satırdan sonra aşağıdaki kodu ekleyin `TestLoan` :
 
 [!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
-Önce dosyanın var olduğunu denetlemeniz gerekir. Varsa, ikili dosyayı okumak için <xref:System.IO.Stream> bir sınıf ve dosyayı çevirecek bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıf oluşturun. Akış türünden kredi nesne türüne de dönüştürmeniz gerekir.
+Önce dosyanın var olduğunu denetlemeniz gerekir. Varsa, <xref:System.IO.Stream> ikili dosyayı okumak için bir sınıf ve <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> dosyayı çevirecek bir sınıf oluşturun. Akış türünden kredi nesne türüne de dönüştürmeniz gerekir.
 
-Daha sonra, sınıfı bir dosyaya seri hale getirmek için kod eklemeniz gerekir. `Main` Yöntemdeki mevcut koddan sonra aşağıdaki kodu ekleyin:
+Daha sonra, sınıfı bir dosyaya seri hale getirmek için kod eklemeniz gerekir. Yöntemdeki mevcut koddan sonra aşağıdaki kodu ekleyin `Main` :
 
 [!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 

@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: e2e25dcfff759d68087006b63544bf688798c029
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286086"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307078"
 ---
 # <a name="background-garbage-collection"></a>Arka plan atık toplama
 
@@ -39,11 +39,11 @@ Arka plan sunucusu çöp toplama, arka plan iş istasyonu çöp toplamaya benzer
 
 Aşağıdaki çizimde, ayrı ve adanmış bir iş parçacığında gerçekleştirilen arka plan *iş istasyonu* çöp toplama işlemi gösterilmektedir:
 
-![Arka plan iş istasyonu çöp toplama](./media/fundamentals/background-workstation-garbage-collection.png)
+![Arka plan iş istasyonu çöp toplama](media/fundamentals/background-workstation-garbage-collection.png)
 
 Aşağıdaki çizimde, ayrı ve adanmış iş parçacıklarında gerçekleştirilen arka plan *sunucusu* çöp toplama işlemi gösterilmektedir:
 
-![Arka plan sunucusu çöp toplama](./media/fundamentals/background-server-garbage-collection.png)
+![Arka plan sunucusu çöp toplama](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>Eşzamanlı atık toplama
 
@@ -63,7 +63,7 @@ Eş zamanlı çöp toplama, adanmış bir iş parçacığında gerçekleştirili
 
 Aşağıdaki çizimde ayrı bir adanmış iş parçacığında gerçekleştirilen eşzamanlı çöp toplama gösterilmektedir.
 
-![Eşzamanlı atık toplama Iş parçacıkları](./media/gc-concurrent.png)
+![Eşzamanlı atık toplama Iş parçacıkları](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

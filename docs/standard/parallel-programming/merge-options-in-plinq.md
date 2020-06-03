@@ -47,17 +47,17 @@ Bir sorgu paralel olarak yürütülerek PLıNQ, kaynak dizisini birden çok iş 
   
 |Operatör|Kısıtlamalar|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Hiçbiri|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Yok|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Yalnızca bir dizi veya liste kaynağına sahip sıralı olmayan sorgular.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Hiçbiri|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Yok|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Yalnızca bir dizi veya liste kaynağına sahip sıralı olmayan sorgular.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Hiçbiri|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Hiçbiri|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|Yok|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Yok|  
   
  Tüm diğer PLıNQ sorgu işleçleri Kullanıcı tarafından sağlanmış birleştirme seçeneklerini yok sayabilir. Örneğin, ve gibi bazı sorgu işleçleri <xref:System.Linq.ParallelEnumerable.Reverse%2A> , <xref:System.Linq.ParallelEnumerable.OrderBy%2A> Tümü üretilene ve yeniden oluşturulana kadar herhangi bir öğe alamaz. Bu nedenle, gibi <xref:System.Linq.ParallelMergeOptions> bir işleci de içeren bir sorguda kullanıldığında <xref:System.Linq.ParallelEnumerable.Reverse%2A> , bu işleç sonuçlarını üretene kadar birleştirme davranışı sorguya uygulanmaz.  
   

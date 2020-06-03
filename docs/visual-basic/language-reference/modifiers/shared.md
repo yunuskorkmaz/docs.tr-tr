@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: bc63de4bda1e8e605e25fbe293686c187dd4d005
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290999"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307091"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -89,9 +89,9 @@ Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üye
 - [Dim Deyimi](../statements/dim-statement.md)
 - [Event Deyimi](../statements/event-statement.md)
 - [Function Deyimi](../statements/function-statement.md)
-- [Operator Deyimi](../operator-statement.md)
-- [Property Deyimi](../property-statement.md)
-- [Sub Deyimi](../sub-statement.md)
+- [Operator Deyimi](../statements/operator-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

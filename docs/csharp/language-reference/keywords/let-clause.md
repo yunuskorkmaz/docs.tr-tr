@@ -17,7 +17,7 @@ ms.locfileid: "82795371"
 ---
 # <a name="let-clause-c-reference"></a>let tümcesi (C# Başvurusu)
 
-Bir sorgu ifadesinde, alt ifadenin sonucunu izleyen yan tümcelerde kullanmak üzere depolamak bazen yararlı olur. Bunu, yeni bir Aralık değişkeni `let` oluşturan ve bunu sağladığınız ifadenin sonucuyla Başlatan anahtar sözcüğü ile yapabilirsiniz. Bir değerle başlatıldıktan sonra, Aralık değişkeni başka bir değeri depolamak için kullanılamaz. Ancak, Aralık değişkeni sorgulanabilir bir tür içeriyorsa, bu, sorgulanabilir.
+Bir sorgu ifadesinde, alt ifadenin sonucunu izleyen yan tümcelerde kullanmak üzere depolamak bazen yararlı olur. Bunu `let` , yeni bir Aralık değişkeni oluşturan ve bunu sağladığınız ifadenin sonucuyla Başlatan anahtar sözcüğü ile yapabilirsiniz. Bir değerle başlatıldıktan sonra, Aralık değişkeni başka bir değeri depolamak için kullanılamaz. Ancak, Aralık değişkeni sorgulanabilir bir tür içeriyorsa, bu, sorgulanabilir.
 
 ## <a name="example"></a>Örnek
 
@@ -25,7 +25,7 @@ Aşağıdaki örnekte `let` iki şekilde kullanılır:
 
 1. Kendisi için sorgulanabilen bir sıralanabilir tür oluşturmak için.
 
-2. Sorgunun, Aralık değişkeninde `ToLower` `word`yalnızca bir kez çağırmasını sağlamak için. Kullanmadan `let`, `where` yan tümcesindeki her bir koşula çağrı `ToLower` yapmanız gerekir.
+2. Sorgunun, `ToLower` Aralık değişkeninde yalnızca bir kez çağırmasını sağlamak için `word` . Kullanmadan `let` , `ToLower` yan tümcesindeki her bir koşula çağrı yapmanız gerekir `where` .
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 

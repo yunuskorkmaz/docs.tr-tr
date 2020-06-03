@@ -1,64 +1,64 @@
 ---
-title: İş istasyonu ve sunucu çöp toplama (GC)
-description: .NET'te iş istasyonu ve sunucu çöp toplama hakkında bilgi edinin.
+title: İş istasyonu ve sunucu atık toplama (GC)
+description: .NET ' te iş istasyonu ve sunucu atık toplama hakkında bilgi edinin.
 ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 6b8e5f6802e5d44669b95d43d4e897fa4a418512
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103557"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306701"
 ---
-# <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu çöp toplama
+# <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu atık toplama
 
-Çöp toplayıcı kendi kendini ayarlıyor ve çok çeşitli senaryolarda çalışabilir. Ancak, [iş yükünün](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) özelliklerine göre çöp toplama türünü ayarlayabilirsiniz. CLR aşağıdaki çöp toplama türlerini sağlar:
+Çöp toplayıcı kendi kendini ayarlamadır ve çok çeşitli senaryolarda çalışabilir. Ancak, [çöp toplamanın türünü](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) iş yükünün özelliklerine göre ayarlayabilirsiniz. CLR aşağıdaki çöp toplama türlerini sağlar:
 
-- İstemci uygulamaları için tasarlanmış iş istasyonu çöp toplama (GC). Bağımsız uygulamalar için varsayılan GC tadıdır. Barındırılan uygulamalar için, örneğin, ASP.NET tarafından barındırılan uygulamalar için, ana bilgisayar varsayılan GC lezzetini belirler.
+- İstemci uygulamaları için tasarlanan iş istasyonu atık toplama (GC). Tek başına uygulamalar için varsayılan GC Flavor ' dir. Barındırılan uygulamalarda, örneğin, ASP.NET tarafından barındırılan uygulamalar için, ana bilgisayar varsayılan GC özelliğini belirler.
 
-  İş istasyonu çöp toplama eşzamanlı veya eşzamanlı olmayan olabilir. Eşzamanlı (veya *arka plan)* çöp toplama, yönetilen iş parçacıklarının çöp toplama sırasında işlemlerine devam etmesini sağlar. [Arka plan çöp toplama](background-gc.md) ,NET Framework 4 ve sonraki sürümlerde [eşzamanlı çöp toplama](background-gc.md#concurrent-garbage-collection) değiştirir.
+  İş istasyonu atık toplama işlemi eşzamanlı olabilir veya eşzamanlı olmayan bir şekilde olabilir. Eş zamanlı (veya *arka plan*) çöp toplama, yönetilen iş parçacıklarının çöp toplama sırasında işlemlere devam etmesine olanak sağlar. [Arka plan atık toplama](background-gc.md) , .NET Framework 4 ve sonraki sürümlerde [eşzamanlı çöp toplama](background-gc.md#concurrent-garbage-collection) yerini alır.
 
-- Yüksek iş gücü ve ölçeklenebilirlik gerektiren sunucu uygulamaları için tasarlanmış sunucu çöp toplama.
+- Yüksek aktarım hızı ve ölçeklenebilirlik gerektiren sunucu uygulamalarına yönelik olan sunucu çöp toplama.
 
-  - .NET Core'da sunucu çöp toplama eşzamanlı olmayan veya arka plan olabilir.
+  - .NET Core 'da, sunucu çöp toplama, eş zamanlı olmayan veya arka plan olabilir.
 
-  - .NET Framework 4.5 ve sonraki sürümlerde sunucu çöp toplama eşzamanlı olmayan veya arka plan olabilir. .NET Framework 4 ve önceki sürümlerde sunucu çöp toplama eşzamanlı değildir.
+  - .NET Framework 4,5 ve sonraki sürümlerinde, sunucu çöp toplama, eş zamanlı olmayan veya arka plan olabilir. .NET Framework 4 ve önceki sürümlerde, sunucu çöp toplama işlemi eşzamanlı değildir.
 
-Aşağıdaki resimde, bir sunucuda çöp toplama işlemini gerçekleştiren özel iş parçacıkları gösterilmektedir:
+Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmış iş parçacıkları gösterilmektedir:
 
-![Sunucu Çöp Toplama İş parçacıkları](./media/gc-server.png)
+![Sunucu atık toplama Iş parçacıkları](media/gc-server.png)
 
 ## <a name="performance-considerations"></a>Performansla ilgili önemli noktalar
 
 ### <a name="workstation-gc"></a>İş istasyonu GC
 
-İş istasyonu çöp toplama için iş parçacığı ve performans hususları şunlardır:
+İş istasyonu çöp toplama işlemi için iş parçacığı ve performans değerlendirmeleri aşağıda verilmiştir:
 
-- Koleksiyon, çöp toplamayı tetikleyen kullanıcı iş parçacığında oluşur ve aynı öncelikte kalır. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığından, çöp toplayıcı (normal bir öncelik iş parçacığı üzerinde çalışır) CPU süresi için diğer iş parçacıkları ile rekabet etmelidir. (Yerel kodu çalıştıran iş parçacıkları sunucu veya iş istasyonu çöp toplama da askıya alınmaz.)
+- Koleksiyon, çöp toplamayı tetikleyen ve aynı önceliğe kalan Kullanıcı iş parçacığında oluşur. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığı için çöp toplayıcı (normal bir öncelikli iş parçacığı üzerinde çalışır), CPU süresi için diğer iş parçacıklarıyla rekabet etmelidir. (Yerel kod çalıştıran iş parçacıkları sunucu veya iş istasyonu çöp toplamadan askıya alınmaz.)
 
-- İş istasyonu çöp toplama, [yapılandırma ayarından](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)bağımsız olarak her zaman yalnızca bir işlemciye sahip bir bilgisayarda kullanılır.
+- İş istasyonu çöp toplama her zaman, [yapılandırma ayarından](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır.
 
 ### <a name="server-gc"></a>Sunucu GC
 
-Sunucu çöp toplama için iş parçacığı ve performans konuları şunlardır:
+Aşağıda sunucu çöp toplama için iş parçacığı ve performans konuları verilmiştir:
 
-- Koleksiyon, `THREAD_PRIORITY_HIGHEST` öncelik düzeyinde çalışan birden çok özel iş parçacığı üzerinde oluşur.
+- Koleksiyon, öncelik düzeyinde çalışan birden fazla adanmış iş parçacığında oluşur `THREAD_PRIORITY_HIGHEST` .
 
-- Her CPU için çöp toplama yapmak için bir yığın ve özel bir iş parçacığı sağlanır ve yığınlar aynı anda toplanır. Her yığın küçük bir nesne yığını ve büyük bir nesne yığını içerir ve tüm yığınlara kullanıcı koduyla erişilebilir. Farklı yığınlar üzerindeki nesneler birbirine başvurabilir.
+- Her CPU için bir yığın ve bir ayrılmış iş parçacığı her CPU için sağlanır ve sayfa@@ 'ler aynı anda toplanır. Her yığın küçük bir nesne yığını ve büyük bir nesne yığını içerir ve tüm yığınlara Kullanıcı kodu tarafından erişilebilir. Farklı yığınlardaki nesneler birbirlerine başvurabilir.
 
-- Birden çok çöp toplama iş parçacığı birlikte çalıştığıiçin, sunucu çöp toplama aynı boyuttaki yığındaki iş istasyonu çöp toplama işleminden daha hızlıdır.
+- Birden çok çöp toplama iş parçacığı birlikte çalıştığından, sunucu çöp toplama, aynı boyuttaki yığında iş istasyonu atık toplamadan daha hızlıdır.
 
-- Sunucu çöp toplama genellikle daha büyük boyutlu segmentleri vardır. Ancak, bu yalnızca bir genellemedir: segment boyutu uygulamaya özgüdür ve değiştirilebilir. Uygulamanızı alarken çöp toplayıcıtarafından ayrılan segmentlerin boyutu hakkında varsayımlarda bulunmayın.
+- Sunucu çöp toplama genellikle daha büyük boyut segmentlerine sahiptir. Ancak, bu yalnızca bir Genelleştirme 'dir: kesim boyutu uygulamaya özeldir ve değiştirilebilir. Uygulamanızı ayarlamaya yönelik çöp toplayıcı tarafından ayrılan parçaların boyutu hakkında varsayımlar yapmayın.
 
-- Sunucu çöp toplama kaynak yoğun olabilir. Örneğin, dört işlemcisi olan bir bilgisayarda çalışan sunucu GC kullanan 12 işlem olduğunu düşünün. Tüm işlemler aynı anda çöp toplamak için olur, onlar birbirlerine müdahale olur, aynı işlemci üzerinde zamanlanmış 12 iş parçacığı olurdu. İşlemler etkinse, hepsinin sunucu GC'sini kullanmasını sağlamak iyi bir fikir değildir.
+- Sunucu atık toplama, kaynak kullanımı yoğun olabilir. Örneğin, dört işlemcili bir bilgisayarda çalışan sunucu GC 'yi kullanan 12 işlem olduğunu düşünün. Tüm süreçler aynı anda çöp toplama işlemi gerçekleşiyorsa, aynı işlemcide zamanlanan 12 iş parçacığı olduğu için birbirleriyle karışacaktır. Süreçler etkinse, hepsi sunucu GC 'yi kullanmak iyi bir fikir değildir.
 
-Bir uygulamanın yüzlerce örneğini çalıştırıyorsanız, eşzamanlı çöp toplama devre dışı bırakılmış iş istasyonu çöp toplama kullanmayı düşünün. Bu, performansı artırabilecek daha az bağlam geçişine neden olur.
+Bir uygulamanın yüzlerce örneğini çalıştırıyorsanız, eşzamanlı atık toplama devre dışı bırakılmış iş istasyonu çöp toplamayı kullanmayı düşünün. Bu, performansı iyileştirebilen daha az bağlam geçişe neden olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka plan çöp toplama](background-gc.md)
+- [Arka plan atık toplama](background-gc.md)
 - [Çöp toplama için çalışma zamanı yapılandırma seçenekleri](../../core/run-time-config/garbage-collector.md)
