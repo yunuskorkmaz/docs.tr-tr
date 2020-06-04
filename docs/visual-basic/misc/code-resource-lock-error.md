@@ -1,23 +1,23 @@
 ---
-title: Kod kaynak kilidi hatası
+title: Kod kaynağı kilit hatası
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID455
 ms.assetid: 67a269bf-f436-4913-bc3c-af7f68116b7d
-ms.openlocfilehash: fb416e5bf88642ab08e6f7ccdf2b915045528910
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc1b744545858c3672bb21dc66f8283ea94a10e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614928"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376787"
 ---
-# <a name="code-resource-lock-error"></a>Kod kaynak kilidi hatası
-Kod kaynak bir yordamda bir arama yapıldı. Kod kaynak bulundu, ancak kullanımda olduğundan kaynak belki de kilitlemek için bir girişimde bulunuldu çalışırken bir hata oluştu.  
+# <a name="code-resource-lock-error"></a>Kod kaynağı kilit hatası
+Kod kaynağındaki bir yordama bir çağrı yapıldı. Kod kaynağı bulundu, ancak kullanımda olduğu için kaynağı kilitlemek için bir girişimde bulunulduğunda bir hata oluştu.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Neden bir hata oluştuğunu belirlemek için kaynak kontrol edin.  
+- Hatanın neden oluştuğunu öğrenmek için kaynağı denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../programming-guide/language-features/error-types.md)

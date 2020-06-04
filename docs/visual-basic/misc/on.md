@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: 7fdbb3d2b8266c87175eb813ef16f260907faa68
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ff396b9bccfbea797766e9ea1c15652279113510
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331845"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376075"
 ---
 # <a name="on-visual-basic"></a>Açık (Visual Basic)
 Bir çalışma zamanı hatasına yanıt tanıtır veya üzerindeki bir derleyici seçeneğini açar.  
@@ -20,20 +20,20 @@ Bir çalışma zamanı hatasına yanıt tanıtır veya üzerindeki bir derleyici
  Sorgular ' da, katılmakta olan koleksiyonlara ait anahtarları tanımlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `On` anahtar sözcüğü şu bağlamlarda kullanılır:  
+ `On`Anahtar sözcüğü şu bağlamlarda kullanılır:  
   
- [Group Join Yan Tümcesi](../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join Yan Tümcesi](../language-reference/queries/group-join-clause.md)  
   
- [Join Yan Tümcesi](../../visual-basic/language-reference/queries/join-clause.md)  
+ [JOIN yan tümcesi](../language-reference/queries/join-clause.md)  
   
- [On Error Deyimi](../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [On Error Deyimi](../language-reference/statements/on-error-statement.md)  
   
- [Option Explicit Deyimi](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit Deyimi](../language-reference/statements/option-explicit-statement.md)  
   
- [Option Infer Deyimi](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Infer Deyimi](../language-reference/statements/option-infer-statement.md)  
   
- [Option Strict Deyimi](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict Deyimi](../language-reference/statements/option-strict-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)
+- [Anahtar sözcükler](../language-reference/keywords/index.md)

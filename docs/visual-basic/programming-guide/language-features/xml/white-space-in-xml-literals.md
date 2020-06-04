@@ -5,15 +5,15 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 56ededeb12d07e979bc86b03924e1ae0f0432822
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3caf7ac052f3fed3fe5427da0cc96bbdd955ea6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336004"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360481"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML Değişmez Değerlerinde Boşluk (Visual Basic)
-Visual Basic Derleyicisi, bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnesi oluşturduğunda yalnızca bir XML sabit değerinden önemli boşluk karakterleri ekler. Önemli boşluk karakterleri dahil değildir.  
+Visual Basic derleyici bir nesne oluşturduğunda yalnızca bir XML sabit değerinden önemli boşluk karakterleri ekler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Önemli boşluk karakterleri dahil değildir.  
   
 ## <a name="significant-and-insignificant-white-space"></a>Önemli ve çok önemli boşluk  
  XML değişmez değerlerinde boşluk karakterleri yalnızca üç alanda önemlidir:  
@@ -24,12 +24,12 @@ Visual Basic Derleyicisi, bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
   
 - Bir öğenin metin içeriği için gömülü bir ifadede olduklarında.  
   
- Aksi halde, derleyici boşluk karakterlerini önemli olarak değerlendirir ve daha sonra değişmez değer için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnesine eklemez.  
+ Aksi halde, derleyici boşluk karakterlerini önemli olarak değerlendirir ve daha sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] değişmez değer için nesnesine içermez.  
   
  Bir XML sabit değerinde boş bir boşluk eklemek için, boşluk içeren bir dize sabit değeri içeren gömülü bir ifade kullanın.  
   
 > [!NOTE]
-> `xml:space` özniteliği bir XML öğesi değişmez değerinde görünürse, Visual Basic Derleyicisi <xref:System.Xml.Linq.XElement> nesnesine özniteliğini içerir, ancak bu özniteliği eklemek derleyicinin boşluk olarak nasıl davrandığını değiştirmez.  
+> `xml:space`Öznitelik BIR XML öğesi değişmez değerinde görünürse, Visual Basic derleyici nesnedeki özniteliği içerir <xref:System.Xml.Linq.XElement> , ancak bu özniteliği eklemek derleyicinin boşluk olarak nasıl davrandığını değiştirmez.  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki örnek, Outer ve Inner olmak üzere iki XML öğesi içerir. Her iki öğe de metin içeriklerinde boşluk içeriyor. Dış öğedeki boşluk, yalnızca boşluk ve bir XML öğesi içerdiği için çok önemlidir. İç öğedeki boşluk, boşluk ve metin içerdiğinden önemlidir.  
@@ -48,4 +48,4 @@ Visual Basic Derleyicisi, bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic'de XML Oluşturma](creating-xml.md)

@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
-ms.openlocfilehash: dfc43748d0754f0a6a29763c42ab82d9937f89f8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 392de45b0ee1688224f3e8170b0144f1acdb0912
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344303"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360572"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic'de Dizeler ve Nothing
-Visual Basic çalışma zamanı ve .NET Framework, dizelerde `Nothing` farklı şekilde değerlendirilir.  
+Visual Basic çalışma zamanı ve .NET Framework, `Nothing` dizelere geldiğinde farklı şekilde değerlendirilir.  
   
 ## <a name="visual-basic-runtime-and-the-net-framework"></a>Çalışma zamanı ve .NET Framework Visual Basic  
- Aşağıdaki örnek göz önünde bulundurun:  
+ Aşağıdaki örneği inceleyin:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- Visual Basic çalışma zamanı genellikle `Nothing` boş bir dize ("") olarak değerlendirir. .NET Framework, ancak `Nothing`bir dize işlemi gerçekleştirmek için bir deneme yapıldığında bir özel durum oluşturur.  
+ Visual Basic çalışma zamanı genellikle `Nothing` boş bir dize ("") olarak değerlendirilir. .NET Framework, ancak üzerinde bir dize işlemi gerçekleştirmek için bir girişimde bulunulduğunda bir özel durum oluşturur `Nothing` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic dizelere giriş](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Visual Basic'de Dizelere Giriş](introduction-to-strings.md)
