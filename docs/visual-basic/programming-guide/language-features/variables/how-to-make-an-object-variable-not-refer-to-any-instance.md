@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 320dadb61c12f3339c5328dcef31c41503892c56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cce2e59cb76652937868a731ad308872d1aba2f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352891"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410457"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="6cfd3-102">Nasıl yapılır: Bir Nesne Değişkeninin Hiçbir Örneğe Başvurmamasını Sağlama (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6cfd3-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
-<span data-ttu-id="6cfd3-103">Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini [Nothing](../../../../visual-basic/language-reference/nothing.md)olarak ayarlayarak kaldırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../../visual-basic/language-reference/nothing.md).</span></span>  
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a><span data-ttu-id="d2d1a-102">Nasıl yapılır: Bir Nesne Değişkeninin Hiçbir Örneğe Başvurmamasını Sağlama (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2d1a-102">How to: Make an Object Variable Not Refer to Any Instance (Visual Basic)</span></span>
+<span data-ttu-id="d2d1a-103">Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini [Nothing](../../../language-reference/nothing.md)olarak ayarlayarak kaldırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-103">You can disassociate an object variable from any object instance by setting it to [Nothing](../../../language-reference/nothing.md).</span></span>  
   
-### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="6cfd3-104">Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="6cfd3-104">To disassociate an object variable from any object instance</span></span>  
+### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a><span data-ttu-id="d2d1a-104">Herhangi bir nesne örneğinden bir nesne değişkeninin ilişkisini kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="d2d1a-104">To disassociate an object variable from any object instance</span></span>  
   
-- <span data-ttu-id="6cfd3-105">Değişkeni atama ifadesinde `Nothing` olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
+- <span data-ttu-id="d2d1a-105">Değişkenini `Nothing` atama ifadesinde olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-105">Set the variable to `Nothing` in an assignment statement.</span></span>  
   
     ```vb  
     ' Assume account is a defined class  
@@ -25,16 +25,16 @@ ms.locfileid: "74352891"
     currentAccount = Nothing  
     ```  
   
-## <a name="robust-programming"></a><span data-ttu-id="6cfd3-106">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="6cfd3-106">Robust Programming</span></span>  
- <span data-ttu-id="6cfd3-107">Kodunuz, `Nothing`olarak ayarlanmış bir nesne değişkeninin üyesine erişmeyi denediğinde, bir <xref:System.NullReferenceException> gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="6cfd3-108">Bir nesne değişkenini sıklıkla `Nothing` olarak ayarlarsanız veya değişken başlatılamıyorsa, üye erişimlerini bir `Try...Catch...Finally` bloğuna eklemek iyi bir fikirdir.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="d2d1a-106">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="d2d1a-106">Robust Programming</span></span>  
+ <span data-ttu-id="d2d1a-107">Kodunuz, olarak ayarlanmış bir nesne değişkeninin üyesine erişmeye çalışırsa `Nothing` , bir <xref:System.NullReferenceException> gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-107">If your code tries to access a member of an object variable that has been set to `Nothing`, a <xref:System.NullReferenceException> occurs.</span></span> <span data-ttu-id="d2d1a-108">Bir nesne değişkenini sıklıkla olarak ayarlarsanız `Nothing` veya değişken başlatılmamış ise, üye erişimlerini bir blokta kapsamak iyi bir fikirdir `Try...Catch...Finally` .</span><span class="sxs-lookup"><span data-stu-id="d2d1a-108">If you set an object variable to `Nothing` frequently, or if it is possible the variable is not initialized, it is a good idea to enclose member accesses in a `Try...Catch...Finally` block.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="6cfd3-109">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="6cfd3-109">.NET Framework Security</span></span>  
- <span data-ttu-id="6cfd3-110">Gizli veya hassas veriler içeren nesneler için bir nesne değişkeni kullanırsanız, bu nesnelerden biriyle etkin bir şekilde ilgilenirken değişkeni `Nothing` olarak ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="6cfd3-111">Bu, kötü amaçlı kodun verilere erişme olasılığını azaltır.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="d2d1a-109">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="d2d1a-109">.NET Framework Security</span></span>  
+ <span data-ttu-id="d2d1a-110">Gizli veya hassas veriler içeren nesneler için bir nesne değişkeni kullanırsanız, `Nothing` bu nesnelerden biriyle etkin bir şekilde ilgilenmediği zaman değişkenini olarak ayarlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-110">If you use an object variable for objects that contain confidential or sensitive data, you can set the variable to `Nothing` when you are not actively dealing with one of those objects.</span></span> <span data-ttu-id="d2d1a-111">Bu, kötü amaçlı kodun verilere erişme olasılığını azaltır.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-111">This reduces the chance of malicious code gaining access to the data.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6cfd3-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6cfd3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2d1a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d2d1a-112">See also</span></span>
 
 - <xref:System.NullReferenceException>
-- [<span data-ttu-id="6cfd3-113">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="6cfd3-113">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="6cfd3-114">Nesne Değişkeni Ataması</span><span class="sxs-lookup"><span data-stu-id="6cfd3-114">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="6cfd3-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="6cfd3-115">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)
-- [<span data-ttu-id="6cfd3-116">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="6cfd3-116">Try...Catch...Finally Statement</span></span>](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="d2d1a-113">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="d2d1a-113">Object Variables</span></span>](object-variables.md)
+- [<span data-ttu-id="d2d1a-114">Nesne Değişkeni Ataması</span><span class="sxs-lookup"><span data-stu-id="d2d1a-114">Object Variable Assignment</span></span>](object-variable-assignment.md)
+- [<span data-ttu-id="d2d1a-115">Nothing</span><span class="sxs-lookup"><span data-stu-id="d2d1a-115">Nothing</span></span>](../../../language-reference/nothing.md)
+- [<span data-ttu-id="d2d1a-116">Try...Catch...Finally Deyimi</span><span class="sxs-lookup"><span data-stu-id="d2d1a-116">Try...Catch...Finally Statement</span></span>](../../../language-reference/statements/try-catch-finally-statement.md)
