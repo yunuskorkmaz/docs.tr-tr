@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML kullanarak sözlüklerle çalışma'
+title: 'Nasıl yapılır: LINQ to XML Kullanarak Sözlüklerle Çalışma'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 12327be3c9d32d34866691b156f58fd1e8e40240
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 14c9c35693f323292849f01af79ae81f92921611
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332361"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397680"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Nasıl yapılır: LINQ to XML kullanarak sözlüklerle çalışma (Visual Basic)
-Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML 'e ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.  
+Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir <xref:System.Collections.Generic.Dictionary%602> .  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, katıştırılmış ifadede XML değişmez değerleri ve bir sorgu kullanılmaktadır. Sorgu projeleri yeni <xref:System.Xml.Linq.XElement> nesneleri `Root` <xref:System.Xml.Linq.XElement> nesnesi için yeni içerik haline gelir.  
+ Bu örnekte, katıştırılmış ifadede XML değişmez değerleri ve bir sorgu kullanılmaktadır. Sorgu yeni <xref:System.Xml.Linq.XElement> nesneler, daha sonra nesne için yeni içerik haline gelir `Root` <xref:System.Xml.Linq.XElement> .  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -72,4 +72,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

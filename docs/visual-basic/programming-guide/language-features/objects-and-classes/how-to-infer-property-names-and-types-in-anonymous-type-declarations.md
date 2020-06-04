@@ -6,16 +6,16 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350031"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404894"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Nasıl yapılır: Anonim Türde Bildirimlerden Özellik Adları ve Türlerini Çıkarma (Visual Basic)
 
-Anonim türler, özelliklerin veri türlerini doğrudan belirtmek için bir mekanizma sağlar. Tüm özelliklerin türleri algılanır. Aşağıdaki örnekte, `Name` ve `Price` türleri, bunları başlatmak için kullanılan değerlerden doğrudan algılanır.
+Anonim türler, özelliklerin veri türlerini doğrudan belirtmek için bir mekanizma sağlar. Tüm özelliklerin türleri algılanır. Aşağıdaki örnekte, türleri `Name` ve, `Price` bunları başlatmak için kullanılan değerlerden doğrudan algılanır.
 
 [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]
 
@@ -25,15 +25,15 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonim türler, aşağıdaki kaynaklardan özellik adlarını ve türlerini çıkarabilir:
 
-- Değişken adlarından. Anonim tür `anonProduct`, `productName` ve `productPrice`iki özelliğe sahip olur. Veri türleri, sırasıyla `String` ve `Double`orijinal değişkenlerle olur.
+- Değişken adlarından. Anonim türün `anonProduct` iki özelliği `productName` ve olur `productPrice` . Veri türleri, sırasıyla özgün değişkenlerle `String` ve `Double` , ve sırasıyla olur.
 
   [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]
 
-- Diğer nesnelerin özelliğinden veya alan adlarından. Örneğin, `Name` ve `ID` özelliklerini içeren bir `CarClass` türünün `car` nesnesini düşünün. `car1`yeni bir anonim tür örneği oluşturmak için, `Name` ve `car` nesnesinden değerler ile başlatılan `ID` özellikleriyle şunları yazabilirsiniz:
+- Diğer nesnelerin özelliğinden veya alan adlarından. Örneğin, `car` ve özelliklerini içeren bir türün nesnesini düşünün `CarClass` `Name` `ID` . Yeni bir anonim tür örneği oluşturmak için, `car1` ve ile `Name` `ID` nesnesinden değerleri ile başlatılan özellikleri `car` , aşağıdakileri yazabilirsiniz:
 
   [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]
 
-  Önceki bildirim, `car2`anonim tür tanımlayan daha uzun kod satırıyla eşdeğerdir.
+  Önceki bildirim, anonim türü tanımlayan daha uzun kod satırıyla eşdeğerdir `car2` .
 
   [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]
 
@@ -41,16 +41,16 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
   [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]
 
-  `anon` için sonuç türü, <xref:System.Collections.IEnumerable>(Of XElement) türünde bir `Book`bir özelliğe sahiptir.
+  İçin sonuç türünün, `anon` `Book` türünde <xref:System.Collections.IEnumerable> (XElement) bir özelliği olacaktır.
 
-- Aşağıdaki örnekte `SomeFunction` gibi parametresi olmayan bir işlevden.
+- Aşağıdaki örnekte olduğu gibi parametresi olmayan bir işlevden `SomeFunction` .
 
   ```vb
   Dim sc As New SomeClass
   Dim anon1 = New With {Key sc.SomeFunction()}
   ```
 
-  Aşağıdaki kodda `anon2` değişkeni, `First`adlı bir karakter olan bir özelliğine sahip anonim bir türdür. Bu kod, işlev <xref:System.Linq.Enumerable.First%2A>tarafından döndürülen harfi "E" olarak görüntüler.
+  `anon2`Aşağıdaki kodda bulunan değişkeni, adlı bir karakter olan bir özelliğine sahip anonim bir türdür `First` . Bu kod, işlevi tarafından döndürülen harfi "E" olarak görüntüler <xref:System.Linq.Enumerable.First%2A> .
 
   [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]
 
@@ -58,7 +58,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Ad çıkarımı, aşağıdakiler dahil olmak üzere birçok durumda başarısız olur:
 
-- Çıkarımı, bir yöntem, Oluşturucu veya bağımsız değişken gerektiren parametreli bir özellik çağrısından türetilir. `someFunction` bir veya daha fazla bağımsız değişken varsa `anon1` önceki bildirimi başarısız olur.
+- Çıkarımı, bir yöntem, Oluşturucu veya bağımsız değişken gerektiren parametreli bir özellik çağrısından türetilir. `anon1` `someFunction` Bir veya daha fazla bağımsız değişken varsa, önceki bir bildirimi başarısız olur.
 
   ```vb
   ' Not valid.
@@ -84,7 +84,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
   [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]
 
-- Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Önceki örneklerde bildirimlere geri döndüğünüzde, hem `product.Name` hem de `car1.Name` aynı anonim türdeki özellikler olarak listelenemez. Bunun nedeni, bunların her biri için çıkarılan tanımlayıcının `Name`olacaktır.
+- Birden çok özellik için çıkarım aynı ada sahip iki veya daha fazla özellik oluşturur. Önceki örneklerde bildirimlere geri döndüğünüzde, hem hem de `product.Name` `car1.Name` aynı anonim türdeki özellikleri listelenemez. Bunun nedeni, bunların her biri için gösterilen tanıtıcıdır `Name` .
 
   ```vb
   ' Not valid.
@@ -103,7 +103,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
   ' Dim anon7 = New With {Key product.Price, Key price}
   ```
 
-- Bir özelliğin başlangıç türü ve değeri henüz kurulu olmayan başka bir özelliğe bağlıdır. Örneğin, `.LastName` zaten başlatılmadığı müddetçe `.IDName = .LastName` anonim tür bildiriminde geçerli değildir.
+- Bir özelliğin başlangıç türü ve değeri henüz kurulu olmayan başka bir özelliğe bağlıdır. Örneğin, `.IDName = .LastName` zaten başlatılmamış olduğu müddetçe anonim tür bildiriminde geçerli değildir `.LastName` .
 
   ```vb
   ' Not valid.
@@ -114,7 +114,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
   [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]
 
-- Anonim türün Özellik adı bir <xref:System.Object>üyesinin adı ile aynıdır. Örneğin, `Equals` bir <xref:System.Object>yöntemi olduğu için aşağıdaki bildirim başarısız olur.
+- Anonim türün Özellik adı bir üyesinin adı ile aynıdır <xref:System.Object> . Örneğin, bir yöntemi olduğu için aşağıdaki bildirim başarısız olur `Equals` <xref:System.Object> .
 
   ```vb
   ' Not valid.
@@ -128,7 +128,7 @@ Anonim türler Ayrıca diğer kaynaklardan özellik adlarını ve türlerini de 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](object-initializers-named-and-anonymous-types.md)
+- [Yerel Tür Arabirimi](../variables/local-type-inference.md)
+- [Anonim Türler](anonymous-types.md)
+- [Anahtar](../../../language-reference/modifiers/key.md)

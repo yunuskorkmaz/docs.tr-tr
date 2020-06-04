@@ -5,23 +5,23 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 19a2c70941a9a72574f7e624743def74b80c4e39
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c3eb1eb57b3d76e762ed53edb3b168ad96abec39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347454"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403271"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
 *Koşullu derlemede*, bir programdaki belirli kod blokları, diğerleri gözardı edilirken seçime bağlı olarak derlenir.  
   
  Örneğin, farklı yaklaşımların hızını aynı programlama göreviyle karşılaştıran hata ayıklama deyimleri yazmak veya bir uygulamayı birden çok dil için yerelleştirmek isteyebilirsiniz. Koşullu derleme deyimleri, çalışma zamanında değil, derleme zamanı sırasında çalışacak şekilde tasarlanmıştır.  
   
- Kod bloklarını `#If...Then...#Else` yönergeyle koşullu olarak derlenebilecek şekilde belirtebilirsiniz. Örneğin, aynı kaynak koddan aynı uygulamanın Fransızca ve Almanca dil sürümlerini oluşturmak için, önceden tanımlanmış sabitleri `FrenchVersion` ve `GermanVersion`kullanarak platforma özgü kod kesimlerini `#If...Then` deyimlerine eklersiniz. Aşağıdaki örnek, aşağıdakilerin nasıl yapıldığını göstermektedir:  
+ Kod bloklarını yönergeyle koşullu olarak derlenebilecek şekilde belirtebilirsiniz `#If...Then...#Else` . Örneğin, aynı kaynak koddan aynı uygulamanın Fransızca ve Almanca dil sürümlerini oluşturmak için, `#If...Then` önceden tanımlanmış sabitleri ve kullanarak deyimlerde platforma özel kod kesimleri eklersiniz `FrenchVersion` `GermanVersion` . Aşağıdaki örnek, aşağıdakilerin nasıl yapıldığını göstermektedir:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- `FrenchVersion` koşullu derleme sabitinin değerini derleme zamanında `True` olarak ayarlarsanız, Fransızca sürümü için koşullu kod derlenir. `GermanVersion` sabitinin değerini `True`olarak ayarlarsanız, derleyici Almanca sürümünü kullanır. Hiçbiri `True`olarak ayarlanmazsa, son `Else` bloğundaki kod çalışır.  
+ `FrenchVersion`Koşullu derleme sabitinin değerini `True` derleme zamanında olarak ayarlarsanız, Fransızca sürümü için koşullu kod derlenir. `GermanVersion`Sabitin değerini olarak ayarlarsanız `True` , derleyici Almanca sürümünü kullanır. Hiçbiri olarak ayarlanmazsa `True` , son `Else` bloktaki kod çalıştırılır.  
   
 > [!NOTE]
 > Kod düzenlenirken otomatik tamamlama çalışmaz ve kod geçerli dalın bir parçası değilse koşullu derleme yönergeleri kullanılır.  
@@ -41,7 +41,7 @@ ms.locfileid: "74347454"
 |---|---|  
 |**Proje Tasarımcısı**|Projedeki tüm dosyalar için ortak|  
 |Komut satırı|Komut satırı derleyicisine geçirilen tüm dosyalar için ortak|  
-|koddaki `#Const` ifade|Özel olarak bildirildiği dosya|  
+|`#Const`koddaki ifade|Özel olarak bildirildiği dosya|  
   
 |Proje tasarımcısında sabitleri ayarlamak için|  
 |---|  
@@ -49,7 +49,7 @@ ms.locfileid: "74347454"
   
 |Sabitleri komut satırında ayarlamak için|  
 |---|  
-|-Aşağıdaki örnekte gösterildiği gibi, koşullu derleme sabitleri girmek için **-d** anahtarını kullanın:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-D** anahtarı ve ilk sabit arasında boşluk gerekmez. Daha fazla bilgi için bkz. [-tanımlama (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Komut satırı bildirimleri **Proje tasarımcısında**girilen bildirimleri geçersiz kılar, ancak onları silmez. **Proje tasarımcısında** ayarlanan bağımsız değişkenler sonraki derlemeler için geçerli olmaya devam eder.<br />     Koda sabitler yazarken, kendi kapsamları bildirildiği modülün tamamı olduğundan, kendi yerleşimine göre kesin bir kural yoktur.|  
+|-Aşağıdaki örnekte gösterildiği gibi, koşullu derleme sabitleri girmek için **-d** anahtarını kullanın:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-D** anahtarı ve ilk sabit arasında boşluk gerekmez. Daha fazla bilgi için bkz. [-tanımlama (Visual Basic)](../../reference/command-line-compiler/define.md).<br />     Komut satırı bildirimleri **Proje tasarımcısında**girilen bildirimleri geçersiz kılar, ancak onları silmez. **Proje tasarımcısında** ayarlanan bağımsız değişkenler sonraki derlemeler için geçerli olmaya devam eder.<br />     Koda sabitler yazarken, kendi kapsamları bildirildiği modülün tamamı olduğundan, kendi yerleşimine göre kesin bir kural yoktur.|  
   
 |Kodunuzda sabitleri ayarlamak için|  
 |---|  
@@ -59,11 +59,11 @@ ms.locfileid: "74347454"
   
 |Başlık|Açıklama|  
 |---|---|  
-|[Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Kodunuzun okunmasını ve korunmasını kolaylaştırmak için öneriler sağlar.|  
+|[Program yapısı ve kod kuralları](program-structure-and-code-conventions.md)|Kodunuzun okunmasını ve korunmasını kolaylaştırmak için öneriler sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
- [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [#Const Yönergesi](../../language-reference/directives/const-directive.md)  
   
- [#If...Then...#Else Yönergesi](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Sonra... #Else yönergeler](../../language-reference/directives/if-then-else-directives.md)  
   
- [-tanımla (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+ [-tanımla (Visual Basic)](../../reference/command-line-compiler/define.md)

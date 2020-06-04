@@ -7,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 7d4566637da74726867c55ddf89b965d055e5d14
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589925"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406579"
 ---
-# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Temel alınan türü \<typename > Enum CLS uyumlu değil
-Bu sabit listesi değil için belirtilen veri türü parçası [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS). Bu veri türü .NET Framework ve Visual Basic desteklediğinden, bir hata, bileşen içinde değil. Ancak, başka bir bileşen kesinlikle CLS uyumlu bir kod halinde yazılmış bu veri türünü desteklemiyor olabilir. Böyle bir bileşene başarıyla bileşeniniz ile etkileşim kurmak mümkün olmayabilir.  
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Enum tarafından temel olarak kullanılan \<typename> türü CLS uyumlu değil
+Bu numaralandırma için belirtilen veri türü, [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değil. .NET Framework ve Visual Basic bu veri türünü desteklediği için bu, bileşeninizdeki bir hata değildir. Ancak, tamamen CLS uyumlu kodda yazılmış başka bir bileşen bu veri türünü desteklemeyebilir. Bu tür bir bileşen, bileşeniniz ile başarılı bir şekilde etkileşim kurabilmeyebilir.  
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  
   
-- [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte Veri Türü](../data-types/sbyte-data-type.md)  
   
-- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger Veri Türü](../data-types/uinteger-data-type.md)  
   
-- [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong Veri Türü](../data-types/ulong-data-type.md)  
   
-- [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort Veri Türü](../data-types/ushort-data-type.md)  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC40032  
+ **Hata kimliği:** BC40032  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bileşeniniz yalnızca diğer .NET Framework bileşenlerini arabirimleri ya da diğer bileşenlerle arabirimi değil, herhangi bir ayarı değiştirmek gerekmez.  
+- Bileşeniniz yalnızca diğer .NET Framework bileşenleriyle arabirimlerinizde veya başka herhangi bir bileşenle arabirim içermiyorsa, herhangi bir şeyi değiştirmenize gerek yoktur.  
   
-- .NET Framework için yazılmaz bir bileşeni ile arabirim, bu veri türünü destekleyip desteklemediğini, yansıma aracılığıyla ya da belge, belirlemek mümkün olabilir. Aşması durumunda, değişikliği gerekmez.  
+- .NET Framework için yazılmayan bir bileşenle ilgili bir arabiriminiz varsa, bu veri türünü destekleyip desteklemediğine göre, yansıma veya belgelerinden birini belirleyebilirsiniz. Varsa, herhangi bir değişiklik yapmanız gerekmez.  
   
-- Bu veri türü desteklemeyen bir bileşen ile arabirim, en yakın CLS uyumlu türü ile değiştirmeniz gerekir. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
+- Bu veri türünü desteklemeyen bir bileşenle ilgili arabiriminiz varsa, bunu en yakın CLS uyumlu türle değiştirmelisiniz. Örneğin, yerine `UInteger` `Integer` 2.147.483.647 üzerinde değer aralığına ihtiyacınız yoksa, kullanabilirsiniz. Genişletilmiş aralığa ihtiyacınız varsa, `UInteger` ile değiştirebilirsiniz `Long` .  
   
-- Otomasyon ve COM nesneleri ile arabirim, .NET Framework'teki bazı türleri değerinden farklı veri genişliği olduğunu aklınızda bulundurun. Örneğin, `uint` 16 bit diğer ortamlarda genellikle olur. Bir 16 bit bağımsız değişkeni böyle bir bileşene geçiriyorsanız, olarak bildirin `UShort` yerine `UInteger` Yönetilen Visual Basic kodunuzda.  
+- Otomasyon veya COM nesneleriyle arabirimsiz değilseniz, bazı türlerin .NET Framework farklı veri genişliklerine sahip olduğunu aklınızda bulundurun. Örneğin, `uint` genellikle diğer ortamlarda 16 bittir. Böyle bir bileşene 16 bitlik bir bağımsız değişken geçirirseniz, bunu `UShort` `UInteger` yönetilen Visual Basic kodunuzda değil olarak bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

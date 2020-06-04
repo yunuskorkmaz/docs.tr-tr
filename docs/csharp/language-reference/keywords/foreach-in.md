@@ -1,6 +1,6 @@
 ---
-title: C# foreach deyimi
-ms.date: 05/17/2019
+title: C# foreach ifadesi
+ms.date: 06/03/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,56 +9,68 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 1645a246c9feee2a92c0d4e4bbeda47f0afde7d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738809"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401894"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, in (C# referans)
+# <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
 
-Deyim, `foreach` her öğe için bir deyim <xref:System.Collections.IEnumerable?displayProperty=nameWithType> veya <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> ifade bloğu uygular türü veya arabirimi uygulayan bir örnek teveks. Bildirim `foreach` bu türlerle sınırlı değildir ve aşağıdaki koşulları yerine getiren herhangi bir türe uygulanabilir:
+`foreach`Deyimi, veya arabirimini uygulayan tür örneğindeki her öğe için bir deyimi veya bir deyim bloğunu yürütür <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . `foreach`Deyimleri bu türlerle sınırlı değildir ve aşağıdaki koşullara uyan herhangi bir türün örneğine uygulanabilir:
 
-- dönüş türü sınıf, `GetEnumerator` yapı veya arayüz türü olan ortak parametresiz yönteme sahiptir,
-- yöntemin `GetEnumerator` dönüş türü kamu `Current` malı ve geri dönüş `MoveNext` türü olan <xref:System.Boolean>kamu parametresiz yöntemi vardır.
+- , `GetEnumerator` dönüş türü Class, struct veya Interface türünde olan public parametresiz metoda sahiptir
+- metodun dönüş türü, `GetEnumerator` ortak `Current` özelliğine ve dönüş türü olan public parametresiz metoda sahiptir `MoveNext` <xref:System.Boolean> .
 
-C# 7.3 ile başlayarak, numaralandırıcının `Current` özelliği bir referans dönüş `T` [değeri](ref.md#reference-return-values) döndürürse (toplama`ref T` öğesinin türü nerede), yineleme değişkenini veya `ref` `ref readonly` değiştiriciile birlikte bildirebilirsiniz.
+Çoğu kullanımda, `foreach` `IEnumerable<T>` her öğe türünde olan bir ifadeyi yineler `T` . Ancak öğeler, özelliğin türünden örtük veya açık dönüştürmeye sahip herhangi bir tür olabilir `Current` . `Current`Özelliği döndürürse `SomeType` , öğelerin türü şu olabilir:
 
-C# 8.0 ile `await` başlayarak, koleksiyon `foreach` türü arabirimi uyguladığında <xref:System.Collections.Generic.IAsyncEnumerable%601> işleç deyimine uygulanabilir. Döngünün her yinelemesi, bir sonraki öğe eş senkronize olarak alınırken askıya alınabilir. Varsayılan olarak, akış öğeleri yakalanan bağlamında işlenir. Bağlamın ele geçirilmesini devre dışı kılmış <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> olmak istiyorsanız, uzantı yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi [için, Görev tabanlı eşzamanlı deseni tüketme makalesine](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)bakın.
+- Temel sınıflarından herhangi biri `SomeType` .
+- Tarafından uygulanan arabirimlerden herhangi biri `SomeType` .
 
-İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilir veya continue deyimini kullanarak döngüdeki bir sonraki yinelemeye adım atabilirsiniz. [continue](continue.md) `foreach` Ayrıca [goto](goto.md) `foreach` tarafından bir döngü çıkmak , [return](return.md), veya ifadeler [atmak.](throw.md)
+Ayrıca, `SomeType` bir veya ise, `class` `interface` `sealed` öğelerin türü şunları içerebilir:
 
-İfadesi `foreach` `null`uygulanırsa, <xref:System.NullReferenceException> a atılır. `foreach` İfadenin kaynak koleksiyonu boşsa, `foreach` döngügövdesi yürütülmez ve atlanır.
+- Öğesinden türetilmiş herhangi bir tür `SomeType` .
+- Herhangi bir rastgele arabirim. Herhangi bir arabirim, veya uygulamadan türetilmiş bir sınıf tarafından uygulanabileceğinden, herhangi bir arabirime izin verilir `SomeType` .
+
+Önceki kurallarla eşleşen herhangi bir türü kullanarak yineleme değişkenini bildirebilirsiniz. `SomeType`Yineleme değişkeninin türüne dönüştürme, açık bir dönüştürme gerektiriyorsa, bu işlem <xref:System.InvalidCastException> dönüştürme başarısız olduğunda bir oluşturabilir.
+
+C# 7,3 ile başlayarak, Numaralandırıcı `Current` özelliği bir [Başvuru dönüş değeri](ref.md#reference-return-values) döndürürse ( `ref T` burada `T` koleksiyon öğesinin türüdür), yineleme değişkenini `ref` veya `ref readonly` değiştiriciyle bildirebilirsiniz.
+
+C# 8,0 ' den başlayarak, `await` `foreach` koleksiyon türü arabirimini uygularsa işleç ifadeye uygulanabilir <xref:System.Collections.Generic.IAsyncEnumerable%601> . Next öğesi zaman uyumsuz olarak alındığında döngünün her yinelemesi askıya alınabilir. Akış öğeleri varsayılan olarak yakalanan bağlamda işlenir. Bağlam yakalamayı devre dışı bırakmak istiyorsanız, <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> genişletme yöntemini kullanın. Eşitleme bağlamları ve geçerli bağlamı yakalama hakkında daha fazla bilgi için [görev tabanlı zaman uyumsuz model](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)kullanma başlıklı makaleye bakın.
+
+Deyimdeki herhangi bir noktada `foreach` , [Break](break.md) ifadesini kullanarak ya da [Continue](continue.md) ifadesini kullanarak döngünün bir sonraki yinelemesine adımla döngüyü kesebilirsiniz. Ayrıca `foreach` [goto](goto.md), [Return](return.md)veya [throw](throw.md) deyimleriyle bir döngüden çıkabilirsiniz.
+
+`foreach`İfade öğesine uygulanırsa `null` , bir oluşturulur <xref:System.NullReferenceException> . Deyimin kaynak koleksiyonu `foreach` boşsa, `foreach` Döngünün gövdesi yürütülmez ve atlanır.
 
 ## <a name="examples"></a>Örnekler
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Aşağıdaki örnek, ifadenin `foreach` <xref:System.Collections.Generic.IEnumerable%601> arabirimi uygulayan <xref:System.Collections.Generic.List%601> türe ait bir örneği yle kullanımını gösterir:
+Aşağıdaki örnek, `foreach` arabirimini uygulayan türünün bir örneği ile deyimin kullanımını gösterir <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.IEnumerable%601> :
 
-[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="1" interactive="try-dotnet-method" :::
 
-Sonraki örnek, `foreach` herhangi bir arabirim <xref:System.Span%601?displayProperty=nameWithType> uygulamaz türü, bir örnek ile deyimi kullanır:
+Sonraki örnek, `foreach` <xref:System.Span%601?displayProperty=nameWithType> hiçbir arabirim uygulamayan türü bir örneği ile ifadesini kullanır:
 
-[!code-csharp[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="2" :::
 
-Aşağıdaki örnek, `ref` stackalloc dizisindeher öğenin değerini ayarlamak için bir yineleme değişkeni kullanır. Sürüm, `ref readonly` tüm değerleri yazdırmak için koleksiyonu yineler. Bildirimde `readonly` örtülü yerel değişken bildirimi kullanır. Örtük değişken bildirimleri, `ref` açıkça `ref readonly` yazılan değişken bildirimleri gibi, ya da bildirimleri ile kullanılabilir.
+Aşağıdaki örnek, bir `ref` stackalloc dizisindeki her bir öğenin değerini ayarlamak için bir yineleme değişkeni kullanır. `ref readonly`Sürüm, tüm değerleri yazdırmak için koleksiyonu yineler. `readonly`Bildirim örtük bir yerel değişken bildirimi kullanır. Örtük değişken bildirimleri, ya da `ref` `ref readonly` bildirimleriyle birlikte kullanılabilir ve açıkça değişken bildirimleri olarak türlenebilir.
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="RefSpan" :::
 
-Aşağıdaki örnek, `await foreach` her öğeyi eşit olarak oluşturan bir koleksiyonu yinelemek için kullanır:
+Aşağıdaki örnek, `await foreach` her öğeyi zaman uyumsuz olarak üreten bir koleksiyonu yinelemek için kullanır:
 
-[!code-csharp[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#AwaitForeach)]
+:::code language="csharp" source="snippets/IterationKeywordsExamples.cs" id="AwaitForeach"  :::
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [foreach deyimi](~/_csharplang/spec/statements.md#the-foreach-statement) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [foreach ifadesi](~/_csharplang/spec/statements.md#the-foreach-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
-- [Foreach'i dizilerle kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [ifade için](for.md)
+- [C# anahtar sözcükleri](index.md)
+- [Dizilerle foreach kullanma](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for deyimi](for.md)

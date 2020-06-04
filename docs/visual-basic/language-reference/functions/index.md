@@ -5,29 +5,29 @@ helpviewer_keywords:
 - Visual Basic, functions
 - functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
-ms.openlocfilehash: 88d3032b3084c5a85ddf2b6490bee61ad894536a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 513d301f4f6bf89b66718620733b5c26234f6e04
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837083"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406423"
 ---
 # <a name="functions-visual-basic"></a>İşlevler (Visual Basic)
 Bu bölümdeki konularda Visual Basic çalışma zamanı üye işlevlerinin tabloları bulunur.  
   
 > [!NOTE]
-> Ayrıca, işlevler oluşturup bunları çağırabilirsiniz. Daha fazla bilgi için bkz. [Işlev açıklaması](../../../visual-basic/language-reference/statements/function-statement.md) ve [nasıl yapılır: değer döndüren bir yordam oluşturma](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+> Ayrıca, işlevler oluşturup bunları çağırabilirsiniz. Daha fazla bilgi için bkz. [Işlev açıklaması](../statements/function-statement.md) ve [nasıl yapılır: değer döndüren bir yordam oluşturma](../../programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Dönüşüm İşlevleri](conversion-functions.md)  
   
- [Matematik İşlevleri](../../../visual-basic/language-reference/functions/math-functions.md)  
+ [Matematik İşlevleri](math-functions.md)  
   
- [Dize İşlevleri](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [Dize Işlevleri](string-functions.md)  
   
- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Tür Dönüştürme İşlevleri](type-conversion-functions.md)  
   
- [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [CType İşlevi](ctype-function.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  
+ [Visual Basic dil başvurusu](../index.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452298"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396875"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği (Visual Basic)
 
@@ -25,8 +25,8 @@ Bu sayfadaki bağlantılar, COM ve .NET Framework nesneleri arasındaki etkileş
 
 | | |
 |---------|---------|
-| [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md) | Com nesneleri, ActiveX denetimleri, Win32 DLL 'Leri, yönetilen nesneler ve COM nesnelerinin devralınması gibi Visual Basic COM birlikte çalışabilirliğini kapsayan konuların bağlantılarını sağlar. |
+| [COM birlikte çalışma](index.md) | Com nesneleri, ActiveX denetimleri, Win32 DLL 'Leri, yönetilen nesneler ve COM nesnelerinin devralınması gibi Visual Basic COM birlikte çalışabilirliğini kapsayan konuların bağlantılarını sağlar. |
 | [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md) | Yönetilen ve yönetilmeyen kod arasındaki etkileşim sorunlarından bazılarını kısaca açıklar ve daha fazla çalışma için bağlantılar sağlar. |
-| [COM Sarmalayıcıları](../../../standard/native-interop/com-wrappers.md) | Yönetilen kodun COM yöntemlerine çağrı yapmasına izin veren ve com 'un .NET nesne yöntemlerini çağırabileceği com çağrılabilir sarmalayıcıları sağlayan, çalışma zamanında çağrılabilir sarmalayıcıları açıklar. |
+| [COM sarmalayıcıları](../../../standard/native-interop/com-wrappers.md) | Yönetilen kodun COM yöntemlerine çağrı yapmasına izin veren ve com 'un .NET nesne yöntemlerini çağırabileceği com çağrılabilir sarmalayıcıları sağlayan, çalışma zamanında çağrılabilir sarmalayıcıları açıklar. |
 | [Gelişmiş COM birlikte çalışabilirlik](../../../framework/interop/index.md) | Sarmalayıcılar, özel durumlar, devralma, iş parçacığı, olaylar, dönüştürmeler ve sıralama açısından COM birlikte çalışabilirliğini kapsayan konuların bağlantılarını sağlar. |
-| [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Bir COM tür kitaplığı içinde bulunan tür tanımlarını ortak dil çalışma zamanı derlemesinde eşdeğer tanımlara dönüştürmek için kullanabileceğiniz aracı açıklar. |
+| [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Bir COM tür kitaplığı içinde bulunan tür tanımlarını ortak dil çalışma zamanı derlemesinde eşdeğer tanımlara dönüştürmek için kullanabileceğiniz aracı açıklar. |

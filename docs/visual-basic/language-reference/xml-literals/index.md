@@ -9,26 +9,26 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: cf70486c1c33013d84f68c9ea9dbc9463a751ad7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d7826c48629ee919344ec1982d3a698e6df9ef7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349412"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400246"
 ---
 # <a name="xml-literals-visual-basic"></a>XML Değişmez Değerleri (Visual Basic)
 Bu bölümdeki konular Visual Basic XML sabit değerlerinin sözdizimini belgebelgeleyin. XML sabit sözdizimi, doğrudan kodunuzda XML eklemenize olanak sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Konu|Açıklama|  
+|Konu başlığı|Description|  
 |-----------|-----------------|  
-|[XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<xref:System.Xml.Linq.XElement> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
-|[XML Belgesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<xref:System.Xml.Linq.XDocument> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
-|[XML CDATA Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<xref:System.Xml.Linq.XCData> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
-|[XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
-|[XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> nesnelerini temsil eden sabit değerler için sözdizimini açıklar.|  
+|[XML Öğesi Değişmez Değeri](xml-element-literal.md)|Nesneleri temsil eden değişmez değerlerin sözdizimini açıklar <xref:System.Xml.Linq.XElement> .|  
+|[XML Belgesi Değişmez Değeri](xml-document-literal.md)|Nesneleri temsil eden değişmez değerlerin sözdizimini açıklar <xref:System.Xml.Linq.XDocument> .|  
+|[XML CDATA Değişmez Değeri](xml-cdata-literal.md)|Nesneleri temsil eden değişmez değerlerin sözdizimini açıklar <xref:System.Xml.Linq.XCData> .|  
+|[XML Açıklama Değişmez Değeri](xml-comment-literal.md)|Nesneleri temsil eden değişmez değerlerin sözdizimini açıklar <xref:System.Xml.Linq.XComment> .|  
+|[XML İşleme Talimatı Değişmez Değeri](xml-processing-instruction-literal.md)|Nesneleri temsil eden değişmez değerlerin sözdizimini açıklar <xref:System.Xml.Linq.XProcessingInstruction> .|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

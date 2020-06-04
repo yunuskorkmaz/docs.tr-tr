@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 989795ee2cdd3a78b71bad4d95cf9b384c2719bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 733f92cc2cdaa6e923c57649774ceb64de172c18
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341385"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403349"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız değişken geçirin. Her bağımsız değişken temeldeki bir programlama öğesine karşılık gelir. Hem temel alınan öğeler hem de bağımsız değişkenler değiştirilebilir ya da değiştirilebilir olabilir.  
@@ -31,9 +31,9 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
 |Dizi öğeleri|İfadeler (öğeleri değiştirilebilir olsa bile)|  
   
 ## <a name="modifiable-and-nonmodifiable-arguments"></a>Değiştirilebilir ve değiştirilemeyen bağımsız değişkenler  
- *Değiştirilebilir bir bağımsız değişken* değiştirilebilir bir temel öğe. Çağıran kod herhangi bir zamanda yeni bir değer saklayabilir ve [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)bağımsız değişkenini geçirirseniz, yordamdaki kod, çağıran kodda temel alınan öğeyi de değiştirebilir.  
+ *Değiştirilebilir bir bağımsız değişken* değiştirilebilir bir temel öğe. Çağıran kod herhangi bir zamanda yeni bir değer saklayabilir ve [ByRef](../../../language-reference/modifiers/byref.md)bağımsız değişkenini geçirirseniz, yordamdaki kod, çağıran kodda temel alınan öğeyi de değiştirebilir.  
   
- *Değiştirilemeyen bir bağımsız değişken* , değiştirilemeyen temel olmayan bir öğeye sahiptir veya [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)' a geçirilir. Yordam, değiştirilebilir bir öğe olsa bile, çağıran kodda temeldeki öğeyi değiştiremez. Değiştirilemeyen bir öğe ise, çağıran kodun kendisi üzerinde değişiklik yapılamaz.  
+ *Değiştirilemeyen bir bağımsız değişken* , değiştirilemeyen temel olmayan bir öğeye sahiptir veya [ByVal](../../../language-reference/modifiers/byval.md)' a geçirilir. Yordam, değiştirilebilir bir öğe olsa bile, çağıran kodda temeldeki öğeyi değiştiremez. Değiştirilemeyen bir öğe ise, çağıran kodun kendisi üzerinde değişiklik yapılamaz.  
   
  Çağrılan yordam, değiştirilemeyen bir bağımsız değişkenin yerel kopyasını değiştirebilir, ancak bu değişiklik çağıran koddaki temeldeki öğeyi etkilemez.  
   
@@ -48,4 +48,4 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
 - [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Değer Türleri ve Başvuru Türleri](../data-types/value-types-and-reference-types.md)

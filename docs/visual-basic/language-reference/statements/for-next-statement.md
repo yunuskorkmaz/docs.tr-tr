@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 3cae44abb8e790542f11e6c5a5f1e317675ff988
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351192"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404647"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next Deyimi (Visual Basic)
 
@@ -48,109 +48,109 @@ Next [ counter ]
 
 ## <a name="parts"></a>Bölümler
 
-|Bölümüyle|Açıklama|
+|Bölüm|Description|
 |----------|-----------------|
-|`counter`|`For` bildiriminde gereklidir. Sayısal değişken. Döngünün denetim değişkeni. Daha fazla bilgi için bu konunun ilerleyen kısımlarında [sayaç bağımsız değişkeni](#BKMK_Counter) bölümüne bakın.|
-|`datatype`|İsteğe bağlı. `counter`veri türü. Daha fazla bilgi için bu konunun ilerleyen kısımlarında [sayaç bağımsız değişkeni](#BKMK_Counter) bölümüne bakın.|
-|`start`|Gerekli. Sayısal ifade. `counter`başlangıç değeri.|
-|`end`|Gerekli. Sayısal ifade. `counter`son değeri.|
-|`step`|İsteğe bağlı. Sayısal ifade. `counter` döngüyle her seferinde artırılır.|
-|`statements`|İsteğe bağlı. `For` ve `Next` arasındaki, belirtilen sayıda kez çalışan bir veya daha fazla deyim.|
+|`counter`|`For`İfadesinde gereklidir. Sayısal değişken. Döngünün denetim değişkeni. Daha fazla bilgi için bu konunun ilerleyen kısımlarında [sayaç bağımsız değişkeni](#BKMK_Counter) bölümüne bakın.|
+|`datatype`|İsteğe bağlı. Veri türü `counter` . Daha fazla bilgi için bu konunun ilerleyen kısımlarında [sayaç bağımsız değişkeni](#BKMK_Counter) bölümüne bakın.|
+|`start`|Gereklidir. Sayısal ifade. Başlangıç değeri `counter` .|
+|`end`|Gereklidir. Sayısal ifade. Öğesinin son değeri `counter` .|
+|`step`|İsteğe bağlı. Sayısal ifade. `counter`Döngü aracılığıyla her seferinde arttırılan miktar.|
+|`statements`|İsteğe bağlı. Ve arasındaki bir veya daha fazla deyim `For` `Next` , belirtilen sayıda kez çalıştırıldı.|
 |`Continue For`|İsteğe bağlı. Denetimi sonraki döngü yinelemesine aktarır.|
-|`Exit For`|İsteğe bağlı. `For` döngüsünün dışına denetimini aktarır.|
-|`Next`|Gerekli. `For` döngüsünün tanımını sonlandırır.|
+|`Exit For`|İsteğe bağlı. Denetimi döngünün dışına aktarır `For` .|
+|`Next`|Gereklidir. Döngünün tanımını sonlandırır `For` .|
 
 > [!NOTE]
-> `To` anahtar sözcüğü, bu bildirimde sayaç aralığını belirtmek için kullanılır. Bu anahtar sözcüğü Select... içinde de kullanabilirsiniz [. Case Bildirimi](../../../visual-basic/language-reference/statements/select-case-statement.md) ve dizi bildirimlerinde. Dizi bildirimleri hakkında daha fazla bilgi için bkz. [Dim deyimleri](../../../visual-basic/language-reference/statements/dim-statement.md).
+> `To`Anahtar sözcüğü, bu bildirimde sayaç aralığını belirtmek için kullanılır. Bu anahtar sözcüğü Select... içinde de kullanabilirsiniz [. Case Bildirimi](select-case-statement.md) ve dizi bildirimlerinde. Dizi bildirimleri hakkında daha fazla bilgi için bkz. [Dim deyimleri](dim-statement.md).
 
 ## <a name="simple-examples"></a>Basit örnekler
 
-Bir dizi deyimin kümesini birkaç kez yinelemek istediğinizde `For`...`Next` yapısını kullanırsınız.
+Bir `For` `Next` deyim kümesini bir dizi defa tekrarlamak istediğinizde bir... yapısı kullanırsınız.
 
-Aşağıdaki örnekte, `index` değişkeni 1 değeriyle başlar ve döngünün her yinelemeyle artırılır, `index` değeri 5 ' e ulaştığında sona eriyor.
+Aşağıdaki örnekte, `index` değişken 1 değeri ile başlar ve döngünün her yinelemeyle artırılır, bu değer 5 ' e `index` ulaştığında biter.
 
 [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]
 
-Aşağıdaki örnekte, `number` değişkeni 2 ' de başlar ve döngünün her yinelemesi için 0,25 tarafından azaltılır, `number` değeri 0 ' a ulaştığında sona eriyor. `-.25` `Step` bağımsız değişkeni, döngünün her yinelemede değeri 0,25 azaltır.
+Aşağıdaki örnekte, `number` değişken 2 ' de başlar ve döngünün her yinelemesinde 0,25 tarafından azaltılır ve değeri 0 ' dan sonra sona eriyor `number` . `Step`Öğesinin bağımsız değişkeni, `-.25` döngünün her yinelemede değeri 0,25 azaltır.
 
 [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]
 
 > [!TIP]
-> Bir [while... End while ekstresi](../../../visual-basic/language-reference/statements/while-end-while-statement.md) veya [Do... Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md) , döngüdeki deyimlerin kaç kez çalıştırılacağını önceden bilmiyorsanız iyi çalışır. Ancak, döngüyü belirli sayıda çalıştırmayı düşünüyorsanız, bir `For`...`Next` döngüsü daha iyi bir seçimdir. Döngüyü ilk kez girerken yineleme sayısını belirlersiniz.
+> Bir [while... End while ekstresi](while-end-while-statement.md) veya [Do... Loop deyimi](do-loop-statement.md) , döngüdeki deyimlerin kaç kez çalıştırılacağını önceden bilmiyorsanız iyi çalışır. Ancak, döngüyü belirli sayıda çalıştırmayı beklediğinizi, a `For` ... `Next` döngüsü daha iyi bir seçimdir. Döngüyü ilk kez girerken yineleme sayısını belirlersiniz.
 
 ## <a name="nesting-loops"></a>İç içe geçme döngüleri
 
-Bir döngüyü diğerinin içine yerleştirerek `For` döngüleri iç içe geçirebilirsiniz. Aşağıdaki örnek, farklı adım değerlerine sahip iç içe `For`...`Next` yapılarını gösterir. Dış döngü, döngünün her yinelemesi için bir dize oluşturur. İç döngü, döngünün her yinelemesi için bir döngü sayacı değişkenini azaltır.
+Bir `For` döngüyü diğerinin içine yerleştirerek döngüleri iç içe geçirebilirsiniz. Aşağıdaki örnek, `For` farklı adım değerlerine sahip iç içe... `Next` yapıları gösterir. Dış döngü, döngünün her yinelemesi için bir dize oluşturur. İç döngü, döngünün her yinelemesi için bir döngü sayacı değişkenini azaltır.
 
 [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]
 
-Döngüleri iç içe aktardığınızda her döngünün benzersiz bir `counter` değişkeni olmalıdır.
+Döngüleri iç içe aktardığınızda her döngünün benzersiz bir değişkeni olmalıdır `counter` .
 
-Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Ayrıca, farklı türlerde denetim yapılarını birbirleriyle iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md).
 
 ## <a name="exit-for-and-continue-for"></a>İçin çık ve devam et
 
-`Exit For` deyimden hemen çıkış `For`...`Next` `Next` deyimlerini izleyen deyime döngü ve denetim aktarır.
+`Exit For`Deyimden hemen çıkar `For` ...`Next` öğesini Loop ve deyimden sonraki deyime aktarır `Next` .
 
-`Continue For` bildiri, denetimi döngünün bir sonraki yinelemesine hemen aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](../../../visual-basic/language-reference/statements/continue-statement.md).
+`Continue For`İfade, denetimi döngünün bir sonraki yinelemesine hemen aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](continue-statement.md).
 
-Aşağıdaki örnekte `Continue For` ve `Exit For` deyimlerinin kullanımı gösterilmektedir.
+Aşağıdaki örnek, `Continue For` ve deyimlerinin kullanımını gösterir `Exit For` .
 
 [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]
 
-Bir `For`...`Next` istediğiniz sayıda `Exit For` deyimi koyabilirsiniz Gerçekleştirmek. İç içe geçmiş `For`içinde kullanıldığında...`Next` döngüler, `Exit For` en içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
+`Exit For`Bir... içinde herhangi bir sayıda deyim yerleştirebilirsiniz. `For``Next` gerçekleştirmek. İç içe yerleştirilmiş `For` ... içinde kullanıldığında`Next` döngüler, en `Exit For` içteki döngüden çıkar ve denetimi sonraki daha yüksek iç içe geçme düzeyine aktarır.
 
-`Exit For`, genellikle bazı koşulları değerlendirdikten sonra kullanılır (örneğin, bir `If`...`Then`...`Else` yapısı). Aşağıdaki koşullarda `Exit For` kullanmak isteyebilirsiniz:
+`Exit For`genellikle bazı koşulları değerlendirdikten sonra kullanılır (örneğin, bir `If` . `Then` .. ...`Else` Yapı). `Exit For`Aşağıdaki koşullar için kullanmak isteyebilirsiniz:
 
 - Tekrarlamaya devam etmek gereksiz veya imkansız. Hatalı bir değer veya sonlandırma isteği bu durumu oluşturabilir.
 
-- Bir `Try`...`Catch`...`Finally` ifadesinde bir özel durum yakalar. `Finally` bloğunun sonunda `Exit For` kullanabilirsiniz.
+- A `Try` .. `Catch` . ...`Finally` ifade bir özel durumu yakalar. `Exit For`Bloğunun sonunda kullanabilirsiniz `Finally` .
 
-- Sonsuz bir döngüyle sahipsiniz, bu, büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Böyle bir koşulu tespit ediyorsanız, döngüden çıkmak için `Exit For` kullanabilirsiniz. Daha fazla bilgi için bkz [. do... Loop deyimleri](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- Sonsuz bir döngüyle sahipsiniz, bu, büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Böyle bir koşulu tespit ediyorsanız, `Exit For` döngüyü atlamak için kullanabilirsiniz. Daha fazla bilgi için bkz [. do... Loop deyimleri](do-loop-statement.md).
 
 ## <a name="technical-implementation"></a>Teknik Uygulama
 
-Bir `For`...`Next` döngüsü başladığında Visual Basic `start`, `end`ve `step`değerlendirir. Visual Basic bu değerleri yalnızca şu anda değerlendirir ve `counter``start` atar. Bildirim bloğu çalıştırılmadan önce, `counter` `end`Visual Basic karşılaştırır. `counter` zaten `end` değerden daha büyükse (veya `step` negatifse küçüktür), `For` döngüsü sonlanır ve denetim `Next` ifadesiyle sonraki deyime geçer. Aksi halde, ekstre bloğu çalışır.
+Bir `For` ... `Next` döngüsü başladığında Visual Basic değerlendirir, `start` `end` ve `step` . Visual Basic bu değerleri yalnızca şu anda değerlendirir ve sonra öğesine atar `start` `counter` . Bildirim bloğu çalıştırılmadan önce, Visual Basic ile karşılaştırılır `counter` `end` . `counter`Zaten değerden daha büyükse `end` (ya da `step` negatifse küçüktür), `For` döngü sonlanır ve denetimi deyimden sonraki deyime geçer `Next` . Aksi halde, ekstre bloğu çalışır.
 
-Visual Basic `Next` deyimle karşılaştığında, `step` tarafından `counter` artırır ve `For` bildirimine geri döndürür. `counter`, `end`ile karşılaştırır ve sonuca bağlı olarak engellemeyi çalıştırır ya da döngüden çıkar. Bu işlem, `counter` `end` geçirene veya bir `Exit For` ifadesiyle karşılaşana kadar devam eder.
+Her Visual Basic `Next` ifadesiyle karşılaştığında, `counter` tarafından artar `step` ve `For` ifadeye döner. Bu, ile `counter` karşılaştırılır `end` ve sonuca bağlı olarak bloğu çalıştırır ya da döngüden çıkar. Bu işlem `counter` `end` , geçişe veya bir `Exit For` deyimle karşılaşılana kadar devam eder.
 
-`counter` `end`geçirene kadar döngü durdurulmaz. `counter` `end`eşitse, döngü devam eder. Bloğunun çalıştırılıp çalıştırılmayacağını belirleyen karşılaştırma, `step` pozitif ve `counter` >= negatifse `end` `end`  <= `counter`.`step`
+Döngü geçene kadar durmaz `counter` `end` . `counter`Eşitse `end` , döngü devam eder. Bloğunun çalıştırılıp çalıştırılmadığını belirleyen karşılaştırma, `counter`  <=  `end` `step` pozitif ise ve `counter`  >=  `end` `step` negatifse.
 
-Bir döngü içinde `counter` değerini değiştirirseniz, kodunuzun okunması ve hata ayıklaması daha zor olabilir. `start`, `end`veya `step` değerini değiştirmek, döngünün ilk kez girildiği zaman belirlenen yineleme değerlerini etkilemez.
+`counter`Bir döngü içinde değerini değiştirirseniz, kodunuzun okunması ve hata ayıklaması daha zor olabilir. `start`,, Veya değerini değiştirmek, `end` `step` döngünün ilk kez girildiği zaman belirlenen yineleme değerlerini etkilemez.
 
-Döngüleri iç içe alırsanız derleyici bir iç düzeyin `Next` ifadesinden önce bir dış iç içe geçme düzeyinin `Next` ifadesiyle karşılaşırsa bir hata bildirir. Ancak, derleyici yalnızca her `Next` bildiriminde `counter` belirtirseniz bu çakışan hatayı algılayabilir.
+Döngülerin iç içe geçirilmesi durumunda derleyici, `Next` `Next` iç düzeydeki deyimden önce dış iç içe düzeyin ifadesiyle karşılaşırsa bir hata bildirir. Ancak, derleyici bu çakışan hatayı yalnızca her ifadede belirtirseniz tespit edebilir `counter` `Next` .
 
 ### <a name="step-argument"></a>Adım bağımsız değişkeni
 
-`step` değeri pozitif veya negatif olabilir. Bu parametre, döngü işlemeyi aşağıdaki tabloya göre belirler:
+Değeri `step` pozitif veya negatif olabilir. Bu parametre, döngü işlemeyi aşağıdaki tabloya göre belirler:
 
 |**Adım değeri**|**Döngü şunu içeriyorsa yürütülür**|
 |--------------------|--------------------------|
 |Pozitif veya sıfır|`counter` <= `end`|
 |Negatif|`counter` >= `end`|
 
-`step` varsayılan değeri 1 ' dir.
+`step` varsayılan değeri 1'dir.
 
-### <a name="BKMK_Counter"></a>Sayaç bağımsız değişkeni
+### <a name="counter-argument"></a><a name="BKMK_Counter"></a>Sayaç bağımsız değişkeni
 
-Aşağıdaki tabloda `counter`, tüm `For…Next` döngüsünün kapsamına alınmış yeni bir yerel değişken oluşturulup oluşturulmayacağını gösterir. Bu belirleme `datatype` var olup olmadığına ve `counter` önceden tanımlanmış olup olmadığına bağlıdır.
+Aşağıdaki tabloda, `counter` Tüm döngünün kapsamına alınmış yeni bir yerel değişken oluşturulup oluşturulmayacağını gösterir `For…Next` . Bu belirleme `datatype` , var olup olmadığına ve önceden tanımlanmış olup olmadığına bağlıdır `counter` .
 
-|`datatype` var mı?|`counter` zaten tanımlandı mı?|Sonuç (`counter`, tüm `For...Next` döngüsünün kapsamına alınmış yeni bir yerel değişken tanımlıyor)|
+|`datatype`Var mı?|`counter`Zaten tanımlanmış mı?|Sonuç ( `counter` Tüm döngünün kapsamına alınmış yeni bir yerel değişken tanımlar `For...Next` )|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|Hayır|Evet|Hayır, `counter` zaten tanımlanmış. `counter` kapsamı yordamda yerel değilse, bir derleme zamanı uyarısı oluşur.|
-|Hayır|Hayır|Evet. Veri türü `start`, `end`ve `step` ifadelerinden algılanır. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](../../../visual-basic/language-reference/statements/option-infer-statement.md) ve [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)|
-|Evet|Evet|Evet, ancak yalnızca varolan `counter` değişkeni yordam dışında tanımlanmışsa. Bu değişken ayrı kalır. Varolan `counter` değişkeninin kapsamı yordamda yerelse, bir derleme zamanı hatası oluşur.|
-|Evet|Hayır|Evet.|
+|Hayır|Evet|Hayır, `counter` zaten tanımlanmış. Öğesinin kapsamı, `counter` yordamda yerel değilse, bir derleme zamanı uyarısı oluşur.|
+|No|Hayır|Evet. Veri türü `start` ,, `end` ve `step` ifadelerinden algılanır. Tür çıkarımı hakkında daha fazla bilgi için bkz. [Option Infer deyimleri](option-infer-statement.md) ve [Yerel tür çıkarımı](../../programming-guide/language-features/variables/local-type-inference.md)|
+|Yes|Yes|Evet, ancak yalnızca varolan `counter` değişken yordamın dışında tanımlanmışsa. Bu değişken ayrı kalır. Varolan `counter` değişkenin kapsamı yordamın yerelse, bir derleme zamanı hatası oluşur.|
+|Yes|Hayır|Evet.|
 
-`counter` veri türü yinelemenin türünü belirler ve bu türlerden biri olmalıdır:
+Veri türü, `counter` aşağıdaki türlerden biri olması gereken yinelemenin türünü belirler:
 
-- `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`veya `Double`.
+- A `Byte` , `SByte` , `UShort` , `Short` , `UInteger` , `Integer` , `ULong` , `Long` , `Decimal` , `Single` , veya `Double` .
 
-- Bir [enum ifadesini](../../../visual-basic/language-reference/statements/enum-statement.md)kullanarak bildirdiğiniz bir sabit listesi.
+- Bir [enum ifadesini](enum-statement.md)kullanarak bildirdiğiniz bir sabit listesi.
 
-- Bir `Object`.
+- Bir `Object` .
 
-- `T`, `B` `Boolean` ifadesinde kullanılabilecek bir tür olan aşağıdaki işleçlere sahip bir tür.
+- `T`Aşağıdaki işleçlere sahip bir tür, burada `B` bir ifadede kullanılabilecek bir tür `Boolean` .
 
   `Public Shared Operator >= (op1 As T, op2 As T) As B`
 
@@ -160,34 +160,34 @@ Aşağıdaki tabloda `counter`, tüm `For…Next` döngüsünün kapsamına alı
 
   `Public Shared Operator + (op1 As T, op2 As T) As T`
 
-İsteğe bağlı olarak, `Next` bildiriminde `counter` değişkenini belirtebilirsiniz. Bu sözdizimi, özellikle iç içe geçmiş `For` döngülerine sahipseniz programınızın okunabilirliğini geliştirir. Karşılık gelen `For` ifadesinde görünen değişkeni belirtmeniz gerekir.
+Bu değişkeni isteğe bağlı olarak `counter` `Next` deyimde belirtebilirsiniz. Bu sözdizimi, özellikle iç içe döngüler varsa programınızın okunabilirliğini geliştirir `For` . Karşılık gelen ifadede görünen değişkeni belirtmeniz gerekir `For` .
 
-`start`, `end`ve `step` ifadeleri, `counter`türüne sahip herhangi bir veri türü için değerlendirebilirler. `counter`için Kullanıcı tanımlı bir tür kullanıyorsanız, `start`, `end`veya `step` türlerini `counter`türüne dönüştürmek için `CType` dönüştürme işlecini tanımlamanız gerekebilir.
+`start`, `end` Ve ifadeleri, `step` türü widens olan herhangi bir veri türünü değerlendirebilir `counter` . İçin Kullanıcı tanımlı bir tür kullanırsanız,, `counter` `CType` veya türlerini türüne dönüştürmek için dönüştürme işlecini tanımlamanız gerekebilir `start` `end` `step` `counter` .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, genel bir listeden tüm öğeleri kaldırır. [Her biri için bir değil... Next Ifadesinde](../../../visual-basic/language-reference/statements/for-each-next-statement.md)örnek, azalan düzende yinelenen bir `For`...`Next` ifadesini gösterir. Örnek, `removeAt` yöntemi kaldırılan öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olduğundan bu tekniği kullanır.
+Aşağıdaki örnek, genel bir listeden tüm öğeleri kaldırır. [Her biri için bir değil... Next Ifadesinde](for-each-next-statement.md)örnek, `For` azalan düzende yinelenen bir... `Next` ifadesini gösterir. Bu örnek, `removeAt` yöntemi kaldırılan öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olduğundan bu tekniği kullanır.
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir sabit listesi [bildirimi](../../../visual-basic/language-reference/statements/enum-statement.md)kullanılarak tanımlanan bir numaralandırma aracılığıyla yinelenir.
+Aşağıdaki örnek, bir sabit listesi [bildirimi](enum-statement.md)kullanılarak tanımlanan bir numaralandırma aracılığıyla yinelenir.
 
 [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, ifade parametreleri `+`, `-`, `>=`ve `<=` işleçleri için işleç aşırı yüklemeleri olan bir sınıfı kullanır.
+Aşağıdaki örnekte, ifade parametreleri,,, `+` `-` `>=` ve işleçleri için işleç aşırı yüklemeleri olan bir sınıfı kullanır `<=` .
 
 [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic.List%601>
-- [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [While...End While Deyimi](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Exit Deyimi](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Döngü Yapıları](../../programming-guide/language-features/control-flow/loop-structures.md)
+- [While...End While Deyimi](while-end-while-statement.md)
+- [Do...Loop Deyimi](do-loop-statement.md)
+- [İç İçe Geçmiş Denetim Yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Exit Deyimi](exit-statement.md)
 - [Koleksiyonlar](../../programming-guide/concepts/collections.md)

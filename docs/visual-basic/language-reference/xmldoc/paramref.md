@@ -5,17 +5,17 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 78227a17584271f91283198e95f5aa389b3ef14b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ca08016d3cef0c44e4f3c0bd0d017628eda606d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352275"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400053"
 ---
-# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
+# <a name="paramref-visual-basic"></a>\<paramref> (Visual Basic)
 Bir sözcüğü parametre olarak biçimlendirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```xml  
 <paramref name="name"/>  
@@ -26,15 +26,15 @@ Bir sözcüğü parametre olarak biçimlendirir.
  Başvurabileceğiniz parametrenin adı. Adı çift tırnak işareti ("") içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<paramref>` etiketi, bir sözcüğün bir parametre olduğunu göstermek için bir yol sağlar. XML dosyası bu parametreyi farklı bir şekilde biçimlendirmek için işlenebilir.  
+ Etiketi, bir `<paramref>` sözcüğün bir parametre olduğunu göstermek için bir yol sağlar. XML dosyası bu parametreyi farklı bir şekilde biçimlendirmek için işlenebilir.  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `id` parametresine başvurmak için `<paramref>` etiketini kullanır.  
+ Bu örnek, `<paramref>` parametresine başvurmak için etiketini kullanır `id` .  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML Açıklama Etiketleri](index.md)

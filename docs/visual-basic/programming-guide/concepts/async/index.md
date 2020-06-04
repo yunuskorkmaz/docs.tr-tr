@@ -2,26 +2,26 @@
 title: Async ve Await ile Zaman Uyumsuz Programlama
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: cbcdd48571855e168f563585088f1210eb6410eb
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 317272649eea56352fcba5402244ba70204c888f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266501"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400815"
 ---
-# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async ve Await ile asynchronous programlama (Visual Basic)
+# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async ve await ile zaman uyumsuz programlama (Visual Basic)
 
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.
 
-Visual Studio 2012, .NET Framework 4.5 ve daha yüksek ve Windows Runtime'da eşzamanlı destekten yararlanan basitleştirilmiş bir yaklaşım, async programlama getirmiştir. Derleyici, normalde geliştiricinin yaptığı zor işi yapar ve uygulamanız zaman uyumlu koda benzer bir mantıksal yapıyı korur. Sonuç olarak, zaman uyumsuz programlama avantajlarının tamamını çok daha az çaba harcayarak elde edebilirsiniz.
+Visual Studio 2012, .NET Framework 4,5 ve üzeri, Windows Çalışma Zamanı ve ayrıca zaman uyumsuz destekten yararlanan, zaman uyumsuz bir yaklaşım getirmiştir. Derleyici, normalde geliştiricinin yaptığı zor işi yapar ve uygulamanız zaman uyumlu koda benzer bir mantıksal yapıyı korur. Sonuç olarak, zaman uyumsuz programlama avantajlarının tamamını çok daha az çaba harcayarak elde edebilirsiniz.
 
 Bu konu zaman uyumsuz programlamanın ne zaman ve nasıl kullanılması gerektiği hakkında genel bakış içerir ve ayrıntılar ve örnekler içeren destek konularına bağlantılar sunar.
 
-## <a name="async-improves-responsiveness"></a><a name="BKMK_WhentoUseAsynchrony"></a>Async yanıt verme yeteneğini artırır
+## <a name="async-improves-responsiveness"></a><a name="BKMK_WhentoUseAsynchrony"></a>Zaman uyumsuz, yanıt hızını geliştirir
 
 Zaman uyumsuzluk, uygulamanızın Web'e erişmesi gibi engelleme olasılığı bulunan faaliyetler için önemlidir. Web kaynağına erişim bazen yavaş veya gecikmeli olabilir. Böyle bir etkinlik zaman uyumlu işlemde engellenirse uygulamanın tamamı beklemelidir. Uygulama, zaman uyumsuz bir işlemde olası engelleme görevi sona erinceye kadar web kaynağına bağlı olmayan diğer işlerle devam eder.
 
-Aşağıdaki tabloda, zaman uyumsuz programlamanın yanıt verme hızını geliştirdiği genel alanlar gösterilmektedir. .NET Framework 4.5 ve Windows Runtime'dan listelenen API'ler, async programlamayı destekleyen yöntemler içerir.
+Aşağıdaki tabloda, zaman uyumsuz programlamanın yanıt verme hızını geliştirdiği genel alanlar gösterilmektedir. .NET Framework 4,5 ve Windows Çalışma Zamanı listelenen API 'Ler, zaman uyumsuz programlamayı destekleyen yöntemler içerir.
 
 |Uygulama alanı|Zaman uyumsuz yöntemler içeren API'leri destekleme|
 |----------------------|------------------------------------------------|
@@ -37,13 +37,13 @@ Zaman uyumsuz yöntemleri kullandığınızda, uygulama arabirime yanıt vermeye
 
 Zaman uyumsuz tabanlı yaklaşım otomatik bir iletimin eşdeğerini, zaman uyumsuz işlemler tasarlarken seçebileceğiniz seçenekler listesine ekler. Diğer bir deyişle, geleneksel zaman uyumsuz programlamanın tüm avantajlarından yararlanabilirsiniz, buna rağmen geliştiricinin daha az çaba sarf etmesi gerekir.
 
-## <a name="async-methods-are-easier-to-write"></a><a name="BKMK_HowtoWriteanAsyncMethod"></a>Async yöntemleri yazmak daha kolaydır
+## <a name="async-methods-are-easier-to-write"></a><a name="BKMK_HowtoWriteanAsyncMethod"></a>Zaman uyumsuz yöntemlerin yazılması daha kolaydır
 
-Visual Basic'teki [Async](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../../../visual-basic/language-reference/operators/await-operator.md) anahtar kelimeleri async programlamanın kalbidir. Bu iki anahtar kelimeyi kullanarak, .NET Framework veya Windows Runtime'daki kaynakları kullanarak eşzamanlı bir yöntem oluşturduğunuz kadar kolay bir eşzamanlı yöntem oluşturabilirsiniz. Kullanarak `Async` tanımladığınız ve `Await` async yöntemleri olarak adlandırdığınız eşzamanlı yöntemler.
+Visual Basic zaman [uyumsuz](../../../language-reference/modifiers/async.md) ve [await](../../../language-reference/operators/await-operator.md) anahtar sözcükleri zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak, bir zaman uyumlu Yöntem oluştururken neredeyse kolayca zaman uyumsuz bir yöntem oluşturmak için .NET Framework veya Windows Çalışma Zamanı kaynaklarını kullanabilirsiniz. Ve kullanarak tanımladığınız zaman uyumsuz yöntemler `Async` `Await` , zaman uyumsuz yöntemler olarak adlandırılır.
 
 Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Kodda yer alan hemen hemen her şey size tamamen tanıdık gelmiş olmalıdır. Açıklamalar, zaman uyumsuzluğu eklemek için oluşturduğunuz özellikleri çağırır.
 
-Bu konunun sonunda eksiksiz bir Windows Presentation Foundation (WPF) örnek dosyasını bulabilir ve Örneği [Async Sample'dan indirebilirsiniz: "Async ve Await ile Asynchronous Programming" örneğinden.](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/)
+Bu konunun sonunda bir Windows Presentation Foundation (WPF) örnek dosyası bulabilirsiniz ve örneği [zaman uyumsuz örnek: "Async ve await Ile zaman uyumsuz programlama" kaynağından](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/)indirebilirsiniz.
 
 ```vb
 ' Three things to note about writing an Async Function:
@@ -75,21 +75,21 @@ Async Function AccessTheWebAsync() As Task(Of Integer)
 End Function
 ```
 
-`AccessTheWebAsync` Arama `GetStringAsync` yapmakla tamamlanmasını beklemek arasında yapabileceği herhangi bir iş yoksa, aşağıdaki tek ifadede arayarak ve bekleyerek kodunuzu basitleştirebilirsiniz.
+`AccessTheWebAsync`Çağrısı ve tamamlanmasını bekleme arasında yapabilecek herhangi bir işi yoksa `GetStringAsync` , aşağıdaki tek deyime çağırarak ve bekleyen kodunuzu basitleştirebilirsiniz.
 
 ```vb
 Dim urlContents As String = Await client.GetStringAsync()
 ```
 
-Aşağıdaki özellikler, önceki örneği bir async yöntemi yapan şeyi özetler:
+Aşağıdaki özellikler, önceki örneği nasıl zaman uyumsuz bir yöntem yaptığını özetler:
 
-- Yöntem imzası bir `Async` değiştirici içerir.
+- Yöntem imzası bir değiştirici içerir `Async` .
 - Zaman uyumsuz yöntemin adı kurala göre "Async" soneki ile sona erer.
 - Dönüş türü aşağıdaki türlerden biridir:
 
-  - [Görev (TResult)](xref:System.Threading.Tasks.Task%601) yönteminizde operand tresult türüne sahip bir iade deyimi varsa.
-  - <xref:System.Threading.Tasks.Task>yönteminizde iade beyanı yoksa veya operand'ı olmayan bir iade beyanı varsa.
-  - Bir async olay işleyicisi yazıyorsanız [alt.](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)
+  - Yönteminizin TResult türünde olan bir return ifadesine sahipse [görev (TResult)](xref:System.Threading.Tasks.Task%601) .
+  - <xref:System.Threading.Tasks.Task>yönteminizin Return bildirisi yoksa veya işleneni olmayan bir return ifadesine sahip.
+  - Bir zaman uyumsuz olay işleyicisi yazıyorsanız [Sub](../../language-features/procedures/sub-procedures.md) .
 
   Daha fazla bilgi için bu konunun ilerleyen kısımlarındaki "Dönüş Türleri ve Parametreler" bölümüne bakın.
 
@@ -97,85 +97,85 @@ Aşağıdaki özellikler, önceki örneği bir async yöntemi yapan şeyi özetl
 
 Zaman uyumsuz yöntemlerde ne yapmak istediğinizi belirtmek için sağlanan anahtar sözcükleri ve türleri kullanırsınız ve denetim, askıya alınan bir yöntemde await noktasına geldiğinde olması gerekenlerin izlenmesi dahil olmak üzere geri kalan işlemleri derleyici yapar. Döngüler ve özel durum işleme gibi bazı rutin işlemlerin geleneksel zaman uyumsuz kodla yapılması zor olabilir. Zaman uyumsuz bir yöntemde, bu öğeleri olabildiğince zaman uyumlu çözümde yazarsınız ve sorun çözülür.
 
-.NET Framework'ün önceki sürümlerinde eşzamanlılık hakkında daha fazla bilgi için [TPL ve Traditional .NET Framework Asynchronous Programming](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)bölümüne bakın.
+.NET Framework önceki sürümlerinde zaman uyumsuzluğu hakkında daha fazla bilgi için bkz. [TPL ve geleneksel .NET Framework zaman uyumsuz programlama](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).
 
-## <a name="what-happens-in-an-async-method"></a><a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>Async yönteminde ne olur?
+## <a name="what-happens-in-an-async-method"></a><a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>Zaman uyumsuz bir yöntemde ne olur?
 
-Zaman uyumsuz programlama ile ilgili olarak anlamanız gereken en önemli şey, denetim akışının yöntemden yönteme nasıl geçtiğidir. Aşağıdaki diyagram işlem boyunca size yol açar:
+Zaman uyumsuz programlama ile ilgili olarak anlamanız gereken en önemli şey, denetim akışının yöntemden yönteme nasıl geçtiğidir. Aşağıdaki diyagramda süreç boyunca size yol gösterir:
 
-![Bir async programının izini gösteren diyagram.](./media/index/navigation-trace-async-program.png)
+![Zaman uyumsuz bir programın izlenmesini gösteren diyagram.](./media/index/navigation-trace-async-program.png)
 
 Diyagramdaki sayılar aşağıdaki adımlara karşılık gelir:
 
-1. Bir olay işleyicisi `AccessTheWebAsync` çağırır ve async yöntemini bekler.
+1. Bir olay işleyicisi, `AccessTheWebAsync` zaman uyumsuz yöntemini çağırır ve bekler.
 
-2. `AccessTheWebAsync`bir <xref:System.Net.Http.HttpClient> örnek oluşturur ve <xref:System.Net.Http.HttpClient.GetStringAsync%2A> bir web sitesinin içeriğini dize olarak indirmek için eşzamanlı yöntemi çağırır.
+2. `AccessTheWebAsync`bir <xref:System.Net.Http.HttpClient> örnek oluşturur ve <xref:System.Net.Http.HttpClient.GetStringAsync%2A> bir Web sitesinin içeriklerini dize olarak indirmek için zaman uyumsuz yöntemi çağırır.
 
-3. İlerlemesini `GetStringAsync` askıya alan bir şey olur. Bir web sitesinin indirmesini veya başka bir engelleyen etkinliği beklemesi gerekebilir. Kaynakları engellemeyi önlemek `GetStringAsync` için, denetimi arayana verir. `AccessTheWebAsync`
+3. İçinde `GetStringAsync` ilerleme durumunu askıya alan bir sorun var. Bir web sitesinin indirmesini veya başka bir engelleyen etkinliği beklemesi gerekebilir. Kaynakları engellemeyi önlemek için, `GetStringAsync` kendi çağıranına denetim verir `AccessTheWebAsync` .
 
-     `GetStringAsync`TResult'In bir dize olduğu bir [Görev (TResult)](xref:System.Threading.Tasks.Task%601) döndürür ve `AccessTheWebAsync` görevi `getStringTask` değişkene atar. Görev, çalışma tamamlandığında gerçek bir `GetStringAsync`dize değeri oluşturma taahhüdüyle, çağrı için devam eden işlemi temsil eder.
+     `GetStringAsync`TResult bir dize olduğu ve bu görevi değişkenine atayan bir [görev (TResult)](xref:System.Threading.Tasks.Task%601) döndürür `AccessTheWebAsync` `getStringTask` . Görev, `GetStringAsync` iş tamamlandığında gerçek bir dize değeri üretme taahhüdünde, çağrısı için devam eden işlemi temsil eder.
 
-4. Çünkü `getStringTask` henüz beklenmedi, `AccessTheWebAsync` nihai sonucuna bağlı olmayan diğer çalışmalarla devam `GetStringAsync`edebilir. Bu çalışma senkron yönteme `DoIndependentWork`yapılan bir çağrı yla temsil edilir.
+4. Henüz beklenmediği `getStringTask` `AccessTheWebAsync` için, nihai sonuca bağlı olmayan diğer çalışmalarla devam edebilir `GetStringAsync` . Bu iş, zaman uyumlu yöntem çağrısıyla temsil edilir `DoIndependentWork` .
 
-5. `DoIndependentWork`işini yapan ve arayana geri dönen eşzamanlı bir yöntemdir.
+5. `DoIndependentWork`, işini yapan ve çağırana döndüren zaman uyumlu bir yöntemdir.
 
-6. `AccessTheWebAsync`bir sonuç olmadan yapabileceği iş tükendi `getStringTask`. `AccessTheWebAsync`sonraki, indirilen dize uzunluğunu hesaplamak ve döndürmek istiyor, ancak yöntem dize olana kadar bu değeri hesaplayamaz.
+6. `AccessTheWebAsync`, uygulamasından bir sonuç olmadan yapabilmeden iş dışında çalışıyor `getStringTask` . `AccessTheWebAsync`ardından, indirilen dizenin uzunluğunu hesaplamak ve döndürmek ister, ancak yöntem dizeye gelinceye kadar bu değeri hesaplayamaz.
 
-     Bu `AccessTheWebAsync` nedenle, ilerlemesini askıya almak ve '. `AccessTheWebAsync` `AccessTheWebAsync`arayana `Task(Of Integer)` bir döndürür. Görev, indirilen dizenin uzunluğu olan bir tamsayı sonucu verecek bir taahhüdü temsil eder.
+     Bu nedenle, `AccessTheWebAsync` ilerleme durumunu askıya almak ve denetimi çağıran yönteme eklemek için bir Await işleci kullanır `AccessTheWebAsync` . `AccessTheWebAsync`çağırana döndürür `Task(Of Integer)` . Görev, indirilen dizenin uzunluğu olan bir tamsayı sonucu verecek bir taahhüdü temsil eder.
 
     > [!NOTE]
-    > (ve `GetStringAsync` bu `getStringTask`nedenle) `AccessTheWebAsync` beklemeden önce tamamlanırsa, `AccessTheWebAsync`denetim . Çağrılan asynchronous işlemi ( `AccessTheWebAsync` `getStringTask`) zaten tamamlanmış ve AccessTheWebSync nihai sonucu beklemek zorunda değildir askıya alma ve daha sonra dönen gider boşa olacaktır.
+    > `GetStringAsync`(Ve bu nedenle `getStringTask` ), bekleden önce tamamlandıktan sonra `AccessTheWebAsync` denetim içinde kalır `AccessTheWebAsync` . `AccessTheWebAsync`Çağrılan zaman uyumsuz işlem ( `getStringTask` ) zaten tamamlanmışsa ve AccessTheWebSync 'in nihai sonucu beklemesi gerekmez.
 
-     Arayanın içinde (bu örnekte olay işleyicisi), işleme düzeni devam eder. Arayan, bu sonucu beklemeden önce elde edilen `AccessTheWebAsync` sonuca bağlı olmayan başka işler yapabilir veya arayan hemen bekleyebilir.   Olay işleyicisi `AccessTheWebAsync`bekliyor `AccessTheWebAsync` ve bekliyor. `GetStringAsync`
+     Arayanın içinde (bu örnekte olay işleyicisi), işleme düzeni devam eder. Çağıran, sonucu beklemeden önce sonucu kendisine bağlı olmayan başka bir iş `AccessTheWebAsync` ya da çağıran hemen bekleme edebilir.   Olay işleyicisi için bekliyor `AccessTheWebAsync` ve `AccessTheWebAsync` bekliyor `GetStringAsync` .
 
-7. `GetStringAsync`tamamlar ve bir dize sonucu üretir. Dize sonucu, beklediğiniz şekilde `GetStringAsync` çağrıyla döndürülemez. (Yöntemin 3. adımda bir görevi zaten döndürettiğini unutmayın.) Bunun yerine, dize sonucu yöntemin tamamlanmasını temsil eden `getStringTask`görevde depolanır. Bekleme işleci sonucu ' `getStringTask`dan alır. Atama deyimi, alınan sonucu ' `urlContents`ya .
+7. `GetStringAsync`tamamlar ve bir dize sonucu üretir. Dize sonucu, bekleneceğiniz şekilde çağrısı tarafından döndürülmedi `GetStringAsync` . (Metodun adım 3 ' te bir görevi zaten döndürdüğünü unutmayın.) Bunun yerine, dize sonucu, yönteminin tamamlandığını temsil eden görevde saklanır `getStringTask` . Await işleci sonucunu alır `getStringTask` . Atama ekstresi alındı sonucunu öğesine atar `urlContents` .
 
-8. Dize sonucu olduğunda, `AccessTheWebAsync` yöntem dize uzunluğunu hesaplayabilirsiniz. Sonra iş `AccessTheWebAsync` de tamamlanır ve bekleyen olay işleyicisi devam edebilirsiniz. Konunun sonundaki tam örnekte olay işleyicisinin uzunluk sonucundaki değeri aldığını ve yazdığını onaylayabilirsiniz.
+8. `AccessTheWebAsync`Dize sonucu olduğunda, yöntemi dizenin uzunluğunu hesaplayabilir. Bu durumda, çalışması `AccessTheWebAsync` da tamamlanır ve bekleyen olay işleyicisi sürdürülebilirler. Konunun sonundaki tam örnekte olay işleyicisinin uzunluk sonucundaki değeri aldığını ve yazdığını onaylayabilirsiniz.
 
 Zaman uyumsuz programlama konusunda yeniyseniz, zaman uyumlu ve zaman uyumsuz davranış arasındaki farkları değerlendirmek için bir dakikanızı ayırın. Zaman uyumlu yöntem, işi tamamlandığında döndürür (5. adım), ancak zaman uyumsuz bir yöntem işi askıya alındığında görev değeri döndürür (3 ve 6. adım). Zaman uyumsuz yöntem çalışmasını tamamladığında görev tamamlandı olarak işaretlenir ve varsa sonuç görevde depolanır.
 
-Denetim akışı hakkında daha fazla bilgi [için, Async Programlarında Denetim Akışı (Visual Basic)](control-flow-in-async-programs.md)bakın.
+Denetim akışı hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışı (Visual Basic)](control-flow-in-async-programs.md).
 
-## <a name="api-async-methods"></a><a name="BKMK_APIAsyncMethods"></a>API Async Yöntemleri
+## <a name="api-async-methods"></a><a name="BKMK_APIAsyncMethods"></a>API zaman uyumsuz yöntemleri
 
-Bu tür async programlama gibi `GetStringAsync` yöntemleri nerede bulacağınızı merak ediyor olabilirsiniz. .NET Framework 4.5 veya üstü, birlikte `Async` `Await`çalışan ve . Bu üyeleri, üye adına ve bir dönüş türüne <xref:System.Threading.Tasks.Task> veya [Görev(TResult)](xref:System.Threading.Tasks.Task%601)ekilen "Async" sonekiyle tanıyabilirsiniz. `System.IO.Stream` Örneğin, <xref:System.IO.Stream.CopyToAsync%2A>sınıf , , <xref:System.IO.Stream.ReadAsync%2A>ve <xref:System.IO.Stream.WriteAsync%2A> senkron yöntemlerin <xref:System.IO.Stream.CopyTo%2A>yanı sıra <xref:System.IO.Stream.Read%2A>, <xref:System.IO.Stream.Write%2A>ve .
+Zaman uyumsuz programlamayı destekleyen gibi yöntemlerin nerede bulunacağını merak ediyor olabilirsiniz `GetStringAsync` . .NET Framework 4,5 veya üzeri, ve ile çalışan birçok üye içerir `Async` `Await` . Bu üyeleri, üye adına ve bir dönüş türüne <xref:System.Threading.Tasks.Task> [(TResult)](xref:System.Threading.Tasks.Task%601)bağlı olan "Async" sonekine göre de tanıyabilirsiniz. Örneğin, sınıfı,, ve gibi `System.IO.Stream` yöntemleri, <xref:System.IO.Stream.CopyToAsync%2A> ve <xref:System.IO.Stream.ReadAsync%2A> <xref:System.IO.Stream.WriteAsync%2A> ile zaman uyumlu yöntemleri içerir <xref:System.IO.Stream.CopyTo%2A> <xref:System.IO.Stream.Read%2A> <xref:System.IO.Stream.Write%2A> .
 
-Windows Runtime, Windows uygulamalarında `Async` ve `Await` windows uygulamalarında kullanabileceğiniz birçok yöntem de içerir. Daha fazla bilgi ve örnek yöntem için C# veya Visual Basic, [Asynchronous programming (Windows Runtime uygulamaları)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))ve [WhenAny: .NET Framework ve Windows Runtime arasında köprü leme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))de dahil olmak üzere [asynchronous API'leri arayın.](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)
+Windows Çalışma Zamanı ayrıca `Async` Windows uygulamalarında ve ile kullanabileceğiniz birçok yöntem içerir `Await` . Daha fazla bilgi ve örnek yöntemler için bkz. [C# veya Visual Basic zaman uyumsuz API 'Leri çağırma](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic), [zaman uyumsuz programlama (Windows çalışma zamanı uygulamalar)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))ve [whenany: .NET Framework ile Windows çalışma zamanı arasında köprü](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))oluşturma.
 
-## <a name="threads"></a><a name="BKMK_Threads"></a>Iş parçacığı
+## <a name="threads"></a><a name="BKMK_Threads"></a>Akışları
 
-Zaman uyumsuz yöntemlerin engelleyici olmayan işlemler olmaları amaçlanmıştır. Async `Await` yöntemindeki bir ifade, beklenen görev çalışırken geçerli iş parçacığı engellemez. Bunun yerine ifade, yöntemin geri kalanını yöntemin devamı olarak imzalar ve denetimi zaman uyumsuz yöntemi arayan kişiye verir.
+Zaman uyumsuz yöntemlerin engelleyici olmayan işlemler olmaları amaçlanmıştır. `Await`Zaman uyumsuz yöntemdeki bir ifade, beklenen görev çalışırken geçerli iş parçacığını engellemez. Bunun yerine ifade, yöntemin geri kalanını yöntemin devamı olarak imzalar ve denetimi zaman uyumsuz yöntemi arayan kişiye verir.
 
-Anahtar `Async` `Await` kelimeler ek iş parçacıkları oluşturulmasına neden olmaz. Async yöntemi kendi iş parçacığı üzerinde çalışmadığından, async yöntemleri çoklu iş parçacığı gerektirmez. Yöntem geçerli eşitleme kapsamının üzerinde çalışır ve yalnızca yöntem etkin olduğunda iş parçacığındaki zamanı kullanır. CPU'ya <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> bağlı çalışmayı arka plan iş parçacığına taşımak için kullanabilirsiniz, ancak arka plan iş parçacığı, sonuçların kullanılabilir olmasını bekleyen bir işleme yardımcı olmaz.
+`Async`Ve `Await` anahtar sözcükleri ek iş parçacıklarının oluşturulmasına neden olmaz. Zaman uyumsuz yöntemler kendi iş parçacığında çalışmadığından zaman uyumsuz metotlar çok iş parçacığı gerektirmez. Yöntem geçerli eşitleme kapsamının üzerinde çalışır ve yalnızca yöntem etkin olduğunda iş parçacığındaki zamanı kullanır. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>CPU 'ya bağlanan işi arka plan iş parçacığına taşımak için kullanabilirsiniz, ancak arka plan iş parçacığı yalnızca sonuçların kullanılabilir hale gelmesini bekleyen bir işlem konusunda yardımcı olmaz.
 
-Zaman uyumsuz programlamaya zaman uyumsuz yaklaşım, hemen hemen her durumda varolan yaklaşımlara tercih edilir. Kod daha basit olduğundan <xref:System.ComponentModel.BackgroundWorker> ve yarış koşullarına karşı korumanız gerekmediği için, bu yaklaşım G/Ç'ye bağlı işlemlerden daha iyidir. Async <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>programlama, kodunuzu çalıştırmanın <xref:System.ComponentModel.BackgroundWorker> koordinasyon ayrıntılarını iş parçacığı havuzuna `Task.Run` aktaran işten ayırdığından, async programlama ile birlikte CPU'ya bağlı işlemlerden daha iyidir.
+Zaman uyumsuz programlamaya zaman uyumsuz yaklaşım, hemen hemen her durumda varolan yaklaşımlara tercih edilir. Özellikle, <xref:System.ComponentModel.BackgroundWorker> kod daha basit olduğundan ve yarış koşullarına karşı koruma sağlamak zorunda olmadığınızdan bu yaklaşım, g/ç 'ye bağlanacak işlemler için daha iyidir. , İle birlikte <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> zaman uyumsuz programlama, <xref:System.ComponentModel.BackgroundWorker> zaman uyumsuz programlama, kodunuzun iş parçacığı koduna aktaran işten kod çalıştırmanın koordinasyon ayrıntılarını AYıRDıĞıNDAN, CPU 'ya bağlanan işlemlerden daha iyidir `Task.Run` .
 
-## <a name="async-and-await"></a><a name="BKMK_AsyncandAwait"></a>Async ve Await
+## <a name="async-and-await"></a><a name="BKMK_AsyncandAwait"></a>Async ve await
 
-Bir yöntemin [Async](../../../../visual-basic/language-reference/modifiers/async.md) değiştirici kullanarak bir async yöntemi olduğunu belirtirseniz, aşağıdaki iki özelliği etkinleştirin.
+Bir yöntemi [zaman](../../../language-reference/modifiers/async.md) uyumsuz bir değiştirici kullanarak zaman uyumsuz bir yöntem olduğunu belirtirseniz, aşağıdaki iki özelliği etkinleştirirsiniz.
 
-- İşaretli async yöntemi süspansiyon noktalarını belirlemek için [Bekle'yi](../../../../visual-basic/language-reference/operators/await-operator.md) kullanabilir. await işleci derleyiciye, beklenen zaman uyumsuz işlem tamamlanmadan zaman uyumsuz yöntemin bu noktanın ilerisine devam edemeyeceğini bildirir. Bu sırada denetim, zaman uyumsuz yönteminin arayanına döner.
+- İşaretlenen zaman uyumsuz yöntem, askıya alma noktaları belirlemek için [await](../../../language-reference/operators/await-operator.md) kullanabilir. await işleci derleyiciye, beklenen zaman uyumsuz işlem tamamlanmadan zaman uyumsuz yöntemin bu noktanın ilerisine devam edemeyeceğini bildirir. Bu sırada denetim, zaman uyumsuz yönteminin arayanına döner.
 
-  Bir `Await` ifadede bir async yönteminin askıya alınması yöntemden çıkış `Finally` anlamına gelmez ve bloklar çalışmaz.
+  Bir ifadede zaman uyumsuz bir yöntemin askıya alınması `Await` yöntemden bir çıkış oluşturmaz ve `Finally` bloklar çalıştırılmaz.
 
 - İşaretli zaman uyumsuz yöntem, kendisinin çağırdığı yöntemler tarafından bekleniyor olabilir.
 
-Async yöntemi genellikle bir `Await` işleç bir veya daha fazla `Await` oluşumları içerir, ancak ifadelerin yokluğu derleyici hatasına neden olmaz. Bir async yöntemi bir süspansiyon `Await` noktası işaretlemek için bir işleç kullanmıyorsa, yöntem `Async` değiştirici rağmen, senkron bir yöntem olarak yürütür. Derleyici bu tür yöntemler için bir uyarı verir.
+Zaman uyumsuz bir yöntem, genellikle bir işlecin bir veya daha fazla örneğini içerir `Await` , ancak ifadelerin yokluğu `Await` bir derleyici hatasına neden olmaz. Zaman uyumsuz bir yöntem, askıya alma `Await` noktasını işaretlemek için bir operatör kullanmıyorsa Yöntem, değiştiriciye rağmen zaman uyumlu bir yöntem olarak yürütülür `Async` . Derleyici bu tür yöntemler için bir uyarı verir.
 
-`Async`ve `Await` bağlamsal anahtar kelimelerdir. Daha fazla bilgi ve örnek için aşağıdaki konulara bakın:
+`Async`ve `Await` bağlamsal anahtar sözcüklerdir. Daha fazla bilgi ve örnek için aşağıdaki konulara bakın:
 
-- [Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Eş](../../../language-reference/modifiers/async.md)
+- [Await Işleci](../../../language-reference/operators/await-operator.md)
 
-## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>İade türleri ve parametreleri
+## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>Dönüş türleri ve parametreleri
 
-.NET Framework programlamada, bir async yöntemi <xref:System.Threading.Tasks.Task> genellikle bir veya bir [Görev(TResult)](xref:System.Threading.Tasks.Task%601)döndürür. Bir async yöntemi `Await` içinde, bir işleç başka bir async yöntemiiçin bir çağrı döndürülen bir göreve uygulanır.
+.NET Framework programlamada, zaman uyumsuz bir yöntem genellikle bir <xref:System.Threading.Tasks.Task> veya bir [görevi (TResult)](xref:System.Threading.Tasks.Task%601)döndürür. Zaman uyumsuz bir yöntemde, bir `Await` işleç, başka bir zaman uyumsuz metoda yapılan çağrıdan döndürülen bir göreve uygulanır.
 
-Yöntem, bir operand türü `TResult`belirten bir [İade](../../../../visual-basic/language-reference/statements/return-statement.md) deyimi içeriyorsa, İade türü olarak [Görev(Sonuç)](xref:System.Threading.Tasks.Task%601) belirtirsiniz.
+Yöntemi, türü bir işleneni belirten [Return](../../../language-reference/statements/return-statement.md) ifadesini içeriyorsa, dönüş türü olarak [(TResult) görevi](xref:System.Threading.Tasks.Task%601) belirtirsiniz `TResult` .
 
-Yöntemin `Task` iade deyimi yoksa veya bir operand döndürmeyen bir iade deyimi varsa, iade türü olarak kullanırsınız.
+`Task`Metodun Return ifadesine sahip olmaması veya bir işleneni döndürmeyen bir return ifadesine sahip olması durumunda dönüş türü olarak kullanırsınız.
 
-Aşağıdaki örnek, bir [Görevi (TResult)](xref:System.Threading.Tasks.Task%601) veya bir <xref:System.Threading.Tasks.Task>yöntemi nasıl beyan ettiğinizi ve adlandırdığınızı gösterir:
+Aşağıdaki örnek, bir [görevi (TResult)](xref:System.Threading.Tasks.Task%601) veya şunu döndüren bir yöntemi bildirme ve çağırma şeklini gösterir <xref:System.Threading.Tasks.Task> :
 
 ```vb
 ' Signature specifies Task(Of Integer)
@@ -209,53 +209,53 @@ Await Task_MethodAsync()
 
 Döndürülmüş her görev, devam eden bir çalışmayı temsil eder. Bir görev, zaman uyumsuz işlemin durumu hakkındaki bilgileri saklar ve sonunda, işlemden alınan nihai sonuca veya başarısız olursa işlemin neden olduğu bir özel duruma ilişkin bilgileri içerir.
 
-Bir async yöntemi de `Sub` bir yöntem olabilir. Bu iade türü, öncelikle bir dönüş türü gerekli olay işleyicileri tanımlamak için kullanılır. Zaman uyumsuz olay işleyicileri, genellikle zaman uyumsuz programlar için başlangıç noktası olarak hizmet eder.
+Zaman uyumsuz bir yöntem de bir `Sub` Yöntem olabilir. Bu dönüş türü öncelikle bir dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır. Zaman uyumsuz olay işleyicileri, genellikle zaman uyumsuz programlar için başlangıç noktası olarak hizmet eder.
 
-Yordam olan bir async `Sub` yöntemi beklenebilir ve arayan yöntematar herhangi bir özel durum yakalayamıyor.
+Bir yordam olan zaman uyumsuz bir yöntem beklenemez `Sub` ve çağıran, yöntemin aldığı özel durumları yakalayamaz.
 
-Bir async yöntemi [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) parametrelerini bildiremez, ancak yöntem bu tür parametrelere sahip yöntemleri çağırabilir.
+Zaman uyumsuz bir yöntem [ByRef](../../../language-reference/modifiers/byref.md) parametreleri bildiremez, ancak yöntem bu parametrelere sahip yöntemleri çağırabilir.
 
-Daha fazla bilgi ve örnekler [için, Bkz. Async İade Türleri (Visual Basic)](async-return-types.md). Özel durumları async yöntemleriyle nasıl yakalayacakları hakkında daha fazla bilgi için [bkz. Yakalamak... Son Olarak İfade](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+Daha fazla bilgi ve örnek için bkz. [Async Return Types (Visual Basic)](async-return-types.md). Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../language-reference/statements/try-catch-finally-statement.md).
 
-Windows Runtime programlamadaki eşzamanlı API'ler, görevlere benzer aşağıdaki iade türlerinden birine sahiptir:
+Windows Çalışma Zamanı programlamadaki zaman uyumsuz API 'Ler, görevlerle benzer olan aşağıdaki dönüş türlerinden birine sahiptir:
 
-- [Görev (TResult)](xref:System.Threading.Tasks.Task%601) karşılık gelen [IAsyncOperation(TResult)](xref:Windows.Foundation.IAsyncOperation%601)
-- <xref:Windows.Foundation.IAsyncAction>, hangi karşılık gelir<xref:System.Threading.Tasks.Task>
-- [IAsyncActionWithProgress(TProgress Of)](xref:Windows.Foundation.IAsyncActionWithProgress%601)
-- [IAsyncOperationWithProgress(Sonuç, Tprogress)](xref:Windows.Foundation.IAsyncOperationWithProgress%602)
+- [IAsyncOperation (Of TResult)](xref:Windows.Foundation.IAsyncOperation%601), [göreve (Of TResult)](xref:System.Threading.Tasks.Task%601) karşılık gelir
+- <xref:Windows.Foundation.IAsyncAction>öğesine karşılık gelen<xref:System.Threading.Tasks.Task>
+- [IAsyncActionWithProgress (Of TProgress)](xref:Windows.Foundation.IAsyncActionWithProgress%601)
+- [IAsyncOperationWithProgress (Of TResult, TProgress)](xref:Windows.Foundation.IAsyncOperationWithProgress%602)
 
-Daha fazla bilgi ve örnek için [C# veya Visual Basic'te asynchronous API'leri arayın.](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)
+Daha fazla bilgi ve örnek için bkz. [C# veya Visual Basic zaman uyumsuz API 'Leri çağırma](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>Adlandırma kuralı
 
-Sözleşmeye göre, "Async"i `Async` değiştirici olan yöntemlerin adlarına eklersiniz.
+Kurala göre, değiştiriciye sahip yöntemlerin adlarına "Async" ekleyin `Async` .
 
-Bir olay, taban sınıf veya arabirim sözleşmesi farklı bir ad öneriyorsa kuralı yoksayabilirsiniz. Örneğin, '. gibi `Button1_Click`ortak olay işleyicileri yeniden adlandırmamalısınız.
+Bir olay, taban sınıf veya arabirim sözleşmesi farklı bir ad öneriyorsa kuralı yoksayabilirsiniz. Örneğin, gibi yaygın olay işleyicilerini yeniden adlandırmamanız gerekir `Button1_Click` .
 
 ## <a name="related-topics-and-samples-visual-studio"></a><a name="BKMK_RelatedTopics"></a>İlgili konular ve örnekler (Visual Studio)
 
 |Başlık|Açıklama|Örnek|
 |-----------|-----------------|------------|
-|[Walkthrough: Async ve Await (Visual Basic) kullanarak Web'e erişim](walkthrough-accessing-the-web-by-using-async-and-await.md)|Zaman uyumlu bir WPF çözümünü zaman uyumsuz bir WPF çözümüne nasıl dönüştüreceğinizi gösterir. Uygulama bir dizi web sitesi indirir.|[Async Örnek: Web Walkthrough erişim](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
-|[Nasıl Yapılır: Task.WhenAll'ı Kullanarak Async Walkthrough'u genişletin (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Önceki <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> gözden geçirimi ekler. Tüm indirmeleri aynı anda başlatır. `WhenAll`||
-|[Nasıl Yapılır: Async ve Await (Visual Basic) kullanarak Paralel Olarak Birden Çok Web İsteği Yapma](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Nasıl aynı anda birkaç görevi başlatacağınızı gösterir.|[Async Örnek: Paralel Olarak Birden Çok Web İsteği Yapma](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[Async İade Türleri (Visual Basic)](async-return-types.md)|Zaman uyumsuz yöntemlerin döndürebileceği türleri gösterir ve her türün ne zaman uygun olduğunu açıklar.||
-|[Async Programlarında Kontrol Akışı (Visual Basic)](control-flow-in-async-programs.md)|Ayrıntılı olarak birbirini izleyenler aracılığıyla denetim akışını izler ve zaman uyumsuz bir program ifadesi bekler.|[Async Örnek: Async Programlarında Kontrol Akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
-|[Async Uygulamanızda İnce Ayar (Visual Basic)](fine-tuning-your-async-application.md)|Zaman uyumsuz çözümünüze aşağıdaki işlevin nasıl ekleneceğini gösterir:<br /><br /> - [Bir Async Görevi veya Görev Listesini İptal Etme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />- [Bir Süre Sonra Async Görevlerini İptal Etme (Visual Basic)](cancel-async-tasks-after-a-period-of-time.md)<br />- [Bir Tamamlandıktan Sonra Kalan Async Görevlerini İptal Et (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [Birden Çok Async Görevi Başlatın ve Tamamladıkları Gibi İşleyin (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Örnek: Uygulamanızı İyi Ayar](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
-|[Async Apps 'da Reentrancy Işleme (Visual Basic)](handling-reentrancy-in-async-apps.md)|Etkin bir eşzamanlı işlemin çalışırken yeniden başlatıldığu servis taleplerini gösterir.||
-|[WhenAny: .NET Framework ve Windows Runtime arasında köprü kurma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Windows Runtime yöntemiyle kullanabilmeniz <xref:System.Threading.Tasks.Task.WhenAny%2A> için Windows Runtime'daki .NET Framework ve IAsyncOperations'taki Görev türleri arasında nasıl köprü kurkullanılacağını gösterir.|[Async Örnek: .NET ve Windows Runtime (AsTask ve WhenAny) arasında köprüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|
-|Zaman Uyumsuz İptal: .NET Framework ve Windows Çalışma Zamanı arasında köprü oluşturma|Windows Runtime yöntemiyle kullanabilmeniz <xref:System.Threading.CancellationTokenSource> için Windows Runtime'daki .NET Framework ve IAsyncOperations'taki Görev türleri arasında nasıl köprü kurkullanılacağını gösterir.|[Async Örnek: .NET ve Windows Runtime arasında köprüleme (AsTask & İptal)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
-|[Dosya Erişimi için Async kullanma (Visual Basic)](using-async-for-file-access.md)|Dosyalara erişmek için zaman uyumsuz yöntemin ve await işlecinin kullanılmasına ilişkin avantajları listeler ve gösterir.||
-|[Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework'te zaman uyumsuzluk için yeni bir düzen açıklar. Desen, Görev <xref:System.Threading.Tasks.Task> [(TResult)](xref:System.Threading.Tasks.Task%601) türlerine dayanır.||
-|[Kanal 9'da Async Videoları](https://channel9.msdn.com/search?term=async+&type=All)|Zaman uyumsuz programlama hakkında çeşitli videoların bağlantılarını sağlar.||
+|[İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)|Zaman uyumlu bir WPF çözümünü zaman uyumsuz bir WPF çözümüne nasıl dönüştüreceğinizi gösterir. Uygulama bir dizi web sitesi indirir.|[Zaman uyumsuz örnek: Web 'e erişme yolu](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
+|[Nasıl yapılır: Task. WhenAll kullanarak zaman uyumsuz Izlenecek yolu genişletme (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>Önceki izlenecek yolu ekler. Öğesinin kullanımı, `WhenAll` tüm indirmeleri aynı anda başlatır.||
+|[Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Nasıl aynı anda birkaç görevi başlatacağınızı gösterir.|[Zaman uyumsuz örnek: birden çok Web Isteğini paralel hale getirme](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
+|[Zaman uyumsuz dönüş türleri (Visual Basic)](async-return-types.md)|Zaman uyumsuz yöntemlerin döndürebileceği türleri gösterir ve her türün ne zaman uygun olduğunu açıklar.||
+|[Zaman uyumsuz programlarda denetim akışı (Visual Basic)](control-flow-in-async-programs.md)|Ayrıntılı olarak birbirini izleyenler aracılığıyla denetim akışını izler ve zaman uyumsuz bir program ifadesi bekler.|[Async örneği: zaman uyumsuz programlarda denetim akışı](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
+|[Zaman uyumsuz uygulamanızda ince ayar yapma (Visual Basic)](fine-tuning-your-async-application.md)|Zaman uyumsuz çözümünüze aşağıdaki işlevin nasıl ekleneceğini gösterir:<br /><br /> - [Zaman uyumsuz bir görevi veya görev listesini iptal etme (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md)<br />- [Zaman uyumsuz görevleri bir süre sonra iptal et (Visual Basic)](cancel-async-tasks-after-a-period-of-time.md)<br />- [Kalan zaman uyumsuz görevleri bir süre tamamlandıktan sonra iptal et (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [Birden çok zaman uyumsuz görev başlatın ve bunları tamamlarsa Işleyin (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Zaman uyumsuz örnek: uygulamanıza Ince ayar yapma](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
+|[Zaman uyumsuz uygulamalarda yeniden girişi işleme (Visual Basic)](handling-reentrancy-in-async-apps.md)|Çalışırken etkin bir zaman uyumsuz işlemin yeniden başlatılma durumlarının nasıl işleneceğini gösterir.||
+|[WhenAny: .NET Framework ve Windows Çalışma Zamanı arasında köprü oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Bir Windows Çalışma Zamanı yöntemiyle kullanabilmeniz için, Windows Çalışma Zamanı .NET Framework ve IAsyncOperations içindeki görev türleri arasında nasıl köprü oluşturulacağını gösterir <xref:System.Threading.Tasks.Task.WhenAny%2A> .|[Zaman uyumsuz örnek: .NET ile Windows Çalışma Zamanı arasında köprü oluşturma (AsTask ve WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|
+|Zaman Uyumsuz İptal: .NET Framework ve Windows Çalışma Zamanı arasında köprü oluşturma|Bir Windows Çalışma Zamanı yöntemiyle kullanabilmeniz için, Windows Çalışma Zamanı .NET Framework ve IAsyncOperations içindeki görev türleri arasında nasıl köprü oluşturulacağını gösterir <xref:System.Threading.CancellationTokenSource> .|[Zaman uyumsuz örnek: .NET ve Windows Çalışma Zamanı arasında köprü oluşturma (AsTask & Iptali)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
+|[Dosya erişimi için Async Kullanma (Visual Basic)](using-async-for-file-access.md)|Dosyalara erişmek için zaman uyumsuz yöntemin ve await işlecinin kullanılmasına ilişkin avantajları listeler ve gösterir.||
+|[Görev Tabanlı Zaman Uyumsuz Desen (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework'te zaman uyumsuzluk için yeni bir düzen açıklar. Bu model, <xref:System.Threading.Tasks.Task> ve [görev (Of TResult)](xref:System.Threading.Tasks.Task%601) türlerini temel alır.||
+|[Channel 9 ' da zaman uyumsuz videolar](https://channel9.msdn.com/search?term=async+&type=All)|Zaman uyumsuz programlama hakkında çeşitli videoların bağlantılarını sağlar.||
 
-## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a>Tam Örnek
+## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a>Örnek Tamam
 
-Aşağıdaki kod, bu konunun tartıştığı Windows Sunu Temeli (WPF) uygulamasından Gelen MainWindow.xaml.vb dosyasıdır. Örneği [Async Sample'dan indirebilirsiniz: "Async ve Await ile Asynchronous Programming" örneğinden.](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/)
+Aşağıdaki kod, bu konunun ele aldığı Windows Presentation Foundation (WPF) uygulamasındaki MainWindow. xaml. vb dosyasıdır. Örneği zaman uyumsuz [örnek: "Async ve await Ile zaman uyumsuz programlama" kaynağından](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/)indirebilirsiniz.
 
 [!code-vb[async](~/samples/snippets/standard/async/async-and-await/vb/MainWindow.xaml.vb)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md)
+- [Await Işleci](../../../language-reference/operators/await-operator.md)
+- [Eş](../../../language-reference/modifiers/async.md)

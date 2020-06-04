@@ -2,12 +2,12 @@
 title: Word Belgelerinde Metin Bulma
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 83941de815968fce471b7366ed7c5114dae0d63c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 546703e3dbead64fd10c04fe52cb1dd98ba53049
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347518"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398096"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Word belgelerinde metin bulma (Visual Basic)
 
@@ -17,9 +17,9 @@ Bu konu, bir şeyi yararlı yapmak için önceki sorguları genişletir: belgede
 
 Bu örnek, belgedeki belirli bir metin parçasının tüm oluşumlarını bulmak için bir WordprocessingML belgesini işler. Bunu yapmak için "Merhaba" dizesini bulan bir sorgu kullanıyoruz. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.
 
-Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).
+Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](creating-the-source-office-open-xml-document.md).
 
-Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.
+Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -302,16 +302,16 @@ StyleName:Code ><
 
 Tabii ki bu örnek çeşitli yollarla iyileştirilen olabilir. Örneğin, normal ifadeleri metin aramak için kullanabiliriz, belirli bir dizindeki tüm Word dosyaları üzerinde yineliyoruz ve bu şekilde devam ediyoruz.
 
-Bu örneğin, tek bir sorgu olarak yazılıp yazılmadığını ve bunun yaklaşık olarak gerçekleştiğini unutmayın. Her sorgu geç, ertelenmiş bir biçimde uygulandığından, sorgu yinelenene kadar her sorgu kendi sonuçlarını vermez. Yürütme ve yavaş değerlendirme hakkında daha fazla bilgi için bkz. [LINQ to XML ertelenmiş yürütme ve yavaş değerlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Bu örneğin, tek bir sorgu olarak yazılıp yazılmadığını ve bunun yaklaşık olarak gerçekleştiğini unutmayın. Her sorgu geç, ertelenmiş bir biçimde uygulandığından, sorgu yinelenene kadar her sorgu kendi sonuçlarını vermez. Yürütme ve yavaş değerlendirme hakkında daha fazla bilgi için bkz. [LINQ to XML ertelenmiş yürütme ve yavaş değerlendirme (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
 Sonraki bölümde WordprocessingML belgeleri hakkında daha fazla bilgi verilmektedir:
 
-- [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Saf Işlev kullanarak yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Saf Işlev kullanarak yeniden düzenleme (Visual Basic)](refactoring-using-a-pure-function.md)
+- [LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
