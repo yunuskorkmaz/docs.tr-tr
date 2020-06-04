@@ -11,12 +11,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 858f22df26d44f47848921ee862c1d4c1ca1fc60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414407"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic'de Sabitler ve Numaralandırmalar
 Sabitler, değişmez bir değer yerine anlamlı adlar kullanmanın bir yoludur. Adın gösterdiği gibi sabitler depolama değerleri, bir uygulamanın yürütülmesi boyunca sabit kalır. Sabitleri, sayılar yerine anlamlı adlar sağlamak için kullanabilirsiniz, böylece kodunuzun daha okunabilir olmasını sağlayabilirsiniz.  
@@ -27,15 +27,15 @@ Sabitler, değişmez bir değer yerine anlamlı adlar kullanmanın bir yoludur. 
   
 |Terim|Tanım|  
 |---|---|  
-|[Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Bu bölümdeki konularda sabitler ve kullanımları açıklanır.|  
-|[Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Bu bölümdeki konularda, numaralandırmalar ve kullanımları açıklanır.|  
+|[Sabitlere Genel Bakış](constants-overview.md)|Bu bölümdeki konularda sabitler ve kullanımları açıklanır.|  
+|[Sabit Listelerine Genel Bakış](enumerations-overview.md)|Bu bölümdeki konularda, numaralandırmalar ve kullanımları açıklanır.|  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
   
 |Terim|Tanım|  
 |---|---|  
-|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|Sabitleri bildirmek için kullanılan `Const` ifadesini açıklar.|  
-|[Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)|Numaralandırmalar oluşturmak için kullanılan `Enum` ifadesini açıklar.|  
-|[Option Explicit Deyimi](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Bu modüldeki tüm değişkenlerin açık bildirimini zorlamak için modül düzeyinde kullanılan `Option Explicit` ifadesini açıklar.|  
-|[Option Infer Deyimi](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Değişkenleri bildirirken yerel tür çıkarımı kullanımını sağlayan `Option Infer` ifadesini açıklar.|  
-|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Örtük veri türü dönüştürmelerini yalnızca genişletme dönüştürmelerine kısıtlayan, geç bağlamaya izin vermeyen ve `Object` bir tür ile sonuçlanan örtülü yazmaya izin vermeyen `Option Strict` ifadesini açıklar.|
+|[Const Deyimi](../../../language-reference/statements/const-statement.md)|`Const`Sabitleri bildirmek için kullanılan ifadesini açıklar.|  
+|[Enum Deyimi](../../../language-reference/statements/enum-statement.md)|`Enum`Numaralandırmalar oluşturmak için kullanılan ifadesini açıklar.|  
+|[Option Explicit Deyimi](../../../language-reference/statements/option-explicit-statement.md)|`Option Explicit`Bu modüldeki tüm değişkenlerin açık bildirimini zorlamak için modül düzeyinde kullanılan ifadesini açıklar.|  
+|[Option Infer Deyimi](../../../language-reference/statements/option-infer-statement.md)|`Option Infer`Değişkenleri bildirirken yerel tür çıkarımı kullanımını sağlayan ifadesini açıklar.|  
+|[Option Strict Deyimi](../../../language-reference/statements/option-strict-statement.md)|`Option Strict`Örtük veri türü dönüştürmelerini yalnızca genişletme dönüştürmelerine kısıtlayan, geç bağlamaya izin vermeyen ve bir tür ile sonuçlanan örtülü yazmaya izin vermeyen ifadesini açıklar `Object` .|

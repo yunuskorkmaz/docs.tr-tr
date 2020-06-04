@@ -1,20 +1,20 @@
 ---
-title: Dosya açma modu için geçerli bir değer ayarlanmadı
+title: Dosyanın açma modu geçerli bir değer olarak ayarlanmadı
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: e6dfae9b9bbe374b6779ea32a4653b6fbb81d89d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3eb41670ef5a45959588f5b22cae4bfc1a0a4b6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624903"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358431"
 ---
-# <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Dosya açma modu için geçerli bir değer ayarlanmadı
-Dosya açma modu için sağlanan değer geçerli değil. İçin geçerli değerler aşağıdaki tabloda gösterilmektedir <xref:Microsoft.VisualBasic.OpenMode> sabit listesi.  
+# <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Dosyanın açma modu geçerli bir değer olarak ayarlanmadı
+Dosyanın açma modu için sağlanan değer geçerli değil. Aşağıdaki tabloda, sabit listesi için geçerli değerler gösterilmektedir <xref:Microsoft.VisualBasic.OpenMode> .  
   
 |Değer|Mod|  
 |-----------|----------|  
-|1.|`OpenMode.Input`|  
+|1|`OpenMode.Input`|  
 |2|`OpenMode.Output`|  
 |4|`OpenMode.Random`|  
 |8|`OpenMode.Append`|  
@@ -22,10 +22,10 @@ Dosya açma modu için sağlanan değer geçerli değil. İçin geçerli değerl
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Dosya açma modu için sağlanmadığında değeri doğrulayın.  
+- Dosyanın açık modu için sağlanan değeri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [Dosyalardan Okuma](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Dosyalara Yazma](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Dosyalardan Okuma](../developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Dosyalara Yazma](../developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -2,12 +2,12 @@
 title: Ortak Öznitelikler
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353522"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400725"
 ---
 # <a name="common-attributes-visual-basic"></a>Ortak öznitelikler (Visual Basic)
 
@@ -23,9 +23,9 @@ Bu konuda Visual Basic programlarında en yaygın olarak kullanılan öznitelikl
 
 - [Visual Basic öznitelikleri](#VB)
 
-## <a name="Global"></a>Genel öznitelikler
+## <a name="global-attributes"></a><a name="Global"></a>Genel öznitelikler
 
-Çoğu öznitelik sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; Ancak, bazı öznitelikler geneldir, tüm derleme veya modül için geçerlidir. Örneğin, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği aşağıdaki gibi bir derlemeye sürüm bilgilerini eklemek için kullanılabilir:
+Çoğu öznitelik sınıflar veya yöntemler gibi belirli dil öğelerine uygulanır; Ancak, bazı öznitelikler geneldir, tüm derleme veya modül için geçerlidir. Örneğin, özniteliği aşağıdaki <xref:System.Reflection.AssemblyVersionAttribute> gibi bir derlemeye sürüm bilgisi eklemek için kullanılabilir:
 
 ```vb
 <Assembly: AssemblyVersion("1.0.0.0")>
@@ -43,7 +43,7 @@ Derleme öznitelikleri, bir derleme hakkında bilgi sağlayan değerlerdir. Bunl
 
 ### <a name="assembly-identity-attributes"></a>Bütünleştirilmiş kod kimliği öznitelikleri
 
-Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya derleme oluşturulduğunda derleme Bağlayıcısı (al. exe) tarafından ayarlanır. <xref:System.Reflection.AssemblyFlagsAttribute> özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.
+Üç öznitelik (varsa, güçlü bir ad varsa) bir derlemenin kimliğini belirleme: ad, sürüm ve kültür. Bu öznitelikler, derlemenin tam adını oluşturur ve kodda başvuru yaptığınızda gereklidir. Öznitelikleri kullanarak bir derlemenin sürümünü ve kültürünü ayarlayabilirsiniz. Bununla birlikte, ad değeri derleyici tarafından, derleme [bilgileri Iletişim kutusunda](/visualstudio/ide/reference/assembly-information-dialog-box)VISUAL Studio IDE veya derleme oluşturulduğunda derleme Bağlayıcısı (al. exe) tarafından ayarlanır. <xref:System.Reflection.AssemblyFlagsAttribute>Özniteliği, derlemenin birden çok kopyasının birlikte kullanılıp kullanılamayacağını belirtir.
 
 Aşağıdaki tabloda kimlik öznitelikleri gösterilmektedir.
 
@@ -56,7 +56,7 @@ Aşağıdaki tabloda kimlik öznitelikleri gösterilmektedir.
 
 ### <a name="informational-attributes"></a>Bilgilendirici öznitelikler
 
-Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan bilgilendirici öznitelikler gösterilmektedir.
+Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici öznitelikleri kullanabilirsiniz. Aşağıdaki tabloda, ad alanında tanımlanan bilgilendirici öznitelikler gösterilmektedir <xref:System.Reflection?displayProperty=nameWithType> .
 
 |Öznitelik|Amaç|
 |---------------|-------------|
@@ -70,7 +70,7 @@ Bir derlemeye ek şirket veya ürün bilgileri sağlamak için bilgilendirici ö
 
 ### <a name="assembly-manifest-attributes"></a>Bütünleştirilmiş kod bildirim öznitelikleri
 
-Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim özniteliklerini kullanabilirsiniz. Buna Başlık, açıklama, varsayılan diğer ad ve yapılandırma dahildir. Aşağıdaki tabloda <xref:System.Reflection?displayProperty=nameWithType> ad alanında tanımlanan derleme bildirimi öznitelikleri gösterilmektedir.
+Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim özniteliklerini kullanabilirsiniz. Buna Başlık, açıklama, varsayılan diğer ad ve yapılandırma dahildir. Aşağıdaki tabloda, ad alanında tanımlanan derleme bildirimi öznitelikleri gösterilmektedir <xref:System.Reflection?displayProperty=nameWithType> .
 
 |Öznitelik|Amaç|
 |---------------|-------------|
@@ -79,9 +79,9 @@ Derleme bildiriminde bilgi sağlamak için bütünleştirilmiş kod bildirim öz
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Derleme bildirimi için bir derleme yapılandırması (perakende veya hata ayıklama) belirten özel bir öznitelik tanımlar.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Bir derleme bildirimi için kolay bir varsayılan diğer ad tanımlar|
 
-## <a name="Obsolete"></a>Kullanımdan kaldırılmış öznitelik
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a>Kullanımdan kaldırılmış öznitelik
 
-`Obsolete` özniteliği, bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örneğin:
+`Obsolete`Özniteliği, bir program varlığını artık kullanım için önerilmeyen bir şekilde işaretler. Kullanımdan kalktı olarak işaretlenen bir varlığın her kullanımı, özniteliğin nasıl yapılandırıldığına bağlı olarak bir uyarı veya hata oluşturur. Örnek:
 
 ```vb
 <System.Obsolete("use class B")>
@@ -100,7 +100,7 @@ Class B
 End Class
 ```
 
-Bu örnekte `Obsolete` özniteliği sınıf `A` ve yönteme `B.OldMethod`uygulanır. `B.OldMethod` uygulanan öznitelik oluşturucusunun ikinci bağımsız değişkeni `true`olarak ayarlandığı için, bu yöntem bir derleyici hatasına neden olur, ancak sınıf `A` kullanılması yalnızca bir uyarı oluşturur. Ancak `B.NewMethod`çağırmak, hiçbir uyarı veya hata üretir.
+Bu örnekte, `Obsolete` özniteliği sınıfa `A` ve yöntemine uygulanır `B.OldMethod` . Öğesine uygulanan öznitelik oluşturucusunun ikinci bağımsız değişkeni `B.OldMethod` olarak ayarlandığından `true` , bu yöntem bir derleyici hatasına neden olur, ancak sınıf kullanımı `A` yalnızca bir uyarı oluşturur. Ancak çağırma, `B.NewMethod` hiçbir uyarı veya hata üretir.
 
 Öznitelik oluşturucusuna ilk bağımsız değişken olarak girilen dize, uyarının veya hatanın bir parçası olarak görüntülenir. Örneğin, önceki tanımlarla birlikte kullandığınızda, aşağıdaki kod iki uyarı ve bir hata oluşturur:
 
@@ -116,17 +116,17 @@ b.NewMethod()
 ' b.OldMethod()
 ```
 
-Sınıf `A` için iki uyarı oluşturulur: biri sınıf başvurusunun bildirimi ve diğeri sınıf oluşturucusu içindir.
+Sınıf için iki uyarı `A` oluşturulur: biri sınıf başvurusunun bildirimi ve diğeri sınıf oluşturucusu içindir.
 
-`Obsolete` özniteliği bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden kullanımdan kalkdığına ve bunun yerine ne tür bir açıklama dahil edilmesi önerilir.
+`Obsolete`Öznitelik bağımsız değişkenler olmadan kullanılabilir, ancak öğenin neden kullanımdan kalkdığına ve bunun yerine ne tür bir açıklama dahil edilmesi önerilir.
 
-`Obsolete` özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`, <xref:System.ObsoleteAttribute>için bir diğer addır.
+`Obsolete`Özniteliği tek kullanım özniteliğidir ve özniteliklere izin veren herhangi bir varlığa uygulanabilir. `Obsolete`, için bir diğer addır <xref:System.ObsoleteAttribute> .
 
-## <a name="Conditional"></a>Koşullu öznitelik
+## <a name="conditional-attribute"></a><a name="Conditional"></a>Koşullu öznitelik
 
-`Conditional` özniteliği, bir yöntemi ön işleme tanımlayıcısına bağımlı hale getirir. `Conditional` özniteliği <xref:System.Diagnostics.ConditionalAttribute>için bir diğer addır ve bir yönteme veya öznitelik sınıfına uygulanabilir.
+`Conditional`Özniteliği bir işlem ön işleme tanımlayıcısına bağımlı bir yöntemin yürütülmesini sağlar. `Conditional`Özniteliği için bir diğer addır <xref:System.Diagnostics.ConditionalAttribute> ve bir yönteme veya öznitelik sınıfına uygulanabilir.
 
-Bu örnekte, programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı bırakmak için bir yönteme `Conditional` uygulanır:
+Bu örnekte, `Conditional` programa özgü tanılama bilgilerinin görüntülenmesini etkinleştirmek veya devre dışı bırakmak için bir yönteme uygulanır:
 
 ```vb
 #Const TRACE_ON = True
@@ -148,9 +148,9 @@ Module TestConditionalAttribute
 End Module
 ```
 
-`TRACE_ON` tanımlayıcı tanımlanmamışsa, izleme çıktısı görüntülenmez.
+`TRACE_ON`Tanımlayıcı tanımlanmamışsa, hiçbir izleme çıkışı gösterilmez.
 
-`Conditional` özniteliği genellikle hata ayıklama derlemeleri için izleme ve günlüğe kaydetme özelliklerini etkinleştirmek üzere `DEBUG` tanımlayıcısı ile kullanılır, ancak bunun gibi sürüm yapılarında desteklenmez:
+`Conditional`Öznitelik, genellikle `DEBUG` hata ayıklama derlemeleri için izleme ve günlüğe kaydetme özelliklerini etkinleştirmek için tanımlayıcı ile birlikte kullanılır, ancak bunun gibi sürüm yapılarında desteklenmez:
 
 ```vb
 <Conditional("DEBUG")>
@@ -159,7 +159,7 @@ Shared Sub DebugMethod()
 End Sub
 ```
 
-Koşullu olarak işaretlenen bir yöntem çağrıldığında, belirtilen ön işleme simgesinin varlığı veya yokluğu, çağrının eklenip eklenmeyeceğini veya atlanmadığını belirler. Sembol tanımlanmışsa, çağrı dahil edilir; Aksi takdirde, çağrı atlanır. `Conditional` kullanmak, bir temizleyici, daha zarif ve `#if…#endif` bloklar içindeki yöntemlere benzer bir diğer hataya açık bir alternatiftir:
+Koşullu olarak işaretlenen bir yöntem çağrıldığında, belirtilen ön işleme simgesinin varlığı veya yokluğu, çağrının eklenip eklenmeyeceğini veya atlanmadığını belirler. Sembol tanımlanmışsa, çağrı dahil edilir; Aksi takdirde, çağrı atlanır. Kullanılarak, `Conditional` blokların içindeki yöntemlerin içine yerleştirilmesi için aşağıdaki gibi bir temizleyici, daha zarif ve daha az hataya açık bir alternatiftir `#if…#endif` :
 
 ```vb
 #If DEBUG Then
@@ -172,7 +172,7 @@ Koşullu Yöntem bir sınıf veya yapı bildiriminde bir yöntem olmalıdır ve 
 
 ### <a name="using-multiple-identifiers"></a>Birden çok tanımlayıcı kullanma
 
-Bir yöntemde birden çok `Conditional` özniteliği varsa, koşullu simgelerden en az biri tanımlanmışsa yönteme bir çağrı dahil edilir (başka bir deyişle, semboller OR işleci kullanılarak mantıksal olarak birbirlerine bağlanır). Bu örnekte, `A` ya da `B` varlığı bir yöntem çağrısına neden olur:
+Bir yöntemin birden çok `Conditional` özniteliği varsa, koşullu simgelerden en az biri tanımlanmışsa yöntemine bir çağrı dahil edilir (başka bir deyişle, semboller or işleci kullanılarak mantıksal olarak birbirlerine bağlanır). Bu örnekte, ya da birinin varlığı `A` `B` bir yöntem çağrısına neden olur:
 
 ```vb
 <Conditional("A"), Conditional("B")>
@@ -181,7 +181,7 @@ Shared Sub DoIfAorB()
 End Sub
 ```
 
-VE işlecini kullanarak sembolleri mantıksal olarak bağlama etkisini elde etmek için, seri koşullu yöntemleri tanımlayabilirsiniz. Örneğin, aşağıdaki ikinci yöntem yalnızca `A` ve `B` tanımlanmışsa yürütülür:
+VE işlecini kullanarak sembolleri mantıksal olarak bağlama etkisini elde etmek için, seri koşullu yöntemleri tanımlayabilirsiniz. Örneğin, aşağıdaki ikinci yöntem yalnızca `A` ve `B` tanımlanırsa yürütülür:
 
 ```vb
 <Conditional("A")>
@@ -197,7 +197,7 @@ End Sub
 
 ### <a name="using-conditional-with-attribute-classes"></a>Öznitelik sınıfları ile koşullu kullanma
 
-`Conditional` özniteliği bir öznitelik sınıfı tanımına da uygulanabilir. Bu örnekte, özel öznitelik `Documentation` yalnızca hata ayıklama tanımlanmışsa meta verilere bilgi ekler.
+`Conditional`Öznitelik, öznitelik sınıfı tanımına da uygulanabilir. Bu örnekte, özel öznitelik `Documentation` yalnızca hata ayıklama tanımlanmışsa meta verilere bilgi ekler.
 
 ```vb
 <Conditional("DEBUG")>
@@ -218,21 +218,21 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a>Arayan bilgileri öznitelikleri
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>Arayan bilgileri öznitelikleri
 
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını elde edebilirsiniz.
 
-Üye çağıran bilgilerini almak için, isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan bir değer belirtir. Aşağıdaki tabloda <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında tanımlanan çağıran bilgi öznitelikleri listelenmektedir:
+Üye çağıran bilgilerini almak için, isteğe bağlı parametrelere uygulanan öznitelikleri kullanırsınız. Her isteğe bağlı parametre varsayılan bir değer belirtir. Aşağıdaki tabloda, ad alanında tanımlanan arayan bilgileri öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :
 
-|Öznitelik|Açıklama|Type|
+|Öznitelik|Description|Tür|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanının yoludur.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Çağıranın Yöntem adı veya özellik adı. Daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Çağıranın Yöntem adı veya özellik adı. Daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../caller-information.md).|`String`|
 
-Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).
+Arayan bilgileri öznitelikleri hakkında daha fazla bilgi için bkz. [arayan bilgileri (Visual Basic)](../caller-information.md).
 
-## <a name="VB"></a>Visual Basic öznitelikleri
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic öznitelikleri
 
 Aşağıdaki tablo Visual Basic özgü öznitelikleri listeler.
 
@@ -245,15 +245,15 @@ Aşağıdaki tablo Visual Basic özgü öznitelikleri listeler.
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-Visual Basic COM bileşenleri oluşturma işlemini basitleştirmek için `COMClassAttribute` kullanın. COM nesneleri .NET Framework derlemelerinden oldukça farklıdır ve `COMClassAttribute`olmadan Visual Basic bir COM nesnesi oluşturmak için birkaç adımı izlemeniz gerekir. `COMClassAttribute`ile işaretlenmiş sınıflar için, derleyici bu adımların çoğunu otomatik olarak gerçekleştirir.
+`COMClassAttribute`VISUAL BASIC com bileşenleri oluşturma işlemini basitleştirmek için kullanın. COM nesneleri .NET Framework derlemelerinden oldukça farklıdır ve olmadan `COMClassAttribute` , Visual Basic BIR com nesnesi oluşturmak için birkaç adımı izlemeniz gerekir. İle işaretlenen sınıflar için `COMClassAttribute` , derleyici bu adımların çoğunu otomatik olarak gerçekleştirir.
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-Modül üyelerine yalnızca modül için gereken nitelik kullanılarak erişilmesine izin vermek için `HideModuleNameAttribute` kullanın.
+Modül `HideModuleNameAttribute` üyelerine yalnızca modül için gereken nitelik kullanılarak erişilmesine izin vermek için kullanın.
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-Visual Basic sabit uzunluklu bir dize oluşturmaya zorlamak için `VBFixedStringAttribute` kullanın. Dizeler varsayılan olarak değişken uzunluktadır ve bu öznitelik, dizeleri dosyalara depolarken yararlı olur. Aşağıdaki kod bunu gösterir:
+`VBFixedStringAttribute`Visual Basic sabit uzunluklu bir dize oluşturacak şekilde zorlamak için kullanın. Dizeler varsayılan olarak değişken uzunluktadır ve bu öznitelik, dizeleri dosyalara depolarken yararlı olur. Aşağıdaki kod bunu gösterir:
 
 ```vb
 Structure Worker
@@ -267,13 +267,13 @@ End Structure
 
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute
 
-Boyut olarak düzeltilen dizileri bildirmek için `VBFixedArrayAttribute` kullanın. Visual Basic dizeleri gibi diziler, varsayılan olarak değişken uzunluktadır. Bu öznitelik, dosyalara veri serileştirilirken veya verileri yazarken faydalıdır.
+`VBFixedArrayAttribute`Boyut olarak düzeltilen dizileri bildirmek için kullanın. Visual Basic dizeleri gibi diziler, varsayılan olarak değişken uzunluktadır. Bu öznitelik, dosyalara veri serileştirilirken veya verileri yazarken faydalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programlama Kılavuzu](../../index.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)
-- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Yansıma (Visual Basic)](../reflection.md)
+- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](accessing-attributes-by-using-reflection.md)

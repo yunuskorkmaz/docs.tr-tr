@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: ad0d0e81f94dd3dead50f21c3bd6ff580c004dd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0fb3e137010390097a68aea161efcff93839d94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346050"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414343"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Nasıl yapılır: Bir Özelliğe Değer Ekleme (Visual Basic)
 Özellik adını atama ifadesinin sol tarafına yerleştirerek bir özelliği bir değer depoluyorsanız.  
   
- Özelliğin `Set` yordamı bir değeri depolar, ancak bunu açıkça adıyla çağırmayın. Özelliğini, bir değişkeni kullandığınız gibi kullanırsınız. Visual Basic, özelliğin yordamlarına çağrı yapar.  
+ Özelliğin `Set` yordamı bir değer depolar, ancak bunu açıkça adıyla çağırmayın. Özelliğini, bir değişkeni kullandığınız gibi kullanırsınız. Visual Basic, özelliğin yordamlarına çağrı yapar.  
   
 ### <a name="to-store-a-value-in-a-property"></a>Bir özelliğinde bir değeri depolamak için  
   
 1. Atama ifadesinin sol tarafındaki özellik adını kullanın.  
   
-     Aşağıdaki örnek, `Set` yordamını örtülü olarak çağırarak Visual Basic `TimeOfDay` özelliğinin değerini öğle olarak ayarlar.  
+     Aşağıdaki örnek, `TimeOfDay` yordamını dolaylı olarak çağıran Visual Basic özelliğinin değerini öğle olarak ayarlar `Set` .  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
@@ -39,10 +39,10 @@ ms.locfileid: "74346050"
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic Özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Property Deyimi](../../../language-reference/statements/property-statement.md)
+- [Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar](./differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
 - [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)
-- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

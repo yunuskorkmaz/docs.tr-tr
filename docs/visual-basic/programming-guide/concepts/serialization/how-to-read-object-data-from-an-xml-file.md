@@ -2,15 +2,15 @@
 title: 'Nasıl Yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: efd5fb72487c92bcccf1fc797106f93c0d2a39fc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7097ec146987aea7855da40dd30f9cd3c17d8ce4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345989"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413173"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Nasıl yapılır: bir XML dosyasından nesne verilerini okuma (Visual Basic)
-Bu örnek, daha önce <xref:System.Xml.Serialization.XmlSerializer> sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur.  
+Bu örnek, daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Örnek  
   
@@ -29,8 +29,8 @@ Public Sub ReadXML()
 End Sub  
 ```  
   
-## <a name="compile-the-code"></a>Kod derleme  
- "C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri serileştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: nesne verilerini BIR XML dosyasına yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+## <a name="compile-the-code"></a>Kodu derle  
+ "C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin. Verileri serileştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: nesne verilerini BIR XML dosyasına yazma (Visual Basic)](how-to-write-object-data-to-an-xml-file.md).  
   
  Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.  
   
@@ -43,7 +43,7 @@ End Sub
   
 - Dosyadaki veriler, seri durumdan çıkarılacak sınıftan verileri temsil etmez.  
   
-- Dosya yok (<xref:System.IO.IOException>).  
+- Dosya yok ( <xref:System.IO.IOException> ).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktaki verileri hiçbir zaman serisini kaldırma. Yeniden oluşturulan nesne, yerel bir bilgisayarda, serisi kaldırılan kodun izinleriyle çalışır. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
@@ -51,6 +51,6 @@ End Sub
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IO.StreamWriter>
-- [Nasıl yapılır: nesne verilerini bir XML dosyasına yazma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-- [Serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Nasıl yapılır: nesne verilerini bir XML dosyasına yazma (Visual Basic)](how-to-write-object-data-to-an-xml-file.md)
+- [Serileştirme (Visual Basic)](index.md)
+- [Visual Basic Programlama Kılavuzu](../../index.md)

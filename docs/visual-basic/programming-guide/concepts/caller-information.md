@@ -2,26 +2,26 @@
 title: Arayan Bilgileri
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349469"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400674"
 ---
 # <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
   
- Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanında tanımlanan çağıran bilgi öznitelikleri listelenmektedir:  
+ Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda, ad alanında tanımlanan arayan bilgileri öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :  
   
-|Öznitelik|Açıklama|Type|  
+|Öznitelik|Description|Tür|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanındaki dosya yoludur.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. Bu konunun devamındaki [üye adları](#MEMBERNAMES) bölümüne bakın.|`String`|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. `TraceMessage` yöntemine yapılan her çağrıda, çağıran bilgileri isteğe bağlı parametrelere bağımsız değişkenler olarak değiştirilir.  
+ Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. Yöntemine yapılan her çağrıda `TraceMessage` , çağıran bilgileri isteğe bağlı parametrelere bağımsız değişkenler olarak değiştirilir.  
   
 ```vb  
 Private Sub DoProcessing()  
@@ -51,18 +51,18 @@ End Sub
   
  Arayan Bilgisi öznitelikleri, bir parametreyi isteğe bağlı hale getirmez. Bunun yerine, bağımsız değişken atlandığında geçirilen varsayılan değeri etkilerler.  
   
- Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. Özel durumlar için <xref:System.Exception.StackTrace%2A> özelliğinin sonuçlarının aksine, sonuçlar gizleme tarafından etkilenmez.  
+ Arayan Bilgisi değerleri, derleme zamanında Ara Dile (IL) değişmez değerler olarak verilir. <xref:System.Exception.StackTrace%2A>Özel durumlar için özellik sonuçlarının aksine, sonuçlar gizleme tarafından etkilenmez.  
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-### <a name="MEMBERNAMES"></a>Üye adları  
- Üyenin adını çağrılan metoda bir `String` bağımsız değişkeni olarak belirtmekten kaçınmak için `CallerMemberName` özniteliğini kullanabilirsiniz. Bu tekniği kullanarak, **yeniden düzenlemeyi yeniden adlandırma** sorununun `String` değerleri değiştirmediğini önleyin. Bu, özellikle aşağıdaki görevler için yararlı olur:  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>Üye adları  
+ `CallerMemberName`Özniteliği, çağrılan yönteme bir bağımsız değişken olarak üye adını belirtmekten kaçınmak için kullanabilirsiniz `String` . Bu tekniği kullanarak **yeniden düzenlemeyi yeniden adlandırma** sorunu, `String` değerleri değiştirmez. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 - İzleme ve tanılama yordamlarını kullanma.  
   
-- Verileri bağlarken <xref:System.ComponentModel.INotifyPropertyChanged> arabirimini uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. `CallerMemberName` özniteliği olmadan, özellik adını bir sabit değer olarak belirtmeniz gerekir.  
+- <xref:System.ComponentModel.INotifyPropertyChanged>Verileri bağlarken arabirimi uygulama. Bu arabirim, bir nesnenin özelliğinin bağlama denetimine özelliğin değiştirildiğini bildirmesini ve böylece denetimin güncelleştirilmiş bilgileri görüntüleyebilmesini sağlar. Özniteliği olmadan `CallerMemberName` , özellik adını bir sabit değer olarak belirtmeniz gerekir.  
   
- Aşağıdaki grafikte `CallerMemberName` özniteliğini kullandığınızda döndürülen üye adları gösterilmektedir.  
+ Aşağıdaki grafikte, özniteliğini kullandığınızda döndürülen üye adları gösterilmektedir `CallerMemberName` .  
   
 |Çağrının oluştuğu yer|Üye adı sonucu|  
 |-------------------------|------------------------|  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öznitelikler (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Ortak öznitelikler (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
-- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Programlama kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Öznitelikler (Visual Basic)](../../language-reference/attributes.md)
+- [Ortak öznitelikler (Visual Basic)](attributes/common-attributes.md)
+- [İsteğe Bağlı Parametreler](../language-features/procedures/optional-parameters.md)
+- [Programlama kavramları (Visual Basic)](index.md)

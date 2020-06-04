@@ -1,25 +1,25 @@
 ---
-title: Bağımsız değişken '<argumentname>' -1'e eşit veya 0'dan büyük olmalıdır
+title: "' ' Bağımsız değişkeni <argumentname> 0 ' dan büyük veya-1 ' e eşit olmalıdır"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
-ms.openlocfilehash: 789bed10022d38eb9b88cadfdffeb78be444e0fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74a1c04cca7a6941600b0bb280d3de7e983a20fc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025190"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412864"
 ---
-# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Bağımsız değişken '\<argumentname >' -1'e eşit veya 0'dan büyük olmalıdır
-Bir bağımsız değişkenin değeri 0'dan küçük ancak -1 değerine eşit değildir.  
+# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>' ' Bağımsız değişkeni \<argumentname> 0 ' dan büyük veya-1 ' e eşit olmalıdır
+Bağımsız değişkenin değeri 0 ' dan küçük ancak-1 ' e eşit değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Bağımsız değişkenin değeri geçerli aralıkta olduğundan emin olun.  
+1. Bağımsız değişkenin değerinin geçerli Aralık içinde olduğundan emin olun.  
   
-2. Bağımsız değişken bir hesaplamanın sağlanırsa, hesaplama işlemleri değerleri kontrol edin.  
+2. Bağımsız değişken bir hesaplama tarafından sağlandıysa, hesaplama işlemlerinin değerlerini kontrol edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

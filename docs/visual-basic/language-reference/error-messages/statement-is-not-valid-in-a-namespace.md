@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 3110241d2c10c3018b2144dbc8234a9b6633e0c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e83fda1a7e58cceb86bbd3e700a25b70be96587
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593255"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400337"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Deyim ad alanında geçerli değil
-Bir ad alanı düzeyinde deyimi yer alamaz. Ad alanı düzeyinde izin yalnızca modülü, arabirim, sınıf, temsilci, numaralandırma ve yapı bildirimleri bildirimlerdir.  
+İfade, bir ad alanı düzeyinde görünemez. Ad alanı düzeyinde izin verilen tek bildirimler Module, Interface, Class, Delegate, Enumeration ve Structure bildirimlerdir.  
   
- **Hata Kimliği:** BC30001  
+ **Hata kimliği:** BC30001  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Deyim, bir modülü, sınıf, arabirim, yapısı, sabit listesi veya temsilci tanımı içinde bir konuma taşıyın.  
+- İfadeyi modül, sınıf, arabirim, yapı, numaralandırma veya temsilci tanımı içindeki bir konuma taşıyın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de kapsam](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic'de Kapsam](../../programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de Ad Alanları](../../programming-guide/program-structure/namespaces.md)

@@ -1,54 +1,54 @@
 ---
-title: 'Nasıl yapılır: Numaralandırmalar bildirme'
+title: 'Nasıl yapılır: Bir Sabit Listesi Bildirme'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 042aea045313bcaf3832274acf1000f87a084b72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354052"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414459"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)
-Bir sınıfın veya modülün Bildirimler bölümünde `Enum` ifadesiyle bir numaralandırma oluşturursunuz. Bir yöntem içinde bir numaralandırma bildiremezsiniz. Uygun erişim düzeyini belirtmek için `Private`, `Protected`, `Friend`veya `Public`kullanın.  
+`Enum`Bir sınıfın veya modülün Bildirimler bölümünde ifadesiyle bir numaralandırma oluşturursunuz. Bir yöntem içinde bir numaralandırma bildiremezsiniz. Uygun erişim düzeyini belirtmek için,, veya kullanın `Private` `Protected` `Friend` `Public` .  
   
- `Enum` türü, her biri bir sabiti temsil eden bir ada, temel alınan türe ve bir alan kümesine sahiptir. Ad geçerli bir .NET niteleyicisi olmalıdır Visual Basic. Temel alınan tür tamsayı türlerinden biri olmalıdır —`Byte`, `Short`, `Long` veya `Integer`. `Integer` varsayılandır. Numaralandırmalar her zaman kesin olarak türlidir ve tamsayı sayı türleriyle birlikte değiştirilebilir değildir.  
+ Bir `Enum` tür, her biri bir sabiti temsil eden bir ad, temel tür ve bir alan kümesi içerir. Ad geçerli bir .NET niteleyicisi olmalıdır Visual Basic. Temel alınan tür tamsayı türlerinden biri olmalıdır — `Byte` , `Short` , `Long` veya `Integer` . `Integer` varsayılan değerdir. Numaralandırmalar her zaman kesin olarak türlidir ve tamsayı sayı türleriyle birlikte değiştirilebilir değildir.  
   
- Numaralandırmalar kayan nokta değerlerine sahip olamaz. Bir numaralandırmaya `Option Strict On`bir kayan nokta değeri atanırsa bir derleyici hatası oluşur. `Option Strict` `Off`ise, değer otomatik olarak `Enum` türüne dönüştürülür.  
+ Numaralandırmalar kayan nokta değerlerine sahip olamaz. Bir numaralandırma ile bir kayan nokta değeri atanırsa bir `Option Strict On` derleyici hatası oluşur. `Option Strict`İse `Off` , değer otomatik olarak `Enum` türüne dönüştürülür.  
   
- Adlar hakkında bilgi edinmek ve ad nitelemesini gereksiz hale getirmek için `Imports` deyimin nasıl kullanılacağını öğrenmek için bkz. [numaralandırmalar ve ad niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md).  
+ Adlar hakkında bilgi edinmek ve bu `Imports` deyimin ad nitelemesini gereksiz hale getirmek için nasıl kullanılacağını öğrenmek için bkz. [numaralandırmalar ve ad niteliği](enumerations-and-name-qualification.md).  
   
 ### <a name="to-declare-an-enumeration"></a>Bir numaralandırma bildirmek için  
   
-1. Her biri farklı bir `Enum`bildiren aşağıdaki örneklerde olduğu gibi, kod erişim düzeyi, `Enum` anahtar sözcüğünü ve geçerli bir adı içeren bir bildirim yazın.  
+1. Her biri farklı bildiren bir kod erişim düzeyi, `Enum` anahtar sözcük ve geçerli bir ad içeren bir bildirim yazın `Enum` .  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. Sabit Listesi içindeki sabitleri tanımlayın. Varsayılan olarak, bir Numaralandırmadaki ilk sabit `0`olarak başlatılır ve sonraki sabitler önceki sabitten bir değere başlatılır. Örneğin, aşağıdaki sabit listesi `Days`, değer `0`, `1`değeri ile `Monday` adlı bir sabit, `Tuesday` değeri ile `2`adlı bir sabit olan `Sunday` adında bir sabit içerir.  
+2. Sabit Listesi içindeki sabitleri tanımlayın. Varsayılan olarak, bir Numaralandırmadaki ilk sabit olarak başlatılır `0` ve sonraki sabitler önceki sabitten bir değere başlatılır. Örneğin, aşağıdaki sabit listesi, `Days` değeri ile adlandırılmış bir sabit, değeri ile adlandırılmış bir sabit, `Sunday` `0` `Monday` `1` `Tuesday` ve değeri ile adlandırılmış `2` bir sabit içerir.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. Atama ifadesini kullanarak, bir Numaralandırmadaki sabitlere açıkça değer atayabilirsiniz. Negatif sayılar da dahil olmak üzere herhangi bir tamsayı değeri atayabilirsiniz. Örneğin, hata koşullarını temsil etmek için sıfırdan küçük değerler içeren sabitlerin olmasını isteyebilirsiniz. Aşağıdaki numaralandırmada, sabit `Invalid` `–1`değeri açıkça atanır ve sabit `Sunday` `0`değer atanır. Numaralandırmadaki ilk sabit olduğundan, `Saturday` `0`değer olarak da başlatılır. `Monday` değeri `1` (`Sunday`değerinden bir daha fazla); `Tuesday` değeri `2`ve bu şekilde devam eder.  
+3. Atama ifadesini kullanarak, bir Numaralandırmadaki sabitlere açıkça değer atayabilirsiniz. Negatif sayılar da dahil olmak üzere herhangi bir tamsayı değeri atayabilirsiniz. Örneğin, hata koşullarını temsil etmek için sıfırdan küçük değerler içeren sabitlerin olmasını isteyebilirsiniz. Aşağıdaki numaralandırmada, sabit `Invalid` değere açıkça atanır `–1` ve sabit `Sunday` değere atanır `0` . Numaralandırmadaki ilk sabit olduğundan, `Saturday` değer olarak da başlatılır `0` . Değeri (değerinden `Monday` `1` bir daha fazla `Sunday` ); değeri `Tuesday` `2` , vb. olur.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Bir sabit listesini açık bir tür olarak bildirmek için  
   
-- Aşağıdaki örnekte gösterildiği gibi, `As` yan tümcesini kullanarak enum türünü belirtin.  
+- `As`Aşağıdaki örnekte gösterildiği gibi yan tümcesini kullanarak enum türünü belirtin.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabit Listeleri ve Ad Niteliği](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [Nasıl yapılır: Visual Basic bir numaralandırmada yineleme yapma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [Sabit Listesi Ne Zaman Kullanılır?](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [Sabitlere Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
-- [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)
+- [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](how-to-refer-to-an-enumeration-member.md)
+- [Nasıl yapılır: Visual Basic'de Numaralandırma Yoluyla Yineleme Yapma](how-to-iterate-through-an-enumeration.md)
+- [Nasıl yapılır: Bir Numaralandırma Değeriyle İlişkili Dizeyi Belirleme](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Sabit Listesi Ne Zaman Kullanılır?](when-to-use-an-enumeration.md)
+- [Sabitlere Genel Bakış](constants-overview.md)
+- [Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)
+- [Sabitler ve numaralandırmalar](../../../language-reference/constants-and-enumerations.md)

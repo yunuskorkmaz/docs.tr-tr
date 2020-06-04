@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1d2d5adc7266faaa1636e568d6433429761eeaab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346775"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414549"
 ---
 # <a name="collection-initializers-visual-basic"></a>Koleksiyon Başlatıcıları (Visual Basic)
 
-*Koleksiyon başlatıcıları* , bir koleksiyon oluşturmanızı ve bir ilk değer kümesiyle doldurmanızı sağlayan kısaltılmış bir sözdizimi sağlar. Koleksiyon başlatıcıları, bir dizi bilinen değerden (örneğin, bir menü seçenekleri veya Kategoriler listesi, bir ilk sayısal değerler kümesi, gün veya ay adları gibi) statik bir liste veya bir gibi coğrafi konumlar oluştururken faydalıdır. doğrulama için kullanılan durumların listesi.
+*Koleksiyon başlatıcıları* , bir koleksiyon oluşturmanızı ve bir ilk değer kümesiyle doldurmanızı sağlayan kısaltılmış bir sözdizimi sağlar. Koleksiyon başlatıcıları, bir dizi bilinen değerden koleksiyon oluştururken (örneğin, menü seçenekleri veya kategorilerinin bir listesi, bir ilk sayısal değerler kümesi, gün veya ay adları gibi) statik bir liste veya doğrulama için kullanılan durumların listesi gibi coğrafi konumlar için yararlıdır.
 
-Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonlar](../../../../visual-basic/programming-guide/concepts/collections.md).
+Koleksiyonlar hakkında daha fazla bilgi için bkz. [koleksiyonlar](../../concepts/collections.md).
 
-`From` anahtar sözcüğünü ve ardından küme ayraçlarını (`{}`) kullanarak bir koleksiyon başlatıcısı belirlersiniz. Bu, [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)bölümünde açıklanan dizi değişmez sözdizimine benzerdir. Aşağıdaki örneklerde Koleksiyonlar oluşturmak için koleksiyon başlatıcıları kullanmanın çeşitli yolları gösterilmektedir.
+Anahtar ayracını `From` ve ardından kaşlı ayraçları kullanarak bir koleksiyon başlatıcısı belirlersiniz `{}` . Bu, [diziler](../arrays/index.md)bölümünde açıklanan dizi değişmez sözdizimine benzerdir. Aşağıdaki örneklerde Koleksiyonlar oluşturmak için koleksiyon başlatıcıları kullanmanın çeşitli yolları gösterilmektedir.
 
 [!code-vb[VbVbalrCollectionInitializers#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#1)]
 
 > [!NOTE]
-> C#Ayrıca koleksiyon başlatıcıları sağlar. C#Koleksiyon Başlatıcıları Visual Basic koleksiyonu başlatıcıları ile aynı işlevleri sağlar. Koleksiyon Başlatıcıları hakkında C# daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
+> C# Ayrıca koleksiyon başlatıcıları sağlar. C# koleksiyon başlatıcıları Visual Basic koleksiyonu başlatıcılarına benzer işlevleri sağlar. C# koleksiyon başlatıcıları hakkında daha fazla bilgi için bkz. [nesne ve koleksiyon başlatıcıları](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).
 
 ## <a name="syntax"></a>Sözdizimi
 
-Bir koleksiyon başlatıcısı, aşağıdaki kodda gösterildiği gibi, önce `From` anahtar sözcüğünün önünde yer alan (`{}`) parantez içine alınmış bir virgülle ayrılmış değerler listesinden oluşur.
+Bir koleksiyon başlatıcısı, `{}` `From` aşağıdaki kodda gösterildiği gibi, önünde anahtar sözcüğünden sonra gelen ve ayraç () içine alınmış bir virgülle ayrılmış değerler listesinden oluşur.
 
 [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]
 
-<xref:System.Collections.Generic.List%601> veya <xref:System.Collections.Generic.Dictionary%602>gibi bir koleksiyon oluşturduğunuzda, aşağıdaki kodda gösterildiği gibi koleksiyon başlatıcıdan önce koleksiyon türünü sağlamanız gerekir.
+Veya gibi bir koleksiyon oluşturduğunuzda <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> , aşağıdaki kodda gösterildiği gibi koleksiyon başlatıcıdan önce koleksiyon türünü sağlamanız gerekir.
 
 [!code-vb[VbVbalrCollectionInitializers#13](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#13)]
 
@@ -41,15 +41,15 @@ Bir koleksiyon başlatıcısı, aşağıdaki kodda gösterildiği gibi, önce `F
 
 ## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Koleksiyon Başlatıcısı kullanarak koleksiyon oluşturma
 
-Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturduğunuzda, koleksiyon başlatıcısında sağlanan her bir değer koleksiyonun uygun `Add` yöntemine geçirilir. Örneğin, bir koleksiyon başlatıcısı kullanarak bir <xref:System.Collections.Generic.List%601> oluşturursanız, koleksiyon başlatıcısındaki her bir dize değeri <xref:System.Collections.Generic.List%601.Add%2A> yöntemine geçirilir. Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturmak istiyorsanız, belirtilen tür geçerli bir koleksiyon türü olmalıdır. Geçerli koleksiyon türü örnekleri, <xref:System.Collections.Generic.IEnumerable%601> arabirimini uygulayan veya <xref:System.Collections.CollectionBase> sınıfını devraldığı sınıfları içerir. Belirtilen tür Ayrıca aşağıdaki ölçütleri karşılayan bir `Add` yöntemi kullanıma sunmalıdır.
+Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturduğunuzda, koleksiyon başlatıcısında sağlanan her bir değer `Add` koleksiyonun uygun yöntemine geçirilir. Örneğin, bir <xref:System.Collections.Generic.List%601> koleksiyon başlatıcısı kullanarak bir oluşturursanız, koleksiyon başlatıcısındaki her bir dize değeri <xref:System.Collections.Generic.List%601.Add%2A> yöntemine geçirilir. Koleksiyon Başlatıcısı kullanarak bir koleksiyon oluşturmak istiyorsanız, belirtilen tür geçerli bir koleksiyon türü olmalıdır. Geçerli koleksiyon türü örnekleri, <xref:System.Collections.Generic.IEnumerable%601> arabirimini uygulayan veya sınıfını devraldığı sınıfları içerir <xref:System.Collections.CollectionBase> . Belirtilen tür Ayrıca `Add` aşağıdaki ölçütlere uyan bir yöntemi kullanıma sunmalıdır.
 
-- `Add` yöntemi, koleksiyon başlatıcısının çağrıldığı kapsamdan kullanılabilir olmalıdır. Koleksiyon Başlatıcısı, koleksiyonun genel olmayan metotlarına erişilebildiği bir senaryoda kullanıyorsanız, `Add` yönteminin ortak olması gerekmez.
+- `Add`Yöntemi, koleksiyon başlatıcısının çağrıldığı kapsamdan kullanılabilir olmalıdır. Koleksiyon `Add` başlatıcısı, koleksiyonun genel olmayan metotlarına erişilebilen bir senaryoda kullanılıyorsa, yöntemin ortak olması gerekmez.
 
-- `Add` yöntemi, koleksiyon sınıfının veya bir uzantı yönteminin bir örnek üyesi veya `Shared` üyesi olmalıdır.
+- `Add`Yöntem bir örnek üyesi veya `Shared` koleksiyon sınıfının üyesi ya da bir genişletme yöntemi olmalıdır.
 
-- Bir `Add` yöntemi, aşırı yükleme çözümleme kurallarına göre, koleksiyon başlatıcısında sağlanan türlere göre eşleştirileceği olmalıdır.
+- Bir `Add` Yöntem, aşırı yükleme çözümleme kurallarına göre, koleksiyon başlatıcısında sağlanan türlere göre eşleştirileceği olmalıdır.
 
- Örneğin, aşağıdaki kod örneği, bir koleksiyon başlatıcısı kullanarak bir `List(Of Customer)` koleksiyonunun nasıl oluşturulacağını göstermektedir. Kod çalıştırıldığında, her `Customer` nesnesi genel listesinin `Add(Customer)` yöntemine geçirilir.
+ Örneğin, aşağıdaki kod örneği `List(Of Customer)` bir koleksiyon başlatıcısı kullanarak nasıl koleksiyon oluşturulacağını göstermektedir. Kod çalıştırıldığında, her `Customer` nesne `Add(Customer)` genel liste yöntemine geçirilir.
 
 [!code-vb[VbVbalrCollectionInitializers#9](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#9)]
 
@@ -57,13 +57,13 @@ Aşağıdaki kod örneği, bir koleksiyon başlatıcısı kullanmayan denk kodu 
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-Koleksiyonda, `Customer` nesnesinin oluşturucusuyla eşleşen parametrelere sahip bir `Add` yöntemi varsa, sonraki bölümde anlatıldığı gibi koleksiyon başlatıcıları içindeki `Add` yönteminin parametre değerlerini iç içe geçirebilirsiniz. Koleksiyonda böyle bir `Add` yöntemi yoksa, bir uzantı yöntemi olarak bir tane oluşturabilirsiniz. Bir koleksiyon için uzantı yöntemi olarak `Add` yönteminin nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: koleksiyon başlatıcısı tarafından kullanılan bir uzantı ekleme yöntemi](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)oluşturma. Bir koleksiyon başlatıcısıyla kullanılabilecek özel bir koleksiyonun nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: koleksiyon başlatıcısı tarafından kullanılan koleksiyon oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+Koleksiyonda `Add` nesnenin oluşturucusuyla eşleşen parametrelere sahip bir yöntem varsa `Customer` , `Add` sonraki bölümde açıklandığı gibi, yöntemin parametre değerlerini koleksiyon başlatıcıları içinde iç içe geçirebilirsiniz. Koleksiyonda böyle bir `Add` Yöntem yoksa, bir uzantı yöntemi olarak bir tane oluşturabilirsiniz. `Add`Bir koleksiyon için uzantı yöntemi olarak bir yöntemin nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: koleksiyon başlatıcısı tarafından kullanılan bir uzantı ekleme yöntemi oluşturma](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Bir koleksiyon başlatıcısıyla kullanılabilecek özel bir koleksiyonun nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: koleksiyon başlatıcısı tarafından kullanılan koleksiyon oluşturma](how-to-create-a-collection-used-by-a-collection-initializer.md).
 
 ## <a name="nesting-collection-initializers"></a>Koleksiyon Başlatıcıları iç içe
 
-Oluşturulan koleksiyon için bir `Add` yönteminin belirli bir aşırı yüklemesini tanımlamak üzere değerleri bir koleksiyon başlatıcısı içinde iç içe geçirebilirsiniz. `Add` yöntemine geçirilen değerler, bir dizi sabit değerinde veya koleksiyon başlatıcısında yaptığınız gibi, virgülle ayrılmalıdır ve küme ayracı (`{}`) içine alınmalıdır.
+Oluşturulan koleksiyon için bir yöntemin belirli bir aşırı yüklemesini tanımlamak üzere değerleri bir koleksiyon başlatıcısı içinde iç içe geçirebilirsiniz `Add` . Yöntemine geçirilen değerler, `Add` `{}` bir dizi sabit değerinde veya koleksiyon başlatıcısında yaptığınız gibi, virgülle ayrılmalıdır ve küme ayracı () içine alınmalıdır.
 
-İç içe geçmiş değerleri kullanarak bir koleksiyon oluşturduğunuzda, iç içe değer listesinin her bir öğesi, öğe türleriyle eşleşen `Add` metoduna bir bağımsız değişken olarak geçirilir. Örneğin, aşağıdaki kod örneği, anahtarların `Integer` türünde olduğu ve değerler `String`türünde olduğu bir <xref:System.Collections.Generic.Dictionary%602> oluşturur. İç içe değer listelerinin her biri, `Dictionary`<xref:System.Collections.Generic.Dictionary%602.Add%2A> yöntemiyle eşleştirilir.
+İç içe değerler kullanarak bir koleksiyon oluşturduğunuzda, iç içe değer listesindeki her öğe, `Add` öğe türleriyle eşleşen yönteme bir bağımsız değişken olarak geçirilir. Örneğin, aşağıdaki kod örneği, <xref:System.Collections.Generic.Dictionary%602> içinde anahtarların türü olan `Integer` ve değerleri türünde olan bir oluşturur `String` . İç içe değer listelerinin her biri <xref:System.Collections.Generic.Dictionary%602.Add%2A> , için yöntemiyle eşleştirilir `Dictionary` .
 
 [!code-vb[VbVbalrCollectionInitializers#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#5)]
 
@@ -71,24 +71,24 @@ Oluşturulan koleksiyon için bir `Add` yönteminin belirli bir aşırı yüklem
 
 [!code-vb[VbVbalrCollectionInitializers#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#6)]
 
-İç içe geçme düzeyinden yalnızca iç içe geçmiş değer listeleri, koleksiyon türü için `Add` metoduna gönderilir. İç içe geçme düzeyleri dizi değişmez değerleri olarak değerlendirilir ve iç içe değer listeleri herhangi bir koleksiyonun `Add` yöntemiyle eşleştirilmez.
+İç içe geçme düzeyinden yalnızca iç içe geçmiş değer listeleri, `Add` koleksiyon türü için metoduna gönderilir. İç içe geçme düzeyleri dizi değişmez değerleri olarak değerlendirilir ve iç içe değer listeleri `Add` herhangi bir koleksiyonun yöntemiyle eşleştirilmez.
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |---|---|
-|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Koleksiyonu bir koleksiyon başlatıcısındaki değerlerle doldurmak için kullanılabilecek `Add` adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.|
-|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable`uygulayan bir koleksiyon sınıfına bir `Add` yöntemi ekleyerek koleksiyon başlatıcısı 'nın nasıl kullanılacağını gösterir.|
+|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|`Add`Bir koleksiyonu bir koleksiyon başlatıcısındaki değerlerle doldurmak için kullanılabilecek adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.|
+|[Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](how-to-create-a-collection-used-by-a-collection-initializer.md)|Uygulayan bir koleksiyon sınıfına bir yöntem ekleyerek bir koleksiyon başlatıcısı kullanımını nasıl etkinleştireceğinizi gösterir `Add` `IEnumerable` .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Koleksiyonlar](../../../../visual-basic/programming-guide/concepts/collections.md)
-- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Otomatik Uygulanan Özellikler](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Nasıl yapılır: Visual Basic dizi değişkenini başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Nasıl yapılır: Öğe Listesi Oluşturma](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Koleksiyonlar](../../concepts/collections.md)
+- [Diziler](../arrays/index.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](../objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New Işleci](../../../language-reference/operators/new-operator.md)
+- [Otomatik Uygulanan Özellikler](../procedures/auto-implemented-properties.md)
+- [Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma](../arrays/how-to-initialize-an-array-variable.md)
+- [Yerel Tür Arabirimi](../variables/local-type-inference.md)
+- [Anonim Türler](../objects-and-classes/anonymous-types.md)
+- [Visual Basic'de LINQ'e Giriş](../linq/introduction-to-linq.md)
+- [Nasıl yapılır: Öğe Listesi Oluşturma](../../concepts/linq/how-to-create-a-list-of-items.md)

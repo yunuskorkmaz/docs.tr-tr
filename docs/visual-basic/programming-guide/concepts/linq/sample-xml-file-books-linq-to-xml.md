@@ -1,17 +1,17 @@
 ---
-title: 'Örnek XML dosyası: kitaplar (LINQ to XML)'
+title: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 2e6ef32e9f7e45b45b22390c1ce669638d0be9a1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4bdf36aef90f56bfe3f2387c18bce69d5015cbb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524091"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413368"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>Örnek XML dosyası: kitaplar (LINQ to XML)
+# <a name="sample-xml-file-books-linq-to-xml"></a>Örnek XML Dosyası: Kitaplar (LINQ to XML)
 
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Dosya, kitaplar hakkındaki bilgileri içerir.
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Dosya, kitaplar hakkındaki bilgileri içerir.
 
 ## <a name="booksxml"></a>Books. xml
 
@@ -42,4 +42,4 @@ Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Örnek XML Belgeleri (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

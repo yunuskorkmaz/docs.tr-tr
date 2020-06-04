@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 3f2aaa65293ed2bcc6c8eeb4bd77e49907d93425
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7e22ad6e32ec13f081391e1d47a80df8b1e65063
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352768"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412994"
 ---
 # <a name="type-list-visual-basic"></a>Tür Listesi (Visual Basic)
 
@@ -45,19 +45,19 @@ ms.locfileid: "74352768"
 
 |Terim|Tanım|
 |---|---|
-|`genericmodifier`|İsteğe bağlı. Yalnızca Genel arabirimlerde ve temsilcilerde kullanılabilir. [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) anahtar sözcüğünü kullanarak [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) anahtar sözcüğünü veya değişken varyantını kullanarak bir tür covaryant bildirebilirsiniz. Bkz. [Kovaryans ve değişken varyansı](../../programming-guide/concepts/covariance-contravariance/index.md).|
-|`typename`|Gerekli. Tür parametresinin adı. Bu, karşılık gelen tür bağımsız değişkeni tarafından sağlanan tanımlı bir türle değiştirilmesini sağlamak için bir yer tutucudur.|
-|`constraintlist`|İsteğe bağlı. `typename`için sağlanabilecek veri türünü kısıtlayan gereksinimlerin listesi. Birden çok kısıtlamaınız varsa bunları küme ayraçları (`{ }`) içine alın ve bunları virgülle ayırın. Kısıtlama listesini [as](../../../visual-basic/language-reference/statements/as-clause.md) anahtar sözcüğüyle birlikte tanıtmalısınız. `As`, listenin başlangıcında yalnızca bir kez kullanılır.|
+|`genericmodifier`|İsteğe bağlı. Yalnızca Genel arabirimlerde ve temsilcilerde kullanılabilir. [In](../modifiers/in-generic-modifier.md) anahtar sözcüğünü kullanarak [Out](../modifiers/out-generic-modifier.md) anahtar sözcüğünü veya değişken varyantını kullanarak bir tür covaryant bildirebilirsiniz. Bkz. [Kovaryans ve değişken varyansı](../../programming-guide/concepts/covariance-contravariance/index.md).|
+|`typename`|Gereklidir. Tür parametresinin adı. Bu, karşılık gelen tür bağımsız değişkeni tarafından sağlanan tanımlı bir türle değiştirilmesini sağlamak için bir yer tutucudur.|
+|`constraintlist`|İsteğe bağlı. İçin sağlanabilecek veri türünü kısıtlayan gereksinimlerin listesi `typename` . Birden çok kısıtlamaınız varsa bunları küme ayraçları () içine alın `{ }` ve bunları virgülle ayırın. Kısıtlama listesini [as](as-clause.md) anahtar sözcüğüyle birlikte tanıtmalısınız. `As`Listenin başlangıcında yalnızca bir kez kullanılır.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 Her genel programlama öğesi en az bir tür parametresi almalıdır. Tür parametresi, bir genel türün örneğini oluşturduğunda istemci kodunun belirttiği belirli bir tür ( *oluşturulmuş bir öğe*) için yer tutucudur. Bir genel sınıf, yapı, arabirim, yordam veya temsilci tanımlayabilirsiniz.
 
-Genel bir türün ne zaman tanımlanacağı hakkında daha fazla bilgi için, bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Tür parametresi adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+Genel bir türün ne zaman tanımlanacağı hakkında daha fazla bilgi için, bkz. [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md). Tür parametresi adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="rules"></a>Kurallar
 
-- **Ayraçlar.** Bir tür parametre listesi [sağlarsanız, onu](../../../visual-basic/language-reference/statements/of-clause.md) parantez içine almalısınız ve listeyi anahtar kelimesiyle birlikte almalısınız. `Of`, listenin başlangıcında yalnızca bir kez kullanılır.
+- **Ayraçlar.** Bir tür parametre listesi [sağlarsanız, onu](of-clause.md) parantez içine almalısınız ve listeyi anahtar kelimesiyle birlikte almalısınız. `Of`Listenin başlangıcında yalnızca bir kez kullanılır.
 
 - **Kısıtlamaları.** Bir tür parametresindeki *kısıtlamaların* listesi, aşağıdaki öğeleri herhangi bir kombinasyonda içerebilir:
 
@@ -65,19 +65,19 @@ Genel bir türün ne zaman tanımlanacağı hakkında daha fazla bilgi için, bk
 
   - En fazla bir sınıf. Sağlanan tür bu sınıftan devralması gerekir.
 
-  - `New` anahtar sözcüğü. Sağlanan tür, genel türünün erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır. Bir tür parametresini bir veya daha fazla arabirim ile sınırlandırdıysanız, bu faydalıdır. Arabirimleri uygulayan bir tür bir oluşturucuyu kullanıma sunmayabilir ve bir oluşturucunun erişim düzeyine bağlı olarak, genel türdeki kod buna erişemeyebilir.
+  - `New`Anahtar sözcüğü. Sağlanan tür, genel türünün erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır. Bir tür parametresini bir veya daha fazla arabirim ile sınırlandırdıysanız, bu faydalıdır. Arabirimleri uygulayan bir tür bir oluşturucuyu kullanıma sunmayabilir ve bir oluşturucunun erişim düzeyine bağlı olarak, genel türdeki kod buna erişemeyebilir.
 
-  - `Class` anahtar sözcüğü ya da `Structure` anahtar sözcüğü. `Class` anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir başvuru türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir String, array veya Delegate veya bir sınıftan oluşturulmuş bir nesne. `Structure` anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir değer türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir yapı, sabit listesi veya Öğesel veri türü. `Class` ve `Structure` aynı `constraintlist`dahil edilemez.
+  - `Class`Anahtar sözcüğü ya da `Structure` anahtar sözcüğü. `Class`Anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir başvuru türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir String, array veya Delegate veya bir sınıftan oluşturulmuş bir nesne. `Structure`Anahtar sözcüğü, geçirilen her tür bağımsız değişkenin bir değer türü olmasını gerektirmek için bir genel tür parametresi kısıtlar, örneğin bir yapı, numaralandırma veya Öğesel veri türü. Hem hem de `Class` aynı olamaz `Structure` `constraintlist` .
 
-  Sağlanan tür, `constraintlist`eklediğiniz her gereksinimi karşılamalıdır.
+  Sağlanan tür, içindeki dahil ettiğiniz her gereksinimi karşılamalıdır `constraintlist` .
 
   Her tür parametresindeki kısıtlamalar, diğer tür parametrelerinin kısıtlamalarından bağımsızdır.
 
 ## <a name="behavior"></a>Davranış
 
-- **Derleme zamanı değiştirme.** Genel programlama öğesinden oluşturulmuş bir tür oluşturduğunuzda, her tür parametresi için tanımlı bir tür sağlarsınız. Visual Basic derleyici, genel öğe içindeki her `typename` oluşumu için sağlanan türü kullanır.
+- **Derleme zamanı değiştirme.** Genel programlama öğesinden oluşturulmuş bir tür oluşturduğunuzda, her tür parametresi için tanımlı bir tür sağlarsınız. Visual Basic derleyici, genel öğe içindeki her oluşum için sağlanan türü kullanır `typename` .
 
-- **Kısıtlamaların yokluğu.** Bir tür parametresinde herhangi bir kısıtlama belirtmezseniz, kodunuz bu tür parametresi için [nesne veri türü](../../../visual-basic/language-reference/data-types/object-data-type.md) tarafından desteklenen işlemler ve üyelerle sınırlandırılmıştır.
+- **Kısıtlamaların yokluğu.** Bir tür parametresinde herhangi bir kısıtlama belirtmezseniz, kodunuz bu tür parametresi için [nesne veri türü](../data-types/object-data-type.md) tarafından desteklenen işlemler ve üyelerle sınırlandırılmıştır.
 
 ## <a name="example"></a>Örnek
 
@@ -87,7 +87,7 @@ Aşağıdaki örnek, sözlüğe yeni bir giriş eklemek için bir iskelet işlev
 
 ## <a name="example"></a>Örnek
 
-`dictionary` genel olduğundan, onu kullanan kod, her biri aynı işlevselliğe sahip ancak farklı bir veri türü üzerinde işlem gören çeşitli nesneler oluşturabilir. Aşağıdaki örnek, `String` girdileri ve `Integer` anahtarlarıyla `dictionary` nesne oluşturan bir kod satırı gösterir.
+`dictionary`Genel olduğundan, onu kullanan kod, her biri aynı işlevselliğe sahip ancak farklı bir veri türü üzerinde işlem gören çeşitli nesneler oluşturabilir. Aşağıdaki örnek, `dictionary` girdiler ve anahtarlarla bir nesne oluşturan kod satırını gösterir `String` `Integer` .
 
 [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]
 
@@ -99,14 +99,14 @@ Aşağıdaki örnek, önceki örnek tarafından oluşturulan eşdeğer iskelet t
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Durumunu](../../../visual-basic/language-reference/statements/of-clause.md)
-- [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Object Veri Türü](../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Kovaryans ve Kontravaryans](../../programming-guide/concepts/covariance-contravariance/index.md)
-- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Durumunu](of-clause.md)
+- [New Işleci](../operators/new-operator.md)
+- [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [Nesne Veri Türü](../data-types/object-data-type.md)
+- [Function Deyimi](function-statement.md)
+- [Structure Yapısı](structure-statement.md)
+- [Sub Deyimi](sub-statement.md)
+- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Kovaryans ve değişken sapması](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [İçinde](../modifiers/in-generic-modifier.md)
+- [Dışı](../modifiers/out-generic-modifier.md)

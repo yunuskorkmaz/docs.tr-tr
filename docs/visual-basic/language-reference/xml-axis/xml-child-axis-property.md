@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 90dc22d12be5566fa1ee40f6b0e48eff8088e67b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545123"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400272"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML Alt Axis Özelliği (Visual Basic)
-Aşağıdakilerden birinin alt öğelerine erişim sağlar: <xref:System.Xml.Linq.XElement> nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.  
+Aşağıdakilerden birinin alt öğelerine erişim sağlar: <xref:System.Xml.Linq.XElement> nesne, <xref:System.Xml.Linq.XDocument> nesne, <xref:System.Xml.Linq.XElement> nesneler koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesne koleksiyonu.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,24 +30,24 @@ object.<child>
   
 |Terim|Tanım|  
 |---|---|  
-|`object`|Gerekli. <xref:System.Xml.Linq.XElement> nesnesi, <xref:System.Xml.Linq.XDocument> nesnesi, <xref:System.Xml.Linq.XElement> nesneleri koleksiyonu veya <xref:System.Xml.Linq.XDocument> nesneleri koleksiyonu.|  
-|.<|Gerekli. Bir alt eksen özelliğinin başlangıcını gösterir.|  
-|`child`|Gerekli. Erişim için kullanılacak alt düğümlerin adı, form `[prefix:]name`.<br /><br /> -   `Prefix`-Isteğe bağlı. Alt düğüm için XML ad alanı ön eki. Bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır.<br />-   `Name`-gerekli. Yerel alt düğüm adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  
-|>|Gerekli. Alt eksen özelliğinin sonunu belirtir.|  
+|`object`|Gereklidir. <xref:System.Xml.Linq.XElement>Nesne, <xref:System.Xml.Linq.XDocument> nesne, <xref:System.Xml.Linq.XElement> nesneler koleksiyonu veya nesne koleksiyonu <xref:System.Xml.Linq.XDocument> .|  
+|. <|Gereklidir. Bir alt eksen özelliğinin başlangıcını gösterir.|  
+|`child`|Gereklidir. Formun erişebileceği alt düğümlerin adı `[prefix:]name` .<br /><br /> -   `Prefix`Seçim. Alt düğüm için XML ad alanı ön eki. Bir ifadesiyle tanımlanmış bir genel XML ad alanı olmalıdır `Imports` .<br />-   `Name`İstenir. Yerel alt düğüm adı. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.|  
+|>|Gereklidir. Alt eksen özelliğinin sonunu belirtir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  <xref:System.Xml.Linq.XElement> nesneleri topluluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alt düğümlere bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesnesinden veya <xref:System.Xml.Linq.XElement> ya da <xref:System.Xml.Linq.XDocument> nesnelerinden oluşan bir koleksiyondan ad ile erişmek için bir XML alt eksen özelliği kullanabilirsiniz. Döndürülen koleksiyondaki ilk alt düğümün değerine erişmek için XML `Value` özelliğini kullanın. Daha fazla bilgi için bkz. [XML Value özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Alt düğümlere bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument> nesnesinden veya bir <xref:System.Xml.Linq.XElement> veya nesneleri koleksiyonundan bir ad ile erışmek için bir xml alt Axis özelliği kullanabilirsiniz <xref:System.Xml.Linq.XDocument> . `Value`Döndürülen koleksiyondaki ilk alt düğümün değerine erişmek IÇIN XML özelliğini kullanın. Daha fazla bilgi için bkz. [XML Value özelliği](xml-value-property.md).  
   
- Visual Basic Derleyicisi alt eksen özelliklerini <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemine yapılan çağrılara dönüştürür.  
+ Visual Basic Derleyicisi alt eksen özelliklerini yöntemine yapılan çağrılara dönüştürür <xref:System.Xml.Linq.XContainer.Elements%2A> .  
   
 ## <a name="xml-namespaces"></a>XML ad alanları  
- Bir alt eksen özelliğindeki ad, `Imports` ifadesiyle Global olarak belirtilen yalnızca XML ad alanı öneklerini kullanabilir. XML öğesi değişmez değerleri içinde yerel olarak belirtilen XML ad alanı öneklerini kullanamaz. Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+ Alt eksen özelliğindeki ad, ifadesiyle Global olarak belirtilen yalnızca XML ad alanı öneklerini kullanabilir `Imports` . XML öğesi değişmez değerleri içinde yerel olarak belirtilen XML ad alanı öneklerini kullanamaz. Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `contact` nesnesinden `phone` adlı alt düğümlere nasıl erişebileceğiniz gösterilmektedir.  
+ Aşağıdaki örnekte, nesnesinden adlı alt düğümlere nasıl erişebileceğiniz gösterilmektedir `phone` `contact` .  
   
  [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
@@ -56,7 +56,7 @@ object.<child>
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `contacts` nesnesinin `contact` alt eksen özelliği tarafından döndürülen koleksiyondan `phone` adlı alt düğümlere nasıl erişebileceğiniz gösterilmektedir.  
+ Aşağıdaki örnek, `phone` `contact` nesnesinin alt eksen özelliği tarafından döndürülen koleksiyondan adlı alt düğümlere nasıl erişegösterdiğini gösterir `contacts` .  
   
  [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   
@@ -65,7 +65,7 @@ object.<child>
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `ns` bir XML ad alanı öneki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve `ns:name`nitelenmiş ada sahip ilk alt düğüme erişir.  
+ Aşağıdaki örnek `ns` BIR XML ad alanı ön eki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve ilk alt düğüme tam adı ile erişin `ns:name` .  
   
  [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
@@ -76,7 +76,7 @@ object.<child>
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XElement>
-- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML Eksen Özellikleri](index.md)
+- [XML Değişmez Değerleri](../xml-literals/index.md)
+- [Visual Basic'de XML Oluşturma](../../programming-guide/language-features/xml/creating-xml.md)
+- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

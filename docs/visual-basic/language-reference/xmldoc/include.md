@@ -5,17 +5,17 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 78a10624107cea349b01f484c641190a945dbd7e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348458"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400117"
 ---
-# <a name="include-visual-basic"></a>\<içerme > (Visual Basic)
+# <a name="include-visual-basic"></a>\<include> (Visual Basic)
 Kaynak kodunuzda türleri ve üyeleri açıklayan başka bir dosya anlamına gelir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```xml  
 <include file="filename" path="tagpath[@name='id']" />  
@@ -23,28 +23,28 @@ Kaynak kodunuzda türleri ve üyeleri açıklayan başka bir dosya anlamına gel
   
 ## <a name="parameters"></a>Parametreler  
  `filename`  
- Gerekli. Belgeleri içeren dosyanın adı. Dosya adı bir yol ile nitelenebilir. `filename` çift tırnak işaretleri ("") içine alın.  
+ Gereklidir. Belgeleri içeren dosyanın adı. Dosya adı bir yol ile nitelenebilir. `filename`Çift tırnak işaretleri ("") içine alın.  
   
  `tagpath`  
- Gerekli. `filename` etiket `name`yol gösteren etiketlerin yolu. Yolu çift tırnak işaretleri ("") içine alın.  
+ Gereklidir. İçindeki etiketlerin yolu, etikete yol `filename` açar `name` . Yolu çift tırnak işaretleri ("") içine alın.  
   
  `name`  
- Gerekli. Yorumlarla önce gelen etiketteki ad belirleyicisi. `Name` bir `id`olacaktır.  
+ Gereklidir. Yorumlarla önce gelen etiketteki ad belirleyicisi. `Name`, olur `id` .  
   
  `id`  
- Gerekli. Açıklamaların önündeki etiketin KIMLIĞI. KIMLIĞI tek tırnak işareti (' ') içine alın.  
+ Gereklidir. Açıklamaların önündeki etiketin KIMLIĞI. KIMLIĞI tek tırnak işareti (' ') içine alın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak kodunuzda türleri ve üyeleri tanımlayan başka bir dosyadaki açıklamalara başvurmak için `<include>` etiketini kullanın. Bu, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeye alternatiftir.  
+ `<include>`Kaynak kodunuzda türleri ve üyeleri tanımlayan başka bir dosyadaki açıklamalara başvurmak için etiketini kullanın. Bu, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeye alternatiftir.  
   
- `<include>` etiketinde W3C XML Path Language (XPath) sürüm 1,0 önerisi kullanılır. `<include>` kullanımını özelleştirmenin yolları hakkında daha fazla bilgi için bkz. <https://www.w3.org/TR/xpath>.  
+ `<include>`Etıketı W3C XML Path Language (XPath) sürüm 1,0 önerisini kullanır. Kullanımı özelleştirmenin yolları hakkında daha fazla bilgi için `<include>` bkz <https://www.w3.org/TR/xpath> ..  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `commentFile.xml`adlı bir dosyadan üye belge açıklamalarını içeri aktarmak için `<include>` etiketini kullanır.  
+ Bu örnek, `<include>` adlı bir dosyadan üye belge açıklamalarını içeri aktarmak için etiketini kullanır `commentFile.xml` .  
   
  [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
- `commentFile.xml` biçimi aşağıdaki gibidir.  
+ Biçimi `commentFile.xml` aşağıdaki gibidir.  
   
 ```xml  
 <Docs>  
@@ -61,4 +61,4 @@ Kaynak kodunuzda türleri ve üyeleri açıklayan başka bir dosya anlamına gel
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML Açıklama Etiketleri](index.md)

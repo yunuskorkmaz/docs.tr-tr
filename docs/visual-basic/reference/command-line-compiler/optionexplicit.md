@@ -9,28 +9,28 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 37ccd14dae0ebba2535185f2646e312d9bb70390
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b004acb0c1c7d145c59a1e3a88ef7f1d405a91c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266735"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400571"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata raporlamasına neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -optionexplicit[+ | -]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `+`&#124;`-`  
- İsteğe bağlı. Değişkenlerin `-optionexplicit+` açık bildirimini gerektirmek için belirtin. Varsayılan `-optionexplicit+` seçenektir ve ile aynıdır `-optionexplicit`. Seçeneği `-optionexplicit-` , değişkenlerin örtülü bildirimini sunar.  
+ İsteğe bağlı. `-optionexplicit+`Değişkenlerin açık bildirimini gerektirmek için belirtin. `-optionexplicit+`Varsayılan seçenektir ve ile aynıdır `-optionexplicit` . `-optionexplicit-`Seçeneği, değişkenlerin örtülü bildirimini sunar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak kodu dosyası [açık bir seçenek ifade](../../../visual-basic/language-reference/statements/option-explicit-statement.md)içeriyorsa, ifade `-optionexplicit` komut satırı derleyici ayarını geçersiz kılar.  
+ Kaynak kodu dosyası [açık bir seçenek ifade](../../language-reference/statements/option-explicit-statement.md)içeriyorsa, ifade `-optionexplicit` komut satırı derleyici ayarını geçersiz kılar.  
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE 'de ayarlamak için-OptionExplicit  
   
@@ -47,10 +47,10 @@ Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata rapor
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [Option Explicit Deyimi](../../language-reference/statements/option-explicit-statement.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -4,33 +4,33 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: d8a0eef4aa685a255a5e1d852e440f8de2f70370
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2e2de35d48b0bdf1cd6c07d6cb4ec2cbd515a6ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350731"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414189"
 ---
 # <a name="myapplication-object"></a>My.Application Nesnesi
 Geçerli uygulamayla ilgili özellikler, Yöntemler ve olaylar sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Application` nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın:  
+ Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için `My.Application` aşağıdaki kaynaklara bakın:  
   
-- tüm projelerde kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>tüm projelerde kullanılabilen Üyeler için.  
   
-- Windows Forms uygulamalarda kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>Windows Forms uygulamalarda bulunan üyeler için.  
   
-- Konsol uygulamalarında kullanılabilen Üyeler için <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>Konsol uygulamalarında kullanılabilen Üyeler için.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Ad alanı:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+ **Ad alanı:**<xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Sınıf:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (temel sınıf <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>, konsol uygulamalarında kullanılabilir üyeleri sağlar ve temel sınıfı <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilir olan üyeleri sağlar)  
+ **Sınıf:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (temel sınıf, <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> konsol uygulamalarında kullanılabilir üyeleri sağlar ve temel sınıfı <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilir olan üyeleri sağlar)  
   
  **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [My.Application.Info Nesnesi](../../../visual-basic/language-reference/objects/my-application-info-object.md)
-- [My.Application.Log Nesnesi](../../../visual-basic/language-reference/objects/my-application-log-object.md)
+- [My.Application.Info Nesnesi](my-application-info-object.md)
+- [My.Application.Log Nesnesi](my-application-log-object.md)

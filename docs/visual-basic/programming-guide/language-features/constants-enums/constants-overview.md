@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 9ccddfe44757c76992d641094e21ec8c2110ef83
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f45cb12c6ef0f90b9c90190f30ce8600fec80947
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338348"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414524"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
 Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Adın gösterdiği gibi sabitler depolama değerleri, uygulamanın yürütülmesi boyunca aynı kalır. Kodunuzun okunabilirliğini büyük ölçüde geliştirebilirsiniz ve sabitleri kullanarak daha kolay koruma sağlayabilirsiniz. Bunları yeniden görüntülenen veya belirgin bir anlamı olmayan belirli numaralara bağlı olan değerleri içeren kodda kullanın.  
   
 ## <a name="how-to-create-and-use-constants"></a>Sabitleri oluşturma ve kullanma  
- Visual Basic, genellikle yazdırma ve görüntüleme için kullanılan bir dizi önceden tanımlanmış sabitler içerir. Ayrıca, `Const` ifadesiyle kendi sabitlerinizi oluşturarak, bir değişken adı oluşturmak için kullandığınız yönergeleri kullanabilirsiniz. `Option Strict` `On`, sabit türü açıkça bildirmeniz gerekir.  
+ Visual Basic, genellikle yazdırma ve görüntüleme için kullanılan bir dizi önceden tanımlanmış sabitler içerir. Ayrıca, `Const` bir değişken adı oluşturmak için kullandığınız yönergeleri kullanarak deyimle kendi sabitlerinizi de oluşturabilirsiniz. `Option Strict`İse `On` , sabit türü açıkça bildirmeniz gerekir.  
   
- Bir sabitin, adını nitelemeden kendisine başvurabilen tüm kod kümesi, aynı konumda bildirildiği değişkenle aynı. Belirli bir yordamın kapsamında var olan bir sabit oluşturmak için, bu yordamın içinde bildirin. Bir uygulamanın tamamında kullanılabilir bir sabit oluşturmak için, sınıfının bildirimler bölümündeki `Public` anahtar sözcüğünü kullanarak bildirin.  
+ Bir sabitin, adını nitelemeden kendisine başvurabilen tüm kod kümesi, aynı konumda bildirildiği değişkenle aynı. Belirli bir yordamın kapsamında var olan bir sabit oluşturmak için, bu yordamın içinde bildirin. Bir uygulamanın tamamında kullanılabilir bir sabit oluşturmak için, `Public` sınıfının bildirimler bölümündeki anahtar sözcüğünü kullanarak bunu bildirin.  
   
 > [!NOTE]
 > Sabitler değişkenlere benzer olsa da, değişkenleri değiştiremeyeceğiniz sürece bunları değiştiremez veya yeni değerler atayamazsınız.  
@@ -31,20 +31,20 @@ Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Ad
   
 |Tanım|Terim|  
 |---|---|  
-|[Nasıl yapılır: Bir Sabit Bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|`Const` deyimin bir sabiti bildirmek ve değerini ayarlamak için nasıl kullanılacağını açıklar; bir sabiti bildirerek değere anlamlı bir ad atarsınız.|  
-|[Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Kapsam ve dairesel başvuruların nasıl engelleneceği hakkında bilgiler de dahil olmak üzere kendi sabitlerinizi oluşturmayı açıklar.|  
-|[Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|`Option Explicit` kapalıyken Visual Basic derleyicisinin sabitleri nasıl Başlatan hakkında bilgi sağlar.|  
-|[Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|İlgili sabit değerlerin nasıl gruplandırılacağını gösterir.|  
+|[Nasıl yapılır: Bir Sabit Bildirme](how-to-declare-a-constant.md)|Bir sabiti `Const` bildirmek ve değerini ayarlamak için ifadesinin nasıl kullanılacağını açıklar; bir sabiti bildirerek değere anlamlı bir ad atarsınız.|  
+|[Kullanıcı Tanımlı Sabitler](user-defined-constants.md)|Kapsam ve dairesel başvuruların nasıl engelleneceği hakkında bilgiler de dahil olmak üzere kendi sabitlerinizi oluşturmayı açıklar.|  
+|[Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)|Kapatıldığında Visual Basic derleyicisinin sabitleri nasıl Başlatan hakkında bilgi sağlar `Option Explicit` .|  
+|[Nasıl yapılır: İlgili Sabit Değerleri Birlikte Gruplandırma](how-to-group-related-constant-values-together.md)|İlgili sabit değerlerin nasıl gruplandırılacağını gösterir.|  
   
 ## <a name="reference"></a>Başvuru  
   
 |Tanım|Terim|  
 |---|---|  
-|[Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanan sabitleri listeler.|  
-|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` ifadesini ve kullanımını açıklar.|  
-|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` ifadesini ve kullanımını açıklar.|  
+|[Sabitler ve numaralandırmalar](../../../language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanan sabitleri listeler.|  
+|[Const Deyimi](../../../language-reference/statements/const-statement.md)|`Const`İfadesini ve kullanımını açıklar.|  
+|[Option Strict Deyimi](../../../language-reference/statements/option-strict-statement.md)|`Option Strict`İfadesini ve kullanımını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [Nasıl yapılır: Visual Basic dizi değişkenini başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Sabit Listelerine Genel Bakış](enumerations-overview.md)
+- [Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma](../arrays/how-to-initialize-an-array-variable.md)

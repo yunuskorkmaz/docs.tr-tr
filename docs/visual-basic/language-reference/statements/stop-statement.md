@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 497c5f207b2228412411cc3eb01976564f82bd6c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ef1e2f9045e5509e11557c9fdaf3edd2786b72c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346475"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404232"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop Deyimi (Visual Basic)
 Yürütmeyi askıya alır.  
@@ -29,18 +29,18 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yürütmeyi askıya almak için `Stop` deyimlerini yordamların herhangi bir yerinde yerleştirebilirsiniz. `Stop` deyimin kullanılması, kodda kesme noktası ayarlamaya benzerdir.  
+ `Stop`Çalışmayı askıya almak için deyimleri yordamların herhangi bir yerinde yerleştirebilirsiniz. İfadesinin kullanılması `Stop` kodda bir kesme noktası ayarlamaya benzerdir.  
   
- `Stop` deyimin yürütülmesi askıya alınır, ancak `End`aksine, derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde hiçbir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
+ `Stop`İfade yürütmeyi askıya alır, ancak farklı olarak, `End` derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde herhangi bir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
   
 > [!NOTE]
-> Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda `Stop` ifadesine karşılaşılırsa, hata ayıklayıcı çağrılır. Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
+> `Stop`Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda deyime karşılaşılırsa, hata ayıklayıcı çağrılır. Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `For...Next` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere `Stop` ifadesini kullanır.  
+ Bu örnek, `Stop` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere ifadesini kullanır `For...Next` .  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [End Deyimi](../../../visual-basic/language-reference/statements/end-statement.md)
+- [End ekstresi](end-statement.md)

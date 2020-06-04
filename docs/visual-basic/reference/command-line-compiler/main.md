@@ -6,32 +6,32 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005498"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403167"
 ---
 # <a name="-main"></a>-main
-`Sub Main` Yordamı içeren sınıfı veya modülü belirtir.  
+Yordamı içeren sınıfı veya modülü belirtir `Sub Main` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -main:location  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `location`  
- Gereklidir. Program başlatıldığında Çağrılacak `Sub Main` yordamı içeren sınıfın veya modülün adı. Bu, **-Main: Module** veya **-Main: Namespace. Module**biçiminde olabilir.  
+ Gereklidir. Program başlatıldığında Çağrılacak yordamı içeren sınıfın veya modülün adı `Sub Main` . Bu, **-Main: Module** veya **-Main: Namespace. Module**biçiminde olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yürütülebilir bir dosya veya Windows yürütülebilir programı oluştururken bu seçeneği kullanın. **-Main** seçeneği atlanırsa, derleyici tüm ortak sınıflarda ve modüllerde geçerli bir paylaşılan `Sub Main` arar.  
+ Yürütülebilir bir dosya veya Windows yürütülebilir programı oluştururken bu seçeneği kullanın. **-Main** seçeneği atlanırsa, derleyici `Sub Main` tüm ortak sınıflarda ve modüllerde geçerli bir paylaşılan arar.  
   
- Yordamın çeşitli biçimlerinin tartışılması için [Visual Basic ana yordama](../../../visual-basic/programming-guide/program-structure/main-procedure.md) bakın. `Main`  
+ Yordamın çeşitli biçimlerinin tartışılması için [Visual Basic ana yordama](../../programming-guide/program-structure/main-procedure.md) bakın `Main` .  
   
- Sınıfından `location` devralan bir sınıf olduğunda <xref:System.Windows.Forms.Form>, derleyici bir yordam yoksa `Main` `Main` , uygulamayı başlatan varsayılan bir yordam sağlar. Bu, geliştirme ortamında oluşturulan komut satırında kod derlemenize olanak sağlar.  
+ Sınıfından `location` devralan bir sınıf olduğunda <xref:System.Windows.Forms.Form> , derleyici bir `Main` yordam yoksa, uygulamayı başlatan varsayılan bir yordam sağlar `Main` . Bu, geliştirme ortamında oluşturulan komut satırında kod derlemenize olanak sağlar.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72005498"
 4. **Başlangıç nesnesi** kutusundaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, ve `T2.vb` `T3.vb` `Sub Main` yordamının `Test2` sınıfında bulunduğunu belirtmek için derleme yapar.  
+ Aşağıdaki kod, `T2.vb` ve `T3.vb` yordamının sınıfında bulunduğunu belirtmek için derleme `Sub Main` yapar `Test2` .  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic'de Ana Yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-target (Visual Basic)](target.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [Visual Basic'de Ana Yordam](../../programming-guide/program-structure/main-procedure.md)

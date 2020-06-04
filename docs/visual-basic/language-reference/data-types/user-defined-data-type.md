@@ -23,16 +23,16 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 99eeb4b619f6bb23d00f8e449de953d41843f714
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343872"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415498"
 ---
 # <a name="user-defined-data-type"></a>Kullanıcı Tanımlı Veri Türü
 
-Verileri tanımladığınız biçimde tutar. `Structure` ifade biçimi tanımlar.
+Verileri tanımladığınız biçimde tutar. `Structure`İfade biçimi tanımlar.
 
 Önceki Visual Basic sürümleri Kullanıcı tanımlı türü (UDT) destekler. Geçerli sürüm, UDT 'yi bir *yapıya*genişletir. Yapı, çeşitli veri türlerindeki bir veya daha fazla *üyenin* bitiştirilmesi olur. Visual Basic, üyelerine tek bir birim olarak davranır, ancak üyelerine ayrı ayrı de erişebilirsiniz.
 
@@ -44,25 +44,25 @@ Bir yapı veri türünün varsayılan değeri, üyelerinden her birinin varsayı
 
 ## <a name="declaration-format"></a>Bildirim biçimi
 
-Yapı bildirimi, [Yapı ifadesiyle](../../../visual-basic/language-reference/statements/structure-statement.md) başlar ve `End Structure` ifadesiyle biter. `Structure` ifade yapının adını sağlar, bu da yapının tanımlayan veri türünün tanımlayıcısıdır. Kodun diğer kısımları, bu yapının veri türünde olması için değişkenleri, parametreleri ve işlev dönüş değerlerini bildirmek üzere bu tanımlayıcıyı kullanabilir.
+Yapı bildirimi, [Yapı ifadesiyle](../statements/structure-statement.md) başlar ve `End Structure` ifadesiyle biter. `Structure`Bu ifade yapının adını sağlar, bu da yapının tanımlayan veri türünün tanımlayıcısıdır. Kodun diğer kısımları, bu yapının veri türünde olması için değişkenleri, parametreleri ve işlev dönüş değerlerini bildirmek üzere bu tanımlayıcıyı kullanabilir.
 
-`Structure` ve `End Structure` deyimleri arasındaki bildirimler yapının üyelerini tanımlar.
+Ve deyimleri arasındaki bildirimler `Structure` `End Structure` yapının üyelerini tanımlar.
 
 ## <a name="member-access-levels"></a>Üye erişim düzeyleri
 
-Her üyeyi, bir [Dim ifadesini](../../../visual-basic/language-reference/statements/dim-statement.md) veya [Public](../../../visual-basic/language-reference/modifiers/public.md), [Friend](../../../visual-basic/language-reference/modifiers/friend.md)veya [Private](../../../visual-basic/language-reference/modifiers/private.md)gibi erişim düzeyini belirten bir bildirimi kullanarak bildirmeniz gerekir. `Dim` bir ifade kullanırsanız, erişim düzeyi varsayılan olarak ortak olur.
+Her üyeyi, bir [Dim ifadesini](../statements/dim-statement.md) veya [Public](../modifiers/public.md), [Friend](../modifiers/friend.md)veya [Private](../modifiers/private.md)gibi erişim düzeyini belirten bir bildirimi kullanarak bildirmeniz gerekir. Bir `Dim` ifade kullanırsanız, erişim düzeyi varsayılan olarak ortak olur.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekiyorsa, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadesine uygulayabilirsiniz.
+- **Bellek tüketimi.** Tüm bileşik veri türlerinde olduğu gibi, üyelerinin nominal depolama ayırmalarını birlikte ekleyerek bir yapının toplam bellek tüketimini güvenle hesaplayabilirsiniz. Ayrıca, bellekteki depolama sırasının bildirimin sıralamayla aynı olduğunu güvenli bir şekilde varsayamaz. Bir yapının depolama yerleşimini denetetmeniz gerekirse, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğini `Structure` ifadeye uygulayabilirsiniz.
 
 - **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle ilgili bir arabirimleriniz varsa, diğer ortamlardaki Kullanıcı tanımlı türlerin Visual Basic yapısı türleriyle uyumlu olmadığını aklınızda bulundurun.
 
-- **Kan.** Herhangi bir yapı veri türünden veya bundan otomatik dönüşüm yoktur. [Işleç ifadesini](../../../visual-basic/language-reference/statements/operator-statement.md)kullanarak yapınıza dönüştürme işleçleri tanımlayabilir ve her bir dönüştürme işlecini `Widening` veya `Narrowing`olacak şekilde bildirebilirsiniz.
+- **Kan.** Herhangi bir yapı veri türünden veya bundan otomatik dönüşüm yoktur. [Işleç ifadesini](../statements/operator-statement.md)kullanarak yapınıza dönüştürme işleçleri tanımlayabilir ve her bir dönüştürme işlecini veya olarak bildirebilirsiniz `Widening` `Narrowing` .
 
 - **Tür karakterleri.** Yapı veri türlerinde değişmez değer türü karakteri veya tanımlayıcı türü karakteri yok.
 
-- **Çerçeve türü.** .NET Framework ilgili hiçbir tür yoktur. Tüm yapılar <xref:System.ValueType?displayProperty=nameWithType>.NET Framework sınıfından devralınır, ancak tek bir yapı <xref:System.ValueType?displayProperty=nameWithType>karşılık değildir.
+- **Çerçeve türü.** .NET Framework ilgili hiçbir tür yoktur. Tüm yapılar .NET Framework sınıfından devralınır <xref:System.ValueType?displayProperty=nameWithType> , ancak tek bir yapı öğesine karşılık gelir <xref:System.ValueType?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Örnek
 
@@ -80,11 +80,11 @@ End Structure
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
-- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Veri türleri](index.md)
+- [Tür Dönüştürme İşlevleri](../functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../keywords/conversion-summary.md)
+- [Structure Yapısı](../statements/structure-statement.md)
+- [Genişletme](../modifiers/widening.md)
+- [Narrowing](../modifiers/narrowing.md)
+- [Yapılar](../../programming-guide/language-features/data-types/structures.md)
+- [Veri Türlerinin Etkili Kullanımı](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

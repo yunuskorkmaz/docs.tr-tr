@@ -2,17 +2,17 @@
 title: Yansıma
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349276"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413186"
 ---
 # <a name="reflection-visual-basic"></a>Yansıma (Visual Basic)
-Yansıma derlemeleri, modülleri ve türleri tanımlayan nesneler (<xref:System.Type>türünde) sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ya da onun yöntemlerini çağırmak ya da alanları ve özelliklerine erişmek için yansıma kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için bkz. [öznitelikler](../../../standard/attributes/index.md).  
+Yansıma <xref:System.Type> derlemeleri, modülleri ve türleri tanımlayan nesneler (türü) sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ya da onun yöntemlerini çağırmak ya da alanları ve özelliklerine erişmek için yansıma kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için bkz. [öznitelikler](../../../standard/attributes/index.md).  
   
- Bir değişkenin türünü almak için `Object` temel sınıfından tüm türler tarafından devralınan `GetType`-statik yöntemi kullanan basit bir yansıma örneği aşağıda verilmiştir:  
+ `GetType` `Object` Bir değişkenin türünü almak için temel sınıftan tüm türler tarafından devralınan statik yöntemi kullanan basit bir yansıma örneği aşağıda verilmiştir:  
   
 ```vb  
 ' Using GetType to obtain type information:  
@@ -21,7 +21,7 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- Çıktı:  
+ Çıkış şöyle olur:  
   
  `System.Int32`  
   
@@ -33,7 +33,7 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- Çıktı:  
+ Çıkış şöyle olur:  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
@@ -44,7 +44,7 @@ System.Console.WriteLine(info)
   
 - Bir derlemedeki türleri İnceleme ve örnekleme için.  
   
-- Çalışma zamanında yeni türler oluşturmak için. <xref:System.Reflection.Emit>sınıfları kullanın.  
+- Çalışma zamanında yeni türler oluşturmak için. İçinde sınıfları kullanın <xref:System.Reflection.Emit> .  
   
 - Geç bağlama gerçekleştirmek için çalışma zamanında oluşturulan türler üzerindeki yöntemlere erişme. [Türleri dinamik olarak yükleme ve kullanma](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)konusuna bakın.  
   
@@ -63,5 +63,5 @@ System.Console.WriteLine(info)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programlama Kılavuzu](../index.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)

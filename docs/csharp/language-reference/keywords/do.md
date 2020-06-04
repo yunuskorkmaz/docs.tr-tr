@@ -1,5 +1,5 @@
 ---
-title: do - C# Referans
+title: do-C# başvurusu
 ms.date: 05/28/2018
 f1_keywords:
 - do_CSharpKeyword
@@ -7,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738903"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401933"
 ---
 # <a name="do-c-reference"></a>do (C# Başvurusu)
 
-`do` İfade bir deyim veya ifade bloğu yürütürken, belirli bir `true`Boolean ifadesi .'ye göre değerlendirilir. Bu ifade döngünün her yürütülmesinden sonra `do-while` değerlendirildiği için, bir döngü bir veya daha fazla kez yürütür. Bu, sıfır veya daha fazla kez yürüten [while](while.md) döngüsünden farklıdır.
+`do`Deyimi, belirtilen bir Boole ifadesi olarak değerlendirilen bir deyimi veya bir deyim bloğunu yürütür `true` . Bu ifade döngünün her yürütülmesinden sonra değerlendirildiğinden bir `do-while` döngü bir veya daha fazla kez yürütülür. Bu, sıfır veya daha fazla kez yürütülen [while](while.md) döngüsünden farklıdır.
 
-`do` İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilirsiniz.
+Deyimdeki herhangi bir noktada `do` [Break](break.md) ifadesini kullanarak döngünün dışına kesebilirsiniz.
 
-Continue deyimini kullanarak ifadenin `while` değerlendirilmesi [continue](continue.md) için doğrudan adım atabilirsiniz. İfade, `true`yürütme yi değerlendirirse, döngüdeki ilk ifadede devam eder. Aksi takdirde, yürütme döngüden sonra ilk deyimde devam ediyor.
+`while` [Continue](continue.md) deyimini kullanarak doğrudan ifadenin değerlendirmesine adım adım ekleyebilirsiniz. İfade olarak değerlendirilirse `true` , yürütme döngüsünde ilk deyimde devam eder. Aksi halde, yürütme döngüden sonraki ilk ifadede devam eder.
 
-Ayrıca [goto](goto.md) `do-while` tarafından bir döngü çıkmak , [return](return.md), veya ifadeler [atmak.](throw.md)
+Ayrıca `do-while` [goto](goto.md), [Return](return.md)veya [throw](throw.md) deyimleriyle bir döngüden çıkabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `do` deyimin kullanımını gösterir. Örnek kodu çalıştırmak için **Çalıştır'ı** seçin. Bundan sonra kodu değiştirebilir ve yeniden çalıştırabilirsiniz.
+Aşağıdaki örnek, ifadesinin kullanımını gösterir `do` . Örnek kodu çalıştırmak için **Çalıştır** ' ı seçin. Bundan sonra kodu değiştirip yeniden çalıştırabilirsiniz.
 
-[!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
+[!code-csharp-interactive[do loop example](snippets/IterationKeywordsExamples.cs#4)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [do deyimi](~/_csharplang/spec/statements.md#the-do-statement) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [Do deyimin](~/_csharplang/spec/statements.md#the-do-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
-- [ifade ederken](while.md)
+- [C# anahtar sözcükleri](index.md)
+- [while deyimi](while.md)

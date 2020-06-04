@@ -2,18 +2,18 @@
 title: Koleksiyonlar
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202440"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400661"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 
 Birçok uygulama için ilgili nesne grupları oluşturmak ve yönetmek istersiniz. Nesneleri gruplandırmanın iki yolu vardır: nesne dizileri oluşturarak ve nesne koleksiyonları oluşturarak.
 
-Diziler, kesin olarak belirlenmiş sabit sayıda nesne oluşturmak ve bunlarla çalışmak için en yararlı seçenektir. Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md).
+Diziler, kesin olarak belirlenmiş sabit sayıda nesne oluşturmak ve bunlarla çalışmak için en yararlı seçenektir. Diziler hakkında daha fazla bilgi için bkz. [diziler](../language-features/arrays/index.md).
 
 Koleksiyonlar, nesne gruplarıyla çalışmak için daha esnek bir yol sağlar. Dizilerden farklı olarak, çalıştığınız nesne grubu, uygulama değişikliğinin ihtiyaçlarına göre dinamik olarak büyüyebilir ve küçülebilir. Bazı koleksiyonlar için, anahtarı kullanarak nesneyi hızlı bir şekilde alabilmeniz için koleksiyona yerleştirdiğiniz herhangi bir nesneye bir anahtar atayabilirsiniz.
 
@@ -22,7 +22,7 @@ Koleksiyon bir sınıftır, bu nedenle bu koleksiyona öğe ekleyebilmeniz için
 Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, ad alanındaki sınıflardan birini kullanabilirsiniz <xref:System.Collections.Generic?displayProperty=nameWithType> . Genel bir koleksiyon, tür güvenliğini, başka bir veri türü eklenememesi için uygular. Genel koleksiyondan bir öğe aldığınızda, veri türünü belirlememek veya dönüştürmek zorunda değilsiniz.
 
 > [!NOTE]
-> Bu konudaki örnekler için, [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections.Generic` ve ad alanları için Imports deyimlerini ekleyin `System.Linq` .
+> Bu konudaki örnekler için, [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) `System.Collections.Generic` ve ad alanları için Imports deyimlerini ekleyin `System.Linq` .
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ Koleksiyonunuz yalnızca bir veri türünün öğelerini içeriyorsa, ad alanın
 
 Bu bölümdeki örneklerde <xref:System.Collections.Generic.List%601> , türü kesin belirlenmiş bir nesne listesiyle çalışmanıza olanak sağlayan genel sınıfı kullanılır.
 
-Aşağıdaki örnek, dizelerin bir listesini oluşturur ve sonra her biri Için bir kullanarak dizeler arasında yinelenir [... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) ifade.
+Aşağıdaki örnek, dizelerin bir listesini oluşturur ve sonra her biri Için bir kullanarak dizeler arasında yinelenir [... Sonraki](../../language-reference/statements/for-each-next-statement.md) ifade.
 
 ```vb
 ' Create a list of strings.
@@ -47,7 +47,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Bir koleksiyonun içeriği önceden biliniyorsa, koleksiyonu başlatmak için bir *koleksiyon başlatıcısı* kullanabilirsiniz. Daha fazla bilgi için bkz. [koleksiyon başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+Bir koleksiyonun içeriği önceden biliniyorsa, koleksiyonu başlatmak için bir *koleksiyon başlatıcısı* kullanabilirsiniz. Daha fazla bilgi için bkz. [koleksiyon başlatıcıları](../language-features/collection-initializers/index.md).
 
 Aşağıdaki örnek, koleksiyona öğe eklemek için bir koleksiyon başlatıcısı kullanılması dışında, önceki örnekle aynıdır.
 
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-Için bir kullanabilirsiniz... [ ](../../../visual-basic/language-reference/statements/for-next-statement.md) `For Each` Bir koleksiyon aracılığıyla yinelemek için bir ifade yerine Next ifadesinin. Bunu, koleksiyon öğelerine dizin konumuna erişerek gerçekleştirirsiniz. Öğelerin dizini 0 ' dan başlar ve öğe sayısı eksi 1 ' den sona erer.
+Için bir kullanabilirsiniz... [ ](../../language-reference/statements/for-next-statement.md) `For Each` Bir koleksiyon aracılığıyla yinelemek için bir ifade yerine Next ifadesinin. Bunu, koleksiyon öğelerine dizin konumuna erişerek gerçekleştirirsiniz. Öğelerin dizini 0 ' dan başlar ve öğe sayısı eksi 1 ' den sona erer.
 
 Aşağıdaki örnek yerine kullanarak bir koleksiyonun öğeleri boyunca yinelenir `For…Next` `For Each` .
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `For Each` , için, bir [... ](../../../visual-basic/language-reference/statements/for-next-statement.md)Azalan sırada yinelenen bir sonraki ifade kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
+Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `For Each` , için, bir [... ](../../language-reference/statements/for-next-statement.md)Azalan sırada yinelenen bir sonraki ifade kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ Ad alanındaki sınıflardan birini kullanarak genel bir koleksiyon oluşturabil
 
 Aşağıdaki tabloda, ad alanının sık kullanılan sınıflarının bazıları listelenmektedir <xref:System.Collections.Generic?displayProperty=nameWithType> :
 
-|Sınıf|Açıklama|
+|Sınıf|Description|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çiftleri koleksiyonunu temsil eder.|
 |<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilen nesnelerin listesini temsil eder. Listeleri aramak, sıralamak ve değiştirmek için yöntemler sağlar.|
@@ -203,7 +203,7 @@ Mümkün olduğunda, ad alanındaki <xref:System.Collections.Generic?displayProp
 
 Aşağıdaki tabloda, ad alanında sık kullanılan sınıfların bazıları listelenmektedir `System.Collections` :
 
-|Sınıf|Açıklama|
+|Sınıf|Description|
 |---|---|
 |<xref:System.Collections.ArrayList>|Boyutu dinamik olarak gerektiği şekilde arttığı bir nesne dizisini temsil eder.|
 |<xref:System.Collections.Hashtable>|Anahtarın karma koduna göre düzenlenmiş anahtar/değer çiftleri koleksiyonunu temsil eder.|
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>Koleksiyona erişmek için LINQ kullanma
 
-LINQ (dil ile tümleşik sorgu), koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ Ile çalışmaya](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)başlama.
+LINQ (dil ile tümleşik sorgu), koleksiyonlara erişmek için kullanılabilir. LINQ sorguları filtreleme, sıralama ve gruplama özellikleri sağlar. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ Ile çalışmaya](linq/getting-started-with-linq.md)başlama.
 
 Aşağıdaki örnek, genel olarak bir LINQ sorgusu çalıştırır `List` . LINQ sorgusu, sonuçları içeren farklı bir koleksiyon döndürür.
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>Yineleyiciler
 
-Bir *Yineleyici* , bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için kullanılır. Yineleyici bir yöntem veya `get` erişimci olabilir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield](../../../visual-basic/language-reference/statements/yield-statement.md) ifadesini kullanır.
+Bir *Yineleyici* , bir koleksiyon üzerinde özel bir yineleme gerçekleştirmek için kullanılır. Yineleyici bir yöntem veya `get` erişimci olabilir. Bir yineleyici, tek seferde koleksiyonun her bir öğesini döndürmek için bir [yield](../../language-reference/statements/yield-statement.md) ifadesini kullanır.
 
-Her biri Için bir yineleyiciyi kullanarak bir yineleyici çağırın [... Sonraki](../../../visual-basic/language-reference/statements/for-each-next-statement.md) ifade. Döngünün her yinelemesi `For Each` yineleyiciyi çağırır. `Yield`Yineleyiciden bir ifadeye ulaşıldığında, bir ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
+Her biri Için bir yineleyiciyi kullanarak bir yineleyici çağırın [... Sonraki](../../language-reference/statements/for-each-next-statement.md) ifade. Döngünün her yinelemesi `For Each` yineleyiciyi çağırır. `Yield`Yineleyiciden bir ifadeye ulaşıldığında, bir ifade döndürülür ve koddaki geçerli konum korunur. Bu konumdan, yineleyici bir sonraki sefer çağrıldığında yürütme yeniden başlatılır.
 
-Daha fazla bilgi için bkz. [yineleyiciler (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md).
+Daha fazla bilgi için bkz. [yineleyiciler (Visual Basic)](iterators.md).
 
-Aşağıdaki örnek bir yineleyici yöntemi kullanır. Yineleyici yöntemi, `Yield` için bir olan bir ifadeye sahiptir [... Sonraki](../../../visual-basic/language-reference/statements/for-next-statement.md) döngü. `ListEvenNumbers`Yönteminde, ifade gövdesinin her yinelemesi, `For Each` bir sonraki ifadeye devam eden Yineleyici yöntemine bir çağrı oluşturur `Yield` .
+Aşağıdaki örnek bir yineleyici yöntemi kullanır. Yineleyici yöntemi, `Yield` için bir olan bir ifadeye sahiptir [... Sonraki](../../language-reference/statements/for-next-statement.md) döngü. `ListEvenNumbers`Yönteminde, ifade gövdesinin her yinelemesi, `For Each` bir sonraki ifadeye devam eden Yineleyici yöntemine bir çağrı oluşturur `Yield` .
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,10 +570,10 @@ End Function
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Koleksiyon Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Programlama kavramları (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Koleksiyon Başlatıcıları](../language-features/collection-initializers/index.md)
+- [Programlama kavramları (Visual Basic)](index.md)
+- [Option Strict Deyimi](../../language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)
 - [Paralel LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Koleksiyonlar ve veri yapıları](../../../standard/collections/index.md)
 - [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)

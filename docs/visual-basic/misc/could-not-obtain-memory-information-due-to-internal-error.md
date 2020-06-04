@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_Memory
 ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
-ms.openlocfilehash: a59c815e0135f02f06ae9d4b7e2c21468af1ba03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dff6ee2f0f46052efae557e1216f73b9f249b464
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598374"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402258"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>İç hata nedeniyle bellek bilgileri alınamadı
-Bellek bilgileri özelliklerinden birini çağrısı `My.Computer.Info` nesnesi oluşturulamadı.  
+Nesnenin bellek bilgisi özelliklerinden birine çağrı `My.Computer.Info` başarısız oldu.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Ekleme bir `Try...Catch` bloğu içine çağrı bellek bilgileri özelliğine `My.Computer.Info` nesne.  
+- `Try...Catch`Nesnenin Memory-Information özelliğine yapılan çağrının etrafına bir blok ekleyin `My.Computer.Info` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [My.Computer.Info](xref:Microsoft.VisualBasic.Devices.ComputerInfo)
-- [Try...Catch...Finally Deyimi](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally Deyimi](../language-reference/statements/try-catch-finally-statement.md)

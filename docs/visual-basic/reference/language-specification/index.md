@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 4148cac9d0ba9ec6851de5babcd37d175be84645
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ddc4558cbf79afc968509177e5be14f5e2f17ef7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345073"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414232"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic dil belirtimi
 
@@ -25,7 +25,7 @@ Belirtile ilgili sorunların [DotNet/vblang](https://github.com/dotnet/vblang/is
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic dil başvurusu](../../../visual-basic/language-reference/index.md)
+- [Visual Basic dil başvurusu](../../language-reference/index.md)
 
 >[!div class="step-by-step"]
 >[Sonraki](../../../../_vblang/spec/introduction.md)

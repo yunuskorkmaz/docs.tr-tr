@@ -1,5 +1,5 @@
 ---
-title: Tamsayı Veri Türü
+title: Integer Veri Türü
 ms.date: 01/31/2018
 f1_keywords:
 - vb.Integer
@@ -21,39 +21,39 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa7b64162308d6af2763b29034c5a7276c973876
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400738"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415615"
 ---
-# <a name="integer-data-type-visual-basic"></a>Sonda veri türü (Visual Basic)
+# <a name="integer-data-type-visual-basic"></a>Tamsayı veri türü (Visual Basic)
 
 Değer olarak -2.147.483.648 ile 2.147.483.647 arasında değişen imzalı 32 bitlik (4 bayt) tamsayıları tutar.  
   
 ## <a name="remarks"></a>Açıklamalar
 
- Veri `Integer` türü, 32 bit işlemcide en iyi performansı sağlar. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
+ `Integer`Veri türü, 32 bitlik bir işlemcide en iyi performansı sağlar. Diğer tamsayı türlerinin bellekten yüklenmesi ve belleğe depolanması daha yavaştır.  
   
- Varsayılan değeri `Integer` 0'dır.  
+ Varsayılan değeri 0 ' `Integer` dır.  
 
-## <a name="literal-assignments"></a>Gerçek atamalar
+## <a name="literal-assignments"></a>Değişmez değer atamaları
 
-Bir `Integer` değişkeni ondalık edebi, hekzadesmal literal, sekizli bir literal veya (Visual Basic 2017 ile başlayan) ikili bir edebi olarak atayarak bildirebilir ve başlatabilirsiniz. Tamsayı literal aralığının `Integer` dışında ysa (yani, daha az <xref:System.Int32.MinValue?displayProperty=nameWithType> veya daha <xref:System.Int32.MaxValue?displayProperty=nameWithType>büyükse, bir derleme hatası oluşur.
+Bir `Integer` değişkeni bir ondalık değişmez değer, bir onaltılı sabit değer, sekizlik bir sabit değer veya (Visual Basic 2017 ' den başlayarak) ikili bir değişmez değer atayarak başlatabilir ve başlatabilirsiniz. Tamsayı sabit değeri aralığın dışındaysa `Integer` (diğer bir deyişle, değerinden küçükse <xref:System.Int32.MinValue?displayProperty=nameWithType> veya ondan büyükse <xref:System.Int32.MaxValue?displayProperty=nameWithType> , bir derleme hatası oluşur.
 
-Aşağıdaki örnekte, ondalık, heksadeondamal ve ikili literaller olarak temsil edilen 90.946'ya eşit tamsayılar değerlere `Integer` atanır.
+Aşağıdaki örnekte, ondalık, onaltılık ve ikili sabit değerler olarak temsil edilen 90.946 'e eşit tamsayılar `Integer` değerlere atanır.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> `&h` Önek'i veya `&H` hexadecimal literal'ı, önek'i `&b` `&B` veya ikili bir edebi yi `&o` belirtmek `&O` için ve önek'i veya bir sekizli edebi yi belirtmek için kullanırsınız. Ondalık edebi hiçbir önek var.
+> Ön eki veya bir `&h` `&H` onaltılık sabit değeri, öneki `&b` veya `&B` bir ikili sabit değer belirtmek için ön eki veya bir `&o` `&O` sekizlik sabit değeri göstermek için kullanın. Ondalık değişmez değerlerinin ön eki yok.
 
-Visual Basic 2017'den başlayarak, aşağıdaki örnekte de görüldüğü gibi okunabilirliği artırmak için alt puan `_`karakterini, basamak ayırıcısı olarak da kullanabilirsiniz.
+Visual Basic 2017 ' den başlayarak, `_` Aşağıdaki örnekte gösterildiği gibi, okunabilirliği geliştirmek için alt çizgi karakterini bir rakam ayırıcısı olarak da kullanabilirsiniz.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Visual Basic 15.5 ile başlayarak, önek`_`ile heksadecimal, ikili veya sekizli basamaklar arasında baş ayırıcı olarak alt çizilme karakterini de kullanabilirsiniz. Örnek:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Sayısal literals, aşağıdaki örnekte görüldüğü `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) `Integer` gibi, veri türünü ifade etmek için tür karakterini de içerebilir.
+Sayısal değişmez değerler, `I` [type character](../../programming-guide/language-features/data-types/type-characters.md) `Integer` Aşağıdaki örnekte gösterildiği gibi, veri türünü belirtmek için de tür karakterini içerebilir.
 
 ```vb
 Dim number = &H_035826I
@@ -69,13 +69,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Programlama ipuçları
 
-- **Interop Hususlar.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle bir `Integer` arada bulunuyorsanız, diğer ortamlarda farklı veri genişliğine (16 bit) sahip olduğunu unutmayın. Böyle bir bileşene 16 bitlik bir bağımsız değişken `Short` geçiyorsanız, bunu yeni Visual Basic kodunuzda değil, `Integer` olarak bildirin.  
+- **Birlikte çalışma konuları.** Otomasyon veya COM nesneleri gibi .NET Framework için yazılmayan bileşenlerle arabirimleriniz varsa, `Integer` diğer ortamlarda farklı bir veri genişliğine (16 bit) sahip olduğunu unutmayın. Böyle bir bileşene 16 bitlik bir bağımsız değişken geçirirseniz, bunu `Short` `Integer` Yeni Visual Basic kodunuzda değil olarak bildirin.  
   
-- **Genişletme.** Veri `Integer` türü `Long`, , `Decimal`, `Single`veya `Double`. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> `Integer` hatayla karşılaşmadan bu türlerden herhangi birine dönüştürebileceğiniz anlamına gelir.  
+- **Kan.** `Integer`Veri türü widens,, `Long` , `Decimal` `Single` veya `Double` . Bu, `Integer` bir hatayla karşılaşmadan bu türlerden birine dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .  
   
-- **Karakterleri yazın.** Gerçek tür karakterini `I` bir edebi karaktere ekler, `Integer` onu veri türüne zorlar. Tanımlayıcı türü karakterini `%` herhangi bir tanımlayıcıya `Integer`ekolarak .  
+- **Tür karakterleri.** Değişmez değer türü karakterini `I` bir sabit değere eklemek, `Integer` veri türüne zorlar. Tanımlayıcı türü karakteri `%` herhangi bir tanımlayıcıya eklemek bunu öğesine zorlar `Integer` .  
   
-- **Çerçeve Türü.** .NET Framework'de karşılık gelen <xref:System.Int32?displayProperty=nameWithType> tür yapıdır.  
+- **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Int32?displayProperty=nameWithType> yapısıdır.  
   
 ## <a name="range"></a>Aralık
 
@@ -98,9 +98,9 @@ k = 5.5
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Int32?displayProperty=nameWithType>
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
-- [Long Veri Türü](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [Short Veri Türü](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Veri türleri](index.md)
+- [Long Veri Türü](long-data-type.md)
+- [Short Veri Türü](short-data-type.md)
+- [Tür Dönüştürme İşlevleri](../functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../keywords/conversion-summary.md)
+- [Veri Türlerinin Etkili Kullanımı](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

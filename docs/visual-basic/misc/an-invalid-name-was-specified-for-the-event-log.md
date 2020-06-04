@@ -1,26 +1,26 @@
 ---
-title: Olay günlüğü için geçersiz ad belirtildi
+title: Olay günlüğü için geçersiz bir ad belirtildi
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
-ms.openlocfilehash: 05f37239510482de218847f069dc74cbef91f398
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70b1de2a3776a9c68260cc431b65e754d7247a0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412929"
 ---
-# <a name="an-invalid-name-was-specified-for-the-event-log"></a>Olay günlüğü için geçersiz ad belirtildi
-Olay günlüğü için geçersiz ad belirtildi. Genellikle bu ad, boş bir dosya adı veya çok uzun bir dosya adı geçersiz karakterler sonucudur.  
+# <a name="an-invalid-name-was-specified-for-the-event-log"></a>Olay günlüğü için geçersiz bir ad belirtildi
+Olay günlüğü için geçersiz bir ad belirtildi. Genellikle bu, ad, boş bir dosya adı veya çok uzun bir dosya adı içindeki geçersiz karakterlerin bir sonucudur.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Belirtilen ada sekiz karakterden daha uzun olması durumunda, diğer günlüklerinin adlarla çakışma olduğundan emin olun. Yalnızca ilk sekiz karakterini adının benzersiz olup olmadığını belirlerken değerlendirilir.  
+- Belirtilen ad sekiz karakterden daha büyükse, diğer olay günlüklerinin adlarıyla çakışma olmadığından emin olun. Adın benzersiz olup olmadığı belirlenirken yalnızca ilk sekiz karakter değerlendirilir.  
   
-- Bir yol sağlayarak, doğru bir şekilde ayrıştırılır emin olun.  
+- Bir yol gerekiyorsa, doğru ayrıştırıladığına emin olun.  
   
-- Adında geçersiz karakter olup olmadığını denetleyin. Dosya adında kullanılan karakterler `<`, `>`, `:`, `"`, `/`, `\`, ve `|`.  
+- Adda geçersiz karakter olmadığından emin olun. Dosya adında kullanılamayan karakterler,,,,, `<` `>` `:` `"` `/` `\` , ve içerir `|` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Dosya yollarını ayrıştırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [Nasıl yapılır: Dosyayı yeniden adlandırma](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Nasıl yapılır: Dosya Yollarını Ayrıştırma](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Nasıl yapılır: Dosyayı Yeniden Adlandırma](../developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

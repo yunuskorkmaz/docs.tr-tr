@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351902"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413110"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
 
 *Boyut* , bir dizinin öğelerinin belirtimini değiştirebileceğiniz bir yöndir. Ayın her günü için satış toplamı tutan bir dizinin bir boyutu (ayın günü) vardır. Ayın her günü için departmanın satış toplamı tutan bir dizinin iki boyutu vardır (Departman numarası ve ayın günü). Bir dizinin sahip olduğu boyut sayısı *derece*olarak adlandırılır.
 
 > [!NOTE]
-> Bir dizinin kaç boyut olduğunu anlamak için <xref:System.Array.Rank%2A> özelliğini kullanabilirsiniz.
+> <xref:System.Array.Rank%2A>Bir dizinin kaç boyut olduğunu anlamak için özelliğini kullanabilirsiniz.
 
 ## <a name="working-with-dimensions"></a>Boyutlarla çalışma
 
 Bir dizinin bir öğesini, boyutlarının her biri için bir *Dizin* veya *alt simge* sağlayarak belirtirsiniz. Öğeler, 0 dizininden bu boyut için en yüksek dizin arasındaki her bir boyut boyunca bitişik.
 
-Aşağıdaki çizimler, farklı derecelendirilerle dizilerin kavramsal yapısını gösterir. Çizimlerde bulunan her öğe, ona erişen dizin değerlerini gösterir. Örneğin, `(1, 0)`dizinleri belirterek iki boyutlu dizinin ikinci satırının ilk öğesine erişebilirsiniz.
+Aşağıdaki çizimler, farklı derecelendirilerle dizilerin kavramsal yapısını gösterir. Çizimlerde bulunan her öğe, ona erişen dizin değerlerini gösterir. Örneğin, dizinler belirterek iki boyutlu dizinin ikinci satırındaki ilk öğesine erişebilirsiniz `(1, 0)` .
 
 ![Tek boyutlu dizi gösteren diyagram.](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -88,12 +88,12 @@ Artık, dizi tutma bilgilerinizin bir yıldan daha fazla olması gerektiğine va
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-Her bir dizin 0 ' dan en büyük ' a değiştiğinden, her `salesAmounts` boyutu söz konusu boyut için gereken uzunluktan bir daha az olarak bildirildiği için unutmayın. Ayrıca, dizi boyutunun her yeni boyutla arttığı unutulmamalıdır. Yukarıdaki örneklerde bulunan üç boyut sırasıyla 31, 372 ve 1.860 öğeleridir.
+Her bir dizin 0 ' dan en büyük ' a değiştiğinden, her boyutun `salesAmounts` Bu boyut için gereken uzunluktan bir daha az olarak bildirildiği unutulmamalıdır. Ayrıca, dizi boyutunun her yeni boyutla arttığı unutulmamalıdır. Yukarıdaki örneklerde bulunan üç boyut sırasıyla 31, 372 ve 1.860 öğeleridir.
 
 > [!NOTE]
-> `Dim` deyimi veya `New` yan tümcesini kullanmadan bir dizi oluşturabilirsiniz. Örneğin, <xref:System.Array.CreateInstance%2A> yöntemini çağırabilir veya başka bir bileşen, kodunuzu bu şekilde oluşturulan bir diziye geçirebilir. Böyle bir dizide 0 dışında bir alt sınır olabilir. <xref:System.Array.GetLowerBound%2A> yöntemini veya `LBound` işlevini kullanarak bir boyutun alt sınır için her zaman test edebilirsiniz.
+> `Dim`Deyimi veya yan tümcesini kullanmadan bir dizi oluşturabilirsiniz `New` . Örneğin, <xref:System.Array.CreateInstance%2A> yöntemini çağırabilirsiniz ya da başka bir bileşen kodunuzu bu şekilde oluşturulan bir diziye geçirebilir. Böyle bir dizide 0 dışında bir alt sınır olabilir. Yöntemini veya işlevini kullanarak, boyutun alt sınır için her zaman test edebilirsiniz <xref:System.Array.GetLowerBound%2A> `LBound` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [Diziler](index.md)
+- [Dizilerle İlgili Sorun Giderme](troubleshooting-arrays.md)

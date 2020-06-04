@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: 093c967557b899c8661fdec348d421996e948b94
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: af57fc7d55c5cfda24a2fd9406b17dedee898760
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352328"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400104"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
 Visual Basic Derleyicisi, kodunuzdaki belge açıklamalarını bir XML dosyasına işleyebilir. XML dosyasını belgelere işlemek için ek araçlar kullanabilirsiniz.  
@@ -27,20 +27,20 @@ Visual Basic Derleyicisi, kodunuzdaki belge açıklamalarını bir XML dosyasın
   
 ||||  
 |---|---|---|  
-|[\<c >](../../../visual-basic/language-reference/xmldoc/c.md)|[\<kodu >](../../../visual-basic/language-reference/xmldoc/code.md)|[\<örnek >](../../../visual-basic/language-reference/xmldoc/example.md)|  
-|[\<özel durum >](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[\<içerme >](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<listesi >](../../../visual-basic/language-reference/xmldoc/list.md)|  
-|[\<paragraf >](../../../visual-basic/language-reference/xmldoc/para.md)|[\<param >](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref >](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
-|[\<izin >](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<açıklamalar >](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
-|[\<bkz. >](../../../visual-basic/language-reference/xmldoc/see.md) <sup>1</sup>|[\<seede >](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
-|[\<typeparam >](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
+|[\<c>](c.md)|[\<code>](code.md)|[\<example>](example.md)|  
+|[\<exception>](exception.md)<sup>1</sup>|[\<include>](include.md)<sup>1</sup>|[\<list>](list.md)|  
+|[\<para>](para.md)|[\<param>](param.md)<sup>1</sup>|[\<paramref>](paramref.md)|  
+|[\<permission>](permission.md)<sup>1</sup>|[\<remarks>](remarks.md)|[\<returns>](returns.md)|  
+|[\<see>](see.md)<sup>1</sup>|[\<seealso>](seealso.md)<sup>1</sup>|[\<summary>](summary.md)|  
+|[\<typeparam>](typeparam.md)<sup>1</sup>|[\<value>](value.md)||  
   
  (<sup>1</sup> derleyici söz dizimini doğrular.)  
   
 > [!NOTE]
-> Bir belge açıklamasının metninde açılı ayraç görüntülenmesini istiyorsanız `&lt;` ve `&gt;`kullanın. Örneğin `"&lt;text in angle brackets&gt;"` dize, `<text in angle brackets>`olarak görünür.  
+> Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyorsanız, `&lt;` ve kullanın `&gt;` . Örneğin, dize `"&lt;text in angle brackets&gt;"` olarak görünür `<text in angle brackets>` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML ile Kodunuzu Belgeleme](../../programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [-doc](../../reference/command-line-compiler/doc.md)
+- [Nasıl yapılır: XML Belgesi Oluşturma](../../programming-guide/program-structure/how-to-create-xml-documentation.md)

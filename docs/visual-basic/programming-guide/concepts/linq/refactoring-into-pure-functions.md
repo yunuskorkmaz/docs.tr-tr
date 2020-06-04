@@ -2,12 +2,12 @@
 title: Saf İşlevler Halinde Yeniden Düzenleme
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346515"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413485"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Saf IŞLEVLERE yeniden düzenleme (Visual Basic)
 
@@ -21,7 +21,7 @@ Daha önce bu bölümde belirtildiği gibi, saf bir işlev iki yararlı özelli�
 
  İşlevsel programlamaya geçiş yapmanın bir yolu, gereksiz yan etkileri ve dış bağımlılıkları ortadan kaldırmak için mevcut kodu yeniden düzenleme yöntemidir. Bu şekilde, var olan kodun saf işlev sürümlerini oluşturabilirsiniz.
 
-Bu konuda, saf bir işlevin ne olduğu ve ne olmadığı açıklanmaktadır. [Öğretici: bir WordprocessingML belgesi (Visual Basic) öğreticisindeki Içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) bir WordprocessingML belgesinin nasıl düzenleneceğini gösterir ve saf bir işlev kullanarak yeniden düzenleme ile iki örnek içerir.
+Bu konuda, saf bir işlevin ne olduğu ve ne olmadığı açıklanmaktadır. [Öğretici: bir WordprocessingML belgesi (Visual Basic) öğreticisindeki Içeriği düzenleme](tutorial-manipulating-content-in-a-wordprocessingml-document.md) bir WordprocessingML belgesinin nasıl düzenleneceğini gösterir ve saf bir işlev kullanarak yeniden düzenleme ile iki örnek içerir.
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Yan etkileri ve dış bağımlılıkları ortadan kaldırma
 
@@ -29,7 +29,7 @@ Aşağıdaki örneklerde, saf olmayan iki işlev ve bir saf işlev kontrast vard
 
 ### <a name="non-pure-function-that-changes-a-class-member"></a>Bir sınıf üyesini değiştiren saf olmayan Işlev
 
-Aşağıdaki kodda `HyphenatedConcat` işlevi saf bir işlev değildir, çünkü bu sınıf içindeki `aMember` veri üyesini değiştirir:
+Aşağıdaki kodda, `HyphenatedConcat` işlev saf bir işlev değildir, çünkü `aMember` sınıfındaki veri üyesini değiştirir:
 
 ```vb
 Module Module1
@@ -52,11 +52,11 @@ Bu kod aşağıdaki çıktıyı üretir:
 StringOne-StringTwo
 ```
 
-Değiştirilen verilerin `public` mı yoksa `private` erişimi mi yoksa bir `shared` üyesi mi yoksa örnek üyesi mi olduğunu unutmayın. Saf bir işlev, işlevin dışındaki herhangi bir veriyi değiştirmez.
+Değiştirilen verilerin veya `public` `private` bir `shared` üye ya da bir örnek üyesi olup olmadığı konusunda ilgisiz olduğunu unutmayın. Saf bir işlev, işlevin dışındaki herhangi bir veriyi değiştirmez.
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>Bir bağımsız değişkeni değiştiren saf olmayan Işlev
 
-Ayrıca, aynı işlevin aşağıdaki sürümü saf değildir, çünkü parametresinin içeriğini değiştirir `sb`.
+Ayrıca, parametresinin içeriğini değiştirdiği için aynı işlevin aşağıdaki sürümü saf değildir `sb` .
 
 ```vb
 Module Module1
@@ -72,14 +72,14 @@ Module Module1
 End Module
 ```
 
-Programın bu sürümü ilk sürümle aynı çıktıyı üretir, çünkü `HyphenatedConcat` işlevi, <xref:System.Text.StringBuilder.Append%2A> üye işlevini çağırarak ilk parametresinin değerini (durum) değiştirdi. Bu değişiklik, `HyphenatedConcat`, bu olguyu, çağrı-değer parametre geçişini kullanmadığına rağmen oluşur.
+Programın bu sürümü ilk sürümle aynı çıktıyı üretir, çünkü `HyphenatedConcat` işlev üye işlevini çağırarak ilk parametresinin değerini (durum) değiştirdi <xref:System.Text.StringBuilder.Append%2A> . Bu değişiklik, bu olguyu, çağrı- `HyphenatedConcat` değer parametresini kullanan bir olgusuna rağmen oluştuğunu unutmayın.
 
 > [!IMPORTANT]
 > Başvuru türleri için bir parametreyi değere göre geçirirseniz, başvurunun geçirildiği bir nesnenin kopyasına neden olur. Bu kopya, özgün başvurusuyla aynı örnek verileriyle ilişkili olmaya devam eder (başvuru değişkeni yeni bir nesneye atanana kadar). Bir parametreyi değiştirmek için bir işlev için başvuruya göre arama gerekli değildir.
 
 ### <a name="pure-function"></a>Saf Işlev
 
-Programın bu sonraki sürümü, `HyphenatedConcat` işlevinin saf bir işlev olarak nasıl uygulanacağını barındırdı.
+Programın bu sonraki sürümü, `HyphenatedConcat` işlevin saf işlev olarak nasıl uygulanacağını barındırdı.
 
 ```vb
 Module Module1
@@ -95,7 +95,7 @@ Module Module1
 End Module
 ```
 
-Yine, bu sürüm aynı çıkış satırını üretir: `StringOne-StringTwo`. Birleştirilmiş değeri bekletmek için `s2`ara değişkende depolandığını unutmayın.
+Yine, bu sürüm aynı çıkış satırını üretir: `StringOne-StringTwo` . Birleştirilmiş değeri bekletmek için, ara değişkende depolandığını unutmayın `s2` .
 
 Çok yararlı olabilecek bir yaklaşım, yerel olarak etkileyici olan işlevleri yazmak (yani yerel değişkenleri bildirdikleri ve değiştirdiklerinde), ancak Global olarak saf bir yaklaşımdır. Bu gibi işlevler, istenen ek özelliklerin çoğuna sahiptir, ancak basit bir döngü aynı şeyi gerçekleştirirken özyineleme kullanmak zorunda kalmadan, daha fazla çalışan işlevsel programlama deyimidir.
 
@@ -103,9 +103,9 @@ Yine, bu sürüm aynı çıkış satırını üretir: `StringOne-StringTwo`. Bir
 
 Standart sorgu işleçlerinin önemli bir özelliği, saf işlevler olarak uygulanırlar.
 
-Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](introduction-to-pure-functional-transformations.md)
+- [Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)](functional-programming-vs-imperative-programming.md)

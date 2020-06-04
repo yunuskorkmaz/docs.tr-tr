@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ecb0f5f6416a2dd4ddd6888cb80ed3ac11ee58df
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343927"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415537"
 ---
 # <a name="single-data-type-visual-basic"></a>Single Veri Türü (Visual Basic)
 
@@ -33,29 +33,29 @@ ms.locfileid: "74343927"
   
 ## <a name="remarks"></a>Açıklamalar  
 
- `Double`tam veri genişliğini gerektirmeyen kayan nokta değerlerini içermesi için `Single` veri türünü kullanın. Bazı durumlarda, ortak dil çalışma zamanı `Single` değişkenlerinizi birbirine yakından paketlenebilir ve bellek tüketimini kaydedebilir.  
+ `Single`Tam veri genişliğini gerektirmeyen kayan nokta değerlerini içermesi için veri türünü kullanın `Double` . Bazı durumlarda, ortak dil çalışma zamanı `Single` değişkenlerinizi birbirine yakından paketlenebilir ve bellek tüketimini kaydedebilir.  
   
- `Single` varsayılan değeri 0 ' dır.  
+ Varsayılan değeri 0 ' `Single` dır.  
   
 ## <a name="programming-tips"></a>Programlama İpuçları  
   
-- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimine sahip olmadıkları göz önünde bulundurun. Bu, değer karşılaştırması ve `Mod` işleci gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimine sahip olmadıkları göz önünde bulundurun. Bu, değer karşılaştırması ve işleç gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir `Mod` . Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Kan.** `Single` veri türü `Double`widens. Bu, bir <xref:System.OverflowException?displayProperty=nameWithType> hatasıyla karşılaşmadan `Single` `Double` dönüştürebileceğiniz anlamına gelir.  
+- **Kan.** `Single`Widens veri türü `Double` . Bu, `Single` `Double` bir hatayla karşılaşmadan ' a dönüştürebileceğiniz anlamına gelir <xref:System.OverflowException?displayProperty=nameWithType> .  
   
 - **Sondaki sıfırlar.** Kayan nokta veri türlerinde sondaki 0 karakterden oluşan iç temsili yok. Örneğin, 4,2000 ve 4,2 arasında ayrım yapmazlar. Sonuç olarak, kayan nokta değerlerini görüntülerken veya yazdırdığınızda sondaki 0 karakter görünmez.  
   
-- **Tür karakterleri.** Değişmez değer türü karakter `F` bir sabit değere eklenmesi, `Single` veri türüne zorlar. Tanımlayıcı türü karakter `!` herhangi bir tanımlayıcıya eklemek bunu `Single`zorlar.  
+- **Tür karakterleri.** Değişmez değer türü karakterini `F` bir sabit değere eklemek, `Single` veri türüne zorlar. Tanımlayıcı türü karakteri `!` herhangi bir tanımlayıcıya eklemek bunu öğesine zorlar `Single` .  
   
 - **Çerçeve türü.** .NET Framework karşılık gelen tür <xref:System.Single?displayProperty=nameWithType> yapısıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Single?displayProperty=nameWithType>
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
-- [Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [Double Veri Türü](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Veri türleri](index.md)
+- [Decimal Veri Türü](decimal-data-type.md)
+- [Double Veri Türü](double-data-type.md)
+- [Tür Dönüştürme İşlevleri](../functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../keywords/conversion-summary.md)
+- [Veri Türlerinin Etkili Kullanımı](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Veri Türü Sorunlarını Giderme](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)

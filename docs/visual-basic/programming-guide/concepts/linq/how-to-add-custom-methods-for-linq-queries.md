@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl Yapılır: LINQ Sorguları için Özel Yöntemler'
+title: 'Nasıl yapılır: LINQ Sorguları için Özel Yöntemler'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 3004a9c9c7abeffd9993b848ad765e7ae2dc8876
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 55004441d2d1d74556da6841f28d113b876d1048
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353368"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400610"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Nasıl yapılır: LINQ sorguları için özel yöntemler ekleme (Visual Basic)
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimine uzantı yöntemleri ekleyerek, LINQ sorguları için kullanabileceğiniz yöntemlerin kümesini genişletebilirsiniz. Örneğin, standart ortalama veya en yüksek işlemlere ek olarak, bir dizi değerden tek bir değeri hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Ayrıca, bir dizi değer için özel bir filtre veya belirli bir veri dönüştürmesi olarak çalışacak bir yöntem oluşturabilirsiniz ve yeni bir dizi döndürür. Bu tür yöntemlere örnek olarak <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>ve <xref:System.Linq.Enumerable.Reverse%2A>verilebilir.
+Arabirime uzantı yöntemleri ekleyerek, LINQ sorguları için kullanabileceğiniz yöntemlerin kümesini genişletebilirsiniz <xref:System.Collections.Generic.IEnumerable%601> . Örneğin, standart ortalama veya en yüksek işlemlere ek olarak, bir dizi değerden tek bir değeri hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Ayrıca, bir dizi değer için özel bir filtre veya belirli bir veri dönüştürmesi olarak çalışacak bir yöntem oluşturabilirsiniz ve yeni bir dizi döndürür. Bu tür yöntemlere örnekler, <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Skip%2A> ve ' dir <xref:System.Linq.Enumerable.Reverse%2A> .
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimini genişlettiğinizde, özel yöntemlerinizi herhangi bir sıralanabilir koleksiyona uygulayabilirsiniz. Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
+<xref:System.Collections.Generic.IEnumerable%601>Arabirimi genişlettiğinizde, özel yöntemlerinizi herhangi bir sıralanabilir koleksiyona uygulayabilirsiniz. Daha fazla bilgi için bkz. [Uzantı yöntemleri](../../language-features/procedures/extension-methods.md).
 
 ## <a name="adding-an-aggregate-method"></a>Toplama yöntemi ekleme
 
-Toplama yöntemi bir değer kümesinden tek bir değeri hesaplar. LINQ, <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>ve <xref:System.Linq.Enumerable.Max%2A>dahil olmak üzere birkaç toplama yöntemi sağlar. <xref:System.Collections.Generic.IEnumerable%601> arabirimine bir genişletme yöntemi ekleyerek kendi toplama yönteminizi oluşturabilirsiniz.
+Toplama yöntemi bir değer kümesinden tek bir değeri hesaplar. LINQ, ve dahil olmak üzere birkaç toplama yöntemi sağlar <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A> . Arayüze bir genişletme yöntemi ekleyerek kendi toplama yönteminizi oluşturabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> .
 
-Aşağıdaki kod örneği, `double`tür bir sayı dizisi için ortanca hesaplamak üzere `Median` adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.
+Aşağıdaki kod örneği, `Median` bir tür sayı dizisi için ortanca hesaplamak üzere çağrılan bir genişletme yönteminin nasıl oluşturulacağını göstermektedir `double` .
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -50,12 +50,12 @@ Module LINQExtension
 End Module
 ```
 
-Bu genişletme yöntemini, her türlü sıralanabilir koleksiyon için <xref:System.Collections.Generic.IEnumerable%601> arabiriminden diğer toplama yöntemlerini çağırdığınız şekilde çağırabilirsiniz.
+Bu genişletme yöntemini, herhangi bir sıralanabilir koleksiyon için, arabirimden diğer toplama yöntemlerini çağırdığınız şekilde çağırabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> .
 
 > [!NOTE]
-> Visual Basic, `Aggregate` veya `Group By` yan tümcesi için bir yöntem çağrısı veya standart sorgu söz dizimini kullanabilirsiniz. Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md) ve [Group by yan tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md).
+> Visual Basic, `Aggregate` veya yan tümcesi için bir yöntem çağrısı veya standart sorgu söz dizimini kullanabilirsiniz `Group By` . Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../language-reference/queries/aggregate-clause.md) ve [Group by yan tümcesi](../../../language-reference/queries/group-by-clause.md).
 
-Aşağıdaki kod örneği, `double`türünde bir dizi için `Median` yönteminin nasıl kullanılacağını gösterir.
+Aşağıdaki kod örneği, `Median` bir dizi türü için yönteminin nasıl kullanılacağını gösterir `double` .
 
 ```vb
 Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}
@@ -77,7 +77,7 @@ Toplama yönteminizi çeşitli türlerde dizileri kabul edecek şekilde aşırı
 
 #### <a name="to-create-an-overload-for-each-type"></a>Her tür için bir aşırı yükleme oluşturmak için
 
-Desteklemek istediğiniz her tür için belirli bir aşırı yükleme oluşturabilirsiniz. Aşağıdaki kod örneğinde, `integer` türü için `Median` yönteminin aşırı yüklemesi gösterilmektedir.
+Desteklemek istediğiniz her tür için belirli bir aşırı yükleme oluşturabilirsiniz. Aşağıdaki kod örneği, türü için yönteminin bir aşırı yüklemesini gösterir `Median` `integer` .
 
 ```vb
 ' Integer overload
@@ -88,7 +88,7 @@ Function Median(ByVal source As IEnumerable(Of Integer)) As Double
 End Function
 ```
 
-Artık aşağıdaki kodda gösterildiği gibi `integer` ve `double` türleri için `Median` aşırı yüklerini çağırabilirsiniz:
+Artık `Median` `integer` `double` , aşağıdaki kodda gösterildiği gibi, hem hem de türleri için aşırı yüklemeleri çağırabilirsiniz:
 
 ```vb
 Dim numbers1() As Double = {1.9, 2, 8, 4, 5.7, 6, 7.2, 0}
@@ -117,7 +117,7 @@ Console.WriteLine("Integer: Median = " & query2)
 
 Ayrıca, genel nesne dizisini kabul eden bir aşırı yükleme de oluşturabilirsiniz. Bu aşırı yükleme bir temsilciyi parametre olarak alır ve bir genel türdeki nesne dizisini belirli bir türe dönüştürmek için kullanır.
 
-Aşağıdaki kod, <xref:System.Func%602> temsilcisini bir parametre olarak alan `Median` yönteminin aşırı yüklemesini gösterir. Bu temsilci, T genel türünde bir nesne alır ve `double`türünde bir nesne döndürür.
+Aşağıdaki kod, `Median` <xref:System.Func%602> bir parametresi olarak temsilciyi alan yönteminin bir aşırı yüklemesini gösterir. Bu temsilci, T genel türünde bir nesne alır ve türünde bir nesne döndürür `double` .
 
 ```vb
 ' Generic overload.
@@ -129,9 +129,9 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function
 ```
 
-Artık herhangi bir türdeki nesne dizisi için `Median` yöntemini çağırabilirsiniz. Türün kendi yöntem aşırı yüklemesi yoksa, bir temsilci parametresi geçirmeniz gerekir. Visual Basic, bu amaçla bir lambda ifadesi kullanabilirsiniz. Ayrıca, yöntem çağrısı yerine `Aggregate` veya `Group By` yan tümcesini kullanırsanız, bu yan tümce kapsamındaki herhangi bir değer veya ifade geçirebilirsiniz.
+Artık `Median` herhangi bir türdeki nesne dizisi için yöntemini çağırabilirsiniz. Türün kendi yöntem aşırı yüklemesi yoksa, bir temsilci parametresi geçirmeniz gerekir. Visual Basic, bu amaçla bir lambda ifadesi kullanabilirsiniz. Ayrıca, `Aggregate` `Group By` Yöntem çağrısı yerine OR yan tümcesini kullanırsanız, bu yan tümce kapsamındaki herhangi bir değer veya ifade geçirebilirsiniz.
 
-Aşağıdaki örnek kod, bir tamsayılar dizisi ve dizeler dizisi için `Median` yönteminin nasıl çağrılacağını gösterir. Dizeler için, dizideki dizelerin uzunluklarının ortancası hesaplanır. Örnek, <xref:System.Func%602> temsilci parametresinin her durum için `Median` yöntemine nasıl geçirileceğini gösterir.
+Aşağıdaki örnek kod, `Median` bir tamsayılar dizisi ve dizeler dizisi için yönteminin nasıl çağrılacağını gösterir. Dizeler için, dizideki dizelerin uzunluklarının ortancası hesaplanır. Örnek, <xref:System.Func%602> her durumda temsilci parametresinin yönteme nasıl geçirileceğini gösterir `Median` .
 
 ```vb
 Dim numbers3() As Integer = {1, 2, 3, 4, 5}
@@ -161,9 +161,9 @@ Console.WriteLine("String: Median = " & query4)
 
 ## <a name="adding-a-method-that-returns-a-collection"></a>Koleksiyon döndüren bir yöntem ekleme
 
-<xref:System.Collections.Generic.IEnumerable%601> arabirimini bir değer dizisi döndüren özel bir sorgu yöntemiyle genişletebilirsiniz. Bu durumda, yöntemin <xref:System.Collections.Generic.IEnumerable%601>türünde bir koleksiyon döndürmesi gerekir. Bu tür yöntemler, bir değerler dizisine filtre veya veri dönüştürmeleri uygulamak için kullanılabilir.
+<xref:System.Collections.Generic.IEnumerable%601>Arabirimi bir değer dizisi döndüren özel bir sorgu yöntemiyle genişletebilirsiniz. Bu durumda, yöntemin türünde bir koleksiyon döndürmesi gerekir <xref:System.Collections.Generic.IEnumerable%601> . Bu tür yöntemler, bir değerler dizisine filtre veya veri dönüştürmeleri uygulamak için kullanılabilir.
 
-Aşağıdaki örnek, ilk öğeden başlayarak bir koleksiyondaki her öğeyi döndüren `AlternateElements` adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.
+Aşağıdaki örnek, `AlternateElements` ilk öğeden başlayarak bir koleksiyondaki her öğeyi döndüren adlı bir genişletme yönteminin nasıl oluşturulacağını gösterir.
 
 ```vb
 ' Extension method for the IEnumerable(of T) interface.
@@ -186,7 +186,7 @@ Function AlternateElements(Of T)(
 End Function
 ```
 
-Aşağıdaki kodda gösterildiği gibi, diğer yöntemleri <xref:System.Collections.Generic.IEnumerable%601> arabiriminden çağırdığınız gibi, herhangi bir sıralanabilir koleksiyon için bu genişletme yöntemini çağırabilirsiniz:
+Aşağıdaki kodda gösterildiği gibi, herhangi bir sayılabilir koleksiyon için bu genişletme yöntemini, arabirimden diğer yöntemleri çağırdığınız gibi çağırabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> :
 
 ```vb
 Dim strings() As String = {"a", "b", "c", "d", "e"}
@@ -207,4 +207,4 @@ Next
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Genişletme Yöntemleri](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Uzantı yöntemleri](../../language-features/procedures/extension-methods.md)

@@ -5,26 +5,26 @@ helpviewer_keywords:
 - list [LINQ in Visual Basic]
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
-ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b3df58fb3d56a1eb3ac6efcca57c76be470e4bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855475"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414627"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Nasıl yapılır: Öğe Listesi Oluşturma
-Bu konuda kod tanımlar bir `Student` sınıfı ve sınıf örneklerinin bir listesini oluşturur. Listenin konu desteklemek için tasarlanmıştır [izlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Nesnelerin bir listesini gerektiren uygulamalar için de kullanılabilir. Kod öğeleri, nesne başlatıcıları kullanarak Öğrenciler listesinde tanımlar.  
+Bu konudaki kod, bir sınıfı tanımlar `Student` ve sınıfının örneklerinin bir listesini oluşturur. Liste [Izlenecek yol: Visual Basic sorguları yazma](walkthrough-writing-queries.md)konusunu destekleyecek şekilde tasarlanmıştır. Ayrıca, nesne listesi gerektiren tüm uygulamalar için de kullanılabilir. Kod, nesne başlatıcıları kullanarak öğrenciler listesindeki öğeleri tanımlar.  
   
 ## <a name="example"></a>Örnek  
- İzlenecek yol üzerinde çalışıyorsanız, bu kodu var. oluşturduğunuz proje için Module1.vb dosyasını kullanabilirsiniz. Az önce ile işaretlenen satırları değiştirin *** içinde `Main` sorgular ve bu kılavuzda sağlanan sorgu yürütme yöntemi.  
+ İzlenecek yol üzerinde çalışıyorsanız, bu kodu burada oluşturulan projenin Module1. vb dosyası için kullanabilirsiniz. Yönteminde * * * * ile işaretlenmiş satırları, `Main` yönergede sunulan sorgular ve sorgu yürütmeleri ile değiştirmeniz yeterlidir.  
   
  [!code-vb[VbLINQHowToCreateList#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowToCreateList/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Visual Basic'de sorgu yazma](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)
-- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Nesne başlatıcıları: Adlandırılmış ve anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [İzlenecek Yol: Visual Basic'de Sorgu Yazma](walkthrough-writing-queries.md)
+- [Visual Basic'te LINQ'e Başlarken](getting-started-with-linq.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](../../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Visual Basic'de LINQ'e Giriş](../../language-features/linq/introduction-to-linq.md)
+- [LINQ](../../language-features/linq/index.md)
+- [Sorgular](../../../language-reference/queries/index.md)

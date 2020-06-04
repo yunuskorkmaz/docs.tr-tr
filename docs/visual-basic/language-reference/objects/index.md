@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 2108e36956ada98e48e6ab05cec56dbf2a12b3dd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e927f69b7606866a0a9e8eadd59270f51ffc5e2b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838266"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414225"
 ---
 # <a name="objects-visual-basic"></a>Nesneler (Visual Basic)
 Bu konu, Visual Basic çalışma zamanı nesnelerini belgelemek ve üye yordamlarının, özelliklerinin ve olaylarının tablolarını içeren diğer konulara bağlantılar sağlar.  
@@ -20,7 +20,7 @@ Bu konu, Visual Basic çalışma zamanı nesnelerini belgelemek ve üye yordamla
 |---|---|  
 |<xref:Microsoft.VisualBasic.Collection>|İlgili öğe grubunu tek bir nesne olarak görmek için kullanışlı bir yol sağlar.|  
 |<xref:Microsoft.VisualBasic.Information.Err%2A>|Çalışma zamanı hatalarıyla ilgili bilgileri içerir.|  
-|`My.Application` nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>, Windows Forms uygulamalarda bulunan üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>, konsol uygulamalarında kullanılabilir üyeleri sağlar.|Yalnızca geçerli uygulama veya DLL ile ilişkili olan verileri sağlar. `My.Application`ile hiçbir sistem düzeyi bilgi değiştirilemez.<br /><br /> Bazı üyeler yalnızca Windows Forms veya konsol uygulamaları için kullanılabilir.|  
+|`My.Application`Nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>Konsol uygulamalarında kullanılabilir üyeleri sağlar.|Yalnızca geçerli uygulama veya DLL ile ilişkili olan verileri sağlar. İle hiçbir sistem düzeyi bilgisi değiştirilemez `My.Application` .<br /><br /> Bazı üyeler yalnızca Windows Forms veya konsol uygulamaları için kullanılabilir.|  
 |`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|Sürüm numarası, açıklama, yüklenen derlemeler vb. gibi bir uygulamayla ilgili bilgilerin alınması için özellikler sağlar.|  
 |`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|Uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.|  
 |`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|Ses, saat, klavye, dosya sistemi vb. gibi bilgisayar bileşenlerinin işlenmesine yönelik özellikler sağlar.|  
@@ -35,16 +35,16 @@ Bu konu, Visual Basic çalışma zamanı nesnelerini belgelemek ve üye yordamla
 |`My.Computer.Network` (<xref:Microsoft.VisualBasic.Devices.Network>)|Bilgisayarın bağlı olduğu ağla etkileşimde bulunmak için bir özellik, olay ve yöntemler sağlar.|  
 |`My.Computer.Ports` (<xref:Microsoft.VisualBasic.Devices.Ports>)|Bilgisayarın seri bağlantı noktalarına erişmek için bir özellik ve bir yöntem sağlar.|  
 |`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Kayıt defterini işlemek için özellikler ve yöntemler sağlar.|  
-|[My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)|Geçerli projede belirtilen her bir Windows formunun örneğine erişim için özellikler sağlar.|  
+|[My.Forms Nesnesi](my-forms-object.md)|Geçerli projede belirtilen her bir Windows formunun örneğine erişim için özellikler sağlar.|  
 |`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Web uygulamaları için uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.|  
-|[My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)|İstenen sayfa için <xref:System.Web.HttpRequest> nesnesini alır. `My.Request` nesnesi geçerli HTTP isteğiyle ilgili bilgiler içerir.<br /><br /> `My.Request` nesnesi yalnızca ASP.NET uygulamaları için kullanılabilir.|  
-|[My.Resources Nesnesi](../../../visual-basic/language-reference/objects/my-resources-object.md)|Uygulamanın kaynaklarına erişmek için özellikler ve sınıflar sağlar.|  
-|[My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)|<xref:System.Web.UI.Page>ilişkili <xref:System.Web.HttpResponse> nesnesini alır. Bu nesne bir istemciye HTTP yanıt verileri göndermenizi ve bu yanıt hakkındaki bilgileri eklemenizi sağlar.<br /><br /> `My.Response` nesnesi yalnızca ASP.NET uygulamaları için kullanılabilir.|  
-|[My.Settings Nesnesi](../../../visual-basic/language-reference/objects/my-settings-object.md)|Uygulamanın ayarlarına erişmek için özellikler ve yöntemler sağlar.|  
+|[My.Request Nesnesi](my-request-object.md)|<xref:System.Web.HttpRequest>İstenen sayfa için nesneyi alır. `My.Request`Nesne, GEÇERLI HTTP isteğiyle ilgili bilgiler içerir.<br /><br /> `My.Request`Nesne yalnızca ASP.NET uygulamaları için kullanılabilir.|  
+|[My.Resources Nesnesi](my-resources-object.md)|Uygulamanın kaynaklarına erişmek için özellikler ve sınıflar sağlar.|  
+|[My.Response Nesnesi](my-response-object.md)|<xref:System.Web.HttpResponse>İle ilişkili nesneyi alır <xref:System.Web.UI.Page> . Bu nesne bir istemciye HTTP yanıt verileri göndermenizi ve bu yanıt hakkındaki bilgileri eklemenizi sağlar.<br /><br /> `My.Response`Nesne yalnızca ASP.NET uygulamaları için kullanılabilir.|  
+|[My.Settings Nesnesi](my-settings-object.md)|Uygulamanın ayarlarına erişmek için özellikler ve yöntemler sağlar.|  
 |`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Geçerli kullanıcı hakkındaki bilgilere erişim sağlar.|  
-|[My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Geçerli proje tarafından başvurulan her bir Web hizmetinin tek bir örneğini oluşturmaya ve bunlara erişmeye yönelik özellikler sağlar.|  
+|[My.WebServices Nesnesi](my-webservices-object.md)|Geçerli proje tarafından başvurulan her bir Web hizmetinin tek bir örneğini oluşturmaya ve bunlara erişmeye yönelik özellikler sağlar.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Yapılandırılmış metin dosyalarını ayrıştırmak için yöntemler ve özellikler sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)
+- [Visual Basic dil başvurusu](../index.md)

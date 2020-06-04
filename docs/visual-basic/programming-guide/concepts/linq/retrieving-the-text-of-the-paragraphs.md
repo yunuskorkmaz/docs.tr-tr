@@ -2,30 +2,30 @@
 title: Paragrafların Metnini Alma
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: 0f53eec44e0b11a6c23c7afb4892e4d5d876d6d6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 24167ade2d0326ef9382536f79f9e45eb22c89c5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341598"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413394"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Paragrafların metnini alma (Visual Basic)
-Bu örnek, önceki örnekte yer alan, [paragrafları ve stillerini (Visual Basic) alırken](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)oluşturulur. Bu yeni örnek, her bir paragrafın metnini dize olarak alır.  
+Bu örnek, önceki örnekte yer alan, [paragrafları ve stillerini (Visual Basic) alırken](retrieving-the-paragraphs-and-their-styles.md)oluşturulur. Bu yeni örnek, her bir paragrafın metnini dize olarak alır.  
   
- Bu örnek, metni almak için, anonim türler koleksiyonu aracılığıyla yinelenen bir sorgu ekler ve yeni bir üyenin eklenmesiyle adsız bir türün yeni bir koleksiyonunu `Text`. Birden çok dizeyi tek bir dizede birleştirmek için <xref:System.Linq.Enumerable.Aggregate%2A> standart sorgu işlecini kullanır.  
+ Bu örnek, metni almak için anonim türler koleksiyonu ve proje, yeni bir üyenin eklenmesiyle anonim bir türün yeni bir koleksiyonu aracılığıyla yinelenen ek bir sorgu ekler `Text` . <xref:System.Linq.Enumerable.Aggregate%2A>Birden çok dizeyi tek bir dizede birleştirmek için standart sorgu işlecini kullanır.  
   
  Bu teknik (yani, ilk olarak anonim bir türün koleksiyonuna yansıtırken, daha sonra bu koleksiyonun yeni bir anonim tür koleksiyonuna proje için kullanılması) ortak ve kullanışlı bir derlemedir. Bu sorgu, ilk anonim türe yansıtılamadan yazılmış olabilir. Ancak, yavaş değerlendirme nedeniyle bunu yapmak çok daha fazla işlem gücü kullanmaz. Deyim yığında daha kısa süreli nesneler oluşturur, ancak bu durum performansı önemli ölçüde düşürür.  
   
  Tabii ki, paragrafları alma işlevini, her bir paragrafın stilini ve her bir paragrafın metnini içeren tek bir sorgu yazmak mümkün olacaktır. Ancak, sonuçta elde edilen kod daha modüler ve bakımını daha kolay olduğundan, genellikle daha karmaşık bir sorguyu birden çok sorguya bölmek faydalı olur. Ayrıca, sorgunun bir bölümünü yeniden kullanmanız gerekiyorsa, sorgular bu şekilde yazılmışsa yeniden düzenleme daha kolay olur.  
   
- Birlikte zincirleme olan bu sorgular, " [ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)konusundaki ayrıntılı olarak incelenen işleme modelini kullanır.  
+ Birlikte zincirleme olan bu sorgular, " [ertelenmiş yürütme (Visual Basic)](tutorial-deferred-execution.md)konusundaki ayrıntılı olarak incelenen işleme modelini kullanır.  
   
 ## <a name="example"></a>Örnek  
  Bu örnekte, bir WordprocessingML belgesi işlenir, öğe düğümü, stil adı ve her paragrafın metni belirlenir. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.  
   
- Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -116,7 +116,7 @@ Module Module1
 End Module  
 ```  
   
- Bu örnek, [kaynak Office Open XML belgesi (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
+ Bu örnek, [kaynak Office Open XML belgesi (Visual Basic) oluşturma](creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -137,11 +137,11 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek, birden çok dizeyi tek bir dizeye birleştirmek için <xref:System.Linq.Enumerable.Aggregate%2A>yerine bir genişletme yönteminin nasıl kullanılacağını gösterir.  
+ Sonraki örnek, <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi tek bir dizeye birleştirmek için yerine bir genişletme yönteminin nasıl kullanılacağını gösterir.  
   
-- [Bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)](refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

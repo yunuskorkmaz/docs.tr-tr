@@ -5,27 +5,27 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 705875677519c387c46301bc825d347b969a46e3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7209b6856eb7302dfa2e5e8938509d9238ceff4d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352872"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414239"
 ---
 # <a name="reference-visual-basic"></a>Başvuru (Visual Basic)
 Bu bölüm Visual Basic programlamanın çeşitli yönleri hakkında başvuru bilgilerine bağlantılar sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Visual Basic dil başvurusu](../../visual-basic/language-reference/index.md)  
+ [Visual Basic dil başvurusu](../language-reference/index.md)  
  Visual Basic dilinin çeşitli yönleri için başvuru bilgileri sağlar.  
   
- [Visual Basic komut satırı derleyicisi](../../visual-basic/reference/command-line-compiler/index.md)  
+ [Visual Basic komut satırı derleyicisi](command-line-compiler/index.md)  
  Visual Studio IDE 'den program derlemeye bir alternatif sağlayan komut satırı derleyicisi hakkındaki bilgilere bağlantılar sağlar.  
   
- [.NET Framework Başvuru Bilgisi](../../visual-basic/reference/net-framework-reference-information.md)  
+ [.NET Framework Başvuru Bilgisi](net-framework-reference-information.md)  
  .NET Framework sınıf kitaplığıyla çalışma hakkındaki bilgilere bağlantılar sağlar.  
   
- [Visual Basic Dil Belirtimi](../../visual-basic/reference/language-specification/index.md)  
+ [Visual Basic Dil Belirtimi](language-specification/index.md)  
  Dilin tüm yönleri hakkında ayrıntılı bilgi içeren, tüm Visual Basic dil belirtiminin bağlantılarını sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  

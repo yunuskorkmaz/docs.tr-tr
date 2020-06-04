@@ -15,16 +15,16 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: eb8790d0d8f82232a4b10e4e0e30165745c065c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352730"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401387"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With Deyimi (Visual Basic)
 
-Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapı kullanırken, yalnızca üye değerlerini okuyabilir veya yöntemleri çağırabilir ve bir `With...End With` bildiriminde kullanılan bir yapının üyelerine değer atamaya çalışırsanız hata alırsınız.
+Deyimlerin, nesne veya yapı üyelerine erişim sağlarken basitleştirilmiş bir sözdizimi kullanabilmesi için sürekli olarak tek bir nesneye veya yapıya başvuran bir dizi deyim yürütür.  Bir yapı kullanırken, yalnızca üye değerlerini okuyabilir veya yöntemleri çağırabilir ve bir bildirimde kullanılan bir yapının üyelerine değer atamaya çalışırsanız hata alırsınız `With...End With` .
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,54 +38,54 @@ End With
 
 |Terim|Tanım|
 |---|---|
-|`objectExpression`|Gerekli. Nesne olarak değerlendirilen bir ifade. İfade rasgele karmaşık olabilir ve yalnızca bir kez değerlendirilir. İfade, basit türler de dahil olmak üzere herhangi bir veri türü olarak değerlendirilebilir.|
-|`statements`|İsteğe bağlı. `objectExpression`değerlendirmesi tarafından üretilen bir nesnenin üyelerine başvurabilen `With` ve `End With` arasındaki bir veya daha fazla deyim.|
-|`End With`|Gerekli. `With` bloğunun tanımını sonlandırır.|
+|`objectExpression`|Gereklidir. Nesne olarak değerlendirilen bir ifade. İfade rasgele karmaşık olabilir ve yalnızca bir kez değerlendirilir. İfade, basit türler de dahil olmak üzere herhangi bir veri türü olarak değerlendirilebilir.|
+|`statements`|İsteğe bağlı. Ve arasındaki bir veya daha fazla deyim, `With` `End With` değerlendirmesi tarafından üretilen bir nesnenin üyelerine başvurabilir `objectExpression` .|
+|`End With`|Gereklidir. Bloğunun tanımını sonlandırır `With` .|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`With...End With`kullanarak, nesnenin adını birden çok kez belirtmeden belirtilen bir nesne üzerinde bir dizi deyim gerçekleştirebilirsiniz. Bir `With` bildiri bloğunda, bir noktayla başlayan nesnenin bir üyesini, `With` deyimin nesnesi önünde olduğu gibi belirtebilirsiniz.
+Kullanarak `With...End With` , nesnenin adını birden çok kez belirtmeden belirtilen bir nesne üzerinde bir dizi deyim gerçekleştirebilirsiniz. Bir `With` ifade bloğunda, bir nokta ile başlayan nesnenin bir üyesini, `With` ifade nesnesi önünde olduğu gibi belirtebilirsiniz.
 
-Örneğin, tek bir nesnedeki birden çok özelliği değiştirmek için, özellik atama deyimlerini, her özellik ataması için bir kez olmak yerine, nesneye yalnızca bir kez başvuruda bulunan `With...End With` bloğunun içine yerleştirin.
+Örneğin, tek bir nesnedeki birden çok özelliği değiştirmek için, özellik atama deyimlerini, `With...End With` her özellik ataması için bir kez olmak yerine, nesneye yalnızca bir kez başvuruda bulunan bloğun içine yerleştirin.
 
-Kodunuz birden çok deyimde aynı nesneye erişirse, `With` deyimini kullanarak aşağıdaki avantajları elde edersiniz:
+Kodunuz birden çok deyimde aynı nesneye erişirse, şu avantajları kullanarak aşağıdaki avantajları elde edersiniz `With` :
 
 - Karmaşık ifadenin üyelerine birden çok kez başvuruda bulunmak için sonucu geçici bir değişkene atamanıza veya karmaşık ifadeyi birden çok kez değerlendirmenize gerek yoktur.
 
 - Yinelenen niteleyici ifadeleri ortadan kaldırarak kodunuzu daha okunur hale getirirsiniz.
 
-`objectExpression` veri türü herhangi bir sınıf veya yapı türü veya hatta `Integer`gibi bir Visual Basic elemensel tür olabilir.  `objectExpression` bir nesneden farklı bir şekilde sonuçlanırsa, yalnızca üyelerinin değerlerini okuyabilir veya yöntemleri çağırabilir ve bir `With...End With` bildiriminde kullanılan bir yapının üyelerine değer atamaya çalışırsanız hata alırsınız.  Bu, bir yapı döndüren ve hemen erişilen ve işlevin sonucunun bir üyesine değer atayan, `GetAPoint().x = 1`gibi bir yöntemi çağırdıysanız elde ettiğiniz hatadır.  İki durumda da sorun şudur: Yapı yalnızca çağrı yığınında mevcuttur ve değiştirilmiş bir yapı üyesinin bu durumlarda, programdaki diğer herhangi bir kodun değişikliği gözlemleyebileceği şekilde bir konuma yazabilmesinin hiçbir yolu yoktur.
+Veri türü `objectExpression` herhangi bir sınıf veya yapı türü ya da gibi Visual Basic bir öğesel tür olabilir `Integer` .  `objectExpression`Bir nesne dışında bir işlem sonucu varsa, yalnızca üyelerinin değerlerini okuyabilir veya yöntemleri çağırabilir ve bir bildirimde kullanılan bir yapının üyelerine değer atamaya çalışırsanız hata alırsınız `With...End With` .  Bu, bir yapı döndüren ve hemen erişilen ve işlevin sonucunun bir üyesine değer atayan bir yöntemi çağırdıysanız elde ettiğiniz hatadır `GetAPoint().x = 1` .  İki durumda da sorun şudur: Yapı yalnızca çağrı yığınında mevcuttur ve değiştirilmiş bir yapı üyesinin bu durumlarda, programdaki diğer herhangi bir kodun değişikliği gözlemleyebileceği şekilde bir konuma yazabilmesinin hiçbir yolu yoktur.
 
-`objectExpression`, bloğa giriş yapıldığında bir kez değerlendirilir. `objectExpression` `With` bloğunun içinden yeniden atayamazsınız.
+, `objectExpression` Bloğa giriş yapıldığında bir kez değerlendirilir. `objectExpression`Bloğunu bloğunun içinden yeniden atayamazsınız `With` .
 
-`With` bloğu içinde, yalnızca belirtilen nesnenin yöntemlerine ve özelliklerine bunları nitelemeden erişebilirsiniz. Diğer nesnelerin yöntemlerini ve özelliklerini kullanabilirsiniz, ancak bunları nesne adlarıyla nitelemeniz gerekir.
+Bir `With` blok içinde, yalnızca belirtilen nesnenin yöntemlerine ve özelliklerine uygun olmayan şekilde erişebilirsiniz. Diğer nesnelerin yöntemlerini ve özelliklerini kullanabilirsiniz, ancak bunları nesne adlarıyla nitelemeniz gerekir.
 
-Bir `With...End With` deyiminizi başka bir şekilde yerleştirebilirsiniz. Başvurulan nesneler bağlamdan temizlenmemişse iç içe `With...End With` deyimleri kafa karıştırıcı olabilir. Nesneye bir iç `With` bloğunun başvurduğu zaman bir dıştaki `With` bloğunda bir nesneye tam bir başvuru sağlamanız gerekir.
+Bir `With...End With` ifadeyi diğerinin içine yerleştirebilirsiniz. `With...End With`Başvurulan nesneler bağlamdan temizlenmemişse iç içe geçmiş deyimler kafa karıştırıcı olabilir. `With`Nesneye bir iç blok içinden başvuruluyorsa, bir dış bloktaki bir nesneye tam nitelikli bir başvuru sağlamanız gerekir `With` .
 
-Bloğunun dışından `With` bir ifade bloğuna dallandırma yapamazsınız.
+`With`Blok dışından bir ifade bloğuna dal oluşturamazsınız.
 
-Blok bir döngü içermediği sürece deyimler yalnızca bir kez çalışır. Farklı türlerde denetim yapılarını iç içe yerleştirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+Blok bir döngü içermediği sürece deyimler yalnızca bir kez çalışır. Farklı türlerde denetim yapılarını iç içe yerleştirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> Nesne başlatıcılarda `With` anahtar sözcüğünü de kullanabilirsiniz. Daha fazla bilgi ve örnek için bkz. [nesne başlatıcıları: adlandırılmış ve anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) ve [anonim türler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> `With`Anahtar sözcüğünü ayrıca nesne başlatıcılarda da kullanabilirsiniz. Daha fazla bilgi ve örnek için bkz. [nesne başlatıcıları: adlandırılmış ve anonim türler](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) ve [anonim türler](../../programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
-> Yalnızca yeni örneklediğiniz bir nesnenin özelliklerini veya alanlarını başlatmak için bir `With` bloğu kullanıyorsanız, bunun yerine bir nesne Başlatıcısı kullanmayı düşünün.
+> `With`Yalnızca yeni örneklediğiniz nesnenin özelliklerini veya alanlarını başlatmak için bir blok kullanıyorsanız, bunun yerine bir nesne Başlatıcısı kullanmayı düşünün.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, her `With` bloğu tek bir nesne üzerinde bir dizi deyim yürütür.
+Aşağıdaki örnekte, her bir `With` blok tek bir nesne üzerinde bir dizi deyim yürütür.
 
 [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek `With…End With` deyimlerini ifade etti. İç içe `With` bildiriminde sözdizimi, iç nesneye başvurur.
+Aşağıdaki örnek with `With…End With` deyimleri. İç içe geçmiş `With` bildiriminde sözdizimi, iç nesneye başvurur.
 
 [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Collections.Generic.List%601>
-- [İç İçe Geçmiş Denetim Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [Anonim Tipler](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [İç İçe Geçmiş Denetim Yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Anonim Türler](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

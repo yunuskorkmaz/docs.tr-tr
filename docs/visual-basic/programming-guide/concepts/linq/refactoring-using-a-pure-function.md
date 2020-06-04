@@ -2,22 +2,22 @@
 title: Saf İşlev Kullanarak Yeniden Düzenleme
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 675baa4eb07db7a798b9bd47877c8f019a7021e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266943"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413459"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>Saf Bir İşlev Kullanarak Yeniden Düzenleme (Visual Basic)
-Aşağıdaki örnek, önceki örnekte, [Bir Uzantı Yöntemini Kullanarak Yeniden Düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), bu örnekte saf bir işlev kullanmak `ParagraphText`için, bir paragrafın metnini bulmak için kod saf statik yönteme taşınır.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>Saf Işlev kullanarak yeniden düzenleme (Visual Basic)
+Aşağıdaki örnek, [bir genişletme yöntemi kullanılarak yeniden düzenleme (Visual Basic)](refactoring-using-an-extension-method.md), bu örnekte saf bir işlev kullanmak için, bir paragrafın metnini bulmak için kod saf statik metoda taşınır `ParagraphText` .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her paragrafın stilini tanımlar. Bu örnek, bu öğreticide önceki örneklere dayanmaktadır. Refactored kodu aşağıdaki kodda yorum denir.  
+ Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her bir paragrafın stilini belirler. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeniden düzenlenmiş kodu, aşağıdaki koddaki açıklamalarda çağrılır.  
   
- Bu örnek için kaynak belge oluşturma yönergeleri için [bkz.](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesi sınıflarını kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -147,7 +147,7 @@ Module Module1
 End Module
 ```  
   
- Bu örnek, yeniden düzenlemeden önceki yle aynı çıktıyı üretir:  
+ Bu örnek, yeniden düzenlemeden önceki ile aynı çıktıyı üretir:  
   
 ```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -168,12 +168,12 @@ StyleName:Code >Hello World<
 ```  
   
 ### <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek, XML'nin nasıl farklı bir şekle yansıtılabildiğini gösterir:  
+ Sonraki örnekte, XML 'in farklı bir şekle nasıl proje yapılacağı gösterilmektedir:  
   
-- [XML'i Farklı Bir Şekilde Yansıtma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [XML 'i farklı bir şekilde yansıtma (Visual Basic)](projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML Belgesinde İçeriği Manipüle Etme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [Uzantı Yöntemini Kullanarak Yeniden Düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Saf Fonksiyonlara Yeniden Düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Bir genişletme yöntemi kullanarak yeniden düzenleme (Visual Basic)](refactoring-using-an-extension-method.md)
+- [Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](refactoring-into-pure-functions.md)

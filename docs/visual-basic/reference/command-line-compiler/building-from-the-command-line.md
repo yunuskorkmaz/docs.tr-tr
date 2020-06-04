@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414304"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Komut Satırından Derleme (Visual Basic)
 
@@ -35,18 +35,18 @@ MSBuild kullanarak, bir komut isteminde proje (. vbproj) dosyalarını derleyebi
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Nasıl yapılır: komut satırı derleyicisini çağırma](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[Nasıl yapılır: komut satırı derleyicisini çağırma](how-to-invoke-the-command-line-compiler.md) \
 Komut satırı derleyicisinin MS-DOS isteminde veya belirli bir alt dizinden nasıl çağırılacağını açıklar.
 
-[Örnek derleme komut satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[Örnek derleme komut satırları](sample-compilation-command-lines.md) \
 Kendi kullanımı için değiştirebileceğiniz örnek komut satırlarının bir listesini sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-[Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic komut satırı derleyicisi](index.md) \
 Alfabetik olarak veya amacına göre düzenlenmiş derleyici seçeneklerinin listesini sağlar.
 
-[Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[Koşullu derleme](../../programming-guide/program-structure/conditional-compilation.md) \
 Kodun belirli bölümlerinin nasıl derlenebileceğinizi açıklar.
 
 [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

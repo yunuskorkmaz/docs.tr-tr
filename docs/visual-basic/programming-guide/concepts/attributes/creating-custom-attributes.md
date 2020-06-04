@@ -2,16 +2,16 @@
 title: Özel Öznitelikler Oluşturma
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 773a3e8e974f37a1554892dd3441c115681c5bae
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 84b400c2fa1b2d4019eec32092f954d680e64978
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350153"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400700"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Özel öznitelikler oluşturma (Visual Basic)
 
-Meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlayan, <xref:System.Attribute>doğrudan veya dolaylı olarak türetilen bir sınıf olan bir öznitelik sınıfı tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:
+Doğrudan veya dolaylı olarak sınıfından türetilmiş bir sınıf olan öznitelik sınıfını tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz <xref:System.Attribute> . Bu, meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlar. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.Class Or
@@ -27,7 +27,7 @@ Public Class Author
 End Class
 ```
 
-Sınıf adı özniteliğin adı, `Author`. `System.Attribute`türetilir, bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` konumsal bir parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek parametre olarak adlandırılır. `Author` özniteliğini yalnızca sınıf ve `Structure` bildirimlerinde geçerli hale getirmek için `AttributeUsage` özniteliğinin kullanımını unutmayın.
+Sınıf adı özniteliğin adıdır, `Author` . Öğesinden türetilir `System.Attribute` , bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` bir Konumsal parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek adlandırılmış parametredir. Özniteliği `AttributeUsage` `Author` yalnızca sınıf ve bildirimlerde geçerli hale getirmek için özniteliğinin kullanımını unutmayın `Structure` .
 
 Bu yeni özniteliği şu şekilde kullanabilirsiniz:
 
@@ -38,7 +38,7 @@ Class SampleClass
 End Class
 ```
 
-`AttributeUsage` adlandırılmış bir parametreye sahiptir ve bu, özel bir özniteliği tek veya çoklu kullanımı yapmak için `AllowMultiple`. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.
+`AttributeUsage`, `AllowMultiple` özel bir özniteliği tek kullanımı veya çok kullanımı yapabileceğiniz adlandırılmış bir parametreye sahiptir. Aşağıdaki kod örneğinde, Multiuse özniteliği oluşturulur.
 
 ```vb
 ' multiuse attribute
@@ -66,9 +66,9 @@ End Class
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programlama Kılavuzu](../../index.md)
 - [Özel Öznitelikler Yazma](../../../../standard/attributes/writing-custom-attributes.md)
-- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Yansıma (Visual Basic)](../reflection.md)
+- [Öznitelikler (Visual Basic)](../../../language-reference/attributes.md)
+- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (Visual Basic)](attributeusage.md)

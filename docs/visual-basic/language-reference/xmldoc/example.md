@@ -5,17 +5,17 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8f36ac1337dd0d1400180fbd3deae2bb24ad9c58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 42f40581d252956433165789d6674234a295867c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348489"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400155"
 ---
-# <a name="example-visual-basic"></a>\<örnek > (Visual Basic)
+# <a name="example-visual-basic"></a>\<example> (Visual Basic)
 Üye için bir örnek belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```xml  
 <example>description</example>  
@@ -26,15 +26,15 @@ ms.locfileid: "74348489"
  Kod örneğinin açıklaması.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<example>` etiketi, bir yöntemin veya diğer kitaplık üyesinin nasıl kullanılacağına ilişkin bir örnek belirtmenize olanak tanır. Bu genellikle [\<kodu >](../../../visual-basic/language-reference/xmldoc/code.md) etiketinin kullanılmasını içerir.  
+ `<example>`Etiketi, bir yöntemi veya diğer kitaplık üyesini nasıl kullanacağınızı gösteren bir örnek belirtmenizi sağlar. Bu genellikle etiketinin kullanılmasını içerir [\<code>](code.md) .  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `ID` alanı kullanmak için bir örnek eklemek için `<example>` etiketini kullanır.  
+ Bu örnek, `<example>` alanı kullanmak için bir örnek eklemek için etiketini kullanır `ID` .  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML Açıklama Etiketleri](index.md)

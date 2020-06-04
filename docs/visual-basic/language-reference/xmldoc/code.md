@@ -5,17 +5,17 @@ helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 1cbac2162bd39cdc8af9a55dfd6e2f90bc40b08a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa65fed863718f1f00b510f82051a13e764e1b23
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354317"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400156"
 ---
-# <a name="code-visual-basic"></a>\<kodu > (Visual Basic)
+# <a name="code-visual-basic"></a>\<code> (Visual Basic)
 Metnin birden çok kod satırı olduğunu gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```xml  
 <code>content</code>  
@@ -26,15 +26,15 @@ Metnin birden çok kod satırı olduğunu gösterir.
  Kod olarak işaretlemek için metin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Birden çok satırı kod olarak göstermek için `<code>` etiketini kullanın. Bir açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için [\<c >](../../../visual-basic/language-reference/xmldoc/c.md) kullanın.  
+ `<code>`Birden çok satırı kod olarak göstermek için etiketini kullanın. [\<c>](c.md)Açıklama içindeki metnin kod olarak işaretlenmesi gerektiğini göstermek için kullanın.  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `ID` alanının kullanılmasına ilişkin örnek kodu eklemek için \<Code > etiketini kullanır.  
+ Bu örnek, \<code> alanı kullanmaya yönelik örnek kodu eklemek için etiketini kullanır `ID` .  
   
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML Açıklama Etiketleri](index.md)

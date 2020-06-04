@@ -19,37 +19,37 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 347b5c7b7af4c4aafec0f91aca46a8cf640236b9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 899554f427ac77ead465752c35e51ca88d045763
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344008"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415640"
 ---
 # <a name="double-data-type-visual-basic"></a>Double Veri Türü (Visual Basic)
 
-Negatif değerler için-1.79769313486231570 E + 308 ile-4.94065645841246544 E-324 arasında ve 4.94065645841246544 E-324 ile 1.79769313486231570 E + 308 arasında bir değer olarak bulunan imzalanmış IEEE 64-bit (8 baytlık) çift duyarlıklı kayan nokta sayılarını barındırır pozitif değerler. Çift duyarlıklı sayılar gerçek bir sayının yaklaşık bir kısmını depolar.
+Negatif değerler için-1.79769313486231570 E + 308 ile-4.94065645841246544 E-324 arasında ve pozitif değerler için 1.79769313486231570 E + 308 ile 4.94065645841246544 E-324 arasında yer alan imzalanmış IEEE 64-bit (8 baytlık) çift duyarlıklı kayan nokta sayılarını barındırır. Çift duyarlıklı sayılar gerçek bir sayının yaklaşık bir kısmını depolar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Double` veri türü, bir sayı için en büyük ve en küçük olası magnitudes sağlar.
+`Double`Veri türü, bir sayı için en büyük ve en küçük olası magnitudes sağlar.
 
-`Double` varsayılan değeri 0 ' dır.
+Varsayılan değeri 0 ' `Double` dır.
 
 ## <a name="programming-tips"></a>Programlama İpuçları
 
-- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimin olduğunu unutmayın. Bu, değer karşılaştırması ve `Mod` işleci gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir. Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+- **Duyarlılık.** Kayan noktalı sayılarla çalışırken her zaman bellekte kesin bir gösterimin olduğunu unutmayın. Bu, değer karşılaştırması ve işleç gibi belirli işlemlerden beklenmedik sonuçlara neden olabilir `Mod` . Daha fazla bilgi için bkz. [sorun giderme veri türleri](../../programming-guide/language-features/data-types/troubleshooting-data-types.md).
 
 - **Sondaki sıfırlar.** Kayan nokta veri türlerinde sondaki sıfır karakteri iç temsili yok. Örneğin, 4,2000 ve 4,2 arasında ayrım yapmazlar. Sonuç olarak, kayan nokta değerlerini görüntülerken veya yazdırdığınızda sondaki sıfır karakter görünmez.
 
-- **Tür karakterleri.** Değişmez değer türü karakter `R` bir sabit değere eklenmesi, `Double` veri türüne zorlar. Örneğin, bir tamsayı değerinin arkasından `R`, değer bir `Double`dönüştürülür.
+- **Tür karakterleri.** Değişmez değer türü karakterini `R` bir sabit değere eklemek, `Double` veri türüne zorlar. Örneğin, bir tamsayı değerinin arkasından `R` , değer bir olarak değiştirilir `Double` .
 
   ```vb
   ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
   Dim dub As Double = 4.0R
   ```
 
-  Tanımlayıcı türü karakter `#` herhangi bir tanımlayıcıya eklemek bunu `Double`zorlar. Aşağıdaki örnekte `num` değişkeni bir `Double`olarak yazılır:
+  Tanımlayıcı türü karakteri `#` herhangi bir tanımlayıcıya eklemek bunu öğesine zorlar `Double` . Aşağıdaki örnekte, değişkeni `num` şöyle yazılır `Double` :
 
   ```vb
   Dim num# = 3
@@ -60,11 +60,11 @@ Negatif değerler için-1.79769313486231570 E + 308 ile-4.94065645841246544 E-32
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Double?displayProperty=nameWithType>
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
-- [Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [Single Veri Türü](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Dönüştürme Özeti](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Veri Türlerinin Etkili Kullanımı](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Veri Türü Sorunlarını Giderme](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Tür Karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Veri türleri](index.md)
+- [Decimal Veri Türü](decimal-data-type.md)
+- [Single Veri Türü](single-data-type.md)
+- [Tür Dönüştürme İşlevleri](../functions/type-conversion-functions.md)
+- [Dönüştürme Özeti](../keywords/conversion-summary.md)
+- [Veri Türlerinin Etkili Kullanımı](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Veri Türü Sorunlarını Giderme](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Tür Karakterleri](../../programming-guide/language-features/data-types/type-characters.md)

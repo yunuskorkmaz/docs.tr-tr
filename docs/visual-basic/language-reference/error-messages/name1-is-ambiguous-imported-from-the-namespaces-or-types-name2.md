@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63e61d412e4d1238b08ccae94f11adb0c3d1b54d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918352"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401582"
 ---
-# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' ad alanlarından veya türlerinden içe belirsiz\<name2 >'
-Belirsiz ve bu nedenle çakışan bir ad başka bir adla sağladınız. Visual Basic Derleyicisi, herhangi bir çakışma çözümleme kurallarını yok; adları kendiniz belirsizliğinin gerekir.  
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1>' ad alanlarından veya türlerinden içeri aktarılan '\<name2>' belirsiz
+Belirsiz bir ad sağladınız ve bu nedenle başka bir adla çakışıyor. Visual Basic derleyicisinde herhangi bir çakışma çözümleme kuralı yok; adları kendiniz kesinleştirmeniz gerekir.  
   
- **Hata Kimliği:** BC30561  
+ **Hata kimliği:** BC30561  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Ad, ad alanı içeri aktarmaları kaldırarak ayırt etmek.  
+1. Ad alanı içeri aktarmaları kaldırılarak adı belirsizliğini kaldırır.  
   
 2. Adı tam olarak nitelendirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](../statements/imports-statement-net-namespace-and-type.md)
+- [Visual Basic'de Ad Alanları](../../programming-guide/program-structure/namespaces.md)
+- [Namespace Deyimi](../statements/namespace-statement.md)

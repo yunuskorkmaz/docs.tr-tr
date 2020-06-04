@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 98b87777cfc64807b6cf5b7aa6f0fdd5c7d42caa
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f320d095c547ffdb1b28f27f64c180c340dada17
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347190"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415277"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse Nesnesi
 Yerel bilgisayarda yüklü olan farenin biçimi ve yapılandırması hakkında bilgi almak için özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Computer.Mouse` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Mouse>.  
+ Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için `My.Computer.Mouse` bkz <xref:Microsoft.VisualBasic.Devices.Mouse> ..  
   
- Daha fazla bilgi için bkz. [fareye erişme](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ Daha fazla bilgi için bkz. [fareye erişme](../../developing-apps/programming/computer-resources/accessing-the-mouse.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Ad alanı:** <xref:Microsoft.VisualBasic.Devices>  
+ **Ad alanı:**<xref:Microsoft.VisualBasic.Devices>  
   
- **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Mouse>  
+ **Sınıf:**<xref:Microsoft.VisualBasic.Devices.Mouse>  
   
  **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer Nesnesi](my-computer-object.md)

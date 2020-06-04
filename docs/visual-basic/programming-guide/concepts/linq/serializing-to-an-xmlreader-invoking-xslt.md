@@ -2,18 +2,18 @@
 title: XmlReader’a Serileştirme (XSLT Çağırma)
 ms.date: 07/20/2015
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-ms.openlocfilehash: 39ecbc1851764d221ac99c3e47c26bcbe84c9e46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e51bfc031ad6d5d0eb98718f5d547fb18eb45295
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349360"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357380"
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader 'a serileştirme (XSLT çağırma) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml?displayProperty=nameWithType> birlikte çalışabilirlik özelliklerini kullandığınızda, <xref:System.Xml.XmlReader>oluşturmak için <xref:System.Xml.Linq.XNode.CreateReader%2A> kullanabilirsiniz. Bu <xref:System.Xml.XmlReader> okuyan modül, düğümleri XML ağacından okur ve bunlara göre işler.  
+<xref:System.Xml?displayProperty=nameWithType>Uygulamasının birlikte çalışabilirlik yeteneklerini kullandığınızda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için kullanabilirsiniz <xref:System.Xml.XmlReader> . Bu öğesinden okuyan modül, <xref:System.Xml.XmlReader> DÜĞÜMLERI XML ağacından okur ve bunlara göre işler.  
   
 ## <a name="invoking-an-xslt-transformation"></a>XSLT dönüşümünü çağırma  
- Bu yöntem için olası bir kullanım XSLT dönüşümünü çağırmada olur. XML ağacı oluşturabilir, XML ağacından bir <xref:System.Xml.XmlReader> oluşturabilir, yeni bir belge oluşturabilir ve sonra yeni belgeye yazmak için bir <xref:System.Xml.XmlWriter> oluşturabilirsiniz. Ardından, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter>geçirerek XSLT dönüşümünü çağırabilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
+ Bu yöntem için olası bir kullanım XSLT dönüşümünü çağırmada olur. Bir XML ağacı oluşturabilir, XML ağacından oluşturabilir, <xref:System.Xml.XmlReader> Yeni bir belge oluşturabilir ve sonra <xref:System.Xml.XmlWriter> yeni belgeye yazmak için oluşturabilirsiniz. Ardından, ve ile geçirerek XSLT dönüşümünü çağırabilirsiniz <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> . Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -62,4 +62,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçlarını serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML ağaçlarını serileştirme (Visual Basic)](serializing-xml-trees.md)

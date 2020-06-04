@@ -14,20 +14,20 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 75c718c83f36e2f0b2c4cfb5504c2d740eaa3520
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b0504d9f7a8862274d5d71dc6a9c1570551629a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347897"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414369"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma (Visual Basic)
-Bir yordam bir parametreyi [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)olarak bildiriyorsa Visual Basic, yordam kodunu çağıran koddaki bağımsız değişkeni temel alan programlama öğesine doğrudan başvuru olarak verir. Bu yordam, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin verir. Bazı durumlarda, çağıran kod bu tür bir değişikliğe karşı korumak isteyebilir.  
+Bir yordam bir parametreyi [ByRef](../../../language-reference/modifiers/byref.md)olarak bildiriyorsa Visual Basic, yordam kodunu çağıran koddaki bağımsız değişkeni temel alan programlama öğesine doğrudan başvuru olarak verir. Bu yordam, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin verir. Bazı durumlarda, çağıran kod bu tür bir değişikliğe karşı korumak isteyebilir.  
   
- Yordamda karşılık gelen parametre [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ' i bildirerek, bir bağımsız değişkeni her zaman bir değişikliğe karşı koruyabilirsiniz. Belirli bir bağımsız değişkeni bazı durumlarda değiştirebilmek istiyorsanız, ancak diğerlerini değil, `ByRef` bildirebilir ve çağıran kodun her çağrıda geçen mekanizmayı belirlemesini sağlayabilirsiniz. Bunu değere göre iletmek için karşılık gelen bağımsız değişkeni parantez içine alarak veya başvuruya göre geçirmek için parantez içine almak için bunu yapar. Daha fazla bilgi için bkz. [nasıl yapılır: bağımsız değişkeni değere göre geçirilmesine zorlama](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Yordamda karşılık gelen parametre [ByVal](../../../language-reference/modifiers/byval.md) ' i bildirerek, bir bağımsız değişkeni her zaman bir değişikliğe karşı koruyabilirsiniz. Belirli bir bağımsız değişkeni bazı durumlarda değiştirebilmek istiyorsanız, ancak başka bir deyişle, çağrı `ByRef` kodunun her çağrıda geçen mekanizmayı belirlemesini sağlayabilirsiniz. Bunu değere göre iletmek için karşılık gelen bağımsız değişkeni parantez içine alarak veya başvuruya göre geçirmek için parantez içine almak için bunu yapar. Daha fazla bilgi için bkz. [nasıl yapılır: bağımsız değişkeni değere göre geçirilmesine zorlama](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir dizi değişkeni alan ve öğelerinde çalışan iki yordamı gösterir. `increase` yordamı her bir öğeye yalnızca bir tane ekler. `replace` yordamı parametre `a()` yeni bir dizi atar ve sonra her öğeye bir tane ekler. Ancak, yeniden atama, çağıran koddaki temeldeki dizi değişkenini etkilemez.  
+ Aşağıdaki örnek, bir dizi değişkeni alan ve öğelerinde çalışan iki yordamı gösterir. `increase`Yordam her bir öğeye yalnızca bir tane ekler. `replace`Yordam parametreye yeni bir dizi atar `a()` ve sonra her öğeye bir tane ekler. Ancak, yeniden atama, çağıran koddaki temeldeki dizi değişkenini etkilemez.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
@@ -35,12 +35,12 @@ Bir yordam bir parametreyi [ByRef](../../../../visual-basic/language-reference/m
   
  [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
- İlk `MsgBox` çağrısı, "artdıktan sonra (n): 11, 21, 31, 41" olarak görüntülenir. Dizi `n` bir başvuru türü olduğundan, `increase`, geçirme mekanizması `ByVal`olmasına rağmen üyelerini değiştirebilir.  
+ İlk `MsgBox` çağrı, "Artdıktan sonra (n): 11, 21, 31, 41" görüntüler. Dizi `n` bir başvuru türü olduğundan, `increase` geçirme mekanizması olsa bile üyelerini değiştirebilir `ByVal` .  
   
- İkinci `MsgBox` çağrısı "yenisiyle değiştirildikten sonra (n): 11, 21, 31, 41" olarak görüntülenir. `n` `ByVal`geçirildiğinden `replace`, çağıran koddaki `n` değişkeni kendisine yeni bir dizi atayarak değiştiremez. `replace` yeni dizi örneği `k` oluşturduğunda ve yerel değişkene `a`atarken, çağıran kod tarafından geçirilen `n` başvurusunu kaybeder. `a`üyelerini değiştirdiğinde, yalnızca yerel dizi `k` etkilenir. Bu nedenle `replace`, çağıran koddaki dizi `n` değerlerini artırmaz.  
+ İkinci `MsgBox` çağrı "yenisiyle değiştirildikten sonra (n): 11, 21, 31, 41" görüntüler. `n`Geçirildiğinden `ByVal` , `replace` `n` çağıran koddaki değişkeni kendisine yeni bir dizi atayarak değiştiremezsiniz. `replace`Yeni dizi örneğini oluşturur `k` ve yerel değişkene atarsa `a` , `n` çağıran kod tarafından geçirilen başvuruyu kaybeder. Üyelerini değiştirdiğinde `a` , yalnızca yerel dizi `k` etkilenir. Bu nedenle, `replace` çağıran koddaki dizi değerlerini artırmaz `n` .  
   
-## <a name="compile-the-code"></a>Kod derleme  
- Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
+## <a name="compile-the-code"></a>Kodu derle  
+ Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -53,4 +53,4 @@ Bir yordam bir parametreyi [ByRef](../../../../visual-basic/language-reference/m
 - [Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Değer Türleri ve Başvuru Türleri](../data-types/value-types-and-reference-types.md)

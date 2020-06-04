@@ -23,17 +23,17 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 5054d4a4fc02d8bd22efceb01770fc54167d8cb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347467"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414485"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: Bir Sabit Bildirme (Visual Basic)
-Bir sabiti bildirmek ve değerini ayarlamak için `Const` ifadesini kullanın. Bir sabiti bildirerek, bir değere anlamlı bir ad atarsınız. Sabit bir kez bildirildiğinde, değiştirilemez veya yeni bir değer atanamaz.  
+`Const`Bir sabiti bildirmek ve değerini ayarlamak için ifadesini kullanın. Bir sabiti bildirerek, bir değere anlamlı bir ad atarsınız. Sabit bir kez bildirildiğinde, değiştirilemez veya yeni bir değer atanamaz.  
   
- Bir yordamın içinde veya bir modülün, sınıfın veya yapının Bildirimler bölümünde bir sabit değer bildirirsiniz. Sınıf veya yapı düzeyi sabitleri varsayılan olarak `Private`, ancak uygun kod erişimi düzeyi için `Public`, `Friend`, `Protected`veya `Protected Friend` olarak da belirtilebilir.  
+ Bir yordamın içinde veya bir modülün, sınıfın veya yapının Bildirimler bölümünde bir sabit değer bildirirsiniz. Sınıf veya yapı düzeyi sabitleri varsayılan olarak olur `Private` , ancak `Public` `Friend` `Protected` `Protected Friend` uygun kod erişimi düzeyi için,, veya olarak da belirtilebilir.  
   
  Sabit, geçerli bir sembolik ada sahip olmalıdır (kurallar, değişken adları oluşturanlarla aynıdır) ve sayısal veya dize sabitleri ve işleçlerden oluşan bir ifade (ancak işlev çağrısı yoktur).  
   
@@ -41,21 +41,21 @@ Bir sabiti bildirmek ve değerini ayarlamak için `Const` ifadesini kullanın. B
   
 ### <a name="to-declare-a-constant"></a>Bir sabit bildirmek için  
   
-- Aşağıdaki örneklerde olduğu gibi, bir erişim belirticisi, `Const` anahtar sözcüğü ve bir ifade içeren bir bildirim yazın:  
+- Aşağıdaki örneklerde olduğu gibi, bir erişim belirticisi, `Const` anahtar sözcüğü ve bir ifadesi içeren bir bildirim yazın:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     [Seçenek çıkarımı](../../../../visual-basic/language-reference/statements/option-infer-statement.md) `Off` ve [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) `On`, bir veri türü (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`veya `String`) belirterek bir sabiti açıkça bildirmeniz gerekir.  
+     [Option Infer](../../../language-reference/statements/option-infer-statement.md) `Off` ve [Option Strict](../../../language-reference/statements/option-strict-statement.md) olduğunda `On` , bir veri türü belirterek ( `Boolean` ,,,,,,, `Byte` `Char` `DateTime` `Decimal` `Double` `Integer` `Long` ,,, `Short` `Single` veya `String` ) bir sabit değer belirtmeniz gerekir.  
   
-     `Option Infer` `On` veya `Option Strict` `Off`olduğunda, bir `As` yan tümcesiyle veri türü belirtmeden bir sabit bildirebilirsiniz. Derleyici, ifadenin türünden sabit türünü belirler. Daha fazla bilgi için bkz. [sabit ve değişmez değerli veri türleri](constant-and-literal-data-types.md).  
+     `Option Infer`Veya olduğunda `On` `Option Strict` `Off` , yan tümcesiyle bir veri türü belirtmeden bir sabit bildirebilirsiniz `As` . Derleyici, ifadenin türünden sabit türünü belirler. Daha fazla bilgi için bkz. [sabit ve değişmez değerli veri türleri](constant-and-literal-data-types.md).  
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Açıkça belirtilen bir veri türüne sahip bir sabit bildirmek için  
   
-- Aşağıdaki örneklerde olduğu gibi `As` anahtar sözcüğünü ve açık bir veri türünü içeren bir bildirim yazın:  
+- `As`Aşağıdaki örneklerde olduğu gibi anahtar sözcüğünü ve açık bir veri türünü içeren bir bildirim yazın:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     Her satırda yalnızca tek bir sabit değer bildirirseniz kodunuz daha okunabilir olsa da, tek bir satırda birden çok sabit bildirebilirsiniz. Tek bir satırda birden çok sabit bildirirseniz, tümünün aynı erişim düzeyine sahip olmaları gerekir (`Public`, `Private`, `Friend`, `Protected`veya `Protected Friend`).  
+     Her satırda yalnızca tek bir sabit değer bildirirseniz kodunuz daha okunabilir olsa da, tek bir satırda birden çok sabit bildirebilirsiniz. Tek bir satırda birden çok sabit bildirirseniz, tümünün aynı erişim düzeyine sahip olmaları gerekir (,,, `Public` `Private` `Friend` `Protected` veya `Protected Friend` ).  
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Birden çok sabiti tek bir satırda bildirmek için  
   
@@ -67,7 +67,7 @@ Bir sabiti bildirmek ve değerini ayarlamak için `Const` ifadesini kullanın. B
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const Deyimi](../../../language-reference/statements/const-statement.md)
 - [Sabit ve Değişmez Değerli Veri Türleri](constant-and-literal-data-types.md)
 - [Sabitlere Genel Bakış](constants-overview.md)
 - [Nasıl yapılır: Bir Sabit Bildirme](how-to-declare-a-constant.md)
@@ -79,12 +79,12 @@ Bir sabiti bildirmek ve değerini ayarlamak için `Const` ifadesini kullanın. B
 - [Nasıl yapılır: Bir Sabit Listesi Üyesine Başvurma](how-to-refer-to-an-enumeration-member.md)
 - [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)
 - [Nasıl yapılır: Sabit Listesi Yoluyla Yineleme](how-to-iterate-through-an-enumeration.md)
-- [Nasıl yapılır: Bir Sabit Listesi Değeriyle İlişkili Dizeyi Belirleme](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Nasıl yapılır: Bir Numaralandırma Değeriyle İlişkili Dizeyi Belirleme](how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Sabit Listesi Ne Zaman Kullanılır?](when-to-use-an-enumeration.md)
 
 - [Sabit Listelerine Genel Bakış](enumerations-overview.md)
 - [Sabitlere Genel Bakış](constants-overview.md)
 - [Nasıl yapılır: numaralandırma bildirme](how-to-declare-enumerations.md)
 - [Sabit Listeleri ve Ad Niteliği](enumerations-and-name-qualification.md)
-- [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Option Strict Deyimi](../../../language-reference/statements/option-strict-statement.md)
+- [Sabitler ve numaralandırmalar](../../../language-reference/constants-and-enumerations.md)

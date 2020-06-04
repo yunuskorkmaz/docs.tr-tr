@@ -2,15 +2,15 @@
 title: 'Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: 63bb6cf5065e2189380bbcd67812c5ae8d6dd372
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: c10c321d96306d45dc8634d1b62771bce65b973c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869112"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413342"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerindeki çeşitli örneklerde kullanılır. Bu dosya müşteriler ve siparişler içerir. XML bir ad alanıdır.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu dosya müşteriler ve siparişler içerir. XML bir ad alanıdır.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace. xml  
   
@@ -432,4 +432,4 @@ Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Örnek XML Belgeleri (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

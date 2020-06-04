@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 6e6e9cc9210232059210862f2bda691c57b372d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5d88a01f90bc91a88229d19aa2368f8c71075b2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404505"
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
 Geçerli sınıfın ya da arabirimin öznitelikleri, değişkenleri, özellikleri, yordamları ve olayları başka bir sınıf veya arabirim kümesinden devralmasını sağlar.  
@@ -28,31 +28,31 @@ Inherits basetypenames
   
 |Terim|Tanım|  
 |---|---|  
-|`basetypenames`|Gerekli. Bu sınıfın türetildiği sınıfın adı.<br /><br /> veya<br /><br /> Bu arabirimin türettiği arabirimlerin adları. Birden çok adı ayırmak için virgül kullanın.|  
+|`basetypenames`|Gereklidir. Bu sınıfın türetildiği sınıfın adı.<br /><br /> -veya-<br /><br /> Bu arabirimin türettiği arabirimlerin adları. Birden çok adı ayırmak için virgül kullanın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanıldıysa, `Inherits` deyimin bir sınıf veya arabirim tanımında ilk boş olmayan, yorum olmayan satırı olması gerekir. `Class` veya `Interface` deyiminizi hemen izlemelidir.  
+ Kullanıldıysa, `Inherits` bir sınıf veya arabirim tanımında deyimin ilk boş olmayan, yorum olmayan satırı olması gerekir. Hemen `Class` veya `Interface` ifadesini izlemelidir.  
   
- Yalnızca bir sınıf veya arabirimde `Inherits` kullanabilirsiniz. Bu, devralma için bildirim bağlamının kaynak dosya, ad alanı, yapı, modül, yordam veya blok olamayacağı anlamına gelir.  
+ `Inherits`Yalnızca bir sınıf veya arabirim için kullanabilirsiniz. Bu, devralma için bildirim bağlamının kaynak dosya, ad alanı, yapı, modül, yordam veya blok olamayacağı anlamına gelir.  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Sınıf devralma.** Bir sınıf `Inherits` ifadesini kullanıyorsa yalnızca bir temel sınıf belirtebilirsiniz.  
+- **Sınıf devralma.** Bir sınıf, ifadesini kullanıyorsa `Inherits` yalnızca bir temel sınıf belirtebilirsiniz.  
   
      Bir sınıf, içinde iç içe geçmiş bir sınıftan devralınabilir.  
   
-- **Arabirim devralma.** Bir arabirim `Inherits` ifadesini kullanıyorsa, bir veya daha fazla temel arabirim belirtebilirsiniz. Her biri aynı ada sahip bir üye tanımlasa bile iki arabirimden devralma yapabilirsiniz. Bunu yaparsanız, uygulama kodunun hangi üyeyi uygulamakta olduğunu belirtmek için ad nitelemesini kullanması gerekir.  
+- **Arabirim devralma.** Bir arabirim, ifadesini kullanıyorsa `Inherits` , bir veya daha fazla temel arabirim belirtebilirsiniz. Her biri aynı ada sahip bir üye tanımlasa bile iki arabirimden devralma yapabilirsiniz. Bunu yaparsanız, uygulama kodunun hangi üyeyi uygulamakta olduğunu belirtmek için ad nitelemesini kullanması gerekir.  
   
-     Arabirim, daha kısıtlayıcı erişim düzeyine sahip başka bir arabirimden devralınabilir. Örneğin, bir `Public` arabirimi `Friend` arabiriminden devralınabilir.  
+     Arabirim, daha kısıtlayıcı erişim düzeyine sahip başka bir arabirimden devralınabilir. Örneğin, bir `Public` arabirim `Friend` arabiriminden devralınabilir.  
   
      Arabirim, içinde iç içe geçmiş bir arabirimden devralınabilir.  
   
- .NET Framework sınıf devralma örneği, <xref:System.SystemException> sınıfından devralan <xref:System.ArgumentException> sınıfıdır. Bu, <xref:System.Exception.Message%2A> özelliği ve <xref:System.Exception.ToString%2A> yöntemi gibi sistem özel durumları için gerekli tüm önceden tanımlanmış özellikleri ve yordamları <xref:System.ArgumentException> sağlar.  
+ .NET Framework sınıf devralma örneği <xref:System.ArgumentException> , sınıfından devralan sınıftır <xref:System.SystemException> . Bu, <xref:System.ArgumentException> özelliği ve yöntemi gibi sistem özel durumları için gerekli tüm önceden tanımlanmış özellikleri ve yordamları sağlar <xref:System.Exception.Message%2A> <xref:System.Exception.ToString%2A> .  
   
- .NET Framework bir arabirim devralım örneği, <xref:System.Collections.IEnumerable> arabiriminden devralan <xref:System.Collections.ICollection> arabirimidir. Bu <xref:System.Collections.ICollection>, bir koleksiyonun çapraz geçişini yapmak için gereken Numaralandırıcı tanımını devralmasını sağlar.  
+ .NET Framework arabirim devralım örneği <xref:System.Collections.ICollection> arabiriminden devralan arabirimdir <xref:System.Collections.IEnumerable> . Bu, <xref:System.Collections.ICollection> bir koleksiyonun çapraz geçişini yapmak için gereken Numaralandırıcı tanımını devralmasını sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `thisClass` adlı bir sınıfın `anotherClass`adlı bir temel sınıfın tüm üyelerini nasıl devralmasını göstermek için `Inherits` ifadesini kullanır.  
+ Aşağıdaki örnek, adlı `Inherits` bir sınıfın `thisClass` adlı bir temel sınıfın tüm üyelerini nasıl devralmasını göstermek için ifadesini kullanır `anotherClass` .  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
@@ -61,12 +61,12 @@ Inherits basetypenames
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- `thisInterface` adlı arabirim artık, devralınan üyelerin,, ayrılmış kaynakları serbest bırakarak ve bir nesnenin değerini bir `String`ifade etmek için sırasıyla, <xref:System.IComparable>, <xref:System.IDisposable>ve <xref:System.IFormattable> arabirimlerinden tüm tanımları içerir. `thisInterface` uygulayan bir sınıf, her temel arabirimin her üyesini uygulamalıdır.  
+ Artık adlı arabirim,, `thisInterface` ve ' deki tüm tanımları içerir, <xref:System.IComparable> <xref:System.IDisposable> ve <xref:System.IFormattable> devralınan üyelerin, iki nesnenin türüne özgü karşılaştırmasına, ayrılan kaynakları serbest bırakarak ve bir nesnenin değerini olarak ifade eder `String` . Uygulayan bir sınıf `thisInterface` , her temel arabirimin her üyesini uygulamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [MustInherit](../modifiers/mustinherit.md)
+- [NotInheritable](../modifiers/notinheritable.md)
+- [Nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md)
+- [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Arabirimler](../../programming-guide/language-features/interfaces/index.md)

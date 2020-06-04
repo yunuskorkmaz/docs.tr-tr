@@ -3044,35 +3044,35 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053315"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357810"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
-Özür dileriz, ancak Biz bu hata hakkındaki belirli bilgilere sahip değildir. Web'deki bilgileri bulmak hata sayısı ve ileti metni için arama yapabilirsiniz. Veya şu forumlardan birine kullanarak diğer geliştiriciler isteyebilirsiniz:  
+Ne yazık ki bu hatayla ilgili belirli bilgiler yok. Web 'de bilgi bulmak için hata numarası ve ileti metni araması yapabilirsiniz. Ya da, şu forumlardan birini kullanarak diğer geliştiricilerle sorun da isteyebilirsiniz:  
   
  [Visual Basic dili](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- Bir forum sorular için derleyici ve Visual Basic dili sözdizimi hakkında ve genel tartışmalar sağlar.  
+ Visual Basic dil sözdizimi ve derleyicisi hakkında sorular ve genel tartışmalar için bir forum sağlar.  
   
- [Visual Basic birlikte çalışabilirlik ve yükseltme](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- Hakkında sorular için bir forum sağlar ve sorunlar Visual Basic yükseltme ve birlikte çalışabilirlik özelliklerle çalışma.  
+ [Birlikte çalışma ve yükseltme Visual Basic](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
+ Visual Basic Yükseltme ve birlikte çalışabilirlik özellikleriyle çalışma ile ilgili sorular ve sorunlar için bir forum sağlar.  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- Visual Studio ortamında çalışma hakkında sorular için bir forum sağlar.  
+ Visual Studio ortamında nasıl çalışılacağı hakkında sorularınız için bir forum sağlar.  
   
  [Visual Basic genel](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- Hakkında sorular için bir forum sağlar ve diğer forumlarda ele alınmamaktadır Visual Basic ile verir.  
+ Hakkında sorularınız ve diğer forumlarda açıklanmayan Visual Basic sorunları için bir forum sağlar.  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
- Hakkında sorular için bir forum sağlar ve Visual Basic ile verir.  
+ Hakkında sorularınız ve Visual Basic sorunları için bir forum sağlar.  
   
  Ayrıca bkz:  
- [Visual Basic Programcıları için Ek Kaynaklar](../../visual-basic/getting-started/additional-resources.md)  
+ [Visual Basic Programcıları için Ek Kaynaklar](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic programlama kılavuzu](../../visual-basic/programming-guide/index.md)
-- [Visual Basic başvurusu](../../visual-basic/reference/index.md)
+- [Visual Basic Programlama Kılavuzu](../programming-guide/index.md)
+- [Visual Basic Başvurusu](../reference/index.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6a91de4e279816bafd29f46bb4f5422cbd934ff
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347023"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400195"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML Öğesi Değişmez Değeri (Visual Basic)
 
-Bir <xref:System.Xml.Linq.XElement> nesnesini temsil eden bir sabit değer.
+Bir nesneyi temsil eden bir sabit değer <xref:System.Xml.Linq.XElement> .
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,20 +31,20 @@ Bir <xref:System.Xml.Linq.XElement> nesnesini temsil eden bir sabit değer.
 
 - `<`
 
-  Gerekli. Başlangıç öğesi etiketini açar.
+  Gereklidir. Başlangıç öğesi etiketini açar.
 
 - `name`
 
-  Gerekli. Öğenin adı. Biçim aşağıdakilerden biridir:
+  Gereklidir. Öğenin adı. Biçim aşağıdakilerden biridir:
 
-  - Form `[ePrefix:]eName`, öğe adı için değişmez metin, burada:
+  - Formun öğe adı için değişmez metin `[ePrefix:]eName` , burada:
 
-    |Bölümüyle|Açıklama|
+    |Bölüm|Description|
     |---|---|
-    |`ePrefix`|İsteğe bağlı. Öğesi için XML ad alanı ön eki. Dosyadaki veya proje düzeyindeki bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı ya da bu öğede veya bir üst öğede tanımlanan yerel bir XML ad alanı olmalıdır.|
-    |`eName`|Gerekli. Öğenin adı. Biçim aşağıdakilerden biridir:<br /><br /> -Sabit metin. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.<br />-`<%= eNameExp %>`form Embedded ifadesi. `eNameExp` türü `String` veya <xref:System.Xml.Linq.XName>örtük olarak dönüştürülebilir bir tür olmalıdır.|
+    |`ePrefix`|İsteğe bağlı. Öğesi için XML ad alanı ön eki. Dosyadaki veya proje düzeyindeki bir deyimle tanımlanmış bir genel XML ad alanı ya da `Imports` Bu öğede veya bir üst öğede tanımlanan yerel BIR XML ad alanı olmalıdır.|
+    |`eName`|Gereklidir. Öğenin adı. Biçim aşağıdakilerden biridir:<br /><br /> -Sabit metin. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.<br />-Formun katıştırılmış ifadesi `<%= eNameExp %>` . Türü `eNameExp` `String` veya örtük olarak dönüştürülebilir bir tür olmalıdır <xref:System.Xml.Linq.XName> .|
 
-  - Formun katıştırılmış ifadesi `<%= nameExp %>`. `nameExp` türü `String` veya <xref:System.Xml.Linq.XName>öğesine örtülü olarak dönüştürülebilir bir tür olmalıdır. Bir öğenin kapanış etiketinde gömülü ifadeye izin verilmez.
+  - Formun katıştırılmış ifadesi `<%= nameExp %>` . Türü `nameExp` `String` veya örtülü olarak dönüştürülebilir bir tür olmalıdır <xref:System.Xml.Linq.XName> . Bir öğenin kapanış etiketinde gömülü ifadeye izin verilmez.
 
 - `attributeList`
 
@@ -52,17 +52,17 @@ Bir <xref:System.Xml.Linq.XElement> nesnesini temsil eden bir sabit değer.
 
   `attribute [ attribute ... ]`
 
-  Her `attribute` aşağıdaki sözdizimlerinden birine sahiptir:
+  Her biri `attribute` aşağıdaki sözdizimlerinden birine sahiptir:
 
-  - Form `[aPrefix:]aName=aValue`öznitelik ataması, burada:
+  - Formun öznitelik ataması, `[aPrefix:]aName=aValue` burada:
 
-    |Bölümüyle|Açıklama|
+    |Bölüm|Description|
     |---|---|
-    |`aPrefix`|İsteğe bağlı. Öznitelik için XML ad alanı ön eki. Bir `Imports` ifadesiyle tanımlanmış bir genel XML ad alanı ya da bu öğede veya bir üst öğede tanımlanan yerel bir XML ad alanı olmalıdır.|
-    |`aName`|Gerekli. Özniteliğin adı. Biçim aşağıdakilerden biridir:<br /><br /> -Sabit metin. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.<br />-`<%= aNameExp %>`form Embedded ifadesi. `aNameExp` türü `String` veya <xref:System.Xml.Linq.XName>örtük olarak dönüştürülebilir bir tür olmalıdır.|
-    |`aValue`|İsteğe bağlı. Özniteliğin değeri. Biçim aşağıdakilerden biridir:<br /><br /> -Düz metin, tırnak işaretleri içine alınır.<br />-`<%= aValueExp %>`form Embedded ifadesi. Herhangi bir türe izin verilir.|
+    |`aPrefix`|İsteğe bağlı. Öznitelik için XML ad alanı ön eki. Bir ifadesiyle tanımlanmış bir genel XML ad alanı `Imports` ya da bu öğede veya bir üst öğede tanımlanan yerel BIR XML ad alanı olmalıdır.|
+    |`aName`|Gereklidir. Özniteliğin adı. Biçim aşağıdakilerden biridir:<br /><br /> -Sabit metin. [BELIRTILEN XML öğelerinin ve özniteliklerin adlarına](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)bakın.<br />-Formun katıştırılmış ifadesi `<%= aNameExp %>` . Türü `aNameExp` `String` veya örtük olarak dönüştürülebilir bir tür olmalıdır <xref:System.Xml.Linq.XName> .|
+    |`aValue`|İsteğe bağlı. Özniteliğin değeri. Biçim aşağıdakilerden biridir:<br /><br /> -Düz metin, tırnak işaretleri içine alınır.<br />-Formun katıştırılmış ifadesi `<%= aValueExp %>` . Herhangi bir türe izin verilir.|
 
-  - Formun katıştırılmış ifadesi `<%= aExp %>`.
+  - Formun katıştırılmış ifadesi `<%= aExp %>` .
 
 - `/>`
 
@@ -70,7 +70,7 @@ Bir <xref:System.Xml.Linq.XElement> nesnesini temsil eden bir sabit değer.
 
 - `>`
 
-  Gerekli. Başlangıç veya boş öğe etiketini sonlandırır.
+  Gereklidir. Başlangıç veya boş öğe etiketini sonlandırır.
 
 - `elementContents`
 
@@ -78,42 +78,42 @@ Bir <xref:System.Xml.Linq.XElement> nesnesini temsil eden bir sabit değer.
 
   `content [ content ... ]`
 
-  Her `content` aşağıdakilerden biri olabilir:
+  Her biri `content` aşağıdakilerden biri olabilir:
 
-  - Değişmez değer metni. `elementContents` tüm boşluklar, herhangi bir sabit metin varsa önemli hale gelir.
+  - Değişmez değer metni. İçindeki tüm boşluklar, `elementContents` herhangi bir sabit metin varsa önemli hale gelir.
 
-  - Formun katıştırılmış ifadesi `<%= contentExp %>`.
+  - Formun katıştırılmış ifadesi `<%= contentExp %>` .
 
   - XML öğesi değişmez değeri.
 
-  - XML açıklama değişmez değeri. Bkz. [XML açıklama değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).
+  - XML açıklama değişmez değeri. Bkz. [XML açıklama değişmez değeri](xml-comment-literal.md).
 
-  - XML işleme yönergesi sabit değeri. Bkz. [XML Işleme yönergesi sabit değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).
+  - XML işleme yönergesi sabit değeri. Bkz. [XML Işleme yönergesi sabit değeri](xml-processing-instruction-literal.md).
 
-  - XML CDATA değişmez değeri. Bkz. [XML CDATA değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md).
+  - XML CDATA değişmez değeri. Bkz. [XML CDATA değişmez değeri](xml-cdata-literal.md).
 
 - `</[name]>`
 
-  İsteğe bağlı. Öğe için kapanış etiketini temsil eder. İsteğe bağlı `name` parametresine, gömülü bir ifadenin sonucu olduğunda izin verilmez.
+  İsteğe bağlı. Öğe için kapanış etiketini temsil eder. İsteğe bağlı `name` parametreye, gömülü bir ifadenin sonucu olduğunda izin verilmez.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-<xref:System.Xml.Linq.XElement> nesnesi.
+Bir <xref:System.Xml.Linq.XElement> nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kodunuzda <xref:System.Xml.Linq.XElement> nesneleri oluşturmak için XML öğesi değişmez sözdizimini kullanabilirsiniz.
+Kodunuzda nesneler oluşturmak için XML öğesi değişmez sözdizimini kullanabilirsiniz <xref:System.Xml.Linq.XElement> .
 
 > [!NOTE]
 > Bir XML sabit değeri, satır devamlılık karakterleri kullanmadan birden fazla satıra yayılabilir. Bu özellik bir XML belgesinden içerik kopyalamanızı ve bunu doğrudan bir Visual Basic programına yapıştırmayı sağlar.
 
-Form `<%= exp %>` katıştırılmış ifadeler, bir XML öğesi değişmez değerine dinamik bilgi eklemenize olanak tanır. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).
+Formun katıştırılmış ifadeleri `<%= exp %>` , BIR XML öğesi değişmez değerine dinamik bilgi eklemenizi sağlar. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md).
 
-Visual Basic derleyici, XML öğesi değişmez değerini <xref:System.Xml.Linq.XElement.%23ctor%2A> oluşturucusuna çağrılara dönüştürür ve gerekirse <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Oluşturucu.
+Visual Basic derleyici, XML öğesi değişmez değerini oluşturucuya yapılan çağrılara dönüştürür <xref:System.Xml.Linq.XElement.%23ctor%2A> ve gerekirse, <xref:System.Xml.Linq.XAttribute.%23ctor%2A> Oluşturucu.
 
 ## <a name="xml-namespaces"></a>XML ad alanları
 
-XML ad alanı önekleri, kodda birçok kez aynı ad alanındaki öğelerle XML değişmez değerleri oluşturmanız gerektiğinde faydalıdır. `xmlns:xmlPrefix="xmlNamespace"` öznitelik sözdizimini kullanarak tanımladığınız `Imports` ifadesini veya yerel ön ekleri kullanarak tanımladığınız genel XML ad alanı öneklerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+XML ad alanı önekleri, kodda birçok kez aynı ad alanındaki öğelerle XML değişmez değerleri oluşturmanız gerektiğinde faydalıdır. Özniteliğini kullanarak tanımladığınız genel XML ad alanı öneklerini `Imports` veya öznitelik sözdizimini kullanarak tanımladığınız yerel önekleri kullanabilirsiniz `xmlns:xmlPrefix="xmlNamespace"` . Daha fazla bilgi için bkz. [Imports bildirisi (XML ad alanı)](../statements/imports-statement-xml-namespace.md).
 
 XML ad alanları için kapsam kurallarına uygun olarak, yerel ön ekler genel öneklere göre önceliklidir. Ancak, bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu ad alanı katıştırılmış ifadede görünen ifadeler için kullanılamaz. Katıştırılmış ifade yalnızca genel XML ad alanına erişebilir.
 
@@ -148,7 +148,7 @@ Bu kod aşağıdaki metni görüntüler:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns` bir XML ad alanı öneki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve öğenin son formunu görüntüler.
+Aşağıdaki örnek `ns` BIR XML ad alanı ön eki olarak bildirir. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve öğenin son formunu görüntüler.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -163,15 +163,15 @@ Bu kod aşağıdaki metni görüntüler:
 </ns:outer>
 ```
 
-Derleyicinin genel XML ad alanının önekini XML ad alanı için bir önek tanımına dönüştürdüğüne dikkat edin. \<NS: Middle > öğesi, \<NS: inner1 > öğesi için XML ad alanı önekini tekrar tanımlar. Ancak, \<NS: inner2 > öğesi `Imports` ifadesiyle tanımlanan ad alanını kullanır.
+Derleyicinin genel XML ad alanının önekini XML ad alanı için bir önek tanımına dönüştürdüğüne dikkat edin. \<ns:middle>Öğesi öğesi IÇIN XML ad alanı önekini tekrar tanımlar \<ns:inner1> . Ancak, \<ns:inner2> öğesi, ifadesiyle tanımlanan ad alanını kullanır `Imports` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XElement>
-- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
-- [XML Açıklama Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
-- [XML CDATA Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)
-- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML Açıklama Değişmez Değeri](xml-comment-literal.md)
+- [XML CDATA Değişmez Değeri](xml-cdata-literal.md)
+- [XML Değişmez Değerleri](index.md)
+- [Visual Basic'de XML Oluşturma](../../programming-guide/language-features/xml/creating-xml.md)
+- [XML'de Katıştırılmış İfadeler](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Imports Deyimi (XML Ad Alanı)](../statements/imports-statement-xml-namespace.md)
