@@ -223,6 +223,10 @@
           displayName: 'unmanaged resources, memory management'
         - name: Dispose metodu uygulama
           href: garbage-collection/implementing-dispose.md
+          displayName: 'using, Dispose, dispose pattern, IDisposable'
+        - name: DisposeAsync metodu uygulama
+          href: garbage-collection/implementing-disposeasync.md
+          displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
         - name: IDisposable uygulayan nesneler kullanma
           href: garbage-collection/using-objects.md
     - name: Atık toplama
