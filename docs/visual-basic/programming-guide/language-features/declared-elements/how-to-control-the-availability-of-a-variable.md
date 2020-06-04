@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 886b57909cf6ba25dbaceea5c5f06eb4e3ba6f1f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0bfa7fa2bdac4746827884c1dad62734c549a48e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345388"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357393"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme (Visual Basic)
 Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol edersiniz. Erişim düzeyi, hangi kodun değişkene okuma veya yazma izni olduğunu belirler.  
@@ -25,55 +25,55 @@ Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol e
   
 - *Yerel değişkenler* (bir yordamda tanımlanan) genel erişime sahiptir, ancak yordamındaki yalnızca kod bunlara erişebilir. Yerel bir değişkenin erişim düzeyini değiştiremezsiniz, ancak onu içeren yordamın erişim düzeyini değiştirebilirsiniz.  
   
- Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](access-levels.md).  
   
 ## <a name="private-and-public-access"></a>Özel ve genel erişim  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Bir değişkeni yalnızca kendi modülünün, sınıfının veya yapısının içinden erişilebilir hale getirmek için  
   
-1. Değişken için [Dim ifadesini](../../../../visual-basic/language-reference/statements/dim-statement.md) modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. Değişken için [Dim ifadesini](../../../language-reference/statements/dim-statement.md) modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
   
-2. `Dim` ifadesine [Private](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü ekleyin.  
+2. Deyimdeki [Private](../../../language-reference/modifiers/private.md) anahtar sözcüğünü ekleyin `Dim` .  
   
      Değişkeni modülün, sınıfın veya yapının içinden herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak dışından kullanamazsınız.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Bir değişkeni, görebileceği koddan erişilebilir hale getirmek için  
   
-1. Bir üye değişkeni için, değişken için `Dim` ifadesini modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına koyun.  
+1. Bir üye değişkeni için, `Dim` değişkenin ifadesini bir modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
   
-2. `Dim` ifadesine [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü ekleyin.  
+2. Deyimdeki [Public](../../../language-reference/modifiers/public.md) anahtar sözcüğünü ekleyin `Dim` .  
   
      Derlemeden birlikte çalışan herhangi bir koddan değişkeni okuyabilir veya yazabilirsiniz.  
   
- veya  
+ -veya-  
   
-1. Yerel bir değişken için, değişkenin `Dim` ifadesini bir yordamın içine yerleştirin.  
+1. Yerel bir değişken için, `Dim` değişkenin ifadesini bir yordamın içine yerleştirin.  
   
-2. `Dim` ifadesine `Public` anahtar sözcüğünü eklemeyin.  
+2. `Public`Deyimdeki anahtar sözcüğünü eklemeyin `Dim` .  
   
      Değişkeni yordamın içinden herhangi bir yerden okuyabilir veya yazabilirsiniz.  
   
 ## <a name="protected-and-friend-access"></a>Korumalı ve arkadaş erişimi  
- Bir değişkenin erişim düzeyini sınıfı ve türetilmiş sınıflar ya da kendi derlemesi ile sınırlayabilirsiniz. Ayrıca, herhangi bir türetilmiş sınıftaki koddan veya aynı derlemede bulunan başka bir yerde erişime izin veren bu kısıtlamaların birleşimini de belirtebilirsiniz. Bu UNION `Protected` ve `Friend` anahtar sözcüklerini aynı bildirimde birleştirerek belirlersiniz.  
+ Bir değişkenin erişim düzeyini sınıfı ve türetilmiş sınıflar ya da kendi derlemesi ile sınırlayabilirsiniz. Ayrıca, herhangi bir türetilmiş sınıftaki koddan veya aynı derlemede bulunan başka bir yerde erişime izin veren bu kısıtlamaların birleşimini de belirtebilirsiniz. `Protected`Aynı bildirimde ve anahtar sözcüklerini birleştirerek bu birleşimi belirtirsiniz `Friend` .  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Bir değişkeni yalnızca kendi sınıfının ve türetilmiş sınıfların içinden erişilebilir hale getirmek için  
   
-1. Değişken için `Dim` ifadesini bir sınıfın içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. `Dim`Değişkenin ifadesini bir sınıfın içine, ancak herhangi bir yordamın dışına yerleştirin.  
   
-2. [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) anahtar sözcüğünü `Dim` ifadesine ekleyin.  
+2. [Korumalı](../../../language-reference/modifiers/protected.md) anahtar sözcüğünü `Dim` deyime ekleyin.  
   
      Değişkeni sınıfın içinde herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak türetme zincirindeki herhangi bir sınıfın dışından değil, onun içinden türetilmiş herhangi bir sınıf içinden.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Bir değişkeni yalnızca aynı derlemenin içinden erişilebilir hale getirmek için  
   
-1. Değişken için `Dim` ifadesini modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
+1. `Dim`Değişkenin ifadesini bir modül, sınıf veya yapının içine, ancak herhangi bir yordamın dışına yerleştirin.  
   
-2. `Dim` ifadesine [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) anahtar sözcüğünü ekleyin.  
+2. Deyime [arkadaş](../../../language-reference/modifiers/friend.md) anahtar sözcüğünü ekleyin `Dim` .  
   
      Değişkeni modül, sınıf veya yapının içinden herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak derlemenin dışından değil, aynı derlemede bulunan herhangi bir koddan.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek `Public`, `Protected`, `Friend`, `Protected Friend`ve `Private` erişim düzeylerine sahip değişkenlerin bildirimlerini gösterir. `Dim` deyimin bir erişim düzeyi belirttiğinde, `Dim` anahtar sözcüğünü eklemeniz gerekmediğini unutmayın.  
+ Aşağıdaki örnek,,,, `Public` `Protected` `Friend` `Protected Friend` ve `Private` erişim düzeylerindeki değişkenlerin bildirimlerini gösterir. `Dim`İfade bir erişim düzeyi belirttiğinde, anahtar sözcüğünü eklemeniz gerekmediğini unutmayın `Dim` .  
   
 ```vb  
 Public Class classForEverybody  
@@ -88,9 +88,9 @@ Private numberForMeOnly As Integer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Private](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Visual Basic erişim düzeyleri](access-levels.md)
+- [Dim Deyimi](../../../language-reference/statements/dim-statement.md)
+- [Geneldir](../../../language-reference/modifiers/public.md)
+- [Korunamadı](../../../language-reference/modifiers/protected.md)
+- [Dost](../../../language-reference/modifiers/friend.md)
+- [Özelleştirme](../../../language-reference/modifiers/private.md)

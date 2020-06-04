@@ -5,25 +5,25 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 7934dcaada4675bf687624bef5ed1ea25e842832
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9501ea46eb13baa171208e20d0c9645d118c4301
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344245"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408627"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
-64 bitlik bir yürütülebilirin veya [-Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) derleyici seçeneği tarafından işaretlenen bir yürütülebilir dosyanın yüksek Entroksiz adres alanı düzeni rastgele SEÇIMINI (ASLR) destekleyip desteklemediğini gösterir.  
+64 bitlik bir yürütülebilirin veya [-Platform: anycpu](platform.md) derleyici seçeneği tarafından işaretlenen bir yürütülebilir dosyanın yüksek Entroksiz adres alanı düzeni rastgele SEÇIMINI (ASLR) destekleyip desteklemediğini gösterir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `+`&#124;`-`  
- İsteğe bağlı. Seçeneği varsayılan olarak veya öğesini belirtirseniz `-highentropyva-`kapalıdır. Veya `-highentropyva` `-highentropyva+`belirtirseniz seçeneği açık olur.  
+ İsteğe bağlı. Seçeneği varsayılan olarak veya öğesini belirtirseniz kapalıdır `-highentropyva-` . Veya belirtirseniz seçeneği açık olur `-highentropyva` `-highentropyva+` .  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu seçeneği belirtirseniz, Windows çekirdeğinin uyumlu sürümleri, çekirdek ASLR 'in bir parçası olarak bir işlemin adres alanı yerleşimini rasgele hale geldiğinde daha yüksek sayıda entropi kullanabilir. Çekirdek daha yüksek bir entropi kullanıyorsa, yığınlar ve yığınlar gibi bellek bölgelerine daha fazla sayıda adres tahsis edilebilir. Sonuç olarak, belirli bir bellek bölgesinin konumunu tahmin etmek daha zordur.  
@@ -32,5 +32,5 @@ ms.locfileid: "74344245"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

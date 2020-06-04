@@ -5,18 +5,18 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352081"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410120"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Günlük Özel Durumları
 
-Uygulamanızda oluşan özel durumlarla `My.Application.Log` ilgili `My.Log` bilgileri günlüğe kaydetmek için ve nesnelerini kullanabilirsiniz. Bu örnekler, `My.Application.Log.WriteException` açıkça yakalayacak özel durumları ve işlenmemiş özel durumları günlüğe kaydetmek için yönteminin nasıl kullanılacağını gösterir.  
+`My.Application.Log` `My.Log` Uygulamanızda oluşan özel durumlarla ilgili bilgileri günlüğe kaydetmek için ve nesnelerini kullanabilirsiniz. Bu örnekler, `My.Application.Log.WriteException` açıkça yakalayacak özel durumları ve işlenmemiş özel durumları günlüğe kaydetmek için yönteminin nasıl kullanılacağını gösterir.  
   
- İzleme bilgilerini günlüğe kaydetmek için `My.Application.Log.WriteEntry` yöntemini kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
+ İzleme bilgilerini günlüğe kaydetmek için yöntemini kullanın `My.Application.Log.WriteEntry` . Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
   
 ### <a name="to-log-a-handled-exception"></a>İşlenmiş bir özel durumu günlüğe kaydetmek için  
   
@@ -24,17 +24,17 @@ Uygulamanızda oluşan özel durumlarla `My.Application.Log` ilgili `My.Log` bil
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2. Özel durumu `Try...Catch` yakalamak için bir blok kullanın.  
+2. `Try...Catch`Özel durumu yakalamak için bir blok kullanın.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3. `Try` Bloğa özel durum üretebilen kodu koyun.  
+3. Bloğa özel durum üretebilen kodu koyun `Try` .  
   
-     Özel duruma `Dim` neden `MsgBox` olacak şekilde ve satırlarının açıklamasını kaldırın. <xref:System.NullReferenceException>  
+     `Dim` `MsgBox` Özel duruma neden olacak şekilde ve satırlarının açıklamasını kaldırın <xref:System.NullReferenceException> .  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4. `Catch` Bloğunda, özel durum bilgilerini yazmak `My.Application.Log.WriteException` için yöntemini kullanın.  
+4. `Catch`Bloğunda, `My.Application.Log.WriteException` özel durum bilgilerini yazmak için yöntemini kullanın.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
@@ -56,9 +56,9 @@ Uygulamanızda oluşan özel durumlarla `My.Application.Log` ilgili `My.Log` bil
   
 5. **Bildirimler** menüsünde **UnhandledException**öğesini seçin.  
   
-     Uygulama, ana uygulama <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> çalışmadan önce olayı başlatır.  
+     Uygulama, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> ana uygulama çalışmadan önce olayı başlatır.  
   
-6. `My.Application.Log.WriteException` Yöntemini `UnhandledException` olay işleyicisine ekleyin.  
+6. `My.Application.Log.WriteException`Yöntemini `UnhandledException` olay işleyicisine ekleyin.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
@@ -71,7 +71,7 @@ Uygulamanızda oluşan özel durumlarla `My.Application.Log` ilgili `My.Log` bil
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Nasıl yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Uygulama Günlükleriyle Çalışma](working-with-application-logs.md)
+- [Nasıl yapılır: Günlük İletileri Yazma](how-to-write-log-messages.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](walkthrough-determining-where-my-application-log-writes-information.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](walkthrough-changing-where-my-application-log-writes-information.md)

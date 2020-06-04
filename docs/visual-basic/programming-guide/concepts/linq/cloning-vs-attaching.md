@@ -1,16 +1,16 @@
 ---
-title: Kopyalama ve Iliştirme
+title: Kopyalama ve Ekleme Karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aaf3344c0439d96a01006ee000d0a827884a5af9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345686"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410883"
 ---
 # <a name="cloning-vs-attaching-visual-basic"></a>Kopyalama ile ekleme (Visual Basic)
-<xref:System.Xml.Linq.XNode> (<xref:System.Xml.Linq.XElement>dahil) veya <xref:System.Xml.Linq.XAttribute> nesneleri yeni bir ağaca eklendiğinde, yeni içeriğin üst öğesi yoksa, nesneler yalnızca XML ağacına eklenir. Yeni içerik zaten üst öğe ise ve başka bir XML ağacının parçasıysa, yeni içerik kopyalanır. Yeni kopyalanan içerik daha sonra XML ağacına eklenir.  
+Yeni <xref:System.Xml.Linq.XNode> <xref:System.Xml.Linq.XElement> bir ağaca (dahil) veya <xref:System.Xml.Linq.XAttribute> nesneleri eklerken, yeni içeriğin üst öğesi yoksa, nesneler yalnızca XML ağacına eklenir. Yeni içerik zaten üst öğe ise ve başka bir XML ağacının parçasıysa, yeni içerik kopyalanır. Yeni kopyalanan içerik daha sonra XML ağacına eklenir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, bir ağaca bir üst öğeye sahip bir öğe eklediğinizde ve bir ağaca üst öğesi olmayan bir öğe eklediğinizde davranışını gösterir.  
@@ -52,4 +52,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçları oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (Visual Basic)](creating-xml-trees.md)

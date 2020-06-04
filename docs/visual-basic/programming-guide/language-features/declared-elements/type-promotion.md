@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: aa05bd7dc87510aedb0facadf4b7590c8ec57d1f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1e284b99a36cdf0f62aee2c45fd9f3bf544d1d81
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345270"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410714"
 ---
 # <a name="type-promotion-visual-basic"></a>Tür Yükseltme (Visual Basic)
 Bir modülde programlama öğesi bildirdiğinizde Visual Basic kapsamını modülünü içeren ad alanına yükseltir. Bu, *tür yükseltmesi*olarak bilinir.  
@@ -24,30 +24,30 @@ Bir modülde programlama öğesi bildirdiğinizde Visual Basic kapsamını modü
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- `projModule`içinde, modül düzeyinde belirtilen programlama öğeleri `projNamespace`yükseltilir. Yukarıdaki örnekte `basicEnum` ve `innerClass` yükseltilir, ancak modül düzeyinde bildirilmemiş olduğundan `numberSub` değildir.  
+ İçinde `projModule` , modül düzeyinde belirtilen programlama öğeleri ' e yükseltilir `projNamespace` . Önceki örnekte `basicEnum` ve `innerClass` yükseltilmekte, ancak `numberSub` modül düzeyinde bildirilmemiş olduğundan, değildir.  
   
 ## <a name="effect-of-type-promotion"></a>Yükseltme türü etkisi  
  Yükseltme türünün etkisi, bir nitelik dizesinin modül adını içermesi gerekmez. Aşağıdaki örnek, önceki örnekteki yordama iki çağrı yapar.  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- Yukarıdaki örnekte, ilk çağrı bütün nitelik dizelerini kullanır. Ancak, tür yükseltmesi nedeniyle bu gerekli değildir. İkinci çağrı Ayrıca, nitelik dizelerine `projModule` dahil etmeden modülün üyelerine erişir.  
+ Yukarıdaki örnekte, ilk çağrı bütün nitelik dizelerini kullanır. Ancak, tür yükseltmesi nedeniyle bu gerekli değildir. İkinci çağrı Ayrıca, nitelik dizelerine dahil etmeden modülün üyelerine erişir `projModule` .  
   
 ## <a name="defeat-of-type-promotion"></a>Tür promosyonu  
  Ad alanı zaten bir modül üyesiyle aynı ada sahip bir üyeye sahipse, bu modül üyesi için yükseltme yapılır yazın. Aşağıdaki örnek, bir numaralandırma ve aynı ad uzayı içindeki bir modülün iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- Yukarıdaki örnekte, ad alanı düzeyinde aynı ada sahip bir sabit listesi olduğundan Visual Basic sınıf `abc` `thisNameSpace` olarak yükseltememesini sağlar. `abcSub`erişmek için, tam niteleme dizesi `thisNamespace.thisModule.abc.abcSub`kullanmalısınız. Ancak, sınıf `xyz` hala yükseltilir ve `xyzSub` daha kısa niteleme dizesiyle `thisNamespace.xyz.xyzSub`erişebilirsiniz.  
+ Yukarıdaki örnekte, `abc` `thisNameSpace` ad alanı düzeyinde aynı ada sahip bir sabit listesi olduğundan, Visual Basic sınıfını öğesine yükseltemezsiniz. Erişmek için `abcSub` tam niteleme dizesini kullanmanız gerekir `thisNamespace.thisModule.abc.abcSub` . Ancak, sınıf `xyz` hala yükseltilir ve `xyzSub` daha kısa nitelik dizesiyle erişebilirsiniz `thisNamespace.xyz.xyzSub` .  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>Kısmi türler için tür promosyonu  
- Modül içindeki bir sınıf veya yapı [kısmi](../../../../visual-basic/language-reference/modifiers/partial.md) anahtar sözcüğünü kullanıyorsa, ad alanının aynı ada sahip bir üyeye sahip olup olmadığına bakılmaksızın, bu sınıf veya yapı için otomatik olarak tür yükseltmesi yapılır. Modüldeki diğer öğeler de tür yükseltme için uygun değildir.  
+ Modül içindeki bir sınıf veya yapı [kısmi](../../../language-reference/modifiers/partial.md) anahtar sözcüğünü kullanıyorsa, ad alanının aynı ada sahip bir üyeye sahip olup olmadığına bakılmaksızın, bu sınıf veya yapı için otomatik olarak tür yükseltmesi yapılır. Modüldeki diğer öğeler de tür yükseltme için uygun değildir.  
   
  **Larının.** Kısmi bir tanımın tür promosyonu, beklenmedik sonuçlara ve hatta derleyici hatalarına neden olabilir. Aşağıdaki örnek, bir sınıfının bir modül içinde olan bir sınıfın iskelet kısmi tanımlarını gösterir.  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- Yukarıdaki örnekte, geliştirici derleyicinin iki kısmi tanımını `sampleClass`birleştirme işlemini bekleyebilir. Ancak, derleyici `sampleModule`içindeki kısmi Tanım için yükseltmeyi göz önünde bulundurmaz. Sonuç olarak, hem `sampleClass` hem de farklı nitelik yollarıyla iki ayrı ve farklı sınıf derlemeye çalışır.  
+ Yukarıdaki örnekte, geliştirici derleyicinin iki kısmi tanımını birleştirme işlemini bekleyebilir `sampleClass` . Ancak derleyici, içindeki kısmi Tanım için yükseltmeyi göz önünde bulundurmaz `sampleModule` . Sonuç olarak, hem adında hem de `sampleClass` farklı nitelik yollarıyla birlikte iki ayrı ve farklı sınıf derlemeye çalışır.  
   
  Derleyici, kısmi tanımları yalnızca kendi tam yolları özdeş olduğunda birleştirir.  
   
@@ -60,9 +60,9 @@ Bir modülde programlama öğesi bildirdiğinizde Visual Basic kapsamını modü
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [Namespace Deyimi](../../../../visual-basic/language-reference/statements/namespace-statement.md)
-- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Visual Basic kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Module Deyimi](../../../language-reference/statements/module-statement.md)
+- [Namespace Deyimi](../../../language-reference/statements/namespace-statement.md)
+- [Kısmi](../../../language-reference/modifiers/partial.md)
+- [Visual Basic'de Kapsam](scope.md)
+- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](how-to-control-the-scope-of-a-variable.md)
+- [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)

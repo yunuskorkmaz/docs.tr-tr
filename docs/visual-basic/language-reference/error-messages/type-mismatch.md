@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID13
 ms.assetid: f72e9e21-f475-43f2-9464-29c8ad27b6c2
-ms.openlocfilehash: 57620ef156f99e1dbe7502d7d72ecac583aed049
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f5dd42c30334084d1a3ae099c3c16c7f3f5e320a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346664"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362624"
 ---
 # <a name="type-mismatch-visual-basic"></a>Tür uyumsuzluğu (Visual Basic)
 Bir değeri, geçerli olmayan bir şekilde başka bir türe dönüştürmeye çalıştınız.  
@@ -24,4 +24,4 @@ Bir değeri, geçerli olmayan bir şekilde başka bir türe dönüştürmeye ça
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../../programming-guide/language-features/error-types.md)
