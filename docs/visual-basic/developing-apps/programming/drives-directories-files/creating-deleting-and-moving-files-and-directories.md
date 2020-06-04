@@ -22,106 +22,106 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348918"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401764"
 ---
-# <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a><span data-ttu-id="f98d1-102">Visual Basic'te Dosya ve Dizin Oluşturma, Silme ve Taşıma</span><span class="sxs-lookup"><span data-stu-id="f98d1-102">Creating, Deleting, and Moving Files and Directories in Visual Basic</span></span>
+# <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a><span data-ttu-id="b3c53-102">Visual Basic'te Dosya ve Dizin Oluşturma, Silme ve Taşıma</span><span class="sxs-lookup"><span data-stu-id="b3c53-102">Creating, Deleting, and Moving Files and Directories in Visual Basic</span></span>
 
-<span data-ttu-id="f98d1-103">Bu bölümde, Visual Basic dosya ve dizinleri oluşturma, silme, taşıma ve yeniden adlandırma ile ilgili görevler listelenmiştir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-103">This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.</span></span>  
+<span data-ttu-id="b3c53-103">Bu bölümde, Visual Basic dosya ve dizinleri oluşturma, silme, taşıma ve yeniden adlandırma ile ilgili görevler listelenmiştir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-103">This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f98d1-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f98d1-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b3c53-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b3c53-104">In This Section</span></span>  
 
- [<span data-ttu-id="f98d1-105">Nasıl Yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama</span><span class="sxs-lookup"><span data-stu-id="f98d1-105">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
- <span data-ttu-id="f98d1-106">Belirli bir dosya adı düzeniyle (örneğin, yalnızca. txt dosyaları gibi) dosyaların bir dizine nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-106">Demonstrates how to copy files with a specific file name pattern, such as only .txt files, to a directory.</span></span>  
+ [<span data-ttu-id="b3c53-105">Nasıl yapılır: Belirli Düzendeki Dosyaları Dizine Kopyalama</span><span class="sxs-lookup"><span data-stu-id="b3c53-105">How to: Copy Files with a Specific Pattern to a Directory</span></span>](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ <span data-ttu-id="b3c53-106">Belirli bir dosya adı düzeniyle (örneğin, yalnızca. txt dosyaları gibi) dosyaların bir dizine nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-106">Demonstrates how to copy files with a specific file name pattern, such as only .txt files, to a directory.</span></span>  
   
- [<span data-ttu-id="f98d1-107">Nasıl Yapılır: Aynı Dizinde Dosya Kopyası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f98d1-107">How to: Create a Copy of a File in the Same Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
- <span data-ttu-id="f98d1-108">Aynı dizindeki bir dosyanın kopyasının nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-108">Demonstrates how to create a copy of a file in the same directory.</span></span>  
+ [<span data-ttu-id="b3c53-107">Nasıl yapılır: Aynı Dizinde Dosya Kopyası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b3c53-107">How to: Create a Copy of a File in the Same Directory</span></span>](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ <span data-ttu-id="b3c53-108">Aynı dizindeki bir dosyanın kopyasının nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-108">Demonstrates how to create a copy of a file in the same directory.</span></span>  
   
- [<span data-ttu-id="f98d1-109">Nasıl Yapılır: Farklı Dizinde Dosya Kopyası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f98d1-109">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
- <span data-ttu-id="f98d1-110">Bir dosyanın başka bir dizine nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-110">Demonstrates how to copy a file to another directory.</span></span>  
+ [<span data-ttu-id="b3c53-109">Nasıl yapılır: Farklı Dizinde Dosya Kopyası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b3c53-109">How to: Create a Copy of a File in a Different Directory</span></span>](how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ <span data-ttu-id="b3c53-110">Bir dosyanın başka bir dizine nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-110">Demonstrates how to copy a file to another directory.</span></span>  
   
- [<span data-ttu-id="f98d1-111">Nasıl Yapılır: Dosya Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f98d1-111">How to: Create a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
- <span data-ttu-id="f98d1-112">Dosya oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-112">Demonstrates how to create a file.</span></span>  
+ [<span data-ttu-id="b3c53-111">Nasıl yapılır: Dosya Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b3c53-111">How to: Create a File</span></span>](how-to-create-a-file.md)  
+ <span data-ttu-id="b3c53-112">Dosya oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-112">Demonstrates how to create a file.</span></span>  
   
- [<span data-ttu-id="f98d1-113">Nasıl Yapılır: Dosya Silme</span><span class="sxs-lookup"><span data-stu-id="f98d1-113">How to: Delete a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
- <span data-ttu-id="f98d1-114">Bir dosyanın nasıl silineceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-114">Demonstrates how to delete a file.</span></span>  
+ [<span data-ttu-id="b3c53-113">Nasıl yapılır: Dosya Silme</span><span class="sxs-lookup"><span data-stu-id="b3c53-113">How to: Delete a File</span></span>](how-to-delete-a-file.md)  
+ <span data-ttu-id="b3c53-114">Bir dosyanın nasıl silineceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-114">Demonstrates how to delete a file.</span></span>  
   
- [<span data-ttu-id="f98d1-115">Nasıl Yapılır: Belirli bir Düzendeki Dosyaları Bulma</span><span class="sxs-lookup"><span data-stu-id="f98d1-115">How to: Find Files with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
- <span data-ttu-id="f98d1-116">Bir dizinde yalnızca belirli bir dosya adı düzenine sahip dosyaların nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-116">Demonstrates how to list only files with a specific file name pattern in a directory.</span></span>  
+ [<span data-ttu-id="b3c53-115">Nasıl yapılır: Belirli bir Düzendeki Dosyaları Bulma</span><span class="sxs-lookup"><span data-stu-id="b3c53-115">How to: Find Files with a Specific Pattern</span></span>](how-to-find-files-with-a-specific-pattern.md)  
+ <span data-ttu-id="b3c53-116">Bir dizinde yalnızca belirli bir dosya adı düzenine sahip dosyaların nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-116">Demonstrates how to list only files with a specific file name pattern in a directory.</span></span>  
   
- [<span data-ttu-id="f98d1-117">Nasıl Yapılır: Dosya Taşıma</span><span class="sxs-lookup"><span data-stu-id="f98d1-117">How to: Move a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
- <span data-ttu-id="f98d1-118">Bir dosyanın farklı bir dizine nasıl taşınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-118">Demonstrates how to move a file to a different directory.</span></span>  
+ [<span data-ttu-id="b3c53-117">Nasıl yapılır: Dosya Taşıma</span><span class="sxs-lookup"><span data-stu-id="b3c53-117">How to: Move a File</span></span>](how-to-move-a-file.md)  
+ <span data-ttu-id="b3c53-118">Bir dosyanın farklı bir dizine nasıl taşınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-118">Demonstrates how to move a file to a different directory.</span></span>  
   
- [<span data-ttu-id="f98d1-119">Nasıl Yapılır: Dosyayı Yeniden Adlandırma</span><span class="sxs-lookup"><span data-stu-id="f98d1-119">How to: Rename a File</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
- <span data-ttu-id="f98d1-120">Bir dosyanın nasıl yeniden adlandırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-120">Demonstrates how to rename a file.</span></span>  
+ [<span data-ttu-id="b3c53-119">Nasıl yapılır: Dosyayı Yeniden Adlandırma</span><span class="sxs-lookup"><span data-stu-id="b3c53-119">How to: Rename a File</span></span>](how-to-rename-a-file.md)  
+ <span data-ttu-id="b3c53-120">Bir dosyanın nasıl yeniden adlandırılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-120">Demonstrates how to rename a file.</span></span>  
   
- [<span data-ttu-id="f98d1-121">Nasıl Yapılır: Bir Dizini Diğerine Kopyalama</span><span class="sxs-lookup"><span data-stu-id="f98d1-121">How to: Copy a Directory to Another Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
- <span data-ttu-id="f98d1-122">Bir dizinin başka bir konuma nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-122">Demonstrates how to copy a directory to another location.</span></span>  
+ [<span data-ttu-id="b3c53-121">Nasıl yapılır: Bir Dizini Diğerine Kopyalama</span><span class="sxs-lookup"><span data-stu-id="b3c53-121">How to: Copy a Directory to Another Directory</span></span>](how-to-copy-a-directory-to-another-directory.md)  
+ <span data-ttu-id="b3c53-122">Bir dizinin başka bir konuma nasıl kopyalanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-122">Demonstrates how to copy a directory to another location.</span></span>  
   
- [<span data-ttu-id="f98d1-123">Nasıl Yapılır: Dizin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f98d1-123">How to: Create a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
- <span data-ttu-id="f98d1-124">Bir dizinin nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-124">Demonstrates how to create a directory.</span></span>  
+ [<span data-ttu-id="b3c53-123">Nasıl yapılır: Dizin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b3c53-123">How to: Create a Directory</span></span>](how-to-create-a-directory.md)  
+ <span data-ttu-id="b3c53-124">Bir dizinin nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-124">Demonstrates how to create a directory.</span></span>  
   
- [<span data-ttu-id="f98d1-125">Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma</span><span class="sxs-lookup"><span data-stu-id="f98d1-125">How to: Find Subdirectories with a Specific Pattern</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- <span data-ttu-id="f98d1-126">Belirli bir düzene sahip dizinlerin adlarını nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-126">Demonstrates how to list directories with a specific pattern in their name.</span></span>  
+ [<span data-ttu-id="b3c53-125">Nasıl yapılır: Belirli bir Desendeki Alt Dizinleri Bulma</span><span class="sxs-lookup"><span data-stu-id="b3c53-125">How to: Find Subdirectories with a Specific Pattern</span></span>](how-to-find-subdirectories-with-a-specific-pattern.md)  
+ <span data-ttu-id="b3c53-126">Belirli bir düzene sahip dizinlerin adlarını nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-126">Demonstrates how to list directories with a specific pattern in their name.</span></span>  
   
- [<span data-ttu-id="f98d1-127">Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma</span><span class="sxs-lookup"><span data-stu-id="f98d1-127">How to: Get the Collection of Files in a Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
- <span data-ttu-id="f98d1-128">Dizindeki dosyaların nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-128">Demonstrates how to list the files in a directory.</span></span>  
+ [<span data-ttu-id="b3c53-127">Nasıl yapılır: Dizindeki Dosya Koleksiyonunu Alma</span><span class="sxs-lookup"><span data-stu-id="b3c53-127">How to: Get the Collection of Files in a Directory</span></span>](how-to-get-the-collection-of-files-in-a-directory.md)  
+ <span data-ttu-id="b3c53-128">Dizindeki dosyaların nasıl listeleyeceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-128">Demonstrates how to list the files in a directory.</span></span>  
   
- [<span data-ttu-id="f98d1-129">Nasıl Yapılır: Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="f98d1-129">How to: Retrieve the Contents of the My Documents Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
- <span data-ttu-id="f98d1-130">Özel dizinlerden nasıl okunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-130">Demonstrates how to read from special directories.</span></span>  
+ [<span data-ttu-id="b3c53-129">Nasıl yapılır: Belgelerim Dizini İçeriğini Alma</span><span class="sxs-lookup"><span data-stu-id="b3c53-129">How to: Retrieve the Contents of the My Documents Directory</span></span>](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ <span data-ttu-id="b3c53-130">Özel dizinlerden nasıl okunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-130">Demonstrates how to read from special directories.</span></span>  
   
- [<span data-ttu-id="f98d1-131">Nasıl Yapılır: Dosya Yollarını Ayrıştırma</span><span class="sxs-lookup"><span data-stu-id="f98d1-131">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- <span data-ttu-id="f98d1-132">Dosya yollarını birleştirmek için `My` yöntemlerin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="f98d1-132">Demonstrates how to use `My` methods to combine file paths.</span></span>  
+ [<span data-ttu-id="b3c53-131">Nasıl yapılır: Dosya Yollarını Ayrıştırma</span><span class="sxs-lookup"><span data-stu-id="b3c53-131">How to: Parse File Paths</span></span>](how-to-parse-file-paths.md)  
+ <span data-ttu-id="b3c53-132">`My`Dosya yollarını birleştirmek için yöntemlerin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3c53-132">Demonstrates how to use `My` methods to combine file paths.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f98d1-133">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f98d1-133">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b3c53-133">Başvuru</span><span class="sxs-lookup"><span data-stu-id="b3c53-133">Reference</span></span>  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <span data-ttu-id="f98d1-134">`My.Computer.FileSystem` Nesnesini ve üyelerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-134">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
+ <span data-ttu-id="b3c53-134">`My.Computer.FileSystem`Nesnesini ve üyelerini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3c53-134">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- <span data-ttu-id="f98d1-135">`CombinePath` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-135">Describes the `CombinePath` method.</span></span>  
+ <span data-ttu-id="b3c53-135">Yöntemini açıklar `CombinePath` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-135">Describes the `CombinePath` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- <span data-ttu-id="f98d1-136">`CopyDirectory` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-136">Describes the `CopyDirectory` method.</span></span>  
+ <span data-ttu-id="b3c53-136">Yöntemini açıklar `CopyDirectory` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-136">Describes the `CopyDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- <span data-ttu-id="f98d1-137">`CopyFile` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-137">Describes the `CopyFile` method.</span></span>  
+ <span data-ttu-id="b3c53-137">Yöntemini açıklar `CopyFile` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-137">Describes the `CopyFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- <span data-ttu-id="f98d1-138">`CreateDirectory` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-138">Describes the `CreateDirectory` method.</span></span>  
+ <span data-ttu-id="b3c53-138">Yöntemini açıklar `CreateDirectory` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-138">Describes the `CreateDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A>  
- <span data-ttu-id="f98d1-139">`DeleteDirectory` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-139">Describes the `DeleteDirectory` method.</span></span>  
+ <span data-ttu-id="b3c53-139">Yöntemini açıklar `DeleteDirectory` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-139">Describes the `DeleteDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A>  
- <span data-ttu-id="f98d1-140">`DeleteFile` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-140">Describes the `DeleteFile` method.</span></span>  
+ <span data-ttu-id="b3c53-140">Yöntemini açıklar `DeleteFile` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-140">Describes the `DeleteFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A>  
- <span data-ttu-id="f98d1-141">`GetParentPath` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-141">Describes the `GetParentPath` method.</span></span>  
+ <span data-ttu-id="b3c53-141">Yöntemini açıklar `GetParentPath` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-141">Describes the `GetParentPath` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveDirectory%2A>  
- <span data-ttu-id="f98d1-142">`MoveDirectory` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-142">Describes the `MoveDirectory` method.</span></span>  
+ <span data-ttu-id="b3c53-142">Yöntemini açıklar `MoveDirectory` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-142">Describes the `MoveDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- <span data-ttu-id="f98d1-143">`MoveFile` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-143">Describes the `MoveFile` method.</span></span>  
+ <span data-ttu-id="b3c53-143">Yöntemini açıklar `MoveFile` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-143">Describes the `MoveFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameDirectory%2A>  
- <span data-ttu-id="f98d1-144">`RenameDirectory` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-144">Describes the `RenameDirectory` method.</span></span>  
+ <span data-ttu-id="b3c53-144">Yöntemini açıklar `RenameDirectory` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-144">Describes the `RenameDirectory` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- <span data-ttu-id="f98d1-145">`RenameFile` Yöntemini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-145">Describes the `RenameFile` method.</span></span>  
+ <span data-ttu-id="b3c53-145">Yöntemini açıklar `RenameFile` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-145">Describes the `RenameFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- <span data-ttu-id="f98d1-146">`SpecialDirectories` Nesnesini açıklar.</span><span class="sxs-lookup"><span data-stu-id="f98d1-146">Describes the `SpecialDirectories` object.</span></span>  
+ <span data-ttu-id="b3c53-146">Nesnesini açıklar `SpecialDirectories` .</span><span class="sxs-lookup"><span data-stu-id="b3c53-146">Describes the `SpecialDirectories` object.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f98d1-147">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="f98d1-147">Related Sections</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="b3c53-147">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="b3c53-147">Related Sections</span></span>  
 
- [<span data-ttu-id="f98d1-148">Dosyalardan Okuma</span><span class="sxs-lookup"><span data-stu-id="f98d1-148">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- <span data-ttu-id="f98d1-149">Dosyalardan okunmayla ilişkili görevleri listeler.</span><span class="sxs-lookup"><span data-stu-id="f98d1-149">Lists tasks associated with reading from files.</span></span>  
+ [<span data-ttu-id="b3c53-148">Dosyalardan Okuma</span><span class="sxs-lookup"><span data-stu-id="b3c53-148">Reading from Files</span></span>](reading-from-files.md)  
+ <span data-ttu-id="b3c53-149">Dosyalardan okunmayla ilişkili görevleri listeler.</span><span class="sxs-lookup"><span data-stu-id="b3c53-149">Lists tasks associated with reading from files.</span></span>  
   
- [<span data-ttu-id="f98d1-150">Dosyalara Yazma</span><span class="sxs-lookup"><span data-stu-id="f98d1-150">Writing to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- <span data-ttu-id="f98d1-151">Dosyalara yazmayı içeren görevleri listeler.</span><span class="sxs-lookup"><span data-stu-id="f98d1-151">Lists tasks involving writing to files.</span></span>
+ [<span data-ttu-id="b3c53-150">Dosyalara Yazma</span><span class="sxs-lookup"><span data-stu-id="b3c53-150">Writing to Files</span></span>](writing-to-files.md)  
+ <span data-ttu-id="b3c53-151">Dosyalara yazmayı içeren görevleri listeler.</span><span class="sxs-lookup"><span data-stu-id="b3c53-151">Lists tasks involving writing to files.</span></span>

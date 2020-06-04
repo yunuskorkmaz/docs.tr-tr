@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e33450e921f1859c97edf1fbf123a0a95267767f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662024"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402894"
 ---
-# <a name="identifier-expected"></a><span data-ttu-id="ac221-102">Tanımlayıcı bekleniyor</span><span class="sxs-lookup"><span data-stu-id="ac221-102">Identifier expected</span></span>
-<span data-ttu-id="ac221-103">Burada bir öğe adı bağlamı gerektirir tanınabilir bildirilen öğe adları değil bir programlama öğesi gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="ac221-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="ac221-104">Olası nedenlerinden biri olan bir öznitelik dışında bir yerde belirtilmiş deyimin başında.</span><span class="sxs-lookup"><span data-stu-id="ac221-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
+# <a name="identifier-expected"></a><span data-ttu-id="d7ec4-102">Tanımlayıcı bekleniyor</span><span class="sxs-lookup"><span data-stu-id="d7ec4-102">Identifier expected</span></span>
+<span data-ttu-id="d7ec4-103">Tanınabilir bir şekilde bildirilmeyen öğe adı olmayan bir programlama öğesi, bağlamı bir öğe adı gerektirdiğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="d7ec4-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="d7ec4-104">Olası nedenlerden biri, bir özniteliğin deyimin başlangıcında dışında bir yerde belirtilmiş olması olabilir.</span><span class="sxs-lookup"><span data-stu-id="d7ec4-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- <span data-ttu-id="ac221-105">**Hata Kimliği:** BC30203</span><span class="sxs-lookup"><span data-stu-id="ac221-105">**Error ID:** BC30203</span></span>  
+ <span data-ttu-id="d7ec4-105">**Hata kimliği:** BC30203</span><span class="sxs-lookup"><span data-stu-id="d7ec4-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ac221-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ac221-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7ec4-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="d7ec4-106">To correct this error</span></span>  
   
-- <span data-ttu-id="ac221-107">Herhangi bir özniteliği deyimindeki tüm başında yerleştirildiğinden emin olun.</span><span class="sxs-lookup"><span data-stu-id="ac221-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
+- <span data-ttu-id="d7ec4-107">Deyimdeki tüm özniteliklerin başlangıca yerleştirildiğinden emin olun.</span><span class="sxs-lookup"><span data-stu-id="d7ec4-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
-- <span data-ttu-id="ac221-108">Tüm öğe adları deyiminde doğru yazdığınızdan emin olun.</span><span class="sxs-lookup"><span data-stu-id="ac221-108">Verify that all element names in the statement are spelled correctly.</span></span>  
+- <span data-ttu-id="d7ec4-108">Deyimdeki tüm öğe adlarının doğru yazıldığından emin olun.</span><span class="sxs-lookup"><span data-stu-id="d7ec4-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac221-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac221-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7ec4-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d7ec4-109">See also</span></span>
 
-- [<span data-ttu-id="ac221-110">Bildirilen Öğe Adları</span><span class="sxs-lookup"><span data-stu-id="ac221-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [<span data-ttu-id="ac221-111">Öznitelikler genel bakış</span><span class="sxs-lookup"><span data-stu-id="ac221-111">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="d7ec4-110">Bildirilen Öğe Adları</span><span class="sxs-lookup"><span data-stu-id="d7ec4-110">Declared Element Names</span></span>](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [<span data-ttu-id="d7ec4-111">Özniteliklere genel bakış</span><span class="sxs-lookup"><span data-stu-id="d7ec4-111">Attributes overview</span></span>](../../programming-guide/concepts/attributes/index.md)

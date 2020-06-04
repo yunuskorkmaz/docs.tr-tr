@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 3110241d2c10c3018b2144dbc8234a9b6633e0c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e83fda1a7e58cceb86bbd3e700a25b70be96587
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593255"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400337"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="77048-102">Deyim ad alanında geçerli değil</span><span class="sxs-lookup"><span data-stu-id="77048-102">Statement is not valid in a namespace</span></span>
-<span data-ttu-id="77048-103">Bir ad alanı düzeyinde deyimi yer alamaz.</span><span class="sxs-lookup"><span data-stu-id="77048-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="77048-104">Ad alanı düzeyinde izin yalnızca modülü, arabirim, sınıf, temsilci, numaralandırma ve yapı bildirimleri bildirimlerdir.</span><span class="sxs-lookup"><span data-stu-id="77048-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="a2b0d-102">Deyim ad alanında geçerli değil</span><span class="sxs-lookup"><span data-stu-id="a2b0d-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="a2b0d-103">İfade, bir ad alanı düzeyinde görünemez.</span><span class="sxs-lookup"><span data-stu-id="a2b0d-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="a2b0d-104">Ad alanı düzeyinde izin verilen tek bildirimler Module, Interface, Class, Delegate, Enumeration ve Structure bildirimlerdir.</span><span class="sxs-lookup"><span data-stu-id="a2b0d-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- <span data-ttu-id="77048-105">**Hata Kimliği:** BC30001</span><span class="sxs-lookup"><span data-stu-id="77048-105">**Error ID:** BC30001</span></span>  
+ <span data-ttu-id="a2b0d-105">**Hata kimliği:** BC30001</span><span class="sxs-lookup"><span data-stu-id="a2b0d-105">**Error ID:** BC30001</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="77048-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="77048-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a2b0d-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="a2b0d-106">To correct this error</span></span>  
   
-- <span data-ttu-id="77048-107">Deyim, bir modülü, sınıf, arabirim, yapısı, sabit listesi veya temsilci tanımı içinde bir konuma taşıyın.</span><span class="sxs-lookup"><span data-stu-id="77048-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
+- <span data-ttu-id="a2b0d-107">İfadeyi modül, sınıf, arabirim, yapı, numaralandırma veya temsilci tanımı içindeki bir konuma taşıyın.</span><span class="sxs-lookup"><span data-stu-id="a2b0d-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77048-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77048-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a2b0d-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a2b0d-108">See also</span></span>
 
-- [<span data-ttu-id="77048-109">Visual Basic'de kapsam</span><span class="sxs-lookup"><span data-stu-id="77048-109">Scope in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [<span data-ttu-id="77048-110">Visual Basic'de ad alanları</span><span class="sxs-lookup"><span data-stu-id="77048-110">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="a2b0d-109">Visual Basic'de Kapsam</span><span class="sxs-lookup"><span data-stu-id="a2b0d-109">Scope in Visual Basic</span></span>](../../programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="a2b0d-110">Visual Basic'de Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="a2b0d-110">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
