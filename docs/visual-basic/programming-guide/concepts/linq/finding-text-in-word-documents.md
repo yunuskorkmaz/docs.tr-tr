@@ -2,24 +2,24 @@
 title: Word Belgelerinde Metin Bulma
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 83941de815968fce471b7366ed7c5114dae0d63c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 546703e3dbead64fd10c04fe52cb1dd98ba53049
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347518"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398096"
 ---
-# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="9afca-102">Word belgelerinde metin bulma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9afca-102">Finding Text in Word Documents (Visual Basic)</span></span>
+# <a name="finding-text-in-word-documents-visual-basic"></a><span data-ttu-id="1dc38-102">Word belgelerinde metin bulma (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc38-102">Finding Text in Word Documents (Visual Basic)</span></span>
 
-<span data-ttu-id="9afca-103">Bu konu, bir şeyi yararlı yapmak için önceki sorguları genişletir: belgede bir dizenin tüm yinelemelerini bulur.</span><span class="sxs-lookup"><span data-stu-id="9afca-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
+<span data-ttu-id="1dc38-103">Bu konu, bir şeyi yararlı yapmak için önceki sorguları genişletir: belgede bir dizenin tüm yinelemelerini bulur.</span><span class="sxs-lookup"><span data-stu-id="1dc38-103">This topic extends the previous queries to do something useful: find all occurrences of a string in the document.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9afca-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="9afca-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1dc38-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="1dc38-104">Example</span></span>
 
-<span data-ttu-id="9afca-105">Bu örnek, belgedeki belirli bir metin parçasının tüm oluşumlarını bulmak için bir WordprocessingML belgesini işler.</span><span class="sxs-lookup"><span data-stu-id="9afca-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="9afca-106">Bunu yapmak için "Merhaba" dizesini bulan bir sorgu kullanıyoruz.</span><span class="sxs-lookup"><span data-stu-id="9afca-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="9afca-107">Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır.</span><span class="sxs-lookup"><span data-stu-id="9afca-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="9afca-108">Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="9afca-108">The new query is called out in comments in the code below.</span></span>
+<span data-ttu-id="1dc38-105">Bu örnek, belgedeki belirli bir metin parçasının tüm oluşumlarını bulmak için bir WordprocessingML belgesini işler.</span><span class="sxs-lookup"><span data-stu-id="1dc38-105">This example processes a WordprocessingML document, to find all the occurrences of a specific piece of text in the document.</span></span> <span data-ttu-id="1dc38-106">Bunu yapmak için "Merhaba" dizesini bulan bir sorgu kullanıyoruz.</span><span class="sxs-lookup"><span data-stu-id="1dc38-106">To do this, we use a query that finds the string "Hello".</span></span> <span data-ttu-id="1dc38-107">Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır.</span><span class="sxs-lookup"><span data-stu-id="1dc38-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="1dc38-108">Yeni sorgu, aşağıdaki koddaki açıklamalarda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="1dc38-108">The new query is called out in comments in the code below.</span></span>
 
-<span data-ttu-id="9afca-109">Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="9afca-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>
+<span data-ttu-id="1dc38-109">Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="1dc38-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](creating-the-source-office-open-xml-document.md).</span></span>
 
-<span data-ttu-id="9afca-110">Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="9afca-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="9afca-111"><xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="9afca-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+<span data-ttu-id="1dc38-110">Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="1dc38-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="1dc38-111"><xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="1dc38-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
 
 ```vb
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
@@ -153,14 +153,14 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="9afca-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="9afca-112">This example produces the following output:</span></span>
+<span data-ttu-id="1dc38-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1dc38-112">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code >        Console.WriteLine("Hello World")<
 StyleName:Code >Hello World<
 ```
 
-<span data-ttu-id="9afca-113">Tabii ki, belirli bir stille satırları arayacak şekilde aramayı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9afca-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="9afca-114">Aşağıdaki sorgu, kod stiline sahip olan tüm boş satırları bulur:</span><span class="sxs-lookup"><span data-stu-id="9afca-114">The following query finds all blank lines that have the Code style:</span></span>
+<span data-ttu-id="1dc38-113">Tabii ki, belirli bir stille satırları arayacak şekilde aramayı değiştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1dc38-113">You can, of course, modify the search so that it searches for lines with a specific style.</span></span> <span data-ttu-id="1dc38-114">Aşağıdaki sorgu, kod stiline sahip olan tüm boş satırları bulur:</span><span class="sxs-lookup"><span data-stu-id="1dc38-114">The following query finds all blank lines that have the Code style:</span></span>
 
 ```vb
 Imports System.IO.Packaging
@@ -294,24 +294,24 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="9afca-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="9afca-115">This example produces the following output:</span></span>
+<span data-ttu-id="1dc38-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="1dc38-115">This example produces the following output:</span></span>
 
 ```console
 StyleName:Code ><
 ```
 
-<span data-ttu-id="9afca-116">Tabii ki bu örnek çeşitli yollarla iyileştirilen olabilir.</span><span class="sxs-lookup"><span data-stu-id="9afca-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="9afca-117">Örneğin, normal ifadeleri metin aramak için kullanabiliriz, belirli bir dizindeki tüm Word dosyaları üzerinde yineliyoruz ve bu şekilde devam ediyoruz.</span><span class="sxs-lookup"><span data-stu-id="9afca-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
+<span data-ttu-id="1dc38-116">Tabii ki bu örnek çeşitli yollarla iyileştirilen olabilir.</span><span class="sxs-lookup"><span data-stu-id="1dc38-116">Of course, this example could be enhanced in a number of ways.</span></span> <span data-ttu-id="1dc38-117">Örneğin, normal ifadeleri metin aramak için kullanabiliriz, belirli bir dizindeki tüm Word dosyaları üzerinde yineliyoruz ve bu şekilde devam ediyoruz.</span><span class="sxs-lookup"><span data-stu-id="1dc38-117">For example, we could use regular expressions to search for text, we could iterate through all the Word files in a particular directory, and so on.</span></span>
 
-<span data-ttu-id="9afca-118">Bu örneğin, tek bir sorgu olarak yazılıp yazılmadığını ve bunun yaklaşık olarak gerçekleştiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="9afca-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="9afca-119">Her sorgu geç, ertelenmiş bir biçimde uygulandığından, sorgu yinelenene kadar her sorgu kendi sonuçlarını vermez.</span><span class="sxs-lookup"><span data-stu-id="9afca-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="9afca-120">Yürütme ve yavaş değerlendirme hakkında daha fazla bilgi için bkz. [LINQ to XML ertelenmiş yürütme ve yavaş değerlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9afca-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
+<span data-ttu-id="1dc38-118">Bu örneğin, tek bir sorgu olarak yazılıp yazılmadığını ve bunun yaklaşık olarak gerçekleştiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="1dc38-118">Note that this example performs approximately as well as if it were written as a single query.</span></span> <span data-ttu-id="1dc38-119">Her sorgu geç, ertelenmiş bir biçimde uygulandığından, sorgu yinelenene kadar her sorgu kendi sonuçlarını vermez.</span><span class="sxs-lookup"><span data-stu-id="1dc38-119">Because each query is implemented in a lazy, deferred fashion, each query does not yield its results until the query is iterated.</span></span> <span data-ttu-id="1dc38-120">Yürütme ve yavaş değerlendirme hakkında daha fazla bilgi için bkz. [LINQ to XML ertelenmiş yürütme ve yavaş değerlendirme (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1dc38-120">For more information about execution and lazy evaluation, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="9afca-121">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="9afca-121">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1dc38-121">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="1dc38-121">Next Steps</span></span>
 
-<span data-ttu-id="9afca-122">Sonraki bölümde WordprocessingML belgeleri hakkında daha fazla bilgi verilmektedir:</span><span class="sxs-lookup"><span data-stu-id="9afca-122">The next section provides more information about WordprocessingML documents:</span></span>
+<span data-ttu-id="1dc38-122">Sonraki bölümde WordprocessingML belgeleri hakkında daha fazla bilgi verilmektedir:</span><span class="sxs-lookup"><span data-stu-id="1dc38-122">The next section provides more information about WordprocessingML documents:</span></span>
 
-- [<span data-ttu-id="9afca-123">Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9afca-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [<span data-ttu-id="1dc38-123">Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc38-123">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](details-of-office-open-xml-wordprocessingml-documents.md)
 
-## <a name="see-also"></a><span data-ttu-id="9afca-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9afca-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1dc38-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1dc38-124">See also</span></span>
 
-- [<span data-ttu-id="9afca-125">Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9afca-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [<span data-ttu-id="9afca-126">Saf Işlev kullanarak yeniden düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9afca-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
-- [<span data-ttu-id="9afca-127">LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9afca-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="1dc38-125">Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc38-125">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="1dc38-126">Saf Işlev kullanarak yeniden düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc38-126">Refactoring Using a Pure Function (Visual Basic)</span></span>](refactoring-using-a-pure-function.md)
+- [<span data-ttu-id="1dc38-127">LINQ to XML ertelenmiş yürütme ve geç değerlendirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc38-127">Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)</span></span>](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
