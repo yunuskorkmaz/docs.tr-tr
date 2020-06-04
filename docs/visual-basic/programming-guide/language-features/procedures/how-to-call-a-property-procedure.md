@@ -8,27 +8,27 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 52e6c62ffb81c480ccc1abf06f04eb780218dbf1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340550"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388705"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Nasıl yapılır: Bir Özellik Yordamı Çağırma (Visual Basic)
 Özellik yordamını, özelliğinde bir değer depolayarak veya değerini alarak çağırabilirsiniz. Bir özelliğe, bir değişkene erişirken aynı şekilde erişirsiniz.  
   
- Özelliğin `Set` yordamı bir değeri depolar ve `Get` yordamı değeri alır. Ancak, bu yordamları adına göre açıkça çağırmayın. Bir değişkenin değerini depoladığınız veya alacağınız gibi, bir atama deyiminde veya bir ifadede özelliğini kullanın. Visual Basic, özelliğin yordamlarına çağrı yapar.  
+ Özelliğin `Set` yordamı bir değeri depolar ve `Get` yordamı değerini alır. Ancak, bu yordamları adına göre açıkça çağırmayın. Bir değişkenin değerini depoladığınız veya alacağınız gibi, bir atama deyiminde veya bir ifadede özelliğini kullanın. Visual Basic, özelliğin yordamlarına çağrı yapar.  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>Bir özelliğin get yordamını çağırmak için  
   
 1. Bir ifadede özellik adını bir değişken adı kullandığınız şekilde kullanın. Bir özelliği, bir değişkeni veya sabiti kullanabileceğiniz her yerde kullanabilirsiniz.  
   
-     veya  
+     -veya-  
   
-     Atama deyimindeki eşittir (`=`) işaretinden sonra özellik adını kullanın.  
+     Atama ifadesinde eşittir () işaretinden sonra özellik adını kullanın `=` .  
   
-     Aşağıdaki örnek, `Get` yordamını dolaylı olarak çağıran <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> özelliğinin değerini okur.  
+     Aşağıdaki örnek, <xref:Microsoft.VisualBasic.DateAndTime.Now%2A> yordamını dolaylı olarak çağıran özelliğinin değerini okur `Get` .  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74340550"
   
 1. Atama ifadesinin sol tarafındaki özellik adını kullanın.  
   
-     Aşağıdaki örnek, `Set` yordamını dolaylı olarak çağıran <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> özelliğinin değerini ayarlar.  
+     Aşağıdaki örnek, <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A> yordamı dolaylı olarak çağıran özelliğin değerini ayarlar `Set` .  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
@@ -56,12 +56,12 @@ ms.locfileid: "74340550"
 
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic Özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Property Deyimi](../../../language-reference/statements/property-statement.md)
+- [Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar](./differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
 - [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
 - [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)
-- [Get Deyimi](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set Deyimi](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Get Deyimi](../../../language-reference/statements/get-statement.md)
+- [Set deyimleri](../../../language-reference/statements/set-statement.md)

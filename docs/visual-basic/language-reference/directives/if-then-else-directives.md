@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7054a6ada4583c5d89e020437eb622a59d3eb17a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410016"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else Yönergeleri
 
@@ -47,24 +47,24 @@ Seçili Visual Basic kodu bloklarını koşullu olarak derler.
 ## <a name="parts"></a>Bölümler
 
 `expression`  
-`#If` ve `#ElseIf` deyimleri için gereklidir, başka bir yerde. Yalnızca bir veya daha fazla koşullu derleyici sabiti, sabit değer ve işleçlerden oluşan, `True` veya `False`değerlendirilen herhangi bir ifade.
+`#If`Ve deyimleri için gerekli `#ElseIf` , başka bir yerde. Veya olarak değerlendirilen bir veya daha fazla koşullu derleyici sabiti, sabit değer ve işleçlerden oluşan herhangi bir ifade `True` `False` .
 
 `statements`  
-`#If` bildiri bloğu için gerekli, başka bir yerde. İlişkili ifade `True`olarak değerlendirilirse derlenen program satırları veya derleyici yönergeleri Visual Basic.
+For deyimleri için gerekli `#If` , başka bir yerde. İlişkili ifade olarak değerlendirildiğinde derlenen program satırları veya derleyici yönergeleri Visual Basic `True` .
 
 `#End If`  
-`#If` bildiri bloğunu sonlandırır.
+`#If`Ekstre bloğunu sonlandırır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yüzeyde, `#If...Then...#Else` yönergelerinin davranışı `If...Then...Else` deyimleriyle aynı şekilde görünür. Ancak, `#If...Then...#Else` yönergeleri derleyicinin derlendiğini değerlendirir, ancak `If...Then...Else` deyimleri çalışma zamanında koşulları değerlendirir.
+Yüzeyde, `#If...Then...#Else` yönergelerin davranışı deyimlerle aynı şekilde görünür `If...Then...Else` . Ancak, `#If...Then...#Else` yönergeler derleyici tarafından derlendiğini değerlendirir, ancak `If...Then...Else` deyimler çalışma zamanında koşulları değerlendirir.
 
 Koşullu derleme genellikle farklı platformlar için aynı programı derlemek için kullanılır. Hata ayıklama kodunun yürütülebilir bir dosyada görünmesini engellemek için de kullanılır. Koşullu derleme sırasında dışlanan kod, son yürütülebilir dosyadan tamamen atlandığından, boyut veya performans üzerinde hiçbir etkisi olmaz.
 
-Herhangi bir değerlendirmenin sonucuna bakılmaksızın, tüm ifadeler `Option Compare Binary`kullanılarak değerlendirilir. `Option Compare` deyimi `#If` ve `#ElseIf` deyimlerindeki ifadeleri etkilemez.
+Herhangi bir değerlendirmenin sonucuna bakılmaksızın, tüm ifadeler kullanılarak değerlendirilir `Option Compare Binary` . `Option Compare`Deyimi `#If` ve `#ElseIf` deyimlerindeki ifadeleri etkilemez.
 
 > [!NOTE]
-> `#If`, `#Else`, `#ElseIf`ve `#End If` yönergelerinin tek satırlık formu yoktur. Diğer hiçbir kod, yönergelerden biriyle aynı satırda görünemez.
+> `#If`,, `#Else` `#ElseIf` Ve yönergelerinin tek satırlık formu yoktur `#End If` . Diğer hiçbir kod, yönergelerden biriyle aynı satırda görünemez.
 
 Koşullu derleme bloğunun içindeki deyimler, tamamlanmış Mantıksal deyimler olmalıdır. Örneğin, yalnızca bir işlevin özniteliklerini koşullu olarak derlenemez, ancak işlevi öznitelikleri ile birlikte koşullu olarak bildirebilirsiniz:
 
@@ -80,13 +80,13 @@ Public Function SomeFunction() As String
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, belirli deyimlerin derlenip derlenmeyeceğini anlamak için `#If...Then...#Else` yapısını kullanır.
+Bu örnek, `#If...Then...#Else` belirli deyimlerin derlenip derlenmeyeceğini anlamak için yapısını kullanır.
 
 [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [#Const Yönergesi](../../../visual-basic/language-reference/directives/const-directive.md)
-- [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [#Const Yönergesi](const-directive.md)
+- [If...Then...Else Deyimi](../statements/if-then-else-statement.md)
+- [Koşullu Derleme](../../programming-guide/program-structure/conditional-compilation.md)
 - <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
