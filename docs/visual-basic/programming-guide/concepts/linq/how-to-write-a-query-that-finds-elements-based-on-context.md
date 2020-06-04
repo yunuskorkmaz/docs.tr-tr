@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: bağlam temelinde öğeleri bulan bir sorgu yazma'
+title: 'Nasıl yapılır: Bağlama Göre Öğeleri Bulan Bir Sorgu Yazma'
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: d25c6d47eee2ae092c84c3db3c08c3e21e7d98d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 52945cecb1fabe8ebabc836c7e9d61e3570fafb3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346213"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397641"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Nasıl yapılır: bağlam temelinde öğeleri bulan bir sorgu yazma (Visual Basic)
 Bazen, bağlamlarına göre öğeleri seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki eşdüzey öğelere göre filtrelemek isteyebilirsiniz. Alt veya üst öğe öğelerine göre filtrelemek isteyebilirsiniz.  
   
- Bunu bir sorgu yazarak ve `where` yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz. İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, sorguyu bir `let` yan tümcesinde yapmak daha uygundur ve sonra sonuçları `where` yan tümcesinde kullanır.  
+ Bunu, bir sorgu yazarak ve yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz `where` . İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, bir yan tümce içinde sorgu yapmak daha uygundur `let` ve sonra sonuçları `where` yan tümce içinde kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir `ul` öğesi tarafından hemen izlenen tüm `p` öğelerini seçer.  
+ Aşağıdaki örnek, `p` hemen arkasından bir öğesi olan tüm öğeleri seçer `ul` .  
   
 ```vb  
 Dim doc As XElement = _  
@@ -112,4 +112,4 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Temel sorgular (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

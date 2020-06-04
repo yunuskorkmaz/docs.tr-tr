@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: nesne grafiğini proje'
+title: 'Nasıl yapılır: Nesne Grafiği Yansıtma'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2900a31a469266d392f1b07b4714a08e253d2abd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636685"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396499"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Nasıl yapılır: nesne grafiğini proje (Visual Basic)
 Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir nesne grafiğini örnek XML dosyasındaki `Address`, `PurchaseOrder`ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.  
+ Aşağıdaki kod, bir nesne grafiğini `Address` `PurchaseOrder` örnek XML dosyasındaki,, ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) XML belgesi.  
   
 ```vb  
 Class Address  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- Bu örnekte, LINQ sorgusunun sonucu `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> olarak döndürülür. `PurchaseOrder` sınıfındaki öğeler `PurchaseOrderItem`<xref:System.Collections.Generic.IEnumerable%601> türüdür. Kod, sorgu sonuçlarından bir <xref:System.Collections.Generic.List%601> koleksiyonu oluşturmak için <xref:System.Linq.Enumerable.ToList%2A> uzantısı yöntemini kullanır.  
+ Bu örnekte, LINQ sorgusunun sonucu ' a döndürülür <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . `PurchaseOrder`Sınıfındaki öğeler türündedir <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . Kod, <xref:System.Linq.Enumerable.ToList%2A> sorgu sonuçlarından bir koleksiyon oluşturmak için genişletme yöntemini kullanır <xref:System.Collections.Generic.List%601> .  
   
  Örnek aşağıdaki çıktıyı üretir:  
   
@@ -341,4 +341,4 @@ ShipDate: 5/21/1999
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

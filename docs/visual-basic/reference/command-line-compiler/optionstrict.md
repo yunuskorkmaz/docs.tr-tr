@@ -8,37 +8,37 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 469e22aef9d746fc55e04ba884d17d60d8baa85a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3dd12971a082869c32b6292ed45e2014b8b0e2c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583083"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400545"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 
 Örtük tür dönüşümlerini kısıtlamak için katı tür semantiğini zorlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```console
 -optionstrict[+ | -]
 -optionstrict[:custom]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `+`&#124;`-`  
-İsteğe bağlı. `-optionstrict+` Seçeneği örtük tür dönüştürmeyi kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-`. `-optionstrict+` Seçeneği ile `-optionstrict`aynıdır. Hem izin veren tür semantiğinin hem de kullanabilirsiniz.
+İsteğe bağlı. `-optionstrict+`Seçeneği örtük tür dönüştürmeyi kısıtlar. Bu seçenek için varsayılan değer `-optionstrict-` . `-optionstrict+`Seçeneği ile aynıdır `-optionstrict` . Hem izin veren tür semantiğinin hem de kullanabilirsiniz.
 
 `custom`  
 Gereklidir. Katı dil semantiklerine uyulmadığında uyar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Etkin `-optionstrict+` olduğunda, yalnızca genişleyen tür dönüştürmeleri örtülü olarak yapılabilir. Bir tamsayı türü nesnesine bir `Decimal` tür nesnesi atama gibi örtülü daraltma tür dönüştürmeleri hata olarak bildirilir.
+`-optionstrict+`Etkin olduğunda, yalnızca genişleyen tür dönüştürmeleri örtülü olarak yapılabilir. Bir tamsayı türü nesnesine bir tür nesnesi atama gibi örtülü daraltma tür dönüştürmeleri `Decimal` hata olarak bildirilir.
 
-Örtülü daraltma tür dönüştürmeleri için uyarı oluşturmak için kullanın `-optionstrict:custom`. Belirli `-nowarn:numberlist` uyarıları yoksaymak ve `-warnaserror:numberlist` belirli uyarıları hata olarak değerlendirmek için kullanın.
+Örtülü daraltma tür dönüştürmeleri için uyarı oluşturmak için kullanın `-optionstrict:custom` . `-nowarn:numberlist`Belirli uyarıları yoksaymak ve `-warnaserror:numberlist` belirli uyarıları hata olarak değerlendirmek için kullanın.
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE 'de-OptionStrict öğesini ayarlamak için
 
@@ -50,11 +50,11 @@ Etkin `-optionstrict+` olduğunda, yalnızca genişleyen tür dönüştürmeleri
 
 ### <a name="to-set--optionstrict-programmatically"></a>Program aracılığıyla ayarlama-OptionStrict
 
-Bkz. [Option Strict deyimdir](../../../visual-basic/language-reference/statements/option-strict-statement.md).
+Bkz. [Option Strict deyimdir](../../language-reference/statements/option-strict-statement.md).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod, katı `Test.vb` tür semantiğini kullanarak derlenir.
+Aşağıdaki kod, `Test.vb` katı tür semantiğini kullanarak derlenir.
 
 ```console
 vbc -optionstrict+ test.vb
@@ -62,12 +62,12 @@ vbc -optionstrict+ test.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
-- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optioninfer](optioninfer.md)
+- [-nowarn](nowarn.md)
+- [-warnaserror (Visual Basic)](warnaserror.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [Option Strict Deyimi](../../language-reference/statements/option-strict-statement.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

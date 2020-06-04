@@ -2,12 +2,12 @@
 title: XML’i Farklı Şekilde Yansıtma
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: 400ceafe8ca219efbbb921d573126e0ca80bbb5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1424b88b478896854b0f094ca4ec8eba82b816b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344491"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396369"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>XML 'i farklı bir şekilde yansıtma (Visual Basic)
 Bu konuda, kaynak XML 'den farklı bir şekilde XML yansıtma örneği gösterilmektedir.  
@@ -17,9 +17,9 @@ Bu konuda, kaynak XML 'den farklı bir şekilde XML yansıtma örneği gösteril
 ## <a name="example"></a>Örnek  
  Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca, her bir paragrafın stilini ve metnini tanımlar. Son olarak, örnek proje XML 'SI farklı bir şekil ile. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yansıtmayı yapan yeni ifadeye aşağıdaki koddaki açıklamalarda bir tanesi çağırılır.  
   
- Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (Visual Basic)](creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgulama yapacaksınız:  
   
-- [Word belgelerinde metin bulma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word belgelerinde metin bulma (Visual Basic)](finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

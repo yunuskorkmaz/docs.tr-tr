@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 6171572176d53562a1baeb8d8602113f6abf9c43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0fd07e4b777bdf48fa07eac7ef49dfb92aae522f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665722"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397200"
 ---
-# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<adı >' ad alanında belirsiz '\<namespacename >'
-Belirsiz ve bu nedenle çakışan bir ad başka bir adla sağladınız. Visual Basic Derleyicisi, herhangi bir çakışma çözümleme kurallarını yok; adları kendiniz belirsizliğinin gerekir.  
+# <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<name>', '\<namespacename>' ad alanında belirsiz
+Belirsiz bir ad sağladınız ve bu nedenle başka bir adla çakışıyor. Visual Basic derleyicisinde herhangi bir çakışma çözümleme kuralı yok; adları kendiniz kesinleştirmeniz gerekir.  
   
- **Hata Kimliği:** BC30560  
+ **Hata kimliği:** BC30560  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -25,5 +25,5 @@ Belirsiz ve bu nedenle çakışan bir ad başka bir adla sağladınız. Visual B
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Visual Basic'de Ad Alanları](../../programming-guide/program-structure/namespaces.md)
+- [Namespace Deyimi](../statements/namespace-statement.md)

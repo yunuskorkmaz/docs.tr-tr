@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: CSV dosyalarından XML oluşturma'
+title: 'Nasıl yapılır: CSV Dosyalarından XML Oluşturma'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636828"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396616"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Nasıl yapılır: CSV dosyalarından XML oluşturma (Visual Basic)
-Bu örnek, bir virgülle ayrılmış değer (CSV) dosyasından bir XML dosyası oluşturmak için dil ile tümleşik sorgu (LINQ) ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kullanmayı gösterir.  
+Bu örnek, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından BIR XML dosyası oluşturmak ve dil Ile tümleşik sorgu (LINQ) kullanmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.  
@@ -109,4 +109,4 @@ Console.WriteLine(cust)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

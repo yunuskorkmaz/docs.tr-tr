@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bd3d3ac6c0a56a26b94e8a245253b2450d9c5b71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700991"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397395"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Sayı olan etiketlerden sonra iki nokta işareti gelmelidir
 Satır numaraları, diğer etiket türleriyle aynı kurallara uyar ve iki nokta üst üste içermelidir.  
@@ -29,4 +29,4 @@ Satır numaraları, diğer etiket türleriyle aynı kurallara uyar ve iki nokta 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GoTo Deyimi](../../../visual-basic/language-reference/statements/goto-statement.md)
+- [GoTo ekstresi](../statements/goto-statement.md)

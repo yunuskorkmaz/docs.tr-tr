@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c7caf266514c43e40135b33d848a688546acf1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353208"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396785"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Birlikte Çalışma'ya Giriş (Visual Basic)
 Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere sunma ve uygulamaları barındırmasına imkan tanır. COM nesneleri birçok yıl için Windows programlamasında temel alınırken, ortak dil çalışma zamanı (CLR) için tasarlanan uygulamalar birçok avantaj sunar.  
@@ -22,7 +22,7 @@ Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere s
 ## <a name="managed-code-and-data"></a>Yönetilen kod ve veriler  
  .NET Framework için geliştirilen kod, *yönetilen kod*olarak ADLANDıRıLıR ve CLR tarafından kullanılan meta verileri içerir. .NET Framework uygulamalar tarafından kullanılan verilere *yönetilen veriler* denir çünkü çalışma zamanı, bellek ayırma ve geri kazanma ve tür denetimi gerçekleştirme gibi verilerle ilgili görevleri yönetir. Varsayılan olarak, Visual Basic .NET yönetilen kod ve verileri kullanır, ancak birlikte çalışma derlemelerini (Bu sayfada daha sonra açıklanan) kullanarak COM nesnelerinin yönetilmeyen koduna ve verilerine erişebilirsiniz.  
   
-## <a name="assemblies"></a>Derlemeler  
+## <a name="assemblies"></a>Bütünleştirilmiş Kodlar  
  Derleme, bir .NET Framework uygulamasının birincil yapı taşıdır. Oluşturulan, sürümlü ve bir veya daha fazla dosya içeren tek bir uygulama birimi olarak dağıtılan işlevlerin bir koleksiyonudur. Her derleme bir derleme bildirimi içerir.  
   
 ## <a name="type-libraries-and-assembly-manifests"></a>Tür kitaplıkları ve derleme bildirimleri  
@@ -53,12 +53,12 @@ Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere s
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [COM birlikte çalışma](index.md)
+- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](walkthrough-implementing-inheritance-with-com-objects.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)
-- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](troubleshooting-interoperability.md)
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
-- [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Birlikte Çalışma için Hazırlama](../../../framework/interop/interop-marshaling.md)
+- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Birlikte Çalışma Hazırlama](../../../framework/interop/interop-marshaling.md)
 - [Kayıtsız COM Birlikte Çalışma](../../../framework/interop/registration-free-com-interop.md)

@@ -1,5 +1,5 @@
 ---
-title: Deyim yöntem-çok satırlı lambda içinde geçerli değil
+title: Deyim yöntem/çok satırlı lambda içinde geçerli değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30024
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 9e6c8ddd7851aee6d9fa1928a6854f7337b867b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3c43d640259d5e1af545e2610088aab5d70453d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593220"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396252"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Deyim yöntem/çok satırlı lambda içinde geçerli değil
-Deyimi içinde geçerli değil. bir `Sub`, `Function`, özellik `Get`, veya özellik `Set` yordamı. Bazı deyimleri modül veya sınıfının düzeyinde yerleştirilebilir. Diğerleri gibi `Option Strict`, ad alanı düzeyinde olmalıdır ve diğer tüm bildirimler koyun.  
+İfade `Sub` ,, `Function` özellik `Get` veya özellik yordamı içinde geçerli değil `Set` . Bazı deyimler modüle veya sınıf düzeyine yerleştirilebilir. Diğer bir deyişle, gibi `Option Strict` diğer tüm bildirimlerin önünde olmalıdır.  
   
- **Hata Kimliği:** BC30024  
+ **Hata kimliği:** BC30024  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Deyim yordamdan kaldırın.  
+- İfadeyi yordamdan kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set Deyimi](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
+- [Get Deyimi](../statements/get-statement.md)
+- [Set deyimleri](../statements/set-statement.md)

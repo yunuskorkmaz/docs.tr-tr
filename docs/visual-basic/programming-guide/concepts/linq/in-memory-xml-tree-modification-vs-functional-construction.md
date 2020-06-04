@@ -1,18 +1,18 @@
 ---
-title: Bellek içi XML ağacı değişikliği ile Işlevsel oluşturma (LINQ to XML)
+title: Bellek içi XML Ağacı Değişikliği ve İşlevsel Oluşturma (LINQ to XML) Karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 15c38cdf7ce860b34d8d3e9d59b8f06d80f6edd8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: efdbf51efa0f502ac9991d520defe45bb95678b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344445"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397615"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Bellek içi XML ağacı değişikliği ile Işlevsel oluşturma (LINQ to XML) (Visual Basic)
-Bir XML ağacını yerinde değiştirmek, bir XML belgesinin şeklini değiştirmenin geleneksel bir yaklaşımdır. Tipik bir uygulama, bir belgeyi DOM veya [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]gibi bir veri deposuna yükler; düğüm eklemek, düğümleri silmek ya da düğümlerin içeriğini değiştirmek için bir programlama arabirimi kullanır; ardından, XML dosyasını bir dosyaya kaydeder veya ağ üzerinden iletir.  
+Bir XML ağacını yerinde değiştirmek, bir XML belgesinin şeklini değiştirmenin geleneksel bir yaklaşımdır. Tipik bir uygulama, bir belgeyi DOM veya gibi bir veri deposuna yükler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ; düğüm eklemek, düğümleri silmek ya da düğümlerin içeriğini değiştirmek için bir programlama arabirimi kullanır ve ardından XML 'i bir dosyaya kaydeder veya bir ağ üzerinden iletir.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], çok sayıda senaryoda faydalı olan başka bir yaklaşım sağlar *: işlevsel oluşturma*. İşlevsel oluşturma, verileri bir veri deposunun ayrıntılı olarak değiştirilmesi yerine dönüşümde bir sorun olarak değiştirir. Verilerin bir temsilini alıp bir formdan diğerine verimli bir şekilde dönüştürebiliyorsanız, sonuç bir veri deposu alıp başka bir şekil almak için bir şekilde işleneceğinden aynı olur. İşlevsel oluşturma yaklaşımına bir anahtar, sorguların sonuçlarını <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> oluşturuculara geçirmektir.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]birçok senaryoda faydalı olan başka bir yaklaşımı sağlar *: işlevsel oluşturma*. İşlevsel oluşturma, verileri bir veri deposunun ayrıntılı olarak değiştirilmesi yerine dönüşümde bir sorun olarak değiştirir. Verilerin bir temsilini alıp bir formdan diğerine verimli bir şekilde dönüştürebiliyorsanız, sonuç bir veri deposu alıp başka bir şekil almak için bir şekilde işleneceğinden aynı olur. İşlevsel oluşturma yaklaşımına bir anahtar, sorguların sonuçlarını <xref:System.Xml.Linq.XDocument> ve oluşturuculara geçirmektir <xref:System.Xml.Linq.XElement> .  
   
  Çoğu durumda, dönüştürme kodunu veri mağazasının yönetilmesi için gereken sürede yazabilir ve bu kodun daha sağlam ve bakımını daha kolay olur. Bu durumlarda, dönüştürme yaklaşımının daha fazla işlem gücü sürmesine rağmen, verileri değiştirmek için daha etkili bir yoldur. Bir geliştirici işlevsel yaklaşımı kullanıyorsa, sonuçta elde edilen kodun çoğu anlaşılması daha kolay olur. Ağacın her bölümünü değiştiren kodu bulmak kolaydır.  
   
@@ -66,7 +66,7 @@ Dim newTree As XElement = _
 Console.WriteLine(newTree)  
 ```  
   
- Bu örnek, ilk örnekle aynı XML 'e çıktı verir. Bununla birlikte, yeni XML 'nin ortaya çıkan yapısını işlevsel yaklaşımda görbildiğinize dikkat edin. `Root` öğesinin oluşturulmasını, kaynak ağacından `Child1` öğesini çeken kodu ve kaynak ağaç içindeki öznitelikleri yeni ağaç içindeki öğelere dönüştüren kodu görebilirsiniz.  
+ Bu örnek, ilk örnekle aynı XML 'e çıktı verir. Bununla birlikte, yeni XML 'nin ortaya çıkan yapısını işlevsel yaklaşımda görbildiğinize dikkat edin. `Root`Öğesinin oluşturulmasını, `Child1` kaynak ağacından öğeyi çeken kodu ve kaynak ağaç içindeki öznitelikleri yeni ağaç içindeki öğelere dönüştüren kodu görebilirsiniz.  
   
  Bu örnekte işlevsel örnek, ilk örnekte daha kısa değildir ve gerçekten daha basit değildir. Ancak, bir XML ağacına yaptığınız birçok değişiklik varsa, işlevsel olmayan yaklaşım oldukça karmaşık ve biraz daha kolay hale gelir. Buna karşılık, işlevsel yaklaşımı kullanırken, istenen içeriği çekmek için istenen XML 'yi, uygun şekilde ekleme sorgularını ve ifadeleri yazmanız yeterlidir. İşlevsel yaklaşım, bakımı daha kolay olan kodu verir.  
   
@@ -76,4 +76,4 @@ Console.WriteLine(newTree)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](modifying-xml-trees-linq-to-xml.md)

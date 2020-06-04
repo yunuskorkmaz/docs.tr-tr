@@ -2,27 +2,27 @@
 title: 'Nasıl yapılır: Birden Fazla Kaynaktan Nesne Koleksiyonları Doldurma (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346972"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396525"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Nasıl yapılır: birden çok kaynaktan nesne koleksiyonları doldurma (LINQ) (Visual Basic)
 
 Bu örnekte, farklı kaynaklardaki verilerin yeni türler dizisine nasıl birleştiriyapılacağı gösterilmektedir.
 
 > [!NOTE]
-> Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin. Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir. Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır. Bir veritabanındaki verileri bellek içi verilere katmak için, önce veritabanı sorgusunda `ToList` veya `ToArray` çağırın ve ardından döndürülen koleksiyonda birleştirmeyi gerçekleştirin.
+> Dosya sistemindeki bellek içi verileri veya verileri, hala veritabanında bulunan verilerle birleştirmeyi denemeyin. Bu tür etki alanları arası birleştirmeler, birleştirme işlemlerinin veritabanı sorguları ve diğer kaynak türleri için tanımlanabileceğinden farklı yollarla tanımsız sonuçlar verebilir. Ayrıca, veritabanındaki veri miktarı yeterince büyükse, bu tür bir işlemin bellek dışı bir özel duruma neden olabileceği bir risk vardır. Verileri bir veritabanından bellek içi verilere katmak için, önce veritabanı sorgusuna çağrı yapın `ToList` `ToArray` ve ardından döndürülen koleksiyonda JOIN işlemini gerçekleştirin.
 
 ## <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için
 
-- Names. csv ve puanlarını. csv dosyalarını, [benzer dosyalardan (LINQ) (Visual Basic) nasıl yapılır: Içerik ekleme](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)bölümünde açıklandığı gibi proje klasörünüze kopyalayın.
+- Names. csv ve puanlarını. csv dosyalarını, [benzer dosyalardan (LINQ) (Visual Basic) nasıl yapılır: Içerik ekleme](how-to-join-content-from-dissimilar-files-linq.md)bölümünde açıklandığı gibi proje klasörünüze kopyalayın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek,. csv biçiminde elektronik tablo verilerinin benzetimini yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir tür `Student` nasıl kullanacağınızı gösterir. İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder. KIMLIK yabancı anahtar olarak kullanılır.
+Aşağıdaki örnek, `Student` . csv biçiminde elektronik tablo verilerinin benzetimini yapan iki bellekteki iki bellek koleksiyonundan birleştirilmiş verileri depolamak için adlandırılmış bir türün nasıl kullanılacağını gösterir. İlk dize koleksiyonu, öğrenci adlarını ve kimliklerini temsil eder ve ikinci koleksiyon öğrenci KIMLIĞINI (ilk sütunda) ve dört sınav puanlarını temsil eder. KIMLIK yabancı anahtar olarak kullanılır.
 
 ```vb
 Imports System.Collections.Generic
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-[Select yan](../../../../visual-basic/language-reference/queries/select-clause.md) tümcesinde bir nesne Başlatıcısı, her yeni `Student` nesnesini iki kaynaktaki verileri kullanarak oluşturmak için kullanılır.
+[Select yan](../../../language-reference/queries/select-clause.md) tümcesinde bir nesne Başlatıcısı, `Student` iki kaynaktaki verileri kullanarak her yeni nesnenin örneğini oluşturmak için kullanılır.
 
 Bir sorgunun sonuçlarını depolamanız gerekmiyorsa, anonim türler adlandırılmış türlerden daha kullanışlı olabilir. Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin dışına geçirirseniz adlandırılmış türler gereklidir. Aşağıdaki örnek, önceki örnekle aynı görevi gerçekleştirir, ancak adlandırılmış türler yerine anonim türler kullanır:
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ ve dizeler (Visual Basic)](linq-and-strings.md)

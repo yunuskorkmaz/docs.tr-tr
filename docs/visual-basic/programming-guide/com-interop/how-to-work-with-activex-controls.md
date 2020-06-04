@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: c41d30582b8c2d3f7fa63c7b75046ab3e65fa390
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9590088272a630b50d953d1832200bacf3fc13fb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353221"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396823"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
 ActiveX denetimleri, başka birinin programlandığı paketlenmiş işlevselliği yeniden kullanmak üzere bir Web sayfasına veya başka bir uygulamaya ekleyebileceğiniz COM bileşenleri veya nesneleri olabilir. Visual Basic 6,0 ve önceki sürümlerde geliştirilen ActiveX denetimlerini kullanarak Visual Studio 'nun **araç kutusuna** özellikler ekleyebilirsiniz.  
@@ -32,8 +32,8 @@ ActiveX denetimleri, başka birinin programlandığı paketlenmiş işlevselliğ
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
+- [COM birlikte çalışma](index.md)
 - [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp. exe (Windows Forms ActiveX denetim Içeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
-- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](troubleshooting-interoperability.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347433"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403258"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme (Visual Basic)
 
@@ -34,10 +34,10 @@ Kodunuzu yazarken, kod düzenleyicisinde yatay kaydırmayı gerektiren uzun deyi
 
 ## <a name="to-break-a-single-statement-into-multiple-lines"></a>Tek bir ifadeyi birden çok satıra bölmek için
 
-Çizginin kesilmesini istediğiniz noktada alt çizgi (`_`) olan satır devamlılık karakterini kullanın. Alt çizgi hemen öncesinde bir boşluk ve hemen arkasından bir satır Sonlandırıcı (satır sonu) ya da (sürüm 16,0 ' den başlayarak) bir yorum ve ardından bir satır başı gelmelidir.
+Çizginin kesilmesini istediğiniz noktada alt çizgi () olan satır devamlılık karakterini kullanın `_` . Alt çizgi hemen öncesinde bir boşluk ve hemen arkasından bir satır Sonlandırıcı (satır sonu) ya da (sürüm 16,0 ' den başlayarak) bir yorum ve ardından bir satır başı gelmelidir.
 
   > [!NOTE]
-  > Bazı durumlarda, satır devamlılık karakterini atlarsanız Visual Basic derleyici bir sonraki kod satırında ifadeye dolaylı olarak devam eder. Satır devamlılık karakterini yok saybileceğiniz sözdizimi öğelerinin listesi için, bkz. [deyimlerde](../../../visual-basic/programming-guide/language-features/statements.md)"örtük satır devamlılığı".
+  > Bazı durumlarda, satır devamlılık karakterini atlarsanız Visual Basic derleyici bir sonraki kod satırında ifadeye dolaylı olarak devam eder. Satır devamlılık karakterini yok saybileceğiniz sözdizimi öğelerinin listesi için, bkz. [deyimlerde](../language-features/statements.md)"örtük satır devamlılığı".
 
   Aşağıdaki örnekte,, son satır hariç tüm satır devamlılık karakterleriyle dört satıra bölünmüştür.
 
@@ -49,17 +49,17 @@ Kodunuzu yazarken, kod düzenleyicisinde yatay kaydırmayı gerektiren uzun deyi
 
   Satır devamlılık karakterini nerede kullanabileceğiniz gibi bazı sınırlamalar vardır; Örneğin, bunu bir bağımsız değişken adının ortasında kullanamazsınız. Bir bağımsız değişken listesini satır devamlılık karakteriyle kesebilirsiniz, ancak bağımsız değişkenlerin bağımsız adları değişmeden kalmalıdır.
 
-  Bir satır devamlılık karakteri kullanarak açıklamaya devam edemiyorum. Derleyici, bir yorum içindeki karakterleri özel anlam açısından inceetmez. Birden çok satırlık bir açıklama için, her satırda açıklama sembolünü (`'`) tekrarlayın.
+  Bir satır devamlılık karakteri kullanarak açıklamaya devam edemiyorum. Derleyici, bir yorum içindeki karakterleri özel anlam açısından inceetmez. Birden çok satırlık bir açıklama için, her satırda açıklama sembolünü ( `'` ) yineleyin.
 
  Her deyimin ayrı bir satıra yerleştirilmesi önerilen yöntem olduğundan, Visual Basic aynı satıra birden çok deyim yerleştirseniz de sağlar.
 
 ## <a name="to-place-multiple-statements-on-the-same-line"></a>Aynı satıra birden çok deyim yerleştirmek için
 
-Deyimlerini aşağıdaki örnekte olduğu gibi iki nokta üst üste (`:`) ayırın:
+Deyimlerini aşağıdaki örnekte olduğu gibi iki nokta üst üste ( `:` ) ayırın:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Program yapısı ve kod kuralları](program-structure-and-code-conventions.md)
+- [Deyimler](../language-features/statements.md)

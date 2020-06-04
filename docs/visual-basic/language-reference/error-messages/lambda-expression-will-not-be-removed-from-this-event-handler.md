@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 52107589c6bbebbd34ecbb090845f4031612c276
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578930"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397382"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda ifadesi bu olay işleyiciden kaldırılmayacak
 
 Lambda ifadesi bu olay işleyicisinden kaldırılmayacak. Lambda ifadesini bir değişkene atayın ve olayı eklemek ve kaldırmak için değişkeni kullanın.
 
-Lambda ifadeleri olay işleyicileriyle kullanıldığında, bekleeceğiniz davranışı göremeyebilirsiniz. Derleyici, aynı olsalar bile her bir lambda ifadesi tanımı için yeni bir yöntem oluşturur. Bu nedenle, aşağıdaki kod `False` görüntüler.
+Lambda ifadeleri olay işleyicileriyle kullanıldığında, bekleeceğiniz davranışı göremeyebilirsiniz. Derleyici, aynı olsalar bile her bir lambda ifadesi tanımı için yeni bir yöntem oluşturur. Bu nedenle, aşağıdaki kod görüntülenir `False` .
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-Lambda ifadeleri olay işleyicileriyle kullanıldığında, bu beklenmeyen sonuçlara neden olabilir. Aşağıdaki örnekte, `AddHandler` tarafından eklenen lambda ifadesi `RemoveHandler` deyimi tarafından kaldırılmaz.
+Lambda ifadeleri olay işleyicileriyle kullanıldığında, bu beklenmeyen sonuçlara neden olabilir. Aşağıdaki örnekte, tarafından eklenen lambda ifadesi `AddHandler` deyimi tarafından kaldırılmaz `RemoveHandler` .
 
 ```vb
 Module Module1
@@ -61,7 +61,7 @@ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarılar�
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-Uyarıyı önlemek ve lambda ifadesini kaldırmak için lambda ifadesini bir değişkene atayın ve aşağıdaki örnekte gösterildiği gibi `AddHandler` ve `RemoveHandler` deyimleriyle değişkeni kullanın.
+Uyarıyı önlemek ve lambda ifadesini kaldırmak için lambda ifadesini bir değişkene atayın ve `AddHandler` `RemoveHandler` Aşağıdaki örnekte gösterildiği gibi değişkeni hem hem de deyimlerde kullanın.
 
 ```vb
 Module Module1
@@ -87,6 +87,6 @@ End Module
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Lambda Ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [Gevşek Temsilci Dönüştürme](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Olaylar](../../programming-guide/language-features/events/index.md)

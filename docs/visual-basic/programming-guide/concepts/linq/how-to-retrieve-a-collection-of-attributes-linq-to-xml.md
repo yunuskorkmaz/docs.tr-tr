@@ -1,16 +1,16 @@
 ---
-title: 'Nasıl yapılır: özniteliklerin koleksiyonunu alma (LINQ to XML)'
+title: 'Nasıl yapılır: Öznitelik Koleksiyonu Alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
-ms.openlocfilehash: ff260660057c3b75f4cc92c37c67fca0a0b7f192
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: be7abac736f9a70ae3f0c9efe2074cfe79821ddb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347570"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397888"
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Nasıl yapılır: özniteliklerin koleksiyonunu alma (LINQ to XML) (Visual Basic)
-Bu konuda <xref:System.Xml.Linq.XElement.Attributes%2A> yöntemi tanıtılmaktadır. Bu yöntem bir öğenin özniteliklerini alır.  
+Bu konuda yöntemi tanıtılmaktadır <xref:System.Xml.Linq.XElement.Attributes%2A> . Bu yöntem bir öğenin özniteliklerini alır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir öğenin özniteliklerinin toplanması arasında nasıl yineleme yapılacağını gösterir.  
@@ -36,4 +36,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](linq-to-xml-axes.md)
