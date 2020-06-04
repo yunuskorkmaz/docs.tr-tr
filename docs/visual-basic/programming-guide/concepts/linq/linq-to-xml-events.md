@@ -2,39 +2,39 @@
 title: LINQ to XML Olayları
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d00f6f1b2a14ac73c1bcd4a1f74b9714ca304da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351933"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368822"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML olayları (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olaylar, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]olaylar, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
   
- Herhangi bir <xref:System.Xml.Linq.XObject>örneğine olay ekleyebilirsiniz. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve alt öğelerinden herhangi birine değişiklikler için olaylar alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
+ Herhangi bir örneğine olay ekleyebilirsiniz <xref:System.Xml.Linq.XObject> . Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve alt öğelerinden herhangi birine değişiklikler için olaylar alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] olayları örnekleri için bkz. <xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed>.  
+ Olay örnekleri için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bkz <xref:System.Xml.Linq.XObject.Changing> <xref:System.Xml.Linq.XObject.Changed> . ve.  
   
 ## <a name="types-and-events"></a>Türler ve olaylar  
  Olaylarla çalışırken aşağıdaki türleri kullanın:  
   
-|Tür|Açıklama|  
+|Tür|Description|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Bir <xref:System.Xml.Linq.XObject>için bir olay harekete çıktığında olay türünü belirtir.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> ve <xref:System.Xml.Linq.XObject.Changed> olayları için veri sağlar.|  
+|<xref:System.Xml.Linq.XObjectChange>|Bir olay oluşturulduğunda olay türünü belirtir <xref:System.Xml.Linq.XObject> .|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Ve olayları için veri <xref:System.Xml.Linq.XObject.Changing> sağlar <xref:System.Xml.Linq.XObject.Changed> .|  
   
  Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Bir <xref:System.Xml.Linq.XObject> değiştirildiğinde veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Bir değiştiğinde <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, karmaşık öğe `Items`altındaki tüm alt öğelerin toplamını korumak için olayları kullanır.  
+### <a name="description"></a>Description  
+ Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, karmaşık öğe altındaki tüm alt öğelerinin toplamını korumak için olayları kullanır `Items` .  
   
 ### <a name="code"></a>Kod  
   
@@ -92,7 +92,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
  Bu kod aşağıdaki çıktıyı üretir:  
   
 ```console  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](advanced-linq-to-xml-programming.md)

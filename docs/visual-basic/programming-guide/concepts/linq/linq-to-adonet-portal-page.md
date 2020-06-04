@@ -2,12 +2,12 @@
 title: ADO.NET'e LINQ (Portal Sayfası)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: d5d7ba8230ae9737d4938c1c8c55f7cd4330b117
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8c90783b56d6393ce3ac71945ed8ebffc8005ee1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636503"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84369186"
 ---
 # <a name="linq-to-adonet-portal-page"></a>ADO.NET'e LINQ (Portal Sayfası)
 LINQ to ADO.NET, dil ile tümleşik sorgu (LINQ) programlama modelini kullanarak ADO.NET içinde herhangi bir sıralanabilir nesne üzerinde sorgulama yapmanızı sağlar.  
@@ -15,17 +15,17 @@ LINQ to ADO.NET, dil ile tümleşik sorgu (LINQ) programlama modelini kullanarak
 > [!NOTE]
 > LINQ to ADO.NET belge .NET Framework SDK: [LINQ ve ADO.net](../../../../framework/data/adonet/linq-and-ado-net.md)' nin ADO.net bölümünde bulunur.
   
- Üç ayrı ADO.NET dil ile tümleşik sorgu (LINQ) teknolojisi vardır: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ve LINQ to Entities. LINQ to DataSet, <xref:System.Data.DataSet>daha zengin, iyileştirilmiş sorgulama sağlar [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server veritabanı şemalarını doğrudan sorgulayabilir ve LINQ to Entities varlık veri modeli sorgulamanızı sağlar.  
+ Üç ayrı ADO.NET dil ile tümleşik sorgu (LINQ) teknolojisi vardır: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ve LINQ to Entities. LINQ to DataSet üzerinde daha zengin, iyileştirilmiş sorgulama sağlar <xref:System.Data.DataSet> , [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server veritabanı şemalarını doğrudan sorgulayabilir ve LINQ to Entities varlık veri modeli sorgulamanızı sağlar.  
   
 ## <a name="linq-to-dataset"></a>LINQ - DataSet  
- <xref:System.Data.DataSet>, ADO.NET ' deki en yaygın olarak kullanılan bileşenlerden biridir ve ADO.NET 'in üzerinde oluşturulduğu, bağlantısı kesilen programlama modelinin anahtar öğesidir. Ancak, bu da <xref:System.Data.DataSet>, sınırlı sayıda sorgu özelliğine sahip olmasına rağmen.  
+ , <xref:System.Data.DataSet> ADO.net ' deki en yaygın olarak kullanılan bileşenlerden biridir ve ADO.net 'in üzerinde oluşturulduğu, bağlantısı kesilen programlama modelinin temel öğesidir. Ancak, bu kadar belirgin olsa da, <xref:System.Data.DataSet> sınırlı sorgu yeteneklerine sahiptir.  
   
- LINQ to DataSet, diğer birçok veri kaynağı için kullanılabilen aynı sorgu işlevini kullanarak <xref:System.Data.DataSet> daha zengin sorgu özellikleri oluşturmanızı sağlar.  
+ LINQ to DataSet, <xref:System.Data.DataSet> diğer birçok veri kaynağı için kullanılabilen aynı sorgu işlevini kullanarak ' ye daha zengin sorgu özellikleri oluşturmanızı sağlar.  
   
- Daha fazla bilgi için [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
+ Daha fazla bilgi için bkz. [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
   
-## <a name="linq-to-sql"></a>LINQ - SQL  
- [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ilişkisel verileri nesne olarak yönetmeye yönelik bir çalışma zamanı altyapısı sağlar. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], bir ilişkisel veritabanının veri modeli, geliştiricinin programlama dilinde ifade edilen bir nesne modeliyle eşlenir. Uygulamayı yürüttüğünüzde [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], nesne modelindeki dil ile tümleşik sorguları SQL 'e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], bunları işleyebileceğiniz nesnelere geri çevirir.  
+## <a name="linq-to-sql"></a>LINQ to SQL  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]ilişkisel verileri nesne olarak yönetmeye yönelik bir çalışma zamanı altyapısı sağlar. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]' De, bir ilişkisel veritabanının veri modeli, geliştiricinin programlama dilinde ifade edilen bir nesne modeliyle eşleştirilir. Uygulamayı yürüttüğünüzde, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] nesne modelindeki dil ile tümleşik SORGULARı SQL 'e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bunları işleyebileceğiniz nesnelere geri çevirir.  
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], veritabanında saklı yordamlar ve Kullanıcı tanımlı işlevler ve nesne modelinde devralma için destek içerir.  
   
@@ -37,4 +37,4 @@ LINQ to ADO.NET, dil ile tümleşik sorgu (LINQ) programlama modelini kullanarak
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ ve ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
-- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](index.md)

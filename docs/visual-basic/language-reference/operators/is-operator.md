@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 52fbb39ab0a36c8b947b78f464fad26be05ce204
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3cc0ae5f04358fbe6b2aabc50498f39ca7225164
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349543"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84370810"
 ---
 # <a name="is-operator-visual-basic"></a>Is İşleci (Visual Basic)
 İki nesne başvuru değişkenini karşılaştırır.  
@@ -27,24 +27,24 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Herhangi bir `Boolean` değeri.  
+ Gereklidir. Herhangi bir `Boolean` değer.  
   
  `object1`  
- Gerekli. Herhangi bir `Object` adı.  
+ Gereklidir. Herhangi bir `Object` ad.  
   
  `object2`  
- Gerekli. Herhangi bir `Object` adı.  
+ Gereklidir. Herhangi bir `Object` ad.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Is` işleci, iki nesne başvurusunun aynı nesneye başvurmasını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1` ve `object2` her ikisi de tam aynı nesne örneğine başvurur, `result` `True`; Aksi takdirde, `result` `False`.  
+ `Is`İşleci iki nesne başvurusunun aynı nesneye başvurmasını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1`Ve `object2` her ikisi de tam aynı nesne örneğine başvurur, ise, olur `result` `True` `result` `False` .  
   
- `Is` Ayrıca bir nesne değişkeninin bir veri türüyle uyumlu olup olmadığını test eden bir `TypeOf`...`Is` ifadesi oluşturmak için `TypeOf` anahtar sözcüğüyle birlikte kullanılabilir.  
+ `Is``TypeOf` `TypeOf` `Is` , bir nesne değişkeninin veri türüyle uyumlu olup olmadığını test eden bir... ifadesi oluşturmak için anahtar sözcüğü ile de kullanılabilir.  
   
 > [!NOTE]
-> `Is` anahtar sözcüğü, Select... içinde de kullanılır [. Case bildirisi](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> `Is`Anahtar sözcüğü, Select... içinde de kullanılır [. Case bildirisi](../statements/select-case-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, nesne başvuruları çiftlerini karşılaştırmak için `Is` işlecini kullanır. Sonuçlar, iki nesnenin aynı olup olmadığını temsil eden `Boolean` bir değere atanır.  
+ Aşağıdaki örnek, `Is` nesne başvuruları çiftlerini karşılaştırmak için işlecini kullanır. Sonuçlar, `Boolean` iki nesnenin aynı olup olmadığını temsil eden bir değere atanır.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
@@ -52,9 +52,9 @@ result = object1 Is object2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TypeOf İşleci](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [TypeOf İşleci](typeof-operator.md)
+- [IsNot İşleci](isnot-operator.md)
+- [Visual Basic'de Karşılaştırma İşleçleri](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic'de İşleç Önceliği](operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](operators-listed-by-functionality.md)
+- [İşleçler ve Ifadeler](../../programming-guide/language-features/operators-and-expressions/index.md)
