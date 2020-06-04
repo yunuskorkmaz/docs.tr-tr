@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a60e44ce92b1805b0a5a6f1d4ce397c295eef202
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935284"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409887"
 ---
 # <a name="bad-dll-calling-convention"></a>Hatalı DLL çağrı standardı
-Bir dinamik bağlantı kitaplığı (DLL) geçirilen bağımsız değişkenler bu yordamı tarafından beklenen tam olarak eşleşmelidir. Çağırma kuralları sayısı, türü ve bağımsız değişkenlerin sırası ile ilgilidir. Programınızı türü yanlış veya bağımsız değişken sayısı geçirilen bir DLL içinde bir yordam çağırma.  
+Dinamik bağlantı kitaplığına (DLL) geçirilen bağımsız değişkenler, yordam tarafından beklenen olanlarla tam olarak eşleşmelidir. Çağırma kuralları, bağımsız değişkenlerin sayısı, türü ve sırası ile ilgilenir. Programınız yanlış tür veya bağımsız değişken sayısı geçirmekte olan bir DLL 'deki bir yordamı çağırıyor olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Aradığınız yordamı bildiriminde belirtilen değerlerle tüm bağımsız değişken türlerini kabul emin olun.  
+1. Tüm bağımsız değişken türlerinin, aradığınız yordamın bildiriminde belirtilenlerle uyumlu olduğundan emin olun.  
   
-2. Aradığınız yordamı bildiriminde belirtilen bağımsız değişkenleri aynı sayıda geçirdiğinizden emin olun.  
+2. Aradığınız yordamın bildiriminde belirtilen sayıda bağımsız değişkeni geçirdiğinizden emin olun.  
   
-3. DLL yordamı değere göre bağımsız değişken bekler, emin `ByVal` yordam bildirimi bu bağımsız değişken belirtilmiş.  
+3. DLL yordamı değere göre bağımsız değişkenler bekliyorsa, `ByVal` Bu yordamın bildiriminde bu bağımsız değişkenler için belirtildiğinden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [Call Deyimi](../../../visual-basic/language-reference/statements/call-statement.md)
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Hata Türleri](../../programming-guide/language-features/error-types.md)
+- [Call Deyimi](../statements/call-statement.md)
+- [Declare Deyimi](../statements/declare-statement.md)

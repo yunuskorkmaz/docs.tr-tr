@@ -7,41 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5a4188fedf9685afdd1cde4c1de93a0b43b919
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803889"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409795"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' değiştiricisi açık temsilci türleri olmadan bildirilen olaylarda geçerli değil
-Bir özel dışı olay aksine bir `Custom Event` bildirimi gerektirir bir `As` olayı için temsilci türünü açıkça belirten bir olay adından yan tümcesi.  
+Özel olmayan bir olaydan farklı olarak, `Custom Event` bildirim, `As` olayın temsilci türünü açıkça belirten olay adından sonra bir yan tümce gerektirir.  
   
- Özel olmayan olaylar olabilir ile tanımlanmış bir `As` yan tümcesi ve açık bir temsilci türü veya bir parametre listesinde hemen aşağıdaki olay adı.  
+ Özel olmayan olaylar `As` , bir yan tümce ve açık bir temsilci türü ile ya da olay adından hemen sonra gelen bir parametre listesi ile tanımlanabilir.  
   
- **Hata Kimliği:** BC31122  
+ **Hata kimliği:** BC31122  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Özel olay olarak aynı parametre listesiyle bir temsilci tanımlar.  
+1. Özel olayla aynı parametre listesine sahip bir temsilci tanımlayın.  
   
-     Örneğin, varsa `Custom Event` tarafından tanımlanan `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, karşılık gelen temsilci şu şekilde olacaktır.  
+     Örneğin, `Custom Event` tarafından tanımlanmışsa, `Custom Event Test(ByVal sender As Object, ByVal i As Integer)` ilgili temsilci aşağıdaki gibi olacaktır.  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2. Özel olay ile parametre listesini değiştirin bir `As` temsilci türünü belirleme yan tümcesi.  
+2. Özel olayın parametre listesini, `As` temsilci türünü belirten bir yan tümce ile değiştirin.  
   
-     Örneğiyle devam etmesini `Custom Event` bildirimi yazılan gibi.  
+     Örnekle devam edildiğinde, `Custom Event` bildirim aşağıdaki şekilde yeniden yazılır.  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek bildirir bir `Custom Event` ve gerekli belirtir `As` yan tümcesi bir temsilci türüne sahip.  
+ Bu örnek bir bildirir `Custom Event` ve bir `As` temsilci türü ile gerekli yan tümceyi belirtir.  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event Deyimi](../statements/event-statement.md)
+- [Delegate Deyimi](../statements/delegate-statement.md)
+- [Olaylar](../../programming-guide/language-features/events/index.md)

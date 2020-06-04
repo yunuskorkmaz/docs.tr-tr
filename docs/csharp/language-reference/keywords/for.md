@@ -1,5 +1,5 @@
 ---
-title: deyim için - C# referans
+title: for deyimleri-C# başvurusu
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,55 +7,55 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738802"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401907"
 ---
-# <a name="for-c-reference"></a>for (C# referansı)
+# <a name="for-c-reference"></a>for (C# Başvurusu)
 
-`for` İfade bir deyim veya ifade bloğu yürütürken, belirli bir `true`Boolean ifadesi .'ye göre değerlendirilir.
+`for`Deyimi, belirtilen bir Boole ifadesi olarak değerlendirilen bir deyimi veya bir deyim bloğunu yürütür `true` .
 
-İfade bloğu içindeki herhangi bir noktada, [kesme](break.md) deyimini kullanarak döngüden çıkabilir veya continue deyimini kullanarak döngüdeki bir sonraki yinelemeye adım atabilirsiniz. [continue](continue.md) `for` Ayrıca [goto](goto.md) `for` tarafından bir döngü çıkmak , [return](return.md), veya ifadeler [atmak.](throw.md)
+Deyimdeki herhangi bir noktada `for` , [Break](break.md) ifadesini kullanarak ya da [Continue](continue.md) ifadesini kullanarak döngünün bir sonraki yinelemesine adımla döngüyü kesebilirsiniz. Ayrıca `for` [goto](goto.md), [Return](return.md)veya [throw](throw.md) deyimleriyle bir döngüden çıkabilirsiniz.
 
-## <a name="structure-of-the-for-statement"></a>İfadenin `for` yapısı
+## <a name="structure-of-the-for-statement"></a>`for`Deyimin yapısı
 
-Deyim, *başharf*, *durum*ve *yineleyici* bölümleri tanımlar: `for`
+`for`İfade *Başlatıcı*, *koşul*ve *Yineleyici* bölümlerini tanımlar:
 
 ```csharp
 for (initializer; condition; iterator)
     body
 ```
 
-Her üç bölüm isteğe bağlıdır. Döngügövdesi bir deyim veya ifadeler bloğudur.
+Üç bölüm de isteğe bağlıdır. Döngünün gövdesi bir deyim ya da deyimler bloğu.
 
-Aşağıdaki örnek, `for` tanımlanan tüm bölümlerle ifadeyi gösterir:
+Aşağıdaki örnek, `for` tanımlı tüm bölümleri içeren ifadesini gösterir:
 
-[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+[!code-csharp-interactive[for loop example](snippets/IterationKeywordsExamples.cs#5)]
 
-### <a name="the-initializer-section"></a>*Baş harf* bölümü
+### <a name="the-initializer-section"></a>*Başlatıcı* bölümü
 
-*Başharf* bölümündeki ifadeler döngüye girmeden önce yalnızca bir kez yürütülür. *Baş harfi* alan bölüm aşağıdakilerden biridir:
+*Başlatıcı* bölümündeki deyimler, döngüyü girmeden önce yalnızca bir kez yürütülür. *Başlatıcı* bölümü aşağıdakilerden biri olabilir:
 
-- Döngü dışından erişilmeden yerel bir döngü değişkeninin bildirimi ve başlatılması.
+- Döngü dışından erişilemeyen bir yerel döngü değişkeninin bildirimi ve başlatılması.
 
-- Aşağıdaki listeden virgülle ayrılmış sıfır veya daha fazla ifade ifadeleri:
+- Aşağıdaki listeden, virgülle ayrılmış olarak sıfır veya daha fazla deyim ifadesi:
 
-  - [atama](../operators/assignment-operator.md) deyimi
+  - [atama](../operators/assignment-operator.md) ekstresi
 
   - bir yöntemin çağrılması
 
-  - önek veya postfix [artış](../operators/arithmetic-operators.md#increment-operator-) ifade, `++i` gibi veya`i++`
+  - veya gibi ön ek veya sonek [artışı](../operators/arithmetic-operators.md#increment-operator-) ifadesi `++i``i++`
 
-  - önek veya postfix [decrement](../operators/arithmetic-operators.md#decrement-operator---) `--i` ifadesi gibi veya`i--`
+  - veya gibi sonek [azaltma](../operators/arithmetic-operators.md#decrement-operator---) ifadesi `--i``i--`
 
-  - [yeni](../operators/new-operator.md) işleç kullanarak bir nesnenin oluşturulması
+  - [New](../operators/new-operator.md) işlecini kullanarak bir nesne oluşturma
 
-  - ifade [bekliyor](../operators/await.md)
+  - [await](../operators/await.md) ifadesi
 
-Yukarıdaki örnekteki *başharf* bölümü yerel döngü değişkenini `i`bildirir ve başharfe bildirir:
+Yukarıdaki örnekteki *Başlatıcı* bölümü, yerel döngü değişkenini bildirir ve başlatır `i` :
 
 ```csharp
 int i = 0
@@ -63,9 +63,9 @@ int i = 0
 
 ### <a name="the-condition-section"></a>*Koşul* bölümü
 
-*Durum* bölümü, varsa, bir boolean ifade olmalıdır. Bu ifade her döngü yinelemesinden önce değerlendirilir. *Koşul* bölümü yoksa veya boolean ifadesi ,bir `true`sonraki döngü yinelemesi yürütülür; aksi takdirde, döngü çıkar.
+*Koşul* bölümü varsa, bir Boolean ifadesi olmalıdır. Bu ifade, her döngü yinelemesinden önce değerlendirilir. *Koşul* bölümü yoksa veya Boole ifadesi olarak değerlendirilirse `true` , sonraki döngü yinelemesi yürütülür; Aksi takdirde, döngüden çıkıldı.
 
-Yukarıdaki örnekteki *koşul* bölümü, döngünün yerel döngü değişkeninin değerine göre sonunun dolup dolmadığını belirler:
+Yukarıdaki örnekteki *koşul* bölümü, döngünün yerel döngü değişkeninin değerine göre sonlandırdığını belirler:
 
 ```csharp
 i < 5
@@ -73,21 +73,21 @@ i < 5
 
 ### <a name="the-iterator-section"></a>*Yineleyici* bölümü
 
-*Yineleme* bölümü, döngü gövdesinin her yinelemeden sonra ne olacağını tanımlar. *Yineleyici* bölümü, virgülle ayrılmış aşağıdaki deyim ifadelerinden sıfır veya daha fazlasını içerir:
+*Yineleyici* bölümü, döngü gövdesinin her yinelemesinden sonra ne olacağını tanımlar. *Yineleyici* bölümü, virgülle ayrılmış olarak aşağıdaki deyim ifadelerinden sıfır veya daha fazlasını içerir:
 
-- [atama](../operators/assignment-operator.md) deyimi
+- [atama](../operators/assignment-operator.md) ekstresi
 
 - bir yöntemin çağrılması
 
-- önek veya postfix [artış](../operators/arithmetic-operators.md#increment-operator-) ifade, `++i` gibi veya`i++`
+- veya gibi ön ek veya sonek [artışı](../operators/arithmetic-operators.md#increment-operator-) ifadesi `++i``i++`
 
-- önek veya postfix [decrement](../operators/arithmetic-operators.md#decrement-operator---) `--i` ifadesi gibi veya`i--`
+- veya gibi sonek [azaltma](../operators/arithmetic-operators.md#decrement-operator---) ifadesi `--i``i--`
 
-- [yeni](../operators/new-operator.md) işleç kullanarak bir nesnenin oluşturulması
+- [New](../operators/new-operator.md) işlecini kullanarak bir nesne oluşturma
 
-- ifade [bekliyor](../operators/await.md)
+- [await](../operators/await.md) ifadesi
 
-Yukarıdaki örnekteki *yineleyici* bölümü yerel döngü değişkenini oluşturur:
+Yukarıdaki örnekteki *Yineleyici* bölümü, yerel döngü değişkenini artırır:
 
 ```csharp
 i++
@@ -95,21 +95,21 @@ i++
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki örnek, deyim `for` bölümlerinin daha az yaygın birkaç kullanımını göstermektedir: *başharf* bölümünde bir dış döngü değişkenine değer atamak, hem *başharf* hem de *yineleyici* bölümlerinde bir yöntem çağırmak ve *yineleyici* bölümündeki iki değişkenin değerlerini değiştirmek. Örnek kodu çalıştırmak için **Çalıştır'ı** seçin. Bundan sonra kodu değiştirebilir ve yeniden çalıştırabilirsiniz.
+Aşağıdaki örnek, ifade bölümlerinin birkaç daha az ortak kullanımını göstermektedir `for` : *Başlatıcı* bölümünde bir dış döngü değişkenine değer atama, *Başlatıcı* ve *Yineleyici* bölümlerinde bir yöntemi çağırma ve *Yineleyici* bölümündeki iki değişkenin değerlerini değiştirme. Örnek kodu çalıştırmak için **Çalıştır** ' ı seçin. Bundan sonra kodu değiştirip yeniden çalıştırabilirsiniz.
 
-[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
+[!code-csharp-interactive[not typical for loop example](snippets/IterationKeywordsExamples.cs#6)]
 
-Aşağıdaki örnekte sonsuz `for` döngü tanımlanır:
+Aşağıdaki örnek sonsuz `for` döngüsünü tanımlar:
 
-[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
+[!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [ekstre](~/_csharplang/spec/statements.md#the-for-statement) bölümüne bakın.
+Daha fazla bilgi için bkz. [C# dil belirtiminin](/dotnet/csharp/language-reference/language-specification/introduction) [for deyimleri](~/_csharplang/spec/statements.md#the-for-statement) bölümü.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [foreach, in](foreach-in.md)

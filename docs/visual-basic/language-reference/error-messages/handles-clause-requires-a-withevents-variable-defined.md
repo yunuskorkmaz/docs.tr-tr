@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582820"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402907"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles tümcesi, içeren türde veya temel türlerinden birinde tanımlanan bir WithEvents değişkeni gerektirir.
 
-@No__t_1 yan tümcesinde bir `WithEvents` değişkeni sağlamadınız. Yordam bildiriminin sonundaki `Handles` anahtar sözcüğü, `WithEvents` anahtar sözcüğü kullanılarak belirtilen bir nesne değişkeni tarafından oluşturulan olayları işlemesini sağlar.
+`WithEvents`Yan tümcesine bir değişken sağlamadınız `Handles` . `Handles`Yordam bildiriminin sonundaki anahtar sözcüğü, anahtar sözcüğü kullanılarak belirtilen bir nesne değişkeni tarafından oluşturulan olayları işlemesini sağlar `WithEvents` .
 
 **Hata kimliği:** BC30506
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-Gerekli `WithEvents` değişkenini sağlayın.
+Gerekli değişkeni sağlayın `WithEvents` .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, <xref:System.Timers.Timer?displayProperty=nameWithType> örneğinin tanımında [WithEvents](../modifiers/withevents.md) anahtar sözcüğünün kullanılmadığından Visual Basic derleyici hatası `BC30506` oluşturur.
+Aşağıdaki örnekte, `BC30506` örnek tanımında [WithEvents](../modifiers/withevents.md) anahtar sözcüğü kullanılmadığından Visual Basic derleyici hatası oluşturuyor <xref:System.Timers.Timer?displayProperty=nameWithType> .
 
 ```vb
 Imports System.Timers
@@ -47,7 +47,7 @@ Module Module1
 End Module
 ```
 
-@No__t_0 değişkeni `WithEvents` anahtar sözcüğüyle tanımlandığından aşağıdaki örnek başarıyla derlenir:
+Aşağıdaki örnek, `_timer1` değişkeni anahtar sözcüğüyle tanımlandığından başarıyla derlenir `WithEvents` :
 
 ```vb
 Imports System.Timers
@@ -71,4 +71,4 @@ End Module
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Handles](../statements/handles-clause.md)

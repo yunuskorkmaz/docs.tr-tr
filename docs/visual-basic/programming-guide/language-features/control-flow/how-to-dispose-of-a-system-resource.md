@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c493051050442597196ba484fb9ce8e99249dbb7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353938"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403504"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)
-Kodunuzun bloğundan çıkılırken sistemin bir kaynağı ortadan kaldırabileceğini garantilemek için `Using` bloğu kullanabilirsiniz. Bu, büyük miktarda bellek tüketen bir sistem kaynağı kullanıyorsanız veya diğer bileşenlerin de kullanılmasını istiyorsanız kullanışlıdır.  
+`Using`Kodunuzun bloğundan çıkış yaparken sistemin bir kaynağı ortadan kaldırabileceğini güvence altına almak için bir bloğu kullanabilirsiniz. Bu, büyük miktarda bellek tüketen bir sistem kaynağı kullanıyorsanız veya diğer bileşenlerin de kullanılmasını istiyorsanız kullanışlıdır.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Kodunuz ile işiniz bittiğinde bir veritabanı bağlantısını atmak için  
   
-1. Kaynak dosyanızın başlangıcında (Bu durumda, <xref:System.Data.SqlClient>) veritabanı bağlantısı için uygun [Imports bildirisini (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) eklediğinizden emin olun.  
+1. Kaynak dosyanızın başlangıcında (Bu durumda,) veritabanı bağlantısı için uygun [Içeri aktarmalar ifadesini (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) eklediğinizden emin olun <xref:System.Data.SqlClient> .  
   
-2. `Using` ve `End Using` deyimleriyle `Using` bloğu oluşturun. Bloğun içinde, veritabanı bağlantısıyla ilgilenen kodu koyun.  
+2. `Using` `Using` Ve deyimleriyle bir blok oluşturun `End Using` . Bloğun içinde, veritabanı bağlantısıyla ilgilenen kodu koyun.  
   
-3. Bağlantıyı bildirin ve `Using` deyimin bir parçası olarak bir örneğini oluşturun.  
+3. Bağlantıyı bildirin ve deyimin bir parçası olarak bir örneğini oluşturun `Using` .  
   
     ```vb  
     ' Insert the following line at the beginning of your source file.  
@@ -40,16 +40,16 @@ Kodunuzun bloğundan çıkılırken sistemin bir kaynağı ortadan kaldırabilec
   
      İşlenmeyen bir özel durum da dahil olmak üzere bloğundan çıktığınızda sistem kaynağı ortadan kaldırsın.  
   
-     Kapsamı bloğa sınırlı olduğundan, `Using` bloğunun dışından `sqc` erişemediğini unutmayın.  
+     `sqc` `Using` Kapsamı bloğuyla sınırlı olduğundan bloğunun dışından erişemediğini unutmayın.  
   
-     Bu tekniği, bir dosya tanıtıcısı veya bir COM sarmalayıcı gibi bir sistem kaynağı üzerinde kullanabilirsiniz. `Using` bloğundan çıktıktan sonra kaynağın diğer bileşenler için kullanılabilir durumda kalmasını sağlamak istediğinizde bir `Using` bloğu kullanırsınız.  
+     Bu tekniği, bir dosya tanıtıcısı veya bir COM sarmalayıcı gibi bir sistem kaynağı üzerinde kullanabilirsiniz. `Using`Bloğundan çıktıktan sonra kaynağı diğer bileşenler için kullanılabilir durumda bırakmaya emin olmak istediğinizde bir blok kullanırsınız `Using` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Data.SqlClient.SqlConnection>
-- [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [İç İçe Geçmiş Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Using Deyimi](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [Denetim akışı](index.md)
+- [Karar Yapıları](decision-structures.md)
+- [Döngü Yapıları](loop-structures.md)
+- [Diğer Denetim Yapıları](other-control-structures.md)
+- [İç İçe Geçmiş Denetim Yapıları](nested-control-structures.md)
+- [Using deyimleri](../../../language-reference/statements/using-statement.md)

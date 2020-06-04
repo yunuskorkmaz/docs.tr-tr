@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: e9a423fa69ad1dcd8c1d4a5b7085e5b5da548f93
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351270"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402713"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
@@ -24,62 +24,62 @@ Bir temel sınıfta, belirtilen bir programlama öğesinin, aynı adlı bir öğ
 
 ## <a name="remarks"></a>Açıklamalar
 
-Gölgeleme için ana amaç ( *ada göre gizleme*olarak da bilinir), sınıf üyelerinizin tanımını korur. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda `Shadows` değiştirici, sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.
+Gölgeleme için ana amaç ( *ada göre gizleme*olarak da bilinir), sınıf üyelerinizin tanımını korur. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda, değiştirici, `Shadows` sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.
 
-Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
+Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** `Shadows` yalnızca sınıf düzeyinde kullanabilirsiniz. Yani, bir `Shadows` öğesi için bildirim bağlamı bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
+- **Bildirim bağlamı.** `Shadows`Yalnızca sınıf düzeyinde kullanabilirsiniz. Yani bir öğe için bildirim bağlamı `Shadows` bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
 
   Tek bir bildirim ifadesinde yalnızca bir gölgeleme öğesi bildirebilirsiniz.
 
-- **Birleşik değiştiriciler.** Aynı bildirimde `Overloads`, `Overrides`veya `Static` birlikte `Shadows` belirtemezsiniz.
+- **Birleşik değiştiriciler.** `Shadows` `Overloads` Aynı bildirimde, veya ile birlikte belirtemezsiniz `Overrides` `Static` .
 
 - **Öğe türleri.** Herhangi bir tür tanımlanmış öğeyi başka bir tür ile gölgelendirebilmeniz gerekir. Bir özelliği veya yordamı başka bir özellik veya yordamla gölgelendirebiliyorsanız, parametrelerin ve dönüş türünün temel sınıf özelliği veya yordamındakilerle eşleşmesi gerekmez.
 
 - **Erişme.** Temel sınıftaki gölgelendirilmiş öğe, normalde onu gölgelendirilebilen türetilmiş sınıfın içinden kullanılamaz. Ancak aşağıdaki noktalar geçerlidir.
 
-  - Gölgeleme öğesine başvuran koddan erişilebilir değilse, başvuru gölgelendirilmiş öğe olarak çözümlenir. Örneğin, bir `Private` öğesi bir temel sınıf öğesini göltikten sonra, `Private` öğesine erişim izni olmayan kod bunun yerine temel sınıf öğesine erişir.
+  - Gölgeleme öğesine başvuran koddan erişilebilir değilse, başvuru gölgelendirilmiş öğe olarak çözümlenir. Örneğin, bir öğe bir `Private` temel sınıf öğesini gölerse, öğesine erişim izni olmayan kod, `Private` bunun yerine temel sınıf öğesine erişir.
 
-  - Bir öğeyi gölgelendiriseniz, taban sınıfının türüyle belirtilen bir nesne aracılığıyla gölgelendirilmiş öğeye erişmeye devam edebilirsiniz. Ayrıca, `MyBase`aracılığıyla da erişebilirsiniz.
+  - Bir öğeyi gölgelendiriseniz, taban sınıfının türüyle belirtilen bir nesne aracılığıyla gölgelendirilmiş öğeye erişmeye devam edebilirsiniz. Ayrıca, üzerinden de erişebilirsiniz `MyBase` .
 
-`Shadows` değiştiricisi şu bağlamlarda kullanılabilir:
+`Shadows`Değiştirici şu bağlamlarda kullanılabilir:
 
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Class Deyimi](../statements/class-statement.md)
 
-- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const Deyimi](../statements/const-statement.md)
 
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Deyimi](../statements/declare-statement.md)
 
-- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate Deyimi](../statements/delegate-statement.md)
 
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim Deyimi](../statements/dim-statement.md)
 
-- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Enum Deyimi](../statements/enum-statement.md)
 
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Event Deyimi](../statements/event-statement.md)
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
 
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface Deyimi](../statements/interface-statement.md)
 
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
 
-- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Structure Yapısı](../statements/structure-statement.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Me, My, MyBase ve MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shared](shared.md)
+- [Se](static.md)
+- [Özelleştirme](private.md)
+- [Me, My, MyBase ve MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](mustoverride.md)
+- [NotOverridable](notoverridable.md)
+- [Aşırı Yüklemeler](overloads.md)
+- [Overridable](overridable.md)
+- [Geçersiz Kılmalar](overrides.md)
+- [Visual Basic'de Gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)

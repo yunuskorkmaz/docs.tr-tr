@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0cf9aceef54998f269e9e377fe5d0a48492969c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716787"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408692"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -24,7 +24,7 @@ Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş o
 
 ## <a name="remarks"></a>Açıklamalar
 
-Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. Değer aynı kaldığı `-deterministic` sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. `-deterministic`Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
 
 Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
@@ -44,7 +44,7 @@ Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
   - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
 - Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
 - Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
-- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, veya `-lib` `-recurse`ile).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `-lib` veya ile `-recurse` ).
 - Derleyicinin çalıştırıldığı CLR platformu.
 - `%LIBPATH%`, Çözümleyici bağımlılığı yüklemeyi etkileyebilecek değeri.
 
@@ -52,5 +52,5 @@ Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derle
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: 841344186b8e56717b81e90397aabc608bdc6dab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10431b1ad40ed320541a22fb46cc8db6dbb775b0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345492"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360078"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 Ad Alanını Kullanarak Kayıt Defterini Okuma ve Yazma (Visual Basic)
 
-, `My.Computer.Registry` Kayıt defterine karşı programlama yaparken temel ihtiyaçlarınızı kapsamalıdır, ancak .NET Framework <xref:Microsoft.Win32.Registry> <xref:Microsoft.Win32.RegistryKey> <xref:Microsoft.Win32> ad alanındaki ve sınıflarını da kullanabilirsiniz.  
+, `My.Computer.Registry` Kayıt defterine karşı programlama yaparken temel ihtiyaçlarınızı kapsamalıdır, ancak <xref:Microsoft.Win32.Registry> <xref:Microsoft.Win32.RegistryKey> .NET Framework ad alanındaki ve sınıflarını da kullanabilirsiniz <xref:Microsoft.Win32> .  
   
 ## <a name="keys-in-the-registry-class"></a>Kayıt defteri sınıfındaki anahtarlar  
 
- <xref:Microsoft.Win32.Registry> Sınıfı, alt anahtarlara ve değerlerine erişmek için kullanılabilen temel kayıt defteri anahtarlarını sağlar. Temel anahtarlar salt okunurdur. Aşağıdaki tabloda, <xref:Microsoft.Win32.Registry> sınıfının açığa çıkarılan yedi anahtar listelenmektedir ve açıklanmaktadır.  
+ <xref:Microsoft.Win32.Registry>Sınıfı, alt anahtarlara ve değerlerine erişmek için kullanılabilen temel kayıt defteri anahtarlarını sağlar. Temel anahtarlar salt okunurdur. Aşağıdaki tabloda, sınıfının açığa çıkarılan yedi anahtar listelenmektedir ve açıklanmaktadır <xref:Microsoft.Win32.Registry> .  
   
 |**Anahtar**|**Açıklama**|  
 |-------------|---------------------|  
@@ -30,7 +30,7 @@ ms.locfileid: "74345492"
 |<xref:Microsoft.Win32.Registry.Users>|Varsayılan Kullanıcı tercihleri hakkında bilgi içerir.|  
   
 > [!IMPORTANT]
-> Geçerli kullanıcıya (<xref:Microsoft.Win32.Registry.CurrentUser>) yerel bilgisayardan (<xref:Microsoft.Win32.Registry.LocalMachine>) veri yazmak daha güvenlidir. Oluşturmakta olduğunuz anahtar daha önce başka bir kötü amaçlı, büyük olasılıkla kötü amaçlı bir işlem tarafından oluşturulduğu zaman, genellikle "ele geçirme" olarak adlandırılan bir koşul oluşur. Bunun oluşmasını önlemek için, anahtar zaten yoksa, gibi bir yöntemi <xref:Microsoft.Win32.RegistryKey.GetValue%2A> `Nothing` kullanın.  
+> Geçerli kullanıcıya () yerel bilgisayardan () veri yazmak daha güvenlidir <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> . Oluşturmakta olduğunuz anahtar daha önce başka bir kötü amaçlı, büyük olasılıkla kötü amaçlı bir işlem tarafından oluşturulduğu zaman, genellikle "ele geçirme" olarak adlandırılan bir koşul oluşur. Bunun oluşmasını önlemek için, <xref:Microsoft.Win32.RegistryKey.GetValue%2A> anahtar zaten yoksa, gibi bir yöntemi kullanın `Nothing` .  
   
 ## <a name="reading-a-value-from-the-registry"></a>Kayıt defterinden bir değer okuma  
 
@@ -47,6 +47,6 @@ ms.locfileid: "74345492"
 - <xref:System.SystemException>
 - <xref:System.ApplicationException>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
-- [Deneyin... Yakala... Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Güvenlik ve Kayıt Defteri](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [Try...Catch...Finally Deyimi](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](reading-from-and-writing-to-the-registry.md)
+- [Güvenlik ve Kayıt Defteri](security-and-the-registry.md)

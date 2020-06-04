@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-ms.openlocfilehash: df7868c510eaacbad1d4421259234f4187f60cd7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a66d43d249a12ffa552073866f2e0a1e6d453608
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976214"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409951"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>EscapeQuote True olarak ayarlandığında çift tırnak işareti ayrılmış alanlar için geçerli bir açıklama belirteci değildir
 
-`TextFieldParser`sınırlayıcı olarak bir tırnak işareti sağlandı, ancak `EscapeQuotes` `True`olarak ayarlanmıştır.  
+İçin sınırlayıcı olarak bir tırnak işareti sağlandı `TextFieldParser` , ancak `EscapeQuotes` olarak ayarlanır `True` .  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- `EscapeQuotes` `False`olarak ayarlayın.  
+- `EscapeQuotes`Olarak ayarlayın `False` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>
-- [Nasıl Yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Nasıl yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

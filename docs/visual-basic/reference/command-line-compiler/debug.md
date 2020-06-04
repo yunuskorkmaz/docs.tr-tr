@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716784"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408731"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 
@@ -24,24 +24,24 @@ Derleyicinin hata ayıklama bilgileri oluşturmasına ve bunu çıkış dosyası
 -debug[+ | -]
 ```
 
-or
+veya
 
 ```console
 -debug:[full | pdbonly]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-|Sözleşme Dönemi|Tanım|
+|Terim|Tanım|
 |---|---|
-|`+`&#124;`-`|İsteğe bağlı. `+` Derleyicinin hata ayıklama bilgilerini oluşturmasını ve bir. pdb dosyasına yerleştirmesini `-debug` sağlar. Belirtme `-` , belirtilmemekle `-debug`aynı etkiye sahiptir.|
-|`full`&#124;`pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Belirtmezseniz `-debug:pdbonly`, varsayılan `full`olarak, çalışan programa bir hata ayıklayıcı eklemenize olanak sağlar. `pdbonly` Bağımsız değişken, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
+|`+`&#124;`-`|İsteğe bağlı. `+` `-debug` Derleyicinin hata ayıklama bilgilerini oluşturmasını ve bir. pdb dosyasına yerleştirmesini sağlar. Belirtme `-` , belirtilmemekle aynı etkiye sahiptir `-debug` .|
+|`full`&#124;`pdbonly`|İsteğe bağlı. Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Belirtmezseniz, varsayılan olarak, `-debug:pdbonly` `full` çalışan programa bir hata ayıklayıcı eklemenize olanak sağlar. `pdbonly`Bağımsız değişken, program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde derleme dili kodunu görüntüler.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. , `-debug` `-debug+`Veya `-debug:full`belirtmezseniz, programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
+Hata ayıklama derlemeleri oluşturmak için bu seçeneği kullanın. `-debug`, Veya belirtmezseniz, `-debug+` `-debug:full` programınızın çıkış dosyasında hata ayıklaması yapamazsınız.
 
-Varsayılan olarak, hata ayıklama bilgileri yayılmaz (`-debug-`). Hata ayıklama bilgilerini göstermek için veya `-debug` `-debug+`belirtin.
+Varsayılan olarak, hata ayıklama bilgileri yayılmaz ( `-debug-` ). Hata ayıklama bilgilerini göstermek için `-debug` veya belirtin `-debug+` .
 
 Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).
 
@@ -51,7 +51,7 @@ Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fa
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek hata ayıklama bilgilerini çıkış dosyasına `App.exe`yerleştirir.
+Aşağıdaki örnek hata ayıklama bilgilerini çıkış dosyasına yerleştirir `App.exe` .
 
 ```console
 vbc -debug -out:app.exe test.vb
@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-bugreport](bugreport.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

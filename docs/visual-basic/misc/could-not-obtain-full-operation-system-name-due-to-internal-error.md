@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: ecbed5b59d36b1984c0b0ae161821ea99d28e090
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67e8fb5e906800d28bf15714463b7ff6ae585693
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970592"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402284"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>İç hata nedeniyle tam işlem sistem adı alınamadı
-İç hata nedeniyle tam işlem sistem adı alınamadı. Bu geçerli makinede mevcut değil WMI tarafından kaynaklanabilir.  
+İç hata nedeniyle tam işlem sistem adı alınamadı. Bu durum, WMI 'nin geçerli makinede mevcut olmadığından kaynaklanıyor olabilir.  
   
- Bir çağrı `My.Computer.Info.OSFullName` özelliği başarısız oldu. Bu hatanın olası nedeni, Windows Yönetim Araçları (WMI) geçerli bilgisayarda yüklü değil, ' dir.  
+ `My.Computer.Info.OSFullName`Özelliğe çağrı başarısız oldu. Bu hatanın olası nedeni, geçerli bilgisayarda Windows Yönetim Araçları (WMI) yüklü değildir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Ekleme bir `Try...Catch` bloğu içine çağrı `My.Computer.Info.OSFullName` özelliği.  
+1. Özelliğe yapılan `Try...Catch` çağrının etrafına bir blok ekleyin `My.Computer.Info.OSFullName` .  
   
-2. WMI ve nasıl yükleneceği hakkında daha fazla bilgi, Git ve "Windows Yönetim Araçları için çekirdek" arayın.  
+2. WMI ve nasıl yükleneceğine ilişkin daha fazla bilgi için şuraya gidin ve "Windows Yönetim Araçları Core" ifadesini arayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [My.Computer.Info.OSFullName](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)
-- [İşleme ve .NET özel durumları atma](../../standard/exceptions/index.md)
-- [Try...Catch...Finally Deyimi](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [My. Computer. Info. OSFullName](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)
+- [.NET 'te özel durumları işleme ve atma](../../standard/exceptions/index.md)
+- [Try...Catch...Finally Deyimi](../language-reference/statements/try-catch-finally-statement.md)

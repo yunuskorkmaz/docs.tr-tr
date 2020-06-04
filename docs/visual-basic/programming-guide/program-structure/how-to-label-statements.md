@@ -7,16 +7,16 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: be116ac8046c43e89e44c2d9127c6131e4dfaa52
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8f04d592c51b6a0630bfe623fd3574555aef9ff8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347376"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403219"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Nasıl yapılır: Deyimler (Visual Basic)
 
-Ekstre blokları, iki nokta üst üste ile ayrılmış kod satırlarından oluşur. Bir tanımlayıcı dize veya tamsayının önünde bulunan kod satırları *etiketlenecek*şekilde söylenir. Deyim etiketleri, `On Error Goto`gibi deyimlerle kullanım için tanımlamak üzere bir kod satırı işaretlemek için kullanılır.
+Ekstre blokları, iki nokta üst üste ile ayrılmış kod satırlarından oluşur. Bir tanımlayıcı dize veya tamsayının önünde bulunan kod satırları *etiketlenecek*şekilde söylenir. Deyim etiketleri, bir kod satırını, gibi deyimlerle kullanılmak üzere belirlemek üzere işaretlemek için kullanılır `On Error Goto` .
 
 Etiketler, programlama öğelerini tanımlayan ya da tamsayı değişmez değerleri gibi geçerli Visual Basic tanımlayıcı olabilir. Bir etiket, kaynak kodu satırının başında görünmelidir ve bunun ardından iki nokta üst üste gelmelidir ve bunun ardından aynı satırdaki bir deyimin takip edilip edilmeyeceğini dikkate alınmalıdır.
 
@@ -31,12 +31,12 @@ Etiketler kendi bildirim alanına sahiptir ve diğer tanımlayıcılarla karış
 
 Kaynak kodu satırının başında bir tanımlayıcı ve sonra iki nokta üst üste koyun.
 
-Örneğin, aşağıdaki kod satırları sırasıyla `Jump` ve `120`etiketlidir:
+Örneğin, aşağıdaki kod satırları sırasıyla ve ile etiketlidir `Jump` `120` :
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Deyimler](../language-features/statements.md)
+- [Bildirilen Öğe Adları](../language-features/declared-elements/declared-element-names.md)
+- [Program yapısı ve kod kuralları](program-structure-and-code-conventions.md)

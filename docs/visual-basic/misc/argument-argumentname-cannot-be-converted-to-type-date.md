@@ -1,18 +1,18 @@
 ---
-title: Bağımsız değişken '<argumentname>' 'Date' türüne dönüştürülemiyor
+title: "' ' Bağımsız değişkeni <argumentname> ' Date ' türüne dönüştürülemez"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidDateValue1
 ms.assetid: 928b8d75-f523-40c3-819a-03a1eb596ccc
-ms.openlocfilehash: 3120593d1f8d73e924b163d9c2d37807fdacdf9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05767ac3ea15c83b044ed7bc50fbf417b199c1f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659539"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411401"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>Bağımsız değişken '\<argumentname >' 'Date' türüne dönüştürülemiyor
-Bir dönüştürme türü için bir değişken değiştirilmeye çalışıldı `Date`, ancak değeri geçerli bir tarih tanınmıyor.  
+# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>' ' Bağımsız değişkeni \<argumentname> ' Date ' türüne dönüştürülemez
+Bir dönüştürme bir değişkeni türe değiştirmeye çalıştı `Date` , ancak değer geçerli bir tarih olarak tanınmıyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -20,5 +20,5 @@ Bir dönüştürme türü için bir değişken değiştirilmeye çalışıldı `
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de tür dönüştürmeleri](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Date Veri Türü](../../visual-basic/language-reference/data-types/date-data-type.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../programming-guide/language-features/data-types/type-conversions.md)
+- [Date Veri Türü](../language-reference/data-types/date-data-type.md)

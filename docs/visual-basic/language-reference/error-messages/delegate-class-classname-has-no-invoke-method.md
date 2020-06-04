@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27be97ba2930791bcb9012c824bc418a0089b037
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803642"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409718"
 ---
-# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Temsilci sınıfında\<SınıfAdı >' Invoke yöntemi yok, bu nedenle bu türdeki bir ifade bir yöntem çağrısının hedefi olamaz sahip
-Bir çağrı `Invoke` bir temsilci olduğundan başarısız oldu `Invoke` temsilci sınıfı üzerinde uygulanmadı.  
+# <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>'\<classname>' temsilci sınıfında Invoke yöntemi yok, bu nedenle bu türdeki bir ifade bir yöntem çağrısının hedefi olamaz
+Temsilci `Invoke` sınıfında uygulanmadığı için bir temsilci aracılığıyla yapılan çağrı başarısız oldu `Invoke` .  
   
- **Hata Kimliği:** BC30220  
+ **Hata kimliği:** BC30220  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Temsilci sınıfının örneği ile oluşturulduğundan emin olun. bir `Dim` ifadesi ve bir yordam temsilci örneği ile atanan `AddressOf` işleci.  
+1. Temsilci sınıfının bir örneğinin bir `Dim` ifadesiyle oluşturulduğundan ve bu işleç ile temsilci örneğine bir yordamın atandığından emin olun `AddressOf` .  
   
-2. Temsilci sınıfı uygulayan kod bulun ve bunu uygulayan emin `Invoke` yordamı.  
+2. Temsilci sınıfını uygulayan kodu bulun ve yordamı gerçekleştirdiğinden emin olun `Invoke` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Temsilciler](../../programming-guide/language-features/delegates/index.md)
+- [Delegate Deyimi](../statements/delegate-statement.md)
+- [AddressOf İşleci](../operators/addressof-operator.md)
+- [Dim Deyimi](../statements/dim-statement.md)

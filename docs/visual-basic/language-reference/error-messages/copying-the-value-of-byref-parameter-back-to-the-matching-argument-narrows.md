@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913197"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409757"
 ---
-# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' parametresinin değeri kopyalama '\<parametername >' eşleşen bağımsız değişkene geri türüne daralan '\<typename1 >' türü için '\<typename2 >'
-Bir yordam bağımsız değişken için karşılık gelen parametre türü widens çağrılır ve bağımsız değişken parametre dönüştürme daraltma.  
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' '\<parametername>' parametresinin değeri '\<typename1>' türünden '\<typename2>' türüne daralan eşleşen bağımsız değişkene geri kopyalanıyor
+Bir yordam, karşılık gelen parametre türüne widens bir bağımsız değişkenle çağrılır ve parametresinden bağımsız değişkene dönüştürme daraltma olur.  
   
- Bir sınıf veya yapı tanımladığınızda, bu sınıf veya yapı türü diğer türlerine dönüştürmek için bir veya daha fazla dönüştürme işleçleri tanımlayabilirsiniz. Bu bir sınıfınız geri türlerine veya yapı türü dönüştürmek için geriye doğru dönüştürme işleçleri de tanımlayabilirsiniz. Bir yordam çağrısında, sınıf veya yapı türünü kullandığınızda, Visual Basic, karşılık gelen bir parametresinin türü için bir bağımsız değişken türünü dönüştürmek için bu dönüştürme işleçlerini kullanabilirsiniz.  
+ Bir sınıf veya yapı tanımladığınızda, bu sınıf veya yapı türünü diğer türlere dönüştürmek için bir veya daha fazla dönüştürme işleci tanımlayabilirsiniz. Ayrıca, bu diğer türleri sınıfınıza veya yapı türüne geri dönüştürmek için ters dönüştürme işleçleri tanımlayabilirsiniz. Sınıf veya yapı türünü bir yordam çağrısında kullandığınızda Visual Basic, bir bağımsız değişkenin türünü karşılık gelen parametresinin türüne dönüştürmek için bu dönüştürme işleçlerini kullanabilir.  
   
- Bağımsız değişken geçirirseniz [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic bazen kopyalar bağımsız değişken değeri yordamda bir başvuru geçirmek yerine yerel bir değişken içine. Yordamı geri döndüğünde, böyle bir durumda, Visual Basic sonra yerel değişken değeri çağıran koddaki bağımsız değişken uygulamasına geri kopyalamanız gerekir.  
+ [ByRef](../modifiers/byref.md)bağımsız değişkenini geçirirseniz Visual Basic bazen bağımsız değişken değerini bir başvuruyu geçirmek yerine yordamda yerel bir değişkene kopyalar. Böyle bir durumda, yordam döndürüldüğünde Visual Basic, ardından yerel değişken değerini çağıran koddaki bağımsız değişkene geri kopyalamanız gerekir.  
   
- Varsa bir `ByRef` bağımsız değişken değeri yordama kopyalanır ve bağımsız değişken ile parametre aynı tür dönüştürme gerekli değildir. Ancak, Visual Basic türleri farklı ise, her iki yönde dönüştürmeniz gerekir. Türlerinden biri, sınıf veya yapı türü ise, Visual Basic, için ve diğer türden dönüştürmeniz gerekir. Bu dönüştürmeler birini genişletme, ters dönüştürme daraltma.  
+ Bir `ByRef` bağımsız değişken değeri yordama kopyalanırsa ve bağımsız değişkeni ve parametresi aynı türde ise, dönüştürme gerekli değildir. Ancak türler farklıysa Visual Basic her iki yönde de dönüştürmeniz gerekir. Türlerden biri sınıfınız veya yapı türtipinizdeki Visual Basic, bunu diğer türden ve arasında dönüştürmelidir. Bu dönüşümlerden biri genişletme ise, ters dönüştürme daraltma olabilir.  
   
- **Hata Kimliği:** BC32053  
+ **Hata kimliği:** BC32053  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Mümkünse, Visual Basic, herhangi bir dönüştürme yapmak gerekmez. Bu nedenle aynı türde çağıran bir bağımsız değişken yordam parametresi kullanın.  
+- Mümkünse, yordam parametresiyle aynı türde bir çağırma bağımsız değişkeni kullanın, bu nedenle Visual Basic herhangi bir dönüştürme yapması gerekmez.  
   
-- Bağımsız değişken içeren bir yordamı çağırma gerekiyorsa parametre türünden farklı yazın ancak ihtiyaç duymayan çağırma bağımsız değişkeni bir değer döndürmek parametre tanımlayın [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) yerine `ByRef`.  
+- Parametre türünden farklı bir bağımsız değişken türü olan yordamı çağırmanız gerekiyorsa, ancak çağıran bağımsız değişkenine bir değer döndürmemelidir, yerine [ByVal](../modifiers/byval.md) olacak parametreyi tanımlayın `ByRef` .  
   
-- Çağırma bağımsız değişkeni bir değer döndürmesi gerekiyorsa, geriye doğru dönüştürme işleci olarak tanımlama [Widening](../../../visual-basic/language-reference/modifiers/widening.md), mümkünse.  
+- Çağırma bağımsız değişkenine bir değer döndürmenize gerek varsa, uygunsa ters dönüştürme işlecini [genişletme](../modifiers/widening.md)olarak tanımlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Nasıl yapılır: Bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Yordamlar](../../programming-guide/language-features/procedures/index.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [İşleç Yordamları](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Operator Deyimi](../statements/operator-statement.md)
+- [Nasıl yapılır: İşleç Tanımlama](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../../programming-guide/language-features/data-types/type-conversions.md)
+- [Genişletme ve Daraltma Dönüşümleri](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
