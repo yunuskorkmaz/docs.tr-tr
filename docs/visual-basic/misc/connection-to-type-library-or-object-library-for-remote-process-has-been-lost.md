@@ -1,29 +1,29 @@
 ---
-title: Kitaplık veya uzak işlem için Nesne Kitaplığı bağlantısı kesildi
+title: Uzak işlem için tür kitaplığı veya nesne kitaplığı bağlantısı kesildi
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: 76ad5129086f40e99ab94d308a519512baf37a89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d442d582f392ea4e2a074136740f9705d50b8d55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970319"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84376774"
 ---
-# <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a><span data-ttu-id="1d674-102">Kitaplık veya uzak işlem için Nesne Kitaplığı bağlantısı kesildi</span><span class="sxs-lookup"><span data-stu-id="1d674-102">Connection to type library or object library for remote process has been lost</span></span>
-<span data-ttu-id="1d674-103">Uzak işlem nesne kitaplığı veya tür kitaplığı için bağlantınız kesildi.</span><span class="sxs-lookup"><span data-stu-id="1d674-103">You lost your connection to the remote process's object library or type library.</span></span>  
+# <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a><span data-ttu-id="1f4d0-102">Uzak işlem için tür kitaplığı veya nesne kitaplığı bağlantısı kesildi</span><span class="sxs-lookup"><span data-stu-id="1f4d0-102">Connection to type library or object library for remote process has been lost</span></span>
+<span data-ttu-id="1f4d0-103">Uzak işlemin nesne kitaplığıyla veya tür kitaplığıyla bağlantınızı kaybettiniz.</span><span class="sxs-lookup"><span data-stu-id="1f4d0-103">You lost your connection to the remote process's object library or type library.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1d674-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="1d674-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1f4d0-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="1f4d0-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="1d674-105">Yeniden `Application` nesne.</span><span class="sxs-lookup"><span data-stu-id="1d674-105">Restart the `Application` object.</span></span>  
+1. <span data-ttu-id="1f4d0-105">Nesneyi yeniden başlatın `Application` .</span><span class="sxs-lookup"><span data-stu-id="1f4d0-105">Restart the `Application` object.</span></span>  
   
-2. <span data-ttu-id="1d674-106">Bu Yardım konusu girdiğiniz hata iletişim kutusunda tıklatın **Tamam** görüntülenecek **başvuruları** iletişim kutusu.</span><span class="sxs-lookup"><span data-stu-id="1d674-106">In the error dialog box through which you entered this Help topic, click **OK** to display the **References** dialog box.</span></span> <span data-ttu-id="1d674-107">"Eksik solunda" sözcüğüyle kayıp başvuru görünür.</span><span class="sxs-lookup"><span data-stu-id="1d674-107">The lost reference appears with the word "MISSING" to its left.</span></span>  
+2. <span data-ttu-id="1f4d0-106">Bu yardım konusunu girdiğiniz hata iletişim kutusunda, **Başvurular** iletişim kutusunu göstermek için **Tamam** ' ı tıklatın.</span><span class="sxs-lookup"><span data-stu-id="1f4d0-106">In the error dialog box through which you entered this Help topic, click **OK** to display the **References** dialog box.</span></span> <span data-ttu-id="1f4d0-107">Kayıp başvuru, sol tarafında "eksık" kelimesiyle birlikte görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="1f4d0-107">The lost reference appears with the word "MISSING" to its left.</span></span>  
   
-3. <span data-ttu-id="1d674-108">Kayıp başvuru silin.</span><span class="sxs-lookup"><span data-stu-id="1d674-108">Delete the lost reference.</span></span>  
+3. <span data-ttu-id="1f4d0-108">Kayıp başvurusunu silin.</span><span class="sxs-lookup"><span data-stu-id="1f4d0-108">Delete the lost reference.</span></span>  
   
-4. <span data-ttu-id="1d674-109">İçinde **başvuruları** için iletişim kutusunda, onay kutusunu seçin `Application` nesne.</span><span class="sxs-lookup"><span data-stu-id="1d674-109">In the **References** dialog box, select the check box for the `Application` object.</span></span>  
+4. <span data-ttu-id="1f4d0-109">**Başvurular** iletişim kutusunda nesnenin onay kutusunu seçin `Application` .</span><span class="sxs-lookup"><span data-stu-id="1f4d0-109">In the **References** dialog box, select the check box for the `Application` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d674-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1d674-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f4d0-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1f4d0-110">See also</span></span>
 
-- [<span data-ttu-id="1d674-111">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="1d674-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="1f4d0-111">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="1f4d0-111">Error Types</span></span>](../programming-guide/language-features/error-types.md)
