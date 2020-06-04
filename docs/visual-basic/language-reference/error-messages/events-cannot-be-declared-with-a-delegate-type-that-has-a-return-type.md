@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: f9598a219c9ec0a5dac0b6e7df778bb9efd05f44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c59f5efe190210a2a6b87b7c2a0971b705c1bb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642925"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409588"
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="18374-102">Olaylar, dönüş türü olan bir temsilci türüyle bildirilemez</span><span class="sxs-lookup"><span data-stu-id="18374-102">Events cannot be declared with a delegate type that has a return type</span></span>
-<span data-ttu-id="18374-103">Bir temsilci işlevi yordamı için belirtildi.</span><span class="sxs-lookup"><span data-stu-id="18374-103">A delegate was specified for a function procedure.</span></span>  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="c0cc6-102">Olaylar, dönüş türü olan bir temsilci türüyle bildirilemez</span><span class="sxs-lookup"><span data-stu-id="c0cc6-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="c0cc6-103">Bir işlev yordamı için bir temsilci belirtildi.</span><span class="sxs-lookup"><span data-stu-id="c0cc6-103">A delegate was specified for a function procedure.</span></span>  
   
- <span data-ttu-id="18374-104">**Hata Kimliği:** BC31084</span><span class="sxs-lookup"><span data-stu-id="18374-104">**Error ID:** BC31084</span></span>  
+ <span data-ttu-id="c0cc6-104">**Hata kimliği:** BC31084</span><span class="sxs-lookup"><span data-stu-id="c0cc6-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="18374-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="18374-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c0cc6-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="c0cc6-105">To correct this error</span></span>  
   
-- <span data-ttu-id="18374-106">Bir temsilci için belirtin bir `Sub` yordamı.</span><span class="sxs-lookup"><span data-stu-id="18374-106">Specify a delegate for a `Sub` procedure.</span></span>  
+- <span data-ttu-id="c0cc6-106">Bir yordam için temsilci belirtin `Sub` .</span><span class="sxs-lookup"><span data-stu-id="c0cc6-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18374-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18374-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0cc6-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c0cc6-107">See also</span></span>
 
-- [<span data-ttu-id="18374-108">Olaylar</span><span class="sxs-lookup"><span data-stu-id="18374-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="c0cc6-108">Olaylar</span><span class="sxs-lookup"><span data-stu-id="c0cc6-108">Events</span></span>](../../programming-guide/language-features/events/index.md)
