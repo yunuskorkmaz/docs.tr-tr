@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
-ms.openlocfilehash: ad9176b5332a75f03968e742501c3fce541055de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc75e031c2d05bea3aa64774a9d3817756e51e8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925768"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409367"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>Nesne veya sınıf olay kümesini desteklemiyor
-Kullanmaya çalıştığınız bir `WithEvents` değişken bir bileşeniyle belirlenen olayları için olay kaynağı olarak çalışamaz. Örneğin, bir nesnenin olaylar indirilir ve ardından başka bir nesne oluşturan istediğinizi `Implements` ilk nesne. Uygulanan nesneden olayları havuz düşünebilirsiniz ancak bu her zaman böyle değildir. `Implements` yalnızca yöntemler ve özellikler için bir arabirim uygular. `WithEvents` Özel için desteklenmeyen `UserControls`tür bilgisini yükseltmek gerekli olduğundan `ObjectEvent` çalışma zamanında kullanılabilir değil.  
+`WithEvents`Belirtilen olay kümesi için olay kaynağı olarak çalışmayan bir bileşeni olan bir değişken kullanmaya çalıştınız. Örneğin, bir nesnenin olaylarını havuza almak istiyordunuz ve ardından ilk nesne için başka bir nesne oluşturun `Implements` . Olayları uygulanan nesnesinden havuzunuza uyacağını düşünebilseniz de, bu durum her zaman değildir. `Implements`yalnızca Yöntemler ve özellikler için bir arabirim uygular. `WithEvents``UserControls`, öğesini yükseltmek için gereken tür bilgisi çalışma zamanında kullanılabilir olmadığından Private için desteklenmez `ObjectEvent` .  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Olayları olay kaynağı olmayan bir bileşen için havuz olamaz.  
+1. Olayları kaynak olmayan bir bileşen için havuza yükleyemezsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [WithEvents](../modifiers/withevents.md)
+- [Implements Deyimi](../statements/implements-statement.md)

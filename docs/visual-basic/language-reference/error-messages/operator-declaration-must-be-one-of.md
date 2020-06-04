@@ -1,5 +1,5 @@
 ---
-title: 'İşleç bildirimi şunlardan biri olmalıdır: +,-, *,-, -, ^, &amp;, Like, Mod ve, Or, Xor, Not, <<>>,, <> =, <, < =, >, > =, CType, IsTrue, IsFalse'
+title: 'İşleç bildirimi şunlardan biri olmalıdır: +,-, *,-,-, ^, &amp; , LIKE, mod, and, or, XOR, Not,  <<,  >>, =,  <>, <, <=, >, >=, CType, IsTrue, IsFalse'
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -7,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2cf392611e5ca83818e3bf173513be031085d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946607"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409341"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>İşleç bildirimi şunlardan biri olmalıdır: +,-, *,\,/, ^, &amp;, Like, Mod ve, Or, Xor, Not, \< \<, >>...
-Aşırı yükleme için uygun olan bir işleç bildirebilirsiniz. Aşağıdaki tabloda bildirebilirsiniz işleçleri listelenir.  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>İşleç bildirimi şunlardan biri olmalıdır: +,-, *, \, /, ^, &amp; , LIKE, mod, and, or, XOR, Not, \<\<, >>...
+Yalnızca aşırı yükleme için uygun bir işleç bildirebilirsiniz. Aşağıdaki tabloda, bildirebilmeniz için kullanabileceğiniz işleçler listelenmektedir.  
   
 |Tür|İşleçler|  
 |----------|---------------|  
 |Birli|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
 |İkili|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|Dönüştürme (tekli)|`CType`|  
+|Dönüştürme (birli)|`CType`|  
   
- Unutmayın `=` işlecidir ikili listesinde karşılaştırma işleci atama işleci.  
+ `=`İkili listedeki işlecin atama işleci değil karşılaştırma operatörü olduğunu unutmayın.  
   
- **Hata Kimliği:** BC33000  
+ **Hata kimliği:** BC33000  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
 1. Fazla yüklenebilir işleçler kümesinden bir işleç seçin.  
   
-2. Doğrudan aşırı yüklenemez operatör aşırı yüklemesi işlevselliğini gerekiyorsa, oluşturun bir `Function` uygun parametreleri alır ve uygun bir değer döndüren yordam.  
+2. Doğrudan aşırı yükleyemez olmayan bir işleci aşırı yükleme işlevselliğine ihtiyacınız varsa, `Function` uygun parametreleri alan ve uygun değeri döndüren bir yordam oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Nasıl yapılır: Bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Operator Deyimi](../statements/operator-statement.md)
+- [İşleç Yordamları](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Nasıl yapılır: İşleç Tanımlama](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Function Deyimi](../statements/function-statement.md)

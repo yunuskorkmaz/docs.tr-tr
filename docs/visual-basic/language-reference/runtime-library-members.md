@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349613"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359496"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
 
-`Microsoft.VisualBasic` ad alanı, Visual Basic çalışma zamanı kitaplığını oluşturan sınıfları, modülleri, sabitleri ve numaralandırmaları içerir. Bu kitaplık üyeleri, kodunuzda kullanabileceğiniz yordamları, özellikleri ve sabit değerleri sağlar. Her modül ve sınıf belirli bir işlev kategorisini temsil eder.  
+`Microsoft.VisualBasic`Ad alanı, Visual Basic çalışma zamanı kitaplığını oluşturan sınıfları, modülleri, sabitleri ve numaralandırmaları içerir. Bu kitaplık üyeleri, kodunuzda kullanabileceğiniz yordamları, özellikleri ve sabit değerleri sağlar. Her modül ve sınıf belirli bir işlev kategorisini temsil eder.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft. VisualBasic. Collection sınıfı  
   
@@ -193,9 +193,9 @@ ms.locfileid: "74349613"
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft. VisualBasic sabitleri ve numaralandırmalar  
 
- `Microsoft.VisualBasic` ad alanı, Visual Basic çalışma zamanı kitaplığının bir parçası olarak sabitler ve numaralandırmalar sağlar. Kodunuzda bu sabit değerleri kullanabilirsiniz. Her numaralandırma belirli bir işlev kategorisini temsil eder. Daha fazla bilgi için bkz. [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic`Ad alanı, Visual Basic çalışma zamanı kitaplığının bir parçası olarak sabitler ve numaralandırmalar sağlar. Kodunuzda bu sabit değerleri kullanabilirsiniz. Her numaralandırma belirli bir işlev kategorisini temsil eder. Daha fazla bilgi için bkz. [sabitler ve numaralandırmalar](constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)
+- [Sabitler ve numaralandırmalar](constants-and-enumerations.md)
+- [Anahtar sözcükler](keywords/index.md)

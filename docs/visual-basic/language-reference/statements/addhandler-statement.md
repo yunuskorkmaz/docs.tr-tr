@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: c110116af75d4fb39c016b8d6afcdb707fa6599b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de995a13b34678410e2af74b59f2d0c467982b75
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350185"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408490"
 ---
 # <a name="addhandler-statement"></a>AddHandler Deyimi
 Çalışma zamanında bir olayı olay işleyicisiyle ilişkilendirir.  
@@ -27,26 +27,26 @@ AddHandler event, AddressOf eventhandler
 ## <a name="parts"></a>Bölümler  
 |||
 |---|---|
-|olay|İşlenecek etkinliğin adı.|  
+|event|İşlenecek etkinliğin adı.|  
 |`eventhandler`|Olayı işleyen yordamın adı.|
 |||
   
 ## <a name="remarks"></a>Açıklamalar  
- `AddHandler` ve `RemoveHandler` deyimleri, program yürütme sırasında herhangi bir zamanda olay işlemeyi başlatıp durdurmalarını sağlar.  
+ `AddHandler`Ve `RemoveHandler` deyimleri, program yürütme sırasında herhangi bir zamanda olay işlemeyi başlatıp durdurmalarını sağlar.  
   
- `eventhandler` yordamının imzası, olay `event`imzasıyla aynı olmalıdır.  
+ Yordamın imzası, `eventhandler` olayın imzasıyla aynı olmalıdır `event` .  
   
- `Handles` anahtar sözcüğü ve `AddHandler` deyimin her ikisi de belirli olayları işleyen belirli yordamları belirtmenizi sağlar, ancak farklar vardır. `AddHandler` ifade, çalışma zamanında yordamları olaylara bağlar. Belirli bir olayı işlediğini belirtmek için bir yordam tanımlarken `Handles` anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [Handles](../../../visual-basic/language-reference/statements/handles-clause.md).  
+ `Handles`Anahtar sözcüğü ve `AddHandler` deyimleri her ikisi de belirli olayları işleyen belirli yordamları belirtmenizi sağlar, ancak farklılık vardır. `AddHandler`İfade, çalışma zamanında yordamları olaylara bağlar. `Handles`Belirli bir olayı işlediğini belirtmek için bir yordam tanımlarken anahtar sözcüğünü kullanın. Daha fazla bilgi için bkz. [Handles](handles-clause.md).  
   
 > [!NOTE]
-> Özel olaylar için `AddHandler` ifade, olayın `AddHandler` erişimcisini çağırır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](../../../visual-basic/language-reference/statements/event-statement.md).  
+> Özel olaylar için, `AddHandler` ifade olayın `AddHandler` erişimcisini çağırır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](event-statement.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [RemoveHandler Deyimi](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [İşlendiğini](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [RemoveHandler Deyimi](removehandler-statement.md)
+- [Handles](handles-clause.md)
+- [Event Deyimi](event-statement.md)
+- [Olaylar](../../programming-guide/language-features/events/index.md)

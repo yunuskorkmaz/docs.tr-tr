@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fd2e425f2dd3f4127cd777d4a1f7ab9809de9d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74329554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409639"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL yüklenirken hata (Visual Basic)
-Dinamik bağlantı kitaplığı (DLL), bir `Declare` deyimin `Lib` yan tümcesinde belirtilen bir kitaplıktır. Bu hatanın olası nedenleri şunlardır:  
+Dinamik bağlantı kitaplığı (DLL), `Lib` bir deyimin yan tümcesinde belirtilen bir kitaplıktır `Declare` . Bu hatanın olası nedenleri şunlardır:  
   
 - Dosya DLL yürütülebilir dosyası değil.  
   
@@ -34,4 +34,4 @@ Dinamik bağlantı kitaplığı (DLL), bir `Declare` deyimin `Lib` yan tümcesin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Deyimi](../statements/declare-statement.md)

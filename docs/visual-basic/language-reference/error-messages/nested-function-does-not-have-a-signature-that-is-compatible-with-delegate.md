@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: d65c8eab661675c955ff6562098248c04036d6e7
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 28d07f01c0fd467cb68d73749988273eee95edf4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580646"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409432"
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>İç içe yerleştirilmiş işlevin imzası ' \<delegatename > ' temsilcisiyle uyumlu değil
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>İç içe yerleştirilmiş işlevin imzası '\<delegatename>' temsilcisiyle uyumlu değil
 
-Uyumsuz imzaya sahip bir temsilciye bir lambda ifadesi atandı. Örneğin, aşağıdaki kodda, temsilci `Del` iki tamsayı parametresine sahiptir.
+Uyumsuz imzaya sahip bir temsilciye bir lambda ifadesi atandı. Örneğin, aşağıdaki kodda, temsilcinin `Del` iki tamsayı parametresi vardır.
 
 ```vb
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ```
 
-Bir bağımsız değişkeni olan bir lambda ifadesi `Del` tür olarak bildirilirse hata oluşur:
+Bir bağımsız değişkeni olan bir lambda ifadesi tür olarak bildirilirse hata oluşur `Del` :
 
 ```vb
 ' Neither of these is valid.
@@ -38,5 +38,5 @@ Bir bağımsız değişkeni olan bir lambda ifadesi `Del` tür olarak bildirilir
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Gevşek Temsilci Dönüştürme](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Lambda Ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md)

@@ -2,17 +2,17 @@
 title: 'Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
-ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b971044ad28763858f40d36e454c08762598a435
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786938"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360861"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Örnek XML Dosyası: Test Yapılandırması (LINQ to XML)
-Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu bir test yapılandırma dosyasıdır.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu bir test yapılandırma dosyasıdır.  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a>TestConfig. xml  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -58,4 +58,4 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [Örnek XML Belgeleri (LINQ to XML)](sample-xml-documents-linq-to-xml.md)

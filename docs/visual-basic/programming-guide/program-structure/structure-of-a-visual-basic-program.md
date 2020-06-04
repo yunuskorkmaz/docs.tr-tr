@@ -7,80 +7,80 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc6b38d78f02a42c8e7cc2aa964e9f3f74996f44
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624308"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408770"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
-Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A *çözüm* bir veya daha fazla proje içerir. A *proje* sırayla bir veya daha fazla içerebilir. Her *derleme* bir veya daha fazla kaynak dosyalarından derlenir. A *kaynak dosyası* tanımı ve sınıflar, yapılar, modülleri ve sonuç olarak, kodunuzu içeren arabirimleri uygulamasını sağlar.  
+Bir Visual Basic program standart yapı taşlarından oluşturulmuştur. Bir *çözüm* bir veya daha fazla projeden oluşur. Sırasıyla bir *Proje* , bir veya daha fazla derleme içerebilir. Her *derleme* bir veya daha fazla kaynak dosyasından derlenir. *Kaynak dosya* , sonunda tüm kodunuzu içeren sınıfların, yapıların, modüllerin ve arabirimlerin tanımını ve uygulamasını sağlar.  
   
- Bir Visual Basic programını bu yapı taşları hakkında daha fazla bilgi için bkz. [çözümler ve projeler](/visualstudio/ide/solutions-and-projects-in-visual-studio) ve [.NET derlemeleri](../../../standard/assembly/index.md).  
+ Visual Basic bir programın bu yapı taşları hakkında daha fazla bilgi için bkz. [.net 'Teki](../../../standard/assembly/index.md) [çözümler ve projeler](/visualstudio/ide/solutions-and-projects-in-visual-studio) ve derlemeler.  
   
-## <a name="file-level-programming-elements"></a>Dosya düzeyinde programlama öğeleri  
- Bir proje veya dosya başlatma ve Kod Düzenleyicisi'ni açın, bazı kodlar zaten yerinde ve doğru sırada bakın. Yazdığınız kod, aşağıdaki sırayı izlemelidir:  
+## <a name="file-level-programming-elements"></a>Dosya düzeyi programlama öğeleri  
+ Bir proje veya dosya başlattığınızda ve kod düzenleyicisini açtığınızda, bazı kodları zaten yerinde ve doğru sırada görürsünüz. Yazdığınız herhangi bir kod aşağıdaki sırayı izlemelidir:  
   
-1. `Option` Deyimleri  
+1. `Option`deyimler  
   
-2. `Imports` Deyimleri  
+2. `Imports`deyimler  
   
-3. `Namespace` ifadeler ve ad alanı düzeyinde öğeleri  
+3. `Namespace`deyimler ve isim uzayı düzeyi öğeleri  
   
- Farklı bir sırada deyimleri girerseniz, derleme hatalarıyla sonuçlanabilir.  
+ Deyimleri farklı bir sırada girerseniz, derleme hataları oluşabilir.  
   
- Bir program, koşullu derleme deyimleriyle de içerebilir. Bu kaynak dosyadaki önceki dizisi deyimleri arasında aralarına koyabilirsiniz.  
+ Bir program, koşullu derleme deyimleri de içerebilir. Bunları kaynak dosyada, önceki sıranın deyimleri arasında birbirine bağlayabilirsiniz.  
   
 ### <a name="option-statements"></a>Seçenek deyimleri  
- `Option` deyimlerini izleyen kod, sözdizimi ve mantık hatalarını engellemeye yardımcı olmak için çığır kuralları oluşturun. [Option Explicit deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md) tüm değişkenleri bildirilir ve doğru yazıldığından, hata ayıklama zaman azaltan sağlar. [Option Strict deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md) arasında farklı veri türlerinin değişkenleri çalışırken oluşabilecek mantık hataları ve veri kaybını en aza indirmek için yardımcı olur. [Seçenek karşılaştırma ifadesini](../../../visual-basic/language-reference/statements/option-compare-statement.md) şekilde dizeleri, birbiriyle bağlı karşılaştırılır belirtir, `Binary` veya `Text` değerleri.  
+ `Option`deyimler sonraki kod için zemin kuralları oluştururlar ve söz dizimi ve mantık hatalarını önlemeye yardımcı olur. [Açık Ifade seçeneği](../../language-reference/statements/option-explicit-statement.md) , tüm değişkenlerin doğru şekilde bildirilmesini ve doğru yazıldığını sağlar ve bu da hata ayıklama süresini azaltır. [Strict deyimleri](../../language-reference/statements/option-strict-statement.md) , farklı veri türleri değişkenleri arasında çalışırken gerçekleşebileceği mantık hatalarını ve veri kaybını en aza indirmenize yardımcı olur. [Option Compare deyimleri](../../language-reference/statements/option-compare-statement.md) , dizelerin birbirlerine veya değerlerine göre birbirleriyle karşılaştırılacağı yöntemi belirtir `Binary` `Text` .  
   
-### <a name="imports-statements"></a>İçeri aktarmalar deyimleri  
- Dahil edebilirsiniz bir [Imports deyimi (.NET Namespace ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) projenizin dışında tanımlı adları almak için. Bir `Imports` deyimi sınıfları ve bunları uygun gerek kalmadan içeri aktarılan ad alanı içinde tanımlanan diğer türleri başvurmak kodunuzu sağlar. Kadar kullanabileceğiniz `Imports` deyimleri uygun şekilde. Daha fazla bilgi için [References ve Imports deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md).  
+### <a name="imports-statements"></a>Imports deyimleri  
+ Projenizin dışında tanımlanan adları içeri aktarmak için [Imports (.net ad alanı ve türü) ifadesini](../../language-reference/statements/imports-statement-net-namespace-and-type.md) dahil edebilirsiniz. Bir `Imports` ifade, kodunuzun sınıflara ve içeri aktarılan ad alanında tanımlanan diğer türlere, bunları nitelendirmek gerekmeden başvurmasını sağlar. `Imports`Uygun şekilde çok sayıda deyim kullanabilirsiniz. Daha fazla bilgi için bkz. [Başvurular ve Imports ekstresi](references-and-the-imports-statement.md).  
   
 ### <a name="namespace-statements"></a>Namespace deyimleri  
- Düzenlemek ve programlama öğeleriniz için gruplandırma ve Erişim Kolaylığı sınıflandırma ad alanları yardımcı olur. Kullandığınız [Namespace deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md) belirli bir ad alanı içinde aşağıdaki deyimleri sınıflandırmak için. Daha fazla bilgi için [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Ad alanları, gruplama ve erişim kolaylığı için programlama öğelerinizi düzenlemenize ve sınıflandırmanıza yardımcı olur. Belirli bir ad alanı içinde aşağıdaki deyimleri sınıflandırmak için [Namespace deyimini](../../language-reference/statements/namespace-statement.md) kullanın. Daha fazla bilgi için bkz. [Visual Basic ad alanları](namespaces.md).  
   
 ### <a name="conditional-compilation-statements"></a>Koşullu derleme deyimleri  
- Koşullu derleme deyimleri, neredeyse her yerden, kaynak dosyada görünebilir. Bunlar, kodunuzun dahil edilecek veya hariç belirli koşullara bağlı olarak derleme zamanında bölümlerini neden. Koşullu kodu hata ayıklama modu yalnızca içinde çalıştığı için Ayrıca bunları, uygulamanızı hata ayıklama için kullanabilirsiniz. Daha fazla bilgi için [koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md).  
+ Koşullu derleme deyimleri, kaynak dosyanızda neredeyse her yerde görünebilir. Bunlar, belirli koşullara bağlı olarak, kodunuzun bölümlerinin derleme zamanına dahil edilmesini veya dışlanmasına neden olur. Koşullu kod yalnızca hata ayıklama modunda çalıştığı için, bunları uygulamanızda hata ayıklamak için de kullanabilirsiniz. Daha fazla bilgi için bkz. [koşullu derleme](conditional-compilation.md).  
   
-## <a name="namespace-level-programming-elements"></a>Namespace düzeyi programlama öğeleri  
- Sınıflar, yapılar ve modüller, kaynak dosyanızdaki tüm kod içerir. Bunlar *ad alanı düzeyinde* öğeleri, bir ad alanındaki veya kaynak dosya düzeyinde görünebilir. Bunlar, diğer programlama öğeleri bildirimlerini basılı tutun. Öğe imzaları tanımlayın, ancak herhangi bir uygulama sağlamak, arabirimler, Modül düzeyinde de görünür. Modül düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
+## <a name="namespace-level-programming-elements"></a>Ad alanı düzeyinde programlama öğeleri  
+ Sınıflar, yapılar ve modüller, kaynak dosyanızdaki tüm kodu içerir. Ad alanı *düzeyindeki* öğelerdir ve bu, bir ad alanı içinde veya kaynak dosya düzeyinde görünebilir. Diğer tüm programlama öğelerinin bildirimlerini tutar. Öğe imzalarını tanımlayan ancak uygulama sağlamayan arabirimler, modül düzeyinde de görünür. Modül düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class Deyimi](../../language-reference/statements/class-statement.md)  
   
-- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure Yapısı](../../language-reference/statements/structure-statement.md)  
   
-- [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module Deyimi](../../language-reference/statements/module-statement.md)  
   
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface Deyimi](../../language-reference/statements/interface-statement.md)  
   
- Verileri ad alanı düzeyinde sabit listeleri ve temsilciler öğeleridir.  
+ Ad alanı düzeyindeki veri öğeleri numaralandırmalar ve temsilcileriniz.  
   
-## <a name="module-level-programming-elements"></a>Modül düzeyi programlama öğeleri  
- Yordamları, işleçler, özellikler ve olaylar yürütülebilir kod (çalışma zamanında işlemleri deyimleri) içerebileceği yalnızca programlama öğelerdir. Bunlar *Modül düzeyinde* , programınızın öğeleri. Yordam düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
+## <a name="module-level-programming-elements"></a>Modül düzeyinde programlama öğeleri  
+ İşlemler, işleçler, Özellikler ve olaylar çalıştırılabilir kodu tutabilecek tek programlama öğeleridir (çalışma zamanında eylem gerçekleştiren deyimler). Programınızın *Modül düzeyi* öğeleridir. Yordam düzeyi öğeler hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function Deyimi](../../language-reference/statements/function-statement.md)  
   
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub Deyimi](../../language-reference/statements/sub-statement.md)  
   
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare Deyimi](../../language-reference/statements/declare-statement.md)  
   
-- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator Deyimi](../../language-reference/statements/operator-statement.md)  
   
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property Deyimi](../../language-reference/statements/property-statement.md)  
   
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event Deyimi](../../language-reference/statements/event-statement.md)  
   
- Veri Modül düzeyinde değişkenleri, sabitleri, sabit listeleri ve temsilciler öğeleridir.  
+ Modül düzeyindeki veri öğeleri, değişkenler, sabitler, numaralandırmalar ve temsilcilerle.  
   
 ## <a name="procedure-level-programming-elements"></a>Yordam düzeyi programlama öğeleri  
- Çoğu içeriğinin *yordam düzeyi* programınızın çalışma zamanı koduyla oluşturan yürütülebilir deyimleri öğeleridir. Tüm yürütülebilir kod bazı yordamda olmalıdır (`Function`, `Sub`, `Operator`, `Get`, `Set`, `AddHandler`, `RemoveHandler`, `RaiseEvent`). Daha fazla bilgi için [deyimleri](../../../visual-basic/programming-guide/language-features/statements.md).  
+ *Yordam düzeyindeki* öğelerin çoğu, programınızın çalışma zamanı kodunu oluşturan çalıştırılabilir deyimlerdir. Tüm yürütülebilir kodlar bazı yordamda ( `Function` , `Sub` ,,,, `Operator` `Get` `Set` `AddHandler` , `RemoveHandler` , `RaiseEvent` ,,,,) olmalıdır. Daha fazla bilgi için bkz. [deyimler](../language-features/statements.md).  
   
- Veri öğeleri yordamı düzeyinde, yerel değişkenleri ve sabitleri için sınırlıdır.  
+ Yordam düzeyindeki veri öğeleri yerel değişkenlerle ve sabitler ile sınırlıdır.  
   
-## <a name="the-main-procedure"></a>Main yordamı  
- `Main` Yordamı uygulamanız yüklendiğinde çalıştırmak için ilk kodu verilmiştir. `Main` Uygulamanız için genel denetim ve başlangıç noktası olarak görev yapar. Dört çeşitleri vardır `Main`:  
+## <a name="the-main-procedure"></a>Ana yordam  
+ `Main`Yordam, uygulamanız yüklendiğinde çalıştırılacak ilk koddur. `Main`, uygulamanız için başlangıç noktası ve genel denetim olarak görev yapar. Dört değişken vardır `Main` :  
   
 - `Sub Main()`  
   
@@ -90,10 +90,10 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
   
 - `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- Bu yordam en sık kullanılan çeşitli olan `Sub Main()`. Daha fazla bilgi için [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+ Bu yordamın en yaygın çeşitliliği şunlardır `Sub Main()` . Daha fazla bilgi için bkz. [Visual Basic ana yordam](main-procedure.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
-- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Visual Basic sınırlamaları](../../../visual-basic/programming-guide/program-structure/limitations.md)
+- [Visual Basic'de Ana Yordam](main-procedure.md)
+- [Visual Basic Adlandırma Kuralları](naming-conventions.md)
+- [Visual Basic Sınırlamaları](limitations.md)

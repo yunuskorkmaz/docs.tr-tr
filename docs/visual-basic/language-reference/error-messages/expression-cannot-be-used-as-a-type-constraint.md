@@ -7,44 +7,44 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2ba411a5f0db21539a9cf99c7645b8c9309caab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642799"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409562"
 ---
-# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<ifadesi >' tür kısıtlaması olarak kullanılamaz
-Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyor bir ifade içerir.  
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expression>' tür kısıtlaması olarak kullanılamaz
+Kısıtlama listesi, bir tür parametresinde geçerli bir kısıtlamayı temsil eden bir ifade içerir.  
   
- Tür parametresi için geçirilen tür bağımsız değişkeni gereksinimlerine kısıtlaması listesini uygular. Herhangi bir bileşimini aşağıdaki gereksinimleri belirtebilirsiniz:  
+ Bir kısıtlama listesi, tür parametresine geçirilen tür bağımsız değişkenine gereksinimleri uygular. Aşağıdaki gereksinimleri herhangi bir kombinasyonda belirtebilirsiniz:  
   
 - Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
   
-- Tür bağımsız değişkeni en fazla bir sınıftan devralmalıdır  
+- Tür bağımsız değişkeni en çok bir sınıftan devralması gerekir  
   
-- Tür bağımsız değişkeni oluşturma kodunu erişip parametresiz bir oluşturucu kullanıma açmalıdır (dahil `New` kısıtlaması)  
+- Tür bağımsız değişkeni, oluşturma kodunun erişebileceği parametresiz bir Oluşturucu kullanıma sunmalıdır ( `New` kısıtlamayı dahil)  
   
- Kısıtlama listede herhangi bir belirli bir sınıf veya arabirim eklemezseniz, aşağıdakilerden birini belirterek daha genel bir gereksinim uygulayabilir:  
+ Kısıtlama listesine belirli bir sınıf veya arabirim eklemezseniz, aşağıdakilerden birini belirterek daha genel bir gereksinim uygulayabilirsiniz:  
   
-- Tür bağımsız değişkeni bir değer türü olmalıdır (dahil `Structure` kısıtlaması)  
+- Tür bağımsız değişkeni bir değer türü olmalıdır ( `Structure` kısıtlamayı dahil)  
   
-- Tür bağımsız değişkeninin bir başvuru türü olmalıdır (dahil `Class` kısıtlaması)  
+- Tür bağımsız değişkeni bir başvuru türü olmalıdır ( `Class` kısıtlamayı dahil)  
   
- Her ikisini de belirtemezsiniz `Structure` ve `Class` aynı türünde parametre ve bunlardan birini birden çok kez belirtilemez.  
+ `Structure` `Class` Aynı tür parametresi için hem hem de belirtemezsiniz ve birden çok kez belirtemezsiniz.  
   
- **Hata Kimliği:** BC32061  
+ **Hata kimliği:** BC32061  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- İfade ve onun öğelerine doğru yazdığınızdan emin olun.  
+- İfadenin ve öğelerinin doğru yazıldığından emin olun.  
   
-- İfade önceki gereksinimleri listesi için uymuyorsa kısıtlama listesinden kaldırın.  
+- İfade önceki gereksinimler listesine uygun değilse, kısıtlama listesinden kaldırın.  
   
-- İfade bir arabirimin veya sınıfın başvuruyorsa, derleyici bu arabirimin veya sınıfın erişimi olduğunu doğrulayın. Adıyla nitelemeniz gerekebilir ve projenize bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için bkz: "Projeler için başvurular" [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+- İfade bir arabirime veya sınıfa başvuruyorsa, derleyicinin bu arabirime veya sınıfa erişimi olduğunu doğrulayın. Adını nitelemeniz gerekebilir ve projenize bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için, bkz. [belirtilen öğelere başvurularda](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)"projelere başvurular".  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Değer Türleri ve Başvuru Türleri](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [Değer Türleri ve Başvuru Türleri](../../programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

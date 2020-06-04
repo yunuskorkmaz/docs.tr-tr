@@ -1,13 +1,13 @@
 ---
-title: "Nasıl yapılır: XML 'den metin dosyaları oluşturma"
+title: 'Nasıl yapılır: XML’den Metin Dosyaları Oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: b30596df1a490d78d1333c688a23ed4ab30bcb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9d89d8d5e929574fa26cc5c11346980e8b235ac5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344571"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396577"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Nasıl yapılır: XML 'den metin dosyaları oluşturma (Visual Basic)
 Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.  
@@ -15,7 +15,7 @@ Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyas
 ## <a name="example"></a>Örnek  
  Visual Basic sürümü, dizeler koleksiyonunu tek bir dizeye toplamak için yordamsal kodu kullanır.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](projections-and-transformations-linq-to-xml.md)

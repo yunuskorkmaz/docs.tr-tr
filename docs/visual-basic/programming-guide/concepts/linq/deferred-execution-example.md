@@ -2,12 +2,12 @@
 title: Ertelenmiş Yürütme Örneği
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 863b018b6047d61f6fb4a5c1ac68151ed69d24a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354235"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410805"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>Ertelenmiş yürütme örneği (Visual Basic)
 
@@ -15,7 +15,7 @@ Bu konu, ertelenmiş yürütmenin ve yavaş değerlendirmenin LINQ to XML sorgul
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, ertelenmiş yürütmeyi kullanan bir genişletme yöntemi kullanılırken yürütme sırasını gösterir. Örnek, üç dizeden oluşan bir dizi bildirir. Daha sonra `ConvertCollectionToUpperCase`tarafından döndürülen koleksiyon üzerinden yinelenir.
+Aşağıdaki örnek, ertelenmiş yürütmeyi kullanan bir genişletme yöntemi kullanılırken yürütme sırasını gösterir. Örnek, üç dizeden oluşan bir dizi bildirir. Daha sonra tarafından döndürülen koleksiyon üzerinden yinelenir `ConvertCollectionToUpperCase` .
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -57,10 +57,10 @@ ToUpper: source ghi
 Main: str GHI
 ```
 
-`ConvertCollectionToUpperCase`tarafından döndürülen koleksiyon üzerinden yineleme yaparken, her öğe kaynak dize dizisinden alınır ve sonraki öğe kaynak dize dizisinden alınmadan önce büyük harfe dönüştürülür.
+Tarafından döndürülen koleksiyonda yineleme yapıldığında `ConvertCollectionToUpperCase` , her öğe kaynak dize dizisinden alınır ve sonraki öğe kaynak dize dizisinden alınmadan önce büyük harfe dönüştürülür.
 
-Döndürülen koleksiyondaki her öğe, `Main``foreach` döngüsünde işlenmeden önce, tüm dizeler dizisinin büyük harfe dönüştürülmediğine bakabilirsiniz.
+Döndürülen koleksiyondaki her öğe, içindeki döngüde işlenmeden önce, tüm dizeler dizisinin büyük harfe dönüştürülmediğine bakabilirsiniz `foreach` `Main` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Öğretici: ertelenmiş yürütme (Visual Basic)](tutorial-deferred-execution.md)

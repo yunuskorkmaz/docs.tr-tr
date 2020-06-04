@@ -15,18 +15,18 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 37fcfa897accb23e9c8c56407ce4ebd956b39c4d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345283"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410740"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 
-Belirtilen bir öğenin *kapsamı* , adını nitelemeden veya bir [içeri aktarmalar Ifadesiyle (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)kullanılabilir hale getirmeden başvurabilen tüm kod kümesidir. Bir öğesi aşağıdaki düzeylerin birinde kapsama sahip olabilir:
+Belirtilen bir öğenin *kapsamı* , adını nitelemeden veya bir [içeri aktarmalar Ifadesiyle (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)kullanılabilir hale getirmeden başvurabilen tüm kod kümesidir. Bir öğesi aşağıdaki düzeylerin birinde kapsama sahip olabilir:
 
-|Düzey|Açıklama|
+|Düzey|Description|
 |-----------|-----------------|
 |Blok kapsamı|Yalnızca bildirildiği kod bloğu içinde kullanılabilir|
 |Yordam kapsamı|İçinde bildirildiği yordamın içindeki tüm kodlar için kullanılabilir|
@@ -45,7 +45,7 @@ Bir öğenin kapsamını bildirdiğinizde belirtirsiniz. Kapsam aşağıdaki fak
 
 - Öğesi için bildirdiğiniz erişim düzeyi
 
-Aynı ada ancak farklı kapsama sahip değişkenler tanımladığınızda, bu durum beklenmedik sonuçlara yol açacağından dikkatli olmanız gerekir. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).
+Aynı ada ancak farklı kapsama sahip değişkenler tanımladığınızda, bu durum beklenmedik sonuçlara yol açacağından dikkatli olmanız gerekir. Daha fazla bilgi için bkz. [bildirilmemiş öğelere başvurular](references-to-declared-elements.md).
 
 ## <a name="levels-of-scope"></a>Kapsam düzeyleri
 
@@ -57,7 +57,7 @@ Blok, aşağıdaki gibi bildirim deyimlerini başlatma ve sonlandırma içinde y
 
 - `Do` ve `Loop`
 
-- `For` [`Each`] ve `Next`
+- `For`[ `Each` ] ve`Next`
 
 - `If` ve `End If`
 
@@ -71,7 +71,7 @@ Blok, aşağıdaki gibi bildirim deyimlerini başlatma ve sonlandırma içinde y
 
 - `With` ve `End With`
 
-Bir blok içinde bir değişken bildirirseniz, bunu yalnızca bu blok içinde kullanabilirsiniz. Aşağıdaki örnekte, `cube` tamsayı değişkeninin kapsamı `If` ve `End If`arasındaki bloğa sahiptir ve yürütme bloğundan geçtiğinde `cube` artık başvurmaz.
+Bir blok içinde bir değişken bildirirseniz, bunu yalnızca bu blok içinde kullanabilirsiniz. Aşağıdaki örnekte, tamsayı değişkeninin kapsamı `cube` ve arasındaki blokdır `If` `End If` ve artık `cube` yürütme bloğundan dışarı geçtiğinde başvurursunuz.
 
 ```vb
 If n < 1291 Then
@@ -85,12 +85,12 @@ End If
 
 ### <a name="procedure-scope"></a>Yordam kapsamı
 
-Yordam içinde belirtilen bir öğe, bu yordamın dışında kullanılamaz. Yalnızca bildirimi içeren yordam bunu kullanabilir. Bu düzeydeki değişkenler *yerel değişkenler*olarak da bilinir. Onları, [static](../../../../visual-basic/language-reference/modifiers/static.md) anahtar sözcüğüyle veya olmadan [Dim ifadesiyle](../../../../visual-basic/language-reference/statements/dim-statement.md)bildirirsiniz.
+Yordam içinde belirtilen bir öğe, bu yordamın dışında kullanılamaz. Yalnızca bildirimi içeren yordam bunu kullanabilir. Bu düzeydeki değişkenler *yerel değişkenler*olarak da bilinir. Onları, [static](../../../language-reference/modifiers/static.md) anahtar sözcüğüyle veya olmadan [Dim ifadesiyle](../../../language-reference/statements/dim-statement.md)bildirirsiniz.
 
 Yordam ve blok kapsamı yakından ilgilidir. Bir yordam içinde bir değişken bildirirseniz, ancak bu yordamın içindeki herhangi bir blok dışında, değişkenini blok kapsamına sahip olarak düşünebilirsiniz; burada blok tüm yordamdır.
 
 > [!NOTE]
-> Tüm yerel öğeler, `Static` değişken olsalar bile, göründükleri yordama özeldir. Bir yordam içinde [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak hiçbir öğe bildiremezsiniz.
+> Değişkenler olsalar bile tüm yerel öğeler `Static` , göründükleri yordama özeldir. Bir yordam içinde [Public](../../../language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak hiçbir öğe bildiremezsiniz.
 
 ### <a name="module-scope"></a>Modül kapsamı
 
@@ -98,9 +98,9 @@ Kolaylık olması için, tek vadeli *Modül düzeyi* modüller, sınıflar ve ya
 
 Modül düzeyinde bir bildirim yaptığınızda seçtiğiniz erişim düzeyi kapsamı belirler. Modül, sınıf veya yapıyı içeren ad alanı da kapsamı etkiler.
 
-[Özel](../../../../visual-basic/language-reference/modifiers/private.md) erişim düzeyi bildirdiğiniz öğeler, bu modüldeki her yordamda kullanılabilir, ancak farklı bir modüldeki herhangi bir koda uygulanmaz. Herhangi bir erişim düzeyi anahtar sözcüğü kullanmıyorsanız modül düzeyindeki `Dim` deyimin varsayılan değeri `Private` olur. Ancak, `Dim` deyimindeki `Private` anahtar sözcüğünü kullanarak kapsamı ve erişim düzeyini daha belirgin hale getirebilirsiniz.
+[Özel](../../../language-reference/modifiers/private.md) erişim düzeyi bildirdiğiniz öğeler, bu modüldeki her yordamda kullanılabilir, ancak farklı bir modüldeki herhangi bir koda uygulanmaz. `Dim`Modül düzeyindeki deyimin değeri, `Private` herhangi bir erişim düzeyi anahtar sözcüğü kullanmıyorsanız varsayılan değerdir. Ancak, bildiriminde anahtar sözcüğünü kullanarak kapsamı ve erişim düzeyini daha belirgin hale getirebilirsiniz `Private` `Dim` .
 
-Aşağıdaki örnekte, modülünde tanımlanan tüm yordamlar `strMsg`dize değişkenine başvurabilir. İkinci yordam çağrıldığında, bir iletişim kutusunda `strMsg` dize değişkeninin içeriğini görüntüler.
+Aşağıdaki örnekte, modülünde tanımlanan tüm yordamlar dize değişkenine başvurabilir `strMsg` . İkinci yordam çağrıldığında, dize değişkeninin içeriğini `strMsg` bir iletişim kutusunda görüntüler.
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -117,7 +117,7 @@ End Sub
 
 ### <a name="namespace-scope"></a>Ad alanı kapsamı
 
-Bir öğeyi, [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) veya [Public](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak modül düzeyinde bildirirseniz, bu, öğenin bildirildiği ad alanı boyunca tüm yordamlarda kullanılabilir hale gelir. Önceki örnekte yapılan aşağıdaki değişiklikle, dize değişkeni `strMsg`, bildiriminin ad alanı içinde herhangi bir yerde kodla başvurulabilir.
+Bir öğeyi, [Friend](../../../language-reference/modifiers/friend.md) veya [Public](../../../language-reference/modifiers/public.md) anahtar sözcüğünü kullanarak modül düzeyinde bildirirseniz, bu, öğenin bildirildiği ad alanı boyunca tüm yordamlarda kullanılabilir hale gelir. Önceki örnekte yapılan aşağıdaki değişiklikle, dize değişkenine, `strMsg` bildiriminin ad alanı içinde herhangi bir yerde kod eklenebilir.
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
@@ -126,7 +126,7 @@ Public strMsg As String
 
 Ad alanı kapsamı iç içe geçmiş ad alanlarını içerir. Ad alanı içinde bulunan bir öğe, bu ad alanı içinde iç içe yerleştirilmiş herhangi bir ad alanı içinde de kullanılabilir.
 
-Projeniz herhangi bir [ad alanı bildirisi](../../../../visual-basic/language-reference/statements/namespace-statement.md)içermiyorsa, projedeki her şey aynı ad alanında bulunur. Bu durumda, ad alanı kapsamı Proje kapsamı olarak düşünülebilir. bir modül, sınıf veya yapıdaki `Public` öğeleri, projesine başvuran tüm projeler için de kullanılabilir.
+Projeniz herhangi bir [ad alanı bildirisi](../../../language-reference/statements/namespace-statement.md)içermiyorsa, projedeki her şey aynı ad alanında bulunur. Bu durumda, ad alanı kapsamı Proje kapsamı olarak düşünülebilir. `Public`bir modül, sınıf veya yapıdaki öğeler, projesine başvuran tüm projeler için de kullanılabilir.
 
 ## <a name="choice-of-scope"></a>Kapsam seçimi
 
@@ -136,19 +136,19 @@ Bir değişken bildirdiğinizde, kapsamını seçerken aşağıdaki noktaları g
 
 Yerel değişkenler, aşağıdaki nedenlerden dolayı her türlü geçici hesaplama için iyi bir seçimdir:
 
-- **Ad çakışması engelleme.** Yerel değişken adları çakışmaya karşı savunmasız değildir. Örneğin, `intTemp`adlı bir değişken içeren birkaç farklı yordam oluşturabilirsiniz. Her bir `intTemp` yerel bir değişken olarak bildirildiği sürece, her yordam yalnızca kendi `intTemp`sürümünü tanır. Herhangi bir yordam, diğer yordamlarda `intTemp` değişkenlerini etkilemeden yerel `intTemp` değeri değiştirebilir.
+- **Ad çakışması engelleme.** Yerel değişken adları çakışmaya karşı savunmasız değildir. Örneğin, adlı bir değişken içeren birkaç farklı yordam oluşturabilirsiniz `intTemp` . Her biri `intTemp` yerel değişken olarak bildirildiği sürece, her yordam yalnızca kendi sürümünü tanır `intTemp` . Herhangi bir yordam, `intTemp` diğer yordamlardan değişkenleri etkilemeden yerel içindeki değeri değiştirebilir `intTemp` .
 
-- **Bellek tüketimi.** Yerel değişkenler yalnızca yordamı çalışırken belleği tüketir. Yordamı çağıran koda geri döndüğünde, belleği serbest bırakılır. Aksine, [paylaşılan](../../../../visual-basic/language-reference/modifiers/shared.md) ve [statik](../../../../visual-basic/language-reference/modifiers/static.md) değişkenler, uygulamanız çalışmayı durdurana kadar bellek kaynaklarını kullanır, bu nedenle onları yalnızca gerekli olduğunda kullanın. Örnek *değişkenleri* , örnekleri mevcut olmaya devam ederken belleği tüketir, bu da yerel değişkenlerden daha az verimlidir, ancak `Shared` veya `Static` değişkenlerinden daha verimli hale gelir.
+- **Bellek tüketimi.** Yerel değişkenler yalnızca yordamı çalışırken belleği tüketir. Yordamı çağıran koda geri döndüğünde, belleği serbest bırakılır. Aksine, [paylaşılan](../../../language-reference/modifiers/shared.md) ve [statik](../../../language-reference/modifiers/static.md) değişkenler, uygulamanız çalışmayı durdurana kadar bellek kaynaklarını kullanır, bu nedenle onları yalnızca gerekli olduğunda kullanın. Örnek *değişkenleri* , örnekleri mevcut olmaya devam ederken belleği tüketir, bu da yerel değişkenlerden daha az verimlidir, ancak büyük olasılıkla `Shared` veya değişkenlerinden daha etkilidir `Static` .
 
 ### <a name="minimizing-scope"></a>Kapsamı küçültme
 
-Genel olarak, herhangi bir değişken veya sabit bildirirken, kapsamı olabildiğince dar hale getirmek için iyi bir programlama uygulamasıdır (blok kapsam en dar olur). Bu, belleğin korunmasına yardımcı olur ve yanlış değişkene başvuran kodunuzun yanlışlıkla yanlış olduğunu en aza indirir. Benzer şekilde, bir değişkeni yalnızca yordam çağrıları arasında değerini korumak gerektiğinde [statik](../../../../visual-basic/language-reference/modifiers/static.md) olacak şekilde bildirmeniz gerekir.
+Genel olarak, herhangi bir değişken veya sabit bildirirken, kapsamı olabildiğince dar hale getirmek için iyi bir programlama uygulamasıdır (blok kapsam en dar olur). Bu, belleğin korunmasına yardımcı olur ve yanlış değişkene başvuran kodunuzun yanlışlıkla yanlış olduğunu en aza indirir. Benzer şekilde, bir değişkeni yalnızca yordam çağrıları arasında değerini korumak gerektiğinde [statik](../../../language-reference/modifiers/static.md) olacak şekilde bildirmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Visual Basic ömrü](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Bildirilen Öğe Özellikleri](declared-element-characteristics.md)
+- [Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme](how-to-control-the-scope-of-a-variable.md)
+- [Visual Basic'de Ömür](lifetime.md)
+- [Visual Basic erişim düzeyleri](access-levels.md)
+- [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
+- [Değişken Bildirimi](../variables/variable-declaration.md)

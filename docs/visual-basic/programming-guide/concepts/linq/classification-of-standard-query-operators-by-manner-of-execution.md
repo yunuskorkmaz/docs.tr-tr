@@ -2,12 +2,12 @@
 title: Standart Sorgu İşleçlerinin Yürütme Yöntemine Göre Sınıflandırılması
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: edace870ea684c70bbf2768c44388f2236622c2c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345711"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410909"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)
 Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yöntemden biriyle yürütülür: ımımor ertelenmiş. Ertelenmiş yürütmeyi kullanan sorgu işleçleri Ayrıca iki kategoriye ayrılabilir: akış ve akış olmayan. Farklı sorgu işleçlerinin nasıl yürütüleceğini biliyorsanız, belirli bir sorgudan aldığınız sonuçları anlamanıza yardımcı olabilir. Bu, veri kaynağı değiştirilirken veya başka bir sorgunun üstünde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konu, standart sorgu işleçlerini yürütme tarzlarına göre sınıflandırır.  
@@ -17,8 +17,8 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 ### <a name="immediate"></a>Hemen  
  Anında yürütme, veri kaynağının okunduğu ve işlemin sorgunun bildirildiği noktada gerçekleştirildiği anlamına gelir. Tek, Numaralandırılmamış bir sonuç döndüren tüm standart sorgu işleçleri hemen yürütülür.  
   
-### <a name="deferred"></a>Ertelenmiş  
- Ertelenmiş yürütme, işlemin sorgunun bildirildiği noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldıktan sonra, örneğin, bir `For Each` ekstresi kullanılarak gerçekleştirilir. Bu, sorguyu yürütmenin sonuçlarının sorgu tanımlandığında değil, sorgu yürütüldüğünde veri kaynağının içeriğine bağlı olduğunu gösterir. Sorgu değişkeni birden çok kez numaralandırıldıktan sonra sonuçlar her seferinde farklılık gösterebilir. Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> olan ve <xref:System.Linq.IOrderedEnumerable%601> ertelenmiş bir şekilde yürütülen standart sorgu işleçleri neredeyse hepsi.  
+### <a name="deferred"></a>İlmiş  
+ Ertelenmiş yürütme, işlemin sorgunun bildirildiği noktada gerçekleştirilmediği anlamına gelir. İşlem yalnızca sorgu değişkeni numaralandırıldıktan sonra, örneğin bir ifade kullanılarak yapılır `For Each` . Bu, sorguyu yürütmenin sonuçlarının sorgu tanımlandığında değil, sorgu yürütüldüğünde veri kaynağının içeriğine bağlı olduğunu gösterir. Sorgu değişkeni birden çok kez numaralandırıldıktan sonra sonuçlar her seferinde farklılık gösterebilir. Dönüş türü <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IOrderedEnumerable%601> ertelenmiş bir şekilde yürütülen tüm standart sorgu işleçleri neredeyse hepsi.  
   
  Ertelenmiş yürütmeyi kullanan sorgu işleçleri ayrıca akış veya akış olmayan olarak sınıflandırılabilirler.  
   
@@ -90,6 +90,6 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

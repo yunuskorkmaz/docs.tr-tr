@@ -1,5 +1,5 @@
 ---
-title: Skip Tümcesi
+title: Skip Yan Tümcesi
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkip
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: c582b014bad4fa8fa3165d2b756f4bc955840cfc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 427d14453260a54bd3f2ab9a8ac75dedacd291f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349648"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359664"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip Tümcesi (Visual Basic)
 Koleksiyonda belirtilen sayıda öğeyi atlar ve kalan öğeleri döndürür.  
@@ -26,28 +26,28 @@ Skip count
   
 ## <a name="parts"></a>Bölümler  
  `count`  
- Gerekli. Atlanacak dizinin öğe sayısını değerlendiren bir değer veya ifade.  
+ Gereklidir. Atlanacak dizinin öğe sayısını değerlendiren bir değer veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Skip` yan tümcesi, bir sorgunun bir sonuç listesinin başlangıcında öğeleri atlamasına ve kalan öğeleri döndürmesini sağlar. Atlanacak öğe sayısı `count` parametresi tarafından tanımlanır.  
+ `Skip`Yan tümce bir sorgunun bir sonuç listesinin başlangıcında öğeleri atlamasına ve kalan öğeleri döndürmesini sağlar. Atlanacak öğe sayısı parametresi tarafından tanımlanır `count` .  
   
- Sorgunun herhangi bir segmentinden bir veri aralığı döndürmek için `Take` yan tümcesiyle `Skip` yan tümcesini kullanabilirsiniz. Bunu yapmak için aralığın ilk öğesinin dizinini `Skip` yan tümcesine ve aralığın boyutunu `Take` yan tümcesine geçirin.  
+ `Skip` `Take` Bir sorgunun herhangi bir segmentinden bir veri aralığı döndürmek için yan tümcesini kullanın. Bunu yapmak için aralığın ilk öğesinin dizinini `Skip` yan tümcesine ve aralığın boyutunu `Take` yan tümcesine geçirin.  
   
- Bir sorguda `Skip` yan tümcesini kullandığınızda, sonuçların, `Skip` yan tümcesinin amaçlanan sonuçları atlamasına olanak sağlayacak bir sırada döndürüldüğünden emin olmanız da gerekebilir. Sorgu sonuçlarını sıralama hakkında daha fazla bilgi için bkz. [order by yan tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ `Skip`Bir sorguda yan tümcesini kullandığınızda, sonuçların `Skip` amaçlanan sonuçları atlayıp atlamalarını sağlayacak bir sırada döndürüldüğünden emin olmanız da gerekebilir. Sorgu sonuçlarını sıralama hakkında daha fazla bilgi için bkz. [order by yan tümcesi](order-by-clause.md).  
   
- Belirtilen koşula bağlı olarak yalnızca belirli öğelerin yoksayılacağını belirtmek için `SkipWhile` yan tümcesini kullanabilirsiniz.  
+ `SkipWhile`Belirtilen koşula bağlı olarak yalnızca belirli öğelerin yoksayılacağını belirtmek için yan tümcesini kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, sayfalardaki bir sorgudan veri döndürmek için `Take` yan tümcesiyle birlikte `Skip` yan tümcesini kullanır. `GetCustomers` işlevi, belirtilen başlangıç dizini değerine kadar listedeki müşterileri atlamak için `Skip` yan tümcesini kullanır ve bu dizin değerinden başlayan müşterilerin bir sayfasını döndürmek için `Take` yan tümcesini kullanır.  
+ Aşağıdaki kod örneği, yan tümcesini, `Skip` `Take` sayfalardaki bir sorgudan veri döndürmek için yan tümcesiyle birlikte kullanır. `GetCustomers`İşlevi, `Skip` sağlanan başlangıç dizini değerine kadar listedeki müşterileri atlamak için yan tümcesini kullanır ve `Take` Bu dizin değerinden başlayan müşterilerin bir sayfasını döndürmek için yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
-- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Order By Yan Tümcesi](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Skip While Yan Tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take Yan Tümcesi](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Visual Basic'de LINQ'e Giriş](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Sorgular](index.md)
+- [Select yan tümcesi](select-clause.md)
+- [From yan tümcesi](from-clause.md)
+- [Order By Yan Tümcesi](order-by-clause.md)
+- [Skip While Yan Tümcesi](skip-while-clause.md)
+- [Take Yan Tümcesi](take-clause.md)

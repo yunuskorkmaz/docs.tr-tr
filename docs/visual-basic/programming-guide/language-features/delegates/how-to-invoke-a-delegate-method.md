@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Temsilci Yöntemi Çağırma'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345261"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410727"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Nasıl yapılır: Temsilci Yöntemi Çağırma (Visual Basic)
 
@@ -15,7 +15,7 @@ Bu örnek, bir yöntemin bir temsilciyle nasıl ilişkilendirileceğini gösteri
 
 ### <a name="create-the-delegate-and-matching-procedures"></a>Temsilci ve eşleştirme yordamlarını oluşturma
 
-1. `MySubDelegate`adlı bir temsilci oluşturun.
+1. Adlı bir temsilci oluşturun `MySubDelegate` .
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
@@ -31,7 +31,7 @@ Bu örnek, bir yöntemin bir temsilciyle nasıl ilişkilendirileceğini gösteri
     End Class
     ```
 
-3. Temsilcinin bir örneğini oluşturan ve yerleşik `Invoke` yöntemini çağırarak temsilciyle ilişkili yöntemi çağıran bir yöntem tanımlayın.
+3. Temsilcinin bir örneğini oluşturan ve yerleşik metodu çağırarak temsilciyle ilişkili yöntemi çağıran bir yöntem tanımlayın `Invoke` .
 
     ```vb
     Protected Sub DelegateTest()
@@ -45,7 +45,7 @@ Bu örnek, bir yöntemin bir temsilciyle nasıl ilişkilendirileceğini gösteri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Delegate Deyimi](../../../language-reference/statements/delegate-statement.md)
+- [Temsilciler](index.md)
+- [Olaylar](../events/index.md)
 - [Çok İş Parçacıklı Uygulamalar](../../../../standard/threading/using-threads-and-threading.md)

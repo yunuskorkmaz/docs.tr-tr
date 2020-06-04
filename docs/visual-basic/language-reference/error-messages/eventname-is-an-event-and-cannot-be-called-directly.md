@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 510fff5370e63a31ee271421c0ab6f154518899f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803331"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409601"
 ---
-# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname >' bir olaydır ve doğrudan çağrılamaz
-' <`eventname`>' bir olaydır ve bu nedenle doğrudan çağrılamaz. Kullanım bir `RaiseEvent` deyimi bir olay oluşturabilmelidir.  
+# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname>' bir olaydır ve doğrudan çağrılamaz
+' <`eventname`> ' bir olaydır, bu nedenle doğrudan çağrılamaz. Bir `RaiseEvent` olayı yükseltmek için bir ifade kullanın.  
   
- Yordam çağrısı yordam adı için bir olay belirtir. Bir olay işleyicisi bir yordam, ancak olay gerçekleşti ve işlenen gerekir bir sinyal bir cihaz.  
+ Yordam çağrısı, yordam adı için bir olay belirtir. Olay işleyicisi bir yordamdır, ancak olayın kendisi, oluşturulması ve işlenmesi gereken bir sinyal aygıtıdır.  
   
- **Hata Kimliği:** BC32022  
+ **Hata kimliği:** BC32022  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Kullanım bir `RaiseEvent` deyimini olaya sinyal ve yordamı veya bunu işleyen yordamlarını çağırma.  
+1. Bir `RaiseEvent` olayı işaret etmek ve onu işleyen yordamı ya da yordamları çağırmak için bir ifade kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [RaiseEvent Deyimi](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [RaiseEvent Deyimi](../statements/raiseevent-statement.md)

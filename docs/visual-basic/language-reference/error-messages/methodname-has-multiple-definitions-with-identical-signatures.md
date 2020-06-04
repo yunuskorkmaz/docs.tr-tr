@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: b884220053bbcec633c964a41892bc8df42f41c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b397711cc2fb1fd0c1dfd76899b162ab5fc1542
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602435"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397239"
 ---
-# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<yöntemAdı >' aynı imzaya sahip birden fazla tanım var
-A `Function` veya `Sub` yordam bildirimi, bir önceki bildirimi olarak aynı yordamı adı ve bağımsız değişken listesi kullanır. Olası nedenlerinden biri, özgün bir yordamı aşırı yükleme girişiminde olmasıdır. Aşırı yüklenmiş yordamları farklı bağımsız değişken listeleri olması gerekir.  
+# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<methodname>' içinde aynı imzaya sahip birden fazla tanım var
+Bir `Function` veya `Sub` yordam bildirimi, önceki bir bildirim olarak aynı yordam adı ve bağımsız değişken listesini kullanır. Olası bir neden, özgün yordamı aşırı yükleme girişimdir. Aşırı yüklenmiş yordamların farklı bağımsız değişken listeleri olmalıdır.  
   
- **Hata Kimliği:** BC30269  
+ **Hata kimliği:** BC30269  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yordam adı veya bağımsız değişken listesiyle değiştirin veya yinelenen bildirimini kaldırın.  
+- Yordam adını veya bağımsız değişken listesini değiştirin veya yinelenen bildirimi kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+- [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](../../programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

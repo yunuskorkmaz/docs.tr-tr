@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a1464e0ac0d87bf9763efe63f2e09927a157a24
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649991"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415433"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>Gereken geçici dosya oluşturulamıyor
-Her iki sürücü dolu içeren TEMP ortam değişkeni tarafından belirtilen dizin veya bir geçersiz veya salt okunur sürücü veya dizin TEMP ortam değişkeni belirtir.  
+Sürücü, TEMP ortam değişkeni tarafından belirtilen dizini içeren bir tam veya TEMP ortam değişkeni, geçersiz veya salt okunurdur bir sürücü ya da dizin belirtiyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Dosyaları sürücüsünden tam varsa silin.  
+1. Tam ise sürücüdeki dosyaları silin.  
   
-2. Farklı bir sürücü TEMP ortam değişkenini belirtin.  
+2. GEÇICI ortam değişkeninde farklı bir sürücü belirtin.  
   
-3. TEMP ortam değişkeni için geçerli bir sürücü belirtin.  
+3. GEÇICI ortam değişkeni için geçerli bir sürücü belirtin.  
   
-4. Şu anda belirtilen sürücü veya dizin salt okunur kısıtlama kaldırın.  
+4. Şu anda belirtilen sürücüden veya dizinden salt okuma kısıtlamasını kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../../programming-guide/language-features/error-types.md)

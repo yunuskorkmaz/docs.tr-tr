@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266930"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414395"
 ---
 # <a name="nested-control-structures-visual-basic"></a>İç İçe Geçmiş Denetim Yapıları (Visual Basic)
-Denetim deyimlerini diğer denetim deyimleri içine(örneğin, `For...Next` bir döngü içinde bir `If...Then...Else` blok) yerleştirebilirsiniz. Başka bir kontrol deyiminin içine yerleştirilen bir kontrol deyiminin *iç içe*olduğu söylenir.  
+Denetim deyimlerini diğer denetim deyimlerinin içine yerleştirebilirsiniz. Örneğin, `If...Then...Else` bir döngü içindeki bir blok `For...Next` . Başka bir denetim ifadesinin içine yerleştirilmiş bir denetim ifadesinin *iç içe*olduğu söylenir.  
   
-## <a name="nesting-levels"></a>İç Içe Düzeyleri  
- Visual Basic'teki denetim yapıları istediğiniz kadar düzeye iç içe olabilir. İç içe yapıların her birinin gövdesini girinterek daha okunabilir hale getirmek yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) düzenleyicisi bunu otomatik olarak yapar.  
+## <a name="nesting-levels"></a>İç içe düzeyler  
+ Visual Basic içindeki denetim yapıları, istediğiniz kadar sayıda düzeyde iç içe olabilir. İç içe yapıları, her birinin gövdesini girintileyerek daha okunaklı hale getirmek yaygın bir uygulamadır. Tümleşik geliştirme ortamı (IDE) Düzenleyicisi bunu otomatik olarak yapar.  
   
- Aşağıdaki örnekte, yordam `sumRows` matrisin her satırının pozitif öğelerini bir araya getirir.  
+ Aşağıdaki örnekte, yordam `sumRows` matrisin her satırının pozitif öğelerini birlikte ekler.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Önceki örnekte, `Next` ilk deyim iç `For` döngüyü kapatır `Next` ve son deyim `For` dış döngüyü kapatır.  
+ Yukarıdaki örnekte, ilk `Next` ifade iç `For` döngüyü kapatır ve son `Next` ifade dıştaki `For` döngüyü kapatır.  
   
- Aynı şekilde, iç `If` içe `End If` geçen ifadelerde, ifadeler `If` otomatik olarak en yakın önceki deyime uygulanır. İç `Do` içe geçmiş döngüler benzer bir şekilde `Loop` çalışır ve `Do` en içteki deyim en içteki deyimle eşleşiyor.  
+ Benzer şekilde, iç içe geçmiş `If` deyimlerde `End If` deyimler, en yakın önceki ifadeye otomatik olarak uygulanır `If` . İç içe `Do` döngüler benzer bir şekilde çalışarak en `Loop` içteki ifadesiyle eşleşen en içteki deyimle birlikte çalışır `Do` .  
   
 > [!NOTE]
-> Birçok denetim yapısı için, bir anahtar kelimeyi tıklattığınızda, yapıdaki tüm anahtar kelimeler vurgulanır. Örneğin, bir `If` `If...Then...Else` yapıyı tıklattığınızda, tüm `If` `Then`, `ElseIf` `Else`, `End If` , ve inşaattaki tüm örnekleri vurgulanır. Bir sonraki veya önceki vurgulanan anahtar kelimeye geçmek için CTRL+SHIFT+DOWN ARROW veya CTRL+SHIFT+UP ARROW tuşlarına basın.  
+> Birçok denetim yapısında, bir anahtar sözcüğe tıkladığınızda yapıdaki tüm anahtar sözcükler vurgulanır. Örneğin, bir yapıya tıkladığınızda,,,, `If` `If...Then...Else` `If` `Then` `ElseIf` `Else` ve `End If` oluşturma içindeki tüm örnekleri vurgulanır. Sonraki veya önceki vurgulanmış anahtar sözcüğe geçmek için CTRL + SHIFT + aşağı ok veya CTRL + SHIFT + yukarı ok tuşlarına basın.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Farklı Kontrol Yapılarının İç Içe Geçme  
- Bir tür kontrol yapısını başka bir türe yuvalayabilirsiniz. Aşağıdaki örnekte `With` bir döngü `For Each` içinde bir `If` blok `With` ve blok içinde iç içe blokları kullanır.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Farklı türlerdeki denetim yapılarını iç içe geçirme  
+ Bir tür denetim yapısını başka bir tür içinde iç içe geçirebilirsiniz. Aşağıdaki örnek, `With` döngüsünün içinde bir blok `For Each` ve `If` blok içindeki iç içe bloklar kullanır `With` .  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,16 +64,16 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Üst Üste Binen Kontrol Yapıları  
- Denetim yapıları çakışamazsınız. Bu, iç içe geçen herhangi bir yapının bir sonraki en içteki yapıiçinde tamamen yer alması gerektiği anlamına gelir. Örneğin, iç `For` `With` blok sona ermeden önce döngü sona erdiğinden aşağıdaki düzenleme geçersizdir.  
+## <a name="overlapping-control-structures"></a>Çakışan denetim yapıları  
+ Denetim yapılarıyla çakışamaz. Bu, herhangi bir iç içe yapının bir sonraki en içteki yapıda tamamen dahil olması gerektiği anlamına gelir. Örneğin, `For` döngü iç blok sonlandırılmadan önce sonlandırdığı için aşağıdaki düzenleme geçersizdir `With` .  
   
  ![Geçersiz iç içe geçme örneğini gösteren diyagram.](./media/nested-control-structures/example-invalid-nesting.gif)
   
- Visual Basic derleyicisi bu tür çakışan denetim yapılarını algılar ve derleme zamanı hatası sinyalleri vetir.  
+ Visual Basic derleyici, bu tür çakışan denetim yapılarını algılar ve derleme zamanı hatasına işaret eder.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kontrol Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Denetim akışı](index.md)
+- [Karar Yapıları](decision-structures.md)
+- [Döngü Yapıları](loop-structures.md)
+- [Diğer Denetim Yapıları](other-control-structures.md)

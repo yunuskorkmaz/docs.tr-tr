@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: f2f4dc428a247275f9919c4a8b6e6944a558eef0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 14145f165adf5ccd20298a70ca5596488b488b0c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409965"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>'\<AttributeName > ' özniteliği birden çok kez uygulanamaz
+# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>'\<attributename>' özniteliği bir defadan fazla uygulanamaz
 
-Özniteliği yalnızca bir kez uygulanabilir. `AttributeUsage` özniteliği bir özniteliğin birden çok kez uygulanıp uygulanamayacağını belirler.  
+Özniteliği yalnızca bir kez uygulanabilir. `AttributeUsage`Özniteliği bir özniteliğin birden çok kez uygulanıp uygulanamayacağını belirler.  
   
  **Hata kimliği:** BC30663  
   
@@ -24,7 +24,7 @@ ms.locfileid: "73968234"
   
 1. Özniteliğin yalnızca bir kez uygulandığından emin olun.  
   
-2. Geliştirdiğiniz özel öznitelikler kullanıyorsanız, aşağıdaki örnekte olduğu gibi, `AttributeUsage` özniteliğini birden çok öznitelik kullanımına izin verecek şekilde değiştirmeyi düşünün.  
+2. Geliştirdiğiniz özel öznitelikleri kullanıyorsanız, `AttributeUsage` Aşağıdaki örnekte olduğu gibi, özniteliğini birden çok öznitelik kullanımına izin verecek şekilde değiştirmeyi düşünün.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
@@ -33,5 +33,5 @@ ms.locfileid: "73968234"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.AttributeUsageAttribute>
-- [Özel Öznitelikler Oluşturma](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [Özel Öznitelikler Oluşturma](../../programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [AttributeUsage](../../programming-guide/concepts/attributes/attributeusage.md)

@@ -8,62 +8,62 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350170"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408464"
 ---
 # <a name="as-clause-visual-basic"></a>As Tümcesi (Visual Basic)
-Bir bildirim deyimindeki bir veri türünü veya genel tür parametresindeki kısıtlama listesini tanımlayan bir `As` yan tümcesi tanıtır.  
+Bir `As` bildirim deyimindeki bir veri türünü veya genel tür parametresindeki kısıtlama listesini tanımlayan bir yan tümce tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `As` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
+ `As`Anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
- [Aggregate Yan Tümcesi](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate Yan Tümcesi](../queries/aggregate-clause.md)  
   
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](class-statement.md)  
   
- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const Deyimi](const-statement.md)  
   
- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Deyimi](declare-statement.md)  
   
- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate Deyimi](delegate-statement.md)  
   
- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim Deyimi](dim-statement.md)  
   
- [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum Deyimi](enum-statement.md)  
   
- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event Deyimi](event-statement.md)  
   
- [İçin... Sonraki deyimler](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [İçin... Sonraki deyimler](for-next-statement.md)  
   
- [Her biri için... Sonraki deyimler](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Her biri için... Sonraki deyimler](for-each-next-statement.md)  
   
- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [From yan tümcesi](../queries/from-clause.md)  
   
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](function-statement.md)  
   
- [Group Join Yan Tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join Yan Tümcesi](../queries/group-join-clause.md)  
   
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface Deyimi](interface-statement.md)  
   
- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Operator Deyimi](operator-statement.md)  
   
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](property-statement.md)  
   
- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Yapısı](structure-statement.md)  
   
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](sub-statement.md)  
   
- [Deneyin... Yakala... Finally deyimleri](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Deneyin... Yakala... Finally deyimleri](try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yeni Değişken Oluşturma](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
-- [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Nasıl yapılır: Yeni Değişken Oluşturma](../../programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Veri türleri](../../programming-guide/language-features/data-types/index.md)
+- [Değişken Bildirimi](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Tür Listesi](type-list.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [Anahtar sözcükler](../keywords/index.md)

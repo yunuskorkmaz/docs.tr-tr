@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 7c05c712bcbb0a61bb3121bb71a7823a1c29afb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625580"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409640"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Projedeki XML şemaları derlenirken hataları oluştu
-Projedeki XML şemaları derlenirken hataları oluştu. Bu nedenle, XML IntelliSense kullanılamıyor.  
+Projedeki XML şemaları derlenirken hatalar oluştu. Bu nedenle, XML IntelliSense kullanılamıyor.  
   
- Projeye dahil bir XML şema tanımı (XSD) şemasında bir hata var. Proje için mevcut bir XSD şeması ile çakışıyor ayarlanan XSD şema (.xsd) dosyası eklediğinizde, bu hata oluşur.  
+ Projeye dahil edilen bir XML şema tanımı (XSD) şemasında bir hata var. Bu hata, proje için mevcut XSD şema kümesiyle çakışan bir XSD şeması (. xsd) dosyası eklediğinizde oluşur.  
   
- **Hata Kimliği:** BC36810  
+ **Hata kimliği:** BC36810  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Uyarıyı çift tıklatın **hata listesine** penceresi. Visual Basic uyarısı kaynağı XSD dosyası konumu yönlendirilirsiniz. XSD şema hatasını düzeltin.  
+- **Hatalar Listesi** penceresinde uyarıya çift tıklayın. Visual Basic, sizi uyarının kaynağı olan XSD dosyasındaki konuma götürür. XSD şemasında hatayı düzeltin.  
   
-- Gerekli tüm XSD şema (.xsd) dosyaları projeye dahil olduğundan emin olun. Tıklaymanız gerekebilir **tüm dosyaları göster** üzerinde **proje** , .xsd görmek için menü dosyaları **Çözüm Gezgini**. .Xsd dosyasını sağ tıklatın ve ardından **projeye dahil et** dosyası projenize eklenecek.  
+- Tüm gerekli XSD şeması (. xsd) dosyalarının projeye eklendiğinden emin olun. . Xsd dosyalarınızı **Çözüm Gezgini**görmek için **Proje** menüsündeki **tüm dosyaları göster** ' e tıklamanız gerekebilir. Bir. xsd dosyasına sağ tıklayın ve dosyayı projenize dahil etmek için **projeye dahil et** ' e tıklayın.  
   
-- XML ve şema Sihirbazı kullanıyorsanız, aynı kaynaktan birden fazla kez şemaları Infer, bu hata oluşabilir. Bu durumda, projeden varolan XSD şema dosyalarını kaldırabilirsiniz ekleme yeni bir XML şema öğesi şablonuna ve projeniz için sonra XML şema Sihirbazı ile tüm geçerli XML kaynakları sağlayın.  
+- XML 'yi şema Sihirbazı ' nı kullanıyorsanız, şemaları aynı kaynaktan birden çok kez çıkarmanız durumunda bu hata ortaya çıkabilir. Bu durumda, var olan XSD şema dosyalarını projeden kaldırabilir, şema öğe şablonuna yeni bir XML ekleyebilir ve sonra projenize yönelik tüm geçerli XML kaynaklarıyla XML 'e şema Sihirbazı sağlayabilirsiniz.  
   
-- XSD Şemanızda herhangi bir hata belirlenirse, ayrıntılı hata iletisi sağlamak için yeterli bilgi XML derleyici olmayabilir. .Xsd dosyaları için XML ad alanları, proje eşlemesinde Visual Studio'da ayarlamak için XML şeması için belirtilen XML ad alanlarını dahil olun, ayrıntılı hata bilgisini almak mümkün olabilir.  
+- XSD şemanızda herhangi bir hata tanımlanmamışsa, XML derleyicisi ayrıntılı bir hata iletisi sağlamak için yeterli bilgiye sahip olmayabilir. Projenize dahil edilen. xsd dosyaları için XML ad alanlarının, Visual Studio 'da XML şeması kümesi için tanımlanan XML ad alanları ile eşleştiğinden emin olmanız durumunda daha ayrıntılı hata bilgileri alabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Listesi Penceresi](/visualstudio/ide/reference/error-list-window)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Hata Listesi penceresi](/visualstudio/ide/reference/error-list-window)
+- [XML](../../programming-guide/language-features/xml/index.md)

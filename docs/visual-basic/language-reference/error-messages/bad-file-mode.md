@@ -4,37 +4,37 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 9a59faf1b6f845858e36efcabdf0758e41ad75dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 534ea2d8316dc29cace798c5ad9b7697a290026f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619741"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409875"
 ---
 # <a name="bad-file-mode"></a>Hatalı dosya modu
-Dosya içerikleri düzenleme içinde kullanılan ifadeleri dosyası içinde açıldı moduna uygun olmalıdır. Olası nedenler şunlardır:  
+Dosya içeriğini düzenleme bölümünde kullanılan deyimler, dosyanın açıldığı moda uygun olmalıdır. Olası nedenler şunlardır:  
   
-- A `FilePutObject` veya `FileGetObject` deyimi bir sıralı dosyasını belirtir.  
+- `FilePutObject`Or `FileGetObject` deyimleri sıralı bir dosya belirtir.  
   
-- A `Print` deyim için bir erişim modu dışında açılmış bir dosyada belirtir `Output` veya `Append`.  
+- Bir `Print` ifade, veya dışında bir erişim modu için açılan bir dosya `Output` belirtir `Append` .  
   
-- Bir `Input` deyim için bir erişim modu dışında açılmış bir dosyasını belirtir `Input`  
+- Bir `Input` ifade, bir erişim modu için açılan bir dosyayı belirtir`Input`  
   
-- Salt okunur dosyaya yazma girişimi.  
+- Salt okunurdur bir dosyaya yazma girişimi.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Emin `FilePutObject` ve `FileGetObject` için açık olan dosyaları yalnızca başvuran `Random` veya `Binary` erişim.  
+- ' In `FilePutObject` `FileGetObject` yalnızca veya erişim için açık olan dosyalara başvuruda bulunduğundan emin olun `Random` `Binary` .  
   
-- Emin `Print` belirtir ya da için açılan bir dosyanın `Output` veya `Append` erişim modu. Aksi halde veri dosyasına yerleştirmeniz farklı bir deyim kullanın veya uygun bir modda dosyayı tekrar açın.  
+- `Print`Ya da erişim modu için açılmış bir dosya belirttiğinden emin olun `Output` `Append` . Aksi takdirde, verileri dosyaya yerleştirmek için farklı bir ifade kullanın veya dosyayı uygun bir modda yeniden açın.  
   
-- Emin `Input` için açılan bir dosyanın belirtir `Input`. Aksi durumda, farklı bir deyim veri dosyasında veya uygun bir modda dosyasını yeniden kullanın.  
+- `Input`İçin açılmış bir dosya belirttiğinden emin olun `Input` . Aksi takdirde, verileri dosyaya yerleştirmek veya uygun modda dosyayı yeniden açmak için farklı bir ifade kullanın.  
   
-- Salt okunur dosya yazıyorsanız, dosya okuma/yazma durumunu değiştirebilir veya yazma çalışmayın.  
+- Salt okunurdur bir dosyaya yazıyorsanız dosyanın okuma/yazma durumunu değiştirin veya yazmaya çalışmayın.  
   
-- Kullanılabilir işlevselliği kullanmak `My.Computer.FileSystem` nesne.  
+- Nesnesinde bulunan işlevleri kullanın `My.Computer.FileSystem` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

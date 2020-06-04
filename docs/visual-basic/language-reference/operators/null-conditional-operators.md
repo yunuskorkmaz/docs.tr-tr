@@ -1,23 +1,23 @@
 ---
-title: Null-koşullu Işleçler
+title: Null koşullu İşleçler
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348294"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401478"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. '? () null-koşullu işleçler (Visual Basic)
 
-Bir üye erişimi (`?.`) veya dizin (`?()`) işlemini gerçekleştirmeden önce sol işlenenin değerini null (`Nothing`) olarak sınar. Sol işlenen `Nothing`olarak değerlendirilirse `Nothing` döndürür. Normalde değer türlerini döndüren ifadelerde, null koşullu işlecin bir <xref:System.Nullable%601>döndürdüğünü unutmayın.
+`Nothing`Bir üye erişimi () veya dizin () işlemi gerçekleştirmeden önce, sol taraftaki işlenenin değerini null () için sınar `?.` `?()` ; `Nothing` sol taraftaki işlenen olarak değerlendirilirse döndürür `Nothing` . Normalde değer türlerini döndüren ifadelerde null koşullu işlecin bir döndürür <xref:System.Nullable%601> .
 
-Bu işleçler, özellikle veri yapılarına göre azalan sırada null denetimleri işlemek için daha az kod yazmanıza yardımcı olur. Örneğin:
+Bu işleçler, özellikle veri yapılarına göre azalan sırada null denetimleri işlemek için daha az kod yazmanıza yardımcı olur. Örnek:
 
 ```vb
 ' Nothing if customers is Nothing
@@ -39,7 +39,7 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Bazen, bu nesnedeki bir Boole üyesinin değerine bağlı olarak null olabilecek bir nesne üzerinde işlem yapmanız gerekir (aşağıdaki örnekte `IsAllowedFreeShipping` Boolean özelliği gibi):
+Bazen, bu nesnedeki bir Boole üyesinin değerine bağlı olarak null olabilecek bir nesne üzerinde işlem yapmanız gerekir (aşağıdaki örnekteki Boolean özelliği gibi `IsAllowedFreeShipping` ):
 
 ```vb
 Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
@@ -57,13 +57,13 @@ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
 If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Null koşullu işleçler kısa devre dışı.  Koşullu üye erişimi ve dizin işlemleri zincirindeki bir işlem `Nothing`döndürürse, zincir yürütmenin geri kalanı duraklar.  Aşağıdaki örnekte, `A`, `B`veya `C` `Nothing`değerlendirilirse `C(E)` değerlendirilmez.
+Null koşullu işleçler kısa devre dışı.  Bir koşullu üye erişimi ve dizin işlemleri zincirindeki bir işlem döndürülürse `Nothing` , zincir yürütmenin geri kalanı duraklar.  Aşağıdaki örnekte,,, `C(E)` `A` `B` veya `C` olarak değerlendirilirse olarak değerlendirilmez `Nothing` .
 
 ```vb
 A?.B?.C?(E)
 ```
 
-Null koşullu üye erişimi için başka bir kullanım, temsilcileri çok daha az kodla iş parçacığı güvenli bir şekilde çağırmektir.  Aşağıdaki örnek, `NewsBroadcaster` ve `NewsReceiver`iki türü tanımlar. Haber öğeleri `NewsBroadcaster.SendNews` temsilcisi tarafından alıcıya gönderilir.
+Null koşullu üye erişimi için başka bir kullanım, temsilcileri çok daha az kodla iş parçacığı güvenli bir şekilde çağırmektir.  Aşağıdaki örnek, ve a olmak üzere iki tür tanımlar `NewsBroadcaster` `NewsReceiver` . Haber öğeleri, temsilci tarafından alıcıya gönderilir `NewsBroadcaster.SendNews` .
 
 ```vb
 Public Module NewsBroadcaster
@@ -91,7 +91,7 @@ Public Class NewsReceiver
 End Class
 ```
 
-`SendNews` çağrısı listesinde hiç öğe yoksa, `SendNews` temsilcisi bir <xref:System.NullReferenceException>oluşturur. Null koşullu işleçlerden önce, aşağıdaki gibi kod temsilci çağırma listesi `Nothing`değildi:
+Çağırma listesinde hiç öğe yoksa `SendNews` , `SendNews` temsilci bir oluşturur <xref:System.NullReferenceException> . Null koşullu işleçlerden önce, aşağıdaki gibi bir kod temsilci çağırma listesi olmadığı için `Nothing` :
 
 ```vb
 SendNews = SendNews.Combine({SendNews, client})
@@ -107,10 +107,10 @@ SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-Derleyici, yalnızca bir kez `SendNews` değerlendirmek üzere kod oluşturduğundan ve sonucu geçici bir değişkende tutarak, yeni yöntem iş parçacığı açısından güvenlidir. Null koşullu temsilci çağırma sözdizimi `SendNews?(String)`olmadığından `Invoke` yöntemi açıkça çağırmanız gerekir.
+Derleyici yalnızca bir kez değerlendirmek üzere kod oluşturduğundan `SendNews` ve sonucu geçici bir değişkende tutarak, yeni yöntem iş parçacığı açısından güvenlidir. `Invoke`Null koşullu temsilci çağırma sözdizimi olmadığından yöntemi açık bir şekilde çağırmanız gerekir `SendNews?(String)` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleçler (Visual Basic)](index.md)
-- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)
-- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)
+- [Visual Basic Programlama Kılavuzu](../../programming-guide/index.md)
+- [Visual Basic dil başvurusu](../index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344254"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408614"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: Komut Satırı Derleyicisini Çağırma (Visual Basic)
 
@@ -30,7 +30,7 @@ Komut satırı derleyicisini, yürütülebilir dosyasının adını MS-DOS istem
 
 4. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
 
-    Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
+    Örneğin, kaynak kodunuzu adlı bir dizinde depoladıysanız `SourceFiles` , komut istemi ' ni açıp `cd SourceFiles` Bu dizine geçmek için yazın. Dizinde adlı bir kaynak dosyası varsa `Source.vb` , yazarak derleyebilirsiniz `vbc.exe Source.vb` .
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Windows komut Istemi için PATH ortam değişkenini derleyiciye ayarlamak için
 
@@ -56,9 +56,9 @@ Komut satırı derleyicisini, yürütülebilir dosyasının adını MS-DOS istem
 
 2. Komut satırında `vbc.exe` *sourceFileName* yazın ve ENTER tuşuna basın.
 
-     Örneğin, kaynak kodunuzu adlı `SourceFiles`bir dizinde depoladıysanız, komut istemi ' ni açıp bu dizine geçmek için yazın. `cd SourceFiles` Dizinde adlı `Source.vb`bir kaynak dosyası varsa, yazarak `vbc.exe Source.vb`derleyebilirsiniz.
+     Örneğin, kaynak kodunuzu adlı bir dizinde depoladıysanız `SourceFiles` , komut istemi ' ni açıp `cd SourceFiles` Bu dizine geçmek için yazın. Dizinde adlı bir kaynak dosyası varsa `Source.vb` , yazarak derleyebilirsiniz `vbc.exe Source.vb` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Koşullu derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Koşullu Derleme](../../programming-guide/program-structure/conditional-compilation.md)

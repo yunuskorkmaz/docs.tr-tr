@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 1aa1edf0130e388c6cc87662d83591f41a8e2325
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349157"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398246"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms Uygulaması Temelleri (Visual Basic)
 
-Visual Basic önemli bir kısmı, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamalar oluşturma olanağıdır. Windows Forms kullanarak uygulamayı ve Kullanıcı arabirimini oluşturmak için Visual Studio 'Yu kullanabilirsiniz. Windows Forms bir uygulama, <xref:System.Windows.Forms> ad alanından sınıflar üzerine kurulmuştur.
+Visual Basic önemli bir kısmı, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamalar oluşturma olanağıdır. Windows Forms kullanarak uygulamayı ve Kullanıcı arabirimini oluşturmak için Visual Studio 'Yu kullanabilirsiniz. Windows Forms bir uygulama, ad alanından sınıflar üzerine kurulmuştur <xref:System.Windows.Forms> .
 
 ## <a name="designing-windows-forms-applications"></a>Windows Forms uygulamaları tasarlama
 
@@ -38,11 +38,11 @@ Bir Kullanıcı formunuza veya denetimlerinden birine bir şey yaparken bir olay
 
 ### <a name="controls"></a>Denetimler
 
-Windows Forms, formlara yerleştirebileceğiniz çeşitli denetimler içerir: metin kutularını, düğmeleri, açılan kutuları, radyo düğmelerini ve hatta Web sayfalarını görüntüleyen denetimler. Bir formda kullanabileceğiniz tüm denetimlerin listesi için, bkz. [Windows Forms kullanılacak denetimler](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Mevcut bir denetim gereksinimlerinizi karşılamıyorsa, Windows Forms <xref:System.Windows.Forms.UserControl> sınıfı kullanarak kendi özel denetimlerinizi oluşturmayı da destekler.
+Windows Forms, formlara yerleştirebileceğiniz çeşitli denetimler içerir: metin kutularını, düğmeleri, açılan kutuları, radyo düğmelerini ve hatta Web sayfalarını görüntüleyen denetimler. Bir formda kullanabileceğiniz tüm denetimlerin listesi için, bkz. [Windows Forms kullanılacak denetimler](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Mevcut bir denetim gereksinimlerinizi karşılamıyorsa, Windows Forms sınıfı kullanarak kendi özel denetimlerinizi oluşturmayı da destekler <xref:System.Windows.Forms.UserControl> .
 
-Windows Forms, Microsoft Office gibi yüksek kaliteli uygulamalardaki özellikleri taklit eden zengin Kullanıcı arabirimi denetimlerine sahiptir. <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.MenuStrip> denetimini kullanarak metin ve görüntü içeren araç çubukları ve menüler oluşturabilir, alt menüler görüntüleyebilir ve metin kutuları ve Birleşik giriş kutuları gibi diğer denetimleri barındırabilirsiniz.
+Windows Forms, Microsoft Office gibi yüksek kaliteli uygulamalardaki özellikleri taklit eden zengin Kullanıcı arabirimi denetimlerine sahiptir. <xref:System.Windows.Forms.ToolStrip>Ve denetimini kullanarak <xref:System.Windows.Forms.MenuStrip> metin ve görüntü içeren araç çubukları ve menüler oluşturabilir, alt menüler görüntüleyebilir ve metin kutuları ve Birleşik giriş kutuları gibi diğer denetimleri barındırabilirsiniz.
 
-Visual Studio sürükle ve bırak formları Tasarımcısı ile kolayca Windows Forms uygulamalar oluşturabilirsiniz: imlecinizin bulunduğu denetimleri seçmeniz ve bunları form üzerinde istediğiniz yere yerleştirmeniz yeterlidir. Tasarımcı, denetimleri hizalamayı ortadan kaldırmaya yönelik kılavuz çizgileri ve "satırları Yasla" gibi araçlar sağlar. Visual Studio 'yu veya komut satırında derlemeyi kullanıp kullanmayacağınızı, en az zaman ve çaba ile gelişmiş <xref:System.Windows.Forms.FlowLayoutPanel>form <xref:System.Windows.Forms.TableLayoutPanel> düzenleri <xref:System.Windows.Forms.SplitContainer> oluşturmak için ve denetimlerini kullanabilirsiniz.
+Visual Studio sürükle ve bırak formları Tasarımcısı ile kolayca Windows Forms uygulamalar oluşturabilirsiniz: imlecinizin bulunduğu denetimleri seçmeniz ve bunları form üzerinde istediğiniz yere yerleştirmeniz yeterlidir. Tasarımcı, denetimleri hizalamayı ortadan kaldırmaya yönelik kılavuz çizgileri ve "satırları Yasla" gibi araçlar sağlar. Visual Studio 'Yu veya komut satırında derlemeyi kullanıp kullanmayacağınızı, <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.SplitContainer> en az zaman ve çaba ile gelişmiş form düzenleri oluşturmak için ve denetimlerini kullanabilirsiniz.
 
 ### <a name="custom-ui-elements"></a>Özel Kullanıcı arabirimi öğeleri
 
@@ -59,9 +59,9 @@ Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yard�
 
 ## <a name="displaying-and-manipulating-data"></a>Verileri görüntüleme ve düzenleme
 
-Birçok uygulamanın, verileri bir veritabanından, XML dosyasından, XML Web hizmetinden veya başka bir veri kaynağından görüntülemesi gerekir. Windows Forms, her veri parçasının kendi hücresini <xref:System.Windows.Forms.DataGridView> kaplayacağı şekilde, bu tür tablosal verileri geleneksel bir satır ve sütun biçiminde işlemeye yönelik denetim adlı esnek bir denetim sağlar. ' <xref:System.Windows.Forms.DataGridView> Yi kullanarak, tek tek hücrelerin görünümünü özelleştirebilir, rastgele satırları ve sütunları bir yere kilitleyebilir ve diğer özellikler arasında hücrelerde karmaşık denetimleri görüntüleyebilirsiniz.
+Birçok uygulamanın, verileri bir veritabanından, XML dosyasından, XML Web hizmetinden veya başka bir veri kaynağından görüntülemesi gerekir. Windows Forms <xref:System.Windows.Forms.DataGridView> , her veri parçasının kendi hücresini kaplayacağı şekilde, bu tür tablosal verileri geleneksel bir satır ve sütun biçiminde işlemeye yönelik denetim adlı esnek bir denetim sağlar. ' Yi kullanarak <xref:System.Windows.Forms.DataGridView> , tek tek hücrelerin görünümünü özelleştirebilir, rastgele satırları ve sütunları bir yere kilitleyebilir ve diğer özellikler arasında hücrelerde karmaşık denetimleri görüntüleyebilirsiniz.
 
-Ağ üzerinden veri kaynaklarına bağlanmak, Windows Forms akıllı istemcileri olan basit bir görevdir. Visual <xref:System.Windows.Forms.BindingSource> Studio 2005 ve .NET Framework 2,0 ' de Windows Forms yeni olan bileşen, bir veri kaynağına bağlantıyı temsil eder ve verileri denetimlere bağlama, önceki ve sonraki kayıtlara gitme, kayıtları düzenlemeyle ve değişiklikleri özgün kaynağa geri kaydetme yöntemlerini gösterir. Denetim <xref:System.Windows.Forms.BindingNavigator> , kullanıcıların kayıtlar arasında gezindiği <xref:System.Windows.Forms.BindingSource> bileşen üzerinde basit bir arabirim sağlar.
+Ağ üzerinden veri kaynaklarına bağlanmak, Windows Forms akıllı istemcileri olan basit bir görevdir. <xref:System.Windows.Forms.BindingSource>Visual Studio 2005 ve .NET Framework 2,0 ' de Windows Forms yeni olan bileşen, bir veri kaynağına bağlantıyı temsil eder ve verileri denetimlere bağlama, önceki ve sonraki kayıtlara gitme, kayıtları düzenlemeyle ve değişiklikleri özgün kaynağa geri kaydetme yöntemlerini gösterir. <xref:System.Windows.Forms.BindingNavigator>Denetim, <xref:System.Windows.Forms.BindingSource> kullanıcıların kayıtlar arasında gezindiği bileşen üzerinde basit bir arabirim sağlar.
 
 ### <a name="data-bound-controls"></a>Veri bağlantılı denetimler
 
@@ -75,7 +75,7 @@ Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yard�
 
 |Alıcı|Bkz.|
 |--------|---------|
-|<xref:System.Windows.Forms.BindingSource> Bileşeni kullanma|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Bileşeni kullanma <xref:System.Windows.Forms.BindingSource>|[Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
 |ADO.NET veri kaynaklarıyla çalışma|[Nasıl yapılır: Windows Forms BindingSource Bileşeni ile ADO.NET Verilerini Sıralama ve Filtreleme](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Veri Kaynakları penceresini kullanma|[İzlenecek yol: Windows formunda verileri görüntüleme](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
@@ -110,4 +110,4 @@ Bu özellikleri kullanma hakkında adım adım bilgiler için aşağıdaki Yard�
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - [Windows Forms'a Genel Bakış](../../../framework/winforms/windows-forms-overview.md)
-- [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms Nesnesi](../../language-reference/objects/my-forms-object.md)

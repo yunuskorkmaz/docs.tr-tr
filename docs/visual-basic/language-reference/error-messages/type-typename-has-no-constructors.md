@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198149"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408516"
 ---
-# <a name="type-typename-has-no-constructors"></a>'\<TypeName > ' türünde Oluşturucu yok
-Bir tür `Sub New()`çağrısını desteklemez. Olası bir neden, bozuk bir derleyici veya ikili dosyadır.  
+# <a name="type-typename-has-no-constructors"></a>'\<typename>' türünün yapıcısı yok
+Bir tür, çağrısını desteklemez `Sub New()` . Olası bir neden, bozuk bir derleyici veya ikili dosyadır.  
   
  **Hata kimliği:** BC30251  
   
@@ -31,5 +31,5 @@ Bir tür `Sub New()`çağrısını desteklemez. Olası bir neden, bozuk bir derl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)
+- [Nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md)
+- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)

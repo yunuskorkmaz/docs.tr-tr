@@ -6,30 +6,30 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716631"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408555"
 ---
 # <a name="-libpath"></a>-libpath
 Başvurulan derlemelerin konumunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -libpath:dirList  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
   
-|Sözleşme Dönemi|Tanım|  
+|Terim|Tanım|  
 |---|---|  
 |`dirList`|Gereklidir. Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırmakta olduğunuz dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde, derleyicinin aranacağı dizinlerin noktalı virgülle ayrılmış listesi. Dizin adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-libpath` Seçeneği, [-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
+ `-libpath`Seçeneği, [-Reference](reference.md) seçeneğinin başvurduğu derlemelerin konumunu belirtir.  
   
  Derleyici, aşağıdaki sırada tam olarak nitelenen derleme başvurularını arar:  
   
@@ -37,20 +37,20 @@ Başvurulan derlemelerin konumunu belirtir.
   
 2. Ortak dil çalışma zamanı sistem dizini.  
   
-3. Tarafından `-libpath`belirtilen dizinler.  
+3. Tarafından belirtilen dizinler `-libpath` .  
   
 4. LıB ortam değişkeni tarafından belirtilen dizinler.  
   
- `-libpath` Seçeneği eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
+ `-libpath`Seçenek eklenebilir; bir defadan fazla belirtmek önceki değerlere ekler.  
   
- Derleme `-reference` başvurusunu belirtmek için kullanın.  
+ `-reference`Derleme başvurusunu belirtmek için kullanın.  
   
 |Visual Studio tümleşik geliştirme ortamında Set-libpath|  
 |---|  
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Başvurular** sekmesine tıklayın.<br />3. **başvuru yolları...** düğmesine tıklayın.<br />4. **başvuru yolları** iletişim kutusunda dizin adını **klasör:** kutusuna girin.<br />5. **Klasör Ekle**'ye tıklayın.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, bir `T2.vb` . exe dosyası oluşturmak için derlenir. Derleyici, C: sürücüsünün kök dizininde ve derleme başvuruları için C: sürücüsünün yeni derlemeler dizininde çalışma dizinine bakar.  
+ Aşağıdaki kod, `T2.vb` bir. exe dosyası oluşturmak için derlenir. Derleyici, C: sürücüsünün kök dizininde ve derleme başvuruları için C: sürücüsünün yeni derlemeler dizininde çalışma dizinine bakar.  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

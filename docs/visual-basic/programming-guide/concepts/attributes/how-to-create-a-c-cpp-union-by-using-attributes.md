@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: öznitelikleri kullanarak CC++ birleşimi oluşturma'
+title: 'Nasıl yapılır: öznitelikleri kullanarak C-C + + birleşimi oluşturma'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ebab0ad947f776932f9379af3969e369eeec1941
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349493"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400687"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Nasıl yapılır: öznitelikleri kullanarak C/C++ Union oluşturma (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Nasıl yapılır: öznitelikleri kullanarak C/C++ birleşimi oluşturma (Visual Basic)
 
-Öznitelikleri kullanarak yapıların bellekte nasıl düzenlendiğini özelleştirebilirsiniz. Örneğin, `StructLayout(LayoutKind.Explicit)` ve `FieldOffset` özniteliklerini kullanarak C/C++ içinde birleşim olarak bilinen öğeleri oluşturabilirsiniz.
+Öznitelikleri kullanarak yapıların bellekte nasıl düzenlendiğini özelleştirebilirsiniz. Örneğin, ve özniteliklerini kullanarak C/C++ içinde birleşim olarak bilinen öğeleri oluşturabilirsiniz `StructLayout(LayoutKind.Explicit)` `FieldOffset` .
 
 ## <a name="example"></a>Örnek
 
-Bu kod kesiminde, tüm `TestUnion` alanları bellekte aynı konumda başlar.
+Bu kod kesiminde, tüm alanları `TestUnion` bellekte aynı konumda başlar.
 
 ```vb
 ' Add an Imports statement for System.Runtime.InteropServices.
@@ -67,15 +67,15 @@ Structure TestExplicit
  End Structure
 ```
 
-İki tamsayı alanı `i1` ve `i2`, `lg`ile aynı bellek konumlarını paylaşır. Yapı düzeni üzerinde bu denetim sıralaması, platform çağırma kullanılırken kullanışlıdır.
+İki tamsayı alanı `i1` ve `i2` aynı bellek konumlarını ile paylaşır `lg` . Yapı düzeni üzerinde bu denetim sıralaması, platform çağırma kullanılırken kullanışlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programlama Kılavuzu](../../index.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)
-- [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Öznitelikler (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Yansıma (Visual Basic)](../reflection.md)
+- [Öznitelikler (Visual Basic)](../../../language-reference/attributes.md)
+- [Özel öznitelikler oluşturma (Visual Basic)](creating-custom-attributes.md)
+- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](accessing-attributes-by-using-reflection.md)
