@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340202"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388549"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma (Visual Basic)
 Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Çağıran kod, yordama geçmesi için gereken bilgileri elde edebilir ve ardından tek bir yordam adı çağırarak, hangi bağımsız değişken geçirdiğine bakılmaksızın onu çağırabilir.  
@@ -26,7 +26,7 @@ Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Ç
   
 3. Hangi yordamın hangi sürüme çağrılacağını belirlemelisiniz. Visual Basic, denetimi bağımsız değişken listenizden eşleşen sürüme geçirir.  
   
-     Aşağıdaki örnek, [nasıl yapılır: bir yordamın birden fazla sürümünü tanımlama konusunda](./how-to-define-multiple-versions-of-a-procedure.md)belirtilen `post` yordamını çağırır. Müşteri kimliğini edinir, bir `String` veya `Integer`olup olmadığını belirler ve her iki durumda da aynı yordamı çağırır.  
+     Aşağıdaki örnek, `post` [nasıl yapılır: bir yordamın birden fazla sürümünü tanımlama konusunda](./how-to-define-multiple-versions-of-a-procedure.md)belirtilen yordamı çağırır. Müşteri kimliğini edinir, bir veya bir olduğunu belirler `String` `Integer` ve her iki durumda da aynı yordamı çağırır.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -42,5 +42,5 @@ Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Ç
 - [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
-- [Aşırı Yükleme Çözümü](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Aşırı yükleme çözümlemesi](./overload-resolution.md)
+- [Aşırı Yüklemeler](../../../language-reference/modifiers/overloads.md)

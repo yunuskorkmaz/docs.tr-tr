@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345894"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387601"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic'te Uygulama Günlükleriyle Çalışma
 
-`My.Application.Log` Ve `My.Log` nesneleri günlüğe kaydetme ve izleme bilgilerini günlüklere yazmayı kolaylaştırır.
+`My.Application.Log`Ve `My.Log` nesneleri günlüğe kaydetme ve izleme bilgilerini günlüklere yazmayı kolaylaştırır.
 
 ## <a name="how-messages-are-logged"></a>Iletiler günlüğe nasıl kaydedilir?
 
-İlk olarak, iletinin önem derecesi günlüğün <xref:System.Diagnostics.TraceSource.Switch%2A> <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> özelliğinin özelliği ile denetlenir. Varsayılan olarak, günlük `TraceListener` koleksiyonunda belirtilen izleme dinleyicilerine yalnızca önem derecesi "bilgi" ve üzeri iletiler geçirilir. Ardından, her dinleyici iletinin önem derecesini dinleyicinin <xref:System.Diagnostics.TraceSource.Switch%2A> özelliği ile karşılaştırır. İletinin önem derecesi yeterince yüksekse, dinleyici iletiyi yazar.
+İlk olarak, iletinin önem derecesi <xref:System.Diagnostics.TraceSource.Switch%2A> Günlüğün özelliğinin özelliği ile denetlenir <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> . Varsayılan olarak, günlük koleksiyonunda belirtilen izleme dinleyicilerine yalnızca önem derecesi "bilgi" ve üzeri iletiler geçirilir `TraceListener` . Ardından, her dinleyici iletinin önem derecesini dinleyicinin özelliği ile karşılaştırır <xref:System.Diagnostics.TraceSource.Switch%2A> . İletinin önem derecesi yeterince yüksekse, dinleyici iletiyi yazar.
 
-Aşağıdaki diyagramda, `WriteEntry` yönteme yazılan bir iletinin günlüğün izleme dinleyicilerinin `WriteLine` yöntemlerine nasıl geçirildiği gösterilmektedir:
+Aşağıdaki diyagramda, yönteme yazılan bir iletinin `WriteEntry` `WriteLine` Günlüğün izleme dinleyicilerinin yöntemlerine nasıl geçirildiği gösterilmektedir:
 
 ![Günlük çağrımı gösteren diyagram.](./media/working-with-application-logs/my-log-call-messages.png)
 
@@ -31,35 +31,35 @@ Uygulamanın yapılandırma dosyasını değiştirerek günlük ve izleme dinley
 
 ## <a name="where-messages-are-logged"></a>Iletiler günlüğe kaydedilir
 
-Derlemenin yapılandırma dosyası yoksa, `My.Application.Log` ve `My.Log` nesneleri uygulamanın hata ayıklama çıktısına ( <xref:System.Diagnostics.DefaultTraceListener> sınıfı aracılığıyla) yazar. Ayrıca, `My.Application.Log` nesnesi derlemenin günlük dosyasına ( <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> sınıfı aracılığıyla) yazar, `My.Log` nesne ASP.NET Web sayfasının çıktısına ( <xref:System.Web.WebPageTraceListener> sınıfı aracılığıyla) yazar.
+Derlemenin yapılandırma dosyası yoksa, `My.Application.Log` ve `My.Log` nesneleri uygulamanın hata ayıklama çıktısına ( <xref:System.Diagnostics.DefaultTraceListener> sınıfı aracılığıyla) yazar. Ayrıca, nesnesi `My.Application.Log` derlemenin günlük dosyasına ( <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> sınıfı aracılığıyla) yazar, `My.Log` nesne ASP.NET Web sayfasının çıktısına ( <xref:System.Web.WebPageTraceListener> sınıfı aracılığıyla) yazar.
 
 Hata ayıklama çıktısı, uygulamanızı hata ayıklama modunda çalıştırırken Visual Studio **çıktı** penceresinde görüntülenebilir. **Çıkış** penceresini açmak Için, **Hata Ayıkla** menü öğesine tıklayın, **Windows**' ın üzerine gelin ve ardından **Çıkış**' a tıklayın. **Çıkış** penceresinde, **çıktıyı göster** kutusundan **Hata Ayıkla** ' yı seçin.
 
-Varsayılan olarak, `My.Application.Log` günlük dosyasını kullanıcının uygulama verileri yoluna yazar. <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> Nesnenin <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> özelliğinden yolunu alabilirsiniz. Yolun biçimi aşağıdaki gibidir:
+Varsayılan olarak, `My.Application.Log` günlük dosyasını kullanıcının uygulama verileri yoluna yazar. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A>Nesnenin özelliğinden yolunu alabilirsiniz <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> . Yolun biçimi aşağıdaki gibidir:
 
 `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`
 
-İçin `BasePath` tipik bir değer aşağıdaki gibidir.
+İçin tipik bir değer `BasePath` aşağıdaki gibidir.
 
-C:\Documents and Settings\\`username`\Application Data
+C:\Documents and Settings \\ `username` \Application Data
 
-`CompanyName`, `ProductName`Ve `ProductVersion` değerleri uygulamanın derleme bilgileriyle gelir. Günlük dosyası adının biçimi *AssemblyName*. log biçimindedir, burada *AssemblyName* uzantısı olmayan derlemenin dosya adıdır. Birden çok günlük dosyası gerekiyorsa (örneğin, uygulama günlüğe yazmaya çalıştığında özgün günlüğün kullanılamadığı durumlar gibi), günlük dosyası adı için form *AssemblyName*-*yineleme*. log ' dur ve burada `iteration` pozitif `Integer`olur.
+`CompanyName`, `ProductName` Ve değerleri `ProductVersion` uygulamanın derleme bilgileriyle gelir. Günlük dosyası adının biçimi *AssemblyName*. log biçimindedir, burada *AssemblyName* uzantısı olmayan derlemenin dosya adıdır. Birden çok günlük dosyası gerekiyorsa (örneğin, uygulama günlüğe yazmaya çalıştığında özgün günlüğün kullanılamadığı durumlar gibi), günlük dosyası adı için form *AssemblyName* - *yineleme*. log ' dur ve burada `iteration` pozitif olur `Integer` .
 
-Bilgisayar ve uygulamanın yapılandırma dosyalarını ekleyerek veya değiştirerek varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz [. Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+Bilgisayar ve uygulamanın yapılandırma dosyalarını ekleyerek veya değiştirerek varsayılan davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz [. Izlenecek yol: My. Application. log bilgisinin nereden yazabileceğini değiştirme](walkthrough-changing-where-my-application-log-writes-information.md).
 
 ## <a name="configuring-log-settings"></a>Günlük ayarlarını yapılandırma
 
-`Log` Nesnesi, uygulama yapılandırma dosyası, App. config olmadan çalışacak varsayılan bir uygulamaya sahiptir. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+`Log`Nesnesi, uygulama yapılandırma dosyası, App. config olmadan çalışacak varsayılan bir uygulamaya sahiptir. Varsayılanları değiştirmek için yeni ayarlara sahip bir yapılandırma dosyası eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: My. Application. log çıktısını filtreleme](walkthrough-filtering-my-application-log-output.md).
 
-Günlük yapılandırma bölümleri, App. config dosyasının `<system.diagnostics>` ana `<configuration>` düğümündeki düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
+Günlük yapılandırma bölümleri, `<system.diagnostics>` `<configuration>` app. config dosyasının ana düğümündeki düğümünde bulunur. Günlük bilgileri çeşitli düğümlerde tanımlanmıştır:
 
-- `Log` Nesnenin dinleyicileri DefaultSource adlı `<sources>` düğümde tanımlanmıştır.
+- `Log`Nesnenin dinleyicileri `<sources>` DefaultSource adlı düğümde tanımlanmıştır.
 
-- `Log` Nesnesi için önem derecesi, DefaultSwitch adlı `<switches>` düğümde tanımlanmıştır.
+- Nesnesi için önem derecesi, `Log` `<switches>` DefaultSwitch adlı düğümde tanımlanmıştır.
 
 - Günlük dinleyicileri, `<sharedListeners>` düğümde tanımlanmıştır.
 
- Aşağıdaki kodda `<sources>`, `<switches>`, ve `<sharedListeners>` düğümleri örnekleri gösterilmiştir:
+ `<sources>` `<switches>` Aşağıdaki kodda,, ve `<sharedListeners>` düğümleri örnekleri gösterilmiştir:
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ Günlük yapılandırma bölümleri, App. config dosyasının `<system.diagnosti
 
 Bir uygulama geliştirirken, yapılandırma ayarları Yukarıdaki örneklerde gösterildiği gibi App. config dosyasında depolanır. Uygulamanızı dağıttıktan sonra yapılandırma dosyasını düzenleyerek günlüğü yapılandırmaya devam edebilirsiniz. Windows tabanlı bir uygulamada, bu dosyanın adı *ApplicationName*. exe. config olur ve yürütülebilir dosyayla aynı klasörde bulunmalıdır. Bir Web uygulaması için, bu, projeyle ilişkili Web. config dosyasıdır.
 
-Uygulamanız bir sınıfın bir örneğini ilk kez oluşturan kodu yürüttüğünde, nesne hakkında bilgi için yapılandırma dosyasını kontrol eder. `Log` Nesnesi için, bu `Log` nesne ilk kez erişildiğinde gerçekleşir. Sistem, yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler — uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
+Uygulamanız bir sınıfın bir örneğini ilk kez oluşturan kodu yürüttüğünde, nesne hakkında bilgi için yapılandırma dosyasını kontrol eder. Nesnesi için `Log` , bu nesne ilk kez `Log` erişildiğinde gerçekleşir. Sistem, yapılandırma dosyasını belirli bir nesne için yalnızca bir kez inceler — uygulamanız nesneyi ilk kez oluşturduğunda. Bu nedenle, değişikliklerin etkili olması için uygulamayı yeniden başlatmanız gerekebilir.
 
 Dağıtılan bir uygulamada, uygulama başlamadan önce geçiş nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirin. Genellikle bu, anahtar nesnelerinin açık ve kapalı olduğunu ya da izleme düzeylerini değiştirerek ve sonra uygulamanızı yeniden başlatarak içerir.
 
@@ -109,4 +109,4 @@ Günlüğe veri yazarken aşağıdakileri göz önünde bulundurun:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [Uygulamadan Günlüğe Bilgi Kaydetme](index.md)
