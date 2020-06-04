@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: e21eea20d953e64e91522074c25f037451145bf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa04c558abbcc4259c2821cdcbdc1669b91ffee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664204"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402778"
 ---
-# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' öğesinden devralamaz \<türü > '\<basetypename >' temelinin erişimini genişlettiğinden \<türü > derleme dışından
-Bir sınıf veya arabirim bir temel sınıftan devraldığı veya arabirimi ancak daha az kısıtlayıcı bir erişim düzeyi yok.  
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename>', \<type> temelinin erişimini derleme dışına genişlettiğinden \<basetypename> '\<type>' öğesinden devralamaz
+Bir sınıf veya arabirim, temel bir sınıftan veya arabirimden devralınır, ancak daha az kısıtlayıcı erişim düzeyine sahiptir.  
   
- Örneğin, bir `Public` arabirim sınıfından devralan bir `Friend` arabirimi veya `Protected` sınıfının devraldığı bir `Private` sınıfı. Bu, temel sınıf veya hedeflenen düzeyinin ötesinde erişmek için bir arabirimi kullanıma sunar.  
+ Örneğin, bir `Public` arabirim bir arabirimden devralınır veya bir sınıf bir `Friend` `Protected` sınıftan devralınır `Private` . Bu, hedeflenen düzeyin ötesine erişmek için temel sınıfı veya arabirimi kullanıma sunar.  
   
- **Hata Kimliği:** BC30910  
+ **Hata kimliği:** BC30910  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Türetilmiş bir sınıf veya arabirim en az olabildiğince kısıtlayıcı, temel sınıf veya arabirim erişim düzeyini değiştirin.  
+- Türetilmiş sınıfın veya arabirimin erişim düzeyini, en az temel sınıf veya arabirim ile kısıtlayıcı olacak şekilde değiştirin.  
   
      -veya-  
   
-- Daha az kısıtlayıcı erişim düzeyi gerekiyorsa, kaldırma `Inherits` deyimi. Bir daha kısıtlı bir temel sınıfı veya arabirimi devralınamaz.  
+- Daha az kısıtlayıcı erişim düzeyine ihtiyacınız varsa, `Inherits` ifadesini kaldırın. Daha kısıtlı bir temel sınıftan veya arabirimden devralma yapılamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Class Deyimi](../statements/class-statement.md)
+- [Interface Deyimi](../statements/interface-statement.md)
+- [Inherits Deyimi](../statements/inherits-statement.md)
+- [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)

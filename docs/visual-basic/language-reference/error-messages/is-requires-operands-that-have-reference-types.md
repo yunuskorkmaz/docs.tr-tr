@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5acc94a3738fca3a43740bdba727fc843132aa1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625950"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402817"
 ---
-# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' için başvuru türünde işlenenler gerekir, ancak bu işlenen değer türünde '\<typename >'
-`Is` Karşılaştırma işleci iki nesne değişkenini aynı örneğe atıfta olup olmadığını belirler. Bu karşılaştırma, değer türleri için tanımlanmadı.  
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' için başvuru türünde işlenenler gerekir, ancak bu işlenen '\<typename>' değer türünde
+`Is`Karşılaştırma işleci iki nesne değişkeninin aynı örneğe başvurmasının gerekip gerekmediğini belirler. Bu karşılaştırma değer türleri için tanımlı değil.  
   
- **Hata Kimliği:** BC30020  
+ **Hata kimliği:** BC30020  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Uygun aritmetik karşılaştırma işlecini kullanın veya `Like` iki veri türünü karşılaştırmak için işleci.  
+- `Like`İki değer türünü karşılaştırmak için uygun aritmetik karşılaştırma işlecini veya işlecini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
-- [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)
-- [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Is İşleci](../operators/is-operator.md)
+- [Like İşleci](../operators/like-operator.md)
+- [Karşılaştırma Işleçleri](../operators/comparison-operators.md)

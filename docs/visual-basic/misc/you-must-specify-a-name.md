@@ -1,22 +1,22 @@
 ---
-title: Bir ad belirtmelisiniz
+title: Bir ad belirtmeniz gerekir
 ms.date: 07/20/2015
 ms.assetid: 9056bc12-951c-4b86-a44a-473d7c8d5f75
-ms.openlocfilehash: 9f3a3ea006569604edbd86455a9deaf48afb727c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebcd52423a09f37fae09acbcd0b1d6d67bf4afef
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619902"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406930"
 ---
-# <a name="you-must-specify-a-name"></a>Bir ad belirtmelisiniz
-Bir dosyayı yeniden adlandırma gibi dosya işlemleri gerçekleştirirken adı belirtmeniz gerekir.  
+# <a name="you-must-specify-a-name"></a>Bir ad belirtmeniz gerekir
+Bir dosyayı yeniden adlandırma gibi dosya işlemlerini gerçekleştirirken adı belirtmeniz gerekir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bir ad belirtin.  
+- Adı belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
-- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [Hata Türleri](../programming-guide/language-features/error-types.md)
+- [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

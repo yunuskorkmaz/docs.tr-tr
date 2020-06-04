@@ -1,73 +1,73 @@
 ---
-title: where (genel tür kısıtlaması) - C# Reference
+title: WHERE (genel tür kısıtlaması)-C# başvurusu
 ms.date: 04/15/2020
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 5a56b8058735d3ca786520a82424c79d1975bfc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 406c710cd884363c32b98336717732a09b3d1fc1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463008"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401881"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (genel tür kısıtlaması) (C# Başvurusu)
 
-Genel `where` bir tanımdaki yan tümce, genel bir tür, yöntem, temsilci veya yerel işlevdeki tür parametreleri için bağımsız değişken olarak kullanılan türler üzerindeki kısıtlamaları belirtir. Kısıtlamalar arabirimleri, temel sınıfları belirtebilir veya başvuru, değer veya yönetilmeyen tür olması için genel bir tür gerektirebilir. Tür bağımsız değişkeninin sahip olması gereken yetenekleri bildirirler.
+`where`Genel tanımda yer alan yan tümce, genel bir tür, metot, temsilci veya yerel işlevde tür parametreleri için bağımsız değişken olarak kullanılan türlerde kısıtlamalar belirtir. Kısıtlamalar, arabirimler, temel sınıflar veya bir genel türün bir başvuru, değer veya yönetilmeyen tür olmasını gerektirebilir. Tür bağımsız değişkeninin sahip olması gereken özellikleri bildirir.
 
-Örneğin, tür parametresi `MyGenericClass` `T` <xref:System.IComparable%601> arabirimi uygular gibi genel bir sınıf bildirebilirsiniz:
+Örneğin, `MyGenericClass` tür parametresi arabirimini uygulayan genel bir sınıf bildirebilirsiniz `T` <xref:System.IComparable%601> :
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#1)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#1)]
 
 > [!NOTE]
-> Sorgu ifadesinde yer yan tümcesi hakkında daha fazla bilgi için [bkz.](where-clause.md)
+> Bir sorgu ifadesindeki WHERE yan tümcesi hakkında daha fazla bilgi için bkz. [WHERE yan tümcesi](where-clause.md).
 
-Yan `where` tümce, taban sınıf kısıtlaması da içerebilir. Taban sınıf kısıtlaması, bu genel tür için tür bağımsız değişkeni olarak kullanılacak bir türün taban sınıf olarak belirtilen sınıfa sahip olduğunu veya bu taban sınıf olduğunu belirtir. Taban sınıf kısıtlaması kullanılırsa, bu tür parametresindeki diğer kısıtlamalardan önce görünmesi gerekir. Bazı türler taban sınıf kısıtlaması olarak <xref:System.Object> <xref:System.Array>izin <xref:System.ValueType>verilmez: , ve . C# <xref:System.Enum>7.3'den <xref:System.Delegate>önce <xref:System.MulticastDelegate> ve taban sınıf kısıtlamaları olarak da izin verilmedi. Aşağıdaki örnek, şimdi taban sınıf olarak belirtilebilen türleri gösterir:
+`where`Yan tümce bir temel sınıf kısıtlaması de içerebilir. Temel sınıf kısıtlaması, bu genel türün tür bağımsız değişkeni olarak kullanılacak bir türün, temel sınıf olarak belirtilen sınıfa sahip olduğunu veya temel sınıf olduğunu belirtir. Temel sınıf kısıtlaması kullanılırsa, bu tür parametresindeki diğer kısıtlamaların önüne gelmelidir. Bir temel sınıf kısıtlaması olarak bazı türlere izin verilmez: <xref:System.Object> , <xref:System.Array> ve <xref:System.ValueType> . C# 7,3,, ve ' den önce <xref:System.Enum> <xref:System.Delegate> <xref:System.MulticastDelegate> temel sınıf kısıtlamaları olarak da izin verilmedi. Aşağıdaki örnek, artık temel sınıf olarak belirtime türleri göstermektedir:
 
-[!code-csharp[using an interface constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#2)]
+[!code-csharp[using an interface constraint](snippets/GenericWhereConstraints.cs#2)]
 
-C# 8.0 ve sonraki durumlarda, taban sınıf türünün nullable'ı zorlanır. Taban sınıf nullable (örneğin) `Base`ise, tür bağımsız değişkeni nullable olmalıdır. Taban sınıf nullable ise (örneğin), `Base?`tür bağımsız değişkeni nullable veya unnullable referans türü olabilir. Derleyici, taban sınıf nullable olmadığında tür bağımsız değişkeni nullable bir başvuru türü yse bir uyarı yayınlar.
+C# 8,0 ve sonraki sürümlerde null yapılabilir bir bağlamda, temel sınıf türünün null değer alabilme değeri zorlanır. Temel sınıf null atanamaz ise (örneğin `Base` ), tür bağımsız değişkeni null atanamaz olmalıdır. Temel sınıf null yapılabilir ise (örneğin `Base?` ), tür bağımsız değişkeni null yapılabilir veya null atanamaz bir başvuru türü olabilir. Temel sınıf null olamayan bir başvuru türünde ise derleyici bir uyarı verir.
 
-Yan `where` tümce, türün `class` a `struct`veya bir . Kısıtlama, `struct` bir taban sınıf kısıtlaması belirtme `System.ValueType`gereksinimini ortadan kaldırır. Tür `System.ValueType` taban sınıf kısıtlaması olarak kullanılmayabilir. Aşağıdaki örnek, hem `class` `struct` kısıtlamaları hem de kısıtlamaları gösterir:
+`where`Yan tümce türün bir `class` veya bir olduğunu belirtebilir `struct` . `struct`Kısıtlama, öğesinin temel sınıf kısıtlamasını belirtme gereksinimini ortadan kaldırır `System.ValueType` . `System.ValueType`Tür, temel sınıf kısıtlaması olarak kullanılamaz. Aşağıdaki örnek, `class` ve `struct` kısıtlamalarını göstermektedir:
 
-[!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
+[!code-csharp[using the class and struct constraints](snippets/GenericWhereConstraints.cs#3)]
 
-C# 8.0 ve sonraki durumlarda, `class` kısıtlama bir tür geçersiz bir başvuru türü gerektirir. Nullable başvuru türlerine izin `class?` vermek için, hem nullable hem de nullable olmayan başvuru türlerine izin veren kısıtlamayı kullanın.
+C# 8,0 ve sonraki sürümlerde null yapılabilir bir bağlamda kısıtlama, `class` bir türün null yapılamayan bir başvuru türü olmasını gerektirir. Null yapılabilir başvuru türlerine izin vermek için, `class?` hem null yapılabilir hem de null olamayan başvuru türlerine izin veren kısıtlamayı kullanın.
 
-Yan `where` tümce `notnull` kısıtlamayı içerebilir. Kısıtlama, `notnull` tür parametresini nullable olmayan türlerle sınırlar. Bu tür bir [değer türü](../builtin-types/value-types.md) veya nullable olmayan bir başvuru türü olabilir. Kısıtlama, `notnull` bir [ `nullable enable` bağlamda](../../nullable-references.md#nullable-contexts)derlenen kod için C# 8.0'dan başlayarak kullanılabilir. Diğer kısıtlamaların aksine, bir tür `notnull` bağımsız değişkenkısıtlamayı ihlal ederse, derleyici hata yerine bir uyarı oluşturur. Uyarılar yalnızca bir `nullable enable` bağlamda oluşturulur.
+`where`Yan tümce `notnull` kısıtlaması içerebilir. `notnull`Kısıtlama, tür parametresini null yapılamayan türler ile sınırlandırır. Bu tür bir [değer türü](../builtin-types/value-types.md) veya null yapılamayan bir başvuru türü olabilir. `notnull`Kısıtlama, bir [ `nullable enable` bağlamda](../../nullable-references.md#nullable-contexts)derlenen kod için C# 8,0 ' den başlayarak kullanılabilir. Diğer kısıtlamaların aksine, bir tür bağımsız değişkeni kısıtlamayı ihlal ederse `notnull` , derleyici hata yerine bir uyarı oluşturur. Uyarılar yalnızca bir `nullable enable` bağlamda oluşturulur.
 
 > [!IMPORTANT]
-> Kısıtlamayı `notnull` içeren genel bildirimler geçersiz bir ilgisiz bağlamda kullanılabilir, ancak derleyici kısıtlamayı zorlamaz.
+> Kısıtlamayı içeren genel bildirimler, `notnull` null yapılabilir bir zorunluluvou bağlamında kullanılabilir, ancak derleyici kısıtlamayı zorlamaz.
 
-[!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
+[!code-csharp[using the nonnull constraint](snippets/GenericWhereConstraints.cs#NotNull)]
 
-Yan `where` tümce, `unmanaged` bir kısıtlama da içerebilir. Kısıtlama, `unmanaged` tür parametresini [yönetilmeyen türler](../builtin-types/unmanaged-types.md)olarak bilinen türlerle sınırlar. Kısıtlama, `unmanaged` c#'a düşük seviyeli interop kodu yazmayı kolaylaştırır. Bu kısıtlama, tüm yönetilmeyen türler arasında yeniden kullanılabilir yordamlar sağlar. Kısıtlama `unmanaged` `class` veya `struct` kısıtlama ile birleştirilemez. Kısıtlama, `unmanaged` türün aşağıdaki `struct`gibi olması gerektiğini zorlar:
+`where`Yan tümce de bir kısıtlama içerebilir `unmanaged` . `unmanaged`Kısıtlama, tür parametresini [yönetilmeyen türler](../builtin-types/unmanaged-types.md)olarak bilinen türlerle sınırlandırır. `unmanaged`Kısıtlama, C# dilinde alt düzey birlikte çalışma kodu yazmayı kolaylaştırır. Bu kısıtlama, tüm yönetilmeyen türler arasında yeniden kullanılabilir yordamlar sunar. `unmanaged`Kısıtlama, `class` veya kısıtlaması ile birleştirilemez `struct` . `unmanaged`Kısıtlama, türün bir olması için şunu uygular `struct` :
 
-[!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
+[!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
-Yan `where` tümce, bir oluşturucu `new()`kısıtlama sıda içerebilir. Bu kısıtlama, işleci kullanarak bir tür parametresi örneği oluşturmayı `new` mümkün kılar. [Yeni() Kısıtlama,](new-constraint.md) derleyiciye, sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir bir parametresiz oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örneğin:
+`where`Yan tümce bir Oluşturucu kısıtlaması de içerebilir `new()` . Bu kısıtlama işleci kullanarak bir tür parametresinin örneğini oluşturmayı mümkün kılar `new` . [New () kısıtlaması](new-constraint.md) , derleyicinin sağlanan herhangi bir tür bağımsız değişkeninin erişilebilir parametresiz bir oluşturucuya sahip olması gerektiğini bilmesini sağlar. Örnek:
 
-[!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
+[!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 
-Kısıtlama `new()` `where` yan tümcede son görünür. Kısıtlama `new()` `struct` veya `unmanaged` kısıtlamalarla birleştirilemez. Bu kısıtlamaları karşılayan tüm türler, `new()` kısıtlamayı gereksiz hale getiren erişilebilir bir parametresiz oluşturucuya sahip olmalıdır.
+`new()`Kısıtlama yan tümcesinde en son görünür `where` . `new()`Kısıtlama `struct` veya `unmanaged` kısıtlamalarıyla birleştirilemez. Bu kısıtlamaların karşılankarşılayan tüm türlerin erişilebilir bir parametresiz oluşturucusu olması gerekir ve `new()` kısıtlama gereksiz hale getirir.
 
-Birden çok tür parametresi ile, örneğin, her tür parametresi için bir `where` yan tümce kullanın:
+Birden çok tür `where` parametresiyle, her tür parametresi için bir yan tümce kullanın, örneğin:
 
-[!code-csharp[using multiple where constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#6)]
+[!code-csharp[using multiple where constraints](snippets/GenericWhereConstraints.cs#6)]
 
-Aşağıdaki örnekte gösterildiği gibi, genel yöntemlerin parametrelerini yazına kısıtlamalar da ekleyebilirsiniz:
+Ayrıca, aşağıdaki örnekte gösterildiği gibi genel yöntemlerin tür parametrelerine kısıtlamalar ekleyebilirsiniz:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#7)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#7)]
 
-Temsilciler üzerindeki tür parametre kısıtlamalarını açıklayan sözdiziminin yöntemlerle aynı olduğuna dikkat edin:
+Temsilcilerle ilgili tür parametresi kısıtlamalarını betimleyen sözdiziminin, metodların türüyle aynı olduğunu unutmayın:
 
-[!code-csharp[where constraints with generic methods](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#8)]
+[!code-csharp[where constraints with generic methods](snippets/GenericWhereConstraints.cs#8)]
 
-Genel temsilciler hakkında bilgi için [Genel Temsilciler'e](../../programming-guide/generics/generic-delegates.md)bakın.
+Genel Temsilciler hakkında daha fazla bilgi için bkz. [Genel Temsilciler](../../programming-guide/generics/generic-delegates.md).
 
-Sözdizimi ve kısıtlamaların kullanımı yla ilgili ayrıntılar için, [Tür Parametreleri üzerindeki Kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md)bölümüne bakın.
+Kısıtlamaların sözdizimi ve kullanımı hakkında ayrıntılı bilgi için bkz. [tür parametrelerindeki kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -75,8 +75,8 @@ Sözdizimi ve kısıtlamaların kullanımı yla ilgili ayrıntılar için, [Tür
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Genel Türlere Giriş](../../programming-guide/generics/index.md)
-- [yeni Kısıtlama](./new-constraint.md)
+- [Yeni kısıtlama](./new-constraint.md)
 - [Tür Parametrelerindeki Kısıtlamalar](../../programming-guide/generics/constraints-on-type-parameters.md)

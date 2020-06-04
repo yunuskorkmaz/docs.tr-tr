@@ -1,6 +1,6 @@
 ---
-title: kilit deyimi - C# başvurusu
-description: İş parçacığı erişimini paylaşılan bir kaynağa eşitlemek için C# kilit deyimini kullanma
+title: Lock deyimleri-C# başvurusu
+description: İş parçacığı erişimini paylaşılan bir kaynağa eşleştirmek için C# lock ifadesini kullanın
 ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 6e9a6975977588ba7692c925d7940cd2ec26671f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635388"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406696"
 ---
-# <a name="lock-statement-c-reference"></a>kilit deyimi (C# başvurusu)
+# <a name="lock-statement-c-reference"></a>Lock deyimleri (C# Başvurusu)
 
-Deyim, `lock` belirli bir nesne için karşılıklı dışlama kilidi kazanır, bir deyim bloğunu yürütür ve kilidi serbest bırakır. Kilit tutulurken, kilidi tutan iş parçacığı kilidi yeniden alabilir ve serbest bırakabilir. Başka bir iş parçacığı kilidi edinme engellenir ve kilit serbest bırakılınyana kadar bekler.
+`lock`İfade, belirli bir nesne için karşılıklı dışlama kilidi alır, bir ekstre bloğunu yürütür ve sonra kilidi serbest bırakır. Kilit tutulurken, kilidi tutan iş parçacığı kilidi yeniden alabilir ve serbest bırakabilir. Diğer herhangi bir iş parçacığının kilidi almak engellenir ve kilit serbest bırakılana kadar bekler.
 
-İfade `lock` formu
+`lock`İfade şu biçimdedir
 
 ```csharp
 lock (x)
@@ -28,7 +28,7 @@ lock (x)
 }
 ```
 
-nerede `x` bir başvuru [türünün](reference-types.md)bir ifadesidir. Tam olarak eşdeğer.
+`x`, [başvuru türünün](reference-types.md)bir ifadesidir. Tam olarak eşdeğerdir
 
 ```csharp
 object __lockObj = x;
@@ -44,29 +44,29 @@ finally
 }
 ```
 
-Kod bir [deneyin kullandığından... son olarak](try-finally.md) blok, bir özel durum bir `lock` ifadenin gövdesi içinde atılmış olsa bile kilit serbest bırakılır.
+Kod bir TRY kullandığından... [ finally](try-finally.md) bloğu, bir deyimin gövdesinde özel durum oluşturulursa bile kilit serbest bırakılır `lock` .
 
-[Bir](../operators/await.md) `lock` deyimin gövdesinde bekleyen operatörü kullanamazsınız.
+Bir deyimin gövdesinde [await işlecini](../operators/await.md) kullanamazsınız `lock` .
 
 ## <a name="guidelines"></a>Yönergeler
 
-İş parçacığı erişimini paylaşılan bir kaynağa eşitlediğinizde, özel bir `private readonly object balanceLock = new object();`nesne örneğini (örneğin,) veya kodun ilgisiz bölümleri tarafından kilit nesnesi olarak kullanılma olasılığı düşük başka bir örneği kilitleyin. Kilitlenme veya kilit çekişmesi neden olabileceğinden, farklı paylaşılan kaynaklar için aynı kilit nesnesi örneğini kullanmaktan kaçının. Özellikle, aşağıdakileri kilit nesneleri olarak kullanmaktan kaçının:
+İş parçacığı erişimini paylaşılan bir kaynağa eşitlediğinizde, ayrılmış bir nesne örneği üzerinde (örneğin, `private readonly object balanceLock = new object();` ) veya kodun ilişkisiz parçaları tarafından kilit nesnesi olarak kullanılması olası bir örnek üzerinde kilit. Farklı paylaşılan kaynaklar için aynı kilit nesnesi örneğini kullanmaktan kaçının, çünkü kilitlenme veya kilitleme çekişmesine yol açabilir. Özellikle, Lock nesneleri olarak aşağıdakileri kullanmaktan kaçının:
 
-- `this`, arayanlar tarafından kilit olarak kullanılabilir.
-- <xref:System.Type>örnekler, bu işleç veya yansıma [türü](../operators/type-testing-and-cast.md#typeof-operator) tarafından elde edilebilir gibi.
-- dize örnekleri, dize literals de dahil olmak üzere, bu [interned](/dotnet/api/system.string.intern#remarks)olabilir gibi .
+- `this`, çünkü çağıranlar bir kilit olarak kullanılıyor olabilir.
+- <xref:System.Type>örnekler, [typeof](../operators/type-testing-and-cast.md#typeof-operator) işleci veya Reflection tarafından elde edilebilir.
+- dize sabit değerleri de dahil olmak üzere dize örnekleri [birbirine](/dotnet/api/system.string.intern#remarks)bağlı olabilir.
 
-Kilit çekişmesini azaltmak için kilidi mümkün olduğunca kısa bir süre tutun.
+Kilit çekişmesini azaltmak için olabildiğince kısa bir süre bekleyin.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, özel `Account` `balanceLock` bir örneği kilitleyerek özel `balance` alanına erişimi eşitleyen bir sınıf tanımlar. Kilitleme için aynı örneğin kullanılması, `balance` alanın aynı anda veya `Debit` `Credit` yöntemleri aynı anda çağırmaya çalışan iki iş parçacığı tarafından güncelleştirilememesini sağlar.
+Aşağıdaki örnek, `Account` `balance` adanmış bir örnek üzerinde kilitleyerek özel alanına erişimi eşitleyen bir sınıfı tanımlar `balanceLock` . Kilitleme için aynı örneği kullanmak, alanın aynı anda `balance` veya yöntemlerini çağırmaya çalışan iki iş parçacığı tarafından aynı anda güncelleştirilememesini sağlar `Debit` `Credit` .
 
-[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
+[!code-csharp[lock-statement-example](snippets/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [kilit deyimi](~/_csharplang/spec/statements.md#the-lock-statement) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [kilit bildirimi](~/_csharplang/spec/statements.md#the-lock-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

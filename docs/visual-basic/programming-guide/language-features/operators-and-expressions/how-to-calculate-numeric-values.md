@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348961"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403465"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)
 Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayısal bir ifade* , sayısal değerleri temsil eden sabit değerler, sabitler ve değişkenleri ve bu değerler üzerinde işlem yapan işleçleri içeren bir ifadedir.  
@@ -45,9 +45,9 @@ Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayıs
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     Önceki örnekte, eşittir işlecinin (`=`) sağ tarafındaki ifadenin değeri, işlecin sol tarafındaki `j` değişkenine atanır, bu nedenle `j` 276 olarak değerlendirilir.  
+     Önceki örnekte, eşittir işlecinin () sağ tarafındaki ifadenin değeri, `=` `j` işlecin sol tarafındaki değişkenine atanır, bu nedenle `j` 276 olarak değerlendirilir.  
   
-     Daha fazla bilgi için bkz. [deyimler](../../../../visual-basic/language-reference/statements/index.md).  
+     Daha fazla bilgi için bkz. [deyimler](../../../language-reference/statements/index.md).  
   
 ## <a name="multiple-operators"></a>Birden çok Işleç  
  Sayısal ifade birden fazla işleç içeriyorsa, değerlendirildikleri sıra, işleç önceliği kurallarına göre belirlenir. İşleç önceliği kurallarını geçersiz kılmak için, ifadeleri Yukarıdaki örnekte olduğu gibi parantez içine almalısınız; içine alınan ifadeler önce değerlendirilir.  
@@ -58,15 +58,15 @@ Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayıs
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     Yukarıdaki örnekte, `j` için hesaplama, normal önceliği geçersiz kıldığından ve `j` atanan değer 276 (4 kez 69) `(67 + i)` olduğundan, önce ekleme işlecini (`+`) uygular. `k` hesaplama, işleçleri normal önceliğinde (`+`önce`*`) gerçekleştirir ve `k` atanan değer 270 (268 Plus 2) olur.  
+     Önceki örnekte, için hesaplama, `j` ekleme işlecini () ilk olarak gerçekleştirir, `+` çünkü etrafındaki parantezler `(67 + i)` Normal önceliği geçersiz kılar ve şuna atanan değer `j` 276 ' dir (4 kez 69). İçin hesaplama, `k` işleçleri normal önceliğinde ( `*` önce `+` ) gerçekleştirir ve atanan değer 270 ' `k` dir (268 Plus 2).  
   
-     Daha fazla bilgi için [Visual Basic operatör önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)bölümüne bakın.  
+     Daha fazla bilgi için [Visual Basic operatör önceliği](../../../language-reference/operators/operator-precedence.md)bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [Deyimler](../../../../visual-basic/language-reference/statements/index.md)
-- [Visual Basic operatör önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Aritmetik İşleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [İşleçler ve Ifadeler](index.md)
+- [Değer Karşılaştırmaları](value-comparisons.md)
+- [Deyimler](../../../language-reference/statements/index.md)
+- [Visual Basic'de İşleç Önceliği](../../../language-reference/operators/operator-precedence.md)
+- [Aritmetik İşleçler](../../../language-reference/operators/arithmetic-operators.md)
+- [İşleçlerin Etkili Bileşimi](efficient-combination-of-operators.md)

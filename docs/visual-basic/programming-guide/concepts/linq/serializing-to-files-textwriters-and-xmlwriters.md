@@ -1,36 +1,36 @@
 ---
-title: Dosya, TextWriters ve XmlWriters3 seri hale getirme
+title: Dosyalara serileştirme, TextWriters ve XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-ms.openlocfilehash: 63577d955da89fde0a2320b4cf84414ccbb69c84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8b929ef02b8fd9c6a9f29ea997a754699a6e1c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786795"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403569"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Dosya, TextWriters ve XmlWriters Serileştirme
 
-XML ağaçlarını serileştirebilen bir <xref:System.IO.File>, <xref:System.IO.TextWriter>, veya bir <xref:System.Xml.XmlWriter>.
+XML ağaçlarını bir, a veya olarak seri hale getirebilirsiniz <xref:System.IO.File> <xref:System.IO.TextWriter> <xref:System.Xml.XmlWriter> .
 
-Herhangi bir XML bileşeni serileştirebiliyorsa dahil olmak üzere <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement>, kullanarak bir dizeye `ToString` yöntemi.
+Yöntemini kullanarak, ve dahil olmak üzere herhangi bir XML bileşenini bir dizeye seri hale getirebilirsiniz <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> `ToString` .
 
-Bir dizeye serileştirilirken biçimlendirme gizlemek istiyorsanız, kullanabileceğiniz <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> yöntemi.
+Bir dizeye serileştirilirken biçimlendirmeyi bastırmak istiyorsanız <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz.
 
-Bir dosyaya serileştirmek kullanırken varsayılan davranış (Girinti) elde edilen XML belgeyi Biçimlendir sağlamaktır. Girintisini zaman anlamsız boşluk XML ağacındaki korunmaz. Biçimlendirme ile seri hale getirmek için aşırı almaz aşağıdaki yöntemlerden birini kullanın: <xref:System.Xml.Linq.SaveOptions> bağımsız değişken olarak:
-
-- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
-
-- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
-
-Seçeneği değil girinti ve XML ağacındaki Önemsiz bölünemez boşluğu koruyacak istiyorsanız, alan aşırı yüklemeler aşağıdaki yöntemlerden birini kullanın <xref:System.Xml.Linq.SaveOptions> bağımsız değişken olarak:
+Bir dosyaya serileştirilirken varsayılan davranış, elde edilen XML belgesini biçimlendirmek (Girintile). Girinti yaptığınızda XML ağacındaki önemli boşluk korunmaz. Biçimlendirme ile seri hale getirmek için, aşağıdaki yöntemlerin bağımsız değişken olarak olmayan aşırı yüklemelerinin birini kullanın <xref:System.Xml.Linq.SaveOptions> :
 
 - <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
 
 - <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
 
-Örnekler için uygun bir başvuru konusuna bakın.
+Seçeneği girintileme ve XML ağacındaki önemli boşlukları korumak istiyorsanız bağımsız değişken olarak kullanılan aşağıdaki yöntemlerin aşırı yüklemelerinin birini kullanın <xref:System.Xml.Linq.SaveOptions> :
+
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>
+
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>
+
+Örnekler için, ilgili başvuru konusuna bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [(Visual Basic) XML ağaçlarını serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML ağaçlarını serileştirme (Visual Basic)](serializing-xml-trees.md)

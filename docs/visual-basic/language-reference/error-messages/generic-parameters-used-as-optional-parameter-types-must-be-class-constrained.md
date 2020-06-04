@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273ea592e73be5d76a4ffef077e691014a108347
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662069"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402933"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
-Bir yordam kullanan bir başvuru türü olması zorunlu değildir bir tür parametresi isteğe bağlı bir parametre ile bildirilir.  
+Bir yordam, bir başvuru türü olarak kısıtlanmış olmayan bir tür parametresi kullanan isteğe bağlı bir parametreyle bildirilmiştir.  
   
- Her zaman isteğe bağlı her parametre için varsayılan bir değer sağlamanız gerekir. Parametre bir başvuru türü ise isteğe bağlı bir değer olmalıdır `Nothing`, herhangi bir başvuru türü için geçerli bir değer olduğu. Ancak, parametre bir değer türü ise, bu tür Visual Basic tarafından önceden tanımlanmış bir başlangıç veri türü olmalıdır. Kullanıcı tanımlı bir yapısı gibi bir bileşik değer türü, geçerli varsayılan değere sahip olmasıdır.  
+ Her isteğe bağlı parametre için her zaman bir varsayılan değer sağlamanız gerekir. Parametresi bir başvuru türü ise, isteğe bağlı değer `Nothing` , herhangi bir başvuru türü için geçerli bir değer olan olmalıdır. Ancak, parametre bir değer türünde ise, bu tür Visual Basic tarafından önceden tanımlanan bir elemensel veri türü olmalıdır. Bunun nedeni, Kullanıcı tanımlı yapı gibi bir bileşik değer türünün geçerli bir varsayılan değer içermez.  
   
- İsteğe bağlı bir parametre için bir tür parametresini kullandığınızda, geçerli varsayılan değer içermeyen bir değer türü olasılığını önlemek için başvuru türünde olduğunu garanti etmeniz gerekir. Yani, gerekir sınırlamak tür parametresi ile `Class` anahtar sözcüğü veya belirli bir sınıfın adı.  
+ İsteğe bağlı bir parametre için bir tür parametresi kullandığınızda, geçerli bir varsayılan değer olmadan bir değer türü olasılığa engel olmak için bir başvuru türü olduğunu garanti etmeniz gerekir. Bu, tür parametresini `Class` anahtar sözcüğüyle veya belirli bir sınıfın adıyla sınırlandırmalısınız.  
   
- **Hata Kimliği:** BC32124  
+ **Hata kimliği:** BC32124  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Tür parametresi yalnızca bir başvuru türü kabul edecek şekilde sınırlamak veya isteğe bağlı parametresi için kullanmayın.  
+- Tür parametresini yalnızca bir başvuru türünü kabul edecek şekilde sınırlayın veya isteğe bağlı parametre için kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
-- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [Tür Listesi](../statements/type-list.md)
+- [Class Deyimi](../statements/class-statement.md)
+- [İsteğe Bağlı Parametreler](../../programming-guide/language-features/procedures/optional-parameters.md)
+- [Yapılar](../../programming-guide/language-features/data-types/structures.md)
+- [Nothing](../nothing.md)

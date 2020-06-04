@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_PropertyNothing
 ms.assetid: 074014b4-5070-4c2f-9496-cbbbe9393dd6
-ms.openlocfilehash: 2741bc611975b283e7a8c1772ffbb7d57b540348
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a392fd31a02dbbba99d22b7573b5b0ad5729d0e1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591791"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411915"
 ---
-# <a name="property-propertyname-cannot-be-set-to-nothing"></a>Özellik \<propertyname > Nothing olarak ayarlanamaz
-Özellik dışında bir değer gerektiriyor `Nothing`. Bu, hatalı değeri hesaplama bir sonucu olabilir.  
+# <a name="property-propertyname-cannot-be-set-to-nothing"></a>Özellik \<propertyname> Nothing olarak ayarlanamaz
+Özelliği dışında bir değer gerektirir `Nothing` . Bu, değerin yanlış hesaplanmasının bir sonucu olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -20,6 +20,6 @@ ms.locfileid: "64591791"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
-- [Nothing](../../visual-basic/language-reference/nothing.md)
+- [Hata Türleri](../programming-guide/language-features/error-types.md)
+- [Nothing](../language-reference/nothing.md)
 - <xref:System.NullReferenceException>

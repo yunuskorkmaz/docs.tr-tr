@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 41b7ef1f435fd0a4f20c4ca2936e2d91e155f7c5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1421cc85beba42b3cf3656c34b1d02347fbaf164
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347418"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403245"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de XML Belgesi Oluşturma
 
@@ -22,23 +22,23 @@ Bu örnek, kodunuza XML belge açıklamaları eklemeyi gösterir.
 
 1. **Kod Düzenleyicisi**'nde imlecinizi, belge oluşturmak istediğiniz türün veya üyenin üzerindeki satıra yerleştirin.
 
-2. `'''` yazın (üç tek tırnak işareti).
+2. Yazın `'''` (üç tek tırnak işareti).
 
     Tür veya üye için bir XML iskelet **kodu, kod düzenleyicisine**eklenir.
 
 3. Uygun Etiketler arasına açıklayıcı bilgi ekleyin.
 
     > [!NOTE]
-    > XML belge bloğunun içine ek satırlar eklerseniz, her satır `'''`başlamalıdır.
+    > XML belge bloğunun içine ek satırlar eklerseniz, her satır ile başlamalıdır `'''` .
 
 4. Yeni XML belge açıklamalarıyla türü veya üyeyi kullanan ek kod ekleyin.
 
-    IntelliSense, tür veya üye için \<Özet > etiketindeki metni görüntüler.
+    IntelliSense, \<summary> tür veya üyenin etiketindeki metni görüntüler.
 
-5. Belge açıklamalarını içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için bkz. [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Belge açıklamalarını içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için bkz. [-doc](../../reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [XML ile Kodunuzu Belgeleme](documenting-your-code-with-xml.md)
+- [XML Açıklama Etiketleri](../../language-reference/xmldoc/index.md)
+- [-doc](../../reference/command-line-compiler/doc.md)

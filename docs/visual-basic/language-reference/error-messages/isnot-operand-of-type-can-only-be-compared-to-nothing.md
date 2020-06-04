@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: fb61b04021bd844fade94413b4f3b28b82f6411b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249519"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402804"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>'typename' türündeki 'IsNot' işleneni, 'typename' boş değer atanabilir bir tür olduğundan, sadece 'Nothing' ile karşılaştırılabilir.
 
-Nullable değer türü olarak bildirilen bir değişken `Nothing` `IsNot` işleci kullanarak dışında bir ifade ile karşılaştırılmıştır.
+Null yapılabilir değer türü olarak belirtilen bir değişken işleci kullanmaktan başka bir ifadeyle karşılaştırıldı `Nothing` `IsNot` .
 
-**Hata Kimliği:** BC32128
+**Hata kimliği:** BC32128
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-Nullable türü `Nothing` `IsNot` işleci kullanmak dışında bir ifadeyle karşılaştırmak için, `GetType` yöntemin nullable türündeki çağrısını arayın ve sonucu aşağıdaki örnekte gösterildiği gibi ifadeyle karşılaştırın.
+Null yapılabilir bir türü işlecini kullanarak dışındaki bir ifadeyle karşılaştırmak için `Nothing` `IsNot` , `GetType` Aşağıdaki örnekte gösterildiği gibi, null yapılabilir türde yöntemi çağırın ve sonucu ifadesiyle karşılaştırın.
 
 ```vb
 Dim number? As Integer = 5
@@ -36,5 +36,5 @@ End If
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Boş Değer Atanabilen Değer Türleri](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Null yapılabilir değer türleri](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [IsNot İşleci](../operators/isnot-operator.md)

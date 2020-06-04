@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: b576062ccbb751a23ecb68e4ae070103078b0c6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9a4dc9904f7875f0405227014e2238fe91f4c69
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664235"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402791"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename >' bir tür ve ifade olarak kullanılamaz
-Bir tür adı bir ifade gerekli olduğu gerçekleşir. Bir ifade değişkenleri, sabitleri, sabit değerleri, özellikleri, bileşiminden oluşmalı ve `Function` yordam çağrıları.  
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename>' bir tür ve ifade olarak kullanılamaz
+Bir ifadenin gerekli olduğu bir tür adı oluşur. Bir ifade, bazı değişkenler, sabitler, sabit değerler, Özellikler ve yordam çağrılarının birleşiminden oluşmalıdır `Function` .  
   
- **Hata Kimliği:** BC30108  
+ **Hata kimliği:** BC30108  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Tür adı'nı kaldırın ve geçerli öğeleri kullanılarak ifade oluşturun.  
+- Tür adını kaldırın ve geçerli öğeleri kullanarak ifadeyi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [İşleçler ve Ifadeler](../../programming-guide/language-features/operators-and-expressions/index.md)

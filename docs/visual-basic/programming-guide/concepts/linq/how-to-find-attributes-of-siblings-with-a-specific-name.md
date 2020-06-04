@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Belirli bir Ada Sahip Eşdüzeylerin Özniteliklerini Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: ea4492dbbe9dc8e32c675e1a938cda0d10321b7a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0317e03de6f671991d6d0a4247ca2e9c172439b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343671"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405280"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: belirli bir ada sahip eşdüzey öğelerinin özniteliklerini bulma (XPath-LINQ to XML) (Visual Basic)
 Bu konu, bağlam düğümünün eşdüzey öğelerinin tüm özniteliklerinin nasıl bulunacağını gösterir. Koleksiyonda yalnızca belirli bir ada sahip öznitelikler döndürülür.  
@@ -17,9 +17,9 @@ Bu konu, bağlam düğümünün eşdüzey öğelerinin tüm özniteliklerinin na
  `../Book/@id`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek öncelikle bir `Book` öğesi bulur ve sonra `Book`adlı tüm eşdüzey öğeleri bulur ve ardından `id`adlı tüm öznitelikleri bulur. Sonuç, özniteliklerin koleksiyonudur.  
+ Bu örnek önce bir `Book` öğesi bulur, sonra adlı tüm eşdüzey öğeleri bulur ve `Book` sonra adlı tüm öznitelikleri bulur `id` . Sonuç, özniteliklerin koleksiyonudur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -56,4 +56,4 @@ id="bk102"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

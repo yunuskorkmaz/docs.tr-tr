@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664179"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382178"
 ---
-# <a name="typename-is-a-delegate-type"></a>'\<typename >' bir temsilci türü
-'\<typename >' temsilci türüdür. Temsilci oluşturma yalnızca tek bir AddressOf ifade bir bağımsız değişken listesi olarak izin verir. Genellikle bir AddressOf ifadesi, bir temsilci oluşturma yerine kullanılabilir.  
+# <a name="typename-is-a-delegate-type"></a>'\<typename>' bir temsilci türü değil
+' \<typename> ' bir temsilci türüdür. Temsilci oluşturma, bağımsız değişken listesi olarak yalnızca tek bir AddressOf ifadesine izin veriyor. Genellikle bir AddressOf ifadesi, temsilci oluşturma yerine kullanılabilir.  
   
- A `New` yan tümcesi bir temsilci sınıfı örneğini oluşturma temsilci Oluşturucu için geçersiz bağımsız değişken listesi sağlar.  
+ `New`Temsilci sınıfının bir örneğini oluşturan yan tümce, temsilci oluşturucusuna geçersiz bir bağımsız değişken listesi sağlar.  
   
- Yalnızca tek bir sağladığınız `AddressOf` yeni bir temsilci örneğini oluştururken ifade.  
+ `AddressOf`Yeni bir temsilci örneği oluştururken yalnızca tek bir ifade sağlayabilirsiniz.  
   
- Bu hata, herhangi bir bağımsız değişken temsilci Oluşturucu için birden fazla bağımsız değişken geçirmeniz ya da tek bir bağımsız değişken geçirirseniz, geçerli değil geçirmezseniz sonuçlanabilir `AddressOf` ifade.  
+ Bu hata, birden fazla bağımsız değişken geçirirseniz veya geçerli bir ifade olmayan tek bir bağımsız değişken geçirirseniz, temsilci oluşturucusuna herhangi bir bağımsız değişken geçirmezseniz oluşabilir `AddressOf` .  
   
- **Hata Kimliği:** BC32008  
+ **Hata kimliği:** BC32008  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Tek kullanımlık `AddressOf` ifade'temsilci sınıfında bağımsız değişken listesinde `New` yan tümcesi.  
+- `AddressOf`Yan tümcesindeki Delegate sınıfı için bağımsız değişken listesinde tek bir ifade kullanın `New` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [New İşleci](../../../visual-basic/language-reference/operators/new-operator.md)
-- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Nasıl yapılır: Bir temsilci yöntemi çağırma](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [New Işleci](../operators/new-operator.md)
+- [AddressOf İşleci](../operators/addressof-operator.md)
+- [Temsilciler](../../programming-guide/language-features/delegates/index.md)
+- [Nasıl yapılır: Temsilci Yöntemi Çağırma](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

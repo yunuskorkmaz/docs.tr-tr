@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: ad alanındaki tüm düğümleri bulma'
+title: 'Nasıl yapılır: Ad Alanındaki Tüm Düğümleri Bulma'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: f6bc38140bc2ea43393133d78c798469d26671c5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f1660020db59b63dea86ed8953faef743c0f40d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352965"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405319"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Nasıl yapılır: ad alanındaki tüm düğümleri bulma (Visual Basic)
 Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Örnek  
  Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Temel sorgular (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)

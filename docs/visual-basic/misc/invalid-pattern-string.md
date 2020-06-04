@@ -1,27 +1,27 @@
 ---
-title: Geçersiz desen dizesi
+title: Geçersiz desenli dize
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-ms.openlocfilehash: 7390b9b32eea248969813b52f8d9799798718de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa408f4cecc2a2774cb98cba96cd04a67afcc546
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790604"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402219"
 ---
-# <a name="invalid-pattern-string"></a>Geçersiz desen dizesi
-Belirtilen desen dizesi `Like` arama işlemi geçersiz.  
+# <a name="invalid-pattern-string"></a>Geçersiz desenli dize
+Bir aramanın işleminde belirtilen model dizesi `Like` geçersiz.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Geçerli karakterler listesi ifadeler için gözden geçirin.  
+1. Liste ifadeleri için geçerli karakterleri gözden geçirin.  
   
-2. Desen aralığında başlangıç aralığı karakteri küçük Bitiş aralığı karakter olarak olduğundan emin olun `[a-z]`.  
+2. Model aralığında, başlangıç aralığı karakterinin ' de olduğu gibi bitiş aralığı karakterinden küçük olduğundan emin olun `[a-z]` .  
   
-3. Desen aralığında değil olarak birden çok kısa çizgi, birbiriyle yanındaki emin olun `[a--z]`.  
+3. Model aralığında, içinde olduğu gibi birbirini izleyen birden çok tire olmadığından emin olun `[a--z]` .  
   
-4. Bir köşeli ayraç aralıklarıyla deseni sonlandırın.  
+4. Kapanış ayracı ile bitiş deseninin aralığı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Like İşleci](../../visual-basic/language-reference/operators/like-operator.md)
+- [Like İşleci](../language-reference/operators/like-operator.md)

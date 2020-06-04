@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: fd2ef1c25233cc1eaad6bcde68923688393b471d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e7bedd1de5197fcf8b69091f4cc878f41b01cd5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345102"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405112"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme
 Bu konuda, devralınan bileşenlerde olay işleyicileriyle ortaya çıkan yaygın sorunlar listelenmektedir.  
@@ -22,12 +22,12 @@ Bu konuda, devralınan bileşenlerde olay işleyicileriyle ortaya çıkan yaygı
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Olay Işleyicisindeki kod her çağrı için Iki kez yürütülür  
   
-- Devralınan olay işleyicisi bir [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) yan tümcesi içermemelidir. Temel sınıftaki yöntemi, olayla zaten ilişkilendirilmiş ve uygun şekilde harekete geçmeyecektir. Devralınan yöntemden `Handles` yan tümcesini kaldırın.  
+- Devralınan olay işleyicisi bir [Handles](../../../language-reference/statements/handles-clause.md) yan tümcesi içermemelidir. Temel sınıftaki yöntemi, olayla zaten ilişkilendirilmiş ve uygun şekilde harekete geçmeyecektir. `Handles`Devralınan yöntemden yan tümceyi kaldırın.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- Devralınan yöntemin bir `Handles` anahtar sözcüğü yoksa, kodunuzun ek bir [AddHandler bildirisi](../../../../visual-basic/language-reference/statements/addhandler-statement.md) veya aynı olayı işleyen başka yöntemler içermediğini doğrulayın.  
+- Devralınan yöntemin bir `Handles` anahtar sözcüğü yoksa, kodunuzun bir ek [AddHandler bildirisi](../../../language-reference/statements/addhandler-statement.md) veya aynı olayı işleyen başka yöntemler içermediğini doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Olaylar](index.md)

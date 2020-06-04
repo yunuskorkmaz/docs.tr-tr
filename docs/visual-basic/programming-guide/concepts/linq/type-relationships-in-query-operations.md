@@ -11,37 +11,37 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 73a287541ddf115510bf6ab5c830eafac370cc3a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636919"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406735"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 
-Dil ile tümleşik sorgu (LINQ) sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir LINQ sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+Dil ile tümleşik sorgu (LINQ) sorgu işlemlerinde kullanılan değişkenler kesin olarak türdedir ve birbirleriyle uyumlu olmalıdır. Güçlü yazma, veri kaynağında, sorgunun kendisinde ve sorgu yürütmesinde kullanılır. Aşağıdaki çizimde, bir LINQ sorgusunu tanımlamak için kullanılan terimler tanımlanmaktadır. Bir sorgunun kısımları hakkında daha fazla bilgi için bkz. [temel sorgu işlemleri (Visual Basic)](basic-query-operations.md).
 
 ![Öğeleri vurgulanmış bir sözde kod sorgusunu gösteren ekran görüntüsü.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
-Sorgudaki aralık değişkeninin türü, veri kaynağındaki öğelerin türüyle uyumlu olmalıdır. Sorgu değişkeninin türü, `Select` yan tümcesinde tanımlanan dizi öğesiyle uyumlu olmalıdır. Son olarak, dizi öğelerinin türü sorguyu yürüten `For Each` bildiriminde kullanılan döngü denetimi değişkeninin türüyle uyumlu olmalıdır. Bu güçlü yazma, derleme zamanında tür hatalarının tanımlanmasını kolaylaştırır.
+Sorgudaki aralık değişkeninin türü, veri kaynağındaki öğelerin türüyle uyumlu olmalıdır. Sorgu değişkeninin türü, yan tümcesinde tanımlanan dizi öğesiyle uyumlu olmalıdır `Select` . Son olarak, dizi öğelerinin türü sorguyu yürüten ifadede kullanılan döngü denetimi değişkeninin türüyle uyumlu olmalıdır `For Each` . Bu güçlü yazma, derleme zamanında tür hatalarının tanımlanmasını kolaylaştırır.
 
-Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve LINQ örnekleri ve belgelerinin tamamında kullanıldığını görürsünüz. Visual Basic, yerel tür çıkarımı yalnızca bir `As` yan tümcesi olmadan bir `Dim` deyimi kullanılarak gerçekleştirilir. Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
+Visual Basic, *örtülü yazma*olarak da bilinen yerel tür çıkarımı uygulayarak güçlü yazma kullanışlı hale getirir. Bu özellik önceki örnekte kullanılır ve LINQ örnekleri ve belgelerinin tamamında kullanıldığını görürsünüz. Visual Basic, yerel tür çıkarımı yalnızca `Dim` yan tümce olmadan bir deyimi kullanılarak gerçekleştirilir `As` . Aşağıdaki örnekte, `city` kesin bir dize olarak türdedir.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Yerel tür çıkarımı yalnızca `Option Infer` `On`olarak ayarlandığında kullanılır. Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
+> Yerel tür çıkarımı yalnızca `Option Infer` olarak ayarlandığında kullanılabilir `On` . Daha fazla bilgi için bkz. [Option Infer deyimleri](../../../language-reference/statements/option-infer-statement.md).
 
 Ancak, bir sorguda yerel tür çıkarımı kullanıyor olsanız bile, veri kaynağı, sorgu değişkeni ve sorgu yürütme döngüsünde değişkenler arasında aynı tür ilişkileri vardır. LINQ sorguları yazarken veya belgelerde örnek ve kod örnekleriyle çalışırken, bu tür ilişkilerden temel olarak anlaşılmak yararlıdır.
 
-Veri kaynağından döndürülen türle eşleşmeyen bir Aralık değişkeni için açık bir tür belirtmeniz gerekebilir. `As` yan tümcesini kullanarak Aralık değişkeninin türünü belirtebilirsiniz. Ancak, dönüştürme bir [daraltma dönüştürmedir](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) ve `Option Strict` `On`olarak ayarlanırsa bu hata oluşur. Bu nedenle, dönüştürmeyi veri kaynağından alınan değerlerle gerçekleştirmenizi öneririz. <xref:System.Linq.Enumerable.Cast%2A> yöntemini kullanarak veri kaynağındaki değerleri açık Aralık değişkeni türüne dönüştürebilirsiniz. `Select` yan tümcesindeki seçili değerleri, Aralık değişkeninin türünden farklı bir açık türe de çevirebilirsiniz. Bu noktaları aşağıdaki kodda gösterilmiştir.
+Veri kaynağından döndürülen türle eşleşmeyen bir Aralık değişkeni için açık bir tür belirtmeniz gerekebilir. Bir yan tümce kullanarak Aralık değişkeninin türünü belirtebilirsiniz `As` . Ancak, dönüştürme bir [daraltma dönüştürmesi](../../language-features/data-types/widening-and-narrowing-conversions.md) ise ve olarak ayarlanmışsa bu hata oluşur `Option Strict` `On` . Bu nedenle, dönüştürmeyi veri kaynağından alınan değerlerle gerçekleştirmenizi öneririz. Yöntemini kullanarak veri kaynağındaki değerleri açık Aralık değişkeni türüne dönüştürebilirsiniz <xref:System.Linq.Enumerable.Cast%2A> . Yan tümcesindeki seçili değerleri, `Select` Aralık değişkeninin türünden farklı bir açık türe de çevirebilirsiniz. Bu noktaları aşağıdaki kodda gösterilmiştir.
 
 [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Kaynak verilerin tüm öğelerini döndüren sorgular
 
-Aşağıdaki örnek, kaynak verilerden seçilen öğelerin dizisini döndüren bir LINQ sorgu işlemini gösterir. Kaynak, `names`, bir dize dizisi içerir ve sorgu çıktısı, ı harfiyle başlayan dizeleri içeren bir dizidir.
+Aşağıdaki örnek, kaynak verilerden seçilen öğelerin dizisini döndüren bir LINQ sorgu işlemini gösterir. Kaynak, `names` bir dize dizisi içerir ve sorgu çıktısı, ı harfiyle başlayan dizeleri içeren bir dizidir.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
@@ -51,15 +51,15 @@ Bu, aşağıdaki koda eşdeğerdir, ancak yazılması çok daha kısadır ve kol
 
 Aşağıdaki ilişkiler, türlerin örtük olarak mı yoksa açık olarak mı belirlendiği, önceki kod örneklerinde her ikisinde de mevcuttur.
 
-1. `names`veri kaynağındaki öğelerin türü, `name`Aralık değişkeninin türüdür, sorgu.
+1. Veri kaynağındaki öğelerin türü, sorgusunda,,,, `names` Aralık değişkeninin türüdür `name` .
 
-2. `name`, seçili nesnenin türü, `mNames`sorgu değişkeninin türünü belirler. Burada `name` bir dizedir, bu nedenle sorgu değişkeni Visual Basic IEnumerable (dize) olur.
+2. Seçilen nesnenin türü, `name` sorgu değişkeninin türünü belirler `mNames` . Burada `name` bir dize olduğundan sorgu değişkeni Visual Basic IEnumerable (dize) olur.
 
-3. `mNames` ' de tanımlanan sorgu `For Each` döngüsünde yürütülür. Döngü, sorguyu yürütmenin sonucunu yineler. `mNames`, yürütüldüğü zaman bir dize dizisi döndürür, `nm`döngüsü yineleme değişkeni de bir dizedir.
+3. İçinde tanımlanan sorgu, `mNames` `For Each` döngüsünde yürütülür. Döngü, sorguyu yürütmenin sonucunu yineler. `mNames`Yürütüldüğünde, bir dize dizisi döndürür, Loop yineleme değişkeni `nm` de bir dizedir.
 
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Seçili öğelerden bir alan döndüren sorgular
 
-Aşağıdaki örnek, veri kaynağından seçilen her bir öğenin yalnızca bir kısmını içeren bir dizi döndüren [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] sorgu işlemini gösterir. Sorgu, veri kaynağı olarak bir `Customer` nesneleri koleksiyonu alır ve yalnızca sonuç içindeki `Name` özelliğini projeler. Müşteri adı bir dize olduğundan, sorgu çıktı olarak bir dizi dize üretir.
+Aşağıdaki örnek, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] veri kaynağından seçilen her bir öğenin yalnızca bir kısmını içeren bir dizi döndüren bir sorgu işlemini gösterir. Sorgu, `Customer` veri kaynağı olarak nesneler koleksiyonunu ve yalnızca `Name` sonuç içindeki özelliği kullanır. Müşteri adı bir dize olduğundan, sorgu çıktı olarak bir dizi dize üretir.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -75,11 +75,11 @@ Next
 
 Değişkenler arasındaki ilişkiler, daha basit örnekteki gibi bir örnektir.
 
-1. `customers`veri kaynağındaki öğelerin türü, `cust`Aralık değişkeninin türüdür, sorgu. Bu örnekte, bu tür `Customer`.
+1. Veri kaynağındaki öğelerin türü, sorgusunda,,,, `customers` Aralık değişkeninin türüdür `cust` . Bu örnekte, bu tür olur `Customer` .
 
-2. `Select` ifade, tüm nesne yerine her bir `Customer` nesnesinin `Name` özelliğini döndürür. `Name` bir dize olduğundan, `custNames`sorgu değişkeni `Customer`değil IEnumerable (dize) olacaktır.
+2. `Select`İfade, `Name` `Customer` tüm nesne yerine her nesnenin özelliğini döndürür. `Name`Bir dize olduğundan, sorgu değişkeni `custNames` yeniden IEnumerable (dize) olacaktır, değil `Customer` .
 
-3. `custNames` bir dizi dizeyi temsil ettiğinden, `For Each` döngüsünün yineleme değişkeni `custName`, bir dize olmalıdır.
+3. , `custNames` Bir dizi dizeyi temsil ettiğinden, `For Each` döngünün yineleme değişkeni, `custName` bir dize olmalıdır.
 
 Yerel tür çıkarımı olmadan, aşağıdaki örnekte gösterildiği gibi önceki örnek yazmak ve anlamak için daha fazla kullanışsız olacaktır.
 
@@ -98,7 +98,7 @@ Yerel tür çıkarımı olmadan, aşağıdaki örnekte gösterildiği gibi önce
 
 ## <a name="queries-that-require-anonymous-types"></a>Anonim türler gerektiren sorgular
 
-Aşağıdaki örnekte daha karmaşık bir durum gösterilmektedir. Önceki örnekte, tüm değişkenler için türleri açıkça belirtmek uygun değildi. Bu örnekte, olanaksızdır. Veri kaynağından tüm `Customer` öğeleri veya her öğeden tek bir alanı seçmek yerine, bu sorgudaki `Select` yan tümce orijinal `Customer` nesnesinin iki özelliğini döndürür: `Name` ve `City`. `Select` yan tümcesine yanıt olarak, derleyici bu iki özelliği içeren anonim bir tür tanımlar. `For Each` döngüsünde `nameCityQuery` yürütmenin sonucu, yeni anonim türün örneklerinin bir koleksiyonudur. Anonim türün kullanılabilir bir adı olmadığından, `nameCityQuery` veya `custInfo` türünü açıkça belirtemezsiniz. Yani, anonim bir tür ile `IEnumerable(Of String)``String` yerine kullanılacak tür adı yoktur. Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Aşağıdaki örnekte daha karmaşık bir durum gösterilmektedir. Önceki örnekte, tüm değişkenler için türleri açıkça belirtmek uygun değildi. Bu örnekte, olanaksızdır. Tüm `Customer` öğeleri veri kaynağından veya her öğeden tek bir alandan seçmek yerine, `Select` Bu sorgudaki yan tümce özgün nesnenin iki özelliğini döndürür `Customer` : `Name` ve `City` . Yan tümcesine yanıt olarak `Select` , derleyici bu iki özelliği içeren anonim bir tür tanımlar. Döngüde yürütmenin sonucu, `nameCityQuery` `For Each` yeni anonim türün örneklerinin bir koleksiyonudur. Anonim türün kullanılabilir bir adı olmadığından, türü `nameCityQuery` veya `custInfo` açıkça belirtemezsiniz. Diğer bir deyişle, bir anonim tür ile, ' de ' ın yerine kullanılacak tür adı yoktur `String` `IEnumerable(Of String)` . Daha fazla bilgi için bkz. [anonim türler](../../language-features/objects-and-classes/anonymous-types.md).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -114,17 +114,17 @@ Next
 
 Önceki örnekteki tüm değişkenlerin türlerini belirtmek mümkün olmasa da ilişkiler aynı kalır.
 
-1. Veri kaynağındaki öğelerin türü, sorgudaki aralık değişkeninin türüdür. Bu örnekte, `cust` bir `Customer`örneğidir.
+1. Veri kaynağındaki öğelerin türü, sorgudaki aralık değişkeninin türüdür. Bu örnekte, `cust` bir örneğidir `Customer` .
 
-2. `Select` deyimin anonim bir tür oluşturduğu için, `nameCityQuery`sorgu değişkeni örtük olarak anonim bir tür olarak yazılmalıdır. Anonim bir türün kullanılabilir adı yok ve bu nedenle açıkça belirtilemez.
+2. `Select`İfade anonim bir tür oluşturduğundan, sorgu değişkeni `nameCityQuery` örtülü olarak anonim bir tür olarak yazılmalıdır. Anonim bir türün kullanılabilir adı yok ve bu nedenle açıkça belirtilemez.
 
-3. `For Each` döngüsünde yineleme değişkeninin türü, adım 2 ' de oluşturulan anonim türüdür. Türün kullanılabilir bir adı olmadığından, döngü yineleme değişkeninin türü örtük olarak belirtilmelidir.
+3. Döngüdeki yineleme değişkeninin türü `For Each` 2. adımda oluşturulan anonim türüdür. Türün kullanılabilir bir adı olmadığından, döngü yineleme değişkeninin türü örtük olarak belirtilmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ ile çalışmaya başlama](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [Visual Basic'te LINQ'e Başlarken](getting-started-with-linq.md)
+- [Anonim Türler](../../language-features/objects-and-classes/anonymous-types.md)
+- [Yerel Tür Arabirimi](../../language-features/variables/local-type-inference.md)
+- [Visual Basic'de LINQ'e Giriş](../../language-features/linq/introduction-to-linq.md)
+- [LINQ](../../language-features/linq/index.md)
+- [Sorgular](../../../language-reference/queries/index.md)

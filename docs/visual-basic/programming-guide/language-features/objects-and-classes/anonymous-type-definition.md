@@ -1,15 +1,15 @@
 ---
-title: Anonim Tür Tanımı
+title: Anonim Tip Tanımı
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: f8ac26577a7fbef865605a7ecf643fa733b2c2c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 952eb295cc71eab5d0ad6e18f2b697a9b701b434
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344923"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404907"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Anonim Tür Tanımı (Visual Basic)
 
@@ -17,11 +17,11 @@ Anonim türdeki bir örneğin bildirimine yanıt olarak, derleyici tür için be
 
 ## <a name="compiler-generated-code"></a>Derleyici tarafından üretilen kod
 
-Aşağıdaki `product`tanımı için, derleyici `Name`, `Price`ve `OnHand`özellikleri içeren yeni bir sınıf tanımı oluşturur.
+Aşağıdaki tanımı için, `product` derleyici, ve özelliklerini içeren yeni bir sınıf tanımı oluşturur `Name` `Price` `OnHand` .
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-Sınıf tanımı aşağıdakine benzer özellik tanımları içerir. Anahtar özellikleri için `Set` yöntemi olmadığına dikkat edin. Anahtar özelliklerinin değerleri salt okunurdur.
+Sınıf tanımı aşağıdakine benzer özellik tanımları içerir. `Set`Anahtar özellikleri için bir yöntem olmadığına dikkat edin. Anahtar özelliklerinin değerleri salt okunurdur.
 
 ```vb
 Public Class $Anonymous1
@@ -54,9 +54,9 @@ End Class
 
 Buna ek olarak, anonim tür tanımları parametresiz bir Oluşturucu içerir. Parametre gerektiren oluşturuculara izin verilmez.
 
-Anonim bir tür bildiriminde en az bir anahtar özellik varsa, tür tanımı <xref:System.Object>devralınan üç üyeyi geçersiz kılar: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>ve <xref:System.Object.ToString%2A>. Hiçbir anahtar özellik bildirilmemiş ise, yalnızca <xref:System.Object.ToString%2A> geçersiz kılınır. Geçersiz kılmalar aşağıdaki işlevleri sağlar:
+Anonim bir tür bildiriminde en az bir anahtar özellik varsa tür tanımı, öğesinden devralınan üç üyeyi geçersiz kılar <xref:System.Object> : <xref:System.Object.Equals%2A> , <xref:System.Object.GetHashCode%2A> , ve <xref:System.Object.ToString%2A> . Hiçbir anahtar özellik bildirilmemiş ise, yalnızca <xref:System.Object.ToString%2A> geçersiz kılınır. Geçersiz kılmalar aşağıdaki işlevleri sağlar:
 
-- `Equals`, iki anonim tür örneği aynı örnekle varsa veya aşağıdaki koşullara uyuyorsa `True` döndürür:
+- `Equals``True`iki anonim tür örneği aynı örnekle ise veya aşağıdaki koşullara uyuyorsa döndürür:
 
   - Aynı sayıda özelliği vardır.
 
@@ -64,26 +64,26 @@ Anonim bir tür bildiriminde en az bir anahtar özellik varsa, tür tanımı <xr
 
   - Özelliklerden en az biri bir anahtar özelliktir ve `Key` anahtar sözcüğü aynı özelliklere uygulanır.
 
-  - Her bir karşılık gelen anahtar özellikleri çiftinin karşılaştırılması `True`döndürür.
+  - Her bir karşılık gelen anahtar özellikleri çiftinin karşılaştırması döndürür `True` .
 
-    Örneğin, aşağıdaki örneklerde `Equals` yalnızca `employee01` ve `employee08`için `True` döndürür. Her satırdan önceki yorum, yeni örneğin `employee01`eşleşmemesi nedenini belirtir.
+    Örneğin, aşağıdaki örneklerde `Equals` `True` yalnızca ve için döndürür `employee01` `employee08` . Her satırdan önceki yorum, yeni örneğin eşleşmemesinin nedenini belirtir `employee01` .
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` uygun bir benzersiz GetHashCode algoritması sağlar. Algoritma, karma kodu hesaplamak için yalnızca anahtar özelliklerini kullanır.
+- `GetHashcode`uygun şekilde benzersiz bir GetHashCode algoritması sağlar. Algoritma, karma kodu hesaplamak için yalnızca anahtar özelliklerini kullanır.
 
-- `ToString`, aşağıdaki örnekte gösterildiği gibi, art arda eklenmiş özellik değerlerinin bir dizesini döndürür. Anahtar ve anahtar olmayan özellikler dahil edilmiştir.
+- `ToString`Aşağıdaki örnekte gösterildiği gibi, art arda eklenmiş özellik değerleri dizesini döndürür. Anahtar ve anahtar olmayan özellikler dahil edilmiştir.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Anonim bir türün açıkça adlandırılmış özellikleri, oluşturulan bu yöntemlerle çakışamaz. Diğer bir deyişle, bir özelliği adlandırmak için `.Equals`, `.GetHashCode`veya `.ToString` kullanamazsınız.
+Anonim bir türün açıkça adlandırılmış özellikleri, oluşturulan bu yöntemlerle çakışamaz. Diğer bir deyişle,,, `.Equals` `.GetHashCode` veya özelliğini kullanamazsınız `.ToString` .
 
-En az bir anahtar özelliği içeren anonim tür tanımları <xref:System.IEquatable%601?displayProperty=nameWithType> arabirimini de uygular; burada `T` anonim türün türüdür.
+En az bir anahtar özelliği içeren anonim tür tanımları arabirimini de uygular <xref:System.IEquatable%601?displayProperty=nameWithType> , burada `T` anonim türün türüdür.
 
 > [!NOTE]
 > Anonim tür bildirimleri aynı anonim türü yalnızca aynı derlemede gerçekleştiklerinde oluşturduklarında, özellikleri aynı ada ve aynı gösterilen türlere sahiptir, özellikler aynı sırada ve aynı Özellikler anahtar özellikleri olarak işaretlenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Anonim Türler](anonymous-types.md)
+- [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

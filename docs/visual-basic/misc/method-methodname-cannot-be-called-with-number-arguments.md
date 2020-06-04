@@ -1,27 +1,27 @@
 ---
-title: Yöntem '<methodname>' ile çağrılamaz <number> bağımsız değişkenleri
+title: "' <methodname> ' Metodu <number> bağımsız değişkenlerle çağrılamaz"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922323"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402115"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Yöntemi '\<yöntemAdı >' ile çağrılamaz \<number > bağımsız değişkenleri
-Bir yöntem çağrısının yanlış sayıda bağımsız değişken içeriyor.  
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>' \<methodname> ' Metodu \<number> bağımsız değişkenlerle çağrılamaz
+Yöntem çağrısı yanlış sayıda bağımsız değişken içeriyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Sağladığınız bağımsız değişkenlerin sayısı.  
+1. Sağladığınız bağımsız değişkenleri say.  
   
-2. Aramak istediğiniz yöntemin parametre sayısı karşı numara ile aynı.  
+2. Numarayı çağırmak istediğiniz yöntemdeki parametre sayısıyla eşleştirin.  
   
-3. İki sayı değil olarak kabul ediyorsanız, bağımsız değişken sayısı ayarlayın.  
+3. İki sayının kabul etmediğinden bağımsız değişken sayısını ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

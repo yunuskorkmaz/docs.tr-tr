@@ -9,23 +9,23 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 31b719fb7e43cdd6ac44424b359999410dd608a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005059"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403050"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan veya belirli bir çalışma zamanı kitaplığı başvurusuyla derlenmesi gerektiğini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -vbruntime:{ - | + | * | path }  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  \-  
  Visual Basic çalışma zamanı kitaplığı başvurusu olmadan derleyin.  
   
@@ -39,14 +39,14 @@ Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan
  Belirtilen kitaplığa (DLL) bir başvuru ile derleyin.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-vbruntime` Derleyici seçeneği, derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan derlenmesi gerektiğini belirtmenize olanak sağlar. Visual Basic çalışma zamanı kitaplığına başvuru olmadan derlerseniz, hatalar veya uyarılar bir Visual Basic çalışma zamanı Yardımcısı çağrısı üreten kod veya dil yapılarında günlüğe kaydedilir. ( *Visual Basic çalışma zamanı Yardımcısı* , belirli bir dil anlam yürütmesi yürütmek için çalışma zamanında çağrılan Microsoft. VisualBasic. dll ' de tanımlanan bir işlevdir.)  
+ `-vbruntime`Derleyici seçeneği, derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan derlenmesi gerektiğini belirtmenize olanak sağlar. Visual Basic çalışma zamanı kitaplığına başvuru olmadan derlerseniz, hatalar veya uyarılar bir Visual Basic çalışma zamanı Yardımcısı çağrısı üreten kod veya dil yapılarında günlüğe kaydedilir. ( *Visual Basic çalışma zamanı Yardımcısı* , belirli bir dil anlam yürütmesi yürütmek için çalışma zamanında çağrılan Microsoft. VisualBasic. dll ' de tanımlanan bir işlevdir.)  
   
- `-vbruntime+` Seçeneği, `-vbruntime` anahtar belirtilmediğinde oluşan aynı davranışı üretir. Daha önceki `-vbruntime` anahtarları geçersiz `-vbruntime+` kılmak için seçeneğini kullanabilirsiniz.  
+ `-vbruntime+`Seçeneği, anahtar belirtilmediğinde oluşan aynı davranışı üretir `-vbruntime` . Daha `-vbruntime+` önceki anahtarları geçersiz kılmak için seçeneğini kullanabilirsiniz `-vbruntime` .  
   
- Veya seçeneklerini kullandığınızda, `My` `-vbruntime:path` türün çoğu nesne `-vbruntime-` kullanılamaz.  
+ `My`Veya seçeneklerini kullandığınızda, türün çoğu nesne kullanılamaz `-vbruntime-` `-vbruntime:path` .  
   
 ## <a name="embedding-visual-basic-runtime-core-functionality"></a>Visual Basic çalışma zamanı temel işlevlerini katıştırma  
- Seçeneği `-vbruntime*` , bir çalışma zamanı kitaplığı başvurusu olmadan derlemenize olanak sağlar. Bunun yerine, Visual Basic çalışma zamanı kitaplığındaki çekirdek işlevsellik Kullanıcı derlemesine katıştırılır. Uygulamanız Visual Basic çalışma zamanı içermeyen platformlarda çalışıyorsa, bu seçeneği kullanabilirsiniz.  
+ `-vbruntime*`Seçeneği, bir çalışma zamanı kitaplığı başvurusu olmadan derlemenize olanak sağlar. Bunun yerine, Visual Basic çalışma zamanı kitaplığındaki çekirdek işlevsellik Kullanıcı derlemesine katıştırılır. Uygulamanız Visual Basic çalışma zamanı içermeyen platformlarda çalışıyorsa, bu seçeneği kullanabilirsiniz.  
   
  Aşağıdaki çalışma zamanı üyeleri katıştırılır:  
   
@@ -78,17 +78,17 @@ Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan
   
 - <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>sabit  
   
-- `My` Türün bazı nesneleri  
+- Türün bazı nesneleri `My`  
   
- `-vbruntime*` Seçeneğini kullanarak derlerseniz ve kodunuz çekirdek işlevlerle gömülü olmayan Visual Basic çalışma zamanı kitaplığından bir üyeye başvuruyorsa, derleyici üyenin kullanılamaz olduğunu belirten bir hata döndürür.  
+ Seçeneğini kullanarak derlerseniz `-vbruntime*` ve kodunuz çekirdek işlevlerle gömülü olmayan Visual Basic çalışma zamanı kitaplığından bir üyeye başvuruyorsa, derleyici üyenin kullanılamaz olduğunu belirten bir hata döndürür.  
   
 ## <a name="referencing-a-specified-library"></a>Belirtilen bir kitaplığa başvurma  
- Varsayılan Visual Basic çalışma zamanı `path` kitaplığı yerine özel bir çalışma zamanı kitaplığı başvurusuyla derlemek için bağımsız değişkenini kullanabilirsiniz.  
+ `path`Varsayılan Visual Basic çalışma zamanı kitaplığı yerine özel bir çalışma zamanı kitaplığı başvurusuyla derlemek için bağımsız değişkenini kullanabilirsiniz.  
   
- `path` Bağımsız değişkenin DEĞERI bir dll 'nin tam yolu ise, derleyici çalışma zamanı kitaplığı olarak bu dosyayı kullanacaktır. `path` Bağımsız değişkenin DEĞERI bir dll 'ye tam yol değilse, Visual Basic derleyici önce geçerli KLASÖRDE tanımlanan dll 'yi arar. Daha sonra [-SdkPath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) derleyici seçeneğini kullanarak belirttiğiniz yolda arama yapılır. `-sdkpath` Derleyici seçeneği kullanılmazsa, derleyici .NET Framework klasöründe (`%systemroot%\Microsoft.NET\Framework\versionNumber`) tanımlanan dll 'yi arar.  
+ `path`Bağımsız değişkenin değeri BIR DLL 'nin tam yolu ise, derleyici çalışma zamanı kitaplığı olarak bu dosyayı kullanacaktır. `path`Bağımsız değişkenin değeri BIR DLL 'ye tam yol değilse, Visual Basic derleyici önce geçerli klasörde tanımlanan dll 'yi arar. Daha sonra [-SdkPath](sdkpath.md) derleyici seçeneğini kullanarak belirttiğiniz yolda arama yapılır. `-sdkpath`Derleyici seçeneği kullanılmazsa, derleyici .NET Framework klasöründe () tanımlanan dll 'yi arar `%systemroot%\Microsoft.NET\Framework\versionNumber` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, özel bir kitaplığa yönelik bir `-vbruntime` başvuruya sahip derleme için seçeneğinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `-vbruntime` özel bir kitaplığa yönelik bir başvuruya sahip derleme için seçeneğinin nasıl kullanılacağını gösterir.  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -97,6 +97,6 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic Core – Visual Studio 2010 SP1 'de yeni derleme modu](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [-sdkpath](sdkpath.md)

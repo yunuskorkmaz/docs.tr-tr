@@ -17,37 +17,37 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: f114aee75356e59eafd9d3ba6af9c64402cb374f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46ab1a1148e8d73d91293aedfc407e5efdc7cfb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345867"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404569"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements Tümcesi (Visual Basic)
 Bir sınıf veya yapı üyesinin, arabirim içinde tanımlanmış bir üye için uygulama sağladığını gösterir.  
   
 ## <a name="remarks"></a>Açıklamalar  
-`Implements` anahtar sözcüğü, [Implements ifadesiyle](../../../visual-basic/language-reference/statements/implements-statement.md)aynı değildir. Bir sınıf veya yapının bir veya daha fazla arabirim uyguladığını belirtmek için `Implements` ifadesini kullanın ve ardından her üye için, hangi arabirimin ve hangi üyenin uyguladığı için `Implements` anahtar sözcüğünü kullanırsınız.
+`Implements`Anahtar sözcüğü, [Implements ifadesiyle](implements-statement.md)aynı değildir. `Implements`Bir sınıf ya da yapının bir veya daha fazla arabirim uyguladığını belirtmek için ifadesini kullanın ve ardından her üye için `Implements` hangi arabirimin ve hangi üyenin uyguladığı, anahtar sözcüğünü kullanırsınız.
 
-Bir sınıf veya yapı bir arabirim uygularsa, [sınıf](../../../visual-basic/language-reference/statements/class-statement.md) veya [Yapı deyimden](../../../visual-basic/language-reference/statements/structure-statement.md)hemen sonra `Implements` ifadesini içermesi gerekir ve arabirim tarafından tanımlanan tüm üyeleri uygulamalıdır.
+Bir sınıf veya yapı bir arabirim uygularsa, `Implements` [sınıf deyimden](class-statement.md) veya [Yapı deyimden](structure-statement.md)hemen sonra ifadesini içermesi gerekir ve arabirim tarafından tanımlanan tüm üyeleri uygulamalıdır.
 
 ## <a name="reimplementation"></a>Yeniden uygulama  
 Türetilmiş bir sınıfta, temel sınıfın zaten uygulanmış olduğu bir arabirim üyesini yeniden uygulayabilirsiniz. Bu, aşağıdaki gibi temel sınıf üyesini geçersiz kılmadan farklıdır:
 
-- Temel sınıf üyesinin yeniden uygulanması için [geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md) olması gerekmez.
+- Temel sınıf üyesinin yeniden uygulanması için [geçersiz kılınabilir](../modifiers/overridable.md) olması gerekmez.
 - Üyeyi farklı bir adla yeniden uygulayabilirsiniz.
 
-`Implements` anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:
+`Implements`Anahtar sözcüğü aşağıdaki bağlamlarda kullanılabilir:
 
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Event Deyimi](event-statement.md)
+- [Function Deyimi](function-statement.md)
+- [Property Deyimi](property-statement.md)
+- [Sub Deyimi](sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Implements Deyimi](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Implements Deyimi](implements-statement.md)
+- [Interface Deyimi](interface-statement.md)
+- [Class Deyimi](class-statement.md)
+- [Structure Yapısı](structure-statement.md)

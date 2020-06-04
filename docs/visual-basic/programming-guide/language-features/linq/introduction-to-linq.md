@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 740d8010908d658deb40591d4a9c3182c46ffc84
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201715"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404920"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
@@ -38,11 +38,11 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm
   
  Visual Basic aşağıdaki LINQ sağlayıcılarını içerir.  
   
-|Sağlayıcı|Açıklama|  
+|Sağlayıcı|Description|  
 |---|---|  
 |Nesnelere LINQ|LINQ to Objects sağlayıcı, bellek içi koleksiyonları ve dizileri sorgulamanızı sağlar. Bir nesne ya da arabirimini destekliyorsa <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> , LINQ to Objects sağlayıcı sorgulamanızı sağlar.<br /><br /> <xref:System.Linq>Tüm Visual Basic projeleri için varsayılan olarak içeri aktarılan ad alanını içeri aktararak LINQ to Objects sağlayıcıyı etkinleştirebilirsiniz.<br /><br /> LINQ to Objects sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|LINQ to SQL sağlayıcı, verileri bir SQL Server veritabanında sorgulamanıza ve değiştirmenize olanak sağlar. Bu, bir uygulamanın nesne modelini bir veritabanındaki tablolar ve nesneler için eşlemeyi kolaylaştırır.<br /><br /> Visual Basic, Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) dahil LINQ to SQL birlikte çalışmayı kolaylaştırır. Bu tasarımcı, bir veritabanındaki nesnelerle eşleşen bir uygulamada nesne modeli oluşturmak için kullanılır. O/R Tasarımcısı Ayrıca, saklı yordamları ve işlevleri, <xref:System.Data.Linq.DataContext> veritabanı ile iletişimi yöneten ve iyimser eşzamanlılık denetimleri için durum depolayan nesne ile eşlemek için de işlevsellik sağlar.<br /><br /> LINQ to SQL sağlayıcısı hakkında daha fazla bilgi için bkz. [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Nesne İlişkisel Tasarımcısı hakkında daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
-|LINQ - XML|LINQ to XML sağlayıcı, XML 'yi sorgulamanıza ve değiştirmenize olanak sağlar. Bellek içi XML 'yi değiştirebilir veya XML dosyasından XML yükleyebilir ve bir dosyaya kaydedebilirsiniz.<br /><br /> Ayrıca, LINQ to XML sağlayıcı, doğrudan Visual Basic kodunuzda XML yazmanızı sağlayan XML sabit değerleri ve XML eksen özelliklerini etkinleştirir. Daha fazla bilgi için bkz. [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
+|LINQ - XML|LINQ to XML sağlayıcı, XML 'yi sorgulamanıza ve değiştirmenize olanak sağlar. Bellek içi XML 'yi değiştirebilir veya XML dosyasından XML yükleyebilir ve bir dosyaya kaydedebilirsiniz.<br /><br /> Ayrıca, LINQ to XML sağlayıcı, doğrudan Visual Basic kodunuzda XML yazmanızı sağlayan XML sabit değerleri ve XML eksen özelliklerini etkinleştirir. Daha fazla bilgi için bkz. [XML](../xml/index.md).|  
 |LINQ - DataSet|LINQ to DataSet sağlayıcı, bir ADO.NET veri kümesindeki verileri sorgulamanıza ve güncelleştirmenize olanak sağlar. Veri kümenizdeki verileri sorgulama, toplama ve güncelleştirme özelliklerini basitleştirmek ve genişletmek için veri kümelerini kullanan uygulamalara LINQ 'ın gücünü ekleyebilirsiniz.<br /><br /> Daha fazla bilgi için bkz. [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ sorgusunun yapısı  
@@ -68,7 +68,7 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- Güçlü sorgu ifadeleri oluşturmak için kullanabileceğiniz birkaç ek LINQ sorgu işleci vardır. Bu konunun sonraki bölümünde, bir sorgu ifadesine dahil etmek için kullanabileceğiniz çeşitli sorgu tümceleri ele alınmaktadır. Visual Basic sorgu yan tümceleri hakkında ayrıntılar için bkz. [sorgular](../../../../visual-basic/language-reference/queries/index.md).  
+ Güçlü sorgu ifadeleri oluşturmak için kullanabileceğiniz birkaç ek LINQ sorgu işleci vardır. Bu konunun sonraki bölümünde, bir sorgu ifadesine dahil etmek için kullanabileceğiniz çeşitli sorgu tümceleri ele alınmaktadır. Visual Basic sorgu yan tümceleri hakkında ayrıntılar için bkz. [sorgular](../../../language-reference/queries/index.md).  
   
 ## <a name="visual-basic-linq-query-operators"></a>Visual Basic LINQ sorgu işleçleri  
 
@@ -76,13 +76,13 @@ Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm
 
 ### <a name="from-clause"></a>From yan tümcesi
 
-Bir sorgu başlatmak için bir [ `From` yan tümce](../../../../visual-basic/language-reference/queries/from-clause.md) veya `Aggregate` yan tümce gereklidir. Bir `From` yan tümce, bir sorgu için bir kaynak koleksiyonu ve bir yineleme değişkeni belirtir. Örneğin:
+Bir sorgu başlatmak için bir [ `From` yan tümce](../../../language-reference/queries/from-clause.md) veya `Aggregate` yan tümce gereklidir. Bir `From` yan tümce, bir sorgu için bir kaynak koleksiyonu ve bir yineleme değişkeni belirtir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select tümcesi
 
-İsteğe bağlı. Bir [ `Select` yan tümce](../../../../visual-basic/language-reference/queries/select-clause.md) bir sorgu için yineleme değişkenleri kümesi bildirir. Örneğin:
+İsteğe bağlı. Bir [ `Select` yan tümce](../../../language-reference/queries/select-clause.md) bir sorgu için yineleme değişkenleri kümesi bildirir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,77 +90,77 @@ Bir `Select` yan tümce belirtilmemişse, sorgunun yineleme değişkenleri `From
 
 ### <a name="where-clause"></a>Where yan tümcesi
 
-İsteğe bağlı. Bir [ `Where` yan tümce](../../../../visual-basic/language-reference/queries/where-clause.md) bir sorgu için filtreleme koşulunu belirtir. Örneğin:
+İsteğe bağlı. Bir [ `Where` yan tümce](../../../language-reference/queries/where-clause.md) bir sorgu için filtreleme koşulunu belirtir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Order by yan tümcesi
 
-İsteğe bağlı. Bir [ `Order By` yan tümce](../../../../visual-basic/language-reference/queries/order-by-clause.md) bir sorgudaki sütunlar için sıralama düzenini belirtir. Örneğin:
+İsteğe bağlı. Bir [ `Order By` yan tümce](../../../language-reference/queries/order-by-clause.md) bir sorgudaki sütunlar için sıralama düzenini belirtir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join tümcesi
 
-İsteğe bağlı. [ `Join` Yan tümce](../../../../visual-basic/language-reference/queries/join-clause.md) iki koleksiyonu tek bir koleksiyon halinde birleştirir. Örneğin:
+İsteğe bağlı. [ `Join` Yan tümce](../../../language-reference/queries/join-clause.md) iki koleksiyonu tek bir koleksiyon halinde birleştirir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By tümcesi
 
-İsteğe bağlı. Bir [ `Group By` yan tümce](../../../../visual-basic/language-reference/queries/group-by-clause.md) bir sorgu sonucunun öğelerini gruplandırır. Her gruba toplama işlevleri uygulamak için kullanılabilir. Örneğin:
+İsteğe bağlı. Bir [ `Group By` yan tümce](../../../language-reference/queries/group-by-clause.md) bir sorgu sonucunun öğelerini gruplandırır. Her gruba toplama işlevleri uygulamak için kullanılabilir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join tümcesi
 
-İsteğe bağlı. [ `Group Join` Yan tümce](../../../../visual-basic/language-reference/queries/group-join-clause.md) iki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. Örneğin:
+İsteğe bağlı. [ `Group Join` Yan tümce](../../../language-reference/queries/group-join-clause.md) iki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate tümcesi
 
-Bir sorgu başlatmak için bir [ `Aggregate` yan tümce](../../../../visual-basic/language-reference/queries/aggregate-clause.md) veya `From` yan tümce gereklidir. `Aggregate`Yan tümce bir koleksiyona bir veya daha fazla toplama işlevi uygular. Örneğin, `Aggregate` Aşağıdaki örnekte olduğu gibi, bir sorgu tarafından döndürülen tüm öğelerin toplamını hesaplamak için yan tümcesini kullanabilirsiniz.
+Bir sorgu başlatmak için bir [ `Aggregate` yan tümce](../../../language-reference/queries/aggregate-clause.md) veya `From` yan tümce gereklidir. `Aggregate`Yan tümce bir koleksiyona bir veya daha fazla toplama işlevi uygular. Örneğin, `Aggregate` Aşağıdaki örnekte olduğu gibi, bir sorgu tarafından döndürülen tüm öğelerin toplamını hesaplamak için yan tümcesini kullanabilirsiniz.
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-`Aggregate`Bir sorguyu değiştirmek için yan tümcesini de kullanabilirsiniz. Örneğin, `Aggregate` yan tümcesini kullanarak ilgili sorgu koleksiyonunda bir hesaplama yapabilirsiniz. Örneğin:
+`Aggregate`Bir sorguyu değiştirmek için yan tümcesini de kullanabilirsiniz. Örneğin, `Aggregate` yan tümcesini kullanarak ilgili sorgu koleksiyonunda bir hesaplama yapabilirsiniz. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let tümcesi
 
-İsteğe bağlı. Bir [ `Let` yan tümce](../../../../visual-basic/language-reference/queries/let-clause.md) bir değeri hesaplar ve bunu sorgudaki yeni bir değişkene atar. Örneğin:
+İsteğe bağlı. Bir [ `Let` yan tümce](../../../language-reference/queries/let-clause.md) bir değeri hesaplar ve bunu sorgudaki yeni bir değişkene atar. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct tümcesi
 
-İsteğe bağlı. Bir `Distinct` yan tümce, sorgu sonuçlarında yinelenen değerleri ortadan kaldırmak için geçerli yineleme değişkeninin değerlerini kısıtlar. Örneğin:
+İsteğe bağlı. Bir `Distinct` yan tümce, sorgu sonuçlarında yinelenen değerleri ortadan kaldırmak için geçerli yineleme değişkeninin değerlerini kısıtlar. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip tümcesi
 
-İsteğe bağlı. [ `Skip` Yan tümce](../../../../visual-basic/language-reference/queries/skip-clause.md) , koleksiyonda belirtilen sayıda öğeyi atlar ve kalan öğeleri döndürür. Örneğin:
+İsteğe bağlı. [ `Skip` Yan tümce](../../../language-reference/queries/skip-clause.md) , koleksiyonda belirtilen sayıda öğeyi atlar ve kalan öğeleri döndürür. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While tümcesi
 
-İsteğe bağlı. Bir [ `Skip While` yan tümce](../../../../visual-basic/language-reference/queries/skip-while-clause.md) , belirtilen koşul olduğu sürece bir koleksiyondaki öğeleri atlar `true` ve kalan öğeleri döndürür. Örneğin:
+İsteğe bağlı. Bir [ `Skip While` yan tümce](../../../language-reference/queries/skip-while-clause.md) , belirtilen koşul olduğu sürece bir koleksiyondaki öğeleri atlar `true` ve kalan öğeleri döndürür. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take tümcesi
 
-İsteğe bağlı. Bir [ `Take` yan tümce](../../../../visual-basic/language-reference/queries/take-clause.md) , bir koleksiyonun başından itibaren belirtilen sayıda bitişik öğeyi döndürür. Örneğin:
+İsteğe bağlı. Bir [ `Take` yan tümce](../../../language-reference/queries/take-clause.md) , bir koleksiyonun başından itibaren belirtilen sayıda bitişik öğeyi döndürür. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While tümcesi
 
-İsteğe bağlı. Bir [ `Take While` yan tümce](../../../../visual-basic/language-reference/queries/take-while-clause.md) , belirtilen koşul olduğu `true` ve kalan öğeleri atlayan sürece bir koleksiyondaki öğeleri içerir. Örneğin:
+İsteğe bağlı. Bir [ `Take While` yan tümce](../../../language-reference/queries/take-while-clause.md) , belirtilen koşul olduğu `true` ve kalan öğeleri atlayan sürece bir koleksiyondaki öğeleri içerir. Örnek:
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
@@ -213,9 +213,9 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
   
 ## <a name="related-resources"></a>İlgili kaynaklar  
   
-|Konu başlığı|Açıklama|  
+|Konu başlığı|Description|  
 |---|---|  
-|[XML](../../language-features/xml/index.md)|Visual Basic ' deki ve Visual Basic kodunuzda birinci sınıf veri nesneleri olarak XML bulundurmasını sağlayan XML özelliklerini açıklar.|  
+|[XML](../xml/index.md)|Visual Basic ' deki ve Visual Basic kodunuzda birinci sınıf veri nesneleri olarak XML bulundurmasını sağlayan XML özelliklerini açıklar.|  
 |[Sorgular](../../../language-reference/queries/index.md)|Visual Basic ' de kullanılabilen sorgu yan tümceleri hakkında başvuru bilgileri sağlar.|  
 |[LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)|Genel bilgileri, programlama kılavuzunu ve LINQ için örnekleri içerir.|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to SQL yönelik örnekleri içerir.|  
@@ -248,7 +248,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ (dil ile tümleşik sorgu)](../../concepts/linq/index.md)
-- [Visual Basic'de LINQ - XML Dönüşümüne Genel Bakış](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Visual Basic'de LINQ - XML Dönüşümüne Genel Bakış](../xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet Genel Bakış](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)

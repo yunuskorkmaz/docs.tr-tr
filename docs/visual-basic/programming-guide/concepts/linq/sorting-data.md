@@ -2,12 +2,12 @@
 title: Verileri Sıralama
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406800"
 ---
 # <a name="sorting-data-visual-basic"></a>Verileri sıralama (Visual Basic)
 
@@ -21,13 +21,13 @@ Verileri sıralayan standart sorgu işleci yöntemleri aşağıdaki bölümde li
 
 ## <a name="methods"></a>Yöntemler
 
-|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|
+|Yöntem adı|Description|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|Değerleri artan düzende sıralar.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|Değerleri azalan düzende sıralar.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
 |ThenBy|Artan sırada ikincil bir sıralama gerçekleştirir.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
 |ThenByDescending|Azalan sırada ikincil bir sıralama gerçekleştirir.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
-|Tersini|Bir koleksiyondaki öğelerin sırasını tersine çevirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+|Reverse|Bir koleksiyondaki öğelerin sırasını tersine çevirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Sorgu Ifadesi söz dizimi örnekleri
 
@@ -35,7 +35,7 @@ Verileri sıralayan standart sorgu işleci yöntemleri aşağıdaki bölümde li
 
 #### <a name="primary-ascending-sort"></a>Birincil artan sıralama
 
-Aşağıdaki örnek, bir dizideki dizeleri dize uzunluğuna göre artan sırada sıralamak için bir LINQ sorgusunda `Order By` yan tümcesinin nasıl kullanılacağını gösterir.
+Aşağıdaki örnek, bir `Order By` dizideki dizeleri dize uzunluğuna göre artan sırada sıralamak için BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağını gösterir.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -63,7 +63,7 @@ MsgBox(sb.ToString())
 
 #### <a name="primary-descending-sort"></a>Birincil azalan sıralama
 
-Sonraki örnekte, dizeleri ilk harfine göre azalan sırada sıralamak için bir LINQ sorgusunda `Order By Descending` yan tümcesinin nasıl kullanılacağı gösterilmektedir.
+Sonraki örnekte, `Order By Descending` BIR LINQ sorgusunda, dizeyi azalan sırada ilk harfine göre sıralamak için yan tümcesinin nasıl kullanılacağı gösterilmektedir.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -93,7 +93,7 @@ MsgBox(sb.ToString())
 
 #### <a name="secondary-ascending-sort"></a>İkincil artan sıralama
 
-Aşağıdaki örnek, bir dizideki dizelerin birincil ve ikincil sıralamasını gerçekleştirmek için bir LINQ sorgusunda `Order By` yan tümcesinin nasıl kullanılacağını gösterir. Dizeler birincil olarak length ve secondarily ile dizenin ilk harfine göre, her ikisi de artan düzende sıralanır.
+Aşağıdaki örnek, bir `Order By` dizideki dizelerin birincil ve ikincil sıralamasını gerçekleştirmek için BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağını gösterir. Dizeler birincil olarak length ve secondarily ile dizenin ilk harfine göre, her ikisi de artan düzende sıralanır.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -121,7 +121,7 @@ MsgBox(sb.ToString())
 
 #### <a name="secondary-descending-sort"></a>İkincil azalan sıralama
 
-Sonraki örnekte, bir LINQ sorgusunda `Order By Descending` yan tümcesinin nasıl kullanılacağı gösterilmektedir ve bu bir birincil sıralama, artan düzende, ikincil bir sıralama ise azalan düzende yapılır. Dizeler öncelikle dizenin ilk harfine göre uzunluğa ve secondarily göre sıralanır.
+Sonraki örnekte, `Order By Descending` BIR LINQ sorgusunda yan tümcesinin nasıl kullanılacağı gösterilmektedir ve azalan düzende bir birincil sıralama, artan sırada ve ikincil bir sıralama işlemleri yapılır. Dizeler öncelikle dizenin ilk harfine göre uzunluğa ve secondarily göre sıralanır.
 
 ```vb
 Dim words = {"the", "quick", "brown", "fox", "jumps"}
@@ -150,7 +150,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Order By Yan Tümcesi](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Nasıl yapılır: sorgu sonuçlarını sıralama](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Order By Yan Tümcesi](../../../language-reference/queries/order-by-clause.md)
+- [Nasıl yapılır: sorgu sonuçlarını sıralama](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [Nasıl yapılır: herhangi bir sözcük veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

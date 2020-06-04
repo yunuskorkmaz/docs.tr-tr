@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: belirli bir alt öğeye sahip bir öğe bulma'
+title: 'Nasıl yapılır: Belirli Bir Alt Öğeye Sahip Öğeyi Bulma'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: a00ca238c67e2edf4e2e68a46fbd7e2cb480ba15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a05504070fe3d2ea5eb6135fd3bf697b131686c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352915"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405293"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>Nasıl yapılır: belirli bir alt öğeye sahip bir öğe bulma (Visual Basic)
 Bu konu, belirli bir değere sahip bir alt öğesi olan belirli bir öğenin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Examp2. EXE" değerine sahip bir `CommandLine` alt öğesi olan `Test` öğesi bulur.  
+ Örnek, `Test` `CommandLine` "EXAMP2. exe" değerine sahip bir alt öğesi olan öğesini bulur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -35,12 +35,12 @@ Next
 0006  
 ```  
   
- Bu örnekte XML [alt eksen özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md), [XML özniteliği eksen özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)ve [XML değeri özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)kullanılmıştır.  
+ Bu örnekte XML [alt eksen özelliği](../../../language-reference/xml-axis/xml-child-axis-property.md), [XML özniteliği eksen özelliği](../../../language-reference/xml-axis/xml-attribute-axis-property.md)ve [XML değeri özelliği](../../../language-reference/xml-axis/xml-value-property.md)kullanılmıştır.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında test yapılandırması](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında test yapılandırması](sample-xml-file-test-configuration-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -70,6 +70,6 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Projeksiyon Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Temel sorgular (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Projeksiyon Işlemleri (Visual Basic)](projection-operations.md)

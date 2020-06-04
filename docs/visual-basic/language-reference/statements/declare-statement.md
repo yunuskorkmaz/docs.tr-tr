@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 9895709076634ce156ba9d1009f79ba7ddd2ba56
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646380"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404777"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 
-Harici bir dosyada uygulanan bir yordam için bir başvuru bildirir.
+Dış dosyada uygulanan bir yordama başvuru bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -52,94 +52,94 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="parts"></a>Bölümler
 
-|Sözleşme Dönemi|Tanım|
+|Terim|Tanım|
 |---|---|
-|`attributelist`|İsteğe bağlı. Bkz. [Öznitelik Listesi](../../../visual-basic/language-reference/statements/attribute-list.md).|
-|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Kamu](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Arkadaş](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Özel](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Korunan Arkadaş](../../language-reference/modifiers/protected-friend.md)<br />- [Özel Korumalı](../../language-reference/modifiers/private-protected.md)<br /><br /> [Visual Basic'teki Erişim düzeylerine](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)bakın.|
-|`Shadows`|İsteğe bağlı. Bkz. [Gölgeler](../../../visual-basic/language-reference/modifiers/shadows.md).|
-|`charsetmodifier`|İsteğe bağlı. Karakter kümesi ni ve dosya arama bilgilerini belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (varsayılan)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Otomatik](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|İsteğe bağlı, `Function` ancak ya da `Sub` görünmesi gerekir. Dış yordamın bir değer döndürmediğini gösterir.|
-|`Function`|İsteğe bağlı, `Function` ancak ya da `Sub` görünmesi gerekir. Dış yordamın bir değer döndürür olduğunu gösterir.|
-|`name`|Gereklidir. Bu dış başvurunun adı. Daha fazla bilgi için, [Bildirilen Öğe Adları'na](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)bakın.|
-|`Lib`|Gereklidir. Harici bir `Lib` yordam içeren dış dosyayı (DLL veya kod kaynağı) tanımlayan bir yan tümce yi tanıtır.|
-|`libname`|Gereklidir. Beyan edilen yordamı içeren dosyanın adı.|
-|`Alias`|İsteğe bağlı. Beyan edilen yordamın dosyasında belirtilen adla tanımlanamayacağını `name`gösterir. Kimliğini ' de `aliasname`belirtin.|
-|`aliasname`|Anahtar sözcüğü `Alias` kullanıyorsanız gereklidir. Yordamı iki şekilde tanımlayan dize:<br /><br /> Dosya içinde yordamın giriş noktası adı,`""`tırnak içinde ( )<br /><br /> -veya-<br /><br /> Bir sayı`#`işareti ( ) ve ardından dosya içindeki yordamın giriş noktasının ordinal numarasını belirten bir tamsayı|
-|`parameterlist`|Yordam parametreleri alıyorsa gereklidir. Bkz. [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|
-|`returntype`|Belirtilirse `Function` ve `Option Strict` `On`. Yordam tarafından döndürülen değerin veri türü.|
+|`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|
+|`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Geneldir](../modifiers/public.md)<br />-   [Korunamadı](../modifiers/protected.md)<br />-   [Dost](../modifiers/friend.md)<br />-   [Özelleştirme](../modifiers/private.md)<br />- [Korumalı arkadaş](../modifiers/protected-friend.md)<br />- [Özel korumalı](../modifiers/private-protected.md)<br /><br /> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|
+|`Shadows`|İsteğe bağlı. Bkz. [gölgeler](../modifiers/shadows.md).|
+|`charsetmodifier`|İsteğe bağlı. Karakter kümesi ve dosya arama bilgilerini belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [ANSI](../modifiers/ansi.md) (varsayılan)<br />-   [Kodlamaları](../modifiers/unicode.md)<br />-   [Otomatik](../modifiers/auto.md)|
+|`Sub`|İsteğe bağlı, ancak ya da `Sub` `Function` görünür olmalıdır. Dış yordamın bir değer döndürmediğini belirtir.|
+|`Function`|İsteğe bağlı, ancak ya da `Sub` `Function` görünür olmalıdır. Dış yordamın bir değer döndürdüğünü gösterir.|
+|`name`|Gereklidir. Bu dış başvurunun adı. Daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Gereklidir. `Lib`Dış yordam içeren dış dosyayı (dll veya kod kaynağı) tanımlayan bir yan tümce tanıtır.|
+|`libname`|Gereklidir. Belirtilen yordamı içeren dosyanın adı.|
+|`Alias`|İsteğe bağlı. Tanımlanmakta olan yordamın, içinde belirtilen ad ile dosyasında belirlenemediğini belirtir `name` . Kimliğini ' de belirtin `aliasname` .|
+|`aliasname`|`Alias`Anahtar sözcüğünü kullanmanız gerekir. İki şekilde yordamı tanımlayan dize:<br /><br /> İçindeki yordamın, tırnak işaretleri () içinde giriş noktası adı `""`<br /><br /> -veya-<br /><br /> Bir sayı işareti ( `#` ), ardından yordamın giriş noktasının dosya içindeki sıra sayısını belirten bir tamsayı|
+|`parameterlist`|Yordam parametreleri alırsa gereklidir. Bkz. [parametre listesi](parameter-list.md).|
+|`returntype`|`Function`Belirtilmişse ve `Option Strict` ise gereklidir `On` . Yordamın döndürdüğü değerin veri türü.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bazen projenizin dışında bir dosyada tanımlanan bir yordamı (DLL veya kod kaynağı gibi) çağırmanız gerekir. Bunu yaptığınızda, Visual Basic derleyicisi yordamı doğru çağırmak için gereken bilgilere (yordamın nerede bulunduğu, nasıl tanımlandığı, çağrı sırası ve dönüş türü ve kullandığı string karakter kümesi gibi) erişimi yoktur. İfade, `Declare` harici bir prosedüre atıfta bulunarak gerekli bilgileri sağlar.
+Bazen, bir dosyada (örneğin, bir DLL veya kod kaynağı gibi) tanımlanan bir yordamı projenizin dışında çağırmanız gerekir. Bunu yaptığınızda, Visual Basic derleyicisinin yordamın nerede olduğu, nasıl tanımlandığı, arama sırası ve dönüş türü ve kullandığı dize karakter kümesi gibi yordamı çağırması için gereken bilgilere erişimi yoktur. İfade, bir `Declare` dış yordama bir başvuru oluşturur ve bu gerekli bilgileri sağlar.
 
-Yalnızca modül `Declare` düzeyinde kullanabilirsiniz. Bu, dış başvuru nun *bildirim bağlamının* bir sınıf, yapı veya modül olması gerektiği ve kaynak dosyası, ad alanı, arabirim, yordam veya blok olamayacağı anlamına gelir. Daha fazla bilgi için [Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri'ne](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)bakın.
+`Declare`Yalnızca modül düzeyinde kullanabilirsiniz. Bu, bir dış başvurunun *bildirim bağlamının* bir sınıf, yapı veya modül olması ve kaynak dosya, ad alanı, arabirim, yordam veya blok olması anlamına gelir. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).
 
-Dış başvurular varsayılan [olarak Genel](../../../visual-basic/language-reference/modifiers/public.md) erişime. Erişim değiştiriciler ile erişim düzeylerini ayarlayabilirsiniz.
+Dış başvurular varsayılan olarak [genel](../modifiers/public.md) erişime sahiptir. Erişim değiştiricilerini kullanarak erişim düzeylerini ayarlayabilirsiniz.
 
 ## <a name="rules"></a>Kurallar
 
-- **Öznitelik.** Öznitelikleri harici bir başvuruya uygulayabilirsiniz. Uyguladığınız herhangi bir öznitelik, dış dosyada değil, yalnızca projenizde etkili olur.
+- **Özelliklerine.** Öznitelikleri bir dış başvuruya uygulayabilirsiniz. Uyguladığınız herhangi bir öznitelik, dış dosyada değil yalnızca projenizde etkilidir.
 
-- **Değiştirici.** Dış yordamlar örtülü olarak [paylaşılır.](../../../visual-basic/language-reference/modifiers/shared.md) Dış başvuru `Shared` bildirirken anahtar sözcüğü kullanamazsınız ve paylaşılan durumunu değiştiremezsiniz.
+- **İlerine.** Dış yordamlar örtük olarak [paylaşılır](../modifiers/shared.md). `Shared`Dış başvuru bildirirken anahtar sözcüğünü kullanamaz ve paylaşılan durumunu değiştiremezsiniz.
 
-  Harici bir yordam geçersiz kılmaya katılamaz, arabirim üyelerini uygulayamaz veya olayları işleyemez. `Overrides`Buna göre, bir `Overridable` `NotOverridable` `MustOverride` `Implements` `Handles` `Declare` deyimde , , , , , veya anahtar kelime kullanamazsınız.
+  Dış yordam, geçersiz kılma, arabirim üyeleri uygulama veya olayları işleme alanına katılamaz. Buna uygun olarak,,,,, `Overrides` `Overridable` `NotOverridable` `MustOverride` `Implements` veya `Handles` anahtar sözcüğünü bir `Declare` bildirimde kullanamazsınız.
 
-- **Dış Yordam Adı.** Bu dış başvuruya yordamın dış dosyasındaki `name`giriş noktası adı (in) ile aynı`aliasname`adı vermeniz gerekmez. Giriş noktası `Alias` adını belirtmek için bir yan tümce kullanabilirsiniz. Bu, dış yordam, Visual Basic ayrılmış bir değiştirici veya aynı kapsamdaki bir değişken, yordam veya başka bir programlama öğesi ile aynı ada sahipse yararlı olabilir.
-
-  > [!NOTE]
-  > Çoğu DL'deki giriş noktası adları büyük/küçük harf duyarlıdır.
-
-- **Dış Yordam Numarası.** Alternatif olarak, dış `Alias` dosyanın dış dosyanın dış tablosundaki giriş noktasının ordinal numarasını belirtmek için bir yan tümce kullanabilirsiniz. Bunu yapmak için, `aliasname` bir sayı`#`işareti ile başlar ( ). Bu, Visual Basic'te dış yordam adındaki herhangi bir karaktere izin verilmiyorsa veya dış dosya yordamı ad olmadan dışa aktaracaksa yararlı olabilir.
-
-## <a name="data-type-rules"></a>Veri Türü Kuralları
-
-- **Parametre Veri Türleri.** Ise, `Option Strict` her parametrenin veri türünü `parameterlist` `On` Bu herhangi bir veri türü veya numaralandırma, yapı, sınıf veya arabirim adı olabilir. Içinde, `parameterlist`her `As` parametreye geçirilecek bağımsız değişkenin veri türünü belirtmek için bir yan tümce kullanırsınız.
+- **Dış yordam adı.** Bu dış başvuruya, `name` kendi dış dosyası () içinde yordamın giriş noktası adı ile aynı adı (içinde) vermeniz gerekmez `aliasname` . `Alias`Giriş noktası adını belirtmek için bir yan tümce kullanabilirsiniz. Bu, dış yordamın Visual Basic ayrılmış değiştirici veya bir değişken, yordam veya aynı kapsamda başka bir programlama öğesiyle aynı ada sahipse yararlı olabilir.
 
   > [!NOTE]
-  > .NET Framework için dış yordam yazılmadıysa, veri türlerinin karşılık verdiğine dikkat etmelisiniz. Örneğin, bir parametre (Visual Basic 6.0'da `Integer` 16 bit) olan bir Visual Basic 6.0 yordamına `Short` harici `Declare` bir başvuru bildirirseniz, Visual Basic'teki 16 bit tamsayı türü olduğundan, ilgili bağımsız değişkeni deyimdeki gibi tanımlamanız gerekir. Benzer şekilde, `Long` Visual Basic 6.0'da farklı `Date` bir veri genişliğine sahiptir ve farklı şekilde uygulanır.
+  > Çoğu dll 'deki giriş noktası adları büyük/küçük harfe duyarlıdır.
 
-- **Veri Türünü Döndür.** Dış yordam a `Function` ise `Option Strict` `On`ve , arama koduna döndürülen değerin veri türünü belirtmeniz gerekir. Bu herhangi bir veri türü veya numaralandırma, yapı, sınıf veya arabirim adı olabilir.
+- **Dış yordam numarası.** Alternatif olarak, `Alias` dış dosyanın dışarı aktarma tablosundaki giriş noktasının sıra sayısını belirtmek için bir yan tümce kullanabilirsiniz. Bunu yapmak için `aliasname` bir sayı işaretiyle ( `#` ) başlarsınız. Bu, dış yordam adındaki herhangi bir karaktere Visual Basic izin verilmiyorsa veya dış dosya yordamı bir ad olmadan dışarı aktardığında yararlı olabilir.
+
+## <a name="data-type-rules"></a>Veri türü kuralları
+
+- **Parametre veri türleri.** `Option Strict`İse `On` , içindeki her parametrenin veri türünü belirtmeniz gerekir `parameterlist` . Bu, herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirimin adı olabilir. İçinde `parameterlist` , `As` her parametreye geçirilecek bağımsız değişkenin veri türünü belirtmek için bir yan tümce kullanırsınız.
 
   > [!NOTE]
-  > Visual Basic derleyicisi, veri tiplerinizin dış yordamla uyumlu olduğunu doğrulamaz. Bir uyuşmazlık varsa, ortak dil çalışma zamanı çalışma <xref:System.Runtime.InteropServices.MarshalDirectiveException> zamanında bir özel durum oluşturur.
+  > Dış yordam .NET Framework için yazılmadığından, veri türlerinin karşılık geldiği konusunda dikkatli olmanız gerekir. Örneğin, bir parametre ile bir Visual Basic 6,0 yordamına dış başvuru bildirirseniz `Integer` (Visual Basic 6,0 ' de 16 bit), `Short` `Declare` Bu, Visual Basic 16 bit tamsayı türü olduğundan, karşılık gelen bağımsız değişkeni deyimde olduğu gibi tanımlamalısınız. Benzer şekilde, `Long` Visual Basic 6,0 ' de farklı bir veri genişliğine sahiptir ve `Date` farklı şekilde uygulanır.
 
-- **Varsayılan Veri Türleri.** Eğer `Option Strict` `Off` ve bir parametrenin veri türünü `parameterlist`belirtmezseniz, Visual Basic derleyicisi ilgili bağımsız değişkeni Nesne Veri [Türüne](../../../visual-basic/language-reference/data-types/object-data-type.md)dönüştürür. Benzer şekilde, belirtmezseniz, `returntype`derleyici döndürücü veri `Object`türünü .
+- **Dönüş veri türü.** Dış yordam bir ve ise, `Function` `Option Strict` `On` çağırma koduna döndürülen değerin veri türünü belirtmeniz gerekir. Bu, herhangi bir veri türü veya bir numaralandırma, yapı, sınıf veya arabirimin adı olabilir.
 
   > [!NOTE]
-  > Farklı bir platformda yazılmış olabilecek harici bir yordamla uğraşıyorsanız, veri türleri hakkında herhangi bir varsayımda bulunmak veya bunların varsayılan olarak uygulanmasına izin vermek tehlikelidir. Varsa, her parametrenin ve iade değerinin veri türünü belirtmek çok daha güvenlidir. Bu, kodunuzun okunabilirliğini de artırır.
+  > Visual Basic Derleyicisi, veri türlerinizin dış yordamla uyumlu olduğunu doğrulamaz. Bir uyuşmazlık varsa, ortak dil çalışma zamanı çalışma zamanında bir <xref:System.Runtime.InteropServices.MarshalDirectiveException> özel durum oluşturur.
+
+- **Varsayılan veri türleri.** `Option Strict`İse `Off` ve ' de bir parametrenin veri türünü belirtmezseniz `parameterlist` , Visual Basic derleyici karşılık gelen bağımsız değişkeni [nesne veri türüne](../data-types/object-data-type.md)dönüştürür. Benzer şekilde, belirtmezseniz `returntype` , derleyici döndürülen veri türünü de alır `Object` .
+
+  > [!NOTE]
+  > Farklı bir platformda yazılmış olabilecek bir dış yordam ile ilgilenirken, veri türleri hakkında varsayımlar yapmak veya bunların varsayılan olmasına izin vermek tehlikeli olabilir. Varsa, her parametrenin ve dönüş değerinin veri türünü belirtmek çok daha güvenlidir. Bu, kodunuzun okunabilirliğini de artırır.
 
 ## <a name="behavior"></a>Davranış
 
-- **Kapsam.** Dış başvuru, sınıfı, yapısı veya modülü boyunca kapsam içindedir.
+- **Kapsam.** Dış başvuru, sınıf, yapı veya modül genelinde kapsamdadır.
 
-- **Ömür boyu.** Harici bir başvuru, beyan edildiği sınıf, yapı veya modülle aynı kullanım ömrüne sahiptir.
+- **Süre.** Dış başvuru, bildirildiği sınıf, yapı veya modülle aynı yaşam süresine sahiptir.
 
-- **Harici Yordam'ı arama.** Harici yordamı, bir değer döndürürse bir ifadede kullanarak veya bir değer döndürmezse [Çağrı Ekstresinde](../../../visual-basic/language-reference/statements/call-statement.md) belirterek, bir `Function` `Sub` yordamı çağırdığınız şekilde çağırırsınız.
+- **Dış yordam çağırma.** Bir ya da yordamını, bir değer döndürürse ya da bir `Function` `Sub` değer döndürmezse bir [Call deyiminde](call-statement.md) belirterek kullanarak bir veya yordamı çağıran şekilde bir dış yordam çağırmanız gerekir.
 
-  Bağımsız değişkenleri, `parameterlist` deyimde tam olarak `Declare` belirtildiği şekilde dış yordama geçirirsiniz. Parametrelerin dış dosyada ilk olarak nasıl beyan edildiğini dikkate almayın. Benzer şekilde, bir iade değeri varsa, `returntype` `Declare` tam olarak deyiminde belirtildiği şekilde kullanın.
+  Bağımsız değişkenleri, bildiriminde tarafından belirtilen şekilde dış yordama geçirebilirsiniz `parameterlist` `Declare` . Parametrelerin dış dosyada ilk olarak nasıl bildirildiği dikkate alma. Benzer şekilde, bir dönüş değeri varsa, tam olarak ifadesinde belirtilen şekilde kullanın `returntype` `Declare` .
 
-- **Karakter Setleri.** Visual Basic'in `charsetmodifier` dış yordamı aradığında dizeleri nasıl bağlaması gerektiğini belirtebilirsiniz. Değiştirici Visual `Ansi` Basic'i tüm dizeleri ANSI değerlerine `Unicode` bağlamaya yönlendirir ve değiştirici tüm dizeleri Unicode değerlerine göre şerife yönlendirir. Değiştirici Visual `Auto` Basic'i dış başvuruya `name`veya `aliasname` belirtilmişse .NET Framework kurallarına göre dize lere yönlendirir. Varsayılan değer: `Ansi`.
+- **Karakter kümeleri.** `charsetmodifier`Dış yordamı çağırdığında Visual Basic dizelerin nasıl sıralaması gerektiğini belirtebilirsiniz. `Ansi`Değiştirici, tüm DIZELERI ANSI değerlerine göre sıralamak için Visual Basic yönlendirir ve `Unicode` değiştirici onu tüm dizeleri Unicode değerlerine göre sıralamak için yönlendirir. `Auto`Değiştirici, dış başvuruya göre .NET Framework kurallarına göre veya belirtilmişse dizeleri sıralama Visual Basic yönlendirir `name` `aliasname` . Varsayılan değer: `Ansi`.
 
-  `charsetmodifier`ayrıca Visual Basic'in dış dosyaiçindeki dış yordamı nasıl bakması gerektiğini belirtir. `Ansi`ve `Unicode` hem doğrudan Visual Basic arama sırasında adını değiştirmeden bakmak için. `Auto`Çalışma zamanı platformunun temel karakter kümesini belirlemek ve dış yordam adını aşağıdaki gibi değiştirmek için Visual Basic'i yönlendirir:
+  `charsetmodifier`Ayrıca, Visual Basic dış yordamın dış dosyası içinde nasıl araması gerektiğini de belirtir. `Ansi``Unicode`Ayrıca, arama sırasında adını değiştirmeden bunu aramak için doğrudan Visual Basic. `Auto`çalışma zamanı platformunun temel karakter kümesini belirlemede Visual Basic yönlendirir ve büyük olasılıkla dış yordam adını şu şekilde değiştirebilir:
 
-  - Windows 95, Windows 98 veya Windows Millennium Edition gibi bir ANSI platformunda, önce ad değişikliği olmadan dış yordamı arayın. Bu başarısız olursa, dış yordam adının sonuna "A" ekleyip yeniden arayın.
+  - Windows 95, Windows 98 veya Windows Millennium Edition gibi bir ANSI platformunda, önce ad değişikliğine sahip olmayan dış yordama bakmanız gerekir. Başarısız olursa, dış yordam adının sonuna "A" ekleyin ve tekrar arama yapın.
 
-  - Windows NT, Windows 2000 veya Windows XP gibi bir Unicode platformunda, önce ad değişikliği olmadan dış yordamı arayın. Bu başarısız olursa, dış yordam adının sonuna "W" ekleyip yeniden arayın.
+  - Windows NT, Windows 2000 veya Windows XP gibi bir Unicode platformunda, önce ad değişikliğine sahip olmayan dış yordama bakmanız gerekir. Başarısız olursa, dış yordam adının sonuna "W" ekleyin ve tekrar arama yapın.
 
-- **Mekanizması.** Visual Basic, dış yordamları çözmek ve erişmek için .NET Framework *platform invoke* (PInvoke) mekanizmasını kullanır. Deyim `Declare` ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıf hem otomatik olarak bu mekanizmayı kullanmak ve PInvoke herhangi bir bilgiye gerek yoktur. Daha fazla bilgi için [Walkthrough: Windows API'lerini arama](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+- **Mekanizmadır.** Visual Basic, dış yordamları çözümlemek ve erişmek için .NET Framework *Platform çağırma* (PInvoke) mekanizmasını kullanır. `Declare`Ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı bu mekanizmayı otomatik olarak kullanır ve herhangi bir PInvoke bilgisine ihtiyacınız yoktur. Daha fazla bilgi için bkz. [Izlenecek yol: Windows API 'Leri çağırma](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Dış yordam ortak dil çalışma zamanı (CLR) dışında çalışırsa, *bu yönetilmeyen koddur.* Böyle bir yordamı (örneğin bir Windows API işlevi veya COM yöntemi) çağırdığınızda, uygulamanızı güvenlik risklerine maruz bırakabilirsiniz. Daha fazla bilgi için, [Yönetilmeyen Kodlar için Güvenli Kodlama Yönergeleri'ne](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)bakın.
+> Dış yordam ortak dil çalışma zamanının (CLR) dışında çalışırsa, bu, yönetilmeyen bir *koddur*. Örneğin, bir Windows API işlevi veya bir COM yöntemi gibi bir yordamı çağırdığınızda, uygulamanızı güvenlik risklerine maruz kalabilirsiniz. Daha fazla bilgi için bkz. [yönetilmeyen kod Için güvenli kodlama yönergeleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, geçerli kullanıcı adını `Function` döndüren bir yordam için harici bir başvuru bildirir. Daha sonra `GetUserNameA` `getUser` yordamın bir parçası olarak dış yordamı çağırır.
+Aşağıdaki örnek, `Function` geçerli kullanıcı adını döndüren bir yordamın dış başvurusunu bildirir. Ardından, `GetUserNameA` yordamın bir parçası olarak dış yordamı çağırır `getUser` .
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>Örnek
 
-Yönetilen <xref:System.Runtime.InteropServices.DllImportAttribute> olmayan kodda işlevleri kullanmanın alternatif bir yolunu sağlar. Aşağıdaki örnek, bir `Declare` deyim kullanmadan içe aktarılan bir işlevi bildirir.
+, <xref:System.Runtime.InteropServices.DllImportAttribute> Yönetilmeyen koddaki işlevleri kullanmanın alternatif bir yolunu sağlar. Aşağıdaki örnek, bir ifade kullanmadan içeri aktarılan bir işlevi bildirir `Declare` .
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 
@@ -148,10 +148,10 @@ Yönetilen <xref:System.Runtime.InteropServices.DllImportAttribute> olmayan kodd
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
-- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Fonksiyon Bildirimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [Call Deyimi](../../../visual-basic/language-reference/statements/call-statement.md)
-- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](imports-statement-net-namespace-and-type.md)
+- [AddressOf İşleci](../operators/addressof-operator.md)
+- [Function Deyimi](function-statement.md)
+- [Sub Deyimi](sub-statement.md)
+- [Parametre Listesi](parameter-list.md)
+- [Call Deyimi](call-statement.md)
+- [İzlenecek yol: Windows API'lerini Çağırma](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)

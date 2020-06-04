@@ -2,12 +2,12 @@
 title: Ayarlama İşlemleri
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: fe9d910415f30fe672dc702f719fdefdb9c0b3d1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b6ff14794343ae7623ee38894cef02cfc0a2a597
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350613"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406826"
 ---
 # <a name="set-operations-visual-basic"></a>Işlemleri ayarlama (Visual Basic)
 
@@ -17,34 +17,34 @@ Ayarlanan işlemleri gerçekleştiren standart sorgu işleci yöntemleri aşağ�
 
 ## <a name="methods"></a>Yöntemler
 
-|Yöntem adı|Açıklama|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|
+|Yöntem adı|Description|Sorgu Ifadesi söz dizimini Visual Basic|Daha Fazla Bilgi|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |Distinct|Yinelenen değerleri bir koleksiyondan kaldırır.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|
 |Dışlama|İkinci bir koleksiyonda görünmeyen bir koleksiyonun öğelerinin anlamı olan küme farkını döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|
 |Kesiştir|Küme kesişimini döndürür, bu iki koleksiyonun her birinde görüntülenen öğeleri gösterir.|Geçerli değildir.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|
-|UNION|İki koleksiyonda de görünen benzersiz öğeler anlamına gelen set birleşimini döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
+|Birleşim|İki koleksiyonda de görünen benzersiz öğeler anlamına gelen set birleşimini döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|
 
 ## <a name="comparison-of-set-operations"></a>Ayarlama Işlemlerinin karşılaştırması
 
 ### <a name="distinct"></a>Distinct
 
-Aşağıdaki çizimde, <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> yönteminin bir karakter dizisinde davranışı gösterilmektedir. Döndürülen dizi, Giriş dizisinden benzersiz öğeleri içerir.
+Aşağıdaki çizim, <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> bir karakter dizisi üzerinde yönteminin davranışını gösterir. Döndürülen dizi, Giriş dizisinden benzersiz öğeleri içerir.
 
-![DISTINCT&#40;&#41;davranışını gösteren grafik.](./media/set-operations/distinct-method-behavior.png)
+![Ayrı&#40;&#41; davranışını gösteren grafik.](./media/set-operations/distinct-method-behavior.png)
 
 ### <a name="except"></a>Dışlama
 
-Aşağıdaki çizimde <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi yalnızca ilk giriş dizisinin ikinci giriş dizisinde olmayan öğelerini içerir.
+Aşağıdaki çizimde davranışını gösterilmektedir <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> . Döndürülen dizi yalnızca ilk giriş dizisinin ikinci giriş dizisinde olmayan öğelerini içerir.
 
-![Haricinde&#40;&#41;eylemini gösteren grafik.](./media/set-operations/except-behavior-graphic.png "Haricinde davranışını gösterir.")
+![&#40;&#41; hariç eylemi gösteren grafik.](./media/set-operations/except-behavior-graphic.png "Haricinde davranışını gösterir.")
 
 ### <a name="intersect"></a>Kesiştir
 
-Aşağıdaki çizimde <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>davranışı gösterilmektedir. Döndürülen dizi, her iki giriş dizisinde da ortak olan öğeleri içerir.
+Aşağıdaki çizimde davranışını gösterilmektedir <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> . Döndürülen dizi, her iki giriş dizisinde da ortak olan öğeleri içerir.
 
 ![İki sıranın kesişimini gösteren grafik.](./media/set-operations/intersection-two-sequences.png)
 
-### <a name="union"></a>UNION
+### <a name="union"></a>Birleşim
 
 Aşağıdaki çizimde iki karakter dizisi üzerinde bir bileşim işlemi gösterilmektedir. Döndürülen dizi, her iki giriş dizisinden benzersiz öğeleri içerir.
 
@@ -52,14 +52,14 @@ Aşağıdaki çizimde iki karakter dizisi üzerinde bir bileşim işlemi göster
 
 ## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği
 
-Aşağıdaki örnek, bir LINQ sorgusunda `Distinct` yan tümcesini kullanarak tamsayı listesinden benzersiz sayılar döndürür.
+Aşağıdaki örnek, `Distinct` bir tamsayı listesinden benzersiz sayıları döndürmek için BIR LINQ sorgusunda yan tümcesini kullanır.
 
 [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Distinct Yan Tümcesi](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [Nasıl yapılır: dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Distinct Yan Tümcesi](../../../language-reference/queries/distinct-clause.md)
+- [Nasıl yapılır: dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)
+- [Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)

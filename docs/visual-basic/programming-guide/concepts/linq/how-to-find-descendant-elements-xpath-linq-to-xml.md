@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Alt Öğe Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: 080afdb782bd6f1acaf2819814bb97a6e5ad0c77
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee67a54116a7d91f6cf6af179d6398a4dcece9c4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346806"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405241"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: alt öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
 Bu konu, belirli bir ada sahip alt öğelerin nasıl alınacağını gösterir.  
   
- XPath ifadesi `//Name`.  
+ XPath ifadesi `//Name` .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek `Name`adlı tüm alt öğeleri bulur.  
+ Bu örnek adlı tüm alt öğeleri bulur `Name` .  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -53,4 +53,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

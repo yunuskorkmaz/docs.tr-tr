@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b9f74f0627268752b0ba3c3816fe9d4cc8a231b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013757"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404829"
 ---
-# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Derlemesine başvuru gereklidir '\<assemblyIdentity >' türünü içeren '\<typename >', ancak proje arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı\<projectname1 >' ve '\< projectname2 >'
-Sınıfı, yapıyı, arabirimi, sabit listesi veya projenizin dışında tanımlı temsilci, gibi bir tür bir ifade kullanır. Ancak, birden fazla derleme türü tanımlayan proje başvurularına sahip.  
+# <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>'\<assemblyidentity>' türünü içeren '\<typename>' derlemesi için başvuru gerekiyordu, ancak '\<projectname1>' ile '\<projectname2>' projeleri arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı
+Bir ifade, projenizin dışında tanımlanan bir sınıf, yapı, arabirim, numaralandırma veya temsilci gibi bir tür kullanır. Ancak, bu türü tanımlayan birden fazla derlemeye proje başvuruları vardır.  
   
- Alıntı projeleri, aynı ada sahip derlemeler üretir. Bu nedenle, derleyici tür için kullanmak üzere hangi derleme erişme belirlenemiyor.  
+ Alıntı yapılan projeler aynı ada sahip derlemeler üretir. Bu nedenle, derleyici eriştiğiniz tür için hangi derlemeyi kullanacağınızı belirleyemez.  
   
- Başka bir derlemede tanımlanan bir türü erişmek için Visual Basic Derleyicisi derlemeye bir başvuru olmalıdır. Bu projeler arasında döngüsel başvurulara neden olmaz tek ve eksiksiz bir başvuru olmalıdır.  
+ Başka bir derlemede tanımlı bir türe erişmek için, Visual Basic derleyicisinin bu derlemeye bir başvurusu olmalıdır. Bu, projeler arasında döngüsel başvurulara neden olmayan tek, belirsiz bir başvuru olmalıdır.  
   
- **Hata Kimliği:** BC30969  
+ **Hata kimliği:** BC30969  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Başvurmak için en iyi derleme projeniz için proje üretir belirleyin. Bu kararı, dosya erişim kolaylığı ve güncelleştirmelerinin sıklığı gibi ölçütlere kullanabilir.  
+1. Projenizin başvurması için en iyi derlemeyi hangi projenin ürettiğini belirleme. Bu karar için dosya erişiminin ve güncelleştirme sıklığının kolaylığı gibi ölçütleri kullanabilirsiniz.  
   
-2. Proje özelliklerinizi kullanmakta olduğunuz türü tanımlayan bir derlemeyi içeren dosyaya bir başvuru ekleyin.  
+2. Proje özelliklerinde, kullanmakta olduğunuz türü tanımlayan derlemeyi içeren dosyaya bir başvuru ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
-- [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Bildirilmiş Öğelere Başvurular](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
 - [Bozuk Başvurularda Sorun Giderme](/visualstudio/ide/troubleshooting-broken-references)

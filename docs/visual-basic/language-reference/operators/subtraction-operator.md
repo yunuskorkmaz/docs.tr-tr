@@ -1,5 +1,5 @@
 ---
-title: '- İşleç'
+title: '- Operatör'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Negate
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 9687c366c5b23693c05ab5c6b34f50c04131dfda
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6539beb5cf8078281357445e2391fac189208087
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348219"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406360"
 ---
 # <a name="--operator-visual-basic"></a>- İşleci (Visual Basic)
 İki sayısal ifade arasındaki farkı ya da sayısal bir ifadenin negatif değerini döndürür.  
@@ -41,40 +41,40 @@ veya
   
 ## <a name="parts"></a>Bölümler  
  `expression1`  
- Gerekli. Herhangi bir sayısal ifade.  
+ Gereklidir. Herhangi bir sayısal ifade.  
   
  `expression2`  
- `–` işleci negatif bir değer hesaplanmadığı için gereklidir. Herhangi bir sayısal ifade.  
+ `–`İşleç negatif bir değer hesaplanmadığı için gereklidir. Herhangi bir sayısal ifade.  
   
 ## <a name="result"></a>Sonuç  
- Sonuç, `expression1` ve `expression2`ya da `expression1`'in nelenmiş değeri arasındaki farktır.  
+ Sonuç, `expression1` ile veya arasında bir değer arasındaki farktır `expression2` `expression1` .  
   
- Sonuç veri türü, `expression1` ve `expression2`veri türleri için uygun bir sayısal türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"tamsayı aritmetiği" tablolarına bakın.  
+ Sonuç veri türü ve veri türleri için uygun bir sayısal türdür `expression1` `expression2` . [Işleç sonuçlarının veri türlerinde](data-types-of-operator-results.md)"tamsayı aritmetiği" tablolarına bakın.  
   
 ## <a name="supported-types"></a>Desteklenen türler  
- Tüm sayısal türler. Bu, işaretsiz ve kayan nokta türlerini ve `Decimal`içerir.  
+ Tüm sayısal türler. Bu, imzasız ve kayan nokta türlerini içerir `Decimal` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Daha önce gösterilen sözdiziminde gösterilen ilk kullanımlarda, `–` işleci iki sayısal ifade arasındaki fark için *ikili* aritmetik çıkarma işleçidir.  
+ Daha önce gösterilen sözdiziminde gösterilen ilk kullanımlarda `–` işleç, iki sayısal ifade arasındaki fark için *ikili* aritmetik çıkarma işleçidir.  
   
- Daha önce gösterilen sözdiziminde gösterilen ikinci kullanım için `–` işleci, bir ifadenin negatif değeri için *birli* olumsuzlama işleçidir. Bu anlamda olumsuzlama, `expression1` negatifse, sonucun pozitif olması için `expression1` işaretini ters çevirmeyi içerir.  
+ Daha önce gösterilen sözdiziminde gösterilen ikinci kullanımda `–` işleci, bir ifadenin negatif değeri için *birli* olumsuzlama işleçidir. Bu anlamda olumsuzlama, negatif ise sonucun pozitif olması için işaretini tersine döndürdükten oluşur `expression1` `expression1` .  
   
- Her iki ifade de [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, `–` işleci onu sıfır olarak değerlendirir.  
+ Her iki ifade de [Nothing](../nothing.md)olarak değerlendirilirse, `–` işleç onu sıfır olarak değerlendirir.  
   
 > [!NOTE]
-> `–` işleci *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> `–`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek iki sayı arasındaki farkı hesaplamak ve döndürmek için `–` işlecini, sonra da bir sayıyı bir sayı olarak döndürür.  
+ Aşağıdaki örnek, `–` iki sayı arasındaki farkı hesaplamak ve döndürmek için işlecini ve sonra bir sayıyı bir sayı olarak döndürür.  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- Bu deyimlerin yürütülmesini izleyerek `binaryResult` 124,45 ve `unaryResult` içerir – 334,90.  
+ Bu deyimlerin yürütülmesi sonrasında `binaryResult` 124,45 ve `unaryResult` içerir – 334,90 içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [-= İşleci (Visual Basic)](subtraction-assignment-operator.md)
+- [Aritmetik İşleçler](arithmetic-operators.md)
+- [Visual Basic'de İşleç Önceliği](operator-precedence.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](operators-listed-by-functionality.md)
+- [Visual Basic'de Aritmetik İşleçler](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
