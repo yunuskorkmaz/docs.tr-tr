@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4ce24073896326bb5a68e563e2d34aafa09ef1c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b5bda7b1a2ae37eb509c736deae1652dc5e6ab0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593212"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374037"
 ---
-# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a><span data-ttu-id="cacaf-102">Yapı '\<structurename >' en az bir örnek üye değişkeni veya 'Custom' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir</span><span class="sxs-lookup"><span data-stu-id="cacaf-102">Structure '\<structurename>' must contain at least one instance member variable or at least one instance event declaration not marked 'Custom'</span></span>
-<span data-ttu-id="cacaf-103">Bir yapı tanımı, herhangi bir paylaşılmayan değişkenler veya paylaşılmayan, özel olmayan olaylar içermez.</span><span class="sxs-lookup"><span data-stu-id="cacaf-103">A structure definition does not include any nonshared variables or nonshared noncustom events.</span></span>  
+# <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a><span data-ttu-id="0b014-102">'\<structurename>' yapısı en az bir örnek üye değişkeni veya 'Custom' olarak işaretlenmemiş en az bir örnek olay bildirimi içermelidir</span><span class="sxs-lookup"><span data-stu-id="0b014-102">Structure '\<structurename>' must contain at least one instance member variable or at least one instance event declaration not marked 'Custom'</span></span>
+<span data-ttu-id="0b014-103">Bir yapı tanımı, paylaşılmayan olmayan değişkenler veya paylaşılmayan özel olmayan olaylar içermez.</span><span class="sxs-lookup"><span data-stu-id="0b014-103">A structure definition does not include any nonshared variables or nonshared noncustom events.</span></span>  
   
- <span data-ttu-id="cacaf-104">Her yapı bir değişken ya da her belirli bir örneğine (yerine paylaşılmayan) tüm örneklerini topluca uygulandığı bir olay olmalıdır ([paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md)).</span><span class="sxs-lookup"><span data-stu-id="cacaf-104">Every structure must have either a variable or an event that applies to each specific instance (nonshared) instead of to all instances collectively ([Shared](../../../visual-basic/language-reference/modifiers/shared.md)).</span></span> <span data-ttu-id="cacaf-105">Paylaşılmayan sabitler, özellikler ve yordamlar bu gereksinimi karşılamıyor.</span><span class="sxs-lookup"><span data-stu-id="cacaf-105">Nonshared constants, properties, and procedures do not satisfy this requirement.</span></span> <span data-ttu-id="cacaf-106">Ayrıca, herhangi bir paylaşılmayan değişkenler ve yalnızca bir paylaşılmayan olay varsa, bu olay olamaz bir `Custom` olay.</span><span class="sxs-lookup"><span data-stu-id="cacaf-106">In addition, if there are no nonshared variables and only one nonshared event, that event cannot be a `Custom` event.</span></span>  
+ <span data-ttu-id="0b014-104">Her yapının, tek tek ([paylaşılan](../modifiers/shared.md)) tüm örnekler yerine her belirli örnek (paylaşılmayan) için geçerli olan bir değişkene veya olaya sahip olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0b014-104">Every structure must have either a variable or an event that applies to each specific instance (nonshared) instead of to all instances collectively ([Shared](../modifiers/shared.md)).</span></span> <span data-ttu-id="0b014-105">Paylaşılmayan sabitler, Özellikler ve yordamlar bu gereksinimi karşılamıyor.</span><span class="sxs-lookup"><span data-stu-id="0b014-105">Nonshared constants, properties, and procedures do not satisfy this requirement.</span></span> <span data-ttu-id="0b014-106">Ayrıca, paylaşılmayan değişkenler ve yalnızca paylaşılan olmayan bir olay yoksa, bu olay bir `Custom` olay olamaz.</span><span class="sxs-lookup"><span data-stu-id="0b014-106">In addition, if there are no nonshared variables and only one nonshared event, that event cannot be a `Custom` event.</span></span>  
   
- <span data-ttu-id="cacaf-107">**Hata Kimliği:** BC30941</span><span class="sxs-lookup"><span data-stu-id="cacaf-107">**Error ID:** BC30941</span></span>  
+ <span data-ttu-id="0b014-107">**Hata kimliği:** BC30941</span><span class="sxs-lookup"><span data-stu-id="0b014-107">**Error ID:** BC30941</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="cacaf-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="cacaf-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0b014-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="0b014-108">To correct this error</span></span>  
   
-- <span data-ttu-id="cacaf-109">En az bir değişken veya değil olay tanımlama `Shared`.</span><span class="sxs-lookup"><span data-stu-id="cacaf-109">Define at least one variable or event that is not `Shared`.</span></span> <span data-ttu-id="cacaf-110">Yalnızca bir olay tanımlarsanız, özel olmayan yanı sıra paylaşılmayan olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cacaf-110">If you define only one event, it must be noncustom as well as nonshared.</span></span>  
+- <span data-ttu-id="0b014-109">En az bir değişken veya olmayan olay tanımlayın `Shared` .</span><span class="sxs-lookup"><span data-stu-id="0b014-109">Define at least one variable or event that is not `Shared`.</span></span> <span data-ttu-id="0b014-110">Yalnızca bir olay tanımlarsanız, özel olmayan ve paylaşılmayan olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0b014-110">If you define only one event, it must be noncustom as well as nonshared.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cacaf-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cacaf-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b014-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b014-111">See also</span></span>
 
-- [<span data-ttu-id="cacaf-112">Yapılar</span><span class="sxs-lookup"><span data-stu-id="cacaf-112">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="cacaf-113">Nasıl yapılır: Yapıyı Bildirme</span><span class="sxs-lookup"><span data-stu-id="cacaf-113">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="cacaf-114">Structure Deyimi</span><span class="sxs-lookup"><span data-stu-id="cacaf-114">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="0b014-112">Yapılar</span><span class="sxs-lookup"><span data-stu-id="0b014-112">Structures</span></span>](../../programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="0b014-113">Nasıl yapılır: Yapıyı Bildirme</span><span class="sxs-lookup"><span data-stu-id="0b014-113">How to: Declare a Structure</span></span>](../../programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="0b014-114">Structure Yapısı</span><span class="sxs-lookup"><span data-stu-id="0b014-114">Structure Statement</span></span>](../statements/structure-statement.md)
