@@ -13,72 +13,72 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62ced7f2048ae41c7ea4c9d62c0ff0a903c37856
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864864"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388926"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic İşleçleriyle Yapılan Genel Görevler
-İşleçler adlı bir veya daha fazla ifadeler içeren birçok ortak görevleri gerçekleştirmek *işlenenler*.  
+İşleçler, *işlenenler*adlı bir veya daha fazla ifadeye ilişkin birçok ortak görevi gerçekleştirir.  
   
-## <a name="arithmetic-and-bit-shift-tasks"></a>Aritmetik ve Bit kaydırma görevleri  
- Aşağıdaki tabloda kullanılabilir aritmetik ve bit kaydırma işlemleri özetlenmektedir.  
+## <a name="arithmetic-and-bit-shift-tasks"></a>Aritmetik ve bit kaydırma görevleri  
+ Aşağıdaki tablo, kullanılabilir aritmetik ve bit kaydırma işlemlerini özetler.  
   
-|Bitiş|Bkz. |  
+|Alıcı|Bkz.|  
 |---|---|  
-|Başka bir sayısal değer Ekle|[+ İşleci](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Bir sayısal değer başka bir çıkarma|[-İşleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Sayısal bir değerin işareti tersine çevirme|[-İşleci (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Bir sayısal değer başkası tarafından Çarp|[* İşleci](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Başka bir sayısal değer Böl|[/ İşleci (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|Bir sayısal değer (kalanını) olmadan bir başka bölünen sayının Bul|[\ İşleci (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|Bir başka (olmadan bölümü) sayısal değer bölü geri kalanında Bul|[Mod İşleci](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|Güç, başka bir sayısal değere Yükselt|[^ İşleci](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Sayısal bir değerin bit deseninin sola kaydır|[<\< İşleci](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Sayısal bir değerin bit deseninin sağa kaydır|[>> İşleci](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|Başka bir sayısal değer ekleme|[+ İşleci](../../../language-reference/operators/addition-operator.md)|  
+|Bir sayısal değeri diğerinden çıkar|[-İşleci (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Sayısal değerin işaretini ters çevirin|[-İşleci (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Bir sayısal değeri başka bir sayı ile çarpın|[* İşleci](../../../language-reference/operators/multiplication-operator.md)|  
+|Bir sayısal değeri başka bir değere Böl|[/İşleci (Visual Basic)](../../../language-reference/operators/floating-point-division-operator.md)|  
+|Bir sayısal değerin başka bir değere bölünmüş bölümünü bul (geri kalanı olmadan)|[\ İşleci (Visual Basic)](../../../language-reference/operators/integer-division-operator.md)|  
+|Bir sayısal değerin geri kalanını başka bir sayı ile ayrılmış olarak bulur (bölüm olmadan)|[Mod İşleci](../../../language-reference/operators/mod-operator.md)|  
+|Bir sayısal değeri diğerinin gücüne yükseltin|[^ İşleci](../../../language-reference/operators/exponentiation-operator.md)|  
+|Sayısal değerin bit stilini sola kaydır|[<\<İşlecinde](../../../language-reference/operators/left-shift-operator.md)|  
+|Sayısal değerin bit stilini sağa kaydır|[>> Işleci](../../../language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Karşılaştırma görevleri  
  Aşağıdaki tabloda kullanılabilir karşılaştırma işlemleri özetlenmektedir.  
   
-|Bitiş|Bkz. |  
+|Alıcı|Bkz.|  
 |---|---|  
-|İki değerin eşit olup olmadığını belirleme|`=` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|İki değer eşit olup olmadığını belirleme|`<>` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bir değer daha az olup olmadığını belirleme|`<` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bir değer diğerinden daha büyük olup olmadığını belirleme|`>` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Bir değer küçüktür veya eşittir diğerine olup olmadığını belirlemek|`<=` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|Diğerine eşit veya daha büyük bir değer olup olmadığını belirleme|`>=` İşleç ([Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|İki nesne değişkenini aynı nesne örneğine başvurup başvurmadığını belirlemeniz|[Is İşleci](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|İki nesne değişkenleri farklı nesne örneklerini başvurup başvurmadığını belirlemeniz|[IsNot İşleci](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|Bir nesne belirli bir türde olup olmadığını belirleme|[TypeOf İşleci](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|İki değerin eşit olup olmadığını belirleme|`=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|İki değerin eşit olup olmadığını belirleme|`<>`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerinden daha küçük olup olmadığını belirleme|`<`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerinden daha büyük olup olmadığını belirleme|`>`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerine eşit veya ondan küçük olup olmadığını belirleme|`<=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerine eşit veya ondan büyük olup olmadığını belirleme|`>=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|İki nesne değişkeninin aynı nesne örneğine başvurmadığını belirleme|[Is İşleci](../../../language-reference/operators/is-operator.md)|  
+|İki nesne değişkeninin farklı nesne örneklerine başvurmadığını belirleme|[IsNot İşleci](../../../language-reference/operators/isnot-operator.md)|  
+|Nesnenin belirli bir türde olup olmadığını belirleme|[TypeOf İşleci](../../../language-reference/operators/typeof-operator.md)|  
   
 ## <a name="concatenation-tasks"></a>Birleştirme görevleri  
- Aşağıdaki tabloda kullanılabilir birleştirme işlemleri özetlenmektedir.  
+ Aşağıdaki tabloda, kullanılabilir birleştirme işlemleri özetlenmektedir.  
   
-|Bitiş|Bkz. |  
+|Alıcı|Bkz.|  
 |---|---|  
-|Tek bir dize olarak birden çok dizeyi birleştirme|`&` İşleç ([Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|Dize değerleri sayısal değerlerle katılın|`+` İşleç ([Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|Birden çok dizeyi tek bir dizeye ekleyin|`&`İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
+|Sayısal değerleri dize değerleriyle birleştirin|`+`İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
   
-## <a name="logical-and-bitwise-tasks"></a>Mantıksal ve bit düzeyinde görevleri  
- Kullanılabilir mantıksal ve bit düzeyinde işlemler aşağıdaki tabloda özetlenmiştir.  
+## <a name="logical-and-bitwise-tasks"></a>Mantıksal ve bit düzeyinde görevler  
+ Aşağıdaki tabloda, kullanılabilir mantıksal ve bit düzeyinde işlemler özetlenmektedir.  
   
-|Bitiş|Bkz. |  
+|Alıcı|Bkz.|  
 |---|---|  
-|Bir Boolean değeri mantıksal olumsuzlaştırma|[Not İşleci](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|İki Boolean değerlerine mantıksal ve işlecini gerçekleştirin|[And İşleci](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|İki Boolean değerlerine kapsamlı mantıksal veya işlecini gerçekleştirin|[Or İşleci](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|İki Boolean değerlerine mantıksal Dışlayıcı veya işlecini gerçekleştirin|[Xor İşleci](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|İki Boolean değerlerine kısa devre yapılma mantıksal ve işlecini gerçekleştirin|[AndAlso İşleci](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|İki Boolean değerlerine kısa devre yapılma kapsamlı mantıksal veya işlecini gerçekleştirin|[OrElse İşleci](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Bit bit mantıksal ve işlecini iki tam sayı değerleri üzerinde gerçekleştirin.|[And İşleci](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Bit bit kapsamlı mantıksal veya işlecini iki tam sayı değerleri üzerinde gerçekleştirin.|[Or İşleci](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Bit bit özel mantıksal veya işlecini iki tam sayı değerleri üzerinde gerçekleştirin.|[Xor İşleci](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Mantıksal olumsuzlama bit bit bir tamsayı değeri üzerinde gerçekleştirin|[Not İşleci](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|Boole değeri üzerinde mantıksal değilleme gerçekleştir|[Not İşleci](../../../language-reference/operators/not-operator.md)|  
+|İki Boolean değer üzerinde mantıksal bir birlikte gerçekleştir|[And İşleci](../../../language-reference/operators/and-operator.md)|  
+|İki Boolean değer üzerinde kapsamlı mantıksal ayırıcı gerçekleştir|[Or İşleci](../../../language-reference/operators/or-operator.md)|  
+|İki Boolean değer üzerinde dışlamalı mantıksal ayırıcı gerçekleştir|[Xor İşleci](../../../language-reference/operators/xor-operator.md)|  
+|İki Boolean değer üzerinde kısa devre dışı olarak kabul edilen mantıksal bir mantıksal değer gerçekleştirin|[AndAlso İşleci](../../../language-reference/operators/andalso-operator.md)|  
+|İki Boolean değer üzerinde kısa devre dışı olarak kabul edilen kapsamlı mantıksal bir birleşim gerçekleştirin|[OrElse İşleci](../../../language-reference/operators/orelse-operator.md)|  
+|İki integral değer üzerinde bit-bit Mantıksal|[And İşleci](../../../language-reference/operators/and-operator.md)|  
+|İki integral değer üzerinde bit ve bit kapsamlı mantıksal ayırıcı gerçekleştirme|[Or İşleci](../../../language-reference/operators/or-operator.md)|  
+|İki integral değer üzerinde bit-bit dışlamalı mantıksal ayırıcı gerçekleştirin|[Xor İşleci](../../../language-reference/operators/xor-operator.md)|  
+|İntegral değerde bit-bit Mantıksal değilleme gerçekleştir|[Not İşleci](../../../language-reference/operators/not-operator.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [İşlevselliğe Göre Listelenmiş İşleçler](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [İşleçler ve Ifadeler](index.md)
+- [İşlevselliğe Göre Listelenmiş İşleçler](../../../language-reference/operators/operators-listed-by-functionality.md)
