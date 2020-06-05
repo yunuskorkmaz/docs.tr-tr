@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348726"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396836"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma (Visual Basic)
 
@@ -27,15 +27,15 @@ ms.locfileid: "74348726"
 
 ## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>İşaretsiz bir tür alan bir Windows işlevini çağırmak için
 
-1. İşlevin hangi kitaplıkta bulunduğunu, adının bu kitaplıkta ne olduğunu, ne zaman arama sırasının ne olduğunu ve çağrı sırasında dizelerin nasıl dönüştürüleceğini Visual Basic söylemek için bir [Declare bildirimi](../../../visual-basic/language-reference/statements/declare-statement.md) kullanın.
+1. İşlevin hangi kitaplıkta bulunduğunu, adının bu kitaplıkta ne olduğunu, ne zaman arama sırasının ne olduğunu ve çağrı sırasında dizelerin nasıl dönüştürüleceğini Visual Basic söylemek için bir [Declare bildirimi](../../language-reference/statements/declare-statement.md) kullanın.
 
-2. `Declare` bildiriminde, imzasız bir tür ile her parametre için uygun `UInteger`, `ULong`, `UShort`veya `Byte` kullanın.
+2. İfadesinde,,, `Declare` `UInteger` `ULong` `UShort` veya `Byte` imzasız bir tür ile her parametreye uygun şekilde kullanın.
 
 3. Kullandığı sabitlerin adlarını ve değerlerini bulmak için, aradığınız Windows işlevinin belgelerini inceleyin. Bunlardan birçoğu WinUser. h dosyasında tanımlanmıştır.
 
-4. Kodunuzda gerekli sabitleri bildirin. Birçok Windows sabiti 32 bitlik işaretsiz değerlerdir ve bu `As UInteger`bildirmeniz gerekir.
+4. Kodunuzda gerekli sabitleri bildirin. Birçok Windows sabiti 32 bitlik işaretsiz değerlerdir ve bunları bildirmeniz gerekir `As UInteger` .
 
-5. İşlevi normal şekilde çağırın. Aşağıdaki örnek, işaretsiz bir tamsayı bağımsız değişkeni alan `MessageBox`Windows işlevini çağırır.
+5. İşlevi normal şekilde çağırın. Aşağıdaki örnek, `MessageBox` işaretsiz bir tamsayı bağımsız değişkeni alan Windows işlevini çağırır.
 
     ```vb
     Public Class windowsMessage
@@ -60,7 +60,7 @@ ms.locfileid: "74348726"
     End Class
     ```
 
-     Aşağıdaki kodla işlevi `messageThroughWindows` test edebilirsiniz.
+     İşlevi aşağıdaki kodla test edebilirsiniz `messageThroughWindows` .
 
     ```vb
     Public Sub consumeWindowsMessage()
@@ -70,18 +70,18 @@ ms.locfileid: "74348726"
     ```
 
     > [!CAUTION]
-    > `UInteger`, `ULong`, `UShort`ve `SByte` veri türleri [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bunları kullanan bir bileşeni tüketemez.
+    > `UInteger`,, `ULong` `UShort` Ve `SByte` veri türleri [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değildir, bu nedenle CLS uyumlu kod bunları kullanan bir bileşeni tüketemez.
 
     > [!IMPORTANT]
     > Windows uygulama programlama arabirimi (API) gibi yönetilmeyen koda çağrı yapmak, kodunuzu olası güvenlik risklerine sunar.
 
     > [!IMPORTANT]
-    > Windows API 'sinin çağrılması, yönetilmeyen kod iznini gerektirir, bu da kısmi güven durumlarında yürütmesini etkileyebilir. Daha fazla bilgi için bkz. <xref:System.Security.Permissions.SecurityPermission> ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > Windows API 'sinin çağrılması, yönetilmeyen kod iznini gerektirir, bu da kısmi güven durumlarında yürütmesini etkileyebilir. Daha fazla bilgi için bkz <xref:System.Security.Permissions.SecurityPermission> . ve [kod erişim izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
-- [Integer Veri Türü](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [İzlenecek yol: Windows API'lerini Çağırma](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Veri türleri](../../language-reference/data-types/index.md)
+- [Integer Veri Türü](../../language-reference/data-types/integer-data-type.md)
+- [UInteger Veri Türü](../../language-reference/data-types/uinteger-data-type.md)
+- [Declare Deyimi](../../language-reference/statements/declare-statement.md)
+- [İzlenecek yol: Windows API'lerini Çağırma](walkthrough-calling-windows-apis.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd0a62b6567f3e74763b7f2e9b96803c193c7976
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341370"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403362"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 Çoğu durumda, bir yordamın çağrıldığı koşullara ilişkin bazı bilgileri olması gerekir. Yinelenen veya paylaşılan görevler gerçekleştiren bir yordam, her çağrı için farklı bilgiler kullanır. Bu bilgiler, çağırdığınızda yordama geçirdiğiniz değişkenlerin, sabitlerin ve ifadelerden oluşur.  
@@ -26,14 +26,14 @@ ms.locfileid: "74341370"
 ## <a name="parameters"></a>Parametreler  
  Bir *parametre* , bu işlemi çağırdığınızda yordamın geçirilmesini beklediği bir değeri temsil eder. Yordamın bildirimi, parametrelerini tanımlar.  
   
- Bir `Function` veya `Sub` yordamı tanımladığınızda, yordam adından hemen sonra parantez içinde bir *parametre listesi* belirtirsiniz. Her parametre için bir ad, veri türü ve bir geçirme mekanizması ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)) belirtirsiniz. Ayrıca, bir parametresinin isteğe bağlı olduğunu belirtebilirsiniz. Bu, çağıran kodun bunun için bir değer geçmesi gerekmediği anlamına gelir.  
+ Bir `Function` veya `Sub` yordamı tanımladığınızda, yordam adından hemen sonra parantez içinde bir *parametre listesi* belirtirsiniz. Her parametre için bir ad, veri türü ve bir geçirme mekanizması ([ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md)) belirtirsiniz. Ayrıca, bir parametresinin isteğe bağlı olduğunu belirtebilirsiniz. Bu, çağıran kodun bunun için bir değer geçmesi gerekmediği anlamına gelir.  
   
  Her parametrenin adı, yordamda *yerel bir değişken* işlevi görür. Parametre adını başka herhangi bir değişken kullandığınız şekilde kullanırsınız.  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Arguments  
  Bir *bağımsız değişken* , yordamı çağırdığınızda bir yordam parametresine geçirdiğiniz değeri temsil eder. Çağıran kod, yordamı çağırdığında bağımsız değişkenleri sağlar.  
   
- Bir `Function` veya `Sub` yordamını çağırdığınızda, yordam adından hemen sonra parantez içine bir *bağımsız değişken listesi* dahil edersiniz. Her bağımsız değişken, listedeki aynı konumdaki parametreye karşılık gelir.  
+ Bir `Function` veya `Sub` yordamını çağırdığınızda, yordam adının hemen ardından parantez içine bir *bağımsız değişken listesi* dahil edersiniz. Her bağımsız değişken, listedeki aynı konumdaki parametreye karşılık gelir.  
   
  Parametre tanımının aksine bağımsız değişkenlerin adları yoktur. Her bağımsız değişken sıfır veya daha fazla değişken, sabit ve değişmez değer içerebilen bir ifadedir. Değerlendirilen ifadenin veri türü genellikle karşılık gelen parametre için tanımlanan veri türüyle eşleşir ve herhangi bir durumda parametre türüne dönüştürülebilir olmalıdır.  
   

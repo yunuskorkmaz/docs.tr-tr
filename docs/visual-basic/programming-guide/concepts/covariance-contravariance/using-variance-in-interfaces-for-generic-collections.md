@@ -2,24 +2,24 @@
 title: Genel Koleksiyonlar için Arabirimlerde Varyans Kullanma
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349017"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375647"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (Visual Basic)
 
 Birlikte değişken arabirimi, yöntemlerinin arabirimde belirtilenden daha fazla türetilmiş tür döndürmesini sağlar. Değişken karşıtı bir arabirim, yöntemlerinin, arabirimde belirtilenden daha az türetilmiş türdeki parametreleri kabul etmesine olanak sağlar.
 
-.NET Framework 4 ' te, bazı mevcut arabirimler birlikte değişken ve değişken karşıtı hale gelmiştir. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve <xref:System.IComparable%601>içerir. Bu, türetilmiş türlerin koleksiyonları için genel temel tür koleksiyonlarıyla çalışan yöntemleri yeniden kullanmanıza olanak sağlar.
+.NET Framework 4 ' te, bazı mevcut arabirimler birlikte değişken ve değişken karşıtı hale gelmiştir. Bunlar <xref:System.Collections.Generic.IEnumerable%601> ve içerir <xref:System.IComparable%601> . Bu, türetilmiş türlerin koleksiyonları için genel temel tür koleksiyonlarıyla çalışan yöntemleri yeniden kullanmanıza olanak sağlar.
 
-.NET Framework değişken arabirimlerin listesi için bkz. [Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).
+.NET Framework değişken arabirimlerin listesi için bkz. [Genel Arabirimlerde Varyans (Visual Basic)](variance-in-generic-interfaces.md).
 
 ## <a name="converting-generic-collections"></a>Genel koleksiyonları dönüştürme
 
-Aşağıdaki örnekte, <xref:System.Collections.Generic.IEnumerable%601> arabirimindeki Kovaryans desteğinin avantajları gösterilmektedir. `PrintFullName` yöntemi, `IEnumerable(Of Person)` türünün bir koleksiyonunu parametre olarak kabul eder. Ancak, `Employee` `Person`devraldığı için `IEnumerable(Of Person)` türünün bir koleksiyonu için onu yeniden kullanabilirsiniz.
+Aşağıdaki örnekte, arabirimindeki Kovaryans desteğinin avantajları gösterilmektedir <xref:System.Collections.Generic.IEnumerable%601> . `PrintFullName`Yöntemi, türü bir koleksiyonu `IEnumerable(Of Person)` bir parametre olarak kabul eder. Ancak, devraldığından bir tür koleksiyonu için onu yeniden kullanabilirsiniz `IEnumerable(Of Person)` `Employee` `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -53,7 +53,7 @@ End Sub
 
 ## <a name="comparing-generic-collections"></a>Genel koleksiyonları karşılaştırma
 
-Aşağıdaki örnek, <xref:System.Collections.Generic.IComparer%601> arabiriminde değişken varyans desteğinin avantajlarını gösterir. `PersonComparer` sınıfı `IComparer(Of Person)` arabirimini uygular. Ancak, `Employee` `Person`devraldığı için `Employee` türünün bir nesne dizisini karşılaştırmak üzere bu sınıfı yeniden kullanabilirsiniz.
+Aşağıdaki örnek, arabirimindeki fark desteğinin avantajlarından yararlanır <xref:System.Collections.Generic.IComparer%601> . `PersonComparer` sınıfı, `IComparer(Of Person)` arabirimini uygular. Ancak, devraldığından tür bir nesne dizisini karşılaştırmak için bu sınıfı yeniden kullanabilirsiniz `Employee` `Employee` `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -114,4 +114,4 @@ End Sub
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel Arabirimlerde Varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Genel Arabirimlerde Varyans (Visual Basic)](variance-in-generic-interfaces.md)

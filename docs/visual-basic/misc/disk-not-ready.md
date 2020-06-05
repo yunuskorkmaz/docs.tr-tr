@@ -1,25 +1,25 @@
 ---
-title: Disk hazır değil
+title: Disk yok
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
-ms.openlocfilehash: 3e981a55158ae77ed8a2b5f3d33c02aea175abdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28cdb5d9a4a08111150770fbac1f367b271a0798
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970371"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394784"
 ---
-# <a name="disk-not-ready"></a>Disk hazır değil
-Belirtilen sürücü için disk yok veya sürücü kapısını açın.  
+# <a name="disk-not-ready"></a>Disk yok
+Belirtilen sürücü için disk yok ya da sürücü kapısı açık.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Belirtilen sürücü denetleyin ve gerekiyorsa bir disk ekleyin.  
+1. Belirtilen sürücüyü denetleyin ve gerekirse bir disk ekleyin.  
   
-2. Sürücü kapağının kapatın.  
+2. Sürücü kapısını kapatın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../programming-guide/language-features/error-types.md)

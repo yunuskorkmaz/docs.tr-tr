@@ -8,27 +8,27 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0d9921704570c6984b203817aed8f5546b2f936
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345989"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408795"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
-*Yordam* , bir bildirim deyimi (`Function`, `Sub`, `Operator`, `Get`, `Set`) ve eşleşen bir `End` bildirimi tarafından eklenen Visual Basic deyimlerinin bir bloğudur. Visual Basic tüm çalıştırılabilir deyimler bazı yordamda olmalıdır.  
+*Yordam* , bir bildirim deyimi ( `Function` ,, `Sub` `Operator` , `Get` , `Set` ) ve eşleşen `End` bildirim tarafından alınan Visual Basic deyimlerinin bir bloğudur. Visual Basic tüm çalıştırılabilir deyimler bazı yordamda olmalıdır.  
   
 ## <a name="calling-a-procedure"></a>Yordam çağırma  
  Koddaki başka bir yerden yordam çağırılır. Bu, *yordam çağrısı*olarak bilinir. Yordam çalışmayı bitirdiğinde, *çağıran*kod olarak bilinen, çağrılan koda denetim döndürür. Çağıran kod, bir deyim veya deyim içindeki bir ifadedir ve bu yordam ada göre yordamı belirtir ve denetimi buna aktarır.  
   
 ## <a name="returning-from-a-procedure"></a>Bir yordamdan dönme  
- Yordam, çalışmayı tamamladığında çağıran koda denetim döndürür. Bunu yapmak için, bir [return ifadesini](../../../../visual-basic/language-reference/statements/return-statement.md), yordam Için uygun [Exit bildiri](../../../../visual-basic/language-reference/statements/exit-statement.md) ifadesini veya yordamın [End \<anahtar sözcüğü > ifade](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) ifadesini kullanabilir. Daha sonra Denetim, yordam çağrısının noktasını izleyen çağırma koduna geçer.  
+ Yordam, çalışmayı tamamladığında çağıran koda denetim döndürür. Bunu yapmak için, yordam için bir [return ifadesini](../../../language-reference/statements/return-statement.md), uygun [Exit bildiri](../../../language-reference/statements/exit-statement.md) ifadesini veya yordamın [End \<keyword> deyimi](../../../language-reference/statements/end-keyword-statement.md) ifadesini kullanabilirsiniz. Daha sonra Denetim, yordam çağrısının noktasını izleyen çağırma koduna geçer.  
   
-- `Return` ifadesiyle denetim, çağırma koduna hemen geri döner. `Return` deyimini izleyen deyimler çalıştırılmadı. Aynı yordamda birden fazla `Return` deyiminiz olabilir.  
+- Bir `Return` ifadesiyle denetim, çağırma koduna hemen geri döner. `Return`Deyimden sonraki deyimler çalıştırılmaz. Aynı yordamda birden fazla deyime sahip olabilirsiniz `Return` .  
   
-- Bir `Exit Sub` veya `Exit Function` ifadesiyle denetim, çağırma koduna hemen geri döner. `Exit` deyimini izleyen deyimler çalıştırılmadı. Aynı yordamda birden fazla `Exit` deyimi olabilir ve aynı yordamda `Return` ve `Exit` deyimlerini karıştırabilirsiniz.  
+- `Exit Sub`Or `Exit Function` ifadesiyle denetim, çağırma koduna hemen geri döner. `Exit`Deyimden sonraki deyimler çalıştırılmaz. Aynı yordamda birden fazla deyime sahip olabilirsiniz `Exit` ve `Return` `Exit` aynı yordamda ve deyimlerini karıştırabilirsiniz.  
   
-- Bir yordamda `Return` veya `Exit` deyim yoksa, yordam gövdesinin son deyiminden sonra bir `End Sub` veya `End Function`, `End Get`veya `End Set` ifadesi ile sonlanır. `End` ifade, denetimi çağıran koda hemen döndürür. Yordamda yalnızca bir `End` deyiminiz olabilir.  
+- Bir yordamda `Return` veya deyimleri yoksa, `Exit` `End Sub` `End Function` `End Get` `End Set` yordam gövdesinin son deyiminden sonra bir veya, ya da ifadesiyle sonlanır. `End`İfade, çağırma koduna anında denetim döndürür. Yordamda yalnızca bir `End` deyiminiz olabilir.  
   
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler  
  Çoğu durumda, bir yordamın her çağırdığınızda farklı veriler üzerinde çalışması gerekir. Yordam çağrısının bir parçası olarak bu bilgileri yordama geçirebilirsiniz. Yordam sıfır veya daha fazla *parametreyi*tanımlar, her biri, kendisine geçirilmesini bekleyen bir değeri temsil eder. Yordam tanımındaki her parametreye karşılık gelen yordam çağrısındaki bir *bağımsız değişkendir* . Bağımsız değişken, belirli bir yordam çağrısında karşılık gelen parametreye geçirdiğiniz değeri temsil eder.  
@@ -38,20 +38,20 @@ ms.locfileid: "74345989"
   
 - [Alt yordamlar](./sub-procedures.md) eylemleri gerçekleştirir, ancak çağırma koduna bir değer döndürmez.  
   
-- Olay işleme yordamları, kullanıcı eylemine göre veya bir programdaki bir oluşum tarafından oluşturulan bir olaya yanıt olarak yürütülen `Sub` yordamlardır.  
+- Olay işleme yordamları, `Sub` Kullanıcı eylemine göre veya bir programdaki bir oluşum tarafından oluşturulan bir olaya yanıt olarak yürütülen yordamlardır.  
   
 - [Işlev yordamları](./function-procedures.md) , çağırma koduna bir değer döndürür. Bu işlemler, döndürmeden önce başka eylemler gerçekleştirebilir.
 
-    İçinde C# yazılan bazı işlevler bir *Başvuru dönüş değeri*döndürür. İşlev çağıranları dönüş değerini değiştirebilir ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017 ' den başlayarak, Visual Basic kodu başvuru dönüş değerlerini tüketebilir, ancak başvuruya göre bir değer döndüremez. Daha fazla bilgi için bkz. [Başvuru dönüş değerleri](ref-return-values.md).
+    C# dilinde yazılan bazı işlevler bir *Başvuru dönüş değeri*döndürür. İşlev çağıranları dönüş değerini değiştirebilir ve bu değişiklik çağrılan nesnenin durumunda yansıtılır. Visual Basic 2017 ' den başlayarak, Visual Basic kodu başvuru dönüş değerlerini tüketebilir, ancak başvuruya göre bir değer döndüremez. Daha fazla bilgi için bkz. [Başvuru dönüş değerleri](ref-return-values.md).
   
 - [Özellik yordamları](./property-procedures.md) , nesne veya modüllerde özelliklerin değerlerini döndürür ve atar.  
   
 - [Işleç yordamları](./operator-procedures.md) , işlenenleri bir veya her ikisi de yeni tanımlanmış bir sınıf veya yapı olduğunda standart işlecin davranışını tanımlar.  
   
-- [Visual Basic genel yordamları](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) normal parametrelerine ek olarak bir veya daha fazla *tür parametresi* tanımlar, bu nedenle çağıran kod her bir çağrı yaptığında belirli veri türlerini geçirebilir.  
+- [Visual Basic genel yordamları](../data-types/generic-procedures.md) normal parametrelerine ek olarak bir veya daha fazla *tür parametresi* tanımlar, bu nedenle çağıran kod her bir çağrı yaptığında belirli veri türlerini geçirebilir.  
   
 ## <a name="procedures-and-structured-code"></a>Yordamlar ve yapılandırılmış kod  
- Uygulamanızdaki her çalıştırılabilir kod satırının `Main`, `calculate`veya `Button1_Click`gibi bir yordamın içinde olması gerekir. Büyük yordamları daha küçük olanlara bölüyorsanız, uygulamanız daha okunabilir olur.  
+ Uygulamanızdaki her çalıştırılabilir kod satırının,, veya gibi bir yordamın içinde olması gerekir `Main` `calculate` `Button1_Click` . Büyük yordamları daha küçük olanlara bölüyorsanız, uygulamanız daha okunabilir olur.  
   
  Yordamlar, sık kullanılan hesaplamalar, metin ve denetim işleme ve veritabanı işlemleri gibi yinelenen veya paylaşılan görevler gerçekleştirmek için yararlıdır. Kodunuzda birçok farklı yerden bir yordam çağırabilirsiniz, böylece yordamları uygulamanızın yapı taşları olarak kullanabilirsiniz.  
   
@@ -71,5 +71,5 @@ ms.locfileid: "74345989"
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
-- [Visual Basic genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Nesneler ve Sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic'de Genel Yordamlar](../data-types/generic-procedures.md)
+- [Nesneler ve sınıflar](../objects-and-classes/index.md)

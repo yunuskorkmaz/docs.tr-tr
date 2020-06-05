@@ -11,20 +11,20 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 1c099c5082f1c4173a50c70998c99135c94821e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3e8df5ccfeca4bc0a19237ba6d59e9d0747080ea
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346382"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394304"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
 Visual Basic tedariklerini temel veri türlerine ek olarak, yapılar, diziler ve sınıflar gibi *bileşik veri türleri* oluşturmak için farklı türlerdeki öğeleri de birleştirebilirsiniz. Birleşik veri türlerini temel türler ve diğer bileşik türlerden oluşturabilirsiniz. Örneğin, bir yapı öğeleri dizisi veya dizi üyeleri olan bir yapı tanımlayabilirsiniz.  
   
 ## <a name="data-types"></a>Veri Türleri  
- Bileşik tür, bileşenlerinden herhangi birinin veri türünden farklıdır. Örneğin, bir dizi `Integer` öğesi `Integer` veri türünde değildir.  
+ Bileşik tür, bileşenlerinden herhangi birinin veri türünden farklıdır. Örneğin, bir dizi `Integer` öğe `Integer` veri türünde değil.  
   
- Dizi veri türü, normalde öğe türü, parantezler ve gereken virgüller kullanılarak temsil edilir. Örneğin, tek boyutlu bir `String` öğeleri `String()`olarak temsil edilir ve iki boyutlu bir dizi `Boolean` öğesi `Boolean(,)`olarak temsil edilir.  
+ Dizi veri türü, normalde öğe türü, parantezler ve gereken virgüller kullanılarak temsil edilir. Örneğin, tek boyutlu bir `String` öğe dizisi olarak temsil edilir `String()` ve iki boyutlu bir `Boolean` öğe dizisi olarak temsil edilir `Boolean(,)` .  
   
 ## <a name="structure-types"></a>Yapı türleri  
  Tüm yapıları kapsayan tek bir veri türü yoktur. Bunun yerine, bir yapının her tanımı, iki yapı aynı sırada aynı öğeleri tanımlasa bile benzersiz bir veri türünü temsil eder. Ancak, aynı yapının iki veya daha fazla örneğini oluşturursanız Visual Basic, bunları aynı veri türünde olacak şekilde değerlendirir.  
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- Yukarıdaki örnekte, `arrayA` ve `arrayB` dizi değişkenleri, farklı uzunluklara başlatılmalarına rağmen aynı veri türünde (`Byte()`) olarak değerlendirilir. `arrayB` ve `arrayC` değişkenleri, öğe türleri farklı olduğundan aynı türde değil. `arrayC` ve `arrayD` değişkenleri, dereceleri farklı olduğundan aynı türde değil. `arrayD` ve `arrayE` değişkenleri aynı türde olmalıdır — `Short(,)` — `arrayD` henüz başlatılmamış olsa da, dereceleri ve öğe türleri aynı olduğundan.  
+ Önceki örnekte, dizi değişkenleri `arrayA` ve `arrayB` aynı veri türünde olduğu kabul edilir — `Byte()` ancak farklı uzunluklara başlatılsalar bile. Değişkenlerini `arrayB` ve `arrayC` öğe türleri farklı olduğundan aynı türde değil. `arrayC`Ve `arrayD` dereceleri farklı olduğundan, değişkenler aynı türde değil. Değişkenleri `arrayD` ve `arrayE` `Short(,)` öğe türleri aynı olmalıdır, ancak henüz başlatılmamış olsa da, kendi dereceleri ve öğe türleri aynı türde `arrayD` .  
   
- Diziler hakkında daha fazla bilgi için bkz. [diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Diziler hakkında daha fazla bilgi için bkz. [diziler](../arrays/index.md).  
   
 ## <a name="class-types"></a>Sınıf Türleri  
  Tüm sınıflardan oluşan tek bir veri türü yoktur. Bir sınıf başka bir sınıftan devralınabilir olsa da, her biri ayrı bir veri türüdür. Aynı sınıfın birden çok örneği aynı veri türündedir. Bir sınıf örneği değişkenini diğerine atarsanız, yalnızca aynı veri türüne sahip olmaları gerekmez, bellekte aynı sınıf örneğine işaret ederler.  
   
- Sınıflar hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ Sınıflar hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Nasıl yapılır: Değişkende Birden Fazla Değer Tutma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+- [Veri türleri](index.md)
+- [Başlangıç Veri Türleri](elementary-data-types.md)
+- [Visual Basic genel türler](generic-types.md)
+- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
+- [Yapılar](structures.md)
+- [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
+- [Nasıl yapılır: Değişkende Birden Fazla Değer Tutma](how-to-hold-more-than-one-value-in-a-variable.md)
