@@ -11,46 +11,46 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea537d302f64933176f1a44fec2e27b804ff5809
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345647"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363325"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="914f0-102">Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarını Silme</span><span class="sxs-lookup"><span data-stu-id="914f0-102">How to: Delete a Registry Key in Visual Basic</span></span>
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a><span data-ttu-id="714b0-102">Nasıl Yapılır: Visual Basic'te Kayıt Defteri Anahtarını Silme</span><span class="sxs-lookup"><span data-stu-id="714b0-102">How to: Delete a Registry Key in Visual Basic</span></span>
 
-<span data-ttu-id="914f0-103"><xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri kayıt defteri anahtarlarını silmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="914f0-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
+<span data-ttu-id="714b0-103"><xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29>Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri kayıt defteri anahtarlarını silmek için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="714b0-103">The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.</span></span>  
   
-## <a name="procedure"></a><span data-ttu-id="914f0-104">Yordam</span><span class="sxs-lookup"><span data-stu-id="914f0-104">Procedure</span></span>  
+## <a name="procedure"></a><span data-ttu-id="714b0-104">Yordam</span><span class="sxs-lookup"><span data-stu-id="714b0-104">Procedure</span></span>  
   
-#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="914f0-105">Kayıt defteri anahtarını silmek için</span><span class="sxs-lookup"><span data-stu-id="914f0-105">To delete a registry key</span></span>  
+#### <a name="to-delete-a-registry-key"></a><span data-ttu-id="714b0-105">Kayıt defteri anahtarını silmek için</span><span class="sxs-lookup"><span data-stu-id="714b0-105">To delete a registry key</span></span>  
   
-- <span data-ttu-id="914f0-106">Bir kayıt `DeleteSubKey` defteri anahtarını silmek için yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="914f0-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="914f0-107">Bu örnek, geçerli kullanıcı kovanındaki Key Software/TestApp öğesini siler.</span><span class="sxs-lookup"><span data-stu-id="914f0-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="914f0-108">Bu kodu kodda uygun dizeye değiştirebilir veya Kullanıcı tarafından sağlanan bilgileri kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="914f0-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
+- <span data-ttu-id="714b0-106">`DeleteSubKey`Bir kayıt defteri anahtarını silmek için yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="714b0-106">Use the `DeleteSubKey` method to delete a registry key.</span></span> <span data-ttu-id="714b0-107">Bu örnek, geçerli kullanıcı kovanındaki Key Software/TestApp öğesini siler.</span><span class="sxs-lookup"><span data-stu-id="714b0-107">This example deletes the key Software/TestApp in the CurrentUser hive.</span></span> <span data-ttu-id="714b0-108">Bu kodu kodda uygun dizeye değiştirebilir veya Kullanıcı tarafından sağlanan bilgileri kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="714b0-108">You can change this in the code to the appropriate string, or have it rely on user-supplied information.</span></span>  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="914f0-109">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="914f0-109">Robust Programming</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="714b0-109">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="714b0-109">Robust Programming</span></span>  
 
- <span data-ttu-id="914f0-110">Anahtar `DeleteSubKey` /değer çifti yoksa yöntem boş bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="914f0-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
+ <span data-ttu-id="714b0-110">`DeleteSubKey`Anahtar/değer çifti yoksa yöntem boş bir dize döndürür.</span><span class="sxs-lookup"><span data-stu-id="714b0-110">The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.</span></span>  
   
- <span data-ttu-id="914f0-111">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="914f0-111">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="714b0-111">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="714b0-111">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="914f0-112">Anahtarın adı `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="914f0-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
+- <span data-ttu-id="714b0-112">Anahtarın adı `Nothing` ( <xref:System.ArgumentNullException> ).</span><span class="sxs-lookup"><span data-stu-id="714b0-112">The name of the key is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
-- <span data-ttu-id="914f0-113">Kullanıcının kayıt defteri anahtarlarını silme izni yok (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="914f0-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
+- <span data-ttu-id="714b0-113">Kullanıcının kayıt defteri anahtarlarını silme izni yok ( <xref:System.Security.SecurityException> ).</span><span class="sxs-lookup"><span data-stu-id="714b0-113">The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).</span></span>  
   
-- <span data-ttu-id="914f0-114">Anahtar adı 255 karakter sınırını (<xref:System.ArgumentException>) aşıyor.</span><span class="sxs-lookup"><span data-stu-id="914f0-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
+- <span data-ttu-id="714b0-114">Anahtar adı 255 karakter sınırını ( <xref:System.ArgumentException> ) aşıyor.</span><span class="sxs-lookup"><span data-stu-id="714b0-114">The key name exceeds the 255-character limit (<xref:System.ArgumentException>).</span></span>  
   
-- <span data-ttu-id="914f0-115">Kayıt defteri anahtarı salt okunurdur (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="914f0-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
+- <span data-ttu-id="714b0-115">Kayıt defteri anahtarı salt okunurdur ( <xref:System.UnauthorizedAccessException> ).</span><span class="sxs-lookup"><span data-stu-id="714b0-115">The registry key is read-only (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="914f0-116">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="914f0-116">.NET Framework Security</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="714b0-116">.NET Framework Güvenliği</span><span class="sxs-lookup"><span data-stu-id="714b0-116">.NET Framework Security</span></span>  
 
- <span data-ttu-id="914f0-117">Yeterli çalışma zamanı izni verilmezse (<xref:System.Security.Permissions.RegistryPermission>) veya Kullanıcı, ayarları oluşturmak veya bu ayarlara yazmak için doğru erişime (ACL 'ler tarafından belirlendiği şekilde) sahip değilse, kayıt defteri çağrıları başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="914f0-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="914f0-118">Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="914f0-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
+ <span data-ttu-id="714b0-117">Yeterli çalışma zamanı izni verilmezse ( <xref:System.Security.Permissions.RegistryPermission> ) veya Kullanıcı, ayarları oluşturmak veya bu ayarlara yazmak için doğru erişime (ACL 'ler tarafından belirlendiği şekilde) sahip değilse, kayıt defteri çağrıları başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="714b0-117">Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings.</span></span> <span data-ttu-id="714b0-118">Örneğin, kod erişim güvenliği iznine sahip bir yerel uygulama işletim sistemi iznine sahip olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="714b0-118">For example, a local application that has the code access security permission might not have operating system permission.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="914f0-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="914f0-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="714b0-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="714b0-119">See also</span></span>
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>
-- [<span data-ttu-id="914f0-120">Güvenlik ve Kayıt Defteri</span><span class="sxs-lookup"><span data-stu-id="914f0-120">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
-- [<span data-ttu-id="914f0-121">Kayıt Defterinden Okuma ve Kayıt Defterine Yazma</span><span class="sxs-lookup"><span data-stu-id="914f0-121">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [<span data-ttu-id="714b0-120">Güvenlik ve Kayıt Defteri</span><span class="sxs-lookup"><span data-stu-id="714b0-120">Security and the Registry</span></span>](security-and-the-registry.md)
+- [<span data-ttu-id="714b0-121">Kayıt Defterinden Okuma ve Kayıt Defterine Yazma</span><span class="sxs-lookup"><span data-stu-id="714b0-121">Reading from and Writing to the Registry</span></span>](reading-from-and-writing-to-the-registry.md)
