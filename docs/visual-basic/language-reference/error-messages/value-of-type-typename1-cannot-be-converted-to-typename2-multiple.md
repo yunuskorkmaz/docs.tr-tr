@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25008f05979638e050b74fc659fdc0a6d13b3c31
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620308"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406592"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >' (birden fazla dosya başvurusu)
-Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Bir dosya başvurusu karışması tür uyuşmazlığı olabilir '\<filepath1 >' projesindeki '\<projectname1 >' için bir dosya başvurusu ile '\<filepath2 >' projesindeki '\<projectname2 >'. İki derleme de aynıysa, bu başvuruları her iki başvuru aynı konumdan olacak şekilde değiştirmeyi deneyin.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>'\<typename1>' türünün değeri '\<typename2>' olarak dönüştürülemez (Birden fazla dosya başvurusu)
+' ' Türünün değeri \<typename1> ' ' olarak dönüştürülemez \<typename2> . ' ' Projesindeki ' ' \<filepath1> \<projectname1> öğesine bir dosya başvurusu olan ' ' projesindeki ' ' öğesine bir dosya başvurusu karıştırılması nedeniyle tür uyumsuzluğu olabilir \<filepath2> \<projectname2> . Her iki derleme de aynıysa, bu başvuruları her iki başvuruyu da aynı konumdan değiştirmeyi deneyin.  
   
- Burada bir derlemeyi birden fazla dosya başvurusu bir proje yapar bir durumda, derleyici bir türden diğerine dönüştürülüp dönüştürülemeyeceği garanti edemez.  
+ Bir projenin bir derlemeye birden fazla dosya başvurusu yaptığı durumlarda, derleyici bir türün diğerine dönüştürülebileceğini garanti edemez.  
   
- Her dosya başvurusu bir dosya yolu ve adı (genellikle bir DLL dosyası) projenin çıkış dosyasını belirtir. Derleyici çıktı dosyaları aynı kaynaktan gelen veya aynı bütünleştirilmiş kodun aynı sürümü temsil ettiğini garanti edemez. Bu nedenle, farklı başvuruları türleri aynı türdeyse veya hatta bir diğerine dönüştürülebilir belirleyemezsiniz.  
+ Her dosya başvurusu, bir projenin çıkış dosyası (genellikle bir DLL dosyası) için bir dosya yolu ve adı belirtir. Derleyici, çıkış dosyalarının aynı kaynaktan gelmesini veya aynı derlemenin aynı sürümünü temsil ettiğini garanti edemez. Bu nedenle, farklı başvurularda bulunan türlerin aynı türde veya hatta diğeri diğerine dönüştürülebileceğinizin garantisi yoktur.  
   
- Başvurulan derlemeler aynı derleme kimliğine sahip olduğunu biliyorsanız, tek bir dosya başvurusu kullanabilirsiniz. *Derleme kimliği* derlemenin adı, sürümü, ortak anahtar varsa ve kültür içerir. Bu bilgiler derlemenin benzersiz olarak tanımlar.  
+ Başvurulan derlemelerin aynı derleme kimliğine sahip olduğunu biliyorsanız, tek bir dosya başvurusu kullanabilirsiniz. *Derleme kimliği* , derleme adı, sürümü, varsa ortak anahtar ve kültür içerir. Bu bilgiler derlemeyi benzersiz şekilde tanımlar.  
   
- **Hata Kimliği:** BC30961  
+ **Hata kimliği:** BC30961  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Başvurulan derlemeler aynı derleme kimliği varsa, kaldırın veya yalnızca tek bir dosya başvurusu yani dosya başvurulardan birini değiştirin.  
+- Başvurulan derlemeler aynı derleme kimliğine sahip ise, yalnızca tek bir dosya başvurusu olacak şekilde dosya başvurularından birini kaldırın veya değiştirin.  
   
-- Başvurulan derlemeler aynı derleme kimliği yoksa, diğer bir tür için tür dönüştürme denemez sonra kodunuzu değiştirin.  
+- Başvurulan derlemeler aynı derleme kimliğine sahip değilse, bir türü birindeki bir türe dönüştürmeye çalışmayacak şekilde kodunuzu değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)

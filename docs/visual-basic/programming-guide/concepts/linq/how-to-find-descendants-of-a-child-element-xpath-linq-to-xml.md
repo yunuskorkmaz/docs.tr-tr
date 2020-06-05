@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Bir Alt Öğenin Alt Öğelerini Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa6a66f4a53fc74b5946a395f7b61218e680f530
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344680"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405228"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (Visual Basic)
 Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri nasıl alınacağı gösterilmektedir.  
@@ -17,7 +17,7 @@ Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri n
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm `Paragraph` öğelerini seçer ve ardından her bir `Paragraph` öğesinin tüm `Text` alt öğelerini seçer. Bu, `Comment` öğesinin alt öğe `Text` öğelerini seçmeyin.  
+ Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm öğeleri seçer `Paragraph` ve ardından `Text` her bir öğenin tüm alt öğelerini seçer `Paragraph` . Bu `Text` , öğesinin alt öğelerini seçmeyin `Comment` .  
   
 ```vb  
 Dim root As XElement = _  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

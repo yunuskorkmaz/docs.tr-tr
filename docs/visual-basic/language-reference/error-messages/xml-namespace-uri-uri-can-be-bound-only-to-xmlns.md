@@ -1,5 +1,5 @@
 ---
-title: XML ad alanı URI '<uri>' yalnızca 'xmlns' bağlanabilir
+title: XML as alanı URI’si '<uri>' yalnızca 'xmlns' ile bağlanabilir
 ms.date: 07/20/2015
 f1_keywords:
 - bc31183
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d791ae699f369ebe69e03fc5019d3ca58554224
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766629"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406488"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML ad alanı URI `http://www.w3.org/XML/1998/namespace`; yalnızca 'xmlns' bağlanabilir
-URI `http://www.w3.org/XML/1998/namespace` bir XML ad alanı bildiriminde kullanılır. Bu URI, ayrılmış bir ad alanı ve bir XML ad alanı bildiriminde yer alamaz.  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML ad alanı URI `http://www.w3.org/XML/1998/namespace` ; yalnızca ' xmlns ' öğesine bağlanabilir
+URI, `http://www.w3.org/XML/1998/namespace` BIR XML ad alanı bildiriminde kullanılır. Bu URI ayrılmış bir ad alanıdır ve bir XML ad alanı bildirimine dahil edilemez.  
   
- **Hata Kimliği:** BC31183  
+ **Hata kimliği:** BC31183  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-XML ad alanı bildirimini kaldırın veya URI değiştirin `http://www.w3.org/XML/1998/namespace` geçerli bir ad alanı URI ile.  
+XML ad alanı bildirimini kaldırın veya URI `http://www.w3.org/XML/1998/namespace` 'yi geçerli bir ad alanı URI 'si ile değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Imports Deyimi (XML Ad Alanı)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
-- [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Imports Deyimi (XML Ad Alanı)](../statements/imports-statement-xml-namespace.md)
+- [XML Değişmez Değerleri](../xml-literals/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

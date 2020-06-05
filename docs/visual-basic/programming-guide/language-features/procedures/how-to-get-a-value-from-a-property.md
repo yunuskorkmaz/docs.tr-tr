@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 85512d4311d3e731a2c4e129d6a01f9b3273b333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339824"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387900"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)
 Özellik adını bir ifadeye ekleyerek bir özelliğin değerini elde edersiniz.  
@@ -24,11 +24,11 @@ ms.locfileid: "74339824"
   
 1. Bir ifadede özellik adını bir değişken adı kullandığınız şekilde kullanın. Bir özelliği, bir değişkeni veya sabiti kullanabileceğiniz her yerde kullanabilirsiniz.  
   
-     veya  
+     -veya-  
   
-     Atama deyimindeki eşittir (`=`) işaretinden sonra özellik adını kullanın.  
+     Atama ifadesinde eşittir () işaretinden sonra özellik adını kullanın `=` .  
   
-     Aşağıdaki örnek, `Get` yordamını dolaylı olarak çağıran Visual Basic `Now` özelliğinin değerini okur.  
+     Aşağıdaki örnek, `Now` yordamını dolaylı olarak çağıran Visual Basic özelliğinin değerini okur `Get` .  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
@@ -43,10 +43,10 @@ ms.locfileid: "74339824"
 - [Yordamlar](./index.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic Özellikler ve değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
+- [Property Deyimi](../../../language-reference/statements/property-statement.md)
+- [Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar](./differences-between-properties-and-variables.md)
 - [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
 - [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)
-- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirme ve çağırma](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Visual Basic'de Varsayılan Bir Özelliği Bildirme ve Çağırma](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)

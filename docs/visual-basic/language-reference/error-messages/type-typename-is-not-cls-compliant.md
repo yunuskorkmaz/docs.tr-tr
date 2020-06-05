@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 2805cac71cb36d21f5ab21a5875183803d07a4b4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eacf5036ebc6fc31dfa0e8de39c4fb574c9072b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642374"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386964"
 ---
-# <a name="type-typename-is-not-cls-compliant"></a>Tür \<typename > CLS uyumlu değil
-Bir değişken, özellik veya işlev dönüş CLS uyumlu olmayan bir veri türü ile bildirilir.  
+# <a name="type-typename-is-not-cls-compliant"></a>\<typename> türü CLS uyumlu değil
+Değişken, özellik veya işlev dönüşü, CLS uyumlu olmayan bir veri türü ile birlikte bildirilmiştir.  
   
- Bir uygulama ile uyumlu olması için [dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS), yalnızca CLS uyumlu türler kullanmalıdır.  
+ Bir uygulamanın [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS) ile uyumlu olması için, yalnızca CLS uyumlu türler kullanması gerekir.  
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  
   
-- [SByte Veri Türü](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte Veri Türü](../data-types/sbyte-data-type.md)  
   
-- [UInteger Veri Türü](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger Veri Türü](../data-types/uinteger-data-type.md)  
   
-- [ULong Veri Türü](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong Veri Türü](../data-types/ulong-data-type.md)  
   
-- [UShort Veri Türü](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort Veri Türü](../data-types/ushort-data-type.md)  
   
- **Hata Kimliği:** BC40041  
+ **Hata kimliği:** BC40041  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Uygulamanızı CLS uyumlu olması gerekiyorsa, bu öğe veri türü en yakın CLS uyumlu türüne değiştirin. Örneğin, içinde yerine, `UInteger` kullanmanız mümkün olabilir `Integer` 2.147.483.647 yukarıda değer aralığı gerekmiyorsa. Genişletilmiş aralık gerekiyorsa, değiştirebileceğiniz `UInteger` ile `Long`.  
+- Uygulamanızın CLS uyumlu olması gerekiyorsa, bu öğenin veri türünü en yakın CLS uyumlu türle değiştirin. Örneğin, yerine `UInteger` `Integer` 2.147.483.647 üzerinde değer aralığına ihtiyacınız yoksa, kullanabilirsiniz. Genişletilmiş aralığa ihtiyacınız varsa, `UInteger` ile değiştirebilirsiniz `Long` .  
   
-- Uygulamanızı CLS uyumlu olması gerekmez, herhangi bir ayarı değiştirmek gerekmez. Ancak, uyumsuzluk farkında olmalıdır.
+- Uygulamanızın CLS uyumlu olması gerekmiyorsa, herhangi bir değişiklik yapmanız gerekmez. Bununla birlikte, uyumsuzluğun farkında olmanız gerekir.

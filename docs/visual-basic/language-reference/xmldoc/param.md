@@ -5,17 +5,17 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4405fdf2defbb27aa2146d20083fd406d1f07236
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d325d5f9fbfd132630cf280653be214a267a7a80
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352292"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400066"
 ---
-# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+# <a name="param-visual-basic"></a>\<param> (Visual Basic)
 Bir parametre adı ve açıklama tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```xml  
 <param name="name">description</param>  
@@ -29,21 +29,21 @@ Bir parametre adı ve açıklama tanımlar.
  Parametresi için bir açıklama.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Metodun parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada `<param>` etiketinin kullanılması gerekir.  
+ `<param>`Yöntemi, yöntemin parametrelerinden birini açıklayacak bir yöntem bildirimine ilişkin açıklamada kullanılmalıdır.  
   
- `<param>` etiketinin metni aşağıdaki konumlarda görünür:  
+ `<param>`Etiketin metni aşağıdaki konumlarda görünür:  
   
 - IntelliSense parametre bilgileri. Daha fazla bilgi için bkz. [IntelliSense kullanma](/visualstudio/ide/using-intellisense).  
   
 - Nesne Tarayıcısı. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Belge açıklamalarını bir dosyaya işlemek için [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) ile derleyin.  
+ Belge açıklamalarını bir dosyaya işlemek için [-doc](../../reference/command-line-compiler/doc.md) ile derleyin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `id` parametresini anlatmak için `<param>` etiketini kullanır.  
+ Bu örnek, `<param>` parametresini anlatmak için etiketini kullanır `id` .  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML Açıklama Etiketleri](index.md)

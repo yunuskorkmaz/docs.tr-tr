@@ -5,33 +5,33 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 7f957a6e4f2dfea3f744365d2d065442d3b85183
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 281004809c7f5000f1c68ecb0db759aa30c78e39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350923"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401569"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Mantıksal/Bit Düzeyinde İşleçler (Visual Basic)
 Aşağıda Visual Basic tanımlanan mantıksal/bit düzeyinde işleçler verilmiştir.  
   
- [And İşleci](../../../visual-basic/language-reference/operators/and-operator.md)  
+ [And İşleci](and-operator.md)  
   
- [Not İşleci](../../../visual-basic/language-reference/operators/not-operator.md)  
+ [Not İşleci](not-operator.md)  
   
- [Or İşleci](../../../visual-basic/language-reference/operators/or-operator.md)  
+ [Or İşleci](or-operator.md)  
   
- [Xor İşleci](../../../visual-basic/language-reference/operators/xor-operator.md)  
+ [Xor İşleci](xor-operator.md)  
   
- [AndAlso İşleci](../../../visual-basic/language-reference/operators/andalso-operator.md)  
+ [AndAlso İşleci](andalso-operator.md)  
   
- [OrElse İşleci](../../../visual-basic/language-reference/operators/orelse-operator.md)  
+ [OrElse İşleci](orelse-operator.md)  
   
- [IsFalse İşleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [IsFalse İşleci](isfalse-operator.md)  
   
- [IsTrue İşleci](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [IsTrue İşleci](istrue-operator.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic'de İşleç Önceliği](operator-precedence.md)
+- [Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
