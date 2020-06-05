@@ -16,45 +16,45 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: c55d57bb3008b2825fe5382844908ea32f0d500c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 463dd2454aafebf11554fb7bacdb73724c3130d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351453"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392164"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 Bir özelliğin veya yordamın türetilmiş bir sınıfta geçersiz kılınamayacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `NotOverridable` değiştiricisi, bir özelliğin veya metodun türetilmiş bir sınıfta geçersiz kılınmasını önler.  [Geçersiz kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md) değiştirici, bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. Daha fazla bilgi için bkz. [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ `NotOverridable`Değiştirici bir özelliğin veya metodun türetilmiş bir sınıfta geçersiz kılınmasını önler.  [Geçersiz kılınabilir](overridable.md) değiştirici, bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. Daha fazla bilgi için bkz. [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- `Overridable` veya `NotOverridable` değiştiricisi belirtilmemişse, varsayılan ayar, özelliğin veya metodun bir temel sınıf özelliğini veya yöntemini geçersiz kıldığına bağlıdır. Özellik veya yöntem bir temel sınıf özelliğini veya yöntemini geçersiz kılıyorsa, varsayılan ayar `Overridable`; Aksi takdirde, `NotOverridable`.  
+ `Overridable`Veya `NotOverridable` değiştiricisi belirtilmemişse, varsayılan ayar, özelliğin veya metodun bir temel sınıf özelliğini veya yöntemini geçersiz kıldığına bağlıdır. Özellik veya yöntem bir temel sınıf özelliğini veya yöntemini geçersiz kılıyorsa, varsayılan ayar olur `Overridable` ; Aksi takdirde, olur `NotOverridable` .  
   
  Geçersiz kılınamayan bir öğe, bazen *Sealed* öğesi olarak adlandırılır.  
   
- Yalnızca bir özellik veya yordam bildirimi ifadesinde `NotOverridable` kullanabilirsiniz. Yalnızca bir özellik veya yordamı geçersiz kılan bir özellik veya yordamda yalnızca `Overrides`ile birlikte `NotOverridable` belirtebilirsiniz.  
+ `NotOverridable`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz. Yalnızca bir özellik veya `NotOverridable` yordamı geçersiz kılan bir özellik ya da yordam üzerinde yalnızca ile birlikte bir özelliği belirtebilirsiniz `Overrides` .  
   
 ## <a name="combined-modifiers"></a>Birleşik değiştiriciler  
- `Private` yöntemi için `Overridable` veya `NotOverridable` belirtemezsiniz.  
+ `Overridable` `NotOverridable` Bir yöntem için veya belirtemezsiniz `Private` .  
   
- Aynı bildirimde `MustOverride`, `Overridable`veya `Shared` birlikte `NotOverridable` belirtemezsiniz.  
+ `NotOverridable` `MustOverride` Aynı bildirimde, veya ile birlikte belirtemezsiniz `Overridable` `Shared` .  
   
 ## <a name="usage"></a>Kullanım  
- `NotOverridable` değiştiricisi şu bağlamlarda kullanılabilir:  
+ `NotOverridable`Değiştirici şu bağlamlarda kullanılabilir:  
   
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](../statements/function-statement.md)  
   
- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property Deyimi](../statements/property-statement.md)  
   
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](../statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Değiştiriciler](../../../visual-basic/language-reference/modifiers/index.md)
-- [Devralma Temelleri](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Değiştiriciler](index.md)
+- [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](mustoverride.md)
+- [Overridable](overridable.md)
+- [Geçersiz Kılmalar](overrides.md)
+- [Anahtar sözcükler](../keywords/index.md)
+- [Visual Basic'de Gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)

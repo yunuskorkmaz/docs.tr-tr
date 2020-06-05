@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: tek bir öznitelik alma (LINQ to XML)'
+title: 'Nasıl yapılır: Tek Bir Öznitelik Alma (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34c390fbffc1aea68a2fd8ae64b17d2637a1f4f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347558"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397862"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: tek bir öznitelik alma (LINQ to XML) (Visual Basic)
 Bu konu, öznitelik adı verilen bir öğenin tek bir özniteliğinin nasıl alınacağını açıklamaktadır. Bu, belirli bir özniteliğe sahip bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
   
- <xref:System.Xml.Linq.XElement> sınıfının <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi, belirtilen ada sahip <xref:System.Xml.Linq.XAttribute> döndürür.  
+ <xref:System.Xml.Linq.XElement.Attribute%2A> <xref:System.Xml.Linq.XElement> Sınıfının yöntemi, <xref:System.Xml.Linq.XAttribute> belirtilen ada sahip öğesini döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemi kullanılmaktadır.  
+ Aşağıdaki örnek <xref:System.Xml.Linq.XElement.Attribute%2A> yöntemini kullanır.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -28,7 +28,7 @@ For Each e As XElement In elList
 Next  
 ```  
   
- Bu örnek, `Phone`adlı ağaçtaki tüm alt öğeleri bulur ve sonra `type`adlı özniteliği bulur.  
+ Bu örnek adlı ağaçtaki tüm alt öğeleri bulur `Phone` ve sonra adlı özniteliği bulur `type` .  
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>Örnek  
- Özniteliğin değerini almak istiyorsanız, <xref:System.Xml.Linq.XElement> nesneleriyle yaptığınız gibi, bu özniteliği de çevirebilirsiniz. Aşağıdaki örnek bunu gösterir.  
+ Özniteliğin değerini almak istiyorsanız, nesneleri ile yaptığınız gibi, bu özniteliği de çevirebilirsiniz <xref:System.Xml.Linq.XElement> . Aşağıdaki örnek bunu gösterir.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -60,7 +60,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.Linq.XAttribute> sınıfının `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`ve `GUID?`için açık atama işleçleri sağlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)],,,,,,,,,,,,,, <xref:System.Xml.Linq.XAttribute> `string` `bool` `bool?` `int` `int?` ,, `uint` `uint?` `long` `long?` `ulong` `ulong?` `float` `float?` `double` `double?` `decimal` `decimal?` , `DateTime` , `DateTime?` `TimeSpan` `TimeSpan?` `GUID` `GUID?` ,,,,,,,,,,,,,,,,,, ve için  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir ad alanında olan bir özniteliği için aynı kodu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
@@ -94,4 +94,4 @@ work
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML eksenleri (Visual Basic)](linq-to-xml-axes.md)

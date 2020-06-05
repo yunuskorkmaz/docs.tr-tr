@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ac385880f8c13c23dffff67fc2a1ecc5609fd189
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581412"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400570"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
@@ -28,7 +28,7 @@ Dize karşılaştırmalarının nasıl yapılacağını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-İki formdan birini `-optioncompare` belirtebilirsiniz: `-optioncompare:binary` ikili dize karşılaştırmaları kullanmak ve `-optioncompare:text` metin dizesi karşılaştırmaları kullanmak için. Varsayılan olarak, derleyici kullanır `-optioncompare:binary`.
+`-optioncompare`İki formdan birini belirtebilirsiniz: `-optioncompare:binary` ikili dize karşılaştırmaları kullanmak ve `-optioncompare:text` metin dizesi karşılaştırmaları kullanmak için. Varsayılan olarak, derleyici kullanır `-optioncompare:binary` .
 
 Microsoft Windows 'da, geçerli kod sayfası ikili sıralama düzenini belirler. Tipik bir ikili sıralama düzeni aşağıdaki gibidir:
 
@@ -48,7 +48,7 @@ Metin tabanlı dize karşılaştırmaları, sisteminizin yerel ayarı tarafında
 
 ### <a name="to-set--optioncompare-programmatically"></a>Programlı olarak ayarlama-OptionCompare
 
-Bkz. [Option Compare deyimin](../../../visual-basic/language-reference/statements/option-compare-statement.md).
+Bkz. [Option Compare deyimin](../../language-reference/statements/option-compare-statement.md).
 
 ## <a name="example"></a>Örnek
 
@@ -60,10 +60,10 @@ vbc -optioncompare:binary projFile.vb
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [Option Compare Deyimi](../../language-reference/statements/option-compare-statement.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
