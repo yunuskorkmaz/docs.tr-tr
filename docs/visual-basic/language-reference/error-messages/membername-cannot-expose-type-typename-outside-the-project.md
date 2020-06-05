@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 729a9f385d94412469d318cb804d216827eeb0fd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700896"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397291"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<MemberName > ', \<ContainerType > '\<containertypename > ' aracılığıyla proje dışında '\<TypeName > ' türünü gösteremez
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>', '\<typename>' türünü proje dışında \<containertype> '\<containertypename>' üzerinden gösteremez
 Bir değişken, yordam parametresi veya işlev dönüşü kapsayıcının dışında sunulur, ancak kapsayıcı dışında gösterilmemesi gereken bir tür olarak bildirilmiştir.  
   
  Aşağıdaki iskelet kodu, bu hatayı üreten bir durumu gösterir.  
@@ -27,7 +27,7 @@ Public Class mainClass
 End Class  
 ```  
   
- `Protected`, `Friend`, `Protected Friend`veya `Private` olarak belirtilen bir türün, bildirim bağlamı dışında sınırlı erişimi olması amaçlanmıştır. Bunu daha az kısıtlanmış erişimi olan bir değişkenin veri türü olarak kullanmak, bu amacı erteçine neden olur. Önceki iskelet kodunda, `exposedVar` `Public` ve buna erişimi olmayan koda `privateClass` kullanıma sunacaktır.  
+ ,, Veya olarak belirtilen bir türün `Protected` , `Friend` `Protected Friend` `Private` Bildirim bağlamı dışında sınırlı erişimi olması amaçlanmıştır. Bunu daha az kısıtlanmış erişimi olan bir değişkenin veri türü olarak kullanmak, bu amacı erteçine neden olur. Önceki iskelet kodunda, `exposedVar` `Public` ve `privateClass` erişimine sahip olmaması gereken kodla kullanıma sunacaktır.  
   
  **Hata kimliği:** BC30909  
   
@@ -37,4 +37,4 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)

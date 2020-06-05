@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 52864e4d1c8183b6243025e72368d23627049c84
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3184d68b0e4cdff5d4296a5a638e22b4e83bcde
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404543"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports Deyimi (XML Ad Alanı)
 
@@ -29,28 +29,28 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="parts"></a>Bölümler
 
 `xmlNamespacePrefix`  
-İsteğe bağlı. XML öğelerinin ve özniteliklerin `xmlNamespaceName`başvurduğu dize. `xmlNamespacePrefix` sağlanmazsa, içeri aktarılan XML ad alanı varsayılan XML ad alanıdır. Geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [BELIRTILEN XML öğelerinin ve özniteliklerin adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
+İsteğe bağlı. XML öğelerinin ve özniteliklerin başvurabileceği dize `xmlNamespaceName` . Hayır `xmlNamespacePrefix` sağlanmazsa, içeri AKTARıLAN XML ad alanı varsayılan XML ad alanıdır. Geçerli bir XML tanımlayıcısı olmalıdır. Daha fazla bilgi için bkz. [BELIRTILEN XML öğelerinin ve özniteliklerin adları](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).
 
 `xmlNamespaceName`  
-Gerekli. İçeri aktarılmakta olan XML ad alanını tanımlayan dize.
+Gereklidir. İçeri aktarılmakta olan XML ad alanını tanımlayan dize.
 
 ## <a name="remarks"></a>Açıklamalar
 
-XML değişmez değerleri ve XML eksen özellikleriyle kullanabileceğiniz ya da `GetXmlNamespace` işlecine geçirilen parametreler olarak genel XML ad alanlarını tanımlamak için `Imports` ifadesini kullanabilirsiniz. (Tür adlarının kodunuzda kullanıldığı yerde kullanılabilecek bir diğer adı içeri aktarmak için `Imports` deyimin kullanımı hakkında bilgi için bkz. [Imports bildirisi (.net ad alanı ve türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) `Imports` ifadesini kullanarak bir XML ad alanı bildirmek için sözdizimi, XML 'de kullanılan söz dizimiyle aynıdır. Bu nedenle, bir XML dosyasından bir ad alanı bildirimi kopyalayabilir ve bunu bir `Imports` ifadesinde kullanabilirsiniz.
+`Imports`XML değişmez değerleri ve xml eksen özellikleriyle kullanabileceğiniz ya da işlecine geçirilen parametreler olarak genel XML ad alanlarını tanımlamak için, ifadesini kullanabilirsiniz `GetXmlNamespace` . ( `Imports` Tür adlarının kodunuzda kullanıldığı yerde kullanılabilecek bir diğer adı içe aktarmak için ifadesini kullanma hakkında bilgi için bkz. [Imports bildirisi (.net ad alanı ve türü)](imports-statement-net-namespace-and-type.md).) İfadesini kullanarak bir XML ad alanı bildirme sözdizimi, `Imports` XML 'de kullanılan söz dizimiyle aynıdır. Bu nedenle, bir XML dosyasından bir ad alanı bildirimi kopyalayabilir ve bunu bir `Imports` bildirimde kullanabilirsiniz.
 
-XML ad alanı önekleri, aynı ad alanından daha tekrarlı XML öğeleri oluşturmak istediğinizde faydalıdır. `Imports` ifadesiyle belirtilen XML ad alanı öneki, dosyadaki tüm kod için kullanılabilir olduğunu anlamlı bir şekilde geneldir. XML öğesi değişmez değerleri oluştururken ve XML eksen özelliklerine eriştiğinizde bu özelliği kullanabilirsiniz. Daha fazla bilgi için bkz. [XML öğesi değişmez değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [xml eksen özellikleri](../../../visual-basic/language-reference/xml-axis/index.md).
+XML ad alanı önekleri, aynı ad alanından daha tekrarlı XML öğeleri oluşturmak istediğinizde faydalıdır. İfadesiyle belirtilen XML ad alanı öneki, `Imports` dosyadaki tüm kod için kullanılabilir olduğunu anlamlı bir şekilde geneldir. XML öğesi değişmez değerleri oluştururken ve XML eksen özelliklerine eriştiğinizde bu özelliği kullanabilirsiniz. Daha fazla bilgi için bkz. [XML öğesi değişmez değeri](../xml-literals/xml-element-literal.md) ve [xml eksen özellikleri](../xml-axis/index.md).
 
-Bir ad alanı öneki olmadan (örneğin, `Imports <xmlns="http://SomeNameSpace>"`) genel bir XML ad alanı tanımlarsanız, bu ad alanı varsayılan XML ad alanı olarak kabul edilir. Varsayılan XML ad alanı, açıkça bir ad alanı belirtmeyen hiçbir XML öğesi değişmez değeri veya XML özniteliği eksen özellikleri için kullanılır. Varsayılan ad alanı, belirtilen ad alanı boş ad alanı (yani, `xmlns=""`) ise de kullanılır. Varsayılan XML ad alanı, XML değişmez değerlerinde veya bir ad alanına sahip olmayan XML öznitelik ekseni özellikleriyle XML öznitelikleri için geçerlidir.
+Bir ad alanı öneki olmadan (örneğin,) genel bir XML ad alanı tanımlarsanız `Imports <xmlns="http://SomeNameSpace>"` , bu ad alanı varsayılan XML ad alanı olarak kabul edilir. Varsayılan XML ad alanı, açıkça bir ad alanı belirtmeyen hiçbir XML öğesi değişmez değeri veya XML özniteliği eksen özellikleri için kullanılır. Varsayılan ad alanı, belirtilen ad alanı boş ad alanı (yani,) ise de kullanılır `xmlns=""` . Varsayılan XML ad alanı, XML değişmez değerlerinde veya bir ad alanına sahip olmayan XML öznitelik ekseni özellikleriyle XML öznitelikleri için geçerlidir.
 
-*Yerel xml ad alanları*olarak ADLANDıRıLAN bir XML sabit DEĞERINDE tanımlanmış XML ad alanları, genel olarak `Imports` BILDIRIMIYLE tanımlanan xml ad alanlarından önceliklidir. `Imports` ifadesiyle tanımlanan XML ad alanları, bir Visual Basic projesi için içeri aktarılan XML ad alanları üzerinden önceliklidir. Bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu yerel ad alanı katıştırılmış ifadeler için uygulanmaz.
+*Yerel xml ad alanları*olarak adlandırılan XML sabit DEĞERINDE tanımlanmış XML ad alanları, genel olarak, IFADESIYLE tanımlanmış XML ad alanlarını önceliklidir `Imports` . İfadesiyle tanımlanan XML ad alanları, `Imports` bir Visual Basic projesi için içeri AKTARıLAN XML ad alanlarına göre önceliklidir. Bir XML sabit değeri bir XML ad alanı tanımlıyorsa, bu yerel ad alanı katıştırılmış ifadeler için uygulanmaz.
 
-Genel XML ad alanları, .NET Framework ad alanları ile aynı kapsam ve tanım kurallarını izler. Sonuç olarak, bir .NET Framework ad alanını içeri aktarabileceğiniz her yerde genel bir XML ad alanı tanımlamak için bir `Imports` ifadesini ekleyebilirsiniz. Bu hem kod dosyalarını hem de proje düzeyinde içeri aktarılan ad alanlarını içerir. Proje düzeyinde içeri aktarılan ad alanları hakkında bilgi için bkz. [Başvurular sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
+Genel XML ad alanları, .NET Framework ad alanları ile aynı kapsam ve tanım kurallarını izler. Sonuç olarak, `Imports` bir .NET Framework ad alanını içeri aktarabileceğiniz yerde, genel BIR XML ad alanı tanımlamak için bir ifade ekleyebilirsiniz. Bu hem kod dosyalarını hem de proje düzeyinde içeri aktarılan ad alanlarını içerir. Proje düzeyinde içeri aktarılan ad alanları hakkında bilgi için bkz. [Başvurular sayfası, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).
 
-Her kaynak dosya, herhangi bir sayıda `Imports` deyimi içerebilir. Bunlar, `Option Strict` deyimi gibi seçenek bildirimlerini izlemelidir ve `Module` veya `Class` deyimleri gibi programlama öğesi bildirimlerinin önüne gelmelidir.
+Her kaynak dosya, herhangi bir sayıda `Imports` deyim içerebilir. Bu, deyimi gibi seçenek bildirimlerini izlemelidir `Option Strict` ve veya deyimleri gibi programlama öğesi bildirimlerinin önüne alınmalıdır `Module` `Class` .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns`önek olarak tanımlanmış bir varsayılan XML ad alanını ve bir XML ad alanını içeri aktarır. Ardından, her iki ad alanını kullanan XML değişmez değerleri oluşturur.
+Aşağıdaki örnek bir varsayılan XML ad alanını ve önekiyle tanımlanan bir XML ad alanını içeri aktarır `ns` . Ardından, her iki ad alanını kullanan XML değişmez değerleri oluşturur.
 
 [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
 
@@ -67,7 +67,7 @@ Bu kod aşağıdaki metni görüntüler:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns`XML ad alanı önekini içeri aktarır. Daha sonra ad alanı önekini kullanan bir XML sabit değeri oluşturur ve öğenin son formunu görüntüler.
+Aşağıdaki örnek XML ad alanı önekini içeri aktarır `ns` . Daha sonra ad alanı önekini kullanan bir XML sabit değeri oluşturur ve öğenin son formunu görüntüler.
 
 [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
 
@@ -86,7 +86,7 @@ Derleyicinin XML ad alanı önekini genel bir önekten yerel ön ek tanımına d
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, `ns`XML ad alanı önekini içeri aktarır. Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve `ns:name`nitelenmiş ada sahip ilk alt düğüme erişir.
+Aşağıdaki örnek XML ad alanı önekini içeri aktarır `ns` . Daha sonra bir XML sabit değeri oluşturmak için ad alanının önekini kullanır ve ilk alt düğüme tam adı ile erişin `ns:name` .
 
 [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
 
@@ -96,7 +96,7 @@ Bu kod aşağıdaki metni görüntüler:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Öğesi Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
-- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
-- [GetXmlNamespace İşleci](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+- [XML Öğesi Değişmez Değeri](../xml-literals/xml-element-literal.md)
+- [XML Eksen Özellikleri](../xml-axis/index.md)
+- [Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace İşleci](../operators/getxmlnamespace-operator.md)

@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: a5cb28a024274e58da1755b437d6ba4ca6712610
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 21a1c4dbab6e26cd1cb848e270bbda9a544c2a67
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661709"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400428"
 ---
-# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Özellik '\<propertyname >' bütün kod yollarında değer döndürmüyor
-Özellik '\<propertyname >' bütün kod yollarında değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında null başvurusu özel durumu oluşabilir.  
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>'\<propertyname>' özelliği tüm kod yollarında değer döndürmüyor
+' \<propertyname> ' Özelliği tüm kod yollarında bir değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında null başvurusu özel durumu oluşabilir.  
   
- Bir özellik `Get` yordamının bir değer döndürmeyen kendi kod aracılığıyla en az bir olası yol vardır.  
+ Özellik `Get` yordamının, bir değer döndürmeyen kodu üzerinden en az bir olası yolu vardır.  
   
- Bir özelliği bir değer döndürebilir `Get` aşağıdaki yollardan biriyle yordamda:  
+ Aşağıdaki yollarla bir özellik yordamından bir değer döndürebilirsiniz `Get` :  
   
-- Özellik adlarının değer atamak ve ardından gerçekleştirin bir `Exit Property` deyimi.  
+- Özellik adına değeri atayın ve sonra bir `Exit Property` ifade gerçekleştirin.  
   
-- Özellik adlarının değer atamak ve ardından gerçekleştirin `End Get` deyimi.  
+- Özellik adına değeri atayın ve sonra `End Get` ifadesini gerçekleştirin.  
   
-- Değer bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Değeri [Return ifadesine](../statements/return-statement.md)ekleyin.  
   
- Denetim için geçerse `Exit Property` veya `End Get` ve özellik adı için herhangi bir değer atamadınız `Get` yordamı özelliğinin veri türünün varsayılan değerini döndürür. Daha fazla bilgi için "Davranışı" bölümüne bakın. [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Denetim `Exit Property` veya ' a geçerse `End Get` ve özellik adına herhangi bir değer atamadıysanız, `Get` yordam özelliğin veri türünün varsayılan değerini döndürür. Daha fazla bilgi için bkz. [Işlev deyimindeki](../statements/function-statement.md)"davranış".  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42107  
+ **Hata kimliği:** BC42107  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Denetim akışı mantığınızı denetleyin ve bir dönüş neden her deyiminden önce bir değer atadığınız emin olun.  
+- Denetim akışı mantığınızı denetleyin ve dönüşe neden olan her deyimden önce bir değer atadığınızdan emin olun.  
   
-     Her zaman kullanırsanız her iade yordamdan gelen bir değer döndürür garanti daha kolaydır `Return` deyimi. Bu, son deyim önce yaparsanız `End Get` olmalıdır bir `Return` deyimi.  
+     Her zaman ifadesini kullanıyorsanız, yordamdan gelen her döndürün bir değer döndürdüğünden emin olmak daha kolaydır `Return` . Bunu yaparsanız, önceki son deyimin `End Get` bir ifade olması gerekir `Return` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)
+- [Özellik Yordamları](../../programming-guide/language-features/procedures/property-procedures.md)
+- [Property Deyimi](../statements/property-statement.md)
+- [Get Deyimi](../statements/get-statement.md)

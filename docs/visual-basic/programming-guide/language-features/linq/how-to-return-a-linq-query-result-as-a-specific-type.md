@@ -9,17 +9,17 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 1084743b0c50d381375b76a3116ed7c9e6f9d769
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c8ed792bf3ffefd903d60522f621958e44546d32
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354208"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404958"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme (Visual Basic)
-Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır. Varsayılan olarak, LINQ sorguları bir nesne listesini anonim bir tür olarak döndürür. Ayrıca, bir sorgunun `Select` yan tümcesini kullanarak belirli bir türün listesini döndürmesini belirtebilirsiniz.  
+Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır. Varsayılan olarak, LINQ sorguları bir nesne listesini anonim bir tür olarak döndürür. Bir sorgunun yan tümcesini kullanarak belirli bir türün listesini döndürmesini de belirtebilirsiniz `Select` .  
   
- Aşağıdaki örnek, SQL Server veritabanına yönelik sorgular gerçekleştiren yeni bir uygulamanın nasıl oluşturulduğunu ve sonuçların belirli bir adlandırılmış tür olarak projede nasıl oluşturulacağını gösterir. Daha fazla bilgi için bkz. [anonim türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) ve [seçim tümcesi](../../../../visual-basic/language-reference/queries/select-clause.md).  
+ Aşağıdaki örnek, SQL Server veritabanına yönelik sorgular gerçekleştiren yeni bir uygulamanın nasıl oluşturulduğunu ve sonuçların belirli bir adlandırılmış tür olarak projede nasıl oluşturulacağını gösterir. Daha fazla bilgi için bkz. [anonim türler](../objects-and-classes/anonymous-types.md) ve [seçim tümcesi](../../../language-reference/queries/select-clause.md).  
   
  Bu konudaki örneklerde Northwind örnek veritabanı kullanılır. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Indirme Merkezi ' nden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
@@ -27,9 +27,9 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 ### <a name="to-create-a-connection-to-a-database"></a>Bir veritabanına bağlantı oluşturmak için  
   
-1. Visual Studio 'da, **Görünüm** menüsünde **Sunucu Gezgini**/**Veritabanı Gezgini** ' a tıklayarak **Sunucu Gezgini**/**veritabanı Gezgini** açın.  
+1. Visual Studio 'da, **Server Explorer** / **Database Explorer** Görünüm menüsünde **Sunucu Gezgini** / **veritabanı Gezgini** ' a tıklayarak Sunucu Gezgini veritabanı Gezgini **View** açın.  
   
-2. **Sunucu Gezgini**/veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın ve ardından **bağlantı ekle**' ye tıklayın.  
+2. **Sunucu Gezgini**veritabanı Gezgini **veri bağlantıları** ' na sağ tıklayın / **Database Explorer** ve ardından **bağlantı ekle**' ye tıklayın.  
   
 3. Northwind örnek veritabanına geçerli bir bağlantı belirtin.  
   
@@ -39,17 +39,17 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **LINQ to SQL sınıfları** öğe şablonunu seçin.  
   
-3. Dosyayı `northwind.dbml`olarak adlandırın. **Ekle**'yi tıklatın. Nesne İlişkisel Tasarımcısı (O/R Designer), Northwind. dbml dosyası için açılır.  
+3. Dosyayı `northwind.dbml` olarak adlandırın. **Ekle**'ye tıklayın. Nesne İlişkisel Tasarımcısı (O/R Designer), Northwind. dbml dosyası için açılır.  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R tasarımcısına sorguya tablo eklemek için  
   
-1. **Sunucu Gezgini**/**veritabanı Gezgini**, Northwind veritabanına olan bağlantıyı genişletin. **Tablolar** klasörünü genişletin.  
+1. **Sunucu Gezgini** / **veritabanı Gezgini**, Northwind veritabanına olan bağlantıyı genişletin. **Tablolar** klasörünü genişletin.  
   
      O/R tasarımcısını kapattıysanız, daha önce eklediğiniz Northwind. dbml dosyasını çift tıklayarak yeniden açabilirsiniz.  
   
 2. Müşteriler tablosuna tıklayın ve tasarımcı 'nın sol bölmesine sürükleyin.  
   
-     Tasarımcı projeniz için yeni bir `Customer` nesnesi oluşturur. Bir sorgu sonucunu `Customer` türü veya oluşturduğunuz bir tür olarak proje yapabilirsiniz. Bu örnek, sonraki bir yordamda yeni bir tür oluşturacak ve bu tür olarak bir sorgu sonucunu proje oluşturacak.  
+     Tasarımcı projeniz için yeni bir `Customer` nesne oluşturur. Bir sorgu sonucunu `Customer` türü veya oluşturduğunuz bir tür olarak proje yapabilirsiniz. Bu örnek, sonraki bir yordamda yeni bir tür oluşturacak ve bu tür olarak bir sorgu sonucunu proje oluşturacak.  
   
 3. Değişikliklerinizi kaydedin ve tasarımcıyı kapatın.  
   
@@ -57,19 +57,19 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 ### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Veritabanını sorgulamak ve sonuçları göstermek üzere kod eklemek için  
   
-1. **Araç kutusundan**bir <xref:System.Windows.Forms.DataGridView> denetimini projeniz Için varsayılan Windows formu üzerine sürükleyin, Form1.  
+1. **Araç kutusundan**, bir <xref:System.Windows.Forms.DataGridView> denetimi projeniz Için varsayılan Windows formu üzerine sürükleyin, Form1.  
   
 2. Form1 sınıfını değiştirmek için Form1 ' e çift tıklayın.  
   
-3. Form1 sınıfının `End Class` deyimden sonra, bu örneğe ilişkin sorgu sonuçlarını tutmak üzere bir `CustomerInfo` türü oluşturmak için aşağıdaki kodu ekleyin.  
+3. `End Class`Form1 sınıfının ifadesinden sonra, `CustomerInfo` Bu örneğe ilişkin sorgu sonuçlarını tutacak bir tür oluşturmak için aşağıdaki kodu ekleyin.  
   
      [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
-4. Tabloları O/R tasarımcısına eklediğinizde, tasarımcı projenize bir <xref:System.Data.Linq.DataContext> nesnesi ekledi. Bu nesne, bu tablolara erişmeniz gereken kodu içerir ve her tablo için ayrı nesneler ve koleksiyonlara erişin. Projeniz için <xref:System.Data.Linq.DataContext> nesnesi,. dbml dosyanızın adına göre adlandırılır. Bu proje için <xref:System.Data.Linq.DataContext> nesnesi `northwindDataContext`olarak adlandırılmıştır.  
+4. Tabloları O/R tasarımcısına eklediğinizde, tasarımcı <xref:System.Data.Linq.DataContext> projenize bir nesne ekledi. Bu nesne, bu tablolara erişmeniz gereken kodu içerir ve her tablo için ayrı nesneler ve koleksiyonlara erişin. <xref:System.Data.Linq.DataContext>Projeniz için olan nesne,. dbml dosyanızın adına göre adlandırılır. Bu proje için, <xref:System.Data.Linq.DataContext> nesne olarak adlandırılır `northwindDataContext` .  
   
-     Kodunuzda <xref:System.Data.Linq.DataContext> bir örneğini oluşturabilir ve O/R Tasarımcısı tarafından belirtilen tabloları sorgulayabilirsiniz.  
+     Kodunuzda ' ın bir örneğini oluşturabilir <xref:System.Data.Linq.DataContext> ve O/R Tasarımcısı tarafından belirtilen tabloları sorgulayabilirsiniz.  
   
-     Form1 sınıfının `Load` olayında, veri bağlamınızın özellikleri olarak gösterilen tabloları sorgulamak için aşağıdaki kodu ekleyin. Sorgunun `Select` yan tümcesi, sorgu sonucunun her bir öğesi için anonim bir tür yerine yeni bir `CustomerInfo` türü oluşturacak.  
+     `Load`Form1 sınıfının olayında, veri bağlamınızın özellikleri olarak gösterilen tabloları sorgulamak için aşağıdaki kodu ekleyin. `Select`Sorgunun yan tümcesi, `CustomerInfo` Sorgu sonucunun her bir öğesi için anonim bir tür yerine yeni bir tür oluşturacak.  
   
      [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
@@ -77,7 +77,7 @@ Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [Sorgular](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext Metotları (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

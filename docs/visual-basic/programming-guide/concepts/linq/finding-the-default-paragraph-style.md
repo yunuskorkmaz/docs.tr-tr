@@ -2,24 +2,24 @@
 title: Varsayılan Paragraf Stilini Bulma
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: c3c92c7ae6f80082265d8516e62118595a341790
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b70ae72c293d00c4f7b7a2601bfd20b85702b6d5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353447"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398083"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Varsayılan paragraf stilini bulma (Visual Basic)
 WordprocessingML belgesi öğreticisindeki düzenleme bilgilerinde ilk görev, belgede varsayılan paragraf stilini bullevidir.  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paketin belge ve stil parçalarını bulur ve ardından varsayılan stil adını bulan bir sorgu yürütür. Office Open XML belge paketleri ve içerdikleri parçalar hakkında daha fazla bilgi için bkz. [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paketin belge ve stil parçalarını bulur ve ardından varsayılan stil adını bulan bir sorgu yürütür. Office Open XML belge paketleri ve içerdikleri parçalar hakkında daha fazla bilgi için bkz. [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md).  
   
- Sorgu, "paragraf" değerine sahip `w:type` adlı bir özniteliğe sahip `w:style` adlı bir düğüm bulur ve ayrıca "1" değerine sahip `w:default` adlı bir özniteliğe sahiptir. Bu özniteliklere sahip yalnızca bir XML düğümü olacağı için, sorgu <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işlecini kullanarak bir koleksiyonu tek bir öğesine dönüştürür. Daha sonra `w:styleId`adı ile özniteliğin değerini alır.  
+ Sorgu, "paragraf" değeri ile adlandırılmış bir özniteliği olan adlı bir düğümü bulur `w:style` `w:type` ve ayrıca `w:default` "1" değerine sahip adlı bir özniteliğe sahiptir. Bu özniteliklere sahip yalnızca bir XML düğümü olacağı için, sorgu <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işleci kullanarak bir koleksiyonu tek bir öğesine dönüştürür. Daha sonra, adlı özniteliğin değerini alır `w:styleId` .  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ### <a name="code"></a>Kod  
   
@@ -79,7 +79,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
  Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console  
@@ -89,8 +89,8 @@ The default style is: Normal
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki örnekte, bir belgedeki ve stillerinin tüm paragraflarını bulan benzer bir sorgu oluşturacaksınız:  
   
-- [Paragrafları ve stillerini alma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [Paragrafları ve stillerini alma (Visual Basic)](retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

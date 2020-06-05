@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Bir Klasör Kümesindeki Toplam Bayt Sayısını Sorgulama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 25e2c2894d9feccf42ee92bdddd17d8558779e6c
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: c6490c8863b5762b0b487c6f3f3b2809e16d6519
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266982"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397940"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Nasıl yapılır: Klasörler Kümesindeki Toplam Bayt Sayısı (LINQ) (Visual Basic) sorgusu
-Bu örnek, belirtilen bir klasördeki tüm dosyalar ve tüm alt klasörleri tarafından kullanılan toplam bayt sayısını nasıl alsüreceğini gösterir.  
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Nasıl yapılır: bir klasör kümesindeki toplam bayt sayısını sorgulama (LINQ) (Visual Basic)
+Bu örnek, belirtilen bir klasör ve tüm alt klasörlerindeki tüm dosyalar tarafından kullanılan toplam bayt sayısının nasıl alınacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Yöntem, <xref:System.Linq.Enumerable.Sum%2A> `select` yan tümcede seçilen tüm öğelerin değerlerini ekler. Bu sorguyu, belirtilen dizin ağacındaki en büyük veya en küçük <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A> dosyayı <xref:System.Linq.Enumerable.Sum%2A>almak için kolayca değiştirebilirsiniz.  
+ <xref:System.Linq.Enumerable.Sum%2A>Yöntemi, yan tümcesinde seçili olan tüm öğelerin değerlerini ekler `select` . Yerine veya metodunu çağırarak, belirtilen dizin ağacındaki en büyük veya en küçük dosyayı almak için bu sorguyu kolayca değiştirebilirsiniz <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Sum%2A> .  
   
 ```vb  
 Module QueryTotalBytes  
@@ -67,14 +67,14 @@ Module QueryTotalBytes
 End Module  
 ```  
   
- Yalnızca belirli bir dizin ağacındaki bayt sayısını saymanız gerekiyorsa, bunu, liste koleksiyonunu veri kaynağı olarak oluşturma nın ek yüküne neden olan bir LINQ sorgusu oluşturmadan daha verimli bir şekilde yapabilirsiniz. Sorgu daha karmaşık hale geldikçe veya aynı veri kaynağına karşı birden çok sorgu çalıştırmanız gerektiğinde LINQ yaklaşımının kullanışlılığı artar.  
+ Yalnızca belirtilen bir dizin ağacındaki bayt sayısını saymanız gerekiyorsa, bunu bir veri kaynağı olarak liste koleksiyonu oluşturma ek yükünü bir LINQ sorgusu oluşturmadan daha verimli bir şekilde yapabilirsiniz. Sorgu daha karmaşık hale geldiği veya aynı veri kaynağında birden çok sorgu çalıştırmanız gerektiğinde LINQ yaklaşımın Yararlılığı artar.  
   
- Sorgu, dosya uzunluğunu elde etmek için ayrı bir yönteme çağırır. Bunu, <xref:System.IO.FileInfo> çağrıda nesne oluşturulduktan sonra dosya başka bir iş parçacığı üzerinde silinmişse yükseltilecek olası özel durumu tüketmek için `GetFiles`yapar. <xref:System.IO.FileInfo> Nesne zaten oluşturulmuş olsa bile, bir <xref:System.IO.FileInfo> nesne özelliğine <xref:System.IO.FileInfo.Length%2A> ilk erişilen en geçerli uzunlukta yenilenmeye çalışacağından özel durum oluşabilir. Bu işlemi sorgunun dışındaki bir try-catch bloğuna koyarak, kod yan etkilere neden olabilecek sorgularda işlemlerden kaçınma kuralını izler. Genel olarak, bir uygulamanın bilinmeyen bir durumda bırakılmadığından emin olmak için özel durumları tükettiğinizde büyük özen gerekir.  
+ Sorgu, dosya uzunluğunu elde etmek için ayrı bir yönteme çağrı yapılır. Bu, dosya, öğesine yapılan çağrıda oluşturulduktan sonra başka bir iş parçacığında silinmişse, ortaya çıkan olası özel durumu kullanmak için bunu yapar <xref:System.IO.FileInfo> `GetFiles` . <xref:System.IO.FileInfo>Nesne zaten oluşturulmuş olsa da, bir nesne, özelliği <xref:System.IO.FileInfo> <xref:System.IO.FileInfo.Length%2A> ilk kez erişildiği zaman en güncel uzunlukla yenilemeyi deneyeceğinden, özel durum oluşabilir. Bu işlemi sorgu dışında bir try-catch bloğuna koyarak, kod, yan etkilere neden olabilecek sorgularda işlemleri önleme kuralına uyar. Genel olarak, bir uygulamanın bilinmeyen bir durumda ayrılmadığından emin olmak için özel durumlar kullandığınızda harika dikkatli olunmalıdır.  
   
-## <a name="compile-the-code"></a>Kodu derleme  
-System.Linq ad alanı için `Imports` bir deyim içeren Visual Basic konsol uyrama projesi oluşturun.
+## <a name="compile-the-code"></a>Kodu derle  
+`Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesnelere LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ ve Dosya Dizinleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ ve dosya dizinleri (Visual Basic)](linq-and-file-directories.md)

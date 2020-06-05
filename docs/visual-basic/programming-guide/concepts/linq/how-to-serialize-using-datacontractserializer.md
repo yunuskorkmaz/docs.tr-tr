@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: DataContractSerializer kullanarak serileştirme'
+title: 'Nasıl yapılır: DataContractSerializer Kullanarak Serileştirme'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ef3a1d7f4b4ce5705411053303d23b3ecfad81e8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352366"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397784"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Nasıl yapılır: DataContractSerializer kullanarak serileştirme (Visual Basic)
-Bu konuda <xref:System.Runtime.Serialization.DataContractSerializer>kullanarak seri hale getirilen ve serileştiren bir örnek gösterilmektedir.  
+Bu konuda, kullanarak seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Xml.Linq.XElement> nesneleri içeren bir dizi nesne oluşturur. Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.  
+ Aşağıdaki örnek, nesneleri içeren bir dizi nesne oluşturur <xref:System.Xml.Linq.XElement> . Daha sonra bunları metin dosyalarına serileştirir ve metin dosyalarından serileştirir.  
   
 ```vb  
 Imports System  
@@ -85,4 +85,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+- [XElement nesneleri içeren nesne grafiklerini serileştirme (Visual Basic)](serializing-object-graphs-that-contain-xelement-objects.md)

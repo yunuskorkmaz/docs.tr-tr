@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: dosya sisteminden bir XML ağacını doldurma'
+title: 'Nasıl yapılır: Dosya Sisteminden bir XML Ağacı Doldurma'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3898b63f24bb87ab5e0de47685c36d61f09250b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344484"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396538"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Nasıl yapılır: dosya sisteminden bir XML ağacını doldurma (Visual Basic)
 XML ağaçlarının ortak ve yararlı bir uygulaması, hiyerarşik ad/değer veri deposu olarak kullanılır. Bir XML ağacını hiyerarşik verilerle doldurabilir ve sonra sorgulayabilir, dönüştürebilir ve gerekirse serileştirin. Bu kullanım senaryosunda, ad alanları ve boşluk davranışı gibi XML 'e özgü semantik birçoğu önemli değildir. Bunun yerine, XML ağacını küçük, bellekte, tek bir Kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.  
@@ -116,4 +116,4 @@ Total File Size:59089
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [Gelişmiş sorgu teknikleri (LINQ to XML) (Visual Basic)](advanced-query-techniques-linq-to-xml.md)

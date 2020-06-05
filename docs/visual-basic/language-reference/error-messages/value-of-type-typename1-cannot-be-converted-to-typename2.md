@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621196"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406566"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'
-Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derleme bir proje başvurusu olan bir dosya başvurusunun karışması tür uyuşmazlığı olabilir '\<assemblyname >'. Dosya başvurusu değiştirmeyi deneyin '\<DosyaYolu >' projesinde '\<projectname1 >' proje başvurusu ile '\<projectname2 >'.  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>'\<typename1>' türünün değeri '\<typename2>' olarak değiştirilemez
+' ' Türünün değeri \<typename1> ' ' olarak dönüştürülemez \<typename2> . Tür uyumsuzluğu, ' ' derlemesine bir proje başvurusuyla bir dosya başvurusunun karıştırılması nedeniyle olabilir \<assemblyname> . ' ' Projesindeki ' ' adlı dosya başvurusunu ' ' \<filepath> \<projectname1> için bir proje başvurusuyla değiştirmeyi deneyin \<projectname2> .  
   
- Bir proje, hem bir proje başvurusu hem de bir dosya başvurusu burada yapar bir durumda, derleyici bir türden diğerine dönüştürülüp dönüştürülemeyeceği garanti edemez.  
+ Bir projenin hem bir proje başvurusu hem de bir dosya başvurusu yaptığı durumlarda, derleyici bir türün diğerine dönüştürülebileceğini garanti edemez.  
   
- Bu hatayı oluşturan durumu aşağıdaki sözde kod gösterilmiştir.  
+ Aşağıdaki sözde kod, bu hatayı oluşturabilecek bir durumu gösterir.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Derl
   
  `End Class`  
   
- Proje `P1` bir proje aracılığıyla dolaylı proje başvuru yapar `P2` projesine `P3`ve ayrıca doğrudan bir dosya başvurusu `P3`. Bildirimi `commonObject` dosya başvurur `P3`, while çağrısı `P2.getCommonClass` proje başvurur `P3`.  
+ Project `P1` , proje aracılığıyla dolaylı bir proje başvurusunu `P2` `P3` ve ayrıca öğesine doğrudan bir dosya başvurusu yapar `P3` . Bildirimi, için `commonObject` Dosya başvurusunu kullanır `P3` , ancak öğesine yapılan çağrı, `P2.getCommonClass` proje başvurusunu kullanır `P3` .  
   
- Dosya başvurusu bir dosya yolu ve çıkış dosyasının adını belirtir, bu durum sorun olduğunu `P3` (genellikle p3.dll) kaynak projenin proje başvurularını tanımlamak sırada (`P3`) tarafından proje adı. Bu nedenle, derleyici bu tür garanti edemez `P3.commonClass` aynı kaynak kodunun iki farklı başvuruları ile gelir.  
+ Bu durumun sorunu, dosya başvurusunun (genellikle P3. dll) çıkış dosyası için bir dosya yolu ve adı belirttiğinden `P3` (proje, kaynak projeyi ( `P3` ) proje adına göre tanımlar. Bu nedenle, derleyici türün `P3.commonClass` iki farklı başvuru aracılığıyla aynı kaynak kodundan geldiğini garanti edemez.  
   
- Bu durum genellikle ortaya başvurular'ne zaman proje ve dosya başvuruları karma. Önceki çizimde, sorun oluşmaz `P1` doğrudan proje başvurusu yapılan `P3` yerine dosya başvurusu.  
+ Bu durum genellikle proje başvuruları ve dosya başvuruları karmaysa oluşur. Önceki çizimde, `P1` `P3` bir dosya başvurusu yerine öğesine doğrudan proje başvurusu yapıldıysa sorun oluşmaz.  
   
- **Hata Kimliği:** BC30955  
+ **Hata kimliği:** BC30955  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Dosya başvurusu bir proje başvurusu olarak değiştirin.  
+- Dosya başvurusunu bir proje başvurusuyla değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)

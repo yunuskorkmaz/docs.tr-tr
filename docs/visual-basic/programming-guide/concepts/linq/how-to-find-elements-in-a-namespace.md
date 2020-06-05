@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: ad alanındaki öğeleri bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Ad Alanındaki Öğeleri Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3663516e6b6289fe3b1d0599ff3ed4b7dad6a80a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344658"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405202"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: ad alanındaki öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
-XPath ifadeleri, belirli bir ad alanındaki düğümleri bulabilir. XPath ifadeleri ad alanlarını belirtmek için ad alanı öneklerini kullanır. Ad alanı önekleri içeren bir XPath ifadesini ayrıştırmak için, <xref:System.Xml.IXmlNamespaceResolver>uygulayan XPath yöntemlerine bir nesne geçirmeniz gerekir. Bu örnek <xref:System.Xml.XmlNamespaceManager>kullanır.  
+XPath ifadeleri, belirli bir ad alanındaki düğümleri bulabilir. XPath ifadeleri ad alanlarını belirtmek için ad alanı öneklerini kullanır. Ad alanı önekleri içeren bir XPath ifadesini ayrıştırmak için, uygulayan XPath yöntemlerine bir nesne geçirmeniz gerekir <xref:System.Xml.IXmlNamespaceResolver> . Bu örnekte, kullanılır <xref:System.Xml.XmlNamespaceManager> .  
   
  XPath ifadesi:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki ad alanı içeren bir XML ağacını okur. XML belgesini okumak için bir <xref:System.Xml.XmlReader> kullanır. Daha sonra <xref:System.Xml.XmlReader>ve <xref:System.Xml.XmlNameTable><xref:System.Xml.XmlNamespaceManager> bir <xref:System.Xml.XmlNameTable> alır. Öğeleri seçerken <xref:System.Xml.XmlNamespaceManager> kullanır.  
+ Aşağıdaki örnek, iki ad alanı içeren bir XML ağacını okur. <xref:System.Xml.XmlReader>XML belgesini okumak için bir kullanır. Daha sonra öğesinden <xref:System.Xml.XmlNameTable> <xref:System.Xml.XmlReader> ve arasında bir alır <xref:System.Xml.XmlNamespaceManager> <xref:System.Xml.XmlNameTable> . <xref:System.Xml.XmlNamespaceManager>Öğeleri seçerken kullanır.  
   
 ```vb  
 Dim reader As XmlReader = _  
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

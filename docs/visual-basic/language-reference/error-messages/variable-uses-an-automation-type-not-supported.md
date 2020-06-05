@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
-ms.openlocfilehash: 944c0c63cd0d7ae7f9ff770fd123231464af1eaf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d52189e31823b63547c757434847c0e1717aada
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344837"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406553"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Değişken, Visual Basic'de desteklenmeyen bir Otomasyon türünü kullanıyor
 
@@ -19,10 +19,10 @@ Visual Basic tarafından desteklenmeyen bir veri türüne sahip bir tür kitapl�
 
 - Visual Basic tarafından tanınan bir tür değişkeni kullanın.
 
-     veya
+     -veya-
 
-- `FileGet` veya `FileGetObject`kullanırken bu hatayla karşılaşırsanız, kullanmaya çalıştığınız dosyanın `FilePut` veya `FilePutObject`ile yazıldığından emin olun.
+- Veya kullanırken bu hatayla karşılaşırsanız `FileGet` `FileGetObject` , kullanmaya çalıştığınız dosyanın veya ile üzerine yazıldığından emin olun `FilePut` `FilePutObject` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Veri türleri](../data-types/index.md)
