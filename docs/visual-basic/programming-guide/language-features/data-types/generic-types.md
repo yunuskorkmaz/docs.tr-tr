@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350117"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394058"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 *Genel tür* , çeşitli veri türleri için aynı işlevselliği gerçekleştirmeye uyum sağlayan tek bir programlama öğesidir. Genel bir sınıf veya yordam tanımladığınızda, bu işlevi gerçekleştirmek isteyebileceğiniz her bir veri türü için ayrı bir sürüm tanımlamanız gerekmez.  
@@ -52,48 +52,48 @@ ms.locfileid: "74350117"
   
  Genel bir tür tanımladığınızda, bir veya daha fazla veri türüyle parametreleştirebilirsiniz. Bu, veri türlerini gereksinimlerine uyarlamak için kodun kullanılmasına izin verir. Kodunuz, her biri farklı veri türleri kümesi üzerinde davranan genel öğeden birkaç farklı programlama öğesi bildirebilir. Ancak, görüntülenen öğeler, kullandıkları veri türleri ne olduğuna bakılmaksızın özdeş mantığı gerçekleştirir.  
   
- Örneğin, `String`gibi belirli bir veri türü üzerinde çalışan bir sıra sınıfı oluşturmak ve kullanmak isteyebilirsiniz. Aşağıdaki örnekte gösterildiği gibi, bu tür bir sınıfı <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>bildirebilirsiniz.  
+ Örneğin, gibi belirli bir veri türü üzerinde çalışan bir sıra sınıfı oluşturmak ve kullanmak isteyebilirsiniz `String` . <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>Aşağıdaki örnekte gösterildiği gibi, bu tür bir sınıfı ' den bildirebilirsiniz.  
   
  [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
- Artık, `String` değerlerle özel olarak çalışmak için `stringQ` kullanabilirsiniz. `stringQ`, `Object` değerleri için genelleştirilmesi yerine `String` özgü olduğundan, geç bağlama veya tür dönüştürme izniniz yoktur. Bu, yürütme süresini kaydeder ve çalışma zamanı hatalarını azaltır.  
+ Artık `stringQ` değerlerle özel olarak çalışmak için ' i kullanabilirsiniz `String` . `stringQ` `String` , Değerleri için genelleştirilmesi yerine için özel olduğundan `Object` , geç bağlama veya tür dönüştürme izniniz yoktur. Bu, yürütme süresini kaydeder ve çalışma zamanı hatalarını azaltır.  
   
- Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel bir sınıf kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel bir sınıf kullanma](how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Genel sınıf örneği  
  Aşağıdaki örnek, bir genel sınıfın iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
- Önceki iskelet 'de, `t` bir *tür parametresidir*, diğer bir deyişle, sınıfı bildirdiğinizde sağladığınız veri türü için yer tutucudur. Kodunuzun başka bir yerinde, `t`için çeşitli veri türleri sağlayarak `classHolder` çeşitli sürümlerini bildirebilirsiniz. Aşağıdaki örnek, bu iki bildirimi gösterir.  
+ Önceki çatı içinde, `t` bir *tür parametresidir*, diğer bir deyişle, sınıfı bildirdiğinizde sağladığınız veri türü için bir yer tutucudur. Kodunuzun başka bir yerinde, `classHolder` için çeşitli veri türleri sunarak çeşitli sürümlerini bildirebilirsiniz `t` . Aşağıdaki örnek, bu iki bildirimi gösterir.  
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- Önceki deyimler, belirli bir türün tür parametresinin yerini aldığı *oluşturulan sınıfları*bildirir. Bu değişiklik, oluşturulan sınıf içindeki kod boyunca yayılır. Aşağıdaki örnek, `processNewItem` yordamının `integerClass`nasıl göründüğünü gösterir.  
+ Önceki deyimler, belirli bir türün tür parametresinin yerini aldığı *oluşturulan sınıfları*bildirir. Bu değişiklik, oluşturulan sınıf içindeki kod boyunca yayılır. Aşağıdaki örnek, `processNewItem` yordamının içinde nasıl göründüğünü gösterir `integerClass` .  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Daha kapsamlı bir örnek için bkz. [nasıl yapılır: farklı veri türlerinde özdeş Işlevsellik sağlayabilen bir sınıf tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Daha kapsamlı bir örnek için bkz. [nasıl yapılır: farklı veri türlerinde özdeş Işlevsellik sağlayabilen bir sınıf tanımlama](how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Uygun programlama öğeleri  
- Genel sınıfları, yapıları, arabirimleri, yordamları ve temsilcileri tanımlayabilir ve kullanabilirsiniz. .NET Framework, yaygın olarak kullanılan genel öğeleri temsil eden çeşitli genel sınıfları, yapıları ve arabirimleri tanımladığını unutmayın. <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanı sözlükler, listeleri, kuyrukları ve yığınları sağlar. Kendi genel öğesini tanımlamadan önce, <xref:System.Collections.Generic?displayProperty=nameWithType>' de zaten kullanılabilir olup olmadığını görün.  
+ Genel sınıfları, yapıları, arabirimleri, yordamları ve temsilcileri tanımlayabilir ve kullanabilirsiniz. .NET Framework, yaygın olarak kullanılan genel öğeleri temsil eden çeşitli genel sınıfları, yapıları ve arabirimleri tanımladığını unutmayın. <xref:System.Collections.Generic?displayProperty=nameWithType>Ad alanı sözlükler, listeleri, kuyrukları ve yığınları sağlar. Kendi genel öğesini tanımlamadan önce, ' de zaten kullanılabilir olup olmadığını görün <xref:System.Collections.Generic?displayProperty=nameWithType> .  
   
- Yordamlar türler değildir, ancak genel yordamları tanımlayabilir ve kullanabilirsiniz. Bkz. [Visual Basic genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ Yordamlar türler değildir, ancak genel yordamları tanımlayabilir ve kullanabilirsiniz. Bkz. [Visual Basic genel yordamlar](generic-procedures.md).  
   
 ## <a name="advantages-of-generic-types"></a>Genel türlerin avantajları  
  Genel bir tür, her biri belirli bir veri türü üzerinde çalışan birkaç farklı programlama öğesi bildirmek için temel görevi görür. Genel tür alternatifleri şunlardır:  
   
-1. `Object` veri türünde çalışan tek bir tür.  
+1. Veri türünde çalışan tek bir tür `Object` .  
   
-2. Türün *türüne özgü* bir dizi, her sürüm tek tek kodlanmış ve `String`, `Integer`veya `customer`gibi Kullanıcı tanımlı bir tür.  
+2. Türün *türüne özgü* bir dizi, her sürüm tek tek kodlanmış ve, gibi belirli bir veri türü üzerinde, `String` veya gibi `Integer` Kullanıcı tanımlı bir tür `customer` .  
   
  Genel bir tür, bu alternatifler üzerinde aşağıdaki avantajlara sahiptir:  
   
-- **Tür güvenliği.** Genel türler derleme zamanı tür denetimini uygular. `Object` temel alan türler, herhangi bir veri türünü kabul eder ve bir giriş veri türünün kabul edilebilir olup olmadığını denetlemek için kod yazmanız gerekir. Genel türlerle, derleyici çalışma zamanından önce tür uyuşmazlıkları yakalayabilir.  
+- **Tür güvenliği.** Genel türler derleme zamanı tür denetimini uygular. `Object`Herhangi bir veri türünü kabul etmek için türler ve bir giriş veri türünün kabul edilebilir olup olmadığını denetlemek için kod yazmanız gerekir. Genel türlerle, derleyici çalışma zamanından önce tür uyuşmazlıkları yakalayabilir.  
   
-- **Mının.** Her biri bir veri türü için *özelleştirilmediği* için genel türler, verileri *Box* ve serbest bırakmak zorunda değildir. `Object` tabanlı işlemler, çıkış için hedeflenen verileri `Object` ve kutudan çıkarmak için giriş veri türleri Box olmalıdır. Kutulama ve kutudan çıkarma performansı azaltır.  
+- **Mının.** Her biri bir veri türü için *özelleştirilmediği* için genel türler, verileri *Box* ve serbest bırakmak zorunda değildir. `Object`Giriş veri türlerine göre `Object` , çıkış için hedeflenen verileri dönüştürmek ve bunları kaldırmak için gereken işlemler. Kutulama ve kutudan çıkarma performansı azaltır.  
   
-     `Object` tabanlı türler de geç bağlı olduğundan, üyelerine erişim çalışma zamanında ek kod gerektirir. Bu ayrıca performansı azaltır.  
+     ' Ye dayalı türler `Object` de geç bağlı olduğundan, üyelerine erişim çalışma zamanında ek kod gerektirir. Bu ayrıca performansı azaltır.  
   
 - **Kod birleştirme.** Genel bir türdeki kodun yalnızca bir kez tanımlanması yeterlidir. Bir türün tür özgü sürümlerinin bir kümesine, her sürümde aynı kod çoğaltılmalıdır ve bu sürüm için tek fark aynı şekilde geçerlidir. Genel türler ile, türe özgü sürümlerin hepsi özgün genel türden oluşturulmuştur.  
   
@@ -101,17 +101,17 @@ ms.locfileid: "74350117"
   
 - **IDE desteği.** Genel bir türden belirtilen oluşturulmuş bir tür kullandığınızda tümleşik geliştirme ortamı (IDE), kodunuzu geliştirirken daha fazla destek verebilir. Örneğin, IntelliSense, bir oluşturucuya veya yöntemine bir bağımsız değişken için tür özgü seçenekler gösterebilir.  
   
-- **Genel algoritmalar.** Tür bağımsız olan soyut algoritmalar genel türler için iyi adaylardır. Örneğin, <xref:System.IComparable> arabirimini kullanarak öğeleri sıralayan bir genel yordam, <xref:System.IComparable>uygulayan herhangi bir veri türü ile kullanılabilir.  
+- **Genel algoritmalar.** Tür bağımsız olan soyut algoritmalar genel türler için iyi adaylardır. Örneğin, arabirimini kullanarak öğeleri sıralayan genel yordam, <xref:System.IComparable> uygulayan herhangi bir veri türü ile kullanılabilir <xref:System.IComparable> .  
   
 ## <a name="constraints"></a>Kısıtlamalar  
- Genel tür tanımındaki kodun mümkün olduğunca bağımsız olması gerekir olsa da, genel türündefinizin verilen herhangi bir veri türünün belirli bir özelliğini sağlamanız gerekebilir. Örneğin, iki öğeyi sıralama veya harmanlama amacıyla karşılaştırmak istiyorsanız, veri türleri <xref:System.IComparable> arabirimini gerçekleştirmelidir. Tür parametresine bir *kısıtlama* ekleyerek bu gereksinimi zorunlu kılabilirsiniz.  
+ Genel tür tanımındaki kodun mümkün olduğunca bağımsız olması gerekir olsa da, genel türündefinizin verilen herhangi bir veri türünün belirli bir özelliğini sağlamanız gerekebilir. Örneğin, iki öğeyi sıralama veya harmanlama amacıyla karşılaştırmak istiyorsanız, veri türlerinin arabirimini uygulaması gerekir <xref:System.IComparable> . Tür parametresine bir *kısıtlama* ekleyerek bu gereksinimi zorunlu kılabilirsiniz.  
   
 ### <a name="example-of-a-constraint"></a>Kısıtlama örneği  
- Aşağıdaki örnek, <xref:System.IComparable>uygulamak için tür bağımsız değişkeni gerektiren bir kısıtlamaya sahip bir sınıfın iskelet tanımını gösterir.  
+ Aşağıdaki örnek, tür bağımsız değişkeninin uygulanmasını gerektiren kısıtlama içeren bir sınıfın iskelet tanımını gösterir <xref:System.IComparable> .  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
- Sonraki kod, <xref:System.IComparable>gerçekleştirmeyen bir tür sağlayan `itemManager` bir sınıf oluşturmaya çalışırsa, derleyici bir hata bildirir.  
+ Sonraki kod, uygulamayan bir tür sağlayan bir sınıf oluşturmaya çalışırsa `itemManager` <xref:System.IComparable> , derleyici bir hata bildirir.  
   
 ### <a name="types-of-constraints"></a>Kısıtlama türleri  
  Kısıtlamalarınız herhangi bir kombinasyonda aşağıdaki gereksinimleri belirtebilir:  
@@ -124,12 +124,12 @@ ms.locfileid: "74350117"
   
 - Tür bağımsız değişkeni bir *başvuru türü*olmalı veya bir *değer türü* olmalıdır  
   
- Birden fazla gereksinim uygulamanız gerekiyorsa, küme ayraçları içinde virgülle ayrılmış bir *kısıtlama listesi* kullanın (`{ }`). Erişilebilir bir Oluşturucu istemek için, [Yeni işleç](../../../../visual-basic/language-reference/operators/new-operator.md) anahtar sözcüğünü listeye ekleyin. Bir başvuru türü gerektirmek için `Class` anahtar sözcüğünü dahil edersiniz. değer türü gerektirmek için `Structure` anahtar sözcüğünü dahil edersiniz.  
+ Birden fazla gereksinim belirlemeniz gerekiyorsa, küme ayracı () içinde virgülle ayrılmış bir *kısıtlama listesi* kullanırsınız `{ }` . Erişilebilir bir Oluşturucu istemek için, [Yeni işleç](../../../language-reference/operators/new-operator.md) anahtar sözcüğünü listeye ekleyin. Bir başvuru türü gerektirmek için, `Class` anahtar sözcüğünü dahil edersiniz; bir değer türü gerektirmek için anahtar sözcüğünü dahil edersiniz `Structure` .  
   
- Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../../visual-basic/language-reference/statements/type-list.md).  
+ Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../language-reference/statements/type-list.md).  
   
 ### <a name="example-of-multiple-constraints"></a>Birden çok kısıtlama örneği  
- Aşağıdaki örnek, tür parametresinde kısıtlama listesi olan bir genel sınıfın iskelet tanımını gösterir. Bu sınıfın bir örneğini oluşturan kodda, tür bağımsız değişkeni hem <xref:System.IComparable> hem de <xref:System.IDisposable> arabirimlerini uygulamalıdır, bir başvuru türü olmalıdır ve erişilebilir parametresiz bir oluşturucuyu kullanıma sunar.  
+ Aşağıdaki örnek, tür parametresinde kısıtlama listesi olan bir genel sınıfın iskelet tanımını gösterir. Bu sınıfın bir örneğini oluşturan kodda, tür bağımsız değişkeni hem hem de <xref:System.IComparable> <xref:System.IDisposable> arabirimlerini uygulamalıdır, bir başvuru türü olmalıdır ve erişilebilir parametresiz bir Oluşturucu kullanıma sunar.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74350117"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
-- [Durumunu](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Gerektiği](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)
-- [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Veri türleri](index.md)
+- [Tür Karakterleri](type-characters.md)
+- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
+- [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
+- [Veri türleri](../../../language-reference/data-types/index.md)
+- [Durumunu](../../../language-reference/statements/of-clause.md)
+- [Gerektiği](../../../language-reference/statements/as-clause.md)
+- [Nesne Veri Türü](../../../language-reference/data-types/object-data-type.md)
+- [Kovaryans ve değişken sapması](../../concepts/covariance-contravariance/index.md)
+- [Yineleyiciler](../../concepts/iterators.md)

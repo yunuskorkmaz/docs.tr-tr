@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: bir özniteliğe filtre uygulama (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Öznitelik Filtreleme (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5bc0a621f0d3bb8e22701440383cdac54c7be51b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353066"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394511"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: bir özniteliğe filtre uygulama (XPath-LINQ to XML) (Visual Basic)
 Bu konu, belirtilen bir ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğelerin nasıl alınacağını gösterir.  
@@ -17,9 +17,9 @@ Bu konu, belirtilen bir ada sahip ve belirtilen değere sahip bir öznitelik ile
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `Address`adı ve "Shipping" değerine sahip bir `Type` özniteliğiyle tüm alt öğeleri bulur.  
+ Bu örnek, adı olan tüm alt öğeleri `Address` ve `Type` "Shipping" değeri olan bir özniteliği bulur.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -77,4 +77,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)
