@@ -1,19 +1,19 @@
 ---
-title: Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması
+title: İşlevsel Programlama ve Kesin Programlama Karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353438"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364805"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Fonksiyonel programlama ile kesinlik temelli programlama (Visual Basic)
 Bu konu, daha geleneksel kesinlik (yordamsal) programlamaya yönelik fonksiyonel programlamayı karşılaştırır ve karşıtın.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması  
- *İşlevsel programlama* paradigması, sorun çözmeye yönelik saf işlevsel bir yaklaşımı desteklemek üzere açıkça oluşturulmuştur. Fonksiyonel programlama bir *bildirim temelli programlama*biçimidir. Buna karşılık, Visual Basic, C# C++ve Java gibi nesne odaklı programlama (OOP) dilleri de dahil olmak üzere çoğu temel dil, öncelikli olarak (yordamsal) programlama desteği sağlayacak şekilde tasarlanmıştır.  
+## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel Programlama ve Kesin Programlama Karşılaştırması  
+ *İşlevsel programlama* paradigması, sorun çözmeye yönelik saf işlevsel bir yaklaşımı desteklemek üzere açıkça oluşturulmuştur. Fonksiyonel programlama bir *bildirim temelli programlama*biçimidir. Buna karşılık, C#, Visual Basic, C++ ve Java gibi nesne odaklı programlama (OOP) dilleri de dahil olmak üzere çoğu temel dil, öncelikle *kesinlik* (yordamsal) programlamayı destekleyecek şekilde tasarlanmıştır.  
   
  Bir geliştirici, bir zorunlu yaklaşım ile, exacting detaylı olarak, bilgisayarın hedefi başarmak için gerçekleştirmesi gereken adımları yazarak bu kodu yazar. Bu, bazen *algoritmik* programlama olarak adlandırılır. Buna karşılık, işlevsel bir yaklaşım, sorunu yürütülecek bir işlevler kümesi olarak oluşturmayı içerir. Her işleve yönelik girişi dikkatle tanımlarsınız ve her bir işlevin ne getirir. Aşağıdaki tabloda, bu iki yaklaşım arasındaki genel farklılıklar açıklanmaktadır.  
   
@@ -52,6 +52,6 @@ Bu konu, daha geleneksel kesinlik (yordamsal) programlamaya yönelik fonksiyonel
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Saf Işlevsel dönüşümlere giriş (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)
-- [Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Saf IŞLEVLERE yeniden düzenleme (Visual Basic)](refactoring-into-pure-functions.md)

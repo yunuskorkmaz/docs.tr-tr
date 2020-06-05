@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 84d52bbbfb34c2e5d67ed6a1810ab3e32fafda22
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266878"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364376"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
-Visual Basic derleyicisi, aşırı yüklü birkaç sürümde tanımlanan bir yordam için bir çağrıyla karşılaştığında, derleyici nin hangi aşırı yüklemeden arayacağına karar vermesi gerekir. Bunu aşağıdaki adımları gerçekleştirerek yapar:  
+Visual Basic derleyici, birkaç aşırı yüklenmiş sürümde tanımlanan bir yordama bir çağrı ile karşılaştığında, derleyicinin hangi aşırı yükleme için çağrılacağını karar vermelidir. Bunu aşağıdaki adımları gerçekleştirerek yapar:  
   
-1. **Erişilebilir -lik.** Arama kodunun aramasını engelleyen bir erişim düzeyine sahip aşırı yüklemeyi ortadan kaldırır.  
+1. **Larınızdaki.** Çağırma kodunun çağırmasının önlediği bir erişim düzeyine sahip tüm aşırı yüklemeleri ortadan kaldırır.  
   
-2. **Parametrelerin Sayısı.** Çağrıda verilenden farklı sayıda parametre tanımlayan aşırı yüklemeyi ortadan kaldırır.  
+2. **Parametre sayısı.** Çağrıda sağlanenden farklı sayıda parametre tanımlayan aşırı yüklemeleri ortadan kaldırır.  
   
-3. **Parametre Veri Türleri.** Derleyici, örnek yöntemleri ni genişletme yöntemlerine göre tercih sağlar. Yordam çağrısıyla eşleşecek şekilde yalnızca genişletme dönüşümleri gerektiren herhangi bir örnek yöntemi bulunursa, tüm uzantı yöntemleri bırakılır ve derleyici yalnızca örnek yöntemi adaylarıyla devam eder. Böyle bir örnek yöntemi bulunamazsa, hem örnek hem de uzantı yöntemleriyle devam e-devam edin.  
+3. **Parametre veri türleri.** Derleyici, uzantı yöntemleri üzerinde örnek yöntemleri tercihi sağlar. Yordam çağrısını eşleştirmek için yalnızca genişletme dönüştürmeleri gerektiren herhangi bir örnek yöntemi bulunursa, tüm uzantı yöntemleri bırakılır ve derleyici yalnızca örnek yöntemi adaylarıyla devam eder. Böyle bir örnek yöntemi bulunamazsa, hem örnek hem de uzantı yöntemleriyle devam eder.  
   
-     Bu adımda, arama bağımsız değişkenlerinin veri türlerinin aşırı yükte tanımlanan parametre türlerine dönüştürülemeyeceği aşırı yüklemeyi ortadan kaldırır.  
+     Bu adımda, çağıran bağımsız değişkenlerin veri türlerinin aşırı yüklemede tanımlanan parametre türlerine dönüştürülemediği tüm aşırı yüklemeleri ortadan kaldırır.  
   
-4. **Dönüşümleri Daraltma.** Çağrı bağımsız değişkeni türlerinden tanımlı parametre türlerine daraltma dönüştürme gerektiren aşırı yüklemeyi ortadan kaldırır. Bu, tür kontrol anahtarının[(Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) veya `On` . `Off`  
+4. **Daraltma dönüştürmeleri.** Çağıran bağımsız değişken türlerinden tanımlanan parametre türlerine daraltma dönüştürmesi gerektiren tüm aşırı yüklemeleri ortadan kaldırır. Bu, tür denetimi anahtarı ([Option Strict deyimin](../../../language-reference/statements/option-strict-statement.md)) veya ' nin olup olmadığı doğrudur `On` `Off` .  
   
-5. **En az genişletme.** Derleyici, kalan aşırı yüklemeleri çiftler halinde dikkate alır. Her çift için, tanımlanan parametrelerin veri türlerini karşılaştırır. Aşırı yüklerden birinde bulunan türler diğerindeki karşılık gelen türlere genişlerse, derleyici ikincisini ortadan kaldırır. Diğer bir süre, en az genişletme gerektiren aşırı yükü korur.  
+5. **En az genişletme.** Derleyici, kalan aşırı yüklerini çiftler halinde dikkate alır. Her çift için, tanımlanan parametrelerin veri türlerini karşılaştırır. Aşırı yüklerden birindeki türlerin tümü, diğer içindeki ilgili türlere genişletürde, derleyici ikincisini ortadan kaldırır. Yani, en az genişletme miktarı gerektiren aşırı yüklemeyi korur.  
   
-6. **Tek Aday.** Yalnızca bir aşırı yükleme kalana kadar çiftler halinde aşırı yüklemeleri göz önünde bulundurmaya devam eder ve aşırı yükleme çağrısını çözer. Derleyici aşırı yüklemeleri tek bir adaya indiremiyorsa, bir hata oluşturur.  
+6. **Tek aday.** Yalnızca bir aşırı yükleme kalana kadar çiftlerin çiftler halinde düşünülmeye devam eder ve bu aşırı yüklemeye çağrı çözülür. Derleyici, aşırı yüklerini tek bir aday olarak azaltamaz bir hata üretir.  
   
- Aşağıdaki resimde, aşırı yüklü sürümler kümesinden hangisinin çağrılmasını belirleyen işlem gösterilmektedir.  
+ Aşağıdaki çizimde, bir dizi aşırı yüklenmiş sürüm çağrısını belirleyen işlem gösterilmektedir.  
   
- ![Aşırı yük çözümleme işleminin akış diyagramı](./media/overload-resolution/determine-overloaded-version.gif "Aşırı yüklü sürümler arasında çözme")
+ ![Aşırı yükleme çözümleme işleminin akış diyagramı](./media/overload-resolution/determine-overloaded-version.gif "Aşırı yüklenmiş sürümler arasında çözümleme")
   
- Aşağıdaki örnek, bu aşırı yük çözümleme işlemini göstermektedir.  
+ Aşağıdaki örnekte bu aşırı yükleme çözümleme süreci gösterilmektedir.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- İlk çağrıda derleyici ilk aşırı yükü ortadan kaldırır, çünkü ilk`Short`bağımsız değişkenin ( ) türü karşılık`Byte`gelen parametrenin türüne daralır ( ). İkinci aşırı yükteki her bağımsız değişken türü (ve)`Short` `Single`üçüncü aşırı yükte (ve) `Single`karşılık gelen`Integer` türe genişlediği için üçüncü aşırı yükü ortadan kaldırır. İkinci aşırı yükleme daha az genişletme gerektirir, bu nedenle derleyici arama için kullanır.  
+ İlk çağrıda derleyici ilk tekrar yüklemeyi ortadan kaldırır çünkü ilk bağımsız değişkenin türü ( `Short` ), karşılık gelen parametrenin türüne () göre daraltır `Byte` . İkinci aşırı yükteki (ve) her bağımsız değişken türü `Short` `Single` üçüncü aşırı yüklemede karşılık gelen türe (ve) widens için, daha sonra üçüncü aşırı yüklemeyi ortadan kaldırır `Integer` `Single` . İkinci aşırı yükleme daha az genişletme gerektirir, bu nedenle derleyici onu çağrı için kullanır.  
   
- İkinci çağrıda, derleyici daralma temelinde aşırı yüklerin hiçbirini ortadan kaldıramaz. Bağımsız değişken türlerinin daha az genişletilmesi yle ikinci aşırı yüklemeyi çağırabildiği için, ilk çağrıdaki yle aynı nedenle üçüncü aşırı yüklemeyi ortadan kaldırır. Ancak, derleyici birinci ve ikinci aşırı yüklemeler arasında çözemez. Her biri, diğerinde karşılık gelen türe`Byte` (to `Short`, ama) `Double` `Single` genişleyen tanımlanmış bir parametre türüne sahiptir. Derleyici bu nedenle aşırı yük çözümlü hata oluşturur.  
+ İkinci çağrıda, derleyici daraltma temelinde aşırı yüklemelerin hiçbirini ortadan kaldırmaz. İkinci aşırı yükleme, bağımsız değişken türlerini daha az genişletme ile çağırabildiğinden, birinci çağrıdan itibaren aynı nedenden dolayı üçüncü aşırı yüklemeyi ortadan kaldırır. Ancak, derleyici birinci ve ikinci aşırı yüklemeler arasında çözümlenemez. Her biri, diğer ( `Byte` `Short` , ancak `Single` için) öğesine karşılık gelen türe widens bir tanımlı parametre türüne sahiptir `Double` . Bu nedenle derleyici aşırı yükleme çözümlemesi hatası oluşturur.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Aşırı Yüklü İsteğe Bağlı ve ParamArray Bağımsız Değişkenleri  
- Bir yordamın iki aşırı yükü, son parametrenin birinde [Isteğe Bağlı,](../../../../visual-basic/language-reference/modifiers/optional.md) diğerinde [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) olarak beyan edildiği dışında aynı imzalara sahipse, derleyici bu yordamiçin bir çağrıyı aşağıdaki gibi çözer:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Aşırı yüklenmiş Isteğe bağlı ve ParamArray bağımsız değişkenleri  
+ Bir yordamın iki aşırı yüklemesi aynı imzaya sahip ise, son parametrenin diğer bir ve [ParamArray](../../../language-reference/modifiers/paramarray.md) 'de [isteğe bağlı](../../../language-reference/modifiers/optional.md) olarak bildirildiği durumlar dışında, derleyici aşağıdaki gibi bu yordama bir çağrı çözer:  
   
-|Arama son bağımsız değişkeni|Derleyici, son bağımsız değişkeni bildiren aşırı yüke çağrıyı çözer|  
+|Çağrı son bağımsız değişkeni şu şekilde sağlar|Derleyici, son bağımsız değişkeni şu şekilde bildiren aşırı yükleme çağrısını çözer|  
 |---|---|  
 |Değer yok (bağımsız değişken atlandı)|`Optional`|  
 |Tek bir değer|`Optional`|  
 |Virgülle ayrılmış bir listede iki veya daha fazla değer|`ParamArray`|  
-|Herhangi bir uzunlukta bir dizi (boş bir dizi dahil)|`ParamArray`|  
+|Herhangi bir uzunlukta dizi (boş bir dizi dahil)|`ParamArray`|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,5 +69,5 @@ Visual Basic derleyicisi, aşırı yüklü birkaç sürümde tanımlanan bir yor
 - [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
-- [Aşırı Yüklemeler](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Genişletme Yöntemleri](./extension-methods.md)
+- [Aşırı Yüklemeler](../../../language-reference/modifiers/overloads.md)
+- [Uzantı yöntemleri](./extension-methods.md)

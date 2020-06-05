@@ -7,26 +7,26 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 99817844120976b6a6d3241a8fc4aef90daf03b2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bac71138723826137f4c9f22a4acc1a81dfb5afd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352687"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362209"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML Eksen Özellikleri (Visual Basic)
 Bu bölümdeki konular Visual Basic XML ekseni özelliklerinin sözdizimini belgebelgeleyin. XML eksen özellikleri, kodunuzda doğrudan XML erişimi kolaylaştırır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-|Konu|Açıklama|  
+|Konu başlığı|Description|  
 |-----------|-----------------|  
-|[XML Özniteliği Axis Özelliği](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|Bir <xref:System.Xml.Linq.XElement> nesnesinin özniteliklerine nasıl erişebileceğinizi açıklar.|  
-|[XML Alt Axis Özelliği](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|Bir <xref:System.Xml.Linq.XElement> nesnesinin alt öğelerine nasıl erişebileceğinizi açıklar.|  
-|[XML Descendant Axis Özelliği](../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|Bir <xref:System.Xml.Linq.XElement> nesnesinin alt öğelerinin nasıl erişebileceğini açıklar.|  
-|[Extension Indexer Özelliği](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneleri koleksiyonundaki tek tek öğelere nasıl erişebileceğinizi açıklar.|  
-|[XML Value Özelliği](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|<xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneleri koleksiyonunun ilk öğesinin değerine nasıl erişebileceğinizi açıklar.|  
+|[XML Özniteliği Axis Özelliği](xml-attribute-axis-property.md)|Bir nesnenin özniteliklerine nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> .|  
+|[XML Alt Axis Özelliği](xml-child-axis-property.md)|Bir nesnenin alt öğelerine nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> .|  
+|[XML Descendant Axis Özelliği](xml-descendant-axis-property.md)|Bir nesnenin alt öğelerinin nasıl erişebileceğini açıklar <xref:System.Xml.Linq.XElement> .|  
+|[Extension Indexer Özelliği](extension-indexer-property.md)|Veya nesneleri koleksiyonundaki tek tek öğelere nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> .|  
+|[XML Value Özelliği](xml-value-property.md)|Veya nesnelerinin bir koleksiyonunun ilk öğesinin değerine nasıl erişebileceğinizi açıklar <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> .|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

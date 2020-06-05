@@ -6,31 +6,31 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 405b557568a736de3ddc3b51e265261222613131
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403037"
 ---
 # <a name="-verbose"></a>-verbose
 Derleyicinin ayrıntılı durum ve hata iletileri oluşturmasına neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -verbose[+ | -]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `+`&#124;`-`  
- İsteğe bağlı. Belirtme `-verbose` , derleyicinin ayrıntılı iletiler yaymasına neden olan, belirtilerek `-verbose+`aynı şekilde belirlenir. Bu seçenek için varsayılan değer `-verbose-`.  
+ İsteğe bağlı. Belirtme, `-verbose` `-verbose+` derleyicinin ayrıntılı iletiler yaymasına neden olan, belirtilerek aynı şekilde belirlenir. Bu seçenek için varsayılan değer `-verbose-` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-verbose` Seçeneği derleyici tarafından verilen toplam hata sayısı, bir modül tarafından hangi derlemelerin yüklendiğini raporlar ve şu anda derlenen dosyaları görüntüler.  
+ `-verbose`Seçeneği derleyici tarafından verilen toplam hata sayısı, bir modül tarafından hangi derlemelerin yüklendiğini raporlar ve şu anda derlenen dosyaları görüntüler.  
   
 > [!NOTE]
-> Bu `-verbose` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> `-verbose`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlenir `In.vb` ve derleyicinin ayrıntılı durum bilgilerini görüntülemesi için yönlendirir.  
@@ -41,5 +41,5 @@ vbc -verbose in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: Standart Sorgu İşleçlerine Genel Bakış
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 0f68d175b526a9da86853272c47b5e7d7b4a5992
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201075"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406787"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Standart sorgu Işleçlerine genel bakış (Visual Basic)
 
@@ -66,7 +66,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi
 
-Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu* *ifadesinin*parçası olarak çağrılmasına olanak sağlayan adanmış C# ve Visual Basic Language anahtar sözcüğü vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu* *ifadesinin*parçası olarak çağrılmasına olanak sağlayan adanmış C# ve Visual Basic Language anahtar sözcüğü vardır. Adanmış anahtar sözcüklere ve bunlara karşılık gelen sözdizimleri içeren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu işleçleri Için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Standart sorgu Işleçlerini genişletme
 
@@ -76,39 +76,39 @@ Hedef etki alanınız veya teknolojiniz için uygun olan alana özgü Yöntemler
 
 Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan konulara götürür.
 
-- [Verileri Sıralama](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [Verileri Sıralama](sorting-data.md)
 
-- [Işlemleri ayarlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [Işlemleri ayarlama (Visual Basic)](set-operations.md)
 
-- [Verileri filtreleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [Verileri filtreleme (Visual Basic)](filtering-data.md)
 
-- [Nicelik belirteci Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Nicelik belirteci Işlemleri (Visual Basic)](quantifier-operations.md)
 
-- [Projeksiyon Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Projeksiyon Işlemleri (Visual Basic)](projection-operations.md)
 
-- [Verileri bölümlendirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [Verileri bölümlendirme (Visual Basic)](partitioning-data.md)
 
-- [JOIN Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [JOIN Işlemleri (Visual Basic)](join-operations.md)
 
-- [Verileri gruplandırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [Verileri gruplandırma (Visual Basic)](grouping-data.md)
 
-- [Oluşturma Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [Oluşturma Işlemleri (Visual Basic)](generation-operations.md)
 
-- [Eşitlik Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [Eşitlik Işlemleri (Visual Basic)](equality-operations.md)
 
-- [Öğe Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [Öğe Işlemleri (Visual Basic)](element-operations.md)
 
-- [Veri türlerini dönüştürme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [Veri türlerini dönüştürme (Visual Basic)](converting-data-types.md)
 
-- [Birleştirme Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [Birleştirme Işlemleri (Visual Basic)](concatenation-operations.md)
 
-- [Toplama Işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Toplama Işlemleri (Visual Basic)](aggregation-operations.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ 'e giriş (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Uzantı Metotları](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [LINQ 'e giriş (Visual Basic)](introduction-to-linq.md)
+- [Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [Standart sorgu Işleçleri yürütme yöntemine göre sınıflandırma (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Uzantı yöntemleri](../../language-features/procedures/extension-methods.md)

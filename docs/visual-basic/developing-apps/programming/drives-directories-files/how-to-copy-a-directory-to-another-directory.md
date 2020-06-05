@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Bir Dizini Diğerine Kopyalama'
+title: 'Nasıl yapılır: Bir Dizini Diğerine Kopyalama'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348858"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401725"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te bir Dizini Diğerine Kopyalama
 
-Bir dizini <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka bir dizine kopyalamak için yöntemini kullanın. Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` olarak `False`ayarlanırsa, iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
+Bir <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> dizini başka bir dizine kopyalamak için yöntemini kullanın. Bu yöntem, dizinin içeriğini ve dizinin kendisini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı ada sahip bir dizin varsa ve `overwrite` olarak ayarlanırsa `False` , iki dizinin içeriği birleştirilir. İşlem sırasında dizin için yeni bir ad belirtebilirsiniz.
 
-Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştirme `overwrite` sırasında var olan bir dosya gibi) nedeniyle özel durumlar oluşturulabilir. `False` Bu tür özel durumlar oluştuğunda, `Data` özelliği dosya veya dizin yolunun anahtar olduğu ve belirli özel durum iletisinin karşılık gelen değerde bulunduğu girdileri tutan tek bir özel durum halinde birleştirilir.
+Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştirme sırasında var olan bir dosya gibi) nedeniyle özel durumlar oluşturulabilir `overwrite` `False` . Bu tür özel durumlar oluştuğunda, `Data` özelliği dosya veya dizin yolunun anahtar olduğu ve belirli özel durum iletisinin karşılık gelen değerde bulunduğu girdileri tutan tek bir özel durum halinde birleştirilir.
 
 ## <a name="to-copy-a-directory-to-another-directory"></a>Bir dizini başka bir dizine kopyalamak için
 
-- Kaynak ve `CopyDirectory` hedef dizin adlarını belirterek yöntemini kullanın. Aşağıdaki örnek, var olan dosyaların üzerine `TestDirectory1` yazarak `TestDirectory2`adlı dizini içine kopyalar.
+- `CopyDirectory`Kaynak ve hedef dizin adlarını belirterek yöntemini kullanın. Aşağıdaki örnek, `TestDirectory1` `TestDirectory2` var olan dosyaların üzerine yazarak adlı dizini içine kopyalar.
 
     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]
 
@@ -32,38 +32,38 @@ Dosyaları bir dizin içinde kopyalarken, özel bir dosya (örneğin, birleştir
 
 Aşağıdaki koşullar özel bir duruma neden olabilir:
 
-- Dizin için belirtilen yeni ad iki nokta içerir (:) veya eğik çizgi (\ veya/)<xref:System.ArgumentException>().
+- Dizin için belirtilen yeni ad iki nokta içerir (:) veya eğik çizgi (\ veya/) ( <xref:System.ArgumentException> ).
 
-- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile \\ \\başlar.\\) (<xref:System.ArgumentException>).
+- Yol, aşağıdaki nedenlerden biri için geçerli değil: sıfır uzunluklu bir dizedir, yalnızca boşluk içeriyor, geçersiz karakterler içeriyor veya bir cihaz yolu (ile başlar \\ \\ . \\ ) (<xref:System.ArgumentException>).
 
-- Yol `Nothing` (<xref:System.ArgumentNullException>) olduğu için geçerli değil.
+- Yol () olduğu için geçerli değil `Nothing` <xref:System.ArgumentNullException> .
 
-- `destinationDirectoryName``Nothing` ya da boş bir dize (<xref:System.ArgumentNullException>)
+- `destinationDirectoryName``Nothing`ya da boş bir dize ( <xref:System.ArgumentNullException> )
 
-- Kaynak dizin yok (<xref:System.IO.DirectoryNotFoundException>).
+- Kaynak dizin yok ( <xref:System.IO.DirectoryNotFoundException> ).
 
-- Kaynak dizin bir kök dizin (<xref:System.IO.IOException>).
+- Kaynak dizin bir kök dizin ( <xref:System.IO.IOException> ).
 
-- Birleşik yol, var olan bir dosyaya (<xref:System.IO.IOException>) işaret eder.
+- Birleşik yol, var olan bir dosyaya () işaret eder <xref:System.IO.IOException> .
 
-- Kaynak yolu ve hedef yolu aynı (<xref:System.IO.IOException>).
+- Kaynak yolu ve hedef yolu aynı ( <xref:System.IO.IOException> ).
 
-- `ShowUI`, olarak `UIOption.AllDialogs` ayarlanır ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor (<xref:System.OperationCanceledException>).
+- `ShowUI`, olarak ayarlanır `UIOption.AllDialogs` ve Kullanıcı işlemi iptal eder veya dizindeki bir veya daha fazla Dosya kopyalanamıyor ( <xref:System.OperationCanceledException> ).
 
-- İşlem döngüsel (<xref:System.InvalidOperationException>).
+- İşlem döngüsel ( <xref:System.InvalidOperationException> ).
 
 - Yol iki nokta içerir (:) (<xref:System.NotSupportedException>).
 
-- Yol, sistem tarafından tanımlanan uzunluk üst sınırını (<xref:System.IO.PathTooLongException>) aşıyor.
+- Yol, sistem tarafından tanımlanan uzunluk üst sınırını ( <xref:System.IO.PathTooLongException> ) aşıyor.
 
-- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde (<xref:System.NotSupportedException>).
+- Yoldaki bir dosya veya klasör adı iki nokta içerir (:) ya da geçersiz bir biçimde ( <xref:System.NotSupportedException> ).
 
-- Kullanıcı, (<xref:System.Security.SecurityException>) yolunu görüntülemek için gerekli izinlere sahip değil.
+- Kullanıcı, () yolunu görüntülemek için gerekli izinlere sahip değil <xref:System.Security.SecurityException> .
 
-- Hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).
+- Hedef dosya var, ancak erişilemez ( <xref:System.UnauthorizedAccessException> ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [Nasıl Yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [Nasıl Yapılır: Dizindeki Dosya Koleksiyonunu Alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Nasıl yapılır: Belirli bir Desendeki Alt Dizinleri Bulma](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Nasıl yapılır: Dizindeki Dosya Koleksiyonunu Alma](how-to-get-the-collection-of-files-in-a-directory.md)
