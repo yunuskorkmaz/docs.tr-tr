@@ -1,15 +1,15 @@
 ---
-title: Modüller
+title: Modül
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838253"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386601"
 ---
 # <a name="modules-visual-basic"></a>Modüller (Visual Basic)
 
@@ -32,4 +32,4 @@ Visual Basic, kodlarınızda dizeleri işleme, matematik hesaplamaları gerçekl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Dili Başvurusu](../../visual-basic/language-reference/index.md)
+- [Visual Basic dil başvurusu](index.md)
