@@ -3,12 +3,12 @@ title: Aracı kaldır
 description: .NET Core SDK 'Ları ve çalışma zamanlarını denetimli temizleme işlemini sağlayan kılavuzlu bir araç olan .NET Core kaldırma aracına genel bakış.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144519"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446912"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core Kaldırma Aracı
 
@@ -138,7 +138,7 @@ dotnet-core-uninstall dry-run [options] [<VERSION>...]
 dotnet-core-uninstall whatif [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a>Bağımsız değişkenler
+#### <a name="arguments"></a>Arguments
 
 * **`VERSION`**
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır. Belirtilen sürüm yüklü durumda kalır.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
@@ -227,11 +227,11 @@ Notlar:
 
   Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Belirtilen sürüm kalacak.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
@@ -318,7 +318,7 @@ Aracın .NET Core SDK 'larını ve çalışma zamanlarını kaldırması için y
 dotnet-core-uninstall remove [options] [<VERSION>...]
 ```
 
-#### <a name="arguments"></a>Bağımsız değişkenler
+#### <a name="arguments"></a>Arguments
 
 * **`VERSION`**
 
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Yalnızca .NET Core SDK 'larını ve çalışma zamanlarını belirtilen sürümden daha küçük bir sürüme kaldırır. Belirtilen sürüm yüklü durumda kalır.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Belirtilen sürümler hariç tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  Yalnızca .NET Core çalışma zamanı ve barındırma paketleri kaldırılır.
+  Yalnızca .NET Core barındırma paketlerini kaldırır.
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ Notlar:
 
   Tüm .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   Belirtilen sürümün altındaki .NET Core SDK 'larını ve çalışma zamanlarını kaldırır. Belirtilen sürüm kalacak.
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   Bu sürümler dışında .NET Core SDK 'larını ve çalışma zamanlarını kaldırır.
 

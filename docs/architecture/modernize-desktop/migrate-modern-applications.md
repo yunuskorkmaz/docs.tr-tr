@@ -2,12 +2,12 @@
 title: Modern masaüstü uygulamalarını geçirme
 description: Modern masaüstü uygulamalarına yönelik geçiş süreci hakkında bilmeniz gereken her şey.
 ms.date: 05/12/2020
-ms.openlocfilehash: 2108aa0b99cabfbb0f3263f094ba8277f953ed6a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a015b266dc5c36fcef38dad04b9f4f048ee5906a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423301"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446919"
 ---
 # <a name="migrating-modern-desktop-applications"></a>Modern masaüstü uygulamalarını geçirme
 
@@ -108,7 +108,7 @@ Microsoft `System.Data.Odbc` kitaplığı .NET Standard 2,0 ile uyumlu olduğund
 
 ### <a name="ole-db"></a>OLE DB
 
-[OLE DB](https://msdn.microsoft.com/library/ms722784(v=vs.85).aspx)   , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET Core gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı OLE DB .NET Core tarafından desteklenmez.
+[OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))   , çeşitli veri kaynaklarına tek bir şekilde erişmenin harika bir yoludur. Ancak bu, yalnızca Windows teknolojisi olan ve .NET Core gibi platformlar arası bir teknolojinin en iyi şekilde uyum sağlayan COM 'a dayalıdır. Ayrıca, 2014 ve üzeri sürümlerde SQL Server de desteklenmez. Bu nedenlerden dolayı OLE DB .NET Core tarafından desteklenmez.
 
 ### <a name="adonet"></a>ADO.NET
 

@@ -1,5 +1,6 @@
 ---
 title: Görev tabanlı zaman uyumsuz programlama-.NET
+description: Bu makalede, .NET 'teki görev tabanlı zaman uyumsuz programlama hakkında bilgi edinin (TPL).
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 188a80459fec021dc934597ea2f77ac7b4471b2d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285293"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446385"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
@@ -95,7 +96,7 @@ Her görev, kendisini bir uygulama etki alanında benzersiz bir şekilde tanıml
 
 Görevleri oluşturan çoğu API, bir parametreyi kabul eden aşırı yüklemeler sağlar <xref:System.Threading.Tasks.TaskCreationOptions> . Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions>parametre değeri|Description|
+|<xref:System.Threading.Tasks.TaskCreationOptions>parametre değeri|Açıklama|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Hiç seçenek belirtilmemişse varsayılan değerdir. Zamanlayıcı, görevi zamanlamak için varsayılan buluşsal yöntemlerini kullanır.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Daha önce oluşturulmuş görevlerin daha önce çalıştırılabilmesi ve daha sonra oluşturulmuş görevlerin daha sonra çalıştırılabilmesi için görevin zamanlanması gerektiğini belirtir.|
@@ -278,7 +279,7 @@ Veya ' den ' i veya ' den devralma yapmanız gerekiyorsa, <xref:System.Threading
 |[Eklenen ve Ayrılan Alt Görevler](attached-and-detached-child-tasks.md)|Ekli ve ayrılmış alt görevler arasındaki farkı açıklar.|
 |[Görev iptali](task-cancellation.md)|Nesnesinde yerleşik olan iptal desteğini açıklar <xref:System.Threading.Tasks.Task> .|
 |[Özel Durum İşleme](exception-handling-task-parallel-library.md)|Eşzamanlı iş parçacıklarındaki özel durumların nasıl işlendiğini açıklar.|
-|[Nasıl yapılır: paralel Işlemleri yürütmek için Parallel. Invoke kullanma](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|' Nin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A> .|
+|[Nasıl yapılır: Paralel İşlemleri Yürütmek için parallel_invoke Kullanma](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|' Nin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Parallel.Invoke%2A> .|
 |[Nasıl yapılır: Bir Görevden Değer Döndürme](how-to-return-a-value-from-a-task.md)|Değerlerin görevlerden nasıl döndürüleceğini açıklar.|
 |[Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme](how-to-cancel-a-task-and-its-children.md)|Görevlerin nasıl iptal edildiğini açıklar.|
 |[Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma](how-to-create-pre-computed-tasks.md)|<xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>Bir önbellekte tutulan zaman uyumsuz indirme işlemlerinin sonuçlarını almak için yönteminin nasıl kullanılacağını açıklar.|

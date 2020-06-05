@@ -1,5 +1,6 @@
 ---
 title: Özel tarih ve saat biçim dizeleri
+description: Tarih saat veya DateTimeOffset değerlerini metin temsillerine dönüştürmek veya tarih & süreleri için dizeleri ayrıştırmak üzere özel tarih ve saat biçimi dizelerini kullanmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 89601d0628e4f5f00ec02d5cdd6fb79216b1469d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279005"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447257"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
@@ -44,7 +45,7 @@ Ayrıştırma işlemlerinde, özel tarih ve saat biçim dizeleri,,, <xref:System
 
 Aşağıdaki tabloda özel tarih ve saat biçimi belirteçleri açıklanır ve her biçim belirticisi tarafından üretilen bir sonuç dizesini görüntülenir. Varsayılan olarak, sonuç dizeleri en-US kültürünün, biçimlendirme kurallarını yansıtır. Belirli bir biçim belirticisi yerelleştirilmiş bir sonuç dizesi üretirse örnek aynı zamanda sonuç dizesinin uygulanacağı kültürü de not alır. Özel tarih ve saat biçimi dizelerini kullanma hakkında daha fazla bilgi için [Notlar](#notes) bölümüne bakın.
 
-| Biçim belirteci | Description | Örnekler |
+| Biçim belirteci | Açıklama | Örnekler |
 | ---------------------- | ----------------- | -------------- |
 |"d"|1 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier).|2009-06-01T13:45:30-> 1<br /><br /> 2009-06-15T13:45:30-> 15|
 |"dd"|01 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["gg" Özel Biçim belirleyicisi](#ddSpecifier).|2009-06-01T13:45:30-> 01<br /><br /> 2009-06-15T13:45:30-> 15|

@@ -2,12 +2,12 @@
 title: Visual Studio Code .NET Standard sınıf kitaplığı oluşturma
 description: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
 ms.date: 05/29/2020
-ms.openlocfilehash: 10c832f5817292b366dc816aebada2dfdab11396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292205"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446958"
 ---
 # <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Öğretici: Visual Studio Code .NET Standard kitaplığı oluşturma
 
@@ -18,7 +18,7 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 
 Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
@@ -127,7 +127,7 @@ Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı prog
 
 Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullanıcıdan bir dize girmesini ister ve dizenin büyük harfli bir karakterle başlayıp başlamamadığını rapor eder.
 
-1. Terminalde, kitaplık projesini oluşturmak için aşağıdaki komutu çalıştırın:
+1. Terminalde, konsol uygulama projesini oluşturmak için aşağıdaki komutu çalıştırın:
 
    ```dotnetcli
    dotnet new console -o ShowCase

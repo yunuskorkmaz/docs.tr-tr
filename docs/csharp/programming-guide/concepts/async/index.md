@@ -1,13 +1,13 @@
 ---
 title: "C 'de zaman uyumsuz programlama #"
 description: Async, await, Task ve Task kullanılarak zaman uyumsuz programlama için C# dil desteğine genel bakış<T>
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007968"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446463"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile asenkron programlama
 
@@ -32,6 +32,10 @@ Paralel bir algoritma için birden çok ortak iş (veya iş parçacığı) gerek
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="zaman uyumlu Breakfast":::
+
+Zaman uyumlu olarak hazırlanan kahhızlı, toplam her bir görevin toplamı olduğundan, yaklaşık olarak 30 dakika sürer.
+
 > [!NOTE]
 > `Coffee`,, `Egg` , `Bacon` `Toast` Ve `Juice` sınıfları boş. Bunlar yalnızca tanıtım amaçlı sınıflardır, hiçbir özellik içermez ve başka bir amaç sunabilir.
 
@@ -50,6 +54,9 @@ Yukarıdaki kodda kötü bir uygulama gösterilmektedir: zaman uyumsuz işlemler
 İş parçacığı, görevler çalışırken engellenmemesi için bu kodu güncelleyerek başlayalım. `await`Anahtar sözcüğü, bir görevi başlatmak için engellenmeyen bir yöntem sağlar ve ardından bu görev tamamlandığında yürütmeye devam eder. Bir Breakfast kodu oluştur 'un basit bir zaman uyumsuz sürümü aşağıdaki kod parçacığına benzer:
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> Geçen toplam süre kabaca ilk senkronizasyon sürümü ile aynıdır. Kod, bazı önemli özelliklerden zaman uyumsuz programlamanın avantajlarından faydalanır.
 
 > [!TIP]
 > , Ve ' nin tüm ve sırasıyla,, ve ' ın bir bütün olarak, ve ' ı `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` döndürecek şekilde güncelleştirilmiştir `Task<Egg>` `Task<Bacon>` `Task<Toast>` . Yöntemler özgün sürümlerinden "Async" sonekini içerecek şekilde yeniden adlandırılır. Uygulamaları, bu makalenin ilerleyen bölümlerinde [son sürümün](#final-version) bir parçası olarak gösterilir.
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="zaman uyumsuz Breakfast":::
+
+Zaman uyumsuz hazırlanmış Breakfast yaklaşık 20 dakika sürdü, bunun nedeni bazı görevlerin eşzamanlı olarak çalıştırılabilmesidir.
+
 Yukarıdaki kod daha iyi çalışmaktadır. Tüm zaman uyumsuz görevleri aynı anda başlatabilirsiniz. Her bir görevi yalnızca sonuçlara ihtiyacınız olduğunda bekleolursunuz. Yukarıdaki kod, farklı mikro hizmetlere istek yapan bir Web uygulamasındaki koda benzer ve sonuçları tek bir sayfada birleştirir. Tüm istekleri hemen, ardından `await` Tüm bu görevleri ve Web sayfasını oluşturduğunuz şekilde yaparsınız.
 
 ## <a name="composition-with-tasks"></a>Görevlerle oluşturma
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 Tüm bu değişiklikler yapıldıktan sonra, kodun son sürümü şöyle görünür:<a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="herhangi bir zaman uyumsuz Breakfast":::
+
+Zaman uyumsuz hazırlanmış Breakfast 'in son sürümü yaklaşık 15 dakika sürdü, bunun nedeni bazı görevlerin eşzamanlı olarak çalıştırılabilmesi ve kodun aynı anda birden çok görevi izleyebilmesi ve yalnızca gerektiğinde işlem yapması olabilir.
 
 Bu son kod zaman uyumsuzdur. Bu, bir kişinin ne kadar hızlı bir şekilde bir kahtacağını daha doğru yansıtır. Yukarıdaki kodu, bu makaledeki ilk kod örneğiyle karşılaştırın. Temel eylemler, kodu okumayı hala temizler. Bu kodu, bu makalenin başlangıcında bir daha hızlı hale getirmek için bu talimatları okuduğunuzdan aynı şekilde okuyabilirsiniz. İçin dil özellikleri `async` ve `await` çeviri, her birinin bu yazılı yönergeleri izlemesini sağlar: Başlangıç görevleri, yaptığınız gibi başlatın ve görevlerin tamamlanmasını beklemeyi engellemez.
 

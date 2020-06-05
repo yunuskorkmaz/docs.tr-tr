@@ -1,5 +1,6 @@
 ---
 title: Standart tarih ve saat biçim dizeleri
+description: Bu makalede, .NET 'teki bir tarih ve saat değerinin metin temsilini tanımlamak için standart tarih ve saat biçimi dizesi kullanmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 0ff187251831130c846a20473237b13268c768be
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289310"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447231"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
@@ -38,7 +39,7 @@ Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabili
 
 <a name="table"></a>Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında ek bilgi için [Notlar](#Notes) bölümüne bakın.
 
-|Biçim belirteci|Description|Örnekler|
+|Biçim belirteci|Açıklama|Örnekler|
 |----------------------|-----------------|--------------|
 |"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
 |"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
@@ -85,7 +86,7 @@ Bazı durumlarda, standart biçim dizesi sabit olan daha uzun bir özel biçim d
 
 |Standart biçim dizeleri|DateTimeFormatInfo.InvariantInfo özelliği tarafından tanımı|Özel biçim dizesi|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" veya "o"|Hiçbiri|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" veya "o"|Yok|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
 |"R" ya da "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|

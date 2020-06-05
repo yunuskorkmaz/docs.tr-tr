@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme'
+description: Bu makalede, .NET 'teki bir tarih ve saatin milisaniyelik bileşenini biçimlendirilen tarih ve saat dizelerine dahil etme hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 4c63e7e67d388b000954f3a53281f95b0f2522b9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290506"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447075"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  

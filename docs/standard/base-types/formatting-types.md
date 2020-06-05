@@ -1,5 +1,6 @@
 ---
 title: .NET 'teki biçimlendirme türleri
+description: .NET ' te türleri biçimlendirmeyi öğrenin. ToString metodunu nasıl kullanacağınızı veya geçersiz kılacağınızı anlayın. Kültüre duyarlı, bileşik ve özel biçimlendirme hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e63a0962efb689a865436df771420e92319110b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290545"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447088"
 ---
 # <a name="format-types-in-net"></a>.NET 'teki biçim türleri
 

@@ -1,5 +1,6 @@
 ---
 title: Özel sayısal biçim dizeleri
+description: .NET 'teki sayısal verileri biçimlendirmek için özel bir sayısal biçim dizesi oluşturmayı öğrenin. Özel bir sayısal biçim dizesinin bir veya daha fazla özel sayısal tanımlayıcısı vardır.
 ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bc2ace5a068a49f19db55c6fcc3cfc7287b6f618
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278966"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447244"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -34,7 +35,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 
 <a name="table"></a>Aşağıdaki tabloda özel sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Özel sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesCustomFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
-|Biçim belirteci|Name|Description|Örnekler|
+|Biçim belirteci|Adı|Açıklama|Örnekler|
 |----------------------|----------|-----------------|--------------|
 |"0"|Sıfır yer tutucu|Eğer varsa, karşılık gelen rakamı sıfır ile değiştirir; aksi halde sonuç dizesinde sıfır görünür.<br /><br /> Daha fazla bilgi: ["0" özel Belirleyicisi](#Specifier0).|1234,5678 ("00000")-> 01235<br /><br /> 0,45678 ("0,00", en-US)-> 0,46<br /><br /> 0,45678 ("0,00", fr-FR)-> 0, 46|
 |"#"|Basamak yer tutucusu|Eğer varsa, karşılık gelen rakamı "#" sembolü ile değiştirir; aksi halde sonuç dizesinde hiçbir rakam gözükmez.<br /><br /> Giriş dizesindeki karşılık gelen basamak, önemli olmayan 0 ise sonuç dizesinde bir basamak göründüğünü unutmayın. Örneğin, 0003 ("# # # #")-> 3.<br /><br /> Daha fazla bilgi: ["#" özel Belirleyicisi](#SpecifierD).|1234,5678 ("# # # # #")-> 1235<br /><br /> 0,45678 ("#. # #", en-US)->.46<br /><br /> 0,45678 ("#. # #", fr-FR)->, 46|
@@ -205,7 +206,7 @@ Aşağıdaki örnek, biçimlendirme işleminin "#", "0" ve " \\ " karakterlerini
 
 Noktalı virgül (;), sayının değerinin pozitif, negatif veya sıfır olma durumuna göre farklı biçimlendirme işlemi uygulayan bir koşullu biçim tanımlayıcısıdır. Bu davranışı oluşturmak için, bir özel biçim dizesi noktalı virgüllerle ayrılan en çok üç bölüm içerebilir. Bu bölümler aşağıdaki tabloda açıklanır.
 
-|Bölüm sayısı|Description|
+|Bölüm sayısı|Açıklama|
 |------------------------|-----------------|
 |Bir bölüm|Biçim dizesi tüm değerlere uygulanır.|
 |İki bölüm|İlk bölüm pozitif değerlere ve sıfırlara, ikinci bölüm de negatif değerlere uygulanır.<br /><br /> Eğer biçimlendirilen değer negatif ise, ama ikinci bölümdeki biçimlendirmeden sonra yuvarlama ile sıfır olursa, sonuçtaki sıfır ilk bölüme göre biçimlendirilir.|

@@ -1,5 +1,6 @@
 ---
 title: Adlandırma Kuralları
+description: Bu genel bakışta, çerçeve geliştirmede kullanılacak adlandırma kuralları hakkında bilgi edinin. Büyük/küçük harf, genel adlandırma ve diğer yönergeleri kapsayan makalelere gidin.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290181"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447153"
 ---
 # <a name="naming-guidelines"></a>Adlandırma Kuralları
 Bir çerçeve geliştirmede tutarlı bir adlandırma kuralları kümesi takip etmek framework 'ün kullanılabilirlik açısından önemli bir katkı olabilir. Framework 'ün yaygın olarak ayrılmış projeler üzerinde birçok geliştirici tarafından kullanılmasını sağlar. Formun tutarlılığı ötesinde, Framework öğelerinin adları kolayca anlaşılmalıdır ve her bir öğenin işlevini iletmelidir.  

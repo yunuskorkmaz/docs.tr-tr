@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
+description: Bir sayıyı baştaki sıfırlarla doldurma hakkında bilgi edinin. Tamsayıları veya sayısal değerleri, belirli bir toplam uzunluğa veya belirli bir satır başına sıfırlar için öndeki sıfırlar ekleyin.
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: ef18fb1bb7b1592a4e92866028868bf1cf793bbf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290467"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447192"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma
 
