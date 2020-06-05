@@ -21,15 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349847"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373905"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Türetilen Matematik İşlevleri (Visual Basic)
-Aşağıdaki tabloda, <xref:System.Math?displayProperty=nameWithType> nesnesinin iç matematik işlevlerinden türetilebilecek iç olmayan matematik işlevleri gösterilmektedir. Dosyanıza veya projenize `Imports System.Math` ekleyerek iç matematik işlevlerine erişebilirsiniz.  
+Aşağıdaki tabloda, nesnenin iç matematik işlevlerinden türetilebilecek iç olmayan matematik işlevleri gösterilmektedir <xref:System.Math?displayProperty=nameWithType> . Dosyanıza veya projenize ekleyerek iç matematik işlevlerine erişebilirsiniz `Imports System.Math` .  
   
 |İşlev|Türetilmiş eşdeğerleri|  
 |--------------|-------------------------|  
@@ -56,4 +56,4 @@ Aşağıdaki tabloda, <xref:System.Math?displayProperty=nameWithType> nesnesinin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Matematik İşlevleri](../../../visual-basic/language-reference/functions/math-functions.md)
+- [Matematik İşlevleri](../functions/math-functions.md)

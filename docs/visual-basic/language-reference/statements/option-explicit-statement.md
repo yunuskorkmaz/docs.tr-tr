@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 3c70d958fdcbb1782af22c3a4715676abbeeac0c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a352df0323cfeca1ea0e206ae45c3f85a2cd7da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353794"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404375"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit Deyimi (Visual Basic)
 Bir dosyadaki tüm değişkenlerin açık bildirimini zorlar veya değişken örtülü bildirimlere izin verir.  
@@ -29,21 +29,21 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Bölümler  
  `On`  
- İsteğe bağlı. `Option Explicit` denetlemeye izin vermez. `On` veya `Off` belirtilmemişse, varsayılan olarak `On`.  
+ İsteğe bağlı. Denetlemeye izin vermez `Option Explicit` . `On`Veya `Off` belirtilmemişse, varsayılan olur `On` .  
   
  `Off`  
- İsteğe bağlı. `Option Explicit` denetlemesini devre dışı bırakır.  
+ İsteğe bağlı. Denetlemeyi devre dışı bırakır `Option Explicit` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir dosyada `Option Explicit On` veya `Option Explicit` göründüğünde, `Dim` veya `ReDim` deyimlerini kullanarak tüm değişkenleri açıkça bildirmeniz gerekir. Bildirilmemiş bir değişken adı kullanmaya çalışırsanız, derleme zamanında bir hata oluşur. `Option Explicit Off` bildirimi, değişkenlerin örtük bildirimine izin verir.  
+ `Option Explicit On`Ya da `Option Explicit` bir dosyada göründüğünde, ya da deyimlerini kullanarak tüm değişkenleri açıkça bildirmeniz gerekir `Dim` `ReDim` . Bildirilmemiş bir değişken adı kullanmaya çalışırsanız, derleme zamanında bir hata oluşur. `Option Explicit Off`İfade, değişkenlerin örtük bildirimine izin verir.  
   
- Kullanıldıysa, `Option Explicit` deyimi herhangi bir diğer kaynak kodu deyiminden önce bir dosyada yer almalıdır.  
+ Kullanıldıysa, `Option Explicit` deyimi diğer kaynak kodu deyimlerinden önce bir dosyada görünmelidir.  
   
 > [!NOTE]
-> `Option Explicit` `Off` ayarı genellikle iyi bir uygulamadır. Bir veya daha fazla konumda değişken adı yanlış yazdığınızda, program çalıştırıldığında beklenmedik sonuçlara neden olabilir.  
+> Ayarı `Option Explicit` `Off` , genellikle iyi bir uygulamadır. Bir veya daha fazla konumda değişken adı yanlış yazdığınızda, program çalıştırıldığında beklenmedik sonuçlara neden olabilir.  
   
 ## <a name="when-an-option-explicit-statement-is-not-present"></a>Açık bir seçenek Ifade yoksa  
- Kaynak kodu `Option Explicit` bir ifade içermiyorsa, derleme sayfasındaki **Açık ayar seçeneği** , [proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa [-OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneği kullanılır.  
+ Kaynak kodu bir `Option Explicit` ifade içermiyorsa, derleme sayfasındaki **Açık ayar seçeneği** , [Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa [-OptionExplicit](../../reference/command-line-compiler/optionexplicit.md) derleyici seçeneği kullanılır.  
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE 'de Option Explicit ayarlamak için  
   
@@ -53,14 +53,14 @@ Option Explicit { On | Off }
   
 3. **Açık** kutuda değeri ayarlayın.  
   
- Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **Açık ayar seçeneği** , **vb varsayılanlar** iletişim kutusunda **Açık seçenek** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb Varsayılanları** içindeki ilk varsayılan ayar `On`.  
+ Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **Açık ayar seçeneği** , **vb varsayılanlar** iletişim kutusunda **Açık seçenek** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. **Vb** varsayılan olarak ilk varsayılan ayar `On` .  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>Komut satırında Explicit seçeneğini ayarlamak için  
   
-- **Vbc** komutuna [-OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneğini ekleyin.  
+- **Vbc** komutuna [-OptionExplicit](../../reference/command-line-compiler/optionexplicit.md) derleyici seçeneğini ekleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm değişkenlerin açık bildirimini zorlamak için `Option Explicit` bildirimini kullanır. Bildirilmemiş bir değişkeni kullanma girişimi, derleme sırasında hataya neden olur.  
+ Aşağıdaki örnek, `Option Explicit` tüm değişkenlerin açık bildirimini zorlamak için bildirimini kullanır. Bildirilmemiş bir değişkeni kullanma girişimi, derleme sırasında hataya neden olur.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
@@ -68,11 +68,11 @@ Option Explicit { On | Off }
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ReDim Deyimi](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [Dim Deyimi](dim-statement.md)
+- [ReDim Deyimi](redim-statement.md)
+- [Option Compare Deyimi](option-compare-statement.md)
+- [Option Strict Deyimi](option-strict-statement.md)
+- [-optioncompare](../../reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../reference/command-line-compiler/optionstrict.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
