@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: 3baf2ec11db72102439b86e151be80d3031cc5d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39be6c90479becb32257bad5803ff1e2c5464f9d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661939"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397317"
 ---
-# <a name="line-is-too-long"></a><span data-ttu-id="a5ec1-102">Satır çok uzun</span><span class="sxs-lookup"><span data-stu-id="a5ec1-102">Line is too long</span></span>
-<span data-ttu-id="a5ec1-103">Kaynak metin satırlarını 65535 karakterden uzun olamaz.</span><span class="sxs-lookup"><span data-stu-id="a5ec1-103">Source text lines cannot exceed 65535 characters.</span></span>  
+# <a name="line-is-too-long"></a><span data-ttu-id="28f9d-102">Satır çok uzun</span><span class="sxs-lookup"><span data-stu-id="28f9d-102">Line is too long</span></span>
+<span data-ttu-id="28f9d-103">Kaynak metin satırları 65535 karakteri aşamaz.</span><span class="sxs-lookup"><span data-stu-id="28f9d-103">Source text lines cannot exceed 65535 characters.</span></span>  
   
- <span data-ttu-id="a5ec1-104">**Hata Kimliği:** BC30494</span><span class="sxs-lookup"><span data-stu-id="a5ec1-104">**Error ID:** BC30494</span></span>  
+ <span data-ttu-id="28f9d-104">**Hata kimliği:** BC30494</span><span class="sxs-lookup"><span data-stu-id="28f9d-104">**Error ID:** BC30494</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a5ec1-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="a5ec1-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="28f9d-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="28f9d-105">To correct this error</span></span>  
   
-- <span data-ttu-id="a5ec1-106">65535 karakter veya daha az satıra uzunluğunu kısaltın.</span><span class="sxs-lookup"><span data-stu-id="a5ec1-106">Shorten the length of the line to 65535 characters or fewer.</span></span>  
+- <span data-ttu-id="28f9d-106">Çizginin uzunluğunu 65535 karakter veya daha kısa bir süre kısaltın.</span><span class="sxs-lookup"><span data-stu-id="28f9d-106">Shorten the length of the line to 65535 characters or fewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5ec1-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a5ec1-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28f9d-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="28f9d-107">See also</span></span>
 
-- [<span data-ttu-id="a5ec1-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="a5ec1-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="28f9d-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="28f9d-108">Error Types</span></span>](../../programming-guide/language-features/error-types.md)
