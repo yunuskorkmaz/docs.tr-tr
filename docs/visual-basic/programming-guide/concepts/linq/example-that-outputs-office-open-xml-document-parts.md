@@ -2,12 +2,12 @@
 title: Office Open XML Belge Kısımları Çıkaran Örnek
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 47a4ac649fb370145962247e07e1d8841411cac0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f374967ec633dcb0dd0fab3ac77de669c65a219c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353505"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375193"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML belge parçalarının (Visual Basic) çıkışı veren örnek
 Bu konuda, bir Office Open XML belgesinin nasıl açılacağı ve içindeki parçalara nasıl erişebileceği gösterilmektedir.  
@@ -15,7 +15,7 @@ Bu konuda, bir Office Open XML belgesinin nasıl açılacağı ve içindeki par�
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir Office Open XML belgesi açar ve belge parçasını ve stil parçasını konsola yazdırır.  
   
- Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> ad alanındaki türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML belgelerinin ayrıntıları (Visual Basic)](details-of-office-open-xml-wordprocessingml-documents.md)

@@ -2,22 +2,22 @@
 title: İşlev ve Eylem Genel Temsilcileri için Varyans Kullanma
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349041"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375764"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func ve eylem genel temsilcileri için varyans kullanma (Visual Basic)
 
-Bu örnekler, `Func` Kovaryans ve karşıtlık farkının nasıl kullanılacağını ve yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha fazla esneklik sağlamak için genel Temsilciler `Action` gösterir.
+Bu örnekler, ve ' de `Func` `Action` yöntemlerin yeniden kullanımını etkinleştirmek ve kodunuzda daha fazla esneklik sağlamak için ve genel temsilcilerde kovaryans ve değişken varyans kullanımını gösterir.
 
-Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+Kovaryans ve değişken varyans hakkında daha fazla bilgi için bkz. [temsilcilerin varyansı (Visual Basic)](variance-in-delegates.md).
 
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Birlikte değişken tür parametrelerine sahip temsilciler kullanma
 
-Aşağıdaki örnekte, genel `Func` temsilcilerde kovaryans desteğinin avantajları gösterilmektedir. `FindByTitle` yöntemi `String` türünün bir parametresini alır ve `Employee` türünün bir nesnesini döndürür. Ancak, `Employee` `Person`devraldığı için bu yöntemi `Func(Of String, Person)` temsilcisine atayabilirsiniz.
+Aşağıdaki örnekte, genel temsilcilerde kovaryans desteğinin avantajları gösterilmektedir `Func` . `FindByTitle`Yöntemi, türünün bir parametresini alır `String` ve türünün bir nesnesini döndürür `Employee` . Ancak, `Func(Of String, Person)` devraldığından bu yöntemi temsilciye atayabilirsiniz `Employee` `Person` .
 
 ```vb
 ' Simple hierarchy of classes.
@@ -56,7 +56,7 @@ End Class
 
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>Değişken karşıtı tür parametreleriyle temsilciler kullanma
 
-Aşağıdaki örnekte, genel `Action` Temsilcilerde değişken olmayan varyans desteğinin avantajları gösterilmektedir. `AddToContacts` yöntemi `Person` türünün bir parametresini alır. Ancak, `Employee` `Person`devraldığı için bu yöntemi `Action(Of Employee)` temsilcisine atayabilirsiniz.
+Aşağıdaki örnekte, genel Temsilcilerde değişken varyans desteğinin avantajları gösterilmektedir `Action` . `AddToContacts`Yöntemi, türünün bir parametresini alır `Person` . Ancak, `Action(Of Employee)` devraldığından bu yöntemi temsilciye atayabilirsiniz `Employee` `Person` .
 
 ```vb
 Public Class Person
@@ -94,5 +94,5 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kovaryans ve değişken varyans (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Kovaryans ve değişken varyans (Visual Basic)](index.md)
 - [Genel Türler](../../../../standard/generics/index.md)
