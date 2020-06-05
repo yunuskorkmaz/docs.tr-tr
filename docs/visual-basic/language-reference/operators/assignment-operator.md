@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 75f303219b9bf32613989f65f90a9096ef70e02e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 516cb21e02d9fb2cd4b8d72282bb74163e1fb14b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350198"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371771"
 ---
 # <a name="-operator-visual-basic"></a>= İşleci (Visual Basic)
 Bir değişkene veya özelliğe bir değer atar.  
@@ -32,13 +32,13 @@ variableorproperty = value
  Herhangi bir sabit değer, sabit veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Eşittir işaretinin (`=`) sol tarafındaki öğesi basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)olamaz. `=` işleci, solundaki değeri, sol tarafındaki değişkene veya özelliğe atar.  
+ Eşittir işaretinin () sol tarafındaki öğesi `=` basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../modifiers/readonly.md)olamaz. `=`İşleci değeri, sol tarafında bulunan değişkene veya özelliğe doğru değerini atar.  
   
 > [!NOTE]
-> `=` işleci bir karşılaştırma işleci olarak da kullanılır. Ayrıntılar için bkz. [karşılaştırma işleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> `=`İşleci bir karşılaştırma işleci olarak da kullanılır. Ayrıntılar için bkz. [karşılaştırma işleçleri](comparison-operators.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `=` işleci, atama işleci olarak değil yalnızca ilişkisel karşılaştırma işleci olarak aşırı yüklenebilir. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `=`İşleci, atama işleci olarak değil yalnızca ilişkisel karşılaştırma işleci olarak aşırı yüklenebilir. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, atama işlecini gösterir. Sağdaki değer soldaki değişkene atanır.  
@@ -47,14 +47,14 @@ variableorproperty = value
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [&= İşleci](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [*= İşleci](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
-- [+= İşleci](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Işleci](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
-- [^= İşleci](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)
-- [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [&= Işleci](and-assignment-operator.md)
+- [* = İşleci](multiplication-assignment-operator.md)
+- [+ = İşleci](addition-assignment-operator.md)
+- [-= İşleci (Visual Basic)](subtraction-assignment-operator.md)
+- [/= İşleci (Visual Basic)](floating-point-division-assignment-operator.md)
+- [\\= İşleci](integer-division-assignment-operator.md)
+- [^ = İşleci](exponentiation-assignment-operator.md)
+- [Deyimler](../../programming-guide/language-features/statements.md)
+- [Karşılaştırma Işleçleri](comparison-operators.md)
+- [Özelliğinin](../modifiers/readonly.md)
+- [Yerel Tür Arabirimi](../../programming-guide/language-features/variables/local-type-inference.md)

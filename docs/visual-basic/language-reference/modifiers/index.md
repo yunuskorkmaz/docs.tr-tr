@@ -2,90 +2,90 @@
 title: Değiştiriciler
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 2056cdc69c7d89b78e9b269fc919a0e0f6b76bf4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838292"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372900"
 ---
 # <a name="modifiers-visual-basic"></a>Değiştiriciler (Visual Basic)
 Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Basic.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [Ansi](ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Bütünleştirilmiş Kod](assembly.md)  
   
- [Async](../../../visual-basic/language-reference/modifiers/async.md)  
+ [Eş](async.md)  
   
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Otomatik](auto.md)  
   
- [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)  
+ [ByRef](byref.md)  
   
- [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [ByVal](byval.md)  
   
- [Default](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Varsayılanını](default.md)  
   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Dost](friend.md)  
   
- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [İçinde](in-generic-modifier.md)  
   
- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
+ [Iterator](iterator.md)  
   
- [Key](../../../visual-basic/language-reference/modifiers/key.md)  
+ [Anahtar](key.md)  
   
- [Modül \<anahtar sözcüğü >](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Birimi\<keyword>](module-keyword.md)  
   
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [MustInherit](mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [MustOverride](mustoverride.md)  
   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Narrowing](narrowing.md)  
   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [NotInheritable](notinheritable.md)  
   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [NotOverridable](notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [İsteğe Bağlı](optional.md)  
   
- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
+ [Dışı](out-generic-modifier.md)  
   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Aşırı Yüklemeler](overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overridable](overridable.md)  
   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Geçersiz Kılmalar](overrides.md)  
   
- [ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)  
+ [ParamArray](paramarray.md)  
   
- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Kısmi](partial.md)  
   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Özelleştirme](private.md)  
   
- [Private Protected](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+ [Özel korumalı](private-protected.md)  
   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Korunamadı](protected.md)  
 
- [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
+ [Protected Friend](protected-friend.md)  
   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Geneldir](public.md)  
   
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [Özelliğinin](readonly.md)  
   
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Shadows](shadows.md)  
   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Shared](shared.md)  
   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Se](static.md)  
   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [Unicode](unicode.md)  
   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Genişletme](widening.md)  
   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [WithEvents](withevents.md)  
   
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)  
+ [Visual Basic dil başvurusu](../index.md)  
