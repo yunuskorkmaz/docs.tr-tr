@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 8d9647fa490077f9f6ef82f30eccc4d5ee271985
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346102"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392889"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
 
@@ -37,13 +37,13 @@ Bir nesne kapsamdan ayrıldığında, ortak dil çalışma zamanı (CLR) tarafı
 
 ## <a name="using-constructors-and-destructors"></a>Oluşturucular ve yıkıcıları kullanma
 
-Oluşturucular ve Yıkıcılar nesnelerin oluşturulmasını ve yok edilmesini denetler. Nesneleri başlatma ve yok etme Visual Basic `Sub New` ve `Sub Finalize` yordamları; Visual Basic 6,0 ve önceki sürümlerde kullanılan `Class_Initialize` ve `Class_Terminate` yöntemlerinin yerini alır.
+Oluşturucular ve Yıkıcılar nesnelerin oluşturulmasını ve yok edilmesini denetler. `Sub New`Visual Basic ve, `Sub Finalize` nesneleri başlatma ve yok etme ' daki ve yordamları, `Class_Initialize` `Class_Terminate` Visual Basic 6,0 ve önceki sürümlerde kullanılan ve yöntemlerini değiştirir.
 
 ### <a name="sub-new"></a>Yeni Sub
 
-`Sub New` Oluşturucusu bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Aynı sınıftan ya da türetilmiş bir sınıftan başka bir oluşturucunun kod ilk satırında dışında, açıkça çağrılamaz. Ayrıca, `Sub New` yöntemi içindeki kod her zaman bir sınıftaki diğer koddan önce çalışır. Bir sınıf için açıkça bir `Sub New` yordamı tanımlamadıysanız, Visual Basic çalışma zamanında örtük olarak bir `Sub New` Oluşturucu oluşturur.
+`Sub New`Oluşturucu, bir sınıf oluşturulduğunda yalnızca bir kez çalıştırılabilir. Aynı sınıftan ya da türetilmiş bir sınıftan başka bir oluşturucunun kod ilk satırında dışında, açıkça çağrılamaz. Ayrıca, yöntemi içindeki kod `Sub New` her zaman bir sınıftaki diğer koddan önce çalışır. `Sub New`Bir sınıf için açıkça bir yordam tanımlamadıysanız Visual Basic, çalışma zamanında örtük olarak bir Oluşturucu oluşturur `Sub New` .
 
-Bir sınıf için Oluşturucu oluşturmak için, sınıf tanımında her yerde `Sub New` adlı bir yordam oluşturun. Parametreli bir Oluşturucu oluşturmak için, aşağıdaki kodda olduğu gibi diğer tüm yordamlar için bağımsız değişkenleri belirttiğiniz gibi `Sub New` için bağımsız değişkenlerin adlarını ve veri türlerini belirtin:
+Bir sınıf için Oluşturucu oluşturmak için, `Sub New` sınıf tanımında herhangi bir yerde adlı bir yordam oluşturun. Parametreli bir Oluşturucu oluşturmak için, `Sub New` aşağıdaki kodda olduğu gibi, diğer herhangi bir yordam için bağımsız değişkenler belirttiğinizde olduğu gibi, bağımsız değişkenlerin adlarını ve veri türlerini belirtin:
 
 [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]
 
@@ -51,45 +51,45 @@ Oluşturucular, aşağıdaki kodda olduğu gibi sıklıkla aşırı yüklenmişt
 
 [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
 
-Başka bir sınıftan türetilmiş bir sınıf tanımladığınızda, temel sınıfın hiçbir parametre alan erişilebilir bir Oluşturucusu yoksa, oluşturucunun ilk satırı temel sınıfın oluşturucusuna bir çağrı olmalıdır. Yukarıdaki oluşturucuyu içeren temel sınıfa yapılan bir çağrı, örneğin `MyBase.New(s)`olacaktır. Aksi takdirde, `MyBase.New` isteğe bağlıdır ve Visual Basic çalışma zamanı onu örtük olarak çağırır.
+Başka bir sınıftan türetilmiş bir sınıf tanımladığınızda, temel sınıfın hiçbir parametre alan erişilebilir bir Oluşturucusu yoksa, oluşturucunun ilk satırı temel sınıfın oluşturucusuna bir çağrı olmalıdır. Yukarıdaki oluşturucuyu içeren temel sınıfa yapılan bir çağrı (örneğin,) `MyBase.New(s)` . Aksi takdirde, `MyBase.New` isteğe bağlıdır ve Visual Basic çalışma zamanı onu örtülü olarak çağırır.
 
-Üst nesnenin oluşturucusunu çağırmak için kodu yazdıktan sonra, `Sub New` yordamına ek başlatma kodu ekleyebilirsiniz. `Sub New` parametreli bir Oluşturucu olarak çağrıldığında bağımsız değişkenleri kabul edebilir. Bu parametreler, oluşturucuyu çağıran yordamdan geçirilir, örneğin, `Dim AnObject As New ThisClass(X)`.
+Üst nesnenin oluşturucusunu çağırmak için kodu yazdıktan sonra, yordama ek başlatma kodu ekleyebilirsiniz `Sub New` . `Sub New`Parametreli bir Oluşturucu olarak çağrıldığında bağımsız değişkenleri kabul edebilir. Bu parametreler, Oluşturucu çağıran yordamdan geçirilir, örneğin, `Dim AnObject As New ThisClass(X)` .
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
-Nesneleri serbest bırakmadan önce, CLR `Sub Finalize` yordamı tanımlayan nesneler için `Finalize` yöntemini otomatik olarak çağırır. `Finalize` yöntemi, dosyaları kapatmak ve durum bilgilerini kaydetmek için kod gibi bir nesne yok edildiğinde yalnızca yürütülmesi gereken kodu içerebilir. `Sub Finalize`yürütmek için küçük bir performans cezası vardır. bu nedenle, yalnızca nesneleri açıkça serbest bırakmanız gerektiğinde bir `Sub Finalize` yöntemi tanımlamanız gerekir.
+Nesneleri serbest bırakmadan önce CLR, `Finalize` bir yordamı tanımlayan nesneler için yöntemini otomatik olarak çağırır `Sub Finalize` . `Finalize`Yöntemi, dosyaları kapatmak ve durum bilgilerini kaydetmek için kod gibi bir nesne yok etmeden önce yürütülmesi gereken kodu içerebilir. Yürütmeye yönelik hafif bir performans cezası var `Sub Finalize` , bu nedenle `Sub Finalize` yalnızca nesneleri açıkça serbest bırakmanız gerektiğinde bir yöntemi tanımlamanız gerekir.
 
 > [!NOTE]
-> CLR içindeki çöp toplayıcı *yönetilmeyen nesneleri*, işletim sisteminin doğrudan ÇALıŞTıRDıĞı nesneleri clr ortamının dışında vermez (ve kullanamaz). Bunun nedeni, farklı yönetilmeyen nesnelerin farklı yollarla atılmalıdır. Bu bilgiler, yönetilmeyen nesneyle doğrudan ilişkili değildir; nesnenin belgelerinde bulunması gerekir. Yönetilmeyen nesneler kullanan bir sınıf, `Finalize` yönteminde atılmalıdır.
+> CLR içindeki çöp toplayıcı *yönetilmeyen nesneleri*, işletim sisteminin doğrudan ÇALıŞTıRDıĞı nesneleri clr ortamının dışında vermez (ve kullanamaz). Bunun nedeni, farklı yönetilmeyen nesnelerin farklı yollarla atılmalıdır. Bu bilgiler, yönetilmeyen nesneyle doğrudan ilişkili değildir; nesnenin belgelerinde bulunması gerekir. Yönetilmeyen nesneler kullanan bir sınıf, kendi metodunda onları atmalıdır `Finalize` .
 
-`Finalize` yıkıcısı, yalnızca ait olduğu sınıftan veya türetilmiş sınıflardan çağrılabilen, korunan bir yöntemdir. Bir nesne yok edildiğinde sistem otomatik olarak `Finalize` çağırır, bu nedenle `Finalize` türetilmiş sınıfın `Finalize` uygulamasının dışından açıkça çağırmamalıdır.
+`Finalize`Yıkıcı, yalnızca ait olduğu sınıftan veya türetilmiş sınıflardan çağrılabilen, korunan bir yöntemdir. `Finalize`Bir nesne yok edildiğinde sistem otomatik olarak çağrılır, bu nedenle `Finalize` türetilmiş sınıfın uygulamasının dışından açık bir şekilde çağırmamalıdır `Finalize` .
 
-Bir nesne Nothing olarak ayarlandığında çalıştırılan `Class_Terminate`aksine, genellikle bir nesnenin kapsamı kaybetmesi ve Visual Basic `Finalize` yıkıcıya çağrı yaptığı zaman arasında bir gecikme vardır. Visual Basic .NET, kaynakları hemen serbest bırakmak için herhangi bir zamanda açıkça çağrılabilecek ikinci bir tür yıkıcı, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>sağlar.
+`Class_Terminate`Bir nesne hiçbir şey olarak ayarlandığında çalıştırılan bir şekilde, genellikle bir nesnenin kapsam kaybettiğinde ve Visual Basic yıkıcıyı çağırdığında bir gecikme vardır `Finalize` . Visual Basic .NET, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> kaynakları hemen serbest bırakmak için herhangi bir zamanda açıkça çağrılabilecek ikinci bir yıkıcı türü sağlar.
 
 > [!NOTE]
-> `Finalize` yıkıcısı, uygulama tarafından işlenemediği ve uygulamanın sonlandırılmasına neden olabileceği için özel durumlar oluşturmaz.
+> `Finalize`Yıkıcı, uygulama tarafından işlenemediği ve uygulamanın sonlandırılmasına neden olabileceği için özel durumlar oluşturmaz.
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Yeni ve sonlandırma yöntemlerinin bir sınıf hiyerarşisinde çalışması
 
-Bir sınıf örneği oluşturulduğunda, ortak dil çalışma zamanı (CLR), bu nesnede varsa `New`adlı bir yordamı yürütmeye çalışır. `New`, bir nesne üzerinde başka herhangi bir kod yürütmeden önce yeni nesneleri başlatmak için kullanılan `constructor` adlı bir yordam türüdür. Bir `New` Oluşturucu, dosyaları açmak, veritabanlarına bağlanmak, değişkenleri başlatmak ve bir nesne kullanılmadan önce gerçekleştirilmesi gereken diğer tüm görevleri gerçekleştirmek için kullanılabilir.
+Bir sınıf örneği oluşturulduğunda, ortak dil çalışma zamanı (CLR), bu nesnede varsa adlı bir yordamı yürütmeye çalışır `New` . `New`, bir `constructor` nesne içindeki diğer herhangi bir kod yürütülmeden önce yeni nesneleri başlatmak için kullanılan adlı bir yordam türüdür. Bir `New` Oluşturucu, dosyaları açmak, veritabanlarına bağlanmak, değişkenleri başlatmak ve bir nesne kullanılmadan önce gerçekleştirilmesi gereken diğer görevlerden yararlanmak için kullanılabilir.
 
-Türetilmiş bir sınıfın bir örneği oluşturulduğunda, ilk olarak temel sınıfın `Sub New` Oluşturucusu yürütülür ve ardından türetilmiş sınıflardaki oluşturucular tarafından yürütülür. Bu durum, bir `Sub New` oluşturucudaki ilk kod satırı, sınıf hiyerarşisinde doğrudan sınıfın yapıcısını çağırmak için `MyBase.New()`sözdizimini kullandığından oluşur. Daha sonra, temel sınıfa yönelik oluşturucuya ulaşılana kadar, sınıf hiyerarşisindeki her sınıf için `Sub New` Oluşturucu çağırılır. Bu noktada, temel sınıf için oluşturucudaki kod yürütülür ve ardından tüm türetilmiş sınıflarda bulunan kod ve en son türetilen sınıflardaki kod son olarak yürütülür.
+Türetilmiş bir sınıfın bir örneği oluşturulduğunda, `Sub New` önce temel sınıfın Oluşturucusu yürütülür ve ardından türetilmiş sınıflardaki oluşturucular tarafından yürütülür. Bu durum, bir oluşturucudaki ilk kod satırı, sınıf `Sub New` `MyBase.New()` hiyerarşisinde kendisinin hemen üzerinde bulunan sınıfının oluşturucusunu çağırmak için sözdizimini kullandığından oluşur. `Sub New`Daha sonra Oluşturucu, temel sınıfa yönelik oluşturucuya ulaşılana kadar sınıf hiyerarşisindeki her sınıf için çağrılır. Bu noktada, temel sınıf için oluşturucudaki kod yürütülür ve ardından tüm türetilmiş sınıflarda bulunan kod ve en son türetilen sınıflardaki kod son olarak yürütülür.
 
 ![Sınıf hiyerarşisi oluşturucularını ve devralmayı gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)
 
-Bir nesne artık gerekli olmadığında, CLR bellekten boşaltmadan önce bu nesne için <xref:System.Object.Finalize%2A> yöntemini çağırır. <xref:System.Object.Finalize%2A> yöntemi `destructor` olarak adlandırılır çünkü durum bilgilerini kaydetme, veritabanlarına yönelik dosya ve veritabanına bağlantı kapatma ve nesneyi serbest bırakmadan önce gerçekleştirilmesi gereken diğer görevler.
+Bir nesne artık gerekli olmadığında, CLR <xref:System.Object.Finalize%2A> bellekten boşaltmadan önce bu nesnenin yöntemini çağırır. <xref:System.Object.Finalize%2A>Yöntemi, `destructor` durum bilgilerini kaydetme, veritabanlarına yönelik dosya ve veritabanına bağlantı kapatma gibi temizleme görevlerini gerçekleştirdiğinden ve nesneyi serbest bırakmadan önce gerçekleştirilmesi gereken diğer görevlere yönelik olarak adlandırılır.
 
 ![Finalize yöntemi yıkıcısını gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)
 
 ## <a name="idisposable-interface"></a>IDisposable arabirimi
 
-Sınıf örnekleri genellikle Windows işleyicileri ve veritabanı bağlantıları gibi CLR tarafından yönetilmeyen kaynakları denetler. Bu kaynaklar, sınıfının `Finalize` yönteminde atılmalıdır, böylece nesne çöp toplayıcı tarafından yok edildiğinde serbest bırakılır. Ancak çöp toplayıcı yalnızca CLR daha fazla boş bellek gerektirdiğinde nesneleri yok eder. Bu, nesnenin kapsam dışına çıkana kadar uzun sürebileceği anlamına gelir.
+Sınıf örnekleri genellikle Windows işleyicileri ve veritabanı bağlantıları gibi CLR tarafından yönetilmeyen kaynakları denetler. Bu kaynaklar, `Finalize` nesne çöp toplayıcı tarafından yok edildiğinde yayımlanabilmeleri için sınıfının yönteminde atılmalıdır. Ancak çöp toplayıcı yalnızca CLR daha fazla boş bellek gerektirdiğinde nesneleri yok eder. Bu, nesnenin kapsam dışına çıkana kadar uzun sürebileceği anlamına gelir.
 
-Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> arabirimini uygularsa sistem kaynaklarını etkin bir şekilde yönetmeye yönelik bir mekanizma sağlayabilir. <xref:System.IDisposable> bir yöntem, <xref:System.IDisposable.Dispose%2A>, istemcileri bir nesne kullanmayı bitirdiğinizde çağırmalıdır. <xref:System.IDisposable.Dispose%2A> yöntemini kullanarak kaynakları hemen serbest bırakabilir ve dosya ve veritabanı bağlantıları kapatma gibi görevleri gerçekleştirebilirsiniz. `Finalize` yıkıcının aksine, <xref:System.IDisposable.Dispose%2A> yöntemi otomatik olarak çağrılmaz. Bir sınıfın istemcileri, kaynakları hemen serbest bırakmak istediğinizde <xref:System.IDisposable.Dispose%2A> açıkça çağırmalıdır.
+Atık toplamayı tamamlamak için sınıflarınız, arabirimi uygularsa sistem kaynaklarını etkin bir şekilde yönetmeye yönelik bir mekanizma sağlayabilir <xref:System.IDisposable> . <xref:System.IDisposable>, <xref:System.IDisposable.Dispose%2A> istemcileri bir nesne kullanmayı tamamlarsa çağrı gereken tek bir yöntemine sahiptir. <xref:System.IDisposable.Dispose%2A>Yöntemi, kaynakları hemen serbest bırakmak ve dosya ve veritabanı bağlantıları kapatma gibi görevleri gerçekleştirmek için kullanabilirsiniz. `Finalize`Yok edicinin aksine, <xref:System.IDisposable.Dispose%2A> yöntemi otomatik olarak çağrılmaz. Bir sınıfın istemcileri <xref:System.IDisposable.Dispose%2A> , kaynakları hemen serbest bırakmak istediğinizde açıkça çağırmalıdır.
 
 ### <a name="implementing-idisposable"></a>IDisposable uygulama
 
-<xref:System.IDisposable> arabirimini uygulayan bir sınıf şu kod kısımlarını içermelidir:
+Arabirimi uygulayan bir sınıf <xref:System.IDisposable> Şu kod bölümlerini içermelidir:
 
 - Nesnenin atılmış olup olmadığını izlemek için bir alan:
 
@@ -97,7 +97,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   Protected disposed As Boolean = False
   ```
 
-- Sınıfın kaynaklarını serbest bırakma <xref:System.IDisposable.Dispose%2A> aşırı yüklemesi. Bu yöntem, temel sınıfın <xref:System.IDisposable.Dispose%2A> ve `Finalize` yöntemleriyle çağrılmalıdır:
+- <xref:System.IDisposable.Dispose%2A>Sınıfının kaynaklarını serbest bırakır. Bu yöntem, <xref:System.IDisposable.Dispose%2A> `Finalize` taban sınıfının ve yöntemleri tarafından çağrılmalıdır:
 
   ```vb
   Protected Overridable Sub Dispose(ByVal disposing As Boolean)
@@ -111,7 +111,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   End Sub
   ```
 
-- Yalnızca aşağıdaki kodu içeren <xref:System.IDisposable.Dispose%2A> bir uygulamasıdır:
+- <xref:System.IDisposable.Dispose%2A>Yalnızca aşağıdaki kodu içeren bir uygulamasıdır:
 
   ```vb
   Public Sub Dispose() Implements IDisposable.Dispose
@@ -120,7 +120,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
   End Sub
   ```
 
-- Yalnızca aşağıdaki kodu içeren `Finalize` yöntemi geçersiz kılınır:
+- `Finalize`Yalnızca aşağıdaki kodu içeren yöntemi geçersiz kılma:
 
   ```vb
   Protected Overrides Sub Finalize()
@@ -131,7 +131,7 @@ Atık toplamayı tamamlamak için sınıflarınız, <xref:System.IDisposable> ar
 
 ### <a name="deriving-from-a-class-that-implements-idisposable"></a>IDisposable uygulayan bir sınıftan türetme
 
-<xref:System.IDisposable> arabirimini uygulayan bir taban sınıftan türetilen bir sınıf, atılmalıdır ek kaynaklar kullanmadığı takdirde hiçbir temel yöntemi geçersiz kılmalıdır. Bu durumda, türetilmiş sınıf, türetilen sınıfın kaynaklarını atmak için temel sınıfın `Dispose(disposing)` yöntemini geçersiz kılmalıdır. Bu geçersiz kılma, temel sınıfın `Dispose(disposing)` yöntemini çağırmalıdır.
+Arabirimi uygulayan bir taban sınıftan türetilen bir sınıf, <xref:System.IDisposable> atılmalıdır ek kaynaklar kullanmadığı takdirde hiçbir temel yöntemi geçersiz kılmalıdır. Bu durumda, türetilmiş sınıf `Dispose(disposing)` türetilmiş sınıfın kaynaklarını atmak için temel sınıfın yöntemini geçersiz kılmalıdır. Bu geçersiz kılma, temel sınıfın yöntemini çağırmalıdır `Dispose(disposing)` .
 
 ```vb
 Protected Overrides Sub Dispose(ByVal disposing As Boolean)
@@ -145,20 +145,20 @@ Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 End Sub
 ```
 
-Türetilmiş bir sınıf temel sınıfın <xref:System.IDisposable.Dispose%2A> ve `Finalize` yöntemlerini geçersiz kılmamalıdır. Bu yöntemler türetilmiş sınıfın bir örneğinden çağrıldığında, taban sınıfın bu yöntemlerin uygulanması, `Dispose(disposing)` yönteminin geçersiz kılmasını çağırır.
+Türetilmiş bir sınıf temel sınıfın <xref:System.IDisposable.Dispose%2A> ve yöntemlerinin üzerine içermemelidir `Finalize` . Bu yöntemler türetilmiş sınıfın bir örneğinden çağrıldığında, taban sınıfın bu yöntemlerin uygulanması, türetilmiş sınıfın yönteminin geçersiz kılmasını çağırır `Dispose(disposing)` .
 
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Çöp toplama ve sonlandırma yıkıcısı
 
 .NET Framework, kullanılmayan kaynakları düzenli aralıklarla serbest bırakmak için *başvuru izleme atık toplama* sistemini kullanır. Visual Basic 6,0 ve önceki sürümler, kaynakları yönetmek için *başvuru sayımı* adlı farklı bir sistem kullandı. Her iki sistem de aynı işlevi otomatik olarak gerçekleştirse de, bazı önemli farklılıklar vardır.
 
-Sistem bu nesne nesnelerinin artık gerekli olmadığını belirlediğinde CLR nesneleri düzenli olarak yok eder. Sistem kaynakları kısa tedarik edildiğinde nesneler daha hızlı serbest bırakılır ve aksi takdirde daha az sıklıkta yayımlanır. Bir nesne kapsamı kaybettiğinde ve CLR yayımlandığında, Visual Basic 6,0 ve önceki sürümlerde bulunan nesnelerden farklı olarak, nesnenin yok edileceği tam olarak belirleyemeyeceğiniz anlamına gelir. Böyle bir durumda, nesneler *belirleyici olmayan bir ömrüne*sahip olarak kabul edilir. Çoğu durumda, belirleyici olmayan ömür, bir nesne kapsamı kaybettiğinde `Finalize` yok edicinin hemen yürütülemeyebilir.
+Sistem bu nesne nesnelerinin artık gerekli olmadığını belirlediğinde CLR nesneleri düzenli olarak yok eder. Sistem kaynakları kısa tedarik edildiğinde nesneler daha hızlı serbest bırakılır ve aksi takdirde daha az sıklıkta yayımlanır. Bir nesne kapsamı kaybettiğinde ve CLR yayımlandığında, Visual Basic 6,0 ve önceki sürümlerde bulunan nesnelerden farklı olarak, nesnenin yok edileceği tam olarak belirleyemeyeceğiniz anlamına gelir. Böyle bir durumda, nesneler *belirleyici olmayan bir ömrüne*sahip olarak kabul edilir. Çoğu durumda, belirleyici olmayan ömür, `Finalize` bir nesne kapsamı kaybettiğinde, yıkıcının hemen yürütülmeyeceğini hatırlayabileceğiniz sürece uygulamaları nasıl yazacağınız değişmez.
 
-Çöp toplama sistemleri arasındaki diğer bir farklılık `Nothing`kullanımını içerir. Visual Basic 6,0 ve önceki sürümlerde başvuru saymadan yararlanmak için, programcılar bazen bu değişkenlerin başvurularını serbest bırakmak üzere nesne değişkenlerine `Nothing` atanmaktadır. Değişken nesneye en son başvuruyu içeriyorsa, nesnenin kaynakları hemen serbest bırakılır. Visual Basic sonraki sürümlerinde, bu yordamın hala değerli olduğu durumlar olabilir, ancak bunun gerçekleştirilmesi hiçbir zaman başvurulan nesnenin kaynaklarını hemen serbest bırakmaya neden olmaz. Kaynakları hemen serbest bırakmak için, varsa nesnenin <xref:System.IDisposable.Dispose%2A> yöntemini kullanın. `Nothing` için bir değişken ayarlamanız gereken tek zaman ömrü, çöp toplayıcının yalnız bırakılmış nesneleri algılamak için aldığı zamana göreli bir süredir.
+Çöp toplama sistemleri arasındaki başka bir farklılık, ' nin kullanımını içerir `Nothing` . Visual Basic 6,0 ve önceki sürümlerde başvuru saymadan yararlanmak için, programcılar bazen `Nothing` nesne değişkenlerine, bu değişkenlerin tuttuğu başvuruları serbest bırakmak için atanır. Değişken nesneye en son başvuruyu içeriyorsa, nesnenin kaynakları hemen serbest bırakılır. Visual Basic sonraki sürümlerinde, bu yordamın hala değerli olduğu durumlar olabilir, ancak bunun gerçekleştirilmesi hiçbir zaman başvurulan nesnenin kaynaklarını hemen serbest bırakmaya neden olmaz. Kaynakları hemen serbest bırakmak için, <xref:System.IDisposable.Dispose%2A> varsa nesnenin yöntemini kullanın. ' A bir değişken ayarlamanız gereken tek zaman `Nothing` ömrü, çöp toplayıcının yalnız bırakılmış nesneleri algılamak için aldığı zamana göreli bir süredir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IDisposable.Dispose%2A>
 - [Bileşenlerin başlatılması ve sonlandırılması](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [New Işleci](../../../language-reference/operators/new-operator.md)
 - [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+- [Nothing](../../../language-reference/nothing.md)

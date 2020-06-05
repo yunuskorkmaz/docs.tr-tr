@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılsın: İsteğe Bağlı Öğeye Filtre Uygulayın'
+title: 'Nasıl yapılır: İsteğe Bağlı Öğeyi Filtreleme'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 6db377ae30582ef010d5af467e88c52b008483ed
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9f03eee479e7c47e528a145d370472de6dfddd39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267060"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394369"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Nasıl yapılır: İsteğe Bağlı Öğeye Filtre Uygulayın (Visual Basic)
-Bazen XML belgenizde var olduğundan emin değilseniz bile bir öğe için filtre yapmak istersiniz. Arama, belirli öğealt öğeye sahip değilse, bunun için filtre uygulayarak null bir başvuru özel durum tetiklemez, böylece yürütülmelidir. Aşağıdaki örnekte, `Child5` öğenin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Nasıl yapılır: Isteğe bağlı bir öğeyi filtreleme (Visual Basic)
+Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A> uzantı yöntemini kullanır.  
+ Bu örnek, <xref:System.Xml.Linq.Extensions.Elements%2A> genişletme yöntemini kullanır.  
   
 ```vb  
 Dim root As XElement = _
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Temel Sorgular (LINQ- XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [XML Alt Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [XML Özniteliği Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [XML Değeri Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Standart Sorgu Operatörlerine Genel Bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Projeksiyon İşlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Temel sorgular (LINQ to XML) (Visual Basic)](basic-queries-linq-to-xml.md)
+- [XML Alt Axis Özelliği](../../../language-reference/xml-axis/xml-child-axis-property.md)
+- [XML Özniteliği Axis Özelliği](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [XML Value Özelliği](../../../language-reference/xml-axis/xml-value-property.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](standard-query-operators-overview.md)
+- [Projeksiyon Işlemleri (Visual Basic)](projection-operations.md)
