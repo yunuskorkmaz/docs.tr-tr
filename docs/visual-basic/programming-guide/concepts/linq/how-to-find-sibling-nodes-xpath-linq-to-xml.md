@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: eşdüzey düğümleri bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: Eşdüzey Düğümleri Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: add51249dbc7cc4d33c79fcf6f82126f6bdb5612
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344635"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364545"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: eşdüzey düğümleri bulma (XPath-LINQ to XML) (Visual Basic)
 
@@ -19,9 +19,9 @@ XPath ifadesi:
 
 ## <a name="example"></a>Örnek
 
-Bu örnek önce bir `Book` öğesi bulur ve sonra `Book`adlı tüm eşdüzey öğeleri bulur. Elde edilen koleksiyon, bağlam düğümünü içerir.
+Bu örnek önce bir `Book` öğesi bulur ve sonra adlı tüm eşdüzey öğeleri bulur `Book` . Elde edilen koleksiyon, bağlam düğümünü içerir.
 
-Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).
+Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](sample-xml-file-books-linq-to-xml.md).
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -71,4 +71,4 @@ Results are identical
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)
