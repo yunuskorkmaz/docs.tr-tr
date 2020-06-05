@@ -1,29 +1,29 @@
 ---
-title: Sürücü '<drivename>' bulunamadı
+title: "' <drivename> ' Sürücüsü bulunamadı"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970150"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394602"
 ---
-# <a name="drive-drivename-not-found"></a>Sürücü '\<drivename >' bulunamadı
-Sürücü bulunamadı. Ağ bağlantısı kaybedildi ya da erişmeye çalıştığınız sürücüsü çevrimdışı veya yok.  
+# <a name="drive-drivename-not-found"></a>' \<drivename> ' Sürücüsü bulunamadı
+Sürücü bulunamıyor. Ağ bağlantınız kaybedildi veya erişmeye çalıştığınız sürücü çevrimdışı ya da yok.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Sürücüye denetleyin.  
+1. Sürücünün gücünü denetleyin.  
   
-2. Bilgisayarınız ağa bağlanma kabloları düzgün şekilde bağlandığından emin olun.  
+2. Bilgisayarınızı ağa bağlayan tüm kabloların düzgün şekilde eklendiğinden emin olun.  
   
-3. Bir sürücü bir ağ üzerinden erişmek için mantıksal bir bağlantı sürücünün, bilgisayarınızın arasında var olduğundan emin olun.  
+3. Bir ağ üzerinden bir sürücüye erişmek için, bilgisayarınız ve sürücü arasında bir mantıksal bağlantı olduğundan emin olun.  
   
-4. Ağa yeniden bağlanıp tekrar deneyin.  
+4. Ağa yeniden bağlanın ve yeniden deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../programming-guide/language-features/error-types.md)

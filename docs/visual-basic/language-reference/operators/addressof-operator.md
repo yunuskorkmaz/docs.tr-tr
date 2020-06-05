@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: e88520bd7e731a35b98c1d40c5210dc5d1314911
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3e7db8e7329ce8d21b6e07863e6f1673a6389608
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350276"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372070"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf İşleci (Visual Basic)
 Belirli yordama başvuran bir temsilci örneği oluşturur.  
@@ -26,26 +26,26 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Bölümler  
  `procedurename`  
- Gerekli. Yeni oluşturulan temsilci tarafından başvurulacak prosedürü belirtir.  
+ Gereklidir. Yeni oluşturulan temsilci tarafından başvurulacak prosedürü belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `AddressOf` işleci, `procedurename`tarafından belirtilen Sub veya Function öğesine işaret eden bir temsilci oluşturur. Belirtilen yordam bir örnek yöntemi olduğunda, temsilci hem örneğe hem de yöntemine başvurur. Ardından, temsilci çağrıldığında belirtilen örnek için belirtilen yöntem çağrılır.  
+ `AddressOf`İşleci, tarafından belirtilen Sub veya Function öğesine işaret eden bir temsilci oluşturur `procedurename` . Belirtilen yordam bir örnek yöntemi olduğunda, temsilci hem örneğe hem de yöntemine başvurur. Ardından, temsilci çağrıldığında belirtilen örnek için belirtilen yöntem çağrılır.  
   
- `AddressOf` işleci, bir temsilci oluşturucusunun işleneni olarak kullanılabilir ya da temsilci türünün derleyici tarafından belirlenebileceği bir bağlamda kullanılabilir.  
+ `AddressOf`İşleci, bir temsilci oluşturucusunun işleneni olarak kullanılabilir ya da temsilci türünün derleyici tarafından belirlenebileceği bir bağlamda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir düğmenin `Click` olayını işlemek üzere bir temsilci belirlemek için `AddressOf` işlecini kullanır.  
+ Bu örnek, `AddressOf` bir düğmenin olayını işlemek üzere bir temsilci belirlemek için işlecini kullanır `Click` .  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir iş parçacığının başlangıç işlevini belirlemek için `AddressOf` işlecini kullanır.  
+ Aşağıdaki örnek, `AddressOf` bir iş parçacığının başlangıç işlevini belirlemek için işlecini kullanır.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Declare Deyimi](../statements/declare-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
+- [Temsilciler](../../programming-guide/language-features/delegates/index.md)

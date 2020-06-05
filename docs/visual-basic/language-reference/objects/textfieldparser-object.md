@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextFieldParser class, aboutTextFieldParser class
 - TextFieldParser class
 ms.assetid: d44bd2b0-7dfc-410b-a48b-534c1e97460b
-ms.openlocfilehash: b00a6acac6b48e7851f78c38712695ae192b26b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 81216631fde3e22351643e73e1ae9a3d4615e914
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350312"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372226"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Nesnesi
 Yapılandırılmış metin dosyalarını ayrıştırmak için yöntemler ve özellikler sağlar.  
@@ -23,13 +23,13 @@ Public Class TextFieldParser
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- `TextFieldParser` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.  
+ Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için `TextFieldParser` bkz <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> ..  
   
- Daha fazla bilgi için bkz. [Dosyadan okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ Daha fazla bilgi için bkz. [Dosyadan okuma](../../developing-apps/programming/drives-directories-files/reading-from-files.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Ad alanı:** <xref:Microsoft.VisualBasic.FileIO>  
+ **Ad alanı:**<xref:Microsoft.VisualBasic.FileIO>  
   
- **Sınıf:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ **Sınıf:**<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
   
  **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)
