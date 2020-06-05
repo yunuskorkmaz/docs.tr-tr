@@ -5,20 +5,20 @@ helpviewer_keywords:
 - My.User property
 - My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-ms.openlocfilehash: 26ecb4a29080a8691217e1093805a7b40f63f022
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 342c9ccaefb041ddd80039046e1927857654ad7d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350646"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372420"
 ---
 # <a name="myuser-object"></a>My.User Nesnesi
 Geçerli kullanıcı hakkındaki bilgilere erişim sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.User` nesnesinin yöntemleri ve özellikleri hakkında bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
+ Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için `My.User` bkz <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> ..  
   
- Daha fazla bilgi için bkz. [Kullanıcı verilerine erişme](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Daha fazla bilgi için bkz. [Kullanıcı verilerine erişme](../../developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  

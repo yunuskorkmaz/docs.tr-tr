@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 5564f95048f6b44a48229c7e5be9331839803439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edb2195f4e83c2315aa929936aff8af88ca8556c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662097"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374141"
 ---
-# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>İşlev '\<procedurename >' bütün kod yollarında değer döndürmüyor
-İşlev '\<procedurename >' bütün kod yollarında değer döndürmüyor. 'Return' deyiminiz eksik olabilir mi?  
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>'\<procedurename>' işlevi tüm kod yollarında değer döndürmüyor
+' \<procedurename> ' İşlevi tüm kod yollarında bir değer döndürmüyor. ' Return ' deyiminiz eksik mi?  
   
- A `Function` yordamının bir değer döndürmeyen kendi kod aracılığıyla en az bir olası yol vardır.  
+ Bir `Function` yordamın, bir değer döndürmeyen kodu aracılığıyla olası en az bir yolu vardır.  
   
- Bir değer döndürmek bir `Function` aşağıdaki yollardan biriyle yordamda:  
+ Aşağıdaki yollarla bir yordamdan bir değer döndürebilirsiniz `Function` :  
   
-- Değer bir [dönüş deyimi](../../../visual-basic/language-reference/statements/return-statement.md).  
+- Değeri [Return ifadesine](../statements/return-statement.md)ekleyin.  
   
-- Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek bir `Exit Function` deyimi.  
+- `Function`Yordam adına değeri atayın ve sonra bir `Exit Function` ifade gerçekleştirin.  
   
-- Değer atayın `Function` yordamı adlandırın ve ardından gerçekleştirmek `End Function` deyimi.  
+- `Function`Yordam adına değeri atayın ve sonra `End Function` ifadesini gerçekleştirin.  
   
- Denetim için geçerse `Exit Function` veya `End Function` ve yordam adı için herhangi bir değer atamadıysanız, yordamın dönüş veri türünün varsayılan değerini döndürür. Daha fazla bilgi için "Davranışı" bölümüne bakın. [Function deyimi](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Denetim veya öğesine geçerse `Exit Function` `End Function` ve yordam adına herhangi bir değer atamadıysanız, yordam dönüş veri türünün varsayılan değerini döndürür. Daha fazla bilgi için bkz. [Işlev deyimindeki](../statements/function-statement.md)"davranış".  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42105  
+ **Hata kimliği:** BC42105  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Denetim akışı mantığınızı denetleyin ve bir dönüş neden her deyiminden önce bir değer atadığınız emin olun.  
+- Denetim akışı mantığınızı denetleyin ve dönüşe neden olan her deyimden önce bir değer atadığınızdan emin olun.  
   
-     Her zaman kullanırsanız her iade yordamdan gelen bir değer döndürür garanti daha kolaydır `Return` deyimi. Bu, son deyim önce yaparsanız `End Function` olmalıdır bir `Return` deyimi.  
+     Her zaman ifadesini kullanıyorsanız, yordamdan gelen her döndürün bir değer döndürdüğünden emin olmak daha kolaydır `Return` . Bunu yaparsanız, önceki son deyimin `End Function` bir ifade olması gerekir `Return` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşlev Yordamları](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [İşlev Yordamları](../../programming-guide/language-features/procedures/function-procedures.md)
+- [Function Deyimi](../statements/function-statement.md)
 - [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

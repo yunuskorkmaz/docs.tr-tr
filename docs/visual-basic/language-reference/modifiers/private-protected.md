@@ -4,20 +4,20 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 265141f77f4a61a61414a07214830feaa8a1ab05
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7d9f81e41950b92c787e2e50fb94fe3d7c07559
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351341"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362235"
 ---
 # <a name="private-protected-visual-basic"></a>Özel korumalı (Visual Basic)
 
-`Private Protected` anahtar sözcük birleşimi bir üye erişim değiştiricisidir. `Private Protected` üyeye, kapsayan sınıftaki tüm üyeler tarafından ve kapsayan sınıftan türetilmiş türler tarafından erişilebilir, ancak yalnızca kendi kapsayıcı derlemesinde bulunur.
+`Private Protected`Anahtar sözcük birleşimi bir üye erişim değiştiricisidir. Bir `Private Protected` üyeye, kapsayan sınıfındaki tüm üyeler tarafından erişilebilir ve ancak kapsayan sınıftan türetilmiş türler, ancak yalnızca kendi kapsayıcı derlemesinde bulunur.
 
-Yalnızca sınıfların üyelerinde `Private Protected` belirtebilirsiniz; yapılar devralınamadığı için `Private Protected` bir yapının üyelerine uygulayamazsınız.
+`Private Protected`Yalnızca sınıfların üyelerinde belirtebilirsiniz; `Private Protected` yapılar devralınamadığı için bir yapının üyelerine uygulayamazsınız.
 
-`Private Protected` erişim değiştiricisi Visual Basic 15,5 ve üzeri tarafından desteklenir. Bunu kullanmak için, Visual Basic projesi (\*. vbproj) dosyanıza aşağıdaki öğeyi ekleyebilirsiniz. Visual Basic 15,5 veya üzeri bir sürümü sisteminize yüklendiği sürece, Visual Basic derleyicinin en son sürümü tarafından desteklenen tüm dil özelliklerinden yararlanmanızı sağlar:
+`Private Protected`Erişim değiştiricisi Visual Basic 15,5 ve üzeri sürümlerde desteklenir. Bunu kullanmak için, Visual Basic projesi ( \* . vbproj) dosyanıza aşağıdaki öğeyi ekleyebilirsiniz. Visual Basic 15,5 veya üzeri bir sürümü sisteminize yüklendiği sürece, Visual Basic derleyicinin en son sürümü tarafından desteklenen tüm dil özelliklerinden yararlanmanızı sağlar:
 
 ```xml
 <PropertyGroup>
@@ -25,55 +25,55 @@ Yalnızca sınıfların üyelerinde `Private Protected` belirtebilirsiniz; yapı
 </PropertyGroup>
 ```
 
-Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../../language-reference/configure-language-version.md).
+Daha fazla bilgi için bkz. [Visual Basic dil sürümünü ayarlama](../configure-language-version.md).
 
 > [!NOTE]
-> Visual Studio 'da F1 Yardımı ' nı seçmek `private protected` [özel](private.md) veya [korumalı](protected.md)yardım sağlar. IDE, bileşik sözcük yerine imleç altında tek belirteci seçer.
+> Visual Studio 'da F1 Yardımı ' nı seçmek, `private protected` [özel](private.md) veya [korumalı](protected.md)için yardım sağlar. IDE, bileşik sözcük yerine imleç altında tek belirteci seçer.
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** `Private Protected` yalnızca sınıf düzeyinde kullanabilirsiniz. Yani, bir `Protected` öğesi için bildirim bağlamı bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
+- **Bildirim bağlamı.** `Private Protected`Yalnızca sınıf düzeyinde kullanabilirsiniz. Yani bir öğe için bildirim bağlamı `Protected` bir sınıf olmalıdır ve kaynak dosya, ad alanı, arabirim, modül, yapı veya yordam olamaz.
 
 ## <a name="behavior"></a>Davranış
 
-- **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilir. Bir taban sınıftan türetilen ve aynı derlemede yer alan herhangi bir sınıftaki kod, temel sınıfın tüm `Private Protected` öğelerine erişebilir. Ancak, bir taban sınıftan türetilen ve farklı bir derlemede yer alan herhangi bir sınıftaki kod, temel sınıfa `Private Protected` öğelerine erişemez.
+- **Erişim düzeyi.** Bir sınıftaki tüm kod öğelerine erişebilir. Bir taban sınıftan türetilen ve aynı derlemede yer alan herhangi bir sınıftaki kod, `Private Protected` temel sınıfın tüm öğelerine erişebilir. Ancak, bir taban sınıftan türetilen ve farklı bir derlemede yer alan herhangi bir sınıftaki kod, temel sınıf `Private Protected` öğelerine erişemez.
 
-- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Erişim değiştiricileri.** Erişim düzeyi belirten anahtar sözcüklere *erişim değiştiricileri*denir. Erişim değiştiricilerinden oluşan bir karşılaştırma için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
-`Private Protected` değiştiricisi şu bağlamlarda kullanılabilir:
+`Private Protected`Değiştirici şu bağlamlarda kullanılabilir:
 
-- İç içe bir sınıfın [sınıf ekstresi](../../../visual-basic/language-reference/statements/class-statement.md)
+- İç içe bir sınıfın [sınıf ekstresi](../statements/class-statement.md)
 
-- [Const Deyimi](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const Deyimi](../statements/const-statement.md)
 
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Deyimi](../statements/declare-statement.md)
 
-- Sınıf içinde iç içe bir temsilcinin [temsilci ekstresi](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- Sınıf içinde iç içe bir temsilcinin [temsilci ekstresi](../statements/delegate-statement.md)
 
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim Deyimi](../statements/dim-statement.md)
 
-- Bir sınıfta iç içe geçmiş bir numaralandırmanın [enum bildirimi](../../../visual-basic/language-reference/statements/enum-statement.md)
+- Bir sınıfta iç içe geçmiş bir numaralandırmanın [enum bildirimi](../statements/enum-statement.md)
 
-- [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Event Deyimi](../statements/event-statement.md)
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
 
-- Bir sınıfta iç içe yerleştirilmiş bir arabirimin [arabirim ekstresi](../../../visual-basic/language-reference/statements/interface-statement.md)
+- Bir sınıfta iç içe yerleştirilmiş bir arabirimin [arabirim ekstresi](../statements/interface-statement.md)
 
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
 
-- Bir sınıfta iç içe yerleştirilmiş bir yapının [Yapı ekstresi](../../../visual-basic/language-reference/statements/structure-statement.md)
+- Bir sınıfta iç içe yerleştirilmiş bir yapının [Yapı ekstresi](../statements/structure-statement.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Geneldir](public.md)
+- [Korunamadı](protected.md)
+- [Dost](friend.md)
+- [Özelleştirme](private.md)
 - [Protected Friend](./protected-friend.md)
-- [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Nesneler ve Sınıflar](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [Yordamlar](../../programming-guide/language-features/procedures/index.md)
+- [Yapılar](../../programming-guide/language-features/data-types/structures.md)
+- [Nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md)
