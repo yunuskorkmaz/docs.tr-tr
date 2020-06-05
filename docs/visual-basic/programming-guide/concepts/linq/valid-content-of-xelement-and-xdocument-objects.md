@@ -1,21 +1,21 @@
 ---
-title: XElement ve XDocument Objects2 geçerli içerik
+title: XElement ve XDocument Objects2 'ın geçerli Içeriği
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d222f19f6f588968a3ef1515dca522a4a80e1ffb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614358"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364350"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement ve XDocument Nesnelerinin Geçerli İçeriği
-Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek için kullandığınız yöntemlere geçirilen geçerli bağımsız değişkenler açıklanmaktadır.  
+Bu konuda, öğelere ve belgelere içerik eklemek için kullandığınız oluşturuculara ve yöntemlere geçirilebilecek geçerli bağımsız değişkenler açıklanmaktadır.  
   
-## <a name="valid-content"></a>Geçerli içeriği  
- Sorgular genellikle değerlendirmek için <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement> veya <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XAttribute>. Koleksiyonları geçirebilirsiniz <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneleri için <xref:System.Xml.Linq.XElement> Oluşturucusu. Bu nedenle, yöntemleri ve XML ağaçlarını doldurmak için kullandığınız oluşturucular bir sorgunun sonuçlarını içeriği olarak geçirmek kullanışlıdır.  
+## <a name="valid-content"></a>Geçerli Içerik  
+ Sorgular genellikle veya ' nin sonucunu vermez <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XAttribute> . <xref:System.Xml.Linq.XElement>Veya <xref:System.Xml.Linq.XAttribute> nesne koleksiyonlarını oluşturucuya geçirebilirsiniz <xref:System.Xml.Linq.XElement> . Bu nedenle, bir sorgunun sonuçlarını, XML ağaçlarını doldurmak için kullandığınız yöntemlere ve oluşturuculara içerik olarak geçirmek kullanışlı olur.  
   
- Basit içerik eklerken, çeşitli türleri bu yönteme geçirilebilir. Geçerli türleri aşağıdakileri kapsamaktadır:  
+ Basit içerik eklerken bu yönteme çeşitli türler geçirilebilir. Geçerli türler şunlardır:  
   
 - <xref:System.String>  
   
@@ -33,11 +33,11 @@ Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek içi
   
 - <xref:System.DateTimeOffset>  
   
-- Uygulayan herhangi bir tür `Object.ToString`.  
+- Uygulayan herhangi bir tür `Object.ToString` .  
   
-- Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>.  
+- Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601> .  
   
- Karmaşık içerik eklerken, çeşitli türleri bu yönteme geçirilen:  
+ Karmaşık içerik eklerken bu yönteme çeşitli türler geçirilebilir:  
   
 - <xref:System.Xml.Linq.XObject>  
   
@@ -45,49 +45,49 @@ Bu konuda, Oluşturucular ve öğelerini ve belgeleri için içerik eklemek içi
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- Uygulayan herhangi bir tür <xref:System.Collections.Generic.IEnumerable%601>  
+- Uygulayan herhangi bir tür<xref:System.Collections.Generic.IEnumerable%601>  
   
- Bir nesne uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601>, koleksiyon nesnesi içinde listelenmiş ve koleksiyondaki tüm öğelerin eklenir. Koleksiyon içeriyorsa <xref:System.Xml.Linq.XNode> veya <xref:System.Xml.Linq.XAttribute> nesneler, koleksiyondaki her öğe ayrı olarak eklenir. Koleksiyon, metin (veya metne dönüştürülür nesneleri) içeriyorsa, koleksiyondaki metin birleştirilmiş ve tek bir metin düğümü olarak eklendi.  
+ Bir nesne uygularsa <xref:System.Collections.Generic.IEnumerable%601> , nesne içindeki koleksiyon numaralandırılır ve koleksiyondaki tüm öğeler eklenir. Koleksiyon <xref:System.Xml.Linq.XNode> veya <xref:System.Xml.Linq.XAttribute> nesneler içeriyorsa, koleksiyondaki her öğe ayrı ayrı eklenir. Koleksiyon metin içeriyorsa (veya metne dönüştürülen nesneler), koleksiyondaki metin birleştirilir ve tek bir metin düğümü olarak eklenir.  
   
- İçerik `null`, hiçbir şey eklenir. Ne zaman bir koleksiyon, koleksiyondaki öğeleri geçirme olabilir `null`. A `null` öğesi koleksiyonu ağaç üzerinde hiçbir etkisi olmaz.  
+ İçerik varsa `null` , hiçbir şey eklenmez. Koleksiyonda bir koleksiyon öğelerini geçirirken olabilir `null` . `null`Koleksiyondaki bir öğenin ağacı üzerinde hiçbir etkisi yoktur.  
   
- Eklenen bir öznitelik içeren öğe içinde benzersiz bir adı olmalıdır.  
+ Eklenen bir öznitelik, kapsayan öğesi içinde benzersiz bir ada sahip olmalıdır.  
   
- Eklerken <xref:System.Xml.Linq.XNode> veya <xref:System.Xml.Linq.XAttribute> nesneler, yeni içerik üstü yoksa, ardından nesneleri yalnızca bağlı XML ağacına. Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, ardından yeni içerik kopyalanmış olan ve yeni kopyalanan içeriği XML ağacına eklenir.  
+ <xref:System.Xml.Linq.XNode>Veya nesneleri eklerken <xref:System.Xml.Linq.XAttribute> , yeni içeriğin üst öğesi yoksa, nesneler yalnızca XML ağacına eklenir. Yeni içerik zaten üst öğe ise ve başka bir XML ağacının parçasıysa, yeni içerik kopyalanır ve yeni kopyalanan içerik XML ağacına eklenir.  
   
-## <a name="valid-content-for-documents"></a>Belgeler için geçerli içerik  
- Öznitelikler ve basit içerik belgeye eklenemiyor.  
+## <a name="valid-content-for-documents"></a>Belgeler için geçerli Içerik  
+ Öznitelikler ve basit içerik belgeye eklenemez.  
   
- Oluşturmak ihtiyacınız olan birçok senaryo yok bir <xref:System.Xml.Linq.XDocument>. Bunun yerine, XML ağaçları genellikle oluşturabileceğiniz bir <xref:System.Xml.Linq.XElement> kök düğümü. Sürece belge (örneğin, işleme yönergeleri ve açıklamalar en üst düzeyinde oluşturmak zorunda veya belge türlerini desteklemek zorunda olduğundan) oluşturmak için belirli bir gereksiniminiz olmadığı, genellikle daha rahat kullanmak <xref:System.Xml.Linq.XElement> , kök düğümü olarak.  
+ Oluşturmanız gereken pek çok senaryo yoktur <xref:System.Xml.Linq.XDocument> . Bunun yerine, genellikle bir kök düğümü olan XML ağaçlarınızı oluşturabilirsiniz <xref:System.Xml.Linq.XElement> . Bir belge oluşturmak için özel bir gereksinime sahip değilseniz (örneğin, en üst düzeyde işlem yönergeleri ve açıklamalar oluşturmanız veya belge türlerini desteklemeniz gerektiğinden), genellikle <xref:System.Xml.Linq.XElement> kök düğümünüz olarak kullanılması daha uygundur.  
   
- Bir belge için geçerli içerik aşağıdakileri içerir:  
+ Bir belge için geçerli içerik şunları içerir:  
   
-- Sıfır veya bir <xref:System.Xml.Linq.XDocumentType> nesneleri. Belge türlerini öğeden önce gelmelidir.  
+- Sıfır veya bir <xref:System.Xml.Linq.XDocumentType> nesne. Belge türlerinin öğeden önce gelmesi gerekir.  
   
 - Sıfır veya bir öğe.  
   
 - Sıfır veya daha fazla açıklama.  
   
-- Sıfır veya daha fazla işleme yönergeleri.  
+- Sıfır veya daha fazla işleme yönergesi.  
   
-- Yalnızca sıfır veya daha fazla metin düğümleri boşluk.  
+- Yalnızca boşluk içeren sıfır veya daha fazla metin düğümü.  
   
-## <a name="constructors-and-functions-that-allow-adding-content"></a>Oluşturucular ve içerik eklemeye izin ver işlevleri  
- Alt içeriğin eklemek aşağıdaki yöntemlerden izin bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>:  
+## <a name="constructors-and-functions-that-allow-adding-content"></a>Içerik eklemeye Izin veren oluşturucular ve Işlevler  
+ Aşağıdaki yöntemler bir veya öğesine alt içerik eklemenize olanak tanır <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XDocument> :  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.%23ctor%2A>|Oluşturur bir <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Oluşturur bir <xref:System.Xml.Linq.XDocument>.|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Alt öğe içeriğini sonuna ekler <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XDocument>.|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Sonra içerik ekler <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Önce içeriği ekler <xref:System.Xml.Linq.XNode>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|İçeriği, içerik alt başında ekler <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|Tüm içeriğini (alt düğümleri ve öznitelikleri) yerini alan bir <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|Özniteliklerini değiştirir bir <xref:System.Xml.Linq.XElement>.|  
-|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Alt düğüm, yeni içerikle değiştirir.|  
-|<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Bir düğüm, yeni içerikle değiştirir.|  
+|<xref:System.Xml.Linq.XElement.%23ctor%2A>|Oluşturur <xref:System.Xml.Linq.XElement> .|  
+|<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Bir oluşturur <xref:System.Xml.Linq.XDocument> .|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Veya alt içeriğinin sonuna ekler <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XDocument> .|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Öğesinden sonra içerik ekler <xref:System.Xml.Linq.XNode> .|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Öğesinden önce içerik ekler <xref:System.Xml.Linq.XNode> .|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Öğesinin alt içeriğinin başlangıcına içerik ekler <xref:System.Xml.Linq.XContainer> .|  
+|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|Bir öğesinin tüm içeriğini (alt düğümleri ve öznitelikleri) değiştirir <xref:System.Xml.Linq.XElement> .|  
+|<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|İçindeki özniteliklerini değiştirir <xref:System.Xml.Linq.XElement> .|  
+|<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Alt düğümleri yeni içerikle değiştirir.|  
+|<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Bir düğümü yeni içerikle değiştirir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML ağaçları (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ağaçları oluşturma (Visual Basic)](creating-xml-trees.md)

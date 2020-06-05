@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: a16dae35bf4bc84d95501624c4f023f390a8dda8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c46d06dba61158d7362d736731161be306af3f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351432"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392151"
 ---
 # <a name="optional-visual-basic"></a>İsteğe Bağlı (Visual Basic)
 
@@ -21,25 +21,25 @@ Yordam çağrıldığında bir yordam bağımsız değişkeninin atlanabileceği
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her isteğe bağlı parametre için, bu parametrenin varsayılan değeri olarak bir sabit ifade belirtmeniz gerekir. İfade [Nothing](../../../visual-basic/language-reference/nothing.md)olarak değerlendirilirse, değer veri türünün varsayılan değeri parametrenin varsayılan değeri olarak kullanılır.
+Her isteğe bağlı parametre için, bu parametrenin varsayılan değeri olarak bir sabit ifade belirtmeniz gerekir. İfade [Nothing](../nothing.md)olarak değerlendirilirse, değer veri türünün varsayılan değeri parametrenin varsayılan değeri olarak kullanılır.
 
 Parametre listesi isteğe bağlı bir parametre içeriyorsa, izleyen her parametrenin de isteğe bağlı olması gerekir.
 
-`Optional` değiştiricisi şu bağlamlarda kullanılabilir:
+`Optional`Değiştirici şu bağlamlarda kullanılabilir:
 
-- [Declare Deyimi](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Deyimi](../statements/declare-statement.md)
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
 
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-
-> [!NOTE]
-> İsteğe bağlı parametreleri olan veya içermeyen bir yordamı çağırırken bağımsız değişkenleri konuma veya ada göre geçirebilirsiniz. Daha fazla bilgi için bkz. [bağımsız değişkenleri konuma ve ada göre geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+- [Sub Deyimi](../statements/sub-statement.md)
 
 > [!NOTE]
-> Ayrıca, aşırı yükleme kullanarak isteğe bağlı parametrelerle bir yordam tanımlayabilirsiniz. İsteğe bağlı bir parametreye sahipseniz, yordamın parametresini kabul eden bir tane olan biri olan iki aşırı yüklenmiş sürümü tanımlayabilirsiniz. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).
+> İsteğe bağlı parametreleri olan veya içermeyen bir yordamı çağırırken bağımsız değişkenleri konuma veya ada göre geçirebilirsiniz. Daha fazla bilgi için bkz. [bağımsız değişkenleri konuma ve ada göre geçirme](../../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).
+
+> [!NOTE]
+> Ayrıca, aşırı yükleme kullanarak isteğe bağlı parametrelerle bir yordam tanımlayabilirsiniz. İsteğe bağlı bir parametreye sahipseniz, yordamın parametresini kabul eden bir tane olan biri olan iki aşırı yüklenmiş sürümü tanımlayabilirsiniz. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](../../programming-guide/language-features/procedures/procedure-overloading.md).
 
 ## <a name="example"></a>Örnek
 
@@ -72,6 +72,6 @@ Aşağıdaki örnek, konumundan geçirilen bağımsız değişkenlerle ve ad ile
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parametre Listesi](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Parametre Listesi](../statements/parameter-list.md)
+- [İsteğe Bağlı Parametreler](../../programming-guide/language-features/procedures/optional-parameters.md)
+- [Anahtar sözcükler](../keywords/index.md)

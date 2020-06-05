@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c231f577d21028e9ef92f37c7ac5f7f1fe2aa3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602411"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415394"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>'Class' deyimi eşleşen bir 'End Class' ile bitmelidir
-`Class` başlatmak için kullanılan bir `Class` engelle; Bu nedenle yalnızca eşleşen bloğu başında görünebilir `End Class` blok sonlandırma deyimi. Ya da bir yedek sahip `Class` deyimi veya değil sona erdi, `Class` ile block `End Class`.  
+`Class`bir bloğu başlatmak için kullanılır `Class` ; Bu nedenle, bloğu sonlandıran eşleşen bir deyimle birlikte yalnızca bloğun başlangıcında görünebilirler `End Class` . Bir yedekli `Class` deyiminiz var veya kendi bloğundan sonlandırılamıyor `Class` `End Class` .  
   
- **Hata Kimliği:** BC30481  
+ **Hata kimliği:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bulmak ve gereksiz kaldırma `Class` deyimi.  
+- Gereksiz deyimin yerini bulun ve kaldırın `Class` .  
   
-- Sonlandırma `Class` ile eşleşen bir blok `End Class`.  
+- `Class`Bloğu eşleştirme ile sonuçlandırma `End Class` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Son \<anahtar sözcüğü > deyimi](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
-- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
+- [End \<keyword> ekstresi](../statements/end-keyword-statement.md)
+- [Class Deyimi](../statements/class-statement.md)

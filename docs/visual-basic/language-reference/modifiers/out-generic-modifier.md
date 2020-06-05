@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351417"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392099"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (Genel Değiştirici) (Visual Basic)
 
@@ -26,7 +26,7 @@ Daha fazla bilgi için bkz. [Kovaryans ve değişken varyans](../../programming-
 
 ## <a name="rules"></a>Kurallar
 
-Genel arabirimlerde ve temsilcilerde `Out` anahtar sözcüğünü kullanabilirsiniz.
+`Out`Genel arabirimlerde ve temsilcilerde anahtar sözcüğünü kullanabilirsiniz.
 
 Bir genel arabirimde, bir tür parametresi aşağıdaki koşullara uygunsa birlikte değişken olarak bildirilemez:
 
@@ -45,7 +45,7 @@ Visual Basic, temsilci türünü belirtmeden birlikte değişken arabirimlerde o
 
 ## <a name="behavior"></a>Davranış
 
-Covaryant türü parametresine sahip bir arabirim, yöntemlerinin tür parametresiyle belirtenlerden daha fazla türetilmiş tür döndürmesini sağlar. Örneğin, .NET Framework 4 ' te, <xref:System.Collections.Generic.IEnumerable%601>' de T yazın ve bir özel dönüştürme yöntemi kullanmadan `IEnumerable(Of String)` türünün bir nesnesini `IEnumerable(Of Object)` türünün bir nesnesine atayabilirsiniz.
+Covaryant türü parametresine sahip bir arabirim, yöntemlerinin tür parametresiyle belirtenlerden daha fazla türetilmiş tür döndürmesini sağlar. Örneğin, içinde .NET Framework 4 ' te, <xref:System.Collections.Generic.IEnumerable%601> T türü de birlikte değişken ise, `IEnumerable(Of String)` herhangi bir özel dönüştürme yöntemi kullanmadan türdeki bir nesneye türünün bir nesnesine atayabilirsiniz `IEnumerable(Of Object)` .
 
 Birlikte değişken temsilcisine aynı türde başka bir temsilci atanabilir, ancak daha türetilmiş bir genel tür parametresi olabilir.
 
@@ -64,4 +64,4 @@ Aşağıdaki örnek, bir covaryant genel temsilcisinin nasıl bildirilemeyeceği
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel Arabirimlerde Varyans](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [İçinde](in-generic-modifier.md)
