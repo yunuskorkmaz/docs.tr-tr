@@ -9,21 +9,21 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348941"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401803"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç ile İlgili Temel Bilgiler (Visual Basic)
 
-<xref:System.IO> Ad alanındaki sınıflar, sürücüler, dosyalar ve dizinler ile çalışmak için kullanılır.
+<xref:System.IO>Ad alanındaki sınıflar, sürücüler, dosyalar ve dizinler ile çalışmak için kullanılır.
 
-Ad alanı, dosyaları <xref:System.IO.File> ve <xref:System.IO.Directory> dizinleri işleyen .NET Framework işlevselliği sağlayan ve sınıflarını içerir. <xref:System.IO> Bu nesnelerin yöntemleri statik veya paylaşılan Üyeler olduğundan, bunları önce sınıfın bir örneğini oluşturmadan doğrudan kullanabilirsiniz. Bu sınıflarla ilişkili, <xref:System.IO.FileInfo> <xref:System.IO.DirectoryInfo> `My` özelliği kullanıcılarına tanıdık olacak ve sınıflardır. Bu sınıfları kullanmak için, etkilenen kodun başındaki `Imports` deyimleri dahil ederek adları tam olarak nitelemeniz veya uygun ad alanlarını içeri aktarmanız gerekir. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).
+<xref:System.IO>Ad alanı, <xref:System.IO.File> <xref:System.IO.Directory> dosyaları ve dizinleri işleyen .NET Framework işlevselliği sağlayan ve sınıflarını içerir. Bu nesnelerin yöntemleri statik veya paylaşılan Üyeler olduğundan, bunları önce sınıfın bir örneğini oluşturmadan doğrudan kullanabilirsiniz. Bu sınıflarla ilişkili, <xref:System.IO.FileInfo> <xref:System.IO.DirectoryInfo> özelliği kullanıcılarına tanıdık olacak ve sınıflardır `My` . Bu sınıfları kullanmak için, `Imports` etkilenen kodun başındaki deyimleri dahil ederek adları tam olarak nitelemeniz veya uygun ad alanlarını içeri aktarmanız gerekir. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).
 
 > [!NOTE]
-> Bu bölümdeki diğer konular, sürücüler, `My.Computer.FileSystem` dosyalar ve dizinler `System.IO` ile çalışmak için sınıflar yerine nesnesini kullanır. `My.Computer.FileSystem` Nesne öncelikle Visual Basic programlarında kullanılmak üzere tasarlanmıştır. `System.IO`sınıflar, Visual Basic dahil olmak üzere .NET Framework destekleyen herhangi bir dil tarafından kullanılmaya yöneliktir.
+> Bu bölümdeki diğer konular, `My.Computer.FileSystem` `System.IO` sürücüler, dosyalar ve dizinler ile çalışmak için sınıflar yerine nesnesini kullanır. `My.Computer.FileSystem`Nesne öncelikle Visual Basic programlarında kullanılmak üzere tasarlanmıştır. `System.IO`sınıflar, Visual Basic dahil olmak üzere .NET Framework destekleyen herhangi bir dil tarafından kullanılmaya yöneliktir.
 
 ## <a name="definition-of-a-stream"></a>Akışın tanımı
 
@@ -45,9 +45,9 @@ Daha fazla bilgi için bkz. [akış oluşturma](../../../../standard/io/composin
 
 ## <a name="types-of-streams"></a>Akış türleri
 
-.NET Framework, bir akış, diğer tüm akışlar için soyut <xref:System.IO.Stream> sınıfı oluşturan sınıfı tarafından temsil edilir. <xref:System.IO.Stream> Sınıfın bir örneğini doğrudan oluşturamazsınız, ancak uyguladığı sınıflardan birini kullanmanız gerekir.
+.NET Framework, bir akış, <xref:System.IO.Stream> diğer tüm akışlar için soyut sınıfı oluşturan sınıfı tarafından temsil edilir. Sınıfın bir örneğini doğrudan oluşturamazsınız <xref:System.IO.Stream> , ancak uyguladığı sınıflardan birini kullanmanız gerekir.
 
-Birçok tür akış vardır ancak dosya girişi/çıkışı (g/ç) ile çalışma amaçları için en önemli türler, dosyaları <xref:System.IO.FileStream> <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> okumak ve yazmak için bir yol ve yalıtılmış depolamada dosya ve dizinler oluşturmak için bir yol sağlayan sınıfı olan sınıftır. Dosya g/ç ile çalışırken kullanılabilecek diğer akışlar şunlardır:
+Birçok tür akış vardır ancak dosya girişi/çıkışı (g/ç) ile çalışma amaçları için en önemli türler, <xref:System.IO.FileStream> dosyaları okumak ve yazmak için bir yol ve <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> yalıtılmış depolamada dosya ve dizinler oluşturmak için bir yol sağlayan sınıfı olan sınıftır. Dosya g/ç ile çalışırken kullanılabilecek diğer akışlar şunlardır:
 
 - <xref:System.IO.BufferedStream>
 
@@ -71,9 +71,9 @@ Aşağıdaki tabloda, bir akışta yaygın olarak gerçekleştirilen görevler l
 
 ## <a name="file-access-and-attributes"></a>Dosya erişimi ve öznitelikleri
 
-<xref:System.IO.FileAccess>Dosyaların oluşturucular <xref:System.IO.FileMode> <xref:System.IO.FileStream> tarafından kullanılan bayrakları içeren,, ve <xref:System.IO.FileShare> numaralandırmalar ile dosyaların nasıl oluşturulduğunu, açılacağını ve paylaşılacağını denetleyebilirsiniz. Örneğin, yeni bir kez <xref:System.IO.FileStream>açtığınızda veya oluşturduğunuz zaman <xref:System.IO.FileMode> numaralandırma, dosyanın ekleme için açılıp açılmadığını, belirtilen dosya mevcut değilse yeni bir dosyanın oluşturulup oluşturulmayacağını, dosyanın üzerine yazılıp yazılmayacağını ve bu şekilde devam etmenizi belirtmenize olanak tanır.
+Dosyaların <xref:System.IO.FileAccess> <xref:System.IO.FileMode> <xref:System.IO.FileShare> oluşturucular tarafından kullanılan bayrakları içeren,, ve numaralandırmalar ile dosyaların nasıl oluşturulduğunu, açılacağını ve paylaşılacağını denetleyebilirsiniz <xref:System.IO.FileStream> . Örneğin, yeni bir kez açtığınızda veya oluşturduğunuz zaman <xref:System.IO.FileStream> <xref:System.IO.FileMode> numaralandırma, dosyanın ekleme için açılıp açılmadığını, belirtilen dosya mevcut değilse yeni bir dosyanın oluşturulup oluşturulmayacağını, dosyanın üzerine yazılıp yazılmayacağını ve bu şekilde devam etmenizi belirtmenize olanak tanır.
 
-<xref:System.IO.FileAttributes> Sabit listesi, dosyaya özgü bilgilerin toplanmasında izin vermez. <xref:System.IO.FileAttributes> Sabit listesi, sıkıştırılmış, şifreli, gizli, salt okunurdur, arşiv, dizin, sistem dosyası veya geçici bir dosya gibi dosyanın depolanmış özniteliklerini döndürür.
+<xref:System.IO.FileAttributes>Sabit listesi, dosyaya özgü bilgilerin toplanmasında izin vermez. <xref:System.IO.FileAttributes>Sabit listesi, sıkıştırılmış, şifreli, gizli, salt okunurdur, arşiv, dizin, sistem dosyası veya geçici bir dosya gibi dosyanın depolanmış özniteliklerini döndürür.
 
 Aşağıdaki tabloda dosya erişimi ve dosya öznitelikleri içeren görevler listelenmiştir:
 
@@ -104,11 +104,11 @@ Aşağıdaki tabloda, yalıtılmış dosya depolama ile yaygın olarak ilişkili
 
 ## <a name="file-events"></a>Dosya olayları
 
-Bileşeni <xref:System.IO.FileSystemWatcher> , sisteminizdeki veya ağ erişiminizin olduğu herhangi bir bilgisayardaki dosyalardaki veya dizinlerdeki değişiklikler için izleme yapmanıza olanak sağlar. Örneğin, bir dosya değiştirilirse, kullanıcının değişikliğin gerçekleştiğinden ilgili bir uyarı göndermek isteyebilirsiniz. Değişiklikler gerçekleştiğinde, bir veya daha fazla olay tetiklenir, bir arabellekte depolanır ve işlemek için <xref:System.IO.FileSystemWatcher> bileşene geçirir.
+<xref:System.IO.FileSystemWatcher>Bileşeni, sisteminizdeki veya ağ erişiminizin olduğu herhangi bir bilgisayardaki dosyalardaki veya dizinlerdeki değişiklikler için izleme yapmanıza olanak sağlar. Örneğin, bir dosya değiştirilirse, kullanıcının değişikliğin gerçekleştiğinden ilgili bir uyarı göndermek isteyebilirsiniz. Değişiklikler gerçekleştiğinde, bir veya daha fazla olay tetiklenir, bir arabellekte depolanır ve <xref:System.IO.FileSystemWatcher> işlemek için bileşene geçirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)
 - [Dosya ve akış g/ç](../../../../standard/io/index.md)
 - [Zaman uyumsuz dosya g/ç](../../../../standard/io/asynchronous-file-i-o.md)
-- [Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)](classes-used-in-net-framework-file-io-and-the-file-system.md)

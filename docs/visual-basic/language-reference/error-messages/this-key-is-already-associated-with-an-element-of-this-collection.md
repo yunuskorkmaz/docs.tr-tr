@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID457
 ms.assetid: 52e15795-907e-4b10-acb7-5c37a76ce594
-ms.openlocfilehash: 1d374304e19d94ed33dc8d44caf4d6601c8e7ae2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b798b099d648617733c4aec07f0892024f505d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649104"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362949"
 ---
 # <a name="this-key-is-already-associated-with-an-element-of-this-collection"></a>Bu anahtar bu koleksiyonun bir öğesi ile zaten ilişkili
-Koleksiyon üyesi zaten başka bir koleksiyonun üyesi tanımlar için bir anahtar belirtilmiş. Bir anahtar belirtilen bir dizedir `Add` belirli bir koleksiyonun üyesi benzersiz olarak tanımlayan yöntemi.  
+Bir koleksiyon üyesi için belirtilen bir anahtar zaten koleksiyonun başka bir üyesini tanımlıyor. Anahtar, `Add` bir koleksiyonun belirli bir üyesini benzersiz bir şekilde tanımlayan yöntemde belirtilen bir dizedir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -20,4 +20,4 @@ Koleksiyon üyesi zaten başka bir koleksiyonun üyesi tanımlar için bir anaht
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Türleri](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Hata Türleri](../../programming-guide/language-features/error-types.md)

@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: 6d5f9d38b413b79f111a14ec3829c57a9797ce54
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4dbe6146b70181864a6717146071f9b93a1f583e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346720"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414575"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Nasıl yapılır: Koleksiyon Başlatıcısı Tarafından Kullanılan Bir Uzantı Ekleme Yöntemi Oluşturma (Visual Basic)
-Koleksiyon oluşturmak için bir koleksiyon başlatıcısı kullandığınızda Visual Basic derleyici, koleksiyon başlatıcısındaki değerlerin türleriyle eşleşen `Add` yöntemi için parametrelerin `Add` yöntemini arar. Bu `Add` yöntemi, koleksiyonu koleksiyon başlatıcısındaki değerlerle doldurmak için kullanılır.  
+Koleksiyon oluşturmak için bir koleksiyon başlatıcısı kullandığınızda, Visual Basic derleyici, `Add` yöntemi için parametrelerin `Add` koleksiyon başlatıcısındaki değerlerin türleriyle eşleştiği koleksiyon türünde bir yöntemi arar. Bu `Add` Yöntem, koleksiyonu koleksiyon başlatıcısındaki değerlerle doldurmak için kullanılır.  
   
- Eşleşen bir `Add` yöntemi yoksa ve koleksiyon için kodu değiştiremeyeceğiniz takdirde, koleksiyon başlatıcısı tarafından gereken parametreleri alan `Add` adlı bir uzantı yöntemi ekleyebilirsiniz. Genel Koleksiyonlar için koleksiyon başlatıcıları kullandığınızda bu genellikle yapmanız gereken şeydir.  
+ Eşleşen `Add` bir yöntem yoksa ve koleksiyon için kodu değiştiremeyeceğiniz takdirde, `Add` koleksiyon başlatıcısı tarafından gereken parametreleri alan adlı bir genişletme yöntemi ekleyebilirsiniz. Genel Koleksiyonlar için koleksiyon başlatıcıları kullandığınızda bu genellikle yapmanız gereken şeydir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir koleksiyon başlatıcısının `Employee`türündeki nesneleri eklemek için kullanılabilmesi için genel <xref:System.Collections.Generic.List%601> türüne bir genişletme yönteminin nasıl ekleneceğini gösterir. Genişletme yöntemi, kısaltılmış koleksiyon başlatıcısı sözdizimini kullanmanıza olanak sağlar.  
+ Aşağıdaki örnek, <xref:System.Collections.Generic.List%601> bir koleksiyon başlatıcısının tür nesneleri eklemek için kullanılabilmesi için genel türe bir genişletme yönteminin nasıl ekleneceğini gösterir `Employee` . Genişletme yöntemi, kısaltılmış koleksiyon başlatıcısı sözdizimini kullanmanıza olanak sağlar.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   
@@ -27,5 +27,5 @@ Koleksiyon oluşturmak için bir koleksiyon başlatıcısı kullandığınızda 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğe Başlatıcıları](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)
+- [Koleksiyon Başlatıcıları](index.md)
+- [Nasıl yapılır: Öğe Başlatıcısı Tarafından Kullanılan Bir Koleksiyon Oluşturma](how-to-create-a-collection-used-by-a-collection-initializer.md)

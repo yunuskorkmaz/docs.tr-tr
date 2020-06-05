@@ -18,46 +18,46 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 20a33478f622fca6d3183772f53dcb3e72f79409
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 7d76e2e7398c2f954ff4274f77ffa350efbd3617
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266891"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410753"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic'de Gölgeleme
-İki programlama öğesi aynı adı paylaştığında, bunlardan biri gizleyebilir veya diğeri *gölgelenebilir.* Böyle bir durumda, gölgeli öğe başvuru için kullanılamaz; bunun yerine, kodunuz öğe adını kullandığında, Visual Basic derleyicisi onu gölgeleme öğesine çözer.  
+İki programlama öğesi aynı adı paylaşıyorsa, bunlardan biri diğer birini gizleyebilir veya *gölgelendirebilir*. Böyle bir durumda, gölgelendirilmiş öğe başvuru için kullanılamaz; Bunun yerine, kodunuz öğe adını kullandığında, Visual Basic derleyici onu gölgeleme öğesine çözer.  
   
 ## <a name="purpose"></a>Amaç  
- Gölgelemenin temel amacı, sınıf üyelerinizin tanımını korumaktır. Taban sınıf, daha önce tanımladığınız öğeyle aynı ada sahip bir öğe oluşturan bir değişikliğe uğrayabilir. Bu durumda, `Shadows` değiştirici başvuruları sınıfınız aracılığıyla yeni taban sınıf öğesi yerine tanımladığınız üyeye çözümlenecek şekilde zorlar.  
+ Gölgeleme için ana amaç, sınıf üyelerinizin tanımını koruyasağlamaktır. Temel sınıf, zaten tanımlamış olduğunuz adla aynı ada sahip bir öğe oluşturan bir değişikliği olumsuz etkileyebilir. Bu durumda, değiştirici, `Shadows` sınıfınızın içindeki başvuruyu, yeni temel sınıf öğesi yerine tanımladığınız üyeye çözümlenmeye zorlar.  
   
-## <a name="types-of-shadowing"></a>Gölgeleme Türleri  
- Bir öğe başka bir öğeyi iki farklı şekilde gölgeleyebilir. Gölgeleme öğesi, gölgeli öğeyi içeren bölgenin bir alt bölgesi içinde bildirilebilir ve bu durumda gölgeleme *kapsam boyunca*gerçekleştirilir. Veya türeyen bir sınıf, bir taban sınıfın üyesini yeniden tanımlayabilir, bu durumda gölgeleme *devralma yoluyla*yapılır.  
+## <a name="types-of-shadowing"></a>Gölgeleme türleri  
+ Bir öğe, başka bir öğeyi iki farklı şekilde gölgelendirebilir. Gölgeleme öğesi, gölgeli öğeyi içeren bölgenin bir alt bölgesi içinde, bu durumda gölgeleme *kapsam aracılığıyla*yapılır. Ya da türetilen bir sınıf temel sınıfın bir üyesini yeniden tanımlayabilir, bu durumda gölgeleme *Devralma yoluyla*yapılır.  
   
-### <a name="shadowing-through-scope"></a>Kapsam Boyunca Gölgeleme  
- Aynı modül, sınıf veya yapıdaki programlama öğelerinin aynı ada ancak farklı bir kapsama sahip olması mümkündür. İki öğe bu şekilde bildirildiğinde ve kod paylaştıkları adı ifade ettiğinde, dar kapsama sahip öğe diğer öğeyi gölgeler (blok kapsamı en dardır).  
+### <a name="shadowing-through-scope"></a>Kapsam üzerinden gölgeleme  
+ Aynı modül, sınıf veya yapıdaki öğelerin aynı ada ancak farklı kapsama sahip olması için programlama mümkündür. İki öğe bu şekilde bildirildiğinde ve kod paylaştıkları ada başvuruyorsa, dar kapsamdaki öğe diğer öğeyi (blok kapsamı en dar).  
   
- Örneğin, bir modül adlı `Public` `temp`bir değişken tanımlayabilir ve modül içindeki bir `temp`yordam da adlı yerel bir değişken bildirebilir. Yordam `temp` ın içinden yapılan başvurular yerel değişkene erişirken, yordamın dışından gelen başvurular değişkene `temp` erişir. `Public` Bu durumda, yordam `temp` değişkeni modül `temp`değişkenini gölgeler.  
+ Örneğin, bir modül adlı bir değişken tanımlayabilir `Public` `temp` ve modül içindeki bir yordam de adında bir yerel değişken bildirebilir `temp` . Yordamın içinden öğesine yapılan başvurular, `temp` `temp` değişkene erişen yordamın dışından yapılan başvurular için yerel değişkene erişir `Public` . Bu durumda, yordam değişkeni `temp` Modül değişkenini gölgeliyor `temp` .  
   
- Aşağıdaki resimde, her ikisi de `temp`. Yerel değişken, `temp` üye değişkeni `temp` kendi yordamı `p`içinden erişildiğinde gölgeler. Ancak, `MyClass` anahtar kelime gölgeleme atlar ve üye değişkenerişer.  
+ Aşağıdaki çizimde, adında iki değişken gösterilmektedir `temp` . Yerel değişken, `temp` `temp` kendi yordamı içinde erişildiğinde üye değişkenini gölgeliyor `p` . Ancak `MyClass` anahtar sözcüğü, gölgelendirmeyi atlar ve üye değişkenine erişir.  
   
- ![Kapsam boyunca gölgeleme gösteren grafik.](./media/shadowing/shadow-scope-diagram.gif)
+ ![Kapsam aracılığıyla gölgelendirmeyi gösteren grafik.](./media/shadowing/shadow-scope-diagram.gif)
   
- Kapsam boyunca gölgeleme örneği için [bkz: Değişkeninizle aynı ada sahip bir Değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ Kapsam üzerinden gölgeleme örneği için bkz. [nasıl yapılır: Değişkeninizle Aynı ada sahip bir değişkeni gizleme](how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
-### <a name="shadowing-through-inheritance"></a>Devralma Yoluyla Gölgeleme  
- Türetilmiş bir sınıf, taban sınıftan devralınan bir programlama öğesini yeniden tanımlıyorsa, yeniden tanımlayan öğe özgün öğeyi gölgeler. Beyan edilen öğe nin herhangi bir türünü veya aşırı yüklü öğeler kümesini başka bir türle gölgeleyebilirsiniz. Örneğin, bir `Integer` değişken bir `Function` yordamı gölgeleyebilir. Bir yordamı başka bir yordamla gölgelerseniz, farklı bir parametre listesi ve farklı bir iade türü kullanabilirsiniz.  
+### <a name="shadowing-through-inheritance"></a>Devralma yoluyla gölgeleme  
+ Türetilmiş bir sınıf, temel sınıftan devralınan bir programlama öğesini yeniden tanımlar, yeniden tanımlama öğesi orijinal öğeyi gölmelidir. Herhangi bir tür tanımlanmış öğeyi veya daha fazla öğe kümesini başka herhangi bir türle gölgelendirebilir. Örneğin, bir `Integer` değişken bir yordamı gölgelendirebilir `Function` . Bir yordamı başka bir yordamla gölgelendirmek istiyorsanız farklı bir parametre listesi ve farklı bir dönüş türü kullanabilirsiniz.  
   
- Aşağıdaki resimde bir taban `b` sınıf ve `d` devralan `b`türetilmiş bir sınıf gösterilmektedir. Taban sınıf adlı `proc`bir yordam tanımlar ve türemiş sınıf aynı adı taşıyan başka bir yordam ile gölgeler. İlk `Call` deyim, türemiş `proc` sınıftaki gölgeleme erişirebedilir. Ancak, `MyBase` anahtar kelime gölgeleme atlar ve temel sınıfta gölgeli yordamı erişer.  
+ Aşağıdaki çizimde, bir temel sınıf `b` ve öğesinden devralan türetilmiş bir sınıf gösterilmektedir `d` `b` . Temel sınıf adlı bir yordamı tanımlar `proc` ve türetilmiş sınıf onu aynı ada sahip başka bir yordamla birlikte gölgeler. İlk `Call` ifade, türetilmiş sınıftaki gölgelendirme erişir `proc` . Ancak `MyBase` anahtar sözcüğü, gölgelendirmeyi atlar ve temel sınıftaki gölgelendirilmiş yordama erişir.  
   
- ![Kalıtım yoluyla gölgelemegrafik diyagramı](./media/shadowing/shadowing-inherit-diagram.gif)  
+ ![Devralma yoluyla gölgeleme grafik Diyagramı](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- Devralma yoluyla gölgeleme örneği için [bkz: Değişkeninizle Aynı Ada sahip Bir Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) ve [Nasıl Gizleni: Devralınan Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ Devralma yoluyla gölgeleme örneği için bkz. [nasıl yapılır: Değişkeninizle Aynı ada sahip bir değişkeni gizleme](how-to-hide-a-variable-with-the-same-name-as-your-variable.md) ve [nasıl yapılır: devralınan bir değişkeni gizleme](how-to-hide-an-inherited-variable.md).  
   
-#### <a name="shadowing-and-access-level"></a>Gölgeleme ve Erişim Düzeyi  
- Gölgeleme öğesine türetilmiş sınıfı kullanarak koddan her zaman erişilemez. Örneğin, '. `Private` Böyle bir durumda, gölgeleme yenir ve derleyici, gölgeleme olmasaydı aynı öğeye herhangi bir başvuruyu çözer. Bu öğe, gölgeleme sınıfından geriye doğru en az türev basamakları erişilebilir öğedir. Gölgeli öğe bir yordamsa, çözünürlük aynı ada, parametre listesine ve iade türüne sahip en yakın erişilebilir sürüme verilir.  
+#### <a name="shadowing-and-access-level"></a>Gölgeleme ve erişim düzeyi  
+ Gölgeleme öğesine, türetilmiş sınıf kullanılarak her zaman koddan erişilebilir. Örneğin, bu durum bildirilmiştir `Private` . Böyle bir durumda, gölgeleme ertelenmiş olur ve bir gölgeleme yoksa, derleyici aynı öğeye yapılan herhangi bir başvuruyu çözer. Bu öğe, gölgeleme sınıfından en az bir adım daha doğru olan erişilebilir öğedir. Gölgelendirilmiş öğe bir yordamdır, çözüm aynı ada, parametre listesine ve dönüş türüne sahip en yakın erişilebilir sürüme göre yapılır.  
   
- Aşağıdaki örnekte, üç sınıfın kalıtım hiyerarşisi gösterilmektedir. Her sınıf bir `Sub` `display`yordam tanımlar ve türetilen `display` her sınıf yordamı kendi taban sınıfında gölgeler.  
+ Aşağıdaki örnekte, üç sınıfın devralma hiyerarşisi gösterilmektedir. Her sınıf bir `Sub` yordamı tanımlar `display` ve türetilmiş her sınıf, `display` yordamı temel sınıfında gölmelidir.  
   
 ```vb  
 Public Class firstClass  
@@ -92,23 +92,23 @@ Module callDisplay
 End Module  
 ```  
   
- Önceki örnekte, türemiş `secondClass` sınıf `display` bir `Private` yordam ile gölgeler. Modül `callDisplay` `display` `secondClass`aradığında, arama kodu `secondClass` dışarıdadır ve bu `display` nedenle özel yordama erişemez. Gölgeleme yenilir ve derleyici temel sınıf `display` yordamına başvuru çözer.  
+ Önceki örnekte, türetilmiş sınıf `secondClass` `display` bir yordam ile gölgeler `Private` . Modül `callDisplay` içinde çağırdığında `display` `secondClass` , çağıran kod dışarıda olur `secondClass` ve bu nedenle özel `display` yordama erişemez. Gölgeleme ertelenmiş ve derleyici, temel sınıf yordamının başvurusunu çözümlüyor `display` .  
   
- Ancak, türetilen `thirdClass` sınıf `display` `Public`, kod `callDisplay` erişebilmek için bildirir.  
+ Bununla birlikte, diğer türetilmiş sınıf `thirdClass` `display` olarak bildirilir `Public` , bu nedenle içindeki kod `callDisplay` buna erişebilir.  
   
-## <a name="shadowing-and-overriding"></a>Gölgeleme ve Geçersiz Kılma  
- Gölgeleme ile geçersiz kılmayı karıştırmayın. Her ikisi de türetilmiş bir sınıf bir taban sınıftan devraldığında kullanılır ve her ikisi de bir bildirilen öğeyi başka bir öğeyle yeniden tanımlar. Ama ikisi arasında önemli farklar vardır. Karşılaştırma için, [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar'a](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)bakın.  
+## <a name="shadowing-and-overriding"></a>Gölgeleme ve geçersiz kılma  
+ Geçersiz kılma ile gölgelendirmeyi karıştırmayın. Her ikisi de türetilmiş bir sınıf temel sınıftan devralındığında ve her ikisi de bir beyan edilen öğeyi başka bir ile yeniden tanımlayarak kullanılır. Ancak ikisi arasında önemli farklılıklar vardır. Karşılaştırma için bkz. [gölgeleme ve geçersiz kılma arasındaki farklar](differences-between-shadowing-and-overriding.md).  
   
-## <a name="shadowing-and-overloading"></a>Gölgeleme ve Aşırı Yükleme  
- Türemiş sınıfınızda birden fazla öğeyle aynı taban sınıf öğesini gölgelerseniz, gölgeleme öğeleri bu öğenin aşırı yüklenmiş sürümleri haline gelir. Daha fazla bilgi için [bkz.](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+## <a name="shadowing-and-overloading"></a>Gölgeleme ve aşırı yükleme  
+ Türetilmiş sınıfınıza birden fazla öğe ile aynı temel sınıf öğesini gölgelendirebiliyorsanız, gölgeleme öğeleri o öğenin aşırı yüklenmiş sürümleri haline gelir. Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](../procedures/procedure-overloading.md).  
   
-## <a name="accessing-a-shadowed-element"></a>Gölgeli Öğeye Erişim  
- Türemiş bir sınıftan bir öğeye erişdiğinizde, normalde bunu türemiş sınıfın geçerli örneği `Me` aracılığıyla, öğe adını anahtar kelimeyle niteleyerek yaparsınız. Türemiş sınıfınız taban sınıftaki öğeyi gölgelerse, anahtar kelimeyle niteleyerek taban sınıf öğesine `MyBase` erişebilirsiniz.  
+## <a name="accessing-a-shadowed-element"></a>Gölgelendirilmiş bir öğeye erişme  
+ Türetilmiş bir sınıftan bir öğeye eriştiğinizde, genellikle bu türetilmiş sınıfın geçerli örneği aracılığıyla, öğe adını anahtar sözcüğüyle niteleyerek yapabilirsiniz `Me` . Türetilmiş sınıfınız temel sınıftaki öğesini göltiği, anahtar sözcüğü ile niteleyerek temel sınıf öğesine erişebilirsiniz `MyBase` .  
   
- Gölgeli bir öğeye erişmek için [bkz: Türemiş Sınıf tarafından gizlenmiş bir değişkene erişim.](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ Gölgelendirilmiş bir öğeye erişme örneği için bkz. [nasıl yapılır: türetilmiş bir sınıf tarafından gizlenen bir değişkene erişme](how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
-### <a name="declaration-of-the-object-variable"></a>Nesne Değişkeninin Bildirimi  
- Nesne değişkenini nasıl oluşturduğunuz, türemiş sınıfın gölgeleme öğesine mi yoksa gölgeli öğeye mi erişeceğini de etkileyebilir. Aşağıdaki örnektüre bir sınıftan iki nesne oluşturur, ancak bir nesne taban sınıf ve diğer türemiş sınıf olarak bildirilir.  
+### <a name="declaration-of-the-object-variable"></a>Nesne değişkeninin bildirimi  
+ Nesne değişkenini nasıl oluşturacağınız, türetilmiş sınıfın bir gölgeleme öğesine mi yoksa gölgelendirilmiş öğeye mi eriştiğini de etkileyebilir. Aşağıdaki örnek, türetilmiş bir sınıftan iki nesne oluşturur, ancak bir nesne temel sınıf olarak ve diğeri türetilmiş sınıf olarak bildirilmiştir.  
   
 ```vb  
 Public Class baseCls  
@@ -135,14 +135,14 @@ Public Class useClasses
 End Class  
 ```  
   
- Önceki örnekte, değişken `basObj` taban sınıf olarak bildirilir. Bir `dervCls` nesneyi ona atamak genişleyen bir dönüşüm oluşturur ve bu nedenle geçerlidir. Ancak, taban sınıf türetilmiş sınıfta değişkenin `z` gölgeleme sürümüne erişemez, `basObj.z` bu nedenle derleyici özgün taban sınıf değerine giderir.  
+ Önceki örnekte, değişkeni `basObj` temel sınıf olarak bildirilmiştir. Nesnesine bir `dervCls` nesne atamak, genişleyen dönüştürme oluşturur ve bu nedenle geçerli olur. Ancak, temel sınıf türetilmiş sınıftaki değişkeninin gölgeleme sürümüne erişemez `z` , bu nedenle derleyici `basObj.z` özgün temel sınıf değerine çözümlenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic'de Kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Bildirilmiş Öğelere Başvurular](references-to-declared-elements.md)
+- [Visual Basic'de Kapsam](scope.md)
+- [Genişletme ve Daraltma Dönüşümleri](../data-types/widening-and-narrowing-conversions.md)
+- [Shadows](../../../language-reference/modifiers/shadows.md)
+- [Geçersiz Kılmalar](../../../language-reference/modifiers/overrides.md)
+- [Me, My, MyBase ve MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [Devralma Temelleri](../objects-and-classes/inheritance-basics.md)

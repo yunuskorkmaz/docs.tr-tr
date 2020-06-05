@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e36b84252c3d8762308e95323b8e284977df8c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649848"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409770"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Sabitler iç veya numaralandırılmış türde olmalıdır; sınıf, yapı, tür parametresi veya dizi türünde olamaz
-Bir sınıf, yapı ya da dizi türü veya içeren bir genel türü tarafından tanımlanan bir tür parametresi olarak bir sabit bildirme girişiminde bulundunuz.  
+Bir sabiti sınıf, yapı veya dizi türü olarak ya da içeren bir genel tür tarafından tanımlanan bir tür parametresi olarak bildirmeye çalıştınız.  
   
- Sabitler iç bir türde olması gerekir (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, veya `UShort`), veya bir `Enum` türüne göre bir integral türleri.  
+ Sabitler bir iç tür (,,,,,,,,,,,,,,,,,,,,,,, `Boolean` `Byte` `Date` `Decimal` `Double` `Integer` `Long` `Object` `SByte` `Short` `Single` `String` `UInteger` `ULong` veya `UShort` ) olmalıdır veya `Enum` integral türlerinden birini temel alan bir tür olmalıdır.  
   
- **Hata Kimliği:** BC30424  
+ **Hata kimliği:** BC30424  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Bir iç öğe olarak bir sabit bildirme veya `Enum` türü.  
+1. Sabiti bir iç veya tür olarak bildirin `Enum` .  
   
-2. Bir sabit ayrıca özel bir değer gibi olabilir `True`, `False`, veya `Nothing`. Derleyici iç türü uygun olması için önceden tanımlanmış bu değerleri göz önünde bulundurur.  
+2. Bir sabit,, veya gibi özel bir değer de `True` olabilir `False` `Nothing` . Derleyici, bu önceden tanımlı değerleri uygun iç türden olacak şekilde değerlendirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
+- [Sabitler ve numaralandırmalar](../constants-and-enumerations.md)
+- [Veri türleri](../../programming-guide/language-features/data-types/index.md)
+- [Veri türleri](../data-types/index.md)

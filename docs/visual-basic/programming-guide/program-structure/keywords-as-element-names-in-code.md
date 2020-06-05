@@ -1,5 +1,5 @@
 ---
-title: Kodda Öğe Adları Olarak Anahtar Sözcükler
+title: Code’da Öğe Adları Olarak Anahtar Sözcükler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, naming conventions
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347389"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403232"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Kodda Öğe Adları Olarak Anahtar Sözcükler (Visual Basic)
-Değişken, sınıf veya üye gibi herhangi bir program öğesi, kısıtlanmış bir anahtar sözcükle aynı ada sahip olabilir. Örneğin, `Loop`adlı bir değişken oluşturabilirsiniz. Bununla birlikte, kısıtlanmış `Loop` anahtar sözcüğüyle aynı ada sahip olan kendi sürümünüze başvurmak için, aşağıdaki örnekte gösterildiği gibi, tam nitelendirme dizesiyle önce veya köşeli ayraç (`[ ]`) içine almanız gerekir.  
+Değişken, sınıf veya üye gibi herhangi bir program öğesi, kısıtlanmış bir anahtar sözcükle aynı ada sahip olabilir. Örneğin, adlı bir değişken oluşturabilirsiniz `Loop` . Bununla birlikte, kısıtlanmış anahtar sözcüğüyle aynı ada sahip olan kendi sürümünüze başvurmak için, `Loop` `[ ]` Aşağıdaki örnekte gösterildiği gibi, tam nitelendirme dizesi ile önce veya köşeli ayraç () içine almanız gerekir.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- Bunlardan birini yapmazsanız, Visual Basic iç `Loop` anahtar sözcüğünün kullanımını varsayar ve aşağıdaki örnekte olduğu gibi bir hata üretir:  
+ Bunlardan herhangi birini yapmazsanız, Visual Basic iç `Loop` anahtar sözcüğünün kullanımını varsayar ve aşağıdaki örnekte olduğu gibi bir hata üretir:  
   
  `' The following statement causes a compiler error.`  
   
@@ -32,6 +32,6 @@ Değişken, sınıf veya üye gibi herhangi bir program öğesi, kısıtlanmış
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic Adlandırma Kuralları](naming-conventions.md)
+- [Program yapısı ve kod kuralları](program-structure-and-code-conventions.md)
+- [Anahtar sözcükler](../../language-reference/keywords/index.md)

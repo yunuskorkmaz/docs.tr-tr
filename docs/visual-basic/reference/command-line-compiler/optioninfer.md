@@ -8,33 +8,33 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775613"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400584"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
   
-|Sözleşme Dönemi|Tanım|  
+|Terim|Tanım|  
 |---|---|  
-|`+`&#124;`-`|İsteğe bağlı. Yerel `-optioninfer+` tür çıkarımını etkinleştirmek veya `-optioninfer-` engellemek için belirtin. Belirtilen `-optioninfer` değer olmadan seçeneği, ile aynıdır `-optioninfer+`. `-optioninfer` Anahtar mevcut olmadığında varsayılan değer de `-optioninfer+`vardır. Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
+|`+`&#124;`-`|İsteğe bağlı. `-optioninfer+`Yerel tür çıkarımını etkinleştirmek veya engellemek için belirtin `-optioninfer-` . `-optioninfer`Belirtilen değer olmadan seçeneği, ile aynıdır `-optioninfer+` . Anahtar mevcut olmadığında varsayılan değer `-optioninfer` de vardır `-optioninfer+` . Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
   
 > [!NOTE]
-> Söz konusu seçeneği, `-noconfig` Vbc. rsp ' de belirtilenler yerine derleyicinin iç varsayılan değerlerini koruma için kullanabilirsiniz. Bu seçenek için varsayılan derleyicidir `-optioninfer-`.  
+> `-noconfig`Söz konusu seçeneği, vbc. rsp ' de belirtilenler yerine derleyicinin iç varsayılan değerlerini koruma için kullanabilirsiniz. Bu seçenek için varsayılan derleyicidir `-optioninfer-` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaynak kodu dosyası bir [seçenek çıkarımı bildirisi](../../../visual-basic/language-reference/statements/option-infer-statement.md)içeriyorsa, ifade `-optioninfer` komut satırı derleyici ayarını geçersiz kılar.  
+ Kaynak kodu dosyası bir [seçenek çıkarımı bildirisi](../../language-reference/statements/option-infer-statement.md)içeriyorsa, ifade `-optioninfer` komut satırı derleyici ayarını geçersiz kılar.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-OptionInfer  
   
@@ -43,7 +43,7 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
 2. **Derle** sekmesinde, **seçenek çıkarımı** kutusunda değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, yerel `test.vb` tür çıkarımı etkin ile derlenir.  
+ Aşağıdaki kod, `test.vb` Yerel tür çıkarımı etkin ile derlenir.  
   
 ```console
 vbc -optioninfer+ test.vb  
@@ -51,14 +51,14 @@ vbc -optioninfer+ test.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Infer Deyimi](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Yerel Tür Arabirimi](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
+- [Option Infer Deyimi](../../language-reference/statements/option-infer-statement.md)
+- [Yerel Tür Arabirimi](../../programming-guide/language-features/variables/local-type-inference.md)
 - [Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Komut Satırından Derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [-noconfig](noconfig.md)
+- [Komut Satırından Derleme](building-from-the-command-line.md)

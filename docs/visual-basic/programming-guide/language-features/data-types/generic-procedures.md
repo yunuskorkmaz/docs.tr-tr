@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350080"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394071"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic'de Genel Yordamlar
 *Genel yöntem*olarak da adlandırılan *genel yordam*, en az bir tür parametresiyle tanımlanmış bir yordamdır. Bu, çağıran kodun, yordamı her çağırdığında veri türlerini gereksinimlerine uyarlayabilmenizi sağlar.  
@@ -27,7 +27,7 @@ ms.locfileid: "74350080"
  Genel yordam, kendi tür parametrelerini normal parametre listesinde, bir tane varsa dönüş türünde ve yordam kodunda kullanabilir.  
   
 ## <a name="type-inference"></a>Tür Çıkarma  
- Herhangi bir tür bağımsız değişkeni sağlamadan, genel bir yordamı çağırabilirsiniz. Bu şekilde çağırırsanız, derleyici yordamın tür bağımsız değişkenlerine geçirilecek uygun veri türlerini saptamaya çalışır. Buna *tür çıkarımı*denir. Aşağıdaki kod, derleyicinin tür parametre `t`tür `String` geçmesi gerektiğini gösterdiği bir çağrıyı gösterir.  
+ Herhangi bir tür bağımsız değişkeni sağlamadan, genel bir yordamı çağırabilirsiniz. Bu şekilde çağırırsanız, derleyici yordamın tür bağımsız değişkenlerine geçirilecek uygun veri türlerini saptamaya çalışır. Buna *tür çıkarımı*denir. Aşağıdaki kod, derleyicinin türü tür parametresine geçmesi gereken bir çağrıyı gösterir `String` `t` .  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
@@ -49,27 +49,27 @@ End Sub
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir dizide belirli bir öğeyi bulmak için genel `Function` yordamını tanımlar. Bir tür parametresini tanımlar ve parametre listesinde iki parametreyi oluşturmak için onu kullanır.  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek, `Function` bir dizide belirli bir öğeyi bulmak için genel bir yordam tanımlar. Bir tür parametresini tanımlar ve parametre listesinde iki parametreyi oluşturmak için onu kullanır.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
-### <a name="comments"></a>Açıklamalar  
- Yukarıdaki örnek, `searchValue` `searchArray`her öğesine karşı karşılaştırma yeteneği gerektirir. Bu özelliği garantilemek için, <xref:System.IComparable%601> arabirimini uygulamak üzere `T` tür parametresini kısıtlar. Kod, `T` için sağlanan bir tür bağımsız değişkeninin `=` işlecini desteklediğinden emin olmadığı için `=` işleci yerine <xref:System.IComparable%601.CompareTo%2A> yöntemini kullanır.  
+### <a name="comments"></a>Yorumlar  
+ Yukarıdaki örnek, öğesinin `searchValue` her öğesine karşı karşılaştırma yeteneği gerektirir `searchArray` . Bu özelliği garantilemek için, `T` arabirimi uygulamak üzere tür parametresini kısıtlar <xref:System.IComparable%601> . Kodu, <xref:System.IComparable%601.CompareTo%2A> `=` için sağlanan bir tür bağımsız değişkeninin işleci desteklediği garantisi olmadığından, işleci yerine yöntemini kullanır `T` `=` .  
   
- `findElement` yordamı aşağıdaki kodla test edebilirsiniz.  
+ `findElement`Yordamı aşağıdaki kodla test edebilirsiniz.  
   
  [!code-vb[VbVbalrDataTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#13)]  
   
- `MsgBox` önceki çağrılar sırasıyla "0", "1" ve "-1" görüntüler.  
+ Yukarıdaki `MsgBox` "0", "1" ve "-1" sırasıyla görüntülenecek çağrılar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [Nasıl yapılır: Genel Bir Sınıf Kullanma](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Yordamlar](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Yordam Parametreleri ve Bağımsız Değişkenleri](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [Tür Listesi](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Parametre Listesi](../../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Visual Basic genel türler](generic-types.md)
+- [Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Nasıl yapılır: Genel Bir Sınıf Kullanma](how-to-use-a-generic-class.md)
+- [Yordamlar](../procedures/index.md)
+- [Yordam Parametreleri ve Bağımsız Değişkenleri](../procedures/procedure-parameters-and-arguments.md)
+- [Tür Listesi](../../../language-reference/statements/type-list.md)
+- [Parametre Listesi](../../../language-reference/statements/parameter-list.md)

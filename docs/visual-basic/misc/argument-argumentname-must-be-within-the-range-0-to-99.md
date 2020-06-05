@@ -1,25 +1,25 @@
 ---
-title: Bağımsız değişken '<argumentname>' 0-99 aralığında olmalıdır
+title: "' ' Bağımsız değişkeni <argumentname> 0 ile 99 arasında olmalıdır"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-ms.openlocfilehash: a582559c4914e6c05f1aef2a78a49adbb244aa59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5713ab586aa0fc69a520ab75ff285886f9a24e8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024553"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412799"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>Bağımsız değişken '\<argumentname >' 0-99 aralığında olmalıdır
-Bağımsız değişken, 0 ile 99 arasındaki aralığın dışında olduğundan geçerli değil.  
+# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>' ' Bağımsız değişkeni \<argumentname> 0 ile 99 arasında olmalıdır
+Bir bağımsız değişken 0 ile 99 aralığının dışında olduğundan geçerli değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Bağımsız değişken ifadesindeki yazımını denetleyin. Yanlış yazılmış bir değişken adı, sıfır olarak başlatılır, sayısal bir değişken örtük olarak oluşturabilirsiniz.  
+1. İfadedeki bağımsız değişkenlerin yazımını denetleyin. Yanlış yazılmış bir değişken adı, sıfır olarak başlatılan bir sayısal değişkeni örtülü olarak oluşturabilir.  
   
-2. Önceki değişkenleri ifadede, özellikle yordama bağımsız değişkenler olarak diğer yordamlardan geçirilen işlemleri denetleyin.  
+2. Deyimdeki değişkenlerde, özellikle de diğer yordamlardan bağımsız değişken olarak geçirilen işlemler için önceki işlemleri denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

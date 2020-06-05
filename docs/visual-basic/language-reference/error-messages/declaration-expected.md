@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619536"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409744"
 ---
 # <a name="declaration-expected"></a>Bildirim bekleniyor
-Atama veya döngü deyimi gibi bir nondeclarative deyimi dışında herhangi bir yordam gerçekleşir. Yalnızca bildirimleri, dış yordamları izin verilir.  
+Atama veya döngü deyimi gibi bildirime dayalı olmayan bir ifade, herhangi bir yordamın dışında meydana gelir. Yordamların dışında yalnızca bildirimlere izin verilir.  
   
- Alternatif olarak, bir programlama öğesi bir bildirimi anahtar sözcüğü gibi bildirilir `Dim` veya `Const`.  
+ Alternatif olarak, bir programlama öğesi veya gibi bir bildirim anahtar sözcüğü olmadan `Dim` bildirilmiştir `Const` .  
   
- **Hata Kimliği:** BC30188  
+ **Hata kimliği:** BC30188  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Nondeclarative deyim gövdesi bir yordam ile taşıyın.  
+- Bildirim temelli olmayan deyimi bir yordamın gövdesine taşıyın.  
   
-- Bildirimi bir uygun bildirimi anahtar sözcüğü ile başlar.  
+- Bildirime uygun bir bildirim anahtar sözcüğüyle başlayın.  
   
-- Bildirim anahtar sözcüğü yazılmadığından emin olun.  
+- Bildirim anahtar sözcüğünün yanlış yazılmadığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Yordamlar](../../programming-guide/language-features/procedures/index.md)
+- [Dim Deyimi](../statements/dim-statement.md)

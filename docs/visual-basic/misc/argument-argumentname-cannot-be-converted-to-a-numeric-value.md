@@ -1,18 +1,18 @@
 ---
-title: Bağımsız değişken '<argumentname>' sayısal değerine dönüştürülemez
+title: "' ' Bağımsız değişkeni <argumentname> sayısal bir değere dönüştürülemez"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
 ms.assetid: 1901c4d4-abbe-462f-a450-5d907d485e94
-ms.openlocfilehash: f405bb7c207c3f98218d8d6ab896a3c7f1a91a99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f8766b240de7dd3ba73cfe73f9718bf0cfae4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666228"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411388"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>Bağımsız değişken '\<argumentname >' sayısal değerine dönüştürülemez
-Bir dönüştürme, bir dize gibi bir değişken sayısal bir değere Dönüştür çalışıldı.  
+# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>' ' Bağımsız değişkeni \<argumentname> sayısal bir değere dönüştürülemez
+Bir dönüştürme dize gibi bir değişkeni sayısal bir değere dönüştürmeye çalıştı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
@@ -20,4 +20,4 @@ Bir dönüştürme, bir dize gibi bir değişken sayısal bir değere Dönüşt�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de tür dönüştürmeleri](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../programming-guide/language-features/data-types/type-conversions.md)

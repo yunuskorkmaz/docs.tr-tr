@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 621dec7537e9c993024e271b96ab8706baf89885
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0de02840cb18fde16134ef43df9d63abb503c979
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350103"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394177"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Veri Türlerinin Etkili Kullanımı (Visual Basic)
-Bildirilmemiş değişkenlere ve veri türü olmadan belirtilen değişkenlere `Object` veri türü atanmamıştır. Bu, programları hızlı bir şekilde yazmayı kolaylaştırır, ancak bunların daha yavaş yürütülmesine neden olabilir.
+Bildirilmemiş değişkenlere ve veri türü olmadan belirtilen değişkenlere veri türü atanmamıştır `Object` . Bu, programları hızlı bir şekilde yazmayı kolaylaştırır, ancak bunların daha yavaş yürütülmesine neden olabilir.
 
 ## <a name="strong-typing"></a>Güçlü yazma
  Tüm değişkenlerinizin veri türlerini belirtme, *güçlü yazma*olarak bilinir. Güçlü yazma kullanmanın çeşitli avantajları vardır:
@@ -35,10 +35,10 @@ Bildirilmemiş değişkenlere ve veri türü olmadan belirtilen değişkenlere `
 ## <a name="most-efficient-data-types"></a>En verimli veri türleri
  Kesirleri olmayan değişkenler için, integral veri türleri İntegral olmayan türlerden daha etkilidir. Visual Basic, `Integer` ve `UInteger` en verimli sayısal türlerdir.
 
- Büyük sayılar için `Double` en etkili veri türüdür, çünkü geçerli platformlardaki işlemciler çift duyarlıklı olarak kayan nokta işlemleri gerçekleştirir. Ancak, `Double` olan işlemler, `Integer`gibi integral türleri kadar hızlı değildir.
+ Büyük sayılar için `Double` en etkili veri türü, geçerli platformlardaki işlemciler çift duyarlıklı olarak kayan nokta işlemleri gerçekleştirtiğinden. Ancak, ile işlemler, gibi `Double` integral türleriyle kadar hızlı değildir `Integer` .
 
 ## <a name="specifying-data-type"></a>Veri türünü belirtme
- Belirli bir türün değişkenini bildirmek için [Dim ifadesini](../../../../visual-basic/language-reference/statements/dim-statement.md) kullanın. Aşağıdaki örnekte olduğu gibi [ortak](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md)veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü kullanarak erişim düzeyini eşzamanlı olarak belirtebilirsiniz.
+ Belirli bir türün değişkenini bildirmek için [Dim ifadesini](../../../language-reference/statements/dim-statement.md) kullanın. Aşağıdaki örnekte olduğu gibi [ortak](../../../language-reference/modifiers/public.md), [korumalı](../../../language-reference/modifiers/protected.md), [arkadaş](../../../language-reference/modifiers/friend.md)veya [özel](../../../language-reference/modifiers/private.md) anahtar sözcüğünü kullanarak erişim düzeyini eşzamanlı olarak belirtebilirsiniz.
 
 ```vb
 Private x As Double
@@ -46,7 +46,7 @@ Protected s As String
 ```
 
 ## <a name="character-conversion"></a>Karakter dönüştürme
- `AscW` ve `ChrW` işlevleri Unicode 'da çalışır. Bunları `Asc` ve `Chr`için tercih ettiğiniz şekilde kullanmanız gerekir; bu, Unicode 'a ve dışına çevrilip çevrilmelidir.
+ `AscW`Ve `ChrW` işlevleri Unicode 'da çalışır. `Asc`Bu uygulamaları, ve ' ı tercih halinde kullanmanız gerekir ve `Chr` Bu, Unicode 'a ve dışına çevirmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -54,7 +54,7 @@ Protected s As String
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)
-- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Veri türleri](index.md)
+- [Sayısal Veri Türleri](numeric-data-types.md)
+- [Değişken Bildirimi](../variables/variable-declaration.md)
 - [IntelliSense Kullanma](/visualstudio/ide/using-intellisense)
