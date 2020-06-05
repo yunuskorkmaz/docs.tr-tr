@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: XSLT stilinde LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma'
+title: 'Nasıl yapılır: XSLT Stilindeki LINQ to XML Ağaçlarını Dönüştürmek için Ek Açıklamalar Kullanma'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 099457eaab8c80605138d7e67d7bc2823e316234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348352"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364454"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Nasıl yapılır: XSLT stilinde LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma (Visual Basic)
 
@@ -19,7 +19,7 @@ Bazı XML belgeleri "karışık içerikli belge merkezli" dir. Bu tür belgeler 
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-Herhangi bir metin düğümü için herhangi bir sayıda alt `<b>` ve `<i>` öğesi olabilir. Bu yaklaşım birkaç farklı durum sağlar: gibi, normal paragraflar, madde işaretli paragraflar ve bit eşlemler gibi çeşitli alt öğeler içerebilen sayfalar. Bir tablodaki hücreler metin, açılan liste veya bit eşlemler içerebilir. Belge merkezli XML 'in birincil özelliklerinden biri, belirli bir öğenin hangi alt öğesi olacağını bilemezsiniz.
+Belirli bir metin düğümü için herhangi bir sayıda alt öğe `<b>` ve `<i>` öğe olabilir. Bu yaklaşım birkaç farklı durum sağlar: gibi, normal paragraflar, madde işaretli paragraflar ve bit eşlemler gibi çeşitli alt öğeler içerebilen sayfalar. Bir tablodaki hücreler metin, açılan liste veya bit eşlemler içerebilir. Belge merkezli XML 'in birincil özelliklerinden biri, belirli bir öğenin hangi alt öğesi olacağını bilemezsiniz.
 
 Dönüştürmek istediğiniz öğelerin alt öğeleri hakkında daha fazla bilgi sahibi olmadığınız bir ağaçtaki öğeleri dönüştürmek istiyorsanız, ek açıklamaları kullanan bu yaklaşım etkili bir yaklaşımdır.
 
@@ -27,23 +27,23 @@ Yaklaşımın Özeti:
 
 - İlk olarak, ağaç içindeki öğeleri bir değiştirme öğesiyle birlikte not edin.
 
-- İkinci olarak, tüm ağaç üzerinde yineleme yapın, her öğeyi ek açıklamasına göre değiştirdiğiniz yeni bir ağaç oluşturun. Bu örnek, `XForm`adlı bir işlevde yeni ağacın yinelemesini ve oluşturulmasını uygular.
+- İkinci olarak, tüm ağaç üzerinde yineleme yapın, her öğeyi ek açıklamasına göre değiştirdiğiniz yeni bir ağaç oluşturun. Bu örnek, adlı bir işlevde yeni ağacın yinelemesini ve oluşturulmasını uygular `XForm` .
 
 Ayrıntılı olarak yaklaşım aşağıdakilerden oluşur:
 
-- Bir şekilden diğerine dönüştürmek istediğiniz öğe kümesini döndüren bir veya daha fazla LINQ to XML sorgu yürütün. Sorgudaki her öğe için, öğesine ek açıklama olarak yeni bir <xref:System.Xml.Linq.XElement> nesnesi ekleyin. Bu yeni öğe, yeni, dönüştürülmüş ağaçtaki açıklamalı öğenin yerini alır. Bu, örnekte gösterildiği gibi yazılacak basit koddur.
+- Bir şekilden diğerine dönüştürmek istediğiniz öğe kümesini döndüren bir veya daha fazla LINQ to XML sorgu yürütün. Sorgudaki her öğe için, <xref:System.Xml.Linq.XElement> öğesine ek açıklama olarak yeni bir nesne ekleyin. Bu yeni öğe, yeni, dönüştürülmüş ağaçtaki açıklamalı öğenin yerini alır. Bu, örnekte gösterildiği gibi yazılacak basit koddur.
 
 - Ek açıklama olarak eklenen yeni öğe, yeni alt düğümler içerebilir; istediğiniz herhangi bir şekle sahip bir alt ağaç oluşturabilir.
 
-- Özel bir kural var: yeni öğenin bir alt düğümü, bu amaçla oluşturulan bir ad alanı, farklı bir ad alanında ise (Bu örnekte, ad alanı `http://www.microsoft.com/LinqToXmlTransform/2007`), bu alt öğe yeni ağaca kopyalanmaz. Bunun yerine, ad alanı yukarıda belirtilen özel ad alanıdır ve öğenin yerel adı `ApplyTransforms`, ardından Kaynak ağacındaki öğenin alt düğümleri yinelenir ve yeni ağaca kopyalanır (ek açıklama alt öğelerinin kendileri bu kurallara göre dönüştürülür).
+- Özel bir kural var: yeni öğenin bir alt düğümü farklı bir ad alanında, bu amaçla oluşturulmuş bir ad alanı ise (Bu örnekte, ad alanı `http://www.microsoft.com/LinqToXmlTransform/2007` ), bu alt öğe yeni ağaca kopyalanmaz. Bunun yerine, ad alanı yukarıda belirtilen özel ad alanıdır ve öğesinin yerel adı ise, `ApplyTransforms` Kaynak ağacındaki öğenin alt düğümleri yinelenir ve yeni ağaca kopyalanır (ek açıklama alt öğelerinin kendileri bu kurallara göre dönüştürülebilse).
 
-- Bu, XSL 'teki dönüşümler belirtimine benzer. Düğüm kümesi seçen sorgu, bir şablon için XPath ifadesine benzer. Ek açıklama olarak kaydedilen yeni <xref:System.Xml.Linq.XElement> oluşturma kodu, XSL 'deki dizi oluşturucusuna benzerdir ve `ApplyTransforms` öğesi, XSL içindeki `xsl:apply-templates` öğesine benzerdir.
+- Bu, XSL 'teki dönüşümler belirtimine benzer. Düğüm kümesi seçen sorgu, bir şablon için XPath ifadesine benzer. <xref:System.Xml.Linq.XElement>Bir ek açıklama olarak kaydedilen yeni oluşturma kodu, XSL 'deki dizi oluşturucusuna benzerdir ve `ApplyTransforms` Öğesı, XSL 'deki öğesine benzerdir `xsl:apply-templates` .
 
 - Bu yaklaşımı almanın avantajlarından biri olan sorgular, her zaman değiştirilmemiş kaynak ağacına sorgu yazırsınız. Ağaçta yapılan değişikliklerin yazmakta olduğunuz sorguları nasıl etkilediği konusunda endişelenmeniz gerekmez.
 
 ## <a name="transforming-a-tree"></a>Ağacı dönüştürme
 
-Bu ilk örnek, tüm `Paragraph` düğümlerini `para`olarak yeniden adlandırır:
+Bu ilk örnek, tüm `Paragraph` düğümleri şu şekilde yeniden adlandırır `para` :
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -85,7 +85,7 @@ End Module
 
 ## <a name="a-more-complicated-transform"></a>Daha karmaşık bir dönüşüm
 
-Aşağıdaki örnek, ağacı sorgular ve `Data` öğelerinin ortalamasını ve toplamını hesaplar ve bunları ağaca yeni öğeler olarak ekler.
+Aşağıdaki örnek, ağacı sorgular ve öğelerin ortalamasını ve toplamını hesaplar `Data` ve bunları ağaca yeni öğeler olarak ekler.
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -160,7 +160,7 @@ After Transform
 
 ## <a name="effecting-the-transform"></a>Dönüşümü efekt
 
-Küçük bir işlev, `XForm`, orijinal, açıklamalı ağaç ' dan yeni bir dönüştürülmüş ağaç oluşturur.
+Küçük bir işlev `XForm` olan özgün, açıklamalı ağaç içinden yeni bir dönüştürülmüş ağaç oluşturur.
 
 İşlevin sahte kodu oldukça basittir:
 
@@ -224,7 +224,7 @@ End Function
 
 ## <a name="complete-example"></a>Örnek Tamam
 
-Aşağıdaki kod, `XForm` işlevini içeren bir bütün örnektir. Bu tür bir dönüştürme için tipik kullanımları içerir:
+Aşağıdaki kod, işlevi içeren bir bütün örnektir `XForm` . Bu tür bir dönüştürme için tipik kullanımları içerir:
 
 ```vb
 Imports System.Collections.Generic
@@ -376,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](advanced-linq-to-xml-programming.md)

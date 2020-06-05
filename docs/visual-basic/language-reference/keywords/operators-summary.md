@@ -6,26 +6,26 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: 7de9fbce0bce775fb2e50b3e0bdf913cf7e9be73
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ccc2ce6e1e5abbd21ba39f387baeabf885ff7017
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351674"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373323"
 ---
 # <a name="operators-summary-visual-basic"></a>İşleçlere İlişkin Özet (Visual Basic)
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  
 |------------|----------------------|  
-|Aritmetik|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [*](../../../visual-basic/language-reference/operators/multiplication-operator.md), [/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [\\](../../../visual-basic/language-reference/operators/integer-division-operator.md), [mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md), [=](../../../visual-basic/language-reference/operators/assignment-operator.md)|  
-|Atama|[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
-|Karşılaştırma|[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [>=](../../../visual-basic/language-reference/operators/comparison-operators.md), [gibi](../../../visual-basic/language-reference/operators/like-operator.md) [](../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Birleştirme|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Mantıksal/bit düzeyinde işlemler|[Not](../../../visual-basic/language-reference/operators/not-operator.md), [ve](../../../visual-basic/language-reference/operators/and-operator.md), [or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [andde](../../../visual-basic/language-reference/operators/andalso-operator.md), [orelo](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Çeşitli işlemler|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|  
+|Tiğinin|[^](../operators/exponentiation-operator.md), [–](../operators/subtraction-operator.md), [*](../operators/multiplication-operator.md) , [/](../operators/floating-point-division-operator.md) , [\\](../operators/integer-division-operator.md) , [Mod](../operators/mod-operator.md), [+](../operators/addition-operator.md) ,[=](../operators/assignment-operator.md)|  
+|Atama|[=](../operators/assignment-operator.md), [^=](../operators/exponentiation-assignment-operator.md), [*=](../operators/multiplication-assignment-operator.md), [/=](../operators/floating-point-division-assignment-operator.md), [\\=](../operators/integer-division-assignment-operator.md), [+=](../operators/addition-assignment-operator.md), [-=](../operators/subtraction-assignment-operator.md), [&=](../operators/and-assignment-operator.md)|  
+|Karşılaştırma|[=](../operators/comparison-operators.md),,, [<>](../operators/comparison-operators.md) [\<](../operators/comparison-operators.md), [>](../operators/comparison-operators.md) [\<=](../operators/comparison-operators.md), [>=](../operators/comparison-operators.md) , [Gibi](../operators/like-operator.md), [Is](../operators/is-operator.md)|  
+|Birleştirme|[&](../operators/concatenation-operator.md), [+](../operators/addition-operator.md)|  
+|Mantıksal/bit düzeyinde işlemler|[Not](../operators/not-operator.md), [ve](../operators/and-operator.md), [or](../operators/or-operator.md), [Xor](../operators/xor-operator.md), [andde](../operators/andalso-operator.md), [orelo](../operators/orelse-operator.md)|  
+|Çeşitli işlemler|[AddressOf](../operators/addressof-operator.md), [await](../operators/await-operator.md), [GetType](../operators/gettype-operator.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Anahtar sözcükler](index.md)
+- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../runtime-library-members.md)

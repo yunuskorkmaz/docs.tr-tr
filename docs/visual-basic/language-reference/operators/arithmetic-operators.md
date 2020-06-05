@@ -6,31 +6,31 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: 747d5d8882b55f323f82202eac0eba449992be3d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c5d7ec0c01e956acfcb3b41689c7a7338c6e25b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371888"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Aritmetik İşleçler (Visual Basic)
 Aşağıda, Visual Basic tanımlanan aritmetik işleçler verilmiştir.  
   
- [^ İşleci](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
+ [^ İşleci](exponentiation-operator.md)  
   
- [* İşleci](../../../visual-basic/language-reference/operators/multiplication-operator.md)  
+ [* İşleci](multiplication-operator.md)  
   
- [/ İşleci](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)  
+ [/İşleci](floating-point-division-operator.md)  
   
- [\ İşleci](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+ [\ İşleci](integer-division-operator.md)  
   
- [Mod İşleci](../../../visual-basic/language-reference/operators/mod-operator.md)  
+ [Mod İşleci](mod-operator.md)  
   
- [+ İşleci](../../../visual-basic/language-reference/operators/addition-operator.md) (birli ve ikili)  
+ [+ İşleci](addition-operator.md) (birli ve ikili)  
   
- [-İşleci](../../../visual-basic/language-reference/operators/subtraction-operator.md) (birli ve ikili)  
+ [-İşleci](subtraction-operator.md) (birli ve ikili)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic'de İşleç Önceliği](operator-precedence.md)
+- [Visual Basic'de Aritmetik İşleçler](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

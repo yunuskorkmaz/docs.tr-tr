@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: 226187fc183b12055e9a67a8fdef0178edb317d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 27dea66da794e5fed95902c40a81fa03422f6267
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347865"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374505"
 ---
 # <a name="attributes-visual-basic"></a>Öznitelikler (Visual Basic)
 
@@ -24,4 +24,4 @@ Visual Basic, nesnelerin yönetilmeyen kodla ve modül üyelerine modül adı ol
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özniteliklere genel bakış](../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Özniteliklere genel bakış](../programming-guide/concepts/attributes/index.md)
