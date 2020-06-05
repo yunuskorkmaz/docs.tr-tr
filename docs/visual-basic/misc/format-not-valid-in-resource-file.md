@@ -1,25 +1,25 @@
 ---
-title: Kaynak dosya biçimi geçerli değil
+title: Kaynak dosyasında biçim geçerli değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 5285365c9ae780a8f78f11eab6705d52138fc049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42cccaf6c8539a2d5e8e081bfe0c0c5cec0e02e9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055179"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358326"
 ---
-# <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="b4a65-102">Kaynak dosya biçimi geçerli değil</span><span class="sxs-lookup"><span data-stu-id="b4a65-102">Format not valid in resource file</span></span>
-<span data-ttu-id="b4a65-103">Projenizdeki bir kaynak dosyası bir Windows kaynak dosyası için standart biçim izlemez veya kaynak dosyasını ve Visual Basic projesi arasında bir uyumsuzluk var.</span><span class="sxs-lookup"><span data-stu-id="b4a65-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the Visual Basic project.</span></span>  
+# <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="b1e85-102">Kaynak dosyasında biçim geçerli değil</span><span class="sxs-lookup"><span data-stu-id="b1e85-102">Format not valid in resource file</span></span>
+<span data-ttu-id="b1e85-103">Projenizdeki bir kaynak dosyası Windows kaynak dosyası için standart biçimi uygulamaz veya kaynak dosyası ile Visual Basic projesi arasında bir uyumsuzluk var.</span><span class="sxs-lookup"><span data-stu-id="b1e85-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the Visual Basic project.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b4a65-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="b4a65-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b1e85-104">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="b1e85-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="b4a65-105">Kaynak kaynağı ve kaynak dosyalarını yeniden oluşturun ve Windows yazılım geliştirme Seti'nde belgelenen söz dizimi izliyor.</span><span class="sxs-lookup"><span data-stu-id="b4a65-105">Recreate the resource source and resource files and adhere to the syntax documented in the Windows Software Development Kit.</span></span>  
+1. <span data-ttu-id="b1e85-105">Kaynak kaynağını ve kaynak dosyalarını yeniden oluşturun ve Windows yazılım geliştirme seti ' nde belgelenen sözdizimine bağlı kalın.</span><span class="sxs-lookup"><span data-stu-id="b1e85-105">Recreate the resource source and resource files and adhere to the syntax documented in the Windows Software Development Kit.</span></span>  
   
-2. <span data-ttu-id="b4a65-106">Geçersiz kaynak dosyasını projeden kaldırın.</span><span class="sxs-lookup"><span data-stu-id="b4a65-106">Remove the invalid resource file from the project.</span></span>  
+2. <span data-ttu-id="b1e85-106">Geçersiz kaynak dosyasını projeden kaldırın.</span><span class="sxs-lookup"><span data-stu-id="b1e85-106">Remove the invalid resource file from the project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4a65-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b4a65-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1e85-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1e85-107">See also</span></span>
 
-- [<span data-ttu-id="b4a65-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="b4a65-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="b1e85-108">Hata Türleri</span><span class="sxs-lookup"><span data-stu-id="b1e85-108">Error Types</span></span>](../programming-guide/language-features/error-types.md)
