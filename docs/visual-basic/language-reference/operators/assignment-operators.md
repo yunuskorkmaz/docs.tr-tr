@@ -7,38 +7,38 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 5de4f781d82278fb747b58a41462a470900efde4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 881295f511600cd02e9bf9c9846cf876793a0d8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336546"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371849"
 ---
-# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="84f47-102">Atama İşleçleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84f47-102">Assignment Operators (Visual Basic)</span></span>
-<span data-ttu-id="84f47-103">Visual Basic içinde tanımlanan atama işleçleri aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="84f47-103">The following are the assignment operators defined in Visual Basic.</span></span>  
+# <a name="assignment-operators-visual-basic"></a><span data-ttu-id="01574-102">Atama İşleçleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01574-102">Assignment Operators (Visual Basic)</span></span>
+<span data-ttu-id="01574-103">Visual Basic içinde tanımlanan atama işleçleri aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="01574-103">The following are the assignment operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="84f47-104">= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-104">= Operator</span></span>](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [<span data-ttu-id="01574-104">= İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-104">= Operator</span></span>](assignment-operator.md)  
   
- [<span data-ttu-id="84f47-105">^= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-105">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [<span data-ttu-id="01574-105">^ = İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-105">^= Operator</span></span>](exponentiation-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-106">\*= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-106">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="01574-106">\* = İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-106">\*= Operator</span></span>](multiplication-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-107">/= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-107">/= Operator</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [<span data-ttu-id="01574-107">/= İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-107">/= Operator</span></span>](floating-point-division-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-108">\\= Işleci</span><span class="sxs-lookup"><span data-stu-id="84f47-108">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [<span data-ttu-id="01574-108">\\= İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-108">\\= Operator</span></span>](integer-division-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-109">+= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-109">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [<span data-ttu-id="01574-109">+ = İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-109">+= Operator</span></span>](addition-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-110">-= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-110">-= Operator</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [<span data-ttu-id="01574-110">-= İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-110">-= Operator</span></span>](subtraction-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-111"><\<= Işleci</span><span class="sxs-lookup"><span data-stu-id="84f47-111"><\<= Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<span data-ttu-id="01574-111"><\<= İşleci</span><span class="sxs-lookup"><span data-stu-id="01574-111"><\<= Operator</span></span>](left-shift-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-112">>>= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-112">>>= Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [<span data-ttu-id="01574-112">>>= Işleci</span><span class="sxs-lookup"><span data-stu-id="01574-112">>>= Operator</span></span>](right-shift-assignment-operator.md)  
   
- [<span data-ttu-id="84f47-113">&= İşleci</span><span class="sxs-lookup"><span data-stu-id="84f47-113">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [<span data-ttu-id="01574-113">&= Işleci</span><span class="sxs-lookup"><span data-stu-id="01574-113">&= Operator</span></span>](and-assignment-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="84f47-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84f47-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01574-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01574-114">See also</span></span>
 
-- [<span data-ttu-id="84f47-115">Visual Basic operatör önceliği</span><span class="sxs-lookup"><span data-stu-id="84f47-115">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="84f47-116">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="84f47-116">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="84f47-117">Deyimler</span><span class="sxs-lookup"><span data-stu-id="84f47-117">Statements</span></span>](../../../visual-basic/language-reference/statements/index.md)
+- [<span data-ttu-id="01574-115">Visual Basic'de İşleç Önceliği</span><span class="sxs-lookup"><span data-stu-id="01574-115">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
+- [<span data-ttu-id="01574-116">İşlevselliğe Göre Listelenmiş İşleçler</span><span class="sxs-lookup"><span data-stu-id="01574-116">Operators Listed by Functionality</span></span>](operators-listed-by-functionality.md)
+- [<span data-ttu-id="01574-117">Deyimler</span><span class="sxs-lookup"><span data-stu-id="01574-117">Statements</span></span>](../statements/index.md)

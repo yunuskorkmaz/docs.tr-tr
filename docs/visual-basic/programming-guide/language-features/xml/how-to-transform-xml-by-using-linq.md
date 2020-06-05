@@ -5,26 +5,26 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: a531b189074ac7bdd1c02935368c408ff506a6f1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dab394ec45567589e002b5d2ac76ec19fb0f76c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353642"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374902"
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a><span data-ttu-id="7c03f-102">Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7c03f-102">How to: Transform XML by Using LINQ (Visual Basic)</span></span>
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a><span data-ttu-id="a46ad-102">Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a46ad-102">How to: Transform XML by Using LINQ (Visual Basic)</span></span>
 
-<span data-ttu-id="7c03f-103">[XML değişmez değerleri](../../../../visual-basic/language-reference/xml-literals/index.md) , BIR kaynaktan XML okumayı ve bunu yenı bir XML biçimine dönüştürmeyi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="7c03f-103">[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format.</span></span> <span data-ttu-id="7c03f-104">Dönüştürülecek içeriği almak veya varolan bir belgedeki içeriği yeni bir XML biçimiyle değiştirmek için LINQ sorgularından yararlanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c03f-104">You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.</span></span>
+<span data-ttu-id="a46ad-103">[XML değişmez değerleri](../../../language-reference/xml-literals/index.md) , BIR kaynaktan XML okumayı ve bunu yenı bir XML biçimine dönüştürmeyi kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="a46ad-103">[XML Literals](../../../language-reference/xml-literals/index.md) make it easy to read XML from one source and transform it to a new XML format.</span></span> <span data-ttu-id="a46ad-104">Dönüştürülecek içeriği almak veya varolan bir belgedeki içeriği yeni bir XML biçimiyle değiştirmek için LINQ sorgularından yararlanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a46ad-104">You can take advantage of LINQ queries to retrieve the content to transform, or change content in an existing document to a new XML format.</span></span>
 
-<span data-ttu-id="7c03f-105">Bu konudaki örnek, bir XML kaynak belgesinden içeriği bir tarayıcıda görüntülenmek üzere HTML 'ye dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="7c03f-105">The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.</span></span>
+<span data-ttu-id="a46ad-105">Bu konudaki örnek, bir XML kaynak belgesinden içeriği bir tarayıcıda görüntülenmek üzere HTML 'ye dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="a46ad-105">The example in this topic transforms content from an XML source document to HTML to be viewed in a browser.</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-### <a name="to-transform-an-xml-document"></a><span data-ttu-id="7c03f-106">Bir XML belgesini dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="7c03f-106">To transform an XML document</span></span>
+### <a name="to-transform-an-xml-document"></a><span data-ttu-id="a46ad-106">Bir XML belgesini dönüştürmek için</span><span class="sxs-lookup"><span data-stu-id="a46ad-106">To transform an XML document</span></span>
 
-1. <span data-ttu-id="7c03f-107">Visual Studio 'da, **konsol uygulaması** proje şablonunda yeni bir Visual Basic projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7c03f-107">In Visual Studio, create a new Visual Basic project in the **Console Application** project template.</span></span>
+1. <span data-ttu-id="a46ad-107">Visual Studio 'da, **konsol uygulaması** proje şablonunda yeni bir Visual Basic projesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="a46ad-107">In Visual Studio, create a new Visual Basic project in the **Console Application** project template.</span></span>
 
-2. <span data-ttu-id="7c03f-108">Visual Basic kodunu değiştirmek için projede oluşturulan Module1. vb dosyasını çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="7c03f-108">Double-click the Module1.vb file created in the project to modify the Visual Basic code.</span></span> <span data-ttu-id="7c03f-109">Aşağıdaki kodu `Module1` modülünün `Sub Main` ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7c03f-109">Add the following code to the `Sub Main` of the `Module1` module.</span></span> <span data-ttu-id="7c03f-110">Bu kod, kaynak XML belgesini bir <xref:System.Xml.Linq.XDocument> nesnesi olarak oluşturur.</span><span class="sxs-lookup"><span data-stu-id="7c03f-110">This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.</span></span>
+2. <span data-ttu-id="a46ad-108">Visual Basic kodunu değiştirmek için projede oluşturulan Module1. vb dosyasını çift tıklatın.</span><span class="sxs-lookup"><span data-stu-id="a46ad-108">Double-click the Module1.vb file created in the project to modify the Visual Basic code.</span></span> <span data-ttu-id="a46ad-109">Aşağıdaki kodu modülün öğesine ekleyin `Sub Main` `Module1` .</span><span class="sxs-lookup"><span data-stu-id="a46ad-109">Add the following code to the `Sub Main` of the `Module1` module.</span></span> <span data-ttu-id="a46ad-110">Bu kod, kaynak XML belgesini bir nesne olarak oluşturur <xref:System.Xml.Linq.XDocument> .</span><span class="sxs-lookup"><span data-stu-id="a46ad-110">This code creates the source XML document as an <xref:System.Xml.Linq.XDocument> object.</span></span>
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ ms.locfileid: "74353642"
         </Catalog>
     ```
 
-     <span data-ttu-id="7c03f-111">[Nasıl yapılır: bir dosyadan, dizeden veya AKıŞTAN XML yükleme](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).</span><span class="sxs-lookup"><span data-stu-id="7c03f-111">[How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).</span></span>
+     <span data-ttu-id="a46ad-111">[Nasıl yapılır: bir dosyadan, dizeden veya AKıŞTAN XML yükleme](how-to-load-xml-from-a-file-string-or-stream.md).</span><span class="sxs-lookup"><span data-stu-id="a46ad-111">[How to: Load XML from a File, String, or Stream](how-to-load-xml-from-a-file-string-or-stream.md).</span></span>
 
-3. <span data-ttu-id="7c03f-112">Kaynak XML belgesini oluşturma kodundan sonra, tüm \<kitabı > öğelerini almak ve bunları bir HTML belgesine dönüştürmek için aşağıdaki kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7c03f-112">After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document.</span></span> <span data-ttu-id="7c03f-113">\<Book > öğelerinin listesi, dönüştürülmüş HTML içeren <xref:System.Xml.Linq.XElement> nesnelerinin bir koleksiyonunu döndüren bir LINQ sorgusu kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="7c03f-113">The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML.</span></span> <span data-ttu-id="7c03f-114">Kaynak belgeden yeni XML biçiminde değerleri yerleştirmek için katıştırılmış ifadeleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7c03f-114">You can use embedded expressions to put the values from the source document in the new XML format.</span></span>
+3. <span data-ttu-id="a46ad-112">Kaynak XML belgesi oluşturma kodundan sonra, \<Book> nesneden tüm öğeleri almak ve bunları BIR HTML belgesine dönüştürmek için aşağıdaki kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a46ad-112">After the code to create the source XML document, add the following code to retrieve all the \<Book> elements from the object and transform them into an HTML document.</span></span> <span data-ttu-id="a46ad-113">Öğe listesi, \<Book> <xref:System.Xml.Linq.XElement> dönüştürülmüş html içeren nesnelerin bir koleksiyonunu döndüren bir LINQ sorgusu kullanılarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="a46ad-113">The list of \<Book> elements is created by using a LINQ query that returns a collection of <xref:System.Xml.Linq.XElement> objects that contain the transformed HTML.</span></span> <span data-ttu-id="a46ad-114">Kaynak belgeden yeni XML biçiminde değerleri yerleştirmek için katıştırılmış ifadeleri kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a46ad-114">You can use embedded expressions to put the values from the source document in the new XML format.</span></span>
 
-     <span data-ttu-id="7c03f-115">Elde edilen HTML belgesi <xref:System.Xml.Linq.XElement.Save%2A> yöntemi kullanılarak bir dosyaya yazılır.</span><span class="sxs-lookup"><span data-stu-id="7c03f-115">The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.</span></span>
+     <span data-ttu-id="a46ad-115">Elde edilen HTML belgesi, yöntemi kullanılarak bir dosyaya yazılır <xref:System.Xml.Linq.XElement.Save%2A> .</span><span class="sxs-lookup"><span data-stu-id="a46ad-115">The resulting HTML document is written to a file by using the <xref:System.Xml.Linq.XElement.Save%2A> method.</span></span>
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ ms.locfileid: "74353642"
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. <span data-ttu-id="7c03f-116">`Module1``Sub Main` sonra, \<açıklama > düğümünü belirtilen HTML biçimine dönüştürmek için yeni bir Yöntem (`Sub`) ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7c03f-116">After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format.</span></span> <span data-ttu-id="7c03f-117">Bu yöntem, önceki adımda kod tarafından çağrılır ve \<Description > öğelerinin biçimini korumak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7c03f-117">This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.</span></span>
+4. <span data-ttu-id="a46ad-116">Öğesinden `Sub Main` sonra `Module1` , bir `Sub` \<Description> düğümü belirtilen HTML biçimine dönüştürmek için yeni bir Yöntem () ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a46ad-116">After `Sub Main` of `Module1`, add a new method (`Sub`) to transform a \<Description> node into the specified HTML format.</span></span> <span data-ttu-id="a46ad-117">Bu yöntem, önceki adımda kod tarafından çağrılır ve öğelerin biçimini korumak için kullanılır \<Description> .</span><span class="sxs-lookup"><span data-stu-id="a46ad-117">This method is called by the code in the previous step and is used to preserve the format of the \<Description> elements.</span></span>
 
-     <span data-ttu-id="7c03f-118">Bu yöntem, \<Description > öğesinin alt öğelerini HTML ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="7c03f-118">This method replaces sub-elements of the \<Description> element with HTML.</span></span> <span data-ttu-id="7c03f-119">`ReplaceWith` yöntemi alt öğelerin konumunu korumak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7c03f-119">The `ReplaceWith` method is used to preserve the location of the sub-elements.</span></span> <span data-ttu-id="7c03f-120">\<Description > öğesinin dönüştürülmüş içeriği bir HTML paragrafı (\<p >) öğesine dahil edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="7c03f-120">The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element.</span></span> <span data-ttu-id="7c03f-121"><xref:System.Xml.Linq.XContainer.Nodes%2A> özelliği, \<Description > öğesinin dönüştürülmüş içeriğini almak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7c03f-121">The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element.</span></span> <span data-ttu-id="7c03f-122">Bu, alt öğelerin dönüştürülmüş içeriğe dahil edilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="7c03f-122">This ensures that sub-elements are included in the transformed content.</span></span>
+     <span data-ttu-id="a46ad-118">Bu yöntem, öğesinin alt öğelerini \<Description> HTML ile değiştirir.</span><span class="sxs-lookup"><span data-stu-id="a46ad-118">This method replaces sub-elements of the \<Description> element with HTML.</span></span> <span data-ttu-id="a46ad-119">`ReplaceWith`Yöntemi, alt öğelerin konumunu korumak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a46ad-119">The `ReplaceWith` method is used to preserve the location of the sub-elements.</span></span> <span data-ttu-id="a46ad-120">Öğenin dönüştürülmüş içeriği \<Description> BIR HTML paragraf ( \<p> ) öğesine eklenir.</span><span class="sxs-lookup"><span data-stu-id="a46ad-120">The transformed content of the \<Description> element is included in an HTML paragraph (\<p>) element.</span></span> <span data-ttu-id="a46ad-121"><xref:System.Xml.Linq.XContainer.Nodes%2A>Özelliği, öğesinin dönüştürülmüş içeriğini almak için kullanılır \<Description> .</span><span class="sxs-lookup"><span data-stu-id="a46ad-121">The <xref:System.Xml.Linq.XContainer.Nodes%2A> property is used to retrieve the transformed content of the \<Description> element.</span></span> <span data-ttu-id="a46ad-122">Bu, alt öğelerin dönüştürülmüş içeriğe dahil edilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="a46ad-122">This ensures that sub-elements are included in the transformed content.</span></span>
 
-     <span data-ttu-id="7c03f-123">`Module1``Sub Main` sonra aşağıdaki kodu ekleyin.</span><span class="sxs-lookup"><span data-stu-id="7c03f-123">Add the following code after `Sub Main` of `Module1`.</span></span>
+     <span data-ttu-id="a46ad-123">Öğesinden sonra aşağıdaki kodu ekleyin `Sub Main` `Module1` .</span><span class="sxs-lookup"><span data-stu-id="a46ad-123">Add the following code after `Sub Main` of `Module1`.</span></span>
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -115,9 +115,9 @@ ms.locfileid: "74353642"
     End Function
     ```
 
-5. <span data-ttu-id="7c03f-124">Yaptığınız değişiklikleri kaydedin.</span><span class="sxs-lookup"><span data-stu-id="7c03f-124">Save your changes.</span></span>
+5. <span data-ttu-id="a46ad-124">Yaptığınız değişiklikleri kaydedin.</span><span class="sxs-lookup"><span data-stu-id="a46ad-124">Save your changes.</span></span>
 
-6. <span data-ttu-id="7c03f-125">Kodu çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="7c03f-125">Press F5 to run the code.</span></span> <span data-ttu-id="7c03f-126">Sonuç olarak kaydedilen belge aşağıdakine benzeyecektir:</span><span class="sxs-lookup"><span data-stu-id="7c03f-126">The resulting saved document will resemble the following:</span></span>
+6. <span data-ttu-id="a46ad-125">Kodu çalıştırmak için F5 tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="a46ad-125">Press F5 to run the code.</span></span> <span data-ttu-id="a46ad-126">Sonuç olarak kaydedilen belge aşağıdakine benzeyecektir:</span><span class="sxs-lookup"><span data-stu-id="a46ad-126">The resulting saved document will resemble the following:</span></span>
 
     ```html
     <?xml version="1.0"?>
@@ -156,11 +156,11 @@ ms.locfileid: "74353642"
     </html>
     ```
 
-## <a name="see-also"></a><span data-ttu-id="7c03f-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7c03f-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a46ad-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a46ad-127">See also</span></span>
 
-- [<span data-ttu-id="7c03f-128">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="7c03f-128">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="7c03f-129">Visual Basic XML 'yi düzenleme</span><span class="sxs-lookup"><span data-stu-id="7c03f-129">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [<span data-ttu-id="7c03f-130">XML</span><span class="sxs-lookup"><span data-stu-id="7c03f-130">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="7c03f-131">Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme</span><span class="sxs-lookup"><span data-stu-id="7c03f-131">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [<span data-ttu-id="7c03f-132">LINQ</span><span class="sxs-lookup"><span data-stu-id="7c03f-132">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="7c03f-133">Visual Basic LINQ 'e giriş</span><span class="sxs-lookup"><span data-stu-id="7c03f-133">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="a46ad-128">XML Değişmez Değerleri</span><span class="sxs-lookup"><span data-stu-id="a46ad-128">XML Literals</span></span>](../../../language-reference/xml-literals/index.md)
+- [<span data-ttu-id="a46ad-129">Visual Basic'de XML'i Düzenleme</span><span class="sxs-lookup"><span data-stu-id="a46ad-129">Manipulating XML in Visual Basic</span></span>](manipulating-xml.md)
+- [<span data-ttu-id="a46ad-130">XML</span><span class="sxs-lookup"><span data-stu-id="a46ad-130">XML</span></span>](index.md)
+- [<span data-ttu-id="a46ad-131">Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme</span><span class="sxs-lookup"><span data-stu-id="a46ad-131">How to: Load XML from a File, String, or Stream</span></span>](how-to-load-xml-from-a-file-string-or-stream.md)
+- [<span data-ttu-id="a46ad-132">LINQ</span><span class="sxs-lookup"><span data-stu-id="a46ad-132">LINQ</span></span>](../linq/index.md)
+- [<span data-ttu-id="a46ad-133">Visual Basic'de LINQ'e Giriş</span><span class="sxs-lookup"><span data-stu-id="a46ad-133">Introduction to LINQ in Visual Basic</span></span>](../linq/introduction-to-linq.md)
