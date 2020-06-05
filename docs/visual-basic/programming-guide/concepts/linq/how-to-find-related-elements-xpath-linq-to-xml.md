@@ -1,13 +1,13 @@
 ---
-title: 'Nasıl yapılır: Ilgili öğeleri bulma (XPath-LINQ to XML)'
+title: 'Nasıl yapılır: İlgili Öğeleri Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: e250572e7bd73e769e4ab06b7b7ff9e3b3d38c47
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5819ef216f767367aa16b20f818b2bbc537d54b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344654"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364662"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Ilgili öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
 Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurulan bir özniteliği seçme öğesinin nasıl alınacağı gösterilmektedir.  
@@ -17,11 +17,11 @@ Bu konu başlığı altında, başka bir öğenin değeri tarafından başvurula
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, 12. `Order` öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
+ Bu örnek 12 `Order` . öğesini bulur ve ardından o sipariş için müşteriyi bulur.  
   
  .NET 'teki bir listede dizin oluşturmanın ' sıfır ' tabanlı olduğunu unutmayın. XPath koşulunda bir düğümler koleksiyonuna dizin oluşturma işlemi ' One ' tabanlıdır. Bu örnek, bu farkı yansıtır.  
   
- Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  
@@ -75,4 +75,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

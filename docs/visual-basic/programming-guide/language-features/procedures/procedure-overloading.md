@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363882"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Yordam Aşırı Yüklemesi (Visual Basic)
 
@@ -50,13 +50,13 @@ Bir yordamı aşırı yüklerken, aşağıdaki kurallar geçerlidir:
 
 - **İmzanın bir parçası değil öğeleri**. İmzayı değiştirmeden bir yordamı aşırı yükleyemezsiniz. Özellikle, aşağıdaki öğelerden yalnızca birini veya birkaçını değiştirerek bir yordamı aşırı yükleyemezsiniz:
 
-  - `Public`, `Shared`ve `Static` gibi yordam değiştirici anahtar sözcükleri
+  - , Ve gibi yordam değiştirici anahtar `Public` sözcükleri `Shared``Static`
 
   - Parametre veya tür parametre adları
 
   - Tür parametresi kısıtlamaları (genel yordam için)
 
-  - `ByRef` ve `Optional` gibi parametre değiştirici anahtar sözcükleri
+  - Ve gibi parametre değiştirici anahtar sözcükleri `ByRef``Optional`
 
   - Değer döndürüp döndürmeksizin
 
@@ -64,27 +64,27 @@ Bir yordamı aşırı yüklerken, aşağıdaki kurallar geçerlidir:
 
   Yukarıdaki listede yer olan öğeler imzaya ait değildir. Bunları aşırı yüklenmiş sürümler arasında ayrım yapmak için kullanamazsınız, ancak bunları imzalarıyla düzgün şekilde ayırt edilen aşırı yüklenmiş sürümler arasında değiştirebilirsiniz.
 
-- **Geç bağlantılı bağımsız değişkenler**. Geç bağlantılı bir nesne değişkenini aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun parametreyi <xref:System.Object>olarak bildirmeniz gerekir.
+- **Geç bağlantılı bağımsız değişkenler**. Geç bağlantılı bir nesne değişkenini aşırı yüklenmiş bir sürüme geçirmek istiyorsanız, uygun parametreyi olarak bildirmeniz gerekir <xref:System.Object> .
 
 ## <a name="multiple-versions-of-a-procedure"></a>Yordamın birden çok sürümü
 
-Bir müşterinin bakiyesine karşı bir işlem göndermek için bir `Sub` yordamı yazıyorsanız ve müşteriye ada veya hesap numarasına göre başvurmak istediğinizi varsayalım. Buna uyum sağlamak için, aşağıdaki örnekte olduğu gibi iki farklı `Sub` yordam tanımlayabilirsiniz:
+Bir `Sub` müşterinin bakiyesine karşı bir işlem göndermek için bir yordam yazıyorsanız ve müşteriye ada veya hesap numarasına göre başvurmak istediğinizi varsayalım. Buna uyum sağlamak için, `Sub` Aşağıdaki örnekte olduğu gibi iki farklı yordam tanımlayabilirsiniz:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
 ### <a name="overloaded-versions"></a>Aşırı yüklenmiş sürümler
 
-Bir alternatif, tek bir yordam adının aşırı yüklenmesine yönelik bir alternatiftir. Her bir parametre listesi için yordamın bir sürümünü tanımlamak üzere [overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğünü aşağıda gösterildiği gibi kullanabilirsiniz:
+Bir alternatif, tek bir yordam adının aşırı yüklenmesine yönelik bir alternatiftir. Her bir parametre listesi için yordamın bir sürümünü tanımlamak üzere [overloads](../../../language-reference/modifiers/overloads.md) anahtar sözcüğünü aşağıda gösterildiği gibi kullanabilirsiniz:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
 #### <a name="additional-overloads"></a>Ek aşırı yüklemeler
 
-Ayrıca `Decimal` veya `Single`bir işlem miktarı kabul etmek isterseniz, bu varyasyon için izin vermek `post` daha fazla aşırı yükleme yapabilirsiniz. Yukarıdaki örnekteki aşırı yüklemelerin her birini yaptıysanız, hepsi aynı ada sahip ancak dört farklı imzaya sahip dört `Sub` yordamımız olur.
+Ya da veya ' de bir işlem tutarını kabul etmek isterseniz `Decimal` `Single` , `post` Bu varyasyon için izin vermek için daha fazla tekrar yükleme yapabilirsiniz. Yukarıdaki örnekteki aşırı yüklemelerin her birini yaptıysanız, `Sub` hepsi aynı ada sahip ancak dört farklı imzaya sahip dört yordamımız olur.
 
 ## <a name="advantages-of-overloading"></a>Aşırı yükleme avantajları
 
-Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Yukarıdaki örnekte açıklanan `post` yordamını kullanmak için, çağıran kod müşteri kimliğini bir `String` veya `Integer`olarak edinebilir ve sonra aynı yordamı her iki durumda da çağırabilir. Aşağıdaki örnek şunu göstermektedir:
+Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. `post`Yukarıdaki örnekte açıklanan yordamı kullanmak için, çağıran kod müşteri kimliğini bir veya olarak alabilir `String` `Integer` ve ardından aynı yordamı her iki durumda da çağırabilir. Aşağıdaki örnekte bu gösterilmektedir:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -98,6 +98,6 @@ Bir yordamı aşırı yükleme avantajı, çağrının esnekliğine sahiptir. Yu
 - [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
-- [Aşırı Yükleme Çözümü](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Visual Basic genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Aşırı yükleme çözümlemesi](./overload-resolution.md)
+- [Aşırı Yüklemeler](../../../language-reference/modifiers/overloads.md)
+- [Visual Basic genel türler](../data-types/generic-types.md)

@@ -2,16 +2,16 @@
 title: XML Ağacı Dönüştürmek için XSLT Kullanma
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: f8d7de508fb954148b8b16ddf24966289f191bbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5332eb0a4fa8a2bd855421d674fe9f0de2ccb5f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350525"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364441"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>XML ağacını dönüştürmek için XSLT kullanma (Visual Basic)
 
-XML ağacı oluşturabilir, XML ağacından bir <xref:System.Xml.XmlReader> oluşturabilir, yeni bir belge oluşturabilir ve yeni belgeye yazılacak bir <xref:System.Xml.XmlWriter> oluşturabilirsiniz. Sonra XSLT dönüşümünü çağırabilirsiniz, <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüştürmeye taşıyabilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.
+Bir XML ağacı oluşturabilir, XML ağacından oluşturabilir, <xref:System.Xml.XmlReader> Yeni bir belge oluşturabilir ve <xref:System.Xml.XmlWriter> yeni belgeye yazılacak bir oluşturabilirsiniz. Ardından, XSLT dönüşümünü çağırarak <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüşümünü dönüştürebilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.
 
 ## <a name="example"></a>Örnek
 
@@ -65,4 +65,4 @@ Bu örnek aşağıdaki çıktıyı üretir:
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [Gelişmiş LINQ to XML Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Gelişmiş LINQ to XML Programlama (Visual Basic)](advanced-linq-to-xml-programming.md)

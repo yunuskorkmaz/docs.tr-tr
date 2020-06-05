@@ -1,25 +1,25 @@
 ---
-title: Bağımsız değişken 'NPer' sıfırdan büyük olmalıdır
+title: "' Taksit_sayısı ' bağımsız değişkeni sıfırdan büyük olmalıdır"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-ms.openlocfilehash: 43f700c28d5ffce8dc8b33651ce69493d9742272
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c2cf0f0000de44e1be796bb2de962b45c1d6969
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659092"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368068"
 ---
-# <a name="argument-nper-must-be-greater-than-zero"></a>Bağımsız değişken 'NPer' sıfırdan büyük olmalıdır
-`NPer` Döndüren bir işlev bir `Double` Dönemsel sabit ödemeler ve sabit faiz oranına dayanan bir anüite için dönem sayısını belirten bir bağımsız değişken sıfırdan büyük gerektirir.  
+# <a name="argument-nper-must-be-greater-than-zero"></a>' Taksit_sayısı ' bağımsız değişkeni sıfırdan büyük olmalıdır
+`NPer` `Double` Dönemsel sabit ödemeler ve sabit faiz oranına dayanan bir Anüite için dönem sayısını belirten işlevi, sıfırdan büyük bir bağımsız değişken gerektirir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bağımsız değişken ifadesindeki yazımını denetleyin. Yanlış yazılmış bir değişken adı, sıfır olarak başlatılır, sayısal bir değişken örtük olarak oluşturabilirsiniz.  
+- İfadedeki bağımsız değişkenlerin yazımını denetleyin. Yanlış yazılmış bir değişken adı, sıfır olarak başlatılan bir sayısal değişkeni örtülü olarak oluşturabilir.  
   
-- Önceki değişkenleri ifadede, özellikle yordama bağımsız değişkenler olarak diğer yordamlardan geçirilen işlemleri denetleyin.  
+- Deyimdeki değişkenlerde, özellikle de diğer yordamlardan bağımsız değişken olarak geçirilen işlemler için önceki işlemleri denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

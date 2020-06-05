@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl Yapılır: Belirli Bir Özniteliğe sahip Öğeleri Bulma (XPath-LINQ- XML)'
+title: 'Nasıl yapılır: Belirli bir Özniteliğe Sahip Öğeleri Bulma (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 36f725a7684dc009dbfb956a1584fd6ca5e487b0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 4b625fcccc834f860072ad92587bbfd7ed5ec4ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267047"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364779"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Nasıl Yapılır: Belirli Bir Özniteliğe sahip Öğeleri Bulma (XPath-LINQ- XML) (Visual Basic)
-Bazen belirli bir özniteliği olan tüm öğeleri bulmak istiyorum. Özniteliğin içeriği yle ilgilenmiyorsunuz. Bunun yerine, özniteliğin varlığına göre seçmek istiyorsunuz.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML) (Visual Basic)
+Bazen belirli bir özniteliğe sahip olan tüm öğeleri bulmak isteyebilirsiniz. Özniteliğin içeriğiyle ilgili endişeleriniz yok. Bunun yerine, özniteliğinin varlığına göre ' ı seçmek istersiniz.  
   
  XPath ifadesi:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod yalnızca `Select` özniteliği olan öğeleri seçer.  
+ Aşağıdaki kod yalnızca özniteliği olan öğeleri seçer `Select` .  
   
 ```vb  
 Dim doc As XElement = _
@@ -51,7 +51,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```console
 Results are identical  
@@ -61,4 +61,4 @@ Results are identical
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath Kullanıcıları için LINQ'dan XML'e (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](linq-to-xml-for-xpath-users.md)

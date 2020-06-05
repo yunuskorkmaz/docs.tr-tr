@@ -5,25 +5,25 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 2e8dd10b334b0271e3c9de11ed155c9d5d7aae48
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 59ba03be6e132203523427d3b7af5a163b6f05ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332935"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392320"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma (Visual Basic)
 Çalışma zamanında oluşturulan içeriği içeren bir XML belgesi, parça veya öğe oluşturmak için gömülü ifadelerle XML değişmez değerlerini birleştirebilirsiniz. Aşağıdaki örneklerde, çalışma zamanında öğe içeriğini, öznitelikleri ve öğe adlarını doldurmak için katıştırılmış ifadelerin nasıl kullanılacağı gösterilmektedir.  
   
- Gömülü bir ifadenin sözdizimi, ASP.NET tarafından kullanılan söz dizimi olan `<%=` `exp` `%>`. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Gömülü ifade için sözdizimi `<%=` `exp` `%>` , ASP.net 'in kullandığı söz dizimi olan sözdizimidir. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](embedded-expressions-in-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri oluşturmak için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API 'Lerini de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]API 'leri, nesneleri oluşturmak için de kullanabilirsiniz [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Yordamlar  
   
 #### <a name="to-insert-text-as-element-content"></a>Metni öğe içeriği olarak eklemek için  
   
-- Aşağıdaki örnek, `contactName` değişkeninde içerilen metnin açılış ve kapanış adı öğeleri arasında nasıl ekleneceğini gösterir.  
+- Aşağıdaki örnek, `contactName` açma ve kapatma adı öğeleri arasındaki değişkende bulunan metnin nasıl ekleneceğini gösterir.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74332935"
   
 #### <a name="to-insert-text-as-an-attribute-value"></a>Bir öznitelik değeri olarak metin eklemek için  
   
-- Aşağıdaki örnek, `phoneType` değişkeninde bulunan metnin `type` özniteliğinin değeri olarak nasıl ekleneceğini gösterir.  
+- Aşağıdaki örnek, değişkeninde bulunan metnin `phoneType` özniteliğin değeri olarak nasıl ekleneceğini gösterir `type` .  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -51,9 +51,9 @@ ms.locfileid: "74332935"
   
 #### <a name="to-insert-text-for-an-element-name"></a>Öğe adı için metin eklemek için  
   
-- Aşağıdaki örnek, `elementName` değişkeninde bulunan metnin bir öğenin adı olarak nasıl ekleneceğini gösterir.  
+- Aşağıdaki örnek, `elementName` bir öğenin adı olarak değişkende bulunan metnin nasıl ekleneceğini gösterir.  
   
-     Bu tekniği kullanarak öğe oluştururken, \</> etiketiyle bunları kapatmalısınız.  
+     Bu tekniği kullanarak öğe oluştururken, bunları \</> etiketiyle kapatmalısınız.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74332935"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: XML Değişmez Değerleri Oluşturma](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
-- [XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Nasıl yapılır: XML Değişmez Değerleri Oluşturma](how-to-create-xml-literals.md)
+- [XML'de Katıştırılmış İfadeler](embedded-expressions-in-xml.md)
+- [Visual Basic'de XML Oluşturma](creating-xml.md)
+- [XML](index.md)

@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 49e6f79c13c94a3f2f6891b259c4bb2bec54ae6f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344516"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363696"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>İzlenecek yol: Parolaların Karmaşık Olduğunu Doğrulama (Visual Basic)
 Bu yöntem, bazı güçlü parola özelliklerini denetler ve parolanın başarısız olup olmadığını kontrol eden bilgilerle bir dize parametresini güncelleştirir.  
   
- Parolalar, bir kullanıcıyı yetkilendirmek için güvenli bir sistemde kullanılabilir. Ancak, yetkisiz kullanıcıların tahmin edilmesi için parolaların kullanılması zor olmalıdır. Saldırganlar bir Sözlükteki tüm sözcükleri (veya farklı dillerdeki birden çok sözlükleri) kullanarak bir *sözlük saldırı* programı kullanabilir ve sözcüklerin birinin Kullanıcı parolası olarak çalışıp çalışmadığını sınar. "Yankees" veya "Mustang" gibi zayıf parolalar hızlı bir şekilde tahmin edilebilir. Daha güçlü parolalar (örneğin, "? 'L1N3vaFiNdMeyeP@sSWerd! ", tahmin edilebilir olma olasılığını çok daha az. Parola korumalı bir sistem, kullanıcıların güçlü parolalar seçmesini sağlamalıdır.  
+ Parolalar, bir kullanıcıyı yetkilendirmek için güvenli bir sistemde kullanılabilir. Ancak, yetkisiz kullanıcıların tahmin edilmesi için parolaların kullanılması zor olmalıdır. Saldırganlar bir Sözlükteki tüm sözcükleri (veya farklı dillerdeki birden çok sözlükleri) kullanarak bir *sözlük saldırı* programı kullanabilir ve sözcüklerin birinin Kullanıcı parolası olarak çalışıp çalışmadığını sınar. "Yankees" veya "Mustang" gibi zayıf parolalar hızlı bir şekilde tahmin edilebilir. Daha güçlü parolalar (örneğin, "? ' L1N3vaFiNdMeyeP@sSWerd ! ", Tahmin edilebilir olma olasılığı çok daha az. Parola korumalı bir sistem, kullanıcıların güçlü parolalar seçmesini sağlamalıdır.  
   
  Güçlü bir parola karmaşıktır (büyük harf, küçük harf, sayısal ve özel karakterlerin bir karışımını içeren) ve bir sözcük değildir. Bu örnek, karmaşıklığın nasıl doğrulanacağını göstermektedir.  
   
@@ -23,17 +23,17 @@ Bu yöntem, bazı güçlü parola özelliklerini denetler ve parolanın başarı
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compile-the-code"></a>Kod derleme  
+## <a name="compile-the-code"></a>Kodu derle  
  Bu parolayı içeren dizeyi geçirerek bu yöntemi çağırın.  
   
  Bu örnek şunları gerektirir:  
   
-- <xref:System.Text.RegularExpressions> ad alanının üyelerine erişin. Kodunuzda üye adlarını tam olarak nitedıysanız `Imports` bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- <xref:System.Text.RegularExpressions>Ad alanının üyelerine erişin. `Imports`Kodunuzda üye adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Güvenlik  
  Parolayı bir ağ üzerinden taşıyorsanız, verileri aktarmak için güvenli bir yöntem kullanmanız gerekir. Daha fazla bilgi için bkz. [ASP.NET Web uygulaması güvenliği](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- Daha fazla karmaşıklık denetimi ekleyerek `ValidatePassword` işlevinin doğruluğunu geliştirebilirsiniz:  
+ `ValidatePassword`Ek karmaşıklık denetimleri ekleyerek işlevin doğruluğunu artırabilirsiniz:  
   
 - Parolayı ve alt dizelerini kullanıcının adı, Kullanıcı tanımlayıcısı ve uygulama tanımlı bir sözlükten karşılaştırın. Ayrıca, karşılaştırmaları gerçekleştirirken görsel açıdan benzer karakterleri eşdeğer olarak değerlendirin. Örneğin, "l" ve "e" harflerini "1" ve "3" sayılarıyla eşdeğer olarak değerlendirin.  
   
