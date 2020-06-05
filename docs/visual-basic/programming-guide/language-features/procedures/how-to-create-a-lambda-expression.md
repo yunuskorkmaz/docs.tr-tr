@@ -5,27 +5,27 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632356"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388393"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
 *Lambda ifadesi* , adı olmayan bir işlev veya alt yordam. Bir lambda ifadesi, bir temsilci türünün geçerli olduğu her yerde kullanılabilir.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Tek satırlık lambda ifadesi işlevi oluşturmak için  
   
-1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte olduğu gibi `Function`anahtar sözcüğünü yazın:  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, `Function` Aşağıdaki örnekte olduğu gibi anahtar sözcüğünü yazın:  
   
      `Dim add1 =`   `Function`  
   
-2. Parantez içinde, `Function`doğrudan sonra, işlevin parametrelerini yazın. `Function`sonra bir ad belirtmediğine dikkat edin.  
+2. Parantez içinde doğrudan sonra, `Function` işlevin parametrelerini yazın. Sonrasında bir ad belirtmediğine dikkat edin `Function` .  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. Parametre listesini izleyerek işlevin gövdesi olarak tek bir ifade yazın. İfadenin değerlendirme değeri, işlev tarafından döndürülen değerdir. Dönüş türünü belirtmek için bir `As` yan tümcesi kullanmayın.  
+3. Parametre listesini izleyerek işlevin gövdesi olarak tek bir ifade yazın. İfadenin değerlendirme değeri, işlev tarafından döndürülen değerdir. `As`Dönüş türünü belirtmek için bir yan tümce kullanmayın.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -39,11 +39,11 @@ ms.locfileid: "75632356"
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Tek satırlık lambda ifadesi alt yordamı oluşturmak için  
   
-1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Sub`anahtar sözcüğünü yazın.  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, `Sub` Aşağıdaki örnekte gösterildiği gibi anahtar sözcüğünü yazın.  
   
      `Dim add1 =`   `Sub`  
   
-2. Parantez içinde, `Sub`doğrudan sonrasında, alt yordamın parametrelerini yazın. `Sub`sonra bir ad belirtmediğine dikkat edin.  
+2. Parantez içinde doğrudan sonrasında `Sub` , alt yordamın parametrelerini yazın. Sonrasında bir ad belirtmediğine dikkat edin `Sub` .  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
@@ -57,17 +57,17 @@ ms.locfileid: "75632356"
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Çok satırlı lambda ifadesi işlevi oluşturmak için  
   
-1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Function`anahtar sözcüğünü yazın.  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, `Function` Aşağıdaki örnekte gösterildiği gibi anahtar sözcüğünü yazın.  
   
      `Dim add1 =`   `Function`  
   
-2. Parantez içinde, `Function`doğrudan sonra, işlevin parametrelerini yazın. `Function`sonra bir ad belirtmediğine dikkat edin.  
+2. Parantez içinde doğrudan sonra, `Function` işlevin parametrelerini yazın. Sonrasında bir ad belirtmediğine dikkat edin `Function` .  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. ENTER tuşuna basın. `End Function` deyimleri otomatik olarak eklenir.  
+3. ENTER tuşuna basın. `End Function`Ekstre otomatik olarak eklenir.  
   
-4. İşlevin gövdesinde, bir ifade oluşturmak ve değeri döndürmek için aşağıdaki kodu ekleyin. Dönüş türünü belirtmek için bir `As` yan tümcesi kullanmayın.  
+4. İşlevin gövdesinde, bir ifade oluşturmak ve değeri döndürmek için aşağıdaki kodu ekleyin. `As`Dönüş türünü belirtmek için bir yan tümce kullanmayın.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
@@ -77,15 +77,15 @@ ms.locfileid: "75632356"
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Çok satırlı lambda ifadesi alt yordamı oluşturmak için  
   
-1. Temsilci türünün kullanılabileceği herhangi bir durumda, aşağıdaki örnekte gösterildiği gibi `Sub`anahtar sözcüğünü yazın:  
+1. Temsilci türünün kullanılabileceği herhangi bir durumda, `Sub` Aşağıdaki örnekte gösterildiği gibi anahtar sözcüğünü yazın:  
   
      `Dim add1 =`   `Sub`  
   
-2. Parantez içinde, `Sub`doğrudan sonrasında, alt yordamın parametrelerini yazın. `Sub`sonra bir ad belirtmediğine dikkat edin.  
+2. Parantez içinde doğrudan sonrasında `Sub` , alt yordamın parametrelerini yazın. Sonrasında bir ad belirtmediğine dikkat edin `Sub` .  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. ENTER tuşuna basın. `End Sub` deyimleri otomatik olarak eklenir.  
+3. ENTER tuşuna basın. `End Sub`Ekstre otomatik olarak eklenir.  
   
 4. İşlevin gövdesinde, alt yordam çağrıldığında yürütülecek aşağıdaki kodu ekleyin.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "75632356"
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Örnek  
- Lambda ifadelerinin yaygın kullanımı, türü `Delegate`olan bir parametre için bağımsız değişken olarak geçirilebilecek bir işlev tanımlamaktır. Aşağıdaki örnekte <xref:System.Diagnostics.Process.GetProcesses%2A> yöntemi, yerel bilgisayarda çalışan işlemlerin dizisini döndürür. <xref:System.Linq.Enumerable> sınıfındaki <xref:System.Linq.Enumerable.Where%2A> yöntemi bağımsız değişkeni olarak bir `Boolean` temsilcisi gerektirir. Örnekteki lambda ifadesi bu amaçla kullanılır. Yalnızca bir iş parçacığına sahip olan her işlem için `True` döndürür ve bunlar `filteredList`seçilir.  
+ Lambda ifadelerinin yaygın kullanımı, türü olan bir parametre için bağımsız değişken olarak geçirilebilecek bir işlev tanımlamaktır `Delegate` . Aşağıdaki örnekte, <xref:System.Diagnostics.Process.GetProcesses%2A> yöntemi yerel bilgisayarda çalışan işlemlerin dizisini döndürür. <xref:System.Linq.Enumerable.Where%2A>Sınıfından yöntemi, <xref:System.Linq.Enumerable> `Boolean` bağımsız değişkeni olarak bir temsilci gerektirir. Örnekteki lambda ifadesi bu amaçla kullanılır. `True`Yalnızca bir iş parçacığına sahip olan ve ' de seçili olan her işlem için döndürür `filteredList` .  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
@@ -107,10 +107,10 @@ ms.locfileid: "75632356"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq.Enumerable>
-- [Lambda İfadeleri](./lambda-expressions.md)
-- [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Nasıl yapılır: yordamları Visual Basic başka bir yordama geçirme](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Lambda Ifadeleri](./lambda-expressions.md)
+- [Function Deyimi](../../../language-reference/statements/function-statement.md)
+- [Sub Deyimi](../../../language-reference/statements/sub-statement.md)
+- [Temsilciler](../delegates/index.md)
+- [Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme](../delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate Deyimi](../../../language-reference/statements/delegate-statement.md)
+- [Visual Basic'de LINQ'e Giriş](../linq/introduction-to-linq.md)

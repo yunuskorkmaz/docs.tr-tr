@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 21c6d35b4e6aa17bb29be1c1e4b5e88a5fb389d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ef0e014745ec99afbce16824e65587276bc145e4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348499"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373453"
 ---
 # <a name="math-summary-visual-basic"></a>Matematik Özeti (Visual Basic)
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
@@ -28,6 +28,6 @@ Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Türetilen Matematik İşlevleri](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Türetilen Matematik İşlevleri](derived-math-functions.md)
+- [Anahtar sözcükler](index.md)
+- [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../runtime-library-members.md)
