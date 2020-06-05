@@ -20,16 +20,16 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: b7215933cec89b7023f08e8996a283b39b3a3c83
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2858dafd2531bd846ad89672348d103f385c4511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346365"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393837"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Örtük ve Açık Dönüştürmeler (Visual Basic)
 
-*Örtük dönüştürme* , kaynak kodunda özel bir sözdizimi gerektirmez. Aşağıdaki örnekte Visual Basic, `q`atamak için `k` değerini örtük olarak tek duyarlıklı kayan noktalı değere dönüştürür.
+*Örtük dönüştürme* , kaynak kodunda özel bir sözdizimi gerektirmez. Aşağıdaki örnekte, Visual Basic değerini ' a atamadan önce, değeri örtük olarak `k` tek duyarlıklı kayan noktalı değere dönüştürür `q` .
 
 ```vb
 Dim k As Integer
@@ -41,7 +41,7 @@ q = k
 
 *Açık dönüştürme* bir tür dönüştürme anahtar sözcüğü kullanır. Visual Basic, parantez içindeki bir ifadeyi istenen veri türüne döndüren birkaç anahtar sözcük sağlar. Bu anahtar sözcükler işlevler gibi davranır ancak derleyici, kodu satır içi olarak oluşturur, böylece yürütme bir işlev çağrısıyla biraz daha hızlıdır.
 
-Önceki örneğin aşağıdaki uzantısında `CInt` anahtar sözcüğü, `q` değerini `k`atamadan önce tamsayıya geri dönüştürür.
+Önceki örneğin aşağıdaki uzantısında, `CInt` anahtar sözcüğü `q` öğesine atamadan önce değeri bir tamsayıya dönüştürür `k` .
 
 ```vb
 ' q had been assigned the value 432 from k.
@@ -56,35 +56,35 @@ Aşağıdaki tabloda kullanılabilir dönüştürme anahtar sözcükleri göster
 
 |Tür dönüştürme anahtar sözcüğü|Bir ifadeyi veri türüne dönüştürür|Dönüştürülecek ifadenin izin verilen veri türleri|
 |---|---|---|
-|`CBool`|[Boolean Veri Türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `String`, `Object`|
-|`CByte`|[Byte Veri Türü](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Herhangi bir sayısal tür (`SByte` ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CChar`|[Char Veri Türü](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|
-|`CDate`|[Date Veri Türü](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|
-|`CDbl`|[Double Veri Türü](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CDec`|[Decimal Veri Türü](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CInt`|[Integer Veri Türü](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CLng`|[Long Veri Türü](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CObj`|[Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Herhangi bir tür|
-|`CSByte`|[SByte Veri Türü](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Herhangi bir sayısal tür (`Byte` ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CShort`|[Short Veri Türü](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CSng`|[Single Veri Türü](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CStr`|[String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `Char`, `Char` dizi, `Date`, `Object`|
-|`CType`|Virgülden sonra belirtilen tür (`,`)|Bir *Öğesel veri türüne* dönüştürme sırasında (bir öğesel türün dizisi dahil), karşılık gelen dönüştürme anahtar sözcüğü için izin verilen türler<br /><br /> *Bileşik veri türüne*dönüştürme yaparken, uyguladığı arabirimler ve devraldığı sınıflar<br /><br /> `CType`, bu sınıf veya yapı üzerinde aşırı yüklediğiniz bir sınıfa veya yapıya dönüştürme yaparken|
-|`CUInt`|[UInteger Veri Türü](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CULng`|[ULong Veri Türü](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
-|`CUShort`|[UShort Veri Türü](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Herhangi bir sayısal tür (`Byte`, `SByte`ve numaralandırılmış türler dahil), `Boolean`, `String`, `Object`|
+|`CBool`|[Boolean Veri Türü](../../../language-reference/data-types/boolean-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `String` ,`Object`|
+|`CByte`|[Byte Veri Türü](../../../language-reference/data-types/byte-data-type.md)|Herhangi bir sayısal tür ( `SByte` ve numaralandırılmış türler dahil),, `Boolean` `String` ,`Object`|
+|`CChar`|[Char Veri Türü](../../../language-reference/data-types/char-data-type.md)|`String`, `Object`|
+|`CDate`|[Date Veri Türü](../../../language-reference/data-types/date-data-type.md)|`String`, `Object`|
+|`CDbl`|[Double Veri Türü](../../../language-reference/data-types/double-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CDec`|[Decimal Veri Türü](../../../language-reference/data-types/decimal-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CInt`|[Integer Veri Türü](../../../language-reference/data-types/integer-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CLng`|[Long Veri Türü](../../../language-reference/data-types/long-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CObj`|[Nesne Veri Türü](../../../language-reference/data-types/object-data-type.md)|Herhangi bir tür|
+|`CSByte`|[SByte Veri Türü](../../../language-reference/data-types/sbyte-data-type.md)|Herhangi bir sayısal tür ( `Byte` ve numaralandırılmış türler dahil),, `Boolean` `String` ,`Object`|
+|`CShort`|[Short Veri Türü](../../../language-reference/data-types/short-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CSng`|[Single Veri Türü](../../../language-reference/data-types/single-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CStr`|[Dize Veri Türü](../../../language-reference/data-types/string-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `Char` , `Char` dizi, `Date` ,`Object`|
+|`CType`|Virgül () sonrasında belirtilen tür `,`|Bir *Öğesel veri türüne* dönüştürme sırasında (bir öğesel türün dizisi dahil), karşılık gelen dönüştürme anahtar sözcüğü için izin verilen türler<br /><br /> *Bileşik veri türüne*dönüştürme yaparken, uyguladığı arabirimler ve devraldığı sınıflar<br /><br /> Daha fazla yüklü olan bir sınıfa veya yapıya dönüştürme sırasında `CType` , bu sınıf veya yapı|
+|`CUInt`|[UInteger Veri Türü](../../../language-reference/data-types/uinteger-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CULng`|[ULong Veri Türü](../../../language-reference/data-types/ulong-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
+|`CUShort`|[UShort Veri Türü](../../../language-reference/data-types/ushort-data-type.md)|Herhangi bir sayısal tür ( `Byte` , `SByte` ve numaralandırılmış türler dahil), `Boolean` , `String` ,`Object`|
 
 ## <a name="the-ctype-function"></a>CType Işlevi
 
-[CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) iki bağımsız değişken üzerinde çalışır. İlki dönüştürülecek ifade, ikincisi ise hedef veri türü veya nesne sınıfıdır. İlk bağımsız değişkenin bir tür değil bir ifade olması gerektiğini unutmayın.
+[CType işlevi](../../../language-reference/functions/ctype-function.md) iki bağımsız değişken üzerinde çalışır. İlki dönüştürülecek ifade, ikincisi ise hedef veri türü veya nesne sınıfıdır. İlk bağımsız değişkenin bir tür değil bir ifade olması gerektiğini unutmayın.
 
 `CType`, bir *satır içi işlevdir*, yani derlenmiş kod, genellikle bir işlev çağrısı oluşturmadan dönüştürmeyi yapar. Bu, performansı geliştirir.
 
-Diğer tür dönüştürme anahtar sözcükleriyle `CType` bir karşılaştırması için bkz. [DirectCast İşleci](../../../../visual-basic/language-reference/operators/directcast-operator.md) ve [TryCast İşleci](../../../../visual-basic/language-reference/operators/trycast-operator.md).
+`CType`Diğer tür dönüştürme anahtar sözcükleriyle bir karşılaştırması için bkz. [DirectCast Işleci](../../../language-reference/operators/directcast-operator.md) ve [TryCast İşleci](../../../language-reference/operators/trycast-operator.md).
 
 ### <a name="elementary-types"></a>Elemensel türler
 
-Aşağıdaki örnek, `CType`kullanımını gösterir.
+Aşağıdaki örnek öğesinin kullanımını gösterir `CType` .
 
 ```vb
 k = CType(q, Integer)
@@ -94,7 +94,7 @@ f = CType(w, Label)
 
 ### <a name="composite-types"></a>Bileşik türler
 
-Değerleri bileşik veri türlerine ve öğesel türlere dönüştürmek için `CType` kullanabilirsiniz. Ayrıca, aşağıdaki örnekte olduğu gibi, bir nesne sınıfını arabirimlerinden biri türüne zorlamak için de kullanabilirsiniz.
+`CType`Değerleri bileşik veri türlerine ve öğesel türlere dönüştürmek için ' i kullanabilirsiniz. Ayrıca, aşağıdaki örnekte olduğu gibi, bir nesne sınıfını arabirimlerinden biri türüne zorlamak için de kullanabilirsiniz.
 
 ```vb
 ' Assume class cZone implements interface iZone.
@@ -120,28 +120,28 @@ If TypeOf obArray Is classV()
 End If
 ```
 
-Daha fazla bilgi ve bir örnek için bkz. [dizi dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md).
+Daha fazla bilgi ve bir örnek için bkz. [dizi dönüştürmeleri](array-conversions.md).
 
 ### <a name="types-defining-ctype"></a>CType tanımlayan türler
 
-Tanımladığınız bir sınıf veya yapı üzerinde `CType` tanımlayabilirsiniz. Bu, değerleri sınıfınızın veya yapınızın türüne ve türünden dönüştürmenizi sağlar. Daha fazla bilgi ve bir örnek için bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
+`CType`Tanımladığınız bir sınıf veya yapı üzerinde tanımlayabilirsiniz. Bu, değerleri sınıfınızın veya yapınızın türüne ve türünden dönüştürmenizi sağlar. Daha fazla bilgi ve bir örnek için bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../procedures/how-to-define-a-conversion-operator.md).
 
 > [!NOTE]
-> Bir dönüştürme anahtar sözcüğüyle kullanılan değerlerin hedef veri türü için geçerli olması gerekir veya bir hata oluşur. Örneğin, bir `Long` `Integer`dönüştürmeye çalışırsanız `Long` değeri `Integer` veri türü için geçerli aralık dahilinde olmalıdır.
+> Bir dönüştürme anahtar sözcüğüyle kullanılan değerlerin hedef veri türü için geçerli olması gerekir veya bir hata oluşur. Örneğin, bir ' a dönüştürmeye çalışırsanız, `Long` `Integer` değeri `Long` veri türü için geçerli aralık dahilinde olmalıdır `Integer` .
 
 > [!CAUTION]
-> Kaynak türü hedef türünden türemezse, çalışma zamanında bir sınıf türünden diğerine dönüştürmek için `CType` belirtme. Bu tür bir hata <xref:System.InvalidCastException> özel durumu oluşturur.
+> `CType`Kaynak türü hedef türünden türemezse, çalışma zamanında bir sınıf türünden diğerine dönüştürme yapmak için belirtme. Bu tür bir hata <xref:System.InvalidCastException> özel durum oluşturur.
 
-Ancak, türlerden biri tanımladığınız bir yapı veya sınıf ise ve bu yapıda veya sınıfta `CType` tanımladıysanız, `CType`gereksinimlerini karşılıyorsa bir dönüştürme başarılı olabilir. Bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md).
+Ancak, türlerden biri tanımladığınız bir yapı veya sınıf ise ve `CType` Bu yapıda veya sınıfta tanımladıysanız, bir dönüştürme işlemi, gereksinimlerinizi karşılıyorsa başarılı olabilir `CType` . Bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../procedures/how-to-define-a-conversion-operator.md).
 
 Açık bir dönüştürme gerçekleştirmek, belirli bir veri türüne veya nesne sınıfına bir ifade *atama* olarak da bilinir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Nasıl yapılır: Visual Basic bir nesneyi başka bir türe dönüştürme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
-- [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
-- [Tür Dönüştürme İşlevleri](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
+- [Dizeler ve Diğer Türler Arasında Dönüştürmeler](conversions-between-strings-and-other-types.md)
+- [Nasıl yapılır: Visual Basic'te Bir Nesneyi Başka Bir Türe Dönüştürme](how-to-convert-an-object-to-another-type.md)
+- [Yapılar](structures.md)
+- [Veri türleri](../../../language-reference/data-types/index.md)
+- [Tür Dönüştürme İşlevleri](../../../language-reference/functions/type-conversion-functions.md)
+- [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)

@@ -2,27 +2,27 @@
 title: Zaman Uyumsuz Dönüş Türleri
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 96d3a945a49a12f7c2d5d60e8ee59ce047a0bae6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347971"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396720"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 
-Zaman uyumsuz metotlarda üç olası dönüş türü vardır: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic, void dönüş türü bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordam olarak yazılır. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).
+Zaman uyumsuz metotlarda üç olası dönüş türü vardır: <xref:System.Threading.Tasks.Task%601> , <xref:System.Threading.Tasks.Task> ve void. Visual Basic, void dönüş türü bir [alt](../../language-features/procedures/sub-procedures.md) yordam olarak yazılır. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama (Visual Basic)](index.md).
 
 Her dönüş türü aşağıdaki bölümlerden birinde incelenir ve konunun sonunda her üç türü kullanan tam bir örnek bulabilirsiniz.
 
 > [!NOTE]
 > Örneği çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.
 
-## <a name="BKMK_TaskTReturnType"></a>Görev (T) dönüş türü
+## <a name="taskt-return-type"></a><a name="BKMK_TaskTReturnType"></a>Görev (T) dönüş türü
 
-<xref:System.Threading.Tasks.Task%601> dönüş türü, işleneninin tür `TResult`sahip olduğu bir [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır.
+<xref:System.Threading.Tasks.Task%601>Dönüş türü, işlenenin türü olan bir [Return](../../../language-reference/statements/return-statement.md) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır `TResult` .
 
-Aşağıdaki örnekte, `TaskOfT_MethodAsync` async yöntemi bir Integer döndüren return ifadesini içerir. Bu nedenle, yöntem bildirimi `Task(Of Integer)`bir dönüş türü belirtmelidir.
+Aşağıdaki örnekte, `TaskOfT_MethodAsync` Async yöntemi bir tamsayı döndüren return ifadesini içerir. Bu nedenle, metot bildiriminin bir dönüş türü belirtmesi gerekir `Task(Of Integer)` .
 
 ```vb
 ' TASK(OF T) EXAMPLE
@@ -47,19 +47,19 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-Bir await ifadesi içinden `TaskOfT_MethodAsync` çağrıldığında await ifadesi, `TaskOfT_MethodAsync`tarafından döndürülen görevde depolanan tamsayı değerini (`leisureHours`değeri) alır. Await ifadeleri hakkında daha fazla bilgi için bkz. [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md).
+`TaskOfT_MethodAsync`Await ifadesi içinden çağrıldığında, await ifadesi `leisureHours` tarafından döndürülen görevde depolanan tamsayı değerini (değeri) alır `TaskOfT_MethodAsync` . Await ifadeleri hakkında daha fazla bilgi için bkz. [Await işleci](../../../language-reference/operators/await-operator.md).
 
-Aşağıdaki kod çağrıları ve await metodu `TaskOfT_MethodAsync`. Sonuç `result1` değişkenine atanır.
+Aşağıdaki kod çağrıları ve Await yöntemi `TaskOfT_MethodAsync` . Sonuç `result1` değişkenine atanır.
 
 ```vb
 ' Call and await the Task(Of T)-returning async method in the same statement.
 Dim result1 As Integer = Await TaskOfT_MethodAsync()
 ```
 
-Aşağıdaki kodun gösterdiği gibi, `TaskOfT_MethodAsync` çağrısını `Await`uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz gibi, hemen beklenmiş olmayan bir yöntem `TaskOfT_MethodAsync` çağrısı `Task(Of Integer)`döndürür. Görev, örnekteki `integerTask` değişkenine atanır. `integerTask` bir <xref:System.Threading.Tasks.Task%601>olduğundan, `TResult`türünde bir <xref:System.Threading.Tasks.Task%601.Result> özelliği içerir. Bu durumda, TResult bir tamsayı türünü temsil eder. `Await` `integerTask`uygulandığında, await ifadesi `integerTask`<xref:System.Threading.Tasks.Task%601.Result%2A> özelliğinin içeriğini değerlendirir. Değer `result2` değişkenine atanır.
+`TaskOfT_MethodAsync` `Await` Aşağıdaki kodda gösterildiği gibi, çağrısını uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. `TaskOfT_MethodAsync`Yönteminin bildiriminden bekleyebileceğiniz için hemen beklenen bir yönteme çağrı bir döndürür `Task(Of Integer)` . Görev `integerTask` örnekteki değişkenine atanır. `integerTask`Bir olduğundan <xref:System.Threading.Tasks.Task%601> , türünde bir özelliği içerir <xref:System.Threading.Tasks.Task%601.Result> `TResult` . Bu durumda, TResult bir tamsayı türünü temsil eder. `Await`Öğesine uygulandığında `integerTask` , await ifadesi <xref:System.Threading.Tasks.Task%601.Result%2A> öğesinin özelliğinin içeriğini değerlendirir `integerTask` . Değer `result2` değişkenine atanır.
 
 > [!WARNING]
-> <xref:System.Threading.Tasks.Task%601.Result%2A> özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliği doğrudan erişmek yerine `Await` kullanarak değere erişmeniz gerekir.
+> <xref:System.Threading.Tasks.Task%601.Result%2A>Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, `Await` özelliğine doğrudan erişmek yerine kullanarak değere erişmeniz gerekir.
 
 ```vb
 ' Call and await in separate statements.
@@ -71,7 +71,7 @@ textBox1.Text &= "Application can continue working while the Task(Of T) runs. . 
 Dim result2 As Integer = Await integerTask
 ```
 
-Aşağıdaki koddaki görüntüleme deyimleri `result1` değişkeninin değerlerinin, `result2` değişkeninin ve `Result` özelliğinin aynı olduğunu doğrular. `Result` özelliğinin engelleme özelliği olduğunu ve görevi beklenmeden önce erişilmeyeceğini unutmayın.
+Aşağıdaki koddaki Display deyimleri, `result1` değişkenin değerlerinin, `result2` değişkenin ve `Result` özelliğinin aynı olduğunu doğrular. `Result`Özelliğin engelleme özelliği olduğunu ve görevi beklenmeden önce erişilmemesi gerektiğini unutmayın.
 
 ```vb
 ' Display the values of the result1 variable, the result2 variable, and
@@ -81,11 +81,11 @@ textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
 textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
-## <a name="BKMK_TaskReturnType"></a>Görev dönüş türü
+## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a>Görev dönüş türü
 
-Dönüş açıklaması içermeyen veya bir işleneni döndürmeyen bir return ifadesini içeren zaman uyumsuz metotlar genellikle <xref:System.Threading.Tasks.Task>dönüş türüne sahiptir. Bu tür yöntemler, zaman uyumlu olarak çalışmak üzere yazılmışsa [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamlar olur. Zaman uyumsuz bir yöntem için `Task` dönüş türü kullanırsanız, çağıran bir yöntem, çağrılan zaman uyumsuz yöntem tamamlanana kadar arayanın tamamlanmasını askıya almak için bir `Await` işleci kullanabilir.
+Dönüş açıklaması içermeyen veya bir işleneni döndürmeyen bir return ifadesini içeren zaman uyumsuz yöntemler genellikle dönüş türüne sahiptir <xref:System.Threading.Tasks.Task> . Bu tür yöntemler, zaman uyumlu olarak çalışmak üzere yazılmışsa [alt](../../language-features/procedures/sub-procedures.md) yordamlar olur. `Task`Zaman uyumsuz bir yöntem için dönüş türü kullanırsanız, çağıran `Await` zaman uyumsuz yöntem bitene kadar çağıranın tamamlanmasını askıya almak için bir operatör kullanabilirsiniz.
 
-Aşağıdaki örnekte, zaman uyumsuz yöntem `Task_MethodAsync` return ifadesini içermez. Bu nedenle, `Task_MethodAsync` beklenmesine olanak sağlayan, yöntemi için `Task` dönüş türünü belirtirsiniz. `Task` türünün tanımı bir dönüş değeri depolamak için bir `Result` özelliği içermiyor.
+Aşağıdaki örnekte, Async yöntemi `Task_MethodAsync` return ifadesini içermez. Bu nedenle, `Task` beklenmeye olanak tanıyan yöntemi için dönüş türü belirtirsiniz `Task_MethodAsync` . `Task`Türün tanımı `Result` bir dönüş değeri depolamak için bir özellik içermez.
 
 ```vb
 ' TASK EXAMPLE
@@ -101,18 +101,18 @@ Async Function Task_MethodAsync() As Task
 End Function
 ```
 
-`Task_MethodAsync`, zaman uyumlu bir `Sub` veya void döndüren bir yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak çağrılır ve bekletildi. Bu durumda `Await` işlecinin uygulaması bir değer üretmez.
+`Task_MethodAsync`, zaman uyumlu veya void döndüren bir yöntem için çağırma deyimine benzer bir await ifadesi yerine await deyimi kullanılarak çağrılır ve bekletildi `Sub` . `Await`Bu durumda bir işlecin uygulaması bir değer üretmez.
 
-Aşağıdaki kod çağrıları ve await metodu `Task_MethodAsync`.
+Aşağıdaki kod çağrıları ve Await yöntemi `Task_MethodAsync` .
 
 ```vb
 ' Call and await the Task-returning async method in the same statement.
 Await Task_MethodAsync()
 ```
 
-Önceki <xref:System.Threading.Tasks.Task%601> örneğinde olduğu gibi, aşağıdaki kodun gösterdiği gibi, bir `Await` işlecinin uygulamasından `Task_MethodAsync` çağrısını ayırabilirsiniz. Ancak, bir `Task` bir `Result` özelliğine sahip olmadığını ve bir `Task`bir Await işleci uygulandığında hiçbir değer üretilmediğini unutmayın.
+Önceki örnekte olduğu gibi <xref:System.Threading.Tasks.Task%601> , `Task_MethodAsync` `Await` aşağıdaki kodda gösterildiği gibi, çağrısını bir işlecin uygulamasından ayırabilirsiniz. Ancak, bir `Task` özelliğine sahip olmadığını `Result` ve bir Await işleci uygulandığında hiçbir değer üretilmediğini unutmayın `Task` .
 
-Aşağıdaki kod, `Task_MethodAsync` döndürdüğü görevi bekleyen çağrıyı `Task_MethodAsync` ayırır.
+Aşağıdaki kod, çağırma `Task_MethodAsync` görevinin döndürdüğü görevi bekleten ayırır `Task_MethodAsync` .
 
 ```vb
 ' Call and await in separate statements.
@@ -124,13 +124,13 @@ textBox1.Text &= vbCrLf & "Application can continue working while the Task runs.
 Await simpleTask
 ```
 
-## <a name="BKMK_VoidReturnType"></a>Void dönüş türü
+## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a>Void dönüş türü
 
-`Sub` yordamların birincil kullanımı, dönüş türü olmayan (diğer dillerde void dönüş türü olarak ifade edilen) olay işleyicileridir. Void Return Ayrıca, void döndüren yöntemleri geçersiz kılmak için veya "Fire ve unut" olarak kategorilere ayrılmamış etkinlikler gerçekleştiren yöntemler için de kullanılabilir. Ancak, void döndüren zaman uyumsuz bir yöntem beklenmediğinden, mümkün olan her yerde `Task` döndürmelisiniz. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.
+Yordamların birincil kullanımı, `Sub` dönüş türü olmayan (diğer dillerde void dönüş türü olarak ifade edilen) olay işleyicileridir. Void Return Ayrıca, void döndüren yöntemleri geçersiz kılmak için veya "Fire ve unut" olarak kategorilere ayrılmamış etkinlikler gerçekleştiren yöntemler için de kullanılabilir. Ancak, `Task` void döndüren zaman uyumsuz bir yöntem beklenmediğinden, mümkün olan her yerde dönebilmelisiniz. Bu tür bir yöntemi çağıran, çağrılan zaman uyumsuz yöntemin tamamlanmasını beklemeden tamamlamaya devam edebilmelidir ve çağıranın, zaman uyumsuz yöntemin ürettiği herhangi bir değerden veya özel durumlardan bağımsız olması gerekir.
 
-Void döndüren zaman uyumsuz bir yöntemi çağıran, yöntemden oluşturulan özel durumları yakalayabilir ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olmasına neden olabilir. Bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndüren zaman uyumsuz yöntemde bir özel durum oluşursa, özel durum döndürülen görevde depolanır ve görev beklendiğinde yeniden oluşturulur. Bu nedenle, bir özel durum üretemeyen herhangi bir zaman uyumsuz yöntemin <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> dönüş türüne sahip olduğundan ve yönteme yapılan çağrıların beklenmediğinden emin olun.
+Void döndüren zaman uyumsuz bir yöntemi çağıran, yöntemden oluşturulan özel durumları yakalayabilir ve bu tür işlenmemiş özel durumlar uygulamanızın başarısız olmasına neden olabilir. Bir veya döndüren zaman uyumsuz bir yöntemde özel durum oluşursa <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> , özel durum döndürülen görevde depolanır ve görev beklendiğinde yeniden oluşturulur. Bu nedenle, bir özel durum üretemeyen herhangi bir zaman uyumsuz metodun, veya dönüş türüne sahip olduğundan ve metoda yapılan çağrıların beklenmediğinden emin olun <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> .
 
-Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+Zaman uyumsuz yöntemlerde özel durumları yakalama hakkında daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../language-reference/statements/try-catch-finally-statement.md).
 
 Aşağıdaki kod zaman uyumsuz bir olay işleyicisini tanımlar.
 
@@ -149,7 +149,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub
 ```
 
-## <a name="BKMK_Example"></a>Örnek Tamam
+## <a name="complete-example"></a><a name="BKMK_Example"></a>Örnek Tamam
 
 Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örneklerini içerir.
 
@@ -163,7 +163,7 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
 
 3. **Yüklü**, **Şablonlar** kategorisinde **Visual Basic**ve ardından **Windows**' u seçin. Proje türleri listesinden **WPF uygulaması** ' nı seçin.
 
-4. Projenin adı olarak `AsyncReturnTypes` girin ve **Tamam** düğmesini seçin.
+4. `AsyncReturnTypes`Projenin adı olarak girin ve **Tamam** düğmesini seçin.
 
      Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -300,7 +300,7 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi bu konudan kod örnek
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz programlarda denetim akışı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Zaman uyumsuz programlarda denetim akışı (Visual Basic)](control-flow-in-async-programs.md)
+- [Eş](../../../language-reference/modifiers/async.md)
+- [Await Işleci](../../../language-reference/operators/await-operator.md)

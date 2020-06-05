@@ -1,23 +1,23 @@
 ---
-title: Geçersiz kayıt numarası
+title: Hatalı kayıt numarası
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
-ms.openlocfilehash: abd0a1467c0991a40b93e74a1d7a7889367fb8ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44a11d95d33041de9d637684f41cb003dcc36b97
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977035"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84367548"
 ---
-# <a name="bad-record-number"></a>Geçersiz kayıt numarası
-Kayıt numarası `a FileGet`, `FilePut`, `FileGetObject`, veya `FilePutObject` deyimdir sıfırdan küçüktür veya eşittir.  
+# <a name="bad-record-number"></a>Hatalı kayıt numarası
+`a FileGet`,, `FilePut` Veya deyimindeki kayıt numarası `FileGetObject` `FilePutObject` sıfıra eşit veya daha az.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Kayıt sayısı oluşturmak için kullanılan hesaplama denetleyin. Kayıt numarası içeren veya kayıt sayıları hesaplamak için kullanılan değişkenleri yazımını denetleyin. Yanlış yazılmış bir değişken adı örtük olarak bildirilmiş ve kullandığınız sürece sıfır olarak başlatılır `Option Explicit On` modülünde.  
+1. Kayıt numarasını oluştururken kullanılan hesaplamaları denetleyin. Kayıt numarasını içeren veya kayıt numaralarını hesaplamak için kullanılan değişkenlerin yazımını doğrulayın. Yanlış yazılmış bir değişken adı, modülde kullanmadığınız durumlar dışında örtülü olarak belirtilir ve sıfır olarak başlatılır `Option Explicit On` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Option Explicit Deyimi](../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Explicit Deyimi](../language-reference/statements/option-explicit-statement.md)

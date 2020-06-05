@@ -11,16 +11,16 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: b395f5fcf1b89bb49e55e207c4910e95f2aae69d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346006"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364324"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
 
-İşleç yordamı, tanımladığınız bir sınıf veya yapıda standart bir işlecin (`*`, `<>`veya `And`) davranışını tanımlayan Visual Basic deyimlerinin bir dizisidir. Buna *işleç aşırı yüklemesi*de denir.
+İşleç yordamı, `*` `<>` `And` tanımladığınız bir sınıf veya yapıda standart işlecin (örneğin,, veya) davranışını tanımlayan Visual Basic deyimlerinin bir dizisidir. Buna *işleç aşırı yüklemesi*de denir.
 
 ## <a name="when-to-define-operator-procedures"></a>Operatör yordamları ne zaman tanımlanır
 
@@ -28,7 +28,7 @@ Bir sınıf veya yapı tanımladığınızda, değişkenleri bu sınıf veya yap
 
 Visual Basic işleçleri yalnızca temel veri türlerinde tanımlar. Bir işlecin bir veya her ikisi de sınıfınızın veya yapınızın türünden olduğunda bir işlecin davranışını tanımlayabilirsiniz.
 
-Daha fazla bilgi için bkz. [operator deyimleri](../../../../visual-basic/language-reference/statements/operator-statement.md).
+Daha fazla bilgi için bkz. [operator deyimleri](../../../language-reference/statements/operator-statement.md).
 
 ## <a name="types-of-operator-procedure"></a>Işleç yordamının türleri
 
@@ -42,9 +42,9 @@ Bir işleç yordamı aşağıdaki türlerden biri olabilir:
 
 - Sınıfınızın veya yapınızın türünü döndüren bir dönüştürme işlecinin tanımı.
 
- Dönüştürme işleçleri her zaman tekil değildir ve `CType` her zaman tanımladığınız operatör olarak kullanırsınız.
+ Dönüştürme işleçleri her zaman birli ve `CType` tanımladığınız operatör olarak her zaman kullanılır.
 
-## <a name="declaration-syntax"></a>Bildirim Söz Dizimi
+## <a name="declaration-syntax"></a>Bildirim Sözdizimi
 
 Bir işleç yordamını bildirmek için sözdizimi aşağıdaki gibidir:
 
@@ -56,9 +56,9 @@ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  oper
 End Operator
 ```
 
-`Widening` veya `Narrowing` anahtar sözcüğünü yalnızca bir tür dönüştürme işleci üzerinde kullanırsınız. İşleç sembolü, bir tür dönüştürme işleci için her zaman [CType işlevidir](../../../../visual-basic/language-reference/functions/ctype-function.md) .
+`Widening`Or `Narrowing` anahtar sözcüğünü yalnızca bir tür dönüştürme işleci üzerinde kullanırsınız. İşleç sembolü, bir tür dönüştürme işleci için her zaman [CType işlevidir](../../../language-reference/functions/ctype-function.md) .
 
-İkili bir işleç tanımlamak için iki işlenen bildirir ve bir tür dönüştürme işleci dahil birli işleç tanımlamak için bir işlenen bildirirsiniz. Tüm işlenenler `ByVal`olarak bildirilmelidir.
+İkili bir işleç tanımlamak için iki işlenen bildirir ve bir tür dönüştürme işleci dahil birli işleç tanımlamak için bir işlenen bildirirsiniz. Tüm işlenenler bildirilmelidir `ByVal` .
 
 Her işleneni, [Sub yordamları](./sub-procedures.md)için parametreleri bildirdiğiniz şekilde bildirirsiniz.
 
@@ -66,7 +66,7 @@ Her işleneni, [Sub yordamları](./sub-procedures.md)için parametreleri bildird
 
 Tanımladığınız bir sınıf veya yapı üzerinde bir işleç tanımladığınız için işlenenlerinden en az birinin bu sınıf veya yapının veri türünde olması gerekir. Bir tür dönüştürme işleci için, işlenen ya da dönüş türü, sınıfın veya yapının veri türünde olmalıdır.
 
-Daha ayrıntılı bilgi için bkz. [Işleç açıklaması](../../../../visual-basic/language-reference/statements/operator-statement.md).
+Daha ayrıntılı bilgi için bkz. [Işleç açıklaması](../../../language-reference/statements/operator-statement.md).
 
 ## <a name="calling-syntax"></a>Çağırma sözdizimi
 
@@ -74,17 +74,17 @@ Bir ifadede işleç sembolünü kullanarak örtük olarak bir operatör yordamı
 
 İşleç yordamına örtük çağrının sözdizimi aşağıdaki gibidir:
 
-`Dim testStruct As`*structurename*
+`Dim testStruct As`  *structurename*
 
-`Dim testNewStruct As`*structurename*`= testStruct`*operatorsymbol*`10`
+`Dim testNewStruct As`  *structurename* `= testStruct` *operatorsymbol*      `10`
 
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi
 
-Aşağıdaki yapı, imzalı bir 128 bitlik tamsayı değerini, anayen yüksek sıralı ve düşük sıralı parçalar olarak depolar. İki `veryLong` değer eklemek ve elde edilen bir `veryLong` değeri oluşturmak için `+` işlecini tanımlar.
+Aşağıdaki yapı, imzalı bir 128 bitlik tamsayı değerini, anayen yüksek sıralı ve düşük sıralı parçalar olarak depolar. `+`İki `veryLong` değer eklemek ve elde edilen bir değer oluşturmak için işlecini tanımlar `veryLong` .
 
 [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]
 
-Aşağıdaki örnek, `veryLong`tanımlanan `+` işlecine tipik bir çağrı gösterir.
+Aşağıdaki örnek, üzerinde tanımlanan işlecine tipik bir çağrı gösterir `+` `veryLong` .
 
 [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
@@ -95,7 +95,7 @@ Aşağıdaki örnek, `veryLong`tanımlanan `+` işlecine tipik bir çağrı gös
 - [İşlev Yordamları](./function-procedures.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Deyimi](../../../language-reference/statements/operator-statement.md)
 - [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)
 - [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
 - [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)

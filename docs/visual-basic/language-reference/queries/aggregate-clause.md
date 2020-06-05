@@ -1,5 +1,5 @@
 ---
-title: Aggregate Tümcesi
+title: Aggregate Yan Tümcesi
 ms.date: 08/28/2018
 f1_keywords:
 - vb.QueryAggregateIn
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 5aa4b9afea4b6b26b853d4f4f6d4c8db08554e19
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350878"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413007"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate Tümcesi (Visual Basic)
 Bir koleksiyona bir veya daha fazla toplama işlevi uygular.  
@@ -33,32 +33,32 @@ Aggregate element [As type] In collection _
   
 |Terim|Tanım|  
 |---|---|  
-|`element`|Gerekli. Koleksiyon öğeleri boyunca yinelemek için kullanılan değişken.|  
-|`type`|İsteğe bağlı. `element` öğesinin türü. Hiçbir tür belirtilmemişse, `element` türü `collection`algılanır.|  
-|`collection`|Gerekli. Üzerinde çalışılacak koleksiyona başvurur.|  
-|`clause`|İsteğe bağlı. Toplama yan tümcesini veya yan tümceleri uygulamak üzere sorgu sonucunu daraltmak için bir `Where` yan tümcesi gibi bir veya daha fazla sorgu yan tümcesi.|  
-|`expressionList`|Gerekli. Koleksiyona uygulanacak bir toplama işlevini tanımlayan bir veya daha fazla virgülle ayrılmış ifade. Sorgu sonucu için bir üye adı belirtmek üzere bir toplama işlevine bir diğer ad uygulayabilirsiniz. Diğer ad sağlanmazsa, toplama işlevinin adı kullanılır. Örnekler için, bu konunun ilerleyen kısımlarında bulunan toplama işlevleri hakkında bölümüne bakın.|  
+|`element`|Gereklidir. Koleksiyon öğeleri boyunca yinelemek için kullanılan değişken.|  
+|`type`|İsteğe bağlı. Türü `element` . Hiçbir tür belirtilmemişse, türü `element` öğesinden çıkarsanamıyor `collection` .|  
+|`collection`|Gereklidir. Üzerinde çalışılacak koleksiyona başvurur.|  
+|`clause`|İsteğe bağlı. `Where`Toplama yan tümcesini veya yan tümceleri uygulamak üzere sorgu sonucunu daraltmak için bir yan tümce gibi bir veya daha fazla sorgu yan tümcesi.|  
+|`expressionList`|Gereklidir. Koleksiyona uygulanacak bir toplama işlevini tanımlayan bir veya daha fazla virgülle ayrılmış ifade. Sorgu sonucu için bir üye adı belirtmek üzere bir toplama işlevine bir diğer ad uygulayabilirsiniz. Diğer ad sağlanmazsa, toplama işlevinin adı kullanılır. Örnekler için, bu konunun ilerleyen kısımlarında bulunan toplama işlevleri hakkında bölümüne bakın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Aggregate` yan tümcesi, Sorgularınızdaki toplama işlevlerini eklemek için kullanılabilir. Toplama işlevleri, bir değerler kümesi üzerinde denetim ve hesaplamalar gerçekleştirir ve tek bir değer döndürür. Sorgu sonuç türünün bir üyesini kullanarak hesaplanan değere erişebilirsiniz. Kullanabileceğiniz standart toplama işlevleri `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`ve `Sum` işlevleridir. Bu işlevler, SQL 'deki toplamalara alışkın olan geliştiricilere tanıdık gelecektir. Bunlar, bu konunun aşağıdaki bölümünde açıklanmaktadır.  
+ `Aggregate`Yan tümce, Sorgularınızdaki toplama işlevlerini dahil etmek için kullanılabilir. Toplama işlevleri, bir değerler kümesi üzerinde denetim ve hesaplamalar gerçekleştirir ve tek bir değer döndürür. Sorgu sonuç türünün bir üyesini kullanarak hesaplanan değere erişebilirsiniz. Kullanabileceğiniz standart toplama işlevleri,,,,,, `All` `Any` `Average` `Count` `LongCount` `Max` `Min` , ve `Sum` işlevleridir. Bu işlevler, SQL 'deki toplamalara alışkın olan geliştiricilere tanıdık gelecektir. Bunlar, bu konunun aşağıdaki bölümünde açıklanmaktadır.  
   
  Toplama işlevinin sonucu sorgu sonuç türünün bir alanı olarak sorgu sonucuna dahil edilir. Toplama işlevi sonucu için, toplam değeri tutacak sorgu sonuç türü üyesinin adını belirtmek üzere bir diğer ad sağlayabilirsiniz. Diğer ad sağlanmazsa, toplama işlevinin adı kullanılır.  
   
- `Aggregate` yan tümcesi bir sorgu başlatabilir veya bir sorguya ek bir yan tümce olarak eklenebilir. `Aggregate` yan tümcesi bir sorgu başlıyorsa, sonuç, `Into` yan tümcesinde belirtilen toplama işlevinin sonucu olan tek bir değerdir. `Into` yan tümcesinde birden fazla toplama işlevi belirtilmişse, sorgu, `Into` yan tümcesindeki her toplama işlevinin sonucuna başvurmak için ayrı bir özelliği olan tek bir tür döndürür. `Aggregate` yan tümcesi bir sorguya ek bir yan tümce olarak dahil edildiğinde, sorgu koleksiyonunda döndürülen türün, `Into` yan tümcesindeki her toplama işlevinin sonucuna başvurması için ayrı bir özelliği olacaktır.  
+ `Aggregate`Yan tümce bir sorgu başlatabilir veya bir sorguya ek bir yan tümce olarak eklenebilir. `Aggregate`Yan tümce bir sorgu başlıyorsa, sonuç, yan tümcesinde belirtilen toplama işlevinin sonucu olan tek bir değerdir `Into` . Yan tümcesinde birden fazla toplama işlevi belirtilmişse `Into` , sorgu, yan tümcesindeki her toplama işlevinin sonucuna başvurmak için ayrı bir özelliği olan tek bir tür döndürür `Into` . `Aggregate`Yan tümce bir sorguya ek bir yan tümce olarak dahil edildiğinde, sorgu koleksiyonunda döndürülen tür, yan tümcesindeki her toplama işlevinin sonucuna başvuracak ayrı bir özelliğe sahip olur `Into` .  
   
 ## <a name="aggregate-functions"></a>Toplama İşlevleri
 
-Aşağıdakiler `Aggregate` yan tümcesiyle kullanılabilen standart toplama işlevleridir.  
+Aşağıdaki, yan tümcesiyle kullanılabilen standart toplama işlevleridir `Aggregate` .  
   
 ### <a name="all"></a>Tümü
 
-Koleksiyondaki tüm öğelerin belirtilen bir koşulu karşılaması durumunda `true` döndürür; Aksi takdirde `false`döndürür. Aşağıda bir örnek verilmiştir:
+`true`Koleksiyondaki tüm öğelerin belirtilen koşulu karşılayıp karşılamadığını döndürür; Aksi takdirde döndürür `false` . Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
-### <a name="any"></a>Tümü
+### <a name="any"></a>Herhangi biri
 
-Koleksiyondaki herhangi bir öğe belirtilen koşulu karşılıyorsa `true` döndürür; Aksi takdirde `false`döndürür. Aşağıda bir örnek verilmiştir:
+`true`Koleksiyondaki herhangi bir öğenin belirtilen koşulu karşılayıp karşılamadığını döndürür; Aksi takdirde döndürür `false` . Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
@@ -70,17 +70,17 @@ Koleksiyondaki tüm öğelerin ortalamasını hesaplar veya koleksiyondaki tüm 
 
 ### <a name="count"></a>Sayı
 
-Koleksiyondaki öğelerin sayısını sayar. Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir `Boolean` ifadesi sağlayabilirsiniz. Aşağıda bir örnek verilmiştir:
+Koleksiyondaki öğelerin sayısını sayar. `Boolean`Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir ifade sağlayabilirsiniz. Aşağıda bir örnek verilmiştir:
 
  [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Grup
 
-Bir `Group By` veya `Group Join` yan tümcesinin sonucu olarak gruplandırılan sorgu sonuçlarının başvurduğu anlamına gelir. `Group` işlevi yalnızca bir `Group By` veya `Group Join` yan tümcesinin `Into` yan tümcesinde geçerlidir. Daha fazla bilgi ve örnek için bkz. [Group by yan tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md) ve [Group JOIN yan tümcesi](../../../visual-basic/language-reference/queries/group-join-clause.md).
+, `Group By` Veya yan tümcesinin sonucu olarak gruplandırılan sorgu sonuçlarının başvurduğu anlamına gelir `Group Join` . `Group`İşlev yalnızca `Into` `Group By` OR yan tümcesinde geçerlidir `Group Join` . Daha fazla bilgi ve örnek için bkz. [Group by yan tümcesi](group-by-clause.md) ve [Group JOIN yan tümcesi](group-join-clause.md).
 
 ### <a name="longcount"></a>LongCount
 
-Koleksiyondaki öğelerin sayısını sayar. Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir `Boolean` ifadesi sağlayabilirsiniz. `Long`sonucunu döndürür. Bir örnek için `Count` toplama işlevine bakın.
+Koleksiyondaki öğelerin sayısını sayar. `Boolean`Koleksiyonda yalnızca bir koşulu karşılayan öğelerin sayısını saymak için isteğe bağlı bir ifade sağlayabilirsiniz. Sonucu bir olarak döndürür `Long` . Bir örnek için bkz `Count` . toplama işlevi.
 
 ### <a name="max"></a>Maks
 
@@ -94,7 +94,7 @@ Koleksiyondaki en küçük değeri hesaplar veya koleksiyondaki tüm öğeler i�
 
  [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
-### <a name="sum"></a>TOPLA
+### <a name="sum"></a>Toplam
 
 Koleksiyondaki tüm öğelerin toplamını hesaplar veya koleksiyondaki tüm öğeler için sağlanan bir ifadeyi hesaplar. Aşağıda bir örnek verilmiştir:
 
@@ -102,27 +102,27 @@ Koleksiyondaki tüm öğelerin toplamını hesaplar veya koleksiyondaki tüm ö�
 
 ## <a name="example"></a>Örnek  
 
-Aşağıdaki örnek, bir sorgu sonucuna toplama işlevleri uygulamak için `Aggregate` yan tümcesinin nasıl kullanılacağını gösterir.  
+Aşağıdaki örnek, `Aggregate` bir sorgu sonucuna toplama işlevleri uygulamak için yan tümcesinin nasıl kullanılacağını gösterir.  
   
  [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Kullanıcı tanımlı toplama Işlevleri oluşturma
 
- <xref:System.Collections.Generic.IEnumerable%601> türüne uzantı yöntemleri ekleyerek kendi özel toplama işlevlerinizi bir sorgu ifadesine dahil edebilirsiniz. Özel yönteminiz, toplama işlevinizin başvurduğu sıralanabilir koleksiyonda bir hesaplama veya işlem gerçekleştirebilir. Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
+ Türe uzantı yöntemleri ekleyerek kendi özel toplama işlevlerinizi bir sorgu ifadesine dahil edebilirsiniz <xref:System.Collections.Generic.IEnumerable%601> . Özel yönteminiz, toplama işlevinizin başvurduğu sıralanabilir koleksiyonda bir hesaplama veya işlem gerçekleştirebilir. Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../programming-guide/language-features/procedures/extension-methods.md).  
   
- Örneğin, aşağıdaki örnek bir sayı koleksiyonunun ortanca değerini hesaplayan özel bir toplama işlevi gösterir. `Median` uzantısı yönteminin iki aşırı yüklemesi vardır. İlk aşırı yükleme giriş olarak, `IEnumerable(Of Double)`türünde bir koleksiyon kabul eder. `Double`türündeki bir sorgu alanı için `Median` toplama işlevi çağrılırsa, bu yöntem çağrılır. `Median` yönteminin ikinci aşırı yüklemesi herhangi bir genel tür geçirilebilir. `Median` yönteminin genel aşırı yüklemesi, `Func(Of T, Double)` lambda ifadesine başvuran ikinci bir parametre alır (bir koleksiyondan), karşılık gelen `Double`türü olarak bir değer proje. Daha sonra ortanca değer hesaplamasını `Median` yönteminin diğer aşırı yüküne devreder. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Örneğin, aşağıdaki örnek bir sayı koleksiyonunun ortanca değerini hesaplayan özel bir toplama işlevi gösterir. Uzantı yönteminin iki aşırı yüklemesi vardır `Median` . İlk aşırı yükleme giriş olarak bir tür koleksiyonu kabul eder `IEnumerable(Of Double)` . `Median`Toplama işlevi, türünde bir sorgu alanı için çağrılırsa `Double` , bu yöntem çağrılır. Metodun ikinci aşırı yüklemesi `Median` herhangi bir genel tür geçirilebilir. Yönteminin genel aşırı yüklemesi, `Median` `Func(Of T, Double)` bir tür için değeri (bir koleksiyondan), karşılık gelen türü olarak proje için lambda ifadesine başvuran ikinci bir parametre alır `Double` . Daha sonra ortanca değer hesaplamasını metodun diğer aşırı yüküne devreder `Median` . Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
- Aşağıdaki örnek, `Integer`türünde bir koleksiyon üzerinde `Median` toplama işlevini çağıran örnek sorguları ve `Double`türünde bir koleksiyonu gösterir. `Double` türü koleksiyonundaki `Median` toplama işlevini çağıran sorgu, giriş olarak kabul eden `Median` yönteminin `Double`bir koleksiyon olan aşırı yüklemesini çağırır. `Integer` türü koleksiyonundaki `Median` toplama işlevini çağıran sorgu `Median` yönteminin genel aşırı yüklemesini çağırır.  
+ Aşağıdaki örnek `Median` , bir türü koleksiyonda toplama işlevini çağıran örnek sorguları `Integer` ve türünde bir koleksiyonu gösterir `Double` . `Median`Türü koleksiyonundaki toplama işlevini çağıran sorgu, `Double` `Median` türü bir koleksiyon olarak kabul eden metodun aşırı yüklemesini çağırır `Double` . `Median`Türü koleksiyonundaki toplama işlevini çağıran sorgu, `Integer` yönteminin genel aşırı yüklemesini çağırır `Median` .  
   
  [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic LINQ 'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Sorgular](../../../visual-basic/language-reference/queries/index.md)
-- [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From Yan Tümcesi](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where Yan Tümcesi](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Group By Yan Tümcesi](../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Visual Basic'de LINQ'e Giriş](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [Sorgular](index.md)
+- [Select yan tümcesi](select-clause.md)
+- [From yan tümcesi](from-clause.md)
+- [WHERE yan tümcesi](where-clause.md)
+- [Group By Yan Tümcesi](group-by-clause.md)

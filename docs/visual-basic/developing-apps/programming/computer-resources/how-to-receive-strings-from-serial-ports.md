@@ -6,16 +6,16 @@ helpviewer_keywords:
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: afd19877d053cb414f08761cda4e461d88f9e21c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 93b6b47d89d05331c85a6459bba7d6fd5e2e3377
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345592"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401842"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Nasıl Yapılır: Visual Basic'te Seri Bağlantı Noktalarından Dize Alma
 
-Bu konu başlığı altında, bilgisayarın `My.Computer.Ports` seri bağlantı noktalarından Visual Basic dize almak için nasıl kullanılacağı açıklanmaktadır.  
+Bu konu başlığı `My.Computer.Ports` altında, bilgisayarın seri bağlantı noktalarından Visual Basic dize almak için nasıl kullanılacağı açıklanmaktadır.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Seri bağlantı noktasından dizeler almak için  
   
@@ -23,27 +23,27 @@ Bu konu başlığı altında, bilgisayarın `My.Computer.Ports` seri bağlantı 
   
      [!code-vb[VbVbalrMyComputer#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#38)]  
   
-2. Dizelerin hangi seri bağlantı noktası tarafından sağlanması gerektiğini saptayın. Bu örnek, `COM1`olduğunu varsayar.  
+2. Dizelerin hangi seri bağlantı noktası tarafından sağlanması gerektiğini saptayın. Bu örnek, olduğunu varsayar `COM1` .  
   
-3. Bağlantı noktasına `My.Computer.Ports.OpenSerialPort` bir başvuru almak için yöntemini kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. `My.Computer.Ports.OpenSerialPort`Bağlantı noktasına bir başvuru almak için yöntemini kullanın. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     `Try...Catch...Finally` Blok, uygulamanın bir özel durum oluşturursa bile seri bağlantı noktasını kapatmasını sağlar. Seri bağlantı noktasını işleyen tüm kodlar bu blok içinde görünmelidir.  
+     `Try...Catch...Finally`Blok, uygulamanın bir özel durum oluşturursa bile seri bağlantı noktasını kapatmasını sağlar. Seri bağlantı noktasını işleyen tüm kodlar bu blok içinde görünmelidir.  
   
      [!code-vb[VbVbalrMyComputer#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#39)]  
   
-4. Daha fazla `Do` satır yoksa metin satırlarını okumak için bir döngü oluşturun.  
+4. `Do`Daha fazla satır yoksa metin satırlarını okumak için bir döngü oluşturun.  
   
      [!code-vb[VbVbalrMyComputer#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#40)]  
   
-5. Seri bağlantı <xref:System.IO.Ports.SerialPort.ReadLine> noktasından sonraki kullanılabilir metin satırını okumak için yöntemini kullanın.  
+5. <xref:System.IO.Ports.SerialPort.ReadLine>Seri bağlantı noktasından sonraki kullanılabilir metin satırını okumak için yöntemini kullanın.  
   
      [!code-vb[VbVbalrMyComputer#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#41)]  
   
-6. Yöntemin döndürüp `If` döndürmediğine `Nothing` yönelik bir ifade kullanın (yani daha fazla metin kullanılamaz). <xref:System.IO.Ports.SerialPort.ReadLine> Geri dönemezse `Nothing` `Do` döngüden çıkın.  
+6. `If` <xref:System.IO.Ports.SerialPort.ReadLine> Yöntemin döndürüp döndürmediğine yönelik bir ifade kullanın `Nothing` (yani daha fazla metin kullanılamaz). Geri dönemezse `Nothing` `Do` döngüden çıkın.  
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. Dize gerçekten `Else` okuneyse, `If` durumu işlemek için deyime bir blok ekleyin. Blok, dizeyi seri bağlantı noktasından dönüş dizesine ekler.  
+7. `Else` `If` Dize gerçekten okuneyse, durumu işlemek için deyime bir blok ekleyin. Blok, dizeyi seri bağlantı noktasından dönüş dizesine ekler.  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   
@@ -59,18 +59,18 @@ Bu konu başlığı altında, bilgisayarın `My.Computer.Ports` seri bağlantı 
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 
- Bu örnekte, bilgisayarın kullandığı `COM1`varsayılır.  
+ Bu örnekte, bilgisayarın kullandığı varsayılır `COM1` .  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
 
- Bu örnekte, bilgisayarın kullandığı `COM1`varsayılır. Daha fazla esneklik için, kod kullanıcının kullanılabilir bağlantı noktası listesinden istenen seri bağlantı noktasını seçmesine izin verir. Daha fazla bilgi için bkz. [nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ Bu örnekte, bilgisayarın kullandığı varsayılır `COM1` . Daha fazla esneklik için, kod kullanıcının kullanılabilir bağlantı noktası listesinden istenen seri bağlantı noktasını seçmesine izin verir. Daha fazla bilgi için bkz. [nasıl yapılır: kullanılabilir seri bağlantı noktalarını gösterme](how-to-show-available-serial-ports.md).  
   
- Bu örnek, uygulamanın `Try...Catch...Finally` bağlantı noktasını kapatıp zaman aşımı özel durumlarını yakalamada emin olmak için bir bloğu kullanır. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Bu örnek `Try...Catch...Finally` , uygulamanın bağlantı noktasını kapatıp zaman aşımı özel durumlarını yakalamada emin olmak için bir bloğu kullanır. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [Nasıl yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [Nasıl yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [Nasıl yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [Nasıl yapılır: Seri Bağlantı Noktalarına Ekli Modemleri Çevirme](how-to-dial-modems-attached-to-serial-ports.md)
+- [Nasıl yapılır: Seri Bağlantı Noktalarına Dizeler Gönderme](how-to-send-strings-to-serial-ports.md)
+- [Nasıl yapılır: Kullanılabilir Seri Bağlantı Noktalarını Gösterme](how-to-show-available-serial-ports.md)

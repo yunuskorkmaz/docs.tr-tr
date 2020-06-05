@@ -1,23 +1,23 @@
 ---
-title: İşleci için geçerli değil '<name1>'ve'<name2>'
+title: İşleç ' <name1> ' ve ' ' için geçerli değil <name2>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
-ms.openlocfilehash: c13638d7be3081ceaddd6ff7096ba670b39d173a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 037cb035c98c70dd39a7056fed8f42b9c508a780
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944800"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375919"
 ---
-# <a name="operator-is-not-valid-for-name1-and-name2"></a>İşleci için geçerli değil '\<name1 >' ve '\<name2 >'
-Bir işleç üzerinde işlem yapılan türleri için uygun değil.  
+# <a name="operator-is-not-valid-for-name1-and-name2"></a>İşleç ' \<name1> ' ve ' ' için geçerli değil \<name2>
+Bir işleç, üzerinde çalışılmakta olan türler için uygun değildir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. İşlecin üzerinde işlem yapılan türleri için uygun olduğundan emin olun.  
+1. İşlecin üzerinde çalışılan türler için uygun olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşleçler](../../visual-basic/language-reference/operators/index.md)
+- [İşleçler](../language-reference/operators/index.md)

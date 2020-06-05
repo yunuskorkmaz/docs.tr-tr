@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: bir dizeyi ayrıştırma'
+title: 'Nasıl yapılır: Dize Ayrıştırma'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0a9076fc516bb8e6bc74732ca252fabfeda43d53
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344493"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398018"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Nasıl yapılır: bir dizeyi ayrıştırma (Visual Basic)
-Bu konuda ' de C#bir xml ağacının nasıl oluşturulacağı gösterilmektedir.  
+Bu konu başlığı altında, C# ' de bir XML ağacının nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- `XElement.Parse` metodunu kullanarak Visual Basic bir dizeyi ayrıştırabilirsiniz. Ancak, XML değişmez değerleri bir dizeden XML ayrıştırılırken aynı performans yaptırımlarından etkilemediğinden, aşağıdaki kodda gösterildiği gibi XML değişmez değerleri kullanmak daha verimlidir.  
+ Yöntemini kullanarak Visual Basic bir dizeyi ayrıştırabilirsiniz `XElement.Parse` . Ancak, XML değişmez değerleri bir dizeden XML ayrıştırılırken aynı performans yaptırımlarından etkilemediğinden, aşağıdaki kodda gösterildiği gibi XML değişmez değerleri kullanmak daha verimlidir.  
   
  XML sabit değerlerini kullanarak yalnızca XML dosyanızı Visual Basic programınıza kopyalayabilir ve yapıştırabilirsiniz.  
   
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML 'yi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 'yi ayrıştırma (Visual Basic)](parsing-xml.md)

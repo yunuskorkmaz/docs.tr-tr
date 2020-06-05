@@ -8,25 +8,25 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ede68b20fb2066d98ad36ac14e8fcda97f49d88
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013692"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373946"
 ---
-# <a name="sub-main-was-not-found-in-name"></a>'Sub Main' bulunamadı '\<adı >'
-`Sub Main` olan eksik veya yanlış konumu belirtilmedi için.  
+# <a name="sub-main-was-not-found-in-name"></a>'\<name>' içinde 'Sub Main' bulunamadı
+`Sub Main`eksik veya kendisi için yanlış konum belirtilmiş.  
   
- **Hata Kimliği:** BC30420  
+ **Hata kimliği:** BC30420  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Eksik olan kaynağı `Sub Main` deyimi veya varsa, kod içinde uygun konuma. Daha fazla bilgi için `Sub Main`, bkz: [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+1. Eksik ifadeyi sağlayın `Sub Main` veya varsa, koddaki uygun konuma taşıyın. Hakkında daha fazla bilgi için `Sub Main` bkz. [Visual Basic ana yordam](../../programming-guide/program-structure/main-procedure.md).  
   
-2. Proje Başlangıç nesnesi konumunu belirtin **başlangıç formu** kutusunun **Proje Tasarımcısı**.  
+2. Projenin başlangıç nesnesinin konumunu **Proje Tasarımcısı**' nın **başlangıç formu** kutusunda belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Sub Deyimi](../statements/sub-statement.md)
+- [Visual Basic'de Ana Yordam](../../programming-guide/program-structure/main-procedure.md)

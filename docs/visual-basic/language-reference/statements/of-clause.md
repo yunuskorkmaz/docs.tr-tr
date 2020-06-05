@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: d88c43efe858d6b81b7d8d2470b234ff5d40632a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8497f46453d586fb94e1f7c82c81c6b923dd6f60
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353834"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404427"
 ---
 # <a name="of-clause-visual-basic"></a>Of Tümcesi (Visual Basic)
-Bir *genel* sınıf, yapı, arabirim, temsilci veya yordamda bir *tür parametresi* tanımlayan bir `Of` yan tümcesi tanıtır. Genel türler hakkında bilgi için bkz. [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Bir `Of` *genel* sınıf, yapı, arabirim, temsilci veya yordamda bir *tür parametresi* tanımlayan bir yan tümce tanıtır. Genel türler hakkında bilgi için bkz. [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>Anahtar sözcüğünü kullanma  
- Aşağıdaki kod örneği, iki tür parametresi alan bir sınıfın ana hattını tanımlamak için `Of` anahtar sözcüğünü kullanır. `keyType` parametresini <xref:System.IComparable> arabirimi ile *kısıtlar* ; bu, tüketen kodun <xref:System.IComparable>uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir. Bu, `add` yordamının <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> yöntemini çağırabilmesi için gereklidir. Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../visual-basic/language-reference/statements/type-list.md).  
+ Aşağıdaki kod örneği, `Of` iki tür parametresi alan bir sınıfın ana hattını tanımlamak için anahtar sözcüğünü kullanır. Parametreyi *constrains* arabirimini kısıtlar `keyType` , bu da <xref:System.IComparable> tüketen kodun uygulayan bir tür bağımsız değişkeni sağlaması gerektiği anlamına gelir <xref:System.IComparable> . `add`Yordamın yöntemi çağırabilmesi için bu gereklidir <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> . Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](type-list.md).  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,32 +42,32 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Önceki sınıf tanımını tamamlarınızda, bundan çok çeşitli `dictionary` sınıfları oluşturabilirsiniz. `entryType` ve `keyType` için sağladığınız türler, sınıfın ne tür bir girişi olduğunu ve her bir girdiyle ne tür bir anahtarın ilişkilendirildiğini belirlemektir. Kısıtlama nedeniyle, <xref:System.IComparable>uygulayan bir tür `keyType` sağlamanız gerekir.  
+ Önceki sınıf tanımını tamamlarınızda, bundan çok çeşitli `dictionary` sınıflar oluşturabilirsiniz. İçin sağladığınız türler, `entryType` `keyType` sınıfın ne tür bir girişi olduğunu ve her bir girdiyle ne tür bir anahtar ilişkilendiğini belirlersiniz. Kısıtlama nedeniyle, `keyType` uygulayan bir türe sağlamanız gerekir <xref:System.IComparable> .  
   
- Aşağıdaki kod örneği, `String` girdileri tutan ve `Integer` anahtarı her biriyle ilişkilendiren bir nesne oluşturur. `Integer` <xref:System.IComparable> uygular ve bu nedenle `keyType`kısıtlamasını karşılar.  
+ Aşağıdaki kod örneği, `String` girdileri tutan ve bir anahtarı her biriyle ilişkilendiren bir nesne oluşturur `Integer` . `Integer`' <xref:System.IComparable> i uygular ve bu nedenle üzerindeki kısıtlamayı karşılar `keyType` .  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- `Of` anahtar sözcüğü şu bağlamlarda kullanılabilir:  
+ `Of`Anahtar sözcüğü şu bağlamlarda kullanılabilir:  
   
- [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class Deyimi](class-statement.md)  
   
- [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate Deyimi](delegate-statement.md)  
   
- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function Deyimi](function-statement.md)  
   
- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface Deyimi](interface-statement.md)  
   
- [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure Yapısı](structure-statement.md)  
   
- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub Deyimi](sub-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IComparable>
-- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- ['Ndaki](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [Dışı](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Tür Listesi](type-list.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [İçinde](../modifiers/in-generic-modifier.md)
+- [Dışı](../modifiers/out-generic-modifier.md)
