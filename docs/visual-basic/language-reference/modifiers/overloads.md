@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bd0931cab520f8580c0d7473a44e350752e287bb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351403"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392112"
 ---
 # <a name="overloads-visual-basic"></a>Aşırı Yüklemeler (Visual Basic)
 
@@ -27,9 +27,9 @@ Bir özellik veya yordamın, aynı ada sahip bir veya daha fazla var olan özell
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** Yalnızca bir özellik veya yordam bildirimi ifadesinde `Overloads` kullanabilirsiniz.
+- **Bildirim bağlamı.** `Overloads`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz.
 
-- **Birleşik değiştiriciler.** Aynı yordam bildiriminde [gölgilerle](../../../visual-basic/language-reference/modifiers/shadows.md) birlikte `Overloads` belirtemezsiniz.
+- **Birleşik değiştiriciler.** `Overloads`Aynı yordam bildiriminde [gölgilerle](shadows.md) birlikte belirtemezsiniz.
 
 - **Gerekli farklar.** Bu Bildirimdeki *imza* , aşırı yüklediği her özellik veya yordamın imzasıyla farklı olmalıdır. İmza, özellik veya yordam adını aşağıdakiler ile birlikte içerir:
 
@@ -49,36 +49,36 @@ Bir özellik veya yordamın, aynı ada sahip bir veya daha fazla var olan özell
 
   - bir değer döndürüp döndürmeksizin (bir yordam için)
 
-  - Dönüş değerinin veri türü (dönüştürme işleci dışında)
+  - dönüş değerinin veri türü (dönüştürme işleci dışında)
 
   - parametrelerin veya tür parametrelerinin adları
 
   - Tür Parametrelerindeki Kısıtlamalar (genel yordam için)
 
-  - parametre değiştirici anahtar sözcükleri (`ByRef` veya `Optional`gibi)
+  - parametre değiştirici anahtar sözcükleri ( `ByRef` veya gibi `Optional` )
 
-  - Özellik veya yordam değiştirici anahtar sözcükleri (`Public` veya `Shared`gibi)
+  - Özellik veya yordam değiştirici anahtar sözcükleri ( `Public` veya gibi `Shared` )
 
-- **İsteğe bağlı değiştirici.** Aynı sınıfta birden fazla aşırı yüklenmiş özellik veya yordam tanımlarken `Overloads` değiştiricisini kullanmanız gerekmez. Ancak, bildirimlerden birinde `Overloads` kullanıyorsanız, bunların tümünde kullanmanız gerekir.
+- **İsteğe bağlı değiştirici.** `Overloads`Aynı sınıfta birden fazla aşırı yüklenmiş özellik veya yordam tanımlarken değiştirici kullanmanız gerekmez. Ancak, `Overloads` bildirimlerden birinde kullanıyorsanız, bunların tümünde kullanmanız gerekir.
 
-- **Gölgeleme ve aşırı yükleme.** `Overloads`, bir temel sınıfta varolan bir üyeyi veya aşırı yüklenmiş Üyeler kümesini gölgelendirmek için de kullanılabilir. `Overloads` bu şekilde kullandığınızda, temel sınıf üyesiyle aynı ada ve aynı parametre listesine sahip olan özelliği veya yöntemi bildirirsiniz ve `Shadows` anahtar sözcüğünü sağlamamalısınız.
+- **Gölgeleme ve aşırı yükleme.** `Overloads`, bir temel sınıfta varolan bir üyeyi veya aşırı yüklenmiş üyelerin gölgesini almak için de kullanılabilir. `Overloads`Bu şekilde kullandığınızda, temel sınıf üyesiyle aynı ada ve aynı parametre listesine sahip özelliği veya yöntemi bildirirsiniz ve `Shadows` anahtar sözcüğünü sağlamamalısınız.
 
-`Overrides`kullanırsanız, derleyici kitaplık API 'lerinizin C# daha kolay bir şekilde çalışması için `Overloads` dolaylı olarak ekler.
+Kullanırsanız `Overrides` , derleyici `Overloads` kitaplık API 'Lerinizin C# ile daha kolay çalışmasını sağlamak için örtülü olarak ekler.
 
-`Overloads` değiştiricisi şu bağlamlarda kullanılabilir:
+`Overloads`Değiştirici şu bağlamlarda kullanılabilir:
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
 
-- [Operator Deyimi](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Deyimi](../statements/operator-statement.md)
 
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [İşleç Yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Shadows](shadows.md)
+- [Yordam Aşırı Yüklemesi](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [İşleç Yordamları](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

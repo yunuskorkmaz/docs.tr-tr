@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 628461c8136946dd902c0a52048eee7c516c52cd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352932"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393084"
 ---
 # <a name="type-characters-visual-basic"></a>Tür karakterleri (Visual Basic)
 
@@ -62,9 +62,9 @@ Visual Basic, bir değişkenin veya sabitin veri türünü belirtmek için bir b
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`veya `UShort` veri türleri veya diziler ya da yapılar gibi herhangi bir bileşik veri türü için tanımlayıcı türü karakterler yok.
+ ,,,,,,,,, `Boolean` `Byte` `Char` `Date` `Object` `SByte` `Short` `UInteger` `ULong` Veya `UShort` veri türleri için ya da diziler ya da yapılar gibi herhangi bir bileşik veri türü için tanımlayıcı türü karakterler yok.
 
-Bazı durumlarda, `String`türünde döndürülen bir değer elde etmek için `Left`yerine `Left$` `$` karakterini Visual Basic işlevine ekleyebilirsiniz.
+Bazı durumlarda, `$` `Left$` `Left` türü döndürülen bir değer elde etmek için, örneğin yerine bir Visual Basic işleve bir karakter ekleyebilirsiniz `String` .
 
 Her durumda, tanımlayıcı türü karakteri tanımlayıcı adını hemen izlemelidir.
 
@@ -79,7 +79,7 @@ Kodunuzda göründüğü gibi bir sabit değerin biçimi normalde veri türünü
 |Sabit değerin metin biçimi|Varsayılan veri türü|Örnek|  
 |-----------------------------|-----------------------|-------------|  
 |Sayısal, kesirli bölüm yok|`Integer`|`2147483647`|  
-|Sayısal, kesirli bölüm yok, `Integer` için çok büyük|`Long`|`2147483648`|  
+|Sayısal, kesirli bölüm yok, için çok büyük`Integer`|`Long`|`2147483648`|  
 |Sayısal, kesirli bölüm|`Double`|`1.2`|  
 |Çift tırnak işareti içine alınmış|`String`|`"A"`|  
 |Sayı işaretleri içine alınmış|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -101,23 +101,23 @@ Visual Basic değişmez değer *türü karakterleri*sağlar, bu, bir hazır değ
 |`UL`|`ULong`|`N = 347UL`|
 |`C`|`Char`|`Q = "."C`|
 
-`Boolean`, `Byte`, `Date`, `Object`, `SByte`veya `String` veri türleri veya diziler ya da yapılar gibi herhangi bir bileşik veri türü için değişmez değer türü karakterleri yok.
+,,,, `Boolean` `Byte` `Date` `Object` `SByte` Veya `String` veri türleri için ya da diziler ya da yapılar gibi herhangi bir bileşik veri türü için değişmez değer türü karakterleri yok.
 
-Değişmez değerler, değişkenler, sabitler ve ifadeler gibi tanımlayıcı türü karakterlerini (`%`, `&`, `@`, `!`, `#`, `$`) de kullanabilir. Ancak, değişmez değer türü karakterleri (`S`, `I`, `L`, `D`, `F`, `R`, `C`) yalnızca sabit karakterlerle kullanılabilir.
+Değişmez değerler, `%` `&` `@` `!` `#` `$` değişkenler, sabitler ve ifadeler gibi tanımlayıcı türü karakterlerini de (,,,,,) kullanabilir. Ancak, değişmez değer türü karakterleri ( `S` , `I` , `L` , `D` , `F` , `R` , `C` ) yalnızca sabit karakterlerle kullanılabilir.
 
 Her durumda, değişmez değer türü karakteri hemen sabit değeri izlemelidir.
 
 ## <a name="hexadecimal-binary-and-octal-literals"></a>Onaltılık, ikili ve sekizlik sabit değerler
 
-Derleyici normalde bir tamsayı değişmez değerini ondalık (10 tabanında) sayı sisteminde olacak şekilde yorumlar. Ayrıca, bir tamsayı sabit değerini, `&H` önekiyle birlikte onaltılık (taban 16) sayı olarak, `&B` ön ekiyle bir ikili (taban 2) numara olarak ve `&O` ön ekine sahip bir Sekizli (taban 8) numarası olarak tanımlayabilirsiniz. Ön eki izleyen basamakların sayı sistemine uygun olması gerekir. Aşağıdaki tabloda bu gösterilmektedir.  
+Derleyici normalde bir tamsayı değişmez değerini ondalık (10 tabanında) sayı sisteminde olacak şekilde yorumlar. Ön eke sahip bir tam sayı (taban 16) numarası, ön eke sahip bir `&H` ikili (taban 2) numarası olarak `&B` ve ön eki olan sekizli (taban 8) numarası olarak bir tamsayı sabit değeri de tanımlayabilirsiniz `&O` . Ön eki izleyen basamakların sayı sistemine uygun olması gerekir. Aşağıdaki tabloda bu gösterilmektedir.  
   
-|Sayı tabanı|Prefix|Geçerli basamak değerleri|Örnek|
+|Sayı tabanı|Ön ek|Geçerli basamak değerleri|Örnek|
 |-----------------|------------|------------------------|-------------|
 |Onaltılı (taban 16)|`&H`|0-9 ve A-F|`&HFFFF`|
 |İkili (taban 2)|`&B`|0-1|`&B01111100`|
 |Sekizlik (taban 8)|`&O`|0-7|`&O77`|
 
-Visual Basic 2017 ' den başlayarak, bir integral sabit değerinin okunabilirliğini geliştirmek için alt çizgi karakterini (`_`) bir grup ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek, bir ikili sabit değeri 8 bitlik gruplar halinde gruplamak için `_` karakterini kullanır:
+Visual Basic 2017 ' den başlayarak, bir `_` integral sabit değerinin okunabilirliğini geliştirmek için alt çizgi karakterini () Grup ayırıcısı olarak kullanabilirsiniz. Aşağıdaki örnek, `_` bir ikili sabit değeri 8 bitlik gruplar halinde gruplandırmak için karakterini kullanır:
 
 ```vb
 Dim number As Integer = &B00100010_11000101_11001111_11001101
@@ -130,9 +130,9 @@ Dim counter As Short = &H8000S
 Dim flags As UShort = &H8000US
 ```
 
-Önceki örnekte, `counter` ondalık değeri-32768 ve `flags` ' nin ondalık değeri + 32768 ' dir.
+Önceki örnekte, `counter` -32768 ondalık değerine sahiptir ve `flags` + 32768 ondalık değerine sahiptir.
 
-Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini (`_`) ön ek ile onaltılık, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak kullanabilirsiniz. Örneğin:
+Visual Basic 15,5 ' den başlayarak, alt çizgi karakterini ( `_` ) ön ek ile onaltılı, ikili veya sekizlik basamaklar arasında önde gelen bir ayırıcı olarak da kullanabilirsiniz. Örnek:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -142,10 +142,10 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic dönüşümler yazın](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
+- [Veri türleri](index.md)
+- [Başlangıç Veri Türleri](elementary-data-types.md)
+- [Değer Türleri ve Başvuru Türleri](value-types-and-reference-types.md)
+- [Visual Basic'de Tür Dönüştürmeleri](type-conversions.md)
+- [Veri Türü Sorunlarını Giderme](troubleshooting-data-types.md)
+- [Değişken Bildirimi](../variables/variable-declaration.md)
+- [Veri türleri](../../../language-reference/data-types/index.md)

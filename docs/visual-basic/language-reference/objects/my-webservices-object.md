@@ -7,44 +7,44 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 290d025985663bc45fe605a2e9904fc90fb2bc63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a52f9f5f5b044273a45da5ef9478e2212def57a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350343"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372368"
 ---
 # <a name="mywebservices-object"></a>My.WebServices Nesnesi
 Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örneğini oluşturmaya ve bunlara erişmeye yönelik özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.WebServices` nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine `My.WebServices` nesnesinin özellikleri aracılığıyla erişebilirsiniz. Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> devralan tüm sınıflar bir Web hizmetidir. Bir projeye Web Hizmetleri ekleme hakkında daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices`Nesnesi, geçerli proje tarafından başvurulan her bir Web hizmetinin örneğini sağlar. Her örnek isteğe bağlı olarak oluşturulur. Bu Web hizmetlerine nesnenin özellikleri aracılığıyla erişebilirsiniz `My.WebServices` . Özelliğin adı, özelliğin eriştiği Web hizmetinin adıyla aynıdır. Öğesinden devralan tüm sınıflar <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> bir Web hizmetidir. Bir projeye Web Hizmetleri ekleme hakkında daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
   
- `My.WebServices` nesnesi yalnızca geçerli projeyle ilişkili Web hizmetlerini kullanıma sunar. Başvurulan DLL 'lerde belirtilen Web hizmetlerine erişim sağlamaz. Bir DLL 'nin sağladığı bir Web hizmetine erişmek için, Web hizmeti 'nin adı *dlladı*biçiminde kullanmanız gerekir. *WebServiceName*. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ `My.WebServices`Nesne yalnızca geçerli projeyle Ilişkili Web hizmetlerini kullanıma sunar. Başvurulan DLL 'lerde belirtilen Web hizmetlerine erişim sağlamaz. Bir DLL 'nin sağladığı bir Web hizmetine erişmek için, Web hizmeti 'nin adı *dlladı*biçiminde kullanmanız gerekir. *WebServiceName*. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
   
  Nesne ve özellikleri Web uygulamaları için kullanılamaz.  
   
 ## <a name="properties"></a>Özellikler  
- `My.WebServices` nesnesinin her özelliği, geçerli proje tarafından başvurulan bir Web hizmeti örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği Web hizmeti adı ile aynıdır ve özellik türü, Web hizmetinin türüyle aynıdır.  
+ Nesnesinin her özelliği, `My.WebServices` geçerli proje tarafından başvurulan bir Web hizmeti örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği Web hizmeti adı ile aynıdır ve özellik türü, Web hizmetinin türüyle aynıdır.  
   
 > [!NOTE]
-> Bir ad çakışması varsa, bir Web hizmetine erişmek için özellik adı *,\_* *ServiceName*ad *alanıdır*. Örneğin, `Service1`adlı iki Web hizmeti göz önünde bulundurun. Bu hizmetlerden biri kök ad alanında `WindowsApplication1` ve ad alanı `Namespace1`, bu hizmete `My.WebServices.WindowsApplication1_Namespace1_Service1`kullanarak erişirsiniz.  
+> Ad çakışması varsa, bir Web hizmetine erişmek için özellik adı *RootNamespace*_*ad*alanı \_ *HizmetAdı*olur. Örneğin, adlı iki Web hizmeti göz önünde bulundurun `Service1` . Bu hizmetlerden biri kök ad alanında ve ad alanında ise `WindowsApplication1` `Namespace1` , kullanarak bu hizmete erişirsiniz `My.WebServices.WindowsApplication1_Namespace1_Service1` .  
   
- `My.WebServices` nesnesinin özelliklerinden birine ilk kez eriştiğinizde, Web hizmetinin yeni bir örneğini oluşturur ve depolar. Bu özelliğin sonraki erişimleri, Web hizmetinin bu örneğini döndürür.  
+ Nesnenin özelliklerinden birine ilk kez eriştiğinizde `My.WebServices` , Web hizmetinin yeni bir örneğini oluşturur ve depolar. Bu özelliğin sonraki erişimleri, Web hizmetinin bu örneğini döndürür.  
   
- Web hizmetini, bu Web hizmetinin özelliğine `Nothing` atayarak atabilirsiniz. Özellik ayarlayıcısı `Nothing` depolanan değere atar. Özelliğe `Nothing` dışında herhangi bir değer atarsanız, ayarlayıcı bir <xref:System.ArgumentException> özel durumu oluşturur.  
+ `Nothing`Bu Web hizmeti için özelliğine atayarak bir Web hizmetini atabilirsiniz. Özellik ayarlayıcısı `Nothing` saklı değere atar. Özelliği dışında bir değer atarsanız `Nothing` , ayarlayıcı bir <xref:System.ArgumentException> özel durum oluşturur.  
   
- `My.WebServices` nesnesinin bir özelliğinin bir Web hizmeti örneğini `Is` veya `IsNot` işlecini kullanarak depolayıp depoladığını test edebilirsiniz. Bu işleçleri, özelliğin değerinin `Nothing`olup olmadığını denetlemek için kullanabilirsiniz.  
+ Bir `My.WebServices` nesnenin özelliğinin, veya işlecini kullanarak bir Web hizmeti örneğini depolayıp depomadığını test edebilirsiniz `Is` `IsNot` . Özelliğin değerinin olup olmadığını denetlemek için bu işleçleri kullanabilirsiniz `Nothing` .  
   
 > [!NOTE]
-> Genellikle, `Is` veya `IsNot` işleci, karşılaştırmayı gerçekleştirmek için özelliğinin değerini okumalı. Ancak, özelliği şu anda `Nothing`depoluyorsa, özelliği Web hizmetinin yeni bir örneğini oluşturur ve ardından bu örneği döndürür. Ancak Visual Basic derleyici, `My.WebServices` nesnesinin özelliklerini özel olarak değerlendirir ve `Is` ya da `IsNot` işlecinin değerini değiştirmeden özelliğin durumunu denetlemesini sağlar.  
+> Genellikle, `Is` veya `IsNot` işlecinin karşılaştırmayı gerçekleştirmek için özelliğinin değerini okuması gerekir. Ancak, özelliği şu anda depoluyorsa `Nothing` , özelliği Web hizmetinin yeni bir örneğini oluşturur ve ardından bu örneği döndürür. Ancak, Visual Basic Derleyicisi `My.WebServices` nesnenin özelliklerini özel olarak değerlendirir ve `Is` veya `IsNot` işlecinin değeri değiştirmeden özelliğin durumunu denetlemesini sağlar.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `TemperatureConverter` XML Web hizmetinin `FahrenheitToCelsius` yöntemini çağırır ve sonucu döndürür.  
+ Bu örnek, `FahrenheitToCelsius` `TemperatureConverter` XML Web hizmetinin yöntemini çağırır ve sonucu döndürür.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- Bu örneğin çalışması için, projenizin `Converter`adlı bir Web hizmetine başvurması gerekir ve bu Web hizmeti `ConvertTemperature` yöntemini kullanıma sunmalıdır. Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ Bu örneğin çalışması için, projeniz adlı bir Web hizmetine başvurmalıdır `Converter` ve Web hizmeti yöntemi kullanıma sunmalıdır `ConvertTemperature` . Daha fazla bilgi için bkz. [uygulama Web Hizmetleri 'Ne erişme](../../developing-apps/programming/accessing-application-web-services.md).  
   
  Bu kod, bir Web uygulaması projesinde çalışmaz.  
   
@@ -54,16 +54,16 @@ Geçerli proje tarafından başvurulan her bir XML Web hizmetinin tek bir örne�
   
 |Proje türü|Kullanılabilir|  
 |---|---|  
-|Windows uygulaması|**Yes**|  
-|Sınıf Kitaplığı|**Yes**|  
-|Konsol Uygulaması|**Yes**|  
-|Windows Denetim Kitaplığı|**Yes**|  
-|Web Denetim Kitaplığı|**Yes**|  
-|Windows Hizmeti|**Yes**|  
-|Web Sitesi|Hayır|  
+|Windows uygulaması|**Evet**|  
+|Sınıf Kitaplığı|**Evet**|  
+|Konsol Uygulaması|**Evet**|  
+|Windows Denetim Kitaplığı|**Evet**|  
+|Web Denetim Kitaplığı|**Evet**|  
+|Windows Hizmeti|**Evet**|  
+|Web Sitesi|No|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
 - <xref:System.ArgumentException>
-- [Uygulama Web Hizmetlerine Erişme](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [Uygulama Web Hizmetlerine Erişme](../../developing-apps/programming/accessing-application-web-services.md)
