@@ -9,28 +9,28 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 6f4c303604f9cf55b4ecd500636e0d2772b6234c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3da60014d7ac95189c5d56c3e339ff1b054a40dc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345095"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405099"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: Olay Bildirme ve Oluşturma (Visual Basic)
-Bu izlenecek yolda, `Widget`adlı bir sınıf için olayların nasıl bildirileceğini ve tetikleyeceğinizi gösterilmektedir. Adımları tamamladıktan sonra, bir uygulamada durum bilgilerini sağlamak için `Widget` nesnelerinden olayları nasıl kullanacağınızı gösteren [Izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)başlıklı yardımcı konuyu okumak isteyebilirsiniz.  
+Bu izlenecek yol, adlı bir sınıf için olayların nasıl bildirileceğini ve oluşturulduğunu gösterir `Widget` . Adımları tamamladıktan sonra, bir uygulamada durum bilgilerini sağlamak için nesnelerden olayları nasıl kullanacağınızı gösteren [Izlenecek yol: olayları işleme](walkthrough-handling-events.md)başlıklı yardımcı konuyu okumak isteyebilirsiniz `Widget` .  
   
 ## <a name="the-widget-class"></a>Pencere öğesi sınıfı  
- `Widget` sınıfa sahip olduğunuz bir süre için varsayıyoruz. `Widget` sınıfınız, yürütülmesi uzun sürebilecek bir yönteme sahiptir ve uygulamanızın bir tür tamamlanma göstergesi koyabilmesini istersiniz.  
+ Bir sınıfa sahip olduğunuz andaki varsayılır `Widget` . `Widget`Sınıfınız, yürütülmesi uzun sürebilecek bir yönteme sahiptir ve uygulamanızın bir tür tamamlanma göstergesi koyabilmesini istiyorsunuz.  
   
- Kuşkusuz, `Widget` nesnenin yüzde-Tamam iletişim kutusunu göstermesini sağlayabilirsiniz, ancak ardından `Widget` sınıfını kullandığınız her projede bu iletişim kutusuyla birlikte kalmış olursunuz. Nesne tasarımının iyi bir prensibi, nesnenin tüm amacı bir form veya iletişim kutusunu yönetmediği için, bir nesneyi kullanan uygulamanın kullanıcı arabirimini işlemesini sağlamaktır.  
+ Kuşkusuz, `Widget` nesneyi yüzde-tam-Tamam iletişim kutusu olarak gösterebilirsiniz, ancak bu iletişim kutusuyla sınıfı kullandığınız her projede bu iletişim kutusuyla birlikte kalmış olursunuz `Widget` . Nesne tasarımının iyi bir prensibi, nesnenin tüm amacı bir form veya iletişim kutusunu yönetmediği için, bir nesneyi kullanan uygulamanın kullanıcı arabirimini işlemesini sağlamaktır.  
   
- `Widget` amacı diğer görevleri gerçekleştirmelidir; bu nedenle, bir `PercentDone` olayı eklemek ve `Widget`yöntemlerini çağıran yordamın bu olayı işleme ve durum güncelleştirmelerini görüntülemesini sağlamak daha iyidir. `PercentDone` olay, görevi iptal etmek için bir mekanizma da sağlayabilir.  
+ Amacı `Widget` diğer görevleri gerçekleştirmelidir, bu nedenle bir `PercentDone` olay eklemek ve yöntemlerini çağıran yordamın `Widget` Bu olayı işleme ve durum güncelleştirmelerini görüntülemesini sağlamak daha iyidir. `PercentDone`Olay, görevi iptal etmek için bir mekanizma da sağlayabilir.  
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Bu konunun kod örneğini oluşturmak için  
   
-1. Yeni bir Visual Basic Windows uygulaması projesi açın ve `Form1`adlı bir form oluşturun.  
+1. Yeni bir Visual Basic Windows uygulaması projesi açın ve adlı bir form oluşturun `Form1` .  
   
-2. `Form1`için iki düğme ve bir etiket ekleyin.  
+2. İçin iki düğme ve bir etiket ekleyin `Form1` .  
   
 3. Nesneleri aşağıdaki tabloda gösterildiği gibi adlandırın.  
   
@@ -40,42 +40,42 @@ Bu izlenecek yolda, `Widget`adlı bir sınıf için olayların nasıl bildirilec
     |`Button2`|`Text`|İptal|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4. **Proje menüsünde,** projeye `Widget.vb` adlı bir sınıf eklemek Için **Sınıf Ekle** ' yi seçin.  
+4. **Proje menüsünde,** projeye adlı bir sınıf eklemek Için **Sınıf Ekle** ' yi seçin `Widget.vb` .  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Pencere öğesi sınıfı için bir olay bildirmek için  
   
-- `Widget` sınıfında bir olay bildirmek için `Event` anahtar sözcüğünü kullanın. Bir olayın `ByVal` ve `ByRef` bağımsız değişkenleri `Widget``PercentDone` olay gösterdiği gibi olabileceğini unutmayın:  
+- `Event`Sınıfında bir olay bildirmek için anahtar sözcüğünü kullanın `Widget` . Olayın `ByVal` `ByRef` , olay gösterdiği gibi, ve bağımsız değişkenlerine sahip olabileceğini unutmayın `Widget` `PercentDone` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- Çağıran nesne `PercentDone` bir olay aldığında, `Percent` bağımsız değişkeni tamamlanan görevin yüzdesini içerir. `Cancel` bağımsız değişkeni, olayı oluşturan yöntemi iptal etmek için `True` olarak ayarlanabilir.  
+ Çağıran nesne bir `PercentDone` olay aldığında, `Percent` bağımsız değişken tamamlanmış görevin yüzdesini içerir. `Cancel`Bağımsız değişkeni, `True` olayı oluşturan yöntemi iptal etmek için olarak ayarlanabilir.  
   
 > [!NOTE]
-> Aşağıdaki özel durumlarla birlikte, yordamların bağımsız değişkenlerini yaptığınız gibi olay bağımsız değişkenlerini bildirebilirsiniz: olaylarda `Optional` veya `ParamArray` bağımsız değişken olamaz ve olayların dönüş değerleri yoktur.  
+> Aşağıdaki özel durumlarla birlikte, yordam bağımsız değişkenlerini yaptığınız gibi olay bağımsız değişkenlerini bildirebilirsiniz: olaylar `Optional` veya `ParamArray` bağımsız değişkenlere sahip olamaz ve olayların dönüş değerleri yoktur.  
   
- `PercentDone` olay `Widget` sınıfının `LongTask` yöntemi tarafından tetiklenir. `LongTask` iki bağımsız değişken alır: yöntemin iş yapmakta olduğu zaman uzunluğu ve `LongTask` duraklamadan önce `PercentDone` olayını tetikleyen en kısa zaman aralığı.  
+ `PercentDone`Olay, sınıfının yöntemi tarafından tetiklenir `LongTask` `Widget` . `LongTask`iki bağımsız değişken alır: yöntemin iş yapmakta olduğu sürenin uzunluğu ve `LongTask` olayı yükseltmek için duraklamadan önce en kısa zaman aralığı `PercentDone` .  
   
 #### <a name="to-raise-the-percentdone-event"></a>PercentDone olayını yükseltmek için  
   
-1. Bu sınıf tarafından kullanılan `Timer` özelliğine erişimi basitleştirmek için, sınıf modülünüzün üst kısmına `Class Widget` deyimin üst kısmına bir `Imports` bildirimi ekleyin.  
+1. `Timer`Bu sınıf tarafından kullanılan özelliğe erişimi basitleştirmek için, `Imports` sınıfının üst kısmındaki bildirim bölümünün üst kısmına bir ifade ekleyin `Class Widget` .  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2. `Widget` sınıfına aşağıdaki kodu ekleyin:  
+2. Sınıfına aşağıdaki kodu ekleyin `Widget` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- Uygulamanız `LongTask` yöntemini çağırdığında, `Widget` sınıfı her `MinimumInterval` saniyede `PercentDone` olayını oluşturur. Olay döndüğünde, `LongTask` `Cancel` bağımsız değişkeninin `True`olarak ayarlandığını denetler.  
+ Uygulamanız `LongTask` yöntemini çağırdığında, `Widget` sınıfı `PercentDone` olayı her `MinimumInterval` saniye yükseltir. Olay döndüğünde, `LongTask` `Cancel` bağımsız değişkenin olarak ayarlanmış olup olmadığını denetler `True` .  
   
- Burada birkaç bildirimler gereklidir. Kolaylık sağlaması için `LongTask` yordamı, görevin ne kadar süreceğine ilişkin olduğunu varsayar. Bu neredeyse hiçbir durum değildir. Görevleri bile eşit ölçekli parçalara bölmek zor olabilir ve genellikle kullanıcıların en önemli bir şeyi, bir şeyin meydana geldiğinin bir göstergesi olmadan önce geçen süreyi belirtir.  
+ Burada birkaç bildirimler gereklidir. Kolaylık olması için, `LongTask` yordamda görevin ne kadar süreceğine ilişkin daha fazla bilgi sahibi olduğunuz varsayılır. Bu neredeyse hiçbir durum değildir. Görevleri bile eşit ölçekli parçalara bölmek zor olabilir ve genellikle kullanıcıların en önemli bir şeyi, bir şeyin meydana geldiğinin bir göstergesi olmadan önce geçen süreyi belirtir.  
   
- Bu örnekte başka bir kusuru açığa çıkabilir. `Timer` özelliği, gece yarısından beri geçen saniye sayısını döndürür; Bu nedenle, uygulama gece yarısından önce başlatıldıysa, takılmış olur. Bu süreyi ölçmeye yönelik daha dikkatli bir yaklaşım, `Now`gibi özellikleri kullanarak bunun dikkate alınması veya bunların tamamen olmaması gibi sınır koşullarını ele alır.  
+ Bu örnekte başka bir kusuru açığa çıkabilir. `Timer`Özelliği, gece yarısından beri geçen saniye sayısını döndürür; bu nedenle, uygulama gece yarısından önce başlatılmışsa, uygulama takılmış olur. Bu süreyi ölçmeye yönelik daha dikkatli bir yaklaşım, gibi özellikleri kullanarak, bunun dikkate alınması veya bunların tamamen olmaması gibi sınır koşullarını ele alır `Now` .  
   
- Artık `Widget` sınıfı olayları tetiklemediğini de bir sonraki izlenecek yol için geçebilirsiniz. [Izlenecek yol: olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) , bir olay işleyicisini `PercentDone` olay ile ilişkilendirmek için `WithEvents` nasıl kullanacağınızı gösterir.  
+ Artık `Widget` sınıfın olayları tetiklemediğini, sonraki izlenecek yolu izleyebilirsiniz. [Izlenecek yol: olayları işleme](walkthrough-handling-events.md) `WithEvents` , olay işleyicisini olayla ilişkilendirmek için nasıl kullanılacağını gösterir `PercentDone` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
-- [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [İzlenecek yol: Olayları İşleme](walkthrough-handling-events.md)
+- [Olaylar](index.md)

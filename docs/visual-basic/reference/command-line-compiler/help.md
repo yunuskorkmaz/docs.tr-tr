@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b30a5a9d73dd84231f30f20549f5c0ae813742ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344278"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408640"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Derleyici seçeneklerini görüntüler.  
@@ -25,7 +25,7 @@ Derleyici seçeneklerini görüntüler.
 -help  
 ```
 
-or  
+veya  
 
 ```console
 -?  
@@ -35,7 +35,7 @@ or
  Bu seçeneği bir derlemeye eklerseniz, hiçbir çıktı dosyası oluşturulmaz ve hiçbir derleme gerçekleşmez.  
   
 > [!NOTE]
-> Bu `-help` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+> `-help`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod, komut satırından yardım görüntüler.  
@@ -46,5 +46,5 @@ vbc -help
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic komut satırı derleyicisi](index.md)
+- [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)

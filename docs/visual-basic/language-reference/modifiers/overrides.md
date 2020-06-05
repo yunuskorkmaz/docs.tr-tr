@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 04f1cb27d6a8366c2dd13f8fdc1d975d382f1cfd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 657f838b2959a5b6a7cef5ff18295a4ada709e9a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351382"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392034"
 ---
 # <a name="overrides-visual-basic"></a>Geçersiz Kılmalar (Visual Basic)
 
@@ -26,9 +26,9 @@ Bir özellik veya yordamın, bir temel sınıftan devralınan aynı adlı özell
 
 ## <a name="rules"></a>Kurallar
 
-- **Bildirim bağlamı.** Yalnızca bir özellik veya yordam bildirimi ifadesinde `Overrides` kullanabilirsiniz.
+- **Bildirim bağlamı.** `Overrides`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz.
 
-- **Birleşik değiştiriciler.** Aynı bildirimde `Shadows` veya `Shared` birlikte `Overrides` belirtemezsiniz. Geçersiz kılan bir öğe örtük olarak geçersiz kılınabilir olduğundan, `Overrides``Overridable` birleştiremezsiniz.
+- **Birleşik değiştiriciler.** `Overrides` `Shadows` Aynı bildirimde veya ile birlikte belirtemezsiniz `Shared` . Geçersiz kılan bir öğe örtük olarak geçersiz kılınabilir olduğundan, `Overridable` ile birleştiremezsiniz `Overrides` .
 
 - **Imza eşleşiyor.** Bu bildirimin imzası, geçersiz kıldığından özelliğin veya yordamın *imzasıyla* tam olarak eşleşmelidir. Bu, parametre listelerinin aynı sırada aynı veri türleriyle aynı sayıda parametreye sahip olması gerektiği anlamına gelir.
 
@@ -42,30 +42,30 @@ Bir özellik veya yordamın, bir temel sınıftan devralınan aynı adlı özell
 
 - **Ek eşleşme.** Bu bildirimin, temel sınıf sürümünün imzasını eşleştirmesinin yanı sıra aşağıdaki şekilde de eşleşmesi gerekir:
 
-  - Erişim düzeyi değiştiricisi ( [genel](../../../visual-basic/language-reference/modifiers/public.md)gibi)
+  - Erişim düzeyi değiştiricisi ( [genel](public.md)gibi)
 
-  - Her parametrenin mekanizmasını geçirme ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Her parametrenin mekanizmasını geçirme ([ByVal](byval.md) veya [ByRef](byref.md))
 
   - Genel yordamın her tür parametresindeki kısıtlama listeleri
 
-- **Gölgeleme ve geçersiz kılma.** Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
+- **Gölgeleme ve geçersiz kılma.** Hem gölgeleme hem de geçersiz kılma devralınan bir öğeyi yeniden tanımlayın, ancak iki yaklaşım arasında önemli farklılıklar vardır. Daha fazla bilgi için [Visual Basic 'Da gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)bölümüne bakın.
 
-`Overrides`kullanırsanız, derleyici kitaplık API 'lerinizin C# daha kolay bir şekilde çalışması için `Overloads` dolaylı olarak ekler.
+Kullanırsanız `Overrides` , derleyici `Overloads` kitaplık API 'Lerinizin C# ile daha kolay çalışmasını sağlamak için örtülü olarak ekler.
 
-`Overrides` değiştiricisi şu bağlamlarda kullanılabilir:
+`Overrides`Değiştirici şu bağlamlarda kullanılabilir:
 
-- [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function Deyimi](../statements/function-statement.md)
 
-- [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Deyimi](../statements/property-statement.md)
 
-- [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub Deyimi](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic gölgeleme](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Visual Basic genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
+- [MustOverride](mustoverride.md)
+- [NotOverridable](notoverridable.md)
+- [Overridable](overridable.md)
+- [Anahtar sözcükler](../keywords/index.md)
+- [Visual Basic'de Gölgeleme](../../programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic genel türler](../../programming-guide/language-features/data-types/generic-types.md)
+- [Tür Listesi](../statements/type-list.md)

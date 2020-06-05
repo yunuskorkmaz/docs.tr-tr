@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: COM nesneleri oluşturma'
+title: 'İzlenecek yol: COM Nesneleri Oluşturma'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5d00aff07358a0c40159fde9c12c70e0842d848b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338614"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396746"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma
 Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluşturmak en iyisidir. Ancak Visual Basic Ayrıca, bir .NET Framework bileşenini COM 'da kullanıma sunmayı da kolaylaştırır. Bu, COM bileşenleri gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza olanak sağlar. Bu izlenecek yol, .NET Framework nesnelerini com nesneleri olarak göstermek için Visual Basic, hem hem de COM sınıf şablonuyla birlikte kullanmak için nasıl kullanılacağını gösterir.  
@@ -21,7 +21,7 @@ Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluş
  COM nesnelerini kullanıma almanın en kolay yolu COM sınıf şablonunu kullanmaktır. COM sınıfı şablonu yeni bir sınıf oluşturur ve ardından projeyi bir COM nesnesi olarak sınıf ve birlikte çalışabilirlik katmanını oluşturacak şekilde yapılandırır ve işletim sistemine kaydeder.  
   
 > [!NOTE]
-> Yönetilmeyen kodun kullanması için Visual Basic bir COM nesnesi olarak oluşturulan bir sınıfı kullanıma sunabilseniz de, bu gerçek bir COM nesnesi değildir ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Yönetilmeyen kodun kullanması için Visual Basic bir COM nesnesi olarak oluşturulan bir sınıfı kullanıma sunabilseniz de, bu gerçek bir COM nesnesi değildir ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,7 +31,7 @@ Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluş
   
 2. **Proje türleri** alanının altındaki **Yeni proje** iletişim kutusunda, Windows 'un seçili olduğunu kontrol edin. **Şablonlar** listesinden **sınıf kitaplığı** ' nı seçin ve ardından **Tamam**' a tıklayın. Yeni proje görüntülenir.  
   
-3. **Proje** menüsünden **Yeni öğe Ekle** ' yi seçin. **Yeni öğe Ekle** iletişim kutusu görüntülenir.  
+3. **Proje** menüsünden **Yeni öğe Ekle** ' yi seçin. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
   
 4. **Şablonlar** listesinden **com sınıfı** ' nı seçin ve ardından **Ekle**' ye tıklayın. Visual Basic yeni bir sınıf ekler ve COM birlikte çalışması için yeni projeyi yapılandırır.  
   
@@ -58,43 +58,43 @@ Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluş
   
 1. **Çözüm Gezgini**, kodunu göstermek için **Class1. vb** öğesine çift tıklayın.  
   
-2. Sınıfı `ComClass1`olarak yeniden adlandırın.  
+2. Sınıfını olarak yeniden adlandırın `ComClass1` .  
   
-3. `ComClass1`için aşağıdaki sabitleri ekleyin. Bunlar, COM nesnelerinin sahip olması için gerekli olan genel benzersiz tanımlayıcı (GUID) sabitlerini depolayacaktır.  
+3. Aşağıdaki sabitleri öğesine ekleyin `ComClass1` . Bunlar, COM nesnelerinin sahip olması için gerekli olan genel benzersiz tanımlayıcı (GUID) sabitlerini depolayacaktır.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4. **Araçlar** menüsünde **GUID oluştur**' a tıklayın. **GUID oluştur** iletişim kutusunda, **kayıt defteri biçimi** ' ne ve ardından **Kopyala**' ya tıklayın. **Çıkış**'a tıklayın.  
   
-5. `ClassId` için boş dizeyi, baştaki ve sondaki ayraçları kaldırarak GUID ile değiştirin. Örneğin, Guidgen tarafından belirtilen GUID `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`, kodunuzun aşağıdaki gibi görünmesi gerekir.  
+5. İçin boş dizeyi `ClassId` GUID ile değiştirin, baştaki ve sondaki ayraçları kaldırır. Örneğin, Guidgen tarafından belirtilen GUID ise `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` kodunuzun aşağıdaki gibi görünmesi gerekir.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Aşağıdaki örnekte olduğu gibi `InterfaceId` ve `EventsId` sabitleri için önceki adımları tekrarlayın.  
+6. `InterfaceId`Aşağıdaki örnekte olduğu gibi, ve sabitleri için önceki adımları tekrarlayın `EventsId` .  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     > GUID 'lerin yeni ve benzersiz olduğundan emin olun; Aksi halde, COM bileşeniniz diğer COM bileşenleriyle çakışabilir.  
   
-7. Aşağıdaki örnekte olduğu gibi, sınıf KIMLIĞI, arabirim KIMLIĞI ve olay KIMLIĞI için GUID 'Leri belirterek `ComClass1``ComClass` özniteliği ekleyin:  
+7. `ComClass` `ComClass1` Aşağıdaki örnekte olduğu gıbı sınıf kimliği, arabirim kimliği ve olay kimliği Için GUID 'leri belirterek özniteliğini öğesine ekleyin:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8. COM sınıflarının parametresiz `Public Sub New()` oluşturucusu olmalıdır veya sınıf doğru şekilde kayıt olmayacaktır. Sınıfına parametresiz bir Oluşturucu ekleyin:  
+8. COM sınıflarının parametresiz bir oluşturucusu olmalıdır `Public Sub New()` veya sınıf doğru şekilde kayıt olmayacaktır. Sınıfına parametresiz bir Oluşturucu ekleyin:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. Sınıfa özellikler, Yöntemler ve olaylar ekleyin ve bunu bir `End Class` ifadesiyle sona erdirin. **Build** menüsünden **Build Solution** öğesini seçin. Visual Basic derlemeyi oluşturur ve COM nesnesini işletim sistemiyle kaydeder.  
+9. Sınıfa özellikler, Yöntemler ve olaylar ekleyin ve bir `End Class` ifadesiyle biter. **Build** menüsünden **Build Solution** öğesini seçin. Visual Basic derlemeyi oluşturur ve COM nesnesini işletim sistemiyle kaydeder.  
   
     > [!NOTE]
-    > Visual Basic ile oluşturduğunuz COM nesneleri, doğru COM nesneleri olmadığından diğer Visual Basic uygulamalar tarafından kullanılamaz. Bu tür COM nesnelerine başvuru ekleme girişimleri bir hata oluşturacak. Ayrıntılar için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > Visual Basic ile oluşturduğunuz COM nesneleri, doğru COM nesneleri olmadığından diğer Visual Basic uygulamalar tarafından kullanılamaz. Bu tür COM nesnelerine başvuru ekleme girişimleri bir hata oluşturacak. Ayrıntılar için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
-- [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [#Region Yönergesi](../../../visual-basic/language-reference/directives/region-directive.md)
-- [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [COM birlikte çalışma](index.md)
+- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region yönergesi](../../language-reference/directives/region-directive.md)
+- [.NET Framework Uygulamalarında COM Birlikte Çalışabilirliği](com-interoperability-in-net-framework-applications.md)
+- [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](troubleshooting-interoperability.md)

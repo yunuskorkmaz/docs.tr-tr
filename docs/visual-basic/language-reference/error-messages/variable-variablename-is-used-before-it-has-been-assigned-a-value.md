@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: a2ba752b95933d146da090a58c416015db75e106
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34718243172d3b1a238a813268e672d62c4eeb6c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662679"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406540"
 ---
-# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Değişken '\<variablename >' bir değer atanmadan önce kullanıldı
-Değişken '\<variablename >' bir değer atanmadan önce kullanılır. Çalışma zamanında null başvurusu özel durumu neden olabilir.  
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>'\<variablename>' değişkenine bir değer atanmadan kullanıldı
+' \<variablename> ' Değişkeni bir değer atanmadan önce kullanıldı. Çalışma zamanında null başvurusu özel durumu oluşabilir.  
   
- Bir uygulama için herhangi bir değere atanmadan önce değişken okur, kod aracılığıyla en az bir yol vardır.  
+ Bir uygulamanın, herhangi bir değer atanmadan önce bir değişkeni okuyan kodu aracılığıyla olası en az bir yolu vardır.  
   
- Bir değişkene bir değer hiçbir zaman atandıysa, kendi veri türü için varsayılan değeri içerir. Başvuru veri türleri için bu varsayılan değerdir [hiçbir şey](../../../visual-basic/language-reference/nothing.md). Bir değeri olan bir başvuru değişkenini okuma `Nothing` neden olabilir bir <xref:System.NullReferenceException> bazı durumlarda.  
+ Bir değişkene hiç bir değer atanmamışsa, veri türü için varsayılan değeri barındırır. Başvuru veri türü için bu varsayılan değer [Nothing](../nothing.md)' dir. Bir değere sahip bir başvuru değişkenini okumak `Nothing` bazı koşullarda bir oluşturulmasına neden olabilir <xref:System.NullReferenceException> .  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini daha fazla bilgi için bkz: [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42104  
+ **Hata kimliği:** BC42104  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Denetim akışı mantığınızı denetleyin ve denetim okuduğu herhangi bir deyimle geçirmeden önce değişkeni geçerli bir değere sahip olduğundan emin olun.  
+- Denetim akışı mantığınızı denetleyin ve denetimin kendisini okuyan hiçbir ifadeye geçmeden önce değişkenin geçerli bir değere sahip olduğundan emin olun.  
   
-- Değişken geçerli bir değer her zaman sahip olacağı garanti edilir bir bildiriminin bir parçası olarak başlatmak için yoludur. "Başlatma" konusuna bakın [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- Değişkenin her zaman geçerli bir değere sahip olduğundan emin olmanın bir yolu, bildiriminin bir parçası olarak bunu başlatmaktır. [Dim ifadesinde](../statements/dim-statement.md)"başlatma" konusuna bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Değişkenlerle İlgili Sorun Giderme](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
+- [Dim Deyimi](../statements/dim-statement.md)
+- [Değişken Bildirimi](../../programming-guide/language-features/variables/variable-declaration.md)
+- [Değişkenlerle İlgili Sorun Giderme](../../programming-guide/language-features/variables/troubleshooting-variables.md)
