@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089114"
 ---
-# <a name="settings-element-network-settings"></a><span data-ttu-id="baf11-102">\<ayarları > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="baf11-102">\<settings> Element (Network Settings)</span></span>
-<span data-ttu-id="baf11-103"><xref:System.Net?displayProperty=nameWithType> ad alanı için temel ağ seçeneklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="baf11-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
+# <a name="settings-element-network-settings"></a><span data-ttu-id="4e8b5-102">\<settings> Öğesi (Ağ Ayarları)</span><span class="sxs-lookup"><span data-stu-id="4e8b5-102">\<settings> Element (Network Settings)</span></span>
+<span data-ttu-id="4e8b5-103">Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="4e8b5-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
 
-<span data-ttu-id="baf11-104">[ **\<configuration >** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="baf11-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="baf11-105">[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;</span><span class="sxs-lookup"><span data-stu-id="baf11-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="baf11-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<ayarları >**</span><span class="sxs-lookup"><span data-stu-id="baf11-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<settings>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<settings>**
 
-## <a name="syntax"></a><span data-ttu-id="baf11-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="baf11-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e8b5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4e8b5-104">Syntax</span></span>  
   
 ```xml  
 <settings>  
@@ -36,36 +36,36 @@ ms.locfileid: "74089114"
 </settings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="baf11-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="baf11-108">Attributes and Elements</span></span>  
- <span data-ttu-id="baf11-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="baf11-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4e8b5-105">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e8b5-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="4e8b5-106">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="baf11-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="baf11-110">Attributes</span></span>  
- <span data-ttu-id="baf11-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="baf11-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4e8b5-107">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4e8b5-107">Attributes</span></span>  
+ <span data-ttu-id="4e8b5-108">Yok.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-108">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="baf11-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="baf11-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4e8b5-109">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e8b5-109">Child Elements</span></span>  
   
-|<span data-ttu-id="baf11-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="baf11-113">Element</span></span>|<span data-ttu-id="baf11-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="baf11-114">Description</span></span>|  
+|<span data-ttu-id="4e8b5-110">Öğe</span><span class="sxs-lookup"><span data-stu-id="4e8b5-110">Element</span></span>|<span data-ttu-id="4e8b5-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e8b5-111">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="baf11-115">httpListener</span><span class="sxs-lookup"><span data-stu-id="baf11-115">httpListener</span></span>](httplistener-element-network-settings.md)|<span data-ttu-id="baf11-116"><xref:System.Net.HttpListener> sınıfı tarafından kullanılan parametreleri özelleştirir.</span><span class="sxs-lookup"><span data-stu-id="baf11-116">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
-|[<span data-ttu-id="baf11-117">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="baf11-117">httpWebRequest</span></span>](httpwebrequest-element-network-settings.md)|<span data-ttu-id="baf11-118">Web isteği parametrelerini özelleştirir.</span><span class="sxs-lookup"><span data-stu-id="baf11-118">Customizes Web request parameters.</span></span>|  
-|[<span data-ttu-id="baf11-119">IPv6</span><span class="sxs-lookup"><span data-stu-id="baf11-119">ipv6</span></span>](ipv6-element-network-settings.md)|<span data-ttu-id="baf11-120">Internet Protokolü sürüm 6 (IPv6) desteğini sunar.</span><span class="sxs-lookup"><span data-stu-id="baf11-120">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
-|[<span data-ttu-id="baf11-121">\<performanceCounter > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="baf11-121">\<performanceCounter> Element (Network Settings)</span></span>](performancecounter-element-network-settings.md)|<span data-ttu-id="baf11-122">Ağ performans sayaçlarını etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="baf11-122">Enables network performance counters.</span></span>|  
-|[<span data-ttu-id="baf11-123">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="baf11-123">servicePointManager</span></span>](servicepointmanager-element-network-settings.md)|<span data-ttu-id="baf11-124">Ağ kaynaklarına bağlantıları yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="baf11-124">Configures connections to network resources.</span></span>|  
-|[<span data-ttu-id="baf11-125">yuvasının</span><span class="sxs-lookup"><span data-stu-id="baf11-125">socket</span></span>](socket-element-network-settings.md)|<span data-ttu-id="baf11-126">Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="baf11-126">Specifies whether socket operations use completion ports.</span></span>|  
-|[<span data-ttu-id="baf11-127">\<webProxyScript > öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="baf11-127">\<webProxyScript> Element (Network Settings)</span></span>](webproxyscript-element-network-settings.md)|<span data-ttu-id="baf11-128">Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="baf11-128">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
+|[<span data-ttu-id="4e8b5-112">httpListener</span><span class="sxs-lookup"><span data-stu-id="4e8b5-112">httpListener</span></span>](httplistener-element-network-settings.md)|<span data-ttu-id="4e8b5-113">Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.HttpListener> .</span><span class="sxs-lookup"><span data-stu-id="4e8b5-113">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
+|[<span data-ttu-id="4e8b5-114">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="4e8b5-114">httpWebRequest</span></span>](httpwebrequest-element-network-settings.md)|<span data-ttu-id="4e8b5-115">Web isteği parametrelerini özelleştirir.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-115">Customizes Web request parameters.</span></span>|  
+|[<span data-ttu-id="4e8b5-116">IPv6</span><span class="sxs-lookup"><span data-stu-id="4e8b5-116">ipv6</span></span>](ipv6-element-network-settings.md)|<span data-ttu-id="4e8b5-117">Internet Protokolü sürüm 6 (IPv6) desteğini sunar.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-117">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
+|[<span data-ttu-id="4e8b5-118">\<performanceCounter>Öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="4e8b5-118">\<performanceCounter> Element (Network Settings)</span></span>](performancecounter-element-network-settings.md)|<span data-ttu-id="4e8b5-119">Ağ performans sayaçlarını etkinleştirilir.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-119">Enables network performance counters.</span></span>|  
+|[<span data-ttu-id="4e8b5-120">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="4e8b5-120">servicePointManager</span></span>](servicepointmanager-element-network-settings.md)|<span data-ttu-id="4e8b5-121">Ağ kaynaklarına bağlantıları yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-121">Configures connections to network resources.</span></span>|  
+|[<span data-ttu-id="4e8b5-122">yuvasının</span><span class="sxs-lookup"><span data-stu-id="4e8b5-122">socket</span></span>](socket-element-network-settings.md)|<span data-ttu-id="4e8b5-123">Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-123">Specifies whether socket operations use completion ports.</span></span>|  
+|[<span data-ttu-id="4e8b5-124">\<webProxyScript>Öğesi (ağ ayarları)</span><span class="sxs-lookup"><span data-stu-id="4e8b5-124">\<webProxyScript> Element (Network Settings)</span></span>](webproxyscript-element-network-settings.md)|<span data-ttu-id="4e8b5-125">Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-125">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="baf11-129">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="baf11-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4e8b5-126">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="4e8b5-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="baf11-130">Öğe</span><span class="sxs-lookup"><span data-stu-id="baf11-130">Element</span></span>|<span data-ttu-id="baf11-131">Açıklama</span><span class="sxs-lookup"><span data-stu-id="baf11-131">Description</span></span>|  
+|<span data-ttu-id="4e8b5-127">Öğe</span><span class="sxs-lookup"><span data-stu-id="4e8b5-127">Element</span></span>|<span data-ttu-id="4e8b5-128">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4e8b5-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="baf11-132">system.net</span><span class="sxs-lookup"><span data-stu-id="baf11-132">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="baf11-133">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="baf11-133">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="4e8b5-129">system.net</span><span class="sxs-lookup"><span data-stu-id="4e8b5-129">system.net</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="4e8b5-130">.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="baf11-134">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="baf11-134">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e8b5-131">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4e8b5-131">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="baf11-135">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="baf11-135">Configuration Files</span></span>  
- <span data-ttu-id="baf11-136">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="baf11-136">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="4e8b5-132">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="4e8b5-132">Configuration Files</span></span>  
+ <span data-ttu-id="4e8b5-133">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-133">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="baf11-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="baf11-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e8b5-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4e8b5-134">See also</span></span>
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [<span data-ttu-id="baf11-138">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="baf11-138">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="4e8b5-135">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="4e8b5-135">Network Settings Schema</span></span>](index.md)

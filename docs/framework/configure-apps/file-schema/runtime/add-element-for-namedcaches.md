@@ -1,27 +1,27 @@
 ---
-title: <namedCaches> için <add> öğesi
+title: <namedCaches> için <add> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154511"
 ---
-# <a name="add-element-for-namedcaches"></a><span data-ttu-id="c1f03-102">\<adCaches \<> için> Öğesi ekleyin</span><span class="sxs-lookup"><span data-stu-id="c1f03-102">\<add> Element for \<namedCaches></span></span>
-<span data-ttu-id="c1f03-103">Bellek `namedCache` önbelleği `namedCaches` için koleksiyona bir giriş ekler.</span><span class="sxs-lookup"><span data-stu-id="c1f03-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+# <a name="add-element-for-namedcaches"></a><span data-ttu-id="60245-102">\<namedCaches> için \<add> Öğesi</span><span class="sxs-lookup"><span data-stu-id="60245-102">\<add> Element for \<namedCaches></span></span>
+<span data-ttu-id="60245-103">`namedCache` `namedCaches` Bir bellek önbelleği için koleksiyona bir giriş ekler.</span><span class="sxs-lookup"><span data-stu-id="60245-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
-<span data-ttu-id="c1f03-104">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="c1f03-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="c1f03-105">&nbsp;&nbsp;[**\<system.runtime.önbelleğe alma>**](system-runtime-caching-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="c1f03-105">&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)</span></span>\
-<span data-ttu-id="c1f03-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryÖnbellek>**](memorycache-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="c1f03-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)</span></span>\
-<span data-ttu-id="c1f03-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="c1f03-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)</span></span>\
-<span data-ttu-id="c1f03-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**</span><span class="sxs-lookup"><span data-stu-id="c1f03-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a><span data-ttu-id="c1f03-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c1f03-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="60245-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="60245-104">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -30,35 +30,35 @@ ms.locfileid: "79154511"
  </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="c1f03-110">Tür</span><span class="sxs-lookup"><span data-stu-id="c1f03-110">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="60245-105">Tür</span><span class="sxs-lookup"><span data-stu-id="60245-105">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c1f03-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1f03-111">Attributes and Elements</span></span>  
- <span data-ttu-id="c1f03-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c1f03-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="60245-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="60245-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="60245-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="60245-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c1f03-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c1f03-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="60245-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="60245-108">Attributes</span></span>  
   
-|<span data-ttu-id="c1f03-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c1f03-114">Attribute</span></span>|<span data-ttu-id="c1f03-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c1f03-115">Description</span></span>|  
+|<span data-ttu-id="60245-109">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="60245-109">Attribute</span></span>|<span data-ttu-id="60245-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="60245-110">Description</span></span>|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|<span data-ttu-id="c1f03-116">İzin verilen en büyük boyutu (megabaytlarda) belirten bir <xref:System.Runtime.Caching.MemoryCache> tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="c1f03-116">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="c1f03-117">Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma sezgiselinin varsayılan olarak kullanıldığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-117">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`Name`|<span data-ttu-id="c1f03-118">Önbelleğin adı.</span><span class="sxs-lookup"><span data-stu-id="c1f03-118">The name of the cache.</span></span>|  
-|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="c1f03-119">Önbellek tarafından tüketilebilen fiziksel olarak yüklenmiş bilgisayar belleğinin maksimum yüzdesini belirten 0 ile 100 arasında bir tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="c1f03-119">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="c1f03-120">Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma sezgiselinin varsayılan olarak kullanıldığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-120">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`PollingInterval`|<span data-ttu-id="c1f03-121">Önbellek uygulamasının geçerli bellek yükünü önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarıyla karşılaştırdığı zaman aralığını gösteren bir değer.</span><span class="sxs-lookup"><span data-stu-id="c1f03-121">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="c1f03-122">Bu değer "HH:MM:SS" biçiminde girilir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-122">This value is entered in "HH:MM:SS" format.</span></span>|  
+|`CacheMemoryLimitMegabytes`|<span data-ttu-id="60245-111">Bir örneğinin bir örneğinin büyüyebileceği en fazla izin verilen boyutu (megabayt cinsinden) belirten bir tamsayı değeri <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="60245-111">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="60245-112">Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="60245-112">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`Name`|<span data-ttu-id="60245-113">Önbelleğin adı.</span><span class="sxs-lookup"><span data-stu-id="60245-113">The name of the cache.</span></span>|  
+|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="60245-114">0 ile 100 arasında, önbellek tarafından tüketilen fiziksel olarak yüklenen bilgisayar belleğinin maksimum yüzdesini belirten bir tamsayı değeri.</span><span class="sxs-lookup"><span data-stu-id="60245-114">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="60245-115">Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="60245-115">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`PollingInterval`|<span data-ttu-id="60245-116">Önbellek uygulamasının geçerli bellek yükünü, önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştıran zaman aralığını belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="60245-116">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="60245-117">Bu değer "HH: MM: SS" biçiminde girilir.</span><span class="sxs-lookup"><span data-stu-id="60245-117">This value is entered in "HH:MM:SS" format.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c1f03-123">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1f03-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="60245-118">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="60245-118">Child Elements</span></span>  
  `None`  
   
-### <a name="parent-elements"></a><span data-ttu-id="c1f03-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1f03-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="60245-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="60245-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="c1f03-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="c1f03-125">Element</span></span>|<span data-ttu-id="c1f03-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c1f03-126">Description</span></span>|  
+|<span data-ttu-id="60245-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="60245-120">Element</span></span>|<span data-ttu-id="60245-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="60245-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c1f03-127">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="c1f03-127">\<namedCaches></span></span>](namedcaches-element-cache-settings.md)|<span data-ttu-id="c1f03-128">Adlandırılmış <xref:System.Runtime.Caching.MemoryCache> örnekler için yapılandırma ayarları koleksiyonu içerir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-128">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|<span data-ttu-id="60245-122">Adlandırılmış örnekler için yapılandırma ayarlarının bir koleksiyonunu içerir <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="60245-122">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c1f03-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c1f03-129">Remarks</span></span>  
- <span data-ttu-id="c1f03-130">Öğe, `add` bellek önbelleği için `namedCaches` koleksiyona bir giriş ekler.</span><span class="sxs-lookup"><span data-stu-id="c1f03-130">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="c1f03-131">Koleksiyonda başka [clear](clear-element-for-namedcaches.md) adlandırılmış önbellek `add` olmadığından emin olmak için öğeyi kullanmadan önce açık öğeyi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c1f03-131">You can use the [clear](clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="c1f03-132">Bu öğe machine.config dosyasında ve Web.config dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-132">This element can be used in the machine.config file and in the Web.config file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="60245-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="60245-123">Remarks</span></span>  
+ <span data-ttu-id="60245-124">`add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler.</span><span class="sxs-lookup"><span data-stu-id="60245-124">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="60245-125">[clear](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="60245-125">You can use the [clear](clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="60245-126">Bu öğe Machine. config dosyasında ve Web. config dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="60245-126">This element can be used in the machine.config file and in the Web.config file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c1f03-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="c1f03-133">Example</span></span>  
- <span data-ttu-id="c1f03-134">Aşağıdaki örnekte, bir bellek önbelleği `namedCaches` için koleksiyona varsayılan `namedCache` giriş ayarlarının nasıl tanımlanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="c1f03-134">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+## <a name="example"></a><span data-ttu-id="60245-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="60245-127">Example</span></span>  
+ <span data-ttu-id="60245-128">Aşağıdaki örnek, `namedCache` `namedCaches` bir bellek önbelleğinin koleksiyonuna varsayılan giriş için ayarların nasıl tanımlanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="60245-128">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "79154511"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c1f03-135">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c1f03-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60245-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="60245-129">See also</span></span>
 
-- [<span data-ttu-id="c1f03-136">\<namedCaches> Öğesi (Önbellek Ayarları)</span><span class="sxs-lookup"><span data-stu-id="c1f03-136">\<namedCaches> Element (Cache Settings)</span></span>](namedcaches-element-cache-settings.md)
+- [<span data-ttu-id="60245-130">\<namedCaches>Öğesi (önbellek ayarları)</span><span class="sxs-lookup"><span data-stu-id="60245-130">\<namedCaches> Element (Cache Settings)</span></span>](namedcaches-element-cache-settings.md)

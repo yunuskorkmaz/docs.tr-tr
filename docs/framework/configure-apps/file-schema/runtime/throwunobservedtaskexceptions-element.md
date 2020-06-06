@@ -9,70 +9,70 @@ helpviewer_keywords:
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153821"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a><span data-ttu-id="802b7-102">\<ThrowUnobservedTaskExceptions> Öğesi</span><span class="sxs-lookup"><span data-stu-id="802b7-102">\<ThrowUnobservedTaskExceptions> Element</span></span>
-<span data-ttu-id="802b7-103">İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırıp sonlandırmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="802b7-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  
+# <a name="throwunobservedtaskexceptions-element"></a><span data-ttu-id="75f98-102">\<ThrowUnobservedTaskExceptions> Öğesi</span><span class="sxs-lookup"><span data-stu-id="75f98-102">\<ThrowUnobservedTaskExceptions> Element</span></span>
+<span data-ttu-id="75f98-103">İşlenmemiş görev özel durumlarının çalışan bir işlemi sonlandırmayı gerekip gerekmediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="75f98-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  
   
-<span data-ttu-id="802b7-104">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="802b7-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="802b7-105">&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="802b7-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
-<span data-ttu-id="802b7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<ThrowUnobservedTaskExceptions>**</span><span class="sxs-lookup"><span data-stu-id="802b7-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<ThrowUnobservedTaskExceptions>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<ThrowUnobservedTaskExceptions>**  
   
-## <a name="syntax"></a><span data-ttu-id="802b7-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="802b7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75f98-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="75f98-104">Syntax</span></span>  
   
 ```xml  
 <ThrowUnobservedTaskExceptions  
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="802b7-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="802b7-108">Attributes and Elements</span></span>  
- <span data-ttu-id="802b7-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="802b7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="75f98-105">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="75f98-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="75f98-106">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="75f98-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="802b7-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="802b7-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="75f98-107">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="75f98-107">Attributes</span></span>  
   
-|<span data-ttu-id="802b7-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="802b7-111">Attribute</span></span>|<span data-ttu-id="802b7-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="802b7-112">Description</span></span>|  
+|<span data-ttu-id="75f98-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="75f98-108">Attribute</span></span>|<span data-ttu-id="75f98-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="75f98-109">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="802b7-113">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="802b7-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="802b7-114">İşlenmemiş görev özel durumlarının yürütme işlemini sonlandırıp sonlandırmayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="802b7-114">Specifies whether unhandled task exceptions should terminate the running process.</span></span>|  
+|`enabled`|<span data-ttu-id="75f98-110">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="75f98-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="75f98-111">İşlenmemiş görev özel durumlarının çalışan işlemi sonlandırmayı gerekip gerekmediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="75f98-111">Specifies whether unhandled task exceptions should terminate the running process.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="802b7-115">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="802b7-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="75f98-112">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="75f98-112">enabled Attribute</span></span>  
   
-|<span data-ttu-id="802b7-116">Değer</span><span class="sxs-lookup"><span data-stu-id="802b7-116">Value</span></span>|<span data-ttu-id="802b7-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="802b7-117">Description</span></span>|  
+|<span data-ttu-id="75f98-113">Değer</span><span class="sxs-lookup"><span data-stu-id="75f98-113">Value</span></span>|<span data-ttu-id="75f98-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="75f98-114">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="802b7-118">İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırmaz.</span><span class="sxs-lookup"><span data-stu-id="802b7-118">Does not terminate the running process for an unhandled task exception.</span></span> <span data-ttu-id="802b7-119">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="802b7-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="802b7-120">İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="802b7-120">Terminates the running process for an unhandled task exception.</span></span>|  
+|`false`|<span data-ttu-id="75f98-115">İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="75f98-115">Does not terminate the running process for an unhandled task exception.</span></span> <span data-ttu-id="75f98-116">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="75f98-116">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="75f98-117">İşlenmemiş bir görev özel durumu için çalışan işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="75f98-117">Terminates the running process for an unhandled task exception.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="802b7-121">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="802b7-121">Child Elements</span></span>  
- <span data-ttu-id="802b7-122">Yok.</span><span class="sxs-lookup"><span data-stu-id="802b7-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="75f98-118">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="75f98-118">Child Elements</span></span>  
+ <span data-ttu-id="75f98-119">Yok.</span><span class="sxs-lookup"><span data-stu-id="75f98-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="802b7-123">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="802b7-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="75f98-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="75f98-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="802b7-124">Öğe</span><span class="sxs-lookup"><span data-stu-id="802b7-124">Element</span></span>|<span data-ttu-id="802b7-125">Açıklama</span><span class="sxs-lookup"><span data-stu-id="802b7-125">Description</span></span>|  
+|<span data-ttu-id="75f98-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="75f98-121">Element</span></span>|<span data-ttu-id="75f98-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="75f98-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="802b7-126">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="802b7-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="802b7-127">Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="802b7-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="75f98-123">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="75f98-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="75f98-124">Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="75f98-124">Contains information about runtime initialization options.</span></span>|  
 |||  
   
-## <a name="remarks"></a><span data-ttu-id="802b7-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="802b7-128">Remarks</span></span>  
- <span data-ttu-id="802b7-129">Bir <xref:System.Threading.Tasks.Task> özel durumla ilişkili bir özel durum gözlenmemişse, işlem yapılmaz, <xref:System.Threading.Tasks.Task.Wait%2A> üst <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> öğe eklenmez ve özellik okunmamışsa görev özel durumu gözlenmemiş olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="802b7-129">If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="75f98-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="75f98-125">Remarks</span></span>  
+ <span data-ttu-id="75f98-126">İle ilişkili bir özel durum <xref:System.Threading.Tasks.Task> gözlemlenmeyen bir <xref:System.Threading.Tasks.Task.Wait%2A> işlem yok, üst öğe iliştirilmemiş ve <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özellik okunamadı, görev özel durumu gözlemlenmemiş olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="75f98-126">If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.</span></span>  
   
- <span data-ttu-id="802b7-130">.NET Framework 4'te, varsayılan <xref:System.Threading.Tasks.Task> olarak, gözlenmeyen bir özel durum varsa, çöp toplanmışsa, sonlandırıcı bir özel durum atar ve işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="802b7-130">In the .NET Framework 4, by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process.</span></span> <span data-ttu-id="802b7-131">Sürecin sona ermesi çöp toplama ve sonuçlandırma zamanlaması ile belirlenir.</span><span class="sxs-lookup"><span data-stu-id="802b7-131">The termination of the process is determined by the timing of garbage collection and finalization.</span></span>  
+ <span data-ttu-id="75f98-127">.NET Framework 4 ' te, varsayılan olarak, gözlemlenen olmayan bir <xref:System.Threading.Tasks.Task> özel durum atık olarak toplanmışsa Sonlandırıcı bir özel durum oluşturur ve işlemi sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="75f98-127">In the .NET Framework 4, by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process.</span></span> <span data-ttu-id="75f98-128">İşlemin sonlandırılması çöp toplama ve sonlandırma zamanlaması tarafından belirlenir.</span><span class="sxs-lookup"><span data-stu-id="75f98-128">The termination of the process is determined by the timing of garbage collection and finalization.</span></span>  
   
- <span data-ttu-id="802b7-132">Geliştiricilerin görevlere dayalı eşzamanlı kod yazmasını kolaylaştırmak için .NET Framework 4.5 bu varsayılan davranışı gözlenmemiş özel durumlar için değiştirir.</span><span class="sxs-lookup"><span data-stu-id="802b7-132">To make it easier for developers to write asynchronous code based on tasks, the .NET Framework 4.5 changes this default behavior for unobserved exceptions.</span></span> <span data-ttu-id="802b7-133">Gözlenmeyen özel durumlar <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> yine de olayın yükseltilmesine neden olur, ancak varsayılan olarak işlem sonlandırmaz.</span><span class="sxs-lookup"><span data-stu-id="802b7-133">Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate.</span></span> <span data-ttu-id="802b7-134">Bunun yerine, olay büyütüldükten sonra, bir olay işleyicisinin özel durumu gözlemleyip izlemediğine bakılmaksızın özel durum yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="802b7-134">Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.</span></span>  
+ <span data-ttu-id="75f98-129">Geliştiricilerin görevlere göre zaman uyumsuz kod yazmasını kolaylaştırmak için .NET Framework 4,5, gözlemlenen özel durumlar için bu varsayılan davranışı değiştirir.</span><span class="sxs-lookup"><span data-stu-id="75f98-129">To make it easier for developers to write asynchronous code based on tasks, the .NET Framework 4.5 changes this default behavior for unobserved exceptions.</span></span> <span data-ttu-id="75f98-130">Gözlemlenen özel durumlar hala etkinliğin oluşturulmasına neden olur <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> , ancak varsayılan olarak işlem sonlanmaz.</span><span class="sxs-lookup"><span data-stu-id="75f98-130">Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate.</span></span> <span data-ttu-id="75f98-131">Bunun yerine, bir olay işleyicisinin özel durumu görmediğine bakılmaksızın, olay oluşturulduktan sonra özel durum yoksayılır.</span><span class="sxs-lookup"><span data-stu-id="75f98-131">Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.</span></span>  
   
- <span data-ttu-id="802b7-135">.NET Framework 4.5'te, bir uygulama yapılandırma dosyasındaki [ \<ThrowUnobservedTaskExceptions> öğesini](throwunobservedtaskexceptions-element.md) kullanarak .NET Framework 4'ün özel durum atma davranışını etkinleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="802b7-135">In the .NET Framework 4.5, you can use the [\<ThrowUnobservedTaskExceptions> element](throwunobservedtaskexceptions-element.md) in an application configuration file to enable the .NET Framework 4 behavior of throwing an exception.</span></span>  
+ <span data-ttu-id="75f98-132">.NET Framework 4,5 ' de, bir özel durum oluşturan .NET Framework 4 davranışını etkinleştirmek için bir uygulama yapılandırma dosyasındaki [ \<ThrowUnobservedTaskExceptions> öğesini](throwunobservedtaskexceptions-element.md) kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="75f98-132">In the .NET Framework 4.5, you can use the [\<ThrowUnobservedTaskExceptions> element](throwunobservedtaskexceptions-element.md) in an application configuration file to enable the .NET Framework 4 behavior of throwing an exception.</span></span>  
   
- <span data-ttu-id="802b7-136">Özel durum davranışını aşağıdaki yollardan birinde de belirtebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="802b7-136">You can also specify the exception behavior in one of the following ways:</span></span>  
+ <span data-ttu-id="75f98-133">Özel durum davranışını aşağıdaki yollarla da belirtebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="75f98-133">You can also specify the exception behavior in one of the following ways:</span></span>  
   
-- <span data-ttu-id="802b7-137">Çevre değişkenini `COMPlus_ThrowUnobservedTaskExceptions` `set COMPlus_ThrowUnobservedTaskExceptions=1`ayarlayarak ( ).</span><span class="sxs-lookup"><span data-stu-id="802b7-137">By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span></span>  
+- <span data-ttu-id="75f98-134">Ortam değişkenini `COMPlus_ThrowUnobservedTaskExceptions` ( `set COMPlus_ThrowUnobservedTaskExceptions=1` ) ayarlayarak.</span><span class="sxs-lookup"><span data-stu-id="75f98-134">By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span></span>  
   
-- <span data-ttu-id="802b7-138">Kayıt defteri DWORD değeri ThrowUnobservedTaskExceptions = 1 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\ayarlayarak . NETFramework anahtarı.</span><span class="sxs-lookup"><span data-stu-id="802b7-138">By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
+- <span data-ttu-id="75f98-135">ThrowUnobservedTaskExceptions = 1 kayıt defteri DWORD değerini HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft olarak ayarlayarak \\ . NETFramework anahtarı.</span><span class="sxs-lookup"><span data-stu-id="75f98-135">By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="802b7-139">Örnek</span><span class="sxs-lookup"><span data-stu-id="802b7-139">Example</span></span>  
- <span data-ttu-id="802b7-140">Aşağıdaki örnekte, bir uygulama yapılandırma dosyası kullanarak görevlerde özel durumların atılması nasıl etkinleştirilir gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="802b7-140">The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="75f98-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="75f98-136">Example</span></span>  
+ <span data-ttu-id="75f98-137">Aşağıdaki örnek, bir uygulama yapılandırma dosyası kullanarak görevlerde özel durumların üretilmesini nasıl etkinleştireceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="75f98-137">The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.</span></span>  
   
 ```xml  
 <configuration>
@@ -82,13 +82,13 @@ ms.locfileid: "79153821"
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="802b7-141">Örnek</span><span class="sxs-lookup"><span data-stu-id="802b7-141">Example</span></span>  
- <span data-ttu-id="802b7-142">Aşağıdaki örnek, gözlenmeyen bir özel durum bir görevden nasıl atıldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="802b7-142">The following example demonstrates how an unobserved exception is thrown from a task.</span></span> <span data-ttu-id="802b7-143">Kodun düzgün çalışması için serbest bırakılmış bir program olarak çalıştırılması gerekir.</span><span class="sxs-lookup"><span data-stu-id="802b7-143">The code must be run as a released program to work correctly.</span></span>  
+## <a name="example"></a><span data-ttu-id="75f98-138">Örnek</span><span class="sxs-lookup"><span data-stu-id="75f98-138">Example</span></span>  
+ <span data-ttu-id="75f98-139">Aşağıdaki örnekte, bir görevden gözlemlenen bir özel durumun nasıl oluşturulduğu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="75f98-139">The following example demonstrates how an unobserved exception is thrown from a task.</span></span> <span data-ttu-id="75f98-140">Kod, doğru bir şekilde çalışması için yayınlanmış bir program olarak çalıştırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="75f98-140">The code must be run as a released program to work correctly.</span></span>  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="802b7-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="802b7-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75f98-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="75f98-141">See also</span></span>
 
-- [<span data-ttu-id="802b7-145">Çalışma Zamanı Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="802b7-145">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="802b7-146">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="802b7-146">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="75f98-142">Çalışma zamanı ayarları şeması</span><span class="sxs-lookup"><span data-stu-id="75f98-142">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="75f98-143">Yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="75f98-143">Configuration File Schema</span></span>](../index.md)

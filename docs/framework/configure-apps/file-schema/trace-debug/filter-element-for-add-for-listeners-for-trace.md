@@ -1,5 +1,5 @@
 ---
-title: <filter><add> Için <listeners> element<trace>
+title: <filter>İçin için <add> öğesi <listeners><trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 ms.openlocfilehash: b6c2c2bf7fe953a75f9d8129039ef33b4d8a3f56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153472"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="a0691-102">\<izleme> \<için> \<dinleyiciler \<için> eklemek için> Öğesi'ni filtreleyin</span><span class="sxs-lookup"><span data-stu-id="a0691-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
-<span data-ttu-id="a0691-103">`Listeners` İzleme için koleksiyondaki bir dinleyiciye filtre ekler.</span><span class="sxs-lookup"><span data-stu-id="a0691-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="3ba3d-102">\<filter>İçin için \<add> öğesi \<listeners>\<trace></span><span class="sxs-lookup"><span data-stu-id="3ba3d-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
+<span data-ttu-id="3ba3d-103">İzleme için koleksiyondaki bir dinleyiciye bir filtre ekler `Listeners` .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
 
-<span data-ttu-id="a0691-104">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="a0691-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-105">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>\
-<span data-ttu-id="a0691-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](trace-element.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)</span></span>\
-<span data-ttu-id="a0691-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dinleyici ler>**](listeners-element-for-trace.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)</span></span>\
-<span data-ttu-id="a0691-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add-element-for-listeners-for-trace.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-listeners-for-trace.md)</span></span>\
-<span data-ttu-id="a0691-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filtre>**</span><span class="sxs-lookup"><span data-stu-id="a0691-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-listeners-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**
 
-## <a name="syntax"></a><span data-ttu-id="a0691-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a0691-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ba3d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3ba3d-104">Syntax</span></span>  
   
 ```xml  
 <filter
@@ -33,36 +33,36 @@ ms.locfileid: "79153472"
   initializeData="data" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a0691-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a0691-111">Attributes and Elements</span></span>  
- <span data-ttu-id="a0691-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a0691-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3ba3d-105">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ba3d-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="3ba3d-106">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a0691-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a0691-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3ba3d-107">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="3ba3d-107">Attributes</span></span>  
   
-|<span data-ttu-id="a0691-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a0691-114">Attribute</span></span>|<span data-ttu-id="a0691-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a0691-115">Description</span></span>|  
+|<span data-ttu-id="3ba3d-108">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="3ba3d-108">Attribute</span></span>|<span data-ttu-id="3ba3d-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3ba3d-109">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="a0691-116">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="a0691-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="a0691-117"><xref:System.Diagnostics.TraceFilter> Sınıftan devralması gereken filtrenin türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="a0691-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="a0691-118">Türün <xref:System.Type.FullName%2A> özelliğine karşılık gelen ad alanı nitelikli adını kullanabilir veya <xref:System.Type.AssemblyQualifiedName%2A> derleme bilgilerini de içeren ve özelliğe karşılık gelen tam nitelikli tür adını kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a0691-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="a0691-119">Tam nitelikli tür adları hakkında bilgi için [bkz.](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)</span><span class="sxs-lookup"><span data-stu-id="a0691-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|`initializeData`|<span data-ttu-id="a0691-120">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="a0691-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="a0691-121">Dize, belirtilen filtre sınıfı için oluşturucuya geçti.</span><span class="sxs-lookup"><span data-stu-id="a0691-121">The string passed to the constructor for the specified filter class.</span></span>|  
+|`type`|<span data-ttu-id="3ba3d-110">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="3ba3d-111">Sınıftan devralması gereken filtrenin türünü belirtir <xref:System.Diagnostics.TraceFilter> .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-111">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="3ba3d-112">Türün özelliğine karşılık gelen, türün ad alanı nitelenmiş adını kullanabilirsiniz <xref:System.Type.FullName%2A> veya, özelliğine karşılık gelen derleme bilgileri de dahil olmak üzere tam nitelikli tür adını kullanabilirsiniz <xref:System.Type.AssemblyQualifiedName%2A> .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-112">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="3ba3d-113">Tam nitelikli tür adları hakkında daha fazla bilgi için bkz. [tam nitelikli tür adlarını belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="3ba3d-113">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="3ba3d-114">İsteğe bağlı öznitelik.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="3ba3d-115">Belirtilen filtre sınıfı için oluşturucuya geçirilen dize.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-115">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a0691-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a0691-122">Child Elements</span></span>  
- <span data-ttu-id="a0691-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="a0691-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3ba3d-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ba3d-116">Child Elements</span></span>  
+ <span data-ttu-id="3ba3d-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="a0691-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a0691-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3ba3d-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="3ba3d-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="a0691-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="a0691-125">Element</span></span>|<span data-ttu-id="a0691-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a0691-126">Description</span></span>|  
+|<span data-ttu-id="3ba3d-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="3ba3d-119">Element</span></span>|<span data-ttu-id="3ba3d-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3ba3d-120">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="a0691-127">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="a0691-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="a0691-128">İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.</span><span class="sxs-lookup"><span data-stu-id="a0691-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="a0691-129">İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="a0691-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="a0691-130">İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="a0691-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="a0691-131">Dinleyiciler izleme çıktısını uygun bir hedefe yönlendirir.</span><span class="sxs-lookup"><span data-stu-id="a0691-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`add`|<span data-ttu-id="a0691-132">`Listeners` Koleksiyona bir dinleyici ekler.</span><span class="sxs-lookup"><span data-stu-id="a0691-132">Adds a listener to the `Listeners` collection.</span></span>|  
+|`configuration`|<span data-ttu-id="3ba3d-121">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="3ba3d-122">İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-122">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="3ba3d-123">İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-123">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="3ba3d-124">İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-124">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="3ba3d-125">Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-125">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="3ba3d-126">Koleksiyona bir dinleyici ekler `Listeners` .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-126">Adds a listener to the `Listeners` collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0691-133">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a0691-133">Remarks</span></span>  
- <span data-ttu-id="a0691-134">Öğe, `<filter>` yalnızca paylaşılan `<add>` Dinleyici [ \<>](sharedlisteners-element.md)tanımlanan bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme dinleyicisi için bir öğede bulunmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a0691-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](sharedlisteners-element.md).</span></span> <span data-ttu-id="a0691-135">Dinleyici [ \<paylaşılan ](sharedlisteners-element.md)dinleyici>tanımlanırsa, bu dinleyicinin filtresi bu öğede tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="a0691-135">If the listener is defined in a [\<sharedListeners>](sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ba3d-127">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3ba3d-127">Remarks</span></span>  
+ <span data-ttu-id="3ba3d-128">`<filter>`Öğesi, `<add>` yalnızca içinde tanımlanan bir dinleyicinin adını değil, dinleyicinin türünü belirten bir izleme dinleyicisi öğesi içinde bulunmalıdır [\<sharedListeners>](sharedlisteners-element.md) .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-128">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](sharedlisteners-element.md).</span></span> <span data-ttu-id="3ba3d-129">Dinleyici bir içinde tanımlanmışsa [\<sharedListeners>](sharedlisteners-element.md) , bu dinleyicinin filtresi o öğede tanımlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-129">If the listener is defined in a [\<sharedListeners>](sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- <span data-ttu-id="a0691-136">Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a0691-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="3ba3d-130">Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-130">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a0691-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="a0691-137">Example</span></span>  
- <span data-ttu-id="a0691-138">Aşağıdaki örnekte, izleme `<filter>` için `console` `Listeners` koleksiyondaki dinleyiciye bir filtre eklemek için öğenin nasıl kullanılacağı `Error`gösterilmektedir ve filtre olay düzeyini .</span><span class="sxs-lookup"><span data-stu-id="a0691-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
+## <a name="example"></a><span data-ttu-id="3ba3d-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="3ba3d-131">Example</span></span>  
+ <span data-ttu-id="3ba3d-132">Aşağıdaki örnek, `<filter>` `console` `Listeners` izleme için koleksiyondaki dinleyiciye filtre eklemek için öğesinin nasıl kullanılacağını gösterir `Error` .</span><span class="sxs-lookup"><span data-stu-id="3ba3d-132">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,10 +81,10 @@ ms.locfileid: "79153472"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a0691-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a0691-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ba3d-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3ba3d-133">See also</span></span>
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [<span data-ttu-id="a0691-140">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="a0691-140">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="3ba3d-134">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="3ba3d-134">Trace and Debug Settings Schema</span></span>](index.md)
