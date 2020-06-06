@@ -12,20 +12,20 @@ helpviewer_keywords:
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 ms.openlocfilehash: 69f15cc9583b397017ac30a0c567914495867c18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153327"
 ---
-# <a name="sharedlisteners-element"></a><span data-ttu-id="ceffe-102">\<sharedListeners> Element</span><span class="sxs-lookup"><span data-stu-id="ceffe-102">\<sharedListeners> Element</span></span>
-<span data-ttu-id="ceffe-103">Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="ceffe-104">Bu dinleyiciler varsayılan olarak herhangi bir iz almazlar ve bu dinleyicileri çalışma zamanında almak mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="ceffe-105">Paylaşılan dinleyici olarak tanımlanan dinleyiciler kaynaklara veya izadile eklenebilir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
+# <a name="sharedlisteners-element"></a><span data-ttu-id="c3ec5-102">\<sharedListeners> Öğesi</span><span class="sxs-lookup"><span data-stu-id="c3ec5-102">\<sharedListeners> Element</span></span>
+<span data-ttu-id="c3ec5-103">Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="c3ec5-104">Bu dinleyiciler, varsayılan olarak herhangi bir izleme almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="c3ec5-105">Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
   
-[<span data-ttu-id="ceffe-106">**\<yapılandırma>**</span><span class="sxs-lookup"><span data-stu-id="ceffe-106">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="ceffe-107">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span><span class="sxs-lookup"><span data-stu-id="ceffe-107">&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)</span></span>  
-<span data-ttu-id="ceffe-108">&nbsp;&nbsp;&nbsp;&nbsp;**\<paylaşılanDinleyiciler>**</span><span class="sxs-lookup"><span data-stu-id="ceffe-108">&nbsp;&nbsp;&nbsp;&nbsp;**\<sharedListeners>**</span></span>  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sharedListeners>**  
   
-## <a name="syntax"></a><span data-ttu-id="ceffe-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ceffe-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3ec5-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c3ec5-106">Syntax</span></span>  
   
 ```xml  
 <sharedListeners>
@@ -33,32 +33,32 @@ ms.locfileid: "79153327"
 </sharedListeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ceffe-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="ceffe-110">Attributes and Elements</span></span>  
- <span data-ttu-id="ceffe-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ceffe-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c3ec5-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c3ec5-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="c3ec5-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ceffe-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="ceffe-112">Attributes</span></span>  
- <span data-ttu-id="ceffe-113">Yok.</span><span class="sxs-lookup"><span data-stu-id="ceffe-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c3ec5-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c3ec5-109">Attributes</span></span>  
+ <span data-ttu-id="c3ec5-110">Yok.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ceffe-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="ceffe-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c3ec5-111">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c3ec5-111">Child Elements</span></span>  
   
-|<span data-ttu-id="ceffe-115">Öğe</span><span class="sxs-lookup"><span data-stu-id="ceffe-115">Element</span></span>|<span data-ttu-id="ceffe-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ceffe-116">Description</span></span>|  
+|<span data-ttu-id="c3ec5-112">Öğe</span><span class="sxs-lookup"><span data-stu-id="c3ec5-112">Element</span></span>|<span data-ttu-id="c3ec5-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c3ec5-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="ceffe-117">\<>ekleyin</span><span class="sxs-lookup"><span data-stu-id="ceffe-117">\<add></span></span>](add-element-for-listeners-for-trace.md)|<span data-ttu-id="ceffe-118">`sharedListeners` Koleksiyona bir dinleyici ekler.</span><span class="sxs-lookup"><span data-stu-id="ceffe-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[\<add>](add-element-for-listeners-for-trace.md)|<span data-ttu-id="c3ec5-114">Koleksiyona bir dinleyici ekler `sharedListeners` .</span><span class="sxs-lookup"><span data-stu-id="c3ec5-114">Adds a listener to the `sharedListeners` collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="ceffe-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="ceffe-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c3ec5-115">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c3ec5-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="ceffe-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="ceffe-120">Element</span></span>|<span data-ttu-id="ceffe-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ceffe-121">Description</span></span>|  
+|<span data-ttu-id="c3ec5-116">Öğe</span><span class="sxs-lookup"><span data-stu-id="c3ec5-116">Element</span></span>|<span data-ttu-id="c3ec5-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c3ec5-117">Description</span></span>|  
 |-------------|-----------------|  
-|`Configuration`|<span data-ttu-id="ceffe-122">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="ceffe-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="ceffe-123">ASP.NET yapılandırma bölümünün kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`Configuration`|<span data-ttu-id="c3ec5-118">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="c3ec5-119">ASP.NET yapılandırma bölümünün kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-119">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ceffe-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ceffe-124">Remarks</span></span>  
- <span data-ttu-id="ceffe-125">Paylaşılan dinleyici koleksiyonuna dinleyici eklemek onu etkin bir dinleyici yapmaz.</span><span class="sxs-lookup"><span data-stu-id="ceffe-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="ceffe-126">Yine de bir izleme kaynağına veya bir izleme `Listeners` için bu izleme öğesi için koleksiyona ekleyerek eklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="ceffe-127">.NET Framework'deki dinleyici sınıfları sınıftan <xref:System.Diagnostics.TraceListener> türetilmiştir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3ec5-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c3ec5-120">Remarks</span></span>  
+ <span data-ttu-id="c3ec5-121">Paylaşılan dinleyiciler koleksiyonuna dinleyici eklemek, etkin bir dinleyici yapmaz.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-121">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="c3ec5-122">Yine de `Listeners` Bu izleme öğesi için koleksiyona ekleyerek bir izleme kaynağına veya bir izlemeye eklenmeli.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-122">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="c3ec5-123">.NET Framework dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-123">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
- <span data-ttu-id="ceffe-128">Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="c3ec5-124">Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-124">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ceffe-129">Örnek</span><span class="sxs-lookup"><span data-stu-id="ceffe-129">Example</span></span>  
- <span data-ttu-id="ceffe-130">Aşağıdaki örnek, dinleyiciyi `<sharedListeners>` `Listeners` hem sınıflar hem `console` de <xref:System.Diagnostics.Trace> sınıflar için <xref:System.Diagnostics.TraceSource> koleksiyona eklemek için öğenin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="ceffe-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="ceffe-131">Konsol izleme dinleyicisi ya da <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>aramalar yoluyla konsola izleme bilgileri yazar.</span><span class="sxs-lookup"><span data-stu-id="ceffe-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
+## <a name="example"></a><span data-ttu-id="c3ec5-125">Örnek</span><span class="sxs-lookup"><span data-stu-id="c3ec5-125">Example</span></span>  
+ <span data-ttu-id="c3ec5-126">Aşağıdaki örnek, `<sharedListeners>` `console` `Listeners` ve sınıflarının her ikisi için de dinleyiciyi koleksiyona eklemek için öğesinin nasıl kullanılacağını gösterir <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace> .</span><span class="sxs-lookup"><span data-stu-id="c3ec5-126">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="c3ec5-127">Konsol izleme dinleyicisi, veya çağrıları aracılığıyla konsola izleme bilgilerini yazar <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace> .</span><span class="sxs-lookup"><span data-stu-id="c3ec5-127">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
   
 ```xml  
 <configuration>  
@@ -88,8 +88,8 @@ ms.locfileid: "79153327"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ceffe-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ceffe-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3ec5-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3ec5-128">See also</span></span>
 
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="ceffe-133">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="ceffe-133">Trace and Debug Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="ceffe-134">İz Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="ceffe-134">Trace Listeners</span></span>](../../../debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="c3ec5-129">İzleme ve Hata Ayıklama Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="c3ec5-129">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="c3ec5-130">İz Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="c3ec5-130">Trace Listeners</span></span>](../../../debug-trace-profile/trace-listeners.md)

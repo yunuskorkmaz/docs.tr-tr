@@ -11,21 +11,21 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155017"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="18d21-102">\<bağlantı Yönetimi için> Öğesi ekle (Ağ Ayarları)</span><span class="sxs-lookup"><span data-stu-id="18d21-102">\<add> Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="18d21-103">Bağlantı yönetim listesine bir IP adresi veya DNS adı ekler.</span><span class="sxs-lookup"><span data-stu-id="18d21-103">Adds an IP address or DNS name to the connection management list.</span></span>  
+# <a name="add-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="732e3-102">connectionManagement için \<add> Öğesi (Ağ Ayarları)</span><span class="sxs-lookup"><span data-stu-id="732e3-102">\<add> Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="732e3-103">Bağlantı yönetimi listesine bir IP adresi veya DNS adı ekler.</span><span class="sxs-lookup"><span data-stu-id="732e3-103">Adds an IP address or DNS name to the connection management list.</span></span>  
 
-<span data-ttu-id="18d21-104">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="18d21-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="18d21-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="18d21-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>\
-<span data-ttu-id="18d21-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bağlantıYönetim>**](connectionmanagement-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="18d21-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)</span></span>\
-<span data-ttu-id="18d21-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**</span><span class="sxs-lookup"><span data-stu-id="18d21-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a><span data-ttu-id="18d21-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="18d21-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="732e3-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="732e3-104">Syntax</span></span>  
   
 ```xml  
 <add
@@ -34,35 +34,35 @@ ms.locfileid: "79155017"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="18d21-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="18d21-109">Attributes and Elements</span></span>  
- <span data-ttu-id="18d21-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="18d21-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="732e3-105">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="732e3-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="732e3-106">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="732e3-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="18d21-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="18d21-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="732e3-107">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="732e3-107">Attributes</span></span>  
   
-|<span data-ttu-id="18d21-112">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="18d21-112">**Attribute**</span></span>|<span data-ttu-id="18d21-113">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="18d21-113">**Description**</span></span>|  
+|<span data-ttu-id="732e3-108">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="732e3-108">**Attribute**</span></span>|<span data-ttu-id="732e3-109">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="732e3-109">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`address`|<span data-ttu-id="18d21-114">IP adresini veya DNS adını açıklayan dize.</span><span class="sxs-lookup"><span data-stu-id="18d21-114">A string describing an IP address or DNS name.</span></span>|  
-|`maxconnection`|<span data-ttu-id="18d21-115">Sunucuya izin verilen maksimum bağlantı sayısı.</span><span class="sxs-lookup"><span data-stu-id="18d21-115">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="18d21-116">Sağlanmazsa, varsayılan değer 2'dir.</span><span class="sxs-lookup"><span data-stu-id="18d21-116">If not supplied, the default is 2.</span></span>|  
+|`address`|<span data-ttu-id="732e3-110">IP adresini veya DNS adını tanımlayan bir dize.</span><span class="sxs-lookup"><span data-stu-id="732e3-110">A string describing an IP address or DNS name.</span></span>|  
+|`maxconnection`|<span data-ttu-id="732e3-111">Bir sunucuyla izin verilen en fazla bağlantı sayısı.</span><span class="sxs-lookup"><span data-stu-id="732e3-111">The maximum number of connections allowed to a server.</span></span> <span data-ttu-id="732e3-112">Sağlanmazsa, varsayılan değer 2 ' dir.</span><span class="sxs-lookup"><span data-stu-id="732e3-112">If not supplied, the default is 2.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="18d21-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="18d21-117">Child Elements</span></span>  
- <span data-ttu-id="18d21-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="18d21-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="732e3-113">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="732e3-113">Child Elements</span></span>  
+ <span data-ttu-id="732e3-114">Yok.</span><span class="sxs-lookup"><span data-stu-id="732e3-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="18d21-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="18d21-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="732e3-115">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="732e3-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="18d21-120">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="18d21-120">**Element**</span></span>|<span data-ttu-id="18d21-121">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="18d21-121">**Description**</span></span>|  
+|<span data-ttu-id="732e3-116">**Dosyalarında**</span><span class="sxs-lookup"><span data-stu-id="732e3-116">**Element**</span></span>|<span data-ttu-id="732e3-117">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="732e3-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="18d21-122">bağlantıYönetim</span><span class="sxs-lookup"><span data-stu-id="18d21-122">connectionManagement</span></span>](connectionmanagement-element-network-settings.md)|<span data-ttu-id="18d21-123">Bir ağ ana bilgisayarına en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="18d21-123">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="732e3-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="732e3-118">connectionManagement</span></span>](connectionmanagement-element-network-settings.md)|<span data-ttu-id="732e3-119">Bir ağ konağına en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="732e3-119">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="18d21-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="18d21-124">Remarks</span></span>  
- <span data-ttu-id="18d21-125">Özniteliğin `address` değeri, tüm bağlantıları belirtmek için bir yıldız işareti veya formun `<schema>://<idn_hostname>[:<port>]`bir dizesi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="18d21-125">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="732e3-120">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="732e3-120">Remarks</span></span>  
+ <span data-ttu-id="732e3-121">`address`Özniteliğin değeri tüm bağlantıları göstermek için bir yıldız işareti ya da formun bir dizesi olmalıdır `<schema>://<idn_hostname>[:<port>]` .</span><span class="sxs-lookup"><span data-stu-id="732e3-121">The value of the `address` attribute should be either an asterisk to indicate all connections, or a string of the form `<schema>://<idn_hostname>[:<port>]`.</span></span>  
   
- <span data-ttu-id="18d21-126">URI herhangi bir HTTP API'sine geçtiyse Unicode içeriyorsa, ad bir punicode dizesi (geçerli IDN yapılandırmasına bağlı davranış) döndürebilecek <xref:System.Uri.DnsSafeHost%2A> şekilde dahili olarak dönüştürülür.</span><span class="sxs-lookup"><span data-stu-id="18d21-126">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
+ <span data-ttu-id="732e3-122">Herhangi bir HTTP API 'sine geçirilen URI Unicode içeriyorsa, bu ad dahili olarak dönüştürülür ve bu, <xref:System.Uri.DnsSafeHost%2A> punicode dize (GEÇERLI IDN yapılandırmasına bağımlı davranışlar) döndürebilir.</span><span class="sxs-lookup"><span data-stu-id="732e3-122">If the URI passed to any HTTP APIs contains Unicode, the name will be converted internally using <xref:System.Uri.DnsSafeHost%2A> which might return a punicode string (behavior dependent on the current IDN configuration).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="18d21-127">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="18d21-127">Configuration Files</span></span>  
- <span data-ttu-id="18d21-128">Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="18d21-128">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="732e3-123">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="732e3-123">Configuration Files</span></span>  
+ <span data-ttu-id="732e3-124">Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="732e3-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18d21-129">Örnek</span><span class="sxs-lookup"><span data-stu-id="18d21-129">Example</span></span>  
- <span data-ttu-id="18d21-130">Aşağıdaki örnek, bir uygulamayı sunucuya `www.contoso.com` dört, diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="18d21-130">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
+## <a name="example"></a><span data-ttu-id="732e3-125">Örnek</span><span class="sxs-lookup"><span data-stu-id="732e3-125">Example</span></span>  
+ <span data-ttu-id="732e3-126">Aşağıdaki örnek, bir uygulamayı sunucuya dört bağlantı `www.contoso.com` ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="732e3-126">The following example configures an application to use four connections to the server `www.contoso.com` and two connections to all other servers.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "79155017"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="18d21-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18d21-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="732e3-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="732e3-127">See also</span></span>
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [<span data-ttu-id="18d21-132">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="18d21-132">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="732e3-128">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="732e3-128">Network Settings Schema</span></span>](index.md)
