@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154536"
 ---
-# <a name="remove-element-for-configsections"></a>\<configSections \<> için> öğeyi kaldırmak
+# <a name="remove-element-for-configsections"></a>\<configSections> için \<remove> öğesi
 
 Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır.
 
-[**\<yapılandırma>**](configuration-element.md)\
-&nbsp;&nbsp;[**\<configBölüm>**](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,27 +32,27 @@ ms.locfileid: "79154536"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **Adı**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
+| **ada**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [** \<configSections>** Öğe](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [**\<configSections>** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-None
+Yok
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yapılandırma dosyası ** \<** hiyerarşisinde daha yüksek bir düzeyde tanımlanan bölümleri ve bölüm gruplarını uygulamanızdan kaldırmak için kaldır>öğesini kullanabilirsiniz.
+**\<remove>** Uygulamanızı yapılandırma dosyası hiyerarşisinde daha yüksek bir düzeyde tanımlanmış olan bölümleri ve bölüm gruplarını kaldırmak için öğesini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, makine yapılandırma dosyasında daha önce tanımlanmış bir bölümü kaldırmak için uygulama yapılandırma dosyasındaki ** \<kaldırma>** öğesini nasıl kullanacağımı gösterir.
+Aşağıdaki örnek, **\<remove>** daha önce makine yapılandırma dosyasında tanımlanan bir bölümü kaldırmak için bir uygulama yapılandırma dosyasında öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosya kodu bölüm ** \<örnekBölüm>** bildirir:
+Aşağıdaki makine yapılandırma dosyası kodu şu bölümü bildirir **\<sampleSection>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Aşağıdaki makine yapılandırma dosya kodu bölüm ** \<örnekBölüm>** bild
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosya kodu ** \<örnekBölüm>** bölümünü kaldırır. Kaldırıldıktan sonra, uygulama ** \<örnekBölüm>'ndaki **ayarları alamıyor.
+Aşağıdaki uygulama yapılandırma dosyası kodu **\<sampleSection>** bölümünü kaldırır. Kaldırma işleminden sonra uygulama, içindeki ayarları alamaz **\<sampleSection>** .
 
 ```xml
 <!-- Application configuration file -->
@@ -80,7 +80,7 @@ Aşağıdaki uygulama yapılandırma dosya kodu ** \<örnekBölüm>** bölümün
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

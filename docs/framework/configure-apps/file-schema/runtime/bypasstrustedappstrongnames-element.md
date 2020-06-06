@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73739089"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > öğesi
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> Öğesi
 
-Tam güvenle <xref:System.AppDomain>yüklenen tam güven derlemelerindeki tanımlayıcı adların doğrulanmasının atlanıp atlanmayacağını belirtir.
+Tam güvenle yüklenmiş olan tam güven derlemelerindeki tanımlayıcı adların doğrulanmasının atlanıp atlanmayacağını belirtir <xref:System.AppDomain> .
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bypassTrustedAppStrongNames>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,14 +37,14 @@ Tam güvenle <xref:System.AppDomain>yüklenen tam güven derlemelerindeki tanım
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Tam güven derlemeleri için tanımlayıcı adların doğrulanmasını önleyen atlama özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Bu özellik etkinleştirildiğinde, derleme yüklendiğinde tanımlayıcı adlar doğruluk açısından doğrulanmaz. Varsayılan, `true` değeridir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Tam güven derlemeleri için tanımlayıcı adların doğrulanmasını önleyen atlama özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Bu özellik etkinleştirildiğinde, derleme yüklendiğinde tanımlayıcı adlar doğruluk açısından doğrulanmaz. Varsayılan değer: `true`.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`true`|Derlemeler tam güvenle bir <xref:System.AppDomain>yüklendiğinde, tam güven derlemelerindeki tanımlayıcı ad imzaları doğrulanmaz. Bu varsayılandır.|
-|`false`|Tam güven derlemelerindeki tanımlayıcı ad imzaları, derlemeler bir tam güvenle <xref:System.AppDomain>yüklendiğinde onaylanır. Tanımlayıcı ad imzası yalnızca imza doğruluğu için denetlenir; bir eşleşme için başka bir tanımlayıcı adla karşılaştırılmaz.|
+|`true`|Derlemeler tam güvenle yüklendiğinde, tam güven derlemelerindeki tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> . Bu varsayılandır.|
+|`false`|Tam güven derlemelerindeki tanımlayıcı ad imzaları, derlemeler tam güvenle yüklendiğinde onaylanır <xref:System.AppDomain> . Tanımlayıcı ad imzası yalnızca imza doğruluğu için denetlenir; bir eşleşme için başka bir tanımlayıcı adla karşılaştırılmaz.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -63,11 +63,11 @@ Tanımlayıcı adı atlama özelliği, tam güven derlemelerinin tanımlayıcı 
 
 Atlama özelliği, bir tanımlayıcı ad ile imzalanmış ve aşağıdaki özelliklere sahip olan her derleme için geçerlidir:
 
-- <xref:System.Security.Policy.StrongName> bulgu olmadan tam güvenilir (örneğin, `MyComputer` Zone bulgusu vardır).
+- Kanıt olmadan tamamen güvenilir <xref:System.Security.Policy.StrongName> (örneğin, `MyComputer` bölge kanıtları vardır).
 
-- Tam güvenilir bir <xref:System.AppDomain>yüklendi.
+- Tam güvenilir bir şekilde yüklendi <xref:System.AppDomain> .
 
-- Bu <xref:System.AppDomain><xref:System.AppDomainSetup.ApplicationBase%2A> özelliği altındaki bir konumdan yüklendi.
+- Özelliği altında bir konumdan yüklendi <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomain> .
 
 - Gecikmeli imza değildir.
 
@@ -88,6 +88,6 @@ Aşağıdaki örnek, tam güven derlemelerinde tanımlayıcı ad imzasını doğ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Nasıl yapılır: tanımlayıcı adı atlama özelliğini devre dışı bırakma](../../../../standard/assembly/disable-strong-name-bypass-feature.md)

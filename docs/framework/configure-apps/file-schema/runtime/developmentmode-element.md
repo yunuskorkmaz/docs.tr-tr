@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117627"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > öğesi
+# <a name="developmentmode-element"></a>\<developmentMode> Öğesi
 Çalışma zamanının DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeleri arayıp aramayacağını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,8 +42,8 @@ ms.locfileid: "73117627"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|**true**|DEVPATH ortam değişkeni tarafından belirtilen dizinlerdeki derlemeleri arar.|  
-|**false**|, DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeler aramaz. Bu, varsayılan|  
+|**değeri**|DEVPATH ortam değişkeni tarafından belirtilen dizinlerdeki derlemeleri arar.|  
+|**yanlýþ**|, DEVPATH ortam değişkeni tarafından belirtilen dizinlerde derlemeler aramaz. Bu, varsayılan|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -71,6 +71,6 @@ ms.locfileid: "73117627"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Nasıl yapılır: DEVPATH Kullanarak Bütünleştirilmiş Kodların Konumunu Bulma](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma](../../how-to-locate-assemblies-by-using-devpath.md)

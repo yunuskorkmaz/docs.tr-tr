@@ -9,19 +9,19 @@ helpviewer_keywords:
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968903"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > öğesi
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Öğesi
 
-Çalışma zamanının, <xref:System.TimeSpan?displayProperty=nameWithType> değerleriyle biçimlendirme işlemlerinde eski davranışı koruyamayacağını belirler.
+Çalışma zamanının, değerleri olan biçimlendirme işlemlerinde eski davranışı koruyamayacağını belirler <xref:System.TimeSpan?displayProperty=nameWithType> .
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<TimeSpan_LegacyFormatMode>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,7 +38,7 @@ ms.locfileid: "73968903"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının <xref:System.TimeSpan?displayProperty=nameWithType> değerlerle eski biçimlendirme davranışı kullanıp kullanmadığını belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çalışma zamanının değerlerle eski biçimlendirme davranışı kullanıp kullanmadığını belirtir <xref:System.TimeSpan?displayProperty=nameWithType> .|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
@@ -60,15 +60,15 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework 4 ' te başlayarak, <xref:System.TimeSpan?displayProperty=nameWithType> yapısı <xref:System.IFormattable> arabirimini uygular ve standart ve özel biçim dizeleriyle biçimlendirme işlemlerini destekler. Bir ayrıştırma yöntemi desteklenmeyen bir biçim belirticisi veya biçim dizesiyle karşılaşırsa, bir <xref:System.FormatException>oluşturur.
+.NET Framework 4 ' te başlayarak, <xref:System.TimeSpan?displayProperty=nameWithType> Yapı <xref:System.IFormattable> arabirimini uygular ve standart ve özel biçim dizeleriyle biçimlendirme işlemlerini destekler. Bir ayrıştırma yöntemi desteklenmeyen bir biçim belirticisi veya biçim dizesiyle karşılaşırsa, bir oluşturur <xref:System.FormatException> .
 
-.NET Framework önceki sürümlerinde, <xref:System.TimeSpan> yapısı <xref:System.IFormattable> gerçekleştirmedi ve biçim dizelerini desteklemiyor. Ancak pek çok geliştirici, <xref:System.TimeSpan> bir dizi biçim dizesini destekledikleri ve bunları <xref:System.String.Format%2A?displayProperty=nameWithType>gibi yöntemlerle [Bileşik biçimlendirme işlemlerinde](../../../../standard/base-types/composite-formatting.md) kullanmışın yanlışlıkla kabul ediyor. Genellikle, bir tür <xref:System.IFormattable> uygular ve biçim dizelerini destekliyorsa, desteklenmeyen biçim dizelerine sahip biçimlendirme yöntemlerine yapılan çağrılar genellikle bir <xref:System.FormatException>oluşturur. Ancak <xref:System.TimeSpan> <xref:System.IFormattable>uygulamadığından, çalışma zamanı biçim dizesini yoksaydı ve bunun yerine <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi çağırılır. Bu, biçim dizelerinin biçimlendirme işlemi üzerinde hiçbir etkisi olmamasına karşın, varlığı <xref:System.FormatException>neden olmadı.
+.NET Framework önceki sürümlerinde, <xref:System.TimeSpan> Yapı uygulamadı <xref:System.IFormattable> ve biçim dizelerini desteklemiyor. Ancak birçok geliştirici yanlışlıkla <xref:System.TimeSpan> bir dizi biçim dizesini destekledikleri ve bunları gibi yöntemlerle [Bileşik biçimlendirme işlemlerinde](../../../../standard/base-types/composite-formatting.md) kullandık <xref:System.String.Format%2A?displayProperty=nameWithType> . Genellikle, bir tür, <xref:System.IFormattable> Biçim dizelerini uygular ve destekliyorsa, desteklenmeyen biçim dizelerine sahip biçimlendirme yöntemlerine yapılan çağrılar genellikle bir oluşturur <xref:System.FormatException> . Ancak, <xref:System.TimeSpan> uygulamadığından, <xref:System.IFormattable> çalışma zamanı biçim dizesini yoksaydı ve bunun yerine <xref:System.TimeSpan.ToString?displayProperty=nameWithType> yöntemi çağırılır. Bu, biçim dizelerinin biçimlendirme işlemi üzerinde hiçbir etkisi olmamasına karşın, varlığı bir ile sonuçlanmamasıdır <xref:System.FormatException> .
 
-Eski kodun bir bileşik biçimlendirme yöntemini ve geçersiz biçim dizesini geçirdiğini ve kodun yeniden derlenmesi durumunda, eski <xref:System.TimeSpan> davranışını geri yüklemek için `<TimeSpan_LegacyFormatMode>` öğesini kullanabilirsiniz. Bu öğenin `enabled` özniteliğini `true`olarak ayarladığınızda, bileşik biçimlendirme yöntemi <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>yerine <xref:System.TimeSpan.ToString?displayProperty=nameWithType> çağrısıyla sonuçlanır ve bir <xref:System.FormatException> oluşturulmaz.
+Eski kodun bir bileşik biçimlendirme yöntemini ve geçersiz biçim dizesini geçirdiğini ve kodun yeniden derlenmesi durumunda, `<TimeSpan_LegacyFormatMode>` eski davranışı geri yüklemek için öğesini kullanabilirsiniz <xref:System.TimeSpan> . `enabled`Bu öğenin özniteliğini olarak ayarladığınızda `true` , bileşik biçimlendirme yöntemi, yerine öğesine çağrı ile sonuçlanır <xref:System.TimeSpan.ToString?displayProperty=nameWithType> <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ve bir oluşturulmaz <xref:System.FormatException> .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir <xref:System.TimeSpan> nesnesini örnekleyerek, desteklenmeyen bir standart biçim dizesi kullanarak onu <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> yöntemiyle biçimlendirmeye çalışır.
+Aşağıdaki örnek bir nesnesi oluşturur <xref:System.TimeSpan> ve <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> Desteklenmeyen bir standart biçim dizesi kullanarak yöntemi ile biçimlendirmeye çalışır.
 
 [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
 [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]
@@ -98,5 +98,5 @@ Ancak, aşağıdaki yapılandırma dosyasını örnek dizinine ekler ve sonra ö
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

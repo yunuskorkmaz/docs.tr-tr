@@ -3,19 +3,19 @@ title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
 ms.openlocfilehash: bd6aeb32e0994bceb9e56bcb1c6267f4cb64a5a4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039140"
 ---
-# <a name="bindingextensions"></a>\<bindingExtensions >
+# \<bindingExtensions>
 
-Bu bölüm, bir makineden ya da uygulama yapılandırma dosyasından Kullanıcı tanımlı bağlamanın kullanımını sunar. `add` anahtar sözcüğünü kullanarak bu koleksiyona Kullanıcı tanımlı bir bağlama ekleyebilirsiniz ve öğenin `type` özniteliğini Kullanıcı tanımlı bağlamaya, `name` özniteliğini de Kullanıcı tanımlı bağlama adına ayarlayabilirsiniz.
+Bu bölüm, bir makineden ya da uygulama yapılandırma dosyasından Kullanıcı tanımlı bağlamanın kullanımını sunar. Anahtar sözcüğünü kullanarak bu koleksiyona Kullanıcı tanımlı bir bağlama ekleyebilir `add` ve öğesinin özniteliğini Kullanıcı tanımlı bağlama adına ve `type` özniteliğini Kullanıcı tanımlı bağlamanın adına ayarlayarak ekleyebilirsiniz `name` .
 
-Bağlama uzantıları, kullanıcının bir uç nokta yapılandırması olarak kullanılmak üzere Kullanıcı tanımlı bağlamalar oluşturmasını sağlar. Programlı olarak, bağlama uzantısı <xref:System.ServiceModel.Channels.Binding>soyut sınıfı uygulayan bir türdür.
+Bağlama uzantıları, kullanıcının bir uç nokta yapılandırması olarak kullanılmak üzere Kullanıcı tanımlı bağlamalar oluşturmasını sağlar. Programlı olarak, bağlama uzantısı soyut sınıfı uygulayan bir türdür <xref:System.ServiceModel.Channels.Binding> .
 
-Aşağıdaki örnek, yapılandırma dosyasının `bindingExtensions` bölümüne bir bağlama uzantısı eklemek için `add` öğesini ve `name` özniteliğini kullanır:
+Aşağıdaki örnek, `add` `name` yapılandırma dosyasının bölümüne bir bağlama uzantısı eklemek için öğesini ve özniteliğini kullanır `bindingExtensions` :
 
 ```xml
 <system.serviceModel>
@@ -29,7 +29,7 @@ Aşağıdaki örnek, yapılandırma dosyasının `bindingExtensions` bölümüne
 </system.serviceModel>
 ```
 
-Öğeye yapılandırma becerileri eklemek için, kullanıcının bir `bindingSection` öğesi yazması ve kaydetmesi gerekir. Bunun hakkında daha fazla bilgi için <xref:System.Configuration> belgelerine bakın.
+Öğeye yapılandırma becerileri eklemek için, kullanıcının bir öğesi yazması ve kaydetmesi gerekir `bindingSection` . Bunun hakkında daha fazla bilgi için belgelerine bakın <xref:System.Configuration> .
 
 Öğesi ve yapılandırma türü tanımlandıktan sonra uzantı, aşağıdaki örnekte gösterildiği gibi bir uç noktanın parçası olarak kullanılabilir:
 

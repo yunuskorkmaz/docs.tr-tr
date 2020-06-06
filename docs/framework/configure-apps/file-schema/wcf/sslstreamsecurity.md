@@ -3,21 +3,21 @@ title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738598"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity >
+# \<sslStreamSecurity>
 SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğesini temsil eder.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sslStreamSecurity >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sslStreamSecurity>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,8 +33,8 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|requireClientCertificate|Bu bağlama için bir istemci sertifikasının gerekli olup olmadığını belirten bir Boolean değer. Varsayılan, `false` değeridir.|  
-|sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan değer Ssl3&#124;TLS&#124;Tls11&#124;Tls12 ' dir.|  
+|requireClientCertificate|Bu bağlama için bir istemci sertifikasının gerekli olup olmadığını belirten bir Boolean değer. Varsayılan değer: `false`.|  
+|sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan, Ssl3&#124;TLS&#124;Tls11&#124;Tls12 'dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\< bağlama >](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
+|[\<binding>](bindings.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -53,4 +53,4 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)
