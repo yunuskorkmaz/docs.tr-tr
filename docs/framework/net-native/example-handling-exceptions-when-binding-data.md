@@ -3,24 +3,24 @@ title: 'Örnek: Veri Bağlama Sırasında Özel Durum İşleme'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181028"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Örnek: Veri Bağlama Sırasında Özel Durum İşleme
 > [!NOTE]
-> Bu konu, yayın öncesi yazılım olan .NET Yerel Geliştirici Önizlemesi'ni ifade eder. Önizlemeyi Microsoft Connect [web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerektirir).  
+> Bu konu, yayın öncesi yazılım olan .NET Native geliştirici önizlemesine başvurur. Önizlemeyi [Microsoft Connect Web sitesinden](https://go.microsoft.com/fwlink/?LinkId=394611) indirebilirsiniz (kayıt gerekir).  
   
- Aşağıdaki örnek, .NET Yerel araç zinciriyle derlenen bir uygulama verileri bağlamaya çalıştığında atılan [Bir Eksik MetadataException](missingmetadataexception-class-net-native.md) özel durum nasıl çözüleceğini gösterir. İstisna bilgileri aşağıda veda eder:  
+ Aşağıdaki örnek, .NET Native araç zinciri ile derlenen bir uygulama verileri bağlamayı denediğinde oluşan bir [MissingMetadataException](missingmetadataexception-class-net-native.md) özel durumunun nasıl çözümlendiğini gösterir. Özel durum bilgileri aşağıda verilmiştir:  
   
 ```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:
 App.ViewModels.MainPageVM  
 ```  
   
- İlişkili çağrı yığını aşağıda veda edebilirsiniz:  
+ İlişkili çağrı yığını aşağıda verilmiştir:  
   
 ```output
 Reflection::Execution::ReflectionDomainSetupImplementation.CreateNonInvokabilityException+0x238  
@@ -37,25 +37,25 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Uygulama ne yapıyordu?  
- Yığının tabanında, ad alanından <xref:Windows.UI.Xaml?displayProperty=nameWithType> kareler XAML işleme altyapısının çalıştığını gösterir.   <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> Yöntemin kullanımı, meta verileri kaldırılan türde bir özelliğin değerinin yansıma tabanlı bir görünümünü gösterir.  
+ Yığının tabanında, <xref:Windows.UI.Xaml?displayProperty=nameWithType> ad alanındaki Çerçeveler XAML işleme altyapısının çalıştığını gösterir.   Yönteminin kullanımı, <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> meta verileri kaldırılmış olan türdeki bir özelliğin değerinin yansıma tabanlı bir aramasını gösterir.  
   
- Meta veri yönergesi sağlamanın ilk `serialize` adımı, özelliklerinin tümüne erişilebilmek için tür için meta veri eklemek olacaktır:  
+ Meta veri yönergesini sağlamanın ilk adımı, `serialize` özelliklerinin tümünün erişilebilir olması için türün meta verilerini eklemektir:  
   
 ```xml  
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a>Bu münferit bir dava mı?  
- Bu senaryoda, veri bağlama biri `ViewModel`için eksik meta veri varsa, diğerleri için de olabilir.  Kod, uygulamanın görünüm modellerinin tümü `App.ViewModels` ad alanında olacak şekilde yapılandırılmışsa, daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:  
+## <a name="is-this-an-isolated-case"></a>Bu yalıtılmış bir durumdur mi?  
+ Bu senaryoda, veri bağlamasında bir tane için eksik meta veriler varsa, `ViewModel` diğerleri de olabilir.  Kod, uygulamanın görünüm modellerinin ad alanında yer aldığı bir şekilde yapılandırılmış ise `App.ViewModels` , daha genel bir çalışma zamanı yönergesi kullanabilirsiniz:  
   
 ```xml  
 <Namespace Name="App.ViewModels " Serialize="Required Public" />  
 ```  
   
-## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Kod yansımayı kullanmamak için yeniden yazılabilir mi?  
- Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodu değiştirmek mümkün değildir.  
+## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>Kod, yansıma kullanmadan yeniden yazılabilir mi?  
+ Veri bağlama yansıma yoğun olduğundan, yansımayı önlemek için kodun değiştirilmesi uygun değildir.  
   
- Ancak, araç zincirinin `ViewModel` özellik bağlamalarını derleme zamanında doğru türle ilişkilendirebilmeleri ve çalışma zamanı yönergesi kullanmadan meta verileri tutabilmesi için XAML sayfasına belirtmenin yolları vardır.  Örneğin, özellikler üzerinde <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> öznitelik uygulayabilirsiniz. Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına neden olur ve Varsayılan.rd.xml dosyasında çalışma zamanı yönergesi gerektirmesini önler.  
+ Ancak, `ViewModel` araç zincirinin derleme zamanında doğru türle Özellik bağlamalarını ilişkilendirebilmesi ve bir çalışma zamanı yönergesi kullanmadan meta verileri tutması IÇIN xaml sayfasına belirtmek için bazı yollar vardır.  Örneğin, özelliğini <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> özelliklerine uygulayabilirsiniz. Bu, XAML derleyicisinin gerekli arama bilgilerini oluşturmasına ve default. RD. xml dosyasında bir çalışma zamanı yönergesi gerektirmesine neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

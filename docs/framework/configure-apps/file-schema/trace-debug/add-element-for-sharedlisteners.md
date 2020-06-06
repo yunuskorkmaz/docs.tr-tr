@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> için <add> öğesi
+title: <sharedListeners> için <add> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: 5588892ec75a791eda1eb043936c0af95e79354e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153613"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<paylaşılan Dinleyiciler \<için> Öğesi>
-`sharedListeners` Koleksiyona bir dinleyici ekler. `sharedListeners`herhangi [ \<](source-element.md) bir kaynağın>veya [ \<izleme>](trace-element.md) başvurulabileceği bir dinleyici topluluğudur.  Varsayılan olarak, `sharedListeners` koleksiyondaki dinleyiciler koleksiyona `Listeners` yerleştirilmez. Kaynak [ \<>](source-element.md) veya [ \<izleme>](trace-element.md)adile eklenmelidir. Dinleyicileri çalışma zamanında kod halinde `sharedListeners` toplama almak mümkün değildir.  
+# <a name="add-element-for-sharedlisteners"></a>\<sharedListeners> için \<add> Öğesi
+Koleksiyona bir dinleyici ekler `sharedListeners` . `sharedListeners`, herhangi bir veya başvuruda bulunan bir dinleyici koleksiyonudur [\<source>](source-element.md) [\<trace>](trace-element.md) .  Varsayılan olarak, `sharedListeners` koleksiyondaki dinleyiciler bir koleksiyona yerleştirilmez `Listeners` . Ya da adına göre eklenmelidir [\<source>](source-element.md) [\<trace>](trace-element.md) . `sharedListeners`Çalışma zamanında koddaki koleksiyondaki dinleyicileri almak mümkün değildir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<paylaşılanDinleyiciler>**](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sharedListeners>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,47 +40,47 @@ ms.locfileid: "79153613"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Gerekli öznitelik.<br /><br /> Paylaşılan dinleyiciyi koleksiyona `Listeners` eklemek için kullanılan dinleyicinin adını belirtir.|  
-|`type`|Gerekli öznitelik.<br /><br /> Dinleyicinin türünü belirtir. [Tam Nitelikli Tür Adları Belirtme'de](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan bir dize kullanmanız gerekir.|  
-|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Dize, belirtilen sınıfın oluşturucuya geçti.|  
-|`traceOutputOptions`|İsteğe bağlı öznitelik.<br/><br/>İzleme çıktısına yazılacak <xref:System.Diagnostics.TraceOptions> verileri gösteren bir veya daha fazla numaralandırma üyesinin dize gösterimi. Birden çok öğe virgülle ayrılır. Varsayılan değer "Yok"dur.|
+|`name`|Gerekli öznitelik.<br /><br /> Paylaşılan dinleyiciyi bir koleksiyona eklemek için kullanılan dinleyicinin adını belirtir `Listeners` .|  
+|`type`|Gerekli öznitelik.<br /><br /> Dinleyicinin türünü belirtir. [Tam nitelikli tür adlarını belirtirken](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan bir dize kullanmanız gerekir.|  
+|`initializeData`|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize.|  
+|`traceOutputOptions`|İsteğe bağlı öznitelik.<br/><br/><xref:System.Diagnostics.TraceOptions>İzleme çıktısına yazılacak verileri gösteren bir veya daha fazla numaralandırma üyesinin dize temsili. Birden çok öğe virgülle ayrılır. Varsayılan değer "none" dır.|
 
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<filtre>](filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` Koleksiyondaki bir dinleyiciye filtre ekler.|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|Koleksiyondaki bir dinleyiciye bir filtre ekler `sharedListeners` .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|`sharedListeners`|Herhangi bir kaynak veya izleme öğesinin başvuruda bulunabileceği dinleyici koleksiyonu.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sharedListeners`|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik bir dinleyici koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework ile gönderilen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıftan türetilmiştir. Öznitelik değeri, `name` paylaşılan dinleyiciyi bir izleme veya `Listeners` izleme kaynağı için bir koleksiyona eklemek için kullanılır. Öznitelik değeri `initializeData` oluşturduğunuz dinleyici türüne bağlıdır. Tüm izleme dinleyicileri belirtmenizi `initializeData`gerektirmez.  
+ .NET Framework ile birlikte gelen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir. Özniteliğin değeri, `name` `Listeners` bir izleme ya da izleme kaynağı için bir koleksiyona paylaşılan dinleyiciyi eklemek için kullanılır. Özniteliğin değeri, `initializeData` oluşturduğunuz dinleyicinin türüne bağlıdır. Tüm izleme dinleyicileri belirtmeniz gerekmez `initializeData` .  
   
 > [!NOTE]
-> Özniteliği kullandığınızda, `initializeData` derleyici uyarı alabilirsiniz "'InitializeData' özniteliği ilan edilmez." Yapılandırma ayarları özniteliği tanımayan <xref:System.Diagnostics.TraceListener> `initializeData` soyut taban sınıfa karşı doğrulandığı için bu uyarı oluşur. Genellikle, bir parametre alan bir oluşturucu ya da izleme dinleyicisi uygulamaları için bu uyarıyı yoksayabilirsiniz.  
+> `initializeData`Özniteliğini kullandığınızda, "ınitializedata" özniteliği bildirilmemiş "derleyici uyarısını alabilirsiniz." Bu uyarı, yapılandırma ayarları özniteliği tanımayan Özet taban sınıfına göre doğrulandığından oluşur <xref:System.Diagnostics.TraceListener> `initializeData` . Genellikle, bir parametresi alan Oluşturucusu olan izleme dinleyicisi uygulamaları için bu uyarıyı yoksayabilirsiniz.  
   
- Aşağıdaki tabloda .NET Framework'e dahil olan izleme dinleyicileri `initializeData` gösterilmektedir ve özniteliklerinin değerini açıklar.  
+ Aşağıdaki tabloda, .NET Framework eklenen izleme dinleyicileri gösterilmektedir ve özniteliklerinin değerleri açıklanmaktadır `initializeData` .  
   
-|İzleme dinleyici sınıfı|initializeData öznitelik değeri|  
+|Trace dinleyicisi sınıfı|ınitializedata öznitelik değeri|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|Oluşturucunun `useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> değeri.  İzleme `initializeData` ve hata`true`ayıklama çıktısını standart hata akışına yazmak için " " özniteliğini ayarlayın; standart çıktı`false`akışına yazmak için " " olarak ayarlayın.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener>|<xref:System.Diagnostics.DelimitedListTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Varolan bir olay günlüğü kaynağının adı.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.EventSchemaTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.TextWriterTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|<xref:System.Diagnostics.XmlWriterTraceListener> Yazdığı dosyanın adı.|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|`useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Oluşturucunun değeri.  `initializeData`"" Özniteliğini, `true` izleme ve hata ayıklama çıkışını standart hata akışına yazmak için "" olarak ayarlayın; `false` Standart çıkış akışına yazmak için "" olarak ayarlayın.|  
+|<xref:System.Diagnostics.DelimitedListTraceListener>|Yazdığı dosyanın adı <xref:System.Diagnostics.DelimitedListTraceListener> .|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Var olan bir olay günlüğü kaynağının adı.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.EventSchemaTraceListener> .|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.TextWriterTraceListener> .|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|Yazdığı dosyanın adı <xref:System.Diagnostics.XmlWriterTraceListener> .|  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, koleksiyona `<add>` eklemek için <xref:System.Diagnostics.TextWriterTraceListener> `textListener` öğelerin nasıl kullanılacağını `sharedListeners` gösterir.   `textListener`izleme kaynağı `TraceSourceApp`için `Listeners` koleksiyona ad ile eklenir. `textListener` Dinleyici myListener.log dosyasına izleme çıktısı yazar.  
+ Aşağıdaki örnek `<add>` , öğesini koleksiyona eklemek için öğesinin nasıl kullanılacağını gösterir <xref:System.Diagnostics.TextWriterTraceListener> `textListener` `sharedListeners` .   `textListener`, `Listeners` izleme kaynağı için koleksiyona adına eklenir `TraceSourceApp` . `textListener`Dinleyici, izleme çıkışını myListener. log dosyasına yazar.  
   
 ```xml  
 <configuration>  

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 ms.openlocfilehash: 8b2f39a0867228474afdee788474fda11f14ca82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154133"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Öğesi
 64-bit platformlarda toplam boyutu 2 gigabayttan (GB) büyük olan dizileri etkinleştirir.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -77,9 +77,9 @@ ms.locfileid: "79154133"
   
 ## <a name="supported-in"></a>Destekleyen:
 
-.NET Framework 4.5 ve sonraki sürümler
+.NET Framework 4,5 ve sonraki sürümler
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

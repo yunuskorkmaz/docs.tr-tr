@@ -9,16 +9,16 @@ helpviewer_keywords:
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154549"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> Elemanı (Ağ Ayarları)
-Ağ ana bilgisayarlarından bilgi istemek için kullanılacak modülleri belirtir.  
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> Öğesi (Ağ Ayarları)
+Ağ konaklarından bilgi istemek için kullanılacak modülleri belirtir.  
   
-[**\<yapılandırma>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules>  
   
@@ -37,28 +37,28 @@ Ağ ana bilgisayarlarından bilgi istemek için kullanılacak modülleri belirti
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ekle](add-element-for-webrequestmodules-network-settings.md)|Uygulamaya özel bir Web isteği modülü ekler.|  
-|[Temizleyin](clear-element-for-webrequestmodules-network-settings.md)|Tüm kayıtlı Web istek modüllerini uygulamadan kaldırır.|  
-|[Kaldırmak](remove-element-for-webrequestmodules-network-settings.md)|Özel bir Web isteği modüllerini uygulamadan kaldırır.|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|Uygulamaya özel bir Web isteği modülü ekler.|  
+|[lediğiniz](clear-element-for-webrequestmodules-network-settings.md)|Tüm kayıtlı Web isteği modüllerini uygulamadan kaldırır.|  
+|[temizlenmesine](remove-element-for-webrequestmodules-network-settings.md)|Uygulamadan özel bir Web istek modülünü kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[system.net](system-net-element-network-settings.md)|.NET Framework'ün ağa nasıl bağladığını belirten ayarlar içerir.|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework ağa nasıl bağlanacağını belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `webRequestModules` ağ ana bilgisayarlarına bilgi isteklerini <xref:System.Net.WebRequest> işlemek için sınıfın torunlarını kaydeder. Web istek modülleri <xref:System.Net.IWebRequestCreate> arabirimi uygulamalıdır.  
+ `webRequestModules`Öğesi, <xref:System.Net.WebRequest> ağ konaklarına bilgi isteklerini işlemek üzere sınıfının alt öğelerini kaydeder. Web isteği modülleri <xref:System.Net.IWebRequestCreate> arabirimini gerçekleştirmelidir.  
   
- .NET Framework, URI'ler için `http://`,, `https://`ve `file://`. Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
+ .NET Framework,, ve ile başlayan URI 'Ler için Web isteği modülleri içerir `http://` `https://` `file://` . Varsayılan modülleri yalnızca yapılandırma dosyasına özel bir modül kaydederek geçersiz kılabilirsiniz.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte varsayılan HTTP modülü kaydedilir. Sürüm ve PublicKeyToken değerlerini belirtilen modül için doğru değerlerle değiştirmelisiniz.  
+ Aşağıdaki örnek varsayılan HTTP modülünü kaydeder. Version ve PublicKeyToken değerlerini belirtilen modülle ilgili doğru değerlerle değiştirmelisiniz.  
   
 ```xml  
 <configuration>  

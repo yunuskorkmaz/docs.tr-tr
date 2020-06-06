@@ -7,18 +7,18 @@ helpviewer_keywords:
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 ms.openlocfilehash: 94c21e0408b7616bf0c8a24267b72bfa7cc3aaa0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153990"
 ---
-# <a name="memorycache-element-cache-settings"></a>\<memoryÖnbellek> Öğesi (Önbellek Ayarları)
-Sınıfı temel alan önbelleği yapılandırmak için kullanılan bir <xref:System.Runtime.Caching.MemoryCache> öğetanımlar. Sınıf, <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> önbelleği yapılandırmak için kullanabileceğiniz bir [memoryCache](memorycache-element-cache-settings.md) öğesini tanımlar. <xref:System.Runtime.Caching.MemoryCache> Sınıfın birden çok örneği tek bir uygulamada kullanılabilir. Yapılandırma `memoryCache` dosyasındaki her öğe, adlandırılmış <xref:System.Runtime.Caching.MemoryCache> bir örneğin ayarlarını içerebilir.  
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache> Öğesi (Önbellek Ayarları)
+Sınıfına dayalı bir önbelleği yapılandırmak için kullanılan bir öğesi tanımlar <xref:System.Runtime.Caching.MemoryCache> . <xref:System.Runtime.Caching.Configuration.MemoryCacheElement>Sınıfı, önbelleği yapılandırmak için kullanabileceğiniz bir [MemoryCache](memorycache-element-cache-settings.md) öğesi tanımlar. Sınıfın birden çok örneği <xref:System.Runtime.Caching.MemoryCache> tek bir uygulamada kullanılabilir. `memoryCache`Yapılandırma dosyasındaki her öğe, adlandırılmış bir örnek için ayarları içerebilir <xref:System.Runtime.Caching.MemoryCache> .  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.runtime.önbelleğe alma>**](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<memoryÖnbellek>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<memoryCache>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,7 +31,7 @@ Sınıfı temel alan önbelleği yapılandırmak için kullanılan bir <xref:Sys
 ```  
   
 ## <a name="type"></a>Tür  
- <xref:System.Runtime.Caching.MemoryCache>Sınıfı.  
+ <xref:System.Runtime.Caching.MemoryCache>sınıfı.  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
@@ -40,30 +40,30 @@ Sınıfı temel alan önbelleği yapılandırmak için kullanılan bir <xref:Sys
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`CacheMemoryLimitMegabytes`|Megabaytlarda, bir <xref:System.Runtime.Caching.MemoryCache> nesnenin bir örneğinin büyüyebileceği maksimum bellek boyutu. Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma buluşsal larının varsayılan olarak kullanıldığı anlamına gelir.|  
+|`CacheMemoryLimitMegabytes`|Bir nesne örneğinin büyüyebileceği maksimum bellek boyutu (megabayt cinsinden) <xref:System.Runtime.Caching.MemoryCache> . Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın AutoSize buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.|  
 |`Name`|Önbellek yapılandırmasının adı.|  
-|`PhysicalMemoryLimitPercentage`|Önbellek tarafından kullanılabilecek fiziksel bellek yüzdesi. Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma buluşsal larının varsayılan olarak kullanıldığı anlamına gelir.|  
-|`PollingInterval`|Önbellek uygulamasının geçerli bellek yükünü önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarıyla karşılaştırdığı zaman aralığını gösteren bir değer. Değer "HH:MM:SS" biçiminde girilir.|  
+|`PhysicalMemoryLimitPercentage`|Önbellek tarafından kullanılabilen fiziksel bellek yüzdesi. Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın AutoSize buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.|  
+|`PollingInterval`|Önbellek uygulamasının geçerli bellek yükünü, önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştıran zaman aralığını belirten bir değer. Değer "HH: MM: SS" biçiminde girilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|`namedCache` Örnek için yapılandırma ayarları koleksiyonu içerir.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Örnek için yapılandırma ayarlarının bir koleksiyonunu içerir `namedCache` .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<yapılandırma>](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasındaki kök öğeyi belirtir.|  
-|[\<system.runtime.önbelleğe alma>](system-runtime-caching-element-cache-settings.md)|.NET Framework'de yerleşik olan uygulamalarda çıktı önbelleğe alma uygulamanızı sağlayan türleri içerir.|  
+|[\<configuration>](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|.NET Framework yerleşik uygulamalarda çıktı önbelleği uygulamanıza olanak sağlayan türler içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sınıf <xref:System.Runtime.Caching.MemoryCache> soyut <xref:System.Runtime.Caching.ObjectCache> sınıfın somut bir uygulamasıdır. <xref:System.Runtime.Caching.MemoryCache> Sınıfın örnekleri, uygulama yapılandırma dosyalarından yapılandırma bilgileriyle birlikte sağlanabilir. [memoryCache](memorycache-element-cache-settings.md) yapılandırma bölümü `namedCaches` bir yapılandırma koleksiyonu içerir.  
+ <xref:System.Runtime.Caching.MemoryCache>Sınıf, soyut sınıfın somut bir uygulamasıdır <xref:System.Runtime.Caching.ObjectCache> . Sınıf örnekleri, <xref:System.Runtime.Caching.MemoryCache> uygulama yapılandırma dosyalarından yapılandırma bilgileriyle sağlanabilir. [MemoryCache](memorycache-element-cache-settings.md) yapılandırma bölümü bir `namedCaches` yapılandırma koleksiyonu içerir.  
   
- Bellek tabanlı önbellek nesnesi baş harfe döndüğünde, `namedCaches` önce bellek önbelleği oluşturucuya geçirilen parametredeki adla eşleşen bir giriş bulmaya çalışır. Bir `namedCaches` giriş bulunursa, yoklama ve bellek yönetimi bilgileri yapılandırma dosyasından alınır.  
+ Bellek tabanlı önbellek nesnesi başlatıldığında, önce `namedCaches` bellek önbelleği oluşturucusuna geçirilen parametresindeki adla eşleşen bir giriş bulmaya çalışır. Bir `namedCaches` giriş bulunursa, yoklama ve bellek yönetimi bilgileri yapılandırma dosyasından alınır.  
   
- Başlatma işlemi daha sonra, yapılandırma bilgilerinin isteğe bağlı topunu kullanarak yapılandırma girdilerinin geçersiz kılınıp geçersiz kılınmadığını belirler. Ad/değer çifti koleksiyonunda aşağıdaki değerlerden herhangi birini geçerseniz, bu değerler yapılandırma dosyasından elde edilen bilgileri geçersiz kılar:  
+ Başlatma işlemi daha sonra, kurucudaki yapılandırma bilgileri için isteğe bağlı ad/değer çiftleri koleksiyonu kullanılarak herhangi bir yapılandırma girişinin geçersiz kılınıp kılınmadığını belirler. Ad/değer çifti koleksiyonunda aşağıdaki değerlerden birini geçirirseniz, bu değerler yapılandırma dosyasından elde edilen bilgileri geçersiz kılar:  
   
 - <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes%2A>  
   
@@ -72,9 +72,9 @@ Sınıfı temel alan önbelleği yapılandırmak için kullanılan bir <xref:Sys
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, <xref:System.Runtime.Caching.MemoryCache> `name` özniteliği "Varsayılan" olarak ayarlayarak nesnenin adının varsayılan önbellek nesnesi adına nasıl ayarlanılabildiği gösterilmektedir.  
+ Aşağıdaki örnek, <xref:System.Runtime.Caching.MemoryCache> `name` özniteliğini "default" olarak ayarlayarak nesnenin adının varsayılan önbellek nesnesi adına nasıl ayarlanacağını gösterir.  
   
- Öznitelik `cacheMemoryLimitMegabytes` ve `physicalMemoryLimitPercentage` öznitelik sıfıra ayarlanır. Bu öznitelikleri sıfıra <xref:System.Runtime.Caching.MemoryCache> ayarlamak, otomatik boyutlandırma sezgisellerinin varsayılan olarak kullanıldığı anlamına gelir. Önbellek uygulaması, geçerli bellek yükünü her iki dakikada bir mutlak ve yüzde tabanlı bellek sınırlarıyla karşılaştırmalıdır.  
+ `cacheMemoryLimitMegabytes`Özniteliği ve `physicalMemoryLimitPercentage` özniteliği sıfır olarak ayarlanır. Bu özniteliklerin sıfıra ayarlanması, <xref:System.Runtime.Caching.MemoryCache> otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir. Önbellek uygulamasının her iki dakikada bir, geçerli bellek yükünü mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştırması gerekir.  
   
 ```xml  
 <configuration>  
@@ -94,5 +94,5 @@ Sınıfı temel alan önbelleği yapılandırmak için kullanılan bir <xref:Sys
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<system.runtime.cacching> Öğesi (Önbellek Ayarları)](system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches> Öğesi (Önbellek Ayarları)](namedcaches-element-cache-settings.md)
+- [\<system.runtime.caching>Öğesi (önbellek ayarları)](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches>Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)

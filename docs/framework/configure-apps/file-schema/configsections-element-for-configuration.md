@@ -8,44 +8,44 @@ helpviewer_keywords:
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155355"
 ---
-# <a name="configsections-element-for-configuration"></a>\<yapılandırma> için \<configSections> elemanı
+# <a name="configsections-element-for-configuration"></a>\<configuration> için \<configSections> öğesi
 
 Yapılandırma bölümü ve ad alanı bildirimleri içerir.
 
-yapılandırma &nbsp; &nbsp;>[** \<**](configuration-element.md) **configSections \<>**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>Öznitelikler
 
-None
+Yok
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<yapılandırma>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
+| [**\<configuration>**](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<bölüm>**](section-element.md) | Yapılandırma bölümü bildirimi içerir. |
-| [**\<bölümGrup>**](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
-| [**\<>kaldırmak**](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
-| [**\<açık>**](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
+| [**\<section>**](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
+| [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
+| [**\<remove>**](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
+| [**\<clear>**](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu öğe bir yapılandırma dosyasındaysa, ** \<yapılandırma>** öğesinin ilk alt öğesi olmalıdır.
+Bu öğe bir yapılandırma dosyasında ise, öğesinin ilk alt öğesi olması gerekir **\<configuration>** .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, yapılandırma bölümünün nasıl tanımlanılıgı ve bu bölümün ayarlarını nasıl tanımlanabilirsiniz:
+Aşağıdaki örnek, bir yapılandırma bölümünün nasıl tanımlanacağını ve bu bölüm için ayarların nasıl tanımlanacağını göstermektedir:
 
 ```xml
 <configuration>
@@ -61,7 +61,7 @@ Aşağıdaki örnekte, yapılandırma bölümünün nasıl tanımlanılıgı ve 
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

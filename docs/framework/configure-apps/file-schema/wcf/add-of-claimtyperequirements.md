@@ -3,24 +3,24 @@ title: <add> / <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
 ms.openlocfilehash: 6ba935f7f6dae0e4d9e6581f53a50c684efcbed3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153093"
 ---
-# <a name="add-of-claimtyperequirements"></a>\<claimTypeRequirements \<>> ekleyin
-Federe kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı talep türlerini belirtir. Örneğin, hizmetler, belirli bir talep türü kümesine sahip olması gereken gelen kimlik bilgilerinin gereksinimlerini belirtir.  
+# <a name="add-of-claimtyperequirements"></a>\<add> / \<claimTypeRequirements>
+Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetler, belirli bir talep türü kümesine sahip olması gereken gelen kimlik bilgileri için gereksinimleri durum.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bağlayıcı>**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlik>**](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParametreleri>**](issuedtokenparameters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParameters>**](issuedtokenparameters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<claimTypeRequirements>**](claimtyperequirements-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,8 +38,8 @@ Federe kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı talep t
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Claimtype|Bir talebin türünü tanımlayan bir URI. Örneğin, bir Web sitesinden ürün satın almak için, kullanıcının yeterli kredi limitine sahip geçerli bir kredi kartı sunması gerekir. Talep türü kredi kartı URI olacaktır.|  
-|ısoptional|Bu isteğe bağlı bir talep için olup olmadığını belirten bir Boolean değeri. Bu özniteliği, `false` gerekli bir talep olup olmadığını ayarlayın.<br /><br /> Hizmet bazı bilgiler istediğinde ancak gerektirmediğinde bu özniteliği kullanabilirsiniz. Örneğin, kullanıcının ad, soyad ve adresini girmesini istiyorsanız, ancak telefon numarasının isteğe bağlı olduğuna karar verin.|  
+|claimType|Bir talebin türünü tanımlayan URI. Örneğin, bir ürünün bir Web sitesinden satın alınması için, kullanıcının yeterli kredi limiti olan geçerli bir kredi kartı sunması gerekir. Talep türü kredi kartı URI 'SI olacaktır.|  
+|IsOptional|Bunun isteğe bağlı bir talep olup olmadığını belirten bir Boolean değer. Bu gerekli bir talep ise, bu özniteliği olarak ayarlayın `false` .<br /><br /> Hizmet bazı bilgileri istediğinde ancak bunu gerektirmiyorsa bu özniteliği kullanabilirsiniz. Örneğin, kullanıcının adını, soyadını ve adresini girmesini gerektiriyorsa, ancak telefon numarasının isteğe bağlı olduğuna karar verin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -48,13 +48,13 @@ Federe kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı talep t
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gerekli talep türlerinin bir koleksiyonunu belirtir.<br /><br /> Federe bir senaryoda, hizmetler gelen kimlik bilgileri gereksinimlerini belirtir. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, federe bir kimlik bilgisi içinde görünmesi beklenen gerekli ve isteğe bağlı talep türlerini belirtir.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gerekli talep türlerinin koleksiyonunu belirtir.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Federe bir senaryoda, hizmetler gelen kimlik bilgileri gereksinimlerini belirtir. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu gereksinim bir güvenlik ilkesinde kendini gösterir. İstemci federe bir hizmetten (örneğin, CardSpace) kimlik bilgileri istediğinde, gereksinimleri bir belirteç isteğine (RequestSecurityToken) koyar, böylece federe hizmet gereksinimleri karşılayan kimlik bilgilerini buna göre verebilir.  
+ Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu gereksinim bir güvenlik ilkesinde oluşturulur. İstemci Federasyon hizmetinden kimlik bilgilerini istediğinde (örneğin, CardSpace), Federasyon hizmetinin gereksinimleri karşılayan kimlik bilgilerini vermesi için gereksinimleri bir belirteç isteğine (RequestSecurityToken) koyar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma, bir güvenlik bağlama iki talep türü gereksinimleri ekler.  
+ Aşağıdaki yapılandırma, bir güvenlik bağlamaya iki talep türü gereksinimi ekler.  
   
 ```xml  
 <bindings>

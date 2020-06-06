@@ -11,19 +11,19 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154783"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<kimlik doğrulama modülleri için> Öğesi kaldırma (Ağ Ayarları)
-Uygulamadan bir kimlik doğrulama modüllerini kaldırır.  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>authenticationModules için \<remove> Öğesi (Ağ Ayarları)
+Bir kimlik doğrulama modülünü uygulamadan kaldırır.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<kimlik doğrulamaModülleri>**](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ Uygulamadan bir kimlik doğrulama modüllerini kaldırır.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|**Türü**|Kaldırılacak kimlik doğrulama modülünün adı.|  
+|**türüyle**|Kaldırılacak kimlik doğrulama modülünün adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[kimlik doğrulamaModülleri](authenticationmodules-element-network-settings.md)|Ağ isteklerini doğrulamak için kullanılan modülleri belirtir.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Ağ isteklerinin kimliğini doğrulamak için kullanılan modülleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `remove` yapılandırma dosyasında veya yapılandırma hiyerarşisinde daha yüksek bir düzeyde daha önce tanımlanan kimlik doğrulama modüllerini kaldırır.  
+ `remove`Öğesi yapılandırma hiyerarşisinde daha önce tanımlanan kimlik doğrulama modüllerini veya yapılandırma hiyerarşisinde daha yüksek bir düzeyi kaldırır.  
   
- Öznitelik için `type` değer geçerli bir sınıf adı olmalıdır.  
+ `type`Özniteliğin değeri geçerli bir sınıf adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kimlik doğrulama modüllerini kaldırır.  
+ Aşağıdaki örnek bir kimlik doğrulama modülünü kaldırır.  
   
 ```xml  
 <configuration>  

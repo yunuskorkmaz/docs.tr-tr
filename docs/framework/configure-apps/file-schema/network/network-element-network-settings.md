@@ -9,20 +9,20 @@ helpviewer_keywords:
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 ms.openlocfilehash: f7cfcc3b9d5a717c23175cd15aa48ae97c828e57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154822"
 ---
-# <a name="network-element-network-settings"></a>\<ağ> Öğesi (Ağ Ayarları)
+# <a name="network-element-network-settings"></a>\<network> Öğesi (Ağ Ayarları)
 Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçeneklerini yapılandırır.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailAyarlar>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ağ>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<network>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,14 +46,14 @@ Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçenekler
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`clientDomain`|SMTP posta sunucusuna bağlanmak için ilk SMTP protokolü isteğinde kullanılacak istemci etki alanı adını belirtir. Varsayılan değer, isteği gönderen yerel bilgisayarın yerel ana bilgisayar adıdır.|  
-|`defaultCredentials`|Varsayılan kullanıcı kimlik bilgilerinin SMTP işlemleri için SMTP posta sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `false`.|  
-|`enableSsl`|SSL'nin bir SMTP posta sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `false`.|  
-|`host`|SMTP işlemleri için kullanılacak SMTP posta sunucusunun ana bilgisayar adını belirtir. Bu öznitelik varsayılan değeri vardır.|  
-|`password`|Kimlik doğrulaması için Kullanılacak parolayı SMTP posta sunucusuna belirtir. Bu öznitelik varsayılan değeri vardır.|  
-|`port`|SMTP posta sunucusuna bağlanmak için kullanılacak bağlantı noktası numarasını belirtir. Varsayılan değer 25'tir.|  
-|`targetName`|SMTP işlemleri için genişletilmiş koruma kullanırken kimlik doğrulaması için kullanılacak Servis Sağlayıcı Adını (SPN) belirtir. Bu öznitelik varsayılan değeri vardır.|  
-|`userName`|SMTP posta sunucusunda kimlik doğrulaması için kullanılacak kullanıcı adını belirtir. Bu öznitelik varsayılan değeri vardır.|  
+|`clientDomain`|SMTP posta sunucusuna bağlanmak için ilk SMTP protokol isteğinde kullanılacak istemci etki alanı adını belirtir. Varsayılan değer, isteği gönderen yerel bilgisayarın localhost adıdır.|  
+|`defaultCredentials`|SMTP işlemleri için SMTP posta sunucusuna erişmek üzere varsayılan kullanıcı kimlik bilgilerinin kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `false`.|  
+|`enableSsl`|SMTP posta sunucusuna erişmek için SSL kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `false`.|  
+|`host`|SMTP işlemleri için kullanılacak SMTP posta sunucusunun ana bilgisayar adını belirtir. Bu özniteliğin varsayılan değeri yok.|  
+|`password`|SMTP posta sunucusunda kimlik doğrulaması için kullanılacak parolayı belirtir. Bu özniteliğin varsayılan değeri yok.|  
+|`port`|SMTP posta sunucusuna bağlanmak için kullanılacak bağlantı noktası numarasını belirtir. Varsayılan değer 25 ' tir.|  
+|`targetName`|SMTP işlemleri için genişletilmiş koruma kullanılırken kimlik doğrulaması için kullanılacak hizmet sağlayıcı adını (SPN) belirtir. Bu özniteliğin varsayılan değeri yok.|  
+|`userName`|SMTP posta sunucusunda kimlik doğrulaması için kullanılacak kullanıcı adını belirtir. Bu özniteliğin varsayılan değeri yok.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -62,34 +62,34 @@ Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçenekler
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<smtp> Elemanı (Ağ Ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
+|[\<smtp>Öğesi (ağ ayarları)](smtp-element-network-settings.md)|Basit Posta Aktarım Protokolü (SMTP) posta gönderme seçeneklerini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bazı SMTP sunucuları, kullanmadan önce kendinizi sunucuya doğrulamanızı gerektirir. Ana bilgisayarınızdaki varsayılan ağ kimlik bilgilerini kullanarak kimliğinizi `defaultCredentials` doğrulamak istiyorsanız, özniteliği `true`' ne göre ayarlayın. Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> özniteliğin `defaultCredentials` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir.  
+ Bazı SMTP sunucuları, kullanmadan önce sunucuda kimlik doğrulamasından geçmesini gerektirir. Ana bilgisayarınızdaki varsayılan ağ kimlik bilgilerini kullanarak kendiniz kimlik doğrulaması yapmak istiyorsanız, `defaultCredentials` özniteliğini olarak ayarlayın `true` . <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `defaultCredentials` .  
   
- SMTP sunucusuna kimlik doğrulamak için temel kimlik doğrulamayı (kullanıcı adı ve parola) da kullanabilirsiniz. Bu seçeneği kullanmak için, belirtilen SMTP sunucusu için geçerli bir kullanıcı adı ve parola belirtmeniz gerekir.  
+ SMTP sunucusunda kimlik doğrulaması yapmak için temel kimlik doğrulaması (bir Kullanıcı adı ve parola) de kullanabilirsiniz. Bu seçeneği kullanmak için, belirtilen SMTP sunucusu için geçerli bir Kullanıcı adı ve parola belirtmeniz gerekir.  
   
 > [!NOTE]
-> Temel kimlik doğrulaması `password` ve değerleri şifrelenmemiş sunucuya gönderir. `userName` Ağ trafiğini izleyen herkes kimlik bilgilerinizi görüntüleyebilir ve bunları sunucuya bağlanmak için kullanabilir. Kerberos veya NT LAN Yöneticisi (NTLM) gibi daha güvenli bir kimlik doğrulama mekanizması kullanmayı düşünmelisiniz. `defaultCredentials` Eğer, `true`sunucu bu protokolleri destekliyorsa, Kerberos veya NTLM kullanılır.  
+> Temel kimlik doğrulaması, `userName` ve `password` değerlerini sunucuya şifrelenmemiş şekilde gönderir. Ağ trafiğini izleyen herkes, kimlik bilgilerinizi görüntüleyip sunucuya bağlanmak için kullanabilir. Kerberos veya NT LAN Manager (NTLM) gibi daha güvenli bir kimlik doğrulama mekanizması kullanmayı göz önünde bulundurmanız gerekir. `defaultCredentials`İse `true` , sunucu bu protokolleri destekliyorsa Kerberos veya NTLM kullanılacaktır.  
   
- Temel kimlik doğrulama ve varsayılan ağ kimlik bilgileri seçenekleri birbirini dışlar; Bir kullanıcı `defaultCredentials` `true` adı ve parola yı ayarlar ve belirtirseniz, varsayılan ağ kimlik bilgisi kullanılır ve temel kimlik doğrulama verileri yoksayılır.  
+ Temel kimlik doğrulaması ve varsayılan ağ kimlik bilgileri seçenekleri birbirini dışlıyor; `defaultCredentials`olarak ayarlarsanız `true` ve bir Kullanıcı adı ve parola belirtirseniz, varsayılan ağ kimlik bilgileri kullanılır ve temel kimlik doğrulama verileri yok sayılır.  
   
- Temel kimlik doğrulaması için, bir `userName`de `password` posta sunucusuna bir kimlik doğrulaması belirtmelisiniz.  
+ Bir belirtirseniz temel kimlik doğrulaması için `userName` , `password` posta sunucusuna kendiniz kimlik doğrulaması yapmak için bir de belirtmeniz gerekir.  
   
- Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType> özniteliğin `userName` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir. Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType> özniteliğin `password` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir. Bir `password` öznitelik normalde güvenlik nedenleriyle yapılandırma dosyalarına girilmez.  
+ <xref:System.Net.Configuration.SmtpNetworkElement.UserName%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `userName` . <xref:System.Net.Configuration.SmtpNetworkElement.Password%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `password` . Bir `password` öznitelik normalde güvenlik nedenleriyle yapılandırma dosyalarına girilmemelidir.  
   
- Öznitelik, `clientDomain` ilk SMTP iletişim kuralı isteğinde kullanılan istemci etki alanı adını bir SMTP sunucusuna değiştirir. Öznitelik, `clientDomain` varsayılan olarak kullanılan yerel ana bilgisayar adı yerine yerel makinenin tam nitelikli etki alanı adına ayarlanabilir. Bu, SMTP protokol standartlarına daha fazla uyumluluk sağlar. Varsayılan değer, isteği gönderen yerel bilgisayarın yerel ana bilgisayar adıdır. Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType> özniteliğin `clientDomain` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir.  
+ `clientDomain`Özniteliği, Ilk SMTP protokol isteğinde kullanılan istemci etki alanı adını BIR SMTP sunucusuna değiştirir. `clientDomain`Özniteliği, varsayılan olarak kullanılan localhost adı yerine, yerel makinenin tam etki alanı adına ayarlanabilir. Bu, SMTP protokol standartları ile daha fazla uyumluluk sağlar. Varsayılan değer, isteği gönderen yerel bilgisayarın localhost adıdır. <xref:System.Net.Configuration.SmtpNetworkElement.ClientDomain%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `clientDomain` .  
   
- Öznitelik, `targetName` genişletilmiş koruma kullanılırken kimlik doğrulama için kullanılır. Varsayılan değer,\< \<ana bilgisayar> SMTP posta sunucusunun ana bilgisayarı olduğu "SMTPSVC/ ana bilgisayar>" biçimindedir. Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType> özniteliğin `targetName` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir.  
+ `targetName`Öznitelik, genişletilmiş koruma kullanılırken kimlik doğrulaması için kullanılır. Varsayılan değer, \<host> \<host> SMTP posta sunucusunun ana bilgisayar adı olan "smtpsvc/" biçimindedir. <xref:System.Net.Configuration.SmtpNetworkElement.TargetName%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `targetName` .  
   
- Öznitelik, SSL'nin `enableSsl` bir SMTP posta sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. Sınıf <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> yalnızca RFC 3207'de tanımlandığı gibi Taşıma Katmanı Güvenliği üzerinden Güvenli SMTP için SMTP Hizmet Uzantısını destekler. Bu modda, SMTP oturumu şifresiz bir kanalda başlar, ardından istemci tarafından sunucuya bir STARTTLS komutu verilir ve SSL kullanarak güvenli iletişime geçer. Daha fazla bilgi için Internet Engineering Task Force (IETF) tarafından yayınlanan RFC 3207'ye bakın.  
+ `enableSsl`Özniteliği, SSL 'nin BIR SMTP posta sunucusuna erişmek için kullanılıp kullanılmayacağını belirtir. <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>Sınıfı, RFC 3207 ' de tanımlanan Aktarım Katmanı Güvenliği üzerinden GÜVENLI SMTP IÇIN SMTP hizmeti uzantısını destekler. Bu modda, SMTP oturumu şifrelenmemiş bir kanalda başlar, sonra SSL kullanarak güvenli iletişime geçmek için istemci tarafından sunucuya bir STARTTLS komutu verilir. Daha fazla bilgi için bkz. Internet Mühendisliği görev gücü (IETF) tarafından yayımlanan RFC 3207.  
   
- Alternatif bağlantı yöntemi, herhangi bir protokol komutu gönderilmeden önce bir SSL oturumunun önceden oluşturulduğü yöntemdir. Bu bağlantı yöntemi bazen SMTPS olarak adlandırılır ve varsayılan olarak 465 bağlantı noktasını kullanır. SSL kullanan bu alternatif bağlantı yöntemi şu anda desteklenmez.  
+ Diğer bir bağlantı yöntemi, herhangi bir protokol komutu gönderilmeden önce bir SSL oturumunun kurulduğu yerdir. Bu bağlantı yöntemi bazen SMTPS olarak adlandırılır ve varsayılan olarak 465 numaralı bağlantı noktasını kullanır. SSL kullanan bu alternatif bağlantı yöntemi şu anda desteklenmiyor.  
   
- Özellik, <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> özniteliğin `enableSsl` geçerli değerini geçerli yapılandırma dosyalarından almak için kullanılabilir.  
+ <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından özniteliğin geçerli değerini almak için kullanılabilir `enableSsl` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametreleri belirtilmez.  
+ Aşağıdaki örnek, varsayılan ağ kimlik bilgilerini kullanarak e-posta göndermek için uygun SMTP parametrelerini belirtir.  
   
 ```xml  
 <configuration>  

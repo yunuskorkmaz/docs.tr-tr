@@ -1,5 +1,5 @@
 ---
-title: <source> için <listeners> öğesi
+title: <source> için <listeners> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153418"
 ---
-# <a name="listeners-element-for-source"></a>\<kaynak> için \<Element> dinleyici
-<xref:System.Diagnostics.TraceSource.Listeners%2A> Koleksiyondaki dinleyicileri ekler veya kaldırır. <xref:System.Diagnostics.TraceSource> Dinleyici, izleme çıktısını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
+# <a name="listeners-element-for-source"></a>\<source> için \<listeners> Öğesi
+İçin koleksiyonuna dinleyici ekler veya kaldırır <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> . Dinleyici, izleme çıkışını günlük, pencere veya metin dosyası gibi uygun bir hedefe yönlendirir.  
   
-[**\<yapılandırma>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynaklar>**](sources-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynak>**](source-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dinleyici ler>**  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,26 +43,26 @@ ms.locfileid: "79153418"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add-element-for-listeners-for-source.md)|`Listeners` Koleksiyona bir dinleyici ekler.|  
-|[\<>kaldırmak](remove-element-for-listeners-for-source.md)|Dinleyiciyi `Listeners` koleksiyondan kaldırır.|  
-|[\<açık>](clear-element-for-listeners-for-source.md)|Bir izleme `Listeners` kaynağı için koleksiyonu temizler.|  
+|[\<add>](add-element-for-listeners-for-source.md)|Koleksiyona bir dinleyici ekler `Listeners` .|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Koleksiyondan bir dinleyiciyi kaldırır `Listeners` .|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|`Listeners`İzleme kaynağı için koleksiyonu temizler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|`sources`|İletileri izlemeyi başlatan izleme kaynakları içerir.|  
-|`source`|İletilerin izlenmesini başlatan bir izleme kaynağı belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
+|`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kaynağa `<listeners>` konsol izleme dinleyicisi eklemek `mySource` ve varsayılan izleme dinleyicisini kaldırmak için öğenin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `<listeners>` bir konsol izleme dinleyicisini `mySource` kaynağa eklemek ve varsayılan izleme dinleyicisini kaldırmak için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: <clear><listeners> Için element<trace>
+title: <clear>İçin için öğesi <listeners><trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 ms.openlocfilehash: 905dad8274fede80f4809ff3c7a014049f9df450
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153548"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<izleme> \<için> \<dinleyiciler için açık> Element
-İzleme için `Listeners` koleksiyonu temizler.  
+# <a name="clear-element-for-listeners-for-trace"></a>\<clear>İçin için öğesi \<listeners>\<trace>
+`Listeners`İzleme için koleksiyonu temizler.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](trace-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dinleyici ler>**](listeners-element-for-trace.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<açık>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,22 +43,22 @@ ms.locfileid: "79153548"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|`trace`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.|  
-|`listeners`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıktısını uygun bir hedefe yönlendirir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`trace`|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe `<clear>` izleme için `Listeners` koleksiyondaki tüm dinleyicileri kaldırır. Koleksiyonda başka `<clear>` etkin dinleyici `<add>` olmadığından emin olmak için öğeyi kullanmadan önce öğeyi kullanabilirsiniz.  
+ `<clear>`Öğesi, `Listeners` izleme için koleksiyondaki tüm dinleyicileri kaldırır. `<clear>` `<add>` Koleksiyonda başka hiçbir etkin dinleyici bulunmadığından emin olmak için öğesini kullanmadan önce öğesini kullanabilirsiniz.  
   
- Toplamayı, `Listeners` <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> özellikteki yöntemi arayarak programlı olarak`System.Diagnostics.Trace.Listeners.Clear()`temizleyebilirsiniz ( ).  
+ `Listeners` <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Özelliği () üzerinde yöntemini çağırarak koleksiyonu programlı bir şekilde temizleyebilirsiniz <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> `System.Diagnostics.Trace.Listeners.Clear()` .  
   
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 > [!NOTE]
-> `Listeners` Öğe, `<clear>` , <xref:System.Diagnostics.DefaultTraceListener> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemleri davranışını değiştirerek, koleksiyondan kaldırır. Bir `Assert` veya `Fail` yöntemin çağrılmak normalde bir ileti kutusunun görüntülenmesine neden olabilir. Ancak, `Listeners` koleksiyonda yoksa ileti <xref:System.Diagnostics.DefaultTraceListener> kutusu görüntülenmez.  
+> Öğesi,,, `<clear>` <xref:System.Diagnostics.DefaultTraceListener> `Listeners` <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> ve yöntemlerinin davranışını değiştirerek koleksiyonundan kaldırır <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . Bir `Assert` veya `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntüsüne neden olur. Ancak, koleksiyonda değilse ileti kutusu görüntülenmez <xref:System.Diagnostics.DefaultTraceListener> `Listeners` .  
   
 ## <a name="example"></a>Örnek  
- `<clear>` Aşağıdaki örnek, dinleyiciyi `<add>` `console` izleme için koleksiyona eklemek için öğeyi kullanmadan önce öğenin nasıl kullanılacağını `Listeners` gösterir.  
+ Aşağıdaki örnek, öğesini `<clear>` `<add>` `console` izleme için koleksiyona eklemek üzere öğesini kullanmadan önce öğesinin nasıl kullanılacağını gösterir `Listeners` .  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ ms.locfileid: "79153548"
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
-- [\<>kaldırmak](remove-element-for-listeners-for-trace.md)
+- [\<remove>](remove-element-for-listeners-for-trace.md)
 - [İz Dinleyicileri](../../../debug-trace-profile/trace-listeners.md)

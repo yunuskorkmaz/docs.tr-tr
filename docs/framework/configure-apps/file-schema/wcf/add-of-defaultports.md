@@ -3,23 +3,23 @@ title: <add> / <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
 ms.openlocfilehash: f5de2aa897a3bc37d08932451a2c7b94bc603b9e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400649"
 ---
-# <a name="add-of-defaultports"></a>\<\<defaultPort > ekleyin >
+# <a name="add-of-defaultports"></a>\<add> / \<defaultPorts>
 İstemci uygulamanın dinlediği varsayılan bir iletişim uç noktası.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<useRequestHeadersForMetadataAddress >** ](userequestheadersformetadataaddress.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultPorts >** ](defaultports.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Ekle**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<useRequestHeadersForMetadataAddress>**](userequestheadersformetadataaddress.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultPorts>**](defaultports.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,7 +39,7 @@ ms.locfileid: "70400649"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|bağlantı noktası|Varsayılan iletişim bağlantı noktası numarasını belirten bir tamsayı|  
+|port|Varsayılan iletişim bağlantı noktası numarasını belirten bir tamsayı|  
 |düzen|İletişim bağlantı noktası ile ilişkili protokol ayarları grubunu belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -49,7 +49,7 @@ ms.locfileid: "70400649"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<defaultPorts >](defaultports.md)|Varsayılan bağlantı noktalarının, istemci uygulamanın dinlediği varsayılan iletişim uç noktalarını listelemesi.|  
+|[\<defaultPorts>](defaultports.md)|Varsayılan bağlantı noktalarının, istemci uygulamanın dinlediği varsayılan iletişim uç noktalarını listelemesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81646025"
 ---
 # <a name="specifying-an-assemblys-location"></a>Derlemenin Konumunu Belirtme
-Bir derlemenin konumunu belirtmenin iki yolu vardır:  
+Bir derlemenin konumunu belirtmek için iki yol vardır:  
   
-- [ \<CodeBase>](./file-schema/runtime/codebase-element.md) öğesini kullanarak.  
+- Öğesini kullanarak [\<codeBase>](./file-schema/runtime/codebase-element.md) .  
   
-- [ \<Sondalama>](./file-schema/runtime/probing-element.md) öğesini kullanarak.  
+- Öğesini kullanarak [\<probing>](./file-schema/runtime/probing-element.md) .  
   
- Montaj konumlarını belirtmek veya derlemeler için sondalamak için ortak dil çalışma zamanı için konumları belirtmek için [.NET Framework Configuration Tool'u (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) de kullanabilirsiniz.  
+ Derleme konumlarını belirtmek için [.NET Framework yapılandırma aracını (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) veya derlemeler için ortak dil çalışma zamanı için konum belirlemek üzere de kullanabilirsiniz.  
   
-## <a name="using-the-codebase-element"></a>CodeBase \<> Öğesi'ni kullanma  
- ** \<CodeBase>** öğesini yalnızca makine yapılandırmasında veya derleme sürümünü yeniden yönlendiren yayımcı ilke dosyalarında kullanabilirsiniz. Çalışma zamanı hangi derleme sürümünün kullanılacağını belirlediğinde, sürümü belirleyen dosyadan kod temel ayarı uygular. Kod tabanı belirtilmezse, montaj için çalışma süresi normal şekilde sondalanır. Ayrıntılar [için, Çalışma Zamanı Derlemeleri Nasıl Bulur'](../deployment/how-the-runtime-locates-assemblies.md)a bakın.  
+## <a name="using-the-codebase-element"></a>Öğesini kullanma \<codeBase>  
+ **\<codeBase>** Öğesini, derleme sürümünü de yeniden yönlendiren makine yapılandırması veya yayımcı ilkesi dosyaları içinde kullanabilirsiniz. Çalışma zamanı hangi derleme sürümünün kullanılacağını belirlediğinde, sürümü belirleyen dosyadan kod tabanı ayarını uygular. Hiçbir kod tabanı belirtilmemişse, çalışma zamanı derlemeyi normal şekilde araştırarak. Ayrıntılar için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
- Aşağıdaki örnek, bir derlemenin konumunu nasıl belirtini gösterilmektedir.  
+ Aşağıdaki örnek, bir derlemenin konumunun nasıl ekleneceğini gösterir.  
   
 ```xml  
 <configuration>  
@@ -43,15 +43,15 @@ Bir derlemenin konumunu belirtmenin iki yolu vardır:
 </configuration>  
 ```  
   
- **Sürüm** özniteliği tüm güçlü adlandırılmış derlemeler için gereklidir, ancak güçlü adlandırılmış olmayan derlemeler için atlanmalıdır. CodeBase>öğesi **href** özniteliğini gerektirir. ** \<** ** \<CodeBase>** öğesinde sürüm aralıklarını belirtemezsiniz.  
+ **Sürüm** özniteliği, tanımlayıcı adlı tüm derlemeler için gereklidir, ancak tanımlayıcı olarak adlandırılmış olmayan derlemeler için atlanmalıdır. **\<codeBase>** Öğesi **href** özniteliğini gerektiriyor. Öğesinde sürüm aralıkları belirtemezsiniz **\<codeBase>** .  
   
 > [!NOTE]
-> Güçlü adlandırılmış olmayan bir derleme için kod temel ipucu sağlıyorsanız, ipucunun uygulama tabanını veya uygulama temel dizininin bir alt dizinini işaret etmesi gerekir.  
+> Güçlü adlandırılmış olmayan bir derleme için bir kod temel ipucu belirtirseniz, ipucu uygulama tabanına veya uygulama temel dizininin bir alt dizinine işaret etmelidir.  
   
-## <a name="using-the-probing-element"></a>Sondalama> Öğesini \<Kullanma  
- Çalışma zamanı, sondalama yaparak kod tabanı olmayan derlemeleri bulur. Sondalama hakkında daha fazla bilgi [için, Çalışma Zamanı Derlemeleri Nasıl Bulur'a](../deployment/how-the-runtime-locates-assemblies.md)bakın.  
+## <a name="using-the-probing-element"></a>Öğesini kullanma \<probing>  
+ Çalışma zamanı, yoklama ile kod tabanı olmayan derlemeler bulur. Algılama hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md).  
   
- Sondalama>öğesini, bir derlemeyi konumalırken çalışma zamanının araması gereken alt dizinleri belirtmek için kullanabilirsiniz. [ \<](./file-schema/runtime/probing-element.md) Aşağıdaki örnek, çalışma zamanının araması gereken dizinlerin nasıl belirtilen şekilde gösteriş yapılacağını gösterir.  
+ [\<probing>](./file-schema/runtime/probing-element.md)Bir derlemeyi bulurken çalışma zamanının aranması gereken alt dizinleri belirtmek için uygulama yapılandırma dosyasındaki öğesini kullanabilirsiniz. Aşağıdaki örnek, çalışma zamanının arama gereken dizinlerin nasıl gösterileceğini gösterir.  
   
 ```xml  
 <configuration>  
@@ -63,7 +63,7 @@ Bir derlemenin konumunu belirtmenin iki yolu vardır:
 </configuration>  
 ```  
   
- **privatePath** özniteliği, çalışma zamanının derlemeleri araması gereken dizinleri içerir. Uygulama C:\Program Files\MyApp'ta bulunuyorsa, çalışma zamanı C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin ve C:\Program Files\MyApp\Bin3'te kod tabanı belirtmeyan derlemeleri arar. **privatePath'te** belirtilen dizinler, uygulama temel dizininin alt dizinleri olmalıdır.  
+ **PrivatePath** özniteliği, çalışma zamanının derlemeler için arama gereken dizinleri içerir. Uygulama C:\Program Files\MyApp konumunda bulunuyorsa, çalışma zamanı C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin ve C:\Program Files\MyApp\Bin3. ' de bir kod tabanı belirtmeyen derlemeler arayacaktır **PrivatePath** içinde belirtilen dizinler, uygulama temel dizininin alt dizinleri olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

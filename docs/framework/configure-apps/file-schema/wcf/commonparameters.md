@@ -3,22 +3,22 @@ title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: 73d8549f68e8ca77115619431c857c4a2aac3fdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153028"
 ---
-# <a name="commonparameters"></a>\<yaygın Parametreler>
-Birden çok hizmet arasında genel olarak kullanılan parametre koleksiyonunu temsil eder. Bu koleksiyon genellikle dayanıklı hizmetler tarafından paylaşılabilecek veritabanı bağlantı dizesini içerir.  
+# \<commonParameters>
+Birden çok hizmet arasında genel olarak kullanılan parametrelerin koleksiyonunu temsil eder. Bu koleksiyon, genellikle dayanıklı hizmetler tarafından paylaşılabilen veritabanı bağlantı dizesini içerir.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<davranışlar>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<davranış>**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<iş akışıRuntime>**](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<commonParametreler>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowRuntime>**](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<commonParameters>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,19 +41,19 @@ Birden çok hizmet arasında genel olarak kullanılan parametre koleksiyonunu te
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add-of-commonparameters.md)|Koleksiyona hizmetler tarafından kullanılan ortak parametrelerin ad değeri çiftini ekler.|  
+|[\<add>](add-of-commonparameters.md)|, Hizmet tarafından koleksiyona kullanılan ortak parametrelerin ad-değer çiftini ekler.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<iş akışıRuntime>](workflowruntime.md)|İş akışı tabanlı Windows <xref:System.Workflow.Runtime.WorkflowRuntime> Communication Foundation (WCF) hizmetlerini barındırmak için ayarları belirtir.|  
+|[\<workflowRuntime>](workflowruntime.md)|<xref:System.Workflow.Runtime.WorkflowRuntime>İş akışı tabanlı Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir örneğinin ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `<commonParameters>` örneğin `ConnectionString` . <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>  
+ `<commonParameters>`Öğesi, ' yi kullanırken, birden çok hizmet arasında genel olarak kullanılan tüm parametreleri tanımlar `ConnectionString` <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService> .  
   
 > [!NOTE]
-> SQL Tracking `ConnectionString` `<commonParameters>` hizmeti, bölümde belirtilmişse değeri sürekli olarak kullanmaz. `StateMachineWorkflowInstance.StateHistory` Özelliğigeri almak gibi bazı işlemleri başarısız olabilir. Bu geçici çözüm için, aşağıdaki örnekte belirtildiği gibi, izleme sağlayıcısı için yapılandırma bölümünde `ConnectionString` özniteliği belirtin.  
+> SQL Izleme hizmeti `ConnectionString` , bölümünde belirtilmişse değeri sürekli olarak kullanmaz `<commonParameters>` . Özelliği alma gibi bazı işlemler `StateMachineWorkflowInstance.StateHistory` başarısız olabilir. Bu sorunu geçici olarak belirlemek için, `ConnectionString` Aşağıdaki örnekte gösterildiği gibi, izleme sağlayıcısına ait yapılandırma bölümünde özniteliğini belirtin.  
 
 ```xml  
 <add
@@ -61,7 +61,7 @@ type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runti
 ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
 ```  
   
- Aşağıdaki örnekte gösterildiği gibi <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> `EnableRetries` parametreyi kullanarak işlemlerini yeniden denemelerini sağlayabilirsiniz:  
+ Ve gibi, kalıcılık depolarına iş toplu işleri uygulayan hizmetler için <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> , `EnableRetries` Aşağıdaki örnekte gösterildiği gibi, parametresini kullanarak işlemini yeniden denemesini sağlayabilirsiniz:  
   
 ```xml  
 <workflowRuntime name="SampleApplication"
@@ -80,9 +80,9 @@ ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated
 </workflowRuntime>
 ```  
   
- Parametrenin `EnableRetries` genel düzeyde *(Ortak Parametreler* bölümünde gösterildiği gibi) veya destekleyen `EnableRetries` tek tek hizmetler için *(Hizmetler* bölümünde gösterildiği gibi) ayarlanabildiği ne dikkat edin.  
+ `EnableRetries`Parametrenin genel düzeyde ( *CommonParameters* bölümünde gösterildiği gibi) ya da tarafından desteklenen bireysel hizmetlerin `EnableRetries` ( *Hizmetler* bölümünde gösterildiği gibi) ayarlandığına dikkat edin.  
   
- Aşağıdaki örnek kod, ortak parametrelerin programlı olarak nasıl değiştirilebildiğini gösterir:
+ Aşağıdaki örnek kod, programlama yoluyla ortak parametrelerin nasıl değiştirileceğini göstermektedir:
   
 ```csharp  
 Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
@@ -92,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Bir Windows İş Akışı Temeli ana bilgisayarı <xref:System.Workflow.Runtime.WorkflowRuntime> uygulamasının nesnesinin davranışını denetlemek için yapılandırma dosyası kullanma hakkında daha fazla bilgi için [Bkz. İş Akışı Yapılandırma Dosyaları.](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
+ Bir Windows Workflow Foundation ana bilgisayar uygulamasının bir nesnesinin davranışını denetlemek için yapılandırma dosyası kullanma hakkında daha fazla bilgi için <xref:System.Workflow.Runtime.WorkflowRuntime> bkz. [Iş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Örnek  
   
@@ -112,5 +112,5 @@ config.Save();
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [İş Akışı Yapılandırma Dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<>ekleyin](add-of-commonparameters.md)
+- [İş akışı yapılandırma dosyaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<add>](add-of-commonparameters.md)

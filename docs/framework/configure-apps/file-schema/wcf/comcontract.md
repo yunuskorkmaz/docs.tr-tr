@@ -3,19 +3,19 @@ title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850032"
 ---
-# <a name="comcontract"></a>\<comContract >
+# \<comContract>
 Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -51,10 +51,10 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|contract|Sözleşme türünü içeren bir dize.|  
+|Sözleşmesi|Sözleşme türünü içeren bir dize.|  
 |name|Sözleşme adını içeren bir dize.|  
 |ad alanı|Sözleşme ad alanını içeren bir dize.|  
-|requiresSession|Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri. Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar. Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur. Bu özellik ise `false`ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.|  
+|requiresSession|Sözleşmenin yalnızca oturumsuz bağlamalarda kullanılıp kullanılamayacağını belirten bir Boole değeri. Hizmet başlatıldığında, tümleştirme çalışma zamanı bu ayarın kullanılacak bağlama türüyle tutarlı olmasını sağlar. Sözleşme için bir veya daha fazla bağlama çakışırsa bir özel durum oluşturulur. Bu özellik ise `false` ve tek yönlü bir kanal kullanımda ise ve herhangi bir [out] parametresi varsa, bir özel durum da oluşturulur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -68,10 +68,10 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|comContracts|`comContract` Öğe koleksiyonunu içerir.|  
+|comContracts|Öğe koleksiyonunu içerir `comContract` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı destekleyici com arabiriminden türetilir. Ancak, öğesini ve yapılandırma dosyasındaki `comContracts` `comContract` öğesini kullanarak alternatifleri belirtebilirsiniz. Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.  
+ COM+ tümleştirme hizmeti sözleşmeleri Şu anda `http://tempuri.org` ad alanıyla kısıtlıdır ve anlaşma adı DESTEKLEYICI com arabiriminden türetilir. Ancak, öğesini ve `comContracts` `comContract` yapılandırma dosyasındaki öğesini kullanarak alternatifleri belirtebilirsiniz. Örneğin, eklenecek ad alanı, sözleşme adı ve Kullanıcı tanımlı türleri, ayrıca bir hizmet sözleşmesinin diğer ayarlarını belirtmek için aşağıdaki yapılandırmayı kullanabilirsiniz.  
   
 ```xml  
 <comContracts>
@@ -95,5 +95,5 @@ Bir COM+ tümleştirme hizmeti sözleşmesini belirtir.
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [COM+ uygulamalarıyla tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

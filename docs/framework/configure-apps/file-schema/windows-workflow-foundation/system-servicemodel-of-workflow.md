@@ -1,20 +1,20 @@
 ---
-title: <system.serviceModel> iş akışı
+title: <System. serviceModel> iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151955"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel iş akışı>
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>iş akışı
 Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;**\<Sistem. ServiceModel>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -98,17 +98,17 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- None  
+ Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışlar>](behaviors-of-workflow.md)|Bu bölümde **serviceBehaviors** koleksiyonu tanımlanır.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi benzersiz **ad** özniteliği ile tanımlanır.|  
-|[\<izleme>](tracking.md)|İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve yapılandırmasında daha fazla bilgi için [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md) [bkz.](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)|  
+|[\<behaviors>](behaviors-of-workflow.md)|Bu bölüm **Servicedavranışlar** koleksiyonunu tanımlar.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi, benzersiz **ad** özniteliği tarafından tanımlanır.|  
+|[\<tracking>](tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<yapılandırma>](../configuration-element.md)|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|
+|[\<configuration>](../configuration-element.md)|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|

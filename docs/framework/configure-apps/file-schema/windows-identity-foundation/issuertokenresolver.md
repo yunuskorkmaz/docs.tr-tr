@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
 ms.openlocfilehash: 67d7e0aa5b6b05bfe8b17a1b1efebb1fbddbb0eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152677"
 ---
-# <a name="issuertokenresolver"></a>\<verenTokenResolver>
-Belirteç işleyicisi koleksiyonunda işleyiciler tarafından kullanılan veren belirteç çözümleyicisini kaydeder. Veren belirteç çözümleyici, gelen belirteçler ve iletiler üzerinde imza belirteci çözmek için kullanılır.  
+# \<issuerTokenResolver>
+Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren belirteç çözümleyicisini kaydeder. Veren belirteç çözümleyici, gelen belirteçlerde ve iletilerde imzalama belirtecini çözümlemek için kullanılır.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<verenTokenResolver>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerTokenResolver>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,27 +42,27 @@ Belirteç işleyicisi koleksiyonunda işleyiciler tarafından kullanılan veren 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|type|Veren belirteç çözücünün türünü belirtir. <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Sınıf veya <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıftan türemiş bir tür olmalıdır. Gereklidir.|  
+|tür|Verenin belirteç Çözümleyicisinin türünü belirtir. Sınıf <xref:System.IdentityModel.Tokens.IssuerTokenResolver> ya da sınıftan türetilmiş bir tür olmalıdır <xref:System.IdentityModel.Tokens.IssuerTokenResolver> . Gereklidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<güvenlikTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Güvenlik belirteç işleyicileri koleksiyonu için yapılandırma sağlar.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Bir güvenlik belirteci işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Veren belirteç çözümleyici, gelen belirteçler ve iletiler üzerinde imza belirteci çözmek için kullanılır. İmzayı denetlemek için kullanılan şifreleme materyalini almak için kullanılır. Özniteliği belirtmeniz `type` gerekir. Belirtilen tür, <xref:System.IdentityModel.Tokens.IssuerTokenResolver> <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıftan türeyen özel bir tür olabilir.  
+ Veren belirteç çözümleyici, gelen belirteçlerde ve iletilerde imzalama belirtecini çözümlemek için kullanılır. İmzayı denetlemek için kullanılan şifreleme malzemesini almak için kullanılır. Özniteliğini belirtmeniz gerekir `type` . Belirtilen tür ya da <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıfından türetilen özel bir tür olabilir <xref:System.IdentityModel.Tokens.IssuerTokenResolver> .  
   
- Bazı belirteç işleyicileri, yapılandırmada veren belirteç çözümleyici ayarlarını belirtmenize olanak tanır. Tek tek belirteç işleyicileri ayarları, güvenlik belirteci işleyicisi koleksiyonunda belirtilenleri geçersiz kılar.  
+ Bazı belirteç işleyicileri yapılandırmada veren belirteç çözümleyici ayarlarını belirtmenize olanak tanır. Bağımsız belirteç işleyicilerindeki ayarlar, güvenlik belirteci işleyici koleksiyonunda belirtilen ayarları geçersiz kılar.  
   
 > [!NOTE]
-> Kimlik Yapılandırma `<issuerTokenResolver>` [ \<>](identityconfiguration.md) öğesinin alt öğesi olarak öğebelirtilmesi küçümsenmiştir, ancak yine de geriye dönük uyumluluk için desteklenir. Öğedeki `<securityTokenHandlerConfiguration>` `<identityConfiguration>` ayarlar, öğedekiayarları geçersiz kılar.  
+> Öğenin `<issuerTokenResolver>` bir alt öğesi olarak belirtilmesi [\<identityConfiguration>](identityconfiguration.md) kullanım dışı bırakılmıştır, ancak yine de geriye dönük uyumluluk için desteklenir. `<securityTokenHandlerConfiguration>`Öğesindeki ayarlar, öğesinde olanları geçersiz kılar `<identityConfiguration>` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML, 'den <xref:System.IdentityModel.Tokens.IssuerTokenResolver>türeyen özel bir sınıfa dayanan bir veren belirteç çözümleyicisi için yapılandırmayı gösterir. Belirteç çözümleyicisi, sınıf için tanımlanan özel bir yapılandırma öğesinden`<AddAudienceKeyPair>`( ) başharfe basılan hedef kitle anahtarı çiftlerinden oluşan bir sözlük tutar. Sınıf, bu <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> öğeyi işlemek için yöntemi geçersiz kılar. Geçersiz kılma aşağıdaki örnekte gösterilmiştir; ancak, adlandırdığı yöntemler kısalık için gösterilmez. Tam örnek için, `CustomToken` örneğe bakın.  
+ Aşağıdaki XML, ' den türetilen özel bir sınıfa dayalı bir veren belirteç Çözümleyicisi için yapılandırmayı gösterir <xref:System.IdentityModel.Tokens.IssuerTokenResolver> . Belirteç çözümleyici, sınıf için tanımlanan özel bir yapılandırma öğesinden () başlatılan bir hedef kitle anahtar çiftleri sözlüğü içerir `<AddAudienceKeyPair>` . Sınıfı, <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> Bu öğeyi işlemek için yöntemini geçersiz kılar. Geçersiz kılma aşağıdaki örnekte gösterilmiştir; ancak çağrı yaptığı Yöntemler breçekimi için gösterilmez. Tüm örnek için `CustomToken` örneğe bakın.  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

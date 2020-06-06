@@ -3,22 +3,22 @@ title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
 ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399409"
 ---
-# <a name="transactedbatching"></a>\<Transactedtoplu işlem >
+# \<transactedBatching>
 
 İşlem toplu işleminin alma işlemleri için desteklenip desteklenmediğini belirtir.
 
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Endpointdavranışlar >** ](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Transactedtoplu işlem >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpointBehaviors>**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transactedBatching>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,7 +34,7 @@ ms.locfileid: "70399409"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`maxBatchSize`|Tek bir işlemde birlikte toplu olarak oluşturulabilecek en fazla alma işlemi sayısını belirten bir tamsayı. Varsayılan değer 0 ' dır.|
+|`maxBatchSize`|Tek bir işlemde birlikte toplu olarak oluşturulabilecek en fazla alma işlemi sayısını belirten bir tamsayı. Varsayılan değer, 0'dur.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -44,7 +44,7 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 

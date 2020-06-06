@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913040"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
@@ -24,11 +24,11 @@ Otomatik bağlama yeniden yönlendirmeleri, .NET Framework 4.5.1 ve sonraki sür
 
 Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümü varsa, projenin özellik sayfalarındaki otomatik olarak oluşturulan bağlamayı kolayca devre dışı bırakabilirsiniz.
 
-1. Projeye sağ **Çözüm Gezgini** seçip **özellikleri**.
+1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler**' i seçin.
 
 2. **Uygulama** sayfasında **bağlama yeniden yönlendirmeleri otomatik oluştur** seçeneğinin işaretini kaldırın.
 
-3. Değişikliği kaydetmek için **CTRL**+**S** tuşuna basın.
+3. **Ctrl** + Değişikliği kaydetmek için CTRL**S** tuşuna basın.
 
 ### <a name="disable-manually-in-the-project-file"></a>Proje dosyasında el ile devre dışı bırak
 
@@ -43,7 +43,7 @@ Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümü varsa, projenin özel
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-3. Şu `true` şekilde`false`değiştirin:
+3. Şu `true` şekilde değiştirin `false` :
 
    ```xml
    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -58,7 +58,7 @@ Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümü varsa, projenin özel
    - Visual Studio 'da **Çözüm Gezgini**' de projeyi seçin ve sonra kısayol menüsünden **klasörü dosya Gezgini 'nde aç** ' ı seçin. Dosya Gezgini 'nde, proje (. csproj veya. vbproj) dosyasını bulun ve Not defteri 'nde açın.
    - Visual Studio 'da, **Çözüm Gezgini**, projeye sağ tıklayın ve **Projeyi Kaldır**' ı seçin. Kaldırılmış projeyi yeniden sağ tıklatın ve ardından **Düzenle [ProjectName. csproj]** öğesini seçin.
 
-2. Aşağıdaki öğeyi ilk yapılandırma özellik grubuna ekleyin ( \<PropertyGroup > etiketinin altında):
+2. Aşağıdaki öğeyi ilk yapılandırma özellik grubuna ekleyin ( \<PropertyGroup> etiketinin altına):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -91,7 +91,7 @@ Bir **Web. config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 1. Visual Studio'da uygulamayı derleyin ve yapı uyarılarını denetleyin.
 
-   ![Derleme başvurusu çakışmaları Için derleme uyarısı](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Derleme başvurusu çakışmaları için derleme uyarısı](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. Derleme bağlama çakışmaları varsa bir uyarı görüntülenir. Uyarıya çift tıklayın veya uyarıyı seçin ve **ENTER**tuşuna basın.
 
@@ -101,5 +101,5 @@ Bir **Web. config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<bindingRedirect > öğesi](./file-schema/runtime/bindingredirect-element.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](redirect-assembly-versions.md)
+- [\<bindingRedirect>Dosyalarında](./file-schema/runtime/bindingredirect-element.md)
+- [Derleme Sürümlerini Yönlendirme](redirect-assembly-versions.md)

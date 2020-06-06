@@ -3,21 +3,21 @@ title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
 ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855303"
 ---
-# <a name="exposedmethod"></a>\<exposedMethod >
+# \<exposedMethod>
 Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya çıkarılan bir COM+ yöntemini temsil eder.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<exposedMethods >** ](exposedmethods.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<exposedMethod >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContract>**](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<exposedMethods>**](exposedmethods.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<exposedMethod>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -47,16 +47,16 @@ Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya ç�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<exposedMethods >](exposedmethods.md)|Bir [ \<ExposedMethod >](exposedmethod.md) öğeleri koleksiyonu.|  
+|[\<exposedMethods>](exposedmethods.md)|[\<exposedMethod>](exposedmethod.md)Öğelerin koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  COM+ tümleştirme yapılandırma aracı (ComSvcConfig. exe), bir COM arabiriminden oluşturulan hizmet sözleşmesinde görünecek belirli yöntemler eklemek için kullanılabilir.  
   
- Örneğin, ' `IFinances` `ItemOrders`de com arabiriminden üç adlandırılmış yöntemi eklemek için aşağıdaki komutu kullanabilirsiniz. Finans bileşeni, oluşturulan hizmet sözleşmesine.  
+ Örneğin, ' de com arabiriminden üç adlandırılmış yöntemi eklemek için aşağıdaki komutu kullanabilirsiniz `IFinances` `ItemOrders` . Finans bileşeni, oluşturulan hizmet sözleşmesine.  
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- ComSvcConfig. exe dosyasını da çalıştırdığınızda, daha önce bahsedilen yöntemleri [ \<ExposedMethod >](exposedmethod.md) öğeleri olarak listeleyerek aşağıdaki hizmet sözleşmesini oluşturur.  
+ ComSvcConfig. exe dosyasını da çalıştırdığınızda, daha önce bahsedilen yöntemleri öğe olarak listeleyerek aşağıdaki hizmet sözleşmesini oluşturur [\<exposedMethod>](exposedmethod.md) .  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -68,12 +68,12 @@ Bir COM+ bileşenindeki arabirim bir Web hizmeti olarak sunulduğunda ortaya ç�
 </comContract>
 ```  
   
- Hizmet başlatma sırasında çalışma zamanı, yalnızca [ \<ExposedMethod >](exposedmethod.md) öğeleri listesine dahil edilen yöntemleri inceleyerek ve ekleyerek bir hizmet sözleşmesi oluşturmaya çalışır. Hizmet sözleşmesine dahil olmayan her arabirim yöntemi için bir izleme oluşturulur.  
+ Hizmet başlatma sırasında çalışma zamanı, yalnızca öğe listesine dahil olan yöntemleri inceleyerek ve ekleyerek bir hizmet sözleşmesi oluşturmaya çalışır [\<exposedMethod>](exposedmethod.md) . Hizmet sözleşmesine dahil olmayan her arabirim yöntemi için bir izleme oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
 - [\<comContracts>](comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [COM+ uygulamalarıyla tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

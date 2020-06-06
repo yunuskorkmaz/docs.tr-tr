@@ -3,61 +3,61 @@ title: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180992"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
-.NET Native uygulamaların lansman süresini önemli ölçüde artırır. Bu gelişme özellikle taşınabilir, düşük güçlü cihazlarda ve karmaşık uygulamalarda fark edilir. Bu konu, bu başlangıç geliştirmeölçmek için gerekli temel enstrümantasyon ile başlamak yardımcı olur.  
+.NET Native uygulamaların başlatma süresini önemli ölçüde geliştirir. Bu geliştirme, özellikle taşınabilir, düşük güç destekli cihazlarda ve karmaşık uygulamalarla görülür. Bu konu, bu başlangıç geliştirmesini ölçmek için gereken temel araçları kullanmaya başlamanıza yardımcı olur.  
   
- Performans araştırmalarını kolaylaştırmak için .NET Framework ve Windows, uygulamanızın olaylar olduğunda araç kullanımını bildirmesine olanak tanıyan Windows için Olay İzleme (ETW) adlı bir olay çerçevesi kullanır. Daha sonra ETW olaylarını kolayca görüntülemek ve analiz etmek için PerfView adlı bir araç kullanabilirsiniz. Bu konu nasıl açıklanıyor:  
+ .NET Framework ve Windows, performans araştırmamasını kolaylaştırmak için, uygulamanızın olaylar gerçekleştiğinde araçları bilgilendirmek için olay Izleme (ETW) adlı bir olay çerçevesi kullanır. Daha sonra, ETW olaylarını kolayca görüntülemek ve analiz etmek için PerfView adlı bir araç kullanabilirsiniz. Bu konuda aşağıdakiler açıklanmaktadır:  
   
-- Olayları <xref:System.Diagnostics.Tracing.EventSource> yayıltmak için sınıfı kullanın.  
+- <xref:System.Diagnostics.Tracing.EventSource>Olayları yayma için sınıfını kullanın.  
   
-- Bu olayları toplamak için PerfView'i kullanın.  
+- Bu olayları toplamak için PerfView kullanın.  
   
-- Bu olayları görüntülemek için PerfView'i kullanın.  
+- Bu olayları görüntülemek için PerfView kullanın.  
   
-## <a name="using-eventsource-to-emit-events"></a>Olayları yayıltmak için EventSource'u kullanma  
- <xref:System.Diagnostics.Tracing.EventSource>özel bir olay sağlayıcısı oluşturmak için hangi bir taban sınıf sağlar. Genellikle, kendi olay yöntemleri <xref:System.Diagnostics.Tracing.EventSource> ile `Write*` bir alt sınıf oluşturmak ve yöntemleri sarın. Bir singleton deseni genellikle <xref:System.Diagnostics.Tracing.EventSource>her biri için kullanılır.  
+## <a name="using-eventsource-to-emit-events"></a>Olayları yayma için EventSource kullanma  
+ <xref:System.Diagnostics.Tracing.EventSource>Özel olay sağlayıcısı oluşturmak için temel bir sınıf sağlar. Genellikle, bir alt sınıfı oluşturur <xref:System.Diagnostics.Tracing.EventSource> ve `Write*` yöntemleri kendi olay yöntemleriyle sarırsınız. Tek bir model genellikle her biri için kullanılır <xref:System.Diagnostics.Tracing.EventSource> .  
   
  Örneğin, aşağıdaki örnekteki sınıf iki performans özelliğini ölçmek için kullanılabilir:  
   
-- Sınıf oluşturucusu `App` çağrılana kadar olan zaman.  
+- `App`Sınıf oluşturucusu çağrılana kadar geçen süre.  
   
-- `MainPage` Yapıcı nın çağrıldaki zamanı.  
+- `MainPage`Oluşturucunun çağrılana kadar geçen süre.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
- Burada dikkat ived etmek için birkaç şey vardır. İlk olarak, bir singleton `AppEventSource.Log`oluşturulur. Bu örnek tüm günlüğe kaydetme için kullanılır. İkinci olarak, her <xref:System.Diagnostics.Tracing.EventAttribute>olay yönteminin bir . Bu, takımlamanın <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> yöntemin dizinini çağrılan `AppEventSource`yöntemle ilişkilendirmesine yardımcı olur.  
+ Burada dikkat etmeniz gereken birkaç nokta vardır. İlk olarak, içinde tek bir oluşturulur `AppEventSource.Log` . Bu örnek, tüm günlük kaydı için kullanılacaktır. İkincisi, her olay yöntemi bir öğesine sahiptir <xref:System.Diagnostics.Tracing.EventAttribute> . Bu, yönteminin dizinini, çağrılan yöntemiyle ilişkilendirmenize yardımcı olur <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> `AppEventSource` .  
   
- Bu olayların tamamen açıklayıcı olduğunu unutmayın. Çoğu uygulama kodu bu olaylardan sonra çalışır. Koddaki hangi olayların kullanıcı etkileşimlerine karşılık geldiğini anlamalı, bunları ölçmeli ve bu ölçütleri geliştirmelisiniz. Ayrıca, olayların kendileri zaman içinde yalnızca tek bir örnek günlük. Genellikle her işlem için eşleşen başlangıç ve durdurma olayları olması yararlıdır. Uygulama başlatma yı incelerken, başlangıç olayı genellikle işletim sisteminin yadığı "İşlem/Başlat" olayıdır.  
+ Bu olayların yalnızca tanım olduğunu unutmayın. Çoğu uygulama kodu, bu olaylardan sonra çalışacaktır. Koddaki hangi olayların kullanıcı etkileşimlerine karşılık geldiğini anlamanız, bunları ölçmenizi ve bu değerlendirmeleri iyileştirmelisiniz. Ayrıca, olaylar zaman içinde yalnızca tek bir örneği günlüğe kaydeder. Her işlem için aynı zamanda başlangıç ve durdurma olaylarını eşleştirmek genellikle yararlıdır. Uygulama başlatma işlemi incelenirken, başlangıç olayı genellikle işletim sisteminin yaydığı "Işlem/başlatma" olayıdır.  
   
- Örneğin, bir RSS okuyucu oluşturduğunuzu varsayalım. Bir olayı günlüğe kaydetmek için birkaç ilginç konum şunlardır:  
+ Örneğin, bir RSS okuyucusu oluşturduğunuzu varsayalım. Bir olayı günlüğe kaydetmek için birkaç ilginç konum şunlardır:  
   
 - Ana sayfa ilk işlendiğinde.  
   
-- Eski RSS hikayeleri yerel depolamadan deserialized olduğunda.  
+- Eski RSS hikayeleri yerel depolamadan seri durumdan çıkarılacağından.  
   
-- Uygulamanız yeni haberleri eşitlemeye başladığında.  
+- Uygulamanız yeni hikayeleri eşitlemeye başladığında.  
   
-- Uygulamanız yeni haberleri eşitlemeyi bitirdiğinde.  
+- Uygulamanız yeni hikayeleri eşitlemeyi tamamladığında.  
   
- Bir uygulamayı enstrümanting basittir: Sadece türemiş sınıf üzerinde uygun yöntemi arayın. Önceki `AppEventSource` örnekten kullanarak, bir uygulamayı aşağıdaki gibi enstrümanta layabilirsiniz:  
+ Bir uygulamanın kullanımı basittir: yalnızca türetilmiş sınıfta uygun yöntemi çağırın. `AppEventSource`Önceki örnekte kullanarak bir uygulamayı aşağıdaki şekilde kullanabilirsiniz:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
- Uygulama işletildiğinde, etkinlikleri toplamaya hazırsınız.  
+ Uygulama görüntülendiğinde, olayları toplamaya hazırsınız demektir.  
   
-## <a name="gathering-events-with-perfview"></a>PerfView ile etkinlik toplama  
- PerfView, uygulamanızda her türlü performans araştırmasını yapmanıza yardımcı olmak için ETW etkinliklerini kullanır. Ayrıca, farklı türde olaylar için günlüğe kaydetmeyi açmanızı veya kapatmanızı sağlayan bir yapılandırma GUI içerir. PerfView ücretsiz bir araçtır ve [Microsoft Download Center'dan](https://www.microsoft.com/download/details.aspx?id=28567)indirilebilir. Daha fazla bilgi için [PerfView öğretici videolarını](https://channel9.msdn.com/Series/PerfView-Tutorial)izleyin.  
+## <a name="gathering-events-with-perfview"></a>PerfView ile olayları toplama  
+ PerfView, uygulamanızdaki tüm performans araştırmaları türlerini yapmanıza yardımcı olması için ETW olaylarını kullanır. Ayrıca, farklı olay türleri için günlüğe kaydetmeyi açmanıza veya kapatmaya olanak sağlayan bir yapılandırma GUI 'si de içerir. PerfView ücretsiz bir araçtır ve [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=28567)' nden indirilebilir. Daha fazla bilgi için [PerfView öğretici videolarını](https://channel9.msdn.com/Series/PerfView-Tutorial)izleyin.  
   
 > [!NOTE]
-> PerfView ARM sistemlerinde olayları toplamak için kullanılamaz. ARM sistemlerinde olayları toplamak için Windows Performance Recorder (WPR) kullanın. Daha fazla bilgi için [Vance Morrison'ın blog yazısına](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)bakın.  
+> , ARM sistemlerinde olayları toplamak için PerfView kullanılamaz. ARM sistemlerinde olayları toplamak için Windows performans Kaydedicisi 'Ni (WPR) kullanın. Daha fazla bilgi için bkz. [Vance Morrison 'un blog gönderisi](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device).  
   
- Komut satırından PerfView'i de çağırabilirsiniz. Yalnızca sağlayıcınızdaki olayları günlüğe kaydetmek için Komut İstem penceresini açın ve komutu girin:  
+ Ayrıca, komut satırından PerfView öğesini çağırabilirsiniz. Yalnızca sağlayıcınızdaki olayları günlüğe kaydetmek için komut Istemi penceresini açın ve şu komutu girin:  
   
 ```console
 perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
@@ -66,34 +66,34 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  burada:  
   
  `-KernelEvents:Process`  
- İşlemin ne zaman başlayıp durduğunu bilmek istediğinizi gösterir. Uygulamanızın diğer etkinlik saatlerinden çıkarılabilmeleri için Uygulamanız için İşlem/Başlangıç etkinliğine ihtiyacınız var.  
+ İşlemin ne zaman başlayacağını ve durdurduğunu bilmesini istediğinizi belirtir. Uygulamanız için Işlem/başlangıç olayına gerek duyarsınız, bu nedenle diğer olay sürelerinin üzerinden çıkarılabilir.  
   
  `-OnlyProviders:*MyCompany-MyApp`  
- PerfView'in varsayılan olarak açtığı diğer sağlayıcıları kapatır ve MyCompany-MyApp sağlayıcısını açar.  (Yıldız işareti bunun bir <xref:System.Diagnostics.Tracing.EventSource>.) olduğunu gösterir.  
+ PerfView 'ın varsayılan olarak açtığı diğer sağlayıcıları kapatır ve MyCompany-MyApp sağlayıcısını açar.  (Yıldız işareti bir olduğunu gösterir <xref:System.Diagnostics.Tracing.EventSource> .)  
   
  `collect outputFile`  
- Toplamayı başlatmak ve verileri outputFile.etl.zip'e kaydetmek istediğinizi gösterir.  
+ Koleksiyonu başlatmak ve verileri ÇıktıDosyası. etl. zip ' e kaydetmek istediğinizi belirtir.  
   
- PerfView'i çalıştırdıktan sonra uygulamanızı çalıştırın. Uygulamanızı çalıştırırken hatırlanması gereken birkaç şey vardır:  
+ PerfView 'ı başlattıktan sonra uygulamanızı çalıştırın. Uygulamanızı çalıştırırken dikkat etmeniz gereken birkaç nokta vardır:  
   
-- Hata ayıklama oluşturma değil, sürüm oluşturma oluşturma kullanın. Hata ayıklama oluşturur genellikle uygulamanızın beklenenden daha yavaş çalışmasına neden olabilecek ekstra hata denetimi ve hata işleme kodu içerir.  
+- Hata ayıklama derlemesi değil, yayın derlemesi kullanın. Hata ayıklama derlemeleri genellikle uygulamanızın beklenenden daha yavaş çalışmasına neden olabilecek ek hata denetimi ve hata işleme kodu içerir.  
   
-- Uygulamanızı ekli bir hata ayıklama yla çalıştırmak uygulamanızın performansını etkiler.  
+- Uygulamanızı bir hata ayıklayıcı ekli olarak çalıştırmak uygulamanızın performansını etkiler.  
   
-- Windows, uygulama başlatma sürelerini hızlandırmak için birden çok önbelleğe alma stratejileri kullanır. Uygulamanız şu anda bellekte önbelleğe alınmışsa ve diskten yüklenmesi gerekmiyorsa, daha hızlı başlar. Tutarlılık sağlamak için, uygulamanızı ölçmeden önce birkaç kez başlatın ve kapatın.  
+- Windows, uygulama başlatma sürelerini hızlandırmak için birden çok önbelleğe alma stratejisi kullanır. Uygulamanız Şu anda bellekte önbelleğe alınmışsa ve diskten yüklenmesi gerekiyorsa daha hızlı başlayacaktır. Tutarlılığı sağlamak için uygulamanızı ölçmeye başlamadan birkaç kez başlatın ve kapatın.  
   
- PerfView'in yayılan olayları toplayabilmesi için uygulamanızı çalıştırdığınızda, **Koleksiyonu Durdur** düğmesini seçin. Genellikle, uygulamanızı kapatmadan önce koleksiyonu durdurmalısınız, böylece gereksiz etkinliklere girmemelisiniz. Ancak, kapatma veya askıya alma performansını ölçüyorsanız, toplamaya devam etmek istersiniz.  
+ PerfView 'un yayınlanan olayları toplayabilmesi için uygulamanızı çalıştırdığınızda, **toplamayı durdur** düğmesini seçin. Genellikle, gereksiz olayları almadan uygulamanızı kapatmadan önce toplamayı durdurmanız gerekir. Ancak, kapalı veya askıya alma performansını ölçyorsanız, koleksiyona devam etmek isteyeceksiniz.  
   
 ## <a name="displaying-the-events"></a>Olayları görüntüleme  
- Zaten toplanmış olayları görüntülemek için, oluşturduğunuz .etl veya .etl.zip dosyasını açmak için PerfView'i kullanın ve **Etkinlikler'i**seçin. ETW, diğer süreçlerden gelen olaylar da dahil olmak üzere çok sayıda olay hakkında bilgi toplamış olacaktır. Araştırmanızı odaklamak için, etkinlik görünümünde aşağıdaki metin kutularını doldurun:  
+ Zaten toplanmış olan olayları görüntülemek için PerfView komutunu kullanarak oluşturduğunuz. etl veya. etl. zip dosyasını açın ve **Olaylar**' ı seçin. ETW, diğer süreçlerdeki olaylar da dahil olmak üzere çok sayıda olay hakkında bilgi toplamıştır. Araştırmanızı odaklamak için Olaylar görünümünde aşağıdaki metin kutularını doldurun:  
   
-- İşlem **Filtresi** kutusunda, uygulama adınızı (".exe" olmadan) belirtin.  
+- **Işlem filtresi** kutusunda uygulamanızın adını (". exe" olmadan) belirtin.  
   
-- Olay **Türleri Filtresi** kutusunda. `Process/Start | MyCompany-MyApp` Bu, MyCompany-MyApp ve Windows Çekirdeği/İşlem/Başlat etkinliğindeki olaylar için bir filtre ayarlar.  
+- **Olay türleri filtre** kutusunda, öğesini belirtin `Process/Start | MyCompany-MyApp` . Bu, MyCompany-MyApp ve Windows Kernel/Process/start olaylarından olaylar için bir filtre ayarlar.  
   
- Sol bölmede (Ctrl-A) listelenen tüm olayları seçin ve **Enter** tuşunu seçin. Şimdi, her olay zaman damgaları görmek gerekir. Bu zaman damgaları izlemenin başlangıcına göredir, bu nedenle başlangıçtan bu yana geçen süreyi belirlemek için her olayın saatini işlemin başlangıç saatinden çıkarmanız gerekir. İki zaman damgası seçmek için Ctrl+Click kullanıyorsanız, sayfanın altındaki durum çubuğunda görüntülenen satır aralarındaki farkı görürsünüz. Bu, ekrandaki iki olay arasında geçen süreyi (işlem başlangıcı dahil) görmenizi kolaylaştırır. Görünüm için kısayol menüsünü açabilir ve verileri kaydetmek veya işlemek için CSV dosyalarına dışa aktarma veya Microsoft Excel'i açma gibi bir dizi yararlı seçenek arasından seçim yapabilirsiniz.  
+ Sol bölmede listelenen tüm olayları seçin (CTRL-A) ve **ENTER** tuşunu seçin. Şimdi, her bir olaydan gelen zaman damgalarını görebilmeniz gerekir. Bu zaman damgaları izlemenin başlangıcına göre yapılır, bu nedenle başlangıçtan itibaren geçen süreyi belirlemek için her bir olayın süresini işlemin başlangıç zamanından çıkarabilirsiniz. İki zaman damgasını seçmek için CTRL + tıklama kullanırsanız, sayfanın altındaki durum çubuğunda görüntülenmeleri arasındaki farkı görürsünüz. Bu, ekranda iki olay arasında geçen süreyi görmeyi kolaylaştırır (işlem başlangıcı dahil). Görünümün kısayol menüsünü açabilir ve verileri kaydetmek veya işlemek üzere CSV dosyalarına dışarı aktarma veya Microsoft Excel 'i açma gibi faydalı seçeneklerden seçim yapabilirsiniz.  
   
- Hem orijinal uygulamanız hem de .NET Native araç zincirini kullanarak oluşturduğunuz sürüm için yordamı yineleyerek performans farkını karşılaştırabilirsiniz.   .NET Yerel uygulamalar genellikle non-.NET Yerel uygulamalardan daha hızlı başlar. Daha derine inmeyle ilgileniyorsanız, PerfView kodunuzun en çok zaman alan bölümlerini de belirleyebilir. Daha fazla bilgi için [PerfView eğitimlerini](https://channel9.msdn.com/Series/PerfView-Tutorial) izleyin veya [Vance Morrison'ın blog girişini](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)okuyun.  
+ Hem özgün uygulamanız hem de .NET Native araç zinciri kullanarak oluşturduğunuz sürüm için yordamı tekrarlayarak, performans farkını karşılaştırabilirsiniz.   .NET Native uygulamalar genellikle non-.NET Native uygulamalardan daha hızlı başlar. Daha ayrıntılı bir şekilde ilgileniyorsanız, PerfView kodunuzun en çok geçen kısmını da tanımlayabilir. Daha fazla bilgi için [PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial) Izleyin veya [Vance Morrison 'un blog girişini](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)okuyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

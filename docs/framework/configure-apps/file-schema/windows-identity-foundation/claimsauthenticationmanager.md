@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
 ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152755"
 ---
-# <a name="claimsauthenticationmanager"></a>\<İddialarAuthenticationManager>
-Gelen talepler için bir talep kimlik doğrulama yöneticisi kaydeder.  
+# \<claimsAuthenticationManager>
+Gelen talepler için bir talep kimlik doğrulama Yöneticisi kaydeder.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<İddialarAuthenticationManager>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthenticationManager>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,10 +37,10 @@ Gelen talepler için bir talep kimlik doğrulama yöneticisi kaydeder.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|type|<xref:System.Security.Claims.ClaimsAuthenticationManager> Sınıftan türeyen özel bir tür belirtir. Öznitelik nasıl belirtilir `type` hakkında daha fazla bilgi için bkz: [Özel Tür Başvuruları].|  
+|tür|Sınıfından türetilen özel bir tür belirtir <xref:System.Security.Claims.ClaimsAuthenticationManager> . Özniteliği belirtme hakkında daha fazla bilgi için `type` bkz. [özel tür başvuruları].|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Öznitelik yoksa `type` veya `type` öznitelik <xref:System.Security.Claims.ClaimsAuthenticationManager> sınıfa başvuruyorsa, `<claimsAuthenticationManager>` öğe alt öğeleri almaz; ancak, türetilen <xref:System.Security.Claims.ClaimsAuthenticationManager> sınıflar alt yapılandırma öğelerini tanımlayabilir.  
+ `type`Öznitelik yoksa veya `type` öznitelik sınıfa başvuruyorsa, <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthenticationManager>` öğesi alt öğeleri almaz; ancak, öğesinden türetilmiş sınıflar <xref:System.Security.Claims.ClaimsAuthenticationManager> alt yapılandırma öğelerini tanımlayabilir.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -49,9 +49,9 @@ Gelen talepler için bir talep kimlik doğrulama yöneticisi kaydeder.
 |[\<identityConfiguration>](identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.Security.Claims.ClaimsAuthenticationManager> Sınıf aracılığıyla sağlanan varsayılan davranış, gelen talepleri yineler. Öznitelik `type` belirtilmemişse veya `type` öznitelik sınıfı <xref:System.Security.Claims.ClaimsAuthenticationManager> belirtmiyorsa, `<claimsAuthenticationManager>` öğe alt öğeleri almaz. Özel davranış `type` uygulamak için <xref:System.Security.Claims.ClaimsAuthenticationManager> sınıftan türetilen bir türü kaydetmek için özniteliği belirtebilirsiniz. Türemiş sınıflar, bu öğeleri `<claimsAuthenticationManager>` işlemek için <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> yöntemi geçersiz kılarak öğenin alt öğeleri aracılığıyla yapılandırmayı destekleyebilir. Alt öğeler için tanımlanan şema sınıfın tasarımcısına kılır.  
+ Sınıfı aracılığıyla sunulan varsayılan davranış, <xref:System.Security.Claims.ClaimsAuthenticationManager> gelen talepleri yankılar. Hiçbir `type` öznitelik belirtilmemişse veya `type` öznitelik <xref:System.Security.Claims.ClaimsAuthenticationManager> sınıfı belirtiyorsa, `<claimsAuthenticationManager>` öğesi alt öğeleri almaz. `type` <xref:System.Security.Claims.ClaimsAuthenticationManager> Özel davranışı uygulamak için sınıfından türetilmiş bir türü kaydetmek üzere özniteliğini belirtebilirsiniz. Türetilmiş sınıflar, `<claimsAuthenticationManager>` <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Bu öğeleri işlemek için yöntemini geçersiz kılarak öğenin alt öğeleri aracılığıyla yapılandırmayı destekleyebilir. Alt öğeler için tanımlanan şema, sınıfının tasarımcısına kadar olur.  
   
- Öğe `<claimsAuthenticationManager>` <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> özelliği ayarlar.  
+ `<claimsAuthenticationManager>`Öğesi <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> özelliği ayarlar.  
   
 ## <a name="example"></a>Örnek  
   

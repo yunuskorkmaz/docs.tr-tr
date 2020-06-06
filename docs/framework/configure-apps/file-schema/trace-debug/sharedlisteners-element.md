@@ -12,18 +12,18 @@ helpviewer_keywords:
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 ms.openlocfilehash: 69f15cc9583b397017ac30a0c567914495867c18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153327"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners> Element
-Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri içerir.  Bu dinleyiciler varsayılan olarak herhangi bir iz almazlar ve bu dinleyicileri çalışma zamanında almak mümkün değildir. Paylaşılan dinleyici olarak tanımlanan dinleyiciler kaynaklara veya izadile eklenebilir.  
+# <a name="sharedlisteners-element"></a>\<sharedListeners> Öğesi
+Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.  Bu dinleyiciler, varsayılan olarak herhangi bir izleme almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.  
   
-[**\<yapılandırma>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<paylaşılanDinleyiciler>**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sharedListeners>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +43,7 @@ Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri i�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add-element-for-listeners-for-trace.md)|`sharedListeners` Koleksiyona bir dinleyici ekler.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Koleksiyona bir dinleyici ekler `sharedListeners` .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -53,12 +53,12 @@ Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri i�
 |`system.diagnostics`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Paylaşılan dinleyici koleksiyonuna dinleyici eklemek onu etkin bir dinleyici yapmaz. Yine de bir izleme kaynağına veya bir izleme `Listeners` için bu izleme öğesi için koleksiyona ekleyerek eklenmelidir. .NET Framework'deki dinleyici sınıfları sınıftan <xref:System.Diagnostics.TraceListener> türetilmiştir.  
+ Paylaşılan dinleyiciler koleksiyonuna dinleyici eklemek, etkin bir dinleyici yapmaz. Yine de `Listeners` Bu izleme öğesi için koleksiyona ekleyerek bir izleme kaynağına veya bir izlemeye eklenmeli. .NET Framework dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
   
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dinleyiciyi `<sharedListeners>` `Listeners` hem sınıflar hem `console` de <xref:System.Diagnostics.Trace> sınıflar için <xref:System.Diagnostics.TraceSource> koleksiyona eklemek için öğenin nasıl kullanılacağını gösterir. Konsol izleme dinleyicisi ya da <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace>aramalar yoluyla konsola izleme bilgileri yazar.  
+ Aşağıdaki örnek, `<sharedListeners>` `console` `Listeners` ve sınıflarının her ikisi için de dinleyiciyi koleksiyona eklemek için öğesinin nasıl kullanılacağını gösterir <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace> . Konsol izleme dinleyicisi, veya çağrıları aracılığıyla konsola izleme bilgilerini yazar <xref:System.Diagnostics.TraceSource> <xref:System.Diagnostics.Trace> .  
   
 ```xml  
 <configuration>  

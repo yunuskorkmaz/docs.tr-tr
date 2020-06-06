@@ -3,37 +3,37 @@ title: .NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 ms.openlocfilehash: 12df2ef7bf6e86a60dfa4c130f35969e72ac5211
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180944"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
-Hata ayıklama ve sürüm yapılandırmaları tamamen farklı olduğundan, Evrensel Windows Platformu uygulamanızın sürüm yapılarını hedef platformlarında sınamak önemlidir. Varsayılan olarak, hata ayıklama yapılandırması uygulamanızı derlemek için .NET Core çalışma zamanını kullanır, ancak sürüm yapılandırması uygulamanızı yerel koda derlemek için .NET Native kullanır.  
+Hata ayıklama ve yayın yapılandırmaları tamamen farklı olduğundan, Evrensel Windows Platformu uygulamanızın sürüm yapılarını hedef platformlarda test etmek önemlidir. Varsayılan olarak, hata ayıklama yapılandırması uygulamanızı derlemek için .NET Core çalışma zamanını kullanır, ancak yayın yapılandırması uygulamanızı yerel koda derlemek için .NET Native kullanır.  
   
 > [!IMPORTANT]
-> [EksikMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)ve Uygulamanızın sürüm sürümlerini test ederken karşılaşabileceğiniz [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları ile ilgili bilgi için bkz: "Adım 4: Eksik meta verileri el ile çözmek: [Başlangıç](getting-started-with-net-native.md) konusunun yanı sıra [Yansıma ve .NET Yerli](reflection-and-net-native.md) ve Çalışma Zamanı [Direktifleri (rd.xml) Yapılandırma Dosya Başvurusu.](runtime-directives-rd-xml-configuration-file-reference.md)  
+> Uygulamanızın yayın sürümlerini sınarken karşılaşabileceğiniz [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)ve [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları ile ilgili bilgi için, bkz. "4. Adım: eksik meta verileri el ile çözme: [Başlarken](getting-started-with-net-native.md) konusunun yanı sıra [yansıma ve .NET Native](reflection-and-net-native.md) ve [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).  
   
-## <a name="debug-and-release-builds"></a>Hata ayıklama ve sürüm yapılarını  
- Hata ayıklama yapısı .NET Core çalışma süresine karşı yürütüldüğünde, yerel kodiçin derlenmemiştir. Bu, normalde çalışma zamanı tarafından sağlanan tüm hizmetleri uygulamanız için kullanılabilir hale getirir.  
+## <a name="debug-and-release-builds"></a>Hata ayıklama ve yayın yapıları  
+ Hata ayıklama derlemesi .NET Core çalışma zamanına karşı yürütüldüğünde, yerel koda derlenmemiş. Bu, normalde çalışma zamanı tarafından sağlanan tüm hizmetlerin uygulamanızda kullanılabilmesini sağlar.  
   
- Diğer taraftan, sürüm yapısı hedef platformları için yerel koda derler, dış çalışma sürelerine ve kitaplıklara olan bağımlılıkların çoğunu kaldırır ve maksimum performans için kodu yoğun bir şekilde optimize eder.  
+ Öte yandan, yayın derlemesi hedef platformları için yerel koda derlenir, dış çalışma zamanları ve kitaplıklarda birçok bağımlılığı kaldırır ve en yüksek performans için kodu yoğun olarak iyileştirir.  
   
- .NET Native kullanılarak derlenen sürüm yapılarını hata ayıklama yaptığınızda:  
+ .NET Native kullanılarak derlenen sürüm Derlemeleriyle ilgili hataları ayıkladığınızda:  
   
-- Normal .NET hata ayıklama araçlarından farklı olan .NET Yerel hata ayıklama altyapısını kullanırsınız.  
+- Normal .NET hata ayıklama araçlarından farklı olan .NET Native hata ayıklama altyapısını kullanırsınız.  
   
-- Çalıştırılabilir boyutunu mümkün olduğunca azalır. .NET Native'in yürütülebilir boyutu azaltma yollarından biri, [Çalışma Zamanı özel durum iletileri](#Messages) bölümünde daha ayrıntılı olarak tartışılan bir konu olan çalışma zamanı özel durum iletilerini önemli ölçüde kırpmaktır.  
+- Yürütülebilir dosyanızın boyutu mümkün olduğunca azalır. .NET Native bir yürütülebilir dosyanın boyutunu azaltmanın bir yolu, çalışma [zamanı özel durum iletileri bölümünde daha](#Messages) ayrıntılı bir şekilde ele alınan çalışma zamanı özel durum iletilerini önemli ölçüde kırpmasıdır.  
   
-- Kodunuz ağır şekilde optimize edildi. Bu, inlining mümkün olduğunda kullanıldığı anlamına gelir. (Inlining kodu dış yordamlardan arama yordamına taşır.)   .NET Native'in özel bir çalışma süresi sağlaması ve agresif ara çizgi sini uygulamaları hata ayıklama yaparken görüntülenen çağrı yığınını etkiler.  Daha fazla bilgi için [Runtime arama yığını](#CallStack) bölümüne bakın.  
+- Kodunuz yoğun bir şekilde iyileştirildi. Bu, mümkün olan her durumda satır içinde kullanıldığı anlamına gelir. (Intıl, kodu dış yordamlardan çağıran yordama taşıtırlar.)   .NET Native, özel bir çalışma zamanı sağlar ve agresif kullanımı uygularsa hata ayıklarken görüntülenen çağrı yığınını etkiler.  Daha fazla bilgi için bkz. [çalışma zamanı çağrı yığını](#CallStack) bölümü.  
   
 > [!NOTE]
-> Hata ayıklama ve sürüm yapılarının .NET Native araç zinciriyle derlenip derlenmediğini,.NET **Native araç zinciri kutusuyla Derleme'yi** denetleyerek veya denetlemeyi denetleyerek denetleyebilirsiniz.   Ancak, Windows Mağazası'nın uygulamanızın üretim sürümünü her zaman .NET Native araç zinciriyle derlemeyeceğini unutmayın.  
+> Hata ayıklama ve sürüm derlemelerinin, **.NET Native araç zinciri Ile derle** kutusunu işaretleyerek veya işaretleyerek .NET Native araç zinciriyle derlenip derlenmediğini denetleyebilirsiniz.   Ancak, Windows Mağazası 'nın .NET Native araç zinciri ile uygulamanızın üretim sürümünü her zaman derlendiğine unutmayın.  
   
 <a name="Messages"></a>
 ## <a name="runtime-exception-messages"></a>Çalışma zamanı özel durum iletileri  
- Uygulama yürütülebilir boyutunu en aza indirmek için ,NET Native özel durum iletilerinin tam metnini içermez. Sonuç olarak, sürüm yapılarında atılan çalışma zamanı özel durumları özel durum iletilerinin tam metnini görüntülemeyebilir. Bunun yerine, metin daha fazla bilgi için takip etmek için bir bağlantı ile birlikte bir alt dize oluşabilir. Örneğin, özel durum bilgileri aşağıdaki gibi görünebilir:  
+ Uygulama yürütülebilir boyutunu en aza indirmek için .NET Native özel durum iletilerinin tam metnini içermez. Sonuç olarak, sürüm Derlemeleriyle oluşturulan çalışma zamanı özel durumları, özel durum iletilerinin tam metnini görüntülemeyebilir. Bunun yerine, metin bir alt dizeden ve daha fazla bilgi için bir bağlantı ile birlikte yer alabilir. Örneğin, özel durum bilgileri şöyle görünebilir:  
   
 ```output
 Exception thrown: '$16_System.AggregateException' in Unknown Module.  
@@ -43,7 +43,7 @@ Additional information: AggregateException_ctor_DefaultMessage
 If there is a handler for this exception, the program may be safely continued.  
 ```  
   
- Tam özel durum iletisi gerekiyorsa, bunun yerine hata ayıklama yapıçalıştırın. Örneğin, sürüm yapısındaki önceki özel durum bilgileri hata ayıklama yapısında aşağıdaki gibi görünebilir:  
+ Tüm özel durum iletisine ihtiyacınız varsa, bunun yerine hata ayıklama derlemesini çalıştırın. Örneğin, yayın derlemeden önceki özel durum bilgileri hata ayıklama derlemesinde aşağıdaki gibi görünebilir:  
   
 ```output
 Exception thrown: 'System.AggregateException' in NativeApp.exe.  
@@ -52,12 +52,12 @@ Additional information: Value does not fall within the expected range.
 ```  
   
 <a name="CallStack"></a>
-## <a name="runtime-call-stack"></a>Çalışma zamanı arama yığını  
- İçe doğru astarlama ve diğer optimizasyonlar nedeniyle,.NET Native araç zinciri tarafından derlenen bir uygulama tarafından görüntülenen çağrı yığını, çalışma zamanı özel duruma giden yolu net bir şekilde belirlemenize yardımcı olmayabilir.  
+## <a name="runtime-call-stack"></a>Çalışma zamanı çağrı yığını  
+ Satır içi ve diğer iyileştirmeler nedeniyle, .NET Native araç zinciri tarafından derlenen bir uygulama tarafından görünen çağrı yığını, çalışma zamanı özel durumunun yolunu açıkça belirlemenize yardımcı olabilir.  
   
- Tam yığını almak için hata ayıklama yapısını çalıştırın.  
+ Tam yığını almak için bunun yerine hata ayıklama derlemesini çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Native Windows Universal Apps Hata Ayıklama](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Windows Evrensel uygulamalarında .NET Native hata ayıklama](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Başlarken](getting-started-with-net-native.md)

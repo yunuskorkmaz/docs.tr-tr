@@ -4,10 +4,10 @@ description: XML serileştirici Oluşturucusu, bir derlemedeki türler için bir
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
 ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288946"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
@@ -27,7 +27,7 @@ sgen [options]
   
 ## <a name="parameters"></a>Parametreler  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/a \[ erleme \] :**_dosya adı_|*Dosya adı*tarafından belirtilen derlemede veya yürütülebilir dosyada bulunan tüm türler için serileştirme kodu oluşturur. Yalnızca bir dosya adı sağlanabilir. Bu bağımsız değişken yinelenir, son dosya adı kullanılır.|  
 |**/c \[ ompiler \] :**_Seçenekler_|C# Derleyici geçirilecek seçeneklerini belirtir. Tüm csc.exe seçenekleri için derleyici geçirilen desteklenir. Bu derleme imzalanması gerektiğini belirtmek ve anahtar dosyasını belirtmek için kullanılabilir.|  

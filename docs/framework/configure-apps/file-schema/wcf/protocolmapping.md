@@ -3,18 +3,18 @@ title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: be4224ef1a8b17653df8123aaf89e105a496355a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400017"
 ---
-# <a name="protocolmapping"></a>\<protocolMapping >
+# \<protocolMapping>
 Aktarım Protokolü şemaları (örn. http, net. TCP, net. pipe, vs.) ve WCF bağlamaları arasında bir dizi varsayılan protokol eşlemesini tanımlamaya yönelik bir yapılandırma bölümünü temsil eder. Çalışma zamanında varsayılan uç noktalar oluştururken, Windows Communication Foundation (WCF) yapılandırılan eşlemelere bakar ve belirli bir tabanlı adres için hangi bağlamanın kullanılacağına karar verir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<protocolMapping >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<protocolMapping>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ Aktarım Protokolü şemaları (örn. http, net. TCP, net. pipe, vs.) ve WCF ba�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Filtreler >](filters-of-routing.md)|Bir Aktarım Protokolü düzeni (örneğin, http, net. TCP, net. pipe, vb.) ve bir WCF bağlaması arasında bir varsayılan protokol eşlemesi içerir.|  
+|[\<filters>](filters-of-routing.md)|Bir Aktarım Protokolü düzeni (örneğin, http, net. TCP, net. pipe, vb.) ve bir WCF bağlaması arasında bir varsayılan protokol eşlemesi içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69912538"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
@@ -38,7 +38,7 @@ Dijital imzalar, bir programdan diğerine gönderildiğinde verilerin üzerinde 
 </configuration>  
 ```  
   
- Oıdentry > öğesi iki öznitelik içerir. [ \<](./file-schema/cryptography/oidentry-element.md) **OID** özniteliği, nesne tanımlayıcı numarasıdır. **Name** özniteliği, [ \<nameEntry > öğesinden](./file-schema/cryptography/nameentry-element.md) **ad** özniteliğinin değeridir. Bir nesne tanımlayıcısının basit bir ada eşleştirilemeden önce bir algoritma adından bir sınıfa eşleme olmalıdır.  
+ [ \<oidEntry> Öğesi](./file-schema/cryptography/oidentry-element.md) iki öznitelik içerir. **OID** özniteliği, nesne tanımlayıcı numarasıdır. **Name** [ \<nameEntry> özniteliği, öğesinden](./file-schema/cryptography/nameentry-element.md) **ad** özniteliğinin değeridir. Bir nesne tanımlayıcısının basit bir ada eşleştirilemeden önce bir algoritma adından bir sınıfa eşleme olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

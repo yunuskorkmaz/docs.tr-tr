@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84289492"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> Öğesi
@@ -38,14 +38,14 @@ Yok.
 
 ### <a name="child-elements"></a>Alt Öğeler
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[\<dateTimeSerialization>Dosyalarında](datetimeserialization-element.md)|Serileştirme modu belirler <xref:System.DateTime> nesneleri.|
 |[\<schemaImporterExtensions>Dosyalarında](schemaimporterextensions-element.md)|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter> için .NET Framework türleri için XSD türü eşleme.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[\<configuration>Dosyalarında](../../framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
 

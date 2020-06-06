@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152510"
 ---
-# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
-WS-Federation protokolünü kullanarak kimlik doğrulama için yapılandırma bölümü.  
+# \<system.identityModel.services>
+WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.identityModel.services>**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -29,27 +29,27 @@ WS-Federation protokolünü kullanarak kimlik doğrulama için yapılandırma b�
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- None  
+ Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<federasyonKonfigürasyon>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) HTTP modüllerini yapılandıran ayarları içerir.|  
+|[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfab) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) http modüllerini yapılandıran ayarları içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
- None  
+ Yok  
   
 ## <a name="remarks"></a>Açıklamalar  
- SAM `<system.identityModel.services>` ve WSFAM ayarlarını sağlamak için uygulamanızın yapılandırma dosyasına bir bölüm ekleyin.  
+ `<system.identityModel.services>`Sam ve WSFAE ayarlarını sağlamak için uygulamanızın yapılandırma dosyasına bir bölüm ekleyin.  
   
 > [!IMPORTANT]
-> Kodunuzda <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> talep <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> tabanlı erişim denetimi sağlamak için sınıfı veya sınıfı<xref:System.Security.Claims.ClaimsAuthorizationManager>kullanırken, talep yetkilendirme yöneticisi ( ) ve `<identityConfiguration>` yetkilendirme kararları vermek için kullanılan ilke, bu bölümdeki bir `<federationConfiguration>` öğeden örtülü veya açıkça başvurulan bir öğe aracılığıyla yapılandırılır. Daha fazla bilgi için [ \<federasyonYapılandırma>](federationconfiguration.md) öğesi altındaki **Açıklamalar'a** bakın.  
+> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Kodunuzda talep tabanlı erişim denetimi sağlamak için veya sınıfını kullanırken, <xref:System.Security.Claims.ClaimsAuthorizationManager> yetkilendirme kararları vermek için kullanılan talep Yetkilendirme Yöneticisi () ve ilke, `<identityConfiguration>` Bu bölümdeki bir öğeden örtük olarak veya açıkça başvurulan bir öğe aracılığıyla yapılandırılır `<federationConfiguration>` . Daha fazla bilgi için, öğesinin **altındaki açıklamalara** bakın [\<federationConfiguration>](federationconfiguration.md) .  
   
- Bölüm `<system.identityModel.services>` <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> sınıf tarafından temsil edilir. Bölümde yapılandırılan `<federationConfiguration>` alt öğelerin toplanması <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> sınıf tarafından temsil edilir.  
+ `<system.identityModel.services>`Bölümü sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> . `<federationConfiguration>`Bölümünde yapılandırılan alt öğelerin koleksiyonu sınıfı tarafından temsil edilir <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML, yapılandırma dosyasına `<system.identityModel.services>` nasıl bir bölüm ekleyeceğinigösterir. Öncelikle `<system.identityModel.services>` hem bölüm hem de bölümler için `<system.identityModel>` bölüm bildirimleri eklemeniz gerekir. (Bir `<system.identityModel.services>` bölüm eklediğinizde, gerekirse çalışma süresine `<system.identityModel>` kadar varsayılan `<identityConfiguration>` bir bölümün oluşturulabilmesini sağlamak için bölüm için bir bildirim de eklemelisiniz.) Bölüm bildirimleri eklendikten sonra, öğenin `<system.identityModel.services>` altında federal kimlik doğrulama ayarlarını yapılandırabilirsiniz.  
+ Aşağıdaki XML, `<system.identityModel.services>` bir yapılandırma dosyasına bir bölümün nasıl ekleneceğini gösterir. Öncelikle bölüm ve bölümler için bölüm bildirimleri eklemeniz gerekir `<system.identityModel.services>` `<system.identityModel>` . (Bir `<system.identityModel.services>` bölümü eklediğinizde, `<system.identityModel>` `<identityConfiguration>` gerekirse çalışma zamanı tarafından varsayılan bir bölümün oluşturulabilmelidir emin olmak için bölüm için bir bildirim de eklemeniz gerekir.) Bölüm bildirimleri eklendikten sonra, öğesinin altında federal kimlik doğrulama ayarlarını yapılandırabilirsiniz `<system.identityModel.services>` .  
   
 ```xml  
 <configuration>  

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
 ms.openlocfilehash: e2df5d83375b2daa2e39ba1ee990c47a6a04f6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151864"
 ---
-# <a name="workflow"></a>\<iş akışı>
+# \<workflow>
 Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> özelliği.  
   
- İş akışı izleme ve yapılandırmasında daha fazla bilgi için [İş Akışı İzleme ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve İzleme [Profilleri'ne](../../../windows-workflow-foundation/tracking-profiles.md)bakın.  
+ İş akışı izleme ve yapılandırma hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<izlemeProfil>**](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<iş akışı>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<workflow>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -86,34 +86,34 @@ Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityDefinitionId|İzlenen iş akışının etkinlik tanım kimliğini belirten bir dize.|  
+|activityDefinitionId|İzlenmekte olan iş akışının etkinlik tanımı KIMLIĞINI belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<etkinlikPlanlanmışSorgular>](activityscheduledqueries.md)|Bir üst etkinlik tarafından yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgukoleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının etkinlik zamanlanan kayıtlara abone olması için gereklidir.|  
-|[\<etkinlikStateQueries>](activitystatequeries.md)|İş akışı örneğini oluşturan etkinliklerin yaşam döngüsü değişikliklerini izlemek için kullanılan sorgu koleksiyonunu temsil eder. Örneğin, "E-Posta Gönder" etkinliği bir iş akışı örneği içinde her tamamlandığında izlemek isteyebilirsiniz. Bu sorgu, bir izleme katılımcısı için etkinlik durumu kayıt nesneleri abone olması için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.|  
-|[\<yer imiDevamıSorgular>](bookmarkresumptionqueries.md)|İş akışı örneği içinde yer işaretinin yeniden başlatılmasını izlemek için kullanılan sorgukoleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının devam kayıtlarını yer imine abone olması için gereklidir.|  
-|[\<cancelRequestedQueries>](cancelrequestedqueries.md)|Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek için kullanılan sorgukoleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının istek kayıt nesnelerini iptal etmek için abone olması için gereklidir.|  
-|[\<customTrackingQueries>](customtrackingqueries.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan sorgu koleksiyonunu temsil eder. Sorgu, bir izleme katılımcısının özel izleme kayıtlarına abone olması için gereklidir.|  
-|[\<hata YayılımSorgular>](faultpropagationqueries.md)|Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan sorgukoleksiyonunu temsil eder.  Bu olay, bir Hata Handler bir hatayı her işlerde oluşur. Bir etkinlik içinde oluşan hataların işlenmesini izlemek için bu tür sorguyu kullanmalısınız. Sorgu, bir izleme katılımcısının hata yayma kayıtlarına abone olması için gereklidir.|  
-|[\<iş akışıInstanceQueries>](workflowinstancequeries.md)|Başlatılan veya tamamlanan olay gibi iş akışı örneği yaşam döngüsü değişikliklerini izleyen yapılandırma öğeleri koleksiyonunu temsil eder.|  
+|[\<activityScheduledQueries>](activityscheduledqueries.md)|Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.|  
+|[\<activityStateQueries>](activitystatequeries.md)|Bir iş akışı örneği oluşturan etkinliklerin yaşam döngüsü değişikliklerini izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Örneğin, bir iş akışı örneği içinde "e-posta gönder" etkinliğinin tamamlandığı her seferinde izlemek isteyebilirsiniz. Bu sorgu, bir izleme katılımcısı için etkinlik durumu kayıt nesnelerine abone olmak için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.|  
+|[\<bookmarkResumptionQueries>](bookmarkresumptionqueries.md)|Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.|  
+|[\<cancelRequestedQueries>](cancelrequestedqueries.md)|Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, istek kaydı nesnelerine abone olmak için bir izleme katılımcısı için gereklidir.|  
+|[\<customTrackingQueries>](customtrackingqueries.md)|Kod etkinliklerinizde tanımladığınız olayları izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, izleme katılımcısı için özel izleme kayıtlarına abone olmak için gereklidir.|  
+|[\<faultPropagationQueries>](faultpropagationqueries.md)|Bir etkinlik içinde oluşan hataların işlenmesini izlemek için kullanılan bir sorgu koleksiyonunu temsil eder.  Bu olay, bir FaultHandler hata her işlediğinde oluşur. Bir etkinlik içinde oluşan hataların işlenmesini izlemek için böyle bir sorgu kullanmanız gerekir. Sorgu, hata yayma kayıtlarına abone olmak için izleme katılımcısı için gereklidir.|  
+|[\<workflowInstanceQueries>](workflowinstancequeries.md)|Başlatılmış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişikliklerini izleyen yapılandırma öğelerinin bir koleksiyonunu temsil eder.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<izlemeProfil>](trackingprofile.md)|İzleme katılımcısında iş akışı izleme kayıtlarına abonelik oluşturmak için bir yapılandırma bölümünü temsil eder. İzleme profili, bir izleme katılımcısının çalışma zamanında iş akışı örneği durumu değiştiğinde yayılan iş akışı olaylarına abone olmasını sağlayan izleme sorguları içerir. İzleme profili bölümünde tanımlanan sorgular, abonelik tarafından döndürülen olay türlerini tanımlar.|  
+|[\<trackingProfile>](trackingprofile.md)|Bir izleme katılımcısı içindeki iş akışı izleme kayıtlarına abonelik oluşturmak için bir yapılandırma bölümünü temsil eder. Bir izleme profili, bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. İzleme profili bölümü içinde tanımlanan sorgular, aboneliğin döndürdüğü olay türlerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İzleme profilleri, belirli bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayılan iş akışı olaylarına abone olmak için izleme katılımcısının izin veren izleme sorguları içerir. İzlenen iş akışı örneği bu yapılandırma öğesi tarafından tanımlanır.  
+ İzleme profilleri, belirli bir iş akışı örneğinin durumu çalışma zamanında değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. İzlenmekte olan iş akışı örneği bu yapılandırma öğesi tarafından tanımlanır.  
   
- Çok kaba bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Tersine, ortaya çıkan olaylar daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok özel bir profil oluşturabilirsiniz.  
+ Çok kaba bir profili yazabilirsiniz izleme gereksinimlerinize bağlı olarak, bir iş akışı üzerinde üst düzey durum değişikliklerini küçük bir kümesi için abone olur. Buna karşılık, daha sonra ayrıntılı bir yürütme akışını yeniden oluşturmak için yeterince zengin olan çok özel bir profil oluşturabilirsiniz.  
   
- İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanıza olanak tanıyan kayıtları izlemek için bildirimsel abonelikler olarak yapılandırılır. Farklı izleme kayıtları sınıflarına abone olsanız sağlayan bir avuç sorgu türü vardır. Sorguların tam listesi için, bu konunun alt öğe öğesi listesine ve [İzleme Profilleri'ne](../../../windows-workflow-foundation/tracking-profiles.md)bakın.  
+ İzleme profilleri, belirli izleme kayıtları için iş akışı çalışma zamanını sorgulamanızı sağlayan kayıtları izlemek için bildirim temelli abonelikler olarak yapılandırılır. Farklı izleme kayıt sınıflarına abone olmanızı sağlayan bir dizi sorgu türü vardır. Sorguların tüm listesi için, bu konunun alt öğe listesi ve [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)' ne bakın.  
   
- Aşağıdaki örnek, bir yapılandırma dosyasındaki bir izleme katılımcısının iş `Started` `Completed` akışı olaylarına abone olmasını sağlayan bir izleme profilini gösterir.  
+ Aşağıdaki örnek, bir yapılandırma dosyasında izleme katılımcısının `Started` ve iş akışı olaylarına abone olmasına izin veren bir izleme profilini gösterir `Completed` .  
   
 ```xml  
 <system.serviceModel>  

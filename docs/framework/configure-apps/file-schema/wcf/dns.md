@@ -3,23 +3,23 @@ title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
 ms.openlocfilehash: e49a564c9793b371425b2b787586bb9d3cbed58b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77452233"
 ---
-# <a name="dns"></a>DNS > \<
+# \<dns>
 Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sahip bir DNS içeriyorsa, bu kimlik, x509 sertifika kimlik doğrulama modu için geçerlidir. SPN aynı değere sahipse, Windows kimlik doğrulama modu için de geçerlidir.  
   
 Öğe değerini ayarlama hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
-[ **\<yapılandırma >** ](../configuration-element.md)\
-[**System. serviceModel >\<** ](system-servicemodel.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<istemci >** ](client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<uç nokta >** ](endpoint-of-client.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<kimlik >** ](identity.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dns >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<client>**](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<endpoint>**](endpoint-of-client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<identity>**](identity.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dns>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,7 +34,7 @@ Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sah
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|Sertifikanın DNS 'i. DNS, IP tabanlı bir ağdaki bilgisayarları bulmak için kullanılan sektör standardı bir protokoldür. Kullanıcılar, `https://go.microsoft.com/fwlink/?prd=10929` veya `https://go.microsoft.com/fwlink/?LinkID=96165`gibi görünen adları, 207.46.131.137 gibi sayı tabanlı adreslerden daha kolay anımsayabilir.|  
+|value|Sertifikanın DNS 'i. DNS, IP tabanlı bir ağdaki bilgisayarları bulmak için kullanılan sektör standardı bir protokoldür. Kullanıcılar, `https://go.microsoft.com/fwlink/?prd=10929` `https://go.microsoft.com/fwlink/?LinkID=96165` 207.46.131.137 gibi sayı tabanlı adreslerden daha kolay görünen adları anımsayabilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sah
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<kimlik >](identity.md)|İstemci tarafından kimlik doğrulaması yapılacak hizmetin kimliğini belirtir.|  
+|[\<identity>](identity.md)|İstemci tarafından kimlik doğrulaması yapılacak hizmetin kimliğini belirtir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki yapılandırma kodu bir sunucunun kimliğini doğrulamak için kullanılan bir X. 509.440 sertifikasının DNS 'sini belirtir.  
@@ -61,4 +61,4 @@ Sunucunun beklenen kimliğini belirtir. Sunucunun sertifikası aynı değere sah
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [\<kimlik >](identity.md)
+- [\<identity>](identity.md)

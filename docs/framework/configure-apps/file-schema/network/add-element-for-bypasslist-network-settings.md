@@ -11,20 +11,20 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155083"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<bypasslist (Ağ Ayarları) için> Öğesi ekle
-Proxy bypass listesine bir IP adresi veya DNS adı ekler.  
+# <a name="add-element-for-bypasslist-network-settings"></a>bypasslist için \<add> Öğesi (Ağ Ayarları)
+Proxy atlama listesine bir IP adresi veya DNS adı ekler.  
   
-[**\<yapılandırma>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ Proxy bypass listesine bir IP adresi veya DNS adı ekler.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|**Adres**|BIR IP adresi veya DNS adını açıklayan normal bir ifade.|  
+|**adrestir**|IP adresini veya DNS adını tanımlayan bir normal ifade.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Bypasslist](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri açıklayan bir dizi düzenli ifade sağlar.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `add` ip adreslerini veya DNS sunucu adlarını açıklayan düzenli ifadeler ekler ve proxy sunucusunu atlayan adresler listesine eklenir.  
+ `add`Öğesi, IP adreslerini veya DNS sunucu adlarını bir proxy sunucusunu atlayan adresler listesine açıklayan normal ifadeler ekler.  
   
- Öznitelik değeri `address` IP adresleri veya ana bilgisayar adları kümesi açıklayan normal bir ifade olmalıdır.  
+ `address`Özniteliğin değeri BIR IP adresi veya ana bilgisayar adı kümesini açıklayan bir normal ifade olmalıdır.  
   
- Bu öğe için düzenli bir ifade belirtirken dikkatli olmalısınız. Normal ifade "[a-z]+\\.contoso\\.com" contoso.com etki alanında herhangi bir ana bilgisayar eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanında herhangi bir ana bilgisayar eşleşir. Yalnızca contoso.com etki alanında bir ana bilgisayarla eşleştirmek için bir bağlantı ("$"): "[a-z]+\\.contoso\\.com$" kullanın.  
+ Bu öğe için bir normal ifade belirtirken dikkatli olmanız gerekir. "[A-z] + \\ . contoso \\ . com" normal ifadesi, contoso.com etki alanındaki herhangi bir konakla eşleşir, ancak aynı zamanda contoso.com.cpandl.com etki alanındaki herhangi bir konakla eşleşir. Yalnızca contoso.com etki alanındaki bir konağı eşleştirmek için bir tutturucu ("$"): "[a-z] + \\ . contoso \\ . com $" kullanın.  
   
- Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET Framework Düzenli İfadeler](../../../../standard/base-types/regular-expressions.md).  
+ Normal ifadeler hakkında daha fazla bilgi için bkz.. [Normal ifadeleri .NET Framework](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, baypas listesine iki adres ekler. İlki, contoso.com etki alanında bulunan tüm sunucular için proxy'yi atlar; ikincisi, IP adresi 192.168 ile başlayan tüm sunucular için proxy'yi atlar.  
+ Aşağıdaki örnek atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresi 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
 <configuration>  

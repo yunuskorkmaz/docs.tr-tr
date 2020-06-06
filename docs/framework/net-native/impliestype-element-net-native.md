@@ -1,16 +1,16 @@
 ---
-title: <ImpliesType>Eleman (.NET Yerel)
+title: <ImpliesType>Öğesi (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181010"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType> Öğesi (.NET Yerli)
-Bu ilke, içeren tür veya yönteme uygulanmışsa, bir türe ilke uygular.  
+# <a name="impliestype-element-net-native"></a>\<ImpliesType>Öğesi (.NET Native)
+İlke kapsayan tür veya yönteme uygulanmışsa ilkeyi bir türe uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,28 +36,28 @@ Bu ilke, içeren tür veya yönteme uygulanmışsa, bir türe ilke uygular.
 |Öznitelik|Öznitelik türü|Açıklama|  
 |---------------|--------------------|-----------------|  
 |`Name`|Genel|Gerekli öznitelik. Tür adını belirtir.|  
-|`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini etkinleştirmek için çalışan zamanında kuruculara erişimi denetler.|  
-|`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi için sorgu denetimleri, ancak herhangi bir çalışma zamanı erişim etkinleştirmez.|  
-|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlamayı etkinleştirmek için oluşturucular, yöntemler, alanlar, özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimi denetler.|  
-|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Newtonsoft JSON serileştiricisi gibi kitaplıklar tarafından seri hale getirilecek ve deserialized türü örnekleri etkinleştirmek için, yapıcılar, alanlar ve özelliklere çalışma zamanı erişimi denetler.|  
-|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfı kullanan serileştirme ilkesini <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> denetler.|  
-|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfı kullanan JSON serileştirme <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> ilkesini denetler.|  
-|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfı kullanan XML serileştirme <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> ilkesini denetler.|  
-|`MarshalObject`|Interop|İsteğe bağlı öznitelik. Başvuru türlerini Windows Runtime ve COM'a göre mareşalleme ilkesini denetler.|  
-|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Temsilci türlerini işlev işaretçisi olarak yerel koda göre işaretetmek için ilkeyi denetler.|  
-|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Değer türlerini yerel koda göre mareşalleştirmek için ilkeyi denetler.|  
+|`Activate`|Yansıma|İsteğe bağlı öznitelik. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.|  
+|`Browse`|Yansıma|İsteğe bağlı öznitelik. Program öğeleri hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.|  
+|`Dynamic`|Yansıma|İsteğe bağlı öznitelik. Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler.|  
+|`Serialize`|Serileştirme|İsteğe bağlı öznitelik. Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için oluşturuculara, alanlara ve özelliklere çalışma zamanı erişimini denetler.|  
+|`DataContractSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfını kullanan serileştirme için ilkeyi denetler <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> .|  
+|`DataContractJsonSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfını kullanan JSON serileştirme için ilkeyi denetler <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> .|  
+|`XmlSerializer`|Serileştirme|İsteğe bağlı öznitelik. Sınıfını kullanan XML serileştirme ilkesini denetler <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> .|  
+|`MarshalObject`|Interop|İsteğe bağlı öznitelik. Windows Çalışma Zamanı ve COM 'a başvuru türlerini hazırlama ilkesini denetler.|  
+|`MarshalDelegate`|Interop|İsteğe bağlı öznitelik. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.|  
+|`MarshalStructure`|Interop|İsteğe bağlı öznitelik. Değer türlerini yerel koda hazırlama ilkesini denetler.|  
   
 ## <a name="name-attribute"></a>Ad özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*Type_name*|Tür adı. Bu `<ImpliesType>` öğe tarafından temsil edilen tür, içerdiği `<Type>` öğeyle aynı ad alanında bulunuyorsa, *type_name* ad alanı olmadan türün adını içerebilir. Aksi takdirde, *type_name* tam nitelikli tür adı içermelidir.|  
+|*type_name*|Tür adı. Bu öğe tarafından temsil edilen tür, `<ImpliesType>` kapsayan öğesiyle aynı ad alanında bulunuyorsa `<Type>` *type_name* , ad alanı olmadan türün adını içerebilir. Aksi takdirde, *type_name* tam nitelikli tür adını içermelidir.|  
   
 ## <a name="all-other-attributes"></a>Diğer tüm öznitelikler  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler `All` `Auto`, `Excluded` `Public`, `PublicAndInternal` `Required Public`, `Required PublicAndInternal`, `Required All`, , , ve . Daha fazla bilgi için [Runtime Yönergesi İlke Ayarları'na](runtime-directive-policy-settings.md)bakın.|  
+|*policy_setting*|Bu ilke türüne uygulanacak ayar. Olası değerler şunlardır,,,,,, `All` `Auto` `Excluded` `Public` `PublicAndInternal` `Required Public` `Required PublicAndInternal` ve `Required All` . Daha fazla bilgi için bkz. [çalışma zamanı yönergesi Ilke ayarları](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -66,20 +66,20 @@ Bu ilke, içeren tür veya yönteme uygulanmışsa, bir türe ilke uygular.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Tip>](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Yapılı genel bir türe ve tüm üyelerine yansıma ilkesi uygular.|  
-|[\<Yöntem>](method-element-net-native.md)|Yansıma ilkesini bir yönteme uygular.|  
+|[\<Type>](type-element-net-native.md)|Yansıma ilkesini bir türe ve tüm üyelerine uygular.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Oluşturulan genel türe ve tüm üyelerine yansıma ilkesi uygular.|  
+|[\<Method>](method-element-net-native.md)|Bir yönteme yansıma ilkesi uygular.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe `<ImpliesType>` öncelikle kitaplıklar tarafından kullanılmak üzere tasarlanmıştır. Aşağıdaki senaryoyu ele alar:  
+ `<ImpliesType>`Öğesi öncelikle kitaplıklar tarafından kullanılmak üzere tasarlanmıştır. Aşağıdaki senaryoyu ele alınmaktadır:  
   
-- Bir yordamın bir türe yansıması gerekiyorsa, mutlaka ikinci bir türe yansıtması gerekir.  
+- Bir yordamın bir tür üzerinde yansıtılması gerekiyorsa, ikinci bir tür üzerinde yansıtılması gerekir.  
   
-- Statik çözümleme gerekli olduğunu göstermez, çünkü ikinci türün zımni anlık için meta veriler, aksi takdirde kullanılamaz.  
+- Statik analiz bunun gerekli olduğunu belirtmediği için, ikinci türün örtük olarak belirtilen örneklenmesi için meta veriler kullanılamaz durumda değildir.  
   
- En sık, iki tür paylaşılan türü bağımsız değişkenleri ile genel anlık vardır.  
+ En yaygın olarak, iki tür paylaşılan tür bağımsız değişkenleriyle genel örneklemelerdir.  
   
- Öğe, `<ImpliesType>` üst öğesi tarafından belirtilen türüzerinde yansıma `<ImpliesType>` gereksiniminin, öğe tarafından belirtilen türüzerinde yansıma gereksinimi anlamına geldiği varsayımıyla tanımlanmıştır. Örneğin, aşağıdaki yansıma yönergeleri iki tür `Explicit<T>` için `Implicit<T>`geçerlidir ve .  
+ `<ImpliesType>`Öğesi, kendi üst öğesi tarafından belirtilen türde bir yansıma gereksinimi, öğesi tarafından belirtilen türde yansıma gereksinimini ifade eden varsayımıyla tanımlanmıştır `<ImpliesType>` . Örneğin, aşağıdaki yansıma yönergeleri iki tür için geçerlidir `Explicit<T>` ve `Implicit<T>` .  
   
 ```xml  
 <Type Name="Explicit{ET}">  
@@ -87,9 +87,9 @@ Bu ilke, içeren tür veya yönteme uygulanmışsa, bir türe ilke uygular.
 </Type>  
 ```  
   
- Tanımlı `Explicit` `Dynamic` bir ilke ayarı anlık olmadığı sürece bu yönergenin hiçbir etkisi yoktur. Örneğin, bu durumda `Explicit<Int32>`, `Implicit<Int32>` genel üyeleri köklü anında ve meta verileri dinamik programlama için erişilebilir hale getirilir.  
+ Bir örneklemesinin `Explicit` tanımlı bir ilke ayarı yoksa, bu yönergenin hiçbir etkisi yoktur `Dynamic` . Örneğin, için bu durum,, için olan `Explicit<Int32>` `Implicit<Int32>` genel üyeleriyle birlikte oluşturulur ve meta verileri dinamik programlama için erişilebilir hale getirilir.  
   
- Aşağıda, en az bir serializer için geçerli olan gerçek dünya örneği verilmiştir. Yönergeler, `IList<`bir şey olarak yazılan *bir* `>` şeyi yansıtmanın, uygulama `List<`başına ek açıklama gerektirmeden ilgili *bir şey* `>` türünü yansıtmayı da içerdiği gereksinimini yakalar.  
+ Aşağıda, en az bir seri hale getirici için geçerli olan gerçek dünyada bir örnek verilmiştir. Yönergeler, bir şey olarak yazılmış bir şeyi yansıtan gereksinimi yakalar ve `IList<` *something* `>` `List<` *something* `>` uygulama başına ek açıklama gerekmeden ilgili bir tür üzerinde yansıtma de içerir.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ Bu ilke, içeren tür veya yönteme uygulanmışsa, bir türe ilke uygular.
 </Type>  
 ```  
   
- Bazı `<ImpliesType>` durumlarda genel bir `<Method>` yöntemin anlık olarak bir tür anlık yansıması anlamına gelir, çünkü öğe de bir öğe içinde görünebilir. Örneğin, belirli bir `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` kitaplığın ilişkili <xref:System.Collections.Generic.List%601> ve <xref:System.Array> türleri ile birlikte dinamik olarak erişeceği genel bir yöntem düşünün. Bu olarak ifade edilebilir:  
+ `<ImpliesType>`Öğesi bir öğesi içinde de görünebilir `<Method>` , çünkü bazı durumlarda genel bir yöntemi örneklemede bir tür örneklemesi yansıtılıyor olması gerekir. Örneğin, `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` belirli bir kitaplığın, ilişkili ve türleriyle birlikte dinamik olarak erişebileceği genel bir yöntem düşünün <xref:System.Collections.Generic.List%601> <xref:System.Array> . Bu, şöyle ifade edilebilir:  
   
 ```xml  
 <Type Name="MyType">  

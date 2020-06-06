@@ -11,19 +11,19 @@ helpviewer_keywords:
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154744"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<bağlantı yönetimi için> Öğesi kaldırma (Ağ Ayarları)
-Bağlantı yönetim listesinden bir IP adresi veya DNS adını kaldırır.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>connectionManagement için \<remove> Öğesi (Ağ Ayarları)
+Bağlantı yönetimi listesinden bir IP adresini veya DNS adını kaldırır.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<bağlantıYönetim>**](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>kaldırmak**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,27 +40,27 @@ Bağlantı yönetim listesinden bir IP adresi veya DNS adını kaldırır.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`address`|BIR IP adresi veya DNS adı.|  
+|`address`|Bir IP adresi veya DNS adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[bağlantıYönetim](connectionmanagement-element-network-settings.md)|Bir ağ ana bilgisayarına en fazla bağlantı sayısını belirtir.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Bir ağ konağına en fazla bağlantı sayısını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `remove` belirtilen sunucunun bağlantı yönetimi listesi girişini kaldırır.  
+ `remove`Öğesi, belirtilen sunucu için bağlantı yönetimi listesi girişini kaldırır.  
   
- Özniteliğin `address` değeri geçerli bir IP adresi veya ana bilgisayar adı olmalıdır.  
+ `address`Özniteliğin değeri geçerli BIR IP adresi veya ana bilgisayar adı olmalıdır.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sunucu `www.adventure-works.com` için tüm bağlantı yönetimi listesi girişlerini kaldırır ve ardından bir `www.contoso.com` uygulamayı sunucuya dört, diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
+ Aşağıdaki örnek, sunucu için tüm bağlantı yönetim listesi girişlerini kaldırır `www.adventure-works.com` ve ardından bir uygulamayı sunucuya dört bağlantı `www.contoso.com` ve diğer tüm sunuculara iki bağlantı kullanacak şekilde yapılandırır.  
   
 ```xml  
 <configuration>  

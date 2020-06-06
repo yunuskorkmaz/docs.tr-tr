@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 560dd0bb-f9fb-423c-8857-2101a3654b06
 ms.openlocfilehash: e6e996bd1cc32258167e30287e9338a4773ce921
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152034"
 ---
-# <a name="participants"></a>\<katılımcılar>
-Çalışma zamanından doğrudan yayılan izleme kayıtlarını dinleyen izleme katılımcılarının listesini yapılandırın ve yapılandırıldıkları şekilde işleyin. Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.  
+# \<participants>
+Çalışma zamanından doğrudan yayılmakta olan izleme kayıtlarını dinleyen bir izleme katılımcıları listesini yapılandırın ve bunları yapılandırıldıklarında her türlü şekilde işleyin. Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.  
   
- İş akışı izleme ve izleme katılımcıları hakkında daha fazla bilgi için İş [Akışı İzleme ve İzleme katılımcılarını](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) görün. [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md)  
+ İş akışı izleme ve İzleme katılımcıları hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) Izleme ve [İzleme katılımcıları](../../../windows-workflow-foundation/tracking-participants.md).  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<katılımcılar>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<participants>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +42,25 @@ ms.locfileid: "79152034"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add-of-participants.md)|İzleme katılımcısı için ayarlar içerir.|  
+|[\<add>](add-of-participants.md)|İzleme katılımcısı için ayarları içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<izleme>](tracking.md)|İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.|  
+|[\<tracking>](tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İzleme katılımcıları, iş akışından yayılan izleme verilerini almak ve farklı ortamlara depolamak için kullanılır. Aynı şekilde, izleme Kayıtları üzerinde herhangi bir posta işleme de izleme katılımcısı içinde yapılabilir.  
+ İzleme katılımcıları iş akışından yayılan izleme verilerini almak ve farklı ortalamalarına depolamak için kullanılır. Benzer şekilde, izleme kayıtlarında yapılan tüm gönderi işlemleri izleme katılımcısının içinden de yapılabilir.  
   
- Birden çok izleme katılımcısı izleme olaylarını aynı anda tüketebilir. Her izleme katılımcısı farklı bir izleme profili ile ilişkilendirilebilir.  
+ Birden çok izleme katılımcısı izleme olaylarını eşzamanlı olarak kullanabilir. Her izleme katılımcısı, farklı bir izleme profiliyle ilişkilendirilebilir.  
   
- İzleme kayıtlarını bir ETW oturumuna yazan standart bir izleme katılımcısı sağlanır. Katılımcı, yapılandırma dosyasına izlemeye özgü bir davranış ekleyerek iş akışı hizmetinde yapılandırılır. Bir ETW izleme katılımcısını etkinleştirmek, izleme kayıtlarının olay görüntüleyicisinde görüntülenmesini sağlar. Bu gereksinimlerinizi karşılamazsa, özel bir izleme katılımcısı da yazabilirsiniz.  
+ İzleme kayıtlarını bir ETW oturumuna yazan standart bir izleme katılımcısı sağlanır. Katılımcı bir yapılandırma dosyasına izlemeye özgü bir davranış ekleyerek bir iş akışı hizmeti üzerinde yapılandırılır. ETW izleme katılımcısının etkinleştirilmesi, Olay Görüntüleyicisi 'nde izleme kayıtlarının görüntülenmesine izin verir. Gereksinimlerinizi karşılamıyorsa, özel bir izleme katılımcısı da yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örneği, Web.config dosyasında yapılandırılan standart ETW izleme katılımcısını gösterir.  
+ Aşağıdaki yapılandırma örneği, Web. config dosyasında yapılandırılmış standart ETW izleme katılımcısını gösterir.  
   
- ETW İzleme Katılımcısının İzleme Kayıtlarını ETW'ye yazmak için kullandığı Sağlayıcı ** \<Kimliği, tanılama>** bölümünde tanımlanır. İzleme katılımcısının, abone olduğu izleme kayıtlarını belirtmek için onunla ilişkili bir profili vardır. Bu, ** \<>öğe ekle** öğesinin **profileName** özniteliği ile tanımlanır. Bunlar tanımlandıktan sonra, İzleme Katılımcısı ** \<etwTracking>** hizmet davranışına eklenir. Bu, seçili İzleme Katılımcılarını İş Akışı örneğinin uzantılarına ekleyerek İzleme Kayıtlarını almaya başlar.  
+ ETW Izleme katılımcısı tarafından ETW 'ye Izleme kayıtlarını yazmak için kullanılan sağlayıcı kimliği **\<diagnostics>** bölümünde tanımlanmıştır. İzleme katılımcısının, abone olduğu izleme kayıtlarını belirtmek için kendisiyle ilişkili bir profili vardır. Bu, öğesinin **ProfileName** özniteliği tarafından tanımlanır **\<add>** . Bunlar tanımlandıktan sonra, Izleme katılımcısı **\<etwTracking>** hizmet davranışına eklenir. Bu işlem, Izleme kayıtlarını almaya başlaması için seçilen Izleme katılımcılarını Iş akışı örneğinin uzantılarına ekler.  
   
 ```xml
 <configuration>

@@ -6,18 +6,18 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 7aa3755be97a839cb576d53852b75cfe50e39276
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "72773941"
 ---
-# <a name="client"></a>\<client >
-@No__t_0 öğesi, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.
+# \<client>
+`client`Öğesi, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp; &nbsp; &nbsp; &nbsp; **\<client >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<client>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,23 +36,23 @@ ms.locfileid: "72773941"
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
- Yok.
+ Yok
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<uç nokta >](endpoint-of-client.md)|Bu istemcinin bağlanabileceği uç noktaları belirten bir uç nokta öğeleri koleksiyonu içerir.|
-|[\<metadata >](metadata.md)|Meta verileri işlemeye yönelik ayarları içerir.|
+|[\<endpoint>](endpoint-of-client.md)|Bu istemcinin bağlanabileceği uç noktaları belirten bir uç nokta öğeleri koleksiyonu içerir.|
+|[\<metadata>](metadata.md)|Meta verileri işlemeye yönelik ayarları içerir.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<system. serviceModel >](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|
+|[\<system.serviceModel>](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar. İstemci bölümünde listelenen her bir uç nokta kendi bağlamasını, davranışını ve sözleşmesini tanımlar. @No__t_0 ve `contract` özniteliklerinin birleşimiyle benzersiz şekilde tanımlanır. İstemci kodu, istemcinin uyguladığı hizmet için bir uç noktaya bağlanmak üzere `name` belirtir. @No__t_0 özniteliği atlanırsa, uç noktası uyguladığı sözleşmenin varsayılan uç noktası olarak davranır.
+ `client`Bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar. İstemci bölümünde listelenen her bir uç nokta kendi bağlamasını, davranışını ve sözleşmesini tanımlar. Ve özniteliklerinin birleşimiyle benzersiz şekilde tanımlanır `name` `contract` . İstemci kodu, `name` istemcinin uyguladığı hizmet için bir uç noktaya bağlanmak üzere öğesini belirtir. `name`Özniteliği atlanırsa, uç noktası uyguladığı sözleşmenin varsayılan uç noktası olarak davranır.
 
  Ayrıca, bu bölüm meta verileri işlemeye yönelik ayarları da belirtir.
 

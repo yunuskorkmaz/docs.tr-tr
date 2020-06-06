@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
 ms.openlocfilehash: d9eb182ef9c35d2e4c6f5d434e6b200ae2e7ca26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151851"
 ---
-# <a name="workflowidle"></a>\<iş akışıBoş>
-Boşta kalan iş akışı örnekleri boşaldığında ve kalıcı olduğunda denetleyen bir hizmet davranışı.  
+# \<workflowIdle>
+Boştaki iş akışı örneklerinin ne zaman kaldırılabileceğini ve kalıcı olduğunu denetleyen bir hizmet davranışı.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<davranışlar>**](behaviors-of-workflow.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<davranış>**](behavior-of-servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<iş akışıBoş>**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<workflowIdle>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,8 +40,8 @@ Boşta kalan iş akışı örnekleri boşaldığında ve kalıcı olduğunda den
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|timeToPersist|İş akışının boşta kalıp kalıcı olduğu süreyi belirten bir Zaman Dilimi değeri. Varsayılan değer TimeSpan.MaxValue'dir.<br /><br /> İş akışı örneği boşta kaldığında geçmesini süresi başlar. Bu öznitelik, bir iş akışı örneğini mümkün olduğunca uzun süre bellekte tutarken daha agresif bir şekilde sürdürmek istiyorsanız yararlıdır. Bu öznitelik yalnızca değeri **timeToUnload** özniteliğinden daha azsa geçerlidir. Büyükse, göz ardı edilir. Bu **öznitelik, zaman ToUnload** özniteliği tarafından belirtilen değerden önce atılırsa, iş akışı kaldırılmadan önce kalıcılığın tamamlanması gerekir. Bu iş akışı kalıcı kadar kaldırma işlemi gecikebilir anlamına gelir. Kalıcılık katmanı geçici hatalar için herhangi bir yeniden deneme işlemek için sorumludur ve yalnızca kurtarılamaz hatalar üzerinde özel durumlar atar. Bu nedenle, kalıcılık sırasında atılan tüm özel durumlar ölümcül olarak kabul edilir ve iş akışı örneği iptal edilir.|  
-|timeToUnload|Saat arasındaki süre belirten bir Timespan değeri iş akışı boş olur ve kaldırıldı. Varsayılan değer 1 dakikadır.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik sıfırolarak ayarlanırsa, iş akışı örneği kalıcı dır ve iş akışı boşta kaldıktan hemen sonra boşaltılır. Bu özniteliği TimeSpan.MaxValue olarak ayarlamak, boşaltma işlemini etkin bir şekilde devre dışı eder. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
+|timeToPersist|İş akışının boşta olduğu ve kalıcı olduğu zaman arasındaki süreyi belirten bir TimeSpan değeri. Varsayılan değer TimeSpan. MaxValue ' dır.<br /><br /> İş akışı örneği boşta kaldığında geçmesini süresi başlar. Bu öznitelik, bir iş akışı örneğini daha fazla kararlılık halinde kalıcı hale getirmek istiyorsanız yararlıdır, ancak örneğin, örneği mümkün olduğunca uzun süre tutarken Bu öznitelik yalnızca değeri **TimeToUnload** özniteliğinden daha küçükse geçerlidir. Büyükse, göz ardı edilir. Bu öznitelik **TimeToUnload** özniteliği tarafından belirtilen değerden önce geçtiğinde, iş akışı kaldırılmadan önce Kalıcılık tamamlanmalıdır. Bu iş akışı kalıcı kadar kaldırma işlemi gecikebilir anlamına gelir. Kalıcılık katmanı, geçici hatalara yönelik yeniden denemeleri işlemekten sorumludur ve yalnızca kurtarılamaz hatalarda özel durumlar oluşturur. Bu nedenle, kalıcılık sırasında oluşan tüm özel durumlar önemli olarak değerlendirilir ve iş akışı örneği iptal edilir.|  
+|timeToUnload|Saat arasındaki süre belirten bir Timespan değeri iş akışı boş olur ve kaldırıldı. Varsayılan değer 1 dakikadır.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik sıfır olarak ayarlandıysa iş akışı örneği kalıcıdır ve iş akışı boşta olduktan hemen sonra kaldırılır. Bu özniteliğin TimeSpan. MaxValue olarak ayarlanması, kaldırma işlemini etkin bir şekilde devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,7 +50,7 @@ Boşta kalan iş akışı örnekleri boşaldığında ve kalıcı olduğunda den
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<hizmet davranış \<>Davranışlar>](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>durumunu\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

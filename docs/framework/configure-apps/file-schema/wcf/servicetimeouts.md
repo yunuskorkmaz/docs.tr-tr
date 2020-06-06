@@ -3,21 +3,21 @@ title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
 ms.openlocfilehash: 801a7aaf1f0d0fa267fa8cca3d2e7fd02919c475
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399557"
 ---
-# <a name="servicetimeouts"></a>\<Servicetimeaşımları >
+# \<serviceTimeouts>
 Bir hizmet için zaman aşımını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Servicetimeaşımları >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceTimeouts>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,7 +35,7 @@ Bir hizmet için zaman aşımını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`transactionTimeout`|Bir <xref:System.TimeSpan> işlemin istemciden sunucuya akışı gereken zaman aralığını belirten bir değer. Varsayılan değer "00:00:00" dır.|  
+|`transactionTimeout`|<xref:System.TimeSpan>Bir işlemin istemciden sunucuya akışı gereken zaman aralığını belirten bir değer. Varsayılan değer "00:00:00" dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,7 +44,7 @@ Bir hizmet için zaman aşımını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

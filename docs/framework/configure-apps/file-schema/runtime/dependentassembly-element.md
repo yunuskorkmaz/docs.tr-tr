@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154211"
 ---
-# <a name="dependentassembly-element"></a>\<bağımlıMontaj> Öğesi
-Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `dependentAssembly` montaj için bir öğe kullanın.  
+# <a name="dependentassembly-element"></a>\<dependentAssembly> Öğesi
+Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `dependentAssembly`Her derleme için bir öğe kullanın.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<montajBağlama>**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bağımlıAssembly>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,10 +41,10 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `dependent
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Derleme hakkında tanımlayıcı bilgileri içerir. Bu öğe her `dependentAssembly` öğeye dahil edilmelidir.|  
-|`codeBase`|Bilgisayarda yüklü değilse, çalışma zamanının paylaşılan bir derlemeyi nerede bulabileceğini belirtir.|  
+|`assemblyIdentity`|Derlemeyle ilgili tanımlama bilgilerini içerir. Bu öğe her bir `dependentAssembly` öğeye eklenmelidir.|  
+|`codeBase`|Çalışma zamanının, bilgisayarda yüklü değilse paylaşılan bir derlemeyi bulabilecekleri yeri belirtir.|  
 |`bindingRedirect`|Bir derleme sürümünü diğerine yeniden yönlendirir.|  
-|`publisherPolicy`|Çalışma zamanının bu derleme için yayımcı ilkesini kullanıp uygulamayacağını belirtir.|  
+|`publisherPolicy`|Çalışma zamanının bu derleme için yayımcı ilkesi uygulanıp uygulanmadığını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -55,7 +55,7 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `dependent
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki derleme için derleme bilgilerinin nasıl kapsüllenebildiğini gösterir.  
+ Aşağıdaki örnek, iki derleme için derleme bilgilerinin nasıl kapsüllagösterdiğini gösterir.  
   
 ```xml  
 <configuration>  
@@ -80,6 +80,6 @@ Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `dependent
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Derleme Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)

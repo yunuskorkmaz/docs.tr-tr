@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
 ms.openlocfilehash: 30ce69a35cfdd34e0dfea5c682347eb9187e04ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152456"
 ---
-# <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Sınıf veya türetilmiş sınıflar için isteğe bağlı yapılandırma sağlar.  
+# \<x509SecurityTokenHandlerRequirement>
+Sınıf veya türetilmiş sınıflar için isteğe bağlı yapılandırma sağlar <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> .  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509SecurityTokenHandlerRequirement>**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -47,20 +47,20 @@ ms.locfileid: "79152456"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|sertifikaDoğrulamaModu|X.509 sertifikası için kullanılacak doğrulama modunu belirten bir <xref:System.ServiceModel.Security.X509CertificateValidationMode> değer. Varsayılan değer "PeerOrChainTrust"tır.|  
-|haritaToWindows|Belirteç işleyicisinin gelen UPN talebini kullanarak doğrulama belirteciyle bir Windows hesabıyla eşlemesi gerekip gerekmediğini belirtir. Varsayılan "false" olur.|  
-|iptalModu|X.509 sertifikası için kullanılacak iptal modunu belirten bir <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> değer. Varsayılan değer "Çevrimiçi"dir.|  
-|güvenilirStoreLocation|X.509 sertifika deposunu belirten bir <xref:System.Security.Cryptography.X509Certificates.StoreLocation> değer. Varsayılan değer "LocalMachine"dir.|  
-|sertifikaValidator|'den <xref:System.IdentityModel.Selectors.X509CertificateValidator>türeyen özel bir tür. `certificateValidationMode` Öznitelik "Özel" ise, bu tür bir örneği veren sertifika doğrulama için kullanılır.|  
+|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>X. 509.440 sertifikası için kullanılacak doğrulama modunu belirten bir değer. Varsayılan değer "PeerOrChainTrust" dır.|  
+|mapToWindows|Belirteç işleyicisinin, gelen UPN talebini kullanarak doğrulama belirtecini bir Windows hesabına eşlemenizi isteyip istemediğinizi belirtir. Varsayılan değer "false" dır.|  
+|Revocationmodu|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>X. 509.440 sertifikası için kullanılacak iptal modunu belirten bir değer. Varsayılan değer "çevrimiçi" dır.|  
+|trustedStoreLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>X. 509.440 sertifika deposunu belirten bir değer. Varsayılan değer "LocalMachine" dır.|  
+|certificateValidator|Öğesinden türetilen özel bir tür <xref:System.IdentityModel.Selectors.X509CertificateValidator> . `certificateValidationMode`Öznitelik "Custom" ise, bu türün bir örneği veren sertifika doğrulaması için kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add.md)|Belirteç işleyicisi koleksiyonuna belirtilen güvenlik belirteci işleyicisi ekler.|  
+|[\<add>](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
   
 ## <a name="example"></a>Örnek  
   

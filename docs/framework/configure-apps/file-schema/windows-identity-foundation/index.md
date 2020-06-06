@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
 ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152729"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation Yapılandırma Şeması
 
-Bu bölümdeki konular, Windows Identity Foundation (WIF) yapılandırma şeması hakkında bilgi sağlar. Ayrıca, bir uygulamayı çerçevetarafından açığa çıkarılan sınıflar aracılığıyla WIF kullanacak şekilde yapılandırabilirsiniz. Bu sınıflar şemada ilgili öğeleri tedavi eden bölümlerde belirtilmiştir. Aşağıda WIF yapılandırma şeması tarafından maruz kalan temel XML etiket yapısı gösterilmektedir. Öznitelikler atlanır. Vurgulanan yorumlar şemanın ana bileşenlerini gösterir.  
+Bu bölümdeki konularda, Windows Identity Foundation (WıF) yapılandırma şeması hakkında bilgi sağlanmaktadır. Ayrıca, bir uygulamayı Framework tarafından sunulan sınıfları kullanarak WıF kullanacak şekilde yapılandırabilirsiniz. Bu sınıflar, şemadaki ilgili öğeleri ele alan bölümlerde belirtilmiştir. Aşağıdaki, WıF yapılandırma şeması tarafından sunulan temel XML etiketi yapısını gösterir. Öznitelikler atlanır. Vurgulanan Yorumlar şemanın ana bileşenlerini gösterir.  
   
 ```xml  
 <configuration>  
@@ -111,6 +111,6 @@ Bu bölümdeki konular, Windows Identity Foundation (WIF) yapılandırma şemas�
   
 ## <a name="in-this-section"></a>Bu Bölümde  
 
-[ \<system.identityModel>](system-identitymodel.md) Uygulamalarda WIF seçeneklerini etkinleştirmek için yapılandırma sağlar.  
+[\<system.identityModel>](system-identitymodel.md)Uygulamalarda WıF seçeneklerini etkinleştirmek için yapılandırma sağlar.  
   
-[ \<system.identityModel.services>](system-identitymodel-services.md) WIF kullanarak pasif federasyon için yapılandırma sağlar. Oturum Kimlik Doğrulama Modülasyon Unu (SAM) ve Federated Authentication Module (WSFAM) yapılandırır.
+[\<system.identityModel.services>](system-identitymodel-services.md)WıF kullanarak Pasif Federasyon için yapılandırma sağlar. Oturum kimlik doğrulama modülünü (SAM) ve federal kimlik doğrulama modülünü (WSFAD) yapılandırır.

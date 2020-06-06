@@ -11,20 +11,20 @@ helpviewer_keywords:
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154939"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<bypasslist (Ağ Ayarları) için açık> Öğesi
-Proxy bypass listesini temizler.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist için \<clear> Öğesi (Ağ Ayarları)
+Proxy atlama listesini temizler.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<açık>**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,18 +43,18 @@ Proxy bypass listesini temizler.
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Bypasslist](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri açıklayan bir dizi düzenli ifade sağlar.|  
+|[BypassList](bypasslist-element-network-settings.md)|Proxy kullanmayan adresleri tanımlayan normal ifadeler kümesi sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `clear` tüm girişleri baypas listesinden temizler.  
+ `clear`Öğesi atlama listesinden tüm girdileri temizler.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, baypas listesini temizler ve sonra bypass listesine iki adres ekler. İlki, contoso.com etki alanında bulunan tüm sunucular için proxy'yi atlar; ikincisi, IP adresi 192.168 ile başlayan tüm sunucular için proxy'yi atlar.  
+ Aşağıdaki örnek atlama listesini temizler ve atlama listesine iki adres ekler. İlki, contoso.com etki alanındaki tüm sunucular için proxy 'yi atlar; İkincisi, IP adresi 192,168 ile başlayan tüm sunucular için proxy 'yi atlar.  
   
 ```xml  
 <configuration>  

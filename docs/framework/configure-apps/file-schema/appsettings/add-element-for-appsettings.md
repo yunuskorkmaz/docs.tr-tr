@@ -1,5 +1,5 @@
 ---
-title: <add> için <appSettings> öğesi
+title: <appSettings> için <add> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214807"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings için > öğesi \<ekleyin >
+# <a name="add-element-for-appsettings"></a>\<appSettings> için \<add> öğesi
 
 Özel bir uygulama ayarı ekler.
 
-[ **\<yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ekleme >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,17 +35,17 @@ ms.locfileid: "77214807"
 |           | Açıklama |
 | --------- | ----------- |
 | **anahtar**   | Gerekli öznitelik.<br><br>Eklenecek anahtarın adını belirtir. |
-| **value** | Gerekli öznitelik.<br><br>Eklenecek anahtarın değerini belirtir. |
+| **deeri** | Gerekli öznitelik.<br><br>Eklenecek anahtarın değerini belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-Hiçbiri
+Yok
 
 ## <a name="example"></a>Örnek
 
@@ -57,7 +57,7 @@ Aşağıdaki örnek, uygulamanın adı için nasıl özel bir yapılandırma aya
 </appSettings>
 ```
 
-Aşağıdaki örnek, bir ASP.NET uygulamasında iki uyumluluk ayarı tanımlamak için `<add>` öğesini kullanır:
+Aşağıdaki örnek, `<add>` bir ASP.NET uygulamasında iki uyumluluk ayarı tanımlamak için öğesini kullanır:
 
 ```xml
 <appSettings>

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155225"
 ---
-# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Elemanı
-Sınıfların dost adlara eşlemelerini içerir.  
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> Öğesi
+Kolay adlarla sınıfların eşlemelerini içerir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<şifrelemeAyarlar>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoNameMapping>**
 
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,20 +40,20 @@ Sınıfların dost adlara eşlemelerini içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`cryptoClasses`|** \<NameEntry>** öğesinde dost bir ada eşleme olan şifreleme sınıflarının listesini içerir.|  
-|`nameEntry`|Bir sınıf adını, bir sınıfın birçok dost ada sahip olmasını sağlayan dostu bir algoritma adı ile eşler.|  
+|`cryptoClasses`|Öğesinde kolay bir ada eşleme olan şifreleme sınıflarının bir listesini içerir **\<nameEntry>** .|  
+|`nameEntry`|Bir sınıf adını kolay bir algoritma adıyla eşleştirir, bu da bir sınıfın birçok kolay adına sahip olmasına olanak tanır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`cryptographySettings`|Şifreleme ayarları içerir.|  
-|`cryptoNameMapping`|Sınıfların dost adlara eşlemelerini içerir.|  
-|`mscorlib`|Şifreleme \<Ayarlar> öğesini içerir.|  
+|`cryptographySettings`|Şifreleme ayarlarını içerir.|  
+|`cryptoNameMapping`|Kolay adlarla sınıfların eşlemelerini içerir.|  
+|`mscorlib`|Öğesini içerir \<cryptographySettings> .|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ** \<şifreleme** sınıfına başvurmak ve çalışma süresini yapılandırmak için cryptoNameMapping>öğesini nasıl kullanacağımı gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yönteme <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> geçirebilir ve `MyCryptoRSAClass` bir nesneyi döndürmek için yöntemi kullanabilirsiniz.  
+ Aşağıdaki örnek, **\<cryptoNameMapping>** bir şifreleme sınıfına başvurmak ve çalışma zamanını yapılandırmak için öğesinin nasıl kullanılacağını gösterir. Daha sonra "RSA" dizesini <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemine geçirebilir ve <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodunu kullanarak bir `MyCryptoRSAClass` nesne döndürebilirsiniz.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ Sınıfların dost adlara eşlemelerini içerir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
