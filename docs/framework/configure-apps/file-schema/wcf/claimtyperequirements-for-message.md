@@ -1,22 +1,22 @@
 ---
-title: <claimTypeRequirements> için <message>
+title: <claimTypeRequirements>bekleniyor<message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
 ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "61704413"
 ---
-# <a name="claimtyperequirements-for-message"></a><span data-ttu-id="41215-102">\<claimTypeRequirements > için \<iletisi ></span><span class="sxs-lookup"><span data-stu-id="41215-102">\<claimTypeRequirements> for \<message></span></span>
-<span data-ttu-id="41215-103">Gerekli talep türlerinin koleksiyonunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="41215-103">Specifies a collection of required claim types.</span></span>  
+# <a name="claimtyperequirements-for-message"></a><span data-ttu-id="282cb-102">\<claimTypeRequirements>bekleniyor\<message></span><span class="sxs-lookup"><span data-stu-id="282cb-102">\<claimTypeRequirements> for \<message></span></span>
+<span data-ttu-id="282cb-103">Gerekli talep türlerinin koleksiyonunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="282cb-103">Specifies a collection of required claim types.</span></span>  
   
- <span data-ttu-id="41215-104">Koleksiyon hizmeti tarafından İstemcinin hizmete erişmek için kullandığı verilen belirteç olması gerekli ve isteğe bağlı talepleri belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="41215-104">The collection is used by the service to specify any required and optional claims which must be in the issued token the client uses to access the service.</span></span> <span data-ttu-id="41215-105">Hizmet meta verilerinde gerekli talep türlerinin WSDL yayımlama etkinleştirildi, ancak WCF verilen belirteç içeren belirli talep türlerini gerektirmeyen kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="41215-105">The service exposes the required claim types in metadata if WSDL publishing is enabled but WCF does not require the issued token contain the specified claim types.</span></span> <span data-ttu-id="41215-106">Gerekli talep türlerinin bulunduğunu zorunlu isteyen Hizmetleri Yetkilendirme İlkesi'ni kullanarak yapmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="41215-106">Services wishing to enforce required claim types are present should do using authorization policy.</span></span>  
+ <span data-ttu-id="282cb-104">Koleksiyon, hizmet tarafından, istemcinin hizmete erişmek için kullandığı, verilen belirteçte olması gereken gerekli ve isteğe bağlı talepler belirtmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="282cb-104">The collection is used by the service to specify any required and optional claims which must be in the issued token the client uses to access the service.</span></span> <span data-ttu-id="282cb-105">WSDL yayımlaması etkinse, bu hizmet gerekli talep türlerini meta verilerde kullanıma sunar, ancak WCF verilen belirtecin belirtilen talep türlerini içermesini gerektirmez.</span><span class="sxs-lookup"><span data-stu-id="282cb-105">The service exposes the required claim types in metadata if WSDL publishing is enabled but WCF does not require the issued token contain the specified claim types.</span></span> <span data-ttu-id="282cb-106">Gerekli talep türlerini zorlamak isteyen hizmetler, yetkilendirme ilkesi kullanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="282cb-106">Services wishing to enforce required claim types are present should do using authorization policy.</span></span>  
   
- <span data-ttu-id="41215-107">Federasyon istemcilerde istemci isteğindeki güvenlik belirteci hizmeti verilen bir belirteç için gönderilen gerekli ve isteğe bağlı talepler listesinin bu koleksiyonu içerir.</span><span class="sxs-lookup"><span data-stu-id="41215-107">On federated clients, this collection contains the list of required and optional claims which is sent to the security token service in the client’s request for an issued token.</span></span>  
+ <span data-ttu-id="282cb-107">Federasyon istemcilerinde, bu koleksiyon, verilen belirteç için istemcinin isteğindeki güvenlik belirteci hizmetine gönderilen gerekli ve isteğe bağlı taleplerin listesini içerir.</span><span class="sxs-lookup"><span data-stu-id="282cb-107">On federated clients, this collection contains the list of required and optional claims which is sent to the security token service in the client’s request for an issued token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41215-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="41215-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="282cb-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="282cb-108">See also</span></span>
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>

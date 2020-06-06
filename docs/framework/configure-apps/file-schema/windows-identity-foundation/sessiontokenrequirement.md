@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
 ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152547"
 ---
-# <a name="sessiontokenrequirement"></a><span data-ttu-id="b7e59-101">\<oturumTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="b7e59-101">\<sessionTokenRequirement></span></span>
-<span data-ttu-id="b7e59-102"><xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="b7e59-102">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
+# \<sessionTokenRequirement>
+<span data-ttu-id="c5cd3-101"><xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="c5cd3-101">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
   
-<span data-ttu-id="b7e59-103">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="b7e59-103">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="b7e59-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span><span class="sxs-lookup"><span data-stu-id="b7e59-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span></span>\
-<span data-ttu-id="b7e59-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span><span class="sxs-lookup"><span data-stu-id="b7e59-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span></span>\
-<span data-ttu-id="b7e59-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<güvenlikTokenHandlers>**](securitytokenhandlers.md)</span><span class="sxs-lookup"><span data-stu-id="b7e59-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)</span></span>\
-<span data-ttu-id="b7e59-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>ekleyin**](add.md)</span><span class="sxs-lookup"><span data-stu-id="b7e59-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)</span></span>\
-<span data-ttu-id="b7e59-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oturumTokenRequirement>**</span><span class="sxs-lookup"><span data-stu-id="b7e59-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**  
   
-## <a name="syntax"></a><span data-ttu-id="b7e59-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b7e59-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5cd3-102">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c5cd3-102">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -35,25 +35,25 @@ ms.locfileid: "79152547"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b7e59-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="b7e59-110">Attributes and Elements</span></span>  
- <span data-ttu-id="b7e59-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="b7e59-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c5cd3-103">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c5cd3-103">Attributes and Elements</span></span>  
+ <span data-ttu-id="c5cd3-104">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c5cd3-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b7e59-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b7e59-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c5cd3-105">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c5cd3-105">Attributes</span></span>  
   
-|<span data-ttu-id="b7e59-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="b7e59-113">Attribute</span></span>|<span data-ttu-id="b7e59-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b7e59-114">Description</span></span>|  
+|<span data-ttu-id="c5cd3-106">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c5cd3-106">Attribute</span></span>|<span data-ttu-id="c5cd3-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5cd3-107">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="b7e59-115">ömür</span><span class="sxs-lookup"><span data-stu-id="b7e59-115">lifetime</span></span>|<span data-ttu-id="b7e59-116">Oturum belirteçlerinin kullanım ömrünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="b7e59-116">Specifies the lifetime of session tokens.</span></span>|  
+|<span data-ttu-id="c5cd3-108">ömür</span><span class="sxs-lookup"><span data-stu-id="c5cd3-108">lifetime</span></span>|<span data-ttu-id="c5cd3-109">Oturum belirteçlerinin ömrünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="c5cd3-109">Specifies the lifetime of session tokens.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b7e59-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="b7e59-117">Child Elements</span></span>  
- <span data-ttu-id="b7e59-118">None</span><span class="sxs-lookup"><span data-stu-id="b7e59-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c5cd3-110">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c5cd3-110">Child Elements</span></span>  
+ <span data-ttu-id="c5cd3-111">Yok</span><span class="sxs-lookup"><span data-stu-id="c5cd3-111">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b7e59-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="b7e59-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c5cd3-112">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c5cd3-112">Parent Elements</span></span>  
   
-|<span data-ttu-id="b7e59-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="b7e59-120">Element</span></span>|<span data-ttu-id="b7e59-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b7e59-121">Description</span></span>|  
+|<span data-ttu-id="c5cd3-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="c5cd3-113">Element</span></span>|<span data-ttu-id="c5cd3-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c5cd3-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b7e59-122">\<>ekleyin</span><span class="sxs-lookup"><span data-stu-id="b7e59-122">\<add></span></span>](add.md)|<span data-ttu-id="b7e59-123">Belirteç işleyicisi koleksiyonuna belirtilen güvenlik belirteci işleyicisi ekler.</span><span class="sxs-lookup"><span data-stu-id="b7e59-123">Adds the specified security token handler to the token handler collection.</span></span>|  
+|[\<add>](add.md)|<span data-ttu-id="c5cd3-115">Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.</span><span class="sxs-lookup"><span data-stu-id="c5cd3-115">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="b7e59-124">Örnek</span><span class="sxs-lookup"><span data-stu-id="b7e59-124">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c5cd3-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="c5cd3-116">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">

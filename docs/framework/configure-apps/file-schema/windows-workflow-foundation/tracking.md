@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
 ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151916"
 ---
-# <a name="tracking"></a><span data-ttu-id="8c680-101">\<izleme></span><span class="sxs-lookup"><span data-stu-id="8c680-101">\<tracking></span></span>
-<span data-ttu-id="8c680-102">İş akışı hizmeti için izleme ayarlarını tanımlamak için bir yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="8c680-102">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
+# \<tracking>
+<span data-ttu-id="68862-101">Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="68862-101">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
   
- <span data-ttu-id="8c680-103">İş akışı izleme ve yapılandırmasında daha fazla bilgi için [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md) [bkz.](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)</span><span class="sxs-lookup"><span data-stu-id="8c680-103">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
+ <span data-ttu-id="68862-102">İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="68862-102">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
   
-<span data-ttu-id="8c680-104">[**\<yapılandırma>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="8c680-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="8c680-105">&nbsp;&nbsp;[**\<Sistem. ServiceModel>**](system-servicemodel-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="8c680-105">&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)</span></span>\
-<span data-ttu-id="8c680-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<izleme>**</span><span class="sxs-lookup"><span data-stu-id="8c680-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**  
   
-## <a name="syntax"></a><span data-ttu-id="8c680-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c680-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68862-103">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="68862-103">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -77,29 +77,29 @@ ms.locfileid: "79151916"
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8c680-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c680-108">Attributes and Elements</span></span>  
- <span data-ttu-id="8c680-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="8c680-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="68862-104">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="68862-104">Attributes and Elements</span></span>  
+ <span data-ttu-id="68862-105">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="68862-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8c680-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="8c680-110">Attributes</span></span>  
- <span data-ttu-id="8c680-111">Yok.</span><span class="sxs-lookup"><span data-stu-id="8c680-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="68862-106">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="68862-106">Attributes</span></span>  
+ <span data-ttu-id="68862-107">Yok.</span><span class="sxs-lookup"><span data-stu-id="68862-107">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="8c680-112">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c680-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="68862-108">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="68862-108">Child Elements</span></span>  
   
-|<span data-ttu-id="8c680-113">Öğe</span><span class="sxs-lookup"><span data-stu-id="8c680-113">Element</span></span>|<span data-ttu-id="8c680-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c680-114">Description</span></span>|  
+|<span data-ttu-id="68862-109">Öğe</span><span class="sxs-lookup"><span data-stu-id="68862-109">Element</span></span>|<span data-ttu-id="68862-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="68862-110">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8c680-115">\<katılımcılar></span><span class="sxs-lookup"><span data-stu-id="8c680-115">\<participants></span></span>](participants.md)|<span data-ttu-id="8c680-116">İzleme kayıtlarına abone olan katılımcıları tanımlayan yapılandırma öğeleri koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="8c680-116">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="8c680-117">İzleme katılımcıları, izleme kayıtlarından yükü işlemek için gereken mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).</span><span class="sxs-lookup"><span data-stu-id="8c680-117">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
-|[<span data-ttu-id="8c680-118">\<izlemeProfil></span><span class="sxs-lookup"><span data-stu-id="8c680-118">\<trackingProfile></span></span>](trackingprofile.md)|<span data-ttu-id="8c680-119">İş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için izleme profili.</span><span class="sxs-lookup"><span data-stu-id="8c680-119">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
+|[\<participants>](participants.md)|<span data-ttu-id="68862-111">Kayıtları izlemeye abone olan katılımcıları tanımlayan bir yapılandırma öğeleri koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="68862-111">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="68862-112">İzleme katılımcıları, izleme kayıtlarından yükü işlemeye yönelik mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).</span><span class="sxs-lookup"><span data-stu-id="68862-112">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
+|[\<trackingProfile>](trackingprofile.md)|<span data-ttu-id="68862-113">Bir iş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için bir izleme profili.</span><span class="sxs-lookup"><span data-stu-id="68862-113">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8c680-120">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="8c680-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="68862-114">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="68862-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="8c680-121">Öğe</span><span class="sxs-lookup"><span data-stu-id="8c680-121">Element</span></span>|<span data-ttu-id="8c680-122">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c680-122">Description</span></span>|  
+|<span data-ttu-id="68862-115">Öğe</span><span class="sxs-lookup"><span data-stu-id="68862-115">Element</span></span>|<span data-ttu-id="68862-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="68862-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8c680-123">Sistem.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8c680-123">system.ServiceModel</span></span>|<span data-ttu-id="8c680-124">Tüm iş akışı yapılandırma öğelerinin kök öğe.</span><span class="sxs-lookup"><span data-stu-id="8c680-124">The root element of all workflow configuration elements.</span></span>|  
+|<span data-ttu-id="68862-117">Sistem.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="68862-117">system.ServiceModel</span></span>|<span data-ttu-id="68862-118">Tüm iş akışı yapılandırma öğelerinin kök öğe.</span><span class="sxs-lookup"><span data-stu-id="68862-118">The root element of all workflow configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8c680-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8c680-125">Remarks</span></span>  
- <span data-ttu-id="8c680-126">İzleme, iş akışının yürütülmesini inceleme olanağı sağlar.</span><span class="sxs-lookup"><span data-stu-id="8c680-126">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="8c680-127">İş akışı izleme altyapısı, yürütme sırasında ki önemli olayları yansıtan kayıtları yayacak bir iş akışı sağlar.</span><span class="sxs-lookup"><span data-stu-id="8c680-127">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="8c680-128">Örneğin, bir iş akışı örneği başlatıldığında veya izleme kayıtlarını tamamladığında yayımlanır.</span><span class="sxs-lookup"><span data-stu-id="8c680-128">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="8c680-129">İzleme, iş akışı değişkenleriyle ilişkili iş ile ilgili verileri de ayıklayabilir.</span><span class="sxs-lookup"><span data-stu-id="8c680-129">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="8c680-130">Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, sipariş kimliği izleme kaydıyla birlikte ayıklanabilir.</span><span class="sxs-lookup"><span data-stu-id="8c680-130">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="8c680-131">Genel olarak, WF izlemeyi etkinleştirmek, iş akışı yürütmesi üzerinden tanılamayı veya iş analitiğini kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="8c680-131">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="68862-119">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="68862-119">Remarks</span></span>  
+ <span data-ttu-id="68862-120">İzleme, bir iş akışının yürütülmesini incelemenize olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="68862-120">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="68862-121">İş akışı izleme altyapısı, yürütme sırasında önemli olayları yansıtan kayıtları göstermek için bir iş akışı araçları sağlar.</span><span class="sxs-lookup"><span data-stu-id="68862-121">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="68862-122">Örneğin, bir iş akışı örneği başlatıldığında ya da tamamlandığında izleme kayıtları yayınlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="68862-122">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="68862-123">İzleme, iş akışı değişkenleriyle ilişkili iş ile ilgili verileri de ayıklayabilir.</span><span class="sxs-lookup"><span data-stu-id="68862-123">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="68862-124">Örneğin, iş akışı bir sipariş işleme sistemini temsil ediyorsa, sipariş kimliği izleme kaydıyla birlikte ayıklanabilir.</span><span class="sxs-lookup"><span data-stu-id="68862-124">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="68862-125">Genel olarak, WF izlemeyi etkinleştirmek, bir iş akışı yürütmesi üzerinde tanılamayı veya iş analizlerini kolaylaştırır.</span><span class="sxs-lookup"><span data-stu-id="68862-125">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c680-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c680-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68862-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="68862-126">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [<span data-ttu-id="8c680-133">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="8c680-133">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="68862-127">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="68862-127">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

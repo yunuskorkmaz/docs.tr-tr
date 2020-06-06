@@ -1,5 +1,5 @@
 ---
-title: <clear> için <appSettings> öğesi
+title: <appSettings> için <clear> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77214790"
 ---
-# <a name="clear-element-for-appsettings"></a><span data-ttu-id="b8176-102">\<appSettings için > öğesi \<temizleyin ></span><span class="sxs-lookup"><span data-stu-id="b8176-102">\<clear> element for \<appSettings></span></span>
+# <a name="clear-element-for-appsettings"></a><span data-ttu-id="895a1-102">\<appSettings> için \<clear> öğesi</span><span class="sxs-lookup"><span data-stu-id="895a1-102">\<clear> element for \<appSettings></span></span>
 
-<span data-ttu-id="b8176-103">Özel uygulama ayarlarını temizler.</span><span class="sxs-lookup"><span data-stu-id="b8176-103">Clears custom application settings.</span></span>
+<span data-ttu-id="895a1-103">Özel uygulama ayarlarını temizler.</span><span class="sxs-lookup"><span data-stu-id="895a1-103">Clears custom application settings.</span></span>
 
-<span data-ttu-id="b8176-104">[ **\<yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="b8176-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="b8176-105">&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="b8176-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)</span></span>\
-<span data-ttu-id="b8176-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<temizle >**</span><span class="sxs-lookup"><span data-stu-id="b8176-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
-## <a name="syntax"></a><span data-ttu-id="b8176-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b8176-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="895a1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="895a1-104">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -30,23 +30,23 @@ ms.locfileid: "77214790"
 </appSettings>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="b8176-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="b8176-108">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="895a1-105">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="895a1-105">Attributes</span></span>
 
-<span data-ttu-id="b8176-109">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="b8176-109">None</span></span>
+<span data-ttu-id="895a1-106">Yok</span><span class="sxs-lookup"><span data-stu-id="895a1-106">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="b8176-110">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="b8176-110">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="895a1-107">Üst öğe</span><span class="sxs-lookup"><span data-stu-id="895a1-107">Parent element</span></span>
 
-|     | <span data-ttu-id="b8176-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b8176-111">Description</span></span> |
+|     | <span data-ttu-id="895a1-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="895a1-108">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="b8176-112"> **\<appSettings >** </span><span class="sxs-lookup"><span data-stu-id="b8176-112">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="b8176-113">Dosya yolları, XML Web hizmeti URL 'Leri veya diğer özel uygulama yapılandırma bilgileri gibi özel uygulama ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="b8176-113">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom application configuration information.</span></span> |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | <span data-ttu-id="895a1-109">Dosya yolları, XML Web hizmeti URL 'Leri veya diğer özel uygulama yapılandırma bilgileri gibi özel uygulama ayarlarını içerir.</span><span class="sxs-lookup"><span data-stu-id="895a1-109">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom application configuration information.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="b8176-114">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="b8176-114">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="895a1-110">Alt öğeleri</span><span class="sxs-lookup"><span data-stu-id="895a1-110">Child elements</span></span>
 
-<span data-ttu-id="b8176-115">Hiçbiri</span><span class="sxs-lookup"><span data-stu-id="b8176-115">None</span></span>
+<span data-ttu-id="895a1-111">Yok</span><span class="sxs-lookup"><span data-stu-id="895a1-111">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="b8176-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="b8176-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="895a1-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="895a1-112">Example</span></span>
 
-<span data-ttu-id="b8176-117">Aşağıdaki örnek, özel yapılandırma ayarlarının nasıl temizyükleneceğini göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="b8176-117">The following example shows how to clear custom configuration settings:</span></span>
+<span data-ttu-id="895a1-113">Aşağıdaki örnek, özel yapılandırma ayarlarının nasıl temizyükleneceğini göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="895a1-113">The following example shows how to clear custom configuration settings:</span></span>
 
 ```xml
 <appSettings>
@@ -54,6 +54,6 @@ ms.locfileid: "77214790"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b8176-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b8176-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="895a1-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="895a1-114">See also</span></span>
 
-- [<span data-ttu-id="b8176-119">.NET Framework için yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="b8176-119">Configuration file schema for the .NET Framework</span></span>](../index.md)
+- [<span data-ttu-id="895a1-115">.NET Framework için yapılandırma dosyası şeması</span><span class="sxs-lookup"><span data-stu-id="895a1-115">Configuration file schema for the .NET Framework</span></span>](../index.md)
