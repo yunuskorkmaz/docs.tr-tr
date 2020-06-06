@@ -3,20 +3,20 @@ title: <tracking>WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
 ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399426"
 ---
-# <a name="tracking-of-wcf"></a>\<WCF > izleme
+# <a name="tracking-of-wcf"></a>\<tracking>WCF
 Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.  
   
  İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<İzleme >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -86,8 +86,8 @@ Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yap
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Katılımcılar >](../windows-workflow-foundation/participants.md)|Kayıtları izlemeye abone olan katılımcıları tanımlayan bir yapılandırma öğeleri koleksiyonu. İzleme katılımcıları, izleme kayıtlarından yükü işlemeye yönelik mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).|  
-|[\<trackingProfile >](../windows-workflow-foundation/trackingprofile.md)|Bir iş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için bir izleme profili.|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|Kayıtları izlemeye abone olan katılımcıları tanımlayan bir yapılandırma öğeleri koleksiyonu. İzleme katılımcıları, izleme kayıtlarından yükü işlemeye yönelik mantığı içerir (örneğin, bir dosyaya yazmayı seçebilirler).|  
+|[\<trackingProfile>](../windows-workflow-foundation/trackingprofile.md)|Bir iş akışı örneğinden yayılan izleme kayıtlarını filtrelemek için bir izleme profili.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

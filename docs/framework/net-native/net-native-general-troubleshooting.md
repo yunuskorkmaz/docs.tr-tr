@@ -3,10 +3,10 @@ title: .NET Yerel Genel Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128236"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
@@ -29,7 +29,7 @@ Bu konuda, .NET Native ile uygulama geliştirirken karşılaşabileceğiniz olas
 
   **Çözüm:** .NET Native derleyicisi çağrılırsa, daha uzun bir derleme zamanı fark edersiniz ve Task Manager ıLC. exe ve nutc_driver. exe gibi çeşitli .NET Native bileşen süreçlerini gösterir.
 
-  Projenizi .NET Native ile başarılı bir şekilde oluşturduktan sonra, bu çıktıyı obj\\*config*\ *Arch*\\*ProjectName*. ılc\outyolunda bulabilirsiniz.  Son yerel paket içerikleri, bin\\*mimari*\\*config*\Appxaltında bulunabilir. Uygulamayı dağıttıysanız, son yerel paket içerikleri \Bin\\*mimari*\\*config*\ appx ' dir.
+  Projenizi .NET Native ile başarılı bir şekilde oluşturduktan sonra, çıktıyı obj \\ *config* \  *Arch* \\ *ProjectName*. ılc\outaltında bulabilirsiniz.  Son yerel paket içerikleri bin \\ *yay* \\ *yapılandırması*\ appxaltında bulunabilir. Uygulamayı dağıttıysanız, son yerel paket içerikleri \Bin \\ *Arch* \\ *config*\appx altındadır.
 
 - **Sorun:** .NET Native derlenen uygulamanız, .NET Native olmadan derlenerek oluşturmadığından, çalışma zamanı özel durumlarını (genellikle [MissingMetadataException](missingmetadataexception-class-net-native.md) veya [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) özel durumları) oluşturur.
 
@@ -43,4 +43,4 @@ Bu konuda, .NET Native ile uygulama geliştirirken karşılaşabileceğiniz olas
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](migrating-your-windows-store-app-to-net-native.md)
+- [Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma](migrating-your-windows-store-app-to-net-native.md)

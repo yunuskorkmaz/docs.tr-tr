@@ -10,18 +10,18 @@ helpviewer_keywords:
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 ms.openlocfilehash: e936c069275bfa9f7ac81ef1c6fc6228828182a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153743"
 ---
-# <a name="startup-element"></a>\<başlangıç> öğesi
+# <a name="startup-element"></a>\<startup> öğesi
 
 Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
-[**\<yapılandırma>**](../configuration-element.md)  
-&nbsp;&nbsp;**\<başlangıç>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<startup>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,21 +38,21 @@ Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|İsteğe bağlı öznitelik.<br /><br /> .NET Framework 2.0 çalışma zamanı etkinleştirme ilkesini etkinleştirmek mi yoksa .NET Framework 4 etkinleştirme ilkesini mi kullanacağınızı belirtir.|
+|`useLegacyV2RuntimeActivationPolicy`|İsteğe bağlı öznitelik.<br /><br /> .NET Framework 2,0 çalışma zamanı etkinleştirme ilkesinin etkinleştirilip etkinleştirilmeyeceğini veya .NET Framework 4 etkinleştirme ilkesini kullanmayı belirtir.|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy özniteliği
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`true`|Seçilen çalışma zamanı için .NET Framework 2.0 çalışma zamanı etkinleştirme ilkesini etkinleştirin, bu da eski çalışma zamanı etkinleştirme tekniklerini [(CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi) CLR sürüm 2.0'da kapamak yerine yapılandırma dosyasından seçilen çalışma süresine bağlamaktır. Böylece, yapılandırma dosyasından CLR sürüm 4 veya daha sonra seçilirse, .NET Framework'ün önceki sürümleriyle oluşturulan karma modlu derlemeler seçilen CLR sürümüyle yüklenir. Bu değerin ayarlanması, CLR sürüm 1.1 veya CLR sürüm 2.0'ın aynı işleme yüklenmesine engel olur ve işlem içi yan yana özelliği etkin bir şekilde devre dışı bırakmaz.|
-|`false`|.NET Framework 4 ve sonraki için varsayılan etkinleştirme ilkesini kullanın, bu da eski çalışma zamanı etkinleştirme tekniklerinin CLR sürüm 1.1 veya 2.0'ı işleme yüklemesine izin vermektir. Bu değerin ayarlanması, karma modlu derlemelerin .NET Framework 4 veya daha sonra ile oluşturulmadığı sürece .NET Framework 4'e veya daha sonra yüklenmelerini önler. Bu varsayılan değerdir.|
+|`true`|Eski çalışma zamanı etkinleştirme tekniklerini ( [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi) yapılandırma dosyasından seçilen çalışma zamanına bağlamak yerine, bunları CLR sürüm 2,0 ' de kullanmak yerine, seçilen çalışma zamanı için .NET Framework 2,0 çalışma zamanı etkinleştirme ilkesini etkinleştirin. Bu nedenle, yapılandırma dosyasından CLR sürüm 4 veya üzeri seçilirse, önceki .NET Framework sürümleriyle oluşturulan karma mod derlemeleri seçilen CLR sürümü ile yüklenir. Bu değeri ayarlamak, CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller ve işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır.|
+|`false`|.NET Framework 4 ve üzeri için varsayılan etkinleştirme ilkesini kullanarak, eski çalışma zamanı etkinleştirme tekniklerinin işleme yönelik CLR sürüm 1,1 veya 2,0 ' i yüklemesine izin verir. Bu değeri ayarlamak, karışık mod derlemelerin .NET Framework 4 ' e veya üzeri bir sürüme derlenmedikleri takdirde, .NET Framework 4 veya üzeri bir sürümü ile oluşturulmalarına engel olur. Bu varsayılan değerdir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<requiredRuntime>](requiredruntime-element.md)|Uygulamanın yalnızca ortak dil çalışma süresinin yalnızca sürüm 1.0 sürümünü desteklediğini belirtir. Çalışma zamanı sürüm 1.1 veya sonraki sürümle oluşturulmuş uygulamalar ** \<desteklenen Runtime>** öğesini kullanmalıdır.|
-|[\<desteklenenRuntime>](supportedruntime-element.md)|Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini belirtir.|
+|[\<requiredRuntime>](requiredruntime-element.md)|Uygulamanın yalnızca ortak dil çalışma zamanının 1,0 sürümünü desteklediğini belirtir. Çalışma zamanı sürüm 1,1 veya üzeri ile oluşturulan uygulamalar öğesini kullanmalıdır **\<supportedRuntime>** .|
+|[\<supportedRuntime>](supportedruntime-element.md)|Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini belirtir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -62,20 +62,20 @@ Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
 
- ** \<Desteklenen Runtime>** öğesi sürüm 1.1 veya daha sonra çalışma süresi kullanılarak oluşturulmuş tüm uygulamalar tarafından kullanılmalıdır. Çalışma zamanının yalnızca sürüm 1.0 sürümünü desteklemek için oluşturulmuş ** \<uygulamalar, gerekli Runtime>** öğesini kullanmalıdır.
+ **\<supportedRuntime>** Öğesi, çalışma zamanının 1,1 veya sonraki bir sürümü kullanılarak oluşturulan tüm uygulamalar tarafından kullanılmalıdır. Yalnızca çalışma zamanının 1,0 sürümünü desteklemeye yönelik uygulamalar **\<requiredRuntime>** öğesi kullanılmalıdır.
 
- Microsoft Internet Explorer'da barındırılan bir ** \<** uygulamanın başlangıç kodu, başlangıç>öğesini ve alt öğelerini yoksayılabilir.
+ Microsoft Internet Explorer 'da barındırılan bir uygulamanın başlangıç kodu, **\<startup>** öğesini ve onun alt öğelerini yoksayar.
 
 ## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a>UseLegacyV2RuntimeActivationPolicy özniteliği
 
- Bu özellik, uygulamanız [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi eski etkinleştirme yollarını kullanıyorsa ve bu yolların önceki bir sürüm yerine CLR'nin 4 sürümünü etkinleştirmesini istiyorsanız veya uygulamanız .NET Framework 4 ile oluşturulmuşsa, ancak .NET Framework'ün önceki bir sürümüyle oluşturulmuş karma modlu bir derlemeye bağımlıysa yararlıdır. Bu senaryolarda, özniteliği ' `true`ne göre ayarlayın.
+ Bu öznitelik, uygulamanız [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi eski etkinleştirme yollarını kullanıyorsa ve bu yolların daha önceki bir sürüm yerine CLR sürüm 4 ' ü etkinleştirmesini istiyorsanız ya da uygulamanız .NET Framework 4 ile oluşturulup daha önceki bir .NET Framework sürümüyle oluşturulmuş bir karma mod derlemesine bağımlılığı varsa yararlıdır. Bu senaryolarda özniteliğini olarak ayarlayın `true` .
 
 > [!NOTE]
-> Özellik, CLR `true` sürüm 1.1 veya CLR sürüm 2.0'ın aynı işleme yüklenmesine engel olur ve işlem içi yan yana özelliği etkin bir şekilde devre dışı bırakmaz (bkz. [COM Interop için Yan Yana Yürütme).](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+> Özniteliğinin ayarlanması `true` , CLR sürüm 1,1 veya CLR sürüm 2,0 ' nin aynı işleme yüklenmesini engeller, işlem içi yan yana özelliğini etkin bir şekilde devre dışı bırakır (bkz. [com birlikte çalışma Için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnekte, bir yapılandırma dosyasında çalışma zamanı sürümünün nasıl belirtilen şekli gösterilmektedir.
+ Aşağıdaki örnek, bir yapılandırma dosyasında çalışma zamanı sürümünün nasıl ekleneceğini gösterir.
 
 ```xml
 <!-- When used with version 1.0 of the .NET Framework runtime -->
@@ -96,7 +96,7 @@ Ortak dil çalışma zamanı başlangıç bilgilerini belirtir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlangıç Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Nasıl yapilir: Bir uygulamayı .NET Framework 4 veya sonraki sürümlerini destekleyecek şekilde yapılandırın](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [COM Interop için Yan Yana Yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
+- [Yapılandırma dosyası şeması](../index.md)
+- [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [COM birlikte çalışması için yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Devam Eden Yan Yana Yürütme](../../../deployment/in-process-side-by-side-execution.md)

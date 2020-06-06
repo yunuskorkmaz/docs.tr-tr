@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089120"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > öğesi (ağ ayarları)
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> Öğesi (Ağ Ayarları)
 Ağ kaynaklarına bağlantıları yapılandırır.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları >** ](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<servicePointManager>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,22 +44,22 @@ Ağ kaynaklarına bağlantıları yapılandırır.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Sistemin, sertifikayı kullanmadan önce sertifikadaki adın sunucu ana bilgisayar adıyla eşleşip eşleşmediğini doğrulaması gerekip gerekmediğini belirtir. Varsayılan değer `true` şeklindedir.|  
-|`checkCertificateRevocationList`|Sistemin sertifika kullanılmadan önce sertifikanın iptal edilip edilmediğini denetleyip denetmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
+|`checkCertificateName`|Sistemin, sertifikayı kullanmadan önce sertifikadaki adın sunucu ana bilgisayar adıyla eşleşip eşleşmediğini doğrulaması gerekip gerekmediğini belirtir. Varsayılan değer: `true`.|  
+|`checkCertificateRevocationList`|Sistemin sertifika kullanılmadan önce sertifikanın iptal edilip edilmediğini denetleyip denetmeyeceğini belirtir. Varsayılan değer: `false`.|  
 |`dnsRefreshTimeout`|Etki alanı adı hizmeti (DNS) çözümlerinin, DNS hepsini bir kez deneme seçeneğiyle birlikte ne kadar süreyle önbelleğe alınacağını belirtir (milisaniye cinsinden). Varsayılan değer 120.000 milisaniyedir (iki dakika).|  
-|`enableDnsRoundRobin`|Birden çok Internet Protokolü (IP) adresi olan ana bilgisayar adlarının DNS çözümlerinin, tüm adresleri mi yoksa yalnızca ilk birini mi döndürmediğini belirtir. Varsayılan değer `false` şeklindedir.|  
-|`encryptionPolicy`|Bir <xref:System.Net.ServicePointManager> örneğindeki SSL/TLS oturumuna uygulanan şifreleme ilkesini belirtir. Olası değerler <xref:System.Net.Security.EncryptionPolicy> numaralandırması için değerler ile eşdeğerdir. Şifreleme ilkesi `NoEncryption`olarak ayarlandığında <xref:System.Security.Authentication.CipherAlgorithmType.Null> kullanılması gerekir. Varsayılan değer `RequireEncryption` şeklindedir.|  
-|`expect100Continue`|POST yöntemlerinin sunucudan `100-continue` yanıtı almayı beklemesi gerekip gerekmediğini belirtir. Varsayılan değer `true` şeklindedir.|  
-|`useNagleAlgorithm`|Hizmet noktası Yöneticisi tarafından denetlenen bağlantıların Nagle algoritmasını kullanıp kullanmadığını belirtir. Varsayılan değer `true` şeklindedir.|  
+|`enableDnsRoundRobin`|Birden çok Internet Protokolü (IP) adresi olan ana bilgisayar adlarının DNS çözümlerinin, tüm adresleri mi yoksa yalnızca ilk birini mi döndürmediğini belirtir. Varsayılan değer: `false`.|  
+|`encryptionPolicy`|Bir örnekteki SSL/TLS oturumuna uygulanan şifreleme ilkesini belirtir <xref:System.Net.ServicePointManager> . Olası değerler, <xref:System.Net.Security.EncryptionPolicy> sabit listesinin değerlerine eşdeğerdir. <xref:System.Security.Authentication.CipherAlgorithmType.Null>Şifreleme ilkesi olarak ayarlandığında kullanılması gerekir `NoEncryption` . Varsayılan değer: `RequireEncryption`.|  
+|`expect100Continue`|POST yöntemlerinin sunucudan bir yanıt almayı beklemesi gerekip gerekmediğini belirtir `100-continue` . Varsayılan değer: `true`.|  
+|`useNagleAlgorithm`|Hizmet noktası Yöneticisi tarafından denetlenen bağlantıların Nagle algoritmasını kullanıp kullanmadığını belirtir. Varsayılan değer: `true`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> ad alanı için temel ağ seçeneklerini yapılandırır.|  
+|[Ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

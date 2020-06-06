@@ -1,5 +1,5 @@
 ---
-title: <add><listeners> Için element<trace>
+title: <add>İçin için öğesi <listeners><trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: c64673908dc9afe67d97c08f93e5b9d9533bd34d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153678"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>\<izleme> \<için> \<dinleyiciler için> Öğesi ekleyin
-**Dinleyici** koleksiyonuna bir dinleyici ekler.  
+# <a name="add-element-for-listeners-for-trace"></a>\<add>İçin için öğesi \<listeners>\<trace>
+**Dinleyiciler** koleksiyonuna bir dinleyici ekler.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](trace-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dinleyici ler>**](listeners-element-for-trace.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-trace.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,51 +39,51 @@ ms.locfileid: "79153678"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Türü**|Gerekli öznitelik.<br /><br /> Dinleyicinin türünü belirtir. [Tam Nitelikli Tür Adları Belirtme'de](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan bir dize kullanmanız gerekir.|  
-|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Dize, belirtilen sınıfın oluşturucuya geçti.|  
-|**Adı**|İsteğe bağlı öznitelik.<br /><br /> Dinleyicinin adını belirtir.|  
+|**türüyle**|Gerekli öznitelik.<br /><br /> Dinleyicinin türünü belirtir. [Tam nitelikli tür adlarını belirtirken](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan bir dize kullanmanız gerekir.|  
+|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize.|  
+|**ada**|İsteğe bağlı öznitelik.<br /><br /> Dinleyicinin adını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<filtre>](filter-element-for-add-for-listeners-for-trace.md)|`Listeners` İzleme için koleksiyondaki bir dinleyiciye filtre ekler.|  
+|[\<filter>](filter-element-for-add-for-listeners-for-trace.md)|İzleme için koleksiyondaki bir dinleyiciye bir filtre ekler `Listeners` .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`listeners`|İletileri toplayan, depolayan ve gönderen bir dinleyici belirtir. Dinleyiciler izleme çıktısını uygun bir hedefe yönlendirir.|  
+|`listeners`|İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
 |`system.diagnostics`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
-|`trace`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|`trace`|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ve <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> sınıflar aynı **Dinleyici** koleksiyonunu paylaşır. Bu sınıflardan birinde koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. Dinleyici sınıfları. <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.Debug>Ve <xref:System.Diagnostics.Trace> sınıfları aynı **dinleyicileri** toplamayı paylaşır. Bu sınıflardan birindeki koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. Dinleyici sınıfları öğesinden türetilir <xref:System.Diagnostics.TraceListener> .  
   
- İzleme dinleyicisinin özniteliğini `name` belirtmezseniz, izleme <xref:System.Diagnostics.TraceListener.Name%2A> dinleyicisinin varsayılan olarak boş bir dize ("") olduğunu belirtirsiniz. Uygulamanızda yalnızca bir dinleyici varsa, bir ad belirtmeden ekleyebilir ve ad için boş bir dize belirterek kaldırabilirsiniz. Ancak, uygulamanızda birden fazla dinleyici varsa, her izleme dinleyicisi için benzersiz adlar belirtmeniz gerekir, <xref:System.Diagnostics.Debug.Listeners%2A> bu <xref:System.Diagnostics.Trace.Listeners%2A> da izleme dinleyicilerini ve koleksiyonlarını tek tek belirlemenize ve yönetmenize olanak tanır.  
-  
-> [!NOTE]
-> Aynı türden ve aynı ada sahip birden fazla izleme dinleyicisi eklemek, koleksiyona bu tür `Listeners` ve addan yalnızca bir izleme dinleyicisi eklenmesiyle sonuçlanır. Ancak, `Listeners` koleksiyona programlı olarak birden çok aynı dinleyici ekleyebilirsiniz.  
-  
- **InitializeData** özniteliğinin değeri, oluşturduğunuz dinleyici türüne bağlıdır. Tüm izleme **dinleyicileri, initializeData**belirtmenizi gerektirmez.  
+ `name`İzleme dinleyicisinin özniteliğini belirtmezseniz, <xref:System.Diagnostics.TraceListener.Name%2A> İzleme dinleyicisinin varsayılan değeri boş bir dize ("") olur. Uygulamanızda yalnızca bir dinleyici varsa, bunu bir ad belirtmeden ekleyebilir ve ad için boş bir dize belirterek kaldırabilirsiniz. Bununla birlikte, uygulamanız birden fazla dinleyici içeriyorsa, her bir izleme dinleyicisi için benzersiz adlar belirtmelisiniz. Bu, ve koleksiyonları içindeki tek tek izleme dinleyicilerini tanımlamanızı ve yönetmenizi sağlar <xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A> .  
   
 > [!NOTE]
-> Özniteliği kullandığınızda, `initializeData` derleyici uyarı alabilirsiniz "'InitializeData' özniteliği ilan edilmez." Yapılandırma ayarları özniteliği tanımayan <xref:System.Diagnostics.TraceListener> `initializeData` soyut taban sınıfa karşı doğrulandığı için bu uyarı oluşur. Genellikle, bir parametre alan bir oluşturucu ya da izleme dinleyicisi uygulamaları için bu uyarıyı yoksayabilirsiniz.  
+> Aynı türde ve aynı ada sahip birden fazla izleme dinleyicisi eklemek, bu tür ve koleksiyona eklenmekte olan adın yalnızca bir izleme dinleyicisine neden olur `Listeners` . Ancak, koleksiyona daha fazla özdeş dinleyici ekleyebilirsiniz `Listeners` .  
   
- Aşağıdaki tabloda .NET Framework'e dahil olan izleme dinleyicileri gösterilmektedir ve **initializeData** özniteliklerinin değerini açıklar.  
+ **Initializedata** özniteliğinin değeri, oluşturduğunuz dinleyicinin türüne bağlıdır. Tüm izleme dinleyicileri **ınitializedata**belirtmenizi gerektirmez.  
   
-|İzleme dinleyici sınıfı|initializeData öznitelik değeri|  
+> [!NOTE]
+> `initializeData`Özniteliğini kullandığınızda, "ınitializedata" özniteliği bildirilmemiş "derleyici uyarısını alabilirsiniz." Bu uyarı, yapılandırma ayarları özniteliği tanımayan Özet taban sınıfına göre doğrulandığından oluşur <xref:System.Diagnostics.TraceListener> `initializeData` . Genellikle, bir parametresi alan Oluşturucusu olan izleme dinleyicisi uygulamaları için bu uyarıyı yoksayabilirsiniz.  
+  
+ Aşağıdaki tabloda, .NET Framework eklenen izleme dinleyicileri gösterilmektedir ve **ınitializedata** özniteliklerinin değeri açıklanmaktadır.  
+  
+|Trace dinleyicisi sınıfı|ınitializedata öznitelik değeri|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|Oluşturucunun `useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> değeri.  İz `initializeData` ve hata`true`ayıklama çıktısı yazmak için <xref:System.Console.Error%2A?displayProperty=nameWithType>özniteliği " " olarak ayarlayın; "`false`" " <xref:System.Console.Out%2A?displayProperty=nameWithType>yazmak için .|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.DelimitedListTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Varolan bir olay günlüğü kaynağının adı.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.EventSchemaTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.TextWriterTraceListener> Yazdığı dosyanın adı.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<xref:System.Diagnostics.XmlWriterTraceListener> Yazdığı dosyanın adı.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|`useErrorStream` <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Oluşturucunun değeri.  `initializeData` `true` Trace ve Debug çıkışını yazmak için özniteliği "" olarak ayarlayın <xref:System.Console.Error%2A?displayProperty=nameWithType> ; " `false` " yazmak için <xref:System.Console.Out%2A?displayProperty=nameWithType> .|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.DelimitedListTraceListener> .|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Mevcut bir olay günlüğü kaynağı adının adı.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.EventSchemaTraceListener> .|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.TextWriterTraceListener> .|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Yazdığı dosyanın adı <xref:System.Diagnostics.XmlWriterTraceListener> .|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, dinleyicileri `MyListener` ve `MyEventListener` **Dinleyiciler** koleksiyonuna eklemek için ** \<>** öğelerini nasıl kullanacağımı gösterir. `MyListener`adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
+ Aşağıdaki örnek, **\<add>** dinleyicileri `MyListener` ve `MyEventListener` **dinleyici** koleksiyonuna eklemek için öğelerin nasıl kullanılacağını gösterir. `MyListener`adlı bir dosya oluşturur `MyListener.log` ve çıktıyı dosyaya yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
   
 ```xml  
 <configuration>  

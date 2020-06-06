@@ -3,18 +3,18 @@ title: <iriParsing> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 ms.openlocfilehash: fd617d1b4ac8e532c6f9aeaa01465e9866b059e9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698099"
 ---
-# <a name="iriparsing-element-uri-settings"></a>\<ıriayrıştırma > öğesi (URI ayarları)
-Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın bir <xref:System.Uri> uygulanıp uygulanmadığını ve IRI ayrıştırma kurallarının uygulanıp uygulanmayacağını belirtir.  
+# <a name="iriparsing-element-uri-settings"></a>\<iriParsing> Öğesi (Uri Ayarları)
+Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma 'nin bir öğesine uygulanıp uygulanmadığını <xref:System.Uri> ve IRI ayrıştırma kurallarının uygulanıp uygulanamayacağını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ıriayrıştırma >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<iriParsing>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,21 +29,21 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın bir <xref:System.Uri
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|`enabled`|IRI ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
+|`enabled`|IRI ayrıştırma özelliğinin etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer: `false`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
+|[kullanılmamışsa](uri-element-uri-settings.md)|.NET Framework Tekdüzen Kaynak tanımlayıcıları (URI 'Ler) kullanarak ifade edilen Web adreslerini nasıl işleyeceğini belirten ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Mevcut <xref:System.Uri> sınıfı .NET Framework 3,5 ' de genişletildi. 3,0 SP1 ve 2,0 SP1 uluslararası kaynak tanımlayıcıları (IRI) ve uluslararası etki alanı adları (ıDN) için destek sağlar. IRI ve ıDN desteğini özellikle etkinleştirmedikleri takdirde geçerli kullanıcılar .NET Framework 2,0 davranışından herhangi bir değişiklik görmez. Bu, uygulamanın .NET Framework önceki sürümleriyle uyumluluğunu sağlar.  
+ Mevcut <xref:System.Uri> sınıf .NET Framework 3,5 ' de genişletildi. 3,0 SP1 ve 2,0 SP1 uluslararası kaynak tanımlayıcıları (IRI) ve uluslararası etki alanı adları (ıDN) için destek sağlar. IRI ve ıDN desteğini özellikle etkinleştirmedikleri takdirde geçerli kullanıcılar .NET Framework 2,0 davranışından herhangi bir değişiklik görmez. Bu, uygulamanın .NET Framework önceki sürümleriyle uyumluluğunu sağlar.  
   
  IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gereklidir:  
   
@@ -55,7 +55,7 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın bir <xref:System.Uri
   
 2. IRI ayrıştırma kurallarının uygulanıp uygulanmayacağını belirtin. Bu, Machine. config veya App. config dosyasında yapılabilir.  
   
- IRI ayrıştırma (ıriayrıştırmayı etkin = `true`) etkinleştirildiğinde, RFC 3987 ' deki en son IRI kurallarına göre normalleştirme ve karakter denetimi yapılır. Varsayılan değer `false`, RFC 2396 ve RFC 3986 ' e (IPv6 sabit değerleri için) göre normalleştirme ve karakter denetimi yapılır.  
+ IRI ayrıştırma (ıriayrıştırmayı etkin = `true` ) etkinleştirildiğinde, RFC 3987 ' deki en son IRI kurallarına göre normalleştirme ve karakter denetimi yapılır. Varsayılan değer, `false` rfc 2396 ve rfc 3986 (IPv6 sabit değerleri için) öğesine göre normalleştirme ve karakter denetimi yapar.  
   
 ### <a name="configuration-files"></a>Yapılandırma Dosyaları  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
@@ -63,7 +63,7 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırmanın bir <xref:System.Uri
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte, IRI ayrıştırma ve ıDN adlarını desteklemek için <xref:System.Uri> sınıfı tarafından kullanılan bir yapılandırma gösterilmektedir.  
+ Aşağıdaki örnek, <xref:System.Uri> IRI ayrıştırma ve IDN adlarını desteklemek için sınıfı tarafından kullanılan bir yapılandırmayı gösterir.  
   
 ### <a name="code"></a>Kod  
   

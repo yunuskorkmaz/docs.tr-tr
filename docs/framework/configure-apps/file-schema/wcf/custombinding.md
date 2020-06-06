@@ -3,20 +3,20 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74140802"
 ---
-# <a name="custombinding"></a>\<customBinding >
+# \<customBinding>
 
 Kullanıcı için mesajlaşma yığını üzerinde tam denetim sağlar.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customBinding >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<customBinding>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -181,23 +181,23 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|closeTimeout|Bir kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
+|closeTimeout|<xref:System.TimeSpan>Bir kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|
 |name|Bağlamanın yapılandırma adını içeren bir dize. Bu değer, özel bağlama için kimlik dizesi görevi gören Kullanıcı tanımlı bir dizedir. .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.|
-|openTimeout|Bir açık işlemin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
-|receiveTimeout|Alma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
-|Binding üstündeki SendTimeout|Bir gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir <xref:System.TimeSpan> değeri. Bu değer, <xref:System.TimeSpan.Zero>eşit veya ondan büyük olmalıdır. Varsayılan değer 00:01:00 ' dir.|
+|openTimeout|Bir <xref:System.TimeSpan> Açık işlemin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|
+|receiveTimeout|<xref:System.TimeSpan>Alma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|
+|Binding üstündeki SendTimeout|<xref:System.TimeSpan>Bir gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero> . Varsayılan değer 00:01:00 ' dir.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<compositeDuplex >](compositeduplex.md)|Özel bağlamaya iki yönlü mesajlaşma belirtir. Çift yönlü iletişimleri yerel olarak (örneğin, HTTP) izin verilmeyen aktarımlarla birlikte kullanılır. Bunun aksine TCP, çift yönlü iletişimleri yerel olarak sağlar ve hizmetin istemciye geri ileti gönderebilmesi için bu bağlama öğesinin kullanılmasını gerektirmez.<br /><br /> İstemci, iletişim kurmak ve bağlantı kurmak için hizmetin bir adresini kullanıma sunmalıdır. Bu istemci adresi `ClientBaseAddress` özniteliği tarafından sağlanır.<br /><br /> Bu öğe <xref:System.ServiceModel.Configuration.CompositeDuplexElement>türündedir.|
-|[\<pnrpPeerResolver >](pnrppeerresolver.md)|Eş adı çözümleme Protokolü (PNRP) eş adı çözümleyicisini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>türündedir.|
-|[Reliableoturum > \<](reliablesession.md)|WS-güvenilir mesajlaşma için ayarı belirtir. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir. Bu öğe <xref:System.ServiceModel.Configuration.ReliableSessionElement>türündedir.|
-|[\<güvenlik >](security-of-custombinding.md)|Özel bağlamanın güvenliği için seçenekleri belirtir. Bu öğe <xref:System.ServiceModel.Configuration.SecurityElement>türündedir.|
-|[\<sslStreamSecurity >](sslstreamsecurity.md)|SSL akışı bağlamasının güvenlik ayarlarını belirtir. Bu öğe <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>türündedir.|
-|[\<transactionFlow >](transactionflow.md)|Bağlamanın işlem akışını ve `transactionProtocol` özniteliği tarafından kullanılacak protokolü desteklediğini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.TransactionFlowElement>türündedir.|
-|[windowsStreamSecurity > \<](windowsstreamsecurity.md)|Özel bağlamanın akış güvenliğini sağlama seçeneklerini belirtir. Bu öğe <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>türündedir.|
+|[\<compositeDuplex>](compositeduplex.md)|Özel bağlamaya iki yönlü mesajlaşma belirtir. Çift yönlü iletişimleri yerel olarak (örneğin, HTTP) izin verilmeyen aktarımlarla birlikte kullanılır. Bunun aksine TCP, çift yönlü iletişimleri yerel olarak sağlar ve hizmetin istemciye geri ileti gönderebilmesi için bu bağlama öğesinin kullanılmasını gerektirmez.<br /><br /> İstemci, iletişim kurmak ve bağlantı kurmak için hizmetin bir adresini kullanıma sunmalıdır. Bu istemci adresi özniteliği tarafından sağlanır `ClientBaseAddress` .<br /><br /> Bu öğe türündedir <xref:System.ServiceModel.Configuration.CompositeDuplexElement> .|
+|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Eş adı çözümleme Protokolü (PNRP) eş adı çözümleyicisini belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> .|
+|[\<reliableSession>](reliablesession.md)|WS-güvenilir mesajlaşma için ayarı belirtir. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.ReliableSessionElement> .|
+|[\<security>](security-of-custombinding.md)|Özel bağlamanın güvenliği için seçenekleri belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.SecurityElement> .|
+|[\<sslStreamSecurity>](sslstreamsecurity.md)|SSL akışı bağlamasının güvenlik ayarlarını belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> .|
+|[\<transactionFlow>](transactionflow.md)|Bağlamanın işlem akışını desteklediğini ve özniteliği tarafından kullanılacak protokolü belirtir `transactionProtocol` . Bu öğe türündedir <xref:System.ServiceModel.Configuration.TransactionFlowElement> .|
+|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|Özel bağlamanın akış güvenliğini sağlama seçeneklerini belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> .|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
@@ -207,7 +207,7 @@ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklan
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özel Bağlamalar, WCF mesajlaşma yığını üzerinde tam denetim sağlar. Özel uyarlanmış bağlamalar, belirli varlıklar için yapılandırma öğelerini eklemem oluşturulabilir. Örneğin, Kullanıcı, güvenilir ve güvenli bir https tabanlı bağlama oluşturmak için `httpsTransport` bölümünü, `reliableSession` bölümünü ve `security` bölümünü birleştirebilirler.
+Özel Bağlamalar, WCF mesajlaşma yığını üzerinde tam denetim sağlar. Özel uyarlanmış bağlamalar, belirli varlıklar için yapılandırma öğelerini eklemem oluşturulabilir. Örneğin, Kullanıcı, `httpsTransport` `reliableSession` `security` güvenilir ve güvenli bir https tabanlı bağlama oluşturmak için bölümü, bölümü ve bölümünü birleştirebilirler.
 
 Tek bir bağlama yığın öğeleri için yapılandırma öğelerini yığında göründükleri sırada belirterek ileti yığınını tanımlar. Her öğe, yığının bir öğesini tanımlar ve yapılandırır. Her özel bağlamada bir ve yalnızca bir Transport öğesi olmalıdır. Bu öğe olmadan mesajlaşma yığını tamamlanmamıştır.
 
@@ -225,11 +225,11 @@ Tek bir bağlama yığın öğeleri için yapılandırma öğelerini yığında 
 
 Sistem tarafından belirtilen bağlamalardan biri hizmetinizin gereksinimlerini karşılamadığında özel bir bağlama kullanın. Bir hizmet uç noktasında yeni bir taşımanın veya yeni bir kodlayıcının kullanımını etkinleştirmek için, örneğin, özel bir bağlama kullanılabilir.
 
-Özel bir bağlama, belirli bir sırada "yığılmış" olan bağlama öğeleri koleksiyonundan <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> biri kullanılarak oluşturulur:
+Özel bir bağlama, <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> belirli bir sırada "yığılmış" olan bağlama öğeleri koleksiyonundan biri kullanılarak oluşturulur:
 
-- En üstte, akan işlemlere izin veren isteğe bağlı bir <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>.
+- En üstte, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> akan işlemlere izin veren isteğe bağlıdır.
 
-- Next, WS-ReliableMessaging belirtiminde tanımlanan bir oturum ve sıralama mekanizması sağlayan isteğe bağlı bir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>. Bu oturum kavramı, SOAP ve aktarım aracıları arasında geçiş yapabilir.
+- Next, <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> WS-ReliableMessaging belirtiminde tanımlanan bir oturum ve sıralama mekanizması sağlayan isteğe bağlı bir ektir. Bu oturum kavramı, SOAP ve aktarım aracıları arasında geçiş yapabilir.
 
 - Daha sonra yetkilendirme, kimlik doğrulama, koruma ve gizlilik gibi güvenlik özellikleri sağlayan isteğe bağlı bir güvenlik bağlama öğesidir. Aşağıdaki güvenlik bağlama öğeleri Windows Communication Foundation (WCF) tarafından sağlanır:
 
@@ -279,15 +279,15 @@ Sistem tarafından belirtilen bağlamalardan biri hizmetinizin gereksinimlerini 
 
 Aşağıdaki tabloda her bir katmanın seçenekleri özetlenmektedir.
 
-|Katmanı|Seçenekler|Gerekli|
+|Katman|Seçenekler|Gerekli|
 |-----------|-------------|--------------|
 |İşlem akışı|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Hayır|
 |Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Hayır|
 |Güvenlik|Simetrik, asimetrik, aktarım düzeyi|Hayır|
 |Şekil değişikliği|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Hayır|
 |Aktarım yükseltmeleri|SSL akışı, Windows Stream, eş çözümleyici|Hayır|
-|Şifreleme|Metin, Ikili, MTOM, özel|Evet|
-|Aktarım|TCP, adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Evet|
+|Encoding|Metin, Ikili, MTOM, özel|Yes|
+|Aktarım|TCP, adlandırılmış kanallar, HTTP, HTTPS, MSMQ, özel|Yes|
 
 Ayrıca, kendi bağlama öğelerinizi tanımlayabilir ve bunları önceki tanımlı katmanlardan herhangi biri arasına ekleyebilirsiniz.
 
@@ -299,7 +299,7 @@ Sistem tarafından sağlanmış bir bağlamayı değiştirmek için özel bağla
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [bağlama > \<](bindings.md)
+- [\<binding>](bindings.md)
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)

@@ -3,20 +3,20 @@ title: <filter>
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
 ms.openlocfilehash: 6e78275aaeb202405e327302455d56fa431d7f27
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855248"
 ---
-# <a name="filter"></a>\<Filtre >
+# \<filter>
 
-Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü, ayrıca filtrenin gerektirdiği destekleyici verileri veya parametreleri belirleyen bir yönlendirme filtresi tanımlar.
+Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF) türünü <xref:System.ServiceModel.Dispatcher.MessageFilter> , ayrıca filtrenin gerektirdiği destekleyici verileri veya parametreleri belirleyen bir yönlendirme filtresi tanımlar.
 
-[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;[ **\<Yönlendirme >** ](routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Filtreler >** ](filters-of-routing.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Filtre >**  
+[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<filters>**](filters-of-routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,9 +39,9 @@ Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation
 
 | Öznitelik  | Açıklama |
 | ---------- | ----------- |
-| customType | Filtre olarak kullanılacak özel türün tam nitelikli tür adını içeren bir dize. `filterType` , Olarak`custom`ayarlandıysa, bu öznitelik oluşturulacak sınıfın tam nitelikli tür adını içerir.  `filterData`özel tür filtresi değerlendirmesi sırasında kullanılacak değerleri de içerebilir. |
-| filterData | Filtre verilerini içeren bir dize. Bu özniteliği belirtme hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
-| filterType | Filtre türünü içeren bir dize. Bu öznitelik <xref:System.ServiceModel.Routing.Configuration.FilterType> türü.  Bunun `filterData` özniteliğiyle nasıl çalıştığı hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>. |
+| customType | Filtre olarak kullanılacak özel türün tam nitelikli tür adını içeren bir dize. , `filterType` Olarak ayarlandıysa `custom` , bu öznitelik oluşturulacak sınıfın tam nitelikli tür adını içerir.  `filterData`özel tür filtresi değerlendirmesi sırasında kullanılacak değerleri de içerebilir. |
+| filterData | Filtre verilerini içeren bir dize. Bu özniteliği belirtme hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> .. |
+| filterType | Filtre türünü içeren bir dize. Bu öznitelik <xref:System.ServiceModel.Routing.Configuration.FilterType> türü.  Bunun özniteliğiyle nasıl çalıştığı hakkında daha fazla bilgi için `filterData` bkz <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> .. |
 | name       | Bu filtre öğesinin benzersiz adını içeren bir dize. |
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -52,7 +52,7 @@ Yok.
 
 | Öğe | Açıklama |
 | ------- | ----------- |
-| [\<Yönlendirme >](routing.md) | Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü belirleyen bir yönlendirme filtresi kümesini tanımlamak için bir yapılandırma bölümü. |
+| [\<routing>](routing.md) | Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF) türünü belirleyen bir yönlendirme filtresi kümesini tanımlamak için bir yapılandırma bölümü <xref:System.ServiceModel.Dispatcher.MessageFilter> . |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70251799"
 ---
-# <a name="systemidentitymodel"></a>\<system.identityModel>
+# \<system.identityModel>
 Uygulamalarda Windows Identity Foundation (WıF) seçeneklerini etkinleştirmek için yapılandırma sağlar.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. IdentityModel >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.identityModel>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,13 +27,13 @@ Uygulamalarda Windows Identity Foundation (WıF) seçeneklerini etkinleştirmek 
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<IdentityConfiguration >](identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Hizmet düzeyi kimlik ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -42,10 +42,10 @@ Uygulamalarda Windows Identity Foundation (WıF) seçeneklerini etkinleştirmek 
 |`<configuration>`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows Identity `<system.identityModel>` Foundation (WIF) kullanmak üzere bir hizmet veya uygulamayı yapılandırmak için yapılandırma dosyasına bir bölüm ekleyin. `<system.identityModel>` Öğesi sınıfı<xref:System.IdentityModel.Configuration.SystemIdentityModelSection> tarafından temsil edilir.  
+ `<system.identityModel>`Windows Identity Foundation (WıF) kullanmak üzere bir hizmet veya uygulamayı yapılandırmak için yapılandırma dosyasına bir bölüm ekleyin. `<system.identityModel>`Öğesi sınıfı tarafından temsil edilir <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir yapılandırma dosyasına bir `<system.identityModel>` bölümün nasıl ekleneceğini gösterir. Önce yapılandırma bölümünü ve ad alanı bildirimini `<configSections>` öğesi altına eklemeniz gerekir. Daha sonra bir veya daha `<system.IdentityModel>` fazla kimlik yapılandırması belirtmek için öğesini yapılandırma dosyanıza ekleyebilirsiniz.  
+ Aşağıdaki örnek, `<system.identityModel>` bir yapılandırma dosyasına bir bölümün nasıl ekleneceğini gösterir. Önce yapılandırma bölümünü ve ad alanı bildirimini öğesi altına eklemeniz gerekir `<configSections>` . Daha sonra `<system.IdentityModel>` bir veya daha fazla kimlik yapılandırması belirtmek için öğesini yapılandırma dosyanıza ekleyebilirsiniz.  
   
 ```xml  
 <configuration>  

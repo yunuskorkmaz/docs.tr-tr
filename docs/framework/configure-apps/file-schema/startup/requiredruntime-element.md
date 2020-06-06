@@ -10,19 +10,19 @@ helpviewer_keywords:
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71697493"
 ---
-# <a name="requiredruntime-element"></a>\<requiredRuntime > öğesi
+# <a name="requiredruntime-element"></a>\<requiredRuntime> öğesi
 
-Uygulamanın yalnızca ortak dil çalışma zamanının 1,0 sürümünü desteklediğini belirtir. Bu öğe kullanımdan kaldırılmıştır ve artık kullanılmamalıdır. Bunun yerine [`supportedRuntime`](supportedruntime-element.md) öğesi kullanılmalıdır.
+Uygulamanın yalnızca ortak dil çalışma zamanının 1,0 sürümünü desteklediğini belirtir. Bu öğe kullanımdan kaldırılmıştır ve artık kullanılmamalıdır. [`supportedRuntime`](supportedruntime-element.md)Bunun yerine öğesi kullanılmalıdır.
 
-[ **\<Yapılandırma >** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<başlatma >** ](startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<startup>**](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requiredRuntime>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -59,18 +59,18 @@ Yok.
 |Öğe|Açıklama|
 |-------------|-----------------|
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|
-|`startup`|`<requiredRuntime>` öğesini içerir.|
+|`startup`|Öğesini içerir `<requiredRuntime>` .|
 
 ## <a name="remarks"></a>Açıklamalar
- Yalnızca çalışma zamanının 1,0 sürümünü desteklemek üzere oluşturulan uygulamalar `<requiredRuntime>` öğesini kullanmalıdır. Çalışma zamanının 1,1 veya sonraki bir sürümünü kullanarak oluşturulan uygulamaların `<supportedRuntime>` öğesini kullanması gerekir.
+ Yalnızca çalışma zamanının 1,0 sürümünü desteklemeye yönelik uygulamalar `<requiredRuntime>` öğesi kullanılmalıdır. Çalışma zamanının 1,1 veya sonraki bir sürümünü kullanarak oluşturulan uygulamalar `<supportedRuntime>` öğesi kullanılmalıdır.
 
 > [!NOTE]
-> Yapılandırma dosyasını belirtmek için [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) işlevini kullanırsanız, çalışma zamanının tüm sürümleri için `<requiredRuntime>` öğesini kullanmanız gerekir. [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)kullandığınızda `<supportedRuntime>` öğesi yok sayılır.
+> Yapılandırma dosyasını belirtmek için [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md) işlevini kullanırsanız, `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesini kullanmanız gerekir. `<supportedRuntime>` [CorBindToRuntimeByCfg](../../../unmanaged-api/hosting/corbindtoruntimebycfg-function.md)kullandığınızda öğe yok sayılır.
 
- `version` öznitelik dizesi, .NET Framework belirtilen sürümü için yükleme klasörü adıyla eşleşmelidir. Bu dize yorumlanmadı. Çalışma zamanı başlangıç kodu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmez; başlangıç kodu bir hata iletisi gösterir ve sonlandırılıyor.
+ `version`Öznitelik dizesinin belirtilen .NET Framework sürümü için yükleme klasörü adıyla eşleşmesi gerekir. Bu dize yorumlanmadı. Çalışma zamanı başlangıç kodu eşleşen bir klasör bulamazsa, çalışma zamanı yüklenmez; başlangıç kodu bir hata iletisi gösterir ve sonlandırılıyor.
 
 > [!NOTE]
-> Microsoft Internet Explorer 'da barındırılan bir uygulama için başlangıç kodu `<requiredRuntime>` öğesini yoksayar.
+> Microsoft Internet Explorer 'da barındırılan bir uygulamanın başlangıç kodu, `<requiredRuntime>` öğesini yoksayar.
 
 ## <a name="example"></a>Örnek
 
@@ -87,5 +87,5 @@ Aşağıdaki örnek, bir yapılandırma dosyasında çalışma zamanı sürümü
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlangıç Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Nasıl yapılır: .NET Framework 4 veya sonraki sürümleri desteklemek için uygulama yapılandırma](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

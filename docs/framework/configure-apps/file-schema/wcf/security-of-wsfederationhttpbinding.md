@@ -3,21 +3,21 @@ title: <security> / <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736321"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding \<güvenlik > >
-[\<wsFederationHttpBinding >](wsfederationhttpbinding.md)güvenlik ayarlarını tanımlar.  
+# <a name="security-of-wsfederationhttpbinding"></a>\<security> / \<wsFederationHttpBinding>
+Öğesinin güvenlik ayarlarını tanımlar [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -86,13 +86,13 @@ ms.locfileid: "73736321"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer `Message` şeklindedir. Bu öznitelik <xref:System.ServiceModel.WSFederationHttpSecurityMode>türündedir.|  
+|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer: `Message`. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|Aktarım sırasında SOAP iletisi güvenli değildir.|  
+|Yok|Aktarım sırasında SOAP iletisi güvenli değildir.|  
 |İleti|Bütünlük, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, bir güvenlik belirteci hizmeti tarafından istemciye verilen belirteci temel alır|  
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, HTTPS tarafından sağlanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirteci temel alır.|  
   
@@ -100,13 +100,13 @@ ms.locfileid: "73736321"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ileti >](message-element-of-wsfederationhttpbinding.md)|İleti düzeyinde güvenlik için ayarları tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>türündedir.|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|İleti düzeyinde güvenlik için ayarları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\< bağlama >](bindings.md)|[\<wsDualHttpBinding >](wsdualhttpbinding.md)'in tüm bağlama yeteneklerini tanımlar.|  
+|[\<binding>](bindings.md)|Öğesinin tüm bağlama yeteneklerini tanımlar [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -120,4 +120,4 @@ ms.locfileid: "73736321"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [\<binding>](bindings.md)

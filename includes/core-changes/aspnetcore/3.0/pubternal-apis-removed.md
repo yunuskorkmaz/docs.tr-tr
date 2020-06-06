@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396344"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466865"
 ---
 ### <a name="pubternal-apis-removed"></a>"Pubternal" API 'Leri kaldırıldı
 
@@ -14,7 +14,7 @@ Daha fazla bilgi için bkz. [DotNet/aspnetcore # 4932](https://github.com/dotnet
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-3,0
+3.0
 
 #### <a name="old-behavior"></a>Eski davranış
 
@@ -22,7 +22,7 @@ Etkilenen API 'Ler `public` erişim değiştiricisiyle işaretlenir ve `*.Intern
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Etkilenen API 'Ler [iç (~/doc/CNET/Language-Reference/Keywords/Internal.exe) erişim değiştiricisiyle işaretlenir ve artık bu derleme dışındaki kod tarafından kullanılamaz.
+Etkilenen API 'Ler [iç](/dotnet/csharp/language-reference/keywords/internal) erişim değiştiricisiyle işaretlenir ve artık bu derleme dışındaki kod tarafından kullanılamaz.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 

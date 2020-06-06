@@ -3,21 +3,21 @@ title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
 ms.openlocfilehash: 7c4d9ae29ca1e543217d444e05a661b48e2cbb62
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400071"
 ---
-# <a name="persistenceprovider"></a>\<persistenceProvider >
+# \<persistenceProvider>
 Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcılık işlemleri için kullanılacak zaman aşımını belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<persistenceProvider >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<persistenceProvider>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,8 +33,8 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|persistenceOperationTimeout|Kalıcılık <xref:System.TimeSpan> işlemleri için kullanılan zaman aşımını belirten bir değer. Varsayılan değer "00:00:30" dır.|  
-|türü|Kullanılacak kalıcılık sağlayıcısı fabrikası türünü belirten bir dize.|  
+|persistenceOperationTimeout|<xref:System.TimeSpan>Kalıcılık işlemleri için kullanılan zaman aşımını belirten bir değer. Varsayılan değer "00:00:30" dır.|  
+|tür|Kullanılacak kalıcılık sağlayıcısı fabrikası türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,10 +43,10 @@ Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcı
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, bir WCF hizmetinin durumunu seri hale getirmek için kullanılacak Kalıcılık sağlayıcısını belirtir. HTTP üst bilgilerinde durum bilgilerini geçiren ile `wsHttpContextBinding` birlikte kullanılmalıdır.  
+ Bu öğe, bir WCF hizmetinin durumunu seri hale getirmek için kullanılacak Kalıcılık sağlayıcısını belirtir. `wsHttpContextBinding`Http üst bilgilerinde durum bilgilerini geçiren ile birlikte kullanılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

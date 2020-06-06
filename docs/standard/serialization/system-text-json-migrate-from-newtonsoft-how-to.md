@@ -12,10 +12,10 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83703588"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
@@ -97,7 +97,7 @@ Seri durumdan çıkarma sırasında, `Newtonsoft.Json` Varsayılan olarak büyü
 
 Serileştirme sırasında, `Newtonsoft.Json` karakterlerin kaçış olmadan üzerinden izin verme konusunda görece bir şekilde izin verilir. Diğer bir deyişle, bunları `\uxxxx` `xxxx` karakterin kod noktası olduğu yerde değiştirmez. Burada kaçış yaptığı yerlerde, `\` karakterden önce bir (örneğin, `"` olur) bir olarak yayarak bunu yapar `\"` . <xref:System.Text.Json>siteler arası betik (XSS) veya bilgi açıklama saldırılarına karşı derinlemesine savunma korumaları sağlamak için varsayılan olarak daha fazla karakter çıkar ve altı karakterli sırayı kullanarak bu şekilde yapılır. `System.Text.Json`ASCII olmayan tüm karakterleri varsayılan olarak çıkar, bu nedenle içinde kullanıyorsanız herhangi bir şey yapmanız gerekmez `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` . `System.Text.Json`Ayrıca, varsayılan olarak HTML duyarlı karakterleri de çıkar. Varsayılan davranışı geçersiz kılma hakkında daha fazla bilgi için `System.Text.Json` bkz. [karakter kodlamasını özelleştirme](system-text-json-how-to.md#customize-character-encoding).
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar
 
 Seri durumdan çıkarma sırasında, `Newtonsoft.Json` Varsayılan olarak JSON 'daki açıklamaları yoksayar. <xref:System.Text.Json> [RFC 8259](https://tools.ietf.org/html/rfc8259) belirtiminde bunları içermediğinden, açıklamalar için özel durumlar oluşturmak varsayılan değer. Açıklamalara izin verme hakkında daha fazla bilgi için bkz. [yorumlara Izin verme ve sondaki virgüller](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 

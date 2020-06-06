@@ -1,5 +1,5 @@
 ---
-title: <clear><listeners> Için element<source>
+title: <clear>İçin için öğesi <listeners><source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 ms.openlocfilehash: 7f9ddd93d27c3619119702c82c9e8752dab1af7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153587"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<kaynak> \<için> \<dinleyiciler için açık> Element
-Bir izleme `Listeners` kaynağı için koleksiyonu temizler.  
+# <a name="clear-element-for-listeners-for-source"></a>\<clear>İçin için öğesi \<listeners>\<source>
+`Listeners`İzleme kaynağı için koleksiyonu temizler.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynaklar>**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynak>**](source-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dinleyici ler>**](listeners-element-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<açık>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,19 +44,19 @@ Bir izleme `Listeners` kaynağı için koleksiyonu temizler.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|`sources`|İletileri izlemeyi başlatan izleme kaynakları içerir.|  
-|`source`|İletilerin izlenmesini başlatan bir izleme kaynağı belirtir.|  
-|`listeners`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
+|`source`|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
+|`listeners`|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `<clear>` bir izleme kaynağı `Listeners` için koleksiyondaki tüm dinleyicileri <xref:System.Diagnostics.DefaultTraceListener>kaldırır. Koleksiyonda başka `<clear>` etkin dinleyici `<add>` olmadığından emin olmak için öğeyi kullanmadan önce öğeyi kullanabilirsiniz.  
+ `<clear>`Öğesi, `Listeners` dahil olmak üzere bir izleme kaynağı için koleksiyondan tüm dinleyicileri kaldırır <xref:System.Diagnostics.DefaultTraceListener> . `<clear>` `<add>` Koleksiyonda başka hiçbir etkin dinleyici bulunmadığından emin olmak için öğesini kullanmadan önce öğesini kullanabilirsiniz.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki `<clear>` örnek, dinleyicileri `<add>` `console` eklemek için öğeleri kullanmadan önce `textListener` öğenin `Listeners` nasıl kullanılacağını `TraceSourceApp`ve izleme kaynağının koleksiyonuna nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, `<clear>` öğeleri kullanarak, `<add>` dinleyicileri `console` ve `textListener` `Listeners` izleme kaynağı koleksiyonuna eklemek için öğesinin nasıl kullanılacağını gösterir `TraceSourceApp` .  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: <schemaImporterExtensions> için <add> öğesi
+title: <schemaImporterExtensions> için <add> Öğesi
 description: <add>Öğesi, xsd türlerini .NET Framework türlerine eşlemek Için XmlSchemaImporter sınıfı tarafından kullanılan türleri ekler.
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288335"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> için \<add> öğesi
+# <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> için \<add> Öğesi
 Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> XSD türlerini .NET Framework türleriyle eşlemek için. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [yapılandırma dosyası şeması](../../framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
@@ -32,7 +32,7 @@ Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaI
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Description|  
+|Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**ada**|Örnek bulmak için kullanılan basit bir ad.|  
 |**türüyle**|Gereklidir. Eklemek için şema uzantısı sınıfını belirtir. **Tür** özniteliği değeri bir satırda olmalı ve tam nitelikli tür adını içermelidir. Derlemesi Genel Derleme Önbelleği'ne (GAC) yerleştirildiğinde, sürüm, kültür ve ortak anahtar belirteci imzalı derleme, aynı zamanda içermelidir.|  
@@ -42,7 +42,7 @@ Tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaI
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   

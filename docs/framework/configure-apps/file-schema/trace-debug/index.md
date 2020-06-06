@@ -12,10 +12,10 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927126"
 ---
 # <a name="trace-and-debug-settings-schema"></a>İzleme ve Hata Ayıklama Ayarları Şeması
@@ -25,31 +25,31 @@ ms.locfileid: "69927126"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<> Ekle](add-element-for-listeners-for-source.md)|İzleme kaynağı için `Listeners` koleksiyona bir dinleyici ekler.|  
-|[\<> Ekle](add-element-for-listeners-for-trace.md)|`Listeners` Koleksiyona bir dinleyici ekler.|  
-|[\<> Ekle](add-element-for-sharedlisteners.md)|`sharedListeners` Koleksiyona bir dinleyici ekler.|  
-|[\<> Ekle](add-element-for-switches.md)|Bir izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|[\<onaylama >](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
-|[\<> Temizle](clear-element-for-listeners-for-source.md)|İzleme kaynağı için koleksiyonu temizler. `Listeners`|  
-|[\<> Temizle](clear-element-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyonu temizler.|  
-|[\<Filtre >](filter-element-for-add-for-listeners-for-source.md)|İzleme kaynağı için `Listeners` koleksiyondaki bir dinleyiciye bir filtre ekler.|  
-|[\<Filtre >](filter-element-for-add-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyondaki bir dinleyiciye bir filtre ekler.|  
-|[\<Filtre >](filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` Koleksiyondaki bir dinleyiciye bir filtre ekler.|  
-|[\<dinleyiciler >](listeners-element-for-source.md)|İzleme kaynağı için `Listeners` koleksiyon dinleyicileri belirtir.|  
-|[\<dinleyiciler >](listeners-element-for-trace.md)|İzleme `Listeners` koleksiyonu için dinleyicileri belirtir.|  
-|[\<performanceCounters >](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
-|[\<> Kaldır](remove-element-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyondan bir dinleyici kaldırır.|  
-|[\<> Kaldır](remove-element-for-listeners-for-source.md)|İzleme kaynağı için `Listeners` koleksiyondan bir dinleyiciyi kaldırır.|  
-|[\<sharedListeners >](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.|  
-|[\<Kaynaklar >](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
-|[\<Kaynak >](source-element.md)|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
-|[\<Anahtarlar >](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyi içerir.|  
-|[\<System. Diagnostics >](system-diagnostics-element.md)|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
-|[\<İzleme >](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[\<add>](add-element-for-listeners-for-source.md)|`Listeners`İzleme kaynağı için koleksiyona bir dinleyici ekler.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Koleksiyona bir dinleyici ekler `Listeners` .|  
+|[\<add>](add-element-for-sharedlisteners.md)|Koleksiyona bir dinleyici ekler `sharedListeners` .|  
+|[\<add>](add-element-for-switches.md)|Bir izleme anahtarının ayarlandığı düzeyi belirtir.|  
+|[\<assert>](assert-element.md)|Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
+|[\<clear>](clear-element-for-listeners-for-source.md)|`Listeners`İzleme kaynağı için koleksiyonu temizler.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|`Listeners`İzleme için koleksiyonu temizler.|  
+|[\<filter>](filter-element-for-add-for-listeners-for-source.md)|İzleme kaynağı için koleksiyondaki bir dinleyiciye bir filtre ekler `Listeners` .|  
+|[\<filter>](filter-element-for-add-for-listeners-for-trace.md)|İzleme için koleksiyondaki bir dinleyiciye bir filtre ekler `Listeners` .|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|Koleksiyondaki bir dinleyiciye bir filtre ekler `sharedListeners` .|  
+|[\<listeners>](listeners-element-for-source.md)|`Listeners`İzleme kaynağı için koleksiyon dinleyicileri belirtir.|  
+|[\<listeners>](listeners-element-for-trace.md)|İzleme koleksiyonu için dinleyicileri belirtir `Listeners` .|  
+|[\<performanceCounters>](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|`Listeners`İzleme için koleksiyondan bir dinleyici kaldırır.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|`Listeners`İzleme kaynağı için koleksiyondan bir dinleyiciyi kaldırır.|  
+|[\<sharedListeners>](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir.|  
+|[\<sources>](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
+|[\<source>](source-element.md)|İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
+|[\<switches>](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyi içerir.|  
+|[\<system.diagnostics>](system-diagnostics-element.md)|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|[\<trace>](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma dosyası şeması](../index.md)

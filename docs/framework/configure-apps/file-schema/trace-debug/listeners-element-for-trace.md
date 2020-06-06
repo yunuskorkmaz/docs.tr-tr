@@ -1,5 +1,5 @@
 ---
-title: <trace> için <listeners> öğesi
+title: <trace> için <listeners> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153379"
 ---
-# <a name="listeners-element-for-trace"></a>\<izleme> için \<Element> dinleyici
-İletileri toplayan, depolayan ve gönderen bir dinleyici belirtir. Dinleyiciler izleme çıktısını uygun bir hedefe yönlendirir.  
+# <a name="listeners-element-for-trace"></a>\<trace> için \<listeners> Öğesi
+İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<izleme>**](trace-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dinleyici ler>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<trace>**](trace-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<listeners>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,9 +42,9 @@ ms.locfileid: "79153379"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>ekleyin](add-element-for-listeners-for-trace.md)|`Listeners` Koleksiyona bir dinleyici ekler.|  
-|[\<açık>](clear-element-for-listeners-for-trace.md)|İzleme için `Listeners` koleksiyonu temizler.|  
-|[\<>kaldırmak](remove-element-for-listeners-for-trace.md)|Dinleyiciyi `Listeners` koleksiyondan kaldırır.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Koleksiyona bir dinleyici ekler `Listeners` .|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|`Listeners`İzleme için koleksiyonu temizler.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Koleksiyondan bir dinleyiciyi kaldırır `Listeners` .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,16 +52,16 @@ ms.locfileid: "79153379"
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`system.diagnostics`|ASP.NET yapılandırma bölümünün kök öğesini belirtir.|  
-|`trace`|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|`trace`|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ve <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> sınıflar aynı **Dinleyici** koleksiyonunu paylaşır. Bu sınıflardan birinde koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. .NET Framework ile gönderilen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıftan türetilmiştir.  
+ <xref:System.Diagnostics.Debug>Ve <xref:System.Diagnostics.Trace> sınıfları aynı **dinleyicileri** toplamayı paylaşır. Bu sınıflardan birindeki koleksiyona bir dinleyici nesnesi eklerseniz, diğer sınıf aynı dinleyiciyi kullanır. .NET Framework ile birlikte gelen dinleyici sınıfları <xref:System.Diagnostics.TraceListener> sınıfından türetilir.  
   
 ## <a name="configuration-file"></a>Yapılandırma Dosyası  
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `MyListener` ** \<dinleyicileri ve** **Dinleyicikoleksiyonunu** eklemek `MyEventListener` için dinleyici>öğenin nasıl kullanılacağını gösterir. `MyListener`adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
+ Aşağıdaki örnek, **\<listeners>** dinleyicileri `MyListener` ve `MyEventListener` **dinleyici** koleksiyonuna eklemek için öğesinin nasıl kullanılacağını gösterir. `MyListener`adlı bir dosya oluşturur `MyListener.log` ve çıktıyı dosyaya yazar. `MyEventListener`olay günlüğünde bir giriş oluşturur.  
   
 ```xml  
 <configuration>  

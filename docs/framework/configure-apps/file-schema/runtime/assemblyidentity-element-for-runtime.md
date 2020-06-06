@@ -1,5 +1,5 @@
 ---
-title: <runtime> için <assemblyIdentity> öğesi
+title: <runtime> için <assemblyIdentity> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154315"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a>\<çalışma zamanı> \<için assemblyIdentity> Öğesi
-Derleme hakkında tanımlayıcı bilgileri içerir.  
+# <a name="assemblyidentity-element-for-runtime"></a>\<runtime> için \<assemblyIdentity> Öğesi
+Derlemeyle ilgili tanımlama bilgilerini içerir.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<montajBağlama>**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bağımlıAssembly>**](dependentassembly-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyIdentity>**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -42,18 +42,18 @@ culture="assembly culture"/>
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`name`|Gerekli öznitelik.<br /><br /> Derlemenin adı|  
-|`culture`|İsteğe bağlı öznitelik.<br /><br /> Derlemenin dilini ve ülkesini/bölgesini belirten bir dize.|  
-|`publicKeyToken`|İsteğe bağlı öznitelik.<br /><br /> Derlemenin güçlü adını belirten bir hexadecimal değer.|  
-|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> "x86", "amd64", "msil" veya "ia64" değerlerinden biri, işlemciye özgü kod içeren bir derlemenin işlemci mimarisini belirtir. Değerler büyük/küçük harf duyarlı değildir. Öznitelik başka bir değer atanırsa, tüm `<assemblyIdentity>` öğe yoksayılır. Bkz. <xref:System.Reflection.ProcessorArchitecture>.|  
+|`culture`|İsteğe bağlı öznitelik.<br /><br /> Derlemenin dil ve ülke/bölge bilgisini belirten bir dize.|  
+|`publicKeyToken`|İsteğe bağlı öznitelik.<br /><br /> Derlemenin tanımlayıcı adını belirten onaltılık bir değer.|  
+|`processorArchitecture`|İsteğe bağlı öznitelik.<br /><br /> "X86", "amd64", "MSIL" veya "ia64" değerlerinden biri, işlemciye özgü kod içeren bir derlemenin işlemci mimarisini belirleyen. Değerler büyük/küçük harfe duyarlı değildir. Özniteliği başka bir değer atanırsa, tüm `<assemblyIdentity>` öğesi yok sayılır. Bkz. <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## <a name="processorarchitecture-attribute"></a>processorMimari Öznitelik  
+## <a name="processorarchitecture-attribute"></a>processorArchitecture özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`amd64`|Sadece AMD x86-64 mimarisi.|  
-|`ia64`|Intel Itanium mimarisi sadece.|  
-|`msil`|İşlemci ve kelime başına bit açısından nötr.|  
-|`x86`|32 bit x86 işlemci, 64 bit platformda yerel veya Windows Windows (WOW) ortamında.|  
+|`amd64`|Yalnızca AMD x86-64 mimarisi.|  
+|`ia64`|Yalnızca Intel Itanium mimarisi.|  
+|`msil`|İşlemci ve sözcüğe göre bit başına açısından nötr.|  
+|`x86`|64 bit platformda yerel veya Windows üzerinde Windows (WOW) ortamındaki 32 bitlik bir x86 işlemcisi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -64,15 +64,15 @@ culture="assembly culture"/>
 |-------------|-----------------|  
 |`assemblyBinding`|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`dependentAssembly`|Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. Her `<dependentAssembly>` montaj için bir öğe kullanın.|  
+|`dependentAssembly`|Her bir derleme için bağlama ilkesi ve derleme konumunu saklar. `<dependentAssembly>`Her derleme için bir öğe kullanın.|  
 |`runtime`|Derleme bağlama ve atık toplama hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her ** \<bağımlıAssembly>** öğesi bir ** \<assemblyIdentity>** alt öğesi olmalıdır.  
+ Her **\<dependentAssembly>** öğenin bir **\<assemblyIdentity>** alt öğesi olmalıdır.  
   
- `processorArchitecture` Öznitelik varsa, `<assemblyIdentity>` öğe yalnızca ilgili işlemci mimarisi ile derleme için geçerlidir. `processorArchitecture` Öznitelik yoksa, `<assemblyIdentity>` öğe herhangi bir işlemci mimarisi olan bir derlemeye uygulayabilir.  
+ `processorArchitecture`Öznitelik varsa, `<assemblyIdentity>` öğe yalnızca karşılık gelen işlemci mimarisine sahip derleme için geçerlidir. `processorArchitecture`Özniteliği yoksa, `<assemblyIdentity>` öğesi herhangi bir işlemci mimarisine sahip bir derleme için uygulanabilir.  
   
- Aşağıdaki örnek, iki farklı iki işlemci mimarisini hedefleyen ve sürümleri eşitlemede korunmayan aynı ada sahip iki derleme için bir yapılandırma dosyası gösterir. Uygulama x86 platformunda yürütüldüğünde `<assemblyIdentity>` ilk öğe uygulanır ve diğeri yoksayılır. Uygulama x86 veya ia64 dışında bir platformda yürütülürse, her ikisi de yoksayılır.  
+ Aşağıdaki örnek, iki farklı iki işlemci mimarisinden oluşan aynı ada sahip iki derleme için bir yapılandırma dosyası gösterir ve sürümleri eşitlenmiş olarak korunmaz. Uygulama x86 platformunda yürütüldüğünde ilk `<assemblyIdentity>` öğe uygulanır ve diğeri yok sayılır. Uygulama, x86 veya ia64 dışında bir platformda yürütülüyorsa her ikisi de yok sayılır.  
   
 ```xml  
 <configuration>  
@@ -99,10 +99,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Yapılandırma dosyası özniteliği `<assemblyIdentity>` olmayan `processorArchitecture` bir öğe içeriyorsa ve platformla eşleşen bir öğe `processorArchitecture` içermiyorsa, özniteliği olmayan öğe kullanılır.  
+ Bir yapılandırma dosyası özniteliği olmayan bir `<assemblyIdentity>` öğe içeriyorsa `processorArchitecture` ve platformla eşleşen bir öğe içermiyorsa, özniteliği olmayan öğesi `processorArchitecture` kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir derleme hakkında nasıl bilgi verilebildiğini gösterir.  
+ Aşağıdaki örnek, bir derleme hakkında nasıl bilgi sağlayagösterdiğini gösterir.  
   
 ```xml  
 <configuration>  
@@ -121,6 +121,6 @@ culture="assembly culture"/>
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Derleme Sürümlerini Yönlendirme](../../redirect-assembly-versions.md)

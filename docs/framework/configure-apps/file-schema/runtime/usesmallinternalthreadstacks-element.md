@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73114921"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<Usesmallınternalthreadyığınları > öğesi
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> Öğesi
 Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan yığın boyutunu kullanmak yerine, dahili olarak kullandığı belirli iş parçacıklarını oluştururken açık yığın boyutları belirterek bellek kullanımını azaltmalarını ister.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Usesmallınternalthreadyığınları >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,14 +32,14 @@ Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|etkinletir|Gerekli öznitelik.<br /><br /> CLR tarafından kullanılan belirli iş parçacıklarını oluşturduğunda, CLR 'nin varsayılan yığın boyutu yerine açık yığın boyutları kullanması istenip istenmeyeceğini belirtir. Açık yığın boyutları 1 MB varsayılan yığın boyutundan daha küçüktür.|  
+|enabled|Gerekli öznitelik.<br /><br /> CLR tarafından kullanılan belirli iş parçacıklarını oluşturduğunda, CLR 'nin varsayılan yığın boyutu yerine açık yığın boyutları kullanması istenip istenmeyeceğini belirtir. Açık yığın boyutları 1 MB varsayılan yığın boyutundan daha küçüktür.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |true|Açık yığın boyutları isteyin.|  
-|false|Varsayılan yığın boyutunu kullanın. .NET Framework 4 için varsayılan değer budur.|  
+|yanlış|Varsayılan yığın boyutunu kullanın. .NET Framework 4 için varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -72,5 +72,5 @@ Ortak dil çalışma zamanının (CLR), bu iş parçacıkları için varsayılan
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

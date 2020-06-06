@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84278408"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> Öğesi
@@ -27,13 +27,13 @@ Tarafından kullanılan türler içerir <xref:System.Xml.Serialization.XmlSchema
   
 ## <a name="child-elements"></a>Alt Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<add>İçin öğesi\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)|Eşlemeleri oluşturmak için tarafından kullanılan türleri ekler <xref:System.Xml.Serialization.XmlSchemaImporter> .|  
   
 ## <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)|XML serileştirmesini denetlemek için en üst düzey öğe.|  
   

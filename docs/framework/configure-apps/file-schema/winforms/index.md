@@ -3,16 +3,16 @@ title: Windows Forms Yapılandırma Bölümü
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151838"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Forms Yapılandırma Bölümü
-Windows Forms yapılandırma ayarları, windows forms uygulamasının çoklu monitör desteği, yüksek DPI desteği ve diğer önceden tanımlanmış yapılandırma ayarları gibi özelleştirilmiş uygulama ayarları hakkında bilgi depolamasına ve almasına olanak tanır.
+Windows Forms yapılandırma ayarları, Windows Forms uygulamanın çok Monitor desteği, yüksek DPı desteği ve diğer önceden tanımlanmış yapılandırma ayarları gibi özelleştirilmiş uygulama ayarları hakkında bilgi depolamasına ve almasına izin verir.
 
-Windows Forms uygulama yapılandırma ayarları bir uygulama yapılandırma `System.Windows.Forms.ApplicationConfigurationSection` dosyasının öğesinde depolanır.
+Windows Forms uygulama yapılandırma ayarları bir uygulama yapılandırma dosyasının `System.Windows.Forms.ApplicationConfigurationSection` öğesinde saklanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,21 +36,21 @@ Yok.
 
 Öğe  |Açıklama |
 ---------|---------|
-[`<add>`](windows-forms-add-configuration-element.md) | Belirli bir değere sahip bir yapılandırma ayar anahtarı ekler |
+[`<add>`](windows-forms-add-configuration-element.md) | Belirtilen değere sahip bir yapılandırma ayarı anahtarı ekler |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 Öğe  |Açıklama |
 ---------|---------|
-[\<yapılandırma>](../configuration-element.md) | Ortak dil çalışma zamanı ve Windows Forms uygulamaları tarafından kullanılan her yapılandırma dosyasındaki temel öğe |
+[\<configuration>](../configuration-element.md) | Ortak dil çalışma zamanı ve Windows Forms uygulamaları tarafından kullanılan her yapılandırma dosyasındaki kök öğe |
 
 ## <a name="remarks"></a>Açıklamalar
 
-.NET Framework 4.7 ile `<System.Windows.Forms.ApplicationConfigurationSection>` başlayarak, öğe ,.NET Framework'ün son sürümlerinde eklenen özelliklerden yararlanacak şekilde Windows Forms uygulamalarını yapılandırmanızı sağlar.
+.NET Framework 4,7 ' den başlayarak, `<System.Windows.Forms.ApplicationConfigurationSection>` öğesi, .NET Framework son sürümlerinde eklenen özelliklerden yararlanmak için Windows Forms uygulamalarını yapılandırmanıza olanak tanır.
 
-Öğe, `<System.Windows.Forms.ApplicationConfigurationSection>` her biri belirli [`<add>`](windows-forms-add-configuration-element.md) bir yapılandırma ayarını tanımlayan bir veya daha fazla alt öğe içerebilir.
+`<System.Windows.Forms.ApplicationConfigurationSection>`Öğesi [`<add>`](windows-forms-add-configuration-element.md) , her biri belirli bir yapılandırma ayarını tanımlayan bir veya daha fazla alt öğe içerebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [Windows Formlarında Yüksek DPI Desteği](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Windows Forms yüksek DPı desteği](../../../winforms/high-dpi-support-in-windows-forms.md)

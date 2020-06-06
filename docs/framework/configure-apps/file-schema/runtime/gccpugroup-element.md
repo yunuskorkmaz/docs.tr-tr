@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 ms.openlocfilehash: f1cbe5a7109d6e4aae2e92710920a1c6b3a40d00
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "82102898"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Elemanı
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Öğesi
 
-Çöp toplamanın birden çok CPU gruplarını destekleyip desteklemediğini belirtir.
+Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.
 
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<çalışma zamanı>**](runtime-element.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<GCCpuGroup>**
 
 ## <a name="syntax"></a>Sözdizimi
@@ -35,14 +35,14 @@ ms.locfileid: "82102898"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplamanın birden çok CPU gruplarını destekleyip desteklemediğini belirtir.|
+|`enabled`|Gerekli öznitelik.<br /><br /> Çöp toplamanın birden çok CPU grubunu destekleyip desteklemediğini belirtir.|
 
 ## <a name="enabled-attribute"></a>etkin Öznitelik
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`false`|Çöp toplama birden çok CPU gruplarını desteklemez. Bu varsayılandır.|
-|`true`|Sunucu çöp toplama etkinse, çöp toplama birden çok CPU gruplarını destekler.|
+|`false`|Çöp toplama birden çok CPU grubunu desteklemiyor. Bu varsayılandır.|
+|`true`|Çöp toplama, sunucu çöp toplama etkinse birden çok CPU grubunu destekler.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -57,14 +57,14 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir bilgisayarda birden çok CPU grubu olduğunda ve sunucu çöp toplama etkinleştirildiğinde [ \<(gcServer>](gcserver-element.md) öğesine bakın), bu öğenin tüm CPU gruplarında çöp toplamayı genişletmesini ve yığınoluştururken ve dengeleme yaparken tüm çekirdekleri hesaba katmasını sağlar.
+Bir bilgisayarda birden çok CPU grubu olduğunda ve sunucu çöp toplama özelliği etkin olduğunda (bkz. [\<gcServer>](gcserver-element.md) öğesi), bu öğenin tüm CPU gruplarında çöp toplamayı genişlettiğini ve Heap 'ler oluştururken ve bunları dengeleyerek tüm çekirdekleri hesaba getirecek şekilde etkinleştirir.
 
 > [!NOTE]
-> Bu öğe yalnızca çöp toplama iş parçacıkları için geçerlidir. Kullanıcı iş parçacıklarını tüm CPU gruplarına dağıtmak için çalışma süresini etkinleştirmek için [ \<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) öğesini de etkinleştirmeniz gerekir.
+> Bu öğe yalnızca çöp toplama iş parçacıkları için geçerlidir. Çalışma zamanının tüm CPU gruplarında Kullanıcı iş parçacıklarını dağıtmasını sağlamak için, öğesini de etkinleştirmeniz gerekir [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, birden çok CPU grubu için çöp toplamanın nasıl etkinleştirilen gösterilmektedir.
+Aşağıdaki örnekte, birden çok CPU grubu için çöp toplamanın nasıl etkinleştirileceği gösterilmektedir.
 
 ```xml
 <configuration>
@@ -77,7 +77,7 @@ Aşağıdaki örnek, birden çok CPU grubu için çöp toplamanın nasıl etkinl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosya Şema](../index.md)
-- [Eşzamanlı çöp toplamayı devre dışı](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [İş istasyonu ve sunucu çöp toplama](../../../../standard/garbage-collection/workstation-server-gc.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [Eşzamanlı atık toplamayı devre dışı bırak](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [İş istasyonu ve sunucu atık toplama](../../../../standard/garbage-collection/workstation-server-gc.md)

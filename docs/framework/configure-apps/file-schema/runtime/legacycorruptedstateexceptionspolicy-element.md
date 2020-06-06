@@ -6,18 +6,18 @@ helpviewer_keywords:
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73116452"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<Legacybozulmuş Tedstateexceptionspolicy > öğesi
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Öğesi
 Ortak dil çalışma zamanının yönetilen kodun erişim ihlallerini ve diğer bozuk durum özel durumlarını yakalayıp belirlemesine izin verip içermediğini belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Legacybozulmuş Tedstateexceptionspolicy >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<legacyCorruptedStateExceptionsPolicy>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,13 +54,13 @@ Ortak dil çalışma zamanının yönetilen kodun erişim ihlallerini ve diğer 
 ## <a name="remarks"></a>Açıklamalar  
  .NET Framework sürüm 3,5 ve önceki sürümlerde, ortak dil çalışma zamanının bozuk işlem durumları tarafından oluşturulan özel durumları yakalayabileceği yönetilen koda izin verilir. Erişim ihlali, bu tür bir özel durum örneğidir.  
   
- .NET Framework 4 ' te başlayarak, yönetilen kod artık `catch` bloklardaki bu tür özel durumları yakalamayacaktır. Ancak, bu değişikliği geçersiz kılabilir ve bozulmuş durum istisnalarını iki şekilde işleme devam edebilirsiniz:  
+ .NET Framework 4 ' te başlayarak, yönetilen kod artık bloklardaki bu tür özel durumları yakalamayacaktır `catch` . Ancak, bu değişikliği geçersiz kılabilir ve bozulmuş durum istisnalarını iki şekilde işleme devam edebilirsiniz:  
   
-- `<legacyCorruptedStateExceptionsPolicy>` öğenin `enabled` özniteliğini `true`olarak ayarlayın. Bu yapılandırma ayarı, processwide uygulanır ve tüm yöntemleri etkiler.  
+- `<legacyCorruptedStateExceptionsPolicy>`Öğenin `enabled` özniteliğini olarak ayarlayın `true` . Bu yapılandırma ayarı, processwide uygulanır ve tüm yöntemleri etkiler.  
   
- veya  
+ -veya-  
   
-- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> özniteliğini, özel durumları `catch` bloğunu içeren yönteme uygulayın.  
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>Özel durum bloğunu içeren yönteme özniteliğini uygulayın `catch` .  
   
  Bu yapılandırma öğesi yalnızca .NET Framework 4 ve üzeri sürümlerde kullanılabilir.  
   
@@ -78,5 +78,5 @@ Ortak dil çalışma zamanının yönetilen kodun erişim ihlallerini ve diğer 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

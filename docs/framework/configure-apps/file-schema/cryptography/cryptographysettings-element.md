@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155238"
 ---
-# <a name="cryptographysettings-element"></a>\<şifrelemeAyarlar> Öğesi
-Şifreleme ayarları içerir.  
+# <a name="cryptographysettings-element"></a>\<cryptographySettings> Öğesi
+Şifreleme ayarlarını içerir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<şifrelemeAyarlar>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptographySettings>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,18 +39,18 @@ ms.locfileid: "79155238"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Sınıfların dost adlara eşlemelerini içerir.|  
-|[\<oidMap>](oidmap-element.md)|Sınıflara ASN.1 nesne tanımlayıcısı (OID) eşlemeleri içerir.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Kolay adlarla sınıfların eşlemelerini içerir.|  
+|[\<oidMap>](oidmap-element.md)|Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`mscorlib`|Öğeyi `cryptographySettings` içerir.|  
+|`mscorlib`|Öğesini içerir `cryptographySettings` .|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ** \<şifreleme** adı eşlemeleri ve OID eşlemeleri içeren şifreleme Ayarları>öğesini nasıl kullandığını gösterir. Bu örnek, bir <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> `MyHashClass` nesneyi ve `MyCryptoClass` sınıf eşlemlerini nesne tanımlayıcı1.3.36.2.1'e döndürecek şekilde çalışma zamanını yapılandırır.  
+ Aşağıdaki örnek, **\<cryptographySettings>** öğesinin şifreleme adı eşlemelerini ve OID eşlemelerini içermesi için nasıl kullanılacağını gösterir. Bu örnek, çalışma zamanını <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> bir `MyHashClass` nesne döndüren ve `MyCryptoClass` sınıfı 1.3.36.2.1 nesne tanımlayıcısına eşlenecek şekilde yapılandırır.  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "79155238"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)

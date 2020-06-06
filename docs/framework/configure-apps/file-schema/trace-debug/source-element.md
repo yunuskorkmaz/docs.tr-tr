@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153301"
 ---
-# <a name="source-element"></a>\<kaynak> Element
-İletilerin izlenmesini başlatan bir izleme kaynağı belirtir.  
+# <a name="source-element"></a>\<source> Öğesi
+İzleme iletilerini Başlatan bir izleme kaynağını belirtir.  
 
-[**\<yapılandırma>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<kaynaklar>**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<kaynak>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<source>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,29 +38,29 @@ ms.locfileid: "79153301"
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |`name`|İsteğe bağlı öznitelik.<br /><br /> İzleme kaynağının adını belirtir.|  
-|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulamada bir izleme anahtarı örneğinin adını belirtir. Anahtar bir `<switches>` öğede tanımlanmamışsa, değer anahtarın düzeyini belirtir.|  
-|`switchType`|İsteğe bağlı öznitelik.<br /><br /> İzleme anahtarının türünü belirtir. Varsa, tür geçerli bir sınıf adı olmalıdır ve boş bir dize olamaz.|  
-|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Bu izleme kaynağı için <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> yöntem tarafından tanımlanan izleme kaynağına özgü bir öznitelik için değeri belirtir.|  
+|`switchName`|İsteğe bağlı öznitelik.<br /><br /> Uygulamadaki bir izleme anahtarı örneğinin adını belirtir. Anahtar bir `<switches>` öğesinde tanımlanmamışsa, değer anahtar düzeyini belirtir.|  
+|`switchType`|İsteğe bağlı öznitelik.<br /><br /> İzleme anahtarının türünü belirtir. Varsa, türün geçerli bir sınıf adı olması ve boş bir dize olmaması gerekir.|  
+|`extraAttribute`|İsteğe bağlı öznitelik.<br /><br /> Bu izleme kaynağı için yöntemi tarafından tanımlanan izleme kaynağına özgü bir özniteliğin değerini belirtir <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<dinleyici ler>](listeners-element-for-source.md)|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[\<listeners>](listeners-element-for-source.md)|İletileri toplayacak, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.|  
-|`sources`|İletileri izlemeyi başlatan izleme kaynakları içerir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sources`|İzleme iletilerini Başlatan izleme kaynaklarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe makine yapılandırma dosyasında (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, izleme kaynağını `<source>` `mySource` eklemek ve adlı `sourceSwitch`kaynak anahtarının düzeyini ayarlamak için öğenin nasıl kullanılacağını gösterir. Konsola izleme bilgileri yazan bir konsol izleme dinleyicisi eklenir.  
+ Aşağıdaki örnek, `<source>` izleme kaynağını eklemek `mySource` ve adlı kaynak anahtarın düzeyini ayarlamak için öğesinin nasıl kullanılacağını gösterir `sourceSwitch` . İzleme bilgilerini konsola yazan bir konsol izleme dinleyicisi eklenir.  
   
 ```xml  
 <configuration>  

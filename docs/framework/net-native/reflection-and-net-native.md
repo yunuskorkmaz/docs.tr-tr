@@ -3,10 +3,10 @@ title: Yansıma ve .NET Yerel
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128181"
 ---
 # <a name="reflection-and-net-native"></a>Yansıma ve .NET Yerel
@@ -21,11 +21,11 @@ ms.locfileid: "73128181"
 > [!NOTE]
 > Çalışma zamanı yönergeleri dosyasının neden gerekli olduğuna ilişkin arka plan sağlayan .NET Native derleme işlemine genel bakış için, bkz. [.NET Native ve derleme](net-native-and-compilation.md).  
   
- Ayrıca .NET Native, .NET Framework sınıf kitaplığının özel üyelerini yansıtmasına izin vermez. Örneğin, bir .NET Framework sınıf kitaplığı türünün alanlarını almak için <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> özelliğine yapılan bir çağrı yalnızca ortak veya korumalı alanları döndürür.  
+ Ayrıca .NET Native, .NET Framework sınıf kitaplığının özel üyelerini yansıtmasına izin vermez. Örneğin, <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> bir .NET Framework sınıf kitaplığı türünün alanlarını almak için özelliğine yapılan bir çağrı yalnızca ortak veya korumalı alanları döndürür.  
   
  Aşağıdaki konular, uygulamalarınızda yansıma ve Serileştirmeyi desteklemek için ihtiyacınız olan kavramsal ve başvuru belgelerini sağlar:  
   
-- [Yansıma Kullanan API'ler](apis-that-rely-on-reflection.md)  
+- [Yansıma kullanan API'ler](apis-that-rely-on-reflection.md)  
   
 - [Yansıma API'si Başvurusu](net-native-reflection-api-reference.md)  
   
@@ -33,5 +33,5 @@ ms.locfileid: "73128181"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Native ile Uygulama Derleme](index.md)
-- [.NET Native ve Derleme](net-native-and-compilation.md)
+- [.NET Yerel ile Uygulama Derleme](index.md)
+- [.NET Yerel ve Derleme](net-native-and-compilation.md)

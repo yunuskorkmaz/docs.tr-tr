@@ -3,20 +3,20 @@ title: <add> / <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
 ms.openlocfilehash: 02654b8ab198a2b161b3044c1f3aa452761a6a4c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398387"
 ---
-# <a name="add-of-allowaccounts"></a>\<\<AllowAccounts > ekleyin >
+# <a name="add-of-allowaccounts"></a>\<add> / \<allowAccounts>
 WCF hizmetlerini barındıran işlemlere yönelik bir kullanıcı hesabı belirtir ve paylaşım hizmetine bağlantı erişimi verilir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel. Activation >** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net. pipe >** ](net-pipe.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<allowAccounts >** ](allowaccounts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> Ekle**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<net.pipe>**](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<allowAccounts>**](allowaccounts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,7 +33,7 @@ WCF hizmetlerini barındıran işlemlere yönelik bir kullanıcı hesabı belirt
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|SecurityIdentifier|Bir kullanıcı hesabını tanımlamak için kullanılan benzersiz bir tanımlayıcıyı belirten dize. Varsayılan değerler LocalSystem, Administrators, NS, LS ve IIS_USRS şeklindedir.|  
+|SecurityIdentifier|Bir kullanıcı hesabını tanımlamak için kullanılan benzersiz bir tanımlayıcıyı belirten dize. Varsayılan değerler LocalSystem, Administrators, NS, LS ve IIS_USRS.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,7 +42,7 @@ WCF hizmetlerini barındıran işlemlere yönelik bir kullanıcı hesabı belirt
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<allowAccounts >](allowaccounts.md)|WCF hizmetlerini barındıran işlemlere yönelik kullanıcı hesaplarını belirtmek `securityIdentifier` için bir özniteliği içeren yapılandırma öğelerinin bir koleksiyonu ve paylaşım hizmetine bağlantı erişimi verilir.|  
+|[\<allowAccounts>](allowaccounts.md)|`securityIdentifier`WCF hizmetlerini barındıran işlemlere yönelik kullanıcı hesaplarını belirtmek için bir özniteliği içeren yapılandırma öğelerinin bir koleksiyonu ve paylaşım hizmetine bağlantı erişimi verilir.|  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki yapılandırma örneği, bu koleksiyona Kullanıcı hesapları için beş varsayılan tanımlayıcı ekler.  

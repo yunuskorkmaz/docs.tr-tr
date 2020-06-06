@@ -3,14 +3,14 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "61700780"
 ---
-# <a name="extensions"></a>\<Uzantıları >
-Bu yapılandırma öğesi, standart bulunabilirlik meta veriler ile birlikte (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanacak özel meta verileri içeren XML öğelerinin bir koleksiyonunu içerir. Bu yapılandırma öğesini kullanarak bir örnek verilmiştir.  
+# \<extensions>
+Bu yapılandırma öğesi, standart bulunabilir meta veriler (EPR, ContractTypeName, BindingName, scope ve ListenURI) ile birlikte yayımlanacak özel meta verileri içeren XML öğelerinin bir koleksiyonunu içerir. Aşağıda bu yapılandırma öğesinin kullanılmasına bir örnek verilmiştir.  
   
 ```xml  
 <services>

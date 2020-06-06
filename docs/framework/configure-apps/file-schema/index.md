@@ -22,10 +22,10 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039155"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework için yapılandırma dosyası şeması
@@ -39,13 +39,13 @@ Yapılandırma dosyalarının türleri, biçimi ve konumu hakkında daha fazla b
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[ **\<Yapılandırma >** öğesi](configuration-element.md)\
+[**\<configuration>** Dosyalarında](configuration-element.md)\
 Tüm yapılandırma dosyaları için en üst düzey öğe.
 
-[ **assemblybinding >** öğesi\\<](assemblybinding-element-for-configuration.md)
+[**\<assemblyBinding>** Dosyalarında](assemblybinding-element-for-configuration.md)\
 Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.
 
-[ **\<linkedconfiguration >** öğesi](linkedconfiguration-element.md)\
+[**\<linkedConfiguration>** Dosyalarında](linkedconfiguration-element.md)\
 Dahil edilecek bir yapılandırma dosyasını belirtir.
 
 [Başlangıç ayarları şeması](./startup/index.md)\
@@ -84,15 +84,15 @@ ASP.NET 'ın IIS gibi bir konak uygulamasıyla nasıl çalıştığını yapıla
 [WCF yapılandırma şeması](./wcf/index.md)\
 WCF hizmetini ve istemci uygulamalarını yapılandırmanızı sağlayan tüm öğeler.
 
-[WCF yönergesi sözdizimi](./wcf-directive/index.md)\
-. Svc derleyicisi tarafından kullanılan sayfaya özgü öznitelikleri tanımlayan `@ServiceHost` yönergesini açıklar.
+[WCF yönerge söz dizimi](./wcf-directive/index.md)\
+`@ServiceHost`. Svc derleyicisi tarafından kullanılan sayfaya özgü öznitelikleri tanımlayan yönergesini açıklar.
 
-[WIF yapılandırma şeması](windows-identity-foundation/index.md)\
+[WıF yapılandırma şeması](windows-identity-foundation/index.md)\
 Windows Identity Foundation (WıF) yapılandırma şemasının tüm öğeleri.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Uzaktan Iletişim ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[Uzaktan iletişim ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 Uzaktan iletişim uygulayan istemci ve sunucu uygulamalarını yapılandıran öğeleri açıklar.
 
 [ASP.NET ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\

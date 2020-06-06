@@ -3,19 +3,19 @@ title: <httpListener> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: 0054be3d2002e4ea5247f25d8094386ac7242422
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088385"
 ---
-# <a name="httplistener-element-network-settings"></a>\<httpListener > öğesi (ağ ayarları)
-<xref:System.Net.HttpListener> sınıfı tarafından kullanılan parametreleri özelleştirir.  
+# <a name="httplistener-element-network-settings"></a>\<httpListener> Öğesi (Ağ Ayarları)
+Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.HttpListener> .  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları >** ](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpListener >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpListener>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,43 +34,43 @@ ms.locfileid: "74088385"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|unescapeRequestUrl 'Si|Bir <xref:System.Net.HttpListener> örneğinin, dönüştürülmüş URI yerine ham unatsız URI kullanıp kullanmadığını gösteren bir Boolean değer.|  
+|unescapeRequestUrl 'Si|Bir <xref:System.Net.HttpListener> Örneğin, dönüştürülmüş URI yerine ham unatsız URI kullanıp kullanmadığını gösteren bir Boolean değer.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|**Öğe**|**Açıklama**|  
+|**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> ad alanı için temel ağ seçeneklerini yapılandırır.|  
+|[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- **UnescapeRequestUrl** özniteliği, <xref:System.Net.HttpListener> yüzde kodlamalı değerlerin dönüştürüldüğü ve diğer normalleştirme adımlarının alındığı dönüştürülmüş URI yerine ham unatsız URI 'yi kullanıp kullanmadığını belirtir.  
+ **UnescapeRequestUrl** özniteliği, <xref:System.Net.HttpListener> yüzde kodlamalı değerlerin dönüştürüldüğü ve diğer normalleştirme ADıMLARıNıN alındığı dönüştürülmüş URI yerine, ham kaçışsız URI kullanıp kullanmadığını belirtir.  
   
- Bir <xref:System.Net.HttpListener> örneği `http.sys` hizmeti üzerinden bir istek aldığında, `http.sys`tarafından sağlanmış URI dizesinin bir örneğini oluşturur ve bunu <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> özelliği olarak gösterir.  
+ Bir <xref:System.Net.HttpListener> örnek hizmet aracılığıyla bir istek aldığında `http.sys` , tarafından sağlanmış URI dizesinin bir örneğini oluşturur `http.sys` ve özelliği olarak gösterir <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> .  
   
- `http.sys` hizmeti iki istek URI dizesi kullanıma sunar:  
+ `http.sys`Hizmet iki Istek URI dizesini kullanıma sunar:  
   
 - Ham URI  
   
 - Dönüştürülmüş URI  
   
- Ham URI, HTTP isteğinin istek satırında belirtilen <xref:System.Uri?displayProperty=nameWithType> ' dır:  
+ Ham URI, <xref:System.Uri?displayProperty=nameWithType> http isteğinin istek satırında verilmiştir:  
   
  `GET /path/`  
   
  `Host: www.contoso.com`  
   
- Yukarıda bahsedilen istek için `http.sys` tarafından belirtilen ham URI, "/path/" dir. Bu, ağ üzerinden gönderilen HTTP fiilini izleyen dizeyi temsil eder.  
+ Yukarıda belirtilen istek için tarafından belirtilen ham URI, `http.sys` "/path/" dir. Bu, ağ üzerinden gönderilen HTTP fiilini izleyen dizeyi temsil eder.  
   
- `http.sys` hizmeti, isteğin iletilmesi gereken kaynak sunucuyu belirleyebilmek için HTTP istek satırında ve ana bilgisayar üstbilgisinde belirtilen URI 'yi kullanarak istekte belirtilen bilgilerden dönüştürülmüş bir URI oluşturur. Bu, istekten gelen bilgileri kayıtlı bir URI önekleri kümesiyle karşılaştırarak yapılır. HTTP sunucusu SDK belgeleri, bu dönüştürülmüş URI 'yi HTTP_COOKED_URL yapısı olarak ifade eder.  
+ Hizmet, isteğin `http.sys` iletilmesi gereken kaynak sunucuyu belirleyebilmek IÇIN http istek satırında ve ana bilgisayar üstbilgisinde BELIRTILEN URI 'yi kullanarak istekte belirtilen bilgilerden dönüştürülmüş BIR URI oluşturur. Bu, istekten gelen bilgileri kayıtlı bir URI önekleri kümesiyle karşılaştırarak yapılır. HTTP sunucusu SDK belgeleri, bu dönüştürülmüş URI 'yi HTTP_COOKED_URL yapısı olarak ifade eder.  
   
  İsteği kayıtlı URI önekleriyle karşılaştırabilmek için, isteğin bazı normalleştirilmesi yapılmalıdır. Yukarıdaki örnek için, dönüştürülmüş URI aşağıdaki gibi olacaktır:  
   
  `http://www.contoso.com/path/`  
   
- `http.sys` hizmeti, dönüştürülmüş bir URI oluşturmak için <xref:System.Uri.Host%2A?displayProperty=nameWithType> özellik değerini ve istek satırındaki dizeyi birleştirir. Ayrıca, `http.sys` ve <xref:System.Uri?displayProperty=nameWithType> sınıfı şunları da yapar:  
+ `http.sys`Hizmet, <xref:System.Uri.Host%2A?displayProperty=nameWithType> dönüştürülmüş bir URI oluşturmak için, özellik değerini ve istek satırındaki dizeyi birleştirir. Ayrıca, `http.sys` <xref:System.Uri?displayProperty=nameWithType> sınıfı şunları da yapar:  
   
 - Tüm kodlanmış değerleri iptal eder.  
   
@@ -80,14 +80,14 @@ ms.locfileid: "74088385"
   
  İstek, yüzde kodlamalı değerler için kullanılan kodlama hakkında herhangi bir bilgi içermediğinden, yalnızca yüzde kodlamalı değerleri ayrıştırarak doğru kodlamayı tespit etmek mümkün olmayabilir.  
   
- Bu nedenle `http.sys` işlemi değiştirmek için iki kayıt defteri anahtarı sağlar:  
+ Bu nedenle `http.sys` , işlemi değiştirmek için iki kayıt defteri anahtarı sağlar:  
   
-|Kayıt Defteri Anahtarı|Varsayılan Değer|Açıklama|  
+|Kayıt Defteri Anahtarı|Varsayılan değer|Açıklama|  
 |------------------|-------------------|-----------------|  
-|EnableNonUTF8|1\.|Sıfır ise, `http.sys` yalnızca UTF-8 kodlu URL 'Leri kabul eder.<br /><br /> Sıfır olmayan `http.sys`, istekler içinde ANSI kodlamalı veya DBCS kodlu URL 'Leri de kabul eder.|  
-|FavorUTF8|1\.|Sıfır olmayan `http.sys`, her zaman ilk olarak bir URL 'YI UTF-8 olarak çözmeye çalışır; Bu dönüştürme başarısız olursa ve EnableNonUTF8 sıfır olmayan bir değer ise, http. sys daha sonra ANSI veya DBCS olarak kodunu çözmeye çalışır.<br /><br /> Sıfır (ve EnableNonUTF8 sıfır olmayan) ise, `http.sys`, ANSI veya DBCS olarak kod çözmeye çalışır; Bu başarılı olmazsa, UTF-8 dönüşümü çalışır.|  
+|EnableNonUTF8|1|Sıfır ise, `http.sys` yalnızca UTF-8 kodlu URL 'leri kabul eder.<br /><br /> Sıfır olmayan bir ise, `http.sys` isteklerde kodlanmış veya DBCS kodlu URL 'leri de kabul eder.|  
+|FavorUTF8|1|Sıfır olmayan, `http.sys` her zaman UTF-8 olarak BIR URL kodunu çözmeye çalışır; dönüştürme başarısız olursa ve EnableNonUTF8 sıfır değilse, http. sys bunu ANSI veya DBCS olarak çözmeye çalışır.<br /><br /> Sıfır (ve EnableNonUTF8 sıfır olmayan) ise `http.sys` ANSI veya DBCS olarak kod çözmeye çalışır; bu başarılı olmazsa UTF-8 dönüşümü çalışır.|  
   
- <xref:System.Net.HttpListener> bir istek aldığında, <xref:System.Net.HttpListenerRequest.Url%2A> özelliğine girdi olarak `http.sys` dönüştürülmüş URI kullanır.  
+ <xref:System.Net.HttpListener>Bir istek aldığında, dönüştürülmüş URI 'yi `http.sys` özelliğe giriş olarak kullanır <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
  URI 'Ler içindeki karakter ve sayıların yanı sıra karakterleri destekleme gereksinimi vardır. "1/3812" müşteri numarası için müşteri bilgilerini almak üzere kullanılan aşağıdaki URI bir örnektir:  
   
@@ -107,14 +107,14 @@ ms.locfileid: "74088385"
   
  Bu, istek göndericisinin amacı değildir.  
   
- **UnescapeRequestUrl** özniteliği **false**olarak ayarlandıysa <xref:System.Net.HttpListener> bir istek aldığında, <xref:System.Net.HttpListenerRequest.Url%2A> özelliğine GIRIŞ olarak `http.sys` dönüştürülmüş URI yerine ham URI kullanır.  
+ **UnescapeRequestUrl** özniteliği **false**olarak ayarlanırsa, <xref:System.Net.HttpListener> bir istek aldığında, `http.sys` özelliğe GIRIŞ olarak dönüştürülmüş URI yerine ham URI 'yi kullanır <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
  **UnescapeRequestUrl** özniteliği için varsayılan değer **true**'dur.  
   
- <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> özelliği, ilgili yapılandırma dosyalarından **unescapeRequestUrl** özniteliğinin geçerli değerini almak için kullanılabilir.  
+ <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>Özelliği, ilgili yapılandırma dosyalarından **unescapeRequestUrl** özniteliğinin geçerli değerini almak için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek <xref:System.Net.HttpListenerRequest.Url%2A> özelliğine girdi olarak `http.sys` dönüştürülmüş URI yerine ham URI kullanma isteği aldığında <xref:System.Net.HttpListener> sınıfının nasıl yapılandırılacağını gösterir.  
+ Aşağıdaki örnek, <xref:System.Net.HttpListener> özelliğine giriş olarak dönüştürülmüş URI yerine ham URI 'yi kullanmak için bir istek aldığında sınıfının nasıl yapılandırılacağını gösterir `http.sys` <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
 ```xml  
 <configuration>  
@@ -132,7 +132,7 @@ ms.locfileid: "74088385"
   
 |||
 |-|-|  
-|Ad Alanı|System.Net|  
+|Ad alanı|System.Net|  
 |Şema adı||  
 |Doğrulama dosyası||  
 |Boş olabilir||  

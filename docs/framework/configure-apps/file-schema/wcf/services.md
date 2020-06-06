@@ -3,18 +3,18 @@ title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
 ms.openlocfilehash: 02d1d530f37f5082153c9aa6b9993fc4009917f5
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854986"
 ---
-# <a name="services"></a>\<Hizmetler >
-Hizmetler, yapılandırma dosyasının `services` bölümünde tanımlanmıştır. Her hizmetin kendi `service` yapılandırma bölümü vardır.  
+# \<services>
+Hizmetler, `services` yapılandırma dosyasının bölümünde tanımlanmıştır. Her hizmetin kendi `service` yapılandırma bölümü vardır.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Hizmetler >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<services>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,13 +31,13 @@ Hizmetler, yapılandırma dosyasının `services` bölümünde tanımlanmıştı
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Yok  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<hizmet >](service.md)|Belirli bir hizmetin hizmet sözleşmesini, davranışını ve uç noktalarını tanımlayın.|  
+|[\<service>](service.md)|Belirli bir hizmetin hizmet sözleşmesini, davranışını ve uç noktalarını tanımlayın.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
 ms.openlocfilehash: 667d59f7eb0d1c7682afcdda584cc5b0ca2da802
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84288933"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer> Öğesi
@@ -31,7 +31,7 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 ### <a name="attributes"></a>Öznitelikler  
   
-|Öznitelik|Description|  
+|Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**Checkdeserializeavanslar**|Belirtir olup olmadığını ilerleme durumunu <xref:System.Xml.Serialization.XmlSerializer> denetlenir. Özniteliği "true" veya "false" olarak ayarlayın. Varsayılan değer "true" dır.|  
 |**useLegacySerializationGeneration**|Belirtir olup olmadığını <xref:System.Xml.Serialization.XmlSerializer> C# kod bir dosyaya yazmak ve sonra da bir derlemeye derlemek tarafından derlemeleri oluşturan eski serileştirme oluşturma kullanır. Varsayılan değer **false**'dur.|  
@@ -41,7 +41,7 @@ Belirtir ilerleme durumunu ek bir denetim olup olmadığını <xref:System.Xml.S
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<system.xml.serialization>Dosyalarında](system-xml-serialization-element.md)|İçin yapılandırma ayarlarını içeren <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Xml.Serialization.XmlSchemaImporter> sınıfları.|  
   

@@ -3,22 +3,22 @@ title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
 ms.openlocfilehash: 8432463ff62e4b5e54a491b574cc6a5285efe220
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397952"
 ---
-# <a name="issuedtokenparameters"></a>\<IssuedTokenParameters >
+# \<issuedTokenParameters>
 Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametreleri belirtir.  
   
-[ **\<Yapılandırma >** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<IssuedTokenParameters >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedTokenParameters>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,26 +50,26 @@ Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |defaultMessageSecurityVersion|Bağlama tarafından desteklenmesi gereken güvenlik belirtimleri sürümlerini (WS-Security, WS-Trust, WS-Secure Conversation and WS-Security Policy) belirtir. Bu değer türünde <xref:System.ServiceModel.MessageSecurityVersion>.|  
-|Yani ıonmode|Belirteç ekleme gereksinimlerini belirtir. Bu öznitelik türü <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
+|Yani ıonmode|Belirteç ekleme gereksinimlerini belirtir. Bu öznitelik türü <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> .|  
 |keySize|Belirteç anahtar boyutunu belirten bir tamsayı. Varsayılan değer 256 ' dir.|  
-|Anahtar|Anahtar türünü belirten geçerli <xref:System.IdentityModel.Tokens.SecurityKeyType> bir değeri. Varsayılan, `SymmetricKey` değeridir.|  
+|Anahtar|<xref:System.IdentityModel.Tokens.SecurityKeyType>Anahtar türünü belirten geçerli bir değeri. Varsayılan değer: `SymmetricKey`.|  
 |Belirteç|Belirteç türünü belirten bir dize. Varsayılan değer "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters >](additionalrequestparameters-element.md)|Ek istek parametrelerini belirten yapılandırma öğeleri koleksiyonu.|  
-|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Gerekli talep türlerinin koleksiyonunu belirtir.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
-|[\<veren >](issuer-of-issuedtokenparameters.md)|Geçerli belirteci veren bitiş noktasını belirten bir yapılandırma öğesi.|  
-|[\<IssuerMetadata >](issuermetadata-of-issuedtokenparameters.md)|Belirteç verenin meta verilerinin uç nokta adresini belirten bir yapılandırma öğesi.|  
+|[\<additionalRequestParameters>](additionalrequestparameters-element.md)|Ek istek parametrelerini belirten yapılandırma öğeleri koleksiyonu.|  
+|[\<claimTypeRequirements>](claimtyperequirements-element.md)|Gerekli talep türlerinin koleksiyonunu belirtir.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
+|[\<issuer>](issuer-of-issuedtokenparameters.md)|Geçerli belirteci veren bitiş noktasını belirten bir yapılandırma öğesi.|  
+|[\<issuerMetadata>](issuermetadata-of-issuedtokenparameters.md)|Belirteç verenin meta verilerinin uç nokta adresini belirten bir yapılandırma öğesi.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Securebir Bootstrap >](secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
-|[\<Güvenlik >](security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
+|[\<security>](security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -80,8 +80,8 @@ Federasyon güvenlik senaryosunda verilen bir güvenlik belirteci için parametr
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [\<customBinding>](custombinding.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../wcf/samples/custom-binding-security.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
 - [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)

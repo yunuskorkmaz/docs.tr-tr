@@ -3,21 +3,21 @@ title: <security> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 ms.openlocfilehash: b66b5228cab9dbc35502a13a2d0fe56ce4c6a18d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738587"
 ---
-# <a name="security-of-wshttpbinding"></a>\<güvenlik > \<wsHttpBinding >
-[\<wsHttpBinding >](wshttpbinding.md)'nin güvenlik yeteneklerini temsil eder.  
+# <a name="security-of-wshttpbinding"></a>\<security> / \<wsHttpBinding>
+Öğesinin güvenlik yeteneklerini temsil eder [\<wsHttpBinding>](wshttpbinding.md) .  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsHttpBinding >** ](wshttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsHttpBinding>**](wshttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,14 +43,14 @@ ms.locfileid: "73738587"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Seçim. Uygulanan güvenlik türünü belirtir. Varsayılan, `Message` değeridir.<br />-Bu öznitelik <xref:System.ServiceModel.SecurityMode>türündedir.|  
+|mod|Seçim. Uygulanan güvenlik türünü belirtir. Varsayılan değer: `Message`.<br />-Bu öznitelik türündedir <xref:System.ServiceModel.SecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|Güvenlik devre dışı bırakıldı.|  
-|Aktarım|Güvenlik, HTTPS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekir. İleti HTTPS kullanılarak tamamen güvenlidir ve hizmetin SSL sertifikası kullanılarak istemci tarafından doğrulanır. İstemci kimlik doğrulaması `ClientCredentials` özniteliği aracılığıyla denetlenir. [\<taşıma >](transport-of-wshttpbinding.md).|  
+|Yok|Güvenlik devre dışı bırakıldı.|  
+|Aktarım|Güvenlik, HTTPS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekir. İleti HTTPS kullanılarak tamamen güvenlidir ve hizmetin SSL sertifikası kullanılarak istemci tarafından doğrulanır. İstemci kimlik doğrulaması özniteliği aracılığıyla denetlenir `ClientCredentials` . [\<transport>](transport-of-wshttpbinding.md).|  
 |İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, SOAP gövdesi şifrelenir ve Imzalanır. Bu mod, hizmet kimlik bilgilerinin, istemci bant dışı, kullanılacak algoritma paketinin ve güvenlik. Message özelliği aracılığıyla ileti gövdesine hangi koruma düzeyini uygulayamayacağı gibi çeşitli özellikler sunar. Oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
 |TransportWithMessageCredential|Bu modda, HTTPS bütünlük, gizlilik ve sunucu kimlik doğrulaması sağlar ve SOAP iletisi güvenliği istemci kimlik doğrulaması sağlar. Varsayılan olarak, oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
   
@@ -58,14 +58,14 @@ ms.locfileid: "73738587"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<taşıma >](transport-of-wshttpbinding.md)|Taşıma güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> türüne karşılık gelir.|  
-|[\<ileti >](message-of-wshttpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> türüne karşılık gelir.|  
+|[\<transport>](transport-of-wshttpbinding.md)|Taşıma güvenlik ayarlarını tanımlar. Bu öğe türüne karşılık gelir <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> .|  
+|[\<message>](message-of-wshttpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe türüne karşılık gelir <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<wsHttpBinding >](wshttpbinding.md)|HTTP taşıma uygulamaları için güvenli bağlama.|  
+|[\<wsHttpBinding>](wshttpbinding.md)|HTTP taşıma uygulamaları için güvenli bağlama.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  WSHttpBinding sınıfı, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL).  
@@ -80,4 +80,4 @@ ms.locfileid: "73738587"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [\<binding>](bindings.md)
