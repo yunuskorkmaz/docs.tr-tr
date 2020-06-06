@@ -1,24 +1,24 @@
 ---
-title: < Crst_DisableSpinWait > öğesi
+title: <Crst_DisableSpinWait> öğesi
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
 ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117645"
 ---
-# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > öğesi
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> öğesi
 
 Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı bırakılacağını belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Crst_DisableSpinWait>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,7 +40,7 @@ Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|1\.|Beklemeyi devre dışı bırak-kritik bir bölüm alınamadığından bekleniyor.|  
+|1|Beklemeyi devre dışı bırak-kritik bir bölüm alınamadığından bekleniyor.|  
 |0|Beklemeyi devre dışı bırakma-kritik bir bölüm alınamadığından bekleniyor. Varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -67,5 +67,5 @@ Aşağıdaki örnek, contenbitirildiği zaman, kritik bölümlerde beklemeyi dev
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

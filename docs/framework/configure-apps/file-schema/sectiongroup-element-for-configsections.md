@@ -1,5 +1,5 @@
 ---
-title: <sectionGroup> için <configSections> öğesi
+title: <configSections> için <sectionGroup> öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215256"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<configSections için sectionGroup > öğesi \<>
+# <a name="sectiongroup-element-for-configsections"></a>\<configSections> için \<sectionGroup> öğesi
 
 Yapılandırma bölümleri için bir ad alanı tanımlar.
 
-[ **\<yapılandırma >** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,17 +40,17 @@ Yapılandırma bölümleri için bir ad alanı tanımlar.
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<configSections >** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [**\<configSections>** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<Bölüm >** ](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
+| [**\<section>**](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bölüm grubunu bildirmek, yapılandırma bölümleri için bir kapsayıcı etiketi oluşturur ve başka biri tarafından tanımlanan yapılandırma bölümleriyle adlandırma çakışması olmamasını sağlar. **\<sectionGroup >** öğelerini birbirine iç içe yerleştirebilirsiniz.
+Bölüm grubunu bildirmek, yapılandırma bölümleri için bir kapsayıcı etiketi oluşturur ve başka biri tarafından tanımlanan yapılandırma bölümleriyle adlandırma çakışması olmamasını sağlar. Öğeleri birbirlerine iç içe yerleştirebilirsiniz **\<sectionGroup>** .
 
 ## <a name="example"></a>Örnek
 

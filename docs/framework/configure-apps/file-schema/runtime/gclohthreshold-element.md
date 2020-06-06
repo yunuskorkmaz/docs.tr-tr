@@ -5,19 +5,19 @@ helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
 ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74451222"
 ---
 # <a name="gclohthreshold-element"></a>GCLOHThreshold öğesi
 
 Çöp toplayıcısının nesneleri büyük nesne yığınına (LOH) yerleştirmesine neden olan eşik boyutunu bayt cinsinden belirtir.
 
-[\<yapılandırma >](../configuration-element.md)\
-&nbsp;&nbsp;[\<çalışma zamanı >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,7 +34,7 @@ ms.locfileid: "74451222"
 
 ### <a name="enabled-attribute"></a>enabled özniteliği
 
-|Value|Açıklama|
+|Değer|Açıklama|
 |-----------|-----------------|
 |`nnnn`|Büyük nesne yığınında nesnelerin gitmesini sağlayan bayt cinsinden eşik boyutu.|
 

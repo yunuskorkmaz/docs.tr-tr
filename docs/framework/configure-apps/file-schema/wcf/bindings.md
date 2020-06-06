@@ -3,15 +3,15 @@ title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
 ms.openlocfilehash: fe8f620668e35183890b8bba1f254a74c962f8d3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74139669"
 ---
-# <a name="bindings"></a>\<bağlamaları >
+# \<bindings>
 
-Windows Communication Foundation (WCF) için standart ve özel bağlamaların bir koleksiyonunu yapılandırmak üzere `bindings` öğesini kullanabilirsiniz. Her giriş, benzersiz `name`tanımlanabilecek bir `binding` öğesidir. Hizmetler, `name`kullanarak bağlantı kurarak bağlamaları kullanır. .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.
+`bindings`Windows Communication Foundation (WCF) için standart ve özel bağlamaların bir koleksiyonunu yapılandırmak için öğesini kullanabilirsiniz. Her giriş, `binding` benzersiz tarafından tanımlanabilecek bir öğedir `name` . Hizmetler, kullanarak bağlama yoluyla bağlamaları kullanır `name` . .NET Framework 4 ' den başlayarak bağlamalar ve davranışlar bir ada sahip olmak için gerekli değildir. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.
 
 ## <a name="system-provided-bindings"></a>Sistem tarafından sağlanmış bağlamalar
 
@@ -25,7 +25,7 @@ Sistem tarafından sunulan bağlamaların listesi için bkz. [sistem tarafından
 
 ## <a name="custom-bindings"></a>Özel Bağlamalar
 
-Özel Bağlamalar, WCF mesajlaşma yığını üzerinde tam denetim sağlar. Tek bir bağlama yığın öğeleri için yapılandırma öğelerini yığında göründükleri sırada belirterek ileti yığınını tanımlar. Her öğe, yığının bir öğesini tanımlar ve yapılandırır. Her özel bağlamada bir ve yalnızca bir `transport` öğesi olmalıdır. Bu öğe olmadan mesajlaşma yığını tamamlanmamıştır.
+Özel Bağlamalar, WCF mesajlaşma yığını üzerinde tam denetim sağlar. Tek bir bağlama yığın öğeleri için yapılandırma öğelerini yığında göründükleri sırada belirterek ileti yığınını tanımlar. Her öğe, yığının bir öğesini tanımlar ve yapılandırır. Her özel bağlamada tek bir ve yalnızca bir `transport` öğe olmalıdır. Bu öğe olmadan mesajlaşma yığını tamamlanmamıştır.
 
 Öğelerin yığında görünme sırası önemli olduğundan, bu işlem, bu, işlemde hangi sırada görünecek? Stack öğelerinin gereken sırası şunlardır:  
 
@@ -39,7 +39,7 @@ Sistem tarafından sunulan bağlamaların listesi için bkz. [sistem tarafından
 
 5. Aktarım  
 
- Özel Bağlamalar `name` özniteliğiyle tanımlanır. Özel Bağlamalar hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md).
+ Özel Bağlamalar özniteliği tarafından tanımlanır `name` . Özel Bağlamalar hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -48,4 +48,4 @@ Sistem tarafından sunulan bağlamaların listesi için bkz. [sistem tarafından
 - <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding >](custombinding.md)
+- [\<customBinding>](custombinding.md)

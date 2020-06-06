@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73978384"
 ---
-# <a name="gcheapaffinitizemask-element"></a>GCHeapAffinitizeMask > öğesi \<
+# <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask> öğesi
 
 GC yığınlarını ve bireysel işlemcileri arasındaki benzeşimi tanımlar.
 
-\<Yapılandırma > \
-&nbsp;&nbsp;\<çalışma zamanı > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapAffinitizeMask>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -59,7 +59,7 @@ Varsayılan olarak, sunucu GC iş parçacıkları, her işlemci için bir GC yı
 
 **Gcheapaffinitizemask** genellikle iki diğer bayraklı birlikte kullanılır:
 
-- [GCNoAffinitize](gcnoaffinitize-element.md), sunucu GC iş parçacıklarının/yığınların CPU 'lara uygulanıp gösterilmeyeceğini denetler. [GCNoAffinitize](gcnoaffinitize-element.md) öğesinin `enabled` özniteliği, **Gcheapaffinitizemask** ayarının kullanılması için `false` (varsayılan değeri) olmalıdır.
+- [GCNoAffinitize](gcnoaffinitize-element.md), sunucu GC iş parçacıklarının/yığınların CPU 'lara uygulanıp gösterilmeyeceğini denetler. `enabled` [GCNoAffinitize](gcnoaffinitize-element.md) öğesinin özniteliği, `false` kullanılacak **Gcheapaffinitizemask** ayarı için olmalıdır (varsayılan değer).
 
 - [Gcheapcount](gcheapcount-element.md), sunucu GC için işlem tarafından kullanılan heçlerin sayısını sınırlar. Varsayılan olarak, her işlemci için bir yığın vardır.
 
@@ -91,5 +91,5 @@ Aşağıdaki örnek, bir uygulamanın 10 Heap/iş parçacığı ile sunucu GC ku
 - [GCNoAffinitize öğesi](gcnoaffinitize-element.md)
 - [GCHeapCount öğesi](gcheapcount-element.md)
 - [Çöp toplamanın temelleri](../../../../standard/garbage-collection/fundamentals.md)
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

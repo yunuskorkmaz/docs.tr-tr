@@ -3,19 +3,19 @@ title: <Thread_UseAllCpuGroups> Öğesi
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115404"
 ---
-# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups > öğesi
+# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> Öğesi
 
 Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtıp dağıtmadığını belirtir.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Thread_UseAllCpuGroups>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -39,7 +39,7 @@ ms.locfileid: "73115404"
 |Değer|Açıklama|
 |-----------|-----------------|
 |`false`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubu arasında dağıtmaz. Bu varsayılandır.|
-|`true`|Bilgisayarın birden çok CPU grubu varsa ve [\<GCCpuGroup >](gccpugroup-element.md) öğesi etkinse, çalışma zamanı yönetilen iş parçacıklarını bırden çok CPU grubu arasında dağıtır.|
+|`true`|Çalışma zamanı, yönetilen iş parçacıklarını birden çok CPU grubuna dağıtır ve bilgisayarda birden çok CPU grubu varsa ve [\<GCCpuGroup>](gccpugroup-element.md) öğesi etkinse.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -54,7 +54,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir bilgisayarda birden çok CPU grubu olduğunda, bu öğenin etkinleştirilmesi çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmasını sağlar. Bu özelliği kullanmak için çöp toplamayı tüm CPU gruplarına genişleten [\<GCCpuGroup >](gccpugroup-element.md) öğesini etkinleştirmeniz ve Heap 'ler oluştururken ve bunları dengeleyerek tüm çekirdekleri hesaba almalısınız. [\<GCCpuGroup >](gccpugroup-element.md) öğesinin etkinleştirilmesi [\<gcServer >](gcserver-element.md) öğesinin etkinleştirilmesini gerektirir. Bu öğeler etkinleştirilmemişse `<Thread_UseAllCpuGroups>` öğesinin etkinleştirilmesi etkisizdir.
+Bir bilgisayarda birden çok CPU grubu olduğunda, bu öğenin etkinleştirilmesi çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmasını sağlar. Bu özelliği kullanmak için [\<GCCpuGroup>](gccpugroup-element.md) çöp toplamayı tüm CPU gruplarına genişleten ve Heap 'ler oluştururken ve dengeleyerek tüm çekirdekleri hesaba götüren öğesini de etkinleştirmeniz gerekir. Öğesinin etkinleştirilmesi için [\<GCCpuGroup>](gccpugroup-element.md) öğesini etkinleştirmeniz gerekir [\<gcServer>](gcserver-element.md) . Bu öğeler etkinleştirilmemişse, `<Thread_UseAllCpuGroups>` öğesinin etkinleştirilmesi etkisizdir.
 
 ## <a name="example"></a>Örnek
 
@@ -72,6 +72,6 @@ Aşağıdaki örnekte, birden çok CPU grubu için desteğin nasıl etkinleştir
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
-- [\<GCCpuGroup > öğesi](gccpugroup-element.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
+- [\<GCCpuGroup>Dosyalarında](gccpugroup-element.md)

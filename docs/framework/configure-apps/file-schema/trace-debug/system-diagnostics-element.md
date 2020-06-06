@@ -1,5 +1,5 @@
 ---
-title: <sistemi.tanılama> Elemanı
+title: <System. Diagnostics> öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153213"
 ---
-# <a name="systemdiagnostics-element"></a>\<system.diagnostics> Element
-İletileri toplayan, depolayan ve yönlendiren izleme dinleyicilerini ve izleme anahtarının ayarlandığı düzeyi belirtir.  
+# <a name="systemdiagnostics-element"></a>\<system.diagnostics> Öğesi
+İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.  
   
-[**\<yapılandırma>**](../configuration-element.md)  
+[**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.diagnostics>**  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,12 +38,12 @@ ms.locfileid: "79153213"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<>iddia](assert-element.md)|Yöntemi aradiğinizde ileti kutusunun görüntülenip <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> görüntülenip görüntülenmeyeceğini belirtir; ayrıca ileti yazacak dosyanın adını belirtir.|  
-|[\<performansSayaçları>](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
-|[\<paylaşılanDinleyiciler>](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvuruedebileceği dinleyicileri içerir. Paylaşılan dinleyici olarak tanımlanan dinleyiciler kaynaklara veya izadile eklenebilir.|  
-|[\<kaynaklar>](sources-element.md)|İletileri izlemeyi başlatan izleme kaynaklarını belirtir.|  
-|[\<anahtarları>](switches-element.md)|İzleme anahtarları ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
-|[\<izleme>](trace-element.md)|İletileri toplayan, depolayan ve yönlendiren dinleyicileri içerir.|  
+|[\<assert>](assert-element.md)|Yöntemini çağırdığınızda bir ileti kutusunun görüntülenip görüntülenmeyeceğini belirtir <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ; Ayrıca, iletilerin yazılacağı dosyanın adını da belirtir.|  
+|[\<performanceCounters>](performancecounters-element.md)|Performans sayaçları tarafından paylaşılan genel belleğin boyutunu belirtir.|  
+|[\<sharedListeners>](sharedlisteners-element.md)|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik dinleyicileri içerir. Paylaşılan dinleyiciler ada göre kaynaklara veya izlemelere eklenebilir olarak tanımlanan dinleyiciler.|  
+|[\<sources>](sources-element.md)|İzleme iletilerini Başlatan izleme kaynaklarını belirtir.|  
+|[\<switches>](switches-element.md)|İzleme anahtarlarını ve izleme anahtarlarının ayarlandığı düzeyleri içerir.|  
+|[\<trace>](trace-element.md)|İzleme iletilerini toplayıp depolayan, depolayan ve yönlendiren dinleyicileri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -52,10 +52,10 @@ ms.locfileid: "79153213"
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ** \<sistemin** içine izleme anahtarı ve izleme dinleyicisi nasıl yerleştirilir gösterilmektedir.tanılama>öğesi. `General` İzleme anahtarı düzeye <xref:System.Diagnostics.TraceLevel> ayarlanır. İzleme dinleyicisi `myListener` adlı `MyListener.log` bir dosya oluşturur ve çıktıyı dosyaya yazar.  
+ Aşağıdaki örnek, bir izleme anahtarı ve bir İzleme dinleyicisinin öğenin içine nasıl ekleneceğini gösterir **\<system.diagnostics>** . `General`İzleme anahtarı düzeyi olarak ayarlanır <xref:System.Diagnostics.TraceLevel> . İzleme dinleyicisi `myListener` adlı bir dosya oluşturur `MyListener.log` ve çıktıyı dosyaya yazar.  
   
 > [!NOTE]
-> .NET Framework sürüm 2.0'da, bir anahtarın değerini belirtmek için metni kullanabilirsiniz. Örneğin, `true` bir <xref:System.Diagnostics.BooleanSwitch> için belirtebilir veya bir `Error` <xref:System.Diagnostics.TraceSwitch>. gibi numaralandırma değerini temsil eden metni kullanabilirsiniz. Satır `<add name="myTraceSwitch" value="Error" />` ' a `<add name="myTraceSwitch" value="1" />`eşdeğerdir.  
+> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, `true` için bir <xref:System.Diagnostics.BooleanSwitch> veya gibi bir numaralandırma değerini temsil eden metni kullanabilirsiniz `Error` <xref:System.Diagnostics.TraceSwitch> . Satır `<add name="myTraceSwitch" value="Error" />` ile eşdeğerdir `<add name="myTraceSwitch" value="1" />` .  
   
 ```xml  
 <configuration>  

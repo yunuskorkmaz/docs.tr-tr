@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 ms.openlocfilehash: 66abd7f057bc6d060e50a889a945281d07c97592
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155433"
 ---
-# <a name="clear-element-for-configsections"></a>\<configSections \<> için net> eleman
+# <a name="clear-element-for-configsections"></a>\<configSections> için \<clear> öğesi
 
 Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler.
 
-&nbsp; &nbsp; &nbsp; &nbsp; ** \<** [** \<konsinyon**](configsections-element-for-configuration.md)>&nbsp; &nbsp;yapılandırmaBölümleri>açık>[** \<**](configuration-element.md)
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,27 +30,27 @@ ms.locfileid: "79155433"
 
 |           | Açıklama |
 | --------- | ----------- |
-| **Adı**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
+| **ada**  | Gerekli öznitelik.<br><br>Kaldırılacak bölüm veya bölüm grubunun adını belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [** \<configSections>** Öğe](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
+| [**\<configSections>** Dosyalarında](configsections-element-for-configuration.md) | Yapılandırma bölümü ve ad alanı bildirimleri içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-None
+Yok
 
 ## <a name="remarks"></a>Açıklamalar
 
-** \<Açık>** öğesi, geçerli yapılandırma dosyasında veya yapılandırma dosyası hiyerarşisinde daha önce tanımlanan tüm bölümleri ve bölüm gruplarını uygulamanızdan kaldırır.
+**\<clear>** Öğesi, geçerli yapılandırma dosyasında daha önce tanımlanan veya yapılandırma dosyası hiyerarşisindeki daha yüksek bir düzeyde olan uygulamanızdaki tüm bölümleri ve bölüm gruplarını kaldırır.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, bir makine yapılandırma dosyası ve bir uygulama yapılandırma dosyası tanımlar ve makine yapılandırma dosyasında daha önce tanımlanan bölümleri temizlemek için bir uygulama yapılandırma dosyasındaki ** \<açık>** öğesinin nasıl kullanılacağını gösterir.
+Bu örnek bir makine yapılandırma dosyası ve bir uygulama yapılandırma dosyası tanımlar ve **\<clear>** daha önce makine yapılandırma dosyasında tanımlanan bölümleri temizlemek için bir uygulama yapılandırma dosyasında öğesinin nasıl kullanılacağını gösterir.
 
-Aşağıdaki makine yapılandırma dosya kodu iki bölüm bildirir, ** \<örnekBölüm>** ve ** \<başka ÖrnekBölüm>**, hangi uygulama yapılandırma dosyası önce okunur:
+Aşağıdaki makine yapılandırma dosyası kodu iki bölüm bildirir **\<sampleSection>** ve **\<anotherSampleSection>** uygulama yapılandırma dosyasından önce okunan:
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Aşağıdaki makine yapılandırma dosya kodu iki bölüm bildirir, ** \<örnekB
 </configuration>
 ```
 
-Aşağıdaki uygulama yapılandırma dosya kodu, daha önce bildirilen tüm bölümleri temizler. Uygulama, makine yapılandırma dosyasında bildirilen bölümlerin herhangi birinde ayarları kullanamaz veya alamaz. Ancak, ** \<net>** öğesi sonra gelir, çünkü ** \<başka bir Bölüm>** ayarları kullanabilirsiniz.
+Aşağıdaki uygulama yapılandırma dosyası kodu, önceden tanımlanmış tüm bölümleri temizler. Uygulama, makine yapılandırma dosyasında belirtilen bölümlerden birindeki ayarları kullanamaz veya alamaz. Ancak, öğesinden sonra gelen ayarları kullanabilir **\<anotherSection>** **\<clear>** .
 
 ```xml
 <!-- Application configuration file -->
@@ -85,7 +85,7 @@ Aşağıdaki uygulama yapılandırma dosya kodu, daha önce bildirilen tüm böl
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında *(Machine.config)* ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarında kullanılabilir.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128382"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 
-.NET Native, Visual Studio 2015 ve sonraki sürümlerinde bulunan Windows uygulamaları oluşturmak ve dağıtmak için ön derleme teknolojisidir. Yönetilen kodda (C# veya Visual Basic) yazılmış olan ve .NET Framework ve Windows 10 ' un yerel koda hedef alan uygulamaların yayın sürümünü otomatik olarak derler.
+.NET Native, Visual Studio 2015 ve sonraki sürümlerinde bulunan Windows uygulamaları oluşturmak ve dağıtmak için ön derleme teknolojisidir. Yönetilen kodda (C# veya Visual Basic) yazılmış uygulamaların yayın sürümünü otomatik olarak derler ve .NET Framework ve Windows 10 ' a yerel koda hedefleyin.
 
 Genellikle, .NET Framework hedefleyen uygulamalar ara dil (IL) ile derlenir. Çalışma zamanında, tam zamanında (JıT) derleyici, Il 'yi yerel koda dönüştürür. Buna karşılık, Windows uygulamalarını doğrudan yerel koda derler .NET Native. Geliştiriciler için şu anlama gelir:
 
 - Uygulamalarınızın yerel kodun performansı vardır. Genellikle, ilk olarak Il 'de derlenen ve sonra JıT derleyicisi tarafından yerel koda derlenen kodların üst işlemi olur.
 
-- C# Veya Visual Basic programda çalışmaya devam edebilirsiniz.
+- C# veya Visual Basic programla çalışmaya devam edebilirsiniz.
 
 - Sınıf kitaplığı, otomatik bellek yönetimi ve çöp toplama ve özel durum işleme dahil olmak üzere .NET Framework tarafından belirtilen kaynaklardan faydalanmaya devam edebilirsiniz.
 
@@ -46,16 +46,16 @@ Ancak .NET Native yerel koda bir derlemeden daha fazlasını içerir. .NET Frame
 
 - .NET Native çalışma zamanı statik ön derleme için iyileştirilmiştir ve durumların büyük çoğunluğunda üstün performans sağlar. Aynı zamanda, geliştiricilerin daha üretken bulduğu temel yansıma özelliklerini korur.
 
-- .NET Native, C++ derleyici ile aynı arka ucu kullanarak statik ön derleme senaryolarında en iyi duruma getirilmiştir.
+- .NET Native, statik ön derleme senaryolarında en iyi duruma getirilmiş C++ derleyicisi ile aynı arka ucu kullanır.
 
-.NET Native, bu tabloda gösterildiği gibi, aynı veya C++ benzer araçları C++ kullandığından, yönetilen kod geliştiricilerine ait performans avantajlarını getirebiliyor.
+.NET Native, bu tabloda gösterildiği gibi, aynı veya benzer araçlarla C++ ile aynı veya benzer araçları kullandığından, C++ ' ın performans avantajlarını yönetilen kod geliştiricilerine getirebiliyor.
 
 ||.NET Yerel|C++|
 |-|----------------------------------------------------------------|-----------|
 |Kitaplıklar|.NET Framework + Windows Çalışma Zamanı|Win32 + Windows Çalışma Zamanı|
 |Derleyici|UTC iyileştirmeli derleyici|UTC iyileştirmeli derleyici|
-|dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
-|Çalışma zamanı|MRT. dll (minimum CLR Runtime)|CRT. dll (C çalışma zamanı)|
+|Dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
+|Çalışma Zamanı|MRT. dll (minimum CLR Runtime)|CRT. dll (C çalışma zamanı)|
 
 Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosyaları) .NET Native kod derleme ikililerini Windows Mağazası 'na yüklersiniz.
 
@@ -67,9 +67,9 @@ Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosy
 
 - [.NET Native ve derleme:](net-native-and-compilation.md) .NET Native projenizi yerel koda nasıl derler.
 
-- [Yansıma ve .NET Native](reflection-and-net-native.md)
+- [Yansıma ve .NET Yerel](reflection-and-net-native.md)
 
-  - [Yansıma Kullanan API'ler](apis-that-rely-on-reflection.md)
+  - [Yansıma kullanan API'ler](apis-that-rely-on-reflection.md)
 
   - [Yansıma API'si Başvurusu](net-native-reflection-api-reference.md)
 
@@ -77,6 +77,6 @@ Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosy
 
 - [Serileştirme ve Meta Veriler](serialization-and-metadata.md)
 
-- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](migrating-your-windows-store-app-to-net-native.md)
+- [Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma](migrating-your-windows-store-app-to-net-native.md)
 
-- [.NET Native Genel Sorun Giderme](net-native-general-troubleshooting.md)
+- [.NET Yerel Genel Sorun Giderme](net-native-general-troubleshooting.md)

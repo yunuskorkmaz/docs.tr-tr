@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283085"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > öğesi (ağ ayarları)
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> Öğesi (Ağ Ayarları)
 Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.  
 
-[ **\<yapılandırma >** ](../configuration-element.md)\
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ayarları >** ](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`enabled`|Ağ performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer `false` şeklindedir.|  
+|`enabled`|Ağ performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Varsayılan değer: `false`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,7 +47,7 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Ayarlar](settings-element-network-settings.md)|<xref:System.Net> ad alanı için temel ağ seçeneklerini yapılandırır.|  
+|[ayarlar](settings-element-network-settings.md)|Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
@@ -56,10 +56,10 @@ Ağ performans sayaçlarını etkinleştirilir veya devre dışı bırakır.
   
  Varsayılan değer ağ performans sayaçlarının devre dışı bırakıldığını unutmayın.  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> özelliği, geçerli yapılandırma dosyalarından **etkin** özniteliğin geçerli değerini almak için kullanılabilir.  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>Özelliği, geçerli yapılandırma dosyalarından **etkin** özniteliğin geçerli değerini almak için kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ağ performans sayaçlarını etkinleştirmek üzere <xref:System.Net> ve ilgili ad alanlarının nasıl yapılandırılacağını gösterir.  
+ Aşağıdaki örnek, <xref:System.Net> ağ performans sayaçlarını etkinleştirmek için ve ilgili ad alanlarının nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <configuration>  

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283077"
 ---
-# <a name="gcheapcount-element"></a>\<GCHeapCount > öğesi
+# <a name="gcheapcount-element"></a>\<GCHeapCount> öğesi
 
 Sunucu atık toplama için kullanılacak Heap/iş parçacığı sayısını belirtir.
 
-\<Yapılandırma > \
-&nbsp;&nbsp;\<çalışma zamanı > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,7 +38,7 @@ Sunucu atık toplama için kullanılacak Heap/iş parçacığı sayısını beli
 
 #### <a name="enabled-attribute"></a>enabled özniteliği
 
-|Value|Açıklama|
+|Değer|Açıklama|
 |-----------|-----------------|
 |`nn`|Sunucu GC için kullanılacak Heap sayısı.|
 
@@ -99,5 +99,5 @@ Aşağıdaki örnek, sunucu GC iş parçacıklarını göstermez ve GC Heap/iş 
 - [GCNoAffinitize öğesi](gcnoaffinitize-element.md)
 - [GCHeapAffinitizeMask öğesi](gcheapaffinitizemask-element.md)
 - [Çöp toplamanın temelleri](../../../../standard/garbage-collection/fundamentals.md)
-- [Çalışma Zamanı Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Çalışma zamanı ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)

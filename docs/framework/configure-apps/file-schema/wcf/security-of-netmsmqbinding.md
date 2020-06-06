@@ -3,21 +3,21 @@ title: <security> / <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 ms.openlocfilehash: 7877fd59aff581eee5b62a1ca224dbf51c956069
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73738673"
 ---
-# <a name="security-of-netmsmqbinding"></a>\<netMsmqBinding > Güvenlik > \<
+# <a name="security-of-netmsmqbinding"></a>\<security> / \<netMsmqBinding>
 MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güvenliğinin etkinleştirilip etkinleştirilmeyeceğini ve bu durumda hangi kimlik doğrulama modunun ve koruma düzeylerinin kullanımda olduğunu belirtir.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netMsmqBinding >** ](netmsmqbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netMsmqBinding>**](netmsmqbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,20 +39,20 @@ MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güven
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Taşıma: koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br />-Message: son son uygulama güvenliğini belirtir. Aktarım katmanında bir güvenlik sunulmaz. Bu, diğer standart bağlamalar tarafından sunulan güvenliğe benzerdir.<br />-Her ikisi: hem aktarım hem de SOAP mesajlaşma katmanında güvenlik sağlar. Aynı kimlik bilgileri her iki düzeyde de gereklidir.<br /><br /> Varsayılan değer Aktarım ' dır. Bu öznitelik <xref:System.ServiceModel.NetMsmqSecurityMode>türündedir.|  
+|mod|Bütünlüğü, gizliliği ve kimlik doğrulamasını denetleyen güvenlik türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: Bu, güvenliği devre dışı bırakır.<br />-Taşıma: koruma ve kimlik doğrulama, taşıma tarafından sunulur. Bu, iki kuyruk yöneticisi arasındaki ileti güvenliği için geçerlidir. Uygulama ve kuyruk Yöneticisi arasında bir güvenlik sunulmaz. Mevcut MSMQ uygulamaları, bu tür güvenlik moduyla işlevsel olarak eşdeğerdir.<br />-Message: son son uygulama güvenliğini belirtir. Aktarım katmanında bir güvenlik sunulmaz. Bu, diğer standart bağlamalar tarafından sunulan güvenliğe benzerdir.<br />-Her ikisi: hem aktarım hem de SOAP mesajlaşma katmanında güvenlik sağlar. Aynı kimlik bilgileri her iki düzeyde de gereklidir.<br /><br /> Varsayılan değer Aktarım ' dır. Bu öznitelik türü <xref:System.ServiceModel.NetMsmqSecurityMode> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ileti >](message-of-netmsmqbinding.md)|SOAP iletisi güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>türündedir.|  
-|[\<taşıma >](transport-of-netmsmqbinding.md)|MSMQ taşıması için güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>türündedir.|  
+|[\<message>](message-of-netmsmqbinding.md)|SOAP iletisi güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement> .|  
+|[\<transport>](transport-of-netmsmqbinding.md)|MSMQ taşıması için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement> .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|bağlama|[\<netMsmqBinding >](netmsmqbinding.md) bağlama öğesi|  
+|bağlama|Öğesinin bağlama öğesi[\<netMsmqBinding>](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -64,5 +64,5 @@ MSMQ bağlamasının güvenlik ayarlarını tanımlar. Aktarım veya SOAP güven
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [\<binding>](bindings.md)
 - [WCF'de Kuyruklar](../../../wcf/feature-details/queues-in-wcf.md)

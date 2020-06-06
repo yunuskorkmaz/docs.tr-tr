@@ -3,15 +3,15 @@ title: .NET Yerel ve Derleme
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128252"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
 
-The.NET Framework 'Ü hedefleyen Windows 8.1 uygulamalar ve Windows Masaüstü uygulamaları belirli bir programlama dilinde yazılır ve ara dil (IL) olarak derlenir. Çalışma zamanında tam zamanında (JıT) derleyici, bir yöntemin ilk kez yürütülmeden önce yerel makinenin yerel kodunda Il 'yi derlerken sorumludur. Buna karşılık .NET Native araç zinciri, derleme zamanında kaynak kodu yerel koda dönüştürür. Bu konu, .NET Framework uygulamalar için kullanılabilen diğer derleme teknolojileriyle .NET Native karşılaştırır ve ayrıca .NET Native, .NET ile derlenen kodda oluşan özel durumların neden olduğunu anlamanıza yardımcı olabilecek yerel kod oluşturma konusunda pratik bir genel bakış sunar. Yerel olarak JıT derlenmiş kodda oluşmaz.
+The.NET Framework 'Ü hedefleyen Windows 8.1 uygulamalar ve Windows Masaüstü uygulamaları belirli bir programlama dilinde yazılır ve ara dil (IL) olarak derlenir. Çalışma zamanında tam zamanında (JıT) derleyici, bir yöntemin ilk kez yürütülmeden önce yerel makinenin yerel kodunda Il 'yi derlerken sorumludur. Buna karşılık .NET Native araç zinciri, derleme zamanında kaynak kodu yerel koda dönüştürür. Bu konu, .NET Framework uygulamalar için kullanılabilen diğer derleme teknolojileriyle .NET Native karşılaştırılır ve ayrıca, .NET Native ile derlenen kodda oluşan özel durumların JıT kodlu kodda gerçekleşmediğini anlamanıza yardımcı olabilecek, .NET Native yerel kod üretmesine yönelik pratik bir genel bakış sunar.
 
 ## <a name="net-native-generating-native-binaries"></a>.NET Native: yerel ikili dosyalar oluşturma
 
@@ -42,7 +42,7 @@ Uygulamanın başarıyla yürütülmesi için tüm ortak dil çalışma zamanın
 
 Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç zinciri aşağıdakiler gibi işlemleri gerçekleştirir:
 
-- Belirli kod yolları için, statik yerel kodla yansıma ve meta verileri temel alan kodu değiştirir. Örneğin, bir değer türü <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> yöntemi geçersiz kılınmıyorsa, eşitlik için varsayılan test, değer türünün alanlarını temsil eden <xref:System.Reflection.FieldInfo> nesneleri almak için yansıma kullanır, ardından iki örneğin alan değerlerini karşılaştırır. Yerel koda derlerken .NET Native araç zinciri, alan değerlerinin statik bir karşılaştırması ile yansıma kodu ve meta verileri değiştirir.
+- Belirli kod yolları için, statik yerel kodla yansıma ve meta verileri temel alan kodu değiştirir. Örneğin, bir değer türü yöntemi geçersiz kılmıyorsa <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> , eşitlik için varsayılan test, <xref:System.Reflection.FieldInfo> değer türünün alanlarını temsil eden nesneleri almak için yansıma kullanır, ardından iki örnek için alan değerlerini karşılaştırır. Yerel koda derlerken .NET Native araç zinciri, alan değerlerinin statik bir karşılaştırması ile yansıma kodu ve meta verileri değiştirir.
 
 - Mümkün olduğunda, tüm meta verileri ortadan kaldırmaya çalışır.
 
@@ -58,17 +58,17 @@ Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç 
 
 .NET Native araç zinciri tarafından üretilen elde edilen uygulama, proje dizininizin hata ayıklama veya yayınlama dizininde ILC. out adlı bir dizine yazılır. Aşağıdaki dosyalardan oluşur:
 
-- denetimi *\<appname >* . dll ' de özel bir `Main` dışarı aktarmaya aktaran bir saplama yürütülebilir dosyası olan *\<AppName >* . exe.
+- *\<appName>*. exe, denetimi yalnızca. dll içindeki özel bir dışarı aktarmaya aktaran bir saplama yürütülebiliri `Main` *\<appName>* .
 
-- *\<appName >* . dll, tüm uygulama kodunuzu Içeren bir Windows dinamik bağlantı kitaplığı ve bir bağımlılığı olan .NET Framework sınıf kitaplığından ve herhangi bir üçüncü taraf kütüphanesinden kod içerir.  Ayrıca, Windows ile birlikte çalışmak ve uygulamanızdaki nesneleri serileştirmek için gereken kod gibi destek kodunu da içerir.
+- *\<appName>*. dll, tüm uygulama kodunuzu içeren bir Windows dinamik bağlantı kitaplığı ve .NET Framework sınıf kitaplığından kod ve bir bağımlılığı olan tüm üçüncü taraf kitaplıkları.  Ayrıca, Windows ile birlikte çalışmak ve uygulamanızdaki nesneleri serileştirmek için gereken kod gibi destek kodunu da içerir.
 
 - çöp toplama gibi çalışma zamanı hizmetleri sağlayan bir yeniden düzenlenmiş çalışma zamanı olan mrt100_app. dll.
 
  Tüm bağımlılıklar, uygulamanın APPX bildirimi tarafından yakalanır.  Doğrudan appx paketinde paketlenmiş uygulama exe, dll ve mrt100_app. dll ' ye ek olarak, bu iki dosya içerir:
 
-- msvcr140_app. dll, mrt100_app. dll tarafından kullanılan C çalışma zamanı (CRT) kitaplığı. Bu, paketteki bir çerçeve başvurusuyla birlikte bulunur.
+- mrt100_app. dll tarafından kullanılan C çalışma zamanı (CRT) kitaplığı msvcr140_app. dll. Bu, paketteki bir çerçeve başvurusuyla birlikte bulunur.
 
-- mrt100. dll. Bu kitaplık, mrt100_app. dll ' nin performansını iyileştirebilecek işlevleri içerir, ancak devamsızlığı mrt100_app. dll ' nin çalışmasına engel olmaz. Varsa, yerel makinedeki system32 dizininden yüklenir.
+- mrt100. dll. Bu kitaplık mrt100_app. dll ' nin performansını iyileştirebilen işlevleri içerir, ancak devamsızlığı mrt100_app. dll ' nin çalışmasını engellemez. Varsa, yerel makinedeki system32 dizininden yüklenir.
 
 .NET Native araç zinciri uygulama kodunu uygulamanıza bağlar çünkü yalnızca uygulamanızın bu kodu çağırdığından emin olduğunu biliyorsa, aşağıdaki senaryolarda gereken meta veriler veya uygulama kodu uygulamanıza dahil olmayabilir:
 
@@ -80,7 +80,7 @@ Bir uygulamayı Il 'den yerel koda dönüştürme sırasında .NET Native araç 
 
 - COM birlikte çalışma.
 
-Gerekli meta veriler veya uygulama kodu çalışma zamanında yoksa, .NET Native çalışma zamanı bir özel durum oluşturur. Bu özel durumları engelleyebilir ve .NET Native araç zincirinin, meta verileri veya uygulama olan program öğelerini atayan bir XML dosyası olan bir [çalışma zamanı yönergeleri dosyası](runtime-directives-rd-xml-configuration-file-reference.md)kullanarak gerekli meta verileri ve uygulama kodunu içerdiğinden emin olabilirsiniz. kod çalışma zamanında kullanılabilir olmalıdır ve bunlara bir çalışma zamanı İlkesi atar. Aşağıda, .NET Native araç zinciri tarafından derlenen bir Windows Mağazası projesine eklenen varsayılan çalışma zamanı yönergeleri dosyası verilmiştir:
+Gerekli meta veriler veya uygulama kodu çalışma zamanında yoksa, .NET Native çalışma zamanı bir özel durum oluşturur. Bu özel durumları engelleyebilir ve .NET Native araç zincirinin, bir [çalışma zamanı yönergeleri dosyası](runtime-directives-rd-xml-configuration-file-reference.md)kullanarak gerekli meta verileri ve uygulama kodunu içerdiğinden emin olabilirsiniz. meta verileri veya uygulama kodu çalışma zamanında kullanılabilir olması gereken program öğelerini atayan bir XML dosyası ve bunlara bir çalışma zamanı İlkesi atar. Aşağıda, .NET Native araç zinciri tarafından derlenen bir Windows Mağazası projesine eklenen varsayılan çalışma zamanı yönergeleri dosyası verilmiştir:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -98,13 +98,13 @@ Bu, tüm türlerinin ve tüm üyelerinin tüm üyelerini, yansıma ve dinamik ç
 
 - Belirli bir yöntem için kullanılabilir yerel görüntü yoksa, NGEN, Jtıve koda geri döner. Bu, yerel görüntülerin, NGEN 'in JıT derlemesine geri dönmesi gereken olayda meta verileri ve Il 'yi eklemeye devam etmesi gerektiği anlamına gelir. Buna karşılık .NET Native yalnızca yerel görüntüler üretir ve JıT derlemesine geri dönmemektedir. Sonuç olarak, yalnızca bazı yansıma, serileştirme ve birlikte çalışma senaryoları için gereken meta veriler korunmalıdır.
 
-- NGEN, derleme yükleme, uzaktan iletişim, birlikte çalışma, bellek yönetimi, çöp toplama ve gerektiğinde JıT derleme gibi hizmetler için tam ortak dil çalışma zamanına güvenmeye devam etmektedir. .NET Native, bu hizmetlerin çoğu gereksiz (JıT derleme) veya derleme zamanında çözümlenir ve uygulama derlemesinde birleştirilir. En önemlisi çöp toplama olan kalan hizmetler, mrt100_app. dll adında çok daha küçük bir yeniden düzenlenmiş çalışma zamanına dahildir.
+- NGEN, derleme yükleme, uzaktan iletişim, birlikte çalışma, bellek yönetimi, çöp toplama ve gerektiğinde JıT derleme gibi hizmetler için tam ortak dil çalışma zamanına güvenmeye devam etmektedir. .NET Native, bu hizmetlerin çoğu gereksiz (JıT derleme) veya derleme zamanında çözümlenir ve uygulama derlemesinde birleştirilir. En önemlisi çöp toplama olan kalan hizmetler, mrt100_app. dll adlı yeniden düzenlenmiş çalışma zamanına çok daha küçük bir çalışma zamanına dahildir.
 
 - NGEN görüntüleri kırılacak şekilde eğilimlidir. Örneğin, bir bağımlılık için bir düzeltme eki veya değişiklik genellikle onu kullanan derlemelerin de yeniden NGENed içeren olmasını gerektirir. Bu, özellikle .NET Framework sınıf kitaplığındaki sistem derlemelerinin bir doğrudur. Buna karşılık .NET Native, uygulamaların birbirinden bağımsız olarak sunulmasını sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../standard/metadata-and-self-describing-components.md)
+- [Meta veriler ve kendi kendine açıklama bileşenleri](../../standard/metadata-and-self-describing-components.md)
 - [.NET Native içinde (Channel 9 Videosu)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Yansıma ve .NET Native](reflection-and-net-native.md)
-- [.NET Native Genel Sorun Giderme](net-native-general-troubleshooting.md)
+- [Yansıma ve .NET Yerel](reflection-and-net-native.md)
+- [.NET Yerel Genel Sorun Giderme](net-native-general-troubleshooting.md)

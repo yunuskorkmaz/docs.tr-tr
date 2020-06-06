@@ -3,21 +3,21 @@ title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
 ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73732560"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings >
+# \<webSocketSettings>
 Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
   
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -57,20 +57,20 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |WhenDuplex|Sözleşme çift yönlü olduğunda Web soketi protokolünü kullanın.|  
-|Her|Sözleşmeye bakılmaksızın her zaman Web soketi protokolünü kullanın.|  
-|Amaçlan|Web yuvası protokolünü hiçbir şekilde kullanmayın.|  
+|Her zaman|Sözleşmeye bakılmaksızın her zaman Web soketi protokolünü kullanın.|  
+|Asla|Web yuvası protokolünü hiçbir şekilde kullanmayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Yok  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|\<netHttpBinding >|NetHttpBinding belirtir|  
+|\<netHttpBinding>|NetHttpBinding belirtir|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, \<webSocketSettings > öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, öğesinin nasıl kullanılacağını gösterir \<webSocketSettings> .  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [\<binding>](bindings.md)

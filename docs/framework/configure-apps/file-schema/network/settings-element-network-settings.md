@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089114"
 ---
-# <a name="settings-element-network-settings"></a>\<ayarları > öğesi (ağ ayarları)
-<xref:System.Net?displayProperty=nameWithType> ad alanı için temel ağ seçeneklerini yapılandırır.  
+# <a name="settings-element-network-settings"></a>\<settings> Öğesi (Ağ Ayarları)
+Ad alanı için temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWithType> .  
 
-[ **\<configuration >** ](../configuration-element.md) \
-[**System. net >\<** ](system-net-element-network-settings.md) &nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<ayarları >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<settings>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,13 +46,13 @@ ms.locfileid: "74089114"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[httpListener](httplistener-element-network-settings.md)|<xref:System.Net.HttpListener> sınıfı tarafından kullanılan parametreleri özelleştirir.|  
+|[httpListener](httplistener-element-network-settings.md)|Sınıf tarafından kullanılan parametreleri özelleştirir <xref:System.Net.HttpListener> .|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Web isteği parametrelerini özelleştirir.|  
 |[IPv6](ipv6-element-network-settings.md)|Internet Protokolü sürüm 6 (IPv6) desteğini sunar.|  
-|[\<performanceCounter > öğesi (ağ ayarları)](performancecounter-element-network-settings.md)|Ağ performans sayaçlarını etkinleştirilir.|  
+|[\<performanceCounter>Öğesi (ağ ayarları)](performancecounter-element-network-settings.md)|Ağ performans sayaçlarını etkinleştirilir.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Ağ kaynaklarına bağlantıları yapılandırır.|  
 |[yuvasının](socket-element-network-settings.md)|Yuva işlemlerinin tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.|  
-|[\<webProxyScript > öğesi (ağ ayarları)](webproxyscript-element-network-settings.md)|Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.|  
+|[\<webProxyScript>Öğesi (ağ ayarları)](webproxyscript-element-network-settings.md)|Web proxy 'lerini keşfetme için kullanılan betiğin özelliklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

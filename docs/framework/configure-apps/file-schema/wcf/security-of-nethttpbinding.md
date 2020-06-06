@@ -3,22 +3,22 @@ title: <security> / <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
 ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73736485"
 ---
-# <a name="security-of-nethttpbinding"></a>\<netHttpBinding \<güvenlik > >
+# <a name="security-of-nethttpbinding"></a>\<security> / \<netHttpBinding>
 
-[\<netHttpBinding >](nethttpbinding.md)'nin güvenlik yeteneklerini tanımlar.
+Uygulamasının güvenlik yeteneklerini tanımlar [\<netHttpBinding>](nethttpbinding.md) .
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlamaları >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<güvenlik >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,15 +40,15 @@ ms.locfileid: "73736485"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|mod|İsteğe bağlı. Kullanılan güvenlik türünü belirtir. Varsayılan, `None` değeridir. Bu öznitelik <xref:System.ServiceModel.BasicHttpSecurityMode>türündedir.|
+|mod|İsteğe bağlı. Kullanılan güvenlik türünü belirtir. Varsayılan değer: `None`. Bu öznitelik türü <xref:System.ServiceModel.BasicHttpSecurityMode> .|
 
 ## <a name="mode-attribute"></a>mode özniteliği
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|Yok.|-İletiler aktarım sırasında güvenli değildir.|
+|Yok|-İletiler aktarım sırasında güvenli değildir.|
 |Aktarım|Güvenlik, HTTPS taşıması kullanılarak sağlanır. SOAP iletilerinin HTTPS kullanılarak güvenliği sağlanır. Hizmetin, hizmetin X. 509.440 sertifikası kullanılarak istemcinin kimliği doğrulanır. İstemcinin kimliği, sağlanan ClientCredentialType kullanılarak doğrulanır.|
-|İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Bu bağlama için, sistem, sunucu sertifikasının bant dışı istemciye sağlanması gerekir. Bu bağlama için geçerli `ClientCredentialType` `Certificate`.|
+|İleti|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Bu bağlama için, sistem, sunucu sertifikasının bant dışı istemciye sağlanması gerekir. `ClientCredentialType`Bu bağlama için geçerli tek geçerlidir `Certificate` .|
 |TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, aktarım güvenliği tarafından sağlanır. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır. Bu mod, Kullanıcı Kullanıcı adı/parola kullanarak kimlik doğrulaması yapıldığında ve ileti aktarımını güvenli hale getirmek için mevcut bir HTTP dağıtımı olduğunda geçerlidir.|
 |Yalnızca transportcredential|Bu mod ileti bütünlüğü ve gizliliği sağlamaz. HTTP tabanlı istemci kimlik doğrulaması sağlar. Bu mod dikkatli kullanılmalıdır. Aktarım güvenliğinin diğer yollarla (IPSec gibi) sağlandığı ve yalnızca WCF altyapısı tarafından istemci kimlik doğrulamasının sağlandığı ortamlarda kullanılması gerekir.|
 
@@ -56,18 +56,18 @@ ms.locfileid: "73736485"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<taşıma >](transport-of-nethttpbinding.md)|Temel bir HTTP hizmeti için taşıma güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.HttpTransportSecurity>karşılık gelir.|
-|[\<ileti >](message-of-nethttpbinding.md)|Temel bir HTTP hizmeti için ileti güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.BasicHttpMessageSecurity>karşılık gelir.|
+|[\<transport>](transport-of-nethttpbinding.md)|Temel bir HTTP hizmeti için taşıma güvenlik ayarlarını tanımlar. Bu öğe öğesine karşılık gelir <xref:System.ServiceModel.HttpTransportSecurity> .|
+|[\<message>](message-of-nethttpbinding.md)|Temel bir HTTP hizmeti için ileti güvenlik ayarlarını tanımlar. Bu öğe öğesine karşılık gelir <xref:System.ServiceModel.BasicHttpMessageSecurity> .|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|bağlama|[\<basicHttpBinding >](basichttpbinding.md)bağlama öğesi.|
+|bağlama|Öğesinin bağlama öğesi [\<basicHttpBinding>](basichttpbinding.md) .|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Varsayılan olarak, SOAP iletisi güvenli değildir ve istemcinin kimliği doğrulanmaz. Bu öğe `netHttpBinding` öğesi için ek güvenlik ayarlarını yapılandırmanızı sağlar.
+ Varsayılan olarak, SOAP iletisi güvenli değildir ve istemcinin kimliği doğrulanmaz. Bu öğe, öğesi için ek güvenlik ayarları yapılandırmanıza olanak sağlar `netHttpBinding` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -78,4 +78,4 @@ ms.locfileid: "73736485"
 - [Bağlamalar](../../../wcf/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\< bağlama >](bindings.md)
+- [\<binding>](bindings.md)

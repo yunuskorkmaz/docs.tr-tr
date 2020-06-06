@@ -9,20 +9,20 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: 4564cf59e3b6cfbdcd9dca06cd0f966d524834de
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088544"
 ---
-# <a name="oidentry-element"></a>\<Oıdentry > öğesi
+# <a name="oidentry-element"></a>\<oidEntry> Öğesi
 Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.  
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Cryptographyısettings >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Oıdmap >** ](oidmap-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Oıdentry >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oidMap>**](oidmap-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<oidEntry>**
 
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**ID**|Gerekli öznitelik.<br /><br /> Sınıfınız tarafından uygulanan algoritmaya karşılık gelen ASN. 1 OID 'yi belirtir.|  
-|**ada**|Gerekli öznitelik.<br /><br /> [\<nameEntry >](nameentry-element.md) etiketindeki **Name** özniteliğinin değerini belirtir.|  
+|**ada**|Gerekli öznitelik.<br /><br /> Etiketteki **Name** özniteliğinin değerini belirtir [\<nameEntry>](nameentry-element.md) .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,14 +49,14 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
 |`cryptographySettings`|Şifreleme ayarlarını içerir.|  
-|`mscorlib`|`cryptographySettings` öğesini içerir.|  
+|`mscorlib`|Öğesini içerir `cryptographySettings` .|  
 |`oidMap`|Sınıflara ASN. 1 nesne tanımlayıcısı (OID) eşlemelerini içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  ASN. 1 nesne tanımlayıcıları bazı şifreleme biçimlerinde algoritmaları belirler. Tanımlamak istediğiniz algoritmaların nesne tanımlayıcılarını kolay adlarla eşleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, RIPEMD-160 karma algoritması için bir nesne tanımlayıcısını bu karma algoritmanın bir uygulamasına eşlemek için **\<Oıdentry >** öğesinin nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, **\<oidEntry>** RIPEMD-160 karma algoritmasının bir nesne tanımlayıcısını, bu karma algoritmanın bir uygulamasına eşlemek için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ Bir ASN. 1 nesne tanımlayıcısını (OID) kolay bir ada eşler.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
 - [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../configure-cryptography-classes.md)
-- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../map-object-identifiers-to-cryptography-algorithms.md)
+- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme](../../map-object-identifiers-to-cryptography-algorithms.md)

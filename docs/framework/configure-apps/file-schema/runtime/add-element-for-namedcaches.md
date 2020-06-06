@@ -1,25 +1,25 @@
 ---
-title: <namedCaches> için <add> öğesi
+title: <namedCaches> için <add> Öğesi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154511"
 ---
-# <a name="add-element-for-namedcaches"></a>\<adCaches \<> için> Öğesi ekleyin
-Bellek `namedCache` önbelleği `namedCaches` için koleksiyona bir giriş ekler.  
+# <a name="add-element-for-namedcaches"></a>\<namedCaches> için \<add> Öğesi
+`namedCache` `namedCaches` Bir bellek önbelleği için koleksiyona bir giriş ekler.  
   
-[**\<yapılandırma>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.runtime.önbelleğe alma>**](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryÖnbellek>**](memorycache-element-cache-settings.md)\
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>ekleyin**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,10 +40,10 @@ Bellek `namedCache` önbelleği `namedCaches` için koleksiyona bir giriş ekler
   
 |Öznitelik|Açıklama|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|İzin verilen en büyük boyutu (megabaytlarda) belirten bir <xref:System.Runtime.Caching.MemoryCache> tamsayı değeri. Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma sezgiselinin varsayılan olarak kullanıldığı anlamına gelir.|  
+|`CacheMemoryLimitMegabytes`|Bir örneğinin bir örneğinin büyüyebileceği en fazla izin verilen boyutu (megabayt cinsinden) belirten bir tamsayı değeri <xref:System.Runtime.Caching.MemoryCache> . Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.|  
 |`Name`|Önbelleğin adı.|  
-|`PhysicalMemoryLimitPercentage`|Önbellek tarafından tüketilebilen fiziksel olarak yüklenmiş bilgisayar belleğinin maksimum yüzdesini belirten 0 ile 100 arasında bir tamsayı değeri. Varsayılan değer 0'dır, bu <xref:System.Runtime.Caching.MemoryCache> da sınıfın otomatik boyutlandırma sezgiselinin varsayılan olarak kullanıldığı anlamına gelir.|  
-|`PollingInterval`|Önbellek uygulamasının geçerli bellek yükünü önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarıyla karşılaştırdığı zaman aralığını gösteren bir değer. Bu değer "HH:MM:SS" biçiminde girilir.|  
+|`PhysicalMemoryLimitPercentage`|0 ile 100 arasında, önbellek tarafından tüketilen fiziksel olarak yüklenen bilgisayar belleğinin maksimum yüzdesini belirten bir tamsayı değeri. Varsayılan değer 0 ' dır. Bu, <xref:System.Runtime.Caching.MemoryCache> sınıfın otomatik boyutlandırma buluşsal yöntemleri varsayılan olarak kullanıldığı anlamına gelir.|  
+|`PollingInterval`|Önbellek uygulamasının geçerli bellek yükünü, önbellek örneği için ayarlanan mutlak ve yüzde tabanlı bellek sınırlarına göre karşılaştıran zaman aralığını belirten bir değer. Bu değer "HH: MM: SS" biçiminde girilir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  `None`  
@@ -52,13 +52,13 @@ Bellek `namedCache` önbelleği `namedCaches` için koleksiyona bir giriş ekler
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedCaches>](namedcaches-element-cache-settings.md)|Adlandırılmış <xref:System.Runtime.Caching.MemoryCache> örnekler için yapılandırma ayarları koleksiyonu içerir.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Adlandırılmış örnekler için yapılandırma ayarlarının bir koleksiyonunu içerir <xref:System.Runtime.Caching.MemoryCache> .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğe, `add` bellek önbelleği için `namedCaches` koleksiyona bir giriş ekler. Koleksiyonda başka [clear](clear-element-for-namedcaches.md) adlandırılmış önbellek `add` olmadığından emin olmak için öğeyi kullanmadan önce açık öğeyi kullanabilirsiniz. Bu öğe machine.config dosyasında ve Web.config dosyasında kullanılabilir.  
+ `add`Öğesi, `namedCaches` bir bellek önbelleği için koleksiyona bir giriş ekler. [clear](clear-element-for-namedcaches.md) `add` Koleksiyonda başka bir adlandırılmış önbellek bulunmadığından emin olmak için öğesini kullanmadan önce Clear öğesini kullanabilirsiniz. Bu öğe Machine. config dosyasında ve Web. config dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, bir bellek önbelleği `namedCaches` için koleksiyona varsayılan `namedCache` giriş ayarlarının nasıl tanımlanacağını gösterir.  
+ Aşağıdaki örnek, `namedCache` `namedCaches` bir bellek önbelleğinin koleksiyonuna varsayılan giriş için ayarların nasıl tanımlanacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Bellek `namedCache` önbelleği `namedCaches` için koleksiyona bir giriş ekler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<namedCaches> Öğesi (Önbellek Ayarları)](namedcaches-element-cache-settings.md)
+- [\<namedCaches>Öğesi (önbellek ayarları)](namedcaches-element-cache-settings.md)
