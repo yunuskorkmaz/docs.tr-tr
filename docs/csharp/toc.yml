@@ -1,6 +1,6 @@
 - name: 'C# belgeleri'
   href: index.yml
-- name: Kullanmaya başlayın
+- name: başlarken
   items:
     - name: Genel Bakış
       displayName: get started
@@ -235,7 +235,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm Oluşturma
+    - name: Sürüm oluşturma
       href: versioning.md
 - name: 'Nasıl yapılır C# makaleleri'
   items:
@@ -927,7 +927,7 @@
           href: programming-guide/classes-and-structs/objects.md
         - name: Devralma
           href: programming-guide/classes-and-structs/inheritance.md
-        - name: Çok Biçimlilik
+        - name: Çok biçimlilik
           items:
             - name: Genel Bakış
               displayName: polymorphism
@@ -1258,7 +1258,7 @@
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
         - name: Kayıt defterinde anahtar oluşturma
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
-    - name: Birlikte Çalışabilirlik
+    - name: Birlikte çalışabilirlik
       items:
         - name: .NET Birlikte Çalışabilirliği
           href: programming-guide/interop/index.md
@@ -1490,7 +1490,7 @@
           items:
             - name: base
               href: language-reference/keywords/base.md
-            - name: this
+            - name: bu
               href: language-reference/keywords/this.md
         - name: Değişmez Değer Anahtar Sözcükleri
           items:
@@ -1519,7 +1519,7 @@
               href: language-reference/keywords/set.md
             - name: when (filtre koşulu)
               href: language-reference/keywords/when.md
-            - name: value
+            - name: değer
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1769,6 +1769,8 @@
               href: language-reference/compiler-options/nowarn-compiler-option.md
             - name: '-nowin32manifest'
               href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+            - name: '-nullable'
+              href: language-reference/compiler-options/nullable-compiler-option.md
             - name: '-optimize'
               href: language-reference/compiler-options/optimize-compiler-option.md
             - name: '-out'
@@ -1830,5 +1832,5 @@
       href: language-reference/specification/
     - name: 'C# 7.0 - 8.0 teklifleri'
       href: language-reference/proposals/
-- name: İzlenecek Yollar
+- name: Kılavuz
   href: walkthroughs.md
