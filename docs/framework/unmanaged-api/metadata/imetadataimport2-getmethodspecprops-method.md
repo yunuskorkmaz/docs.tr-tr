@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490451"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps Yöntemi
-Belirtilen MethodSpec belirteci tarafından başvurulan yöntemin meta veri imzasını alır.  
+Belirtilen MethodSpec belirteci tarafından başvurulan metodun meta veri imzasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMethodSpecProps (  
@@ -38,27 +38,27 @@ HRESULT GetMethodSpecProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mi`  
- [içinde] Yöntemin anlık durumunu temsil eden bir MethodSpec belirteci.  
+ 'ndaki Metodun örneklenmesini temsil eden bir MethodSpec belirteci.  
   
  `tkParent`  
- [çıkış] Yöntem tanımını temsil eden MethodDef veya MethodRef belirteci için bir işaretçi.  
+ dışı Yöntem tanımını temsil eden MethodDef veya MethodRef belirtecine yönelik bir işaretçi.  
   
  `ppvSigBlob`  
- [çıkış] Yöntemin ikili meta veri imzasına işaretçi.  
+ dışı Metodun ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [çıkış] Boyutu, bayt, ve. `ppvSigBlob`  
+ dışı Bayt cinsinden boyutu `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)

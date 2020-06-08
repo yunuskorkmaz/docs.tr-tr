@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: c3011149b9b23e776ad3baac9e41f3c42213654d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504465"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance İşlevi
-Üç arabirimden birini sunar: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
+Üç arabirimden birini sunar: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Söz dizimi  
   
@@ -43,12 +43,12 @@ HRESULT CLRCreateInstance(
  'ndaki Üç arabirim tanımlayıcılarından biri (IIDS): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy veya IID_ICLRDebugging.  
   
  `ppInterface`  
- dışı Üç arabirimden biri: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
+ dışı Üç arabirimden biri: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)veya [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
 |E_POINTER|`ppInterface`null.|  
@@ -91,4 +91,4 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma](index.md)
+- [Hosting](index.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177242"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491270"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps Metodu
-Belirtilen FieldDef belirteci tarafından başvurulan alanla ilişkili meta verileri alır.  
+Belirtilen FieldDef belirtecinin başvurduğu alanla ilişkili meta verileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFieldProps (  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [içinde] İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
+ 'ndaki İlişkili meta verileri almak için alanı temsil eden bir FieldDef belirteci.  
   
  `pClass`  
- [çıkış] Alanın ait olduğu sınıfın türünü temsil eden bir TypeDef belirteci.  
+ dışı Bir TypeDef belirtecinin, alanın ait olduğu sınıfın türünü temsil eden bir işaretçisi.  
   
  `szField`  
- [çıkış] Alanın adı.  
+ dışı Alanın adı.  
   
  `cchField`  
- [içinde] *szField*için arabellek geniş karakterler boyutu.  
+ 'ndaki *SzField*arabelleğinin geniş karakterdeki boyutu.  
   
  `pchField`  
- [çıkış] Döndürülen arabelleğe gerçek boyutu.  
+ dışı Döndürülen arabelleğin gerçek boyutu.  
   
  `pdwAttr`  
- [çıkış] Alanın meta verileriyle ilişkili bayraklar.  
+ dışı Alanın meta verileriyle ilişkili bayraklar.  
   
  `ppvSigBlob`  
- [içinde] Alanı açıklayan ikili meta veri değeri için bir işaretçi.  
+ 'ndaki Alanı açıklayan ikili meta veri değerine yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [çıkış] `ppvSigBlob`Baytboyutu.  
+ dışı Bayt cinsinden boyut `ppvSigBlob` .  
   
  `pdwCPlusTypeFlag`  
- [çıkış] Alanın değer türünü belirten bir bayrak.  
+ dışı Alanın değer türünü belirten bayrak.  
   
  `ppValue`  
- [çıkış] Alan için sabit bir değer.  
+ dışı Alan için sabit bir değer.  
   
  `pcchValue`  
- [çıkış] Karakterdeki boyut `ppValue`, veya dize yoksa sıfır.  
+ dışı Herhangi bir dize yoksa, karakter cinsinden boyut `ppValue` veya sıfır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

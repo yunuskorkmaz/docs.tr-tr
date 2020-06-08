@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 15ce195af0c0e8f8777f6e5d02043e17e32308da
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ce4a842bc71ff144e46efb0d6f7068dfca9d207d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500448"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished Yöntemi
 Profiler 'ın bir derlemenin yüklemeyi bitirmiş olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AssemblyLoadFinished(  
@@ -37,25 +37,25 @@ HRESULT AssemblyLoadFinished(
 
 - `assemblyId`
 
-  \[in], yüklenen derlemeyi tanımlar.
+  \[' de], yüklenmiş derlemeyi tanımlar.
 
 - `hrStatus`
 
-  \[içinde] derlemenin başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
+  \[içinde] derlemenin başarıyla yüklenip yüklenmediğini belirten bir HRESULT.
 
 ## <a name="remarks"></a>Açıklamalar  
- `assemblyId` değeri, `AssemblyLoadFinished` yöntemi çağrılana kadar bir bilgi isteği için geçerli değildir.  
+ Değeri `assemblyId` , `AssemblyLoadFinished` yöntemi çağrılana kadar bir bilgi isteği için geçerli değildir.  
   
- Derlemeyi yüklemenin bazı bölümleri `AssemblyLoadFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak, `hrStatus` başarılı bir HRESULT, sadece derlemeyi yüklemenin ilk bölümünün başarılı olduğunu gösterir.  
+ Derlemeyi yüklemenin bazı bölümleri geri aramadan sonra devam edebilir `AssemblyLoadFinished` . ' De HRESULT hatası, `hrStatus` bir hatayı gösterir. Ancak, içinde başarılı bir HRESULT, `hrStatus` sadece derlemeyi yüklemenin ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

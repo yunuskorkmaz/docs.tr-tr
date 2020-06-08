@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: e96492270c403f93687245cee8b680dc16b3c787
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803119"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501462"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager Arabirimi
 Ortak dil çalışma zamanının (CLR) Win32 eşitleme işlevlerini kullanmak yerine Konağı çağırarak eşitleme temelleri oluşturmasına izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[CreateAutoEvent Yöntemi](ihostsyncmanager-createautoevent-method.md)|Otomatik sıfırlama olay nesnesi oluşturur.|  
 |[CreateCrst Yöntemi](ihostsyncmanager-createcrst-method.md)|Eşitleme için bir kritik bölüm nesnesi oluşturur.|  
@@ -35,8 +35,8 @@ Ortak dil çalışma zamanının (CLR) Win32 eşitleme işlevlerini kullanmak ye
 |[CreateMonitorEvent Yöntemi](ihostsyncmanager-createmonitorevent-method.md)|İzlenen otomatik sıfırlama olay nesnesi oluşturur.|  
 |[CreateRWLockReaderEvent Yöntemi](ihostsyncmanager-createrwlockreaderevent-method.md)|Bir okuyucu kilidinin uygulanması için el ile sıfırlama olay nesnesi oluşturur.|  
 |[CreateRWLockWriterEvent Yöntemi](ihostsyncmanager-createrwlockwriterevent-method.md)|Bir yazıcı kilidinin uygulanması için otomatik sıfırlama olay nesnesi oluşturur.|  
-|[CreateSemaphore Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|CLR için, bekleme olayları için semafor olarak kullanılacak bir [ıhostsemafor](ihostsemaphore-interface.md) nesnesi oluşturur.|  
-|[SetCLRSyncManager Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|[ICLRSyncManager](iclrsyncmanager-interface.md) örneğini geçerli örnekle ilişkilendirilecek şekilde ayarlar `IHostSyncManager` .|  
+|[CreateSemaphore Yöntemi](ihostsyncmanager-createsemaphore-method.md)|CLR için, bekleme olayları için semafor olarak kullanılacak bir [ıhostsemafor](ihostsemaphore-interface.md) nesnesi oluşturur.|  
+|[SetCLRSyncManager Yöntemi](ihostsyncmanager-setclrsyncmanager-method.md)|[ICLRSyncManager](iclrsyncmanager-interface.md) örneğini geçerli örnekle ilişkilendirilecek şekilde ayarlar `IHostSyncManager` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
  CLR, `IHostSyncManager` IID_IHostSyncManager Ile [IHostControl:: GetHostManager](ihostcontrol-gethostmanager-method.md) metodunu çağırarak konağın uygulamasını bulur `IID` .  

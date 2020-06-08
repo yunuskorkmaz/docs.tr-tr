@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d2b7e93866bf0aa79849925234a4d6e4cc9b5b52
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862314"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502827"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Metodu
 Modül KIMLIĞI verildiğinde, modülün dosya adını, modülün üst derleme KIMLIĞINI ve modülün özelliklerini açıklayan bir bit maskesini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetModuleInfo2(  
@@ -47,7 +47,7 @@ HRESULT GetModuleInfo2(
  dışı Modülün yüklendiği temel adres.  
   
  `cchName`  
- 'ndaki `szName` dönüş arabelleğinin karakter cinsinden uzunluğu.  
+ 'ndaki Dönüş arabelleğinin karakter cinsinden uzunluğu `szName` .  
   
  `pcchName`  
  dışı Modülün dosya adının döndürülen toplam karakter uzunluğuna yönelik bir işaretçi.  
@@ -62,22 +62,22 @@ HRESULT GetModuleInfo2(
  dışı [Cor_prf_module_flags](cor-prf-module-flags-enumeration.md) Numaralandırmadaki, modülün özelliklerini belirten değerlerin bir bit maskesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinamik modüller için `szName` parametresi modülün meta veri adıdır ve temel adres 0 (sıfır) olur. Meta veri adı, meta veriler içindeki modül tablosundan Ad sütunundaki değerdir. Bu Ayrıca, yönetilen koda <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> özelliği olarak ve [IMetaDataImport:: GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) yönteminin `szName` parametresi olarak yönetilmeyen meta veri istemci koduna da sunulur.  
+ Dinamik modüller için parametresi, `szName` modülün meta veri adıdır ve temel adres 0 (sıfır) olur. Meta veri adı, meta veriler içindeki modül tablosundan Ad sütunundaki değerdir. Bu, <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> yönetilen koda özellik olarak ve `szName` [IMetaDataImport:: GetScopeProps](../metadata/imetadataimport-getscopeprops-method.md) yönteminin parametresi olarak yönetilmeyen meta veri istemci koduna olarak da sunulur.  
   
- `GetModuleInfo2` yöntemi modülün KIMLIĞI mevcut olduğu anda çağrılabilir olsa da, ana derlemenin KIMLIĞI, profil oluşturucu [ICorProfilerCallback:: ModuleAttachedToAssembly geri çağrısını](icorprofilercallback-moduleattachedtoassembly-method.md) alıncaya kadar kullanılamaz.  
+ `GetModuleInfo2`Yöntemi modülün kimliği mevcut olduğu anda çağrılabilir olsa da, ana DERLEMENIN kimliği, profil oluşturucu [ICorProfilerCallback:: ModuleAttachedToAssembly geri çağrısını](icorprofilercallback-moduleattachedtoassembly-method.md) alıncaya kadar kullanılamaz.  
   
- `GetModuleInfo2` döndüğünde, `szName` arabelleğinin modülün tam dosya adını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcchName` işaret eden değeri `cchName` parametresinin değeri ile karşılaştırın. `pcchName`, `cchName`daha büyük bir değere işaret ediyorsa, daha büyük bir `szName` arabelleği ayırın, yeni, daha büyük boyuttaki `cchName` güncelleştirin ve `GetModuleInfo2` çağırın.  
+ `GetModuleInfo2`' İ döndüğünde, `szName` arabelleğin modülün tam dosya adını içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için, işaret eden değeri `pcchName` parametresinin değeriyle karşılaştırın `cchName` . Daha `pcchName` büyük bir değere işaret ediyorsa `cchName` , daha büyük bir `szName` arabellek ayırır, `cchName` Yeni, daha büyük boyutla güncelleştirin ve `GetModuleInfo2` yeniden çağırın.  
   
- Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetModuleInfo2` sıfır uzunluklu `szName` arabelleği ile çağırabilirsiniz. Daha sonra arabellek boyutunu `pcchName` döndürülen değere ayarlayabilir ve `GetModuleInfo2` tekrar çağırabilirsiniz.  
+ Alternatif olarak, `GetModuleInfo2` `szName` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcchName` ve `GetModuleInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

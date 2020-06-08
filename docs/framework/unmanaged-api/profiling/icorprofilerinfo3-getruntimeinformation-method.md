@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: e3d167be9a4091ae57a3283424186142e90ca7a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496405"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation Metodu
 Profili oluşturulan ortak dil çalışma zamanı (CLR) hakkında sürüm bilgileri sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRuntimeInformation(  
@@ -43,10 +43,10 @@ HRESULT GetRuntimeInformation(
   
 ## <a name="parameters"></a>Parametreler  
  `pClrInstanceId`  
- dışı İşlemdeki çalışan bir CLR örneğinin temsili KIMLIĞI. Bu, Windows için olay izleme (ETW) başlatma olayı raporlarının `ClrInstanceID` aynıdır.  
+ dışı İşlemdeki çalışan bir CLR örneğinin temsili KIMLIĞI. Bu, `ClrInstanceID` Windows için olay izleme (ETW) başlatma olay raporlarıdır.  
   
  `pRuntimeType`  
- dışı Çalışma zamanı türü. Bu parametre, CLR 'nin masaüstü sürümü için `COR_PRF_DESKTOP_CLR` veya Silverlight 'ta kullanılan CLR 'nin çekirdek sürümü için `COR_PRF_CORE_CLR` döndürür.  
+ dışı Çalışma zamanı türü. Bu parametre `COR_PRF_DESKTOP_CLR` , clr 'nin masaüstü sürümü veya `COR_PRF_CORE_CLR` Silverlight 'DA kullanılan CLR 'nin çekirdek sürümü için döndürür.  
   
  `pMajorVersion`  
  dışı CLR 'nin ana sürüm numarası.  
@@ -61,28 +61,28 @@ HRESULT GetRuntimeInformation(
  dışı Bir yazılım güncelleştirmesiyle ilişkilendirilen CLR 'nin sürüm numarası.  
   
  `cchVersionString`  
- 'ndaki `szVersionString` arabelleğin gösterdiği uzunluğun uzunluğu (karakter).  
+ 'ndaki ' I işaret eden arabelleğin karakter cinsinden uzunluğu `szVersionString` .  
   
  `pcchVersionString`  
- dışı `szVersionString`karakter cinsinden uzunluğu.  
+ dışı Karakter cinsinden uzunluğu `szVersionString` .  
   
  `szVersionString`  
  dışı CLR sürüm dizesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Herhangi bir parametre için null değeri geçirebilirsiniz. Ancak, `szVersionString` da null olmadığı müddetçe `pcchVersionString` null olamaz.  
+ Herhangi bir parametre için null değeri geçirebilirsiniz. Ancak `pcchVersionString` aynı zamanda null olmadığı için null olamaz `szVersionString` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
 - [Profil Oluşturma](index.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: df62ad1af0ea91783cb62bb0590b6e36d812de3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864473"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503074"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next Yöntemi
 Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı bir işlevler koleksiyonundan belirtilen sayıda bitişik işlevi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next([in]  ULONG      celt,  
@@ -39,27 +39,27 @@ HRESULT Next([in]  ULONG      celt,
  'ndaki Alınacak işlevlerin sayısı.  
   
  `ids`  
- dışı Her biri alınan bir işlevi temsil eden `COR_PRF_FUNCTION` değerleri dizisi.  
+ dışı `COR_PRF_FUNCTION`Her biri alınan bir işlevi temsil eden bir değer dizisi.  
   
  `pceltFetched`  
- dışı `ids` dizisinde aslında döndürülen işlev sayısına yönelik bir işaretçi.  
+ dışı Aslında dizide döndürülen işlev sayısına yönelik bir işaretçi `ids` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`celt` öğeler döndürüldü.|  
-|S_FALSE|`celt` öğelerinden daha azı döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
+|S_OK|`celt`öğeler döndürüldü.|  
+|S_FALSE|Daha az `celt` öğe döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea3dc625-5650-4bf4-8e67-01e42be065b1
 topic_type:
 - apiref
-ms.openlocfilehash: 367584a01e368dc591c2e93acfcc6574f2fa1ec0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5e50255342abae43565fd3556964c24ba4385eb8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866327"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500136"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter Yöntemi
 Profil oluşturucuyu, özel durum işlemenin geri alma aşamasının bir işlevi geriye doğru bir şekilde geri yüklemeye başladığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ExceptionUnwindFunctionEnter(  
@@ -36,7 +36,7 @@ HRESULT ExceptionUnwindFunctionEnter(
 
 - `functionId`
 
-  \[içinde], ölçeklendirmekte olan işlevin KIMLIĞI.
+  \[içinde] bozuk işlevin KIMLIĞI.
 
 ## <a name="remarks"></a>Açıklamalar  
  Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
@@ -44,13 +44,13 @@ HRESULT ExceptionUnwindFunctionEnter(
  Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: be2845d1d660d86447cfbb6f2845a8e68b727e66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175518"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492284"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields Yöntemi
-Belirtilen TypeDef belirteci tarafından başvurulan tür için FieldDef belirteçleri sayısalleştirir.  
+Belirtilen TypeDef belirtecinin başvurduğu tür için FieldDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumFields (
@@ -39,37 +39,37 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [içinde] Alanları numaralandırılacak sınıfın TypeDef belirteci.  
+ 'ndaki Alanları Numaralandırılacak olan sınıfın TypeDef belirteci.  
   
  `rFields`  
- [çıkış] FieldDef belirteçleri listesi.  
+ dışı FieldDef belirteçlerinin listesi.  
   
  `cMax`  
- [içinde] `rFields` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rFields` .  
   
  `pcTokens`  
- [çıkış] FieldDef belirteçlerinin gerçek sayısı `rFields`.  
+ dışı İçinde döndürülen FieldDef belirteçlerinin gerçek sayısı `rFields` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısalolarak sayısala erdirecek alan yok. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumFields`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

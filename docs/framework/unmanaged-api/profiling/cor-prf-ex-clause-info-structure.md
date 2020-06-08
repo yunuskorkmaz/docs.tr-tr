@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: fb6d2e5fc21047fea0928137f983c553f9bb2bbd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5c764031f709eefe61022d0662f37bc5d3f3e281
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867288"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501007"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO Yapısı
 Belirli bir özel durum yan tümcesi ve onunla ilişkili çerçevesini hakkında bilgi depolar.  
@@ -37,7 +37,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`clauseType`|Yeni girilen veya soldaki kodun özel durum yan tümcesinin türünü belirten [COR_PRF_CLAUSE_TYPE](cor-prf-clause-type-enumeration.md) numaralandırması değeri.|  
 |`programCounter`|Yan tümce işleyicisinin yerel giriş noktası — Örneğin, x86 EıP kaydının içeriği.|  
@@ -45,7 +45,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 |`shadowStackPointer`|Gölge yığınının işaretçisi. Bu değer BSP yazmacın içerikleri ve yalnızca ıA64 için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özel durum bildirimi alındığında, [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) , çalıştırılmak üzere veya yalnızca çalıştırılmış olan özel durum yan tümcesinin (`catch`/`finally`/Filter) yerel adresini ve çerçeve bilgilerini almak için kullanılabilir.  
+ Bir özel durum bildirimi alındığında, çalıştırılmak üzere veya yalnızca çalıştırılmış olan özel durum yan tümcesinin (/Filter) yerel adres ve çerçeve bilgilerini almak için [ICorProfilerInfo2:: GetNotifiedExceptionClauseInfo](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) kullanılabilir `catch` / `finally` .  
   
  Özel durum yan tümcesinin yürütülmesi, ortak dil çalışma zamanından (CLR) bu geri çağırmaları içerir:  
   
@@ -62,13 +62,13 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback:: ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

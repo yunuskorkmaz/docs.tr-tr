@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177078"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500500"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished Yöntemi
-Profil oluşturucuya bir uygulama etki alanı oluşturulduğunu belirtir.  
+Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AppDomainCreationFinished(  
@@ -37,25 +37,25 @@ HRESULT AppDomainCreationFinished(
 
 - `appDomainId`
 
-  \[in] Oluşturulan etki alanını tanımlar.
+  \[' de], oluşturulan etki alanını tanımlar.
 
 - `hrStatus`
 
-  \[in] Uygulama etki alanıoluşturmanın başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT.
+  \[içinde] uygulama etki alanının oluşturulmasını başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT.
 
 ## <a name="remarks"></a>Açıklamalar  
- `AppDomainCreationFinished` Yöntem çağrılana kadar başvuru kimliği herhangi bir bilgi isteği için geçerli değildir.  
+ Uygulama KIMLIĞI, yöntem çağrılana kadar herhangi bir bilgi isteği için geçerli değildir `AppDomainCreationFinished` .  
   
- Uygulama etki alanıyüklemenin bazı bölümleri `AppDomainCreationFinished` geri aramadan sonra da devam edebilir. Bir hata HRESULT bir hata `hrStatus` gösterir. Ancak, bir başarı `hrStatus` HRESULT yalnızca uygulama etki alanı oluşturma nın ilk bölümü başarılı olduğunu gösterir.  
+ Uygulama etki alanını yüklemenin bazı bölümleri geri aramadan sonra devam edebilir `AppDomainCreationFinished` . ' De HRESULT hatası, `hrStatus` bir hatayı gösterir. Ancak, içinde başarılı bir HRESULT, `hrStatus` yalnızca uygulama etki alanı oluşturmanın ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

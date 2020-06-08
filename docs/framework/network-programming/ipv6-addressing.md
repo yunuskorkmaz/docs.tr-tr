@@ -1,5 +1,6 @@
 ---
 title: IPv6 Adresleme
+description: Metin gösterimi ve adres türleri dahil Internet Protokolü sürüm 6 (IPv6), adresler hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,56 +27,56 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf68cb5f40450c2f9ecf4900801ee55e326fcb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047847"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502346"
 ---
 # <a name="ipv6-addressing"></a>IPv6 Adresleme
 
-Internet Protokolü sürüm 6'da (IPv6) adresler 128 bit uzunluğundadır. Bu kadar büyük bir adres alanının bir nedeni, kullanılabilir adresleri Internet'in topolojisini yansıtan yönlendirme etki alanları hiyerarşisine bölmektir. Başka bir neden, aygıtları ağa bağlayan ağ bağdaştırıcılarının (veya arabirimlerin) adreslerini eşlemektir. IPv6, adresleri ağ arabirimi düzeyinde olan ve aynı zamanda otomatik yapılandırma özelliklerine sahip en düşük düzeyde çözümlemek için doğal bir yeteneğe sahiptir.
+Internet Protokolü sürüm 6 ' da (IPv6), adresler 128 bit uzunluğundadır. Bu tür büyük bir adres alanının bir nedeni, kullanılabilir adreslerin Internet 'in topolojisini yansıtan bir yönlendirme etki alanı hiyerarşisine alt kümesini oluşturma. Diğer bir neden, cihazları ağa bağlayan ağ bağdaştırıcılarının (veya arabirimlerinin) adreslerini eşlemenize yöneliktir. IPv6, adresleri, ağ arabirimi düzeyinde olan ve ayrıca otomatik yapılandırma özelliklerine sahip olan en düşük düzeyde çözümlemek için devralınmış bir özellik sunar.
 
-## <a name="text-representation"></a>Metin Gösterimi
+## <a name="text-representation"></a>Metin gösterimi
 
-IPv6 adreslerini metin dizeleri olarak temsil etmek için kullanılan üç geleneksel form şunlardır:
+IPv6 adreslerini metin dizeleri olarak temsil etmek için kullanılan üç geleneksel form aşağıda verilmiştir:
 
-- **Kolon-hexadecimal formu**. This is the preferred form n:n:n:n:n:n:n:n. Her n, adresin sekiz 16 bitlik öğesinden birinin hexadecimal değerini temsil eder. Örneğin: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
+- **Iki nokta üst üste onaltılık form**. Bu değer, n:n: n:n: n:n: n:n. Her n, adresin 8 16 bitlik öğelerinden birinin onaltılık değerini temsil eder. Örneğin: `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`.
 
-- **Sıkıştırılmış form**. Adres uzunluğu nedeniyle, uzun bir sıfır dizesi içeren adreslere sahip olmak yaygındır. Bu adresleri yazmayı kolaylaştırmak için, 0 bloktan oluşan tek bir bitişik sıranın çift sütunlu bir simgeyle temsil edildiği sıkıştırılmış formu kullanın (::). Bu sembol bir adreste yalnızca bir kez görünebilir. Örneğin, sıkıştırılmış biçimdeki çok noktaya `FFED::BA98:3210:4562`yayın adresi. `FFED:0:0:0:0:BA98:3210:4562` Sıkıştırılmış biçimde `3FFE:FFFF:0:0:8:800:20C4:0` unicast `3FFE:FFFF::8:800:20C4:0`adresi . Sıkıştırılmış biçimde geri dönüş adresi `0:0:0:0:0:0:0:1` 1'dir. `::` Sıkıştırılmış biçimde belirtilmeyen `0:0:0:0:0:0:0:0` `::`adres .
+- **Sıkıştırılmış form**. Adres uzunluğu nedeniyle, uzun bir sıfır dizesi içeren adresler olması yaygındır. Bu adresleri yazmayı basitleştirmek için, tek bir bitişik dizi 0 blobunun çift iki nokta simgesiyle temsil edildiği sıkıştırılmış formu kullanın (::). Bu simge, adreste yalnızca bir kez görünebilir. Örneğin, sıkıştırılmış biçimdeki çok noktaya yayın adresi `FFED:0:0:0:0:BA98:3210:4562` `FFED::BA98:3210:4562` . Sıkıştırılmış biçimdeki tek noktaya yayın adresi `3FFE:FFFF:0:0:8:800:20C4:0` `3FFE:FFFF::8:800:20C4:0` . Sıkıştırılmış biçimdeki geri döngü adresi `0:0:0:0:0:0:0:1` 1 ' dir `::` . `0:0:0:0:0:0:0:0`Sıkıştırılmış biçimdeki belirtilmemiş adres `::` .
 
-- **Karışık form**. Bu form, IPv4 ve IPv6 adreslerini birleştirir. In this case, the address format is n:n:n:n:n:n:d.d.d.d, where each n represents the hexadecimal values of the six IPv6 high-order 16-bit address elements, and each d represents the decimal value of an IPv4 address.
+- **Karışık form**. Bu form IPv4 ve IPv6 adreslerini birleştirir. Bu durumda, adres biçimi n:n: n:n: n:n: d. d. d. d olur, burada her n altı IPv6 yüksek sıralı 16 bit adres öğesinin onaltılı değerlerini temsil eder ve her d bir IPv4 adresinin ondalık değerini temsil eder.
 
-## <a name="address-types"></a>Adres Türleri
+## <a name="address-types"></a>Adres türleri
 
-Adresteki satır aralığı bitleri belirli IPv6 adres türünü tanımlar. Bu satır baş bitlerini içeren değişken uzunluktaki alana Biçim Öneki (FP) adı verilir.
+Adresteki önde gelen bit, belirli bir IPv6 adresi türünü tanımlar. Bu önde gelen bitleri içeren değişken uzunluklu alan, biçim öneki (FP) olarak adlandırılır.
 
-Bir IPv6 unicast adresi iki bölüme ayrılmıştır. İlk bölüm adres önekini, ikinci bölüm ise arabirim tanımlayıcısını içerir. IPv6 adresi/öneki birleşimini ifade etmenin kısa bir yolu aşağıdaki gibidir: ipv6-address/önek uzunluğu.
+IPv6 tek noktaya yayın adresi iki parçaya ayrılmıştır. İlk bölüm, adres önekini içerir ve ikinci bölüm arabirim tanımlayıcısını içerir. IPv6 adresi/ön ek bileşimini hızlı bir şekilde ifade etmenin kısa bir yolu şunlardır: IPv6 adresi/ön ek uzunluğu.
 
-Aşağıda, 64 bit önek olan bir adres örneği verilmiştir.
+Aşağıda, 64 bit ön ekine sahip bir adres örneği verilmiştir.
 
 `3FFE:FFFF:0:CD30:0:0:0:0/64`.
 
-Bu örnekteki önek `3FFE:FFFF:0:CD30`. Adres de sıkıştırılmış bir biçimde yazılabilir, gibi `3FFE:FFFF:0:CD30::/64`.
+Bu örnekteki ön ek `3FFE:FFFF:0:CD30` . Adres Ayrıca, olarak sıkıştırılmış bir biçimde yazılabilir `3FFE:FFFF:0:CD30::/64` .
 
 IPv6 aşağıdaki adres türlerini tanımlar:
 
-- **Unicast adresi**. Tek bir arabirim için tanımlayıcı. Bu adrese gönderilen bir paket tanımlanan arabirime teslim edilir. Tek noktaya yayın adresleri, çok noktaya yayın adreslerinden yüksek sıralı sekizlinin değeriyle ayırt edilir. Çok noktaya yayın adreslerinin yüksek sıralı sekizlisi FF'nin heksadesimal değerine sahiptir. Bu sekizliiçin başka bir değer tek dökümlü bir adresi tanımlar. Aşağıdaki tek tek adresler farklı türleri şunlardır:
+- **Tek noktaya yayın adresi**. Tek bir arabirim için tanımlayıcı. Bu adrese gönderilen bir paket, tanımlanan arabirime teslim edilir. Tek noktaya yayın adresleri, çok noktaya yayın adreslerinden yüksek sıralı sekizli değerine göre ayırt edilir. Çok noktaya yayın adreslerinin yüksek sıralı sekizli, FF onaltılık değerine sahiptir. Bu sekizli için herhangi bir diğer değer bir tek noktaya yayın adresini tanımlar. Aşağıdakiler farklı tek noktaya yayın adresi türleridir:
 
-  - **Bağlantı yerel adresleri**. Bu adresler tek bir bağlantıda kullanılır ve aşağıdaki biçime sahiptir: FE80::*InterfaceID*. Otomatik adres yapılandırması, komşu bulma veya yönlendirici olmadığında bağlantıdaki düğümler arasında bağlantı yerel adresleri kullanılır. Bir bağlantı yerel adres öncelikle başlangıç ve sistem henüz daha büyük kapsamda adresleri elde değil kullanılır.
+  - **Bağlantı yerel adresleri**. Bu adresler tek bir bağlantıda kullanılır ve şu biçime sahiptir: FE80::*InterfaceID*. Bağlantı yerel adresleri, bir bağlantı üzerindeki düğümler arasında otomatik adres yapılandırması, komşu bulma veya yönlendirici olmadığında kullanılır. Bir bağlantı yerel adresi birincil olarak başlangıçta ve sistem daha büyük kapsamın adreslerini henüz almış olmadığında kullanılır.
 
-  - **Site yerel adresleri.** Bu adresler tek bir sitede kullanılır ve aşağıdaki biçime sahiptir: FEC0::*SubnetID*:*InterfaceID*. Site yerel adresleri, genel bir önek gerek kalmadan bir site içinde adresleme için kullanılır.
+  - **Site-yerel adresler**. Bu adresler tek bir sitede kullanılır ve şu biçime sahiptir: FEC0::*SubnetID*:*InterfaceID*. Site yerel adresleri, genel ön ek gereksinimi olmadan bir site içinde adresleme için kullanılır.
 
-  - **Global IPv6 unicast adresleri.** Bu adresler Internet'te kullanılabilir ve aşağıdaki biçime sahiptir: 010(FP, 3 bit) TLA ID (13 bit) Ayrılmış (8 bit) NLA ID (24 bit) SLA ID (16 bit) *InterfaceID* (64 bit).
+  - **Genel IPv6 tek noktaya yayın adresleri**. Bu adresler Internet üzerinden kullanılabilir ve şu biçimdedir: 010 (FP, 3 bit) TLA KIMLIĞI (13 bit) ayrılmış (8 bit) NLA Kimliği (24 bit) SLA kimliği (16 bit) *InterfaceID* (64 bit).
 
-- **Çok noktaya yayın adresi.** Arabirim kümesi (genellikle farklı düğümlere ait) için bir tanımlayıcı. Bu adrese gönderilen bir paket, adres tarafından tanımlanan tüm arabirimlere teslim edilir. Çok noktaya yayın adresi türleri IPv4 yayın adreslerinin yerini alar.
+- **Çok noktaya yayın adresi**. Bir arabirim kümesi için tanımlayıcı (genellikle farklı düğümlere ait). Bu adrese gönderilen bir paket, adres tarafından tanımlanan tüm arabirimlere dağıtılır. Çok noktaya yayın adres türleri IPv4 yayın adreslerinin yerini alır.
 
-- **Anycast adresi**. Arabirim kümesi (genellikle farklı düğümlere ait) için bir tanımlayıcı. Bu adrese gönderilen bir paket, adres tarafından tanımlanan yalnızca bir arabirime teslim edilir. Bu, yönlendirme ölçümleri ile tanımlanan en yakın arabirimdir. Herhangi bir döküm adresleri unicast adres alanından alınır ve sözdizimsel olarak ayırt edilemez. Adresli arabirim, yapılandırmasının bir işlevi olarak unicast ve anycast adresleri arasındaki ayrımı gerçekleştirir.
+- **Her noktaya yayın adresi**. Bir arabirim kümesi için tanımlayıcı (genellikle farklı düğümlere ait). Bu adrese gönderilen bir paket, yalnızca adres tarafından tanımlanan bir arabirime dağıtılır. Bu, yönlendirme ölçümleri tarafından tanımlanan en yakın arabirimdir. Tek noktaya yayın adresleri tek noktaya yayın adres alanından alınır ve sözdizimsel olarak ayırt edilemez. Adreslenen arabirim, tek noktaya yayın ve tek noktaya yayın adresleri arasındaki ayrımı kendi yapılandırmasının bir işlevi olarak gerçekleştirir.
 
-Genel olarak, bir düğümün her zaman bir bağlantı yerel adresi vardır. Bir site yerel adresi ve bir veya daha fazla genel adres olabilir.
+Genel olarak, bir düğümün her zaman bir bağlantı yerel adresi vardır. Bu, bir site yerel adresine ve bir veya daha fazla genel adrese sahip olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İnternet Protokolü Sürüm 6](internet-protocol-version-6.md)
+- [Internet Protokolü sürüm 6](internet-protocol-version-6.md)
 - [Yuvalar](sockets.md)
