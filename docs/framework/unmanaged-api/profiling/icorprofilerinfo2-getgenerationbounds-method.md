@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 3cdc185408576f5679daacef4dde438d66e490ff
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 2e6e3a6432d6568532a5f5b9676b5f130eb83d0b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862756"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502900"
 ---
-# <a name="icorprofilerinfo2getgenerationbounds-method"></a><span data-ttu-id="9e5d5-102">ICorProfilerInfo2::GetGenerationBounds Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9e5d5-102">ICorProfilerInfo2::GetGenerationBounds Method</span></span>
-<span data-ttu-id="9e5d5-103">Yığın kesimleri olan bellek bölgelerini alır, bu, çeşitli çöp toplama nesilleri yapar.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-103">Gets the memory regions, which are segments of the heap, that make up the various garbage collection generations.</span></span>  
+# <a name="icorprofilerinfo2getgenerationbounds-method"></a><span data-ttu-id="95cfb-102">ICorProfilerInfo2::GetGenerationBounds Yöntemi</span><span class="sxs-lookup"><span data-stu-id="95cfb-102">ICorProfilerInfo2::GetGenerationBounds Method</span></span>
+<span data-ttu-id="95cfb-103">Yığın kesimleri olan bellek bölgelerini alır, bu, çeşitli çöp toplama nesilleri yapar.</span><span class="sxs-lookup"><span data-stu-id="95cfb-103">Gets the memory regions, which are segments of the heap, that make up the various garbage collection generations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e5d5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9e5d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95cfb-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="95cfb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGenerationBounds(  
@@ -34,37 +34,37 @@ HRESULT GetGenerationBounds(
     [out, size_is(cObjectRanges), length_is(*pcObjectRanges)] COR_PRF_GC_GENERATION_RANGE ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e5d5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9e5d5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="95cfb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="95cfb-105">Parameters</span></span>  
  `cObjectRanges`  
- <span data-ttu-id="9e5d5-106">'ndaki `ranges` dizisi için çağıran tarafından ayrılan öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-106">[in] The number of elements allocated by the caller for the `ranges` array.</span></span>  
+ <span data-ttu-id="95cfb-106">'ndaki Dizi için çağıran tarafından ayrılan öğe sayısı `ranges` .</span><span class="sxs-lookup"><span data-stu-id="95cfb-106">[in] The number of elements allocated by the caller for the `ranges` array.</span></span>  
   
  `pcObjectRanges`  
- <span data-ttu-id="9e5d5-107">dışı `ranges` dizisinde döndürülecek bir veya hepsi olan toplam Aralık sayısını belirten bir tamsayı işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-107">[out] A pointer to an integer that specifies the total number of ranges, some or all of which will be returned in the `ranges` array.</span></span>  
+ <span data-ttu-id="95cfb-107">dışı Dizide döndürülecek bir veya hepsi olan toplam Aralık sayısını belirten bir tamsayı işaretçisi `ranges` .</span><span class="sxs-lookup"><span data-stu-id="95cfb-107">[out] A pointer to an integer that specifies the total number of ranges, some or all of which will be returned in the `ranges` array.</span></span>  
   
  `ranges`  
- <span data-ttu-id="9e5d5-108">dışı Her biri çöp toplama yapılmakta olan kuşak içindeki belleğin bir aralığını (yani bloğunu) açıklayan [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapıları dizisi.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-108">[out] An array of [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.</span></span>  
+ <span data-ttu-id="95cfb-108">dışı Her biri çöp toplama yapılmakta olan kuşak içindeki belleğin bir aralığını (yani bloğunu) açıklayan [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapıları dizisi.</span><span class="sxs-lookup"><span data-stu-id="95cfb-108">[out] An array of [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) structures, each of which describes a range (that is, block) of memory within the generation that is undergoing garbage collection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9e5d5-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9e5d5-109">Remarks</span></span>  
- <span data-ttu-id="9e5d5-110">Çöp toplama işlemi devam ettiğinden, `GetGenerationBounds` yöntemi herhangi bir profil oluşturucu geri çağrısından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-110">The `GetGenerationBounds` method can be called from any profiler callback, provided that garbage collection is not in progress.</span></span>
+## <a name="remarks"></a><span data-ttu-id="95cfb-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="95cfb-109">Remarks</span></span>  
+ <span data-ttu-id="95cfb-110">`GetGenerationBounds`Çöp toplama işlemi devam ettiğinden, yöntemi herhangi bir profil oluşturucu geri çağrısından çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="95cfb-110">The `GetGenerationBounds` method can be called from any profiler callback, provided that garbage collection is not in progress.</span></span>
 
- <span data-ttu-id="9e5d5-111">Nesklerde en fazla kaydırma, çöp koleksiyonları sırasında gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-111">Most shifting of generations takes place during garbage collections.</span></span> <span data-ttu-id="9e5d5-112">Nesiller koleksiyonlar arasında büyüyebilir ancak genellikle hareket etmez.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-112">Generations might grow between collections but generally do not move around.</span></span> <span data-ttu-id="9e5d5-113">Bu nedenle, `GetGenerationBounds` çağrısı yapılacak en ilginç konumlar `ICorProfilerCallback2::GarbageCollectionStarted` ve `ICorProfilerCallback2::GarbageCollectionFinished`.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-113">Therefore, the most interesting places to call `GetGenerationBounds` are in `ICorProfilerCallback2::GarbageCollectionStarted` and `ICorProfilerCallback2::GarbageCollectionFinished`.</span></span>  
+ <span data-ttu-id="95cfb-111">Nesklerde en fazla kaydırma, çöp koleksiyonları sırasında gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="95cfb-111">Most shifting of generations takes place during garbage collections.</span></span> <span data-ttu-id="95cfb-112">Nesiller koleksiyonlar arasında büyüyebilir ancak genellikle hareket etmez.</span><span class="sxs-lookup"><span data-stu-id="95cfb-112">Generations might grow between collections but generally do not move around.</span></span> <span data-ttu-id="95cfb-113">Bu nedenle, çağrının en ilginç yerleri `GetGenerationBounds` ve ' dir `ICorProfilerCallback2::GarbageCollectionStarted` `ICorProfilerCallback2::GarbageCollectionFinished` .</span><span class="sxs-lookup"><span data-stu-id="95cfb-113">Therefore, the most interesting places to call `GetGenerationBounds` are in `ICorProfilerCallback2::GarbageCollectionStarted` and `ICorProfilerCallback2::GarbageCollectionFinished`.</span></span>  
   
- <span data-ttu-id="9e5d5-114">Program başlatma sırasında bazı nesneler ortak dil çalışma zamanı (CLR) tarafından genellikle 2. nesil 3 ve 0 ' da ayrılır.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-114">During program startup, some objects are allocated by the common language runtime (CLR) itself, generally in generations 3 and 0.</span></span> <span data-ttu-id="9e5d5-115">Bu nedenle, yönetilen kodun yürütülmeye başladığı zaman, bu nesiller de nesneleri içerecektir.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-115">Thus, by the time managed code starts executing, these generations will already contain objects.</span></span> <span data-ttu-id="9e5d5-116">Atık toplayıcı tarafından oluşturulan kukla nesneler dışında, 1 ve 2. nesil normalde boş olur.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-116">Generations 1 and 2 will normally be empty, except for dummy objects that are generated by the garbage collector.</span></span> <span data-ttu-id="9e5d5-117">(Kukla nesnelerin boyutu, CLR 'nin 32 bitlik uygulamalarında 12 bayttır; boyut 64 bit uygulamalarda daha büyüktür.) Ayrıca, yerel görüntü Oluşturucu (NGen. exe) tarafından üretilen modüller içindeki 2. nesil aralıkları görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-117">(The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe).</span></span> <span data-ttu-id="9e5d5-118">Bu durumda, kuşak 2 ' deki nesneler, çöp toplayıcı tarafından değil NGen. exe çalıştırıldığında ayrılan *dondurulmuş nesnelerdir*.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-118">In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.</span></span>  
+ <span data-ttu-id="95cfb-114">Program başlatma sırasında bazı nesneler ortak dil çalışma zamanı (CLR) tarafından genellikle 2. nesil 3 ve 0 ' da ayrılır.</span><span class="sxs-lookup"><span data-stu-id="95cfb-114">During program startup, some objects are allocated by the common language runtime (CLR) itself, generally in generations 3 and 0.</span></span> <span data-ttu-id="95cfb-115">Bu nedenle, yönetilen kodun yürütülmeye başladığı zaman, bu nesiller de nesneleri içerecektir.</span><span class="sxs-lookup"><span data-stu-id="95cfb-115">Thus, by the time managed code starts executing, these generations will already contain objects.</span></span> <span data-ttu-id="95cfb-116">Atık toplayıcı tarafından oluşturulan kukla nesneler dışında, 1 ve 2. nesil normalde boş olur.</span><span class="sxs-lookup"><span data-stu-id="95cfb-116">Generations 1 and 2 will normally be empty, except for dummy objects that are generated by the garbage collector.</span></span> <span data-ttu-id="95cfb-117">(Kukla nesnelerin boyutu, CLR 'nin 32 bitlik uygulamalarında 12 bayttır; boyut 64 bit uygulamalarda daha büyüktür.) Ayrıca, yerel görüntü Oluşturucu (NGen. exe) tarafından üretilen modüller içindeki 2. nesil aralıkları görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="95cfb-117">(The size of dummy objects is 12 bytes in 32-bit implementations of the CLR; the size is larger in 64-bit implementations.) You might also see generation 2 ranges that are inside modules produced by the Native Image Generator (NGen.exe).</span></span> <span data-ttu-id="95cfb-118">Bu durumda, kuşak 2 ' deki nesneler, çöp toplayıcı tarafından değil NGen. exe çalıştırıldığında ayrılan *dondurulmuş nesnelerdir*.</span><span class="sxs-lookup"><span data-stu-id="95cfb-118">In this case, the objects in generation 2 are *frozen objects*, which are allocated when NGen.exe runs rather than by the garbage collector.</span></span>  
   
- <span data-ttu-id="9e5d5-119">Bu işlev, arayana ayrılan arabellekleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-119">This function uses caller-allocated buffers.</span></span>  
+ <span data-ttu-id="95cfb-119">Bu işlev, arayana ayrılan arabellekleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="95cfb-119">This function uses caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e5d5-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9e5d5-120">Requirements</span></span>  
- <span data-ttu-id="9e5d5-121">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e5d5-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95cfb-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="95cfb-120">Requirements</span></span>  
+ <span data-ttu-id="95cfb-121">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95cfb-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e5d5-122">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="9e5d5-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="95cfb-122">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="95cfb-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9e5d5-123">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="9e5d5-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="95cfb-123">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="95cfb-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e5d5-124">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e5d5-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="95cfb-124">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95cfb-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e5d5-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e5d5-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95cfb-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="95cfb-125">See also</span></span>
 
-- [<span data-ttu-id="9e5d5-126">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9e5d5-126">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
-- [<span data-ttu-id="9e5d5-127">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9e5d5-127">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="9e5d5-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9e5d5-128">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="9e5d5-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9e5d5-129">Profiling</span></span>](index.md)
+- [<span data-ttu-id="95cfb-126">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="95cfb-126">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="95cfb-127">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="95cfb-127">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="95cfb-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="95cfb-128">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="95cfb-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="95cfb-129">Profiling</span></span>](index.md)
