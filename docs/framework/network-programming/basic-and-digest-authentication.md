@@ -1,5 +1,6 @@
 ---
 title: Temel ve Özet Kimlik Doğrulaması
+description: Bir uygulamanın, veri istemek için kullandığı WebRequest nesnesinde bir Kullanıcı adı ve parola sağladığı temel ve Özet kimlik doğrulamasını kullanmayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7772430b508b52a63d716550b69018385418c132
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048907"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502710"
 ---
-# <a name="basic-and-digest-authentication"></a><span data-ttu-id="1594e-102">Temel ve Özet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="1594e-102">Basic and Digest Authentication</span></span>
-<span data-ttu-id="1594e-103">Temel <xref:System.Net> ve özet kimlik doğrulamasının uygulanması RFC2617 – HTTP Kimlik Doğrulama: Temel ve Özet Kimlik Doğrulama [(World Wide Web Konsorsiyumu'nun](https://www.w3.org) web sitesinde mevcuttur) ile uyumludur.</span><span class="sxs-lookup"><span data-stu-id="1594e-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the [World Wide Web Consortium's](https://www.w3.org) website).</span></span>  
+# <a name="basic-and-digest-authentication"></a><span data-ttu-id="dfa01-103">Temel ve Özet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="dfa01-103">Basic and Digest Authentication</span></span>
+<span data-ttu-id="dfa01-104"><xref:System.Net>Temel ve Özet kimlik doğrulamasının UYGULANMASı RFC2617 – http kimlik doğrulaması: temel ve Özet kimlik doğrulaması ( [World Wide Web Konsorsiyumu 'ın](https://www.w3.org) Web sitesinde bulunur) ile uyumludur.</span><span class="sxs-lookup"><span data-stu-id="dfa01-104">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the [World Wide Web Consortium's](https://www.w3.org) website).</span></span>  
   
- <span data-ttu-id="1594e-104">Temel ve özet kimlik doğrulamasını kullanmak için, uygulamanın <xref:System.Net.WebRequest.Credentials%2A> aşağıdaki örnekte gösterildiği gibi, Internet'ten veri istemek için kullandığı <xref:System.Net.WebRequest> nesnenin özelliğinde bir kullanıcı adı ve parola sağlaması gerekir.</span><span class="sxs-lookup"><span data-stu-id="1594e-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
+ <span data-ttu-id="dfa01-105">Temel ve Özet kimlik doğrulamasını kullanmak için bir uygulamanın, <xref:System.Net.WebRequest.Credentials%2A> <xref:System.Net.WebRequest> Aşağıdaki örnekte gösterildiği gibi, Internet 'ten veri istemek için kullandığı nesnenin özelliğinde bir Kullanıcı adı ve parola sağlaması gerekir.</span><span class="sxs-lookup"><span data-stu-id="dfa01-105">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -44,9 +45,9 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
-> <span data-ttu-id="1594e-105">Temel ve Özet Kimlik Doğrulama ile gönderilen veriler şifrelenmez, bu nedenle veriler bir rakip tarafından görülebilir.</span><span class="sxs-lookup"><span data-stu-id="1594e-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="1594e-106">Ayrıca, Temel Kimlik Doğrulama kimlik bilgileri (kullanıcı adı ve parola) açık olarak gönderilir ve ele geçirilebilir.</span><span class="sxs-lookup"><span data-stu-id="1594e-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
+> <span data-ttu-id="dfa01-106">Temel ve Özet kimlik doğrulamasıyla gönderilen veriler şifrelenmemiştir, bu nedenle veriler bir saldırgan tarafından görülebilir.</span><span class="sxs-lookup"><span data-stu-id="dfa01-106">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="dfa01-107">Ayrıca, temel kimlik doğrulama kimlik bilgileri (Kullanıcı adı ve parola) açık olarak gönderilir ve yakalanabilir.</span><span class="sxs-lookup"><span data-stu-id="dfa01-107">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1594e-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1594e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfa01-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dfa01-108">See also</span></span>
 
-- [<span data-ttu-id="1594e-108">NTLM ve Kerberos Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="1594e-108">NTLM and Kerberos Authentication</span></span>](ntlm-and-kerberos-authentication.md)
-- [<span data-ttu-id="1594e-109">İnternet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="1594e-109">Internet Authentication</span></span>](internet-authentication.md)
+- [<span data-ttu-id="dfa01-109">NTLM ve Kerberos Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="dfa01-109">NTLM and Kerberos Authentication</span></span>](ntlm-and-kerberos-authentication.md)
+- [<span data-ttu-id="dfa01-110">İnternet Kimlik Doğrulaması</span><span class="sxs-lookup"><span data-stu-id="dfa01-110">Internet Authentication</span></span>](internet-authentication.md)

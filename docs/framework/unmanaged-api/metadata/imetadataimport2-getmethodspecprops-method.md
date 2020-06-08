@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 079d9245526ff7914d1cbd6a91f0f2d96a690af5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490451"
 ---
-# <a name="imetadataimport2getmethodspecprops-method"></a><span data-ttu-id="22b40-102">IMetaDataImport2::GetMethodSpecProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="22b40-102">IMetaDataImport2::GetMethodSpecProps Method</span></span>
-<span data-ttu-id="22b40-103">Belirtilen MethodSpec belirteci tarafından başvurulan yöntemin meta veri imzasını alır.</span><span class="sxs-lookup"><span data-stu-id="22b40-103">Gets the metadata signature of the method referenced by the specified MethodSpec token.</span></span>  
+# <a name="imetadataimport2getmethodspecprops-method"></a><span data-ttu-id="bac56-102">IMetaDataImport2::GetMethodSpecProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bac56-102">IMetaDataImport2::GetMethodSpecProps Method</span></span>
+<span data-ttu-id="bac56-103">Belirtilen MethodSpec belirteci tarafından başvurulan metodun meta veri imzasını alır.</span><span class="sxs-lookup"><span data-stu-id="bac56-103">Gets the metadata signature of the method referenced by the specified MethodSpec token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22b40-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="22b40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bac56-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="bac56-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodSpecProps (  
@@ -36,29 +36,29 @@ HRESULT GetMethodSpecProps (
 );
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22b40-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="22b40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bac56-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bac56-105">Parameters</span></span>  
  `mi`  
- <span data-ttu-id="22b40-106">[içinde] Yöntemin anlık durumunu temsil eden bir MethodSpec belirteci.</span><span class="sxs-lookup"><span data-stu-id="22b40-106">[in] A MethodSpec token that represents the instantiation of the method.</span></span>  
+ <span data-ttu-id="bac56-106">'ndaki Metodun örneklenmesini temsil eden bir MethodSpec belirteci.</span><span class="sxs-lookup"><span data-stu-id="bac56-106">[in] A MethodSpec token that represents the instantiation of the method.</span></span>  
   
  `tkParent`  
- <span data-ttu-id="22b40-107">[çıkış] Yöntem tanımını temsil eden MethodDef veya MethodRef belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="22b40-107">[out] A pointer to the MethodDef or MethodRef token that represents the method definition.</span></span>  
+ <span data-ttu-id="bac56-107">dışı Yöntem tanımını temsil eden MethodDef veya MethodRef belirtecine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bac56-107">[out] A pointer to the MethodDef or MethodRef token that represents the method definition.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="22b40-108">[çıkış] Yöntemin ikili meta veri imzasına işaretçi.</span><span class="sxs-lookup"><span data-stu-id="22b40-108">[out] A pointer to the binary metadata signature of the method.</span></span>  
+ <span data-ttu-id="bac56-108">dışı Metodun ikili meta veri imzasına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bac56-108">[out] A pointer to the binary metadata signature of the method.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="22b40-109">[çıkış] Boyutu, bayt, ve. `ppvSigBlob`</span><span class="sxs-lookup"><span data-stu-id="22b40-109">[out] The size, in bytes, of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="bac56-109">dışı Bayt cinsinden boyutu `ppvSigBlob` .</span><span class="sxs-lookup"><span data-stu-id="bac56-109">[out] The size, in bytes, of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22b40-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="22b40-110">Requirements</span></span>  
- <span data-ttu-id="22b40-111">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22b40-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bac56-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bac56-110">Requirements</span></span>  
+ <span data-ttu-id="bac56-111">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bac56-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22b40-112">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="22b40-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="bac56-112">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="bac56-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="22b40-113">**Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="22b40-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="bac56-113">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="bac56-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="22b40-114">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22b40-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bac56-114">**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bac56-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22b40-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="22b40-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bac56-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bac56-115">See also</span></span>
 
-- [<span data-ttu-id="22b40-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="22b40-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="22b40-117">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="22b40-117">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="bac56-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bac56-116">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)
+- [<span data-ttu-id="bac56-117">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bac56-117">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
