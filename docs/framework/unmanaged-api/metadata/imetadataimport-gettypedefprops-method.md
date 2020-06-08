@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436755"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490802"
 ---
-# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="8a513-102">IMetaDataImport::GetTypeDefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8a513-102">IMetaDataImport::GetTypeDefProps Method</span></span>
-<span data-ttu-id="8a513-103">Belirtilen TypeDef belirteci tarafından temsil edilen <xref:System.Type> için meta veri bilgilerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="8a513-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportgettypedefprops-method"></a><span data-ttu-id="c3edb-102">IMetaDataImport::GetTypeDefProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c3edb-102">IMetaDataImport::GetTypeDefProps Method</span></span>
+<span data-ttu-id="c3edb-103"><xref:System.Type>Belirtilen typedef belirteci tarafından temsil edilen için meta veri bilgilerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="c3edb-103">Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a513-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8a513-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3edb-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="c3edb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTypeDefProps (  
@@ -38,35 +38,35 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8a513-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8a513-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3edb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c3edb-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="8a513-106">'ndaki Meta verilerini döndürecek türü temsil eden TypeDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="8a513-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="c3edb-106">'ndaki Meta verilerini döndürecek türü temsil eden TypeDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="c3edb-106">[in] The TypeDef token that represents the type to return metadata for.</span></span>  
   
  `szTypeDef`  
- <span data-ttu-id="8a513-107">dışı Tür adını içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="8a513-107">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="c3edb-107">dışı Tür adını içeren bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="c3edb-107">[out] A buffer containing the type name.</span></span>  
   
  `cchTypeDef`  
- <span data-ttu-id="8a513-108">'ndaki `szTypeDef`geniş karakterdeki boyut.</span><span class="sxs-lookup"><span data-stu-id="8a513-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
+ <span data-ttu-id="c3edb-108">'ndaki Öğesinin geniş karakterdeki boyutu `szTypeDef` .</span><span class="sxs-lookup"><span data-stu-id="c3edb-108">[in] The size in wide characters of `szTypeDef`.</span></span>  
   
  `pchTypeDef`  
- <span data-ttu-id="8a513-109">dışı `szTypeDef`' de döndürülen geniş karakter sayısı.</span><span class="sxs-lookup"><span data-stu-id="8a513-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
+ <span data-ttu-id="c3edb-109">dışı İçinde döndürülen geniş karakter sayısı `szTypeDef` .</span><span class="sxs-lookup"><span data-stu-id="c3edb-109">[out] The number of wide characters returned in `szTypeDef`.</span></span>  
   
  `pdwTypeDefFlags`  
- <span data-ttu-id="8a513-110">dışı Tür tanımını değiştiren bayrakların bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="8a513-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="8a513-111">Bu değer [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırmasından bir bit dır.</span><span class="sxs-lookup"><span data-stu-id="8a513-111">This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="c3edb-110">dışı Tür tanımını değiştiren bayrakların bir işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c3edb-110">[out] A pointer to any flags that modify the type definition.</span></span> <span data-ttu-id="c3edb-111">Bu değer [CorTypeAttr](cortypeattr-enumeration.md) numaralandırmasından bir bit dır.</span><span class="sxs-lookup"><span data-stu-id="c3edb-111">This value is a bitmask from the [CorTypeAttr](cortypeattr-enumeration.md) enumeration.</span></span>  
   
  `ptkExtends`  
- <span data-ttu-id="8a513-112">dışı İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="8a513-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
+ <span data-ttu-id="c3edb-112">dışı İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="c3edb-112">[out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a513-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8a513-113">Requirements</span></span>  
- <span data-ttu-id="8a513-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a513-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3edb-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c3edb-113">Requirements</span></span>  
+ <span data-ttu-id="c3edb-114">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3edb-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a513-115">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8a513-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c3edb-115">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c3edb-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8a513-116">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="8a513-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c3edb-116">**Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="c3edb-116">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8a513-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a513-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c3edb-117">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3edb-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a513-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8a513-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3edb-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3edb-118">See also</span></span>
 
-- [<span data-ttu-id="8a513-119">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a513-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8a513-120">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a513-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c3edb-119">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c3edb-119">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
+- [<span data-ttu-id="c3edb-120">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c3edb-120">IMetaDataImport2 Interface</span></span>](imetadataimport2-interface.md)

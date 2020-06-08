@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: c32407c3fc0bc5a045b80ec48937699826d981af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68e29e932e477f286db00b0c989a3346bd13c9bc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501228"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="0b344-102">IMetaDataTables::GetBlobHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b344-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="0b344-103">İkili büyük nesne (BLOB) yığınının boyutunu baytlar halinde alır.</span><span class="sxs-lookup"><span data-stu-id="0b344-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="15933-102">IMetaDataTables::GetBlobHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="15933-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="15933-103">İkili büyük nesne (BLOB) yığınının boyutunu bayt cinsinden alır.</span><span class="sxs-lookup"><span data-stu-id="15933-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b344-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b344-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15933-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="15933-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBlobHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetBlobHeapSize (
 );
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0b344-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b344-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15933-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="15933-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="0b344-106">[çıkış] BLOB yığınının baytboyutuna göre bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0b344-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="15933-106">dışı BLOB yığınının bayt cinsinden boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="15933-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b344-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b344-107">Requirements</span></span>  
- <span data-ttu-id="0b344-108">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b344-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15933-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="15933-107">Requirements</span></span>  
+ <span data-ttu-id="15933-108">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15933-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b344-109">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0b344-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="15933-109">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="15933-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0b344-110">**Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="0b344-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="15933-110">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="15933-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0b344-111">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b344-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="15933-111">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15933-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b344-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b344-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="15933-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="15933-112">See also</span></span>
 
-- [<span data-ttu-id="0b344-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b344-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="0b344-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b344-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="15933-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="15933-113">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="15933-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="15933-114">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)

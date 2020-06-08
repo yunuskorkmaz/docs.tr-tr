@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f4764f016360a2ec0ab054b7a89ccb3f86aeb43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175258"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490230"
 ---
-# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="01b0f-102">IMetaDataTables::GetNextString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="01b0f-102">IMetaDataTables::GetNextString Method</span></span>
-<span data-ttu-id="01b0f-103">Geçerli tablo sütunundaki sonraki dizenin dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="01b0f-103">Gets the index of the next string in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="14c46-102">IMetaDataTables::GetNextString Yöntemi</span><span class="sxs-lookup"><span data-stu-id="14c46-102">IMetaDataTables::GetNextString Method</span></span>
+<span data-ttu-id="14c46-103">Geçerli tablo sütunundaki sonraki dizenin dizinini alır.</span><span class="sxs-lookup"><span data-stu-id="14c46-103">Gets the index of the next string in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01b0f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="01b0f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14c46-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="14c46-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNextString (
@@ -34,23 +34,23 @@ HRESULT GetNextString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="01b0f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="01b0f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="14c46-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="14c46-105">Parameters</span></span>  
  `ixString`  
- <span data-ttu-id="01b0f-106">[içinde] Dize tablo sütunundaki dizin değeri.</span><span class="sxs-lookup"><span data-stu-id="01b0f-106">[in] The index value from a string table column.</span></span>  
+ <span data-ttu-id="14c46-106">'ndaki Dize tablosu sütunundan dizin değeri.</span><span class="sxs-lookup"><span data-stu-id="14c46-106">[in] The index value from a string table column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="01b0f-107">[çıkış] Sütundaki sonraki dizenin dizinine işaretçi.</span><span class="sxs-lookup"><span data-stu-id="01b0f-107">[out] A pointer to the index of the next string in the column.</span></span>  
+ <span data-ttu-id="14c46-107">dışı Sütundaki sonraki dizenin dizinine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="14c46-107">[out] A pointer to the index of the next string in the column.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01b0f-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="01b0f-108">Requirements</span></span>  
- <span data-ttu-id="01b0f-109">**Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01b0f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14c46-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="14c46-108">Requirements</span></span>  
+ <span data-ttu-id="14c46-109">**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14c46-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01b0f-110">**Üstbilgi:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="01b0f-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="14c46-110">**Üst bilgi:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="14c46-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="01b0f-111">**Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="01b0f-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="14c46-111">**Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır</span><span class="sxs-lookup"><span data-stu-id="14c46-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="01b0f-112">**.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01b0f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="14c46-112">**.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14c46-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01b0f-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01b0f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14c46-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="14c46-113">See also</span></span>
 
-- [<span data-ttu-id="01b0f-114">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01b0f-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="01b0f-115">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="01b0f-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="14c46-114">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="14c46-114">IMetaDataTables Interface</span></span>](imetadatatables-interface.md)
+- [<span data-ttu-id="14c46-115">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="14c46-115">IMetaDataTables2 Interface</span></span>](imetadatatables2-interface.md)
