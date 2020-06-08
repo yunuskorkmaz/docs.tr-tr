@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21ce66722e069573b651ada950b64ef6d97220fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431428"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501150"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString Metodu
 
 Geçerli kapsamdaki dize sütununda belirtilen dizinde sabit kodlanmış dizeyi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetUserString (
@@ -42,20 +42,20 @@ HRESULT GetUserString (
 'ndaki Sabit kodlanmış dizenin alınacağı dizin değeri.
 
 `pcbData`\
-dışı `ppData`boyutuna yönelik bir işaretçi.
+dışı Boyutu için bir işaretçi `ppData` .
 
 `ppData`\
 dışı Döndürülen dizeye bir işaretçi işaretçisi.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi:** Cor. h
 
 **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

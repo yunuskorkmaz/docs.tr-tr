@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762090"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501657"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName Arabirimi
 Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevler sağlar. Tüm `ICLRStrongName` Yöntemler standart com HRESULTs döndürür.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[GetHashFromAssemblyFile Yöntemi](iclrstrongname-gethashfromassemblyfile-method.md)|Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır.|  
 |[GetHashFromAssemblyFileW Yöntemi](iclrstrongname-gethashfromassemblyfilew-method.md)|Belirtilen karma algoritmasını kullanarak, Unicode dizesi olarak belirtilen derleme dosyasının karmasını alır.|  
@@ -35,7 +35,7 @@ Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevler 
 |[GetHashFromFileW Yöntemi](iclrstrongname-gethashfromfilew-method.md)|Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.|  
 |[GetHashFromHandle Yöntemi](iclrstrongname-gethashfromhandle-method.md)|Belirtilen karma algoritmasını kullanarak, belirtilen dosya tanıtıcısına sahip dosyanın içeriği üzerinde bir karma oluşturur.|  
 |[StrongNameCompareAssemblies Yöntemi](iclrstrongname-strongnamecompareassemblies-method.md)|İki derlemenin yalnızca kendi tanımlayıcı ad imzalarına göre farklı olup olmadığını belirler.|  
-|[StrongNameFreeBuffer Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)veya [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)gibi bir tanımlayıcı ad yöntemine önceki bir çağrı ile ayrılmış belleği serbest bırakır.|  
+|[StrongNameFreeBuffer Yöntemi](iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md), [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)veya [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)gibi bir tanımlayıcı ad yöntemine önceki bir çağrı ile ayrılmış belleği serbest bırakır.|  
 |[StrongNameGetBlob Yöntemi](iclrstrongname-strongnamegetblob-method.md)|Belirtilen adresteki yürütülebilir dosyanın ikili gösterimiyle belirtilen arabelleği doldurur.|  
 |[StrongNameGetBlobFromImage Yöntemi](iclrstrongname-strongnamegetblobfromimage-method.md)|Belirtilen bellek adresindeki derleme görüntüsünün ikili gösterimini alır.|  
 |[StrongNameGetPublicKey Yöntemi](iclrstrongname-strongnamegetpublickey-method.md)|Özel/ortak anahtar çiftinden ortak anahtarı alır.|  
@@ -69,4 +69,4 @@ Derlemeleri tanımlayıcı adlarla imzalamak için temel genel statik işlevler 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

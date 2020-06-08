@@ -1,5 +1,6 @@
 ---
 title: Zaman Uyumlu Sunucu Yuvası Kullanma
+description: Bu örnekte, yuvada bir bağlantı isteği alınana kadar uygulamayı askıya alan .NET Framework zaman uyumlu bir sunucu yuvası gösterilmektedir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047029"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502060"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Zaman Uyumlu Sunucu Yuvası Kullanma
-Senkron sunucu soketleri, sokette bir bağlantı isteği alınana kadar uygulamanın yürütülmesini askıya alar. Senkron sunucu soketleri, çalışma larında ağı yoğun olarak kullanan uygulamalar için uygun değildir, ancak basit ağ uygulamaları için uygun olabilir.  
+Zaman uyumlu sunucu yuvaları, yuvada bir bağlantı isteği alınana kadar uygulamanın yürütülmesini askıya alır. Zaman uyumlu sunucu yuvaları, ağ uygulamalarında yoğun olarak kullanılan uygulamalar için uygun değildir, ancak basit ağ uygulamaları için uygun olabilir.  
   
- A, <xref:System.Net.Sockets.Socket> bitiş noktası üzerinde dinlemeye <xref:System.Net.Sockets.Socket.Bind%2A> ayarlandıktan sonra, <xref:System.Net.Sockets.Socket.Listen%2A> yöntemi kullanarak gelen bağlantı <xref:System.Net.Sockets.Socket.Accept%2A> isteklerini kabul etmeye hazırdır. Kabul **yöntemi** çağrıldığında bir bağlantı isteği alınana kadar uygulama askıya alınır.  
+ Bir <xref:System.Net.Sockets.Socket> uç noktayı ve yöntemlerini kullanarak bir uç noktada dinlemek üzere ayarlandıktan sonra <xref:System.Net.Sockets.Socket.Bind%2A> <xref:System.Net.Sockets.Socket.Listen%2A> , yöntemi kullanılarak gelen bağlantı isteklerini kabul etmeye hazırlıdır <xref:System.Net.Sockets.Socket.Accept%2A> . **Accept** yöntemi çağrıldığında bir bağlantı isteği alınana kadar uygulama askıya alınır.  
   
- Bir bağlantı isteği alındığı zaman, **Bağlanan** istemciyle ilişkili yeni bir **Soket** örneğini kabul et. Aşağıdaki örnek, istemciden gelen verileri okur, konsolda görüntüler ve verileri istemciye geri döndürer. **Soket** herhangi bir ileti protokolü belirtmez,\<bu nedenle "EOF>" dizesi ileti verilerinin sonunu işaretler. Bir Soket adlı `listener` bir **soketin** baş harfe fişebildiğini ve bir bitiş noktasına bağlı olduğunu varsayar.  
+ Bir bağlantı isteği alındığında, **kabul et** , bağlanılan istemciyle ilişkili yeni bir **yuva** örneği döndürür. Aşağıdaki örnek, istemciden gelen verileri okur, konsolunda görüntüler ve verileri istemciye geri yankılar. **Yuva** herhangi bir mesajlaşma Protokolü belirtmez, bu nedenle " \<EOF> " dizesi ileti verilerinin sonunu işaretler. Adlandırılmış bir **yuvanın** `listener` başlatıldığını ve bir uç noktaya bağlandığını varsayar.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803892"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501475"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager Arabirimi
 Şu anda yürütülmekte olan iş parçacığının güvenlik bağlamı üzerinde erişime ve denetime izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
-|[GetSecurityContext Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Konaktan istenen [IHostSecurityContext](ihostsecuritycontext-interface.md) değerini alır.|  
+|[GetSecurityContext Yöntemi](ihostsecuritymanager-getsecuritycontext-method.md)|Konaktan istenen [IHostSecurityContext](ihostsecuritycontext-interface.md) değerini alır.|  
 |[ImpersonateLoggedOnUser Yöntemi](ihostsecuritymanager-impersonateloggedonuser-method.md)|Geçerli Kullanıcı kimliğinin kimlik bilgileri kullanılarak kodun yürütülmesini ister.|  
 |[OpenThreadToken Yöntemi](ihostsecuritymanager-openthreadtoken-method.md)|Geçerli iş parçacığıyla ilişkili isteğe bağlı erişim belirtecini açar.|  
 |[RevertToSelf Yöntemi](ihostsecuritymanager-reverttoself-method.md)|Geçerli Kullanıcı kimliğini kimliğe bürünme işlemini sonlandırır ve özgün iş parçacığı belirtecini döndürür.|  

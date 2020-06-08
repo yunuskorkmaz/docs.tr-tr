@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 0eb1f57e3505f9ce5bb8b831d30c3891e51097c3
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: b7a068efcf20b2028e9c193567d15b59e582febf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158573"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500929"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION Numaralandırması
 Çöp toplama oluşturmayı tanımlar.  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|Nesne, oluşturma 0 olarak depolanır.|  
 |`COR_PRF_GC_GEN_1`|Nesnesi 1. nesil olarak depolanır.|  
@@ -53,10 +53,10 @@ typedef enum {
   
  Nesin kullanımı, çöp toplayıcının herhangi bir anda yalnızca ayrılmış nesnelerin bir alt kümesiyle çalışması gerektiği anlamına gelir.  
   
- `COR_PRF_GC_GENERATION` Sabit listesi [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapısı tarafından kullanılır.  
+ `COR_PRF_GC_GENERATION`Sabit listesi [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) yapısı tarafından kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   

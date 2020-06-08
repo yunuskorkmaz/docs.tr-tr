@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 75fb92be078c40f49ddcdc6662535b2a0be7a6ad
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 86402abca5386f34256f1f44f674f1e1898ad5fd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866565"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500357"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted Yöntemi
 Profil oluşturucuyu bir sınıfın kaldırılmakta olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ClassUnloadStarted(  
@@ -36,19 +36,19 @@ HRESULT ClassUnloadStarted(
 
 - `classId`
 
-  \[içindeki], bellekten kaldırılan sınıfı tanımlar.
+  \[' de], kaldırılmakta olan sınıfı tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar  
- `classId` değeri `ClassUnloadStarted` yöntemi çağrıldıktan sonra bir bilgi isteği için geçerli değil — bu sınıf hakkında bilgi almak için profil oluşturucunun son şansı budur.  
+ Değeri, `classId` yöntemin döndürdüğü bir bilgi isteği için geçerli değil `ClassUnloadStarted` — Bu sınıf hakkında bilgi edinmek için profil oluşturucunun son şansı budur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 3ba014cbae4a71713f29968f0137ac053033c661
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866963"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500708"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 İşlevi
 Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
@@ -34,12 +34,12 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 
 - `functionOrRemappedID`
 
-  \[içinde] denetimin geçirildiği işlevin tanımlayıcısı.
+  \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
 
 ## <a name="remarks"></a>Açıklamalar  
- `FunctionEnter3` geri çağırma işlevi Profiler öğesine işlevler çağrılmakta, ancak bağımsız değişken incelemesini desteklemez. Bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 metodunu](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) kullanın.  
+ `FunctionEnter3`Geri çağırma işlevi, profil oluşturucuyu işlevler çağrılmakta olduğunu ancak bağımsız değişken incelemesini desteklemez. Bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 metodunu](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) kullanın.  
   
- `FunctionEnter3` işlevi bir geri çağırmasıdır; Uygulamanızı uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
+ `FunctionEnter3`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
   
  Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
@@ -48,13 +48,13 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

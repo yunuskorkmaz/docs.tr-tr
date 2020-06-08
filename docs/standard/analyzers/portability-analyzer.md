@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe5aafe1ad8bf87883ebe27f2aa4fb102a01e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501812"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -32,6 +32,23 @@ Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlama
 ![Taşınabilirlik Çözümleyicisi 'nin ekran görüntüsü.](./media/portability-analyzer/portability-screenshot.png)
 
 Ayrıca, ApiPort konsol uygulamasını da kullanabilir, [apiport deposundan](https://aka.ms/apiportdownload)indirebilirsiniz. `listTargets`Kullanılabilir hedef listesini göstermek için komut seçeneğini kullanabilirsiniz, ardından `-t` veya komut seçeneğini belirterek hedef platformları seçebilirsiniz `--target` .
+
+> [!IMPORTANT]
+> Aracı çalıştırırken sonuç yoksa, varsayılan hedefler kullanılamayabilir. Bu sorunla karşılaşırsanız, lütfen açık hedefleri eklemediğinizden emin olun.
+
+### <a name="solution-wide-view"></a>Çözüm genelinde görünüm
+
+Birçok projeyle bir çözümü çözümlemede yararlı bir adım, derlemelerin hangi alt kümesinin ne olduğunu anlamak için bağımlılıkları görselleştirmektir. Genel öneri, bir bağımlılık grafiğindeki yaprak düğümleri ile başlayan bir alt yaklaşımda analizin sonuçlarının uygulanması için kullanılır.
+
+Bunu almak için aşağıdaki komutu çalıştırabilirsiniz:
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+Bunun sonucu, Visual Studio 'da açıldığında aşağıdaki gibi görünür:
+
+![DGML analizinin ekran görüntüsü.](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>Taşınabilirliği çözümle
 Visual Studio 'daki tüm projenizi çözümlemek için **Çözüm Gezgini** ' de projenize sağ tıklayın ve **derleme taşınabilirliği çözümle**' yi seçin. Aksi takdirde, **Çözümle** menüsüne gidin ve **derleme taşınabilirliği çözümle**' yi seçin. Buradan projenizin yürütülebilir dosyasını veya DLL 'sini seçin.

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e97b2d4ad1fec4675d1484959b115a4d4b87e90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427302"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490620"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps Yöntemi
 Belirtilen belirteç tarafından temsil edilen genel parametreyle ilişkili meta verileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetGenericParamProps (  
@@ -45,10 +45,10 @@ HRESULT GetGenericParamProps (
  'ndaki Meta veri döndürülecek genel parametresini temsil eden belirteç.  
   
  `pulParamSeq`  
- dışı Üst Oluşturucu veya yöntemde `Type` parametresinin sıra konumu.  
+ dışı `Type`Parametrenin üst Oluşturucu veya yöntemdeki sıra konumu.  
   
  `pdwParamFlags`  
- dışı Genel parametre için `Type` tanımlayan [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) numaralandırması değeri.  
+ dışı Genel parametresi için tanımlayan [CorGenericParamAttr](corgenericparamattr-enumeration.md) numaralandırması değeri `Type` .  
   
  `ptOwner`  
  dışı Parametrenin sahibini temsil eden bir TypeDef veya MethodDef belirteci.  
@@ -60,21 +60,21 @@ HRESULT GetGenericParamProps (
  dışı Genel parametrenin adı.  
   
  `cchName`  
- 'ndaki `wzName` arabelleğinin boyutu.  
+ 'ndaki `wzName`Arabelleğin boyutu.  
   
  `pchName`  
  dışı Adın, geniş karakter olarak döndürülen boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)

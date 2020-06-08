@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: b742f717f4caa0ba23d5a4c1438ed3ce4dcc60d7
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842263"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501410"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager Arabirimi
 Ortak dil çalışma zamanının (CLR) standart işletim sistemi iş parçacığı veya fiber işlevlerini kullanmak yerine ana bilgisayar aracılığıyla görevlerle çalışmasına izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[BeginDelayAbort Yöntemi](ihosttaskmanager-begindelayabort-method.md)|Ana bilgisayara, yönetilen kodun geçerli görevin durdurulmayan bir dönem girdiğini bildirir.|  
 |[BeginThreadAffinity Yöntemi](ihosttaskmanager-beginthreadaffinity-method.md)|Yönetilen koda, geçerli görevin başka bir işletim sistemi iş parçacığına taşınmaması gereken bir dönem girmediğini bildirir.|  
@@ -40,7 +40,7 @@ Ortak dil çalışma zamanının (CLR) standart işletim sistemi iş parçacığ
 |[LeaveRuntime Yöntemi](ihosttaskmanager-leaveruntime-method.md)|Yönetilmeyen bir işleve çağrı yapmak için yönetilen kodun ilgili olduğu konağa bildirir.|  
 |[ReverseEnterRuntime Yöntemi](ihosttaskmanager-reverseenterruntime-method.md)|Ana bilgisayara, yönetilmeyen koddan ortak dil çalışma zamanı (CLR) için bir çağrının yapıldığını bildirir.|  
 |[ReverseLeaveRuntime Yöntemi](ihosttaskmanager-reverseleaveruntime-method.md)|Denetimin CLR 'den ayrıldığını ve yönetilen koddan çağrılan yönetilmeyen bir işlevi girdiğini ana bilgisayara bildirir.|  
-|[SetCLRTaskManager Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|Bir konağa, CLR tarafından uygulanan bir [ICLRTaskManager](iclrtaskmanager-interface.md) örneğine yönelik arabirim işaretçisi sağlar.|  
+|[SetCLRTaskManager Yöntemi](ihosttaskmanager-setclrtaskmanager-method.md)|Bir konağa, CLR tarafından uygulanan bir [ICLRTaskManager](iclrtaskmanager-interface.md) örneğine yönelik arabirim işaretçisi sağlar.|  
 |[SetLocale Yöntemi](ihosttaskmanager-setlocale-method.md)|Konağa CLR 'nin geçerli görevdeki yerel ayarı değiştirdiğinizi bildirir.|  
 |[SetStackGuarantee Yöntemi](ihosttaskmanager-setstackguarantee-method.md)|Yalnızca iç kullanım için ayrılmıştır.|  
 |[SetUILocale Yöntemi](ihosttaskmanager-setuilocale-method.md)|Ana bilgisayara, geçerli görevde Kullanıcı arabirimi yerel ayarının değiştirildiğini bildirir.|  

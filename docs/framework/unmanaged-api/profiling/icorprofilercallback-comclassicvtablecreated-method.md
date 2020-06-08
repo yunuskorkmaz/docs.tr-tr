@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6c9ec6af90cc47c3c01621563a9813789c25aa1d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866552"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500344"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated Yöntemi
 Profil oluşturucuya, belirtilen IID ve sınıf için bir COM birlikte çalışma vtable 'ın oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT COMClassicVTableCreated(  
@@ -39,19 +39,19 @@ HRESULT COMClassicVTableCreated(
 
 - `wrappedClasId`
 
-  \[içinde] vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
+  \[' de] vtable 'ın oluşturulduğu sınıfın KIMLIĞI.
 
 - `implementedIID`
 
-  \[içinde] sınıfı tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
+  \[' de] sınıf tarafından uygulanan arabirimin KIMLIĞI. Arabirim yalnızca dahili ise bu değer NULL olabilir.
 
 - `pVTable`
 
-  \[, vtable başlangıcını gösteren bir işaretçidir.
+  \[' de] vtable başlangıcını gösteren bir işaretçidir.
 
 - `cSlots`
 
-  \[içinde] vtable 'daki yuva sayısı.
+  \[' de] vtable 'da olan yuvaların sayısı.
 
 ## <a name="remarks"></a>Açıklamalar  
  Yığın atık toplamaya izin veren bir durumda olmadığından profil oluşturucu bu yöntemin uygulamasında engellenmemelidir, bu nedenle preemptive çöp toplama etkinleştirilemez. Profil Oluşturucu burada ve çöp toplama denendiğinde, bu geri arama dönene kadar çalışma zamanı engellenir.  
@@ -59,13 +59,13 @@ HRESULT COMClassicVTableCreated(
  Profil oluşturucunun bu yöntemin uygulanması yönetilen koda veya herhangi bir şekilde bir yönetilen bellek ayırmaya yol açmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

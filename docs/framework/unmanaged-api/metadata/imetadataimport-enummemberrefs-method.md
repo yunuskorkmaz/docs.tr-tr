@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177326"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503763"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs Yöntemi
-Belirtilen tipteki üyeleri temsil eden ÜyeRef belirteçlerini oyalar.  
+Belirtilen türdeki üyeleri temsil eden MemberRef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumMemberRefs (  
@@ -39,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `tkParent`  
- [içinde] Üyeleri numaralandırılacak tür için TypeDef, TypeRef, MethodDef veya ModuleRef belirteci.  
+ 'ndaki Üyeleri numaralandırılmış olan tür için bir TypeDef, TypeRef, MethodDef veya ModuleRef belirteci.  
   
  `rMemberRefs`  
- [çıkış] ÜyeRef belirteçlerini depolamak için kullanılan dizi.  
+ dışı MemberRef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rMemberRefs` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rMemberRefs` .  
   
  `pcTokens`  
- [çıkış] ÜyeRef belirteçlerinin gerçek sayısı `rMemberRefs`.  
+ dışı İçinde döndürülen MemberRef belirteçleri gerçek sayısı `rMemberRefs` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısallaştırmak için ÜyeRef belirteçleri yoktur. Bu durumda, `pcTokens` sıfıra.|  
+|`S_OK`|`EnumMemberRefs`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak bir MemberRef belirteci yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

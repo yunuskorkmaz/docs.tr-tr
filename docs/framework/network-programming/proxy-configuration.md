@@ -1,5 +1,6 @@
 ---
 title: Ara Sunucu Yapılandırma
+description: Uyarlamalı ve statik proxy sunucularının nasıl yapılandırılacağı hakkında bilgi edinin. Proxy yapılandırması, bir proxy sunucusunun kaynaklar için istemci isteklerini nasıl işlediğini denetler.
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,26 +12,26 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1c8b69223ab470d505d9f8007bc01b29fdc66b8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047351"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502216"
 ---
 # <a name="proxy-configuration"></a>Ara Sunucu Yapılandırma
-Proxy sunucusu, istemci kaynakları isteklerini işler. Proxy, istenen kaynağı önbelleğinden döndürebilir veya isteği kaynağın bulunduğu sunucuya iletebilir. Ekseksiler, uzak sunuculara gönderilen istek sayısını azaltarak ağ performansını artırabilir. Ekseksitler, kaynaklara erişimi kısıtlamak için de kullanılabilir.  
+Proxy sunucusu, kaynaklar için istemci isteklerini işler. Bir ara sunucu, önbelleğinden istenen bir kaynağı döndürebilir veya isteği kaynağın bulunduğu sunucuya iletebilir. Proxy 'ler, uzak sunuculara gönderilen isteklerin sayısını azaltarak ağ performansını iyileştirebilir. Proxy 'ler, kaynaklara erişimi kısıtlamak için de kullanılabilir.  
   
-## <a name="adaptive-proxies"></a>Adaptif Proxies  
- .NET Framework'de yakınlıklar iki çeşitten gelir: uyarlanabilir ve statik. Uyarlanabilir yakınlıklar, ağ yapılandırması değiştiğinde ayarlarını ayarlar. Örneğin, bir dizüstü bilgisayar kullanıcısı çevirmeli ağ bağlantısı başlatırsa, uyarlanabilir bir proxy bu değişikliği tanır, yeni yapılandırma komut dosyasını keşfeder ve çalıştırAbilir ve ayarlarını uygun şekilde ayarlar.  
+## <a name="adaptive-proxies"></a>Uyarlamalı proxy 'Ler  
+ .NET Framework, proxy 'ler iki değişken halinde gelir: Uyarlamalı ve statik. Uyarlamalı proxy 'ler, ağ yapılandırması değiştiğinde ayarlarını ayarlar. Örneğin, bir dizüstü Kullanıcı Çevirmeli ağ bağlantısı başlattığında, bir uyarlamalı ara sunucu bu değişikliği algılar, yeni yapılandırma betiğini bulur ve çalıştırır ve ayarlarını uygun şekilde ayarlar.  
   
- Uyarlanabilir proxy'ler bir yapılandırma komut dosyası tarafından yapılandırılır (bkz. [Otomatik Proxy Algılama).](automatic-proxy-detection.md) Komut dosyası, her protokol için bir uygulama protokolü kümesi ve proxy oluşturur.  
+ Uyarlamalı proxy 'ler bir yapılandırma betiği tarafından yapılandırılır (bkz. [otomatik proxy algılama](automatic-proxy-detection.md)). Betik, her protokol için bir dizi uygulama protokolü ve ara sunucu oluşturur.  
   
- Ağ ortamındaki değişiklikler, sistemin yeni bir yakınlık kümesi kullanmasını gerektirebilir. Bir ağ bağlantısı kapatılırsa veya yeni bir ağ bağlantısı başlatılması durumunda, sistemin yapılandırma komut dosyasının uygun kaynağını yeni ortamda bulması ve yeni komut dosyasını çalıştırması gerekir.  
+ Ağ ortamındaki değişiklikler sistemin yeni bir proxy kümesi kullanmasını gerektirebilir. Bir ağ bağlantısı kapalıysa veya yeni bir ağ bağlantısı başlatılmışsa, sistem yeni ortamda yapılandırma betiğinin uygun kaynağını bulmalı ve yeni betiği çalıştırmalıdır.  
   
- Yapılandırma dosyanızdaki `usesystemdefault` öğenin [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) özniteliğini kullanabilirsiniz. Öznitelik, `usesystemdefault` statik proxy ayarlarının (proxy adresi, bypass listesi ve yerel deki bypass) kullanıcı için Internet Explorer proxy ayarlarından okunup okunmayacağını denetler. Bu değer `true`ayarlanmışsa, Internet Explorer'ın statik proxy ayarları kullanılır. Bu değer `false` ayarlanmış sa veya ayarlanmamışsa, statik proxy ayarları yapılandırmada belirtilebilir ve Internet Explorer proxy ayarlarını geçersiz kılar. Uyarlanabilir yakınlıkların etkinleştirilmesi için bu değerin ayarlanmaması `false` veya ayarlanmaması gerekir.  
+ `usesystemdefault` [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) Yapılandırma dosyanızda öğesinin özniteliğini kullanabilirsiniz. `usesystemdefault`Özniteliği, statik ara sunucu ayarlarının (proxy adresi, atlama listesi ve yerel üzerinde atlama) Kullanıcı Için Internet Explorer proxy ayarlarından okunmayacağını denetler. Bu değer olarak ayarlanırsa `true` , Internet Explorer 'daki statik proxy ayarları kullanılacaktır. Bu değer `false` ayarlanmamışsa, yapılandırmada statik ara sunucu ayarları belirtilebilir ve Internet Explorer ara sunucu ayarlarını geçersiz kılar. Bu değer Ayrıca, `false` Uyarlamalı proxy 'lerin etkinleştirilmesi için olarak ayarlanmalıdır veya ayarlanmamış olmalıdır.  
   
- Aşağıdaki örnek, tipik bir uyarlanabilir proxy yapılandırmasını gösterir.  
+ Aşağıdaki örnek, tipik bir uyarlamalı ara sunucu yapılandırmasını gösterir.  
   
 ```xml  
 <system.net>  
@@ -40,27 +41,27 @@ Proxy sunucusu, istemci kaynakları isteklerini işler. Proxy, istenen kaynağı
 </system.net>  
 ```  
   
-## <a name="static-proxies"></a>Statik Proxies  
- Statik ekseksenler genellikle bir uygulama tarafından veya bir yapılandırma dosyası bir uygulama veya sistem tarafından çağrıldığında açıkça yapılandırılır. Statik yakınlıklar, topolojinin şirket ağına bağlı bir masaüstü bilgisayar gibi seyrek değiştiği ağlarda yararlıdır.  
+## <a name="static-proxies"></a>Statik proxy 'Ler  
+ Statik proxy 'ler genellikle bir uygulama tarafından açıkça veya bir yapılandırma dosyası bir uygulama veya sistem tarafından çağrıldığında yapılandırılır. Statik proxy 'ler, bir kurumsal ağa bağlı bir masaüstü bilgisayar gibi, topolojinin seyrek değiştiği ağlarda yararlıdır.  
   
- Statik proxy'nin nasıl çalıştığını çeşitli seçenekler denetler. Aşağıdakileri belirtebilirsiniz:  
+ Statik bir proxy 'nin nasıl çalıştığını çeşitli seçenekler denetler. Aşağıdakileri belirtebilirsiniz:  
   
-- Vekilin adresi.  
+- Proxy adresi.  
   
-- Proxy yerel adresler için atlalı olup olmadığını.  
+- Yerel adresler için proxy 'nin atlanıp atlanmayacağı.  
   
-- Proxy adresleri kümesi için atlalı olup olmadığını.  
+- Bir adres kümesi için proxy 'nin atlanıp atlanmayacağı.  
   
- Aşağıdaki tablostatik bir proxy için yapılandırma seçeneklerini gösterir.  
+ Aşağıdaki tabloda bir statik ara sunucu için yapılandırma seçenekleri gösterilmektedir.  
   
-|Öznitelik, özellik veya yapılandırma dosya ayarı|Açıklama|  
+|Öznitelik, özellik veya yapılandırma dosyası ayarı|Description|  
 |--------------------------------------------------------|-----------------|  
-|`proxyaddress` veya <xref:System.Net.WebProxy.Address>|Kullanılacak proxy adresi.|  
-|`bypassonlocal` veya <xref:System.Net.WebProxy.BypassProxyOnLocal>|Proxy'nin yerel adresler için atlanıp atlanıp atlanıp atlılmayacağını denetler.|  
-|`bypasslist` veya <xref:System.Net.WebProxy.BypassArrayList>|Düzenli ifadelerle proxy'yi atlayan bir adres kümesini açıklar.|  
-|`usesystemdefault`|Statik proxy ayarlarının (proxy adresi, bypass listesi ve yerel deki bypass) kullanıcı için Internet Explorer proxy ayarlarından okunup okunmayacağını denetler. Bu değer `true`,internet explorer statik proxy ayarları olarak ayarlanırsa kullanılır. .NET Framework 2.0'da bu `true`değer ayarlandığında, Internet Explorer proxy ayarları yapılandırma dosyasındaki diğer proxy ayarları tarafından geçersiz kılınmaz. .NET Framework 1.1'de, Internet Explorer proxy ayarları yapılandırma dosyasındaki diğer proxy ayarları tarafından geçersiz kılınabilir.<br /><br /> Bu değer `false` ayarlanmış sa veya ayarlanmamışsa, statik proxy ayarları yapılandırmada belirtilebilir ve Internet Explorer proxy ayarlarını geçersiz kılar. Uyarlanabilir yakınlıkların etkinleştirilmesi için bu değerin ayarlanmaması `false` veya ayarlanmaması gerekir.|  
+|`proxyaddress` veya <xref:System.Net.WebProxy.Address>|Kullanılacak proxy 'nin adresi.|  
+|`bypassonlocal` veya <xref:System.Net.WebProxy.BypassProxyOnLocal>|Yerel adresler için proxy 'nin atlanıp atlanmayacağını denetler.|  
+|`bypasslist` veya <xref:System.Net.WebProxy.BypassArrayList>|Normal ifadelerle, proxy 'yi atlayan bir adres kümesini açıklar.|  
+|`usesystemdefault`|Statik ara sunucu ayarlarının (proxy adresi, atlama listesi ve yerel üzerinde atlama) Kullanıcı için Internet Explorer proxy ayarlarından okunmayacağını denetler. Bu değer olarak ayarlanırsa `true` , Internet Explorer 'daki statik proxy ayarları kullanılacaktır. .NET Framework 2,0 ' de, bu değer olarak ayarlandığında `true` , Internet Explorer proxy ayarları yapılandırma dosyasındaki diğer proxy ayarları tarafından geçersiz kılınmaz. .NET Framework 1,1 ' de, Internet Explorer proxy ayarları yapılandırma dosyasındaki diğer proxy ayarları tarafından geçersiz kılınabilir.<br /><br /> Bu değer `false` ayarlanmamışsa, yapılandırmada statik ara sunucu ayarları belirtilebilir ve Internet Explorer ara sunucu ayarlarını geçersiz kılar. Bu değer Ayrıca, `false` Uyarlamalı proxy 'lerin etkinleştirilmesi için olarak ayarlanmalıdır veya ayarlanmamış olmalıdır.|  
   
- Aşağıdaki örnek, tipik bir statik proxy yapılandırmasını gösterir.  
+ Aşağıdaki örnek, tipik bir statik ara sunucu yapılandırmasını gösterir.  
   
 ```xml  
 <system.net>  

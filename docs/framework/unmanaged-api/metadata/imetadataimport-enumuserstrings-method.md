@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449949"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503711"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings Yöntemi
 Geçerli meta veri kapsamındaki sabit kodlanmış dizeleri temsil eden dize belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumUserStrings (  
@@ -44,31 +44,31 @@ HRESULT EnumUserStrings (
  dışı Dize belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rStrings` dizisinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rStrings` .  
   
  `pcStrings`  
- dışı `rStrings`' de döndürülen dize belirteçleri sayısı.  
+ dışı İçinde döndürülen dize belirteçleri sayısı `rStrings` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcStrings` sıfırdır.|  
+|`S_OK`|`EnumUserStrings`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcStrings` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dize belirteçleri [ımetadatayayma::D efineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) yöntemi tarafından oluşturulur. Bu yöntem, bir derleyici yerine bir meta veri tarayıcısı tarafından kullanılmak üzere tasarlanmıştır.  
+ Dize belirteçleri [ımetadatayayma::D efineUserString](imetadataemit-defineuserstring-method.md) yöntemi tarafından oluşturulur. Bu yöntem, bir derleyici yerine bir meta veri tarayıcısı tarafından kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

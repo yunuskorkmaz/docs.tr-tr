@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41e7b8193ce3288d526db8d7d8c289b0a053ee4e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175245"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489762"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString Metodu
 Geçerli başvuru kapsamındaki tablo sütunundan belirtilen dizindeki dizeyi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetString (
@@ -36,21 +36,21 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametreler  
  `ixString`  
- [içinde] Bir sonraki değeri aramaya başlamak için hangi dizin.  
+ 'ndaki Sonraki değeri aramaya başlamak için kullanılacak dizin.  
   
  `ppString`  
- [çıkış] Döndürülen dize değeri için bir işaretçi için bir işaretçi.  
+ dışı Döndürülen dize değerine yönelik işaretçiye yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables Arabirimi](imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](imetadatatables2-interface.md)

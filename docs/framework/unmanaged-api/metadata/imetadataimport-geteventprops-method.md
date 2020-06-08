@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b47d1559300a462ccda42bc88da43f66c1043ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177265"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491309"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps Yöntemi
-Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve herhangi bir bayrak ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgileri alır.  
+Bildirim türü, temsilciler için ekleme ve kaldırma yöntemleri ve tüm bayraklar ve diğer ilişkili veriler de dahil olmak üzere, belirtilen olay belirteci tarafından temsil edilen olay için meta veri bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetEventProps (  
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parametreler  
  `ev`  
- [içinde] Meta veri almak için olayı temsil eden olay meta veri belirteci.  
+ 'ndaki Meta verilerinin alınacağı olayı temsil eden olay meta veri belirteci.  
   
  `pClass`  
- [çıkış] Olayı bildiren sınıfı temsil eden TypeDef belirteci için bir işaretçi.  
+ dışı Olayı bildiren sınıfı temsil eden TypeDef belirtecinin işaretçisi.  
   
  `szEvent`  
- [çıkış] Başvuran olayın `ev`adı.  
+ dışı Tarafından başvurulan olayın adı `ev` .  
   
  `pchEvent`  
- [içinde] Geniş karakterlerde istenen `szEvent`uzunluk.  
+ 'ndaki Geniş karakterdeki istenen uzunluk `szEvent` .  
   
  `pdwEventFlags`  
- [çıkış] Geniş karakterlerde döndürülen `szEvent`uzunluk.  
+ dışı Geniş karakter olarak döndürülen uzunluk `szEvent` .  
   
  `ptkEventType`  
- [çıkış] Olayın <xref:System.Delegate> türünü temsil eden bir TypeRef veya TypeDef meta veri belirteci için bir işaretçi.  
+ dışı Olay türünü temsil eden TypeRef veya TypeDef meta veri belirtecinin işaretçisi <xref:System.Delegate> .  
   
  `pmdAddOn`  
- [çıkış] Olay için işleyicileri ekleyen yöntemi temsil eden meta veri belirteci için bir işaretçi.  
+ dışı Olaya yönelik işleyiciler ekleyen yöntemi temsil eden meta veri belirteci işaretçisi.  
   
  `pmdRemoveOn`  
- [çıkış] Olay için işleyicileri kaldıran yöntemi temsil eden meta veri belirteci için bir işaretçi.  
+ dışı Olay için işleyicileri kaldıran yöntemi temsil eden meta veri belirteci işaretçisi.  
   
  `pmdFire`  
- [çıkış] Olayı yükselten yöntemi temsil eden meta veri belirteci için bir işaretçi.  
+ dışı Olayı başlatan yöntemi temsil eden meta veri belirtecinin işaretçisi.  
   
  `rmdOtherMethod`  
- [çıkış] Olayla ilişkili diğer yöntemlere işaretçi dizisi.  
+ dışı Olayla ilişkili diğer yöntemlere belirteç işaretçileri dizisi.  
   
  `cMax`  
- [içinde] `rmdOtherMethod` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rmdOtherMethod` .  
   
  `pcOtherMethod`  
- [çıkış] Döndürülen belirteçlerin `rmdOtherMethod`sayısı.  
+ dışı İçinde döndürülen belirteçlerin sayısı `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

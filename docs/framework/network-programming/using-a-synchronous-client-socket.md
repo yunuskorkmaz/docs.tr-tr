@@ -1,5 +1,6 @@
 ---
 title: Zaman Uyumlu İstemci Yuvası Kullanma
+description: Bu örnekte, ağ işlemi tamamlanırken uygulama programını askıya alarak .NET Framework zaman uyumlu bir istemci yuvası gösterilmektedir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047068"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502073"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Zaman Uyumlu İstemci Yuvası Kullanma
-Ağ işlemi tamamlarken eşzamanlı istemci soketi uygulama programını askıya atanır. Senkron soketler, ağları n için yoğun olarak kullanan uygulamalar için uygun değildir, ancak diğer uygulamalar için ağ hizmetlerine basit erişim sağlayabilir.  
+Ağ işlemi tamamlanırken, zaman uyumlu bir istemci yuvası uygulama programını askıya alır. Zaman uyumlu yuvalar, ağ işlemleri için yoğun olarak kullanılan uygulamalar için uygun değildir, ancak diğer uygulamalar için ağ hizmetlerine basit erişimi etkinleştirebilir.  
   
- Veri göndermek için, sınıfın veri gönderme <xref:System.Net.Sockets.Socket> yöntemlerinden birine bir bayt dizisi geçirin (<xref:System.Net.Sockets.Socket.Send%2A> ve <xref:System.Net.Sockets.Socket.SendTo%2A>). Aşağıdaki örnek özelliği kullanarak <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> bir bayt dizi arabelleği içine bir dize kodlar ve sonra **Gönder** yöntemini kullanarak ağ aygıtına arabellek iletir. **Gönder** yöntemi, ağ aygıtına gönderilen bayt sayısını döndürür.  
+ Veri göndermek için, <xref:System.Net.Sockets.Socket> sınıfın Send-Data yöntemlerinden birine bir bayt dizisi geçirin ( <xref:System.Net.Sockets.Socket.Send%2A> ve <xref:System.Net.Sockets.Socket.SendTo%2A> ). Aşağıdaki örnek, özelliğini kullanarak bir dizeyi bir bayt dizisi arabelleğine kodluyor <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> ve sonra **Send** metodunu kullanarak arabelleği ağ cihazına iletir. **Send** yöntemi, ağ cihazına gönderilen bayt sayısını döndürür.  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -40,9 +41,9 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- **Gönder** yöntemi arabellekten baytları kaldırır ve ağ aygıtına gönderilmek üzere ağ arabirimiyle sıralar. Ağ arabirimi verileri hemen göndermeyebilir, ancak bağlantı <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemle normal olarak kapatılır.  
+ **Send** yöntemi arabellekteki baytları kaldırır ve ağ cihazına gönderilmek üzere ağ arabirimiyle sıralar. Ağ arabirimi, verileri hemen gönderemeyebilir, ancak bağlantı, normal şekilde yöntemle kapandığı sürece, bu işlemi sonunda gönderir <xref:System.Net.Sockets.Socket.Shutdown%2A> .  
   
- Bir ağ aygıtından veri almak için, bir arabellek **soket** sınıfının<xref:System.Net.Sockets.Socket.Receive%2A> alma <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>veri yöntemlerinden birine geçirin ( ve ). Senkron soketler, ağdan baytlar alınana veya soket kapanana kadar uygulamayı askıya alacaktır. Aşağıdaki örnek ağdan veri alır ve konsolda görüntüler. Örnek, ağdan gelen verilerin ASCII kodlanmış bir metin olduğunu varsayar. **Alma** yöntemi ağdan alınan bayt sayısını döndürür.  
+ Bir ağ aygıtından veri almak için, **yuva** sınıfının Receive-Data yöntemlerinden birine bir arabellek geçirin ( <xref:System.Net.Sockets.Socket.Receive%2A> ve <xref:System.Net.Sockets.Socket.ReceiveFrom%2A> ). Zaman uyumlu yuvalar, ağdan bayt alınana veya yuva kapatılıncaya kadar uygulamayı askıya alır. Aşağıdaki örnek, ağdan verileri alır ve sonra konsolunda görüntüler. Örnek, ağdan gelen verilerin ASCII kodlamalı metin olduğunu varsayar. **Receive** yöntemi ağdan alınan bayt sayısını döndürür.  
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -58,7 +59,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- Sokete artık ihtiyaç duyulmadığında, <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemi arayarak ve ardından **Kapat** yöntemini arayarak soketi serbest bırakmanız gerekir. Aşağıdaki örnekte bir **Soket**serbest. Numaralandırma, <xref:System.Net.Sockets.SocketShutdown> soketin göndermek, almak için mi yoksa her ikisi için mi kapatılması gerektiğini belirten sabitleri tanımlar.  
+ Yuva artık gerekli olmadığında, <xref:System.Net.Sockets.Socket.Shutdown%2A> yöntemini çağırarak ve sonra **Close** metodunu çağırarak onu serbest bırakmanız gerekir. Aşağıdaki örnek bir **yuva**yayınlar. <xref:System.Net.Sockets.SocketShutdown>Sabit listesi, yuvanın gönderme, alma için veya her ikisi için de kapatılıp kapatılmayacağını belirten sabitleri tanımlar.  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  

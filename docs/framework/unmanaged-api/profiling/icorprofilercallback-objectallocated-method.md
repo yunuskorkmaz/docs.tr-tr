@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: 38d9e83e9fa0e9cd0586fb10a6fd79c29bead4a6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 9a402b7dfc3ece9d38994ed897162fe0d81ff0b9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866110"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503308"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated Yöntemi
 Profil oluşturucuya, yığın içindeki belleğin bir nesne için ayrıldığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ObjectAllocated(  
@@ -41,16 +41,16 @@ HRESULT ObjectAllocated(
  'ndaki Nesnenin bir örnek olduğu sınıfın KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ObjectedAllocated` yöntemi, yığından veya yönetilmeyen bellekten ayırmalar için çağrılmaz. `classId` parametresi, henüz yüklenmemiş Yönetilen koddaki bir sınıfa başvurabilir. Profil Oluşturucu, `ObjectAllocated` geri çağrısından hemen sonra bu sınıf için bir sınıf yükü geri çağırması alır.  
+ `ObjectedAllocated`Yöntemi, yığından veya yönetilmeyen bellekten ayırmalar için çağrılmaz. `classId`Parametresi, henüz yüklenmemiş Yönetilen koddaki bir sınıfa başvurabilir. Profil Oluşturucu, geri aramadan hemen sonra bu sınıf için bir sınıf yükü geri çağırması alır `ObjectAllocated` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

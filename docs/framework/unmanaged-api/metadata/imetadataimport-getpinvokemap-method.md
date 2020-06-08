@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b8685c1e-b80c-4198-8eb3-748d6f48a99e
 topic_type:
 - apiref
-ms.openlocfilehash: c458fef77b49f522ca21dd5487731f4d43588cea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8409e56b5ec4dbe47035a0555b6b7ce175b517ee
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437104"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490984"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>IMetaDataImport::GetPinvokeMap Yöntemi
 Bir PInvoke çağrısının hedef derlemesini temsil eden bir ModuleRef belirteci alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPinvokeMap (  
@@ -43,30 +43,30 @@ HRESULT GetPinvokeMap (
  'ndaki İçin PInvoke eşleme meta verilerini almak için FieldDef veya MethodDef belirteci.  
   
  `pdwMappingFlags`  
- dışı Eşleme için kullanılan bayrakların işaretçisi. Bu değer, [Corpınvokemap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) numaralandırmasındaki bir bit dır.  
+ dışı Eşleme için kullanılan bayrakların işaretçisi. Bu değer, [Corpınvokemap](corpinvokemap-enumeration.md) numaralandırmasındaki bir bit dır.  
   
  `szImportName`  
  dışı Yönetilmeyen hedef DLL 'in adı.  
   
  `cchImportName`  
- 'ndaki `szImportName`geniş karakterdeki boyut.  
+ 'ndaki Öğesinin geniş karakterdeki boyutu `szImportName` .  
   
  `pchImportName`  
- dışı `szImportName`' de döndürülen geniş karakter sayısı.  
+ dışı İçinde döndürülen geniş karakter sayısı `szImportName` .  
   
  `pmrImportDLL`  
  dışı Yönetilmeyen hedef nesne kitaplığını temsil eden bir ModuleRef belirtecinin işaretçisi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ad94bf766e0fcdbff95b0766cf68c2196a2c71
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175154"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503344"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted Yöntemi
-Profiloluşturucuya bir modülün boşaltıldığını belirtir.  
+Profil oluşturucuyu bir modülün kaldırılmakta olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ModuleUnloadStarted(  
@@ -34,19 +34,19 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [içinde] Boşaltılan modülün kimliği.  
+ 'ndaki Kaldırılmakta olan modülün KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntem döndükten sonra `moduleId` `ModuleUnloadStarted` bir bilgi isteği için değeri geçerli değildir — bu, profiloluşturucunun bu modül hakkında bilgi almak için son şansıdır.  
+ Değeri, `moduleId` yöntemin döndürdüğü bir bilgi isteği için geçerli değil — bu `ModuleUnloadStarted` modülle ilgili bilgi almak için profil oluşturucunun son şansı budur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

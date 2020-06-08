@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175128"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503165"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated Yöntemi
-Profil oluşturucuya bir iş parçacığı oluşturulduğunu belirtir.  
+Profil oluşturucuyu bir iş parçacığının oluşturulduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ThreadCreated(  
@@ -34,19 +34,19 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>Parametreler  
  `threadId`  
- [içinde] Oluşturulan iş parçacığının kimliği.  
+ 'ndaki Oluşturulan iş parçacığının KIMLIĞI.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değer `threadId` hemen geçerlidir.  
+ `threadId`Değer hemen geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

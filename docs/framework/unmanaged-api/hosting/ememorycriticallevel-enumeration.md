@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-ms.openlocfilehash: 248f1d281697923e2da14517ca174fe615bba4ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 359dd84032fce920892631dda2615f63aa54fa6b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616209"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504387"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel Numaralandırması
 Belirli bir bellek ayırma talep edildiğinde, ancak karşılanamaması durumunda hatanın etkisini gösteren değerleri içerir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef enum {  
@@ -36,14 +36,14 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`eAppDomainCritical`|Ayırmayı isteyen etki alanında yönetilen kodu yürütmek için ayırmanın kritik olduğunu gösterir. Bellek ayrılabileceği takdirde, CLR etki alanının hala kullanılabilir olduğundan emin olamaz. Ana bilgisayar, ayırma karşılanmıyorsa hangi eylemin yapılacağını belirler. CLR 'nin `AppDomain` otomatik olarak iptal etmesini veya [ICLRPolicyManager](iclrpolicymanager-interface.md)'daki yöntemleri çağırarak çalışmaya devam etmesini sağlayabilirsiniz.|  
 |`eProcessCritical`|Ayırmanın, işlemdeki yönetilen kodun yürütülmesi için kritik öneme sahip olduğunu gösterir. Bu değer başlangıç sırasında ve sonlandırıcılar çalıştırılırken kullanılır. Bellek ayrılabileceği takdirde, CLR işlemde çalışamaz. Ayırma başarısız olursa, CLR etkin bir şekilde devre dışı bırakılır. CLR 'ye yapılan tüm sonraki çağrılar HOST_E_CLRNOTAVAILABLE ile başarısız olur.|  
 |`eTaskCritical`|Ayırmayı isteyen görevi çalıştırmak için ayırmanın kritik olduğunu gösterir. Bellek ayrılabileceği takdirde, CLR görevin yürütülüp yürütülabileceğini garanti edemez. Hata durumunda, CLR <xref:System.Threading.ThreadAbortException> fiziksel işlem sistemi iş parçacığı üzerinde bir oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) ve [IHostMAlloc](ihostmalloc-interface.md) arabirimlerinde tanımlanan bellek ayırma yöntemleri bu türden bir parametre alır. Bir hata önem derecesine bağlı olarak, bir ana bilgisayar, ayırma isteğinin hemen başarısız olmasına veya karşılanmayacağı kadar bekleyip bekmeyeceğine karar verebilir.  
+ [IHostMemoryManager](ihostmemorymanager-interface.md) ve [IHostMAlloc](ihostmalloc-interface.md) arabirimlerinde tanımlanan bellek ayırma yöntemleri bu türden bir parametre alır. Bir hata önem derecesine bağlı olarak, bir ana bilgisayar, ayırma isteğinin hemen başarısız olmasına veya karşılanmayacağı kadar bekleyip bekmeyeceğine karar verebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  

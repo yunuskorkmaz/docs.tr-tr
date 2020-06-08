@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84cf5ac9eab5749d3bdc63670fe5c31bfb62abcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445229"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490413"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString Metodu
 Derlemeyi oluşturmak için kullanılan çalışma zamanının sürüm numarasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetVersionString (  
@@ -40,24 +40,24 @@ HRESULT GetVersionString (
  dışı Sürümü belirten dizeyi depolayan bir dizi.  
   
  `ccBufSize`  
- 'ndaki `pwzBuf` dizisinin geniş karakterdeki boyutu.  
+ 'ndaki Dizinin geniş karakterdeki boyutu `pwzBuf` .  
   
  `pccBufSize`  
- dışı `pwzBuf` dizisinde döndürülen bir null Sonlandırıcı da dahil olmak üzere geniş karakter sayısı.  
+ dışı Dizide döndürülen bir null Sonlandırıcı dahil olmak üzere geniş karakter sayısı `pwzBuf` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetVersionString` yöntemi, geçerli meta veri kapsamının yerleşik sürümünü alır. Kapsam hiç kaydedilmediğinde, yerleşik bir sürüme sahip olmaz ve boş bir dize döndürülür.  
+ `GetVersionString`Yöntemi, geçerli meta veri kapsamının yerleşik sürümünü alır. Kapsam hiç kaydedilmediğinde, yerleşik bir sürüme sahip olmaz ve boş bir dize döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)

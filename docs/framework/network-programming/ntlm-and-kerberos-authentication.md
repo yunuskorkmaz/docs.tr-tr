@@ -1,5 +1,6 @@
 ---
 title: NTLM ve Kerberos Kimlik Doğrulaması
+description: Varsayılan NTLM kimlik doğrulamasının ve Kerberos kimlik doğrulamasının .NET Framework bir uygulama için nasıl çalıştığını öğrenin ve varsayılan olmayan NTLM kimlik doğrulaması hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502242"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos Kimlik Doğrulaması
-Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulaması, sunucuyla kimlik doğrulamayı denemek için arama uygulamasıyla ilişkili Microsoft Windows NT kullanıcı kimlik bilgilerini kullanır. Varsayılan olmayan NTLM kimlik doğrulaması kullanırken, uygulama kimlik doğrulama türünü <xref:System.Net.NetworkCredential> NTLM olarak ayarlar ve aşağıdaki örnekte gösterildiği gibi kullanıcı adını, parolayı ve etki alanını ana bilgisayara geçirmek için bir nesne kullanır.  
+Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulaması, sunucuyla kimlik doğrulamayı denemek için çağıran uygulamayla ilişkili Microsoft Windows NT Kullanıcı kimlik bilgilerini kullanır. Varsayılan olmayan NTLM kimlik doğrulaması kullanılırken, uygulama kimlik doğrulama türünü NTLM olarak ayarlar ve <xref:System.Net.NetworkCredential> Aşağıdaki örnekte gösterildiği gibi kullanıcı adını, parolayı ve etki alanını konağa geçirmek için bir nesne kullanır.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -43,7 +44,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- Uygulama kullanıcısının kimlik bilgilerini kullanarak Internet hizmetlerine bağlanması gereken uygulamalar, aşağıdaki örnekte gösterildiği gibi, kullanıcının varsayılan kimlik bilgileriyle bunu yapabilir.  
+ Uygulama kullanıcısının kimlik bilgilerini kullanarak Internet hizmetlerine bağlanması gereken uygulamalar, aşağıdaki örnekte gösterildiği gibi kullanıcının varsayılan kimlik bilgileriyle bunu yapabilir.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -57,12 +58,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- Anlaşma kimlik doğrulama modülü uzak sunucunun NTLM veya Kerberos kimlik doğrulaması kullanıp kullanmadığını belirler ve uygun yanıtı gönderir.  
+ Negotiate kimlik doğrulama modülü, uzak sunucunun NTLM veya Kerberos kimlik doğrulaması kullanıp kullanmadığını belirler ve uygun yanıtı gönderir.  
   
 > [!NOTE]
-> NTLM kimlik doğrulaması bir proxy sunucusu aracılığıyla çalışmaz.  
+> NTLM kimlik doğrulaması bir ara sunucu üzerinden çalışmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel ve Özet Kimlik Doğrulama](basic-and-digest-authentication.md)
+- [Temel ve Özet kimlik doğrulaması](basic-and-digest-authentication.md)
 - [İnternet Kimlik Doğrulaması](internet-authentication.md)

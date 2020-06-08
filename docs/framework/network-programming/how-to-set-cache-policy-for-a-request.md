@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama'
+description: .NET Framework bir istek için önbellek ilkesi ayarlamayı öğrenin. Bu önbellek ilkesi, bir kaynağın önbellekten bir güne kadar kullanılmasına izin verir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180759"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502437"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama
-Aşağıdaki örnek, bir istek için önbellek ilkesi ayarını gösterir. Örnek giriş gibi bir URI `http://www.contoso.com/`olduğunu.  
+Aşağıdaki örnek, bir istek için önbellek ilkesi ayarlamayı gösterir. Örnek giriş, gibi bir URI 'dir `http://www.contoso.com/` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, önbellekte bir günden uzun süre yoksa istenen kaynağın önbellekten kullanılmasına izin veren bir önbellek ilkesi oluşturur. Örnekte, kaynağın önbellekten `"The response was retrieved from the cache : False."`kullanılıp kullanılmadığını belirten bir ileti görüntülenir ve sonra kaynağı görüntüler. İstek istemci ve sunucu arasındaki herhangi bir önbellek tarafından yerine getirilebilir.  
+ Aşağıdaki kod örneği, bir günden daha uzun süredir önbellekte olmayan istenen kaynağın önbellekten kullanılmasına izin veren bir önbellek ilkesi oluşturur. Örnek, kaynağın önbellekten kullanılıp kullanılmadığını belirten bir ileti görüntüler — Örneğin, `"The response was retrieved from the cache : False."` — ve ardından kaynağı görüntüler. İstek, istemci ve sunucu arasındaki herhangi bir önbellekte yerine getirilir.  
   
 ```csharp  
 using System;  
@@ -108,7 +109,7 @@ End Namespace
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ Uygulamaları için Önbellek Yönetimi](cache-management-for-network-applications.md)
-- [Önbellek İlkesi](cache-policy.md)
+- [Önbellek Ilkesi](cache-policy.md)
 - [Konum Temelli Önbellek İlkeleri](location-based-cache-policies.md)
 - [Saat Temelli Önbellek İlkeleri](time-based-cache-policies.md)
-- [\<requestCaching> Elemanı (Ağ Ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<requestCaching>Öğesi (ağ ayarları)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

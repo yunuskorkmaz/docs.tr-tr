@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d39d089c348b7320651ed21ea14ba07d7877fd4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426221"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501114"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo Metodu
 Belirtilen dizindeki meta veri akışının adını, boyutunu ve içeriğini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMetaDataStreamInfo (  
@@ -47,18 +47,18 @@ HRESULT GetMetaDataStreamInfo (
  dışı Meta veri akışına yönelik bir işaretçi.  
   
  `pcb`  
- dışı `ppv`bayt cinsinden boyutu.  
+ dışı Bayt cinsinden boyutu `ppv` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](imetadatatables2-interface.md)
+- [IMetaDataTables Arabirimi](imetadatatables-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: 9ee6f43c94b8ff2e765d2a0dde0697c4c895a94f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c0381cf924e44e581c8b275c9750cacba045cf1b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212379"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501787"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols Yöntemi
 Hata ayıklayıcısını, ortak dil çalışma zamanı modülü simgelerinin değiştiği hakkında bilgilendirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT UpdateModuleSymbols (  
@@ -46,7 +46,7 @@ HRESULT UpdateModuleSymbols (
  'ndaki Değiştirilen sembolleri içeren bir Win32 COM `IStream` nesnesi işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, [ıvmunmanagedreader:: UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) veya [ıımunmanagedreader:: Synccesymbolstore](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md)çağırarak hata ayıklayıcının bir modülün sembol görünümünü güncelleştirme fırsatı sağlar.  
+ Bu yöntem, [ıvmunmanagedreader:: UpdateSymbolStore](../diagnostics/isymunmanagedreader-updatesymbolstore-method.md) veya [ıımunmanagedreader:: Synccesymbolstore](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md)çağırarak hata ayıklayıcının bir modülün sembol görünümünü güncelleştirme fırsatı sağlar.  
   
  Bu geri çağırma aynı modül için birden çok kez gerçekleşebilir.  
   

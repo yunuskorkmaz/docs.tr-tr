@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58ab9ee9381fce4d7af1910df6c8d3bb813bcf13
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177209"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490900"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA Metodu
-Belirtilen belirteç tarafından temsil edilen yöntem veya alanın göreli sanal adresi (RVA) ve uygulama bayraklarını alır.  
+Belirtilen belirteçle temsil edilen metodun veya alanın göreli sanal adresini (RVA) ve uygulama bayraklarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetRVA (  
@@ -37,24 +37,24 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parametreler  
  `tk`  
- [içinde] RVA'yı döndürecek kod nesnesini temsil eden bir MethodDef veya FieldDef meta veri belirteci. Belirteç bir FieldDef ise, alan küresel bir değişken olmalıdır.  
+ 'ndaki İçin RVA 'yu döndürecek kod nesnesini temsil eden bir MethodDef veya FieldDef meta veri belirteci. Belirteç bir FieldDef ise, alan genel bir değişken olmalıdır.  
   
  `pulCodeRVA`  
- [çıkış] Belirteç tarafından temsil edilen kod nesnesinin göreli sanal adresine işaretçi.  
+ dışı Belirteç tarafından temsil edilen kod nesnesinin göreli sanal adresine yönelik bir işaretçi.  
   
  `pdwImplFlags`  
- [çıkış] Yöntem için uygulama bayrakları için bir işaretçi. Bu değer [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) numaralandırma bir bitmask olduğunu. Değeri `pdwImplFlags` yalnızca Bir MethodDef belirteci ise `tk` geçerlidir.  
+ dışı Yöntemi için uygulama bayraklarının bir işaretçisi. Bu değer, [CorMethodImpl](cormethodimpl-enumeration.md) numaralandırmasındaki bir bit dır. Değeri `pdwImplFlags` yalnızca `tk` bir MethodDef belirtecidir geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

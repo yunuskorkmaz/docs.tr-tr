@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f273cb03ad00957afb2bd78fe538a940fae236a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175284"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501241"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid Metodu
 Belirtilen dizindeki satırdan bir GUID alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetGuid (
@@ -36,25 +36,25 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>Parametreler  
  `ixGuid`  
- [içinde] GUID almak için satır ın dizin.  
+ 'ndaki GUID 'nin alınacağı satırın dizini.  
   
  `ppGuid`  
- [çıkış] GUID için bir işaretçi için bir işaretçi.  
+ dışı GUID işaretçisinin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
 
-  Tutarlı sonuçlar döndürmediği için bu yöntemin kullanılmasını önermiyoruz. GUID tablosu hakkında bilgi için, "Partition II: Metadata Definition and Semantics" başta olmak üzere Ortak Dil Altyapısı (CLI) belgelerine bakın. Dokümantasyon online olarak mevcuttur; bkz. [ECMA C# ve Ortak Dil Altyapı Standartları](../../../standard/components.md#applicable-standards) ve Standart [ECMA-335 - Ortak Dil Altyapısı (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+  Tutarlı sonuçlar döndürmediğinden bu yöntemin kullanımını önermiyoruz. GUID tablosu hakkında daha fazla bilgi için, bkz. ortak dil altyapısı (CLı) belgeleri, özellikle "Bölüm II: meta veri tanımı ve semantiği". Belgeler çevrimiçi olarak kullanılabilir; bkz. [ecma C# ve ortak dil altyapısı standartları](../../../standard/components.md#applicable-standards) ve [standart ECMA-335-ortak DIL altyapısı (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables Arabirimi](imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](imetadatatables2-interface.md)

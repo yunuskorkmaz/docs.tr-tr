@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501514"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager Arabirimi
 Ortak dil çalışma zamanının (CLR), standart Win32 sanal bellek işlevlerini kullanmak yerine ana bilgisayar üzerinden sanal bellek istekleri yapmasına izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace Yöntemi](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|Ana bilgisayara ortak dil çalışma zamanının (CLR) belirtilen belleği işletim sisteminden almış olduğunu bildirir.|  
-|[CreateMAlloc Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|Ana bilgisayar tarafından oluşturulan bir yığından bellek ayırmaları istemek için kullanılan bir [IHostMAlloc](ihostmalloc-interface.md) örneğine bir arabirim işaretçisi alır.|  
+|[CreateMAlloc Yöntemi](ihostmemorymanager-createmalloc-method.md)|Ana bilgisayar tarafından oluşturulan bir yığından bellek ayırmaları istemek için kullanılan bir [IHostMAlloc](ihostmalloc-interface.md) örneğine bir arabirim işaretçisi alır.|  
 |[GetMemoryLoad Yöntemi](ihostmemorymanager-getmemoryload-method.md)|Ana bilgisayar tarafından bildirilen şu anda kullanılmakta olan fiziksel bellek miktarını alır.|  
 |[NeedsVirtualAddressSpace Yöntemi](ihostmemorymanager-needsvirtualaddressspace-method.md)|Konağa CLR 'nin belirtilen belleği kullanmayı deneyeceği konusunda bilgilendirir.|  
 |[RegisterMemoryNotificationCallback Yöntemi](ihostmemorymanager-registermemorynotificationcallback-method.md)|Ana bilgisayarın, bilgisayardaki geçerli bellek yükünün CLR 'sini bilgilendirmek için çağırdığı bir geri çağırma işlevine bir işaretçi kaydeder.|  

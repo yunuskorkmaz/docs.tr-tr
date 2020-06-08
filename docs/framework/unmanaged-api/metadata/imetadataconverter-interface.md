@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-ms.openlocfilehash: b6ca7c619d32e69ffac20b80561171d0320db2d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7a2a5080872f49a84e36c53ac337d91738c15e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008384"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501345"
 ---
 # <a name="imetadataconverter-interface"></a>IMetaDataConverter Arabirimi
 Tür kitaplıklarını meta veri imzalarına eşlemek ve birinden diğerine dönüştürmek için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
-|[GetMetaDataFromTypeInfo Metodu](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-getmetadatafromtypeinfo-method.md)|Belirtilen örnek tarafından başvurulan tür kitaplığının meta veri imzasını temsil eden bir [IMetaDataImport](imetadataimport-interface.md) örneğine yönelik bir işaretçi alır `ITypeInfo` .|  
+|[GetMetaDataFromTypeInfo Metodu](imetadataconverter-getmetadatafromtypeinfo-method.md)|Belirtilen örnek tarafından başvurulan tür kitaplığının meta veri imzasını temsil eden bir [IMetaDataImport](imetadataimport-interface.md) örneğine yönelik bir işaretçi alır `ITypeInfo` .|  
 |[GetMetaDataFromTypeLib Metodu](imetadataconverter-getmetadatafromtypelib-method.md)|`IMetaDataImport`Belirtilen örnek tarafından temsil edilen tür kitaplığı için meta veri imzasını temsil eden bir örneğe yönelik bir işaretçi alır `ITypeLib` .|  
 |[GetTypeLibFromMetaData Metodu](imetadataconverter-gettypelibfrommetadata-method.md)|`ITypeLib`Belirtilen modüle ve kitaplık adlarına sahip tür kitaplığını temsil eden bir örneğe yönelik bir işaretçi alır.|  
   

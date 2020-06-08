@@ -1,5 +1,6 @@
 ---
 title: Zaman Uyumsuz Sunucu Yuvası Örneği
+description: Bu örnek .NET Framework program, zaman uyumsuz yuva kullanan istemcilerden bağlantı alan bir sunucu oluşturur. Bir dizeyi alır ve yankılar.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 8a9a3cb26968c548aa971bac548313a459c2fdf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 089de8ce9629e30cb6e4458c0f9a4613c9674a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502723"
 ---
 # <a name="asynchronous-server-socket-example"></a>Zaman Uyumsuz Sunucu Yuvası Örneği
-Aşağıdaki örnek program istemcilerden bağlantı istekleri alan bir sunucu oluşturur. Sunucu bir eşzamanlı soket ile oluşturulmuş, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınmaz. Uygulama istemciden bir dize alır, konsoldaki dizeyi görüntüler ve sonra dizeistemciye yankılanır. İletinin sonuna işaret vermek için\<istemciden gelen dize "EOF>" dizesini içermelidir.  
+Aşağıdaki örnek program istemcilerden gelen bağlantı isteklerini alan bir sunucu oluşturur. Sunucu zaman uyumsuz bir yuva ile oluşturulmuştur, bu nedenle sunucu uygulamasının yürütülmesi istemciden bir bağlantı beklerken askıya alınmaz. Uygulama istemciden bir dize alır, bu dizeyi konsolda görüntüler ve ardından dizeyi istemciye geri yankılar. İstemciden alınan dize, \<EOF> iletinin sonuna işaret etmek için "" dizesini içermelidir.  
   
 ```vb  
 Imports System  

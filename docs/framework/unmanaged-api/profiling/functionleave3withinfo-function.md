@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: f7a945fb7ef10f995be2d779a88b98bbce2fdfb3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 235bae64fe5e6a534f2a650050c6c9ad4aa8fe84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500630"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo İşlevi
 Denetim oluşturucuyu bir işlevden döndürülmekte olduğunu bildirir ve yığın çerçevesini ve dönüş değerini almak için [ICorProfilerInfo3:: GetFunctionLeave3Info yöntemine](icorprofilerinfo3-getfunctionleave3info-method.md) geçirilebilecek bir tanıtıcı sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 void __stdcall FunctionLeave3WithInfo(  
@@ -36,16 +36,16 @@ void __stdcall FunctionLeave3WithInfo(
 
 - `functionIDOrClientID`
 
-  \[in] denetimin döndürüldüğü işlevin tanımlayıcısı.
+  \[' de] denetimin döndürüldüğü işlevin tanımlayıcısı.
 
 - `eltInfo`
 
-  \[, belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir işleyicsahiptir. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
+  \[' de] belirli bir yığın çerçevesi hakkındaki bilgileri temsil eden donuk bir işleyici. Bu tanıtıcı yalnızca geçirildiği geri arama sırasında geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar  
- `FunctionLeave3WithInfo` geri çağırma yöntemi, profil oluşturucuyu işlevler olarak bildirir ve profil oluşturucunun döndürülen değeri incelemek için [ICorProfilerInfo3:: GetFunctionLeave3Info metodunu](icorprofilerinfo3-getfunctionleave3info-method.md) kullanmasına izin verir. Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağının ayarlanması gerekir. Profiler, Event bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask yöntemini](icorprofilerinfo-seteventmask-method.md) kullanabilir ve sonra bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo metodunu](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) kullanabilir.  
+ `FunctionLeave3WithInfo`Geri arama yöntemi, profil oluşturucuyu işlevler olarak bildirir ve profil oluşturucunun döndürülen değeri incelemek Için [ICorProfilerInfo3:: GetFunctionLeave3Info metodunu](icorprofilerinfo3-getfunctionleave3info-method.md) kullanmasına izin verir. Dönüş değeri bilgilerine erişmek için `COR_PRF_ENABLE_FUNCTION_RETVAL` bayrağın ayarlanması gerekir. Profiler, Event bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask yöntemini](icorprofilerinfo-seteventmask-method.md) kullanabilir ve sonra bu işlevin uygulamanızı kaydetmek için [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo metodunu](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) kullanabilir.  
   
- `FunctionLeave3WithInfo` işlevi bir geri çağırmasıdır; Uygulamanızı uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
+ `FunctionLeave3WithInfo`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec(naked)` Storage-Class özniteliğini kullanması gerekir.  
   
  Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
@@ -53,22 +53,22 @@ void __stdcall FunctionLeave3WithInfo(
   
 - Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
- Atık toplamayı ertelendirip `FunctionLeave3WithInfo` uygulanması engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionLeave3WithInfo` dönüşene kadar engeller.  
+ `FunctionLeave3WithInfo`Atık toplamayı ertelendirip, uygulamanın engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionLeave3WithInfo` dönüşene kadar engeller.  
   
- `FunctionLeave3WithInfo` işlevi, yönetilen kod içine çağırmamalıdır veya yönetilen bellek ayırmaya herhangi bir şekilde neden olmamalıdır.  
+ `FunctionLeave3WithInfo`İşlev yönetilen kod içine çağırmamalıdır veya yönetilen bellek ayırmaya hiçbir şekilde neden olmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)
+- [Getfunctionleave3ınfo](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)

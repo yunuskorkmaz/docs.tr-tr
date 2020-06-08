@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: 5fc71bf240b89afadbf8f2ba10906322921bdda2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175336"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491049"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps Metodu
 Belirtilen belirteç tarafından temsil edilen özelliğin meta verilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPropertyProps (  
@@ -50,63 +50,63 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parametreler  
  `prop`  
- [içinde] Meta verileri döndürecek özelliği temsil eden bir belirteç.  
+ 'ndaki Meta verilerini döndürecek özelliği temsil eden bir belirteç.  
   
  `pClass`  
- [çıkış] Özelliği uygulayan türü temsil eden TypeDef belirteci için bir işaretçi.  
+ dışı Özelliği uygulayan türü temsil eden TypeDef belirtecinin işaretçisi.  
   
  `szProperty`  
- [çıkış] Özellik adını tutmak için bir arabellek.  
+ dışı Özellik adını tutan bir arabellek.  
   
  `cchProperty`  
- [içinde] Geniş karakterler boyutu `szProperty`.  
+ 'ndaki Öğesinin geniş karakterdeki boyutu `szProperty` .  
   
  `pchProperty`  
- [çıkış] Döndürülen geniş karakter `szProperty`sayısı.  
+ dışı İçinde döndürülen geniş karakter sayısı `szProperty` .  
   
  `pdwPropFlags`  
- [çıkış] Özelliğe uygulanan herhangi bir öznitelik bayrakları için bir işaretçi. Bu değer [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) numaralandırmabir bitmask olduğunu.  
+ dışı Özelliğe uygulanan öznitelik bayraklarının bir işaretçisi. Bu değer [CorPropertyAttr](corpropertyattr-enumeration.md) numaralandırmasından bir bit dır.  
   
  `ppvSig`  
- [çıkış] Özelliğin meta veri imzasına işaretçi.  
+ dışı Özelliğin meta veri imzasına yönelik bir işaretçi.  
   
  `pbSig`  
- [çıkış] Döndürülen bayt `ppvSig`sayısı.  
+ dışı İçinde döndürülen bayt sayısı `ppvSig` .  
   
  `pdwCPlusTypeFlag`  
- [çıkış] Özelliğin varsayılan değeri olan sabit türünü belirten bir bayrak. Bu değer CorElementType numaralandırmasından dır.  
+ dışı Özelliğin varsayılan değeri olan sabitin türünü belirten bayrak. Bu değer CorElementType numaralandırmasından.  
   
  `ppDefaultValue`  
- [çıkış] Bu özellik için varsayılan değeri depolayan baytlar için bir işaretçi.  
+ dışı Bu özellik için varsayılan değeri depolayan bayta yönelik bir işaretçi.  
   
  `pcchDefaultValue`  
- [çıkış] Geniş karakterlerdeki boyut `ppDefaultValue`, `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING ise; aksi takdirde, bu değer ilgili değildir. Bu durumda, uzunluk `ppDefaultValue` tarafından belirtilen türden `pdwCPlusTypeFlag`çıkarılır.  
+ dışı ' Nin geniş karakterdeki boyutu `ppDefaultValue` , `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING; Aksi takdirde, bu değer ilgili değildir. Bu durumda, uzunluğu `ppDefaultValue` tarafından belirtilen türden çıkarsanamıyor `pdwCPlusTypeFlag` .  
   
  `pmdSetter`  
- [çıkış] Özelliğin ayarlanan erişimci yöntemini temsil eden MethodDef belirteci için bir işaretçi.  
+ dışı Özelliği için set erişimcisi metodunu temsil eden MethodDef belirtecinin işaretçisi.  
   
  `pmdGetter`  
- [çıkış] Özelliğin erişime alma yöntemini temsil eden MethodDef belirteci için bir işaretçi.  
+ dışı Özelliği için get erişimcisi metodunu temsil eden MethodDef belirtecinin işaretçisi.  
   
  `rmdOtherMethod`  
- [çıkış] Özellik ile ilişkili diğer yöntemleri temsil eden MethodDef belirteçleri bir dizi.  
+ dışı Özelliği ile ilişkili diğer yöntemleri temsil eden bir MethodDef belirteçleri dizisi.  
   
  `cMax`  
- [içinde] `rmdOtherMethod` Dizinin en büyük boyutu. Tüm yöntemleri tutabilecek kadar büyük bir dizi sağlamazsanız, bunlar uyarı yapılmadan atlanır.  
+ 'ndaki Dizinin en büyük boyutu `rmdOtherMethod` . Tüm yöntemleri tutacak büyüklükte bir dizi sağlamazsanız, bunlar uyarı vermeden atlanır.  
   
  `pcOtherMethod`  
- [çıkış] MethodDef belirteçlerinin sayısı `rmdOtherMethod`.  
+ dışı İçinde döndürülen MethodDef belirteçleri sayısı `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: 1036ecbdb735b95c0ad6897c1545e3bd8cb6c3a9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fdbcbb2da8f449b9275d820763c2a94cca86cd1e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867080"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500760"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
 Çalışma zamanının askıya alınma nedenini gösterir.  
@@ -40,12 +40,12 @@ typedef enum {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Beklenmeyen bir nedenden dolayı çalışma zamanı askıya alındı.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC`|Bir çöp toplama isteğine hizmet vermek için çalışma zamanı askıya alındı.<br /><br /> [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) ve [ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md) geri çağırmaları arasında çöp toplama ile ilgili geri çağırmaları meydana gelir.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı, bir `AppDomain` kapatılabilen şekilde askıya alınır.<br /><br /> Çalışma zamanı askıya alındığında, çalışma zamanı hangi iş parçacıklarının kapanmakta olduğunu ve sürdürüldiklerinde iptal olarak ayarlandığını belirleyen `AppDomain`. Bu askıya alma sırasında `AppDomain`özel geri çağırma yok.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Çalışma zamanı, kod alma işleminin gerçekleşmesi için askıya alındı.<br /><br /> Kod işleme, yalnızca tam zamanında (JıT) derleyici tarafından etkin hale geldiğinde kodun etkin hale getiriliyor. `ICorProfilerCallback::RuntimeSuspendFinished` ve `ICorProfilerCallback::RuntimeResumeStarted` geri çağırmaları arasında kod geri çağırmaları oluşur. **Note:**  CLR JıT, .NET Framework sürüm 2,0 ' deki işlevleri göstermez, bu nedenle bu değer 2,0 ' de kullanılmaz.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Çalışma zamanı askıya alınabilmesi için askıya alındı `AppDomain` .<br /><br /> Çalışma zamanı askıya alındığında, çalışma zamanı hangi iş parçacıklarının `AppDomain` kapanmakta olduğunu ve sürdürüldiklerinde onları iptal etmek üzere ayarlayaceğini belirlemektir. `AppDomain`Bu askıya alma sırasında belirli bir geri çağırma yok.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Çalışma zamanı, kod alma işleminin gerçekleşmesi için askıya alındı.<br /><br /> Kod işleme, yalnızca tam zamanında (JıT) derleyici tarafından etkin hale geldiğinde kodun etkin hale getiriliyor. `ICorProfilerCallback::RuntimeSuspendFinished`Ve geri çağırmalar arasında kod geri çağırmaları oluşur `ICorProfilerCallback::RuntimeResumeStarted` . **Note:**  CLR JıT, .NET Framework sürüm 2,0 ' deki işlevleri göstermez, bu nedenle bu değer 2,0 ' de kullanılmaz.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Çalışma zamanı, kapanması için askıya alındı. İşlemi gerçekleştirmek için tüm iş parçacıklarını askıya almalıdır.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Çalışma zamanı, işlem içi hata ayıklama için askıya alındı.|  
 |`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Bir çöp toplama işlemine hazırlanmak için çalışma zamanı askıya alındı.|  
@@ -55,13 +55,13 @@ typedef enum {
  Yönetilmeyen koddaki tüm çalışma zamanı iş parçacıklarının çalışmaya devam etmesine izin verilir, çalışma zamanı yeniden girmeye çalışır ve bu noktada çalışma zamanı sürdürülene kadar da askıya alınır. Bu, çalışma zamanını belirten yeni iş parçacıkları için de geçerlidir. Çalışma zamanının içindeki tüm iş parçacıkları, kesilebilir kodunda olmaları durumunda veya kesilebilir koduna ulaştığında askıya alınması isteniyorsa hemen askıya alınır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

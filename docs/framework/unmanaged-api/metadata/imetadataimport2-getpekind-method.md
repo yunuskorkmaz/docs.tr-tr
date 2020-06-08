@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d91c3d89-8022-4a4c-a2a2-a8af2c387507
 topic_type:
 - apiref
-ms.openlocfilehash: 0464c61e4ff01483e10fb5708d5ed4b5f5ed63d0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3626998c456e23fb922ae45a68bedb0e45a7ccba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445241"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490438"
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind Yöntemi
 Taşınabilir yürütülebilir (PE) dosyasındaki, genellikle geçerli meta veri kapsamında tanımlanan bir DLL veya EXE dosyası olan kodun yapısını tanımlayan bir değer alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPEKind (  
@@ -36,13 +36,13 @@ HRESULT GetPEKind (
   
 ## <a name="parameters"></a>Parametreler  
  `pdwPEKind`  
- dışı PE dosyasını tanımlayan bir [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) numaralandırması değerine yönelik bir işaretçi.  
+ dışı PE dosyasını tanımlayan bir [CorPEKind](corpekind-enumeration.md) numaralandırması değerine yönelik bir işaretçi.  
   
  `pdwMachine`  
  dışı Makinenin mimarisini tanımlayan bir değere yönelik bir işaretçi. Olası değerler için sonraki bölüme bakın.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `pdwMachine` parametresi tarafından başvurulan değer aşağıdakilerden biri olabilir.  
+ Parametresi tarafından başvurulan değer `pdwMachine` aşağıdakilerden biri olabilir.  
   
 |Değer|Makine mimarisi|  
 |-----------|--------------------------|  
@@ -51,16 +51,16 @@ HRESULT GetPEKind (
 |IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [CorPEKind Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [CorPEKind Numaralandırması](corpekind-enumeration.md)

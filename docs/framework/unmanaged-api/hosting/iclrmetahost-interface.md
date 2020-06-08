@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-ms.openlocfilehash: 391adc6f9fe55ad7ca527ea416956ab013a27b15
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: bb7c3659930f308328cba121c06a88cb6a95eb26
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703729"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504166"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost Arabirimi
 Ortak dil çalışma zamanının (CLR) sürüm numarasına göre belirli bir sürümünü döndüren, tüm yüklü CLRs 'leri listeleme, belirli bir işlemde yüklü olan tüm çalışma zamanlarını listeleme, bir derlemeyi derlemek için kullanılan CLR sürümünü bulma, temiz çalışma zamanı ile bir işlemden çıkma ve eski API bağlamasını sorgulama gibi yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
-|[EnumerateInstalledRuntimes Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateinstalledruntimes-method.md)|Bir bilgisayarda yüklü her CLR sürümü için geçerli bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi işaretçisi içeren bir sabit listesi döndürür.|  
-|[EnumerateLoadedRuntimes Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateloadedruntimes-method.md)|Belirli bir işlemde yüklenen her CLR için geçerli bir [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi işaretçisi içeren bir sabit listesi döndürür. Bu yöntem [GetVersionFromProcess](getversionfromprocess-function.md)'in yerini alır.|  
-|[ExitProcess Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)|Tüm yüklenen çalışma zamanlarını sorunsuz bir şekilde kapatmaya çalışır ve sonra işlemi sonlandırır. [CorExitProcess](corexitprocess-function.md) işlevinin yerini alır.|  
-|[GetRuntime Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)|Belirli bir CLR sürümüne karşılık gelen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimini alır. Bu yöntem [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) bayrağıyla kullanılan [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) işlevinin yerini alır.|  
-|[GetVersionFromFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getversionfromfile-method.md)|Derlemenin özgün .NET Framework derleme sürümünü (meta verilerde depolanır), onun dosya yolu olarak alır. Bu yöntem, [GetFileVersion](getfileversion-function.md)'ın yerini alır.|  
-|[QueryLegacyV2RuntimeBinding Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-querylegacyv2runtimebinding-method.md)|Eski etkinleştirme ilkesinin bağlı olduğu bir çalışma zamanını temsil eden bir arabirim döndürür. Örneğin, `useLegacyV2RuntimeActivationPolicy` [ \< Başlangıç> öğesi](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) yapılandırma dosyası girişinde, eski etkinleştirme API 'Lerinin doğrudan kullanımı veya [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md) yöntemini çağırarak.|  
-|[RequestRuntimeLoadedNotification Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-requestruntimeloadednotification-method.md)|CLR sürümü ilk yüklendiğinde belirtilen işlev işaretçisine geri çağırma garantisi verir, ancak henüz başlatılmamıştır. Bu yöntem [LockClrVersion](lockclrversion-function.md) yerine geçiyor|  
+|[EnumerateInstalledRuntimes Yöntemi](iclrmetahost-enumerateinstalledruntimes-method.md)|Bir bilgisayarda yüklü her CLR sürümü için geçerli bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi işaretçisi içeren bir sabit listesi döndürür.|  
+|[EnumerateLoadedRuntimes Yöntemi](iclrmetahost-enumerateloadedruntimes-method.md)|Belirli bir işlemde yüklenen her CLR için geçerli bir [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimi işaretçisi içeren bir sabit listesi döndürür. Bu yöntem [GetVersionFromProcess](getversionfromprocess-function.md)'in yerini alır.|  
+|[ExitProcess Yöntemi](iclrmetahost-exitprocess-method.md)|Tüm yüklenen çalışma zamanlarını sorunsuz bir şekilde kapatmaya çalışır ve sonra işlemi sonlandırır. [CorExitProcess](corexitprocess-function.md) işlevinin yerini alır.|  
+|[GetRuntime Yöntemi](iclrmetahost-getruntime-method.md)|Belirli bir CLR sürümüne karşılık gelen [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) arabirimini alır. Bu yöntem [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md) bayrağıyla kullanılan [CorBindToRuntimeEx](corbindtoruntimeex-function.md) işlevinin yerini alır.|  
+|[GetVersionFromFile Yöntemi](iclrmetahost-getversionfromfile-method.md)|Derlemenin özgün .NET Framework derleme sürümünü (meta verilerde depolanır), onun dosya yolu olarak alır. Bu yöntem, [GetFileVersion](getfileversion-function.md)'ın yerini alır.|  
+|[QueryLegacyV2RuntimeBinding Yöntemi](iclrmetahost-querylegacyv2runtimebinding-method.md)|Eski etkinleştirme ilkesinin bağlı olduğu bir çalışma zamanını temsil eden bir arabirim döndürür. Örneğin, `useLegacyV2RuntimeActivationPolicy` Eski etkinleştirme API 'lerinin doğrudan kullanımı ile veya [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md) yöntemini çağırarak, [ \<startup> öğe](../../configure-apps/file-schema/startup/startup-element.md) yapılandırma dosyası girişinde özniteliği kullanarak.|  
+|[RequestRuntimeLoadedNotification Yöntemi](iclrmetahost-requestruntimeloadednotification-method.md)|CLR sürümü ilk yüklendiğinde belirtilen işlev işaretçisine geri çağırma garantisi verir, ancak henüz başlatılmamıştır. Bu yöntem [LockClrVersion](lockclrversion-function.md) yerine geçiyor|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu arabirimin bir örneğini almanın tek yolu, aşağıdaki gibi [CLRCreateInstance](clrcreateinstance-function.md) işlevini çağırarak olur:  
@@ -57,4 +57,4 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Barındırma Arabirimleri](hosting-interfaces.md)
-- [Barındırma](index.md)
+- [Hosting](index.md)

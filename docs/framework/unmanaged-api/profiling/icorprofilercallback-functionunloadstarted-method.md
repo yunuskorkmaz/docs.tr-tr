@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175167"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503386"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted Yöntemi
-Profil oluşturucuya çalışma zamanının bir işlevi boşaltmaya başladığını belirtir.  
+Profil oluşturucuyu, çalışma zamanının bir işlevi kaldırmak için başlatıldığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
@@ -36,19 +36,19 @@ HRESULT FunctionUnloadStarted(
 
 - `functionId`
 
-  \[in] Boşaltılan işlevin kimliği.
+  \[' de] kaldırılmakta olan işlevin KIMLIĞI.
 
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem `functionId` arayana döndükten sonra parametrenin değeri artık geçerli değildir.  
+ `functionId`Bu yöntem çağırana döndüğünde parametrenin değeri artık geçerli değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

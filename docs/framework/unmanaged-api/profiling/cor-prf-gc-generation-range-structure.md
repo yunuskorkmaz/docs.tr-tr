@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 682aac9729519e0861ae6e6f60df78a30063c278
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 91fb902aab678e29c6e74380e3576fa5c4ae62d4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867220"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500907"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE Yapısı
 Çöp toplama işlemi yapılmakta olan belleğin bir aralığını (yani bloğunu) açıklar.  
@@ -37,7 +37,7 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`generation`|Bellek bloğunun ait olduğu üretimi belirten [COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md) numaralandırması değeri.|  
 |`rangeStart`|Bellek bloğunun başlangıç konumunu belirten nesnenin KIMLIĞI.|  
@@ -45,16 +45,16 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 |`rangeLengthReserved`|Bellek bloğunun boyutunu belirten bir tamsayı işaretçisi (yani, blok için ayrılan bellek miktarı).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rangeLength` değeri yalnızca [ICorProfilerInfo2:: Getgenerationlimiti](icorprofilerinfo2-getgenerationbounds-method.md) veya [ICorProfilerInfo2:: GetObjectGeneration](icorprofilerinfo2-getobjectgeneration-method.md), her ikisi `COR_PRF_GC_GENERATION_RANGE` de [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) veya [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) yönteminden çağrıldığında doğru olarak garanti edilir.  
+ `rangeLength`Değerin yalnızca ICorProfilerInfo2:: GarbageCollectionStarted veya ICorProfilerCallback2:: GarbageCollectionFinished yönteminden çağrılan, [:: Getgenerationlimiti](icorprofilerinfo2-getgenerationbounds-method.md) veya [ICorProfilerInfo2:: GetObjectGeneration](icorprofilerinfo2-getobjectgeneration-method.md), her ikisi de olan `COR_PRF_GC_GENERATION_RANGE` . [ICorProfilerCallback2::GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) [ICorProfilerCallback2::GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

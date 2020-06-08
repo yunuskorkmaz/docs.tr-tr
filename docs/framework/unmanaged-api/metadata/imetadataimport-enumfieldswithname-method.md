@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: bb8b531a884c9d3c2f33aa4aec5c4dbeaafe2b66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68261b165847a5c3ee29adbc4908451fb00c5443
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177348"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492271"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName Yöntemi
-Belirtilen türdeki FieldDef belirteçlerini belirtilen adla oyuvarlar.  
+Belirtilen ada sahip belirtilen türdeki FieldDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
@@ -40,43 +40,43 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [içinde] Alanları numaralandırılacak türden belirteç.  
+ 'ndaki Alanları Numaralandırılacak olan türün belirteci.  
   
  `szName`  
- [içinde] Numaralandırmanın kapsamını sınırlayan alan adı.  
+ 'ndaki Sabit listesinin kapsamını sınırlayan alan adı.  
   
  `rFields`  
- [çıkış] Dizi FieldDef belirteçleri depolamak için kullanılır.  
+ dışı FieldDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rFields` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rFields` .  
   
  `pcTokens`  
- [çıkış] FieldDef belirteçlerinin gerçek sayısı `rFields`.  
+ dışı İçinde döndürülen FieldDef belirteçlerinin gerçek sayısı `rFields` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- [IMetaDataImport::EnumFields'ın](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)aksine, `EnumFieldsWithName` belirtilen ada sahip olmayan tüm alan belirteçlerini atar.  
+ [IMetaDataImport:: EnumFields](imetadataimport-enumfields-method.md)'in aksine, `EnumFieldsWithName` belirtilen ada sahip olmayan tüm alan belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısalolarak sayısala erdirecek alan yok. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumFieldsWithName`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak alan yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

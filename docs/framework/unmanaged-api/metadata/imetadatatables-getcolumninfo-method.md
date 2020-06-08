@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501202"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo Yöntemi
-Belirtilen tabloda belirtilen sütun hakkında veri alır.  
+Belirtilen tabloda belirtilen sütunla ilgili verileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetColumnInfo (
@@ -42,31 +42,31 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [içinde] İstenilen tablonun dizini.  
+ 'ndaki İstenen tablonun dizini.  
   
  `ixCol`  
- [içinde] İstenilen sütunun dizini.  
+ 'ndaki İstenen sütunun dizini.  
   
  `poCol`  
- [çıkış] Satırdaki sütunun mahsup için bir işaretçi.  
+ dışı Satırdaki sütunun uzaklığa yönelik bir işaretçi.  
   
  `pcbCol`  
- [çıkış] Sütunun boyutuna, baytlarda bir işaretçi.  
+ dışı Sütunun bayt cinsinden boyutu için bir işaretçi.  
   
  `pType`  
- [çıkış] Sütundaki değerlerin türüne işaretçi.  
+ dışı Sütundaki değerlerin türüne yönelik bir işaretçi.  
   
  `ppName`  
- [çıkış] Sütun adına işaretçi için bir işaretçi.  
+ dışı Sütun adı işaretçisinin işaretçisi.  
 
 ## <a name="remarks"></a>Açıklamalar
 
-Döndürülen sütun türü bir değer aralığına girer:
+Döndürülen sütun türü bir değer aralığı içinde yer alıyorsa:
 
-| pTipi                    | Açıklama   | Yardımcı işlevi                   |
+| pType                    | Description   | Yardımcı işlevi                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Kurtulmak           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **Isrbıtype türü**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Kodlanmış belirteç | **IsCodedTokenType** <br>**IsRidOrToken** |
 | `iSHORT`(96)            | Int16         | **IsFixedType**                   |
 | `iUSHORT`(97)           | UInt16        | **IsFixedType**                   |
 | `iLONG`(98)             | Int32         | **IsFixedType**                   |
@@ -76,25 +76,25 @@ Döndürülen sütun türü bir değer aralığına girer:
 | `iGUID`(102)            | Guid          | **IsHeapType**                    |
 | `iBLOB`(103)            | Blob          | **IsHeapType**                    |
 
-*Yığında* depolanan değerler (diğer bir `IsHeapType == true`deyişle), aşağıdakiler kullanılarak okunabilir:
+*Yığında* depolanan değerler (yani, `IsHeapType == true` ) kullanılarak okunabilir:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetaDataTables. GetString**
+- `iGUID`: **IMetaDataTables. GetGUID**
+- `iBLOB`: **IMetaDataTables. GetBlob**
 
 > [!IMPORTANT]
-> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için `#define _DEFINE_META_DATA_META_CONSTANTS` *cor.h* üstbilgi dosyası tarafından sağlanan yönergeyi ekleyin.
+> Yukarıdaki tabloda tanımlanan sabitleri kullanmak için `#define _DEFINE_META_DATA_META_CONSTANTS` *Cor. h* üstbilgi dosyası tarafından sunulan yönergeyi dahil edin.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataTables Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables Arabirimi](imetadatatables-interface.md)
+- [IMetaDataTables2 Arabirimi](imetadatatables2-interface.md)

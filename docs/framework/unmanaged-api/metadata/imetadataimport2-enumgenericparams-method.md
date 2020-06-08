@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 55709e79cd8bdb36fe1e32ee8a699fccb1b1bbc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 093e3edf0a3c06222ebc56a4876fca08d1b7578f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175310"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490737"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams Yöntemi
-Belirtilen TypeDef veya MethodDef belirteciyle ilişkili genel parametre belirteçleri dizisi için bir sayısallaştırıcı alır.  
+Belirtilen TypeDef veya MethodDef belirteciyle ilişkili bir genel parametre belirteçleri dizisi için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT EnumGenericParams (  
@@ -39,37 +39,37 @@ HRESULT EnumGenericParams (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `tk`  
- [içinde] Genel parametreleri numaralandırılacak Olan TypeDef veya MethodDef belirteci.  
+ 'ndaki Genel parametreleri numaralandırılmış olan TypeDef veya MethodDef belirteci.  
   
  `rGenericParams`  
- [çıkış] Sayısala' da genel parametreler dizisi.  
+ dışı Numaralandırılacak genel parametrelerin dizisi.  
   
  `cMax`  
- [içinde] Yerleştirilecek istenen maksimum belirteç `rGenericParams`sayısı.  
+ 'ndaki İstenen en fazla belirteç sayısı, içine yerleştirilecek `rGenericParams` .  
   
  `pcGenericParams`  
- [çıkış] Yerleştirilen belirteçlerin döndürülen `rGenericParams`sayısı.  
+ dışı Döndürülen belirteç sayısı döndürüldü `rGenericParams` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams`başarıyla döndürülür.|  
-|`S_FALSE`|`phEnum`üye öğesi yoktur. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
+|`S_OK`|`EnumGenericParams`başarıyla döndürüldü.|  
+|`S_FALSE`|`phEnum`Üye öğesi yok. Bu durumda, `pcGenericParams` 0 (sıfır) olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)

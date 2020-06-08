@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 722a1e0adea41a13ca25829c53372c29187b80bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866682"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500474"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished Yöntemi
 Profil oluşturucuyu bir uygulama etki alanının bir işlemden kaldırılmış olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AppDomainShutdownFinished(  
@@ -37,25 +37,25 @@ HRESULT AppDomainShutdownFinished(
 
 - `appDomainId`
 
-  \[içinde], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
+  \[' de], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
 
 - `hrStatus`
 
-  \[) uygulama etki alanının başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
+  \[içinde] uygulama etki alanının başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
 
 ## <a name="remarks"></a>Açıklamalar  
- `appDomainId` değeri, [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) yöntemi döndürüldüğünden bir bilgi isteği için geçerli değildir.  
+ Değeri, `appDomainId` [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md) yönteminin döndürdüğü bir bilgi isteği için geçerli değildir.  
   
- Uygulama etki alanını kaldırma işleminin bazı bölümleri `AppDomainCreationFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak `hrStatus` başarılı bir HRESULT, yalnızca uygulama etki alanını kaldırmayı ilk bölümünün başarılı olduğunu gösterir.  
+ Uygulama etki alanını kaldırma işleminin bazı bölümleri geri aramadan sonra devam edebilir `AppDomainCreationFinished` . ' De HRESULT hatası, `hrStatus` bir hatayı gösterir. Ancak, içinde başarılı bir HRESULT, `hrStatus` yalnızca uygulama etki alanını kaldırmayı ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

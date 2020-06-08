@@ -1,5 +1,6 @@
 ---
 title: Takılabilir Protokoller Programlama
+description: Soyut WebRequest ve WebResponse sınıflarının, bir uygulamanın protokol belirtmeden veri almasını sağlayan takılabilir protokolleri nasıl desteklediğini öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, pluggable protocols
@@ -15,21 +16,21 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 94dfedd317782b9e518df02c84d9af55b1ef2b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502203"
 ---
 # <a name="programming-pluggable-protocols"></a>Takılabilir Protokoller Programlama
-Soyut <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıflar takılabilir protokoller için temel sağlar. Bir uygulama, protokole özgü <xref:System.Net.WebRequest> <xref:System.Net.WebResponse>sınıfları bir Internet kaynağından veri isteyebilir ve kullanılan protokolü belirtmeden yanıtı okuyabilir.  
+Soyut <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıflar takılabilir protokoller için temel sağlar. Ve ' den protokolüne özgü sınıfları türeterek <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> , bir uygulama bir Internet kaynağından veri talep edebilir ve kullanılan protokolü belirtmeden yanıtı okuyabilir.  
   
- Protokole özgü <xref:System.Net.WebRequest>bir yöntem oluşturmadan önce, oluştur yöntemini kaydetmeniz gerekir. Belirli bir <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> Internet <xref:System.Net.WebRequest> düzenine, bir düzene ve sunucuya veya bir şemaya, sunucuya ve yola bir dizi isteği işlemek için bir soyundan geleni <xref:System.Net.WebRequest> kaydetmek için statik yöntemi kullanın.  
+ Protokolüne özgü bir oluşturabilmeniz için önce <xref:System.Net.WebRequest> Create yöntemini kaydetmeniz gerekir. <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> <xref:System.Net.WebRequest> <xref:System.Net.WebRequest> Belirli bir Internet şemasına, bir düzene ve sunucuya ya da bir düzen, sunucu ve yol için bir istek kümesini işlemek üzere bir alt öğesi kaydetmek için ' ın statik metodunu kullanın.  
   
- Çoğu <xref:System.Net.WebRequest> durumda, sınıfın yöntemlerini ve özelliklerini kullanarak veri gönderip alabilirsiniz. Ancak, protokole özgü özelliklere erişmeniz gerekiyorsa, <xref:System.Net.WebRequest> a'dan türemiş sınıf örneğine dakti-resmon yazabilirsiniz.  
+ Çoğu durumda, sınıfının yöntemlerini ve özelliklerini kullanarak veri gönderebileceksiniz ve alabilirsiniz <xref:System.Net.WebRequest> . Ancak, protokole özgü özelliklere erişmeniz gerekiyorsa, a 'yı <xref:System.Net.WebRequest> belirli bir türetilmiş sınıf örneğine yazabilirsiniz.  
   
- Takılabilir protokollerden yararlanmak için, <xref:System.Net.WebRequest> torunlarınızın protokole özgü özelliklerin ayarlanmasını gerektirmeyen varsayılan istek ve yanıt hareketi sağlaması gerekir. Örneğin, HTTP <xref:System.Net.HttpWebRequest> <xref:System.Net.WebRequest> için sınıfı uygulayan sınıf varsayılan olarak `GET` bir istek sağlar <xref:System.Net.HttpWebResponse> ve Web sunucusundan döndürülen akışı içeren bir istek verir.  
+ Takılabilir protokollerinden yararlanmak için, alt bilgileriniz, <xref:System.Net.WebRequest> protokole özgü özelliklerin ayarlanmasına gerek olmayan varsayılan bir istek-yanıt işlemi sağlamalıdır. Örneğin, <xref:System.Net.HttpWebRequest> <xref:System.Net.WebRequest> http için sınıfını uygulayan sınıfı, `GET` Varsayılan olarak bir Istek sağlar ve <xref:System.Net.HttpWebResponse> Web sunucusundan döndürülen akışı içeren bir döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

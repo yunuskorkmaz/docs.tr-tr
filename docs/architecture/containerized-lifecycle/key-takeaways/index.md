@@ -2,12 +2,12 @@
 title: Anahtar paketleri
 description: Kılavuzun anahtar devrmalarını gözden geçirin.
 ms.date: 04/20/2020
-ms.openlocfilehash: 2aa0b3a9ca59a55a7493b86647f334f4438eaa3e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 51662c52ce0917aa89b86151cf7cab5f13f846e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447023"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502788"
 ---
 # <a name="key-takeaways"></a>Anahtar paketleri
 
@@ -23,4 +23,5 @@ ms.locfileid: "84447023"
 
 - Azure DevOps Services, CI/CD işlem hatlarınızdaki Docker ortamlarına dağıtarak DevOps ortamınızı büyük ölçüde basitleştirir. Bu ifade, basit Docker ortamları ve Azure 'a bağlı olarak gelişmiş mikro hizmet ve kapsayıcı yöneticileri için geçerlidir.
 
-> [!div class="step-by-step"][previous](.. /run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+> [!div class="step-by-step"]
+> [Öncekini](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

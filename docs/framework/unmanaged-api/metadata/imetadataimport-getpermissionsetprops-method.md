@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175349"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490997"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps Yöntemi
-Belirtilen İzin belirteci <xref:System.Security.PermissionSet?displayProperty=nameWithType> tarafından temsil edilenile ilişkili meta verileri alır.  
+<xref:System.Security.PermissionSet?displayProperty=nameWithType>Belirtilen izin belirteciyle temsil edilen ile ilişkili meta verileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetPermissionSetProps (  
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametreler  
  `pm`  
- [içinde] Meta veri özelliklerini almak için izin kümesini temsil eden İzin meta veri belirteci.  
+ 'ndaki Meta veri özelliklerini almak için ayarlanan izni temsil eden Izin meta veri belirteci.  
   
  `pdwAction`  
- [çıkış] İzin kümesiiçin bir işaretçi.  
+ dışı İzin kümesine yönelik bir işaretçi.  
   
  `ppvPermission`  
- [çıkış] İzin kümesinin ikili meta veri imzasına işaretçi.  
+ dışı İzin kümesinin ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbPermission`  
- [çıkış] `ppvPermission`Baytboyutu.  
+ dışı Bayt cinsinden boyut `ppvPermission` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.PermissionSet>
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

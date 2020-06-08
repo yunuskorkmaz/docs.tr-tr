@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177180"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490734"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs Yöntemi
-Belirtilen MethodDef veya MemberRef belirteciile ilişkili bir dizi MethodSpec belirteci için bir sayısallaştırıcı alır.  
+Belirtilen MethodDef veya MemberRef belirteciyle ilişkili bir MethodSpec belirteçleri dizisi için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumMethodSpecs (  
@@ -39,37 +39,37 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Için sayısallaştırıcıya `rMethodSpecs`bir işaretçi.  
+ [in, out] İçin numaralandırıcı işaretçisi `rMethodSpecs` .  
   
  `tk`  
- [içinde] MethodSpec belirteçleri numaralandırılacak yöntemi temsil eden MemberRef veya MethodDef belirteci. Değeri 0 `tk` (sıfır) ise, kapsamdaki tüm MethodSpec belirteçleri numaralandırılır.  
+ 'ndaki MethodSpec belirteçleri numaralandırılmış olan yöntemi temsil eden MemberRef veya MethodDef belirteci. Değeri `tk` 0 (sıfır) ise, kapsamdaki tüm MethodSpec belirteçleri numaralandırılır.  
   
  `rMethodSpecs`  
- [çıkış] Sayısala dizecek MethodSpec belirteçleri dizisi.  
+ dışı Numaralandırılacak MethodSpec belirteçlerinin dizisi.  
   
  `cMax`  
- [içinde] Yerleştirilecek istenen maksimum belirteç `rMethodSpecs`sayısı.  
+ 'ndaki İstenen en fazla belirteç sayısı, içine yerleştirilecek `rMethodSpecs` .  
   
  `pcMethodSpecs`  
- [çıkış] Yerleştirilen belirteçlerin döndürülen `rMethodSpecs`sayısı.  
+ dışı Döndürülen belirteç sayısı döndürüldü `rMethodSpecs` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`başarıyla döndürülür.|  
-|`S_FALSE`|`phEnum`üye öğesi yoktur. Bu durumda, `pcMethodSpecs` 0 (sıfır) olarak ayarlanır.|  
+|`S_OK`|`EnumMethodSpecs`başarıyla döndürüldü.|  
+|`S_FALSE`|`phEnum`Üye öğesi yok. Bu durumda, `pcMethodSpecs` 0 (sıfır) olarak ayarlanır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)

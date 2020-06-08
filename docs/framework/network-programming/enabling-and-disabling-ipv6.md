@@ -1,32 +1,33 @@
 ---
 title: IPv6 Etkinleştirme ve Devre Dışı Bırakma
+description: Bilgisayar veya uygulama için yapılandırma dosyasını değiştirme dahil olmak üzere IPv6 protokolünü kullanmayı etkinleştirmek için bu yapılandırma adımlarını izleyin.
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7729647b09df20a98d5d639a641cb0a31f557330
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048570"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502619"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 Etkinleştirme ve Devre Dışı Bırakma
-IPv6 protokolünü kullanmak için, IPv6'yı destekleyen işletim sisteminin bir sürümünü çalıştırdığınızdan emin olun ve işletim sistemi ve ağ sınıflarının düzgün şekilde yapılandırıldığından emin olun.  
+IPv6 protokolünü kullanmak için, IPv6 'Yı destekleyen bir işletim sistemi sürümü çalıştırdığından ve işletim sisteminin ve ağ sınıflarının düzgün yapılandırıldığından emin olun.  
   
-## <a name="configuration-steps"></a>Yapılandırma Adımları  
- Aşağıdaki tabloda çeşitli yapılandırmalar listele  
+## <a name="configuration-steps"></a>Yapılandırma adımları  
+ Aşağıdaki tabloda çeşitli yapılandırma listelenmiştir  
   
-|İşletim sistemi IPv6 etkin?|Ağ sınıfları IPv6 etkin?|Açıklama|  
+|İşletim sistemi IPv6 etkin mi?|Ağ sınıfları IPv6-etkin mi?|Description|  
 |-------------------------------------|---------------------------------------|-----------------|  
-|Hayır|Hayır|IPv6 adreslerini ayrışdırabilir.|  
-|Hayır|Evet|IPv6 adreslerini ayrışdırabilir.|  
-|Evet|Hayır|IPv6 adreslerini ayrışdırabilir ve iPv6 adreslerini eski işaretlenmemiş ad çözümleme yöntemlerini kullanarak çözümleyebilir.|  
-|Evet|Evet|IPv6 adreslerini, eski işaretlenmiş olanlar da dahil olmak üzere tüm yöntemleri kullanarak ayrıştabilir ve çözebilir.|  
+|Hayır|Hayır|IPv6 adreslerini ayrıştırılabilir.|  
+|No|Evet|IPv6 adreslerini ayrıştırılabilir.|  
+|Evet|No|, Bilinen olarak işaretlenmemiş ad çözümleme yöntemlerini kullanarak IPv6 adreslerini ayrıştırıp adresleri çözümleyebilir.|  
+|Yes|Yes|, Artık kullanılmıyor olarak işaretlenenler dahil tüm yöntemleri kullanarak IPv6 adreslerini ayrıştırıp çözümleyebilir.|  
   
- System.Net ad alanındaki tüm sınıflar için IPv6 desteğini etkinleştirmek için, bilgisayar yapılandırma dosyasını veya uygulama nın yapılandırma dosyasını değiştirmeniz gerektiğini unutmayın. Bir uygulamanın yapılandırma dosyasının bilgisayar yapılandırma dosyasından önceliği vardır.  
+ System.Net ad alanındaki tüm sınıfların IPv6 desteğini etkinleştirmek için, bilgisayar yapılandırma dosyasını veya uygulamanın yapılandırma dosyasını değiştirmeniz gerektiğini unutmayın. Bir uygulamanın yapılandırma dosyası, bilgisayar yapılandırma dosyasına göre önceliğe sahiptir.  
   
- Bilgisayar yapılandırma dosyası, *machine.config,* Ipv6 desteği sağlamak için nasıl değiştirin bir örnek için [bkz.](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md) Ayrıca, işletim sistemi için IPv6 desteğinin etkin olduğundan emin olun.  
+ *Machine. config*bilgisayar yapılandırma dosyasının nasıl değiştirileceği hakkında bir örnek Için, IPv6 desteğinin etkinleştirilmesi için bkz. [IPv6 desteğini etkinleştirmek Için bilgisayar yapılandırma dosyasını değiştirme](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Ayrıca, işletim sistemi için IPv6 desteğinin etkinleştirildiğinden emin olun.  
   
- .NET Framework'ün bir yapılandırma dosyasında aşağıdaki gibi ayarlanmış bir yapılandırma anahtarı vardır  
+ .NET Framework yapılandırma dosyasında aşağıdaki şekilde ayarlanmış bir yapılandırma anahtarı vardır  
   
 ```xml  
 <system.net>  
@@ -40,13 +41,13 @@ IPv6 protokolünü kullanmak için, IPv6'yı destekleyen işletim sisteminin bir
 </system.net>  
 ```  
   
- .NET Framework sürüm 1.1 ve daha önceki sürümiçin, **ipv6 etkinleştirilmiş** <xref:System.Net.Dns?displayProperty=nameWithType> yapılandırma anahtarının değeri, sınıf üyelerinin IPv6 adreslerini döndürüp döndürmeyeceğini belirtir.  
+ .NET Framework sürüm 1,1 ve önceki sürümlerde **IPv6 etkin** yapılandırma anahtarının değeri, <xref:System.Net.Dns?displayProperty=nameWithType> sınıfın üyelerinin IPv6 adresleri döndürmeyeceğini belirtir.  
   
- .NET Framework sürüm 2.0 ve sonrası için, Windows IPv6'yı destekliyorsa, <xref:System.Net.Dns?displayProperty=nameWithType> sınıfın üyeleri (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntem) IPv6 adreslerini tek bir sınırlamayla döndürecektir. DNS'nin <xref:System.Net.Dns?displayProperty=nameWithType> eski üyeleri (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntem) ipv6 etkin ayar için yapılandırma dosyasındaki değeri okur ve tanır.  
+ .NET Framework sürüm 2,0 ve üzeri için, Windows IPv6 'yı destekliyorsa, <xref:System.Net.Dns?displayProperty=nameWithType> sınıfın üyeleri (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntemi) bir sınırlamaya sahip IPv6 adreslerini döndürür. Kullanılmayan DNS üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntemi) IPv6 etkin ayarının yapılandırma dosyasındaki değeri okur ve tanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İnternet Protokolü Sürüm 6](internet-protocol-version-6.md)
+- [Internet Protokolü sürüm 6](internet-protocol-version-6.md)
 - [Yuvalar](sockets.md)
 - [Ağ Ayarları Şeması](../configure-apps/file-schema/network/index.md)
-- [\<ipv6> Elemanı (Ağ Ayarları)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<ipv6>Öğesi (ağ ayarları)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

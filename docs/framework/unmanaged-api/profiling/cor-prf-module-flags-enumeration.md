@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 12e7faa8d9fee7698de9d9734f522d818f225c84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867119"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500825"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS Numaralandırması
 Modülün özelliklerini belirtir.  
@@ -41,27 +41,27 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |COR_PRF_MODULE_DISK|Modül diskten yüklendi.|  
 |COR_PRF_MODULE_NGEN|Modül yerel görüntü Oluşturucu (Ngen. exe) tarafından oluşturuldu.|  
-|COR_PRF_MODULE_DYNAMIC|Modül, <xref:System.Reflection.Emit?displayProperty=nameWithType> ad alanındaki yöntemlerle oluşturulmuştur.|  
+|COR_PRF_MODULE_DYNAMIC|Modül, ad alanındaki metotlar tarafından oluşturulmuştur <xref:System.Reflection.Emit?displayProperty=nameWithType> .|  
 |COR_PRF_MODULE_COLLECTIBLE|Modülün yaşam süresi çöp toplayıcı tarafından yönetiliyor.|  
 |COR_PRF_MODULE_RESOURCE|Modül meta veri içermiyor ve kesinlikle kaynak olarak kullanılır. Bu bitin yönetilen eşdeğeri <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> yöntemidir.|  
 |COR_PRF_MODULE_FLAT_LAYOUT|Modülün bellekteki yerleşimi düz, eşlenmemiş. Bir modülde bu bit kümesi varsa, profil oluşturucular doğrudan Taşınabilir çalıştırılabilir (PE) dosya başlığından bilgi okuyan, üst bilgide göreli sanal adresleri (RVA) yorumlarken dikkatli olması gerekir.|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows Çalışma Zamanı içerik türü bayrağı, Bu modülün derlemesi için meta verilerde ayarlanır. Tüm Windows meta veri (. winmd) modülleri için bu durum budur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COR_PRF_MODULE_FLAGS bitler, [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yönteminin `pdwModuleFlags` output parametresinde profil oluşturucuya döndürülür. İki veya daha fazla bayrak için bazı birleşimler olasıdır, ancak tüm birleşimler mümkün değildir.  
+ COR_PRF_MODULE_FLAGS bitler, `pdwModuleFlags` [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yönteminin çıkış parametresinde profil oluşturucuya döndürülür. İki veya daha fazla bayrak için bazı birleşimler olasıdır, ancak tüm birleşimler mümkün değildir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

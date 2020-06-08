@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8ad04a7a6705b961686317c9473b885fb90676ce
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ea66474e809b3813faceef79a69dd8a639a72a3b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861924"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502801"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 Yöntemi
 Yönetilen bir kod yönerge işaretçisini bir işlevin JıT yeniden derlenmiş sürümüne eşler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetFunctionFromIP2(  
@@ -45,19 +45,19 @@ HRESULT GetFunctionFromIP2(
  dışı İşlevin JıT yeniden derlenmesi sürümünün kimliği.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetFunctionFromIP2`, belirtilen IP adresini içeren işlevin işlev KIMLIĞI yerine JıT-yeniden derlenmesi KIMLIĞINI aldığından, `GetFunctionFromIP`benzer.  
+ `GetFunctionFromIP2`, öğesine benzerdir `GetFunctionFromIP` , ancak BELIRTILEN IP adresini içeren işlevin Işlev kimliği yerıne JIT-yeniden DERLENMESI kimliğini alır.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` bir çöp toplamayı tetikleyebilir, ancak `GetFunctionFromIP` olmayacaktır.  Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2`bir çöp toplama tetiklenebilir, ancak `GetFunctionFromIP` olmayacaktır.  Daha fazla bilgi için bkz. [HRESULT corprof_e_unsupported_call_sequence](corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

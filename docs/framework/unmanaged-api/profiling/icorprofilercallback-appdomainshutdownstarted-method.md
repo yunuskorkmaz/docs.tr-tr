@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1b973cdeaffbec0dad1f2d082c44e8001647fdcc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500461"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback:: AppDomainShutdownStarted Yöntemi
 Profil Oluşturucu bir uygulama etki alanının bir işlemden kaldırılmakta olduğunu bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT AppDomainShutdownStarted(  
@@ -36,19 +36,19 @@ HRESULT AppDomainShutdownStarted(
 
 - `appDomainId`
 
-  \[içinde], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
+  \[' de], uygulamanın derlemelerinin depolandığı etki alanını tanımlar.
 
 ## <a name="remarks"></a>Açıklamalar  
- `appDomainId` değeri `AppDomainShutdownStarted` yöntemi çağrıldıktan sonra herhangi bir bilgi isteği için geçerli değildir — bu, profil oluşturucunun bu uygulama etki alanı hakkında bilgi almak için son şansınız olur.  
+ Değeri, `appDomainId` Yöntem çağrıldıktan sonra herhangi bir bilgi isteği için geçerli değildir `AppDomainShutdownStarted` ; Bu, profil oluşturucunun bu uygulama etki alanı hakkında bilgi almak için en son şansınız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

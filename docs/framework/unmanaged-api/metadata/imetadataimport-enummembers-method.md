@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc3bc5140da0634b5172f6253de3de37bff487f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175492"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492065"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers Yöntemi
-Belirtilen tipteki üyeleri temsil eden ÜyeDef belirteçlerini oyalar.  
+Belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumMembers (
@@ -39,42 +39,42 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [içinde] Üyeleri numaralandırılacak türü temsil eden bir TypeDef belirteci.  
+ 'ndaki Üyeleri numaralandırılmış olan türü temsil eden bir TypeDef belirteci.  
   
  `rMembers`  
- [çıkış] ÜyeDef belirteçlerini tutmak için kullanılan dizi.  
+ dışı MemberDef belirteçlerini tutmak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rMembers` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rMembers` .  
   
  `pcTokens`  
- [çıkış] ÜyeDef belirteçlerinin gerçek sayısı `rMembers`.  
+ dışı İçinde döndürülen MemberDef belirteçlerinin gerçek sayısı `rMembers` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala kaydolacak ÜyeDef belirteçleri yoktur. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumMembers`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir sınıf için üye koleksiyonlarını toplarken, `EnumMembers` yalnızca üyeler (alanlar ve yöntemler, ancak özellikler veya olaylar) doğrudan sınıf üzerinde tanımlanan döndürür. **not** Sınıf, devralınan üyeler için bir uygulama sağlasa bile, sınıfın devraldığı hiçbir üyeyi döndürmez. Devralınan üyeleri doğrulamak için, arayan açıkça devralma zincirinde yürümelidir. Devralma zincirinin kurallarının, özgün meta verileri yayan dile veya derleyiciye bağlı olarak değişebileceğini unutmayın.
+ Bir sınıf için üye koleksiyonları numaralandırılırken, `EnumMembers` doğrudan sınıfında tanımlanmış üyeleri (alanlar ve Yöntemler, ancak Özellikler veya olaylar **değil** ) döndürür. Sınıf, devralınan Üyeler için bir uygulama sağladığından bile, sınıfın devraldığı herhangi bir üye döndürmez. Devralınan üyeleri listelemek için çağıran, devralma zincirini açıkça yürümelidir. Devralma zincirinin kurallarının, özgün meta verileri oluşturan dile veya derleyiciye göre değişebileceğini unutmayın.
 
- Özellikler ve olaylar `EnumMembers`tarafından numaralandırılmez. Bunları sayısallandırmak için [EnumProperties](imetadataimport-enumproperties-method.md) veya [EnumEvents'i](imetadataimport-enumevents-method.md)kullanın.
+ Özellikler ve olaylar tarafından numaralandırılmıyor `EnumMembers` . Bunları listelemek için, [EnumProperties](imetadataimport-enumproperties-method.md) veya [trmevents](imetadataimport-enumevents-method.md)kullanın.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

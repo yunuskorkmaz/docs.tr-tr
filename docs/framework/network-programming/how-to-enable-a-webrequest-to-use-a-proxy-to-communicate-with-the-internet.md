@@ -1,20 +1,21 @@
 ---
 title: 'Nasıl yapılır: İnternet ile İletişim Kurmak Üzere Ara Sunucu Kullanan bir WebRequest’i Etkinleştirme'
+description: Web Isteklerini .NET Framework internet ile iletişim kurmak üzere bir proxy kullanmasını sağlamak için genel bir proxy örneği oluşturmayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
-ms.openlocfilehash: 8b38973e4cb2c83ce32b8a08e54d828a8eeef879
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0fc33cea3f5a7fe4669b110e53e71afdb9561c23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039547"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502541"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Nasıl yapılır: İnternet ile İletişim Kurmak Üzere Ara Sunucu Kullanan bir WebRequest’i Etkinleştirme
 
-Bu örnek, Herhangi <xref:System.Net.WebRequest> bir Internet ile iletişim kurmak için bir proxy kullanmak sağlayacak genel bir proxy örneği oluşturur. Örnek, proxy sunucusunun adlandırılmış `webproxy` olduğunu ve standart HTTP bağlantı noktası olan 80 bağlantı noktasında iletişim kurduğunu varsayar.
+Bu örnek <xref:System.Net.WebRequest> , Internet ile iletişim kurmak için bir proxy kullanmasını sağlayacak küresel bir ara sunucu örneği oluşturur. Örnek, proxy sunucusunun adlandırıldığını `webproxy` ve standart http bağlantı noktası 80 bağlantı noktası üzerinden iletişim kurduğu varsayılmaktadır.
 
 ## <a name="example"></a>Örnek
 
@@ -32,8 +33,8 @@ GlobalProxySelection.Select = proxyObject
 
 Bu örnek şunları gerektirir:
 
-- **System.Net** ad alanı için bir C# [ `using` yönergesi.](../../csharp/language-reference/keywords/using-directive.md)
-- System.Net ad alanı için **Görsel** Temel [ `Imports` ifadesi.](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- **System.net** ad alanı için C# [ `using` yönergesi](../../csharp/language-reference/keywords/using-directive.md) .
+- **System.net** ad alanı için Visual Basic bir [ `Imports` ifade](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

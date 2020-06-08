@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-ms.openlocfilehash: ebb0951322f63b9f8802b7830e55976f824df21a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7f606a12022368183316f985a44693667e38a029
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443407"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489736"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData Yöntemi
 Geçerli meta veri kapsamındaki nesnelerin meta veri imzalarını doğrular.  
@@ -32,14 +32,14 @@ HRESULT ValidateMetaData ();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataValidate Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+- [IMetaDataValidate Arabirimi](imetadatavalidate-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436755"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490802"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps Yöntemi
-Belirtilen TypeDef belirteci tarafından temsil edilen <xref:System.Type> için meta veri bilgilerini döndürür.  
+<xref:System.Type>Belirtilen typedef belirteci tarafından temsil edilen için meta veri bilgilerini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeDefProps (  
@@ -46,27 +46,27 @@ HRESULT GetTypeDefProps (
  dışı Tür adını içeren bir arabellek.  
   
  `cchTypeDef`  
- 'ndaki `szTypeDef`geniş karakterdeki boyut.  
+ 'ndaki Öğesinin geniş karakterdeki boyutu `szTypeDef` .  
   
  `pchTypeDef`  
- dışı `szTypeDef`' de döndürülen geniş karakter sayısı.  
+ dışı İçinde döndürülen geniş karakter sayısı `szTypeDef` .  
   
  `pdwTypeDefFlags`  
- dışı Tür tanımını değiştiren bayrakların bir işaretçisi. Bu değer [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) numaralandırmasından bir bit dır.  
+ dışı Tür tanımını değiştiren bayrakların bir işaretçisi. Bu değer [CorTypeAttr](cortypeattr-enumeration.md) numaralandırmasından bir bit dır.  
   
  `ptkExtends`  
  dışı İstenen türün temel türünü temsil eden bir TypeDef veya TypeRef meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)
