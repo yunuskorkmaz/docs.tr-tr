@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: a9ce9a7a56847efcadf09924ffc56c41f20a1c58
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 2ce58113f40c8eb67a89b6ab6c9bb8f755975bd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499759"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 Yöntemi
 Çöp toplama gerçekleştirildikten sonra profil oluşturucuyu kök başvuruları hakkında bilgilendirir. Bu yöntem [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) yönteminin bir uzantısıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT RootReferences2(  
@@ -38,10 +38,10 @@ HRESULT RootReferences2(
   
 ## <a name="parameters"></a>Parametreler  
  `cRootRefs`  
- 'ndaki `rootRefIds`, `rootKinds`, `rootFlags`ve `rootIds` dizilerindeki öğe sayısı.  
+ 'ndaki `rootRefIds`,, `rootKinds` `rootFlags` , Ve `rootIds` dizilerindeki öğelerin sayısı.  
   
  `rootRefIds`  
- 'ndaki Her biri bir statik nesneye veya yığında bir nesneye başvuran bir nesne kimlikleri dizisi. `rootKinds` dizisindeki öğeler, `rootRefIds` dizisinde karşılık gelen öğeleri sınıflandırmak için bilgi sağlar.  
+ 'ndaki Her biri bir statik nesneye veya yığında bir nesneye başvuran bir nesne kimlikleri dizisi. `rootKinds`Dizideki öğeler dizideki karşılık gelen öğeleri sınıflandırmak için bilgi sağlar `rootRefIds` .  
   
  `rootKinds`  
  'ndaki Çöp toplama kökünün türünü belirten [COR_PRF_GC_ROOT_KIND](cor-prf-gc-root-kind-enumeration.md) değerleri dizisi.  
@@ -50,27 +50,27 @@ HRESULT RootReferences2(
  'ndaki Bir çöp toplama kökünün özelliklerini tanımlayan [COR_PRF_GC_ROOT_FLAGS](cor-prf-gc-root-flags-enumeration.md) değerleri dizisi.  
   
  `rootIds`  
- 'ndaki `rootKinds` parametresinin değerine bağlı olarak çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden UINT_PTR değerleri dizisi.  
+ 'ndaki Parametrenin değerine bağlı olarak çöp toplama köküyle ilgili ek bilgiler içeren bir tamsayıyı işaret eden UINT_PTR değerleri dizisi `rootKinds` .  
   
  Kök türü bir yığın ise, kök KIMLIĞI değişkeni içeren işleve yöneliktir. Bu kök KIMLIĞI 0 ise, işlev CLR 'ye iç olan adlandırılmamış bir işlevdir. Kök türü bir tanıtıcı ise, kök KIMLIĞI çöp toplama tutamacı içindir. Diğer kök türleri için KIMLIK donuk bir değerdir ve göz ardı edilmelidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `rootRefIds`, `rootKinds`, `rootFlags`ve `rootIds` dizileri paralel dizilerdir. Diğer bir deyişle, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`ve `rootIds[i]` hepsi aynı köke sorun.  
+ `rootRefIds`,, `rootKinds` , `rootFlags` Ve `rootIds` dizileri paralel dizilerdir. ,,, `rootRefIds[i]` `rootKinds[i]` `rootFlags[i]` Ve `rootIds[i]` hepsi aynı köke sahip olur.  
   
- Profil oluşturucuyu bildirmek için hem `RootReferences` hem de `RootReferences2` çağırılır. Profil oluşturucular, genellikle bir yöntemi veya diğerini uygular, çünkü `RootReferences2` geçirilen bilgiler, `RootReferences`geçirilen bir üst kümesidir.  
+ Her ikisi de `RootReferences` `RootReferences2` profil oluşturucuyu bildirmek için çağırılır. Profil oluşturucular, normalde bir yöntemi veya diğerini uygular, ancak geçirilen bilgiler `RootReferences2` geçilen bir üst kümesidir `RootReferences` .  
   
- `rootRefIds` içindeki girişlerin sıfır olması mümkündür. Bu, karşılık gelen kök başvurusunun null olduğunu ve yönetilen yığında bir nesneye başvurmayacağı anlamına gelir.  
+ ' Deki girişlerin `rootRefIds` sıfır olması mümkündür. Bu, karşılık gelen kök başvurusunun null olduğunu ve yönetilen yığında bir nesneye başvurmayacağı anlamına gelir.  
   
- Çöp toplama nesneleri eski adreslerden yeni adreslere taşıma işleminin ortasında olabileceğinden, `RootReferences2` tarafından döndürülen nesne kimlikleri geri çağırma sırasında geçerli değildir. Bu nedenle, profil oluşturucular `RootReferences2` çağrısı sırasında nesneleri incelemeyi denememelidir. [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında tüm nesneler yeni konumlarına taşınır ve güvenle incelenebilir.  
+ Tarafından döndürülen nesne kimlikleri `RootReferences2` geri çağırma sırasında geçerli değildir çünkü çöp toplama nesneleri eski adreslerden yeni adreslere taşıma işleminin ortasında olabilir. Bu nedenle, profil oluşturucular bir çağrı sırasında nesneleri incelemeyi denememelidir `RootReferences2` . [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md) çağrıldığında tüm nesneler yeni konumlarına taşınır ve güvenle incelenebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
