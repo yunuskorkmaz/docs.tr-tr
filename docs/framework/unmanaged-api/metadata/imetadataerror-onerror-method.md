@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2252f58af1a319d953fb320a99fad1cfec3dca0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177392"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492726"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError Yöntemi
 Meta veri birleştirme sırasında oluşan hataların bildirimini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT OnError (  
@@ -36,20 +36,20 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parametreler  
  `hrError`  
- [içinde] HRESULT hata değeri arama yöntemine döndürülür.  
+ 'ndaki Çağırma yöntemine döndürülen HRESULT hata değeri.  
   
  `token`  
- [içinde] Hata oluştuğunda birleştirilen kod nesnesinin meta veri belirteci.  
+ 'ndaki Hata oluştuğunda birleştirilmekte olan kod nesnesinin meta veri belirteci.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataError Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+- [IMetaDataError Arabirimi](imetadataerror-interface.md)

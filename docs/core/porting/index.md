@@ -3,12 +3,12 @@ title: .NET Framework’ten .NET Core’a taşıma
 description: Bir .NET Framework projesi .NET Core 'a taşıma konusunda yararlı bulabileceğiniz yardım alabileceğiniz işlem ve bulma araçlarını anlayın.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158298"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502775"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework .NET Core 'a taşıma ile genel bakış
 
@@ -38,7 +38,10 @@ Bir çözümde birden çok proje olduğunda, projeleri belirli bir sırada ele a
 Sipariş projelerinin geçirilmesi gerektiğini belirlemek için aşağıdaki araçları kullanabilirsiniz:
 
 - [Visual Studio 'Daki bağımlılık diyagramları](/visualstudio/modeling/create-layer-diagrams-from-your-code) , bir çözümde kodun yönlendirilmiş bir grafiğini oluşturabilir.
-- Proje `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` başvuruları listesini içeren bir JSON belgesi oluşturmak için öğesini çalıştırın.
+- `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json`Proje başvuruları listesini içeren bir JSON belgesi oluşturmak için öğesini çalıştırın.
+- Derlemelerin bağımlılık diyagramını almak için [.net taşınabilirlik Çözümleyicisi](../../standard/analyzers/portability-analyzer.md) `-r DGML` 'ni anahtarla çalıştırın. Daha fazla bilgi için [buraya](../../standard/analyzers/portability-analyzer.md#solution-wide-view)bakın.
+
+Bağımlılık bilgilerine sahip olduğunuzda, bu bilgileri, yaprak düğümlerde başlamak ve sonraki bölümde yer alan adımları uygulayarak bağımlılık ağacının yolunu kullanmak için kullanabilirsiniz.
 
 ## <a name="per-project-steps"></a>Proje adımları başına
 
@@ -46,7 +49,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
 1. `packages.config` [Visual Studio 'daki Dönüştürme aracıyla](/nuget/consume-packages/migrate-packages-config-to-package-reference)tüm bağımlılıklarınızı [packagereference](/nuget/consume-packages/package-references-in-project-files) biçimine dönüştürün.
 
-   Bu adım, bağımlılıklarınızı eski `packages.config` biçimden dönüştürmeyi içerir. `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, yalnızca bir projede doğrudan kullandığınız bağımlılıklara gerek duyar, bu da daha sonra yönetmeniz gereken bağımlılıkların sayısını azaltarak daha sonra daha kolay bir hale getirir.
+   Bu adım, bağımlılıklarınızı eski biçimden dönüştürmeyi içerir `packages.config` . `packages.config`, .NET Core üzerinde çalışmaz, bu nedenle paket bağımlılıklarınız varsa bu dönüştürme gereklidir. Ayrıca, yalnızca bir projede doğrudan kullandığınız bağımlılıklara gerek duyar, bu da daha sonra yönetmeniz gereken bağımlılıkların sayısını azaltarak daha sonra daha kolay bir hale getirir.
 
 1. Proje dosyanızı yeni SDK stili dosya yapısına dönüştürün. .NET Core için yeni projeler oluşturabilir ve kaynak dosyaları üzerine kopyalayabilir ya da mevcut proje dosyanızı bir araçla dönüştürmeyi deneyebilirsiniz.
 
@@ -66,7 +69,7 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 
    Çözümleyici tarafından oluşturulan raporları okurken önemli bilgiler, kullanılmakta olan gerçek API 'lardır ve hedef platform için desteğin yüzdesi değildir. Birçok API .NET Standard/çekirdek içinde eşdeğer seçeneklere sahiptir ve bu nedenle kitaplığınızın veya uygulamanızın API için gereken senaryoları anlamak, taşınabilirliğin belirlenmesini sağlamaya yardımcı olur.
 
-   API 'Lerin eşdeğer olmadığı bazı durumlar vardır ve platformlar için bazı derleyici Önişlemci yönergeleri (yani, `#if NET45`) yapmanız gerekir. Bu noktada, projeniz .NET Framework hedeflemeye devam eder. Bu hedeflenen durumların her biri için, bir senaryo olarak anlayabileceği iyi bilinen koşullar kullanılması önerilir.  Örneğin, .NET Core 'da AppDomain desteği sınırlıdır, ancak derlemeleri yükleme ve kaldırma senaryosunda .NET Core 'da kullanılamayan yeni bir API vardır. Bu kodu kodda işlemenin yaygın bir yolu şöyle olacaktır:
+   API 'Lerin eşdeğer olmadığı bazı durumlar vardır ve platformlar için bazı derleyici Önişlemci yönergeleri (yani,) yapmanız gerekir `#if NET45` . Bu noktada, projeniz .NET Framework hedeflemeye devam eder. Bu hedeflenen durumların her biri için, bir senaryo olarak anlayabileceği iyi bilinen koşullar kullanılması önerilir.  Örneğin, .NET Core 'da AppDomain desteği sınırlıdır, ancak derlemeleri yükleme ve kaldırma senaryosunda .NET Core 'da kullanılamayan yeni bir API vardır. Bu kodu kodda işlemenin yaygın bir yolu şöyle olacaktır:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -78,9 +81,9 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
    #endif
    ```
 
-1. Bazı platformlarda ve diğer olası Uyumluluk sorunlarından oluşan <xref:System.PlatformNotSupportedException> API 'leri tanımlamak için, projelerinize [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) 'ni yükler.
+1. Bazı platformlarda ve diğer olası Uyumluluk sorunlarından oluşan API 'Leri tanımlamak için, projelerinize [.NET API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) 'ni yükler <xref:System.PlatformNotSupportedException> .
 
-   Bu araç taşınabilirlik Çözümleyicisi ile benzerdir, ancak kodun .NET Core üzerinde oluşturulup oluşturulmayacağını çözümlemek yerine, bir API 'yi çalışma zamanında oluşturacak şekilde <xref:System.PlatformNotSupportedException> kullanıp kullanmayacağınızı analiz eder. .NET Framework 4.7.2 veya üzeri bir sürümü taşıyorsanız, bu yaygın olmasa da kontrol etmeniz iyidir. .NET Core üzerinde özel durumlar oluşturan API 'Ler hakkında daha fazla bilgi için bkz. [.NET Core üzerinde her zaman özel durum oluşturan API 'ler](../compatibility/unsupported-apis.md).
+   Bu araç taşınabilirlik Çözümleyicisi ile benzerdir, ancak kodun .NET Core üzerinde oluşturulup oluşturulmayacağını çözümlemek yerine, bir API 'yi çalışma zamanında oluşturacak şekilde kullanıp kullanmayacağınızı analiz eder <xref:System.PlatformNotSupportedException> . .NET Framework 4.7.2 veya üzeri bir sürümü taşıyorsanız, bu yaygın olmasa da kontrol etmeniz iyidir. .NET Core üzerinde özel durumlar oluşturan API 'Ler hakkında daha fazla bilgi için bkz. [.NET Core üzerinde her zaman özel durum oluşturan API 'ler](../compatibility/unsupported-apis.md).
 
 1. Bu noktada, .NET Core 'u (genellikle uygulamalar için) veya .NET Standard (kitaplıklar için) hedeflemek için geçiş yapabilirsiniz.
 
@@ -109,6 +112,6 @@ Projenizi .NET Core 'a taşıma sırasında aşağıdaki işlemi kullanmanızı 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Analyze dependencies](third-party-deps.md)
-> [ASP.NET Core geçiş için](/aspnet/core/migration/proper-to-2x) bağımlılıklar[paketi NuGet paketi](../deploying/creating-nuget-packages.md)
-> ASP.net
+> [Bağımlılıkları çözümle](third-party-deps.md) 
+>  [Paket NuGet paketi](../deploying/creating-nuget-packages.md) 
+>  [ASP.NET Core geçişe ASP.net](/aspnet/core/migration/proper-to-2x)

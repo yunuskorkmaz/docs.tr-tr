@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175531"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492336"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes Yöntemi
-Belirtilen tür veya üyeile ilişkili özel öznitelik tanım belirteçleri güncelleştirir.  
+Belirtilen tür veya üyeyle ilişkili özel öznitelik tanımı belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumCustomAttributes (
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Döndürülen sayıya işaretçi.  
+ [in, out] Döndürülen Numaralandırıcı için bir işaretçi.  
   
  `tk`  
- [içinde] Numaralandırma kapsamı için bir belirteç veya tüm özel öznitelikler için sıfır.  
+ 'ndaki Numaralandırma kapsamı için bir belirteç veya tüm özel öznitelikler için sıfır.  
   
  `tkType`  
- [içinde] Numaralandırılacak özniteliklerin türünün veya tüm türlerin oluşturucusu `null` için bir belirteç.  
+ 'ndaki Numaralandırılacak özniteliklerin türünün veya `null` tüm türlerin oluşturucusunun belirteci.  
   
  `rCustomAttributes`  
- [çıkış] Özel öznitelik belirteçleri dizisi.  
+ dışı Özel öznitelik belirteçlerinin dizisi.  
   
  `cMax`  
- [içinde] `rCustomAttributes` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rCustomAttributes` .  
   
  `pcCustomAttributes`  
- [çıkış, isteğe bağlı] Döndürülen belirteç değerlerinin `rCustomAttributes`gerçek sayısı.  
+ [Out, isteğe bağlı] İçinde döndürülen belirteç değerlerinin gerçek sayısı `rCustomAttributes` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala' da özel öznitelikler yoktur. Bu durumda, `pcCustomAttributes` sıfırdır.|  
+|`S_OK`|`EnumCustomAttributes`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak özel öznitelik yok. Bu durumda, `pcCustomAttributes` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

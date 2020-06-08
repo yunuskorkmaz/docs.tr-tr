@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177065"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500721"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 İşlevi
-Profiloluşturucuya denetimin bir işleve geçirildiğini belirtir ve yığın çerçevesi ve işlev bağımsız değişkenleri hakkında bilgi sağlar. Bu işlev [FunctionEnter](functionenter-function.md) işlevinin yerini alar.  
+Profil oluşturucuyu denetimin bir işleve geçtiğini ve yığın çerçevesi ve işlev bağımsız değişkenleri hakkında bilgi sağladığını bildirir. Bu işlev [FunctionEnter](functionenter-function.md) işlevinin yerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 void __stdcall FunctionEnter2 (  
@@ -39,47 +39,47 @@ void __stdcall FunctionEnter2 (
 
 - `funcId`
 
-  \[in] Denetimin geçtiği işlevin tanımlayıcısı.
+  \[' de] denetimin geçirildiği işlevin tanımlayıcısı.
 
 - `clientData`
 
-  \[in] Profiloluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevini kullanarak belirttiği remapped işlev tanımlayıcısı.
+  \[' de] profil oluşturucunun daha önce [FunctionIDMapper](functionidmapper-function.md) işlevini kullanarak belirttiği, yeniden eşlenen işlev tanımlayıcısı.
   
 - `func`
 
-  \[in] `COR_PRF_FRAME_INFO` Yığın çerçevesi hakkındaki bilgilere işaret eden bir değer.
+  \[' de] `COR_PRF_FRAME_INFO` yığın çerçevesi hakkındaki bilgileri gösteren bir değer.
   
-  Profil oluşturucu [bunu, ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yöntemindeki yürütme motoruna geri geçirilebilen opak bir kulp olarak ele almalıdır.  
+  Profil Oluşturucu bunu [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) yönteminde yürütme motoruna geri geçirilebilecek donuk bir tanıtıcı olarak kabul etmelidir.  
   
 - `argumentInfo`
 
-  \[in] İşlevin bağımsız değişkenlerinin belleğindeki konumları belirten [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) bir yapıya işaretçi.
+  \[' de] işlevin bağımsız değişkenlerinin belleğindeki konumları belirten [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) yapısına yönelik bir işaretçi.
 
-  Bağımsız değişken bilgilerine erişmek `COR_PRF_ENABLE_FUNCTION_ARGS` için bayrak ayarlanmalıdır. Profil oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
+  Bağımsız değişken bilgilerine erişebilmek için `COR_PRF_ENABLE_FUNCTION_ARGS` bayrağın ayarlanması gerekir. Profil Oluşturucu, olay bayraklarını ayarlamak için [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) yöntemini kullanabilir.
 
 ## <a name="remarks"></a>Açıklamalar  
- Değerler değişebileceği `func` `argumentInfo` veya yok `FunctionEnter2` olabileceğinden, işlev döndükten sonra parametrelerin değerleri geçerli değildir.  
+ Ve parametrelerinin değerleri, `func` `argumentInfo` `FunctionEnter2` değerler değişeceğinden veya yok edileceği için döndüğünde geçerli değildir.  
   
- İşlev `FunctionEnter2` bir geri aramadır; bunu uygulamanız gerekir. Uygulama `__declspec`, (`naked`) depolama sınıfı özniteliği kullanmalıdır.  
+ `FunctionEnter2`İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec` ( `naked` ) depolama sınıfı özniteliğini kullanması gerekir.  
   
- Yürütme motoru, bu işlevi aramadan önce herhangi bir kayıt kaydetmez.  
+ Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
-- Girişte, kayan nokta birimindekiler (FPU) dahil olmak üzere kullandığınız tüm kayıtları kaydetmeniz gerekir.  
+- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
   
-- Çıkışta, arayan tarafından itilen tüm parametreleri patlatarak yığını geri yüklemeniz gerekir.  
+- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
- Çöp toplamayı `FunctionEnter2` geciktireceği için uygulanması engellememelidir. Yığın çöp toplama dostu bir durumda olmayabilir, çünkü uygulama bir çöp toplama girişimi olmamalıdır. Bir çöp toplama denenir, çalışma süresi `FunctionEnter2` döndürülene kadar engellenir.  
+ , `FunctionEnter2` Atık toplamayı ertelendirip, uygulamanın engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı `FunctionEnter2` dönüşene kadar engeller.  
   
- Ayrıca, `FunctionEnter2` işlev yönetilen koda çağrı yapmamalı veya herhangi bir şekilde yönetilen bir bellek ayırmasına neden olmamalıdır.  
+ Ayrıca, `FunctionEnter2` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** CorProf.idl  
+ **Üst bilgi:** CorProf. IDL  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
