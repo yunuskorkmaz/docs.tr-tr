@@ -1,5 +1,6 @@
 ---
 title: TCP Hizmetleri Kullanma
+description: TcpClient sınıfı, TCP kullanarak veri istemek ve almak için bir yuva oluşturmak üzere ayrıntıları soyutlar. Veri okumak ve yazmak için akış işleme .NET Framework kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,22 +17,22 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 329701e8f11ca7f87c40ee8b2cc6a337435242b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501969"
 ---
 # <a name="using-tcp-services"></a>TCP Hizmetleri Kullanma
 
-Sınıf, <xref:System.Net.Sockets.TcpClient> TCP kullanarak bir Internet kaynağından veri ister. **TcpClient'ın** yöntemleri ve özellikleri, TCP kullanarak veri istemek ve almak <xref:System.Net.Sockets.Socket> için ayrıntıları özetler. Uzak aygıta bağlantı bir akış olarak temsil edildiğinden, veriler .NET Framework akışı işleme teknikleri ile okunabilir ve yazılabilir.
+<xref:System.Net.Sockets.TcpClient>Sınıfı, TCP kullanarak bir Internet kaynağından veri ister. **TcpClient** 'ın yöntemleri ve ÖZELLIKLERI, <xref:System.Net.Sockets.Socket> TCP kullanarak veri istemek ve almak için oluşturma ayrıntılarını soyutlar. Uzak cihazla bağlantı bir akış olarak temsil ettiğinden, veriler .NET Framework akış işleme teknikleriyle okunabilir ve yazılabilir.
 
-TCP protokolü uzak bir uç nokta ile bir bağlantı kurar ve daha sonra veri paketleri göndermek ve almak için bu bağlantıyı kullanır. TCP, veri paketlerinin uç noktaya gönderilmesini ve geldiklerinde doğru sırada bir araya getirildiğinden sorumludur.
+TCP protokolü, uzak bir uç nokta ile bağlantı kurar ve ardından bu bağlantıyı veri paketleri göndermek ve almak için kullanır. TCP, veri paketlerinin uç noktaya gönderilmesini ve ulaştığında doğru sırada derlenmesinden emin olmanın sorumluluğundadır.
 
-TCP bağlantısı oluşturmak için, gereksinim duyduğunuz hizmeti barındıran ağ aygıtının adresini bilmeniz ve hizmetin iletişim kurmak için kullandığı TCP bağlantı noktasını bilmeniz gerekir. Internet Atanmış Sayılar Yetkilisi (Iana), ortak hizmetler için bağlantı noktası numaralarını tanımlar (bkz. [Hizmet Adı ve Taşıma Protokolü Bağlantı Noktası Numarası Kayıt Defteri).](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) Iana listesinde olmayan hizmetlerin bağlantı noktası numaraları 1.024 ile 65.535 arasında olabilir.
+TCP bağlantısı kurmak için, ihtiyacınız olan hizmeti barındıran ağ cihazının adresini bilmeniz ve hizmetin iletişim kurmak için kullandığı TCP bağlantı noktasını bilmeniz gerekir. Internet atanmış numaralar yetkilisi (IANA), ortak hizmetler için bağlantı noktası numaralarını tanımlar (bkz. [hizmet adı ve Aktarım Protokolü bağlantı noktası numarası kayıt defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). IANA listesinde bulunmayan hizmetler 1.024-65.535 aralığında bağlantı noktası numaralarına sahip olabilir.
 
-Aşağıdaki örnek, TCP bağlantı noktası 13'teki bir zaman sunucusuna bağlanmak için bir **TcpClient** ayarlıyor:
+Aşağıdaki örnek, TCP bağlantı noktası 13 ' te bir zaman sunucusuna bağlanmak için bir **TcpClient** ayarlamayı göstermektedir:
 
 ```vb
 Imports System.Net.Sockets
@@ -105,9 +106,9 @@ public class TcpTimeClient
 }
 ```
 
-<xref:System.Net.Sockets.TcpListener>gelen istekler için bir TCP bağlantı noktasını izlemek ve ardından istemciyle bağlantıyı yöneten bir **Soket** veya **TcpClient** oluşturmak için kullanılır. Yöntem <xref:System.Net.Sockets.TcpListener.Start%2A> dinlemeyi sağlar ve <xref:System.Net.Sockets.TcpListener.Stop%2A> yöntem bağlantı noktasında dinlemeyi devre dışı kılabilir. Yöntem <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> gelen bağlantı isteklerini kabul eder ve isteği işlemek için bir <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> **TcpClient** oluşturur ve yöntem gelen bağlantı isteklerini kabul eder ve isteği işlemek için bir **Soket** oluşturur.
+<xref:System.Net.Sockets.TcpListener>, gelen istekler için bir TCP bağlantı noktasını izlemek ve ardından istemciyle bağlantıyı yöneten bir **yuva** ya da **TcpClient** oluşturmak için kullanılır. <xref:System.Net.Sockets.TcpListener.Start%2A>Yöntemi dinlemeyi etkinleştirilir ve <xref:System.Net.Sockets.TcpListener.Stop%2A> yöntemi bağlantı noktasında dinlemeyi devre dışı bırakır. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>Yöntemi gelen bağlantı isteklerini kabul eder ve isteği işlemek için bir **TcpClient** oluşturur ve <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> yöntemi gelen bağlantı isteklerini kabul eder ve Isteği işlemek için bir **yuva** oluşturur.
 
-Aşağıdaki örnek, TCP bağlantı noktası 13'ü izlemek için bir **TcpListener** kullanarak bir ağ zaman sunucusu oluşturmayı göstermektedir. Gelen bir bağlantı isteği kabul edildiğinde, zaman sunucusu ana bilgisayar sunucusundan geçerli tarih ve saatle yanıt verir.
+Aşağıdaki örnek, TCP bağlantı noktası 13 ' ü izlemek için bir **TcpListener** kullanarak bir ağ zaman sunucusu oluşturmayı göstermektedir. Gelen bir bağlantı isteği kabul edildiğinde, sunucu, ana bilgisayar sunucusundan geçerli tarih ve saat ile yanıt verir.
 
 ```vb
 Imports System.Net

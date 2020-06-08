@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-ms.openlocfilehash: ff9827174e43fd62f3a995e9f477c6fff66b227a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c991c0af845bc6825db6b3bf258fe0809d5db804
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449960"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503706"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods Yöntemi
 Geçerli meta veri kapsamındaki çözümlenmemiş yöntemleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumUnresolvedMethods (  
@@ -44,33 +44,33 @@ HRESULT EnumUnresolvedMethods (
  dışı MemberDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rMethods` dizisinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rMethods` .  
   
  `pcTokens`  
- dışı `rMethods`' de döndürülen MemberDef belirteçleri sayısı.  
+ dışı İçinde döndürülen MemberDef belirteçleri sayısı `rMethods` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumUnresolvedMethods`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çözümlenmemiş bir yöntem, tanımlanan ancak uygulanmayan bir yöntemdir. Yöntem `miForwardRef` işaretlenmişse ve `mdPinvokeImpl` ya da `miRuntime` sıfıra ayarlandıysa, bir yöntem numaralandırmaya dahil edilir. Diğer bir deyişle, çözümlenmemiş bir yöntem `miForwardRef` işaretlenen, ancak yönetilmeyen kodda uygulanmayan (PInvoke aracılığıyla ulaşılan) veya çalışma zamanı tarafından dahili olarak uygulanan bir sınıf yöntemidir  
+ Çözümlenmemiş bir yöntem, tanımlanan ancak uygulanmayan bir yöntemdir. Yöntem işaretlenmişse `miForwardRef` ve ya da `mdPinvokeImpl` sıfır olarak ayarlandıysa, bir yöntem numaralandırmaya dahil edilir `miRuntime` . Diğer bir deyişle, çözümlenmemiş bir yöntem, `miForwardRef` yönetilmeyen kodda uygulanmayan, ancak bir çalışma zamanının kendisi tarafından dahili olarak uygulanan bir sınıf yöntemidir  
   
  Sabit listesi, modül kapsamında (genel) veya arabirimlerde ya da soyut sınıflarda tanımlanmış tüm yöntemleri dışlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

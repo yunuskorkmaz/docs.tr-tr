@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177224"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503646"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps Metodu
-Belirtilen meta veri belirteci tarafından başvurulan üyenin <xref:System.Type> adı, ikili imza ve göreli sanal adresi de dahil olmak üzere, belirli bir üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *mb* bir MethodDef ise, **getMethodProps** denir; *mb* bir FieldDef ise, o zaman **GetFieldProps** denir. Ayrıntılar için diğer yöntemlere bakın.
+Belirtilen <xref:System.Type> meta veri belirtecinin başvurduğu üyenin adı, ikili imzası ve göreli sanal adresi de dahil olmak üzere, belirtilen üye tanımı için meta verilerde depolanan bilgileri alır. Bu basit bir yardımcı yöntemdir: *MB* bir MethodDef Ise **GetMethodProps** çağrılır; *MB* bir fieldDef Ise, **GetFieldProps** çağırılır. Ayrıntılar için diğer yöntemlere bakın.
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMemberProps (  
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mb`  
- [içinde] İlişkili meta verileri almak için üyeye başvurur belirteç.  
+ 'ndaki İlişkili meta verileri almak için üyeye başvuran belirteç.  
   
  `pClass`  
- [çıkış] Üyenin sınıfını temsil eden meta veri belirteci için bir işaretçi.  
+ dışı Üyenin sınıfını temsil eden meta veri belirtecinin işaretçisi.  
   
  `szMember`  
- [çıkış] Üyenin adı.  
+ dışı Üyenin adı.  
   
  `cchMember`  
- [içinde] `szMember` Arabellek geniş karakterlerboyutu.  
+ 'ndaki Arabelleğin geniş karakterdeki boyutu `szMember` .  
   
  `pchMember`  
- [çıkış] Döndürülen adın geniş karakterlerindeki boyutu.  
+ dışı Döndürülen adın geniş karakterdeki boyutu.  
   
  `pdwAttr`  
- [çıkış] Üyeye uygulanan tüm bayrak değerleri.  
+ dışı Üyeye uygulanan bayrak değerleri.  
   
  `ppvSigBlob`  
- [çıkış] Üyenin ikili meta veri imzasına işaretçi.  
+ dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pcbSigBlob`  
- [çıkış] `ppvSigBlob`Baytboyutu.  
+ dışı Bayt cinsinden boyut `ppvSigBlob` .  
   
  `pulCodeRVA`  
- [çıkış] Üyenin göreli sanal adresine işaretçi.  
+ dışı Üyenin göreli sanal adresine yönelik bir işaretçi.  
   
  `pdwImplFlags`  
- [çıkış] Üyeyle ilişkili herhangi bir yöntem uygulama bayrakları.  
+ dışı Üyeyle ilişkili herhangi bir yöntem uygulama bayrağı.  
   
  `pdwCPlusTypeFlag`  
- [çıkış] Bir bayrak. <xref:System.ValueType> Bu `ELEMENT_TYPE_*` değerlerden biridir.
+ dışı Bir işareti olan bayrak <xref:System.ValueType> . Bu `ELEMENT_TYPE_*` değerlerden biridir.
   
  `ppValue`  
- [çıkış] Bu üye tarafından döndürülen sabit bir dize değeri.  
+ dışı Bu üye tarafından döndürülen sabit dize değeri.  
   
  `pcchValue`  
- [çıkış] Bir dize tutmuyorsa `ppValue` `ppValue` , veya sıfır karakter boyutu.  
+ dışı Karakter cinsinden boyut `ppValue` veya dize yoksa sıfır `ppValue` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

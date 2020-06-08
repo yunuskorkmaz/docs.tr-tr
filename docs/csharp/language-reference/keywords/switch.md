@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493675"
 ---
 # <a name="switch-c-reference"></a>Switch (C# Başvurusu)
 
@@ -86,7 +86,7 @@ Eşleştirme ifadesiyle eşleşen bir Case etiketi ile Switch bölümündeki dey
 
 Her Case etiketi, Match ifadesiyle Karşılaştırılacak bir model belirtir ( `caseSwitch` Önceki örneklerde bulunan değişkeni). Eşleşiyorsa denetim, **ilk** eşleşen Case etiketini içeren Switch bölümüne aktarılır. Hiçbir Case etiket deseninin eşleşme ifadesiyle eşleşmesi halinde, denetim varsa Case etiketi ile bölüme aktarılır `default` . `default`Böyle bir durum yoksa, herhangi bir switch bölümünde hiçbir deyim yürütülmez ve denetim deyimin dışına aktarılır `switch` .
 
-`switch`Deyimle ve model eşleştirme hakkında daha fazla bilgi için bkz. [ `switch` deyimle eşleşen model](#pattern) bölümü.
+`switch`Deyimle ve model eşleştirme hakkında daha fazla bilgi için bkz. [ `switch` deyimle eşleşen model](#pattern-matching with-the-switch-statement) bölümü.
 
 C# 6 yalnızca sabit bir stili desteklediğinden ve sabit değerlerin yinelenmesinde izin vermediğinden, Case etiketleri birbirini dışlayan değerleri tanımlar ve yalnızca bir desenler eşleştirme ifadesiyle eşleştirebilir. Sonuç olarak, `case` deyimlerin görünme sırası önemli değildir.
 
@@ -100,7 +100,7 @@ Bu sorunu düzeltebilir ve iki şekilde derleyici uyarısını ortadan kaldırab
 
 - Anahtar bölümlerinin sırasını değiştirerek.
 
-- Etikette bir [WHERE yan tümcesi](#when) kullanarak `case` .
+- Etikette bir [WHERE yan tümcesi](#the-case-statement-and-the-when-clause) kullanarak `case` .
 
 ## <a name="the-default-case"></a>`default`Büyük/küçük harf
 
@@ -108,7 +108,7 @@ Bu `default` durumda, eşleşme ifadesi başka bir etiketle eşleşmezse yürüt
 
 `default`Durum, deyimdeki herhangi bir sırada görünebilir `switch` . Kaynak kodundaki sıralarından bağımsız olarak, tüm Etiketler hesaplandıktan sonra her zaman son değerlendirilir `case` .
 
-## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern"></a>Deyimle eşleşen desenler `switch`
+## <a name="pattern-matching-with-the-switch-statement"></a>Deyimle eşleşen desenler `switch`
 
 Her `case` deyim, eşleşme ifadesiyle eşleşiyorsa, kapsayan anahtar bölümünün yürütülmesine neden olan bir model tanımlar. Tüm C# sürümleri sabit bir stili destekler. Kalan desenler C# 7,0 ' den başlayarak desteklenir.
 
@@ -185,7 +185,7 @@ Model eşleştirmesi olmadan bu kod aşağıdaki gibi yazılabilir. Tür desenin
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case`Deyimi ve `when` yan tümcesi
+## <a name="the-case-statement-and-the-when-clause"></a>`case`Deyimi ve `when` yan tümcesi
 
 C# 7,0 ' den itibaren, Case deyimlerinin birbirini `when` dışlanması gerektiğinden, Case ifadesinin true olarak değerlendirilmesi için karşılanması gereken ek bir koşul belirtmek üzere bir yan tümce ekleyebilirsiniz. `when`Yan tümce, Boolean değer döndüren herhangi bir ifade olabilir.
 
@@ -205,4 +205,4 @@ Daha fazla bilgi için [C# dil belirtiminde](/dotnet/csharp/language-reference/l
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# anahtar sözcükleri](index.md)
 - [if-else](if-else.md)
-- [Desen Eşleştirme](../../pattern-matching.md)
+- [Model eşleştirme](../../pattern-matching.md)

@@ -1,5 +1,6 @@
 ---
-title: Ağ programlamada güvenlik - .NET Framework
+title: Ağ programlamasında güvenlik-.NET Framework
+description: .NET Framework System.Net ad alanı sınıflarının desteklediği popüler uygulama kimlik doğrulama mekanizmaları ve kod erişim izinleri hakkında bilgi edinin.
 ms.date: 03/14/2018
 helpviewer_keywords:
 - sending data, Internet security
@@ -12,32 +13,32 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: bbe30292e474c9cb5956d96fbbae4d78d464d603
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 546e7223ba4af3029a798fb3edfb503c07e1ab4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989239"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502177"
 ---
 # <a name="security-in-network-programming"></a>Ağ programlamada güvenlik
 
-.NET Framework <xref:System.Net> ad alanı sınıfları, popüler Internet uygulaması kimlik doğrulama mekanizmaları ve .NET Framework kodu erişim izinleri için yerleşik destek sağlar.  
+.NET Framework <xref:System.Net> ad alanı sınıfları, popüler Internet uygulaması kimlik doğrulama mekanizmaları ve .NET Framework kod erişim izinleri için yerleşik destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu bölümde
 
-[.NET Framework ile Taşıma Katmanı Güvenliği (TLS) en iyi uygulamaları](tls.md)  
-TLS'nin en iyi uygulamalarını .NET Framework ile açıklar.
+[.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](tls.md)  
+.NET Framework ile ilgili en iyi TLS uygulamalarını açıklar.
 
 [Güvenli Yuva Katmanı Kullanma](using-secure-sockets-layer.md)  
-Güvenli Soket katmanı (SSL) bağlantılarının nasıl kullanılacağını açıklar.  
+Güvenli Yuva Katmanı (SSL) bağlantılarının nasıl kullanılacağını açıklar.  
   
 [İnternet Kimlik Doğrulaması](internet-authentication.md)  
-HTTP sunucularına kimlik doğrulama bağlantıları oluşturmak için HTTP kimlik doğrulama yöntemlerinin nasıl kullanılacağını açıklar.  
+Http kimlik doğrulaması yöntemlerinin HTTP sunucularına kimliği doğrulanmış bağlantılar oluşturmak için nasıl kullanılacağını açıklar.  
   
 [Web ve Yuva İzinleri](web-and-socket-permissions.md)  
-Internet bağlantılarını kullanan uygulamalar için kod erişim güvenliğinin nasıl ayarlanır olduğunu açıklar.  
+Internet bağlantıları kullanan uygulamalar için kod erişimi güvenliğinin nasıl ayarlanacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili bölümler
 
 [.NET Framework'te Ağ Programlaması](index.md)  
-Sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad boşluklarını tanıtır.
+, <xref:System.Net> Ve ad alanlarındaki sınıfları tanıtır <xref:System.Net.Sockets> .

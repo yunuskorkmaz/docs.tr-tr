@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804685"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501546"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager Arabirimi
 Ortak dil çalışma zamanının (CLR) konak tarafından sağlanan g/ç tamamlama bağlantı noktalarıyla etkileşime girmesine izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[Bind Yöntemi](ihostiocompletionmanager-bind-method.md)|Bir tanıtıcıyı g/ç tamamlama bağlantı noktasına bağlar.|  
 |[CloseIoCompletionPort Yöntemi](ihostiocompletionmanager-closeiocompletionport-method.md)|Daha önceki bir çağrısıyla oluşturulmuş bir bağlantı noktasını kapatır `CreateIoCompletionPort` .|  
@@ -36,7 +36,7 @@ Ortak dil çalışma zamanının (CLR) konak tarafından sağlanan g/ç tamamlam
 |[GetMaxThreads Yöntemi](ihostiocompletionmanager-getmaxthreads-method.md)|Ana bilgisayarın g/ç isteklerine hizmet vermek için lot olarak barındırabileceği en fazla iş parçacığı sayısını alır.|  
 |[GetMinThreads Yöntemi](ihostiocompletionmanager-getminthreads-method.md)|Hizmetin g/ç isteklerine hizmet vermek için sağladığı en az iş parçacığı sayısını alır.|  
 |[InitializeHostOverlapped Yöntemi](ihostiocompletionmanager-initializehostoverlapped-method.md)|Bir g/ç isteğiyle ilgili özel verileri başlatmak için ana bilgisayara bir fırsat sağlar.|  
-|[SetCLRIoCompletionManager Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR tarafından uygulanan bir [ıclriocompletionmanager](iclriocompletionmanager-interface.md) örneğine yönelik arabirim işaretçisi ile konağa sağlar.|  
+|[SetCLRIoCompletionManager Yöntemi](ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR tarafından uygulanan bir [ıclriocompletionmanager](iclriocompletionmanager-interface.md) örneğine yönelik arabirim işaretçisi ile konağa sağlar.|  
 |[SetMaxThreads Yöntemi](ihostiocompletionmanager-setmaxthreads-method.md)|Ana bilgisayar tarafından g/ç isteklerine hizmet vermek için ayrılan iş parçacığı sayısı üst sınırını ayarlar.|  
 |[SetMinThreads Yöntemi](ihostiocompletionmanager-setminthreads-method.md)|Ana bilgisayarın g/ç tamamlama için en az sayıda iş parçacığı sayısını ayarlar.|  
   

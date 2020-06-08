@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616174"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493324"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType Numaralandırması
-Bir [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) veya [IHostTask](ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.  
+Bir [ICLRTask](iclrtask-interface.md) veya [IHostTask](ihosttask-interface.md) arabirimi tarafından temsil edilen görevin türünü gösteren değerleri içerir.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```cpp  
 typedef enum ETaskType {  
@@ -44,7 +44,7 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|Arabirim bir uygulama etki alanı kaldırma görevini temsil eder.|  
 |`TT_DEBUGGERHELPER`|Arabirim bir hata ayıklayıcı Yardımcısı görevini temsil eder.|  

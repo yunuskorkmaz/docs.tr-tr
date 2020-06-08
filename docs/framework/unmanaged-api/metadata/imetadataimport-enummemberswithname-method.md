@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea451bdd645d2d4dea4c5dd00408e0bc51804803
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177313"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492076"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName Yöntemi
-Belirtilen türdeki üyeleri temsil eden ÜyeDef belirteçlerini belirtilen adla oyalar.  
+Belirtilen ada sahip belirtilen türdeki üyeleri temsil eden MemberDef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumMembersWithName (  
@@ -40,43 +40,43 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `cl`  
- [içinde] Üyelerini sayısala dizecek türü temsil eden bir TypeDef belirteci.  
+ 'ndaki Numaralandırılacak üyeleri olan türü temsil eden bir TypeDef belirteci.  
   
  `szName`  
- [içinde] Üyenin kapsamını sınırlayan üye adı.  
+ 'ndaki Numaralandırıcı kapsamını sınırlayan üye adı.  
   
  `rMembers`  
- [çıkış] ÜyeDef belirteçlerini depolamak için kullanılan dizi.  
+ dışı MemberDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rMembers` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rMembers` .  
   
  `pcTokens`  
- [çıkış] ÜyeDef belirteçlerinin gerçek sayısı `rMembers`.  
+ dışı İçinde döndürülen MemberDef belirteçlerinin gerçek sayısı `rMembers` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem alanları ve yöntemleri, ancak özellikleri veya olayları sayısallar. [IMetaDataImport aksine::EnumMembers,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md) `EnumMembersWithName` belirtilen adı olmayan tüm alan ve üye belirteçleri atar.  
+ Bu yöntem, alanları ve yöntemleri numaralandırır, ancak özellikleri veya olayları numaralandırır. [IMetaDataImport:: EnumMembers](imetadataimport-enummembers-method.md)'ın aksine, `EnumMembersWithName` belirtilen ada sahip olmayan tüm alan ve üye belirteçlerini atar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala kaydolacak ÜyeDef belirteçleri yoktur. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumTypeDefs`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak MemberDef belirteçleri yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

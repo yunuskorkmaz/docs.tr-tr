@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32114ecf-8916-4ab2-a201-179c017344f1
 topic_type:
 - apiref
-ms.openlocfilehash: 6ed30f07fcec9c730e1514350c594399f0aa16e5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d62739148280c7333cf7cdb6002b59a145496e3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503568"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken Yöntemi
 Belirtilen meta veri belirtecinin başvurduğu nesnenin UTF-8 adını alır. Bu yöntem artık kullanılmıyor.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetNameFromToken (  
@@ -42,10 +42,10 @@ HRESULT GetNameFromToken (
  dışı Yığında UTF-8 nesne adı için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetNameFromToken` artık kullanılmıyor. Alternatif olarak, bir alan için `GetFieldProps` veya bir yöntem için `GetMethodProps` gibi belirli bir belirteç türünün özelliklerini almak için bir yöntemi çağırın.  
+ `GetNameFromToken`artık kullanılmıyor. Alternatif olarak, `GetFieldProps` bir alan veya bir yöntem için gerekli olan belirli bir belirteç türünün özelliklerini almak için bir yöntemi çağırın `GetMethodProps` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
@@ -55,5 +55,5 @@ HRESULT GetNameFromToken (
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

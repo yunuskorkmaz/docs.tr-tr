@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94b4c3935c949c0c4008e41244713b6bfa4dba84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449975"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503724"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs Yöntemi
 Geçerli meta veri kapsamında tanımlanan TypeSpec belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumTypeSpecs (  
@@ -44,31 +44,31 @@ HRESULT EnumTypeSpecs (
  dışı TypeSpec belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- 'ndaki `rTypeSpecs` dizisinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rTypeSpecs` .  
   
  `pcTypeSpecs`  
- dışı `rTypeSpecs`' de döndürülen TypeSpec belirteçleri sayısı.  
+ dışı İçinde döndürülen TypeSpec belirteçleri sayısı `rTypeSpecs` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` başarıyla döndürüldü.|  
-|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda `pcTypeSpecs` sıfırdır.|  
+|`S_OK`|`EnumTypeSpecs`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTypeSpecs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeSpec belirteçleri [ımetadatayayma:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) yöntemi tarafından oluşturulur.  
+ TypeSpec belirteçleri [ımetadatayayma:: GetTokenFromTypeSpec](imetadataemit-gettokenfromtypespec-method.md) yöntemi tarafından oluşturulur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

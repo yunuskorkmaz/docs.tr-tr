@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447561"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494208"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc Yöntemi
 
 Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için belirtilen miktarda bellek ayırmaya çalışır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 PVOID Alloc (
@@ -41,18 +41,18 @@ PVOID Alloc (
 
 ## <a name="remarks"></a>Açıklamalar
 
- Ayrılan bellek, bu ayırıcıyla ilişkili modülün temel adresinden büyük bir adreste başlayacaktır. Diğer bir deyişle, her ayırıcı belirli bir modül için oluşturulur ve temel adresinden pozitif bir uzaklığa bellek ayırmaya çalışır. `Alloc`, istenen bayt sayısını modülün temel adresinden daha büyük bir adrese ayıramazsa, kullanılabilir bellek alanı gerçek miktarına bakılmaksızın E_OUTOFMEMORY döndürür.
+ Ayrılan bellek, bu ayırıcıyla ilişkili modülün temel adresinden büyük bir adreste başlayacaktır. Diğer bir deyişle, her ayırıcı belirli bir modül için oluşturulur ve temel adresinden pozitif bir uzaklığa bellek ayırmaya çalışır. `Alloc`Modülün temel adresinden daha büyük bir adreste istenen bayt sayısını ayıramazsa, kullanılabilir bellek alanının gerçek miktarından bağımsız olarak e_outofmemory döndürür.
 
- `Alloc` yöntemi [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) yöntemiyle birlikte kullanılmalıdır.
+ `Alloc`Yöntemi [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) yöntemiyle birlikte kullanılmalıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
  **Üst bilgi:** CorProf. IDL, CorProf. h
 
  **Kitaplık:** Corguid. lib
 
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

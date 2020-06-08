@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c7e96c50e59902cde4686f908047a86dd2b6a47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175440"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503750"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs Yöntemi
-Geçerli meta veri kapsamında tanımlanan TypeRef belirteçlerini güncelleştirir.  
+Geçerli meta veri kapsamında tanımlanan TypeRef belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumTypeRefs (  
@@ -38,37 +38,37 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi. Bu yöntemin ilk araması için NULL olmalıdır.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `rTypeRefs`  
- [çıkış] TypeRef belirteçlerini depolamak için kullanılan dizi.  
+ dışı TypeRef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rTypeRefs` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rTypeRefs` .  
   
  `pcTypeRefs`  
- [çıkış] TypeRef belirteçlerinin sayısına işaretçi. `rTypeRefs`  
+ dışı İçinde döndürülen TypeRef belirteçleri sayısına yönelik bir işaretçi `rTypeRefs` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala rendelemek için hiçbir belirteçleri vardır. Bu durumda, `pcTypeRefs` sıfırdır.|  
+|`S_OK`|`EnumTypeRefs`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak belirteç yok. Bu durumda, `pcTypeRefs` sıfırdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- TypeRef belirteci, bir türe yapılan başvuruyciyi temsil eder.  
+ TypeRef belirteci bir türe başvuruyu temsil eder.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

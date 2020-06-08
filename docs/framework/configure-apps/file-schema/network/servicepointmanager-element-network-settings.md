@@ -1,5 +1,6 @@
 ---
 title: <servicePointManager> Öğesi (Ağ Ayarları)
+description: <servicePointManager>Ağ ayarları öğesi .NET Framework ağ kaynakları seçeneklerine yönelik bağlantıları yapılandırır.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb27716ec7c2936f32a7e4d4c983d1e175c4d044
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504530"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> Öğesi (Ağ Ayarları)
 Ağ kaynaklarına bağlantıları yapılandırır.  

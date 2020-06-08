@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-ms.openlocfilehash: b52a0e7f993629c1005883723c734996d75300a7
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1f3ff3e9b68aa30f424f4b2fe6c7cacd2cddd544
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868440"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495937"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread Yöntemi
 Geçerli iş parçacığını aynı iş parçacığında sonraki profil oluşturucu API çağrılarından önce başlatır, böylece kilitlenme kaçınılabilir.  
@@ -32,19 +32,19 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Askıya alınmış iş parçacıkları varken profil oluşturucu API çağrısı yapılacak herhangi bir iş parçacığında `InitializeCurrentThread` çağırmalarını öneririz. Bu yöntem genellikle, hedef iş parçacığı askıya alınırken yığın izlenecek yol için [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) metodunu çağırmak üzere kendi iş parçacığını oluşturan örnekleme profil oluşturucular tarafından kullanılır. Profil Oluşturucu ilk olarak örnekleme iş parçacığını oluşturduğunda `InitializeCurrentThread` bir kez çağırarak, profil oluşturucular ilk çağrı sırasında CLR 'nin geçici `DoStackSnapshot` olarak gerçekleştireceği yavaş iş parçacığı başlatma işleminin başka bir iş parçacığı askıya alınmadıkça güvenli bir şekilde gerçekleşmemesini sağlayabilir.  
+ `InitializeCurrentThread`Askıya alınmış iş parçacıkları varken profil oluşturucu API 'si çağıran herhangi bir iş parçacığında çağrı yapmanızı öneririz. Bu yöntem genellikle, hedef iş parçacığı askıya alınırken yığın izlenecek yol için [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) metodunu çağırmak üzere kendi iş parçacığını oluşturan örnekleme profil oluşturucular tarafından kullanılır. `InitializeCurrentThread`Profil Oluşturucu ilk olarak örnekleme iş parçacığını oluşturduğunda, profil oluşturucular, clr 'nin ilk çağrı sırasında gerçekleştireceği yavaş iş parçacığı başlatma `DoStackSnapshot` işleminin, başka bir iş parçacığı askıya alınmadıkça güvenli bir şekilde gerçekleşmemesini sağlayabilir.  
   
 > [!NOTE]
-> `InitializeCurrentThread`, kilitleri kilitleyen ve kilitlenmeleri gereken görevleri tamamlamak için önceden başlatma işlemi yapar. Yalnızca askıya alınmış iş parçacığı olmadığında `InitializeCurrentThread` çağırın.  
+> `InitializeCurrentThread`başlatma işlemi, kilitleri olan görevleri tamamlamak için önceden ve kilitlenme olabilir. `InitializeCurrentThread`Yalnızca askıya alınmış iş parçacığı olmadığında çağırın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

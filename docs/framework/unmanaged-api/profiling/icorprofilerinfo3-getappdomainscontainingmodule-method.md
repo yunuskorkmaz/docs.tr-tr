@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 56221c6b3ac40595e999f2a2a3739f023441c46d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862418"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502853"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule Metodu
 Verilen modülün yüklendiği uygulama etki alanlarının tanımlayıcılarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetAppDomainsContainingModule(  
@@ -41,7 +41,7 @@ HRESULT GetAppDomainsContainingModule(
  'ndaki Yüklenen modülün KIMLIĞI.  
   
  `cAppDomainIds`  
- 'ndaki `appDomainIds` dizisinin boyutu.  
+ 'ndaki `appDomainIds`Dizinin boyutu.  
   
  `pcAppDomainIds`  
  dışı Döndürülen öğelerin toplam sayısına yönelik bir işaretçi.  
@@ -53,17 +53,17 @@ HRESULT GetAppDomainsContainingModule(
  Yöntemi, çağıran ayrılmış arabellekleri kullanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICorProfilerFunctionEnum Arabirimi](icorprofilerfunctionenum-interface.md)
-- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
 - [Profil Oluşturma](index.md)

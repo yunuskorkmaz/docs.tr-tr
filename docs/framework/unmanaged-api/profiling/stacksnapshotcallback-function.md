@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-ms.openlocfilehash: 49e154ade91ea1a207645f924bd8aea1dbdb635c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a0f5316900dedc6c8983f9e670f60767ed783a40
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868128"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494000"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback İşlevi
 , Profil oluşturucuyu her yönetilen çerçeve ve yığın üzerinde her yönetilmeyen çerçeve, [ICorProfilerInfo2::D oStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yöntemi tarafından başlatılan bir yığın ilerleme durumuyla ilgili bilgilerle birlikte sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT __stdcall StackSnapshotCallback (  
@@ -45,32 +45,32 @@ HRESULT __stdcall StackSnapshotCallback (
  'ndaki Çerçevede yerel kod yönerge işaretçisinin değeri.  
   
  `frameInfo`  
- 'ndaki Yığın çerçevesiyle ilgili bilgilere başvuran bir `COR_PRF_FRAME_INFO` değeri. Bu değer yalnızca bu geri çağırma sırasında kullanım için geçerlidir.  
+ 'ndaki `COR_PRF_FRAME_INFO`Yığın çerçevesiyle ilgili bilgilere başvuran bir değer. Bu değer yalnızca bu geri çağırma sırasında kullanım için geçerlidir.  
   
  `contextSize`  
- 'ndaki `context` parametresi tarafından başvurulan `CONTEXT` yapısının boyutu.  
+ 'ndaki `CONTEXT`Parametrenin başvurduğu yapının boyutu `context` .  
   
  `context`  
- 'ndaki Bu çerçevenin CPU durumunu temsil eden bir Win32 `CONTEXT` yapısına yönelik bir işaretçi.  
+ 'ndaki `CONTEXT`Bu ÇERÇEVENIN CPU durumunu temsil eden Win32 yapısına yönelik bir işaretçi.  
   
- `context` parametresi yalnızca COR_PRF_SNAPSHOT_CONTEXT bayrağı `ICorProfilerInfo2::DoStackSnapshot`geçirildiğinde geçerlidir.  
+ `context`Parametresi yalnızca COR_PRF_SNAPSHOT_CONTEXT bayrağının geçirilmesi durumunda geçerlidir `ICorProfilerInfo2::DoStackSnapshot` .  
   
  `clientData`  
- 'ndaki `ICorProfilerInfo2::DoStackSnapshot`'den doğrudan geçirilen istemci verilerine yönelik bir işaretçi.  
+ 'ndaki İstemci verilerine yönelik bir işaretçi, ' den doğrudan geçirilir `ICorProfilerInfo2::DoStackSnapshot` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `StackSnapshotCallback` işlevi, profil oluşturucu yazıcı tarafından uygulanır. `StackSnapshotCallback`yapılan çalışmanın karmaşıklığını sınırlamanız gerekir. Örneğin, zaman uyumsuz bir şekilde `ICorProfilerInfo2::DoStackSnapshot` kullanırken, hedef iş parçacığı kilitleri tutuyor olabilir. `StackSnapshotCallback` içindeki kod aynı kilitleri gerektiriyorsa, bir kilitlenme olabilir.  
+ `StackSnapshotCallback`İşlev, profil oluşturucu yazıcı tarafından uygulanır. ' De yapılan çalışmanın karmaşıklığını sınırlamanız gerekir `StackSnapshotCallback` . Örneğin, `ICorProfilerInfo2::DoStackSnapshot` zaman uyumsuz bir şekilde kullanırken, hedef iş parçacığı kilitleri tutuyor olabilir. İçindeki kod `StackSnapshotCallback` aynı kilitleri gerektiriyorsa, bir kilitlenme olabilir.  
   
- `ICorProfilerInfo2::DoStackSnapshot` yöntemi, yönetilen çerçeveye veya yönetilmeyen çerçevelerin her biri için bir kez `StackSnapshotCallback` işlevini çağırır. Yönetilmeyen çerçevelerin bir çalıştırması için `StackSnapshotCallback` çağrılırsa, profil oluşturucu kendi yönetilmeyen yığın ilerlemesini gerçekleştirmek için Register bağlamını (`context` parametresi tarafından başvurulan) kullanabilir. Bu durumda, Win32 `CONTEXT` yapısı yönetilmeyen çerçevelerin çalıştırılmasındaki en son gönderilen çerçevenin CPU durumunu temsil eder. Win32 `CONTEXT` yapısı tüm yazmaçların değerlerini içerse de, yalnızca yığın işaretçisi yazmacı, çerçeve işaretçisi kaydı, yönerge işaretçisi kaydı ve kalıcı (yani korunan) tamsayı Yazmaçları değerlerini de bilmelisiniz.  
+ `ICorProfilerInfo2::DoStackSnapshot`Yöntemi `StackSnapshotCallback` yönetilen çerçeveye göre veya yönetilmeyen çerçevelerin her biri için bir kez işlevini çağırır. `StackSnapshotCallback`Yönetilmeyen çerçevelerin bir çalıştırması için çağrılırsa, profil oluşturucu `context` kendi yönetilmeyen yığın yürüme işlemini gerçekleştirmek için YAZMAÇ bağlamını (parametresi tarafından başvurulan) kullanabilir. Bu durumda, Win32 `CONTEXT` yapısı yönetilmeyen çerçevelerin çalıştırılmasındaki en son gönderilen çerçeveye AIT CPU durumunu temsil eder. Win32 `CONTEXT` yapısı tüm yazmaçların değerlerini içerse de, yalnızca yığın işaretçisi yazmacı, çerçeve işaretçisi kaydı, yönerge işaretçisi kaydı ve kalıcı (yani korunan) tamsayı Yazmaçları değerlerini de bilmelisiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

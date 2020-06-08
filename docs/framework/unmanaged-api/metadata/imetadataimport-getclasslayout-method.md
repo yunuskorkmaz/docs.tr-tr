@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36c0ffef2d984604be4ae19899e8f3f912cee123
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175414"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491478"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout Metodu
-Belirtilen TypeDef belirteci tarafından başvurulan sınıfın düzen bilgilerini alır.  
+Belirtilen TypeDef belirtecinin başvurduğu sınıfa ait düzen bilgisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetClassLayout  (
@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [içinde] Döndürülecek düzene sahip sınıfın TypeDef belirteci.  
+ 'ndaki Döndürülecek düzen ile sınıfın TypeDef belirteci.  
   
  `pdwPackSize`  
- [çıkış] Sınıfın paket boyutunu temsil eden 1, 2, 4, 8 veya 16 değerlerinden biri.  
+ dışı Sınıfın paket boyutunu temsil eden 1, 2, 4, 8 veya 16 değerlerinden biri.  
   
  `rFieldOffset`  
- [çıkış] [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) değerleri dizisi.  
+ dışı [COR_FIELD_OFFSET](cor-field-offset-structure.md) değerleri dizisi.  
   
  `cMax`  
- [içinde] `rFieldOffset` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rFieldOffset` .  
   
  `pcFieldOffset`  
- [çıkış] Döndürülen öğe `rFieldOffset`sayısı.  
+ dışı İçinde döndürülen öğelerin sayısı `rFieldOffset` .  
   
  `pulClassSize`  
- [çıkış] Sınıfın baytboyutu tarafından `td`temsil edilir.  
+ dışı Tarafından temsil edilen sınıfın bayt cinsinden boyutu `td` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

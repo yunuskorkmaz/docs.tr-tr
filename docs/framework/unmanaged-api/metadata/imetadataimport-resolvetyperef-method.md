@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f55af87e21b48430807166cb03e1d41271e830a1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431477"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503451"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef Yöntemi
-Belirtilen TypeRef belirteci ile temsil edilen bir <xref:System.Type> başvurusunu çözümler.  
+<xref:System.Type>Belirtilen TypeRef belirteci ile temsil edilen bir başvuruyu çözümler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ResolveTypeRef (  
@@ -41,7 +41,7 @@ HRESULT ResolveTypeRef (
  'ndaki İçin başvurulan tür bilgilerini döndürecek olan TypeRef meta veri belirteci.  
   
  `riid`  
- 'ndaki `ppIScope`döndürülecek arabirimin IID 'si. Genellikle bu IID_IMetaDataImport olacaktır.  
+ 'ndaki Döndürülecek arabirimin IID 'si `ppIScope` . Genellikle bu IID_IMetaDataImport olacaktır.  
   
  `ppIScope`  
  dışı Başvurulan türün tanımlandığı modül kapsamına yönelik arabirim.  
@@ -54,20 +54,20 @@ HRESULT ResolveTypeRef (
 > [!IMPORTANT]
 > Birden çok uygulama etki alanı yüklenmişse bu yöntemi kullanmayın. Yöntem, uygulama etki alanı sınırlarına uymaz. Bir derlemenin birden çok sürümü yüklüyse ve aynı ad alanıyla aynı türü içeriyorsa, yöntemi bulduğu ilk türün modül kapsamını döndürür.  
   
- `ResolveTypeRef` yöntemi, diğer modüllerde tür tanımını arar. Tür tanımı bulunursa `ResolveTypeRef`, bu modül kapsamına bir arabirim ve tür için de TypeDef belirtecini döndürür.  
+ `ResolveTypeRef`Yöntemi, diğer modüllerde tür tanımını arar. Tür tanımı bulunursa, `ResolveTypeRef` Bu modül kapsamına ve tür Için typedef belirtecine bir arabirim döndürür.  
   
- Çözümlenecek tür başvurusunda AssemblyRef 'nin bir çözüm kapsamı varsa `ResolveTypeRef` yöntemi, yalnızca [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) yöntemi veya [ımetadatadağıtıcı:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) metoduna yapılan çağrılarla zaten açılmış olan meta veri kapsamlarındaki eşleşmeyi arar. Bunun nedeni `ResolveTypeRef` yalnızca diskte veya derlemenin depolandığı genel derleme önbelleğinde bulunan AssemblyRef kapsamından saptanamıyor.  
+ Çözümlenecek tür başvurusunun AssemblyRef bir çözüm kapsamı varsa, `ResolveTypeRef` yöntemi yalnızca [ımetadatadağıtıcı:: OpenScope](imetadatadispenser-openscope-method.md) yöntemi veya [ımetadatadağıtıcı:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) metoduna yapılan çağrılarla zaten açılmış olan meta veri kapsamlarındaki eşleşmeyi arar. Bunun nedeni, `ResolveTypeRef` yalnızca diskte veya derlemenin depolandığı genel derleme önbelleğinde bulunan AssemblyRef kapsamından saptanamıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** Cor. h  
   
  **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175479"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492028"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls Yöntemi
-Belirtilen tipteki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçlerini okurum.  
+Belirtilen türdeki yöntemleri temsil eden MethodBody ve MethodDeclaration belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumMethodImpls (  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi. Bu yöntemin ilk araması için NULL olmalıdır.  
+ [in, out] Numaralandırıcı için bir işaretçi. Bu yöntemin ilk çağrısı için bu NULL olmalıdır.  
   
  `td`  
- [içinde] Yöntem uygulamaları numaralandırmak için türü için bir TypeDef belirteci.  
+ 'ndaki Yöntem uygulamaları Numaralandırılacak tür için bir TypeDef belirteci.  
   
  `rMethodBody`  
- [çıkış] MethodBody belirteçlerini depolamak için dizi.  
+ dışı MethodBody belirteçlerini depolayacak dizi.  
   
  `rMethodDecl`  
- [çıkış] MethodDeclaration belirteçlerini depolayabilmek için dizi.  
+ dışı MethodDeclaration belirteçlerini depolayacak dizi.  
   
  `cMax`  
- [içinde] Ve `rMethodBody` `rMethodDecl` dizilerin maksimum boyutu.  
+ 'ndaki Ve dizilerinin en büyük boyutu `rMethodBody` `rMethodDecl` .  
   
  `pcTokens`  
- [içinde] Döndürülen yöntemlerin gerçek `rMethodBody` `rMethodDecl`sayısı ve .  
+ 'ndaki Ve ' de döndürülen gerçek Yöntem sayısı `rMethodBody` `rMethodDecl` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala maksat için herhangi bir yöntem belirteçleri vardır. Bu durumda, `pcTokens` sıfırdır.|  
+|`S_OK`|`EnumMethodImpls`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak hiçbir yöntem belirteci yok. Bu durumda, `pcTokens` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

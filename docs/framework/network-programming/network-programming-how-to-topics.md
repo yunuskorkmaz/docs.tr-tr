@@ -1,5 +1,6 @@
 ---
 title: Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
+description: .NET Framework farklı ağ programlama modelleri hakkında bilgi edinmek için bu nasıl yapılır makalelerini kullanın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,17 +8,17 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047626"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502281"
 ---
 # <a name="network-programming-how-to-topics"></a>Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
-Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan Nasıl Nasıl Yapılan konulara bağlantılar içerir.  
+Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan nasıl yapılır konularına bağlantılar içerir.  
   
- **Veri İsteme:**  
+ **Veri isteniyor:**  
   
 - [Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
@@ -27,7 +28,7 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan Nasıl Na
   
 - [Nasıl yapılır: WebRequest ile Eşleşen Protokole Özgü WebResponse Alma](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Takılabilir ve Uygulama Protokolleri:**  
+ **Takılabilir ve uygulama protokolleri:**  
   
 - [Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme](how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -45,31 +46,31 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan Nasıl Na
   
 - [Nasıl yapılır: FTP ile Dizin İçeriğini Listeleme](how-to-list-directory-contents-with-ftp.md)  
   
- **İnternet Protokolü Sürüm 6:**  
+ **Internet Protokolü sürüm 6:**  
   
 - [Nasıl yapılır: IPv6 Desteğini Etkinleştirmek için Bilgisayar Yapılandırma Dosyasını Değiştirme](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
- **Ağ İzleme:**  
+ **Ağ Izleme:**  
   
 - [Nasıl yapılır: Ağ İzlemeyi Yapılandırma](how-to-configure-network-tracing.md)  
   
- **Önbelleğe Alma:**  
+ **Önbelleğe almayı yapılandırma:**  
   
 - [Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
 - [Nasıl yapılır: Uygulama için Varsayılan Saat Temelli Önbellek İlkesi Ayarlama](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
-- [Nasıl?](how-to-customize-a-time-based-cache-policy.md)  
+- [Nasıl yapılır: zaman tabanlı önbellek Ilkesini özelleştirme](how-to-customize-a-time-based-cache-policy.md)  
   
 - [Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama](how-to-set-cache-policy-for-a-request.md)  
   
- **Proxies kullanma:**  
+ **Proxy 'Leri kullanma:**  
   
 - [Nasıl yapılır: İnternet ile İletişim Kurmak Üzere Ara Sunucu Kullanan bir WebRequest’i Etkinleştirme](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
 - [Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma](how-to-override-a-global-proxy-selection.md)  
   
- **Ağ Bilgileri:**  
+ **Ağ bilgileri:**  
   
 - [Nasıl yapılır: Ağ Kullanılabilirliğini Algılama ve Adres Değişiklikleri](how-to-detect-network-availability-and-address-changes.md)  
   
@@ -81,4 +82,4 @@ Aşağıdaki liste, ağ programlama için kavramsal belgelerde bulunan Nasıl Na
 
 - [.NET Framework'te Ağ Programlaması](index.md)
 - [Ağ Programlama Örnekleri](network-programming-samples.md)
-- [MSDN Kod Galerisi'nde .NET için Ağ Örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+- [MSDN kod galerisinde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

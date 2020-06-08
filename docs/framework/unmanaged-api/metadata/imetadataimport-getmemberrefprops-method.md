@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175375"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503625"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps Yöntemi
-Belirtilen belirteç tarafından başvurulan üye ile ilişkili meta verileri alır.  
+Belirtilen belirteç tarafından başvurulan üyeyle ilişkili meta verileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetMemberRefProps (  
@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametreler  
  `mr`  
- [içinde] ÜyeRef belirteç için ilişkili meta verileri döndürmek için.  
+ 'ndaki İçin ilişkili meta verileri döndürecek MemberRef belirteci.  
   
  `ptk`  
- [çıkış] Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef veya TypeSpec belirteci veya üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci veya üyeyi temsil eden bir MethodDef belirteç.  
+ dışı Üyeyi bildiren sınıfı temsil eden bir TypeDef veya TypeRef, ya da üyeyi bildiren modül sınıfını temsil eden bir ModuleRef belirteci ya da üyeyi temsil eden bir MethodDef.  
   
  `szMember`  
- [çıkış] Üyenin adı için bir dize arabelleği.  
+ dışı Üyenin adı için bir dize arabelleği.  
   
  `cchMember`  
- [içinde] Geniş karakterlerde istenen `szMember`boyut.  
+ 'ndaki Geniş karakterdeki istenen boyut `szMember` .  
   
  `pchMember`  
- [çıkış] Döndürülen boyut geniş karakterler `szMember`.  
+ dışı Geniş karakter olarak döndürülen boyut `szMember` .  
   
  `ppvSibBlob`  
- [çıkış] Üye için ikili meta veri imzasına işaretçi.  
+ dışı Üyenin ikili meta veri imzasına yönelik bir işaretçi.  
   
  `pbSig`  
- [çıkış] `ppvSigBlob`Baytboyutu.  
+ dışı Bayt cinsinden boyut `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

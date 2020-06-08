@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53b1234a176cade5876d70da0cb4eadc18802c69
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492310"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents Yöntemi
-Belirtilen TypeDef belirteci için olay tanımı belirteçlerini oyalar.  
+Belirtilen TypeDef belirtecinin olay tanımı belirteçlerini numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumEvents (
@@ -39,37 +39,37 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `td`  
- [içinde] Olay tanımları numaralandırılacak Olan TypeDef belirteci.  
+ 'ndaki Olay tanımları Numaralandırılacak olan TypeDef belirteci.  
   
  `rEvents`  
- [çıkış] Döndürülen olaylar dizisi.  
+ dışı Döndürülen olayların dizisi.  
   
  `cMax`  
- [içinde] `rEvents` Dizinin en büyük boyutu.  
+ 'ndaki Dizinin en büyük boyutu `rEvents` .  
   
  `pcEvents`  
- [çıkış] Döndürülen olayların gerçek `rEvents`sayısı.  
+ dışı ' De döndürülen olayların gerçek sayısı `rEvents` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısalolarak kaydolacak bir olay yok. Bu durumda, `pcEvents` sıfırdır.|  
+|`S_OK`|`EnumEvents`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak olay yok. Bu durumda, `pcEvents` sıfırdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

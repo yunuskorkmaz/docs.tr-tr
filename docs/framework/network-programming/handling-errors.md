@@ -1,5 +1,6 @@
 ---
 title: Hataları İşleme
+description: WebRequest ve WebResponse tarafından oluşturulan sistem ve Web 'e özel özel durumlar hakkında bilgi edinin. Sorunu anlamak ve çözmek için Status özelliğini kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,45 +32,45 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180865"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502580"
 ---
 # <a name="handling-errors"></a>Hataları İşleme
 
-Ve <xref:System.Net.WebRequest> <xref:System.Net.WebResponse> sınıflar hem sistem özel durumlarını (örneğin) <xref:System.ArgumentException>hem de <xref:System.Net.WebException> Web'e <xref:System.Net.WebRequest.GetResponse%2A> özgü özel özel durumları (yöntem tarafından atılan) atar.  
+<xref:System.Net.WebRequest>Ve <xref:System.Net.WebResponse> sınıfları hem sistem özel durumlarını (gibi) hem de <xref:System.ArgumentException> Web 'e özel özel durumları ( <xref:System.Net.WebException> yöntemi tarafından oluşturulan) oluşturur <xref:System.Net.WebRequest.GetResponse%2A> .  
   
-Her **WebException** <xref:System.Net.WebException.Status%2A> numaralandırma bir <xref:System.Net.WebExceptionStatus> değer içeren bir özellik içerir. Oluşan hatayı belirlemek için **Durum** özelliğini inceleyebilir ve hatayı gidermek için uygun adımları atabilirsiniz.  
+Her **WebException** <xref:System.Net.WebException.Status%2A> , Numaralandırmadaki bir değer içeren bir özelliği içerir <xref:System.Net.WebExceptionStatus> . **Durum** özelliğini inceleyerek oluşan hatayı belirleyebilir ve hatayı çözümlemek için doğru adımları uygulayabilirsiniz.  
   
-Aşağıdaki **tabloda Durum** özelliği için olası değerler açıklanmaktadır.  
+Aşağıdaki tabloda **durum** özelliği için olası değerler açıklanmaktadır.  
   
 |Durum|Açıklama|  
 |------------|-----------------|  
-|ConnectFailure|Uzak hizmet, aktarım düzeyinde bağlantı kuramadı.|  
-|Bağlantı Kapalı|Bağlantı zamanından önce kapatıldı.|  
-|KeepAliveFailure|Sunucu, Canlı Kal üstbilgi kümesiyle yapılan bir bağlantıyı kapattı.|  
-|Ad Çözümleme Hatası|Ad hizmeti ana bilgisayar adını çözümlemedi.|  
-|ProtokolHatası|Sunucudan alınan yanıt tamamlandı, ancak protokol düzeyinde bir hata belirtildi.|  
-|Alma Hatası|Uzak sunucudan tam bir yanıt alınmadı.|  
-|İstekİptal edildi|İstek iptal edildi.|  
-|Güvenli Kanal Hatası|Güvenli bir kanal bağlantısında bir hata oluştu.|  
-|SendFailure|Uzak sunucuya tam bir istek gönderilemedi.|  
-|ServerProtocolViolation|Sunucu yanıtı geçerli bir HTTP yanıtı değildi.|  
-|Başarılı|Hiçbir hata yla karşılaşılmamada.|  
-|Zaman aşımı|İstek için zaman belirleme kümesi içinde yanıt alınmadı.|  
-|Güven Hatası|Sunucu sertifikası doğrulanamadı.|  
-|MesajUzunluğuLimitAşıldı|İstek gönderirken veya sunucudan yanıt alırken belirtilen sınırı aşan bir ileti alındı.|  
-|Beklemede|Dahili bir eşzamanlı istek beklemede.|  
-|Boru Hattı Arıza|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.|  
-|ProxyNameResolutionFailure|Ad çözümleyici hizmeti proxy ana bilgisayar adını çözemedi.|  
+|ConnectFailure|Uzak hizmete Aktarım düzeyinde iletişim kurulamadı.|  
+|ConnectionClosed|Bağlantı zamanından önce kapatıldı.|  
+|KeepAliveFailure|Sunucu, etkin tut üst bilgi kümesiyle yapılan bir bağlantıyı kapattı.|  
+|NameResolutionFailure|Ad hizmeti, ana bilgisayar adını çözümleyemedi.|  
+|ProtocolError|Sunucudan alınan yanıt tamamlanmıştır, ancak protokol düzeyinde bir hata belirtti.|  
+|ReceiveFailure|Uzak sunucudan bir bütün yanıt alınmadı.|  
+|Requestiptal edildi|İstek iptal edildi.|  
+|SecureChannelFailure|Güvenli kanal bağlantısında bir hata oluştu.|  
+|SendFailure|Uzak sunucuya komple bir istek gönderilemedi.|  
+|Serverprotocolihlaline|Sunucu yanıtı geçerli bir HTTP yanıtı değildi.|  
+|Başarılı|Hatayla karşılaşılmadı.|  
+|Zaman aşımı|İstek için zaman aşımı kümesi içinde yanıt alınmadı.|  
+|TrustFailure hatası|Sunucu sertifikası doğrulanamadı.|  
+|Messagelengthlimitexceıbaşında|İstek gönderilirken veya sunucudan yanıt alındığında belirtilen sınırı aşan bir ileti alındı.|  
+|Beklemede|İç zaman uyumsuz istek bekleniyor.|  
+|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmaya yönelik değildir.|  
+|ProxyNameResolutionFailure|Ad çözümleyici Hizmeti, proxy ana bilgisayar adını çözümleyemedi.|  
 |UnknownError|Bilinmeyen türde bir özel durum oluştu.|  
   
-**Durum** özelliği **WebExceptionStatus.ProtocolError**olduğunda, sunucudan yanıt içeren bir **WebResponse** kullanılabilir. Bu yanıtı, protokol hatasının gerçek kaynağını belirlemek için inceleyebilirsiniz.  
+**Status** özelliği **WebExceptionStatus. ProtocolError**olduğunda, sunucudan gelen yanıtı içeren bir **WebResponse** kullanılabilir. Protokol hatasının gerçek kaynağını öğrenmek için bu yanıtı inceleyebilirsiniz.  
   
-Aşağıdaki örnek, bir **WebException'ı**nasıl yakalayacaklarını gösterir.  
+Aşağıdaki örnek, bir **WebException**nasıl yakalandığı gösterilmektedir.  
   
 ```csharp  
 try
@@ -164,11 +165,11 @@ Catch e As Exception
 End Try  
 ```  
   
-Windows yuvasında <xref:System.Net.Sockets.Socket> hatalar <xref:System.Net.Sockets.SocketException> oluştuğunda sınıf atışını kullanan uygulamalar. , <xref:System.Net.Sockets.TcpClient> <xref:System.Net.Sockets.TcpListener>ve <xref:System.Net.Sockets.UdpClient> sınıflar **Soket** sınıfının üstüne inşa edilir ve **SocketExceptions** atmak da.  
+Sınıfını kullanan uygulamalar <xref:System.Net.Sockets.Socket> <xref:System.Net.Sockets.SocketException> , Windows yuvasında hata oluştuğunda oluşturur. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> Ve <xref:System.Net.Sockets.UdpClient> sınıfları **yuva** sınıfının üzerine kurulmuştur ve **SocketExceptions** de oluşturur.  
   
-**SocketException** atıldığında, **SocketException** sınıfı <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliği oluşan son işletim sistemi soketi hatasına ayarlar. Soket hata kodları hakkında daha fazla bilgi için MSDN'deki Winsock 2.0 API hata kodu belgelerine bakın.  
+Bir **SocketException** oluşturulduğunda, **SocketException** sınıfı <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliği, gerçekleşen son işletim sistemi yuva hatası olarak ayarlar. Yuva hata kodları hakkında daha fazla bilgi için MSDN 'de Winsock 2,0 API hata kodu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET'te özel durumları işleme ve atma](../../standard/exceptions/index.md)
+- [.NET 'te özel durumları işleme ve atma](../../standard/exceptions/index.md)
 - [Veri İsteme](requesting-data.md)

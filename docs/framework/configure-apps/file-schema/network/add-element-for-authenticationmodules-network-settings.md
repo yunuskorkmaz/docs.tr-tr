@@ -1,5 +1,6 @@
 ---
 title: authenticationModules için <add> Öğesi (Ağ Ayarları)
+description: <add>ConnectionManagement için ağ ayarları öğesi .NET Framework bağlantı yönetimi listesine BIR IP adresi veya DNS adı ekler.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155121"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504647"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules için \<add> Öğesi (Ağ Ayarları)
 Uygulamaya bir kimlik doğrulama modülü ekler.  
