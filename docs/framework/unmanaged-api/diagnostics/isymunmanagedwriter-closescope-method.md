@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dade525-7770-4cb4-bafd-4bb995ad0d87
 topic_type:
 - apiref
-ms.openlocfilehash: 4d8790dc68bc063deed4c58ba0df8e9ea258b9d7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e2e911fb1d737ebb6b2106c89ac11335788ace4f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610086"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501735"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope Yöntemi
 Geçerli sözcük temelli kapsamı kapatır.  
@@ -42,7 +42,7 @@ HRESULT CloseScope(
 ## <a name="remarks"></a>Açıklamalar  
  Bir kapsam kapatıldıktan sonra, içinde daha fazla değişken tanımlanamaz.  
   
- [Ityperunmanagedwriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) , daha sonra bir kapsamın başlangıç ve bitiş sapmasını tanımlamak için [ıvmunmanagedwriter:: SetScopeRange](isymunmanagedwriter-setscoperange-method.md) ile kullanılabilecek bir donuk kapsam tanımlayıcısı döndürüyor. Bu durumda, ve öğesine geçirilen uzaklıklar `ISymUnmanagedWriter::OpenScope` `ISymUnmanagedWriter::CloseScope` yok sayılır. Kapsam tanımlayıcıları yalnızca geçerli yöntemde geçerlidir.  
+ [Ityperunmanagedwriter:: OpenScope](isymunmanagedwriter-openscope-method.md) , daha sonra bir kapsamın başlangıç ve bitiş sapmasını tanımlamak için [ıvmunmanagedwriter:: SetScopeRange](isymunmanagedwriter-setscoperange-method.md) ile kullanılabilecek bir donuk kapsam tanımlayıcısı döndürüyor. Bu durumda, ve öğesine geçirilen uzaklıklar `ISymUnmanagedWriter::OpenScope` `ISymUnmanagedWriter::CloseScope` yok sayılır. Kapsam tanımlayıcıları yalnızca geçerli yöntemde geçerlidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Üst bilgi:** CorSym. IDL, CorSym. h  

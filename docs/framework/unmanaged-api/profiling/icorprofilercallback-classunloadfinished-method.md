@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866578"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500383"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished Yöntemi
 Profil oluşturucuyu bir sınıfın kaldırmayı tamamladığını bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ClassUnloadFinished(  
@@ -37,23 +37,23 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  \[in], bellekten kaldırılan sınıfı tanımlar.
+  \[' de], kaldırılan sınıfı tanımlar.
 
 - `hrStatus`
 
-  \[, sınıfın başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
+  \[içinde] sınıfın başarıyla yüklenip yüklenmediğini gösteren bir HRESULT.
   
 ## <a name="remarks"></a>Açıklamalar  
- Sınıfı kaldırma işleminin bazı bölümleri `ClassUnloadFinished` geri çağrısından sonra devam edebilir. `hrStatus` HRESULT hatası, bir hatayı gösterir. Ancak, `hrStatus` başarılı bir HRESULT, yalnızca sınıfın kaldırılmasının ilk bölümünün başarılı olduğunu gösterir.  
+ Sınıfı kaldırma işleminin bazı bölümleri geri aramadan sonra devam edebilir `ClassUnloadFinished` . ' De HRESULT hatası, `hrStatus` bir hatayı gösterir. Ancak, içinde başarılı bir HRESULT, `hrStatus` yalnızca sınıfın kaldırılmasının ilk bölümünün başarılı olduğunu gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

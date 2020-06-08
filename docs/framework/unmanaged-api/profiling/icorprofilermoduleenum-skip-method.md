@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-ms.openlocfilehash: fb7a2a6d8bac7e9a67a5275694fc07e0f1d469e1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b48b782b7c8be35bfb815d72758f0bc316fb2114
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861339"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494728"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip Yöntemi
 Belirlenen sayıda öğe atlanabilmesi için Numaralandırıcının imlecini geçerli konumundan ilerletir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Skip([in] ULONG celt);  
@@ -38,22 +38,22 @@ HRESULT Skip([in] ULONG celt);
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`celt` öğeler atlandı.|  
-|S_FALSE|Daha az sayıda öğe olmadığını belirten `celt` öğeden azı atlandı.|  
+|S_OK|`celt`öğeler atlandı.|  
+|S_FALSE|Daha az öğe olmadığını `celt` belirten öğe atlandı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu Numaralandırıcı imlecinizin yeni konumu (geçerli konum) + `celt`.  
+ Bu Numaralandırıcı imlecinizin yeni konumu (geçerli konum) + ' dır `celt` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

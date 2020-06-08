@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 044a262f-0fa7-485d-b0c1-64cdc359c654
 topic_type:
 - apiref
-ms.openlocfilehash: c3642154ba5f9798f59ca8fc49cb848d7e2f73c7
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0a474719935ba763cbd15dc6e18fe5ba99c14ebc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496314"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 Arabirimi
-Olay izlemeyi denetlemek ve bilgi istemek için ortak dil çalışma zamanı (CLR) ile iletişim kurmak üzere kod profil oluşturucular kullanan yöntemler sağlar. `ICorProfilerInfo3` arabirimi [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabiriminin bir uzantısıdır. .NET Framework 4 ve sonraki sürümlerde desteklenen yeni yöntemler sağlar.  
+Olay izlemeyi denetlemek ve bilgi istemek için ortak dil çalışma zamanı (CLR) ile iletişim kurmak üzere kod profil oluşturucular kullanan yöntemler sağlar. `ICorProfilerInfo3`Arabirim, [ICorProfilerInfo2](icorprofilerinfo2-interface.md) arabiriminin bir uzantısıdır. .NET Framework 4 ve sonraki sürümlerde desteklenen yeni yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[EnumJITedFunctions Yöntemi](icorprofilerinfo3-enumjitedfunctions-method.md)|Daha önce JıT olarak derlenen tüm işlevler için bir Numaralandırıcı döndürür.|  
 |[EnumModules Yöntemi](icorprofilerinfo3-enummodules-method.md)|Uygulamaya yüklenen bir yönetilen modüller koleksiyonu aracılığıyla sırayla yinelemek için yöntemler sağlayan bir Numaralandırıcı döndürür.|  
@@ -41,21 +41,21 @@ Olay izlemeyi denetlemek ve bilgi istemek için ortak dil çalışma zamanı (CL
 |[RequestProfilerDetach Yöntemi](icorprofilerinfo3-requestprofilerdetach-method.md)|Çalışma zamanına profil oluşturucuyu ayırmasını söyler.|  
 |[SetEnterLeaveFunctionHooks3 Yöntemi](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)|[FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md)ve [FunctionTailcall3](functiontailcall3-function.md) işlevlerinde çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.|  
 |[SetEnterLeaveFunctionHooks3WithInfo Yöntemi](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)|Yönetilen işlevlerin [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)ve [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) kancaları üzerinde çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.|  
-|[SetFunctionIDMapper2 Yöntemi](icorprofilerinfo3-setfunctionidmapper2-method.md)|Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen `FunctionID` değerlerini alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir. Bu yöntem [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) öğesini, çalışma zamanları arasında belirsizliği ortadan kaldırmak için profil oluşturucular tarafından kullanılan bir parametre ile genişletir.|  
+|[SetFunctionIDMapper2 Yöntemi](icorprofilerinfo3-setfunctionidmapper2-method.md)|`FunctionID`Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen değerleri alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir. Bu yöntem [ICorProfilerInfo:: SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md) öğesini, çalışma zamanları arasında belirsizliği ortadan kaldırmak için profil oluşturucular tarafından kullanılan bir parametre ile genişletir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR, serbest iş parçacıklı modeli kullanarak `ICorProfilerInfo3` arabiriminin yöntemlerini uygular. Her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının listesi için CorError. h dosyasına bakın.  
+ CLR, `ICorProfilerInfo3` serbest iş parçacıklı modeli kullanarak arabirimin yöntemlerini uygular. Her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının listesi için CorError. h dosyasına bakın.  
   
- CLR, başlatma sırasında, profil oluşturucunun [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) veya [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi uygulamasını kullanarak her kod profil oluşturucuya bir `ICorProfilerInfo3` arabirimini geçirir. Kod Profilcisi daha sonra CLR denetimi altında yürütülen yönetilen kod hakkında bilgi almak için `ICorProfilerInfo3` yöntemlerini çağırabilir.  
+ CLR, `ICorProfilerInfo3` başlatma sırasında, profil oluşturucunun [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) veya [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) yöntemi uygulamasını kullanarak her kod profil oluşturucuya bir arabirim geçirir. Daha sonra bir kod profil oluşturucu, `ICorProfilerInfo3` clr denetimi altında yürütülen yönetilen kod hakkında bilgi almak için yöntemleri çağırabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

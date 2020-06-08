@@ -11,18 +11,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495326"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: Getdynamicfunctionınfo yöntemi
 
 Dinamik yöntemler hakkında bilgi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
@@ -38,11 +38,11 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `functionId`
 
-  \[içinde] bilgi alınacak işlevin KIMLIĞI.
+  \[' de] bilgi alınacak işlevin KIMLIĞI.
 
 - `moduleId`
 
-  \[içinde) işlevin üst sınıfının tanımlandığı modülün bir işaretçisi.
+  \[' de] işlevin üst sınıfının tanımlandığı modülün bir işaretçisi.
 
 - `ppvSig`
 
@@ -54,15 +54,15 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[içinde] `wszName` dizisinin en büyük boyutu.
+  \[' de] dizinin en büyük boyutu `wszName` .
 
 - `pcchName`
 
-  \[out] `wszName` dizisindeki karakterlerin sayısı.
+  \[out] dizideki karakterlerin sayısı `wszName` .
 
 - `wszName`
 
-  \[out], varsa, işlevin adı olan bir `WCHAR` dizisi.
+  \[out] bir dizi varsa `WCHAR` işlevin adıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -72,14 +72,14 @@ Bu API, varsa kolay bir ad dahil dinamik yöntemler hakkında bilgi almak için 
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi:** CorProf. IDL, CorProf. h
 
 **Kitaplık:** Corguid. lib
 
-**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo8 arabirimi](icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8 Arabirimi](icorprofilerinfo8-interface.md)

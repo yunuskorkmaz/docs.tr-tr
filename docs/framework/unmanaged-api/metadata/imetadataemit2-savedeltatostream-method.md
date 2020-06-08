@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f46871dde4c664a502c261fc882f3badf0f362
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177420"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492768"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream Yöntemi
-Değişiklikleri geçerli düzenle ve devam oturumundan belirtilen akışa kaydeder.  
+Değişiklikleri geçerli Düzenle ve devam et oturumundan belirtilen akışa kaydeder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
@@ -36,21 +36,21 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>Parametreler  
  `pIStream`  
- [içinde] Değişiklikleri kaydetmek için yazılabilir akış için bir arabirim işaretçisi.  
+ 'ndaki Değişikliklerin kaydedileceği yazılabilir akışa yönelik bir arabirim işaretçisi.  
   
  `dwSaveFlags`  
- [içinde] Saklı -dır. Bu değer sıfır olmalıdır.  
+ 'ndaki Ayrılamadı. Bu değer sıfır olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll'de kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Arabirimi](imetadataemit2-interface.md)
+- [IMetaDataEmit Arabirimi](imetadataemit-interface.md)

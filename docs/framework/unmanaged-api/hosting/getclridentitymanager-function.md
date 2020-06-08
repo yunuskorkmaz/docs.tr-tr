@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 57f771d933e896677dfc0bd5d9dac58da2af22c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b1e918edf641d38dd6b91d790bcaff8020293a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617262"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493272"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager İşlevi
 Ortak dil çalışma zamanının (CLR) kimlikleri yönetmesine izin veren bir arabirime yönelik bir işaretçi alır.  
@@ -40,7 +40,7 @@ STDAPI GetCLRIdentityManager(
  'ndaki `REFIID`Hangi arabirimin alınacağını belirten bir (bir arabirim tanımlayıcısı). Bu değer IID_ICLRAssemblyIdentityManager ya da IID_ICLRHostBindingPolicyManager olmalıdır.  
   
  `ppManager`  
- dışı Bir [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md) veya [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) nesnesinin adresine yönelik bir işaretçi.  
+ dışı Bir [ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md) veya [ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md) nesnesinin adresine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
  İşleve bir işaretçi almak için [GetRealProcAddress](getrealprocaddress-function.md) işlevini çağırın `GetCLRIdentityManager` .  

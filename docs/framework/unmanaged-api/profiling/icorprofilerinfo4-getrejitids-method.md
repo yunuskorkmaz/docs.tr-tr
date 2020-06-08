@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ba15440df79dded95a8afa9438657d064e167f36
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495976"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs Yöntemi
 Hala ayrılan belirtilen işlevin tüm JıT yeniden derlenmiş sürümlerini tanımlayan bir kimlik dizisi döndürür. Bu, daha sonra geri alınmış ancak henüz serbest bırakılmayan işlevlerin JıT yeniden derlenmiş sürümlerini içerir (örneğin, geri döndürülmüş işlevi içeren uygulama etki alanı hala kullanımda olduğunda).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetReJITIDs (  
@@ -37,10 +37,10 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- 'ndaki Sürümlerinin numaralandırılacağı işlev örneğinin `FunctionID`.  
+ 'ndaki `FunctionID`Sürümlerinin numaralandırılacağı işlev örneği.  
   
  `cReJitIds`  
- 'ndaki `reJitIds` dizisinde ayrılan JıT yeniden derleme kimliği sayısı.  
+ 'ndaki Dizide ayrılan JıT yeniden derleme kimliği sayısı `reJitIds` .  
   
  `pcReJitIds`  
  dışı JıT yeniden derlenen kimliklerinin gerçek sayısı.  
@@ -49,16 +49,16 @@ HRESULT GetReJITIDs (
  dışı Belirtilen işlev için JıT-yeniden derleme kimliklerini içeren, arayan tarafından ayrılmış bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetReJITIDs` belirli bir işlev örneği için etkin JıT-yeniden derleme kimliklerini numaralandırır. Bu, arayan tarafından ayrılan arabellekleri kabul eden diğer `ICorProfilerInfo` işlevleriyle aynı kullanım modelini izler.  
+ `GetReJITIDs`belirli bir işlev örneği için etkin JıT-yeniden derlenmesi kimliklerini numaralandırır. Bu, `ICorProfilerInfo` çağıran ayrılmış arabellekleri kabul eden diğer işlevlerle aynı kullanım modelini izler.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

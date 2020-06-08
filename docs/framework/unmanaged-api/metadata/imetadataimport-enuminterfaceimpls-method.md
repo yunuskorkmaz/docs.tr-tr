@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: b535fdd5027a26cc4dd0eafec9883f0186773dd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492253"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls Yöntemi
-Belirtilen `TypeDef`tarafından uygulanan tüm arabirimleri oyalar.
+Belirtilen tarafından uygulanan tüm arabirimleri numaralandırır `TypeDef` .
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT EnumInterfaceImpls (  
@@ -39,41 +39,41 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parametreler  
  `phEnum`  
- [içinde, dışarı] Sayıya işaretçisi.  
+ [in, out] Numaralandırıcı için bir işaretçi.  
   
  `td`  
- [içinde] Arabirim uygulamalarını temsil eden MethodDef belirteçleri numaralandırılacak Olan TypeDef belirteci.  
+ 'ndaki MethodDef belirteçleri arabirim uygulamalarını temsil eden TypeDef 'in belirteci NUMARALANDIRILAMAZ.  
   
  `rImpls`  
- [çıkış] MethodDef belirteçlerini depolamak için kullanılan dizi.  
+ dışı MethodDef belirteçlerini depolamak için kullanılan dizi.  
   
  `cMax`  
- [içinde] `rImpls` Dizinin maksimum uzunluğu.  
+ 'ndaki Dizinin uzunluk üst sınırı `rImpls` .  
   
  `pcImpls`  
- [çıkış] Döndürülen belirteçlerin gerçek `rImpls`sayısı.  
+ dışı İçinde döndürülen gerçek belirteç sayısı `rImpls` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`başarıyla döndürülür.|  
-|`S_FALSE`|Sayısala çıkarmak için MethodDef belirteçleri yoktur. Bu durumda, `pcImpls` sıfıra ayarlanır.|  
+|`S_OK`|`EnumInterfaceImpls`başarıyla döndürüldü.|  
+|`S_FALSE`|Numaralandırılacak bir MethodDef belirteci yok. Bu durumda, `pcImpls` sıfır olarak ayarlanır.|  
 
 ## <a name="remarks"></a>Açıklamalar
 
-Numaralandırma, belirtilen ler tarafından `mdInterfaceImpl` uygulanan her arabirim için bir `TypeDef`belirteç ler koleksiyonunu döndürür. Arabirim belirteçleri, arabirimlerin belirtildiği sırayla `DefineTypeDef` `SetTypeDefProps`döndürülür (üzerinden veya). Döndürülen `mdInterfaceImpl` belirteçlerin özellikleri [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)kullanılarak sorgulanabilir.
+Sabit listesi, `mdInterfaceImpl` belirtilen tarafından uygulanan her arabirim için bir belirteç koleksiyonu döndürür `TypeDef` . Arabirim belirteçleri, arabirimlerin belirtildiği sırada döndürülür ( `DefineTypeDef` veya üzerinden `SetTypeDefProps` ). Döndürülen `mdInterfaceImpl` belirteçlerin özellikleri, [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)kullanılarak sorgulanabilir.
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

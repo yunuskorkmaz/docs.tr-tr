@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: dbcf9230a953069d311c3908aa3ed21fcfd5075c
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 627df3600b920e2fe2250f2fc3da51c852edc774
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496278"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach Yöntemi
 Çalışma zamanına profil oluşturucuyu ayırmasını söyler.  
@@ -39,7 +39,7 @@ HRESULT RequestProfilerDetach(
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|Ayırma isteği geçerli ve ayırma yordamı artık başka bir iş parçacığında devam ediyor. Ayırma tam olarak tamamlandığında bir `ProfilerDetachSucceeded` olay verilir.|  
 |E_CORPROF_E_CALLBACK3_REQUIRED|Profil Oluşturucu, ayırma işlemini desteklemek için uygulanması gereken [ICorProfilerCallback3](icorprofilercallback3-interface.md) arabirimi için [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) girişimi başarısız oldu. Ayırma denenmedi.|  
@@ -56,7 +56,7 @@ HRESULT RequestProfilerDetach(
  Profil Oluşturucu `dwExpectedCompletionMilliseconds` 0 (sıfır) olarak belirtirse, clr varsayılan bir 5000 değeri kullanır. Bu, 5 saniye sonra, 10 saniye sonra ve sonrasında 10 dakikada bir denetim gerçekleştirecek anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   

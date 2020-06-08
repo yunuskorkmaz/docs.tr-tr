@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868154"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494052"
 ---
 # <a name="profiling-interfaces"></a>Profil Oluşturma Arabirimleri
 Bu bölümde, ortak dil çalışma zamanı (CLR) tarafından yürütülen bir programın profilini oluşturma olanağı sağlayan yönetilmeyen arabirimler açıklanmaktadır.  
@@ -27,7 +27,7 @@ Bu bölümde, ortak dil çalışma zamanı (CLR) tarafından yürütülen bir pr
  Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde kod Profilcisi bildirmek için CLR tarafından kullanılan yöntemleri sağlar.  
   
  [ICorProfilerCallback2 Arabirimi](icorprofilercallback2-interface.md)  
- `ICorProfilerCallback` arabirimini .NET Framework 2,0 ve sonraki sürümlerde desteklenen geri çağırmalar ile genişletir.  
+ Arabirimi, `ICorProfilerCallback` .NET Framework 2,0 ve sonraki sürümlerde desteklenen geri çağırmalar ile genişletir.  
   
  [ICorProfilerCallback3 Arabirimi](icorprofilercallback3-interface.md)  
  CLR 'nin, bağlama ve ayırma durum bilgilerini profil oluşturucuya iletmek için kullandığı geri çağırma yöntemleri sağlar.  
@@ -60,10 +60,10 @@ Ortak dil çalışma zamanının, dinamik bir yöntemin atık olarak toplandığ
  Olay izleme ve istek bilgilerini denetlemek için CLR ile iletişim kurmak üzere kod profil oluşturucular tarafından kullanılacak yöntemler sağlar.  
   
  [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)  
- `ICorProfilerInfo` arabirimini .NET Framework 2,0 ve sonraki sürümlerde desteklenen yöntemlerle genişletir.  
+ Arabirimi, `ICorProfilerInfo` .NET Framework 2,0 ve sonraki sürümlerde desteklenen yöntemlerle genişletir.  
   
- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)  
- `ICorProfilerInfo2` arabirimini .NET Framework 4 ve sonraki sürümlerde desteklenen yöntemlerle genişletir.  
+ [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)  
+ Arabirimi, `ICorProfilerInfo2` .NET Framework 4 ve sonraki sürümlerinde desteklenen yöntemlerle genişletir.  
   
  [ICorProfilerInfo4 Arabirimi](icorprofilerinfo4-interface.md)  
  Olay izlemeyi denetlemek ve bilgi istemek üzere CLR ile iletişim kurmak için kod profil oluşturucular kullanan yöntemler sağlar.  
@@ -81,7 +81,7 @@ Ortak dil çalışma zamanının, dinamik bir yöntemin atık olarak toplandığ
  Uygulama veya profil oluşturucu tarafından yüklenen bir modül koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
   
  [ICorProfilerObjectEnum Arabirimi](icorprofilerobjectenum-interface.md)  
- [Ngen. exe (yerel görüntü Oluşturucu)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)tarafından oluşturulan dondurulmuş nesneler koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
+ [Ngen. exe (yerel görüntü Oluşturucu)](../../tools/ngen-exe-native-image-generator.md)tarafından oluşturulan dondurulmuş nesneler koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
   
  [ICorProfilerThreadEnum Arabirimi](icorprofilerthreadenum-interface.md)  
  CLR 'deki iş parçacığı koleksiyonunda sırayla yinelemek için yöntemler sağlar.  
@@ -90,7 +90,7 @@ Ortak dil çalışma zamanının, dinamik bir yöntemin atık olarak toplandığ
  Yeni bir Microsoft ara dili (MSIL) işlev gövdesi için bellek ayırmak üzere [ayırma](imethodmalloc-alloc-method.md) yöntemi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Profil Oluşturmaya Genel Bakış](profiling-overview.md)  
+ [Profil oluşturmaya genel bakış](profiling-overview.md)  
   
  [Profil Oluşturma Genel Statik İşlevleri](profiling-global-static-functions.md)  
   

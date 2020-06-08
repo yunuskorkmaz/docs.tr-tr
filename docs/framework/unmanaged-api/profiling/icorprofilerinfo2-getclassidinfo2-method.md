@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-ms.openlocfilehash: 64d2cd76dafb1a51814b916b5ce73fb08cdcaef9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a33e51969dc0579d976f08470ebc6e2bcca04dd7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868866"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497172"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 Yöntemi
-Belirtilen sınıfın açık genel tanımına, üst sınıfının `ClassID` ve varsa sınıfının her bir tür bağımsız değişkeni için `ClassID` ait üst modülü ve meta veri belirtecini alır.  
+Belirtilen sınıfın açık genel tanımının, `ClassID` üst sınıfının ve varsa `ClassID` sınıfının her tür bağımsız değişkeni için üst modülü ve meta veri belirtecini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetClassIDInfo2(  
@@ -52,31 +52,31 @@ HRESULT GetClassIDInfo2(
  dışı Üst sınıfın KIMLIĞINE yönelik işaretçi.  
   
  `cNumTypeArgs`  
- 'ndaki `typeArgs` dizisinin boyutu.  
+ 'ndaki `typeArgs`Dizinin boyutu.  
   
  `pcNumTypeArgs`  
  dışı Kullanılabilir öğelerin toplam sayısına yönelik işaretçi.  
   
  `typeArgs`  
- dışı Her biri sınıfının bir tür bağımsız değişkeninin KIMLIĞINI temsil eden `ClassID` değerleri dizisi. Yöntemi döndürüldüğünde `typeArgs`, kullanılabilir `ClassID` değerlerinin bazılarını veya tümünü içerecektir.  
+ dışı `ClassID`Her biri sınıfının bir tür bağımsız DEĞIŞKENININ kimliğini temsil eden bir değer dizisi. Yöntemi döndüğünde, `typeArgs` kullanılabilir değerlerin bazılarını veya tümünü içerecektir `ClassID` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetClassIDInfo2` yöntemi [ICorProfilerInfo:: GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) yöntemine benzer, ancak `GetClassIDInfo2` genel bir tür hakkında ek bilgiler elde eder.  
+ `GetClassIDInfo2`Yöntemi [ICorProfilerInfo:: GetClassIDInfo](icorprofilerinfo-getclassidinfo-method.md) yöntemine benzer, ancak `GetClassIDInfo2` genel bir tür hakkında ek bilgiler edinir.  
   
- Profil Oluşturucu kodu, belirli bir modül için [meta](../../../../docs/framework/unmanaged-api/metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. `pTypeDefToken` tarafından başvurulan konuma döndürülen meta veri belirteci, daha sonra sınıfının meta verilerine erişmek için kullanılabilir.  
+ Profil Oluşturucu kodu, belirli bir modül için [meta](../metadata/index.md) veri arabirimi elde etmek üzere [ICorProfilerInfo:: GetModuleMetaData öğesini](icorprofilerinfo-getmodulemetadata-method.md) çağırabilir. Tarafından başvurulan konuma döndürülen meta veri belirteci, `pTypeDefToken` daha sonra sınıfının meta verilerine erişmek için kullanılabilir.  
   
- `GetClassIDInfo2` çağrıldıktan sonra, `typeArgs` arabelleğinin tüm `ClassID` değerlerini içerecek kadar büyük olduğunu doğrulamanız gerekir. Bunu yapmak için `pcNumTypeArgs` işaret eden değeri `cNumTypeArgs` parametresinin değeri ile karşılaştırın. `pcNumTypeArgs`, `cNumTypeArgs`daha büyük bir değere işaret ediyorsa, daha büyük bir `typeArgs` arabelleği ayırın, yeni, daha büyük boyuttaki `cNumTypeArgs` güncelleştirin ve `GetClassIDInfo2` çağırın.  
+ `GetClassIDInfo2`Geri döndüğünde, `typeArgs` arabelleğin tüm değerleri içerecek kadar büyük olduğunu doğrulamanız gerekir `ClassID` . Bunu yapmak için, işaret eden değeri `pcNumTypeArgs` parametresinin değeriyle karşılaştırın `cNumTypeArgs` . Daha `pcNumTypeArgs` büyük bir değere işaret ediyorsa `cNumTypeArgs` , daha büyük bir `typeArgs` arabellek ayırır, `cNumTypeArgs` Yeni, daha büyük boyutla güncelleştirin ve `GetClassIDInfo2` yeniden çağırın.  
   
- Alternatif olarak, doğru arabellek boyutunu elde etmek için ilk olarak `GetClassIDInfo2` sıfır uzunluklu `typeArgs` arabelleği ile çağırabilirsiniz. Daha sonra `typeArgs` arabellek boyutunu `pcNumTypeArgs` döndürülen değere ayarlayabilir ve `GetClassIDInfo2` yeniden çağırabilirsiniz.  
+ Alternatif olarak, `GetClassIDInfo2` `typeArgs` doğru arabellek boyutunu elde etmek için ilk olarak sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra `typeArgs` arabellek boyutunu içinde döndürülen değere ayarlayabilir `pcNumTypeArgs` ve `GetClassIDInfo2` yeniden çağırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
