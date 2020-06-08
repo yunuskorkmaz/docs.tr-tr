@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: b8cba2b1a1f206392a59f8bc9b968e725e0ce6ee
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869318"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497757"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo Arabirimi
 Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı (CLR) ile iletişim kurmak üzere kod profil oluşturucular tarafından kullanılacak yöntemler sağlar.  
   
 > [!NOTE]
-> `ICorProfilerInfo` arabirimindeki her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının bir listesi için bkz. CorError. h.  
+> Arabirimdeki her yöntem, `ICorProfilerInfo` başarılı veya başarısız olduğunu göstermek için BIR hresult döndürür. Olası dönüş kodlarının bir listesi için bkz. CorError. h.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
 |[BeginInprocDebugging Yöntemi](icorprofilerinfo-begininprocdebugging-method.md)|İşlem içi hata ayıklama desteğini başlatır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.|  
 |[EndInprocDebugging Yöntemi](icorprofilerinfo-endinprocdebugging-method.md)|İşlem içi hata ayıklama oturumunu kapatır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor.|  
 |[ForceGC Yöntemi](icorprofilerinfo-forcegc-method.md)|Çöp toplamayı çalışma zamanı içinde gerçekleşmeye zorlar.|  
 |[GetAppDomainInfo Yöntemi](icorprofilerinfo-getappdomaininfo-method.md)|Belirtilen uygulama etki alanı hakkında bilgi alır.|  
 |[GetAssemblyInfo Yöntemi](icorprofilerinfo-getassemblyinfo-method.md)|Belirtilen derleme hakkında bilgi alır.|  
-|[GetClassFromObject Yöntemi](icorprofilerinfo-getclassfromobject-method.md)|`ClassID` alır<br /><br /> nesnesini `ObjectID`verildiğinde.|  
+|[GetClassFromObject Yöntemi](icorprofilerinfo-getclassfromobject-method.md)|`ClassID`Bir<br /><br /> nesnesi `ObjectID` .|  
 |[GetClassFromToken Yöntemi](icorprofilerinfo-getclassfromtoken-method.md)|Meta veri belirteci verilen sınıfın KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) metodunu kullanın.|  
 |[GetClassIDInfo Yöntemi](icorprofilerinfo-getclassidinfo-method.md)|Belirtilen sınıf için üst modülü ve meta veri belirtecini alır.|  
 |[GetCodeInfo Yöntemi](icorprofilerinfo-getcodeinfo-method.md)|Belirtilen işlev KIMLIĞIYLE ilişkili yerel kod kapsamını alır. Bu yöntem artık kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) yöntemini kullanın.|  
 |[GetCurrentThreadID Yöntemi](icorprofilerinfo-getcurrentthreadid-method.md)|Yönetilen bir iş parçacığı ise, geçerli iş parçacığının KIMLIĞINI alır.|  
 |[GetEventMask Yöntemi](icorprofilerinfo-geteventmask-method.md)|Profil oluşturucunun CLR 'den olay bildirimleri almak istediği geçerli olay kategorilerini alır.|  
-|[GetFunctionFromIP Yöntemi](icorprofilerinfo-getfunctionfromip-method.md)|Yönetilen bir kod yönerge işaretçisini `FunctionID`eşler.|  
+|[GetFunctionFromIP Yöntemi](icorprofilerinfo-getfunctionfromip-method.md)|Yönetilen bir kod yönerge işaretçisini bir ile eşler `FunctionID` .|  
 |[GetFunctionFromToken Yöntemi](icorprofilerinfo-getfunctionfromtoken-method.md)|Bir işlevin KIMLIĞINI alır. Bu yöntem .NET Framework sürüm 2,0 ' de kullanılmıyor. Bunun yerine [ICorProfilerInfo2:: GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) metodunu kullanın.|  
 |[GetFunctionInfo Yöntemi](icorprofilerinfo-getfunctioninfo-method.md)|Belirtilen işlev için üst sınıfı ve meta veri belirtecini alır.|  
 |[GetHandleFromThread Yöntemi](icorprofilerinfo-gethandlefromthread-method.md)|Bir iş parçacığının KIMLIĞINI bir Win32 iş parçacığı tanıtıcısına eşler.|  
@@ -60,26 +60,26 @@ Olay izlemeyi ve istek bilgilerini denetlemek için ortak dil çalışma zamanı
 |[IsArrayClass Yöntemi](icorprofilerinfo-isarrayclass-method.md)|Belirtilen sınıfın bir dizi sınıfı olup olmadığını belirler.|  
 |[SetEnterLeaveFunctionHooks Yöntemi](icorprofilerinfo-setenterleavefunctionhooks-method.md)|Yönetilen işlevlerin "Enter", "Leave" ve "cloncall" kancalarında çağrılacak Profil Oluşturucu uygulanmış işlevleri belirtir.|  
 |[SetEventMask Yöntemi](icorprofilerinfo-seteventmask-method.md)|Profil oluşturucunun CLR 'den bildirim almak istediği olay türlerini belirten bir değer ayarlar.|  
-|[SetFunctionIDMapper Yöntemi](icorprofilerinfo-setfunctionidmapper-method.md)|Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen `FunctionID` değerlerini alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir.|  
-|[SetFunctionReJIT Yöntemi](icorprofilerinfo-setfunctionrejit-method.md)|Uygulanmadı. Kullanmayın.|  
+|[SetFunctionIDMapper Yöntemi](icorprofilerinfo-setfunctionidmapper-method.md)|`FunctionID`Profil oluşturucunun işlev girişine/çıkış kancalarına geçirilen değerleri alternatif değerlerle eşlemek için çağrılacak Profil Oluşturucu uygulanmış işlevi belirtir.|  
+|[SetFunctionReJIT Yöntemi](icorprofilerinfo-setfunctionrejit-method.md)|Uygulanmaz. Kullanmayın.|  
 |[SetILFunctionBody Yöntemi](icorprofilerinfo-setilfunctionbody-method.md)|Belirtilen modüldeki belirtilen işlevin gövdesini değiştirir.|  
 |[SetILInstrumentedCodeMap Yöntemi](icorprofilerinfo-setilinstrumentedcodemap-method.md)|Belirtilen işlevin özgün MSIL 'in, işlevin profiler-modified MSIL 'in yeni uzaklıklardır nasıl eşlendiğini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Profil Oluşturucu, olay izleme ve istek bilgilerini denetlemek üzere CLR ile iletişim kurmak için `ICorProfilerInfo` arabirimindeki bir yöntemi çağırır.  
+ Profil Oluşturucu, `ICorProfilerInfo` olay izleme ve istek bilgilerini denetlemek üzere clr ile iletişim kurmak için arabirimdeki bir yöntemi çağırır.  
   
- `ICorProfilerInfo` arabiriminin yöntemleri, ücretsiz iş parçacıklı model kullanılarak CLR tarafından uygulanır. Her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının bir listesi için bkz. CorError. h.  
+ Arabirim yöntemleri, `ICorProfilerInfo` clr tarafından ücretsiz iş parçacıklı model kullanılarak uygulanır. Her yöntem, başarılı veya başarısız olduğunu göstermek için bir HRESULT döndürür. Olası dönüş kodlarının bir listesi için bkz. CorError. h.  
   
- CLR, başlatma sırasında her kod profil Oluşturucu için bir `ICorProfilerInfo` arabirimi olan [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)uygulaması aracılığıyla başarılı oldu. Kod Profilcisi daha sonra CLR denetimi altında yürütülen yönetilen kod hakkında bilgi almak için `ICorProfilerInfo` arabiriminin yöntemlerini çağırabilir.  
+ CLR, profil oluşturucunun [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)uygulaması aracılığıyla, `ICorProfilerInfo` başlatma sırasında her kod Profilcisi için bir arabirim aracılığıyla geçer. Kod Profilcisi daha sonra, `ICorProfilerInfo` clr denetimi altında yürütülen yönetilen kod hakkında bilgi almak için arabirimin yöntemlerini çağırabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

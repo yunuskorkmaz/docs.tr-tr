@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 068014732cee91147edaec29fa0f954a741d8b5c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491673"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef Yöntemi
-Belirtilen <xref:System.Type> ad ve meta veri imzasına sahip üye başvurusu için Üye Ref belirteci alır.  
+Belirtilen <xref:System.Type> ve belirtilen ad ve meta veri imzasına sahip olan üye başvurusu Için MemberRef belirtecine yönelik bir işaretçi alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT FindMemberRef (  
@@ -39,37 +39,37 @@ HRESULT FindMemberRef (
   
 ## <a name="parameters"></a>Parametreler  
  `td`  
- [içinde] Arama için üye başvuruyu içine alan sınıf veya arabirim için TypeRef belirteci. Bu değer `mdTokenNil`ise, arama genel değişken veya genel işlev başvurusu için yapılır.  
+ 'ndaki Arama için üye başvurusunu kapsayan sınıf veya arabirim için TypeRef belirteci. Bu değer ise `mdTokenNil` , arama genel bir değişken veya genel işlev başvurusu için yapılır.  
   
  `szName`  
- [içinde] Aranacak üye nin adı.  
+ 'ndaki Arama yapılacak üye başvurusunun adı.  
   
  `pvSigBlob`  
- [içinde] Üye başvurunun ikili meta veri imzasına işaretçi.  
+ 'ndaki Üye başvurusunun ikili meta veri imzasına yönelik bir işaretçi.  
   
  `cbSigBlob`  
- [içinde] `pvSigBlob`Baytboyutu.  
+ 'ndaki Bayt cinsinden boyut `pvSigBlob` .  
   
  `pmr`  
- [çıkış] Eşleşen ÜyeRef belirteci için bir işaretçi.  
+ dışı Eşleşen MemberRef belirtecine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üyeyi çevreleyen sınıfını veya arayüzünü`td`( ),`szName`adını ( ),`pvSigBlob`ve isteğe bağlı olarak imzasını ( ) kullanarak belirtirsiniz.  
+ Üyeyi kapsayan sınıfını veya arabirimini ( `td` ), adını ( `szName` ) ve isteğe bağlı olarak imzasını () kullanarak belirtirsiniz `pvSigBlob` .  
   
- İmzalar belirli `FindMemberRef` bir kapsama bağlı olduğundan, geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, çevreleyen sınıfı veya değer türünü tanımlayan bir belirteç katıştırabilir. Belirteç, yerel TypeDef tablosuna bir dizindir. Geçerli kapsam bağlamının dışında bir çalışma zamanı imzası oluşturamazsınız ve `FindMemberRef`bu imzayı 'ye giriş olarak kullanamazsınız.  
+ `FindMemberRef`İmzaların belirli bir kapsama bağlandığı için, geçirilen imza geçerli kapsamda oluşturulmuş olmalıdır. İmza, kapsayan sınıf veya değer türünü tanımlayan bir belirteç ekleyebilir. Belirteç, yerel TypeDef tablosunun bir dizinidir. Geçerli kapsamın bağlamı dışında bir çalışma zamanı imzası derlenemez ve bu imzayı giriş olarak kullanabilirsiniz `FindMemberRef` .  
   
- `FindMemberRef`yalnızca doğrudan sınıf veya arabirimde tanımlanmış üye başvuruları bulur; devralınan üye referansları bulamaz.  
+ `FindMemberRef`yalnızca sınıfta veya arabirimde doğrudan tanımlanmış üye başvurularını bulur; devralınan üye başvurularını bulmaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** Cor.h  
+ **Üst bilgi:** Cor. h  
   
- **Kütüphane:** MsCorEE.dll bir kaynak olarak dahil  
+ **Kitaplık:** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport Arabirimi](imetadataimport-interface.md)
+- [IMetaDataImport2 Arabirimi](imetadataimport2-interface.md)

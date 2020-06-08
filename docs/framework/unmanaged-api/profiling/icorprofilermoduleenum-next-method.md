@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 695a4386d9399a079df41f11f52a3185083784ed
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861391"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494845"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next Yöntemi
 Numaralandırıcının dizideki geçerli konumundan başlayarak sıralı bir modül koleksiyonundan belirtilen sayıda bitişik modülü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Next([in]  ULONG      celt,  
@@ -39,27 +39,27 @@ HRESULT Next([in]  ULONG      celt,
  'ndaki Alınacak modül sayısı.  
   
  `ids`  
- dışı Her biri alınan bir modülü temsil eden `ModuleID` değerleri dizisi.  
+ dışı `ModuleID`Her biri alınan bir modülü temsil eden bir değer dizisi.  
   
  `pceltFetched`  
- dışı `ids` dizisinde aslında döndürülen öğe sayısına yönelik bir işaretçi.  
+ dışı Dizide gerçekten döndürülen öğe sayısına yönelik bir işaretçi `ids` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`celt` öğeler döndürüldü.|  
-|S_FALSE|`celt` öğelerinden daha azı döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
+|S_OK|`celt`öğeler döndürüldü.|  
+|S_FALSE|Daha az `celt` öğe döndürüldü, bu, numaralandırmanın tamamlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi:** CorProf. IDL, CorProf. h  
   
  **Kitaplık:** Corguid. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
