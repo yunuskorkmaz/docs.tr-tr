@@ -2,19 +2,19 @@
 title: İstemci Birlikte Kullanılabilirliği
 ms.date: 03/30/2017
 ms.assetid: e890e40a-b76a-48c4-9e5b-a4b385fac847
-ms.openlocfilehash: 8aadd1592cdb08c9c44490ebfbaba1c9d3d9606e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d482c7331998b97c5ff535d8471cc7aece74c2d4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944020"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585343"
 ---
-# <a name="client-interoperability"></a><span data-ttu-id="402ca-102">İstemci Birlikte Kullanılabilirliği</span><span class="sxs-lookup"><span data-stu-id="402ca-102">Client Interoperability</span></span>
-<span data-ttu-id="402ca-103">Bu bölüm, Windows Communication Foundation (WCF) ve diğer teknolojiler arasındaki birlikte çalışabilirlik gösteren örnekler içerir.</span><span class="sxs-lookup"><span data-stu-id="402ca-103">This section contains samples that demonstrate interoperability between Windows Communication Foundation (WCF) and other technologies.</span></span>  
+# <a name="client-interoperability"></a><span data-ttu-id="8f220-102">İstemci Birlikte Kullanılabilirliği</span><span class="sxs-lookup"><span data-stu-id="8f220-102">Client Interoperability</span></span>
+<span data-ttu-id="8f220-103">Bu bölüm Windows Communication Foundation (WCF) ve diğer teknolojiler arasında birlikte çalışabilirliği gösteren örnekler içerir.</span><span class="sxs-lookup"><span data-stu-id="8f220-103">This section contains samples that demonstrate interoperability between Windows Communication Foundation (WCF) and other technologies.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="402ca-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="402ca-104">In This Section</span></span>  
- [<span data-ttu-id="402ca-105">ASMX Web Hizmetleri ile Birlikte Çalışma</span><span class="sxs-lookup"><span data-stu-id="402ca-105">Interoperating with ASMX Web Services</span></span>](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)  
- <span data-ttu-id="402ca-106">WCF istemci uygulaması ile mevcut bir ASMX Web hizmetini tümleştirmek nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="402ca-106">Demonstrates how to integrate a WCF client application with an existing ASMX Web service.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8f220-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8f220-104">In This Section</span></span>  
+ [<span data-ttu-id="8f220-105">ASMX Web Hizmetleri ile Birlikte Çalışma</span><span class="sxs-lookup"><span data-stu-id="8f220-105">Interoperating with ASMX Web Services</span></span>](interoperating-with-asmx-web-services.md)  
+ <span data-ttu-id="8f220-106">Bir WCF istemci uygulamasının mevcut bir ASMX Web hizmetiyle nasıl tümleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="8f220-106">Demonstrates how to integrate a WCF client application with an existing ASMX Web service.</span></span>  
   
- [<span data-ttu-id="402ca-107">XMLSerializer Örneği</span><span class="sxs-lookup"><span data-stu-id="402ca-107">XMLSerializer Sample</span></span>](../../../../docs/framework/wcf/samples/xmlserializer-sample.md)  
- <span data-ttu-id="402ca-108">İle uyumlu olan türler seri hale getrime ve yapmayı gösteren <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="402ca-108">Demonstrates how to serialize and deserialize types that are compatible with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>
+ [<span data-ttu-id="8f220-107">XMLSerializer Örneği</span><span class="sxs-lookup"><span data-stu-id="8f220-107">XMLSerializer Sample</span></span>](xmlserializer-sample.md)  
+ <span data-ttu-id="8f220-108">İle uyumlu türlerin serileştirilmesinin ve serisini kaldırma işlemlerinin nasıl yapılacağını gösterir <xref:System.Xml.Serialization.XmlSerializer> .</span><span class="sxs-lookup"><span data-stu-id="8f220-108">Demonstrates how to serialize and deserialize types that are compatible with the <xref:System.Xml.Serialization.XmlSerializer>.</span></span>
