@@ -7,54 +7,54 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 1e82fbb266d3789a8d34109c66d9ee1d8a93c70c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463816"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596779"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
-Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevlerini açıklar. Bu konu yalnızca kimlik doğrulama, gizlilik ve bütünlüğü kapsar, topluca *aktarım güvenliği*olarak bilinir. Bu konu yetkilendirmeyi (kaynaklara veya hizmetlere erişim denetimi) kapsamaz; yetkilendirme hakkında bilgi [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)için Yetkilendirme'ye bakın.  
+Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklanmaktadır. Bu konu, toplu olarak *Aktarım güvenliği*olarak bilinen kimlik doğrulama, gizlilik ve bütünlüğü içerir. Bu konu, yetkilendirmeyi kapsamaz (kaynaklara veya hizmetlere erişimin denetimi); Yetkilendirme hakkında bilgi için bkz. [Yetkilendirme](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Güvenlik kavramlarına değerli bir giriş için, özellikle WCF ile ilgili olarak, [Senaryolar, Desenler ve Web Hizmetleri Geliştirmeleri (WSE) 3.0 için Uygulama Kılavuzu'nda](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10))MSDN'deki desen ve uygulama öğreticileri kümesine bakın.  
+> Özellikle WCF ile ilgili olarak güvenlik kavramlarına değerli bir giriş için, [Web Hizmetleri geliştirmeleri (WVAS) 3,0 Için senaryolar, desenler ve uygulama KıLAVUZLARıNDAKI](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10))MSDN 'de bulunan desenler ve uygulamalar öğreticilerine bakın.  
   
- WCF güvenliğini programlamak, aşağıdakileri ayarlayan üç adımı temel aşar: güvenlik modu, istemci kimlik bilgisi türü ve kimlik bilgileri değerleri. Bu adımları kod veya yapılandırma yoluyla gerçekleştirebilirsiniz.  
+ WCF güvenliğini programlama, aşağıdaki üç adımı temel alır: güvenlik modu, istemci kimlik bilgileri türü ve kimlik bilgisi değerleri. Bu adımları kod veya yapılandırma aracılığıyla yapabilirsiniz.  
   
-## <a name="setting-the-security-mode"></a>Güvenlik Modunu Ayarlama  
- WCF'de güvenlik moduile programlama için genel adımları aşağıda açıklar:  
+## <a name="setting-the-security-mode"></a>Güvenlik modunu ayarlama  
+ Aşağıda, WCF 'de güvenlik moduyla programlama için genel adımlar açıklanmıştır:  
   
-1. Uygulama gereksinimlerinize uygun önceden tanımlanmış bağlamalardan birini seçin. Bağlama seçeneklerinin listesi [için, Sistem Tarafından Sağlanan Bağlamalar'a](../../../../docs/framework/wcf/system-provided-bindings.md)bakın. Varsayılan olarak, hemen hemen her bağlama güvenlik etkin. Bir özel durum <xref:System.ServiceModel.BasicHttpBinding> sınıf (yapılandırma kullanarak, [ \<temelHttpBinding>). ](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
+1. Uygulama gereksinimlerinize uygun olan önceden tanımlanmış bağlamalardan birini seçin. Bağlama seçeneklerinin bir listesi için bkz. [sistem tarafından sunulan bağlamalar](../system-provided-bindings.md). Varsayılan olarak, neredeyse her bağlamada Güvenlik etkindir. Tek istisna, <xref:System.ServiceModel.BasicHttpBinding> sınıftır (yapılandırma,, [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ).  
   
-     Seçtiğiniz bağlama aktarımını belirler. Örneğin, <xref:System.ServiceModel.WSHttpBinding> aktarım olarak HTTP kullanır; <xref:System.ServiceModel.NetTcpBinding> TCP kullanır.  
+     Seçtiğiniz bağlama, taşımayı belirler. Örneğin, <xref:System.ServiceModel.WSHttpBinding> taşıma olarak http 'yi kullanır; <xref:System.ServiceModel.NetTcpBinding> TCP kullanır.  
   
-2. Bağlama için güvenlik modlarından birini seçin. Seçtiğiniz bağlamanın kullanılabilir mod seçeneklerini belirlediğini unutmayın. Örneğin, aktarım güvenliğine izin <xref:System.ServiceModel.WSDualHttpBinding> vermez (bu bir seçenek değildir). Benzer şekilde, <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne <xref:System.ServiceModel.NetNamedPipeBinding> mesaj güvenliğine izin verir.  
+2. Bağlama için güvenlik modlarından birini seçin. Seçtiğiniz bağlamanın kullanılabilir mod seçimlerini belirlediğini unutmayın. Örneğin, <xref:System.ServiceModel.WSDualHttpBinding> Aktarım güvenliğine izin vermez (bir seçenek değildir). Benzer şekilde, <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne ne de <xref:System.ServiceModel.NetNamedPipeBinding> ileti güvenliği izin vermez.  
   
      Üç seçeneğiniz vardır:  
   
     1. `Transport`  
   
-         Aktarım güvenliği, seçtiğiniz bağlamanın kullandığı mekanizmaya bağlıdır. Örneğin, kullanıyorsanız `WSHttpBinding` güvenlik mekanizması Güvenli Soketler Katmanı (SSL) (ayrıca HTTPS protokolü mekanizması). Genel olarak konuşursak, taşıma güvenliğinin en büyük avantajı, hangi taşımayı kullanıyor olursanız olun iyi bir iş elde etmektir. Ancak, iki sınırlaması vardır: Birincisi, aktarım mekanizmasının bir kullanıcıyı doğrulamak için kullanılan kimlik bilgisi türünü dikte etmesidir. Bu, yalnızca bir hizmetin farklı kimlik bilgileri gerektiren diğer hizmetlerle birlikte çalışması gerekiyorsa bir dezavantajdır. İkincisi, güvenlik ileti düzeyinde uygulanmadığından, güvenlik uçtan uca değil, hop-by-hop şekilde uygulanır. Bu ikinci sınırlama yalnızca istemci ve hizmet arasındaki ileti yolu aracılar içeriyorsa bir sorundur. Hangi taşımanın kullanılacağı hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md) Aktarım güvenliğini kullanma hakkında daha fazla bilgi için [Taşıma Güvenliğine Genel Bakış'a](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)bakın.  
+         Taşıma güvenliği, seçtiğiniz bağlamanın kullandığı mekanizmaya bağlıdır. Örneğin, kullanıyorsanız, `WSHttpBinding` güvenlik mekanizması Güvenli Yuva Katmanı (SSL) (aynı zamanda https Protokolü mekanizması) olur. Genel olarak, aktarım güvenliğinin temel avantajı, hangi taşımanın kullanıldığı önemli değildir. Ancak, bu iki sınırlamalara sahiptir: ilki, taşıma mekanizmasının bir kullanıcının kimliğini doğrulamak için kullanılan kimlik bilgisi türünü belirlemesi. Bu, yalnızca bir hizmetin farklı kimlik bilgilerini talep eden diğer hizmetlerle birlikte çalışması gerektiğinde bir dezavantajdır. İkincisi ise, güvenlik ileti düzeyinde uygulanmadığından, güvenlik, uçtan uca değil, atlama bir şekilde uygulanır. Bu ikinci sınırlama yalnızca istemci ve hizmet arasındaki ileti yolu aracılar içeriyorsa bir sorundur. Hangi taşımanın kullanılacağı hakkında daha fazla bilgi için bkz. [bir taşıma seçme](choosing-a-transport.md). Taşıma güvenliğini kullanma hakkında daha fazla bilgi için bkz. [Transport Security Overview](transport-security-overview.md).  
   
     2. `Message`  
   
-         İleti güvenliği, her iletinin iletiyi güvende tutmak için gerekli üstbilgileri ve verileri içerdiği anlamına gelir. Üstbilgilerin bileşimi değiştiğinden, istediğiniz sayıda kimlik bilgileri ekleyebilirsiniz. Bir aktarım mekanizmasının sağlayamadığı belirli bir kimlik bilgisi türünü talep eden diğer hizmetlerle birlikte çalışıyorsanız veya iletinin her hizmetin farklı bir kimlik bilgisi türü gerektirdiği birden fazla hizmetle kullanılması gerekiyorsa, bu bir faktör haline gelir.  
+         İleti güvenliği her iletinin, iletiyi güvenli tutmak için gerekli üst bilgileri ve verileri içerdiği anlamına gelir. Üst bilgilerin bileşimi değiştiğinden, istediğiniz sayıda kimlik bilgilerini ekleyebilirsiniz. Bu, bir taşıma mekanizmasının sağlayamediği belirli bir kimlik bilgisi türünü talep eden diğer hizmetlerle birlikte çalışıyorsanız veya ileti, her hizmetin farklı bir kimlik bilgisi türü talep ettiği birden fazla hizmetle birlikte kullanılması gerekiyorsa bir faktör haline gelir.  
   
-         Daha fazla bilgi için [İleti Güvenliği'ne](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)bakın.  
+         Daha fazla bilgi için bkz. [Ileti güvenliği](message-security-in-wcf.md).  
   
     3. `TransportWithMessageCredential`  
   
-         Bu seçenek ileti aktarımını güvence altına almak için aktarım katmanını kullanırken, her ileti diğer hizmetlerin gereksinim duyduğu zengin kimlik bilgilerini içerir. Bu, aktarım güvenliğinin performans avantajını ileti güvenliğinin zengin kimlik bilgileri avantajıyla birleştirir. Bu aşağıdaki bağlamaları ile <xref:System.ServiceModel.BasicHttpBinding>kullanılabilir: <xref:System.ServiceModel.NetPeerTcpBinding>, <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, ve .  
+         Bu seçim, ileti aktarımını güvenli hale getirmek için aktarım katmanını kullanır, her ileti diğer hizmetlere gereken zengin kimlik bilgilerini içerir. Bu, aktarım güvenliğinin performans avantajlarından yararlanarak ileti güvenliğinin zengin kimlik bilgileri avantajını birleştirir. Bu, aşağıdaki bağlamalarla kullanılabilir: <xref:System.ServiceModel.BasicHttpBinding> , <xref:System.ServiceModel.WSFederationHttpBinding> , <xref:System.ServiceModel.NetPeerTcpBinding> ve <xref:System.ServiceModel.WSHttpBinding> .  
   
-3. HTTP için aktarım güvenliğini kullanmaya karar verirseniz (başka bir deyişle, HTTPS), ana bilgisayarı bir SSL sertifikasıyla yapılandırmanız ve bir bağlantı noktasında SSL'yi etkinleştirmeniz gerekir. Daha fazla bilgi için [HTTP Transport Security'ye](../../../../docs/framework/wcf/feature-details/http-transport-security.md)bakın.  
+3. HTTP için Transport Security 'yi (diğer bir deyişle, HTTPS) kullanmaya karar verirseniz, ana bilgisayarı bir SSL sertifikası ile yapılandırmanız ve bir bağlantı noktasında SSL 'yi etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [http aktarım güvenliği](http-transport-security.md).  
   
-4. Kullanıyorsanız <xref:System.ServiceModel.WSHttpBinding> ve güvenli bir oturum oluşturmanız gerekmiyorsa, <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> `false`özelliği .  
+4. Kullanıyorsanız <xref:System.ServiceModel.WSHttpBinding> ve güvenli bir oturum oluşturmanız gerekmiyorsa, <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliğini olarak ayarlayın `false` .  
   
-     Güvenli oturum, bir istemci ve hizmet simetrik anahtar kullanarak bir kanal oluşturduğunda oluşur (hem istemci hem de sunucu iletişim kapatılana kadar konuşma uzunluğu için aynı anahtarı kullanır).  
+     İstemci ve hizmet simetrik anahtar kullanarak bir kanal oluştururken güvenli bir oturum oluşur (iletişim kutusu kapatılıncaya kadar hem istemci hem de sunucu bir konuşma uzunluğu için aynı anahtarı kullanır).  
   
-## <a name="setting-the-client-credential-type"></a>İstemci Kimlik Türünü Ayarlama  
- Uygun olarak bir istemci kimlik bilgisi türü seçin. Daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md) Aşağıdaki istemci kimlik bilgileri türleri kullanılabilir:  
+## <a name="setting-the-client-credential-type"></a>Istemci kimlik bilgisi türünü ayarlama  
+ Uygun şekilde bir istemci kimlik bilgisi türü seçin. Daha fazla bilgi için bkz. [kimlik bilgisi türü seçme](selecting-a-credential-type.md). Aşağıdaki istemci kimlik bilgisi türleri kullanılabilir:  
   
 - `Windows`  
   
@@ -70,7 +70,7 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
   
 - `IssuedToken`  
   
- Modu nasıl ayarladığınıza bağlı olarak, kimlik bilgisi türünü ayarlamanız gerekir. Örneğin, `wsHttpBinding`,, "İleti" modunu seçtiyseniz ve modu "İleti" `clientCredentialType` olarak ayarladıysanız, İleti öğesinin özniteliğini aşağıdaki değerlerden birine de ayarlayabilirsiniz: `None`, , `Windows` `UserName` `Certificate`ve `IssuedToken`, aşağıdaki yapılandırma örneğinde gösterildiği gibi.  
+ Modu nasıl ayarlayadığınıza bağlı olarak, kimlik bilgisi türünü ayarlamanız gerekir. Örneğin, `wsHttpBinding` öğesini seçtiyseniz ve modunu "ileti" olarak ayarladıysanız, `clientCredentialType` `None` `Windows` `UserName` `Certificate` `IssuedToken` aşağıdaki yapılandırma örneğinde gösterildiği gibi ileti öğesinin özniteliğini aşağıdaki değerlerden birine de ayarlayabilirsiniz:,,,, ve.  
   
 ```xml  
 <system.serviceModel>  
@@ -85,24 +85,24 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
 </system.serviceModel>  
 ```  
   
- Veya kod olarak:  
+ Veya kodda:  
   
  [!code-csharp[c_WsHttpService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#1)]
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
-## <a name="setting-service-credential-values"></a>Hizmet Kimlik Bilgileri Değerlerini Ayarlama  
- İstemci kimlik bilgisi türünü seçtikten sonra, hizmetin ve istemcinin kullanacağı gerçek kimlik bilgilerini ayarlamanız gerekir. Hizmette kimlik bilgileri <xref:System.ServiceModel.Description.ServiceCredentials> sınıf kullanılarak ayarlanır ve <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> <xref:System.ServiceModel.ServiceHostBase> sınıfın özelliği tarafından döndürülür. Kullanılan bağlama, hizmet kimlik bilgisi türünü, seçilen güvenlik modunu ve istemci kimlik bilgisinin türünü ifade eder. Aşağıdaki kod, bir hizmet kimlik bilgisi için bir sertifika ayarlar.  
+## <a name="setting-service-credential-values"></a>Hizmet kimlik bilgisi değerlerini ayarlama  
+ Bir istemci kimlik bilgisi türünü seçtikten sonra, hizmet ve İstemcinin kullanacağı gerçek kimlik bilgilerini ayarlamanız gerekir. Hizmette, kimlik bilgileri sınıfı kullanılarak ayarlanır <xref:System.ServiceModel.Description.ServiceCredentials> ve <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> sınıfının özelliği tarafından döndürülür <xref:System.ServiceModel.ServiceHostBase> . Kullanımdaki bağlama hizmet kimlik bilgisi türünü, seçilen güvenlik modunu ve istemci kimlik bilgisinin türünü gösterir. Aşağıdaki kod, bir hizmet kimlik bilgileri için bir sertifika ayarlar.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
-## <a name="setting-client-credential-values"></a>İstemci Kimlik Bilgileri Değerlerini Ayarlama  
- İstemci üzerinde, <xref:System.ServiceModel.Description.ClientCredentials> sınıfı kullanarak istemci kimlik bilgileri değerlerini <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> ayarlayın <xref:System.ServiceModel.ClientBase%601> ve sınıfın özelliği tarafından döndürülür. Aşağıdaki kod, TCP protokolünü kullanan bir istemcide bir kimlik bilgisi olarak sertifika ayarlar.  
+## <a name="setting-client-credential-values"></a>Istemci kimlik bilgisi değerlerini ayarlama  
+ İstemcisinde, <xref:System.ServiceModel.Description.ClientCredentials> sınıfını kullanarak ve sınıfının özelliği tarafından döndürülen istemci kimlik bilgileri değerlerini ayarlayın <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> . Aşağıdaki kod, bir sertifikayı TCP protokolünü kullanarak bir istemci üzerinde kimlik bilgileri olarak ayarlar.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Temel WCF Programlama](../basic-wcf-programming.md)
+- [Ortak Güvenlik Senaryoları](common-security-scenarios.md)

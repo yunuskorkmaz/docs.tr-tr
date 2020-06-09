@@ -2,20 +2,20 @@
 title: Kullanıcı Kodu İzleri Yayma
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589298"
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 
-Windows Communication Foundation (WCF) tarafından oluşturulan izleme verilerini toplamak için yapılandırma izleme etkinleştirmeye ek olarak, kullanıcı kodunda programlı olarak izlemeleri gönderebilir. Bu şekilde, tanılama amacıyla daha sonra tekrar kullanmanıza ölçümlü izleme verilerini proaktif bir şekilde oluşturabilirsiniz. Bu konuda, bunu nasıl yapabileceğiniz açıklanır.
+Yapılandırmada izlemeyi Windows Communication Foundation (WCF) tarafından oluşturulan izleme verilerini toplamak üzere etkinleştirmenin yanı sıra, izlemeleri Kullanıcı kodunda programlı bir şekilde de getirebilirsiniz. Bu şekilde, daha sonra tanılama amacıyla kullanabileceğiniz izleme verilerini önceden oluşturabilirsiniz. Bu konu, bunu nasıl yapabileceğinizi anlatmaktadır.
 
-Ayrıca, [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md) aşağıdaki bölümlerde gösterilen tüm kod örneği içerir.
+Ayrıca, [genişletme izleme](../../samples/extending-tracing.md) örneği aşağıdaki bölümlerde gösterilen tüm kodu içerir.
 
-## <a name="creating-a-trace-source"></a>Bir izleme kaynağı oluşturma
+## <a name="creating-a-trace-source"></a>Izleme kaynağı oluşturma
 
 Bir kullanıcı izleme kaynağı oluşturmak için aşağıdaki kodu kullanabilirsiniz.
 
@@ -25,15 +25,15 @@ TraceSource ts = new TraceSource("myUserTraceSource");
 
 ## <a name="creating-activities"></a>Etkinlik oluşturma
 
-Mantıksal birim işleme etkinliklerdir. Birlikte gruplanması izlemeleri istediğiniz her bir ana işleme birimi için bir etkinlik oluşturabilirsiniz. Örneğin, hizmete her istek için bir etkinlik oluşturabilirsiniz. Bunu yapmak için aşağıdaki adımları gerçekleştirin.
+Etkinlikler mantıksal işleme birimidir. İzlemelerin birlikte gruplandırılmasına istediğiniz her önemli işlem birimi için bir etkinlik oluşturabilirsiniz. Örneğin, hizmete her istek için bir etkinlik oluşturabilirsiniz. Bunu yapmak için aşağıdaki adımları gerçekleştirin.
 
-1. Etkinlik Kimliği kapsamda kaydedin.
+1. Etkinlik KIMLIĞINI kapsama alanına kaydedin.
 
-2. Yeni bir etkinlik kimliği oluşturma
+2. Yeni bir etkinlik KIMLIĞI oluşturun.
 
-3. Yeni bir tane kapsam etkinliğinde aktarmaya kapsamda yeni etkinliği ayarlayabilir ve bu etkinlik için bir başlangıç izleme yayma.
+3. Kapsamdaki etkinlikten yeni bir öğesine aktarın, kapsamdaki yeni etkinliği ayarlayın ve bu etkinlik için bir başlangıç izlemesi yapın.
 
-Aşağıdaki kod, bunun nasıl yapılacağı gösterilmektedir.
+Aşağıdaki kod bunun nasıl yapılacağını göstermektedir.
 
 ```csharp
 Guid oldID = Trace.CorrelationManager.ActivityId;
@@ -43,9 +43,9 @@ Trace.CorrelationManager.ActivityId = traceID; // Trace is static
 ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ```
 
-## <a name="emitting-traces-within-a-user-activity"></a>Bir kullanıcı etkinliği içinde izlemeleri yayma
+## <a name="emitting-traces-within-a-user-activity"></a>Bir kullanıcı etkinliği içinde Izlemeleri yayma
 
-Aşağıdaki kod, bir kullanıcı etkinliği içinde izlemeleri yayar.
+Aşağıdaki kod, izlemeleri bir kullanıcı etkinliği içinde yayar.
 
 ```csharp
 double value1 = 100.00D;
@@ -55,11 +55,11 @@ double result = client.Add(value1, value2);
 ts.TraceInformation("Client receives Add response '" + result + "'");
 ```
 
-## <a name="stopping-the-activities"></a>Etkinlikleri durduruluyor
+## <a name="stopping-the-activities"></a>Etkinlikler durduruluyor
 
-Etkinlikleri durdurmak için eski etkinliğine Aktarım, geçerli etkinlik kimliği durdurun ve sıfırlama kapsamda eski etkinlik kimliği.
+Etkinlikleri durdurmak için eski etkinliğe geri aktarın, geçerli etkinlik kimliğini durdurun ve kapsamdaki eski etkinlik kimliğini sıfırlayın.
 
-Aşağıdaki kod, bunun nasıl yapılacağı gösterilmektedir.
+Aşağıdaki kod bunun nasıl yapılacağını göstermektedir.
 
 ```csharp
 ts.TraceTransfer(0, "transfer", oldID);
@@ -67,14 +67,14 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add request");
 Trace.CorrelationManager.ActivityId = oldID;
 ```
 
-## <a name="propagating-the-activity-id-to-a-service"></a>Bir hizmete etkinlik kimliği yayma
+## <a name="propagating-the-activity-id-to-a-service"></a>Etkinlik KIMLIĞI bir hizmete yayılıyor
 
-Ayarlarsanız `propagateActivity` özniteliğini `true` için `System.ServiceModel` izleme kaynağı hem istemci hem de hizmet yapılandırma dosyaları, aynı etkinliğinde istemci tanımlı bir ekleme isteği gerçekleştiği için işleme hizmetidir. Hizmet kendi etkinlikleri ve aktarımları tanımlıyorsa, hizmet izlemeleri istemci yayılan etkinliğinde görünmez. Bunun yerine, etkinlik kimliği, istemci tarafından yayılan etkinliğine aktarımı izlemeleri tarafından bağıntılı görünürler.
+`propagateActivity` `true` `System.ServiceModel` Öğesini hem istemci hem de hizmet yapılandırma dosyalarında izleme kaynağı için olarak ayarlarsanız, ekleme isteği için hizmet işleme, istemcide tanımlananla aynı etkinlikte oluşur. Hizmet kendi etkinliklerini ve aktarımlarını tanımlıyorsa, hizmet izlemeleri istemci tarafından yayılan etkinlikte görünmez. Bunun yerine, aktarım izlemelerinden bağıntılı bir etkinlikte, KIMLIĞI istemci tarafından yayılan etkinliğe görünürler.
 
 > [!NOTE]
-> Varsa `propagateActivity` özniteliği `true` hem istemci hem de hizmet, ortam etkinlik hizmet işlemi kapsamında WCF tarafından ayarlanır.
+> `propagateActivity`Özniteliği `true` hem istemci hem de hizmette olarak ayarlandıysa, hizmetin işlem kapsamındaki çevresel etkinlik WCF tarafından ayarlanır.
 
-Bir etkinlik kapsamda WCF tarafından ayarlanıp ayarlanmadığını kontrol etmek için aşağıdaki kodu kullanabilirsiniz.
+Bir etkinliğin WCF tarafından kapsamda ayarlanmış olup olmadığını denetlemek için aşağıdaki kodu kullanabilirsiniz.
 
 ```csharp
 // Check if an activity was set in scope by WCF, if it was
@@ -99,56 +99,56 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 // return result;
 ```
 
-## <a name="tracing-exceptions-thrown-in-code"></a>Kod içinde oluşturulan özel durumları izleme
+## <a name="tracing-exceptions-thrown-in-code"></a>Kodda oluşturulan özel durumlar izleniyor
 
-Kodda bir özel durum, özel durum uyarısı düzeyinde veya oluşturan aşağıdaki kodu kullanarak da izleyebilirsiniz.
+Kodda bir özel durum oluşturduğunuzda, özel durumu uyarı düzeyinde veya aşağıdaki kodu kullanarak da izleyebilirsiniz.
 
 ```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");
 ```
 
-## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Hizmet izleme Görüntüleyicisi Aracı ' kullanıcı izlemeleri görüntüleme
+## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Hizmet Izleme Görüntüleyicisi aracında Kullanıcı Izlemelerini görüntüleme
 
-Bu bölümde çalıştırılarak oluşturulan izlemeleri ekran görüntüleri içeren [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md) kullanarak görüntülendiğinde, örnek [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).
+Bu bölüm, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenirken, [genişletme izleme](../../samples/extending-tracing.md) örneği çalıştırılarak oluşturulan izlemelerin ekran görüntülerini içerir.
 
-Aşağıdaki diyagramda, daha önce oluşturduğunuz "Ekleme isteği" etkinliği sol panelde seçilir. Uygulama istemci programı oluşturan (, çıkarma, birden çok kez bölme) üç diğer matematiksel işlem etkinliklerle listelenir. Kullanıcı kodu farklı isteklerinde olası hataları ayırmak her işlem için yeni bir etkinlik tanımladı.
+Aşağıdaki diyagramda, daha önce oluşturulan "istek ekle" etkinliği sol bölmede seçilidir. Uygulama istemci programını oluşturan üç farklı matematik işlemi etkinliği (Böl, çıkart, çarpma) ile listelenir. Kullanıcı kodu, farklı isteklerindeki olası hata oluşumlarını yalıtmak için her işlem için bir yeni etkinlik tanımladı.
 
-Aktarımlarında kullanımını göstermek için [genişletme izleme](../../../../../docs/framework/wcf/samples/extending-tracing.md) dört işlem istekleri kapsülleyen bir hesap makinesi etkinlik örneği de oluşturulur. Her istek için hesaplayıcı etkinliğinden İleri ve geri bir aktarım isteği etkinliği yok (şekildeki üst sağ panelde izleme vurgulanır).
+[Genişletme izleme](../../samples/extending-tracing.md) örneğinde aktarımların kullanımını göstermek için, dört işlem isteğini kapsülleyen bir hesap makinesi etkinliği de oluşturulur. Her istek için, hesap makinesi etkinliğinden istek etkinliğine geri ve geriye doğru bir aktarım vardır (izleme, şekildeki sağ üst bölmede vurgulanır).
 
-Bir etkinlik Sol paneldeki seçtiğinizde, bu etkinliği tarafından bulunan izlemeleri üst Sağdaki panelde görüntülenir. Varsa `propagateActivity` olduğu `true` istek yolu, her bir uç noktada istekte katılan tüm işlemler istek etkinliği izlemelerinde arasındadır. Bu örnekte, hem istemci hem de hizmet Masası 4 sütununda izlemelerinden görebilirsiniz.
+Sol panelde bir etkinlik seçtiğinizde, bu etkinliğin içerdiği izlemeler sağ üst bölmede gösterilir. `propagateActivity` `true` İstek yolundaki her uç noktada, istek etkinliğindeki izlemeler, isteğe katılan tüm işlemlerden alınır. Bu örnekte, paneldeki 4 sütununda hem istemci hem de hizmetten izlemeleri görebilirsiniz.
 
-Bu etkinlik aşağıdaki işlenme sırasını gösterir:
+Bu etkinlik aşağıdaki işleme sırasını gösterir:
 
-1. İstemci Ekle iletisi gönderir.
+1. İstemci eklemek için ileti gönderir.
 
-2. Hizmet Ekle İstek iletisini alır.
+2. Hizmet, ekleme isteği iletisi alır.
 
-3. Hizmet Ekle yanıt gönderir.
+3. Hizmet, Add yanıtı gönderir.
 
-4. İstemci Ekle yanıtı alır.
+4. İstemci, ekleme yanıtı alır.
 
-Bu izlemeler bilgi düzeyinde yayılan. Sağ panelde bir izleme tıklayarak sağ panelde, izleme ayrıntılarını gösterir.
+Tüm bu izlemeler bilgi düzeyine yayılmıştı. Sağ üst panelde bir izlemeye tıkladığınızda sağ alt panelde bu izlemenin ayrıntıları gösterilir.
 
-Aşağıdaki diyagramda, ayrıca aktarım izlemeleri ilk ve son iki başlangıç çiftlerini yanı sıra, hesaplayıcı etkinliği ve istemci biri diğeri (her bir izleme kaynağı için bir tane) hizmeti isteği etkinliği başına durdurma izlemeleri görüyoruz.
+Aşağıdaki diyagramda Ayrıca, hesap ve hizmet için bir tane olmak üzere (her izleme kaynağı için bir tane) bir tane olmak üzere, bir veya daha fazla istek için izleme ve durdurma ve hesaplama etkinliklerini de görtik.
 
-![İzleme görüntüleyicisini: Kullanıcı yayma&#45;kodu izlemeleri](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd") oluşturulma zamanı (sol paneli) ile etkinlikleri ve iç içe geçmiş etkinliklerini (sağ paneli) listesi
+![Izleme Görüntüleyicisi: kullanıcı&#45;kod Izlemelerini yayma](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475A-4BAF-83f3-4227aa942fcd") Oluşturma zamanına göre etkinlik listesi (sol panel) ve iç içe geçmiş Etkinlikleri (sağ üst panel)
 
-Hizmet kodu (örneğin istemci isteğine yanıt almadı yanı,) throw istemciye neden olan bir özel durum oluşturursa, hem hizmet ve istemci uyarı veya hata iletileri aynı etkinlik için doğrudan bağıntı oluşur. Aşağıdaki görüntüde hizmet, "kullanıcı kodunda bu isteği işlemek hizmet reddeder." bildiren bir özel durum oluşturur. İstemci de "sunucu bir iç hata nedeniyle isteği işleyemedi." bildiren bir özel durum oluşturur.
+Hizmet kodu, istemcinin oluşturmasına neden olan bir özel durum oluşturursa (örneğin, istemci isteğine yanıt alamazsanız), hem hizmet hem de istemci uyarısı veya hata iletileri doğrudan bağıntı için aynı etkinlikte oluşur. Aşağıdaki görüntüde hizmet, "hizmet bu isteği Kullanıcı kodunda işlemeye reddediyor" durumunu belirten bir özel durum oluşturur. İstemci Ayrıca "sunucu bir iç hata nedeniyle isteği işleyemedi" adlı bir özel durum oluşturur.
 
-Aşağıdaki resimlerde isteğin etkinlik kimliği yayıldığı, hataları belirli bir istek için uç noktalar arasında aynı etkinliğin göründüğünü gösterir:
+Aşağıdaki görüntüler, istek etkinlik kimliği yayıldığında, belirli bir istek için uç noktalar arasındaki hataların aynı etkinlikte göründüğünü gösterir:
 
-![Belirli bir istek için uç noktalar arasında hataları gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![Belirli bir istek için uç noktalar arasındaki hataları gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
-Çift birden çok kez izlemelerini ile aşağıdaki grafikte Sol paneldeki etkinliği gösterir katılan her işlem için etkinlik çarpın. Bir uyarı olduğu için istek işlenemedi istemcide ardından uyarıları ve hataları hizmeti (özel durum oluştu), ilk oluştu görebiliriz. Bu nedenle, biz uç noktalar arasında nedensel hata ilişkisine işaret ve hatanın nedenini türetilir.
+Sol paneldeki çarpma etkinliğine çift tıklamak, ilgili her bir işlemin çarpılacağı izlemeleri içeren aşağıdaki grafiği gösterir. Hizmette (özel durum oluştu) bir uyarı görüyoruz, bu, isteğin işlenemediği için istemcideki uyarılar ve hatalar tarafından izlenir. Bu nedenle, uç noktalar arasındaki causal hata ilişkisini belirleyebilir ve hatanın kök nedenini türetebiliriz.
 
-Aşağıdaki görüntüde bağıntı hata bir grafik görünümü gösterilmektedir:
+Aşağıdaki görüntüde hata bağıntısı grafik görünümü gösterilmektedir:
 
-![Graf görünümünü hata bağıntı gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![Hatanın bağıntı grafik görünümünü gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-Önceki izlemeleri almak için ayarladığımız `ActivityTracing` kullanıcı izleme kaynakları için ve `propagateActivity=true` için `System.ServiceModel` izleme kaynağı. Biz ayarlanmamış `ActivityTracing` için `System.ServiceModel` kullanıcı kodu Etkinlik yayma kullanıcı kodu etkinleştirmek için izleme kaynağı. (ServiceModel Etkinlik izleme etkin olduğunda, istemci tanımlanan etkinlik kimliği tüm hizmet kullanıcı koduna dağıtılmaz; Aktarımları, Bununla birlikte, hizmet ve istemci kullanıcı kodu etkinlikleri Ara WCF etkinliklere ilişkilendirin.)
+Önceki izlemeleri almak için `ActivityTracing` Kullanıcı izleme kaynakları ve izleme kaynağı için ayarlandık `propagateActivity=true` `System.ServiceModel` . Kullanıcı kodu `ActivityTracing` `System.ServiceModel` etkinlik yayılmaya kullanıcı kodunun etkinleştirilmesi için izleme kaynağı için ayarlanmadınız. (ServiceModel etkinlik izleme açık olduğunda, istemcide tanımlanan etkinlik KIMLIĞI, hizmet kullanıcı koduna tüm şekilde yayılmaz; Ancak, istemci ve hizmet Kullanıcı kodu etkinliklerini ara WCF etkinlikleriyle ilişkilendirmenize karşın aktarır.)
 
-Etkinlikleri tanımlama ve etkinlik kimliği yayma uç noktalar genelinde doğrudan hata bağıntısı gerçekleştirme sağlıyor. Bu şekilde, biz hata nedenini daha hızlı bir şekilde bulabilir.
+Etkinlikleri tanımlama ve etkinlik KIMLIĞI yaymaya bitiş noktaları arasında doğrudan hata bağıntısı gerçekleştirmemizi sağlar. Bu şekilde, hatanın kök nedenini daha hızlı bulabiliriz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlemeyi Genişletme](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [İzlemeyi Genişletme](../../samples/extending-tracing.md)

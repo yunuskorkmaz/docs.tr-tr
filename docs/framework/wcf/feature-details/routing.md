@@ -6,31 +6,31 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 801de9865495aec32114f47075397c3445a88fc9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590390"
 ---
 # <a name="routing"></a>Yönlendirme
-Bu bölümdeki konular, yönlendirme hizmeti kapsar. Yönlendirme hizmeti içerik tabanlı yönlendirme, protokol bağlantı kurma ayarlayın yapılandırmanızı sağlar iletişim hataları işleme ve yönlendirme mantığı çalışma zamanında dinamik olarak güncelleştir bir genel yapılandırılabilir SOAP aracıdır.  
+Bu bölümdeki konular yönlendirme hizmetini kapsar. Yönlendirme hizmeti, içerik tabanlı yönlendirmeyi yapılandırmanıza, protokol köprülemeyi ayarlamanıza, iletişim hatalarını idare etmenize ve çalışma zamanında yönlendirme mantığını dinamik olarak güncelleştirmenize olanak sağlayan, genel olarak yapılandırılabilir bir SOAP aracısıyla bulunur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- Yönlendirme hizmetin özelliklerine genel bakış sağlar.  
+ [Yönlendirme Hizmeti](routing-service.md)  
+ Yönlendirme hizmetinin özelliklerine genel bir bakış sağlar.  
   
- [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- Yönlendirme Hizmeti özelliklerini açıklar.  
+ [Yönlendirme Hizmeti](routing-service.md)  
+ Yönlendirme hizmetinin özelliklerini açıklar.  
   
- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- Yönlendirme hizmeti yapılandırması açıklanır.  
+ [Yönlendirme Tanıtımı](routing-introduction.md)  
+ Yönlendirme hizmetinin yapılandırmasını açıklar.  
   
- [Anlaşmaları Yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- Yönlendirme hizmeti işleyebileceği ileti desenleri açıklar.  
+ [Anlaşmaları Yönlendirme](routing-contracts.md)  
+ Yönlendirme hizmetinin işleyebildiğiniz ileti düzenlerini açıklar.  
   
- [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- İleti filtreleri içerik tabanlı yönlendirme için nasıl kullanılacağını açıklar.  
+ [İleti Filtreleri](message-filters.md)  
+ İçerik tabanlı yönlendirme için ileti filtrelerinin nasıl kullanıldığını açıklar.  
   
- [Yönlendirme Senaryoları](../../../../docs/framework/wcf/feature-details/routing-scenarios.md)  
- Yönlendirme senaryoları açıklar.
+ [Yönlendirme Senaryoları](routing-scenarios.md)  
+ Yaygın yönlendirme senaryolarını açıklar.

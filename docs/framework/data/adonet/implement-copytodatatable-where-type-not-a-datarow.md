@@ -5,39 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 6c14e87c5caede4fea52867d9f184f3f64a5ed3b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a1427747d03f01e52f1ee7ad1fc11d47d310edbe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590611"
 ---
-# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Nasıl Yapılır: CopyToDataTable\<T> Genel T Türü DataRow Değildir Uygulama
-Nesne <xref:System.Data.DataTable> genellikle veri bağlama için kullanılır. Yöntem, <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> bir sorgunun sonuçlarını alır ve verileri <xref:System.Data.DataTable>veri bağlama için kullanılabilecek bir , Ancak <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemler yalnızca genel parametrenin <xref:System.Collections.Generic.IEnumerable%601> `T` türünde <xref:System.Data.DataRow>olduğu bir kaynakta çalışır. Bu yararlı olsa da, tabloların skaler türler dizisi, adsız türleri projesorgulayan sorgulardan veya tablo birleştirmelerini gerçekleştiren sorgulardan oluşturulmasına izin vermez.  
+# <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Nasıl yapılır: T Genel Türünün DataRow Olmadığı\<T> CopyToDataTable İşlemini Uygulama
+<xref:System.Data.DataTable>Nesnesi genellikle veri bağlama için kullanılır. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Yöntemi bir sorgunun sonuçlarını alır ve verileri ' a kopyalar ve <xref:System.Data.DataTable> Bu da veri bağlama için kullanılabilir. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>Ancak, yöntemleri yalnızca <xref:System.Collections.Generic.IEnumerable%601> genel parametresinin türü olan bir kaynak üzerinde çalışır `T` <xref:System.Data.DataRow> . Bu faydalı olsa da, tabloların bir skalar türler dizisinden, proje anonim türleri olan sorgulardan veya tablo katılımları gerçekleştiren sorgulardan oluşturulmasını izin vermez.  
   
- Bu konu, `CopyToDataTable<T>` `T` <xref:System.Data.DataRow>başka bir türün genel parametresini kabul eden iki özel uzantı yönteminin nasıl uygulanacağını açıklar. <xref:System.Data.DataTable> Bir <xref:System.Collections.Generic.IEnumerable%601> kaynaktan bir kaynak oluşturma `ObjectShredder<T>` mantığı, daha sonra iki aşırı yüklenmiş uzantı `CopyToDataTable<T>` yöntemleri sarılmış sınıfta yer almaktadır. `ObjectShredder<T>` Sınıfın `Shred` yöntemi <xref:System.Data.DataTable> doldurulan ve üç giriş parametresini <xref:System.Collections.Generic.IEnumerable%601> kabul eder: kaynak, a <xref:System.Data.DataTable>ve numaralandırma. <xref:System.Data.LoadOption> Döndürülen <xref:System.Data.DataTable> in ilk şeması türünün `T`şemasına dayanır. Varolan bir tablo girdi olarak sağlanıyorsa, şema türünün `T`şemasıyla tutarlı olmalıdır. Türünün `T` her kamu malı ve alanı <xref:System.Data.DataColumn> döndürülen tablodaki a'ya dönüştürülür. Kaynak sıra türetilen bir `T`tür içeriyorsa, döndürülen tablo şeması herhangi bir ek ortak özellik veya alanlar için genişletilir.  
+ Bu konu `CopyToDataTable<T>` , dışında bir türün genel bir parametresini kabul eden iki özel uzantı yönteminin nasıl uygulanacağını açıklar `T` <xref:System.Data.DataRow> . Kaynağından bir kaynağı oluşturma mantığı, <xref:System.Data.DataTable> <xref:System.Collections.Generic.IEnumerable%601> `ObjectShredder<T>` daha sonra iki aşırı yüklenmiş uzantı yöntemine sarılan sınıfta bulunur `CopyToDataTable<T>` . `Shred`Sınıfının yöntemi, `ObjectShredder<T>` doldurulmuş <xref:System.Data.DataTable> ve üç giriş parametresini kabul eder: bir <xref:System.Collections.Generic.IEnumerable%601> kaynak, a <xref:System.Data.DataTable> ve bir <xref:System.Data.LoadOption> sabit listesi. Döndürülen ilk şeması, <xref:System.Data.DataTable> türün şemasına dayalıdır `T` . Var olan bir tablo giriş olarak sağlanmışsa, şemanın tür şemasıyla tutarlı olması gerekir `T` . Türün her bir ortak özelliği ve alanı `T` döndürülen tabloda bir öğesine dönüştürülür <xref:System.Data.DataColumn> . Kaynak sırası öğesinden türetilmiş bir tür içeriyorsa `T` , döndürülen tablo şeması herhangi bir ek ortak özellik veya alan için genişletilir.  
   
- Özel `CopyToDataTable<T>` yöntemleri kullanma örnekleri için [bkz.](creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ Özel yöntemleri kullanma örnekleri için `CopyToDataTable<T>` , bkz. [bir sorgudan DataTable oluşturma](creating-a-datatable-from-a-query-linq-to-dataset.md).  
   
-### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Uygulamanızda özel CopyToDataTable\<T> yöntemlerini uygulamak için  
+### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Uygulamanıza özel CopyToDataTable yöntemlerini uygulamak için \<T>  
   
-1. Bir `ObjectShredder<T>` <xref:System.Collections.Generic.IEnumerable%601> kaynaktan bir <xref:System.Data.DataTable> oluşturmak için sınıf uygulayın:  
+1. `ObjectShredder<T>`Bir kaynaktan oluşturmak için sınıfını uygulayın <xref:System.Data.DataTable> <xref:System.Collections.Generic.IEnumerable%601> :  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
 
-    Önceki örnek, özelliklerinin nullable `DataColumn` değer türleri olmadığını varsayar. Nullable değer türleri ile özellikleri işlemek için aşağıdaki kodu kullanın:
+    Yukarıdaki örnekte, öğesinin özellikleri ve alanlarının `DataColumn` null yapılabilir değer türleri olmadığı varsayılır. Null yapılabilir değer türlerine sahip özellikleri ve alanları işlemek için aşağıdaki kodu kullanın:
 
     ```csharp
+    // Nullable-aware code for properties.
     DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
+
+    // Nullable-aware code for fields.
+    DataColumn dc = table.Columns.Contains(f.Name) ? table.Columns[f.Name] : table.Columns.Add(f.Name, Nullable.GetUnderlyingType(f.FieldType) ?? f.FieldType);
     ```
 
-2. Özel `CopyToDataTable<T>` uzatma yöntemlerini bir sınıfta uygulayın:  
+2. Özel `CopyToDataTable<T>` genişletme yöntemlerini bir sınıfta uygulayın:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]
      [!code-vb[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#customcopytodatatablemethods)]  
   
-3. Uygulamanıza `ObjectShredder<T>` sınıf `CopyToDataTable<T>` ve uzantı yöntemlerini ekleyin.  
+3. `ObjectShredder<T>`Uygulamanıza sınıf ve `CopyToDataTable<T>` Uzantı yöntemlerini ekleyin.  
   
 ```vb  
 Module Module1  
