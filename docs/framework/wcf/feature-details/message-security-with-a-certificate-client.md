@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184651"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602641"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
-Aşağıdaki senaryo, ileti güvenliği modu kullanılarak güvenli bir Windows Communication Foundation (WCF) istemcisi ve hizmetini gösterir. Hem istemci hem de hizmet sertifikalarla doğrulanır. Daha fazla bilgi için Bkz. [Dağıtılmış Uygulama Güvenliği.](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir. İstemci ve hizmetin her ikisi de sertifikalarla doğrulanır. Daha fazla bilgi için bkz. [Dağıtılmış uygulama güvenliği](distributed-application-security.md).
 
- ![Sertifikası olan bir istemciyi gösteren ekran görüntüsü.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![Sertifikayı içeren bir istemciyi gösteren ekran görüntüsü.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- Örnek bir uygulama için [İleti Güvenlik Sertifikası'na](../../../../docs/framework/wcf/samples/message-security-certificate.md)bakın.  
+ Örnek bir uygulama için bkz. [Ileti güvenliği sertifikası](../samples/message-security-certificate.md).  
 
 |Özellik|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik Modu|İleti|  
+|Güvenlik modu|İleti|  
 |Birlikte çalışabilirlik|Yalnızca WCF|  
-|Kimlik Doğrulama (Sunucu)|Hizmet sertifikasını kullanma|  
-|Kimlik Doğrulama (İstemci)|İstemci sertifikasını kullanma|  
-|Bütünlük|Evet|  
-|Gizlilik|Evet|  
+|Kimlik doğrulaması (sunucu)|Hizmet sertifikası kullanma|  
+|Kimlik doğrulaması (Istemci)|İstemci sertifikası kullanma|  
+|Bütünlük|Yes|  
+|Gizlilik|Yes|  
 |Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
-- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamayın.  
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, güvenli bir bağlam oluşturmak için ileti güvenliğini kullanan bir hizmet bitiş noktasının nasıl oluşturultuğu gösterilmektedir.  
+ Aşağıdaki kod, güvenli bir bağlam oluşturmak için ileti güvenliği kullanan bir hizmet uç noktası oluşturmayı gösterir.  
   
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Kod yerine aşağıdaki yapılandırma kullanılabilir.  
+ Aşağıdaki yapılandırma kod yerine kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -85,23 +85,23 @@ Aşağıdaki senaryo, ileti güvenliği modu kullanılarak güvenli bir Windows 
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
-- Kodu (ve istemci kodunu) kullanarak tek başına bir istemci oluşturun.  
+- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucuyu kullanın. Örnek:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod istemciyi oluşturur. Bağlama ileti modu güvenliği için ve istemci kimlik bilgisi türü `Certificate`olarak ayarlanır.  
+ Aşağıdaki kod istemcisini oluşturur. Bağlama ileti modu güvenliğine, istemci kimlik bilgisi türü olarak ayarlanır `Certificate` .  
   
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırma, bir bitiş noktası davranışı kullanarak istemci sertifikasını belirtir. Sertifikalar hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) Kod ayrıca, beklenen `identity` sunucu kimliğinin Etki Alanı Adı Sistemi(DNS) belirtmek için <bir> öğesi kullanır. Kimlik hakkında daha fazla bilgi için [Hizmet Kimliği ve Kimlik Doğrulama'ya](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)bakın.  
+ Aşağıdaki yapılandırma, bir uç nokta davranışı kullanarak istemci sertifikasını belirtir. Sertifikalar hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Kod ayrıca, `identity` beklenen sunucu kimliğinin etki alanı adı sistemi (DNS) belirtmek için bir <> öğesi kullanır. Kimlik hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulaması](service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -145,7 +145,7 @@ Aşağıdaki senaryo, ileti güvenliği modu kullanılarak güvenli bir Windows 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Windows Server App Fabric için Güvenlik Modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Güvenliğe genel bakış](security-overview.md)
+- [Kimlik Doğrulama ile Hizmet Kimliği](service-identity-and-authentication.md)
+- [Sertifikalarla Çalışma](working-with-certificates.md)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

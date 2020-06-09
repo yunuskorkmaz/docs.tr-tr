@@ -2,105 +2,105 @@
 title: Etkinlik
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 7f498c1f2222add197f428386076148cccc9ad06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41de6b9458feb4e1898eeac6635b74c4617885d6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656289"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602147"
 ---
 # <a name="activity"></a>Etkinlik
-Bu konu, Windows Communication Foundation (WCF) izleme modelinde etkinlik izlemeleri açıklar. Etkinlikler işlem hata kapsamını daraltmak kullanıcı Yardımı birimleri. Aynı etkinlik içinde oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde, hem işlem hem de şifre çözme hatası iletisi izlemelerini görünür.  
+Bu konuda Windows Communication Foundation (WCF) izleme modelindeki etkinlik izlemeleri açıklanmaktadır. Etkinlikler, kullanıcının bir hata kapsamını daraltmaya yardımcı olan birimleri işliyor. Aynı etkinlikte oluşan hatalar doğrudan ilgilidir. Örneğin, ileti şifre çözme işlemi başarısız olduğundan bir işlem başarısız olur. Hem işlem hem de ileti şifre çözme hatasının izlemeleri aynı etkinlikte görünür ve şifre çözme hatası ile istek hatası arasında doğrudan bağıntı gösteriliyor.  
   
-## <a name="configuring-activity-tracing"></a>Etkinlik izlemeyi yapılandırma  
- WCF işleme uygulamaları için önceden tanımlanmış etkinlikleri sağlar (bkz [etkinlik listesi](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Etkinlikler de program aracılığıyla ve grup kullanıcı izlemelere tanımlayabilirsiniz. Daha fazla bilgi için [kullanıcı kodu izlemeleri yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+## <a name="configuring-activity-tracing"></a>Etkinlik Izlemeyi yapılandırma  
+ WCF, uygulamaları işlemek için önceden tanımlanmış etkinlikler sağlar (bkz. [etkinlik listesi](activity-list.md)). Ayrıca, Kullanıcı izlemelerini gruplamak için etkinlik programlama yoluyla da tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı kodu Izlemelerini yayma](emitting-user-code-traces.md).  
   
- Çalışma zamanında etkinlik izlemeleri yayma kullanın `ActivityTracing` ayarını `System.ServiceModel` izleme kaynağına veya diğer WCF veya özel izleme kaynakları, aşağıdaki yapılandırma kodda gösterildiği gibi.  
+ Çalışma zamanında etkinlik izlemelerini yaymak için, `ActivityTracing` `System.ServiceModel` aşağıdaki yapılandırma kodu tarafından gösterildiği gibi izleme kaynağı veya diğer WCF veya özel izleme kaynakları için ayarı kullanın.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
- Yapılandırma öğesi ve kullanılan öznitelikler hakkında daha fazla bilgi için bkz: [yapılandırma izleme](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) konu.  
+ Kullanılan yapılandırma öğesi ve öznitelikleri hakkında daha fazla bilgi edinmek için [Izleme yapılandırma](configuring-tracing.md) konusuna bakın.  
   
 ## <a name="viewing-activities"></a>Etkinlikleri görüntüleme  
- Etkinlikler ve bunların yardımcı programı görüntüleyebileceğiniz [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). ActivityTracing etkinleştirildiğinde, bu aracı izlemelerini alır ve bunları etkinliklere göre sıralar. İzleme aktarımları da görebilirsiniz. Bir izleme aktarımı nasıl farklı etkinlikleri gösterir birbirleriyle ilişkili. Belirli bir etkinlik başlatmak başka bir neden olduğunu görebilirsiniz. Örneğin, bir güvenli konuşma belirteci almak için bir güvenlik el sıkışması iletisi İsteği başlatıldı.  
+ Etkinlikleri ve yardımcı programını [hizmet Izleme Görüntüleyicisi aracında (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)görebilirsiniz. ActivityTracing etkinleştirildiğinde, bu araç izlemeleri alır ve bunları etkinliğe göre sıralar. İzleme aktarımlarını de görebilirsiniz. Bir izleme aktarımı, farklı etkinliklerin birbirleriyle nasıl ilişkili olduğunu gösterir. Belirli bir etkinliğin bir diğerinin başlamasını neden olduğunu görebilirsiniz. Örneğin, bir ileti isteği güvenli konuşma belirteci almak için bir güvenlik anlaşmasını başlattı.  
   
-### <a name="correlating-activities-in-service-trace-viewer"></a>Hizmet izleme görüntüleyicisini etkinlikleri ilişkilendirme  
- Hizmet izleme Görüntüleyicisi aracı etkinliklerinin iki görünüm sağlar:  
+### <a name="correlating-activities-in-service-trace-viewer"></a>Hizmet Izleme görüntüleyicisinde etkinlikleri ilişkilendirme  
+ Hizmet Izleme Görüntüleyicisi aracı iki etkinlik görünümü sağlar:  
   
-- **Liste** izlemeleri süreçler arasında doğrudan bağıntı kurmak için etkinlik kimliği kullanıldığı görünümü. İzlemeler farklı işlemler, örneğin, istemciyi ve hizmeti ancak aynı etkinlik kimliği ile aynı etkinliğin gruplandırılır. Bu nedenle, ardından istemcide bir hata neden hizmetinde gerçekleşen bir hata her ikisi de aynı aracı etkinlik görünümünde gösterilir.  
+- Etkinlik KIMLIĞININ süreçler genelinde izlemeleri doğrudan ilişkilendirmek için kullanıldığı **liste** görünümü. Farklı süreçlerden (örneğin, istemci ve hizmet) izler, ancak aynı etkinlik kimliği ile aynı etkinlik kimliğine sahip bir şekilde gruplandırılır. Bu nedenle, hizmette oluşan bir hata, bu durumda istemcide bir hata oluşmasına neden olur ve araç içinde aynı etkinlik görünümünde görünür.  
   
-- **Graf** nerede etkinlikleri gruplanır işlemler tarafından görünümü. Bu görünümde, bir istemci ve aynı etkinlik kimliği hizmetiyle farklı etkinlikleri, izlemeleri sahip. Etkinlikler farklı işlemlerdeki aynı etkinlik kimliği ile ilişkilendirmek için aracı ileti akışları arasında ilgili etkinlikleri gösterir.  
+- Etkinliklerin işlemlere göre gruplandırıldığı **grafik** görünümü. Bu görünümde, aynı etkinlik KIMLIĞINE sahip bir istemci ve hizmetin izlemeleri farklı etkinliklerde vardır. Farklı işlemlerdeki aynı etkinlik KIMLIĞINE sahip etkinlikleri ilişkilendirmek için, araç ilgili etkinliklerin tamamında ileti akışlarını gösterir.  
   
- Daha fazla bilgi ve hizmet izleme Görüntüleyicisi aracı grafik bir görünümünü görmek için bkz. [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ve [ilişkilendirilmiş izlemeleri görüntülemek için hizmet izleme görüntüleyicisini kullanma ve Sorun giderme](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Daha fazla bilgi edinmek ve hizmet Izleme Görüntüleyicisi aracının grafik bir görünümünü görmek için, bkz. [hizmet izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md) ve [bağıntılı Izlemeleri ve sorun gidermeyi görüntülemek Için hizmet Izleme Görüntüleyicisi 'ni kullanma](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
-## <a name="defining-the-scope-of-an-activity"></a>Bir etkinlik kapsamını tanımlama  
- Bir etkinliğin tasarım zamanında tanımlanır ve bir mantıksal birim iş gösterir. Aynı etkinlik tanımlayıcısı yayılan izlemeleri doğrudan ilgili, aynı etkinliğin parçasıdır. Etkinlik bitiş noktası sınırları (istek) aşabileceğinden bir etkinlik için iki kapsamı tanımlanır.  
+## <a name="defining-the-scope-of-an-activity"></a>Etkinliğin kapsamını tanımlama  
+ Bir etkinlik tasarım zamanında tanımlanır ve mantıksal bir iş birimi gösterir. Aynı etkinlik tanımlayıcısına sahip olan izlemeler doğrudan ilgili olarak aynı etkinliğin bir parçasıdır. Bir etkinlik uç nokta sınırlarını (bir istek) çapraz bir şekilde sağladığından, bir etkinliğin iki kapsamı tanımlanmıştır.  
   
-- `Global` uygulama başına kapsam. Bu kapsamda etkinlik, 128 bit genel olarak benzersiz bir etkinlik tanımlayıcısı, gAId tanımlanır. Uç noktalar genelinde yayılır gAid olur.  
+- `Global`kapsam, uygulama başına. Bu kapsamda etkinlik, 128 bitlik genel benzersiz etkinlik tanımlayıcısı, gAId tarafından tanımlanır. GAId, uç noktalar genelinde yayılmış şeydir.  
   
-- `Local` uç noktası başına kapsam. Bu kapsamda etkinliğin etkinlik izlemeleri ve işlem kimliği yayma izleme kaynak adı ile birlikte kendi gAId tanımlanır Bu Üçlü düzenlenir, yerel etkinlik kimliği oluşturur. Düzenlenir, bir etkinlik (yerel) sınırlarını tanımlamak için kullanılır.  
+- `Local`kapsam, uç nokta başına. Bu kapsamda etkinlik, gAId ile tanımlanır ve etkinlik izlemelerini ve işlem kimliğini yayan izleme kaynak adı ile birlikte kullanılır. Bu, yerel etkinlik kimliğini oluşturur, düzenlenir. Bu, bir etkinliğin (yerel) sınırlarını tanımlamak için kullanılır.  
   
 ## <a name="trace-schema"></a>İzleme şeması  
- İzlemeler yayılan herhangi bir şema kullanılarak ve Microsoft platformlarında. "e2e" ("uçtan uca" için) yaygın olarak kullanılan bir şema var. Bu şema 128 bit tanımlayıcı (gAId), izleme kaynak adını ve işlem kimliği içerir. Yönetilen kodda <xref:System.Diagnostics.XmlWriterTraceListener> E2E şema izlemelerinde yayar.  
+ İzlemeler, herhangi bir şema kullanılarak ve Microsoft platformları arasında dağıtılabilir. "e2e" ("uçtan uca" için), yaygın olarak kullanılan bir şemadır. Bu şema, 128 bitlik bir tanımlayıcı (gAId), izleme kaynağı adı ve işlem KIMLIĞI içerir. Yönetilen kodda, <xref:System.Diagnostics.XmlWriterTraceListener> e2e şemasında izlemeleri yayar.  
   
- Geliştiriciler, bir izleme ile ayarlayarak yayıldığını yardımcı ayarlayabilirsiniz <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> özellik üzerinde iş parçacığı yerel depolaması (TLS) GUID. Aşağıdaki örnekte bu gösterir.  
+ Geliştiriciler, <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> Iş parçacığı yerel depolama (TLS) üzerinde bir GUID ile özelliği ayarlayarak, bir izleme ile YAYıLAN yardımı ayarlayabilir. Aşağıdaki örnek bunu gösterir.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
 CorrelationManager.ActivityId = Guid.NewGuid();  
 ```
   
- İzlemeleri bir izleme kaynağı kullanarak aşağıdaki örnekte gösterildiği gibi gönderilir, gAId TLS'ye ayarlama yetkisiz değiştirmeye karşı korumalı hale gelir.  
+ Aşağıdaki örnekte gösterildiği gibi, izlemeler bir izleme kaynağı kullanılarak yayıldığınızda, TLS 'de gAId 'nin ayarlanması de görünmez.  
   
 ```csharp
 TraceSource traceSource = new TraceSource("myTraceSource");  
 traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");  
 ```  
   
- TLS, izleme kaynağının oluşturucusu ve geçerli işlemin kimliği için bir parametre olarak geçirilen izleme kaynak adı, şu anda gAId yayılan izleme içerir  
+ Bu izleme, şu anda TLS 'de bulunan gAId 'yi, izleme kaynağının oluşturucusuna parametre olarak geçirilen izleme kaynağı adını ve geçerli işlemin KIMLIĞINI içerecektir.  
   
-## <a name="activity-lifetime"></a>Etkinlik yaşam süresi  
- En katı bağlamında, kanıt etkinliğin etkinlik kimliği yayılan bir izlemede kullanılır ve yayılan bir izlemede kullanıldığı son kez sona erer ilk kez başlatır. Önceden tanımlanmış bir izleme türleri kümesi tarafından sağlanan <xref:System.Diagnostics>başlatma ve durdurma, etkinlik yaşam sınırlarını açıkça işaretlemek için dahil olmak üzere.  
+## <a name="activity-lifetime"></a>Etkinlik ömrü  
+ En katı koşullarında, bir etkinliğin kanıtı, etkinlik kimliği, yayımlanan bir izlemede ilk kez kullanıldığında başlar ve bu, yayımlanan bir izlemede son kullanıldığı zamanı sonlandırır. <xref:System.Diagnostics>Etkinlik ömrü sınırlarını açıkça işaretlemek için, başlangıç ve durdurma dahil olmak üzere, tarafından önceden tanımlanmış bir izleme türleri kümesi sağlanır.  
   
-- Başlat: Bir etkinlik başlangıcını gösterir. Yeni bir işleme kilometre taşı başlayan bir kayıt "Başlangıç" izleme sağlar. Etkinlik Kimliği uç noktalar genelinde ne zaman dağıtılacağını dışında verilen bir işlem olarak belirtilen izleme kaynağı için yeni bir etkinlik kimliği varsa, bu durumda bir "Başlangıç" uç nokta görüyoruz. Yeni bir etkinlik başlangıç örnekleri, işleme veya yeni bir genel yöntem girmek için yeni bir iş parçacığı oluşturmayı içerir.  
+- Başlat: bir etkinliğin başlangıcını gösterir. "Başlat" izlemesi, yeni bir işleme kilometre taşını başlangıç kaydını sağlar. Etkinlik KIMLIĞININ uç noktalara yayıldığı durumlar dışında, belirli bir işlemde belirli bir izleme kaynağı için yeni bir etkinlik KIMLIĞI içerir. Bu durumda, uç nokta başına bir "başlangıç" görüyoruz. Yeni bir etkinlik başlatma örnekleri, işlenmek üzere yeni bir iş parçacığı oluşturmayı veya yeni bir ortak yöntemi girmeyi içerir.  
   
-- Durdur: Etkinliğin bitiş gösterir. Bir "Durdur" izleme var olan bir işleme kilometre bitiş kaydını sağlar. Etkinlik Kimliği uç noktalar genelinde ne zaman dağıtılacağını dışında verilen bir işlem olarak belirtilen izleme kaynağı için mevcut bir etkinlik kimliği varsa, bu durumda bir "durak" uç nokta görüyoruz.  Bir etkinlik durdurma örnekleri şunlardır: işlem iş parçacığı Sonlandırıcı ya da devre dışı olan başına "Başlangıç" izleme ile gösterilen bir yönteminden çıkılıyor.  
+- Durdur: bir etkinliğin sonunu gösterir. "Durdur" izlemesi, var olan bir işlem kilometre taşını sona erdirme kaydı sağlar. Etkinlik KIMLIĞININ uç noktalara yayıldığı durumlar dışında, belirli bir işlemde belirli bir izleme kaynağı için var olan bir etkinlik KIMLIĞI içerir. Bu durumda, uç nokta başına bir "Durdur" görüyoruz.  Bir etkinliği durdurma örnekleri bir işleme iş parçacığını sonlandırarak veya başlangıcı "Başlat" izleme ile belirtilen bir yöntemden çıkmadan oluşur.  
   
-- Askıya alma: Bir etkinliğin işlenmesini askıya alınması gösterir. Bir "Askıya Al" izleme, işlem daha sonra devam etmek için beklenen var olan bir etkinlik kimliği içerir. İzleme yok, bu kimliği geçerli bir izleme kaynağı askıya alma ve sürdürme olayları arasında gönderilir. Bir etkinlik bir dış kitaplık işleve çağrılırken veya bir g/ç tamamlama bağlantı gibi bir kaynaktaki beklerken duraklatma örneklerindendir.  
+- Askıya al: bir etkinliğin işlenmesinin askıya alınma durumunu gösterir. "Askıya alma" izlemesi, işlemenin daha sonra sürdürülmesi beklenen mevcut bir etkinlik KIMLIĞINI içerir. Geçerli izleme kaynağından askıda kalma ve sürdürülme olayları arasında bu KIMLIKLE hiçbir izleme yok. Örneğin, bir dış kitaplık işlevine çağrı yaparken veya g/ç tamamlama bağlantı noktası gibi bir kaynakta beklerken bir etkinliğin duraklatılması sayılabilir.  
   
-- Sürdür: Bir etkinliğin işlemin sürdürülmesini gösterir. "Devam" izleme "Askıya Al" izleme, son yayılan izleme geçerli izleme kaynağına ait olduğu mevcut bir etkinlik kimliği içerir. Bir dış kitaplık işlevine veya bir g/ç tamamlama bağlantı gibi bir kaynak tarafından sinyal işleme devam etmek için bir çağrısından döndürerek örneklerindendir.  
+- Özgeçmişi: bir etkinliğin işleme sürdürme gösterir. "Özgeçmişi" izlemesi, geçerli izleme kaynağından son yayınlanan izleme "askıya al" iziydi. Örnek olarak, bir dış kitaplık işlevine yapılan çağrıdan veya g/ç tamamlama bağlantı noktası gibi bir kaynak tarafından işlemeyi sürdürecek şekilde sinyallerden geri dönme sayılabilir.  
   
-- Aktarın: Bazı etkinlikler başkaları tarafından neden olduğu veya başkalarına ilgili etkinlikleri diğer etkinliklerden izlemeleri "Aktarabilir" ilgili olabilir. Bir etkinlik başka bir yönlendirilmiş arasındaki ilişkiyi bir aktarım kaydeder  
+- Aktarım: bazı etkinliklere başkaları neden olduğu veya diğer kullanıcılarla ilişkili olduğu için, etkinlikler "aktarım" izlemeleriyle diğer etkinliklerle ilgili olabilir. Aktarım, bir etkinliğin bir diğer öğesine yönlendirilmiş ilişkisini kaydeder  
   
- Başlatma ve durdurma izlemelerle bağıntı için kritik değildir. Ancak, bunlar performans, profil oluşturma ve etkinlik kapsam doğrulama artan düzende yardımcı olabilir.  
+ Bağıntı için başlatma ve durdurma izlemeleri önemli değildir. Bununla birlikte, performans, profil oluşturma ve etkinlik kapsamı doğrulamasının artması konusunda yardımcı olabilirler.  
   
- Araç aktarım izlemeleri izliyorsa olayları etkinlikleri ilgili veya kullanarak bu tür araçların aynı etkinliğin hemen ilgili olayları bulmak için izleme günlüklerini gezinme en iyi duruma getirebilirsiniz. Örneğin, bunlar bir Başlat/Durdur izleme gördüğünüzde belirli bir etkinlik günlüklerini ayrıştırma araçları durdurur.  
+ Araçlar, bu türleri kullanarak, aynı etkinliğin anında ilgili olaylarını veya araç aktarım izlemelerinizi izliyorsa ilgili etkinliklerdeki olayları bulmak için izleme günlüklerinde gezinmeyi en uygun hale getirebilir. Örneğin, araçlar bir Başlat/Durdur izlemesi görtiklerinde belirli bir etkinliğin günlüklerini ayrıştırmayı durdurur.  
   
- Bu izleme türleri, profil oluşturma için de kullanılabilir. Başlatma ve durdurma işaretlerinin arasında tüketilen kaynaklar içerdiği mantıksal etkinlikler dahil olmak üzere etkinliğe ilişkin kapsamlı süre temsil eder. Askıya alma ve sürdürme izlemeleri arasındaki zaman aralıklarının çıkararak gerçek etkinlik süresi sağlar.  
+ Bu izleme türleri, profil oluşturma için de kullanılabilir. Başlangıç ve durdurma işaretçileri arasında tüketilen kaynaklar, içerilen mantıksal etkinlikler dahil olmak üzere etkinliğin dahil edilen süresini temsil eder. Askıya alma ve özgeçmişi izlemeleri arasındaki zaman aralıklarını çıkarmak gerçek etkinlik süresini sağlar.  
   
- İzlemeyi Durdur de uygulanan etkinlikleri kapsamını doğrulamak için özellikle yararlıdır. Bazı işleme izlemelerini İzlemeyi Durdur yerine belirli bir etkinlik içinde sonra görünüyorsa, bu kod hatası önerir.  
+ Durdurma izlemesi, uygulanan etkinliklerin kapsamını doğrulamak için de özellikle yararlıdır. Belirli bir etkinlik yerine durdurma izlemesinden sonra bazı işleme izlemeleri görünürse, bu kod hata durumunda olabilir.  
   
-## <a name="guidelines-for-using-activity-tracing"></a>Etkinlik izleme kullanma yönergeleri  
- ActivityTracing izlemeleri (Başlangıç, durdurma, askıya alma, sürdürme ve aktarım) kullanarak bir kılavuz aşağıda verilmiştir.  
+## <a name="guidelines-for-using-activity-tracing"></a>Etkinlik Izlemeyi kullanmaya yönelik yönergeler  
+ Aşağıda, ActivityTracing izlemelerinin (başlatma, durdurma, askıya alma, özgeçmişi ve aktarım) kullanımı hakkında bir kılavuz verilmiştir.  
   
-- İzleme yönlendirilmiş döngüsel bir grafik olan bir ağaç olur. Bir etkinlik için etkinlik kökenli denetim döndürebilir.  
+- İzleme, ağaç değil, yönlendirilmiş bir döngüsel grafiktir. Bir etkinliği oluşturan bir etkinliğe denetim getirebilirsiniz.  
   
-- Bir etkinlik yöneticisine sistemin veya desteklenebilirlik için anlamlı bir işleme sınırı gösterir.  
+- Bir etkinlik, sistemin yöneticisine veya desteklenebilirliği açısından anlamlı olabilen bir işleme sınırını gösterir.  
   
-- Hem istemci ve sunucu üzerindeki her WCF yöntemi sonra başlayan yeni bir etkinlik tarafından (İş tamamlandıktan sonra) sınırlıdır yeni etkinlik bitiş ve ortam etkinlikten döndürüyor.  
+- Hem istemci hem de sunucu üzerinde her bir WCF Yöntemi yeni bir etkinlik başlatarak, sonra (çalışma yapıldıktan sonra) yeni etkinliği sonlandırarak çevresel etkinliğe geri dönerek sınırlanır.  
   
-- Bağlantıları dinlemeyi veya bekleyen iletileri gibi uzun (sürekli) çalıştıran etkinlikler tarafından karşılık gelen başlangıç/bitiş işaretleri gösterilir.  
+- Bağlantı dinlemek veya ileti bekleniyor gibi uzun süre çalışan (devam eden) Etkinlikler, ilgili başlatma/durdurma işaretçileri tarafından temsil edilir.  
   
-- Etkinlikleri ulaşmasından tetiklenen veya ileti işleme izleme sınırları tarafından temsil edilir.  
+- Bir iletinin alınması veya işlenmesi tarafından tetiklenen etkinlikler, izleme sınırları ile temsil edilir.  
   
-- Etkinlikler, etkinlikleri, mutlaka nesneleri gösterir. Bir etkinlik olarak yorumlanması gereken "Bu gerçekleştiği zaman. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır. (anlamlı izleme Emisyonu oluştu)."  
+- Etkinlikler, nesneleri değil, etkinlikleri temsil eder. Etkinlik "Bu oluştu. . . (anlamlı izleme egörev gerçekleşti). "  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Kullanıcı Kodu İzlemeleri Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+- [İzlemeyi Yapılandırma](configuring-tracing.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uçtan Uca İzleme Senaryoları](end-to-end-tracing-scenarios.md)
+- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Kullanıcı Kodu İzleri Yayma](emitting-user-code-traces.md)

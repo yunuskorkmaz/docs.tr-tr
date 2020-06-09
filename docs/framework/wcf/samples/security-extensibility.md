@@ -2,43 +2,43 @@
 title: Güvenlik Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-ms.openlocfilehash: afb11d240c25e6b9dbfd5b5c0a63759af8c534f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3fc9a482271b904ccf56f1a911d3a44172bb40e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787484"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602394"
 ---
 # <a name="security-extensibility"></a>Güvenlik Genişletilebilirliği
-Bu bölüm, özel güvenlik Windows Communication Foundation (WCF) gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) ' de özel güvenliği gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Dayanıklı Verilen Belirteç Sağlayıcısı](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
- Özel istemci verilen belirteç sağlayıcısı için uygulanacak gösterilmiştir.  
+ [Dayanıklı Verilen Belirteç Sağlayıcısı](durable-issued-token-provider.md)  
+ Özel bir istemci tarafından verilen belirteç sağlayıcısının nasıl uygulanacağını gösterir.  
   
- [SAML Belirteç Sağlayıcı](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
- SAML belirteç sağlayıcı özel bir istemci uygulama gösterilmiştir.  
+ [SAML Belirteç Sağlayıcı](saml-token-provider.md)  
+ Özel bir istemci SAML belirteci sağlayıcısının nasıl uygulanacağını gösterir.  
   
- [Destek Belirteçleri](../../../../docs/framework/wcf/samples/supporting-tokens.md)  
- WS-güvenlik kullanan bir iletiye ek belirteçler ekleme gösterir.  
+ [Destek Belirteçleri](supporting-tokens.md)  
+ WS-Security kullanan bir iletiye nasıl ek belirteç ekleneceğini gösterir.  
   
- [Belirteç Doğrulayıcı](../../../../docs/framework/wcf/samples/token-authenticator.md)  
- Özel bir belirteç kimlik doğrulayıcısı uygulanacağı gösterilmiştir.  
+ [Belirteç Kimlik Doğrulayıcı](token-authenticator.md)  
+ Özel bir belirteç kimlik doğrulayıcısının nasıl uygulanacağını gösterir.  
   
- [Belirteç Sağlayıcı](../../../../docs/framework/wcf/samples/token-provider.md)  
- Özel bir belirteç sağlayıcısını uygulamak nasıl gösterir.  
+ [Belirteç Sağlayıcı](token-provider.md)  
+ Özel bir belirteç sağlayıcısının nasıl uygulanacağını gösterir.  
   
- [Kullanıcı Adı Parola Doğrulayıcı](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
- Özel bir UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir.  
+ [Kullanıcı AdıParola Doğrulayıcı](user-name-password-validator.md)  
+ Özel bir UserNamePassword doğrulayıcısı nasıl uygulanacağını gösterir.  
   
- [X.509 Sertifika Doğrulayıcı](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  
- Özel bir X.509 Sertifika Doğrulayıcı uygulama gösterilmiştir.  
+ [X.509 Sertifika Doğrulayıcı](x-509-certificate-validator.md)  
+ Özel bir X. 509.440 sertifika Doğrulayıcısı nasıl uygulanacağını gösterir.  
   
- [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- Bir özel talep yetkilendirme ilkesi ve bir ilişkili özel hizmet Yetkilendirme Yöneticisi'ni uygulamak nasıl gösterir.  
+ [Yetkilendirme İlkesi](authorization-policy.md)  
+ Özel bir talep yetkilendirme ilkesinin ve ilişkili bir özel hizmet Yetkilendirme yöneticisinin nasıl uygulanacağını gösterir.  
   
- [Özel Belirteç](../../../../docs/framework/wcf/samples/custom-token.md)  
- Bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulaması eklemek nasıl gösterir.  
+ [Özel Belirteç](custom-token.md)  
+ Bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasının nasıl ekleneceğini gösterir.  
   
- [İstemci Doğrulaması](../../../../docs/framework/wcf/samples/client-validation.md)  
- Hizmet uç noktası kullanmanın güvenli olduğundan emin olmak için hizmet uç noktası doğrular uç nokta davranışı bir istemci yazma işlemi gösterilmektedir.
+ [İstemci Doğrulaması](client-validation.md)  
+ Hizmet uç noktasının kullanımı güvenli olduğundan emin olmak için hizmet uç noktasını doğrulayan bir istemci uç noktası davranışının nasıl yazılacağını gösterir.

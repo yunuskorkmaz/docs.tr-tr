@@ -2,21 +2,21 @@
 title: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma"
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6392194b3124c999031123225dcc28c8de6171e9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576531"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma
-ASP.NET kullanmaya hemen başlayın ve gelecekte WCF kullanarak tahmin, bu konu, yeni ASP.NET Web hizmetlerini de WCF uygulamaları ile birlikte çalışacağından emin olmak için kılavuzluk sağlar.  
+ASP.NET bugün kullanıyorsanız ve gelecekte WCF kullanmayı düşünüyorsanız, bu konuda yeni ASP.NET Web hizmetlerinin WCF uygulamalarıyla birlikte iyi şekilde çalışmasını sağlamak için rehberlik sağlanmıştır.  
   
 ## <a name="general-recommendations"></a>Genel öneriler  
- ASP.NET 2.0 için yeni hizmetler benimseyin. Bunun yapılması, iyileştirmeler ve geliştirmeler yeni sürümü için erişim sağlar. Ancak, bu da aynı uygulamada ASP.NET 2.0 bileşenleri WCF bileşenleri ile birlikte kullanma olasılığını için izin verir.  
+ Tüm yeni hizmetler için ASP.NET 2,0 benimseyin. Bu işlem, yeni sürümün geliştirmeleri ve geliştirmeleri için erişim sağlar. Ancak, ASP.NET 2,0 bileşenlerini aynı uygulamadaki WCF bileşenleriyle birlikte kullanma olasılığa de izin verir.  
   
-## <a name="protocols"></a>Protokolleri  
- Yeni ASP.NET 2.0'ın tesis ws uygunluk doğrulamak için kullanın-ı Basic Profile 1.1:  
+## <a name="protocols"></a>Protokoller  
+ ASP.NET 2.0 'ın, WS-ı temel profil 1,1 ile uyumluluğunu doğrulamak için yeni tesis kullanın:  
   
 ```csharp  
 [WebService(Namespace = "http://tempuri.org/")]  
@@ -26,23 +26,23 @@ ASP.NET kullanmaya hemen başlayın ve gelecekte WCF kullanarak tahmin, bu konu,
 public interface IEcho  
 ```  
   
- ASP.NET Web Hizmetleri, uygun WS-ı Basic Profile 1.1 bağlama, önceden tanımlanmış WCF kullanarak WCF istemcileri ile birlikte çalışabilen olacağını <xref:System.ServiceModel.BasicHttpBinding>.  
+ WS-ı temel profil 1,1 ile uyumlu olan ASP.NET Web Hizmetleri, WCF istemcileri ile önceden tanımlanmış WCF kullanılarak birlikte çalışabilir <xref:System.ServiceModel.BasicHttpBinding> .  
   
 ## <a name="service-development"></a>Hizmet geliştirme  
- Kullanmaktan kaçının <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> yöntemlere yönlendirilmiş iletiler için öznitelik SOAPAction HTTP üst bilgisi yerine SOAP iletisi body öğesi tam olarak nitelenmiş adını temel alarak. SOAPAction HTTP üst bilgisi, WCF iletileri yönlendirmek için kullanır.  
+ <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute>SOAPACTION http üstbilgisi yerıne soap iletisinin gövde öğesinin tam adına bağlı olarak yöntemlere yönlendirilmek için özniteliğini kullanmaktan kaçının. WCF iletileri yönlendirmek için SOAPAction HTTP üstbilgisini kullanır.  
   
 ## <a name="data-representation"></a>Veri gösterimi  
- XML'e <xref:System.Xml.Serialization.XmlSerializer> serileştiren bir türü varsayılan olarak anlamı da XML'e aynıdır <xref:System.Runtime.Serialization.DataContractSerializer> ad alanı XML açıkça tanımlanmış için sağlanan bir türü seri hale getirir. ASP.NET Web Hizmetleri ile kullanmak için bir veri türü olasılığına benimsemenin WCF içinde gelecekte tanımlarken aşağıdakileri yapın:  
+ <xref:System.Xml.Serialization.XmlSerializer>Bir türü varsayılan olarak seri hale getirilen XML, bir türü seri hale getirilen XML ile aynıdır, bu, <xref:System.Runtime.Serialization.DataContractSerializer> XML için ad alanı açıkça tanımlanmış olarak belirtilmelidir. Daha sonra WCF 'yi benimseme olasılığına 'de ASP.NET Web Hizmetleri ile kullanmak için bir veri türü tanımlarken, şunları yapın:  
   
-1. XML şeması yerine .NET Framework sınıfları kullanarak türünü tanımlayın.  
+1. Türü, XML şeması yerine .NET Framework sınıfları kullanarak tanımlayın.  
   
-2. Yalnızca ekleme <xref:System.SerializableAttribute> ve <xref:System.Xml.Serialization.XmlRootAttribute> sınıf türünün ad alanını açıkça tanımlamak için ikinci kullanarak. Yapmak hiçbir ek özniteliklerinden Ekle <xref:System.Xml.Serialization> nasıl XML'e çevrilmesi için .NET Framework sınıf olduğunu denetlemek için ad alanı.  
+2. <xref:System.SerializableAttribute> <xref:System.Xml.Serialization.XmlRootAttribute> Türü için ad alanını açıkça tanımlamak için, ikincisini kullanarak yalnızca ve öğesini sınıfına ekleyin. <xref:System.Xml.Serialization>.NET Framework SıNıFıNıN XML 'e nasıl çevrileceğini denetlemek için ad alanından ek öznitelikler eklemeyin.  
   
- Bu yaklaşım benimseyerek, daha sonra ek olarak veri sözleşmeleri içine .NET sınıfları oluşturmak erişebileceğinizi <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> içine sınıfları aktarım için serileştirilir XML önemli ölçüde boyutlandırabiliriz. İletileri ASP.NET Web Hizmetleri tarafından kullanılan türleri arasında diğer avantajları, WCF uygulamalarında daha iyi performans sağlayan veri sözleşmesi WCF uygulamaları tarafından işlenmek üzere mümkün olacaktır.  
+ Bu yaklaşımı benimseerek, daha sonra, <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> sınıflarının iletilmek üzere SERILEŞTIRILDIĞI XML 'yi önemli ölçüde değiştirmeksizin, .NET sınıflarını daha sonra ve ' nin eklenmesiyle veri sözleşmeleri halinde yapabilmelisiniz. ASP.NET Web hizmetlerine göre iletilerde kullanılan türler, WCF uygulamalarında veri sözleşmeleri, diğer avantajlar arasında, WCF uygulamalarında daha iyi performans olarak işlenebilecektir.  
   
 ## <a name="security"></a>Güvenlik  
- Internet Information Services (IIS) tarafından sağlanan kimlik doğrulama seçenekleri kullanmaktan kaçının. WCF istemcileri onları desteklemez. Bir hizmet korunması gerekir, çünkü bu seçeneklerin daha zengin ve standardı protokollerine dayalıdır WCF tarafından sağlanan seçenekleri kullanın.  
+ Internet Information Services (IIS) tarafından sunulan kimlik doğrulama seçeneklerini kullanmaktan kaçının. WCF istemcileri bunları desteklemez. Bir hizmetin güvenliğinin sağlanması gerekiyorsa, bu seçenekler daha zengin ve standart protokollerin temel aldığı için WCF tarafından sağlanan seçenekleri kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Taşınmayı Kolaylaştırma](anticipating-adopting-wcf-migration.md)

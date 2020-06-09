@@ -2,12 +2,12 @@
 title: DataContractJsonSerializer kullanarak tek başına JSON serileştirmesi
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600912"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer kullanarak tek başına JSON serileştirmesi
 
@@ -18,9 +18,9 @@ JSON (JavaScript Nesne Gösterimi), tarayıcı içindeki Web sayfalarında çal�
 
 Bu biçim, ASP.NET ile tümleştirmeden AJAX Hizmetleri oluştururken de kullanılabilir-Bu örnekte, XML varsayılandır ancak JSON seçilebilir.
 
-Son olarak, JSON desteğine ihtiyacınız vardır ancak bir AJAX Hizmeti oluşturmadıysanız, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .net nesnelerinin doğrudan JSON verilerine serileştirmesini ve bu gibi verilerin serisini .net türlerinin örneklerine geri oluşturmasını mümkün hale getirir. Bunun nasıl yapılacağı hakkında bir açıklama için bkz. [nasıl yapılır: serileştirme ve seri durumdan ÇıKARMA JSON verileri](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).
+Son olarak, JSON desteğine ihtiyacınız vardır ancak bir AJAX Hizmeti oluşturmadıysanız, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .net nesnelerinin doğrudan JSON verilerine serileştirmesini ve bu gibi verilerin serisini .net türlerinin örneklerine geri oluşturmasını mümkün hale getirir. Bunun nasıl yapılacağı hakkında bir açıklama için bkz. [nasıl yapılır: serileştirme ve seri durumdan ÇıKARMA JSON verileri](how-to-serialize-and-deserialize-json-data.md).
 
-JSON ile çalışırken, tarafından desteklendiği gibi birkaç özel durum ile aynı .NET türleri desteklenir <xref:System.Runtime.Serialization.DataContractSerializer> . Desteklenen türlerin listesi için bkz. [veri sözleşmesi serileştiricisi tarafından desteklenen türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Buna en basit türler, çoğu dizi ve koleksiyon türü ve ve kullanan karmaşık türler dahildir <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> .
+JSON ile çalışırken, tarafından desteklendiği gibi birkaç özel durum ile aynı .NET türleri desteklenir <xref:System.Runtime.Serialization.DataContractSerializer> . Desteklenen türlerin listesi için bkz. [veri sözleşmesi serileştiricisi tarafından desteklenen türler](types-supported-by-the-data-contract-serializer.md). Buna en basit türler, çoğu dizi ve koleksiyon türü ve ve kullanan karmaşık türler dahildir <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> .
 
 ## <a name="mapping-net-types-to-json-types"></a>.NET türlerini JSON türleriyle eşleme
 
@@ -32,7 +32,7 @@ Aşağıdaki tabloda, serileştirme ve serisini kaldırma yordamları ile eşlen
 |<xref:System.Enum>|Sayı|Bu konunun devamındaki "numaralandırmalar ve JSON" başlığına bakın.|
 |<xref:System.Boolean>|Boole|--|
 |<xref:System.String>, <xref:System.Char>|Dize|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Dize|JSON 'daki bu türlerin biçimi, XML (temel olarak, ISO 8601 süre biçimindeki zaman aralığı, "12345678-ABCD-ABCD-ABCD-1234567890AB" biçiminde ve URI DEĞERI "" gibi doğal dize biçiminde http://www.example.com ). Kesin bilgiler için bkz. [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|Dize|JSON 'daki bu türlerin biçimi, XML (temel olarak, ISO 8601 süre biçimindeki zaman aralığı, "12345678-ABCD-ABCD-ABCD-1234567890AB" biçiminde ve URI DEĞERI "" gibi doğal dize biçiminde http://www.example.com ). Kesin bilgiler için bkz. [veri sözleşmesi şema başvurusu](data-contract-schema-reference.md).|
 |<xref:System.Xml.XmlQualifiedName>|Dize|Biçim "ad: Namespace" (ilk iki nokta üst üsteden önce herhangi bir şey ad). Ad veya ad alanı eksik olabilir. Ad alanı yoksa, iki nokta üst üste işareti de atlanabilir.|
 |<xref:System.Array>türünde<xref:System.Byte>|Sayı dizisi|Her sayı bir baytlık değeri temsil eder.|
 |<xref:System.DateTime>|DateTime veya String|Bu konunun ilerleyen kısımlarında tarihlere/saatlere ve JSON öğesine bakın.|
@@ -46,7 +46,7 @@ Aşağıdaki tabloda, serileştirme ve serisini kaldırma yordamları ile eşlen
 
 ### <a name="enumerations-and-json"></a>Numaralandırmalar ve JSON
 
-Sabit listesi üyesi değerleri, JSON 'da sayı olarak değerlendirilir ve bu, üye adları olarak dahil oldukları veri sözleşmeleri içinde nasıl ele alındıklarından farklıdır. Veri anlaşması işlemi hakkında daha fazla bilgi için bkz. [veri sözleşmeleri Içindeki numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).
+Sabit listesi üyesi değerleri, JSON 'da sayı olarak değerlendirilir ve bu, üye adları olarak dahil oldukları veri sözleşmeleri içinde nasıl ele alındıklarından farklıdır. Veri anlaşması işlemi hakkında daha fazla bilgi için bkz. [veri sözleşmeleri Içindeki numaralandırma türleri](enumeration-types-in-data-contracts.md).
 
 - Örneğin, varsa `public enum Color {red, green, blue, yellow, pink}` serileştirmek, `yellow` "sarı" dizesini değil 3 sayısını üretir.
 
@@ -87,11 +87,11 @@ Tüm koleksiyonlar, sözlükler ve diziler JSON 'da diziler olarak temsil edilir
 
 - JSON ile doğrudan çalışmak istiyorsanız (bir rigıd sözleşmesini önceden tanımlamaya gerek kalmadan anahtar ve değerlere dinamik olarak erişme), birkaç seçeneğiniz vardır:
 
-  - [Zayıf YAZıLMıŞ JSON serileştirme (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) örneğini kullanmayı göz önünde bulundurun.
+  - [Zayıf YAZıLMıŞ JSON serileştirme (AJAX)](../samples/weakly-typed-json-serialization-sample.md) örneğini kullanmayı göz önünde bulundurun.
 
   - <xref:System.Runtime.Serialization.ISerializable>Arabirim ve seri kaldırma oluşturucularını kullanmayı düşünün-bu iki mekanizma sırasıyla serileştirme ve seri durumundan çıkarma SıRASıNDA JSON anahtar/değer çiftlerine erişmenize izin verir, ancak kısmi güven senaryolarında çalışmaz.
 
-  - Serileştirici kullanmak yerine [JSON ve XML arasındaki eşleme](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) ile çalışmayı düşünün.
+  - Serileştirici kullanmak yerine [JSON ve XML arasındaki eşleme](mapping-between-json-and-xml.md) ile çalışmayı düşünün.
 
   - Serileştirme bağlamındaki çok *biçimlilik* , temel türünün beklendiği türetilmiş bir türü seri hale getirme özelliğine başvurur. Koleksiyonlar polymorphically kullanılırken JSON 'a özgü özel kurallar vardır, örneğin, bir koleksiyon ' a atama <xref:System.Object> . Bu sorun, bu konunun ilerleyen bölümlerinde gelişmiş bilgiler bölümünde daha ayrıntılı olarak ele alınmıştır.
 
@@ -113,13 +113,13 @@ Karmaşık bir türü seri durumdan çıkarmadığınız takdirde, temel tür be
 
 Arabirim türünde seri durumdan çıkarılırken, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> belirtilen tür nesne gibi seri hale getirir.
 
-Kendi Tabanınızla ve türetilmiş türlerle çalışırken, <xref:System.Runtime.Serialization.KnownTypeAttribute> <xref:System.ServiceModel.ServiceKnownTypeAttribute> veya ile eşdeğer bir mekanizma gereklidir. Örneğin, bir `Animal` dönüş değeri olan ve aslında (öğesinden türetilmiş) bir örneğini döndüren bir işlemden sahipseniz, `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> öğesini `Animal` türüne ya da öğesine uygulamanız gerekir <xref:System.ServiceModel.ServiceKnownTypeAttribute> ve `Cat` türü bu özniteliklerde belirtmeniz gerekir. Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).
+Kendi Tabanınızla ve türetilmiş türlerle çalışırken, <xref:System.Runtime.Serialization.KnownTypeAttribute> <xref:System.ServiceModel.ServiceKnownTypeAttribute> veya ile eşdeğer bir mekanizma gereklidir. Örneğin, bir `Animal` dönüş değeri olan ve aslında (öğesinden türetilmiş) bir örneğini döndüren bir işlemden sahipseniz, `Cat` `Animal` <xref:System.Runtime.Serialization.KnownTypeAttribute> öğesini `Animal` türüne ya da öğesine uygulamanız gerekir <xref:System.ServiceModel.ServiceKnownTypeAttribute> ve `Cat` türü bu özniteliklerde belirtmeniz gerekir. Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](data-contract-known-types.md).
 
 Çok biçimli serileştirme çalışmasının nasıl çalıştığı ve bunu kullanırken dikkate alınmalıdır bazı sınırlamalara ilişkin bir Tartışmayla ilgili ayrıntılar için, bu konunun ilerleyen kısımlarında yer alan gelişmiş bilgiler bölümüne bakın.
 
-### <a name="versioning"></a>Sürüm Oluşturma
+### <a name="versioning"></a>Sürüm oluşturma
 
-Arabirim dahil, veri anlaşması sürüm oluşturma özellikleri <xref:System.Runtime.Serialization.IExtensibleDataObject> JSON 'da tamamen desteklenir. Ayrıca, çoğu durumda bir türün bir biçimde serisini kaldırmak (örneğin, XML) ve daha sonra başka bir biçimde (örneğin, JSON) seri hale getirmek ve ' de verileri sürdürmek mümkündür <xref:System.Runtime.Serialization.IExtensibleDataObject> . Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Herhangi bir sipariş bilgisinin kaybedilmesi için JSON 'un sıralanmamış olduğunu unutmayın. Ayrıca, JSON aynı anahtar adına sahip birden çok anahtar/değer çiftini desteklemez. Son olarak, üzerindeki tüm işlemler <xref:System.Runtime.Serialization.IExtensibleDataObject> doğal olarak çok biçimli olur; bunların türetilmiş türü <xref:System.Object> , tüm türlerin temel türüdür.
+Arabirim dahil, veri anlaşması sürüm oluşturma özellikleri <xref:System.Runtime.Serialization.IExtensibleDataObject> JSON 'da tamamen desteklenir. Ayrıca, çoğu durumda bir türün bir biçimde serisini kaldırmak (örneğin, XML) ve daha sonra başka bir biçimde (örneğin, JSON) seri hale getirmek ve ' de verileri sürdürmek mümkündür <xref:System.Runtime.Serialization.IExtensibleDataObject> . Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](forward-compatible-data-contracts.md). Herhangi bir sipariş bilgisinin kaybedilmesi için JSON 'un sıralanmamış olduğunu unutmayın. Ayrıca, JSON aynı anahtar adına sahip birden çok anahtar/değer çiftini desteklemez. Son olarak, üzerindeki tüm işlemler <xref:System.Runtime.Serialization.IExtensibleDataObject> doğal olarak çok biçimli olur; bunların türetilmiş türü <xref:System.Object> , tüm türlerin temel türüdür.
 
 ## <a name="json-in-urls"></a>URL 'Lerdeki JSON
 
@@ -179,7 +179,7 @@ Dönüştürme yalnızca, "/" karakterlerinin kaçış durumunda (yani, JSON " \
 
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>XElement ve DataSet dahil IXmlSerializable türleri
 
-<xref:System.Runtime.Serialization.ISerializable>türler, "içerik türleri", "veri kümesi türleri" ve "öğe türleri" içinde alt bölümlere ayırır. Bu türlerin tanımları için bkz. [veri sözleşmeleri Içindeki XML ve ADO.net türleri](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).
+<xref:System.Runtime.Serialization.ISerializable>türler, "içerik türleri", "veri kümesi türleri" ve "öğe türleri" içinde alt bölümlere ayırır. Bu türlerin tanımları için bkz. [veri sözleşmeleri Içindeki XML ve ADO.net türleri](xml-and-ado-net-types-in-data-contracts.md).
 
 "İçerik" ve "veri kümesi" türleri, <xref:System.Array> <xref:System.Xml.XmlNode> önceki bölümde ele alınan nesnelere benzer şekilde serileştirilir. Ad ve ad alanı, söz konusu türün veri sözleşmesi adına ve ad alanına karşılık gelen bir öğede sarmalanır.
 
@@ -261,7 +261,7 @@ Bir koleksiyon türü veya <xref:System.Xml.Serialization.IXmlSerializable> olma
 
 #### <a name="known-types-and-configuration"></a>Bilinen türler ve yapılandırma
 
-Tarafından kullanılan tüm bilinen tür mekanizmaları <xref:System.Runtime.Serialization.DataContractSerializer> , ile aynı şekilde de desteklenir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Her iki serileştiriciler, [\<dataContractSerializer>](../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md) bir yapılandırma dosyası aracılığıyla eklenen bilinen türleri öğrenmek için içindeki aynı yapılandırma öğesini okur.
+Tarafından kullanılan tüm bilinen tür mekanizmaları <xref:System.Runtime.Serialization.DataContractSerializer> , ile aynı şekilde de desteklenir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . Her iki serileştiriciler, [\<dataContractSerializer>](../../configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md) [\<system.runtime.serialization>](../../configure-apps/file-schema/wcf/system-runtime-serialization.md) bir yapılandırma dosyası aracılığıyla eklenen bilinen türleri öğrenmek için içindeki aynı yapılandırma öğesini okur.
 
 #### <a name="collections-assigned-to-object"></a>Nesneye atanan Koleksiyonlar
 
@@ -291,8 +291,8 @@ Sözlük türlerini serileştirirken, "Key" ve "Value" üyelerini içeren JSON n
 
 ### <a name="valid-json-key-names"></a>Geçerli JSON anahtar adları
 
-Seri hale getirici XML-geçerli XML adı olmayan anahtar adlarını kodlar. Örneğin, "123" adlı bir veri üyesi "x0031 x0032 x0033" gibi kodlanmış bir ada sahip olur, \_ \_ \_ \_ \_ \_ çünkü "123" geçersiz bir XML öğesi adı (bir basamakla başlar). Bazı uluslararası karakter kümelerinde XML adlarında geçerli olmayan benzer bir durum ortaya çıkabilir. JSON işlemede XML 'nin bu efektinin açıklaması için bkz. [JSON ve XML arasında eşleme](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
+Seri hale getirici XML-geçerli XML adı olmayan anahtar adlarını kodlar. Örneğin, "123" adlı bir veri üyesi "x0031 x0032 x0033" gibi kodlanmış bir ada sahip olur, \_ \_ \_ \_ \_ \_ çünkü "123" geçersiz bir XML öğesi adı (bir basamakla başlar). Bazı uluslararası karakter kümelerinde XML adlarında geçerli olmayan benzer bir durum ortaya çıkabilir. JSON işlemede XML 'nin bu efektinin açıklaması için bkz. [JSON ve XML arasında eşleme](mapping-between-json-and-xml.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [JSON ve Diğer Veri Aktarma Biçimleri için Destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+- [JSON ve Diğer Veri Aktarma Biçimleri için Destek](support-for-json-and-other-data-transfer-formats.md)

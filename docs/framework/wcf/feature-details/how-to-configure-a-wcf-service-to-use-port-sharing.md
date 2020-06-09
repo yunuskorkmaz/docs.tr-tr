@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579533"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir Windows Communication Foundation Hizmetini Yapılandırma
-Windows Communication Foundation (WCF) uygulamanızda net.tcp:// bağlantı noktası paylaşımını kullanmanın <xref:System.ServiceModel.NetTcpBinding>en kolay yolu, bir hizmeti kullanarak bir hizmeti ortaya çıkarmaktır.  
+Windows Communication Foundation (WCF) uygulamanızda net. TCP://bağlantı noktası paylaşımını kullanmanın en kolay yolu, hizmetini kullanarak bir hizmeti kullanıma sunmasıdır <xref:System.ServiceModel.NetTcpBinding> .  
   
- Bu bağlama, <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> bu bağlama ile yapılandırılan hizmet için net.tcp:// bağlantı noktası paylaşımının etkin olup olmadığını kontrol eden bir özellik sağlar.  
+ Bu bağlama <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> , bu bağlama ile yapılandırılan hizmet için net. TCP://bağlantı noktası paylaşımının etkinleştirilip etkinleştirilmeyeceğini denetleyen bir özellik sağlar.  
   
- Aşağıdaki yordam, tekdüzen <xref:System.ServiceModel.NetTcpBinding> kaynak tanımlayıcı (URI) net.tcp://localhost/MyService'te önce kod da sonra yapılandırma öğelerini kullanarak bir bitiş noktası açmak için sınıfın nasıl kullanılacağını gösterir.  
+ Aşağıdaki yordamda, <xref:System.ServiceModel.NetTcpBinding> sınıfının önce kod içinde, sonra yapılandırma öğelerini kullanarak Tekdüzen Kaynak tanımlayıcısı (URI) net. TCP://localhost/MyService içinde bir uç nokta açmak için nasıl kullanılacağı gösterilmektedir.  
   
-### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>NetTcpBinding kodunda net.tcp:// bağlantı noktası paylaşımını etkinleştirmek için  
+### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Kodda NetTcpBinding üzerinde net. TCP://bağlantı noktası paylaşımını etkinleştirmek için  
   
-1. Bir sözleşme uygulamak için `IMyService` bir hizmet `MyService`oluşturun ve onu , .  
+1. Adlı bir sözleşmeyi uygulamak ve çağırmak için bir hizmet oluşturun `IMyService` `MyService` .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
   
-2. Sınıfın bir örneğini <xref:System.ServiceModel.NetTcpBinding> oluşturun <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> ve `true`özelliği 'ne göre ayarlayın.  
+2. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliğini olarak ayarlayın `true` .  
   
      [!code-csharp[c_ConfigurePortSharing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#2)]
      [!code-vb[c_ConfigurePortSharing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#2)]  
   
-3. Bağlantı <xref:System.ServiceModel.ServiceHost> noktası paylaşımını etkinleştiren `MyService` <xref:System.ServiceModel.NetTcpBinding> ve bitiş noktası adresi URI "net.tcp://localhost/MyService"i dinleyen bir nokta oluşturun ve hizmet bitiş noktasını ekleyin.  
+3. Bir oluşturun <xref:System.ServiceModel.ServiceHost> ve bu `MyService` bağlantı noktası, <xref:System.ServiceModel.NetTcpBinding> "net. TCP://localhost/MyService" uç nokta adresi URI 'sini dinler.  
   
      [!code-csharp[c_ConfigurePortSharing#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#3)]
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
   
     > [!NOTE]
-    > Bu örnek, bitiş noktası adresi URI farklı bir bağlantı noktası numarası belirtmediği için varsayılan TCP 808 bağlantı noktasını kullanır. Bağlantı noktası paylaşımı aktarım bağlamada açıkça etkinleştirildiğinden, bu hizmet bağlantı noktası 808'i diğer işlemlerdeki diğer hizmetlerle paylaşabilir. Bağlantı noktası paylaşımına izin verilmeseydi ve başka bir uygulama zaten <xref:System.ServiceModel.AddressAlreadyInUseException> bağlantı noktası 808'i kullanıyorsa, bu hizmet açıldığında bir hizmet verirdi.  
+    > Bu örnek, uç nokta adresi URI 'SI farklı bir bağlantı noktası numarası belirtmediğinden, varsayılan TCP bağlantı noktası 808 ' ü kullanır. Bağlantı noktası Paylaşımı, aktarım bağlamasında açık bir şekilde etkinleştirildiğinden, bu hizmet bağlantı noktası 808 ' i diğer süreçlerdeki diğer hizmetlerle paylaşabilir. Bağlantı noktası paylaşımına izin verilmiyorsa ve başka bir uygulama zaten 808 numaralı bağlantı noktasını kullanıyorsa, bu hizmet açıldığında bir oluşturur <xref:System.ServiceModel.AddressAlreadyInUseException> .  
   
-### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>Yapılandırmada netTcpBinding üzerinde net.tcp:// bağlantı noktası paylaşımını etkinleştirmek için  
+### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>Yapılandırmada NetTcpBinding üzerinde net. TCP://bağlantı noktası paylaşımını etkinleştirmek için  
   
-1. Aşağıdaki örnekte, yapılandırma öğelerini kullanarak bağlantı noktası paylaşımını nasıl etkinleştirilir ve hizmet bitiş noktası nın nasıl ekleyeceğini gösterir.  
+1. Aşağıdaki örnek, bağlantı noktası paylaşımının nasıl etkinleştirileceğini ve yapılandırma öğelerini kullanarak hizmet uç noktasının nasıl ekleneceğini gösterir.  
   
 ```xml  
 <system.serviceModel>  
@@ -62,5 +62,5 @@ Windows Communication Foundation (WCF) uygulamanızda net.tcp:// bağlantı nokt
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Net.TCP Bağlantı Noktası Paylaşımı](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Nasıl yapılır: Net.TCP Bağlantı Noktası Paylaşım Hizmetini Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP Bağlantı Noktası Paylaşımı](net-tcp-port-sharing.md)
+- [Nasıl yapılır: Net.TCP Bağlantı Noktası Paylaşım Hizmetini Etkinleştirme](how-to-enable-the-net-tcp-port-sharing-service.md)

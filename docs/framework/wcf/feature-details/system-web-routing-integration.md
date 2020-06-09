@@ -2,18 +2,18 @@
 title: System.Web.Routing Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600743"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing Tümleştirmesi
-Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF) hizmeti barındırırken sanal dizine bir .svc dosyası yersiniz. Bu .svc dosyası, hizmeti uygulayan sınıfın yanı sıra kullanılacak servis ana bilgisayar fabrikasını da belirtir. Hizmete istekte bulunduktan sonra URI'deki .svc dosyasını belirtin, örneğin: `http://contoso.com/EmployeeServce.svc`. REST hizmetleri yazan programcılar için, bu tür URI en uygun değildir. REST hizmetleri için URI'ler belirli bir kaynak belirtir ve normalde herhangi bir uzantısı yoktur. Tümleştirme özelliği, <xref:System.Web.Routing> uri'lere uzantısı zolmadan yanıt veren bir WCF REST hizmeti barındırmanızı sağlar. Yönlendirme hakkında daha fazla bilgi için ASP.NET [Yönlendirme'ye](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))bakın.  
+Internet Information Service (IIS) içinde bir Windows Communication Foundation (WCF) hizmeti barındırırken, sanal dizinde bir. svc dosyası yerleştirebilirsiniz. Bu. svc dosyası, kullanılacak hizmet ana bilgisayar fabrikasını ve hizmeti uygulayan sınıfını belirtir. Hizmete istek yaparken, URI 'de. svc dosyasını belirtirsiniz, örneğin: `http://contoso.com/EmployeeServce.svc` . REST Hizmetleri yazan programcılar için, bu tür bir URI en uygun değildir. REST Hizmetleri için URI 'Ler belirli bir kaynağı belirtir ve normalde hiçbir uzantıya sahip değildir. <xref:System.Web.Routing>Tümleştirme özelliği, uzantısı olmayan URI 'lere yanıt veren bır WCF REST hizmetini barındırmanıza olanak tanır. Yönlendirme hakkında daha fazla bilgi için bkz. [ASP.net Routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
   
-## <a name="using-systemwebrouting-integration"></a>System.Web.Routing Entegrasyonunu Kullanma  
- Tümleştirme <xref:System.Web.Routing> özelliğini kullanmak için <xref:System.ServiceModel.Activation.ServiceRoute> sınıfı bir veya daha fazla yol <xref:System.Web.Routing.RouteTable> oluşturmak ve bunları global.asax dosyasına eklemek için kullanırsınız. Bu rotalar, hizmetin yanıt verdiği göreli ÜR'leri belirtir. Aşağıdaki örnekte, bunun nasıl yapılacağını gösterilmektedir.  
+## <a name="using-systemwebrouting-integration"></a>System. Web. Routing tümleştirmesini kullanma  
+ <xref:System.Web.Routing>Tümleştirme özelliğini kullanmak için <xref:System.ServiceModel.Activation.ServiceRoute> sınıfını kullanarak bir veya daha fazla yol oluşturun ve bunları <xref:System.Web.Routing.RouteTable> Global. asax dosyasına ekleyin. Bu rotalar hizmetin yanıt verdiği göreli URI 'Leri belirtir. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
   
 ```aspx-csharp  
 <%@ Application Language="C#" %>  
@@ -34,9 +34,9 @@ Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF
 </script>  
 ```  
   
- Bu, müşterilerle başlayan göreceli bir URI `Service` ile tüm istekleri hizmete yönlendirir.  
+ Bu, tüm istekleri müşterilerle çalışmaya başlayan göreli bir URI ile yönlendirir `Service` .  
   
- `System.Web.Routing.UrlRoutingModule` Web.config dosyanızda modülü eklemeniz, özniteliği `runAllManagedModulesForAllRequests` `true`ayarlamanız ve `UrlRoutingHandler` işleyiciyi `<system.webServer>` aşağıdaki örnekte gösterildiği gibi öğeye eklemeniz gerekir.  
+ Web. config dosyanızda `System.Web.Routing.UrlRoutingModule` modülünü eklemeniz, `runAllManagedModulesForAllRequests` özniteliğini olarak ayarlamanız `true` ve `UrlRoutingHandler` `<system.webServer>` Aşağıdaki örnekte gösterildiği gibi işleyiciyi öğesine eklemeniz gerekir.  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF
     </system.webServer>  
 ```  
   
- Bu, yönlendirme için gerekli bir modül ve işleyici yükler. Daha fazla bilgi için [Yönlendirme'ye](../../../../docs/framework/wcf/feature-details/routing.md)bakın. Ayrıca, aşağıdaki `aspNetCompatibilityEnabled` `true` örnekte gösterildiği `<serviceHostingEnvironment>` gibi öğedeki özniteliği de ayarlamanız gerekir.  
+ Bu, yönlendirme için gerekli bir modülü ve işleyiciyi yükler. Daha fazla bilgi için bkz. [yönlendirme](routing.md). Ayrıca, `aspNetCompatibilityEnabled` `true` `<serviceHostingEnvironment>` Aşağıdaki örnekte gösterildiği gibi öğesini öğesi içinde olarak ayarlamanız gerekir.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,7 +58,7 @@ Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF
     </system.serviceModel>  
 ```  
   
- Hizmeti uygulayan sınıf, aşağıdaki örnekte gösterildiği gibi ASP.NET uyumluluk gereksinimlerini etkinleştirmelidir.  
+ Hizmeti uygulayan sınıfın aşağıdaki örnekte gösterildiği gibi ASP.NET uyumluluk gereksinimlerini etkinleştirmesi gerekir.  
   
 ```csharp
 [ServiceContract]  
@@ -71,5 +71,5 @@ Internet Information Service 'te (IIS) bir Windows Communication Foundation (WCF
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET Yönlendirme](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))
+- [WCF Web HTTP Programlama Modeli](wcf-web-http-programming-model.md)
+- [ASP.NET yönlendirme](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

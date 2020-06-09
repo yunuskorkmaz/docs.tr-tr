@@ -2,28 +2,28 @@
 title: İstemciler
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: aa6d415c0908845bedf7c95ed66281bc0f17eb2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c44016a0367ea80485f220418e5bd8365b9694
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599327"
 ---
 # <a name="clients"></a>İstemciler
-Bu bölümdeki konular, istemci mimarisi nasıl ele erişmek için bir Windows Communication Foundation (WCF) hizmeti, bir WCF istemcisi ve bazı güvenlik önlemleri WCF istemciler için yapılandırma.  
+Bu bölümdeki konularda istemci mimarisi, bir Windows Communication Foundation (WCF) hizmetine erişme, bir WCF istemcisinin nasıl yapılandırılacağı ve WCF istemcileri için bazı güvenlik konuları ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF İstemci Mimarisi](../../../../docs/framework/wcf/feature-details/client-architecture.md)  
- WCF istemci mimarisi açıklanmaktadır.  
+ [WCF İstemci Mimarisi](client-architecture.md)  
+ WCF istemci mimarisini açıklar.  
   
- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)  
- Bir WCF hizmeti erişim açıklar.  
+ [WCF İstemcisi Kullanarak Hizmetlere Erişme](accessing-services-using-a-client.md)  
+ Bir WCF hizmetine nasıl erişebileceğinizi açıklar.  
   
- [WCF İstemci Yapılandırması](../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- WCF istemcisini yapılandırma açıklar.  
+ [WCF İstemci Yapılandırması](client-configuration.md)  
+ Bir WCF istemcisinin nasıl yapılandırılacağını açıklar.  
   
- [İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-clients.md)  
- Bazı WCF istemcileri için güvenlik konuları açıklanmaktadır.  
+ [İstemcileri Güvenli Hale Getirme](../securing-clients.md)  
+ WCF istemcileri için bazı güvenlik konularını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601198"
 ---
 # <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
 Bu konu başlığı altında, aynı hedef hizmetin birden çok örneğinde iletileri bölümlemek için gereken temel adımlar özetlenmektedir. Hizmet verileri bölümlendirme genellikle, daha iyi hizmet kalitesi sağlamak için veya belirli bir şekilde farklı müşterilerden gelen istekleri işleyebilmeniz gerektiğinde kullanılır. Örneğin, yüksek değerden veya "altın" müşterilerden gelen iletilerin, standart müşteriden gelen iletilerden daha yüksek bir önceliğe göre işlenmesi gerekebilir.  
@@ -175,4 +175,4 @@ Bu konu başlığı altında, aynı hedef hizmetin birden çok örneğinde ileti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)
+- [Yönlendirme Hizmetleri](../samples/routing-services.md)

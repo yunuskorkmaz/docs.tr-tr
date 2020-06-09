@@ -7,86 +7,86 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047185"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579390"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
-Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme en iyi şekilde hem aktarım hem de ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti düzeyi güvenlik katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konu, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımları gösterir. <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Hem aktarım hem de ileti kimlik bilgileriyle bir hizmetin güvenliğini sağlamak, Windows Communication Foundation (WCF) içinde hem aktarım hem de Ileti güvenliği modlarından en iyi şekilde yararlanır. Sum olarak, aktarım katmanı güvenliği bütünlük ve gizlilik sağlar, ancak ileti katmanı güvenliği, katı taşıma güvenlik mekanizmalarıyla mümkün olmayan çeşitli kimlik bilgileri sağlar. Bu konuda, ve bağlamaları kullanılarak ileti kimlik bilgileriyle taşıma uygulamak için temel adımlar <xref:System.ServiceModel.WSHttpBinding> gösterilmektedir <xref:System.ServiceModel.NetTcpBinding> . Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenlik modunu ayarlama](../how-to-set-the-security-mode.md).  
   
- Güvenlik modunu ayarlama zaman `TransportWithMessageCredential`, aktarım düzeyi güvenlik sağlayan gerçek mekanizması taşıma belirler. HTTP için Güvenli Yuva Katmanı (SSL) HTTP (HTTPS) üzerinden mekanizmadır; TCP için SSL TCP veya Windows üzerinde değil.  
+ Güvenlik modu olarak ayarlandığında `TransportWithMessageCredential` , taşıma, aktarım düzeyi güvenliği sağlayan gerçek mekanizmayı belirler. HTTP için mekanizma, HTTP (HTTPS) üzerinden Güvenli Yuva Katmanı (SSL); TCP, TCP veya Windows üzerinde SSL 'dir.  
   
- HTTP taşıma ise (kullanarak <xref:System.ServiceModel.WSHttpBinding>), HTTP üzerinden SSL aktarım düzeyi güvenlik sağlar. Bu durumda, bu konunun ilerleyen bölümlerinde gösterilen şekilde bir bağlantı noktasına bağlı bir SSL sertifikasıyla hizmetini barındıran bilgisayarın yapılandırmanız gerekir.  
+ Aktarım HTTP ise (kullanılarak <xref:System.ServiceModel.WSHttpBinding> ), http üzerinden SSL, aktarım düzeyi güvenliği sağlar. Bu durumda, hizmeti barındıran bilgisayarı, bu konunun ilerleyen kısımlarında gösterildiği gibi, bir bağlantı noktasına bağlanan bir SSL sertifikası ile yapılandırmanız gerekir.  
   
- TCP aktarımı ise (kullanarak <xref:System.ServiceModel.NetTcpBinding>), varsayılan olarak sağlanan aktarım düzeyi güvenlik Windows Güvenlik ya da SSL TCP üzerinden olduğu. TCP üzerinden SSL kullanılırken, sertifika kullanarak belirtilmelisiniz <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> yöntemi, bu konunun ilerleyen bölümlerinde gösterilen şekilde.  
+ Aktarım TCP ise (kullanılarak <xref:System.ServiceModel.NetTcpBinding> ), varsayılan olarak, belirtilen aktarım düzeyi güvenliği Windows güvenliği veya TCP ÜZERINDEN SSL olur. TCP üzerinden SSL kullanırken, <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> Bu konunun ilerleyen kısımlarında gösterildiği gibi, yöntemini kullanarak sertifikayı belirtmeniz gerekir.  
   
-### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>WSHttpBinding, aktarım güvenliği (kodda) için bir sertifika ile kullanmak için  
+### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Taşıma güvenliği için bir sertifikayla WSHttpBinding 'i kullanmak için (kodda)  
   
-1. Makine üzerindeki bir bağlantı noktası bir SSL sertifikası bağlamak için HttpCfg.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Bir SSL sertifikasını makinedeki bir bağlantı noktasına bağlamak için HttpCfg. exe aracını kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-2. Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> ayarlayın ve sınıf <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliğini <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+2. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliğini olarak ayarlayın <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   
-3. Ayarlama <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliğini uygun bir değer. (Daha fazla bilgi için [kimlik bilgisi türü seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri.  
+3. <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>Özelliği uygun bir değere ayarlayın. (Daha fazla bilgi için bkz. [kimlik bilgisi türü seçme](selecting-a-credential-type.md).) Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri kullanır.  
   
-4. Bir örneğini oluşturmak <xref:System.Uri> sınıfı uygun bir temel adresine sahip. Not adresi "HTTPS" şeması kullanması gerekir ve makine ve SSL sertifikasını bağlı bağlantı noktası numarasını gerçek adını içermelidir. (Alternatif olarak, temel adres yapılandırmasında ayarlayabilirsiniz.)  
+4. <xref:System.Uri>Uygun bir temel adresle sınıfının bir örneğini oluşturun. Adresin "HTTPS" düzenini kullanması gerektiğini ve makinenin gerçek adını ve SSL sertifikasının bağlandığı bağlantı noktası numarasını içermesi gerektiğini unutmayın. (Alternatif olarak, yapılandırmada temel adresi ayarlayabilirsiniz.)  
   
-5. Kullanarak bir hizmet uç noktası ekleme <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> yöntemi.  
+5. Yöntemini kullanarak bir hizmet uç noktası ekleyin <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> .  
   
-6. Örneği oluşturmak <xref:System.ServiceModel.ServiceHost> ve çağrı <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+6. Örneğini oluşturun <xref:System.ServiceModel.ServiceHost> ve <xref:System.ServiceModel.ICommunicationObject.Open%2A> aşağıdaki kodda gösterildiği gibi yöntemini çağırın.  
   
      [!code-csharp[c_SettingSecurityMode#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#7)]
      [!code-vb[c_SettingSecurityMode#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#7)]  
   
-### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security-in-code"></a>NetTcpBinding, (kod) aktarım güvenliği bir sertifika ile kullanmak için  
+### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security-in-code"></a>Bir aktarım güvenliği için bir sertifikayla NetTcpBinding kullanmak için (kodda)  
   
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.NetTcpBinding> ayarlayın ve sınıf <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> özelliğini <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+1. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> özelliğini olarak ayarlayın <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   
-2. Ayarlama <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> uygun değeri. Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri.  
+2. Öğesini <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> uygun bir değere ayarlayın. Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri kullanır.  
   
-3. Bir örneğini oluşturmak <xref:System.Uri> sınıfı uygun bir temel adresine sahip. "Net.tcp" düzeni adresini kullanması gerektiğini unutmayın. (Alternatif olarak, temel adres yapılandırmasında ayarlayabilirsiniz.)  
+3. <xref:System.Uri>Uygun bir temel adresle sınıfının bir örneğini oluşturun. Adresin "net. TCP" düzenini kullanması gerektiğini unutmayın. (Alternatif olarak, yapılandırmada temel adresi ayarlayabilirsiniz.)  
   
-4. Örneği oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfı.  
+4. Sınıfının örneğini oluşturun <xref:System.ServiceModel.ServiceHost> .  
   
-5. Kullanım <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> hizmeti için X.509 sertifikası açıkça ayarlamak için sınıf.  
+5. <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> Hizmetin X. 509.440 sertifikasını açıkça ayarlamak için sınıfının yöntemini kullanın.  
   
-6. Kullanarak bir hizmet uç noktası ekleme <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> yöntemi.  
+6. Yöntemini kullanarak bir hizmet uç noktası ekleyin <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> .  
   
-7. Çağrı <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+7. <xref:System.ServiceModel.ICommunicationObject.Open%2A>Aşağıdaki kodda gösterildiği gibi yöntemini çağırın.  
   
      [!code-csharp[c_SettingSecurityMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#8)]
      [!code-vb[c_SettingSecurityMode#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#8)]  
   
-### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security-in-code"></a>NetTcpBinding Windows ile Aktarım güvenliği (kodda) kullanmak için  
+### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security-in-code"></a>Aktarım güvenliği için Windows ile NetTcpBinding 'i kullanmak için (kodda)  
   
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.NetTcpBinding> ayarlayın ve sınıf <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> özelliğini <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+1. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> özelliğini olarak ayarlayın <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   
-2. Windows ayarlayarak kullanılacak aktarım güvenliği <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> için <xref:System.ServiceModel.TcpClientCredentialType.Windows>. (Bu varsayılan olduğunu unutmayın.)  
+2. ' İ ' ye ayarlayarak aktarım güvenliğini Windows kullanacak şekilde <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> ayarlayın <xref:System.ServiceModel.TcpClientCredentialType.Windows> . (Bunun varsayılan değer olduğunu unutmayın.)  
   
-3. Ayarlama <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> uygun değeri. Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri.  
+3. Öğesini <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> uygun bir değere ayarlayın. Aşağıdaki kod <xref:System.ServiceModel.MessageCredentialType.Certificate> değeri kullanır.  
   
-4. Bir örneğini oluşturmak <xref:System.Uri> sınıfı uygun bir temel adresine sahip. "Net.tcp" düzeni adresini kullanması gerektiğini unutmayın. (Alternatif olarak, temel adres yapılandırmasında ayarlayabilirsiniz.)  
+4. <xref:System.Uri>Uygun bir temel adresle sınıfının bir örneğini oluşturun. Adresin "net. TCP" düzenini kullanması gerektiğini unutmayın. (Alternatif olarak, yapılandırmada temel adresi ayarlayabilirsiniz.)  
   
-5. Örneği oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfı.  
+5. Sınıfının örneğini oluşturun <xref:System.ServiceModel.ServiceHost> .  
   
-6. Kullanım <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> hizmeti için X.509 sertifikası açıkça ayarlamak için sınıf.  
+6. <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> Hizmetin X. 509.440 sertifikasını açıkça ayarlamak için sınıfının yöntemini kullanın.  
   
-7. Kullanarak bir hizmet uç noktası ekleme <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> yöntemi.  
+7. Yöntemini kullanarak bir hizmet uç noktası ekleyin <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> .  
   
-8. Çağrı <xref:System.ServiceModel.ICommunicationObject.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+8. <xref:System.ServiceModel.ICommunicationObject.Open%2A>Aşağıdaki kodda gösterildiği gibi yöntemini çağırın.  
   
      [!code-csharp[c_SettingSecurityMode#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#9)]
      [!code-vb[c_SettingSecurityMode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#9)]  
   
 ## <a name="using-configuration"></a>Yapılandırma kullanma  
   
-#### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding kullanmak için  
+#### <a name="to-use-the-wshttpbinding"></a>WSHttpBinding 'i kullanmak için  
   
-1. Bilgisayar bağlantı noktasına bağlı bir SSL sertifikasıyla yapılandırın. (Daha fazla bilgi için [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Ayarlanacak gerekmez bir <`transport`> Bu yapılandırmaya sahip öğe değeri.  
+1. Bilgisayarı bir bağlantı noktasına bağlaan SSL sertifikası ile yapılandırın. (Daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md)). `transport`Bu yapılandırmayla bir <> öğesi değeri ayarlamanız gerekmez.  
   
-2. İleti düzeyi güvenliği için istemci kimlik bilgisi türü belirtin. Aşağıdaki örnek kümeleri `clientCredentialType` özniteliği <`message`> öğesine `UserName`.  
+2. İleti düzeyi güvenlik için istemci kimlik bilgisi türünü belirtin. Aşağıdaki örnek, `clientCredentialType` <`message`> öğesinin özniteliğini olarak ayarlar `UserName` .  
   
     ```xml  
     <wsHttpBinding>  
@@ -98,9 +98,9 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
     </wsHttpBinding>  
     ```  
   
-#### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security"></a>NetTcpBinding aktarım güvenliği için bir sertifika ile kullanmak için  
+#### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security"></a>Aktarım güvenliği için bir sertifikayla NetTcpBinding kullanmak için  
   
-1. TCP üzerinden SSL için sertifikayı açıkça belirtmelisiniz `<behaviors>` öğesi. Aşağıdaki örnek, varsayılan depolama konumu (yerel makine ve kişisel depolar) sertifikayı veren tarafından sertifikayı belirtir.  
+1. TCP üzerinden SSL için, sertifikayı öğesinde açıkça belirtmeniz gerekir `<behaviors>` . Aşağıdaki örnek, varsayılan depo konumundaki (yerel makine ve kişisel Mağazalar) veren tarafından bir sertifikayı belirtir.  
   
     ```xml  
     <behaviors>  
@@ -115,13 +115,13 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
     </behaviors>  
     ```  
   
-2. Ekleme bir [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) bağlamalar bölümü için  
+2. [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)Bağlamalar bölümüne bir ekleyin  
   
-3. Bir bağlama öğesi ekleyin ve ayarlayın `name` özniteliği için uygun bir değer.  
+3. Bir Binding öğesi ekleyin ve `name` özniteliği uygun bir değere ayarlayın.  
   
-4. Ekleme bir <`security`> öğesi ve kümesi `mode` özniteliğini `TransportWithMessageCredential`.  
+4. Bir <`security`> öğesi ekleyin ve `mode` özniteliğini olarak ayarlayın `TransportWithMessageCredential` .  
   
-5. Ekleme bir <`message>` öğesi ve kümesi `clientCredentialType` özniteliği için uygun bir değer.  
+5. <bir `message>` öğesi ekleyin ve `clientCredentialType` özniteliği uygun bir değere ayarlayın.  
   
     ```xml  
     <bindings>  
@@ -135,17 +135,17 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
     </bindings>  
     ```  
   
-#### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>NetTcpBinding Windows ile Aktarım güvenliği için kullanılacak  
+#### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>Aktarım güvenliği için Windows ile NetTcpBinding 'i kullanmak için  
   
-1. Ekleme bir [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) bağlamalar bölümü için  
+1. [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md)Bağlamalar bölümüne bir ekleyin,  
   
-2. Ekleme bir <`binding`> öğesi ve kümesi `name` özniteliği için uygun bir değer.  
+2. Bir <`binding`> öğesi ekleyin ve `name` özniteliği uygun bir değere ayarlayın.  
   
-3. Ekleme bir <`security`> öğesi ve kümesi `mode` özniteliğini `TransportWithMessageCredential`.  
+3. Bir <`security`> öğesi ekleyin ve `mode` özniteliğini olarak ayarlayın `TransportWithMessageCredential` .  
   
-4. Ekleme bir <`transport`> öğesi ve kümesi `clientCredentialType` özniteliğini `Windows`.  
+4. Bir <`transport`> öğesi ekleyin ve `clientCredentialType` özniteliğini olarak ayarlayın `Windows` .  
   
-5. Ekleme bir <`message`> öğesi ve kümesi `clientCredentialType` özniteliği için uygun bir değer. Aşağıdaki kod, bir sertifika için değeri ayarlar.  
+5. Bir <`message`> öğesi ekleyin ve `clientCredentialType` özniteliği uygun bir değere ayarlayın. Aşağıdaki kod, değeri bir sertifika olarak ayarlar.  
   
     ```xml  
     <bindings>  
@@ -162,6 +162,6 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../how-to-set-the-security-mode.md)
+- [Hizmetleri Güvenli Hale Getirme](../securing-services.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)
